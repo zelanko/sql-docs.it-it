@@ -1,22 +1,21 @@
 ---
-title: 'Passaggio 6: Aggiunta e configurazione delle trasformazioni Ricerca | Microsoft Docs'
+title: 'Passaggio 6: Aggiunta e configurazione delle trasformazioni ricerca | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 5c59f723-9707-4407-80ae-f05f483cf65f
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: c2bcdfc80c056b9d9a29df4195e136d5b00d31f2
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 756c6ce9c57b314ddd9f9e821df7c391af5fa84a
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48206781"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52805798"
 ---
 # <a name="step-6-adding-and-configuring-the-lookup-transformations"></a>Passaggio 6: Aggiunta e configurazione delle trasformazioni Ricerca
   Dopo aver configurato l'origine file flat per l'estrazione di dati dal file di origine si definiranno le trasformazioni Ricerca necessarie per ottenere i valori di **CurrencyKey** e **DateKey**. Una trasformazione Ricerca esegue una ricerca tramite l'unione in join dei dati della colonna di input specificata con una colonna di un set di dati di riferimento. Il set di dati di riferimento può essere una vista o tabella esistente, una nuova tabella o il risultato di un'istruzione SQL. In questa esercitazione, la trasformazione Ricerca utilizza una gestione connessione OLE DB per connettersi al database che contiene i dati che costituiscono l'origine del set di dati di riferimento.  
@@ -34,7 +33,7 @@ ms.locfileid: "48206781"
   
 ### <a name="to-add-and-configure-the-lookup-currency-key-transformation"></a>Per aggiungere e configurare la trasformazione Lookup Currency Key  
   
-1.  Nella **Casella degli strumenti SSIS**espandere **Comune**, quindi trascinare **Ricerca** sull'area di progettazione della scheda **Flusso di dati** . Posizionare Ricerca proprio sotto l'origine **Extract Sample Currency Data**.  
+1.  Nella **Casella degli strumenti SSIS**espandere **Comune**, quindi trascinare **Ricerca** sull'area di progettazione della scheda **Flusso di dati** . Posizionare Ricerca proprio sotto l'origine **Extract Sample Currency Data** .  
   
 2.  Fare clic sull'origine del file flat **Extract Sample Currency Data** e trascinare la freccia verde sulla trasformazione **Ricerca** appena aggiunta per collegare i due componenti.  
   

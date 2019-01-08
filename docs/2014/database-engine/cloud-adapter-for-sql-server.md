@@ -14,12 +14,12 @@ ms.assetid: 82ed0d0f-952d-4d49-aa36-3855a3ca9877
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 90bc2c9f6f268bf03904d768fd25b25b3ade3fbc
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 9dd6b8e754ea4bc56884b456d673e5af31a013d5
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48157991"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52518263"
 ---
 # <a name="cloud-adapter-for-sql-server"></a>Adattatore cloud per SQL Server
   Il servizio adattatore cloud viene creato durante il provisioning di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] in Macchine virtuali di Windows Azure. Il servizio Adattatore del cloud genera un certificato SSL autofirmato quando viene eseguito per la prima volta, quindi viene eseguito come account di **sistema locale** . Genera un file di configurazione utilizzato per autoconfigurarsi. L'adattatore cloud crea inoltre una regola di Windows Firewall per autorizzare le connessioni TCP in ingresso alla porta predefinita 11435.  
@@ -33,7 +33,7 @@ ms.locfileid: "48157991"
   
 -   Il servizio Web Adattatore del cloud viene eseguito come account di **sistema locale** e verifica le credenziali del client prima dell'esecuzione di qualsiasi attività. Le credenziali fornite dal client devono appartenere all'account utente che è un membro della classe locale **gli amministratori** gruppo nel computer remoto.  
   
--   L'adattatore cloud supporta solo l'autenticazione di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
+-   L'adattatore cloud supporta solo l'autenticazione di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] .  
   
 -   L'adattatore cloud utilizza l'account amministratore locale della macchina virtuale per eseguire i comandi nel computer locale e non un account amministratore di sistema.  
   
@@ -44,7 +44,7 @@ ms.locfileid: "48157991"
 ## <a name="cloud-adapter-configuration-settings"></a>Impostazioni di configurazione dell'adattatore cloud  
  Per modificare le impostazioni di un adattatore cloud, utilizzare le informazioni sulla configurazione dell'adattatore cloud riportate di seguito.  
   
--   **Percorso predefinito per il file di configurazione** : C:\Program Files\Microsoft SQL Server\120\Tools\CloudAdapter\  
+-   **Percorso predefinito per il file di configurazione** -C:\Program Files\Microsoft SQL Server\120\Tools\CloudAdapter\  
   
 -   **Parametri del file di configurazione** -  
   
@@ -62,9 +62,9 @@ ms.locfileid: "48157991"
   
     -   \</ Configuration >  
   
--   **Dettagli del certificato** : il certificato presenta i valori seguenti:  
+-   **Dettagli del certificato** -il certificato ha i valori seguenti:  
   
-    -   Oggetto: "CN = CloudAdapter\<VMName >, DC = SQL Server, DC = Microsoft"  
+    -   -Soggetto "CN = CloudAdapter\<VMName >, DC = SQL Server, DC = Microsoft"  
   
     -   Il certificato deve disporre di un solo utilizzo chiavi avanzato (EKU) nell'attributo Autenticazione server.  
   
@@ -72,7 +72,7 @@ ms.locfileid: "48157991"
   
  **Valori del file di configurazione**:  
   
-|Impostazione|Valori|Default|Commenti|  
+|Impostazione|Valori|Impostazione predefinita|Commenti|  
 |-------------|------------|-------------|--------------|  
 |WebServicePort|1-65535|11435|Se omesso, viene utilizzato 11435.|  
 |WebServiceCertificate|Thumbprint|Vuoto|Se vuoto, viene generato un nuovo certificato autofirmato.|  
@@ -81,11 +81,11 @@ ms.locfileid: "48157991"
 ## <a name="cloud-adapter-troubleshooting"></a>Risoluzione dei problemi dell'adattatore cloud  
  Per risolvere i problemi relativi all'adattatore cloud per [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], fare riferimento alle informazioni seguenti:  
   
--   **Gestione e registrazione degli errori** : gli errori e i messaggi di stato vengono scritti nel log eventi dell'applicazione.  
+-   **Errore di registrazione e gestione** -errori e messaggi di stato vengono scritti nel registro eventi applicazioni.  
   
--   **Traccia, Eventi** : tutti gli eventi vengono scritti nel log eventi dell'applicazione.  
+-   **Traccia, eventi** -tutti gli eventi vengono scritti nel registro eventi applicazioni.  
   
--   **Controllo, configurazione** : usare il file di configurazione che si trova: C:\Program Files\Microsoft SQL Server\120\Tools\CloudAdapter\\.  
+-   **Controllo, configurazione** -usare il file di configurazione che si trova:  C:\Program Files\Microsoft SQL Server\120\Tools\CloudAdapter\\.  
   
 |Errore|ID errore|Causa|Soluzione|  
 |-----------|--------------|-----------|----------------|  

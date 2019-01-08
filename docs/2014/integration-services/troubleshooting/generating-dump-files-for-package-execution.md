@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 61ef1731-cb3a-4afb-b4a4-059b04aeade0
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: cc56a469d6fb75f3d5a70fc323788ff726519474
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 00b75a698a372466dfe46d8997c730bb77ac2d1b
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48111980"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52799183"
 ---
 # <a name="generating-dump-files-for-package-execution"></a>Generazione di file di dump per l'esecuzione del pacchetto
   In [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]è possibile creare file di dump del debug contenenti informazioni sull'esecuzione di un pacchetto. Tramite le informazioni di questi file, è possibile risolvere i problemi di esecuzione dei pacchetti.  
@@ -26,7 +25,7 @@ ms.locfileid: "48111980"
   
  Quando si distribuisce un progetto al server [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] , è possibile creare file di dump in cui sono fornite informazioni sull'esecuzione dei pacchetti contenuti nel progetto. Al termine del processo ISServerExec.exe, vengono creati i file di dump. È possibile specificare che un file di dump venga creato quando si verificano errori durante l'esecuzione del pacchetto, selezionando l'opzione **Dump su errori** nella finestra di dialogo **Esegui pacchetto** . È inoltre possibile utilizzare le seguenti stored procedure:  
   
--   [catalog.set_execution_parameter_value &#40;database SSISDB&#41;](/sql/integration-services/system-stored-procedures/catalog-set-execution-parameter-value-ssisdb-database)  
+-   [catalog.set_execution_parameter_value &#40;SSISDB Database&#41;](/sql/integration-services/system-stored-procedures/catalog-set-execution-parameter-value-ssisdb-database)  
   
      Chiamare questa stored procedure per configurare la creazione di un file di dump quando si verifica qualsiasi errore o evento e quando si verificano eventi specifici, durante l'esecuzione di un pacchetto.  
   
@@ -47,11 +46,11 @@ ms.locfileid: "48111980"
   
  Nella tabella seguente sono descritte solo determinate sezioni del file con estensione tmp. Il file tmp include altri dati non riportati nella tabella.  
   
-|Tipo di informazione|Description|Esempio|  
+|Tipo di informazione|Descrizione|Esempio|  
 |-------------------------|-----------------|-------------|  
-|Ambiente|Versione del sistema operativo, dati di utilizzo della memoria, ID del processo e nome immagine del processo. Le informazioni sull'ambiente sono riportate all'inizio del file tmp.|# SSIS Textual Dump taken at 9/13/2007 1:50:34 PM<br /><br /> #PID 4120<br /><br /> #Image Name [C:\Program Files\Microsoft SQL Server\110\DTS\Binn\DTExec.exe]<br /><br /> # OS major=6 minor=0 build=6000<br /><br /> # Running on 2 amd64 processors under WOW64<br /><br /> # Memory: 58% in use. Physical: 845M/2044M  Paging: 2404M/4095M (avail/total)|  
-|Percorso e versione delle librerie a collegamento dinamico (DLL)|Percorso e numero di versione di ogni DLL caricata nel sistema durante l'elaborazione di un pacchetto.|# Loaded Module: c:\bb\Sql\DTS\src\bin\debug\i386\DTExec.exe (10.0.1069.5)<br /><br /> # Loaded Module: C:\Windows\SysWOW64\ntdll.dll (6.0.6000.16386)<br /><br /> # Loaded Module: C:\Windows\syswow64\kernel32.dll (6.0.6000.16386)|  
-|Messaggi recenti|Messaggi recenti emessi dal sistema. Sono inclusi l'ora, il tipo, la descrizione e l'ID thread di ogni messaggio.|[M:1]   Ring buffer entry:              (*pRecord)<br /><br /> [D:2]      <<\<CRingBufferLogging::RingBufferLoggingRecord>>> ( \@ 0282F1A8 )<br /><br /> [E:3]         Time Stamp: 2007-09-13 13:50:32.786      (szTimeStamp)<br /><br /> [E:3]         Thread ID: 2368           (ThreadID)<br /><br /> [E:3]         Event Name: OnError                        (EventName)<br /><br /> [E:3]         Source Name:                (SourceName)<br /><br /> [E:3]         Source ID:                        (SourceID)<br /><br /> [E:3]         Execution ID:                 (ExecutionGUID)<br /><br /> [E:3]         Data Code: -1073446879              (DataCode)<br /><br /> [E:3]         Descrizione: Componente mancante, non registrato, non aggiornabile oppure mancano interfacce necessarie. Informazioni di contatto per il componente: "".|  
+|Ambiente|Versione del sistema operativo, dati di utilizzo della memoria, ID del processo e nome immagine del processo. Le informazioni sull'ambiente sono riportate all'inizio del file tmp.|# SSIS Textual Dump taken at 9/13/2007 1:50:34 PM<br /><br /> #PID 4120<br /><br /> #Image Name [C:\Program Files\Microsoft SQL Server\110\DTS\Binn\DTExec.exe]<br /><br /> # OS major=6 minor=0 build=6000<br /><br /> # Running on 2 amd64 processors under WOW64<br /><br /> # Memoria: % 58 in uso. Fisica: Paging 845M / 2044M: 2404M / 4095M (Disp/totali)|  
+|Percorso e versione delle librerie a collegamento dinamico (DLL)|Percorso e numero di versione di ogni DLL caricata nel sistema durante l'elaborazione di un pacchetto.|# Loaded Module: c:\bb\Sql\DTS\src\bin\debug\i386\DTExec.exe (10.0.1069.5)<br /><br /> # Modulo caricato: C:\Windows\SysWOW64\ntdll.dll (6.0.6000.16386)<br /><br /> # Modulo caricato: C:\Windows\syswow64\kernel32.dll (6.0.6000.16386)|  
+|Messaggi recenti|Messaggi recenti emessi dal sistema. Sono inclusi l'ora, il tipo, la descrizione e l'ID thread di ogni messaggio.|[M:1]   Ring buffer entry:              (*pRecord)<br /><br /> [D:2]      <<\<CRingBufferLogging::RingBufferLoggingRecord>>> ( \@ 0282F1A8 )<br /><br /> [E:3]         Data / ora: 13:50:32.786 2007-09-13 (szTimeStamp)<br /><br /> [E:3]         ID thread: 2368 (ThreadID)<br /><br /> [E:3]         Nome evento: OnError (EventName)<br /><br /> [E:3]         Nome origine:                (SourceName)<br /><br /> [E:3]         ID origine:                        (SourceID=%2)<br /><br /> [E:3]         ID esecuzione:                 (ExecutionGUID)<br /><br /> [E:3]         Data Code: -1073446879              (DataCode)<br /><br /> [E:3]         Descrizione: Componente mancante, non registrato, non aggiornabile oppure mancano interfacce necessarie. Informazioni di contatto per il componente: "".|  
   
 ## <a name="related-content"></a>Contenuto correlato  
  [Finestra di dialogo Esecuzione pacchetto](../execute-package-dialog-box.md)  

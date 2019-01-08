@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 helpviewer_keywords:
 - Oracle publishing [SQL Server replication], data type mapping
@@ -15,12 +14,12 @@ ms.assetid: 6da0e4f4-f252-4b7e-ba60-d2e912aa278e
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 46eb3d71eb1c8ec7793cc2be798ef4e774dd9595
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 463dd08cfa9434396a1afea1e4851549f16496cc
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48194741"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52786653"
 ---
 # <a name="data-type-mapping-for-oracle-publishers"></a>Mapping dei tipi di dati per i server di pubblicazione Oracle
   I tipi di dati Oracle e i tipi di dati [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] non sempre corrispondono in modo preciso. Se possibile, durante la pubblicazione di una tabella Oracle viene selezionato automaticamente il tipo di dati corrispondente. Nei casi in cui il mapping di un singolo tipo di dati non risulti chiaro, vengono forniti mapping di tipi di dati alternativi. Per informazioni sulla selezione di mapping alternativi, vedere la sezione "Specifica di mapping di tipi di dati alternativi" più avanti in questo argomento.  
@@ -29,36 +28,36 @@ ms.locfileid: "48194741"
   
 |Tipo di dati Oracle|Tipo di dati di SQL Server|Alternativi|  
 |----------------------|--------------------------|------------------|  
-|BFILE|VARBINARY(MAX)|Sì|  
-|BLOB|VARBINARY(MAX)|Sì|  
-|CHAR([1-2000])|CHAR([1-2000])|Sì|  
-|CLOB|VARCHAR(MAX)|Sì|  
-|DATE|DATETIME|Sì|  
-|FLOAT|FLOAT|no|  
-|FLOAT([1-53])|FLOAT([1-53])|no|  
-|FLOAT([54-126])|FLOAT|no|  
-|INT|NUMERIC(38)|Sì|  
-|INTERVAL|DATETIME|Sì|  
-|LONG|VARCHAR(MAX)|Sì|  
-|LONG RAW|IMAGE|Sì|  
-|NCHAR([1-1000])|NCHAR([1-1000])|no|  
-|NCLOB|NVARCHAR(MAX)|Sì|  
-|NUMBER|FLOAT|Sì|  
-|NUMBER([1-38])|NUMERIC([1-38])|no|  
-|NUMBER([0-38],[1-38])|NUMERIC([0-38],[1-38])|Sì|  
-|NVARCHAR2([1-2000])|NVARCHAR([1-2000])|no|  
-|RAW([1-2000])|VARBINARY([1-2000])|no|  
-|real|FLOAT|no|  
-|ROWID|CHAR(18)|no|  
-|TIMESTAMP|DATETIME|Sì|  
-|TIMESTAMP(0-7)|DATETIME|Sì|  
-|TIMESTAMP(8-9)|DATETIME|Sì|  
-|TIMESTAMP(0-7) WITH TIME ZONE|VARCHAR(37)|Sì|  
-|TIMESTAMP(8-9) WITH TIME ZONE|VARCHAR(37)|no|  
-|TIMESTAMP(0-7) WITH LOCAL TIME ZONE|VARCHAR(37)|Sì|  
-|TIMESTAMP(8-9) WITH LOCAL TIME ZONE|VARCHAR(37)|no|  
-|UROWID|CHAR(18)|no|  
-|VARCHAR2([1-4000])|VARCHAR([1-4000])|Sì|  
+|BFILE|VARBINARY(MAX)|Yes|  
+|BLOB|VARBINARY(MAX)|Yes|  
+|CHAR([1-2000])|CHAR([1-2000])|Yes|  
+|CLOB|VARCHAR(MAX)|Yes|  
+|DATE|DATETIME|Yes|  
+|FLOAT|FLOAT|No|  
+|FLOAT([1-53])|FLOAT([1-53])|No|  
+|FLOAT([54-126])|FLOAT|No|  
+|INT|NUMERIC(38)|Yes|  
+|INTERVAL|DATETIME|Yes|  
+|LONG|VARCHAR(MAX)|Yes|  
+|LONG RAW|IMAGE|Yes|  
+|NCHAR([1-1000])|NCHAR([1-1000])|No|  
+|NCLOB|NVARCHAR(MAX)|Yes|  
+|NUMBER|FLOAT|Yes|  
+|NUMBER([1-38])|NUMERIC([1-38])|No|  
+|NUMBER([0-38],[1-38])|NUMERIC([0-38],[1-38])|Yes|  
+|NVARCHAR2([1-2000])|NVARCHAR([1-2000])|No|  
+|RAW([1-2000])|VARBINARY([1-2000])|No|  
+|real|FLOAT|No|  
+|ROWID|CHAR(18)|No|  
+|timestamp|DATETIME|Yes|  
+|TIMESTAMP(0-7)|DATETIME|Yes|  
+|TIMESTAMP(8-9)|DATETIME|Yes|  
+|TIMESTAMP(0-7) WITH TIME ZONE|VARCHAR(37)|Yes|  
+|TIMESTAMP(8-9) WITH TIME ZONE|VARCHAR(37)|No|  
+|TIMESTAMP(0-7) WITH LOCAL TIME ZONE|VARCHAR(37)|Yes|  
+|TIMESTAMP(8-9) WITH LOCAL TIME ZONE|VARCHAR(37)|No|  
+|UROWID|CHAR(18)|No|  
+|VARCHAR2([1-4000])|VARCHAR([1-4000])|Yes|  
   
 ## <a name="considerations-for-data-type-mapping"></a>Considerazioni sul mapping dei tipi di dati  
  Durante la replica di dati da un database Oracle, è opportuno considerare i problemi relativi ai tipi di dati riportati di seguito.  
@@ -82,7 +81,7 @@ ms.locfileid: "48194741"
 ### <a name="float-and-number-types"></a>Tipi FLOAT e NUMBER  
  La scala e la precisione specificate durante il mapping dei tipi di dati FLOAT e NUMBER dipende dalla scala e dalla precisione specificate per la colonna che utilizza il tipo di dati nel database Oracle. La precisione è il numero di cifre in un numero. La scala è il numero di cifre a destra della virgola decimale in un numero. Il numero 123,45, ad esempio, ha una precisione di 5 e una scala di 2.  
   
- In Oracle è possibile definire i numeri con una scala maggiore della precisione, ad esempio NUMBER(4,5), mentre in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] la precisione deve essere uguale o maggiore della scala. Per garantire che i dati non vengano troncati, se la scala è maggiore della precisione nel server di pubblicazione Oracle, la precisione viene impostata su un valore uguale a quello della scala quando si esegue il mapping del tipo di dati. Il mapping di NUMBER(4,5) sarebbe NUMERIC(5,5).  
+ In Oracle è possibile definire i numeri con una scala maggiore della precisione, ad esempio NUMBER(4,5), mentre in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] la precisione deve essere uguale o maggiore della scala. Per assicurare che non vi è alcun troncamento dei dati, se la scala è maggiore della precisione nel server di pubblicazione Oracle, la precisione viene impostata la scalabilità quando viene eseguito il mapping al tipo di dati: Number(4,5) sarebbe numeric(5,5.  
   
 > [!NOTE]  
 >  Se non si specifica una scala e una precisione per NUMBER, in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] vengono automaticamente utilizzate la scala massima (8) e la precisione massima (38). Per migliorare le prestazioni e le operazioni di archiviazione durante la replica dei dati, è consigliabile impostare una scala e una precisione specifiche in Oracle.  

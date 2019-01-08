@@ -18,12 +18,12 @@ ms.assetid: 32187282-1385-4c52-9134-09f061eb44f5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 1e20a7ebdffc8972a1c3d1449fd65d2560a1d71b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 323ea04d32501f04156ffa81452fad5e5cf86664
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48145241"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52753083"
 ---
 # <a name="bcpcontrol"></a>bcp_control
   Modifica le impostazioni predefinite per vari parametri di controllo per una copia bulk tra un file e [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
@@ -68,7 +68,7 @@ iValue
  BCPFILECP  
  *iValue* contiene il numero della tabella codici del file di dati. È possibile specificare il numero della tabella codici, ad esempio 1252 o 850, o uno dei valori indicati di seguito:  
   
- BCPFILE_ACP: i dati contenuti nel file utilizzano la tabella codici di Microsoft Windows® del client.  
+ BCPFILE_ACP: i dati nel file sono in Windows di Microsoft? tabella codici del client.  
   
  BCPFILE_OEMCP: i dati contenuti nel file utilizzano la tabella codici OEM del client (impostazione predefinita).  
   

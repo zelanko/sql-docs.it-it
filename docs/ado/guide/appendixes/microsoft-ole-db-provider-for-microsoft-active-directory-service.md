@@ -16,12 +16,12 @@ ms.assetid: f9e81452-5675-4cfc-9949-cfbd2fe57534
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 16ece0ae1eee2ed1cc944504af87a74609cba0fe
-ms.sourcegitcommit: 96b2355d54dfad259826e88bdff91cc9344e16f2
+ms.openlocfilehash: 25a076118df9f85ff2449c35dc0273db8a499fac
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51350445"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52538163"
 ---
 # <a name="microsoft-ole-db-provider-for-microsoft-active-directory-service"></a>Provider Microsoft OLE DB per il servizio Microsoft Active Directory
 Il Provider di Active Directory Service Interfaces (ADSI) consente di ADO per connettersi ai servizi eterogenei directory tramite ADSI. In questo modo le applicazioni ADO accesso in lettura per i servizi directory di Microsoft Windows NT 4.0 e Microsoft Windows 2000, oltre a qualsiasi servizio di directory compatibile con LDAP e Novell Directory Services. ADSI è basato su un modello di provider, in modo che se è presente un nuovo provider concedere l'accesso a un'altra directory, l'applicazione ADO sarà in grado di accedervi facilmente. Il provider ADSI è a thread libero e abilitata per Unicode.  
@@ -44,7 +44,7 @@ ADSDSOObject
   
  La stringa è costituito da parole chiave seguenti.  
   
-|Parola chiave|Description|  
+|Parola chiave|Descrizione|  
 |-------------|-----------------|  
 |**Provider**|Specifica il Provider OLE DB per il servizio Active Directory.|  
 |**ID utente**|Specifica il nome utente. Se questa parola chiave viene omesso, viene usato l'account di accesso corrente.|  
@@ -60,20 +60,20 @@ ADSDSOObject
 "Root; Filter; Attributes[; Scope]"  
 ```  
   
-|valore|Description|  
+|Value|Descrizione|  
 |-----------|-----------------|  
 |*Root*|Indica la **ADsPath** oggetto da cui iniziare la ricerca (vale a dire, la radice della ricerca).|  
 |*Filter*|Indica il filtro di ricerca nel formato RFC 1960.|  
 |*Attributi*|Indica un elenco delimitato da virgole di attributi da restituire.|  
-|*Ambito*|Facoltativo. Oggetto **stringa** che specifica l'ambito della ricerca. I possibili valori sono i seguenti:<br /><br /> -Base, ovvero La ricerca solo l'oggetto di base (radice della ricerca).<br />-UnLivello, Cercare un solo livello.<br />-Sottoalbero, Eseguire una ricerca nell'intero sottoalbero.|  
+|*Ambito*|Facoltativo. Oggetto **stringa** che specifica l'ambito della ricerca. I possibili valori sono i seguenti:<br /><br /> -Base - eseguire la ricerca solo l'oggetto di base (radice della ricerca).<br />-UnLivello - ricerca di un solo livello.<br />-Sottoalbero, eseguire una ricerca nell'intero sottoalbero.|  
   
- Esempio:  
+ Ad esempio:  
   
 ```vb
 "<LDAP://DC=ArcadiaBay,DC=COM>;(objectClass=*);sn, givenName; subtree"  
 ```  
   
- Il provider supporta anche SQL SELECT per il testo del comando. Esempio:  
+ Il provider supporta anche SQL SELECT per il testo del comando. Ad esempio:  
   
 ```vb
 "SELECT title, telephoneNumber From 'LDAP://DC=Microsoft, DC=COM' WHERE   
@@ -110,33 +110,33 @@ objectClass='user' AND objectCategory='Person'"
 |[PageSize](../../../ado/reference/ado-api/pagesize-property-ado.md)|lettura/scrittura|  
 |[RecordCount](../../../ado/reference/ado-api/recordcount-property-ado.md)|Sola lettura|  
 |[Origine](../../../ado/reference/ado-api/source-property-ado-recordset.md)|lettura/scrittura|  
-|[State](../../../ado/reference/ado-api/state-property-ado.md)|Sola lettura|  
+|[Stato](../../../ado/reference/ado-api/state-property-ado.md)|Sola lettura|  
 |[Stato](../../../ado/reference/ado-api/status-property-ado-recordset.md)|Sola lettura|  
   
  **Disponibilità di metodi di Recordset ADO standard:**  
   
 |Metodo|Disponibile?|  
 |------------|----------------|  
-|[AddNew](../../../ado/reference/ado-api/addnew-method-ado.md)|no|  
-|[Annulla](../../../ado/reference/ado-api/cancel-method-ado.md)|no|  
-|[CancelBatch](../../../ado/reference/ado-api/cancelbatch-method-ado.md)|no|  
-|[CancelUpdate](../../../ado/reference/ado-api/cancelupdate-method-ado.md)|no|  
-|[Clone](../../../ado/reference/ado-api/clone-method-ado.md)|Sì|  
-|[Chiudi](../../../ado/reference/ado-api/close-method-ado.md)|Sì|  
-|[Elimina](../../../ado/reference/ado-api/delete-method-ado-recordset.md)|no|  
-|[Metodo GetRows](../../../ado/reference/ado-api/getrows-method-ado.md)|Sì|  
-|[Sposta](../../../ado/reference/ado-api/move-method-ado.md)|Sì|  
-|[MoveFirst](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)|Sì|  
-|[MoveLast](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)|Sì|  
-|[Metodo MoveNext](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)|Sì|  
-|[MovePrevious](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)|Sì|  
-|[NextRecordset](../../../ado/reference/ado-api/nextrecordset-method-ado.md)|Sì|  
-|[Aprire](../../../ado/reference/ado-api/open-method-ado-recordset.md)|Sì|  
-|[Rieseguire una query](../../../ado/reference/ado-api/requery-method.md)|Sì|  
-|[Risincronizzazione](../../../ado/reference/ado-api/resync-method.md)|Sì|  
-|[Supporti](../../../ado/reference/ado-api/supports-method.md)|Sì|  
-|[Update](../../../ado/reference/ado-api/update-method.md)|no|  
-|[Metodo UpdateBatch](../../../ado/reference/ado-api/updatebatch-method.md)|no|  
+|[AddNew](../../../ado/reference/ado-api/addnew-method-ado.md)|No|  
+|[Annulla](../../../ado/reference/ado-api/cancel-method-ado.md)|No|  
+|[CancelBatch](../../../ado/reference/ado-api/cancelbatch-method-ado.md)|No|  
+|[CancelUpdate](../../../ado/reference/ado-api/cancelupdate-method-ado.md)|No|  
+|[Clone](../../../ado/reference/ado-api/clone-method-ado.md)|Yes|  
+|[Chiudi](../../../ado/reference/ado-api/close-method-ado.md)|Yes|  
+|[Elimina](../../../ado/reference/ado-api/delete-method-ado-recordset.md)|No|  
+|[Metodo GetRows](../../../ado/reference/ado-api/getrows-method-ado.md)|Yes|  
+|[Sposta](../../../ado/reference/ado-api/move-method-ado.md)|Yes|  
+|[MoveFirst](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)|Yes|  
+|[MoveLast](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)|Yes|  
+|[Metodo MoveNext](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)|Yes|  
+|[MovePrevious](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)|Yes|  
+|[NextRecordset](../../../ado/reference/ado-api/nextrecordset-method-ado.md)|Yes|  
+|[Aprire](../../../ado/reference/ado-api/open-method-ado-recordset.md)|Yes|  
+|[Rieseguire una query](../../../ado/reference/ado-api/requery-method.md)|Yes|  
+|[Risincronizzazione](../../../ado/reference/ado-api/resync-method.md)|Yes|  
+|[Supporti](../../../ado/reference/ado-api/supports-method.md)|Yes|  
+|[Update](../../../ado/reference/ado-api/update-method.md)|No|  
+|[Metodo UpdateBatch](../../../ado/reference/ado-api/updatebatch-method.md)|No|  
   
  Per altre informazioni su ADSI e le specifiche del provider, consultare la documentazione di Active Directory Service Interfaces o visitare la pagina Web ADSI.  
   

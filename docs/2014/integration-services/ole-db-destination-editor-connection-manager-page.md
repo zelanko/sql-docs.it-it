@@ -15,12 +15,12 @@ ms.assetid: ae2200c6-8ba0-49b7-b01a-53425b84d2ed
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 5db99f475b1fc1a71d36f8643dea56f99d00d0b9
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 7688f3979f935b6d461c47fe2747eb7718835f01
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48188341"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52504704"
 ---
 # <a name="ole-db-destination-editor-connection-manager-page"></a>Editor destinazione OLE DB (pagina Gestione connessione)
   Usare la pagina **Gestione connessione** della finestra di dialogo **Editor destinazione OLE DB** per selezionare la connessione OLE DB per la destinazione. Tramite questa pagina è inoltre possibile selezionare una tabella o una vista del database.  
@@ -40,11 +40,11 @@ ms.locfileid: "48188341"
  **Modalità di accesso ai dati**  
  Consente di specificare il metodo di caricamento dei dati nella destinazione. Per i dati DBCS (Double-Byte Character Set) è necessario utilizzare una delle opzioni di caricamento rapido. Per altre informazioni sulle modalità di accesso ai dati con caricamento rapido, ottimizzate per gli inserimenti bulk, vedere [Destinazione OLE DB](data-flow/ole-db-destination.md).  
   
-|Opzione|Description|  
+|Opzione|Descrizione|  
 |------------|-----------------|  
 |Tabella o vista|Consente di caricare i dati in una tabella o vista nella destinazione OLE DB.|  
 |Tabella o vista - Caricamento rapido|Consente di caricare i dati in una tabella o vista nella destinazione OLE DB e di utilizzare l'opzione di caricamento rapido. Per altre informazioni sulle modalità di accesso ai dati con caricamento rapido, ottimizzate per gli inserimenti bulk, vedere [Destinazione OLE DB](data-flow/ole-db-destination.md).|  
-|Variabile nome vista o nome tabella|Consente di specificare il nome della vista o della tabella in una variabile.<br /><br /> **Informazioni correlate**: [Utilizzo di variabili nei pacchetti](../../2014/integration-services/use-variables-in-packages.md)|  
+|Variabile nome vista o nome tabella|Consente di specificare il nome della vista o della tabella in una variabile.<br /><br /> **Le informazioni correlate**: [Uso di variabili nei pacchetti](../../2014/integration-services/use-variables-in-packages.md)|  
 |Variabile nome vista o nome tabella - Caricamento rapido|Consente di specificare il nome della vista o della tabella in una variabile e di caricare i dati utilizzando l'opzione di caricamento rapido. Per altre informazioni sulle modalità di accesso ai dati con caricamento rapido, ottimizzate per gli inserimenti bulk, vedere [Destinazione OLE DB](data-flow/ole-db-destination.md).|  
 |Comando SQL|Consente di caricare i dati nella destinazione OLE DB utilizzando una query SQL.|  
   
@@ -64,7 +64,7 @@ ms.locfileid: "48188341"
 > [!NOTE]  
 >  Quando si fa clic su **Nuova**, [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] genera un'istruzione CREATE TABLE predefinita basata sull'origine dati connessa. Questa istruzione CREATE TABLE predefinita non includerà l'attributo FILESTREAM anche se la tabella di origine include una colonna con l'attributo FILESTREAM dichiarato. Per eseguire un componente [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] con l'attributo FILESTREAM, implementare innanzitutto l'archiviazione di FILESTREAM nel database di destinazione. Aggiungere quindi l'attributo FILESTREAM all'istruzione CREATE TABLE nella finestra di dialogo **Crea tabella**. Per altre informazioni, vedere [Dati BLOB &#40;Binary Large Object&#41; &#40;SQL Server&#41;](../relational-databases/blob/binary-large-object-blob-data-sql-server.md).  
   
-### <a name="data-access-mode--table-or-view--fast-load"></a>Modalità di accesso ai dati = Tabella o vista - Caricamento rapido  
+### <a name="data-access-mode--table-or-view---fast-load"></a>Modalità di accesso ai dati = Tabella o vista - Caricamento rapido  
  **Nome tabella o vista**  
  Consente di selezionare una tabella o vista del database nell'elenco o di creare una nuova tabella facendo clic su **Nuova**.  
   
@@ -107,7 +107,7 @@ ms.locfileid: "48188341"
  **Nome variabile**  
  Consente di selezionare la variabile che contiene il nome della tabella o vista.  
   
-### <a name="data-access-mode--table-name-or-view-name-variable--fast-load"></a>Modalità di accesso ai dati = Variabile nome vista o nome tabella - Caricamento rapido  
+### <a name="data-access-mode--table-name-or-view-name-variable---fast-load"></a>Modalità di accesso ai dati = Variabile nome vista o nome tabella - Caricamento rapido  
  **Nome variabile**  
  Consente di selezionare la variabile che contiene il nome della tabella o vista.  
   
@@ -158,9 +158,9 @@ ms.locfileid: "48188341"
  Consente di verificare la sintassi del testo della query.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Riferimento ai messaggi e agli errori di Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [Editor destinazione OLE DB &#40;pagina mapping&#41;](../../2014/integration-services/ole-db-destination-editor-mappings-page.md)   
- [Editor destinazione OLE DB &#40;pagina dell'Output degli errori&#41;](../../2014/integration-services/ole-db-destination-editor-error-output-page.md)   
- [Caricare dati tramite la destinazione OLE DB](data-flow/load-data-by-using-the-ole-db-destination.md)  
+ [Guida di riferimento ai messaggi e agli errori di Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
+ [Editor destinazione OLE DB &#40;pagina Mapping&#41;](../../2014/integration-services/ole-db-destination-editor-mappings-page.md)   
+ [Editor destinazione OLE DB &#40;pagina Output degli errori&#41;](../../2014/integration-services/ole-db-destination-editor-error-output-page.md)   
+ [Caricamento dei dati tramite la destinazione OLE DB](data-flow/load-data-by-using-the-ole-db-destination.md)  
   
   

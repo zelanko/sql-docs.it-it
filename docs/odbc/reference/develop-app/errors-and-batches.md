@@ -17,15 +17,15 @@ ms.assetid: 6debd41d-9f4c-4f4c-a44b-2993da5306f0
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 61effe29811cc7a8f6e23cbea127b2f757cc7b0c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 97179574407dca56026f9d5216e4978069cffc1e
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47645939"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52527335"
 ---
 # <a name="errors-and-batches"></a>Errori e batch
-Quando si verifica un errore durante l'esecuzione di un batch di istruzioni SQL, uno dei seguenti quattro risultati sono possibili. (Ogni possibile risultato è specifico dell'origine dati e potrebbe dipendere anche le istruzioni incluse nel batch).  
+Quando si verifica un errore durante l'esecuzione di un batch di istruzioni SQL, uno dei seguenti quattro risultati sono possibili. (Ogni risultato possibili è specifiche dell'origine dati e potrebbe dipendere anche le istruzioni incluse nel batch).  
   
 -   Viene eseguita alcuna istruzione nel batch.  
   

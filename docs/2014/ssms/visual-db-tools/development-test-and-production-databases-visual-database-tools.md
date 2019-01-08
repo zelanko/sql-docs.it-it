@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
 - production databases [SQL Server]
@@ -14,12 +14,12 @@ ms.assetid: cb403330-8cbe-41c6-bd23-bc432d50f173
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 7c4266ccc99aeb49eed2000edd3eff50099db82e
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 13ec879395358536485fb0d80e7ab1a2a19d4823
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48161621"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52818693"
 ---
 # <a name="development-test-and-production-databases-visual-database-tools"></a>Database di sviluppo, verifica e produzione (Visual Database Tools)
   Se si dispone di due database con la stessa struttura, è possibile apportare alcune modifiche in uno di essi e propagarle nell'altro. Se, ad esempio, si utilizzano un database di sviluppo personale e un database di verifica condiviso dall'intero gruppo di lavoro, è possibile modificare il database di sviluppo e propagare le modifiche al database di verifica.  

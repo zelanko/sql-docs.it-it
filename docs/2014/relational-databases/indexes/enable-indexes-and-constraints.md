@@ -17,12 +17,12 @@ ms.assetid: c55c8865-322e-4ab0-ba04-ea1f56735353
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 0f9f0130c90796efa8bc12f663fbe3ad32f19413
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 7d68f329aecdd1284bac311db4139470bba55e41
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48152621"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52533139"
 ---
 # <a name="enable-indexes-and-constraints"></a>Abilitazione di indici e vincoli
   In questo argomento si descrive come abilitare un indice disabilitato in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] tramite [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)]. Dopo la disabilitazione, un indice rimane nello stato disabilitato finché non viene ricompilato o rimosso.  
@@ -33,7 +33,7 @@ ms.locfileid: "48152621"
   
      [Limitazioni e restrizioni](#Restrictions)  
   
-     [Security](#Security)  
+     [Sicurezza](#Security)  
   
 -   **Per abilitare un indice disabilitato utilizzando:**  
   
@@ -51,7 +51,7 @@ ms.locfileid: "48152621"
   
 -   Se l'indice cluster è abilitato o disabilitato e l'indice non cluster è disabilitato, l'operazione sull'indice cluster ha l'effetto seguente sull'indice non cluster disabilitato.  
   
-    |Operazione sull'indice cluster|Indice non cluster disabilitato|  
+    |Operazione sull'indice cluster|Indice non cluster disabilitato...|  
     |----------------------------|-----------------------------------|  
     |ALTER INDEX REBUILD.|Rimane disabilitato.|  
     |ALTER INDEX ALL REBUILD.|Viene ricompilato e abilitato.|  
@@ -103,7 +103,7 @@ ms.locfileid: "48152621"
   
  Le informazioni seguenti sono disponibili nella finestra di dialogo **Ricompila indici** :  
   
-##  <a name="TsqlProcedure"></a> Uso di Transact-SQL  
+##  <a name="TsqlProcedure"></a> Utilizzo di Transact-SQL  
   
 #### <a name="to-enable-a-disabled-index-using-alter-index"></a>Per abilitare un indice disabilitato utilizzando ALTER INDEX  
   

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: configuration
 ms.topic: conceptual
 f1_keywords:
 - sql12.swb.serverproperties.security.f1
@@ -13,12 +12,12 @@ ms.assetid: b8a131c7-e7bd-4203-bf26-234f1ebfe622
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: eb9d19b96350ebfc9eb2f3e047866c272e8d1e35
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 3a42d496a59f489238d270fcb6bb17f3e1ff6421
+ms.sourcegitcommit: 04dd0620202287869b23cc2fde998a18d3200c66
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48195271"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "52639449"
 ---
 # <a name="server-properties-security-page"></a>Proprietà server (pagina sicurezza)
   Utilizzare questa pagina per visualizzare o modificare le opzioni di sicurezza del server.  
@@ -37,7 +36,7 @@ ms.locfileid: "48195271"
 >  la modifica della configurazione di sicurezza richiede il riavvio del servizio. Quando si passa dall'autenticazione server a SQL Server e all'autenticazione di Windows, l'account SA non viene abilitato automaticamente. Per usare l'account SA, eseguire [ALTER LOGIN](/sql/t-sql/statements/alter-login-transact-sql) con l'opzione ENABLE.  
   
 ## <a name="login-auditing"></a>Controllo accessi  
- **Nessuno**  
+ **None**  
  Consente di disattivare il controllo degli accessi.  
   
  **Solo accessi non riusciti**  

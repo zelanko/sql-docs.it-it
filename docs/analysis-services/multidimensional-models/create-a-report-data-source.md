@@ -1,5 +1,5 @@
 ---
-title: Creare un'origine dati Report | Documenti Microsoft
+title: Creare un'origine dati Report | Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: bf4b8048392121c37b6f4f13584aa2fd18a90984
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: b6e811f9114a484f7b0b68ca9782b9b60e366383
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34026968"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52393324"
 ---
 # <a name="create-a-report-data-source"></a>Creare un'origine dati per il report
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -50,14 +50,14 @@ ms.locfileid: "34026968"
   
 5.  In **Stringa di connessione**, specificare il nome del server Analysis Services, il nome del database, il nome del cubo e le impostazioni facoltative.  
   
-     Stringa di connessione: `Data source=<servername>;initial catalog=<multidimensionaldatabasename>-ee;cube='<cubename>’`  
+     Stringa di connessione: `Data source=<servername>;initial catalog=<multidimensionaldatabasename>-ee;cube='<cubename>'`  
   
     > [!NOTE]  
     >  Se è presente più di un cubo, è necessario specificare il nome di un cubo.  
   
-     (Facoltativo) I cubi possono avere prospettive che forniscono agli utenti una vista di selezione in cui sono visibili solo determinate dimensioni e/o gruppi di misure nel client. Per specificare una prospettiva, immettere il nome di prospettiva come valore per la proprietà Cube: `Data source=<servername>;initial catalog=<multidimensionaldatabasename>-ee;cube='<perspectivename>’`  
+     (Facoltativo) I cubi possono avere prospettive che forniscono agli utenti una vista di selezione in cui sono visibili solo determinate dimensioni e/o gruppi di misure nel client. Per specificare una prospettiva, immettere il nome di prospettiva come valore per la proprietà Cube: `Data source=<servername>;initial catalog=<multidimensionaldatabasename>-ee;cube='<perspectivename>'`  
   
-     (Facoltativo) I cubi possono presentare metadati e traduzioni di dati specificati per varie lingue all'interno del modello. Per visualizzare le traduzioni (dati e metadati), è necessario aggiungere la proprietà "Locale Identifier" alla stringa di connessione: `Data source=<servername>;initial catalog=<multidimensionaldatabasename>-ee;cube='<cubename>’; Locale Identifier=<identifier number>`  
+     (Facoltativo) I cubi possono presentare metadati e traduzioni di dati specificati per varie lingue all'interno del modello. Per visualizzare le traduzioni (dati e metadati) è necessario aggiungere la proprietà "Locale Identifier" alla stringa di connessione: `Data source=<servername>;initial catalog=<multidimensionaldatabasename>-ee;cube='<cubename>'; Locale Identifier=<identifier number>`  
   
 6.  In **Credenziali**specificare la modalità con cui il server di report ottiene le credenziali per l'accesso all'origine dati esterna.  
   

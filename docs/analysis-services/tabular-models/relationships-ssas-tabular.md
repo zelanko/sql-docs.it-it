@@ -1,5 +1,5 @@
 ---
-title: Relazioni | Documenti Microsoft
+title: Relazioni nei modelli tabulari di Analysis Services | Microsoft Docs
 ms.date: 05/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: b704b7e2fdc299006d77e08314d2b16ffd750a0a
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 6314331be3a844b86ff8790c8c38abb4c0d3758e
+ms.sourcegitcommit: 8a64c59c5d84150659a015e54f8937673cab87a0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34045305"
+ms.lasthandoff: 12/08/2018
+ms.locfileid: "53072528"
 ---
 # <a name="relationships"></a>Relazioni 
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
@@ -31,17 +31,17 @@ ms.locfileid: "34045305"
 ##  <a name="what"></a> Vantaggi  
  Una relazione è una connessione tra due tabelle di dati, in base a una o più colonne in ogni tabella. Per capire perché le relazioni sono utili, provare a immaginare di tenere traccia degli ordini di un cliente della propria azienda. È possibile tenere traccia di tutti i dati in un'unica tabella che dispone di una struttura simile alla seguente:  
   
-|CustomerID|Nome|EMail|DiscountRate|OrderID|OrderDate|Product|Quantity|  
+|CustomerID|nome|EMail|DiscountRate|OrderID|OrderDate|Prodotto|Quantity|  
 |----------------|----------|-----------|------------------|-------------|---------------|-------------|--------------|  
 |1|Ashton|chris.ashton@contoso.com|.05|256|07/01/2010|Compact Digital|11|  
-|1|Ashton|chris.ashton@contoso.com|.05|255|2010-01-03|SLR Camera|15|  
+|1|Ashton|chris.ashton@contoso.com|.05|255|03/01/2010|SLR Camera|15|  
 |2|Jaworski|michal.jaworski@contoso.com|0,10|254|03/01/2010|Budget Movie-Maker|27|  
   
- Questo approccio può funzionare, tuttavia comporta l'archiviazione di molti dati ridondanti, ad esempio l'indirizzo di posta elettronica del cliente per ogni ordine. L'archiviazione è economica ma è necessario assicurarsi di aggiornare ogni riga relativa al cliente nel caso in cui l'indirizzo di posta elettronica cambi. Una soluzione a questo problema è suddividere i dati in più tabelle e definire relazioni tra tali tabelle. Si tratta dell'approccio utilizzato *database relazionali* come SQL Server. Ad esempio, un database importato in un modello potrebbe rappresentare i dati dell'ordine tramite tre tabelle correlate:  
+ Questo approccio può funzionare, tuttavia comporta l'archiviazione di molti dati ridondanti, ad esempio l'indirizzo di posta elettronica del cliente per ogni ordine. L'archiviazione è economica ma è necessario assicurarsi di aggiornare ogni riga relativa al cliente nel caso in cui l'indirizzo di posta elettronica cambi. Una soluzione a questo problema è suddividere i dati in più tabelle e definire relazioni tra tali tabelle. Questo è l'approccio usato nel *database relazionali* , ad esempio SQL Server. Ad esempio, un database importato in un modello potrebbe rappresentare i dati dell'ordine tramite tre tabelle correlate:  
   
 ### <a name="customers"></a>Customers  
   
-|[CustomerID]|Nome|EMail|  
+|[CustomerID]|nome|EMail|  
 |--------------------|----------|-----------|  
 |1|Ashton|chris.ashton@contoso.com|  
 |2|Jaworski|michal.jaworski@contoso.com|  
@@ -55,10 +55,10 @@ ms.locfileid: "34045305"
   
 ### <a name="orders"></a>Orders  
   
-|[CustomerID]|OrderID|OrderDate|Product|Quantity|  
+|[CustomerID]|OrderID|OrderDate|Prodotto|Quantity|  
 |--------------------|-------------|---------------|-------------|--------------|  
 |1|256|07/01/2010|Compact Digital|11|  
-|1|255|2010-01-03|SLR Camera|15|  
+|1|255|03/01/2010|SLR Camera|15|  
 |2|254|03/01/2010|Budget Movie-Maker|27|  
   
  Se si importano tali tabelle dallo stesso database, l'Importazione guidata tabella consente di rilevare le relazioni tra le tabelle in base alle colonne tra [parentesi] e di riprodurre tali relazioni in Progettazione modelli. Per altre informazioni, vedere [Inferenza e rilevamento automatici delle relazioni](#detection) in questo argomento. Se si importano tabelle da più origini, è possibile creare manualmente relazioni come descritto in [creare una relazione tra due tabelle](../../analysis-services/tabular-models/create-a-relationship-between-two-tables-ssas-tabular.md).  
@@ -97,7 +97,7 @@ ms.locfileid: "34045305"
 ### <a name="single-active-relationship-between-tables"></a>Singola relazione attiva tra tabelle  
  Più relazioni possono comportare dipendenze ambigue tra le tabelle. Per creare calcoli accurati, è necessario un unico percorso da una tabella a quella successiva. Di conseguenza, può essere presente una sola relazione attiva tra ogni coppia di tabelle. In AdventureWorks DW 2012, ad esempio, la tabella DimDate contiene una colonna, DateKey, correlata a tre colonne diverse della tabella FactInternetSales: OrderDate, DueDate e ShipDate. Se si tenta di importare queste tabelle, la prima relazione viene creata correttamente, ma per le relazioni successive che riguardano la stessa colonna verrà visualizzato il messaggio di errore seguente:  
   
- \* Relazione: tabella [colonna 1] -> tabella [colonna 2] - stato: errore - motivo: Impossibile creare una relazione tra tabelle \<tabella 1 > e \<tabella 2 >. Tra due tabelle può esistere solo una relazione diretta o indiretta.  
+ \* Relazione: tabella [colonna 1] -> tabella [colonna 2] - stato: errore - motivo: Non è possibile creare una relazione tra le tabelle \<tabella 1 > e \<la tabella 2 >. Tra due tabelle può esistere solo una relazione diretta o indiretta.  
   
  Se sono presenti due tabelle unite da più relazioni, sarà necessario importare più copie della tabella contenente la colonna di ricerca e creare una relazione tra ogni coppia di tabelle.  
   
@@ -106,7 +106,7 @@ ms.locfileid: "34045305"
 ### <a name="one-relationship-for-each-source-column"></a>Una relazione per ogni colonna di origine  
  Una colonna di origine non può partecipare a più relazioni. Se una colonna è già stata utilizzata come colonna di origine in una relazione ma si desidera utilizzarla per connetterla a un'altra colonna di ricerca correlata in una tabella diversa, è possibile creare una copia della colonna e utilizzare tale colonna per la nuova relazione.  
   
- Creare una copia di una colonna che dispone esattamente degli stessi valori è un'operazione semplice, eseguibile tramite una formula DAX in una colonna calcolata. Per ulteriori informazioni, vedere [crea una colonna calcolata](../../analysis-services/tabular-models/ssas-calculated-columns-create-a-calculated-column.md).  
+ Creare una copia di una colonna che dispone esattamente degli stessi valori è un'operazione semplice, eseguibile tramite una formula DAX in una colonna calcolata. Per altre informazioni, vedere [crea una colonna calcolata](../../analysis-services/tabular-models/ssas-calculated-columns-create-a-calculated-column.md).  
   
 ### <a name="unique-identifier-for-each-table"></a>Identificatore univoco per ogni tabella  
  In ogni tabella deve essere presente una colonna singola che ne identifichi in maniera univoca ogni riga. La colonna correlata viene spesso definita chiave primaria.  
@@ -115,7 +115,7 @@ ms.locfileid: "34045305"
  I valori dei dati nella colonna di ricerca devono essere univoci. In altri termini, nella colonna non possono essere contenuti valori duplicati. Nei modelli tabulari le stringhe Null e vuote sono equivalenti a un valore vuoto, ovvero un valore dei dati distinto. Ciò vuole dire che non è possibile avere più valori Null nella colonna di ricerca.  
   
 ### <a name="compatible-data-types"></a>Tipi di dati compatibili  
- I tipi di dati nella colonna di origine e nella colonna di ricerca devono essere compatibili. Per ulteriori informazioni sui tipi di dati, vedere [tipi di dati supportati](../../analysis-services/tabular-models/data-types-supported-ssas-tabular.md).  
+ I tipi di dati nella colonna di origine e nella colonna di ricerca devono essere compatibili. Per altre informazioni sui tipi di dati, vedere [tipi di dati supportati](../../analysis-services/tabular-models/data-types-supported-ssas-tabular.md).  
   
 ### <a name="composite-keys-and-lookup-columns"></a>Chiavi composte e colonne di ricerca  
  Non è possibile utilizzare chiavi composte in un modello tabulare. È necessario che vi sia sempre esattamente una colonna che consente di identificare in modo univoco ogni riga nella tabella. Se si tenta di importare tabelle con una relazione esistente basata su una chiave composta, la relazione viene ignorata dall'Importazione guidata tabella, in quanto non può essere creata nel modello tabulare.  
@@ -125,7 +125,7 @@ ms.locfileid: "34045305"
 ###  <a name="bkmk_many_to_many"></a> Many-to-Many relationships  
  I modelli tabulari non supportano relazioni molti-a-molti e non è possibile aggiungere semplicemente *tabelle di collegamento* in Progettazione modelli. È tuttavia possibile utilizzare funzioni DAX per modellare relazioni molti-a-molti.  
   
- Si può anche provare a configurare un filtro incrociato bidirezionale per vedere se raggiunge lo stesso obiettivo. In alcuni casi il requisito della relazione molti-a-molti può essere soddisfatto usando filtri incrociati che mantengono un contesto di filtro tra più relazioni tra tabelle. Per informazioni dettagliate, vedere [Filtri incrociati bidirezionali per i modelli tabulari in SQL Server 2016 Analysis Services](../../analysis-services/tabular-models/bi-directional-cross-filters-tabular-models-analysis-services.md) .  
+ Si può anche provare a configurare un filtro incrociato bidirezionale per vedere se raggiunge lo stesso obiettivo. Il requisito della relazione molti-a-molti in alcuni casi può essere soddisfatto usando filtri incrociati che mantengono un contesto di filtro nelle relazioni tra tabelle più. Per informazioni dettagliate, vedere [Filtri incrociati bidirezionali per i modelli tabulari in SQL Server 2016 Analysis Services](../../analysis-services/tabular-models/bi-directional-cross-filters-tabular-models-analysis-services.md) .  
   
 ### <a name="self-joins-and-loops"></a>Self-join e cicli  
  I self-join non sono consentiti nelle tabelle del modello tabulare. Un self-join è una relazione ricorsiva tra una tabella e se stessa. I self-join vengono spesso utilizzati per definire gerarchie padre-figlio. Ad esempio, è possibile unire una tabella Employees a se stessa in modo da creare una gerarchia che mostra la catena di gestione di un'azienda.  
@@ -171,7 +171,7 @@ ms.locfileid: "34045305"
   
 ##  <a name="bkmk_related_tasks"></a> Related tasks  
   
-|Argomento|Description|  
+|Argomento|Descrizione|  
 |-----------|-----------------|  
 |[Creare una relazione tra due tabelle](../../analysis-services/tabular-models/create-a-relationship-between-two-tables-ssas-tabular.md)|Viene descritto come creare manualmente una relazione tra due tabelle.|  
 |[Eliminare relazioni](../../analysis-services/tabular-models/delete-relationships-ssas-tabular.md)|Viene descritto come eliminare una relazione e le ramificazioni dovute all'eliminazione di relazioni.|  

@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 0b2a6266f1a789c5475ac6551a2f52f1d0bd393f
-ms.sourcegitcommit: 9f2edcdf958e6afce9a09fb2e572ae36dfe9edb0
+ms.openlocfilehash: 7158c0c441c11f87c4cc4989ca66061318a60df4
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50099932"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52419702"
 ---
 # <a name="power-pivot-management-dashboard-and-usage-data"></a>Dati di utilizzo e dashboard di gestione PowerPivot
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -27,7 +27,7 @@ ms.locfileid: "50099932"
 ##  <a name="items"></a> Panoramica delle sezioni del dashboard  
  [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] sono contenuti Web part e report incorporati che consentono di eseguire il drill-down in categorie di informazioni specifiche. Nell'elenco seguente sono descritte le singole parti del dashboard:  
   
-|Dashboard|Description|  
+|Dashboard|Descrizione|  
 |---------------|-----------------|  
 |Infrastruttura: integrità del server|Vengono mostrate le tendenze nel tempo relative all'utilizzo della CPU, al consumo di memoria e ai tempi di risposta delle query in modo che sia possibile valutare se le risorse di sistema vengono impegnate al massimo o rimangono sottoutilizzate.|  
 |Azioni|Sono contenuti i collegamenti ad altre pagine in Amministrazione centrale inclusi l'applicazione di servizio corrente, un elenco di applicazioni di servizio e la registrazione utilizzo.|  
@@ -70,7 +70,7 @@ ms.locfileid: "50099932"
   
 -   [Configurare la raccolta dati di utilizzo per PowerPivot per SharePoint](../../analysis-services/power-pivot-sharepoint/configure-usage-data-collection-for-power-pivot-for-sharepoint.md)  
   
- Al fine di acquisire dati sul sistema del server PowerPivot, verificare che siano abilitate la messaggistica degli eventi, la cronologia dell'aggiornamento dati e altre cronologie relative all'utilizzo per ogni applicazione del servizio PowerPivot. I dati di utilizzo e del server raccolti durante il normale funzionamento del server costituiscono i dati di origine che finiscono nel modello di dati interno. **Nota:** se si disabilita la cronologia degli eventi o dell'utilizzo, i report composti risulteranno incompleti o errati.  
+ Al fine di acquisire dati sul sistema del server PowerPivot, verificare che siano abilitate la messaggistica degli eventi, la cronologia dell'aggiornamento dati e altre cronologie relative all'utilizzo per ogni applicazione del servizio PowerPivot. I dati di utilizzo e del server raccolti durante il normale funzionamento del server costituiscono i dati di origine che finiscono nel modello di dati interno. **Nota:** Se si disabilita la cronologia degli eventi o dell'utilizzo, i report composti risulteranno incompleti o errati.  
   
 ##  <a name="edit"></a> Modificare il dashboard PowerPivot  
  Gli utenti esperti nello sviluppo e nella personalizzazione di dashboard potranno modificare il dashboard in modo da includere nuove web part. È possibile modificare anche le proprietà delle web part incluse nel dashboard.  
@@ -81,7 +81,7 @@ ms.locfileid: "50099932"
  Per iniziare a usare la creazione di report personalizzati, il dashboard di gestione [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] fornisce un file Office Data Connection (.odc) per la connessione alla cartella di lavoro di origine. Ad esempio, è possibile utilizzare il file con estensione odc in Excel per la creazione di report aggiuntivi.  
   
 > [!NOTE]  
->  Modificare il file per evitare l'errore seguente in caso di tentativo di utilizzo del file con estensione odc in Excel: "Impossibile inizializzare l'origine dati". Nel file con estensione odc generato automaticamente è incluso un parametro che non è supportato dal provider OLE DB MSOLAP. Nelle istruzioni seguenti viene fornita la soluzione alternativa per la rimozione dei parametri.  
+>  Modificare il file per evitare l'errore seguente quando si tenta di usare il file con estensione odc in Excel: "Inizializzazione dell'origine dati non riuscita". Nel file con estensione odc generato automaticamente è incluso un parametro che non è supportato dal provider OLE DB MSOLAP. Nelle istruzioni seguenti viene fornita la soluzione alternativa per la rimozione dei parametri.  
   
  Per compilare report basati sulla cartella di lavoro di [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] in Amministrazione centrale, è necessario essere l'amministratore di una farm o di un servizio.  
   
@@ -113,7 +113,7 @@ ms.locfileid: "50099932"
   
     7.  Digitare un nome per la connessione, quindi fare clic su **Avanti**.  
   
-    8.  In Specifica di una query MDX fare clic su **Progettazione** per aprire la finestra Progettazione query MDX al fine di assemblare i dati che si desidera utilizzare. **Se si visualizza il messaggio di errore** "Il formato del nome della proprietà Modalità di modifica non è corretto", verificare la modifica del file ODC.  
+    8.  In specificare una Query MDX fare clic su **Design** per aprire la finestra Progettazione query MDX per assemblare i dati che si desidera utilizzare **se viene visualizzato il messaggio di errore** "il nome della proprietà modalità di modifica non è formattato correttamente.", verificare si modifica il. File con estensione ODC.  
   
     9. Scegliere **OK** , quindi **Fine**.  
   

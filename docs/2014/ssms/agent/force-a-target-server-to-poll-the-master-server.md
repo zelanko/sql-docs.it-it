@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
 - forcing master server polling
@@ -15,12 +15,12 @@ ms.assetid: f1189a47-5ac3-45e2-9c5f-847810672279
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: e2373b75766acbc34547f062a2ffc76a3125ade5
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 7e9580839c18ed40a6163ab933ce40276bc413ab
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48172261"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52764213"
 ---
 # <a name="force-a-target-server-to-poll-the-master-server"></a>Forzare un server di destinazione a eseguire il polling del server master
   In questo argomento viene descritta la procedura per il polling forzato del server di destinazione al server master. Il server di destinazione deve essere registrato nel server master.  
@@ -30,9 +30,9 @@ ms.locfileid: "48172261"
 > [!NOTE]  
 >  Se il server master non è accessibile quando il server di destinazione tenta di caricare lo stato del processo, per tale stato viene eseguito lo spooling fino a quando non è possibile accedere al server master.  
   
--   **Prima di iniziare:**  [Limitazioni e restrizioni](#Restrictions), [Sicurezza](#Security)  
+-   **Prima di iniziare:**  [Limitazioni e restrizioni](#Restrictions), [sicurezza](#Security)  
   
--   **Per forzare un server di destinazione a eseguire il polling del server master usando:**  [SQL Server Management Studio](#SSMS)  
+-   **Per forzare un server di destinazione per eseguire il polling del server master tramite:**  [SQL Server Management Studio](#SSMS)  
   
 ##  <a name="BeforeYouBegin"></a> Prima di iniziare  
   
@@ -40,7 +40,7 @@ ms.locfileid: "48172261"
  Il server di destinazione deve essere registrato nel server master. È necessario eseguire le istruzioni fornite in questo argomento dal server master.  
   
 ###  <a name="Security"></a> Sicurezza  
- Per informazioni dettagliate, vedere [Implement SQL Server Agent Security](implement-sql-server-agent-security.md) e [Scegliere l'account di servizio SQL Server Agent adatto ad ambienti multiserver](choose-the-right-sql-server-agent-service-account-for-multiserver-environments.md).  
+ Per informazioni dettagliate, vedere [Implement SQL Server Agent Security](implement-sql-server-agent-security.md) e [Choose the Right SQL Server Agent Service Account for Multiserver Environments](choose-the-right-sql-server-agent-service-account-for-multiserver-environments.md).  
   
 ##  <a name="SSMS"></a> Utilizzo di SQL Server Management Studio  
  **Per forzare un server di destinazione a eseguire il polling del server master**  

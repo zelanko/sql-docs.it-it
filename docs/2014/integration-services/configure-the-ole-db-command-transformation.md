@@ -14,12 +14,12 @@ ms.assetid: c800f167-3d2e-4c10-8ba3-a02f1872ccea
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: e6926eae9c92a80e271c786a325e94f58b6ab647
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 307773a82206cc1c804a41525b733175ffbb12da
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48229771"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52540171"
 ---
 # <a name="configure-the-ole-db-command-transformation"></a>Configurazione della trasformazione Comando OLE DB
   È possibile aggiungere e configurare una trasformazione Comando OLE DB solo se il pacchetto include almeno un'attività Flusso di dati e un'origine, quale un'origine file flat o un'origine OLE DB. Questa trasformazione viene in genere utilizzata per l'esecuzione di query con parametri.  
@@ -73,7 +73,7 @@ ms.locfileid: "48229771"
 15. Per salvare il pacchetto aggiornato, scegliere **Salva** dal menu **File** .  
   
 ## <a name="see-also"></a>Vedere anche  
- [Trasformazione comando OLE DB](data-flow/transformations/ole-db-command-transformation.md)   
+ [OLE DB Command Transformation](data-flow/transformations/ole-db-command-transformation.md)   
  [Trasformazioni di Integration Services](data-flow/transformations/integration-services-transformations.md)   
  [Percorsi in Integration Services](data-flow/integration-services-paths.md)   
  [Attività Flusso di dati](control-flow/data-flow-task.md)  

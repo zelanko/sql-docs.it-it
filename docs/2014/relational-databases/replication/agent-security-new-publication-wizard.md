@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 04/27/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 f1_keywords:
 - sql12.rep.agentsecurity.articles.f1
@@ -13,12 +12,12 @@ ms.assetid: 05ae44df-8e9f-46ea-95f6-972ad109c6c0
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 7bb806f53c481254513abb5c91b2f2e3efd29eeb
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: b7acd2c6ab698a8fafb8e89c21376973163d88c2
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48159542"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52758203"
 ---
 # <a name="agent-security-new-publication-wizard"></a>Sicurezza agente (Creazione guidata nuova pubblicazione)
   La pagina **Sicurezza agente** consente di specificare gli account nell'ambito dei quali gli agenti seguenti vengono eseguiti e si connettono ai computer in una topologia di replica.  
@@ -55,7 +54,7 @@ ms.locfileid: "48159542"
   
 ## <a name="see-also"></a>Vedere anche  
  [Create a Publication](publish/create-a-publication.md)   
- [Creare una sottoscrizione aggiornabile di una pubblicazione transazionale](create-updatable-subscription-transactional-publication-transact-sql.md)   
+ [Create an Updatable Subscription to a Transactional Publication](create-updatable-subscription-transactional-publication-transact-sql.md)   
  [Visualizzare e modificare le proprietà del server di pubblicazione e del database di distribuzione](view-and-modify-distributor-and-publisher-properties.md)   
  [Visualizzare e modificare le proprietà della pubblicazione](publish/view-and-modify-publication-properties.md)   
  [Gestire gli account di accesso e le password nella replica](security/manage-logins-and-passwords-in-replication.md)   

@@ -17,12 +17,12 @@ ms.assetid: b4aa5714-916b-48b8-8b09-cc2708379602
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: ad973b69d9f85b731e417e502225036ae714ae63
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 01b2e7dc8b70c109fc6cf998cec2bbad1147692c
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47658658"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52529606"
 ---
 # <a name="copyto-method-ado"></a>Metodo CopyTo (ADO)
 Copia il numero specificato di caratteri o byte (a seconda [tipo](../../../ado/reference/ado-api/type-property-ado-stream.md)) nella [Stream](../../../ado/reference/ado-api/stream-object-ado.md) a un altro **Stream** oggetto.  
@@ -42,7 +42,7 @@ Stream.CopyTo DestStream, NumChars
 >  Il *DestStream* parametro non può essere un proxy di **Stream** dell'oggetto perché questo richiede l'accesso a un'interfaccia privata nel **Stream** oggetto che non può essere eseguita in modalità remota per il client.  
   
  *numChars*  
- Facoltativo. Un' **Integer** valore che specifica il numero di byte o caratteri da copiare dalla posizione corrente nell'origine **Stream** alla destinazione **Stream**. Il valore predefinito è – 1, che specifica che tutti i caratteri o byte vengono copiati dalla posizione corrente per [EOS](../../../ado/reference/ado-api/eos-property.md).  
+ Facoltativo. Un' **Integer** valore che specifica il numero di byte o caratteri da copiare dalla posizione corrente nell'origine **Stream** alla destinazione **Stream**. Il valore predefinito è -1, che specifica che tutti i caratteri o byte vengono copiati dalla posizione corrente per [EOS](../../../ado/reference/ado-api/eos-property.md).  
   
 ## <a name="remarks"></a>Note  
  Questo metodo copia il numero specificato di caratteri o byte, a partire dalla posizione corrente specificata dal [posizione](../../../ado/reference/ado-api/position-property-ado.md) proprietà. Se il numero specificato è maggiore del numero disponibile di byte fino **EOS**, quindi solo caratteri o byte dalla posizione corrente alla **EOS** vengono copiati. Se il valore di *NumChars* è -1 o viene omesso, vengono copiati tutti i caratteri o byte a partire dalla posizione corrente.  

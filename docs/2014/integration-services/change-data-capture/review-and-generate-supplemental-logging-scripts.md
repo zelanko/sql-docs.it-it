@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - scripts
@@ -13,12 +12,12 @@ ms.assetid: 5c858ae2-37d6-42e8-a252-7f6ed4e628a7
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: a622bdebc82f1c557a80ea43a18f474a852cca9e
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 9d4731cbc7b6b4a761de3c5d0e3777a028c8a3c6
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48048991"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52777084"
 ---
 # <a name="review-and-generate-supplemental-logging-scripts"></a>Rivedere e generare script di registrazione supplementare
   Usare la scheda **Scripts** per eseguire o rieseguire uno script nel database di origine Oracle per la configurazione della registrazione supplementare.  
@@ -55,7 +54,7 @@ ms.locfileid: "48048991"
 2.  Assegnare un nome al file e scegliere **Save** per salvarlo.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Come modificare le proprietà di istanza di CDC](how-to-edit-the-cdc-instance-properties.md)   
- [Credenziali Oracle per l'esecuzione di script](oracle-credentials-for-running-script.md)  
+ [Procedura di modifica delle proprietà dell'istanza di CDC](how-to-edit-the-cdc-instance-properties.md)   
+ [Oracle Credentials for Running Script](oracle-credentials-for-running-script.md)  
   
   

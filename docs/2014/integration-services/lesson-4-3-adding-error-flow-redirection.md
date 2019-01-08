@@ -1,22 +1,21 @@
 ---
-title: 'Passaggio 3: Aggiunta del reindirizzamento del flusso degli errori | Microsoft Docs'
+title: 'Passaggio 3: Aggiunta del reindirizzamento del flusso di errore | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 5683a45d-9e73-4cd5-83ca-fae8b26b488c
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 217aa8a702d636b920be157974a5d90e695ad191
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 3ff729a43f1dbc414ba6a67a0c80e9f17e4d0cc4
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48051311"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52747923"
 ---
 # <a name="step-3-adding-error-flow-redirection"></a>Passaggio 3: Aggiunta del reindirizzamento del flusso degli errori
   Come dimostrato nell'attività precedente, la trasformazione Lookup Currency Key non crea una corrispondenza quando tenta di elaborare il file flat di esempio danneggiato che ha generato un errore. Dato che la trasformazione utilizza le impostazioni predefinite per l'output degli errori, qualsiasi errore determina l'esito negativo della trasformazione. Quando la trasformazione viene interrotta, si interrompe anche il resto del pacchetto.  
@@ -97,6 +96,6 @@ ms.locfileid: "48051311"
 13. Scegliere **OK** per chiudere la finestra di dialogo **Editor trasformazione Script** .  
   
 ## <a name="next-steps"></a>Passaggi successivi  
- [Passaggio 4: aggiunta di una destinazione File Flat] (lesson-4-4-adding-a-flat-file-destination.md  
+ [Passaggio 4: Aggiunta di una destinazione File Flat] (lesson-4-4-adding-a-flat-file-destination.md  
   
   

@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: xml
 ms.topic: reference
 helpviewer_keywords:
 - mapping data types [SQLXML]
@@ -23,12 +21,12 @@ ms.assetid: db192105-e8aa-4392-b812-9d727918c005
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: ad0d88b04929be5bfcd67534ded2c72733441411
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 7662587e1cffad5b111c747c0af2116991743296
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48115801"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52778413"
 ---
 # <a name="data-type-coercions-and-the-sqldatatype-annotation-sqlxml-40"></a>Coercizioni dei tipi di dati e annotazione sql:datatype (SQLXML 4.0)
   In uno schema XDR l'attributo `xsd:type` specifica il tipo di dati XSD di un elemento o di un attributo. Quando viene utilizzato uno schema XSD per estrarre dati dal database, il tipo di dati specificato viene utilizzato per formattare i dati.  
@@ -191,7 +189,7 @@ ms.locfileid: "48115801"
 </Schema>  
 ```  
   
-### <a name="b-specifying-sql-data-type-using-sqldatatype"></a>B. Definizione del tipo di dati SQL tramite sql:datatype  
+### <a name="b-specifying-sql-data-type-using-sqldatatype"></a>b. Definizione del tipo di dati SQL tramite sql:datatype  
  Per un esempio funzionante, vedere l'esempio G in [esempi di caricamento Bulk XML &#40;SQLXML 4.0&#41;](../sqlxml-annotated-xsd-schemas-xpath-queries/bulk-load-xml/xml-bulk-load-examples-sqlxml-4-0.md). In questo esempio viene eseguito il caricamento bulk di un valore GUID che include"{" e "}". Lo schema in questo esempio specifica `sql:datatype` per identificare il tipo di dati di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] come `uniqueidentifier`. In questo esempio vengono indicati i casi in cui è necessario specificare `sql:datatype` nello schema.  
   
   

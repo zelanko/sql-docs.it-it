@@ -1,5 +1,5 @@
 ---
-title: La distribuzione di servizi di requisiti e considerazioni per l'analisi | Documenti Microsoft
+title: Considerazioni per l'analisi e i requisiti di distribuzione dei servizi | Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,19 +9,19 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 8fc21b64be49a74359dcde41e10be5524bc1d9ab
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 991fdab41b7e14e88e621927371d7cc2da3ed3c4
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34026528"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52530421"
 ---
 # <a name="requirements-and-considerations-for-analysis-services-deployment"></a>Requisiti e considerazioni per la distribuzione di Analysis Services
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
   Le prestazioni e la disponibilità di una soluzione dipendono da molti fattori, tra cui le funzionalità dell'hardware sottostante, la topologia della distribuzione server, le caratteristiche della soluzione (ad esempio, con partizioni distribuite in più server o usando l'archiviazione ROLAP per la quale è richiesto l'accesso diretto al motore relazionale), i contratti di servizio e la complessità del modello di dati.  
   
 ## <a name="memory-and-processor-requirements"></a>Requisiti relativi a memoria e processore  
- [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]richiede maggiori risorse di memoria e processore nei casi seguenti:  
+ [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] è necessaria una quantità maggiore di risorse di memoria e processore nei casi seguenti:  
   
 -   In caso di elaborazione di cubi di grandi dimensioni o complessi. Questi cubi richiedono maggiori risorse di memoria e processore rispetto ai cubi di piccole dimensioni o semplici.  
   
@@ -50,7 +50,7 @@ ms.locfileid: "34026528"
  I cubi che includono tabelle dei fatti di grandi dimensioni richiedono una quantità maggiore di spazio su disco rispetto a quelli contenenti tabelle dei fatti di piccole dimensioni. Analogamente, sebbene in proporzioni minori, i cubi che includono un numero elevato di dimensioni grandi richiedono una maggiore quantità di spazio su disco rispetto ai cubi che contengono un numero minore di membri della dimensione. In genere, un database di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] richiede approssimativamente il 20% dello spazio su disco necessario per gli stessi dati archiviati nel database relazionale sottostante.  
   
  Aggregations  
- Le aggregazioni richiedono spazio su disco aggiuntivo in modo proporzionale al numero di aggregazioni aggiunte: maggiore è il numero di aggregazioni, maggiore sarà lo spazio necessario. Se si evita la creazione di aggregazioni non necessarie, lo spazio su disco aggiuntivo necessario per le aggregazioni non supera in genere il 10% circa della dimensione dei dati archiviati nel database relazionale sottostante.  
+ Le aggregazioni richiedono ulteriore spazio proporzionale alle aggregazioni aggiunto, il più le aggregazioni sono disponibili, è necessario più spazio. Se si evita la creazione di aggregazioni non necessarie, lo spazio su disco aggiuntivo necessario per le aggregazioni non supera in genere il 10% circa della dimensione dei dati archiviati nel database relazionale sottostante.  
   
  Data Mining  
  Per impostazione predefinita, le strutture di data mining memorizzano nella cache il set di dati in cui viene eseguito il training. Per rimuovere dal disco i dati presenti nella cache, è possibile usare l'opzione di elaborazione **Elaborazione struttura pulita** nell'oggetto struttura di data mining. Per altre informazioni, vedere [Requisiti e considerazioni sull'elaborazione &#40;data mining&#41;](../../analysis-services/data-mining/processing-requirements-and-considerations-data-mining.md).  
@@ -64,7 +64,7 @@ ms.locfileid: "34026528"
 ### <a name="providing-availability-in-the-event-of-hardware-or-software-failures"></a>Metodi per garantire la disponibilità in caso di problemi hardware o software  
  I componenti hardware o software possono presentare problemi per vari motivi. Per garantire la disponibilità dell'installazione di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] non è tuttavia sufficiente risolvere questi problemi, ma è anche necessario offrire risorse alternative che consentano all'utente di continuare a usare un sistema in caso di errore. Spesso per offrire le risorse alternative necessarie a mantenere la disponibilità in caso di problema hardware o software vengono usati server di clustering o di bilanciamento del carico.  
   
- Per offrire un'alternativa in caso di problema hardware o software, valutare l'opportunità di distribuire [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] in un cluster di failover. In un cluster di failover se nel nodo primario si verifica un errore per qualsiasi motivo oppure se è necessario riavviare tale nodo, le funzionalità di clustering di failover di [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows consentono di eseguire il failover a un nodo secondario. Dopo il failover, che avviene in modo molto rapido, quando gli utenti eseguono query accedono all'istanza di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] in esecuzione nel nodo secondario. Per ulteriori informazioni sui cluster di failover, vedere la pagina relativa ai [cluster di failover (tecnologie di Windows Server)](http://technet.microsoft.com/library/cc732488\(v=WS.10\).aspx).  
+ Per offrire un'alternativa in caso di problema hardware o software, valutare l'opportunità di distribuire [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] in un cluster di failover. In un cluster di failover se nel nodo primario si verifica un errore per qualsiasi motivo oppure se è necessario riavviare tale nodo, le funzionalità di clustering di failover di [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows consentono di eseguire il failover a un nodo secondario. Dopo il failover, che avviene in modo molto rapido, quando gli utenti eseguono query accedono all'istanza di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] in esecuzione nel nodo secondario. Per altre informazioni sui cluster di failover, vedere [tecnologie di Windows Server:  I cluster di failover](http://technet.microsoft.com/library/cc732488\(v=WS.10\).aspx).  
   
  Un'altra soluzione utile per risolvere i problemi di disponibilità consiste nel distribuire il progetto di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] in due o più server di produzione. Sarà quindi possibile usare la funzionalità di bilanciamento del carico di rete dei server Windows per combinare i server di produzione in un unico cluster. In un cluster con bilanciamento carico di rete, se un server non è disponibile a causa di problemi hardware o software, tramite il servizio di bilanciamento carico di rete le query degli utenti vengono indirizzate ai server ancora disponibili.  
   
@@ -87,7 +87,7 @@ ms.locfileid: "34026528"
   
 -   Se uno o più database relazionali forniscono dati a un database di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , è possibile spostare questi database in un computer diverso. Prima di spostare i database, valutare la velocità di rete e la larghezza di banda tra il database di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] e i database sottostanti. Se la rete è lenta o sovraccarica, lo spostamento dei database sottostanti in un computer diverso influirà negativamente sulle prestazioni di elaborazione.  
   
--   Se le operazioni di elaborazione influiscono sulle prestazioni di esecuzione delle query, ma non è possibile eseguire tali operazioni durante i periodi in cui il carico di query è ridotto, valutare l'opportunità di spostare le attività di elaborazione in un server dell'area di gestione temporanea e quindi di eseguire una sincronizzazione online del server di produzione e del server dell'area di gestione temporanea. Per altre informazioni, vedere [Sincronizzare database di Analysis Services](../../analysis-services/multidimensional-models/synchronize-analysis-services-databases.md). È inoltre possibile distribuire le attività di elaborazione tra più istanze di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] tramite partizioni remote. Per l'elaborazione delle partizioni remote vengono usate risorse di memoria e processore nel server remoto anziché nel computer locale. Per altre informazioni sulla gestione delle partizioni remote, vedere [Creare e gestire una partizione remota &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/create-and-manage-a-remote-partition-analysis-services.md).  
+-   Se l'elaborazione interessa le prestazioni delle query, ma non è possibile elaborare durante i periodi di carico di query è ridotto, è consigliabile spostare le attività di elaborazione in un server di gestione temporanea e quindi eseguire una sincronizzazione online del server di produzione e il server di gestione temporanea. Per altre informazioni, vedere [Sincronizzare database di Analysis Services](../../analysis-services/multidimensional-models/synchronize-analysis-services-databases.md). È inoltre possibile distribuire le attività di elaborazione tra più istanze di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] tramite partizioni remote. Per l'elaborazione delle partizioni remote vengono usate risorse di memoria e processore nel server remoto anziché nel computer locale. Per altre informazioni sulla gestione delle partizioni remote, vedere [Creare e gestire una partizione remota &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/create-and-manage-a-remote-partition-analysis-services.md).  
   
 -   Se le prestazioni di esecuzione delle query non sono soddisfacenti, ma non è possibile aumentare le risorse di memoria e processore nel server locale, valutare l'opportunità di distribuire un progetto di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] in due o più server di produzione. Sarà quindi possibile usare la funzionalità di bilanciamento del carico di rete per combinare i server in un unico cluster. In un cluster con bilanciamento carico di rete, le query vengono automaticamente distribuite tra tutti i server del cluster.  
   

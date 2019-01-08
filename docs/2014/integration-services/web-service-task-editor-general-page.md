@@ -15,12 +15,12 @@ ms.assetid: 4d7df283-430d-4f0f-9dd4-5909554cd5eb
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 32da4424359a7b27ebef6f48c988f9e20c6f4d71
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: d349947ed06ec406dad4f928cdbbc97838aec409
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48090231"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52538670"
 ---
 # <a name="web-service-task-editor-general-page"></a>Editor attività Servizio Web (pagina Generale)
   Usare la pagina **Generale** della finestra di dialogo **Editor attività Servizio Web** per specificare una gestione connessione HTTP e il percorso del file WSDL (Web Services Description Language) usato dall'attività Servizio Web, descrivere l'attività Servizio Web e scaricare il file WSDL.  
@@ -29,15 +29,15 @@ ms.locfileid: "48090231"
   
 ## <a name="options"></a>Opzioni  
  **HTTPConnection**  
- Selezionare una gestione connessione nell'elenco o creare una nuova gestione connessione facendo clic su \<**Nuova connessione**>.  
+ Selezionare una gestione connessione nell'elenco oppure crearne una nuova facendo clic su \<**Nuova connessione**>.  
   
 > [!IMPORTANT]  
 >  La gestione connessione HTTP supporta solo l'autenticazione anonima e l'autenticazione di base. Non supporta l'autenticazione di Windows.  
   
- **Argomenti correlati**: [Gestione connessione HTTP](connection-manager/http-connection-manager.md), [Editor gestione connessione HTTP &#40;pagina Server&#41;](../../2014/integration-services/http-connection-manager-editor-server-page.md)  
+ **Argomenti correlati:**  [Gestione connessione HTTP](connection-manager/http-connection-manager.md), [Editor gestione connessione HTTP &#40;pagina del Server&#41;](../../2014/integration-services/http-connection-manager-editor-server-page.md)  
   
  **WSDLFile**  
- Consente di digitare il percorso completo di un file WSDL presente localmente nel computer o di trovare il file usando il pulsante Sfoglia **(…)** .  
+ Digitare il percorso completo di un file WSDL presente in locale nel computer oppure fare clic sul pulsante sfoglia **(...)** e individuare il file.  
   
  Sezionare il file WSDL presente nel computer, se è già stato scaricato manualmente. Se invece il file WSDL non è stato ancora scaricato, attenersi alla seguente procedura:  
   
@@ -57,7 +57,7 @@ ms.locfileid: "48090231"
   
  Se si intende scaricare il file WSDL tramite il **Scarica WSDL** pulsante, impostare questo valore su `True`.  
   
- **Nome**  
+ **Name**  
  Consente di specificare un nome univoco per l'attività Servizio Web. Tale nome viene utilizzato come etichetta nell'icona dell'attività.  
   
 > [!NOTE]  
@@ -72,9 +72,9 @@ ms.locfileid: "48090231"
  Questo pulsante non è attivato fino a quando non si fornisce il nome di un file locale esistente nella casella **WSDLFile** .  
   
 ## <a name="see-also"></a>Vedere anche  
- [Riferimento ai messaggi e agli errori di Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [Editor attività servizio Web &#40;pagina di Input&#41;](../../2014/integration-services/web-service-task-editor-input-page.md)   
- [Editor attività servizio Web &#40;pagina di Output&#41;](../../2014/integration-services/web-service-task-editor-output-page.md)   
+ [Guida di riferimento ai messaggi e agli errori di Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
+ [Editor attività Servizio Web &#40;pagina Input&#41;](../../2014/integration-services/web-service-task-editor-input-page.md)   
+ [Editor attività Servizio Web &#40;pagina Output&#41;](../../2014/integration-services/web-service-task-editor-output-page.md)   
  [Pagina Espressioni](expressions/expressions-page.md)  
   
   

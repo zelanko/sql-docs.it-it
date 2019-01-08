@@ -1,7 +1,7 @@
 ---
 title: Sys. query_store_plan (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 09/12/2017
+ms.date: 11/29/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -22,19 +22,19 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 78aa727d23810524d5bceba6865c7f14ce1eca14
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a5b7b4b9831fcfa04932ed05951b27bca7e4e4b0
+ms.sourcegitcommit: c7febcaff4a51a899bc775a86e764ac60aab22eb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47770219"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "52710772"
 ---
 # <a name="sysquerystoreplan-transact-sql"></a>Sys. query_store_plan (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2016-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-asdw-xxx-md.md)]
 
   Contiene informazioni su ogni piano di esecuzione associato a una query.  
   
-|Nome colonna|Tipo di dati|Description|  
+|Nome colonna|Tipo di dati|Descrizione|  
 |-----------------|---------------|-----------------|  
 |**plan_id**|**bigint**|Chiave primaria.|  
 |**query_id**|**bigint**|Chiave esterna. Crea un join al [Sys. query_store_query &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-store-query-transact-sql.md).|  
@@ -50,7 +50,7 @@ ms.locfileid: "47770219"
 |**is_natively_compiled**|**bit**|Piano include procedure ottimizzate per la memoria compilate in modo nativo. (0 = FALSE, 1 = TRUE).|  
 |**force_failure_count**|**bigint**|Numero di volte in cui è Impossibile forzare l'utilizzo di questo piano. Può essere incrementato solo quando la query viene ricompilata (*non a ogni esecuzione*). Viene reimpostato su 0 ogni volta **is_plan_forced** viene modificato da **FALSE** al **TRUE**.|  
 |**last_force_failure_reason**|**int**|Motivo di uso forzato del piano perché non è riuscito.<br /><br /> 0: nessun errore, in caso contrario, numero di errore dell'errore che ha causato l'utilizzo forzato esito negativo<br /><br /> 8637: ONLINE_INDEX_BUILD<br /><br /> 8683: INVALID_STARJOIN<br /><br /> 8684: TIME_OUT<br /><br /> 8689: NO_DB<br /><br /> 8690: HINT_CONFLICT<br /><br /> 8691: SETOPT_CONFLICT<br /><br /> 8694: DQ_NO_FORCING_SUPPORTED<br /><br /> 8698: NO_PLAN<br /><br /> 8712: NO_INDEX<br /><br /> 8713: VIEW_COMPILE_FAILED<br /><br /> \<altro valore >: GENERAL_FAILURE|  
-|**last_force_failure_reason_desc**|**nvarchar(128)**|Descrizione testuale del last_force_failure_reason_desc.<br /><br /> ONLINE_INDEX_BUILD: query tenta di modificare i dati mentre la tabella di destinazione ha un indice che viene compilato online<br /><br /> INVALID_STARJOIN: piano contiene specifica StarJoin non valida<br /><br /> TIME_OUT: Numero di Query Optimizer ha superato di operazioni consentite durante la ricerca del piano specificato dal piano forzato<br /><br /> NO_DB: Un database specificato nel piano non esiste<br /><br /> HINT_CONFLICT: Non è possibile compilare la Query. piano in conflitto con un hint di query<br /><br /> DQ_NO_FORCING_SUPPORTED: Impossibile eseguire query piano è in conflitto con l'uso di query distribuita o operazioni full-text.<br /><br /> NO_PLAN: Query processor Impossibile generare il piano di query perché il piano forzato non è stato possibile verificare la validità per la query<br /><br /> NO_INDEX: Indice specificato nel piano non è più presente<br /><br /> VIEW_COMPILE_FAILED: Non è stato possibile forzare il piano di query a causa di un problema in una vista indicizzata a cui fa riferimento il piano<br /><br /> GENERAL_FAILURE: errore generale di forzatura (non coperte da motivi sopra)|  
+|**last_force_failure_reason_desc**|**nvarchar(128)**|Descrizione testuale del last_force_failure_reason_desc.<br /><br /> ONLINE_INDEX_BUILD: query tenta di modificare i dati mentre la tabella di destinazione ha un indice che viene compilato online<br /><br /> INVALID_STARJOIN: piano contiene specifica StarJoin non valida<br /><br /> TIME_OUT: Numero di Query Optimizer ha superato di operazioni consentite durante la ricerca del piano specificato dal piano forzato<br /><br /> NO_DB: Un database specificato nel piano non esiste<br /><br /> HINT_CONFLICT: Impossibile compilare la query piano è in conflitto con un hint di query<br /><br /> DQ_NO_FORCING_SUPPORTED: Impossibile eseguire query piano è in conflitto con l'uso di query distribuita o operazioni full-text.<br /><br /> NO_PLAN: Query processor non è stato possibile generare il piano di query perché il piano forzato non è stato possibile verificare la validità per la query<br /><br /> NO_INDEX: Indice specificato nel piano non è più presente<br /><br /> VIEW_COMPILE_FAILED: Non è stato possibile forzare il piano di query a causa di un problema in una vista indicizzata a cui fa riferimento il piano<br /><br /> GENERAL_FAILURE: errore generale di forzatura (non coperte da motivi sopra)|  
 |**count_compiles**|**bigint**|Pianificare le statistiche di compilazione.|  
 |**initial_compile_start_time**|**datetimeoffset**|Pianificare le statistiche di compilazione.|  
 |**last_compile_start_time**|**datetimeoffset**|Pianificare le statistiche di compilazione.|  

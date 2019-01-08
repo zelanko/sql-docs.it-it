@@ -13,12 +13,12 @@ ms.assetid: d311cc67-7db7-4c43-9590-d465564695e4
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 302a43238c755890e9fd106d8784eabdd0361d88
-ms.sourcegitcommit: 1a5448747ccb2e13e8f3d9f04012ba5ae04bb0a3
+ms.openlocfilehash: a761267c3d25619b58f23e2e7b6396f0e9b43958
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51558618"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52535803"
 ---
 # <a name="solutions-for-remote-data-access"></a>Soluzioni per RDA (Remote Data Access)
 ## <a name="the-issue"></a>Il problema  
@@ -34,14 +34,14 @@ ms.locfileid: "51558618"
  In questo esempio, l'applicazione mai direttamente connesso all'origine dati; È stato IIS. E IIS accessibili i dati tramite ADO.  
   
 > [!NOTE]
->  L'applicazione client/server non deve essere basato su Internet o intranet (vale a dire, basata sul Web), può essere costituito esclusivamente programmi compilati su una rete locale. Tuttavia, il caso tipico è un'applicazione basata sul Web.  
+>  L'applicazione client/server non deve essere basato su Internet o intranet (vale a dire, basata sul Web)-quanto potrebbe essere costituita esclusivamente da programmi compilati su una rete locale. Tuttavia, il caso tipico è un'applicazione basata sul Web.  
   
  Dato che un controllo visual, ad esempio una griglia, una casella di controllo o un elenco, può usare le informazioni restituite, è necessario usare facilmente le informazioni restituite da un controllo visual.  
   
  Per visualizzare un'interfaccia di programmazione di applicazioni semplice ed efficiente che supporta i sistemi a tre livelli e restituisce informazioni come facilmente come se fosse stato recuperato in un sistema a due livelli. Servizio dati remoto (RDS) è questa interfaccia.  
   
 ## <a name="the-solution"></a>Soluzione  
- Servizi Desktop remoto definisce un modello di programmazione, la sequenza di attività necessarie per accedere e aggiornare un'origine dati, per ottenere l'accesso ai dati tramite un intermediario, ad esempio Internet Information Services (IIS). Il modello di programmazione riepiloga l'intera funzionalità di servizi desktop remoto.  
+ Servizi Desktop remoto consente di definire un modello di programmazione - la sequenza di attività necessarie per accedere e aggiornare un'origine dati - per ottenere l'accesso ai dati tramite un intermediario, ad esempio Internet Information Services (IIS). Il modello di programmazione riepiloga l'intera funzionalità di servizi desktop remoto.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Modello di programmazione RDS di base](../../../ado/guide/remote-data-service/basic-rds-programming-model.md)   

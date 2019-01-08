@@ -15,12 +15,12 @@ ms.assetid: e2a48c4d-88b1-43ff-a202-9cdec54997d2
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 9b5db12f6c4fb6fcba85b4ed6e59b0434ce3697d
-ms.sourcegitcommit: 1a5448747ccb2e13e8f3d9f04012ba5ae04bb0a3
+ms.openlocfilehash: 3a50b9d8c1f22f23f3533240b2543ef981fef8e9
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51560468"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52535205"
 ---
 # <a name="rds-tutorial-vbscript"></a>Esercitazione su RDS (VBScript)
 Questo è l'esercitazione su RDS, scritto in Microsoft Visual Basic Scripting Edition. Per una descrizione dello scopo di questa esercitazione, vedere la [esercitazione su RDS](../../../ado/guide/remote-data-service/rds-tutorial.md).  
@@ -49,7 +49,7 @@ Set DC = Server.CreateObject("RDS.DataControl")
    Dim DF1   
 ```  
   
-## <a name="step-1--specify-a-server-program"></a>Passaggio 1: Specificare un'applicazione server  
+## <a name="step-1---specify-a-server-program"></a>Passaggio 1: specificare un'applicazione server  
  VBScript può scoprire il nome del server Web IIS in cui viene eseguito tramite l'accesso a VBScript **Request. ServerVariables** metodo disponibile per le pagine ASP:  
   
 ```vb
@@ -65,7 +65,7 @@ Set DC = Server.CreateObject("RDS.DataControl")
 Set DF1 = DS1.CreateObject("RDSServer.DataFactory", "https://yourServer")  
 ```  
   
-## <a name="step-2a--invoke-the-server-program-with-rdsdatacontrol"></a>Passaggio 2a: richiamare il programma di server con Servizi Desktop remoto. DataControl  
+## <a name="step-2a---invoke-the-server-program-with-rdsdatacontrol"></a>Passaggio 2a: richiamare il programma di server con Servizi Desktop remoto. DataControl  
  Questo esempio è semplicemente un commento che illustra il comportamento predefinito del **Servizi Desktop remoto. DataControl** consiste nell'eseguire la query specificata.  
   
 ```vb
@@ -84,17 +84,17 @@ Sub RDSTutorial2A()
 ...  
 ```  
   
-## <a name="step-2b--invoke-the-server-program-with-rdsserverdatafactory"></a>Passaggio 2b: richiamare il programma di server con RDSServer  
+## <a name="step-2b---invoke-the-server-program-with-rdsserverdatafactory"></a>Passaggio 2b: richiamare il programma di server con RDSServer  
   
-## <a name="step-3--server-obtains-a-recordset"></a>Passaggio 3: Server Ottiene un set di record  
+## <a name="step-3---server-obtains-a-recordset"></a>Passaggio 3: Server Ottiene un Recordset  
   
-## <a name="step-4--server-returns-the-recordset"></a>Passaggio 4: Server restituisce il Recordset  
+## <a name="step-4---server-returns-the-recordset"></a>Passaggio 4: Server restituisce il Recordset  
   
 ```vb
 Set RS = DF1.Query("DSN=Pubs;", "SELECT * FROM Authors")  
 ```  
   
-## <a name="step-5--datacontrol-is-made-usable-by-visual-controls"></a>Passaggio 5: DataControl viene reso utilizzabile dai controlli di visual  
+## <a name="step-5---datacontrol-is-made-usable-by-visual-controls"></a>Passaggio 5: DataControl viene reso utilizzabile dai controlli di visual  
   
 ```vb
 ' Assign the returned recordset to the DataControl.  
@@ -102,7 +102,7 @@ Set RS = DF1.Query("DSN=Pubs;", "SELECT * FROM Authors")
 DC1.SourceRecordset = RS  
 ```  
   
-## <a name="step-6a--changes-are-sent-to-the-server-with-rdsdatacontrol"></a>Passaggio 6a, ovvero le modifiche vengono inviate al server con Servizi Desktop remoto. DataControl  
+## <a name="step-6a---changes-are-sent-to-the-server-with-rdsdatacontrol"></a>Passaggio 6a - le modifiche vengono inviate al server con Servizi Desktop remoto. DataControl  
  Questo esempio è semplicemente un commento che illustra come il **Servizi Desktop remoto. DataControl** esegue gli aggiornamenti.  
   
 ```vb
@@ -126,7 +126,7 @@ Set DC1.SourceRecordset = RS
 DC1.SubmitChanges  
 ```  
   
-## <a name="step-6b--changes-are-sent-to-the-server-with-rdsserverdatafactory"></a>Passaggio 6b: le modifiche vengono inviate al server con RDSServer  
+## <a name="step-6b---changes-are-sent-to-the-server-with-rdsserverdatafactory"></a>Passaggio 6b - le modifiche vengono inviate al server con RDSServer  
   
 ```vb
 DF.SubmitChanges "DSN=Pubs", RS  

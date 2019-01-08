@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
 - roles [SQL Server], SQL Server Agent
@@ -19,12 +19,12 @@ ms.assetid: 719ce56b-d6b2-414a-88a8-f43b725ebc79
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: a94f0a88442051597a845623c26e4cc9fe782d31
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: dcb939b8eb04fafce163a395b05eb0e272977283
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48168761"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52773773"
 ---
 # <a name="sql-server-agent-fixed-database-roles"></a>Ruoli di database predefiniti di SQL Server Agent
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Gli amministratori hanno a disposizione i seguenti ruoli predefiniti del database **msdb** , che consentono di controllare in modo più capillare l'accesso a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent. Sono previsti i seguenti ruoli, elencati a partire da quello che ha meno privilegi:  
@@ -50,14 +50,14 @@ ms.locfileid: "48168761"
   
 |Azione|Operatori|Processi locali<br /><br /> (solo processi di proprietà)|Pianificazioni di processi<br /><br /> (solo pianificazioni di proprietà)|Proxy|  
 |------------|---------------|----------------------------------------|------------------------------------------------|-------------|  
-|Creazione/modifica/eliminazione|no|Sì <sup>1</sup>|Sì|no|  
-|Visualizzazione di un elenco (enumerazione)|Sì <sup>2</sup>|Sì|Sì|Sì <sup>3</sup>|  
-|Abilitazione/disabilitazione|no|Sì|Sì|Non applicabile|  
-|Visualizzazione di proprietà|no|Sì|Sì|no|  
-|Esecuzione/arresto/avvio|Non applicabile|Sì|Non applicabile|Non applicabile|  
-|Visualizzazione cronologia processo|Non applicabile|Sì|Non applicabile|Non applicabile|  
+|Creazione/modifica/eliminazione|No|Sì <sup>1</sup>|Yes|No|  
+|Visualizzazione di un elenco (enumerazione)|Sì <sup>2</sup>|Yes|Yes|Sì <sup>3</sup>|  
+|Abilitazione/disabilitazione|No|Yes|Yes|Non applicabile|  
+|Visualizzazione di proprietà|No|Yes|Yes|No|  
+|Esecuzione/arresto/avvio|Non applicabile|Yes|Non applicabile|Non applicabile|  
+|Visualizzazione cronologia processo|Non applicabile|Yes|Non applicabile|Non applicabile|  
 |Eliminazione cronologia processo|Non applicabile|Non <sup>4</sup>|Non applicabile|Non applicabile|  
-|Collegamento/scollegamento|Non applicabile|Non applicabile|Sì|Non applicabile|  
+|Collegamento/scollegamento|Non applicabile|Non applicabile|Yes|Non applicabile|  
   
  <sup>1</sup> non è possibile modificare la proprietà dei processi.  
   
@@ -77,14 +77,14 @@ ms.locfileid: "48168761"
   
 |Azione|Operatori|Processi locali|Processi multiserver|Pianificazioni di processi|Proxy|  
 |------------|---------------|----------------|----------------------|-------------------|-------------|  
-|Creazione/modifica/eliminazione|no|Sì <sup>1</sup> (solo per i processi di proprietà)|no|Sì (solo pianificazioni di proprietà)|no|  
-|Visualizzazione di un elenco (enumerazione)|Sì <sup>2</sup>|Sì|Sì|Sì|Sì <sup>3</sup>|  
-|Abilitazione/disabilitazione|no|Sì (solo processi di proprietà)|no|Sì (solo pianificazioni di proprietà)|Non applicabile|  
-|Visualizzazione di proprietà|no|Sì|Sì|Sì|no|  
-|Modifica di proprietà|no|Sì (solo processi di proprietà)|no|Sì (solo pianificazioni di proprietà)|no|  
-|Esecuzione/arresto/avvio|Non applicabile|Sì (solo processi di proprietà)|no|Non applicabile|Non applicabile|  
-|Visualizzazione cronologia processo|Non applicabile|Sì|Sì|Non applicabile|Non applicabile|  
-|Eliminazione cronologia processo|Non applicabile|Non <sup>4</sup>|no|Non applicabile|Non applicabile|  
+|Creazione/modifica/eliminazione|No|Sì <sup>1</sup> (solo per i processi di proprietà)|No|Sì (solo pianificazioni di proprietà)|No|  
+|Visualizzazione di un elenco (enumerazione)|Sì <sup>2</sup>|Yes|Yes|Yes|Sì <sup>3</sup>|  
+|Abilitazione/disabilitazione|No|Sì (solo processi di proprietà)|No|Sì (solo pianificazioni di proprietà)|Non applicabile|  
+|Visualizzazione di proprietà|No|Yes|Yes|Yes|No|  
+|Modifica di proprietà|No|Sì (solo processi di proprietà)|No|Sì (solo pianificazioni di proprietà)|No|  
+|Esecuzione/arresto/avvio|Non applicabile|Sì (solo processi di proprietà)|No|Non applicabile|Non applicabile|  
+|Visualizzazione cronologia processo|Non applicabile|Yes|Yes|Non applicabile|Non applicabile|  
+|Eliminazione cronologia processo|Non applicabile|Non <sup>4</sup>|No|Non applicabile|Non applicabile|  
 |Collegamento/scollegamento|Non applicabile|Non applicabile|Non applicabile|Sì (solo pianificazioni di proprietà)|Non applicabile|  
   
  <sup>1</sup> non è possibile modificare la proprietà dei processi.  
@@ -109,14 +109,14 @@ ms.locfileid: "48168761"
   
 |Azione|Avvisi|Operatori|Processi locali|Processi multiserver|Pianificazioni di processi|Proxy|  
 |------------|------------|---------------|----------------|----------------------|-------------------|-------------|  
-|Creazione/modifica/eliminazione|no|no|Sì <sup>2</sup> (solo per i processi di proprietà)|no|Sì (solo pianificazioni di proprietà)|no|  
-|Visualizzazione di un elenco (enumerazione)|Sì|Sì <sup>1</sup>|Sì|Sì|Sì|Sì|  
-|Abilitazione/disabilitazione|no|no|Sì <sup>3</sup>|no|Sì <sup>4</sup>|Non applicabile|  
-|Visualizzazione di proprietà|Sì|Sì|Sì|Sì|Sì|Sì|  
-|Modifica di proprietà|no|no|Sì (solo processi di proprietà)|no|Sì (solo pianificazioni di proprietà)|no|  
-|Esecuzione/arresto/avvio|Non applicabile|Non applicabile|Sì|no|Non applicabile|Non applicabile|  
-|Visualizzazione cronologia processo|Non applicabile|Non applicabile|Sì|Sì|Non applicabile|Non applicabile|  
-|Eliminazione cronologia processo|Non applicabile|Non applicabile|Sì|no|Non applicabile|Non applicabile|  
+|Creazione/modifica/eliminazione|No|No|Sì <sup>2</sup> (solo per i processi di proprietà)|No|Sì (solo pianificazioni di proprietà)|No|  
+|Visualizzazione di un elenco (enumerazione)|Yes|Sì <sup>1</sup>|Yes|Yes|Yes|Yes|  
+|Abilitazione/disabilitazione|No|No|Sì <sup>3</sup>|No|Sì <sup>4</sup>|Non applicabile|  
+|Visualizzazione di proprietà|Yes|Yes|Yes|Yes|Yes|Yes|  
+|Modifica di proprietà|No|No|Sì (solo processi di proprietà)|No|Sì (solo pianificazioni di proprietà)|No|  
+|Esecuzione/arresto/avvio|Non applicabile|Non applicabile|Yes|No|Non applicabile|Non applicabile|  
+|Visualizzazione cronologia processo|Non applicabile|Non applicabile|Yes|Yes|Non applicabile|Non applicabile|  
+|Eliminazione cronologia processo|Non applicabile|Non applicabile|Yes|No|Non applicabile|Non applicabile|  
 |Collegamento/scollegamento|Non applicabile|Non applicabile|Non applicabile|Non applicabile|Sì (solo pianificazioni di proprietà)|Non applicabile|  
   
  <sup>1</sup> possibile ottenere l'elenco di operatori disponibili per l'uso in **sp_notify_operator** e il **delle proprietà del processo** finestra di dialogo di Management Studio.  

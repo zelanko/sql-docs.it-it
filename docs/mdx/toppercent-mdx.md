@@ -1,5 +1,5 @@
 ---
-title: TopPercent (MDX) | Documenti Microsoft
+title: TopPercent (MDX) | Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: d7de38f27d23fe11d0953553a8737a9e2f4e2db3
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.openlocfilehash: 0093da0a4f69d8a1e4cf178959d28509eef15b75
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34743650"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52532345"
 ---
 # <a name="toppercent-mdx"></a>TopPercent (MDX)
 
@@ -41,16 +41,16 @@ TopPercent(Set_Expression, Percentage, Numeric_Expression)
  *Numeric_expression*  
  Espressione numerica valida che in genere è un'espressione MDX (Multidimensional Expression) di coordinate di celle che restituisce un numero.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Note  
  Il **TopPercent** funzione calcola la somma dell'espressione numerica specificata valutata sul set specificato, disponendo il set in ordine decrescente. La funzione restituisce quindi gli elementi con i valori più alti la cui percentuale cumulativa del valore sommato totale corrisponde almeno alla percentuale specificata. La funzione restituisce il subset più piccolo di un set il cui totale cumulativo corrisponde almeno alla percentuale specificata. Gli elementi restituiti sono ordinati dal più grande al più piccolo.  
   
 > [!WARNING]  
->  Se *Numeric_Expression* restituisce quindi un valore negativo **TopPercent** restituisce solo uno (1) riga.  
+>  Se *Numeric_Expression* restituisce quindi un valore negativo **TopPercent** restituisce solo un (1) riga.  
 >   
 >  Vedere il secondo esempio per una presentazione dettagliata di questo comportamento.  
   
 > [!IMPORTANT]  
->  Ad esempio il [BottomPercent](../mdx/bottompercent-mdx.md) funzione, il **TopPercent** funzione rispetta mai la gerarchia.  
+>  Ad esempio la [BottomPercent](../mdx/bottompercent-mdx.md) funzione, il **TopPercent** funzione rispetta mai la gerarchia.  
   
 ## <a name="example"></a>Esempio  
  Nell'esempio seguente vengono restituite le migliori città che contribuiscono al primo 10% delle vendite dei rivenditori per la categoria della bicicletta. Il risultato viene disposto in ordine decrescente a iniziare con la città con il valore massimo di vendite.  
@@ -106,10 +106,10 @@ FROM [Adventure Works]
 ||Reseller Sales Amount|Reseller Total Product Cost|Reseller Gross Profit|  
 |-|---------------------------|---------------------------------|---------------------------|  
 |Touring-2000 Blue, 50|$157,444.56|$163,112.57|($5,668.01)|  
-|Touring-2000 blu, 46|$321,027.03|$333,021.50|($11,994.47)|  
-|Touring-3000 blu, 62|$87,773.61|$100,133.52|($12,359.91)|  
-|…|…|…|…|  
-|Touring-1000 giallo, 46|$1,016,312.83|$1,234,454.27|($218,141.44)|  
+|2000 Touring blu, 46|$321,027.03|$333,021.50|($11,994.47)|  
+|62 blu, Touring 3000|$87,773.61|$100,133.52|($12,359.91)|  
+|...|...|...|...|  
+|Touring-1000 Yellow, 46|$1,016,312.83|$1,234,454.27|($218,141.44)|  
 |Touring-1000 Yellow, 60|$1,184,363.30|$1,443,407.51|($259,044.21)|  
   
  Ora, se è stato richiesto di presentare le prime biciclette al 100% in base al profitto si scriverebbe una query come quella riportata di seguito.  
@@ -128,6 +128,6 @@ FROM [Adventure Works]
 |Touring-2000 Blue, 50|$157,444.56|$163,112.57|($5,668.01)|  
   
 ## <a name="see-also"></a>Vedere anche  
- [Riferimento alla funzione MDX &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
+ [Guida di riferimento alle funzioni MDX &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

@@ -4,22 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: configuration
 ms.topic: conceptual
 ms.assetid: af9ae643-9866-4014-b36f-11ab556a773e
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 0035994dbcc1e0f4aebf01b6dbc4b69dcb7bfb6a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 2e38b572535011737f33ba1e4c438540ecdd6849
+ms.sourcegitcommit: 04dd0620202287869b23cc2fde998a18d3200c66
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48157951"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "52640742"
 ---
 # <a name="database-engine-instances-sql-server"></a>Istanza del motore di database (SQL Server)
-  Un'istanza del [!INCLUDE[ssDE](../../includes/ssde-md.md)] è una copia del `sqlservr.exe` eseguibile che viene eseguito come servizio di sistema operativo. Ogni istanza gestisce diversi database di sistema e uno o più database utente. Ciascun computer può eseguire più istanze del [!INCLUDE[ssDE](../../includes/ssde-md.md)]. Le applicazioni si connettono all'istanza per eseguire attività in un database gestito dall'istanza.  
+  Un'istanza del [!INCLUDE[ssDE](../../includes/ssde-md.md)] è una copia del file eseguibile `sqlservr.exe` che viene eseguita come un servizio del sistema operativo. Ogni istanza gestisce diversi database di sistema e uno o più database utente. Ciascun computer può eseguire più istanze del [!INCLUDE[ssDE](../../includes/ssde-md.md)]. Le applicazioni si connettono all'istanza per eseguire attività in un database gestito dall'istanza.  
   
 ## <a name="instances"></a>Istanze  
  Un'istanza del [!INCLUDE[ssDE](../../includes/ssde-md.md)] funziona come un servizio che gestisce ogni richiesta dell'applicazione per utilizzare i dati in qualsiasi database gestito da quell'istanza. È la destinazione delle richieste di connessione (accessi) da parte delle applicazioni. La connessione attraversa una connessione di rete se l'applicazione e l'istanza si trovano in computer separati. Se l'applicazione e l'istanza sono nello stesso computer, la connessione di SQL Server può essere eseguita come una connessione di rete o una connessione in memoria. Una volta completata una connessione, un'applicazione invia le istruzioni [!INCLUDE[tsql](../../includes/tsql-md.md)] attraverso la connessione all'istanza. L'istanza risolve le istruzioni [!INCLUDE[tsql](../../includes/tsql-md.md)] in operazioni rispetto ai dati e agli oggetti nei database e, se le autorizzazioni necessarie sono state concesse alle credenziali di accesso, esegue l'attività. Qualsiasi dato recuperato viene restituito all'applicazione, insieme a qualsiasi messaggio, come ad esempio errori.  
@@ -46,7 +45,7 @@ ms.locfileid: "48157951"
 |Viene descritto come utilizzare [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Profiler per acquisire tracce di richieste dell'applicazione che entrano a un'istanza del [!INCLUDE[ssDE](../../includes/ssde-md.md)]. È possibile riprodurre queste tracce in un secondo momento per attività quali test delle prestazioni o diagnosi dei problemi.|[SQL Server Profiler](../../tools/sql-server-profiler/sql-server-profiler.md)|  
 |Vengono descritte le funzionalità Change Data Capture e Rilevamento delle modifiche e viene indicato come utilizzare queste funzionalità per tener traccia delle modifiche ai dati in un database.|[Rilevare le modifiche ai dati &#40;SQL Server&#41;](../../relational-databases/track-changes/track-data-changes-sql-server.md)|  
 |Viene descritto come utilizzare il visualizzatore di file di log per trovare e visualizzare errori e messaggi [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] nei vari log, come ad esempio la cronologia processo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , i log di SQL Server e i registri eventi di Windows.|[Visualizzatore file di log](../../relational-databases/logs/log-file-viewer.md)|  
-|Viene descritto come utilizzare l'Ottimizzazione guidata del [!INCLUDE[ssDE](../../includes/ssde-md.md)] per analizzare database e creare requisiti per risolvere potenziali problemi di prestazione.|[Ottimizzazione guidata motore di database](../../relational-databases/performance/database-engine-tuning-advisor.md)|  
+|Viene descritto come utilizzare l'Ottimizzazione guidata del [!INCLUDE[ssDE](../../includes/ssde-md.md)] per analizzare database e creare requisiti per risolvere potenziali problemi di prestazione.|[Database Engine Tuning Advisor](../../relational-databases/performance/database-engine-tuning-advisor.md)|  
 |Viene descritto come gli amministratori del database di produzione possono stabilire una connessione diagnostica con le istanze quando non sono accettate connessioni standard.|[Connessione di diagnostica per gli amministratori di database](diagnostic-connection-for-database-administrators.md)|  
 |Viene descritto come utilizzare la funzionalità server remoti deprecati per abilitare l'accesso da un'istanza del [!INCLUDE[ssDE](../../includes/ssde-md.md)] a un'altra. Il meccanismo preferito per questa funzionalità è un server collegato.|[Server remoti](remote-servers.md)|  
 |Vengono illustrate le funzionalità di Service Broker per applicazioni di messaggistica e accodamento e viene fatto riferimento alla documentazione di Service Broker.|[Service Broker](sql-server-service-broker.md)|  

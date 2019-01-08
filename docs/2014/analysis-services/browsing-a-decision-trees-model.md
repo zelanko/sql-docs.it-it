@@ -18,12 +18,12 @@ ms.assetid: 6b3dd1ae-caff-41c3-817b-802dc020ff88
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: e9e1ccaf9e000779485be93e476f9114817529a7
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 257d193c84420a0c70ea99ef2a8cadfa9e11eec5
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48137051"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52525563"
 ---
 # <a name="browsing-a-decision-trees-model"></a>Esplorazione di un modello Decision Trees
   Quando si apre un modello di classificazione utilizzando **esplorare**, il modello viene visualizzato in un visualizzatore di struttura ad albero delle decisioni interattivo, simile al [!INCLUDE[msCoName](../includes/msconame-md.md)] Visualizzatore alberi delle decisioni in [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]. Nell visualizzatore vengono visualizzati i risultati di classificazione come grafico progettato per evidenziare i criteri che differenziano un gruppo di dati da un altro. È inoltre possibile eseguire il drill-down in singoli subset dell'albero e recuperare i dati sottostanti.  
@@ -92,13 +92,13 @@ ms.locfileid: "48137051"
   
          Case totali: 1150  
   
-         Probabilità bike buyer: % 18  
+         Probabilità acquirente di biciclette: % 18  
   
     -   Età > = 32 e \< 53 e Yearly Income > = 26000 e gli elementi figlio non = stato civile e 0 = 'Single'  
   
-         Totale dei case: 402  
+         Case totali: 402  
   
-         Probabilità Bike Buyer: 16%  
+         Probabilità acquirente di biciclette: 16%  
   
 7.  Modificare il valore per **sfondo** da **Yes** a **No** e vedere come cambia il grafico.  
   
@@ -108,7 +108,7 @@ ms.locfileid: "48137051"
   
 -   Se i dati possono essere suddivisi in più serie, viene compilato un modello diverso per ogni set di dati che si desidera modellare.  
   
--   Nel modello di dati di esempio, è presente un solo risultato stimabile, Bike Buyer, ma si supponga di disporre di informazioni relative al fatto se il cliente ha acquistato un piano di servizio e di volere stimare anche questo. In questo caso si disporrebbe di tali dati in una colonna separata e si includerebbero due attributi stimabili nel modello.  
+-   Nel modello di dati di esempio, è presente un solo risultato stimabile, Bike Buyer, ma si supponga di informazioni sul fatto che il cliente acquista un piano di servizio e voleva stimare anche. In questo caso si disporrebbe di tali dati in una colonna separata e si includerebbero due attributi stimabili nel modello.  
   
      Scegliere il **istogramma** opzione, nell'angolo superiore sinistro del riquadro dell'albero delle decisioni per modificare il numero massimo di stati che possono essere visualizzati negli istogrammi dell'albero. Tale opzione è utile se l'attributo stimabile include molti stati. Gli stati vengono visualizzati in un istogramma in ordine di diffusione da sinistra a destra.  
   
@@ -148,7 +148,7 @@ ms.locfileid: "48137051"
   
     -   **Drill-Through modello**. Questa opzione consente di ottenere i case che appartengono al nodo selezionato e di salvarli in una tabella in Excel. È possibile tornare solo alle colonne dei dati utilizzati effettivamente nella compilazione del modello.  
   
-    -   **Drill-Through le colonne della struttura**. Questa opzione consente di ottenere i case che appartengono al nodo selezionato e di salvarli in una tabella in Excel. Si ottengono tutte le informazioni disponibili nei dati sottostanti quando sono stati compilati, anche se una colonna non è stata utilizzata nel modello. Ad esempio, si potrebbe aver escluso l'indirizzo e il CAP del cliente in quanto tali campi non sono utili con l'analisi, ma sono stati lasciati nella struttura.  
+    -   **Drill-Through le colonne della struttura**. Questa opzione consente di ottenere i case che appartengono al nodo selezionato e di salvarli in una tabella in Excel. Si ottengono tutte le informazioni disponibili nell'oggetto sottostante dei dati durante la compilazione di esso, persino di una colonna non è stati utilizzati nel modello. Ad esempio, si potrebbe aver escluso l'indirizzo e il CAP del cliente in quanto tali campi non sono utili con l'analisi, ma sono stati lasciati nella struttura.  
   
      Tornare a Excel per visualizzare i dati. Nel visualizzatore Sfoglia viene eseguita una query, vengono salvati i dati in una tabella in un nuovo foglio di lavoro e vengono etichettati i risultati.  
   

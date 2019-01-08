@@ -15,19 +15,19 @@ ms.assetid: efe50306-cf7c-46b3-9cc4-e7f0b6968b0c
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 3e3b99c917b6f272f4af325a35712f059313742c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 85f0c099aba12fe9a4049fe787e248cfe580ff3b
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48172561"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52400464"
 ---
 # <a name="goal-seek-scenario-table-analysis-tools-for-excel"></a>Ricerca obiettivo (Strumenti di analisi tabelle per Excel)
   ![Pulsante Ricerca obiettivo in strumenti di analisi tabelle](media/tat-goalseek.gif "pulsante Ricerca obiettivo in strumenti di analisi tabelle")  
   
  Il **ricerca obiettivo** dello strumento per scenari è complementare ad le [cosa accade se](what-if-scenario-table-analysis-tools-for-excel.md) dello strumento per scenari. Il **simulazione** lo strumento indica l'impatto di una modifica, mentre le **ricerca obiettivo** strumento indica i fattori sottostanti che è necessario modificare per ottenere un risultato desiderato.  
   
- Si supponga, ad esempio, che l'obiettivo consista nel migliorare la soddisfazione dei clienti. È possibile usare **ricerca obiettivo** analysis per determinare quali fattori sarebbe più probabili aumentare la soddisfazione dei clienti e decidere se tali modifiche sono convenienti.  
+ Ad esempio, si supponga che l'obiettivo consiste nel migliorare la soddisfazione dei clienti. È possibile usare **ricerca obiettivo** analysis per determinare quali fattori sarebbe più probabili aumentare la soddisfazione dei clienti e decidere se tali modifiche sono convenienti.  
   
  Al termine dell'analisi, tramite lo strumento vengono create due nuove colonne nella tabella dati di origine. Queste colonne indicano il *probabilità* che è possibile ottenere il risultato di destinazione e la modifica consigliata, se presente.  
   
@@ -39,7 +39,7 @@ ms.locfileid: "48172561"
   
 2.  Fare clic su **scenari**e selezionare **ricerca obiettivo**.  
   
-3.  Nel **analisi dello Scenario: ricerca obiettivo** finestra di dialogo, seleziona il valore della colonna che contiene la destinazione dall'elenco.  
+3.  Nel **analisi di Scenario: Ricerca obiettivo** finestra di dialogo, seleziona il valore della colonna che contiene la destinazione dall'elenco.  
   
 4.  Specificare il valore che si desidera raggiungere.  
   

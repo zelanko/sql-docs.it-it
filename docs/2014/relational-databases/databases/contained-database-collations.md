@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 07/17/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: configuration
 ms.topic: conceptual
 helpviewer_keywords:
 - contained database, collations
@@ -13,12 +12,12 @@ ms.assetid: 4b44f6b9-2359-452f-8bb1-5520f2528483
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 6b0772ac03110b21912671b7e7651a1b0ede2903
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 8bb735093eb7b2e41e1822facca6c03ace45a911
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48055991"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52789703"
 ---
 # <a name="contained-database-collations"></a>Regole di confronto dei database indipendenti
   Varie proprietà incidono sull'ordinamento e sulla semantica di uguaglianza dei dati testuali, ad esempio distinzione maiuscole/minuscole, distinzione caratteri accentati/non accentati e linguaggio di base utilizzato. Queste qualità vengono espresse in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tramite la scelta di regole di confronto per i dati. Per informazioni dettagliate sulle regole di confronto, vedere [Regole di confronto e supporto Unicode](../collations/collation-and-unicode-support.md).  
@@ -28,7 +27,7 @@ ms.locfileid: "48055991"
  In questo argomento si illustra il contenuto della modifica e si esaminano alcune aree in cui tale modifica potrebbe causare problemi.  
   
 ## <a name="non-contained-databases"></a>Database non indipendenti  
- A tutti i database sono associate regole di confronto predefinite, che possono essere impostate quando si crea o si modifica un database. Queste regole di confronto vengono utilizzate per tutti i metadati presenti nel database e come impostazione predefinita per tutte le colonne stringa all'interno del database. Gli utenti possono scegliere regole di confronto diverse per qualsiasi colonna specifica usando il `COLLATE` clausola.  
+ A tutti i database sono associate regole di confronto predefinite, che possono essere impostate quando si crea o si modifica un database. Queste regole di confronto vengono utilizzate per tutti i metadati presenti nel database e come impostazione predefinita per tutte le colonne stringa all'interno del database. Gli utenti possono scegliere regole di confronto diverse per qualsiasi colonna specifica tramite la clausola `COLLATE`.  
   
 ### <a name="example-1"></a>Esempio 1  
  Se si lavora ad esempio a Pechino, è possibile che venga utilizzata una regola di confronto cinese:  
@@ -107,12 +106,12 @@ JOIN #T2
 CREATE FUNCTION f(@x INT) RETURNS INT  
 AS BEGIN   
       DECLARE @I INT = 1  
-      DECLARE @İ INT = 2  
+      DECLARE @?? INT = 2  
       RETURN @x * @i  
 END;  
 ```  
   
- Si tratta di una funzione piuttosto particolare. Nelle regole di confronto con distinzione tra maiuscole e minuscole, @i nella clausola RETURN non può essere associato a @I o @İ. Nelle regole di confronto Latin1_General senza distinzione tra maiuscole e minuscole, @i viene associato a @I e la funzione restituisce 1. Tuttavia, nelle regole di confronto Turkish senza distinzione tra maiuscole e minuscole, @i viene associato a @I e la funzione restituisce 2. Questa funzione può causare seri problemi in un database che passa da un'istanza all'altra con regole di confronto diverse.  
+ Si tratta di una funzione piuttosto particolare. Nelle regole di confronto tra maiuscole e minuscole, il @i nella clausola return non può eseguire l'associazione a una delle due @I o @??. Nelle regole di confronto Latin1_General senza distinzione tra maiuscole e minuscole, @i viene associato a @I e la funzione restituisce 1. Ma nelle regole di confronto Turkish senza maiuscole/minuscole, @i viene associato a @??, e la funzione restituisce 2. Questa funzione può causare seri problemi in un database che passa da un'istanza all'altra con regole di confronto diverse.  
   
 ## <a name="contained-databases"></a>Database indipendenti  
  Poiché uno degli obiettivi di progettazione dei database indipendenti è di renderli autosufficienti, è necessario eliminare la dipendenza dalle regole di confronto di istanza e `tempdb`. A questo scopo, nei database indipendenti viene introdotto il concetto di regole di confronto del catalogo. Tali regole vengono utilizzate per metadati di sistema e oggetti temporanei. Di seguito vengono illustrati i dettagli.  
@@ -121,7 +120,7 @@ END;
   
  Le regole di confronto del database vengono mantenute, ma utilizzate solo come regole di confronto predefinite per i dati utente. Per impostazione predefinita, le regole di confronto del database sono uguali alle regole di confronto del database modello, ma può essere modificato dall'utente tramite un `CREATE` o `ALTER DATABASE` comando con i database non indipendente.  
   
- Nella clausola `CATALOG_DEFAULT` è disponibile la nuova parola chiave `COLLATE`, che viene utilizzata come collegamento alle regole di confronto correnti per i metadati nei database indipendenti e non indipendenti. Vale a dire, in un database non indipendente, `CATALOG_DEFAULT` restituirà le regole di confronto del database corrente, poiché i metadati vengono confrontati nelle regole di confronto del database. In un database indipendente questi due valori potrebbero essere diversi, in quanto l'utente può modificare le regole di confronto del database in modo che non corrispondano alle regole di confronto del catalogo.  
+ Nella clausola `CATALOG_DEFAULT` è disponibile la nuova parola chiave `COLLATE`, che viene utilizzata come collegamento alle regole di confronto correnti per i metadati nei database indipendenti e non indipendenti. Vale a dire che, in un database non indipendente, la parola chiave `CATALOG_DEFAULT` restituirà le regole di confronto del database correnti, poiché i metadati vengono confrontati nelle regole di confronto del database. In un database indipendente questi due valori potrebbero essere diversi, in quanto l'utente può modificare le regole di confronto del database in modo che non corrispondano alle regole di confronto del catalogo.  
   
  Nella tabella seguente viene riepilogato il comportamento di vari oggetti sia nei database non indipendenti che in quelli indipendenti:  
   
@@ -134,7 +133,7 @@ END;
 |Metadati temporanei|Regole di confronto TempDB|COLLATE|  
 |Variabili|Regole di confronto di istanza|COLLATE|  
 |Etichette Goto|Regole di confronto di istanza|COLLATE|  
-|Nomi di cursori|Regole di confronto di istanza|CATALOG_DEFAULT|  
+|Nomi di cursori|Regole di confronto di istanza|COLLATE|  
   
  Se si utilizza una tabella temporanea nell'esempio precedentemente descritto, è possibile osservare che questo comportamento delle regole di confronto elimina l'esigenza di una clausola `COLLATE` esplicita nella maggior parte degli usi della tabelle temporanee. In un database indipendente questo codice ora viene eseguito senza errori, anche se le regole di confronto di database e istanza sono diverse:  
   
@@ -152,11 +151,11 @@ JOIN #T2
  Il codice funziona perché il confronto di `T1_txt` e di `T2_txt` viene effettuato nelle regole di confronto del database relative al database indipendente.  
   
 ## <a name="crossing-between-contained-and-uncontained-contexts"></a>Passaggio tra contesti indipendenti e non indipendenti  
- Finché una sessione in un database indipendente rimane indipendente, dovrà rimanere all'interno del database al quale è connessa. In questo caso il comportamento è molto chiaro. Se, tuttavia, avviene il passaggio di una sessione tra contesti indipendenti e non indipendenti, il comportamento diventa più complesso, poiché è necessario creare un collegamento tra i due set di regole. Questa situazione può verificarsi in un database parzialmente indipendente, poiché un utente può `USE` a un altro database. In questo caso, la differenza nelle regole di confronto viene gestita in base al principio seguente.  
+ Finché una sessione in un database indipendente rimane indipendente, dovrà rimanere all'interno del database al quale è connessa. In questo caso il comportamento è molto chiaro. Se, tuttavia, avviene il passaggio di una sessione tra contesti indipendenti e non indipendenti, il comportamento diventa più complesso, poiché è necessario creare un collegamento tra i due set di regole. Questa condizione può verificarsi in un database parzialmente indipendente, poiché un utente può utilizzare `USE` su un altro database. In questo caso, la differenza nelle regole di confronto viene gestita in base al principio seguente.  
   
 -   Il comportamento delle regole di confronto per un batch viene determinato dal database in cui inizia il batch.  
   
- Si noti che questa decisione avviene prima di qualsiasi comando, tra cui iniziale `USE`. Se un batch inizia in un database indipendente, ma il primo comando è un `USE` su un database non indipendente, il comportamento delle regole di confronto indipendenti verrà comunque utilizzato per il batch. In questo caso, un riferimento a una variabile, ad esempio, può avere più risultati possibili:  
+ Questa decisione avviene prima dell'esecuzione di qualsiasi comando, incluso un comando `USE` iniziale. Ciò significa che se un batch inizia in un database indipendente, ma il primo comando è `USE` su un database non indipendente, per il batch verrà comunque utilizzato il comportamento delle regole di confronto indipendenti. In questo caso, un riferimento a una variabile, ad esempio, può avere più risultati possibili:  
   
 -   Il riferimento può trovare esattamente una corrispondenza. In questo caso il riferimento funzionerà senza errori.  
   
@@ -164,7 +163,7 @@ JOIN #T2
   
 -   Il riferimento più trovare più corrispondenze originariamente distinte. Anche in questo caso verrà generato un errore.  
   
- Di seguito vengono utilizzati alcuni esempi per illustrare questo comportamento, presupponendo l'uso di un database parzialmente indipendente, denominato `MyCDB` , con regole di confronto del database impostate sulle regole di confronto predefinite **Latin1_General_100_CI_AS_WS_KS_SC**. Si supponga che le regole di confronto di istanza siano `Latin1_General_100_CS_AS_WS_KS_SC`. la sola differenza tra le due regole di confronto riguarda la distinzione tra maiuscole e minuscole.  
+ Di seguito vengono usati alcuni esempi per illustrare questo comportamento, presupponendo l'uso di un database parzialmente indipendente, denominato `MyCDB` , con regole di confronto del database impostate sulle regole di confronto predefinite **Latin1_General_100_CI_AS_WS_KS_SC**. Si supponga che le regole di confronto di istanza siano `Latin1_General_100_CS_AS_WS_KS_SC`, la sola differenza tra le due regole di confronto riguarda la distinzione tra maiuscole e minuscole.  
   
 ### <a name="example-1"></a>Esempio 1  
  Nell'esempio seguente viene illustrato il caso in cui il riferimento trova esattamente una corrispondenza.  
@@ -276,7 +275,7 @@ GO
   
  Il riferimento al nome della tabella temporanea '#a' è ambiguo e non può essere risolto. I possibili candidati sono '#a' e '#A'.  
   
-## <a name="conclusion"></a>Conclusioni  
+## <a name="conclusion"></a>Conclusione  
  Il comportamento delle regole di confronto dei database indipendenti è leggermente diverso da quello nei database non indipendenti. Questo comportamento è generalmente utile, in quanto consente l'indipendenza dell'istanza e favorisce la semplicità. È possibile che alcuni utenti riscontrino problemi, specialmente quando una sessione accede a database indipendenti e non indipendenti.  
   
 ## <a name="see-also"></a>Vedere anche  

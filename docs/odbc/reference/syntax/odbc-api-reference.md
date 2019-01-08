@@ -12,12 +12,12 @@ ms.assetid: b7a49774-f458-44ce-9a04-a0457501405b
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 6553984255843cf940b48d745d4494522b357159
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d56d6068b842256bd450844c7b163727e5d35f3d
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47680829"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52525063"
 ---
 # <a name="odbc-api-reference"></a>Informazioni di riferimento sull'API ODBC
 Gli argomenti in questa sezione descrivono ogni funzione ODBC in ordine alfabetico. Ogni funzione viene definita come funzione del linguaggio di programmazione C. Le descrizioni seguenti:  
@@ -42,7 +42,7 @@ Gli argomenti in questa sezione descrivono ogni funzione ODBC in ordine alfabeti
   
 -   Riferimenti alle funzioni correlate  
   
- Il livello di conformità della riga di comando standard può essere uno dei seguenti: 92 ISO, Open Group, ODBC o obsoleto. Una funzione contrassegnata come conforme allo standard ISO 92 visualizzato anche nell'Open Group versione 1, poiché Open Group è un superset pure del 92 ISO. Una funzione contrassegnata come conforme a Open gruppo viene visualizzato anche in ODBC 3. *x*, in quanto ODBC 3. *x* è un superset puro di Open Group versione 1. Una funzione contrassegnata come conforme a ODBC viene visualizzato in nessuna delle due standard. Una funzione contrassegnata come deprecata è stata deprecata in ODBC 3. *x*.  
+ Il livello di conformità della riga di comando standard può essere uno dei seguenti: 92 ISO, aprire il gruppo, ODBC, o deprecata. Una funzione contrassegnata come conforme a ISO 92 visualizzato anche nell'Open Group versione 1, poiché Open Group è un superset pure del 92 ISO. Una funzione contrassegnata come conforme a Open gruppo viene visualizzato anche in ODBC 3. *x*, in quanto ODBC 3. *x* è un superset puro di Open Group versione 1. Una funzione contrassegnata come conforme a ODBC viene visualizzato in nessuna delle due standard. Una funzione contrassegnata come deprecata è stata deprecata in ODBC 3. *x*.  
   
  La gestione delle informazioni di diagnostica è descritta nel [SQLGetDiagField](../../../odbc/reference/syntax/sqlgetdiagfield-function.md) descrizione della funzione. Il testo associato ai valori SQLSTATE verrà fornite una descrizione della condizione, ma non deve prevedere un testo specifico.  
   

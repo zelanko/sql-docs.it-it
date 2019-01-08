@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: configuration
 ms.topic: conceptual
 helpviewer_keywords:
 - global default for all users [SQL Server]
@@ -15,12 +14,12 @@ ms.assetid: cfed8f86-6bcf-4b90-88eb-9656e22d5dc5
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 9c418de267940942c99aae21bcf00118bb1ac36e
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 88cc979d7888a5844731c63ec96898572d31acc8
+ms.sourcegitcommit: 04dd0620202287869b23cc2fde998a18d3200c66
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48172671"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "52641479"
 ---
 # <a name="configure-the-user-options-server-configuration-option"></a>Configurare l'opzione di configurazione del server user options
   In questo argomento si illustra come configurare l'opzione di configurazione del server **user options** in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] utilizzando [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)]. L'opzione **user options** consente di specificare impostazioni globali predefinite per tutti gli utenti. Viene creato un elenco di opzioni predefinite per l'elaborazione delle query, che rimane valido per tutta la durata della sessione di lavoro dell'utente. L'opzione **user options** consente di modificare i valori predefiniti delle opzioni SET, se le impostazioni predefinite del server non risultano appropriate.  
@@ -33,7 +32,7 @@ ms.locfileid: "48172671"
   
      [Indicazioni](#Recommendations)  
   
-     [Security](#Security)  
+     [Sicurezza](#Security)  
   
 -   **Per impostare l'opzione di configurazione user options utilizzando:**  
   
@@ -41,7 +40,7 @@ ms.locfileid: "48172671"
   
      [Transact-SQL](#TsqlProcedure)  
   
--   **Completamento:**  [Dopo l'impostazione dell'opzione di configurazione user options](#FollowUp)  
+-   **Completamento:**  [Dopo aver configurato l'opzione di configurazione user options](#FollowUp)  
   
 ##  <a name="BeforeYouBegin"></a> Prima di iniziare  
   
@@ -49,7 +48,7 @@ ms.locfileid: "48172671"
   
 -   Nella tabella seguente sono elencati e descritti i valori di configurazione per **user options**. Non tutti i valori di configurazione sono compatibili tra loro. Ad esempio, non è possibile impostare contemporaneamente ANSI_NULL_DFLT_ON e ANSI_NULL_DFLT_OFF.  
   
-    |valore|Configurazione|Description|  
+    |Value|Configurazione|Descrizione|  
     |-----------|-------------------|-----------------|  
     |1|DISABLE_DEF_CNST_CHK|Controlla la verifica dei vincoli posticipata o provvisoria.|  
     |2|IMPLICIT_TRANSACTIONS|Per connessioni alla libreria di rete dblib, determina se una transazione viene avviata in modo implicito al momento dell'esecuzione di un'istruzione. L'impostazione IMPLICIT_TRANSACTIONS non influisce su connessioni ODBC o OLEDB.|  
@@ -71,7 +70,7 @@ ms.locfileid: "48172671"
   
 ###  <a name="Security"></a> Sicurezza  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> Autorizzazioni  
  Le autorizzazioni di esecuzione per **sp_configure** senza alcun parametro o solo con il primo parametro vengono assegnate per impostazione predefinita a tutti gli utenti. Per eseguire **sp_configure** con entrambi i parametri per la modifica di un'opzione di configurazione o per l'esecuzione dell'istruzione RECONFIGURE, a un utente deve essere concessa l'autorizzazione a livello di server ALTER SETTINGS. L'autorizzazione ALTER SETTINGS è assegnata implicitamente ai ruoli predefiniti del server **sysadmin** e **serveradmin** .  
   
 ##  <a name="SSMSProcedure"></a> Utilizzo di SQL Server Management Studio  
@@ -86,7 +85,7 @@ ms.locfileid: "48172671"
   
      Per impostazione predefinita, non è configurata alcuna opzione utente.  
   
-##  <a name="TsqlProcedure"></a> Uso di Transact-SQL  
+##  <a name="TsqlProcedure"></a> Utilizzo di Transact-SQL  
   
 #### <a name="to-configure-the-user-options-configuration-option"></a>Per impostare l'opzione di configurazione user options  
   
@@ -106,7 +105,7 @@ GO
   
 ```  
   
-##  <a name="FollowUp"></a> Completamento: Dopo l'impostazione dell'opzione di configurazione user options  
+##  <a name="FollowUp"></a> Completamento: Dopo aver configurato l'opzione di configurazione user options  
  L'impostazione diventa effettiva immediatamente senza dover riavviare il server.  
   
 ## <a name="see-also"></a>Vedere anche  

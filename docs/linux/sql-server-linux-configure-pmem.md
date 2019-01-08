@@ -10,12 +10,12 @@ ms.prod: sql
 ms.custom: sql-linux
 ms.technology: linux
 monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
-ms.openlocfilehash: 07f068a24c60fe82c299387fe859f07296f21df8
-ms.sourcegitcommit: a2be75158491535c9a59583c51890e3457dc75d6
+ms.openlocfilehash: b11b3154162fafdfc717e9785fb65e59dc45799c
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/07/2018
-ms.locfileid: "51269435"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52510821"
 ---
 # <a name="how-to-configure-persistent-memory-pmem-for-sql-server-on-linux"></a>Come configurare la memoria persistente (PMEM) per SQL Server in Linux
 
@@ -40,7 +40,7 @@ Per abilitare l'illuminazione di file di database in SQL Server in Linux, seguir
   - Per creare uno spazio dei nomi, usare [ndctl].
 
   ```bash 
-  ndctl create-namespace -f -e namespace0.0 --mode=fsdax* -–map=mem
+  ndctl create-namespace -f -e namespace0.0 --mode=fsdax* --map=mem
   ```
 
   >[!NOTE]
@@ -67,7 +67,7 @@ ndctl list
 
     ```bash
     mkfs.xfs -f /dev/pmem0
-    mount –o dax,noatime /dev/pmem0 /mnt/dax
+    mount -o dax,noatime /dev/pmem0 /mnt/dax
     xfs_io -c "extsize 2m" /mnt/dax
     ```
 
@@ -75,7 +75,7 @@ ndctl list
 
     ```bash
     mkfs.ext4 -b 4096 -E stride=512 -F /dev/pmem0
-    mount –o dax,noatime /dev/pmem0 /mnt/dax
+    mount -o dax,noatime /dev/pmem0 /mnt/dax
     ```
 
   Una volta che il dispositivo è stato configurato con ndctl, formattato e montato, è possibile inserire i file di database in esso. È anche possibile creare un nuovo database 

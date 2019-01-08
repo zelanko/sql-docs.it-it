@@ -11,12 +11,12 @@ ms.assetid: 5d654a60-d205-49d2-a831-b3d986d60024
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: f9791e381b9233137055c680efb8bdfcad62929a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: abfaedbc8eb415d00b1947fe36bef0a51716f536
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48110701"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52513015"
 ---
 # <a name="open-an-editor-sql-server-management-studio"></a>Apertura di un editor (SQL Server Management Studio)
   In questo argomento viene descritto come aprire gli editor di query del [!INCLUDE[ssDE](../../includes/ssde-md.md)] , MDX, DMX o XML/A in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Ogni finestra dell'editor quando viene aperta viene visualizzata come una scheda nel riquadro centrale di [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)].  
@@ -30,15 +30,15 @@ ms.locfileid: "48110701"
 ### <a name="permissions"></a>Permissions  
  Le operazioni eseguite in un editor del codice sono soggette alle autorizzazioni concesse all'account di autenticazione utilizzato per l'accesso. Se ad esempio si apre una finestra dell'editor di query del [!INCLUDE[ssDE](../../includes/ssde-md.md)] utilizzando l'autenticazione di Windows, non sarà possibile eseguire le istruzioni [!INCLUDE[tsql](../../includes/tsql-md.md)] che fanno riferimento a oggetti per i quali l'account di Windows non dispone delle autorizzazioni di accesso.  
   
-## <a name="how-to-open-editors"></a>Procedura: Apertura degli editor  
+## <a name="how-to-open-editors"></a>Procedura: Apri editor  
  In questa sezione viene illustrato come aprire i vari editor in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
   
 ### <a name="using-the-filenew-menu"></a>Utilizzo del menu File/Nuovo  
  Scegliere **Nuovo** dal menu **File**e quindi selezionare una delle opzioni dell'editor di query:  
   
--   **Query con connessione corrente** : consente di aprire una nuova finestra dell'editor del tipo associato alla connessione corrente in [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]. La finestra dell'editor utilizza le stesse informazioni di autenticazione della connessione corrente. Se ad esempio si seleziona un'istanza del [!INCLUDE[ssDE](../../includes/ssde-md.md)] in Esplora oggetti e quindi si usa **Query con connessione corrente**, in [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] viene aperto un editor di query del [!INCLUDE[ssDE](../../includes/ssde-md.md)] connesso alla stessa istanza usando le stesse informazioni di autenticazione.  
+-   **Query con connessione corrente**: consente di aprire una nuova finestra dell'editor del tipo associato alla connessione corrente in [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]. La finestra dell'editor utilizza le stesse informazioni di autenticazione della connessione corrente. Se ad esempio si seleziona un'istanza del [!INCLUDE[ssDE](../../includes/ssde-md.md)] in Esplora oggetti e quindi si usa **Query con connessione corrente**, in [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] viene aperto un editor di query del [!INCLUDE[ssDE](../../includes/ssde-md.md)] connesso alla stessa istanza usando le stesse informazioni di autenticazione.  
   
--   **Query del motore di database** : consente di aprire un nuovo editor di query del [!INCLUDE[ssDE](../../includes/ssde-md.md)] e una finestra di dialogo per ottenere le informazioni necessarie per connettersi a un'istanza del [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
+-   **Query del motore di database**: consente di aprire un nuovo editor di query del [!INCLUDE[ssDE](../../includes/ssde-md.md)] e una finestra di dialogo per ottenere le informazioni necessarie per connettersi a un'istanza del [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
 -   **Query MDX di Analysis Services** : consente di aprire un nuovo editor di query MDX di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] e una finestra di dialogo per ottenere le informazioni necessarie per connettersi a un'istanza di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)].  
   
@@ -54,9 +54,9 @@ ms.locfileid: "48110701"
 ### <a name="using-the-toolbar"></a>Utilizzo della barra degli strumenti  
  Nella barra degli strumenti **Standard** fare clic su uno dei pulsanti seguenti:  
   
--   **Nuova query** : consente di aprire una nuova finestra dell'editor del tipo associato alla connessione corrente in [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]. La finestra dell'editor utilizza le stesse informazioni di autenticazione della connessione corrente. Se ad esempio si seleziona un'istanza del [!INCLUDE[ssDE](../../includes/ssde-md.md)] in Esplora oggetti e quindi si fa clic sul pulsante **Nuova query** , [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] apre un editor di query del [!INCLUDE[ssDE](../../includes/ssde-md.md)] connesso alla stessa istanza usando le stesse informazioni di autenticazione.  
+-   **Nuova query**: consente di aprire una nuova finestra dell'editor del tipo associato alla connessione corrente in [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]. La finestra dell'editor utilizza le stesse informazioni di autenticazione della connessione corrente. Se ad esempio si seleziona un'istanza del [!INCLUDE[ssDE](../../includes/ssde-md.md)] in Esplora oggetti e quindi si fa clic sul pulsante **Nuova query** , [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] apre un editor di query del [!INCLUDE[ssDE](../../includes/ssde-md.md)] connesso alla stessa istanza usando le stesse informazioni di autenticazione.  
   
--   **Query del motore di database** : consente di aprire un nuovo editor di query del [!INCLUDE[ssDE](../../includes/ssde-md.md)] e una finestra di dialogo per ottenere le informazioni necessarie per connettersi a un'istanza del [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
+-   **Query del motore di database**: consente di aprire un nuovo editor di query del [!INCLUDE[ssDE](../../includes/ssde-md.md)] e una finestra di dialogo per ottenere le informazioni necessarie per connettersi a un'istanza del [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
 -   **Query MDX di Analysis Services** : consente di aprire un nuovo editor di query MDX di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] e una finestra di dialogo per ottenere le informazioni necessarie per connettersi a un'istanza di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)].  
   

@@ -16,12 +16,12 @@ ms.assetid: ff759185-df41-4507-8d12-0921894ffbd9
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: aeae626f924776092bc8f6652e716747768b689c
-ms.sourcegitcommit: 96b2355d54dfad259826e88bdff91cc9344e16f2
+ms.openlocfilehash: 30d358dab4ab983109d354238b35b64a3d7976da
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51350525"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52544179"
 ---
 # <a name="visual-c-extensions"></a>Estensioni di Visual C++
 ## <a name="the-iadorecordbinding-interface"></a>L'interfaccia IADORecordBinding
@@ -34,7 +34,7 @@ ms.locfileid: "51350525"
 ## <a name="binding-entries"></a>Voci di associazione
  Le estensioni di Visual C++ per ADO mappare i campi di un [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) oggetto alle variabili di C/C++. La definizione di un mapping di un campo a una variabile viene chiamata un *associazione di voce*. Macro di forniscono le voci di associazione di dati numerici a lunghezza fissa e a lunghezza variabile. Le voci di associazione e le variabili di C/C++ vengono dichiarate in una classe derivata dalla classe di estensioni di Visual C++ **CADORecordBinding**. Il **CADORecordBinding** classe è definita internamente dalle macro di ingresso di associazione.
 
- ADO esegue il mapping internamente i parametri in queste macro per OLE DB **DBBINDING** strutturare e crea OLE DB **della funzione di accesso** oggetto per gestire lo spostamento e la conversione dei dati tra i campi e variabili. OLE DB definisce i dati, costituito da tre parti: un *buffer* in cui sono archiviati i dati; un *stato* che indica se un campo è stato correttamente archiviato nel buffer, o come la variabile deve essere ripristinata a il campo. e il *lunghezza* dei dati. (Vedere [introduzione e l'impostazione dei dati (OLE DB)](https://msdn.microsoft.com/4369708b-c9fb-4d48-a321-bf949b41a369)nel riferimento delle per programmatori OLE DB, per altre informazioni.)
+ ADO esegue il mapping internamente i parametri in queste macro per OLE DB **DBBINDING** strutturare e crea OLE DB **della funzione di accesso** oggetto per gestire lo spostamento e la conversione dei dati tra i campi e variabili. OLE DB definisce i dati, costituito da tre parti: Oggetto *buffer* indica dove sono archiviati i dati; un *stato* che indica se un campo è stato correttamente archiviato nel buffer, o il modo in cui la variabile deve essere ripristinata al campo; e *lunghezza* dei dati. (Vedere [introduzione e l'impostazione dei dati (OLE DB)](https://msdn.microsoft.com/4369708b-c9fb-4d48-a321-bf949b41a369)nel riferimento delle per programmatori OLE DB, per altre informazioni.)
 
 ## <a name="header-file"></a>File di intestazione
  Nell'applicazione per poter usare le estensioni di Visual C++ per ADO, includere il file seguente:
@@ -84,7 +84,7 @@ Update(CADORecordBinding *binding)
 
  Famiglie di macro vengono fornite per i dati a lunghezza fissa, ad esempio **adDate** oppure **adBoolean**; numerico i dati, ad esempio **adTinyInt**, **tutti**, oppure **adDouble**; e i dati a lunghezza variabile, ad esempio **famiglia**, **adVarChar** oppure **adVarBinary**. Tutti i tipi numerici, ad eccezione di **adVarNumeric**, sono anche tipi a lunghezza fissa. Ogni famiglia è costituita da diversi set di parametri in modo che è possibile escludere le informazioni di associazione di alcun interesse.
 
- Per altre informazioni, vedere [appendice a: tipi di dati](https://msdn.microsoft.com/e3a0533a-2196-4eb0-a31e-92fe9556ada6), di riferimento delle per programmatori OLE DB.
+ Per altre informazioni, vedere [appendice a: Tipi di dati](https://msdn.microsoft.com/e3a0533a-2196-4eb0-a31e-92fe9556ada6), di riferimento per programmatori OLE DB.
 
 ### <a name="begin-binding-entries"></a>Iniziare a voci di associazione
  **Le macro BEGIN_ADO_BINDING**(*classe*)
@@ -111,7 +111,7 @@ Update(CADORecordBinding *binding)
 ### <a name="end-binding-entries"></a>Associazione voci finali
  **END_ADO_BINDING**()
 
-|Parametro|Description|
+|Parametro|Descrizione|
 |---------------|-----------------|
 |*Classe*|Classe in cui sono definite le voci di associazione e le variabili di C/C++.|
 |*Ordinal*|Numero ordinale a partire da uno, del **Recordset** campo corrispondente alla variabile di C/C++.|
@@ -129,7 +129,7 @@ Update(CADORecordBinding *binding)
 
  Quando si impostano i dati, *lo stato* può essere impostato su **adFldNull** per indicare il **Recordset** campo deve essere impostato su null.
 
-|Costante|valore|Description|
+|Costante|Value|Descrizione|
 |--------------|-----------|-----------------|
 |**adFldOK**|0|È stato restituito un valore del campo non null.|
 |**adFldBadAccessor**|1|Associazione non è valida.|
@@ -139,7 +139,7 @@ Update(CADORecordBinding *binding)
 |**adFldSignMismatch**|5|Valore è con segno mentre il tipo di dati della variabile è senza segno.|
 |**adFldDataOverFlow**|6|Il valore è maggiore di possono essere archiviati nel tipo di dati della variabile.|
 |**adFldCantCreate**|7|Tipo di colonna sconosciuto e il campo è già aperta.|
-|**adFldUnavailable**|8|Valore del campo non è stato possibile determinare, ad esempio, su un campo di nuovo, non assegnato non prevede alcun valore predefinito.|
+|**adFldUnavailable**|8|Valore del campo non è stato possibile determinare ad esempio, su un campo di nuovo, non assegnato non prevede alcun valore predefinito.|
 |**adFldPermissionDenied**|9|Quando non si aggiorna, nessuna autorizzazione per scrivere i dati.|
 |**adFldIntegrityViolation**|10|Durante l'aggiornamento, il valore del campo violerebbe l'integrità della colonna.|
 |**adFldSchemaViolation**|11|Durante l'aggiornamento, il valore del campo violerebbe dello schema di colonna.|

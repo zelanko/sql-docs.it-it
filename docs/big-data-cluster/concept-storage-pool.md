@@ -1,22 +1,24 @@
 ---
-title: Che cos'è il pool di archiviazione cluster di SQL Server i big Data? | Microsoft Docs
+title: Che cos'è il pool di archiviazione?
+titleSuffix: SQL Server 2019 big data clusters
 description: Questo articolo descrive il pool di archiviazione in un cluster di big data di SQL Server 2019.
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 10/01/2018
+ms.date: 12/06/2018
 ms.topic: conceptual
 ms.prod: sql
-ms.openlocfilehash: cbf9ff14ece1b33e1c271786bc96f0ac590b807e
-ms.sourcegitcommit: 182d77997133a6e4ee71e7a64b4eed6609da0fba
+ms.custom: seodec18
+ms.openlocfilehash: c0f376066ad02e70576c59bfe13c6f77e4b72c09
+ms.sourcegitcommit: 189a28785075cd7018c98e9625c69225a7ae0777
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50050753"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53029955"
 ---
-# <a name="what-is-the-sql-server-big-data-clusters-storage-pool"></a>Che cos'è il pool di archiviazione cluster di SQL Server i big Data?
+# <a name="what-is-the-storage-pool-sql-server-2019-big-data-clusters"></a>Che cos'è il pool di archiviazione (cluster di SQL Server 2019 dei big Data)?
 
-Questo articolo descrive il ruolo del *pool di archiviazione di SQL Server* in un cluster di big data anteprima di SQL Server 2019. Le sezioni seguenti descrivono l'architettura e la funzionalità di un pool di archiviazione SQL.
+Questo articolo descrive il ruolo del *pool di archiviazione di SQL Server* in un cluster di big data di SQL Server 2019 (anteprima). Le sezioni seguenti descrivono l'architettura e la funzionalità di un pool di archiviazione SQL.
 
 ## <a name="storage-pool-architecture"></a>Architettura del pool di archiviazione
 

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 f1_keywords:
 - sql12.rep.p2pwizard.LRA.f1
@@ -13,12 +12,12 @@ ms.assetid: 6575e2a8-16bb-449c-bdca-4a4202d0972f
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 24e74cbeae446e4bd70088b0dc3a61b1490e590d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: d6bcf7d78fd550404f81f9cc303414303ad82504
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48124451"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52761444"
 ---
 # <a name="log-reader-agent-security-peer-to-peer-replication"></a>Sicurezza agente di lettura log (replica peer-to-peer)
   La pagina **Sicurezza agente di lettura log** consente di specificare gli account con cui viene eseguito l'agente di lettura in ogni peer e vengono stabilite le connessioni. Per informazioni sulle autorizzazioni necessarie per gli agenti e le procedure migliori per la sicurezza della replica, vedere [Modello di sicurezza dell'agente di replica](security/replication-agent-security-model.md) e [Procedure consigliate per la sicurezza della replica](security/replication-security-best-practices.md).  
@@ -41,7 +40,7 @@ ms.locfileid: "48124451"
  Contesto in cui viene creata la connessione al server di distribuzione. La connessione locale al server di distribuzione viene sempre stabilita usando il contesto dell'account di [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows con cui viene eseguito l'agente e in questo campo, quindi, verrà sempre visualizzato **Rappresenta '\<Dominio>\\<Login\>'** oppure **Rappresenta '\<Computer>\\<Login\>'**.  
   
  **Connessione server di pubblicazione**  
- Contesto nel quale viene stabilita la connessione al server di pubblicazione. La connessione al server di pubblicazione può essere stabilita utilizzando un account di accesso di [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] oppure utilizzando il contesto dell'account di Windows con cui viene eseguito l'agente. Nel campo viene visualizzato uno dei valori seguenti: **Usa l'account di accesso '\<Account accesso>'**, **Rappresenta '\<Dominio>\\<AccountDiAccesso\>'** oppure **Rappresenta '\<Computer>\\<AccountDiAccesso\>'**. [!INCLUDE[msCoName](../../includes/msconame-md.md)] consiglia di stabilire tutte le connessioni utilizzando il contesto dell'account di Windows.  
+ Contesto nel quale viene stabilita la connessione al server di pubblicazione. La connessione al server di pubblicazione può essere stabilita utilizzando un account di accesso di [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] oppure utilizzando il contesto dell'account di Windows con cui viene eseguito l'agente. Il campo viene visualizzato uno dei seguenti: **Account di accesso di Usa '\<account di accesso >'**, **rappresenta '\<dominio >\\< account di accesso\>'** oppure **Impersonate '\<Computer >\\< account di accesso\>'**. [!INCLUDE[msCoName](../../includes/msconame-md.md)] consiglia di stabilire tutte le connessioni utilizzando il contesto dell'account di Windows.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Amministrare una topologia peer-to-peer &#40;programmazione Transact-SQL della replica&#41;](administration/administer-a-peer-to-peer-topology-replication-transact-sql-programming.md)   

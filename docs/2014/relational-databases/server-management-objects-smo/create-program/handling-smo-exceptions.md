@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: ''
 ms.topic: reference
 helpviewer_keywords:
 - SMO [SQL Server], exceptions
@@ -17,12 +15,12 @@ ms.assetid: 4c725ff2-6588-44ca-b86a-87979e164153
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 3321cde44bbdecc2b7f3ad715db1e6483fa06c8c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 595da161660b60845c02d71e22411a2a4eba009c
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48180591"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52807393"
 ---
 # <a name="handling-smo-exceptions"></a>Gestione delle eccezioni SMO
   Nel codice gestito vengono generate eccezioni quando si verifica un errore. Proprietà e metodi SMO non indicano l'esito positivo o negativo nel valore restituito. Le eccezioni possono invece essere rilevate e gestite da un gestore di eccezioni.  
@@ -32,7 +30,7 @@ ms.locfileid: "48180591"
  Le istruzioni relative alla gestione delle eccezioni sono specifiche del linguaggio di programmazione. In [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual Basic, ad esempio, è l'istruzione `Catch`.  
   
 ## <a name="inner-exceptions"></a>Eccezioni interne  
- Le eccezioni possono essere generali o specifiche. Le eccezioni generali contengono un set di eccezioni specifiche. Diversi `Catch` possono essere usate per gestire gli errori previsti e consentire gli errori rimanenti tramite per la gestione delle eccezioni generali. Le eccezioni si verificano spesso in una sequenza a cascata. Accade di frequente che un'eccezione SMO sia stata causata da un'eccezione SQL. Il modo rilevare questa attività consiste nell'usare il `InnerException` in successione per determinare l'eccezione originale che ha causato l'eccezione finale di livello superiore.  
+ Le eccezioni possono essere generali o specifiche. Le eccezioni generali contengono un set di eccezioni specifiche. È possibile utilizzare diverse istruzioni `Catch` per gestire gli errori anticipati e fare in modo che gli errori rimanenti vengano passati al codice di gestione delle eccezioni generali. Le eccezioni si verificano spesso in una sequenza a cascata. Accade di frequente che un'eccezione SMO sia stata causata da un'eccezione SQL. È possibile stabilirlo utilizzando in successione la proprietà `InnerException` per determinare l'eccezione originale che ha provocato l'eccezione finale di livello superiore.  
   
 > [!NOTE]  
 >  Il `SQLException` eccezione viene dichiarata nel **SqlClient** dello spazio dei nomi.  
@@ -45,12 +43,12 @@ ms.locfileid: "48180591"
  Per usare qualsiasi esempio di codice fornito, è necessario scegliere l'ambiente di programmazione, il modello di programmazione e il linguaggio di programmazione per la creazione dell'applicazione. Per altre informazioni, vedere [creare un Visual C&#35; progetto SMO in Visual Studio .NET](../how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md) oppure [creare un progetto Visual Basic SMO in Visual Studio .NET](../../../database-engine/dev-guide/create-a-visual-basic-smo-project-in-visual-studio-net.md).  
   
 ## <a name="catching-an-exception-in-visual-basic"></a>Rilevamento di un'eccezione in Visual Basic  
- Questo esempio di codice viene illustrato come utilizzare il `Try…Catch…Finally` [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)] istruzione per rilevare un'eccezione SMO. Tutte le eccezioni SMO sono di tipo SmoException e sono elencate nella documentazione di riferimento di SMO. La sequenza di eccezioni interne viene visualizzata per mostrare la radice dell'errore. Per altre informazioni, vedere il [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)] documentazione di .NET.  
+ Questo esempio di codice illustra come usare l'istruzione `Try...Catch...Finally`[!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)] per rilevare un'eccezione SMO. Tutte le eccezioni SMO sono di tipo SmoException e sono elencate nella documentazione di riferimento di SMO. La sequenza di eccezioni interne viene visualizzata per mostrare la radice dell'errore. Per ulteriori informazioni, vedere la documentazione di [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)] .NET.  
   
 <!-- TODO: review snippet reference  [!CODE [SMO How to#SMO_VBExceptions1](SMO How to#SMO_VBExceptions1)]  -->  
   
 ## <a name="catching-an-exception-in-visual-c"></a>Rilevamento di un'eccezione in Visual C#  
- In questo esempio di codice viene illustrato come utilizzare l'istruzione `Try…Catch…Finally` Visual C# per rilevare un'eccezione SMO. Tutte le eccezioni SMO sono di tipo SmoException e sono elencate nella documentazione di riferimento di SMO. La sequenza di eccezioni interne viene visualizzata per mostrare la radice dell'errore. Per ulteriori informazioni, vedere la documentazione di Visual C#.  
+ In questo esempio di codice viene illustrato come utilizzare l'istruzione `Try...Catch...Finally` Visual C# per rilevare un'eccezione SMO. Tutte le eccezioni SMO sono di tipo SmoException e sono elencate nella documentazione di riferimento di SMO. La sequenza di eccezioni interne viene visualizzata per mostrare la radice dell'errore. Per ulteriori informazioni, vedere la documentazione di Visual C#.  
   
 ```  
 {   

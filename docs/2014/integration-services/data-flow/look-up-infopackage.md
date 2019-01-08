@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 7c0cb7a4-cd07-44cc-85cb-eb1ad91f85fd
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: c571dc5e2cd9d831136f70251d04a807cd654dcf
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 28cc4183a651fb1e9c52f10d4d518bc94d684cad
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48147861"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52749508"
 ---
 # <a name="look-up-infopackage"></a>Cerca InfoPackage
   Utilizzare la finestra di dialogo **Cerca InfoPackage** per cercare un InfoPackage definito nel sistema SAP Netweaver BW. Quando viene visualizzato l'elenco di InfoPackage, selezionare l'InfoPackage desiderato e le opzioni associate verranno compilate con i valori richiesti dalla destinazione.  
@@ -60,7 +59,7 @@ ms.locfileid: "48147861"
  **Tipo**  
  Visualizza il tipo di InfoPackage. Nella tabella seguente sono elencati i valori possibili per il tipo.  
   
-|valore|Description|  
+|Value|Descrizione|  
 |-----------|-----------------|  
 |transazioni|Dati di transazione.|  
 |Attr.|Dati dell'attributo.|  

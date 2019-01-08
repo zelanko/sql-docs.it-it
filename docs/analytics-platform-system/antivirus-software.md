@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.date: 04/24/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: 2bf94fb04bd6f96de019c7e8543b8a626cebe439
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: c5b9a1eddf8bf06a9d9e5b59754b2c6a34b94267
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51699122"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52524472"
 ---
 # <a name="antivirus-software-for-analytics-platform-system"></a>Software antivirus per il sistema di piattaforma Analitica
 Se il data center richiede un software antivirus, usare queste linee guida per installare il software antivirus nel sistema di piattaforma Analitica. È consigliabile non installare il software antivirus a meno che non è un requisito fisso del data center.  
@@ -46,13 +46,13 @@ Per installare il software antivirus in host fisici, escludere il seguente elenc
 ## <a name="exclusion-list-for-virtual-machines-vms"></a>Elenco di esclusione per le macchine virtuali (VM)  
 Per installare il software antivirus nelle macchine virtuali, escludere nell'elenco seguente di file e directory. Questi non devono essere analizzati con il software antivirus.  
   
-***PDW_region*-CTL01**  
+**_PDW_region_-CTL01**  
   
 -   C:\windows\cluster\  
   
 -   G:\  
   
-***appliance_domain *-AD01** e ***appliance_domain *-AD02**  
+**_appliance_domain_-AD01** e  **_appliance_domain_-AD02**  
   
 -   Nessuna restrizione  
   
@@ -62,15 +62,15 @@ Per installare il software antivirus nelle macchine virtuali, escludere nell'ele
   
 -   G:\  
   
-***appliance_domain*-VMM**  
+**_appliance_domain_- VMM**  
   
 -   Nessuna restrizione  
   
-***appliance_domain*-WDS**  
+**_appliance_domain_- servizi di distribuzione Windows**  
   
 -   Nessuna restrizione  
   
-***appliance_domain*-ISCSI01**  
+**_appliance_domain_-ISCSI01**  
   
 -   C:\iscsitarget  
   

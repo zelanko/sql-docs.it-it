@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: configuration
 ms.topic: conceptual
 helpviewer_keywords:
 - connections [SQL Server], other computers
@@ -13,12 +12,12 @@ ms.assetid: c4c1e94f-4f5f-431e-8b5b-d5ff97baf723
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: fecf123299d81f1d1b39c62c7ab1ecb2368f98dd
-ms.sourcegitcommit: 5d6e1c827752c3aa2d02c4c7653aefb2736fffc3
+ms.openlocfilehash: 4305438285ae5f3b51ab8ac51ec2b1d0699aee64
+ms.sourcegitcommit: 04dd0620202287869b23cc2fde998a18d3200c66
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/10/2018
-ms.locfileid: "49072095"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "52639298"
 ---
 # <a name="connect-to-another-computer-sql-server-configuration-manager"></a>Connessione a un altro computer (Gestione configurazione SQL Server)
   In questo argomento viene illustrato come connettersi a un altro computer in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Attenersi alla prima procedura per aprire Gestione computer di Windows, [!INCLUDE[msCoName](../../includes/msconame-md.md)] Management Console (MMC), connettersi al computer ed espandere l'albero Servizi e applicazioni. Seguire la seconda procedura per creare un file con un collegamento a Gestione configurazione [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in un computer remoto.  
@@ -64,7 +63,7 @@ ms.locfileid: "49072095"
   
 10. Fare clic con il pulsante destro del mouse su **Gestione configurazione SQL Server**e quindi scegliere **Nuova finestra da qui**.  
   
-11. Nel **finestra** menu, fare clic su **radice Console**, per tornare alla prima finestra ed eliminare la finestra.  
+11. Scegliere **Radice console** dal menu **Finestra** per tornare alla prima finestra ed eliminare la finestra aperta.  
   
 12. Nel **File** menu, fare clic su **Salva con nome**e salvare il file nella cartella desiderata con un nome appropriato e il `.msc` estensione di file. Chiudere [!INCLUDE[msCoName](../../includes/msconame-md.md)] Management Console.  
   

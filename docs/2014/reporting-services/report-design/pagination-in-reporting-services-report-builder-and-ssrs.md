@@ -11,15 +11,15 @@ ms.assetid: e0894b0d-dc5b-4a75-8142-75092972a034
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: 0748fd29a116ee426f17c3cf12ce67ebcd0c519a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 702e5778825ed5b521db4357508e45427af6b56e
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48098041"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53349950"
 ---
 # <a name="pagination-in-reporting-services-report-builder--and-ssrs"></a>Paginazione in Reporting Services (Generatore report e SSRS)
-  Il termine paginazione si riferisce al numero di pagine all'interno di un report e alla disposizione degli elementi del report in tali pagine. Paginazione in [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] varia a seconda dell'estensione per il rendering che consente di visualizzare e recapitare il report. Quando si esegue un report sul server di report, viene usato il renderer HTML. Tale renderer si attiene a un set specifico di regole di paginazione. Se ad esempio si esporta lo stesso report in formato PDF, viene usato il renderer PDF e viene applicato un set di regole differente, pertanto il report viene impaginato in modo diverso. Per progettare correttamente un report di facile lettura per gli utenti che è ottimizzato per il renderer che si intende usare per recapitare il report, è necessario comprendere le regole utilizzate per controllare la paginazione in [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)].  
+  Il termine paginazione si riferisce al numero di pagine all'interno di un report e alla disposizione degli elementi del report in tali pagine. In [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] la paginazione varia a seconda dell'estensione per il rendering usata per visualizzare e recapitare il report. Quando si esegue un report sul server di report, viene usato il renderer HTML. Tale renderer si attiene a un set specifico di regole di paginazione. Se ad esempio si esporta lo stesso report in formato PDF, viene usato il renderer PDF e viene applicato un set di regole differente, pertanto il report viene impaginato in modo diverso. Per progettare correttamente un report di facile lettura e ottimizzato per il renderer che si intende usare per recapitare il report, è necessario comprendere le regole usate per controllare la paginazione in [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)].  
   
  In questo argomento viene illustrato l'impatto delle dimensioni della pagina fisica e del layout del report sul rendering del report eseguito mediante renderer di interruzioni di pagina manuali. È possibile impostare le proprietà per modificare le dimensioni e i margini delle pagine fisiche e dividere il report in colonne nei riquadri **Proprietà report** e **Proprietà** o nella finestra di dialogo **Imposta pagina** . Per accedere al riquadro **Proprietà report** , fare clic sull'area blu all'esterno del corpo del report. Per accedere alla finestra di dialogo **Imposta pagina** , fare clic su **Esegui** nella scheda Home, quindi fare clic su **Imposta pagina** nella scheda Esegui.  
   
@@ -39,7 +39,7 @@ ms.locfileid: "48098041"
   
  Per impostazione predefinita, le dimensioni della pagina sono 8,5 x 11 pollici, ma è possibile cambiarle nella finestra di dialogo **Imposta pagina** o nel riquadro **Proprietà report** oppure modificando le proprietà PageHeight e PageWidth nel riquadro **Proprietà** . Le dimensioni della pagina non vengono aumentate o ridotte a seconda del contenuto del corpo del report. Se si desidera che il report sia visualizzato in una sola pagina, tutto il contenuto del corpo del report deve essere inserito nella pagina fisica. Se non è possibile inserirlo e si usa il formato con interruzioni di pagina manuali, per il report saranno necessarie ulteriori pagine. Se il corpo del report si estende oltre il bordo destro della pagina fisica, viene inserita un'interruzione di pagina orizzontale. Se il corpo del report si estende oltre il bordo inferiore della pagina fisica, viene inserita un'interruzione di pagina verticale.  
   
- Se si desidera eseguire l'override delle dimensioni della pagina fisica definite nel report, è possibile specificare tali dimensioni usando le impostazioni relative alle informazioni sui dispositivi per il renderer specifico usato per esportare il report. Per altre informazioni, vedere [Reporting Services Device Information Settings](http://go.microsoft.com/fwlink/?LinkId=102515).  
+ Se si desidera eseguire l'override delle dimensioni della pagina fisica definite nel report, è possibile specificare tali dimensioni usando le impostazioni relative alle informazioni sui dispositivi per il renderer specifico usato per esportare il report. Per altre informazioni, vedere [Reporting Services Device Information Settings](https://go.microsoft.com/fwlink/?LinkId=102515).  
   
 ### <a name="margins"></a>Margini  
  I margini vengono tracciati dal bordo delle dimensioni della pagina fisica verso l'interno fino all'impostazione specificata. Se un elemento del report si estende nell'area del margine, viene tagliato in modo da non eseguire il rendering dell'area della sovrapposizione. Se per i margini si specificano dimensioni tali che la larghezza orizzontale o verticale della pagina sia uguale a zero, il valore predefinito delle impostazioni dei margini sarà uguale a zero. I margini vengono specificati nella finestra di dialogo **Imposta pagina** o nel riquadro **Proprietà report** oppure modificando le proprietà TopMargin, BottomMargin, LeftMargin e RightMargin nel riquadro **Proprietà** . Se si desidera eseguire l'override delle dimensioni dei margini definite nel report, è possibile specificare tali dimensioni usando le impostazioni relative alle informazioni sui dispositivi per il renderer specifico usato per esportare il report.  
@@ -76,7 +76,7 @@ ms.locfileid: "48098041"
   
  È possibile usare costanti ed espressioni semplici o complesse per impostare il valore delle proprietà Disabled e ResetPageNumber. Non è tuttavia possibile usare espressioni con la proprietà BreakLocation. Per altre informazioni sulla creazione e l'uso delle espressioni, vedere [Espressioni &#40;Generatore report e SSRS&#41;](expressions-report-builder-and-ssrs.md).  
   
- Nel report è possibile scrivere espressioni che fanno riferimento i nomi di pagina correnti o numeri di pagina utilizzando la `Globals` raccolta. Per altre informazioni, vedere [Riferimenti alle raccolte predefinite Globals e Users &#40;Generatore report e SSRS&#41;](built-in-collections-built-in-globals-and-users-references-report-builder.md).  
+ Nel report è possibile scrivere espressioni che fanno riferimento ai nomi o ai numeri di pagina correnti tramite la raccolta `Globals`. Per altre informazioni, vedere [Riferimenti alle raccolte predefinite Globals e Users &#40;Generatore report e SSRS&#41;](built-in-collections-built-in-globals-and-users-references-report-builder.md).  
   
 ### <a name="naming-excel-worksheet-tabs"></a>Denominazione delle schede del foglio di lavoro di Excel  
  Queste proprietà risultano utili quando si esportano report nelle cartelle di lavoro di Excel. Usare la proprietà InitialPage per specificare un nome predefinito per la scheda del foglio di lavoro quando si esporta il report e usare le interruzioni di pagina e la proprietà PageName per fornire nomi diversi per ogni foglio di lavoro. Ogni nuova pagina del report, definita da un'interruzione di pagina, viene esportata in un foglio di lavoro diverso denominato in base al valore della proprietà PageName. Se PageName è vuoto, ma il report dispone di un nome di pagina iniziale, quest'ultimo verrà usato per tutti i fogli di lavoro nella cartella di lavoro di Excel.  
@@ -84,6 +84,6 @@ ms.locfileid: "48098041"
  Per altre informazioni sul funzionamento di queste proprietà in caso di esportazione dei report in Excel, vedere [Esportazione in Microsoft Excel &#40;Generatore report e SSRS&#41;](../report-builder/exporting-to-microsoft-excel-report-builder-and-ssrs.md).  
   
 ## <a name="see-also"></a>Vedere anche  
- [Pagina Layout e Rendering della &#40;Report e SSRS&#41;](page-layout-and-rendering-report-builder-and-ssrs.md)  
+ [Layout e rendering della pagina &#40;Generatore report e SSRS&#41;](page-layout-and-rendering-report-builder-and-ssrs.md)  
   
   

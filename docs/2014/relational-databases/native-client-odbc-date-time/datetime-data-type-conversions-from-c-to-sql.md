@@ -12,12 +12,12 @@ ms.assetid: 7ac098db-9147-4883-8da9-a58ab24a0d31
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 8f1f44e37b212c973a59fbead2618bfbb477370e
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 8179b9452852777bb6d2a06018d0bf86598a5bf8
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48109501"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52399414"
 ---
 # <a name="conversions-from-c-to-sql"></a>Conversioni da tipi di dati C a tipi di dati SQL
   In questo argomento elenca i problemi da prendere in considerazione durante le conversioni dai tipi C a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tipi data/ora.  
@@ -54,7 +54,7 @@ ms.locfileid: "48109501"
 |5|Il fuso orario viene impostato sul fuso orario del client.|  
 |6|L'ora è impostata su zero.|  
 |7|La data viene impostata sulla data corrente.|  
-|8|L'ora viene convertita dal fuso orario del client a quello UTC. Se si verifica un errore durante questa conversione, viene generato un record di diagnostica con l'identificativo SQLSTATE 22008 e il messaggio "Overflow del campo Datetime".|  
+|8|L'ora viene convertita dal fuso orario del client in formato UTC. Se si verifica un errore durante questa conversione, viene generato un record di diagnostica con l'identificativo SQLSTATE 22008 e il messaggio "Overflow del campo Datetime".|  
 |9|La stringa viene analizzata e convertita in un valore date, datetime, datetimeoffset o time, in base al primo carattere di punteggiatura rilevato e alla presenza di componenti rimanenti. La stringa viene quindi convertita nel tipo di destinazione, seguendo le regole nella tabella precedente per il tipo di origine individuato da questo processo. Se durante l'analisi dei dati viene rilevato un errore, viene generato un record di diagnostica con SQLSTATE 22018 e il messaggio "Carattere non valido per la specifica del cast". Per i parametri datetime e smalldatetime, se l'anno non è compreso nell'intervallo supportato da questi tipi, viene generato un record di diagnostica con SQLSTATE 22007 e il messaggio "Formato di datetime non valido".<br /><br /> Per datetimeoffset, il valore deve essere compreso nell'intervallo supportato in seguito alla conversione in UTC, anche se non è necessaria alcuna conversione in UTC. Ciò è dovuto al fatto che TDS e il server normalizzano sempre l'ora in valori datetimeoffset per UTC. Il client deve pertanto verificare che i componenti relativi all'ora siano compresi nell'intervallo supportato in seguito alla conversione in UTC. Se il valore non è compreso nell'intervallo UTC supportato, viene generato un record di diagnostica con SQLSTATE 22007 e il messaggio "Formato di datetime non valido".|  
 |10|Se si verifica un troncamento con perdita di dati, viene generato un record di diagnostica con SQLSTATE 22008 e il messaggio "Formato ora non valido". Questo errore si verifica anche se il valore non è incluso nell'intervallo che può essere rappresentato dall'intervallo UTC utilizzato dal server.|  
 |11|Se la lunghezza in byte dei dati non equivale alla dimensione della struttura richiesta dal tipo SQL, viene generato un record di diagnostica con SQLSTATE 22003 e il messaggio "Valore numerico non compreso nell'intervallo".|  

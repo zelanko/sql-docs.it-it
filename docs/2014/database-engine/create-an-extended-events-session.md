@@ -11,15 +11,15 @@ ms.assetid: 34b1e95a-a80e-4aca-9201-abde47f2ca74
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: da5cd273a0bfc00e86a6290777376fb6d1d30c6d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 72feb645258f7e1521f3f0380ca9de42b85a1192
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48107671"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52522757"
 ---
 # <a name="create-an-extended-events-session"></a>Creare una sessione Eventi estesi
-  È possibile creare una sessione Eventi estesi tramite l'editor di query o è possibile creare una sessione in Esplora oggetti. In Eventi estesi in Esplora oggetti sono disponibili due interfacce utente che è possibile utilizzare per creare, modificare e visualizzare dati della sessione eventi. Tramite una procedura guidata vengono illustrati il processo di creazione della sessione eventi e una nuova interfaccia utente della sessione che fornisce opzioni di configurazione più avanzate. È possibile creare sessioni di eventi estesi per la diagnosi della traccia di SQL Server, che consente di risolvere problemi come i seguenti:  
+  È possibile creare una sessione Eventi estesi tramite l'editor di query o è possibile creare una sessione in Esplora oggetti. In Esplora oggetti eventi estesi sono disponibili due interfacce di utente che è possibile usare per creare, modificare e visualizzare i dati della sessione eventi: una procedura guidata che descrive il processo di creazione della sessione di eventi e una nuova interfaccia utente della sessione che fornisce opzioni di configurazione più avanzate. È possibile creare sessioni di eventi estesi per la diagnosi della traccia di SQL Server, che consente di risolvere problemi come i seguenti:  
   
 -   Trovare le query con il costo più elevato  
   
@@ -31,7 +31,7 @@ ms.locfileid: "48107671"
   
 -   Risolvere problemi relativi ai deadlock  
   
-## <a name="in-this-section"></a>Argomenti della sezione  
+## <a name="in-this-section"></a>In questa sezione  
  [Creare una sessione Eventi estesi tramite l'editor di query](../../2014/database-engine/create-an-extended-events-session-using-query-editor.md)  
   
  [Creare una sessione eventi estesi utilizzando la procedura guidata &#40;Esplora oggetti&#41;](../ssms/object/object-explorer.md)  

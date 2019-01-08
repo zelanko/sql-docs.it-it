@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 3afa531e-f425-40a4-a1bf-1c3e1727287e
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: bff3b71c0f091bc60d500dfaced02cb62b483753
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: fe0f98b373b736b9e7b97e9c5a599812210e4136
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48069261"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52799653"
 ---
 # <a name="direct-the-cdc-stream-according-to-the-type-of-change"></a>Indirizzare il flusso CDC in base al tipo di modifica
   Per aggiungere e configurare una trasformazione CDC Splitter, il pacchetto deve contenere almeno un'attività Flusso di dati e un'origine CDC.  
@@ -37,11 +36,11 @@ ms.locfileid: "48069261"
   
 6.  Selezionare uno degli output seguenti:  
   
-    -   Output di eliminazione: output in cui vengono indirizzate le righe delle modifiche DELETE.  
+    -   Eliminare l'output: L'output in cui vengono indirizzate le righe delle modifiche DELETE.  
   
-    -   Output di inserimento: output in cui vengono indirizzate le righe delle modifiche INSERT.  
+    -   Output di inserimento: L'output in cui vengono indirizzate le righe delle modifiche INSERT.  
   
-    -   Output di aggiornamento: output in cui vengono indirizzate le righe delle modifiche before/after UPDATE e le righe delle modifiche MERGE.  
+    -   Aggiornare l'output: L'output in cui prima/dopo la modifica di aggiornare le righe e tipo Merge le righe delle modifiche vengono indirizzati.  
   
 7.  È eventualmente possibile configurare le proprietà avanzate utilizzando la finestra di dialogo **Editor avanzato** .  
   

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - sort attributes [Integration Services]
@@ -14,12 +13,12 @@ ms.assetid: 22ce3f5d-8a88-4423-92c2-60a8f82cd4fd
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: e9ed22ac35505515bfd1f4f1863bb55c59f70bef
-ms.sourcegitcommit: ef78cc196329a10fc5c731556afceaac5fd4cb13
+ms.openlocfilehash: 6f20391528b56bedca42e62ff9ae1f54111f3604
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/19/2018
-ms.locfileid: "49460596"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52751533"
 ---
 # <a name="sort-data-for-the-merge-and-merge-join-transformations"></a>Ordinamento dei dati per le trasformazioni Unione e Merge Join
   In [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)]le trasformazioni Unione e Merge Join richiedono dati di input ordinati. I dati di input devono essere ordinati fisicamente ed è necessario impostare le opzioni di ordinamento sugli output e sulle colonne di output nell'origine o nella trasformazione a monte. Se le opzioni di ordinamento indicano che i dati sono ordinati, mentre in realtà non lo sono, l'operazione di Unione o Merge join restituisce risultati imprevisti.  
@@ -39,7 +38,7 @@ ms.locfileid: "49460596"
   
      La trasformazione Ordinamento utilizza le regole di confronto di Windows per ordinare i valori stringa.  
   
-     -oppure-  
+     oppure  
   
 -   Utilizzare l'operatore CAST Transact-SQL per eseguire innanzitutto il cast dei valori `varchar` in valori `nvarchar`, quindi utilizzare la clausola ORDER BY Transact-SQL per ordinare i dati.  
   

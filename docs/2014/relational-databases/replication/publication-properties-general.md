@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 f1_keywords:
 - sql12.rep.newpubwizard.pubproperties.general.f1
@@ -13,18 +12,18 @@ ms.assetid: 7912362f-c4d6-4f60-bd39-dee1f656ed18
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: f6337e69df7b7d6fe0984a843bf82124f90cc4d2
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 9b04098ad26cd4cf539fde4f1f826e4e6d1ce5c0
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48112671"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52786173"
 ---
 # <a name="publication-properties-general"></a>Proprietà pubblicazione, Generale
   La pagina **Generale** della finestra di dialogo **Proprietà pubblicazione** contiene informazioni di base sulla pubblicazione, tra cui il nome, la descrizione e i criteri di scadenza della sottoscrizione.  
   
 ## <a name="options"></a>Opzioni  
- **Nome**  
+ **Name**  
  Nome del database della pubblicazione (informazione di sola lettura).  
   
  **Database**  
@@ -37,7 +36,7 @@ ms.locfileid: "48112671"
  Tipo di pubblicazione (informazione di sola lettura).  
   
  **Scadenza sottoscrizione**  
- Consente di selezionare una delle opzioni disponibili per la scadenza della sottoscrizione, ovvero **Le sottoscrizioni non hanno scadenza** oppure **Le sottoscrizioni scadono**, con un periodo di tempo esplicito (**Intervallo**).  
+ Selezionare una delle opzioni per la scadenza della sottoscrizione: **Le sottoscrizioni non scadono mai** oppure **le sottoscrizioni scadono**, con un periodo di tempo esplicito (**intervallo**).  
   
  Per le pubblicazioni snapshot e transazionali, [!INCLUDE[msCoName](../../includes/msconame-md.md)] consiglia di accettare l'impostazione predefinita **Le sottoscrizioni non hanno scadenza**.  
   

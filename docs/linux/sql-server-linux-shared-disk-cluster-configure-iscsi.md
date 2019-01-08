@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.custom: sql-linux
 ms.technology: linux
-ms.openlocfilehash: 519289337d35ebd0cc8d59d54e624d1dfa819792
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: c73a91a461f78687d390e4ef620416325e7672df
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51676340"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52524915"
 ---
 # <a name="configure-failover-cluster-instance---iscsi---sql-server-on-linux"></a>Configurare l'istanza del cluster di failover SQL Server in Linux - iSCSI:
 
@@ -93,7 +93,7 @@ Per altre informazioni sull'iniziatore iSCSI per le distribuzioni supportate, co
 6.  Controllare i dischi collegati iSCSI
 
     ```bash
-    sudo grep “Attached SCSI” /var/log/messages
+    sudo grep "Attached SCSI" /var/log/messages
     ```
     ![30-iSCSIattachedDisks][7]
 
@@ -187,7 +187,7 @@ Per altre informazioni sull'iniziatore iSCSI per le distribuzioni supportate, co
    *    Eliminare i file dalla directory di dati di SQL Server esistente. Non riceverà alcun acknowledgement se ha esito positivo.
 
     ```bash
-    rm – f /var/opt/mssql/data/*
+    rm - f /var/opt/mssql/data/*
     ```
 
    *    Verificare che i file siano stati eliminati. L'immagine seguente mostra un esempio dell'intera sequenza da c a h.
@@ -337,7 +337,7 @@ Per altre informazioni sull'iniziatore iSCSI per le distribuzioni supportate, co
 14. Configurare il server in modo che solo Pacemaker può attivare il gruppo di volumi.
 
     ```bash
-    sudo lvmconf --enable-halvm --services –startstopservices
+    sudo lvmconf --enable-halvm --services -startstopservices
     ```
  
 15. Generare un elenco dei gruppi di volumi nel server. Tutti gli elementi elencati non il disco iSCSI viene utilizzato dal sistema, ad esempio per il disco del sistema operativo.
@@ -367,7 +367,7 @@ Per altre informazioni sull'iniziatore iSCSI per le distribuzioni supportate, co
 
 18. Riavviare il server.
 
-19. In un altro server che farà parte dell'istanza FCI, eseguire i passaggi da 1 – 6. Verrà visualizzata la destinazione iSCSI a SQL Server. 
+19. In un altro server che farà parte dell'istanza FCI, eseguire i passaggi da 1 - 6. Verrà visualizzata la destinazione iSCSI a SQL Server. 
  
 20. Generare un elenco dei gruppi di volumi nel server. Dovrebbe visualizzare il gruppo di volumi creato in precedenza. 
 

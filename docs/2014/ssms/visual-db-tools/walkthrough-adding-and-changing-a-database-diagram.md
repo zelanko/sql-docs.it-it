@@ -1,10 +1,10 @@
 ---
-title: 'Scenario: Aggiunta e modifica di un diagramma di database | Microsoft Docs'
+title: 'Procedura dettagliata: Aggiunta e modifica di un diagramma di Database | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
 - database diagrams [SQL Server], about database diagrams
@@ -14,14 +14,14 @@ ms.assetid: 228caa0d-8f24-46ab-86d1-b6d8631322bc
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 46333534aebb2991fe0dc3239264bc94f7ddb821
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 59225dd445ec2d075b9c7c8ca7eac52af2020a68
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48195521"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52822625"
 ---
-# <a name="walkthrough-adding-and-changing-a-database-diagram"></a>Scenario: Aggiunta e modifica di un diagramma di database
+# <a name="walkthrough-adding-and-changing-a-database-diagram"></a>Procedura dettagliata: Aggiunta e modifica di un diagramma di Database
   In questo scenario viene illustrato come creare e modificare un diagramma di database e apportare modifiche al database tramite il componente per i diagrammi di database. Verrà descritto come aggiungere tabelle ai diagrammi, creare relazioni tra le tabelle, creare vincoli e indici su colonne e modificare il livello delle informazioni visualizzate per ogni tabella.  
   
 ## <a name="prerequisites"></a>Prerequisiti  
@@ -44,7 +44,7 @@ ms.locfileid: "48195521"
   
 3.  Fare clic con il pulsante destro del mouse sul nodo Diagrammi database e scegliere **Nuovo diagramma database**.  
   
-     Se il database non include gli oggetti necessari alla creazione dei diagrammi, verrà visualizzato il messaggio seguente: **Per il database non sono disponibili uno o più oggetti di supporto necessari per l'utilizzo dei diagrammi. Creare tali oggetti?** Scegliere **Sì**.  
+     Se il database non include gli oggetti necessari alla creazione dei diagrammi, viene visualizzato il messaggio seguente: **Questo database non dispone di uno o più oggetti di supporto necessari per l'uso dei diagrammi di database. Creare tali oggetti?** Scegliere **Sì**.  
   
      Verrà visualizzata la finestra di dialogo **Aggiungi tabella** .  
   
@@ -58,7 +58,7 @@ ms.locfileid: "48195521"
   
 1.  Fare clic con il pulsante destro del mouse sulla tabella `Address` . Nel menu di scelta rapida scegliere **Vista tabella**e fare clic su **Standard**.  
   
-     Nella griglia della tabella sono visualizzate tre colonne: **Nome colonna**, **Tipo di dati**e **Consenti valori Null**.  
+     La griglia della tabella sono visualizzate tre colonne: **Nome della colonna**, **tipo di dati**, e **ammette valori null**.  
   
 2.  Fare clic con il pulsante destro del mouse sulla tabella `Address` , fare clic su **Vista tabella** e scegliere **Chiavi**.  
   
@@ -72,7 +72,7 @@ ms.locfileid: "48195521"
   
 2.  Nel **Scegli nome** finestra di dialogo, fare clic su **OK** per accettare il nome predefinito `Table1`.  
   
-     Verrà visualizzata una nuova griglia della tabella con tre colonne: **Nome colonna**, **Tipo di dati**e **Consenti valori Null**.  
+     Viene visualizzata una nuova griglia della tabella con tre colonne: **Nome della colonna**, **tipo di dati**, e **ammette valori null**.  
   
 3.  Aggiungere le informazioni seguenti per `Table1`:  
   
@@ -130,7 +130,7 @@ ms.locfileid: "48195521"
   
 2.  Trascinare `T2col1` in `T1col1`.  
   
-     Verranno visualizzate due finestre di dialogo: **Relazione chiavi esterne** sullo sfondo e **Tabelle e colonne** in primo piano.  
+     Verranno visualizzate due finestre di dialogo: **Relazione chiavi esterne** in background e **tabelle e colonne** in primo piano.  
   
 3.  Fare clic su **OK** per salvare la nuova relazione.  
   

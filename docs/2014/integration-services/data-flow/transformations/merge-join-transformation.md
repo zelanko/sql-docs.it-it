@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.mergejointrans.f1
@@ -19,12 +18,12 @@ ms.assetid: cd8b0412-f83b-4bd2-b227-e53dcfd941a8
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 0620aec0c710e513115455388276c72cc4371e9a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: e1a581536bb4f2a07dbbdf3d6ca187ac4a6f5250
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48171042"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52767183"
 ---
 # <a name="merge-join-transformation"></a>Merge join - trasformazione
   La trasformazione Merge join fornisce un output generato unendo in join due set di dati ordinati, tramite un join di tipo FULL, LEFT o INNER. È ad esempio possibile utilizzare un join di tipo LEFT per unire in join una tabella che include informazioni sui prodotti con una tabella in cui sono elencati i relativi paesi di produzione. Il risultato è costituito da una tabella in cui sono elencati tutti i prodotti e i relativi paesi di origine.  
@@ -49,23 +48,23 @@ ms.locfileid: "48171042"
  Per eseguire la trasformazione Merge join è necessario che le colonne da unire in join abbiano metadati corrispondenti. Non è ad esempio possibile unire in join una colonna con tipo di dati numeric a una colonna con tipo di dati character. Se i dati sono di tipo string, la lunghezza della colonna nel secondo input dovrà essere minore o uguale a quella della colonna nel primo input, alla quale verrà unita.  
   
 ## <a name="buffer-throttling"></a>Limitazione delle richieste del buffer  
- Non è più necessario configurare il valore della `MaxBuffersPerInput` proprietà perché Microsoft ha apportato modifiche che riducono il rischio che la trasformazione Merge Join utilizzino memoria eccessiva. Questo problema si verificava in genere quando tramite i diversi input della trasformazione Merge Join venivano prodotti dati con frequenze irregolari.  
+ Non è più necessario configurare il valore della proprietà `MaxBuffersPerInput`, in quanto Microsoft ha apportato modifiche che riducono il rischio di utilizzo di una quantità eccessiva di memoria da parte della trasformazione Merge join. Questo problema si verificava in genere quando tramite i diversi input della trasformazione Merge Join venivano prodotti dati con frequenze irregolari.  
   
 ## <a name="related-tasks"></a>Attività correlate  
  È possibile impostare le proprietà tramite Progettazione [!INCLUDE[ssIS](../../../includes/ssis-md.md)] o a livello di codice.  
   
  Per informazioni sull'impostazione delle proprietà di questa trasformazione, fare clic su uno degli argomenti seguenti:  
   
--   [Estendere un set di dati tramite la trasformazione Merge join](merge-join-transformation.md)  
+-   [Estensione di un set di dati tramite la trasformazione Merge join](merge-join-transformation.md)  
   
--   [Impostare le proprietà di un componente del flusso di dati](../set-the-properties-of-a-data-flow-component.md)  
+-   [Impostazione delle proprietà di un componente del flusso di dati](../set-the-properties-of-a-data-flow-component.md)  
   
--   [Ordinare i dati per le trasformazioni Unione e Merge Join](sort-data-for-the-merge-and-merge-join-transformations.md)  
+-   [Ordinamento dei dati per le trasformazioni Unione e Merge Join](sort-data-for-the-merge-and-merge-join-transformations.md)  
   
 ## <a name="see-also"></a>Vedere anche  
- [Editor trasformazione Merge Join](../../merge-join-transformation-editor.md)   
- [Unione-trasformazione](merge-transformation.md)   
- [Unione input multipli-trasformazione](union-all-transformation.md)   
+ [Editor trasformazione Merge join](../../merge-join-transformation-editor.md)   
+ [Trasformazione Unione](merge-transformation.md)   
+ [Trasformazione Unione input multipli](union-all-transformation.md)   
  [Trasformazioni di Integration Services](integration-services-transformations.md)  
   
   

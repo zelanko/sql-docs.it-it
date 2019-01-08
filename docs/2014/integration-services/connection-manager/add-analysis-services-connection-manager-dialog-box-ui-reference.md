@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.olapconnection.f1
@@ -15,12 +14,12 @@ ms.assetid: 9d5e1bb1-adda-4985-80f6-56e14d5d295c
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 5157d67fe96939c8942ff3dc0351cc09deb030f3
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: c91547692c9a703b1d989015a0b56525e3e7c40f
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48063247"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52779073"
 ---
 # <a name="add-analysis-services-connection-manager-dialog-box-ui-reference"></a>Riferimento all'interfaccia utente della finestra di dialogo Aggiungi gestione connessione Analysis Services
   Utilizzare la finestra di dialogo **Aggiungi gestione connessione Analysis Services** per creare una connessione a un server che esegue [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]o per modificare le proprietà della connessione.  
@@ -44,7 +43,7 @@ ms.locfileid: "48063247"
  Consente di selezionare un progetto di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] nell'elenco.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Riferimento ai messaggi e agli errori di Integration Services](../integration-services-error-and-message-reference.md)   
- [Integration Services &#40;SSIS&#41; le connessioni](integration-services-ssis-connections.md)  
+ [Guida di riferimento ai messaggi e agli errori di Integration Services](../integration-services-error-and-message-reference.md)   
+ [Connessioni in Integration Services &#40;SSIS&#41;](integration-services-ssis-connections.md)  
   
   

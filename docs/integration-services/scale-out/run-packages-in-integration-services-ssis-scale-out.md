@@ -13,12 +13,12 @@ ms.author: haoqian
 manager: craigg
 f1_keywords:
 - sql13.ssis.ssms.ispackageexecuteinscaleout.f1
-ms.openlocfilehash: 70ebcc5773d17f6f0f6fe714367f4bf487f3a0db
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 4c718dd14e1c7d2fc508efa403a9abfbcbae100d
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47686269"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53205810"
 ---
 # <a name="run-packages-in-integration-services-ssis-scale-out"></a>Eseguire pacchetti nel servizio Integration Services (SSIS) Scale Out
 Dopo aver distribuito i pacchetti nel server Integration Services, è possibile eseguirli in Scale Out usando uno dei metodi seguenti:
@@ -33,7 +33,7 @@ Dopo aver distribuito i pacchetti nel server Integration Services, è possibile 
 
 1. Aprire la finestra di dialogo Esegui pacchetto in Scale Out.
 
-    In [!INCLUDE[ssManStudioFull_md](../../includes/ssmanstudiofull-md.md)] connettersi al server di Integration Services. In Esplora oggetti espandere l'albero per visualizzare il nodo in **Cataloghi di Integration Services**. Fare clic con il pulsante destro del mouse sul nodo **SSISDB** , sul progetto o sul pacchetto che si vuole eseguire e quindi fare clic su **Execute in Scale Out**(Esegui nel servizio di scalabilità orizzontale).
+    In [!INCLUDE[ssManStudioFull_md](../../includes/ssmanstudiofull-md.md)]connettersi al server di Integration Services. In Esplora oggetti espandere l'albero per visualizzare il nodo in **Cataloghi di Integration Services**. Fare clic con il pulsante destro del mouse sul nodo **SSISDB** , sul progetto o sul pacchetto che si vuole eseguire e quindi fare clic su **Execute in Scale Out**(Esegui nel servizio di scalabilità orizzontale).
 
 2. Selezionare i pacchetti e impostare le opzioni.
 
@@ -117,7 +117,7 @@ Per impostare la modalità di esecuzione predefinita per i pacchetti su **Scale 
 
 Dopo aver impostato la modalità di esecuzione predefinita, non è più necessario specificare il parametro **@runinscaleout** quando si chiama la stored procedure `[catalog].[create_execution]`. I pacchetti vengono eseguiti automaticamente in Scale Out. 
 
-![Modalità file exe](media\exe-mode.PNG)
+![Modalità file exe](media/exe-mode.PNG)
 
 Per impostare nuovamente la modalità di esecuzione predefinita sulla modalità non Scale Out, impostare **Modalità di esecuzione predefinita a livello di server** su **Server**.
 

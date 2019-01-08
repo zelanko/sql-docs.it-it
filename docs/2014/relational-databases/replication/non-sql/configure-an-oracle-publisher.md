@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 helpviewer_keywords:
 - Oracle publishing [SQL Server replication], configuring
@@ -13,12 +12,12 @@ ms.assetid: 240c8416-c8e5-4346-8433-07e0f779099f
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 3a84224e68be8b5d4c5ad9fcd3f2be1ddce78fdb
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: bffa36106278b8913a9ecb042e94318c41ce87b5
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48057461"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52804446"
 ---
 # <a name="configure-an-oracle-publisher"></a>Configurazione di un server di pubblicazione Oracle
   La creazione di una pubblicazione nei server di pubblicazione Oracle avviene in maniera analoga al processo di creazione delle comuni pubblicazioni snapshot e transazionali, ma prima di poter effettivamente eseguire questo processo è necessario completare la procedura seguente (i primi quattro passaggi verranno descritti in dettaglio di seguito in questo argomento):  
@@ -75,7 +74,7 @@ ms.locfileid: "48057461"
   
  In Oracle Universal Installer, è necessario inserire le informazioni seguenti:  
   
-|Informazioni|Description|  
+|Informazioni|Descrizione|  
 |-----------------|-----------------|  
 |Oracle Home|Percorso della directory di installazione del software Oracle. Accettare il percorso predefinito (C:\oracle\ora90 o simile) o inserirne un altro. Per ulteriori informazioni su Oracle Home, vedere la sezione relativa alle considerazioni su Oracle Home più avanti in questo argomento.|  
 |Oracle home name|Alias del percorso di Oracle Home.|  
@@ -83,7 +82,7 @@ ms.locfileid: "48057461"
   
  Dopo aver completato la procedura di Oracle Universal Installer, utilizzare Net Configuration Assistant per configurare la connettività di rete. È necessario indicare quattro informazioni per configurare la connettività di rete. L'amministratore del database Oracle definisce la configurazione di rete quando imposta il database e il listener e deve essere in grado di offrire queste informazioni se l'utente non le possiede. Eseguire le operazioni seguenti:  
   
-|Azione|Description|  
+|Azione|Descrizione|  
 |------------|-----------------|  
 |Identificazione del database|Per l'identificazione del database sono disponibili due modalità. La prima modalità utilizza il SID (Oracle System Identifier) ed è disponibile in ogni release di Oracle. La seconda utilizza il Service Name, disponibile a partire da Oracle 8.0. Entrambe le modalità utilizzano un valore configurato alla creazione del database ed è importante che la configurazione di rete del client utilizzi la stessa modalità di denominazione utilizzata dall'amministratore nella configurazione del listener per il database.|  
 |Identificazione di un alias di rete per il database|È necessario specificare un alias di rete che verrà utilizzato per accedere al database Oracle. L'alias deve inoltre essere specificato quando si identifica il database Oracle come server di pubblicazione nel server di distribuzione [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Si tratta in sostanza di un puntatore al Service Name o al SID remoto che è stato configurato quando è stato creato il database. Per l'alias di rete sono stati utilizzati diversi nomi nelle diverse release e nei diversi prodotti Oracle, tra cui Net Service Name e TNS Alias. SQL*Plus richiede questo alias come parametro "Host String" al momento dell'accesso.|  
@@ -123,7 +122,7 @@ ms.locfileid: "48057461"
 > [!NOTE]  
 >  Il nome del server di pubblicazione Oracle non può essere identico a quello del relativo server di distribuzione [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] o di alcun server di pubblicazione [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] che utilizzi lo stesso server di distribuzione.  
   
- Quando si identifica il database Oracle come server di pubblicazione, è necessario scegliere un'opzione di pubblicazione Oracle: Complete o Oracle Gateway. Dopo aver identificato un server di pubblicazione, questa opzione può essere modificata solo eliminando e riconfigurando il server di pubblicazione. L'opzione Complete è progettata per offrire alle pubblicazioni snapshot e transazionali il set completo di funzionalità supportate per la pubblicazione Oracle. L'opzione Oracle Gateway prevede ottimizzazioni della progettazione specifiche per migliorare le prestazioni quando la replica funge da gateway tra i sistemi.  
+ Quando si identifica il database Oracle come server di pubblicazione, è necessario scegliere un'opzione di pubblicazione Oracle: Complete o Oracle Gareway. Dopo aver identificato un server di pubblicazione, questa opzione può essere modificata solo eliminando e riconfigurando il server di pubblicazione. L'opzione Complete è progettata per offrire alle pubblicazioni snapshot e transazionali il set completo di funzionalità supportate per la pubblicazione Oracle. L'opzione Oracle Gateway prevede ottimizzazioni della progettazione specifiche per migliorare le prestazioni quando la replica funge da gateway tra i sistemi.  
   
  Dopo l'identificazione del server di pubblicazione Oracle nel server di distribuzione [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , la replica crea un server collegato con nome identico a quello del servizio TNS del database Oracle. Tale server può essere utilizzato solo dalla replica. Se è necessario connettersi al server di pubblicazione Oracle tramite una connessione al server collegato, creare un altro nome di servizio TNS e quindi usare tale nome nella chiamata a [sp_addlinkedserver &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql).  
   

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 f1_keywords:
 - sql12.rep.profiles.perfprofiles.f1
@@ -15,12 +14,12 @@ ms.assetid: 0422e99c-e688-419b-bb4c-c7bebeef1d8d
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 4c469b6d3e4fa23b5b20b70671f2c6a211836a4d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: ce4dff443e52ef214e7c43f5df7eb50140937c1e
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48186321"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52753003"
 ---
 # <a name="agent-profiles"></a>Profili agenti
   Utilizzare la finestra di dialogo **Profili agenti** per gestire i profili degli agenti. I profili agenti consentono di gestire facilmente i parametri di run-time per ogni agente. Ogni agente dispone di un profilo predefinito e alcuni agenti dispongono di profili predefiniti aggiuntivi. L'agente di merge, ad esempio, dispone di un profilo "collegamento lento" dedicato alle connessioni a larghezza di banda ridotta. I profili predefiniti sono sufficienti per la maggior parte delle applicazioni, ma è possibile creare profili definiti dall'utente, che consentono di personalizzare il funzionamento degli agenti.  
@@ -32,11 +31,11 @@ ms.locfileid: "48186321"
  **Predefinito per i nuovi agenti**  
  Consente di selezionare il profilo che verrà utilizzato durante la creazione dei processi per un dato tipo di agente. Se ad esempio si creano varie sottoscrizioni a una pubblicazione di tipo merge, il processo dell'agente di merge per ogni sottoscrizione utilizzerà il profilo selezionato. Per modificare il profilo di processi esistenti, selezionare un profilo e quindi fare clic su **Modifica agenti esistenti**.  
   
- **Nome**  
+ **Name**  
  Nome del profilo.  
   
  **Tipo**  
- Tipo di profilo: **Utente** (definito dall'utente) o **Sistema** (predefinito).  
+ Tipo di profilo: **Utente** (definita dall'utente) o **sistema** (predefinito).  
   
  **Proprietà (...)**  
  Fare clic su questo pulsante per visualizzare i valori utilizzati per ogni parametro nel profilo agente.  

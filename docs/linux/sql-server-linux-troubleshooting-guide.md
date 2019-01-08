@@ -10,12 +10,12 @@ ms.prod: sql
 ms.custom: sql-linux
 ms.technology: linux
 ms.assetid: 99636ee8-2ba6-4316-88e0-121988eebcf9S
-ms.openlocfilehash: 4bd04ee62af21255f40363de602c6461aeb350a6
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 3686ab7df82a3241ee97948ab2ffa9a0b1d41df3
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51677917"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53215457"
 ---
 # <a name="troubleshoot-sql-server-on-linux"></a>Risolvere i problemi di SQL Server in Linux
 
@@ -105,7 +105,7 @@ Il programma di installazione Registra qui: / var/rifiutare/mssql/installazione-
 Se si preferisce, è anche possibile convertire i file in UTF-8 di leggerle con 'altro' o 'meno' con il comando seguente:
    
    ```bash
-   sudo iconv –f UTF-16LE –t UTF-8 <errorlog> -o <output errorlog file>
+   sudo iconv -f UTF-16LE -t UTF-8 <errorlog> -o <output errorlog file>
    ```
 ## <a name="extended-events"></a>Eventi estesi
 
@@ -118,9 +118,9 @@ Cercare i dump nella directory dei log in Linux. Controllare le impostazioni di 
 Per i Core dump 
    ```bash
    sudo ls /var/opt/mssql/log | grep .tar.gz2 
-   ```
+   ```
 
-For SQL dumps 
+Per i dump di SQL 
    ```bash
    sudo ls /var/opt/mssql/log | grep .mdmp 
    ```
@@ -205,7 +205,7 @@ Esistono molti fattori che influiscono sulle prestazioni, tra cui Progettazione 
 
    Vedere la sezione dell'articolo sulla risoluzione dei problemi [Connetti a SQL Server in Linux](#connection).
 
-2. Errore: Nome host deve essere 15 caratteri o meno.
+2. ERRORE: Nome host deve essere di 15 caratteri o meno.
 
    Si tratta di un problema noto che si verifica ogni volta che il nome del computer che sta provando a installare il pacchetto Debian di SQL Server è più lungo di 15 caratteri. Non esistono attualmente alcuna soluzione alternativa oltre alla modifica il nome del computer. Un modo per ottenere questo risultato è modificando il file di nome host e il riavvio del computer. Quanto segue [Guida di sito Web](https://www.cyberciti.biz/faq/ubuntu-change-hostname-command/) si illustra in dettaglio.
 
@@ -239,7 +239,7 @@ Esistono molti fattori che influiscono sulle prestazioni, tra cui Progettazione 
    sqlcmd -S myserver -U sa -P Test\$\$
    ```
 
-   Risorse: [caratteri speciali](https://tldp.org/LDP/abs/html/special-chars.html)
+   Risorse: [Caratteri speciali](https://tldp.org/LDP/abs/html/special-chars.html)
    [Escaping](https://tldp.org/LDP/abs/html/escapingsection.html)
 
 [!INCLUDE[Get Help Options](../includes/paragraph-content/get-help-options.md)]

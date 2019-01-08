@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 f1_keywords:
 - sql12.rep.configdistwizard.distpubproperties.f1
@@ -15,12 +14,12 @@ ms.assetid: ab6ada76-0f99-43fe-b524-baac7b1bc483
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: b0b1cddd1c5849f43aac7f41a2f4b679af21760b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: b6425c4e0dc5175fd9404c1654168e6d79c7b7b5
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48057961"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52764863"
 ---
 # <a name="publisher-properties---distributor"></a>Proprietà server di pubblicazione - Server di distribuzione
   La finestra di dialogo **Proprietà server di pubblicazione** consente di visualizzare e modificare le proprietà associate alla relazione tra il server di pubblicazione e il relativo server di distribuzione.  

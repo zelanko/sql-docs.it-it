@@ -15,12 +15,12 @@ ms.assetid: e644696f-9017-428e-a5b3-d445d1c630b3
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 866e84844c563f1289a23a598cbd980d9b3bc432
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: a87863d3046de695e489e83ec46eb073a7f4761c
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48169591"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52531589"
 ---
 # <a name="import-native-and-character-format-data-from-earlier-versions-of-sql-server"></a>Importare dati in formato nativo e carattere da versioni precedenti di SQL Server
   In [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]è possibile usare **bcp** per importare dati in formato nativo e carattere da [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)], [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)], [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]o da [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] usando l'opzione **-V** . Se si usa l'opzione **-V** , in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] vengono usati tipi di dati della versione precedente specificata di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]e il formato del file di dati corrisponderà al formato della versione precedente in questione.  
@@ -51,8 +51,8 @@ ms.locfileid: "48169591"
   
  <sup>1</sup> UDT indica un tipo definito dall'utente.  
   
-## <a name="exporting-using-v-80"></a>Esportazione utilizzando –V 80  
- Quando si esportazione bulk dei dati tramite il **– V80** passa, `nvarchar(max)`, `varchar(max)`, `varbinary(max)`, XML, e i dati di tipo definito dall'utente in modalità nativa vengono archiviati con un prefisso a 4 byte, come `text`, `image`e `ntext`dei dati, anziché con un prefisso a 8 byte che rappresenta il valore predefinito per [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] e versioni successive.  
+## <a name="exporting-using--v-80"></a>Esportazione usando –V 80  
+ Quando si esportazione bulk dei dati usando il **-V80** passa, `nvarchar(max)`, `varchar(max)`, `varbinary(max)`, XML, e i dati di tipo definito dall'utente in modalità nativa vengono archiviati con un prefisso a 4 byte, come `text`, `image`e `ntext`dei dati, anziché con un prefisso a 8 byte che rappresenta il valore predefinito per [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] e versioni successive.  
   
 ## <a name="copying-date-values"></a>Copia dei valori di data  
  **bcp** consente di usare l'API della copia bulk ODBC. Quindi, per importare i valori di dati in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], **bcp** usa il formato di data ODBC (*aaaa-mm-gg hh:mm:ss*[*.f...*]).  
@@ -60,7 +60,7 @@ ms.locfileid: "48169591"
  Il **bcp** comando Esporta i file in formato carattere usando il formato predefinito ODBC per `datetime` e `smalldatetime` valori. Ad esempio, per una colonna `datetime` contenente la data `12 Aug 1998` verrà eseguita la copia bulk in un file di dati come stringa di caratteri `1998-08-12 00:00:00.000`.  
   
 > [!IMPORTANT]  
->  Quando si importano i dati in un `smalldatetime` campo utilizzando **bcp**, verificare che il valore dei secondi sia 00.000; in caso contrario, l'operazione avrà esito negativo. Il `smalldatetime` tipo di dati contiene solo valori approssimati al minuto più vicino. In questa istanza, le istruzioni BULK INSERT e INSERT ... SELECT * FROM OPENROWSET(BULK...) verranno eseguite ma il valore dei secondi verrà troncato.  
+>  Quando si importano i dati in un `smalldatetime` campo utilizzando **bcp**, verificare che il valore dei secondi sia 00.000; in caso contrario, l'operazione avrà esito negativo. Il tipo di dati `smalldatetime` contiene solo valori approssimati al minuto più vicino. In questa istanza, le istruzioni BULK INSERT e INSERT ... SELECT * FROM OPENROWSET(BULK...) verranno eseguite ma il valore dei secondi verrà troncato.  
   
 ##  <a name="RelatedTasks"></a> Attività correlate  
  **Per utilizzare formati di dati per l'importazione o l'esportazione bulk**  

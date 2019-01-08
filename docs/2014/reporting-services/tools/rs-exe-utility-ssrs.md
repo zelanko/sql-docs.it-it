@@ -19,12 +19,12 @@ ms.assetid: bd6f958f-cce6-4e79-8a0f-9475da2919ce
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 0ebd18967f892d0f40e5d5b0e3b15e1196935af8
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 3cbc3a76c1f6e5c67297f44c312fe0497666a9b8
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48141841"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52505632"
 ---
 # <a name="rsexe-utility-ssrs"></a>RS.exe Utility (SSRS)
   L'utilità rs.exe elabora lo script fornito in un file di input. Utilizzare questa utilità per automatizzare le attività di amministrazione e distribuzione dei server di report.  
@@ -75,7 +75,7 @@ ms.locfileid: "48141841"
  (Facoltativo) Consente di specificare l'account utente utilizzato per connettersi al server di report. Se si omettono `-u` e `-p`, verrà utilizzato l'account utente di Windows corrente.  
   
  `-p` *Password*  
- (Obbligatorio se `-u` è specificato) specifica la password da usare con il `-u` argomento. Per questo valore viene applicata la distinzione tra maiuscole e minuscole.  
+ (Obbligatorio se si specifica `-u`) Consente di specificare la password da utilizzare con l'argomento `-u`. Per questo valore viene applicata la distinzione tra maiuscole e minuscole.  
   
  `-e`  
  (Facoltativo) Specifica l'endpoint SOAP in base al quale eseguire lo script. Di seguito sono riportati i valori validi:  
@@ -88,16 +88,16 @@ ms.locfileid: "48141841"
   
 -   Exec2005  
   
- Se non si specifica alcun valore, viene utilizzato l'endpoint Mgmt2005. Per altre informazioni sugli endpoint SOAP, vedere [endpoint del servizio Web ReportServer](../report-server-web-service/methods/report-server-web-service-endpoints.md).  
+ Se non si specifica alcun valore, viene utilizzato l'endpoint Mgmt2005. Per ulteriori informazioni sugli endpoint SOAP, vedere [Report Server Web Service Endpoints](../report-server-web-service/methods/report-server-web-service-endpoints.md).  
   
  `-l` *time_out*  
  (Facoltativo) Consente di specificare quanti secondi devono trascorrere prima del timeout della connessione al server. Il valore predefinito è 60 secondi. Se non si specifica un valore per il timeout, verrà utilizzato il valore predefinito. Se si specifica il valore `0`, non si verificherà mai il timeout della connessione.  
   
  **-b**  
- (Facoltativo) Specifica che i comandi del file di script vengano eseguiti come batch. Se uno o più comandi hanno esito negativo, verrà eseguito il rollback dell'intero batch. Vi sono tuttavia comandi non eseguibili in batch. Tali comandi verranno eseguiti normalmente e verrà eseguito un rollback solo in caso di eccezioni generate e non gestite nell'ambito dello script. Se lo script gestisce un'eccezione e completa normalmente `Main`, il batch viene eseguito il commit. Se si omette questo parametro, i comandi verranno eseguiti senza la creazione di un batch. Per altre informazioni, vedere [Batching Methods](../report-server-web-service-net-framework-soap-headers/batching-methods.md).  
+ (Facoltativo) Specifica che i comandi del file di script vengano eseguiti come batch. Se uno o più comandi hanno esito negativo, verrà eseguito il rollback dell'intero batch. Vi sono tuttavia comandi non eseguibili in batch. Tali comandi verranno eseguiti normalmente e verrà eseguito un rollback solo in caso di eccezioni generate e non gestite nell'ambito dello script. Se lo script gestisce un'eccezione e completa normalmente la routine `Main`, verrà eseguito il commit del batch. Se si omette questo parametro, i comandi verranno eseguiti senza la creazione di un batch. Per altre informazioni, vedere [Batching Methods](../report-server-web-service-net-framework-soap-headers/batching-methods.md).  
   
  `-v` *GlobalVar*  
- (Facoltativo) Consente di specificare le variabili globali utilizzate nello script. Se lo script utilizza variabili globali, è necessario specificare questo argomento. Il valore specificato deve essere valido per la variabile globale definita nel file con estensione rss. È necessario specificare una variabile globale per ogni argomento **–v** .  
+ (Facoltativo) Consente di specificare le variabili globali utilizzate nello script. Se lo script utilizza variabili globali, è necessario specificare questo argomento. Il valore specificato deve essere valido per la variabile globale definita nel file con estensione rss. È necessario specificare una variabile globale per ogni argomento **-v**.  
   
  L'argomento `-v` viene specificato nella riga di comando ed è utilizzato per impostare il valore per una variabile globale definita in fase di esecuzione nello script. Se, ad esempio, lo script contiene un variabile denominata *parentFolder*, è possibile specificare un nome per la cartella nella riga di comando:  
   
@@ -117,7 +117,7 @@ ms.locfileid: "48141841"
  Nell'esempio seguente viene illustrato come specificare il file script contenente lo script di [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] .NET e i metodi del servizio Web che si desidera eseguire.  
   
 ```  
-rs –i c:\scriptfiles\script_copycontent.rss -s http://localhost/reportserver  
+rs -i c:\scriptfiles\script_copycontent.rss -s http://localhost/reportserver  
 ```  
   
  Per un esempio dettagliato, vedere [Script di esempio rs.exe di Reporting Services per la copia di contenuto tra server di report](sample-reporting-services-rs-exe-script-to-copy-content-between-report-servers.md).  
@@ -125,7 +125,7 @@ rs –i c:\scriptfiles\script_copycontent.rss -s http://localhost/reportserver
  Per ulteriori esempi, vedere [Eseguire un file script di Reporting Services](run-a-reporting-services-script-file.md)  
   
 ## <a name="remarks"></a>Note  
- È possibile definire script per impostare le proprietà di sistema, pubblicare report e così via. Gli script creati possono includere qualsiasi metodo dell'API di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Per altre informazioni sui metodi e proprietà disponibili, vedere [servizio Web ReportServer](../report-server-web-service/report-server-web-service.md).  
+ È possibile definire script per impostare le proprietà di sistema, pubblicare report e così via. Gli script creati possono includere qualsiasi metodo dell'API di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Per ulteriori informazioni sui metodi e sulle proprietà disponibili, vedere [Report Server Web Service](../report-server-web-service/report-server-web-service.md).  
   
  Lo script deve essere scritto in codice [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] .NET e archiviato in un file di testo Unicode o UTF-8 con estensione di file rss. Non è possibile eseguire il debug degli script con l'utilità **rs** . Per eseguire il debug di uno script, eseguire il codice in [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)].  
   
@@ -133,9 +133,9 @@ rs –i c:\scriptfiles\script_copycontent.rss -s http://localhost/reportserver
 >  Per un esempio dettagliato, vedere [Script di esempio rs.exe di Reporting Services per la copia di contenuto tra server di report](sample-reporting-services-rs-exe-script-to-copy-content-between-report-servers.md).  
   
 ## <a name="see-also"></a>Vedere anche  
- [Eseguire un File di Script di Reporting Services](run-a-reporting-services-script-file.md)   
+ [Eseguire un file script di Reporting Services](run-a-reporting-services-script-file.md)   
  [Utilizzare script per l'esecuzione di attività di distribuzione e di amministrazione](script-deployment-and-administrative-tasks.md)   
- [Script con l'utilità rs.exe e il servizio Web](script-with-the-rs-exe-utility-and-the-web-service.md)   
- [Utilità della riga di comando di Server di report &#40;SSRS&#41;](report-server-command-prompt-utilities-ssrs.md)  
+ [Eseguire lo script con l'utilità rs.exe e il servizio Web](script-with-the-rs-exe-utility-and-the-web-service.md)   
+ [Utilità della riga di comando del server di report &#40;SSRS&#41;](report-server-command-prompt-utilities-ssrs.md)  
   
   

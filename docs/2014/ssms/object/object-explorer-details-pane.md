@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 f1_keywords:
 - sql12.swb.summary.report.f1
@@ -18,12 +18,12 @@ ms.assetid: b963e3c2-dc9e-4d38-bd28-2e00fe9e0e47
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: e89d1e8032d52e49e85cca13d945fe76d341e18f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 76362bedfd982fe0fb513873c6822fdcf56af6de
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48086881"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52779023"
 ---
 # <a name="object-explorer-details-pane"></a>Riquadro Dettagli di Esplora oggetti
   Dettagli Esplora oggetti è un componente di [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] che fornisce una vista tabulare di tutti gli oggetti nel server e offre un'interfaccia utente che consente di gestire tali oggetti. Le funzionalità di Esplora oggetti variano leggermente in base al tipo di server, ma in genere comprendono le funzionalità di sviluppo per i database e di gestione per tutti i tipi di server.  
@@ -98,6 +98,6 @@ ms.locfileid: "48086881"
 -   La ricerche eseguite su set di grandi dimensioni possono richiedere tempi particolarmente lunghi e ridurre le prestazioni del server.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Visualizza](object-explorer.md)  
+ [Esplora oggetti](object-explorer.md)  
   
   

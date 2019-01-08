@@ -11,12 +11,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 0f8a5dc68eed10ea6afce1a1aa0f75c2c2e9e09a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 50cf289af9c2b29f7239596ff04102308048456b
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47764669"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52502295"
 ---
 # <a name="sql-server-shared-management-objects-smo-license-terms"></a>SQL Server Shared Management Objects (SMO) License termini
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
@@ -55,11 +55,11 @@ per il presente software, a meno che a tali prodotti non siano associate condizi
 * per qualsiasi codice distribuibile con estensione dll, distribuire solo i risultati dell'esecuzione di tale codice distribuibile attraverso un linker al programma;
 * far accettare ai distributori e agli utenti finali esterni un contratto con condizioni che garantiscano almeno lo stesso livello di tutela definito nel presente contratto; 
 * visualizzare una valida comunicazione di copyright del licenziatario stesso nei suoi programmi;
-* indennizzare, manlevare e difendere Microsoft da ogni e qualsiasi domanda o azione giudiziaria, ivi incluse le spese legali, relative all'utilizzo o alla distribuzione dei programmi del licenziatario.
+* indennizzare, manlevare e difendere Microsoft da qualsiasi domanda o azione giudiziaria, ivi incluse le spese legali, relative all'utilizzo o alla distribuzione dei programmi del licenziatario.
 
 &nbsp;&nbsp;&nbsp;&nbsp;**iii.  Restrizioni per la distribuzione. Il licenziatario non potrà**
 * modificare le eventuali comunicazioni relative ai copyright, ai marchi o ai brevetti riportati nel Codice distribuibile;
-* utilizzare i marchi di Microsoft nei nomi dei programmi del licenziatario stesso o in modo tale da suggerire che tali programmi provengano o siano riconosciuti in qualsiasi modo da Microsoft;
+* utilizzare i marchi di Microsoft nei nomi dei programmi del licenziatario stesso o in modo tale da suggerire che tali programmi provengano o siano riconosciuti da Microsoft;
 * includere Codice distribuibile in programmi dannosi, ingannevoli o illegali;
 * modificare o distribuire il codice sorgente di qualsiasi Codice distribuibile in modo da assoggettare una qualsiasi parte di tale codice alle condizioni di una Licenza esclusa. Per Licenza esclusa si intende qualsiasi licenza che richieda, come condizione per l'utilizzo, la modifica o la distribuzione, che
   * il codice sia divulgato o distribuito nel formato in codice sorgente;
@@ -81,7 +81,7 @@ per il presente software, a meno che a tali prodotti non siano associate condizi
 
 **7.    RESTRIZIONI ALL'ESPORTAZIONE.** Il software è soggetto alle leggi e alle disposizioni in vigore negli Stati Uniti in materia di controllo dell'esportazione. Il licenziatario dovrà attenersi a tutte le leggi e le disposizioni locali e internazionali applicabili al software in materia di controllo delle esportazioni. Queste leggi includono limitazioni circa le destinazioni, gli utenti finali e l'utilizzo finale. Per altre informazioni, vedere www.microsoft.com/exporting.
 
-**8.    SERVIZI DI SUPPORTO TECNICO.** Poiché il presente software viene fornito "com’è", non è prevista la fornitura di servizi di supporto tecnico da parte di Microsoft.
+**8.    SERVIZI DI SUPPORTO TECNICO.** Poiché il presente software viene fornito "così com’è", non è prevista la fornitura di servizi di supporto tecnico da parte di Microsoft.
 
 **9.    INTERO ACCORDO**. Il presente accordo e le condizioni che disciplinano l'utilizzo di integrazioni, aggiornamenti, servizi basati su Internet e servizi di supporto tecnico utilizzati dal licenziatario costituiscono l'intero accordo relativo al software e ai servizi di supporto tecnico.
 

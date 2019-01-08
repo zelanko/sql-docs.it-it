@@ -15,12 +15,12 @@ ms.assetid: 0eaa2101-006e-4015-9979-3468b50e0aaa
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 92641d34920b0ef7ea7a9e7ad929e6976d644ffe
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 343ba03f20d059763f4b1122aac80e0af80fc2ae
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48064193"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52415638"
 ---
 # <a name="view-statistics-properties"></a>Visualizzare le proprietà delle statistiche
   È possibile visualizzare le statistiche di ottimizzazione delle query correnti per una tabella o una vista indicizzata in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] utilizzando [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)]. L'oggetto statistiche include un'intestazione con metadati relativi alle statistiche, un istogramma con la distribuzione dei valori nella prima colonna chiave dell'oggetto stesso e un vettore di densità per misurare la correlazione tra colonne. Per altre informazioni sugli istogrammi e sui vettori di densità, vedere [DBCC SHOW_STATISTICS &#40;Transact-SQL&#41;](/sql/t-sql/database-console-commands/dbcc-show-statistics-transact-sql)  
@@ -29,7 +29,7 @@ ms.locfileid: "48064193"
   
 -   **Prima di iniziare:**  
   
-     [Security](#Security)  
+     [Sicurezza](#Security)  
   
 -   **Visualizzare le proprietà delle statistiche tramite:**  
   
@@ -52,7 +52,7 @@ ms.locfileid: "48064193"
   
 2.  Fare clic sul segno più per espandere la cartella **Tabelle** .  
   
-3.  Fare clic sul segno più per espandere la tabella in cui si desidera visualizzare le proprietà della statistica.  
+3.  Fare clic sul segno più per espandere la tabella in cui verranno visualizzate le proprietà della statistica.  
   
 4.  Fare clic sul segno più per espandere la cartella **Statistiche** .  
   
@@ -69,11 +69,11 @@ ms.locfileid: "48064193"
      Consente di visualizzare il nome dell'oggetto di database in cui sono archiviate le statistiche.  
   
      **Statistiche per l'indice nome_statistiche**  
-     Questa casella di testo consente di visualizzare le proprietà restituite dall'oggetto statistiche. Queste proprietà sono divise in tre sezioni: intestazione delle statistiche, vettore di densità e istogramma.  
+     Questa casella di testo consente di visualizzare le proprietà restituite dall'oggetto statistiche. Queste proprietà sono divise in tre sezioni: Intestazione delle statistiche, vettore di densità e istogramma.  
   
      Tramite le informazioni seguenti vengono descritte le colonne restituite nel set di risultati per l'intestazione delle statistiche.  
   
-     **Nome**  
+     **Name**  
      Nome dell'oggetto statistiche.  
   
      **Updated**  
@@ -106,7 +106,7 @@ ms.locfileid: "48064193"
      Tramite le informazioni seguenti vengono descritte le colonne restituite nel set di risultati per il vettore di densità.  
   
      **All Density**  
-     Il valore Density viene calcolato come 1/ *valori distinct*. Nei risultati la densità viene visualizzata per ogni prefisso di colonna dell'oggetto statistiche, una riga per ogni densità. Un valore distinct è un elenco distinto dei valori delle colonne per riga e per prefisso di colonna. Se l'oggetto statistiche contiene, ad esempio, le colonne chiave (A, B, C), i risultati restituiscono la densità degli elenchi di valori distinct in ognuno di tali prefissi di colonna, ovvero (A), (A, B) e (A, B, C). Utilizzando il prefisso (A, B, C), ciascuno di questi elenchi è un elenco di valori distinct, ovvero (3, 5, 6), (4, 4, 6), (4, 5, 6), (4, 5, 7). Utilizzando il prefisso (A, B), agli stessi valori di colonna sono associati elenchi di valori distinti (3, 5), (4, 4) e (4, 5).  
+     Il valore Density viene calcolato come 1/ *valori distinct*. Nei risultati la densità viene visualizzata per ogni prefisso di colonna dell'oggetto statistiche, una riga per ogni densità. Un valore distinct è un elenco distinto dei valori delle colonne per riga e per prefisso di colonna. Se l'oggetto statistiche contiene, ad esempio, le colonne chiave (A, B, C), i risultati restituiscono la densità degli elenchi di valori distinct in ognuno di tali prefissi di colonna, ovvero (A), (A,B) e (A, B, C). Usando il prefisso (A, B, C), ciascuno di questi elenchi è un elenco di valori distinct, ovvero (3, 5, 6), (4, 4, 6), (4, 5, 6), (4, 5, 7). Usando il prefisso (A, B) agli stessi valori di colonna sono associati gli elenchi di valori distinct (3, 5), (4, 4) e (4, 5).  
   
      **Average Length**  
      Lunghezza media, in byte, per archiviare un elenco di valori di colonna per il prefisso di colonna. Se per ogni valore presente nell'elenco (3, 5, 6), ad esempio, sono necessari 4 byte, la lunghezza media è di 12 byte.  
@@ -133,7 +133,7 @@ ms.locfileid: "48064193"
   
 7.  Fare clic su **OK**.  
   
-##  <a name="TsqlProcedure"></a> Uso di Transact-SQL  
+##  <a name="TsqlProcedure"></a> Utilizzo di Transact-SQL  
   
 #### <a name="to-view-statistics-properties"></a>Per visualizzare le proprietà delle statistiche  
   

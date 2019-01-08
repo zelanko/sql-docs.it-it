@@ -19,16 +19,16 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 59c9af7037c51490e93352849957ec57bc7e4eb3
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 0f6af7eecb4a77adb4d53440753da1c9b6ef6e1d
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51662300"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52509823"
 ---
 # <a name="annotation-interpretation---sqlmapped"></a>Interpretazione delle annotazioni - sql:mapped
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-  Caricamento Bulk XML elabora il **sql: mappato** annotazione nello schema XSD come previsto, vale a dire, se lo schema di mapping specifica **sql: mappato = "false"** per qualsiasi elemento o attributo, il caricamento Bulk XML non tentativo di archiviare i dati associati nella colonna corrispondente.  
+  Caricamento Bulk XML elabora il **sql: mappata** annotazione nello schema XSD come che previsto è, se lo schema di mapping specifica **sql: mappata = "false"** per qualsiasi elemento o attributo, il caricamento Bulk XML non tentativo di archiviare i dati associati nella colonna corrispondente.  
   
  Caricamento Bulk XML ignora gli elementi e attributi non mappati (perché non sono descritti nello schema o perché vengono annotati nello schema XSD con **sql: mappata = "false"**). Tutti i dati senza mapping va nella colonna di overflow, se tale colonna viene specificata utilizzando **SQL: overflow-campo**.  
   

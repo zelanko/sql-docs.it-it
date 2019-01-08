@@ -1,5 +1,5 @@
 ---
-title: Rinominare una tabella o colonna | Documenti Microsoft
+title: Rinominare una colonna o tabella di modelli tabulari di Analysis Services | Microsoft Docs
 ms.date: 05/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 0c8564b7a61a73937bc5f9a207c98fd77c7b1bb7
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 0e5c0173de2ea22e91c0a1f13517a9bcb7c58ed9
+ms.sourcegitcommit: 8a64c59c5d84150659a015e54f8937673cab87a0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34040105"
+ms.lasthandoff: 12/08/2018
+ms.locfileid: "53072638"
 ---
 # <a name="rename-a-table-or-column"></a>Rinominare una tabella o una colonna 
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
@@ -44,14 +44,14 @@ ms.locfileid: "34040105"
   
 -   Caratteri di controllo  
   
--   I seguenti caratteri (che non sono validi nei nomi degli oggetti di Analysis Services):., ': / \\*|? & % $! [] () + ={}<>  
+-   I caratteri seguenti (che non sono validi nei nomi degli oggetti di Analysis Services):., ': / \\*|? & % $! + = [] (){}<>  
   
 -   Le parole chiave riservate di Analysis Services, inclusi i nomi delle funzioni e gli operatori MDX (Multidimensional Expressions) e DMX (Data Mining Extensions).  
   
 ## <a name="effect-of-renaming-on-existing-tables-columns-and-calculations"></a>Effetto della ridenominazione su tabelle, colonne e calcoli esistenti  
- Modificando il nome di una tabella, si modifica il nome dell'oggetto tabella sottostante, che può contenere più colonne o misure. Tutte le colonne presenti nella tabella e tutte le relazioni che coinvolgono la tabella, devono essere aggiornate per utilizzare il nuovo nome nelle relative definizioni. Questo aggiornamento viene eseguito automaticamente nella maggior parte dei casi.
+ Modificando il nome di una tabella, si modifica il nome dell'oggetto tabella sottostante, che può contenere più colonne o misure. Tutte le colonne presenti nella tabella e tutte le relazioni che utilizzano la tabella, devono essere aggiornate per usare il nuovo nome nelle relative definizioni. Questo aggiornamento viene eseguita automaticamente nella maggior parte dei casi.
   
- È necessario aggiornare tutti i calcoli che utilizzano la tabella rinominata o che utilizzano le colonne della tabella rinominata, e i dati da essi derivati devono essere aggiornati e ricalcolati. A seconda del numero di tabelle e di calcoli interessati, l'operazione può richiedere del tempo prima di essere completata. Il momento migliore per rinominare le tabelle ricade pertanto nell'arco del processo di importazione o prima dell'inizio della compilazione di relazioni e calcoli complessi.  
+ È necessario aggiornare tutti i calcoli che utilizzano la tabella rinominata o che usano le colonne della tabella rinominata, e i dati da essi derivati devono essere aggiornati e ricalcolati. A seconda del numero di tabelle e di calcoli interessati, l'operazione può richiedere del tempo prima di essere completata. Il momento migliore per rinominare le tabelle ricade pertanto nell'arco del processo di importazione o prima dell'inizio della compilazione di relazioni e calcoli complessi.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Tabelle e colonne](../../analysis-services/tabular-models/tables-and-columns-ssas-tabular.md)   

@@ -1,5 +1,5 @@
 ---
-title: Definizione di una relazione molti-a-molti | Documenti Microsoft
+title: Definizione di una relazione molti-a-molti | Microsoft Docs
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,14 +9,14 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 487b61512e1dbd784b9b63eb0c3efdf1f98281ec
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: c2541637af690395bb52c86a604ed7b37bd3fb00
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34019628"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52518016"
 ---
-# <a name="lesson-5-3---defining-a-many-to-many-relationship"></a>Lezione 5-3-definizione di una relazione molti-a-molti
+# <a name="lesson-5-3---defining-a-many-to-many-relationship"></a>Lezione 5-3: definizione di una relazione molti-a-molti
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
 Quando si definisce una dimensione, generalmente ogni fatto viene unito in join a un solo membro della dimensione, mentre un singolo membro della dimensione può essere associato a molti fatti. A ogni cliente possono essere ad esempio associati più ordini, ma ogni ordine appartiene a un unico cliente. Nella terminologia dei database relazionali, questa viene definita una *relazione uno-a-molti*. A volte, tuttavia, è possibile che un singolo fatto venga unito in join a più membri della dimensione. Nella terminologia dei database relazionali, questa viene definita una *relazione molti-a-molti*. Ad esempio, i motivi che determinano un acquisto da parte di un cliente possono essere diversi e un motivo per l'acquisto può essere associato a più acquisti. Una tabella di join viene utilizzata per definire i motivi di vendita correlati a ogni acquisto. Una dimensione Sales Reason creata a partire da relazioni di questo tipo può disporre quindi di più membri che corrispondono a una singola transazione di vendita. Le dimensioni molti-a-molti consentono di espandere la modellazione dimensionale oltre lo schema star classico e supportano analisi complesse quando le dimensioni non sono direttamente associate a una tabella dei fatti.  
@@ -26,7 +26,7 @@ In [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]è possibile defini
 Con una dimensione molti-a-molti, i valori sono di tipo distinct sommati, ovvero non verranno aggregati più di una volta nel membro Totale.  
   
 > [!NOTE]  
-> Per supportare una relazione delle dimensioni molti-a-molti, nella vista origine dati è necessario definire una relazione tra chiave primaria e chiave esterna tra tutte le tabelle coinvolte. In caso contrario, non sarà possibile selezionare il gruppo di misure intermedio corretto quando la relazione viene stabilita nella scheda **Utilizzo dimensioni** di Progettazione cubi.  
+> Per supportare una relazione tra dimensioni molti-a-molti, una relazione di chiave esterna-chiave primaria deve essere definita nella vista origine dati tra tutte le tabelle coinvolte. In caso contrario, non sarà possibile selezionare il gruppo di misure intermedio corretto quando la relazione viene stabilita nella scheda **Utilizzo dimensioni** di Progettazione cubi.  
   
 Per altre informazioni, vedere [Relazioni tra dimensioni](../analysis-services/multidimensional-models-olap-logical-cube-objects/dimension-relationships.md)e [Definire una relazione molti-a-molti e le relative proprietà](../analysis-services/multidimensional-models/define-a-many-to-many-relationship-and-many-to-many-relationship-properties.md).  
   
@@ -44,7 +44,7 @@ Nelle attività di questo argomento vengono definiti la dimensione Sales Reasons
   
 5.  Nella finestra di dialogo **Aggiungi/Rimuovi tabelle** aggiungere le tabelle **DimSalesReason** e **FactInternetSalesReason** all'elenco **Oggetti inclusi** e quindi fare clic su **OK**.  
   
-    Si noti che le relazioni tra chiave primaria e chiave esterna tra le tabelle coinvolte vengono stabilite automaticamente poiché le relazioni sono definite nel database relazionale sottostante. Se le relazioni non fossero definite nel database relazionale sottostante, sarebbe necessario definirle nella vista origine dati.  
+    Si noti che le relazioni di chiave esterna-chiave primarie tra le tabelle coinvolte vengono stabilite automaticamente poiché le relazioni sono definite nel database relazionale sottostante. Se le relazioni non fossero definite nel database relazionale sottostante, sarebbe necessario definirle nella vista origine dati.  
   
 6.  Scegliere **Layout automatico** dal menu **Formato**e quindi fare clic su **Diagramma**.  
   
@@ -62,7 +62,7 @@ Nelle attività di questo argomento vengono definiti la dimensione Sales Reasons
   
     Si noti che per ogni numero di riga all'interno di ogni ordine un valore chiave identifica il motivo della vendita per l'acquisto di quell'elemento di riga, come illustrato nella figura seguente.  
   
-    ![Chiave per identificare il motivo delle vendite per gli acquisti](../analysis-services/media/l5-many-to-many-1.gif "chiave per identificare il motivo delle vendite per gli acquisti")  
+    ![Chiave per identificare motivo di vendita per gli acquisti](../analysis-services/media/l5-many-to-many-1.gif "chiave per identificare motivo di vendita per gli acquisti")  
   
 ## <a name="defining-the-intermediate-measure-group"></a>Definizione del gruppo di misure intermedio  
   
@@ -80,7 +80,7 @@ Nelle attività di questo argomento vengono definiti la dimensione Sales Reasons
   
 5.  Selezionare **Internet Sales Reason Count** e controllare le proprietà della misura della finestra Proprietà.  
   
-    Si noti che la proprietà **AggregateFunction** per questa misura è definita come **Conteggio** anziché come **Somma**. [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]sceglie **conteggio** perché il tipo di dati sottostante è un tipo di dati stringa. Le altre due colonne della tabella dei fatti sottostante non sono selezionate come misure poiché [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] le ha rilevate come chiavi numeriche anziché come misure effettive. Per altre informazioni, vedere [Definire una funzione semiadditiva](../analysis-services/multidimensional-models/define-semiadditive-behavior.md).  
+    Si noti che la proprietà **AggregateFunction** per questa misura è definita come **Conteggio** anziché come **Somma**. [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] sceglie **Conteggio** poiché il tipo di dati sottostante è di tipo stringa. Le altre due colonne della tabella dei fatti sottostante non sono selezionate come misure poiché [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] le ha rilevate come chiavi numeriche anziché come misure effettive. Per altre informazioni, vedere [Definire una funzione semiadditiva](../analysis-services/multidimensional-models/define-semiadditive-behavior.md).  
   
 6.  Nella finestra Proprietà, impostare la proprietà **Visible** della misura **Internet Sales Reason Count** su **False**.  
   
@@ -88,7 +88,7 @@ Nelle attività di questo argomento vengono definiti la dimensione Sales Reasons
   
     Nella figura successiva vengono illustrate le proprietà della misura **Internet Sales Reason Count** .  
   
-    ![Le proprietà per la misura Internet Sales Reason Count](../analysis-services/media/l5-many-to-many-2.gif "proprietà per la misura Internet Sales Reason Count")  
+    ![Le proprietà della misura Internet Sales Reason Count](../analysis-services/media/l5-many-to-many-2.gif "le proprietà della misura Internet Sales Reason Count")  
   
 ## <a name="defining-the-many-to-many-dimension"></a>Definizione della dimensione molti-a-molti  
   
@@ -144,9 +144,9 @@ Nelle attività di questo argomento vengono definiti la dimensione Sales Reasons
   
     Nella figura seguente vengono illustrate le modifiche apportate alla finestra di dialogo **Definisci relazione** .  
   
-    ![Finestra di dialogo Definisci relazione](../analysis-services/media/l5-many-to-many-3.gif "la finestra di dialogo Definisci relazione")  
+    ![Finestra di dialogo Definisci relazione](../analysis-services/media/l5-many-to-many-3.gif "nella finestra di dialogo Definisci relazione")  
   
-5.  Scegliere **OK**.  
+5.  Fare clic su **OK**.  
   
     Si noti l'icona molti-a-molti che rappresenta la relazione tra la dimensione Sales Reason e il gruppo di misure Internet Sales.  
   
@@ -168,13 +168,13 @@ Nelle attività di questo argomento vengono definiti la dimensione Sales Reasons
   
     Nella figura seguente sono illustrati i riquadri **Filtro** e **Dati** di Progettazione cubi.  
   
-    ![I dati e filtrare i riquadri di Progettazione cubi](../analysis-services/media/l5-many-to-many-5.gif "i dati e filtrare i riquadri di Progettazione cubi")  
+    ![Riquadri filtro e dati di Progettazione cubi](../analysis-services/media/l5-many-to-many-5.gif "riquadri filtro e dati di Progettazione cubi")  
   
 ## <a name="next-task-in-lesson"></a>Attività successiva della lezione  
-[Definizione di granularità della dimensione all'interno di un gruppo di misure](../analysis-services/lesson-5-4-defining-dimension-granularity-within-a-measure-group.md)  
+[Definizione della granularità della dimensione in un gruppo di misure](../analysis-services/lesson-5-4-defining-dimension-granularity-within-a-measure-group.md)  
   
 ## <a name="see-also"></a>Vedere anche  
-[Utilizzare diagrammi in Progettazione vista origine dati & #40; Analysis Services & #41;](../analysis-services/multidimensional-models/work-with-diagrams-in-data-source-view-designer-analysis-services.md)  
+[Usare diagrammi in Progettazione vista origine dati &#40;Analysis Services&#41;](../analysis-services/multidimensional-models/work-with-diagrams-in-data-source-view-designer-analysis-services.md)  
 [Relazioni tra dimensioni](../analysis-services/multidimensional-models-olap-logical-cube-objects/dimension-relationships.md)  
 [Definire una relazione molti-a-molti e le relative proprietà](../analysis-services/multidimensional-models/define-a-many-to-many-relationship-and-many-to-many-relationship-properties.md)  
   

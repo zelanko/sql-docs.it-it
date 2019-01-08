@@ -7,20 +7,18 @@ ms.reviewer: ''
 ms.technology:
 - database-engine
 ms.topic: conceptual
-f1_keywords:
-- vs.debug.breakpt.contraints
 helpviewer_keywords:
 - Transact-SQL debugger, breakpoint filter
 ms.assetid: 7bf1dddd-7b0b-4c47-8a7b-28a5569b4fa5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 09fd45e648833f2d46c258a1806e8c424634b514
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: e35da51b4af9e653fd6cdbad77704676941c49b3
+ms.sourcegitcommit: 40c3b86793d91531a919f598dd312f7e572171ec
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48219571"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53328711"
 ---
 # <a name="specify-a-breakpoint-filter"></a>Impostazione di un filtro per un punto di interruzione
   Un filtro per un punto di interruzione limita il punto di interruzione in modo che agisca solo su computer o processi e thread del sistema operativo specificati. I filtri per i punti di interruzione vengono in genere utilizzati per il debug di applicazioni parallele.  
@@ -40,15 +38,13 @@ ms.locfileid: "48219571"
   
     -   `MachineName` è il computer che esegue l'istanza del Motore di database.  
   
-    -   `ProcessID`, e `ProcessName` sono relativi al processo di sistema operativo in esecuzione l'istanza del motore di Database.  
+    -   `ProcessID` e `ProcessName` sono relativi al processo del sistema operativo che esegue l'istanza del Motore di database.  
   
-    -   `ThreadID` e `ThreadName` sono thread del sistema operativo in esecuzione il [!INCLUDE[tsql](../../includes/tsql-md.md)] batch, procedura o funzione nell'istanza del motore di Database.  
+    -   `ThreadID` e `ThreadName` sono relativi al thread del sistema operativo che esegue il batch, la procedura o la funzione [!INCLUDE[tsql](../../includes/tsql-md.md)] nell'istanza del Motore di database.  
   
 3.  Fare clic su **OK** per implementare le modifiche o su **Annulla** per uscire senza applicare le modifiche.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Impostare una condizione del punto di interruzione](specify-a-breakpoint-condition.md)   
  [Specifica di un numero di passaggi](specify-a-hit-count.md)   
- [Specificare un'azione del punto di interruzione](specify-a-breakpoint-action.md)  
-  
-  
+ [Impostazione di un'azione del punto di interruzione](specify-a-breakpoint-action.md)  

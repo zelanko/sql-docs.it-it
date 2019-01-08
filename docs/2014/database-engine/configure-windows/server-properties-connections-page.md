@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: configuration
 ms.topic: conceptual
 f1_keywords:
 - sql12.swb.serverproperties.connections.f1
@@ -13,12 +12,12 @@ ms.assetid: 33be8ac5-12dd-4b8a-99e0-68261c219dd2
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: b20ec9f33d9b2d117ad3c29d464af2392703a771
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: c9d58fb2a5702a2a6c3f5ac74ae970411d887b62
+ms.sourcegitcommit: 04dd0620202287869b23cc2fde998a18d3200c66
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48079175"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "52640032"
 ---
 # <a name="server-properties-connections-page"></a>Proprietà server (pagina Connessioni)
   Utilizzare questa pagina per visualizzare o modificare le opzioni di connessione.  
@@ -34,7 +33,7 @@ ms.locfileid: "48079175"
  **Default connection options**  
  Specifica le opzioni di connessione predefinite descritte nella tabella seguente.  
   
-|Opzione di configurazione|Description|  
+|Opzione di configurazione|Descrizione|  
 |--------------------------|-----------------|  
 |**disable deferred constraint checking**|Controlla la verifica dei vincoli posticipata o provvisoria.|  
 |**transazioni implicite**|Determina se al momento dell'esecuzione di un'istruzione una transazione viene avviata in modo implicito.|  

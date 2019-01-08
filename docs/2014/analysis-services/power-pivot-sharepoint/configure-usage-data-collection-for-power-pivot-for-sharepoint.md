@@ -11,17 +11,17 @@ ms.assetid: 955ca6d6-9d5b-47a4-a87c-59bd23f1bf74
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 12943c96c64c1a5d20ee94c76a9701fc7a983d85
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 9f3544ce4297117be11b3ba68821e3b621fbc400
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48083821"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52411278"
 ---
 # <a name="configure-usage-data-collection-for-powerpivot-for-sharepoint"></a>Configurare la raccolta dati di utilizzo per PowerPivot per SharePoint
   La raccolta dati di utilizzo è una funzionalità di SharePoint a livello di farm. In PowerPivot per SharePoint questo sistema viene utilizzato ed esteso per fornire i report nel dashboard di gestione PowerPivot in cui viene mostrato l'utilizzo dei servizi e dei dati PowerPivot. A seconda dell'installazione di SharePoint, la raccolta dati di utilizzo potrebbe essere disabilitata per la farm. È necessario che un amministratore della farm abiliti la registrazione dell'utilizzo per creare i dati di utilizzo che vengono visualizzati nel dashboard di gestione PowerPivot.  
   
- Per informazioni sui dati di utilizzo nel Dashboard di gestione PowerPivot, vedere [PowerPivot Management Dashboard and Usage Data](power-pivot-management-dashboard-and-usage-data.md).  
+ Per informazioni sui dati di utilizzo nel dashboard di gestione PowerPivot, vedere [PowerPivot Management Dashboard and Usage Data](power-pivot-management-dashboard-and-usage-data.md).  
   
  **Contenuto dell'argomento:**  
   
@@ -55,12 +55,12 @@ ms.locfileid: "48083821"
   
 4.  Nella sezione **Eventi da registrare** selezionare o deselezionare le caselle di controllo per abilitare o disabilitare gli eventi di Analysis Services seguenti:  
   
-    |Evento|Description|  
+    |Evento|Descrizione|  
     |-----------|-----------------|  
     |**Connessioni PowerPivot**|L'evento Connessione PowerPivot viene utilizzato per monitorare le connessioni al server PowerPivot effettuate per conto di un utente.|  
     |**Utilizzo dati di caricamento di PowerPivot**|Utilizzo dati di caricamento di PowerPivot viene utilizzato per monitorare le richieste per il caricamento dei dati PowerPivot nella memoria del server. Un evento di caricamento viene generato per i file di dati PowerPivot caricati da un database del contenuto o dalla cache.|  
     |**Utilizzo di dati di scaricamento di PowerPivot**|Utilizzo dati di scaricamento di PowerPivot viene utilizzato per monitorare le richieste per lo scaricamento di un'origine dati PowerPivot dopo un periodo di inattività. La memorizzazione nella cache su disco di un'origine dati PowerPivot verrà segnalata come un evento di scaricamento.|  
-    |**Utilizzo Query PowerPivot**|Utilizzo Query PowerPivot viene utilizzato per monitorare i tempi di elaborazione delle query per i dati caricati in un [!INCLUDE[ssGeminiSrv](../../includes/ssgeminisrv-md.md)] istanza.|  
+    |**Utilizzo Query PowerPivot**|Utilizzo query PowerPivot viene utilizzato per monitorare i tempi di elaborazione query dei dati caricati in un'istanza di [!INCLUDE[ssGeminiSrv](../../includes/ssgeminisrv-md.md)] .|  
   
     > [!NOTE]  
     >  Anche le operazioni di aggiornamento dati e prevenzione e risoluzione dei problemi del server generano dati sull'utilizzo, ma a questi processi non è associato alcun evento.  
@@ -87,9 +87,9 @@ ms.locfileid: "48083821"
 ##  <a name="jobs"></a> Configurare i processi timer utilizzati nella raccolta dati di utilizzo  
  I dati di utilizzo e sull'integrità del server PowerPivot vengono spostati in percorsi diversi nel sistema di raccolta dati di utilizzo tramite due processi timer:  
   
--   Tramite il processo timer "Importazione dati di utilizzo di Microsoft SharePoint Foundation" i dati di utilizzo di PowerPivot vengono spostati nel database dell'applicazione di servizio PowerPivot.  
+-   Il processo timer di "Microsoft SharePoint Foundation importazione dati di utilizzo" sposta sull'utilizzo di PowerPivot nel database dell'applicazione di servizio PowerPivot.  
   
--   Tramite "Processo timer di elaborazione dashboard di gestione PowerPivot" i dati vengono spostati in una cartella di lavoro di PowerPivot che rappresenta l'origine dei dati per report amministrativi predefiniti.  
+-   "Processo timer di elaborazione Dashboard di gestione PowerPivot" i dati alla cartella di lavoro di PowerPivot che rappresenta l'origine dei dati per report amministrativi predefiniti.  
   
  Se è necessario aggiornare i report amministrativi visualizzati più frequentemente nel dashboard di gestione PowerPivot, attenersi alla procedura seguente.  
   
@@ -105,7 +105,7 @@ ms.locfileid: "48083821"
   
 6.  Fare clic su **Esegui**.  
   
-7.  Selezionare i report per visualizzare i dati di aggiornamento. Per altre informazioni, vedere [PowerPivot Management Dashboard and Usage Data](power-pivot-management-dashboard-and-usage-data.md).  
+7.  Selezionare i report per visualizzare i dati di aggiornamento. Per ulteriori informazioni, vedere [PowerPivot Management Dashboard and Usage Data](power-pivot-management-dashboard-and-usage-data.md).  
   
 ##  <a name="confighist"></a> Definire la durata del periodo di archiviazione della cronologia dei dati sull'utilizzo  
  La cronologia dei dati sull'utilizzo viene archiviata per eventi (connessioni, caricamenti, scaricamenti ed elaborazione query su richiesta) e per l'aggiornamento dei dati (elaborazione pianificata dei dati). Sebbene i dati sull'utilizzo vengano raccolti attraverso il sistema di raccolta dei dati sull'utilizzo di SharePoint, verranno in seguito spostati in un database dell'applicazione PowerPivot e in un database Reporting per un'archiviazione a lungo termine. L'impostazione della cronologia dei dati sull'utilizzo specifica per quanto tempo i dati sull'utilizzo verranno mantenuti nei database dell'applicazione PowerPivot. Lo stesso limite si applica in modo analogo a tutti i tipi di dati sull'utilizzo archiviati nello stesso database dell'applicazione di servizio PowerPivot.  
@@ -129,7 +129,7 @@ ms.locfileid: "48083821"
  Per altre informazioni su come i dati di utilizzo vengono raccolti e archiviati, vedere [PowerPivot Usage Data Collection](power-pivot-usage-data-collection.md).  
   
 ##  <a name="qrh"></a> Definire le categorie delle risposte alle query veloce, media e lenta per la creazione di report  
- Le prestazioni di elaborazione query vengono misurate rispetto a categorie predefinite che definiscono un ciclo di risposta alle richieste in base al tempo necessario per il completamento. Le categorie predefinite includono: Semplice, Rapida, Prevista, Esecuzione prolungata e Superato. Ogni richiesta a un server PowerPivot rientrerà in una di queste categorie in base al tempo necessario per il completamento.  
+ Le prestazioni di elaborazione query vengono misurate rispetto a categorie predefinite che definiscono un ciclo di risposta alle richieste in base al tempo necessario per il completamento. Le categorie predefinite includono: Semplice, rapida, prevista, con esecuzione prolungata e superata. Ogni richiesta a un server PowerPivot rientrerà in una di queste categorie in base al tempo necessario per il completamento.  
   
  Le informazioni sulle risposte alle query vengono utilizzate nei report di attività. All'interno dei report, ogni categoria viene utilizzata in modo diverso per rivelare nel modo migliore le tendenze delle prestazioni del sistema PowerPivot. Ad esempio, le richieste semplici vengono escluse completamente per mostrare unicamente le tendenze più significative attraverso le categorie rimanenti. Le statistiche sulle richieste con esecuzione prolungata o superate sono invece molto presenti nei report per dare la possibilità agli amministratori o ai proprietari della cartella di lavoro di intraprendere immediatamente azioni correttive.  
   
@@ -183,12 +183,12 @@ ms.locfileid: "48083821"
 |Impostazione|Valore predefinito|Tipo|Intervallo valido|  
 |-------------|-------------------|----------|-----------------|  
 |**Eventi di uso di Analysis Services** (Connessione, Caricamento, Scaricamento, Richieste)|\<abilitato >|Boolean|Questi valori sono abilitati o disabilitati.|  
-|**Query Reporting interval**|300 (in secondi)|Valore intero|Tra 1 e qualsiasi numero intero positivo. Il valore predefinito è 5 minuti.|  
-|**Usage data history**|365 (in giorni)|Valore intero|0 specifica nessun limite, ma è anche possibile impostare un limite massimo per imporre una scadenza sui dati cronologici e l'eliminazione automatica. I valori validi per un periodo di memorizzazione limitato sono compresi tra 1 e 5000 (in giorni).|  
-|Limite massimo risposta semplice|500 (in millisecondi)|Valore intero|Imposta un limite massimo che definisce uno scambio richiesta-risposta semplice. Qualsiasi richiesta completata entro un intervallo di tempo compreso tra 0 e 500 millisecondi viene considerata una richiesta semplice e ignorata ai fini del report.|  
-|Limite massimo risposta rapida|1000 (in millisecondi)|Valore intero|Imposta un limite massimo che definisce uno scambio richiesta-risposta rapido.|  
-|Limite massimo risposta prevista|3000 (in millisecondi)|Valore intero|Imposta un limite massimo che definisce uno scambio richiesta-risposta previsto.|  
-|Limite massimo risposta con esecuzione prolungata|10000 (in millisecondi)|Valore intero|Imposta un limite massimo che definisce uno scambio richiesta-risposta con esecuzione prolungata. Tutte le richieste che superano questo limite massimo rientrano nella categoria Superato, che non prevede una soglia massima.|  
+|**Query Reporting interval**|300 (in secondi)|Integer|Tra 1 e qualsiasi numero intero positivo. Il valore predefinito è 5 minuti.|  
+|**Usage data history**|365 (in giorni)|Integer|0 specifica nessun limite, ma è anche possibile impostare un limite massimo per imporre una scadenza sui dati cronologici e l'eliminazione automatica. I valori validi per un periodo di memorizzazione limitato sono compresi tra 1 e 5000 (in giorni).|  
+|Limite massimo risposta semplice|500 (in millisecondi)|Integer|Imposta un limite massimo che definisce uno scambio richiesta-risposta semplice. Qualsiasi richiesta completata entro un intervallo di tempo compreso tra 0 e 500 millisecondi viene considerata una richiesta semplice e ignorata ai fini del report.|  
+|Limite massimo risposta rapida|1000 (in millisecondi)|Integer|Imposta un limite massimo che definisce uno scambio richiesta-risposta rapido.|  
+|Limite massimo risposta prevista|3000 (in millisecondi)|Integer|Imposta un limite massimo che definisce uno scambio richiesta-risposta previsto.|  
+|Limite massimo risposta con esecuzione prolungata|10000 (in millisecondi)|Integer|Imposta un limite massimo che definisce uno scambio richiesta-risposta con esecuzione prolungata. Tutte le richieste che superano questo limite massimo rientrano nella categoria Superato, che non prevede una soglia massima.|  
   
 ## <a name="see-also"></a>Vedere anche  
  [Riferimento all'impostazione di configurazione &#40;PowerPivot per SharePoint&#41;](configuration-setting-reference-power-pivot-for-sharepoint.md)   

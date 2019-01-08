@@ -16,12 +16,12 @@ ms.assetid: f68b6782-f386-4947-93c4-e89110800704
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 606b5273619e0f88503abeadaf6d463f6f16d3c0
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: ba10d54fb2c18e29a6cc41d74e8d79bc6355e63e
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48188401"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52539755"
 ---
 # <a name="specify-field-and-row-terminators-sql-server"></a>Impostazione dei caratteri di terminazione del campo e della riga (SQL Server)
   Per i campi dati di tipo carattere è facoltativamente possibile contrassegnare la fine di ogni campo di un file di dati con un *carattere di terminazione del campo* a e la fine di ogni riga con un *carattere di terminazione della riga*. I caratteri di terminazione costituiscono un mezzo per indicare ai programmi che leggono il file di dati dove termina un campo o una riga e dove inizia un altro campo o un'altra riga.  
@@ -40,7 +40,7 @@ ms.locfileid: "48188401"
 |Barra rovesciata<sup>1</sup>|\\\|  
 |Terminazione null (non visibile)<sup>2</sup>|\0|  
 |Tutti i caratteri stampabili (i caratteri di controllo non sono stampabili, ad eccezione dei caratteri Null, di tabulazione, di nuova riga e di ritorno a capo)|(*, A, t, l e così via)|  
-|Stringa costituita da un massimo di 10 caratteri stampabili, inclusi alcuni o tutti i caratteri di terminazione descritti sopra|(\*\*\t\*\*, end, !!!!!!!!!!, \t—\n e così via)|  
+|Stringa costituita da un massimo di 10 caratteri stampabili, inclusi alcuni o tutti i caratteri di terminazione descritti sopra|(**\t\*\*, end, !!!!!!!!!!, \t-\n e così via)|  
   
  <sup>1</sup> solo la t, n, r, 0 e '\0' caratteri lavorare con il carattere di escape barra rovesciata per produrre un carattere di controllo.  
   
@@ -76,13 +76,13 @@ ms.locfileid: "48188401"
   
          `Enter field terminator [none]:`  
   
-         In genere, l'impostazione predefinita rappresenta una scelta appropriata. Tuttavia, affinché `char` o `nchar` campi di dati, vedere la sottosezione seguente "Linee guida per l'uso dei caratteri di terminazione". Per un esempio contestualizzato di tale richiesta, vedere [Impostazione dei formati di dati per la compatibilità mediante &#40;SQL Server&#41;](specify-data-formats-for-compatibility-when-using-bcp-sql-server.md).  
+         In genere, l'impostazione predefinita rappresenta una scelta appropriata. Per i campi che includono dati `char` o `nchar`, tuttavia, vedere la sottosezione seguente "Linee guida per l'utilizzo dei caratteri di terminazione". Per un esempio contestualizzato di tale richiesta, vedere [Impostazione dei formati di dati per la compatibilità mediante &#40;SQL Server&#41;](specify-data-formats-for-compatibility-when-using-bcp-sql-server.md).  
   
         > [!NOTE]  
         >  Dopo l'impostazione interattiva di tutti i campi in un comando **bcp**, viene richiesto di salvare le risposte relative a ogni campo in un file di formato non XML. Per altre informazioni sui file di formato non XML, vedere [File in formato non XML &#40;SQL Server&#41;](xml-format-files-sql-server.md).  
   
 ### <a name="guidelines-for-using-terminators"></a>Linee guida per l'utilizzo dei caratteri di terminazione  
- In alcuni casi, un carattere di terminazione è utile per un `char` o `nchar` campo dati. Esempio:  
+ In alcuni casi, un carattere di terminazione può essere utile per un campo dati `char` o `nchar`. Ad esempio:  
   
 -   Per una colonna di dati che contiene un valore null in un file di dati da importare in un programma che non riconosce le informazioni sulla lunghezza del prefisso.  
   
@@ -97,7 +97,7 @@ ms.locfileid: "48188401"
   
  Per il comando **bcp** sono disponibili le opzioni seguenti.  
   
-|Opzione|Description|  
+|Opzione|Descrizione|  
 |------------|-----------------|  
 |**-c**|Specifica che i campi dati devono essere caricati come dati di tipo carattere.|  
 |**-t** `,`|Specifica la virgola (,) come carattere di terminazione del campo.|  
@@ -125,7 +125,7 @@ bcp AdventureWorks.HumanResources.Department out C:\myDepartment-c-t.txt -c -t, 
   
      È possibile specificare i caratteri di terminazione per i singoli campi di un file di formato o per l'intero file di dati utilizzando i qualificatori illustrati nella tabella seguente:  
   
-    |Qualifier|Description|  
+    |Qualifier|Descrizione|  
     |---------------|-----------------|  
     |FIELDTERMINATOR **='*`field_terminator`*'**|Specifica il carattere di terminazione del campo da utilizzare per i file di dati di tipo carattere e carattere Unicode.<br /><br /> Il valore predefinito è il carattere di tabulazione (\t).|  
     |ROWTERMINATOR **='*`row_terminator`*'**|Specifica il carattere di terminazione della riga da utilizzare per i file di dati di tipo carattere e carattere Unicode.<br /><br /> Il valore predefinito è \n (carattere di nuova riga).|  
@@ -134,7 +134,7 @@ bcp AdventureWorks.HumanResources.Department out C:\myDepartment-c-t.txt -c -t, 
   
 -   INSERT ... SELECT * FROM OPENROWSET(BULK...).  
   
-     Per il provider di set di righe con lettura bulk OPENROWSET, è possibile specificare i caratteri di terminazione solo nel file di formato, ad eccezione dei tipi di dati contenenti oggetti di grandi dimensioni. Se un file di dati di tipo carattere utilizza un carattere di terminazione non predefinito, è necessario definire tale carattere nel file di formato. Per altre informazioni, vedere [Creazione di un file di formato &#40;SQL Server&#41](create-a-format-file-sql-server.md) e [Utilizzo di un file di formato per l'importazione bulk dei dati &#40;SQL Server&#41;](use-a-format-file-to-bulk-import-data-sql-server.md).  
+     Per il provider di set di righe con lettura bulk OPENROWSET, è possibile specificare i caratteri di terminazione solo nel file di formato, ad eccezione dei tipi di dati contenenti oggetti di grandi dimensioni. Se un file di dati di tipo carattere utilizza un carattere di terminazione non predefinito, è necessario definire tale carattere nel file di formato. Per altre informazioni, vedere [Creazione di un file di formato &#40;SQL Server&#41;](create-a-format-file-sql-server.md) e [Utilizzo di un file di formato per l'importazione bulk dei dati &#40;SQL Server&#41;](use-a-format-file-to-bulk-import-data-sql-server.md).  
   
      Per altre informazioni sulla clausola OPENROWSET BULK, vedere [OPENROWSET &#40;Transact-SQL&#41;](/sql/t-sql/functions/openrowset-transact-sql).  
   
@@ -164,7 +164,7 @@ GO
 bcp AdventureWorks..myDepartment in C:\myDepartment-c-t.txt -c -t , -r \n -T  
 ```  
   
-#### <a name="b-using-bulk-insert-to-interactively-specify-terminators"></a>B. Utilizzo dell'istruzione BULK INSERT per l'impostazione interattiva dei caratteri di terminazione  
+#### <a name="b-using-bulk-insert-to-interactively-specify-terminators"></a>b. Utilizzo dell'istruzione BULK INSERT per l'impostazione interattiva dei caratteri di terminazione  
  Nell'esempio seguente viene eseguita l'importazione bulk del file di dati `Department-c-t.txt` utilizzando un'istruzione `BULK INSERT` con i qualificatori illustrati nella tabella seguente:  
   
 |Opzione|attribute|  

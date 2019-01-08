@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
 - joins [SQL Server], operators
@@ -14,12 +14,12 @@ ms.assetid: d1dcdcfd-166c-4147-85ab-43cadc63819b
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 5dfc560a935373a9495edc884a892937fbd13161
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 74470d40bace6e1443ef9eb94f9698e225ff2946
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48167161"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52815813"
 ---
 # <a name="modify-join-operators-visual-database-tools"></a>Modifica di operatori di join (Visual Database Tools)
   Per impostazione predefinita, in [Progettazione query e Progettazione viste](visual-database-tools.md) le tabelle vengono unite in join tramite un segno di uguale (equijoin) che collega i valori delle due colonne join. Se si desidera, sarà possibile modificare l'operatore utilizzato per confrontare i valori nelle colonne join.  
@@ -28,7 +28,7 @@ ms.locfileid: "48167161"
   
 1.  Nel [riquadro Diagramma](diagram-pane-visual-database-tools.md)fare clic con il pulsante destro del mouse sulla linea di join da modificare e scegliere **Proprietà** dal menu di scelta rapida.  
   
-2.  Nella finestra Proprietà fare clic su **Tipo e condizione di join** e fare clic sui **puntini di sospensione (…)** a destra della proprietà.  
+2.  Nella finestra Proprietà fare clic su **Tipo e condizione di join** e fare clic sui **puntini di sospensione (...)** a destra della proprietà.  
   
 3.  Nella finestra di dialogo **Join** selezionare un nuovo operatore.  
   

@@ -14,12 +14,12 @@ ms.assetid: c745ade0-738e-4a98-a3f0-3eabfd3eeba2
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 2f3e44d2891d9080b361d07d0bdcacfd0ad2ec39
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 05555f9f3b90cbf0eaae410a2b97dc31a0ed17d2
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48209771"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52393095"
 ---
 # <a name="specifying-the-contents-of-a-query-axis-mdx"></a>Impostazione del contenuto di un asse della query (MDX)
   Gli assi della query specificano i bordi di un set di celle restituito dall'istruzione SELECT di MDX (Multidimensional Expression). L'impostazione dei bordi di un set di celle consente di limitare i dati restituiti visibili al client.  
@@ -72,7 +72,7 @@ FROM [Adventure Works]
   
 ```  
   
- La parola chiave NON EMPTY, utilizzata prima delle definizione del set, è un rapido metodo per rimuovere tutte tuple vuote da un asse. Negli esempi è stato ad esempio osservato fino a questo punto come non vi siano dati nel cubo dall'agosto 2004 in poi. Per rimuovere tutte le righe dal set di celle che non includono dati in alcuna colonna, è sufficiente aggiungere NON EMPTY prima del set nella definizione dell'asse delle righe, nel modo seguente:  
+ La parola chiave NON EMPTY, utilizzata prima delle definizione del set, è un rapido metodo per rimuovere tutte tuple vuote da un asse. Ad esempio, negli esempi che abbiamo visto finora non vi è alcun dato nel cubo dall'agosto 2004 e versioni successive. Per rimuovere tutte le righe dal set di celle che non includono dati in alcuna colonna, è sufficiente aggiungere NON EMPTY prima del set nella definizione dell'asse delle righe, nel modo seguente:  
   
 ```  
 SELECT {[Measures].[Internet Sales Amount]} ON COLUMNS,  

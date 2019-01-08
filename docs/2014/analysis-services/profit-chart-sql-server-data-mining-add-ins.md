@@ -16,12 +16,12 @@ ms.assetid: 5c902543-4da9-4db3-99d5-4ce04c43d7ef
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 618388325ecc552bf38f20603ff9d3c4c432bd1d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: ddeafaafd816e226edff764c8e273cde6df4eaad
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48191241"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52530727"
 ---
 # <a name="profit-chart-sql-server-data-mining-add-ins"></a>Grafico profitti (componenti aggiuntivi Data mining di SQL Server)
   ![Pulsante grafico profitti sulla barra multifunzione Data Mining](media/dmc-profitchart.gif "pulsante grafico profitti sulla barra multifunzione Data Mining")  

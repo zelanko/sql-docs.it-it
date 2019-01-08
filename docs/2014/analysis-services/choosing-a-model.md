@@ -17,17 +17,17 @@ ms.assetid: 444bbf9c-cec8-460e-881d-38784fb146fa
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 4cbde25ffc504e2e2c41bcf6b46cde9d464daa7d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 6d91e282ebfe0299fd6015530e8af1b6d10e6547
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48113291"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52400514"
 ---
 # <a name="choosing-a-model"></a>Scelta di un modello
-  **Algoritmo di data mining:** modelli di data mining *algoritmo* è il meccanismo che consente di creare modelli dai dati. L'algoritmo definisce come vengono conteggiati i dati, come vengono derivate le relazioni e come vengono archiviati i modelli. La scelta di un algoritmo dipende parzialmente dal tipo di dati che si desidera analizzare. Alcuni algoritmi, ad esempio, possono essere utilizzati solo con numeri continui, mentre altri sono più adatti ad essere utilizzati con un numero limitato di valori distinct.  
+  **Algoritmo di data mining:** Modelli di data mining *algoritmo* è il meccanismo che consente di creare modelli dai dati. L'algoritmo definisce come vengono conteggiati i dati, come vengono derivate le relazioni e come vengono archiviati i modelli. La scelta di un algoritmo dipende parzialmente dal tipo di dati che si desidera analizzare. Alcuni algoritmi, ad esempio, possono essere utilizzati solo con numeri continui, mentre altri sono più adatti ad essere utilizzati con un numero limitato di valori distinct.  
   
- **Modello di data mining:** il risultato dell'analisi dei dati tramite un algoritmo viene salvato un *modello di data mining*. Un modello di data mining è una raccolta di regole, statistiche e modelli. Il *contenuto* del modello di data mining dipende dall'algoritmo utilizzato per elaborare i dati, ma possono includere quanto segue:  
+ **Modello di data mining:** Il risultato dell'analisi dei dati tramite un algoritmo viene salvato un *modello di data mining*. Un modello di data mining è una raccolta di regole, statistiche e modelli. Il *contenuto* del modello di data mining dipende dall'algoritmo utilizzato per elaborare i dati, ma possono includere quanto segue:  
   
 -   Regole if-then che descrivono in che modo i prodotti vengono raggruppati in una transazione.  
   
@@ -39,7 +39,7 @@ ms.locfileid: "48113291"
   
 -   *I nodi* in una rete, collegata da *bordi*. I nodi rappresentano elementi o gruppi di elementi. Ai bordi sono assegnati dei punteggi a seconda della forza delle relazioni tra i nodi.  
   
- **Usando il modello:** dopo aver creato un modello, è possibile utilizzare i visualizzatori forniti per esaminarlo o è possibile creare una query sul modello. È possibile utilizzare le query per:  
+ **Usando il modello:** Dopo aver creato un modello, è possibile utilizzare i visualizzatori forniti per esplorarlo oppure è possibile creare una query sul modello. È possibile utilizzare le query per:  
   
 -   Stimare valori futuri.  
   
@@ -105,7 +105,7 @@ ms.locfileid: "48113291"
 ## <a name="list-of-supported-algorithms"></a>Elenco degli algoritmi supportati  
  I seguenti algoritmi sono forniti per impostazione predefinita.  
   
-|Nome algoritmo|Description|Campo di utilizzo|  
+|Nome algoritmo|Descrizione|Campo di utilizzo|  
 |--------------------|-----------------|-------------|  
 |Microsoft Association Rules|Consente di compilare regole che descrivono gli elementi che hanno maggiore probabilità di comparire insieme in una transazione.|[Procedura guidata associazione &#40;Client di Data Mining per Excel&#41;](associate-wizard-data-mining-client-for-excel.md)<br /><br /> [Market Basket Analysis &#40;strumenti di analisi di tabelle per Excel&#41;](shopping-basket-analysis-table-analysistools-for-excel.md)|  
 |Microsoft Clustering|Consente di identificare in un set di dati le relazioni che non è possibile derivare in modo logico tramite l'osservazione casuale. L'algoritmo utilizza tecniche iterative per raggruppare i record in cluster con caratteristiche simili.|[Rileva categorie &#40;strumenti di analisi tabelle per Excel&#41;](detect-categories-table-analysis-tools-for-excel.md)<br /><br /> [Creazione guidata del cluster &#40;dati di componenti aggiuntivi Data Mining per Excel&#41;](cluster-wizard-data-mining-add-ins-for-excel.md)|  

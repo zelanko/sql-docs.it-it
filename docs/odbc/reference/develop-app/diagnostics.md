@@ -15,15 +15,15 @@ ms.assetid: 450abd88-90a1-4fbc-b417-8efbdd8e1dea
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: c0c7ddfeda7538027c56af17664e5962d09903b1
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 72e79d377371277720e2fcc15a31ce715693d832
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47686349"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52512092"
 ---
 # <a name="diagnostics"></a>Diagnostica
-Funzioni ODBC restituiscono le informazioni di diagnostica in due modi. Il codice restituito indica l'esito positivo o negativo della funzione, complessivo, mentre i record di diagnostica forniscono informazioni dettagliate sulla funzione. Almeno un record di diagnostica, ovvero il record di intestazione, viene restituito anche se la funzione ha esito positivo.  
+Funzioni ODBC restituiscono le informazioni di diagnostica in due modi. Il codice restituito indica l'esito positivo o negativo della funzione, complessivo, mentre i record di diagnostica forniscono informazioni dettagliate sulla funzione. Almeno un record di diagnostica - record di intestazione, viene restituito anche se la funzione ha esito positivo.  
   
  Informazioni di diagnostica viene utilizzate in fase di sviluppo per rilevare gli errori di programmazione, ad esempio gli handle non validi ed errori di sintassi nelle istruzioni SQL hard-coded. Utilizzato in fase di esecuzione per rilevare errori di run-time e avvisi, ad esempio il troncamento dei dati, le violazioni di accesso e gli errori di sintassi nelle istruzioni SQL immesse dall'utente.  
   

@@ -14,15 +14,15 @@ ms.assetid: ca0d59ef-25f0-4047-9130-e2282d058283
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 26e5c4cdbc181012d72f02f4bc05b122a4e722ca
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 7febab9f8ecf6cae4df08f110a16c0bdc512a948
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48111481"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53349935"
 ---
 # <a name="wsfc-quorum-modes-and-voting-configuration-sql-server"></a>Modalità quorum WSFC e configurazione del voto (SQL Server)
-  Entrambe [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] e istanze del Cluster di Failover (FCI) AlwaysOn sfruttare i vantaggi di Windows Server Failover Clustering (WSFC) come tecnologia della piattaforma.  WSFC utilizza un approccio basato sul quorum per monitorare l'integrità complessiva del cluster e aumentare al massimo la tolleranza di errore a livello di nodo. Una comprensione di base delle modalità quorum WSFC e della configurazione di voto dei nodi è molto importante per progettare ed eseguire la soluzione di ripristino di emergenza e a disponibilità elevata AlwaysOn, nonché per risolverne i problemi.  
+  Sia i [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] di [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] sia le istanze del cluster di failover AlwaysOn utilizzano Windows Server Failover Clustering (WSFC) come tecnologia della piattaforma.  WSFC utilizza un approccio basato sul quorum per monitorare l'integrità complessiva del cluster e aumentare al massimo la tolleranza di errore a livello di nodo. Una comprensione di base delle modalità quorum WSFC e della configurazione di voto dei nodi è molto importante per progettare ed eseguire la soluzione di ripristino di emergenza e a disponibilità elevata AlwaysOn, nonché per risolverne i problemi.  
   
  **Contenuto dell'argomento:**  
   
@@ -48,7 +48,7 @@ ms.locfileid: "48111481"
 > [!IMPORTANT]  
 >  Se un cluster WSFC viene impostato offline a causa di un errore del quorum, è necessario l'intervento manuale per reimpostare online il cluster.  
 >   
->  Per altre informazioni, vedere [Ripristino di emergenza WSFC tramite quorum forzato &#40;SQL Server&#41;](wsfc-disaster-recovery-through-forced-quorum-sql-server.md)periodico.  
+>  Per altre informazioni, vedere: [Ripristino di emergenza WSFC tramite Quorum forzato &#40;SQL Server&#41;](wsfc-disaster-recovery-through-forced-quorum-sql-server.md).  
   
 ##  <a name="QuorumModes"></a> Modalità quorum  
  Viene impostata una *modalità quorum* al livello del cluster WSFC che specifica la metodologia utilizzata per i voti quorum.  L'utilità Gestione cluster di failover specifica una modalità quorum consigliata basata sul numero di nodi nel cluster.  
@@ -87,7 +87,7 @@ ms.locfileid: "48111481"
 > [!IMPORTANT]  
 >  Per utilizzare le impostazioni NodeWeight, è necessario applicare l'aggiornamento rapido seguente a tutti i server del cluster WSFC:  
 >   
->  [KB2494036](http://support.microsoft.com/kb/2494036): è disponibile un aggiornamento rapido per configurare un nodo del cluster che non presenta voti quorum in [!INCLUDE[firstref_longhorn](../../../includes/firstref-longhorn-md.md)] e in [!INCLUDE[winserver2008r2](../../../includes/winserver2008r2-md.md)]  
+>  [KB2494036](https://support.microsoft.com/kb/2494036): è disponibile un aggiornamento rapido per configurare un nodo del cluster che non presenta voti quorum in [!INCLUDE[firstref_longhorn](../../../includes/firstref-longhorn-md.md)] e in [!INCLUDE[winserver2008r2](../../../includes/winserver2008r2-md.md)]  
   
 ##  <a name="RecommendedAdjustmentstoQuorumVoting"></a> Modifiche ai voti quorum consigliate  
  Per abilitare o disabilitare il voto di un nodo WSFC specifico, attenersi alle linee guida seguenti:  
@@ -104,16 +104,16 @@ ms.locfileid: "48111481"
   
 -   **Valutare nuovamente le assegnazioni dei voti dopo il failover.** Non è consigliabile eseguire il failover in una configurazione del cluster che non supporta un quorum integro.  
   
-> [!IMPORTANT]  
+> [!IMPORTANT]
 >  Quando si convalida la configurazione dei voti quorum di WSFC, nella Creazione guidata Gruppo di disponibilità AlwaysOn viene visualizzato un avviso se una o più delle condizioni seguenti è vera:  
->   
+> 
 >  -   Il nodo del cluster che ospita la replica primaria non dispone di un voto.  
 > -   Una replica secondaria è configurata per il failover automatico e il relativo nodo del cluster non dispone di un voto.  
-> -   [KB2494036](http://support.microsoft.com/kb/2494036) non è installato in tutti i nodi del cluster che ospitano repliche di disponibilità. Questa patch è necessaria per aggiungere o rimuovere voti per i nodi del cluster in distribuzioni multisito. Tuttavia, in distribuzioni a singolo sito, non è in genere necessaria e l'avviso può essere ignorato senza rischi.  
-  
-> [!TIP]  
+> -   [KB2494036](https://support.microsoft.com/kb/2494036) non è installato in tutti i nodi del cluster che ospitano repliche di disponibilità. Questa patch è necessaria per aggiungere o rimuovere voti per i nodi del cluster in distribuzioni multisito. Tuttavia, in distribuzioni a singolo sito, non è in genere necessaria e l'avviso può essere ignorato senza rischi.  
+> 
+> [!TIP]
 >  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] espone diverse DMW (viste a gestione dinamica) di sistema che semplificano la gestione delle impostazioni correlate alla configurazione del cluster WSFC e dei voti quorum dei nodi.  
->   
+> 
 >  Per altre informazioni, vedere  [sys.dm_hadr_cluster](/sql/relational-databases/system-dynamic-management-views/sys-dm-hadr-cluster-transact-sql), [sys.dm_hadr_cluster_members](/sql/relational-databases/system-dynamic-management-views/sys-dm-hadr-cluster-members-transact-sql), [sys.dm_os_cluster_nodes](/sql/relational-databases/system-dynamic-management-views/sys-dm-os-nodes-transact-sql), [sys.dm_hadr_cluster_networks](/sql/relational-databases/system-dynamic-management-views/sys-dm-hadr-cluster-networks-transact-sql)  
   
 ##  <a name="RelatedTasks"></a> Attività correlate  
@@ -124,16 +124,16 @@ ms.locfileid: "48111481"
   
 ##  <a name="RelatedContent"></a> Contenuto correlato  
   
--   [Microsoft SQL Server AlwaysOn Solutions Guide for High Availability and Disaster Recovery](http://go.microsoft.com/fwlink/?LinkId=227600)  
+-   [Microsoft SQL Server AlwaysOn Solutions Guide for High Availability and Disaster Recovery](https://go.microsoft.com/fwlink/?LinkId=227600)  
   
--   [Quorum vote configuration check in procedure guidate gruppi di disponibilità AlwaysOn](http://blogs.msdn.com/b/sqlalwayson/archive/2012/03/13/quorum-vote-configuration-check-in-alwayson-availability-group-wizards-andy-jing.aspx)  
+-   [Quorum vote configuration check in procedure guidate gruppi di disponibilità AlwaysOn](https://blogs.msdn.com/b/sqlalwayson/archive/2012/03/13/quorum-vote-configuration-check-in-alwayson-availability-group-wizards-andy-jing.aspx)  
   
--   [Tecnologie di Windows Server: cluster di failover](http://technet.microsoft.com/library/cc732488\(v=WS.10\).aspx)  
+-   [Tecnologie di Windows Server:  Cluster di failover](https://technet.microsoft.com/library/cc732488\(v=WS.10\).aspx)  
   
--   [Guida dettagliata al cluster di failover: configurazione del quorum in un cluster di failover](http://technet.microsoft.com/library/cc770620\(WS.10\).aspx)  
+-   [Guida dettagliata al Cluster di failover: Configurazione del Quorum in un Cluster di Failover](https://technet.microsoft.com/library/cc770620\(WS.10\).aspx)  
   
 ## <a name="see-also"></a>Vedere anche  
  [Ripristino di emergenza WSFC tramite quorum forzato &#40;SQL Server&#41;](wsfc-disaster-recovery-through-forced-quorum-sql-server.md)   
- [Windows Server Failover Clustering &#40;WSFC&#41; con SQL Server](windows-server-failover-clustering-wsfc-with-sql-server.md)  
+ [WSFC &#40;Windows Server Failover Clustering&#41; con SQL Server](windows-server-failover-clustering-wsfc-with-sql-server.md)  
   
   

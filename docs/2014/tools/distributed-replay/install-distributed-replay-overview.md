@@ -4,26 +4,25 @@ ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: install
 ms.topic: conceptual
 ms.assetid: 7ab77d42-8e84-4396-aa7f-47e2b84d59b2
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 7b4959f9cf9e070d65ff3fad7868b8af60260a4e
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 037e3c9c61b2c6648ec1194a766256d5e6cae5cb
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48204861"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52781736"
 ---
 # <a name="install-distributed-replay"></a>Installare Riesecuzione distribuita
   Utilizzare gli argomenti seguenti per installare la funzionalità di Riesecuzione distribuita.  
   
-## <a name="in-this-section"></a>Argomenti della sezione  
+## <a name="in-this-section"></a>In questa sezione  
   
-|Argomento|Description|  
+|Argomento|Descrizione|  
 |-----------|-----------------|  
 |[Installare riesecuzione distribuita &#40;programma di installazione&#41;](../../sql-server/install/install-distributed-replay-setup.md)|Argomento contenente le procedure per l'esecuzione di un'installazione tipica di Riesecuzione distribuita tramite l'Installazione guidata.|  
 |[Installare Riesecuzione distribuita dal prompt dei comandi](install-distributed-replay-overview.md)|Argomento contenente le procedure, la sintassi di esempio e i parametri di installazione per l'esecuzione dell'installazione automatica.|  

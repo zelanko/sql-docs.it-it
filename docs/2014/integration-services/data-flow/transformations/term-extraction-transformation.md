@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.termextractiontrans.f1
@@ -26,12 +25,12 @@ ms.assetid: d0821526-1603-4ea6-8322-2d901568fbeb
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 1a0e333b31bef63c0f0f8fcf3a9d54dbdba579a4
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: f6d63836dbc6827eb47daaf4110bc678357012d3
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48155131"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52762440"
 ---
 # <a name="term-extraction-transformation"></a>Estrazione termini - trasformazione
   La trasformazione Estrazione termini consente di estrarre termini da un testo in una colonna di input di una trasformazione e quindi scrivere tali termini in una colonna di output della trasformazione. La trasformazione è applicabile solo a testo in lingua inglese, utilizza un dizionario inglese interno e le proprie informazioni sulla lingua inglese.  
@@ -49,12 +48,12 @@ ms.locfileid: "48155131"
   
  Se i termini estratti vengono scritti in una tabella, potranno essere utilizzati da altre trasformazioni di ricerca, ad esempio le trasformazioni Ricerca termini, Ricerca fuzzy e Ricerca.  
   
- La trasformazione Estrazione termini può essere applicata solo a testo contenuto in colonne con tipo di dati DT_WSTR o DT_NTEXT. Se una colonna contiene testo ma non ha uno di questi tipi di dati, sarà possibile utilizzare la trasformazione Conversione dati per aggiungere al flusso di dati una colonna con tipo di dati DT_WSTR o DT_NTEXT e copiare nella nuova colonna i valori della colonna originale. L'output della trasformazione Conversione dati può essere quindi utilizzato come input della trasformazione Estrazione termini. Per altre informazioni, vedere [trasformazione Conversione dati](data-conversion-transformation.md).  
+ La trasformazione Estrazione termini può essere applicata solo a testo contenuto in colonne con tipo di dati DT_WSTR o DT_NTEXT. Se una colonna contiene testo ma non ha uno di questi tipi di dati, sarà possibile utilizzare la trasformazione Conversione dati per aggiungere al flusso di dati una colonna con tipo di dati DT_WSTR o DT_NTEXT e copiare nella nuova colonna i valori della colonna originale. L'output della trasformazione Conversione dati può essere quindi utilizzato come input della trasformazione Estrazione termini. Per altre informazioni, vedere [Trasformazione Conversione dati](data-conversion-transformation.md).  
   
 ## <a name="exclusion-terms"></a>Termini di esclusione  
  Facoltativamente, la trasformazione Estrazione termini può fare riferimento a una colonna in una tabella che contiene termini di esclusione, ovvero parole che la trasformazione deve ignorare durante l'estrazione dei termini da un set di dati. Ciò è utile quando è già stato identificato un set di termini non rilevanti per un'azienda o un settore specifico, in genere perché si presentano con una frequenza tale da non essere significativi. Durante l'estrazione di termini da un set di dati che contiene informazioni sul servizio di assistenza clienti per una particolare marca di automobili, ad esempio, è possibile escludere la marca stessa, perché viene citata troppo spesso per essere significativa. I valori nell'elenco di esclusione possono essere pertanto personalizzati in base al set di dati che si sta utilizzando.  
   
- Quando si aggiunge un termine all'elenco di esclusioni, vengono esclusi anche tutti i termini, parole o sintagmi nominali, che contengono tale termine. Ad esempio, se l'elenco di esclusione include la singola parola *dati*, verranno esclusi anche tutti i termini che contengono questa parola, come *dati*, *origine dati* *integrità dei dati*e *convalida dei dati* . Per escludere solo i composti che contengono la parola *dati*, è necessario aggiungerli in modo esplicito all'elenco di esclusione. Ad esempio, per estrarre le incidenze di *dati*escludendo *convalida dei dati*, è necessario aggiungere *convalida dei dati* all'elenco di esclusione e assicurarsi che la parola *dati* venga rimossa dall'elenco.  
+ Quando si aggiunge un termine all'elenco di esclusioni, vengono esclusi anche tutti i termini, ovvero parole o sintagmi nominali, che contengono tale termine. Ad esempio, se l'elenco di esclusione include la singola parola *dati*, verranno esclusi anche tutti i termini che contengono questa parola, come *dati*, *origine dati* *integrità dei dati*e *convalida dei dati* . Per escludere solo i composti che contengono la parola *dati*, è necessario aggiungerli in modo esplicito all'elenco di esclusione. Ad esempio, per estrarre le incidenze di *dati*escludendo *convalida dei dati*, è necessario aggiungere *convalida dei dati* all'elenco di esclusione e assicurarsi che la parola *dati* venga rimossa dall'elenco.  
   
  La tabella di riferimento deve essere una tabella di un database di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] o di Access. La trasformazione Estrazione termini utilizza una connessione OLE DB distinta per connettersi alla tabella di riferimento. Per altre informazioni, vedere [Gestione connessione OLE DB](../../connection-manager/ole-db-connection-manager.md).  
   
@@ -139,7 +138,7 @@ ms.locfileid: "48155131"
   
 -   Caratteri ASCII di interruzione di riga, 0x0d (ritorno a capo) e 0x0a (avanzamento riga). Tali caratteri vengono utilizzati come delimitatori di frase solo se nella riga sono presenti due o più caratteri di interruzione di riga.  
   
--   Segno meno (–). Tale carattere viene utilizzato come delimitatore di frase solo se non è preceduto né seguito da una lettera.  
+-   Segno meno (-). Tale carattere viene utilizzato come delimitatore di frase solo se non è preceduto né seguito da una lettera.  
   
 -   Carattere di sottolineatura (_). Tale carattere viene utilizzato come delimitatore di frase solo se non è preceduto né seguito da una lettera.  
   
@@ -147,7 +146,7 @@ ms.locfileid: "48155131"
   
 -   Combinazioni di numeri, segni di punteggiatura e caratteri alfabetici. Ad esempio, *A23B#99* restituisce il termine *A23B*.  
   
--   Caratteri %, @, &, $, #, \*, :, ;, ., **,** , !, ?, \<, >, +, =, ^, ~, |, \\, /, (, ), [, ], {, }, “ e ‘.  
+-   Caratteri %, @, &, $, #, \*, :, ;, ., **,** , !, ?, \<, >, +, =, ^, ~, |, \\, /, (, ), [, ], {, }, " e '.  
   
     > [!NOTE]  
     >  Gli acronimi che includono uno o più punti (.) non vengono suddivisi in più frasi.  
@@ -174,11 +173,11 @@ ms.locfileid: "48155131"
   
  Per altre informazioni sulle proprietà che è possibile impostare nella finestra di dialogo **Editor trasformazione Estrazione termini** , fare clic su uno degli argomenti seguenti:  
   
--   [Editor trasformazione estrazione termini &#40;scheda estrazione termini&#41;](../../term-extraction-transformation-editor-term-extraction-tab.md)  
+-   [Editor trasformazione Estrazione termini &#40;scheda Estrazione termini&#41;](../../term-extraction-transformation-editor-term-extraction-tab.md)  
   
--   [Editor trasformazione estrazione termini &#40;scheda di esclusione&#41;](../../term-extraction-transformation-editor-exclusion-tab.md)  
+-   [Editor trasformazione Estrazione termini &#40;scheda Esclusione&#41;](../../term-extraction-transformation-editor-exclusion-tab.md)  
   
--   [Editor trasformazione estrazione termini &#40;scheda Avanzate&#41;](../../term-extraction-transformation-editor-advanced-tab.md)  
+-   [Editor trasformazione Estrazione termini &#40;scheda Avanzate&#41;](../../term-extraction-transformation-editor-advanced-tab.md)  
   
  Per ulteriori informazioni sulle proprietà che è possibile impostare nella finestra di dialogo **Editor avanzato** o a livello di codice, fare clic su uno degli argomenti seguenti:  
   

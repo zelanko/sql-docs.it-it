@@ -11,15 +11,15 @@ ms.assetid: 0a00f409-050f-4b92-9763-ba31a6aa3052
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 4ff9743774a9c05f4369cb2d24fde592bf011225
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: d49bda5b1616a2052542b6047c1291dd64763e1d
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48150990"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52401706"
 ---
 # <a name="exploring-the-forecasting-model-intermediate-data-mining-tutorial"></a>Esplorazione del modello di previsione (Esercitazione intermedia sul data mining)
-  Dopo aver creato il modello di data mining previsione, è possibile esplorare i risultati usando il **visualizzatore modello di Data Mining** scheda della finestra di progettazione modelli di Data Mining. Il [!INCLUDE[msCoName](../includes/msconame-md.md)] Visualizzatore Time Series contiene due schede: **grafici** e **Model**.  
+  Dopo aver creato il modello di data mining previsione, è possibile esplorare i risultati usando il **visualizzatore modello di Data Mining** scheda della finestra di progettazione modelli di Data Mining. Il [!INCLUDE[msCoName](../includes/msconame-md.md)] Visualizzatore Time Series contiene due schede: **I grafici** e **modello**.  
   
  È inoltre possibile utilizzare Microsoft Generic Content Tree Viewer con tutti i modelli. Ogni vista presenta un'immagine leggermente diversa delle informazioni nel modello Time Series.  
   
@@ -50,17 +50,17 @@ ms.locfileid: "48150990"
   
      Il grafico conterrà solo le sei linee delle serie seguenti, in modo da consentire di confrontare più facilmente le tendenze per le biciclette M200 e T1000.  
   
-    -   **M200 Europe: Quantity**  
+    -   **M200 Europe: Quantità**  
   
-    -   **M200 North America: Quantity**  
+    -   **M200 North America: Quantità**  
   
-    -   **M200 Pacific: Quantity**  
+    -   **M200 Pacific: Quantità**  
   
-    -   **T1000 Europe: Quantity**  
+    -   **T1000 Europe: Quantità**  
   
-    -   **T1000 North America: Quantity**  
+    -   **T1000 North America: Quantità**  
   
-    -   **T1000 Pacific: Quantity**  
+    -   **T1000 Pacific: Quantità**  
   
  ![Serie di stima delle quantità M200 e T1000](../../2014/tutorials/media/6series-defaultforecasting.gif "serie stima delle quantità M200 e T1000")  
   
@@ -82,7 +82,7 @@ ms.locfileid: "48150990"
   
 3.  Osservare la scala dell'asse X. Le modifiche dei dati cronologici e stimati vengono sempre espresse come una percentuale, ma i valori effettivi vengono modificati automaticamente in base a tutti i valori nel grafico. In caso di confronto dei modelli, è pertanto opportuno evitare di basarsi solo sugli elementi visivi. Per ottenere l'esatto valore, o l'aumento percentuale e per le stime, posizionare il puntatore del mouse sulla linea punteggiata o linee continue oppure fare clic sulle linee per visualizzare i valori nel **legenda Data Mining**.  
   
-     **Suggerimento**: se il **legenda Data Mining** non è visibile, passare alla **Model** visualizzare, fare doppio clic su qualsiasi nodo e selezionare **Mostra legenda**.  
+     **Suggerimento**: Se il **legenda Data Mining** non è visibile, passare alla **Model** consente di visualizzare, fare doppio clic su qualsiasi nodo e selezionare **Mostra legenda**.  
   
  Analizzando queste tendenze si nota la mancanza di dati per alcune serie e si desidera ottenere stime più affidabili facendo la media delle vendite per modello o eventualmente per area. Si esaminerà questo approccio in una lezione successiva di questa esercitazione.  
   
@@ -95,17 +95,17 @@ ms.locfileid: "48150990"
   
  È possibile scegliere quale combinazione di linea di prodotti, area e metrica delle vendite si desidera visualizzare selezionando una serie del **struttura ad albero** elenco a discesa la **modello** scheda.  
   
- Nozioni che è possibile apprendere visualizzando il modello come un albero Verrà effettuato un confronto tra due modelli, ad esempio, uno con diversi livelli nell'albero e un altro con un solo nodo.  
+ Nozioni che è possibile apprendere visualizzando il modello come un albero Ad esempio, ecco un confronto tra due modelli, uno con diversi livelli nell'albero e quello che ha un singolo nodo.  
   
 -   Quando un grafico dell'albero contiene un singolo nodo, significa che la tendenza individuata nel modello è per lo più omogenea nel tempo. È possibile usare questo singolo nodo, con l'etichetta **tutti**, per visualizzare la formula che descrive la relazione tra le variabili di input e il risultato.  
   
 -   Se un grafico dell'albero per una serie temporale dispone di più rami, significa che la serie temporale rilevata è troppo complessa per essere rappresentata come una singola equazione. Al contrario, il grafico dell'albero potrebbe contenere più rami, ognuno identificato con le condizioni che ha causato l'albero per *dividere*. Quando l'albero viene diviso, ogni ramo rappresenta un segmento temporale diverso, all'interno del quale la tendenza può essere descritta come una singola equazione.  
   
-     Ad esempio, se esaminiamo il grafico e vedere un aumento improvviso nel volume delle vendite a partire da protrae nel mese di settembre e continua fino alle festività di, è possibile passare per il **modello** visualizzazione per visualizzare la data esatta in cui la tendenza è cambiata. I rami dell'albero che rappresentano "prima di settembre" e "dopo settembre" conterranno formule diverse: una formula descrive matematicamente le tendenze delle vendite fino alla divisione, mentre l'altra descrive le tendenze delle vendite per settembre fino alle festività di fine anno.  
+     Ad esempio, se esaminiamo il grafico e vedere un aumento improvviso nel volume delle vendite a partire da protrae nel mese di settembre e continua fino alle festività di, è possibile passare per il **modello** visualizzazione per visualizzare la data esatta in cui la tendenza è cambiata. I rami dell'albero che rappresentano "prima di settembre" e "dopo settembre" conterranno formule diverse: una formula descrive matematicamente le tendenze delle vendite fino alla divisione, mentre l'altra che descrive le tendenze delle vendite per settembre fino alle festività.  
   
 #### <a name="to-explore-the-decision-tree-for-a-time-series-model"></a>Per esplorare l'albero delle decisioni per un modello Time Series  
   
-1.  Nel **struttura ad albero** elenco le **modello** scheda del Visualizzatore selezionare il **T1000 Europe: quantità** serie.  
+1.  Nel **struttura ad albero** elenco il **modello** scheda del Visualizzatore selezionare la **T1000 Europe: Quantità** serie.  
   
      Fare clic sul nodo con etichettato **tutti**.  
   
@@ -115,7 +115,7 @@ ms.locfileid: "48150990"
   
      Il **legenda Data Mining** fornisce pressappoco le stesse informazioni nella descrizione comando. Se una delle variabili indipendenti è discreta, verrà inoltre visualizzato un istogramma che illustra la distribuzione delle variabili nel nodo.  
   
-3.  A questo punto selezionare una serie temporale diversa da visualizzare. Usando il **struttura ad albero** elenco il **modello** scheda del Visualizzatore selezionare il **M200 North America: quantità** serie.  
+3.  A questo punto selezionare una serie temporale diversa da visualizzare. Usando il **struttura ad albero** elenco il **modello** scheda del Visualizzatore selezionare la **M200 North America: Quantità** serie.  
   
      Il grafico dell'albero contiene ora un' **tutti** nodi e due nodi figlio. Osservando le etichette dei nodi figlio, è possibile identificare il punto in cui la linea di tendenza è stata modificata.  
   
@@ -134,9 +134,9 @@ ms.locfileid: "48150990"
 ##  <a name="bkmk_Content"></a> (Facoltativo) Generic Content Tree Viewer  
  Oltre al visualizzatore personalizzato per la serie temporale, [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] fornisce il **MicrosoftGeneric Content Tree Viewer** per l'utilizzo con tutti i modelli di data mining. Questo visualizzatore fornisce alcuni vantaggi:  
   
--   **Visualizzatore Microsoft Time Series**: in questa vista consente di unire i risultati dei due algoritmi. Anche se è possibile visualizzare ogni serie separatamente, non è possibile determinare come sono stati combinati i risultati di ogni algoritmo. Inoltre in questa vista le descrizioni comando e Legenda data mining mostrano solo le statistiche più importanti.  
+-   **Visualizzatore Microsoft Time Series**: In questa vista consente di unire i risultati dei due algoritmi. Anche se è possibile visualizzare ogni serie separatamente, non è possibile determinare come sono stati combinati i risultati di ogni algoritmo. Inoltre in questa vista le descrizioni comando e Legenda data mining mostrano solo le statistiche più importanti.  
   
--   **Generic Content Tree Viewer**: consente di esplorare e visualizzare tutte le serie di dati che sono state usate nel modello in una sola volta e se è stato creato un misto del modello, entrambi di ARIMA e gli alberi ARTXP vengono visualizzati nello stesso grafico.  
+-   **Generic Content Tree Viewer**: Consente di esplorare e visualizzare tutte le serie di dati che sono state usate nel modello in una sola volta e se è stato creato un misto del modello, entrambi di ARIMA e gli alberi ARTXP vengono visualizzati nello stesso grafico.  
   
      È possibile utilizzare questo visualizzatore per ottenere tutte le statistiche da entrambi gli algoritmi, oltre alle distribuzioni dei valori.  
   
@@ -174,7 +174,7 @@ ms.locfileid: "48150990"
  [Creazione di stime basate su serie temporali &#40;esercitazione intermedia sul Data Mining&#41;](../../2014/tutorials/creating-time-series-predictions-intermediate-data-mining-tutorial.md)  
   
 ## <a name="see-also"></a>Vedere anche  
- [Time Series Model Query Examples](../../2014/analysis-services/data-mining/time-series-model-query-examples.md)   
+ [Esempi di query sul modello di serie temporale](../../2014/analysis-services/data-mining/time-series-model-query-examples.md)   
  [Riferimento tecnico per l'algoritmo Microsoft Time Series](../../2014/analysis-services/data-mining/microsoft-time-series-algorithm-technical-reference.md)  
   
   

@@ -13,12 +13,12 @@ ms.assetid: cb3bc7d8-9d4d-4da9-979d-bdad5e27e526
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 0f13c975be4fb8e993cb682da20c6bdf725f25ec
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 936862a702d7ca6f82dab5104c5354105443c3be
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48141591"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52528738"
 ---
 # <a name="create-attribute-relationship-and-edit-attribute-relationship-dialog-boxes-attribute-relationship-designer-tab-dimension-designer-analysis-services---multidimensional-data"></a>Creare finestre di dialogo Relazione tra attributi e Modifica relazione tra attributi (scheda Relazione tra attributi, Progettazione dimensioni) (Analysis Services - Dati multidimensionali)
   Usare la finestra di dialogo **Crea relazione tra attributi** per definire nuove relazioni tra attributi e la finestra di dialogo **Modifica relazione tra attributi** per modificare una relazione tra attributi. Per altre informazioni, vedere [Definire relazioni tra attributi](multidimensional-models/attribute-relationships-define.md).  
@@ -29,7 +29,7 @@ ms.locfileid: "48141591"
   
 2.  Sulla barra degli strumenti, fare clic sull'icona Nuova relazione tra attributi.  
   
-     -oppure-  
+     oppure  
   
      Nel diagramma delle relazioni tra attributi o nell'elenco **Attributi** fare clic con il pulsante destro del mouse su un attributo, quindi fare clic su **Nuova relazione tra attributi**.  
   
@@ -40,7 +40,7 @@ ms.locfileid: "48141591"
 2.  Nel diagramma delle relazioni tra attributi o nell'elenco **Relazione fra attributi** fare clic con il pulsante destro del mouse su una relazione fra attributi, quindi fare clic su **Modifica relazione tra attributi**.  
   
 ## <a name="options"></a>Opzioni  
- **Nome**  
+ **Name**  
  Nel gruppo **Attributo di origine** specifica il nome dell'attributo dal quale ha origine la relazione.  
   
  Nel gruppo **Attributo correlato** specifica il nome dell'attributo verso il quale è diretta la relazione.  

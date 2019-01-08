@@ -1,5 +1,5 @@
 ---
-title: 'Lesson 2: Specifying Connection Information (Reporting Services) (Lezione 2: Specifica delle informazioni di connessione (Reporting Services)) | Microsoft Docs'
+title: 'Lezione 2: Specificare le informazioni di connessione (Reporting Services) | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,21 +11,21 @@ ms.assetid: 54405a3a-d7fa-4d95-8963-9aa224e5901e
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: 75022350450358c22c53851939faa2ae7b10c8e0
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: fce2ad94feef0a59113ce6c7cfd715405ab17a9e
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48200041"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52503508"
 ---
-# <a name="lesson-2-specifying-connection-information-reporting-services"></a>Lezione 2: Specifica delle informazioni di connessione (Reporting Services)
+# <a name="lesson-2-specifying-connection-information-reporting-services"></a>Lezione 2: Specificare le informazioni di connessione (Reporting Services)
   Dopo aver aggiunto un report al progetto Tutorial, è necessario definire un' *origine dati*, vale a dire informazioni di connessione usate dal report per accedere ai dati da un database relazionale, da un database multidimensionale o da un'altra risorsa.  
   
- In questa lezione come origine dati verrà utilizzato il database di esempio [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)]. L'esercitazione presuppone che il database si trovi in un'istanza predefinita del [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] di [!INCLUDE[ssDE](../includes/ssde-md.md)] installata nel computer locale.  
+ In questa lezione come origine dati verrà utilizzato il database di esempio [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)]. L'esercitazione presuppone che il database si trovi in un'istanza predefinita del [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../includes/ssde-md.md)] installata nel computer locale.  
   
 ### <a name="to-set-up-a-connection"></a>Per impostare una connessione  
   
-1.  Nel riquadro **Dati report** , fare clic su **Nuova** , quindi su **Origine dati**.  
+1.  Nel **i dati del Report** riquadro, fare clic su **New** e quindi fare clic su **Zdroj dat...** .  
   
     > [!NOTE]  
     >  Se il riquadro **Dati report** non è visualizzato, scegliere **Dati report** dal menu **Visualizza**.  
@@ -42,7 +42,7 @@ ms.locfileid: "48200041"
     Data source=localhost; initial catalog=AdventureWorks2012  
     ```  
   
-     Per questa stringa di connessione si presuppone che [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)], il server di report e il database [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] siano installati nel computer locale e che si disponga dell'autorizzazione per l'accesso al database [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)].  
+     Per questa stringa di connessione si presuppone che [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)], il server di report e il database [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] siano installati nel computer locale e che si disponga dell'autorizzazione per l'accesso al database [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] .  
   
     > [!NOTE]  
     >  Se si utilizza [!INCLUDE[ssExpress](../includes/ssexpress-md.md)] with Advanced Services oppure un'istanza denominata, è necessario includere nella stringa di connessione le informazioni sull'istanza:  
@@ -56,7 +56,7 @@ ms.locfileid: "48200041"
 7.  [!INCLUDE[clickOK](../includes/clickok-md.md)] zdroj dat [!INCLUDE[ssSampleDBnormal](../includes/sssampledbnormal-md.md)] viene aggiunto per il **i dati del Report** riquadro.  
   
 ## <a name="next-task"></a>Attività successiva  
- È stata definita correttamente una connessione per il [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] database di esempio. Verrà successivamente creato il report. Vedere [Lezione 3: Definizione di un set di dati per il report tabella &#40;Reporting Services&#41;](lesson-3-defining-a-dataset-for-the-table-report-reporting-services.md).  
+ È stata definita correttamente una connessione al database di esempio [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] . Verrà successivamente creato il report. Vedere [lezione 3: La definizione di un set di dati per il Report di tabella &#40;Reporting Services&#41;](lesson-3-defining-a-dataset-for-the-table-report-reporting-services.md).  
   
 ## <a name="see-also"></a>Vedere anche  
  [Connessioni dati, origini dati e stringhe di connessione in Reporting Services](data-connections-data-sources-and-connection-strings-in-reporting-services.md)  

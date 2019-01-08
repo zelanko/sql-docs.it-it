@@ -20,12 +20,12 @@ ms.assetid: dc7018b2-18d4-4657-96d0-086479a47474
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 7f9eed345d3d6483cd1b47f8141e00d2a0164eb1
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 197c22a160b30fc9c1958e90470c174e3888a053
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47680819"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53201980"
 ---
 # <a name="sqlwritedsntoini-function"></a>Funzione SQLWriteDSNToIni
 **Conformità**  
@@ -56,7 +56,7 @@ BOOL SQLWriteDSNToIni(
 ## <a name="diagnostics"></a>Diagnostica  
  Quando **SQLWriteDSNToIni** FALSO, restituisce un oggetto associato  *\*pfErrorCode* valore può essere ottenuto chiamando **SQLInstallerError**. La tabella seguente elenca i  *\*pfErrorCode* i valori che possono essere restituiti da **SQLInstallerError** e illustra ognuna nel contesto di questa funzione.  
   
-|*\*pfErrorCode*|Errore|Description|  
+|*\*pfErrorCode*|Errore|Descrizione|  
 |---------------------|-----------|-----------------|  
 |ODBC_ERROR_GENERAL_ERR|Errore di programma di installazione generale|Errore per cui si è verificato alcun errore di programma di installazione specifico.|  
 |ODBC_ERROR_INVALID_DSN|DSN valido|Il *lpszDSN* argomento è contenuta una stringa che non è valida per un DSN.|  

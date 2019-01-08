@@ -20,19 +20,19 @@ ms.assetid: eddef353-83f3-4a3c-8f24-f9ed888890a4
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 0240d5fe1f701715f11adc4f68e80abed896d704
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 1b8453d76dc2af0499dc8d8af2ca1ec3024aee83
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47742689"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52523815"
 ---
 # <a name="sqldescribecol-function"></a>Funzione SQLDescribeCol 
 **Conformità**  
- Versione introdotta: Conformità agli standard 1.0 di ODBC: ISO 92  
+ Versione introdotta: Conformità agli standard 1.0 ODBC: ISO 92  
   
  **Riepilogo**  
- **SQLDescribeCol** restituisce il descrittore del risultato, ovvero nome di colonna, tipo, dimensione della colonna, cifre decimali e supporto di valori null, per una colonna nel risultato impostato. Queste informazioni sono anche disponibili nei campi di implementazione.  
+ **SQLDescribeCol** restituisce il descrittore del risultato - nome della colonna, tipo, dimensione della colonna, cifre decimali e supporto di valori null - per una colonna nel set di risultati. Queste informazioni sono anche disponibili nei campi di implementazione.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -75,13 +75,13 @@ SQLRETURN SQLDescribeCol(
   
  Quando *ColumnNumber* è uguale a 0 (per una colonna del segnalibro), viene restituito SQL_BINARY nel  *\*DataTypePtr* per i segnalibri di lunghezza variabile. (SQL_INTEGER viene restituito se i segnalibri vengono utilizzati da un'applicazione ODBC 3. *x* funziona con un'API ODBC 2. *x* driver o da un'API ODBC 2. *x* funziona con un'applicazione ODBC 3. *x* driver.)  
   
- Per altre informazioni su questi tipi di dati, vedere [tipi di dati SQL](../../../odbc/reference/appendixes/sql-data-types.md) nell'appendice d: i tipi di dati. Per informazioni sui tipi di dati specifici del driver SQL, vedere la documentazione del driver.  
+ Per altre informazioni su questi tipi di dati, vedere [tipi di dati SQL](../../../odbc/reference/appendixes/sql-data-types.md) nell'appendice d: Tipi di dati. Per informazioni sui tipi di dati specifici del driver SQL, vedere la documentazione del driver.  
   
  *ColumnSizePtr*  
- [Output] Puntatore a un buffer in cui si desidera restituire le dimensioni (in caratteri) della colonna nell'origine dati. Se non è possibile determinare la dimensione della colonna, il driver restituisce 0. Per altre informazioni sulle dimensioni di colonna, vedere [le dimensioni di colonna, cifre decimali, lunghezza dell'ottetto di trasferimento e dimensioni di visualizzazione](../../../odbc/reference/appendixes/column-size-decimal-digits-transfer-octet-length-and-display-size.md) nell'appendice d: i tipi di dati.  
+ [Output] Puntatore a un buffer in cui si desidera restituire le dimensioni (in caratteri) della colonna nell'origine dati. Se non è possibile determinare la dimensione della colonna, il driver restituisce 0. Per altre informazioni sulle dimensioni di colonna, vedere [le dimensioni di colonna, cifre decimali, lunghezza dell'ottetto di trasferimento e dimensioni di visualizzazione](../../../odbc/reference/appendixes/column-size-decimal-digits-transfer-octet-length-and-display-size.md) nell'appendice d: Tipi di dati.  
   
  *DecimalDigitsPtr*  
- [Output] Puntatore a un buffer in cui restituire il numero di cifre decimali della colonna nell'origine dati. Se il numero di cifre decimali non può essere determinato o non è applicabile, il driver restituisce 0. Per altre informazioni su cifre decimali, vedere [le dimensioni di colonna, cifre decimali, lunghezza dell'ottetto di trasferimento e dimensioni di visualizzazione](../../../odbc/reference/appendixes/column-size-decimal-digits-transfer-octet-length-and-display-size.md) nell'appendice d: i tipi di dati.  
+ [Output] Puntatore a un buffer in cui restituire il numero di cifre decimali della colonna nell'origine dati. Se il numero di cifre decimali non può essere determinato o non è applicabile, il driver restituisce 0. Per altre informazioni su cifre decimali, vedere [le dimensioni di colonna, cifre decimali, lunghezza dell'ottetto di trasferimento e dimensioni di visualizzazione](../../../odbc/reference/appendixes/column-size-decimal-digits-transfer-octet-length-and-display-size.md) nell'appendice d: Tipi di dati.  
   
  *NullablePtr*  
  [Output] Puntatore a un buffer in cui si desidera restituire un valore che indica se la colonna ammette valori NULL. Questo valore viene letto dal campo SQL_DESC_NULLABLE di implementazione. I possibili valori sono i seguenti:  
@@ -98,7 +98,7 @@ SQLRETURN SQLDescribeCol(
 ## <a name="diagnostics"></a>Diagnostica  
  Quando **SQLDescribeCol** restituisce SQL_ERROR o SQL_SUCCESS_WITH_INFO, un valore SQLSTATE associato può essere ottenuto chiamando **SQLGetDiagRec** con un *HandleType*SQL_HANDLE_STMT e una *gestiscono* dei *StatementHandle*. Nella tabella seguente sono elencati i valori SQLSTATE comunemente restituiti da **SQLDescribeCol** e illustra ognuna nel contesto di questa funzione; la notazione "(DM)" precede le descrizioni di SQLSTATE restituiti da Gestione Driver. Il codice restituito a ogni valore SQLSTATE è SQL_ERROR, se non specificato diversamente.  
   
-|SQLSTATE|Errore|Description|  
+|SQLSTATE|Errore|Descrizione|  
 |--------------|-----------|-----------------|  
 |01000|Avviso generale|Messaggio informativo specifico del driver. (Funzione restituisce SQL_SUCCESS_WITH_INFO).|  
 |01004|Stringa troncati di dati a destra|Il buffer \* *ColumnName* non sia abbastanza grande per restituire il nome dell'intera colonna, in modo che il nome della colonna sono stato troncato. Viene restituita la lunghezza del nome della colonna non troncato **NameLengthPtr*. (Funzione restituisce SQL_SUCCESS_WITH_INFO).|  

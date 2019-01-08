@@ -22,12 +22,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: 83ba28d09e32f043c58bdc1c63837f5b465312f3
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 72945aca048d322ee03c8a1d88b76650ddd1db16
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47723489"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52392694"
 ---
 # <a name="sysresourcestats-azure-sql-database"></a>sys.resource_stats (Database SQL di Azure)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
@@ -38,12 +38,12 @@ ms.locfileid: "47723489"
   
  La tabella seguente descrive le colonne disponibili in un server v12:  
   
-|Colonne|Tipo di dati|Description|  
+|Colonne|Tipo di dati|Descrizione|  
 |----------------------------|---------------|-----------------|  
 |start_time|**datetime**|Ora UTC che indica l'inizio dell'intervallo di reporting di 5 minuti.|  
 |end_time|**datetime**|Ora UTC che indica la fine dell'intervallo di reporting di 5 minuti.|  
 |database_name|**varchar**|Nome del database utente.|  
-|sku|**varchar**|Livello di servizio del database. Di seguito sono indicati i valori possibili:<br /><br /> Standard<br /><br /> Standard<br /><br /> Premium<br /><br />Utilizzo generico<br /><br />Business Critical|  
+|sku|**varchar**|Livello di servizio del database. Di seguito sono indicati i valori possibili:<br /><br /> Basic<br /><br /> Standard<br /><br /> Premium<br /><br />Utilizzo generico<br /><br />Business Critical|  
 |storage_in_megabytes|**float**|Dimensioni massime in megabyte per il periodo di tempo, tra cui i dati del database, indici, stored procedure e metadati di archiviazione.|  
 |avg_cpu_percent|**numeric**|Percentuale dell'utilizzo medio del calcolo del limite del livello del servizio.|  
 |avg_data_io_percent|**numeric**|Percentuale dell'utilizzo medio di I/O in base al limite del livello del servizio.|  
@@ -51,7 +51,7 @@ ms.locfileid: "47723489"
 |max_worker_percent|**decimal(5,2)**|Massimi ruoli di lavoro simultanei (richieste) espresso in percentuale sulla base del limite del livello di servizio del database.<br /><br /> Valore massimo attualmente non viene calcolato per l'intervallo di cinque minuti sulla base dei campioni di 15 secondi di conteggi di lavoro simultanei.|  
 |max_session_percent|**decimal(5,2)**|Numero massimo di sessioni simultaneo espresso in percentuale sulla base del limite del livello di servizio del database.<br /><br /> Valore massimo attualmente non viene calcolato per l'intervallo di cinque minuti sulla base dei campioni di 15 secondi di conteggi di sessioni simultanee.|  
 |dtu_limit|**int**|Database max DTU impostazione corrente per il database durante questo intervallo. |  
-|allocated_storage_in_megabytes|**float**|La quantità di formato su file in MB resi disponibili per l'archiviazione dei dati del database. Spazio file formattata è detta anche dati spazio allocato.  Per altre informazioni, vedere: [gestione dello spazio del File nel database SQL](https://docs.microsoft.com/azure/sql-database/sql-database-file-space-management)|
+|allocated_storage_in_megabytes|**float**|La quantità di formato su file in MB resi disponibili per l'archiviazione dei dati del database. Spazio file formattata è detta anche dati spazio allocato.  Per altre informazioni, vedere: [Gestione dello spazio file nel database SQL](https://docs.microsoft.com/azure/sql-database/sql-database-file-space-management)|
   
 > [!TIP]  
 >  Per altre informazioni su questi limiti e i livelli di servizio, vedere gli argomenti [livelli di servizio](https://azure.microsoft.com/documentation/articles/sql-database-service-tiers/).  

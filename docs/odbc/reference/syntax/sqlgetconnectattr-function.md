@@ -20,12 +20,12 @@ ms.assetid: 2cb4ffa8-19d3-4664-8c2f-6682cdcc3f33
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 0d9006d2b1792e66c1f37faa94c9c4b3f9304f3e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 4a24ccf58a1cd0f6d0f4fb2fd32dbee79feb896b
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47764359"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53204440"
 ---
 # <a name="sqlgetconnectattr-function"></a>Funzione SQLSetConnectAttr
 **Conformità**  
@@ -34,7 +34,7 @@ ms.locfileid: "47764359"
  **Riepilogo**  
  **SQLGetConnectAttr** restituisce l'impostazione corrente di un attributo di connessione.  
   
-> [!NOTE]  
+> [!NOTE]
 >  Per altre informazioni su cosa the Driver Manager esegue il mapping a questa funzione quando un'applicazione ODBC 3 *. x* applicazione funziona con un'API ODBC 2 *. x* driver, vedere [Mapping di funzioni di sostituzione per Aut Compatibilità delle applicazioni](../../../odbc/reference/develop-app/mapping-replacement-functions-for-backward-compatibility-of-applications.md).  
   
 ## <a name="syntax"></a>Sintassi  
@@ -83,7 +83,7 @@ SQLRETURN SQLGetConnectAttr(
 ## <a name="diagnostics"></a>Diagnostica  
  Quando **SQLGetConnectAttr** restituisce SQL_ERROR o SQL_SUCCESS_WITH_INFO, un valore SQLSTATE associato possono essere ottenuti dalla struttura di dati di diagnostica chiamando **SQLGetDiagRec** con un *HandleType* SQL_HANDLE_DBC e una *gestiscono* dei *ConnectionHandle*. Nella tabella seguente sono elencati i valori SQLSTATE normalmente restituiti dal **SQLGetConnectAttr** e illustra ognuna nel contesto di questa funzione; la notazione "(DM)" precede le descrizioni di SQLSTATE restituiti da Gestione Driver . Il codice restituito a ogni valore SQLSTATE è SQL_ERROR, se non specificato diversamente.  
   
-|SQLSTATE|Errore|Description|  
+|SQLSTATE|Errore|Descrizione|  
 |--------------|-----------|-----------------|  
 |01000|Avviso generale|Messaggio informativo specifico del driver. (Funzione restituisce SQL_SUCCESS_WITH_INFO).|  
 |01004|Stringa troncati di dati a destra|I dati restituiti nella \* *ValuePtr* sono stati troncati per essere *BufferLength* meno la lunghezza di un carattere di terminazione null. Viene restituita la lunghezza del valore della stringa non troncato **StringLengthPtr*. (Funzione restituisce SQL_SUCCESS_WITH_INFO).|  

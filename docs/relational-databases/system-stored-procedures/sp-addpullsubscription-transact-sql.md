@@ -5,8 +5,7 @@ ms.date: 03/15/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: language-reference
 f1_keywords:
 - sp_addpullsubscription
@@ -17,12 +16,12 @@ ms.assetid: 0f4bbedc-0c1c-414a-b82a-6fd47f0a6a7f
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 0d3c09a2d625f8b1a8c92d3fc55d8b571336a020
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: c003b103c7957e737f53eb8733022e68073b3aef
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47857029"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52802503"
 ---
 # <a name="spaddpullsubscription-transact-sql"></a>sp_addpullsubscription (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -59,7 +58,7 @@ sp_addpullsubscription [ @publisher= ] 'publisher'
  Specifica se per la pubblicazione è disponibile un agente di distribuzione autonomo. *independent_agent* viene **nvarchar(5**, con un valore predefinito è TRUE. Se **true**, è disponibile un agente di distribuzione autonomo per la pubblicazione. Se **false**, è associato un agente di distribuzione per ogni coppia database del server di pubblicazione/database sottoscrittore. *independent_agent* è una proprietà della pubblicazione e deve avere lo stesso valore qui perché contiene server di pubblicazione.  
   
  [  **@subscription_type=**] **'***subscription_type***'**  
- Tipo di sottoscrizione. *subscription_type* viene **nvarchar(9)**, il valore predefinito è **anonimo**. È necessario specificare un valore pari **pull** per *subscription_type*, a meno che non si desidera creare una sottoscrizione senza registrarla nel server di pubblicazione. In questo caso, è necessario specificare un valore pari **anonimo**. Questa operazione è necessaria per i casi in cui è possibile stabilire una [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] connessione al server di pubblicazione durante la configurazione della sottoscrizione.  
+ Tipo di sottoscrizione. *subscription_type* viene **nvarchar(9)**, il valore predefinito è **anonimo**. È necessario specificare un valore pari **pull** per *subscription_type*, a meno che non si desidera creare una sottoscrizione senza registrarla nel server di pubblicazione. In questo caso, è necessario specificare un valore pari **anonimo**. Ciò è necessario in casi in cui non è possibile stabilire una connessione [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] al server di pubblicazione durante la configurazione della sottoscrizione.  
   
  [  **@description=**] **'***descrizione***'**  
  Descrizione della pubblicazione. *Descrizione* viene **nvarchar(100)**, con un valore predefinito è NULL.  
@@ -67,7 +66,7 @@ sp_addpullsubscription [ @publisher= ] 'publisher'
  [  **@update_mode=**] **'***update_mode***'**  
  Tipo di aggiornamento. *update_mode* viene **nvarchar(30)**, e può essere uno dei valori seguenti.  
   
-|valore|Description|  
+|Value|Descrizione|  
 |-----------|-----------------|  
 |**di sola lettura** (impostazione predefinita)|La sottoscrizione è di sola lettura. Le modifiche apportate nel Sottoscrittore non vengono ritrasmesse al server di pubblicazione. È consigliabile utilizzare questo valore quando non sono previsti aggiornamenti nel Sottoscrittore.|  
 |**Synctran**|Abilita il supporto per sottoscrizioni ad aggiornamento immediato.|  

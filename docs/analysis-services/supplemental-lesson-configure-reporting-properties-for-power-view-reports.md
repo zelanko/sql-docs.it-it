@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 27698f0431a11b73c1ebacd532769269458f1225
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: e9122ab6f783e6b845c1a961c133d66e58e933e7
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38033430"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52544278"
 ---
 # <a name="supplemental-lesson---configure-reporting-properties-for-power-view-reports"></a>Supplementare lezione - configurare le proprietà di creazione di report per i report Power View
 [!INCLUDE[ssas-appliesto-sql2016-later-aas](../includes/ssas-appliesto-sql2016-later-aas.md)]
@@ -33,17 +33,17 @@ Per completare questa lezione supplementare specifica, è necessario disporre an
 ## <a name="model-properties-that-affect-reporting"></a>Proprietà del modello che influiscono sulla creazione di report  
 Quando si crea un modello tabulare, è possibile impostare alcune proprietà in singole colonne e tabelle per migliorare la creazione di report in Power View da parte dell'utente finale. Inoltre, è possibile creare ulteriori dati del modello per supportare la visualizzazione dei dati e altre funzionalità specifiche del client di creazione report. Di seguito sono riportate alcune delle modifiche che verranno apportate all'esempio Adventure Works Internet Sales Model:  
   
--   **Aggiungere nuovi dati** : se si aggiungono nuovi dati in una colonna calcolata usando una formula DAX, vengono create informazioni sulla data in un formato di visualizzazione più semplice nei grafici.  
+-   **Aggiungere nuovi dati** -aggiunta di nuovi dati in una colonna calcolata con una formula DAX create informazioni sulla data in un formato che è più facile da visualizzare nei grafici.  
   
 -   **Nascondere tabelle e colonne inutili per l'utente finale** : con la proprietà **Hidden** è possibile controllare se le tabelle e le relative colonne sono visualizzate nel client di creazione del report. Gli elementi nascosti fanno comunque parte del modello e rimangono disponibili per le query e i calcoli.  
   
--   **Abilitare tabelle con un clic** : per impostazione predefinita, non si verifica alcuna azione se un utente finale fa clic su una tabella nell'elenco di campi. Per modificare questo comportamento in modo che facendo clic su una tabella, questa venga aggiunta al report, è necessario impostare la proprietà Set di campi predefiniti per ogni colonna che si desidera includere nella tabella. Questa proprietà viene impostata nelle colonne della tabella che sarà utilizzata maggiormente dagli utenti finali.  
+-   **Abilitare tabelle con un clic** -per impostazione predefinita, viene eseguita alcuna azione se un utente finale fa clic su una tabella nell'elenco dei campi. Per modificare questo comportamento in modo che facendo clic su una tabella, questa venga aggiunta al report, è necessario impostare la proprietà Set di campi predefiniti per ogni colonna che si desidera includere nella tabella. Questa proprietà viene impostata nelle colonne della tabella che sarà utilizzata maggiormente dagli utenti finali.  
   
 -   **Impostare raggruppamenti ove necessario** : con la proprietà **Keep Unique Rows** è possibile determinare se i valori nella colonna debbano essere raggruppati in base ai valori in un campo diverso, ad esempio un campo dell'identificatore. Per le colonne contenenti valori duplicati, ad esempio la colonna con il nome del cliente, in cui possono essere presenti più clienti di nome Diego Sages, è importante raggruppare i dati, mantenendo righe univoche, nel campo **Identificatore di riga** per offrire agli utenti finali i risultati corretti.  
   
 -   **Impostare tipi e formati di dati** : per impostazione predefinita, in Power View le regole vengono applicate in base al tipo di dati della colonna per determinare se il campo può essere usato come misura. Poiché a ogni visualizzazione dei dati in Power View sono anche applicate regole relative al posizionamento di misure e non misure, è importante impostare il tipo di dati nel modello oppure sostituire l'impostazione predefinita per ottenere il comportamento voluto per l'utente finale.  
   
--   **Impostare la proprietà Sort by Column** : con la proprietà **Sort By Column** è possibile specificare se è preferibile ordinare i valori della colonna in base a valori in un campo diverso. Ad esempio, nella colonna Month Calendar contenente il nome del mese, effettuare l'ordinamento in base alla colonna Month Number.  
+-   **Impostare l'ordinamento per colonna** proprietà - i **Ordina per colonna** proprietà specifica se i valori nella colonna devono essere ordinati dai valori in un campo diverso. Ad esempio, nella colonna Month Calendar contenente il nome del mese, effettuare l'ordinamento in base alla colonna Month Number.  
   
 ## <a name="hide-tables-from-client-tools"></a>Nascondere le tabelle negli strumenti client  
 Poiché nella tabella Product sono già presenti le colonne calcolate Product Category e Product Subcategory, non è necessario che le tabelle Product Category e Product Subcategory siano visibili nelle applicazioni client.  
@@ -129,7 +129,7 @@ Per informazioni dettagliate sulle proprietà comportamento tabella, vedere [con
 7.  Ripetere questi passaggi per la tabella **Product** , selezionando la colonna **Product Id** come identificatore di riga e la colonna **Product Name** dall'elenco **Mantieni righe univoche** . Per **Etichetta predefinita**selezionare **Product Alternate Id**.  
   
 ## <a name="reporting-properties-for-columns"></a>Proprietà report per le colonne  
-Per migliorare la creazione di report del modello è possibile impostare diverse proprietà relative alle colonne di base e alla creazione di report specifici. Ad esempio, gli utenti potrebbero non voler visualizzare tutte le colonne in ogni tabella. Nello stesso modo in cui sono state precedentemente nascoste le tabelle Product Category e Product Subcategory, è possibile nascondere colonne particolari di una tabella che, normalmente, sono visualizzate, utilizzando la proprietà Nascosta di una colonna. Altre proprietà, ad esempio Formato dati e Ordina per colonna, possono influire anche sulla modalità di visualizzazione dei dati delle colonne nei report. Nell'esempio, alcune di esse vengono impostate in colonne particolari. Le altre colonne per cui non è richiesta alcuna azione non vengono mostrate di seguito.  
+Per migliorare la creazione di report del modello è possibile impostare diverse proprietà relative alle colonne di base e alla creazione di report specifici. Ad esempio, gli utenti potrebbero non voler visualizzare tutte le colonne in ogni tabella. Proprio come le tabelle Product Category e Product Subcategory è stata nascosta in precedenza, tramite proprietà Hidden di una colonna, è possibile nascondere colonne particolari di una tabella che viene visualizzato in caso contrario. Altre proprietà, ad esempio Formato dati e Ordina per colonna, possono influire anche sulla modalità di visualizzazione dei dati delle colonne nei report. Nell'esempio, alcune di esse vengono impostate in colonne particolari. Le altre colonne per cui non è richiesta alcuna azione non vengono mostrate di seguito.  
   
 In questo esempio vengono impostate solo alcune delle diverse proprietà di colonne. Per altre informazioni sulla colonna proprietà report, vedere [le proprietà delle colonne](../analysis-services/tabular-models/column-properties-ssas-tabular.md) nella documentazione Online di SQL Server.  
   
@@ -143,21 +143,21 @@ In questo esempio vengono impostate solo alcune delle diverse proprietà di colo
   
 4.  Ripetere questi passaggi, impostando le seguenti proprietà di colonna e di creazione report per ogni tabella specificata. Per tutte le altre proprietà mantenere le impostazioni predefinite.  
   
-    Nota: per tutte le colonne contenenti una data, assicurarsi che il **tipo di dati** sia una **data**.  
+    Nota: Per tutte le colonne di date, assicurarsi che **tipo di dati** viene **data**.  
   
     **Customer**  
   
-    |colonna|Proprietà|valore|  
+    |colonna|Proprietà|Value|  
     |----------|------------|---------|  
     |Geography Id|Hidden|True|  
     |Birth Date|Formato dati|Short Date|  
   
-    **Date**  
+    **Data**  
   
     > [!NOTE]  
-    > Poiché la tabella Date è stata selezionata come tabella data dei modelli utilizzando l'impostazione Contrassegna come tabella data, illustrata nella Lezione 7: Contrassegna come tabella data, e la colonna Date dell'omonima tabella come colonna da utilizzare come identificatore univoco, la proprietà Row Identifier per la colonna Date sarà impostata automaticamente su True e non potrà essere modificata. Quando si utilizzano funzioni di Business Intelligence per le gerarchie temporali nelle formule DAX, è necessario specificare una tabella relativa alla data. In questo modello sono state create diverse misure utilizzando funzioni di Business Intelligence per le gerarchie temporali per calcolare i dati di vendita per diversi periodi, ad esempio i trimestri precedente e corrente, nonché per essere utilizzati negli indicatori KPI. Per altre informazioni su come specificare una tabella data, vedere [specificare contrassegna come tabella data per l'uso con Intelligence tempo](../analysis-services/tabular-models/specify-mark-as-date-table-for-use-with-time-intelligence-ssas-tabular.md) nella documentazione Online di SQL Server.  
+    > Poiché la tabella Date è stata selezionata come tabella data dei modelli mediante l'impostazione Contrassegna come tabella data nella lezione 7 e la colonna Date nella tabella Date è stata selezionata come colonna da usare come identificatore univoco, la proprietà Identificatore di riga per la colonna Date verrà automaticamente impostata su True e non può essere modificata. Quando si utilizzano funzioni di Business Intelligence per le gerarchie temporali nelle formule DAX, è necessario specificare una tabella relativa alla data. In questo modello sono state create diverse misure utilizzando funzioni di Business Intelligence per le gerarchie temporali per calcolare i dati di vendita per diversi periodi, ad esempio i trimestri precedente e corrente, nonché per essere utilizzati negli indicatori KPI. Per altre informazioni su come specificare una tabella data, vedere [specificare contrassegna come tabella data per l'uso con Intelligence tempo](../analysis-services/tabular-models/specify-mark-as-date-table-for-use-with-time-intelligence-ssas-tabular.md) nella documentazione Online di SQL Server.  
   
-    |colonna|Proprietà|valore|  
+    |colonna|Proprietà|Value|  
     |----------|------------|---------|  
     |date|Formato dati|Short Date|  
     |Day Number of Week|Hidden|True|  
@@ -174,24 +174,24 @@ In questo esempio vengono impostate solo alcune delle diverse proprietà di colo
   
     **Geography**  
   
-    |colonna|Proprietà|valore|  
+    |colonna|Proprietà|Value|  
     |----------|------------|---------|  
     |Geography Id|Hidden|True|  
     |ID territorio vendita|Hidden|True|  
   
     **Product**  
   
-    |colonna|Proprietà|valore|  
+    |colonna|Proprietà|Value|  
     |----------|------------|---------|  
     |Product Id|Hidden|True|  
     |Product Alternate Id|Etichetta predefinita|True|  
     |Product Subcategory Id|Hidden|True|  
-    |Product Start Date|Formato dei dati|Short Date|  
+    |Product Start Date|Formato dati|Short Date|  
     |Product End Date|Formato dati|Short Date|  
   
     **Internet Sales**  
   
-    |colonna|Proprietà|valore|  
+    |colonna|Proprietà|Value|  
     |----------|------------|---------|  
     |Product Id|Hidden|True|  
     |Customer Id|Hidden|True|  

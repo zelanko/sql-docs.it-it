@@ -1,5 +1,5 @@
 ---
-title: Proprietà OLAP | Documenti Microsoft
+title: Proprietà OLAP di Analysis Services | Microsoft Docs
 ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 0e98fb016ff43ff34456fd02e43fa710c9156334
-ms.sourcegitcommit: 6e55a0a7b7eb6d455006916bc63f93ed2218eae1
+ms.openlocfilehash: 936b05f8d54d3a5e67e7e03a02cc7907c56eab02
+ms.sourcegitcommit: 8a64c59c5d84150659a015e54f8937673cab87a0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/08/2018
-ms.locfileid: "35239291"
+ms.lasthandoff: 12/08/2018
+ms.locfileid: "53072518"
 ---
 # <a name="olap-properties"></a>Proprietà OLAP
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]

@@ -15,12 +15,12 @@ ms.assetid: c96b13ad-02a6-4646-bcc7-b4a8d490f5cc
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 999d56cdeb6990d4979fb9f7f0b2e5bfa8fb91d6
-ms.sourcegitcommit: af1d9fc4a50baf3df60488b4c630ce68f7e75ed1
+ms.openlocfilehash: ad4feee8fe6a47b82196f6684a9c56b663a42c71
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/06/2018
-ms.locfileid: "51031178"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52392274"
 ---
 # <a name="cleanse-data-using-dqs-internal-knowledge"></a>Pulizia dei dati mediante le informazioni interne di DQS
   In questo argomento viene descritto come eseguire la pulizia dei dati utilizzando un progetto Data Quality in [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS). La pulizia dei dati viene eseguita sui dati di origine utilizzando una Knowledge Base incorporata in DQS e confrontando tali dati con un set di dati di alta qualità. Per altre informazioni, vedere [Compilazione di una Knowledge Base](../../2014/data-quality-services/building-a-knowledge-base.md).  
@@ -33,7 +33,7 @@ ms.locfileid: "51031178"
   
 -   È necessario avere specificato valori soglia adatti per l'attività di pulizia. Per informazioni su questa operazione, vedere [Configurazione dei valori soglia per le attività di pulizia e di individuazione delle corrispondenze](../../2014/data-quality-services/configure-threshold-values-for-cleansing-and-matching.md).  
   
--   È necessario che in [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)] sia disponibile una Knowledge Base DQS con cui confrontare i dati di origine ed eseguirne la pulizia. La Knowledge Base deve inoltre contenere informazioni sul tipo di dati da pulire. Se si desidera pulire dati di origine che contengono indirizzi in Italia, ad esempio, è necessario disporre di una Knowledge Base creata in base a dati di esempio di alta qualità per indirizzi italiani.  
+-   È necessario che in [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)] sia disponibile una Knowledge Base DQS con cui confrontare i dati di origine ed eseguirne la pulizia. La Knowledge Base deve inoltre contenere informazioni sul tipo di dati da pulire. Se si vogliono pulire dati di origine che contengono indirizzi in Italia, ad esempio, è necessario aver creato una Knowledge Base in base a dati di esempio di alta qualità per indirizzi italiani.  
   
 -   Se i dati di origine da pulire si trovano in un file di Excel, è necessario che Microsoft Excel sia installato nel computer [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] . In caso contrario, non sarà possibile selezionare il file di Excel nella fase di mapping. I file creati da Microsoft Excel potranno presentare l'estensione xlsx, xls o csv. Se viene utilizzata la versione a 64 bit di Excel, sono supportati solo i file di Excel 2003 (xls), mentre non sono supportati file di Excel 2007 o 2010 (xlsx). Se si utilizza una versione a 64 bit di Excel 2007 o 2010, salvare il file come file xls o csv o installare una versione a 32 bit di Excel.  
   
@@ -56,11 +56,11 @@ ms.locfileid: "51031178"
 ##  <a name="Mapping"></a> Fase di mapping  
  Nella fase di mapping è possibile specificare la connessione ai dati di origine da pulire ed eseguire il mapping delle colonne dei dati di origine ai domini appropriati nella Knowledge Base selezionata.  
   
-1.  Nella pagina **Mappa** della procedura guidata Data Quality per la pulizia dei dati, selezionare i dati di origine da pulire: **SQL Server** o **File di Excel**:  
+1.  Nel **mappa** pagina della procedura guidata Data quality per la pulizia dei dati, selezionare i dati di origine da pulire: **SQL Server** oppure **File di Excel**:  
   
-    1.  **SQL Server**: scegliere **DQS_STAGING_DATA** come database di origine se sono stati copiati i dati di origine in questo database, quindi selezionare la tabella o vista appropriata contenente i dati di origine. In alternativa, selezionare il database di origine e la tabella o vista appropriata. Il database di origine deve essere presente nella stessa istanza di SQL Server di [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)] per essere visualizzato nell'elenco a discesa **Database** .  
+    1.  **SQL Server**: Selezionare **DQS_STAGING_DATA** come origine database se è stato copiato i dati di origine al database e quindi selezionare tabella o vista appropriata che contiene i dati di origine. In alternativa, selezionare il database di origine e la tabella o vista appropriata. Il database di origine deve essere presente nella stessa istanza di SQL Server di [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)] per essere visualizzato nell'elenco a discesa **Database** .  
   
-    2.  **File di Excel**: fare clic su **Sfoglia**e selezionare il file di Excel contenente i dati da pulire. Per selezionare un file di Excel, è necessario che Microsoft Excel sia installato nel computer [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] . In caso contrario, il pulsante **Sfoglia** non sarà disponibile e verrà visualizzata una notifica sotto questa casella di testo in cui si avvisa che Microsoft Excel non è installato. Lasciare inoltre selezionata la casella di controllo **Utilizza la prima riga come intestazione** se la prima riga del file di Excel contiene dati dell'intestazione.  
+    2.  **Il File di Excel**: Fare clic su **Sfoglia**e selezionare il file di Excel che contiene i dati da pulire. Per selezionare un file di Excel, è necessario che Microsoft Excel sia installato nel computer [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] . In caso contrario, il pulsante **Sfoglia** non sarà disponibile e verrà visualizzata una notifica sotto questa casella di testo in cui si avvisa che Microsoft Excel non è installato. Lasciare inoltre selezionata la casella di controllo **Utilizza la prima riga come intestazione** se la prima riga del file di Excel contiene dati dell'intestazione.  
   
 2.  In **Mapping**, eseguire il mapping delle colonne di dati nei dati di origine ai domini appropriati della Knowledge Base selezionando una colonna di origine dall'elenco a discesa nella **Colonna di origine** , quindi selezionando un dominio dall'elenco a discesa nella colonna **Dominio** della stessa riga. Ripetere questo passaggio per eseguire il mapping di tutte le colonne nei dati di origine ai domini appropriati nella Knowledge Base. Se necessario, è possibile fare clic sull'icona **Aggiungi un mapping colonne** per aggiungere righe alla tabella di mapping.  
   
@@ -95,15 +95,15 @@ ms.locfileid: "51031178"
 ##  <a name="Interactive"></a> Fase di pulizia interattiva  
  Nella fase di pulizia interattiva, è possibile visualizzare le modifiche proposte da DQS e decidere se implementarle o meno, approvandole o rifiutandole. Nel riquadro sinistro della pagina **Gestisci e visualizza risultati** , tramite DQS viene mostrato un elenco di tutti i domini di cui si è eseguito il mapping precedentemente nella fase di mapping, insieme al numero di valori analizzati nei dati di origine rispetto a ciascun dominio durante la fase di pulizia computerizzata. Nel riquadro destro della pagina **Gestisci e visualizza risultati** , in base al rispetto delle regole di dominio, alle regole relative agli errori di sintassi e ad algoritmi avanzati, tramite DQS i dati vengono suddivisi in categorie in cinque schede, utilizzando il *livello di confidenza*. Il livello di confidenza indica il livello di certezza da parte di DQS in relazione a una correzione o suggerimento e si basa sui valori soglia seguenti:  
   
--   **Soglia di correzione automatica**: qualsiasi valore con un livello di confidenza al di sopra di questa soglia viene corretto automaticamente da DQS. L'amministratore dei dati può tuttavia ignorare la modifica durante la pulizia interattiva. È possibile specificare il valore soglia di correzione automatica nella scheda **Impostazioni generali** della schermata **Configurazione** . Per altre informazioni, vedere [Configurazione dei valori soglia per le attività di pulizia e di individuazione delle corrispondenze](../../2014/data-quality-services/configure-threshold-values-for-cleansing-and-matching.md).  
+-   **Soglia di correzione automatica**: Qualsiasi valore con un livello di confidenza di sopra di questa soglia viene corretto automaticamente da DQS. L'amministratore dei dati può tuttavia ignorare la modifica durante la pulizia interattiva. È possibile specificare il valore soglia di correzione automatica nella scheda **Impostazioni generali** della schermata **Configurazione** . Per altre informazioni, vedere [Configurazione dei valori soglia per le attività di pulizia e di individuazione delle corrispondenze](../../2014/data-quality-services/configure-threshold-values-for-cleansing-and-matching.md).  
   
--   **Soglia di suggerimento automatico**: qualsiasi valore con un livello di confidenza al di sopra di questa soglia, ma al di sotto della soglia di correzione automatica, viene suggerito come valore sostitutivo. In DQS la modifica viene apportata solo se approvata dall'amministratore dei dati. È possibile specificare il valore soglia di suggerimento automatico nella scheda **Impostazioni generali** della schermata **Configurazione** . Per altre informazioni, vedere [Configurazione dei valori soglia per le attività di pulizia e di individuazione delle corrispondenze](../../2014/data-quality-services/configure-threshold-values-for-cleansing-and-matching.md).  
+-   **Soglia di suggerimento automatico**:  Qualsiasi valore con un livello di confidenza di sopra di questa soglia, ma di sotto della soglia di correzione automatica, viene suggerito come valore sostitutivo. In DQS la modifica viene apportata solo se approvata dall'amministratore dei dati. È possibile specificare il valore soglia di suggerimento automatico nella scheda **Impostazioni generali** della schermata **Configurazione** . Per altre informazioni, vedere [Configurazione dei valori soglia per le attività di pulizia e di individuazione delle corrispondenze](../../2014/data-quality-services/configure-threshold-values-for-cleansing-and-matching.md).  
   
--   **Altro**: qualsiasi valore al di sotto del valore soglia di suggerimento automatico non viene modificato da DQS.  
+-   **Altri**:  Qualsiasi valore di sotto che del valore di soglia di suggerimento automatico viene lasciato invariato da DQS.  
   
  In base al livello di confidenza, i valori vengono visualizzati nelle cinque schede seguenti:  
   
-|Scheda|Description|  
+|Scheda|Descrizione|  
 |---------|-----------------|  
 |**Suggeriti**|Mostra i valori del dominio per il quale tramite DQS sono stati trovati valori suggeriti che dispongono di un livello di confidenza più elevato del valore *soglia di suggerimento automatico* , ma inferiore al valore *soglia di correzione automatica* .<br /><br /> Nella colonna **Correggi in** vengono visualizzati i valori suggeriti rispetto al valore originale. È possibile fare clic sul pulsante di opzione nella colonna **Approva** o **Rifiuta** rispetto a un valore nella griglia superiore per accettare o rifiutare il suggerimento per tutte le istanze di tale valore. In questo caso, il valore accettato viene spostato nella scheda **Con correzione** e il valore respinto viene spostato nella scheda **Non validi** .|  
 |**Nuova**|Mostra il dominio valido per il quale DQS non dispone di informazioni sufficienti e del quale non è pertanto possibile eseguire il mapping a nessuna altra scheda. Questa scheda contiene inoltre valori che presentano un livello di confidenza inferiore al valore *soglia di suggerimento automatico* , ma sufficientemente elevato per essere contrassegnati come validi.<br /><br /> Se il valore è ritenuto corretto, fare clic sul pulsante di opzione nella colonna **Approva** . Altrimenti, fare clic sul pulsante di opzione nella colonna **Rifiuta** . Il valore accettato viene spostato nella scheda **Corretti** e il valore respinto viene spostato nella scheda **Non validi** . È anche possibile digitare il valore corretto manualmente sostituendo il valore originale nella colonna **Correggi in** e fare clic sul pulsante di opzione nella colonna **Approva** per accettare la modifica. In questo caso, il valore viene spostato nella scheda **Con correzione** .|  
@@ -124,7 +124,7 @@ ms.locfileid: "51031178"
   
     -   Nel riquadro inferiore vengono visualizzate occorrenze singole del valore di dominio selezionato nel riquadro superiore destro. Nel superiore destro vengono visualizzate le informazioni seguenti: una casella per specificare un altro valore (corretto), il livello di confidenza (non disponibile per i valori nella scheda **Corretti** ), il motivo per l'azione DQS sul valore, l'opzione per approvare e rifiutare le correzioni, i suggerimenti per il valore e il valore originale.  
   
-3.  Se è stata abilitata la funzionalità **Correttore ortografico** per un dominio durante la sua creazione, vengono visualizzati dei caratteri di sottolineatura rossi ondulati insieme a quei valori di dominio identificati come potenziali errori. La sottolineatura viene visualizzata per l'intero valore. Se ad esempio "New York" è stato erroneamente digitato "Neu York", la sottolineatura rossa verrà visualizzata sotto "Neu York" e non solo sotto "Neu." Se si fa clic con il pulsante destro del mouse sul valore, verranno visualizzate le correzioni suggerite. Se sono presenti più di 5 suggerimenti, è possibile fare clic su **Ulteriori suggerimenti** nel menu di scelta rapida per visualizzare quelli rimanenti. Così come avviene per la visualizzazione degli errori, i suggerimenti rappresentano sostituzioni per l'intero valore. Il suggerimento visualizzato per l'esempio precedente sarà ad esempio "New York" e non solo "New". È possibile scegliere uno dei suggerimenti o aggiungere al dizionario una voce da visualizzare per quel valore. I valori vengono archiviati nel dizionario a livello di account utente. Quando si seleziona un suggerimento dal menu di scelta rapida del correttore ortografico, tale suggerimento viene aggiunto alla colonna **Correggi in** . Se si seleziona un suggerimento nella colonna **Correggi in** , tuttavia, il valore nella colonna viene sostituito dal suggerimento selezionato.  
+3.  Se è stata abilitata la funzionalità **Correttore ortografico** per un dominio durante la sua creazione, vengono visualizzati dei caratteri di sottolineatura rossi ondulati insieme a quei valori di dominio identificati come potenziali errori. La sottolineatura viene visualizzata per l'intero valore. Se ad esempio "New York" è stato erroneamente digitato "Neu York", la sottolineatura rossa verrà visualizzata sotto "Neu York" e non solo sotto "Neu". Se si fa clic con il pulsante destro del mouse sul valore, verranno visualizzate le correzioni suggerite. Se sono presenti più di 5 suggerimenti, è possibile fare clic su **Ulteriori suggerimenti** nel menu di scelta rapida per visualizzare quelli rimanenti. Così come avviene per la visualizzazione degli errori, i suggerimenti rappresentano sostituzioni per l'intero valore. Il suggerimento visualizzato per l'esempio precedente sarà ad esempio "New York" e non solo "New". È possibile scegliere uno dei suggerimenti o aggiungere al dizionario una voce da visualizzare per quel valore. I valori vengono archiviati nel dizionario a livello di account utente. Quando si seleziona un suggerimento dal menu di scelta rapida del correttore ortografico, tale suggerimento viene aggiunto alla colonna **Correggi in** . Se si seleziona un suggerimento nella colonna **Correggi in** , tuttavia, il valore nella colonna viene sostituito dal suggerimento selezionato.  
   
      La funzionalità di correzione ortografica è abilitata per impostazione predefinita nella fase di pulizia interattiva. È possibile disabilitare il correttore ortografico nella fase di pulizia interattiva facendo clic sull'icona **Abilita/Disabilita correttore ortografico** o facendo clic con il pulsante destro del mouse nell'area dei valori di dominio e scegliendo **Correttore ortografico** dal menu di scelta rapida. Per abilitarlo nuovamente, seguire la stessa procedura.  
   
@@ -138,36 +138,36 @@ ms.locfileid: "51031178"
 ##  <a name="Export"></a> Fase di esportazione  
  Nella fase di esportazione si specificano i parametri per indicare quali dati puliti esportare e in quale ubicazione.  
   
-1.  Nella pagina **Esporta** della procedura guidata Data Quality per la pulizia dei dati, selezionare il tipo di destinazione per l'esportazione dei dati puliti: **SQL Server**, **File CSV**o **File di Excel**.  
+1.  Nel **esportare** pagina della pulizia data quality procedura guidata, selezionare il tipo di destinazione per l'esportazione dei dati puliti: **SQL Server**, **File con estensione CSV**, o **il File di Excel**.  
   
     > [!IMPORTANT]  
     >  Se si utilizza la versione a 64 bit di Excel, non è possibile esportare i propri dati puliti in un file di Excel. È possibile eseguire l'esportazione solo in un database di SQL Server o in un file con estensione csv.  
   
-    1.  **SQL Server**: scegliere **DQS_STAGING_DATA** come database di destinazione se si desidera esportare i dati in esso, quindi specificare un nome di tabella che verrà creata per archiviare i dati esportati. Altrimenti, se si desidera esportare i dati in un database diverso, sceglierlo e specificare un nome di tabella che verrà creata per archiviare i dati esportati. Il database di destinazione deve essere presente nella stessa istanza di SQL Server di [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)] per essere visualizzato nell'elenco a discesa **Database** .  
+    1.  **SQL Server**: Selezionare **DQS_STAGING_DATA** come destinazione database se si desidera esportare i dati in esso e quindi specificare un nome di tabella che verrà creata per archiviare i dati esportati. Altrimenti, se si desidera esportare i dati in un database diverso, sceglierlo e specificare un nome di tabella che verrà creata per archiviare i dati esportati. Il database di destinazione deve essere presente nella stessa istanza di SQL Server di [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)] per essere visualizzato nell'elenco a discesa **Database** .  
   
-    2.  **File CSV**: fare clic su **Sfoglia**e specificare il nome e il percorso del file csv nel quale si desidera esportare i dati puliti. È anche possibile digitare il nome per il file csv insieme al percorso completo in cui si desidera esportare i dati puliti, ad esempio, "C:\ExportedData.csv". Il file viene salvato nel computer in cui è installato [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)] .  
+    2.  **File CSV**: Fare clic su **Sfoglia**e specificare il nome e percorso del file con estensione csv in cui si desidera esportare i dati puliti. È anche possibile digitare il nome per il file csv insieme al percorso completo in cui si desidera esportare i dati puliti, Ad esempio, "c:\ExportedData.csv". Il file viene salvato nel computer in cui è installato [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)] .  
   
-    3.  **File di Excel**: fare clic su **Sfoglia**e specificare il nome e il percorso del file di Excel nel quale si desidera esportare i dati puliti. È anche possibile digitare il nome per il file di Excel insieme al percorso completo in cui si desidera esportare i dati puliti, Ad esempio, "C:\ExportedData.xlsx”. Il file viene salvato nel computer in cui è installato [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)] .  
+    3.  **Il File di Excel**: Fare clic su **Sfoglia**e specificare il nome e percorso del file di Excel in cui si desidera esportare i dati puliti. È anche possibile digitare il nome per il file di Excel insieme al percorso completo in cui si desidera esportare i dati puliti, Ad esempio, "c:\ExportedData.xlsx". Il file viene salvato nel computer in cui è installato [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)] .  
   
 2.  Selezionare la casella di controllo **Standardizzare output** per standardizzare l'output in base al formato selezionato per il dominio. Ad esempio, modificare il valore stringa in caratteri maiuscoli o cambiare al maiuscolo l'iniziale della parola. Per informazioni sulla specifica del formato di output di un dominio, vedere l'elenco **Formato output in** in [Imposta proprietà del dominio](../../2014/data-quality-services/set-domain-properties.md).  
   
 3.  Selezionare quindi l'output dei dati: esportare solo i dati puliti o i dati puliti insieme alle informazioni relative alla pulizia.  
   
-    -   **Solo dati**: fare clic sul pulsante di opzione per esportare solo i dati puliti.  
+    -   **Solo i dati**: Fare clic sul pulsante di opzione per esportare solo i dati puliti.  
   
-    -   **Dati e informazioni pulizia**: fare clic sul pulsante di opzione per esportare i dati seguenti per ogni dominio:  
+    -   **Dati e informazioni pulizia**: Fare clic sul pulsante di opzione per esportare i dati seguenti per ogni dominio:  
   
-        -   **\<Dominio>_Source**: il valore originale nel dominio.  
+        -   **\<Dominio > _Source**: Il valore originale nel dominio.  
   
-        -   **\<Dominio>_Output**: i valori puliti nel dominio.  
+        -   **\<Dominio > _Output**: I valori puliti nel dominio.  
   
-        -   **\<Dominio>_Reason**: il motivo specificato per la correzione del valore.  
+        -   **\<Dominio > _Reason**: Il motivo specificato per la correzione del valore.  
   
-        -   **\<Dominio>_Confidence**: il livello di attendibilità per tutti i termini corretti. Viene visualizzato come valore decimale equivalente al valore percentuale corrispondente. Un livello di confidenza del 95% viene ad esempio visualizzato come 0,9500000.  
+        -   **\<Dominio > _Confidence**: Il livello di confidenza per tutti i termini corretti. Viene visualizzato come valore decimale equivalente al valore percentuale corrispondente. Un livello di confidenza del 95% viene ad esempio visualizzato come 0,9500000.  
   
-        -   **\<Dominio>_Status**: lo stato del valore del dominio dopo la pulizia dei dati. Ad esempio **Suggeriti**, **Nuovi**, **Non validi**, **Con correzione**o **Corretti**.  
+        -   **\<Dominio > _Status**: Lo stato del valore del dominio dopo la pulizia dei dati. Ad esempio **Suggeriti**, **Nuovi**, **Non validi**, **Con correzione**o **Corretti**.  
   
-        -   **Stato record**: oltre a includere un campo di stato per ogni dominio di cui è stato eseguito il mapping **(\<NomeDominio>_Status**), il campo **Stato record** visualizza lo stato di un record. Se uno stato del dominio nel record è *Nuovi* o *Corretti*, il valore di **Stato record** viene impostato su *Corretti*. Se uno stato del dominio nel record è *Suggeriti*, *Non validi*o *Con correzione*, il valore di **Stato record** viene impostato sul rispettivo valore. Ad esempio, se uno stato del dominio nel record è *Suggeriti*, il valore di **Stato record** viene impostato su *Suggeriti*.  
+        -   **Stato record**: Oltre a includere un campo di stato per ogni dominio mappata **(\<NomeDominio > _Status**), il **stato Record** campo viene visualizzato lo stato di un record. Se uno stato del dominio nel record è *Nuovi* o *Corretti*, il valore di **Stato record** viene impostato su *Corretti*. Se uno stato del dominio nel record è *Suggeriti*, *Non validi*o *Con correzione*, il valore di **Stato record** viene impostato sul rispettivo valore. Ad esempio, se uno stato del dominio nel record è *Suggeriti*, il valore di **Stato record** viene impostato su *Suggeriti*.  
   
             > [!NOTE]  
             >  Se si utilizza un servizio dati di riferimento per l'operazione di pulizia, sono disponibili dati aggiuntivi sui valori di dominio per l'esportazione. Per altre informazioni, vedere [Pulire i dati mediante le informazioni dei dati di riferimento &#40;esterni&#41;](../../2014/data-quality-services/cleanse-data-using-reference-data-external-knowledge.md).  
@@ -187,29 +187,29 @@ ms.locfileid: "51031178"
   
  La scheda **Profiler** fornisce le statistiche seguenti per i dati di origine, per campo e dominio:  
   
--   **Record**: il numero di record nei dati di esempio analizzati per l'attività di pulizia dei dati  
+-   **I record**: Il numero di record nei dati di esempio analizzato per attività di pulizia dei dati  
   
--   **Record corretti**: il numero di record che sono risultati corretti  
+-   **Record corretti**: Il numero di record sono stato trovato corretti  
   
--   **Record con correzione**: il numero di record cui sono state apportate correzioni  
+-   **Record con correzione**: Il numero di record sono stati corretti  
   
--   **Record suggeriti**: il numero di record che sono stati suggeriti  
+-   **Record suggeriti**: Il numero di record che sono stato suggerito  
   
--   **Record non validi**: il numero di record che sono risultati non validi  
+-   **Record non validi**: Il numero di record non è valido  
   
  Le statistiche relative ai campi includono:  
   
--   **Campo**: nome del campo nei dati di origine  
+-   **Campo**: Nome del campo nei dati di origine  
   
--   **Dominio**: nome del dominio di cui è stato eseguito il mapping al campo  
+-   **Dominio**: Nome del dominio che esegue il mapping al campo  
   
--   **Valori con correzione**: il numero di valori di dominio che sono stati corretti  
+-   **Valori con correzione**: Il numero di valori di dominio che sono stati corretti  
   
--   **Valori consigliati**: il numero di valori di dominio che sono stati suggeriti  
+-   **I valori suggeriti**: Il numero di valori di dominio che sono stati suggeriti  
   
--   **Completezza**: la completezza di ogni campo di origine di cui è stato eseguito il mapping per l'attività di pulizia  
+-   **Completezza**: La completezza di ogni campo di origine che viene eseguito il mapping per l'attività di pulizia  
   
--   **Accuratezza**: l'accuratezza di ogni campo di origine di cui è stato eseguito il mapping per l'attività di pulizia  
+-   **Accuratezza**: L'accuratezza di ogni campo di origine che viene eseguito il mapping per l'attività di pulizia  
   
  Il profiling DQS fornisce due dimensioni della qualità dei dati: *completezza* (l'entità della presenza dei dati) e *accuratezza* (la misura entro cui i dati possono essere utilizzati per gli scopi previsti). Se il profiling suggerisce che un campo è relativamente incompleto, è necessario rimuoverlo dalla Knowledge Base di un progetto Data Quality. È possibile che il profiling non fornisca statistiche di completezza affidabili per i domini compositi. Se sono necessarie statistiche di completezza, utilizzare domini singoli anziché domini compositi. Se si desidera utilizzare domini compositi, è consigliabile creare una Knowledge Base con domini singoli di cui eseguire il profiling per determinare la completezza, quindi creare un altro dominio con un dominio composito per il processo di pulizia. Ad esempio, il profiling potrebbe mostrare una completezza del 95% per record relativi a indirizzi, utilizzando un dominio composito, ma potrebbe esservi un livello di incompletezza molto più alto per una delle colonne, ad esempio una colonna relativa al codice postale (CAP). In questo esempio, è necessario misurare la completezza della colonna del CAP con un solo dominio. Il profiling fornirà probabilmente statistiche di accuratezza affidabili per i domini compositi perché è possibile misurare l'accuratezza di più colonne allo stesso tempo. Il valore di questi dati sta nell'aggregazione composta, pertanto è consigliabile misurarne l'accuratezza con un dominio composito.  
   

@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: performance
 ms.topic: conceptual
 helpviewer_keywords:
 - Broker / DBM Transport object
@@ -13,17 +13,17 @@ ms.assetid: eddb60b6-20a9-416c-adf3-4bc1687944fa
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: cb200c251f53ca67ca3e93da350325802f39ac14
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: b0347c7f7e19ae5500f8c5be100ef2d0dc663784
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48068691"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52748233"
 ---
 # <a name="sql-server-broker-and-dbm-transport-object"></a>Oggetto Trasporto Broker/mirroring del database di SQL Server
   L'oggetto prestazione **Trasporto Broker/DBM** include contatori delle prestazioni che contengono informazioni di rete per Service Broker e il mirroring del database. Nella tabella seguente sono elencati i contatori inclusi nell'oggetto.  
   
-|Contatore Trasporto Broker/DBM di SQL Server|Description|  
+|Contatore Trasporto Broker/DBM di SQL Server|Descrizione|  
 |------------------------------------------------|-----------------|  
 |**Byte correnti I/O ricezione**|Questo contatore indica il numero di byte letti dalle operazioni correnti di ricezione del trasporto.|  
 |**Byte correnti I/O invio**|Questo contatore indica il numero di byte nei frammenti di messaggi di cui è in corso l'invio in rete.|  

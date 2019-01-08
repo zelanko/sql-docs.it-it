@@ -5,8 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: language-reference
 f1_keywords:
 - sp_helpmergepublication
@@ -17,12 +16,12 @@ ms.assetid: dfe1e1e1-9a65-406a-aced-6385a078e135
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 26c19d33b9834d2a8cdf1ee0b05530138c3fa006
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 3328facfd0f19d6fa5f5f02a614c45cd22a79f76
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47717929"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52754125"
 ---
 # <a name="sphelpmergepublication-transact-sql"></a>sp_helpmergepublication (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -64,7 +63,7 @@ sp_helpmergepublication [ [ @publication = ] 'publication' ]
   
 ## <a name="result-sets"></a>Set di risultati  
   
-|Nome colonna|Tipo di dati|Description|  
+|Nome colonna|Tipo di dati|Descrizione|  
 |-----------------|---------------|-----------------|  
 |id|**int**|Ordine sequenziale della pubblicazione nell'elenco del set di risultati.|  
 |NAME|**sysname**|Nome della pubblicazione.|  
@@ -94,7 +93,7 @@ sp_helpmergepublication [ [ @publication = ] 'publication' ]
 |ftp_subdirectory|**nvarchar(255)**|Viene specificata la posizione in cui i file di snapshot possono essere prelevati dall'agente di merge quando lo snapshot viene recapitato tramite FTP.|  
 |ftp_login|**sysname**|Nome utente utilizzato per la connessione al servizio FTP.|  
 |conflict_retention|**int**|Viene specificato il periodo di memorizzazione dei conflitti espresso in giorni. Al trascorrere del numero di giorni specificati, la riga in conflitto viene eliminata dalla tabella dei conflitti.|  
-|keep_partition_changes|**int**|Specifica se viene eseguita l'ottimizzazione della sincronizzazione per la pubblicazione specificata. **keep_partition_changes** ha un valore predefinito è **0**. Un valore pari **0** significa che la sincronizzazione non è ottimizzata e le partizioni inviate a tutti i sottoscrittori vengono verificate quando si modificano i dati in una partizione.<br /><br /> **1** significa che la sincronizzazione è ottimizzata e vengono coinvolti solo i sottoscrittori con righe nella partizione modificata.<br /><br /> Nota: Per impostazione predefinita, le pubblicazioni di tipo merge utilizzano partizioni pre-calcolate, che fornisce un livello di ottimizzazione maggiore rispetto a questa opzione. Per altre informazioni, vedere [Parameterized Row Filters](../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md) e [Ottimizza prestazioni filtro con parametri con partizioni pre-calcolate](../../relational-databases/replication/merge/parameterized-filters-optimize-for-precomputed-partitions.md).|  
+|keep_partition_changes|**int**|Specifica se viene eseguita l'ottimizzazione della sincronizzazione per la pubblicazione specificata. **keep_partition_changes** ha un valore predefinito è **0**. Un valore pari **0** significa che la sincronizzazione non è ottimizzata e le partizioni inviate a tutti i sottoscrittori vengono verificate quando si modificano i dati in una partizione.<br /><br /> **1** significa che la sincronizzazione è ottimizzata e vengono coinvolti solo i sottoscrittori con righe nella partizione modificata.<br /><br /> Nota: Per impostazione predefinita, nelle pubblicazioni di tipo merge vengono utilizzate partizioni precalcolate tramite cui viene garantito un livello di ottimizzazione maggiore rispetto a questa opzione. Per altre informazioni, vedere [Parameterized Row Filters](../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md) e [Ottimizza prestazioni filtro con parametri con partizioni pre-calcolate](../../relational-databases/replication/merge/parameterized-filters-optimize-for-precomputed-partitions.md).|  
 |allow_subscription_copy|**int**|Specifica se la funzionalità che consente di copiare i database di sottoscrizione che sottoscrivono la pubblicazione è abilitata. Un valore pari **0** significa copia non è consentita.|  
 |allow_synctoalternate|**int**|Viene specificato se è consentito l'utilizzo di un partner di sincronizzazione alternativo per la sincronizzazione con il server di pubblicazione. Un valore pari **0** indica un partner di sincronizzazione non è consentito.|  
 |validate_subscriber_info|**nvarchar(500)**|Viene visualizzato un elenco delle funzioni utilizzate per il recupero delle informazioni sul Sottoscrittore e la convalida dei criteri per i filtri di riga con parametri nel Sottoscrittore. Inoltre, viene facilitata la verifica del partizionamento consistente delle informazioni a ogni operazione di unione.|  

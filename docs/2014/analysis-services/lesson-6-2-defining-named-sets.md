@@ -11,12 +11,12 @@ ms.assetid: 47254fd3-525f-4c35-b93d-316607652517
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 9970c8c086c14dcc49f741e47c48f76f9b9c6f96
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: bb982848854eef74363250c291b9f5676abec2f6
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48189131"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52507871"
 ---
 # <a name="defining-named-sets"></a>Definizione dei set denominati
   Un set denominato è un'espressione MDX (Multidimensional Expressions) che restituisce un set di membri della dimensione. È possibile definire set denominati e salvarli come parte della definizione del cubo, nonché creare set denominati in applicazioni client. I set denominati possono essere creati combinando dati del cubo, operatori aritmetici, numeri e funzioni. I set denominati possono essere utilizzati dagli utenti nelle query MDX in applicazioni client, nonché per definire set nei sottocubi. Un sottocubo è una raccolta di set di crossjoin che limita lo spazio del cubo nel sottospazio definito per istruzioni successive. La definizione di uno spazio del cubo limitato costituisce un concetto fondamentale dello scripting MDX.  
@@ -68,7 +68,7 @@ ms.locfileid: "48189131"
     Exists([Reseller].[Reseller Name].[Reseller Name].Members)  
     ```  
   
-     Ora che è stato definito il primo set per l'espressione set Exists è possibile aggiungere il secondo set, ovvero il set di membri della dimensione Reseller contenente il maggior numero di dipendenti.  
+     Ora che è stato definito il primo set per il metodo Exists espressione set, è possibile aggiungere il secondo set, il set di membri della dimensione Reseller contenente il maggior numero di dipendenti.  
   
 7.  Nel **metadati** scheda le **strumenti di calcolo** riquadro, espandere **Number of Employees** nella dimensione Reseller, espandere `Members`e quindi espandere **Tutti i rivenditori**.  
   
@@ -108,7 +108,7 @@ ms.locfileid: "48189131"
   
 ## <a name="browsing-the-cube-by-using-the-new-named-sets"></a>Esplorazione del cubo utilizzando i nuovi set denominati  
   
-1.  Scegliere **Distribuisci Analysis Services Tutorial** dal menu [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]Compila **di**.  
+1.  Nel menu **Compila** di [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)], scegliere **Distribuisci Analysis Services Tutorial**.  
   
 2.  Al termine delle operazioni di distribuzione, fare clic sulla scheda **Esplorazione** e fare clic su **Riconnetti**.  
   
@@ -133,7 +133,7 @@ ms.locfileid: "48189131"
      ![Riquadro filtro contenente due denominato imposta](../../2014/tutorials/media/l6-named-set-05.gif "imposta riquadro filtro contenente due denominato")  
   
 ## <a name="next-task-in-lesson"></a>Attività successiva della lezione  
- [Lezione 7: Definizione degli indicatori di prestazioni chiave &#40;KPI&#41;](../analysis-services/lesson-7-defining-key-performance-indicators-kpis.md)  
+ [Lezione 7: Definizione degli indicatori di prestazioni chiave &#40;indicatori KPI&#41;](../analysis-services/lesson-7-defining-key-performance-indicators-kpis.md)  
   
 ## <a name="see-also"></a>Vedere anche  
  [Calcoli](multidimensional-models-olap-logical-cube-objects/calculations.md)   

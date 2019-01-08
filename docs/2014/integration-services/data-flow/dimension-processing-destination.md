@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.dimensionprocessingdest.f1
@@ -18,12 +17,12 @@ ms.assetid: 4c49bb95-7259-42f4-a785-bb6aaf5f8566
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 3cd8b33e330a2edd9d6c93cb9ab00c68783ae5bc
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: b8b3e0e7b353ad37aeb3ce87e39bdfc52d2cbcb0
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48135421"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52749463"
 ---
 # <a name="dimension-processing-destination"></a>destinazione elaborazione dimensione
   La destinazione elaborazione dimensione consente di caricare ed elaborare una dimensione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . Per altre informazioni sulle dimensioni, vedere [Dimensioni &#40;Analysis Services - Dati multidimensionali&#41;](../../analysis-services/multidimensional-models-olap-logical-dimension-objects/dimensions-analysis-services-multidimensional-data.md).  
@@ -49,9 +48,9 @@ ms.locfileid: "48135421"
   
 -   [Editor destinazione elaborazione dimensione &#40;pagina Gestione connessione&#41;](../dimension-processing-destination-editor-connection-manager-page.md)  
   
--   [Editor destinazione elaborazione dimensione &#40;pagina mapping&#41;](../dimension-processing-destination-editor-mappings-page.md)  
+-   [Editor destinazione elaborazione dimensione &#40;pagina Mapping&#41;](../dimension-processing-destination-editor-mappings-page.md)  
   
--   [Editor destinazione elaborazione dimensione &#40;pagina avanzate&#41;](../dimension-processing-destination-editor-advanced-page.md)  
+-   [Editor destinazione elaborazione dimensione &#40;pagina Avanzate&#41;](../dimension-processing-destination-editor-advanced-page.md)  
   
  Nella finestra di dialogo **Editor avanzato** sono disponibili le proprietà che è possibile impostare a livello di codice. Per altre informazioni sulle proprietà che è possibile impostare nella finestra di dialogo **Editor avanzato** o a livello di programmazione, fare clic su uno degli argomenti seguenti:  
   

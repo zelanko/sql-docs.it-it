@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 f1_keywords:
 - vdt.dlgbox.fulltextindex
@@ -12,12 +12,12 @@ ms.assetid: ef45b585-2567-4abe-b421-9fd0994e0146
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: aac010a0dc1d9d6cd23b6ccdfbff5358455cddd6
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: adb00f8b0e7cb009420e9843532c3f3d4deb0833
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48080431"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52822745"
 ---
 # <a name="full-text-index-dialog-box-visual-database-tools"></a>Finestra di dialogo Indice full-text (Visual Database Tools)
   Questa finestra di dialogo consente di creare un indice full-text per eseguire ricerche full-text nelle colonne basate su testo delle tabelle di database. Poiché un indice di questo tipo si basa su un indice normale, è necessario innanzitutto creare tale indice. L'indice normale deve essere creato utilizzando una sola colonna non Null, preferibilmente con valori non particolarmente elevati.  
@@ -42,7 +42,7 @@ ms.locfileid: "48080431"
  Se viene espansa, visualizza **Colonne** e **Nome catalogo full-text**.  
   
  **Colonne**  
- Visualizza un elenco separato da virgole con i nomi delle colonne in cui è possibile effettuare la ricerca full-text. Per visualizzare l'elenco completo, fare clic sui puntini di sospensione (**…**) a sinistra del campo della proprietà.  
+ Visualizza un elenco separato da virgole con i nomi delle colonne in cui è possibile effettuare la ricerca full-text. Per visualizzare l'elenco completo, fare clic sul pulsante con i puntini di sospensione (**...**) a sinistra del campo della proprietà.  
   
  **Full-Text Catalog Name**  
  Visualizza il nome del catalogo full-text in cui è archiviato l'indice full-text. Per archiviare l'indice in un catalogo diverso, fare clic sul nome del catalogo e selezionarne un altro dall'elenco a discesa.  
@@ -53,7 +53,7 @@ ms.locfileid: "48080431"
  **Categoria Identità**  
  Se viene espansa, visualizza il campo del nome dell'indice.  
   
- **Nome**  
+ **Name**  
  Visualizza il nome specificato dal sistema per l'indice full-text.  
   
  **Categoria Progettazione tabelle**  
@@ -63,7 +63,7 @@ ms.locfileid: "48080431"
  Indica se è possibile eseguire una ricerca full-text utilizzando l'indice full-text.  
   
  **Impostazione ricerca delle modifiche**  
- Visualizza lo stato della ricerca delle modifiche per l'indice: Manuale, Automatico o Disattivato.  
+ Descrive lo stato di rilevamento delle modifiche per questo indice: Manuale, automatico o disattivato.  
   
  **Ricerca completata**  
  Indica se la ricerca più recente è stata completata. Se la proprietà è impostata su No, è in corso una ricerca.  
@@ -87,7 +87,7 @@ ms.locfileid: "48080431"
  Visualizza la data e l'ora di inizio della prossima ricerca.  
   
  **Tipo di ricerca corrente o più recente**  
- Visualizza il tipo della ricerca corrente o più recente: Completa, Incrementale, Aggiornamento o Propagazione automatica.  
+ Visualizza il tipo di ricerca corrente o più recente: Completa, incrementale, aggiornamento o propagazione automatica.  
   
  **Nome indice univoco**  
  Visualizza un elenco di tutti i nomi delle colonne del database con indici di colonne singole univoci. Queste colonne possono essere utilizzate per creare un indice full-text.  
