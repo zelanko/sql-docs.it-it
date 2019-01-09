@@ -11,15 +11,17 @@ items:
     href: quickstart-big-data-cluster-deploy.md
 - name: Esercitazioni
   items:
-  - name: 1_Eseguire query su dati HDFS
+  - name: 1_Caricare dati di esempio
+    href: tutorial-load-sample-data.md
+  - name: 2_Eseguire query su dati HDFS
     href: tutorial-query-hdfs-storage-pool.md
-  - name: 2_Eseguire query su dati Oracle
+  - name: 3_Eseguire query su dati Oracle
     href: tutorial-query-oracle.md
-  - name: 3_Caricare un pool di dati con SQL
+  - name: 4_Caricare un pool di dati con SQL
     href: tutorial-data-pool-ingest-sql.md
-  - name: 4_Caricare un pool di dati con Spark
+  - name: 5_Caricare un pool di dati con Spark
     href: tutorial-data-pool-ingest-spark.md
-  - name: 5_Eseguire un notebook Spark
+  - name: 6_Eseguire un notebook Spark
     href: tutorial-notebook-spark.md
 - name: Concetti
   items:
@@ -37,24 +39,32 @@ items:
     href: concept-data-persistence.md
   - name: Security
     href: concept-security.md
-- name: Guide alle procedure
+- name: Guide pratiche
   items:
   - name: Install
     items:
-    - name: Linee guida per la distribuzione
-      href: deployment-guidance.md
-    - name: Distribuire in Minikube
-      href: deploy-on-minikube.md
-    - name: Distribuire nel servizio Azure Kubernetes
-      href: deploy-on-aks.md
-    - name: Eseguire la distribuzione con Kubeadm
-      href: deploy-with-kubeadm.md
-    - name: Connettere con Azure Data Studio
-      href: deploy-big-data-tools.md
+    - name: Distribuire cluster Big Data
+      items:
+      - name: Linee guida per la distribuzione
+        href: deployment-guidance.md
+      - name: Distribuire in Minikube
+        href: deploy-on-minikube.md
+      - name: Distribuire nel servizio Azure Kubernetes
+        href: deploy-on-aks.md
+      - name: Eseguire la distribuzione con Kubeadm
+        href: deploy-with-kubeadm.md
+    - name: Installare gli strumenti
+      items:
+      - name: Installare strumenti Big Data
+        href: deploy-big-data-tools.md
+      - name: Installare mssqlctl
+        href: deploy-install-mssqlctl.md
   - name: Virtualizzazione dei dati
     items:
-    - name: Virtualizzare i dati esterni
+    - name: Virtualizzare i dati relazionali
       href: ../relational-databases/polybase/data-virtualization.md?toc=%2fsql%2fbig-data-cluster%2ftoc.json
+    - name: Virtualizzare i dati CSV
+      href: ../relational-databases/polybase/data-virtualization-csv.md?toc=%2fsql%2fbig-data-cluster%2ftoc.json
   - name: Inserimento dati
     items:
     - name: Caricare i dati con curl
@@ -73,6 +83,8 @@ items:
       href: export-model-with-spark-mleap.md
   - name: Gestire il cluster Big Data di SQL Server
     items:
+    - name: Connettersi a un cluster Big Data
+      href: connect-to-big-data-cluster.md
     - name: Portale di amministrazione cluster
       href: cluster-admin-portal.md
     - name: Risoluzione dei problemi di Kubernetes
@@ -97,9 +109,9 @@ items:
     href: ../relational-databases/polybase/polybase-guide.md
   - name: Richiedere l'accesso ai cluster Big Data
     href: https://aka.ms/eapsignup
-ms.openlocfilehash: fa4a5b29c4a4ebb3cb879de4a390effb76002ae9
-ms.sourcegitcommit: cb73d60db8df15bf929ca17c1576cf1c4dca1780
+ms.openlocfilehash: 3580372dfac82485e6c64bbb3d5b517ee34ede4a
+ms.sourcegitcommit: 33712a0587c1cdc90de6dada88d727f8623efd11
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/07/2018
-ms.locfileid: "51221617"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53595802"

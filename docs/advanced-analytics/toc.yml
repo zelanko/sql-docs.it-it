@@ -52,22 +52,32 @@ items:
   items:
   - name: R
     items:
+    - name: Verificare la presenza di R in SQL Server
+      href: tutorials/quickstart-r-verify.md
     - name: Hello World in R e SQL
-      href: tutorials/rtsql-using-r-code-in-transact-sql-quickstart.md
+      href: tutorials/quickstart-r-run-using-tsql.md
     - name: Gestire input e output
-      href: tutorials/rtsql-working-with-inputs-and-outputs.md
+      href: tutorials/quickstart-r-inputs-and-outputs.md
     - name: Gestire i tipi di dati e gli oggetti
-      href: tutorials/rtsql-r-and-sql-data-types-and-data-objects.md
+      href: tutorials/quickstart-r-data-types-and-objects.md
     - name: Uso delle funzioni R
-      href: tutorials/rtsql-using-r-functions-with-sql-server-data.md
+      href: tutorials/quickstart-r-functions.md
     - name: Creare un modello predittivo
-      href: tutorials/rtsql-create-a-predictive-model-r.md
-    - name: Eseguire la stima e il tracciato da un modello
-      href: tutorials/rtsql-predict-and-plot-from-model.md
+      href: tutorials/quickstart-r-create-predictive-model.md
+    - name: Eseguire la stima da un modello
+      href: tutorials/quickstart-r-predict-from-model.md
   - name: Python
     items:
-    - name: Eseguire Python con T-SQL
-      href: tutorials/run-python-using-t-sql.md
+    - name: Verificare la presenza di Python in SQL Server
+      href: tutorials/quickstart-python-verify.md
+    - name: Hello World in Python e SQL
+      href: tutorials/quickstart-python-run-using-t-sql.md
+    - name: Gestire input e output
+      href: tutorials/quickstart-python-inputs-and-outputs.md
+    - name: Strutture dei dati di Python e SQL
+      href: tutorials/quickstart-python-data-structures.md
+    - name: Eseguire il training del primo modello e usarlo
+      href: tutorials/quickstart-python-train-score-in-tsql.md
 - name: Esercitazioni
   href: tutorials/machine-learning-services-tutorials.md
   items:
@@ -79,24 +89,6 @@ items:
       href: tutorials/demo-data-iris-in-sql.md
     - name: Set di dati NYC Taxi
       href: tutorials/demo-data-nyctaxi-in-sql.md
-  - name: Python
-    href: tutorials/sql-server-python-tutorials.md
-    items:
-    - name: Eseguire il training del primo modello e usarlo
-      href: tutorials/train-score-using-python-in-tsql.md
-    - name: Creare un modello Python usando revoscalepy
-      href: tutorials/use-python-revoscalepy-to-create-model.md
-    - name: Informazioni sull'analisi nel database
-      href: tutorials/sqldev-in-database-python-for-sql-developers.md
-      items:
-      - name: 1 - Esplorazione dati
-        href: tutorials/sqldev-py3-explore-and-visualize-the-data.md
-      - name: 2 - Progettazione delle funzionalità
-        href: tutorials/sqldev-py4-create-data-features-using-t-sql.md
-      - name: 3 - Eseguire il training e distribuire
-        href: tutorials/sqldev-py5-train-and-save-a-model-using-t-sql.md
-      - name: 4 - Stime
-        href: tutorials/sqldev-py6-operationalize-the-model.md
   - name: R
     href: tutorials/sql-server-r-tutorials.md
     items:
@@ -157,6 +149,22 @@ items:
         href: tutorials/deepdive-move-data-between-sql-server-and-xdf-file.md
       - name: Inviare codice R personalizzato mediante rxExec
         href: tutorials/r-tutorial-custom-r-functions.md
+  - name: Python
+    href: tutorials/sql-server-python-tutorials.md
+    items:
+    - name: Creare un modello Python usando revoscalepy
+      href: tutorials/use-python-revoscalepy-to-create-model.md
+    - name: Informazioni sull'analisi nel database
+      href: tutorials/sqldev-in-database-python-for-sql-developers.md
+      items:
+      - name: 1 - Esplorazione dati
+        href: tutorials/sqldev-py3-explore-and-visualize-the-data.md
+      - name: 2 - Progettazione delle funzionalità
+        href: tutorials/sqldev-py4-create-data-features-using-t-sql.md
+      - name: 3 - Eseguire il training e distribuire
+        href: tutorials/sqldev-py5-train-and-save-a-model-using-t-sql.md
+      - name: 4 - Stime
+        href: tutorials/sqldev-py6-operationalize-the-model.md
 - name: Esempi
   href: https://github.com/Microsoft/sql-server-samples
 - name: Soluzioni
@@ -180,8 +188,6 @@ items:
       href: r/installing-and-managing-r-packages.md
     - name: Ottenere informazioni sui pacchetti
       href: r/determine-which-packages-are-installed-on-sql-server.md
-    - name: Installare nuovi pacchetti Python
-      href: python/install-additional-python-packages-on-sql-server.md
     - name: Installare nuovi pacchetti R
       href: r/install-additional-r-packages-on-sql-server.md
       items:
@@ -200,22 +206,28 @@ items:
         href: r/create-a-local-package-repository-using-minicran.md
       - name: Suggerimenti per l'uso di pacchetti R
         href: r/packages-installed-in-user-libraries.md
+    - name: Installare nuovi pacchetti Python
+      href: python/install-additional-python-packages-on-sql-server.md
   - name: Esplorazione e modellazione dei dati
     items:
-    - name: Librerie e tipi di dati R
+    - name: Conversioni dei tipi di dati da R a SQL
       href: r/r-libraries-and-data-types.md
-    - name: Librerie e tipi di dati Python
+    - name: Conversioni dei tipi di dati da Python a SQL
       href: python/python-libraries-and-data-types.md
-    - name: Modellazione predittiva con R
-      href: r/data-exploration-and-predictive-modeling-with-r.md
     - name: Caricare oggetti R usando ODBC
       href: r/save-and-load-r-objects-from-sql-server-using-odbc.md
-    - name: Conversione di codice R per l'uso in Machine Learning Services
-      href: r/converting-r-code-for-use-in-sql-server.md
-    - name: Creazione di più modelli con rxExecBy
-      href: r/creating-multiple-models-using-rxexecby.md
     - name: Usare dati dai cubi OLAP in R
       href: r/using-data-from-olap-cubes-in-r.md
+    - name: Come creare query MDX con olapR
+      href: r/how-to-create-mdx-queries-using-olapr.md
+    - name: Modellazione predittiva con R
+      href: r/data-exploration-and-predictive-modeling-with-r.md
+    - name: Creare più modelli con rxExecBy
+      href: r/creating-multiple-models-using-rxexecby.md
+  - name: Distribuzione
+    items:
+    - name: Convertire il codice R per SQL Server
+      href: r/converting-r-code-for-use-in-sql-server.md
     - name: Creare una stored procedure con sqlrutils
       href: r/how-to-create-a-stored-procedure-using-sqlrutils.md
   - name: Stime
@@ -226,7 +238,7 @@ items:
       href: real-time-scoring.md
     - name: Punteggio nativo con PREDICT T-SQL
       href: sql-native-scoring.md
-  - name: restazioni
+  - name: Prestazioni
     items:
     - name: Panoramica dell'ottimizzazione delle prestazioni per R
       href: r/sql-server-r-services-performance-tuning.md
@@ -269,25 +281,23 @@ items:
     - name: Funzioni di profiling del codice R
       href: r/using-r-code-profiling-functions.md
 - name: Riferimento
-  href: r/machine-learning-services-r-reference.md
   items:
   - name: Pacchetti R
-    href: r/machine-learning-services-r-reference.md
     items:
-    - name: olapR in SQL
-      href: r/how-to-create-mdx-queries-using-olapr.md
-    - name: MicrosoftML in SQL
-      href: using-the-microsoftml-package.md
-    - name: RevoScaleR in SQL
-      href: r/revoscaler-overview.md
-    - name: Elenco delle funzioni RevoScaleR per i dati di SQL Server
-      href: r/scaler-functions-for-working-with-sql-server-data.md
-    - name: sqlrutils in SQL
-      href: r/generating-an-r-stored-procedure-for-r-code-using-the-sqlrutils-package.md
+    - name: RevoScaleR
+      href: r/ref-r-revoscaler.md
+    - name: MicrosoftML
+      href: r/ref-r-microsoftml.md
+    - name: olapR
+      href: r/ref-r-olapr.md
+    - name: sqlRUtils
+      href: r/ref-r-sqlrutils.md
   - name: Pacchetti Python
     items:
-    - name: revoscalepy in SQL
-      href: python/what-is-revoscalepy.md
+    - name: revoscalepy
+      href: python/ref-py-revoscalepy.md
+    - name: microsoftml
+      href: python/ref-py-microsoftml.md
 - name: Risorse
   items:
   - name: Note sulla versione
@@ -319,9 +329,9 @@ items:
       href: https://social.msdn.microsoft.com/Forums/sqlserver/home?category=sqlserver
     - name: Machine Learning Server
       href: https://social.msdn.microsoft.com/Forums/en-US/home?forum=MicrosoftR
-ms.openlocfilehash: e400aa9026b3a2684ffc5f436e4fe43cba3c52d4
-ms.sourcegitcommit: 0395ffeb6e51b5d653fa23673e564c4c0cfe4f57
+ms.openlocfilehash: 9e76e68b7b970c64050136b3ae9cb9c486c297c2
+ms.sourcegitcommit: baca29731a1be4f8fa47567888278394966e2af7
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/01/2018
-ms.locfileid: "52717194"
+ms.lasthandoff: 01/04/2019
+ms.locfileid: "54046601"
