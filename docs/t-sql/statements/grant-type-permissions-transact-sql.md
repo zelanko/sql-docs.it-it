@@ -18,12 +18,12 @@ ms.assetid: 14bd2fb3-1446-49c0-be87-c6a670317ed0
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 5b2cc4e32272a337a196d93df8c3101a3bbbad8a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b0769e3435cf09b4c69ddbc2f75f3e866e2a61a3
+ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47808359"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53588745"
 ---
 # <a name="grant-type-permissions-transact-sql"></a>GRANT - autorizzazioni per tipi (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -56,7 +56,7 @@ GRANT permission  [ ,...n ] ON TYPE :: [ schema_name . ] type_name
  *permission*  
  Specifica un'autorizzazione che può essere concessa per un tipo. Per un elenco delle autorizzazioni, vedere la sezione Osservazioni di seguito in questo argomento.  
   
- ON TYPE **::** [ *schema_name***.** ] *type_name*  
+ ON TYPE **::** [ _schema_name_**.** ] *type_name*  
  Specifica il tipo per cui viene concessa l'autorizzazione. Il qualificatore di ambito (**::**) è obbligatorio. Se si omette *schema_name*, verrà usato lo schema predefinito. Se si specifica *schema_name*, il qualificatore di ambito dello schema (**.**) è obbligatorio.  
   
  TO \<database_principal> Specifica l'entità di sicurezza a cui viene concessa l'autorizzazione.  

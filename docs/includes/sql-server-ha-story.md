@@ -35,7 +35,7 @@ Poiché i gruppi di disponibilità assicurano la protezione solo a livello di da
 
 Un gruppo di disponibilità ha anche un altro componente denominato listener, che consente alle applicazioni e agli utenti finali di connettersi senza dover sapere quale istanza di SQL Server ospita la replica primaria. Ogni gruppo di disponibilità ha il proprio listener. Le implementazioni del listener sono leggermente diverse in Windows Server rispetto a Linux, ma la funzionalità e la modalità di utilizzo sono le stesse. L'immagine seguente illustra un gruppo di disponibilità basato su Windows Server che usa Windows Server Failover Cluster (WSFC). Sia in Linux che in Windows Server è necessario un cluster sottostante a livello di sistema operativo per la disponibilità. Nell'esempio viene illustrata una configurazione semplice a due server, o nodi, in cui un cluster WSFC è il cluster sottostante. 
 
-![Gruppo di disponibilità semplice][SimpleAG]
+![Gruppo di disponibilità semplice](media/sql-server-ha-story/image1.png)
  
 Standard Edition ed Enterprise Edition hanno valori massimi diversi per quanto riguarda le repliche. Un gruppo di disponibilità in Standard Edition, noto come gruppo di disponibilità di base, supporta due repliche, una primaria e una secondaria, con un singolo database nel gruppo di disponibilità. Enterprise Edition non solo consente la configurazione di più database in un unico gruppo di disponibilità, ma può anche avere fino a nove repliche in totale, una primaria e otto secondarie. Enterprise Edition offre anche altri vantaggi facoltativi, ad esempio le repliche secondarie leggibili, la possibilità di eseguire copie di backup da una replica secondaria e altro ancora.
 
@@ -81,13 +81,13 @@ Per gli utenti che vogliono semplicemente aggiungere altre copie di sola lettura
 
 La schermata riportata di seguito illustra il supporto per i diversi tipi di cluster in SSMS. È necessario che sia in esecuzione la versione 17.1 o successiva. La schermata seguente è tratta dalla versione 17.2.
 
-![Opzioni del gruppo di disponibilità SSMS][SSMSAGOptions]
+![Opzioni del gruppo di disponibilità SSMS](media/sql-server-ha-story/image2.png)
  
 ##### <a name="requiredsynchronizedsecondariestocommit"></a>REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT
 
 SQL Server 2016 ha incrementato il supporto per il numero di repliche sincrone da due a tre in Enterprise Edition. Tuttavia, se una replica secondaria viene sincronizzata ma nell'altra si verifica un problema, non esiste un modo per controllare il comportamento in modo da indicare alla replica primaria di attendere la replica che si comporta in modo errato o consentirle di continuare. Ciò significa che la replica primaria a un certo punto continuerebbe a ricevere traffico in scrittura anche se la replica secondaria non è in uno stato sincronizzato, ovvero si ha una perdita di dati nella replica secondaria.
 In SQL Server 2017 ora è disponibile un'opzione in grado di controllare il comportamento dell'azione che si verifica quando sono presenti repliche sincrone denominate REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT. L'opzione funziona come indicato di seguito:
-* Esistono tre valori possibili: 0, 1 e 2
+* I tre valori possibili sono: 0, 1 e 2
 * Il valore è il numero di repliche secondarie che devono essere sincronizzate, con implicazioni per la perdita di dati, la disponibilità di gruppo di disponibilità e il failover
 * Per i cluster WSFC e il tipo di cluster None il valore predefinito è 0 e può essere impostato manualmente su 1 o 2
 * Per il tipo di cluster External, per impostazione predefinita, il meccanismo di cluster imposta il valore, che può essere sostituito manualmente. Per tre repliche sincrone, il valore predefinito sarà 1.
@@ -111,11 +111,11 @@ Un altro miglioramento apportato al supporto DTC per i gruppi di disponibilità 
 #### <a name="always-on-failover-cluster-instances"></a>Istanze del cluster di failover Always On
 Le installazioni in cluster sono una funzionalità di SQL Server a partire dalla versione 6.5. Le istanze FCI sono un metodo efficace per garantire la disponibilità per l'intera installazione di SQL Server, nota come istanza. Ciò significa che tutti gli elementi all'interno dell'istanza, tra cui database, SQL Server Agent - processi, server collegati e così via, verranno spostati in un altro server nel caso in cui si verifichi un problema con il server sottostante. Tutte le istanze FCI richiedono un'archiviazione condivisa, anche se disponibile attraverso la rete. Le risorse dell'istanza FCI possono essere eseguite da, ed essere di proprietà di, un solo nodo alla volta. Nell'immagine seguente il primo nodo del cluster è proprietario dell'istanza FCI, quindi è anche proprietario delle risorse di archiviazione condivise associate, come indica la linea continua tra il nodo e la risorsa di archiviazione.
 
-![Istanza del cluster di failover][BasicFCI]
+![Istanza del cluster di failover](media/sql-server-ha-story/image3.png)
  
 Dopo un failover la proprietà cambia come illustra l'immagine seguente.
 
-![Dopo il failover][PostFailoverFCI]
+![Dopo il failover](media/sql-server-ha-story/image4.png)
  
 La perdita di dati è zero con un'istanza FCI, ma l'archiviazione condivisa sottostante è un singolo punto di errore poiché è presente una sola copia dei dati. Le istanze FCI vengono spesso combinate con un altro metodo di disponibilità, ad esempio un gruppo di disponibilità o il log shipping, per avere copie ridondanti dei database. Il metodo aggiuntivo distribuito deve usare una risorsa di archiviazione fisicamente separata dall'istanza FCI. Quando l'istanza FCI effettua il failover a un altro nodo, si interrompe in un nodo e inizia in un altro, come se si spegnesse e riaccendesse un server. Un'istanza FCI passa attraverso il normale processo di recupero, ovvero viene eseguito il rollforward di tutte le transazioni che lo richiedono e per tutte le transazioni incomplete viene eseguito il rollback. Di conseguenza, il database è coerente da un punto dati al momento dell'errore o del failover manuale, quindi non vi è perdita di dati. I database sono disponibili solo al termine del recupero, quindi il tempo di recupero dipende da molti fattori ed è in genere più lungo del failover effettuato in un gruppo di disponibilità. Lo svantaggio è che quando si esegue il failover in un gruppo di disponibilità, può essere necessario eseguire ulteriori operazioni per poter usare un database, ad esempio abilitare un processo di SQL Server Agent.
 
@@ -132,7 +132,7 @@ Se il punto di recupero e gli obiettivi del tempo di recupero sono più flessibi
 > [!IMPORTANT] 
 > In Linux SQL Server Agent - processi non è incluso come parte dell'installazione di SQL Server. È disponibile nel pacchetto mssql-server-Agent - processi, che deve a sua volta essere installato per usare il log shipping.
 
-![Log Shipping][LogShipping]
+![Log Shipping](media/sql-server-ha-story/image5.png)
  
 Senza dubbio il principale vantaggio offerto dal log shipping in alcune capacità è che prende in considerazione l'errore umano. L'applicazione dei log delle transazioni può subire un ritardo. Quindi, se ad esempio qualcuno rilascia un oggetto UPDATE senza una clausola WHERE, lo standby può non contenere la modifica ed è quindi possibile usarlo mentre si ripara il sistema primario. Benché il log shipping sia facile da configurare, il passaggio dall'istanza primaria al warm standby, noto come modifica del ruolo, è sempre manuale. Una modifica del ruolo viene avviata attraverso Transact-SQL e, come per un gruppo di disponibilità, tutti gli oggetti non acquisiti nel log delle transazioni devono essere sincronizzati manualmente. Il log shipping deve inoltre essere configurato per ogni database, mentre un singolo gruppo di disponibilità può contenere più database. A differenza di un gruppo di disponibilità o un'istanza FCI, il log shipping non è in grado di astrarre le modifiche di ruolo. Le applicazioni devono essere in grado di gestire questa situazione. È possibile ricorrere a tecniche come l'alias DNS (CNAME), ma esistono pro e contro, ad esempio il tempo necessario per l'aggiornamento di DNS dopo il passaggio.
 
@@ -144,17 +144,17 @@ Quando la località di disponibilità primaria è interessata da un evento catas
 
 Uno dei vantaggi offerti dai gruppi di disponibilità è che sia la disponibilità elevata che il ripristino di emergenza possono essere configurati usando una sola funzionalità. Se non è necessario garantire la disponibilità elevata anche per l'archiviazione condivisa, è molto più semplice avere repliche che sono locali in un data center per la disponibilità elevata e remote in altri data center per il ripristino di emergenza, ognuna con archiviazione separata. Avere copie aggiuntive del database è il compromesso per garantire la ridondanza. Di seguito è riportato un esempio di gruppo di disponibilità che si estende in più data center. Una sola replica primaria è responsabile della sincronizzazione costante di tutte le repliche secondarie.
 
-![Gruppo di disponibilità][AG]
+![Gruppo di disponibilità](media/sql-server-ha-story/image6.png)
  
 All'esterno di un gruppo di disponibilità con tipo di cluster None, un gruppo di disponibilità richiede che tutte le repliche siano parte dello stesso cluster sottostante, sia che si tratti di WSFC o Pacemaker. Ciò significa che nell'immagine precedente il cluster WSFC viene esteso per lavorare in due diversi data center e questo accresce la complessità, indipendentemente dalla piattaforma (Windows Server o Linux). L'estensione dei cluster oltre una certa distanza aggiunge complessità. Introdotto in SQL Server 2016, un gruppo di disponibilità distribuito consente a un gruppo di disponibilità di estendersi su gruppi di disponibilità configurati in cluster diversi. In questo modo si disaccoppia il requisito in base al quale tutti i nodi devono far parte dello stesso cluster e si semplifica notevolmente la configurazione del ripristino di emergenza. Per altre informazioni sui gruppi di disponibilità distribuiti, vedere [Gruppi di disponibilità distribuiti](https://docs.microsoft.com/sql/database-engine/availability-groups/windows/distributed-availability-groups).
 
-![Gruppo di disponibilità distribuito][DAG]
+![Gruppo di disponibilità distribuito](media/sql-server-ha-story/image11.png)
  
 ### <a name="always-on-failover-cluster-instances"></a>Istanze del cluster di failover Always On
 
 Le istanze FCI possono essere usate per il ripristino di emergenza. Come con un normale gruppo di disponibilità, il meccanismo di cluster sottostante deve essere esteso anche a tutte le posizioni e questo aggiunge complessità. C'è un'altra considerazione da fare per le istanze FCI: l'archiviazione condivisa. Gli stessi dischi devono essere disponibili nei siti primari e secondari, quindi è necessario un metodo esterno, ad esempio una funzionalità offerta dal produttore della risorsa di archiviazione a livello di hardware o l'uso di Replica di archiviazione in Windows Server, per garantire che i dischi utilizzati dall'istanza FCI esistano altrove. 
 
-![FCI Always On][AlwaysOnFCI]
+![FCI Always On](media/sql-server-ha-story/image8.png)
  
 ### <a name="log-shipping"></a>Log shipping
 Il log shipping è uno dei metodi usati da più tempo per il ripristino di emergenza dei database di SQL Server. Il log shipping viene spesso usato in combinazione con i gruppi di disponibilità e le istanze FCI per offrire un ripristino di emergenza semplice ed economico in situazioni che possono essere complesse a causa dell'ambiente, delle competenze amministrative o del budget. Analogamente alla disponibilità elevata per il log shipping, molti ambienti ritardano il caricamento di un log delle transazioni per tenere conto dell'errore umano.
@@ -174,7 +174,7 @@ Se l'obiettivo è la migrazione a nuovi server e non la modifica della configura
 
 I gruppi di disponibilità distribuiti sono anche un altro metodo per eseguire la migrazione a una nuova configurazione o l'aggiornamento di SQL Server. Poiché un gruppo di disponibilità distribuito supporta diversi gruppi di disponibilità sottostanti in architetture diverse, è possibile ad esempio passare da SQL Server 2016 in esecuzione in Windows Server 2012 R2 a SQL Server 2017 in esecuzione in Windows Server 2016. 
 
-![Gruppo di disponibilità distribuito][image10]
+![Gruppo di disponibilità distribuito](media/sql-server-ha-story/image10.png)
 
 Infine, i gruppi di disponibilità con un tipo di cluster None possono essere usati anche per la migrazione o l'aggiornamento. Non è possibile combinare e far corrispondere i tipi di cluster in una configurazione tipica di gruppi di disponibilità, quindi tutte le repliche devono essere di tipo None. Un gruppo di disponibilità distribuito può essere usato per estendere gruppi di disponibilità configurati con diversi tipi di cluster. Questo metodo è supportato anche in piattaforme diverse del sistema operativo.
 
@@ -218,7 +218,7 @@ Prima di analizzare gli scenari multipiattaforma e di interoperabilità, è nece
 
 I gruppi di disponibilità distribuiti sono progettati in modo da estendere le configurazioni con gruppi di disponibilità e i due cluster sottostanti ai gruppi di disponibilità possono essere due cluster WSFC, o distribuzioni Linux, diversi o essere uno in un cluster WSFC e l'altro in Linux. Un gruppo di disponibilità distribuito sarà il metodo principale per ottenere una soluzione multipiattaforma. Un gruppo di disponibilità distribuito è anche la soluzione principale per le migrazioni, ad esempio la conversione di un'infrastruttura SQL Server basata su Windows Server in un'infrastruttura basata su Linux, se questo è l'obiettivo dell'azienda. Come indicato in precedenza, i gruppi di disponibilità, e in particolare i gruppi di disponibilità distribuiti, consentono di ridurre il periodo di tempo in cui un'applicazione non è disponibile per l'uso. Un esempio di gruppo di disponibilità distribuito che si estende in un cluster WSFC e Pacemaker è illustrato di seguito.
 
-![Gruppo di disponibilità distribuito][BasicDAG]
+![Gruppo di disponibilità distribuito](media/sql-server-ha-story/image9.png)
  
 Se un gruppo di disponibilità è configurato con un tipo di cluster None, è in grado di estendere Windows Server e Linux, nonché più distribuzioni Linux. Poiché non si tratta di una configurazione con disponibilità elevata reale, non deve essere usata per le distribuzioni cruciali, ma per gli scenari di scalabilità in lettura o di migrazione/aggiornamento.
 
@@ -230,12 +230,12 @@ Poiché il log shipping si basa essenzialmente su backup e ripristino, non esist
 
 Da quando sono state introdotte in SQL Server 2012, le repliche secondarie possono essere usate per le query di sola lettura. L'operazione può essere eseguita in due modi con un gruppo di disponibilità: consentendo l'accesso diretto alla replica secondaria e [configurando il routing di sola lettura](https://docs.microsoft.com/sql/database-engine/availability-groups/windows/configure-read-only-routing-for-an-availability-group-sql-server), che richiede l'uso del listener.  SQL Server 2016 ha introdotto la possibilità di bilanciare il carico delle connessioni di sola lettura attraverso il listener usando un algoritmo round robin, che consente la diffusione delle richieste di sola lettura in tutte le repliche leggibili. 
 
-> [!NOTE] 
-Le repliche secondarie leggibili sono una funzionalità presente solo in Enterprise Edition e ogni istanza che ospita una replica leggibile deve avere una licenza di SQL Server.
+> [!NOTE]
+> Le repliche secondarie leggibili sono una funzionalità presente solo in Enterprise Edition e ogni istanza che ospita una replica leggibile deve avere una licenza di SQL Server.
 
 Il ridimensionamento delle copie leggibili di un database usando i gruppi di disponibilità è stato introdotto con i gruppi di disponibilità distribuiti in SQL Server 2016. Questo consente alle aziende di avere copie di sola lettura del database non solo a livello locale, ma anche a livello regionale e globale con esigenze minime in termini di configurazione e di ridurre il traffico di rete e la latenza grazie all'esecuzione locale delle query. Ogni replica primaria di un gruppo di disponibilità può inizializzare altri due gruppi di disponibilità anche se non è la copia con funzioni di lettura/scrittura complete, quindi ogni gruppo di disponibilità distribuito può supportare fino a 27 copie dei dati leggibili. 
 
-![Gruppo di disponibilità distribuito][DAG]
+![Gruppo di disponibilità distribuito](media/sql-server-ha-story/image11.png)
 
 A partire da SQL Server 2017, è possibile creare una soluzione di sola lettura near real time con i gruppi di disponibilità configurati con un cluster di tipo None. Se l'obiettivo è usare i gruppi di disponibilità per le repliche secondarie leggibili e non per la disponibilità, questa operazione elimina la complessità dell'uso di un cluster WSFC o Pacemaker e offre i vantaggi in termini di leggibilità di un gruppo di disponibilità in un metodo di distribuzione più semplice. 
 

@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: b3884576-1f7e-4d40-bb7d-168312333bb3
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 56ab751d420fe323b641d3fea0e7454d20447e15
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+ms.openlocfilehash: 90b1e966a2f62877e658658048b12427bca109cc
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50031860"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53202410"
 ---
 # <a name="dataset-fields-collection-report-builder-and-ssrs"></a>Raccolta di campi del set di dati (Generatore report e SSRS)
   I campi del set di dati rappresentano i dati provenienti da una connessione dati. Un campo può presentare dati numerici o non numerici. Possono essere inclusi, ad esempio, importi delle vendite, vendite totali, nomi dei clienti, identificatori di database, URL, immagini, dati spaziali e indirizzi di posta elettronica. Nell'area di progettazione i campi vengono visualizzati come espressioni in elementi del report quali caselle di testo, tabelle e grafici.  
@@ -55,7 +55,7 @@ ms.locfileid: "50031860"
 ### <a name="using-extended-field-properties"></a>Utilizzo delle proprietà di campo estese  
  Le origini dati che supportano query multidimensionali, ad esempio [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], supportano anche le proprietà di campo per i campi. Tali proprietà vengono visualizzate nel set di risultati per una query, ma non sono visibili nel riquadro **Dati report** . È possibile comunque usarle nel report. Per fare riferimento a una proprietà per un campo, trascinare il campo nel report e modificare la proprietà predefinita **Value** impostandola sul nome del campo della proprietà desiderata. In un cubo di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , ad esempio, è possibile definire formati per i valori presenti nelle celle del cubo. Il valore formattato è disponibile se si usa la proprietà di campo **FormattedValue**. Per usare direttamente il valore anziché usare un valore e impostare la proprietà del formato della casella di testo, trascinare il campo nella casella di testo e impostare l'espressione predefinita `=Fields!FieldName.Value` su `=Fields!FieldName.FormattedValue`.  
   
-> [!NOTE]  
+> [!NOTE]
 >  Solo alcune proprietà **Field** possono essere usate per tutte le origini dati. Le proprietà **Value** e **IsMissing** vengono definite per tutte le origini dati. Altre proprietà predefinite, ad esempio **Key**, **UniqueName**e **ParentUniqueName** per origini dati multidimensionali, sono supportate solo se sono disponibili nell'origine dati. Le proprietà personalizzate sono supportate da alcuni provider di dati. Per altre informazioni, vedere gli argomenti specifici sulle proprietà di campo estese per il tipo di origine dati in [Set di dati condivisi e incorporati del report &#40;Generatore report e SSRS&#41;](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md). Ad esempio, per un'origine dati [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], vedere [Proprietà di campo estese per un database di Analysis Services &#40;SSRS&#41;](../../reporting-services/report-data/extended-field-properties-for-an-analysis-services-database-ssrs.md).  
   
   
@@ -70,7 +70,7 @@ ms.locfileid: "50031860"
 ##  <a name="DataTypes"></a> Tipi di dati dei campi  
  Quando si crea un set di dati, i tipi di dati dei campi nell'origine dati potrebbero non corrispondere esattamente ai tipi di dati utilizzati in un report. Ai tipi di dati possono essere applicati uno o due livelli di mapping. L'estensione per l'elaborazione dati o il provider di dati può eseguire il mapping dei tipi di dati dall'origine dati a tipi di dati CLR (Common Language Runtime). I tipi di dati restituiti dalle estensioni per l'elaborazione dei dati vengono su cui viene eseguito il mapping a un subset di tipi di dati CLR da [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)].  
   
- Nell'origine dati i dati vengono archiviati in tipi di dati supportati dall'origine stessa. I dati presenti in un database di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , ad esempio, devono essere di un tipo supportato da [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , come **nvarchar** o **datetime**. Quando vengono recuperati dall'origine dati, i dati vengono passati attraverso un'estensione per l'elaborazione dati o un provider di dati associato al tipo di origine dati. In base all'estensione per l'elaborazione dati, i dati possono essere convertiti dai tipi usati dall'origine dati in tipi di dati supportati dall'estensione per l'elaborazione dati. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] usa i tipi di dati supportati da Common Language Runtime (CLR) installato con [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]. Il provider di dati esegue il mapping di ogni colonna nel set di risultati dal tipo di dati nativo a un tipo di dati CLR di [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] :  
+ Nell'origine dati i dati vengono archiviati in tipi di dati supportati dall'origine stessa. I dati presenti in un database di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , ad esempio, devono essere di un tipo supportato da [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , come **nvarchar** o **datetime**. Quando vengono recuperati dall'origine dati, i dati vengono passati attraverso un'estensione per l'elaborazione dati o un provider di dati associato al tipo di origine dati. In base all'estensione per l'elaborazione dati, i dati possono essere convertiti dai tipi utilizzati dall'origine dati in tipi di dati supportati dall'estensione per l'elaborazione dati. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] usa i tipi di dati supportati da Common Language Runtime (CLR) installato con [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]. Il provider di dati esegue il mapping di ogni colonna nel set di risultati dal tipo di dati nativo a un tipo di dati CLR di [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] :  
   
  In ogni fase i dati vengono rappresentati dai tipi di dati in base a quanto descritto nell'elenco seguente.  
   
@@ -91,7 +91,7 @@ ms.locfileid: "50031860"
   
     |Tipo di dati SQL|Tipo di dati CLR|Descrizione|  
     |-------------------|-------------------|-----------------|  
-    |**Date**|**DateTime**|Solo data|  
+    |**Data**|**DateTime**|Solo data|  
     |**Time**|**TimeSpan**|Solo ora|  
     |**DateTimeTZ**|**DateTimeOffset**|Data e ora con differenza di fuso orario|  
     |**DateTime2**|**DateTime**|Data e ora con millisecondi frazionari|  

@@ -23,12 +23,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=aps-pdw-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 2220349cf0ab3db2a31e2c520fc8ef92acb48eb9
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 7544e79400c2b85b11330825866909a05acdfd09
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47762419"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53213760"
 ---
 # <a name="create-database-scoped-credential-transact-sql"></a>CREATE DATABASE SCOPED CREDENTIAL (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -56,7 +56,7 @@ WITH IDENTITY = 'identity_name'
   
  SECRET **='**_secret_**'**  
  Specifica il segreto richiesto per l'autenticazione in uscita. È necessario specificare `SECRET` per importare un file dall'archiviazione BLOB di Azure. Per caricare dati dall'archiviazione BLOB di Azure in SQL Data Warehouse, il segreto deve essere la chiave di archiviazione di Azure.  
->  [!WARNING]
+> [!WARNING]
 >  Il valore della chiave di firma di accesso condiviso può iniziare con "?" (punto interrogativo). Quando si usa la chiave di firma di accesso condiviso, è necessario rimuovere il carattere "?" iniziale, altrimenti potrebbe verificarsi un blocco.  
   
 ## <a name="remarks"></a>Remarks  
@@ -100,7 +100,7 @@ CREATE DATABASE SCOPED CREDENTIAL AppCred WITH IDENTITY = 'Mary5',
 GO  
 ```  
 
-### <a name="b-creating-a-database-scoped-credential-for-a-shared-access-signature"></a>B. Creazione di credenziali con ambito database per una firma di accesso condiviso.   
+### <a name="b-creating-a-database-scoped-credential-for-a-shared-access-signature"></a>b. Creazione di credenziali con ambito database per una firma di accesso condiviso.   
 Nell'esempio seguente viene creata una credenziale con ambito database che può essere usata per creare un'[origine dati esterna](../../t-sql/statements/create-external-data-source-transact-sql.md) che può eseguire operazioni in blocco, come ad esempio [BULK INSERT](../../t-sql/statements/bulk-insert-transact-sql.md) e [OPENROWSET](../../t-sql/functions/openrowset-transact-sql.md). Le firme di accesso condiviso non possono essere usate con PolyBase in SQL Server, nella piattaforma di strumenti analitici o in SQL DW.
 ```sql
 CREATE DATABASE SCOPED CREDENTIAL MyCredentials  

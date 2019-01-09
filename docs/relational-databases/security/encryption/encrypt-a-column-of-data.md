@@ -1,7 +1,7 @@
 ---
 title: Crittografare una colonna di dati | Microsoft Docs
 ms.custom: ''
-ms.date: 05/22/2017
+ms.date: 01/02/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: vanto
@@ -17,61 +17,52 @@ author: aliceku
 ms.author: aliceku
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: f104edbe976f516fac1d7439a454054d05ef7e30
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 6f8238abce193ea7582c278d0c843f5f1b695fc8
+ms.sourcegitcommit: fa2f85b6deeceadc0f32aa7f5f4e2b6e4d99541c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47650369"
+ms.lasthandoff: 01/03/2019
+ms.locfileid: "53997543"
 ---
 # <a name="encrypt-a-column-of-data"></a>Crittografia di una colonna di dati
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
   Questo articolo descrive come crittografare una colonna di dati tramite la crittografia simmetrica in [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] con [!INCLUDE[tsql](../../../includes/tsql-md.md)]. È chiamata a volte crittografia a livello di colonna o crittografia a livello di cella.  
+
+## <a name="security"></a>Security  
   
- **Contenuto dell'articolo**  
-  
--   **Prima di iniziare:**  
-  
-     [Security](#Security)  
-  
--   [Per crittografare una colonna di dati tramite Transact-SQL](#TsqlProcedure)  
-  
-##  <a name="BeforeYouBegin"></a> Prima di iniziare  
-  
-###  <a name="Security"></a> Sicurezza  
-  
-####  <a name="Permissions"></a> Permissions  
+### <a name="permissions"></a>Permissions  
  Le autorizzazioni seguenti sono necessarie per eseguire i passaggi riportati di seguito:  
   
--   Autorizzazione CONTROL per il database.  
+- Autorizzazione CONTROL per il database.  
   
--   Autorizzazione CREATE CERTIFICATE per il database. Solo gli account di accesso di Windows e di SQL Server e i ruoli applicazione possono disporre di certificati. I gruppi e i ruoli non possono disporre di certificati.  
+- Autorizzazione CREATE CERTIFICATE per il database. Solo gli account di accesso di Windows e di SQL Server e i ruoli applicazione possono disporre di certificati. I gruppi e i ruoli non possono disporre di certificati.  
   
--   Autorizzazione ALTER per la tabella.  
+- Autorizzazione ALTER per la tabella.  
   
--   È necessario disporre di un'autorizzazione per la chiave e che non venga negata l'autorizzazione VIEW DEFINITION.  
+- È necessario disporre di un'autorizzazione per la chiave e che non venga negata l'autorizzazione VIEW DEFINITION.  
   
-##  <a name="TsqlProcedure"></a> Uso di Transact-SQL  
+## <a name="using-transact-sql"></a>Utilizzo di Transact-SQL  
 
-Per usare gli esempi seguenti è necessaria una chiave master di database. Se il database in uso non contiene una chiave master, crearne una eseguendo l'istruzione riportata di seguito specificando la propria password:   
-```  
+Per usare gli esempi seguenti è necessaria una chiave master di database. Se il database in uso non contiene una chiave master, crearne una eseguendo l'istruzione riportata di seguito specificando la propria password:
+
+```sql  
 CREATE MASTER KEY ENCRYPTION BY   
 PASSWORD = '<some strong password>';  
 ```  
+
 Creare sempre una copia di backup della chiave master del database. Per altre informazioni sulla creazione di chiavi master di database, vedere [CREATE MASTER KEY &#40;Transact-SQL&#41;](../../../t-sql/statements/create-master-key-transact-sql.md).
 
-#### <a name="to-encrypt-a-column-of-data-using-symmetric-encryption-that-includes-an-authenticator"></a>Per crittografare una colonna di dati utilizzando la crittografia simmetrica che include un autenticatore  
+### <a name="to-encrypt-a-column-of-data-using-symmetric-encryption-that-includes-an-authenticator"></a>Per crittografare una colonna di dati utilizzando la crittografia simmetrica che include un autenticatore  
   
-1.  In **Esplora oggetti**connettersi a un'istanza del [!INCLUDE[ssDE](../../../includes/ssde-md.md)].  
+1. In **Esplora oggetti**connettersi a un'istanza del [!INCLUDE[ssDE](../../../includes/ssde-md.md)].  
   
-2.  Sulla barra Standard fare clic su **Nuova query**.  
+2. Sulla barra Standard fare clic su **Nuova query**.  
   
-3.  Copiare e incollare l'esempio seguente nella finestra delle query e fare clic su **Esegui**.  
+3. Copiare e incollare l'esempio seguente nella finestra delle query e fare clic su **Esegui**.  
   
-    ```  
+    ```sql
     USE AdventureWorks2012;  
-    
     GO  
   
     CREATE CERTIFICATE Sales09  
@@ -120,15 +111,15 @@ Creare sempre una copia di backup della chiave master del database. Per altre in
     GO  
     ```  
   
-#### <a name="to-encrypt-a-column-of-data-using-a-simple-symmetric-encryption"></a>Per crittografare una colonna di dati utilizzando una crittografia simmetrica semplice  
+### <a name="to-encrypt-a-column-of-data-using-a-simple-symmetric-encryption"></a>Per crittografare una colonna di dati utilizzando una crittografia simmetrica semplice  
   
-1.  In **Esplora oggetti**connettersi a un'istanza del [!INCLUDE[ssDE](../../../includes/ssde-md.md)].  
+1. In **Esplora oggetti**connettersi a un'istanza del [!INCLUDE[ssDE](../../../includes/ssde-md.md)].  
   
-2.  Sulla barra Standard fare clic su **Nuova query**.  
+2. Sulla barra Standard fare clic su **Nuova query**.  
   
-3.  Copiare e incollare l'esempio seguente nella finestra delle query e fare clic su **Esegui**.  
+3. Copiare e incollare l'esempio seguente nella finestra delle query e fare clic su **Esegui**.  
   
-    ```  
+    ```sql
     USE AdventureWorks2012;  
     GO  
   
@@ -185,5 +176,3 @@ Creare sempre una copia di backup della chiave master del database. Per altre in
 -   [ALTER TABLE &#40;Transact-SQL&#41;](../../../t-sql/statements/alter-table-transact-sql.md)  
   
 -   [OPEN SYMMETRIC KEY &#40;Transact-SQL&#41;](../../../t-sql/statements/open-symmetric-key-transact-sql.md)  
-  
-  

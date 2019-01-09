@@ -10,12 +10,12 @@ f1_keywords:
 ms.assetid: 423360de-9bed-462e-921f-60a5abab004f
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: f09dd10c77c7e4d87e769748d9053f18fc6d0fe9
-ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
+ms.openlocfilehash: ee6b34ed594948bd796f589c7ded4b4259062a3d
+ms.sourcegitcommit: e0178cb14954c45575a0bab73dcc7547014d03b3
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51811994"
+ms.lasthandoff: 12/04/2018
+ms.locfileid: "52860084"
 ---
 # <a name="set-default-options-for-report-builder"></a>Impostare le opzioni predefinite per Generatore Report
   In Generatore Report è possibile impostare alcuni valori predefiniti utili per semplificare e accelerare la creazione di report.  Ad esempio, se è si può impostare o modificare il server di report predefinito, Generatore Report salva i report nello stesso server di report automaticamente, se non diversamente specificato.  
@@ -24,7 +24,7 @@ ms.locfileid: "51811994"
   
 ## <a name="uielement-list"></a>Elenco degli elementi di interfaccia  
  **Usa questo server di report o sito di SharePoint per impostazione predefinita**  
- È possibile che l'amministratore abbia configurato questa opzione. Il valore può essere un URL ben formato che inizia con https:// o https://. Questa impostazione determina le connessioni all'origine dati che verranno visualizzate per impostazione predefinita nelle procedure guidate Nuova tabella o matrice e Nuovo grafico. I report verranno inoltre elaborati su questo server e sarà possibile fare riferimento alle risorse dal server.  
+ È possibile che l'amministratore abbia configurato questa opzione. Il valore può essere un URL ben formato che inizia con http:// o https://. Questa impostazione determina le connessioni all'origine dati che verranno visualizzate per impostazione predefinita nelle procedure guidate Nuova tabella o matrice e Nuovo grafico. I report verranno inoltre elaborati su questo server e sarà possibile fare riferimento alle risorse dal server.  
   
  Se si seleziona un altro server di report, potrebbe essere necessario riavviare Generatore report per rendere effettiva la modifica.  
   

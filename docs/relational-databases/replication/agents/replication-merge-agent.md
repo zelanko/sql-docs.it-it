@@ -16,12 +16,12 @@ ms.assetid: fe1e7f60-b0c8-45e9-a5e8-4fedfa73d7ea
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 2d9760d692e30a7d33828f27202ba7818c1ac047
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 3ce470350556e035453e68c8e84e6cff1ae1ee14
+ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52523462"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53590225"
 ---
 # <a name="replication-merge-agent"></a>Agente merge repliche
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -113,55 +113,55 @@ replmerg [-?]
  **-?**  
  Stampa tutti i parametri disponibili.  
   
- **-Publisher** *nome_server*[**\\***nome_istanza*]  
- Nome del server di pubblicazione. Specificare *server_name* per l'istanza predefinita di [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] in tale server. Specificare *server_name***\\***instance_name* per un'istanza denominata di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] in tale server.  
+ **-Publisher** _server_name_[**\\**_instance_name_]  
+ Nome del server di pubblicazione. Specificare *server_name* per l'istanza predefinita di [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] in tale server. Specificare _server_name_**\\**_instance_name_ per un'istanza denominata di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] in tale server.  
   
- **-PublisherDB** *publisher_database*  
+ **-PublisherDB** _publisher_database_  
  Nome del database del server di pubblicazione.  
   
- **-Publication** *publication*  
+ **-Publication** _publication_  
  Nome della pubblicazione. Questo parametro è valido solo se la pubblicazione è configurata in modo che sia sempre disponibile uno snapshot per le sottoscrizioni nuove o reinizializzate.  
   
- **-Subscriber** *nome_server*[**\\***nome_istanza*]  
- Nome del Sottoscrittore. Specificare *server_name* per l'istanza predefinita di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] in tale server. Specificare *server_name***\\***instance_name* per un'istanza denominata di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] in tale server.  
+ **-Subscriber** _server_name_[**\\**_instance_name_]  
+ Nome del Sottoscrittore. Specificare *server_name* per l'istanza predefinita di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] in tale server. Specificare _server_name_**\\**_instance_name_ per un'istanza denominata di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] in tale server.  
   
- **-SubscriberDB** *subscriber_database*  
+ **-SubscriberDB** _subscriber_database_  
  Nome del database Sottoscrittore.  
   
- **-AltSnapshotFolder** *alt_snapshot_folder_path*  
+ **-AltSnapshotFolder** _alt_snapshot_folder_path_  
  Percorso della cartella che contiene lo snapshot iniziale per una sottoscrizione.  
   
  **-Continuous**  
  Specifica se l'agente tenta di eseguire continuamente il polling delle transazioni replicate. Se specificato, l'agente esegue il polling delle transazioni replicate dall'origine in base agli intervalli di polling, anche se non vi sono transazioni in sospeso.  
   
- **-DestThreads** *number_of_destination_threads*  
+ **-DestThreads** _number_of_destination_threads_  
  Specifica il numero di thread di destinazione utilizzati dall'agente di merge per applicare le modifiche nella destinazione. La destinazione è costituita dal server di pubblicazione durante il caricamento e dal Sottoscrittore durante il download. Il valore predefinito è 4.  
   
- **-DefinitionFile** *def_path_and_file_name*  
+ **-DefinitionFile** _def_path_and_file_name_  
  Percorso del file di definizione dell'agente. Un file di definizione dell'agente contiene argomenti del prompt dei comandi per l'agente. Il contenuto del file viene analizzato come file eseguibile. Utilizzare virgolette doppie (") per specificare valori dell'argomento contenenti caratteri arbitrari.  
   
- **-Distributor** *nome_server*[**\\***nome_istanza*]  
- Nome del database di distribuzione. Specificare *server_name* per l'istanza predefinita di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] in tale server. Specificare *server_name***\\***instance_name* per un'istanza denominata di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] in tale server. Per la distribuzione (push) del database di distribuzione, per impostazione predefinita viene utilizzato il nome dell'istanza predefinita di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] nel computer locale.  
+ **-Distributor** _server_name_[**\\**_instance_name_]  
+ Nome del database di distribuzione. Specificare *server_name* per l'istanza predefinita di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] in tale server. Specificare _server_name_**\\**_instance_name_ per un'istanza denominata di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] in tale server. Per la distribuzione (push) del database di distribuzione, per impostazione predefinita viene utilizzato il nome dell'istanza predefinita di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] nel computer locale.  
   
- **-DistributorLogin** *distributor_login*  
+ **-DistributorLogin** _distributor_login_  
  Nome dell'account di accesso del database di distribuzione.  
   
- **-DistributorPassword** *distributor_password*  
+ **-DistributorPassword** _distributor_password_  
  Password del database di distribuzione.  
   
  **-DistributorSecurityMode** [ **0**| **1**]  
  Specifica la modalità di sicurezza del database di distribuzione. Un valore **0** indica la modalità di autenticazione di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] (impostazione predefinita), mentre un valore **1** indica la modalità di autenticazione di Windows.  
   
- **-DownloadGenerationsPerBatch** *download_generations_per_batch*  
+ **-DownloadGenerationsPerBatch** _download_generations_per_batch_  
  Numero di generazioni da elaborare in un singolo batch durante il download delle modifiche dal server di pubblicazione al Sottoscrittore. Una generazione è definita come un gruppo logico di modifiche per articolo. Il valore predefinito per un collegamento di comunicazione affidabile è 100. Il valore predefinito per un collegamento di comunicazione non affidabile è 10.  
   
- **-DownloadReadChangesPerBatch** *download_read_changes_per_batch*  
+ **-DownloadReadChangesPerBatch** _download_read_changes_per_batch_  
  Numero di modifiche da leggere in un singolo batch durante il download delle modifiche dal server di pubblicazione al Sottoscrittore. Il valore predefinito è 100.  
   
- **-DownloadWriteChangesPerBatch** *download_write_changes_per_batch*  
+ **-DownloadWriteChangesPerBatch** _download_write_changes_per_batch_  
  Numero di modifiche da applicare in un singolo batch durante il download delle modifiche dal server di pubblicazione al Sottoscrittore. Il valore predefinito è 100.  
   
- **-DynamicSnapshotLocation** *dynamic_snapshot_location*  
+ **-DynamicSnapshotLocation** _dynamic_snapshot_location_  
  Posizione dei file di snapshot dei dati filtrati quando nella pubblicazione vengono utilizzati filtri di riga con parametri.  
   
  **-EncryptionLevel** [ **0** | **1** | **2** ]  
@@ -179,7 +179,7 @@ replmerg [-?]
  Per altre informazioni, vedere [Panoramica della sicurezza &#40;replica&#41;](../../../relational-databases/replication/security/security-overview-replication.md).  
   
  **-ExchangeType** [ **1**| **2**| **3**]  
- > [!WARNING]  
+> [!WARNING]
 >  [!INCLUDE[ssNoteDepFutureDontUse](../../../includes/ssnotedepfuturedontuse-md.md)] Per limitare il caricamento, utilizzare in alternativa **@subscriber_upload_options** di **sp_addmergearticle** .  
   
  Specifica il tipo di scambio di dati durante la sincronizzazione. I possibili valori sono i seguenti:  
@@ -209,16 +209,16 @@ replmerg [-?]
 |**1**|Forza la convergenza per tutte le generazioni.|  
 |**2**|Forza la convergenza per tutte le generazioni e corregge le derivazioni danneggiate. Quando si specifica questo valore, specificare dove devono essere corrette le derivazioni, ovvero nel server di pubblicazione, nel Sottoscrittore o in entrambi.|  
   
- **-FtpAddress** *ftp_address*  
+ **-FtpAddress** _ftp_address_  
  Indirizzo di rete del servizio FTP per il database di distribuzione. Quando non è specificato, viene utilizzato **Distributor** .  
   
- **-FtpPassword** *ftp_password*  
+ **-FtpPassword** _ftp_password_  
  Password utente utilizzata per la connessione al servizio FTP.  
   
- **-FtpPort** *ftp_port*  
+ **-FtpPort** _ftp_port_  
  Numero di porta del servizio FTP per il database di distribuzione. Quando non è specificato, viene utilizzato il numero di porta predefinito per il servizio FTP, ovvero 21.  
   
- **-FtpUserName** *ftp_user_name*  
+ **-FtpUserName** _ftp_user_name_  
  Nome utente utilizzato per la connessione al servizio FTP. Quando non è specificato, viene utilizzato anonymous.  
   
  **-HistoryVerboseLevel** [**1**|**2**|**3**]  
@@ -231,16 +231,16 @@ replmerg [-?]
 |**2**|Valore predefinito. Registra sia i dettagli di sessione incrementali a ogni stato della sessione che i dettagli di sessione a livello di articolo, inclusa la percentuale di completamento, oltre al messaggio di stato dell'agente finale, ai dettagli di sessione finali e a eventuali errori. Vengono inoltre registrati i messaggi di stato dell'agente.|  
 |**3**|Equivale a **-HistoryVerboseLevel** = **2**, ad eccezione del fatto che viene registrato un numero maggiore di messaggi di stato dell'agente.|  
   
- **-Hostname** *host_name*  
+ **-Hostname** _host_name_  
  Nome di rete del computer locale. Il valore predefinito è il nome del computer locale.  
   
  **-InteractiveResolution** [**0**|**1**]  
  Specifica se viene utilizzata la risoluzione dei conflitti interattiva quando si verifica un conflitto durante la sincronizzazione. Il valore predefinito è **0**, che indica che la risoluzione dei conflitti interattiva non viene utilizzata.  
   
- **-InternetLogin** *internet_login*  
+ **-InternetLogin** _internet_login_  
  Specifica il nome di accesso utilizzato per la connessione a una DLL ISAPI del listener per la replica di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] che richiede l'autenticazione.  
   
- **-InternetPassword** *internet_password*  
+ **-InternetPassword** _internet_password_  
  Specifica la password utilizzata per la connessione a una DLL ISAPI del listener per la replica di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] che richiede l'autenticazione.  
   
  **-InternetProxyLogin**  *internet_proxy_login*  
@@ -255,36 +255,36 @@ replmerg [-?]
  **-InternetSecurityMode** [**0**|**1**]  
  Specifica la modalità di sicurezza di IIS da utilizzare per la connessione al server Web durante la sincronizzazione Web. Un valore **0** indica l'autenticazione di base, mentre un valore **1** indica l'autenticazione integrata di Windows (impostazione predefinita).  
   
- **-InternetTimeout** *internet_timeout*  
+ **-InternetTimeout** _internet_timeout_  
  Numero di secondi prima che si verifichi il timeout di una connessione alla DLL ISAPI del listener per la replica di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .  
   
- **-InternetURL** *internet_url*  
+ **-InternetURL** _internet_url_  
  Specifica l'URL utilizzato per la connessione alla DLL ISAPI del listener per la replica di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . È necessario specificare questa proprietà.  
   
- **-KeepAliveMessageInterval** *keep_alive_message_interval_seconds*  
+ **-KeepAliveMessageInterval** _keep_alive_message_interval_seconds_  
  Numero di secondi prima che il thread per la cronologia controlli se una delle connessioni esistenti è in attesa di una risposta dal server. Questo valore può essere ridotto per evitare che l'agente di controllo contrassegni l'agente di merge come sospetto in caso di esecuzione di un batch con esecuzione prolungata. Il valore predefinito è **300** secondi.  
   
- **-LoginTimeOut** *login_time_out_seconds*  
+ **-LoginTimeOut** _login_time_out_seconds_  
  Numero di secondi prima del timeout di accesso. Il valore predefinito è **15** secondi.  
   
- **-MakeGenerationInterval** *make_generation_interval_seconds*  
+ **-MakeGenerationInterval** _make_generation_interval_seconds_  
  Numero di secondi di attesa tra la creazione di generazioni, o batch di modifiche, per il download nel client. Il valore predefinito è **1** secondo.  
   
  Makegeneration è il processo che prepara il download delle modifiche del server di pubblicazione nei Sottoscrittori e può rappresentare un collo di bottiglia per le prestazioni durante i download. Se è stato già eseguito all'interno dell'intervallo specificato da **- MakeGenerationInterval**, il processo viene ignorato per la sessione di sincronizzazione corrente. Questa operazione può procurare vantaggio alla simultaneità della sincronizzazione e risulta particolarmente utile se i Sottoscrittori non prevedono il download di modifiche.  
   
- **-MaxBcpThreads** *number_of_threads*  
+ **-MaxBcpThreads** _number_of_threads_  
  Specifica il numero di operazioni di copia bulk che possono essere eseguite in parallelo. Il numero massimo di connessioni ODBC e thread presenti simultaneamente corrisponde a **MaxBcpThreads** o al numero di richieste di copia bulk presenti nella tabella di sistema **sysmergeschemachange** nel database di pubblicazione, a seconda di quale sia il valore minore. **MaxBcpThreads** deve avere un valore maggiore di 0 e non ha un limite massimo specificato a livello di codice. L'impostazione predefinita è **1**.  
   
- **-MaxDownloadChanges** *number_of_download_changes*  
+ **-MaxDownloadChanges** _number_of_download_changes_  
  Specifica il numero massimo di righe modificate che possono essere scaricate dal server di pubblicazione al Sottoscrittore. Il numero di righe scaricate può essere superiore al valore massimo specificato se vengono elaborate generazioni complete e possono essere eseguiti thread di destinazione paralleli, ognuno dei quali elabora almeno 100 modifiche nel primo passaggio. Per impostazione predefinita, tutte le modifiche pronte per essere scaricate vengono inviate.  
   
- **-MaxUploadChanges** *number_of_upload_changes*  
+ **-MaxUploadChanges** _number_of_upload_changes_  
  Specifica il numero massimo di righe modificate che possono essere caricate dal Sottoscrittore al server di pubblicazione. Il numero di righe caricate può essere superiore al valore massimo specificato se vengono elaborate generazioni complete e possono essere eseguiti thread di destinazione paralleli, ognuno dei quali elabora almeno 100 modifiche nel primo passaggio. Per impostazione predefinita, tutte le modifiche pronte per essere caricate vengono inviate.  
   
  **-MetadataRetentionCleanup** [**0**|**1**]  
  Specifica se i metadati vengono rimossi da [MSmerge_genhistory](../../../relational-databases/system-tables/msmerge-genhistory-transact-sql.md), [MSmerge_contents](../../../relational-databases/system-tables/msmerge-contents-transact-sql.md), [MSmerge_tombstone](../../../relational-databases/system-tables/msmerge-tombstone-transact-sql.md), [MSmerge_past_partition_mappings](../../../relational-databases/system-tables/msmerge-past-partition-mappings-transact-sql.md)e [MSmerge_current_partition_mappings](../../../relational-databases/system-tables/msmerge-current-partition-mappings.md) in base al periodo di memorizzazione della pubblicazione. Il valore predefinito è **1**, che indica che deve essere eseguita la pulizia. Un valore **0** indica che la pulizia non deve essere eseguita automaticamente.  
   
- **-Output** *output_path_and_file_name*  
+ **-Output** _output_path_and_file_name_  
  Percorso del file di output dell'agente. Se non viene specificato il nome file, l'output viene inviato alla console. Se il nome file specificato esiste già, l'output viene aggiunto al file.  
   
  **-OutputVerboseLevel** [**0**|**1**|**2**]  
@@ -296,34 +296,34 @@ replmerg [-?]
  **-PacketSize**  
  Dimensioni del pacchetto, in byte. Il valore predefinito è 4096 byte.  
   
- **-PollingInterval** *polling_interval*  
+ **-PollingInterval** _polling_interval_  
  Frequenza, in secondi, di esecuzione di query sul server di pubblicazione o sul Sottoscrittore per le modifiche ai dati. Il valore predefinito è 60 secondi.  
   
- **-ProfileName** *profile_name*  
+ **-ProfileName** _profile_name_  
  Specifica un profilo agente da utilizzare per i parametri dell'agente. Se **ProfileName** è NULL, il profilo agente è disabilitato. Se **ProfileName** non viene specificato, viene utilizzato il profilo predefinito per il tipo di agente. Per altre informazioni, vedere [Profili degli agenti di replica](../../../relational-databases/replication/agents/replication-agent-profiles.md).  
   
- **-PublisherFailoverPartner** *nome_server*[**\\***nome_istanza*]  
+ **-PublisherFailoverPartner** _server_name_[**\\**_instance_name_]  
  Specifica l'istanza del partner di failover di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] che partecipa in una sessione di mirroring del database con il database di pubblicazione. Per altre informazioni, vedere [Mirroring e replica del database &#40;SQL Server&#41;](../../../database-engine/database-mirroring/database-mirroring-and-replication-sql-server.md).  
   
- **-PublisherLogin** *publisher_login*  
+ **-PublisherLogin** _publisher_login_  
  Nome dell'account di accesso del server di pubblicazione. Se **PublisherSecurityMode** è **0** (per l'autenticazione di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ), questo parametro deve essere specificato.  
   
- **-PublisherPassword** *publisher_password*  
+ **-PublisherPassword** _publisher_password_  
  Password del server di pubblicazione. Se **PublisherSecurityMode** è **0** (per l'autenticazione di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ), questo parametro deve essere specificato.  
   
  **-PublisherSecurityMode** [**0**|**1**]  
  Specifica la modalità di sicurezza del server di pubblicazione. Un valore **0** indica la modalità di autenticazione di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] (impostazione predefinita), mentre un valore **1** indica la modalità di autenticazione di Windows.  
   
- **-QueryTimeOut** *query_time_out_seconds*  
+ **-QueryTimeOut** _query_time_out_seconds_  
  Numero di secondi prima del timeout delle query. Il valore predefinito è 300 secondi. L'agente di merge utilizza anche il valore di **QueryTimeout** per determinare quanto tempo aspettare per la generazione di uno snapshot partizionato quando questo valore è maggiore di 1800.  
   
- **-SrcThreads** *number_of_source_threads*  
+ **-SrcThreads** _number_of_source_threads_  
  Specifica il numero di thread di origine utilizzati dall'agente di merge per enumerare le modifiche dall'origine. L'origine è costituita dal Sottoscrittore durante il caricamento e dal server di pubblicazione durante il download. Il valore predefinito è **3**.  
   
- **-StartQueueTimeout** *start_queue_timeout_seconds*  
+ **-StartQueueTimeout** _start_queue_timeout_seconds_  
  Numero massimo di secondi di attesa da parte dell'agente di merge quando il numero di processi di merge simultanei in esecuzione raggiunge il limite impostato tramite la proprietà **@max_concurrent_merge** di **sp_addmergepublication**. Se viene raggiunto il numero massimo di secondi e l'agente di merge è ancora in attesa, si chiude. Un valore 0 indica che l'agente attende indefinitamente, sebbene possa essere annullato.  
   
- **-SubscriberDatabasePath** *subscriber_database_path*  
+ **-SubscriberDatabasePath** _subscriber_database_path_  
  Percorso del database Jet (file con estensione mdb) se **SubscriberType** è **2** (consente una connessione a un database Jet senza un nome origine dati (DNS, Data Source Name) ODBC).  
   
  **-SubscriberDBAddOption** [**0**| **1**| **2**| **3**]  
@@ -339,10 +339,10 @@ replmerg [-?]
 > [!NOTE]  
 >  Quando si utilizzano i valori **2** e **3**, il percorso del database per il Sottoscrittore deve essere specificato nell'opzione **SubscriberDatabasePath** .  
   
- **-SubscriberLogin** *subscriber_login*  
+ **-SubscriberLogin** _subscriber_login_  
  Nome dell'account di accesso del Sottoscrittore. Se **SubscriberSecurityMode** è **0** (per l'autenticazione di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ), questo parametro deve essere specificato.  
   
- **-SubscriberPassword** *subscriber_password*  
+ **-SubscriberPassword** _subscriber_password_  
  Password del Sottoscrittore. Se **SubscriberSecurityMode** è **0** (per l'autenticazione di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ), questo parametro deve essere specificato.  
   
  **-SubscriberSecurityMode** [ **0**| **1**]  
@@ -360,13 +360,13 @@ replmerg [-?]
  **-SyncToAlternate** [ **0|1**]  
  Specifica se l'agente di merge sta eseguendo la sincronizzazione tra un Sottoscrittore e un server di pubblicazione alternativo. Un valore **1** indica che si tratta di un server di pubblicazione alternativo. Il valore predefinito è **0**.  
   
- **-UploadGenerationsPerBatch** *upload_generations_per_batch*  
+ **-UploadGenerationsPerBatch** _upload_generations_per_batch_  
  Numero di generazioni da elaborare in un singolo batch mentre vengono caricate le modifiche dal Sottoscrittore al server di pubblicazione. Una generazione è definita come un gruppo logico di modifiche per articolo. Il valore predefinito per un collegamento di comunicazione affidabile è **100**. Il valore predefinito per un collegamento di comunicazione non affidabile è **1**.  
   
- **-UploadReadChangesPerBatch** *upload_read_changes_per_batch*  
+ **-UploadReadChangesPerBatch** _upload_read_changes_per_batch_  
  Numero di modifiche da leggere in un singolo batch mentre vengono caricate le modifiche dal Sottoscrittore al server di pubblicazione. Il valore predefinito è **100**.  
   
- **-UploadWriteChangesPerBatch** *upload_write_changes_per_batch*  
+ **-UploadWriteChangesPerBatch** _upload_write_changes_per_batch_  
  Numero di modifiche da applicare in un singolo batch mentre vengono caricate le modifiche dal Sottoscrittore al server di pubblicazione. Il valore predefinito è **100**.  
   
  **-UseInprocLoader**  
@@ -385,7 +385,7 @@ replmerg [-?]
 > [!NOTE]  
 >  La convalida eseguita mediante checksum o checksum binario può segnalare erroneamente un problema se nel Sottoscrittore vi sono tipi di dati diversi rispetto al server di pubblicazione. Per altre informazioni, vedere la sezione "Considerazioni sulla convalida dei dati" in [Convalidare i dati replicati](../../../relational-databases/replication/validate-replicated-data.md).  
   
- **-ValidateInterval** *validate_interval*  
+ **-ValidateInterval** _validate_interval_  
  Frequenza, in minuti, di convalida della sottoscrizione in modalità continua. Il valore predefinito è **60** minuti.  
   
 ## <a name="remarks"></a>Remarks  

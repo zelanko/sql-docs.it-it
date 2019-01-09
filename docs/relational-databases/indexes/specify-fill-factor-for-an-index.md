@@ -15,12 +15,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: a80d893cd942e7d8c1e9bb12b6fa21a3247d7e52
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: ba81029a195bcee0e747bfe517fa5d6b27e4ead1
+ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52401626"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53588379"
 ---
 # <a name="specify-fill-factor-for-an-index"></a>Specificare un fattore di riempimento per un indice
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -40,7 +40,7 @@ ms.locfileid: "52401626"
   
      [Considerazioni sulle prestazioni](#Performance)  
   
-     [Security](#Security)  
+     [Sicurezza](#Security)  
   
 -   **Per specificare un fattore di riempimento in un indice tramite:**  
   
@@ -83,7 +83,7 @@ ms.locfileid: "52401626"
   
 7.  Scegliere **Chiudi**.  
   
-8.  Nel menu **File** scegliere **Salva***nome_tabella*.  
+8.  Selezionare **Salva** table_name **dal menu**_File_.  
   
 #### <a name="to-specify-a-fill-factor-in-an-index-by-using-object-explorer"></a>Per specificare un fattore di riempimento in un indice tramite Esplora oggetti  
   
@@ -103,7 +103,7 @@ ms.locfileid: "52401626"
   
 8.  Fare clic su **OK**.  
   
-##  <a name="TsqlProcedure"></a> Uso di Transact-SQL  
+##  <a name="TsqlProcedure"></a> Utilizzo di Transact-SQL  
   
 #### <a name="to-specify-a-fill-factor-in-an-existing-index"></a>Per specificare un fattore di riempimento in un indice esistente  
   

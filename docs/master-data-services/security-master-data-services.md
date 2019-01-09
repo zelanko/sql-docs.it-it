@@ -5,19 +5,18 @@ ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: mds
 ms.reviewer: ''
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.topic: conceptual
 ms.assetid: 56bc41ea-de28-4184-aa7e-99111ae55af5
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 02053fed0f366945d08e0551d64aeb8a3ed6f33a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 13678d9b3d522e65ff1f9e895020bb0fde020bef
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47619539"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52751914"
 ---
 # <a name="security-master-data-services"></a>Sicurezza (Master Data Services)
 
@@ -47,7 +46,7 @@ ms.locfileid: "47619539"
   
 -   Facoltativamente, le [autorizzazioni per i membri della gerarchia](../master-data-services/hierarchy-member-permissions-master-data-services.md)che determinano i membri ai quali un utente può accedere e il tipo di accesso (lettura, aggiornamento ed eliminazione) che l'utente possiede su quei membri.  
   
- Quando si assegnano le autorizzazioni a attributi e membri, le autorizzazioni si intersecano e le regole determinano quale autorizzazione ha la precedenza. Per altre informazioni, vedere [Modalità di determinazione delle autorizzazioni &#40;Master Data Services&#41;](../master-data-services/how-permissions-are-determined-master-data-services.md).  
+ Quando si assegnano le autorizzazioni a attributi e membri, le autorizzazioni si intersecano e le regole determinano quale autorizzazione ha la precedenza. Per altre informazioni, vedere [How Permissions Are Determined &#40;Master Data Services&#41;](../master-data-services/how-permissions-are-determined-master-data-services.md).  
   
 ## <a name="security-in-the-add-in-for-excel"></a>Sicurezza nel componente aggiuntivo di Excel  
  La sicurezza impostata nell'applicazione Web [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] viene anche applicata a [!INCLUDE[ssMDSXLS](../includes/ssmdsxls-md.md)]. Gli utenti possono visualizzare e utilizzare solo i dati per cui dispongono dell'autorizzazione. Gli amministratori possono eseguire attività amministrative.  

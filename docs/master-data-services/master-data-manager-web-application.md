@@ -5,19 +5,18 @@ ms.date: 12/20/2016
 ms.prod: sql
 ms.prod_service: mds
 ms.reviewer: ''
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.topic: conceptual
 ms.assetid: 8eac727c-2304-4612-bc1f-14539295b4b3
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 2fec17446829d39deae233c205360d768aec313c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 6fff6e1ab9f6394c34c60356fdd4f5eb76ab89c6
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47682459"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53212380"
 ---
 # <a name="master-data-manager-web-application"></a>Applicazione Web Gestione dati master
 
@@ -25,12 +24,12 @@ ms.locfileid: "47682459"
 
   L'applicazione Web [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] viene usata principalmente dagli amministratori per eseguire attività amministrative. Ad esempio, solo gli amministratori possono creare modelli, regole business o versioni di dati. Per altre informazioni sugli amministratori, vedere [Amministratori &#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md).  
   
-> [!IMPORTANT]  
+> [!IMPORTANT]
 >  [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] funziona solo in Internet Explorer (IE) 9 o versioni successive. IE 8 e le versioni precedenti, Microsoft Edge e Chrome non sono supportati.  
-
+> 
 > **Non è possibile creare un sito Web MDS?**
->>Leggere quest'articolo del supporto tecnico Microsoft per istruzioni sulla risoluzione del problema.
-[Non è possibile creare un sito Web MDS tramite un account con privilegi limitati in SQL Server 2016](https://aka.ms/mdssupport) 
+> >Leggere quest'articolo del supporto tecnico Microsoft per istruzioni sulla risoluzione del problema.
+> [Non è possibile creare un sito Web MDS tramite un account con privilegi limitati in SQL Server 2016](https://aka.ms/mdssupport) 
   
  L'area funzionale Esplora risorse dell'applicazione Web è la sola area non utilizzata dagli amministratori. Esplora risorse è pensata per quegli utenti che aggiornano i dati master frequentemente. Questi utenti dispongono delle autorizzazioni per i dati necessari per l'esecuzione dei processi.  
   

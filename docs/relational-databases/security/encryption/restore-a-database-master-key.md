@@ -1,7 +1,7 @@
 ---
 title: Ripristinare la chiave master di un database | Microsoft Docs
 ms.custom: ''
-ms.date: 03/14/2017
+ms.date: 01/02/2019
 ms.prod: sql
 ms.reviewer: vanto
 ms.technology: security
@@ -12,57 +12,47 @@ ms.assetid: 16897cc5-db8f-43bb-a38e-6855c82647cf
 author: aliceku
 ms.author: aliceku
 manager: craigg
-ms.openlocfilehash: ea2487e7b6a62f2b277569547b420accdbd67cc9
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 4e0e8afe9c46d6d1f4c5382152de8a0f66ac6e9e
+ms.sourcegitcommit: fa2f85b6deeceadc0f32aa7f5f4e2b6e4d99541c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47795079"
+ms.lasthandoff: 01/03/2019
+ms.locfileid: "53997523"
 ---
 # <a name="restore-a-database-master-key"></a>Ripristino di una chiave master del database
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   In questo argomento viene descritto come ripristinare una chiave master del database in [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] tramite [!INCLUDE[tsql](../../../includes/tsql-md.md)].  
   
- **Contenuto dell'argomento**  
+## <a name="before-you-begin"></a>Prima di iniziare  
   
--   **Prima di iniziare:**  
+### <a name="limitations-and-restrictions"></a>Limitazioni e restrizioni  
   
-     [Limitazioni e restrizioni](#Restrictions)  
+- Quando si ripristina la chiave master, in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] vengono decrittografate tutte le chiavi crittografate con la chiave master attiva corrente. Tali elementi venogno poi crittografati nuovamente con la chiave master ripristinata. Si tratta di un'operazione che utilizza molte risorse e pertanto dovrebbe essere pianificata in periodi di carico ridotto. L'operazione di ripristino avrà esito negativo se la chiave master del database corrente non è aperta e non è possibile aprirla, oppure se non è possibile decrittografare le eventuali chiavi crittografate con tale chiave master.  
   
-     [Security](#Security)  
+- In caso di esito negativo di una qualsiasi delle operazioni di decrittografia, il ripristino avrà esito negativo. È possibile utilizzare l'opzione FORCE per ignorare eventuali errori, ma in questo caso andranno perduti tutti i dati che non possono essere decrittografati.  
   
--   [Per ripristinare la chiave master del database tramite Transact-SQL](#SSMSProcedure)  
+- Se la chiave master è stata crittografata con la chiave master del servizio, anche la chiave master ripristinata verrà crittografata con la chiave master del servizio.  
   
-##  <a name="BeforeYouBegin"></a> Prima di iniziare  
+- Se il database corrente non include alcuna chiave master, con l'esecuzione di RESTORE MASTER KEY verrà creata una chiave master. La nuova chiave master non verrà crittografata automaticamente con la chiave master del servizio.  
   
-###  <a name="Restrictions"></a> Limitazioni e restrizioni  
+## <a name="security"></a>Security  
   
--   Quando si ripristina la chiave master, in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] vengono decrittografate tutte le chiavi crittografate con la chiave master attiva corrente. Tali elementi venogno poi crittografati nuovamente con la chiave master ripristinata. Si tratta di un'operazione che utilizza molte risorse e pertanto dovrebbe essere pianificata in periodi di carico ridotto. L'operazione di ripristino avrà esito negativo se la chiave master del database corrente non è aperta e non è possibile aprirla, oppure se non è possibile decrittografare le eventuali chiavi crittografate con tale chiave master.  
+### <a name="permissions"></a>Permissions
+È richiesta l'autorizzazione CONTROL per il database.  
   
--   In caso di esito negativo di una qualsiasi delle operazioni di decrittografia, il ripristino avrà esito negativo. È possibile utilizzare l'opzione FORCE per ignorare eventuali errori, ma in questo caso andranno perduti tutti i dati che non possono essere decrittografati.  
+## <a name="using-sql-server-management-studio-with-transact-sql"></a>Utilizzo di SQL Server Management Studio con Transact-SQL  
   
--   Se la chiave master è stata crittografata con la chiave master del servizio, anche la chiave master ripristinata verrà crittografata con la chiave master del servizio.  
+### <a name="to-restore-the-database-master-key"></a>Per ripristinare la chiave master del database  
   
--   Se il database corrente non include alcuna chiave master, con l'esecuzione di RESTORE MASTER KEY verrà creata una chiave master. La nuova chiave master non verrà crittografata automaticamente con la chiave master del servizio.  
+1. Recuperare una copia della chiave master del database da un supporto di backup fisico o da una directory nel file system locale.  
   
-###  <a name="Security"></a> Sicurezza  
+2. In **Esplora oggetti**connettersi a un'istanza del [!INCLUDE[ssDE](../../../includes/ssde-md.md)].  
   
-####  <a name="Permissions"></a> Permissions  
- È richiesta l'autorizzazione CONTROL per il database.  
+3. Sulla barra Standard fare clic su **Nuova query**.  
   
-##  <a name="SSMSProcedure"></a> Utilizzo di SQL Server Management Studio con Transact-SQL  
+4. Copiare e incollare l'esempio seguente nella finestra delle query e fare clic su **Esegui**.  
   
-#### <a name="to-restore-the-database-master-key"></a>Per ripristinare la chiave master del database  
-  
-1.  Recuperare una copia della chiave master del database da un supporto di backup fisico o da una directory nel file system locale.  
-  
-2.  In **Esplora oggetti**connettersi a un'istanza del [!INCLUDE[ssDE](../../../includes/ssde-md.md)].  
-  
-3.  Sulla barra Standard fare clic su **Nuova query**.  
-  
-4.  Copiare e incollare l'esempio seguente nella finestra delle query e fare clic su **Esegui**.  
-  
-    ```  
+    ```sql
     -- Restores the database master key of the AdventureWorks2012 database.  
     USE AdventureWorks2012;  
     GO  
@@ -74,8 +64,6 @@ ms.locfileid: "47795079"
     ```  
   
     > [!NOTE]  
-    >  Il percorso del file della chiave e della password della chiave (se esistente) sarà diverso da quello indicato in precedenza. Assicurarsi che entrambi siano specifici della configurazione della chiave e del server in uso.  
+    > Il percorso del file della chiave e della password della chiave (se esistente) sarà diverso da quello indicato in precedenza. Assicurarsi che entrambi siano specifici della configurazione della chiave e del server in uso.  
   
  Per altre informazioni, vedere [RESTORE MASTER KEY &#40;Transact-SQL&#41;](../../../t-sql/statements/restore-master-key-transact-sql.md)  
-  
-  

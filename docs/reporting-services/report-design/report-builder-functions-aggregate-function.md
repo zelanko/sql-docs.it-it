@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 16ce643f-bbb3-40a5-ba78-7aed73156f3e
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: b97d2a45a0312e2d2db0425f89262526ddbe76ae
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+ms.openlocfilehash: ea1a6e2a0cca043fc7465a3dd7408ec24ab98286
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50030530"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53202590"
 ---
 # <a name="report-builder-functions---aggregate-function"></a>Funzioni di Generatore report - Funzione Aggregate
   Restituisce un'aggregazione personalizzata dell'espressione specificata, secondo quanto definito dal provider di dati.  
@@ -47,7 +47,7 @@ Aggregate(expression, scope)
   
  È possibile cambiare questo comportamento predefinito modificando il valore dell'opzione **Interpretare i subtotali come righe di dettaglio** nella finestra di dialogo **Proprietà set di dati** . Quando questa opzione è impostata su **True**, tutti i dati, incluse le aggregazioni server, appaiono come dati di dettaglio. Quando è impostata su **False**, le aggregazioni server appaiono come totali. L'impostazione di questa proprietà influisce su tutte le aree dati collegate al set di dati.  
   
-> [!NOTE]  
+> [!NOTE]
 >  Tutti i gruppi di contenuto per l'elemento del report che fa riferimento ad **Aggregate** devono includere riferimenti di campo semplici per le relative espressioni di raggruppamento, ad esempio `[FieldName]`. Non è possibile usare **Aggregate** in un'area dati che usa espressioni di raggruppamento complesse. Per l'estensione di elaborazione dati [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] la query deve includere campi MDX di tipo **LevelProperty** (non **MemberProperty**) per supportare l'aggregazione con la funzione **Aggregate**.  
   
  *Expression* può contenere chiamate alle funzioni di aggregazione nidificate con le eccezioni e le condizioni seguenti:  

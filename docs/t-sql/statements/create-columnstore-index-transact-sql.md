@@ -30,12 +30,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a7f9c78dc06da0cbb12e34483d3bdd7b469a8f78
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: c6c384df7810cce06f3e10003ec85771b2bcea58
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52398051"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53215650"
 ---
 # <a name="create-columnstore-index-transact-sql"></a>CREATE COLUMNSTORE INDEX (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-all-md](../../includes/tsql-appliesto-ss2012-all-md.md)]
@@ -215,7 +215,7 @@ Creare un indice columnstore non cluster in memoria in una tabella rowstore arch
     Specifica le colonne da archiviare. Un indice columnstore non cluster è limitato a 1024 colonne.  
    Ogni colonna deve essere di un tipo di dati supportato per gli indici columnstore. Vedere [Limitazioni e restrizioni](../../t-sql/statements/create-columnstore-index-transact-sql.md#LimitRest) per un elenco di tipi di dati supportati.  
 
-ON [*database_name*. [*schema_name* ] . | *schema_name* . ] *table_name*  
+ON [*database_name*. [*schema_name* ] . |  *schema_name* . ] *table_name*  
    Specifica il nome composto da una, due o tre parti della tabella che contiene l'indice.  
 
 #### <a name="with-options"></a>Opzioni WITH
@@ -234,7 +234,7 @@ ON [*database_name*. [*schema_name* ] . | *schema_name* . ] *table_name*
   
    Per altre informazioni, vedere [Configurazione di operazioni parallele sugli indici](../../relational-databases/indexes/configure-parallel-index-operations.md).  
   
-> [!NOTE]  
+> [!NOTE]
 >  Le operazioni parallele sugli indici sono disponibili solo in alcune edizioni di [!INCLUDE[msC](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Per un elenco delle funzionalità supportate dalle edizioni di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], vedere [Edizioni e funzionalità supportate per SQL Server 2016](../../sql-server/editions-and-supported-features-for-sql-server-2016.md).  
   
 ###### <a name="online--on--off"></a>ONLINE = [ON | OFF]   
@@ -287,7 +287,7 @@ Crea l'indice specificato nel filegroup predefinito.
   
 In questo contesto il termine default non rappresenta una parola chiave, È un identificatore per il filegroup predefinito e pertanto deve essere delimitato, ad esempio ON **"** default **"** o ON **[** default **]**. Se si specifica "default", l'opzione QUOTED_IDENTIFIER deve essere impostata su ON per la sessione corrente. Si tratta dell'impostazione predefinita. Per altre informazioni, vedere [SET QUOTED_IDENTIFIER &#40;Transact-SQL&#41;](../../t-sql/statements/set-quoted-identifier-transact-sql.md).  
   
-##  <a name="Permissions"></a> Autorizzazioni  
+##  <a name="Permissions"></a> Permissions  
  È necessario disporre dell'autorizzazione ALTER per la tabella.  
   
 ##  <a name="GenRemarks"></a> Osservazioni generali  
@@ -425,7 +425,7 @@ CREATE CLUSTERED COLUMNSTORE INDEX cci_Simple ON SimpleTable;
 GO  
 ```  
   
-### <a name="b-convert-a-clustered-index-to-a-clustered-columnstore-index-with-the-same-name"></a>B. Convertire un indice cluster in un indice columnstore cluster con lo stesso nome.  
+### <a name="b-convert-a-clustered-index-to-a-clustered-columnstore-index-with-the-same-name"></a>b. Convertire un indice cluster in un indice columnstore cluster con lo stesso nome.  
  In questo esempio viene creato una tabella con un indice cluster, quindi viene illustrata la sintassi della conversione dell'indice cluster in un indice columnstore cluster. In questo modo viene modificata l'archiviazione dell'intera tabella da rowstore a columnstore.  
   
 ```sql  
@@ -614,7 +614,7 @@ ON SimpleTable
 GO  
 ```  
   
-### <a name="b-create-a-simple-nonclustered-columnstore-index-using-all-options"></a>B. Creare un indice columnstore non cluster semplice usando tutte le opzioni  
+### <a name="b-create-a-simple-nonclustered-columnstore-index-using-all-options"></a>b. Creare un indice columnstore non cluster semplice usando tutte le opzioni  
  Nell'esempio seguente viene illustrata la sintassi della creazione di un indice columnstore non cluster usando tutte le opzioni.  
   
 ```sql  
@@ -694,7 +694,7 @@ ON xdimProduct
 WITH ( DROP_EXISTING = ON );  
 ```  
   
-### <a name="b-rebuild-a-clustered-columnstore-index"></a>B. Ricompilare un indice columnstore cluster  
+### <a name="b-rebuild-a-clustered-columnstore-index"></a>b. Ricompilare un indice columnstore cluster  
  Usando come base l'esempio precedente, questo esempio usa CREATE CLUSTERED COLUMNSTORE INDEX per ricompilare l'indice columnstore cluster esistente denominato cci_xDimProduct.  
   
 ```sql  
