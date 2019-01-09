@@ -12,12 +12,12 @@ ms.assetid: df516567-8689-45c2-b418-16473f8d43e4
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 12e5afd378f09a0fa7d624c6842e907211bc4212
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 0119d51332dde13ae77a67fb82f293495a4fefdf
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48194731"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53375143"
 ---
 # <a name="currency-type-and-conversion-function"></a>Tipo Currency e funzione di conversione
   In questo esempio viene definito un tipo di dati Currency definito dall'utente mediante C#. Questo tipo di dati definito dall'utente incapsula un importo e impostazioni cultura che consentono di determinare il modo corretto per rappresentare l'importo come valuta del paese delle impostazioni cultura in oggetto. Nell'esempio viene inoltre fornita una funzione di conversione di valuta che restituisce un'istanza del tipo di dati Currency definito dall'utente. Se il database AdventureWorks prevede un tasso di conversione da dollari US (USD) nella valuta associata alle impostazioni cultura specificate, la funzione di conversione restituisce un tipo di dati Currency definito dall'utente con conversione e impostazioni cultura corrispondenti alle impostazioni cultura specificate. In caso contrario, viene restituito un tipo di dati Currency definito dall'utente con l'importo originale in dollari USA e con le impostazioni cultura `en-us`. Nell'esempio viene illustrato come registrare assembly e metodi CLR (Common Language Runtime) e annullarne la registrazione mediante Transact-SQL.  
@@ -28,9 +28,9 @@ ms.locfileid: "48194731"
 ## <a name="prerequisites"></a>Prerequisiti  
  Per creare ed eseguire questo progetto, è necessario installare il software seguente:  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express è disponibile gratuitamente nel [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sito Web [di documentazione ed esempi di](http://go.microsoft.com/fwlink/?LinkId=31046)Express  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express.  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express è disponibile gratuitamente nel [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sito Web [di documentazione ed esempi di](https://go.microsoft.com/fwlink/?LinkId=31046)Express  
   
--   Database AdventureWorks, disponibile nel [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sito Web [per sviluppatori di](http://go.microsoft.com/fwlink/?linkid=62796)  
+-   Database AdventureWorks, disponibile nel [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sito Web [per sviluppatori di](https://go.microsoft.com/fwlink/?linkid=62796)  
   
 -   .NET Framework SDK 2.0 o versione successiva oppure Microsoft Visual Studio 2005 o versione successiva. .NET Framework SDK è disponibile gratuitamente.  
   

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: tools-other
 ms.topic: conceptual
 dev_langs:
 - XML
@@ -15,12 +14,12 @@ ms.assetid: 447d3964-b387-40f6-9189-71386774c29e
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: b8d334a319807692f099056f0f350c395ecbeeb2
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 59650edbef55b7bb433c6003c9ddc0f203ca7c5e
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48120111"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52780693"
 ---
 # <a name="index-element-dta"></a>Index - elemento (DTA)
   Contiene informazioni su un indice che si desidera creare o eliminare per una configurazione specificata dall'utente.  
@@ -39,14 +38,14 @@ ms.locfileid: "48120111"
   
 ## <a name="element-attributes"></a>Attributi elemento  
   
-|Attributo Index|Tipo di dati|Description|  
+|Attributo Index|Tipo di dati|Descrizione|  
 |---------------------|---------------|-----------------|  
 |`Clustered`|`boolean`|Facoltativo. Specifica un indice cluster. Impostare su "true" o "false", ad esempio:<br /><br /> `<Index Clustered="true">`<br /><br /> Per impostazione predefinita, questo attributo è impostato su "false".|  
 |`Unique`|`boolean`|Facoltativo. Specifica un indice univoco. Impostare su "true" o "false", ad esempio:<br /><br /> `<Index Unique="true">`<br /><br /> Per impostazione predefinita, questo attributo è impostato su "false".|  
 |`Online`|`boolean`|Facoltativo. Specifica un indice in grado di eseguire operazioni che richiedono spazio su disco temporaneo mentre il server è online. Impostare su "true" o "false", ad esempio:<br /><br /> `<Index Online="true">`<br /><br /> Per impostazione predefinita, questo attributo è impostato su "false".<br /><br /> Per altre informazioni, vedere [Perform Index Operations Online](../../relational-databases/indexes/perform-index-operations-online.md).|  
 |`IndexSizeInMB`|`double`|Facoltativo. Specifica le dimensioni massime dell'indice in megabyte, ad esempio:<br /><br /> `<Index IndexSizeInMB="873.75">`<br /><br /> Nessuna impostazione predefinita.|  
 |`NumberOfRows`|`integer`|Facoltativo. Simula diverse dimensioni di indice, che rispecchiano in maniera efficiente diverse dimensioni di tabella, ad esempio:<br /><br /> `<Index NumberOfRows="3000">`<br /><br /> Nessuna impostazione predefinita.|  
-|`QUOTED_IDENTIFIER`|`boolean`|Facoltativo. [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] seguirà le regole ISO relative alle virgolette che delimitano gli identificatori e le stringhe letterali. È necessario attivare questo attributo se l'indice è definito in una colonna calcolata o in una vista. La sintassi seguente, ad esempio, consente di attivare l'attributo:<br /><br /> `<Index QUOTED_IDENTIFIER [...]>`<br /><br /> Per impostazione predefinita, l'attributo è disattivato.<br /><br /> Per altre informazioni, vedere [SET QUOTED_IDENTIFIER &#40;Transact-SQL&#41;](/sql/t-sql/statements/set-quoted-identifier-transact-sql).|  
+|`QUOTED_IDENTIFIER`|`boolean`|Facoltativo.  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] seguirà le regole ISO relative alle virgolette che delimitano gli identificatori e le stringhe letterali. È necessario attivare questo attributo se l'indice è definito in una colonna calcolata o in una vista. La sintassi seguente, ad esempio, consente di attivare l'attributo:<br /><br /> `<Index QUOTED_IDENTIFIER [...]>`<br /><br /> Per impostazione predefinita, l'attributo è disattivato.<br /><br /> Per altre informazioni, vedere [SET QUOTED_IDENTIFIER &#40;Transact-SQL&#41;](/sql/t-sql/statements/set-quoted-identifier-transact-sql).|  
 |`ARITHABORT`|`boolean`|Facoltativo. Interrompe una query quando si verifica un errore di divisione per zero o di overflow durante l'esecuzione della query stessa. È necessario attivare questo attributo se l'indice è definito in una colonna calcolata o in una vista. La sintassi seguente, ad esempio, consente di attivare l'attributo:<br /><br /> `<Index ARITHABORT [...]>`<br /><br /> Per impostazione predefinita, l'attributo è disattivato.<br /><br /> Per altre informazioni, vedere [SET ARITHABORT &#40;Transact-SQL&#41;](/sql/t-sql/statements/set-arithabort-transact-sql).|  
 |`CONCAT_NULL_YIELDS_`<br /><br /> `NULL`|`boolean`|Facoltativo. Controlla se i risultati di concatenazione vengono considerati valori Null o stringhe vuote. È necessario attivare questo attributo se l'indice è definito in una colonna calcolata o in una vista. La sintassi seguente, ad esempio, consente di attivare l'attributo:<br /><br /> `<Index CONCAT_NULL_YIELDS_NULL [...]>`<br /><br /> Per impostazione predefinita, l'attributo è disattivato.<br /><br /> Per altre informazioni, vedere [SET CONCAT_NULL_YIELDS_NULL &#40;Transact-SQL&#41;](/sql/t-sql/statements/set-concat-null-yields-null-transact-sql).|  
 |`ANSI_NULLS`|`boolean`|Facoltativo. Specifica il comportamento conforme allo standard ISO degli operatori di confronto uguale a (=) e diverso da (<>) quando questi vengono utilizzati con valori Null. È necessario attivare questo attributo se l'indice è definito in una colonna calcolata o in una vista. La sintassi seguente, ad esempio, consente di attivare l'attributo:<br /><br /> `<Index ANSI_NULLS [...]>`<br /><br /> Per impostazione predefinita, l'attributo è disattivato.<br /><br /> Per altre informazioni, vedere [SET ANSI_NULLS &#40;Transact-SQL&#41;](/sql/t-sql/statements/set-ansi-nulls-transact-sql).|  
@@ -56,7 +55,7 @@ ms.locfileid: "48120111"
   
 ## <a name="element-characteristics"></a>Caratteristiche elemento  
   
-|Caratteristica|Description|  
+|Caratteristica|Descrizione|  
 |--------------------|-----------------|  
 |**Tipo di dati e lunghezza**|Nessuna.|  
 |**Valore predefinito**|Nessuna.|  
@@ -66,13 +65,13 @@ ms.locfileid: "48120111"
   
 |Relazione|Elementi|  
 |------------------|--------------|  
-|**Elemento padre**|[Creare l'elemento &#40;DTA&#41;](create-element-dta.md)<br /><br /> Elemento `Drop`. Per ulteriori informazioni, vedere l'XML Schema di Ottimizzazione guidata motore di database.|  
-|**Elementi figlio**|[Nome di elemento per l'indice &#40;DTA&#41;](name-element-for-index-dta.md)<br /><br /> [Elemento Column per Index &#40;DTA&#41;](column-element-for-index-dta.md)<br /><br /> Elemento `PartitionScheme`. Per ulteriori informazioni, vedere l'XML Schema di Ottimizzazione guidata motore di database.<br /><br /> Elemento `PartitionColumn`. Per ulteriori informazioni, vedere l'XML Schema di Ottimizzazione guidata motore di database.<br /><br /> [Elemento filegroup per Index &#40;DTA&#41;](filegroup-element-for-index-dta.md)<br /><br /> Elemento `NumberOfReferences`. Per ulteriori informazioni, vedere l'XML Schema di Ottimizzazione guidata motore di database.<br /><br /> Elemento `PercentUsage`. Per ulteriori informazioni, vedere l'XML Schema di Ottimizzazione guidata motore di database.|  
+|**Elemento padre**|[Elemento Create &#40;DTA&#41;](create-element-dta.md)<br /><br /> Elemento `Drop`. Per ulteriori informazioni, vedere l'XML Schema di Ottimizzazione guidata motore di database.|  
+|**Elementi figlio**|[Elemento Name per Index &#40;DTA&#41;](name-element-for-index-dta.md)<br /><br /> [Elemento Column per Index &#40;DTA&#41;](column-element-for-index-dta.md)<br /><br /> Elemento `PartitionScheme`. Per ulteriori informazioni, vedere l'XML Schema di Ottimizzazione guidata motore di database.<br /><br /> Elemento `PartitionColumn`. Per ulteriori informazioni, vedere l'XML Schema di Ottimizzazione guidata motore di database.<br /><br /> [Elemento Filegroup per Index &#40;DTA&#41;](filegroup-element-for-index-dta.md)<br /><br /> Elemento `NumberOfReferences`. Per ulteriori informazioni, vedere l'XML Schema di Ottimizzazione guidata motore di database.<br /><br /> Elemento `PercentUsage`. Per ulteriori informazioni, vedere l'XML Schema di Ottimizzazione guidata motore di database.|  
   
 ## <a name="example"></a>Esempio  
  Per un esempio di questo elemento, vedere [Esempio di file di input XML con configurazione specificata dall'utente &#40;DTA&#41;](xml-input-file-sample-with-user-specified-configuration-dta.md).  
   
 ## <a name="see-also"></a>Vedere anche  
- [Guida di riferimento ai file di input XML &#40;Ottimizzazione guidata motore di database&#41;](../../relational-databases/performance/database-engine-tuning-advisor.md)  
+ [Guida di riferimento ai file di input XML&#40; (Ottimizzazione guidata motore di database)&#41;](../../relational-databases/performance/database-engine-tuning-advisor.md)  
   
   

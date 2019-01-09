@@ -15,21 +15,21 @@ ms.assetid: 209d9e22-37fc-418f-8739-83adcf447d3f
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 79eb8344ef875aa76cde5b0ffcc34aa0bf23e1b6
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 1061ae540d4773ae53560c464d2af568c8e35782
+ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48122371"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53589625"
 ---
-# <a name="project-property-pages-dialog-box"></a>Finestra di dialogo Pagine delle proprietà del progetto
-  Utilizzare le pagine delle proprietà del progetto per configurare le proprietà di distribuzione per un progetto server di report. Per aprire questa finestra di dialogo, dal menu **Progetto** scegliere *\<Nome report progetto>***Proprietà**.  
+# <a name="project-property-pages-dialog-box"></a>pagine delle proprietà del progetto - finestra di dialogo
+  Utilizzare le pagine delle proprietà del progetto per configurare le proprietà di distribuzione per un progetto server di report. Per aprire questa finestra di dialogo, dal menu **Progetto** scegliere _\<Nome report progetto>_**Proprietà**.  
   
  Dopo aver definito le proprietà di configurazione, è possibile selezionare una configurazione nell'elenco a discesa **Configurazioni soluzione** sulla barra degli strumenti.  
   
 ## <a name="options"></a>Opzioni  
  **Configurazione**  
- Consente di selezionare la configurazione da modificare. Sono inizialmente disponibili tre configurazioni: **Debug**, **DebugLocal**e **Release**. La configurazione attiva viene visualizzata per prima, ad esempio **Active(Debug)**.  
+ Consente di selezionare la configurazione da modificare. Inizialmente, sono disponibili le seguenti configurazioni: **Eseguire il debug**, **DebugLocal**, e **versione**. La configurazione attiva viene visualizzata per prima, ad esempio **Active(Debug)**.  
   
  Per visualizzare le proprietà per più configurazioni contemporaneamente, selezionare **Tutte le configurazioni** o **Più configurazioni**.  
   
@@ -79,7 +79,7 @@ ms.locfileid: "48122371"
   
 ## <a name="see-also"></a>Vedere anche  
  [Pubblicazione di report](../publish-reports.md)   
- [Pubblicare un Report in una raccolta di SharePoint](../reports/publish-a-report-to-a-sharepoint-library.md)   
+ [Pubblicare un report in una raccolta di SharePoint](../reports/publish-a-report-to-a-sharepoint-library.md)   
  [Impostare le proprietà di distribuzione &#40;Reporting Services&#41;](set-deployment-properties-reporting-services.md)   
  [Guida sensibile al contesto di Progettazione report](report-designer-f1-help.md)  
   

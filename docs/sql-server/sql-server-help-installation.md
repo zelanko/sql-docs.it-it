@@ -10,12 +10,12 @@ ms.assetid: 51f8a08c-51d0-41d8-8bc5-1cb4d42622fb
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: e05a241d81d4a051bd11dc8ce8b80858627afec0
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 00db3d0ca027a0f188831281bb2c844b5bc8462d
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52514526"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53202450"
 ---
 # <a name="sql-server-offline-help-and-help-viewer"></a>Guida offline di SQL Server e Help Viewer
 
@@ -207,7 +207,7 @@ Quando si preme F1 o si fa clic su **Guida** o **?** in una finestra di dialogo 
 1. Selezionare **Imposta preferenza Guida** dal menu ? e scegliere **Avvia nel browser** o **Avvia in Help Viewer**. 
 2. Premere F1 o fare clic su **?** o **Guida** nelle finestre di dialogo in cui sono disponibili per visualizzare gli argomenti online sensibili al contesto nell'ambiente selezionato.
 
->  [!NOTE]
+> [!NOTE]
 >  La Guida sensibile al contesto funziona solo quando si è online. Non esistono origini offline per la Guida sensibile al contesto. 
 
 ## <a name="systems-without-internet-access"></a>Sistemi senza accesso a Internet

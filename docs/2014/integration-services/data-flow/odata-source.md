@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - SQL12.DTS.DESIGNER.ODATASOURCE.F1
@@ -13,18 +12,18 @@ ms.assetid: cc9003c9-638e-432b-867e-e949d50cec90
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 788a644f191fe84bf8bfe2dc580b62fb345493a9
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 331baa7fd450b1a49879f7f1be3d985425ad1267
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48188981"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53363453"
 ---
 # <a name="odata-source"></a>Origine OData
   Utilizzare il componente di origine OData in un pacchetto SSIS per utilizzare i dati dai servizi Protocollo OData (Open Data). Il componente supporta i formati dati JSON e ATOM, nonché i protocolli v3 e v2 OData.  
   
 > [!NOTE]  
->  L'origine OData può essere utilizzata per eseguire letture da elenchi SharePoint. Per visualizzare tutti gli elenchi in SharePoint server, usare l'URL seguente: http://\<server > / /_vti_bin/listData.svc. Per ulteriori informazioni sulle convenzioni per l'URL di SharePoint, vedere la pagina relativa all' [interfaccia REST di SharePoint Foundation](http://msdn.microsoft.com/library/ff521587.aspx).  
+>  L'origine OData può essere utilizzata per eseguire letture da elenchi SharePoint. Per visualizzare tutti gli elenchi in SharePoint server, usare l'URL seguente: http://\<server > / /_vti_bin/listData.svc. Per ulteriori informazioni sulle convenzioni per l'URL di SharePoint, vedere la pagina relativa all' [interfaccia REST di SharePoint Foundation](https://msdn.microsoft.com/library/ff521587.aspx).  
   
 ## <a name="odata-format"></a>Formato OData  
  I risultati restituiti dalla maggior parte dei servizi OData sono in più formati. È possibile specificare il formato del set di risultati utilizzando l'opzione query $format. I formati quali JSON e JSON Light sono più efficienti di ATOM/XML e possono garantire prestazioni migliori quando si trasferiscono grandi quantità di dati. Nella tabella seguente vengono forniti i risultati dei test di esempio. Come si può notare, si verifica un miglioramento delle prestazioni del 30-53% quando si passa dal formato ATOM a JSON e un miglioramento del 67% quando si passa da ATOM al nuovo formato JSON Light, disponibile in WCF Data Services 5.1.  
@@ -38,7 +37,7 @@ ms.locfileid: "48188981"
 > [!NOTE]  
 >  Con l'origine SSIS OData viene utilizzato ODataLib 5.5.0 per analizzare i feed OData ed è possibile leggere tutti i formati supportati da questa libreria.  
   
-## <a name="in-this-section"></a>Argomenti della sezione  
+## <a name="in-this-section"></a>In questa sezione  
   
 -   [Installare e disinstallare il componente di origine OData](../install-and-uninstall-odata-source-component.md)  
   

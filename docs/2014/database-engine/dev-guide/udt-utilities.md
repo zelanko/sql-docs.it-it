@@ -12,12 +12,12 @@ ms.assetid: 9e915268-9628-445b-81c2-b0ebd11e891e
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: adcea3ce2134ddfe33a9a11ba06cce028c8fad51
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 84fcd5451bae28f1817d7cf9b874938436f3d2f4
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48210181"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53372393"
 ---
 # <a name="udt-utilities"></a>UDT Utilities
   L'esempio UDT Utilities include una serie di funzioni di utilità, quali funzioni per l'esposizione dei metadati dell'assembly a Transact-SQL, funzioni di flusso di esempio con valori di tabella per la restituzione dei tipi di un assembly sotto forma di tabella e funzioni per la restituzione di campi, metodi e proprietà di un tipo di dati definito dall'utente. Le tecnologie illustrate comprendono funzioni di flusso con valori di tabella, API di reflection .NET Framework e il richiamo di funzioni con valori di tabella da Transact-SQL.  
@@ -25,9 +25,9 @@ ms.locfileid: "48210181"
 ## <a name="prerequisites"></a>Prerequisiti  
  Per creare ed eseguire questo progetto, è necessario installare il software seguente:  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express è disponibile gratuitamente nel [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sito Web [di documentazione ed esempi di](http://go.microsoft.com/fwlink/?LinkId=31046)Express  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express.  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express è disponibile gratuitamente nel [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sito Web [di documentazione ed esempi di](https://go.microsoft.com/fwlink/?LinkId=31046)Express  
   
--   Il [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] database in cui è disponibile in Codeplex [sito Web](http://go.microsoft.com/fwlink/?linkid=62796)  
+-   Il [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] database in cui è disponibile in Codeplex [sito Web](https://go.microsoft.com/fwlink/?linkid=62796)  
   
 -   .NET Framework SDK 2.0 o versione successiva oppure Microsoft Visual Studio 2005 o versione successiva. .NET Framework SDK è disponibile gratuitamente.  
   
