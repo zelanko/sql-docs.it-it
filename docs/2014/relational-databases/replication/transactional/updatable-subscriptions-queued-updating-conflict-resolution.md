@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 helpviewer_keywords:
 - conflict resolution [SQL Server replication], queued updating subscriptions
@@ -17,12 +16,12 @@ ms.assetid: 084ac587-25e7-4bd0-a385-556bbe07d02f
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 46d54056a60b2059bed038ddb8de3c83941ff38c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: MT
+ms.openlocfilehash: 1c07d35024358961b1d438d6a0b53cc764bbc479
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48085641"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52781233"
 ---
 # <a name="queued-updating-conflict-detection-and-resolution"></a>Queued Updating Conflict Detection and Resolution
   Dato che le sottoscrizioni ad aggiornamento in coda consentono la modifica degli stessi dati in più posizioni, è possibile che durante la sincronizzazione dei dati nel server di pubblicazione si verifichino conflitti. I conflitti vengono rilevati quando le modifiche vengono sincronizzate con il server di pubblicazione e vengono risolti in base ai criteri di risoluzione selezionati durante la creazione della pubblicazione. È possibile che si verifichino i conflitti seguenti:  
@@ -57,7 +56,7 @@ ms.locfileid: "48085641"
   
 -   [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]: [Impostare le opzioni di risoluzione dei conflitti per l'aggiornamento in coda &#40;SQL Server Management Studio&#41;](../publish/set-queued-updating-conflict-resolution-options-sql-server-management-studio.md)  
   
--   Programmazione Transact-SQL della replica: [Abilitazione delle sottoscrizioni aggiornabili per le pubblicazioni transazionali](../publish/enable-updating-subscriptions-for-transactional-publications.md)  
+-   Programmazione Transact-SQL della replica: [Abilitare le sottoscrizioni aggiornabili per le pubblicazioni transazionali](../publish/enable-updating-subscriptions-for-transactional-publications.md)  
   
  **Per visualizzare i conflitti di dati**  
   

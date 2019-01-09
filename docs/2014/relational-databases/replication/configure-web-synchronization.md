@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 01/10/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 f1_keywords:
 - SQL10.REP.CONFIGWEBSYNCWIZARD.SUBTYPE.F1
@@ -24,12 +23,12 @@ ms.assetid: 21f8e4d4-cd07-4856-98f0-9c9890ebbc82
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 49f3c4a66c38b339c87b79a30d42bf643f03d730
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 341066defb122e33e82cfde87a561bc9df1ed762
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48112747"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52782843"
 ---
 # <a name="configure-web-synchronization"></a>Configurazione della sincronizzazione Web
   L'opzione di sincronizzazione Web per la replica di tipo merge di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] consente la replica dei dati tramite il protocollo HTTPS su Internet. Per utilizzare la sincronizzazione Web, è innanzitutto necessario eseguire le azioni di configurazione riportate di seguito:  
@@ -125,7 +124,7 @@ La sincronizzazione Web è supportata in IIS a partire dalla versione 5.0. La Co
   
 -   Se si replicano volumi elevati di dati, può essere necessario regolare la dimensione dei batch dell'agente di merge.  
   
- La dimensione dei batch per la replica di tipo merge è misurata in *generazioni*, ovvero raccolte di modifiche per ogni articolo. Il numero di generazioni in un batch viene specificato utilizzando il –`DownloadGenerationsPerBatch` e –`UploadGenerationsPerBatch` parametri dell'agente di Merge. Per altre informazioni, vedere [Replication Merge Agent](agents/replication-merge-agent.md).  
+ La dimensione dei batch per la replica di tipo merge è misurata in *generazioni*, ovvero raccolte di modifiche per ogni articolo. Il numero di generazioni in un batch viene specificato usando il`DownloadGenerationsPerBatch` e -`UploadGenerationsPerBatch` parametri dell'agente di Merge. Per altre informazioni, vedere [Replication Merge Agent](agents/replication-merge-agent.md).  
   
  Per volumi elevati di dati, specificare un numero basso per ognuno dei parametri di batch. Si consiglia di iniziare con il valore 10, quindi regolarlo in base alle esigenze e alle prestazioni dell'applicazione. In genere, questi parametri sono specificati in un profilo dell'agente. Per ulteriori informazioni sui profili, vedere [Replication Agent Profiles](agents/replication-agent-profiles.md).  
   

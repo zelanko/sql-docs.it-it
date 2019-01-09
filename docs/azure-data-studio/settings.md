@@ -1,7 +1,8 @@
 ---
-title: L'utente di Studio dei dati di Azure e le impostazioni dell'area di lavoro | Microsoft Docs
-description: Come modificare le impostazioni dell'area di lavoro e utente di Studio dei dati di Azure.
-ms.custom: tools|sos
+title: Utente e le impostazioni dell'area di lavoro
+titleSuffix: Azure Data Studio
+description: Come personalizzare Azure dati Studio modificando le impostazioni dell'area di lavoro e utente.
+ms.custom: seodec18
 ms.date: 09/24/2018
 ms.prod: sql
 ms.technology: azure-data-studio
@@ -10,14 +11,14 @@ ms.topic: conceptual
 author: yualan
 ms.author: alayu
 manager: craigg
-ms.openlocfilehash: 34eea8db6295903ccdd99d7d73b143fb6fed02ec
-ms.sourcegitcommit: 35e4c71bfbf2c330a9688f95de784ce9ca5d7547
+ms.openlocfilehash: 6bf09159c8b7384a835a06bfafe744ea2f90f0c2
+ms.sourcegitcommit: 189a28785075cd7018c98e9625c69225a7ae0777
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/16/2018
-ms.locfileid: "49355952"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53030505"
 ---
-# <a name="user-and-workspace-settings"></a>Utente e le impostazioni dell'area di lavoro
+# <a name="modify-user-and-workspace-settings"></a>Modificare le impostazioni dell'area di lavoro e utente
 
 È facile da configurare [!INCLUDE[name-sos](../includes/name-sos-short.md)] in base alle esigenze tramite le impostazioni. Quasi tutte le parti di [!INCLUDE[name-sos](../includes/name-sos-short.md)]dell'editor, interfaccia utente e comportamento funzionale sono disponibili opzioni è possibile modificare.
 
@@ -30,7 +31,7 @@ ms.locfileid: "49355952"
 
 Il comando di menu **File** > **Preferenze** > **Impostazioni** (**sqlops**  >  **Preferenze** > **Impostazioni** su Mac) fornisce il punto di ingresso per configurare le impostazioni utente e dell'area di lavoro. Esse vengono fornite con un elenco di impostazioni predefinite. Copiare qualsiasi impostazione si desideri modificare nell'appropriato file `settings.json`. Le schede a destra consentono di passare rapidamente tra i file delle impostazioni utente e dell'area di lavoro.
 
-È inoltre possibile aprire le impostazioni utente e dell'area di lavoro dal **Riquadro comandi** (**Ctrl + MAIUSC + P**) con **Preferenze: Apri impostazioni utente** e  **Preferenze: Apri impostazioni area di lavoro** o utilizzare il tasto di scelta rapida (**Ctrl +**).
+È anche possibile aprire le impostazioni utente e dell'area di lavoro dal **riquadro comandi** (**Ctrl + MAIUSC + P**) con **preferenze: Aprire le impostazioni utente** e **preferenze: Aprire le impostazioni dell'area di lavoro** oppure usare il tasto di scelta rapida (**Ctrl +,**).
 
 Nell'esempio seguente disabilita i numeri di riga nell'editor e configura le righe di codice per essere rientrate automaticamente.
 
@@ -38,7 +39,7 @@ Nell'esempio seguente disabilita i numeri di riga nell'editor e configura le rig
 
 Le modifiche alle impostazioni vengono ricaricate da [!INCLUDE[name-sos](../includes/name-sos-short.md)] dopo aver modificato e salvato il file `settings.json`.
 
->**Nota:** le impostazioni dell'area di lavoro sono utili per la condivisione delle impostazioni specifiche di un progetto in un team.
+>**Nota:** Le impostazioni dell'area di lavoro sono utili per la condivisione delle impostazioni specifiche del progetto in un team.
 
 ## <a name="settings-file-locations"></a>Percorsi dei file delle impostazioni
 

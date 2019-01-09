@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 helpviewer_keywords:
 - backups [SQL Server replication], snapshot replication
@@ -21,12 +20,12 @@ ms.assetid: a8afcdbc-55db-4916-a219-19454f561f9e
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 43f5005c9b03772e8e8e23c3b3e06ea912683362
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: MT
+ms.openlocfilehash: 43be13027d1460ec407239140cd4306be76a445e
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48229991"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52823516"
 ---
 # <a name="strategies-for-backing-up-and-restoring-snapshot-and-transactional-replication"></a>Strategie per il backup e il ripristino della replica snapshot e della replica transazionale
   Quando si progetta una strategia di backup e ripristino per la replica snapshot e la replica transazionale, è necessario considerare le tre aree di fattori seguenti:  
@@ -72,7 +71,7 @@ ms.locfileid: "48229991"
   
  **Per impostare l'opzione sync with backup**  
   
--   Programmazione [!INCLUDE[tsql](../../../includes/tsql-md.md)] della replica: [Attivare backup coordinati per la replica transazionale &#40;programmazione Transact-SQL della replica&#41;](enable-coordinated-backups-for-transactional-replication.md)  
+-   Programmazione [!INCLUDE[tsql](../../../includes/tsql-md.md)] della replica: [Abilitare backup coordinati per la replica transazionale &#40;programmazione Transact-SQL della replica&#41;](enable-coordinated-backups-for-transactional-replication.md)  
   
 ## <a name="restoring-databases-involved-in-replication"></a>Ripristino di database interessati da una replica  
  È possibile ripristinare tutti i database in una topologia di replica se sono disponibili backup recenti e viene eseguita la procedura appropriata. La procedura di ripristino per il database di pubblicazione dipende dal tipo di replica e dalle opzioni utilizzate, mentre quella per tutti gli altri database è indipendente da tali fattori.  
@@ -92,7 +91,7 @@ ms.locfileid: "48229991"
   
  Il ripristino dei database **msdb** e **master** , descritti in questa sezione, è identico per tutti i quattro tipi.  
   
-#### <a name="publication-database-snapshot-replication"></a>Database di pubblicazione: replica snapshot  
+#### <a name="publication-database-snapshot-replication"></a>Database di pubblicazione: Replica snapshot  
   
 1.  Ripristinare il backup più recente del database di pubblicazione. Andare al passaggio 2.  
   
@@ -102,7 +101,7 @@ ms.locfileid: "48229991"
   
      Per altre informazioni su come rimuovere la replica, vedere [sp_removedbreplication &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-removedbreplication-transact-sql).  
   
-#### <a name="publication-database-read-only-transactional-replication"></a>Database di pubblicazione: replica transazionale di sola lettura  
+#### <a name="publication-database-read-only-transactional-replication"></a>Database di pubblicazione: Replica transazionale di sola lettura  
   
 1.  Ripristinare il backup più recente del database di pubblicazione. Andare al passaggio 2.  
   
@@ -149,7 +148,7 @@ ms.locfileid: "48229991"
   
          Per ulteriori informazioni su come specificare che i dati sono già disponibili nel Sottoscrittore, vedere [Initialize a Subscription Manually](../initialize-a-subscription-manually.md).  
   
-#### <a name="publication-database-transactional-replication-with-updating-subscriptions"></a>Database di pubblicazione: replica transazionale con sottoscrizioni aggiornabili  
+#### <a name="publication-database-transactional-replication-with-updating-subscriptions"></a>Database di pubblicazione: Replica transazionale con sottoscrizioni aggiornabili  
   
 1.  Ripristinare il backup più recente del database di pubblicazione. Andare al passaggio 2.  
   
@@ -183,7 +182,7 @@ ms.locfileid: "48229991"
   
          Per ulteriori informazioni su come specificare che i dati sono già disponibili nel Sottoscrittore, vedere [Initialize a Subscription Manually](../initialize-a-subscription-manually.md).  
   
-#### <a name="publication-database-peer-to-peer-transactional-replication"></a>Database di pubblicazione: replica transazionale peer-to-peer  
+#### <a name="publication-database-peer-to-peer-transactional-replication"></a>Database di pubblicazione: Replica transazionale peer-to-peer  
  Nella procedura seguente i database di pubblicazione **A**, **B**e **C** sono inclusi in una topologia di replica transazionale peer-to-peer. I database **A** e **C** sono online e funzionano correttamente. Il database **B** è il database da ripristinare. Il processo descritto, specialmente i passaggi 7, 10 e 11, è molto simile al processo per l'aggiunta di un nodo a una topologia peer-to-peer. Il modo più semplice per eseguire questi passaggi consiste nell'utilizzare la Configurazione guidata topologia peer-to-peer, ma è possibile utilizzare anche stored procedure.  
   
 1.  Eseguire gli agenti di distribuzione per sincronizzare le sottoscrizioni nei database **A** e **C**. Andare al passaggio 2.  
@@ -322,7 +321,7 @@ ms.locfileid: "48229991"
   
 2.  Ripristinare il backup del database di sottoscrizione più recente. Andare al passaggio 3.  
   
-3.  Se il database di sottoscrizione contiene solo sottoscrizioni push, andare al passaggio 4. Se il database di sottoscrizione contiene sottoscrizioni pull, determinare quanto segue: le informazioni sulla sottoscrizione sono aggiornate? Nel database sono incluse tutte le tabelle e le opzioni impostate al momento dell'errore? In caso affermativo, andare al passaggio 4. In caso contrario, reinizializzare la sottoscrizione. Il recupero viene completato.  
+3.  Se il database di sottoscrizione contiene solo sottoscrizioni push, andare al passaggio 4. Se il database di sottoscrizione contiene sottoscrizioni pull, porsi le domande seguenti: Sia le informazioni sulla sottoscrizione corrente? Nel database sono incluse tutte le tabelle e le opzioni impostate al momento dell'errore? In caso affermativo, andare al passaggio 4. In caso contrario, reinizializzare la sottoscrizione. Il recupero viene completato.  
   
 4.  Per sincronizzare il Sottoscrittore, eseguire l'agente di distribuzione. Il recupero viene completato.  
   
