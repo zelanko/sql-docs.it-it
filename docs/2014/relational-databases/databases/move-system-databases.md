@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - moving system databases
@@ -28,12 +27,12 @@ ms.assetid: 72bb62ee-9602-4f71-be51-c466c1670878
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 3297457db7fb0d363e8122cab9b4d02abcd87ceb
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: da6b02061ca12210f78ee48b9d3a78c30d43e0b6
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48080421"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52756273"
 ---
 # <a name="move-system-databases"></a>Spostare i database di sistema
   In questo argomento viene descritta la procedura per lo spostamento dei database di sistema in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Lo spostamento dei database di sistema può risultare utile nelle situazioni seguenti:  
@@ -61,7 +60,7 @@ ms.locfileid: "48080421"
   
 -   [Lo spostamento del Database Resource](#Resource)  
   
--   [Completamento: Dopo lo spostamento di tutti i database di sistema](#Follow)  
+-   [Completamento: Dopo aver spostato tutti i database di sistema](#Follow)  
   
 -   [Esempi](#Examples)  
   
@@ -74,7 +73,7 @@ ms.locfileid: "48080421"
     ALTER DATABASE database_name MODIFY FILE ( NAME = logical_name , FILENAME = 'new_path\os_file_name' )  
     ```  
   
-2.  Arrestare l'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o arrestare il sistema per eseguire la manutenzione. Per altre informazioni, vedere [Avviare, arrestare, sospendere, riprendere, riavviare il motore di database, SQL Server Agent o SQL Server Browser](../../database-engine/configure-windows/start-stop-pause-resume-restart-sql-server-services.md).  
+2.  Arrestare l'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o arrestare il sistema per eseguire la manutenzione. Per altre informazioni, vedere [Avviare, arrestare, sospendere, riprendere, riavviare i servizi SQL Server](../../database-engine/configure-windows/start-stop-pause-resume-restart-sql-server-services.md).  
   
 3.  Spostare il file o i file nella nuova posizione.  
   
@@ -159,11 +158,11 @@ ms.locfileid: "48080421"
   
 3.  Nella finestra di dialogo **Proprietà (***nome_istanza***) di SQL Server** fare clic sulla scheda **Parametri di avvio**.  
   
-4.  Nella casella **Parametri esistenti** selezionare il parametro –d per spostare il file di dati master. Per salvare le modifiche, fare clic su **Aggiorna** .  
+4.  Nella casella **Parametri esistenti** selezionare il parametro -d per spostare il file di dati master. Per salvare le modifiche, fare clic su **Aggiorna** .  
   
      Nella casella **Specificare un parametro di avvio** impostare il parametro sul nuovo percorso del database master.  
   
-5.  Nella casella **Parametri esistenti** selezionare il parametro –l per spostare il file di log master. Per salvare le modifiche, fare clic su **Aggiorna** .  
+5.  Nella casella **Parametri esistenti** selezionare il parametro -l per spostare il file di log master. Per salvare le modifiche, fare clic su **Aggiorna** .  
   
      Nella casella **Specificare un parametro di avvio** impostare il parametro sul nuovo percorso del database master.  
   

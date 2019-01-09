@@ -1,7 +1,8 @@
 ---
-title: 'Esercitazione: Abilitare il widget insight tabella spazio utilizzo esempio in Studio di Azure Data | Microsoft Docs'
+title: "Esercitazione: Abilitare il widget insight esempio di tabella dello spazio dell'utilizzo"
+titleSuffix: Azure Data Studio
 description: Questa esercitazione illustra come abilitare il widget insight tabella spazio utilizzo esempio sul dashboard del database di Studio di Azure Data.
-ms.custom: tools|sos
+ms.custom: seodec18
 ms.date: 09/24/2018
 ms.prod: sql
 ms.technology: azure-data-studio
@@ -10,14 +11,14 @@ ms.topic: tutorial
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 55d6c96cc328f21d1b51ce7186c8396ab278ee6f
-ms.sourcegitcommit: 35e4c71bfbf2c330a9688f95de784ce9ca5d7547
+ms.openlocfilehash: ebd3b1af1bc9b342ad6b2d33596e69b487888ced
+ms.sourcegitcommit: 189a28785075cd7018c98e9625c69225a7ae0777
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/16/2018
-ms.locfileid: "49355992"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53030355"
 ---
-# <a name="tutorial-enable-the-table-space-usage-sample-insight-widget-using-includename-sosincludesname-sos-shortmd"></a>Esercitazione: Abilitare il widget dello spazio utilizzato per le tabelle su [!INCLUDE[name-sos](../includes/name-sos-short.md)]
+# <a name="tutorial-enable-the-table-space-usage-sample-insight-widget-using-includename-sosincludesname-sos-shortmd"></a>Esercitazione: Abilitare la tabella dello spazio dell'utilizzo esempio insight widget usando [!INCLUDE[name-sos](../includes/name-sos-short.md)]
 
 Con questa esercitazione viene illustrato come abilitare un widget sulla dashboard del database al fine di avere una panoramica sull'utilizzo dello spazio per tutte le tabelle in un database. Durante questa esercitazione, si apprenderà come:
 
@@ -38,7 +39,7 @@ Questa esercitazione richiede *TutorialDB*, un database su SQL Server o Database
 [!INCLUDE[name-sos](../includes/name-sos-short.md)] offre un widget di esempio incorporato per monitorare lo spazio utilizzato dalle tabelle in un database.
 
 1. Al fine di accedere al file delle *IMPOSTAZIONI UTENTE* premere **Ctrl+MAIUSC+P** per aprire il *riquadro comandi*.
-2. Scrivere *impostazioni* nella casella di ricerca e dai file di impostazioni disponibili, selezionare **Preferenze: Apri impostazioni utente**.
+2. Tipo di *le impostazioni* nella casella di ricerca e selezionare **preferenze: Aprire le impostazioni utente**.
 2. Scrivere ora *dashboard* nella ricerca impostazioni e individuare **dashboard.database.widgets**.
 
 3. Per personalizzare il **dashboard.database.widgets** impostazioni è necessario modificare il **dashboard.database.widgets** voce nella **impostazioni utente** sezione (la colonna nel lato destro). Se è presente alcun **dashboard.database.widgets** nel **delle impostazioni utente** sezione, passare il mouse sul **dashboard.database.widgets** testo nella colonna impostazioni predefinite e fare clic su l'icona a forma di matita visualizzata a sinistra del testo e fare clic su **Copia impostazioni**. Se viene visualizzato il menu a comparsa **sostituire nelle impostazioni**, senza selezionarlo. Andare alla **delle impostazioni utente** colonna a destra e individuare le **dashboard.database.widgets** sezione e andare al passaggio successivo.

@@ -1,7 +1,8 @@
 ---
-title: 'Guida introduttiva: Connettersi ed eseguire query di SQL Server usando Azure Data Studio | Microsoft Docs'
+title: 'Guida introduttiva: Connettersi ed eseguire query di SQL Server'
+titleSuffix: Azure Data Studio
 description: Questa Guida introduttiva illustra come usare Azure Data Studio per connettersi a SQL Server ed eseguire una query
-ms.custom: tools|sos
+ms.custom: seodec18
 ms.date: 09/24/2018
 ms.prod: sql
 ms.technology: azure-data-studio
@@ -10,14 +11,14 @@ ms.topic: quickstart
 author: yualan
 ms.author: alayu
 manager: craigg
-ms.openlocfilehash: 6ad52b466c15ad81515e954cf8fa3fa5a727100f
-ms.sourcegitcommit: 35e4c71bfbf2c330a9688f95de784ce9ca5d7547
+ms.openlocfilehash: 2b7e251440fd8b0184e36e0e41c47d2ab0dcaf18
+ms.sourcegitcommit: 189a28785075cd7018c98e9625c69225a7ae0777
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/16/2018
-ms.locfileid: "49356092"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53030285"
 ---
-# <a name="quickstart-connect-and-query-sql-server-using-includename-sosincludesname-sos-shortmd"></a>Guida introduttiva: Connettersi ed eseguire query di SQL Server con[!INCLUDE[name-sos](../includes/name-sos-short.md)]
+# <a name="quickstart-connect-and-query-sql-server-using-includename-sosincludesname-sos-shortmd"></a>Guida introduttiva: Connettersi ed eseguire query usando SQL Server [!INCLUDE[name-sos](../includes/name-sos-short.md)]
 Con questa guida introduttiva viene illustrato come utilizzare [!INCLUDE[name-sos](../includes/name-sos-short.md)] per connettersi a SQL Server e quindi utilizzare istruzioni Transact-SQL (T-SQL) per creare il *TutorialDB* utilizzato [!INCLUDE[name-sos](../includes/name-sos-short.md)] esercitazioni.
 
 ## <a name="prerequisites"></a>Prerequisiti
@@ -43,11 +44,11 @@ Se non si dispone di alcun SQL Server, selezionare la piattaforma usata dai coll
 1. Questo articolo usa *Account di accesso SQL*, ma l'accesso tramite *Autenticazione di Windows* è comunque supportato. Compilare i campi come indicato di seguito:
  
     - **Nome del server:** localhost
-    - **Tipo di autenticazione:** account di accesso SQL  
-    - **Nome utente:** nome utente per SQL Server  
+    - **Tipo di autenticazione:** Account di accesso SQL  
+    - **Nome utente:** Nome utente per SQL Server  
     - **Password:** Password per SQL Server  
     - **Nome del database:** lasciare vuoto questo campo 
-    - **Gruppo di server:** \<predefinito\>  
+    - **Gruppo di server:** \<Default\>  
 
    ![Schermata "Nuova connessione"](media/quickstart-sql-server/new-connection-screen.png)
 

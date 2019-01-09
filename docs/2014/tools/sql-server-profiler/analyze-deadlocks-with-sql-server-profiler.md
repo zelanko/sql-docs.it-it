@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: profiler
 ms.topic: conceptual
 helpviewer_keywords:
 - process nodes [SQL Server Profiler]
@@ -20,19 +19,19 @@ ms.assetid: 72d6718f-501b-4ea6-b344-c0e653f19561
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: eb04d2fd2b0587863d59d90a4fff7f949c108ec7
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: ca1882faa9c61536d1ef025058322f141beedafd
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48176581"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52780683"
 ---
 # <a name="analyze-deadlocks-with-sql-server-profiler"></a>Analizzare deadlock con SQL Server Profiler
   [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] consente di identificare la causa di un deadlock. I deadlock si verificano in caso di dipendenza ciclica tra due o più thread o processi per alcuni set di risorse in SQL Server. Tramite [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)], è possibile creare una traccia che registra, riproduce e visualizza gli eventi deadlock da analizzare.  
   
  Per tracciare gli eventi deadlock, aggiungere la classe di evento **Deadlock graph** a una traccia. Questa classe di evento consente di popolare la colonna di dati **TextData** nella traccia con dati XML sul processo e gli oggetti coinvolti nel deadlock. [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] può estrarre il documento XML in un file XML del deadlock (con estensione xdl) visualizzabile in un secondo momento in SQL Server Management Studio. È possibile configurare [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] per estrarre gli eventi **Deadlock graph** in un singolo file contenente tutti gli eventi **Deadlock graph** oppure in file distinti. È possibile eseguire l'estrazione in uno dei modi seguenti:  
   
--   Durante la configurazione della traccia, con la scheda **Impostazioni estrazione eventi** . Si noti che questa scheda non viene visualizzata a meno che non si selezioni l'evento **Deadlock graph** nella scheda **Selezione eventi** .  
+-   Durante la configurazione della traccia, con la scheda **Impostazioni estrazione eventi** . Si noti che questa scheda non viene visualizzata a meno che non si selezioni l'evento Deadlock graph nella scheda **Selezione eventi** .  
   
 -   Con il comando **Estrai eventi di SQL Server** del menu **File** .  
   
@@ -48,7 +47,7 @@ ms.locfileid: "48176581"
  Un oggetto di database, ad esempio una tabella, un indice o una riga.  
   
  Arco  
- Una relazione tra un processo e una risorsa. Oggetto `request` edge si verifica quando un processo in attesa di una risorsa. Un `owner` edge si verifica quando una risorsa in attesa di un processo. Nella descrizione dell'arco è inclusa la modalità di blocco, ad esempio **Modalità: X**.  
+ Una relazione tra un processo e una risorsa. Un arco di tipo `request` viene generato quando un processo è in attesa di una risorsa. Un arco di tipo `owner` viene generato quando una risorsa è in attesa di un processo. Nella descrizione dell'arco è inclusa la modalità di blocco, Ad esempio, **modalità: X**.  
   
 ## <a name="deadlock-process-node"></a>Nodo di processo del deadlock  
  In questo tipo di grafico, il nodo del processo contiene informazioni sul processo. Nella tabella seguente vengono illustrati i componenti di un processo.  

@@ -1,7 +1,8 @@
 ---
-title: 'Esercitazione: Abilitare i cinque query più lente widget - Data Studio di Azure di esempio | Microsoft Docs'
+title: 'Esercitazione: Abilitare il widget di esempio le query più lente cinque'
+titleSuffix: Azure Data Studio
 description: Con questa esercitazione viene illustrato come abilitare il widget di esempio delle cinque query più lente nella dashboard del database.
-ms.custom: tools|sos
+ms.custom: seodec18
 ms.date: 09/24/2018
 ms.prod: sql
 ms.technology: azure-data-studio
@@ -10,12 +11,12 @@ ms.topic: tutorial
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 75886c26b7ceff9df9e2fc96f76038e8d6e70dd0
-ms.sourcegitcommit: 35e4c71bfbf2c330a9688f95de784ce9ca5d7547
+ms.openlocfilehash: 491e66ecc8b0dfb3024a2beb59cfefd3f8e0d28f
+ms.sourcegitcommit: 189a28785075cd7018c98e9625c69225a7ae0777
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/16/2018
-ms.locfileid: "49356242"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53030785"
 ---
 # <a name="tutorial-add-the-five-slowest-queries-sample-widget-to-the-database-dashboard"></a>Esercitazione: Aggiungere il *cinque query più lente* widget al dashboard del database di esempio
 
@@ -54,7 +55,7 @@ Il widget in questo esempio richiede *Query Store* deve essere abilitata.
 Per aggiungere il *widget di query lente* al dashboard, modificare il *dashboard.database.widgets* impostazione nel *impostazioni utente* file.
 
 1. Al fine di accedere al file delle *IMPOSTAZIONI UTENTE* premere **Ctrl+MAIUSC+P** per aprire il *riquadro comandi*.
-2. Scrivere *impostazioni* nella casella di ricerca e dai file di impostazioni disponibili, selezionare **Preferenze: Apri impostazioni utente**.
+2. Tipo di *le impostazioni* nella casella di ricerca e selezionare **preferenze: Aprire le impostazioni utente**.
 
    ![Comando Apri impostazioni utente](./media/tutorial-qds-sql-server/open-user-settings.png)
 

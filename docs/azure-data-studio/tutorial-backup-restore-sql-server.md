@@ -1,7 +1,8 @@
 ---
-title: Eseguire il backup e ripristinare un database tramite Data Studio di Azure | Microsoft Docs
+title: Eseguire il backup e ripristinare un database
+titleSuffix: Azure Data Studio
 description: Informazioni su come eseguire il backup e ripristinare un database tramite Data Studio di Azure
-ms.custom: tools|sos
+ms.custom: seodec18
 ms.date: 09/24/2018
 ms.prod: sql
 ms.technology: azure-data-studio
@@ -10,16 +11,16 @@ ms.topic: tutorial
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: f2d9b4cbee5ab4da44961927809bf1fb4c771cc1
-ms.sourcegitcommit: 35e4c71bfbf2c330a9688f95de784ce9ca5d7547
+ms.openlocfilehash: 0e6025c59206f48fe6cf5cd5bf5182ea73090bbf
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/16/2018
-ms.locfileid: "49355912"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53207130"
 ---
-# <a name="backup-and-restore-using-includename-sosincludesname-sos-shortmd"></a>Backup e ripristino usando [!INCLUDE[name-sos](../includes/name-sos-short.md)]
+# <a name="backup-and-restore-databases-using-includename-sosincludesname-sos-shortmd"></a>Backup e ripristino di database usando [!INCLUDE[name-sos](../includes/name-sos-short.md)]
 
-In questa esercitazione si apprenderà come sfruttare[!INCLUDE[name-sos](../includes/name-sos-short.md)] al fine di:
+In questa esercitazione imparerete a usare [!INCLUDE[name-sos](../includes/name-sos-short.md)] per:
 > [!div class="checklist"]
 > * Effettuare il backup di un database  
 > * Visualizzare lo stato del backup
@@ -31,12 +32,13 @@ In questa esercitazione si apprenderà come sfruttare[!INCLUDE[name-sos](../incl
 
 Questa esercitazione richiede il database *TutorialDB* su SQL Server. Per crearlo, completare la guida rapida seguente:
 
-- [Connettersi ed eseguire query su SQL Server tramite[!INCLUDE[name-sos-short](../includes/name-sos-short.md)]](quickstart-sql-server.md)
+- [Connettersi ed eseguire query su SQL Server [!INCLUDE[name-sos-short](../includes/name-sos-short.md)]](quickstart-sql-server.md)
 
+Questa esercitazione richiede la connessione a un database di SQL Server. Database SQL di Azure con i backup automatici in modo che Data Studio di Azure non eseguire il backup di Database SQL di Azure e il ripristino. Per informazioni dettagliate, vedere [informazioni sui backup automatici del Database SQL](https://docs.microsoft.com/azure/sql-database/sql-database-automated-backups).
 
 ## <a name="backup-a-database"></a>Effettuare il backup di un database 
 
-1. Aprire la dashboard del database TutorialDB (aprire la barra laterale **SERVER** con **CTRL+G**, espandere **Database**, fare clic con il pulsante destro del mouse su **TutorialDB** e selezionare **Gestisci**).  
+1. Aprire la dashboard del database TutorialDB (aprire la barra laterale **SERVER** con **CTRL+G**, espandere **Database**, fare clic con il pulsante destro del mouse su **TutorialDB** e selezionare **Gestisci**). 
 
 2. Aprire la finestra di dialogo **Backup database** (fare clic su **Backup** sul widget **Attività**).
 
