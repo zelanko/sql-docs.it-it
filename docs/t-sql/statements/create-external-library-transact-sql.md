@@ -1,7 +1,7 @@
 ---
 title: CREATE EXTERNAL LIBRARY (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 03/05/2018
+ms.date: 12/07/2018
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: t-sql
@@ -19,22 +19,20 @@ author: HeidiSteen
 ms.author: heidist
 manager: cgronlund
 monikerRange: '>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d8c6b8ea4467ddc09a08d21a337b1b5c8c44f34e
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: bd47fd06404dad6e6896d377e95de677a08c5ae3
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52538784"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53205161"
 ---
 # <a name="create-external-library-transact-sql"></a>CREATE EXTERNAL LIBRARY (Transact-SQL)  
 
 [!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]  
 
-Carica pacchetti R in un database dal flusso di byte o dal percorso di file specificato.
+Carica file pacchetto R in un database dal flusso di byte o dal percorso di file specificato. Questa istruzione funge da meccanismo generico per l'amministratore del database per il caricamento degli elementi necessari per i runtime dei nuovi linguaggi esterni (attualmente solo R) e per le piattaforme del sistema operativo supportate da [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)]. 
 
-Questa istruzione funge da meccanismo generico per l'amministratore del database per il caricamento degli elementi necessari per i runtime dei nuovi linguaggi esterni (R, Python, Java e così via) e per le piattaforme del sistema operativo supportate da [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)]. 
-
-Attualmente sono supportati solo il linguaggio R e la piattaforma Windows. Il supporto di Python e Linux è previsto per una versione successiva.
+In SQL Server 2017 e versioni successive sono supportati solo il linguaggio R e la piattaforma Windows. Il supporto di Python e Linux è previsto per una versione successiva.
 
 ## <a name="syntax"></a>Sintassi
 
@@ -94,7 +92,7 @@ Questa opzione è utile se è necessario creare una libreria o modificare una li
 
 Specifica la piattaforma per il contenuto della libreria. Il valore predefinito corrisponde alla piattaforma host in cui è in esecuzione SQL Server. Per l'utente, quindi, non è necessario specificare questo valore. È necessario nel caso in cui siano supportate più piattaforme o l'utente debba specificare una piattaforma diversa. 
 
-In SQL Server 2017, Windows è l'unica piattaforma supportata.
+Attualmente Windows è l'unica piattaforma supportata.
 
 ## <a name="remarks"></a>Remarks
 
@@ -129,7 +127,7 @@ EXEC sp_execute_external_script
 @script=N'library(customPackage)'
 ```
 
-### <a name="b-installing-packages-with-dependencies"></a>B. Installare pacchetti con dipendenze
+### <a name="b-installing-packages-with-dependencies"></a>b. Installare pacchetti con dipendenze
 
 Se il pacchetto che si vuole installare presenta dipendenze, è fondamentale analizzare le dipendenze sia di primo che di secondo livello e assicurarsi che tutti i pacchetti necessari siano disponibili _prima_ di tentare l'installazione del pacchetto di destinazione.
 
@@ -181,7 +179,7 @@ Poiché può essere difficile determinare tutte le dipendenze semplicemente esam
 
 ### <a name="c-create-a-library-from-a-byte-stream"></a>C. Creare una libreria da un flusso di byte
 
-Se non si ha la possibilità di salvare i file del pacchetto in un percorso nel server, è possibile passare il contenuto del pacchetto in una variabile. L'esempio seguente crea una libreria passando i bit come valori letterali esadecimali.
+Se non si ha la possibilità di salvare i file del pacchetto in un percorso nel server, è possibile passare il contenuto del pacchetto in una variabile. L'esempio seguente crea una libreria passando i bit come valore letterale esadecimale.
 
 ```SQL
 CREATE EXTERNAL LIBRARY customLibrary FROM (CONTENT = 0xabc123) WITH (LANGUAGE = 'R');
