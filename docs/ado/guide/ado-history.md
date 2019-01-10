@@ -15,7 +15,7 @@ ms.author: genemi
 manager: craigg
 ms.openlocfilehash: e00a1ff652e3f1463d37e2cd5457965968b4ba4c
 ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 10/01/2018
 ms.locfileid: "47709559"
@@ -32,10 +32,10 @@ Questo argomento elenca le nuove funzionalità introdotte per ogni versione del 
  *Accesso alle unità disco rigido non è consentito all'esterno di un'area attendibile.*
 Tra i domini di scripting che includono i siti non trusted, sono disabilitate le seguenti operazioni: **Stream.SaveToFile**, **Stream.LoadFromFile**, **Recordset. Save**, e **Open**, usato in combinazione con la **adCmdFile** flag o con il Provider Microsoft OLE DB Persistence (MSPersist).
 
- **Open** *,***Recordset. Save** *,***Stream.SaveToFile** *, e* **Stream.LoadFromFile***operano su solo i file fisici.* 
+ **Open** *,* **Recordset. Save** *,* **Stream.SaveToFile** *, e* **Stream.LoadFromFile** *operano su solo i file fisici.*
 Questi metodi, a questo punto, verificare che gli handle di file scegliere solo i file fisici.
 
- **Recordset.ActiveCommand***restituisce un errore quando viene richiamato da una pagina HTML o ASP.* 
+ **Recordset.ActiveCommand** *restituisce un errore quando viene richiamato da una pagina HTML o ASP.*
 Ciò impedisce che il **comando** oggetto dall'utilizzo improprio.
 
  *I numerosi***recordset***restituito da un'annidata***forma***comando ha un limite superiore.* 
