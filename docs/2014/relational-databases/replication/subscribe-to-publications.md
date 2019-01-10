@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 f1_keywords:
 - sql12.rep.conc.subtopubs.f1
@@ -25,12 +24,12 @@ ms.assetid: 088ee30a-05ab-47c4-92ed-316b93e12445
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 573346dcd34691f9270e61592a25d8625d2af367
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 3aa122e19d890b0b994e4403dcc59b3131571d7c
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48207831"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52767873"
 ---
 # <a name="subscribe-to-publications"></a>Subscribe to Publications
   Una sottoscrizione è la richiesta di una copia di dati o di oggetti di database in una pubblicazione. Una sottoscrizione definisce quale pubblicazione verrà ricevuta, insieme alla posizione e al momento in cui verrà ricevuta. Quando si pianificano le sottoscrizioni, è necessario decidere dove si desidera eseguire l'elaborazione dell'agente. La posizione di esecuzione dell'agente varia in base al tipo di sottoscrizione selezionato. In una sottoscrizione push, l'agente di merge o l'agente di distribuzione viene eseguito nel server di distribuzione, mentre in una sottoscrizione pull gli agenti vengono eseguiti nei Sottoscrittori. Dopo la creazione di una sottoscrizione non è più possibile modificarne il tipo.  
@@ -80,7 +79,7 @@ ms.locfileid: "48207831"
   
  **Per creare una sottoscrizione pull**  
   
- [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]: [Creare una sottoscrizione pull](create-a-pull-subscription.md)  
+ [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]: [Create a Pull Subscription](create-a-pull-subscription.md)  
   
  **Per visualizzare o modificare le proprietà di sottoscrizione pull**  
   
