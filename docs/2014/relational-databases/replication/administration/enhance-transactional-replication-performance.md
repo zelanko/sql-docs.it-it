@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 helpviewer_keywords:
 - publications [SQL Server replication], design and performance
@@ -22,12 +21,12 @@ ms.assetid: 67084a67-43ff-4065-987a-3b16d1841565
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: eaf1d549ecf5e40593c3602cc35b4f4ad5e39790
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 1cb8d3e14d7963bdcbad9bdc273f2adfaf11c0ee
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48085501"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52813653"
 ---
 # <a name="enhance-transactional-replication-performance"></a>Miglioramento delle prestazioni della replica transazionale
   Dopo aver considerato i suggerimenti sulle prestazioni generali descritti nella sezione [Miglioramento delle prestazioni generali della replica](enhance-general-replication-performance.md), tenere presente le aree aggiuntive specifiche della replica transazionale riportate di seguito.  
@@ -70,16 +69,16 @@ ms.locfileid: "48085501"
   
 ## <a name="distribution-agent-and-log-reader-agent-parameters"></a>Parametri dell'agente di distribuzione e dell'agente di lettura log  
   
--   Per risolvere i colli di bottiglia accidentali, usare il parametro **–MaxCmdsInTran** per l'agente di lettura log.  
+-   Per risolvere i colli di bottiglia accidentali, usare il parametro **-MaxCmdsInTran** per l'agente di lettura log.  
   
-     Il parametro **–MaxCmdsInTran** specifica il numero massimo di istruzioni raggruppate in una transazione mentre l'agente di lettura log scrive i comandi nel database di distribuzione. L'utilizzo di questo parametro consente all'agente di lettura log e all'agente di distribuzione di dividere le transazioni di grandi dimensioni, ovvero costituite da molti comandi, nel server di pubblicazione in diverse transazioni più piccole quando i comandi vengono applicati al Sottoscrittore. Può inoltre ridurre la possibilità che si verifichino contese nel server di distribuzione e diminuire la latenza tra il server di pubblicazione e il Sottoscrittore. Dal momento che la transazione originale viene applicata in unità più piccole, il Sottoscrittore può accedere alle righe di una vasta transazione logica del server di pubblicazione prima della fine della transazione originale, violando la rigida atomicità transazionale. Il valore predefinito è **0**, che consente di mantenere i limiti delle transazioni del server di pubblicazione. Questo parametro non è applicabile ai server di pubblicazione Oracle.  
+     Il parametro **-MaxCmdsInTran** specifica il numero massimo di istruzioni raggruppate in una transazione mentre l'agente di lettura log scrive i comandi nel database di distribuzione. L'utilizzo di questo parametro consente all'agente di lettura log e all'agente di distribuzione di dividere le transazioni di grandi dimensioni, ovvero costituite da molti comandi, nel server di pubblicazione in diverse transazioni più piccole quando i comandi vengono applicati al Sottoscrittore. Può inoltre ridurre la possibilità che si verifichino contese nel server di distribuzione e diminuire la latenza tra il server di pubblicazione e il Sottoscrittore. Dal momento che la transazione originale viene applicata in unità più piccole, il Sottoscrittore può accedere alle righe di una vasta transazione logica del server di pubblicazione prima della fine della transazione originale, violando la rigida atomicità transazionale. Il valore predefinito è **0**, che consente di mantenere i limiti delle transazioni del server di pubblicazione. Questo parametro non è applicabile ai server di pubblicazione Oracle.  
   
     > [!WARNING]  
     >  `MaxCmdsInTran` non è stato progettato per essere sempre abilitato. Sono disponibili casi di risoluzione in cui qualcuno ha accidentalmente eseguito un numero elevato di operazioni DML in una singola transazione (causando ritardi nella distribuzione dei comandi fino a che l'intera transazione è in database di distribuzione, blocchi mantenuti e così via). Se periodicamente si verifica questa situazione, è necessario esaminare le applicazioni e trovare un modo per ridurre le dimensioni della transazione.  
   
--   usare il parametro **–SubscriptionStreams** per l'agente di distribuzione.  
+-   Usare la **- SubscriptionStreams** parametro dell'agente di distribuzione.  
   
-     Il parametro **–SubscriptionStreams** può migliorare notevolmente la velocità effettiva della replica aggregata. e consente a più connessioni a un Sottoscrittore l'applicazione di batch di modifiche in parallelo, conservando molte delle caratteristiche transazionali disponibili quando si utilizza un singolo thread. Se si verifica un errore di esecuzione o di commit di una delle connessioni, tutte le connessioni interromperanno il batch corrente e l'agente utilizzerà un singolo flusso per ripetere i batch non riusciti. Prima del completamento di questa fase di tentativi, possono verificarsi inconsistenze temporanee delle transazioni nel Sottoscrittore. Al termine del commit dei batch non riusciti, viene ripristinata la consistenza delle transazioni nel Sottoscrittore.  
+     Il parametro **-SubscriptionStreams** può migliorare notevolmente la velocità effettiva della replica aggregata. e consente a più connessioni a un Sottoscrittore l'applicazione di batch di modifiche in parallelo, conservando molte delle caratteristiche transazionali disponibili quando si utilizza un singolo thread. Se si verifica un errore di esecuzione o di commit di una delle connessioni, tutte le connessioni interromperanno il batch corrente e l'agente utilizzerà un singolo flusso per ripetere i batch non riusciti. Prima del completamento di questa fase di tentativi, possono verificarsi inconsistenze temporanee delle transazioni nel Sottoscrittore. Al termine del commit dei batch non riusciti, viene ripristinata la consistenza delle transazioni nel Sottoscrittore.  
   
      È possibile specificare un valore per questo parametro di agente usando **@subscriptionstreams** di [sp_addsubscription &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addsubscription-transact-sql).  
   

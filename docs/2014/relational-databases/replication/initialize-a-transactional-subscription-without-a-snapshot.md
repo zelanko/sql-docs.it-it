@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 helpviewer_keywords:
 - transactional replication, initializing
@@ -15,12 +14,12 @@ ms.assetid: 75c8c1f8-60bc-44a8-944b-d18d1f6bda11
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 7680a62293bd9a15b12e0a979be22c33220af4b3
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: c0cef8a7e8a64935cca6b378e14c00eb0d80f6b8
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48107811"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52811983"
 ---
 # <a name="initialize-a-transactional-subscription-without-a-snapshot"></a>Inizializzazione di una sottoscrizione transazionale senza uno snapshot
   Per impostazione predefinita, una sottoscrizione di una pubblicazione transazionale viene inizializzata con uno snapshot generato dall'agente snapshot e applicato dall'agente di distribuzione. In alcuni scenari, ad esempio quelli che comportano l'utilizzo di set di dati iniziali di grandi dimensioni, è preferibile inizializzare una sottoscrizione utilizzando un altro metodo. Altri metodi di inizializzazione di un Sottoscrittore includono:  

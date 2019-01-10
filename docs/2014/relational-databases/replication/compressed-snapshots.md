@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 helpviewer_keywords:
 - snapshots [SQL Server replication], compressed
@@ -15,12 +14,12 @@ ms.assetid: 979ffa7c-3a88-4e70-8cf2-b8d452fd7a7f
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: be1415b0f31e79baed84545ea623c84151f5c251
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: MT
+ms.openlocfilehash: c45dc872cd75640f244c55863cdbace607812a38
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48148111"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52815343"
 ---
 # <a name="compressed-snapshots"></a>Snapshot compressi
   È consigliabile comprimere i file di snapshot quando vengono trasferiti in una rete lenta o salvati su supporti rimovibili in cui lo spazio disponibile non è sufficiente per contenere uno snapshot non compresso. La compressione, pur essendo utile in queste situazioni, richiede più tempo per generare e applicare lo snapshot.  

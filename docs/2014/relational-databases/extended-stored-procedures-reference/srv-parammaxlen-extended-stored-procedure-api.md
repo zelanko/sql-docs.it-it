@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: stored-procedures
 ms.topic: reference
 api_name:
 - srv_parammaxlen
@@ -22,12 +20,12 @@ ms.assetid: 49bfc29d-f76a-4963-b0e6-b8532dfda850
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 8d1ebf8be54abfd0b7a12239cb84df103a8106d0
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 7fadcfbc6249ca15ecd9581cc50d58d0e3a09a5d
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48156392"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53360833"
 ---
 # <a name="srvparammaxlen-extended-stored-procedure-api"></a>srv_parammaxlen (API Stored procedure estesa)
     
@@ -64,13 +62,13 @@ n
   
 |Nuovi tipi di dati|Lunghezza dei dati di input|  
 |--------------------|-----------------------|  
-|`BITN`|**NULL:** 1<br /><br /> **ZERO:** 1<br /><br /> **>=255:** N/D<br /><br /> **<255:** N/D|  
-|`BIGVARCHAR`|**NULL:** 255<br /><br /> **ZERO:** 255<br /><br /> **>=255:** 255<br /><br /> **<255:** 255|  
-|`BIGCHAR`|**NULL:** 255<br /><br /> **ZERO:** 255<br /><br /> **>=255:** 255<br /><br /> **<255:** 255|  
-|`BIGBINARY`|**NULL:** 255<br /><br /> **ZERO:** 255<br /><br /> **>=255:** 255<br /><br /> **<255:** 255|  
-|`BIGVARBINARY`|**NULL:** 255<br /><br /> **ZERO:** 255<br /><br /> **>=255:** 255<br /><br /> **<255:** 255|  
-|`NCHAR`|**NULL:** 255<br /><br /> **ZERO:** 255<br /><br /> **>=255:** 255<br /><br /> **<255:** 255|  
-|`NVARCHAR`|**NULL:** 255<br /><br /> **ZERO:** 255<br /><br /> **>=255:** 255<br /><br /> **<255:** 255|  
+|`BITN`|**NULL:** 1<br /><br /> **ZERO:** 1<br /><br /> **> = 255:** N/D<br /><br /> **< 255:** N/D|  
+|`BIGVARCHAR`|**NULL:** 255<br /><br /> **ZERO:** 255<br /><br /> **> = 255:** 255<br /><br /> **< 255:** 255|  
+|`BIGCHAR`|**NULL:** 255<br /><br /> **ZERO:** 255<br /><br /> **> = 255:** 255<br /><br /> **< 255:** 255|  
+|`BIGBINARY`|**NULL:** 255<br /><br /> **ZERO:** 255<br /><br /> **> = 255:** 255<br /><br /> **< 255:** 255|  
+|`BIGVARBINARY`|**NULL:** 255<br /><br /> **ZERO:** 255<br /><br /> **> = 255:** 255<br /><br /> **< 255:** 255|  
+|`NCHAR`|**NULL:** 255<br /><br /> **ZERO:** 255<br /><br /> **> = 255:** 255<br /><br /> **< 255:** 255|  
+|`NVARCHAR`|**NULL:** 255<br /><br /> **ZERO:** 255<br /><br /> **> = 255:** 255<br /><br /> **< 255:** 255|  
 |`NTEXT`|**NULL:** -1<br /><br /> **ZERO:** -1<br /><br /> **>=255:** -1<br /><br /> **\<255:** -1|  
   
 ## <a name="remarks"></a>Note  
@@ -79,7 +77,7 @@ n
  Quando viene effettuata una chiamata a una stored procedure remota con parametri, tali parametri possono essere passati per nome o per posizione (senza nome). Se invece viene effettuata con alcuni parametri passati per nome e altri passati per posizione, si verifica un errore. Il gestore SRV_RPC viene comunque chiamato, ma risulta che non sono presenti parametri e **srv_rpcparams** restituisce 0.  
   
 > [!IMPORTANT]  
->  È necessario esaminare con attenzione il codice sorgente delle stored procedure estese e testare le DLL compilate prima di installarle in un server di produzione. Per informazioni sui test e sull'analisi della sicurezza, visitare questo [sito Web Microsoft](http://go.microsoft.com/fwlink/?LinkID=54761&amp;clcid=0x409http://msdn.microsoft.com/security/).  
+>  È necessario esaminare con attenzione il codice sorgente delle stored procedure estese e testare le DLL compilate prima di installarle in un server di produzione. Per informazioni sui test e sull'analisi della sicurezza, visitare questo [sito Web Microsoft](https://go.microsoft.com/fwlink/?LinkID=54761&amp;clcid=0x409https://msdn.microsoft.com/security/).  
   
 ## <a name="see-also"></a>Vedere anche  
  [srv_paraminfo &#40;API delle stored procedure estese&#41;](srv-paraminfo-extended-stored-procedure-api.md)   

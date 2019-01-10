@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: stored-procedures
 ms.topic: reference
 api_name:
 - srv_rpcoptions
@@ -22,12 +20,12 @@ ms.assetid: dbcce5d1-d5a1-4379-9597-04e43af5923d
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 97a30b223df8420ba67aef21d9b7837b2d4e5557
-ms.sourcegitcommit: 110e5e09ab3f301c530c3f6363013239febf0ce5
+ms.openlocfilehash: 0c97262ab6b3ee42b070511a813fcb4498b78d60
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/10/2018
-ms.locfileid: "48905915"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53362313"
 ---
 # <a name="srvrpcoptions-extended-stored-procedure-api"></a>srv_rpcoptions (API delle stored procedure estese)
     
@@ -56,12 +54,12 @@ srvproc
 ## <a name="remarks"></a>Note  
  Nella tabella seguente viene descritto ciascun flag di esecuzione.  
   
-|Flag di esecuzione|Description|  
+|Flag di esecuzione|Descrizione|  
 |--------------------|-----------------|  
 |SRV_NOMETADATA|Il client ha richiesto risultati senza informazioni sui metadati. Questo flag viene usato solo quando il client comunica con un'istanza di [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Un'applicazione API delle stored procedure estese non può omettere le informazioni sui metadati.|  
 |SRV_RECOMPILE|Il client ha richiesto di ricompilare la stored procedure remota prima di eseguirla. Questo flag non può essere applicato a un'applicazione API delle stored procedure estese.|  
   
 > [!IMPORTANT]  
->  È necessario esaminare con attenzione il codice sorgente delle stored procedure estese e testare le DLL compilate prima di installarle in un server di produzione. Per informazioni sui test e sull'analisi della sicurezza, visitare questo [sito Web Microsoft](http://go.microsoft.com/fwlink/?LinkID=54761&amp;clcid=0x409http://msdn.microsoft.com/security/).  
+>  È necessario esaminare con attenzione il codice sorgente delle stored procedure estese e testare le DLL compilate prima di installarle in un server di produzione. Per informazioni sui test e sull'analisi della sicurezza, visitare questo [sito Web Microsoft](https://go.microsoft.com/fwlink/?LinkID=54761&amp;clcid=0x409https://msdn.microsoft.com/security/).  
   
   

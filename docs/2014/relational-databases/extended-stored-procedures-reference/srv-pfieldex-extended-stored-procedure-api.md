@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: stored-procedures
 ms.topic: reference
 api_name:
 - srv_pfieldex
@@ -22,12 +20,12 @@ ms.assetid: d4e9a34b-b3a3-434f-8556-768bd20d145a
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: c885847e046e17963f6d21e1615f0fb2dad4c85d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 8bacfd4f955f60b17b439c8066a3b1cba2c52392
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48187521"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53369603"
 ---
 # <a name="srvpfieldex-extended-stored-procedure-api"></a>srv_pfieldex (API delle stored procedure estese)
     
@@ -57,7 +55,7 @@ len
  *field*  
  Specifica il campo *srvproc* da restituire.  
   
-|Campo|Description|Tipo restituito|  
+|Campo|Descrizione|Tipo restituito|  
 |-----------|-----------------|------------------|  
 |SRV_MSGLCID|LCDI di messaggio della sessione corrente.|ULONG*|  
 |SRV_INSTANCENAME|Nome dell'istanza (se si tratta di un'istanza denominata); in caso contrario, restituisce NULL.|WCHAR*|  
@@ -72,6 +70,6 @@ len
 >  Il buffer restituito dal server deve essere di sola lettura. In caso contrario, lo stato del server può risultare danneggiato.  
   
 ## <a name="remarks"></a>Note  
- **Nota sulla sicurezza** È necessario esaminare con attenzione il codice sorgente delle stored procedure estese e testare le DLL compilate prima di installarle in un server di produzione. Per informazioni sui test e sull'analisi della sicurezza, visitare questo [sito Web Microsoft](http://go.microsoft.com/fwlink/?LinkID=54761&amp;clcid=0x409http://msdn.microsoft.com/security/).  
+ **Nota sulla sicurezza** È necessario esaminare con attenzione il codice sorgente delle stored procedure estese e testare le DLL compilate prima di installarle in un server di produzione. Per informazioni sui test e sull'analisi della sicurezza, visitare questo [sito Web Microsoft](https://go.microsoft.com/fwlink/?LinkID=54761&amp;clcid=0x409https://msdn.microsoft.com/security/).  
   
   

@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: stored-procedures
 ms.topic: reference
 api_name:
 - srv_rpcdb
@@ -22,12 +20,12 @@ ms.assetid: d52bfd22-7a7c-4ab0-af65-df96ff359e6f
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 86094a51fc8d4d3413869dca2f05b869bdad1f5e
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 7eb462881ab9ae5d6221498a84fc2b79e0524bc9
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48114941"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53369463"
 ---
 # <a name="srvrpcdb-extended-stored-procedure-api"></a>srv_rpcdb (API delle stored procedure estese)
     
@@ -58,6 +56,6 @@ SRV_PROC * srvproc,int *len );
  Questa funzione restituisce solo il componente del database del nome dell'oggetto stored procedure remota. Non include gli identificatori facoltativi per il proprietario, il nome della stored procedure remota e il numero della stored procedure remota.  
   
 > [!IMPORTANT]  
->  È necessario esaminare con attenzione il codice sorgente delle stored procedure estese e testare le DLL compilate prima di installarle in un server di produzione. Per informazioni sui test e sull'analisi della sicurezza, visitare questo [sito Web Microsoft](http://go.microsoft.com/fwlink/?LinkID=54761&amp;clcid=0x409http://msdn.microsoft.com/security/).  
+>  È necessario esaminare con attenzione il codice sorgente delle stored procedure estese e testare le DLL compilate prima di installarle in un server di produzione. Per informazioni sui test e sull'analisi della sicurezza, visitare questo [sito Web Microsoft](https://go.microsoft.com/fwlink/?LinkID=54761&amp;clcid=0x409https://msdn.microsoft.com/security/).  
   
   

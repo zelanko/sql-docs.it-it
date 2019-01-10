@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: stored-procedures
 ms.topic: reference
 api_name:
 - srv_paraminfo
@@ -22,12 +20,12 @@ ms.assetid: ee2afd4e-0d91-462b-9403-98d481546330
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 2e017d225dd4f4a0d46c4b0bc6f3cb064eb75bd4
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: f3c89eb2e6f810902e28e01c7e5ffbcdcc0375c7
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48158271"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53363963"
 ---
 # <a name="srvparaminfo-extended-stored-procedure-api"></a>srv_paraminfo (API Stored procedure estesa)
     
@@ -91,7 +89,7 @@ pfNull
  Se le informazioni sul parametro vengono ottenute correttamente, viene restituito SUCCEED; in caso contrario, FAIL. Restituisce FAIL se non esiste una stored procedure remota corrente o se non è presente nessun parametro *n* della stored procedure remota.  
   
 ## <a name="remarks"></a>Note  
- **Nota sulla sicurezza** È necessario esaminare con attenzione il codice sorgente delle stored procedure estese e testare le DLL compilate prima di installarle in un server di produzione. Per informazioni sui test e sull'analisi della sicurezza, visitare questo [sito Web Microsoft](http://go.microsoft.com/fwlink/?LinkID=54761&amp;clcid=0x409http://msdn.microsoft.com/security/).  
+ **Nota sulla sicurezza** È necessario esaminare con attenzione il codice sorgente delle stored procedure estese e testare le DLL compilate prima di installarle in un server di produzione. Per informazioni sui test e sull'analisi della sicurezza, visitare questo [sito Web Microsoft](https://go.microsoft.com/fwlink/?LinkID=54761&amp;clcid=0x409https://msdn.microsoft.com/security/).  
   
 ## <a name="see-also"></a>Vedere anche  
  [Guida di riferimento per i programmatori delle stored procedure estese](database-engine-extended-stored-procedures-reference.md)  

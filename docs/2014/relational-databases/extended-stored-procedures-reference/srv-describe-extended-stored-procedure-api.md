@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: stored-procedures
 ms.topic: reference
 api_name:
 - srv_describe
@@ -22,12 +20,12 @@ ms.assetid: 2115600e-5ce7-4be0-9cd3-a1dd1fab0729
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 376aa2a01f6b7f25f29c1086c5ce0ea81fe87b14
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 64910ce8bab155639a16cb065768c43fd86ac737
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48096781"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53361083"
 ---
 # <a name="srvdescribe-extended-stored-procedure-api"></a>srv_describe (API Stored procedure estesa)
     
@@ -114,7 +112,7 @@ srcdata
  Se il nome della colonna nell'applicazione è in Unicode, è necessario convertirlo nella tabella codici multibyte del server prima di chiamare **srv_describe**. Per altre informazioni, vedere [Dati Unicode e tabelle codici del server](../extended-stored-procedures-programming/unicode-data-and-server-code-pages.md).  
   
 > [!IMPORTANT]  
->  È necessario esaminare con attenzione il codice sorgente delle stored procedure estese e testare le DLL compilate prima di installarle in un server di produzione. Per informazioni sui test e sull'analisi della sicurezza, visitare questo [sito Web Microsoft](http://go.microsoft.com/fwlink/?LinkID=54761&amp;clcid=0x409http://msdn.microsoft.com/security/).  
+>  È necessario esaminare con attenzione il codice sorgente delle stored procedure estese e testare le DLL compilate prima di installarle in un server di produzione. Per informazioni sui test e sull'analisi della sicurezza, visitare questo [sito Web Microsoft](https://go.microsoft.com/fwlink/?LinkID=54761&amp;clcid=0x409https://msdn.microsoft.com/security/).  
   
 ## <a name="see-also"></a>Vedere anche  
  [srv_sendrow &#40;API Stored procedure estesa&#41;](srv-sendrow-extended-stored-procedure-api.md)   

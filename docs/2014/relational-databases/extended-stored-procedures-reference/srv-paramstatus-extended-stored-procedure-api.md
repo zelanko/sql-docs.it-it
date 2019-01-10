@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: stored-procedures
 ms.topic: reference
 api_name:
 - srv_paramstatus
@@ -22,12 +20,12 @@ ms.assetid: 86cecd45-0b09-42e9-8152-32a12a1c2b7a
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 1968748fb47fa666ed7f84c4971c39e652af6cb7
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 57e5ed3215391d3a1b134db471e2f4f0393f4443
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48212631"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53373273"
 ---
 # <a name="srvparamstatus-extended-stored-procedure-api"></a>srv_paramstatus (API Stored procedure estesa)
     
@@ -58,7 +56,7 @@ n
  Indica il numero del parametro. Il primo parametro è 1.  
   
 ## <a name="returns"></a>Valori di codice restituiti  
- `int` contenente flag di stato per il parametro. Attualmente è disponibile un solo flag: se il bit 0 è impostato su 1, il parametro è un parametro restituito. Se non è presente nessun parametro *n* o nessuna stored procedure remota, restituisce -1.  
+ `int` contenente flag di stato per il parametro. Attualmente è disponibile un solo flag: Se il bit 0 è impostato su 1, il parametro è un parametro restituito. Se non è presente nessun parametro *n* o nessuna stored procedure remota, restituisce -1.  
   
 ## <a name="remarks"></a>Note  
  Questa routine restituisce i flag di stato per un determinato parametro di chiamata a una stored procedure remota.  
@@ -70,7 +68,7 @@ n
  Quando viene effettuata una chiamata a una stored procedure remota con parametri, tali parametri possono essere passati per nome o per posizione (senza nome). Se invece viene effettuata con alcuni parametri passati per nome e altri passati per posizione, si verifica un errore. Se si verifica un errore, il gestore SRV_RPC viene chiamato comunque ma risulta che non sono presenti parametri e **srv_rpcparams** restituisce 0.  
   
 > [!IMPORTANT]  
->  È necessario esaminare con attenzione il codice sorgente delle stored procedure estese e testare le DLL compilate prima di installarle in un server di produzione. Per informazioni sui test e sull'analisi della sicurezza, visitare questo [sito Web Microsoft](http://go.microsoft.com/fwlink/?LinkID=54761&amp;clcid=0x409http://msdn.microsoft.com/security/).  
+>  È necessario esaminare con attenzione il codice sorgente delle stored procedure estese e testare le DLL compilate prima di installarle in un server di produzione. Per informazioni sui test e sull'analisi della sicurezza, visitare questo [sito Web Microsoft](https://go.microsoft.com/fwlink/?LinkID=54761&amp;clcid=0x409https://msdn.microsoft.com/security/).  
   
 ## <a name="see-also"></a>Vedere anche  
  [srv_rpcparams &#40;API delle stored procedure estese&#41;](srv-rpcparams-extended-stored-procedure-api.md)  

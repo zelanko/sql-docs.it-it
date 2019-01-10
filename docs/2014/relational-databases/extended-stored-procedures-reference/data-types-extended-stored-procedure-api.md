@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: stored-procedures
 ms.topic: reference
 helpviewer_keywords:
 - extended stored procedures [SQL Server], data types
@@ -15,12 +13,12 @@ ms.assetid: 37fb86b9-8819-4387-bcdc-9616968e15ad
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: a21e4154d0595a2bcf61cafbbeccb2d7b7599bde
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 715cdc343e3a73781c06977fdb3d3d829d6bf533
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48115151"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53368543"
 ---
 # <a name="data-types-extended-stored-procedure-api"></a>Tipi di dati (API Stored procedure estesa)
     
@@ -29,7 +27,7 @@ ms.locfileid: "48115151"
   
  Per utilizzare i tipi di dati dell'API Stored procedure estesa, includere il file di intestazione Srv.h nel programma.  
   
-|Tipo di dati|Tipo di dati di SQL Server|Description|  
+|Tipo di dati|Tipo di dati di SQL Server|Descrizione|  
 |---------------|--------------------------|-----------------|  
 |SRVBIGBINARY|`binary`|Tipo di dati `binary` (lunghezza compresa tra 0 e 8000 byte).|  
 |SRVBIGCHAR|`char`|Tipo di dati `character` (lunghezza compresa tra 0 e 8000 byte).|  
@@ -65,6 +63,6 @@ ms.locfileid: "48115151"
 |SRVVARCHAR|`varchar`|Tipo di dati `character` a lunghezza variabile.|  
   
 > [!IMPORTANT]  
->  È necessario esaminare con attenzione il codice sorgente delle stored procedure estese e testare le DLL compilate prima di installarle in un server di produzione. Per informazioni sui test e sull'analisi della sicurezza, visitare questo [sito Web Microsoft](http://go.microsoft.com/fwlink/?LinkID=54761&amp;clcid=0x409http://msdn.microsoft.com/security/).  
+>  È necessario esaminare con attenzione il codice sorgente delle stored procedure estese e testare le DLL compilate prima di installarle in un server di produzione. Per informazioni sui test e sull'analisi della sicurezza, visitare questo [sito Web Microsoft](https://go.microsoft.com/fwlink/?LinkID=54761&amp;clcid=0x409https://msdn.microsoft.com/security/).  
   
   
