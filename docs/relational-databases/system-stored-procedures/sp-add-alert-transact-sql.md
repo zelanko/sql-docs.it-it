@@ -18,12 +18,12 @@ ms.assetid: d9b41853-e22d-4813-a79f-57efb4511f09
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 12c44c565e6e867c2fde6a99d770c2b083e3d6f9
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: 4193e073f4ad4c52d6b2c7f6b82c6246107e85a1
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53203281"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54127071"
 ---
 # <a name="spaddalert-transact-sql"></a>sp_add_alert (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -54,7 +54,7 @@ sp_add_alert [ @name = ] 'name'
 ```  
   
 ## <a name="arguments"></a>Argomenti  
- [  **@name =** ] **'***nome***'**  
+ [  **@name =** ] **'**_nome_**'**  
  Nome dell'avviso. Tale nome viene visualizzato nel messaggio di posta elettronica o di cercapersone inviato in risposta all'avviso. Deve essere univoco e può contenere la percentuale (**%**) caratteri. *nome* viene **sysname**, non prevede alcun valore predefinito.  
   
  [ **@message_id =** ] *message_id*  
@@ -78,7 +78,7 @@ sp_add_alert [ @name = ] 'name'
   
  L'impostazione di tale valore impedisce, ad esempio, l'invio di più messaggi di posta elettronica quando un avviso viene generato ripetutamente in un breve periodo di tempo.  
   
- [  **@notification_message =** ] **'***notification_message***'**  
+ [  **@notification_message =** ] **'**_notification_message_**'**  
  Messaggio aggiuntivo facoltativo inviato all'operatore come parte del messaggio di posta elettronica, **net send**, o notifica tramite cercapersone. *notification_message* viene **nvarchar(512)**, con un valore predefinito è NULL. Che specifica *notification_message* è utile per aggiungere note speciali, ad esempio procedure correttive.  
   
  [ **@include_event_description_in =** ] *include_event_description_in*  
@@ -94,16 +94,16 @@ sp_add_alert [ @name = ] 'name'
 |**2**|Cercapersone|  
 |**4**|**net send**|  
   
- [  **@database_name =** ] **'***database***'**  
+ [  **@database_name =** ] **'**_database_**'**  
  Database in cui deve verificarsi l'errore affinché l'avviso venga generato. Se *database*viene omesso, l'avviso viene attivato indipendentemente dalla posizione dell'errore. *database* viene **sysname**. I nomi racchiusi tra parentesi quadre ([ ]) non sono ammessi. Il valore predefinito è NULL.  
   
- [  **@event_description_keyword =** ] **'***event_description_keyword_pattern***'**  
+ [  **@event_description_keyword =** ] **'**_event_description_keyword_pattern_**'**  
  Sequenza di caratteri della descrizione dell'errore di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. È possibile utilizzare i caratteri dei criteri di ricerca dell'espressione LIKE [!INCLUDE[tsql](../../includes/tsql-md.md)]. *event_description_keyword_pattern* viene **nvarchar(100)**, con un valore predefinito è NULL. Questo parametro è utile per filtrare i nomi degli oggetti (ad esempio, **% customer_table %**).  
   
  [ **@job_id =** ] *job_id*  
  Numero di identificazione del processo da eseguire in risposta all'avviso. *job_id* viene **uniqueidentifier**, con un valore predefinito è NULL.  
   
- [ **@job_name =** ] **'***job_name***'**  
+ [  **@job_name =** ] **'**_job_name_**'**  
  Nome del processo da eseguire in risposta all'avviso. *nome_processo*viene **sysname**, con un valore predefinito è NULL.  
   
 > [!NOTE]  
@@ -112,7 +112,7 @@ sp_add_alert [ @name = ] 'name'
  [ **@raise_snmp_trap =** ] *raise_snmp_trap*  
  Non implementato in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] versione 7.0. *raise_snmp_trap* viene **tinyint**, con un valore predefinito è 0.  
   
- [  **@performance_condition =** ] **'***performance_condition***'**  
+ [  **@performance_condition =** ] **'**_performance_condition_**'**  
  È un valore espresso nel formato '*itemcomparatorvalue*'. *performance_condition* viene **nvarchar(512)** con un valore predefinito è NULL ed è costituito da questi elementi.  
   
 |Componente del formato|Descrizione|  
@@ -121,13 +121,13 @@ sp_add_alert [ @name = ] 'name'
 |*Criterio di confronto*|Uno degli operatori seguenti: >, < o =|  
 |*Valore*|Valore numerico del contatore|  
   
- [  **@category_name =** ] **'***categoria***'**  
+ [  **@category_name =** ] **'**_categoria_**'**  
  Nome della categoria di avvisi. *categoria* viene **sysname**, con un valore predefinito è NULL.  
   
- [ **@wmi_namespace**=] **'***wmi_namespace***'**  
+ [ **@wmi_namespace**=] **'**_wmi_namespace_**'**  
  Spazio dei nomi WMI in cui eseguire query per gli eventi. *wmi_namespace* viene **sysname**, con un valore predefinito è NULL. Sono supportati solo gli spazi di nomi nel server locale.  
   
- [ **@wmi_query**= ] **'***wmi_query***'**  
+ [ **@wmi_query**=] **'**_wmi_query_**'**  
  Query che consente di specificare l'evento WMI per l'avviso. *Wmi_query* viene **nvarchar(512)**, con un valore predefinito è NULL.  
   
 ## <a name="return-code-values"></a>Valori restituiti  

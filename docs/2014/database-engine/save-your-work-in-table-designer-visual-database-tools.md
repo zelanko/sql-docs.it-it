@@ -14,12 +14,12 @@ ms.assetid: 676e4a9a-be75-44d2-b011-6e7fb921de4a
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 56da0e1bff6811885a2008a0881d52583c24c1ce
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 1b6b705f887e0df06684d33fc7be26aa73ff4048
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48090294"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54130801"
 ---
 # <a name="save-your-work-in-table-designer-visual-database-tools"></a>Salvataggio del lavoro in Progettazione tabelle (Visual Database Tools)
   È possibile salvare le modifiche apportate alle tabelle aperte in Progettazione tabelle.  
@@ -28,7 +28,7 @@ ms.locfileid: "48090294"
   
 1.  Fare clic in un punto qualsiasi di Progettazione tabelle.  
   
-2.  Dal **File** menu, scegliere **salvare * * * tablename*.  
+2.  Scegliere **Salva** nome tabella **dal menu**_File_.  
   
 3.  Nella finestra di dialogo **Salva** fare clic su **Sì** per aggiornare il database.  
   

@@ -1,5 +1,5 @@
 ---
-title: Informazioni del server di pubblicazione - Pubblicazioni | Microsoft Docs
+title: Finestra di dialogo di replica di SQL Server 'Le informazioni sull'editore' | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -12,14 +12,14 @@ ms.assetid: 0b2e3d4e-03b7-4c31-8f96-48648d750010
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 8614db7bd44f6ba5de8826215aed8cf123e86488
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 344b899905e844312ee6e5a66455fc2fa14b446f
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52812173"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54128911"
 ---
-# <a name="publisher-information-publications"></a>Informazioni del server di pubblicazione - Pubblicazioni
+# <a name="sql-server-replication-publisher-information-dialog-box"></a>Finestra di dialogo di replica di SQL Server 'Le informazioni sull'editore'
   Nella scheda **Pubblicazioni** vengono fornite informazioni di riepilogo relative a tutte le pubblicazioni nel server di pubblicazione selezionato nel riquadro sinistro.  
   
 ## <a name="options"></a>Opzioni  
@@ -84,7 +84,7 @@ ms.locfileid: "52812173"
   
 ## <a name="see-also"></a>Vedere anche  
  [Avviare Monitoraggio replica](monitor/start-the-replication-monitor.md)   
- [Visualizzare le informazioni ed eseguire attività relative a un server di pubblicazione &#40;Monitoraggio replica&#41;](monitor/view-information-and-perform-tasks-for-a-publisher-replication-monitor.md)   
+ [Visualizzare informazioni ed eseguire attività con Monitoraggio replica](monitor/view-information-and-perform-tasks-replication-monitor.md)   
  [Monitoraggio della replica](monitoring-replication.md)  
   
   

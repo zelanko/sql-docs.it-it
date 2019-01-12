@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 04/27/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: replication
 ms.topic: reference
 dev_langs:
 - VB
@@ -20,12 +20,12 @@ ms.assetid: 37476d50-fb47-49e3-9504-3b163ac381d8
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 75d4e1e4ac97683d25e00fd2cf249a8890f5edd3
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 2cbc3571aa26728fa94957bb0c2f207ff769f4c4
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52772084"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54129571"
 ---
 # <a name="replication-management-objects-concepts"></a>Replication Management Objects Concepts
   RMO (Replication Management Objects) è un assembly di codice gestito che incapsula le funzionalità di replica per [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. RMO viene implementato dallo spazio dei nomi <xref:Microsoft.SqlServer.Replication>.  
@@ -35,16 +35,16 @@ ms.locfileid: "52772084"
  [Configurare la distribuzione](../configure-distribution.md)  
  Negli argomenti inclusi in questa sezione viene illustrato come utilizzare RMO per configurare la pubblicazione e la distribuzione.  
   
- [Creare, modificare ed eliminare pubblicazioni e articoli &#40;replica&#41;](../publish/create-modify-and-delete-publications-and-articles-replication.md)  
+ [Create a Publication](../publish/create-a-publication.md)  
  Negli argomenti inclusi in questa sezione viene illustrato come utilizzare RMO per creare, eliminare e modificare pubblicazioni e articoli.  
   
  [Sottoscrizione delle pubblicazioni](../subscribe-to-publications.md)  
  Negli argomenti inclusi in questa sezione viene illustrato come utilizzare RMO per creare, eliminare e modificare sottoscrizioni.  
   
- [Proteggere una topologia di replica](../security/secure-a-replication-topology.md)  
+ [Proteggere una topologia di replica](../security/view-and-modify-replication-security-settings.md)  
  Negli argomenti inclusi in questa sezione viene illustrato come utilizzare RMO per visualizzare e modificare le impostazioni di sicurezza.  
   
- [Sincronizzare le sottoscrizioni &#40;replica&#41;](../synchronize-subscriptions-replication.md)  
+ [Sincronizzare le sottoscrizioni &#40;replica&#41;](../synchronize-data.md)  
  Negli argomenti inclusi in questa sezione viene illustrato come sincronizzare le sottoscrizioni.  
   
  [Monitoraggio della replica](../monitoring-replication.md)  

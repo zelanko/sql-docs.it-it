@@ -18,12 +18,12 @@ ms.assetid: 6e335a5c-64b2-4bcf-a88f-35dc9393f329
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 027800860166b511b0a548313de30b3d237d9930
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 711c82bb627ca9ad1620cf1e11fdbc9dfa5f4351
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52513797"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54127456"
 ---
 # <a name="bcpbind"></a>bcp_bind
   Vengono associati dati provenienti da una variabile di programma a una colonna di tabella per eseguire la copia bulk in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
@@ -146,7 +146,7 @@ bcp_bind(hdbc, szName, 0,
 ## <a name="remarks"></a>Note  
  Uso **bcp_bind** di un modo veloce ed efficiente per copiare dati da una variabile di programma in una tabella in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
- Chiamare [bcp_init](bcp-init.md) prima di chiamare questa o qualsiasi altra funzione di copia bulk. La chiamata **bcp_init** imposta il [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tabella di destinazione per la copia bulk. Quando si chiama **bcp_init** per l'uso con **bcp_bind** e [bcp_sendrow](bcp-sendrow.md), il **bcp_init** *szDataFile*parametro, che indica il file di dati è impostato su NULL. il **bcp_init**_eDirection_ parametro è impostato su DB_IN.  
+ Chiamare [bcp_init](bcp-init.md) prima di chiamare questa o qualsiasi altra funzione di copia bulk. La chiamata **bcp_init** imposta il [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tabella di destinazione per la copia bulk. Quando si chiama **bcp_init** per l'uso con **bcp_bind** e [bcp_sendrow](bcp-sendrow.md), il **bcp_init** _szDataFile_parametro, che indica il file di dati è impostato su NULL. il **bcp_init**_eDirection_ parametro è impostato su DB_IN.  
   
  Rendere un oggetto separato **bcp_bind** chiamato per ogni colonna di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tabella in cui si desidera copiare. Dopo la necessaria **bcp_bind** chiamate sono state apportate, quindi chiamare **bcp_sendrow** per inviare una riga di dati da variabili di programma a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. La riassociazione della colonna non è supportata.  
   

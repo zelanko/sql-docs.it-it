@@ -14,12 +14,12 @@ ms.assetid: 0ca39a35-f22c-46c5-82a4-342e34bf5d1b
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: cdab726dcfe30e2a6309fce49ca02914bc802d6d
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: bd79fb3d5860847fbd522d7fb200e1138787e19d
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52781413"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54127121"
 ---
 # <a name="validate-subscriptions"></a>Convalida sottoscrizioni
   Utilizzare la finestra di dialogo **Convalida sottoscrizioni** per specificare che è necessario convalidare le sottoscrizioni di una pubblicazione transazionale alla successiva esecuzione dell'agente di distribuzione per ogni sottoscrizione. I risultati della convalida vengono visualizzati in Monitoraggio replica. Per altre informazioni, vedere [Validate Data at the Subscriber](validate-data-at-the-subscriber.md).  
@@ -35,6 +35,6 @@ ms.locfileid: "52781413"
  Fare clic su questo pulsante per accedere alla finestra di dialogo **Opzioni di convalida delle sottoscrizioni** nella quale è possibile specificare se utilizzare la convalida mediante il conteggio delle righe oppure la convalida mediante checksum binario.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Convalidare i dati replicati](validate-replicated-data.md)  
+ [Convalidare i dati replicati](validate-data-at-the-subscriber.md)  
   
   

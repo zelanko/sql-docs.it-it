@@ -12,12 +12,12 @@ ms.assetid: 73ff590a-20da-4f10-b592-c60b7226d22b
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 7695411fd842aed0116073c4ac4a7b51e60b49fb
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 46a2e9e332899c8d48fb762e153a926c99bb9e61
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52749088"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54124031"
 ---
 # <a name="publication-information-agents-merge-publication"></a>Informazioni sulla pubblicazione, Agenti (pubblicazione di tipo merge)
   La scheda **Agenti** visualizza informazioni di riepilogo sull'agente snapshot per la pubblicazione selezionata.  
@@ -47,7 +47,7 @@ ms.locfileid: "52749088"
 -   Operazione completata  
   
  **Agente**  
- Agente snapshot. Si tratta dell'unico agente associato a una pubblicazione di tipo merge. L'agente di merge è associato alle sottoscrizioni della pubblicazione. Per altre informazioni, vedere [Visualizzare le informazioni ed eseguire attività relative agli agenti associati a una sottoscrizione &#40;Monitoraggio replica&#41;](monitor/view-information-and-perform-tasks-for-subscription-agents.md).  
+ Agente snapshot. Si tratta dell'unico agente associato a una pubblicazione di tipo merge. L'agente di merge è associato alle sottoscrizioni della pubblicazione. Per altre informazioni, vedere [visualizzare le informazioni ed eseguire attività con Monitoraggio replica](monitor/view-information-and-perform-tasks-replication-monitor.md).  
   
  **Ultima ora inizio**  
  Ultima ora di avvio dell'agente.  
@@ -60,8 +60,7 @@ ms.locfileid: "52749088"
   
 ## <a name="see-also"></a>Vedere anche  
  [Avviare Monitoraggio replica](monitor/start-the-replication-monitor.md)   
- [Visualizzare le informazioni ed eseguire attività per una pubblicazione &#40;Monitoraggio replica&#41;](monitor/view-information-and-perform-tasks-for-a-publication-replication-monitor.md)   
- [Visualizzare le informazioni ed eseguire attività relative agli agenti associati a una pubblicazione &#40;Monitoraggio replica&#41;](monitor/view-information-and-perform-tasks-for-publication-agents.md)   
+ [Visualizzare informazioni ed eseguire attività con Monitoraggio replica](monitor/view-information-and-perform-tasks-replication-monitor.md)   
  [Monitoraggio della replica](monitoring-replication.md)  
   
   

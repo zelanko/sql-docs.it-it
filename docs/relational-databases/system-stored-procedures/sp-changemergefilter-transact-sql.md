@@ -16,12 +16,12 @@ ms.assetid: e08fdfdd-d242-4e85-817b-9f7a224fe567
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: c872cbafb3cb0a3a54c34e489242d9f69339b68f
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: c199af62d7cd5cb95c382b412182bb24c957bf89
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52748223"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54127081"
 ---
 # <a name="spchangemergefilter-transact-sql"></a>sp_changemergefilter (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -44,19 +44,19 @@ sp_changemergefilter [ @publication= ] 'publication'
 ```  
   
 ## <a name="arguments"></a>Argomenti  
- [  **@publication=** ] **'***pubblicazione***'**  
+ [  **@publication=** ] **'**_pubblicazione_**'**  
  Nome della pubblicazione. *pubblicazione* viene **sysname**, non prevede alcun valore predefinito.  
   
- [  **@article=** ] **'***articolo***'**  
+ [  **@article=** ] **'**_articolo_**'**  
  Nome dell'articolo. *articolo* viene **sysname**, non prevede alcun valore predefinito.  
   
- [  **@filtername=** ] **'***filtername***'**  
+ [  **@filtername=** ] **'**_filtername_**'**  
  Nome corrente del filtro. *FilterName* viene **sysname**, non prevede alcun valore predefinito.  
   
- [  **@property=** ] **'***proprietà***'**  
+ [  **@property=** ] **'**_proprietà_**'**  
  Nome della proprietà da modificare. *proprietà* viene **sysname**, non prevede alcun valore predefinito.  
   
- [  **@value=**] **'***valore***'**  
+ [  **@value=**] **'**_valore_**'**  
  Nuovo valore della proprietà specificata. *valore*viene **nvarchar(1000)**, non prevede alcun valore predefinito.  
   
  Nella tabella seguente vengono descritte le proprietà degli articoli e i valori corrispondenti.  

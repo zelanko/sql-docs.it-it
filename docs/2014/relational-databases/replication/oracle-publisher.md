@@ -12,12 +12,12 @@ ms.assetid: 019b7c49-dcca-445d-8969-5982a8ccbc1a
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: ad7a226b3c4e3fa9aa593e82e976ff94dd4fe557
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: b38b397c0a2128aed5ebaba0b1367ca14ebdcd09
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52753873"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54130251"
 ---
 # <a name="oracle-publisher"></a>Server di pubblicazione Oracle
   A partire da [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)], [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] consente di pubblicare i dati di un database Oracle mediante la replica transazionale o snapshot. Per altre informazioni, vedere [Panoramica della pubblicazione Oracle](non-sql/oracle-publishing-overview.md).  
@@ -39,6 +39,6 @@ ms.locfileid: "52753873"
   
 ## <a name="see-also"></a>Vedere anche  
  [Creare una pubblicazione da un database Oracle](publish/create-a-publication-from-an-oracle-database.md)   
- [Riferimento alle proprietà &#40;replica&#41;](properties-reference-replication.md)  
+
   
   

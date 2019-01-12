@@ -12,12 +12,12 @@ ms.assetid: ce30a095-2975-4387-9377-94a461ac78ee
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 8e82c71834a2d41a7620f549bc6335fa15df84bf
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: c9b8ed6778a087c2200012c6df1409b187b39329
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52813993"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54125381"
 ---
 # <a name="tutorial-preparing-the-server-for-replication"></a>Esercitazione: Preparazione del server per la replica
   È importante pianificare la sicurezza prima di configurare la topologia di replica. In questa esercitazione viene illustrato come proteggere la topologia di replica e come configurare la distribuzione, ovvero il primo passaggio nella replica dei dati. È necessario completare questa esercitazione prima delle altre esercitazioni sulla replica.  
@@ -49,6 +49,6 @@ ms.locfileid: "52813993"
   
 ## <a name="see-also"></a>Vedere anche  
  [Configura distribuzione](configure-distribution.md)   
- [Sicurezza e protezione #40;replica&#41;](security/security-and-protection-replication.md)  
+ [Sicurezza della replica di SQL Server](security/view-and-modify-replication-security-settings.md)  
   
   

@@ -18,12 +18,12 @@ ms.assetid: ad3573da-d820-4d1c-81c4-a83c4640ce22
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 5f3f2dbe576fe95f89588354785b64bf444eb27b
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 542cf5a0960e967d2bebb3889af0f03656004472
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51661850"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54124561"
 ---
 # <a name="sequencetype-expressions-xquery"></a>Espressioni SequenceType (XQuery)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -33,7 +33,7 @@ ms.locfileid: "51661850"
  Il nome di tipo atomico è anche utilizzabile nel **sottoposto a cast come** espressione XQuery. Nelle [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], il **istanza** e **sottoposto a cast come** espressioni XQuery in tipi parzialmente supportate.  
   
 ## <a name="instance-of-operator"></a>Operatore instance of  
- Il **istanza** operatore può essere utilizzato per determinare il tipo dinamico o in fase di esecuzione, il valore dell'espressione specificata. Esempio:  
+ Il **istanza** operatore può essere utilizzato per determinare il tipo dinamico o in fase di esecuzione, il valore dell'espressione specificata. Ad esempio:  
   
 ```  
   
@@ -44,7 +44,7 @@ Expression instance of SequenceType[Occurrence indicator]
   
  Se il **?** indicatore di occorrenza non viene specificato, `sequence of` restituisce True solo quando il `Expression` corrispondenze di digitare il `Type` specificato e `Expression` restituisce un singleton.  
   
- **Nota** sul simbolo più (**+**) e l'asterisco (**\***) non sono supportati gli indicatori di occorrenza in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
+ **Nota** sul simbolo più (**+**) e l'asterisco (**&#42;**) non sono supportati gli indicatori di occorrenza in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
   
  Gli esempi seguenti illustrano l'uso del**istanza** operatore XQuery.  
   
@@ -139,7 +139,7 @@ where ProductModelID=19
  La query restituisce True.  
   
 ### <a name="example-c"></a>Esempio C  
- Quando si utilizzano i tipi unione, l'espressione `instance of` in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] presenta una limitazione. In particolare, quando un elemento o un attributo è di un tipo unione, è possibile che `instance of` non riesca a determinare il tipo esatto. Di conseguenza, una query restituirà False, a meno che i tipi atomici utilizzati in SequenceType siano l'elemento padre di livello più alto del tipo effettivo dell'espressione nella gerarchia simpleType, ovvero che i tipi atomici specificati in SequenceType siano figli diretti di anySimpleType. Per informazioni sulla gerarchia dei tipi, vedere [regole di cast di tipi in XQuery](../xquery/type-casting-rules-in-xquery.md).  
+ Quando si usano i tipi unione, il `instance of` espressione in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] prevede una limitazione: In particolare, quando il tipo di un elemento o attributo è un tipo unione, `instance of` non riesca a determinare il tipo esatto. Di conseguenza, una query restituirà False, a meno che i tipi atomici utilizzati in SequenceType siano l'elemento padre di livello più alto del tipo effettivo dell'espressione nella gerarchia simpleType, ovvero che i tipi atomici specificati in SequenceType siano figli diretti di anySimpleType. Per informazioni sulla gerarchia dei tipi, vedere [regole di cast di tipi in XQuery](../xquery/type-casting-rules-in-xquery.md).  
   
  La prossima query esegue le operazioni seguenti:  
   
@@ -326,7 +326,7 @@ select @x.query(' declare namespace CustOrders="Customers";
 -   Per il **//Processing-Instruction ()** e **document-node()** sono consentiti tipi di sequenza, solo forme senza argomenti. Ad esempio, `processing-instruction()` è consentito, ma `processing-instruction('abc')` non è consentito.  
   
 ## <a name="cast-as-operator"></a>Operatore cast as  
- Il **sottoposto a cast come** espressione può essere utilizzata per convertire un valore in un tipo di dati specifico. Esempio:  
+ Il **sottoposto a cast come** espressione può essere utilizzata per convertire un valore in un tipo di dati specifico. Ad esempio:  
   
 ```  
   
@@ -401,7 +401,7 @@ select @x.query('xs:date("2000-01-01Z")')
     go  
     ```  
   
-     Risultato:  
+     Questo è il risultato:  
   
     ```  
     <a>2002-05-25Z</a>  

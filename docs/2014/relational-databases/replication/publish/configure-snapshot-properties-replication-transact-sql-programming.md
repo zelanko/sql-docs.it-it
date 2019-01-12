@@ -14,12 +14,12 @@ ms.assetid: 978d150f-8971-458a-ab2b-3beba5937b46
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 880f2f6fc155338aa65637fbc71402ba7ec55821
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: b03dd7f886cee5816d591034d1be63ece45d8d1d
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52800213"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54127882"
 ---
 # <a name="configure-snapshot-properties-replication-transact-sql-programming"></a>Configurazione delle proprietà dello snapshot (programmazione Transact-SQL della replica)
   Le proprietà dello snapshot possono essere definite e modificate a livello di programmazione tramite le stored procedure di replica. Le stored procedure utilizzate dipendono dal tipo di pubblicazione.  
@@ -101,7 +101,7 @@ ms.locfileid: "52800213"
 ## <a name="see-also"></a>Vedere anche  
  [Posizioni alternative della cartella snapshot](../alternate-snapshot-folder-locations.md)   
  [Snapshot compressi](../compressed-snapshots.md)   
- [Eseguire gli script prima e dopo l'applicazione dello snapshot](../execute-scripts-before-and-after-the-snapshot-is-applied.md)   
+ [Eseguire gli script prima e dopo l'applicazione dello snapshot](../snapshot-options.md#execute-scripts-before-and-after-snapshot-is-applied)   
  [Replication System Stored Procedures Concepts](../concepts/replication-system-stored-procedures-concepts.md)   
  [Trasferire snapshot tramite FTP](../transfer-snapshots-through-ftp.md)   
  [Modificare le proprietà di pubblicazioni e articoli](change-publication-and-article-properties.md)  

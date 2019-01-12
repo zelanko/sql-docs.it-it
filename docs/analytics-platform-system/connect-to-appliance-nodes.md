@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: f57719bae769a75d704454af03af82689715644d
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: e8c61bebd6265d25e2c3fe0a14516e986f3ee414
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52506304"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54124446"
 ---
 # <a name="connect-to-appliance-nodes-in-analytics-platform-system"></a>Connettersi ai nodi di appliance nel sistema di piattaforma Analitica
 Questo articolo illustra vari modi per connettersi a ogni nodo nell'appliance del sistema di piattaforma Analitica.  
@@ -30,7 +30,7 @@ Ciascuno dei nodi di appliance è possibile accedere direttamente solo in scenar
 |||  
 |-|-|  
 |**Node**|**Scenari di accesso**|  
-|Nodo di controllo|Usare un web browser per accedere alla Console di amministrazione, che viene eseguito nel nodo di controllo. Per altre informazioni, vedere [monitorare l'Appliance usando la Console di amministrazione &#40;sistema di piattaforma Analitica&#41;](monitor-the-appliance-by-using-the-admin-console.md).<br /><br />Tutti gli strumenti e applicazioni client di connettersi al nodo di controllo, indipendentemente dal fatto che la connessione Usa Ethernet o InfiniBand.<br /><br />Per configurare una connessione Ethernet per il nodo di controllo, usare l'indirizzo IP del Cluster del nodo di controllo e la porta **17001**. Ad esempio, "192.168.0.1,17001".<br /><br />Per configurare una connessione InfiniBand al nodo di controllo, usare ***appliance_domain *-SQLCTL01** e la porta **17001**. Con ***appliance_domain *-SQLCTL01**, il server DNS appliance si connetterà il server alla rete InfiniBand attiva. Per configurare il server non appliance per utilizzare questa opzione, vedere [configurare le schede di rete InfiniBand](configure-infiniband-network-adapters.md).<br /><br />L'amministratore del dispositivo si connette al nodo di controllo per eseguire operazioni di gestione. Ad esempio, l'amministratore del dispositivo esegue le operazioni seguenti dal nodo di controllo:<br /><br />Configurare il sistema di piattaforma Analitica con il **dwconfig.exe** dello strumento di configurazione.|  
+|Nodo di controllo|Usare un web browser per accedere alla Console di amministrazione, che viene eseguito nel nodo di controllo. Per altre informazioni, vedere [monitorare l'Appliance usando la Console di amministrazione &#40;sistema di piattaforma Analitica&#41;](monitor-the-appliance-by-using-the-admin-console.md).<br /><br />Tutti gli strumenti e applicazioni client di connettersi al nodo di controllo, indipendentemente dal fatto che la connessione Usa Ethernet o InfiniBand.<br /><br />Per configurare una connessione Ethernet per il nodo di controllo, usare l'indirizzo IP del Cluster del nodo di controllo e la porta **17001**. Ad esempio, "192.168.0.1,17001".<br /><br />Per configurare una connessione InfiniBand al nodo di controllo, usare  <strong>*appliance_domain*-SQLCTL01</strong> e la porta **17001**. Usando  <strong>*appliance_domain*-SQLCTL01</strong>, il server DNS appliance si connetterà il server alla rete InfiniBand attiva. Per configurare il server non appliance per utilizzare questa opzione, vedere [configurare le schede di rete InfiniBand](configure-infiniband-network-adapters.md).<br /><br />L'amministratore del dispositivo si connette al nodo di controllo per eseguire operazioni di gestione. Ad esempio, l'amministratore del dispositivo esegue le operazioni seguenti dal nodo di controllo:<br /><br />Configurare il sistema di piattaforma Analitica con il **dwconfig.exe** dello strumento di configurazione.|  
 |Nodo di calcolo|Calcolare le connessioni di nodo vengono indirizzate dal nodo di controllo. Gli indirizzi IP dei nodi di calcolo non sono mai inseriti i comandi dell'applicazione come parametri.<br /><br />Per il caricamento, backup, copia di tabelle Remote e Hadoop, SQL Server PDW inviano o ricevono i dati direttamente in parallelo tra i nodi di calcolo e i nodi non di appliance o server. Queste applicazioni connettono con SQL Server PDW effettuando la connessione al nodo di controllo e quindi il nodo di controllo indica a SQL Server PDW per stabilire la comunicazione tra i nodi di calcolo e il server non appliance.<br /><br />Ad esempio, queste operazioni di trasferimento dei dati avvengano in parallelo con le connessioni dirette ai nodi di calcolo:<br /><br />Il caricamento dal server durante il caricamento in SQL Server PDW.<br /><br />Backup di database da SQL Server PDW al server di backup.<br /><br />Ripristino di un database dal server di backup in SQL Server PDW.<br /><br />Eseguire query sui dati Hadoop da SQL Server PDW.<br /><br />Esportazione dei dati da SQL Server PDW in una tabella esterna Hadoop.<br /><br />Copia di una tabella di SQL Server PDW a un database di SQL Server SMP remoto.|  
   
 ## <a name="connecting-to-the-ethernet-and-infiniband-networks"></a>La connessione per le reti Ethernet e InfiniBand  

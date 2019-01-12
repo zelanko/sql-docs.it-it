@@ -10,12 +10,12 @@ ms.assetid: 1a8e6bc7-433e-471d-b646-092dc80a2d1a
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: d2409c993aad299551dcaf97e11c99fe032a96f1
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 0ee585f9773858848f213b3eeef6e995aedfb53f
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52800663"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54127771"
 ---
 # <a name="replication-to-memory-optimized-table-subscribers"></a>Replica in sottoscrittori di tabelle con ottimizzazione per la memoria
   Le tabelle con funzione di sottoscrittori di replica transazionale, esclusa la replica transazionale peer-to-peer, possono essere configurate come tabelle ottimizzate per la memoria. Le altre configurazioni di replica non sono compatibili con le tabelle ottimizzate per la memoria.  
@@ -317,6 +317,6 @@ GO
  Non è possibile aggiornare la chiave primaria di una tabella ottimizzata per la memoria. Per replicare un aggiornamento della chiave primaria in un sottoscrittore, modificare la stored procedure di aggiornamento per recapitare l'aggiornamento come coppia di eliminazione e inserimento.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Caratteristiche e attività di replica](replication-features-and-tasks.md)  
+ [Replica di SQL Server](sql-server-replication.md)  
   
   

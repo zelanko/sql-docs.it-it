@@ -12,12 +12,12 @@ ms.assetid: 65ea76db-d809-439d-be64-08b6965aaea1
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 2983889b79f30c18c6b6ae1ad22d614629b37654
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: ed11d8f045315130fb0d9155607625659f2b8052
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52778103"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54125593"
 ---
 # <a name="replication-monitor-main-page"></a>Monitoraggio replica, pagina principale
   Monitoraggio replica consente all'utente di tenere traccia dello stato e delle prestazioni di pubblicazioni e sottoscrizioni in una topologia di replica. Per ulteriori informazioni, vedere gli argomenti indicati di seguito.  
@@ -30,15 +30,7 @@ ms.locfileid: "52778103"
   
     -   [Aggiornare i dati in Monitoraggio replica](monitor/refresh-data-in-replication-monitor.md)  
   
-    -   [Visualizzare le informazioni ed eseguire attività relative a un server di pubblicazione &#40;Monitoraggio replica&#41;](monitor/view-information-and-perform-tasks-for-a-publisher-replication-monitor.md)  
-  
-    -   [Visualizzare le informazioni ed eseguire attività per una pubblicazione &#40;Monitoraggio replica&#41;](monitor/view-information-and-perform-tasks-for-a-publication-replication-monitor.md)  
-  
-    -   [Visualizzare le informazioni ed eseguire attività relative agli agenti associati a una pubblicazione &#40;Monitoraggio replica&#41;](monitor/view-information-and-perform-tasks-for-publication-agents.md)  
-  
-    -   [Visualizzare le informazioni ed eseguire attività per una sottoscrizione &#40;Monitoraggio replica&#41;](monitor/view-information-and-perform-tasks-for-a-subscription-replication-monitor.md)  
-  
-    -   [Visualizzare le informazioni ed eseguire attività degli agenti associati a una sottoscrizione &#40;Monitoraggio replica&#41;](monitor/view-information-and-perform-tasks-for-subscription-agents.md)  
+    -   [Visualizzare informazioni ed eseguire attività con Monitoraggio replica](monitor/view-information-and-perform-tasks-replication-monitor.md) 
   
     -   [Misurazione della latenza e convalida delle connessioni per la replica transazionale](monitor/measure-latency-and-validate-connections-for-transactional-replication.md)  
   

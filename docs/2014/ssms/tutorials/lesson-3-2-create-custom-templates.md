@@ -14,12 +14,12 @@ ms.assetid: 41098e78-b482-410e-bfe8-2ac10769ac4a
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: e94112325267cf65329d825f46a30f3ed9c50450
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 495b03b98e6c497bfd7a1527d9e2e2d81f25b762
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48215581"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54127251"
 ---
 # <a name="create-custom-templates"></a>Creare modelli personalizzati
   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] include modelli da usare per molte attività comuni. L'effettivo vantaggio dei modelli, tuttavia, consiste nella possibilità di creare un modello personalizzato per uno script complesso che è necessario creare frequentemente. In questa esercitazione verranno illustrate le procedure per la creazione di uno script semplice con un numero limitato di parametri, ma i modelli risultano utili anche per script complessi e ripetitivi.  
@@ -67,7 +67,7 @@ ms.locfileid: "48215581"
   
 10. Nell'editor di query digitare **EXECUTE dbo.WorkOrdersForBlade**e premere F5 per eseguire la query. Verificare che nel riquadro **Risultati** sia visualizzato l'elenco di ordini di blade richiesto.  
   
-11. Modificare lo script del modello (lo script nel passaggio 7) sostituendo il nome del prodotto Blade con il parametro ***< * Nome_prodotto**, `nvarchar(50)`, **nome*> * * *, in quattro punti.  
+11. Modificare lo script del modello (lo script nel passaggio 7) sostituendo il nome del prodotto Blade con il parametro  <strong>*<* product_name</strong>, `nvarchar(50)`, <strong>nome*>*</strong> , in quattro punti.  
   
     > [!NOTE]  
     >  Per i parametri sono necessari tre elementi, ovvero il nome che si desidera restituire, il tipo di dati e il valore predefinito.  

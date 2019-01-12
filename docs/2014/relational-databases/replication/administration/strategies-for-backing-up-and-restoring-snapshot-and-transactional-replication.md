@@ -20,12 +20,12 @@ ms.assetid: a8afcdbc-55db-4916-a219-19454f561f9e
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 43be13027d1460ec407239140cd4306be76a445e
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
-ms.translationtype: HT
+ms.openlocfilehash: b5011daf52b7eb5a14fb97ff3d39691caf4a563c
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52823516"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54125231"
 ---
 # <a name="strategies-for-backing-up-and-restoring-snapshot-and-transactional-replication"></a>Strategie per il backup e il ripristino della replica snapshot e della replica transazionale
   Quando si progetta una strategia di backup e ripristino per la replica snapshot e la replica transazionale, è necessario considerare le tre aree di fattori seguenti:  
@@ -117,7 +117,7 @@ ms.locfileid: "52823516"
   
          Per altre informazioni su come eseguire l'agente di distribuzione, vedere [Avviare e arrestare un agente di replica &#40;SQL Server Management Studio&#41;](../agents/start-and-stop-a-replication-agent-sql-server-management-studio.md) e [Concetti di base relativi ai file eseguibili dell'agente di replica](../concepts/replication-agent-executables-concepts.md).  
   
-         Per altre informazioni su come verificare i comandi, vedere [Visualizzare comandi replicati e altre informazioni nel database di distribuzione &#40;programmazione Transact-SQL della replica&#41;](../monitor/view-replicated-commands-and-information-in-distribution-database.md) e [Visualizzare le informazioni ed eseguire attività relative agli agenti associati a una sottoscrizione &#40;Monitoraggio replica&#41;](../monitor/view-information-and-perform-tasks-for-subscription-agents.md).  
+         Per altre informazioni su come verificare i comandi, vedere [visualizzare comandi replicati e altre informazioni nel Database di distribuzione &#40;programmazione Transact-SQL della replica&#41; ](../monitor/view-replicated-commands-and-information-in-distribution-database.md) e [Visualizza informazioni ed eseguire attività con Monitoraggio replica](../monitor/view-information-and-perform-tasks-replication-monitor.md).  
   
     2.  Rimuovere la configurazione della replica dal server di pubblicazione, dal database di distribuzione e dai Sottoscrittori, quindi ricreare la configurazione. Quando si ricreano le sottoscrizioni, specificare che i dati sono già disponibili nel Sottoscrittore. Il ripristino viene completato.  
   
@@ -134,7 +134,7 @@ ms.locfileid: "52823516"
   
          Per altre informazioni su come eseguire l'agente di distribuzione, vedere [Avviare e arrestare un agente di replica &#40;SQL Server Management Studio&#41;](../agents/start-and-stop-a-replication-agent-sql-server-management-studio.md) e [Concetti di base relativi ai file eseguibili dell'agente di replica](../concepts/replication-agent-executables-concepts.md).  
   
-         Per altre informazioni su come verificare i comandi, vedere [Visualizzare comandi replicati e altre informazioni nel database di distribuzione &#40;programmazione Transact-SQL della replica&#41;](../monitor/view-replicated-commands-and-information-in-distribution-database.md) e [Visualizzare le informazioni ed eseguire attività relative agli agenti associati a una sottoscrizione &#40;Monitoraggio replica&#41;](../monitor/view-information-and-perform-tasks-for-subscription-agents.md).  
+         Per altre informazioni su come verificare i comandi, vedere [visualizzare comandi replicati e altre informazioni nel Database di distribuzione &#40;programmazione Transact-SQL della replica&#41; ](../monitor/view-replicated-commands-and-information-in-distribution-database.md) e [Visualizza informazioni ed eseguire attività con Monitoraggio replica](../monitor/view-information-and-perform-tasks-replication-monitor.md).  
   
     2.  Utilizzare l' [utilità tablediff](../../../tools/tablediff-utility.md) o un altro strumento per sincronizzare manualmente il server di pubblicazione con il Sottoscrittore. Questa operazione consente di recuperare i dati del database di sottoscrizione non inclusi nel backup del database di pubblicazione. Andare al passaggio c.  
   
@@ -156,7 +156,7 @@ ms.locfileid: "52823516"
   
      Per altre informazioni su come eseguire l'agente di distribuzione, vedere [Avviare e arrestare un agente di replica &#40;SQL Server Management Studio&#41;](../agents/start-and-stop-a-replication-agent-sql-server-management-studio.md) e [Concetti di base relativi ai file eseguibili dell'agente di replica](../concepts/replication-agent-executables-concepts.md).  
   
-     Per altre informazioni su come verificare i comandi, vedere [Visualizzare comandi replicati e altre informazioni nel database di distribuzione &#40;programmazione Transact-SQL della replica&#41;](../monitor/view-replicated-commands-and-information-in-distribution-database.md) e [Visualizzare le informazioni ed eseguire attività relative agli agenti associati a una sottoscrizione &#40;Monitoraggio replica&#41;](../monitor/view-information-and-perform-tasks-for-subscription-agents.md).  
+     Per altre informazioni su come verificare i comandi, vedere [visualizzare comandi replicati e altre informazioni nel Database di distribuzione &#40;programmazione Transact-SQL della replica&#41; ](../monitor/view-replicated-commands-and-information-in-distribution-database.md) e [Visualizza informazioni ed eseguire attività con Monitoraggio replica](../monitor/view-information-and-perform-tasks-replication-monitor.md).  
   
 3.  Se si usano sottoscrizioni ad aggiornamento in coda, connettersi a ogni Sottoscrittore ed eliminare tutte le righe dalla tabella [MSreplication_queue &#40;Transact-SQL&#41;](/sql/relational-databases/system-tables/msreplication-queue-transact-sql) nel database di sottoscrizione. Andare al passaggio 4.  
   
@@ -285,7 +285,7 @@ ms.locfileid: "52823516"
   
     2.  Contrassegnare tutte le pubblicazioni per la convalida. Reinizializzare eventuali sottoscrizioni che non superano la convalida. Il recupero viene completato.  
   
-         Per ulteriori informazioni sulla convalida, vedere [Validate Replicated Data](../validate-replicated-data.md). Per altre informazioni sulla reinizializzazione, vedere [Reinizializzare le sottoscrizioni](../reinitialize-subscriptions.md).  
+         Per ulteriori informazioni sulla convalida, vedere [Validate Replicated Data](../validate-data-at-the-subscriber.md). Per altre informazioni sulla reinizializzazione, vedere [Reinizializzare le sottoscrizioni](../reinitialize-subscriptions.md).  
   
 #### <a name="msdb-database-distributor"></a>Database msdb (database di distribuzione)  
   
@@ -301,7 +301,7 @@ ms.locfileid: "52823516"
   
 4.  Contrassegnare tutte le pubblicazioni per la convalida. Reinizializzare eventuali sottoscrizioni che non superano la convalida. Il recupero viene completato.  
   
-     Per ulteriori informazioni sulla convalida, vedere [Validate Replicated Data](../validate-replicated-data.md). Per altre informazioni sulla reinizializzazione, vedere [Reinizializzare le sottoscrizioni](../reinitialize-subscriptions.md).  
+     Per ulteriori informazioni sulla convalida, vedere [Validate Replicated Data](../validate-data-at-the-subscriber.md). Per altre informazioni sulla reinizializzazione, vedere [Reinizializzare le sottoscrizioni](../reinitialize-subscriptions.md).  
   
 #### <a name="master-database-distributor"></a>Database master (database di distribuzione)  
   

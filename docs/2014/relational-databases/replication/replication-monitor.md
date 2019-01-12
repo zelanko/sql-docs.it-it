@@ -14,12 +14,12 @@ ms.assetid: 39b92198-c3f6-4f25-8560-095848ad652d
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 780c4913a75b6014c43c407f05181ef93eddb594
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: fcb3a7ccfc5e0b5da01d3976f3c9f13e06df7ee7
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52813968"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54124451"
 ---
 # <a name="replication-monitor"></a>Monitoraggio replica
   In questa sezione della documentazione vengono fornite informazioni su Monitoraggio replica. Le pagine e le finestre di dialogo visualizzate dipendono dal tipo di replica e dalla versione di [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] monitorata.  
@@ -31,15 +31,7 @@ ms.locfileid: "52813968"
 -   [Impostazioni del database di distribuzione](distributor-settings.md)  
   
 -   [Informazioni sul database di distribuzione, Pubblicazioni](distributor-information-publications.md)  
-  
--   [Informazioni sul database di distribuzione, Elenco verifica sottoscrizioni &#40;pubblicazione transazionale, SQL Server 2005 e versioni successive&#41;](distributor-info-subscription-watch-list-transaction-pub-sql-2005.md)  
-  
--   [Informazioni sul server di distribuzione, Elenco verifica sottoscrizioni &#40;pubblicazione di tipo merge, SQL Server 2005 e versioni successive&#41;](distributor-info-subscription-watch-list-merge-pub-sql-2005.md)  
-  
--   [Informazioni sul database di distribuzione, Elenco verifica sottoscrizioni &#40;pubblicazione snapshot, SQL Server 2005 e versioni successive&#41;](distributor-info-subscription-watch-list-snapshot-pub-sql-2005.md)  
-  
--   [Informazioni sul database di distribuzione, Agenti](distributor-information-agents.md)  
-  
+
 -   [Impostazioni server di pubblicazione](publisher-settings.md)  
   
 -   [Informazioni sul server di pubblicazione, Pubblicazioni](publisher-information-publications.md)  
@@ -80,8 +72,6 @@ ms.locfileid: "52813968"
   
 -   [Sottoscrizione, Cronologia sincronizzazione History &#40;sottoscrizione di tipo merge, SQL Server 2005 e versioni successive&#41;](subscription-synchronization-history.md)  
   
--   [Sottoscrizione, Cronologia sincronizzazione &#40;sottoscrizione di tipo merge, SQL Server 2000&#41;](subscription-synchronization-history-merge-subscription-sql-server-2000.md)  
-  
 -   [Sottoscrizione, Cronologia database di distribuzione - Sottoscrittore &#40;sottoscrizione snapshot&#41;](subscription-distributor-to-subscriber-history-snapshot-subscription.md)  
   
 -   [Agente di lettura log](log-reader-agent.md)  
@@ -97,6 +87,5 @@ ms.locfileid: "52813968"
 ## <a name="see-also"></a>Vedere anche  
  [Avviare Monitoraggio replica](monitor/start-the-replication-monitor.md)   
  [Monitoraggio della replica](monitoring-replication.md)   
- [Riferimento alle proprietà &#40;replica&#41;](properties-reference-replication.md)  
   
   

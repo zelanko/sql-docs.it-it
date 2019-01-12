@@ -19,12 +19,12 @@ ms.assetid: b6d07386-7c6f-4cc6-be32-93289adbd3d6
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 47fd5d47ea064a6aa783132ff052f8b95a6f2941
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 5157fcfeb54e22c404dcba29655771a1c2034e2c
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48150431"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54126901"
 ---
 # <a name="file-restores-simple-recovery-model"></a>Ripristini di file (modello di recupero con registrazione minima)
   Le informazioni contenute in questo argomento sono rilevanti solo per i database che utilizzano il modello di recupero con registrazione minima e includono almeno un filegroup secondario di sola lettura.  
@@ -46,7 +46,7 @@ ms.locfileid: "48150431"
      Per informazioni sul supporto per il ripristino di pagine e file online, vedere [Funzionalità supportate dalle edizioni di SQL Server 2014](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md). Per altre informazioni sui ripristini online, vedere [Ripristino in linea &#40;SQL Server&#41;](online-restore-sql-server.md).  
   
     > [!TIP]  
-    >  Se si desidera attivare la modalità offline per il database al fine di eseguire un ripristino di file, attivare la modalità offline per il database prima di avviare la sequenza di ripristino eseguendo la seguente istruzione [ALTER DATABASE](/sql/t-sql/statements/alter-database-transact-sql-set-options) : ALTER DATABASE *nome_database* SET OFFLINE.  
+    >  Se si desidera che il database rimanga offline per un file, portare il database offline prima di avviare la sequenza di ripristino eseguendo il codice seguente [ALTER DATABASE](/sql/t-sql/statements/alter-database-transact-sql-set-options) istruzione: ALTER DATABASE *database_name* SET OFFLINE.  
   
 
   
@@ -62,13 +62,13 @@ ms.locfileid: "48150431"
   
  La sequenza di ripristino contiene solo due istruzioni [!INCLUDE[tsql](../../../includes/tsql-md.md)] . La prima istruzione esegue il ripristino di un file secondario, il file `A`, che viene ripristinato utilizzando WITH NORECOVERY. La seconda operazione ripristina altri due file, i file `B` e `C` , che vengono ripristinati utilizzando WITH RECOVERY da un diverso dispositivo di backup:  
   
-1.  RESTORE DATABASE *database* FILE **=***nome_file_A*  
+1.  RESTORE DATABASE *database* FILE **=**_nome_file_A_  
   
      FROM *backup_file_A*  
   
      WITH NORECOVERY **;**  
   
-2.  RESTORE DATABASE *database* FILE **=***nome_file_B***,***nome_file_C*  
+2.  RESTORE DATABASE *database* FILE **=**_nome_file_B_**,**_nome_file_C_  
   
      FROM *backup_dei_file_B_e_C*  
   
@@ -76,9 +76,9 @@ ms.locfileid: "48150431"
   
 ### <a name="examples"></a>Esempi  
   
--   [Esempio: Ripristino in linea di un file di sola lettura &#40;modello di recupero con registrazione minima&#41;](example-online-restore-of-a-read-only-file-simple-recovery-model.md)  
+-   [Esempio: Ripristino online di un File di sola lettura &#40;modello di recupero con registrazione minima&#41;](example-online-restore-of-a-read-only-file-simple-recovery-model.md)  
   
--   [Esempio: Ripristino non in linea del filegroup primario e di un altro filegroup &#40;modello di recupero con registrazione completa&#41;](example-offline-restore-of-primary-and-one-other-filegroup-full-recovery-model.md)  
+-   [Esempio: Ripristino offline del filegroup primario e un altro Filegroup &#40;modello di recupero completo&#41;](example-offline-restore-of-primary-and-one-other-filegroup-full-recovery-model.md)  
   
  
   
@@ -96,7 +96,7 @@ ms.locfileid: "48150431"
   
   
 ## <a name="see-also"></a>Vedere anche  
- [Backup e ripristino: interoperabilità e coesistenza &#40;SQL Server&#41;](backup-and-restore-interoperability-and-coexistence-sql-server.md)   
+ [Backup e ripristino: Interoperabilità e coesistenza &#40;SQL Server&#41;](backup-and-restore-interoperability-and-coexistence-sql-server.md)   
  [Backup differenziali &#40;SQL Server&#41;](differential-backups-sql-server.md)   
  [Backup completi del file &#40;SQL Server&#41;](full-file-backups-sql-server.md)   
  [Panoramica del backup &#40;SQL Server&#41;](backup-overview-sql-server.md)   

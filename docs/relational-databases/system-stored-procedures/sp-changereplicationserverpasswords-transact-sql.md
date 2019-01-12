@@ -16,12 +16,12 @@ ms.assetid: 9333da96-3a1c-4adb-9a74-5dac9ce596df
 author: VanMSFT
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 073577731fba32e092307ebd7c86eb5904c38a05
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: bfe5d9f7bc5c95055af06b0582f2ddcf88ae7cdf
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52760234"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54125711"
 ---
 # <a name="spchangereplicationserverpasswords-transact-sql"></a>sp_changereplicationserverpasswords (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -48,16 +48,16 @@ sp_changereplicationserverpasswords [ @login_type = ] login_type
   
  **0**  =  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] autenticazione  
   
- [ **@login** =] **'***account di accesso***'**  
+ [ **@login** =] **'**_account di accesso_**'**  
  Nome dell'account di Windows o dell'account di accesso di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] da modificare. *account di accesso* viene **nvarchar(257)**, non prevede alcun valore predefinito  
   
- [ **@password** =] **'***password***'**  
+ [ **@password** =] **'**_password_**'**  
  Nuova password da archiviare per l'oggetto specificato *account di accesso*. *la password* viene **sysname**, non prevede alcun valore predefinito.  
   
 > [!NOTE]  
 >  Dopo aver modificato una password per la replica è necessario arrestare e riavviare ogni agente che utilizza la password prima che la modifica abbia effetto per tale agente.  
   
- [ **@server** =] **'***server***'**  
+ [ **@server** =] **'**_server_**'**  
  Connessione server per cui viene modificata la password archiviata. *server* viene **sysname**, i possibili valori sono i seguenti:  
   
 |Value|Descrizione|  

@@ -21,12 +21,12 @@ ms.assetid: 16590771-9867-463e-a973-36a5c145ac16
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 95fbb61460c23ca0fedf0baec71aa21acaa50398
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 9dad3a2c5f7073ea63608ba5234061a3ffa2102c
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52786743"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54123931"
 ---
 # <a name="view-publication-and-subscription-status-in-replication-monitor"></a>Visualizzazione dello stato delle pubblicazioni e delle sottoscrizioni in Monitoraggio replica
   In Monitoraggio replica per[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] vengono visualizzate informazioni sullo stato delle pubblicazioni e delle sottoscrizioni:  
@@ -53,11 +53,8 @@ ms.locfileid: "52786743"
   
  **Per visualizzare lo stato delle pubblicazioni e delle sottoscrizioni**  
   
--   Monitoraggio replica: [Visualizzare le informazioni ed eseguire attività per una pubblicazione di tipo &#40;Monitoraggio replica&#41; ](view-information-and-perform-tasks-for-a-publication-replication-monitor.md) e [consente di visualizzare informazioni ed eseguire attività per una sottoscrizione &#40;Monitoraggio replica&#41;](view-information-and-perform-tasks-for-a-subscription-replication-monitor.md)  
+-   Monitoraggio replica: [Visualizzare informazioni ed eseguire attività con Monitoraggio replica](view-information-and-perform-tasks-replication-monitor.md).
   
- **Per visualizzare informazioni dettagliate sugli agenti**  
-  
--   Monitoraggio replica: [Visualizzare le informazioni ed eseguire attività relative agli agenti associati a una pubblicazione di tipo &#40;Monitoraggio replica&#41; ](view-information-and-perform-tasks-for-publication-agents.md) e [consente di visualizzare informazioni ed eseguire attività relative agli agenti associati a una sottoscrizione &#40;replica Monitoraggio&#41;](view-information-and-perform-tasks-for-subscription-agents.md).  
   
 ## <a name="publication-status-values"></a>Valori di stato delle pubblicazioni  
  Nella tabella seguente vengono mostrati i valori di stato delle pubblicazioni e le relative icone in ordine di priorità.  

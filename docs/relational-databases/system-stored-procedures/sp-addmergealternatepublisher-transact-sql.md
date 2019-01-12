@@ -16,12 +16,12 @@ ms.assetid: de46e0b1-d946-4021-bff6-2d8e3187656d
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: caaf907b0db55306ebd341ed727174f3531c947f
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 21d0ea34f3521333976ce00a3f5b823c3fcb816a
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52777739"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54129301"
 ---
 # <a name="spaddmergealternatepublisher-transact-sql"></a>sp_addmergealternatepublisher (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -46,31 +46,31 @@ sp_addmergealternatepublisher [ @publisher= ] 'publisher'
 ```  
   
 ## <a name="arguments"></a>Argomenti  
- [  **@publisher=**] **'***publisher***'**  
+ [  **@publisher=**] **'**_editore_**'**  
  Nome del server di pubblicazione. *server di pubblicazione* viene **sysname**, non prevede alcun valore predefinito.  
   
- [ **@publisher_db=**] **'***publisher_db***'**  
+ [  **@publisher_db=**] **'**_publisher_db_**'**  
  Nome del database di pubblicazione. *publisher_db* viene **sysname**, non prevede alcun valore predefinito.  
   
- [  **@publication=**] **'***pubblicazione***'**  
+ [  **@publication=**] **'**_pubblicazione_**'**  
  Nome della pubblicazione. *pubblicazione* viene **sysname**, non prevede alcun valore predefinito.  
   
- [  **@alternate_publisher=**] **'***alternate_synchronization_partner***'**  
+ [  **@alternate_publisher=**] **'**_alternate_synchronization_partner_**'**  
  Nome del server di pubblicazione alternativo. *alternate_synchronization_partner* viene **sysname**, non prevede alcun valore predefinito.  
   
- [  **@alternate_publisher_db=**] **'***alternate_publisher_db***'**  
+ [  **@alternate_publisher_db=**] **'**_alternate_publisher_db_**'**  
  Nome del database di pubblicazione nel server di pubblicazione alternativo. *alternate_publisher_db* viene **sysname**, non prevede alcun valore predefinito.  
   
- [  **@alternate_publication=**] **'***alternate_synchronization_partner***'**  
+ [  **@alternate_publication=**] **'**_alternate_synchronization_partner_**'**  
  Nome della pubblicazione nel partner di sincronizzazione alternativo. *alternate_synchronization_partner* viene **sysname**, non prevede alcun valore predefinito.  
   
- [  **@alternate_distributor=**] **'***alternate_distributor***'**  
+ [  **@alternate_distributor=**] **'**_alternate_distributor_**'**  
  Nome del server di distribuzione per il partner di sincronizzazione alternativo. *alternate_distributor* viene **sysname**, non prevede alcun valore predefinito.  
   
- [  **@friendly_name=**] **'***friendly_name***'**  
+ [  **@friendly_name=**] **'**_friendly_name_**'**  
  Nome visualizzato utilizzato per identificare un partner di sincronizzazione alternativo determinato dall'associazione del server di pubblicazione, della pubblicazione e del server di distribuzione. *friendly_name* viene **nvarchar(255**, con un valore predefinito è NULL.  
   
- [  **@reserved=**] **'***riservato***'**  
+ [  **@reserved=**] **'**_riservato_**'**  
  [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
   
 ## <a name="return-code-values"></a>Valori restituiti  

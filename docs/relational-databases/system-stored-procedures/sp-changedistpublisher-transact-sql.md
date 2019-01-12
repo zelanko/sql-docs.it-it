@@ -16,12 +16,12 @@ ms.assetid: 7ef5c89d-faaa-4f8e-aef7-00649ebc8bc9
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: ba242dfc6c457bd94c082f151f162b8f6eb06e29
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 81f6b1ca0ea65068851756dc2a1b91cb84c52227
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52819183"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54128236"
 ---
 # <a name="spchangedistpublisher-transact-sql"></a>sp_changedistpublisher (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -41,16 +41,16 @@ sp_changedistpublisher [ @publisher = ] 'publisher'
 ```  
   
 ## <a name="arguments"></a>Argomenti  
- [  **@publisher=** ] **'***publisher***'**  
+ [  **@publisher=** ] **'**_editore_**'**  
  Nome del server di pubblicazione. *server di pubblicazione* viene **sysname**, non prevede alcun valore predefinito.  
   
- [  **@property=** ] **'***proprietà***'**  
+ [  **@property=** ] **'**_proprietà_**'**  
  Proprietà da modificare per il server di pubblicazione specificato. *proprietà* viene **sysname** i possibili valori sono i seguenti.  
   
- [ **@value=** ] **'***valore***'**  
+ [ **@value=** ] **'**_value_**'**  
  Valore della proprietà specificata. *valore* viene **nvarchar(255**, con un valore predefinito è NULL.  
   
- [  **@storage_connection_string =**] **'***storage_connection_string***'**  
+ [  **@storage_connection_string =**] **'**_storage_connection_string_**'**  
  È necessaria per l'istanza gestita di Database SQL, deve corrispondere alla chiave di accesso per il volume di archiviazione di Database SQL di Azure. 
 
 

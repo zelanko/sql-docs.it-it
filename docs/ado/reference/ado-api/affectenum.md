@@ -16,19 +16,19 @@ ms.assetid: 1ab921a0-6c57-43b4-9291-701b2599f3e8
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 3a26d1f9b1e8ff7cf9ed127dc78a02827952d411
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: bf8f067cd223bb9064e5e44734b9765cc8b41c79
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47772199"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54129471"
 ---
 # <a name="affectenum"></a>AffectEnum
 Consente di specificare quali record sono interessati da un'operazione.  
   
-|Costante|valore|Description|  
+|Costante|Value|Descrizione|  
 |--------------|-----------|-----------------|  
-|**adAffectAll**|3|Se non è presente una [filtro](../../../ado/reference/ado-api/filter-property.md) applicato per il **Recordset**, influisce su tutti i record.<br /><br /> Se il **filtro** è impostata su un criterio di tipo stringa (ad esempio "autore ="Smith""), quindi l'operazione interessa record visibili nel capitolo corrente.<br /><br /> Se il **filtro** è impostata su un membro del [FilterGroupEnum](../../../ado/reference/ado-api/filtergroupenum.md) o una matrice di segnalibri, quindi l'operazione verrà applicate a tutte le righe del **Recordset**. **Nota:****adAffectAll** è nascosto nel Visualizzatore oggetti Visual Basic.  |  
+|**adAffectAll**|3|Se non è presente una [filtro](../../../ado/reference/ado-api/filter-property.md) applicato per il **Recordset**, influisce su tutti i record.<br /><br /> Se il **filtro** è impostata su un criterio di tipo stringa (ad esempio "autore ="Smith""), quindi l'operazione interessa record visibili nel capitolo corrente.<br /><br /> Se il **filtro** è impostata su un membro del [FilterGroupEnum](../../../ado/reference/ado-api/filtergroupenum.md) o una matrice di segnalibri, quindi l'operazione verrà applicate a tutte le righe del **Recordset**. **Nota: adAffectAll** è nascosto nel Visualizzatore oggetti Visual Basic.|  
 |**adAffectAllChapters**|4|Influisce su tutti i record in tutti i capitoli di pari livello dei **Recordset**, inclusi quelli non visibili tramite qualsiasi **filtro** attualmente applicato.|  
 |**adAffectCurrent**|1|Interessa solo il record corrente.|  
 |**adAffectGroup**|2|Interessa solo i record che soddisfano l'oggetto corrente [filtro](../../../ado/reference/ado-api/filter-property.md) l'impostazione della proprietà. È necessario impostare il **filtro** proprietà di un **FilterGroupEnum** valore o una matrice di **segnalibri** per usare questa opzione.|  

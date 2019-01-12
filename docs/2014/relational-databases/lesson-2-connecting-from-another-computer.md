@@ -10,12 +10,12 @@ ms.assetid: fd4ddeb8-0cb6-441b-9704-03575c07020f
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 6efa9ab6ec2733c67a00b4c16e08d6b4e435cf9b
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: eedbde338ad3cc2af5477cc263eac7444707c0d8
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53367194"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54127211"
 ---
 # <a name="lesson-2-connecting-from-another-computer"></a>Lezione 2: connessione da un altro computer
   Per una maggiore sicurezza non è possibile accedere al [!INCLUDE[ssDE](../includes/ssde-md.md)] di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Developer Edition, Express Edition ed Evaluation Edition da un altro computer al momento dell'installazione iniziale. In questa lezione vengono descritte le procedure per abilitare i protocolli, configurare le porte e configurare Windows Firewall per la connessione da altri computer.  
@@ -44,7 +44,7 @@ ms.locfileid: "53367194"
     > [!NOTE]  
     >  Possono essere disponibili entrambe le opzioni a 32 e 64 bit.  
   
-2.  Nelle **Gestione configurazione SQL Server**, espandere **configurazione di rete SQL Server**, quindi fare clic su **protocolli per**  *\<NomeIstanza >*.  
+2.  Nelle **Gestione configurazione SQL Server**, espandere **configurazione di rete SQL Server**, quindi fare clic su **protocolli per**  _\<NomeIstanza >_.  
   
      L'istanza predefinita (un'istanza senza nome) è indicata come **MSSQLSERVER**. Se è stata installata un'istanza denominata, il nome fornito è elencato. [!INCLUDE[ssExpressEd11](../includes/ssexpressed11-md.md)] viene installato come **SQLEXPRESS**, a meno che non sia stato specificato un nome diverso durante l'installazione.  
   
@@ -112,7 +112,7 @@ ms.locfileid: "53367194"
   
 2.  Nella finestra di dialogo **Connetti al server** confermare l'opzione **Motore di database** nella casella **Tipo server** .  
   
-3.  Nella casella **Nome server** digitare **tcp:** per specificare il protocollo, quindi immettere il nome del computer, una virgola e il numero di porta. Per la connessione all'istanza predefinita viene automaticamente usata la porta 1433, la quale può quindi essere omessa. Digitare pertanto **tcp:***<nome_computer>*. In questo esempio di istanza denominata digitare **tcp:***<nome_computer>***,49172**.  
+3.  Nella casella **Nome server** digitare **tcp:** per specificare il protocollo, quindi immettere il nome del computer, una virgola e il numero di porta. Per la connessione all'istanza predefinita viene automaticamente usata la porta 1433, la quale può quindi essere omessa. Digitare pertanto **tcp:**_<nome_computer>_. In questo esempio di istanza denominata digitare **tcp:**_<nome_computer>_**,49172**.  
   
     > [!NOTE]  
     >  Se si omette **tcp:** nella casella **Nome server** , il client eseguirà un tentativo con tutti i protocolli abilitati, nell'ordine specificato nella configurazione client.  

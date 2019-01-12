@@ -12,26 +12,21 @@ ms.assetid: 0dc485a0-5a50-41eb-a29d-f2b2fb920174
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 19faa0690069d6c16be7591547f4a242ac2469fc
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: f294ad3868670783d3010498dd0ba89e1e6a48be
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52805584"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54128391"
 ---
 # <a name="run-replication-maintenance-jobs-sql-server-management-studio"></a>Esecuzione di processi di manutenzione della replica (SQL Server Management Studio)
   Nella replica vengono utilizzati i seguenti processi di manutenzione:  
   
--   **Reinizializzazione delle sottoscrizioni con errori di convalida dei dati**  
-  
--   **Eliminazione del contenuto della cronologia dell'agente: distribuzione**  
-  
--   **Aggiornamento del monitoraggio della replica per la distribuzione.**  
-  
--   **Controllo degli agenti di replica**  
-  
--   **Eliminazione del contenuto della distribuzione: distribuzione**  
-  
+-   **Reinizializzazione delle sottoscrizioni con errori di convalida dei dati**
+-   **Eliminazione del contenuto della cronologia dell'agente: distribuzione**
+-   **Aggiornamento del monitoraggio della replica per la distribuzione.**
+-   **Controllo degli agenti di replica**
+-   **Eliminazione del contenuto della distribuzione: distribuzione**
 -   **Pulizia dei riferimenti alla sottoscrizione scaduta**  
   
  Avviare e arrestare questi processi dalla cartella **Processi** in [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] e dalla scheda **Agenti** in Monitoraggio replica. Per informazioni sull'avvio di Monitoraggio replica, vedere [Avviare Monitoraggio replica](../monitor/start-the-replication-monitor.md). Visualizzare e modificare le proprietà per ogni processo nella finestra di dialogo **Proprietà processo - \<Processo>**, disponibile dalla stessa cartella e dalla stessa scheda.  
@@ -74,7 +69,7 @@ ms.locfileid: "52805584"
   
 ## <a name="see-also"></a>Vedere anche  
  [Avviare e arrestare un agente di replica &#40;SQL Server Management Studio&#41;](../agents/start-and-stop-a-replication-agent-sql-server-management-studio.md)   
- [Visualizzare le informazioni ed eseguire attività relative a un server di pubblicazione &#40;Monitoraggio replica&#41;](../monitor/view-information-and-perform-tasks-for-a-publisher-replication-monitor.md)   
+ [Visualizzare informazioni ed eseguire attività con Monitoraggio replica](../monitor/view-information-and-perform-tasks-replication-monitor.md)   
  [Amministrazione dell'agente di replica](../agents/replication-agent-administration.md)  
   
   

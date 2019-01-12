@@ -13,12 +13,12 @@ ms.assetid: 82796217-02e2-4bc5-9ab5-218bae11a2d6
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 3141146842bd568336033073f07b41c636129ee7
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 9268f0d06e0bf960ce3fb8879dfc219232ea822e
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52543576"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54130481"
 ---
 # <a name="database-mirroring-and-replication-sql-server"></a>Mirroring e replica del database (SQL Server)
   Per migliorare la disponibilità del database di pubblicazione è possibile utilizzare il mirroring del database in combinazione con la replica. Il mirroring del database coinvolge due copie di un unico database che in genere risiedono in computer diversi. In un momento dato solo una copia del database risulta disponibile per i client. Questa copia viene definita database principale. Gli aggiornamenti apportati dai client al database principale vengono applicati all'altra copia del database, definita database mirror. Il processo di mirroring prevede l'applicazione nel database mirror del log delle transazioni relativo a ogni operazione di inserimento, aggiornamento o eliminazione eseguita sul database principale.  
@@ -161,7 +161,7 @@ ms.locfileid: "52543576"
 |Modalità a sicurezza elevata senza failover automatico|Tutte le transazioni di cui è stato eseguito il commit vengono salvate su disco nel database mirror. L'agente di lettura log replica solo le transazioni salvate nel server mirror. Se il server mirror non è disponibile, il server principale non consente alcuna operazione nel database. L'agente di lettura log non può pertanto replicare alcuna transazione.|  
   
 ## <a name="see-also"></a>Vedere anche  
- [Caratteristiche e attività di replica](../../relational-databases/replication/replication-features-and-tasks.md)   
+ [Replica di SQL Server](../../relational-databases/replication/sql-server-replication.md)   
  [Log shipping e replica &#40;SQL Server&#41;](../log-shipping/log-shipping-and-replication-sql-server.md)  
   
   

@@ -16,12 +16,12 @@ ms.assetid: 47148383-c2c7-4f08-a9e4-7016bf2d1d13
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 06b97ac4bf58b933f55c4b53bfeacfbc9a736f28
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 3cea4731ee665e401429679d764832247b2a2242
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52516225"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54126161"
 ---
 # <a name="create-clustered-indexes"></a>Creare indici cluster
   È possibile creare indici cluster nelle tabelle di [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] utilizzando [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)]. A parte poche eccezioni, ogni tabella deve disporre di un indice cluster. Oltre a migliorare le prestazioni di esecuzione delle query, un indice può essere ricompilato o riorganizzato su richiesta per controllare la frammentazione della tabella. È inoltre possibile creare un indice cluster in una vista. Gli indici cluster sono descritti nell'argomento [Descrizione di indici cluster e non cluster](clustered-and-nonclustered-indexes-described.md).  
@@ -86,7 +86,7 @@ ms.locfileid: "52516225"
   
 4.  In **Colonne chiave indice**fare clic su **Aggiungi**.  
   
-5.  Nella finestra di dialogo **Seleziona colonne da***nome_tabella* selezionare la casella di controllo della colonna della tabella da aggiungere all'indice cluster.  
+5.  Nella finestra di dialogo **Seleziona colonne da**_nome_tabella_ selezionare la casella di controllo della colonna della tabella da aggiungere all'indice cluster.  
   
 6.  Fare clic su **OK**.  
   
@@ -112,7 +112,7 @@ ms.locfileid: "52516225"
   
 9. Scegliere **Chiudi**.  
   
-10. Scegliere **Salva***nome_tabella* dal menu **File**.  
+10. Nel menu **File** scegliere **Salva**_table_name_.  
   
 ##  <a name="TsqlProcedure"></a> Utilizzo di Transact-SQL  
   

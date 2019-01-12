@@ -13,12 +13,12 @@ ms.assetid: 7b976a84-7381-43a6-a828-ba83ada71cbe
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 803acc60555c996a0556e456b8d31753506b43ab
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: e6e3ecc4b125d226fc2cdf6dbe241e0ce017eae6
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53205790"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54126691"
 ---
 # <a name="set-a-trace-filter-transact-sql"></a>Impostare un filtro di traccia (Transact-SQL)
   In questo argomento viene descritto come utilizzare stored procedure per creare un filtro che recupera solo le informazioni necessarie su un evento di cui è in corso la traccia.  
@@ -30,7 +30,7 @@ ms.locfileid: "53205790"
 2.  Eseguire **sp_trace_setfilter** per configurare il tipo di informazioni da recuperare per l'evento di cui è in corso la traccia.  
   
 > [!IMPORTANT]
->  A differenza di quanto avviene con le normali stored procedure, i parametri di tutte le stored procedure di [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] (**sp_trace_* xx***) sono fortemente tipizzati e non supportano la conversione automatica del tipo di dati. Se questi parametri non vengono chiamati con i tipi di dati corretti per i parametri di input, come indicato nella descrizione dell'argomento, la stored procedure restituirà un errore.  
+>  A differenza delle normali stored procedure, parametri di tutte le [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] stored procedure (<strong>sp_trace _*xx*</strong>) sono rigidamente tipizzati e non supportano la conversione di tipo automatica dei dati. Se questi parametri non vengono chiamati con i tipi di dati corretti per i parametri di input, come indicato nella descrizione dell'argomento, la stored procedure restituirà un errore.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Filtrare una traccia](../../relational-databases/sql-trace/filter-a-trace.md)   
