@@ -16,12 +16,12 @@ ms.assetid: 04e15011-a902-4074-b38c-3ec2fc73b838
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 171618db612b77de63feb2a7e53b248a6ac847b0
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: 079e2591323b60ea86f93c3cbaedc423cc85d420
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53206570"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54135042"
 ---
 # <a name="spadddistpublisher-transact-sql"></a>sp_adddistpublisher (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
@@ -48,10 +48,10 @@ sp_adddistpublisher [ @publisher= ] 'publisher'
 ```  
   
 ## <a name="arguments"></a>Argomenti  
- [  **@publisher=**] **'***publisher***'**  
+ [  **@publisher=**] **'**_editore_**'**  
  Nome del server di pubblicazione. *server di pubblicazione* viene **sysname**, non prevede alcun valore predefinito.  
   
- [  **@distribution_db=**] **'***distribution_db***'**  
+ [  **@distribution_db=**] **'**_distribution_db_**'**  
  Nome del database di distribuzione. *distributor_db* viene **sysname**, non prevede alcun valore predefinito. Questo parametro viene utilizzato dagli agenti di replica per la connessione al server di pubblicazione.  
   
  [  **@security_mode=**] *security_mode*  
@@ -62,26 +62,26 @@ sp_adddistpublisher [ @publisher= ] 'publisher'
 |**0**|Gli agenti di replica nel server di distribuzione si connettono al server di pubblicazione tramite l'autenticazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |**1** (impostazione predefinita)|Gli agenti di replica nel server di distribuzione si connettono al server di pubblicazione tramite l'autenticazione di Windows.|  
   
- [  **@login=**] **'***account di accesso***'**  
+ [  **@login=**] **'**_account di accesso_**'**  
  Account di accesso. Questo parametro è obbligatorio se *security_mode* viene **0**. *login* è di tipo **sysname** e il valore predefinito è NULL. Questo parametro viene utilizzato dagli agenti di replica per la connessione al server di pubblicazione.  
   
- [  **@password=**] **'***password***'**]  
+ [  **@password=**] **'**_password_**'**]  
  Password. *la password* viene **sysname**, con un valore predefinito è NULL. Questo parametro viene utilizzato dagli agenti di replica per la connessione al server di pubblicazione.  
   
 > [!IMPORTANT]  
 >  Non usare una password vuota. Usare una password complessa.  
   
- [  **@working_directory=**] **'***working_directory***'**  
+ [  **@working_directory=**] **'**_working_directory_**'**  
  Nome della directory di lavoro utilizzata per archiviare i file dei dati e di schema per la pubblicazione *working_directory* viene **nvarchar(255**e il valore predefinito è la cartella ReplData per questa istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], ad esempio `C:\Program Files\Microsoft SQL Server\MSSQL\MSSQ.1\ReplData`. Il nome deve essere specificato in formato UNC.  
 
  Per il Database SQL di Azure, usare `\\<storage_account>.file.core.windows.net\<share>`.
 
- [  **@storage_connection_string =**] **'***storage_connection_string***'**  
+ [  **@storage_connection_string =**] **'**_storage_connection_string_**'**  
  È necessario per il Database SQL. Usare la chiave di accesso dal portale di Azure in archiviazione > Impostazioni.
 
  > [!INCLUDE[Azure SQL Database link](../../includes/azure-sql-db-repl-for-more-information.md)]
 
- [  **@trusted=**] **'***attendibile***'**  
+ [  **@trusted=**] **'**_attendibile_**'**  
  Questo parametro è deprecato ed è disponibile solo per compatibilità con le versioni precedenti. *attendibile* viene **nvarchar(5**e impostandola su qualsiasi valore diverso **false** comporterà un errore.  
   
  [  **@encrypted_password=**] *encrypted_password*  
@@ -95,7 +95,7 @@ sp_adddistpublisher [ @publisher= ] 'publisher'
 |**0** (predefinito)|Database di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |**1**|Database non di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
   
- [ **@publisher_type**=] **'***publisher_type***'**  
+ [ **@publisher_type**=] **'**_publisher_type_**'**  
  Specifica il tipo di server di pubblicazione quando è diverso da [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. *publisher_type* è di tipo sysname e può essere uno dei valori seguenti.  
   
 |Value|Descrizione|  

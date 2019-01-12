@@ -15,12 +15,12 @@ ms.assetid: 2d3c14dc-43e5-4324-b8fb-f2692d330b16
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: b3d2581f2f086f8db5f9408502185c132a5866af
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: ef528fb128c81de1d2be07196dfe2a20ceaebba4
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52513219"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54135081"
 ---
 # <a name="modify-views"></a>Modifica di viste
   Dopo aver definito una vista, è possibile modificarne la definizione in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] , senza eliminare e ricreare la vista, utilizzando [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)].  
@@ -70,7 +70,7 @@ ms.locfileid: "52513219"
   
     3.  Fare clic con il pulsante destro del mouse sulla barra del titolo della tabella da rimuovere e selezionare **Rimuovi**.  
   
-4.  Scegliere *Salva***nome vista* dal menu **File**.  
+4.  Nel menu **File** scegliere **Salva**_view name_.  
   
 ##  <a name="TsqlProcedure"></a> Utilizzo di Transact-SQL  
   

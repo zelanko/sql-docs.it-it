@@ -22,12 +22,12 @@ ms.assetid: fb163e47-1546-4682-abaa-8c9494e9ddc7
 author: VanMSFT
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: c9ff712cb5915493f1ff285421bfe3edc8d7981f
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: b765248e43dc66b9e1c038df27ca9a8b6135706d
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53374763"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54131591"
 ---
 # <a name="create-a-login"></a>Creazione di un account di accesso
   In questo argomento viene descritto come creare un account di accesso in [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] utilizzando [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../../includes/tsql-md.md)]. Un account di accesso è l'identità della persona o del processo che esegue la connessione a un'istanza di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
@@ -146,7 +146,7 @@ ms.locfileid: "53374763"
  Nella pagina **Mapping utenti** sono elencati tutti i possibili database e le appartenenze al ruolo dei database che possono essere applicati all'account di accesso. I database selezionati determinano le appartenenze al ruolo che sono disponibili per l'account di accesso. In questa pagina sono disponibili le opzioni seguenti.  
   
  **Utenti di cui è stato eseguito il mapping all'account di accesso seguente**  
- Consente di selezionare i database ai quali può accedere l'account di accesso specificato. Quando si seleziona un database, i rispettivi ruoli validi vengono visualizzati nel riquadro **Appartenenza a ruoli del database per:** *database_name* .  
+ Consente di selezionare i database ai quali può accedere l'account di accesso specificato. Quando si seleziona un database, i rispettivi ruoli validi vengono visualizzati nel riquadro **Appartenenza a ruoli del database per:** _database_name_ .  
   
  **Mappa**  
  Consente all'account di accesso di accedere al database sotto indicato.  
@@ -160,10 +160,10 @@ ms.locfileid: "53374763"
  **Schema predefinito**  
  Consente di specificare lo schema predefinito dell'utente. Lo schema predefinito dei nuovi utenti creati è **dbo**. È possibile specificare uno schema predefinito non ancora creato. Non è possibile specificare uno schema predefinito per un utente del quale è stato eseguito il mapping a un gruppo di Windows, un certificato o una chiave asimmetrica.  
   
- **Account Guest abilitato per:**  *database_name*  
+ **Guest account enabled for:**  _database_name_  
  Attributo di sola lettura che indica se l'account Guest è abilitato nel database selezionato. Utilizzare la pagina **Stato** della finestra di dialogo **Proprietà account di accesso** dell'account Guest per abilitare o disabilitare tale account.  
   
- **Appartenenza a ruoli del database per:**  *database_name*  
+ **Database role membership for:**  _database_name_  
  Consente di selezionare i ruoli per l'utente nel database specificato. Tutti gli utenti sono membri del ruolo **public** in ogni database e non possono essere eliminati. Per altre informazioni sui ruoli di database, vedere [Ruoli a livello di database](database-level-roles.md).  
   
 ### <a name="securables"></a>Entità a protezione diretta  
@@ -176,10 +176,10 @@ ms.locfileid: "53374763"
   
 1.  Fare clic su **Cerca**.  
   
-2.  Nel **Aggiungi oggetti** nella finestra di dialogo selezionare una delle opzioni seguenti: **Oggetti specifici...** , **Tutti gli oggetti dei tipi...** , o **server * * * nome_server*. [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
+2.  Nel **Aggiungi oggetti** nella finestra di dialogo selezionare una delle opzioni seguenti: **Oggetti specifici...** , **Tutti gli oggetti dei tipi...** , oppure **server**_nome_server_. [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
     > [!NOTE]  
-    >  Selezionare **server * * * nome_server* la griglia superiore viene automaticamente compilata con tutti gli oggetti a protezione diretta di tale server.  
+    >  Quando si seleziona **Il server**_nome_server_, la griglia superiore viene automaticamente compilata con tutti gli oggetti a protezione diretta di tale server.  
   
 3.  Se si seleziona **Oggetti specifici...**:  
   

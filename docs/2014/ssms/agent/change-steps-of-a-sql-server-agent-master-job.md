@@ -10,12 +10,12 @@ ms.assetid: 8f1a0ee6-49ff-4080-94ca-d661daeff2a6
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 2bf10e4357579bcda5ec9ac3bef92b49f596b7a9
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 1a60d9e5d8569324cc3f68200d4a5a232b930d8b
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52812293"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54133261"
 ---
 # <a name="change-steps-of-a-sql-server-agent-master-job"></a>Change Steps of a SQL Server Agent Master Job
   In questo argomento verrà descritto come apportare modifiche ai passaggi di un processo master di SQL Server Agent in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] utilizzando [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)].  
@@ -56,13 +56,13 @@ ms.locfileid: "52812293"
   
 4.  Fare clic con il pulsante destro del mouse sul processo in cui si intende modificare passaggi e scegliere **Proprietà**.  
   
-5.  Nel **proprietà processo-* * * nome_processo* nella finestra di dialogo **selezione pagina**, selezionare **passaggi**.  
+5.  Nella finestra di dialogo **Proprietà processo -**_nome_processo_ selezionare **Passaggi** in **Selezione pagina**.  
   
-6.  Fare clic su **Edit** per aprire la **proprietà passaggio processo-* * * nome_passaggio_processo* nella finestra di dialogo. Per altre informazioni sulle opzioni disponibili nella finestra di dialogo, vedere [proprietà passaggio processo: Nuovo passaggio di processo &#40;General Page&#41; ](../../integration-services/general-page-of-integration-services-designers-options.md) e [proprietà passaggio processo: Nuovo passaggio di processo &#40;pagina avanzate&#41;](job-step-properties-new-job-step-advanced-page.md).  
+6.  Fare clic su **Edit** per aprire il **proprietà passaggio processo -**_nome_passaggio_processo_ nella finestra di dialogo. Per altre informazioni sulle opzioni disponibili nella finestra di dialogo, vedere [proprietà passaggio processo: Nuovo passaggio di processo &#40;General Page&#41; ](../../integration-services/general-page-of-integration-services-designers-options.md) e [proprietà passaggio processo: Nuovo passaggio di processo &#40;pagina avanzate&#41;](job-step-properties-new-job-step-advanced-page.md).  
   
 7.  Al termine, fare clic su **OK**.  
   
-8.  Nel **proprietà processo-* * * nome_processo* finestra di dialogo, fare clic su **OK**.  
+8.  Nel **proprietà processo -**_job_name_ la finestra di dialogo, fare clic su **OK**.  
   
 ##  <a name="TsqlProcedure"></a> Utilizzo di Transact-SQL  
   

@@ -15,12 +15,12 @@ author: jovanpop-msft
 ms.author: jovanpop
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: a196ef879c176fe731fe85b2de7962d70edff7b4
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 7382e4d1b9e9d968d7ad87af9830691dd931d657
+ms.sourcegitcommit: 170c275ece5969ff0c8c413987c4f2062459db21
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52541170"
+ms.lasthandoff: 01/11/2019
+ms.locfileid: "54226618"
 ---
 # <a name="automatic-tuning"></a>Ottimizzazione automatica
 [!INCLUDE[tsql-appliesto-ss2017-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-xxxx-xxx-md.md)]
@@ -114,24 +114,21 @@ Usare la query seguente per ottenere uno script che corregge il problema e infor
 SELECT reason, score,
       script = JSON_VALUE(details, '$.implementationDetails.script'),
       planForceDetails.*,
-      estimated_gain = (regressedPlanExecutionCount+recommendedPlanExecutionCount)
-                  *(regressedPlanCpuTimeAverage-recommendedPlanCpuTimeAverage)/1000000,
-      error_prone = IIF(regressedPlanErrorCount>recommendedPlanErrorCount, 'YES','NO')
+      estimated_gain = (regressedPlanExecutionCount + recommendedPlanExecutionCount)
+                  * (regressedPlanCpuTimeAverage - recommendedPlanCpuTimeAverage)/1000000,
+      error_prone = IIF(regressedPlanErrorCount > recommendedPlanErrorCount, 'YES','NO')
 FROM sys.dm_db_tuning_recommendations
-  CROSS APPLY OPENJSON (Details, '$.planForceDetails')
+CROSS APPLY OPENJSON (Details, '$.planForceDetails')
     WITH (  [query_id] int '$.queryId',
-            [current plan_id] int '$.regressedPlanId',
-            [recommended plan_id] int '$.recommendedPlanId',
-
+            regressedPlanId int '$.regressedPlanId',
+            recommendedPlanId int '$.recommendedPlanId',
             regressedPlanErrorCount int,
             recommendedPlanErrorCount int,
-
             regressedPlanExecutionCount int,
             regressedPlanCpuTimeAverage float,
             recommendedPlanExecutionCount int,
             recommendedPlanCpuTimeAverage float
-
-          ) as planForceDetails;
+          ) AS planForceDetails;
 ```
 
 [!INCLUDE[ssresult-md](../../includes/ssresult-md.md)]     
@@ -176,7 +173,7 @@ Le azioni necessarie per creare gli indici necessari in [!INCLUDE[ssazure_md](..
 
 ### <a name="alternative---manual-index-management"></a>Opzione alternativa: gestione dell'indice di manuali
 
-Senza gestione automatica degli indici, sarebbe necessario eseguire manualmente una query utente [DM db_missing_index_details &#40;Transact-SQL&#41; ](../../relational-databases/system-dynamic-management-views/sys-dm-db-missing-index-details-transact-sql.md) vista per individuare gli indici che potrebbero migliorare le prestazioni, creare indici con i dettagli disponibili in questa vista e manualmente monitorare le prestazioni della query. Per trovare gli indici che devono essere eliminati, gli utenti devono monitorare le statistiche di utilizzo operativa degli indici per gli indici di ricerca usata raramente.
+Senza gestione automatica degli indici, sarebbe necessario eseguire manualmente una query utente [DM db_missing_index_details &#40;Transact-SQL&#41; ](../../relational-databases/system-dynamic-management-views/sys-dm-db-missing-index-details-transact-sql.md) visualizzare o usare il report di Performance Dashboard nella [!INCLUDE[ssManStudio](../../includes/ssManStudio-md.md)] agli indici di ricerca che potrebbe essere migliorare le prestazioni, creare indici con i dettagli forniti in questa vista e monitorare manualmente le prestazioni della query. Per trovare gli indici che devono essere eliminati, gli utenti devono monitorare le statistiche di utilizzo operativa degli indici per gli indici di ricerca usata raramente.
 
 [!INCLUDE[ssazure_md](../../includes/ssazure_md.md)] semplifica questo processo. [!INCLUDE[ssazure_md](../../includes/ssazure_md.md)] Analizza il carico di lavoro, identifica le query che potrebbero essere eseguite più velocemente con un nuovo indice e identifica gli indici inutilizzati o duplicati. Trovare altre informazioni sull'identificazione degli indici che devono essere modificati in [trovare indicazioni relative agli indici nel portale di Azure](https://docs.microsoft.com/azure/sql-database/sql-database-advisor-portal).
 

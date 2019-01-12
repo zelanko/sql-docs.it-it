@@ -16,12 +16,12 @@ ms.assetid: 9926a4f7-bcd8-4b9b-9dcf-5426a5857116
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: d26bb248705ddce8932264701fbb7b9c09f64fcb
-ms.sourcegitcommit: 87f29b23d5ab174248dab5d558830eeca2a6a0a4
+ms.openlocfilehash: a356a6bad7b0756f148b43ed0cbf35e8d2ce9cc9
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "51018596"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54132401"
 ---
 # <a name="upgrade-replicated-databases"></a>Aggiornare database replicati
   [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] supporta l'aggiornamento di database replicati da versioni precedenti di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] senza che sia necessario, durante l'aggiornamento di un nodo, arrestare le attività negli altri nodi. Verificare che vengano osservate le regole relative alle versioni supportate in una topologia:  
@@ -89,9 +89,8 @@ ms.locfileid: "51018596"
  Per verificare che in seguito al ripristino del backup di un database replicato vengano mantenute le impostazioni di replica di una versione precedente, eseguire il ripristino in un server e un database con gli stessi nomi del server e del database utilizzati per la creazione della copia di backup.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Amministrazione &#40;Replica&#41;](../../relational-databases/replication/administration/administration-replication.md)   
+ [Domande frequenti sull'amministrazione della replica](../../relational-databases/replication/administration/frequently-asked-questions-for-replication-administrators.md)   
  [Compatibilità con le versioni precedenti della replica](../../../2014/relational-databases/replication/replication-backward-compatibility.md)   
- [Novità &#40;replica&#41;](../../../2014/relational-databases/replication/what-s-new-replication.md)   
  [Aggiornamenti di versione ed edizione supportati](../../database-engine/install-windows/supported-version-and-edition-upgrades.md)   
  [Aggiornamento a SQL Server 2014](upgrade-sql-server.md)  
   

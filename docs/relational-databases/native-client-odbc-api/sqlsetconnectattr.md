@@ -1,7 +1,7 @@
 ---
 title: SQLSetConnectAttr | Microsoft Docs
 ms.custom: ''
-ms.date: 12/11/2018
+ms.date: 01/09/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -15,14 +15,15 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 7167f88fd1cc3b349df9543080caf6d571322c40
-ms.sourcegitcommit: c9d33ce831723ece69f282896955539d49aee7f8
+ms.openlocfilehash: 0e27df2328474f4123daa9488af88eb7903832be
+ms.sourcegitcommit: 1f53b6a536ccffd701fc87e658ddac714f6da7a2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/12/2018
-ms.locfileid: "53306258"
+ms.lasthandoff: 01/10/2019
+ms.locfileid: "54206377"
 ---
 # <a name="sqlsetconnectattr"></a>SQLSetConnectAttr
+
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 [!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
 
@@ -35,7 +36,7 @@ ms.locfileid: "53306258"
  In [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] è stato introdotto il supporto per un nuovo attributo di isolamento delle transazioni: SQL_COPT_SS_TXN_ISOLATION. Impostando SQL_COPT_SS_TXN_ISOLATION su SQL_TXN_SS_SNAPSHOT si indica che la transazione si verificherà con il livello di isolamento dello snapshot.  
   
 > [!NOTE]  
->  SQL_ATTR_TXN_ISOLATION può essere utilizzato per impostare tutti gli altri livelli di isolamento ad eccezione di SQL_TXN_SS_SNAPSHOT. Se si desidera utilizzare l'isolamento dello snapshot, è necessario impostare SQL_TXN_SS_SNAPSHOT tramite SQL_COPT_SS_TXN_ISOLATION. Tuttavia, è possibile recuperare il livello di isolamento tramite SQL_ATTR_TXN_ISOLATION oppure SQL_COPT_SS_TXN_ISOLATION.  
+> SQL_ATTR_TXN_ISOLATION può essere utilizzato per impostare tutti gli altri livelli di isolamento ad eccezione di SQL_TXN_SS_SNAPSHOT. Se si desidera utilizzare l'isolamento dello snapshot, è necessario impostare SQL_TXN_SS_SNAPSHOT tramite SQL_COPT_SS_TXN_ISOLATION. Tuttavia, è possibile recuperare il livello di isolamento tramite SQL_ATTR_TXN_ISOLATION oppure SQL_COPT_SS_TXN_ISOLATION.  
   
  La promozione di attributi di istruzione ODBC ad attributi di connessione può comportare conseguenze impreviste. Gli attributi di istruzione che richiedono cursori del server per l'elaborazione dei set di risultati possono essere promossi ad attributi di connessione. L'impostazione, ad esempio, dell'attributo di istruzione ODBC SQL_ATTR_CONCURRENCY su un valore più restrittivo del valore predefinito SQL_CONCUR_READ_ONLY indica al driver di utilizzare cursori dinamici per tutte le istruzioni eseguite nella connessione. L'esecuzione di una funzione di catalogo ODBC in un'istruzione nella connessione restituisce SQL_SUCCESS_WITH_INFO e un record di diagnostica indicante che il comportamento del cursore è stato modificato e impostato come di sola lettura. Un tentativo di esecuzione di un'istruzione Transact-SQL SELECT contenente una clausola COMPUTE nella stessa connessione avrà esito negativo.  
   
@@ -193,7 +194,7 @@ SQLSetConnectAttr(hdbc, SQL_COPT_SS_APPLICATION_INTENT, TEXT("Readonly"), SQL_NT
 |SQL_IS_OFF|Valore predefinito. L'autenticazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] viene utilizzata per convalidare ID utente e password al momento dell'accesso.|  
 |SQL_IS_ON|Viene utilizzata la modalità di autenticazione di Windows per convalidare i diritti di accesso di un utente a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 
-< nome = "sqlcoptssmarsenabled" ></a>
+<a name="sqlcoptssmarsenabled"></a>
 ## <a name="sqlcoptssmarsenabled"></a>SQL_COPT_SS_MARS_ENABLED  
  Questo attributo abilita o disabilita MARS (Multiple Active Result Set). Per impostazione predefinita, MARS è disabilitato. Questo attributo deve essere impostato prima di stabilire una connessione a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Una volta aperta la connessione a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], il servizio MARS rimarrà abilitato o disabilitato per tutta la durata della connessione.  
   
@@ -315,7 +316,8 @@ SQLSetConnectAttr(hdbc, SQL_COPT_SS_MULTISUBNET_FAILOVER, SQL_IS_ON, SQL_IS_INTE
   
  Per altre informazioni sull'isolamento dello snapshot, vedere [utilizzo dell'isolamento dello Snapshot](../../relational-databases/native-client/features/working-with-snapshot-isolation.md).  
   
-## <a name="sqlcoptssuseprocforprep"></a>SQL_COPT_SS_USE_PROC_FOR_PREP  
+## <a name="sqlcoptssuseprocforprep"></a>SQL_COPT_SS_USE_PROC_FOR_PREP
+
  Questo attributo non è più supportato.  
 
 <a name="sqlcoptssuserdata"></a>
@@ -333,7 +335,8 @@ SQLSetConnectAttr(hdbc, SQL_COPT_SS_MULTISUBNET_FAILOVER, SQL_IS_ON, SQL_IS_INTE
 |SQL_WARN_YES|Genera avvisi quando si verifica una perdita di dati durante la conversione della tabella codici.|  
 |SQL_WARN_NO|(Impostazione predefinita) Non genera avvisi quando si verifica una perdita di dati durante la conversione della tabella codici.|  
   
-## <a name="sqlsetconnectattr-support-for-service-principal-names-spns"></a>Supporto di SQLSetConnectAttr per nomi SPN (Service Principal Name)  
+## <a name="sqlsetconnectattr-support-for-service-principal-names-spns"></a>Supporto di SQLSetConnectAttr per nomi SPN (Service Principal Name)
+
  SQLSetConnectAttr può essere utilizzata per impostare il valore dei nuovi attributi di connessione SQL_COPT_SS_SERVER_SPN e SQL_COPT_SS_FAILOVER_PARTNER_SPN. Tali attributi non possono essere impostati quando una connessione è aperta; se si tenta di impostare questi attributi quando una connessione è aperta, viene restituito l'errore HY011 con il messaggio "Operazione correntemente non valida". (SQLSetConnectOption può anche essere utilizzato per impostare questi valori.)  
   
  Per altre informazioni sui nomi SPN, vedere [nomi delle entità servizio &#40;SPN&#41; nelle connessioni Client &#40;ODBC&#41;](../../relational-databases/native-client/odbc/service-principal-names-spns-in-client-connections-odbc.md).  
@@ -344,7 +347,8 @@ SQLSetConnectAttr(hdbc, SQL_COPT_SS_MULTISUBNET_FAILOVER, SQL_IS_ON, SQL_IS_INTE
   
  Per altre informazioni su SQL_COPT_SS_CONNECTION_DEAD, vedere [SQLGetConnectAttr](../../relational-databases/native-client-odbc-api/sqlgetconnectattr.md) e [ci si connette a un'origine dati &#40;ODBC&#41;](../../relational-databases/native-client-odbc-communication/connecting-to-a-data-source-odbc.md).  
   
-## <a name="example"></a>Esempio  
+## <a name="example"></a>Esempio
+
  In questo esempio vengono registrati i dati relativi alle prestazioni.  
   
 ```  
@@ -388,7 +392,8 @@ SQLSetConnectAttr(hDbc, SQL_COPT_SS_PERF_DATA,
 // Continue on...  
 ```  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedere anche
+
  [Funzione SQLSetConnectAttr](https://go.microsoft.com/fwlink/?LinkId=59368)   
  [Dettagli di implementazione di API ODBC](../../relational-databases/native-client-odbc-api/odbc-api-implementation-details.md)   
  [Funzioni di copia bulk](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/sql-server-driver-extensions-bulk-copy-functions.md)   

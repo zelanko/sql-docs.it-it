@@ -14,12 +14,12 @@ ms.assetid: 77938da0-2afd-4455-8826-f4a6a9440cb3
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 52291313f25453db47b10ecc5da0daa7ad9e1c89
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 657116e00b6905964f8cc65c28dff383c3cc9ad0
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52781953"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54133641"
 ---
 # <a name="queue-reader-agent-security"></a>Sicurezza agente di lettura coda
   La finestra di dialogo **Sicurezza agente di lettura coda** consente di specificare l'account di [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows con cui viene eseguito l'agente di lettura coda e vengono stabilite le connessioni locali al server di distribuzione. L'agente si connette al server di pubblicazione utilizzando l'account specificato nella finestra di dialogo **Proprietà server di pubblicazione** , alla quale è possibile accedere dalla finestra di dialogo **Proprietà server di distribuzione** . L'agente si connette al Sottoscrittore utilizzando lo stesso contesto dell'agente di distribuzione per la sottoscrizione. Per altre informazioni, vedere [View and Modify Replication Security Settings](security/view-and-modify-replication-security-settings.md).  
@@ -34,7 +34,7 @@ ms.locfileid: "52781953"
  Immettere la password per l'account di Windows.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Gestire gli account di accesso e le password nella replica](security/manage-logins-and-passwords-in-replication.md)   
+ [Gestire gli account di accesso e le password nella replica](security/identity-and-access-control-replication.md#manage-logins-and-passwords-in-replication)   
  [Modello di sicurezza dell'agente di replica](security/replication-agent-security-model.md)   
  [Panoramica degli agenti di replica](agents/replication-agents-overview.md)   
  [Procedure consigliate per la sicurezza della replica](security/replication-security-best-practices.md)  

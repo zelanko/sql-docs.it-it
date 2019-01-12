@@ -12,12 +12,12 @@ ms.assetid: 2ef803ee-a9f8-454a-ad63-fedcbe6838d1
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 151a7e847d50a84c34eb07f55e5bd4d8e20dcc4d
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: c5a78fc65ee96439c6b6a4d7726e9a40522e5be4
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52775793"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54132786"
 ---
 # <a name="create-a-maintenance-plan-maintenance-plan-design-surface"></a>Creare un piano di manutenzione (area di progettazione del piano di manutenzione)
   In questo argomento viene descritto come creare un piano di manutenzione multiserver o di un singolo server utilizzando l'area di progettazione del piano di manutenzione in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Mentre la **Creazione guidata piano di manutenzione** è ideale per la creazione di piani di manutenzione di base, la creazione di un piano tramite l'area di progettazione consente di utilizzare un flusso di lavoro avanzato.  
@@ -55,7 +55,7 @@ ms.locfileid: "52775793"
   
 3.  Fare clic con il pulsante destro del mouse sulla cartella **Piani di manutenzione** e scegliere **Nuovo piano di manutenzione**.  
   
-4.  Nella finestra di dialogo **Nuovo piano di manutenzione** digitare un nome per il piano nella casella **Nome** , quindi fare clic su **OK**. Verranno visualizzate la Casella degli strumenti e l'area *nome_piano_manutenzione* **[Progettazione]** con il sottopiano **Sottopiano_1** creato nella griglia principale.  
+4.  Nella finestra di dialogo **Nuovo piano di manutenzione** digitare un nome per il piano nella casella **Nome** , quindi fare clic su **OK**. Verranno visualizzate la Casella degli strumenti e l'area _nome_piano_manutenzione_ **[Progettazione]** con il sottopiano **Sottopiano_1** creato nella griglia principale.  
   
      Nell'intestazione dell'area di progettazione sono disponibili le opzioni seguenti.  
   
@@ -215,7 +215,7 @@ ms.locfileid: "52775793"
   
         1.  Se si seleziona **Genera report in un file di testo**, selezionare **Crea nuovo file** o **Accoda a file**.  
   
-        2.  A seconda della selezione effettuata nel passaggio precedente, immettere il nome e il percorso completo del nuovo file o del file da accodare nella casella **Cartella** o **Nome file** . In alternativa, fare clic sui puntini di sospensione **(...)**  e selezionare il percorso per il nome file o cartella dal **individua cartella-* * * nome_server* o **Individua file di Database-* * * nome_server* finestre di dialogo.  
+        2.  A seconda della selezione effettuata nel passaggio precedente, immettere il nome e il percorso completo del nuovo file o del file da accodare nella casella **Cartella** o **Nome file** . In alternativa, fare clic sui puntini di sospensione **(...)**  e selezionare il percorso per il nome file o cartella dal **individua cartella -**_nome_server_ oppure **Individua file di Database -**_nome_server_  finestre di dialogo.  
   
         3.  Se si seleziona **Invia report a destinatario di posta elettronica**, nell'elenco **Operatore agente** selezionare il destinatario del report da inviare tramite posta elettronica.  
   
@@ -230,7 +230,7 @@ ms.locfileid: "52775793"
   
 12. Per visualizzare i risultati nel visualizzatore file di log, in **Esplora oggetti**fare clic con il pulsante destro del mouse sulla cartella **Piani di manutenzione** o sul piano di manutenzione specifico e selezionare **Visualizza cronologia**.  
   
-     Le opzioni seguenti sono disponibili sul **Visualizzatore File di Log-* * * nome_server* nella finestra di dialogo.  
+     Le opzioni seguenti sono disponibili sul **Visualizzatore File di Log -**_nome_server_ nella finestra di dialogo.  
   
      **Carica log**  
      Consente di aprire una finestra di dialogo in cui è possibile specificare un file di log da caricare.  

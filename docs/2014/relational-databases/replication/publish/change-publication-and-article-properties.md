@@ -16,12 +16,12 @@ ms.assetid: f7df51ef-c088-4efc-b247-f91fb2c6ff32
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: f9f106af7d3464ca1b0f2047fd86e2670389d821
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 207f934a9fba6e60bf1903544b12c88b4924dc23
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52822595"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54135811"
 ---
 # <a name="change-publication-and-article-properties"></a>Modifica delle proprietà di pubblicazioni e articoli
   Dopo aver creato una pubblicazione, è possibile modificare la maggior parte delle proprietà della pubblicazione stessa e degli articoli. In alcuni casi è necessario rigenerare lo snapshot e/o reinizializzare le sottoscrizioni. In questo argomento vengono fornite informazioni su tutte le proprietà che, se modificate, richiedono l'esecuzione di una o entrambe le azioni.  
@@ -93,7 +93,7 @@ ms.locfileid: "52822595"
 |Modifica del proprietario della tabella di destinazione.|**sp_changemergearticle**|**destination_owner**|Nuovo snapshot.<br /><br /> Reinizializzazione delle sottoscrizioni.|  
   
 ## <a name="see-also"></a>Vedere anche  
- [Amministrazione &#40;replica&#41;](../administration/administration-replication.md)   
+ [Domande frequenti sull'amministrazione della replica](../administration/frequently-asked-questions-for-replication-administrators.md)   
  [Creare e applicare lo snapshot](../create-and-apply-the-snapshot.md)   
  [Reinizializzare le sottoscrizioni](../reinitialize-subscriptions.md)   
  [sp_addmergefilter &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addmergefilter-transact-sql)   

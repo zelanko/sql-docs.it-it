@@ -12,12 +12,12 @@ ms.assetid: 8d9dcc59-3de8-4d36-a61f-bc3ca96516b6
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 8f9d7183d6e94f5808434090dd8fc998b946ed0f
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 043bf26fb17a3433e59623b5b3bfddaaea8bc89f
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52810893"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54136061"
 ---
 # <a name="design-considerations-and-limitations-for-oracle-publishers"></a>Considerazioni e limitazioni relative alla progettazione dei server di pubblicazione Oracle
   La pubblicazione da un database Oracle è progettata per funzionare in modo quasi identico alla pubblicazione da un database [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . È tuttavia necessario tenere conto delle limitazioni e dei problemi seguenti:  
@@ -135,7 +135,7 @@ ms.locfileid: "52810893"
   
 -   I Sottoscrittori delle pubblicazioni Oracle non possono essere inizializzati automaticamente da un backup.  
   
--   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] supporta due tipi di convalida: binaria e mediante il conteggio delle righe. I server di pubblicazione Oracle supportano la convalida mediante il conteggio delle righe. Per altre informazioni, vedere [Convalidare i dati replicati](../validate-replicated-data.md).  
+-   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] supporta due tipi di convalida: binaria e mediante il conteggio delle righe. I server di pubblicazione Oracle supportano la convalida mediante il conteggio delle righe. Per altre informazioni, vedere [Convalidare i dati replicati](../validate-data-at-the-subscriber.md).  
   
 -   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] include due formati di snapshot: in modalità bcp nativa e in modalità carattere. I server di pubblicazione Oracle supportano gli snapshot in modalità carattere.  
   
@@ -163,7 +163,7 @@ ms.locfileid: "52810893"
   
     -   Non è possibile modificare il parametro **@job_login** tramite [sp_changepublication_snapshot &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-changepublication-snapshot-transact-sql) o [sp_changelogreader_agent &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-changelogreader-agent-transact-sql), ma la password può essere modificata.  
   
- Per altre informazioni sulle sicurezza della replica, vedere [Sicurezza e protezione &#40;replica&#41;](../security/security-and-protection-replication.md).  
+ Per altre informazioni sulla sicurezza della replica, vedere [la sicurezza della replica di SQL Server](../security/view-and-modify-replication-security-settings.md).  
   
 ## <a name="see-also"></a>Vedere anche  
  [Considerazioni amministrative per i server di pubblicazione Oracle](administrative-considerations-for-oracle-publishers.md)   

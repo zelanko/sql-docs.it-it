@@ -13,12 +13,12 @@ ms.assetid: 8e2a15ba-1cd1-4408-b860-16c3ee37d635
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: c411b3f032931dfe0964fe008d7fa1b5598d6423
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: e9e19d6d6453acedff16e46dbd2d90d92a3b9587
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52822955"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54134801"
 ---
 # <a name="modify-primary-keys"></a>Modifica di chiavi primarie
   È possibile modificare chiave primaria in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] tramite [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)]. È possibile modificare la chiave primaria di una tabella modificando l'ordine della colonna, il nome dell'indice, l'opzione cluster o il fattore di riempimento.  
@@ -59,7 +59,7 @@ ms.locfileid: "52822955"
     |Definire un fattore di riempimento|Espandere la categoria **Specifica riempimento** e digitare un numero intero compreso tra 0 e 100 nella casella **Riempimento** . Per altre informazioni sui fattori di riempimento e sul loro uso, vedere [Specificare un fattore di riempimento per un indice](../indexes/specify-fill-factor-for-an-index.md).|  
     |Cambiare l'ordine delle colonne|Selezionare **Colonne**, quindi fare clic sui puntini di sospensione **(...)** a destra della proprietà. Nella finestra di dialogo  **Colonne indice** rimuovere le colonne dalla chiave primaria, quindi aggiungerle nuovamente nell'ordine desiderato. Per rimuovere una colonna dalla chiave, eliminare semplicemente il nome colonna dall'elenco **Nome colonna** .|  
   
-4.  Scegliere **Salva***nome tabella* dal menu **File**.  
+4.  Nel menu **File** scegliere **Salva**_table name_.  
   
 ##  <a name="TsqlProcedure"></a> Utilizzo di Transact-SQL  
  **Per modificare una chiave primaria**  

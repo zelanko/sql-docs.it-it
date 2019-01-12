@@ -39,12 +39,12 @@ ms.assetid: 7edc21d4-ccf3-42a9-84c0-3f70333efce6
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 72f7ee857946267ca1c8732976cb31d30767bfed
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 2686eb387854823ff16a722fe3219c6e2acb2adc
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53371183"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54131491"
 ---
 # <a name="configure-database-mail"></a>Configurare Posta elettronica database
   In questo argomento viene illustrato come abilitare e configurare Posta elettronica database utilizzando la Configurazione guidata Posta elettronica database e come creare uno script di configurazione per Posta elettronica database utilizzando i modelli.  
@@ -394,7 +394,7 @@ ms.locfileid: "53371183"
 
   
 ###  <a name="TestEmail"></a> Send Test E-Mail Page  
- Usare la finestra di dialogo **Invia messaggio di prova da***<nome_istanza>* per inviare un messaggio di posta elettronica usando il profilo di Posta elettronica database specificato. Solo i membri del ruolo predefinito del server **sysadmin** possono inviare messaggi di posta elettronica di prova usando questa pagina.  
+ Usare la finestra di dialogo **Invia messaggio di prova da**_<nome_istanza>_ per inviare un messaggio di posta elettronica usando il profilo di Posta elettronica database specificato. Solo i membri del ruolo predefinito del server **sysadmin** possono inviare messaggi di posta elettronica di prova usando questa pagina.  
   
  **Profilo di Posta elettronica database**  
  Selezionare un profilo di Posta elettronica database nell'elenco. Questo campo è obbligatorio. Se non viene visualizzato alcun profilo, non esiste alcun profilo oppure non si dispone dell'autorizzazione per esso. Per creare e configurare profili, usare la **Configurazione guidata posta elettronica database** . Se non è elencato alcun profilo, utilizzare la Configurazione guidata posta elettronica database per crearne uno.  

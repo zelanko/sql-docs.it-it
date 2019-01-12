@@ -9,12 +9,12 @@ ms.date: 12/11/2018
 ms.topic: conceptual
 ms.prod: sql
 ms.custom: seodec18
-ms.openlocfilehash: a4bdccba6d42868225a39792cb94566df1f56680
-ms.sourcegitcommit: edf7372cb674179f03a330de5e674824a8b4118f
-ms.translationtype: MT
+ms.openlocfilehash: 02c0eb930cddbe3ff1a9d5529f640474b5bf2af4
+ms.sourcegitcommit: 1f53b6a536ccffd701fc87e658ddac714f6da7a2
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53246570"
+ms.lasthandoff: 01/10/2019
+ms.locfileid: "54206207"
 ---
 # <a name="configure-minikube-for-sql-server-2019-big-data-cluster-deployments"></a>Configurare minikube per le distribuzioni di cluster di SQL Server 2019 dei big Data
 
@@ -25,7 +25,7 @@ Questo articolo descrive come configurare **minikube** in un unico computer per 
 - Per eseguire un cluster di Minikube per SQL Server 2019 (anteprima) per i cluster di big data, è consigliabile che il computer dispone di almeno 32 GB di RAM.
 
    > [!TIP] 
-   > Se nel computer è solo il valore minimo consigliato di memoria, quindi configurare la distribuzione del cluster per avere solo 1 istanza di calcolo del pool, 1 istanza del pool di dati e istanza del pool di archiviazione di 1. Questa configurazione deve essere utilizzata solo per gli ambienti di valutazione in cui non è importante la durabilità e disponibilità dei dati. Vedere le [documentazione sulla distribuzione](deployment-guidance.md#define-environment-variables) per altre informazioni sulle variabili di ambiente da impostare per configurare il numero di repliche per i pool di dati, di calcolo di pool e i pool di archiviazione.
+   > Se nel computer è solo il valore minimo consigliato di memoria, quindi configurare la distribuzione del cluster per avere solo 1 istanza di calcolo del pool, 1 istanza del pool di dati e istanza del pool di archiviazione di 1. Questa configurazione deve essere utilizzata solo per gli ambienti di valutazione in cui non è importante la durabilità e disponibilità dei dati. Vedere le [documentazione sulla distribuzione](deployment-guidance.md#env) per altre informazioni sulle variabili di ambiente da impostare per configurare il numero di repliche per i pool di dati, di calcolo di pool e i pool di archiviazione.
 
 - La virtualizzazione VT-x o AMD-v deve essere abilitata nel BIOS del computer.
 

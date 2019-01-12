@@ -16,12 +16,12 @@ ms.assetid: 7352d94a-f8f2-42ea-aaf1-d08c3b5a0e76
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: d8d796c5e7b309ef33bf30eba851b3aedb6c1e6b
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 0343855bbc3d82e58a0a0252109dee6255ee766f
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52823935"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54134051"
 ---
 # <a name="spdroppullsubscription-transact-sql"></a>sp_droppullsubscription (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -41,13 +41,13 @@ sp_droppullsubscription [ @publisher= ] 'publisher'
 ```  
   
 ## <a name="arguments"></a>Argomenti  
- [  **@publisher=** ] **'***publisher***'**  
+ [  **@publisher=** ] **'**_editore_**'**  
  Nome del server remoto. *server di pubblicazione* viene **sysname**, non prevede alcun valore predefinito. Se **tutti**, la sottoscrizione viene eliminata in tutti i server di pubblicazione.  
   
- [  **@publisher_db=** ] **'***publisher_db***'**  
+ [  **@publisher_db=** ] **'**_publisher_db_**'**  
  Nome del database del server di pubblicazione. *publisher_db* viene **sysname**, non prevede alcun valore predefinito. **tutti i** indica tutti i database del server di pubblicazione.  
   
- [  **@publication=** ] **'***pubblicazione***'**  
+ [  **@publication=** ] **'**_pubblicazione_**'**  
  Nome della pubblicazione. *pubblicazione* viene **sysname**, non prevede alcun valore predefinito. Se **tutti**, la sottoscrizione viene eliminata in tutte le pubblicazioni.  
   
  [  **@reserved=** ] *riservato*  

@@ -16,12 +16,12 @@ ms.assetid: a3d63fd6-f360-4a2f-8a82-a0dc15f650b3
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: cda4e884608c10e75ab4c33a89fcf23a1919fc0d
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: b06d348358a141771816230179ca7deae4e4353a
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53202047"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54132862"
 ---
 # <a name="sparticleview-transact-sql"></a>sp_articleview (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -47,16 +47,16 @@ sp_articleview [ @publication = ] 'publication'
 ```  
   
 ## <a name="arguments"></a>Argomenti  
- [  **@publication=**] **'***pubblicazione***'**  
+ [  **@publication=**] **'**_pubblicazione_**'**  
  Nome della pubblicazione in cui è contenuto l'articolo. *pubblicazione* viene **sysname**, non prevede alcun valore predefinito.  
   
- [  **@article=**] **'***articolo***'**  
+ [  **@article=**] **'**_articolo_**'**  
  Nome dell'articolo. *articolo* viene **sysname**, non prevede alcun valore predefinito.  
   
- [  **@view_name=**] **'***view_name***'**  
+ [  **@view_name=**] **'**_view_name_**'**  
  Nome della vista che definisce l'articolo pubblicato. *view_name* viene **nvarchar(386)**, con un valore predefinito è NULL.  
   
- [  **@filter_clause=**] **'***filter_clause***'**  
+ [  **@filter_clause=**] **'**_filter_clause_**'**  
  Clausola di restrizione (WHERE) che definisce un filtro orizzontale. Quando si specifica la clausola di restrizione, omettere la parola chiave WHERE. *filter_clause* viene **ntext**, con un valore predefinito è NULL.  
   
  [  **@change_active =** ] *change_active*  
@@ -69,14 +69,14 @@ sp_articleview [ @publication = ] 'publication'
   
  **1** specifica che le modifiche apportate all'articolo possono invalidare lo snapshot non è valido e se sono presenti sottoscrizioni esistenti richiedono un nuovo snapshot, consente lo snapshot esistente deve essere contrassegnato come obsoleto e di generarne uno nuovo.  
   
- [  **@force_reinit_subscription =]** *force_reinit_subscription*  
+ [  **@force_reinit_subscription =]** _force_reinit_subscription_  
  Segnala che l'azione eseguita dalla stored procedure potrebbe richiedere la reinizializzazione delle sottoscrizioni esistenti. *force_reinit_subscription* è un **bit** con valore predefinito è **0**.  
   
  **0** specifica che le modifiche apportate all'articolo non causano la reinizializzazione della sottoscrizione. Se la stored procedure rileva che la modifica richiede la reinizializzazione delle sottoscrizioni, viene generato un errore e non viene apportata alcuna modifica.  
   
  **1** specifica che le modifiche apportate all'articolo comportano la sottoscrizione esistente per la reinizializzazione e concede l'autorizzazione per la reinizializzazione della sottoscrizione.  
   
- [ **@publisher**=] **'***publisher***'**  
+ [ **@publisher**=] **'**_editore_**'**  
  Specifica un non - [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] server di pubblicazione. *server di pubblicazione* viene **sysname**, con un valore predefinito è NULL.  
   
 > [!NOTE]  

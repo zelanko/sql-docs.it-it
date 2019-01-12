@@ -20,12 +20,12 @@ ms.assetid: e1e55519-97ec-4404-81ef-881da3b42006
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 8ffe88de8533db5cf9bbec7936d30e95d64b1726
-ms.sourcegitcommit: 04dd0620202287869b23cc2fde998a18d3200c66
+ms.openlocfilehash: a872057f354b289d65a6a3a730e3a63afd7af0d4
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "52640772"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54133911"
 ---
 # <a name="enable-encrypted-connections-to-the-database-engine-sql-server-configuration-manager"></a>Abilitazione di connessioni crittografate al Motore di database (Gestione configurazione SQL Server)
   In questo argomento viene descritto come abilitare connessioni crittografate per un'istanza del [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] specificando un certificato per il [!INCLUDE[ssDE](../../includes/ssde-md.md)] tramite Gestione configurazione [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . È necessario che sia disponibile un certificato per il computer server e che il computer client sia impostato per considerare attendibile l'autorità radice del certificato. Il processo di provisioning consiste nell'installazione di un certificato tramite l'importazione in Windows.  
@@ -83,9 +83,9 @@ ms.locfileid: "52640772"
   
 ###  <a name="ConfigureServerConnections"></a> Per configurare il server in modo che accetti connessioni crittografate  
   
-1.  In **Gestione configurazione SQL Server** espandere **Configurazione di rete SQL Server**, fare clic con il pulsante destro del mouse su **Protocolli per** *\<istanza server>* e quindi scegliere **Proprietà**.  
+1.  In **Gestione configurazione SQL Server** espandere **Configurazione di rete SQL Server**, fare clic con il pulsante destro del mouse su **Protocolli per** _\<istanza server>_ e quindi scegliere **Proprietà**.  
   
-2.  Nel **protocolli per * * *\<nome istanza >* **delle proprietà** finestra di dialogo il **certificato** scheda, selezionare il certificato desiderato dall'elenco a discesa per il **certificato** e quindi scegliere **OK**.  
+2.  Nel **protocolli per**_\<nome istanza >_ **proprietà** finestra di dialogo il **certificato** scheda, seleziona il lo si desidera certificato dall'elenco a discesa per il **certificato** casella e quindi fare clic su **OK**.  
   
 3.  Nella casella **ForceEncryption** della scheda **Flag** selezionare **Sì**e quindi fare clic su **OK** per chiudere la finestra di dialogo.  
   

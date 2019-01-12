@@ -11,12 +11,12 @@ ms.topic: conceptual
 author: yualan
 ms.author: alayu
 manager: craigg
-ms.openlocfilehash: 8248404353674f8139a26cfc75f37363557136b9
-ms.sourcegitcommit: 189a28785075cd7018c98e9625c69225a7ae0777
+ms.openlocfilehash: acca24570cf1c5052d92378b0dd5aa44d978aab6
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53030745"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54131421"
 ---
 # <a name="sql-server-import-extension-preview"></a>Estensione di SQL Server Import (anteprima)
 
@@ -55,7 +55,7 @@ Per altre informazioni sulla versione di SSMS di questa funzionalità, è possib
     ![Aprire importazione guidata](media/sql-server-import-extension/import-wizard-modify-columns.png)
 3. Questa pagina fornisce un riepilogo delle azioni scelte. È anche possibile visualizzare se la tabella inserito correttamente o meno. 
 
-    È possibile scegliere **termine** **Previous** se è necessario apportare modifiche, o **nuovo file di importazione** per importare rapidamente un altro file.
+    È possibile scegliere **, Previous** se è necessario apportare modifiche, o **nuovo file di importazione** per importare rapidamente un altro file.
     ![Aprire importazione guidata](media/sql-server-import-extension/import-wizard-summary.png)
 1. Verificare se la tabella importata correttamente l'aggiornamento del database di destinazione o eseguendo una query di selezione sul nome della tabella.
 

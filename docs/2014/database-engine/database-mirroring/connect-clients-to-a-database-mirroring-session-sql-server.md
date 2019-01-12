@@ -15,12 +15,12 @@ ms.assetid: 0d5d2742-2614-43de-9ab9-864addb6299b
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 7d4a8d29e27fae9b54a6060ec1be8f6c5a4163a8
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 183dba1f69634ea6931dc14cc6aa3fb6d6eca6ee
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52507271"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54132541"
 ---
 # <a name="connect-clients-to-a-database-mirroring-session-sql-server"></a>Connessione di client a una sessione di mirroring del database (SQL Server)
   Per connettersi a una sessione di mirroring del database un client può utilizzare [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client o il provider di dati .NET Framework per [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Se configurati per un database [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] , questi provider di accesso ai dati supportano entrambi completamente il mirroring del database. Per informazioni relative alle considerazioni di programmazione per l'utilizzo di un database con mirroring, vedere [Using Database Mirroring](../../relational-databases/native-client/features/using-database-mirroring.md). È inoltre necessario che l'istanza del server principale corrente sia disponibile e che l'account di accesso del client sia stato creato nell'istanza del server. Per altre informazioni, vedere [Risolvere i problemi relativi agli utenti isolati &#40;SQL Server&#41;](../../sql-server/failover-clusters/troubleshoot-orphaned-users-sql-server.md). Le connessioni client a una sessione di mirroring del database non richiedono l'istanza del server di controllo del mirroring, se ne esiste una.  
@@ -85,7 +85,7 @@ Network=dbnmpntw;
 #### <a name="server-attribute"></a>Attributo Server  
  La stringa di connessione deve includere un attributo `Server` indicante il nome partner iniziale, che dovrebbe identificare l'istanza del server principale corrente.  
   
- Il modo più semplice per identificare l'istanza del server è specificarne il nome, *<nome_server>*[**\\***<nome_istanza_SQL_Server>*]. Ad esempio:  
+ Il modo più semplice per identificare l'istanza del server è specificarne il nome, *<nome_server>*[**\\**_<nome_istanza_SQL_Server>_]. Esempio:  
   
  `Server=Partner_A;`  
   
@@ -129,7 +129,7 @@ Server=123.34.45.56,4724;
 |Driver ODBC|`Failover_Partner`|  
 |ADO (ActiveX Data Objects)|`Failover Partner`|  
   
- Il modo più semplice per identificare l'istanza del server è tramite il relativo nome di sistema, *<nome_server>*[**\\***<nome_istanza_SQL_Server>*].  
+ Il modo più semplice per identificare l'istanza del server è tramite il nome di sistema, *<nome_server>*[**\\**_\<nome_istanza_SQL_Server>_].  
   
  In alternativa, è possibile specificare l'indirizzo IP e il numero di porta nell'attributo `Failover Partner`. Se il tentativo di connessione iniziale non riesce durante la prima connessione al database, il tentativo di connessione al partner di failover non dovrà più utilizzare necessariamente il DNS e SQL Server Browser. Una volta stabilita una connessione, il nome partner di failover sarà sovrascritto dal nome partner di failover. In questo modo, se si verifica un failover, le connessioni reindirizzate richiederanno il DNS e SQL Server Browser.  
   
@@ -166,7 +166,7 @@ Server=123.34.45.56,4724;
   
  Il tempo di riesecuzione dei tentativi viene calcolato mediante la formula seguente:  
   
- *RetryTime* **=** *PreviousRetryTime* **+(** 0,08 **\****LoginTimeout***)**  
+ _RetryTime_ **=** _PreviousRetryTime_ **+ (** 0,08 **&#42;**  _LoginTimeout_**)**  
   
  Dove *PreviousRetryTime* è inizialmente pari a 0.  
   
@@ -174,10 +174,10 @@ Server=123.34.45.56,4724;
   
 |Arrotondamento|Calcolo*RetryTime* |Tempo di riesecuzione per tentativo|  
 |-----------|-----------------------------|----------------------------|  
-|1|0 **+(** 0.08 **\*** 15 **)**|1,2 secondi|  
-|2|1.2 **+(** 0.08 **\*** 15 **)**|2,4 secondi|  
-|3|2.4 **+(** 0.08 **\*** 15 **)**|3,6 secondi|  
-|4|3.6 **+(** 0.08 **\*** 15 **)**|4,8 secondi|  
+|1|0 **+ (** 0,08 **&#42;** 15 **)**|1,2 secondi|  
+|2|1.2 **+ (** 0,08 **&#42;** 15 **)**|2,4 secondi|  
+|3|2.4 **+ (** 0,08 **&#42;** 15 **)**|3,6 secondi|  
+|4|3.6 **+ (** 0,08 **&#42;** 15 **)**|4,8 secondi|   
   
  Nella figura seguente vengono illustrati questi tempi di riesecuzione dei tentativi di connessione successivi, per ognuno dei quali si verifica il timeout.  
   

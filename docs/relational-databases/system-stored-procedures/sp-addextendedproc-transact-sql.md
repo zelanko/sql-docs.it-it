@@ -18,12 +18,12 @@ ms.assetid: c0d4b47b-a855-451e-90e5-5fb2d836ebfa
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 2c66f3ac4395e3985d6881ddb085db1d9a71c366
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 23c97002d5400d3794bed23fea4fb4eb05efd7f0
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47713219"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54133011"
 ---
 # <a name="spaddextendedproc-transact-sql"></a>sp_addextendedproc (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -44,17 +44,17 @@ sp_addextendedproc [ @functname = ] 'procedure' ,
 ```  
   
 ## <a name="arguments"></a>Argomenti  
- [  **@functname =** ] **'***procedure***'**  
+ [  **@functname =** ] **'**_procedure_**'**  
  Nome della funzione da chiamare all'interno della libreria di collegamento dinamico (DDL, Dynamic-Link Library). *routine* viene **nvarchar(517)**, non prevede alcun valore predefinito. *routine* può includere facoltativamente il nome del proprietario nel formato *proprietario*.  
   
- [  **@dllname =** ] **'***dll***'**  
+ [  **@dllname =** ] **'**_dll_**'**  
  Nome della DLL che contiene la funzione. *DLL* viene **nvarchar (255)**, non prevede alcun valore predefinito. È consigliabile specificare il percorso completo della DLL.  
   
 ## <a name="return-code-values"></a>Valori restituiti  
  0 (esito positivo) o 1 (esito negativo)  
   
 ## <a name="result-sets"></a>Set di risultati  
- Nessuno  
+ None  
   
 ## <a name="remarks"></a>Note  
  Dopo la creazione di una stored procedure estesa, deve essere aggiunto al [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usando **sp_addextendedproc**. Per altre informazioni, vedere [aggiunta di una Stored Procedure estesa a SQL Server](../../relational-databases/extended-stored-procedures-programming/adding-an-extended-stored-procedure-to-sql-server.md).  

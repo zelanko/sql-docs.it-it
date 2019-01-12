@@ -15,15 +15,15 @@ ms.assetid: e17a9ca9-dd96-4f84-a85d-60f590da96ad
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 50328c814b23f9df33a0524bae1758afecd3f5f8
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 1b3bf1b9c7b43a2196f2bc2c09422feb43cbc7c4
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48091261"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54134091"
 ---
 # <a name="replication-change-tracking-change-data-capture-and-alwayson-availability-groups-sql-server"></a>Replica, Rilevamento modifiche, Change Data Capture e Gruppi di disponibilità AlwaysOn (SQL Server)
-  Le funzionalità di replica, di rilevamento delle modifiche (CT, Change Tracking) e Change Data Capture (CDC) di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] sono supportate in [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]. [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] vengono fornite disponibilità elevata e funzionalità aggiuntive di recupero database.  
+  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Le funzionalità di replica, di rilevamento delle modifiche (CT, Change Tracking) e Change Data Capture (CDC) sono supportate in [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]. [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] vengono fornite disponibilità elevata e funzionalità aggiuntive di recupero database.  
   
  
   
@@ -191,24 +191,24 @@ ms.locfileid: "48091261"
   
 -   Quando si usano la replica di tipo merge e il database di pubblicazione è in un gruppo di disponibilità:  
   
-    -   Sottoscrizione push: sia nel server di pubblicazione che nel server di distribuzione deve essere in esecuzione [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)].  
+    -   Sottoscrizione push: sia nel server di pubblicazione che nel database di distribuzione deve essere in esecuzione almeno [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)].  
   
-    -   Sottoscrizione pull: il server di pubblicazione, il server di distribuzione e i database sottoscrittore devono essere presenti almeno in [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)]. Ciò è dovuto al fatto che l'agente di merge nel sottoscrittore deve comprendere il modo in cui in un gruppo di disponibilità può essere eseguito il failover sul secondario.  
+    -   Sottoscrizione pull: nel server di pubblicazione e nei database di distribuzione e sottoscrittore deve essere in esecuzione almeno [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)]. Ciò è dovuto al fatto che l'agente di merge nel sottoscrittore deve comprendere il modo in cui in un gruppo di disponibilità può essere eseguito il failover sul secondario.  
   
 -   L'inserimento del database di distribuzione in un gruppo di disponibilità non è supportato.  
   
 -   Le istanze del server di pubblicazione soddisfano tutti i prerequisiti richiesti per fare parte di un gruppo di disponibilità AlwaysOn. Per altre informazioni, vedere [Prerequisiti, restrizioni e consigli per i gruppi di disponibilità AlwaysOn &#40;SQL Server&#41;](prereqs-restrictions-recommendations-always-on-availability.md).  
   
-### <a name="restrictions"></a>Restrizioni  
+### <a name="restrictions"></a>Restrictions  
  Combinazioni supportate di replica in [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]:  
   
 |||||  
 |-|-|-|-|  
 ||**Server di pubblicazione**|**Server di distribuzione** <sup>3</sup>|**Sottoscrittore**|  
-|**Transazionale**|Sì<sup>1</sup>|no|Sì<sup>2</sup>|  
-|**P2P**|no|no|no|  
-|**Merge**|Sì|no|Sì<sup>2</sup>|  
-|**Snapshot**|Sì|no|Sì<sup>2</sup>|  
+|**Transazionale**|Sì<sup>1</sup>|No|Sì<sup>2</sup>|  
+|**P2P**|No|No|No|  
+|**Merge**|Yes|No|Sì<sup>2</sup>|  
+|**Snapshot**|Yes|No|Sì<sup>2</sup>|  
   
  <sup>1</sup> non include il supporto per la replica transazionale bidirezionale e reciproca.  
   
@@ -231,7 +231,7 @@ ms.locfileid: "48091261"
   
 -   [Gestione di un Database di pubblicazione AlwaysOn &#40;SQL Server&#41;](maintaining-an-always-on-publication-database-sql-server.md)  
   
--   [Amministrazione &#40;Replica&#41;](../../../relational-databases/replication/administration/administration-replication.md)  
+-   [Domande frequenti sull'amministrazione della replica](../../../relational-databases/replication/administration/frequently-asked-questions-for-replication-administrators.md)  
   
  **Change data capture**  
   
@@ -257,7 +257,7 @@ ms.locfileid: "48091261"
  [Informazioni su Change Data Capture &#40;SQL Server&#41;](../../../relational-databases/track-changes/about-change-data-capture-sql-server.md)   
  [Informazioni sul rilevamento delle modifiche &#40;SQL Server&#41;](../../../relational-databases/track-changes/about-change-tracking-sql-server.md)   
  [Replica di SQL Server](../../../relational-databases/replication/sql-server-replication.md)   
- [Tenere traccia delle modifiche ai dati &#40;SQL Server&#41;](../../../relational-databases/track-changes/track-data-changes-sql-server.md)   
+ [Rilevare le modifiche ai dati &#40;SQL Server&#41;](../../../relational-databases/track-changes/track-data-changes-sql-server.md)   
  [sys.sp_cdc_add_job &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sys-sp-cdc-add-job-transact-sql)  
   
   

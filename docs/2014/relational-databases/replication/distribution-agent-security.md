@@ -14,12 +14,12 @@ ms.assetid: de40cc21-2e58-4464-9be7-b5b90c925e9b
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 7a28ee9f405e589e7956be4391f22d9ea2a46388
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 3e604ee6aac125f366ac2fca6444527340213019
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52815523"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54135526"
 ---
 # <a name="distribution-agent-security"></a>Sicurezza agente di distribuzione
   La finestra di dialogo **Sicurezza agente di distribuzione** consente di specificare l'account di Windows utilizzato per l'esecuzione dell'agente di distribuzione. L'agente di distribuzione viene eseguito nel server di distribuzione per le sottoscrizioni push e nel Sottoscrittore per le sottoscrizioni pull. L'account di Windows [!INCLUDE[msCoName](../../includes/msconame-md.md)] è detto anche *account di processo*, poiché si tratta dell'account con cui viene eseguito il processo dell'agente. Le opzioni aggiuntive disponibili in questa finestra di dialogo dipendono dalla modalità con cui si accede a tale finestra di dialogo:  
@@ -94,7 +94,7 @@ Persist Security Info=False;Connection Pooling=True;
  La maggior parte delle opzioni nella stringa è specifica per il server DB2 configurato, ma è necessario che l'opzione **Process Binary as Character** sia sempre impostata su **False**. È necessario specificare un valore per l'opzione **Initial Catalog** per identificare il database di sottoscrizione. Per altre informazioni, vedere [IBM DB2 Subscribers](non-sql/ibm-db2-subscribers.md).  
   
 ## <a name="see-also"></a>Vedere anche  
- [Gestire gli account di accesso e le password nella replica](security/manage-logins-and-passwords-in-replication.md)   
+ [Gestire gli account di accesso e le password nella replica](security/identity-and-access-control-replication.md#manage-logins-and-passwords-in-replication)   
  [Modello di sicurezza dell'agente di replica](security/replication-agent-security-model.md)   
  [Panoramica degli agenti di replica](agents/replication-agents-overview.md)   
  [Replication Security Best Practices](security/replication-security-best-practices.md)   

@@ -13,12 +13,12 @@ ms.assetid: 143c68a5-589f-4e7f-be59-02707e1a430a
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 433c50834a7dc989d706cc2f67883cd43f5788d9
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: c1ea3cd62c97cecd9af0b8b696156b9f2622f5b7
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52508413"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54135530"
 ---
 # <a name="establish-a-database-mirroring-session-using-windows-authentication-transact-sql"></a>Stabilire una sessione di mirroring del database tramite autenticazione di Windows (Transact-SQL)
     
@@ -63,13 +63,13 @@ ms.locfileid: "52508413"
   
 4.  Per impostare il server principale come partner sul database mirror, connettersi al server mirror ed eseguire l'istruzione seguente:  
   
-     ALTER DATABASE *<database_name>* SET PARTNER **=***<server_network_address>*  
+     ALTER DATABASE *<database_name>* SET PARTNER **=**_<server_network_address>_  
   
      dove *<database_name>* è il nome del database di cui eseguire il mirroring (il nome è lo stesso per entrambi i partner) e *<server_network_address>* è l'indirizzo di rete del server principale.  
   
      La sintassi per un indirizzo di rete del server presenta la seguente struttura:  
   
-     TCP **://**\<*system-address>***:**\<* port>*  
+     TCP<strong>://</strong>\<*indirizzo_sistema>*<strong>:</strong>\<*porta>*  
   
      dove \<*indirizzo-sistema>* è una stringa che identifica in maniera univoca il computer di destinazione e \<*porta>* è il numero di porta usato dall'endpoint del mirroring dell'istanza del server partner. Per altre informazioni, vedere [Specificare un indirizzo di rete del server &#40;Mirroring del database&#41;](specify-a-server-network-address-database-mirroring.md).  
   
@@ -84,7 +84,7 @@ ms.locfileid: "52508413"
   
 5.  Per impostare il server mirror come partner sul database principale, connettersi al server principale ed eseguire l'istruzione seguente:  
   
-     ALTER DATABASE *<database_name>* SET PARTNER **=***<server_network_address>*  
+     ALTER DATABASE *<database_name>* SET PARTNER **=**_<server_network_address>_  
   
      Per ulteriori informazioni, vedere il passaggio 4.  
   

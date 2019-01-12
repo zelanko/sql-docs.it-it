@@ -10,12 +10,12 @@ ms.assetid: 72dfd37f-dbe7-4d1d-bda6-7eb54c7922d3
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: d64724108630e64ecfd654367180a6603aabe3e5
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 6d17dd44f597d7b3ddfce574670e9e6bfd55f908
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48125947"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54134831"
 ---
 # <a name="save-scripts-as-projects-or-solutions"></a>Salvare gli script come progetti o soluzioni
   Gli sviluppatori che hanno familiarità con [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual Studio apprezzeranno molto l'inclusione di Esplora soluzioni in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Gli script che supportano le operazioni aziendali possono essere raggruppati in progetti script gestibili come una soluzione. Quando gli script sono inseriti in soluzioni e progetti script è possibile aprirli come gruppo o salvarli contemporaneamente in un prodotto per il controllo del codice sorgente, ad esempio Visual SourceSafe. I progetti script contengono le informazioni di connessione per assicurare un'esecuzione corretta degli script e possono includere altri tipi di file, ad esempio un file di testo di supporto.  
@@ -58,11 +58,11 @@ ms.locfileid: "48125947"
     > [!NOTE]  
     >  Se è necessario maggiore spazio per digitare la query, premere MAIUSC+ALT+INVIO per passare alla modalità a schermo intero.  
   
-11. In Esplora soluzioni fare clic con il pulsante destro del mouse su **SQLQuery1**, quindi scegliere **Rinomina**. Digitare **Check Workorders****.sql** come nuovo nome della query e premere INVIO.  
+11. In Esplora soluzioni fare clic con il pulsante destro del mouse su **SQLQuery1**, quindi scegliere **Rinomina**. Tipo di **Check workorders. SQL** come nuovo nome per la query e premere INVIO.  
   
 12. Per salvare la soluzione e il progetto script, scegliere **Salva tutto** dal menu **File**.  
   
 ## <a name="next-task-in-lesson"></a>Attività successiva della lezione  
- [Riepilogo: Soluzioni e progetti script](lesson-3-4-summary-solutions-and-script-projects.md)  
+ [Riepilogo: Soluzioni e progetti Script](lesson-3-4-summary-solutions-and-script-projects.md)  
   
   

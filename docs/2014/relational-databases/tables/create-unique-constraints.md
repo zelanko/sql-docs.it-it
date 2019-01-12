@@ -14,12 +14,12 @@ ms.assetid: a86f9d6f-f242-43be-b65d-b3435b71b62a
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 98b2b9e94ea6474d2e10e1da9282c37af9bb0c27
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 77581cc6d8838e0cfed4bb7cc615f4d1f58de0d5
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52814393"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54132576"
 ---
 # <a name="create-unique-constraints"></a>Creare vincoli univoci
   È possibile creare un vincolo univoco in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] utilizzando [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)] per assicurare non vengano immessi valori duplicat nelle colonne specifiche che non partecipano in una chiave primaria. La creazione automatica di un vincolo univoco crea un indice univoco corrispondente.  
@@ -55,7 +55,7 @@ ms.locfileid: "52814393"
   
 4.  Nella griglia in **Generale**fare clic su **Tipo** e selezionare **Chiave univoca** dall'elenco a discesa a destra della proprietà.  
   
-5.  Scegliere **Salva***nome tabella* dal menu **File**.  
+5.  Nel menu **File** scegliere **Salva**_table name_.  
   
 ##  <a name="TsqlProcedure"></a> Utilizzo di Transact-SQL  
   

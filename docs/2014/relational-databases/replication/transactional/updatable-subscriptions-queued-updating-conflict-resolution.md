@@ -16,12 +16,12 @@ ms.assetid: 084ac587-25e7-4bd0-a385-556bbe07d02f
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 1c07d35024358961b1d438d6a0b53cc764bbc479
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
-ms.translationtype: HT
+ms.openlocfilehash: b43cdabb83b8f255b315e16b4bbe0d9af1156c51
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52781233"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54133631"
 ---
 # <a name="queued-updating-conflict-detection-and-resolution"></a>Queued Updating Conflict Detection and Resolution
   Dato che le sottoscrizioni ad aggiornamento in coda consentono la modifica degli stessi dati in più posizioni, è possibile che durante la sincronizzazione dei dati nel server di pubblicazione si verifichino conflitti. I conflitti vengono rilevati quando le modifiche vengono sincronizzate con il server di pubblicazione e vengono risolti in base ai criteri di risoluzione selezionati durante la creazione della pubblicazione. È possibile che si verifichino i conflitti seguenti:  
@@ -54,7 +54,7 @@ ms.locfileid: "52781233"
   
  **Per impostare i criteri di risoluzione dei conflitti per l'aggiornamento in coda**  
   
--   [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]: [Impostare le opzioni di risoluzione dei conflitti per l'aggiornamento in coda &#40;SQL Server Management Studio&#41;](../publish/set-queued-updating-conflict-resolution-options-sql-server-management-studio.md)  
+-   [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]: [Impostare le opzioni di risoluzione dei conflitti per l'aggiornamento in coda &#40;SQL Server Management Studio&#41;](../publish/create-an-updatable-subscription-to-a-transactional-publication.md)  
   
 -   Programmazione Transact-SQL della replica: [Abilitare le sottoscrizioni aggiornabili per le pubblicazioni transazionali](../publish/enable-updating-subscriptions-for-transactional-publications.md)  
   

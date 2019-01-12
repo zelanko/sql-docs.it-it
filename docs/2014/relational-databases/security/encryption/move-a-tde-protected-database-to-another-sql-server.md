@@ -13,12 +13,12 @@ ms.assetid: fb420903-df54-4016-bab6-49e6dfbdedc7
 author: aliceku
 ms.author: aliceku
 manager: craigg
-ms.openlocfilehash: 9be3645ec0846970cc7bcaaff237c4864bfe1216
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 42027a48803cd5269d5ab2d69452352bdbe62bc5
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52544631"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54135001"
 ---
 # <a name="move-a-tde-protected-database-to-another-sql-server"></a>Spostare un database protetto da TDE in un'altra istanza di SQL Server
   Questo argomento illustra come proteggere un database tramite TDE (Transparent Data Encryption) e spostare il database in un'altra istanza di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] usando [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../../includes/tsql-md.md)]. TDE consente di eseguire la crittografia e la decrittografia I/O in tempo reale dei file di dati e di log. Per la crittografia viene usata una chiave di crittografia del database (DEK), archiviata nel record di avvio del database affinché sia disponibile durante le operazioni di recupero. La chiave di decrittografia è una chiave simmetrica protetta tramite un certificato archiviato nel database `master` del server o una chiave asimmetrica protetta da un modulo EKM.  
@@ -191,7 +191,7 @@ ms.locfileid: "52544631"
   
     -   Quando un database è coinvolto nella replica, lo **Stato** è **Non pronto** e nella colonna **Messaggio** viene visualizzato **Database replicato**.  
   
-    -   Quando un database dispone di uno o più connessioni attive, il **lo stato** viene **non pronto** e il **messaggio** colonna Visualizza *< numero_di_connessioni_attive > * * * connessioni attive:**, ad esempio: **Connessioni attive 1:**. Prima di poter scollegare il database è necessario disconnettere tutte le connessioni attive selezionando **Interrompi connessioni**.  
+    -   Quando un database dispone di uno o più connessioni attive, il **lo stato** viene **non pronto** e il **messaggio** colonna Visualizza _< numero_di_connessioni_attive >_**Connessioni attive:** , ad esempio: **Connessioni attive 1:**. Prima di poter scollegare il database è necessario disconnettere tutte le connessioni attive selezionando **Interrompi connessioni**.  
   
      Per ottenere ulteriori informazioni su un messaggio, fare clic sul testo del collegamento ipertestuale per aprire Monitoraggio attività.  
   
@@ -209,7 +209,7 @@ ms.locfileid: "52544631"
   
 8.  Nella finestra di dialogo **Collega database** , in **Database da collegare**fare clic su **Aggiungi**.  
   
-9. Nel **Individua file di Database-* * * server_name* finestra di dialogo, seleziona il file di database da collegare al nuovo server e fare clic su **OK**.  
+9. Nel **Individua file di Database -**_nome_server_ della finestra di dialogo Seleziona il file di database da collegare al nuovo server e fare clic su **OK**.  
   
      Nella finestra di dialogo **Collega database** sono disponibili le opzioni seguenti.  
   
@@ -252,7 +252,7 @@ ms.locfileid: "52544631"
      **Rimuovi**  
      Consente di rimuovere il file selezionato dalla griglia **Database da collegare** .  
   
-     **"** *<database_name>* **" dettagli database**  
+     **"** _<database_name>_ **" dettagli database**  
      Consente di visualizzare i nomi dei file da collegare. Per verificare o modificare il percorso di un file, fare clic sul pulsante **Sfoglia** (**...**).  
   
     > [!NOTE]  

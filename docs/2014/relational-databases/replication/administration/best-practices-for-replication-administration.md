@@ -13,12 +13,12 @@ ms.assetid: 850e8a87-b34c-4934-afb5-a1104f118ba8
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: cd6f263e816d74f1fe3f09902c7e806709dd6993
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: fb7a972d865f7afe1295c5dbdf5ad3ce0c886556
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52823308"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54134739"
 ---
 # <a name="best-practices-for-replication-administration"></a>Procedure consigliate per l'amministrazione della replica
   Dopo aver configurato la replica, è importante comprendere in che modo amministrare una topologia di replica. In questo argomento sono contenute procedure consigliate di base relative a diverse aree, con collegamenti ad altre informazioni per ogni area. Oltre a seguire le procedure consigliate descritte in questo argomento, è consigliabile leggere l'argomento in domande frequenti per familiarizzare con problemi e domande frequenti: [Domande frequenti per gli amministratori di replica](frequently-asked-questions-for-replication-administrators.md).  
@@ -121,7 +121,7 @@ ms.locfileid: "52823308"
 ## <a name="validate-data-periodically"></a>Convalidare i dati periodicamente  
  La procedura di convalida non è richiesta per la replica, ma è consigliabile eseguirla periodicamente per quella transazionale e di tipo merge. Tale procedura consente di verificare che i dati nel Sottoscrittore corrispondano ai dati nel server di pubblicazione. Una convalida riuscita indica che in quel particolare momento tutte le modifiche del server di pubblicazione sono state replicate nel Sottoscrittore (e dal Sottoscrittore nel server di pubblicazione se il Sottoscrittore supporta gli aggiornamenti) e che i due database sono sincronizzati.  
   
- È consigliabile eseguire la convalida in base alla pianificazione del backup del database di pubblicazione. Se, ad esempio, per il database di pubblicazione è stato impostato un backup completo ogni settimana, è possibile eseguire una convalida ogni settimana al termine del backup. Per altre informazioni, vedere [Convalidare i dati replicati](../validate-replicated-data.md).  
+ È consigliabile eseguire la convalida in base alla pianificazione del backup del database di pubblicazione. Se, ad esempio, per il database di pubblicazione è stato impostato un backup completo ogni settimana, è possibile eseguire una convalida ogni settimana al termine del backup. Per altre informazioni, vedere [Convalidare i dati replicati](../validate-data-at-the-subscriber.md).  
   
 ## <a name="use-agent-profiles-to-change-agent-parameters-if-necessary"></a>Utilizzare i profili agenti per modificare i parametri dell'agente, se necessario  
  I profili agenti consentono di impostare facilmente i parametri dell'agente di replica. È inoltre possibile specificare tali parametri dalla riga di comando dell'agente, sebbene sia generalmente più corretto utilizzare un profilo agente predefinito oppure creare un nuovo profilo se è necessario modificare il valore di un parametro. Se, ad esempio, si utilizza la replica di tipo merge e un Sottoscrittore passa da una connessione a banda larga a una connessione remota, provare a utilizzare il profilo a **collegamento lento** per l'agente di merge. Tale profilo utilizza un set di parametri che sono più adatti per il collegamento di comunicazione più lento. Per altre informazioni, vedere [Replication Agent Profiles](../agents/replication-agent-profiles.md).  
@@ -148,6 +148,6 @@ ms.locfileid: "52823308"
  Per altre informazioni, vedere [Apportare modifiche allo schema nei database di pubblicazione](../publish/make-schema-changes-on-publication-databases.md).  
   
 ## <a name="see-also"></a>Vedere anche  
- [Amministrazione &#40;Replica&#41;](administration-replication.md)  
+ [Domande frequenti sull'amministrazione della replica](frequently-asked-questions-for-replication-administrators.md)  
   
   

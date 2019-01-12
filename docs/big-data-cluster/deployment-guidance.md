@@ -9,12 +9,12 @@ ms.date: 12/07/2018
 ms.topic: conceptual
 ms.prod: sql
 ms.custom: seodec18
-ms.openlocfilehash: 9c1f2fbb750dcdf8e5d78ddcfd5004a32c0cc209
-ms.sourcegitcommit: edf7372cb674179f03a330de5e674824a8b4118f
-ms.translationtype: MT
+ms.openlocfilehash: 4d4e39da3176223305fe02a8931ff9d2c34a64c4
+ms.sourcegitcommit: 1f53b6a536ccffd701fc87e658ddac714f6da7a2
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53246750"
+ms.lasthandoff: 01/10/2019
+ms.locfileid: "54206353"
 ---
 # <a name="how-to-deploy-sql-server-big-data-clusters-on-kubernetes"></a>Come distribuire i cluster di big data di SQL Server in Kubernetes
 
@@ -77,7 +77,7 @@ Eseguire la **kubectl** comando per visualizzare la configurazione del cluster. 
 kubectl config view
 ```
 
-## <a name="define-environment-variables"></a>Definire le variabili di ambiente
+## <a id="env"></a> Definire le variabili di ambiente
 
 La configurazione del cluster può essere personalizzata usando un set di variabili di ambiente che vengono passati al `mssqlctl create cluster` comando. La maggior parte delle variabili di ambiente sono facoltativa con i valori predefiniti come indicato di seguito. Si noti che le variabili di ambiente, ad esempio le credenziali che richiedono l'input dell'utente.
 

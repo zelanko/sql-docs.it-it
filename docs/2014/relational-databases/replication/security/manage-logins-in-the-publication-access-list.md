@@ -16,12 +16,12 @@ ms.assetid: fceb216b-0b18-4e3b-8ae0-13e35920dcbc
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 2ffc40d39df10e83e4f5c68f891b0d7f44223524
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 966b8a03d10bb8e87950e19e3e099954e8aaad8f
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52784723"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54132231"
 ---
 # <a name="manage-logins-in-the-publication-access-list"></a>Gestione degli account nell'elenco di accesso alla pubblicazione
   In questo argomento si illustra come gestire gli account di accesso nell'elenco di accesso alla pubblicazione in [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] usando [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../../includes/tsql-md.md)]. L'accesso a una pubblicazione viene controllato tramite l'elenco di accesso alla pubblicazione. Accessi e gruppi possono essere aggiunti e rimossi dell'elenco di accesso alla pubblicazione.  
@@ -72,7 +72,7 @@ ms.locfileid: "52784723"
   
 ## <a name="see-also"></a>Vedere anche  
  [Modello di sicurezza dell'agente di replica](replication-agent-security-model.md)   
- [Proteggere una topologia di replica](secure-a-replication-topology.md)   
+ [Proteggere una topologia di replica](view-and-modify-replication-security-settings.md)   
  [Proteggere il server di pubblicazione](secure-the-publisher.md)  
   
   

@@ -2,7 +2,7 @@
 title: Eseguire Data Migration Assistant dalla riga di comando (SQL Server) | Microsoft Docs
 description: Informazioni su come eseguire Data Migration Assistant dalla riga di comando per valutare i database di SQL Server per la migrazione
 ms.custom: ''
-ms.date: 10/20/2018
+ms.date: 01/11/2019
 ms.prod: sql
 ms.prod_service: dma
 ms.reviewer: ''
@@ -15,15 +15,15 @@ ms.assetid: ''
 author: pochiraju
 ms.author: rajpo
 manager: craigg
-ms.openlocfilehash: c308dc9e0f05ec8abed83a75a3a1d0ea396fd46c
-ms.sourcegitcommit: 38f35b2f7a226ded447edc6a36665eaa0376e06e
+ms.openlocfilehash: 7d02ead6a601c47ba68bd12ece8fa444ceee5a9e
+ms.sourcegitcommit: 170c275ece5969ff0c8c413987c4f2062459db21
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49643989"
+ms.lasthandoff: 01/11/2019
+ms.locfileid: "54226398"
 ---
 # <a name="run-data-migration-assistant-from-the-command-line"></a>Eseguire Data Migration Assistant dalla riga di comando
-La versione 2.1 e versioni successive, quando si installa Data Migration Assistant, viene installato anche in dmacmd.exe *% ProgramFiles %\\Microsoft Data Migration Assistant\\*. Usare dmacmd.exe per valutare i database in modalità automatica e restituire il risultato al file JSON o CSV. Questo metodo è particolarmente utile quando si valuta più database o database di grandi dimensioni. 
+La versione 2.1 e versioni successive, quando si installa Data Migration Assistant, viene installato anche in dmacmd.exe *% ProgramFiles %\\Microsoft Data Migration Assistant\\*. Usare dmacmd.exe per valutare i database in modalità automatica e restituire il risultato al file JSON o CSV. Questo metodo è particolarmente utile quando si valuta più database o database di grandi dimensioni. 
 
 > [!NOTE]
 > Dmacmd.exe supporta solo le valutazioni in esecuzione. In questo momento non sono supportate le migrazioni.
@@ -40,12 +40,12 @@ DmaCmd.exe /AssessmentName="string"
 /AssessmentResultJson="file"|/AssessmentResultCsv="file"
 ```
 
-|Argomento  |Description  | Obbligatorio (Y/N)
+|Argomento  |Descrizione  | Obbligatorio (Y/N)
 |---------|---------|---------------|
 | `/help or /?`     | Come usare il testo della Guida dmacmd.exe        | N
 |`/AssessmentName`     |   Nome del progetto di valutazione   | Y
 |`/AssessmentDatabases`     | Elenco delimitato da spazi delle stringhe di connessione. Nome del database (catalogo iniziale) è tra maiuscole e minuscole. | Y
-|`/AssessmentTargetPlatform`     | Piattaforma di destinazione per la valutazione, i valori supportati: SqlServer2012, SqlServer2014, SqlServer2016 e AzureSqlDatabaseV12. Il valore predefinito è SqlServer2016   | N
+|`/AssessmentTargetPlatform`     | Piattaforma di destinazione per la valutazione, i valori supportati: SqlServer2012 SqlServer2014, SqlServer2016 e AzureSqlDatabaseV12. Il valore predefinito è SqlServer2016   | N
 |`/AssessmentEvaluateFeatureParity`  | Eseguire le regole di parità delle funzionalità  | N
 |`/AssessmentEvaluateCompatibilityIssues`     | Eseguire le regole di compatibilità  | Y <br> (AssessmentEvaluateCompatibilityIssues o AssessmentEvaluateRecommendations è obbligatorio.)
 |`/AssessmentEvaluateRecommendations`     | Eseguire funzionalità consigliate        | Y <br> (AssessmentEvaluateCompatibilityIssues o AssessmentEvaluateRecommendationsis obbligati)
@@ -96,13 +96,13 @@ Catalog=DatabaseName;Integrated Security=true"
 **Valutazione di un singolo database per la piattaforma di destinazione Database di SQL Azure, salvare i risultati nel file con estensione JSON e CSV**
 
 ```
-DmaCmd.exe /AssessmentName="TestAssessment" 
+DmaCmd.exe /AssessmentName="TestAssessment" 
 /AssessmentDatabases="Server=SQLServerInstanceName;Initial
 Catalog=DatabaseName;Integrated Security=true"
 /AssessmentTargetPlatform="AzureSqlDatabaseV12"
 /AssessmentEvaluateCompatibilityIssues /AssessmentEvaluateFeatureParity
-/AssessmentOverwriteResult 
-/AssessmentResultCsv="C:\\temp\\AssessmentReport.csv" 
+/AssessmentOverwriteResult 
+/AssessmentResultCsv="C:\\temp\\AssessmentReport.csv" 
 /AssessmentResultJson="C:\\temp\\AssessmentReport.json"
 ```
 
@@ -123,24 +123,6 @@ Catalog=DatabaseName3;Integrated Security=true"***
 
 ## <a name="azure-sql-database-sku-recommendations-using-the-cli"></a>API recommendations di Azure lo SKU del Database SQL usando l'interfaccia della riga di comando
 
-> [!IMPORTANT]
-> Le raccomandazioni dello SKU per il Database SQL di Azure sono attualmente disponibili per le migrazioni da SQL Server 2016 o versione successiva.
-
-```
-.\DmaCmd.exe /Action=SkuRecommendation
-/SkuRecommendationInputDataFilePath="C:\TestOut\out.csv"
-/SkuRecommendationTsvOutputResultsFilePath="C:\TestOut\prices.tsv"
-/SkuRecommendationJsonOutputResultsFilePath="C:\TestOut\prices.json"
-/SkuRecommendationOutputResultsFilePath="C:\TestOut\prices.html"
-/SkuRecommendationCurrencyCode=USD
-/SkuRecommendationOfferName=MS-AZR-0044p
-/SkuRecommendationRegionName=UKWest
-/SkuRecommendationSubscriptionId=<Your Subscription Id>
-/AzureAuthenticationInteractiveAuthentication=true
-/AzureAuthenticationClientId=<Your AzureAuthenticationClientId>
-/AzureAuthenticationTenantId=<Your AzureAuthenticationTenantId>
-```
-
 ```
 .\DmaCmd.exe /Action=SkuRecommendation
 /SkuRecommendationInputDataFilePath="C:\TestOut\out.csv"
@@ -150,7 +132,7 @@ Catalog=DatabaseName3;Integrated Security=true"***
 /SkuRecommendationPreventPriceRefresh=true 
 ```
 
-|Argomento  |Description  | Obbligatorio (Y/N)
+|Argomento  |Descrizione  | Obbligatorio (Y/N)
 |---------|---------|---------------|
 |`/Action=SkuRecommendation` | Eseguire la valutazione dello SKU utilizzando la riga di comando DMA | Y
 |`/SkuRecommendationInputDataFilePath`  | Percorso completo del file del contatore delle prestazioni raccolti dai computer che ospita i database |    Y

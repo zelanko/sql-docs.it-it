@@ -1,6 +1,6 @@
 ---
 title: Concetti di Data Mining | Microsoft Docs
-ms.date: 05/01/2018
+ms.date: 01/09/2019
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: data-mining
@@ -9,24 +9,28 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 6dc15187198b5355d9e6f5a2171e57d52406e839
-ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
+ms.openlocfilehash: 161ba42729a21bd3794cf380c745380f8f7ed59c
+ms.sourcegitcommit: 1c01af5b02fe185fd60718cc289829426dc86eaa
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38982003"
+ms.lasthandoff: 01/10/2019
+ms.locfileid: "54185137"
 ---
 # <a name="data-mining-concepts"></a>Concetti di data mining
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+
+> [!IMPORTANT]
+> Il data mining è deprecato in SQL Server Analysis Services 2017. La documentazione non viene aggiornata per le funzionalità deprecate. Per altre informazioni, vedere [compatibilità con le versioni precedenti di Analysis Services (SQL 2017)](../analysis-services-backward-compatibility-sql2017.md).
+
   Il data mining è il processo di individuazione di informazioni utilizzabili da grandi set di dati. Nel data mining viene usata l'analisi matematica per dedurre modelli e tendenze esistenti nei dati. In genere, questi modelli non possono essere individuati tramite l'esplorazione tradizionale dei dati perché le relazioni sono troppo complesse o perché sono presenti troppi dati.  
   
  I modelli e le tendenze possono essere raccolti e definiti in un *modello di data mining*. È possibile applicare i modelli di data mining a scenari specifici, ad esempio:  
   
--   **Previsioni**: stima delle vendite, dei carichi del server o del tempo di inattività del server  
+-   **Previsione**: stima delle vendite, dei carichi del server o del tempo di inattività del server  
   
 -   **Rischio e probabilità**: scelta dei clienti migliori per mailing diretti, determinazione del punto di pareggio probabile per scenari di rischio e assegnazione di probabilità a diagnosi o ad altri risultati  
   
--   **Indicazioni**: determinazione dei prodotti che probabilmente vengono venduti insieme e generazione di indicazioni  
+-   **Raccomandazioni**: determinazione dei prodotti che probabilmente vengono venduti insieme e generazione di indicazioni  
   
 -   **Individuazione delle sequenze**: analisi delle scelte dei clienti in un carrello acquisti e stima dei possibili eventi successivi  
   

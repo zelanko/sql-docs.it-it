@@ -1,7 +1,7 @@
 ---
 title: Requisiti hardware e Software per Reporting Services in modalità SharePoint | Microsoft Docs
 ms.custom: ''
-ms.date: 06/13/2017
+ms.date: 01/09/2019
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.technology:
@@ -11,14 +11,15 @@ ms.assetid: ed91877d-4f74-4266-a932-b824b4810c99
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 6ee2cbd875416e1b981d2dfa6006e42529fcf679
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 5b70a6a736d9a7f566eb4aa60a37ed7b5151168e
+ms.sourcegitcommit: 1f53b6a536ccffd701fc87e658ddac714f6da7a2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53362603"
+ms.lasthandoff: 01/10/2019
+ms.locfileid: "54206177"
 ---
 # <a name="hardware-and-software-requirements-for-reporting-services-in-sharepoint-mode"></a>Requisiti hardware e software per Reporting Services in modalità SharePoint
+
   In questo argomento vengono descritti i prerequisiti, i requisiti hardware e le considerazioni sull'installazione per [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] in esecuzione in modalità SharePoint. Dal momento la modalità SharePoint di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] richiede un server SharePoint, la maggior parte dei requisiti sono basati sull'ambiente SharePoint. Per i server di report in modalità nativa è consigliabile soddisfare i requisiti hardware e software minimi per l'esecuzione di [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Per ulteriori informazioni, vedere [Hardware and Software Requirements for Installing SQL Server 2014](hardware-and-software-requirements-for-installing-sql-server.md).  
   
 -   [Prerequisiti](#bkmk_prereq)  
@@ -61,11 +62,13 @@ ms.locfileid: "53362603"
   
 -   L'istanza del server di report non può utilizzare SQL Server Express Edition per il proprio database. Tuttavia, l'istanza di SQL Server Express Edition installata mediante il prodotto SharePoint può esistere in modalità side-by-side con altre eventuali edizioni del motore di database.  
   
-##  <a name="bkmk_powerview"></a> Requisiti di [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)]  
+##  <a name="bkmk_powerview"></a> Requisiti di [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)]
+
  Esaminare la [documentazione di Power View](http://office.microsoft.com/excel-help/power-view-explore-visualize-and-present-your-data-HA102835634.aspx) più aggiornata su Office.Microsoft.com. [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] è ora una funzionalità di Microsoft Excel 2013 ed è incluso nel componente aggiuntivo di [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Reporting Services per Microsoft SharePoint Server 2010 e 2013 Enterprise Edition.  
   
-##  <a name="bkmk_more_information"></a> Ulteriori informazioni  
- Per informazioni sulle modifiche di SharePoint, vedere [modifiche da SharePoint 2010 a SharePoint 2013](https://technet.microsoft.com/library/ff607742\(office.15\).aspx) (https://technet.microsoft.com/en-us/library/ff607742(office.15).aspx).  
+##  <a name="bkmk_more_information"></a> Ulteriori informazioni
+
+ Per informazioni sulle modifiche di SharePoint, vedere [modifiche da SharePoint 2010 a SharePoint 2013](https://technet.microsoft.com/library/ff607742\(office.15\).aspx) (https://technet.microsoft.com/library/ff607742(office.15).aspx).  
   
  [Note sulla versione di SQL Server 2014](https://go.microsoft.com/fwlink/?LinkID=296445).  
   

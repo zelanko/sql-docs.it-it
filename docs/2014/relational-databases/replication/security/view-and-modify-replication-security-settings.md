@@ -16,12 +16,12 @@ ms.assetid: 67d79532-1482-4de1-ac9f-4a23d162c85e
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 2c4fd9221e363cb869f01c525a7f4b63b91132ca
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
-ms.translationtype: HT
+ms.openlocfilehash: 0fb57b14b27fd2682efae9da8befae6c5454f1d1
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53375633"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54132121"
 ---
 # <a name="view-and-modify-replication-security-settings"></a>Visualizzazione e modifica delle impostazioni di sicurezza della replica
   In questo argomento viene descritto come visualizzare e modificare le impostazioni di sicurezza della replica in [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] tramite [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../../includes/tsql-md.md)]o RMO (Replication Management Objects). È ad esempio possibile modificare la connessione dell'agente di lettura log al server di pubblicazione passando dall'autenticazione di SQL Server all'autenticazione integrata di Windows oppure potrebbe essere necessario modificare le credenziali utilizzate per eseguire un processo di agente al momento della modifica della password dell'account di Windows. Per informazioni sulle autorizzazioni richieste per ogni agente, vedere [Modello di sicurezza dell'agente di replica](replication-agent-security-model.md).  
@@ -572,10 +572,10 @@ ms.locfileid: "53375633"
 ## <a name="see-also"></a>Vedere anche  
  [Replication Management Objects Concepts](../concepts/replication-management-objects-concepts.md)   
  [Aggiornare gli script di replica &#40;programmazione Transact-SQL della replica&#41;](../administration/upgrade-replication-scripts-replication-transact-sql-programming.md)   
- [Gestire gli account di accesso e le password nella replica](manage-logins-and-passwords-in-replication.md)   
+ [Gestire gli account di accesso e le password nella replica](identity-and-access-control-replication.md#manage-logins-and-passwords-in-replication)   
  [Modello di sicurezza dell'agente di replica](replication-agent-security-model.md)   
  [Replication Security Best Practices](replication-security-best-practices.md)   
- [Sicurezza e protezione &#40;replica&#41;](security-and-protection-replication.md)   
+ [Sicurezza della replica di SQL Server](view-and-modify-replication-security-settings.md)   
  [Replication System Stored Procedures Concepts](../concepts/replication-system-stored-procedures-concepts.md)  
   
   

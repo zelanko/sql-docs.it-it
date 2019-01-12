@@ -17,12 +17,12 @@ ms.assetid: f86dd29f-52dd-44a9-91ac-1eb305c1ca8d
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 056675637b181340dc27e7f09698a0ac439dfb6a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 2159178c2fd26aca54d099f7345dbb62039ee34e
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48164601"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54131811"
 ---
 # <a name="create-indexed-views"></a>Creazione di viste indicizzate
   In questo argomento si illustra come creare una vista indicizzata in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] usando [!INCLUDE[tsql](../../includes/tsql-md.md)]. Il primo indice creato per una vista deve essere un indice cluster univoco. Dopo aver creato l'indice cluster univoco, è possibile creare più indici non cluster. La creazione di un indice cluster univoco per una vista consente un miglioramento delle prestazioni delle query, in quanto la vista viene archiviata nel database in modo analogo a una tabella con un indice cluster. Le viste indicizzate possono essere usate da Query Optimizer per velocizzare l'esecuzione delle query. Non è necessario fare riferimento alla vista nella query affinché venga usata da Query Optimizer per una sostituzione.  
@@ -55,7 +55,7 @@ ms.locfileid: "48164601"
   
 -   Quando la vista indicizzata viene usata in Query Optimizer per generare il piano di query.  
   
-    |Opzioni SET|Valore obbligatorio|Valore server predefinito|Default<br /><br /> OLE DB e ODBC predefinito|Default<br /><br /> DB-Library predefinito|  
+    |Opzioni SET|Valore obbligatorio|Valore server predefinito|Impostazione predefinita<br /><br /> OLE DB e ODBC predefinito|Impostazione predefinita<br /><br /> DB-Library predefinito|  
     |-----------------|--------------------|--------------------------|---------------------------------------|-----------------------------------|  
     |ANSI_NULLS|ON|ON|ON|OFF|  
     |ANSI_PADDING|ON|ON|ON|OFF|  
@@ -86,11 +86,11 @@ ms.locfileid: "48164601"
   
 -   Quando si crea l'indice, l'opzione IGNORE_DUP_KEY deve essere impostata su OFF (impostazione predefinita).  
   
--   I riferimenti alle tabelle devono essere specificati come nomi composti da due parti, ovvero *schema ***.*** nometabella* nella definizione della vista.  
+-   I riferimenti alle tabelle devono essere specificati come nomi composti da due parti, ovvero _schema_**.**_nometabella_ , nella definizione della vista.  
   
 -   Le funzioni definite dall'utente a cui viene fatto riferimento nella vista devono essere create usando l'opzione WITH SCHEMABINDING.  
   
--   I riferimenti alle funzioni definite dall'utente nella vista devono essere specificati come nomi composti da due parti, ovvero *schema ***.*** funzione*.  
+-   A qualsiasi funzione definita dall'utente a cui si fa riferimento nella vista è necessario fare riferimento mediante nomi composti da due parti, _schema_**.**_funzione_.  
   
 -   La proprietà di accesso ai dati di una funzione definita dall'utente deve essere NO SQL e la proprietà di accesso esterno deve essere NO.  
   
@@ -131,7 +131,7 @@ ms.locfileid: "48164601"
 -   Se la definizione della vista include una clausola GROUP BY, la chiave dell'indice cluster univoco può contenere riferimenti solo alle colonne specificate nella clausola GROUP BY.  
   
 ###  <a name="Recommendations"></a> Indicazioni  
- Quando si fa riferimento a valori letterali stringa `datetime` e `smalldatetime` nelle viste indicizzate, è consigliabile convertire in modo esplicito il valore letterale nel tipo di dati desiderato usando uno stile del formato di data deterministico. Per un elenco degli stili del formato di data deterministici, vedere [CAST e CONVERT &#40;Transact-SQL&#41;](/sql/t-sql/functions/cast-and-convert-transact-sql). Le espressioni che prevedono la conversione implicita di stringhe di caratteri `datetime` o `smalldatetime` sono considerate non deterministiche. Ciò è dovuto al fatto che i risultati dipendono dalle impostazioni LANGUAGE e DATEFORMAT della sessione del server. I risultati dell'espressione `CONVERT (datetime, '30 listopad 1996', 113)` dipendono ad esempio dall'impostazione LANGUAGE, in quanto la stringa '`listopad`' indica mesi diversi in diverse lingue. Analogamente, nell'espressione `DATEADD(mm,3,'2000-12-01')` [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] interpreta la stringa `'2000-12-01'` sulla base dell'impostazione DATEFORMAT.  
+ Quando si fa riferimento a valori letterali stringa `datetime` e `smalldatetime` nelle viste indicizzate, è consigliabile convertire in modo esplicito il valore letterale nel tipo di dati desiderato usando uno stile del formato di data deterministico. Per un elenco degli stili del formato di data deterministici, vedere [CAST e CONVERT &#40;Transact-SQL&#41;](/sql/t-sql/functions/cast-and-convert-transact-sql). Le espressioni che prevedono la conversione implicita di stringhe di caratteri nel tipo di dati `datetime` o `smalldatetime` sono considerate non deterministiche. Ciò è dovuto al fatto che i risultati dipendono dalle impostazioni LANGUAGE e DATEFORMAT della sessione del server. I risultati dell'espressione `CONVERT (datetime, '30 listopad 1996', 113)` dipendono ad esempio dall'impostazione LANGUAGE, in quanto la stringa '`listopad`' indica mesi diversi in diverse lingue. Analogamente, nell'espressione `DATEADD(mm,3,'2000-12-01')` [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] interpreta la stringa `'2000-12-01'` sulla base dell'impostazione DATEFORMAT.  
   
  Anche la conversione implicita di dati di tipo carattere non Unicode tra regole di confronto viene considerata non deterministica  
   
@@ -151,7 +151,7 @@ ms.locfileid: "48164601"
 ####  <a name="Permissions"></a> Permissions  
  Sono richieste l'autorizzazione CREATE VIEW per il database e l'autorizzazione ALTER per lo schema in cui viene creata la vista.  
   
-##  <a name="TsqlProcedure"></a> Uso di Transact-SQL  
+##  <a name="TsqlProcedure"></a> Utilizzo di Transact-SQL  
   
 #### <a name="to-create-an-indexed-view"></a>Per creare una vista indicizzata  
   

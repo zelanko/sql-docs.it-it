@@ -16,12 +16,12 @@ ms.assetid: 7c83049b-9227-4723-9b7f-66288bc6bd1d
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: ee501c8e576363fd4a4bc15883ca322490d60908
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 34f36ea3b27100510857a05cd5edffa68c5be74a
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48150771"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54132391"
 ---
 # <a name="running-upgrade-advisor-command-prompt"></a>Esecuzione di Preparazione aggiornamento (prompt dei comandi)
   Usare la **UpgradeAdvisorWizardCmd** eseguire Preparazione aggiornamento dal prompt dei comandi dell'utilità. È possibile scegliere di ricevere i risultati in formato XML o in un file con valori delimitati da virgole.  
@@ -43,7 +43,7 @@ where <server_info> is any combination of the following:
  **-?**  
  Visualizza la sintassi del comando.  
   
- **-ConfigFile** *nomefile*  
+ **-ConfigFile** _nomefile_  
  È il nome del percorso e nome del file di un file XML contenente le impostazioni da usare quando si esegue la **UpgradeAdvisorWizardCmd** utilità.  
   
  *< server_info >*  
@@ -51,22 +51,22 @@ where <server_info> is any combination of the following:
   
  *< server_info >* può essere qualsiasi combinazione dei quattro argomenti seguenti:  
   
- **-Server** *nome_server*  
+ **-Server** _nome_server_  
  Specifica il nome del computer da analizzare, che può essere il computer locale, ovvero il valore predefinito, oppure un computer remoto.  
   
- **-Istanza** *nome_istanza*  
+ **-Istanza** _nome_istanza_  
  Specifica il nome dell'istanza da analizzare. Nessun valore predefinito. Se non si specifica questo parametro il [!INCLUDE[ssDE](../../includes/ssde-md.md)] non viene analizzato. Il valore per un'istanza predefinita di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] è MSSQLSERVER. Per un'istanza denominata, utilizzare il nome dell'istanza.  
   
- **-ASInstance**  *AS_instance_name*   
+ **-ASInstance**  _AS_instance_name_   
  Specifica il nome dell'istanza di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] da analizzare. Nessun valore predefinito. Se non si specifica questo valore, [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] non viene analizzato. Il valore per un'istanza predefinita di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] è MSSQLServerOLAPService. Per un'istanza denominata, utilizzare il nome dell'istanza.  
   
- **-RSInstance**  *RS_instance_name*   
+ **-RSInstance**  _RS_instance_name_   
  Specifica il nome dell'istanza di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] da analizzare. Nessun valore predefinito. Se non si specifica questo valore, [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] non viene analizzato. Il valore per un'istanza predefinita di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] è ReportServer. Per un'istanza denominata, utilizzare il nome dell'istanza.  
   
- **-SqlUser** *login_id*  
+ **-SqlUser** _login_id_  
  Se si utilizza l'autenticazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], questo valore corrisponde all'account di accesso di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] che verrà utilizzato da Preparazione aggiornamento per stabilire la connessione all'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Se non si specifica un account di accesso, per la connessione all'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] verrà utilizzata l'autenticazione di Windows.  
   
- **-SqlPassword** *password*  
+ **-SqlPassword** _password_  
  Se si usa la **- SqlUser** argomento, usare questo argomento per specificare la password per il [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] account di accesso.  
   
  **-CSV**  
@@ -75,7 +75,7 @@ where <server_info> is any combination of the following:
 ## <a name="return-values"></a>Valori restituiti  
  Nella tabella seguente mostra i valori **UpgradeAdvisorWizardCmd** restituisce.  
   
-|valore|Description|  
+|Value|Descrizione|  
 |-----------|-----------------|  
 |0|Analisi riuscita, nessun problema di aggiornamento rilevato.|  
 |numero intero positivo|Analisi riuscita, problemi di aggiornamento rilevati.|  
@@ -137,11 +137,11 @@ where <server_info> is any combination of the following:
 |`BatchFile`|Specifica un file batch da analizzare. Possono essere più di uno.|Obbligatorio una o più volte se l'elemento `BatchFiles` è presente. Nessun valore predefinito.|  
 |`BatchSeparator`|Specifica il separatore batch utilizzato nei file batch di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|Facoltativo una volta per ogni elemento di `SQLServer`. Il valore predefinito è GO.|  
 |`AnalysisServices`|Contiene le impostazioni dell'analisi per [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)].|Facoltativo una volta per ogni file di configurazione. Se non viene specificato, i database [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] non verranno analizzati.|  
-|`ASInstance`|Specifica il nome dell'istanza di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)].|Obbligatorio una sola volta per ogni `AnalysisServices` elemento. Nessun valore predefinito.|  
+|`ASInstance`|Specifica il nome dell'istanza di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)].|Obbligatorio una volta per ogni elemento di `AnalysisServices`. Nessun valore predefinito.|  
 |Elemento `Databases` per `Analysis Services`|Contiene un elenco di database da analizzare.|Facoltativo una volta per ogni elemento di `AnalysisServices`. Se questo elemento non è presente, verranno analizzati tutti i database dell'istanza.|  
 |Elemento `Database` per `AnalysisServices`|Specifica il nome di un database da analizzare.|Obbligatorio una o più volte se l'elemento `Databases` è presente. Se un elemento `Database` contiene il valore "*", verranno analizzati tutti i database dell'istanza. Nessun valore predefinito.|  
 |`ReportingServices`|Specifica di eseguire l'analisi su [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].|Facoltativo una volta per ogni file di configurazione. Se non viene specificato, [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] non viene analizzato.|  
-|`RSInstance`|Specifica il nome dell'istanza di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].|Obbligatorio una sola volta per ogni `ReportingServices` elemento. Nessun valore predefinito.|  
+|`RSInstance`|Specifica il nome dell'istanza di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].|Obbligatorio una volta per ogni elemento di `ReportingServices`. Nessun valore predefinito.|  
 |`IntegrationServices`|Contiene le impostazioni di analisi per [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)].|Facoltativo una volta per ogni file di configurazione. Se non viene specificato, [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] non viene analizzato.|  
 |`PackagePath`|Specifica il percorso di un set di pacchetti [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)].|Facoltativo una volta per ogni elemento di `IntegrationServices`. Se questo elemento non è presente, l'analisi verrà effettuata sull'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], mentre i pacchetti archiviati esternamente non verranno analizzati. Nessun valore predefinito.|  
   
@@ -154,7 +154,7 @@ where <server_info> is any combination of the following:
 UpgradeAdvisorWizardCmd -ConfigFile "C:\My Documents\UpgradeConfig1.xml"  
 ```  
   
-### <a name="b-run-upgrade-advisor-using-default-configuration-settings"></a>B. Eseguire Preparazione aggiornamento utilizzando le impostazioni di configurazione predefinite  
+### <a name="b-run-upgrade-advisor-using-default-configuration-settings"></a>b. Eseguire Preparazione aggiornamento utilizzando le impostazioni di configurazione predefinite  
  Nell'esempio seguente viene illustrato come eseguire Preparazione aggiornamento dal prompt dei comandi utilizzando le impostazioni di configurazione predefinite e l'autenticazione di Windows.  
   
 ```  

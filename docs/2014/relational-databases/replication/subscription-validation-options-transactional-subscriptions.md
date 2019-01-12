@@ -14,12 +14,12 @@ ms.assetid: fd66ad1f-df01-4240-9e89-8f41bff12c1e
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: f4538774295e7456d46922a71db91527604d71fb
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: a82e13202209121897a5e5878a141c8d53800a47
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52761653"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54135841"
 ---
 # <a name="subscription-validation-options-transactional-subscriptions"></a>Opzioni di convalida delle sottoscrizioni (sottoscrizioni transazionali)
   La finestra di dialogo **Opzioni di convalida delle sottoscrizioni** consente di specificare se la convalida deve utilizzare solo un conteggio di righe o un conteggio di righe e un checksum binario.  
@@ -36,6 +36,6 @@ ms.locfileid: "52761653"
   
 ## <a name="see-also"></a>Vedere anche  
  [Convalidare i dati nel Sottoscrittore](validate-data-at-the-subscriber.md)   
- [Convalidare i dati replicati](validate-replicated-data.md)  
+ [Convalidare i dati replicati](validate-data-at-the-subscriber.md)  
   
   

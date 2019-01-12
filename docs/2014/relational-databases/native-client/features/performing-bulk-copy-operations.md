@@ -15,12 +15,12 @@ ms.assetid: 50d8456b-e6a1-4b25-bc7e-56946ed654a7
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 2cce9b961c2830b670bb862dee88284a18ed7eb6
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: c33c5adeb748f3a714112faf7410684413cf0cd5
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53363303"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54134681"
 ---
 # <a name="performing-bulk-copy-operations"></a>Esecuzione di operazioni di copia bulk
   La funzionalità di copia bulk di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] supporta il trasferimento di grandi quantità di dati in o da una tabella o una vista di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Il trasferimento dei dati può essere eseguito anche specificando un'istruzione SELECT. È possibile spostare i dati tra [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] e un file di dati del sistema operativo, ad esempio un file ASCII. Il file di dati può avere formati diversi. Per eseguire una copia bulk in un file di formato, è necessario definire il formato. I dati possono essere caricati in variabili di programma e trasferiti a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] mediante metodi e funzioni di copia bulk.  
@@ -95,7 +95,7 @@ ms.locfileid: "53363303"
   
 -   **ISupportErrorInfo**  
   
- Le proprietà SSPROP_FASTLOADOPTIONS, SSPROP_FASTLOADKEEPNULLS e SSPROP_FASTLOADKEEPIDENTITY specifiche del provider controllano i comportamenti di un set di righe della copia bulk del provider OLE DB di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client. Le proprietà sono specificate nel *rgProperties* membro di un * rgPropertySets ***IOpenRowset**membro del parametro.  
+ Le proprietà SSPROP_FASTLOADOPTIONS, SSPROP_FASTLOADKEEPNULLS e SSPROP_FASTLOADKEEPIDENTITY specifiche del provider controllano i comportamenti di un set di righe della copia bulk del provider OLE DB di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client. Le proprietà sono specificate nel *rgProperties* membro di un _rgPropertySets_**IOpenRowset**membro del parametro.  
   
 |ID proprietà|Descrizione|  
 |-----------------|-----------------|  

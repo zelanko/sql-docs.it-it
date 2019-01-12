@@ -12,12 +12,12 @@ ms.assetid: bea09522-ff47-4037-ab55-a98ea7c10099
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: f7652f9ebacf5e673738c4144878870eb156d944
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 4355245af62817b7ab675241f5df9db77500daa3
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52780943"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54132361"
 ---
 # <a name="evaluate-a-policy-based-management-policy-on-a-schedule"></a>Valutare i criteri della gestione basata su criteri in una pianificazione
   In questo argomento verrà descritto come valutare i criteri della gestione basata su criteri in una pianificazione in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] utilizzando [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
@@ -53,7 +53,7 @@ ms.locfileid: "52780943"
   
 5.  Fare clic con il pulsante destro del mouse sui criteri di cui si desidera valutare la pianificazione, quindi scegliere **Proprietà**.  
   
-6.  Nella finestra di dialogo **Apri criteri -***nome_criterio* selezionare **Su pianificazione** nell'elenco **Modalità di valutazione**.  
+6.  Nel **Apri criteri -**_nome_criteri_ nella finestra di dialogo il **modalità di valutazione** elenco, selezionare **su pianificazione**.  
   
 7.  In **Pianificazione**fare clic su **Seleziona** per specificare una pianificazione esistente o su **Nuova** per creare una nuova pianificazione.  
   

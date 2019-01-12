@@ -15,12 +15,12 @@ ms.assetid: 172c60c7-f605-4eb5-b185-54ae9e9d3c60
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 7485f840682c6bc8f8140aae6376431ad92442a0
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 43347190c53331d0a30ba0f29d795cce981eec34
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52815413"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54135631"
 ---
 # <a name="interactive-conflict-resolution"></a>Interactive Conflict Resolution
   La replica di[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] offre un sistema di risoluzione interattivo che consente di risolvere i conflitti in modo manuale durante la sincronizzazione su richiesta in Gestione sincronizzazione [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Windows. Attivato in fase di esecuzione, il sistema di risoluzione interattivo è un'interfaccia grafica che visualizza i dati relativi a ogni riga in conflitto e offre opzioni per la visualizzazione e la modifica dei dati in conflitto, nonché per la risoluzione distinta dei singoli conflitti.  
@@ -35,7 +35,7 @@ ms.locfileid: "52815413"
   
  Per utilizzare il sistema di risoluzione interattivo, è necessario che la risoluzione interattiva sia attivata per ogni articolo e sottoscrizione che la richiede. Dopo essere stato abilitato per uno o più articoli e sottoscrizioni, il sistema di risoluzione interattivo viene utilizzato quando viene rilevato un conflitto durante la sincronizzazione di tipo merge.  
   
- Per usare il sistema di risoluzione dei conflitti interattivo , vedere [Specificare la risoluzione interattiva dei conflitti per articoli di merge](../publish/specify-interactive-conflict-resolution-for-merge-articles.md) e [Sincronizzare una sottoscrizione mediante Gestione sincronizzazione Microsoft Windows &#40;Gestione sincronizzazione Microsoft Windows&#41;](../synchronize-a-subscription-using-windows-synchronization-manager.md).  
+ Per usare il sistema di risoluzione dei conflitti interattivo , vedere [Specificare la risoluzione interattiva dei conflitti per articoli di merge](..//publish/specify-merge-replication-properties.md#interactive-conflict-resolution) e [Sincronizzare una sottoscrizione mediante Gestione sincronizzazione Microsoft Windows &#40;Gestione sincronizzazione Microsoft Windows&#41;](../synchronize-a-subscription-using-windows-synchronization-manager.md).  
   
 ## <a name="see-also"></a>Vedere anche  
  [Rilevamento e risoluzione avanzati dei conflitti nella replica di tipo merge](advanced-merge-replication-conflict-detection-and-resolution.md)  

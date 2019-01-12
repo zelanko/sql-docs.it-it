@@ -16,12 +16,12 @@ ms.assetid: a012a32f-6f26-45bf-8046-b51cd7fec455
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 0cb4757d454343b48d5eea74d10d66cdbaa7a52a
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: d3c8037bdccc0b04e2c11399f09e5a99c109df65
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52817192"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54134111"
 ---
 # <a name="spcopysnapshot-transact-sql"></a>sp_copysnapshot (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -40,16 +40,16 @@ sp_copysnapshot [ @publication = ] 'publication', [ @destination_folder = ] 'des
 ```  
   
 ## <a name="arguments"></a>Argomenti  
- [  **@publication=**] **'***pubblicazione***'**  
+ [  **@publication=**] **'**_pubblicazione_**'**  
  Nome della pubblicazione di cui si desidera copiare la cartella snapshot. *pubblicazione* viene **sysname**, non prevede alcun valore predefinito.  
   
- [  **@destination_folder=**] **'***destination_folder***'**  
+ [  **@destination_folder=**] **'**_destination_folder_**'**  
  Nome della cartella in cui si desidera copiare il contenuto della cartella snapshot della pubblicazione. *destination_folder*viene **nvarchar(255**, non prevede alcun valore predefinito. Il *destination_folder* può essere un percorso alternativo, ad esempio in un altro server, in un'unità di rete o su supporti rimovibili (ad esempio CD-ROM o un disco rimovibile).  
   
- [  **@subscriber=**] **'***sottoscrittore***'**  
+ [  **@subscriber=**] **'**_sottoscrittore_**'**  
  Nome del Sottoscrittore. *Sottoscrittore* is sysname con valore predefinito è NULL.  
   
- [  **@subscriber_db=**] **'***subscriber_db***'**  
+ [  **@subscriber_db=**] **'**_subscriber_db_**'**  
  Nome del database di sottoscrizione. *subscriber_db* is sysname con valore predefinito è NULL.  
   
 ## <a name="return-code-values"></a>Valori restituiti  
@@ -62,7 +62,7 @@ sp_copysnapshot [ @publication = ] 'publication', [ @destination_folder = ] 'des
  Solo i membri del **sysadmin** ruolo predefinito del server oppure **db_owner** ruolo predefinito del database possono eseguire **sp_copysnapshot**.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Posizioni alternative della cartella snapshot](../../relational-databases/replication/alternate-snapshot-folder-locations.md)   
+ [Posizioni alternative della cartella snapshot](../../relational-databases/replication/snapshot-options.md)   
  [Stored procedure di sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

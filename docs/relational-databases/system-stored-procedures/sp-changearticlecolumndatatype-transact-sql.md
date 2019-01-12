@@ -16,12 +16,12 @@ ms.assetid: 0db80e08-fb77-4d0c-aa41-455b13ffa9b4
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: e93025676d451444140fad80a993813c0463a2f6
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: 07213247345280e992c2fbd5552d5cdfb96747ab
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53206760"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54133561"
 ---
 # <a name="spchangearticlecolumndatatype-transact-sql"></a>sp_changearticlecolumndatatype (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -48,16 +48,16 @@ sp_changearticlecolumndatatype [ @publication= ] 'publication'
 ```  
   
 ## <a name="arguments"></a>Argomenti  
- [  **@publication=** ] **'***pubblicazione***'**  
+ [  **@publication=** ] **'**_pubblicazione_**'**  
  Nome della pubblicazione Oracle. *pubblicazione* viene **sysname**, non prevede alcun valore predefinito.  
   
- [  **@article =** ] **'***articolo***'**  
+ [  **@article =** ] **'**_articolo_**'**  
  Nome dell'articolo. *articolo* viene **sysname**, non prevede alcun valore predefinito.  
   
- [ **@column**=] **'***colonna***'**  
+ [ **@column**=] **'**_colonna_**'**  
  Nome della colonna per cui modificare il mapping dei tipi di dati. *colonna* viene **sysname**, non prevede alcun valore predefinito.  
   
- [ **@type** =] **'***tipo***'**  
+ [ **@type** =] **'**_tipo_**'**  
  È il nome del [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tipo di dati nella colonna di destinazione. *tipo di* viene **sysname**, con un valore predefinito è NULL.  
   
  [ **@length** =] *lunghezza*  
@@ -66,7 +66,7 @@ sp_changearticlecolumndatatype [ @publication= ] 'publication'
  [ **@precision**=] *precisione*  
  Precisione del tipo di dati di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] nella colonna di destinazione. *precisione* viene **bigint**, con un valore predefinito è NULL.  
   
- [ **@publisher**=] **'***publisher***'**  
+ [ **@publisher**=] **'**_editore_**'**  
  Specifica un non - [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] server di pubblicazione. *server di pubblicazione* viene **sysname**, con un valore predefinito è NULL.  
   
 ## <a name="return-code-values"></a>Valori restituiti  

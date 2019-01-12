@@ -12,12 +12,12 @@ ms.assetid: 1aad5b82-592e-4907-92f7-b90794175be5
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 4daea476dd9d533d8a16365a5260905f9fb22d29
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: b8d858e8b7ab62ac22902a15159163f8d6d01889
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52804303"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54133513"
 ---
 # <a name="subscription-distributor-to-subscriber-history-transactional-subscription"></a>Sottoscrizione, Cronologia server di distribuzione - Sottoscrittore (Sottoscrizione transazionale)
   Nella scheda **Cronologia server di distribuzione - Sottoscrittore** vengono visualizzate informazioni dettagliate sull'agente di distribuzione, quali lo stato, la cronologia, i messaggi informativi ed eventuali messaggi di errore.  
@@ -62,7 +62,7 @@ ms.locfileid: "52804303"
   
 ## <a name="see-also"></a>Vedere anche  
  [Avviare Monitoraggio replica](monitor/start-the-replication-monitor.md)   
- [Visualizzare le informazioni ed eseguire attività relative agli agenti associati a una sottoscrizione &#40;Monitoraggio replica&#41;](monitor/view-information-and-perform-tasks-for-subscription-agents.md)   
+ [Visualizzare informazioni ed eseguire attività con Monitoraggio replica](monitor/view-information-and-perform-tasks-replication-monitor.md)   
  [Monitoraggio della replica](monitoring-replication.md)   
  [Panoramica degli agenti di replica](agents/replication-agents-overview.md)  
   

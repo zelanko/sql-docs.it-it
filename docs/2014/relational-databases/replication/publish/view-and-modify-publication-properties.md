@@ -18,12 +18,12 @@ ms.assetid: 27d72ea4-bcb6-48f2-b4aa-eb1410da7efc
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 439a2009e6cb5e470ef09d3c766c4349d54ecdb8
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 4af21c912ce5a703cd46f0f9b00b5dd4bda7d2d3
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52792292"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54135831"
 ---
 # <a name="view-and-modify-publication-properties"></a>Visualizzazione e modifica delle proprietà della pubblicazione
   In questo argomento viene descritto come modificare le proprietà delle pubblicazioni in [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] tramite [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../../includes/tsql-md.md)]o RMO (Replication Management Objects).  
@@ -192,8 +192,8 @@ ms.locfileid: "52792292"
  [Modificare le proprietà di pubblicazioni e articoli](change-publication-and-article-properties.md)   
  [Apportare modifiche allo schema nei database di pubblicazione](make-schema-changes-on-publication-databases.md)   
  [Replication System Stored Procedures Concepts](../concepts/replication-system-stored-procedures-concepts.md)   
- [Aggiungere ed eliminare articoli in una pubblicazione &#40;SQL Server Management Studio&#41;](add-articles-to-and-drop-articles-from-a-publication.md)   
- [Visualizzare le informazioni ed eseguire attività per una pubblicazione &#40;Monitoraggio replica&#41;](../monitor/view-information-and-perform-tasks-for-a-publication-replication-monitor.md)   
+ [Aggiungere ed eliminare articoli in una pubblicazione](add-articles-to-and-drop-articles-from-a-publication.md)   
+ [Visualizzare informazioni ed eseguire attività con Monitoraggio replica](../monitor/view-information-and-perform-tasks-replication-monitor.md)   
  [Visualizzare e modificare le proprietà degli articoli](view-and-modify-article-properties.md)  
   
   

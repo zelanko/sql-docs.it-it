@@ -11,12 +11,12 @@ ms.topic: conceptual
 author: meet-bhagdev
 ms.author: meetb
 manager: craigg
-ms.openlocfilehash: b73e144dd362691ea93b3312f6dc10ce542f1c43
-ms.sourcegitcommit: 189a28785075cd7018c98e9625c69225a7ae0777
+ms.openlocfilehash: 02e5e0ba4bd7300d71d95d5e3572ce4e09ac3bd4
+ms.sourcegitcommit: dd794633466b1da8ead9889f5e633bdf4b3389cd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53030215"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54143327"
 ---
 # <a name="connect-includename-sosincludesname-sos-shortmd-to-your-sql-server-using-windows-authentication---kerberos"></a>Connettersi a SQL Server utilizzando l'autenticazione di Windows - Kerberos in [!INCLUDE[name-sos](../includes/name-sos-short.md)] 
 
@@ -27,7 +27,7 @@ Per utilizzare l'autenticazione integrata (autenticazione di Windows) in macOS o
 ## <a name="prerequisites"></a>Prerequisiti
 
 - Accedere a un computer nel dominio di Windows per eseguire query verso il controller di dominio Kerberos.
-- SQL Server deve essere configurato per consentire l'autenticazione Kerberos. Per il driver client in esecuzione su Unix, l'autenticazione integrata è supportata solo con Kerberos. Sono disponibili ulteriori informazioni sulla configurazione di Sql Server per l'autenticazione tramite Kerberos [qui](https://support.microsoft.com/en-us/help/319723/how-to-use-kerberos-authentication-in-sql-server). Devono esistere SPN registrati per ogni istanza di Sql Server a cui si sta tentando di connettersi. I dettagli sul formato dei nomi SPN di SQL Server sono elencati [qui](https://technet.microsoft.com/library/ms191153%28v=sql.105%29.aspx#SPN%20Formats)
+- SQL Server deve essere configurato per consentire l'autenticazione Kerberos. Per il driver client in esecuzione su Unix, l'autenticazione integrata è supportata solo con Kerberos. Sono disponibili ulteriori informazioni sulla configurazione di Sql Server per l'autenticazione tramite Kerberos [qui](https://support.microsoft.com/help/319723/how-to-use-kerberos-authentication-in-sql-server). Devono esistere SPN registrati per ogni istanza di Sql Server a cui si sta tentando di connettersi. I dettagli sul formato dei nomi SPN di SQL Server sono elencati [qui](https://technet.microsoft.com/library/ms191153%28v=sql.105%29.aspx#SPN%20Formats)
 
 
 ## <a name="checking-if-sql-server-has-kerberos-setup"></a>Verifica della presenza del setup di Kerberos su Sql Server

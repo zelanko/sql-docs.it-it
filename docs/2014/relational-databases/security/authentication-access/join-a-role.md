@@ -15,12 +15,12 @@ ms.assetid: 05c8d10d-5823-46c6-8b1a-81722da6a42b
 author: VanMSFT
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 815615f31e033eaee63f2c296ff5daf73349714c
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: d1c846f7ed60bbecac64021e9a881312e1f1f64c
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52514298"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54134121"
 ---
 # <a name="join-a-role"></a>aggiungere un ruolo
   In questo argomento si descrive come assegnare ruoli agli account di accesso e agli utenti di database in [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] tramite [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../../includes/tsql-md.md)]. Utilizzare i ruoli disponibili in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] per gestire in modo efficace le autorizzazioni. Assegnare autorizzazioni ai ruoli, quindi aggiungere e rimuovere utenti e account di accesso ai ruoli. Utilizzando i ruoli, non è necessario gestire singolarmente le autorizzazioni per ciascun utente.  
@@ -76,9 +76,9 @@ ms.locfileid: "52514298"
   
 4.  Fare clic con il pulsante destro del mouse sul ruolo da modificare e selezionare **Proprietà**.  
   
-5.  Nel **proprietà del ruolo Server-* * * nome_ruolo_server* finestra di dialogo il **membri** fare clic su **Add**.  
+5.  Nel **proprietà del ruolo Server -**_nome_ruolo_server_ finestra di dialogo il **membri** fare clic su **Aggiungi**.  
   
-6.  Nella finestra di dialogo **Seleziona account di accesso o ruolo del server** immettere l'account di accesso o il ruolo del server da aggiungere a questo ruolo del server in **Immettere i nomi degli oggetti da selezionare (esempi)**. In alternativa, fare clic su **Sfoglia...** e selezionare uno, alcuni o tutti gli oggetti disponibili nella finestra di dialogo **Cerca oggetti**. Fare clic su **OK** da restituire per il **proprietà ruolo del Server-* * * nome_ruolo_server* nella finestra di dialogo.  
+6.  Nella finestra di dialogo **Seleziona account di accesso o ruolo del server** immettere l'account di accesso o il ruolo del server da aggiungere a questo ruolo del server in **Immettere i nomi degli oggetti da selezionare (esempi)**. In alternativa, fare clic su **Sfoglia...** e selezionare uno, alcuni o tutti gli oggetti disponibili nella finestra di dialogo **Cerca oggetti**. Fare clic su **OK** da restituire per il **proprietà ruolo del Server -**_nome_ruolo_server_ nella finestra di dialogo.  
   
 7.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
@@ -98,9 +98,9 @@ ms.locfileid: "52514298"
   
 7.  Fare clic con il pulsante destro del mouse sul ruolo da modificare e selezionare **Proprietà**.  
   
-8.  Nel **proprietà ruolo Database-* * * database_role_name* nella finestra di dialogo il **generali** fare clic su **Add**.  
+8.  Nel **proprietà ruolo Database -**_database_role_name_ nella finestra di dialogo il **generali** fare clic su **Aggiungi**.  
   
-9. Nella finestra di dialogo **Seleziona utente o ruolo del database** immettere l'account di accesso o il ruolo del database da aggiungere a questo ruolo del database in **Immettere i nomi degli oggetti da selezionare (esempi)**. In alternativa, fare clic su **Sfoglia...** e selezionare uno, alcuni o tutti gli oggetti disponibili nella finestra di dialogo **Cerca oggetti**. Fare clic su **OK** da restituire per il **proprietà ruolo Database-* * * database_role_name* nella finestra di dialogo.  
+9. Nella finestra di dialogo **Seleziona utente o ruolo del database** immettere l'account di accesso o il ruolo del database da aggiungere a questo ruolo del database in **Immettere i nomi degli oggetti da selezionare (esempi)**. In alternativa, fare clic su **Sfoglia...** e selezionare uno, alcuni o tutti gli oggetti disponibili nella finestra di dialogo **Cerca oggetti**. Fare clic su **OK** da restituire per il **proprietà ruolo Database -**_database_role_name_ nella finestra di dialogo.  
   
 10. [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   

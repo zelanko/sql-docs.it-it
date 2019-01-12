@@ -19,12 +19,12 @@ ms.assetid: d06ed24f-82d7-4b9e-9e40-cc9780476a71
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 1456a3113feb8a32ce9876ef7ef060f96f66910b
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: ab277c5ad8d85fdc7c24046bfa191078525fe705
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52800733"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54132311"
 ---
 # <a name="monitor-replication-agents"></a>Monitoraggio degli agenti di replica
   In Monitoraggio replica di[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] viene offerta una visualizzazione di sistema dell'attività di replica e viene inoltre semplificata l'individuazione di informazioni su un agente specifico. Nell'elenco seguente vengono inclusi tutti gli agenti, le relative schede di Monitoraggio replica e un collegamento all'argomento in cui si spiega come accedere a queste schede:  
@@ -37,7 +37,7 @@ ms.locfileid: "52800733"
   
     -   Agente di lettura coda  
   
-     Accedere alle informazioni e attività associate a questi agenti utilizzare le schede seguenti: **Gli agenti** (disponibile per ogni server di pubblicazione e pubblicazione) e **avvisi** (disponibile per tutte le pubblicazioni). Per altre informazioni, vedere [Visualizzare le informazioni ed eseguire attività relative agli agenti associati a una pubblicazione &#40;Monitoraggio replica&#41;](view-information-and-perform-tasks-for-publication-agents.md).  
+     Accedere alle informazioni e attività associate a questi agenti utilizzare le schede seguenti: **Gli agenti** (disponibile per ogni server di pubblicazione e pubblicazione) e **avvisi** (disponibile per tutte le pubblicazioni). Per altre informazioni, vedere [visualizzare le informazioni ed eseguire attività con Monitoraggio replica](view-information-and-perform-tasks-replication-monitor.md).  
   
 -   Gli agenti seguenti sono associati alle sottoscrizioni in Monitoraggio replica:  
   
@@ -45,7 +45,7 @@ ms.locfileid: "52800733"
   
     -   Agente di merge  
   
-     Accedere alle informazioni e attività associate a questi agenti utilizzare le schede seguenti: **Elenco verifica sottoscrizioni** (disponibile per ogni server di pubblicazione) o il **tutte le sottoscrizioni** (disponibile per tutte le pubblicazioni). Per altre informazioni, vedere [Visualizzare le informazioni ed eseguire attività relative agli agenti associati a una sottoscrizione &#40;Monitoraggio replica&#41;](view-information-and-perform-tasks-for-subscription-agents.md).  
+     Accedere alle informazioni e attività associate a questi agenti utilizzare le schede seguenti: **Elenco verifica sottoscrizioni** (disponibile per ogni server di pubblicazione) o il **tutte le sottoscrizioni** (disponibile per tutte le pubblicazioni). Per altre informazioni, vedere [visualizzare le informazioni ed eseguire attività con Monitoraggio replica](view-information-and-perform-tasks-replication-monitor.md).  
   
 ## <a name="using-sql-server-management-studio-to-monitor-replication-agents"></a>Utilizzo di SQL Server Management Studio per il monitoraggio degli agenti di replica  
  In[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] sono disponibili le finestre di dialogo seguenti per il monitoraggio degli agenti di replica:  
@@ -56,7 +56,7 @@ ms.locfileid: "52800733"
   
 -   **Visualizza stato sincronizzazione** (per tutte le sottoscrizioni: questa finestra di dialogo consente l'accesso all'agente di distribuzione e all'agente di merge)  
   
- Monitoraggio replica offre informazioni aggiuntive su ogni agente e consente di monitorare l'agente di lettura coda, se utilizzato. Per altre informazioni, vedere [Visualizzare le informazioni ed eseguire attività relative agli agenti associati a una pubblicazione &#40;Monitoraggio replica&#41;](view-information-and-perform-tasks-for-publication-agents.md), [Visualizzare le informazioni ed eseguire attività relative agli agenti associati a una pubblicazione &#40;Monitoraggio replica&#41;](view-information-and-perform-tasks-for-publication-agents.md) e [Visualizzare le informazioni ed eseguire attività relative agli agenti associati a una sottoscrizione &#40;Monitoraggio replica&#41;](view-information-and-perform-tasks-for-subscription-agents.md).  
+ Monitoraggio replica offre informazioni aggiuntive su ogni agente e consente di monitorare l'agente di lettura coda, se utilizzato. Per altre informazioni, vedere [visualizzare le informazioni ed eseguire attività con Monitoraggio replica](view-information-and-perform-tasks-replication-monitor.md).  
   
 #### <a name="to-monitor-the-snapshot-agent-and-log-reader-agent"></a>Per monitorare l'agente snapshot e l'agente di lettura log  
   

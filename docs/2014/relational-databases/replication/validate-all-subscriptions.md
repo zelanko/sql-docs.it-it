@@ -14,12 +14,12 @@ ms.assetid: 32e31469-36e4-42d9-a57a-12388bfd229d
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: f0f9161e0b083afe8a57c396ba9d6e1db68755c1
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: b33cfe47cebba4c24c90ad41ce1b218192d128f4
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52799603"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54135961"
 ---
 # <a name="validate-all-subscriptions"></a>Convalida tutte le sottoscrizioni
   Utilizzare la finestra di dialogo **Convalida tutte le sottoscrizioni** per specificare che tutte le sottoscrizioni di una pubblicazione di tipo merge devono essere convalidate all'esecuzione successiva dell'agente di merge per ogni sottoscrizione. I risultati della convalida vengono visualizzati in Monitoraggio replica. Per altre informazioni, vedere [Validate Data at the Subscriber](validate-data-at-the-subscriber.md).  
@@ -34,6 +34,6 @@ ms.locfileid: "52799603"
  Oltre al conteggio delle righe nel server di pubblicazione e nel Sottoscrittore, viene calcolato un checksum di tutti i dati utilizzando l'algoritmo di checksum binario. In caso di esito negativo durante il conteggio delle righe il checksum non viene eseguito. Questa opzione non è valida per [!INCLUDE[ssEW](../../includes/ssew-md.md)].  
   
 ## <a name="see-also"></a>Vedere anche  
- [Convalidare i dati replicati](validate-replicated-data.md)  
+ [Convalidare i dati replicati](validate-data-at-the-subscriber.md)  
   
   

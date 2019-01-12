@@ -22,12 +22,12 @@ ms.assetid: 10d58b92-b67b-47e2-af9c-9f9fd6968bba
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: fbe4b5e5605964d027e496a56b4dbf0836baaae4
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 11e5b26a9e2a953aff319b41749d2c12be1a880e
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52801773"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54135681"
 ---
 # <a name="change-an-operator39s-availability"></a>Modificare la disponibilità di un operatore
   In questo argomento viene descritto come modificare la pianificazione di un operatore relativa alla ricezione di notifiche degli avvisi in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] tramite [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)].  
@@ -63,7 +63,7 @@ ms.locfileid: "52801773"
   
 4.  Fare clic con il pulsante destro del mouse sull'operatore che si vuole abilitare o disabilitare, selezionare **Proprietà**e fare clic sulla scheda **Generale** .  
   
-5.  Nella finestra di dialogo *Proprietà***nome_operatore** selezionare o deselezionare la casella di controllo **Abilitato**.  
+5.  Selezionare o deselezionare la casella di controllo _Abilitato_**nella finestra di dialogo** Proprietà **nome_operatore** .  
   
 6.  Fare clic su **OK**.  
   

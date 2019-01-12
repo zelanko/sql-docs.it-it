@@ -12,12 +12,12 @@ ms.assetid: 4e98f8de-287c-4090-81ee-dc8f80dfa6a1
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: bc44785fa96b5bc9af8e871605f8304d13bc481d
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 4788e7696b9bb986ab5a16fb2fea618d0b996cc9
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52753283"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54133591"
 ---
 # <a name="mssqleng020574"></a>MSSQL_ENG020574
     
@@ -33,7 +33,7 @@ ms.locfileid: "52753283"
 |Testo del messaggio|La sottoscrizione del Sottoscrittore '%s' dell'articolo '%s' della pubblicazione '%s' non ha superato la convalida dei dati.|  
   
 ## <a name="explanation"></a>Spiegazione  
- I dati nel Sottoscrittore sono stati convalidati in base a quelli nel server di pubblicazione e non corrispondono, pertanto la convalida non è stata eseguita. Per ulteriori informazioni sulla convalida, vedere [Validate Replicated Data](validate-replicated-data.md).  
+ I dati nel Sottoscrittore sono stati convalidati in base a quelli nel server di pubblicazione e non corrispondono, pertanto la convalida non è stata eseguita. Per ulteriori informazioni sulla convalida, vedere [Validate Replicated Data](validate-data-at-the-subscriber.md).  
   
 ## <a name="user-action"></a>Azione dell'utente  
  È consigliabile eseguire le operazioni seguenti:  

@@ -15,12 +15,12 @@ ms.assetid: bd56ffe4-0855-4ada-8aca-251fbc6ff2ce
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: bda6c6038a4bdfce089d8523c2b4655d1b4d2d39
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 1280bb44d11ce4f8234d544bf113e796a9c3c85c
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53362093"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54133381"
 ---
 # <a name="mssqlserver17832"></a>MSSQLSERVER_17832
     
@@ -51,7 +51,7 @@ ms.locfileid: "53362093"
 > [!CAUTION]  
 >  [!INCLUDE[ssNoteRegistry](../../includes/ssnoteregistry-md.md)]  
   
- **Per modificare il valore di MaxTokenSize****nel computer del server**  
+ **Per modificare il valore di MaxTokenSize nel computer del server**  
   
 1.  Fare clic sul menu **Start** e scegliere **Esegui**.  
   

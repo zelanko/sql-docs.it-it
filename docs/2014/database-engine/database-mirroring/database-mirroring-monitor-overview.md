@@ -14,12 +14,12 @@ ms.assetid: 8ebbdcd6-565a-498f-b674-289c84b985eb
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 876397aeab28f0d328e3fb80555bdae18699bb01
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 36dcb23a2e4dde09d5c57d7c837fa90eae3fddf5
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52536967"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54133881"
 ---
 # <a name="database-mirroring-monitor-overview"></a>Panoramica di Monitoraggio mirroring del database
   Se si dispone delle autorizzazioni corrette, è possibile utilizzare Monitoraggio mirroring del database per monitorare eventuali subset dei database con mirroring su un'istanza del server. Il monitoraggio consente di verificare se e quanto correttamente i dati vengono trasmessi alla sessione di mirroring del database. Monitoraggio mirroring del database è inoltre utile per individuare e risolvere la causa di una riduzione del flusso di dati.  
@@ -45,7 +45,7 @@ ms.locfileid: "52536967"
   
  Per ogni database registrato sono visualizzate le informazioni seguenti:  
   
- *<Nome_database>* **(** *\<Stato>* **,** *<SERVER_PRINCIPALE>* **->** *<SERVER_MIRROR>* **)**  
+ _<Nome_database>_ **(** _\<Stato>_ **,** _<SERVER_PRINCIPALE>_ **->** _<SERVER_MIRROR>_ **)**  
   
  *<Nome_database>*  
  Nome di un database con mirroring registrato in Monitoraggio mirroring del database.  
@@ -64,9 +64,9 @@ ms.locfileid: "52536967"
  *<PRINCIPAL_SERVER>*  
  Nome del partner che rappresenta attualmente l'istanza del server principale. Il nome è nel formato seguente:  
   
- *<SYSTEM_NAME>*[**\\***<nome_istanza>*]  
+ *<NOME_SISTEMA>*[**\\**_<nome_istanza>_]  
   
- dove *<NOME_SISTEMA>* è il nome del sistema contenente l'istanza del server. Per un'istanza del server non predefinita, viene anche visualizzato il nome dell'istanza, *<NOME_SISTEMA>***\\***<nome_istanza>*.  
+ dove *<NOME_SISTEMA>* è il nome del sistema contenente l'istanza del server. Per un'istanza del server non predefinita, viene anche visualizzato il nome dell'istanza, _<NOME_SISTEMA>_**\\**_<nome_istanza>_.  
   
  *<MIRROR_SERVER>*  
  Nome del partner che rappresenta attualmente l'istanza del server mirror. Il formato è identico a quello del server principale.  
@@ -81,7 +81,7 @@ ms.locfileid: "52536967"
   
  Un amministratore di sistema può visualizzare la configurazione corrente degli avvisi per il database selezionando la pagina a schede **Avvisi** . Da questa pagina è possibile accedere alla finestra di dialogo **Imposta valori di soglia avvisi** per abilitare e configurare una o più soglie degli avvisi.  
   
- Nell'intestazione sopra le schede, il riquadro dei dettagli visualizza l'ora dell'ultimo aggiornamento delle informazioni di stato nel monitoraggio nel formato **Ultimo aggiornamento:***\<data>**\<ora>*. Monitoraggio mirroring del database recupera in genere le informazioni di stato dalle istanze del server principale e mirror in momenti diversi. Viene visualizzato l'orario relativo alla meno recente delle due operazioni.  
+ Nell'intestazione sopra le schede, il riquadro dei dettagli visualizza l'ora dell'ultimo aggiornamento delle informazioni di stato nel monitoraggio nel formato **Ultimo aggiornamento:**_\<data>_*\<ora>*. Monitoraggio mirroring del database recupera in genere le informazioni di stato dalle istanze del server principale e mirror in momenti diversi. Viene visualizzato l'orario relativo alla meno recente delle due operazioni.  
   
 ## <a name="action-menu"></a>Menu Azione  
  Il menu **Azione** include sempre i comandi seguenti:  

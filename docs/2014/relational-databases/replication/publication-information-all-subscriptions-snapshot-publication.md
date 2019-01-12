@@ -12,12 +12,12 @@ ms.assetid: 7ce656c2-6e60-4625-8955-1daff641070c
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 30f407c862bdc0b4cc38b225b9ff6842e8fbcce0
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 3665647e89c03b75230acf58d2f5193fceefe878
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52776943"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54135731"
 ---
 # <a name="publication-information-all-subscriptions-snapshot-publication"></a>Informazioni sulla pubblicazione, Tutte le sottoscrizioni (Pubblicazione snapshot)
   Nella scheda **Tutte le sottoscrizioni** vengono visualizzate le informazioni su tutte le sottoscrizioni della pubblicazione snapshot selezionata.  
@@ -69,8 +69,7 @@ ms.locfileid: "52776943"
   
 ## <a name="see-also"></a>Vedere anche  
  [Avviare Monitoraggio replica](monitor/start-the-replication-monitor.md)   
- [Visualizzare le informazioni ed eseguire attività per una sottoscrizione &#40;Monitoraggio replica&#41;](monitor/view-information-and-perform-tasks-for-a-subscription-replication-monitor.md)   
- [Visualizzare le informazioni ed eseguire attività relative agli agenti associati a una sottoscrizione &#40;Monitoraggio replica&#41;](monitor/view-information-and-perform-tasks-for-subscription-agents.md)   
+ [Visualizzare informazioni ed eseguire attività con Monitoraggio replica](monitor/view-information-and-perform-tasks-replication-monitor.md)   
  [Monitoraggio della replica](monitoring-replication.md)  
   
   

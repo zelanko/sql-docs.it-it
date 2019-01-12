@@ -13,12 +13,12 @@ ms.assetid: 670abd41-d204-4cd7-a371-7664e603a0ce
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: f58b96f2b8d95f31eeb89c9e0796b39a221b0a66
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 7033db55df0dd9b25c3dee5accdd4259842a571b
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52786123"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54133321"
 ---
 # <a name="article-options-for-merge-replication"></a>Opzioni degli articoli per la replica di tipo merge
   Sono disponibili diverse opzioni per gli articoli di tabella di merge che consentono di adattare il comportamento della replica alle esigenze delle applicazioni. La replica di tipo merge consente di eseguire le operazioni seguenti:  
@@ -29,11 +29,11 @@ ms.locfileid: "52786123"
   
 -   Specificare che le eliminazioni di uno o più articoli non devono essere rilevate dai trigger di replica e dalle tabelle di sistema. Questa opzione può essere utile in molti scenari applicativi, inclusi quelli in cui vengono utilizzate eliminazioni batch che non richiedono una replica. Per altre informazioni, vedere [Ottimizzare le prestazioni della replica di tipo merge con il rilevamento condizionale delle eliminazioni](optimize-merge-replication-performance-with-conditional-delete-tracking.md).  
   
--   Specificare l'ordine di elaborazione degli articoli per garantire che corrisponda a quello richiesto dall'applicazione. Per altre informazioni, vedere [Specificare l'ordine di elaborazione degli articoli di merge](specify-the-processing-order-of-merge-articles.md).  
+-   Specificare l'ordine di elaborazione degli articoli per garantire che corrisponda a quello richiesto dall'applicazione. Per altre informazioni, vedere [delle proprietà di replica di tipo Merge specificare](../publish/specify-merge-replication-properties.md).  
   
 -   Specificare che i set di record correlati devono essere elaborati come unità. Per impostazione predefinita, la replica di tipo merge elabora le modifiche nelle tabelle procedendo riga per riga. Per altre informazioni, vedere [Raggruppare modifiche alle righe correlate con record logici](group-changes-to-related-rows-with-logical-records.md).  
   
--   Utilizzare il rilevamento e la risoluzione dei conflitti per i casi in cui è possibile che gli stessi dati vengano modificati in più nodi di una topologia. Per altre informazioni, vedere [Detect and Resolve Merge Replication Conflicts](advanced-merge-replication-resolve-merge-replication-conflicts.md).  
+-   Utilizzare il rilevamento e la risoluzione dei conflitti per i casi in cui è possibile che gli stessi dati vengano modificati in più nodi di una topologia. Per altre informazioni, vedere [Detect and Resolve Merge Replication Conflicts](advanced-merge-replication-conflict-detection-and-resolution.md).  
   
 -   Specificare le opzioni di schema, ad esempio se i vincoli e i trigger vengono copiati nel Sottoscrittore. Per altre informazioni, vedere [Specificare le opzioni dello schema](../publish/specify-schema-options.md).  
   

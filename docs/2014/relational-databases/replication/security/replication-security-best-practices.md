@@ -15,12 +15,12 @@ ms.assetid: 1ab2635d-0992-4c99-b17d-041d02ec9a7c
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 18a3bed07be7fd035a5011d16c528525685cdfb6
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 7db85ce6d63cd6c3eb458434357fa5a2d8127dec
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52781173"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54135931"
 ---
 # <a name="replication-security-best-practices"></a>Procedure consigliate per la sicurezza della replica
   La replica implica lo spostamento di dati in ambienti distribuiti che includono reti Intranet in un singolo dominio, applicazioni che accedono a dati tra domini non attendibili e Internet. È importante individuare l'approccio migliore per la protezione delle connessioni di replica in queste diverse circostanze.  
@@ -37,7 +37,7 @@ ms.locfileid: "52781173"
   
     -   [Replication Agent Executables Concepts](../concepts/replication-agent-executables-concepts.md)  
   
--   Eseguire ogni agente di replica con un diverso account di Windows e utilizzare l'autenticazione di Windows per tutte le connessioni agli agenti di replica. Per altre informazioni su come specificare gli account, vedere [Gestire gli account di accesso e le password nella replica](manage-logins-and-passwords-in-replication.md).  
+-   Eseguire ogni agente di replica con un diverso account di Windows e utilizzare l'autenticazione di Windows per tutte le connessioni agli agenti di replica. Per altre informazioni su come specificare gli account, vedere [Gestire gli account di accesso e le password nella replica](identity-and-access-control-replication.md#manage-logins-and-passwords-in-replication).  
   
 -   Concedere agli agenti solo le autorizzazioni necessarie. Per ulteriori informazioni, vedere la sezione relativa alle autorizzazioni necessarie per gli agenti in [Replication Agent Security Model](replication-agent-security-model.md).  
   
@@ -73,6 +73,6 @@ ms.locfileid: "52781173"
  [Proteggere il sottoscrittore](secure-the-subscriber.md)   
  [Proteggere il database di distribuzione](secure-the-distributor.md)   
  [Proteggere il server di pubblicazione](secure-the-publisher.md)   
- [Sicurezza e protezione #40;replica&#41;](security-and-protection-replication.md)  
+ [Sicurezza della replica di SQL Server](view-and-modify-replication-security-settings.md)  
   
   

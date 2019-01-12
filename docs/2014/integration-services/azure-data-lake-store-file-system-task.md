@@ -1,7 +1,7 @@
 ---
 title: Attività File system di Azure Data Lake Store | Microsoft Docs
 ms.custom: ''
-ms.date: 08/24/2017
+ms.date: 01/09/2019
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.technology:
@@ -14,35 +14,38 @@ ms.assetid: 02b9edd7-6ef9-463e-abbf-e1830bcae875
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 0c6b4c27b0edde310ba3252dd67bf8f51f40f0e5
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: f1b3fc1317e4454008a628c03e189e690bfeb21d
+ms.sourcegitcommit: 1f53b6a536ccffd701fc87e658ddac714f6da7a2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48136561"
+ms.lasthandoff: 01/10/2019
+ms.locfileid: "54206277"
 ---
 # <a name="azure-data-lake-store-file-system-task"></a>Attività File system di Azure Data Lake Store
-Il **attività di sistema di File di Azure Data Lake Store** consente agli utenti di eseguire varie operazioni del file system sul [Azure Data Lake Store (ADLS)](https://azure.microsoft.com/en-us/services/data-lake-store/).
+
+Il **attività di sistema di File di Azure Data Lake Store** consente agli utenti di eseguire varie operazioni del file system sul [Azure Data Lake Store (ADLS)](https://azure.microsoft.com/services/data-lake-store/).
 
 Per aggiungere un'attività File System di Azure Data Lake Store a un pacchetto, trascinarla dalla casella degli strumenti SSIS ai canvas di progettazione. Quindi fare doppio clic su attività, o l'attività e scegliere **modifica**, per aprire la finestra di dialogo Editor dell'attività.
 
 La proprietà **Operation** specifica l'operazione del file system da eseguire. Sono supportate le operazioni seguenti.
 
-* **CopyToADLS** per caricare file in ADLS.
-* **CopyFromADLS** per scaricare file da ADLS.
+* **CopyToADLS:** Caricare file in Azure Data Lake Store.
+* **CopyFromADLS:** Scaricare i file da Azure Data Lake Store.
 
 Per qualsiasi operazione è necessario specificare una gestione della connessione di Azure Data Lake.
 
 Di seguito sono riportate le descrizioni delle proprietà specifiche per ogni operazione.
 
 ## <a name="copytoadls"></a>CopyToADLS
-* **LocalDirectory:** specifica la directory di origine che contiene i file da caricare.
-* **FileNamePattern:** specifica un filtro di nome file per i file di origine. Verranno caricati solo i file il cui nome corrisponde al modello specificato. Sono supportati i caratteri jolly `*` e `?`.
-* **SearchRecursively:** specifica se cercare in modo ricorsivo i file da caricare all'interno della directory di origine.
-* **AzureDataLakeDirectory:** specifica la directory di destinazione di ADLS in cui caricare i file.
-* **FileExpiry:** specifica una data di scadenza e l'ora per i file caricati in Azure Data Lake Store o lasciare vuoto per indicare che i file non scadono mai questa proprietà.
+
+* **LocalDirectory:** Specifica la directory di origine che contiene i file da caricare.
+* **FileNamePattern:** Specifica un filtro di nome file per file di origine. Verranno caricati solo i file il cui nome corrisponde al modello specificato. Sono supportati i caratteri jolly `*` e `?`.
+* **SearchRecursively:** Specifica se eseguire la ricerca in modo ricorsivo all'interno della directory di origine per i file da caricare.
+* **AzureDataLakeDirectory:** Specifica la directory di destinazione di Azure Data Lake Store per caricare i file.
+* **FileExpiry:** Specifica una data di scadenza e l'ora per i file caricati in Azure Data Lake Store, o lasciare vuoto per indicare che i file non scadono mai questa proprietà.
 
 ## <a name="copyfromadls"></a>CopyFromADLS
-* **AzureDataLakeDirectory:** specifica la directory di origine di ADLS che contiene i file da scaricare.
-* **SearchRecursively:** specifica se cercare in modo ricorsivo i file da scaricare all'interno della directory di origine.
-* **LocalDirectory:** specifica la directory di destinazione in cui archiviare i file scaricati.
+
+* **AzureDataLakeDirectory:** Specifica la directory di origine ADLS che contiene i file da scaricare.
+* **SearchRecursively:** Specifica se eseguire la ricerca in modo ricorsivo all'interno della directory di origine per i file da scaricare.
+* **LocalDirectory:** Specifica la directory di destinazione per archiviare i file scaricati.

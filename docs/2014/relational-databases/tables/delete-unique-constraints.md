@@ -16,12 +16,12 @@ ms.assetid: 71e563fc-f5d7-4c2e-a42f-f0695a831f32
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 6ff1ea78afa77211504e6a0b17c8931183dead73
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 8225039ece914c461af34f5344350227d6a39cdc
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52798353"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54132431"
 ---
 # <a name="delete-unique-constraints"></a>Eliminazione di vincoli univoci
   È possibile eliminare un vincolo univoco in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] tramite [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)]. L'eliminazione di un vincolo univoco consente di rimuovere il requisito di univocità per i valori immessi nella colonna o nella combinazione di colonne inclusa nell'espressione del vincolo ed elimina l'indice univoco corrispondente.  
@@ -65,7 +65,7 @@ ms.locfileid: "52798353"
   
 4.  Fare clic su **Elimina**.  
   
-5.  Scegliere **Salva** *nome tabella* dal menu **File**.  
+5.  Scegliere **Salva** _nome tabella_ dal menu **File**.  
   
 ##  <a name="TsqlProcedure"></a> Utilizzo di Transact-SQL  
   

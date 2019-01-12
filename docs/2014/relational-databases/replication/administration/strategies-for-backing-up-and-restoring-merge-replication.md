@@ -15,22 +15,19 @@ ms.assetid: b8ae31c6-d76f-4dd7-8f46-17d023ca3eca
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: f4d1bdc1f39e7e8e40b75b02bcb258f23ee411a7
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: a91d050e489aa782ab10490d294a7fba8c806fe4
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52757485"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54131911"
 ---
 # <a name="strategies-for-backing-up-and-restoring-merge-replication"></a>Strategie di backup e ripristino della replica di tipo merge
   Per la replica di tipo merge, eseguire periodicamente il backup dei database seguenti:  
   
--   Database di pubblicazione nel server di pubblicazione.  
-  
--   Database di distribuzione nel server di distribuzione.  
-  
--   Database di sottoscrizione in ogni Sottoscrittore.  
-  
+-   Database di pubblicazione nel server di pubblicazione.   
+-   Database di distribuzione nel server di distribuzione.    
+-   Database di sottoscrizione in ogni Sottoscrittore.    
 -   Database di sistema **master** e **msdb** nel server di pubblicazione, nel database di distribuzione e in tutti i Sottoscrittori. È necessario che il backup di questi database venga eseguito contemporaneamente e che venga inoltre eseguito nello stesso momento di quello del relativo database di replica. Eseguire, ad esempio, il backup dei database **master** e **msdb** nel server di pubblicazione nello stesso momento in cui si esegue il backup del database di pubblicazione. Se il database di pubblicazione viene ripristinato, verificare che i database **master** e **msdb** siano consistenti con il database di pubblicazione in termini di impostazioni e di configurazione della replica.  
   
  Se si eseguono backup regolari del log, le eventuali modifiche correlate alla replica dovrebbero essere incluse nei backup del log. Se non si eseguono backup del log, è necessario eseguire un backup ogni volta che viene modificata un'impostazione relativa alla replica. Per altre informazioni, vedere [Operazioni comuni che richiedono il backup del database](common-actions-requiring-an-updated-backup.md).  

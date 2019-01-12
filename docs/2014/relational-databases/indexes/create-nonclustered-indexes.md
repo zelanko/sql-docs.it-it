@@ -16,12 +16,12 @@ ms.assetid: 9402029a-1227-46c4-93aa-c2122eb1b943
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 932bd340e84e352eb6de2bd714508135328024d1
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 3dc7c4b9b32ee872ec48e78ecb05a713f2cf8a12
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52533060"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54132015"
 ---
 # <a name="create-nonclustered-indexes"></a>Creare indici non cluster
   È possibile creare indici non cluster in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] utilizzando [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)]. Un indice non cluster è una struttura di indice separata dai dati archiviati in una tabella che riordina una o più colonne selezionate. Spesso gli indici non cluster consentono di trovare i dati più rapidamente rispetto alla ricerca nella tabella sottostante. Le query talvolta possono ottenere risposta unicamente mediante i dati presenti nell'indice non cluster oppure l'indice non cluster può puntare il [!INCLUDE[ssDE](../../includes/ssde-md.md)] alle righe nella tabella sottostante. Gli indici non cluster vengono creati generalmente per migliorare le prestazioni delle query di utilizzo frequente non coperte dall'indice cluster oppure per individuare le righe in una tabella senza un indice cluster (denominato heap). In una vista tabella o indicizzata è possibile creare più indici non cluster.  
@@ -82,7 +82,7 @@ ms.locfileid: "52533060"
   
 8.  Scegliere **Chiudi**.  
   
-9. Scegliere **Salva***nome_tabella* dal menu **File**.  
+9. Nel menu **File** scegliere **Salva**_table_name_.  
   
 #### <a name="to-create-a-nonclustered-index-by-using-object-explorer"></a>Per creare un indice non cluster tramite Esplora oggetti  
   
@@ -98,7 +98,7 @@ ms.locfileid: "52533060"
   
 6.  In **Colonne chiave indice**fare clic su **Aggiungi**.  
   
-7.  Nella finestra di dialogo **Seleziona colonne da***nome_tabella* selezionare le caselle di controllo delle colonne di tabella da aggiungere all'indice non cluster.  
+7.  Nella finestra di dialogo **Seleziona colonne da**_table_name_ selezionare le caselle di controllo delle colonne di tabella da aggiungere all'indice non cluster.  
   
 8.  Fare clic su **OK**.  
   

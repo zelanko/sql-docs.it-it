@@ -17,19 +17,19 @@ ms.assetid: c6bad147-1449-4e20-a42e-b51aed76963c
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: f4614ab97c2f5726c1c5382fbe87b9198f9cf2f5
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: cd8520a26b28c16876163cf8f2c0f7a57b3c33ad
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47800729"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54136031"
 ---
 # <a name="cdcfncdcgetallchangesltcaptureinstancegt--transact-sql"></a>cdc.fn_cdc_get_all_changes_&lt;capture_instance&gt;  (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Restituisce una riga per ciascuna modifica applicata alla tabella di origine all'interno dell'intervallo del numero di sequenza del file di log (LSN) specificato. Se a una riga di origine vengono applicate più modifiche durante l'intervallo, ogni modifica è riportata nel set di risultati restituito. Oltre alla restituzione dei dati delle modifiche, quattro colonne di metadati forniscono le informazioni necessarie per applicare le modifiche a un'altra origine dati. Al contenuto delle colonne dei metadati e alle righe restituite nel set di risultati vengono applicate le opzioni di filtro di riga. Quando è specificata l'opzione di filtro di riga 'all', per l'identificazione di ogni modifica è disponibile esattamente una riga. Quando è specificata l'opzione 'all update old', le operazioni di aggiornamento sono rappresentate su due righe: una contiene i valori delle colonne acquisite prima dell'aggiornamento e l'altra contiene i valori delle colonne acquisite dopo l'aggiornamento.  
   
- Questa funzione di enumerazione viene creata nel momento in cui una tabella di origine è abilitata per Change Data Capture. Il nome della funzione è derivato e utilizza il formato **cdc.fn_cdc_get_all_changes_***capture_instance* in cui *capture_instance* è il valore specificato per l'istanza di acquisizione quando la tabella di origine è abilitato per change data capture.  
+ Questa funzione di enumerazione viene creata nel momento in cui una tabella di origine è abilitata per Change Data Capture. Il nome della funzione è derivato e utilizza il formato **CDC. fn_cdc_get_all_changes _**_capture_instance_ in cui *capture_instance* è il valore specificato per l'acquisizione istanza quando la tabella di origine è abilitata per change data capture.  
   
  ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -69,7 +69,7 @@ cdc.fn_cdc_get_all_changes_capture_instance ( from_lsn , to_lsn , '<row_filter_o
   
 ## <a name="table-returned"></a>Tabella restituita  
   
-|Nome colonna|Tipo di dati|Description|  
+|Nome colonna|Tipo di dati|Descrizione|  
 |-----------------|---------------|-----------------|  
 |**__$start_lsn**|**binary(10)**|Numero LSN di commit associato alla modifica. Mantiene l'ordine del commit della modifica. Le modifiche di cui è stato eseguito il commit nella stessa transazione condividono lo stesso valore LSN di commit.|  
 |**__$seqval**|**binary(10)**|Valore di sequenza utilizzato per ordinare le modifiche a una riga all'interno di una transazione.|  

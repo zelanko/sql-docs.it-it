@@ -18,12 +18,12 @@ ms.assetid: d599c791-200d-46f8-b758-97e761a1a5c0
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 3b9390b198ddcb9a54691a7f33b8f52d520356d8
-ms.sourcegitcommit: 0f7cf9b7ab23df15624d27c129ab3a539e8b6457
+ms.openlocfilehash: 232b071c11d4a2a0bb2e42b6f9787d07f99e21e2
+ms.sourcegitcommit: 170c275ece5969ff0c8c413987c4f2062459db21
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51292423"
+ms.lasthandoff: 01/11/2019
+ms.locfileid: "54226588"
 ---
 # <a name="xquery-and-static-typing"></a>XQuery e tipizzazione statica
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -60,7 +60,7 @@ ms.locfileid: "51292423"
   
  Se è necessario dopo una conversione implicita, il controllo dei tipi statici garantisce che solo i valori dei tipi consentiti con la cardinalità corretta vengano passati a un'operazione. Per "string" + 1, riconosce che il tipo statico di "string" sia **xs: String**. Poiché non si tratta di un tipo consentito per il **+** viene generato un errore di tipo operazione.  
   
- In caso di addizione del risultato di un'espressione arbitraria E1 a un'espressione arbitraria E2 (E1 + E2), l'inferenza dei tipi statici determina innanzitutto i tipi statici di E1 e di E2 e quindi confronta tali tipi statici con quelli consentiti per l'operazione. Ad esempio, se il tipo statico di E1 può essere un' **xs: String** o un' **xs: integer**, il controllo dei tipi statici restituisce un errore di tipo, anche se alcuni valori in fase di esecuzione potrebbe essere Integer. Lo stesso sarebbe il caso se fosse il tipo statico di E1 **xs: integer\***. Poiché il **+** operazione accetta solo un numero intero ed E1 può restituire zero o maggiore di 1, il controllo dei tipi statici genera un errore.  
+ In caso di addizione del risultato di un'espressione arbitraria E1 a un'espressione arbitraria E2 (E1 + E2), l'inferenza dei tipi statici determina innanzitutto i tipi statici di E1 e di E2 e quindi confronta tali tipi statici con quelli consentiti per l'operazione. Ad esempio, se il tipo statico di E1 può essere un' **xs: String** o un' **xs: integer**, il controllo dei tipi statici restituisce un errore di tipo, anche se alcuni valori in fase di esecuzione potrebbe essere Integer. Lo stesso sarebbe il caso se fosse il tipo statico di E1 **xs: integer&#42;**. Poiché il **+** operazione accetta solo un numero intero ed E1 può restituire zero o maggiore di 1, il controllo dei tipi statici genera un errore.  
   
  Come menzionato in precedenza, l'inferenza deduce spesso un tipo più complesso rispetto alle informazioni in possesso dell'utente riguardo ai tipi di dati da passare. In tali casi, l'utente deve riformulare la query. In genere, tra i casi tipici rientrano i seguenti:  
   
@@ -73,7 +73,7 @@ ms.locfileid: "51292423"
 ## <a name="type-checking-of-union-types"></a>Verifica dei tipi unione  
  I tipi unione devono essere gestiti con particolare attenzione, perché possono causare problemi durante la verifica dei tipi. Due di questi problemi sono illustrati negli esempi seguenti.  
   
-### <a name="example-function-over-union-type"></a>Esempio: funzione su tipo unione  
+### <a name="example-function-over-union-type"></a>Esempio: Funzione su tipo unione  
  Si consideri la seguente definizione per l'elemento <`r`> di tipo unione:  
   
 ```  
@@ -86,7 +86,7 @@ ms.locfileid: "51292423"
   
  Nel contesto di XQuery, la funzione "average" `fn:avg (//r)` restituisce un errore statico perché il compilatore XQuery non è possibile aggiungere valori di tipi diversi (**xs: int**, **xs: float** o **xs: doppie**) per il <`r`> elementi nell'argomento **fn:avg()**. Per risolvere il problema, è necessario riscrivere la chiamata alla funzione nel modo seguente: `fn:avg(for $r in //r return $r cast as xs:double ?)`.  
   
-### <a name="example-operator-over-union-type"></a>Esempio: operatore su tipo unione  
+### <a name="example-operator-over-union-type"></a>Esempio: Operatore su tipo unione  
  L'operazione di addizione ('+') richiede tipi di operandi specifici. Di conseguenza, per l'elemento <`r`> l'espressione `(//r)[1] + 1` restituisce un errore statico con la definizione di tipo illustrata in precedenza. È possibile risolvere il problema riscrivendo l'espressione nel modo seguente: `(//r)[1] cast as xs:int? +1`, dove "?" indica zero o una occorrenza. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] richiede "cast as" con "?", perché ogni operazione di cast può generare una sequenza vuota in caso di errore di run-time.  
   
 ## <a name="see-also"></a>Vedere anche  

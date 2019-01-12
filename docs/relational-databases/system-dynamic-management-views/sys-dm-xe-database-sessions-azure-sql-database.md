@@ -12,12 +12,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: 732d0bc450c23413fb31c7336e93dbf3dc785bec
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 7602e03864a736c6011142fd56c3e6129efcb718
+ms.sourcegitcommit: dd794633466b1da8ead9889f5e633bdf4b3389cd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51662780"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54143271"
 ---
 # <a name="sysdmxedatabasesessions-azure-sql-database"></a>sys.dm_xe_database_sessions (database SQL di Azure)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
@@ -26,9 +26,9 @@ ms.locfileid: "51662780"
   
 ||  
 |-|  
-|**Si applica a**: [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] V12 e tutte le versioni successive.|  
+|**Si applica a**: [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] Versione 12 e tutte le versioni successive.|  
   
-|Nome colonna|Tipo di dati|Description|  
+|Nome colonna|Tipo di dati|Descrizione|  
 |-----------------|---------------|-----------------|  
 |event_session_address|**varbinary(8)**|Indirizzo di memoria della sessione dell'evento. Non ammette i valori Null.|  
 |event_name|**nvarchar(60)**|Nome dell'evento associato all'azione. Non ammette i valori Null.|  
@@ -39,7 +39,7 @@ ms.locfileid: "51662780"
  È richiesta l'autorizzazione VIEW DATABASE STATE.  
   
 ### <a name="relationship-cardinalities"></a>Cardinalità delle relazioni  
-A partire da 2015-07-13, '. dm xe_objects' è una di queste DMV XEvent che non contengono database' nel nome. Non è un errore di digitazione o un errore nella colonna a destra della tabella seguente. Il nome è lo stesso in Microsoft SQL Server e Database SQL di Azure. GeneMi.  
+A partire da 2015-07-13, '. dm xe_objects' è una di queste DMV XEvent che non contengono database' nel nome. Non è un errore di digitazione o un errore nella colonna a destra della tabella seguente. Il nome è lo stesso in Microsoft SQL Server e Database SQL di Azure.  
   
 |From|Per|Relazione|  
 |--------|------|----------------|  

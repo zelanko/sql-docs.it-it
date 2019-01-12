@@ -13,12 +13,12 @@ ms.assetid: 94195797-ad7a-4962-a8e3-b259cd13aa38
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: ae66ab14a058f5fd6cfef462ddcc1c83c5a9cfe3
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 27d5be264fc6e6033997babb4a7aac1e8271a39d
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52823524"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54134951"
 ---
 # <a name="com-based-custom-resolvers"></a>COM-Based Custom Resolvers
   I sistemi di risoluzione personalizzati offrono una flessibilità maggiore rispetto al meccanismo di risoluzione predefinito e possono implementare la logica di business richiesta dalle applicazioni che utilizzano i dati replicati. Un sistema di risoluzione personalizzato basato su COM è una libreria di collegamento dinamico (DLL, dynamic-link library) che implementa l'interfaccia COM **ICustomResolver** con i relativi metodi e proprietà e altre interfacce e definizioni di tipi di supporto progettate appositamente per la risoluzione dei conflitti.  
@@ -32,7 +32,7 @@ ms.locfileid: "52823524"
   
 -   I tipi di modifiche alle righe che si desidera risolvere, ad esempio le operazioni di aggiornamento, inserimento ed eliminazione oppure se il sistema di risoluzione deve essere richiamato durante le operazioni di caricamento o di download delle modifiche di tipo merge o durante entrambi i processi. È possibile specificare un tipo di modifica, tutte le modifiche o qualsiasi combinazione di modifiche. Il sistema di risoluzione dei conflitti del processo di merge predefinito gestisce tutti i conflitti non risolti da un sistema di risoluzione personalizzato.  
   
--   Se utilizzare il rilevamento a livello di colonna per la risoluzione dei conflitti. Quando si utilizza il rilevamento a livello di colonna, vengono contrassegnati come conflitti solo i dati delle colonne in cui si verifica un conflitto. Negli altri casi i dati vengono uniti. I conflitti tuttavia vengono risolti in base alle stesse modalità utilizzate per il rilevamento a livello di riga, ovvero il processo che prevale sovrascrive l'intera riga di dati. I dati tuttavia possono essere una combinazione dei valori del server di pubblicazione e dei Sottoscrittori oppure valori alterati che non provengono né dal server di pubblicazione, né dai Sottoscrittori. Per altre informazioni, vedere [Rilevare e risolvere i conflitti tra repliche di tipo merge](advanced-merge-replication-resolve-merge-replication-conflicts.md).  
+-   Se utilizzare il rilevamento a livello di colonna per la risoluzione dei conflitti. Quando si utilizza il rilevamento a livello di colonna, vengono contrassegnati come conflitti solo i dati delle colonne in cui si verifica un conflitto. Negli altri casi i dati vengono uniti. I conflitti tuttavia vengono risolti in base alle stesse modalità utilizzate per il rilevamento a livello di riga, ovvero il processo che prevale sovrascrive l'intera riga di dati. I dati tuttavia possono essere una combinazione dei valori del server di pubblicazione e dei Sottoscrittori oppure valori alterati che non provengono né dal server di pubblicazione, né dai Sottoscrittori. Per altre informazioni, vedere [Rilevare e risolvere i conflitti tra repliche di tipo merge](advanced-merge-replication-conflict-detection-and-resolution.md).  
   
  Per implementare un sistema di risoluzione dei conflitti personalizzato basato su COM, vedere [Implementazione di un sistema di risoluzione dei conflitti personalizzato per un articolo di tipo merge](../implement-a-custom-conflict-resolver-for-a-merge-article.md).  
   

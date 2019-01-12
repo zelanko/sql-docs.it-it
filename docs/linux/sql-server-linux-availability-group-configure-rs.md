@@ -5,18 +5,17 @@ description: Informazioni sulla configurazione di un SQL Server Always nel grupp
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.date: 02/14/2018
+ms.date: 01/09/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.custom: sql-linux, seodec18
 ms.technology: linux
-ms.assetid: ''
-ms.openlocfilehash: 014ff123618c04f91c0e2c2a39d5ef8e5690a386
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: 60cdef13ec46ab1f859d17f724863f67939e6b6f
+ms.sourcegitcommit: 1f53b6a536ccffd701fc87e658ddac714f6da7a2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53203870"
+ms.lasthandoff: 01/10/2019
+ms.locfileid: "54206497"
 ---
 # <a name="configure-a-sql-server-availability-group-for-read-scale-on-linux"></a>Configurare un gruppo di disponibilità SQL Server per scalabilità in lettura in Linux
 
@@ -24,8 +23,8 @@ ms.locfileid: "53203870"
 
 È possibile configurare un SQL Server Always nel gruppo di disponibilità (AG) per i carichi di lavoro di scalabilità in lettura in Linux. Esistono due tipi di architetture per i gruppi di disponibilità. Un'architettura per la disponibilità elevata utilizza una gestione di cluster per assicurare la continuità aziendale migliorata. Questa architettura può includere anche le repliche con scalabilità in lettura. Per creare l'architettura a disponibilità elevata, vedere [configurare SQL Server gruppo di disponibilità AlwaysOn per la disponibilità elevata in Linux](sql-server-linux-availability-group-configure-ha.md). L'altra architettura supporta solo i carichi di lavoro di scalabilità in lettura. Questo articolo illustra come creare un gruppo di disponibilità senza una Gestione cluster per i carichi di lavoro di scalabilità in lettura. Questa architettura fornisce solo la scalabilità in lettura. Non fornisce la disponibilità elevata.
 
->[!NOTE]
->Un gruppo di disponibilità con `CLUSTER_TYPE = NONE` può includere repliche ospitate in diverse piattaforme del sistema operativo. Non può tuttavia supportare la disponibilità elevata. 
+> [!NOTE]
+> Un gruppo di disponibilità con `CLUSTER_TYPE = NONE` può includere repliche ospitate in diverse piattaforme del sistema operativo. Non può tuttavia supportare la disponibilità elevata. 
 
 [!INCLUDE [Create prerequisites](../includes/ss-linux-cluster-availability-group-create-prereq.md)]
 
@@ -84,7 +83,6 @@ Esistono due modi per eseguire la connessione a repliche secondarie di sola lett
 
 ## <a name="next-steps"></a>Passaggi successivi
 
-* [Configurare gruppi di disponibilità distribuiti](..\database-engine\availability-groups\windows\distributed-availability-groups-always-on-availability-groups.md)
-* [Altre informazioni sui gruppi di disponibilità](..\database-engine\availability-groups\windows\overview-of-always-on-availability-groups-sql-server.md)
+* [Configurare gruppi di disponibilità distribuiti](../database-engine/availability-groups/windows/distributed-availability-groups-always-on-availability-groups.md)
+* [Altre informazioni sui gruppi di disponibilità](../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)
 * [Eseguire un failover manuale forzato](../database-engine/availability-groups/windows/perform-a-forced-manual-failover-of-an-availability-group-sql-server.md)
-
