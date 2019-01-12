@@ -12,12 +12,12 @@ ms.assetid: 022a244c-c2e7-4467-b9a2-c7a27859be22
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: fbd3260e8d32811c405623dbdcc94dd34b0b8711
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: c819fc7fb3b1cc73b67362a0eabd82ad33946fbc
+ms.sourcegitcommit: 78e32562f9c1fbf2e50d3be645941d4aa457e31f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52753263"
+ms.lasthandoff: 01/08/2019
+ms.locfileid: "54100297"
 ---
 # <a name="view-the-properties-of-a-policy-based-management-facet"></a>Visualizzare le proprietà di un facet della gestione basata su criteri
   In questo argomento verrà descritto come visualizzare le proprietà di un facet della gestione basata su criteri in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] utilizzando [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
@@ -51,7 +51,7 @@ ms.locfileid: "52753263"
   
 4.  Fare clic sul segno più per espandere la cartella **Facet** .  
   
-5.  Fare clic con il pulsante destro del mouse sul facet di cui si vogliono visualizzare le proprietà e scegliere **Proprietà**. Per altre informazioni sulle opzioni disponibili nella finestra di dialogo **Proprietà facet -***nome_facet*, vedere [Finestra di dialogo Proprietà facet, pagina Generale](../../integration-services/general-page-of-integration-services-designers-options.md), [Finestra di dialogo Proprietà facet, pagina Criteri dipendenti](facet-properties-dialog-box-dependent-policies-page.md) e [Finestra di dialogo Proprietà facet, pagina Condizioni dipendenti](facet-properties-dialog-box-dependent-conditions-page.md).  
+5.  Fare clic con il pulsante destro del mouse sul facet di cui si vogliono visualizzare le proprietà e scegliere **Proprietà**. Per altre informazioni sulle opzioni disponibili nel **proprietà Facet -**_nome_facet_ la finestra di dialogo, vedere [finestra di dialogo Proprietà Facet, pagina Generale](../../integration-services/general-page-of-integration-services-designers-options.md), [ Finestra di dialogo Proprietà facet, pagina criteri dipendenti](facet-properties-dialog-box-dependent-policies-page.md), e [finestra di dialogo Proprietà Facet, pagina condizioni dipendenti](facet-properties-dialog-box-dependent-conditions-page.md).  
   
 6.  Al termine, fare clic su **Chiudi**.  
   

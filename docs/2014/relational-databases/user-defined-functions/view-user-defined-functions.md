@@ -18,12 +18,12 @@ ms.assetid: a45dfab5-6384-4311-b935-2e23a70c5c10
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 73f3fcdb485d4fdfbb06392414086d25f405a77f
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: ea37fdca56c222cbebbdcb00956938a92fe2c203
+ms.sourcegitcommit: 78e32562f9c1fbf2e50d3be645941d4aa457e31f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52505448"
+ms.lasthandoff: 01/08/2019
+ms.locfileid: "54100556"
 ---
 # <a name="view-user-defined-functions"></a>Visualizzare le funzioni definite dall'utente
   È possibile acquisire informazioni sulla definizione o le proprietà di una funzione definita dall'utente in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] tramite [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)]. Potrebbe essere necessario visualizzare la definizione della funzione per determinare come vengono derivati i dati dalle tabelle di origine o per visualizzare i dati definiti dalla funzione.  
@@ -68,7 +68,7 @@ ms.locfileid: "52505448"
   
 4.  Fare clic con il pulsante destro del mouse sulla funzione di cui si vogliono visualizzare le proprietà e scegliere **Proprietà**.  
   
-     Le proprietà seguenti vengono visualizzate nella finestra di dialogo **Proprietà funzione -** *nome_funzione*.  
+     Le proprietà seguenti vengono visualizzate nella finestra di dialogo **Proprietà funzione -** _nome_funzione_.  
   
      **Database**  
      Nome del database che contiene la funzione.  

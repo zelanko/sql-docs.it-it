@@ -14,12 +14,12 @@ ms.assetid: de3510df-f792-4a9d-80fa-f198fd36cdc8
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: c1093297892ea2e03cb9583a1e5c40a1c2a85b19
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 35d4720a8fe8b8c1b404a97e27b36896f36dd5f7
+ms.sourcegitcommit: 78e32562f9c1fbf2e50d3be645941d4aa457e31f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52781264"
+ms.lasthandoff: 01/08/2019
+ms.locfileid: "54100796"
 ---
 # <a name="view-resource-governor-properties"></a>View Resource Governor Properties
   È possibile creare o configurare entità Resource Governor, ad esempio pool di risorse e gruppi di carico di lavoro, tramite la pagina Proprietà di Resource Governor in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
@@ -73,7 +73,7 @@ ms.locfileid: "52781264"
  Consente di abilitare o disabilitare Resource Governor selezionando o deselezionando la casella di controllo.  
   
  **Pool di risorse**  
- Consente di creare o modificare la configurazione del pool di risorse utilizzando la griglia fornita. Questa griglia viene popolata con le informazioni sui pool interni e sui pool predefiniti. Selezionare un pool da utilizzare facendo clic sulla prima colonna nella riga del pool. Per creare un nuovo pool di risorse, fare clic sulla riga preceduta dall'asterisco (**\***).  
+ Consente di creare o modificare la configurazione del pool di risorse utilizzando la griglia fornita. Questa griglia viene popolata con le informazioni sui pool interni e sui pool predefiniti. Selezionare un pool da utilizzare facendo clic sulla prima colonna nella riga del pool. Per creare un nuovo pool di risorse, fare clic sulla riga preceduta dall'asterisco (**&#42;**).  
   
  **Name**  
  Consente di specificare il nome del pool di risorse.  
@@ -93,7 +93,7 @@ ms.locfileid: "52781264"
  Per altre informazioni, vedere [crea POOL di risorse &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-resource-pool-transact-sql).  
   
  **Gruppi del carico di lavoro per pool di risorse**  
- Consente di creare o modificare la configurazione del gruppo del carico di lavoro utilizzando la griglia fornita. Questa griglia viene popolata con le informazioni sui gruppi interni e sui gruppi predefiniti. Selezionare un gruppo da utilizzare facendo clic sulla prima colonna nella riga del pool. Per creare un nuovo gruppo del carico di lavoro, fare clic sulla riga preceduta dall'asterisco (**\***).  
+ Consente di creare o modificare la configurazione del gruppo del carico di lavoro utilizzando la griglia fornita. Questa griglia viene popolata con le informazioni sui gruppi interni e sui gruppi predefiniti. Selezionare un gruppo da utilizzare facendo clic sulla prima colonna nella riga del pool. Per creare un nuovo gruppo di carico di lavoro, fare clic sulla riga preceduta dall'asterisco (**&#42;**).  
   
  **Name**  
  Consente di specificare il nome del gruppo del carico di lavoro.  

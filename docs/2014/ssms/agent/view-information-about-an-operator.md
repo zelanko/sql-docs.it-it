@@ -17,12 +17,12 @@ ms.assetid: 92c82cdf-f704-444e-9539-82aea7fe6fb7
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 361511051bec6cc33f3062c0c4da13fe8a39329b
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 9d1cab01b6fc496de90975966bfcf29b70e041fa
+ms.sourcegitcommit: 78e32562f9c1fbf2e50d3be645941d4aa457e31f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52751053"
+ms.lasthandoff: 01/08/2019
+ms.locfileid: "54100326"
 ---
 # <a name="view-information-about-an-operator"></a>Visualizzazione delle informazioni relative a un operatore
   In questo argomento viene descritta la procedura per visualizzare le infomazioni relative a un operatoe di [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] tramite [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)].  
@@ -66,7 +66,7 @@ ms.locfileid: "52751053"
   
 4.  Fare clic con il pulsante destro del mouse sull'operatore da visualizzare e selezionare **Proprietà**.  
   
-     Per altre informazioni sulle opzioni disponibili contenute nella finestra di dialogo ****Proprietà nome_operatore** vedere:  
+     Per altre informazioni sulle opzioni disponibili contenute nella finestra di dialogo _Proprietà_**nome_operatore** , vedere:  
   
     -   [Proprietà operatore e operatore New &#40;pagina Generale&#41;](../../integration-services/general-page-of-integration-services-designers-options.md)  
   

@@ -17,12 +17,12 @@ ms.assetid: 7773fb2e-06b5-4c4b-88e9-0ad9132ad273
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 997855d160108abe530affdd2b28e464076fbbb7
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 263df9986df0297c8bf1afdb35d70841835cef4d
+ms.sourcegitcommit: 78e32562f9c1fbf2e50d3be645941d4aa457e31f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48077011"
+ms.lasthandoff: 01/08/2019
+ms.locfileid: "54100636"
 ---
 # <a name="using-catalog-functions"></a>Utilizzo delle funzioni di catalogo
   Tutti i database presentano una struttura che contiene i dati archiviati nel database. Una definizione di tale struttura, insieme ad altre informazioni quali le autorizzazioni, è archiviata in un catalogo (implementato come un set di tabelle di sistema), noto anche come dizionario dei dati.  
@@ -43,7 +43,7 @@ ms.locfileid: "48077011"
   
      Restituisce un elenco dei cataloghi presenti in un server collegato.  
   
- Dopo aver ottenuto un nome del server collegato e un nome di catalogo, il [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] driver ODBC Native Client supporta recupero delle informazioni dal catalogo usando un nome composto due parti *linked_server_name ***.*** catalogo* per *CatalogName* funzioni di catalogo in ODBC seguenti:  
+ Dopo aver ottenuto un nome del server collegato e un nome di catalogo, il [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] driver ODBC Native Client supporta recupero delle informazioni dal catalogo usando un nome composto due parti _linked_server_name_**.** _catalog_ per *CatalogName* funzioni di catalogo in ODBC seguenti:  
   
 -   **SQLColumnPrivileges**  
   
@@ -57,7 +57,7 @@ ms.locfileid: "48077011"
   
 -   **SQLTables**  
   
- Le due parti *linked_server_name ***.*** catalogo* è supportata anche per *FKCatalogName* e *PKCatalogName* sul [SQLForeignKeys](../../native-client-odbc-api/sqlforeignkeys.md).  
+ Le due parti _linked_server_name_**.** _catalog_ è supportato anche per *FKCatalogName* e *PKCatalogName* sul [SQLForeignKeys](../../native-client-odbc-api/sqlforeignkeys.md).  
   
  L'utilizzo di SQLLinkedServers e SQLLinkedCatalogs richiede i file seguenti:  
   

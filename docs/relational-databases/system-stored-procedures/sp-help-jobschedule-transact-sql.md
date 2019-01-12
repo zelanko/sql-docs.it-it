@@ -18,12 +18,12 @@ ms.assetid: 2cded902-9272-4667-ac4b-a4f95a9f008e
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 1a327b07384ce2c12e64612b19c611c57dbbf18b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 36e00cf0e5d39722fee1c60fc86f0e6f81fd7e43
+ms.sourcegitcommit: 78e32562f9c1fbf2e50d3be645941d4aa457e31f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47850369"
+ms.lasthandoff: 01/08/2019
+ms.locfileid: "54100356"
 ---
 # <a name="sphelpjobschedule-transact-sql"></a>sp_help_jobschedule (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -47,12 +47,12 @@ sp_help_jobschedule { [ @job_id = ] job_id | [ @job_name = ] 'job_name' }
  [ **@job_id=** ] *job_id*  
  Numero di identificazione del processo. *job_id*viene **uniqueidentifier**, con un valore predefinito è NULL.  
   
- [ **@job_name=** ] **'***job_name***'**  
+ [  **@job_name=** ] **'**_job_name_**'**  
  Nome del processo. *nome_processo*viene **sysname**, con un valore predefinito è NULL.  
   
-> **Nota:** entrambe *job_id* oppure *job_name* devono essere specificati, ma non è possibile specificarli entrambi.  
+> **NOTA:** Entrambi *job_id* oppure *job_name* devono essere specificati, ma non è possibile specificarli entrambi.  
   
- [  **@schedule_name=** ] **'***schedule_name***'**  
+ [  **@schedule_name=** ] **'**_schedule_name_**'**  
  Nome dell'elemento di pianificazione per il processo. *schedule_name*viene **sysname**, con un valore predefinito è NULL.  
   
  [  **@schedule_id=** ] *schedule_id*  
@@ -66,7 +66,7 @@ sp_help_jobschedule { [ @job_id = ] job_id | [ @job_name = ] 'job_name' }
   
 ## <a name="result-sets"></a>Set di risultati  
   
-|Nome colonna|Tipo di dati|Description|  
+|Nome colonna|Tipo di dati|Descrizione|  
 |-----------------|---------------|-----------------|  
 |**schedule_id**|**int**|Numero di identificazione della pianificazione.|  
 |**schedule_name**|**sysname**|Nome della pianificazione.|  
@@ -88,7 +88,7 @@ sp_help_jobschedule { [ @job_id = ] job_id | [ @job_name = ] 'job_name' }
 |**schedule_uid**|**uniqueidentifier**|Identificatore della pianificazione.|  
 |**job_count**|**int**|Numero di processi restituiti.|  
   
-> **Nota:****sp_help_jobschedule** restituisce i valori di **dbo. sysjobschedules** e **dbo. sysschedules** tabelle di sistema **msdb** .   **sysjobschedules** ogni 20 minuti. Ciò potrebbe influire sui valori restituiti dalla stored procedure.  
+> **Nota: sp_help_jobschedule** restituisce valori dalle **dbo. sysjobschedules** e **dbo. sysschedules** tabelle di sistema **msdb**. **sysjobschedules** ogni 20 minuti. Ciò potrebbe influire sui valori restituiti dalla stored procedure.  
   
 ## <a name="remarks"></a>Note  
  I parametri del **sp_help_jobschedule** può essere usato solo in determinate combinazioni. Se *schedule_id* è specificato, né *job_id* né *job_name* può essere specificato. In caso contrario, il *job_id* oppure *job_name* parametri possono essere utilizzati con *schedule_name*.  
@@ -120,7 +120,7 @@ EXEC dbo.sp_help_jobschedule
 GO  
 ```  
   
-### <a name="b-returning-the-job-schedule-for-a-specific-schedule"></a>B. Restituzione della pianificazione di un processo per una pianificazione specifica  
+### <a name="b-returning-the-job-schedule-for-a-specific-schedule"></a>b. Restituzione della pianificazione di un processo per una pianificazione specifica  
  Nell'esempio seguente vengono restituite informazioni sulla pianificazione `NightlyJobs` e sul processo `RunReports`.  
   
 ```  

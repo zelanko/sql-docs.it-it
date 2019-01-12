@@ -12,12 +12,12 @@ ms.assetid: 4d84239a-68c7-4aa2-8602-2b51dd07260f
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: b347715a601be779b864500a6bc28655141ceeeb
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 00c5e0017b8d81eaea6960f016e40dbc381e69e8
+ms.sourcegitcommit: 78e32562f9c1fbf2e50d3be645941d4aa457e31f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52773473"
+ms.lasthandoff: 01/08/2019
+ms.locfileid: "54100536"
 ---
 # <a name="spatial-indexes-dialog-box-visual-database-tools"></a>Finestra di dialogo Indici spaziali (Visual Database Tools)
   La finestra di dialogo **Indici spaziali** consente di creare indici per le colonne con tipo di dati **geometria** o **geografia** (*colonne spaziali*), che non possono essere indicizzate con la finestra di dialogo **Indici/chiavi** . Ogni colonna spaziale può avere più indici spaziali, ma gli indici devono essere creati uno alla volta.  
@@ -109,7 +109,7 @@ ms.locfileid: "52773473"
  **Blocchi pagine consentiti**  
  Consente di specificare se per l'indice è consentito il blocco a livello di pagina. L'attivazione o la disattivazione di tale blocco incide sulle prestazioni del database.  
   
- **Ricalcola****statistiche**  
+ **Ricalcola statistiche**  
  Consente di specificare se calcolare nuove statistiche quando viene creato l'indice. Il ricalcolo delle statistiche rallenta la compilazione degli indici, ma in genere consente di migliorare le prestazioni delle query.  
   
  **Blocchi righe consentiti**  

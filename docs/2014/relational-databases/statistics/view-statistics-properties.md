@@ -15,12 +15,12 @@ ms.assetid: 0eaa2101-006e-4015-9979-3468b50e0aaa
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 343ba03f20d059763f4b1122aac80e0af80fc2ae
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 8db42e567b80ca282b89d9be29fffff3e643ea7a
+ms.sourcegitcommit: 78e32562f9c1fbf2e50d3be645941d4aa457e31f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52415638"
+ms.lasthandoff: 01/08/2019
+ms.locfileid: "54099966"
 ---
 # <a name="view-statistics-properties"></a>Visualizzare le proprietà delle statistiche
   È possibile visualizzare le statistiche di ottimizzazione delle query correnti per una tabella o una vista indicizzata in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] utilizzando [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)]. L'oggetto statistiche include un'intestazione con metadati relativi alle statistiche, un istogramma con la distribuzione dei valori nella prima colonna chiave dell'oggetto stesso e un vettore di densità per misurare la correlazione tra colonne. Per altre informazioni sugli istogrammi e sui vettori di densità, vedere [DBCC SHOW_STATISTICS &#40;Transact-SQL&#41;](/sql/t-sql/database-console-commands/dbcc-show-statistics-transact-sql)  
@@ -58,9 +58,9 @@ ms.locfileid: "52415638"
   
 5.  Fare clic con il pulsante destro del mouse sull'oggetto statistiche di cui si vogliono visualizzare le proprietà e scegliere **Proprietà**.  
   
-6.  Nella finestra di dialogo **Proprietà statistiche -** *nome_statistiche* selezionare **Dettagli** nel riquadro **Seleziona una pagina**.  
+6.  Nella finestra di dialogo **Proprietà statistiche -** _nome_statistiche_ selezionare **Dettagli** nel riquadro **Seleziona una pagina**.  
   
-     Nella pagina **Dettagli** della finestra di dialogo **Proprietà statistiche -** *nome_statistiche* vengono visualizzate le proprietà seguenti.  
+     Nella pagina **Dettagli** della finestra di dialogo **Proprietà statistiche -** _nome_statistiche_ vengono visualizzate le proprietà seguenti.  
   
      **Nome tabella**  
      Consente di visualizzare il nome della tabella descritta dalle statistiche.  

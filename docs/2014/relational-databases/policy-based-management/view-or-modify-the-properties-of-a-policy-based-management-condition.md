@@ -13,12 +13,12 @@ ms.assetid: 890d7384-8444-4767-bb6f-f5debb155747
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: eb6f8f381b0cc284e0db2816fd56dd130f60de07
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 340423e23037ae401b1e5749fbed38b1822cfb41
+ms.sourcegitcommit: 78e32562f9c1fbf2e50d3be645941d4aa457e31f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52758213"
+ms.lasthandoff: 01/08/2019
+ms.locfileid: "54100585"
 ---
 # <a name="view-or-modify-the-properties-of-a-policy-based-management-condition"></a>Visualizzare o modificare le proprietà di una condizione della gestione basata su criteri
   In questo argomento verrà descritto come visualizzare o modificare le proprietà di una condizione della gestione basata su criteri in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] utilizzando [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)].  
@@ -54,7 +54,7 @@ ms.locfileid: "52758213"
   
 4.  Fare clic sul segno più per espandere la cartella **Condizioni** .  
   
-5.  Fare clic con il pulsante destro del mouse sulla condizione da visualizzare o modificare e scegliere **Proprietà**. Per altre informazioni sulle opzioni disponibili nella finestra di dialogo **Apri condizione -***nome_condizione*, vedere [Finestra di dialogo Crea nuova condizione o Apri condizione, pagina Generale](../../integration-services/general-page-of-integration-services-designers-options.md), [Finestra di dialogo Apri condizione, pagina Criteri dipendenti](open-condition-dialog-box-dependent-policies-page.md), [Finestra di dialogo Crea nuova condizione o Apri condizione, pagina Descrizione](create-new-condition-or-open-condition-dialog-box-description-page.md) e [Finestra di dialogo Modifica avanzata &#40;Condizione&#41;](advanced-edit-condition-dialog-box.md).  
+5.  Fare clic con il pulsante destro del mouse sulla condizione da visualizzare o modificare e scegliere **Proprietà**. Per altre informazioni sulle opzioni disponibili nel **Apri condizione -**_condition_name_ la finestra di dialogo, vedere [Crea nuova condizione o finestra di dialogo Apri condizione, pagina Generale](../../integration-services/general-page-of-integration-services-designers-options.md), [Dialogo Apri condizione, pagina criteri dipendenti](open-condition-dialog-box-dependent-policies-page.md), [Crea nuova condizione o finestra di dialogo Apri condizione, pagina Descrizione](create-new-condition-or-open-condition-dialog-box-description-page.md), e [avanzate modifica &#40; Condizione&#41; finestra di dialogo](advanced-edit-condition-dialog-box.md).  
   
 6.  Al termine, fare clic su **OK**.  
   

@@ -13,12 +13,12 @@ ms.assetid: ba805504-5db5-4731-a8da-a0e89cb20c37
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: a61e48294d39c955e806b8dd4f127bf8bfec2027
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 6d5b5b5ee05f467c0881b38108d126da523ea2e7
+ms.sourcegitcommit: 78e32562f9c1fbf2e50d3be645941d4aa457e31f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52758153"
+ms.lasthandoff: 01/08/2019
+ms.locfileid: "54100226"
 ---
 # <a name="view-or-modify-the-properties-of-a-policy-based-management-policy"></a>Visualizzare o modificare le proprietà dei criteri della gestione basata su criteri
   In questo argomento verrà descritto come visualizzare o modificare le proprietà dei criteri della gestione basata su criteri in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] utilizzando [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)].  
@@ -46,7 +46,7 @@ ms.locfileid: "52758153"
   
 #### <a name="to-view-the-properties-of-all-policies-on-an-object"></a>Per visualizzare le proprietà di tutti i criteri in un oggetto  
   
-1.  In Esplora oggetti fare clic con il pulsante destro del mouse su un server, un oggetto server, un database o un oggetto di database, scegliere **Criteri** , quindi fare clic su **Visualizza**. Per altre informazioni sulle opzioni disponibili nella finestra di dialogo **Visualizza criteri -***nome_oggetto*, vedere [Finestra di dialogo Visualizza criteri](view-policies-dialog-box.md).  
+1.  In Esplora oggetti fare clic con il pulsante destro del mouse su un server, un oggetto server, un database o un oggetto di database, scegliere **Criteri** , quindi fare clic su **Visualizza**. Per altre informazioni sulle opzioni disponibili nel **Visualizza criteri -**_object_name_ finestra di dialogo, vedere [dialogo Visualizza criteri](view-policies-dialog-box.md).  
   
 2.  Al termine, fare clic su **Chiudi**.  
   
@@ -60,7 +60,7 @@ ms.locfileid: "52758153"
   
 4.  Fare clic sul segno più per espandere la cartella **Criteri** .  
   
-5.  Fare clic con il pulsante destro del mouse sui criteri da visualizzare o modificare e selezionare **Proprietà**. Per altre informazioni sulle opzioni disponibili nella finestra di dialogo **Apri criteri -***nome_criteri*, vedere [Finestra di dialogo Crea nuovi criteri o Apri criteri, pagina Generale](../../integration-services/general-page-of-integration-services-designers-options.md) e [Finestra di dialogo Crea nuovi criteri o Apri criteri, pagina Descrizione](create-new-policy-or-open-policy-dialog-box-description-page.md).  
+5.  Fare clic con il pulsante destro del mouse sui criteri da visualizzare o modificare e selezionare **Proprietà**. Per altre informazioni sulle opzioni disponibili nel **Apri criteri -**_nome_criteri_ finestra di dialogo, vedere [crea nuovi criteri o Apri finestra di dialogo dei criteri, pagina Generale](../../integration-services/general-page-of-integration-services-designers-options.md) e[ Crea nuovi criteri o Apri criteri, finestra di dialogo, pagina Descrizione](create-new-policy-or-open-policy-dialog-box-description-page.md).  
   
 6.  Al termine, fare clic su **OK**.  
   

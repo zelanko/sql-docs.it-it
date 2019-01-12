@@ -13,12 +13,12 @@ ms.assetid: 4b97c0b4-03ff-4cfb-9c3f-3b33290b7a2c
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 872b0ffa2cc08c90430ec703cea984ad7d274339
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 7c9a628f912f382f3ee8a87276aa34d0e54e37ba
+ms.sourcegitcommit: 78e32562f9c1fbf2e50d3be645941d4aa457e31f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52527977"
+ms.lasthandoff: 01/08/2019
+ms.locfileid: "54100816"
 ---
 # <a name="update-statistics"></a>Aggiorna statistiche
   È possibile aggiornare le statistiche di ottimizzazione delle query per una tabella o una vista indicizzata in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] utilizzando [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)]. Per impostazione predefinita, tramite Query Optimizer vengono già aggiornate le statistiche nel modo necessario per migliorare il piano di query. In alcuni casi, è possibile migliorare le prestazioni di esecuzione delle query utilizzando UPDATE STATISTICS o la stored procedure `sp_updatestats` per aggiornare le statistiche con una maggiore frequenza rispetto agli aggiornamenti predefiniti.  
@@ -58,7 +58,7 @@ ms.locfileid: "52527977"
   
 5.  Fare clic con il pulsante destro del mouse sull'oggetto che si vuole aggiornare e scegliere **Proprietà**.  
   
-6.  Nel **proprietà statistiche-* * * nome_statistiche* finestra di dialogo, seleziona la **aggiornare le statistiche per le colonne selezionate** casella di controllo e quindi fare clic su **OK**.  
+6.  Nel **proprietà statistiche -**_nome_statistiche_ della finestra di dialogo Seleziona il **aggiornare le statistiche per le colonne selezionate** casella di controllo e quindi fare clic su **OK**.  
   
 ##  <a name="TsqlProcedure"></a> Utilizzo di Transact-SQL  
   

@@ -13,12 +13,12 @@ ms.assetid: 237a577e-b42b-4adb-90cf-aa7fb174f3ab
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: cb12dbcee56debfd88b4706ad69ac3ac2d04113a
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: d4fe48814f8d707b0feeacf7a9a84c79df0ffe71
+ms.sourcegitcommit: 78e32562f9c1fbf2e50d3be645941d4aa457e31f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52398814"
+ms.lasthandoff: 01/08/2019
+ms.locfileid: "54100716"
 ---
 # <a name="specify-fill-factor-for-an-index"></a>Specificare un fattore di riempimento per un indice
   In questo argomento si descrive il fattore di riempimento e come specificare un valore del fattore di riempimento in un indice in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] tramite [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)].  
@@ -79,7 +79,7 @@ ms.locfileid: "52398814"
   
 7.  Scegliere **Chiudi**.  
   
-8.  Nel menu **File** scegliere **Salva***nome_tabella*.  
+8.  Selezionare **Salva** table_name **dal menu**_File_.  
   
 #### <a name="to-specify-a-fill-factor-in-an-index-by-using-object-explorer"></a>Per specificare un fattore di riempimento in un indice tramite Esplora oggetti  
   

@@ -16,12 +16,12 @@ ms.assetid: a0e3a8c4-e3c2-42a5-b2f8-aa06061d3fa6
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 693c36cf0c23004f0538595ac75e1aa5d5039a33
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: c5567abc0893bd183c2468f82278a014e2005113
+ms.sourcegitcommit: 78e32562f9c1fbf2e50d3be645941d4aa457e31f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52768473"
+ms.lasthandoff: 01/08/2019
+ms.locfileid: "54100236"
 ---
 # <a name="view-information-about-an-alert"></a>Visualizzare informazioni su un avviso
   In questo argomento viene descritto come visualizzare le infomazioni sugli avvisi di [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] tramite [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)].  
@@ -57,7 +57,7 @@ ms.locfileid: "52768473"
   
 4.  Fare clic con il pulsante destro del mouse sull'avviso con le informazioni da visualizzare e selezionare **Proprietà**.  
   
-     Per altre informazioni sulle opzioni disponibili contenute nella finestra di dialogo dell'interfaccia utente nella finestra di dialogo ****Proprietà avviso nome_avviso**, vedere:  
+     Per altre informazioni sulle opzioni disponibili contenute nella finestra di dialogo dell'interfaccia utente nella finestra di dialogo _Proprietà dell'avviso_**nome_avviso** , vedere:  
   
     -   [Proprietà-nuovo avviso di avviso &#40;pagina Generale&#41;](../../integration-services/general-page-of-integration-services-designers-options.md)  
   

@@ -18,12 +18,12 @@ ms.assetid: 82fbb48b-603a-4016-a7fb-1ce17fb76919
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 5e5dc7d93b411834ae127d5bce7f775b78dc36ac
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 12058e9c599428b6f0ba6c3014b8aab8b9ae5f61
+ms.sourcegitcommit: 78e32562f9c1fbf2e50d3be645941d4aa457e31f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47815349"
+ms.lasthandoff: 01/08/2019
+ms.locfileid: "54100865"
 ---
 # <a name="spdeletejobschedule-transact-sql"></a>sp_delete_jobschedule (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -36,7 +36,7 @@ ms.locfileid: "47815349"
 ## <a name="remarks"></a>Note  
  È possibile gestire le pianificazioni dei processi in modo indipendente dai processi. Per rimuovere una pianificazione da un processo, usare **sp_detach_schedule**. Per eliminare una pianificazione, utilizzare **sp_delete_schedule**.  
   
-> **Nota:****sp_delete_jobschedule** non supporta le pianificazioni associate a più processi.   Se uno script esistente chiama **sp_delete_jobschedule** per rimuovere una pianificazione collegata a più di un processo, viene restituito un errore.  
+> **Nota: sp_delete_jobschedule** non supporta le pianificazioni associate a più processi. Se uno script esistente chiama **sp_delete_jobschedule** per rimuovere una pianificazione collegata a più di un processo, viene restituito un errore.  
   
 ## <a name="permissions"></a>Permissions  
  Per impostazione predefinita, questa stored procedure può essere eseguita dai membri del ruolo predefinito del server **sysadmin** . Gli altri utenti devono essere membri di uno dei ruoli predefiniti del database di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent seguenti nel database **msdb** :  

@@ -18,12 +18,12 @@ ms.assetid: 45b3dc1c-1cde-45b7-a248-5195c12973e9
 author: VanMSFT
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 16ba2e0130c766763c554d6ec256a8858db3373b
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: 8914ce54d85e99213d923d7bebc186f61f928cf9
+ms.sourcegitcommit: 78e32562f9c1fbf2e50d3be645941d4aa457e31f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53204930"
+ms.lasthandoff: 01/08/2019
+ms.locfileid: "54100486"
 ---
 # <a name="spchangeobjectowner-transact-sql"></a>sp_changeobjectowner (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -46,10 +46,10 @@ sp_changeobjectowner [ @objname = ] 'object' , [ @newowner = ] 'owner'
 ```  
   
 ## <a name="arguments"></a>Argomenti  
- [  **@objname =** ] **'***oggetto***'**  
- Nome di una tabella, vista, funzione definita dall'utente o stored procedure esistente nel database corrente. *oggetto* è un **nvarchar(776)**, non prevede alcun valore predefinito. *oggetto* può essere qualificato con il proprietario dell'oggetto esistente, nel formato *existing_owner ***.*** oggetto* se lo schema e il relativo proprietario hanno lo stesso nome.  
+ [  **@objname =** ] **'**_oggetto_**'**  
+ Nome di una tabella, vista, funzione definita dall'utente o stored procedure esistente nel database corrente. *oggetto* è un **nvarchar(776)**, non prevede alcun valore predefinito. *oggetto* può essere qualificato con il proprietario dell'oggetto esistente, nel formato _existing_owner_**.** _oggetto_ se lo schema e il relativo proprietario hanno lo stesso nome.  
   
- [  **@newowner=**] **' * * * proprietario* **'**  
+ [  **@newowner=**] **'**_proprietario_ **'**  
  Nome dell'account di sicurezza che rappresenta il nuovo proprietario dell'oggetto. *proprietario* viene **sysname**, non prevede alcun valore predefinito. *proprietario* deve essere un utente valido del database, ruolo del server [!INCLUDE[msCoName](../../includes/msconame-md.md)] account di accesso di Windows, o il gruppo di Windows con accesso al database corrente. Se il nuovo proprietario è un utente di Windows o un gruppo di Windows per cui non esiste un'entità corrispondente a livello di database, verrà creato un utente di database.  
   
 ## <a name="return-code-values"></a>Valori restituiti  

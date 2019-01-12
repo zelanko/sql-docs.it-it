@@ -13,12 +13,12 @@ ms.assetid: 64514aed-b846-407b-992e-cf813f9a1a91
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 14bc2f8445f61cb8cbafb94770c646df4d6a48bb
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 8a02385a6cd12b85be1661c738488c000f810510
+ms.sourcegitcommit: 78e32562f9c1fbf2e50d3be645941d4aa457e31f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52748493"
+ms.lasthandoff: 01/08/2019
+ms.locfileid: "54100666"
 ---
 # <a name="specify-default-values-for-columns"></a>Specificare valori predefiniti per le colonne
   È possibile specificare un valore predefinito che sarà immesso nella colonna in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] tramite [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)]. Se non si assegna un valore predefinito e l'utente lascia la colonna vuota, si verificherà quanto segue:  
@@ -71,7 +71,7 @@ ms.locfileid: "52748493"
     > [!NOTE]  
     >  Per specificare un valore predefinito numerico, immettere il numero desiderato. Per specificare un oggetto o una funzione, immetterne il nome. Per specificare un valore predefinito alfanumerico, immettere il valore racchiudendolo tra virgolette singole.  
   
-4.  Scegliere **Salva***nome tabella* dal menu **File**.  
+4.  Nel menu **File** scegliere **Salva**_table name_.  
   
 ##  <a name="TsqlProcedure"></a> Utilizzo di Transact-SQL  
   

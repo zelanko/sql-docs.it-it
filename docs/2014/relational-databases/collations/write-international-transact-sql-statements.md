@@ -18,12 +18,12 @@ ms.assetid: f0b10fee-27f7-45fe-aece-ccc3f63bdcdb
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 8d092939ca68c0d556b33c2f74b6cd4925061716
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 64dc9129373a57de2924b2983e14266a67d4915e
+ms.sourcegitcommit: 78e32562f9c1fbf2e50d3be645941d4aa457e31f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52778343"
+ms.lasthandoff: 01/08/2019
+ms.locfileid: "54100316"
 ---
 # <a name="write-international-transact-sql-statements"></a>Scrittura di istruzioni Transact-SQL internazionali
   Le linee guida seguenti consentono di aumentare il grado di portabilità tra lingue diverse, nonché il supporto di più lingue, per i database e le applicazioni di database che utilizzano istruzioni [!INCLUDE[tsql](../../includes/tsql-md.md)] .  
@@ -36,11 +36,11 @@ ms.locfileid: "52778343"
   
     -   Le applicazioni ADO, OLE DB e ODBC devono utilizzare le clausole di escape seguenti relative a timestamp, data e ora:  
   
-         **{ ts'** aaaa**-***mm***-***gg**hh ***:*** mm ***:*** ss *[**.***fff*] **'}** ad esempio: **{ ts'** 1998**-** 09**-** 24 10 **:** 02 **:** 20 **' }**  
+         **{ts'** yyyy**-**_mm_**-**_ddhh_**:**  _mm_**:**_ss_[**.** _fff_] **'}** , ad esempio: **{ts'** 1998**-** 09**-** 24 10 **:** 02 **:** 20 **'}**  
   
-         **{ d'** *aaaa* **-** *mm* **-** *gg* **'}** ad esempio: **{ d'** 1998**-** 09**-** 24 **'}**  
+         **{ d'** _aaaa_ **-** _mm_ **-** _gg_ **'}** ad esempio: **{ d'** 1998**-** 09**-** 24 **'}**  
   
-         **{ t'** *hh* **:** *mm* **:** *ss* **'}** ad esempio: **{ t'** 10:02:20 **'}**  
+         **{ t'** _hh_ **:** _mm_ **:** _ss_ **'}** such as: **{ t'** 10:02:20 **'}**  
   
     -   Nelle applicazioni che utilizzano altre API, oppure script, stored procedure e trigger di [!INCLUDE[tsql](../../includes/tsql-md.md)] , è necessario utilizzare le stringhe numeriche non separate, Ad esempio, *aaaammgg* come 19980924.  
   

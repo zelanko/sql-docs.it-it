@@ -15,12 +15,12 @@ ms.assetid: d7520c13-a8ee-4ddc-9e9a-54cd3d27ef1c
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 8356014a1b5406f2cd33d5166b5feea7339d782e
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 85f3fe4115f770f45df6dc226eac81e798514f08
+ms.sourcegitcommit: 78e32562f9c1fbf2e50d3be645941d4aa457e31f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53370053"
+ms.lasthandoff: 01/08/2019
+ms.locfileid: "54100266"
 ---
 # <a name="specify-the-endpoint-url-when-adding-or-modifying-an-availability-replica-sql-server"></a>Specifica dell'URL dell'endpoint quando si aggiunge o si modifica una replica di disponibilità (SQL Server)
   Per ospitare una replica di disponibilità per un gruppo di disponibilità, un'istanza del server deve possedere un endpoint del mirroring del database. L'istanza del server utilizza questo endpoint per rimanere in attesa dei messaggi [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] dalle repliche di disponibilità ospitate da altre istanze del server. Per definire una replica di disponibilità per un gruppo di disponibilità, è necessario specificare l'URL dell'endpoint dell'istanza del server che ospiterà la replica. L'*URL dell'endpoint* identifica il protocollo di trasporto dell'endpoint del mirroring del database (TCP), l'indirizzo di sistema dell'istanza del server e il numero di porta associato all'endpoint.  
@@ -39,7 +39,7 @@ ms.locfileid: "53370053"
 ##  <a name="SyntaxOfURL"></a> Sintassi per un URL dell'endpoint  
  La sintassi per un URL dell'endpoint è la seguente:  
   
- TCP**://***\<indirizzo-sistema>***:***\<porta>*  
+ TCP<strong>://</strong>*\<indirizzo_sistema>*<strong>:<strong>*\<porta>*  
   
  dove  
   
@@ -47,15 +47,15 @@ ms.locfileid: "53370053"
   
     -   Poiché i nodi del cluster WSFC (Windows Server Failover Clustering) si trovano nello stesso dominio, è possibile utilizzare il nome del computer, ad esempio `SYSTEM46`.  
   
-    -   Per utilizzare un indirizzo IP, è necessario che esso sia univoco nell'ambiente. È consigliabile utilizzare un indirizzo IP solo se è statico. L'indirizzo IP può essere IP versione 4 (IPv4) o IP versione 6 (IPv6). Un indirizzo IPv6 deve essere racchiuso tra parentesi quadre, ad esempio: **[***<indirizzo_IPv6>***]**.  
+    -   Per utilizzare un indirizzo IP, è necessario che esso sia univoco nell'ambiente. È consigliabile utilizzare un indirizzo IP solo se è statico. L'indirizzo IP può essere IP versione 4 (IPv4) o IP versione 6 (IPv6). Un indirizzo IPv6 deve essere racchiuso tra parentesi quadre, ad esempio **[**_<indirizzo_IPv6>_**]**.  
   
          Per individuare l'indirizzo IP di un sistema, al prompt dei comandi di Windows immettere il comando **ipconfig** .  
   
     -   Il funzionamento del nome di dominio completo è garantito. Il nome di dominio completo è costituito da una stringa di indirizzo definita a livello locale che accetta forme diverse a seconda della posizione. Spesso ma non sempre, un nome di dominio completo è un nome composto che include un nome computer e una serie di segmenti di dominio separati da virgole, ad esempio:  
   
-         *nome_computer* **.** *segmento_dominio*[...**.***segmento_dominio*]  
+         _nome_computer_ **.** _segmento_dominio_[...**.**_segmento_dominio_]  
   
-         dove *nome_computer* è il nome di rete del computer che esegue l'istanza del server e *segmento_dominio*[...**.***segmento_dominio*] è la parte rimanente delle informazioni sul dominio del server, ad esempio: `localinfo.corp.Adventure-Works.com`.  
+         dove *nome_computer*è il nome di rete del computer che esegue l'istanza del server e *segmento_dominio*[...**.**_segmento_dominio_] è la parte rimanente delle informazioni sul dominio del server, ad esempio: `localinfo.corp.Adventure-Works.com`.  
   
          Il contenuto e il numero dei segmenti di dominio sono determinati all'interno della società o dell'organizzazione. Per ulteriori informazioni, vedere [Individuazione del nome di dominio completo](#Finding_FQDN), più avanti in questo argomento.  
   
@@ -104,7 +104,7 @@ ms.locfileid: "53370053"
   
  Per ottenere il nome di dominio completo, concatenare i valori di *<host_name>* e *<Primary_Dns_Suffix>* come riportato di seguito:  
   
- *<host_name>* **.** *<Primary_Dns_Suffix>*  
+ _<host_name>_ **.** _<Primary_Dns_Suffix>_  
   
  Ad esempio, la configurazione IP  
   

@@ -17,12 +17,12 @@ ms.assetid: 99f66ed9-3a75-4e38-ad7d-6c27cc3529a9
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 39e9db45723d32fd78eef35c5600d05b54999e61
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 290454026cc87819bf9ffcf73329bb562e3dc5a4
+ms.sourcegitcommit: 78e32562f9c1fbf2e50d3be645941d4aa457e31f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52749215"
+ms.lasthandoff: 01/08/2019
+ms.locfileid: "54100876"
 ---
 # <a name="upgrade-a-database-using-detach-and-attach-transact-sql"></a>Aggiornamento di un database utilizzando le operazioni di scollegamento e collegamento (Transact-SQL)
   In questo argomento si illustra come utilizzare le operazioni di collegamento e scollegamento per aggiornare un database di [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Dopo essere stato collegato a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], il database è immediatamente disponibile e viene aggiornato automaticamente.  
@@ -88,7 +88,7 @@ ms.locfileid: "52749215"
     > [!IMPORTANT]  
     >  Nel caso di un database di produzione, posizionare su dischi separati il database e il log delle transazioni.  
   
-     Per copiare i file in rete su un disco di un computer remoto, utilizzare il nome UNC (Universal Naming Convention) della posizione remota. Il formato di un nome UNC è **\\\\***Nomeserver***\\***Nomecondivisione***\\***Percorso***\\***Nomefile*. Come per la scrittura di file nel disco rigido locale, è necessario che l'account utente utilizzato dall'istanza di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]disponga delle autorizzazioni appropriate per la lettura o la scrittura di un file nel disco remoto.  
+     Per copiare i file in rete su un disco di un computer remoto, utilizzare il nome UNC (Universal Naming Convention) della posizione remota. Il formato di un nome UNC è **\\\\**_Servername_**\\**_Sharename_**\\**_Path_**\\**_Filename_. Come per la scrittura di file nel disco rigido locale, è necessario che l'account utente utilizzato dall'istanza di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]disponga delle autorizzazioni appropriate per la lettura o la scrittura di un file nel disco remoto.  
   
 3.  Collegare il database spostato e, facoltativamente, il relativo log tramite l'esecuzione dell'istruzione [!INCLUDE[tsql](../../includes/tsql-md.md)] seguente:  
   

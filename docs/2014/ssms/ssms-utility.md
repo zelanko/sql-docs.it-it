@@ -16,12 +16,12 @@ ms.assetid: aafda520-9e2a-4e1e-b936-1b165f1684e8
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 20b6109b5622fb78366ab24886b991185c8dbc76
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: edb7ea682ebef5d99cee7a248681be80fc433312
+ms.sourcegitcommit: 78e32562f9c1fbf2e50d3be645941d4aa457e31f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52777813"
+ms.lasthandoff: 01/08/2019
+ms.locfileid: "54100456"
 ---
 # <a name="ssms-utility"></a>Utilità Ssms
   L'utilità **Ssms** apre [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]. Se specificato, **Ssms** anche una connessione a un server e apre query, script, file, progetti e soluzioni.  
@@ -51,16 +51,16 @@ ms.locfileid: "52777813"
  *solutionfile*  
  Specifica una soluzione da aprire. Il parametro deve includere il percorso completo del file di soluzione.  
   
- [**-S** *nomeserver*]  
+ [**-S** _nomeserver_]  
  Nome server  
   
- [**-d** *databasename*]  
+ [**-d** _databasename_]  
  Nome database  
   
- [**-U** *username*]  
+ [**-U** _username_]  
  Nome utente utilizzato per la connessione tramite l'autenticazione di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] .  
   
- [**-P** *password*]  
+ [**-P** _password_]  
  Password utilizzata per la connessione tramite l'autenticazione di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] .  
   
  [**-E**]  
@@ -69,7 +69,7 @@ ms.locfileid: "52777813"
  [**-nosplash**]  
  Se si specifica questa opzione, in [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] non viene visualizzata la grafica della schermata iniziale all'apertura. Utilizzare questa opzione in caso di connessione al computer che esegue [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] per mezzo di Servizi terminal tramite una connessione a larghezza di banda limitata. Questo argomento non supporta la distinzione tra maiuscole e minuscole e può trovarsi prima o dopo altri argomenti.  
   
- [**-log***[nomefile]?*]  
+ [**-log**_[filename]?_]  
  L'attività [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] viene registrata nel file specificato per la risoluzione dei problemi  
   
  [**-?**]  

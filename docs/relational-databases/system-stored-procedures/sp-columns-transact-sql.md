@@ -19,12 +19,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 1d61c0d2a7c7b15db9e96a354d5b7f062d10ca8f
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 71b5b57625a8feb5d268898ff4865c2039bd358c
+ms.sourcegitcommit: 78e32562f9c1fbf2e50d3be645941d4aa457e31f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52514083"
+ms.lasthandoff: 01/08/2019
+ms.locfileid: "54100506"
 ---
 # <a name="spcolumns-transact-sql"></a>sp_columns (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -46,21 +46,21 @@ sp_columns [ @table_name = ] object
 ```  
   
 ## <a name="arguments"></a>Argomenti  
- [  **@table_name=**] *oggetto*  
+ [  **\@table_name =**] *oggetto*  
  Nome dell'oggetto utilizzato per restituire informazioni sul catalogo. *oggetto* può essere una tabella, vista oppure altro oggetto che dispone di colonne, ad esempio le funzioni con valori di tabella. *oggetto* viene **nvarchar (384)**, non prevede alcun valore predefinito. La ricerca con caratteri jolly è supportata.  
   
- [ **@table_owner****=**] *owner*  
+ [  **\@table_owner =**] *proprietario*  
  Proprietario dell'oggetto utilizzato per restituire informazioni sul catalogo. *proprietario* viene **nvarchar (384)**, con un valore predefinito è NULL. La ricerca con caratteri jolly è supportata. Se *proprietario* non viene specificato, si applicano le regole di visibilità di oggetto predefinito del sistema DBMS sottostante.  
   
  Se l'utente corrente è il proprietario di un oggetto con il nome specificato, vengono restituite le colonne di tale oggetto. Se *owner* non viene specificato e l'utente corrente non dispone di un oggetto con l'oggetto specificato *oggetto*, **sp_columns** Cerca un oggetto con l'oggetto specificato  *oggetto* appartengono al proprietario del database. Se viene individuato, vengono restituite le colonne di tale oggetto.  
   
- [  **@table_qualifier* * * =**] *qualificatore*  
+ [  **\@table_qualifier =**] *qualificatore*  
  Nome del qualificatore dell'oggetto. *qualificatore* viene **sysname**, con un valore predefinito è NULL. Vari prodotti DBMS supportano tre parti di denominazione per oggetti (_qualificatore_**.** _owner_**.** _nome_). In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] questa colonna rappresenta il nome del database. In alcuni prodotti rappresenta il nome del server dell'ambiente di database dell'oggetto.  
   
- [  **@column_name=**] *colonna*  
+ [  **\@column_name =**] *colonna*  
  Colonna singola utilizzata quando si desidera recuperare una sola colonna di informazioni di catalogo. *colonna* viene **nvarchar (384)**, con un valore predefinito è NULL. Se *colonna* viene omesso, vengono restituite tutte le colonne. Nelle [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], *colonna* rappresenta il nome di colonna elencato nella **syscolumns** tabella. La ricerca con caratteri jolly è supportata. Per ottenere la massima interoperabilità, è consigliabile che nel client di gateway siano utilizzati solo i caratteri jolly standard di SQL-92, ovvero i caratteri % e _.  
   
- [ **@ODBCVer=**] *ODBCVer*  
+ [  **\@ODBCVer =**] *ODBCVer*  
  Versione di ODBC utilizzata. *ODBCVer* viene **int**, con un valore predefinito è 2. che indica ODBC versione 2. I valori validi sono 2 e 3. Per le differenze di comportamento tra le versioni 2 e 3, vedere ODBC **SQLColumns** specifica.  
   
 ## <a name="return-code-values"></a>Valori restituiti  

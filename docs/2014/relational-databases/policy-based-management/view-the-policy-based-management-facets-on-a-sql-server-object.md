@@ -12,12 +12,12 @@ ms.assetid: 5f423b9f-a6c4-41a7-9d8d-8f4926ce1fb4
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 462a4e0b58a9a201f0a26c4bb910f47f14c900d9
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: cb2a08d874dd022fdad3646ea263d34dd65b9739
+ms.sourcegitcommit: 78e32562f9c1fbf2e50d3be645941d4aa457e31f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52757953"
+ms.lasthandoff: 01/08/2019
+ms.locfileid: "54100836"
 ---
 # <a name="view-the-policy-based-management-facets-on-a-sql-server-object"></a>Visualizzare i facet della gestione basata su criteri in un oggetto di SQL Server
   In questo argomento verrà descritto come visualizzare tutti i facet della gestione basata su criteri applicati a un oggetto specifico di SQL Server in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] utilizzando [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
@@ -45,7 +45,7 @@ ms.locfileid: "52757953"
   
 1.  In Esplora oggetti fare clic con il pulsante destro del mouse su un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], su un oggetto istanza, su un database o su un oggetto di database, quindi scegliere **Facet**.  
   
-2.  Nella finestra di dialogo **Visualizza facet -***nome_oggetto* selezionare un facet nell'elenco **Facet** per visualizzarne le proprietà. Per ulteriori informazioni sulle opzioni disponibili in questa finestra di dialogo, vedere [View Facets Dialog Box](view-facets-dialog-box.md).  
+2.  Nel **Visualizza facet -**_object_name_ nella finestra di dialogo il **Facet** elencare, selezionare un facet per visualizzarne le proprietà. Per ulteriori informazioni sulle opzioni disponibili in questa finestra di dialogo, vedere [View Facets Dialog Box](view-facets-dialog-box.md).  
   
 3.  Al termine, fare clic su **OK**.  
   
