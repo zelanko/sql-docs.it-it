@@ -16,12 +16,12 @@ ms.assetid: c36e5865-25d5-42b7-b045-dc5036225081
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 7b247e6869d3eea05325fd9020ee6a073540deb4
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: 5cdd5f3b4c4c1dd8ddac0df34423834c3b09b839
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53209130"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54131241"
 ---
 # <a name="spchangepublication-transact-sql"></a>sp_changepublication (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -42,13 +42,13 @@ sp_changepublication [ [ @publication = ] 'publication' ]
 ```  
   
 ## <a name="arguments"></a>Argomenti  
- [  **@publication =** ] **'***pubblicazione***'**  
+ [  **@publication =** ] **'**_pubblicazione_**'**  
  Nome della pubblicazione. *pubblicazione* viene **sysname**, con un valore predefinito è NULL.  
   
- [  **@property =** ] **'***proprietà***'**  
+ [  **@property =** ] **'**_proprietà_**'**  
  Proprietà della pubblicazione da modificare. *proprietà* viene **nvarchar(255**.  
   
- [  **@value =** ] **'***valore***'**  
+ [  **@value =** ] **'**_valore_**'**  
  Nuovo valore della proprietà. *valore* viene **nvarchar(255**, con un valore predefinito è NULL.  
   
  Nella tabella seguente vengono descritte le proprietà della pubblicazione che è possibile modificare e le limitazioni previste per i valori di tali proprietà.  
@@ -130,7 +130,7 @@ Per informazioni sulle proprietà che richiedono la generazione di un nuovo snap
   - **0** specifica che le modifiche apportate all'articolo non causano la reinizializzazione della sottoscrizione. Se la stored procedure rileva che la modifica richiede la reinizializzazione delle sottoscrizioni esistenti, viene generato un errore e non viene apportata alcuna modifica.  
   - **1** specifica che le modifiche apportate all'articolo causano la sottoscrizione esistente per la reinizializzazione e concede l'autorizzazione per la reinizializzazione della sottoscrizione.  
   
-[ **@publisher** =] **'***publisher***'**  
+[ **@publisher** =] **'**_editore_**'**  
  Specifica un non - [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] server di pubblicazione. *server di pubblicazione* viene **sysname**, con un valore predefinito è NULL.  
   
   > [!NOTE]  

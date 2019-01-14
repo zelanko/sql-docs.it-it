@@ -1,11 +1,10 @@
 ---
-title: Monitoraggio (replica) | Microsoft Docs
+title: Monitoraggio della replica | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 helpviewer_keywords:
 - monitoring performance [SQL Server replication], about monitoring replication
@@ -19,23 +18,23 @@ ms.assetid: f182f43a-6af8-45bc-a708-08d5f7a6984a
 author: craigg-msft
 ms.author: craigg
 manager: craigg
-ms.openlocfilehash: 34d88a90890ac047913e1973b37a2a40e831dd01
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: e2b3441d98bc9226abce3a49fd28820df6ec99ab
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48111041"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54134301"
 ---
 # <a name="monitoring-replication"></a>Monitoraggio (replica)
   Il monitoraggio di una topologia di replica rappresenta un aspetto essenziale della distribuzione di una replica. Dato che l'attività di replica viene distribuita, è fondamentale monitorarne l'attività e lo stato su tutti i computer interessati. Per monitorare la replica è possibile utilizzare gli strumenti seguenti:  
   
 -   Monitoraggio replica di[!INCLUDE[msCoName](../../includes/msCoName-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssNoVersion-md.md)]   
   
-     Monitoraggio replica è lo strumento principale per il monitoraggio della replica, caratterizzato da una vista dell'intera attività di replica con priorità al server di pubblicazione. Per altre informazioni, vedere [monitorare la replica](monitor/monitoring-replication-overview.md).  
+     Monitoraggio replica è lo strumento principale per il monitoraggio della replica, caratterizzato da una vista dell'intera attività di replica con priorità al server di pubblicazione. Per altre informazioni, vedere [monitorare le prestazioni con Monitoraggio replica](monitor/monitor-performance-with-replication-monitor.md).  
   
 -   [!INCLUDE[msCoName](../../includes/msCoName-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssManStudioFull-md.md)]  
   
-     [!INCLUDE[ssManStudio](../../includes/ssManStudio-md.md)] consente di accedere a Monitoraggio replica. Consente inoltre di visualizzare lo stato attuale e l'ultimo messaggio registrato dall'agente di lettura log, dall'agente snapshot, dall'agente di merge e dall'agente di distribuzione, con la possibilità di avviare e arrestare ognuno di loro. Per altre informazioni, vedere [Monitor Replication Agents](agents/replication-agents.md).  
+     [!INCLUDE[ssManStudio](../../includes/ssManStudio-md.md)] consente di accedere a Monitoraggio replica. Inoltre, consente di visualizzare lo stato corrente e l'ultimo messaggio registrato dagli agenti seguenti e consente di avviare e arrestare ciascun agente: Agente di lettura log, agente Snapshot, agente di Merge e agente di distribuzione. Per altre informazioni, vedere [Monitor Replication Agents](monitor/monitor-replication-agents.md).  
   
 -   [!INCLUDE[tsql](../../includes/tsql-md.md)] e oggetti RMO (Replication Management Objects)  
   
@@ -50,8 +49,8 @@ ms.locfileid: "48111041"
      Questa opzione può essere utile per monitorare le prestazioni della replica tramite vari contatori. Per altre informazioni, vedere [Monitoring Replication with System Monitor](monitor/monitoring-replication-with-system-monitor.md).  
   
 ## <a name="see-also"></a>Vedere anche  
- [Amministrazione &#40;Replica&#41;](administration/administration-replication.md)   
+ [Domande frequenti sull'amministrazione della replica](administration/frequently-asked-questions-for-replication-administrators.md)   
  [Best Practices for Replication Administration](administration/best-practices-for-replication-administration.md)   
- [Monitorare la replica](monitor/monitoring-replication-overview.md)  
+
   
   

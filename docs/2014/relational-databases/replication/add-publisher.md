@@ -1,5 +1,5 @@
 ---
-title: Aggiungi server di pubblicazione | Microsoft Docs
+title: Finestra di dialogo "Aggiungi server di pubblicazione"
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -14,14 +14,14 @@ ms.assetid: 4b57e298-655f-42c2-82bc-25cdad94a194
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 8fc6041d3d33a7ddaaeb9fb11ff8582c70c7f080
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 735162edb8e7eda06e99d69ed74d4752b7f0d950
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52817493"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54133301"
 ---
-# <a name="add-publisher"></a>Aggiungi server di pubblicazione
+# <a name="sql-server-replication-add-publisher-dialog-box"></a>Finestra di dialogo 'Aggiungi server di pubblicazione' replica di SQL Server 
   La finestra di dialogo **Aggiungi server di pubblicazione** consente di aggiungere uno o più server di pubblicazione al riquadro sinistro di Monitoraggio replica. Dopo l'aggiunta di un server di pubblicazione, selezionare il server nel riquadro sinistro per visualizzare le informazioni relative nel riquadro destro.  
   
 ## <a name="options"></a>Opzioni  

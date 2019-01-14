@@ -13,12 +13,12 @@ ms.assetid: 0903c7b2-ac59-45f1-b7d0-922ecd9d76f8
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: 5fafd1a86686b7609a8b6e0241c05cc858f2dc41
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: df8e06b5de6824ee33fb8e923411ecf3e24e2ca9
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52409698"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54125141"
 ---
 # <a name="reporting-services-in-sql-server-data-tools-ssdt"></a>Reporting Services in SQL Server Data Tools (SSDT)
   [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)] è un [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] ambiente include miglioramenti specifici di soluzioni di business intelligence. [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)] è incluso in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
@@ -40,7 +40,7 @@ ms.locfileid: "52409698"
 ##  <a name="bkmk_ReportServerProjects"></a> Progetti server di report  
  Dopo l'installazione di [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)], in [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)]sono disponibili i modelli di progetto seguenti:  
   
--   **Progetto server di report.** Quando si seleziona un progetto server di report, verrà aperto Progettazione report. Un progetto server di report è un modello di progetti Business Intelligence installato da [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] e disponibile nella finestra di dialogo **Nuovo progetto** . Per altre informazioni, vedere [Aggiungere un report nuovo o esistente a un progetto report &#40;SSRS&#41;](add-a-new-or-existing-report-to-a-report-project-ssrs.md). Le proprietà dei progetti server di report sono applicabili a tutti i report e a tutte le origini dati condivise di un progetto di [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)]. Queste proprietà includono l'URL del server di report e i nomi di cartella per i report e le origini dati condivise. Usare la finestra di dialogo delle **pagine delle proprietà del progetto** per visualizzare i valori correnti delle proprietà. Per aprire questa finestra di dialogo, scegliere il **Project** menu, fare clic su  *\<nome progetto >* **proprietà**.  
+-   **Progetto server di report.** Quando si seleziona un progetto server di report, verrà aperto Progettazione report. Un progetto server di report è un modello di progetti Business Intelligence installato da [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] e disponibile nella finestra di dialogo **Nuovo progetto** . Per altre informazioni, vedere [Aggiungere un report nuovo o esistente a un progetto report &#40;SSRS&#41;](add-a-new-or-existing-report-to-a-report-project-ssrs.md). Le proprietà dei progetti server di report sono applicabili a tutti i report e a tutte le origini dati condivise di un progetto di [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)]. Queste proprietà includono l'URL del server di report e i nomi di cartella per i report e le origini dati condivise. Usare la finestra di dialogo delle **pagine delle proprietà del progetto** per visualizzare i valori correnti delle proprietà. Per aprire questa finestra di dialogo, scegliere il **Project** menu, fare clic su  _\<nome progetto >_ **proprietà**.  
   
 -   **Creazione guidata progetto server di report.** Quando si seleziona un progetto Creazione guidata server di report, verrà creato automaticamente un progetto server di report e verrà aperta la Creazione guidata report. Nella procedura guidata è possibile creare un report seguendo le istruzioni riportate in ogni pagina per creare una stringa di connessione a un'origine dati, impostare le credenziali dell'origine dati, progettare una query, aggiungere un'area dati Tabella o Matrice, specificare i dati del report e i gruppi, selezionare uno stile di carattere e colore, pubblicare il report in un server di report e visualizzare l'anteprima del report in locale. Dopo aver creato un report con la procedura guidata, è possibile modificarne i dati e la finestra di progettazione tramite Progettazione report nel progetto server di report.  
   

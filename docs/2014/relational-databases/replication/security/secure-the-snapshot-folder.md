@@ -12,12 +12,12 @@ ms.assetid: 3cd877d1-ffb8-48fd-a72b-98eb948aad27
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: cb3aa18f17219f46bc5ce6f3d25af7d4bd29c4d9
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: f3612a8b2006978a8098a406a6557d6c9f0f1f7f
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52753953"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54127801"
 ---
 # <a name="secure-the-snapshot-folder"></a>Sicurezza della cartella snapshot
   La cartella snapshot è una directory in cui vengono archiviati i file di snapshot. È consigliabile dedicare questa directory esclusivamente all'archiviazione degli snapshot. Concedere all'agente snapshot l'autorizzazione di scrittura per la cartella e verificare che l'autorizzazione di lettura sia concessa solo all'account di Windows utilizzato dall'agente di merge o dall'agente di distribuzione per accedere alla cartella. L'account di Windows associato all'agente deve essere un account di dominio per poter accedere a una cartella snapshot posizionata in un computer remoto.  
@@ -54,7 +54,7 @@ ms.locfileid: "52753953"
  [Posizioni alternative della cartella snapshot](../alternate-snapshot-folder-locations.md)   
  [Inizializzare una sottoscrizione con uno snapshot](../initialize-a-subscription-with-a-snapshot.md)   
  [Replication Security Best Practices](replication-security-best-practices.md)   
- [Sicurezza e protezione &#40;replica&#41;](security-and-protection-replication.md)   
+ [Sicurezza della replica di SQL Server](view-and-modify-replication-security-settings.md)   
  [Trasferire snapshot tramite FTP](../transfer-snapshots-through-ftp.md)  
   
   
