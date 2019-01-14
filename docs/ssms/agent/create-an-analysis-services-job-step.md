@@ -14,14 +14,15 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: b42d5ae09ef078e98f1343a4e4e7bfda7ac6566b
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: c72154e0cb963e5a3c819c064155bd8ea869aa85
+ms.sourcegitcommit: bfa10c54e871700de285d7f819095d51ef70d997
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51698189"
+ms.lasthandoff: 01/14/2019
+ms.locfileid: "54257216"
 ---
 # <a name="create-an-analysis-services-job-step"></a>Create an Analysis Services Job Step
+
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
 > [!IMPORTANT]  
@@ -33,7 +34,7 @@ In questo argomento viene descritto come creare e definire passaggi del processo
   
     [Limitazioni e restrizioni](#Restrictions)  
   
-    [Security](#Security)  
+    [Sicurezza](#Security)  
   
 -   **Per creare i passaggi di un processo di SQL Server utilizzando i comandi e/o le query di Analysis Services con:**  
   
@@ -59,7 +60,7 @@ In questo argomento viene descritto come creare e definire passaggi del processo
   
 -   Solo i membri del ruolo predefinito del server **sysadmin** sono autorizzati a scrivere l'output di un passaggio del processo in un file. Se il passaggio del processo viene eseguito da utenti appartenenti al ruolo di database **SQLAgentUserRole** nel database **msdb** , sarà possibile scrivere l'output solo in una tabella. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent viene scritto l'output del passaggio di processo nella tabella **sysjobstepslog** del database **msdb** .  
   
--   Per informazioni dettagliate, vedere [Implement SQL Server Agent Security](../../ssms/agent/implement-sql-server-agent-security.md).  
+-   Per informazioni dettagliate, vedere [Implementazione della sicurezza di SQL Server Agent](../../ssms/agent/implement-sql-server-agent-security.md).  
   
 ## <a name="SSMS"></a>Utilizzo di SQL Server Management Studio  
   
@@ -129,8 +130,8 @@ In questo argomento viene descritto come creare e definire passaggi del processo
             <DatabaseID>AdventureWorks2012</DatabaseID>  
         </ParentObject>  
         <ObjectDefinition>  
-            <DataSource xmlns:xsd="https://www.w3.org/2001/XMLSchema"
-                xmlns:xsi="https://www.w3.org/2001/XMLSchema-instance"
+            <DataSource xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+                xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
                 xsi:type="RelationalDataSource">  
                 <ID>AdventureWorks2012</ID>  
                 <Name>Adventure Works 2012</Name>  

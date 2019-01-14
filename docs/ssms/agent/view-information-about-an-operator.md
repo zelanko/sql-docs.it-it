@@ -19,12 +19,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 58abfa4ff4add4415b71a536b0c9aeb1f6a9f472
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: 0ce920c169e2a3e64be1c6aa02841305b64378ee
+ms.sourcegitcommit: bfa10c54e871700de285d7f819095d51ef70d997
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51702559"
+ms.lasthandoff: 01/14/2019
+ms.locfileid: "54256396"
 ---
 # <a name="view-information-about-an-operator"></a>Visualizzazione delle informazioni relative a un operatore
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -38,7 +38,7 @@ In questo argomento viene descritta la procedura per visualizzare le infomazioni
   
 -   **Prima di iniziare:**  
   
-    [Security](#Security)  
+    [Sicurezza](#Security)  
   
 -   **Per visualizzare le informazioni relative a un operatore utilizzando:**  
   
@@ -73,7 +73,7 @@ Per informazioni dettagliate sulle autorizzazioni di questi ruoli, vedere [Ruoli
   
 4.  Fare clic con il pulsante destro del mouse sull'operatore da visualizzare e selezionare **Proprietà**.  
   
-    Per altre informazioni sulle opzioni disponibili contenute nella finestra di dialogo ****Proprietà nome_operatore** vedere:  
+    Per altre informazioni sulle opzioni disponibili contenute nella finestra di dialogo _Proprietà_**nome_operatore** , vedere:  
   
     -   [Proprietà operatore - nuovo operatore &#40;pagina generale&#41;](../../ssms/agent/operator-properties-new-operator-general-page.md)  
   

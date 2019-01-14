@@ -17,12 +17,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 1e56b8180caf8beec9a0371e79e847fd4ff2e30d
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: cbb3f5d659a859e58deb7410e6890b5b39ac2895
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51701109"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54131131"
 ---
 # <a name="change-the-membership-of-a-job-category"></a>Modificare l'appartenenza a una categoria di processi
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -38,7 +38,7 @@ Le categorie consentono di organizzare i processi per semplificare le operazioni
   
 -   **Prima di iniziare:**  
   
-    [Security](#Security)  
+    [Sicurezza](#Security)  
   
 -   **Per modificare l'appartenenza a una categoria di processi usando:**  
   
@@ -51,7 +51,7 @@ Le categorie consentono di organizzare i processi per semplificare le operazioni
 ## <a name="BeforeYouBegin"></a>Prima di iniziare  
   
 ### <a name="Security"></a>Security  
-Per informazioni dettagliate, vedere [Implement SQL Server Agent Security](../../ssms/agent/implement-sql-server-agent-security.md).  
+Per informazioni dettagliate, vedere [Implementazione della sicurezza di SQL Server Agent](../../ssms/agent/implement-sql-server-agent-security.md).  
   
 ## <a name="SSMS"></a>Utilizzo di SQL Server Management Studio  
   
@@ -63,13 +63,13 @@ Per informazioni dettagliate, vedere [Implement SQL Server Agent Security](../..
   
 3.  Fare clic con il pulsante destro del mouse sulla cartella **Processi** e selezionare **Gestione categorie processi**.  
   
-4.  nella finestra di dialogo **Gestione categorie di processi***nome_server* selezionare la categoria di processi da modificare e quindi fare clic su **Visualizza processi**.  
+4.  Nella finestra di dialogo **Gestione categorie processi**_nome_server_ selezionare la categoria di processi da modificare e fare clic su **Visualizza processi**.  
   
 5.  Selezionare la casella di controllo **Mostra tutti i processi** .  
   
 6.  Per aggiungere un processo alla categoria, selezionare nella griglia principale la casella di controllo della colonna **Seleziona** corrispondente al processo. Per rimuovere un processo dalla categoria, deselezionare la casella. Al termine, fare clic su **OK**.  
   
-7.  Chiudere la finestra di dialogo **Gestione categorie di processi***nome_server*.  
+7.  Chiudere la finestra di dialogo **Gestione categorie processi**_nome_server_ .  
   
 ## <a name="TSQL"></a>Utilizzo di Transact-SQL  
   

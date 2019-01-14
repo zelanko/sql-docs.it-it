@@ -16,12 +16,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 2e0de2004ce2b3e9c91988bfc08fa0fea2074435
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: c7dbc000d71d7d2cda2d299de476346103f2d2a6
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51701951"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54134311"
 ---
 # <a name="create-a-job-category"></a>Creare una categoria di processi
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -39,7 +39,7 @@ In questo argomento si descrive come creare una categoria di processi in [!INCLU
   
     [Limitazioni e restrizioni](#Restrictions)  
   
-    [Security](#Security)  
+    [Sicurezza](#Security)  
   
 -   **Per creare una categoria di processi mediante:**  
   
@@ -55,7 +55,7 @@ In questo argomento si descrive come creare una categoria di processi in [!INCLU
 Le categorie multiserver sono disponibili solo in un server master. In un server master è disponibile una sola categoria di processi predefinita: [**Senza categoria (multiserver)**]. Quando viene scaricato un processo multiserver, la categoria viene modificata in **Processi dal server MSX** nel server di destinazione.  
   
 ### <a name="Security"></a>Security  
-Per informazioni dettagliate, vedere [Implement SQL Server Agent Security](../../ssms/agent/implement-sql-server-agent-security.md).  
+Per informazioni dettagliate, vedere [Implementazione della sicurezza di SQL Server Agent](../../ssms/agent/implement-sql-server-agent-security.md).  
   
 ## <a name="SSMS"></a>Utilizzo di SQL Server Management Studio  
   
@@ -67,7 +67,7 @@ Per informazioni dettagliate, vedere [Implement SQL Server Agent Security](../..
   
 3.  Fare clic con il pulsante destro del mouse sulla cartella **Processi** e selezionare **Gestione categorie processi**.  
   
-4.  Nella finestra di dialogo **Gestione categorie di processi***nome_server* fare clic su **Aggiungi**.  
+4.  Nella finestra di dialogo **Gestione categorie processi**_nome_server_ fare clic su **Aggiungi**.  
   
 5.  Nella casella **Nome** della nuova finestra di dialogo immettere un nome per la nuova categoria di processi.  
   
@@ -75,7 +75,7 @@ Per informazioni dettagliate, vedere [Implement SQL Server Agent Security](../..
   
 7.  Fare clic su **OK**.  
   
-8.  Nella finestra di dialogo **Gestione categorie di processi***nome_server* fare clic su **Aggiorna** per assicurarsi che la nuova categoria di processi sia attiva. Se l'aspetto è quello previsto, chiudere questa finestra di dialogo.  
+8.  Nella finestra di dialogo **Gestisci categorie processi**_nome_server_ fare clic su **Aggiorna** per assicurarsi che la nuova categoria di processi sia attiva. Se l'aspetto è quello previsto, chiudere questa finestra di dialogo.  
   
 Per altre informazioni su queste finestre di dialogo, vedere [Categorie processi - Gestione categorie processi](../../ssms/agent/job-categories-manage-job-categories.md) e [Proprietà categorie processi - Nuova categoria di processi](../../ssms/agent/job-categories-properties-new-job-category.md).  
   
