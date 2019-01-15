@@ -129,7 +129,7 @@ REBUILD PARTITION = ALL WITH (
 ) ;  
 ```  
   
-### <a name="performance"></a>restazioni  
+### <a name="performance"></a>Prestazioni  
  La compressione degli indici columnstore con la compressione dell'archivio comporta un calo delle prestazioni dell'indice rispetto agli indici columnstore compressi con un altro tipo di compressione. Utilizzare la compressione dell'archivio solo quando è possibile concedere altro tempo e altre risorse della CPU per comprimere e recuperare i dati.  
   
  Il vantaggio della compressione dell'archivio è uno spazio di archiviazione ridotto, utile per i dati a cui non si accede di frequente. Se ad esempio si dispone di una partizione per ogni mese di dati e la maggior parte dell'attività è relativa ai mesi più recenti, è possibile archiviare i mesi precedenti per ridurre i requisiti di archiviazione.  
