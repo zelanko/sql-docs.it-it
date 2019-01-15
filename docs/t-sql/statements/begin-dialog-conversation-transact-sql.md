@@ -31,12 +31,12 @@ ms.assetid: 8e814f9d-77c1-4906-b8e4-668a86fc94ba
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 3ef067f78e6ff7e1358a89ab210ae8c701625b14
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: f26eace7208ce0ec251707a34e964f718fcc1d09
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52543834"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54124791"
 ---
 # <a name="begin-dialog-conversation-transact-sql"></a>BEGIN DIALOG CONVERSATION (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -63,7 +63,7 @@ BEGIN DIALOG [ CONVERSATION ] @dialog_handle
 ```  
   
 ## <a name="arguments"></a>Argomenti  
- **@** *dialog_handle*  
+ **@** _dialog_handle_  
  Variabile utilizzata per archiviare l'handle di dialogo generato dal sistema per il nuovo dialogo restituito dall'istruzione BEGIN DIALOG CONVERSATION. La variabile deve essere di tipo **uniqueidentifier**.  
   
  FROM SERVICE *initiator_service_name*  
@@ -139,7 +139,7 @@ BEGIN DIALOG CONVERSATION @dialog_handle
    ON CONTRACT [//Adventure-Works.com/Expenses/ExpenseSubmission] ;  
 ```  
   
-### <a name="b-beginning-a-dialog-with-an-explicit-lifetime"></a>B. Inizio di un dialogo con una durata esplicita  
+### <a name="b-beginning-a-dialog-with-an-explicit-lifetime"></a>b. Inizio di un dialogo con una durata esplicita  
  Nell'esempio seguente viene avviata una conversazione di dialogo e viene archiviato un identificatore per il dialogo in `@dialog_handle`. `//Adventure-Works.com/ExpenseClient` è il servizio initiator del dialogo, mentre `//Adventure-Works.com/Expenses` rappresenta il servizio di destinazione del dialogo. Il dialogo è basato sul contratto `//Adventure-Works.com/Expenses/ExpenseSubmission`. Se il dialogo non viene chiuso dal comando END CONVERSATION entro `60` secondi, Service Broker termina il dialogo con un errore.  
   
 ```  

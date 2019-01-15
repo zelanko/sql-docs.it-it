@@ -14,12 +14,12 @@ ms.assetid: 754a1070-59bc-438d-998b-97fdd77d45ca
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 799a3890afb2247e42dd78e7e133b94b44f162ca
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e47b99fef642ab0760a177d426db4e3353da2e21
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47834689"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54125086"
 ---
 # <a name="peer-to-peer---conflict-detection-in-peer-to-peer-replication"></a>Peer-to-peer - Rilevamento dei conflitti nella replica
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -28,7 +28,7 @@ ms.locfileid: "47834689"
  Con la replica peer-to-peer in [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)] e versioni successive, viene introdotta l'opzione che consente di abilitare il rilevamento dei conflitti in una topologia peer-to-peer. Questa opzione consente di evitare problemi causati da conflitti non rilevati, tra cui il comportamento incoerente dell'applicazione e la perdita di aggiornamenti. Se questa opzione è abilitata, per impostazione predefinita una modifica in conflitto viene considerata come un errore critico che impedisce il corretto funzionamento dell'agente di distribuzione. In caso di conflitto, la topologia rimane in uno stato incoerente finché il conflitto non viene risolto e i dati non vengono resi coerenti nell'intera topologia.  
   
 > [!NOTE]  
->  Per prevenire potenziali incoerenze dei dati, evitare che si verifichino conflitti in una topologia peer-to-peer, anche quando il rilevamento dei conflitti è abilitato. Per garantire che le operazioni di scrittura relative a una determinata riga vengano eseguite in un unico nodo, le applicazioni che accedono e modificano i dati devono partizionare le operazioni di inserimento, aggiornamento ed eliminazione. Tale partizionamento assicura che le modifiche apportate a una determinata riga in un singolo nodo vengano sincronizzate con tutti gli altri nodi della topologia prima che la riga venga modificata da un nodo diverso. Se un'applicazione richiede funzionalità avanzate di rilevamento e risoluzione dei conflitti, utilizzare la replica di tipo merge. Per altre informazioni, vedere [Replica di tipo merge](../../../relational-databases/replication/merge/merge-replication.md) e [Rilevare e risolvere i conflitti tra repliche di tipo merge](../../../relational-databases/replication/merge/advanced-merge-replication-resolve-merge-replication-conflicts.md).  
+>  Per prevenire potenziali incoerenze dei dati, evitare che si verifichino conflitti in una topologia peer-to-peer, anche quando il rilevamento dei conflitti è abilitato. Per garantire che le operazioni di scrittura relative a una determinata riga vengano eseguite in un unico nodo, le applicazioni che accedono e modificano i dati devono partizionare le operazioni di inserimento, aggiornamento ed eliminazione. Tale partizionamento assicura che le modifiche apportate a una determinata riga in un singolo nodo vengano sincronizzate con tutti gli altri nodi della topologia prima che la riga venga modificata da un nodo diverso. Se un'applicazione richiede funzionalità avanzate di rilevamento e risoluzione dei conflitti, utilizzare la replica di tipo merge. Per altre informazioni, vedere [Replica di tipo merge](../../../relational-databases/replication/merge/merge-replication.md) e [Rilevare e risolvere i conflitti tra repliche di tipo merge](../../../relational-databases/replication/merge/advanced-merge-replication-conflict-detection-and-resolution.md).  
   
 ## <a name="understanding-conflicts-and-conflict-detection"></a>Informazioni sui conflitti e sul relativo rilevamento  
  In un singolo database le modifiche apportate alla stessa riga da applicazioni diverse non generano un conflitto, in quanto le transazioni sono serializzate e vengono utilizzati blocchi per gestire le modifiche simultanee. In un sistema distribuito asincrono, ad esempio la replica peer-to-peer, le transazioni agiscono in modo indipendente su ogni nodo e non sono presenti meccanismi per serializzarle tra più nodi. È possibile utilizzare un protocollo come il commit 2PC, che tuttavia influisce in modo significativo sulle prestazioni.  
@@ -94,7 +94,7 @@ ms.locfileid: "47834689"
   
     3.  Verificare i conflitti rilevati utilizzando il Visualizzatore conflitti e determinare le righe coinvolte, il tipo di conflitto e la riga in conflitto confermata. Il conflitto viene risolto in base al valore di ID origine specificato durante la configurazione: la riga che ha origine nel nodo con l'ID più alto è la riga in conflitto confermata. Per altre informazioni, vedere [Visualizzare i conflitti di dati per le pubblicazioni transazionali &#40;SQL Server Management Studio&#41;](../../../relational-databases/replication/view-data-conflicts-for-transactional-publications-sql-server-management-studio.md).  
   
-    4.  Eseguire la convalida per assicurare la corretta convergenza delle righe in conflitto. Per altre informazioni, vedere [Convalidare i dati replicati](../../../relational-databases/replication/validate-replicated-data.md).  
+    4.  Eseguire la convalida per assicurare la corretta convergenza delle righe in conflitto. Per altre informazioni, vedere [Convalidare i dati replicati](../../../relational-databases/replication/validate-data-at-the-subscriber.md).  
   
         > [!NOTE]  
         >  Se i dati sono incoerenti dopo questo passaggio, è necessario aggiornare manualmente le righe sul nodo con la massima priorità, quindi consentire la propagazione delle modifiche da questo nodo. Se non sono presenti ulteriori modifiche in conflitto nella topologia, tutti i nodi verranno portati in uno stato coerente.  

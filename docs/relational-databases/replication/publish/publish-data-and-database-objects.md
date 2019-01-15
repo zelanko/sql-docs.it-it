@@ -42,12 +42,12 @@ ms.assetid: d986032c-3387-4de1-a435-3ec5e82185a2
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: b9d1acf8774331ca5e789d9c8d9c50e05a6a3b1e
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: e0f959c6bc5a34fe2c2a3aec08f87f1e703749cf
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52523068"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54129011"
 ---
 # <a name="publish-data-and-database-objects"></a>Pubblicazione di dati e oggetti di database
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -71,36 +71,22 @@ ms.locfileid: "52523068"
 ## <a name="creating-publications"></a>Creazione di pubblicazioni  
  Per creare una pubblicazione, si specificano le informazioni seguenti:  
   
--   Server di distribuzione.  
-  
--   Percorso dei file di snapshot.  
-  
--   Database di pubblicazione.  
-  
--   Tipo di pubblicazione da creare (snapshot, transazionale, transazionale con sottoscrizioni aggiornabili o di tipo merge).  
-  
--   Dati e oggetti di database (articoli) da includere nella pubblicazione.  
-  
--   Filtri di colonna e filtri di riga statici per tutti i tipi di pubblicazioni, nonché filtri join e filtri di riga con parametri per le pubblicazioni di tipo merge.  
-  
--   Pianificazione dell'agente snapshot.  
-  
--   Account usati per l'esecuzione degli agenti seguenti: agente snapshot per tutte le pubblicazioni, agente di lettura log per tutte le pubblicazioni transazionali e agente di lettura coda per tutte le pubblicazioni transazionali che consentono sottoscrizioni aggiornabili.  
-  
+-   Server di distribuzione.    
+-   Percorso dei file di snapshot.    
+-   Database di pubblicazione.    
+-   Tipo di pubblicazione da creare (snapshot, transazionale, transazionale con sottoscrizioni aggiornabili o di tipo merge).    
+-   Dati e oggetti di database (articoli) da includere nella pubblicazione.   
+-   Filtri di colonna e filtri di riga statici per tutti i tipi di pubblicazioni, nonché filtri join e filtri di riga con parametri per le pubblicazioni di tipo merge.   
+-   Pianificazione dell'agente snapshot.    
+-   Account usati per l'esecuzione degli agenti seguenti: agente snapshot per tutte le pubblicazioni, agente di lettura log per tutte le pubblicazioni transazionali e agente di lettura coda per tutte le pubblicazioni transazionali che consentono sottoscrizioni aggiornabili.    
 -   Nome e descrizione della pubblicazione.  
   
- Per informazioni sull'utilizzo di pubblicazioni, vedere gli argomenti seguenti:  
-  
--   [Create a Publication](../../../relational-databases/replication/publish/create-a-publication.md)  
-  
--   [Define an Article](../../../relational-databases/replication/publish/define-an-article.md)  
-  
--   [Visualizzare e modificare le proprietà della pubblicazione](../../../relational-databases/replication/publish/view-and-modify-publication-properties.md)  
-  
--   [Visualizzare e modificare le proprietà degli articoli](../../../relational-databases/replication/publish/view-and-modify-article-properties.md)  
-  
--   [Eliminare una pubblicazione](../../../relational-databases/replication/publish/delete-a-publication.md)  
-  
+ Per informazioni sull'utilizzo di pubblicazioni, vedere gli argomenti seguenti:    
+-   [Create a Publication](../../../relational-databases/replication/publish/create-a-publication.md)    
+-   [Define an Article](../../../relational-databases/replication/publish/define-an-article.md)    
+-   [Visualizzare e modificare le proprietà della pubblicazione](../../../relational-databases/replication/publish/view-and-modify-publication-properties.md)    
+-   [Visualizzare e modificare le proprietà degli articoli](../../../relational-databases/replication/publish/view-and-modify-article-properties.md)    
+-   [Eliminare una pubblicazione](../../../relational-databases/replication/publish/delete-a-publication.md)    
 -   [Eliminare un articolo](../../../relational-databases/replication/publish/delete-an-article.md)  
   
 > [!NOTE]  
@@ -109,12 +95,9 @@ ms.locfileid: "52523068"
 ## <a name="publishing-tables"></a>Pubblicazione di tabelle  
  L'oggetto più comunemente pubblicato è costituito da una tabella. È possibile utilizzare i collegamenti seguenti per ottenere informazioni aggiuntive sulle aree correlate alla pubblicazione di tabelle:  
   
--   [Filtrare i dati pubblicati](../../../relational-databases/replication/publish/filter-published-data.md)  
-  
--   [Article Options for Transactional Replication](../../../relational-databases/replication/transactional/article-options-for-transactional-replication.md)  
-  
--   [Article Options for Merge Replication](../../../relational-databases/replication/merge/article-options-for-merge-replication.md)  
-  
+-   [Filtrare i dati pubblicati](../../../relational-databases/replication/publish/filter-published-data.md)    
+-   [Article Options for Transactional Replication](../../../relational-databases/replication/transactional/article-options-for-transactional-replication.md)
+-   [Article Options for Merge Replication](../../../relational-databases/replication/merge/article-options-for-merge-replication.md)    
 -   [Replicare colonne Identity](../../../relational-databases/replication/publish/replicate-identity-columns.md)  
   
  Quando si pubblica una tabella per la replica, è possibile specificare gli oggetti dello schema da copiare nel Sottoscrittore, ad esempio l'integrità referenziale dichiarata (vincoli di chiave primaria, di riferimento o UNIQUE), indici, trigger DML dell'utente (i trigger DDL non possono essere replicati), proprietà estese e regole di confronto. Le proprietà estese vengono replicate solo nella sincronizzazione iniziale tra il server di pubblicazione e il Sottoscrittore. Se si aggiungono o si modificano proprietà estese dopo la sincronizzazione iniziale, le modifiche apportate non vengono replicate.  
@@ -199,7 +182,7 @@ ms.locfileid: "52523068"
   
 -   Per articoli di pubblicazioni che usano snapshot in modalità carattere (usati per Sottoscrittori non[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] e Sottoscrittori [!INCLUDE[ssEW](../../../includes/ssew-md.md)] ): per impostazione predefinita, il proprietario rimane vuoto. Il proprietario viene impostato sul proprietario associato all'account utilizzato dall'agente di distribuzione o dall'agente di merge per la connessione al Sottoscrittore.  
   
- Il proprietario dell'oggetto può essere modificato tramite la finestra di dialogo **Proprietà articolo - \<***Articolo***>** e tramite le stored procedure **sp_addarticle**, **sp_addmergearticle**, **sp_changearticle** e **sp_changemergearticle**. Per altre informazioni, vedere [Visualizzare e modificare le proprietà della pubblicazione](../../../relational-databases/replication/publish/view-and-modify-publication-properties.md), [Definire un articolo](../../../relational-databases/replication/publish/define-an-article.md) e [Visualizzare e modificare le proprietà degli articoli](../../../relational-databases/replication/publish/view-and-modify-article-properties.md).  
+ Il proprietario dell'oggetto può essere modificato tramite la finestra di dialogo **Proprietà articolo - \<**_Articolo_**>** e tramite le stored procedure **sp_addarticle**, **sp_addmergearticle**, **sp_changearticle** e **sp_changemergearticle**. Per altre informazioni, vedere [Visualizzare e modificare le proprietà della pubblicazione](../../../relational-databases/replication/publish/view-and-modify-publication-properties.md), [Definire un articolo](../../../relational-databases/replication/publish/define-an-article.md) e [Visualizzare e modificare le proprietà degli articoli](../../../relational-databases/replication/publish/view-and-modify-article-properties.md).  
   
 ### <a name="publishing-data-to-subscribers-running-previous-versions-of-sql-server"></a>Pubblicazione di dati per Sottoscrittori che eseguono versioni precedenti di SQL Server  
   

@@ -1,7 +1,7 @@
 ---
 title: Reindirizzamento della connessione in lettura/scrittura dalla replica secondaria alla primaria (Gruppi di disponibilità AlwaysOn) | Microsoft Docs
 ms.custom: ''
-ms.date: 08/09/2018
+ms.date: 01/09/2019
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: high-availability
@@ -18,14 +18,15 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: a811fdb21d6c0c1d702c067f255ece3c2b183b9c
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.openlocfilehash: e64768dcfaf4342c3ea52f1b01c29940fb1c8cf0
+ms.sourcegitcommit: 1f53b6a536ccffd701fc87e658ddac714f6da7a2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51600528"
+ms.lasthandoff: 01/10/2019
+ms.locfileid: "54206307"
 ---
 # <a name="secondary-to-primary-replica-readwrite-connection-redirection-always-on-availability-groups"></a>Reindirizzamento della connessione in lettura/scrittura dalla replica secondaria alla primaria (Gruppi di disponibilità AlwaysOn)
+
 [!INCLUDE[appliesto](../../../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
 [!INCLUDE[sssqlv15-md](../../../includes/sssqlv15-md.md)] CTP 2.0 introduce il *reindirizzamento della connessione in lettura/scrittura dalla replica secondaria alla primaria* per i gruppi di disponibilità AlwaysOn. Il reindirizzamento della connessione di lettura/scrittura è disponibile in qualsiasi piattaforma del sistema operativo. Consente di orientare le connessioni dell'applicazione client alla replica primaria, indipendentemente dal server di destinazione specificato nella stringa di connessione. 
@@ -53,8 +54,8 @@ Per configurare il reindirizzamento della connessione di lettura/scrittura, impo
 
 In [!INCLUDE[sssqlv15-md](../../../includes/sssqlv15-md.md)] l'elemento `READ_WRITE_ROUTING_URL` è stato aggiunto alla specifica `<add_replica_option>`. Vedere gli argomenti seguenti: 
 
-* [CREATE AVAILABILITY GROUP](../../../t-sql\statements\create-availability-group-transact-sql.md)
-* [ALTER AVAILABILITY GROUP](../../../t-sql\statements\alter-availability-group-transact-sql.md)
+* [CREATE AVAILABILITY GROUP](../../../t-sql/statements/create-availability-group-transact-sql.md)
+* [ALTER AVAILABILITY GROUP](../../../t-sql/statements/alter-availability-group-transact-sql.md)
 
 
 ### <a name="primaryrolereadwriteroutingurl-not-set-default"></a>PRIMARY_ROLE(READ_WRITE_ROUTING_URL) non impostato (impostazione predefinita) 
@@ -156,7 +157,8 @@ Nel diagramma seguente la replica primaria è stata sottoposta manualmente a fai
 
 Se l'istanza di SQL Server specificata nella stringa di connessione non è disponibile (causa interruzione del servizio), la connessione ha esito negativo indipendentemente dal ruolo svolto dalla replica nel server di destinazione. Per evitare tempi di inattività dell'applicazione prolungati, configurare un elemento `FailoverPartner` alternativo nella stringa di connessione. L'applicazione deve implementare la logica di ripetizione dei tentativi per gestire il caso in cui le repliche primarie e secondarie non sono online durante il failover reale. Per informazioni sulle stringhe di connessione, vedere [Proprietà SqlConnection.ConnectionString](https://msdn.microsoft.com/library/system.data.sqlclient.sqlconnection.connectionstring.aspx).
 
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedere anche
+
 [Panoramica di Gruppi di disponibilità AlwaysOn &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   
  
 [Informazioni sull'accesso alla connessione client per le repliche di disponibilità &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/about-client-connection-access-to-availability-replicas-sql-server.md)   

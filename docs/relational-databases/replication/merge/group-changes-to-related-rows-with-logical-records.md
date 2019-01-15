@@ -15,12 +15,12 @@ ms.assetid: ad76799c-4486-4b98-9705-005433041321
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 8c76fe140a6cfd6e8d4cc2f83e3c0f3143a15708
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a4bebb60c7d40ab7d1a98bbb6c8b28ff64ea7b09
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47834119"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54134271"
 ---
 # <a name="group-changes-to-related-rows-with-logical-records"></a>Raggruppamento di modifiche alla righe correlate con record logici
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -99,7 +99,7 @@ ms.locfileid: "47834119"
   
 -   La risoluzione dei conflitti personalizzata con gestori della logica di business o sistemi di risoluzione personalizzati non è supportata per gli articoli inclusi in un record logico.  
   
--   Se in una pubblicazione che include filtri con parametri vengono utilizzati record logici, è necessario inizializzare ogni Sottoscrittore con uno snapshot per la relativa partizione. Se si inizializza un Sottoscrittore con un altro metodo, l'agente di merge non verrà eseguito in modo corretto. Per altre informazioni, vedere [Snapshots for Merge Publications with Parameterized Filters](../../../relational-databases/replication/snapshots-for-merge-publications-with-parameterized-filters.md).  
+-   Se in una pubblicazione che include filtri con parametri vengono utilizzati record logici, è necessario inizializzare ogni Sottoscrittore con uno snapshot per la relativa partizione. Se si inizializza un Sottoscrittore con un altro metodo, l'agente di merge non verrà eseguito in modo corretto. Per altre informazioni, vedere [Snapshots for Merge Publications with Parameterized Filters](../../../relational-databases/replication/create-a-snapshot-for-a-merge-publication-with-parameterized-filters.md).  
   
 -   I conflitti a livello di record logici non vengono visualizzati nel Visualizzatore conflitti. Per visualizzare informazioni relative a questi conflitti, utilizzare le stored procedure di replica. Per altre informazioni, vedere [Visualizzare le informazioni sui conflitti per le pubblicazioni di tipo merge &#40;programmazione Transact-SQL della replica&#41;](../../../relational-databases/replication/view-conflict-information-for-merge-publications.md).  
   

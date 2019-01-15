@@ -1,7 +1,7 @@
 ---
 title: Indici columnstore - Prestazioni delle query | Microsoft Docs
 ms.custom: ''
-ms.date: 12/01/2017
+ms.date: 01/11/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -12,14 +12,15 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: cfe14cc4f52fe0606fd68613736d91fd48bf87f2
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: dddb1ee5aaeab9a741cfe0a09bea2a93b786c57e
+ms.sourcegitcommit: bfa10c54e871700de285d7f819095d51ef70d997
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47637141"
+ms.lasthandoff: 01/14/2019
+ms.locfileid: "54255285"
 ---
 # <a name="columnstore-indexes---query-performance"></a>Indici columnstore - Prestazioni delle query
+
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
   Indicazioni per ottenere prestazioni delle query elevate che è possibile raggiungere con la progettazione degli indici columnstore.    
@@ -141,11 +142,11 @@ FROM FactResellerSalesXL_CCI
 ```    
     
 ### <a name="string-predicate-pushdown"></a>Distribuzione del predicato stringa    
-Quando si progetta uno schema del data warehouse, la modellazione consigliata è l'uso di uno schema star o snowflake costituito da una o più tabelle dei fatti e da molte tabelle delle dimensioni. La [tabella dei fatti](https://en.wikipedia.org/wiki/Fact_table) archivia le misure o le transazioni aziendali e la [tabella delle dimensioni](https://en.wikipedia.org/wiki/Dimension_table) archivia le dimensioni di cui analizzare i fatti.    
+Quando si progetta uno schema del data warehouse, la modellazione consigliata è l'uso di uno schema star o snowflake costituito da una o più tabelle dei fatti e da molte tabelle delle dimensioni. La [tabella dei fatti](https://wikipedia.org/wiki/Fact_table) archivia le misure o le transazioni aziendali e la [tabella delle dimensioni](https://wikipedia.org/wiki/Dimension_table) archivia le dimensioni di cui analizzare i fatti.    
     
 Ad esempio, un fatto può essere un record che rappresenta la vendita di un certo prodotto in un'area specifica, mentre la dimensione rappresenta un set di regioni, prodotti e così via. Le tabelle dei fatti e delle dimensioni sono connesse da una relazione di tipo chiave primaria/chiave esterna. Le query di analisi più diffuse creano un join di una o più tabelle delle dimensioni con la tabella dei fatti.    
     
-Ad esempio considerare il caso di una tabella delle dimensioni `Products`. Una chiave primaria tipica è `ProductCode`, generalmente rappresentata con il tipo di dati stringa. Una procedura consigliata per il miglioramento delle prestazioni delle query è la creazione di una chiave surrogata, in genere una colonna di tipo integer, per fare riferimento alla riga della tabella delle dimensioni dalla tabella dei fatti.    
+Ad esempio considerare il caso di una tabella delle dimensioni `Products`. Una chiave primaria tipica è `ProductCode`, generalmente rappresentata con il tipo di dati stringa. Una procedura consigliata per il miglioramento delle prestazioni delle query è la creazione di una chiave surrogata, in genere una colonna di tipo integer, per fare riferimento alla riga della tabella delle dimensioni dalla tabella dei fatti.    
     
 L'indice columnstore esegue in modo efficace le query di analisi con join/predicati che includono chiavi di tipo numerico o integer. Tuttavia, in molti carichi di lavoro del cliente vengono usate colonne basate su stringhe per il collegamento delle tabelle dei fatti e delle dimensioni e le prestazioni delle query con l'indice columnstore non risultano altrettanto efficaci. [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] migliora in modo significativo le prestazioni delle query di analisi con le colonne basate su stringhe grazie alla distribuzione dei predicati con colonne di tipo stringa nel nodo SCAN.    
     

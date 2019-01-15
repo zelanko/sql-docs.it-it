@@ -17,12 +17,12 @@ ms.assetid: cba476df-d4ea-44c9-bb86-81488971e328
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: ead289095f53693a7e6a487fa2a07a7c94df6219
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 45280a18af70578117898f70458ed9d144c61c3d
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47791819"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54131321"
 ---
 # <a name="replication-agent-executables-concepts"></a>Concetti di base relativi ai file eseguibili dell'agente di replica
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -50,7 +50,7 @@ ms.locfileid: "47791819"
  Quando si richiamano gli agenti di replica, è possibile utilizzare profili di prestazioni per passare automaticamente un set di parametri definito al file eseguibile dell'agente. Per altre informazioni, vedere [Replication Agent Profiles](../../../relational-databases/replication/agents/replication-agent-profiles.md).  
   
 ## <a name="examples"></a>Esempi  
- Negli esempi seguenti viene illustrato come richiamare gli agenti di replica dal prompt dei comandi. Gli agenti di replica possono inoltre essere richiamati utilizzando RMO (Replication Management Objects). Per altre informazioni, vedere [Sincronizzare le sottoscrizioni &#40;replica&#41;](../../../relational-databases/replication/synchronize-subscriptions-replication.md).  
+ Negli esempi seguenti viene illustrato come richiamare gli agenti di replica dal prompt dei comandi. Gli agenti di replica possono inoltre essere richiamati utilizzando RMO (Replication Management Objects). Per altre informazioni, vedere [Sincronizzare le sottoscrizioni &#40;replica&#41;](../../../relational-databases/replication/synchronize-data.md).  
   
 > [!NOTE]  
 >  Le interruzioni di riga presenti negli esempi sono state aggiunte per facilitare la lettura. I comandi in un file batch devono essere inseriti in un'unica riga.  

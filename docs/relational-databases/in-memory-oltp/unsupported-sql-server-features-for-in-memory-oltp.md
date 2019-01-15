@@ -12,12 +12,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 51485f1d1bbe120b42371c9d04a9d4576ac8d0d4
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: ba432d722bcd6f9df6c797d361a53e0b6dc6dff9
+ms.sourcegitcommit: bfa10c54e871700de285d7f819095d51ef70d997
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52391544"
+ms.lasthandoff: 01/14/2019
+ms.locfileid: "54254962"
 ---
 # <a name="unsupported-sql-server-features-for-in-memory-oltp"></a>Funzionalità di SQL Server non supportate per OLTP in memoria
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -64,8 +64,8 @@ Salvo alcune eccezioni, le transazioni tra database non sono supportate. Nella t
   
 - Keyset e cursori dinamici sulle query che accedono a tabelle ottimizzate per la memoria. Questi cursori diventano statici e di sola lettura.  
   
-- L'uso di **MERGE INTO** *target*, dove *target* è una tabella ottimizzata per la memoria, non è supportato.
-    - **MERGE USING** *source* è supportato per le tabelle ottimizzate per la memoria.  
+- L'uso di **MERGE INTO** _target_, dove *target* è una tabella ottimizzata per la memoria, non è supportato.
+    - **MERGE USING** _source_ è supportato per le tabelle ottimizzate per la memoria.  
   
 - Il tipo di dati ROWVERSION (TIMESTAMP) non è supportato. Per altre informazioni, vedere [FROM &#40;Transact-SQL&#41;](../../t-sql/queries/from-transact-sql.md).
   

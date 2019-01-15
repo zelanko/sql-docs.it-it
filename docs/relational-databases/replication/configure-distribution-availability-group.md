@@ -20,12 +20,12 @@ ms.assetid: 94d52169-384e-4885-84eb-2304e967d9f7
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 627aea0126031dc747472861ac186e600dcfaaf6
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: 5b2f6defed7ad897f3464aec1b8b99391a2b9149
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53202390"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54126451"
 ---
 # <a name="set-up-replication-distribution-database-in-always-on-availability-group"></a>Configurare il database di distribuzione repliche nel gruppo di disponibilità Always On
 
@@ -48,7 +48,7 @@ Dopo aver configurato un database di distribuzione nel gruppo di disponibilità 
 - Aggiunta o rimozione di nodi nel gruppo di disponibilità del database di distribuzione esistente.
 - Un'istanza del server di distribuzione può avere più database di distribuzione. Ogni database di distribuzione può essere nel proprio gruppo di disponibilità e non può essere in tutti i gruppi di disponibilità. Più database di distribuzione possono condividere un gruppo di disponibilità.
 - Il server di pubblicazione e il server di distribuzione devono essere in istanze separate di SQL Server.
-- Se il listener del gruppo di disponibilità che ospita il database di distribuzione è configurato per usare una porta non predefinita, è necessario configurare un alias per il listener e la porta non predefinita. Questo alias dovrà essere creato per tutte le repliche di server di pubblicazione, server di distribuzione e sottoscrittori (per i sottoscrittori eseguiti in modalità pull). 
+- Se il listener del gruppo di disponibilità che ospita il database di distribuzione è configurato per usare una porta non predefinita, è necessario configurare un alias per il listener e la porta non predefinita.
 
 ## <a name="limitations-or-exclusions"></a>Limitazioni o esclusioni
 
@@ -236,7 +236,7 @@ In questo esempio viene rimosso un server di distribuzione da un gruppo di dispo
 
 ## <a name="remove-a-publisher-from-distribution-database-ag"></a>Rimuovere un server di pubblicazione dal gruppo di disponibilità del database di distribuzione
 
-In questo esempio viene rimosso un server di pubblicazione da un gruppo di disponibilità del database di distribuzione corrente del server di distribuzione senza alcun effetto sui restanti server di pubblicazione gestiti dal gruppo di disponibilità del database di distribuzione. In questo esempio la configurazione esistente include un database di distribuzione in un gruppo di disponibilità. DIST1, DIST2 e DIST3 sono i server di distribuzione, `distribution` è il database di distribuzione nel gruppo di disponibilità e PUB1 e PUB2 sono i server di pubblicazione serviti dal database `distribution`. Nell'esempio PUB1 viene rimosso dai server di distribuzione.
+In questo esempio viene rimosso un server di pubblicazione da un gruppo di disponibilità del database di distribuzione corrente del server di distribuzione senza alcun effetto sui server di pubblicazione serviti dal gruppo di disponibilità del database di distribuzione. In questo esempio la configurazione esistente include un database di distribuzione in un gruppo di disponibilità. DIST1, DIST2 e DIST3 sono i server di distribuzione, `distribution` è il database di distribuzione nel gruppo di disponibilità e PUB1 e PUB2 sono i server di pubblicazione serviti dal database `distribution`. Nell'esempio PUB1 viene rimosso dai server di distribuzione.
 
 ### <a name="publisher-workflow"></a>Flusso di lavoro del server di pubblicazione
 

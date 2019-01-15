@@ -19,12 +19,12 @@ ms.assetid: 8e955033-06ef-403f-b813-3d8241b62f1f
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: fe616847c9a9883fb46508286828b679a37ed065
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 2efa695bd6b6c36db1a813d7b33a866a30bd95f4
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47655959"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54125961"
 ---
 # <a name="configure-the-database-engine-to-listen-on-multiple-tcp-ports"></a>Configurazione del Motore di database per l'attesa su più porte TCP
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -76,9 +76,9 @@ ms.locfileid: "47655959"
   
 #### <a name="to-configure-the-sql-server-database-engine-to-listen-on-an-additional-tcp-port"></a>Per configurare il Motore di database di SQL Server per l'attesa su una porta TCP aggiuntiva  
   
-1.  In Gestione configurazione SQL Server espandere **Configurazione di rete SQL Server** e quindi fare clic su **Protocolli per***<nome_istanza>*.  
+1.  In Gestione configurazione SQL Server espandere **Configurazione di rete SQL Server** e quindi fare clic su **Protocolli per**_<nome_istanza>_.  
   
-2.  Espandere **Protocolli per***<nome_istanza>* e quindi fare clic su **TCP/IP**.  
+2.  Espandere **Protocolli per** _<nome_istanza>_ e quindi fare clic su **TCP/IP**.  
   
 3.  Nel riquadro di destra, fare clic con il pulsante destro del mouse sugli indirizzi IP disabilitati da attivare, quindi scegliere **lita**.  
   
@@ -91,7 +91,7 @@ ms.locfileid: "47655959"
   
 6.  Nel riquadro di sinistra fare clic su **Servizi di SQL Server**.  
   
-7.  Nel riquadro di destra fare clic con il pulsante destro del mouse su **SQL Server***<nome_istanza>* e quindi scegliere **Riavvia**.  
+7.  Nel riquadro di destra fare clic con il pulsante destro del mouse su **SQL Server**_<nome_istanza>_ e quindi scegliere **Riavvia**.  
   
      Dopo il riavvio di [!INCLUDE[ssDE](../../includes/ssde-md.md)], il log degli errori conterrà l'elenco delle porte sulle quali [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] è in attesa.  
   

@@ -21,12 +21,12 @@ ms.assetid: 37476d50-fb47-49e3-9504-3b163ac381d8
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 38ce786d8362f711e238b32059ae3bae4f50006e
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 3b2ce551f280c56e7526455ee03931478f2322b2
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51672630"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54125054"
 ---
 # <a name="replication-management-objects-concepts"></a>Replication Management Objects Concepts
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -38,19 +38,19 @@ ms.locfileid: "51672630"
  [Configurare la distribuzione](../../../relational-databases/replication/configure-distribution.md)  
  Negli argomenti inclusi in questa sezione viene illustrato come utilizzare RMO per configurare la pubblicazione e la distribuzione.  
   
- [Creare, modificare ed eliminare pubblicazioni e articoli &#40;replica&#41;](../../../relational-databases/replication/publish/create-modify-and-delete-publications-and-articles-replication.md)  
+ [Create a Publication](../../../relational-databases/replication/publish/create-a-publication.md)  
  Negli argomenti inclusi in questa sezione viene illustrato come utilizzare RMO per creare, eliminare e modificare pubblicazioni e articoli.  
   
  [Sottoscrizione delle pubblicazioni](../../../relational-databases/replication/subscribe-to-publications.md)  
  Negli argomenti inclusi in questa sezione viene illustrato come utilizzare RMO per creare, eliminare e modificare sottoscrizioni.  
   
- [Proteggere una topologia di replica](../../../relational-databases/replication/security/secure-a-replication-topology.md)  
+ [Proteggere una topologia di replica](../../../relational-databases/replication/security/view-and-modify-replication-security-settings.md)  
  Negli argomenti inclusi in questa sezione viene illustrato come utilizzare RMO per visualizzare e modificare le impostazioni di sicurezza.  
   
- [Sincronizzare le sottoscrizioni &#40;replica&#41;](../../../relational-databases/replication/synchronize-subscriptions-replication.md)  
+ [Sincronizzare le sottoscrizioni &#40;replica&#41;](../../../relational-databases/replication/synchronize-data.md)  
  Negli argomenti inclusi in questa sezione viene illustrato come sincronizzare le sottoscrizioni.  
   
- [Monitoraggio della replica](../../../relational-databases/replication/monitor/monitoring-replication-overview.md)  
+ [Monitoraggio della replica](../../../relational-databases/replication/monitor/monitoring-replication.md)  
  Negli argomenti inclusi in questa sezione viene illustrato come monitorare a livello di codice una topologia di replica.  
   
 ## <a name="introduction-to-rmo-programming"></a>Introduzione alla programmazione RMO  

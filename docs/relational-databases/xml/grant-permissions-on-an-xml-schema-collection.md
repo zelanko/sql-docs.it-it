@@ -14,12 +14,12 @@ ms.assetid: ffbb829c-3b8f-4e5d-97d9-ab4059aab0db
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 5bd71aa5fe43b953fc887e9cede1bab221bcc26c
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 5acba25c4a393723c4311cc0070b6dee165757c2
+ms.sourcegitcommit: bfa10c54e871700de285d7f819095d51ef70d997
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51658280"
+ms.lasthandoff: 01/14/2019
+ms.locfileid: "54256656"
 ---
 # <a name="grant-permissions-on-an-xml-schema-collection"></a>Concedere autorizzazioni per una raccolta di XML Schema
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -96,7 +96,7 @@ SETUSER 'TestLogin1'
 GO  
 CREATE XML SCHEMA COLLECTION myTestSchemaCollection AS '<?xml version="1.0" encoding="UTF-8" ?>  
 <xsd:schema targetNamespace="https://schemas.adventure-works.com/Additional/ContactInfo"   
-            xmlns:xsd="https://www.w3.org/2001/XMLSchema"   
+            xmlns:xsd="http://www.w3.org/2001/XMLSchema"   
 elementFormDefault="qualified">  
 <xsd:element name="AdditionalContactInfo" >  
   <xsd:complexType mixed="true" >  
@@ -122,7 +122,7 @@ DROP LOGIN TestLogin1
 GO  
 ```  
   
-### <a name="b-granting-permission-to-use-an-existing-xml-schema-collection"></a>B. Concessione dell'autorizzazione per l'utilizzo di una raccolta di XML Schema esistente  
+### <a name="b-granting-permission-to-use-an-existing-xml-schema-collection"></a>b. Concessione dell'autorizzazione per l'utilizzo di una raccolta di XML Schema esistente  
  Nell'esempio seguente viene illustrato ulteriormente il modello di autorizzazione per la raccolta di XML Schema, con le diverse autorizzazioni necessarie per creare e utilizzare tale raccolta.  
   
  Nell'esempio vengono creati un database di prova e l'account di accesso `TestLogin1`. `TestLogin1` crea una raccolta di XML Schema nel database. L'account di accesso crea quindi una tabella e utilizza la raccolta di XML Schema per creare una colonna XML tipizzata. Successivamente, l'utente inserisce i dati ed esegue le relative query. Tutti questi passaggi richiedono le autorizzazioni necessarie per lo schema, come illustrato nel codice seguente.  
@@ -155,7 +155,7 @@ SETUSER 'TestLogin1'
 GO  
 CREATE XML SCHEMA COLLECTION myTestSchemaCollection AS '<?xml version="1.0" encoding="UTF-8" ?>  
 <xsd:schema targetNamespace="https://schemas.adventure-works.com/Additional/ContactInfo"   
-            xmlns:xsd="https://www.w3.org/2001/XMLSchema"   
+            xmlns:xsd="http://www.w3.org/2001/XMLSchema"   
 elementFormDefault="qualified">  
   
 <xsd:element name="AdditionalContactInfo" >  
@@ -270,7 +270,7 @@ SETUSER 'TestLogin1'
 GO  
 CREATE XML SCHEMA COLLECTION myTestSchemaCollection AS '<?xml version="1.0" encoding="UTF-8" ?>  
 <xsd:schema targetNamespace="https://schemas.adventure-works.com/Additional/ContactInfo"   
-            xmlns:xsd="https://www.w3.org/2001/XMLSchema"   
+            xmlns:xsd="http://www.w3.org/2001/XMLSchema"   
 elementFormDefault="qualified">  
   
 <xsd:element name="AdditionalContactInfo" >  
@@ -296,7 +296,7 @@ SETUSER 'TestLogin1'
 GO  
 ALTER XML SCHEMA COLLECTION myTestSchemaCollection ADD '  
 <xsd:schema targetNamespace="https://schemas.adventure-works.com/Additional/ContactInfo"   
-            xmlns:xsd="https://www.w3.org/2001/XMLSchema"   
+            xmlns:xsd="http://www.w3.org/2001/XMLSchema"   
             xmlns="https://schemas.adventure-works.com/Additional/ContactInfo"   
 elementFormDefault="qualified">  
  <xsd:element name="pager" type="xsd:string"/>  
@@ -363,7 +363,7 @@ setuser 'TestLogin1'
 GO  
 CREATE XML SCHEMA COLLECTION myTestSchemaCollection AS '<?xml version="1.0" encoding="UTF-8" ?>  
 <xsd:schema targetNamespace="https://schemas.adventure-works.com/Additional/ContactInfo"   
-            xmlns:xsd="https://www.w3.org/2001/XMLSchema"   
+            xmlns:xsd="http://www.w3.org/2001/XMLSchema"   
 elementFormDefault="qualified">  
   
 <xsd:element name="AdditionalContactInfo" >  
@@ -457,8 +457,8 @@ GO
 CREATE USER schemaUser WITH DEFAULT_SCHEMA=dbo  
 GO  
 CREATE XML SCHEMA COLLECTION MySC AS '  
-<schema xmlns="https://www.w3.org/2001/XMLSchema" targetNamespace="https://ns"  
-xmlns:ns="https://ns">  
+<schema xmlns="http://www.w3.org/2001/XMLSchema" targetNamespace="http://ns"  
+xmlns:ns="http://ns">  
   
    <simpleType name="ListOfIntegers">  
       <list itemType="integer"/>  

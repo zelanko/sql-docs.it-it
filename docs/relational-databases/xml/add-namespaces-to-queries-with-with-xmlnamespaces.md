@@ -22,12 +22,12 @@ ms.assetid: 2189cb5e-4460-46c5-a254-20c833ebbfec
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: b9d8b702172a66918bd5fe6a101ddf07b05f6484
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 7c7c3b925b018ea7f212693b5de02fb43b425bc4
+ms.sourcegitcommit: bfa10c54e871700de285d7f819095d51ef70d997
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51677890"
+ms.lasthandoff: 01/14/2019
+ms.locfileid: "54256966"
 ---
 # <a name="add-namespaces-to-queries-with-with-xmlnamespaces"></a>Aggiungere spazi dei nomi alle query con WITH XMLNAMESPACES
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -114,7 +114,7 @@ FOR XML RAW, ELEMENTS XSINIL
  Risultato:  
   
 ```  
-<row xmlns:xsi="https://www.w3.org/2001/XMLSchema-instance" xmlns:ns1="uri">  
+<row xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ns1="uri">  
   <ns1:ProductID>316</ns1:ProductID>  
   <ns1:Name>Blade</ns1:Name>  
   <ns1:Color xsi:nil="true" />  
@@ -181,7 +181,7 @@ FOR XML PATH('sql:root')
 </sql:root>  
 ```  
   
- Il prefisso dello spazio dei nomi xml è l'unico che può essere utilizzato senza che sia necessario definirlo in modo esplicito in WITH XMLNAMESPACES, come illustrato nella query seguente in modalità PATH. Se si dichiara questo prefisso, è anche necessario associarlo allo spazio dei nomi https://www.w3.org/XML/1998/namespace. I nomi specificati nella clausola SELECT fanno riferimento al prefisso dello spazio dei nomi xml che non viene definito in modo esplicito tramite WITH XMLNAMESPACES.  
+ Il prefisso dello spazio dei nomi xml è l'unico che può essere utilizzato senza che sia necessario definirlo in modo esplicito in WITH XMLNAMESPACES, come illustrato nella query seguente in modalità PATH. Se si dichiara questo prefisso, è anche necessario associarlo allo spazio dei nomi http://www.w3.org/XML/1998/namespace. I nomi specificati nella clausola SELECT fanno riferimento al prefisso dello spazio dei nomi xml che non viene definito in modo esplicito tramite WITH XMLNAMESPACES.  
   
 ```  
 SELECT 'en'    as "English/@xml:lang",  

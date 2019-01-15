@@ -15,12 +15,12 @@ ms.assetid: 39b92198-c3f6-4f25-8560-095848ad652d
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 397604c04c71b662a36cb5bf39f7aaa99c600a05
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 9646f61d6cb8d9a277f08711dc8326f34064c5ad
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47799469"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54124601"
 ---
 # <a name="replication-monitor"></a>Monitoraggio replica
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -33,14 +33,6 @@ ms.locfileid: "47799469"
 -   [Impostazioni del database di distribuzione](../../relational-databases/replication/distributor-settings.md)  
   
 -   [Informazioni sul database di distribuzione, Pubblicazioni](../../relational-databases/replication/distributor-information-publications.md)  
-  
--   [Informazioni sul database di distribuzione, Elenco verifica sottoscrizioni &#40;pubblicazione transazionale, SQL Server 2005 e versioni successive&#41;](../../relational-databases/replication/distributor-info-subscription-watch-list-transaction-pub-sql-2005.md)  
-  
--   [Informazioni sul server di distribuzione, Elenco verifica sottoscrizioni &#40;pubblicazione di tipo merge, SQL Server 2005 e versioni successive&#41;](../../relational-databases/replication/distributor-info-subscription-watch-list-merge-pub-sql-2005.md)  
-  
--   [Informazioni sul database di distribuzione, Elenco verifica sottoscrizioni &#40;pubblicazione snapshot, SQL Server 2005 e versioni successive&#41;](../../relational-databases/replication/distributor-info-subscription-watch-list-snapshot-pub-sql-2005.md)  
-  
--   [Informazioni sul database di distribuzione, Agenti](../../relational-databases/replication/distributor-information-agents.md)  
   
 -   [Impostazioni server di pubblicazione](../../relational-databases/replication/publisher-settings.md)  
   
@@ -68,8 +60,7 @@ ms.locfileid: "47799469"
   
 -   [Informazioni sulla pubblicazione, Agenti &#40;pubblicazione transazionale&#41;](../../relational-databases/replication/publication-information-agents-transactional-publication.md)  
   
--   [Informazioni sulla pubblicazione, Agenti &#40;pubblicazione di tipo merge&#41;](../../relational-databases/replication/publication-information-agents-merge-publication.md)  
-  
+-   [Informazioni sulla pubblicazione, Agenti &#40;pubblicazione di tipo merge&#41;](../../relational-databases/replication/publication-information-agents-merge-publication.md)    
 -   [Informazioni sulla pubblicazione, Agenti &#40;pubblicazione snapshot&#41;](../../relational-databases/replication/publication-information-agents-snapshot-publication.md)  
   
 -   [Informazioni sulla pubblicazione, Token di traccia &#40;pubblicazione transazionale, SQL Server 2005 e versioni successive&#41;](../../relational-databases/replication/publication-information-tracer-tokens-sql-server-2005-and-later.md)  
@@ -81,8 +72,6 @@ ms.locfileid: "47799469"
 -   [Sottoscrizione, Cronologia database di distribuzione - Sottoscrittore &#40;Sottoscrizione transazionale&#41;](../../relational-databases/replication/subscription-distributor-to-subscriber-history-transactional-subscription.md)  
   
 -   [Sottoscrizione, Cronologia sincronizzazione History &#40;sottoscrizione di tipo merge, SQL Server 2005 e versioni successive&#41;](../../relational-databases/replication/subscription-synchronization-history.md)  
-  
--   [Sottoscrizione, Cronologia sincronizzazione &#40;sottoscrizione di tipo merge, SQL Server 2000&#41;](../../relational-databases/replication/subscription-synchronization-history-merge-subscription-sql-server-2000.md)  
   
 -   [Sottoscrizione, Cronologia database di distribuzione - Sottoscrittore &#40;sottoscrizione snapshot&#41;](../../relational-databases/replication/subscription-distributor-to-subscriber-history-snapshot-subscription.md)  
   
@@ -98,7 +87,6 @@ ms.locfileid: "47799469"
   
 ## <a name="see-also"></a>Vedere anche  
  [Avviare Monitoraggio replica](../../relational-databases/replication/monitor/start-the-replication-monitor.md)   
- [Monitoraggio della replica](../../relational-databases/replication/monitor/monitoring-replication-overview.md)   
- [Riferimento alle proprietà &#40;replica&#41;](../../relational-databases/replication/properties-reference-replication.md)  
+
   
   

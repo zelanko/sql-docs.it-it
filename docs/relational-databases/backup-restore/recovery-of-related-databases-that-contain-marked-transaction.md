@@ -23,12 +23,12 @@ ms.assetid: 77a0d9c0-978a-4891-8b0d-a4256c81c3f8
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: b0ad92c9bf7596bb30dce4adf912fb1a9aa468a9
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a548fe7327c6e3c8ac4febca3db442490c983058
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47678219"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54131701"
 ---
 # <a name="recovery-of-related--databases-that-contain-marked-transaction"></a>Recupero di database correlati che contengono transazioni contrassegnate
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -61,13 +61,13 @@ BEGIN TRANSACTION Tx1 WITH MARK 'not the mark name, just a description'
  Per informazioni sull'inserimento di un contrassegno in una transazione che si estende su più database, vedere [Usare transazioni contrassegnate per recuperare coerentemente i database correlati &#40;modello di recupero con registrazione completa&#41;](../../relational-databases/backup-restore/use-marked-transactions-to-recover-related-databases-consistently.md).  
   
 ## <a name="transact-sql-syntax-for-recovering-to-a-mark"></a>Sintassi Transact-SQL per il recupero fino a un contrassegno  
- Quando si specifica una transazione contrassegnata come destinazione usando un'istruzione[RESTORE LOG](../../t-sql/statements/restore-statements-transact-sql.md), è possibile usare una delle clausole seguenti per arrestare l'operazione in corrispondenza del contrassegno o immediatamente prima di esso:  
+ Quando si specifica una transazione contrassegnata come destinazione usando un'istruzione [RESTORE LOG](../../t-sql/statements/restore-statements-transact-sql.md), è possibile usare una delle clausole seguenti per arrestare l'operazione in corrispondenza del contrassegno o immediatamente prima di esso:  
   
--   Usare la clausola WITH STOPATMARK = **'***<nome_contrassegno>***'** per specificare che il punto di recupero corrisponde alla transazione contrassegnata.  
+-   Usare la clausola WITH STOPATMARK = **'**_<nome_contrassegno>_**'** per specificare che il punto di recupero corrisponde alla transazione contrassegnata.  
   
      STOPATMARK esegue il rollforward fino al contrassegno, includendovi la transazione contrassegnata.  
   
--   Usare la clausola WITH STOPBEFOREMARK = **'***<nome_contrassegno>***'** per specificare che il punto di recupero corrisponde al record del log immediatamente precedente al contrassegno.  
+-   Usare la clausola WITH STOPBEFOREMARK = **'**_<nome_contrassegno>_**'** per specificare che il punto di recupero corrisponde al record del log immediatamente precedente al contrassegno.  
   
      STOPBEFOREMARK esegue il rollforward fino al contrassegno, escludendo la transazione contrassegnata.  
   
@@ -118,7 +118,7 @@ BEGIN TRANSACTION Tx1 WITH MARK 'not the mark name, just a description'
  [Applicare backup del log delle transazioni &#40;SQL Server&#41;](../../relational-databases/backup-restore/apply-transaction-log-backups-sql-server.md)   
  [Usare transazioni contrassegnate per recuperare coerentemente i database correlati &#40;modello di recupero con registrazione completa&#41;](../../relational-databases/backup-restore/use-marked-transactions-to-recover-related-databases-consistently.md)   
  [Panoramica del ripristino e del recupero &#40;SQL Server&#41;](../../relational-databases/backup-restore/restore-and-recovery-overview-sql-server.md)   
- [Ripristinare un database di SQL Server fino a un punto specifico &#40;Modello di recupero con registrazione completa&#41;](../../relational-databases/backup-restore/restore-a-sql-server-database-to-a-point-in-time-full-recovery-model.md)   
+ [Ripristinare un database di SQL Server fino a un punto specifico &#40;modello di recupero con registrazione completa&#41;](../../relational-databases/backup-restore/restore-a-sql-server-database-to-a-point-in-time-full-recovery-model.md)   
  [Pianificare ed eseguire sequenze di ripristino &#40;modello di recupero con registrazione completa&#41;](../../relational-databases/backup-restore/plan-and-perform-restore-sequences-full-recovery-model.md)  
   
   

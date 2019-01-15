@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 01a821c4-2920-400c-be03-93d26c749bb1
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: fedc2265a7d8e879a2ca67c5d2e6946ae1cb2c30
-ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
+ms.openlocfilehash: b85c71ca4dd8e6634474205346bce358969dd3b0
+ms.sourcegitcommit: bfa10c54e871700de285d7f819095d51ef70d997
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51812245"
+ms.lasthandoff: 01/14/2019
+ms.locfileid: "54254316"
 ---
 # <a name="integrating-reporting-services-using-the-report-viewer-controls---get-started"></a>Integrazione di Reporting Services tramite i controlli Visualizzatore report - Guida introduttiva
 
@@ -55,7 +55,7 @@ La pagina finale sarà simile alla seguente.
 
 <!DOCTYPE html>
 
-<html xmlns="https://www.w3.org/1999/xhtml">
+<html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
     <meta http-equiv="X-UA-Compatible" content="IE=edge" /> 
     <title></title>
@@ -177,7 +177,7 @@ Se si imposta l'altezza del controllo visualizzatore al 100%, l'elemento padre d
 
 ```
 <!DOCTYPE html>
-<html xmlns="https://www.w3.org/1999/xhtml">
+<html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
     <style>
         html,body,form,#div1 {
@@ -201,11 +201,11 @@ Se si imposta l'altezza del controllo visualizzatore al 100%, l'elemento padre d
 
 ### <a name="setting-the-parents-height-attribute"></a>Impostazione dell'attributo altezza dell'elemento padre
 
-Per altre informazioni sulle lunghezze percentuali di Viewport, vedere [Viewport-percentage lengths](https://www.w3.org/TR/css3-values/#viewport-relative-lengths) (Viewport-lunghezze percentuali).
+Per altre informazioni sulle lunghezze percentuali di Viewport, vedere [Viewport-percentage lengths](http://www.w3.org/TR/css3-values/#viewport-relative-lengths) (Viewport-lunghezze percentuali).
 
 ```
 <!DOCTYPE html>
-<html xmlns="https://www.w3.org/1999/xhtml">
+<html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
 </head>
 <body>

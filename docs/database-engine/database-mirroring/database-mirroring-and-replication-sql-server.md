@@ -14,12 +14,12 @@ ms.assetid: 82796217-02e2-4bc5-9ab5-218bae11a2d6
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 029ad55778a1c4239bdb83d587ca9a1f21bcaf20
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 40035d23d7414aa00f44f22411244ca7452ccafd
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52534441"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54124871"
 ---
 # <a name="database-mirroring-and-replication-sql-server"></a>Mirroring e replica del database (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -163,7 +163,7 @@ ms.locfileid: "52534441"
 |Modalità a sicurezza elevata senza failover automatico|Tutte le transazioni di cui è stato eseguito il commit vengono salvate su disco nel database mirror. L'agente di lettura log replica solo le transazioni salvate nel server mirror. Se il server mirror non è disponibile, il server principale non consente alcuna operazione nel database. L'agente di lettura log non può pertanto replicare alcuna transazione.|  
   
 ## <a name="see-also"></a>Vedere anche  
- [Caratteristiche e attività di replica](../../relational-databases/replication/replication-features-and-tasks.md)   
+ [Replica di SQL Server](../../relational-databases/replication/sql-server-replication.md)   
  [Log shipping e replica &#40;SQL Server&#41;](../../database-engine/log-shipping/log-shipping-and-replication-sql-server.md)  
   
   

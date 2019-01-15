@@ -13,12 +13,12 @@ ms.assetid: 74eee587-d5f5-4d1a-bbae-7f4e3f27e23b
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: ca169dc94a2f3fcbe6165bbbe1c69de158f9835f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 787e3c18581339de78a5f4fcd653967566f85ece
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47719009"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54124661"
 ---
 # <a name="security-architecture-for-web-synchronization"></a>Architettura di sicurezza per la sincronizzazione tramite il Web
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -39,7 +39,7 @@ ms.locfileid: "47719009"
 |Account di servizio di Windows per [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Agent|Gestione configurazione[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] |  
 |Applicazione autonoma|L'agente di merge viene eseguito nel contesto dell'utente di Windows che esegue l'applicazione.|  
   
-## <a name="b-connection-to-the-subscriber"></a>B. Connessione al Sottoscrittore  
+## <a name="b-connection-to-the-subscriber"></a>b. Connessione al Sottoscrittore  
  L'agente di merge si connette al Sottoscrittore utilizzando l'autenticazione di Windows o l'autenticazione di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . L'utente di Windows o l'account di accesso di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] specificato deve essere associato a un utente di database che sia membro del ruolo predefinito del database **dbowner** nel database di sottoscrizione.  
   
 > [!NOTE]  
@@ -105,7 +105,7 @@ ms.locfileid: "47719009"
 |L'autenticazione di[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] viene utilizzata se si specifica uno dei valori seguenti:<br /><br /> -   [!INCLUDE[tsql](../../../includes/tsql-md.md)]: valore **0** per il parametro **@distributor_security_mode** di [sp_addmergepullsubscription_agent](../../../relational-databases/system-stored-procedures/sp-addmergepullsubscription-agent-transact-sql.md).<br />- RMO: valore di <xref:Microsoft.SqlServer.Replication.SecurityMode.Standard> per <xref:Microsoft.SqlServer.Replication.MergeSynchronizationAgent.DistributorSecurityMode%2A>.<br />- Riga di comando dell'agente di merge: valore **0** per **-DistributorSecurityMode**.|[!INCLUDE[tsql](../../../includes/tsql-md.md)]: parametri **@distributor_login** e **@distributor_password** di [sp_addmergepullsubscription_agent](../../../relational-databases/system-stored-procedures/sp-addmergepullsubscription-agent-transact-sql.md).<br /><br /> RMO: <xref:Microsoft.SqlServer.Replication.MergeSynchronizationAgent.DistributorLogin%2A> e <xref:Microsoft.SqlServer.Replication.MergeSynchronizationAgent.DistributorPassword%2A><br /><br /> Riga di comando dell'agente di merge: **-DistributorLogin** e **-DistributorPassword**.|  
   
 ## <a name="g-connection-to-an-ftp-server"></a>G. Connessione a un server FTP  
- Specificare un utente di Windows per questa connessione solo se si eseguirà il download dei file di snapshot da un server FTP, anziché da un percorso UNC, al computer che esegue IIS prima dell'applicazione dello snapshot al Sottoscrittore. Per altre informazioni, vedere [Trasferire snapshot tramite FTP](../../../relational-databases/replication/transfer-snapshots-through-ftp.md).  
+ Specificare un utente di Windows per questa connessione solo se si eseguirà il download dei file di snapshot da un server FTP, anziché da un percorso UNC, al computer che esegue IIS prima dell'applicazione dello snapshot al Sottoscrittore. Per altre informazioni, vedere [Trasferire snapshot tramite FTP](../../../relational-databases/replication//publish/deliver-a-snapshot-through-ftp.md).  
   
 |Tipo di autenticazione|Posizione in cui viene specificata l'autenticazione|  
 |----------------------------|-------------------------------------------|  

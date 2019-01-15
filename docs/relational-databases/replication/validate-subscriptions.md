@@ -16,12 +16,12 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: fba42b0cd532f61dc71c89ba67c09798f69891fb
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 87856e3acee400e7a9832d53dee0c1d5c342637c
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47836679"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54133341"
 ---
 # <a name="validate-subscriptions"></a>Convalida sottoscrizioni
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -38,6 +38,6 @@ ms.locfileid: "47836679"
  Fare clic su questo pulsante per accedere alla finestra di dialogo **Opzioni di convalida delle sottoscrizioni** nella quale è possibile specificare se utilizzare la convalida mediante il conteggio delle righe oppure la convalida mediante checksum binario.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Convalidare i dati replicati](../../relational-databases/replication/validate-replicated-data.md)  
+ [Convalidare i dati replicati](../../relational-databases/replication/validate-data-at-the-subscriber.md)  
   
   

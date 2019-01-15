@@ -33,12 +33,12 @@ ms.assetid: 21f8e4d4-cd07-4856-98f0-9c9890ebbc82
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 36d70b56432fee62d157bb8e6cf192d906e84bc3
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 144323deee0c84ac1be404869a0ca71197ffcd32
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52519343"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54135581"
 ---
 # <a name="configure-web-synchronization"></a>Configurazione della sincronizzazione Web
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -136,7 +136,7 @@ ms.locfileid: "52519343"
   
 -   Se si replicano volumi elevati di dati, può essere necessario regolare la dimensione dei batch dell'agente di merge.  
   
- La dimensione dei batch per la replica di tipo merge è misurata in *generazioni*, ovvero raccolte di modifiche per ogni articolo. Per specificare il numero di generazioni in un batch, si usano i parametri **-DownloadGenerationsPerBatch** e **-UploadGenerationsPerBatch** dell'agente di merge. Per altre informazioni, vedere [Replication Merge Agent](../../relational-databases/replication/agents/replication-merge-agent.md).  
+ La dimensione dei batch per la replica di tipo merge è misurata in *generazioni*, ovvero raccolte di modifiche per ogni articolo. Il numero di generazioni in un batch è specificato utilizzando i parametri **-DownloadGenerationsPerBatch** e **-UploadGenerationsPerBatch** dell'agente di merge. Per altre informazioni, vedere [Replication Merge Agent](../../relational-databases/replication/agents/replication-merge-agent.md).  
   
  Per volumi elevati di dati, specificare un numero basso per ognuno dei parametri di batch. Si consiglia di iniziare con il valore 10, quindi regolarlo in base alle esigenze e alle prestazioni dell'applicazione. In genere, questi parametri sono specificati in un profilo dell'agente. Per ulteriori informazioni sui profili, vedere [Replication Agent Profiles](../../relational-databases/replication/agents/replication-agent-profiles.md).  
   
@@ -162,7 +162,7 @@ ms.locfileid: "52519343"
   
 -   L'account con cui viene eseguito il listener per la replica di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (Replisapi.dll) è anche l'account utilizzato per la connessione al server di pubblicazione e al server di distribuzione durante la sincronizzazione. Deve essere eseguito il mapping di questo account a un account di accesso di SQL nel server di pubblicazione e nel server di distribuzione. Per altre informazioni, vedere la sezione "Impostazione delle autorizzazioni per Listener per la replica di SQL Server" in [Configurare IIS per la sincronizzazione Web](../../relational-databases/replication/configure-iis-for-web-synchronization.md).  
   
--   È possibile utilizzare la connessione FTP per trasferire lo snapshot dal server di pubblicazione al computer che esegue IIS. Lo snapshot viene sempre trasferito dal computer che esegue IIS al Sottoscrittore tramite HTTPS. Per altre informazioni, vedere [Trasferire snapshot tramite FTP](../../relational-databases/replication/transfer-snapshots-through-ftp.md).  
+-   È possibile utilizzare la connessione FTP per trasferire lo snapshot dal server di pubblicazione al computer che esegue IIS. Lo snapshot viene sempre trasferito dal computer che esegue IIS al Sottoscrittore tramite HTTPS. Per altre informazioni, vedere [Trasferire snapshot tramite FTP](../../relational-databases/replication/publish/deliver-a-snapshot-through-ftp.md).  
   
 -   Se i server nella topologia di replica sono protetti da un firewall, potrebbe essere necessario aprire porte nel firewall per consentire la sincronizzazione Web.  
   
@@ -170,7 +170,7 @@ ms.locfileid: "52519343"
   
     -   Il computer che esegue IIS si connette in genere al server di pubblicazione o al server di distribuzione mediante la porta 1433 (istanza predefinita). Quando il server di pubblicazione o di distribuzione corrisponde a un'istanza denominata in un server con un'altra istanza predefinita, per la connessione all'istanza denominata viene in genere utilizzata la porta 1500.  
   
-    -   Se il computer che esegue IIS e il server di distribuzione sono separati da un firewall e per il recapito di snapshot viene utilizzata una condivisione FTP, è necessario aprire le porte utilizzate per FTP. Per altre informazioni, vedere [Trasferire snapshot tramite FTP](../../relational-databases/replication/transfer-snapshots-through-ftp.md).  
+    -   Se il computer che esegue IIS e il server di distribuzione sono separati da un firewall e per il recapito di snapshot viene utilizzata una condivisione FTP, è necessario aprire le porte utilizzate per FTP. Per altre informazioni, vedere [Trasferire snapshot tramite FTP](../../relational-databases/replication/publish/deliver-a-snapshot-through-ftp.md).  
   
 > [!IMPORTANT]  
 >  L'apertura di porte nel firewall potrebbe esporre il server ad attacchi dannosi. Prima di aprire una porta, verificare di comprenderne le implicazioni per un sistema firewall. Per altre informazioni, vedere [Security Considerations for a SQL Server Installation](../../sql-server/install/security-considerations-for-a-sql-server-installation.md).  

@@ -14,12 +14,12 @@ ms.assetid: 0a291582-f034-42da-a1a3-29535b607b74
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 2b03471825ee3a6db98a0df68c81828ee61d433a
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 5231236fea77859bcdd7b1e18979480a944ec22c
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52527483"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54131461"
 ---
 # <a name="set-the-propagation-method-for-data-changes-to-transactional-articles"></a>Impostazione del metodo di propagazione per le modifiche ai dati negli articoli transazionali
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -76,7 +76,7 @@ ms.locfileid: "52527483"
   
      Dopo la generazione dello snapshot, passare alla cartella snapshot per la pubblicazione cui appartiene questo articolo e individuare il file con estensione **sch** che presenta lo stesso nome dell'articolo. Aprire il file mediante Blocco note o un altro editor di testo, individuare il comando CREATE PROCEDURE per le stored procedure di inserimento, aggiornamento o eliminazione, quindi modificare la definizione della procedura in modo da fornire qualsiasi logica personalizzata per la propagazione delle modifiche ai dati. Se lo snapshot viene rigenerato, è necessario ricreare la stored procedura personalizzata.  
   
-##  <a name="TsqlProcedure"></a> Uso di Transact-SQL  
+##  <a name="TsqlProcedure"></a> Utilizzo di Transact-SQL  
  La replica transazionale consente di controllare la modalità con cui le modifiche vengono propagate dal server di pubblicazione ai Sottoscrittori. Questo metodo di propagazione può inoltre essere impostato a livello di programmazione quando un articolo viene creato e in seguito modificato tramite le stored procedure di replica.  
   
 > [!NOTE]  
@@ -118,11 +118,11 @@ ms.locfileid: "52527483"
   
 1.  Nel database di pubblicazione del server di pubblicazione eseguire [sp_addarticle](../../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md). Specificare il nome della pubblicazione cui appartiene l'articolo per **@publication**, il nome dell'articolo per **@article**, l'oggetto di database da pubblicare per **@source_object**, un valore per la maschera di bit **@schema_option** che contiene il valore **0x02** (consente la generazione automatica di stored procedure personalizzate) e almeno uno dei parametri seguenti:  
   
-    -   **@ins_cmd**: specificare il valore **CALL sp_MSins\__nome_articolo_**, dove **_nome_articolo_** è il valore specificato per **@article**.  
+    -   **@ins_cmd**: specificare il valore **CALL sp_MSins_* nome_articolo***, dove ***nome_articolo*** è il valore specificato per **@article**.  
   
-    -   **@del_cmd**: specificare il valore **CALL sp_MSdel\__nome_articolo_** o **XCALL sp_MSdel\__nome_articolo_**, dove **_nome_articolo_** è il valore specificato per **@article**.  
+    -   **@del_cmd**: specificare il valore **CALL sp_MSdel_*nome_articolo*** o **XCALL sp_MSdel_* nome_articolo***, dove ***nome_articolo*** è il valore specificato per **@article**.  
   
-    -   **@upd_cmd**: specificare il valore **SCALL sp_MSupd\__nome_articolo_**, **CALL sp_MSupd\__nome_articolo_**, **XCALL sp_MSupd\__nome_articolo_** o **MCALL sp_MSupd\__nome_articolo_**, dove **_nome_articolo_** è il valore specificato per **@article**.  
+    -   **@upd_cmd**: specificare il valore **SCALL sp_MSupd_* nome_articolo***, **CALL sp_MSupd_* nome_articolo***, **XCALL sp_MSupd_* nome_articolo*** o **MCALL sp_MSupd_* nome_articolo***, dove ***nome_articolo*** è il valore specificato per **@article**.  
   
     > [!NOTE]  
     >  Per ognuno dei parametri di comando indicati in precedenza, è possibile specificare il nome desiderato per le stored procedure generate dalla replica.  
@@ -138,11 +138,11 @@ ms.locfileid: "52527483"
   
 1.  Nel database di pubblicazione del server di pubblicazione eseguire [sp_addarticle](../../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md). Specificare il nome della pubblicazione cui appartiene l'articolo per **@publication**, il nome dell'articolo per **@article**, l'oggetto di database da pubblicare per **@source_object**, un valore per la maschera di bit **@schema_option** che contiene il valore **0x02** (consente la generazione automatica di stored procedure personalizzate) e almeno uno dei parametri seguenti:  
   
-    -   **@ins_cmd**: specificare il valore **CALL sp_MSins\__nome_articolo_**, dove **_nome_articolo_** è il valore specificato per **@article**.  
+    -   **@ins_cmd**: specificare il valore **CALL sp_MSins_* nome_articolo***, dove ***nome_articolo*** è il valore specificato per **@article**.  
   
-    -   **@del_cmd**: specificare il valore **CALL sp_MSdel\__nome_articolo_** o **XCALL sp_MSdel\__nome_articolo_**, dove **_nome_articolo_** è il valore specificato per **@article**.  
+    -   **@del_cmd**: specificare il valore **CALL sp_MSdel_*nome_articolo*** o **XCALL sp_MSdel_* nome_articolo***, dove ***nome_articolo*** è il valore specificato per **@article**.  
   
-    -   **@upd_cmd**: specificare il valore **SCALL sp_MSupd\__nome_articolo_**, **CALL sp_MSupd\__nome_articolo_**, **XCALL sp_MSupd\__nome_articolo_**, **MCALL sp_MSupd\__nome_articolo_**, dove **_nome_articolo_** è il valore specificato per **@article**.  
+    -   **@upd_cmd**: specificare il valore **SCALL sp_MSupd_* nome_articolo***, **CALL sp_MSupd_* nome_articolo***, **XCALL sp_MSupd_* nome_articolo*** o **MCALL sp_MSupd_* nome_articolo***, dove ***nome_articolo*** è il valore specificato per **@article**.  
   
     > [!NOTE]  
     >  Per ognuno dei parametri di comando indicati in precedenza, è possibile specificare il nome desiderato per le stored procedure generate dalla replica.  
@@ -162,6 +162,6 @@ ms.locfileid: "52527483"
   
 ## <a name="see-also"></a>Vedere anche  
  [Specificare la modalità di propagazione delle modifiche per gli articoli transazionali](../../../relational-databases/replication/transactional/transactional-articles-specify-how-changes-are-propagated.md)   
- [Creare, modificare ed eliminare pubblicazioni e articoli &#40;replica&#41;](../../../relational-databases/replication/publish/create-modify-and-delete-publications-and-articles-replication.md)  
+ [Create a Publication](../../../relational-databases/replication/publish/create-a-publication.md)  
   
   

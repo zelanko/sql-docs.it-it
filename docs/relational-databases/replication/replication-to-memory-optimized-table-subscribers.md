@@ -11,12 +11,12 @@ ms.assetid: 1a8e6bc7-433e-471d-b646-092dc80a2d1a
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 1658039af7e81a8019a7b72f0338802bd30162b6
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 2d0b215dbc61be9d7a710300301ec63f8796a915
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47603299"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54129511"
 ---
 # <a name="replication-to-memory-optimized-table-subscribers"></a>Replica in sottoscrittori di tabelle con ottimizzazione per la memoria
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -90,7 +90,5 @@ ms.locfileid: "47603299"
   
 -   ANSI_PADDING deve essere ON.  
   
-## <a name="see-also"></a>Vedere anche  
- [Caratteristiche e attività di replica](../../relational-databases/replication/replication-features-and-tasks.md)  
   
   
