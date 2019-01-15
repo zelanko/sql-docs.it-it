@@ -13,12 +13,12 @@ ms.assetid: 8ae70041-f3d9-46e4-8fa8-31088572a9f8
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: f56669ce6fdb9bdc71017afa351e0f2b31f0b9d3
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 8e4179324ec6b194e0e60e4d9715ec24c1c4f835
+ms.sourcegitcommit: 78e32562f9c1fbf2e50d3be645941d4aa457e31f
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52508053"
+ms.lasthandoff: 01/08/2019
+ms.locfileid: "54100756"
 ---
 # <a name="sqllogship-application"></a>Applicazione sqllogship
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -34,25 +34,25 @@ sqllogship -server instance_name { -backup primary_id | -copy secondary_id | -re
 ```  
   
 ## <a name="arguments"></a>Argomenti  
- **-server** *instance_name*  
+ **-server** _instance_name_  
  Specifica l'istanza di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] in cui verrà eseguita l'operazione. L'istanza del server da specificare dipende dall'operazione di distribuzione dei log specificata. Nel caso dell'operazione **-backup**, *instance_name* deve essere il nome del server primario in una configurazione per il log shipping. Nel caso di un'operazione **-copy** o **-restore**, *instance_name* deve essere il nome del server secondario in una configurazione per il log shipping.  
   
- **-backup** *primary_id*  
+ **-backup** _primary_id_  
  Esegue un'operazione di backup per il database primario corrispondente all'ID primario specificato tramite *primary_id*. Per ottenere questo ID, selezionarlo dalla tabella di sistema [log_shipping_primary_databases](../relational-databases/system-tables/log-shipping-primary-databases-transact-sql.md) oppure usare la stored procedure [sp_help_log_shipping_primary_database](../relational-databases/system-stored-procedures/sp-help-log-shipping-primary-database-transact-sql.md) .  
   
  L'operazione di backup crea il backup del log nella directory di backup. L'applicazione **sqllogship** elimina quindi tutti i file di backup meno recenti in base al periodo di conservazione dei file. La cronologia per l'operazione di backup viene poi registrata dall'applicazione nel server primario e nel server di monitoraggio. L'applicazione esegue infine [sp_cleanup_log_shipping_history](../relational-databases/system-stored-procedures/sp-cleanup-log-shipping-history-transact-sql.md)che elimina le informazioni sulla cronologia meno recenti in base al periodo di conservazione.  
   
- **-copy** *secondary_id*  
+ **-copy** _secondary_id_  
  Esegue un'operazione di copia per copiare i backup dal server secondario specificato per il database o i database secondari, corrispondenti all'ID secondario specificato tramite *secondary_id*. Per ottenere questo ID, selezionarlo dalla tabella di sistema [log_shipping_secondary](../relational-databases/system-tables/log-shipping-secondary-transact-sql.md) oppure usare la stored procedure [sp_help_log_shipping_secondary_database](../relational-databases/system-stored-procedures/sp-help-log-shipping-secondary-database-transact-sql.md) .  
   
  L'operazione copia i file di backup dalla directory di backup alla directory di destinazione. L'applicazione **sqllogship** registra quindi la cronologia per l'operazione di copia nel server secondario e nel server di monitoraggio.  
   
- **-restore** *secondary_id*  
+ **-restore** _secondary_id_  
  Esegue un'operazione di ripristino nel server secondario specificato per il database o i database secondari, corrispondenti all'ID secondario specificato tramite *secondary_id*. Per ottenere questo ID è possibile usare la stored procedure **sp_help_log_shipping_secondary_database** .  
   
  Tutti i file di backup nella directory di destinazione creati dopo il punto di ripristino più recente vengono ripristinati nel database o nei database secondari. L'applicazione **sqllogship** elimina quindi tutti i file di backup meno recenti in base al periodo di conservazione dei file. La cronologia per l'operazione di ripristino viene poi registrata dall'applicazione nel server secondario e nel server di monitoraggio. L'applicazione esegue infine **sp_cleanup_log_shipping_history**che elimina le informazioni sulla cronologia meno recenti in base al periodo di conservazione.  
   
- **-verboselevel** *level*  
+ **-verboselevel** _level_  
  Specifica il livello di messaggi aggiunti alla cronologia di log shipping. *level* può essere uno dei valori interi seguenti:  
   
 |level|Descrizione|  
@@ -63,10 +63,10 @@ sqllogship -server instance_name { -backup primary_id | -copy secondary_id | -re
 |**3**|L'output include messaggi informativi, di avviso e di gestione degli errori. Si tratta del valore predefinito.|  
 |4|L'output include tutti i messaggi di debug e di traccia.|  
   
- **-logintimeout** *timeout_value*  
+ **-logintimeout** _timeout_value_  
  Specifica la quantità di tempo assegnata per un tentativo di accesso all'istanza del server prima del timeout. Il valore predefinito è 15 secondi. *timeout_value* is **int**_._  
   
- **-querytimeout** *timeout_value*  
+ **-querytimeout** _timeout_value_  
  Specifica la quantità di tempo assegnata per l'avvio dell'operazione specificata prima del timeout del tentativo. Il valore predefinito non prevede un periodo di timeout. *timeout_value* is **int**_._  
   
 ## <a name="remarks"></a>Remarks  
