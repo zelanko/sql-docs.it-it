@@ -29,19 +29,22 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: 777fb26703b4582662748a15d4ac6ed6e0fdfae0
-ms.sourcegitcommit: c7febcaff4a51a899bc775a86e764ac60aab22eb
+ms.openlocfilehash: 375a20488c8f887a89538ee640e059a96da72a99
+ms.sourcegitcommit: 96032813f6bf1cba680b5e46d82ae1f0f2da3d11
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "52712502"
+ms.lasthandoff: 01/15/2019
+ms.locfileid: "54300578"
 ---
 # <a name="bcp-utility"></a>Utilità bcp
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
- > Per l'uso di bcp in Linux, vedere [installare sqlcmd e bcp in Linux](../linux/sql-server-linux-setup-tools.md).
+  > [!div class="nextstepaction"]
+  > [Condividi i tuoi commenti su SQL Docs sommario.](https://aka.ms/sqldocsurvey)
 
- > Per informazioni dettagliate sull'uso di bcp con Azure SQL Data Warehouse, vedere [caricare dati con bcp](https://docs.microsoft.com/azure/sql-data-warehouse/sql-data-warehouse-load-with-bcp).
+> Per l'uso di bcp in Linux, vedere [installare sqlcmd e bcp in Linux](../linux/sql-server-linux-setup-tools.md).
+> 
+> Per informazioni dettagliate sull'uso di bcp con Azure SQL Data Warehouse, vedere [caricare dati con bcp](https://docs.microsoft.com/azure/sql-data-warehouse/sql-data-warehouse-load-with-bcp).
 
   L'utilità del **p**rogramma di **c**opia **b**ulk (**bcp**) esegue operazioni di copia bulk di dati tra un'istanza di [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] e un file di dati in un formato specificato dall'utente. L'utilità **bcp** può essere usata per importare un numero elevato di nuove righe nelle tabelle di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] o per esportare dati dalle tabelle in file di dati. Ad eccezione del caso in cui venga usata con l'opzione **queryout** , l'utilità non richiede alcuna conoscenza di [!INCLUDE[tsql](../includes/tsql-md.md)]. Per importare dati in una tabella, è necessario utilizzare un file di formato creato per la tabella specifica oppure conoscere approfonditamente la struttura della tabella e i tipi di dati validi per le relative colonne.  
   
@@ -60,8 +63,8 @@ Gli strumenti da riga di comando sono General Availability (GA), ma essi vengono
 **Informazioni sulla versione**
 
 Numero di versione: 15.0 <br>
-Numero di build: 15.0.1000.34<br>
-Data di rilascio: 18 ottobre 2018
+Numero build: 15.0.1000.34<br>
+Data di rilascio 18 ottobre 2018
 
 La nuova versione di SQLCMD supporta l'autenticazione di Azure AD, incluso il supporto multi-Factor Authentication (MFA) per le funzionalità di Database SQL, SQL Data Warehouse e Always Encrypted.
 Il nuovo BCP supporta l'autenticazione di Azure AD, incluso il supporto multi-Factor Authentication (MFA) per Database SQL e SQL Data Warehouse.
@@ -172,7 +175,7 @@ bcp [<a href="#db_name">database_name.</a>] <a href="#schema">schema</a>.{<a hre
  **-d** _**database\_name**_<a name="d"></a>   
  Specifica il database al quale connettersi. Per impostazione predefinita, bcp.exe si connette al database predefinito dell'utente. Se si specificano **-d** *database_name* e un nome in tre parti (*database_name.schema.table*, passed as the first parameter to bcp.exe) is specified, an error will occur because you cannot specify the database name twice.Se si specificano *database_name* inizia con un trattino (-) o una barra (/), non aggiungere uno spazio tra **-d** e il nome del database.  
   
- **-e**  _**err\_file**_<a name="e"></a>  
+ **-e** _**err\_file**_<a name="e"></a>  
  Specifica il percorso completo di un file di errori usato per archiviare le eventuali righe che l'utilità **bcp** non è in grado di trasferire dal file al database. I messaggi di errore generati dal comando **bcp** vengono inviati alla workstation dell'utente. Se questa opzione non viene utilizzata, non viene creato alcun file degli errori.  
   
  Se *err_file* inizia con un segno meno (-) o una barra (/), non includere uno spazio tra **-e** e il valore *err_file* .  
@@ -251,7 +254,7 @@ bcp [<a href="#db_name">database_name.</a>] <a href="#schema">schema</a>.{<a hre
 
    Per abilitare l'autenticazione interattiva, specificare l'opzione -G con nome utente (-U), solo senza una password.   
 
-   Nell'esempio seguente esporta i dati utilizzando la modalità interattiva di Azure AD che indica il nome utente in cui utente rappresenta un account AAD. Questo è lo stesso esempio usato nella precedente sezione: *Azure Active Directory utente e Password*.  
+   Nell'esempio seguente esporta i dati utilizzando la modalità interattiva di Azure AD che indica il nome utente in cui utente rappresenta un account AAD. Questo è lo stesso esempio usato nella sezione precedente: *Nome utente e password di Azure Active Directory:*  
 
    Modalità interattiva richiede una password per essere immessi manualmente, o per gli account di multi-factor Authentication abilitata, di completare il metodo di autenticazione MFA configurato. 
 
@@ -312,7 +315,7 @@ Se *input_file* inizia con un segno meno (-) o una barra (/), non includere uno 
 Specifica che durante l'operazione il valore delle colonne vuote deve essere Null, ovvero che non verranno inseriti valori predefiniti in tali colonne. Per altre informazioni, vedere [Mantenere i valori Null o usare i valori predefiniti durante l'importazione in blocco &#40;SQL Server&#41;](../relational-databases/import-export/keep-nulls-or-use-default-values-during-bulk-import-sql-server.md).  
   
 **-K** _**application\_intent**_<a name="K"></a>   
-Dichiara il tipo di carico di lavoro dell'applicazione in caso di connessione a un server. L'unico valore consentito è **ReadOnly**. Se l'opzione **-K** non è specificata, l'utilità bcp non supporterà la connettività a una replica secondaria in un gruppo di disponibilità Always On. Per altre informazioni, vedere [Repliche secondarie attive: Repliche secondarie leggibili &#40;Gruppi di disponibilità AlwaysOn&#41;](../database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md).  
+Dichiara il tipo di carico di lavoro dell'applicazione in caso di connessione a un server. L'unico valore consentito è **ReadOnly**. Se l'opzione **-K** non è specificata, l'utilità bcp non supporterà la connettività a una replica secondaria in un gruppo di disponibilità Always On. Per altre informazioni, vedere [Repliche secondarie attive: Repliche secondarie leggibili &#40;Gruppi di disponibilità Always On&#41;](../database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md).  
   
 **-L** _**last\_row**_<a name="L"></a>  
 Specifica il numero dell'ultima riga da esportare da una tabella o da importare da un file di dati. Per questo parametro è necessario specificare un valore maggiore di (>) 0, ma minore (<) o uguale (=) al numero dell'ultima riga. Se il parametro viene omesso, l'impostazione predefinita è l'ultima riga del file.  
@@ -341,7 +344,7 @@ Esegue l'operazione di copia bulk utilizzando i tipi di dati nativi del database
   
  L'avviso può essere ignorato. Per evitare la visualizzazione dell'avviso, usare **-n** invece di **-N**.  
   
- **-o**  _**output\_file**_<a name="o"></a>  
+ **-o** _**output\_file**_<a name="o"></a>  
  Specifica il nome di un file in cui viene reindirizzato l'output dal prompt dei comandi.  
   
  Se *output_file* inizia con un segno meno (-) o una barra (/), non includere uno spazio tra **-o** e il valore *output_file* .  
@@ -365,7 +368,7 @@ Esegue l'operazione di copia bulk utilizzando i tipi di dati nativi del database
   
  Per altre informazioni, vedere la sezione [Osservazioni](#remarks)di seguito in questo argomento.  
   
- **-r**  _**riga\_termine**_<a name="r"></a>  
+ **-r** _**row\_term**_<a name="r"></a>  
  Specifica il carattere di terminazione della riga. Il valore predefinito è **\n** (carattere di nuova riga). Utilizzare questo parametro per specificare un carattere di terminazione della riga diverso da quello predefinito. Per altre informazioni, vedere [Impostazione dei caratteri di terminazione del campo e della riga &#40;SQL Server&#41;](../relational-databases/import-export/specify-field-and-row-terminators-sql-server.md).  
   
  Se si specifica il carattere di terminazione della riga in notazione esadecimale nel comando bcp.exe, il valore verrà troncato in corrispondenza di 0x00. Se ad esempio si specifica 0x410041, verrà utilizzato 0x41.  
@@ -519,7 +522,7 @@ L'utilità bcp può anche essere scaricata separatamente dal [Microsoft SQL Serv
  
 -   A. Identificare la versione dell'utilità **bcp**
   
--   B. Copia delle righe di tabella in un file di dati (con connessione trusted)  
+-   b. Copia delle righe di tabella in un file di dati (con connessione trusted)  
   
 -   [C.](#c-copying-table-rows-into-a-data-file-with-mixed-mode-authentication) Copia delle righe di tabella in un file di dati (con autenticazione in modalità mista)  
   
@@ -570,7 +573,7 @@ Al prompt dei comandi immettere il comando seguente:
 bcp -v
 ```
   
-### <a name="b-copying-table-rows-into-a-data-file-with-a-trusted-connection"></a>B. Copia delle righe di tabella in un file di dati (con connessione trusted)  
+### <a name="b-copying-table-rows-into-a-data-file-with-a-trusted-connection"></a>b. Copia delle righe di tabella in un file di dati (con connessione trusted)  
 Gli esempi seguenti illustrano l'uso dell'opzione **out** nella tabella `WideWorldImporters.Warehouse.StockItemTransactions` .
 
 - **Base**  
@@ -596,7 +599,7 @@ L'esempio seguente illustra l'uso dell'opzione **out** nella tabella `WideWorldI
   
  Si presuppone che l'utente usi l'autenticazione in modalità mista, quindi l'opzione **-U** è necessaria per specificare l'ID di accesso. A meno che non venga eseguita la connessione all'istanza predefinita di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] sul computer locale, usare l'opzione **-S** per specificare il nome di sistema e, facoltativamente, il nome di un'istanza.  
 
-Al prompt dei comandi, immettere il comando seguente: \(il sistema chiederà di specificare la password.\)
+Al prompt dei comandi immettere il comando seguente: \(Verrà richiesto di inserire la password.\)
 ```  
 bcp WideWorldImporters.Warehouse.StockItemTransactions out D:\BCP\StockItemTransactions_character.bcp -c -U<login_id> -S<server_name\instance_name>
 ```  
@@ -709,6 +712,6 @@ bcp.exe MyTable out "D:\data.csv" -T -c -C 65001 -t , ...
   
 ## <a name="feedback"></a>Commenti e suggerimenti
 
-![needhelp_person_icon](../ssms/media/needhelp_person_icon.png) [SQL Client Tools Forum](https://social.msdn.microsoft.com/Forums/en-US/home?forum=sqltools)
+![needhelp_person_icon](../ssms/media/needhelp_person_icon.png) [SQL Client Tools Forum](https://social.msdn.microsoft.com/Forums/home?forum=sqltools)
 
 [!INCLUDE[get-help-options](../includes/paragraph-content/get-help-options.md)]
