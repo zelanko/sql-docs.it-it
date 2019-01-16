@@ -11,19 +11,19 @@ ms.assetid: 62de4be6-b027-427d-a7e5-352960e42877
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 5c36ae89563490257ccc9db78c7386642a71f0ce
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 8e2df0607162f5f2cb90ff6b0525fdc530b7be66
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52398430"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53211821"
 ---
 # <a name="jdbc-driver-support-for-high-availability-disaster-recovery"></a>Supporto di Microsoft JDBC Driver per il ripristino di emergenza a disponibilità elevata
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
-  In questo argomento viene illustrato il supporto di [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] per il ripristino di emergenza a disponibilità elevata -- [!INCLUDE[ssHADR](../../includes/sshadr_md.md)]. Per ulteriori informazioni su [!INCLUDE[ssHADR](../../includes/sshadr_md.md)], vedere la documentazione online di [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)].  
+  In questo argomento viene illustrato il supporto di [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] per il ripristino di emergenza a disponibilità elevata - [!INCLUDE[ssHADR](../../includes/sshadr_md.md)]. Per altre informazioni su [!INCLUDE[ssHADR](../../includes/sshadr_md.md)], vedere la documentazione online di [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] .  
   
- A partire dalla versione 4.0 di [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] è possibile specificare il listener di un gruppo di disponibilità (di ripristino di emergenza a disponibilità elevata) nella proprietà di connessione. Se un'applicazione [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] è connessa a un database AlwaysOn che esegue il failover, dopo il failover la connessione originale viene interrotta e l'applicazione deve aprire una nuova connessione per proseguire con l'esecuzione. Le [proprietà di connessione](../../connect/jdbc/setting-the-connection-properties.md) seguenti sono state aggiunte in [!INCLUDE[jdbc_40](../../includes/jdbc_40_md.md)]:  
+ A partire dalla versione 4.0 di [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] è possibile specificare il listener del gruppo di disponibilità (ripristino di emergenza a disponibilità elevata) nella proprietà di connessione. Se un'applicazione [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] è connessa a un database AlwaysOn che esegue il failover, dopo il failover la connessione originale viene interrotta e l'applicazione deve aprire una nuova connessione per proseguire con l'esecuzione. Le [proprietà di connessione](../../connect/jdbc/setting-the-connection-properties.md) seguenti sono state aggiunte in [!INCLUDE[jdbc_40](../../includes/jdbc_40_md.md)]:  
   
 -   **multiSubnetFailover**  
   
@@ -40,11 +40,11 @@ Si noti che:
 * transparentNetworkIPResolution viene ignorato se sono presenti più di 64 indirizzi IP
 * Quando transparentNetworkIPResolution è true, il primo tentativo di connessione Usa un valore di timeout di 500 ms. REST di tentativi di connessione seguire la stessa logica della funzionalità multiSubnetFailover. 
 
-> [!NOTE]  
-Se si utilizza Microsoft JDBC Driver 4.2 (o inferiore) per SQL Server e se **multiSubnetFailover** è false, il [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] tenta di connettersi al primo indirizzo IP. Se [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] non stabilisce una connessione con il primo indirizzo IP, la connessione avrà esito negativo. Tramite [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] non verranno eseguiti tentativi di connessione ad altri indirizzi IP successivi associati al server. 
-
-  
-> [!NOTE]  
+> [!NOTE]
+> Se si utilizza Microsoft JDBC Driver 4.2 (o inferiore) per SQL Server e se **multiSubnetFailover** è false, il [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] tenta di connettersi al primo indirizzo IP. Se [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] non stabilisce una connessione con il primo indirizzo IP, la connessione avrà esito negativo. Tramite [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] non verranno eseguiti tentativi di connessione ad altri indirizzi IP successivi associati al server. 
+> 
+> 
+> [!NOTE]
 >  L'aumento del timeout di connessione e l'implementazione della logica di riesecuzione per le connessioni aumentano le probabilità che un'applicazione si connetta a un gruppo di disponibilità. Inoltre, poiché potrebbe non essere possibile stabilire una connessione a causa del failover di un gruppo di disponibilità, è opportuno implementare la logica di riesecuzione delle connessioni, finché non si ottiene la riconnessione.  
   
  
@@ -70,7 +70,7 @@ Se si utilizza Microsoft JDBC Driver 4.2 (o inferiore) per SQL Server e se **mul
   
 -   La connessione a un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] configurata con più di 64 indirizzi IP determinerà un errore di connessione.  
   
--   Il comportamento di un'applicazione in cui viene usata la proprietà di connessione **multiSubnetFailover** non è influenzato dal tipo di autenticazione, cioè dall'autenticazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], dall'autenticazione Kerberos o dall’autenticazione di Windows.  
+-   Il comportamento di un'applicazione in cui viene usata la proprietà di connessione **multiSubnetFailover** non è influenzato dal tipo di autenticazione, cioè Autenticazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], Autenticazione Kerberos o Autenticazione di Windows.  
   
 -   Aumentare il valore di **loginTimeout** per adattarlo alla durata del failover e ridurre il numero di nuovi tentativi di connessione dell'applicazione.  
   

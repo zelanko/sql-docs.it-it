@@ -15,12 +15,12 @@ helpviewer_keywords:
 author: pmasl
 ms.author: pelopes
 manager: craigg
-ms.openlocfilehash: ae488cfeabc3d506bc53b455f0df6149c537765d
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.openlocfilehash: 125b3de50e127e4b1e7d567da58b71f58e2f72aa
+ms.sourcegitcommit: 467b2c708651a3a2be2c45e36d0006a5bbe87b79
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51605281"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53980287"
 ---
 # <a name="service-principal-name-spn-support-in-client-connections"></a>Supporto per nomi SPN nelle connessioni client
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -64,7 +64,7 @@ ms.locfileid: "51605281"
   
  Le applicazioni possono specificare a livello di programmazione i nomi SPN come attributi di connessione anziché specificare parole chiave della stringa di connessione. In questo modo, viene semplificata la gestione della frammentazione del pool di connessioni.  
   
- Nelle applicazioni è inoltre necessario tenere presente che i nomi SPN nelle stringhe di connessione possono essere sostituiti dagli attributi di connessione corrispondenti, mentre le stringhe di connessione utilizzate dal pool di connessioni utilizzeranno i valori della stringa di connessione ai fini del pool.  
+ Nelle applicazioni è inoltre necessario tenere presente che i nomi SPN nelle stringhe di connessione possono essere sostituiti dagli attributi di connessione corrispondenti, mentre le stringhe di connessione usate dal pool di connessioni useranno i valori della stringa di connessione ai fini del pool.  
   
 ## <a name="down-level-server-behavior"></a>Comportamento dei server legacy  
  Poiché il nuovo comportamento di connessione viene implementato dal client, non è specifico di una determinata versione di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
@@ -81,7 +81,7 @@ ms.locfileid: "51605281"
   
 -   Affidabilità: per consentire l'uso di nomi SPN predefiniti, è necessario che l'account del servizio usato per l'esecuzione dell'istanza di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] disponga di privilegi sufficienti per l'aggiornamento di Active Directory nel centro distribuzione chiavi.  
   
--   Utilità e trasparenza a livello di posizione: valutare le conseguenze sui nomi SPN di un'applicazione se il database viene spostato in un'istanza diversa di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Questa considerazione si applica sia al server principale sia al relativo partner di failover se si usa il mirroring del database. Se una modifica apportata al server comporta la modifica dei nomi SPN, valutare le conseguenze sulle applicazioni e determinare se sarà possibile gestire tutte le modifiche.  
+-   Utilità e trasparenza a livello di posizione: valutare le conseguenze sui nomi SPN di un'applicazione se il database viene spostato in un'istanza diversa di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Questa considerazione si applica sia al server principale sia al relativo partner di failover se si usa il mirroring del database. Se una modifica apportata al server comporta la modifica dei nomi SPN, valutare le conseguenze sulle applicazioni e determinare se sarà possibile gestire tutte le modifiche.  
   
 ## <a name="specifying-the-spn"></a>Definizione del nome SPN  
  È possibile specificare un nome SPN nelle finestre di dialogo e nel codice. In questa sezione viene descritto come specificare un nome SPN.  

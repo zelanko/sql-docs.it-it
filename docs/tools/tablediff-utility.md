@@ -20,12 +20,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: fdb89ebbfebe6ea8e47857347428cb27d4d41530
-ms.sourcegitcommit: 0f7cf9b7ab23df15624d27c129ab3a539e8b6457
+ms.openlocfilehash: f0c4bec0b0ef0181a62ac8c8183830716a604490
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51293147"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54128511"
 ---
 # <a name="tablediff-utility"></a>utilità tablediff
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -81,58 +81,58 @@ tablediff
  [ **-?** ]  
  Restituisce l'elenco dei parametri supportati.  
   
- **-sourceserver** *source_server_name*[**\\**_instance\_name_]  
- Nome del server di origine. Specificare *source_server_name* per l'istanza predefinita di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Specificare *source_server_name***\\***instance_name* per un'istanza denominata di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
+ **-sourceserver** _source_server_name_[**\\**_instance\_name_]  
+ Nome del server di origine. Specificare *source_server_name* per l'istanza predefinita di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Specificare _source_server_name_**\\**_instance_name_ per un'istanza denominata di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
   
- **-sourcedatabase** *source_database*  
+ **-sourcedatabase** _source_database_  
  Nome del database di origine.  
   
- **-sourcetable** *source_table_name*  
+ **-sourcetable** _source_table_name_  
  Nome della tabella di origine sottoposta al controllo.  
   
- **-sourceschema** *source_schema_name*  
+ **-sourceschema** _source_schema_name_  
  Proprietario dello schema della tabella di origine. Per impostazione predefinita, dbo viene considerato il proprietario della tabella.  
   
- **-sourcepassword** *source_password*  
+ **-sourcepassword** _source_password_  
  Password di accesso usata per connettersi al server di origine mediante l'autenticazione di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] .  
   
 > [!IMPORTANT]  
 >  Se possibile, specificare le credenziali di sicurezza in fase di esecuzione. Se è necessario archiviare le credenziali in un file script, è consigliabile proteggere il file per evitare accessi non autorizzati.  
   
- **-sourceuser** *source_login*  
+ **-sourceuser** _source_login_  
  Account di accesso usato per connettersi al server di origine mediante l'autenticazione di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] . Se non si specifica il parametro *source_login* , durante la connessione al server di origine viene usata l'autenticazione di Windows. [!INCLUDE[ssNoteWinAuthentication](../includes/ssnotewinauthentication-md.md)]  
   
  **-sourcelocked**  
  La tabella di origine viene bloccata durante il confronto mediante gli hint di tabella TABLOCK e HOLDLOCK.  
   
- **-destinationserver** *destination_server_name*[**\\***instance_name*]  
- Nome del server di destinazione. Specificare *destination_server_name* per l'istanza predefinita di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Specificare *destination_server_name***\\***instance_name* per un'istanza denominata di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
+ **-destinationserver** _destination_server_name_[**\\**_instance_name_]  
+ Nome del server di destinazione. Specificare *destination_server_name* per l'istanza predefinita di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Specificare _destination_server_name_**\\**_instance_name_ per un'istanza denominata di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
   
- **-destinationdatabase** *subscription_database*  
+ **-destinationdatabase** _subscription_database_  
  Nome del database di destinazione.  
   
- **-destinationtable** *destination_table*  
+ **-destinationtable** _destination_table_  
  Nome della tabella di destinazione.  
   
- **-destinationschema** *destination_schema_name*  
+ **-destinationschema** _destination_schema_name_  
  Proprietario dello schema della tabella di destinazione. Per impostazione predefinita, dbo viene considerato il proprietario della tabella.  
   
- **-destinationpassword** *destination_password*  
+ **-destinationpassword** _destination_password_  
  Password di accesso usata per connettersi al server di destinazione mediante l'autenticazione di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] .  
   
 > [!IMPORTANT]  
 >  Se possibile, specificare le credenziali di sicurezza in fase di esecuzione. Se è necessario archiviare le credenziali in un file script, è consigliabile proteggere il file per evitare accessi non autorizzati.  
   
- **-destinationuser** *destination_login*  
+ **-destinationuser** _destination_login_  
  Account di accesso usato per connettersi al server di destinazione mediante l'autenticazione di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] . Se non si specifica il parametro *destination_login* , durante la connessione al server viene usata l'autenticazione di Windows. [!INCLUDE[ssNoteWinAuthentication](../includes/ssnotewinauthentication-md.md)]  
   
  **-destinationlocked**  
  La tabella di destinazione viene bloccata durante il confronto mediante gli hint di tabella TABLOCK e HOLDLOCK.  
   
- **-b** *large_object_bytes*  
+ **-b** _large_object_bytes_  
  Numero di byte da confrontare per le colonne dei tipi di dati di grandi dimensioni, ovvero: **text**, **ntext**, **image**, **varchar(max)**, **nvarchar(max)** e **varbinary(max)**. L'impostazione predefinita di*large_object_bytes* corrisponde alle dimensioni della colonna. I dati che superano il valore di *large_object_bytes* non verranno confrontati.  
   
- **-bf**  *number_of_statements*  
+ **-bf**  _number_of_statements_  
  Numero di istruzioni [!INCLUDE[tsql](../includes/tsql-md.md)] da scrivere nel file script [!INCLUDE[tsql](../includes/tsql-md.md)] corrente quando si usa l'opzione **-f** . Se il numero di istruzioni [!INCLUDE[tsql](../includes/tsql-md.md)] supera il valore di *number_of_statements*, viene creato un nuovo file script [!INCLUDE[tsql](../includes/tsql-md.md)] .  
   
  **-c**  
@@ -141,28 +141,28 @@ tablediff
  **-dt**  
  Elimina la tabella dei risultati specificata da *table_name*se la tabella esiste già.  
   
- **-et** *table_name*  
+ **-et** _table_name_  
  Specifica il nome della tabella dei risultati da creare. Se questa tabella esiste già, è necessario usare l'opzione **-DT** . In caso contrario, l'operazione ha esito negativo.  
   
  **-f** [ *file_name* ]  
  Genera uno script [!INCLUDE[tsql](../includes/tsql-md.md)] per ripristinare la convergenza tra la tabella nel server di destinazione e quella nel server di origine. È possibile specificare facoltativamente un nome e un percorso per il file script [!INCLUDE[tsql](../includes/tsql-md.md)] generato. Se *file_name* viene omesso, il file script [!INCLUDE[tsql](../includes/tsql-md.md)] verrà generato nella directory in cui si esegue l'utilità.  
   
- **-o** *output_file_name*  
+ **-o** _output_file_name_  
  Nome e percorso completi del file di output.  
   
  **-q**  
  Esegue un confronto rapido mediante il confronto solo dei conteggi delle righe e degli schemi.  
   
- **-rc** *number_of_retries*  
+ **-rc** _number_of_retries_  
  Numero di tentativi di esecuzione di un'operazione non riuscita compiuti dall'utilità.  
   
- **-ri**  *retry_interval*  
+ **-ri**  _retry_interval_  
  Intervallo espresso in secondi tra i vari tentativi.  
   
  **-strict**  
  Gli schemi di origine e di destinazione vengono confrontati rigorosamente.  
   
- **-t** *connection_timeouts*  
+ **-t** _connection_timeouts_  
  Imposta il periodo di timeout della connessione, espresso in secondi, per le connessioni al server di origine e al server di destinazione.  
   
 ## <a name="return-value"></a>Valore restituito  
@@ -174,7 +174,7 @@ tablediff
 |**2**|Differenze tra tabelle|  
   
 ## <a name="remarks"></a>Remarks  
- L'utilità **tablediff** non può essere usata con server non[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] .  
+ L'utilità **tablediff** non può essere usata con server non [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
   
  Le tabelle contenenti colonne con il tipo di dati **sql_variant** non sono supportate.  
   

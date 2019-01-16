@@ -16,12 +16,12 @@ helpviewer_keywords:
 author: pmasl
 ms.author: pelopes
 manager: craigg
-ms.openlocfilehash: c39d2aa6b98be2ba3432234b97a36591bbfa105a
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.openlocfilehash: f9599b4e35cf54a14c04bf4675b61f962e9d0fb9
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51604671"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53211100"
 ---
 # <a name="bulk-copy-data-using-irowsetfastload-ole-db"></a>Eseguire una copia bulk di dati mediante IRowsetFastLoad (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -58,11 +58,11 @@ ms.locfileid: "51604671"
 ## <a name="example"></a>Esempio  
  In questo esempio vengono aggiunti 10 record alla tabella IRFLTable. È necessario creare la tabella IRFLTable nel database. Questo esempio non è supportato in IA64.  
   
- Eseguire il primo listato di codice ([!INCLUDE[tsql](../../../includes/tsql-md.md)]) per creare la tabella utilizzata dall'applicazione.  
+ Eseguire il primo listato di codice ( [!INCLUDE[tsql](../../../includes/tsql-md.md)] ) per creare la tabella usata dall'applicazione.  
   
  Compilare il listato di codice C++ seguente con ole32.lib oleaut32.lib ed eseguirlo. In questa applicazione viene eseguita la connessione all'istanza predefinita di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] nel computer in uso. In alcuni sistemi operativi Windows sarà necessario modificare (local) o (localhost) impostando il valore sul nome dell'istanza di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Per connettersi a un'istanza denominata, modificare la stringa di connessione da L"(local)" in L"(local)\\\nome", dove nome rappresenta l'istanza denominata. Per impostazione predefinita, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Express viene installato in un'istanza denominata. Verificare che nella variabile di ambiente INCLUDE sia presente la directory che contiene msoledbsql.h.  
   
- Eseguire il terzo listato di codice ([!INCLUDE[tsql](../../../includes/tsql-md.md)]) per eliminare la tabella utilizzata dall'applicazione.  
+ Eseguire il terzo listato di codice ( [!INCLUDE[tsql](../../../includes/tsql-md.md)] ) per eliminare la tabella usata dall'applicazione.  
   
 ```  
 USE AdventureWorks  

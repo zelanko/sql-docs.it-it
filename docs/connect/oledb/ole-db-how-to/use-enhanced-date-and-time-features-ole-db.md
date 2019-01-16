@@ -11,12 +11,12 @@ ms.topic: reference
 author: pmasl
 ms.author: pelopes
 manager: craigg
-ms.openlocfilehash: 276cf9f67d83ce67fa86ea00ca594f0c176456b9
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.openlocfilehash: c5b7682f43e2a4f2accba55e70940b81f53709ee
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51607071"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53210900"
 ---
 # <a name="use-enhanced-date-and-time-features-ole-db"></a>Usare le funzionalità avanzate di data e ora (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -31,11 +31,11 @@ ms.locfileid: "51607071"
 >  Se possibile, usare l'autenticazione di Windows. Se non è disponibile, agli utenti verrà richiesto di immettere le credenziali in fase di esecuzione. Evitare di archiviare le credenziali in un file. Se è necessario rendere persistenti le credenziali, è consigliabile crittografarle usando l'[API di crittografia Win32](https://go.microsoft.com/fwlink/?LinkId=64532).  
   
 ## <a name="example"></a>Esempio  
- Il primo listato di codice ([!INCLUDE[tsql](../../../includes/tsql-md.md)]) consente di creare una stored procedure utilizzata dall'esempio.  
+ Il primo listato di codice ( [!INCLUDE[tsql](../../../includes/tsql-md.md)] ) consente di creare una stored procedure usata dall'esempio.  
   
  Compilare il secondo listato di codice (C++) con ole32.lib oleaut32.lib ed eseguirlo. In questa applicazione viene eseguita la connessione all'istanza predefinita di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] nel computer in uso. In alcuni sistemi operativi Windows sarà necessario modificare (local) o (localhost) impostando il valore sul nome dell'istanza di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Per connettersi a un'istanza denominata, modificare la stringa di connessione da L"(local)" in L"(local)\\\nome", dove nome rappresenta l'istanza denominata. Per impostazione predefinita, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Express viene installato in un'istanza denominata. Verificare che nella variabile di ambiente INCLUDE sia presente la directory che contiene msoledbsql.h.  
   
- Il terzo listato di codice ([!INCLUDE[tsql](../../../includes/tsql-md.md)]) consente di eliminare una stored procedure utilizzata dall'esempio.  
+ Il terzo listato di codice ( [!INCLUDE[tsql](../../../includes/tsql-md.md)] ) consente di eliminare una stored procedure usata dall'esempio.  
   
 ```  
 CREATE PROCEDURE sp_datetimetypes  

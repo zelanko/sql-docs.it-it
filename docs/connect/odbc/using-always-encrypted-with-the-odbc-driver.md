@@ -9,12 +9,12 @@ ms.assetid: 02e306b8-9dde-4846-8d64-c528e2ffe479
 ms.author: v-chojas
 manager: craigg
 author: MightyPen
-ms.openlocfilehash: a0c917c6f7200db2b5a04b47185ba6b61f59ad34
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: f91ba6d5e7120f26c4ce4f8572eea779cdddebfc
+ms.sourcegitcommit: 170c275ece5969ff0c8c413987c4f2062459db21
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52506835"
+ms.lasthandoff: 01/11/2019
+ms.locfileid: "54226688"
 ---
 # <a name="using-always-encrypted-with-the-odbc-driver-for-sql-server"></a>Uso di Always Encrypted con ODBC Driver for SQL Server
 [!INCLUDE[Driver_ODBC_Download](../../includes/driver_odbc_download.md)]
@@ -96,7 +96,7 @@ Questo esempio illustra come inserire una riga nella tabella Patients. Si noti q
 
 - I valori inseriti nelle colonne di database, incluse quelle crittografate, vengono passati come parametri associati (vedere [Funzione SQLBindParameter](https://msdn.microsoft.com/library/ms710963(v=vs.85).aspx)). Quando si inviano valori a colonne non crittografate, l'uso dei parametri è facoltativo, nonostante sia consigliabile per prevenire attacchi SQL injection. È invece necessario usare i parametri in presenza di valori destinati a colonne crittografate. Se i valori inseriti nelle colonne SSN o BirthDate sono stati passati come valori letterali incorporati nell'istruzione della query, la query avrà esito negativo perché il driver non prova a crittografare o in caso contrario elaborare valori letterali nelle query. Di conseguenza, il server li rifiuterà come incompatibili con le colonne crittografate.
 
-- Il tipo SQL del parametro inserito nella colonna SSN è impostato su SQL_CHAR, che esegue il mapping per il **char** tipo di dati di SQL Server (`rc = SQLBindParameter(hstmt, 1, SQL_PARAM_INPUT, SQL_C_CHAR, SQL_CHAR, 11, 0, (SQLPOINTER)SSN, 0, &cbSSN);`). Se il tipo del parametro è stato impostato su SQL_WCHAR, che esegue il mapping a **nchar**, la query avrà esito negativo, come Always Encrypted non supporta le conversioni sul lato server da valori nchar crittografati a valori char crittografato. Visualizzare [riferimento per programmatori ODBC: Appendice d: i tipi di dati](https://msdn.microsoft.com/library/ms713607.aspx) per informazioni sui mapping dei tipi di dati.
+- Il tipo SQL del parametro inserito nella colonna SSN è impostato su SQL_CHAR, che esegue il mapping per il **char** tipo di dati di SQL Server (`rc = SQLBindParameter(hstmt, 1, SQL_PARAM_INPUT, SQL_C_CHAR, SQL_CHAR, 11, 0, (SQLPOINTER)SSN, 0, &cbSSN);`). Se il tipo del parametro è stato impostato su SQL_WCHAR, che esegue il mapping a **nchar**, la query avrà esito negativo, come Always Encrypted non supporta le conversioni sul lato server da valori nchar crittografati a valori char crittografato. Vedere [riferimento per programmatori ODBC: Appendice d: Tipi di dati](https://msdn.microsoft.com/library/ms713607.aspx) per informazioni sui mapping dei tipi di dati.
 
 ```
     SQL_DATE_STRUCT date;
@@ -286,7 +286,7 @@ Questa sezione descrive le ottimizzazioni delle prestazioni predefinite in ODBC 
 
 ### <a name="controlling-round-trips-to-retrieve-metadata-for-query-parameters"></a>Controllo dei round trip per recuperare i metadati per i parametri di query
 
-Se la funzionalità Always Encrypted è abilitata per una connessione, per impostazione predefinita il driver chiamerà [sys.sp_describe_parameter_encryption](../../relational-databases/system-stored-procedures/sp-describe-parameter-encryption-transact-sql.md) per ogni query con parametri, passando l'istruzione di query (senza i valori dei parametri) a SQL Server. Questa stored procedure analizza l'istruzione di query per scoprire se i parametri devono essere crittografati e, in caso affermativo, restituisce le informazioni relative alla crittografia per ogni parametro consentire al driver di crittografarli. Il comportamento descritto garantisce un elevato livello di trasparenza per l'applicazione client: l'applicazione (e lo sviluppatore dell'applicazione) non è necessario essere a conoscenza di quali query accedono alle colonne crittografate, purché i valori destinati alle colonne crittografate vengano passati a il driver nei parametri.
+Se la funzionalità Always Encrypted è abilitata per una connessione, per impostazione predefinita il driver chiamerà [sys.sp_describe_parameter_encryption](../../relational-databases/system-stored-procedures/sp-describe-parameter-encryption-transact-sql.md) per ogni query con parametri, passando l'istruzione di query (senza i valori dei parametri) a SQL Server. Questa stored procedure analizza l'istruzione di query per scoprire se i parametri devono essere crittografati e, in caso affermativo, restituisce le informazioni relative alla crittografia per ogni parametro consentire al driver di crittografarli. Il comportamento descritto garantisce all'applicazione client un elevato livello di trasparenza: non è necessario che l'applicazione (e lo sviluppatore dell'applicazione) sappiano quali query accedono alle colonne crittografate, a condizione che i valori destinati alle colonne crittografate vengano passati al driver nei parametri.
 
 ### <a name="per-statement-always-encrypted-behavior"></a>Per ogni istruzione Always Encrypted comportamento
 
@@ -538,7 +538,7 @@ I parametri non possono destinare le colonne crittografate **money** o **smallmo
 
 ## <a name="bulk-copy-of-encrypted-columns"></a>Copia bulk di colonne crittografate
 
-A partire da ODBC Driver 17 for SQL Server, è possibile usare le [funzioni di copia bulk di SQL](../../relational-databases/native-client-odbc-bulk-copy-operations/performing-bulk-copy-operations-odbc.md) e l'utilità **bcp** supportata con Always Encrypted. Sia il testo non crittografato (crittografato in inserimento e decrittografato in recupero) sia il testo crittografato (verbatim trasferito) possono essere inseriti e recuperati usando le API di copia bulk (bcp_*) e l'utilità **bcp**.
+A partire da ODBC Driver 17 for SQL Server, è possibile usare le [funzioni di copia bulk di SQL](../../relational-databases/native-client-odbc-bulk-copy-operations/performing-bulk-copy-operations-odbc.md) e l'utilità **bcp** supportata con Always Encrypted. Sia il testo non crittografato (crittografato in inserimento e decrittografato in recupero) sia il testo crittografato (verbatim trasferito) possono essere inseriti e recuperati usando le API di copia bulk (bcp_&#42;) e l'utilità **bcp**.
 
 - Per recuperare il testo crittografato nel formato varbinary(max) (ad esempio per il caricamento bulk in un database diverso), connettersi senza l'opzione `ColumnEncryption`, oppure impostarla su `Disabled`, ed eseguire l'operazione BCP OUT.
 
@@ -546,7 +546,7 @@ A partire da ODBC Driver 17 for SQL Server, è possibile usare le [funzioni di c
 
 - Per inserire testo crittografato nel formato varbinary (max) (ad esempio il testo recuperato descritto in precedenza), impostare l'opzione `BCPMODIFYENCRYPTED` su TRUE ed eseguire l'operazione BCP IN. Affinché i dati risultanti possano essere decrittografati, verificare che il valore CEK della colonna di destinazione sia lo stesso dal quale è stato originariamente ottenuto il testo crittografato.
 
-Quando si usa la **bcp** utilità: per controllare il `ColumnEncryption` impostazione, utilizzare l'opzione -D e specificare un DSN che contiene il valore desiderato. Per inserire testo crittografato, verificare che il `ALLOW_ENCRYPTED_VALUE_MODIFICATIONS` dell'utente è attivata.
+Quando si usa la **bcp** utilità: Per controllare il `ColumnEncryption` impostazione, utilizzare l'opzione -D e specificare un DSN che contiene il valore desiderato. Per inserire testo crittografato, verificare che il `ALLOW_ENCRYPTED_VALUE_MODIFICATIONS` dell'utente è attivata.
 
 Nella tabella seguente fornisce un riepilogo delle azioni quando si opera su una colonna crittografata:
 

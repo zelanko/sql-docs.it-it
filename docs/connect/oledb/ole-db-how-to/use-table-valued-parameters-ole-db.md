@@ -11,12 +11,12 @@ ms.topic: reference
 author: pmasl
 ms.author: pelopes
 manager: craigg
-ms.openlocfilehash: fc5e4e8e8730770ccf35bad11125bf568bcae50f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 9696baae9c0eaf2d4e4f918e08ea66f653e33ff8
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47837739"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53211980"
 ---
 # <a name="use-table-valued-parameters-ole-db"></a>Utilizzare parametri con valori di tabella (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -38,7 +38,7 @@ ms.locfileid: "47837739"
  Per altre informazioni sui parametri con valori di tabella, vedere [parametri con valori di tabella &#40;Driver OLE DB per SQL Server&#41;](../../oledb/features/table-valued-parameters-oledb-driver-for-sql-server.md).  
   
 ## <a name="example"></a>Esempio  
- Il primo listato di codice ([!INCLUDE[tsql](../../../includes/tsql-md.md)]) consente di creare il database utilizzato dall'esempio.  
+ Il primo listato di codice ( [!INCLUDE[tsql](../../../includes/tsql-md.md)] ) consente di creare il database usato dall'esempio.  
   
  Inserire il secondo listato di codice in un file denominato stdafx.h.  
   
@@ -46,7 +46,7 @@ ms.locfileid: "47837739"
   
  Compilare il quarto listato di codice (C++) con ole32.lib oleaut32.lib ed eseguirlo. In questa applicazione viene eseguita la connessione all'istanza predefinita di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] nel computer in uso. In alcuni sistemi operativi Windows sarà necessario modificare (local) o (localhost) impostando il valore sul nome dell'istanza di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Per connettersi a un'istanza denominata, modificare la stringa di connessione da L"(local)" in L"(local)\\\nome", dove nome rappresenta l'istanza denominata. Per impostazione predefinita, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Express viene installato in un'istanza denominata. Verificare che nella variabile di ambiente INCLUDE sia presente la directory che contiene msoledbsql.h.  
   
- Il quinto listato di codice ([!INCLUDE[tsql](../../../includes/tsql-md.md)]) consente di creare il database utilizzato dall'esempio.  
+ Il quinto listato di codice ( [!INCLUDE[tsql](../../../includes/tsql-md.md)] ) consente di creare il database usato dall'esempio.  
   
 ```  
 create database testdb  

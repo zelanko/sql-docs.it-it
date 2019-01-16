@@ -21,12 +21,12 @@ ms.assetid: a0b210ce-9b58-4709-80cb-9363b68a1f5a
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 719e891168fcf6a0ce094d67ec8186c653d00f49
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: b40e9c05d81f7fb868884ab25e0f317804d162e0
+ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52529117"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53590195"
 ---
 # <a name="dta-utility"></a>dta - utilità
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -81,13 +81,13 @@ dta
  **-?**  
  Visualizza le informazioni sull'utilizzo.  
   
- **-A** *time_for_tuning_in_minutes*  
+ **-A** _time_for_tuning_in_minutes_  
  Specifica il limite di tempo di ottimizzazione espresso in minuti. **dta** utilizza l'intervallo di tempo specificato per ottimizzare il carico di lavoro e generare uno script in base alle indicazioni relative alla modifica della progettazione fisica. Per impostazione predefinita, **dta** utilizza un tempo di ottimizzazione pari a 8 ore. Se si specifica 0, viene impostato un tempo di ottimizzazione illimitato. È possibile che l'utilità**dta** termini l'ottimizzazione dell'intero carico di lavoro prima che sia trascorso il limite di tempo specificato. Per garantire l'ottimizzazione dell'intero carico di lavoro, è tuttavia consigliabile specificare un tempo di ottimizzazione illimitato (-A 0).  
   
  **-a**  
  Ottimizza il carico di lavoro e applica l'indicazione senza richiedere conferma all'utente.  
   
- **-B** *storage_size*  
+ **-B** _storage_size_  
  Specifica lo spazio massimo, espresso in megabyte, che può essere utilizzato dall'indice e dal partizionamento consigliati. Se si ottimizzano più database, per il calcolo dello spazio vengono considerate le indicazioni per tutti i database. Per impostazione predefinita, **dta** utilizza il valore più basso delle dimensioni dello spazio di archiviazione riportate di seguito:  
   
 -   Valore triplo della dimensione corrente dei dati non elaborati, incluse le dimensioni totali degli heap e degli indici cluster nelle tabelle del database.  
@@ -96,13 +96,13 @@ dta
   
  Le dimensioni dello spazio di archiviazione predefinite non includono gli indici non cluster e le viste indicizzate.  
   
- **-C** *max_columns_in_index*  
+ **-C** _max_columns_in_index_  
  Specifica il numero massimo di colonne negli indici proposto da **dta** . Il valore massimo è 1024. Per impostazione predefinita, questo argomento è impostato su 16.  
   
- **-c** *max_key_columns_in_index*  
+ **-c** _max_key_columns_in_index_  
  Specifica il numero massimo di colonne chiave negli indici proposto da **dta** . Il valore predefinito è 16, ovvero il valore massimo consentito. In**dta** viene inoltre presa in considerazione la creazione di indici con colonne incluse. Gli indici con colonne incluse indicati dall'utilità potrebbero superare il numero di colonne specificato in questo argomento.  
   
- **-D** *database_name*  
+ **-D** _database_name_  
  Specifica il nome di ogni database da ottimizzare. Il primo database è il database predefinito. Per specificare più database, separare i relativi nomi con una virgola, ad esempio:  
   
 ```  
@@ -129,7 +129,7 @@ dta -D db_name1, db_name2...
 dta -D db_name1, db_name2 -d db_name1  
 ```  
   
- **-d** *database_name*  
+ **-d** _database_name_  
  Specifica il primo database al quale si connette **dta** per ottimizzare un carico di lavoro. Per questo argomento è possibile specificare solo un database. Ad esempio  
   
 ```  
@@ -145,7 +145,7 @@ dta -d AdventureWorks2012 ...
  **-E**  
  Utilizza una connessione trusted anziché richiedere una password. È necessario usare l'argomento **-E** o **-U** , che specifica un ID di accesso.  
   
- **-e** *tuning_log_name*  
+ **-e** _tuning_log_name_  
  Specifica il nome della tabella o del file in cui **dta** registra gli eventi che non possono essere ottimizzati. La tabella viene creata nel server in cui viene eseguita l'ottimizzazione.  
   
  Se si usa una tabella, specificarne il nome in formato *[database_name].[owner_name].table_name*. Nella tabella seguente sono riportati i valori predefiniti per ogni parametro.  
@@ -164,8 +164,8 @@ dta -d AdventureWorks2012 ...
  **-F**  
  Consente a **dta** di sovrascrivere un file di output esistente. Se esiste già un file di output con lo stesso nome e si omette **-F** , **dta**restituisce un errore. È possibile usare **-F** con **-of**, **-or**oppure **-ox**.  
   
- **-fa** *physical_design_structures_to_add*  
- Specifica i tipi di strutture di progettazione fisica che **dta** deve includere nell'indicazione. Nella tabella seguente sono riportati e descritti i valori che è possibile specificare per questo argomento. Se non si specifica alcun valore, **dta** usa l'argomento predefinito **-fa****IDX**.  
+ **-fa** _physical_design_structures_to_add_  
+ Specifica i tipi di strutture di progettazione fisica che **dta** deve includere nell'indicazione. Nella tabella seguente sono riportati e descritti i valori che è possibile specificare per questo argomento. Se non si specifica alcun valore, **dta** usa l'argomento predefinito **-fa IDX**.  
   
 |valore|Descrizione|  
 |-----------|-----------------|  
@@ -185,7 +185,7 @@ dta -d AdventureWorks2012 ...
 |**Si applica a**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] tramite [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].|  
 
   
- **-fk** *keep_existing_option*  
+ **-fk** _keep_existing_option_  
  Specifica le strutture di progettazione fisica esistenti che **dta** deve conservare durante la generazione dell'indicazione. Nella tabella seguente sono riportati e descritti i valori che è possibile specificare per questo argomento.  
   
 |valore|Descrizione|  
@@ -196,7 +196,7 @@ dta -d AdventureWorks2012 ...
 |CL_IDX|Tutti gli indici cluster nelle tabelle.|  
 |IDX|Tutti gli indici cluster e non cluster nelle tabelle.|  
   
- **-fp** *partitioning_strategy*  
+ **-fp** _partitioning_strategy_  
  Specifica se le nuove strutture di progettazione fisica, ovvero indici e viste indicizzate, proposte da **dta** devono essere partizionate e definisce la modalità di partizionamento. Nella tabella seguente sono riportati e descritti i valori che è possibile specificare per questo argomento.  
   
 |valore|Descrizione|  
@@ -205,12 +205,12 @@ dta -d AdventureWorks2012 ...
 |FULL|Partizionamento completo (scegliere questo valore per ottimizzare le prestazioni).|  
 |ALIGNED|Solo partizionamento allineato (scegliere questo valore per ottimizzare la gestione).|  
   
- Se si specifica ALIGNED, nell'indicazione generata da **dta** ogni indice proposto viene partizionato esattamente nello stesso modo della tabella sottostante per la quale è stato definito l'indice. Gli indici non cluster in una vista indicizzata sono allineati in base alla vista indicizzata. Per questo argomento è possibile specificare solo un valore. Il valore predefinito è **-fp****NONE**.  
+ Se si specifica ALIGNED, nell'indicazione generata da **dta** ogni indice proposto viene partizionato esattamente nello stesso modo della tabella sottostante per la quale è stato definito l'indice. Gli indici non cluster in una vista indicizzata sono allineati in base alla vista indicizzata. Per questo argomento è possibile specificare solo un valore. Il valore predefinito è **-fp NONE**.  
   
- **-fx** *drop_only_mode*  
+ **-fx** _drop_only_mode_  
  Specifica che **dta** prende in considerazione esclusivamente l'eliminazione delle strutture di progettazione fisica esistenti. Non verranno considerate le nuove strutture di progettazione fisica. Se si specifica questa opzione, **dta** valuta l'utilità delle strutture di progettazione fisica esistenti e propone di eliminare le strutture utilizzate meno di frequente. Questo argomento non utilizza alcun valore e non può essere usato in combinazione con gli argomenti **-fa**, **-fp**o **-fk ALL**  
   
- **-ID** *session_ID*  
+ **-ID** _session_ID_  
  Specifica l'identificatore numerico per la sessione di ottimizzazione. Se omesso, **dta** genera un numero di identificazione. È possibile utilizzare questo identificatore per visualizzare le informazioni relative alle sessioni di ottimizzazione correnti. Se per **-ID**non si specifica alcun valore, è necessario specificare un nome di sessione usando **-s**.  
   
  **-ip**  
@@ -223,11 +223,11 @@ dta -d AdventureWorks2012 ...
 |**Si applica a**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] tramite [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].|  
      
   
- **-if** *workload_file*  
- Specifica il percorso e il nome del file del carico di lavoro da utilizzare come input per l'ottimizzazione. Il file deve essere in formato trc (file di traccia di SQL Server Profiler), sql (file SQL) oppure log (file di traccia di[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ). È inoltre necessario specificare un file o una tabella del carico di lavoro.  
+ **-if** _workload_file_  
+ Specifica il percorso e il nome del file del carico di lavoro da utilizzare come input per l'ottimizzazione. Il file deve essere in formato trc (file di traccia di SQL Server Profiler), sql (file SQL) oppure log (file di traccia di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]). È inoltre necessario specificare un file o una tabella del carico di lavoro.  
   
- **-it** *workload_trace_table_name*  
- Specifica il nome della tabella contenente la traccia del carico di lavoro per l'ottimizzazione. Il nome viene specificato in formato [*database_name*]**.**[*owner_name*]**.***table_name*.  
+ **-it** _workload_trace_table_name_  
+ Specifica il nome della tabella contenente la traccia del carico di lavoro per l'ottimizzazione. Il nome viene specificato in formato [*database_name*]**.**[*owner_name*]**.**_table_name_.  
   
  Nella tabella seguente sono riportati i valori predefiniti per ogni parametro.  
   
@@ -240,13 +240,13 @@ dta -d AdventureWorks2012 ...
 > [!NOTE]  
 >  *owner_name* deve essere **dbo**. Se viene specificato un altro valore, l'esecuzione di **dta** ha esito negativo e viene restituito un errore. È inoltre necessario specificare una tabella o un file del carico di lavoro.  
   
- **-ix** *input_XML_file_name*  
+ **-ix** _input_XML_file_name_  
  Specifica il nome del file XML contenente le informazioni di input di **dta** . Tale file deve essere un documento XML valido conforme a DTASchema.xsd. Gli argomenti in conflitto specificati nel prompt dei comandi per le opzioni di ottimizzazione hanno la priorità sul valore corrispondente incluso in questo file XML. L'unica eccezione è rappresentata dal caso in cui una configurazione definita dall'utente venga specificata in modalità di valutazione nel file di input XML. Se, ad esempio, si specifica una configurazione nell'elemento **Configuration** del file di input XML e si specifica anche l'elemento **EvaluateConfiguration** come una delle opzioni di ottimizzazione, le opzioni di ottimizzazione specificate nel file di input XML avranno la priorità su qualsiasi opzione di ottimizzazione specificata nel prompt dei comandi.  
   
- **-m** *minimum_improvement*  
+ **-m** _minimum_improvement_  
  Specifica la percentuale minima di miglioramento che la configurazione consigliata deve soddisfare.  
   
- **-N** *online_option*  
+ **-N** _online_option_  
  Specifica se le strutture di progettazione fisica vengono create online. Nella tabella seguente sono riportati e descritti i valori che è possibile specificare per questo argomento.  
   
 |valore|Descrizione|  
@@ -257,7 +257,7 @@ dta -d AdventureWorks2012 ...
   
  Se gli indici vengono creati online, ONLINE = ON viene aggiunto alla relativa definizione di oggetto.  
   
- **-n** *number_of_events*  
+ **-n** _number_of_events_  
  Specifica il numero di eventi nel carico di lavoro che **dta** deve ottimizzare. Se si specifica questo argomento e il carico di lavoro è un file di traccia contenente informazioni sulla durata, **dta** ottimizza gli eventi in base all'ordine decrescente di durata. Questo argomento risulta utile per confrontare due configurazioni di strutture di progettazione fisica. Per confrontare due configurazioni, per entrambe le configurazioni specificare lo stesso numero di eventi da ottimizzare e quindi un tempo di ottimizzazione illimitato nel modo illustrato di seguito:  
   
 ```  
@@ -266,7 +266,7 @@ dta -n number_of_events -A 0
   
  In questo caso, è importante specificare un tempo di ottimizzazione illimitato (`-A 0`). In caso contrario, Ottimizzazione guidata motore di database utilizza il tempo di ottimizzazione predefinito pari a 8 ore.
  
- **-Sarò** *time_window_in_hours*   
+ **-I** _time_window_in_hours_   
    Specifica l'intervallo di tempo (in ore) quando una query deve essere stata eseguita per essere considerata da DTA per l'ottimizzazione quando si usa **-iq** opzione (carico di lavoro da Query Store). 
 ```  
 dta -iq -I 48  
@@ -278,28 +278,28 @@ In questo caso, DTA verrà usare Query Store come origine del carico di lavoro e
 
 
   
- **-of** *output_script_file_name*  
+ **-of** _output_script_file_name_  
  Specifica che **dta** scrive l'indicazione sotto forma di script [!INCLUDE[tsql](../../includes/tsql-md.md)] nel nome file e nella destinazione specificati.  
   
  È possibile usare **-F** con questa opzione. Assicurarsi che il nome file sia univoco, soprattutto se vengono specificate anche le opzioni **-or** e **-ox**.  
   
- **-or** *output_xml_report_file_name*  
+ **-or** _output_xml_report_file_name_  
  Specifica che **dta** scrive l'indicazione in un report di output in formato XML. Se si specifica un nome di file, le indicazioni vengono scritte in tale destinazione. In caso contrario, **dta** utilizza il nome di sessione per generare il nome file e lo scrive nella directory corrente.  
   
  È possibile usare **-F** con questa opzione. Assicurarsi che il nome file sia univoco, soprattutto se vengono specificate anche le opzioni **-of** e **-ox**.  
   
- **-ox** *output_XML_file_name*  
+ **-ox** _output_XML_file_name_  
  Specifica che **dta** scrive l'indicazione sotto forma di file XML nel nome file e nella destinazione specificati. Assicurarsi che Ottimizzazione guidata motore di database disponga delle autorizzazioni di scrittura adeguate per la directory di destinazione.  
   
  È possibile usare **-F** con questa opzione. Assicurarsi che il nome file sia univoco, soprattutto se vengono specificate anche le opzioni **-of** e **-or**.  
   
- **-P** *password*  
+ **-P** _password_  
  Specifica la password per l'ID di accesso. Se si omette questa opzione, **dta** richiede una password.  
   
  **-q**  
  Imposta la modalità non interattiva. Le informazioni, incluse quelle relative alle intestazioni e allo stato, non vengono scritte nella console.  
   
- **-rl** *analysis_report_list*  
+ **-rl** _analysis_report_list_  
  Specifica l'elenco dei report di analisi da generare. Nella tabella seguente sono riportati i valori che è possibile specificare per questo argomento.  
   
 |valore|Report|  
@@ -327,13 +327,13 @@ In questo caso, DTA verrà usare Query Store come origine del carico di lavoro e
 ... -rl EVT_FREQ, VIW_TAB, WKLD_ANL ...  
 ```  
   
- **-S** *server_name*[ *\instance*]  
+ **-S** _server_name_[ *\instance*]  
  Specifica il nome del computer e dell'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a cui connettersi. Se si omette *server_name* , **dta** si connette all'istanza predefinita di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] nel computer locale. Questa opzione è obbligatoria in caso di connessione a un'istanza denominata oppure quando si esegue **dta** da un computer remoto in rete.  
   
- **-s** *session_name*  
+ **-s** _session_name_  
  Specifica il nome della sessione di ottimizzazione. Questa opzione è obbligatoria se non si specifica **-ID** .  
   
- **-Tf** *table_list_file*  
+ **-Tf** _table_list_file_  
  Specifica il nome del file contenente l'elenco di tabelle da ottimizzare. Ogni tabella inclusa nel file deve iniziare su una nuova riga. Le tabelle devono essere qualificate con nomi di tabella composti da tre parti, ad esempio **AdventureWorks2012.HumanResources.Department**. In alternativa, per richiamare la funzionalità di ridimensionamento delle tabelle, il nome di una tabella esistente può essere seguito da un numero che indica il numero previsto di righe nella tabella. Ottimizzazione guidata motore di database utilizza il numero previsto di righe durante l'ottimizzazione o la valutazione delle istruzioni nel carico di lavoro che fanno riferimento a queste tabelle. Possono essere presenti uno o più spazi tra il numero di *number_of_rows* e *table_name*.  
   
  Il formato di file per *table_list_file*è:  
@@ -348,12 +348,12 @@ In questo caso, DTA verrà usare Query Store come origine del carico di lavoro e
   
  Se si omettono gli argomenti **-Tf** e **-Tl** , tutte le tabelle utente nei database specificati verranno considerate per l'ottimizzazione.  
   
- **-Tl** *table_list*  
+ **-Tl** _table_list_  
  Specifica al prompt dei comandi un elenco di tabelle da ottimizzare. Per separare i nomi di tabella, utilizzare la virgola. Se con l'argomento **-D** viene specificato solo un database, non è necessario che i nomi delle tabelle vengano qualificati con un nome di database. In caso contrario, per ogni tabella sarà necessario specificare il nome completo nel formato: *database_name.schema_name.table_name* .  
   
  Questo argomento rappresenta un'alternativa all'utilizzo di un file contenente un elenco di tabelle (**-Tf**). Se vengono usati entrambi gli argomenti **-Tl** e **-Tf** , l'esecuzione di **dta** non riesce e viene restituito un errore.  
   
- **-U** *login_id*  
+ **-U** _login_id_  
  Specifica l'ID di accesso utilizzato per connettersi a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
  **-u**  

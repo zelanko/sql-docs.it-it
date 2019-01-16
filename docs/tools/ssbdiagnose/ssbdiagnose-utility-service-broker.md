@@ -26,12 +26,12 @@ ms.assetid: 0c1636e8-a3db-438e-be4c-1ea40d1f4877
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 23985f7a9c78993e154babdcbdd9980334f0fc36
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: cc67193013c0ea546f69aaa87fb1fb0aa0ad7cac
+ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52541328"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53590545"
 ---
 # <a name="ssbdiagnose-utility-service-broker"></a>Utilità ssbdiagnose (Service Broker)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -115,22 +115,22 @@ ssbdiagnose
   
  L'impostazione predefinita è **WARNING**.  
   
- **-IGNORE** *error_id*  
+ **-IGNORE** _error_id_  
  Specifica che i messaggi o gli errori con il valore *error_id* specificato non devono essere inclusi nei report. È possibile specificare **-IGNORE** più volte per eliminare più ID messaggio.  
   
- **\<baseconnectionoptions >**  
+ **\<baseconnectionoptions>**  
  Specifica le informazioni di connessione di base usate da **ssbdiagnose** quando le opzioni di connessione non sono incluse in una clausola specifica. Le informazioni di connessione indicate in una clausola specifica prevalgono sulle informazioni specificate in **baseconnectionoption** . Questa situazione viene gestita separatamente per ciascun parametro. Ad esempio, se vengono specificati **-S** e **-d** in **baseconnetionoptions**e solo **-d** è specificato in **toconnetionoptions**, **ssbdiagnose** userà -S di **baseconnetionoptions** e -d di **toconnetionoptions**.  
   
  **CONFIGURATION**  
  Richiede un report degli errori di configurazione tra una coppia di servizi di [!INCLUDE[ssSB](../../includes/sssb-md.md)] o per un singolo servizio.  
   
- **FROM SERVICE** *service_name*  
+ **FROM SERVICE** _service_name_  
  Specifica il servizio che avvia le conversazioni.  
   
- **\<fromconnectionoptions >**  
+ **\<fromconnectionoptions>**  
  Specifica le informazioni necessarie per connettersi al database che contiene il servizio Initiator. Se **fromconnectionoptions** non viene specificato, **ssbdiagnose** usa le informazioni di connessione di **baseconnectionoptions** per la connessione al database del servizio Initiator. Se specificato, **fromconnectionoptions** deve includere il database che contiene il servizio Initiator. Se **fromconnectionoptions** non è specificato, **baseconnectionoptions** deve specificare il database del servizio Initiator.  
   
- **TO SERVICE** *service_name*[, *broker_id* ]  
+ **TO SERVICE** _service_name_[, *broker_id* ]  
  Specifica il servizio che rappresenta la destinazione delle conversazioni.  
   
  *service_name*: specifica il nome del servizio di destinazione.  
@@ -143,16 +143,16 @@ FROM sys.databases
 WHERE database_id = DB_ID();  
 ```  
   
- **\<toconnectionoptions >**  
+ **\<toconnectionoptions>**  
  Specifica le informazioni necessarie per connettersi al database che contiene il servizio di destinazione. Se **toconnectionoptions** non viene specificato, **ssbdiagnose** usa le informazioni di connessione di **baseconnectionoptions** per la connessione al database di destinazione.  
   
  **MIRROR**  
  Specifica che il servizio [!INCLUDE[ssSB](../../includes/sssb-md.md)] associato è ospitato in un database con mirroring. **ssbdiagnose** verifica che la route per il servizio sia una route con mirroring, in cui MIRROR_ADDRESS è stato specificato in CREATE ROUTE.  
   
- **\<mirrorconnectionoptions >**  
+ **\<mirrorconnectionoptions>**  
  Specifica le informazioni necessarie per connettersi al database mirror. Se **mirrorconnectionoptions** non viene specificato, **ssbdiagnose** usa le informazioni di connessione di **baseconnectionoptions** per la connessione al database mirror.  
   
- **ON CONTRACT** *contract_name*  
+ **ON CONTRACT** _contract_name_  
  Richiede che **ssbdiagnose** controlli solo le configurazioni che usano il contratto specificato. Se ON CONTRACT non è specificato, **ssbdiagnose** offre informazioni solo sul contratto denominato DEFAULT.  
   
  **ENCRYPTION** { **ON** | **OFF** | **ANONYMOUS** }  
@@ -201,10 +201,10 @@ WHERE database_id = DB_ID();
   
  Gli ID conversazione vengono indicati nella colonna **conversation_id** della vista del catalogo **sys.conversation_endpoints** .  
   
- **-TIMEOUT** *timeout_interval*  
+ **-TIMEOUT** _timeout_interval_  
  Specifica il numero di secondi per l'esecuzione un report **RUNTIME** . Se l'opzione **-TIMEOUT** non viene specificata, il report di runtime viene eseguito per un periodo di tempo illimitato. **- TIMEOUT** viene usata solo nei report **RUNTIME** e non nei report **CONFIGURATION** . Usare CTRL + C per uscire da **ssbdiagnose** se **-TIMEOUT** non è stata specificata oppure per terminare un report di runtime prima che scada l'intervallo di time**-** out. Il valore*timeout_interval* deve essere un numero compreso tra 1 e 2,147,483,647.  
   
- **\<runtimeconnectionoptions >**  
+ **\<runtimeconnectionoptions>**  
  Specifica le informazioni di connessione per i database che contengono i servizi associati agli elementi di conversazione monitorati. Se tutti i servizi si trovano nello stesso database, è necessario specificare solo una clausola **CONNECT TO** , mentre se i servizi si trovano in database separati è necessario specificare una clausola **CONNECT TO** per ogni database. Se **runtimeconnectionoptions** non viene specificato, **ssbdiagnose** usa le informazioni di connessione di **baseconnectionoptions**.  
   
  **-E**  
@@ -216,14 +216,14 @@ WHERE database_id = DB_ID();
   
  Se si usa l'opzione **-E** in combinazione con l'opzione **-U** o con l'opzione **-P** , viene generato un messaggio di errore.  
   
- **-U** *login_id*  
+ **-U** _login_id_  
  Apre una connessione con autenticazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tramite l'ID di accesso specificato. Le credenziali di accesso devono corrispondere a un membro del ruolo predefinito del server **sysadmin** .  
   
  Se non viene specificata né **-E** né **-U** , **ssbdiagnose** usa il valore della variabile di ambiente SQLCMDUSER. Se SQLCMDUSER non è impostata, **ssbdiagnose** tenta di effettuare la connessione usando la modalità di autenticazione di Windows basata sull'account di Windows dell'utente che esegue **ssbdiagnose**.  
   
  Se si usa l'opzione **-U** in combinazione con l'opzione **-E** , viene generato un messaggio di errore. Se l'opzione **-U** è seguita da più di un argomento, viene generato un messaggio di errore e il programma viene chiuso.  
   
- **-P** *password*  
+ **-P** _password_  
  Specifica la password per l'ID di accesso **-U** . Alle password viene applicata la distinzione tra maiuscole e minuscole. Se si usa l'opzione **-U** senza usare **-P** , **ssbdiagnose** usa il valore della variabile di ambiente SQLCMDPASSWORD. Se SQLCMDPASSWORD non è impostata, **ssbdiagnose** richiede l'immissione di una password.  
   
 > [!IMPORTANT]  
@@ -242,15 +242,15 @@ WHERE database_id = DB_ID();
   
  Se l'opzione **-P** è seguita da più di un argomento, viene generato un messaggio di errore.  
   
- **-S** *server_name*[\\*instance_name*]  
+ **-S** _server_name_[\\*instance_name*]  
  Specifica l'istanza del [!INCLUDE[ssDE](../../includes/ssde-md.md)] che contiene i servizi di [!INCLUDE[ssSB](../../includes/sssb-md.md)] da analizzare.  
   
  Specificare *server_name* per connettersi all'istanza predefinita del [!INCLUDE[ssDE](../../includes/ssde-md.md)] in tale server. Specificare _server\_name_**\\**_instance\_name_ per connettersi a un'istanza denominata di [!INCLUDE[ssDE](../../includes/ssde-md.md)] su tale server. Se **-S** non viene specificata, **ssbdiagnose** usa il valore della variabile di ambiente SQLCMDSERVER. Se SQLCMDSERVER non è impostata, **ssbdiagnose** si connette all'istanza predefinita del [!INCLUDE[ssDE](../../includes/ssde-md.md)] sul computer locale.  
   
- **-d** *database_name*  
+ **-d** _database_name_  
  Specifica il database che contiene i servizi di [!INCLUDE[ssSB](../../includes/sssb-md.md)] da analizzare. Se il database non esiste, viene generato un messaggio di errore. Se l'opzione **-d** non è specificata, per impostazione predefinita viene usato il database specificato nella proprietà default-database dell'account di accesso.  
   
- **-l** *login_timeout*  
+ **-l** _login_timeout_  
  Specifica il numero di secondi prima del timeout di un tentativo di connessione. Se l'opzione **-l** non è specificata, **ssbdiagnose** usa il valore impostato per la variabile di ambiente SQLCMDLOGINTIMEOUT. Se SQLCMDLOGINTIMEOUT non è impostata, il timeout predefinito è di trenta secondi. Il valore del timeout deve essere un numero compreso tra 0 e 65.534. Se il valore specificato non è numerico o non è compreso nell'intervallo, **ssbdiagnose** genera un messaggio di errore. Il valore 0 specifica un timeout infinito.  
   
  **-?**  
@@ -331,7 +331,7 @@ WHERE database_id = DB_ID();
 ssbdiagnose -E -d MyDatabase CONFIGURATION FROM SERVICE /test/initiator TO SERVICE /test/target  
 ```  
   
-### <a name="b-checking-the-configuration-of-two-services-on-separate-computers-that-use-one-login"></a>B. Controllo della configurazione di due servizi in computer separati che utilizzano un unico account di accesso  
+### <a name="b-checking-the-configuration-of-two-services-on-separate-computers-that-use-one-login"></a>b. Controllo della configurazione di due servizi in computer separati che utilizzano un unico account di accesso  
  Nell'esempio seguente viene illustrato come richiedere un report di configurazione quando il servizio Initiator e quello di destinazione si trovano in computer separati, ma l'accesso ai servizi può essere eseguito utilizzando lo stesso account con autenticazione di Windows.  
   
 ```  

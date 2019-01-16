@@ -11,12 +11,12 @@ ms.assetid: d7bce6a5-d414-488d-a3cd-50c1c62019c4
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 46285d61f38619ed8dff835faee266e5a76f591d
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 709ee04eaaf35501cedae0e61d93cfe6e3b55210
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52511163"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54125941"
 ---
 # <a name="replay-option-distributed-replay-administration-tool"></a>Opzione replay (strumento di amministrazione Distributed Replay)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -36,12 +36,12 @@ dreplay replay [-m controller] -d controller_working_dir [-o]
 ```  
   
 #### <a name="parameters"></a>Parametri  
- **Controller** *-m*  
+ **Controller** _-m_  
  Specifica il nome computer del controller. È possibile utilizzare "`localhost`" o "`.`" per fare riferimento al computer locale.  
   
  Se il parametro **-m** non è specificato, viene usato il computer locale.  
   
- **-d** *controller_working_dir*  
+ **-d** _controller_working_dir_  
  Specifica la directory nel controller in cui verrà archiviato il file intermedio. Il parametro **-d** è obbligatorio.  
   
  Di seguito vengono indicati i requisiti per questo parametro:  
@@ -59,7 +59,7 @@ dreplay replay [-m controller] -d controller_working_dir [-o]
   
  Quando il parametro **-o** non è specificato, il file di traccia dei risultati non viene generato. L'output della console restituisce informazioni di riepilogo al termine della riproduzione, ma non sono disponibili altre statistiche di riproduzione.  
   
- **-s** *target_server*  
+ **-s** _target_server_  
  Specifica l'istanza di destinazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] su cui deve essere riprodotto il carico di lavoro distribuito. È necessario specificare questo parametro nel formato **nome_server[\nome istanza]**.  
   
  Non è possibile utilizzare "`localhost`" o "`.`" come server di destinazione.  
@@ -68,18 +68,18 @@ dreplay replay [-m controller] -d controller_working_dir [-o]
   
  Se si usa il parametro **-s** , l'elemento `<Server>` nella sezione `<ReplayOptions>` del file di configurazione della riproduzione viene ignorato.  
   
- **-w** *clients*  
+ **-w** _clients_  
  Questo parametro obbligatorio è un elenco delimitato da virgole (senza spazi) che specifica i nomi computer dei client che devono partecipare alla riproduzione distribuita. Gli indirizzi IP non sono consentiti. Tenere presente che i client devono essere già registrati nel controller.  
   
 > [!NOTE]  
 >  Ogni client viene registrato nel controller specificato nel file di configurazione del client all'avvio del servizio client.  
   
- **-c** *config_file*  
+ **-c** _config_file_  
  Percorso completo del file di configurazione della riproduzione. Viene utilizzato per specificare il percorso quando il file viene archiviato in una posizione diversa.  
   
  Il parametro **-c** non è obbligatorio se si vuole usare i valori predefiniti del file di configurazione della riproduzione `DReplay.exe.replay.config`.  
   
- *intervallo_stato***-f**  
+ _intervallo_stato_**-f**  
  Specifica la frequenza in secondi in base alla quale visualizzare lo stato.  
   
  Se **-f** non è specificato, l'intervallo predefinito è 30 secondi.  
@@ -91,7 +91,7 @@ dreplay replay [-m controller] -d controller_working_dir [-o]
   
 -   Il parametro **-d** specifica il percorso del file intermedio nel controller, `c:\WorkingDir`.  
   
--   Il parametro **-o** indica che ogni client specificato acquisisce l'attività di riproduzione e la salva in un file di traccia dei risultati. Nota: è possibile utilizzare l'elemento `<ResultTrace>` nel file di configurazione per specificare se registrare il conteggio delle righe e il set di risultati.  
+-   Il parametro **-o** indica che ogni client specificato acquisisce l'attività di riproduzione e la salva in un file di traccia dei risultati. Nota: è possibile usare l'elemento `<ResultTrace>` nel file di configurazione per specificare se registrare il conteggio delle righe e il set di risultati.  
   
 -   Il parametro **-w** specifica che i computer compresi tra `client1` e `client4` partecipano come client alla riesecuzione distribuita.  
   

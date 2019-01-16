@@ -11,12 +11,12 @@ ms.topic: reference
 author: pmasl
 ms.author: pelopes
 manager: craigg
-ms.openlocfilehash: 9f8c045260ed923f5e5229167f9222bef187fe13
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 0eeb91d3cebd709b96fc08fe6317c90a08bdb4c7
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47695181"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53211970"
 ---
 # <a name="use-large-clr-udts-ole-db"></a>Utilizzare tipi definiti dall'utente CLR di grandi dimensioni (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -30,11 +30,11 @@ ms.locfileid: "47695181"
   
  Compilare il primo listato di codice (C#) in una DLL.  Copiare quindi la DLL nella directory radice dell'unità C.  
   
- Eseguire il secondo listato di codice ([!INCLUDE[tsql](../../../includes/tsql-md.md)]) per aggiungere l'assembly al database master.  
+ Eseguire il secondo listato di codice ( [!INCLUDE[tsql](../../../includes/tsql-md.md)] ) per aggiungere l'assembly al database master.  
   
  Compilare il terzo listato di codice (C++) con ole32.lib oleaut32.lib ed eseguirlo. In questa applicazione viene eseguita la connessione all'istanza predefinita di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] nel computer in uso. In alcuni sistemi operativi Windows sarà necessario modificare (local) o (localhost) impostando il valore sul nome dell'istanza di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Per connettersi a un'istanza denominata, modificare la stringa di connessione da L"(local)" in L"(local)\\\nome", dove nome rappresenta l'istanza denominata. Per impostazione predefinita, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Express viene installato in un'istanza denominata. Verificare che nella variabile di ambiente INCLUDE sia presente la directory che contiene msoledbsql.h.  
   
- Eseguire il quarto listato di codice ([!INCLUDE[tsql](../../../includes/tsql-md.md)]) per eliminare l'assembly nel database master.  
+ Eseguire il quarto listato di codice ( [!INCLUDE[tsql](../../../includes/tsql-md.md)] ) per eliminare l'assembly nel database master.  
   
 ```  
 // compile with: /target: library  

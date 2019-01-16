@@ -25,12 +25,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: 31e71f63e1cb06fdc38af291668f32552e5659b2
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 2a6762f20c05a66c597474d33bd98e9bb8f2c5f4
+ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52538909"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53589995"
 ---
 # <a name="osql-utility"></a>Utilità osql
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -70,10 +70,10 @@ osql
 > [!NOTE]  
 >  A causa della natura delle trasmissioni in rete, è possibile che **osql** non riceva una risposta tempestiva da tutti i server e pertanto che l'elenco di server restituito sia diverso per ogni chiamata di questa opzione.  
   
- **-U** *login_id*  
+ **-U** _login_id_  
  ID di accesso dell'utente. Negli ID di accesso viene fatta distinzione tra maiuscole e minuscole.  
   
- **-P** *password*  
+ **-P** _password_  
  Password specificata dall'utente. Se si omette l'opzione **-P** , **osql** richiede una password. Se l'opzione **-P** viene specificata alla fine del prompt dei comandi senza indicare una password, **osql** usa la password predefinita (NULL).  
   
 > [!IMPORTANT]  
@@ -96,31 +96,31 @@ C:\>osql
  **-E**  
  Utilizza una connessione trusted anziché richiedere una password.  
   
- **-S** _server\_name_[ **\\** _istanza\_nome_]  
+ **-S** _server\_name_[ **\\**_instance\_name_]  
  Specifica l'istanza di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] alla quale connettersi. Specificare il *nome_server* per connettersi all'istanza predefinita di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] su tale server. Specificare _server\_name_**\\**_instance\_name_ per connettersi a un'istanza denominata di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] su tale server. Se non si specifica alcun server, **osql** si connette all'istanza predefinita di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] nel computer locale. Questa opzione è obbligatoria per l'esecuzione di **osql** da un computer remoto sulla rete.  
   
- **-H** *wksta_name*  
+ **-H** _wksta_name_  
  Nome della workstation. Il nome della workstation viene archiviato in **sysprocesses.hostname** ed è visualizzato tramite **sp_who**. Se omesso, viene utilizzato il nome del computer corrente.  
   
- **-d** *db_name*  
+ **-d** _db_name_  
  Esegue un'istruzione USE *db_name* all'avvio di **osql**.  
   
- **-l** *time_out*  
+ **-l** _time_out_  
  Specifica il numero di secondi prima del timeout di accesso a **osql** . Il valore predefinito per il timeout di accesso a **osql** è otto secondi.  
   
- **-t** *time_out*  
+ **-t** _time_out_  
  Specifica il numero di secondi prima del timeout del comando. Se per *time_out* non viene specificato alcun valore, ai comandi non viene associato alcun timeout.  
   
- **-h** *headers*  
+ **-h** _headers_  
  Specifica il numero di righe da stampare tra le intestazioni delle colonne. Per impostazione predefinita, le intestazioni vengono stampate una volta per ogni set di risultati delle query. Utilizzare -1 per non stampare alcuna intestazione. Se si usa -1, non inserire spazi tra il parametro e l'impostazione (**-h-1**e non **-h -1**).  
   
- **-s** *col_separator*  
+ **-s** _col_separator_  
  Specifica il carattere separatore di colonne che, per impostazione predefinita, è uno spazio vuoto. Per utilizzare caratteri con un significato speciale per il sistema operativo (ad esempio, | ; & < >), racchiudere il carattere tra virgolette doppie (").  
   
- **-w** *column_width*  
+ **-w** _column_width_  
  Consente di impostare la larghezza della schermata per l'output. Il valore predefinito è 80 caratteri. Se una riga di output raggiunge la larghezza massima della schermata, viene suddivisa su più righe.  
   
- **-a** *packet_size*  
+ **-a** _packet_size_  
  Consente di richiedere un pacchetto di dimensioni diverse. I valori validi per *packet_size* sono compresi tra 512 e 65535. Il valore predefinito per **osql** è il valore predefinito del server. Aumentando le dimensioni del pacchetto si possono ottenere miglioramenti delle prestazioni di esecuzione di script di grandi dimensioni, che includono numerose istruzioni SQL tra i comandi GO. [!INCLUDE[msCoName](../includes/msconame-md.md)] indicano che, per le operazioni di copia bulk, l'impostazione che garantisce le prestazioni più veloci è in genere 8.192. È possibile richiedere una dimensione maggiore del pacchetto, ma se questa non è disponibile **osql** usa il valore predefinito del server.  
   
  **-e**  
@@ -129,16 +129,16 @@ C:\>osql
  **-I**  
  Attiva l'opzione di connessione QUOTED_IDENTIFIER.  
   
- **-D** *data_source_name*  
+ **-D** _data_source_name_  
  Stabilisce una connessione a un'origine dei dati ODBC definita mediante il driver ODBC per [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. La connessione **osql** usa le opzioni specificate nell'origine dei dati.  
   
 > [!NOTE]  
 >  Tale opzione non può essere utilizzata con origini dei dati definite per altri driver.  
   
- **-c** *cmd_end*  
+ **-c** _cmd_end_  
  Specifica il carattere di terminazione del comando. Per impostazione predefinita, i comandi vengono terminati e inviati a [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] tramite l'immissione di GO su una riga a sé stante. Se si reimposta il carattere di terminazione del comando, non utilizzare parole riservate di [!INCLUDE[tsql](../includes/tsql-md.md)] o caratteri con un significato speciale per il sistema operativo, indipendentemente dal fatto che siano preceduti da una barra rovesciata.  
   
- **-q "** *query* **"**  
+ **-q "** _query_ **"**  
  Esegue una query all'avvio di **osql** senza uscire da **osql** al termine della query. Si noti che l'istruzione della query non dovrebbe includere l'istruzione GO. Se si esegue una query da un file batch, è possibile utilizzare variabili in formato %variabile o variabili di ambiente in formato %variabile%. Ad esempio  
   
 ```  
@@ -148,22 +148,22 @@ osql -E -q "select name, object_id from %table%"
   
  Racchiudere la query tra virgolette doppie e utilizzare le virgolette singole per altri elementi inclusi nella query.  
   
- **-Q"** *query* **"**  
+ **-Q"** _query_ **"**  
  Esegue una query ed esce immediatamente da **osql**. Racchiudere la query tra virgolette doppie e utilizzare le virgolette singole per altri elementi inclusi nella query.  
   
  **-n**  
  Rimuove la numerazione e il simbolo del prompt (>) dalle righe di input.  
   
- **-m** *error_level*  
+ **-m** _error_level_  
  Personalizza la visualizzazione dei messaggi di errore. Per gli errori con livello di gravità pari o superiore a quello specificato vengono visualizzati il numero, lo stato e il livello di errore del messaggio. Per gli errori con livelli di gravità inferiori a quello specificato non viene visualizzato nulla. Usare **-1** per specificare che con i messaggi, anche quelli informativi, devono essere restituite anche tutte le rispettive intestazioni. Se si usa **-1**, non inserire spazi tra il parametro e l'impostazione (**-m-1**e non **-m -1**).  
   
  **-r** { **0**| **1**}  
  Reindirizza l'output dei messaggi sullo schermo (**stderr**). Se il parametro viene omesso o si specifica **0**, vengono reindirizzati solo i messaggi di errore con gravità pari o superiore a 11. Se si specifica **1**, viene reindirizzato l'output di tutti i messaggi (incluso quello dell'istruzione "print").  
   
- **-i** *input_file*  
+ **-i** _input_file_  
  Identifica il file che include un batch di istruzioni SQL o stored procedure. Anziché**\<**-i **, è possibile utilizzare l'operatore di confronto minore di (**).  
   
- **-o** *output_file*  
+ **-o** _output_file_  
  Identifica il file che riceve l'output di **osql**. Anziché**>**-o **, è possibile usare l'operatore di confronto maggiore di (**).  
   
  Se *input_file* non è un file Unicode e l'opzione **-u** non è specificata, *output_file* viene archiviato in formato OEM. Se *input_file* è un file Unicode o l'opzione **-u** è specificata, *output_file* viene archiviato in formato Unicode.  

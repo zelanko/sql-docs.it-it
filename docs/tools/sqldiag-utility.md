@@ -30,12 +30,12 @@ ms.assetid: 45ba1307-33d1-431e-872c-a6e4556f5ff2
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: a20913ac99f7c4cf32ae31c55cdf027f2db360c1
-ms.sourcegitcommit: 0f7cf9b7ab23df15624d27c129ab3a539e8b6457
+ms.openlocfilehash: 05336c1b9a7f6830b3dd2c6e6f0b794984bda061
+ms.sourcegitcommit: 78e32562f9c1fbf2e50d3be645941d4aa457e31f
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51292707"
+ms.lasthandoff: 01/08/2019
+ms.locfileid: "54100946"
 ---
 # <a name="sqldiag-utility"></a>SQLdiag - utilità
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -86,16 +86,16 @@ sqldiag
  **/?**  
  Visualizza le informazioni sull'utilizzo.  
   
- **/I** *configuration_file*  
+ **/I** _configuration_file_  
  Imposta il file di configurazione usato da **SQLdiag** . Per impostazione predefinita, **/I** è impostato su SQLDiag.Xml.  
   
- **/O** *output_folder_path*  
+ **/O** _output_folder_path_  
  Reindirizza l'output dell'utilità **SQLdiag** sulla cartella specificata. Se si omette l'opzione **/O** , l'output dell'utilità **SQLdiag** viene scritto in una sottocartella denominata SQLDIAG nella cartella di avvio **SQLdiag** . Se la cartella SQLDIAG non esiste, l'utilità **SQLdiag** cercherà di crearla.  
   
 > [!NOTE]  
 >  La posizione della cartella di output è relativa alla posizione della cartella di supporto che è possibile specificare mediante **/P**. Per impostare una cartella di output completamente diversa, specificare il percorso completo della directory per **/O**.  
   
- **/P** *support_folder_path*  
+ **/P** _support_folder_path_  
  Imposta il percorso della cartella di supporto. Per impostazione predefinita, **/P** viene impostata sulla cartella nella quale risiede il file eseguibile di **SQLdiag** . La cartella di supporto contiene i file di supporto di **SQLdiag** , ad esempio il file di configurazione XML, gli script di Transact-SQL e altri file che l'utilità usa durante la raccolta dei dati diagnostici. Se si usa questa opzione per specificare un percorso alternativo per i file di supporto, **SQLdiag** copierà automaticamente i file di supporto necessari nella cartella specificata, se non esistono già.  
   
 > [!NOTE]  
@@ -103,7 +103,7 @@ sqldiag
 >   
 >  **SQLDIAG /P %cd%**  
   
- **/N** *output_folder_management_option*  
+ **/N** _output_folder_management_option_  
  Imposta la sovrascrittura o la ridenominazione della cartella di output all'avvio dell'utilità **SQLdiag** . Opzioni disponibili:  
   
  1 = sovrascrive la cartella di output (impostazione predefinita).  
@@ -113,12 +113,12 @@ sqldiag
 > [!NOTE]  
 >  Con**SQLdiag** l'output non viene accodato alla cartella di output corrente al momento dell'avvio. È possibile soltanto sovrascrivere la cartella di output predefinita (opzione 1) o rinominare la cartella (opzione 2), quindi l'output viene scritto nella nuova cartella di output predefinita denominata SQLDIAG.  
   
- **/M** *Computer1* [ *machine2 * * machineN*] | *@machinelistfile*  
+ **/M** _machine1_ [ *machine2* *machineN*] | *@machinelistfile*  
  Esegue l'override del computer specificato nel file di configurazione. Per impostazione predefinita il file di configurazione è SQLDiag.Xml o è impostato con il parametro **/I** . Quando si specifica più di un computer, separare ogni nome di computer con uno spazio.  
   
  L'utilizzo di *@machinelistfile* consente di specificare un nome di file di un elenco di computer da archiviare nel file di configurazione.  
   
- **/C** *file_compression_type*  
+ **/C** _file_compression_type_  
  Imposta il tipo di compressione usato per i file nella cartella di output **SQLdiag** . Opzioni disponibili:  
   
  0 = nessuna compressione (impostazione predefinita)  
@@ -153,7 +153,7 @@ sqldiag
   
  L'utilità **SQLdiag** usa l'ora locale del computer in cui è in esecuzione.  
   
- **/A**  *SQLdiag_application_name*  
+ **/A**  _SQLdiag_application_name_  
  Abilita l'esecuzione di più istanze dell'utilità **SQLdiag** sulla base della stessa istanza di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] .  
   
  Ogni *SQLdiag_application_name* identifica un'istanza diversa di **SQLdiag**. Non esiste alcuna relazione tra un'istanza *SQLdiag_application_name* e il nome di un'istanza di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] .  
@@ -162,11 +162,11 @@ sqldiag
   
  Ad esempio  
   
- **SQLDIAG START /A**  *SQLdiag_application_name*  
+ **SQLDIAG START /A**  _SQLdiag_application_name_  
   
  È anche possibile usare tale parametro con l'opzione **/R** per registrare un'istanza specifica di **SQLdiag** come servizio. Ad esempio  
   
- **SQLDIAG /R /A** *SQLdiag_application_name*  
+ **SQLDIAG /R /A** _SQLdiag_application_name_  
   
 > [!NOTE]  
 >  **SQLdiag** aggiunge automaticamente il prefisso DIAG$ al nome dell'istanza specificato per *SQLdiag_application_name*. In questo modo viene messo a disposizione un nome di servizio appropriato se si registra **SQLdiag** come servizio.  
@@ -202,7 +202,7 @@ sqldiag
   
  È inoltre possibile utilizzare il comando **net start** per avviare il servizio:  
   
- **net**  **start SQLDIAG**  
+ **net  start SQLDIAG**  
   
  **/U**  
  Annulla la registrazione di **SQLdiag** come servizio.  
@@ -229,7 +229,7 @@ sqldiag
   
  L' argomento **/A** , che specifica un'istanza denominata di **SQLdiag**, è l'unico che può essere usato con **START**, **STOP**o **STOP_ABORT** per il controllo di un'istanza specifica del servizio **SQLdiag** . Ad esempio  
   
- **SQLDIAG START /A** *SQLdiag_application_name*  
+ **SQLDIAG START /A** _SQLdiag_application_name_  
   
 ## <a name="security-requirements"></a>Requisiti di sicurezza  
  Se l'utilità **SQLdiag** non viene eseguita in modalità generica specificando l'argomento della riga di comando **/G** , l'utente che esegue **SQLdiag** deve essere membro del gruppo **Administrators** di Windows e membro del ruolo predefinito del server [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] **sysadmin** fixed server role. Per impostazione predefinita, l'utilità **SQLdiag** esegue la connessione a [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] usando l'autenticazione di Windows, ma supporta anche l'autenticazione di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] .  

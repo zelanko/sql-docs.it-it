@@ -11,12 +11,12 @@ ms.assetid: aee11dde-daad-439b-b594-9f4aeac94335
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 5253fc1b7ace718fc2d83cadd9fca944b4898c7b
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 166e5e929863a9c7213f3cda6f43e6c1007865b2
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52506222"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54125561"
 ---
 # <a name="configure-distributed-replay"></a>Configurare Distributed Replay
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -123,7 +123,7 @@ ms.locfileid: "52506222"
   
 |Impostazione|Elemento XML|Descrizione|Valori consentiti|Obbligatorio|  
 |-------------|-----------------|-----------------|--------------------|--------------|  
-|Istanza di destinazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (server di prova)|`<Server>`|Specifica il nome del server e dell'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a cui connettersi.|*server_name*[\\*instance_name*]<br /><br /> Non è possibile utilizzare "`localhost`" o "`.`" per rappresentare l'host locale.|No, se il nome del server è già specificato tramite il parametro **-s***target server* con l'opzione **replay** dello strumento di amministrazione.|  
+|Istanza di destinazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (server di prova)|`<Server>`|Specifica il nome del server e dell'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a cui connettersi.|*server_name*[\\*instance_name*]<br /><br /> Non è possibile utilizzare "`localhost`" o "`.`" per rappresentare l'host locale.|No, se il nome del server è già specificato con il parametro **-s**_target server_ con l'opzione **replay** dello strumento di amministrazione.|  
 |Modalità di sequenza|`<SequencingMode>`|Specifica la modalità utilizzata per la pianificazione degli eventi.|`synchronization` &#124; `stress`|No. Per impostazione predefinita, il valore è `stress`.|  
 |Granularità di scala di stress|`<StressScaleGranularity>`|Specifica se tutte le connessioni nel Servizio Profilo l'Identificatore (SPID) devono essere ridimensionate, insieme (SPID) o indipendentemente (Connessione), in modalità di stress.|SPID &#124; Connessione|Sì. Per impostazione predefinita, il valore è `SPID`.|  
 |Scala del tempo di connessione|`<ConnectTimeScale>`|Viene utilizzata per ridimensionare il tempo di connessione in modalità di stress.|Numero intero compreso tra `1` e `100`.|No. Per impostazione predefinita, il valore è `100`.|  
@@ -167,8 +167,8 @@ ms.locfileid: "52506222"
 
 ### <a name="possible-issue-when-running-with-synchronization-sequencing-mode"></a>Possibile problema durante l'esecuzione con la sequenziazione di modalità di sincronizzazione
  È possibile riscontrare un problema in cui la funzionalità di riproduzione sembra "Auto", o eventi riproduzioni molto lentamente. Questo fenomeno può verificarsi se la traccia riprodotta si basa su dati e/o gli eventi che non esistono nel database di destinazione ripristinato. 
- 
-Un esempio è un carico di lavoro acquisita che utilizza l'istruzione WAITFOR, come nell'istruzione WAITFOR di ricezione di Service Broker. Quando si usa la modalità di sequenza di sincronizzazione, batch vengono riprodotte in modo seriale. Se si verifica un inserimento nel database di origine dopo il backup del database, ma prima dell'acquisizione di riproduzione traccia viene avviata, la ricezione di WAITFOR emesso durante la riproduzione potrebbe essere necessario attendere l'intera durata dell'istruzione WAITFOR. Eventi impostati da riprodurre dopo la ricezione di WAITFOR verrà bloccata. Ciò può comportare il contatore richieste Batch/sec performance monitor per il rilascio di destinazione database riproduzione su zero fino al completamento l'istruzione WAITFOR. 
+ 
+ Un esempio è un carico di lavoro acquisita che utilizza l'istruzione WAITFOR, come nell'istruzione WAITFOR di ricezione di Service Broker. Quando si usa la modalità di sequenza di sincronizzazione, batch vengono riprodotte in modo seriale. Se si verifica un inserimento nel database di origine dopo il backup del database, ma prima dell'acquisizione di riproduzione traccia viene avviata, la ricezione di WAITFOR emesso durante la riproduzione potrebbe essere necessario attendere l'intera durata dell'istruzione WAITFOR. Eventi impostati da riprodurre dopo la ricezione di WAITFOR verrà bloccata. Ciò può comportare il contatore richieste Batch/sec performance monitor per il rilascio di destinazione database riproduzione su zero fino al completamento l'istruzione WAITFOR. 
  
  Se è necessario usare la modalità di sincronizzazione e desideri per evitare questo comportamento, è necessario eseguire quanto segue:
  

@@ -15,12 +15,12 @@ ms.assetid: f95cdbce-e7c2-4e56-a9f7-8fa3a920a125
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 3c07b0bb4659f9b1b05573bf952842486f9ec72e
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: db4df94d04a27df5715abe4bf5e4947850c687e4
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52420452"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54125841"
 ---
 # <a name="connecting-to-sql-server"></a>Connessione a SQL Server
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
@@ -32,7 +32,7 @@ Questo argomento descrive come creare una connessione a un database di [!INCLUDE
 Visualizzare [DSN e parole chiave delle stringhe di connessione e gli attributi](../../../connect/odbc/dsn-connection-string-attribute.md) per tutte le parole chiave delle stringhe di connessione e gli attributi supportati in Linux e Mac
 
 > [!IMPORTANT]  
-> Se si stabilisce una connessione a un database che usa il mirroring, ovvero dispone di un partner di failover, non specificare il nome del database nella stringa di connessione. Inviare invece un comando **use***nome_database* per connettersi al database prima di eseguire le query.  
+> Se si stabilisce una connessione a un database che usa il mirroring, ovvero dispone di un partner di failover, non specificare il nome del database nella stringa di connessione. Inviare invece un comando **use**_nome_database_ per connettersi al database prima di eseguire le query.  
   
 Il valore passato per il **Driver** parola chiave può essere uno dei seguenti:  
   
@@ -53,12 +53,12 @@ Server = [protocol:]server[,port]
 #  
 ```  
 
-È anche possibile specificare il protocollo e la porta per la connessione al server. Ad esempio, **Server = tcp:***servername***, 12345**. Si noti che è l'unico protocollo supportato dai driver di Linux e macOS `tcp`.
+È anche possibile specificare il protocollo e la porta per la connessione al server. Ad esempio, **Server = tcp:**_servername_**, 12345**. Si noti che è l'unico protocollo supportato dai driver di Linux e macOS `tcp`.
 
 Per connettersi a un'istanza denominata tramite una porta statica, usare <b>Server=</b>*nomeserver*,**numero_porta**. La connessione a una porta dinamica non è supportata.  
 
 In alternativa, è possibile aggiungere le informazioni del DSN in un file di modello ed eseguire il comando seguente per aggiungere tali informazioni a `~/.odbc.ini`:
- - **Odbcinst -i -s -f** *template_file*  
+ - **odbcinst -i -s -f** _template_file_  
  
 È possibile verificare che il driver funzioni usando `isql` per testare la connessione, oppure è possibile usare questo comando:
  - **master.INFORMATION_SCHEMA.TABLES BCP out -S OUTFILE <server> - U <name> - P <password>**  
@@ -72,7 +72,7 @@ Per altre informazioni, vedere [crittografia delle connessioni a SQL Server](htt
 
 Indipendentemente dalle impostazioni di **Encrypt** e **TrustServerCertificate**, le credenziali di accesso al server (nome utente e password) vengono sempre crittografate. La tabella seguente mostra l'effetto delle impostazioni di **Encrypt** e **TrustServerCertificate** .  
 
-||**TrustServerCertificate = no**|**TrustServerCertificate = yes**|  
+||**TrustServerCertificate=no**|**TrustServerCertificate=yes**|  
 |-|-------------------------------------|------------------------------------|  
 |**Encrypt=no**|Il certificato del server non viene verificato.<br /><br />I dati inviati dal client al server e viceversa non vengono crittografati.|Il certificato del server non viene verificato.<br /><br />I dati inviati dal client al server e viceversa non vengono crittografati.|  
 |**Encrypt=yes**|Il certificato del server viene verificato.<br /><br />I dati inviati dal client al server e viceversa vengono crittografati.<br /><br />Il nome (o indirizzo IP) in un nome comune del soggetto (CN) o nome alternativo del soggetto (SAN) di un certificato SSL di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] deve corrispondere esattamente al nome server (o indirizzo IP) specificato nella stringa di connessione.|Il certificato del server non viene verificato.<br /><br />I dati inviati dal client al server e viceversa vengono crittografati.|  
