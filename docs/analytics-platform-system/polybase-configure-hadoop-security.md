@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.date: 10/26/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: df7e0492c73d213efb08c1bfb25a2c87e2550374
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: c916fef2b70333c2d5bc89fec5c86d61482cdba7
+ms.sourcegitcommit: bfa10c54e871700de285d7f819095d51ef70d997
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51700289"
+ms.lasthandoff: 01/14/2019
+ms.locfileid: "54256436"
 ---
 # <a name="polybase-configuration-and-security-for-hadoop"></a>Configurazione di PolyBase e sicurezza per Hadoop
 
@@ -120,7 +120,7 @@ Si noti che è stata aggiunta la proprietà mapreduce.application.classpath. In 
 <?xml version="1.0"?>
 <?xml-stylesheet type="text/xsl" href="configuration.xsl"?>
 <!-- Put site-specific property overrides in this file. -->
-<configuration xmlns:xi="https://www.w3.org/2001/XInclude">
+<configuration xmlns:xi="http://www.w3.org/2001/XInclude">
    <property>
      <name>mapred.min.split.size</name>
        <value>1073741824</value>
@@ -167,14 +167,14 @@ Per connettersi a un Hadoop protetto con Kerberos tramite MIT KDC sono necessari
    |**#**|**File di configurazione**|**Chiave di configurazione**|**Azione**|  
    |------------|----------------|---------------------|----------|   
    |1|core-site.xml|polybase.kerberos.kdchost|Specificare il nome host KDC. Ad esempio: kerberos.area-di-autenticazione.com.|  
-   |2|core-site.xml|polybase.kerberos.realm|Specificare l'area di autenticazione Kerberos. Ad esempio: AREA-DI-AUTENTICAZIONE.COM|  
-   |3|core-site.xml|hadoop.security.authentication|Trovare la configurazione lato Hadoop e copiarla nel computer SQL Server. Ad esempio: KERBEROS<br></br>**Nota sulla sicurezza:** è necessario scrivere KERBEROS in maiuscolo. Se si usano lettere minuscole, potrebbe non essere disponibile.|   
+   |2|core-site.xml|polybase.kerberos.realm|Specificare l'area di autenticazione Kerberos. Ad esempio: YOUR-REALM.COM|  
+   |3|core-site.xml|hadoop.security.authentication|Trovare la configurazione lato Hadoop e copiarla nel computer SQL Server. Ad esempio: KERBEROS<br></br>**Nota sulla sicurezza:** KERBEROS deve essere scritto in lettere maiuscole. Se si usano lettere minuscole, potrebbe non essere disponibile.|   
    |4|hdfs-site.xml|dfs.namenode.kerberos.principal|Trovare la configurazione lato Hadoop e copiarla nel computer SQL Server. Ad esempio: hdfs/_HOST@YOUR-REALM.COM|  
    |5|mapred-site.xml|mapreduce.jobhistory.principal|Trovare la configurazione lato Hadoop e copiarla nel computer SQL Server. Ad esempio: mapred/_HOST@YOUR-REALM.COM|  
    |6|mapred-site.xml|mapreduce.jobhistory.address|Trovare la configurazione lato Hadoop e copiarla nel computer SQL Server. Ad esempio: 10.193.26.174:10020|  
    |7|yarn-site.xml yarn.|yarn.resourcemanager.principal|Trovare la configurazione lato Hadoop e copiarla nel computer SQL Server. Ad esempio: yarn/_HOST@YOUR-REALM.COM|  
 
-**Core-Site. Xml**
+**core-site.xml**
 ```xml
 <property>
   <name>polybase.kerberos.realm</name>
@@ -190,7 +190,7 @@ Per connettersi a un Hadoop protetto con Kerberos tramite MIT KDC sono necessari
 </property>
 ```
 
-**hdfs-Site. Xml**
+**hdfs-site.xml**
 ```xml
 <property>
   <name>dfs.namenode.kerberos.principal</name>
@@ -223,7 +223,7 @@ Per connettersi a un Hadoop protetto con Kerberos tramite MIT KDC sono necessari
 ## <a id="encryptionzone"></a> Programma di installazione di Hadoop crittografia zona
 Se si usa Hadoop zona crittografia modificare core-Site. XML e hdfs-Site. XML come indicato di seguito. Specificare l'indirizzo ip in cui il servizio KMS è in esecuzione con il numero di porta corrispondente. La porta predefinita per KMS in CDH è 16000.
 
-**Core-Site. Xml**
+**core-site.xml**
 ```xml
 <property>
   <name>hadoop.security.key.provider.path</name>
@@ -231,7 +231,7 @@ Se si usa Hadoop zona crittografia modificare core-Site. XML e hdfs-Site. XML co
 </property>
 ```
 
-**hdfs-Site. Xml**
+**hdfs-site.xml**
 ```xml
 <property>
   <name>dfs.encryption.key.provider.uri</name>

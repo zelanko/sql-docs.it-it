@@ -33,12 +33,12 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: cefdb89d4b8c36747f8fce6824f51b8dbb11e095
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 22d521b86e1129547c925d3958af67af6003109c
+ms.sourcegitcommit: bfa10c54e871700de285d7f819095d51ef70d997
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51673980"
+ms.lasthandoff: 01/14/2019
+ms.locfileid: "54256206"
 ---
 # <a name="xml-bulk-load-examples-sqlxml-40"></a>Esempi di caricamento bulk XML (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -130,7 +130,7 @@ End Function
 2.  Creare un file nell'editor di testo o XML preferito e salvarlo con il nome SampleSchema.xml. Aggiungere lo schema XSD seguente al file:  
   
     ```xml  
-    <xsd:schema xmlns:xsd="https://www.w3.org/2001/XMLSchema"  
+    <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"  
                 xmlns:sql="urn:schemas-microsoft-com:mapping-schema">  
        <xsd:element name="ROOT" sql:is-constant="1" >  
          <xsd:complexType>  
@@ -201,7 +201,7 @@ End Function
 </Schema>  
 ```  
   
-## <a name="b-bulk-loading-xml-data-in-multiple-tables"></a>B. Caricamento bulk di dati XML in più tabelle  
+## <a name="b-bulk-loading-xml-data-in-multiple-tables"></a>b. Caricamento bulk di dati XML in più tabelle  
  In questo esempio, il documento XML è costituito il  **\<cliente >** e  **\<ordine >** elementi.  
   
 ```xml  
@@ -236,7 +236,7 @@ End Function
  Nello schema XSD seguente viene definita la vista XML delle tabelle. Lo schema specifica la relazione padre-figlio tra le  **\<cliente >** e  **\<ordine >** elementi.  
   
 ```xml  
-<xsd:schema xmlns:xsd="https://www.w3.org/2001/XMLSchema"  
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"  
             xmlns:sql="urn:schemas-microsoft-com:mapping-schema">  
   <xsd:annotation>  
     <xsd:appinfo>  
@@ -338,7 +338,7 @@ End Function
  Si consideri, ad esempio, lo schema XSD seguente:  
   
 ```xml  
-<xsd:schema xmlns:xsd="https://www.w3.org/2001/XMLSchema"  
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"  
             xmlns:sql="urn:schemas-microsoft-com:mapping-schema">  
 <xsd:annotation>  
   <xsd:appinfo>  
@@ -490,7 +490,7 @@ OrderDetail (OrderID, ProductID)
 2.  Creare un file nell'editor di testo o XML preferito e salvarlo con il nome SampleSchema.xml. Aggiungere lo schema XSD seguente al file.  
   
     ```  
-    <xsd:schema xmlns:xsd="https://www.w3.org/2001/XMLSchema"  
+    <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"  
                 xmlns:sql="urn:schemas-microsoft-com:mapping-schema">  
      <xsd:annotation>  
        <xsd:appinfo>  
@@ -657,7 +657,7 @@ Set objBL = Nothing
  Nello schema di mapping XSD seguente vengono fornite le informazioni necessarie per creare la tabella:  
   
 ```  
-<xsd:schema xmlns:xsd="https://www.w3.org/2001/XMLSchema"  
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"  
             xmlns:sql="urn:schemas-microsoft-com:mapping-schema">  
 <xsd:element name="ROOT" sql:is-constant="true" >  
   <xsd:complexType>  
@@ -815,7 +815,7 @@ End Sub
  Si consideri lo schema XSD seguente:  
   
 ```  
-<xsd:schema xmlns:xsd="https://www.w3.org/2001/XMLSchema"  
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"  
             xmlns:sql="urn:schemas-microsoft-com:mapping-schema">  
 <xsd:annotation>  
   <xsd:appinfo>  
@@ -990,7 +990,7 @@ set objBL=Nothing
 2.  Creare un file nell'editor di testo o XML preferito e salvarlo con il nome SampleSchema.xml. Aggiungere lo schema XSD seguente al file:  
   
     ```  
-    <xsd:schema xmlns:xsd="https://www.w3.org/2001/XMLSchema"  
+    <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"  
                 xmlns:sql="urn:schemas-microsoft-com:mapping-schema">  
       <xsd:element name="ROOT" sql:is-constant="true" >  
         <xsd:complexType>  
@@ -1045,7 +1045,7 @@ set objBL=Nothing
      Di seguito viene fornito lo schema aggiornato:  
   
     ```  
-    <xsd:schema xmlns:xsd="https://www.w3.org/2001/XMLSchema"  
+    <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"  
                 xmlns:sql="urn:schemas-microsoft-com:mapping-schema">  
       <xsd:element name="ROOT" sql:is-constant="true" >  
         <xsd:complexType>  
@@ -1134,7 +1134,7 @@ End Sub
 2.  Creare un file nell'editor di testo o XML preferito e salvarlo con il nome SampleSchema.xml. Aggiungere lo schema XSD seguente al file:  
   
     ```  
-    <xsd:schema xmlns:xsd="https://www.w3.org/2001/XMLSchema"  
+    <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"  
                 xmlns:sql="urn:schemas-microsoft-com:mapping-schema">  
     <xsd:annotation>  
       <xsd:appinfo>  
@@ -1251,7 +1251,7 @@ End Sub
   
 ```  
 <?xml version="1.0" encoding="utf-8" ?>  
-<xsd:schema xmlns:xsd="https://www.w3.org/2001/XMLSchema"   
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"   
            xmlns:sql="urn:schemas-microsoft-com:mapping-schema"  
            xmlns="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription">   
   <xsd:element name="ProductModel"  sql:relation="Production.ProductModel" >  
@@ -1293,7 +1293,7 @@ End Sub
             <p1:ProductDescription xmlns:p1="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription"   
                   xmlns:wm="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelWarrAndMain"   
                   xmlns:wf="https://www.adventure-works.com/schemas/OtherFeatures"   
-                  xmlns:html="https://www.w3.org/1999/xhtml"   
+                  xmlns:html="http://www.w3.org/1999/xhtml"   
                   xmlns="">  
                 <p1:Summary>  
                     <html:p>Our top-of-the-line competition mountain bike.   

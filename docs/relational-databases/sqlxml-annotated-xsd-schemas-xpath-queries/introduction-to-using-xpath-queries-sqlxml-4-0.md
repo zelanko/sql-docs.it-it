@@ -16,12 +16,12 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 0c8edb6cb54d2ef600080093729a9ff0c06f4082
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 3758a437a35ad3add877d04eaafca0997f7b2096
+ms.sourcegitcommit: bfa10c54e871700de285d7f819095d51ef70d997
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51671640"
+ms.lasthandoff: 01/14/2019
+ms.locfileid: "54256456"
 ---
 # <a name="introduction-to-using-xpath-queries-sqlxml-40"></a>Introduzione all'utilizzo di query XPath (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -52,7 +52,7 @@ ms.locfileid: "51671640"
   
  XPath è un linguaggio di navigazione grafica utilizzato per selezionare un set di nodi da un documento XML. Ogni operatore XPath consente di selezionare un set di nodi in base a un set di nodi selezionato da un operatore XPath precedente. Ad esempio, dato un set di  **\<cliente >** consente di selezionare tutti i nodi, XPath  **\<ordine >** nodi con il **data** attributo valore **"7/14/1999"**. Il set di nodi risultante contiene tutti gli ordini con data 7/14/1999.  
   
- Il linguaggio XPath è definito dal World Wide Web Consortium (W3C) come linguaggio di navigazione standard. SQLXML 4.0 implementa un subset della specifica XPath W3C, che si trova in https://www.w3.org/TR/1999/PR-xpath-19991008.html.  
+ Il linguaggio XPath è definito dal World Wide Web Consortium (W3C) come linguaggio di navigazione standard. SQLXML 4.0 implementa un subset della specifica XPath W3C, che si trova in http://www.w3.org/TR/1999/PR-xpath-19991008.html.  
   
  Di seguito vengono elencate alcune delle differenze principali tra l'implementazione di XPath del W3C e l'implementazione di SQLXML 4.0.  
   
@@ -108,13 +108,13 @@ ms.locfileid: "51671640"
   
 |Funzionalità|Elemento|  
 |-------------|----------|  
-|Assi|**predecessore**, **ancestor-or-self**, **discendenti**, **descendant-or-self (/ /)**, **seguenti**,  **successivi**, **dello spazio dei nomi**, **precedente**, **pari livello precedenti**|  
+|Assi|**ancestor**, **ancestor-or-self**, **descendant**, **descendant-or-self (//)**, **following**, **following-sibling**, **namespace**, **preceding**, **preceding-sibling**|  
 |Predicati con valori numerici||  
 |Operatori aritmetici|mod|  
-|Funzioni nodo|**predecessore**, **ancestor-or-self**, **discendenti**, **descendant-or-self (/ /)**, **seguenti**,  **successivi**, **dello spazio dei nomi**, **precedente**, **pari livello precedenti**|  
+|Funzioni nodo|**ancestor**, **ancestor-or-self**, **descendant**, **descendant-or-self (//)**, **following**, **following-sibling**, **namespace**, **preceding**, **preceding-sibling**|  
 |Funzioni per i valori stringa|**String ()**, **Concat ()**, **starts-with**, **Contains ()**, **substring-before()**,  **substring-after()**, **substring ()**, **string-length()**, **normalize()**, **Translate)**|  
-|funzioni booleane|**lang)**|  
-|Funzioni numeriche|**SUM ()**, **floor ()**, **Ceiling ()**, **Round)**|  
+|funzioni booleane|**lang()**|  
+|Funzioni numeriche|**sum()**, **floor()**, **ceiling()**, **round()**|  
 |Operatore Union|&#124;|  
   
  Quando si specificano query XPath in un modello, si noti il comportamento seguente:  

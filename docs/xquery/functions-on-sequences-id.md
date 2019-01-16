@@ -16,12 +16,12 @@ ms.assetid: de99fc60-d0ad-4117-a17d-02bdde6512b4
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 3a2c5164c884f2611267e22d62bc2d83bc8cfac0
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 80bb427800f57ddaa07e5e53f21b03df9e8317d3
+ms.sourcegitcommit: bfa10c54e871700de285d7f819095d51ef70d997
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51659700"
+ms.lasthandoff: 01/14/2019
+ms.locfileid: "54255526"
 ---
 # <a name="functions-on-sequences---id"></a>Funzioni su sequenze - id
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -66,7 +66,7 @@ fn:id($arg as xs:IDREF*) as element()*
 -- go  
   
 create xml schema collection SC as  
-'<schema xmlns="https://www.w3.org/2001/XMLSchema" xmlns:e="emp" targetNamespace="emp">  
+'<schema xmlns="http://www.w3.org/2001/XMLSchema" xmlns:e="emp" targetNamespace="emp">  
             <element name="employees" type="e:EmployeesType"/>  
             <complexType name="EmployeesType">  
                  <sequence>  
@@ -98,7 +98,7 @@ Go
   
  La query restituisce il valore "Dave", che indica che Dave è il responsabile di Joe.  
   
-### <a name="b-retrieving-elements-based-on-the-orderlist-idrefs-attribute-value"></a>B. Recupero di elementi basati sul valore dell'attributo IDREFS OrderList  
+### <a name="b-retrieving-elements-based-on-the-orderlist-idrefs-attribute-value"></a>b. Recupero di elementi basati sul valore dell'attributo IDREFS OrderList  
  Nell'esempio seguente, l'attributo OrderList dell'elemento <`Customer`> è un attributo di tipo IDREFS. che elenca gli ID degli ordini del cliente specifico. Per ogni ID di un ordine, è disponibile un elemento figlio <`Order`> di <`Customer`> che indica il valore dell'ordine.  
   
  L'espressione di query, `data(CustOrders:Customers/Customer[1]/@OrderList)[1]`, recupera il primo valore dall'elenco IDRES relativo al primo cliente. Questo valore viene quindi passato per il **ID ()** (funzione). La funzione trova quindi la <`Order`> elemento il cui valore dell'attributo OrderID corrispondente all'input per il **ID ()** (funzione).  
@@ -107,7 +107,7 @@ Go
 drop xml schema collection SC  
 go  
 create xml schema collection SC as  
-'<schema xmlns="https://www.w3.org/2001/XMLSchema" xmlns:Customers="Customers" targetNamespace="Customers">  
+'<schema xmlns="http://www.w3.org/2001/XMLSchema" xmlns:Customers="Customers" targetNamespace="Customers">  
             <element name="Customers" type="Customers:CustomersType"/>  
             <complexType name="CustomersType">  
                         <sequence>  

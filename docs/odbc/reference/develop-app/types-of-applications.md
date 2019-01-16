@@ -17,18 +17,18 @@ ms.assetid: d346a64e-a32c-4153-a40f-5b53c2f57ef2
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 2d835e7d541f69c6a84129d3d6c1c8128f748a23
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 50e3e733a4ddd4855da2ea7722407e5f061eee47
+ms.sourcegitcommit: bfa10c54e871700de285d7f819095d51ef70d997
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52541913"
+ms.lasthandoff: 01/14/2019
+ms.locfileid: "54255796"
 ---
 # <a name="types-of-applications"></a>Tipi di applicazioni
 Le applicazioni ODBC possono essere classificate come segue:  
   
 -   **Pure ODBC 2.**  
-     ***x* applicazione** applicazione A 32 bit che:  
+     **_x_ applicazione** applicazione A 32 bit che:  
   
     -   Chiama solo ODBC 2. *x* funzioni (inclusa la funzione ODBC 1.0 **SQLSetParam**). Ad esempio ODBC 1. *x* le applicazioni che sono state trasferite a 32 bit.  
   
@@ -37,10 +37,10 @@ Le applicazioni ODBC possono essere classificate come segue:
     -   Non è stato ricompilato con le intestazioni di ODBC 3.5.  
   
 -   **Pure ODBC 2.**  
-     ***x* dell'applicazione ricompilata** un puro di ODBC 2. *x* applicazione che è stato ricompilato utilizzando i file di intestazione ODBC 3.5, impostando ODBCVER = 0x0250.  
+     **_x_ dell'applicazione ricompilata** un puro di ODBC 2. *x* applicazione che è stato ricompilato utilizzando i file di intestazione ODBC 3.5, impostando ODBCVER = 0x0250.  
   
 -   **Pure ODBC 2.**  
-     ***x* Unicode Application** un puro di ODBC 2. *x* ricompilato l'applicazione che è conforme a Unicode e Usa il tipo di dati SQL_WCHAR.  
+     **_x_ Unicode Application** un puro di ODBC 2. *x* ricompilato l'applicazione che è conforme a Unicode e Usa il tipo di dati SQL_WCHAR.  
   
 -   **Gruppo aperta pure e ISO**-**applicazione conforme a ODBC** applicazione A 32 bit che:  
   

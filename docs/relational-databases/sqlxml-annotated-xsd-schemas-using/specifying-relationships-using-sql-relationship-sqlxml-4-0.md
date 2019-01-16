@@ -30,12 +30,12 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 55741ddbf71eaff963e25c8e087c3cff31389409
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 7578df8d31dadba739bb2de58a8568f6ba55d7e4
+ms.sourcegitcommit: bfa10c54e871700de285d7f819095d51ef70d997
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51670499"
+ms.lasthandoff: 01/14/2019
+ms.locfileid: "54256096"
 ---
 # <a name="specifying-relationships-using-sqlrelationship-sqlxml-40"></a>Definizione di relazioni tramite sql:relationship (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -53,7 +53,7 @@ ms.locfileid: "51670499"
   
  Per fornire i nomi delle tabelle e le informazioni sul join necessari, vengono specificati gli attributi seguenti sul **SQL: Relationship** annotazione. Questi attributi sono validi solo con il  **\<SQL: Relationship >** elemento:  
   
- **Nome**  
+ **Name**  
  Specifica il nome univoco della relazione,  
   
  **Parent**  
@@ -86,7 +86,7 @@ ms.locfileid: "51670499"
  Il  **\<relazione >** elemento identifica CustomerID nella tabella Sales. SalesOrderHeader come chiave esterna che fa riferimento alla chiave primaria CustomerID nella tabella Sales. Customer. Di conseguenza, gli ordini appartenenti a un cliente vengono visualizzati come elemento figlio di tale  **\<cliente >** elemento.  
   
 ```  
-<xsd:schema xmlns:xsd="https://www.w3.org/2001/XMLSchema"  
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"  
             xmlns:sql="urn:schemas-microsoft-com:mapping-schema">  
 <xsd:annotation>  
   <xsd:appinfo>  
@@ -121,7 +121,7 @@ ms.locfileid: "51670499"
  Di seguito viene fornito lo schema corretto in cui è specificata una relazione priva di nome:  
   
 ```  
-<xsd:schema xmlns:xsd="https://www.w3.org/2001/XMLSchema"  
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"  
             xmlns:sql="urn:schemas-microsoft-com:mapping-schema">  
   
   <xsd:element name="Customer" sql:relation="Sales.Customer"  type="CustomerType" />  
@@ -187,7 +187,7 @@ ms.locfileid: "51670499"
 </ROOT>  
 ```  
   
-### <a name="b-specifying-a-relationship-chain"></a>B. Definizione di una catena di relazioni  
+### <a name="b-specifying-a-relationship-chain"></a>b. Definizione di una catena di relazioni  
  Per questo esempio, si supponga di voler fare in modo che il documento XML seguente utilizzi dati ottenuti dal database di AdventureWorks:  
   
 ```  
@@ -201,12 +201,12 @@ ms.locfileid: "51670499"
   
  Per ogni ordine nella tabella Sales. SalesOrderHeader, il documento XML contiene un  **\<ordine >** elemento. E ogni  **\<ordine >** elemento contiene un elenco delle  **\<Product >** gli elementi figlio, uno per ogni prodotto richiesto nell'ordine.  
   
- Per specificare uno schema XSD che produrrà questa gerarchia, è necessario definire due relazioni: OrderOD e ODProduct. La relazione OrderOD specifica la relazione padre-figlio tra le tabelle Sales.SalesOrderHeader e Sales.SalesOrderDetail. La relazione ODProduct specifica la relazione tra le tabelle Sales.SalesOrderDetail e Production.Product.  
+ Per specificare uno schema XSD che produrrà questa gerarchia, è necessario specificare due relazioni: OrderOD e ODProduct. La relazione OrderOD specifica la relazione padre-figlio tra le tabelle Sales.SalesOrderHeader e Sales.SalesOrderDetail. La relazione ODProduct specifica la relazione tra le tabelle Sales.SalesOrderDetail e Production.Product.  
   
  Nello schema seguente, il **msdata: Relationship** annotazione nel  **\<Product >** elemento specifica due valori: OrderOD e ODProduct. L'ordine in cui sono elencati gli attributi è importante.  
   
 ```  
-<xsd:schema xmlns:xsd="https://www.w3.org/2001/XMLSchema"  
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"  
             xmlns:msdata="urn:schemas-microsoft-com:mapping-schema">  
 <xsd:annotation>  
   <xsd:appinfo>  
@@ -244,7 +244,7 @@ ms.locfileid: "51670499"
  Anziché specificare una relazione denominata, è possibile specificare una relazione anonima. In questo caso, l'intero contenuto del  **\<annotation >**...  **\</annotation >**, che descrive le due relazioni, viene visualizzato come elemento figlio del  **\<Product >**.  
   
 ```  
-<xsd:schema xmlns:xsd="https://www.w3.org/2001/XMLSchema"  
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"  
             xmlns:msdata="urn:schemas-microsoft-com:mapping-schema">  
   
   <xsd:element name="Order" msdata:relation="Sales.SalesOrderHeader"   
@@ -323,7 +323,7 @@ ms.locfileid: "51670499"
  Lo schema in questo esempio include un' \<cliente > elemento con un \<CustomerID > elemento figlio e un attributo OrderIDList di tipo IDREFS. Il \<cliente > elemento viene mappato alla tabella Sales. Customer nel database AdventureWorks. Per impostazione predefinita, l'ambito di questo mapping si applica a tutti gli elementi figlio o attributi, a meno che **Relation** viene specificata nell'elemento figlio o attributo, nel qual caso, la relazione primario-chiave/chiave esterna appropriata deve essere definito tramite la \<relazione > elemento. E l'elemento figlio o attributo, che specifica la tabella diversa utilizzando il **relazione** annotazione, è necessario specificare anche il **relazione** annotazione.  
   
 ```  
-<xsd:schema xmlns:xsd="https://www.w3.org/2001/XMLSchema"  
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"  
             xmlns:sql="urn:schemas-microsoft-com:mapping-schema">  
 <xsd:annotation>  
   <xsd:appinfo>  
@@ -392,7 +392,7 @@ ms.locfileid: "51670499"
  Il  **\<ordine >** elemento include il  **\<OrderDetail >** elemento figlio. **\<SQL: Relationship >** viene specificata nel  **\<OrderDetail >** elemento figlio, in modo che i dettagli dell'ordine che interessano un ordine appaiono come elementi figlio di tale **\<ordine >** elemento.  
   
 ```  
-<xsd:schema xmlns:xsd="https://www.w3.org/2001/XMLSchema"  
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"  
             xmlns:sql="urn:schemas-microsoft-com:mapping-schema">  
 <xsd:annotation>  
   <xsd:appinfo>  
@@ -496,7 +496,7 @@ Emp2(SalesPersonID, FirstName, LastName, ReportsTo)
  La vista XML seguente contiene le  **\<Emp1 >** e  **\<Emp2 >** elementi mapping di tabelle alla Sales.Emp1 e Sales.Emp2:  
   
 ```  
-<xsd:schema xmlns:xsd="https://www.w3.org/2001/XMLSchema"  
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"  
             xmlns:sql="urn:schemas-microsoft-com:mapping-schema">  
 <xsd:annotation>  
   <xsd:appinfo>  

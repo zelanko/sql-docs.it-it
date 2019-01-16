@@ -1,7 +1,7 @@
 ---
 title: In SQLXML 4.0 di schemi XSD con annotazioni | Microsoft Docs
 ms.custom: ''
-ms.date: 03/16/2017
+ms.date: 01/11/2019"
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -19,18 +19,18 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 73695ebfc9d2322d57fc3b03a6fe576f90e54554
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 961f4af715f8639a67ff6a6ea03cf63d52e1c086
+ms.sourcegitcommit: bfa10c54e871700de285d7f819095d51ef70d997
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51662310"
+ms.lasthandoff: 01/14/2019
+ms.locfileid: "54255636"
 ---
 # <a name="annotated-xsd-schemas-in-sqlxml-40"></a>Schemi XSD con annotazioni in SQLXML 4.0
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   In questa sezione vengono fornite informazioni sull'utilizzo degli schemi XSD con annotazioni in SQLXML 4.0. Nelle versioni precedenti di SQLXML, una funzionalità simile veniva fornita con gli schemi XDR (XML-Data Reduced). In questa sezione vengono inoltre fornite le informazioni su XDR per le applicazioni legacy.  
   
-## <a name="in-this-section"></a>Argomenti della sezione  
+## <a name="in-this-section"></a>In questa sezione  
  [Introduzione agli schemi XSD con annotazioni &#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml/annotated-xsd-schemas/introduction-to-annotated-xsd-schemas-sqlxml-4-0.md)  
  Viene fornita una panoramica degli schemi XSD con annotazioni in SQLXML 4.0.  
   
@@ -49,14 +49,14 @@ ms.locfileid: "51662310"
 ## <a name="other-resources"></a>Altre risorse  
  Ulteriori informazioni sul linguaggio di definizione di XML Schema (XSD), sul linguaggio XML Path (XPath) e su Extensible Stylesheet Language Transformations (XSLT) sono disponibili nei siti Web seguenti:  
   
--   XML Schema Part 0: Primer, W3C Recommendation (https://www.w3.org/TR/xmlschema-0/)  
+-   XML Schema Part 0: Nozioni di base, W3C Recommendation (http://www.w3.org/TR/xmlschema-0/)  
   
--   XML Schema Part 1: Strutture, W3C (raccomandazione https://www.w3.org/TR/xmlschema-1/)  
+-   Nella Parte 1 dello schema XML: Strutture, W3C Recommendation (http://www.w3.org/TR/xmlschema-1/)  
   
--   XML Schema Part 2: Datatypes W3C Recommendation (https://www.w3.org/TR/xmlschema-2/)  
+-   XML Schema Part 2: Datatypes W3C Recommendation (http://www.w3.org/TR/xmlschema-2/)  
   
--   XML Path Language (XPath) (https://www.w3.org/TR/xpath)  
+-   XML Path Language (XPath) (http://www.w3.org/TR/xpath)  
   
--   XSL Transformations (XSLT) (https://www.w3.org/TR/xslt)  
+-   XSL Transformations (XSLT) (http://www.w3.org/TR/xslt)  
   
   

@@ -23,12 +23,12 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 55b81e7fff73442660ae98f4d6e6fcbfca0906df
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: acac24b36f5eefcc1490e016d43c4ef014fb813d
+ms.sourcegitcommit: bfa10c54e871700de285d7f819095d51ef70d997
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51675141"
+ms.lasthandoff: 01/14/2019
+ms.locfileid: "54256126"
 ---
 # <a name="specifying-depth-in-recursive-relationships-by-using-sqlmax-depth"></a>Specifica del livello di nidificazione nelle relazioni ricorsive mediante sql:max-depth
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -65,7 +65,7 @@ Emp (EmployeeID, FirstName, LastName, ReportsTo)
  Per produrre questo risultato, è possibile utilizzare lo schema XSD seguente e specificare una query XPath in tale schema. Lo schema descrive un'  **\<Emp >** elemento di tipo EmployeeType, costituito da un  **\<Emp >** elemento figlio dello stesso tipo, EmployeeType. Si tratta di una relazione ricorsiva (l'elemento e il rispettivo predecessore sono dello stesso tipo). Inoltre, lo schema Usa un'  **\<SQL: Relationship >** per descrivere la relazione padre-figlio tra il supervisore e supervisionato. Si noti che in questo  **\<SQL: Relationship >**, Emp rappresenta sia l'elemento padre che la tabella figlio.  
   
 ```  
-<xsd:schema xmlns:xsd="https://www.w3.org/2001/XMLSchema"  
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"  
             xmlns:dt="urn:schemas-microsoft-com:datatypes"  
             xmlns:sql="urn:schemas-microsoft-com:mapping-schema">  
   <xsd:annotation>  
@@ -149,7 +149,7 @@ Emp (EmployeeID, FirstName, LastName, ReportsTo)
   
 5.  Creare e utilizzare lo script di test SQLXML 4.0 (Sqlxml4test.vbs) per eseguire il modello. Per altre informazioni, vedere [utilizzo di ADO per eseguire query di SQLXML 4.0](../../relational-databases/sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md).  
   
- Risultato:  
+ Questo è il risultato:  
   
 ```  
 <?xml version="1.0" encoding="utf-8" ?>   
@@ -191,7 +191,7 @@ Emp (EmployeeID, FirstName, LastName, ReportsTo)
  Questo è lo schema corretto:  
   
 ```  
-<xsd:schema xmlns:xsd="https://www.w3.org/2001/XMLSchema"  
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"  
             xmlns:dt="urn:schemas-microsoft-com:datatypes"  
             xmlns:sql="urn:schemas-microsoft-com:mapping-schema">  
   <xsd:annotation>  
@@ -232,7 +232,7 @@ Emp (EmployeeID, FirstName, LastName, ReportsTo)
 ## <a name="sqlmax-depth-annotation"></a>Annotazione sql:max-depth  
  In un schema costituito da relazioni ricorsive il livello di nidificazione della ricorsione deve essere specificata in modo esplicito. Questa operazione è necessaria per produrre correttamente la query FOR XML EXPLICIT corrispondente che restituisce i risultati richiesti.  
   
- Usare la **SQL: max-depth** annotazione nello schema per specificare la profondità di ricorsione in una relazione ricorsiva descritta nello schema. Il valore della **SQL: max-depth** annotazione è un numero intero positivo (da 1 a 50) che indica il numero di ricorsioni: un valore pari a 1 arresta la ricorsione in corrispondenza dell'elemento per cui il **SQL: max-profondità** annotazione è stato omesso. un valore pari a 2 Arresta la ricorsione al livello successivo dall'elemento in corrispondenza del quale **SQL: max-depth** è specificato; e così via.  
+ Usare la **SQL: max-depth** annotazione nello schema per specificare la profondità di ricorsione in una relazione ricorsiva descritta nello schema. Il valore della **SQL: max-depth** annotazione è un numero intero positivo (da 1 a 50) che indica il numero di ricorsioni:  Un valore pari a 1 arresta la ricorsione in corrispondenza dell'elemento per cui il **SQL: max-depth** annotazione è specificata; un valore pari a 2 Arresta la ricorsione al livello successivo dall'elemento in corrispondenza del quale **SQL: max-depth** è specificato ; E così via.  
   
 > [!NOTE]  
 >  Nell'implementazione sottostante una query XPath specificata rispetto a un schema di mapping viene convertita in una query SELECT... FOR XML EXPLICIT. Questa query richiede che venga specificato un livello di nidificazione limitato della ricorsione. Maggiore è il valore specificato per **SQL: max-depth**, maggiore sarà la query FOR XML EXPLICIT che viene generato. con un probabile rallentamento del tempo di recupero.  
@@ -249,7 +249,7 @@ Emp (EmployeeID, FirstName, LastName, ReportsTo)
 #### <a name="example-b"></a>Esempio B  
   
 ```  
-<xsd:schema xmlns:xsd="https://www.w3.org/2001/XMLSchema"  
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"  
             xmlns:dt="urn:schemas-microsoft-com:datatypes"  
             xmlns:sql="urn:schemas-microsoft-com:mapping-schema">  
   <xsd:annotation>  
@@ -291,7 +291,7 @@ Emp (EmployeeID, FirstName, LastName, ReportsTo)
 #### <a name="example-c"></a>Esempio C  
   
 ```  
-<xsd:schema xmlns:xsd="https://www.w3.org/2001/XMLSchema"   
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"   
 xmlns:sql="urn:schemas-microsoft-com:mapping-schema">  
   <xsd:annotation>  
     <xsd:appinfo>  
@@ -339,7 +339,7 @@ xmlns:sql="urn:schemas-microsoft-com:mapping-schema">
 #### <a name="example-d"></a>Esempio D  
   
 ```  
-<xsd:schema xmlns:xsd="https://www.w3.org/2001/XMLSchema"  
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"  
             xmlns:dt="urn:schemas-microsoft-com:datatypes"  
             xmlns:msdata="urn:schemas-microsoft-com:mapping-schema">  
   <xsd:complexType name="CustomerBaseType">   

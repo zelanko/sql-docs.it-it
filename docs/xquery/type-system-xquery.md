@@ -24,21 +24,21 @@ ms.assetid: 22d6f861-d058-47ee-b550-cbe9092dcb12
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: e8b4680532843b9f60b6cdab3c0c528aab719dbf
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 34680d0af0e8c69bca15e4e93cddbe6b2a3386cb
+ms.sourcegitcommit: bfa10c54e871700de285d7f819095d51ef70d997
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51668663"
+ms.lasthandoff: 01/14/2019
+ms.locfileid: "54254786"
 ---
 # <a name="type-system-xquery"></a>Sistema di tipi (XQuery)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   XQuery è un linguaggio fortemente tipizzato per i tipi di schema e tipizzato in modo debole per i dati non tipizzati. I tipi predefiniti di XQuery sono:  
   
--   Tipi predefiniti di XML schema nel **https://www.w3.org/2001/XMLSchema** dello spazio dei nomi.  
+-   Tipi predefiniti di XML schema nel **http://www.w3.org/2001/XMLSchema** dello spazio dei nomi.  
   
--   Tipi definiti nel **https://www.w3.org/2004/07/xpath-datatypes** dello spazio dei nomi.  
+-   Tipi definiti nel **http://www.w3.org/2004/07/xpath-datatypes** dello spazio dei nomi.  
   
  Questo argomento descrive inoltre quanto segue:  
   
@@ -65,7 +65,7 @@ WHERE ProductModelID=7
  Queste informazioni relative alla tipizzazione vengono fornite dalla raccolta di XML Schema associata alla colonna.  
   
 ## <a name="types-defined-in-xpath-data-types-namespace"></a>Tipi definiti nello spazio dei nomi dei tipi di dati XPath  
- I tipi definiti nel **https://www.w3.org/2004/07/xpath-datatypes** dello spazio dei nomi hanno un prefisso predefinito **xdt**. Per questi tipi sono valide le osservazioni seguenti:  
+ I tipi definiti nel **http://www.w3.org/2004/07/xpath-datatypes** dello spazio dei nomi hanno un prefisso predefinito **xdt**. Per questi tipi sono valide le osservazioni seguenti:  
   
 -   Non è possibile utilizzarli per la creazione di una raccolta di XML Schema. Questi tipi vengono utilizzati nel sistema di tipi XQuery e vengono usati per [XQuery e tipizzazione statica](../xquery/xquery-and-static-typing.md). È possibile eseguire il cast ai tipi atomici, ad esempio, **xdt: untypedAtomic**, nella **xdt** dello spazio dei nomi.  
   
@@ -110,7 +110,7 @@ SELECT @x.query( '/a[1] instance of element()')
   
 ```  
 CREATE XML SCHEMA COLLECTION SC AS N'  
-<schema xmlns="https://www.w3.org/2001/XMLSchema">  
+<schema xmlns="http://www.w3.org/2001/XMLSchema">  
       <element name="root" type="integer"/>  
 </schema>'  
 GO  

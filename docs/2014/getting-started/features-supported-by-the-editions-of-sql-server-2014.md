@@ -17,17 +17,21 @@ ms.assetid: 5da61ff5-12b9-48e6-b3c8-0dacca1751c4
 author: mightypen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: bcf2d5924e160f38c9b00b564a8ae94b6f8705c3
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 23ba1fdda2ce951834c221cdd58d39a034a5b3ff
+ms.sourcegitcommit: 96032813f6bf1cba680b5e46d82ae1f0f2da3d11
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53358003"
+ms.lasthandoff: 01/15/2019
+ms.locfileid: "54300588"
 ---
 # <a name="features-supported-by-the-editions-of-sql-server-2014"></a>Funzionalità supportate dalle edizioni di SQL Server 2014
-  In questo argomento vengono forniti i dettagli delle funzionalità supportate dalle diverse edizioni di [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)].  
-  
-> **Nota:** [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] è disponibile in versione di valutazione per un periodo di valutazione di 180 giorni. Per altre informazioni, vedere la [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [sito Web Software di prova](https://go.microsoft.com/fwlink/?LinkId=190955).  
+
+  > [!div class="nextstepaction"]
+  > [Condividi i tuoi commenti su SQL Docs sommario.](https://aka.ms/sqldocsurvey)
+
+  In questo argomento vengono forniti i dettagli delle funzionalità supportate dalle diverse edizioni di [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]. 
+
+ > **Nota:** [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] è disponibile in versione di valutazione per un periodo di valutazione di 180 giorni. Per altre informazioni, vedere la [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [sito Web Software di prova](https://go.microsoft.com/fwlink/?LinkId=190955).  
 > 
 > **NOTA:** Per le funzionalità supportate dalle edizioni Evaluation e Developer, vedere il set di funzionalità di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Enterprise Edition.  
   
@@ -173,7 +177,7 @@ ms.locfileid: "53358003"
 |Riesecuzione distribuita - Strumento di amministrazione|Yes|Yes|Yes|Yes|Yes|Yes||  
 |Distributed Replay - Client|Yes|No|Yes|Yes||||  
 |Distributed Replay - Controller|Sì (Enterprise supporta fino a 16 client, Developer supporta solo 1 client)|No|Sì (supporto di 1 solo client)|Sì (supporto di 1 solo client)||||  
-|SQL Profiler|Yes|Yes|Yes|Non<sup>2</sup>|Non<sup>2</sup>|Non<sup>2</sup>|Non<sup>2</sup>|  
+|SQL Profiler|Yes|Yes|Yes|No<sup>2</sup>|No<sup>2</sup>|No<sup>2</sup>|No<sup>2</sup>|  
 |[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Agent|Yes|Yes|Yes|Yes||||  
 |Management Pack di Microsoft System Center Operations Manager|Yes|Yes|Yes|Yes||||  
 |Ottimizzazione guidata motore di database (DTA)|Yes|Yes|Sì <sup>3</sup>|Sì <sup>3</sup>||||  
@@ -314,7 +318,7 @@ ms.locfileid: "53358003"
   
 |Nome funzionalità|Enterprise|Business Intelligence|Standard|Web|Express with Advanced Services|Express with Tools|Express|  
 |------------------|----------------|---------------------------|--------------|---------|------------------------------------|------------------------|-------------|  
-|Misure semiadditive|Yes|Yes|Non<sup>1</sup>|||||  
+|Misure semiadditive|Yes|Yes|No<sup>1</sup>|||||  
 |Gerarchie|Yes|Yes|Yes|||||  
 |KPI|Yes|Yes|Yes|||||  
 |prospettive|Yes|Yes||||||  

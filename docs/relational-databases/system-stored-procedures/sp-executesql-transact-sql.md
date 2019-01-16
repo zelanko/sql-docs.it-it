@@ -20,15 +20,18 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: b4561ff563bf04322c290571cf9df3a94f8faf5d
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 2018d96233a1dea6f4b2d7cfa612f19df878610f
+ms.sourcegitcommit: 96032813f6bf1cba680b5e46d82ae1f0f2da3d11
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51668310"
+ms.lasthandoff: 01/15/2019
+ms.locfileid: "54300028"
 ---
 # <a name="spexecutesql-transact-sql"></a>sp_executesql (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+
+  > [!div class="nextstepaction"]
+  > [Condividi i tuoi commenti su SQL Docs sommario.](https://aka.ms/sqldocsurvey)
 
   Esegue un'istruzione o un batch [!INCLUDE[tsql](../../includes/tsql-md.md)] che può essere riutilizzato più volte o che è stato compilato in modo dinamico. L'istruzione o il batch [!INCLUDE[tsql](../../includes/tsql-md.md)] può contenere parametri incorporati.  
   
@@ -50,7 +53,7 @@ sp_executesql [ @stmt = ] statement
 ```  
   
 ## <a name="arguments"></a>Argomenti  
- [ \@stmt =] *istruzione*  
+ [ \@stmt= ] *statement*  
  È una stringa Unicode che contiene un [!INCLUDE[tsql](../../includes/tsql-md.md)] istruzione o il batch. \@stmt deve essere una costante Unicode o una variabile Unicode. Non sono consentite le espressioni Unicode più complesse, ad esempio per la concatenazione di due stringhe tramite l'operatore +. Le costanti di tipo carattere non sono consentite. Se viene specificata una costante Unicode, devono essere preceduto da un **N**. Ad esempio, la costante Unicode **n' sp_who'** valido, ma la costante carattere **'sp_who'** non. Le dimensioni massime della stringa dipendono dalla memoria disponibile nel server di database. Nei server a 64 bit, le dimensioni della stringa sono limitate a 2 GB, la dimensione massima del **nvarchar (max)**.  
   
 > [!NOTE]  
@@ -58,7 +61,7 @@ sp_executesql [ @stmt = ] statement
   
  Ogni parametro incluso in \@stmt deve avere una voce corrispondente in entrambe le \@params elenco di definizioni di parametro e il parametro di elenco di valori.  
   
- [ \@params =] N'\@*parameter_name * * data_type* [,... *n* ] '  
+ [ \@params= ] N'\@*parameter_name**data_type* [ ,... *n* ] '  
  Stringa che contiene le definizioni di tutti i parametri che sono stati incorporati in \@stmt. La stringa deve essere una costante o una variabile Unicode. Ogni definizione di parametro è costituita da un nome del parametro e da un tipo di dati. *n* è un segnaposto che indica definizioni di parametro aggiuntive. Ogni parametro specificato in \@stmtmust essere definite in \@params. Se il [!INCLUDE[tsql](../../includes/tsql-md.md)] istruzione o il batch nel \@stmt non contiene parametri, \@params non è obbligatorio. Il valore predefinito per questo parametro è NULL.  
   
  [ \@param1 =] '*value1*'  
@@ -151,7 +154,7 @@ EXECUTE sp_executesql
           @level = 109;  
 ```  
   
-### <a name="b-executing-a-dynamically-built-string"></a>B. Esecuzione di una stringa compilata in modo dinamico  
+### <a name="b-executing-a-dynamically-built-string"></a>b. Esecuzione di una stringa compilata in modo dinamico  
  Nell'esempio seguente viene illustrato l'utilizzo di `sp_executesql` per l'esecuzione di una stringa compilata in modo dinamico. La stored procedure di esempio consente di inserire dati in un set di tabelle utilizzate per il partizionamento dei dati relativi alle vendite annuali. È disponibile una sola tabella per ogni mese dell'anno nel formato seguente:  
   
 ```  

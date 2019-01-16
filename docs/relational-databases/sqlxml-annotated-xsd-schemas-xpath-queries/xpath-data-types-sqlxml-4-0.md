@@ -29,12 +29,12 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 90c611eff42a3cd31894e27b1a7737ca77e91bea
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 9ebaeb1a0fce11d984f858247763c4222d4a8b27
+ms.sourcegitcommit: bfa10c54e871700de285d7f819095d51ef70d997
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51670407"
+ms.lasthandoff: 01/14/2019
+ms.locfileid: "54256926"
 ---
 # <a name="xpath-data-types-sqlxml-40"></a>Tipi di dati XPath (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -43,7 +43,7 @@ ms.locfileid: "51670407"
  XPath utilizza tre tipi di dati: **stringa**, **numero**, e **booleano**. Il **numero** tipo di dati è sempre una valore IEEE 754 a precisione doppia. Il [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **float (53)** tipo di dati è il più vicino a XPath **numero**. Tuttavia **float (53)** è non esattamente IEEE 754. Ad esempio, non viene utilizzato né un valore diverso da un numero (NaN, Not-a-Number) né un valore infinito. Tenta di convertire una stringa in un valore numerico **numero** e tenta di dividere per zero restituiscono un errore.  
   
 ## <a name="xpath-conversions"></a>Conversioni XPath  
- Quando si utilizza una query XPath, ad esempio `OrderDetail[@UnitPrice > "10.0"]`, le conversioni dei tipi di dati implicite ed esplicite possono modificare impercettibilmente il significato della query. È pertanto importante comprendere le modalità di implementazione dei tipi di dati XPath. La specifica del linguaggio XPath, XML Path Language (XPath) version 1.0 W3C Proposed Recommendation 8 October 1999, visitare il sito Web W3C all'indirizzo https://www.w3.org/TR/1999/PR-xpath-19991008.html.  
+ Quando si utilizza una query XPath, ad esempio `OrderDetail[@UnitPrice > "10.0"]`, le conversioni dei tipi di dati implicite ed esplicite possono modificare impercettibilmente il significato della query. È pertanto importante comprendere le modalità di implementazione dei tipi di dati XPath. La specifica del linguaggio XPath, XML Path Language (XPath) version 1.0 W3C Proposed Recommendation 8 October 1999, visitare il sito Web W3C all'indirizzo http://www.w3.org/TR/1999/PR-xpath-19991008.html.  
   
  Gli operatori XPath sono suddivisi in quattro categorie:  
   
@@ -66,7 +66,7 @@ ms.locfileid: "51670407"
 |Nessuno è un set di nodi.|Convertire entrambi gli operandi al **numero** e quindi eseguire il confronto.|Convertire entrambi gli operandi in un tipo comune e quindi eseguire il confronto. Convertire **booleana** se si verifica una **booleano**, **numero** se si verifica una **numero**; in caso contrario, convertire in **stringa**.|  
   
 > [!NOTE]  
->  Poiché gli operatori relazionali XPath convertono sempre gli operandi in **numero**, **stringa** confronti non sono possibili. Per includere confronti relativi alla data, SQL Server 2000 è disponibile una variazione alla specifica XPath: quando un operatore relazionale Confronta un **stringa** a un **stringa**, un set di nodi un **stringa**, un con valori di stringa di set di nodi in un stringa con valori di set di nodi, o un **stringa** confronto (non un **numero** confronto) viene eseguita.  
+>  Poiché gli operatori relazionali XPath convertono sempre gli operandi in **numero**, **stringa** confronti non sono possibili. Per includere confronti relativi alla data, SQL Server 2000 è disponibile una variazione alla specifica XPath: Quando un operatore relazionale Confronta un **stringa** a un **stringa**, un set di nodi un **stringa**, un con valori di stringa di set di nodi in un stringa con valori di set di nodi, o un  **stringa** confronto (non un **numero** confronto) viene eseguita.  
   
 ## <a name="node-set-conversions"></a>Conversioni dei set di nodi  
  Le conversioni dei set di nodi non sono sempre intuitive. Un set di nodi viene convertito in un **stringa** prendendo il valore stringa del solo il primo nodo nel set. Un set di nodi viene convertito in **numero** tramite la conversione a **stringa**e quindi riconvertendo **stringa** al **numero**. Un set di nodi viene convertito in **booleana** eseguendo il test di esistenza.  
@@ -74,7 +74,7 @@ ms.locfileid: "51670407"
 > [!NOTE]  
 >  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] non esegue la selezione della posizione nei set di nodi: la query XPath `Customer[3]`, ad esempio, indica il terzo cliente. Questo tipo di selezione della posizione non è supportato in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Di conseguenza, il nodo-impostare-a-**stringa** o nodo-set-a-**numero** conversioni come descritto dalla specifica XPath non sono implementate. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utilizza le semantiche "any" dove la specifica XPath specifica la semantica "first". Ad esempio, basato sulla specifica W3C XPath, la query XPath `Order[OrderDetail/@UnitPrice > 10.0]` seleziona gli ordini con il primo **OrderDetail** con un **UnitPrice** maggiore di 10.0. Nelle [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], la query XPath seguente seleziona gli ordini con qualsiasi **OrderDetail** con un **UnitPrice** maggiore di 10.0.  
   
- La conversione a **booleana** genera un esistenza test; pertanto, la query XPath `Products[@Discontinued=true()]` è equivalente all'espressione SQL "Products. Discontinued non is null", non all'espressione SQL "Products. Discontinued = 1". Per rendere la query è equivalente all'espressione SQL successiva, convertire innanzitutto il set di nodi in un non -**booleana** digitare, ad esempio **numero**. Ad esempio, `Products[number(@Discontinued) = true()]`.  
+ La conversione a **booleana** genera un esistenza test; pertanto, la query XPath `Products[@Discontinued=true()]` è equivalente all'espressione SQL "Products. Discontinued non is null", non all'espressione SQL "Products. Discontinued = 1". Per rendere la query è equivalente all'espressione SQL successiva, convertire innanzitutto il set di nodi in un non -**booleana** digitare, ad esempio **numero**. Ad esempio `Products[number(@Discontinued) = true()]`.  
   
  Poiché la maggior parte degli operatori viene definita come TRUE se gli operatori sono TRUE per tutti i nodi nel set di nodi o per uno di essi, queste operazioni restituiscono sempre FALSE se il set di nodi è vuoto. In questo modo, se A è vuoto, sia `A = B` sia `A != B` sono FALSE e `not(A=B)` e `not(A!=B)` sono TRUE.  
   
@@ -150,7 +150,7 @@ CONVERT(float(CONVERT(money, m)) + CONVERT(float(53), 3) = CONVERT(float(53), 3)
   
  Il prefisso "E-" viene aggiunto alla stringa, e il risultato viene quindi confrontato con `N'E-1'`.  
   
-### <a name="b-perform-several-data-type-conversions-in-an-xpath-query"></a>B. Eseguire diverse conversioni dei tipi di dati in una query XPath  
+### <a name="b-perform-several-data-type-conversions-in-an-xpath-query"></a>b. Eseguire diverse conversioni dei tipi di dati in una query XPath  
  Considerare la seguente query XPath specificata su uno schema XSD con annotazioni: `OrderDetail[@UnitPrice * @OrderQty > 98]`  
   
  Questa query XPath restituisce tutti i  **\<OrderDetail >** gli elementi che soddisfano il predicato `@UnitPrice * @OrderQty > 98`. Se il **UnitPrice** annotato con un **fixed14.4** tipo di dati nello schema con annotazione, questo predicato è equivalente all'espressione SQL:  

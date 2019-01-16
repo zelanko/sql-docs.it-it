@@ -11,16 +11,20 @@ ms.topic: conceptual
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: a4f8861d8d7104b536abbf14a7629218c46e577e
-ms.sourcegitcommit: dd794633466b1da8ead9889f5e633bdf4b3389cd
+ms.openlocfilehash: d7e9cd2130487a0ac50d6aa55a8a2e0f9cf9e80c
+ms.sourcegitcommit: 96032813f6bf1cba680b5e46d82ae1f0f2da3d11
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54143061"
+ms.lasthandoff: 01/15/2019
+ms.locfileid: "54298718"
 ---
 # <a name="download-and-install-azure-data-studio"></a>Scaricare e installare Data Studio di Azure
 
+  > [!div class="nextstepaction"]
+  > [Condividi i tuoi commenti su SQL Docs sommario.](https://aka.ms/sqldocsurvey)
+
 [!INCLUDE[name-sos](../includes/name-sos.md)] è supportato in Windows, macOS e Linux.
+
 
 Scaricare e installare la versione più recente, il *gennaio Release*:
 
@@ -157,7 +161,7 @@ Se[!INCLUDE[name-sos-short](../includes/name-sos-short.md)] è stato installato 
 ## <a name="recommended-system-requirements"></a>I requisiti di sistema consigliati
 Per un'esperienza ottimale, usare i requisiti di sistema consigliati.
 
-|             | Core CPU | Memoria/memoria RAM |
+|             | Core CPU | Memory/RAM |
 |:-----------:|:---------:|:----------:|
 | Consigliato |     4     |      8     |
 |   Minimo   |     2     |      4     |
@@ -194,7 +198,7 @@ Se si desidera spostare che le impostazioni personalizzate, tasti di scelta rapi
 
 3. Copiare tutti i file in questa cartella e salvarlo in un modo facile trovare percorso nell'unità locale, come la cartella documenti.
 
-   ![Copia-impostazioni](./media/download/copy-settings.png)
+   ![copy-settings](./media/download/copy-settings.png)
 
 4. Nella versione nuova di Azure Data Studio, seguire i passaggi 1 e 2, quindi per passaggio 3 incollare il contenuto che è stato salvato nella cartella. È inoltre possibile copiare manualmente tramite le impostazioni, i tasti di scelta rapida o frammenti di codice nelle rispettive posizioni.
 

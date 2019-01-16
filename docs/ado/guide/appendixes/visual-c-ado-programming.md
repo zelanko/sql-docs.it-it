@@ -16,12 +16,12 @@ ms.assetid: 11233b96-e05c-4221-9aed-5f20944b0f1c
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: e1b34c2b88c8e1906438f706143fcf6ec966026d
-ms.sourcegitcommit: fa2f85b6deeceadc0f32aa7f5f4e2b6e4d99541c
+ms.openlocfilehash: 232b7c739e274ba9252c14dd28e739934cbd42e6
+ms.sourcegitcommit: bfa10c54e871700de285d7f819095d51ef70d997
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/03/2019
-ms.locfileid: "53997593"
+ms.lasthandoff: 01/14/2019
+ms.locfileid: "54257046"
 ---
 # <a name="visual-c-ado-programming"></a>Programmazione ADO in Visual C++
 Il riferimento all'API ADO viene descritta la funzionalità delle ADO application programming interface (API) usando una sintassi simile a Microsoft Visual Basic. Anche se i destinatari sono tutti gli utenti, programmatori ADO utilizzano svariati linguaggi come Visual Basic, Visual C++ (con e senza il **#import** (direttiva)) e Visual J++ (con il pacchetto di classe ADO/WFC).  
@@ -74,6 +74,7 @@ variable = objectPtr->GetProperty;  // get property value
  Ad esempio, il **comandi** oggetto **ActiveConnection** proprietà è dichiarata con una sintassi alternativa per **Ottieni**_ActiveConnection_e **PutRef**_ActiveConnection_. Il **PutRef**-sintassi è un'ottima scelta perché in pratica, è in genere consigliabile inserire un elemento aperto **connessione** oggetto (vale a dire, una **connessione** puntatore all'oggetto) in questo proprietà. D'altra parte, il **Recordset** oggetto presenta **ottenere**-, **Put**-, e **PutRef**_ActiveConnection_operazioni, ma nessuna sintassi alternativa.  
   
 ## <a name="collections-the-getitem-method-and-the-item-property"></a>Raccolte, il metodo GetItem e la proprietà dell'elemento  
+
  ADO definisce diverse raccolte, che include **i campi**, **parametri**, **proprietà**, e **errori**. In Visual C++, il **GetItem (_indice_)** metodo restituisce un membro della raccolta. *Indice* è un **Variant**, il cui valore è un indice numerico del membro della raccolta o una stringa contenente il nome del membro.  
   
  Il **declspec**  direttiva del compilatore dichiara il **articoli** della proprietà come una sintassi alternativa per ogni raccolta fondamentale **GetItem ()** (metodo). La sintassi alternativa Usa le parentesi quadre e ha un aspetto simile a un riferimento della matrice. In generale, le due forme di aspetto simile al seguente:  

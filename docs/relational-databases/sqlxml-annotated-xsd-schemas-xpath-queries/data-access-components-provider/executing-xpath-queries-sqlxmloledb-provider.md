@@ -18,12 +18,12 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 814d4efd49c5a579551a5cec39f5866018d50871
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: aada8746e4953de11d989831c7ed28fbb48c415f
+ms.sourcegitcommit: bfa10c54e871700de285d7f819095d51ef70d997
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51675240"
+ms.lasthandoff: 01/14/2019
+ms.locfileid: "54256146"
 ---
 # <a name="executing-xpath-queries-sqlxmloledb-provider"></a>Esecuzione di query XPath (provider SQLXMLOLEDB)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -31,14 +31,14 @@ ms.locfileid: "51675240"
   
 -   **ClientSideXML**  
   
--   **Percorso di base**  
+-   **Base Path**  
   
 -   **Schema di mapping**  
   
  In questa applicazione ADO di esempio viene specificata una query XPath (radice) su uno schema di mapping XSD (MySchema.xml). Lo schema include un  **\<contatti >** elemento con **ContactID**, **FirstName**, e **LastName** attributi. Nello schema viene eseguito il mapping predefinito, ovvero un nome di elemento viene mappato alla tabella con lo stesso nome e gli attributi di tipo semplice vengono mappati alle colonne con gli stessi nomi.  
   
 ```  
-<xsd:schema xmlns:xsd='https://www.w3.org/2001/XMLSchema'  
+<xsd:schema xmlns:xsd='http://www.w3.org/2001/XMLSchema'  
    xmlns:sql='urn:schemas-microsoft-com:mapping-schema'>  
  <xsd:element name= 'root' sql:is-constant='1'>   
     <xsd:complexType>  

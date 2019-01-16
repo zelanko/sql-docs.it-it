@@ -18,14 +18,18 @@ ms.assetid: 6a164349-dfcf-4995-80bc-d4e7aee52a83
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: b0f1add0f2d249922f00fc1b16d5da12bb903faf
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 6fb2354720b334d69f7d5e05977c82c3807fd109
+ms.sourcegitcommit: 96032813f6bf1cba680b5e46d82ae1f0f2da3d11
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52524993"
+ms.lasthandoff: 01/15/2019
+ms.locfileid: "54300078"
 ---
 # <a name="map-query-parameters-to-variables-in-an-execute-sql-task"></a>Mapping di parametri di query a variabili in un'attività Esegui SQL
+
+  > [!div class="nextstepaction"]
+  > [Condividi i tuoi commenti su SQL Docs sommario.](https://aka.ms/sqldocsurvey)
+
   In questo argomento viene descritto come utilizzare un'istruzione SQL con parametri nell'attività Esegui SQL e come creare mapping tra variabili e parametri dell'istruzione SQL.  
   
  Per sapere di più sull'attività Esegui SQL, sugli indicatori di parametro e sui nomi dei parametri usati con i diversi tipi di connessione, vedere [Attività Esegui SQL](control-flow/execute-sql-task.md) e [Parametri e codici restituiti nell'attività Esegui SQL](../../2014/integration-services/parameters-and-return-codes-in-the-execute-sql-task.md).  

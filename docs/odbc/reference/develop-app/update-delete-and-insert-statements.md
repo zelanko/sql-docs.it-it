@@ -17,31 +17,31 @@ ms.assetid: 5004ea72-4c49-4064-9752-f7032ba7f133
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 92fb7b0e9722c52c7f1e9fc071d434f531b2fc46
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 00732de7eca32dc8b2984fdda14163c77c66ad43
+ms.sourcegitcommit: bfa10c54e871700de285d7f819095d51ef70d997
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47721909"
+ms.lasthandoff: 01/14/2019
+ms.locfileid: "54256226"
 ---
 # <a name="update-delete-and-insert-statements"></a>Istruzioni UPDATE, DELETE e INSERT
 Applicazioni basate su SQL apportano modifiche alle tabelle mediante l'esecuzione di **UPDATE**, **eliminare**, e **Inserisci** istruzioni. Queste istruzioni fanno parte del livello di conformità grammatica SQL minima e devono essere supportate da tutti i driver e origini dati.  
   
  La sintassi di tali istruzioni è:  
   
- **UPDATE***-nome della tabella*   
+ **UPDATE** _-nome della tabella_  
   
- **IMPOSTARE** *colonna identificatore* **=** {*espressione* &#124; **NULL**}  
+ **SET** _column-identifier_ **=** {*expression* &#124; **NULL**}  
   
- [**,** *colonna identificatore* **=** {*espressione* &#124; **NULL**}]...  
+ [**,** _column-identifier_ **=** {*expression* &#124; **NULL**}]...  
   
- [**In cui** *condizione di ricerca*]  
+ [**In cui** _condizione di ricerca_]  
   
- **DELETE FROM** *nome tabella*[**in cui** *condizioni di ricerca*]  
+ **DELETE FROM** _nome tabella_[**in cui** _condizioni di ricerca_]  
   
- **INSERT INTO** *nome tabella*[**(* * *-identificatore della colonna* [* *,** *colonna identificatore*]... **)**]  
+ **INSERT INTO** _table-name_[**(** _column-identifier_ [**,** _column-identifier_]...**)**]  
   
- {*query-specification* &#124;  **valori (* * *-valore di inserimento* [* *,** *insert-value*]... **)**}  
+ {*query-specification* &#124; **VALUES (** _insert-value_ [**,** _insert-value_]...**)**}  
   
  Si noti che il *query-specification* elemento è valido solo nelle grammatiche di Core e SQL estesa e che le *expression* e *condizione di ricerca* elementi diventano più complesse nelle grammatiche di Core e SQL estesa.  
   

@@ -19,12 +19,12 @@ ms.assetid: 568e9119-b9b0-4284-9cef-3878c691de5f
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 24e9f4aa4cf1ab8694947411f5565250c6544d92
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: f7b50d9cf05f1242ae853f7aa24e7e681bdc245f
+ms.sourcegitcommit: bfa10c54e871700de285d7f819095d51ef70d997
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51659110"
+ms.lasthandoff: 01/14/2019
+ms.locfileid: "54256236"
 ---
 # <a name="spsyscollectorcreatecollectortype-transact-sql"></a>sp_syscollector_create_collector_type (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -47,7 +47,7 @@ sp_syscollector_create_collector_type
 ```  
   
 ## <a name="arguments"></a>Argomenti  
- [ @collector_type_uid =] '*collector_type_uid*'  
+ [ @collector_type_uid = ] '*collector_type_uid*'  
  GUID del tipo di agente di raccolta. *collector_type_uid* viene **uniqueidentifier** e se è NULL verrà creato automaticamente e restituito come OUTPUT.  
   
  [ @name =] '*nome*'  
@@ -56,13 +56,13 @@ sp_syscollector_create_collector_type
  [ @parameter_schema =] '*parameter_schema*'  
  XML Schema per questo tipo di agente di raccolta. *parameter_schema* viene **xml** con valore predefinito è NULL.  
   
- [ @parameter_formatter =] '*parameter_formatter*'  
+ [ @parameter_formatter = ] '*parameter_formatter*'  
  Modello da utilizzare per trasformare l'XML per l'utilizzo nella pagina delle proprietà del set di raccolta. *parameter_formatter* viene **xml** con valore predefinito è NULL.  
   
- [@collection_package_id =] *collection_package_id*  
+ [@collection_package_id = ] *collection_package_id*  
  È un identificatore univoco locale che punta al pacchetto di raccolta [!INCLUDE[ssIS](../../includes/ssis-md.md)] utilizzato dal set di raccolta. *collection_package_id* viene **uniqueidentifier** ed è obbligatorio.  
   
- [@upload_package_id =] *upload_package_id*  
+ [@upload_package_id = ] *upload_package_id*  
  Identificatore univoco locale che punta al pacchetto di caricamento di [!INCLUDE[ssIS](../../includes/ssis-md.md)] utilizzato dal set di raccolta. *upload_package_id* viene **uniqueidentifier** ed è obbligatorio.  
   
 ## <a name="return-code-values"></a>Valori restituiti  
@@ -79,7 +79,7 @@ EXEC sp_syscollector_create_collector_type
 @collector_type_uid = '302E93D1-3424-4be7-AA8E-84813ECF2419',  
 @name = 'Generic T-SQL Query Collector Type',  
 @parameter_schema = '<?xml version="1.0" encoding="utf-8"?>  
-  <xs:schema xmlns:xs="https://www.w3.org/2001/XMLSchema" targetNamespace="DataCollectorType">  
+  <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="DataCollectorType">  
     <xs:element name="TSQLQueryCollector">  
       <xs:complexType>  
         <xs:sequence>  

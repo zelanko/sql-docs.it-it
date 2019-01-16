@@ -11,14 +11,17 @@ ms.prod: sql
 ms.custom: sql-linux, seodec18
 ms.technology: linux
 ms.assetid: ''
-ms.openlocfilehash: 3c64c2ab3927c111b29f0bafa6745fbab2f7fd13
-ms.sourcegitcommit: de8ef246a74c935c5098713f14e9dd06c4733713
+ms.openlocfilehash: 77e818109424b5f0d9dea3b495da4e927c506366
+ms.sourcegitcommit: 96032813f6bf1cba680b5e46d82ae1f0f2da3d11
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53160539"
+ms.lasthandoff: 01/15/2019
+ms.locfileid: "54299238"
 ---
 # <a name="quickstart-run-sql-server-in-the-cloud"></a>Guida introduttiva: Eseguire SQL Server nel cloud
+
+  > [!div class="nextstepaction"]
+  > [Condividi i tuoi commenti su SQL Docs sommario.](https://aka.ms/sqldocsurvey)
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
@@ -27,10 +30,10 @@ In questa Guida introduttiva si installerà SQL Server su Red Hat Enterprise Lin
 > [!NOTE]
 > Se si sceglie di eseguire un'edizione a pagamento di SQL Server, quindi è necessario utilizzare la propria licenza (BYOL).
 
-## <a name="amazon-web-services"></a>Servizi Web Amazon
+## <a name="amazon-web-services"></a>Amazon Web Services
 1.  Creare un AMI Linux con almeno 2 GB di memoria da marketplace 
     * [RHEL 7.3 +](https://aws.amazon.com/marketplace/pp/B00KWBZVK6)
-    * [SLES 12 SP2](https://aws.amazon.com/marketplace/pp/B00PMM99PI)
+    * [SLES v12 SP2](https://aws.amazon.com/marketplace/pp/B00PMM99PI)
     * [Ubuntu 16.04](https://aws.amazon.com/marketplace/pp/B01JBL2M0O)
 1.  Connettersi alla finestra di Rispostarli con ssh
 1.  Attenersi alla Guida introduttiva per la distribuzione Linux che scelta: 
@@ -56,7 +59,7 @@ In questa Guida introduttiva si installerà SQL Server su Red Hat Enterprise Lin
 ## <a name="google-cloud-platform"></a>Google Cloud Platform
 1.  Creare un'immagine Linux con almeno 2 GB di memoria di avvio di Cloud 
     * [RHEL 7.3 +](https://console.cloud.google.com/launcher/details/rhel-cloud/rhel-7)
-    * [SLES 12 SP2](https://console.cloud.google.com/launcher/details/suse-cloud/sles-12)
+    * [SLES v12 SP2](https://console.cloud.google.com/launcher/details/suse-cloud/sles-12)
     * [Ubuntu 16.04](https://console.cloud.google.com/launcher/details/ubuntu-os-cloud/ubuntu-xenial)
 1.  Connettersi all'immagine con ssh
 1.  Attenersi alla Guida introduttiva per la distribuzione Linux che scelta: 

@@ -28,12 +28,12 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 21b0f28d79f44fd21828475c22748450d8f3628b
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 5473cca90d26056f82d79a5b3189998d0723269b
+ms.sourcegitcommit: bfa10c54e871700de285d7f819095d51ef70d997
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51673770"
+ms.lasthandoff: 01/14/2019
+ms.locfileid: "54254426"
 ---
 # <a name="default-mapping-of-xsd-elements-and-attributes-to-tables-and-columns-sqlxml-40"></a>Mapping predefinito di elementi e attributi XSD a tabelle e colonne (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -46,7 +46,7 @@ ms.locfileid: "51673770"
  In questo esempio non viene specificata alcuna annotazione nello schema XSD. Il  **\<Person. Contact >** elemento è di tipo complesso e, pertanto, esegue il mapping per impostazione predefinita per la tabella Person. Contact nel database AdventureWorks. Tutti gli attributi (ContactID, FirstName, LastName) del  **\<Person. Contact >** elemento di tipo semplice e mappati per default in colonne con lo stesso nome della tabella Person. Contact.  
   
 ```  
-<xsd:schema xmlns:xsd="https://www.w3.org/2001/XMLSchema"   
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"   
             xmlns:sql="urn:schemas-microsoft-com:mapping-schema">  
   <xsd:element name="Person.Contact" >  
      <xsd:complexType>  
@@ -93,11 +93,11 @@ ms.locfileid: "51673770"
 </ROOT>  
 ```  
   
-### <a name="b-mapping-an-xml-element-to-a-database-column"></a>B. Mapping di un elemento XML a una colonna del database  
+### <a name="b-mapping-an-xml-element-to-a-database-column"></a>b. Mapping di un elemento XML a una colonna del database  
  Anche in questo esempio viene eseguito un mapping predefinito, in quanto non viene utilizzata alcuna annotazione. Il  **\<Person. Contact >** elemento è di tipo complesso ed è associato alla tabella con lo stesso nome del database. Gli elementi  **\<FirstName >** e  **\<LastName >** e **EmployeeID** attributo sono di tipo semplice e, pertanto, associare il colonne con lo stesso nome. L'unica differenza tra questo e l'esempio precedente consiste nel fatto che gli elementi vengono utilizzati per eseguire il mapping dei campi FirstName e LastName.  
   
 ```  
-<xsd:schema xmlns:xsd="https://www.w3.org/2001/XMLSchema"   
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"   
             xmlns:sql="urn:schemas-microsoft-com:mapping-schema">  
   <xsd:element name="Person.Contact">  
     <xsd:complexType>  
@@ -151,7 +151,7 @@ ms.locfileid: "51673770"
  Anche in questo esempio viene eseguito un mapping predefinito, in quanto non viene utilizzata alcuna annotazione. Il  **\<Production.ProductModel >** elemento è di tipo complesso ed è associato alla tabella con lo stesso nome del database. Il **ProductModelID** attributo è di tipo semplice e, pertanto, eseguire il mapping alle colonne con lo stesso nome. L'unica differenza tra questo e negli esempi precedenti è che il  **\<istruzioni >** elemento sta eseguendo il mapping a una colonna che utilizza il **xml** tipo di dati tramite la **xsd: anyType** tipo.  
   
 ```  
-<xsd:schema xmlns:xsd="https://www.w3.org/2001/XMLSchema"   
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"   
             xmlns:sql="urn:schemas-microsoft-com:mapping-schema">  
   <xsd:element name="Production.ProductModel">  
     <xsd:complexType>  

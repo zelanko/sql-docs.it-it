@@ -1,5 +1,5 @@
 ---
-title: VISTE (Transact-SQL) | Microsoft Docs
+title: VIEWS (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -20,28 +20,28 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 56ed627383b8ac80568b857d10e9d065a2bf9726
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: c23935ef020763bffe80957f054637a96e6785db
+ms.sourcegitcommit: bfa10c54e871700de285d7f819095d51ef70d997
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51670010"
+ms.lasthandoff: 01/14/2019
+ms.locfileid: "54254776"
 ---
 # <a name="views-transact-sql"></a>VIEWS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   Restituisce una riga per le viste a cui l'utente corrente può accedere nel database corrente.  
   
- Per recuperare informazioni da queste viste, specificare il nome completo di **INFORMATION_SCHEMA. * * * view_name*.  
+ Per recuperare informazioni da queste viste, specificare il nome completo del **INFORMATION_SCHEMA.** _view_name_.  
   
-|Nome colonna|Tipo di dati|Description|  
+|Nome colonna|Tipo di dati|Descrizione|  
 |-----------------|---------------|-----------------|  
-|**TABLE_CATALOG**|**nvarchar (** 128 **)**|Qualificatore della vista.|  
-|**TABLE_SCHEMA**|**nvarchar (** 128 **)**|Nome dello schema che contiene la vista.<br /><br /> **\*\* Importanti \* \***  non utilizzare viste INFORMATION_SCHEMA per determinare lo schema di un oggetto. L'unica modalità affidabile per cercare lo schema di un oggetto consiste nell'eseguire una query sulla vista del catalogo sys.objects.|  
-|**TABLE_NAME**|**nvarchar (** 128 **)**|Nome della vista.|  
-|**DEFINIZIONE_VISTA**|**nvarchar (** 4000 **)**|Se la lunghezza della definizione è più grande **nvarchar (** 4000 **)**, questa colonna è NULL. In caso contrario, questa colonna corrisponde al testo della definizione della vista.|  
-|**CHECK_OPTION**|**varchar (** 7 **)**|Tipo di WITH CHECK OPTION. Restituisce CASCADE se la vista originale è stata creata tramite WITH CHECK OPTION. In caso contrario restituisce NONE.|  
-|**IS_UPDATABLE**|**varchar (** 2 **)**|Specifica se è possibile aggiornare la vista. Restituisce sempre NO.|  
+|**TABLE_CATALOG**|**nvarchar(** 128 **)**|Qualificatore della vista.|  
+|**TABLE_SCHEMA**|**nvarchar(** 128 **)**|Nome dello schema che contiene la vista.<br /><br /> **&#42;&#42;Importante &#42; &#42;**  non utilizzare viste INFORMATION_SCHEMA per determinare lo schema di un oggetto. L'unica modalità affidabile per cercare lo schema di un oggetto consiste nell'eseguire una query sulla vista del catalogo sys.objects.|  
+|**TABLE_NAME**|**nvarchar(** 128 **)**|Nome della vista.|  
+|**VIEW_DEFINITION**|**nvarchar(** 4000 **)**|Se la lunghezza della definizione è più grande **nvarchar (** 4000 **)**, questa colonna è NULL. In caso contrario, questa colonna corrisponde al testo della definizione della vista.|  
+|**CHECK_OPTION**|**varchar(** 7 **)**|Tipo di WITH CHECK OPTION. Restituisce CASCADE se la vista originale è stata creata tramite WITH CHECK OPTION. In caso contrario restituisce NONE.|  
+|**IS_UPDATABLE**|**varchar(** 2 **)**|Specifica se è possibile aggiornare la vista. Restituisce sempre NO.|  
   
 ## <a name="see-also"></a>Vedere anche  
  [Viste di sistema &#40;Transact-SQL&#41;](https://msdn.microsoft.com/library/35a6161d-7f43-4e00-bcd3-3091f2015e90)   

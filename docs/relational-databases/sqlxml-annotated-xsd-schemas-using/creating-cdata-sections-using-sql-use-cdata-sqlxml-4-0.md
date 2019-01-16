@@ -1,7 +1,7 @@
 ---
 title: 'Creazione di sezioni CDATA mediante SQL: use-cdata (SQLXML 4.0) | Documenti di Microsoft'
 ms.custom: ''
-ms.date: 03/16/2017
+ms.date: 01/11/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -21,14 +21,15 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 8ed36a17744c9626b54de7439af20cdd76c2bc18
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 2af9a6ef501b09e102ed708fa7600416c9e0fd8b
+ms.sourcegitcommit: bfa10c54e871700de285d7f819095d51ef70d997
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51667400"
+ms.lasthandoff: 01/14/2019
+ms.locfileid: "54254416"
 ---
 # <a name="creating-cdata-sections-using-sqluse-cdata-sqlxml-40"></a>Creazione di sezioni CDATA mediante sql:use-cdata (SQLXML 4.0)
+
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   In XML vengono utilizzate le sezioni CDATA per eseguire l'escape di blocchi di testo contenenti caratteri che, altrimenti, verrebbero riconosciuti come caratteri di markup.  
   
@@ -47,7 +48,7 @@ ms.locfileid: "51667400"
  Nello schema seguente, **SQL: use-cdata** è impostata su 1 (True) per il  **\<AddressLine1 >** all'interno di  **\<indirizzo >** elemento. I dati vengono quindi restituiti in una sezione CDATA.  
   
 ```  
-<xsd:schema xmlns:xsd="https://www.w3.org/2001/XMLSchema"  
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"  
             xmlns:sql="urn:schemas-microsoft-com:mapping-schema">  
   <xsd:element name="Address"   
                sql:relation="Person.Address"   

@@ -13,12 +13,12 @@ ms.assetid: efff5569-db52-451d-a039-2e74870534da
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: db90ecbc083a887a9845542b73e50bae6bf61e1e
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: e352a6c4d548b382d700c54cf0167fadcec8bf7b
+ms.sourcegitcommit: bfa10c54e871700de285d7f819095d51ef70d997
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52534740"
+ms.lasthandoff: 01/14/2019
+ms.locfileid: "54254546"
 ---
 # <a name="namespaces"></a>Spazi dei nomi
 Il formato di persistenza XML ADO utilizza i seguenti quattro spazi dei nomi.  
@@ -29,11 +29,11 @@ Il formato di persistenza XML ADO utilizza i seguenti quattro spazi dei nomi.
 |Prefisso|Descrizione|  
 |------------|-----------------|  
 |s|Fa riferimento allo spazio dei nomi "XML-Data" che contiene gli elementi e attributi che definiscono lo schema del set di record corrente.|  
-|DT|Fa riferimento alla specifica di definizioni del tipo di dati.|  
+|dt|Fa riferimento alla specifica di definizioni del tipo di dati.|  
 |rs|Fa riferimento agli elementi che lo contiene lo spazio dei nomi e gli attributi specifici per le proprietà di Recordset ADO e attributi.|  
 |z|Fa riferimento allo schema del set di righe corrente.|  
   
- Un client non deve aggiungere dei tag corrispondenti a questi spazi dei nomi, come definito dalla specifica. Ad esempio, un client non deve definire uno spazio dei nomi come "urn: schemas-microsoft-com: rowset" e quindi scrivere un valore, ad esempio "rs: MyOwnTag." Per altre informazioni sugli spazi dei nomi, vedere la [W3C raccomandazione Namespaces in XML](https://www.w3.org/TR/REC-xml-names/).  
+ Un client non deve aggiungere dei tag corrispondenti a questi spazi dei nomi, come definito dalla specifica. Ad esempio, un client non deve definire uno spazio dei nomi come "urn: schemas-microsoft-com: rowset" e quindi scrivere un valore, ad esempio "rs: MyOwnTag." Per altre informazioni sugli spazi dei nomi, vedere la [W3C raccomandazione Namespaces in XML](http://www.w3.org/TR/REC-xml-names/).  
   
 > [!IMPORTANT]
 >  L'ID per il tag dello schema deve essere "RowsetSchema", e lo spazio dei nomi usato per fare riferimento allo schema del set di righe corrente deve puntare a "#RowsetSchema."  

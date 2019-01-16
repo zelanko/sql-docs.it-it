@@ -16,12 +16,12 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: ab60a5cae291c307b0717b2d90409e26b835327f
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: e247e2bf49c9fcf0c6eb211bd9c83b6444118f17
+ms.sourcegitcommit: bfa10c54e871700de285d7f819095d51ef70d997
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51675300"
+ms.lasthandoff: 01/14/2019
+ms.locfileid: "54256646"
 ---
 # <a name="annotation-interpretation---sqlrelationship-and-key-ordering-rule"></a>Interpretazione delle annotazioni - sql:relationship e regola di ordinamento delle chiavi
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -30,7 +30,7 @@ ms.locfileid: "51675300"
  Si consideri lo schema XSD seguente, in cui la relazione uno-a-molti tra  **\<cliente >** e  **\<ordine >** elementi (un cliente può effettuare molti ordini) è specificato utilizzando il  **\<SQL: Relationship >** elemento:  
   
 ```  
-<xsd:schema xmlns:xsd="https://www.w3.org/2001/XMLSchema"<>   
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"<>   
             xmlns:sql="urn:schemas-microsoft-com:mapping-schema">  
 <xsd:annotation>  
   <xsd:appinfo>  
@@ -118,7 +118,7 @@ ms.locfileid: "51675300"
     set objBL=Nothing  
     ```  
   
-     Come risultato, il caricamento bulk XML inserisce un valore NULL nella colonna chiave esterna CustomerID della tabella CustOrder. Se si modificano i dati di esempio XML in modo che il  **\<CustomerID >** elemento figlio viene visualizzata prima il  **\<ordine >** elemento figlio, si ottiene il risultato previsto: caricamento Bulk XML Inserisce il valore di chiave esterno specificato nella colonna.  
+     Come risultato, il caricamento bulk XML inserisce un valore NULL nella colonna chiave esterna CustomerID della tabella CustOrder. Se si modificano i dati di esempio XML in modo che il  **\<CustomerID >** elemento figlio viene visualizzata prima il  **\<ordine >** elemento figlio, si ottiene il risultato previsto: Caricamento Bulk XML inserisce il valore di chiave esterno specificato nella colonna.  
   
  Di seguito viene indicato lo schema XDR equivalente:  
   

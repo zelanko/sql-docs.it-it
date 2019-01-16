@@ -13,12 +13,12 @@ ms.assetid: 6e146738-ac4d-47bb-b6cd-d87b2260aead
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 0f794267904ec1c84595b4b627722a1ca935c15a
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: 2330703450e42e8ddf9bfeed536dd3649d65edf8
+ms.sourcegitcommit: bfa10c54e871700de285d7f819095d51ef70d997
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53211010"
+ms.lasthandoff: 01/14/2019
+ms.locfileid: "54255686"
 ---
 # <a name="xml-persistence-format"></a>Formato di persistenza XML
 ADO utilizza la codifica UTF-8 per il flusso XML che viene mantenuto.  
@@ -67,7 +67,7 @@ xmlns:z="#RowsetSchema">
   
  Lo schema sono illustrate le dichiarazioni di spazi dei nomi, la sezione dello schema e la sezione di dati. La sezione dello schema contiene le definizioni per riga, ShipperID, CompanyName e telefono.  
   
- Definizioni dello schema conformi per il [specifica W3C XML-Data](https://www.w3.org/TR/1998/NOTE-XML-data/) e può essere convalidato completamente (anche se la convalida non verrà eseguita in Internet Explorer 5). XML-Data è attualmente il formato dello schema supportate solo per la persistenza di Recordset.  
+ Definizioni dello schema conformi per il [specifica W3C XML-Data](http://www.w3.org/TR/1998/NOTE-XML-data/) e può essere convalidato completamente (anche se la convalida non verrà eseguita in Internet Explorer 5). XML-Data è attualmente il formato dello schema supportate solo per la persistenza di Recordset.  
   
  La sezione di dati sono presenti tre righe che contengono informazioni spedizionieri. Per un set di righe vuoto, la sezione di dati può essere vuota, ma il \<rs: dati > tag devono essere presenti. Senza dati, è possibile scrivere semplicemente la sintassi abbreviata tag \<rs: data / >. Qualsiasi tag il prefisso "rs" indica che si tratta dello spazio dei nomi definito dall'urn: schemas-microsoft-com: rowset.  
   
