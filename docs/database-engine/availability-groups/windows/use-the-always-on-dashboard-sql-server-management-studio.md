@@ -54,7 +54,7 @@ ms.locfileid: "49120198"
   
 1.  In Esplora oggetti connettersi all'istanza di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] in cui si vuole eseguire il dashboard Always On.  
   
-2.  Espandere il nodo **Disponibilità elevata Always On**, fare clic con il pulsante destro del mouse sul nodo **Gruppi di disponibilità****Mostra dashboard**.  
+2.  Espandere il nodo **Disponibilità elevata Always On**, fare clic con il pulsante destro del mouse sul nodo **Gruppi di disponibilità** **Mostra dashboard**.  
   
 ###  <a name="change-always-on-dashboard-options"></a>Modificare le opzioni del dashboard Always On  
  È possibile usare la finestra di dialogo [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]**Opzioni** per configurare il comportamento del dashboard Always On di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .  
