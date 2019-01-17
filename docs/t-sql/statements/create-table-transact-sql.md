@@ -47,12 +47,12 @@ ms.assetid: 1e068443-b9ea-486a-804f-ce7b6e048e8b
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: a74cdb7827351c6616a7d37ad3deb80a068a375c
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 60938c31712e8bb6b08579cab099baaaf99bb0aa
+ms.sourcegitcommit: 467b2c708651a3a2be2c45e36d0006a5bbe87b79
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52394525"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53980387"
 ---
 # <a name="create-table-transact-sql"></a>CREATE TABLE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -390,10 +390,10 @@ column_name <data_type>
   
  ON {*partition_scheme* | *filegroup* | **"** default **"**} può inoltre essere specificato in un vincolo PRIMARY KEY o UNIQUE. Questi vincoli comportano la creazione di indici. Se si specifica *filegroup*, l'indice viene archiviato nel filegroup indicato. Se si specifica **"** default **"** oppure si omette ON, l'indice viene archiviato nello stesso filegroup della tabella. Se il vincolo PRIMARY KEY o UNIQUE crea un indice cluster, le pagine di dati della tabella vengono archiviate nello stesso filegroup dell'indice. Se si specifica CLUSTERED o se il vincolo crea in altro modo un indice cluster e si specifica un valore *partition_scheme* diverso dal valore *partition_scheme* o *filegroup* della definizione della tabella, o viceversa, verrà rispettata solo la definizione del vincolo e gli altri valori verranno ignorati.  
   
-> [!NOTE]  
+> [!NOTE]
 >  In questo contesto, default non è una parola chiave, È un identificatore per il filegroup predefinito e pertanto deve essere delimitato, ad esempio ON **"** default **"** o ON **[** default **]**. Se si specifica "**"** default **"**, l'opzione QUOTED_IDENTIFIER deve essere impostata su ON per la sessione corrente. Si tratta dell'impostazione predefinita. Per altre informazioni, vedere [SET QUOTED_IDENTIFIER &#40;Transact-SQL&#41;](../../t-sql/statements/set-quoted-identifier-transact-sql.md).  
-  
-> [!NOTE]  
+> 
+> [!NOTE]
 >  Dopo avere creato una tabella partizionata, impostare l'opzione LOCK_ESCALATION per la tabella su AUTO. In questo modo è possibile migliorare la concorrenza consentendo ai blocchi di eseguire l'escalation a livello di partizione (HoBT) anziché di tabella. Per altre informazioni, vedere [ALTER TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md).  
   
  TEXTIMAGE_ON { *filegroup*| **"** default **"** }  
@@ -401,12 +401,12 @@ column_name <data_type>
   
  La parola chiave TEXTIMAGE_ON non è consentita se la tabella non include colonne con valori di grandi dimensioni. Non è possibile specificare TEXTIMAGE_ON se si specifica *partition_scheme*. Se si specifica **"** default **"** oppure si omette TEXTIMAGE_ON, le colonne con valori di grandi dimensioni vengono archiviate nel filegroup predefinito. Il tipo di archiviazione per i dati di colonne con valori di grandi dimensioni specificato in CREATE TABLE non può essere modificato in seguito.  
 
-> [!NOTE]  
+> [!NOTE]
 > I valori Varchar(max), nvarchar(max), varbinary(max), xml e i valori elevati definiti dall'utente vengono archiviati direttamente nella riga di dati, con un limite massimo di 8000 byte e a condizione che le dimensioni del record siano sufficienti per contenere il valore. Se le dimensioni del record non sono sufficienti per il valore, all'interno della riga viene archiviato un puntatore e i dati restanti vengono archiviati all'esterno della riga nello spazio di archiviazione LOB. Il valore predefinito è 0.
-TEXTIMAGE_ON modifica solo la posizione dello "spazio di archiviazione LOB", non influisce quando i dati sono archiviati nella riga. Usare l'opzione large value types out of row di sp_tableoption per archiviare l'intero valore LOB all'esterno della riga. 
-
-
-> [!NOTE]  
+> TEXTIMAGE_ON modifica solo la posizione dello "spazio di archiviazione LOB", non influisce quando i dati sono archiviati nella riga. Usare l'opzione large value types out of row di sp_tableoption per archiviare l'intero valore LOB all'esterno della riga. 
+> 
+> 
+> [!NOTE]
 >  In questo contesto, default non è una parola chiave, ma un identificatore per il filegroup predefinito e deve essere delimitato, ad esempio TEXTIMAGE_ON **"** default **"** o TEXTIMAGE_ON **[** default **]**. Se si specifica "**"** default **"**, l'opzione QUOTED_IDENTIFIER deve essere impostata su ON per la sessione corrente. Si tratta dell'impostazione predefinita. Per altre informazioni, vedere [SET QUOTED_IDENTIFIER &#40;Transact-SQL&#41;](../../t-sql/statements/set-quoted-identifier-transact-sql.md).  
   
  FILESTREAM_ON { *partition_scheme_name* | filegroup | **"** default **"** } 
@@ -706,7 +706,7 @@ CREATE TABLE t4( c1 int, c2 int, INDEX ix_1 NONCLUSTERED (c1,c2))
   
  Non è possibile specificare ON UPDATE CASCADE, SET NULL o SET DEFAULT se nella tabella che viene modificata esiste già un trigger INSTEAD OF per ON UPDATE.  
   
- Ad esempio, nel database [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] la tabella **ProductVendor** ha una relazione referenziale con la tabella **Vendor**, ovvero la chiave esterna **ProductVendor.BusinessEntity** fa riferimento alla chiave primaria **Vendor.BusinessEntityID**.  
+ Nel database [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)], ad esempio, la tabella **ProductVendor** ha una relazione referenziale con la tabella **Vendor**: La chiave esterna **ProductVendor.BusinessEntity** fa riferimento alla chiave primaria **Vendor.BusinessEntityID**.  
   
  Se in una riga della tabella **Vendor** viene eseguita un'istruzione UPDATE e si specifica un'azione ON UPDATE CASCADE per **ProductVendor.BusinessEntityID**, [!INCLUDE[ssDE](../../includes/ssde-md.md)] verifica se sono già presenti una o più righe dipendenti nella tabella **ProductVendor**. Le eventuali righe dipendenti individuate nella tabella **ProductVendor** vengono aggiornate insieme alla riga a cui viene fatto riferimento nella tabella **Vendor**.  
   
@@ -793,13 +793,13 @@ CREATE TABLE t4( c1 int, c2 int, INDEX ix_1 NONCLUSTERED (c1,c2))
   
  È possibile specificare *partition_number_expression* nei modi seguenti:  
   
--   Specificare il numero di una partizione, ad esempio ON PARTITIONS (2).  
+-   Specificare il numero di una partizione, ad esempio: ON PARTITIONS (2).  
   
 -   Fornire i numeri di partizione per più partizioni singole separati da virgole, ad esempio ON PARTITIONS (1, 5).  
   
--   Specificare sia intervalli, sia singole partizioni, ad esempio ON PARTITIONS (2, 4, 6 TO 8).  
+-   Fornire sia intervalli, sia singole partizioni, ad esempio ON PARTITIONS (2, 4, 6 TO 8)  
   
- È possibile specificare `<range>` come numeri di partizione separati dalla parola TO, ad esempio ON PARTITIONS (6 TO 8).  
+ `<range>` può essere specificato sotto forma di numeri di partizione separati dalla parola TO, ad esempio: ON PARTITIONS (6 TO 8).  
   
  Per impostare tipi diversi di compressione dei dati per partizioni diverse, specificare più volte l'opzione DATA_COMPRESSION, ad esempio:  
   
@@ -957,7 +957,7 @@ DATA_COMPRESSION = PAGE ON PARTITIONS (3, 5)
    
 **Si applica a** : da [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] fino a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] e [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]. 
   
-Gli indici di tabella e di colonna possono essere specificati come parte dell'istruzione CREATE TABLE. Per informazioni dettagliate sull'aggiunta e rimozione degli indici nelle tabelle ottimizzate per la memoria, vedere: [Modifica di tabelle con ottimizzazione per la memoria](../../relational-databases/in-memory-oltp/altering-memory-optimized-tables.md)
+Gli indici di tabella e di colonna possono essere specificati come parte dell'istruzione CREATE TABLE. Per informazioni dettagliate sull'aggiunta e la rimozione degli indici nelle tabelle ottimizzate per la memoria, vedere: [Modifica di tabelle con ottimizzazione per la memoria](../../relational-databases/in-memory-oltp/altering-memory-optimized-tables.md)
   
  HASH  
    
@@ -1262,7 +1262,7 @@ CREATE TABLE dbo.Employee (EmployeeID int
 PRIMARY KEY CLUSTERED);  
 ```  
   
-### <a name="b-using-foreign-key-constraints"></a>B. Utilizzo di vincoli FOREIGN KEY  
+### <a name="b-using-foreign-key-constraints"></a>b. Utilizzo di vincoli FOREIGN KEY  
  Il vincolo FOREIGN KEY viene utilizzato per fare riferimento a un'altra tabella. Le chiavi esterne possono essere chiavi a colonna singola o a più colonne. Nell'esempio seguente viene illustrato un vincolo FOREIGN KEY a colonna singola nella tabella `SalesOrderHeader` che fa riferimento alla tabella `SalesPerson`. Per un vincolo FOREIGN KEY a colonna singola è sufficiente specificare solo la clausola REFERENCES.  
   
 ```sql  
@@ -1438,7 +1438,7 @@ CREATE TABLE dbo.mylogintable
 ```sql  
 CREATE TABLE dbo.EmployeePhoto  
     (  
-    EmployeeId int NOT NULL PRIMARY KEY,  
+     EmployeeId int NOT NULL PRIMARY KEY  
     ,Photo varbinary(max) FILESTREAM NULL  
     ,MyRowGuidColumn uniqueidentifier NOT NULL ROWGUIDCOL  
         UNIQUE DEFAULT NEWID()  

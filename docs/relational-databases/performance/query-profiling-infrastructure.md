@@ -5,17 +5,24 @@ ms.date: 11/26/2018
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: performance
-ms.topic: conceptual - "query plans [SQL Server]" - "execution plans [SQL Server]" - "query profiling" - "lightweight query profiling" - "lightweight profiling" - "lwp"
+ms.topic: conceptual
+helpviewer_keywords:
+- query plans [SQL Server]
+- execution plans [SQL Server]
+- query profiling
+- lightweight query profiling
+- lightweight profiling
+- lwp
 ms.assetid: 07f8f594-75b4-4591-8c29-d63811d7753e
 author: pmasl
 ms.author: pelopes
 manager: amitban
-ms.openlocfilehash: e0ee0bc2c99d997d6a44d5ca0e9944e0ae4bfeb3
-ms.sourcegitcommit: c19696d3d67161ce78aaa5340964da3256bf602d
+ms.openlocfilehash: 39f3d82d65eb0dd05b8459742febd67d2bc56790
+ms.sourcegitcommit: 0bb306da5374d726b1e681cd4b5459cb50d4a87a
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/29/2018
-ms.locfileid: "52617251"
+ms.lasthandoff: 12/21/2018
+ms.locfileid: "53732028"
 ---
 # <a name="query-profiling-infrastructure"></a>Infrastruttura di profilatura delle query
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -52,7 +59,7 @@ A partire da [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] SP2 e [!INCLUDE[s
 
 ### <a name="lightweight-query-execution-statistics-profiling-infrastructure-v1"></a>Infrastruttura di profilatura delle statistiche di esecuzione query lightweight v1
 
-**Si applica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (da [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] SP2 a [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]). 
+**Si applica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (da [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] SP2 fino a [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]). 
   
 A partire [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] SP2 e [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], con l'introduzione della profilatura lightweight è stato ridotto l'overhead delle prestazioni per raccogliere informazioni sui piani di esecuzione. A differenza della profilatura standard, la profilatura lightweight non raccoglie informazioni di runtime della CPU. La profilatura lightweight continua comunque a raccogliere il totale di righe conteggio delle righe e le informazioni sull'utilizzo dell'I/O.
 
@@ -76,13 +83,13 @@ WITH (MAX_MEMORY=4096 KB,
 ```
 
 > [!NOTE]
-> Per altre informazioni sull'overhead delle prestazioni della profilatura d query, vedere il post di blog [Developers Choice: Query progress - anytime, anywhere](https://blogs.msdn.microsoft.com/sql_server_team/query-progress-anytime-anywhere/) (Scelta degli sviluppatori: Avanzamento delle query, sempre e dovunque). 
+> Per altre informazioni sull'overhead delle prestazioni della profilatura di query, vedere il post di blog [Developers Choice: Query progress - anytime, anywhere](https://blogs.msdn.microsoft.com/sql_server_team/query-progress-anytime-anywhere/) (Scelta degli sviluppatori: Avanzamento delle query, sempre e dovunque). 
 
 Durante l'esecuzione di una sessione di eventi estesi che usa l'evento *query_thread_profile*, viene popolata anche la DMV [sys.dm_exec_query_profiles](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-profiles-transact-sql.md) tramite la profilatura lightweight e vengono abilitate le statistiche di query dinamiche per tutte le sessioni usando [Monitoraggio attività](../../relational-databases/performance-monitor/activity-monitor.md) o eseguendo la query direttamente nella DMV.
 
 ### <a name="lightweight-query-execution-statistics-profiling-infrastructure-v2"></a>Infrastruttura di profilatura delle statistiche di esecuzione query lightweight v2
 
-**Si applica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (da [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 a [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]). 
+**Si applica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (da [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 fino a [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]). 
 
 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 include una versione rivista della profilatura lightweight con un overhead minimo. La profilatura lightweight può essere anche abilitata a livello globale tramite il [flag di traccia 7412](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) per le versioni indicate nella sezione precedente *Si applica a*. Una nuova DMF [sys.dm_exec_query_statistics_xml](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-statistics-xml-transact-sql.md) viene introdotta per restituire il piano di esecuzione query per le richieste in elaborazione.
 
@@ -107,7 +114,7 @@ WITH (MAX_MEMORY=4096 KB,
 
 ### <a name="lightweight-query-execution-statistics-profiling-infrastructure-v3"></a>Infrastruttura di profilatura delle statistiche di esecuzione query lightweight v3
 
-**Si applica a** : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (a partire da [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)])
+**Si applica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (a partire da [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)])
 
 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] include una nuova versione rivista della profilatura lightweight che raccoglie il totale di righe per tutte le esecuzioni. La profilatura lightweight è abilitata per impostazione predefinita in [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] e il flag di traccia 7412 non ha alcun effetto.
 
@@ -118,7 +125,7 @@ WITH (MAX_MEMORY=4096 KB,
 
 A partire dalla profilatura lightweight v2 con overhead ridotto, qualsiasi server che non è già basato su CPU può eseguire la profilatura lightweight **in modo continuo** e consentire ai professionisti di database di inserirsi in qualsiasi esecuzione in corso in qualsiasi momento, ad esempio usando Monitoraggio attività o eseguendo direttamente una query in `sys.dm_exec_query_profiles` e ottenere il piano di query con le statistiche di runtime.
 
-Per altre informazioni sull'overhead delle prestazioni della profilatura d query, vedere il post di blog [Developers Choice: Query progress - anytime, anywhere](https://blogs.msdn.microsoft.com/sql_server_team/query-progress-anytime-anywhere/) (Scelta degli sviluppatori: Avanzamento delle query, sempre e dovunque). 
+Per altre informazioni sull'overhead delle prestazioni della profilatura di query, vedere il post di blog [Developers Choice: Query progress - anytime, anywhere](https://blogs.msdn.microsoft.com/sql_server_team/query-progress-anytime-anywhere/) (Scelta degli sviluppatori: Avanzamento delle query, sempre e dovunque). 
 
 ## <a name="see-also"></a>Vedere anche  
  [Monitoraggio e ottimizzazione delle prestazioni](../../relational-databases/performance/monitor-and-tune-for-performance.md)     
@@ -133,4 +140,4 @@ Per altre informazioni sull'overhead delle prestazioni della profilatura d query
  [Guida di riferimento a operatori Showplan logici e fisici](../../relational-databases/showplan-logical-and-physical-operators-reference.md)    
  [piano di esecuzione effettivo](../../relational-databases/performance/display-an-actual-execution-plan.md)    
  [Statistiche sulle query dinamiche](../../relational-databases/performance/live-query-statistics.md)      
- [Scelta degli sviluppatori: stato di avanzamento della query, sempre e ovunque](https://blogs.msdn.microsoft.com/sql_server_team/query-progress-anytime-anywhere/)
+ [Developers Choice: Query progress - anytime, anywhere](https://blogs.msdn.microsoft.com/sql_server_team/query-progress-anytime-anywhere/) (Scelta degli sviluppatori: Avanzamento delle query, sempre e dovunque)

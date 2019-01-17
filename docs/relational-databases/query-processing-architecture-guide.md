@@ -16,12 +16,12 @@ ms.assetid: 44fadbee-b5fe-40c0-af8a-11a1eecf6cb5
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 89a7be267cfe6f4e60961e6d9a6610897cb5718d
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 743c12fe1ec749c597655f249c1ba6fbfe1b0b4e
+ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52542517"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53591885"
 ---
 # <a name="query-processing-architecture-guide"></a>Guida sull'architettura di elaborazione delle query
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -386,7 +386,7 @@ L'esempio seguente indica quali piani di esecuzione vengono rimossi dalla cache 
 * A un piano di esecuzione viene fatto riferimento di frequente in modo che il costo non sia mai pari a zero. Il piano viene mantenuto nella cache dei piani e non viene rimosso a meno che non vi sia un numero eccessivo di richieste di memoria e il costo corrente non sia pari a zero.
 * Viene inserito un piano di esecuzione ad hoc, cui non viene fatto nuovamente riferimento prima che sia presente un numero massimo di richieste di memoria. Dato che i piani ad hoc vengono inizializzati con un costo corrente pari a zero, quando il [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] esamina il piano di esecuzione, individuerà il costo corrente pari a zero e rimuoverà il piano dalla cache dei piani. Il piano di esecuzione ad hoc viene mantenuto nella cache dei piani con un costo corrente pari a zero in assenza di un numero eccessivo di richieste di memoria.
 
-Per rimuovere manualmente un singolo piano o tutti i piani dalla cache, usare [DBCC FREEPROCCACHE](../t-sql/database-console-commands/dbcc-freeproccache-transact-sql.md).
+Per rimuovere manualmente un singolo piano o tutti i piani dalla cache, usare [DBCC FREEPROCCACHE](../t-sql/database-console-commands/dbcc-freeproccache-transact-sql.md). A partire da [!INCLUDE[ssSQL15](../includes/sssql15-md.md)], viene usata l'istruzione `ALTER DATABASE SCOPED CONFIGURATION CLEAR PROCEDURE_CACHE` per cancellare la cache (dei piani) delle procedure per il database nell'ambito.
 
 ### <a name="recompiling-execution-plans"></a>Ricompilazione dei piani di esecuzione
 
@@ -572,7 +572,7 @@ Le clausole di query seguenti sono inoltre senza parametri. Si noti che in quest
 La parametrizzazione viene eseguita a livello di singole istruzioni Transact-SQL. In altri termini, vengono parametrizzate le singole istruzioni presenti in un batch. In seguito alla compilazione, una query con parametri viene eseguita nel contesto del batch in cui è stata inviata originariamente. Se un piano di esecuzione per una query viene memorizzato nella cache, è possibile determinare se è stata eseguita la parametrizzazione della query facendo riferimento alla colonna sql della vista a gestione dinamica sys.syscacheobjects. Se è stata eseguita la parametrizzazione di una query, i nomi e i tipi di dati dei parametri precedono il testo del batch inviato nella colonna, ad esempio \@1 tinyint.
 
 > [!NOTE]
-> I nomi dei parametri sono arbitrari. Gli utenti o le applicazioni non devono basarsi su un ordine di denominazione specifico. È inoltre possibile che nomi dei parametri, scelta dei valori letterali con parametri e spaziatura nel testo con parametri cambino tra le versioni di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] e gli aggiornamenti dei Service Pack.
+> I nomi dei parametri sono arbitrari. Gli utenti o le applicazioni non devono basarsi su un ordine di denominazione specifico. È anche possibile che gli elementi seguenti cambino tra le versioni di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] e gli aggiornamenti dei Service Pack: nomi dei parametri, scelta dei valori letterali con parametri e spaziatura nel testo con parametri.
 
 #### <a name="data-types-of-parameters"></a>Tipi di dati dei parametri
 
@@ -1025,10 +1025,10 @@ Per illustrare un altro esempio, si supponga che la tabella dispone di quattro p
 
 |Partizioni della tabella basate sulla colonna A |Ricerca della colonna B in ogni partizione della tabella |
 |----|----|
-|Partizione della tabella 1: A < 10   |B=50, B=100, B=150 |
-|Partizione della tabella 2: A >= 10 AND A < 20   |B=50, B=100, B=150 |
-|Partizione della tabella 3: A >= 20 AND A < 30   |B=50, B=100, B=150 |
-|Partizione della tabella 4: A >= 30  |B=50, B=100, B=150 |
+|Partizione di tabella 1: A < 10   |B=50, B=100, B=150 |
+|Partizione di tabella 2: A >= 10 AND A < 20   |B=50, B=100, B=150 |
+|Partizione di tabella 3: A >= 20 AND A < 30   |B=50, B=100, B=150 |
+|Partizione di tabella 4: A >= 30  |B=50, B=100, B=150 |
 
 ### <a name="best-practices"></a>Procedure consigliate
 

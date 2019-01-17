@@ -5,19 +5,18 @@ ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: mds
 ms.reviewer: ''
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.topic: conceptual
 ms.assetid: 8b2a9c43-40e0-48f7-a6a9-325beb9f27da
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: d05fc6068b221bfd21ffdfd0e6f8fff850bab179
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 6da7d5b12dcd8e998a32403bc9f98ae3ceee121b
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47755569"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52797133"
 ---
 # <a name="show-many-to-many-relationships-in-derived-hierarchies-master-data-services"></a>Mostrare le relazioni molti-a-molti nelle gerarchie derivate (Master Data Services)
 
@@ -44,7 +43,7 @@ ms.locfileid: "47755569"
   
  Nella schermata precedente si noti che l'entità **Dipendente** appare sotto **Livelli correnti** al centro come unico livello. La gerarchia derivata **Anteprima** a destra mostra semplicemente un elenco di tutti i membri dell'entità **Dipendente** . La sezione **Livelli disponibili** a sinistra mostra i livelli che possono essere aggiunti sopra il livello corrente (**Dipendente**). Molti di questi sono attributi basati su dominio (DBA) per l'entità **Dipendente** , incluso il DBA **Reparto** .  
   
- A partire da [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)], esiste un nuovo tipo di livello che modella le relazioni M2M, ad esempio: **Corso (mappato mediante RegistrazioneCorso.Studente)**. Il nome del livello è più dettagliato rispetto degli altri, in modo da riflettere le informazioni aggiuntive necessarie per descrivere univocamente la relazione di mapping. Trascinare il livello fino al livello **Dipendente** nella sezione **Livelli correnti** :  
+ A partire da [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)], esiste un nuovo tipo di livello che modella le relazioni M2M, ad esempio: **Corso (mappato tramite RegistrazioneCorso.Studente)**. Il nome del livello è più dettagliato rispetto degli altri, in modo da riflettere le informazioni aggiuntive necessarie per descrivere univocamente la relazione di mapping. Trascinare il livello fino al livello **Dipendente** nella sezione **Livelli correnti** :  
   
  ![mds_hierarchies_edit_derived_hierarchy_two](../master-data-services/media/mds-hierarchies-edit-derived-hierarchy-two.PNG "mds_hierarchies_edit_derived_hierarchy_two")  
   
@@ -84,7 +83,7 @@ Come mostra l'immagine seguente, il nome del livello che modella questa relazion
 Per istruzioni sulla distribuzione del modello di esempio Customer e di altri modelli di esempio inclusi in [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)], vedere [Distribuzione di modelli di esempio e dati](~/master-data-services/sql-server-samples-model-deployment-packages-mds.md).   
   
 ## <a name="one-many-relationship"></a>Relazione uno-a-molti  
- Un membro di una gerarchia derivata può essere padre di molti membri figlio, ma non può avere in genere più di un padre (per le eccezioni, vedere [Sicurezza dei membri](#bkmk_member_security)). Si supponga ad esempio che ci siano due entità, Dipendente e Reparto, in cui ogni dipendente appartiene a un singolo reparto. Questa relazione viene modellata aggiungendo all'entità Dipendente un attributo basato su dominio (DBA) che fa riferimento all'entità Reparto:  
+ Un membro di una gerarchia derivata può essere padre di molti membri figlio, ma non può avere in genere più di un padre (per le eccezioni, vedere [Sicurezza dei membri](#bkmk_member_security)). Si supponga, ad esempio, che ci siano due entità: Dipendente e Reparto, in cui ogni dipendente appartiene a un singolo reparto. Questa relazione viene modellata aggiungendo all'entità Dipendente un attributo basato su dominio (DBA) che fa riferimento all'entità Reparto:  
   
  ![mds_hierarchies_onetomany](../master-data-services/media/mds-hierarchies-onetomany.png "mds_hierarchies_onetomany")  
   

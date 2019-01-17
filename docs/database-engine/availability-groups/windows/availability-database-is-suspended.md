@@ -1,6 +1,7 @@
 ---
-title: Il database di disponibilità è sospeso | Microsoft Docs
-ms.custom: ''
+title: Il database di disponibilità è sospeso per un gruppo di disponibilità
+description: Informazioni su come identificare i possibili motivi per cui un database all'interno di un gruppo di disponibilità Always On può essere sospeso.
+ms.custom: seodec18
 ms.date: 05/17/2016
 ms.prod: sql
 ms.reviewer: ''
@@ -14,14 +15,14 @@ ms.assetid: 6baee70f-848c-4e86-b20d-78875c0f82cb
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 0d87f43a7ec36af19cb141a2cb4c3724158f655f
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.openlocfilehash: a6746eb6dc024db06a63de972befd7305f64a85c
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51601751"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53212030"
 ---
-# <a name="availability-database-is-suspended"></a>Il database di disponibilità è sospeso
+# <a name="availability-database-is-suspended-for-an-availability-group"></a>Il database di disponibilità è sospeso per un gruppo di disponibilità
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
     
 ## <a name="introduction"></a>Introduzione  

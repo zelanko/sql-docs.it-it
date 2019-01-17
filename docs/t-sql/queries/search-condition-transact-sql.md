@@ -38,12 +38,12 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f8e4fb4a2e8da7ecf32e4bec80f3d18a53a022ac
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: ef9f5377ffef172436d7e84164a20f1d92a9a325
+ms.sourcegitcommit: 467b2c708651a3a2be2c45e36d0006a5bbe87b79
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51699799"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53979517"
 ---
 # <a name="search-condition-transact-sql"></a>Condizione di ricerca (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -134,7 +134,7 @@ ms.locfileid: "51699799"
  Nome di colonna, costante, funzione, variabile, sottoquery scalare o qualsiasi combinazione di costanti, funzioni e nomi di colonna collegati da uno o più operatori oppure da una sottoquery. L'espressione può inoltre includere l'espressione CASE.  
   
 > [!NOTE]  
->  Le costanti e le variabili delle stringhe diverse da Unicode usano la tabella codici corrispondente alle regole di confronto predefinite del database. Le conversioni della tabella dei codici possono presentarsi quando si usano unicamente dati di tipo carattere non Unicode e si fa riferimento ai tipi di dati carattere non Unicode **char**, **varchar** e **testo**. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] converte le costanti e le variabili delle stringhe non Unicode nella tabella codici che corrisponde alle regole di confronto della colonna con riferimenti o specificati mediante COLLATE, se tale tabella codici è diversa da quella che corrisponde a regole di confronto predefinite del database. Tutti i caratteri non trovati nella nuova tabella codici verranno convertiti in un carattere simile, se è reperibile un [mapping di migliore approssimazione](https://www.unicode.org/Public/MAPPINGS/VENDORS/MICSFT/WindowsBestFit/), altrimenti verrà convertito nel carattere di sostituzione predefinito di "?".  
+>  Le costanti e le variabili delle stringhe diverse da Unicode usano la tabella codici corrispondente alle regole di confronto predefinite del database. Le conversioni della tabella codici possono verificarsi quando si usano unicamente dati di tipo carattere non Unicode e si fa riferimento ai tipi di dati carattere non Unicode **char**, **varchar** e **text**. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] converte le costanti e le variabili delle stringhe non Unicode nella tabella codici che corrisponde alle regole di confronto della colonna con riferimenti o specificati mediante COLLATE, se tale tabella codici è diversa da quella che corrisponde a regole di confronto predefinite del database. Tutti i caratteri non trovati nella nuova tabella codici verranno convertiti in un carattere simile, se è reperibile un [mapping di migliore approssimazione](https://www.unicode.org/Public/MAPPINGS/VENDORS/MICSFT/WindowsBestFit/), altrimenti verrà convertito nel carattere di sostituzione predefinito di "?".  
 >  
 > Quando si usano più tabelle codici, le costanti carattere possono essere precedute dalla lettera maiuscola 'N ' e possono essere usate variabili Unicode, per evitare conversioni delle tabelle codici.  
   
@@ -217,7 +217,7 @@ FROM Production.ProductPhoto
 WHERE LargePhotoFileName LIKE '%greena_%' ESCAPE 'a' ;  
 ```  
   
-### <a name="b-using-where-and-like-syntax-with-unicode-data"></a>B. Utilizzo della clausola WHERE e della sintassi LIKE con dati Unicode  
+### <a name="b-using-where-and-like-syntax-with-unicode-data"></a>b. Utilizzo della clausola WHERE e della sintassi LIKE con dati Unicode  
  Nell'esempio seguente viene utilizzata la clausola `WHERE` per recuperare l'indirizzo postale delle società con sede al di fuori degli Stati Uniti (`US`) e in città il cui nome inizia con `Pa`.  
   
 ```  

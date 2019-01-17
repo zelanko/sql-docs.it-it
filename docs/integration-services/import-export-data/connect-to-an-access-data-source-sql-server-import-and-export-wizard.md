@@ -11,12 +11,12 @@ ms.assetid: b44c159a-c33d-4f3c-bdb8-9832f35317c8
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: c49ec9733634d0b8eb5f6523eb6fd7f416b5f408
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: fb847f12e7b9a508d880033da7e66a426b757791
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47829469"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53202640"
 ---
 # <a name="connect-to-an-access-data-source-sql-server-import-and-export-wizard"></a>Connettersi a un'origine dati Access (Importazione/Esportazione guidata SQL Server)
 Questo argomento illustra come connettersi a un'origine dati **Microsoft Access** dalla pagina **Scelta origine dati** o **Scelta destinazione** dell'Importazione/Esportazione guidata SQL Server.
@@ -46,8 +46,8 @@ L'elenco dei provider di dati può contenere diverse voci per Microsoft Access. 
  **Nome file**  
 Specificare il percorso e il nome del file Access. Ad esempio, **C:\\MyData.mdb** per un file nel computer locale o **\\\\Sales\\Database\\Northwind.mdb** per un file in una condivisione di rete. In alternativa, fare clic su **Sfoglia**. 
 
- >   [!NOTE] 
- > Se si fa clic su **Sfoglia** per individuare il file Access, la finestra di dialogo **Apri** applica per impostazione predefinita un filtro per i file con formato ed estensione di file MDB. Il provider di dati è in grado tuttavia di aprire anche i file con il nuovo formato ed estensione di file ACCDB.
+> [!NOTE]
+> Se si fa clic su **Sfoglia** per individuare il file Access, la finestra di dialogo **Apri** applica per impostazione predefinita un filtro per i file con formato ed estensione di file MDB. Il provider di dati è in grado tuttavia di aprire anche i file con il nuovo formato ed estensione di file ACCDB.
   
  **Sfoglia**  
  Consente di individuare il file di database tramite la finestra di dialogo **Apri**.  

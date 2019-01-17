@@ -26,12 +26,12 @@ author: uc-msft
 ms.author: umajay
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ad662f209361dbffd8096bd7605cb5ad0e01a9d5
-ms.sourcegitcommit: 5d6e1c827752c3aa2d02c4c7653aefb2736fffc3
+ms.openlocfilehash: 8c8a970d96475d2682bc58246aa2383bf19e8365
+ms.sourcegitcommit: 467b2c708651a3a2be2c45e36d0006a5bbe87b79
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/10/2018
-ms.locfileid: "49072045"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53979737"
 ---
 # <a name="dbcc-freeproccache-transact-sql"></a>DBCC FREEPROCCACHE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-pdw-md.md)]
@@ -131,7 +131,7 @@ DBCC FREEPROCCACHE può essere annullato durante l'esecuzione.
   
 ## <a name="limitations-and-restrictions-for-includesssdwincludessssdw-mdmd-and-includesspdwincludessspdw-mdmd"></a>Limitazioni e restrizioni per [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] e [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
 DBCC FREEPROCCACHE non può essere eseguito all'interno di una transazione.
-DBCC FREEPROCCAHCE non è supportato in un'istruzione EXPLAIN.
+DBCC FREEPROCCACHE non è supportato in un'istruzione EXPLAIN.
   
 ## <a name="metadata-for-includesssdwincludessssdw-mdmd-and-includesspdwincludessspdw-mdmd"></a>Metadati per [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] e [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
 Quando viene eseguito DBCC FREEPROCCACHE, viene aggiunta una nuova riga alla vista di sistema sys.pdw_exec_requests.
@@ -171,7 +171,7 @@ DBCC FREEPROCCACHE (0x060006001ECA270EC0215D05000000000000000000000000);
 GO  
 ```  
   
-### <a name="b-clearing-all-plans-from-the-plan-cache"></a>B. Cancellazione di tutti i piani dalla cache dei piani  
+### <a name="b-clearing-all-plans-from-the-plan-cache"></a>b. Cancellazione di tutti i piani dalla cache dei piani  
 Nell'esempio seguente vengono cancellati tutti gli elementi dalla cache dei piani. La clausola WITH `NO_INFOMSGS` viene specificata per impedire la visualizzazione del messaggio di informazioni.
   
 ```sql  

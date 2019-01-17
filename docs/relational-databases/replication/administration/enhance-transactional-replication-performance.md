@@ -22,12 +22,12 @@ ms.assetid: 67084a67-43ff-4065-987a-3b16d1841565
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: a5c17d05b00c711c311e41ac98add0e6fd549f58
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 67f22e0608493ba3f33144c8d97b9cb275a5c506
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52535761"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53207090"
 ---
 # <a name="enhance-transactional-replication-performance"></a>Miglioramento delle prestazioni della replica transazionale
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -142,11 +142,11 @@ Il risultato di questo esempio è uno stato in cui nessuna sessione esegue i com
 
 Durante questo periodo di timeout query è possibile rilevare le tendenze seguenti nei contatori delle prestazioni dell'agente di distribuzione: 
 
-- Il valore del contatore delle prestazioni **Dist:Comandi recapitati/sec** è sempre 0.
-- Il valore del contatore delle prestazioni **Dist:Transazioni recapitate/sec** è sempre 0.
-- Il valore del contatore delle prestazioni **Dist:Latenza recapito** aumenta fino a quando non viene risolto il deadlock del thread.
+- Il valore del contatore delle prestazioni **Dist: Comandi recapitati/sec** è sempre 0.
+- Il valore del contatore delle prestazioni **Dist: Transazioni recapitate/sec** è sempre 0.
+- Il valore del contatore delle prestazioni **Dist: Latenza recapito** aumenta fino a quando non viene risolto il deadlock del thread.
 
-L'argomento "Replication Distribution Agent" della documentazione online di SQL Server contiene la descrizione seguente per il parametro *SubscriptionStreams*: "Se si verifica un errore di esecuzione o di commit di una delle connessioni, tutte le connessioni interromperanno il batch corrente e l'agente userà un singolo flusso per ripetere i batch non riusciti."
+L'argomento relativo all'agente di distribuzione repliche nella documentazione online di Microsoft SQL Server contiene la descrizione seguente per il parametro *SubscriptionStreams*: "Se si verifica un errore di esecuzione o di commit di una delle connessioni, tutte le connessioni interromperanno il batch corrente e l'agente utilizzerà un singolo flusso per ripetere i batch non riusciti".
 
 L'agente di distribuzione usa una sessione per riprovare l'applicazione del batch che non era riuscita. Dopo aver applicato correttamente il batch, l'agente di distribuzione riprende l'uso di più sessioni senza riavviare il computer.
 
@@ -156,7 +156,7 @@ L'agente di distribuzione usa una sessione per riprovare l'applicazione del batc
 Il commit di un set di transazioni presenta un overhead fisso. Se si esegue il commit di un numero maggiore di transazioni con una frequenza minore, l'overhead viene distribuito in un volume più ampio di dati.  L'aumento di CommitBatchSize (fino a 200) può migliorare le prestazioni, perché viene eseguito il commit di più transazioni nel Sottoscrittore. Tuttavia, il vantaggio offerto dall'aumento del valore di questo parametro decade in quanto il costo dell'applicazione delle modifiche è controllato da altri fattori, come l'I/O massimo del disco che contiene il log. È anche necessario tenere presente che gli eventuali errori che causano il riavvio delle operazioni dell'agente di distribuzione richiedono l'esecuzione del rollback e la nuova applicazione di un numero maggiore di transazioni. Per le reti non affidabili, un valore più basso può generare meno errori nonché il rollback e la riapplicazione di un numero inferiore di transazioni in caso di errore.  
   
 
-##<a name="see-more"></a>Altre informazioni
+## <a name="see-more"></a>Altre informazioni
   
 [Usare i profili agenti di replica](../../../relational-databases/replication/agents/work-with-replication-agent-profiles.md)  
 [Visualizzare e modificare i parametri del prompt dei comandi dell'agente di replica &#40;SQL Server Management Studio&#41;](../../../relational-databases/replication/agents/view-and-modify-replication-agent-command-prompt-parameters.md)  

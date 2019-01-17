@@ -24,12 +24,12 @@ ms.assetid: 3c7df676-4843-44d0-8c1c-a9ab7e593b70
 author: uc-msft
 ms.author: umajay
 manager: craigg
-ms.openlocfilehash: 3f4236452b1bda93c7e69b2577e4b2bfa5ded592
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: 10bf0b318c4a9f6b549dc53d2f89a0a0640d813b
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51698750"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53207304"
 ---
 # <a name="dbcc-indexdefrag-transact-sql"></a>DBCC INDEXDEFRAG (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -121,7 +121,7 @@ DBCC INDEXDEFRAG (AdventureWorks2012, 'Production.Product', PK_Product_ProductID
 GO  
 ```  
   
-### <a name="b-using-dbcc-showcontig-and-dbcc-indexdefrag-to-defragment-the-indexes-in-a-database"></a>B. Utilizzo di DBCC SHOWCONTIG e DBCC INDEXDEFRAG per deframmentare gli indici di un database  
+### <a name="b-using-dbcc-showcontig-and-dbcc-indexdefrag-to-defragment-the-indexes-in-a-database"></a>b. Utilizzo di DBCC SHOWCONTIG e DBCC INDEXDEFRAG per deframmentare gli indici di un database  
  Nell'esempio seguente viene illustrato un metodo semplice per deframmentare tutti gli indici di un database il cui livello di frammentazione è superiore alla soglia massima specificata.  
   
 ```sql  

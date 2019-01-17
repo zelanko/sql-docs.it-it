@@ -21,12 +21,12 @@ ms.assetid: c5579976-97c4-4123-be0c-d0b98a9e38fb
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: a5af2e9a7ad54c76d2c6fb6e5854803a652dc2ca
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 3146d04acc0a74096af2cc2f04341eaa1b2a68fe
+ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47799019"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53589825"
 ---
 # <a name="grant-service-broker-permissions-transact-sql"></a>GRANT - autorizzazioni per Service Broker (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -56,19 +56,19 @@ GRANT permission  [ ,...n ] ON
  *permission*  
  Specifica un'autorizzazione che può essere concessa per un'entità a protezione diretta di Service Broker.  Vedere l'elenco riportato di seguito.  
   
- CONTRACT **::***contract_name*  
+ CONTRACT **::**_contract_name_  
  Specifica il contratto per cui viene concessa l'autorizzazione. Il qualificatore di ambito "::" è obbligatorio.  
   
- MESSAGE TYPE **::***message_type_name*  
+ MESSAGE TYPE **::**_message_type_name_  
  Specifica il tipo di messaggio per cui viene concessa l'autorizzazione. Il qualificatore di ambito "::" è obbligatorio.  
   
- REMOTE SERVICE BINDING **::***remote_binding_name*  
+ REMOTE SERVICE BINDING **::**_remote_binding_name_  
  Specifica l'associazione al servizio remoto per cui viene concessa l'autorizzazione. Il qualificatore di ambito "::" è obbligatorio.  
   
- ROUTE **::***route_name*  
+ ROUTE **::**_route_name_  
  Specifica la route per cui viene concessa l'autorizzazione. Il qualificatore di ambito "::" è obbligatorio.  
   
- SERVICE **::***service_name*  
+ SERVICE **::**_service_name_  
  Specifica il servizio per cui viene concessa l'autorizzazione. Il qualificatore di ambito "::" è obbligatorio.  
   
  *database_principal*  
@@ -78,7 +78,7 @@ GRANT permission  [ ,...n ] ON
   
 -   ruolo del database  
   
--   ruolo dell'applicazione  
+-   ruolo applicazione  
   
 -   utente del database sul quale viene eseguito il mapping a un account di accesso di Windows  
   
@@ -100,7 +100,7 @@ GRANT permission  [ ,...n ] ON
   
 -   ruolo del database  
   
--   ruolo dell'applicazione  
+-   ruolo applicazione  
   
 -   utente del database sul quale viene eseguito il mapping a un account di accesso di Windows  
   

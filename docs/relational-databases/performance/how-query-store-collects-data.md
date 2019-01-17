@@ -10,16 +10,16 @@ ms.topic: conceptual
 helpviewer_keywords:
 - Query Store, data collection
 ms.assetid: 8d5eec36-0013-480a-9c11-183e162e4c8e
-author: MikeRayMSFT
-ms.author: mikeray
+author: julieMSFT
+ms.author: jrasnick
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: a5d262b72fec278e037c99662d1d5aecd93190cf
-ms.sourcegitcommit: c7febcaff4a51a899bc775a86e764ac60aab22eb
+ms.openlocfilehash: c2e84a286cb4fa59c25426e9b1e8e8506fb51d91
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "52711073"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53370543"
 ---
 # <a name="how-query-store-collects-data"></a>Come Archivio query raccoglie i dati
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
@@ -39,7 +39,7 @@ ms.locfileid: "52711073"
 |**sys.query_store_query**|Voci di query che vengono monitorate e forzate separatamente nell'Archivio query. Un singolo testo di query può generare più voci di query se viene eseguito con impostazioni di contesto diverse o se viene eseguito all'esterno anziché all'interno di moduli [!INCLUDE[tsql](../../includes/tsql-md.md)] diversi, ovvero stored procedure, trigger e così via.|  
 |**sys.query_store_plan**|Presenta il piano stimato per la query con le statistiche della fase di compilazione. Il piano archiviato è equivalente al piano che si otterrebbe usando `SET SHOWPLAN_XML ON`.|  
 |**sys.query_store_runtime_stats_interval**|Archivio query divide il tempo in finestre temporali (intervalli) generate automaticamente e archivia le statistiche aggregate per tale intervallo per ogni piano eseguito. La dimensione dell'intervallo è controllata dall'opzione di configurazione Intervallo raccolta statistiche (in [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]) o `INTERVAL_LENGTH_MINUTES` usando [Opzioni di ALTER DATABASE SET &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-set-options.md).|  
-|**sys.query_store_runtime_stats**|Statistiche di runtime aggregate per i piani eseguiti. Tutte le metriche acquisite sono espresse nella forma di quattro funzioni statistiche: media, minimo, massimo e deviazione standard.|  
+|**sys.query_store_runtime_stats**|Statistiche di runtime aggregate per i piani eseguiti. Tutte le metriche acquisite sono espresse sotto forma di 4 funzioni statistiche: Media, Minimo, Massimo, Deviazione standard.|  
   
  Per altre informazioni sulle viste di Query Store, vedere la sezione **Viste, funzioni e procedure correlate** di [Monitoraggio delle prestazioni con Query Store](monitoring-performance-by-using-the-query-store.md).  
   

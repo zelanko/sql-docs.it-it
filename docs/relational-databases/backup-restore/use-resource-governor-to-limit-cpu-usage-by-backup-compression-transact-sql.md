@@ -17,12 +17,12 @@ ms.assetid: 01796551-578d-4425-9b9e-d87210f7ba72
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 6ea2daec0d2926588e80ade4a5e41cc602da58b3
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d3094df3f5fff3a0dbeb70573236432202420224
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47649359"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53210540"
 ---
 # <a name="use-resource-governor-to-limit-cpu-usage-by-backup-compression-transact-sql"></a>Utilizzo di Resource Governor per limitare l'utilizzo della CPU da parte della compressione dei backup (Transact-SQL)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -45,7 +45,7 @@ ms.locfileid: "47649359"
 ##  <a name="setup_login_and_user"></a> Impostazione di un account di accesso e di un utente per operazioni con priorità bassa  
  Per lo scenario presentato in questo argomento sono necessari un account di accesso e un utente di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] con priorità bassa. Il nome utente verrà utilizzato per classificare sessioni in esecuzione con l'account di accesso e per indirizzarle a un gruppo del carico di lavoro di Resource Governor che limita l'utilizzo della CPU.  
   
- Nella procedura seguente vengono descritte le operazioni necessarie per impostare un account di accesso e un utente a tale scopo. Viene quindi illustrato l'esempio [!INCLUDE[tsql](../../includes/tsql-md.md)] "Esempio A. Impostazione di un account di accesso e di un utente (Transact-SQL)".  
+ Nella procedura seguente vengono descritte le operazioni necessarie per impostare un account di accesso e un utente. Viene quindi illustrato l'esempio [!INCLUDE[tsql](../../includes/tsql-md.md)] "Esempio A: Impostazione di un account di accesso e di un utente (Transact-SQL)".  
   
 ### <a name="to-set-up-a-login-and-database-user-for-classifying-sessions"></a>Per impostare un account di accesso e un utente del database per classificare sessioni  
   
@@ -79,7 +79,7 @@ ms.locfileid: "47649359"
   
      Per altre informazioni, vedere [GRANT - autorizzazioni per entità di database &#40;Transact-SQL&#41;](../../t-sql/statements/grant-database-principal-permissions-transact-sql.md).  
   
-### <a name="example-a-setting-up-a-login-and-user-transact-sql"></a>Esempio A. Impostazione di un accesso e di un utente (Transact-SQL)  
+### <a name="example-a-setting-up-a-login-and-user-transact-sql"></a>Esempio A: Impostazione di un account di accesso e di un utente (Transact-SQL)  
  L'esempio seguente è rilevante solo se si sceglie di creare un nuovo account di accesso e un nuovo utente di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] per eseguire backup con priorità bassa. In alternativa, è possibile utilizzare un account di accesso e un utente esistenti, se appropriati.  
   
 > [!IMPORTANT]  
@@ -186,7 +186,7 @@ GO
     ALTER RESOURCE GOVERNOR RECONFIGURE;  
     ```  
   
-### <a name="example-b-configuring-resource-governor-transact-sql"></a>Esempio B. Configurazione di Resource Governor (Transact-SQL)  
+### <a name="example-b-configuring-resource-governor-transact-sql"></a>Esempio B: Configurazione di Resource Governor (Transact-SQL)  
  Nell'esempio seguente vengono effettuati i passaggi seguenti all'interno di un'unica transazione:  
   
 1.  Creazione del pool di risorse `pMAX_CPU_PERCENT_20` .  
@@ -200,7 +200,7 @@ GO
  Dopo l'esecuzione del commit della transazione, nell'esempio vengono applicate le modifiche di configurazione richieste nell'istruzione ALTER WORKLOAD GROUP o ALTER RESOURCE POOL.  
   
 > [!IMPORTANT]  
->  L'esempio seguente usa il nome dell'utente di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] di esempio creato in "Esempio A. Impostazione di un accesso e di un utente (Transact-SQL)", ossia *domain_name*`\MAX_CPU`. Sostituire questo nome con quello dell'utente relativo all'account di accesso che si intende utilizzare per la creazione di backup compressi con priorità bassa.  
+>  Nell'esempio seguente viene usato il nome dell'utente di esempio [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] creato in "Esempio A: Impostazione di un accesso e di un utente (Transact-SQL)", *nome_dominio*`\MAX_CPU`. Sostituire questo nome con quello dell'utente relativo all'account di accesso che si intende utilizzare per la creazione di backup compressi con priorità bassa.  
   
 ```sql  
 -- Configure Resource Governor.  
@@ -264,7 +264,7 @@ GO
 ##  <a name="creating_compressed_backup"></a> Compressione di backup utilizzando una sessione con utilizzo della CPU limitato  
  Per creare un backup compresso in una sessione con un utilizzo massimo della CPU limitato, accedere come l'utente specificato nella funzione di classificazione. Nel comando di backup specificare WITH COMPRESSION ([!INCLUDE[tsql](../../includes/tsql-md.md)]) o selezionare **Comprimi backup** ([!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]). Per creare un backup compresso del database, vedere [Creazione di un backup completo del database &#40;SQL Server&#41;](../../relational-databases/backup-restore/create-a-full-database-backup-sql-server.md).  
   
-### <a name="example-c-creating-a-compressed-backup-transact-sql"></a>Esempio C. Creazione di un backup compresso (Transact-SQL)  
+### <a name="example-c-creating-a-compressed-backup-transact-sql"></a>Esempio C: Creazione di un backup compresso (Transact-SQL)  
  Nell'esempio seguente [BACKUP](../../t-sql/statements/backup-transact-sql.md) viene creato un backup compresso completo del database [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] nel nuovo file di backup formattato `Z:\SQLServerBackups\AdvWorksData.bak`.  
   
 ```sql  

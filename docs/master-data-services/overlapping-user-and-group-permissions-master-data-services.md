@@ -5,8 +5,7 @@ ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: mds
 ms.reviewer: ''
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.topic: conceptual
 helpviewer_keywords:
 - users [Master Data Services], resolving permissions
@@ -16,12 +15,12 @@ ms.assetid: 31c3cf7d-17d4-4474-b6a7-ffcb9fc45b37
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 9c8e5c76ceffe53f2b2ee4dd759db748ae58f7b2
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 6b337b716905523d78d3e49d60477c7b6f29f72f
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47606589"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52765323"
 ---
 # <a name="overlapping-user-and-group-permissions-master-data-services"></a>Autorizzazioni utenti e gruppi sovrapposte (Master Data Services)
 
@@ -81,7 +80,7 @@ ms.locfileid: "47606589"
   
  Il gruppo 2 ha l'autorizzazione **Read** per un gruppo di membri in un nodo gerarchia.  
   
- Risultato: l'autorizzazione utente valida è **Update** per i membri.  
+ Risultato: l'autorizzazione valida dell'utente è **Update** per i membri.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Modalità di determinazione delle autorizzazioni &#40;Master Data Services&#41;](../master-data-services/how-permissions-are-determined-master-data-services.md)   

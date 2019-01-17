@@ -5,19 +5,18 @@ ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: mds
 ms.reviewer: ''
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.topic: conceptual
 ms.assetid: d694a105-69b1-4ff6-99d3-1f408b916b81
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 20fad19ffa9d5d82c83321f63236b066e3e1c781
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b0dc4612ff2d77558a04062704df61e1f93b58ec
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47849839"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52774103"
 ---
 # <a name="create-an-index-master-data-services"></a>Creare un indice (Master Data Services)
 
@@ -61,13 +60,13 @@ ms.locfileid: "47849839"
   
  Quando si fa clic su un indice, vengono visualizzate le informazioni seguenti.  
   
--   **Creato da**: nome dell'utente che ha creato l'indice.  
+-   **Creato da**: Nome dell'utente che ha creato l'indice.  
   
--   **Il**: la data e l'ora di creazione dell'indice.  
+-   **Il**: data e ora di creazione dell'indice.  
   
--   **Aggiornato da**: nome dell'ultimo utente che ha aggiornato l'indice.  
+-   **Aggiornato da**: nome dell'utente che ha aggiornato l'indice per ultimo.  
   
--   **Il**: la data e l'ora dell'ultimo aggiornamento dell'indice.  
+-   **Il**: data e ora dell'ultimo aggiornamento dell'indice.  
   
 ## <a name="next-steps"></a>Next Steps  
  [Modificare ed eliminare un indice &#40;Master Data Services&#41;](../master-data-services/edit-and-delete-an-index-master-data-services.md)  

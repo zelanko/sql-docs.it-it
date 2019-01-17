@@ -5,19 +5,18 @@ ms.date: 07/08/2016
 ms.prod: sql
 ms.prod_service: mds
 ms.reviewer: ''
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.topic: conceptual
 ms.assetid: ad530f60-d480-4457-ba7a-93a10c8a1695
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 657308bcf378b6e35a360a2c6ad39a807c03e086
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: d83bf40c6f5621f694f4ca6a5251dfb148c29ddf
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52392341"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52764603"
 ---
 # <a name="what39s-new-in-master-data-services-mds"></a>Novità in Master Data Services (MDS)
 
@@ -82,7 +81,7 @@ ms.locfileid: "52392341"
   
  Ora l'autorizzazione di amministratore può essere assegnata a un utente in modo esplicito al livello del modello. Ciò significa che l'utente non perderà l'autorizzazione di amministratore se in un secondo momento gli vengono assegnate autorizzazioni nel sottoalbero di modello, ad esempio per il livello di entità.  
   
- In questa versione di [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] vengono forniti altri livelli di autorizzazioni grazie all'introduzione di questi nuovi tipi: lettura, creazione, aggiornamento ed eliminazione. Ad esempio, un utente che ha solo l'autorizzazione di aggiornamento ora può aggiornare i dati master senza creare o eliminare i dati. Quando si concede l'autorizzazione di creazione, aggiornamento o eliminazione, all'utente viene assegnata automaticamente anche l'autorizzazione di lettura. È anche possibile combinare le autorizzazioni di lettura, creazione, aggiornamento ed eliminazione.  
+ In questa versione di [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] vengono forniti altri livelli di autorizzazioni grazie all'introduzione dei nuovi tipi di autorizzazione Lettura, Creazione, Aggiornamento ed Eliminazione. Ad esempio, un utente che ha solo l'autorizzazione di aggiornamento ora può aggiornare i dati master senza creare o eliminare i dati. Quando si concede l'autorizzazione di creazione, aggiornamento o eliminazione, all'utente viene assegnata automaticamente anche l'autorizzazione di lettura. È anche possibile combinare le autorizzazioni di lettura, creazione, aggiornamento ed eliminazione.  
   
  Durante l'aggiornamento a [!INCLUDE[ssSQL15](../includes/sssql15-md.md)][!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], le autorizzazioni precedenti vengono convertite nelle nuove autorizzazioni, come illustrato nella tabella seguente.  
   
@@ -91,7 +90,7 @@ ms.locfileid: "52392341"
 |L'utente che installa inizialmente [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] ha l'autorizzazione di amministratore del server.|L'utente ha l'autorizzazione della funzione Utente con privilegi avanzati|  
 |L'utente ha autorizzazioni di aggiornamento al livello del modello e nessuna autorizzazione nel sottoalbero di modello, quindi è implicitamente un amministratore del modello.|L'utente ha autorizzazioni di amministratore esplicite al livello del modello.|  
 |L'utente ha autorizzazioni di sola lettura.|L'utente ha autorizzazioni di accesso in lettura.|  
-|L'utente ha autorizzazioni di aggiornamento.|L'utente ha tutte e quattro le autorizzazioni di accesso: creazione, aggiornamento, eliminazione e lettura.|  
+|L'utente ha autorizzazioni di aggiornamento.|L'utente ha tutte le quattro autorizzazioni di accesso: Creazione, Aggiornamento, Eliminazione e Lettura.|  
 |L'utente ha autorizzazioni di negazione|L'utente ha autorizzazioni di negazione|  
   
  Per altre informazioni sulle autorizzazioni, vedere [Sicurezza &#40;Master Data Services&#41;](../master-data-services/security-master-data-services.md).  
@@ -229,7 +228,7 @@ ms.locfileid: "52392341"
    
  **Pacchetti di distribuzione per i modelli di esempio aggiornati**  
   
- I pacchetti di esempio sono stati aggiornati per supportare nuovi scenari. Per altre informazioni, vedere [Esempi: pacchetti di distribuzione di modelli (MDS)](../master-data-services/sql-server-samples-model-deployment-packages-mds.md).  
+ I pacchetti di esempio sono stati aggiornati per supportare nuovi scenari. Per altre informazioni, vedere [Esempi di SQL Server: pacchetti di distribuzione di modelli (MDS)](../master-data-services/sql-server-samples-model-deployment-packages-mds.md).  
   
 ## <a name="see-also"></a>Vedere anche  
  [Funzionalità di Master Data Services e Data Quality Services supportate dalle edizioni di SQL Server 2016](../master-data-services/master-data-services-and-data-quality-services-features-support.md)  

@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.custom: ''
 ms.technology: configuration
-ms.openlocfilehash: 47d911c6a05af96d042211f98b5365230dd57084
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: d89d70b7aae73acd965f053a993432c62878351f
+ms.sourcegitcommit: 467b2c708651a3a2be2c45e36d0006a5bbe87b79
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52525198"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53979647"
 ---
 # <a name="configure-sql-server-to-send-feedback-to-microsoft"></a>Configurare SQL Server per inviare commenti e suggerimenti a Microsoft
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -96,11 +96,11 @@ I clienti aziendali possono configurare impostazioni di Criteri di gruppo per co
 > [!NOTE]
 > {Versione principale} fa riferimento alla versione di SQL Server, ad esempio 140 per SQL Server 2017
 
-- Per SQL Server Management Studio:
+- Per SQL Server Management Studio 17:
   
-    Sottochiave = HKEY_CURRENT_USER\Software\Microsoft\Microsoft SQL Server\140
+    Sottochiave = HKEY_CURRENT_USER\Software\Microsoft\SQL Server Management Studio\14.0
 
-    Nome RegEntry = CustomerFeedback
+    RegEntry name = UserFeedbackOptIn
 
     Tipo voce DWORD: 0 rifiuto esplicito; 1 consenso esplicito
 
@@ -114,6 +114,13 @@ I clienti aziendali possono configurare impostazioni di Criteri di gruppo per co
 
     I Criteri di gruppo basati sul Registro di sistema per queste sottochiavi del Registro di sistema vengono rispettati dalla raccolta di dati di utilizzo di SQL Server 2017.
 
+- Per SQL Server Management Studio 18:
+    
+    Sottochiave = HKEY_CURRENT_USER\Software\Microsoft\SQL Server Management Studio\18.0_IsoShell
+
+    RegEntry name = UserFeedbackOptIn
+
+    Tipo voce DWORD: 0 rifiuto esplicito; 1 consenso esplicito
 ## <a name="set-registry-subkeys-for-crash-dump-collection"></a>Impostare le sottochiavi del Registro di sistema per la raccolta di dump di arresto anomalo del sistema
 
 In modo analogo al comportamento in una versione precedente di SQL Server, i clienti aziendali di SQL Server 2017 possono configurare impostazioni di Criteri di gruppo nel server per acconsentire o meno in modo esplicito alla raccolta di dump di arresto anomalo del sistema. Questa operazione viene eseguita tramite la configurazione di un criterio basato sul Registro di sistema. Le sottochiavi del Registro di sistema e le impostazioni pertinenti sono le seguenti: 
@@ -124,7 +131,7 @@ In modo analogo al comportamento in una versione precedente di SQL Server, i cli
 
     Nome RegEntry = EnableErrorReporting
 
-    Tipo voce DWORD: 0 rifiuto esplicito ; 1 consenso esplicito
+    Tipo voce DWORD: 0 rifiuto esplicito; 1 consenso esplicito
  
     {IDIstanza} fa riferimento al tipo di istanza e all'istanza, come negli esempi seguenti: 
 
@@ -139,7 +146,7 @@ In modo analogo al comportamento in una versione precedente di SQL Server, i cli
 
     Nome RegEntry = EnableErrorReporting
 
-    Tipo voce DWORD: 0 rifiuto esplicito ; 1 consenso esplicito
+    Tipo voce DWORD: 0 rifiuto esplicito; 1 consenso esplicito
 
 > [!NOTE]
 > {Versione principale} fa riferimento alla versione di SQL Server. Ad esempio, "140" indica SQL Server 2017.

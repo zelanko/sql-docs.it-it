@@ -20,12 +20,12 @@ ms.assetid: 958e95d6-fbe6-43e8-abbd-ccedbac2dbac
 author: VanMSFT
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 02920786c8ee3b4fec011dd084a8fb7fc064b69d
-ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
+ms.openlocfilehash: 55867a7740bd0a37d789a870ef043350b22e5376
+ms.sourcegitcommit: 467b2c708651a3a2be2c45e36d0006a5bbe87b79
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43807367"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53979388"
 ---
 # <a name="alter-asymmetric-key-transact-sql"></a>ALTER ASYMMETRIC KEY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -61,7 +61,7 @@ ALTER ASYMMETRIC KEY Asym_Key_Name <alter_option>
  WITH PRIVATE KEY  
  Modifica la protezione della chiave privata.  
   
- ENCRYPTION BY PASSWORD **='***stongPassword***'**  
+ ENCRYPTION BY PASSWORD **='***strongPassword***'**  
  Specifica una nuova password per proteggere la chiave privata. *password* deve soddisfare i requisiti per i criteri password di Windows del computer che sta eseguendo l'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Se questa opzione viene omessa, la chiave privata verrà crittografata con la chiave master del database.  
   
  DECRYPTION BY PASSWORD **='***oldPassword***'**  
@@ -98,7 +98,7 @@ ALTER ASYMMETRIC KEY PacificSales09
 GO  
 ```  
   
-### <a name="b-removing-the-private-key-from-an-asymmetric-key"></a>B. Rimozione della chiave privata da una chiave asimmetrica  
+### <a name="b-removing-the-private-key-from-an-asymmetric-key"></a>b. Rimozione della chiave privata da una chiave asimmetrica  
  Nell'esempio seguente viene rimossa la chiave privata da `PacificSales19`, lasciando solo la chiave pubblica.  
   
 ```  

@@ -26,19 +26,19 @@ ms.assetid: 63163843-226f-42d3-9e2c-b634fbf06943
 author: uc-msft
 ms.author: umajay
 manager: craigg
-ms.openlocfilehash: eafe617f4586863dba9bed75a14cee2623cb54e7
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 1cebd9e5b52e2aa80308e266858da014b13f267c
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47821539"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53206730"
 ---
 # <a name="dbcc-opentran-transact-sql"></a>DBCC OPENTRAN (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
 DBCC OPENTRAN consente di identificare le transazioni attive che potrebbero impedire il troncamento del log. In DBCC OPENTRAN vengono visualizzate informazioni sulle transazioni attive meno recenti e sulle eventuali transazioni di replica meno recenti, distribuite e non, all'interno del log delle transazioni del database specificato, se presenti. I risultati vengono visualizzati solo se nel log è presente una transazione attiva o se il database contiene informazioni di replica. In assenza di transazioni attive nel log, viene visualizzato un messaggio informativo.
   
-> [!NOTE]  
+> [!NOTE]
 >  L'istruzione DBCC OPENTRAN non è supportata per server di pubblicazione non [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
@@ -113,7 +113,7 @@ DBCC execution completed. If DBCC printed error messages, contact your system ad
 > [!NOTE]  
 >  Il risultato di "UID (ID utente)" non è significativo e sarà rimosso in una prossima versione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
-### <a name="b-specifying-the-with-tableresults-option"></a>B. Specifica dell'opzione WITH TABLERESULTS  
+### <a name="b-specifying-the-with-tableresults-option"></a>b. Specifica dell'opzione WITH TABLERESULTS  
 Nell'esempio seguente vengono caricati i risultati del comando DBCC OPENTRAN in una tabella temporanea.
   
 ```sql  

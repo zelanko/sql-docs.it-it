@@ -1,6 +1,7 @@
 ---
-title: Modificare il contesto del cluster HADR dell'istanza del server (SQL Server) | Microsoft Docs
-ms.custom: ''
+title: Cambiare il cluster che gestisce i metadati per le repliche in un gruppo di disponibilità
+description: Quando si esegue una migrazione tra cluster, cambiare il cluster che gestisce i metadati per le repliche di disponibilità all'interno di un gruppo di disponibilità Always On cambiando il contesto del cluster HADR di un'istanza di SQL Server.
+ms.custom: seodec18
 ms.date: 05/17/2016
 ms.prod: sql
 ms.reviewer: ''
@@ -14,14 +15,14 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 940fc70407c6a4131719818bbbc87049c93fab6b
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.openlocfilehash: def5873f53093abfc13ed0968229671a012af839
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51605702"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53202130"
 ---
-# <a name="change-the-hadr-cluster-context-of-server-instance-sql-server"></a>Modificare il contesto del cluster HADR dell'istanza del server (SQL Server)
+# <a name="change-which-cluster-manages-the-metadata-for-replicas-in-an-always-on-availability-group"></a>Cambiare il cluster che gestisce i metadati per le repliche in un gruppo di disponibilità Always On
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
@@ -37,9 +38,9 @@ ms.locfileid: "51605702"
   
      [Indicazioni](#Recommendations)  
   
-     [Security](#Security)  
+     [Sicurezza](#Security)  
   
--   **Per cambiare il contesto del cluster di una replica di disponibilità mediante**  [Transact-SQL](#TsqlProcedure)  
+-   **Per cambiare il contesto del cluster di una replica di disponibilità mediante:**  [Transact-SQL](#TsqlProcedure)  
   
 -   **Completamento:**  [dopo aver cambiato il contesto del cluster di una replica di disponibilità](#FollowUp)  
   
@@ -103,7 +104,7 @@ ms.locfileid: "51605702"
   
     -   Accesso remoto a WSFC in lettura e scrittura.  
   
-##  <a name="TsqlProcedure"></a> Uso di Transact-SQL  
+##  <a name="TsqlProcedure"></a> Utilizzo di Transact-SQL  
  **Per modificare il contesto del cluster WSFC di una replica di disponibilità**  
   
 1.  Connettersi all'istanza del server che ospita la replica primaria o una replica secondaria del gruppo di disponibilità.  
@@ -168,7 +169,7 @@ SELECT cluster_name FROM sys.dm_hadr_cluster
   
 -   [Articoli tecnici su SQL Server 2012](https://msdn.microsoft.com/library/bb418445\(SQL.10\).aspx)  
   
--   [SQL Server AlwaysOn Team Blog: blog ufficiale del team di SQL Server AlwaysOn](https://blogs.msdn.microsoft.com/sqlalwayson/)  
+-   [SQL Server Always On Team Blog (Blog di SQL Server Always On): blog ufficiale del team di SQL Server Always On](https://blogs.msdn.microsoft.com/sqlalwayson/)  
   
 ## <a name="see-also"></a>Vedere anche  
  [Gruppi di disponibilità AlwaysOn &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/always-on-availability-groups-sql-server.md)   

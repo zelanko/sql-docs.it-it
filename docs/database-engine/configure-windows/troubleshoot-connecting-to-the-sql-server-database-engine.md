@@ -14,27 +14,27 @@ ms.assetid: 474c365b-c451-4b07-b636-1653439f4b1f
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: c491a67b55db4a730db2bb7fcd8977162657e516
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 853f3c26f729db2256ad859174eeef16d4698453
+ms.sourcegitcommit: 85fd3e1751de97a16399575397ab72ebd977c8e9
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52410908"
+ms.lasthandoff: 12/17/2018
+ms.locfileid: "53531076"
 ---
 # <a name="troubleshoot-connecting-to-the-sql-server-database-engine"></a>Risolvere i problemi di connessione al motore di database di SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 Di seguito sono elencate tutte le tecniche di risoluzione dei problemi che è possibile usare quando non è possibile connettersi al motore di database di SQL Server. I passaggi non seguono l'ordine dei problemi più frequenti dei quali probabilmente sono già stati tentati i passaggi. I passaggi seguono invece un ordine basato sulla complessità, dai problemi di base ai problemi più complessi. Nei passaggi si presuppone che la connessione a SQL Server venga stabilita da un altro computer usando il protocollo TCP/IP, che è la situazione più comune. I passaggi sono stati scritti per SQL Server 2016 con SQL Server e le applicazioni client che eseguono Windows 10. I passaggi tuttavia si applicano in genere alle altre versioni di SQL Server e ad altri sistemi operativi con leggere differenze.
 
-Le istruzioni fornite risultano particolarmente utili per la risoluzione dell'errore di "**connessione al server**" con numero di errore 11001 o 53, gravità 20, stato 0 e di messaggi di errore quali:
+Le istruzioni specificate risultano particolarmente utili per la risoluzione dell'errore "**Connect to Server**"(Connessione al server) con numero di errore: 11001 o 53, gravità: 20, stato: 0 e di messaggi di errore quali:
 
 *   "Si è verificato un errore di rete o specifico dell'istanza mentre si cercava di stabilire una connessione con SQL Server. Server non trovato o non accessibile. Verificare che il nome dell'istanza sia corretto e che il server sia configurato in modo da consentire connessioni remote. " 
 
-*   "(provider: Provider named pipe, errore: 40 - Impossibile aprire una connessione a SQL Server) (Microsoft SQL Server, Errore: 53)" o "(provider: Provider TCP, errore: 0 - Host sconosciuto.) (Microsoft SQL Server, Errore: 11001)" 
+*   "(provider: Provider named pipe, errore: 40 - Non è stato possibile aprire una connessione a SQL Server) (Microsoft SQL Server, errore: 53)" oppure "(provider: provider TCP, errore: 0 - No such host is known.) (Host sconosciuto) (Microsoft SQL Server, errore: 11001)" 
 
 Questo errore indica in genere che non è possibile trovare il computer SQL Server o che il numero di porta TCP non è noto, non è corretto o è bloccato da un firewall.
 
->  [!TIP]
+> [!TIP]
 >  Una pagina di risoluzione interattiva è disponibile dal Supporto Tecnico Microsoft [!INCLUDE[msCoName_md](../../includes/msconame-md.md)] in [Risoluzionedei problemi di connettività a SQL Server](https://support.microsoft.com/help/4009936/solving-connectivity-errors-to-sql-server).
 
 ### <a name="not-included"></a>Errori non inclusi
@@ -64,8 +64,8 @@ Questo errore indica in genere che non è possibile trovare il computer SQL Serv
     2.  Nel Visualizzatore log fare clic sul pulsante **Filtro** sulla barra degli strumenti. Nella casella **Testo contenuto nel messaggio** digitare **Il server è in attesa su**, fare clic su **Applica filtro**e quindi fare clic su **OK**.
     3.  Viene visualizzato un messaggio simile a **Il server è in attesa su [ 'qualsiasi' \<ipv4> 1433]**. Questo messaggio indica che l'istanza di SQL Server è in attesa su tutti gli indirizzi IP nel computer in uso (per la versione IP 4) ed è in attesa sulla porta TCP 1433. La porta TCP 1433 è in genere la porta usata dal motore di database. Poiché una porta può essere usata da una sola istanza di SQL Server, in presenza di più istanze di SQL Server installate è necessario che alcune istanze usino altri numeri di porta. Prendere nota del numero di porta usato dall'istanza di [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] a cui si sta cercando di connettersi. 
 
-    >    [!NOTE] 
-    >    Verrà probabilmente indicato l'indirizzo IP 127.0.0.1. Si tratta dell'indirizzo della scheda di loopback cui è possibile connettersi soltanto da processi nello stesso computer. Può essere utile per la risoluzione dei problemi, ma non può essere usato per la connessione da un altro computer.
+    > [!NOTE] 
+    > Verrà probabilmente indicato l'indirizzo IP 127.0.0.1. Si tratta dell'indirizzo della scheda di loopback cui è possibile connettersi soltanto da processi nello stesso computer. Può essere utile per la risoluzione dei problemi, ma non può essere usato per la connessione da un altro computer.
 
 ## <a name="enable-protocols"></a>Abilitare i protocolli
 
@@ -98,20 +98,20 @@ Prima di risolvere un problema di connessione da un altro computer, verificare i
 |Istanza predefinita|Nome del computer|ACCNT27|
 |Istanza denominata|Nome del computer\nome dell'istanza|ACCNT27\PAYROLL|
 
->  [!NOTE] 
+> [!NOTE]
 >  Per la connessione a SQL Server da un'applicazione client nello stesso computer viene usato il protocollo Shared Memory. Poiché Shared Memory è un tipo di named pipe locale, a volte si verificano errori relativi alle pipe.
 
 Se si verifica un errore in questa fase, è necessario risolverlo prima di procedere. Possono verificarsi diversi tipi di problemi. È possibile che l'account di accesso non sia autorizzato a connettersi. Il database predefinito potrebbe non essere disponibile.
 
->    [!NOTE] 
+> [!NOTE]
 >    Alcuni messaggi di errore passati al client non forniscano intenzionalmente informazioni sufficienti per risolvere il problema. Si tratta di una misura di sicurezza per evitare di fornire informazioni su SQL Server a un utente malintenzionato. Per visualizzare informazioni complete sull'errore, esaminare il log degli errori di SQL Server. Il log contiene informazioni dettagliate. Se si verifica l'errore **18456 L'accesso non è riuscito per l'utente**, vedere l'argomento [MSSQLSERVER_18456](../../relational-databases/errors-events/mssqlserver-18456-database-engine-error.md) della documentazione online che include informazioni aggiuntive sui codici di errore. Un blog di Aaron Bertrand include un elenco completo dei codici di errore in [Troubleshooting Error 18456](https://www2.sqlblog.com/blogs/aaron_bertrand/archive/2011/01/14/sql-server-v-next-denali-additional-states-for-error-18456.aspx)(Risoluzione dell'errore 18456). Se si è in grado di stabilire la connessione, è possibile visualizzare il log degli errori con SSMS nella sezione Gestione di Esplora oggetti. In caso contrario, è possibile visualizzare il log degli errori con il Blocco note di Windows. Il percorso predefinito varia in base alla versione e può essere modificato durante l'installazione. Il percorso predefinito per [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] è `C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\MSSQL\Log\ERRORLOG`.  
 
 4.   Se è possibile connettersi tramite Shared Memory, testare la connessione usando TCP. È possibile forzare una connessione TCP specificando **tcp:** prima del nome. Ad esempio
 
 |Connessione a:|Tipo:|Esempio:|
 |-----------------|---------------|-----------------|
-|Istanza predefinita|tcp: nome del computer|tcp:ACCNT27|
-|Istanza denominata|tcp: nome del computer/nome dell'istanza|tcp:ACCNT27\PAYROLL|
+|Istanza predefinita|tcp: Nome del computer|tcp:ACCNT27|
+|Istanza denominata|tcp: Nome del computer/nome dell'istanza|tcp:ACCNT27\PAYROLL|
   
 Se è possibile connettersi con Shared Memory e non con TCP, è necessario correggere il problema TCP. La causa più probabile è che TCP non sia abilitato. Per abilitare TCP, vedere i passaggi descritti sopra in **Abilitare i protocolli** .
 
@@ -144,7 +144,7 @@ Entrambi questi problemi sono correlati al servizio SQL Server Browser che indic
   * Avviare il servizio SQL Server Browser. Tornare a **Raccolta di informazioni sull'istanza di SQL Server**, sezione 1.d.
   * Il servizio SQL Server Browser è bloccato dal firewall. Aprire la porta UDP 1434 nel firewall. Tornare alla sezione **Apertura di una porta nel firewall**. Assicurarsi di aprire una porta UDP e non TCP. Si tratta di porte diverse.
   * Le informazioni sulla porta UDP 1434 sono bloccate da un router. La comunicazione UDP (User Datagram Protocol) non è progettata per passare tramite router. In questo modo la rete viene occupata da traffico con priorità bassa. Dovrebbe essere possibile configurare il router per l'inoltro del traffico UDP oppure è possibile decidere di comunicare sempre il numero di porta quando si stabilisce la connessione.
-  * Se il computer client usa Windows 7, Windows Server 2008 o un sistema operativo più recente, è possibile che il traffico UDP venga eliminato dal sistema operativo client poiché la risposta del server viene restituita da un indirizzo IP diverso da quello richiesto. Si tratta di una misura di sicurezza che blocca il "loose source mapping". Per altre informazioni, vedere la sezione **Più indirizzi IP del server** dell'argomento [Risoluzione dei problemi: Timeout scaduto](https://msdn.microsoft.com/library/ms190181.aspx)della documentazione online. Sebbene si tratti di un articolo relativo a SQL Server 2008 R2, le nozioni fornite sono ancora valide. Dovrebbe essere possibile configurare il client in modo che venga usato l'indirizzo IP corretto oppure è possibile decidere di comunicare sempre il numero di porta quando si stabilisce la connessione.
+  * Se il computer client usa Windows 7, Windows Server 2008 o un sistema operativo più recente, è possibile che il traffico UDP venga eliminato dal sistema operativo client poiché la risposta del server viene restituita da un indirizzo IP diverso da quello richiesto. Si tratta di una misura di sicurezza che blocca il "loose source mapping". Per altre informazioni, vedere la sezione **Più indirizzi IP del server** dell'argomento della documentazione online [Risoluzione dei problemi: Timeout scaduto](https://msdn.microsoft.com/library/ms190181.aspx). Sebbene si tratti di un articolo relativo a SQL Server 2008 R2, le nozioni fornite sono ancora valide. Dovrebbe essere possibile configurare il client in modo che venga usato l'indirizzo IP corretto oppure è possibile decidere di comunicare sempre il numero di porta quando si stabilisce la connessione.
      
 3. Quando è possibile connettersi usando l'indirizzo IP o l'indirizzo IP e il nome dell'istanza per un'istanza denominata, provare a connettersi usando il nome del computer o il nome del computer e il nome dell'istanza per un'istanza denominata. Inserire `tcp:` prima del nome del computer per forzare una connessione TCP/IP. Ad esempio, per l'istanza predefinita in un computer denominato `ACCNT27`usare `tcp:ACCNT27` . Per un'istanza denominata `PAYROLL`nello stesso computer usare `tcp:ACCNT27\PAYROLL` . Se è possibile connettersi usando l'indirizzo IP ma non è possibile farlo usando il nome del computer, significa che c'è un problema di risoluzione dei nomi. Tornare alla parte 4 della sezione **Test della connettività TCP/IP**.
 

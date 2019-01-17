@@ -8,15 +8,15 @@ ms.technology: security
 ms.topic: conceptual
 ms.assetid: a62f4ff9-2953-42ca-b7d8-1f8f527c4d66
 author: egranet
-ms.author: esgranet
+ms.author: aliceku
 manager: ajayj
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 18dd28aeb4c1678b4b6ae454c065d3d96770cb5a
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: cec6c79fadb5ef2a63145fff3efe0df3c8cd0f9d
+ms.sourcegitcommit: 467b2c708651a3a2be2c45e36d0006a5bbe87b79
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52539111"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53980457"
 ---
 # <a name="static-data-masking"></a>Maschera dati statica
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -104,7 +104,7 @@ Di seguito è riportata una guida dettagliata per l'esecuzione della maschera da
  
  ![Elenco a discesa delle funzioni di maschera](../../relational-databases/security/media/sql-static-data-masking/masking_functions.PNG)
  
- Nota: la maggior parte di queste funzioni di maschera ha parametri di configurazione aggiuntivi. Per la maschera selezionata in ordine casuale, la maschera dati statica include un parametro predefinito. Per la maschera selezionata in ordine casuale gruppo, la maschera a valore singolo e la maschera con stringa composita, i parametri di configurazione devono essere specificati dall'utente. Per modificare o specificare i parametri di configurazione, fare clic sull'opzione **Configura…** e specificare un valore (alternativo) per il parametro nella finestra di dialogo visualizzata. Descrizioni dettagliate di ogni funzione di maschera sono disponibili in [Funzioni di maschera](#masking-functions).
+ NOTA: la maggior parte di queste funzioni di maschera ha parametri di configurazione aggiuntivi. Per la maschera selezionata in ordine casuale, la maschera dati statica include un parametro predefinito. Per la maschera selezionata in ordine casuale gruppo, la maschera a valore singolo e la maschera con stringa composita, i parametri di configurazione devono essere specificati dall'utente. Per modificare o specificare i parametri di configurazione, fare clic sull'opzione **Configura…** e specificare un valore (alternativo) per il parametro nella finestra di dialogo visualizzata. Descrizioni dettagliate di ogni funzione di maschera sono disponibili in [Funzioni di maschera](#masking-functions).
  
  ![Pulsante di configurazione delle funzioni di maschera](../../relational-databases/security/media/sql-static-data-masking/masking_functions_configure.png)
  
@@ -125,7 +125,7 @@ Di seguito è riportata una guida dettagliata per l'esecuzione della maschera da
 6. La maschera dati statica crea una cartella denominata Maschera dati statica all'interno della cartella **Documenti** dell'utente e vi inserisce i file di log. I file di log possono essere utili per le attività di debug. Il nome del file di log è indicato nella parte inferiore della finestra di configurazione. 
   
  
-7. (Solo SQL Server) Se si usa la maschera dati statica in un database locale, questa eseguirà un'operazione di backup/ripristino. In **Step 2: Clone .BAK file Location** (Passaggio 2: Percorso del file .BAK clone), specificare il percorso nel server in cui verrà archiviato il file di backup. 
+7. (Solo SQL Server) Se si usa la maschera dati statica in un database locale, questa eseguirà un'operazione di backup/ripristino. In **Step 2: Clone .BAK file Location** (Passaggio 2: Percorso del file .BAK clone) specificare il percorso nel server in cui verrà archiviato il file di backup. 
 
 ## <a name="masking-functions"></a>Funzioni di maschera
 

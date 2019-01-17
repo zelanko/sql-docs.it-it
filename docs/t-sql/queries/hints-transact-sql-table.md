@@ -37,12 +37,12 @@ ms.assetid: 8bf1316f-c0ef-49d0-90a7-3946bc8e7a89
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 8bbde02754a5cfe9d1a164f025b7442e12167802
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b866f40fddcd5fa12082c296036492ec894d2989
+ms.sourcegitcommit: c9d33ce831723ece69f282896955539d49aee7f8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47713369"
+ms.lasthandoff: 12/12/2018
+ms.locfileid: "53306268"
 ---
 # <a name="hints-transact-sql---table"></a>Hint (Transact-SQL) - Tabella
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -69,7 +69,6 @@ ms.locfileid: "47713369"
 ## <a name="syntax"></a>Sintassi  
   
 ```  
-  
 WITH  ( <table_hint> [ [, ]...n ] )  
   
 <table_hint> ::=   
@@ -127,9 +126,9 @@ WITH **(** \<table_hint> **)** [ [**,** ]...*n* ]
 Con alcune eccezioni, gli hint di tabella sono supportati nella clausola FROM solo se vengono specificati con la parola chiave WITH. Tali hint devono inoltre essere racchiusi tra parentesi.  
   
 > [!IMPORTANT]  
->  L'omissione della parola chiave WITH è una funzionalità deprecata: [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]  
+> L'omissione della parola chiave WITH è una funzionalità deprecata: [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]  
   
-Gli hint di tabella seguenti sono supportati sia con, sia senza la parola chiave WITH: NOLOCK, READUNCOMMITTED, UPDLOCK, REPEATABLEREAD, SERIALIZABLE, READCOMMITTED, TABLOCK, TABLOCKX, PAGLOCK, ROWLOCK, NOWAIT, READPAST, XLOCK, SNAPSHOT e NOEXPAND. Se vengono specificati senza la parola chiave WITH, questi hint devono essere specificati da soli. Ad esempio  
+Gli hint di tabella seguenti sono supportati con e senza la parola chiave WITH: NOLOCK, READUNCOMMITTED, UPDLOCK, REPEATABLEREAD, SERIALIZABLE, READCOMMITTED, TABLOCK, TABLOCKX, PAGLOCK, ROWLOCK, NOWAIT, READPAST, XLOCK, SNAPSHOT e NOEXPAND. Se vengono specificati senza la parola chiave WITH, questi hint devono essere specificati da soli. Ad esempio  
   
 ```sql  
 FROM t (TABLOCK)  
@@ -147,7 +146,7 @@ Si consiglia di separare gli hint di tabella tramite virgole.
 >  L'utilizzo di spazi al posto delle virgole per separare gli hint è una funzionalità deprecata: [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)]  
   
 NOEXPAND  
-Specifica che qualsiasi vista indicizzata non verrà espansa per accedere alle tabelle sottostanti quando Query Optimizer elabora la query. In Query Optimizer la vista viene gestita come una tabella con indici cluster. L'hint NOEXPAND è applicabile solo alle viste indicizzate. Per altre informazioni, vedere la sezione Osservazioni.  
+Specifica che qualsiasi vista indicizzata non verrà espansa per accedere alle tabelle sottostanti quando Query Optimizer elabora la query. In Query Optimizer la vista viene gestita come una tabella con indici cluster. L'hint NOEXPAND è applicabile solo alle viste indicizzate. Per altre informazioni, vedere [Utilizzo di NOEXPAND](#using-noexpand).  
   
 INDEX  **(**_index\_value_ [**,**... _n_ ] ) | INDEX =  ( _index\_value_**)**  
 La sintassi INDEX() consente di specificare i nomi o gli ID di uno o più indici che devono essere usati in Query Optimizer quando viene elaborata l'istruzione. La sintassi alternativa INDEX = specifica un singolo valore di indice. È possibile specificare solo un hint per l'indice per ogni tabella.  
@@ -157,7 +156,7 @@ Se esiste un indice cluster, INDEX(0) attiva un'analisi degli indici cluster, me
  Se in un unico elenco di hint vengono usati più indici, gli indici duplicati vengono ignorati, mentre gli altri indici vengono usati per recuperare le righe della tabella. L'ordine degli indici nell'hint è significativo. Un hint con più indici impone inoltre il collegamento degli indici tramite operatore AND e Query Optimizer applica il numero massimo di condizioni possibili a ogni indice a cui viene effettuato l'accesso. Se la raccolta di indici con hint non include tutte le colonne a cui la query fa riferimento, viene eseguita un'operazione di recupero delle colonne rimanenti dopo che tutte le colonne indicizzate sono state recuperate da [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)].  
   
 > [!NOTE]  
->  Se in una tabella dei fatti in un join a stella viene usato un hint per l'indice che fa riferimento a più indici, l'hint per l'indice viene ignorato e verrà restituito un messaggio di avviso. Non è inoltre consentito il collegamento degli indici tramite OR per una tabella per la quale è stato specificato un hint per l'indice.  
+> Se in una tabella dei fatti in un join a stella viene usato un hint per l'indice che fa riferimento a più indici, l'hint per l'indice viene ignorato e verrà restituito un messaggio di avviso. Non è inoltre consentito il collegamento degli indici tramite OR per una tabella per la quale è stato specificato un hint per l'indice.  
   
  Un hint di tabella può includere al massimo 250 indici non cluster.  
   
@@ -167,9 +166,9 @@ Applicabile solo in un'istruzione INSERT se viene usata l'opzione BULK con [OPEN
  Specifica che il valore o i valori Identity presenti nel file di dati importato devono essere usati per la colonna Identity. Se KEEPIDENTITY viene omesso, i valori Identity per questa colonna vengono verificati ma non importati e Query Optimizer assegna automaticamente valori univoci in base ai valori di inizializzazione e di incremento specificati in fase di creazione della tabella.  
   
 > [!IMPORTANT]  
->  Se il file di dati non contiene valori per la colonna Identity nella tabella o nella vista, tale colonna deve essere ignorata, a meno che non sia l'ultima colonna della tabella. Per altre informazioni, vedere [Usare un file di formato per escludere un campo di dati &#40;SQL Server&#41;](../../relational-databases/import-export/use-a-format-file-to-skip-a-data-field-sql-server.md). Se una colonna Identity viene ignorata correttamente, Query Optimizer assegna automaticamente valori univoci per la colonna Identity nelle righe importate della tabella.  
+> Se il file di dati non contiene valori per la colonna Identity nella tabella o nella vista, tale colonna deve essere ignorata, a meno che non sia l'ultima colonna della tabella. Per altre informazioni, vedere [Usare un file di formato per escludere un campo di dati &#40;SQL Server&#41;](../../relational-databases/import-export/use-a-format-file-to-skip-a-data-field-sql-server.md). Se una colonna Identity viene ignorata correttamente, Query Optimizer assegna automaticamente valori univoci per la colonna Identity nelle righe importate della tabella.  
   
-Per un esempio di utilizzo di questo hint in un'istruzione INSERT ... SELECT * FROM OPENROWSET(BULK...), vedere [Mantenere i valori Identity durante l'importazione bulk dei dati &#40;SQL Server&#41;](../../relational-databases/import-export/keep-identity-values-when-bulk-importing-data-sql-server.md).  
+Per un esempio di questo hint in un'istruzione `INSERT ... SELECT * FROM OPENROWSET(BULK...)`, vedere [Mantenere i valori Identity durante l'importazione bulk dei dati &#40;SQL Server&#41;](../../relational-databases/import-export/keep-identity-values-when-bulk-importing-data-sql-server.md).  
   
 Per altre informazioni sul controllo del valore Identity per una tabella, vedere [DBCC CHECKIDENT &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-checkident-transact-sql.md).  
   
@@ -221,9 +220,9 @@ Quando si specifica FORCESEEK con parametri di indice, è opportuno considerare 
 -   Per gli indici partizionati, la colonna di partizionamento aggiunta in modo implicito da [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] non può essere specificata nell'hint FORCESEEK.  
   
 > [!CAUTION]  
-> Se si specifica FORCESEEK con parametri, il numero di piani che possono essere considerati da Query Optimizer viene limitato più di quanto avvenga se si specifica FORCESEEK senza parametri. In questo caso potrebbe venire generato un errore "Impossibile generare il piano" con maggiore frequenza. In una versione futura, le modifiche interne a Query Optimizer potrebbero consentire di prendere in considerazione più piani.  
+> Se si specifica FORCESEEK con parametri, il numero di piani che possono essere considerati da Query Optimizer viene limitato più di quanto avvenga se si specifica FORCESEEK senza parametri. Ciò potrebbe causare un errore `Plan cannot be generated` in più casi. In una versione futura le modifiche interne a Query Optimizer potrebbero consentire di prendere in considerazione più piani.  
   
-FORCESCAN **Si applica a**: da [!INCLUDE[ssKilimanjaro](../../includes/ssKilimanjaro-md.md)] SP1 a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].
+FORCESCAN **Si applica a**: : da [!INCLUDE[ssKilimanjaro](../../includes/ssKilimanjaro-md.md)] SP1 a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].
 Specifica che Query Optimizer deve usare solo un'operazione di analisi dell'indice come percorso di accesso alla tabella o alla vista a cui viene fatto riferimento. L'hint FORCESCAN può essere utile per le query in cui, a causa della valutazione errata (in difetto) del numero di righe interessate da parte di Query Optimizer, viene eseguita un'operazione di ricerca anziché di analisi. In questo caso, la quantità di memoria concessa per l'operazione è troppo ridotta, con conseguente calo delle prestazioni di query.  
   
 È possibile specificare FORCESCAN con o senza un hint INDEX. Quando viene specificato in combinazione con un hint per l'indice (`INDEX = index_name, FORCESCAN`), in Query Optimizer vengono presi in considerazione solo i percorsi di accesso all'analisi nell'indice specificato per accedere alla tabella a cui viene fatto riferimento. FORCESCAN può essere specificato con l'hint per l'indice INDEX(0) per forzare un'operazione di analisi delle tabelle nella tabella di base.  
@@ -408,7 +407,7 @@ Tuttavia, affinché Query Optimizer utilizzi le viste indicizzate oppure una vis
   
  L'opzione NUMERIC_ROUNDABORT deve invece essere impostata su OFF.  
   
- Per forzare l'utilizzo di un indice per una vista indicizzata in Query Optimizer, è necessario specificare l'opzione NOEXPAND. Questo hint può essere usato solo se la vista è specificata anche nella query. In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] non è disponibile un hint per forzare l'utilizzo di una vista indicizzata specifica in una query in cui tale vista non viene specificata direttamente nella clausola FROM. In Query Optimizer viene tuttavia valutata la possibilità di usare le viste indicizzate, anche se non sono presenti riferimenti diretti a tali viste all'interno della query.  
+ Per forzare l'utilizzo di un indice per una vista indicizzata in Query Optimizer, è necessario specificare l'opzione NOEXPAND. Questo hint può essere usato solo se la vista è specificata anche nella query. In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] non è disponibile un hint per forzare l'utilizzo di una vista indicizzata specifica in una query in cui tale vista non viene specificata direttamente nella clausola FROM. In Query Optimizer viene tuttavia valutata la possibilità di usare le viste indicizzate, anche se non sono presenti riferimenti diretti a tali viste all'interno della query. SQL Server creerà automaticamente solo le statistiche relative a una vista indicizzata quando si usa un hint di tabella NOEXPAND. L'omissione di questo hint può causare la generazione di avvisi del piano di esecuzione relativi alla perdita di statistiche che non possono essere risolti creando manualmente le statistiche. Durante l'ottimizzazione della query [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] userà le statistiche della vista create automaticamente o manualmente quando la query fa riferimento alla vista direttamente e viene usato l'hint NOEXPAND.    
   
 ## <a name="using-a-table-hint-as-a-query-hint"></a>Utilizzo di un hint di tabella come hint per la query  
  Gli *hint di tabella* possono anche essere specificati come hint per la query tramite la clausola OPTION (TABLE HINT). È consigliabile usare un hint di tabella come hint per la query solo nel contesto di una [guida di piano](../../relational-databases/performance/plan-guides.md). Per le query ad hoc, specificare questi hint solo come hint di tabella. Per altre informazioni, vedere [Hint per la query &#40;Transact-SQL&#41;](../../t-sql/queries/hints-transact-sql-query.md).  
@@ -429,7 +428,7 @@ WHERE ProductNumber LIKE 'BK-%';
 GO  
 ```  
   
-### <a name="b-using-the-forceseek-hint-to-specify-an-index-seek-operation"></a>B. Utilizzo dell'hint FORCESEEK per specificare un'operazione di ricerca nell'indice  
+### <a name="b-using-the-forceseek-hint-to-specify-an-index-seek-operation"></a>b. Utilizzo dell'hint FORCESEEK per specificare un'operazione di ricerca nell'indice  
  Nell'esempio seguente viene utilizzato l'hint FORCESEEK senza specificare un indice per forzare l'esecuzione di un'operazione Index Seek da parte di Query Optimizer nella tabella `Sales.SalesOrderDetail` del database [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)].  
   
 ```sql

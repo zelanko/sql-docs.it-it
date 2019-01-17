@@ -39,12 +39,12 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 9ab6a40f49ce64e4e157c4eacccb59b6135ed4ff
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: b5e69a2ebd97a554620914ffba5ea20c6a08aa21
+ms.sourcegitcommit: 467b2c708651a3a2be2c45e36d0006a5bbe87b79
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52520851"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53980327"
 ---
 # <a name="update-transact-sql"></a>UPDATE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -327,7 +327,7 @@ GO
   
  Se l'istruzione UPDATE modifica più righe durante l'aggiornamento della chiave di clustering e di una o più colonne di tipo **text**, **ntext** o **image**, l'aggiornamento parziale di queste colonne viene eseguito come sostituzione completa dei valori.  
   
-> [!IMPORTANT]  
+> [!IMPORTANT]
 >  I tipi di dati **ntext**, **text** e **image** verranno rimossi in una versione futura di [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Evitare di utilizzare questi tipi di dati in un nuovo progetto di sviluppo e prevedere interventi di modifica nelle applicazioni che attualmente li utilizzano. Usare in alternativa [nvarchar(max)](../../t-sql/data-types/nchar-and-nvarchar-transact-sql.md), [varchar(max)](../../t-sql/data-types/char-and-varchar-transact-sql.md)e [varbinary(max)](../../t-sql/data-types/binary-and-varbinary-transact-sql.md) .  
   
 ### <a name="updating-large-value-data-types"></a>Aggiornamento dei tipi di dati per valori di grandi dimensioni  
@@ -463,7 +463,7 @@ ID     Value
   
 ## <a name="security"></a>Security  
   
-### <a name="permissions"></a>Autorizzazioni  
+### <a name="permissions"></a>Permissions  
  Le autorizzazioni UPDATE sono necessarie nella tabella di destinazione. Se l'istruzione UPDATE include una clausola WHERE oppure l'argomento *expression* nella clausola SET usa una colonna della tabella, sono anche necessarie le autorizzazioni per l'esecuzione dell'istruzione SELECT nella tabella da aggiornare.  
   
  Le autorizzazioni per l'istruzione UPDATE vengono assegnate per impostazione predefinita ai membri del ruolo predefinito del server **sysadmin**, dei ruoli predefiniti del database **db_owner** e **db_datawriter** e al proprietario della tabella. I membri dei ruoli **sysadmin**, **db_owner** e **db_securityadmin** e il proprietario della tabella possono trasferire autorizzazioni ad altri utenti.  
@@ -497,7 +497,7 @@ UPDATE Person.Address
 SET ModifiedDate = GETDATE();  
 ```  
   
-#### <a name="b-updating-multiple-columns"></a>B. Aggiornamento di più colonne  
+#### <a name="b-updating-multiple-columns"></a>b. Aggiornamento di più colonne  
  Nell'esempio seguente vengono aggiornati i valori nelle colonne `Bonus`, `CommissionPct` e `SalesQuota` per tutte le righe nella tabella `SalesPerson`.  
   
 ```sql  
@@ -546,7 +546,7 @@ GO
 ```  
   
 #### <a name="e-using-the-with-commontableexpression-clause"></a>E. Utilizzo della clausola WITH common_table_expression  
- Nell'esempio seguente viene aggiornato il valore `PerAssemnblyQty` per tutte le parti e tutti i componenti utilizzati direttamente o indirettamente per creare `ProductAssemblyID 800`. L'espressione di tabella comune restituisce un elenco gerarchico di parti utilizzate direttamente per compilare `ProductAssemblyID 800` e di parti utilizzate per compilare tali componenti e così via. Vengono modificate solo le righe restituite dall'espressione di tabella comune.  
+ Nell'esempio seguente viene aggiornato il valore `PerAssemblyQty` per tutte le parti e tutti i componenti utilizzati direttamente o indirettamente per creare `ProductAssemblyID 800`. L'espressione di tabella comune restituisce un elenco gerarchico di parti utilizzate direttamente per compilare `ProductAssemblyID 800` e di parti utilizzate per compilare tali componenti e così via. Vengono modificate solo le righe restituite dall'espressione di tabella comune.  
   
 ```sql  
 USE AdventureWorks2012;  
@@ -762,7 +762,7 @@ GO
  Gli esempi di questa sezione illustrano come aggiornare le righe in una tabella di destinazione remota tramite un [server collegato](../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md) o una [funzione per i set di righe](../../t-sql/functions/rowset-functions-transact-sql.md) per fare riferimento alla tabella remota.  
   
 #### <a name="o-updating-data-in-a-remote-table-by-using-a-linked-server"></a>O. Aggiornamento di dati in una tabella remota tramite un server collegato  
- Nell'esempio seguente viene aggiornata una tabella in un server remoto. L'esempio inizia con la creazione di un collegamento all'origine dati remota tramite [sp_addlinkedserver](../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md). Il nome del server collegato, `MyLinkServer`, viene quindi specificato come parte del nome dell'oggetto in quattro parti nel formato server.catalogo.schema.oggetto. Si noti che è necessario specificare un nome server valido per `@datasrc`.  
+ Nell'esempio seguente viene aggiornata una tabella in un server remoto. L'esempio inizia con la creazione di un collegamento all'origine dati remota tramite [sp_addlinkedserver](../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md). Il nome del server collegato, `MyLinkedServer`, viene quindi specificato come parte del nome dell'oggetto in quattro parti nel formato server.catalogo.schema.oggetto. Si noti che è necessario specificare un nome server valido per `@datasrc`.  
   
 ```sql  
 USE master;  
@@ -770,7 +770,7 @@ GO
 -- Create a link to the remote data source.   
 -- Specify a valid server name for @datasrc as 'server_name' or 'server_nameinstance_name'.  
   
-EXEC sp_addlinkedserver @server = N'MyLinkServer',  
+EXEC sp_addlinkedserver @server = N'MyLinkedServer',  
     @srvproduct = N' ',  
     @provider = N'SQLNCLI10',   
     @datasrc = N'<server name>',  
@@ -781,7 +781,7 @@ GO
 -- Specify the remote data source using a four-part name   
 -- in the form linked_server.catalog.schema.object.  
   
-UPDATE MyLinkServer.AdventureWorks2012.HumanResources.Department  
+UPDATE MyLinkedServer.AdventureWorks2012.HumanResources.Department  
 SET GroupName = N'Public Relations'  
 WHERE DepartmentID = 4;  
 ```  
@@ -790,18 +790,18 @@ WHERE DepartmentID = 4;
  L'esempio seguente aggiorna una riga in una tabella remota specificando la funzione per i set di righe [OPENQUERY](../../t-sql/functions/openquery-transact-sql.md). Viene utilizzato il nome del server collegato creato nell'esempio precedente.  
   
 ```sql  
-UPDATE OPENQUERY (MyLinkServer, 'SELECT GroupName FROM HumanResources.Department WHERE DepartmentID = 4')   
+UPDATE OPENQUERY (MyLinkedServer, 'SELECT GroupName FROM HumanResources.Department WHERE DepartmentID = 4')   
 SET GroupName = 'Sales and Marketing';  
 ```  
   
 #### <a name="q-updating-data-in-a-remote-table-by-using-the-opendatasource-function"></a>Q. Aggiornamento di dati in una tabella remota tramite una funzione OPENDATASOURCE  
- L'esempio seguente inserisce una riga in una tabella remota tramite la funzione per i set di righe [OPENDATASOURCE](../../t-sql/functions/opendatasource-transact-sql.md). Specificare un nome server valido per l'origine dati usando il formato *nome_server* oppure *nome_server\nome_istanza*. Potrebbe essere necessario configurare l'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] per Ad Hoc Distributed Queries. Per altre informazioni, vedere [Opzione di configurazione del server ad hoc distributed queries](../../database-engine/configure-windows/ad-hoc-distributed-queries-server-configuration-option.md).  
-  
-```sql  
-UPDATE OPENQUERY (MyLinkServer, 'SELECT GroupName FROM HumanResources.Department WHERE DepartmentID = 4')   
-SET GroupName = 'Sales and Marketing';  
-```  
-  
+ L'esempio seguente aggiorna una riga in una tabella remota specificando la funzione per i set di righe [OPENDATASOURCE](../../t-sql/functions/opendatasource-transact-sql.md). Specificare un nome server valido per l'origine dati usando il formato *nome_server* oppure *nome_server\nome_istanza*. Potrebbe essere necessario configurare l'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] per Ad Hoc Distributed Queries. Per altre informazioni, vedere [Opzione di configurazione del server ad hoc distributed queries](../../database-engine/configure-windows/ad-hoc-distributed-queries-server-configuration-option.md).  
+
+```sql
+UPDATE OPENDATASOURCE('SQLNCLI', 'Data Source=<server name>;Integrated Security=SSPI').AdventureWorks2012.HumanResources.Department
+SET GroupName = 'Sales and Marketing' WHERE DepartmentID = 4;  
+```
+
 ###  <a name="LOBValues"></a> Aggiornamento di tipi di dati Large Object  
  Negli esempi contenuti in questa sezione vengono illustrati i metodi per l'aggiornamento di valori in colonne definite con tipi di dati LOB (Large Object).  
   

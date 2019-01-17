@@ -1,6 +1,7 @@
 ---
-title: Snapshot del database con gruppi di disponibilità Always On (SQL Server) | Microsoft Docs
-ms.custom: ''
+title: Creare uno snapshot del database per un gruppo di disponibilità
+description: Procedura per la creazione di uno snapshot per un database incluso in un gruppo di disponibilità Always On, che può essere un database primario o secondario.
+ms.custom: seodec18
 ms.date: 05/17/2016
 ms.prod: sql
 ms.reviewer: ''
@@ -13,12 +14,12 @@ ms.assetid: 7432da1c-ce2f-4cd9-af41-54c97744166b
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 434d0ef7782766cfcf5a590c6a6adc3e5e13f504
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 95a309a0742b28719e901bb54d285d5255955ba1
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47808679"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53212910"
 ---
 # <a name="database-snapshots-with-always-on-availability-groups-sql-server"></a>Snapshot del database con gruppi di disponibilità Always On (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

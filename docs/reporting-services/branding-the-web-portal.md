@@ -1,24 +1,25 @@
 ---
 title: Personalizzazione del portale Web | Microsoft Docs
-ms.date: 11/17/2017
+ms.date: 12/06/2018
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: reporting-services
+description: Questo articolo illustra come modificare l'aspetto del portale Web personalizzandolo per l'azienda tramite un pacchetto del marchio. Il pacchetto del marchio è progettato in modo che per crearlo non è necessaria una conoscenza approfondita dei fogli di stile CSS.
 ms.topic: conceptual
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 01c93f13a94533c6562516ca398d76034564beb7
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 6e3761e7bc91a219562d46cc33f0c5bbd4ca6aa3
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52397709"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53201041"
 ---
 # <a name="branding-the-web-portal"></a>Personalizzazione del portale Web
 
 [!INCLUDE[ssrs-appliesto](../includes/ssrs-appliesto.md)] [!INCLUDE[ssrs-appliesto-2016-and-later](../includes/ssrs-appliesto-2016-and-later.md)] [!INCLUDE[ssrs-appliesto-pbirsi](../includes/ssrs-appliesto-pbirs.md)]
 
-È possibile modificare l'aspetto del portale Web personalizzandolo in base all'azienda. Questa operazione viene eseguita tramite un pacchetto del marchio. Il pacchetto del marchio è stato progettato in modo che per crearlo non sia necessaria una conoscenza approfondita dei fogli di stile CSS.  
+È possibile modificare l'aspetto del portale Web personalizzandolo in base all'azienda. Questa operazione viene eseguita tramite un pacchetto del marchio. Il pacchetto del marchio è progettato in modo che per crearlo non è necessaria una conoscenza approfondita dei fogli di stile CSS.  
   
 <iframe width="560" height="315" src="https://www.youtube.com/embed/m08kLuofwFA?list=PLv2BtOtLblH3F--8WmK9QcLbx6dV_lVkL" frameborder="0" allowfullscreen></iframe>  
    
@@ -239,5 +240,7 @@ Per aggiungere, scaricare o rimuovere un pacchetto del marchio, è possibile ese
             "altTableAccent":"#fdc336"  
         }  
     }  
+
+## <a name="next-steps"></a>Passaggi successivi
 
 Altre domande? [Visitare il forum su Reporting Services](https://go.microsoft.com/fwlink/?LinkId=620231)

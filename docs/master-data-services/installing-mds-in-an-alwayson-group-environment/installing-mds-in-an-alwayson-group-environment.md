@@ -11,19 +11,19 @@ ms.assetid: ''
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 86a56f8394dbddccf00025b750256364aa51e99d
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 27ffbf76d0841479b10b515e0a66f14c8b6bfee3
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52395683"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53215820"
 ---
 # <a name="high-availability-and-disaster-recovery-for-master-data-services"></a>Disponibilità elevata e ripristino di emergenza per Master Data Services
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 
-**Riepilogo:** questo articolo illustra una soluzione per Master Data Service (MDS) ospitata nella configurazione di un gruppo di disponibilità AlwaysOn. L'articolo descrive come installare e configurare SQL 2016 Master Data Services in un gruppo di disponibilità (AG) AlwaysOn di SQL 2016. Lo scopo principale di questa soluzione consiste nel migliorare la disponibilità elevata e il recupero di emergenza dei dati di back-end di MDS ospitati in un database di SQL Server.
+**Riepilogo:** questo articolo illustra una soluzione per Master Data Services (MDS) ospitata nella configurazione di un gruppo di disponibilità AlwaysOn. L'articolo descrive come installare e configurare SQL 2016 Master Data Services in un gruppo di disponibilità (AG) AlwaysOn di SQL 2016. Lo scopo principale di questa soluzione consiste nel migliorare la disponibilità elevata e il recupero di emergenza dei dati di back-end di MDS ospitati in un database di SQL Server.
 
 ## <a name="introduction"></a>Introduzione
 
@@ -156,8 +156,8 @@ Quando la funzionalità WSFC è installata in tutte le istante, è possibile con
 7.  Nella pagina **Riepilogo** controllare eventuali messaggi di avviso o errore.
 
     Gli errori devono essere corretti. Tuttavia, gli avvisi possono non costituire un problema. Un messaggio di avviso significa che l'elemento testato potrebbe soddisfare il requisito, ma c'è qualcosa da controllare. Ad esempio, nella figura 7 è illustrato un avviso "Convalida latenza di accesso al disco" che potrebbe essere dovuto al fatto che il disco è temporaneamente occupato da altre attività. Il messaggio può essere ignorato. Per altri dettagli, vedere la documentazione online per ogni messaggio di avviso e di errore. Vedere Figura 7.
- 
-![Convalida guidata configurazione, pagina Convalida in corso](media/Fig6_ValidationTests.png)
+ 
+    ![Convalida guidata configurazione, pagina Convalida in corso](media/Fig6_ValidationTests.png)
 
     Figura 6
 
@@ -187,7 +187,7 @@ Note:
 
 -   La funzionalità WSFC potrebbe non essere disponibile in tutte le edizioni di Windows Server. Assicurarsi che l'edizione in uso abbia questa funzionalità.
 
--   Verificare di avere le autorizzazioni appropriate per configurare WSFC in Active Directory. Per altre informazioni, vedere [Failover Cluster Step-by-Step Guide: Configure Accounts in Active Directory](https://technet.microsoft.com/library/cc731002(v=ws.10).aspx) (Guida dettagliata del cluster di failover: Configurare gli account in Active Directory).
+-   Verificare di avere le autorizzazioni appropriate per configurare WSFC in Active Directory. Per altre informazioni, vedere [Guida dettagliata al cluster di failover: Configurare account in Active Directory](https://technet.microsoft.com/library/cc731002(v=ws.10).aspx).
 
 Per altre informazioni su WSFC, vedere [Cluster di failover](https://technet.microsoft.com/library/cc732488(v=ws.10).aspx).
 
@@ -305,7 +305,7 @@ Il gruppo di disponibilità può essere creato solo sui database esistenti. Pert
     Per ogni replica, configurare le impostazioni **Commit sincrono**, **Failover automatico** e **Secondario leggibile** seguenti. Vedere figura
 17.
 
-    **Commit sincrono**: in questo modo si garantisce che se viene eseguito il commit di una transazione nella replica primaria di un database, viene eseguito anche in tutte le altre repliche sincrone. Il commit asincrono non garantisce questo aspetto e potrebbe rimanere indietro rispetto alla replica primaria.
+    **Commit sincrono**: garantisce che se il commit di una transazione viene eseguito nella replica primaria di un database, viene eseguito anche in tutte le altre repliche sincrone. Il commit asincrono non garantisce questo aspetto e potrebbe rimanere indietro rispetto alla replica primaria.
 
     In genere, è consigliabile abilitare il commit sincrono solo quando i due nodi sono nello stesso data center. Se sono in data center diversi, il commit sincrono può rallentare le prestazioni del database.
 
@@ -358,7 +358,7 @@ Il gruppo di disponibilità può essere creato solo sui database esistenti. Pert
 
 3.  Fare clic su **Failover** per eseguire il failover in una replica sincrona e in una replica asincrona. In questo modo è possibile verificare che il failover avvenga senza problemi.
 
- L'installazione di AlwaysOn è stata completata.
+ L'installazione di AlwaysOn è stata completata.
 
 Per altre informazioni sul gruppo di disponibilità AlwaysOn, vedere [Gruppi di disponibilità AlwaysOn di SQL Server 2016](https://docs.microsoft.com/sql/database-engine/availability-groups/windows/always-on-availability-groups-sql-server).
 

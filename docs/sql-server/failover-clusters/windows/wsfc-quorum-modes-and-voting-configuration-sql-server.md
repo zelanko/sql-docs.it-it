@@ -14,12 +14,12 @@ ms.assetid: ca0d59ef-25f0-4047-9130-e2282d058283
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: ec96dd777f338af847602fdb4b595f9fefc76a9d
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 8cba297aa253fd4f4d7798342ccb4627f8008154
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52404096"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53215517"
 ---
 # <a name="wsfc-quorum-modes-and-voting-configuration-sql-server"></a>Modalità quorum WSFC e configurazione del voto (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -49,7 +49,7 @@ ms.locfileid: "52404096"
 > [!IMPORTANT]  
 >  Se un cluster WSFC viene impostato offline a causa di un errore del quorum, è necessario l'intervento manuale per reimpostare online il cluster.  
 >   
->  Per altre informazioni, vedere [Ripristino di emergenza WSFC tramite quorum forzato &#40;SQL Server&#41;](../../../sql-server/failover-clusters/windows/wsfc-disaster-recovery-through-forced-quorum-sql-server.md)periodico.  
+>  Per altre informazioni, vedere: [Ripristino di emergenza WSFC tramite quorum forzato &#40;SQL Server&#41;](../../../sql-server/failover-clusters/windows/wsfc-disaster-recovery-through-forced-quorum-sql-server.md).  
   
 ##  <a name="QuorumModes"></a> Modalità quorum  
  Viene impostata una *modalità quorum* al livello del cluster WSFC che specifica la metodologia utilizzata per i voti quorum.  L'utilità Gestione cluster di failover specifica una modalità quorum consigliata basata sul numero di nodi nel cluster.  
@@ -105,16 +105,16 @@ ms.locfileid: "52404096"
   
 -   **Valutare nuovamente le assegnazioni dei voti dopo il failover.** Non è consigliabile eseguire il failover in una configurazione del cluster che non supporta un quorum integro.  
   
-> [!IMPORTANT]  
+> [!IMPORTANT]
 >  Quando si convalida la configurazione dei voti quorum di WSFC, nella Creazione guidata Gruppo di disponibilità Always On viene visualizzato un avviso se una o più delle condizioni seguenti è vera:  
->   
+> 
 >  -   Il nodo del cluster che ospita la replica primaria non dispone di un voto.  
 > -   Una replica secondaria è configurata per il failover automatico e il relativo nodo del cluster non dispone di un voto.  
 > -   [KB2494036](https://support.microsoft.com/kb/2494036) non è installato in tutti i nodi del cluster che ospitano repliche di disponibilità. Questa patch è necessaria per aggiungere o rimuovere voti per i nodi del cluster in distribuzioni multisito. Tuttavia, in distribuzioni a singolo sito, non è in genere necessaria e l'avviso può essere ignorato senza rischi.  
-  
-> [!TIP]  
+> 
+> [!TIP]
 >  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] espone diverse DMW (viste a gestione dinamica) di sistema che semplificano la gestione delle impostazioni correlate alla configurazione del cluster WSFC e dei voti quorum dei nodi.  
->   
+> 
 >  Per altre informazioni, vedere  [sys.dm_hadr_cluster](../../../relational-databases/system-dynamic-management-views/sys-dm-hadr-cluster-transact-sql.md), [sys.dm_hadr_cluster_members](../../../relational-databases/system-dynamic-management-views/sys-dm-hadr-cluster-members-transact-sql.md), [sys.dm_os_cluster_nodes](../../../relational-databases/system-dynamic-management-views/sys-dm-os-cluster-nodes-transact-sql.md), [sys.dm_hadr_cluster_networks](../../../relational-databases/system-dynamic-management-views/sys-dm-hadr-cluster-networks-transact-sql.md)  
   
 ##  <a name="RelatedTasks"></a> Attività correlate  
@@ -129,7 +129,7 @@ ms.locfileid: "52404096"
   
 -   [Quorum vote configuration check in Always On Availability Group Wizards (Controllo della configurazione di voto quorum nelle procedure guidate dei gruppi di disponibilità Always On)](https://blogs.msdn.microsoft.com/sqlalwayson/2012/03/13/quorum-vote-configuration-check-in-alwayson-availability-group-wizards-andy-jing/)  
   
--   [Tecnologie di Windows Server: cluster di failover](https://technet.microsoft.com/library/cc732488\(v=WS.10\).aspx)  
+-   [Tecnologie di Windows Server:  cluster di failover](https://technet.microsoft.com/library/cc732488\(v=WS.10\).aspx)  
   
 -   [Guida dettagliata al cluster di failover: configurazione del quorum in un cluster di failover](https://technet.microsoft.com/library/cc770620\(WS.10\).aspx)  
   

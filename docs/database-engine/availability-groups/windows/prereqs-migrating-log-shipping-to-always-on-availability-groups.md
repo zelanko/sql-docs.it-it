@@ -1,6 +1,7 @@
 ---
-title: Prerequisiti di migrazione di log shipping in gruppi di disponibilità Always On | Microsoft Docs
-ms.custom: ''
+title: Prerequisiti per convertire il log shipping in gruppi di disponibilità
+description: Descrizione dei prerequisiti necessari per convertire il log shipping in un gruppo di disponibilità Always On.
+ms.custom: seodec18
 ms.date: 05/17/2016
 ms.prod: sql
 ms.reviewer: ''
@@ -13,14 +14,14 @@ ms.assetid: 2738ce65-205e-4682-92d8-dc7e37c58b2b
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: c246912b7e12690427bc296d3db277481eddc42f
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.openlocfilehash: f5dc6b48ece6318cdd1ab15e6bccd86401b05e2a
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51606921"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53214722"
 ---
-# <a name="prereqs-migrating-log-shipping-to-always-on-availability-groups"></a>Prerequisiti di migrazione di log shipping in gruppi di disponibilità Always On
+# <a name="prerequisites-to-convert-log-shipping-to-always-on-availability-groups"></a>Prerequisiti per convertire il log shipping in gruppi di disponibilità Always On
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
   In questo argomento vengono descritti i prerequisiti per convertire un database primario per il log shipping insieme a uno o più dei relativi database secondari in un database primario AlwaysOn e nei relativi database secondari.  
@@ -68,7 +69,7 @@ ms.locfileid: "51606921"
   
  **Per ulteriori informazioni:**  
   
- [Converting a logshipping configuration to Availability Group](https://blogs.msdn.microsoft.com/sqlalwayson/2012/01/09/converting-a-logshipping-configuration-to-availability-group/) (Conversione di una configurazione per il log shipping in un gruppo di disponibilità) (blog su SQL Server)  
+ [Converting a log shipping configuration to Availability Group](https://blogs.msdn.microsoft.com/sqlalwayson/2012/01/09/converting-a-logshipping-configuration-to-availability-group/) (Conversione di una configurazione per il log shipping in un gruppo di disponibilità) (blog su SQL Server)  
   
 ##  <a name="RelatedTasks"></a> Attività correlate  
  **Log shipping**  
@@ -99,13 +100,13 @@ ms.locfileid: "51606921"
   
      [Pagina relativa all'aggiunta di un database primario e di database secondari per il log shipping in un gruppo di disponibilità esistente](https://blogs.msdn.microsoft.com/sqlalwayson/2012/02/01/add-a-log-shipping-primary-database-and-secondary-databases-to-an-existing-availability-group/)  
   
-     [Pagina relativa ai blog del team di SQL Server AlwaysOn in cui è disponibile il blog del team ufficiale di SQL Server AlwaysOn](https://blogs.msdn.microsoft.com/sqlalwayson/)  
+     [SQL Server Always On Team Blogs (Blog del team di SQL Server Always On): blog ufficiale del team di SQL Server Always On](https://blogs.msdn.microsoft.com/sqlalwayson/)  
   
      [Pagina relativa ai blog del Servizio Supporto Tecnico Clienti per gli ingegneri di SQL Server](https://blogs.msdn.com/b/psssql/)  
   
 -   **White paper:**  
   
-     [Pagina relativa alla guida alla migrazione in cui viene illustrata la migrazione in gruppi di disponibilità AlwaysOn da distribuzioni precedenti in cui vengono combinati il mirroring del database e il log shipping](https://msdn.microsoft.com/library/jj635217)  
+     [Guida alla migrazione: migrazione in gruppi di disponibilità Always On da distribuzioni precedenti che combinano mirroring del database e log shipping](https://msdn.microsoft.com/library/jj635217)  
   
      [Pagina relativa ai white paper Microsoft per SQL Server 2012](https://msdn.microsoft.com/library/hh403491.aspx)  
   

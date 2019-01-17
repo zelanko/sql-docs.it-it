@@ -1,7 +1,7 @@
 ---
 title: ALTER USER (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 05/05/2017
+ms.date: 12/03/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -26,12 +26,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 2cd03ba4b9b0363ef1d8ebe9c3ff0721fc08e3f9
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 3c738f81901ca44891184ff6810eea05dac9d4c3
+ms.sourcegitcommit: 753364d8ac569c9f363d2eb6b1b8214948d2ed8c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52542270"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52826116"
 ---
 # <a name="alter-user-transact-sql"></a>ALTER USER (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -43,7 +43,7 @@ ms.locfileid: "52542270"
 ## <a name="syntax"></a>Sintassi  
   
 ```  
--- Syntax for SQL Server  
+-- Syntax for SQL Server and Azure SQL Database
   
 ALTER USER userName    
      WITH <set_item> [ ,...n ]  
@@ -56,9 +56,12 @@ ALTER USER userName
     | PASSWORD = 'password' [ OLD_PASSWORD = 'oldpassword' ]  
     | DEFAULT_LANGUAGE = { NONE | <lcid> | <language name> | <language alias> }  
     | ALLOW_ENCRYPTED_VALUE_MODIFICATIONS = [ ON | OFF ]  
-```  
-  
-```  
+```
+
+> [!IMPORTANT]
+> Gli account di accesso di Azure AD per l'Istanza gestita di database SQL sono in **anteprima pubblica**. Se applicate a utenti con account di accesso di Azure AD, per Istanza gestita di database SQL di Azure sono supportate solo le opzioni seguenti: `DEFAULT_SCHEMA = { schemaName | NULL }` e `DEFAULT_LANGUAGE = { NONE | lcid | language name | language alias }`
+
+```
 -- Syntax for Azure SQL Database  
   
 ALTER USER userName    
@@ -211,7 +214,7 @@ ALTER USER Mary5 WITH NAME = Mary51;
 GO  
 ```  
   
-### <a name="b-changing-the-default-schema-of-a-user"></a>B. Modifica dello schema predefinito di un utente  
+### <a name="b-changing-the-default-schema-of-a-user"></a>b. Modifica dello schema predefinito di un utente  
  Nell'esempio seguente lo schema predefinito dell'utente `Mary51` viene modificato in `Purchasing`.  
   
 ```  

@@ -11,12 +11,12 @@ author: jovanpop-msft
 ms.author: jovanpop
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 22365cc7a483b285f583268856a979a694eeabab
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 7b77ef114e1af3ec0d8c7a7268ae5f9b892196fe
+ms.sourcegitcommit: 0330cbd1490b63e88334a9f9e421f4bd31a6083f
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52537273"
+ms.lasthandoff: 12/05/2018
+ms.locfileid: "52886926"
 ---
 # <a name="import-json-documents-into-sql-server"></a>Importare documenti JSON in SQL Server
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -121,8 +121,6 @@ FROM 'data/product.dat'
 WITH ( DATA_SOURCE = 'MyAzureBlobStorage');
 ```
 
-Per altre informazioni e un esempio che usa OPENROWSET, vedere il post di blog sul [caricamento di file da Archiviazione BLOB di Azure nel database SQL di Azure](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2017/02/23/loading-files-from-azure-blob-storage-into-azure-sql-database/).
-
 ## <a name="parse-json-documents-into-rows-and-columns"></a>Analizzare i documenti JSON come righe e colonne
 Anziché leggere un intero file JSON come singolo valore, può essere utile analizzarlo e restituire i libri nel file e le relative proprietà in righe e colonne. L'esempio seguente usa un file JSON di [questo sito](https://github.com/tamingtext/book/blob/master/apache-solr/example/exampledocs/books.json) contenente un elenco di libri.
 
@@ -162,7 +160,7 @@ In questo esempio, OPENROWSET(BULK) legge il contenuto del file e passa il conte
 |---|---|---|---|---|
 978-0641723445|The Lightning Thief|12,5|384|Rick Riordan| 
 978-1423103349|The Sea of Monsters|6,49|304|Rick Riordan| 
-978-1857995879|Sophie’s World: The Greek Philosophers|3,07|64|Jostein Gaarder| 
+978-1857995879|Sophie's World : The Greek Philosophers|3,07|64|Jostein Gaarder| 
 978-1933988177|Lucene in Action, Second Edition|30,5|475|Michael McCandless|
 ||||||
 
@@ -170,10 +168,6 @@ A questo punto è possibile restituire questa tabella all'utente o caricare i da
 
 ## <a name="learn-more-about-json-in-sql-server-and-azure-sql-database"></a>Altre informazioni su JSON in SQL Server e nel database SQL di Azure  
   
-### <a name="microsoft-blog-posts"></a>Post del blog Microsoft  
-  
-Per soluzioni specifiche, casi d'uso e indicazioni, vedere questi [post del blog sul supporto JSON integrato](https://blogs.msdn.com/b/sqlserverstorageengine/archive/tags/json/) in SQL Server e nel database SQL di Azure.  
-
 ### <a name="microsoft-videos"></a>Video Microsoft
 
 Per un'introduzione visiva al supporto JSON predefinito in SQL Server e nel database SQL di Azure, vedere i video seguenti:

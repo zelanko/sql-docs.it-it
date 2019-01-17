@@ -19,12 +19,12 @@ ms.assetid: 69b756e0-a1df-45b3-8a24-6ded8658aefe
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 6bba3aa9dd92086fa887e92c5c5efc3379f419fd
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: 51d4b6c9e19f334946657205de6cdc8c6ce593ec
+ms.sourcegitcommit: 467b2c708651a3a2be2c45e36d0006a5bbe87b79
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51702952"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53980027"
 ---
 # <a name="hierarchyid-data-type-method-reference"></a>Guida di riferimento ai metodi per il tipo di dati hierarchyid
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -75,8 +75,8 @@ Se durante l'aggiornamento esiste un utente con nome in conflitto, non viene ese
 Le colonne di tipo **hierarchyid** possono essere usate su qualsiasi tabella replicata. I requisiti per l'applicazione dipendono dal tipo di replica direzionale o bidirezionale e dalla versioni del [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utilizzato.
   
 ### <a name="one-directional-replication"></a>Replica direzionale
-La replica direzionale include la replica snapshot, la replica transazionale e la replica di tipo merge in cui le modifiche non sono apportate al Sottoscrittore. Il modo in cui le colonne **hierachyid** funzionano con una replica direzionale dipende dalla versione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] che il Sottoscrittore sta eseguendo.
--   Un server di pubblicazione [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] può replicare colonne **hierachyid** in un sottoscrittore [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]senza alcuna speciale considerazione.  
+La replica direzionale include la replica snapshot, la replica transazionale e la replica di tipo merge in cui le modifiche non sono apportate al Sottoscrittore. Il modo in cui le colonne **hierarchyid** funzionano con una replica direzionale dipende dalla versione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] che il sottoscrittore sta eseguendo.
+-   Un server di pubblicazione [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] può replicare colonne **hierarchyid** in un sottoscrittore [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]senza alcuna speciale considerazione.  
 -   Un server di pubblicazione [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] deve convertire le colonne **hierarchyid** per replicarle in un sottoscrittore che sta eseguendo [!INCLUDE[ssEW](../../includes/ssew-md.md)] o una versione precedente di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. [!INCLUDE[ssEW](../../includes/ssew-md.md)] e le versioni precedenti di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] non supportano le colonne **hierarchyid**. Se si utilizza una di queste versioni, è ancora possibile replicare dati in un Sottoscrittore. A questo scopo, è necessario impostare un'opzione dello schema o il livello di compatibilità della pubblicazione (per replica di tipo merge) in modo che sia possibile convertire la colonna in un tipo di dati compatibile.  
   
 L'applicazione di filtri di colonna è supportata in entrambi questi scenari. Include filtri per l'esclusione di colonne **hierarchyid**. L'applicazione di filtri di riga è supportata se il filtro non include una colonna **hierarchyid**.

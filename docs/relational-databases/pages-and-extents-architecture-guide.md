@@ -15,12 +15,12 @@ author: rothja
 ms.author: jroth
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: cef241919f29225ee7c6384a7466fc69bc9391ed
-ms.sourcegitcommit: ddb682c0061c2a040970ea88c051859330b8ac00
+ms.openlocfilehash: 5f5dcb8899b64a7dc21367b5deda5aa6bd473a65
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51571440"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52748483"
 ---
 # <a name="pages-and-extents-architecture-guide"></a>Guida sull'architettura di pagina ed extent
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -155,7 +155,7 @@ Le pagine IAM vengono allocate per ogni unità di allocazione in base alle neces
  
 Pagine IAM collegate in catena per unità di allocazione Ogni pagina IAM include un'intestazione che indica l'extent iniziale dell'intervallo di extent sul quale viene eseguito il mapping dalla pagina IAM. La pagina IAM include inoltre una mappa di bit di grandi dimensioni in cui ogni bit rappresenta un extent. Il primo bit della mappa rappresenta il primo extent dell'intervallo, il secondo bit rappresenta il secondo extent e così via. Se un bit è 0, significa che l'extent che rappresenta non è allocato all'unità di allocazione proprietaria della pagina IAM. Se il bit è 1, significa che l'extent che rappresenta è allocato all'unità di allocazione proprietaria della pagina IAM.
 
-Se in [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] è necessario inserire una nuova riga ma lo spazio libero nella pagina non è sufficiente, vengono utilizzate le pagine IAM e PFS per trovare una pagina per l'allocazione o, nel caso di un heap o di una pagina di tipo text/image, una pagina in cui sia disponibile spazio sufficiente per la riga da inserire. [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] utilizza le pagine IAM per trovare gli extent allocati all'unità di allocazione. Per ogni extent, [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] cerca le pagine PFS per verificare se esiste una pagina da utilizzare. Poiché ogni pagina IAM e PFS include i dati di un numero di pagine elevato, il numero di pagine IAM e PFS di un database è ridotto. Ciò significa che le pagine IAM e PFS in genere risiedono nella memoria del pool di buffer di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] e che pertanto è possibile eseguire rapidamente ricerche al loro interno. Per gli indici, il punto di inserimento di una nuova riga viene impostato dalla chiave dell'indice. In questo caso, il processo di ricerca illustrato in precedenza non viene eseguito.
+Se in [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] è necessario inserire una nuova riga ma lo spazio libero nella pagina non è sufficiente, vengono utilizzate le pagine IAM e PFS per trovare una pagina per l'allocazione o, nel caso di un heap o di una pagina di tipo text/image, una pagina in cui sia disponibile spazio sufficiente per la riga da inserire. [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] utilizza le pagine IAM per trovare gli extent allocati all'unità di allocazione. Per ogni extent, [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] cerca le pagine PFS per verificare se esiste una pagina da utilizzare. Poiché ogni pagina IAM e PFS include i dati di un numero di pagine elevato, il numero di pagine IAM e PFS di un database è ridotto. Ciò significa che le pagine IAM e PFS in genere risiedono nella memoria del pool di buffer di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] e che pertanto è possibile eseguire rapidamente ricerche al loro interno. Per gli indici, il punto di inserimento di una nuova riga viene impostato dalla chiave indice, ma quando è necessaria una nuova pagina si verifica il processo descritto in precedenza.
 
 In [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] viene allocato un nuovo extent a un'unità di allocazione solo se non viene trovata rapidamente una pagina di un extent esistente in cui sia disponibile spazio sufficiente per la riga da inserire. 
 

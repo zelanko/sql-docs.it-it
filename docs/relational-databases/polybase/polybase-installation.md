@@ -11,12 +11,12 @@ helpviewer_keywords:
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: f77ab925ebfba6ab1d3fd524d7d740eca58fcba6
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 3c08f8cb48e22ba5ca1546f9fcca63f77868b356
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52523483"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53208800"
 ---
 # <a name="install-polybase-on-windows"></a>Installare PolyBase in Windows
 
@@ -36,18 +36,18 @@ Per installare una versione di valutazione di SQL Server, visitare [SQL Server V
    
 - Spazio su disco rigido minimo: 2 GB.
   
-- Consigliato: minimo di 16 GB di RAM.
+- Consigliata: Almeno 16 GB di RAM.
    
 - Polybase funziona correttamente se è abilitato il protocollo TCP/IP. TCP/IP è abilitato per impostazione predefinita in tutte le edizioni di SQL Server tranne le edizioni Developer e SQL Server Express. Perché PolyBase funzioni correttamente nelle edizioni Developer ed Express è necessario abilitare la connettività TCP/IP. Vedere [Abilitare o disabilitare un protocollo di rete del server](../../database-engine/configure-windows/enable-or-disable-a-server-network-protocol.md).
 
 - MSVC++ 2012. 
 
-> [!NOTE]  
-
+> [!NOTE]
+> 
 > È possibile installare PolyBase in una sola istanza di SQL Server per computer.
-
+> 
 > [!IMPORTANT]
->
+> 
 > Per usare la funzionalità di distribuzione di calcolo su Hadoop, il cluster Hadoop di destinazione deve disporre dei componenti principali di HDFS, YARN e MapReduce con il server della cronologia processo abilitato. PolyBase invia la query di distribuzione tramite MapReduce e recupera lo stato dal server della cronologia processo. Senza uno dei due componenti la query ha esito negativo.
   
 ## <a name="single-node-or-polybase-scale-out-group"></a>Singolo nodo o gruppo di scalabilità orizzontale di PolyBase
@@ -108,10 +108,10 @@ Usare i valori in questa tabella per creare gli script di installazione. Il serv
 |Controllo dell'installazione di SQL Server|**Required**<br /><br /> /FEATURES=PolyBase|Viene selezionata la funzionalità PolyBase.|  
 |servizio motore PolyBase di SQL Server|**Facoltativo**<br /><br /> /PBENGSVCACCOUNT|Viene specificato l'account per il servizio motore. L'impostazione predefinita è **NT Authority\NETWORK SERVICE**.|  
 |Motore di PolyBase per SQL Server|**Facoltativo**<br /><br /> /PBENGSVCPASSWORD|Viene specificata la password per l'account del servizio motore.|  
-|Motore di PolyBase per SQL Server|**Facoltativo**<br /><br /> /PBENGSVCSTARTUPTYPE|Viene specificata la modalità di avvio per il motore PolyBase: automatico (predefinito), disabilitato o manuale.|  
+|Motore di PolyBase per SQL Server|**Facoltativo**<br /><br /> /PBENGSVCSTARTUPTYPE|Viene specificata la modalità di avvio per il motore PolyBase: Automatico (predefinito), disabilitato e manuale.|  
 |SQL Server PolyBase Data Movement |**Facoltativo**<br /><br /> /PBDMSSVCACCOUNT|Viene specificato l'account per il servizio di spostamento dati. L'impostazione predefinita è **NT Authority\NETWORK SERVICE**.|  
 |SQL Server PolyBase Data Movement |**Facoltativo**<br /><br /> /PBDMSSVCPASSWORD|Viene specificata la password per l'account di spostamento dati.|  
-|SQL Server PolyBase Data Movement |**Facoltativo**<br /><br /> /PBDMSSVCSTARTUPTYPE|Viene specificata la modalità di avvio per il servizio di spostamento dati: automatico (predefinito), disabilitato o manuale.|  
+|SQL Server PolyBase Data Movement |**Facoltativo**<br /><br /> /PBDMSSVCSTARTUPTYPE|Viene specificata la modalità di avvio per il servizio di spostamento dati: Automatico (predefinito), disabilitato e manuale.|  
 |PolyBase|**Facoltativo**<br /><br /> /PBSCALEOUT|Viene indicato se l'istanza di SQL Server viene usata come parte di un gruppo di calcolo con scalabilità orizzontale di PolyBase. <br />Valori supportati: True, False.|  
 |PolyBase|**Facoltativo**<br /><br /> /PBPORTRANGE|Viene specificato un intervallo di porte con almeno sei porte per i servizi PolyBase. Esempio:<br /><br /> `/PBPORTRANGE=16450-16460`|  
 
@@ -124,10 +124,10 @@ Usare i valori in questa tabella per creare gli script di installazione. Il serv
 |Controllo dell'installazione di SQL Server|**Obbligatorio**<br /><br /> /FEATURES=PolyBaseCore, PolyBaseJava, PolyBase | PolyBaseCore installa il supporto per tutte le funzionalità di PolyBase, ad eccezione della connettività Hadoop. PolyBaseJava abilita la connettività Hadoop. PolyBase installa entrambe le funzionalità. |  
 |Motore di PolyBase per SQL Server|**Facoltativo**<br /><br /> /PBENGSVCACCOUNT|Viene specificato l'account per il servizio motore. L'impostazione predefinita è **NT Authority\NETWORK SERVICE**.|  
 |Motore di PolyBase per SQL Server|**Facoltativo**<br /><br /> /PBENGSVCPASSWORD|Viene specificata la password per l'account del servizio motore.|  
-|Motore di PolyBase per SQL Server|**Facoltativo**<br /><br /> /PBENGSVCSTARTUPTYPE|Viene specificata la modalità di avvio per il motore PolyBase: automatico (predefinito), disabilitato o manuale.|  
+|Motore di PolyBase per SQL Server|**Facoltativo**<br /><br /> /PBENGSVCSTARTUPTYPE|Viene specificata la modalità di avvio per il motore PolyBase: Automatico (predefinito), disabilitato e manuale.|  
 |SQL Server PolyBase Data Movement |**Facoltativo**<br /><br /> /PBDMSSVCACCOUNT|Viene specificato l'account per il servizio di spostamento dati. L'impostazione predefinita è **NT Authority\NETWORK SERVICE**.|  
 |SQL Server PolyBase Data Movement |**Facoltativo**<br /><br /> /PBDMSSVCPASSWORD|Viene specificata la password per l'account di spostamento dati.|  
-|SQL Server PolyBase Data Movement |**Facoltativo**<br /><br /> /PBDMSSVCSTARTUPTYPE|Viene specificata la modalità di avvio per il servizio di spostamento dati: automatico (predefinito), disabilitato o manuale.|  
+|SQL Server PolyBase Data Movement |**Facoltativo**<br /><br /> /PBDMSSVCSTARTUPTYPE|Viene specificata la modalità di avvio per il servizio di spostamento dati: Automatico (predefinito), disabilitato e manuale.|  
 |PolyBase|**Facoltativo**<br /><br /> /PBSCALEOUT|Viene indicato se l'istanza di SQL Server viene usata come parte di un gruppo di calcolo con scalabilità orizzontale di PolyBase. <br />Valori supportati: True, False.|  
 |PolyBase|**Facoltativo**<br /><br /> /PBPORTRANGE|Viene specificato un intervallo di porte con almeno sei porte per i servizi PolyBase. Esempio:<br /><br /> `/PBPORTRANGE=16450-16460`|  
 

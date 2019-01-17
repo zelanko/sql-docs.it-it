@@ -26,12 +26,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: c82f0b10a692f4f1d146a6916657186d17632a15
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f2d84c426bddf4a896a3be1f79ea85e3b718fd4e
+ms.sourcegitcommit: 9ea11d738503223b46d2be5db6fed6af6265aecc
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47597470"
+ms.lasthandoff: 01/07/2019
+ms.locfileid: "54069767"
 ---
 # <a name="set-ansinulls-transact-sql"></a>SET ANSI_NULLS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-pdw-md.md)]
@@ -58,13 +58,13 @@ SET ANSI_NULLS ON
 ```
 
 ## <a name="remarks"></a>Remarks  
- Quando l'opzione SET ANSI_NULLS è impostata su ON, un'istruzione SELECT che usa WHERE *column_name* = **NULL** non restituisce alcuna riga anche se *column_name* include valori Null. Un'istruzione SELECT che usa WHERE *column_name* <> **NULL** non restituisce alcuna riga anche se *column_name* include valori non Null.  
+Quando l'opzione ANSI_NULLS è impostata su ON, un'istruzione SELECT che usa WHERE *column_name* = **NULL** non restituisce alcuna riga anche se *column_name* include valori Null. Un'istruzione SELECT che usa WHERE *column_name* <> **NULL** non restituisce alcuna riga anche se *column_name* include valori non Null.  
   
- Quando l'opzione SET ANSI_NULLS è impostata su OFF, gli operatori uguale a (=) e diverso da (<>) non seguono lo standard ISO. Un'istruzione SELECT che usa WHERE *column_name* = **NULL** restituisce le righe con valori Null in *column_name*. Un'istruzione SELECT che usa WHERE *column_name* <> **NULL** restituisce le righe con valori non Null nella colonna. Inoltre un'istruzione SELECT che usa WHERE *column_name* <> *XYZ_value* restituisce tutte le righe che non sono *XYZ_value* e non sono NULL.  
+Quando l'opzione ANSI_NULLS è impostata su OFF, gli operatori uguale a (=) e diverso da (<>) non seguono lo standard ISO. Un'istruzione SELECT che usa WHERE *column_name* = **NULL** restituisce le righe con valori Null in *column_name*. Un'istruzione SELECT che usa WHERE *column_name* <> **NULL** restituisce le righe con valori non Null nella colonna. Inoltre un'istruzione SELECT che usa WHERE *column_name* <> *XYZ_value* restituisce tutte le righe che non sono *XYZ_value* e non sono NULL.  
   
- Quando l'opzione SET ANSI_NULLS è impostata su ON, tutti i confronti con un valore Null restituiscono UNKNOWN. Quando l'opzione SET ANSI_NULLS è impostata su OFF, i confronti di tutti i dati con un valore Null restituiscono TRUE se il valore dei dati è NULL. In caso di omissione di SET ANSI_NULLS, viene applicata l'impostazione dell'opzione ANSI_NULLS del database corrente. Per altre informazioni sull'opzione di database ANSI_NULLS, vedere [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md).  
+Quando l'opzione ANSI_NULLS è impostata su ON, tutti i confronti con un valore Null restituiscono UNKNOWN. Quando l'opzione SET ANSI_NULLS è impostata su OFF, i confronti di tutti i dati con un valore Null restituiscono TRUE se il valore dei dati è NULL. In caso di omissione di SET ANSI_NULLS, viene applicata l'impostazione dell'opzione ANSI_NULLS del database corrente. Per altre informazioni sull'opzione di database ANSI_NULLS, vedere [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md).  
 
- La tabella seguente illustra come l'impostazione di ANSI_NULLS influisce sui risultati di un certo numero di espressioni booleane che usano valori NULL e non NULL.  
+La tabella seguente illustra come l'impostazione di ANSI_NULLS influisce sui risultati di un certo numero di espressioni booleane che usano valori NULL e non NULL.  
   
 |Espressione booleana|SET ANSI_NULLS ON|SET ANSI_NULLS OFF|  
 |---------------|---------------|------------|  
@@ -79,16 +79,16 @@ SET ANSI_NULLS ON
 |NULL IS NOT NULL|FALSE|FALSE|  
 |1 IS NOT NULL|TRUE|TRUE|  
 
- SET ANSI_NULLS ON influisce su un confronto solo se uno degli operandi del confronto è una variabile NULL o un valore letterale NULL. Se entrambi gli operandi del confronto sono colonne o espressioni composte, l'impostazione non ha effetto sul confronto.  
+SET ANSI_NULLS ON influisce su un confronto solo se uno degli operandi del confronto è una variabile NULL o un valore letterale NULL. Se entrambi gli operandi del confronto sono colonne o espressioni composte, l'impostazione non ha effetto sul confronto.  
   
- Affinché uno script presenti il funzionamento previsto indipendentemente dall'opzione di database ANSI_NULLS o dall'impostazione di SET ANSI_NULLS, utilizzare IS NULL e IS NOT NULL nei confronti che potrebbero includere valori Null.  
+Affinché uno script presenti il funzionamento previsto indipendentemente dall'opzione di database ANSI_NULLS o dall'impostazione di SET ANSI_NULLS, utilizzare IS NULL e IS NOT NULL nei confronti che potrebbero includere valori Null.  
   
- Per l'esecuzione di query distribuite, è consigliabile impostare l'opzione SET ANSI_NULLS su ON.  
+Per l'esecuzione di query distribuite, è consigliabile impostare l'opzione SET ANSI_NULLS su ON.  
   
- È inoltre necessario che l'opzione SET ANSI_NULLS sia impostata su ON durante la creazione o la modifica di indici su colonne calcolate o viste indicizzate. Se l'opzione SET ANSI_NULLS è impostata su OFF, qualsiasi istruzione CREATE, UPDATE, INSERT e DELETE eseguita in tabelle con indici su colonne calcolate o viste indicizzate avrà esito negativo. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] restituisce un errore in cui sono elencate tutte le opzioni SET che violano i valori obbligatori. Se inoltre l'opzione SET ANSI_NULLS è impostata su OFF durante l'esecuzione di un'istruzione SELECT, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ignora i valori di indice delle colonne calcolate o delle viste e l'operazione di selezione viene risolta come se le tabelle o le viste non includessero tali indici.  
+È inoltre necessario che l'opzione SET ANSI_NULLS sia impostata su ON durante la creazione o la modifica di indici su colonne calcolate o viste indicizzate. Se l'opzione SET ANSI_NULLS è impostata su OFF, qualsiasi istruzione CREATE, UPDATE, INSERT e DELETE eseguita in tabelle con indici su colonne calcolate o viste indicizzate avrà esito negativo. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] restituisce un errore in cui sono elencate tutte le opzioni SET che violano i valori obbligatori. Se inoltre l'opzione SET ANSI_NULLS è impostata su OFF durante l'esecuzione di un'istruzione SELECT, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ignora i valori di indice delle colonne calcolate o delle viste e l'operazione di selezione viene risolta come se le tabelle o le viste non includessero tali indici.  
   
 > [!NOTE]  
->  ANSI_NULLS è una delle sette opzioni SET che è necessario impostare sui valori richiesti quando si utilizzano colonne calcolate o viste indicizzate. È inoltre necessario impostare su ON le opzioni ANSI_PADDING, ANSI_WARNINGS, ARITHABORT, QUOTED_IDENTIFIER e CONCAT_NULL_YIELDS_NULL, mentre l'opzione NUMERIC_ROUNDABORT deve essere impostata su OFF.  
+> ANSI_NULLS è una delle sette opzioni SET che è necessario impostare sui valori richiesti quando si utilizzano colonne calcolate o viste indicizzate. Anche le opzioni `ANSI_PADDING`, `ANSI_WARNINGS`, `ARITHABORT`, `QUOTED_IDENTIFIER` e `CONCAT_NULL_YIELDS_NULL` devono essere impostate su ON e `NUMERIC_ROUNDABORT` deve essere impostata su OFF.  
   
  Il driver ODBC [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client e il provider OLE DB [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client per [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] impostano automaticamente l'opzione ANSI_DEFAULTS su ON al momento della connessione. È possibile configurare questa impostazione nelle origini dei dati ODBC, negli attributi di connessione ODBC o nelle proprietà di connessione OLE DB impostate nell'applicazione prima della connessione a un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Il valore predefinito per SET ANSI_NULLS è OFF.  
   
@@ -98,11 +98,10 @@ SET ANSI_NULLS ON
   
  Per visualizzare l'impostazione corrente per questa impostazione, eseguire la query riportata di seguito:
   
-```  
+```sql  
 DECLARE @ANSI_NULLS VARCHAR(3) = 'OFF';  
 IF ( (32 & @@OPTIONS) = 32 ) SET @ANSI_NULLS = 'ON';  
-SELECT @ANSI_NULLS AS ANSI_NULLS;  
-  
+SELECT @ANSI_NULLS AS ANSI_NULLS;   
 ```  
   
 ## <a name="permissions"></a>Permissions  
@@ -111,7 +110,7 @@ SELECT @ANSI_NULLS AS ANSI_NULLS;
 ## <a name="examples"></a>Esempi  
  Nell'esempio seguente vengono utilizzati gli operatori di confronto Uguale a (`=`) e Diverso da (`<>`) per confrontare i valori `NULL` e non Null di una tabella. L'esempio evidenzia anche il fatto che l'impostazione dell'opzione `SET ANSI_NULLS` non influisce su `IS NULL`.  
   
-```  
+```sql  
 -- Create table t1 and insert values.  
 CREATE TABLE dbo.t1 (a INT NULL);  
 INSERT INTO dbo.t1 values (NULL),(0),(1);  
@@ -176,7 +175,6 @@ GO
   
 -- Drop table t1.  
 DROP TABLE dbo.t1;  
-  
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
@@ -189,5 +187,4 @@ DROP TABLE dbo.t1;
  [SET ANSI_DEFAULTS &#40;Transact-SQL&#41;](../../t-sql/statements/set-ansi-defaults-transact-sql.md)   
  [WHERE &#40;Transact-SQL&#41;](../../t-sql/queries/where-transact-sql.md)   
  [WHILE &#40;Transact-SQL&#41;](../../t-sql/language-elements/while-transact-sql.md)  
-  
   

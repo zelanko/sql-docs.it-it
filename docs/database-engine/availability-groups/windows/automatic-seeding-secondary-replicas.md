@@ -1,8 +1,8 @@
 ---
-title: Seeding automatico per le repliche secondarie (SQL Server) | Microsoft Docs
-description: Usare il seeding automatico per inizializzare le repliche secondarie.
+title: Usare il seeding automatico per inizializzare una replica secondaria per un gruppo di disponibilità
+description: È possibile usare il seeding automatico per inizializzare le repliche secondarie come parte di un gruppo di disponibilità Always On con SQL 2016 e versioni successive.
 services: data-lake-analytics
-ms.custom: ''
+ms.custom: seodec18
 ms.date: 11/27/2018
 ms.prod: sql
 ms.reviewer: ''
@@ -14,14 +14,14 @@ ms.assetid: ''
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: d6a8359fede2b688292fa47e59a64d5ef43d424d
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: b903c4e55940f4c941564f4f0d180f4f94d1ad58
+ms.sourcegitcommit: c9d33ce831723ece69f282896955539d49aee7f8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52506695"
+ms.lasthandoff: 12/12/2018
+ms.locfileid: "53306168"
 ---
-# <a name="automatic-seeding-for-secondary-replicas"></a>Seeding automatico per le repliche secondarie
+# <a name="use-automatic-seeding-to-initialize-a-secondary-replica-for-an-always-on-availability-group"></a>Usare il seeding automatico per inizializzare una replica secondaria per un gruppo di disponibilità Always On
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 In SQL Server 2012 e 2014, l'unico modo per inizializzare una replica secondaria in un gruppo di disponibilità AlwaysOn di SQL Server consiste nell'usare le operazioni di backup, copia e ripristino. SQL Server 2016 introduce una nuova funzionalità per l'inizializzazione di una replica secondaria: il *seeding automatico*. Il seeding automatico usa il trasporto del flusso di log per trasmettere il backup mediante un'infrastruttura VDI nella replica secondaria per ogni database del gruppo di disponibilità tramite endpoint configurati. Questa nuova funzionalità può essere usata durante la creazione iniziale di un gruppo di disponibilità o quando viene aggiunto un database a un gruppo di disponibilità. Il seeding automatico si trova in tutte le edizioni di SQL Server che supportano i gruppi di disponibilità Always On e può essere usato sia con i gruppi di disponibilità tradizionali che con i [gruppi di disponibilità distribuiti](distributed-availability-groups.md).
@@ -32,7 +32,7 @@ Le considerazioni sull'uso del seeding automatico includono:
 
 * [Impatto del log delle prestazioni e delle transazioni sulla replica primaria](#performance-and-transaction-log-impact-on-the-primary-replica)
 * [Layout dei dischi](#disklayout)
-* [Security](#security)
+* [Sicurezza](#security)
 
 
 ### <a name="performance-and-transaction-log-impact-on-the-primary-replica"></a>Impatto del log delle prestazioni e delle transazioni sulla replica primaria
@@ -207,7 +207,7 @@ Il seeding automatico aggiunge nuovi eventi estesi per tenere traccia delle modi
 Ad esempio, lo script seguente crea una sessione di eventi estesi che acquisisce gli eventi correlati al seeding automatico.
 
 ```sql
-CREATE EVENT SESSION [AG_autoseed] ON SERVER 
+CREATE EVENT SESSION [AlwaysOn_autoseed] ON SERVER 
     ADD EVENT sqlserver.hadr_automatic_seeding_state_transition,
     ADD EVENT sqlserver.hadr_automatic_seeding_timeout,
     ADD EVENT sqlserver.hadr_db_manager_seeding_request_msg,

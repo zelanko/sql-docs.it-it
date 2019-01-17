@@ -10,16 +10,16 @@ ms.topic: conceptual
 helpviewer_keywords:
 - Query Store, best practices
 ms.assetid: 5b13b5ac-1e4c-45e7-bda7-ebebe2784551
-author: MikeRayMSFT
-ms.author: mikeray
+author: julieMSFT
+ms.author: jrasnick
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: a727c599dc5a2b7c21d07a415f6ba9490c7e96cd
-ms.sourcegitcommit: c7febcaff4a51a899bc775a86e764ac60aab22eb
+ms.openlocfilehash: 2203e8fe68861fd0e69dae352fef8c015e76859f
+ms.sourcegitcommit: 40c3b86793d91531a919f598dd312f7e572171ec
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "52712119"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53328971"
 ---
 # <a name="best-practice-with-the-query-store"></a>Procedure consigliate per l'archivio query
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
@@ -48,7 +48,7 @@ I parametri predefiniti sono sufficienti per iniziare, ma è opportuno monitorar
   
  Di seguito sono riportate alcune linee guida per l'impostazione dei valori dei parametri:  
   
- **Dimensioni massime (MB):** specifica il limite per lo spazio dati che l'archivio query può occupare all'interno del database. Si tratta dell'impostazione più importante, che influisce direttamente sulla modalità di funzionamento dell'archivio query.  
+ **Dimensioni massime (MB):** specifica il limite per lo spazio dati che Query Store può occupare all'interno del database. Si tratta dell'impostazione più importante, che influisce direttamente sulla modalità di funzionamento dell'archivio query.  
   
  Mentre l'archivio query raccoglie query, piani di esecuzione e statistiche, le sue dimensioni nel database aumentano fino a quando non viene raggiunto questo limite. A quel punto, l'archivio query passa automaticamente alla modalità operativa di sola lettura e smette di raccogliere nuovi dati. Questo si riflette negativamente sull'accuratezza dell'analisi delle prestazioni.  
   
@@ -70,7 +70,7 @@ ALTER DATABASE [QueryStoreDB]
 SET QUERY_STORE (MAX_STORAGE_SIZE_MB = 1024);  
 ```  
 
- **Intervallo di scaricamento dati:** definisce la frequenza in secondi per rendere persistenti le statistiche di runtime raccolte su disco (il valore predefinito è 900 secondi, che corrisponde a 15 minuti). Valutare la possibilità di usare un valore più elevato se il carico di lavoro non genera un numero elevato di query e piani diversi o se è possibile attendere più tempo per rendere persistenti i dati prima della chiusura di un database. 
+ **Intervallo di scaricamento dati:** definisce la frequenza in secondi per rendere persistenti le statistiche di runtime raccolte su disco. Il valore predefinito è 900 secondi, che corrisponde a 15 minuti. Valutare la possibilità di usare un valore più elevato se il carico di lavoro non genera un numero elevato di query e piani diversi o se è possibile attendere più tempo per rendere persistenti i dati prima della chiusura di un database. 
  
 > [!NOTE]
 > L'uso del flag di traccia 7745 impedirà la scrittura su disco dei dati di Query Store nel caso di un comando di failover o arresto. Per altri dettagli, vedere la sezione [Usare i flag di traccia nei server critici per migliorare il ripristino di emergenza](#Recovery).
@@ -99,7 +99,7 @@ ALTER DATABASE [QueryStoreDB]
 SET QUERY_STORE (CLEANUP_POLICY = (STALE_QUERY_THRESHOLD_DAYS = 90));  
 ```  
   
- **Modalità di pulizia basata sulle dimensioni:** specifica se viene eseguita la pulizia automatica dei dati quando le dimensioni dei dati dell'archivio query si avvicinano al limite.  
+ **Modalità di pulizia basata sulle dimensioni:** specifica se viene eseguita la pulizia automatica dei dati quando le dimensioni dei dati di Query Store si avvicinano al limite.  
   
  È consigliabile attivare la pulizia basata sulle dimensioni per assicurarsi che l'archivio query venga sempre eseguito in modalità lettura/scrittura e possa raccoglie i dati più recenti.  
   
@@ -108,7 +108,7 @@ ALTER DATABASE [QueryStoreDB]
 SET QUERY_STORE (SIZE_BASED_CLEANUP_MODE = AUTO);  
 ```  
   
- **Modalità di acquisizione archivio query:** specifica i criteri di acquisizione delle query per l'archivio query.  
+ **Modalità di acquisizione di Query Store:** specifica i criteri di acquisizione delle query per Query Store.  
   
 -   **All**: vengono acquisite tutte le query. Si tratta dell'opzione predefinita.  
   
@@ -159,7 +159,7 @@ Le viste dell'archivio query di[!INCLUDE[ssManStudio](../../includes/ssmanstudio
 |Statistiche di attesa query|Consente di analizzare le categorie di attesa più attive in un database e le query che contribuiscono maggiormente alla categoria di attesa selezionata.<br />Usare questa vista per analizzare le statistiche di attesa e identificare le query che possono influire negativamente sull'esperienza utente in tutte le applicazioni.<br /><br />**Si applica a:** a partire da [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] v18.0 e [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]|  
 |Query rilevate|Tenere traccia dell'esecuzione delle query più importanti in tempo reale. In genere, questa vista viene usata in presenza di query con piani forzati per garantire la stabilità delle prestazioni delle query.|
   
-> [!TIP]  
+> [!TIP]
 > Per informazioni dettagliate sull'uso di [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] per identificare le prime query per consumo risorse e correggere le query regredite a causa della modifica di una scelta del piano, vedere i [post relativi all'archivio query nei blog di @Azure](https://azure.microsoft.com/blog/query-store-a-flight-data-recorder-for-your-database/).  
   
  Quando si identifica una query con prestazioni non ottimali, l'azione correttiva dipende dalla natura del problema.  
@@ -168,7 +168,7 @@ Le viste dell'archivio query di[!INCLUDE[ssManStudio](../../includes/ssmanstudio
   
      ![query-store-force-plan](../../relational-databases/performance/media/query-store-force-plan.png "query-store-force-plan")  
 
-> [!NOTE]  
+> [!NOTE]
 > Nella figura sopra riportata sono illustrate forme diverse per piani di query specifici, con i significati seguenti per ogni stato possibile:<br />  
 > |Con forme|Significato|  
 > |-------------------|-------------|

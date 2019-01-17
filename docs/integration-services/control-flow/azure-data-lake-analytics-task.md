@@ -6,8 +6,7 @@ ms.date: 05/18/2018
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: douglasl
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - SQL13.DTS.DESIGNER.AFPADLSTASK.F1
@@ -15,12 +14,12 @@ f1_keywords:
 author: yanancai
 ms.author: yanacai
 manager: craigg
-ms.openlocfilehash: 3060dd1fa3a46f64b34658a1c8ebccbc4155526c
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: 1b324d4aa115a08c1c13b1680176022cab343daa
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51641748"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52808463"
 ---
 # <a name="azure-data-lake-analytics-task"></a>Attività Azure Data Lake Analytics
 
@@ -83,9 +82,9 @@ La configurazione del processo specifica le proprietà di invio dei processi U-S
 
 Usare la pagina **Mapping parametri** della finestra di dialogo dell'**editor dell'attività Azure Data Lake Analytics** per mappare variabili a parametri (variabili U-SQL) nello script U-SQL.
 
-- **Nome variabile:** dopo aver aggiunto un mapping dei parametri, selezionando **Aggiungi**, selezionare una variabile di sistema o definita dall'utente nell'elenco. In alternativa, è possibile selezionare <**Nuova variabile**> per aggiungere una nuova variabile usando la finestra di dialogo **Aggiungi variabile**. Per informazioni correlate, vedere [Variabili di Integration Services &#40;SSIS&#41;](../../integration-services/integration-services-ssis-variables.md).  
+- **Nome variabile:** dopo aver aggiunto un mapping di parametri selezionando **Aggiungi**, selezionare dall'elenco una variabile di sistema o definita dall'utente. In alternativa, è possibile selezionare <**Nuova variabile**> per aggiungere una nuova variabile usando la finestra di dialogo **Aggiungi variabile**. Per informazioni correlate, vedere [Variabili di Integration Services &#40;SSIS&#41;](../../integration-services/integration-services-ssis-variables.md).  
 
-- **Nome parametro:** specificare un nome di parametro/variabile nello script U-SQL. Assicurarsi che il nome del parametro inizi con il simbolo \@, ad esempio \@Param1. 
+- **Nome parametro:** specificare un nome di parametro o di variabile nello script U-SQL. Assicurarsi che il nome del parametro inizi con il simbolo \@, ad esempio \@Param1. 
 
 Ecco un esempio di come passare i parametri per lo script U-SQL.
 
@@ -121,8 +120,8 @@ Si noti che i percorsi di input e output sono definiti nei parametri **\@in** e 
 
 |Nome variabile|Nome parametro|
 |-------------|--------------|
-|Utente: Variabile1|\@in|
-|Utente: Variabile2|\@out| 
+|Utente: Variabile 1|\@in|
+|Utente: Variabile 2|\@out| 
 
 ## <a name="expression-page-configuration"></a>Configurazione della pagina Espressioni
 

@@ -1,9 +1,10 @@
 ---
-title: Aggiungere elementi di Reporting Services ai dashboard di Power BI | Microsoft Docs
-ms.date: 09/16/2016
+title: Aggiungere elementi del report impaginato ai dashboard di Power BI - Reporting Services | Microsoft Docs
+ms.date: 12/05/2018
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: reporting-services
+description: È possibile aggiungere elementi del report impaginato di Reporting Services in locale a un dashboard nel servizio Power BI come nuovo riquadro.
 ms.topic: conceptual
 helpviewer_keywords:
 - pbi
@@ -14,49 +15,43 @@ helpviewer_keywords:
 ms.assetid: 1d96c3f7-2fd4-40f7-8d1c-14a7f54cdb15
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: d0a87e49956227a168bb77059ae9311d8c775c4e
-ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
+ms.openlocfilehash: 0df8dab5bb48afbade1526a7ab02f4b5a30258d2
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51813231"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53210990"
 ---
-# <a name="pin-reporting-services-items-to-power-bi-dashboards"></a>Aggiungere elementi di Reporting Services ai dashboard di Power BI
-  [!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)] consente agli utenti di aggiungere elementi del report di [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] dalla barra degli strumenti di Visualizzatore report a un dashboard di [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)] come nuovo riquadro.   Per aggiungere elementi, l'amministratore deve innanzitutto integrare il server di report con Azure Active Directory e [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)].  
-  
- ![rs_powerbi_icon](../reporting-services/media/ssrs-powerbi-icon.png "rs_powerbi_icon")  
-  
- [!INCLUDE[applies](../includes/applies-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] Modalità nativa
+# <a name="pin-reporting-services-paginated-report-items-to-dashboards-in-power-bi"></a>Aggiungere elementi del report impaginato di Reporting Services ai dashboard in Power BI
+
+[!INCLUDE[ssrs-appliesto](../includes/ssrs-appliesto.md)] [!INCLUDE[ssrs-appliesto-2016-and-later](../includes/ssrs-appliesto-2016-and-later.md)] [!INCLUDE[ssrs-appliesto-pbirsi](../includes/ssrs-appliesto-pbirs.md)]
+
+È possibile aggiungere l'elemento di un report impaginato di [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] in locale a un dashboard nel servizio [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)] come nuovo riquadro.   Per aggiungere elementi, l'amministratore deve innanzitutto integrare il server di report con Azure Active Directory e [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)].  
   
 ##  <a name="bkmk_requirements_to_pin"></a> Requisiti per l'aggiunta  
   
--   Il server di report è configurato per l'integrazione di [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)] . Per altre informazioni, vedere [Power BI Report Server Integration &#40;Configuration Manager&#41;](../reporting-services/install-windows/power-bi-report-server-integration-configuration-manager.md). Se il server di report non è stato configurato, il pulsante **Aggiungi al dashboard di Power BI** non verrà visualizzato nella barra degli strumenti.  
+-   Il server di report è configurato per l'integrazione di [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)] . Per altre informazioni, vedere [Integrazione del server di report e di Power BI &#40;Gestione configurazione&#41;](../reporting-services/install-windows/power-bi-report-server-integration-configuration-manager.md). Se il server di report non è stato configurato, il pulsante **Aggiungi al dashboard di Power BI** non verrà visualizzato nella barra degli strumenti del Visualizzatore report.  
   
-     ![ssRS_Report_PowerBI](../reporting-services/media/ssrs-report-powerbi.png)  
+     ![barra degli strumenti del Visualizzatore report](../reporting-services/media/ssrs-report-powerbi.png)  
   
--   Aggiungere il [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] Visualizzatore di report in [!INCLUDE[ssRSWebPortal](../includes/ssrswebportal.md)], ad esempio `https://myserver/Reports`.  Non è possibile aggiungere elementi da [!INCLUDE[ssRBnoversion](../includes/ssrbnoversion.md)], da Progettazione report in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]o da un URL del server di report.  Ad esempio, `https://myserver/ReportServer`.  
+-   Aggiungere elementi dal Visualizzatore report di [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] nel [!INCLUDE[ssRSWebPortal](../includes/ssrswebportal.md)], ad esempio, `https://myserver/Reports`.  Non è possibile aggiungere elementi da [!INCLUDE[ssRBnoversion](../includes/ssrbnoversion.md)], da Progettazione report in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] o da un URL del server di report.  Ad esempio, `https://myserver/ReportServer`.  
   
--   Il browser deve essere configurato per consentire i popup dal sito del server di report.  
+-   È necessario configurare il browser per consentire i popup dal sito del server di report.  
   
--   Se si desidera aggiornare l'elemento aggiunto, i report devono essere configurati per le credenziali archiviate.  Quando si aggiunge un elemento, viene creata automaticamente una sottoscrizione di [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] per gestire l'aggiornamento dei dati dell'elemento nel dashboard.  Se il report non usa le credenziali archiviate, quando viene eseguita la sottoscrizione, verrà visualizzato un messaggio di errore simile al seguente nella pagina **Sottoscrizioni personali** .  
+-   Se si vuole aggiornare l'elemento aggiunto, è necessario configurare i report per le credenziali archiviate.  Quando si aggiunge un elemento, viene creata automaticamente una sottoscrizione di [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] per gestire l'aggiornamento dei dati dell'elemento nel dashboard.  Se il report non usa le credenziali archiviate, quando viene eseguita la sottoscrizione verrà visualizzato un messaggio simile al seguente nella pagina **Sottoscrizioni personali**.  
   
-        PowerBI Delivery error: dashboard: IT Spend Analysis Sample, visual: Chart2, error: The current action cannot be completed. The user data source credentials do not meet the requirements to run this report or shared dataset. Either the user data source credential.
+    "Errore di recapito di Power BI: dashboard: Esempio di analisi della spesa IT, oggetto visivo: Chart2, errore: Impossibile completare l'azione corrente. Le credenziali per l'origine dati utente non soddisfano i requisiti per eseguire il report o il set di dati condiviso. Le credenziali per l'origine dati utente..."
  
     Vedere la sezione "Configurare le credenziali archiviate per un'origine dati specifica del report (modalità nativa)" di [Archiviare le credenziali in un'origine dati di Reporting Services](../reporting-services/report-data/store-credentials-in-a-reporting-services-data-source.md).  
   
 ##  <a name="bkmk_supported_items"></a> Elementi che è possibile aggiungere  
- I seguenti elementi del report possono essere aggiunti a un dashboard di [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)] .  Non è possibile aggiungere elementi annidati all'interno di un'area dati. Ad esempio, non è possibile aggiungere un elemento annidato all'interno di una tabella o un elenco di [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] .  
+ I seguenti elementi del report possono essere aggiunti a un dashboard di [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)] .  Non è possibile aggiungere elementi annidati all'interno di un'area dati. Ad esempio, non è possibile aggiungere un elemento annidato all'interno di una tabella o un elenco di [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)].  
   
 -   Grafici  
-  
 -   Pannelli dei misuratori  
-  
 -   Mappe  
-  
 -   Immagini  
-  
 -   Gli elementi devono far parte del corpo del report.  Non è possibile aggiungere elementi presenti nell'intestazione o nel piè di pagina.  
-  
 -   È possibile aggiungere singoli elementi presenti all'interno di un rettangolo di livello superiore, ma non come unico gruppo.  
   
 ##  <a name="bkmk_to_pin"></a> Per aggiungere un elemento del report  
@@ -71,7 +66,7 @@ ms.locfileid: "51813231"
   
     ![ssRS_Report_PowerBI](../reporting-services/media/ssrs-report-powerbi.png)  
   
-4. Selezionare l'elemento del report che si vuole aggiungere a [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)]. È possibile aggiungere un solo elemento per volta.  Visualizzatore di report presenta una visualizzazione ombreggiata del report. Gli elementi del report che è possibile aggiungere sono evidenziati, mentre quelli che non è possibile aggiungere sono ombreggiati con un colore scuro.  
+4. Selezionare l'elemento del report che si vuole aggiungere a [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)]. È possibile aggiungere un solo elemento per volta.  Il Visualizzatore report presenta una visualizzazione ombreggiata del report. Gli elementi del report che è possibile aggiungere sono evidenziati, mentre quelli che non è possibile aggiungere sono ombreggiati con un colore scuro.  
   
     **(1)** selezionare il gruppo contenente il dashboard in cui si vuole aggiungere l'elemento, **(2)** selezionare il dashboard a cui si vuole aggiungere l'elemento e **(3)** selezionare la frequenza di aggiornamento del riquadro nel dashboard.   ![nota](../analysis-services/instances/install-windows/media/ssrs-fyi-note.png "nota") L'aggiornamento è gestito dalle sottoscrizioni di [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] e, dopo l'aggiunta dell'elemento, è possibile modificare la sottoscrizione e configurare un'altra pianificazione dell'aggiornamento.  
   
@@ -95,34 +90,34 @@ Nel dashboard di [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)] l'elemento d
 
 **(3)** Il sottotitolo del riquadro è basato sulla data e sull'ora di aggiunta del riquadro o dell'ultimo aggiornamento dei dati da [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]. La pianificazione dell'aggiornamento è gestita dalla sottoscrizione di [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] creata automaticamente quando l'elemento del report è stato aggiunto.
 
-**(4)** Se si fa clic sul riquadro stesso, [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)] usare il **(3) collegamento personalizzato** per passare alla pagina di [!INCLUDE[ssRSWebPortal](../includes/ssrswebportal.md)] del server di report registrato. Il link è stato impostato quando l'elemento è stato aggiunto da [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]. Se non si dispone di connettività a Internet per il server di report, verrà visualizzato un errore nel browser.  
+**(5)** Se si fa clic sul riquadro stesso, [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)] usa il **collegamento personalizzato (4)** per passare alla pagina del [!INCLUDE[ssRSWebPortal](../includes/ssrswebportal.md)] del server di report registrato. Il link è stato impostato quando l'elemento è stato aggiunto da [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]. Se non si dispone di connettività a Internet per il server di report, verrà visualizzato un errore nel browser.  
 
 ![ssrs_pinned_tile_details](../reporting-services/media/ssrs-pinned-tile-details.png "ssrs_pinned_tile_details")  
   
 ##  <a name="bkmk-troubleshoot"></a> Risolvere eventuali problemi  
   
--   **Nessun pulsante di [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)] nella barra degli strumenti di Visualizzatore report**: questo indica che il server di report non è stato integrato con [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)]. Per altre informazioni, vedere [Integrazione del server di report e di Power BI &#40;Gestione configurazione&#41;](../reporting-services/install-windows/power-bi-report-server-integration-configuration-manager.md).  
+-   **Nessun pulsante di [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)] nella barra degli strumenti del Visualizzatore report:**  questo messaggio indica che il server di report non è stato integrato con [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)]. Per altre informazioni, vedere [Integrazione del server di report e di Power BI &#40;Gestione configurazione&#41;](../reporting-services/install-windows/power-bi-report-server-integration-configuration-manager.md).  
   
-- **Impossibile eseguire l'aggiunta**: quando si tenta di aggiungere un elemento, viene visualizzato il messaggio di errore seguente. Vedere la sezione [Elementi che è possibile aggiungere](#bkmk_supported_items).  
+- **Impossibile eseguire l'aggiunta**: se si tenta di aggiungere un elemento, viene visualizzato il messaggio di errore seguente: Vedere la sezione [Elementi che è possibile aggiungere](#bkmk_supported_items).  
   
       Cannot Pin: There are no report items on this page that you can pin to [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)].  
   
--   **Gli elementi aggiunti mostrano dati non aggiornati** in un dashboard di [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)] , che non è stato aggiornato per un periodo di tempo.  Il token delle credenziali utente è scaduto ed è necessario eseguire nuovamente l'accesso.  La registrazione delle credenziali utente con Azure e [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)] è valida per 90 giorni. In[!INCLUDE[ssRSWebPortal](../includes/ssrswebportal.md)]fare clic su **Impostazioni personali**. Per altre informazioni, vedere [Impostazioni personali per Integrazione di Power BI &#40;portale Web&#41;](https://msdn.microsoft.com/85c2fac7-80bf-45b7-8654-764b5f5231f5).  
+-   **Gli elementi aggiunti mostrano dati non aggiornati** in un dashboard di [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)] , che non è stato aggiornato per un periodo di tempo.  Il token delle credenziali utente è scaduto ed è necessario eseguire nuovamente l'accesso.  La registrazione delle credenziali utente con Azure e [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)] è valida per 90 giorni. Nel [!INCLUDE[ssRSWebPortal](../includes/ssrswebportal.md)] fare clic su **Impostazioni personali**. Per altre informazioni, vedere [Impostazioni personali per Integrazione di Power BI &#40;portale Web&#41;](https://msdn.microsoft.com/85c2fac7-80bf-45b7-8654-764b5f5231f5).  
   
--   **Gli elementi aggiunti mostrano dati non aggiornati** in un dashboard di [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)] , che non è stato mai aggiornato.  Il problema è che il report non è configurato per usare le credenziali archiviate. Un report deve usare le credenziali archiviate perché l'azione di aggiunta di un elemento del report crea una sottoscrizione di [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] per gestire la pianificazione dell'aggiornamento dei riquadri. [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] richiedono credenziali archiviate. Se si esamina la pagina **Sottoscrizioni personali** , viene visualizzato un messaggio di errore simile al seguente:  
+-   **Gli elementi aggiunti mostrano dati non aggiornati** in un dashboard di [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)] , che non è stato mai aggiornato.  Il problema è che il report non è configurato per usare le credenziali archiviate. Un report deve usare le credenziali archiviate perché l'azione di aggiunta di un elemento del report crea una sottoscrizione di [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] per gestire la pianificazione dell'aggiornamento dei riquadri. [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] richiedono credenziali archiviate. Se si esamina la pagina **Sottoscrizioni personali**, viene visualizzato un messaggio di errore simile al seguente:  
   
-        PowerBI Delivery error: dashboard: SSRS items, visual: Image3, error: The current action cannot be completed. The user data source credentials do not meet the requirements to run this report or shared dataset. Either the user data source credentials are not stored in the report server database, or the user data source is configured not to require credentials but the unattended execution account is not specified. (rsInvalidDataSourceCredentialSetting)
+        PowerBI Delivery error: dashboard: SSRS items, visual: Image3, error: The current action can't be completed. The user data source credentials do not meet the requirements to run this report or shared dataset. Either the user data source credentials are not stored in the report server database, or the user data source is configured not to require credentials but the unattended execution account is not specified. (rsInvalidDataSourceCredentialSetting)
   
--   **Credenziali di Power BI scadute:**  se si tenta di aggiungere un elemento, viene visualizzato il messaggio di errore seguente. In [!INCLUDE[ssRSWebPortal](../includes/ssrswebportal.md)]fare clic su **Impostazioni personali** e, nella pagina Impostazioni personali, fare clic su **Accedi**. Per altre informazioni, vedere  [Impostazioni personali per Integrazione di Power BI &#40;portale Web&#41;](https://msdn.microsoft.com/85c2fac7-80bf-45b7-8654-764b5f5231f5) .  
+-   **Credenziali di Power BI scadute:**  se si tenta di aggiungere un elemento, viene visualizzato il messaggio di errore seguente. In [!INCLUDE[ssRSWebPortal](../includes/ssrswebportal.md)]fare clic su **Impostazioni personali** e, nella pagina Impostazioni personali, fare clic su **Accedi**. Per altre informazioni, vedere  [Impostazioni personali per Integrazione di Power BI &#40;portale Web&#41;](https://msdn.microsoft.com/85c2fac7-80bf-45b7-8654-764b5f5231f5).  
   
-        Cannot Pin : Unexpected Server Error: Missing, invalid or expired Power BI credentials.  
+        Cannot Pin: Unexpected Server Error: Missing, invalid or expired Power BI credentials.  
   
 -   **Impossibile eseguire l'aggiunta**: se si tenta di aggiungere un elemento a un dashboard in uno stato di sola lettura, verrà visualizzato un messaggio di errore simile al seguente:  
   
-        Server Error : The item 'Dashboard deleted 015cf022-8e2f-462e-88e5-75ab0a04c4d0' cannot be found. (rsItemNotFound)  
+        Server Error: The item 'Dashboard deleted 015cf022-8e2f-462e-88e5-75ab0a04c4d0' can't be found. (rsItemNotFound)  
   
 ##  <a name="bkmk_subscription_management"></a> Gestione delle sottoscrizioni  
- Oltre ai problemi relativi alle sottoscrizioni descritti nella sezione sulla risoluzione dei problemi, le informazioni seguenti aiuteranno a mantenere le sottoscrizioni relative a [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)] .
+ Oltre ai problemi relativi alle sottoscrizioni descritti nella sezione sulla risoluzione dei problemi, le informazioni seguenti aiuteranno a mantenere le sottoscrizioni relative a [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)].
   
 -   **Nome dell'elemento modificato:** se un elemento del report aggiunto viene rinominato o eliminato, il riquadro di [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)] non verrà più aggiornato e verrà visualizzato un messaggio di errore simile al seguente.  Se si ripristina il nome originale dell'elemento, la sottoscrizione inizierà a funzionare di nuovo e il riquadro verrà aggiornato nella pianificazione delle sottoscrizioni.  
   

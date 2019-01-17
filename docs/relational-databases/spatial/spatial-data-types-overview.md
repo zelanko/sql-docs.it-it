@@ -16,12 +16,12 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 99f6a05b3d033a32b9a45ec305faa92f214e59e4
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 9fea754e936831833fd81ff9a50079c31b5938f6
+ms.sourcegitcommit: 467b2c708651a3a2be2c45e36d0006a5bbe87b79
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52535820"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53979607"
 ---
 # <a name="spatial-data-types-overview"></a>Panoramica dei tipi di dati spaziali
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -88,7 +88,7 @@ Per ulteriori informazioni sulle specifiche OGC, vedere quanto riportato di segu
 -   [OGC Specifications, Simple Feature Access Part 2 - SQL Options](https://go.microsoft.com/fwlink/?LinkId=93628) (Specifiche OGC, accesso semplificato alle caratteristiche Parte 2 - Opzioni SQL)  
 
 ##  <a name="circular"></a> Segmenti di arco circolare  
-Tre tipi di cui è possibile creare istanze possono accettare segmenti di arco circolare: **CircularString**, **CompoundCurve**e **CurvePolygon**.  Un segmento di arco circolare è definito da tre punti in un piano bidimensionale. Il terzo punto non può corrispondere al primo punto.  
+Tre tipi di cui è possibile creare istanze possono accettare segmenti di arco circolare: **CircularString**, **CompoundCurve** e **CurvePolygon**.  Un segmento di arco circolare è definito da tre punti in un piano bidimensionale. Il terzo punto non può corrispondere al primo punto.  
 
 Nelle figure A e B vengono illustrati segmenti di arco circolare tipici. Si noti come ognuno dei tre punti giace sul perimetro di un cerchio.  
 
@@ -96,10 +96,11 @@ Nelle figure C e D viene illustrato come un segmento di linea possa essere defin
 I metodi che operano sui tipi di segmento di arco circolare utilizzano segmenti di linea retta per simulare l'arco circolare. Il numero di segmenti di linea utilizzati per simulare l'arco dipenderanno dalla lunghezza e dalla curvatura dell'arco. Benché sia possibile archiviare i valori Z per ognuno dei tipi di segmento di arco circolare, i metodi non utilizzeranno i valori Z nei calcoli.  
 
 > [!NOTE]  
->  Se si specificano valori Z per segmenti di arco circolare, tali valori devono essere gli stessi per tutti i punti nel segmento di arco circolare perché questo venga accettato per l'input. Ad esempio, `CIRCULARSTRING(0 0 1, 2 2 1, 4 0 1)` è ammesso, mentre `CIRCULARSTRING(0 0 1, 2 2 2, 4 0 1)` non lo è.  
+> Se si specificano valori Z per segmenti di arco circolare, tali valori devono essere gli stessi per tutti i punti nel segmento di arco circolare perché questo venga accettato per l'input. Ad esempio, `CIRCULARSTRING(0 0 1, 2 2 1, 4 0 1)` è ammesso, mentre `CIRCULARSTRING(0 0 1, 2 2 2, 4 0 1)` non lo è.  
 
 ### <a name="linestring-and-circularstring-comparison"></a>Confronto tra LineString e CircularString  
 Questo esempio illustra come archiviare triangoli isosceli identici usando un'istanza **LineString** e un'istanza **CircularString**:  
+
 ```sql
 DECLARE @g1 geometry;
 DECLARE @g2 geometry;
@@ -114,14 +115,16 @@ IF @g1.STIsValid() = 1 AND @g2.STIsValid() = 1
 
 Si noti che un'istanza **CircularString** richiede sette punti per definire il triangolo, mentre un'istanza **LineString** richiede solo quattro punti. Il motivo è che un'istanza **CircularString** archivia segmenti di arco circolare e non segmenti di linea. Di conseguenza, i lati del triangolo archiviati nell'istanza **CircularString** sono ABC, CDE ed EFA, mentre i lati del triangolo archiviati nell'istanza **LineString** sono AC, CE ed EA.  
 
-Si consideri il frammento di codice seguente:  
+Si consideri l'esempio descritto di seguito.  
+
 ```sql
 SET @g1 = geometry::STGeomFromText('LINESTRING(0 0, 2 2, 4 0)', 0);
 SET @g2 = geometry::STGeomFromText('CIRCULARSTRING(0 0, 2 2, 4 0)', 0);
 SELECT @g1.STLength() AS [LS Length], @g2.STLength() AS [CS Length];
 ```
 
-Questo frammento di codice produce i risultati seguenti:  
+[!INCLUDE[ssResult](../../includes/ssresult-md.md)]
+
 ```
 LS LengthCS Length
 5.65685...6.28318...
@@ -131,15 +134,15 @@ Le istanze **CircularString** usano un numero minore di punti per archiviare i l
 
 ### <a name="linestring-and-compoundcurve-comparison"></a>Confronto tra LineString e CompoundCurve  
 Negli esempi di codice seguenti viene illustrato come archiviare la stessa figura utilizzando istanze **LineString** e **CompoundCurve** :
+
 ```sql
 SET @g = geometry::Parse('LINESTRING(2 2, 4 2, 4 4, 2 4, 2 2)');
 SET @g = geometry::Parse('COMPOUNDCURVE((2 2, 4 2), (4 2, 4 4), (4 4, 2 4), (2 4, 2 2))');
 SET @g = geometry::Parse('COMPOUNDCURVE((2 2, 4 2, 4 4, 2 4, 2 2))');
 ```
 
-o Gestione configurazione  
-
 Negli esempi precedenti un'istanza **LineString** o un'istanza **CompoundCurve** potrebbe archiviare la figura.  Nell'esempio seguente viene utilizzata un'istanza **CompoundCurve** per archiviare una sezione di un grafico a torta:  
+
 ```sql
 SET @g = geometry::Parse('COMPOUNDCURVE(CIRCULARSTRING(2 2, 1 3, 0 2),(0 2, 1 0, 2 2))');  
 ```  
@@ -148,6 +151,7 @@ Un'istanza **CompoundCurve** consente di archiviare direttamente il segmento di 
 
 ### <a name="circularstring-and-compoundcurve-comparison"></a>Confronto tra CircularString e CompoundCurve  
 Nell'esempio di codice seguente viene illustrata l'archiviazione di una sezione di un grafico a torta in un'istanza **CircularString** :  
+
 ```sql
 DECLARE @g geometry;
 SET @g = geometry::Parse('CIRCULARSTRING( 0 0, 1 2.1082, 3 6.3246, 0 7, -3 6.3246, -1 2.1082, 0 0)');
@@ -168,7 +172,7 @@ SELECT @g.ToString(), @g.STLength();
 ```
 
 ### <a name="polygon-and-curvepolygon-comparison"></a>Confronto tra Polygon e CurvePolygon  
-Le istanze**CurvePolygon** possono utilizzare istanze **CircularString** e **CompoundCurve** instances when defining their exterior e interior rings.  Le istanze**Polygon** non possono utilizzare i tipi di segmento di arco circolare: **CircularString** e **CompoundCurve**.  
+Le istanze**CurvePolygon** possono utilizzare istanze **CircularString** e **CompoundCurve** instances when defining their exterior e interior rings.  Le istanze **Polygon** non possono usare i tipi di segmento di arco circolare: **CircularString** e **CompoundCurve**.  
 
 ## <a name="see-also"></a>Vedere anche  
 - [Dati spaziali (SQL Server)](https://msdn.microsoft.com/library/bb933790.aspx) 

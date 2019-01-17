@@ -1,6 +1,7 @@
 ---
-title: Il gruppo di disponibilità non è pronto per il failover automatico | Microsoft Docs
-ms.custom: ''
+title: Il gruppo di disponibilità non è pronto per il failover automatico
+description: Informazioni sull'identificazione dei possibili motivi per cui un gruppo di disponibilità Always On non è pronto per il failover.
+ms.custom: seodec18
 ms.date: 05/17/2016
 ms.prod: sql
 ms.reviewer: ''
@@ -14,14 +15,14 @@ ms.assetid: 28261014-342c-442a-bd89-6d04b8d4e8b7
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: dec114e42921c7d7619ad3da6252d54e534826a9
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.openlocfilehash: 2951f586d252d058d7de542160f8b103b6a79bef
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51601601"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53210110"
 ---
-# <a name="availability-group-is-not-ready-for-automatic-failover"></a>Il gruppo di disponibilità non è pronto per il failover automatico
+# <a name="always-on-availability-group-is-not-ready-for-automatic-failover"></a>Il gruppo di disponibilità Always On non è pronto per il failover automatico
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
     
 ## <a name="introduction"></a>Introduzione  

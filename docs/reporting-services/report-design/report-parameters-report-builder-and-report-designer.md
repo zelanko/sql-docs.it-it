@@ -1,9 +1,11 @@
 ---
 title: Parametri report (Generatore report e Progettazione report) | Microsoft Docs
-ms.date: 10/17/2016
+ms.date: 12/06/2018
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: report-design
+description: Questo argomento descrive le modalità d'uso comuni per i parametri report di Reporting Services, le proprietà impostabili e altre informazioni.
+ms.custom: seodec18
 ms.topic: conceptual
 f1_keywords:
 - sql13.rtp.rptdesigner.reportparameters.general.f1
@@ -15,26 +17,25 @@ f1_keywords:
 ms.assetid: 58b96555-d876-4f61-bff8-db5764b9f5f9
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: fa92c44ff8410049e32ba7ddba2c90fcd07c2821
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+ms.openlocfilehash: 55104192e2a6ac738ca5b99365fd90b74d40430b
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50032080"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53215022"
 ---
 # <a name="report-parameters-report-builder-and-report-designer"></a>Parametri report (Generatore report e Progettazione report)
+
+[!INCLUDE[ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)], [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] modalità SharePoint e modalità nativa
+
   Questo argomento descrive gli usi comuni per i parametri di report [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] , le proprietà che è possibile impostare e altre informazioni. I parametri del report consentono di controllare i dati del report, connettere report correlati e variare la presentazione del report. È possibile usare i parametri del report in report impaginati creati in [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] e Progettazione report, nonché in report per dispositivi mobili creati in [!INCLUDE[SS_MobileReptPub_Long](../../includes/ss-mobilereptpub-long.md)]. Altre informazioni sui [Concetti relativi ai parametri di report](../../reporting-services/report-design/report-parameters-concepts-report-builder-and-ssrs.md).  
-  
-||  
-|-|  
-|[!INCLUDE[applies](../../includes/applies-md.md)] [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)], modalità SharePoint e modalità nativa di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]|  
-  
- Per provare ad aggiungere un parametro a un report manualmente, vedere [Esercitazione: Aggiungere un parametro al report &#40;Generatore report&#41;](../../reporting-services/tutorial-add-a-parameter-to-your-report-report-builder.md).  
+ 
+Per provare ad aggiungere un parametro a un report manualmente, vedere [Esercitazione: Aggiungere un parametro al report &#40;Generatore report&#41;](../../reporting-services/tutorial-add-a-parameter-to-your-report-report-builder.md).  
     
 ##  <a name="bkmk_Common_Uses_for_Parameters"></a> Utilizzi comuni per i parametri  
  Di seguito sono elencate alcune delle modalità più comuni in cui è possibile usare i parametri.  
   
- **Controllare i dati dei report per dispositivi mobili e impaginati**  
+**Controllare i dati dei report per dispositivi mobili e impaginati**  
   
 -   Filtrare i dati del report impaginato nell'origine dati scrivendo query del set di dati contenenti variabili.  
   
@@ -44,7 +45,7 @@ ms.locfileid: "50032080"
   
 -   Consentire agli utenti di specificare i valori per personalizzare i dati di un report impaginato. È ad esempio possibile fornire due parametri per la data di inizio e la data di fine dei dati di vendita.  
   
- **Connettere report correlati**  
+**Connettere report correlati**  
   
 -   Usare parametri per correlare report principali a report drill-through, sottoreport e report collegati. Durante la progettazione di un set di report, ogni report viene progettato in modo da rispondere a domande specifiche. In particolare, ogni report è in grado di offrire una vista diversa o un livello di dettaglio diverso per le informazioni correlate. Per ottenere un set di report correlati tra loro, creare i parametri per i dati correlati nei report di destinazione.  
   
@@ -52,7 +53,7 @@ ms.locfileid: "50032080"
   
 -   Personalizzare set di parametri per più utenti. Creare due report collegati basati su un report relativo alle vendite sul server di report. In un report collegato vengono usati i valori di parametro predefiniti per i venditori mentre nel secondo report collegato vengono usati i valori di parametro predefiniti per i responsabili vendite. In entrambi i report viene usata la stessa definizione report.  
   
- **Variare la presentazione del report**  
+**Variare la presentazione del report**  
   
 -   Inviare comandi a un server di report tramite una richiesta URL, per personalizzare il rendering di un report. Per altre informazioni, vedere [Accesso con URL &#40;SSRS&#41;](../../reporting-services/url-access-ssrs.md) e [Passare un parametro del report in un URL](../../reporting-services/pass-a-report-parameter-within-a-url.md).  
   
@@ -105,9 +106,9 @@ ms.locfileid: "50032080"
   
  Per altre informazioni, vedere [Query del set di dati](#bkmk_Dataset_Parameters) più avanti in questo argomento.  
   
- **Creare un parametro manualmente**  
+**Creare un parametro manualmente**  
   
- Creare manualmente un parametro dal riquadro dei dati del report. È possibile configurare i parametri del report in modo che un utente possa immettere in modo interattivo i valori per personalizzare il contenuto o l'aspetto di un report. È inoltre possibile configurare i parametri del report in modo che un utente non possa modificare i valori preconfigurati.  
+Creare manualmente un parametro dal riquadro dei dati del report. È possibile configurare i parametri del report in modo che un utente possa immettere in modo interattivo i valori per personalizzare il contenuto o l'aspetto di un report. È inoltre possibile configurare i parametri del report in modo che un utente non possa modificare i valori preconfigurati.  
   
 > [!NOTE]  
 >  Poiché i parametri vengono gestiti in modo indipendente nel server, la ripubblicazione di un report principale con nuove impostazioni dei parametri non implica la sovrascrittura delle impostazioni dei parametri esistenti per il report principale o per quello collegato.  
@@ -211,30 +212,9 @@ ms.locfileid: "50032080"
 >  Se un parametro di report non è correlato a un parametro del set di dati e i valori del parametro sono inclusi nel report, un utente potrebbe digitare nel valore del parametro un URL o la sintassi di un'espressione ed eseguire il rendering del report in formato Excel o HTML. Se il report viene in seguito visualizzato da un altro utente che fa clic sul contenuto dei parametri di cui è stato eseguito il rendering, è possibile che venga inavvertitamente eseguito il collegamento o lo script dannoso.  
 >   
 >  Per ridurre il rischio di eseguire inavvertitamente script dannosi, aprire i report visualizzabili solo da origini attendibili. Per altre informazioni sulla sicurezza dei report, vedere [Garantire la sicurezza di report e risorse](../../reporting-services/security/secure-reports-and-resources.md).  
-  
-##  <a name="bkmk_How_To_Topics"></a> Procedure  
- In questa sezione vengono elencate le procedure in cui viene mostrato in dettaglio l'utilizzo di parametri e filtri.  
-  
--   [Aggiungere, modificare o eliminare un parametro di report &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/add-change-or-delete-a-report-parameter-report-builder-and-ssrs.md)  
-  
--   [Aggiungere, modificare o eliminare valori disponibili per un parametro di report &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/add-change-or-delete-available-values-for-a-report-parameter.md)  
-  
--   [Aggiungere, modificare o eliminare valori predefiniti per un parametro di report &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/add-change-or-delete-default-values-for-a-report-parameter.md)  
-  
--   [Modificare l'ordine di un parametro del report &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/change-the-order-of-a-report-parameter-report-builder-and-ssrs.md)  
-  
--   [Aggiungere parametri di propagazione a un report &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/add-cascading-parameters-to-a-report-report-builder-and-ssrs.md)  
-  
--   [Aggiungere un filtro a un set di dati &#40;Generatore report e SSRS&#41;](../../reporting-services/report-data/add-a-filter-to-a-dataset-report-builder-and-ssrs.md)  
-  
--   [Aggiungere un sottoreport e parametri &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/add-a-subreport-and-parameters-report-builder-and-ssrs.md)  
-  
--   [Personalizzare il riquadro dei parametri in un report &#40;Generatore report&#41;](../../reporting-services/report-design/customize-the-parameters-pane-in-a-report-report-builder.md)  
-  
 
 ##  <a name="bkmk_Related_Topics"></a> Sezioni correlate  
- [Configurazione dei parametri di report SSRS (quiz)](https://go.microsoft.com/fwlink/p/?LinkID=306443)  
-  
+
  [Esercitazione: Aggiungere un parametro al report &#40;Generatore report&#41;](../../reporting-services/tutorial-add-a-parameter-to-your-report-report-builder.md)  
   
 [Concetti relativi ai parametri di report](../../reporting-services/report-design/report-parameters-concepts-report-builder-and-ssrs.md)  

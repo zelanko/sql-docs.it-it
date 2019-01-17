@@ -1,6 +1,7 @@
 ---
-title: Configurare un gruppo di disponibilità distribuito (gruppo di disponibilità AlwaysOn) | Microsoft Docs
-ms.custom: ''
+title: Configurare un gruppo di disponibilità distribuito
+description: 'In questo argomento viene descritto come creare e configurare un gruppo di disponibilità distribuito Always On. '
+ms.custom: seodec18
 ms.date: 08/17/2017
 ms.prod: sql
 ms.reviewer: ''
@@ -10,14 +11,14 @@ ms.assetid: f7c7acc5-a350-4a17-95e1-e689c78a0900
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 6cfc2b3cbb9dedc9f2b8902229c6aea9e68226ec
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.openlocfilehash: bc8dc35b72a5544bc6b52934a4e2e517a047a621
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51603997"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53215367"
 ---
-# <a name="configure-distributed-availability-group"></a>Configurare un gruppo di disponibilità distribuito  
+# <a name="configure-a-distributed-always-on-availability-group"></a>Configurare un gruppo di disponibilità distribuito Always On  
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 Per creare un gruppo di disponibilità distribuito, è necessario creare un gruppo di disponibilità e listener in ogni WSFC (Windows Server Failover Cluster). È quindi possibile combinare questi gruppi di disponibilità in un gruppo di disponibilità distribuito. La procedura seguente illustra un esempio di base in Transact-SQL. Questo esempio non descrive in dettaglio la creazione dei gruppi di disponibilità e listener, ma mette in rilievo i requisiti principali. 

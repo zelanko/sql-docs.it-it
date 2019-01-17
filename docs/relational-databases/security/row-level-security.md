@@ -18,12 +18,12 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 5ec86bf23a2fdf951da6d64f934ce8f62f6b3cb5
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: f1f0e5180c03a033cd854aba9f3261e5a89960f5
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52409898"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53210431"
 ---
 # <a name="row-level-security"></a>Sicurezza a livello di riga
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
@@ -52,7 +52,7 @@ ms.locfileid: "52409898"
   
  L'accesso ai dati a livello di riga in una tabella è limitato da un predicato di sicurezza definito come una funzione inline con valori di tabella. La funzione viene quindi richiamata e applicata dai criteri di sicurezza. Nel caso dei predicati del filtro, l'applicazione non rileva le righe filtrate dal set di risultati. Se vengono filtrate tutte le righe, viene restituito un set Null. Per i predicati di blocco, qualsiasi operazione che violi il predicato non verrà completata e genererà un errore.  
   
- I predicati del filtro vengono applicati durante la lettura dei dati dalla tabella di base e hanno effetto su tutte le operazioni Get: **SELECT**, **DELETE** (l'utente non può eliminare le righe filtrate) e **UPDATE** (l'utente non può aggiornare le righe filtrate, anche se è possibile aggiornare le righe in modo che vengano filtrate successivamente). I predicati di blocco influiscono su tutte le operazioni di scrittura.  
+ I predicati di filtro vengono applicati durante la lettura dei dati dalla tabella di base e influiscono su tutte le operazioni Get: **SELECT**, **DELETE** (l'utente non può eliminare le righe filtrate) e **UPDATE** (l'utente non può aggiornare le righe filtrate, anche se è possibile aggiornare le righe in modo che vengano filtrate successivamente). I predicati di blocco influiscono su tutte le operazioni di scrittura.  
   
 -   I predicati AFTER INSERT e AFTER UPDATE possono impedire agli utenti di aggiornare le righe con valori che violano il predicato.  
   
@@ -84,7 +84,7 @@ ms.locfileid: "52409898"
   
 -   I predicati di blocco di UPDATE vengono suddivisi in operazioni distinte BEFORE e AFTER. Di conseguenza non è possibile, ad esempio, impedire agli utenti di aggiornare una riga con un valore superiore a quello corrente. Se si deve applicare una logica di questo tipo, occorre usare i trigger con le tabelle intermedie DELETED e INSERTED per rimandare ai valori precedenti e nuovi insieme.  
   
--   L'ottimizzatore non controllerà il predicato di blocco AFTER e UPDATE se non è stata modificata nessuna delle colonne usate dalla funzione del predicato. Ad esempio, Alice non sarà in grado di modificare uno stipendio in modo che superi 100.000, ma sarà in grado di modificare l'indirizzo di un dipendente il cui stipendio è già maggiore di 100.000, perché viola già il predicato.  
+-   L'ottimizzatore non controllerà il predicato di blocco AFTER e UPDATE se non è stata modificata nessuna delle colonne usate dalla funzione del predicato. Ad esempio Alice non sarà in grado di modificare uno stipendio in modo che superi 100.000, ma sarà in grado di modificare l'indirizzo di un dipendente il cui stipendio è già maggiore di 100.000, perché viola già il predicato.  
   
 -   Non sono state modificate le API in blocco, compresa l'API BULK INSERT. Questo significa che i predicati di blocco AFTER INSERT verranno applicati alle operazioni di inserimento in blocco come se fossero operazioni di inserimento regolari.  
   
@@ -103,7 +103,7 @@ ms.locfileid: "52409898"
  In termini più formali, la sicurezza a livello di riga introduce il controllo degli accessi basato su predicato. Comprende una valutazione basata su predicato flessibile e centralizzata che può prendere in considerazione i metadati o altri criteri ritenuti appropriati dall'amministratore. Il predicato viene usato come criterio per determinare se l'utente dispone dell'accesso appropriato ai dati in base agli attributi utente. Il controllo degli accessi basato su etichetta può essere implementato usando un controllo degli accessi basato su predicato.  
   
   
-##  <a name="Permissions"></a> Autorizzazioni  
+##  <a name="Permissions"></a> Permissions  
  La creazione, la modifica o l'eliminazione dei criteri di sicurezza richiede l'autorizzazione **ALTER ANY SECURITY POLICY** . La creazione o l'eliminazione dei criteri di sicurezza richiede l'autorizzazione **ALTER** nello schema.  
   
  Inoltre, per ogni predicato che viene aggiunto sono richieste le autorizzazioni seguenti:  
@@ -131,7 +131,7 @@ ms.locfileid: "52409898"
   
 -   Evitare di usare un numero eccessivo di join di tabella nelle funzioni di predicato per ottimizzare le prestazioni.  
   
- Evitare una logica di predicato dipendente da [opzioni SET](../../t-sql/statements/set-statements-transact-sql.md)specifiche della sessione. Nonostante sia improbabile che vengano usate in applicazioni pratiche, le funzioni di predicato la cui logica dipende da determinate opzioni **SET** specifiche della sessione possono causare perdite di informazioni se gli utenti possono eseguire query arbitrarie. Ad esempio, una funzione di predicato che converte implicitamente una stringa in **datetime** potrebbe filtrare righe diverse in base all'opzione **SET DATEFORMAT** per la sessione corrente. In generale le funzioni di predicato devono rispettare le regole seguenti:  
+ Evitare una logica del predicato dipendente da [opzioni SET](../../t-sql/statements/set-statements-transact-sql.md) specifiche della sessione: nonostante sia improbabile che vengano usate in applicazioni pratiche, le funzioni del predicato la cui logica dipende da determinate opzioni **SET** specifiche della sessione possono causare la perdita di informazioni se gli utenti possono eseguire query arbitrarie. Ad esempio, una funzione di predicato che converte implicitamente una stringa in **datetime** potrebbe filtrare righe diverse in base all'opzione **SET DATEFORMAT** per la sessione corrente. In generale le funzioni di predicato devono rispettare le regole seguenti:  
   
 -   Le funzioni di predicato non devono convertire implicitamente stringhe di caratteri in **date**, **smalldatetime**, **datetime**, **datetime2** o **datetimeoffset** né viceversa, perché queste conversioni sono influenzate dalle opzioni [SET DATEFORMAT &#40;Transact-SQL&#41;](../../t-sql/statements/set-dateformat-transact-sql.md) e [SET LANGUAGE &#40;Transact-SQL&#41;](../../t-sql/statements/set-language-transact-sql.md). Utilizzare invece la funzione **CONVERT** e specificare esplicitamente il parametro di stile.  
   
@@ -142,10 +142,10 @@ ms.locfileid: "52409898"
 -   Le funzioni di predicato non devono confrontare stringhe concatenate con **NULL**, perché questo comportamento è influenzato dall'opzione [SET CONCAT_NULL_YIELDS_NULL &#40;Transact-SQL&#41;](../../t-sql/statements/set-concat-null-yields-null-transact-sql.md).  
    
   
-##  <a name="SecNote"></a> Nota sulla sicurezza: attacchi al canale laterale  
- **Gestore dei criteri di sicurezza malintenzionato:** è importante osservare che un gestore dei criteri di sicurezza malintenzionato, con autorizzazioni sufficienti per creare criteri di sicurezza per una colonna sensibile e per creare o modificare le funzioni con valori di tabella inline, può agire in collusione con un altro utente con autorizzazioni Select su una tabella al fine di estrarre dolosamente i dati creando funzioni con valori di tabella inline progettate per usare attacchi al canale laterale per estrapolare i dati. Questi attacchi richiedono la collusione con altre persone (o autorizzazioni eccessive concesse a un utente malintenzionato) e richiedono probabilmente diversi tentativi di modifica dei criteri (che richiede autorizzazioni per rimuovere il predicato per interrompere l'associazione allo schema), la modifica delle funzioni con valori di tabella inline e diverse esecuzioni delle istruzioni Select nella tabella di destinazione. È consigliabile di limitare le autorizzazioni concedendo solo quelle necessarie e di monitorare le attività sospette, ad esempio la modifica frequente dei criteri e delle funzioni con valori di tabella inline relativi alla sicurezza a livello di riga.  
+##  <a name="SecNote"></a> Nota sulla sicurezza: Attacchi al canale laterale  
+ **Gestore dei criteri di sicurezza malintenzionato:** è importante osservare che un gestore dei criteri di sicurezza malintenzionato, con autorizzazioni sufficienti per creare criteri di sicurezza per una colonna sensibile e per creare o modificare le funzioni inline con valori di tabella, può agire in collusione con un altro utente con autorizzazioni Select su una tabella al fine di estrarre dolosamente i dati creando funzioni inline con valori di tabella progettate per usare attacchi al canale laterale per estrapolare i dati. Questi attacchi richiedono la collusione con altre persone (o autorizzazioni eccessive concesse a un utente malintenzionato) e richiedono probabilmente diversi tentativi di modifica dei criteri (che richiede autorizzazioni per rimuovere il predicato per interrompere l'associazione allo schema), la modifica delle funzioni con valori di tabella inline e diverse esecuzioni delle istruzioni Select nella tabella di destinazione. È consigliabile di limitare le autorizzazioni concedendo solo quelle necessarie e di monitorare le attività sospette, ad esempio la modifica frequente dei criteri e delle funzioni con valori di tabella inline relativi alla sicurezza a livello di riga.  
   
- **Query create appositamente:** è possibile causare perdite di informazioni mediante l'utilizzo di query create appositamente. Ad esempio, `SELECT 1/(SALARY-100000) FROM PAYROLL WHERE NAME='John Doe'` consentirebbe a un utente malintenzionato di sapere che lo stipendio di John Doe ammonta a 100.000 dollari. Anche se è disponibile un predicato di sicurezza per impedire le query dirette di un utente malintenzionato relative allo stipendio degli altri dipendenti, l'utente può determinare quando la query restituisce un'eccezione di divisione per zero.  
+ **Query appositamente create:** È possibile causare perdite di informazioni mediante l'utilizzo di query appositamente create. Ad esempio, `SELECT 1/(SALARY-100000) FROM PAYROLL WHERE NAME='John Doe'` consentirebbe a un utente malintenzionato di sapere che lo stipendio di John Doe ammonta a 100.000 dollari. Anche se è disponibile un predicato di sicurezza per impedire le query dirette di un utente malintenzionato relative allo stipendio degli altri dipendenti, l'utente può determinare quando la query restituisce un'eccezione di divisione per zero.  
    
   
 ##  <a name="Limitations"></a> Compatibilità tra funzionalità  
@@ -165,7 +165,7 @@ ms.locfileid: "52409898"
   
 -   **Rilevamento delle modifiche** Il rilevamento delle modifiche può provocare la perdita della chiave primaria delle righe che devono essere filtrate per gli utenti con autorizzazioni **SELECT** e **VIEW CHANGE TRACKING** . I valori dei dati effettivi non vengono perduti, ma va perduto solo il fatto che la colonna A è stata aggiornata/inserita/eliminata per la riga con la chiave primaria B. Questo rappresenta un problema se la chiave primaria contiene un elemento riservato, ad esempio un codice fiscale. In pratica però **CHANGETABLE** è quasi sempre unito alla tabella originale per ottenere i dati più recenti.  
   
--   **Ricerca full-text** . A causa di un join aggiuntivo introdotto per applicare la sicurezza a livello di riga ed evitare la perdita di chiavi primarie delle righe che devono essere filtrate, è previsto un calo di prestazioni per le query che usano le funzioni di ricerca semantica e ricerca full-text seguenti: **CONTAINSTABLE**, **FREETEXTTABLE**, semantickeyphrasetable, semanticsimilaritydetailstable e semanticsimilaritytable.  
+-   **Ricerca full-Text** È previsto un peggioramento delle prestazioni per le query che usano le funzioni seguenti di ricerca full-text e ricerca semantica, a causa di un join aggiuntivo introdotto per applicare la sicurezza a livello di riga e di evitare la perdita di chiavi primarie delle righe che devono essere filtrate: **CONTAINSTABLE**, **FREETEXTTABLE**, semantickeyphrasetable, semanticsimilaritydetailstable, semanticsimilaritytable.  
   
 -   **Indici columnstore** . La sicurezza a livello di riga è compatibile con indici columnstore sia cluster che non cluster. Dato però che la sicurezza a livello di riga applica una funzione, l'ottimizzatore può modificare il piano di query in modo che non usi la modalità batch.  
   

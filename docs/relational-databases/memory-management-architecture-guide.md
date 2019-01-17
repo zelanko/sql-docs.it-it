@@ -1,7 +1,7 @@
 ---
 title: Guida sull'architettura di gestione della memoria | Microsoft Docs
 ms.custom: ''
-ms.date: 06/08/2018
+ms.date: 12/11/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -15,12 +15,12 @@ author: rothja
 ms.author: jroth
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: dadd28224a7f360ee90767861025b0bdebc7cbe5
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 924b347e5fa8907fa1f2b9cb9b820a63808cbc3b
+ms.sourcegitcommit: 40c3b86793d91531a919f598dd312f7e572171ec
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51669400"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53328981"
 ---
 # <a name="memory-management-architecture-guide"></a>guida sull'architettura di gestione della memoria
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -57,8 +57,8 @@ Usando AWE e il privilegio Blocco di pagine in memoria, è possibile fornire al 
 | |32 bit <sup>1</sup> |64 bit|
 |-------|-------|-------| 
 |Memoria convenzionale |Tutte le edizioni di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] . Fino al limite dello spazio degli indirizzi virtuali di processo: <br>- 2 GB<br>- 3 GB con parametro di avvio /3gb <sup>2</sup> <br>- 4 GB su WOW64 <sup>3</sup> |Tutte le edizioni di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] . Fino al limite dello spazio degli indirizzi virtuali di processo: <br>- 7 TB con architettura IA64 (IA64 non è supportato in [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] e versioni successive)<br>- Valore massimo del sistema operativo con architettura x64 <sup>4</sup>
-|Meccanismo AWE (consente a [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] di superare il limite dello spazio degli indirizzi virtuali di processo nelle piattaforme a 32 bit) |[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] edizioni Standard, Enterprise e Developer: il pool di buffer è in grado di accedere a una memoria limite di 64 GB.|Non applicabile <sup>5</sup> |
-|Privilegio Blocco di pagine in memoria del sistema operativo (consente di bloccare la memoria fisica, impedendo il paging della memoria bloccata da parte del sistema operativo). <sup>6</sup> |[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] edizioni Standard, Enterprise e Developer: necessari per il processo di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] che usa il meccanismo AWE. La memoria allocata tramite il meccanismo AWE non può essere trasferita. <br> La concessione di questo privilegio senza l'attivazione di AWE non ha alcun effetto sul server. | Usato solo quando necessario, ovvero in presenza di segnali di page out del processo sqlservr. In questo caso, verrà segnalato l'errore 17890 nel log degli errori, simile a quello riportato nell'esempio seguente:`A significant part of sql server process memory has been paged out. This may result in a performance degradation. Duration: #### seconds. Working set (KB): ####, committed (KB): ####, memory utilization: ##%.`|
+|Meccanismo AWE (consente a [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] di superare il limite dello spazio degli indirizzi virtuali di processo nelle piattaforme a 32 bit) |[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Edizione Standard, Enterprise e Developer: Il pool di buffer può accedere a un massimo di 64 GB di memoria.|Non applicabile <sup>5</sup> |
+|Privilegio Blocco di pagine in memoria del sistema operativo (consente di bloccare la memoria fisica, impedendo il paging della memoria bloccata da parte del sistema operativo). <sup>6</sup> |[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Edizione Standard, Enterprise e Developer: Obbligatorio perché il processo [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] possa usare il meccanismo AWE. La memoria allocata tramite il meccanismo AWE non può essere trasferita. <br> La concessione di questo privilegio senza l'attivazione di AWE non ha alcun effetto sul server. | Usato solo quando necessario, ovvero in presenza di segnali di page out del processo sqlservr. In questo caso, verrà segnalato l'errore 17890 nel log degli errori, simile a quello riportato nell'esempio seguente:`A significant part of sql server process memory has been paged out. This may result in a performance degradation. Duration: #### seconds. Working set (KB): ####, committed (KB): ####, memory utilization: ##%.`|
 
 <sup>1</sup> Le versioni a 32 bit non sono disponibili a partire da [!INCLUDE[ssSQL14](../includes/sssql14-md.md)].  
 <sup>2</sup> /3gb è un parametro di avvio del sistema operativo. Per altre informazioni, consultare MSDN Library.  
@@ -71,7 +71,7 @@ Usando AWE e il privilegio Blocco di pagine in memoria, è possibile fornire al 
 > Le versioni precedenti di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] potrebbero essere eseguite in un sistema operativo a 32 bit. L'accesso a più di 4 gigabyte (GB) di memoria in un sistema operativo a 32 bit richiede estensioni AWE (Address Windowing Extensions) per la gestione della memoria. Queste estensioni non sono necessarie quando [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] è in esecuzione su sistemi operativi a 64 bit. Per altre informazioni su AWE, vedere [Spazio degli indirizzi di processo](https://msdn.microsoft.com/library/ms189334.aspx) e [Gestione della memoria per database di grandi dimensioni](https://msdn.microsoft.com/library/ms191481.aspx) nella documentazione di [!INCLUDE[ssKatmai](../includes/ssKatmai-md.md)].   
 
 ## <a name="changes-to-memory-management-starting-with-includesssql11includessssql11-mdmd"></a>Modifiche apportate alla gestione della memoria a partire da [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]
-Nelle versioni precedenti di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] ([!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)], [!INCLUDE[ssKatmai](../includes/ssKatmai-md.md)] e [!INCLUDE[ssKilimanjaro](../includes/ssKilimanjaro-md.md)]), l'allocazione di memoria veniva gestita con cinque meccanismi diversi:
+Nelle versioni precedenti di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] ([!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)], [!INCLUDE[ssKatmai](../includes/ssKatmai-md.md)] e [!INCLUDE[ssKilimanjaro](../includes/ssKilimanjaro-md.md)]), l'allocazione di memoria viene gestita con cinque meccanismi diversi:
 -  **Allocatore di pagine singole**, che include solo le allocazioni di memoria minori o uguali a 8 KB nel processo di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Le opzioni di configurazione *max server memory (MB)* e *min server memory (MB)* che determinano i limiti di memoria fisica usata dall'allocatore di pagine singole. Il pool di buffer è contemporaneamente il meccanismo per l'allocazione di pagine singole e il maggiore consumer di allocazioni di pagine singole.
 -  **Allocatore di più pagine**, per le allocazioni di memoria che richiedono più di 8 KB.
 -  **Allocatore CLR**, che include gli heap CLR SQL e le relative allocazioni globali create durante l'inizializzazione di CLR.
@@ -103,8 +103,9 @@ Questo comportamento viene in genere osservato durante le operazioni seguenti:
 -  Operazioni di backup che richiedono buffer di memoria di grandi dimensioni.
 -  Operazioni di traccia che devono archiviare parametri di input di grandi dimensioni.
 
+<a name="#changes-to-memory-management-starting-with-includesssql11includessssql11-mdmd"></a>
 ## <a name="changes-to-memorytoreserve-starting-with-includesssql11includessssql11-mdmd"></a>Modifiche apportate a "memory_to_reserve" a partire da [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]
-Nelle versioni precedenti di SQL Server ([!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)], [!INCLUDE[ssKatmai](../includes/ssKatmai-md.md)] e [!INCLUDE[ssKilimanjaro](../includes/ssKilimanjaro-md.md)]), lo strumento di gestione della memoria di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] riserva parte dello spazio indirizzi virtuali dl processo per l'**allocatore di più pagine**, l'**allocatore CLR**, le allocazioni di memoria per gli **stack di thread** nel processo di SQL Server e le **allocazioni di Windows dirette**. Questa parte dello spazio indirizzi virtuali è nota anche come area MemToLeave o "pool non di buffer".
+Nelle versioni precedenti di SQL Server ([!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)], [!INCLUDE[ssKatmai](../includes/ssKatmai-md.md)] e [!INCLUDE[ssKilimanjaro](../includes/ssKilimanjaro-md.md)]) lo strumento di gestione della memoria di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] riserva parte dello spazio indirizzi virtuali del processo per l'**allocatore di più pagine**, l'**allocatore CLR**, le allocazioni di memoria per gli **stack di thread** nel processo di SQL Server e le **allocazioni di Windows dirette**. Questa parte dello spazio indirizzi virtuali è nota anche come area MemToLeave o "pool non di buffer".
 
 Lo spazio indirizzi virtuali riservato per queste allocazioni varia a seconda dell'opzione di configurazione _**memory\_to\_reserve**_. Il valore predefinito usato da [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] è 256 MB. Per sostituire il valore predefinito, usare il parametro di avvio [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] *-g*. Fare riferimento alla pagina della documentazione [Opzioni di avvio del servizio del motore di database](../database-engine/configure-windows/database-engine-service-startup-options.md) per informazioni sul parametro di avvio *-g*.
 
@@ -183,7 +184,7 @@ Se un'istanza di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] è in es
 Nella seguente tabella sono indicate le quantità di memoria approssimative usate da diversi oggetti in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. I valori riportati sono stimati e possono variare a seconda dell'ambiente e delle modalità di creazione degli oggetti:
 
 * Blocco (gestito da Gestione blocchi): 64 byte + 32 byte per proprietario   
-* Connessione utente: circa (3 \* dimensioni_pacchetto_rete + 94 kb)    
+* Connessione utente: circa (3 \*network_packet_size + 94 kb)    
 
 **dimensioni_pacchetto_rete** indica le dimensioni dei pacchetti TDS (Tabular Data Scheme) usati per le comunicazioni tra le applicazioni e il motore di database di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. La dimensione predefinita del pacchetto è 4 KB e viene controllata dall'opzione di configurazione delle dimensioni del pacchetto di rete.
 
@@ -313,12 +314,12 @@ La protezione dei checksum, introdotta in [!INCLUDE[ssVersion2005](../includes/s
 > TORN_PAGE_DETECTION può consentire l'utilizzo di un numero più limitato di risorse, ma offre una protezione minore rispetto all'opzione CHECKSUM.
 
 ## <a name="understanding-non-uniform-memory-access"></a>Informazioni sull'architettura NUMA (Non-Uniform Memory Access)
-[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] supporta l'architettura NUMA (Non-Uniform Memory Access) e offre buone prestazioni su hardware NUMA senza alcuna configurazione specifica. Con l'aumentare della velocità del clock e del numero di processori, diventa sempre più difficile ridurre la latenza di memoria necessaria per utilizzare questa ulteriore capacità di elaborazione. Per ovviare a questo problema, i fornitori di hardware offrono cache L3 di grandi dimensioni. Si tratta, tuttavia, di una soluzione soggetta a limiti. L'architettura NUMA offre una soluzione scalabile per questo problema. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] è stato progettato per l'uso ottimale in computer basati su NUMA senza che sia necessario apportare alcuna modifica alle applicazioni. Per altre informazioni, vedere [Procedura: Configurazione di SQL Server per l'uso di Soft-NUMA](../database-engine/configure-windows/soft-numa-sql-server.md).
+[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] supporta l'architettura NUMA (Non-Uniform Memory Access) e offre buone prestazioni su hardware NUMA senza alcuna configurazione specifica. Con l'aumentare della velocità del clock e del numero di processori, diventa sempre più difficile ridurre la latenza di memoria necessaria per utilizzare questa ulteriore capacità di elaborazione. Per ovviare a questo problema, i fornitori di hardware offrono cache L3 di grandi dimensioni. Si tratta, tuttavia, di una soluzione soggetta a limiti. L'architettura NUMA offre una soluzione scalabile per questo problema. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] è stato progettato per l'uso ottimale in computer basati su NUMA senza che sia necessario apportare alcuna modifica alle applicazioni. Per altre informazioni, vedere [Procedura: Configurare SQL Server per usare Soft-NUMA](../database-engine/configure-windows/soft-numa-sql-server.md).
 
 ## <a name="see-also"></a>Vedere anche
 [Opzioni di configurazione del server Server Memory](../database-engine/configure-windows/server-memory-server-configuration-options.md)   
 [Lettura di pagine](../relational-databases/reading-pages.md)   
 [Scrittura di pagine](../relational-databases/writing-pages.md)   
-[Procedura: Configurazione di SQL Server per l'utilizzo di Soft-NUMA](../database-engine/configure-windows/soft-numa-sql-server.md)   
+[Procedura: Configurare SQL Server per usare Soft-NUMA](../database-engine/configure-windows/soft-numa-sql-server.md)   
 [Requisiti per l'uso di tabelle ottimizzate per la memoria](../relational-databases/in-memory-oltp/requirements-for-using-memory-optimized-tables.md)   
 [Risolvere i problemi di memoria insufficiente con le tabelle ottimizzate per la memoria](../relational-databases/in-memory-oltp/resolve-out-of-memory-issues.md)

@@ -13,12 +13,12 @@ ms.assetid: 9a75d48b-c25f-40f3-8ea1-32cfa8211754
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 3b590fa12fb2168a80c320068facb979702cd4fa
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: bbeeb28aced36cf1d80b2a6c4efeba3c614385c0
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47853919"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53209990"
 ---
 # <a name="restore-database-options-page"></a>Ripristina database (pagina Opzioni)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -62,7 +62,7 @@ ms.locfileid: "47853919"
  Per determinare lo stato del database dopo l'operazione di ripristino, è necessario selezionare una delle opzioni del pannello **Stato di recupero** .  
   
  **RESTORE WITH RECOVERY**  
- Consente di recuperare il database dopo il ripristino del backup finale selezionato nella griglia **Set di backup da ripristinare**della pagina [Generale](../../relational-databases/backup-restore/restore-database-general-page.md). Questa opzione è quella predefinita ed equivale all'opzione WITH RECOVERY in un'istruzione [RESTORE](../../t-sql/statements/restore-statements-arguments-transact-sql.md) ([!INCLUDE[tsql](../../includes/tsql-md.md)]).  
+ Consente di recuperare il database dopo il ripristino del backup finale selezionato nella griglia **Set di backup da ripristinare**della pagina [Generale](../../relational-databases/backup-restore/restore-database-general-page.md). Questa è l'opzione predefinita ed equivale all'opzione WITH RECOVERY in un'istruzione [RESTORE](../../t-sql/statements/restore-statements-arguments-transact-sql.md) ([!INCLUDE[tsql](../../includes/tsql-md.md)]).  
   
 > [!NOTE]  
 >  Se viene utilizzato il modello di recupero con registrazione completa o il modello di recupero con registrazione minima delle operazioni bulk, selezionare questa opzione solo se si stanno ripristinando tutti i file di log.  

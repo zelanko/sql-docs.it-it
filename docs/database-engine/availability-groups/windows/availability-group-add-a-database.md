@@ -1,6 +1,7 @@
 ---
-title: Aggiungere un database a un gruppo di disponibilità (SQL Server) | Microsoft Docs
-ms.custom: ''
+title: Aggiungere un database a un gruppo di disponibilità
+description: 'Aggiungere un database a un gruppo di disponibilità Always On usando Transact-SQL (T-SQL), PowerShell o SQL Server Management Studio. '
+ms.custom: seodec18
 ms.date: 05/17/2016
 ms.prod: sql
 ms.reviewer: ''
@@ -14,46 +15,41 @@ ms.assetid: 2a54eef8-9e8e-4e04-909c-6970112d55cc
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: c8e63b4561c56f5d930856758afa464f85a9ab40
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 2e31c26430433b26eb858b967f54df4e61b103b2
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47857127"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53214662"
 ---
-# <a name="availability-group---add-a-database"></a>Aggiungere un database a un gruppo di disponibilità
+# <a name="add-a-database-to-an-always-on-availability-group"></a>Aggiungere un database a un gruppo di disponibilità Always On
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   In questo argomento viene illustrato come aggiungere un database a un gruppo di disponibilità AlwaysOn usando [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../../includes/tsql-md.md)]o PowerShell in [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)].  
   
 -   **Prima di iniziare:**  
   
-     [Prerequisiti e restrizioni](#Prerequisites)  
-  
-     [Autorizzazioni](#Permissions)  
-  
+     [Prerequisiti e restrizioni](#Prerequisites)    
+     [Autorizzazioni](#Permissions)    
 -   **Per aggiungere un database a un gruppo di disponibilità utilizzando:**  
   
-     [SQL Server Management Studio](#SSMSProcedure)  
-  
-     [Transact-SQL](#TsqlProcedure)  
-  
+     [SQL Server Management Studio](#SSMSProcedure)    
+     [Transact-SQL](#TsqlProcedure)    
      [PowerShell](#PowerShellProcedure)  
   
-##  <a name="BeforeYouBegin"></a> Prima di iniziare  
   
-###  <a name="Prerequisites"></a> Prerequisiti e restrizioni  
+## <a name="prerequisites-and-restrictions"></a>Prerequisiti e restrizioni  
   
 -   È necessario essere connessi all'istanza del server che ospita la replica primaria.  
   
 -   È necessario che il database risieda nell'istanza del server che ospita la replica primaria e sia conforme ai prerequisiti e alle restrizioni per i database di disponibilità. Per altre informazioni, vedere [Prerequisiti, restrizioni e consigli per i gruppi di disponibilità Always On &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/prereqs-restrictions-recommendations-always-on-availability.md).  
   
-###  <a name="Security"></a> Sicurezza  
+##  <a name="Security"></a> Sicurezza  
   
-###  <a name="Permissions"></a> Permissions  
+##  <a name="Permissions"></a> Permissions  
  È necessaria l'autorizzazione ALTER AVAILABILITY GROUP nel gruppo di disponibilità, l'autorizzazione CONTROL AVAILABILITY GROUP, l'autorizzazione ALTER ANY AVAILABILITY GROUP o l'autorizzazione CONTROL SERVER.  
   
 ##  <a name="SSMSProcedure"></a> Utilizzo di SQL Server Management Studio  
- **Per aggiungere un database a un gruppo di disponibilità**  
+
   
 1.  In Esplora oggetti connettersi all'istanza del server che ospita la replica primaria ed espandere l'albero del server.  
   
@@ -73,11 +69,10 @@ ms.locfileid: "47857127"
   
          Dopo avere utilizzato la finestra di dialogo **Proprietà gruppo di disponibilità** per aggiungere un database a un gruppo di disponibilità, è necessario configurare il database secondario corrispondente su ogni istanza del server che ospita una replica secondaria. Per altre informazioni, vedere [Avviare lo spostamento dati su un database secondario Always On &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/start-data-movement-on-an-always-on-secondary-database-sql-server.md).  
   
-##  <a name="TsqlProcedure"></a> Uso di Transact-SQL  
- **Per aggiungere un database a un gruppo di disponibilità**  
+##  <a name="TsqlProcedure"></a> Usare Transact-SQL  
+
   
-1.  Connettersi all'istanza del server che ospita la replica primaria.  
-  
+1.  Connettersi all'istanza del server che ospita la replica primaria.    
 2.  Utilizzare l'istruzione [ALTER AVAILABILITY GROUP](../../../t-sql/statements/alter-availability-group-transact-sql.md) , come indicato di seguito:  
   
      ALTER AVAILABILITY GROUP *nome_gruppo* ADD DATABASE *nome_database* [,...*n*]  
@@ -95,8 +90,8 @@ ms.locfileid: "47857127"
   
 3.  Dopo avere aggiunto un database a un gruppo di disponibilità, è necessario configurare il database secondario corrispondente su ogni istanza del server che ospita una replica secondaria. Per altre informazioni, vedere [Avviare lo spostamento dati su un database secondario Always On &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/start-data-movement-on-an-always-on-secondary-database-sql-server.md).  
   
-##  <a name="PowerShellProcedure"></a> Utilizzo di PowerShell  
- **Per aggiungere un database a un gruppo di disponibilità**  
+##  <a name="PowerShellProcedure"></a> Usare PowerShell  
+
   
 1.  Cambiare la directory (**cd**) impostandola sull'istanza del server che ospita la replica primaria.  
   

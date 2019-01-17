@@ -17,18 +17,21 @@ ms.assetid: aba8ecb7-0dcf-40d0-a2a8-64da0da94b93
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 4229a8ddbd899ea8709cdc537f2d9383f9043179
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 4ec5e67b6a2f593f2869cf72fa2983305e084f8d
+ms.sourcegitcommit: 258c32f7e85a38aaf674da3478ae3ed10648d1f1
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47697519"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53414156"
 ---
 # <a name="loading-the-output-of-a-local-package"></a>Caricamento dell'output di un pacchetto locale
   Le applicazioni client possono leggere l'output dei pacchetti di [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] quando viene salvato nelle destinazioni [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tramite [!INCLUDE[vstecado](../../includes/vstecado-md.md)] o quando viene salvato in una destinazione file flat usando le classi dello spazio dei nomi **System.IO**. Tuttavia, un'applicazione client può anche leggere l'output di un pacchetto direttamente dalla memoria, senza la necessità di un passaggio intermedio per rendere persistenti i dati. La chiave per questa soluzione è lo spazio dei nomi **Microsoft.SqlServer.Dts.DtsClient**, che contiene implementazioni speciali delle interfacce **IDbConnection**, **IDbCommand**, e **IDbDataParameter** dello spazio dei nomi **System. Data**. L'assembly Microsoft.SqlServer.Dts.DtsClient.dll è installato per impostazione predefinita in **%ProgramFiles%\Microsoft SQL Server\100\DTS\Binn**.  
-  
+
+> [!IMPORTANT]
+> La procedura descritta in questo articolo, che usa la libreria `DtsClient`, funziona solo per i pacchetti distribuiti con il modello di distribuzione del pacchetto (vale a dire, con l'opzione `/SQL`, `/DTS`, o `/File`). Questa procedura non funziona per i pacchetti distribuiti con il modello di distribuzione server (vale a dire, con l'opzione `/ISServer`). Per usare l'output di un pacchetto locale distribuito con il modello di distribuzione server (vale a dire, con l'opzione `/ISServer`), usare la [Destinazione flusso di dati](../data-flow/data-streaming-destination.md) invece della procedura descritta in questo articolo.
+
 > [!NOTE]  
->  Per la procedura descritta in questo argomento, è necessario che la proprietà DelayValidation dell'attività Flusso di dati e di eventuali oggetti padre sia impostata sul valore predefinito, ovvero **False**.  
+> Per la procedura descritta in questo argomento, è necessario che la proprietà DelayValidation dell'attività Flusso di dati e di eventuali oggetti padre sia impostata sul valore predefinito, ovvero **False**.
   
 ## <a name="description"></a>Descrizione  
  In questa procedura viene illustrato lo sviluppo di un'applicazione client in codice gestito che carica l'output di un pacchetto con una destinazione DataReader direttamente dalla memoria. I passaggi riepilogati in questa sezione sono illustrati nel codice di esempio seguente.  

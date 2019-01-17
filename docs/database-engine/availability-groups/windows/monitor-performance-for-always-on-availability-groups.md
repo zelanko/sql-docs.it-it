@@ -1,6 +1,7 @@
 ---
-title: Monitorare le prestazioni di Gruppi di disponibilità Always On (SQL Server) | Microsoft Docs
-ms.custom: ag-guide
+title: Monitorare le prestazioni per i gruppi di disponibilità
+description: In questo articolo viene descritto il processo di sincronizzazione, viene illustrato come calcolare alcune delle metriche chiave e vengono specificati i collegamenti ad alcuni scenari comuni per la risoluzione dei problemi relativi alle prestazioni.
+ms.custom: ag-guide, seodec18
 ms.date: 06/13/2017
 ms.prod: sql
 ms.reviewer: ''
@@ -10,14 +11,14 @@ ms.assetid: dfd2b639-8fd4-4cb9-b134-768a3898f9e6
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 2f9b3fb8ce55a57a7609aacd685ef56952b6811e
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.openlocfilehash: 52a1bde0da61988793463aa725a5b0a4003b2e12
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51601151"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53203351"
 ---
-# <a name="monitor-performance-for-always-on-availability-groups"></a>Monitorare le prestazioni di Gruppi di disponibilità Always On
+# <a name="monitor-performance-for-always-on-availability-groups"></a>Monitorare le prestazioni di gruppi di disponibilità Always On
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   Le prestazioni di Gruppi di disponibilità Always On sono un aspetto importante per garantire il contratto di servizio per i database cruciali. Conoscere come i gruppi di disponibilità inviano i log alle repliche secondarie può aiutare a stimare l'obiettivo del tempo di ripristino (RTO, recovery time objective) e l'obiettivo del punto di ripristino (RPO, recovery point objective) dell'implementazione della disponibilità e identificare i colli di bottiglia in gruppi o repliche di disponibilità le cui prestazioni risultano scarse. In questo articolo viene descritto il processo di sincronizzazione, viene illustrato come calcolare alcune delle metriche chiave e vengono specificati i collegamenti ad alcuni scenari comuni per la risoluzione dei problemi relativi alle prestazioni.  
   
@@ -134,9 +135,9 @@ Per il database primario, **last_commit_time** corrisponde all'ora in cui è sta
 
 ### <a name="performance-counters-used-in-rtorpo-formulas"></a>Contatori delle prestazioni utilizzati nelle formule RTO/RPO
 
-- **redo_queue_size** (KB) [*usato per l'RTO*]: la dimensione della coda di rollforward è la dimensione dei log delle transazioni tra **last_received_lsn** e **last_redone_lsn**. **last_received_lsn** è l'ID del blocco di log che identifica il punto fino a cui tutti i blocchi di log sono stati ricevuti dalla replica secondaria che ospita questo database secondario. **Last_redone_lsn** è il numero di sequenza del file di log dell'ultimo record di log di cui è stato eseguito il rollforward nel database secondario. Sulla base di questi due valori, è possibile trovare gli ID del blocco di log iniziale (**last_received_lsn**) e del blocco di log finale (**last_redone_lsn**). Lo spazio tra questi due blocchi di log quindi può rappresentare il numero di blocchi di log delle transazioni di cui non è ancora stato eseguito il rollforward. Il valore viene misurato in kilobyte (KB).
+- **redo_queue_size** (KB) [*usato per l'RTO*]: le dimensioni della coda di rollforward sono le dimensioni dei log delle transazioni tra **last_received_lsn** e **last_redone_lsn**. **last_received_lsn** è l'ID del blocco di log che identifica il punto fino a cui tutti i blocchi di log sono stati ricevuti dalla replica secondaria che ospita questo database secondario. **Last_redone_lsn** è il numero di sequenza del file di log dell'ultimo record di log di cui è stato eseguito il rollforward nel database secondario. Sulla base di questi due valori, è possibile trovare gli ID del blocco di log iniziale (**last_received_lsn**) e del blocco di log finale (**last_redone_lsn**). Lo spazio tra questi due blocchi di log quindi può rappresentare il numero di blocchi di log delle transazioni di cui non è ancora stato eseguito il rollforward. Il valore viene misurato in kilobyte (KB).
 -  **redo_rate** (KB/sec) [*usato per l'RTO*]: valore cumulativo che rappresenta, dopo un dato periodo di tempo, la quantità, espressa in KB, del log della transazione che è stata sottoposta a rollforward nel database secondario in kilobyte (KB)/secondo. 
-- **last_commit_time** (Datetime) [*usato per l'RPO*]: per il database primario, **last_commit_time** corrisponde all'ora in cui è stato eseguito il commit della transazione più recente. Per il database secondario, **last_commit_time** corrisponde all'ora in cui è stato eseguito il commit della transazione più recente nel database primario che è stata finalizzata correttamente anche nel database secondario. Poiché questo valore del database secondario deve essere sincronizzato con lo stesso valore del database primario, eventuali differenze tra questi due valori rappresentano la stima della perdita dei dati (RPO).  
+- **last_commit_time** (Datetime) [*usato per l'RPO*]: Per il database primario, **last_commit_time** corrisponde all'ora in cui è stato eseguito il commit della transazione più recente. Per il database secondario, **last_commit_time** corrisponde all'ora in cui è stato eseguito il commit della transazione più recente nel database primario che è stata finalizzata correttamente anche nel database secondario. Poiché questo valore del database secondario deve essere sincronizzato con lo stesso valore del database primario, eventuali differenze tra questi due valori rappresentano la stima della perdita dei dati (RPO).  
  
 ## <a name="estimate-rto-and-rpo-using-dmvs"></a>Stimare i valori RTO e RPO mediante DMV
 
@@ -328,7 +329,7 @@ Per il database primario, **last_commit_time** corrisponde all'ora in cui è sta
 
   
 ##  <a name="monitoring-for-rto-and-rpo"></a>Monitoraggio di RTO e RPO  
- In questa sezione viene illustrato come monitorare i gruppi di disponibilità per la metrica degli obiettivi RTO e RPO. Questa dimostrazione è simile all'esercitazione per la GUI descritta in [The Always On health model, part 2: Extending the health model (Modello di integrità Always On, parte 2: Estensione del modello di integrità)](https://blogs.msdn.com/b/sqlalwayson/archive/2012/02/13/extending-the-alwayson-health-model.aspx).  
+ In questa sezione viene illustrato come monitorare i gruppi di disponibilità per la metrica degli obiettivi RTO e RPO. Questa dimostrazione è simile all'esercitazione per la GUI descritta in [The AlwaysOn Health Model Part 2: Extending the Health Model](https://blogs.msdn.com/b/sqlalwayson/archive/2012/02/13/extending-the-alwayson-health-model.aspx) (Il modello di integrità AlwaysOn parte 2: Estensione del modello di integrità).  
   
  Gli elementi per il calcolo del tempo di failover e della possibile perdita dei dati in [Stima del tempo di failover (RTO)](#BKMK_RTO) e in [Stima della potenziale perdita dei dati (RPO)](#BKMK_RPO) vengono specificati come metrica delle prestazione nel facet della gestione basata su criteri **Stato replica di database** (vedere [View the policy-based management facets on a SQL Server object](~/relational-databases/policy-based-management/view-the-policy-based-management-facets-on-a-sql-server-object.md)) (Visualizzare i facet della gestione basata su criteri in un oggetto di SQL Server). È possibile monitorare queste due metriche in una pianificazione e ricevere un avviso quando la metrica supera rispettivamente gli obiettivi RTO e RPO.  
   
@@ -404,7 +405,7 @@ Per creare i criteri, seguire le istruzioni riportate di seguito in tutte le ist
   
         -   **Condizioni di controllo**: `RTO`  
   
-        -   **In base alle destinazioni**: **Ogni DatabaseReplicaState** in **IsPrimaryReplica AvailabilityGroup**  
+        -   **In base alle destinazioni**: **Every DatabaseReplicaState** in **IsPrimaryReplica AvailabilityGroup**  
   
              Questa impostazione controlla che i criteri vengano valutati solo nei gruppi di disponibilità per cui la replica di disponibilità locale è la replica primaria.  
   
@@ -416,11 +417,11 @@ Per creare i criteri, seguire le istruzioni riportate di seguito in tutte le ist
   
     -   Pagina **Descrizione**:  
   
-        -   **Categoria**: **avvisi del database di disponibilità**  
+        -   **Categoria**: **Avvisi del database di disponibilità**  
   
              Questa impostazione abilita i risultati della valutazione dei criteri che devono essere visualizzati nel dashboard Always On.  
   
-        -   **Descrizione**: **la replica corrente è un obiettivo RTO che non supera i 10 minuti, presupponendo un overhead di 1 minuto per l'individuazione e il failover. Esaminare immediatamente i problemi relativi alle prestazioni nella rispettiva istanza del server.**  
+        -   **Descrizione**: **la replica corrente è un obiettivo RTO che supera i 10 minuti, presupponendo un overhead di 1 minuto per l'individuazione e il failover. Esaminare immediatamente i problemi relativi alle prestazioni nella rispettiva istanza del server.**  
   
         -   **Testo da visualizzare**: **RTO superato!**  
   
@@ -432,7 +433,7 @@ Per creare i criteri, seguire le istruzioni riportate di seguito in tutte le ist
   
         -   **Condizioni di controllo**: `RPO`  
   
-        -   **In base alle destinazioni**: **Ogni DatabaseReplicaState** in **IsPrimaryReplica AvailabilityGroup**  
+        -   **In base alle destinazioni**: **Every DatabaseReplicaState** in **IsPrimaryReplica AvailabilityGroup**  
   
         -   **Modalità di valutazione**: **Su pianificazione**  
   
@@ -442,7 +443,7 @@ Per creare i criteri, seguire le istruzioni riportate di seguito in tutte le ist
   
     -   Pagina **Descrizione**:  
   
-        -   **Categoria**: **avvisi del database di disponibilità**  
+        -   **Categoria**: **Avvisi del database di disponibilità**  
   
         -   **Descrizione**: **il database di disponibilità ha superato l'obiettivo RPO di 1 ora. Esaminare immediatamente i problemi relativi alle prestazioni nelle repliche di disponibilità.**  
   

@@ -1,6 +1,7 @@
 ---
-title: Risultato della valutazione dei criteri (Always On) | Microsoft Docs
-ms.custom: ''
+title: Pagina Risultato di valutazione criteri (dashboard Always On) | Microsoft Docs
+description: Descrizione della "pagina Risultato di valutazione criteri" presente nel "dashboard Always On" in SQL Server Management Studio.
+ms.custom: seodec18
 ms.date: 05/17/2016
 ms.prod: sql
 ms.reviewer: ''
@@ -13,14 +14,14 @@ ms.assetid: 703e947f-d345-4506-be21-34bfbfa7bca6
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 587258b743ae65201e1f30e10fc513f361da8824
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 907be803cc448a5b8424adf4e968cb4520c52cd3
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47821049"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53201930"
 ---
-# <a name="policy-evaluation-result-always-on"></a>Risultato della valutazione dei criteri (Always On)
+# <a name="policy-evaluation-result-page-always-on-dashboard"></a>Pagina Risultato di valutazione criteri (dashboard Always On)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
   Usare la pagina **Risultato di valutazione criteri** del dashboard Always On per visualizzare qualsiasi problema corrente relativo ai criteri.  

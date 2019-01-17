@@ -20,12 +20,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: b3375af07fc7231321c96c2aa03d95dbbdc6709f
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 51e75f21dbaa518e344ec8c43fc8c9a087cea959
+ms.sourcegitcommit: 467b2c708651a3a2be2c45e36d0006a5bbe87b79
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52506406"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53980007"
 ---
 # <a name="create-external-data-source-transact-sql"></a>CREATE EXTERNAL DATA SOURCE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-all-md](../../includes/tsql-appliesto-ss2016-all-md.md)]
@@ -208,7 +208,7 @@ CREATE EXTERNAL DATA SOURCE MyElasticDBQueryDataSrc WITH
 Per un'esercitazione dettagliata su RDBMS, vedere [Introduzione alle query tra database (partizionamento verticale)](https://azure.microsoft.com/documentation/articles/sql-database-elastic-query-getting-started-vertical/).  
 
 **BLOB_STORAGE**   
-Questo tipo viene usato solo per le operazioni bulk. `LOCATION` deve essere l'URL valido del contenitore e dell'archivio BLOB di Azure. Non inserire **/**, nome file o parametri di firma per l'accesso condiviso alla fine dell'URL `LOCATION`. `CREADENTIAL` è obbligatorio se l'oggetto BLOB non è pubblico. Ad esempio 
+Questo tipo viene usato solo per le operazioni bulk. `LOCATION` deve essere l'URL valido del contenitore e dell'archivio BLOB di Azure. Non inserire **/**, nome file o parametri di firma per l'accesso condiviso alla fine dell'URL `LOCATION`. `CREDENTIAL` è obbligatorio se l'oggetto BLOB non è pubblico. Ad esempio 
 ```sql
 CREATE EXTERNAL DATA SOURCE MyAzureBlobStorage
 WITH (  TYPE = BLOB_STORAGE, 
@@ -302,7 +302,7 @@ Per un elenco completo delle origini dati esterne supportate, vedere [Configuraz
   
 -   Una tabella esterna che fa riferimento all'origine dati esterna e al formato di file esterno.  
   
-## <a name="permissions"></a>Autorizzazioni  
+## <a name="permissions"></a>Permissions  
  Richiede l'autorizzazione CONTROL nel database in SQL DW, SQL Server, APS 2016 e nel database SQL.
 
 > [!IMPORTANT]  
@@ -343,7 +343,7 @@ WITH (
 
 ```  
   
-### <a name="b-create-external-data-source-to-reference-hadoop-with-pushdown-enabled"></a>B. Creare un'origine dati esterna per fare riferimento a Hadoop con il pushdown abilitato  
+### <a name="b-create-external-data-source-to-reference-hadoop-with-pushdown-enabled"></a>b. Creare un'origine dati esterna per fare riferimento a Hadoop con il pushdown abilitato  
 Specificare l'opzione RESOURCE_MANAGER_LOCATION per abilitare il push-down del calcolo in Hadoop per le query PolyBase. Dopo l'abilitazione, PolyBase usa una decisione basata sui costi per determinare se eseguire il push del calcolo delle query in Hadoop o spostare tutti i dati per elaborare la query in SQL Server.
   
 ```sql  
@@ -401,7 +401,7 @@ CREATE EXTERNAL DATA SOURCE MyAzureStorage WITH (
 );
 ```
 
-## <a name="examples-azure-sql-database"></a>Esempi: database SQL di Azure
+## <a name="examples-azure-sql-database"></a>Esempi: Database SQL di Azure
 
 ### <a name="e-create-a-shard-map-manager-external-data-source"></a>E. Creare un'origine dati esterna del gestore mappe partizioni
 Per creare un'origine dati esterna per fare riferimento a SHARD_MAP_MANAGER, specificare il nome del server logico che ospita il gestore mappe partizioni nel database SQL di Azure o in un database SQL Server in una macchina virtuale di Azure.
@@ -445,7 +445,7 @@ WITH (
 ## <a name="examples-azure-sql-data-warehouse"></a>Esempi: Azure SQL Data Warehouse
 
 ### <a name="g-create-external-data-source-to-reference-azure-data-lake-store"></a>G. Creare un'origine dati esterna per fare riferimento ad Azure Data Lake Store
-La connettività di Azure Data Lake Store è basata sull'URI ADLS e sul servizio dell'applicazione di Azure Active Directory. La documentazione relativa alla creazione di questa applicazione è disponibile in [Autenticazione da servizio a servizio con Data Lake Store tramite Azure Active Directory](https://docs.microsoft.com/azure/data-lake-store/data-lake-store-authenticate-using-active-directory).
+La connettività di Azure Data Lake Store è basata sull'URI ADLS e sull'entità servizio dell'applicazione di Azure Active Directory. La documentazione relativa alla creazione di questa applicazione è disponibile in [Autenticazione da servizio a servizio con Data Lake Store tramite Azure Active Directory](https://docs.microsoft.com/azure/data-lake-store/data-lake-store-authenticate-using-active-directory).
 
 ```sql
 -- If you do not have a Master Key on your DW you will need to create one.
@@ -491,7 +491,7 @@ CREATE EXTERNAL DATA SOURCE MyAzureStorage WITH (
 );
 ```
 
-## <a name="examples-bulk-operations"></a>Esempi: operazioni bulk   
+## <a name="examples-bulk-operations"></a>Esempi: Operazioni bulk   
 ### <a name="j-create-an-external-data-source-for-bulk-operations-retrieving-data-from-azure-blob-storage"></a>J. Creare un'origine dati esterna per le operazioni bulk che recuperano i dati dall'archiviazione BLOB di Azure.   
 **Si applica a:** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)].   
 Usare l'origine dati seguente per le operazioni bulk che usano [BULK INSERT](../../t-sql/statements/bulk-insert-transact-sql.md) o [OPENROWSET](../../t-sql/functions/openrowset-transact-sql.md). La credenziale usata deve essere creata con `SHARED ACCESS SIGNATURE` come identità, non deve avere `?` iniziale nel token di firma di accesso condiviso, deve avere almeno un'autorizzazione di lettura per il file da caricare (ad esempio, `srt=o&sp=r`), e il periodo di scadenza deve essere valido. Tutte le date sono in formato UTC. Per altre informazioni sulle firme di accesso condiviso, vedere [Uso delle firme di accesso condiviso](https://docs.microsoft.com/azure/storage/storage-dotnet-shared-access-signature-part-1).   

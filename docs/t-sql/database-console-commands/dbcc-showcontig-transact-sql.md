@@ -24,12 +24,12 @@ ms.assetid: 1df2123a-1197-4fff-91a3-25e3d8848aaa
 author: uc-msft
 ms.author: umajay
 manager: craigg
-ms.openlocfilehash: 2d66330f4c575972b019d7df68cf0f1d00f2fab4
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 9ae3cd167b7f8b2dc633eb50063b4bcaee143acf
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52510713"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53213850"
 ---
 # <a name="dbcc-showcontig-transact-sql"></a>DBCC SHOWCONTIG (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -96,9 +96,9 @@ Nella tabella seguente vengono descritte le informazioni del set di risultati.
 |**Extent sottoposti ad analisi**|Numero di extent della tabella o dell'indice.|  
 |**Cambi di extent**|Numero di passaggi dell'istruzione DBCC da un extent all'altro durante l'attraversamento delle pagine della tabella o dell'indice.|  
 |**Byte Pagine per extent**|Numero di pagine per extent nella catena di pagine.|  
-|**Densità di analisi [conteggio ottimale:conteggio effettivo]**|Valore percentuale. Rapporto tra **Conteggio ottimale** e **Conteggio effettivo**. Questo valore è 100 se tutti gli elementi sono contigui, è minore di 100 in presenza di frammentazioni.<br /><br /> **Conteggio ottimale** rappresenta il numero ideale di cambi di extent se tutti gli elementi fossero contigui. **Conteggio effettivo** rappresenta il numero effettivo di cambi di extent.|  
+|**Densità di analisi [conteggio ottimale: conteggio effettivo]**|Valore percentuale. Rapporto tra **Conteggio ottimale** e **Conteggio effettivo**. Questo valore è 100 se tutti gli elementi sono contigui, è minore di 100 in presenza di frammentazioni.<br /><br /> **Conteggio ottimale** rappresenta il numero ideale di cambi di extent se tutti gli elementi fossero contigui. **Conteggio effettivo** rappresenta il numero effettivo di cambi di extent.|  
 |**Frammentazione analisi logica**|Percentuale di pagine non ordinate restituite dall'analisi delle pagine foglia di un indice. Questo valore non è rilevante per gli heap. Una pagina risulta non ordinata quando la pagina fisica successiva allocata all'indice è diversa da quella a cui fa riferimento il *puntatore di pagina successiva* nella pagina foglia corrente.|  
-|**Frammentazione analisi extent**|Percentuale di extent non ordinati rilevati durante l'analisi delle pagine foglia di un indice. Questo valore non è rilevante per gli heap. Un extent risulta non ordinato quando l'extent contenente la pagina corrente di un indice non corrisponde fisicamente all'extent successivo a quello che contiene la pagina precedente di un indice.<br /><br /> Nota: questo numero non è significativo se l'indice è esteso a più file.|  
+|**Frammentazione analisi extent**|Percentuale di extent non ordinati rilevati durante l'analisi delle pagine foglia di un indice. Questo valore non è rilevante per gli heap. Un extent risulta non ordinato quando l'extent contenente la pagina corrente di un indice non corrisponde fisicamente all'extent successivo a quello che contiene la pagina precedente di un indice.<br /><br /> Nota: Questo numero non è significativo se l'indice è esteso a più file.|  
 |**Byte disponibili per pagina**|Numero medio di byte disponibili nelle pagine sottoposte ad analisi. Maggiore è il numero, minore sarà il livello di riempimento delle pagine. I numeri minori indicano una situazione migliore se nell'indice non verranno eseguiti numerosi inserimenti casuali. Anche le dimensioni delle righe influiscono su questo valore, che risulta maggiore per righe di grandi dimensioni.|  
 |**Byte densità pagina (completa)**|Densità media della pagina, in percentuale. Questo valore tiene conto delle dimensioni delle righe e pertanto rappresenta un'indicazione più precisa dell'effettivo livello di riempimento delle pagine. Sono preferibili valori elevati.|  
   
@@ -132,7 +132,7 @@ Se si specifica TABLERESULTS, DBCC SHOWCONTIG restituisce le colonne seguenti ol
 |**BestCount**|Rappresenta il numero ideale di cambi di extent se tutti gli elementi fossero contigui.|  
 |**ActualCount**|Rappresenta il numero effettivo di cambi di extent.|  
 |**LogicalFragmentation**|Percentuale di pagine non ordinate restituite dall'analisi delle pagine foglia di un indice. Questo valore non è rilevante per gli heap. Una pagina risulta non ordinata quando la pagina fisica successiva allocata all'indice è diversa da quella a cui fa riferimento il *puntatore di pagina successiva* nella pagina foglia corrente.|  
-|**ExtentFragmentation**|Percentuale di extent non ordinati rilevati durante l'analisi delle pagine foglia di un indice. Questo valore non è rilevante per gli heap. Un extent risulta non ordinato quando l'extent contenente la pagina corrente di un indice non corrisponde fisicamente all'extent successivo a quello che contiene la pagina precedente di un indice.<br /><br /> Nota: questo numero non è significativo se l'indice è esteso a più file.|  
+|**ExtentFragmentation**|Percentuale di extent non ordinati rilevati durante l'analisi delle pagine foglia di un indice. Questo valore non è rilevante per gli heap. Un extent risulta non ordinato quando l'extent contenente la pagina corrente di un indice non corrisponde fisicamente all'extent successivo a quello che contiene la pagina precedente di un indice.<br /><br /> Nota: Questo numero non è significativo se l'indice è esteso a più file.|  
   
 Se si specificano le opzioni WITH TABLERESULTS e FAST, il set di risultati è uguale a quello restituito specificando WITH TABLERESULTS, con l'eccezione delle colonne seguenti che avranno valori Null:
 
@@ -199,7 +199,7 @@ DBCC SHOWCONTIG ('HumanResources.Employee');
 GO  
 ```  
   
-### <a name="b-using-objectid-to-obtain-the-table-id-and-sysindexes-to-obtain-the-index-id"></a>B. Utilizzo di OBJECT_ID per ottenere l'ID della tabella e di sys.indexes per ottenere l'ID dell'indice  
+### <a name="b-using-objectid-to-obtain-the-table-id-and-sysindexes-to-obtain-the-index-id"></a>b. Utilizzo di OBJECT_ID per ottenere l'ID della tabella e di sys.indexes per ottenere l'ID dell'indice  
 Nell'esempio seguente vengono usate la funzione `OBJECT_ID` e la vista del catalogo `sys.indexes` per ottenere l'ID di tabella e l'ID di indice per l'indice `AK_Product_Name` della tabella `Production.Product` nel database [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)].
   
 ```sql  

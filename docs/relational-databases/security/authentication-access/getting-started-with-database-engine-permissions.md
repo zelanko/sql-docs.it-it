@@ -14,12 +14,12 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 00d28b0750ba599e4bc73fa2ec6586271b683545
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 23ed71d50fc84c743f5574a3e3e96852b2e9bd21
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52410858"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53202660"
 ---
 # <a name="getting-started-with-database-engine-permissions"></a>Introduzione alle autorizzazioni del motore di database
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -126,7 +126,7 @@ GRANT UPDATE ON OBJECT::Production.Parts TO PartsTeam;
 -   Se l'amministratore esegue `DENY SELECT ON OBJECT::OrderStatus TO Sales;` in modo non corretto, a Ted, come membro del ruolo Sales, verrà negata l'autorizzazione `SELECT` perché l'istruzione `DENY` per il gruppo Sales prevale sull'istruzione  `GRANT`personale.  
   
 > [!NOTE]  
->  Le autorizzazioni possono essere configurate con [!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)]. Cercare l'oggetto a protezione diretta in Esplora oggetti, fare clic con il pulsante destro del mouse sull'oggetto e quindi scegliere **Proprietà**. Selezionare la pagina **Autorizzazioni** . Per informazioni sull'uso della pagina delle autorizzazioni, vedere [Pagina Autorizzazioni o Entità a sicurezza diretta](../../../relational-databases/security/permissions-or-securables-page.md).  
+>  Le autorizzazioni possono essere configurate con [!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)]. Cercare l'oggetto a protezione diretta in Esplora oggetti, fare clic con il pulsante destro del mouse sull'oggetto e quindi scegliere **Proprietà**. Selezionare la pagina **Autorizzazioni** . Per informazioni sull'uso della pagina delle autorizzazioni, vedere [Permissions or Securables Page](../../../relational-databases/security/permissions-or-securables-page.md).  
   
 ## <a name="permission-hierarchy"></a>Gerarchia delle autorizzazioni  
  Le autorizzazioni hanno una gerarchia padre/figlio, ovvero se si concede l'autorizzazione `SELECT` per un database, tale autorizzazione include l'autorizzazione `SELECT` per tutti gli schemi (figlio) presenti nel database. Se si concede l'autorizzazione `SELECT` per uno schema, tale autorizzazione include l'autorizzazione `SELECT` per tutte le tabelle e le viste (figlio) presenti nello schema. Le autorizzazioni sono transitive, ovvero se si concede l'autorizzazione `SELECT` per un database, tale autorizzazione include l'autorizzazione `SELECT` per tutti gli schemi (figlio) e tutte le tabelle e le viste (nipote).  
@@ -203,7 +203,7 @@ JOIN sys.objects AS obj
     ON perms.major_id = obj.object_id;  
 ```  
   
- Per restituire i membri dei ruoli del server (solo[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ), eseguire l'istruzione seguente.  
+ Per restituire i membri dei ruoli del server (solo [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]), eseguire l'istruzione seguente.  
   
 ```sql  
 SELECT sRole.name AS [Server Role Name] , sPrinc.name AS [Members]  
@@ -231,7 +231,7 @@ JOIN sys.database_principals AS dRole
   
 -   [Esercitazione: Introduzione al motore di database](../../../relational-databases/tutorial-getting-started-with-the-database-engine.md) [Creazione di un database &#40;esercitazione&#41;](../../../t-sql/lesson-1-creating-database-objects.md#)  
   
--   [Esercitazione su SQL Server Management Studio](../../../tools/sql-server-management-studio/tutorial-sql-server-management-studio.md)  
+-   [Esercitazione: SQL Server Management Studio](../../../tools/sql-server-management-studio/tutorial-sql-server-management-studio.md)  
   
 -   [Esercitazione: Scrittura di istruzioni Transact-SQL](../../../t-sql/tutorial-writing-transact-sql-statements.md)  
   

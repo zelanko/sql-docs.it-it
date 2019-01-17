@@ -13,16 +13,16 @@ helpviewer_keywords:
 - subqueries [SQL Server], correlated
 - subqueries [SQL Server], types
 ms.assetid: bfc97432-c14c-4768-9dc5-a9c512f6b2bd
-author: MikeRayMSFT
-ms.author: mikeray
+author: julieMSFT
+ms.author: jrasnick
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 487397681b993bc4995a422730d84aef5423f8c0
-ms.sourcegitcommit: af1d9fc4a50baf3df60488b4c630ce68f7e75ed1
+ms.openlocfilehash: a2ac6f2a1692d72eecbcd97dbc3536dcebd6f2ec
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/06/2018
-ms.locfileid: "51033698"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53356019"
 ---
 # <a name="subqueries-sql-server"></a>Sottoquery (SQL Server)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -487,7 +487,7 @@ WHERE ProductSubcategoryID NOT IN
 GO
 ```
 
-Non è possibile convertire questa istruzione in un join. Il join di disuguaglianza corrispondente ha infatti un significato diverso perché trova i nomi dei prodotti inclusi in una sottocategoria che non corrisponde a una bicicletta finita.      
+Non è possibile convertire questa istruzione in un join. Il join di disuguaglianza analogo ha un significato diverso: trova i nomi dei prodotti inclusi in una sottocategoria che non corrisponde a una bicicletta finita.      
 
 ### <a name="upsert"></a> Sottoquery in istruzioni UPDATE, DELETE e INSERT
 Le sottoquery possono essere nidificate nelle istruzioni DML `UPDATE`, `DELETE`, `INSERT` e `SELECT `.    

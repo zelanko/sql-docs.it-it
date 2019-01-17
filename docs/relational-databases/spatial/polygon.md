@@ -14,12 +14,12 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: d3a6cee6ac23c38521d0c500aef5fd4a77495c43
-ms.sourcegitcommit: 87f29b23d5ab174248dab5d558830eeca2a6a0a4
+ms.openlocfilehash: 90f1ff1b99dbc5880909fb8387fc1b82d9b32df8
+ms.sourcegitcommit: 467b2c708651a3a2be2c45e36d0006a5bbe87b79
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "51018426"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53979018"
 ---
 # <a name="polygon"></a>Polygon
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -28,13 +28,13 @@ ms.locfileid: "51018426"
 ## <a name="polygon-instances"></a>Istanze Polygon  
  Un'istanza **Polygon** può essere formata da un anello che ha almeno tre punti distinti. Un'istanza **Polygon** può essere anche vuota.  
   
- L'anello esterno e ogni anello interno di un oggetto **Polygon** ne definiscono il limite. Lo spazio all'interno degli anelli definisce l'interno dell'oggetto **Polygon**.  
+L'anello esterno e ogni anello interno di un oggetto **Polygon** ne definiscono il limite. Lo spazio all'interno degli anelli definisce l'interno dell'oggetto **Polygon**.  
   
- La figura seguente mostra alcuni esempi di istanze **Polygon** .  
+La figura seguente mostra alcuni esempi di istanze **Polygon** .  
   
  ![Esempi di istanze di geometria Polygon](../../relational-databases/spatial/media/polygon.gif "Esempi di istanze di geometria Polygon")  
   
- Come indicato nell'illustrazione:  
+Come indicato nell'illustrazione:  
   
 1.  La figura 1 è un'istanza **Polygon** il cui limite è definito da un anello esterno e due anelli interni.  
   
@@ -46,20 +46,17 @@ ms.locfileid: "51018426"
  Le istanze **Polygon** accettate sono istanze che possono essere archiviate in una variabile **geometry** o **geography** senza generare un'eccezione. Di seguito sono riportate le istanze **Polygon** accettate:  
   
 -   Istanza **Polygon** vuota  
-  
 -   Istanza **Polygon** che ha un anello esterno accettabile e zero o più anelli interni accettabili  
   
- I criteri seguenti sono necessari affinché un anello sia accettabile.  
+I criteri seguenti sono necessari affinché un anello sia accettabile.  
   
 -   L'istanza **LineString** deve essere accettata.  
-  
 -   L'istanza **LineString** deve avere almeno quattro punti.  
-  
 -   I punti iniziale e finale dell'istanza **LineString** devono corrispondere.  
   
- L'esempio seguente illustra le istanze **Polygon** accettate.  
+L'esempio seguente illustra le istanze **Polygon** accettate.  
   
-```  
+```sql  
 DECLARE @g1 geometry = 'POLYGON EMPTY';  
 DECLARE @g2 geometry = 'POLYGON((1 1, 3 3, 3 1, 1 1))';  
 DECLARE @g3 geometry = 'POLYGON((-5 -5, -5 5, 5 5, 5 -5, -5 -5),(0 0, 3 0, 3 3, 0 3, 0 0))';  
@@ -67,18 +64,18 @@ DECLARE @g4 geometry = 'POLYGON((-5 -5, -5 5, 5 5, 5 -5, -5 -5),(3 0, 6 0, 6 3, 
 DECLARE @g5 geometry = 'POLYGON((1 1, 1 1, 1 1, 1 1))';  
 ```  
   
- Come illustrato in `@g4` e `@g5` è possibile che **Polygon** accettata non sia un'istanza **Polygon** valida. `@g5` mostra anche che un'istanza Polygon, per essere accettata, deve contenere solo un anello con quattro punti qualsiasi.  
+Come illustrato in `@g4` e `@g5` è possibile che **Polygon** accettata non sia un'istanza **Polygon** valida. `@g5` mostra anche che un'istanza Polygon, per essere accettata, deve contenere solo un anello con quattro punti qualsiasi.  
   
- Negli esempi seguenti viene generata un'eccezione `System.FormatException` , poiché le istanze **Polygon** non vengono accettate.  
+Negli esempi seguenti viene generata un'eccezione `System.FormatException` , poiché le istanze **Polygon** non vengono accettate.  
   
-```  
+```sql  
 DECLARE @g1 geometry = 'POLYGON((1 1, 3 3, 1 1))';  
 DECLARE @g2 geometry = 'POLYGON((1 1, 3 3, 3 1, 1 5))';  
 ```  
   
- `@g1` non viene accettata perché l'istanza **LineString** per l'anello esterno non contiene un numero di punti sufficiente. `@g2` non viene accettata perché il punto iniziale dell'istanza **LineString** per l'anello esterno non corrisponde al punto finale. Nell'esempio seguente è presente un anello esterno accettabile, ma l'anello interno non è accettabile. Viene inoltre generata un'eccezione `System.FormatException`.  
+`@g1` non viene accettata perché l'istanza **LineString** per l'anello esterno non contiene un numero di punti sufficiente. `@g2` non viene accettata perché il punto iniziale dell'istanza **LineString** per l'anello esterno non corrisponde al punto finale. Nell'esempio seguente è presente un anello esterno accettabile, ma l'anello interno non è accettabile. Viene inoltre generata un'eccezione `System.FormatException`.  
   
-```  
+```sql  
 DECLARE @g geometry = 'POLYGON((-5 -5, -5 5, 5 5, 5 -5, -5 -5),(0 0, 3 0, 0 0))';  
 ```  
   
@@ -87,7 +84,7 @@ DECLARE @g geometry = 'POLYGON((-5 -5, -5 5, 5 5, 5 -5, -5 -5),(0 0, 3 0, 0 0))'
   
  Nell'esempio seguente vengono illustrate le istanze **Polygon** valide.  
   
-```  
+```sql  
 DECLARE @g1 geometry = 'POLYGON((-20 -20, -20 20, 20 20, 20 -20, -20 -20))';  
 DECLARE @g2 geometry = 'POLYGON((-20 -20, -20 20, 20 20, 20 -20, -20 -20), (10 0, 0 10, 0 -10, 10 0))';  
 DECLARE @g3 geometry = 'POLYGON((-20 -20, -20 20, 20 20, 20 -20, -20 -20), (10 0, 0 10, 0 -10, 10 0), (-10 0, 0 10, -5 -10, -10 0))';  
@@ -96,7 +93,7 @@ SELECT @g1.STIsValid(), @g2.STIsValid(), @g3.STIsValid();
   
  `@g3` è valida perché i due anelli interni si toccano in un solo punto e non si incrociano. Nell'esempio seguente vengono illustrate le istanze `Polygon` non valide.  
   
-```  
+```sql   
 DECLARE @g1 geometry = 'POLYGON((-20 -20, -20 20, 20 20, 20 -20, -20 -20), (20 0, 0 10, 0 -20, 20 0))';  
 DECLARE @g2 geometry = 'POLYGON((-20 -20, -20 20, 20 20, 20 -20, -20 -20), (10 0, 0 10, 0 -10, 10 0), (5 0, 1 5, 1 -5, 5 0))';  
 DECLARE @g3 geometry = 'POLYGON((-20 -20, -20 20, 20 20, 20 -20, -20 -20), (10 0, 0 10, 0 -10, 10 0), (-10 0, 0 10, 0 -10, -10 0))';  
@@ -109,34 +106,39 @@ SELECT @g1.STIsValid(), @g2.STIsValid(), @g3.STIsValid(), @g4.STIsValid(), @g5.S
  `@g1` non è valida perché l'anello interno tocca l'anello esterno in due punti. `@g2` non è valida perché il secondo anello interno si trova all'interno del primo anello interno. `@g3` non è valida perché i due anelli interni si toccano in più punti consecutivi. `@g4` non è valida perché gli interni dei due anelli interni si sovrappongono. `@g5` non è valida perché l'anello esterno non è il primo anello. `@g6` non è valida perché l'anello non presenta almeno tre punti distinti.  
   
 ## <a name="examples"></a>Esempi  
- Nell'esempio seguente viene creata un'istanza `geometry``Polygon` semplice con un foro e SRID 10.  
+### <a name="example-a"></a>Esempio A.  
+Nell'esempio seguente viene creata un'istanza `geometry``Polygon` semplice con un foro e SRID 10.  
   
-```  
+```sql  
 DECLARE @g geometry;  
 SET @g = geometry::STPolyFromText('POLYGON((0 0, 0 3, 3 3, 3 0, 0 0), (1 1, 1 2, 2 1, 1 1))', 10);  
 ```  
   
- Un'istanza non valida può essere immessa e convertita in un'istanza `geometry` valida. Nell'esempio seguente di un `Polygon`, gli anelli interni ed esterni si sovrappongono e l'istanza non è valida.  
+
+### <a name="example-b"></a>Esempio B.   
+Un'istanza non valida può essere immessa e convertita in un'istanza `geometry` valida. Nell'esempio seguente di un `Polygon`, gli anelli interni ed esterni si sovrappongono e l'istanza non è valida.  
   
-```  
+```sql  
 DECLARE @g geometry;  
 SET @g = geometry::Parse('POLYGON((1 0, 0 1, 1 2, 2 1, 1 0), (2 0, 1 1, 2 2, 3 1, 2 0))');  
 ```  
   
- Nell'esempio seguente, l'istanza non valida è resa valida con `MakeValid()`.  
+### <a name="example-c"></a>Esempio C.  
+Nell'esempio seguente, l'istanza non valida è resa valida con `MakeValid()`.  
   
-```  
+```sql  
 SET @g = @g.MakeValid();  
 SELECT @g.ToString();  
 ```  
   
- L'istanza `geometry` restituita dall'esempio precedente è un `MultiPolygon`.  
+L'istanza `geometry` restituita dall'esempio precedente è un `MultiPolygon`.  
   
-```  
+```sql  
 MULTIPOLYGON (((2 0, 3 1, 2 2, 1.5 1.5, 2 1, 1.5 0.5, 2 0)), ((1 0, 1.5 0.5, 1 1, 1.5 1.5, 1 2, 0 1, 1 0)))  
 ```  
   
- Di seguito è riportato un altro esempio della conversione di un'istanza non valida in un'istanza geometry valida. Nell'esempio seguente l'istanza `Polygon` è stata creata utilizzando tre punti esattamente uguali:  
+### <a name="example-d"></a>Esempio D.  
+Questo è un altro esempio di conversione di un'istanza non valida in un'istanza geometry valida. Nell'esempio seguente l'istanza `Polygon` è stata creata utilizzando tre punti esattamente uguali:  
   
 ```sql  
 DECLARE @g geometry  
@@ -145,7 +147,7 @@ SET @g = @g.MakeValid();
 SELECT @g.ToString()  
 ```  
   
- L'istanza geometry restituita sopra è `Point(1 3)`.  Se l'istanza `Polygon` indicata è `POLYGON((1 3, 1 5, 1 3, 1 3))` , `MakeValid()` restituirà `LINESTRING(1 3, 1 5)`.  
+L'istanza geometry restituita sopra è `Point(1 3)`.  Se l'istanza `Polygon` indicata è `POLYGON((1 3, 1 5, 1 3, 1 3))` , `MakeValid()` restituirà `LINESTRING(1 3, 1 5)`.  
   
 ## <a name="see-also"></a>Vedere anche  
  [STArea &#40;tipo di dati geometry&#41;](../../t-sql/spatial-geometry/starea-geometry-data-type.md)   

@@ -35,12 +35,12 @@ ms.assetid: 2c506167-0b69-49f7-9282-241e411910df
 author: uc-msft
 ms.author: umajay
 manager: craigg
-ms.openlocfilehash: f5d0da7fb7b4515875b456eac380a6f5e0588e55
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: cd332393a0d605f2ae0e519e6a449fe49bff3477
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52420432"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53215770"
 ---
 # <a name="dbcc-checkdb-transact-sql"></a>DBCC CHECKDB (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
@@ -97,7 +97,7 @@ REPAIR_ALLOW_DATA_LOSS | REPAIR_FAST | REPAIR_REBUILD
     
 REPAIR_ALLOW_DATA_LOSS  
  Tenta di riparare tutti gli errori rilevati. Le operazioni di correzione possono comportare la perdita di dati.  
-    
+    
 > [!WARNING]
 > L'opzione REPAIR_ALLOW_DATA_LOSS è una funzionalità supportata ma non sempre può rappresentare l'opzione migliore per portare un database in uno stato coerente dal punto di vista fisico. Se ha esito positivo, l'opzione REPAIR_ALLOW_DATA_LOSS può comportare una perdita di dati. Infatti, può comportare una perdita maggiore di dati rispetto al ripristino del database dall'ultimo backup valido. 
 >
@@ -133,7 +133,7 @@ NO_INFOMSGS
     
 TABLOCK  
  Consente a DBCC CHECKDB di ottenere blocchi invece di utilizzare uno snapshot di database interno, incluso un blocco esclusivo (X) sul database di breve durata. TABLOCK consente l'esecuzione più rapida di DBCC CHECKDB in database con carico di lavoro elevato, ma comporta una diminuzione del livello di concorrenza del database durante l'esecuzione del comando.  
-    
+    
 > [!IMPORTANT] 
 > TABLOCK limita i controlli eseguiti. DBCC CHECKCATALOG non viene eseguito sul database e i dati di [!INCLUDE[ssSB](../../includes/sssb-md.md)] non vengono convalidati.
     
@@ -155,14 +155,14 @@ Questo argomento implica sempre l'utilizzo dell'opzione NO_INFOMSGS e non è con
 DATA_PURITY  
  Consente a DBCC CHECKDB di controllare il database per i valori di colonna che non sono validi o non sono compresi nell'intervallo dei valori consentiti. Ad esempio, DBCC CHECKDB rileva le colonne con valori di data e ora maggiori o minori dell'intervallo accettabile per il tipo di dati **datetime** oppure le colonne di tipi di dati numerici approssimati o **decimal** con valori di precisione o di scala non validi.  
  I controlli di integrità dei valori di colonna sono abilitati per impostazione predefinita e non richiedono l'opzione DATA_PURITY. Per i database aggiornati da versioni precedenti di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], i controlli dei valori di colonna non sono abilitati per impostazione predefinita fino a quando DBCC CHECKDB WITH DATA_PURITY non è stato eseguito senza errori nel database. A questo punto, DBCC CHECKDB controlla l'integrità dei valori di colonna per impostazione predefinita. Per ulteriori informazioni su come l'aggiornamento del database da versioni precedenti di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] può influire su CHECKDB, vedere la sezione Osservazioni di seguito in questo argomento.  
-    
+    
 > [!WARNING]
 > Se si specifica PHYSICAL_ONLY, i controlli di integrità di colonna non vengono eseguiti.
     
- Gli errori di convalida rilevati da questa opzione non possono essere corretti utilizzando le opzioni di correzione DBCC. Per informazioni sulla correzione manuale di questi errori, vedere l'articolo 923247 della Knowledge Base [Risoluzione dei problemi errore DBCC 2570 in SQL Server 2005 e versioni successive](https://support.microsoft.com/kb/923247).  
+ Gli errori di convalida rilevati da questa opzione non possono essere corretti utilizzando le opzioni di correzione DBCC. Per informazioni sulla correzione manuale di questi errori, vedere l'articolo 923247 della Knowledge Base: [Risoluzione dell'errore DBCC 2570 in SQL Server 2005 e versioni successive](https://support.microsoft.com/kb/923247).  
     
  MAXDOP  
- **Si applica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (da [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] SP2 a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]).  
+ **Si applica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (da [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] SP2 fino a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]).  
     
  Esegue l'override dell'opzione di configurazione **Massimo grado di parallelismo** di **sp_configure** per l'istruzione. MAXDOP può superare il valore configurato con sp_configure. Se MAXDOP supera il valore configurato con Resource Governor, il [!INCLUDE[ssDEnoversion](../../includes/ssDEnoversion_md.md)] usa il valore MAXDOP di Resource Governor descritto in [ALTER WORKLOAD GROUP](../../t-sql/statements/alter-workload-group-transact-sql.md). Quando si utilizza l'hint per la query MAXDOP sono valide tutte le regole semantiche utilizzate con l'opzione di configurazione max degree of parallelism. Per altre informazioni, vedere [Configurare l'opzione di configurazione del server max degree of parallelism](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md).  
  
@@ -196,7 +196,7 @@ Tramite questi controlli di consistenza logica vengono eseguiti controlli incroc
 DBCC CHECKDB utilizza uno snapshot interno del database per garantire la consistenza delle transazioni necessaria per l'esecuzione di questi controlli. Ciò consente di evitare problemi di blocco e concorrenza durante l'esecuzione di questi comandi. Per altre informazioni, vedere [Visualizzare le dimensioni del file sparse di uno snapshot del database &#40;Transact-SQL&#41;](../../relational-databases/databases/view-the-size-of-the-sparse-file-of-a-database-snapshot-transact-sql.md) e la sezione Utilizzo dello snapshot interno del database DBCC in [DBCC &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-transact-sql.md). Se non è possibile creare uno snapshot o se viene specificato TABLOCK, DBCC CHECKDB acquisisce blocchi per ottenere la consistenza necessaria. In questo caso, è necessario un blocco esclusivo a livello di database per eseguire i controlli di allocazione, nonché blocchi condivisi a livello di tabella per eseguire i controlli delle tabelle.
 L'esecuzione dell'istruzione DBCC CHECKDB sul database master ha esito negativo se non è possibile creare uno snapshot interno del database.
 Quando il comando DBCC CHECKDB viene eseguito su tempdb, non esegue alcuna allocazione o controllo del catalogo e deve acquisire blocchi di tabella condivisi per eseguire i controlli sulle tabelle. Questo funzionamento dipende dal fatto che per motivi di prestazioni gli snapshot di database non sono disponibili in tempdb. Ciò significa che non è possibile ottenere la consistenza delle transazioni necessaria.
-In Microsoft SQL Server 2012 o versioni precedenti di SQL Server, è possibile che vengano generati messaggi di errore quando si esegue il comando DBCC CHECKDB per un database i cui file si trovano in un volume formattato in ReFS. Per altre informazioni, vedere l'articolo 2974455 della Knowledge Base: [Comportamento di DBCC CHECKDB quando il database di SQL Server si trova su un volume di rif](https://support.microsoft.com/kb/2974455).    
+In Microsoft SQL Server 2012 o versioni precedenti di SQL Server, è possibile che vengano generati messaggi di errore quando si esegue il comando DBCC CHECKDB per un database i cui file si trovano in un volume formattato in ReFS. Per altre informazioni, vedere l'articolo 2974455 della Knowledge Base. [Comportamento di DBCC CHECKDB quando il database di SQL Server si trova su un volume ReFS](https://support.microsoft.com/kb/2974455).    
     
 ## <a name="checking-and-repairing-filestream-data"></a>Controllo e ripristino dei dati FILESTREAM    
 Quando FILESTREAM è abilitato per un database e una tabella, è possibile, facoltativamente, archiviare oggetti binari di grandi dimensioni (BLOB) **varbinary(max)** nel file system. Quando si utilizza DBCC CHECKDB in un database tramite cui vengono archiviati oggetti BLOB nel file system, tramite DBCC viene verificata la consistenza a livello di collegamenti tra il file system e il database.
@@ -267,7 +267,7 @@ L'esecuzione del comando DBCC CHECKDB con l'opzione REPAIR_ALLOW_DATA_LOSS può 
 -   Tabelle di metadati della replica. Le azioni eseguite dal processo CHECKDB per correggere le tabelle di metadati della replica danneggiate richiedono l'eliminazione e la riconfigurazione della replica.    
     
 Se è necessario eseguire il comando DBCC CHECKDB con l'opzione REPAIR_ALLOW_DATA_LOSS su un database utente o di distribuzione:
-1.  Mettere in stato di inattività il sistema: arrestare l'attività sul database e su qualsiasi altro database incluso nella topologia di replica, quindi provare a sincronizzare tutti i nodi. Per altre informazioni, vedere [Come mettere una topologia di replica in stato di inattività &#40;programmazione Transact-SQL della replica&#41;](../../relational-databases/replication/administration/quiesce-a-replication-topology-replication-transact-sql-programming.md).    
+1.  Mettere in stato di inattività il sistema. Arrestare l'attività sul database e su qualsiasi altro database incluso nella topologia di replica, quindi provare a sincronizzare tutti i nodi. Per altre informazioni, vedere [Come mettere una topologia di replica in stato di inattività &#40;programmazione Transact-SQL della replica&#41;](../../relational-databases/replication/administration/quiesce-a-replication-topology-replication-transact-sql-programming.md).    
 1.  Eseguire DBCC CHECKDB.    
 1.  Se il report di DBCC CHECKDB include correzioni relative a tabelle presenti nel database di distribuzione o a tabelle di metadati della replica di un database utente, eliminare e riconfigurare la replica. Per altre informazioni, vedere [Disabilitare la pubblicazione e la distribuzione](../../relational-databases/replication/disable-publishing-and-distribution.md).    
 1.  Se il report di DBCC CHECKDB include correzioni relative a tabelle replicate, eseguire la convalida dei dati per determinare la presenza di eventuali differenze tra i dati dei database di pubblicazione e di sottoscrizione.    
@@ -382,7 +382,7 @@ DBCC CHECKDB (AdventureWorks2012, NOINDEX);
 GO    
 ```    
     
-### <a name="b-checking-the-current-database-suppressing-informational-messages"></a>B. Controllo del database corrente, con la disattivazione dei messaggi informativi    
+### <a name="b-checking-the-current-database-suppressing-informational-messages"></a>b. Controllo del database corrente, con la disattivazione dei messaggi informativi    
 Nell'esempio seguente viene verificato il database corrente e vengono soppressi tutti i messaggi informativi.
     
 ```sql    

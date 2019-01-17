@@ -15,19 +15,19 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 9d4a037898aaa022b7db5d6bf55f4a6dfb08988c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b5ef89fc257782f7977efbee371a40e188893bc7
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47734609"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53216060"
 ---
 # <a name="determining-effective-database-engine-permissions"></a>Determinare le autorizzazioni valide per il motore di database
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 Questo articolo descrive come determinare chi ha le autorizzazioni per i vari oggetti nel motore di database di SQL Server. SQL Server implementa due sistemi di autorizzazione per il motore di database. Nel sistema precedente basato sui ruoli predefiniti esistono autorizzazioni preconfigurate. A partire da SQL Server 2005 è disponibile un sistema più flessibile e preciso. Le informazioni in questo articolo si applicano a SQL Server a partire dalla versione 2005. Alcuni tipi di autorizzazioni non sono disponibili in alcune versioni di SQL Server.
 
->  [!IMPORTANT] 
+> [!IMPORTANT]
 >  * Le autorizzazioni valide sono il risultato dell'aggregazione di entrambi i sistemi di autorizzazione. 
 >  * La negazione di autorizzazioni è prioritaria rispetto alla concessione di autorizzazioni. 
 >  * Se un utente è un membro del ruolo predefinito del server sysadmin, è possibile che le autorizzazioni non vengono controllate e quindi che le negazioni non vengano applicate. 
@@ -51,24 +51,24 @@ Questo articolo descrive come determinare chi ha le autorizzazioni per i vari og
 ## <a name="older-fixed-role-permission-system"></a>Sistema di autorizzazione precedente con ruoli predefiniti
 
 I ruoli predefiniti del server e del database hanno autorizzazioni preconfigurate non modificabili. Per determinare i membri di un ruolo predefinito del server, eseguire la query seguente:    
->  [!NOTE] 
+> [!NOTE]
 >  Non si applica al database SQL o SQL Data Warehouse per cui non è disponibile l'autorizzazione a livello di server. La colonna `is_fixed_role` di `sys.server_principals` è stata aggiunta in SQL Server 2012. Non è necessaria per le versioni precedenti di SQL Server.  
-```sql
-SELECT SP1.name AS ServerRoleName, 
- isnull (SP2.name, 'No members') AS LoginName   
- FROM sys.server_role_members AS SRM
- RIGHT OUTER JOIN sys.server_principals AS SP1
-   ON SRM.role_principal_id = SP1.principal_id
- LEFT OUTER JOIN sys.server_principals AS SP2
-   ON SRM.member_principal_id = SP2.principal_id
- WHERE SP1.is_fixed_role = 1 -- Remove for SQL Server 2008
- ORDER BY SP1.name;
+> ```sql
+> SELECT SP1.name AS ServerRoleName, 
+>  isnull (SP2.name, 'No members') AS LoginName   
+>  FROM sys.server_role_members AS SRM
+>  RIGHT OUTER JOIN sys.server_principals AS SP1
+>    ON SRM.role_principal_id = SP1.principal_id
+>  LEFT OUTER JOIN sys.server_principals AS SP2
+>    ON SRM.member_principal_id = SP2.principal_id
+>  WHERE SP1.is_fixed_role = 1 -- Remove for SQL Server 2008
+>  ORDER BY SP1.name;
 ```
->  [!NOTE] 
->  * Tutti gli account di accesso sono membri del ruolo public e non possono essere rimossi. 
->  * Questa query controlla le tabelle nel database master, ma può essere eseguita in qualsiasi database per il prodotto locale. 
+> [!NOTE]
+>  * All logins are members of the public role and cannot be removed. 
+>  * This query checks tables in the master database but it can be executed in any database for the on premises product. 
 
-Per determinare i membri di un ruolo predefinito del database, eseguire la query seguente in ogni database.
+To determine who is a member of a fixed database role, execute the following query in each database.
 ```sql
 SELECT DP1.name AS DatabaseRoleName, 
    isnull (DP2.name, 'No members') AS DatabaseUserName 
@@ -106,22 +106,22 @@ Tenere presente che un utente di Windows potrebbe essere un membro di più di un
 ### <a name="server-permissions"></a>Autorizzazioni per il server
 
 La query seguente restituisce un elenco delle autorizzazioni concesse o negate a livello di server. Questa query deve essere eseguita nel database master.   
->  [!NOTE] 
+> [!NOTE]
 >  Non è possibile concedere autorizzazioni a livello di server o eseguire query per recuperare tali autorizzazioni nel database SQL o in SQL Data Warehouse.   
-```sql
-SELECT pr.type_desc, pr.name, 
- isnull (pe.state_desc, 'No permission statements') AS state_desc, 
- isnull (pe.permission_name, 'No permission statements') AS permission_name 
- FROM sys.server_principals AS pr
- LEFT OUTER JOIN sys.server_permissions AS pe
-   ON pr.principal_id = pe.grantee_principal_id
- WHERE is_fixed_role = 0 -- Remove for SQL Server 2008
- ORDER BY pr.name, type_desc;
+> ```sql
+> SELECT pr.type_desc, pr.name, 
+>  isnull (pe.state_desc, 'No permission statements') AS state_desc, 
+>  isnull (pe.permission_name, 'No permission statements') AS permission_name 
+>  FROM sys.server_principals AS pr
+>  LEFT OUTER JOIN sys.server_permissions AS pe
+>    ON pr.principal_id = pe.grantee_principal_id
+>  WHERE is_fixed_role = 0 -- Remove for SQL Server 2008
+>  ORDER BY pr.name, type_desc;
 ```
 
-### <a name="database-permissions"></a>Autorizzazioni per il database
+### Database Permissions
 
-La query seguente restituisce un elenco delle autorizzazioni concesse o negate a livello di database. Questa query deve essere eseguita in ogni database.   
+The following query returns a list of the permissions that have been granted or denied at the database level. This query should be executed in each database.   
 ```sql
 SELECT pr.type_desc, pr.name, 
  isnull (pe.state_desc, 'No permission statements') AS state_desc, 

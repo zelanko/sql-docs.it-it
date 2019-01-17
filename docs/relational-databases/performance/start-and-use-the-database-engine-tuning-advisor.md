@@ -16,15 +16,15 @@ f1_keywords:
 helpviewer_keywords:
 - Database Engine Tuning Advisor [SQL Server], starting
 ms.assetid: a4e3226a-3917-4ec8-bdf0-472879d231c9
-author: MikeRayMSFT
-ms.author: mikeray
+author: julieMSFT
+ms.author: jrasnick
 manager: craigg
-ms.openlocfilehash: 926b099e6cadadb130717159188f2fcc87dbc218
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 749f94658d03828b30de3b328df1abfc8c932d43
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52517668"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53351059"
 ---
 # <a name="start-and-use-the-database-engine-tuning-advisor"></a>Avvio e utilizzo di Ottimizzazione guidata motore di database
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -454,7 +454,7 @@ database_name.owner_name.table_name
  Vengono incluse solo le indicazioni per l'aggiunta di viste indicizzate. Non verranno generate indicazioni per gli indici cluster e non cluster.  
   
  **Includi indici filtrati**  
- Vengono incluse le indicazioni per l'aggiunta di indici filtrati. Questa opzione è disponibile se si seleziona una delle strutture di progettazione fisiche **Indici e viste indicizzate**, **Indici**o **Indici non cluster**.  
+ Vengono incluse le indicazioni per l'aggiunta di indici filtrati. Questa opzione è disponibile se si seleziona una di queste strutture di progettazione fisica: **Indici e viste indicizzate**, **Indici** o  **Indici non cluster**.  
   
  **Indici**  
  Vengono incluse solo le indicazioni per l'aggiunta di indici cluster e non cluster. Non verranno generate indicazioni per le viste indicizzate.  

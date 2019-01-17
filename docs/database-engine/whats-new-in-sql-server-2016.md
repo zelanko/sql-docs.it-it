@@ -14,12 +14,12 @@ ms.assetid: 8f625d5a-763c-4440-97b8-4b823a6e2439
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 2c82a2400020baf0d97cda595c630c2b7b55a9b1
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 22a4907e0eec995839648371a14022a3f9c94d78
+ms.sourcegitcommit: 1e7ec3b11f25d469163bdc9096a475411eacf79a
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52504508"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53266082"
 ---
 # <a name="whats-new-in-database-engine---sql-server-2016"></a>Novità del motore di database - SQL Server 2016
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -293,7 +293,7 @@ SQL Server 2016 aggiunge il supporto predefinito per l'importazione e l'esportaz
  Per altre informazioni, vedere [PolyBase Guide](../relational-databases/polybase/polybase-guide.md)(Guida a PolyBase).
 
 ## <a name="stretch-database"></a>Stretch database
- Stretch Database è una nuova funzionalità di [!INCLUDE[ssSQL15](../includes/sssql15-md.md)] che esegue la migrazione dei dati cronologici in modo trasparente e sicuro nel cloud di Microsoft Azure. È possibile accedere direttamente ai dati di SQL Server a prescindere dal fatto che si trovino in locale o siano stati estesi nel cloud. Impostare i criteri che determinano le posizioni di archiviazione dei dati e SQL Server gestisce il trasferimento dei dati in background. L'intera tabella è sempre online e disponibile per le query. Stretch Database non richiede modifiche alle query o alle applicazioni esistenti: il percorso dei dati è completamente trasparente per l'applicazione. Per ulteriori informazioni, vedere [Stretch Database](../sql-server/stretch-database/stretch-database.md).
+ Stretch Database è una nuova funzionalità di [!INCLUDE[ssSQL15](../includes/sssql15-md.md)] che esegue la migrazione dei dati cronologici in modo trasparente e sicuro nel cloud di Microsoft Azure. È possibile accedere direttamente ai dati di SQL Server a prescindere dal fatto che si trovino in locale o siano stati estesi nel cloud. Impostare i criteri che determinano le posizioni di archiviazione dei dati e SQL Server gestisce il trasferimento dei dati in background. L'intera tabella è sempre online e disponibile per le query. Stretch Database non richiede modifiche alle query o alle applicazioni esistenti: il percorso dei dati è completamente disponibile per l'applicazione. Per ulteriori informazioni, vedere [Stretch Database](../sql-server/stretch-database/stretch-database.md).
  
 ## <a name="support-for-utf-8"></a>Supporto per UTF-8
 [L'utilità bcp](../tools/bcp-utility.md), [BULK INSERT](../t-sql/statements/bulk-insert-transact-sql.md) e [OPENROWSET](../t-sql/functions/openrowset-transact-sql.md) supportano ora la tabella codici UTF-8. Per altre informazioni, vedere questi argomenti in [Creare un file di formato &#40;SQL Server&#41;](../relational-databases/import-export/create-a-format-file-sql-server.md).
@@ -323,7 +323,7 @@ Numerosi miglioramenti supportano le funzionalità descritte nella altre sezioni
 - Il limite di lunghezza di input di 8.000 byte per la funzione [HASHBYTES &#40;Transact-SQL&#41;](../t-sql/functions/hashbytes-transact-sql.md) è stato rimosso.
 - Sono state aggiunte nuove funzioni di stringa [STRING_SPLIT &#40;Transact-SQL&#41;](../t-sql/functions/string-split-transact-sql.md) e [STRING_ESCAPE &#40;Transact-SQL&#41;](../t-sql/functions/string-escape-transact-sql.md).
 - Opzioni di aumento automatico: il flag di traccia 1117 è stato sostituito dalle opzioni AUTOGROW_SINGLE_FILE e AUTOGROW_ALL_FILES di ALTER DATABASE e il flag di traccia 1117 non ha alcun effetto. Per altre informazioni, vedere [Opzioni file e filegroup ALTER DATABASE &#40;Transact-SQL&#41;](../t-sql/statements/alter-database-transact-sql-file-and-filegroup-options.md) e la nuova colonna is_autogrow_all_files di [sys.filegroups &#40;Transact-SQL&#41;](../relational-databases/system-catalog-views/sys-filegroups-transact-sql.md).
-- Allocazione di extent misti: per i database utente, l'allocazione predefinita per le prime 8 pagine di un oggetto usa extent uniformi al posto di extent di pagina misti. Il flag di traccia 1118 è stato sostituito dall'opzione SET MIXED_PAGE_ALLOCATION di ALTER DATABASE e il flag di traccia 1118 non ha alcun effetto. Per altre informazioni, vedere [Opzioni di ALTER DATABASE SET &#40;Transact-SQL&#41;](../t-sql/statements/alter-database-transact-sql-set-options.md) e la nuova colonna `is_mixed_page_allocation_on` di [sys.databases &#40;Transact-SQL&#41;](../relational-databases/system-catalog-views/sys-databases-transact-sql.md).
+- Allocazione di extent misti: per i database utente, l'allocazione predefinita per le prime 8 pagine di un oggetto ora usa extent uniformi al posto di extent di pagina misti. Il flag di traccia 1118 è stato sostituito dall'opzione SET MIXED_PAGE_ALLOCATION di ALTER DATABASE e il flag di traccia 1118 non ha alcun effetto. Per altre informazioni, vedere [Opzioni di ALTER DATABASE SET &#40;Transact-SQL&#41;](../t-sql/statements/alter-database-transact-sql-set-options.md) e la nuova colonna `is_mixed_page_allocation_on` di [sys.databases &#40;Transact-SQL&#41;](../relational-databases/system-catalog-views/sys-databases-transact-sql.md).
 
 ### <a name="transact-sql-improvements-for-natively-compiled-modules"></a>Miglioramenti di Transact-SQL per i moduli compilati in modo nativo
 
@@ -438,10 +438,8 @@ Il seeding diretto consente di eseguire automaticamente il seeding di una replic
 Scaricare la versione più recente di [SQL Server Management Studio (SSMS)](../ssms/download-sql-server-management-studio-ssms.md)
 
 - [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] supporta Active Directory Authentication Library (ADAL), che è in fase di sviluppo per la connessione a Microsoft Azure. Questo strumento sostituisce l'autenticazione basata su certificati usata in [!INCLUDE[ssSQL14](../includes/sssql14-md.md)][!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)].
-- [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] richiede l'installazione di .NET 4.6 come prerequisito. .NET 4.6 verrà installato automaticamente durante l'installazione di [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] .
 - Una nuova opzione della griglia di risultati di query supporta il mantenimento di un ritorno a capo/avanzamento riga (caratteri di nuova riga) quando si copia o si salva il testo dalla griglia di risultati. È possibile impostare questa opzione dal menu Strumenti/Opzioni.
 - Strumenti di gestione di SQL Server non viene più installato dall'albero delle funzionalità principale. Per informazioni dettagliate, vedere [Installare gli strumenti di gestione di SQL Server con SSMS](https://msdn.microsoft.com/library/af68d59a-a04d-4f23-9967-ad4ee2e63381).
-- [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] richiede l'installazione di .NET 4.6.1 come prerequisito. .NET 4.6.1 verrà installato automaticamente durante l'installazione di [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)].
 
 ### <a name="upgrade-advisor"></a>Preparazione aggiornamento
 La versione di anteprima di Gestione spazio aggiornamenti di SQL Server 2016 è uno strumento autonomo che consente agli utenti di versioni precedenti di eseguire un set di regole di aggiornamento nel database di SQL Server per trovare le modifiche di rilievo, le differenze di comportamento e le funzionalità deprecate, fornendo assistenza per l'adozione di nuove funzionalità come Stretch Database.

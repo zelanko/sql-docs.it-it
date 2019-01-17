@@ -22,12 +22,12 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: c4bf9ffc5d71e046c32322d20bc9b59c7fb5a25f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 63b1c9e8bda9bbabcc94aa7b384b3e7ffef053de
+ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47856169"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53590205"
 ---
 # <a name="keep-nulls-or-use-default-values-during-bulk-import-sql-server"></a>Mantenimento dei valori Null o utilizzo dei valori predefiniti durante un'importazione bulk (SQL Server)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -46,10 +46,10 @@ I qualificatori seguenti specificano che un campo vuoto del file di dati mantien
 |Comando|Qualifier|Tipo di qualificatore|  
 |-------------|---------------|--------------------|  
 |bcp|-k|Opzione|  
-|BULK INSERT|KEEPNULLS**\***|Argomento|  
+|BULK INSERT|KEEPNULLS\*|Argomento|  
 |INSERT ... SELECT * FROM OPENROWSET(BULK...).|N/D|N/D|  
   
-**\*** Per [BULK INSERT](../../t-sql/statements/bulk-insert-transact-sql.md), se i valori predefiniti non sono disponibili, è necessario impostare la colonna della tabella in modo da consentire valori Null. 
+\* Per [BULK INSERT](../../t-sql/statements/bulk-insert-transact-sql.md), se i valori predefiniti non sono disponibili, è necessario impostare la colonna della tabella in modo da consentire valori Null. 
   
 > [!NOTE]
 > Questi qualificatori disabilitano il controllo delle definizioni DEFAULT di una tabella mediante i comandi per l'importazione bulk.  Per le istruzioni INSERT simultanee, le definizioni DEFAULT sono tuttavia previste.

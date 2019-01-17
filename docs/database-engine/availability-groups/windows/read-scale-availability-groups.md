@@ -1,6 +1,7 @@
 ---
-title: Gruppi di disponibilità con scalabilità in lettura | Microsoft Docs
-ms.custom: ''
+title: Usare gruppi di disponibilità con scalabilità in lettura
+description: 'Descrizione di come realizzare la scalabilità in lettura quando si usano i gruppi di disponibilità Always On. '
+ms.custom: seodec18
 ms.date: 10/24/2017
 ms.prod: sql
 ms.reviewer: ''
@@ -10,14 +11,14 @@ ms.assetid: ''
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: ee043206e4525f8c549f9bf6e90c2655bff0c6c6
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 3b9556e7cecf64d0cd3d2abfe0aecdf3c5aa7cc8
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47622405"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53203840"
 ---
-# <a name="read-scale-availability-groups"></a>Gruppi di disponibilità con scalabilità in lettura
+# <a name="use-read-scale-with-always-on-availability-groups"></a>Usare gruppi di disponibilità Always On con scalabilità in lettura
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 Un gruppo di disponibilità è una soluzione completa che offre funzionalità a disponibilità elevata per SQL Server e anche soluzioni di scalabilità integrate. In un'applicazione di database tipica, diversi client eseguono vari tipi di carichi di lavoro. In alcuni casi a causa dei vincoli di risorse possono verificarsi dei colli di bottiglia. È possibile liberare risorse e ottenere una velocità effettiva maggiore per il carico di lavoro OLTP. È anche possibile offrire migliori prestazioni e maggior scalabilità per i carichi di lavoro di sola lettura. Sfruttare la tecnologia di replica più veloce per SQL Server, creando un gruppo di database replicati per allocare i carichi di lavoro di creazione report e analisi alle repliche di sola lettura.

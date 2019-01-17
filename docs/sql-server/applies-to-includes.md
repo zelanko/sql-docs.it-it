@@ -3,27 +3,27 @@ title: File di inclusione della documentazione di SQL Server | Microsoft Docs
 ms.custom: ''
 ms.date: 08/15/2018
 ms.prod: sql
-ms.prod_service: sql-tools
 ms.reviewer: ''
-ms.technology: database-engine
+ms.technology: ''
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
+ms.topic: conceptual
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || >= sql-server-linux-2017 || = sqlallproducts-allversions'
-ms.openlocfilehash: 06d710e269ff4575bf7edb1c074de9421dad5c2a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 61cee54e6f49ffaf7e996cf593388ad22e8a7b44
+ms.sourcegitcommit: 0bb306da5374d726b1e681cd4b5459cb50d4a87a
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47614759"
+ms.lasthandoff: 12/21/2018
+ms.locfileid: "53731958"
 ---
 # <a name="sql-server-include-files-for-versioning-and-applies-to"></a>File di inclusione per il controllo delle versioni e Si applica a in SQL Server
 
-I riferimenti nella documentazione possono essere modificati facilmente senza modificare il testo effettivo dei singoli articoli tramite file di inclusione in Markdown. Esistono tre tipi di file di inclusione nel mondo del contenuto SQL: versione di SQL, Si applica a e testo referenziale. Le **inclusioni della versione di SQL** vengono utilizzate per indicare la versione di SQL trattata, ad esempio SQL Server 2016 o 2017. Le **inclusioni Si applica a** indicano a quali prodotti e servizi SQL si riferisce il documento, ad esempio SQL Server in Linux o Database SQL di Azure. Le **inclusioni testo referenziale** non rientrano nelle altre due categorie, ad esempio l'inclusione "Supporto", ovvero un elenco di collegamenti che i clienti possono usare per ottenere supporto e assistenza con SQL.
+I riferimenti nella documentazione possono essere modificati facilmente senza modificare il testo effettivo dei singoli articoli tramite file di inclusione in Markdown. Esistono tre tipi di file di inclusione nel mondo dei contenuti SQL: versione SQL, Si applica a e testo referenziale. I file di inclusione **versione di SQL Server** vengono utilizzati per indicare la versione di SQL trattata, ad esempio SQL Server 2016 o 2017. I file di inclusione **Si applica a** indicano a quali prodotti e servizi SQL si riferisce il documento, ad esempio SQL Server in Linux o Database SQL di Azure. I file di inclusione **testo referenziale** sono quelli che non rientrano nelle altre due categorie, ad esempio l'inclusione "Supporto", ovvero un elenco di collegamenti che i clienti possono usare per ottenere supporto e assistenza con SQL.
 
-Questo articolo è progettato per essere usato come punto di riferimento solo per i primi due tipi di inclusioni. È possibile esplorare l'elenco completo dei file di inclusione nel [repository sql-docs](https://github.com/MicrosoftDocs/sql-docs/tree/live/docs/includes).
+Questo articolo è stato progettato per fungere da punto di riferimento solo per i primi due tipi di file di inclusione. È possibile esplorare l'elenco completo dei file di inclusione nel [repository sql-docs](https://github.com/MicrosoftDocs/sql-docs/tree/live/docs/includes).
 
-## <a name="sql-server-version-includes"></a>Inclusioni della versione di SQL Server
+## <a name="sql-server-version-include-files"></a>File di inclusione della versione di SQL Server
 
 Gli autori di contenuti SQL hanno spesso la necessità di includere il nome del prodotto e la versione di SQL Server. In questo modo, se il nome cambia, è possibile aggiornare il file di inclusione invece di modificare manualmente il valore in ogni singolo articolo. Questi file di inclusione vengono usati come segnaposto per i nomi di prodotto, ma non sono stati usati in modo coerente in tutta la documentazione di SQL. SQL Server vNext fa riferimento a una versione futura di SQL che non ha ancora un numero di versione e rappresenta un'eccezione.  
 
@@ -41,9 +41,9 @@ Gli autori di contenuti SQL hanno spesso la necessità di includere il nome del 
 | SQL vNext | sssqlv15-md.md | `[!INCLUDE[sssqlv15-md](../includes/sssqlv15-md.md)]` | SQL Server vNext |
 | &nbsp; | &nbsp; | &nbsp; | &nbsp; |  
 
-## <a name="sql-server-non-version-specific"></a>SQL Server (non specifico della versione)
+## <a name="sql-server-applies-to-non-version-specific"></a>Si applica a per SQL Server (non per una versione specifica)
 
-In queste inclusioni Si applica a viene omessa la versione di SQL Server.
+In questi file di inclusione Si applica a viene omessa la versione di SQL Server.
 
 | Nome file| Esempio di Markdown |image|
 | :-------------| :----------| :-------------------|
@@ -63,9 +63,9 @@ In queste inclusioni Si applica a viene omessa la versione di SQL Server.
 | appliesto-xx-xxxx-asdw-xxx-md.md | `[!INCLUDE[appliesto-xx-xxxx-asdw-xxx-md.md](../includes/appliesto-xx-xxxx-asdw-xxx-md.md)]` | [!INCLUDE[appliesto-xx-xxxx-asdw-xxx-md.md](../includes/appliesto-xx-xxxx-asdw-xxx-md.md)] |
 |&nbsp; | &nbsp; | &nbsp; |  
  
-## <a name="sql-server-version-specific"></a>SQL Server (specifico della versione)
+## <a name="sql-server-applies-to-version-specific"></a>Si applica a per SQL Server (per una versione specifica)
 
-Queste inclusioni Si applica a specificano le versioni di SQL a cui si applica la documentazione.
+In questi file di inclusione Si applica a viene indicata la versione della documentazione di SQL Server a cui si riferiscono.
 
  Nome file| Esempio di Markdown |image|
 | :-------------| :----------| :-------------------|
@@ -107,9 +107,9 @@ Queste inclusioni Si applica a specificano le versioni di SQL a cui si applica l
 | tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md.md | `[!INCLUDE[tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md.md](../includes/tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md.md)]` | [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md.md](../includes/tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md.md)] |
 |&nbsp; | &nbsp; | &nbsp; |  
 
-## <a name="analysis-services"></a>Analysis Services
+## <a name="analysis-services-applies-to"></a>Si applica a per Analysis Services
 
-Queste inclusioni Si applica a vengono utilizzate con la documentazione di Analysis Services.
+Questi file di inclusione Si applica a vengono utilizzati con la documentazione di Analysis Services.
 
 | Nome file| Esempio di Markdown |image|
 | :-------------| :----------| :-------------------|
@@ -124,9 +124,9 @@ Queste inclusioni Si applica a vengono utilizzate con la documentazione di Analy
 | ssas-appliesto-sqlas-all-aas.md | `[!INCLUDE[ssas-appliesto-sqlas-all-aas.md](../includes/ssas-appliesto-sqlas-all-aas.md)]` | [!INCLUDE[ssas-appliesto-sqlas-all-aas.md](../includes/ssas-appliesto-sqlas-all-aas.md)] |
 |&nbsp; | &nbsp; | &nbsp; |  
 
-## <a name="reporting-services"></a>Reporting Services
+## <a name="reporting-services-applies-to"></a>Si applica a per Reporting Services
 
-Queste inclusioni Si applica a vengono utilizzate con la documentazione di Reporting Services.
+Questi file di inclusione Si applica a vengono utilizzati con la documentazione di Reporting Services.
 
 | Nome file| Esempio di Markdown |image|
 | :-------------| :----------| :-------------------|

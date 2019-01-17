@@ -12,16 +12,16 @@ helpviewer_keywords:
 - CE (cardinality estimator)
 - estimating cardinality
 ms.assetid: baa8a304-5713-4cfe-a699-345e819ce6df
-author: MikeRayMSFT
-ms.author: mikeray
+author: julieMSFT
+ms.author: jrasnick
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 27ef6862a5fcfb6e63ffcbdd89fb1e000c2065f2
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 4f827b1de0a9cba06a17fc2b84724277e9daab22
+ms.sourcegitcommit: 40c3b86793d91531a919f598dd312f7e572171ec
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51667030"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53328851"
 ---
 # <a name="cardinality-estimation-sql-server"></a>Stima della cardinalità (SQL Server)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -38,8 +38,8 @@ Sono implementate tecniche per identificare una query che risulta più lenta con
 ## <a name="versions-of-the-ce"></a>Versioni della stima della cardinalità  
 Nel 1998 è stato incluso un aggiornamento importante della stima di cardinalità in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 7.0, per cui il livello di compatibilità era 70. Questa versione del modello di stima di cardinalità si basa su quattro presupposti:
 
--  **Indipendenza:** si presuppone che le distribuzioni dei dati in colonne diverse siano indipendenti una dall'altro, a meno che siano disponibili e utilizzabili informazioni di correlazione.
--  **Uniformità:** i valori distinct sono divisi uniformemente e hanno tutti la stessa frequenza. Più precisamente, all'interno di ogni intervallo dell'[istogramma](../../relational-databases/statistics/statistics.md#histogram), i valori distinct sono distribuiti uniformemente e hanno tutti la stessa frequenza. 
+-  **Indipendenza:** si presuppone che le distribuzioni dei dati in colonne diverse siano indipendenti una dall'altra, a meno che siano disponibili e utilizzabili informazioni di correlazione.
+-  **Uniformità:** i valori Distinct sono divisi uniformemente e hanno tutti la stessa frequenza. Più precisamente, all'interno di ogni intervallo dell'[istogramma](../../relational-databases/statistics/statistics.md#histogram), i valori distinct sono distribuiti uniformemente e hanno tutti la stessa frequenza. 
 -  **Indipendenza (semplice):** gli utenti eseguono una query per i dati esistenti. Ad esempio, per un join di uguaglianza tra due tabelle, considerare la selettività di join <sup>1</sup> in ogni istogramma di input prima di creare un join di istogrammi e stimarne la selettività. 
 -  **Inclusione:** per i predicati di filtro dove `Column = Constant`, si presuppone che la costante sia effettivamente esistente nella colonna associata. Se un intervallo dell'istogramma corrispondente non è vuoto, si presuppone che uno dei valori distinct dell'intervallo corrisponda al valore del predicato.
 
@@ -48,9 +48,9 @@ Nel 1998 è stato incluso un aggiornamento importante della stima di cardinalit�
 Gli aggiornamenti successivi sono iniziati con [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)], con livelli di compatibilità 120 e superiori. Gli aggiornamenti della stima di cardinalità per i livelli 120 e superiori integrano presupposti e algoritmi aggiornati che funzionano bene nel data warehousing moderno e nei carichi di lavoro OLTP. Dopo i presupporti della stima di cardinalità per i livelli 70, con la stima di cardinalità per i livelli 120 sono stati modificati i presupposti del modello seguenti:
 
 -  **Indipendenza** diventa **correlazione:** la combinazione dei diversi valori di colonna che non sono necessariamente indipendenti. Può assomigliare all'esecuzione di query sui dati più reali.
--  **Indipendenza semplice** diventa **contenimento di base:** gli utenti possono eseguire la query per dati che non esistono. Ad esempio, per un join di uguaglianza tra due tabelle, si usano gli istogrammi delle tabelle di base per stimare la selettività di join e considerare la selettività dei predicati.
+-  **Indipendenza semplice** diventa **indipendenza di base:** gli utenti possono eseguire query per dati che non esistono. Ad esempio, per un join di uguaglianza tra due tabelle, si usano gli istogrammi delle tabelle di base per stimare la selettività di join e considerare la selettività dei predicati.
   
-**Livello di compatibilità:** per assicurarsi che il database sia impostato su un determinato livello, è possibile usare il codice [!INCLUDE[tsql](../../includes/tsql-md.md)] seguente per [COMPATIBILITY_LEVEL](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md).  
+**Livello di compatibilità:** è possibile assicurarsi che il database sia impostato su un determinato livello usando il codice [!INCLUDE[tsql](../../includes/tsql-md.md)] seguente per [COMPATIBILITY_LEVEL](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md).  
 
 ```sql  
 SELECT ServerProperty('ProductVersion');  

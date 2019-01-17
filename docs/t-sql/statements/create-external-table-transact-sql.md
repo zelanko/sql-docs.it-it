@@ -22,12 +22,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 4409d67e60fd4d82d339ac31e96ca75b578171fe
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: e7d0e18e67720b301f97cc212f7b3b5de0d08e29
+ms.sourcegitcommit: 467b2c708651a3a2be2c45e36d0006a5bbe87b79
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52402816"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53980537"
 ---
 # <a name="create-external-table-transact-sql"></a>CREATE EXTERNAL TABLE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-all-md](../../includes/tsql-appliesto-ss2016-all-md.md)]
@@ -255,8 +255,8 @@ Sia i file del motivo che i file di dati hanno il queryID associato all'istruzio
  Si noti che l'account di accesso che crea l'origine dati esterna deve avere le autorizzazioni necessarie per leggere e scrivere nell'origine dati esterna, che si trova in Hadoop o nell'archiviazione BLOB di Azure.  
 
 
- > [!IMPORTANT]  
-
+> [!IMPORTANT]
+> 
 >  L'autorizzazione ALTER ANY EXTERNAL DATA SOURCE concede a qualsiasi entità di sicurezza la possibilità di creare e modificare qualsiasi oggetto origine dati esterna e, di conseguenza, la possibilità di accedere a tutte le credenziali con ambito database per il database. Questa autorizzazione deve essere considerata con privilegi elevati e quindi essere concessa solo a entità attendibili nel sistema.
 
 ## <a name="error-handling"></a>Gestione degli errori  
@@ -274,7 +274,7 @@ Sia i file del motivo che i file di dati hanno il queryID associato all'istruzio
 ## <a name="limitations-and-restrictions"></a>Limitazioni e restrizioni  
  In CTP2 la funzionalità di esportazione non è supportata, quindi i dati SQL vengono archiviati in modo permanente nell'origine dati esterna. Questa funzionalità sarà disponibile in CTP3.  
   
- Poiché i dati per una tabella esterna risiedono fuori dal dispositivo, non sono sotto il controllo di PolyBase e possono essere modificati o rimossi in qualsiasi momento da un processo esterno. Per questo motivo, non si garantisce che i risultati delle query rispetto a una tabella esterna siano deterministici. La stessa query può restituire risultati diversi ogni volta che viene eseguita su una tabella esterna. Analogamente, una query può non riuscire se i dati esterni vengono rimossi o spostati.  
+ Poiché i dati per una tabella esterna risiedono fuori dal dispositivo, non sono sotto il controllo di PolyBase e possono essere modificati o rimossi in qualsiasi momento da un processo esterno. Per questo motivo, non si garantisce che i risultati delle query su una tabella esterna siano deterministici. La stessa query può restituire risultati diversi ogni volta che viene eseguita su una tabella esterna. Analogamente, una query può non riuscire se i dati esterni vengono rimossi o spostati.  
   
  È possibile creare più tabelle esterne che fanno tutte riferimento a origini dati esterne differenti. Tuttavia, se si eseguono contemporaneamente query su diverse origini dati Hadoop, ogni origine Hadoop deve usare la stessa impostazione di configurazione server "hadoop connectivity". Ad esempio, non è possibile eseguire contemporaneamente una query su un cluster Cloudera Hadoop e un cluster Hortonworks Hadoop poiché usano impostazioni di configurazione diverse. Per le impostazioni di configurazione e le combinazioni supportate, vedere [Configurazione della connettività di PolyBase &#40;Transact-SQL&#41;](../../database-engine/configure-windows/polybase-connectivity-configuration-transact-sql.md).  
   
@@ -283,7 +283,7 @@ Sia i file del motivo che i file di dati hanno il queryID associato all'istruzio
 -   CREATE TABLE e DROP TABLE  
   
 -   CREATE STATISTICS e DROP STATISTICS  
-Nota: CREATE e DROP STATISTICS per le tabelle esterne non sono supportate nel database SQL di Azure. 
+Nota: CREATE e DROP STATISTICS su tabelle esterne non sono supportate nel database SQL di Azure. 
   
 -   CREATE VIEW e DROP VIEW  
   
@@ -341,7 +341,7 @@ WITH (
   
 ```  
   
-### <a name="b-create-an-external-table-with-data-in-rcfile-format"></a>B. Creare una tabella esterna con dati in formato RCFILE.  
+### <a name="b-create-an-external-table-with-data-in-rcfile-format"></a>b. Creare una tabella esterna con dati in formato RCFILE.  
  Questo esempio illustra tutti i passaggi necessari per creare una tabella esterna i cui dati sono formattati come RCFILE. Definisce un'origine dati esterna *mydatasource_rc* e un formato di file esterno *myfileformat_rc*. A questi oggetti a livello di database viene fatto riferimento nell'istruzione CREATE EXTERNAL TABLE. Per altre informazioni, vedere [CREATE EXTERNAL DATA SOURCE &#40;Transact-SQL&#41;](../../t-sql/statements/create-external-data-source-transact-sql.md) e [CREATE EXTERNAL FILE FORMAT &#40;Transact-SQL&#41;](../../t-sql/statements/create-external-file-format-transact-sql.md).  
   
 ```  

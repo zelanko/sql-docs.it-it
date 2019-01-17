@@ -5,8 +5,7 @@ ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: mds
 ms.reviewer: ''
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.topic: conceptual
 helpviewer_keywords:
 - entities [Master Data Services], creating
@@ -15,12 +14,12 @@ ms.assetid: d9a6a51e-7b53-4785-a118-3baeb7ca2d48
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 933c5a7f4eeae256ce9fafed6d5be53a1236e559
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 3597ac503684c84b10b9ce8025b8fddbb26f3947
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47702959"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52755083"
 ---
 # <a name="create-an-entity-master-data-services"></a>Creare un'entità (Master Data Services)
 
@@ -55,8 +54,8 @@ ms.locfileid: "47702959"
   
     > [!TIP]  
     >  Usare il nome del modello come parte del nome della tabella di staging, ad esempio *Nomemodello_Nomeentità*. In questo modo risulta più agevole trovare le tabelle nel database. Per altre informazioni sulle tabelle di staging, vedere [Panoramica: Importazione di dati da tabelle &#40;Master Data Services&#41;](../master-data-services/overview-importing-data-from-tables-master-data-services.md).
-    > [!TIP]  
-    >  Se si usano i nomi predefiniti per le tabelle di staging, MDS aggiungerà automaticamente gli identificatori (ad esempio, 1, 2) ai nomi delle tabelle di staging, se esiste un'entità con lo stesso nome in un altro modello.
+    > [!TIP]
+    > Se si usano i nomi predefiniti per le tabelle di staging, MDS aggiungerà automaticamente gli identificatori (ad esempio, 1, 2) ai nomi delle tabelle di staging, se esiste un'entità con lo stesso nome in un altro modello.
   
 7.  Per il campo **Tipo di log delle transazioni** scegliere il tipo di log delle transazioni nell'elenco a discesa.  
   

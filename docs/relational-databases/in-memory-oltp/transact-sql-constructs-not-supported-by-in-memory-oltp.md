@@ -12,12 +12,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: e8023d29ccdf04ff46b995e1f698bb54a905df5d
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 5023d29379ab254e85c38e0b9e0b6ae3c8772133
+ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52503620"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53590765"
 ---
 # <a name="transact-sql-constructs-not-supported-by-in-memory-oltp"></a>Costrutti Transact-SQL non supportati da OLTP in memoria
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -69,7 +69,7 @@ ms.locfileid: "52503620"
 |Operazione|CREATE INDEX|Gli indici delle tabelle ottimizzate per la memoria devono essere specificati inline con l'istruzione **CREATE TABLE** o **ALTER TABLE**.|  
 |Operazione|CREATE FULLTEXT INDEX|Gli indici full-text non sono supportati dalle tabelle ottimizzate per la memoria.|  
 |Operazione|modifica schema|Le tabelle con ottimizzazione per la memoria e le stored procedure compilate in modo nativo non supportano determinate modifiche dello schema:<br/> [!INCLUDE[ssSDSFull_md](../../includes/ssSDSFull-md.md)] e SQL Server a partire da [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)]: sono supportate le operazioni ALTER TABLE, ALTER PROCEDURE e sp_rename. Altre modifiche dello schema, ad esempio l'aggiunta di proprietà estese, non sono supportate.<br/><br/>[!INCLUDE[ssSQL15-md](../../includes/sssql15-md.md)]: sono supportate le operazioni ALTER TABLE e ALTER PROCEDURE. Altre modifiche dello schema, tra cui sp_rename, non sono supportate.<br/><br/>[!INCLUDE[ssSQL14-md](../../includes/sssql14-md.md)]: le modifiche dello schema non sono supportate. Per modificare la definizione di una tabella ottimizzata per la memoria o di una stored procedure compilata in modo nativo, rilasciare prima l'oggetto e quindi ricrearlo con la definizione desiderata.| 
-|Operazione|TRUNCATE TABLE|L'operazione TRUNCATE non è supportata dalle tabelle ottimizzate per la memoria. Per rimuovere tutte le righe da una tabella, eliminare tutte le righe usando **DELETE FROM***tabella* oppure eliminare e ricreare la tabella.|  
+|Operazione|TRUNCATE TABLE|L'operazione TRUNCATE non è supportata dalle tabelle ottimizzate per la memoria. Per rimuovere tutte le righe da una tabella, eliminare tutte le righe usando **DELETE FROM**_table_ oppure eliminare e ricreare la tabella.|  
 |Operazione|ALTER AUTHORIZATION|La modifica del proprietario di una tabella ottimizzata per la memoria o di una stored procedure compilata in modo nativo non è supportata. Eliminare e ricreare la tabella o la stored procedure per modificare la proprietà.|  
 |Operazione|ALTER SCHEMA|Il trasferimento di una tabella o di una stored procedure compilata in modo nativo esistente in un altro schema non è supportato. Rilasciare e ricreare l'oggetto per trasferirlo da uno schema a un altro.|  
 |Operazione|DBCC CHECKTABLE|L'operazione DBCC CHECKTABLE non è supportata con le tabelle ottimizzate per la memoria. Per verificare l'integrità dei file di checkpoint su disco, eseguire un backup del filegroup MEMORY_OPTIMIZED_DATA.|  
@@ -104,11 +104,11 @@ ms.locfileid: "52503620"
 |Funzionalità|Cursori|I cursori non sono supportati nelle stored procedure compilate in modo nativo.<br /><br /> Quando si esegue la procedura dal client, usare RPC anziché l'API cursore. Con ODBC, evitare l'istruzione [!INCLUDE[tsql](../../includes/tsql-md.md)] . **EXECUTE**e specificare direttamente il nome della procedura.<br /><br /> Quando si esegue la procedura da un batch [!INCLUDE[tsql](../../includes/tsql-md.md)] o da un'altra stored procedure, evitare di usare un cursore con la stored procedure compilata in modo nativo.<br /><br /> Quando si crea una stored procedure compilata in modo nativo, usare al posto del cursore la logica basata su set o un ciclo **WHILE** .|  
 |Funzionalità|Valori predefiniti del parametro non costanti|Quando si utilizzano i valori predefiniti con i parametri nelle stored procedure compilate in modo nativo, i valori devono essere costanti. Rimuovere tutti i caratteri jolly dalle dichiarazioni di parametro.|  
 |Funzionalità|EXTERNAL|Le stored procedure CLR non possono essere compilate in modo nativo. Rimuovere la clausola AS EXTERNAL o l'opzione NATIVE_COMPILATION dall'istruzione CREATE PROCEDURE.|  
-|Funzionalità|Stored procedure numerate|Le stored procedure compilate in modo nativo non possono essere numerate. Rimuovere il **;***numero* dall'istruzione **CREATE PROCEDURE**.|  
+|Funzionalità|Stored procedure numerate|Le stored procedure compilate in modo nativo non possono essere numerate. Rimuovere **;**_number_ dall'istruzione **CREATE PROCEDURE** .|  
 |Funzionalità|INSERT di più righe... Istruzioni VALUES|Non è possibile inserire più righe utilizzando la stessa istruzione **INSERT** in una stored procedure compilata in modo nativo. Creare istruzioni **INSERT** per ogni riga.|  
 |Funzionalità|Espressioni di tabella comuni|Le espressioni di tabella comuni (CTE) non sono supportate nelle stored procedure compilate in modo nativo. Riformulare la query.|  
 |Funzionalità|COMPUTE|La clausola **COMPUTE** non è supportata. Rimuoverla dalla query.|  
-|Funzionalità|SELECT INTO|La clausola **INTO** non è supportata con l'istruzione **SELECT** . Riscrivere la query come **INSERT INTO** *tabella* **SELECT**.|  
+|Funzionalità|SELECT INTO|La clausola **INTO** non è supportata con l'istruzione **SELECT** . Riscrivere la query come **INSERT INTO** _tabella_ **SELECT**.|  
 |Funzionalità|elenco delle colonne di inserimento incompleto|In genere, nelle istruzioni INSERT i valori devono essere specificati per tutte le colonne della tabella.<br /><br /> Tuttavia, nelle tabelle con ottimizzazione per la memoria Microsoft supporta i vincoli DEFAULT e le colonne IDENTITY(1,1). Tali colonne possono essere, e nel caso delle colonne IDENTITY devono essere, omesse dall'elenco di colonne INSERT.|  
 |Funzionalità|*Funzione*|Alcune funzioni predefinite non sono supportate nelle stored procedure compilate in modo nativo. Rimuovere la funzione rifiutata dalla stored procedure. Per altre informazioni sulle funzioni predefinite supportate, vedere<br />[Funzionalità supportate per i moduli T-SQL compilati in modo nativo](../../relational-databases/in-memory-oltp/supported-features-for-natively-compiled-t-sql-modules.md)o<br />[Stored procedure compilate in modo nativo](../../relational-databases/in-memory-oltp/natively-compiled-stored-procedures.md).|  
 |Funzionalità|CASE|**Si applica a:** [!INCLUDE[ssSQL14-md](../../includes/sssql14-md.md)] e SQL Server a partire da [!INCLUDE[ssSQL15-md](../../includes/sssql15-md.md)]<br/>Le espressioni **CASE** non sono supportate nelle query all'interno di stored procedure compilate in modo nativo. Creare query per ogni istruzione CASE. Per altre informazioni, vedere [Implementazione di un'istruzione CASE](../../relational-databases/in-memory-oltp/implementing-a-case-expression-in-a-natively-compiled-stored-procedure.md).<br/><br/>[!INCLUDE[ssSDSFull_md](../../includes/ssSDSFull-md.md)] e SQL Server a partire da [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] supportano le espressioni CASE.|  

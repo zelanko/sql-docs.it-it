@@ -3,7 +3,7 @@ title: Note sulla versione e log delle modifiche
 titleSuffix: Azure Data Studio
 description: Note sulla versione di Azure Data Studio
 ms.custom: seodec18
-ms.date: 01/10/2019
+ms.date: 01/17/2019
 ms.prod: sql
 ms.technology: azure-data-studio
 ms.reviewer: alayu; sstein
@@ -11,17 +11,26 @@ ms.topic: conceptual
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 63cf17e26ce554b901a3c9cc6db1fcb18162140d
-ms.sourcegitcommit: dd794633466b1da8ead9889f5e633bdf4b3389cd
+ms.openlocfilehash: 163f5740626b0f4cb927272d46acddc79495e4c1
+ms.sourcegitcommit: 9c99f992abd5f1c174b3d1e978774dffb99ff218
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54143661"
+ms.lasthandoff: 01/17/2019
+ms.locfileid: "54361681"
 ---
 # <a name="azure-data-studio-latest-release-notes-and-changelog"></a>Note sulla versione più recente Studio di dati e log delle modifiche di Azure
 
-**[Scarica la versione di gennaio.](download.md)**
+**[Scaricare e installare la versione più recente.](download.md)**
 
+
+## <a name="january-hotfix-2019-january-hotfix-release"></a>Hotfix di gennaio 2019 (versione dell'Hotfix di gennaio)
+
+Data di rilascio: 16 gennaio 2019  
+Versione: 1.3.9
+
+Versione 1.3.9 corregge alcuni problemi riscontrati in 1.3.8. Per informazioni dettagliate, vedere [la versione dell'Hotfix di gennaio](https://github.com/Microsoft/azuredatastudio/milestone/24?closed=1).
+
+Per informazioni dettagliate, vedere la [Log delle modifiche](https://github.com/Microsoft/azuredatastudio/blob/master/CHANGELOG.md), e [versioni](https://github.com/Microsoft/azuredatastudio/releases).
 
 ## <a name="january-2019-january-release"></a>Gennaio 2019 (versione di gennaio)
 
@@ -37,8 +46,6 @@ Versione: 1.3.8
 - Risultati della query di grandi dimensioni (anteprima) di Streaming.
 - Le estensioni della community: sp_executesql, sql e al nuovo Database.
 - Risolto [dei bug e problemi](https://github.com/Microsoft/azuredatastudio/milestone/19?closed=1).
-
-Per informazioni dettagliate, vedere la [Log delle modifiche](https://github.com/Microsoft/azuredatastudio/blob/master/CHANGELOG.md), e [versioni](https://github.com/Microsoft/azuredatastudio/releases).
 
 ## <a name="november-2018-november-release"></a>Novembre 2018 (versione di novembre)
 

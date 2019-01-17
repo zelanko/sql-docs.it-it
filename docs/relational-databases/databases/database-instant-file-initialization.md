@@ -18,12 +18,12 @@ ms.assetid: 1ad468f5-4f75-480b-aac6-0b01b048bd67
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 418fdf1db1dfb6db58ee80b709b267338d2591d8
-ms.sourcegitcommit: 1a5448747ccb2e13e8f3d9f04012ba5ae04bb0a3
+ms.openlocfilehash: e365ef2eed7dcd3f20dd5a9ad9a94627191c4df9
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51558228"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53204920"
 ---
 # <a name="database-file-initialization"></a>Inizializzazione di file di database
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -39,9 +39,9 @@ L'inizializzazione dei file richiede una quantità di tempo maggiore per l'esecu
 ## <a name="instant-file-initialization-ifi"></a>Inizializzazione immediata dei file  
 In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] i file di dati possono essere inizializzati immediatamente per evitare operazioni di azzeramento. L'inizializzazione istantanea dei file consente l'esecuzione rapida delle operazioni sui file indicate in precedenza. Tramite l'inizializzazione dei file immediata infatti viene recuperato lo spazio su disco in uso evitando il riempimento di tale spazio con zeri. Il contenuto del disco viene invece sovrascritto via via che nuovi dati vengono scritti nei file. Per i file di log non è possibile eseguire l'inizializzazione immediata.  
   
-> [!NOTE]  
+> [!NOTE]
 > L'inizializzazione immediata dei file è disponibile solo in [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[winxppro](../../includes/winxppro-md.md)] o [!INCLUDE[winxpsvr](../../includes/winxpsvr-md.md)] o versioni successive.  
-
+> 
 > [!IMPORTANT]
 > L'inizializzazione immediata dei file è disponibile solo per i file di dati. I file di log verranno sempre azzerati quando vengono creati o aumentano di dimensione.
   

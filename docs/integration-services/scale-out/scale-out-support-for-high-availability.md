@@ -11,12 +11,12 @@ ms.topic: conceptual
 author: haoqian
 ms.author: haoqian
 manager: craigg
-ms.openlocfilehash: f9572368002a0aef7b02d615701baefb0fd6708b
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: 4e3429a52d24b9bb9fbb0de18c1687cfdaa76d30
+ms.sourcegitcommit: edf7372cb674179f03a330de5e674824a8b4118f
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51638147"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53246740"
 ---
 # <a name="scale-out-support-for-high-availability"></a>Supporto della disponibilità elevata in Scale Out
 
@@ -97,7 +97,7 @@ Nelle macchine virtuali di Azure questa procedura di configurazione richiede pas
 
 1.  È necessario configurare un dominio di Azure. Windows Server Failover Clustering richiede che tutti i computer del cluster siano membri dello stesso dominio. Per altre informazioni, vedere [Abilitare Azure Active Directory Domain Services tramite il portale di Azure](https://docs.microsoft.com/azure/active-directory-domain-services/active-directory-ds-getting-started).
 
-2. È necessario configurare un servizio di bilanciamento del carico di Azure. Questa operazione è un requisito per il listener del gruppo di disponibilità. Per altre informazioni, vedere [Tutorial: Load balance internal traffic with Basic Load Balancer to VMs using the Azure portal](https://docs.microsoft.com/azure/load-balancer/tutorial-load-balancer-basic-internal-portal) (Esercitazione: Bilanciare il carico del traffico interno con Load Balancer base per le VM usando il portale di Azure).
+2. È necessario configurare un servizio di bilanciamento del carico di Azure. Questa operazione è un requisito per il listener del gruppo di disponibilità. Per altre informazioni, vedere [Esercitazione: Bilanciare il carico del traffico interno con un servizio di bilanciamento del carico Basic nel portale di Azure](https://docs.microsoft.com/azure/load-balancer/tutorial-load-balancer-basic-internal-portal).
 
 ## <a name="8-update-the-scale-out-master-address-in-ssisdb"></a>8. Aggiornare l'indirizzo di Scale Out Master nel database SSISDB
 
@@ -107,7 +107,7 @@ Nell'istanza di SQL Server primaria eseguire la stored procedure `[catalog].[upd
 
 A questo punto è possibile aggiungere le istanze di Scale Out Worker usando [Integration Services Scale Out Manager](integration-services-ssis-scale-out-manager.md). Immettere `[SQL Server Availability Group Listener DNS name],[Port]` nella pagina di connessione.
 
-# <a name="upgrade-scale-out-in-high-availability-environment"></a>Aggiornare Scale Out in un ambiente a disponibilità elevata
+## <a name="upgrade-scale-out-in-high-availability-environment"></a>Aggiornare Scale Out in un ambiente a disponibilità elevata
 Per aggiornare Scale Out in un ambiente a disponibilità elevata seguire la [procedura di aggiornamento di Always On for SSIS Catalog](../catalog/ssis-catalog.md#Upgrade), aggiornare Scale Out Master e Scale Out Worker in ogni computer, quindi ricreare il ruolo cluster di failover Windows Server nel passaggio 7 precedente con la nuova versione del servizio Scale Out Master.
 
 ## <a name="next-steps"></a>Passaggi successivi

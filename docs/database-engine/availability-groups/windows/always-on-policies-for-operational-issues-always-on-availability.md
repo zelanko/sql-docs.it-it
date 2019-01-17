@@ -1,6 +1,7 @@
 ---
-title: Criteri Always On per problemi operativi con gruppi di disponibilità Always On | Microsoft Docs
-ms.custom: ''
+title: Gestione basata su criteri dei problemi operativi con i gruppi di disponibilità
+description: Il modello di integrità dei gruppi di disponibilità Always On consente di valutare un set di criteri predefiniti della gestione basata su criteri. Questi criteri possono essere usati per visualizzare l'integrità di un gruppo di disponibilità, nonché delle repliche e dei database di SQL Server.
+ms.custom: seodec18
 ms.date: 05/17/2016
 ms.prod: sql
 ms.reviewer: ''
@@ -13,31 +14,18 @@ ms.assetid: afa5289c-641a-4c03-8749-44862384ec5f
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 330a9169fb1177686ffc95a530b5e068ed98e4e5
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.openlocfilehash: 6d9d780473346a446811595d850aafd4da9d5930
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51601680"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53214170"
 ---
-# <a name="always-on-policies-for-operational-issues---always-on-availability"></a>Criteri Always On per problemi operativi con gruppi di disponibilità Always On
+# <a name="policy-based-management-for-operational-issues-with-always-on-availability-groups"></a>Gestione basata su criteri dei problemi operativi con i gruppi di disponibilità Always On
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-  Il modello di integrità [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] consente di valutare un set di criteri di gestione basata su criteri (PBM, Policy Based Management) predefiniti. Questi criteri possono essere utilizzati per la visualizzazione dell'integrità di un gruppo di disponibilità, nonché delle repliche e dei database di disponibilità relativi in [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)].  
+  Il modello di integrità dei gruppi di disponibilità Always On consente di valutare un set di criteri predefiniti della gestione basata su criteri. Questi criteri possono essere utilizzati per la visualizzazione dell'integrità di un gruppo di disponibilità, nonché delle repliche e dei database di disponibilità corrispondenti in SQL Server.  
   
- **Contenuto dell'argomento**  
-  
--   [Termini e definizioni](#TermsAndDefinitions)  
-  
--   [Criteri predefiniti e problemi](#Always OnPBM)  
-  
--   [Dashboard Always On](#Dashboard)  
-  
--   [Estensione del modello di integrità Always On](#ExtendHealthModel)  
-  
--   [Attività correlate](#RelatedTasks)  
-  
--   [Contenuto correlato](#RelatedContent)  
   
 ##  <a name="TermsAndDefinitions"></a> Termini e definizioni  
  Criteri predefiniti Always On  
@@ -78,7 +66,7 @@ ms.locfileid: "51601680"
 |Stato di join del database di disponibilità|[Il database secondario non è unito in join](../../../database-engine/availability-groups/windows/secondary-database-is-not-joined.md).|Avviso|Database di disponibilità|  
 |Stato di sincronizzazione dei dati del database di disponibilità|[Lo stato della sincronizzazione dei dati del database di disponibilità non è integro](../../../database-engine/availability-groups/windows/data-synchronization-state-of-availability-database-is-not-healthy.md).|Avviso|Database di disponibilità|  
   
-> [!IMPORTANT]  
+> [!IMPORTANT]
 >  **\*** Per i criteri Always On, i nomi delle categorie vengono usati come ID. La modifica del nome di una categoria Always On causa l'interruzione della funzionalità di valutazione dell'integrità. Evitare quindi di modificare i nomi di categorie Always On.  
   
 ##  <a name="Dashboard"></a> Dashboard Always On  
@@ -99,7 +87,7 @@ ms.locfileid: "51601680"
 ##  <a name="ExtendHealthModel"></a> Estensione del modello di integrità Always On  
  L'estensione del modello di integrità [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] riguarda semplicemente la creazione di propri criteri definiti dall'utente e l'inserimento in determinate categorie in base al tipo di oggetto di cui si sta eseguendo il monitoraggio.  Dopo aver modificato alcune impostazioni, il dashboard Always On valuterà automaticamente i criteri definiti dall'utente, oltre ai criteri predefiniti Always On.  
   
- I criteri definiti dall'utente possono usare qualsiasi facet della gestione basata su criteri disponibile, inclusi quelli usati dai criteri predefiniti Always On. Vedere [Criteri predefiniti e problemi](#Always OnPBM), precedentemente in questo argomento. Il facet Server fornisce le proprietà seguenti per il monitoraggio dell'integrità [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] : (**IsHadrEnabled** e **HadrManagerStatus**). Fornisce anche le proprietà dei seguenti criteri per il monitoraggio della configurazione del cluster WSFC: **ClusterQuorumType**e **ClusterQuorumState**.  
+ I criteri definiti dall'utente possono usare qualsiasi facet della gestione basata su criteri disponibile, inclusi quelli usati dai criteri predefiniti Always On. Vedere [Criteri predefiniti e problemi](#Always OnPBM), precedentemente in questo argomento. Il facet Server fornisce le proprietà seguenti per il monitoraggio dell'integrità [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]: (**IsHadrEnabled** e **HadrManagerStatus**). Fornisce anche le proprietà dei seguenti criteri per il monitoraggio della configurazione del cluster WSFC: **ClusterQuorumType** e **ClusterQuorumState**.  
   
  Per altre informazioni, vedere [The Always On Health Model Part 2 -- Extending the Health Model](https://blogs.msdn.microsoft.com/sqlalwayson/2012/02/13/the-alwayson-health-model-part-2-extending-the-health-model/) (Seconda parte del modello di integrità Always On riguardante l'estensione del modello di integrità) (blog del team di SQL Server Always On).  
   

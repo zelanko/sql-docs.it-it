@@ -16,19 +16,19 @@ helpviewer_keywords:
 ms.assetid: 429f1dbb-183a-4097-bd1b-693da9fe7a36
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: b099941ce9b51583647cd29d0114cd795bf051ba
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: dfbab3b4af007cfd7694e45176131cb6c931b3fb
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52397195"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53210160"
 ---
 # <a name="reporting-services-roles-tasks-vs-sharepoint-groups-permissions"></a>Ruoli-attività di Reporting Services e autorizzazioni-gruppi di SharePoint
   In questo argomento vengono confrontate le funzionalità di autorizzazione basata su ruoli e attività nella modalità nativa di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] con le funzionalità di sicurezza dei prodotti SharePoint. In questo argomento vengono confrontate la terminologia e le caratteristiche di ruoli, attività, gruppi di SharePoint, livelli di autorizzazione e autorizzazioni.  
   
 ||  
 |-|  
-|[!INCLUDE[applies](../../includes/applies-md.md)]<br /><br /> [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Modalità SharePoint &#124; SharePoint 2010 e SharePoint 2013<br /><br /> [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Modalità nativa|  
+| [!INCLUDE[applies](../../includes/applies-md.md)]<br /><br /> [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Modalità SharePoint &#124; SharePoint 2010 e SharePoint 2013<br /><br /> [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Modalità nativa|  
   
  **Contenuto dell'argomento:**  
   
@@ -39,24 +39,24 @@ ms.locfileid: "52397195"
 -   [Confrontare attività in modalità nativa e autorizzazioni di SharePoint](#bkmk_compare_tasks_permissions)  
   
 ##  <a name="bkmk_compare_tools_terms"></a> Confrontare strumenti di autorizzazione e terminologia  
- **Modalità nativa** : gli oggetti di autorizzazione (ruoli e attività) in modalità nativa di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] vengono creati in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] e configurati per i singoli utenti in Gestione report.  
+ **Modalità nativa:** gli oggetti di autorizzazione (ruoli e attività) in modalità nativa di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] vengono creati in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] e configurati per i singoli utenti in Gestione report.  
   
- **Modalità SharePoint** [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] vengono usate le funzionalità di autorizzazione di SharePoint. I gruppi e le autorizzazioni di SharePoint vengono gestiti dalla seguente pagina **Impostazioni sito** .  
+ **Modalità SharePoint:** [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] la modalità SharePoint usa le funzionalità di autorizzazione di SharePoint. I gruppi e le autorizzazioni di SharePoint vengono gestiti dalla seguente pagina **Impostazioni sito** .  
   
  Nella tabella seguente vengono confrontati gli oggetti e i concetti correlati all'autorizzazione tra la modalità SharePoint e nativa di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .  
   
 |[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Modalità nativa|SharePoint|  
 |---------------------------------------------|----------------|  
-|**Ruolo**: ad esempio "Gestione contenuto".|**Gruppo**: ad esempio il gruppo predefinito "Visualizzatori".|  
-|---|**Gruppo livelli di autorizzazione**: ad esempio "Solo visualizzazione" per il gruppo "Visualizzatori".|  
-|**Attività**: ad esempio "Gestione di report".|**Autorizzazioni**: ad esempio, nel gruppo "Solo visualizzazione" sono presenti autorizzazioni correlate all'elenco come Visualizzazione elementi, Visualizzazione versioni e Visualizzazione pagine applicazione.|  
+|**Ruolo:** ad esempio "Gestione contenuto".|**Gruppo:** ad esempio il gruppo predefinito "Visualizzatori".|  
+|---|**Gruppo livelli di autorizzazione:** ad esempio "Solo visualizzazione" per il gruppo "Visualizzatori".|  
+|**Attività**: ad esempio "Gestione di report".|**Autorizzazioni:** ad esempio il gruppo "Solo visualizzazione" include le autorizzazioni correlate per visualizzazione elementi, visualizzazione versioni e visualizzazione pagine dell'applicazione.|  
   
  Per ulteriori informazioni sulle autorizzazioni di SharePoint, vedere [Livelli di autorizzazione e autorizzazioni](https://office.microsoft.com/windows-sharepoint-services-help/permission-levels-and-permissions-HA010100149.aspx) e [Determinare i livelli di autorizzazione e i gruppi in SharePoint 2013](https://technet.microsoft.com/library/cc262690.aspx).  
   
 ##  <a name="bkmk_compare_roles_groups"></a> Confrontare ruoli in modalità nativa e gruppi di SharePoint  
  Nella tabella seguente vengono confrontate le definizioni di ruolo predefinito in [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] in modalità nativa con i gruppi di SharePoint standard. Se i gruppi di SharePoint non corrispondono al ruolo specifico desiderato, è possibile creare un gruppo personalizzato e assegnarvi livelli di autorizzazione in SharePoint.  
   
- **Nota**: i gruppi di SharePoint predefiniti disponibili dipendono dal modello di sito utilizzato per creare il sito di SharePoint.  
+ **Nota**: i gruppi di SharePoint predefiniti disponibili dipendono dal modello di sito usato per creare il sito di SharePoint.  
   
 |[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Ruolo|Gruppi di SharePoint|  
 |--------------------------------------|-----------------------|  

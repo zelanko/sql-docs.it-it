@@ -22,12 +22,12 @@ ms.assetid: 63373c2f-9a0b-431b-b9d2-6fa35641571a
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 744895bc3e2a60d8eb3edad4554f08bc1aaf6a95
-ms.sourcegitcommit: 04dd0620202287869b23cc2fde998a18d3200c66
+ms.openlocfilehash: 972cd8bf1acc8a7abcf428c3bfd553e878248fde
+ms.sourcegitcommit: 9ea11d738503223b46d2be5db6fed6af6265aecc
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "52641502"
+ms.lasthandoff: 01/07/2019
+ms.locfileid: "54069787"
 ---
 # <a name="alter-database-scoped-configuration-transact-sql"></a>ALTER DATABASE SCOPED CONFIGURATION (Transact-SQL)
 
@@ -168,7 +168,7 @@ Abilita o disabilita la raccolta di statistiche di esecuzione a livello di istru
 
 Le statistiche di esecuzione a livello di istruzione per i moduli T-SQL compilati in modo nativo vengono raccolte se questa opzione è ON o se la raccolta di statistiche è abilitata mediante [sp_xtp_control_query_exec_stats](../../relational-databases/system-stored-procedures/sys-sp-xtp-control-query-exec-stats-transact-sql.md).
 
-Per altre informazioni sul monitoraggio delle prestazioni dei moduli T-SQL compilati in modo nativo, vedere [Monitoraggio delle prestazioni di stored procedure compilate in modo nativo](../../relational-databases/in-memory-oltp/monitoring-performance-of-natively-compiled-stored-procedures.md).
+Per altre informazioni sul monitoraggio delle prestazioni dei moduli [!INCLUDE[tsql](../../includes/tsql-md.md)] compilati in modo nativo, vedere [Monitoraggio delle prestazioni di stored procedure compilate in modo nativo](../../relational-databases/in-memory-oltp/monitoring-performance-of-natively-compiled-stored-procedures.md).
 
 ELEVATE_ONLINE = { OFF | WHEN_SUPPORTED | FAIL_UNSUPPORTED }
 
@@ -210,20 +210,20 @@ GLOBAL_TEMPORARY_TABLE_AUTODROP = { ON | OFF }
 
 Consente di impostare le funzionalità di eliminazione automatica per le [tabelle temporanee globali](create-table-transact-sql.md). Il valore predefinito è ON, il che significa che le tabelle temporanee globali vengono eliminate automaticamente quando non sono usate in nessuna sessione. Se impostato su OFF, le tabelle temporanee globali devono essere eliminate in modo esplicito usando un'istruzione DROP TABLE, altrimenti verranno eliminate automaticamente al riavvio del server.
 
-- Nel server logico del database SQL di Azure è possibile impostare questa opzione nei database utente del server logico.
-- In SQL Server e nell'Istanza gestita di database SQL di Azure questa opzione è impostata in `TEMPDB` e l'impostazione dei singoli database utente non ha effetto.
+- Nel server logico [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] è possibile impostare questa opzione nei singoli database utente del server logico.
+- In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e nell'Istanza gestita di [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] questa opzione è impostata in `TempDB` e l'impostazione dei singoli database utente non ha effetto.
 
 DISABLE_INTERLEAVED_EXECUTION_TVF = { ON | OFF }
 
 **Si applica a**: [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] e [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
 
-Consente di abilitare o disabilitare l'esecuzione interleaved per funzioni con valori di tabella a più istruzioni nell'ambito del database o dell'istruzione mantenendo comunque la compatibilità sul livello 140 o superiore. L'esecuzione interleaved è una funzionalità che fa parte dell'elaborazione di query adattive nei database SQL. Per altre informazioni, vedere [Elaborazione di query adattive](../../relational-databases/performance/adaptive-query-processing.md)
+Consente di abilitare o disabilitare l'esecuzione interleaved per funzioni con valori di tabella a più istruzioni nell'ambito del database o dell'istruzione mantenendo comunque la compatibilità sul livello 140 o superiore. L'esecuzione interleaved è una funzionalità che fa parte dell'elaborazione di query adattive in [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]. Per altre informazioni, vedere [Elaborazione di query adattive](../../relational-databases/performance/adaptive-query-processing.md)
 
 DISABLE_BATCH_MODE_ADAPTIVE_JOINS = { ON | OFF }
 
 **Si applica a**: [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] e [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
 
-Consente di abilitare o disabilitare i join adattivi nell'ambito del database o dell'istruzione mantenendo comunque la compatibilità sul livello 140 o superiore. I join adattivi sono una funzionalità che fa parte dell'[elaborazione di query adattive](../../relational-databases/performance/adaptive-query-processing.md) introdotta in SQL Server 2017.
+Consente di abilitare o disabilitare i join adattivi nell'ambito del database o dell'istruzione mantenendo comunque la compatibilità sul livello 140 o superiore. I join adattivi sono una funzionalità che fa parte dell'[elaborazione di query adattive](../../relational-databases/performance/adaptive-query-processing.md) introdotta in [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)].
 
 ROW_MODE_MEMORY_GRANT_FEEDBACK = { ON | OFF}
 
@@ -233,74 +233,69 @@ Consente di abilitare o disabilitare il feedback delle concessioni di memoria in
 
 ## <a name="Permissions"></a> Permissions
 
-È necessaria l'autorizzazione ALTER ANY DATABASE SCOPE CONFIGURATION nel database. Questa autorizzazione può essere concessa da un utente con autorizzazione CONTROL in un database.
+Richiede `ALTER ANY DATABASE SCOPE CONFIGURATION` per il database. Questa autorizzazione può essere concessa da un utente con autorizzazione CONTROL in un database.
 
 ## <a name="general-remarks"></a>Osservazioni generali
-
 Tutti i database secondari usano la stessa configurazione, nonostante sia possibile configurarli in modo che abbiamo impostazioni di configurazione con ambiti diversi rispetto al database primario. Non è possibile configurare impostazioni diverse per singoli database secondari.
 
 Se viene eseguita questa istruzione, viene cancellata la cache delle procedure nel database corrente, il che significa che è necessario ricompilare tutte le query.
 
 Per le query con nome in 3 parti, vengono prese in considerazione le impostazioni per la connessione al database corrente per la query, a differenza dei moduli SQL (ad esempio procedure, funzioni e trigger) che vengono compilati nel contesto del database corrente e quindi usano le opzioni del database in cui risiedono.
 
-L'evento ALTER_DATABASE_SCOPED_CONFIGURATION viene aggiunto come evento DDL che può essere usato per attivare un trigger DDL ed è un elemento figlio del gruppo di trigger ALTER_DATABASE_EVENTS.
+L'evento `ALTER_DATABASE_SCOPED_CONFIGURATION` viene aggiunto come evento DDL che può essere usato per attivare un trigger DDL ed è elemento figlio del gruppo di trigger `ALTER_DATABASE_EVENTS`.
 
 Le impostazioni di configurazione con ambito database verranno trasferite con il database, il che significa che quando un determinato database viene ripristinato o collegato, le impostazioni di configurazione esistenti rimangono.
 
 ## <a name="limitations-and-restrictions"></a>Limitazioni e restrizioni
 
 ### <a name="maxdop"></a>MAXDOP
-
 Le impostazioni granulari possono sostituire quelle globali e Resource Governor può limitare tutte le altre impostazioni MAXDOP. La logica per l'impostazione MAXDOP è la seguente:
 
-- L'hint per la query sostituisce sia sp_configure sia l'opzione con ambito database. Se il parametro MAXDOP del gruppo di risorse è impostato per il gruppo di carico di lavoro:
+- L'hint per la query sostituisce sia `sp_configure`, sia la configurazione con ambito database. Se il parametro MAXDOP del gruppo di risorse è impostato per il gruppo di carico di lavoro:
 
-  - Se l'hint per la query non è 0, il valore è limitato dall'impostazione nel resource governor.
+  - Se l'hint per la query è impostato su zero (0), viene sostituito dall'impostazione di Resource Governor.
 
-  - Se l'hint per la query non è impostato su 0, viene limitato dall'impostazione di Resource Governor.
+  - Se l'hint per la query non è zero (0), viene limitato dall'impostazione di Resource Governor.
 
-- A meno che non sia uguale a 0, l'impostazione con ambito database sostituisce l'impostazione sp_configure, sempre che non sia presente un hint per la query e che non vi sia un limite di impostazione di Resource Governor.
+- La configurazione con ambito database, a meno che non sia zero, sostituisce l'impostazione `sp_configure`, sempre che non sia presente un hint per la query e non vi sia un limite di impostazione di Resource Governor.
 
-- L'impostazione sp_configure viene sostituita dall'impostazione di Resource Governor.
+- L'impostazione `sp_configure` viene sostituita dall'impostazione di Resource Governor.
 
 ### <a name="queryoptimizerhotfixes"></a>QUERY_OPTIMIZER_HOTFIXES
 
-Quando l'hint QUERYTRACEON viene usato per abilitare gli hotfix di Query Optimizer legacy o di Query Optimizer, sarà presente una condizione OR tra l'hint per la query e l'impostazione con ambito database a indicare che, se una delle due opzioni è abilitata, le opzioni vengono applicate.
+Quando l'hint `QUERYTRACEON` viene usato per abilitare l'istanza predefinita di Query Optimizer di SQL Server 7.0 attraverso le versioni di [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] o gli hotfix di Query Optimizer, sarà presente una condizione OR tra l'hint per la query e l'impostazione di configurazione con ambito database a indicare che, se una delle due opzioni è abilitata, vengono applicate le configurazioni con ambito database.
 
-### <a name="geodr"></a>GeoDR
+### <a name="geo-dr"></a>Geo DR
 
-I database secondari leggibili (gruppi di disponibilità Always On e database con replica geografica del database SQL di Azure), usano il valore del database secondario controllando lo stato del database. Anche se la ricompilazione non avviene in caso di failover e tecnicamente il nuovo database primario contiene le query che usano le impostazioni del database secondario, l'idea è che l'impostazione tra primario e secondario vari solo quando il carico di lavoro è diverso e pertanto le query memorizzate nella cache usino le impostazioni ottimali, mentre le nuove query selezionino le nuove impostazioni adatte a loro.
+I database secondari leggibili (gruppi di disponibilità Always On e database con replica geografica del [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]) usano il valore del database secondario controllando lo stato del database. Anche se la ricompilazione non avviene in caso di failover e tecnicamente il nuovo database primario contiene le query che usano le impostazioni del database secondario, l'idea è che l'impostazione tra primario e secondario vari solo quando il carico di lavoro è diverso e pertanto le query memorizzate nella cache usino le impostazioni ottimali, mentre le nuove query selezionino le nuove impostazioni adatte a loro.
 
 ### <a name="dacfx"></a>DacFx
 
-ALTER DATABASE SCOPED CONFIGURATION è una nuova funzionalità del database SQL di Azure e di SQL Server a partire da SQL Server 2016, che influisce sullo schema del database. Le esportazioni dello schema (con o senza dati) non possono essere importate in una versione precedente di SQL Server, ad esempio [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] o [!INCLUDE[ssSQLv14](../../includes/sssqlv14-md.md)]. Ad esempio, un'esportazione in [DACPAC](https://msdn.microsoft.com/library/ee210546.aspx#Anchor_3) o [BACPAC](https://msdn.microsoft.com/library/ee210546.aspx#Anchor_4) da un database di [!INCLUDE[ssSDS](../../includes/sssds-md.md)] o [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] in cui è stata usata questa nuova funzionalità non può essere importata in un server legacy.
+Poiché `ALTER DATABASE SCOPED CONFIGURATION` è una nuova funzionalità di [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] e [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (a partire da [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]) che influisce sullo schema del database, le esportazioni dello schema (con o senza dati) non possono essere importate in una versione precedente di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], ad esempio [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] o [!INCLUDE[ssSQLv14](../../includes/sssqlv14-md.md)]. Ad esempio, un'esportazione in [DACPAC](https://msdn.microsoft.com/library/ee210546.aspx#Anchor_3) o [BACPAC](https://msdn.microsoft.com/library/ee210546.aspx#Anchor_4) da un database di [!INCLUDE[ssSDS](../../includes/sssds-md.md)] o [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] in cui è stata usata questa nuova funzionalità non può essere importata in un server legacy.
 
 ### <a name="elevateonline"></a>ELEVATE_ONLINE
 
-Questa opzione si applica solo alle istruzioni DDL che supportano la sintassi WITH(ONLINE=. Gli indici XML non sono interessati.
+Questa opzione si applica solo alle istruzioni DDL che supportano la sintassi `WITH (ONLINE = <syntax>)`. Gli indici XML non sono interessati.
 
 ### <a name="elevateresumable"></a>ELEVATE_RESUMABLE
 
-Questa opzione si applica solo alle istruzioni DDL che supportano la sintassi WITH(RESUMABLE=. Gli indici XML non sono interessati.
+Questa opzione si applica solo alle istruzioni DDL che supportano la sintassi `WITH (RESUMABLE = <syntax>)`. Gli indici XML non sono interessati.
 
 ## <a name="metadata"></a>Metadati
 
 La vista di sistema [database_scoped_configurations &#40;Transact-SQL&#41; ](../../relational-databases/system-catalog-views/sys-database-scoped-configurations-transact-sql.md) contiene informazioni sulle configurazioni con ambito database. Le opzioni di configurazione con ambito database vengono visualizzate solo in sys.database_scoped_configurations in quanto vengono sostituite dalle impostazioni predefinite a livello di server. La vista di sistema [sys.configurations &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-configurations-transact-sql.md) contiene solo impostazioni a livello di server.
 
 ## <a name="examples"></a>Esempi
-
 In questi esempi viene illustrato l'uso di ALTER DATABASE SCOPED CONFIGURATION
 
 ### <a name="a-grant-permission"></a>A. Concedere un'autorizzazione
-
 In questo esempio viene concessa all'utente [Joe] l'autorizzazione necessaria per eseguire ALTER DATABASE SCOPED CONFIGURATION.
 
 ```sql
 GRANT ALTER ANY DATABASE SCOPED CONFIGURATION to [Joe] ;
 ```
 
-### <a name="b-set-maxdop"></a>B. Impostare MAXDOP
-
+### <a name="b-set-maxdop"></a>b. Impostare MAXDOP
 In questo esempio viene impostato il parametro MAXDOP = 1 per un database primario e MAXDOP = 4 per un database secondario in uno scenario di replica geografica.
 
 ```sql
@@ -315,7 +310,6 @@ ALTER DATABASE SCOPED CONFIGURATION FOR SECONDARY SET MAXDOP=PRIMARY ;
 ```
 
 ### <a name="c-set-legacycardinalityestimation"></a>C. Impostare LEGACY_CARDINALITY_ESTIMATION
-
 In questo esempio il parametro LEGACY_CARDINALITY_ESTIMATION viene impostato su ON per un database secondario in uno scenario di replica geografica.
 
 ```sql
@@ -329,7 +323,6 @@ ALTER DATABASE SCOPED CONFIGURATION FOR SECONDARY SET LEGACY_CARDINALITY_ESTIMAT
 ```
 
 ### <a name="d-set-parametersniffing"></a>D. Impostare PARAMETER_SNIFFING
-
 In questo esempio il parametro PARAMETER_SNIFFING viene impostato su OFF per un database primario in uno scenario di replica geografica.
 
 ```sql
@@ -349,7 +342,6 @@ ALTER DATABASE SCOPED CONFIGURATION FOR SECONDARY SET PARAMETER_SNIFFING=PRIMARY
 ```
 
 ### <a name="e-set-queryoptimizerhotfixes"></a>E. Impostare QUERY_OPTIMIZER_HOTFIXES
-
 Impostare il parametro QUERY_OPTIMIZER_HOTFIXES su ON per un database primario in uno scenario di replica geografica.
 
 ```sql
@@ -357,7 +349,6 @@ ALTER DATABASE SCOPED CONFIGURATION SET QUERY_OPTIMIZER_HOTFIXES=ON ;
 ```
 
 ### <a name="f-clear-procedure-cache"></a>F. Cancellare la cache delle procedure
-
 In questo esempio viene cancellata la cache delle procedure. È possibile solo per un database primario.
 
 ```sql
@@ -365,8 +356,7 @@ ALTER DATABASE SCOPED CONFIGURATION CLEAR PROCEDURE_CACHE ;
 ```
 
 ### <a name="g-set-identitycache"></a>G. Impostare IDENTITY_CACHE
-
-**Si applica a**: [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] e [!INCLUDE[ssSDS](../../includes/sssds-md.md)] (la funzionalità è disponibile nell'anteprima pubblica)
+**Si applica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (a partire da [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]) e [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] (la funzionalità è disponibile nell'anteprima pubblica)
 
 In questo esempio viene disabilitata la cache Identity.
 
@@ -375,8 +365,7 @@ ALTER DATABASE SCOPED CONFIGURATION SET IDENTITY_CACHE=OFF ;
 ```
 
 ### <a name="h-set-optimizeforadhocworkloads"></a>H. Impostare OPTIMIZE_FOR_AD_HOC_WORKLOADS
-
-**Si applica a**: [!INCLUDE[ssSDS](../../includes/sssds-md.md)]
+**Si applica a**: [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 
 
 In questo esempio viene abilitato uno stub del piano compilato da memorizzare nella cache quando un batch viene compilato per la prima volta.
 
@@ -385,7 +374,6 @@ ALTER DATABASE SCOPED CONFIGURATION SET OPTIMIZE_FOR_AD_HOC_WORKLOADS = ON;
 ```
 
 ### <a name="i-set-elevateonline"></a>I. Impostare ELEVATE_ONLINE
-
 **Si applica a**: [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)] e come funzionalità in anteprima pubblica
 
 In questo esempio viene impostato il parametro ELEVATE_ONLINE su FAIL_UNSUPPORTED.
@@ -395,8 +383,7 @@ ALTER DATABASE SCOPED CONFIGURATION SET ELEVATE_ONLINE=FAIL_UNSUPPORTED ;
 ```
 
 ### <a name="j-set-elevateresumable"></a>J. Impostare ELEVATE_RESUMABLE
-
-**Si applica a**: [!INCLUDE[ssSDS](../../includes/sssds-md.md)] e [!INCLUDE[ssNoVersion](../../includes/sssqlv15-md.md)] come funzionalità in anteprima pubblica
+**Si applica a**: [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] e [!INCLUDE[ssNoVersion](../../includes/sssqlv15-md.md)] come funzionalità in anteprima pubblica
 
 In questo esempio viene impostato il parametro ELEVATE_RESUMABLE su WHEN_SUPPORTED.
 

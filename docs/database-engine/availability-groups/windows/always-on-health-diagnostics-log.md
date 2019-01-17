@@ -1,6 +1,7 @@
 ---
-title: Log di diagnostica dell'integrità dei gruppi di disponibilità Always On (SQL Server) | Microsoft Docs
-ms.custom: ag-guide
+title: Log di diagnostica dell'integrità della DLL risorse SQL Server per i gruppi di disponibilità
+description: Viene descritto come la DLL risorse SQL Server consenta di monitorare l'integrità del gruppo di disponibilità Always On.
+ms.custom: ag-guide, seodec18
 ms.date: 06/13/2017
 ms.prod: sql
 ms.reviewer: ''
@@ -10,14 +11,14 @@ ms.assetid: c1862d8a-5f82-4647-a280-3e588b82a6dc
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: c9a41540e9617f9eb9543677c9982b8bbb5985c3
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: a1703e24458e21bf267c4b33ce458e7fedbead1d
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52405008"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53207760"
 ---
-# <a name="always-on-availability-groups-health-diagnostics-log"></a>Log di diagnostica dell'integrità dei gruppi di disponibilità Always On
+# <a name="sql-server-resource-dll-health-diagnostic-logs-for-availability-groups"></a>Log di diagnostica dell'integrità della DLL risorse SQL Server per i gruppi di disponibilità
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   Per monitorare l'integrità della replica di disponibilità primaria, la DLL risorse SQL Server eseguita dal cluster WSFC (Windows Server Failover Clustering) utilizza una stored procedure nell'istanza di SQL Server denominata [sp_server_diagnostics](~/relational-databases/system-stored-procedures/sp-server-diagnostics-transact-sql.md).  
   

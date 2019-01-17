@@ -21,12 +21,12 @@ ms.assetid: 19ac1693-3cfa-400d-bf83-20a9cb46599a
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 4516965f66256e21e5e68310f7668770e17cabb9
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 9a2a6dfd98cef225e8ca612d3cce758087663f75
+ms.sourcegitcommit: baca29731a1be4f8fa47567888278394966e2af7
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47644849"
+ms.lasthandoff: 01/04/2019
+ms.locfileid: "54046551"
 ---
 # <a name="datediffbig-transact-sql"></a>DATEDIFF_BIG (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -89,7 +89,7 @@ Vedere *startdate*.
 Restituisce il numero (valore bigint con segno) dei limiti di datepart specificati sovrapposti tra i valori startdate ed enddate indicati.
 -   Ogni *datepart* specifico e le rispettive abbreviazioni di tali *datepart* restituiscono lo stesso valore.  
   
-Per un valore restituito esterno all'intervallo per **bigint** (da -9.223.372.036.854.775.808 a +9.223.372.036.854.775.807), `DATEDIFF_BIG` restituisce un errore. Per **millisecond**, la differenza massima tra *enddate* e *startdate* è 24 giorni, 20 ore, 31 minuti e 23,647 secondi. Per **second**, la differenza massima è 68 anni.
+Per un valore restituito esterno all'intervallo per **bigint** (da -9.223.372.036.854.775.808 a +9.223.372.036.854.775.807), `DATEDIFF_BIG` restituisce un errore. A differenza di `DATEDIFF` che restituisce un **int** e può quindi determinare un overflow con una precisione di **minute** o superiore, `DATEDIFF_BIG` può determinare un overflow solo se si usa la precisione **nanosecond** dove la differenza tra *enddate* e *startdate* è superiore a 292 anni, 3 mesi, 10 giorni, 23 ore, 47 minuti e 16.8547758 secondi.
   
 Se sia a *startdate* che a *enddate* è stato assegnato solo un valore orario e *datepart* non è un *datepart* orario, `DATEDIFF_BIG` restituisce 0.
   
@@ -97,12 +97,12 @@ Per calcolare il valore restituito, `DATEDIFF_BIG` non usa un componente differe
   
 Per un valore **smalldatetime** usato per *startdate* o *enddate*, nel valore restituito `DATEDIFF_BIG` imposta sempre i secondi e i millisecondi su 0, perché [smalldatetime](../../t-sql/data-types/smalldatetime-transact-sql.md) garantisce la precisione solo a livello di minuti.
   
-Se a una variabile di tipo data viene assegnato solo il valore dell'ora, `DATEDIFF_BIG` imposta il valore della parte mancante della data sul valore predefinito: 1900-01-01. Se a una variabile di tipo ora o data viene assegnato solo il valore della data, `DATEDIFF_BIG` imposta il valore della parte mancante dell'ora sul valore predefinito: 00:00:00. Se *startdate* ed *enddate* hanno rispettivamente solo la parte relativa all'ora o solo la parte relativa alla data, `DATEDIFF_BIG` imposta le parti mancanti sui rispettivi valori predefiniti.
+Se a una variabile di tipo data viene assegnato solo il valore dell'ora, `DATEDIFF_BIG` imposta il valore della parte mancante della data sul valore predefinito: `1900-01-01`. Se a una variabile di tipo ora o data viene assegnato solo il valore della data, `DATEDIFF_BIG` imposta il valore della parte mancante dell'ora sul valore predefinito: `00:00:00`. Se *startdate* ed *enddate* hanno rispettivamente solo la parte relativa all'ora o solo la parte relativa alla data, `DATEDIFF_BIG` imposta le parti mancanti sui rispettivi valori predefiniti.
   
 Se i valori *startdate* ed *enddate* sono di tipi data diversi e uno di questi comprende un numero maggiore di parti di ora o offre una precisione in secondi frazionari maggiore, `DATEDIFF_BIG` imposta le parti mancanti dell'altro valore su 0.
   
 ## <a name="datepart-boundaries"></a>Limiti di datepart
-Le istruzioni seguenti hanno gli stessi valori *startdate* ed *enddate*. Queste date sono adiacenti e differiscono di 0,0000001 secondi. La differenza tra *startdate* e *enddate* in ogni istruzione oltrepassa un limite di calendario o di ora del rispettivo valore *datepart*. Ciascuna istruzione restituisce 1. Se *startdate* ed *enddate* hanno valori di anno diversi ma gli stessi valori di settimana di calendario, `DATEDIFF_BIG` restituisce 0 per il parametro di *datepart*  **week**.
+Le istruzioni seguenti hanno gli stessi valori *startdate* ed *enddate*. Queste date sono adiacenti e differiscono di un microsecondo (0,0000001 secondi). La differenza tra *startdate* e *enddate* in ogni istruzione oltrepassa un limite di calendario o di ora del rispettivo valore *datepart*. Ciascuna istruzione restituisce 1. Se *startdate* ed *enddate* hanno valori di anno diversi ma gli stessi valori di settimana di calendario, `DATEDIFF_BIG` restituisce 0 per il parametro di *datepart*  **week**.
 
 ```sql
 SELECT DATEDIFF_BIG(year,        '2005-12-31 23:59:59.9999999', '2006-01-01 00:00:00.0000000');
@@ -118,11 +118,13 @@ SELECT DATEDIFF_BIG(millisecond, '2005-12-31 23:59:59.9999999', '2006-01-01 00:0
 ```
   
 ## <a name="remarks"></a>Remarks  
-Usare `DATEDIFF_BIG` nelle clausole SELECT <list>, WHERE, HAVING, GROUP BY e ORDER BY.
+Usare `DATEDIFF_BIG` nelle clausole `SELECT <list>`, `WHERE`, `HAVING`, `GROUP BY` e `ORDER BY`.
   
 `DATEDIFF_BIG` consente di eseguire in modo implicito il cast di valori letterali stringa come tipo di dati **datetime2**. `DATEDIFF_BIG`, pertanto, non supporta il formato AGM se la data viene passata come stringa. Per usare il formato AGM è necessario eseguire il cast della stringa in modo esplicito in un tipo **datetime** o **smalldatetime**.
   
-SET DATEFIRST non influisce su `DATEDIFF_BIG`. `DATEDIFF_BIG` usa sempre la domenica come primo giorno della settimana, per garantire che la funzione operi in modo deterministico.
+La specifica di `SET DATEFIRST` non ha alcun effetto su `DATEDIFF_BIG`. `DATEDIFF_BIG` usa sempre la domenica come primo giorno della settimana, per garantire che la funzione operi in modo deterministico.
+
+`DATEDIFF_BIG` può determinare un overflow con una precisione di **nanosecond** se la differenza tra *enddate* e *startdate* restituisce un valore non compreso nell'intervallo per **bigint**.
   
 ## <a name="examples"></a>Esempi 
   
@@ -140,6 +142,66 @@ SELECT DATEDIFF_BIG(day, startDate, endDate) AS 'Duration'
     FROM dbo.Duration;  
 -- Returns: 1  
 ```  
+
+### <a name="finding-difference-between-startdate-and-enddate-as-date-parts-strings"></a>Ricerca della differenza tra startdate e enddate come stringhe di parti di data
+
+```sql
+DECLARE @date1 DATETIME2, @date2 DATETIME2, @result VARCHAR(100)
+DECLARE @years BIGINT, @months BIGINT, @days BIGINT, @hours BIGINT, @minutes BIGINT, @seconds BIGINT, @milliseconds BIGINT
+
+SET @date1 = '0001-01-01 00:00:00.00000000'
+SET @date2 = '2018-12-12 07:08:01.12345678'
+
+SELECT @years = DATEDIFF(yy, @date1, @date2)
+IF DATEADD(yy, -@years, @date2) < @date1 
+SELECT @years = @years-1
+SET @date2 = DATEADD(yy, -@years, @date2)
+
+SELECT @months = DATEDIFF(mm, @date1, @date2)
+IF DATEADD(mm, -@months, @date2) < @date1 
+SELECT @months=@months-1
+SET @date2= DATEADD(mm, -@months, @date2)
+
+SELECT @days=DATEDIFF(dd, @date1, @date2)
+IF DATEADD(dd, -@days, @date2) < @date1 
+SELECT @days=@days-1
+SET @date2= DATEADD(dd, -@days, @date2)
+
+SELECT @hours=DATEDIFF(hh, @date1, @date2)
+IF DATEADD(hh, -@hours, @date2) < @date1 
+SELECT @hours=@hours-1
+SET @date2= DATEADD(hh, -@hours, @date2)
+
+SELECT @minutes=DATEDIFF(mi, @date1, @date2)
+IF DATEADD(mi, -@minutes, @date2) < @date1 
+SELECT @minutes=@minutes-1
+SET @date2= DATEADD(mi, -@minutes, @date2)
+
+SELECT @seconds=DATEDIFF(s, @date1, @date2)
+IF DATEADD(s, -@seconds, @date2) < @date1 
+SELECT @seconds=@seconds-1
+SET @date2= DATEADD(s, -@seconds, @date2)
+
+SELECT @milliseconds=DATEDIFF(ms, @date1, @date2)
+
+SELECT @result= ISNULL(CAST(NULLIF(@years,0) AS VARCHAR(10)) + ' years,','')
+     + ISNULL(' ' + CAST(NULLIF(@months,0) AS VARCHAR(10)) + ' months,','')    
+     + ISNULL(' ' + CAST(NULLIF(@days,0) AS VARCHAR(10)) + ' days,','')
+     + ISNULL(' ' + CAST(NULLIF(@hours,0) AS VARCHAR(10)) + ' hours,','')
+     + ISNULL(' ' + CAST(@minutes AS VARCHAR(10)) + ' minutes and','')
+     + ISNULL(' ' + CAST(@seconds AS VARCHAR(10)) 
+          + CASE WHEN @milliseconds > 0 THEN '.' + CAST(@milliseconds AS VARCHAR(10)) 
+               ELSE '' END 
+          + ' seconds','')
+
+SELECT @result
+```
+
+[!INCLUDE[ssResult](../../includes/ssresult-md.md)] 
+
+```
+2017 years, 11 months, 11 days, 7 hours, 8 minutes and 1.123 seconds
+```   
 
 Per esempi più strettamente correlati, vedere [DATEDIFF &#40;Transact-SQL&#41;](../../t-sql/functions/datediff-transact-sql.md).
   

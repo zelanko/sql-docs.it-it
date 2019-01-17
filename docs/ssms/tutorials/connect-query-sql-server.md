@@ -11,12 +11,12 @@ ms.reviewer: sstein
 manager: craigg
 ms.prod: sql
 ms.technology: ssms
-ms.openlocfilehash: baa4f703e4c76722dcecb729299e6ff416784f75
-ms.sourcegitcommit: b58d514879f182fac74d9819918188f1688889f3
+ms.openlocfilehash: 274e91c482ada16847cb2b2e704ac9d953567d7d
+ms.sourcegitcommit: 40c3b86793d91531a919f598dd312f7e572171ec
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "50970383"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53328591"
 ---
 # <a name="tutorial-connect-to-and-query-a-sql-server-instance-by-using-sql-server-management-studio"></a>Esercitazione: Connettersi a un'istanza di SQL Server ed eseguire query con SQL Server Management Studio
 
@@ -40,8 +40,8 @@ Per completare questa esercitazione è necessario avere SQL Server Management St
 - Installare [SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms).
 
 Se non si dispone dell'accesso a un'istanza di SQL Server, selezionare la piattaforma in uso tra i collegamenti seguenti. Se si sceglie Autenticazione SQL, usare le credenziali di accesso di SQL Server.
-- **Windows**: [scaricare SQL Server 2017 Developer Edition](https://www.microsoft.com/sql-server/sql-server-downloads).
-- **macOS**: [scaricare SQL Server 2017 in Docker](https://docs.microsoft.com/sql/linux/quickstart-install-connect-docker).
+- **Windows**: [Scaricare SQL Server 2017 Developer](https://www.microsoft.com/sql-server/sql-server-downloads).
+- **macOS**: [Scaricare SQL Server 2017 in Docker](https://docs.microsoft.com/sql/linux/quickstart-install-connect-docker).
 
 
 ## <a name="connect-to-a-sql-server-instance"></a>Connessione a un'istanza di SQL Server
@@ -66,12 +66,12 @@ Se non si dispone dell'accesso a un'istanza di SQL Server, selezionare la piatta
 ### <a name="examples-of-successful-connections"></a>Esempi di connessioni riuscite
 Per verificare se la connessione a SQL Server è stata eseguita correttamente, espandere ed esplorare gli oggetti in **Esplora oggetti**. Questi oggetti sono diversi a seconda del tipo di server al quale si è connessi. 
 
-- Connessione a un server SQL Server locale, in questo caso NODE5\SQL2016ST: ![Connecting to an on-prem server](media/connect-query-sql-server/connect-on-prem.png) (Connessione a un server SQL Server locale)
+- Connessione a un server SQL Server locale, in questo caso NODE5\SQL2016ST: ![Connessione a un server locale](media/connect-query-sql-server/connect-on-prem.png)
 
-- Connessione a un database SQL di Azure, in questo caso msftestserver.database.windows.net: ![Connecting to a SQL Azure DB](media/connect-query-sql-server/connect-sql-azure.png) (Connessione a un database SQL di Azure)
+- Connessione a un database SQL di Azure, in questo caso msftestserver.database.windows.net: ![Connessione a un database SQL di Azure](media/connect-query-sql-server/connect-sql-azure.png)
 
   >[!NOTE]
-  > In questa esercitazione è già stata usata l'*autenticazione di Windows* per connettersi al server SQL Server locale, ma questo metodo non è supportato per il database SQL di Azure. Pertanto la figura seguente illustra l'uso dell'autenticazione SQL per la connessione al database SQL di Azure. Per altre informazioni, vedere [SQL on-prem authentication](../../relational-databases/security/choose-an-authentication-mode.md) (Autenticazione SQL locale) e [SQL Azure authentication](https://docs.microsoft.com/azure/sql-database/sql-database-security-overview#control-access) (Autenticazione SQL Azure). 
+  > In questa esercitazione è stata usata l'*autenticazione di Windows* per connettersi al server SQL Server locale, ma questo metodo non è supportato per il database SQL di Azure. Pertanto la figura seguente illustra l'uso dell'autenticazione SQL per la connessione al database SQL di Azure. Per altre informazioni, vedere [Autenticazione per SQL locale](../../relational-databases/security/choose-an-authentication-mode.md) e [Autenticazione per SQL di Azure](https://docs.microsoft.com/azure/sql-database/sql-database-security-overview#control-access). 
 
 ## <a name="create-a-database"></a>Creazione di un database
 Creare un database denominato TutorialDB seguendo questa procedura: 

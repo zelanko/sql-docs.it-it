@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 84e45a2f-3ca6-4c16-8259-c15ff49d72ad
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 967f4188168d1f322ba64c5ef9dfca5c958f3b45
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: c8904d9cd03f8d9e7b7010f34f8bfde7e23f0475
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52525350"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53213660"
 ---
 # <a name="rsconfig-utility-ssrs"></a>utilità rsconfig (SSRS)
   L'utilità **rsconfig** consente di crittografare e archiviare i valori relativi alle connessioni e agli account nel file RSReportServer.config. I valori crittografati includono le informazioni sulla connessione al database del server di report e i valori relativi agli account utilizzati per l'elaborazione automatica dei report.  
@@ -92,7 +92,7 @@ rsconfig -c -m <REMOTECOMPUTERNAME> -s <SQLSERVERNAME> -d reportserver -a SQL -u
 ```  
   
 #### <a name="specifying-a-built-in-account"></a>Impostazione di un account predefinito  
- Nell'esempio seguente viene illustrata la configurazione di un server di report in modo che utilizzi un account predefinito durante la connessione al relativo database locale. Si noti che **-u** non viene usato. Tra i valori di account predefiniti supportati sono inclusi NT AUTHORITY\SYSTEM per il sistema locale e NT AUTHORITY\NETWORKSERVICE per il servizio di rete (solo[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[winxpsvr](../../includes/winxpsvr-md.md)] ).  
+ Nell'esempio seguente viene illustrata la configurazione di un server di report in modo che utilizzi un account predefinito durante la connessione al relativo database locale. Si noti che **-u** non viene usato. I valori di account predefiniti supportati includono NT AUTHORITY\SYSTEM per il sistema locale e NT AUTHORITY\NETWORKSERVICE per il servizio di rete (solo [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[winxpsvr](../../includes/winxpsvr-md.md)]).  
   
 ```  
 rsconfig -c -s <SQLSERVERNAME> -d reportserver -a Windows "NT AUTHORITY\SYSTEM"  

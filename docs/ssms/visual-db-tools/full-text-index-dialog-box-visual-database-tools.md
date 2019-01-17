@@ -13,21 +13,21 @@ ms.assetid: ef45b585-2567-4abe-b421-9fd0994e0146
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 7b98cab5bffef09bdbbfd353f9f72bbb6d093c9c
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: f9d44df32b29f2c2efaad86386690020fe19818f
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52508999"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53213510"
 ---
 # <a name="full-text-index-dialog-box-visual-database-tools"></a>Finestra di dialogo Indice full-text (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 Questa finestra di dialogo consente di creare un indice full-text per eseguire ricerche full-text nelle colonne basate su testo delle tabelle di database. Poiché un indice di questo tipo si basa su un indice normale, è necessario innanzitutto creare tale indice. L'indice normale deve essere creato utilizzando una sola colonna non Null, preferibilmente con valori non particolarmente elevati.  
   
-> [!NOTE]  
+> [!NOTE]
 > Per creare un indice full-text, è innanzitutto necessario creare un catalogo full-text per il database utilizzando uno strumento esterno quale [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o Enterprise Manager.  
-  
-> [!NOTE]  
+> 
+> [!NOTE]
 > La funzionalità degli indici full-text non è disponibile in tutte le edizioni di [!INCLUDE[msCoName](../../includes/msconame_md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Per un elenco delle funzionalità supportate dalle edizioni di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], vedere [Funzionalità supportate dalle edizioni di SQL Server 2012](https://msdn.microsoft.com/5da61ff5-12b9-48e6-b3c8-0dacca1751c4).  
   
 ## <a name="options"></a>Opzioni  
@@ -65,7 +65,7 @@ Se viene espansa, visualizza le proprietà che determinano il funzionamento dell
 Indica se è possibile eseguire una ricerca full-text utilizzando l'indice full-text.  
   
 **Impostazione ricerca delle modifiche**  
-Visualizza lo stato della ricerca delle modifiche per l'indice: Manuale, Automatico o Disattivato.  
+Visualizza lo stato del rilevamento modifiche per l'indice: Manuale, Automatico o Disattivato.  
   
 **Ricerca completata**  
 Indica se la ricerca più recente è stata completata. Se la proprietà è impostata su No, è in corso una ricerca.  
@@ -89,7 +89,7 @@ Visualizza la data e l'ora in cui è iniziata la ricerca corrente o più recente
 Visualizza la data e l'ora di inizio della prossima ricerca.  
   
 **Tipo di ricerca corrente o più recente**  
-Visualizza il tipo della ricerca corrente o più recente: Completa, Incrementale, Aggiornamento o Propagazione automatica.  
+Visualizza il tipo della ricerca corrente o più recente: Completa, Incrementale, Aggiorna o Propagazione automatica.  
   
 **Nome indice univoco**  
 Visualizza un elenco di tutti i nomi delle colonne del database con indici di colonne singole univoci. Queste colonne possono essere utilizzate per creare un indice full-text.  

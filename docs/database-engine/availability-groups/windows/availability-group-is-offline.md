@@ -1,6 +1,7 @@
 ---
-title: Il gruppo di disponibilità è offline | Microsoft Docs
-ms.custom: ''
+title: Il gruppo di disponibilità è offline
+description: Informazioni su come identificare i possibili motivi per cui un gruppo di disponibilità Always On è offline.
+ms.custom: seodec18
 ms.date: 05/17/2016
 ms.prod: sql
 ms.reviewer: ''
@@ -14,14 +15,14 @@ ms.assetid: 093c5208-bf7a-49f4-a546-72b48197cadf
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 343ae5ff2b5b65b26569f99ff22d51ed1860e69d
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.openlocfilehash: 78517d525165c7186c1ecccb2c1fc3561a7f3f45
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51600171"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53203740"
 ---
-# <a name="availability-group-is-offline"></a>Il gruppo di disponibilità è offline
+# <a name="always-on-availability-group-is-offline"></a>Un gruppo di disponibilità Always On è offline
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
     
 ## <a name="introduction"></a>Introduzione  

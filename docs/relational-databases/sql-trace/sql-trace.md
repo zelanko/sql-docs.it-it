@@ -11,12 +11,12 @@ ms.assetid: 83c6d1d9-19ce-43fe-be9a-45aaa31f20cb
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: de20ad37cf5393f2498f00b7d5b1e78bd5285b34
-ms.sourcegitcommit: 60739bcb48ccce17bca4e11a85df443e93ca23e3
+ms.openlocfilehash: 6c9d9f975bcc18341c3f0465e92523815083e2de
+ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52439803"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53591365"
 ---
 # <a name="sql-trace"></a>Traccia SQL
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -25,7 +25,7 @@ In Traccia SQL vengono raccolti unicamente gli eventi che rappresentano istanze 
 > [!IMPORTANT]
 > Traccia SQL e [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] sono deprecati. Anche lo spazio dei nomi *Microsoft.SqlServer.Management.Trace* che contiene gli oggetti Trace e Replay di Microsoft SQL Server è deprecato. 
 > [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] 
-> In alternativa, usare Eventi estesi. Per altre informazioni sugli [eventi estesi](../../relational-databases/extended-events/extended-events.md), vedere [Avvio rapido: Eventi estesi in SQL Server](../../relational-databases/extended-events/quick-start-extended-events-in-sql-server.md) e [Profiler XEvent di SSMS](../../relational-databases/extended-events/use-the-ssms-xe-profiler.md).
+> In alternativa, usare Eventi estesi. Per altre informazioni sugli [eventi estesi](../../relational-databases/extended-events/extended-events.md), vedere [Avvio rapido: Eventi estesi in SQL Server](../../relational-databases/extended-events/quick-start-extended-events-in-sql-server.md) e [Profiler XEvent di SQL Server Management Studio](../../relational-databases/extended-events/use-the-ssms-xe-profiler.md).
 
 ## <a name="benefits-of-sql-trace"></a>Vantaggi di Traccia SQL  
 In Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sono disponibili stored procedure di sistema [!INCLUDE[tsql](../../includes/tsql-md.md)] per la creazione di tracce per un'istanza di [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]. È possibile utilizzare tali stored procedure di sistema all'interno di applicazioni personalizzate per creare tracce in modo manuale anziché tramite [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]. Ciò consente di creare applicazioni personalizzate in grado di soddisfare esigenze aziendali specifiche.  
@@ -76,26 +76,26 @@ Traccia SQL utilizza le colonne di dati nell'output di traccia per descrivere gl
   
 |Colonna di dati|Numero colonna|Descrizione|  
 |-----------------|-------------------|-----------------|  
-|**ApplicationName***|10|Nome dell'applicazione client in cui è stata creata la connessione a un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Questa colonna viene popolata con i valori passati dall'applicazione anziché con il nome visualizzato del programma.|  
+|**ApplicationName**|10|Nome dell'applicazione client in cui è stata creata la connessione a un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Questa colonna viene popolata con i valori passati dall'applicazione anziché con il nome visualizzato del programma.|  
 |**BigintData1**|52|Valore (tipo di dati**bigint** ) che dipende dalla classe di evento specificata nella traccia.|  
 |**BigintData2**|53|Valore (tipo di dati**bigint** ) che dipende dalla classe di evento specificata nella traccia.|  
 |**Binary Data**|2|Valore binario che dipende dalla classe di evento acquisita nella traccia.|  
-|**ClientProcessID***|9|ID assegnato dal computer host al processo in cui è in esecuzione l'applicazione client. Questa colonna di dati viene popolata se l'ID del processo client viene fornito dal client.|  
+|**ClientProcessID**|9|ID assegnato dal computer host al processo in cui è in esecuzione l'applicazione client. Questa colonna di dati viene popolata se l'ID del processo client viene fornito dal client.|  
 |**ColumnPermissions**|44|Indica se è stata impostata un'autorizzazione a livello di colonna. È possibile analizzare il testo dell'istruzione per determinare con esattezza quali autorizzazioni sono state impostate per quali colonne.|  
 |**CPU**|18|Tempo della CPU in millisecondi utilizzato dall'evento.|  
-|**Database ID***|3|ID del database specificato nell'istruzione USE *nome_database* oppure ID del database predefinito, se per una determinata istanza non viene eseguita un'istruzione USE *nome_database*. [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] visualizza il nome del database se la colonna di dati **ServerName** è acquisita nella traccia e il server è disponibile. Determinare il valore per un database utilizzando la funzione DB_ID.|  
+|**ID database**|3|ID del database specificato nell'istruzione USE *nome_database* oppure ID del database predefinito, se per una determinata istanza non viene eseguita un'istruzione USE *nome_database*. [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] visualizza il nome del database se la colonna di dati **ServerName** è acquisita nella traccia e il server è disponibile. Determinare il valore per un database utilizzando la funzione DB_ID.|  
 |**DatabaseName**|35|Nome del database in cui viene eseguita l'istruzione dell'utente.|  
-|**DBUserName***|40|Nome utente di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] del client.|  
+|**DBUserName**|40|Nome utente di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] del client.|  
 |**Durata**|13|Durata dell'evento in microsecondi.<br /><br /> Il server indica la durata di un evento in microsecondi (un milionesimo o 10<sup>-6</sup>di secondo) e la quantità di tempo della CPU usato dall'evento in millisecondi (un millesimo o 10<sup>-3</sup>di secondo). Nell'interfaccia utente grafica di [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] il valore della colonna **Duration** viene visualizzato in millisecondi. Tuttavia, quando si salva una traccia in un file o in una tabella di database, il valore della colonna **Duration** viene scritto in microsecondi.|  
 |**EndTime**|15|Ora di fine dell'evento. Questa colonna non viene popolata per le classi di evento che fanno riferimento all'avvio di un evento, quali **SQL:BatchStarting** o **SP:Starting**.|  
 |**Errore**|31|Numero di errore di un determinato evento. In genere corrisponde al numero di errore archiviato in **sysmessages**.|  
-|**EventClass***|27|Tipo di classe di evento acquisita.|  
+|**EventClass**|27|Tipo di classe di evento acquisita.|  
 |**EventSequence**|51|Numero di sequenza dell'evento.|  
-|**EventSubClass***|21|Tipo di sottoclasse di evento, che offre informazioni aggiuntive su ogni classe di evento. Ad esempio, i valori della sottoclasse della classe di evento **Execution Warning** rappresentano il tipo di avviso di esecuzione:<br /><br /> **1** = attesa della query. Tempo di attesa delle risorse, ad esempio della memoria, prima dell'esecuzione della query.<br /><br /> **2** = timeout della query. Timeout della query durante l'attesa delle risorse necessarie per l'esecuzione. Questa colonna di dati non viene popolata per tutte le classi di evento.|  
+|**EventSubClass**|21|Tipo di sottoclasse di evento, che offre informazioni aggiuntive su ogni classe di evento. Ad esempio, i valori della sottoclasse della classe di evento **Execution Warning** rappresentano il tipo di avviso di esecuzione:<br /><br /> **1** = attesa della query. Tempo di attesa delle risorse, ad esempio della memoria, prima dell'esecuzione della query.<br /><br /> **2** = timeout della query. Timeout della query durante l'attesa delle risorse necessarie per l'esecuzione. Questa colonna di dati non viene popolata per tutte le classi di evento.|  
 |**GUID**|54|Valore GUID che dipende dalla classe di evento specificata nella traccia.|  
 |**FileName**|36|Nome logico del file modificato.|  
 |**Handle**|33|Valore intero utilizzato da ODBC, OLE DB o DB-Library per il coordinamento dell'esecuzione con il server.|  
-|**HostName***|8|Nome del computer in cui è in esecuzione il client. Questa colonna di dati viene popolata se il nome host viene fornito dal client. Per determinare il nome host, usare la funzione HOST_NAME.|  
+|**HostName**|8|Nome del computer in cui è in esecuzione il client. Questa colonna di dati viene popolata se il nome host viene fornito dal client. Per determinare il nome host, usare la funzione HOST_NAME.|  
 |**IndexID**|24|ID dell'indice dell'oggetto interessato dall'evento. Per determinare l'ID di indice di un oggetto, utilizzare la colonna **indid** della tabella di sistema **sysindexes** .|  
 |**IntegerData**|25|Valore intero che dipende dalla classe di evento acquisita nella traccia.|  
 |**IntegerData2**|55|Valore intero che dipende dalla classe di evento acquisita nella traccia.|  
@@ -103,16 +103,16 @@ Traccia SQL utilizza le colonne di dati nell'output di traccia per descrivere gl
 |**LineNumber**|5|Contiene il numero della riga contenente l'errore. Per gli eventi associati a istruzioni [!INCLUDE[tsql](../../includes/tsql-md.md)] , come **SP:StmtStarting**, **LineNumber** contiene il numero di riga dell'istruzione nella stored procedure o nel batch.|  
 |**LinkedServerName**|45|Nome del server collegato.|  
 |**LoginName**|11|Nome dell'account di accesso dell'utente (account di sicurezza di SQL Server o credenziali di accesso di Windows nel formato DOMINIO\Nomeutente).|  
-|**LoginSid***|41|ID di sicurezza (SID) dell'utente connesso. Tali informazioni sono disponibili nella vista **sys.server_principals** del database **master** . L'ID è univoco per ogni account di accesso al server.|  
+|**LoginSid**|41|ID di sicurezza (SID) dell'utente connesso. Tali informazioni sono disponibili nella vista **sys.server_principals** del database **master** . L'ID è univoco per ogni account di accesso al server.|  
 |**MethodName**|47|Nome del metodo OLE DB.|  
 |**Mode**|32|Valore intero utilizzato da vari eventi per descrivere uno stato richiesto o ricevuto dall'evento.|  
 |**NestLevel**|29|Valore intero che rappresenta i dati restituiti da @@NESTLEVEL.|  
-|**NTDomainName***|7|Dominio di Windows a cui appartiene l'utente.|  
-|**NTUserName***|6|Nome utente di Windows.|  
+|**NTDomainName**|7|Dominio di Windows a cui appartiene l'utente.|  
+|**NTUserName**|6|Nome utente di Windows.|  
 |**ObjectID**|22|ID dell'oggetto assegnato dal sistema.|  
 |**ObjectID2**|56|ID dell'entità o dell'oggetto correlato, se disponibile.|  
 |**ObjectName**|34|Nome dell'oggetto a cui si fa riferimento.|  
-|**ObjectType***\*|28|Valore che rappresenta il tipo di oggetto coinvolto nell'evento. Questo valore corrisponde alla colonna **type** nella tabella **sysobjects**.|  
+|**ObjectType**|28|Valore che rappresenta il tipo di oggetto coinvolto nell'evento. Questo valore corrisponde alla colonna **type** nella tabella **sysobjects**.|  
 |**Offset**|61|Offset iniziale dell'istruzione nella stored procedure o nel batch.|  
 |**OwnerID**|58|Solo per gli eventi di blocco. Tipo dell'oggetto proprietario di un blocco.|  
 |**OwnerName**|37|Nome utente del database per il proprietario dell'oggetto.|  
@@ -123,13 +123,13 @@ Traccia SQL utilizza le colonne di dati nell'output di traccia per descrivere gl
 |**RequestID**|49|ID della richiesta contenente l'istruzione.|  
 |**RoleName**|38|Nome del ruolo applicazione in corso di abilitazione.|  
 |**RowCounts**|48|Numero di righe del batch.|  
-|**ServerName***|26|Nome dell'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tracciata.|  
+|**ServerName**|26|Nome dell'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tracciata.|  
 |**SessionLoginName**|64|Nome dell'account di accesso dell'utente che ha avviato la sessione. Se, ad esempio, si esegue la connessione a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] con l'account di accesso **Login1** e si esegue un'istruzione con l'account di accesso **Login2**, **SessionLoginName** indica **Login1**, mentre **LoginName** indica **Login2**. In questa colonna vengono visualizzati sia gli account di accesso di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] che quelli di Windows.|  
 |**Severity**|20|Livello di gravità dell'evento di eccezione.|  
 |**SourceDatabaseID**|62|ID del database di origine dell'oggetto.|  
 |**SPID**|12|ID del processo server (SPID) che [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] assegna al processo associato al client.|  
 |**SqlHandle**|63|Hash a 64 bit basato sul testo di una query ad hoc oppure ID del database e dell'oggetto di un oggetto SQL. È possibile passare questo valore a **sys.dm_exec_sql_text()** per recuperare il testo SQL associato.|  
-|**StartTime***|14|Ora di inizio dell'evento, se disponibile.|  
+|**StartTime**|14|Ora di inizio dell'evento, se disponibile.|  
 |**State**|30|Codice dello stato di errore.|  
 |**Esito positivo**|23|Indica l'esito dell'evento. I possibili valori sono:<br /><br /> **1** = esito positivo.<br /><br /> **0** = esito negativo<br /><br /> Ad esempio, **1** indica l'esito positivo di un controllo delle autorizzazioni e **0** indica l'esito negativo di tale controllo.|  
 |**TargetLoginName**|42|Per le azioni relative a un account di accesso, ad esempio l'aggiunta di un nuovo account di accesso, il nome dell'account di accesso specifico.|  

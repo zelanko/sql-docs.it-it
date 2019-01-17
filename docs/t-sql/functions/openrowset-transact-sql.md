@@ -26,12 +26,12 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: db0fbc2125ca748f0426eea95c4c1a059e5b67f5
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 7cbf93440d9b164adef0f87c5af88da02d0f9b50
+ms.sourcegitcommit: 85fd3e1751de97a16399575397ab72ebd977c8e9
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52509957"
+ms.lasthandoff: 12/17/2018
+ms.locfileid: "53531096"
 ---
 # <a name="openrowset-transact-sql"></a>OPENROWSET (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
@@ -114,7 +114,7 @@ OPENROWSET
  Per informazioni sull'utilizzo dell'opzione BULK, vedere la sezione "Osservazioni" di seguito in questo argomento. Per informazioni sulle autorizzazioni necessarie per l'opzione BULK, vedere la sezione "Autorizzazioni" di seguito in questo argomento.  
   
 > [!NOTE]  
->  Quando utilizzata per importare i dati con il modello di recupero con registrazione completa, OPENROWSET (BULK ...) non ottimizza la registrazione.  
+> Quando utilizzata per importare i dati con il modello di recupero con registrazione completa, OPENROWSET (BULK ...) non ottimizza la registrazione.  
   
  Per informazioni sulla preparazione dei dati per le operazioni di importazione bulk, vedere [Preparazione dei dati per l'importazione o l'esportazione bulk &#40;SQL Server&#41;](../../relational-databases/import-export/prepare-data-for-bulk-export-or-import-sql-server.md).  
   
@@ -136,7 +136,7 @@ A partire da [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1, dat
 > CODEPAGE non è un'opzione supportata in Linux.
 
 > [!NOTE]  
->  È consigliabile specificare un nome di regole di confronto per ogni colonna in un file di formato tranne quando si vuole assegnare all'opzione 65001 la priorità sulla specifica delle regole di confronto o della tabella codici.  
+> È consigliabile specificare un nome di regole di confronto per ogni colonna in un file di formato tranne quando si vuole assegnare all'opzione 65001 la priorità sulla specifica delle regole di confronto o della tabella codici.  
   
 |Valore CODEPAGE|Descrizione|  
 |--------------------|-----------------|  
@@ -168,7 +168,7 @@ Origine dati esterna denominata che punta alla posizione di archiviazione BLOB d
  Il valore predefinito per *maximum_errors* è 10.  
   
 > [!NOTE]  
->  MAX_ERRORS non si applica ai vincoli CHECK o alla conversione dei tipi di dati **money** e **bigint**.  
+> MAX_ERRORS non si applica ai vincoli CHECK o alla conversione dei tipi di dati **money** e **bigint**.  
   
  ROWS_PER_BATCH =*rows_per_batch*  
  Specifica il numero approssimativo di righe di dati nel file di dati. Questo valore deve essere dello stesso ordine del numero effettivo di righe.  
@@ -198,7 +198,7 @@ Origine dati esterna denominata che punta alla posizione di archiviazione BLOB d
  Restituisce il contenuto di *data_file* come set di righe a riga singola e a colonna singola di tipo **varbinary(max)**.  
   
 > [!IMPORTANT]  
->  Per l'importazione di dati XML è consigliabile utilizzare solo l'opzione SINGLE_BLOB anziché SINGLE_CLOB e SINGLE_NCLOB, in quanto solo SINGLE_BLOB supporta tutti i tipi di conversione di codifica di Windows.  
+> Per l'importazione di dati XML è consigliabile utilizzare solo l'opzione SINGLE_BLOB anziché SINGLE_CLOB e SINGLE_NCLOB, in quanto solo SINGLE_BLOB supporta tutti i tipi di conversione di codifica di Windows.  
   
  SINGLE_CLOB  
  Leggendo *data_file* come ASCII, restituisce il contenuto come set di righe a riga singola e colonna singola di tipo **varchar(max)**, usando le regole di confronto del database corrente.  
@@ -213,7 +213,7 @@ FORMAT **=** 'CSV'
 Specifica un file di valori separati da virgole conforme allo standard [RFC 4180](https://tools.ietf.org/html/rfc4180).
 
  FORMATFILE ='*format_file_path*'  
- Specifica il percorso completo di un file di formato. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] supporta due tipi di file di formato, ovvero XML e non XML.  
+ Specifica il percorso completo di un file di formato. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] supporta due tipi di file di formato: XML e non XML.  
   
  Un file di formato è necessario per definire i tipi di colonna nel set di risultati. L'unica eccezione si verifica quando viene specificato SINGLE_CLOB, SINGLE_BLOB o SINGLE_NCLOB. In questo caso, il file di formato non è necessario.  
   
@@ -248,10 +248,10 @@ Specifica il carattere da usare come carattere virgolette nel file CSV. Se non v
      `FROM OPENROWSET(BULK...) AS table_alias`  
   
      `FROM OPENROWSET(BULK...) AS table_alias(column_alias,...n)`  
->    [!IMPORTANT]  
->    Se non si aggiunge `AS <table_alias>` viene generato l'errore:    
->    Messaggio 491, livello 16, stato 1, riga 20    
->    Specificare il nome della correlazione per il set di righe con lettura bulk nella clausola FROM.    
+> [!IMPORTANT]  
+> Se non si aggiunge `AS <table_alias>` viene generato l'errore:    
+> Messaggio 491, livello 16, stato 1, riga 20    
+> Specificare il nome della correlazione per il set di righe con lettura bulk nella clausola FROM.    
   
 -   Un'istruzione `SELECT...FROM OPENROWSET(BULK...)` consente di eseguire query direttamente sui dati in un file, senza importare i dati in una tabella. Le istruzioni `SELECT...FROM OPENROWSET(BULK...)` consentono anche di elencare alias di colonna bulk usando un file di formato per specificare nomi di colonna e tipi di dati.  
   
@@ -262,13 +262,13 @@ Specifica il carattere da usare come carattere virgolette nel file CSV. Se non v
  Per informazioni su come usare le istruzioni `INSERT...SELECT * FROM OPENROWSET(BULK...)`, vedere [Importazione ed esportazione bulk di dati &#40;SQL Server&#41;](../../relational-databases/import-export/bulk-import-and-export-of-data-sql-server.md). Per informazioni sui casi in cui le operazioni di inserimento di righe eseguite durante l'importazione in blocco vengono registrate nel log delle transazioni, vedere [Prerequisiti per la registrazione minima nell'importazione in blocco](../../relational-databases/import-export/prerequisites-for-minimal-logging-in-bulk-import.md).  
   
 > [!NOTE]  
->  Quando si usa `OPENROWSET`, è importante comprendere il modo in cui la rappresentazione viene gestita da [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Per considerazioni sulla sicurezza, vedere [Importazione di dati per operazioni bulk con BULK INSERT o OPENROWSET&#40;BULK...&#41; &#40;SQL Server&#41;](../../relational-databases/import-export/import-bulk-data-by-using-bulk-insert-or-openrowset-bulk-sql-server.md).  
+> Quando si usa `OPENROWSET`, è importante comprendere il modo in cui la rappresentazione viene gestita da [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Per considerazioni sulla sicurezza, vedere [Importazione di dati per operazioni bulk con BULK INSERT o OPENROWSET&#40;BULK...&#41; &#40;SQL Server&#41;](../../relational-databases/import-export/import-bulk-data-by-using-bulk-insert-or-openrowset-bulk-sql-server.md).  
   
 ### <a name="bulk-importing-sqlchar-sqlnchar-or-sqlbinary-data"></a>Importazione bulk di dati SQLCHAR, SQLNCHAR o SQLBINARY  
  OPENROWSET(BULK...) presuppone che, se non è specificata, la lunghezza massima dei dati SQLCHAR, SQLNCHAR o SQLBINARY non supera 8000 byte. Se i dati in corso di importazione sono in un campo dati di tipo LOB contenente un oggetto **varchar(max)**, **nvarchar(max)** o **varbinary(max)** che supera 8000 byte, è necessario usare un file di formato XML che definisca la lunghezza massima per il campo dati. Per specificare la lunghezza massima, modificare il file di formato dichiarando l'attributo MAX_LENGTH.  
   
 > [!NOTE]  
->  Un file di formato generato automaticamente non specifica la lunghezza o la lunghezza massima per un campo di tipo LOB. Tuttavia, è possibile modificare un file di formato e specificare la lunghezza o la lunghezza massima manualmente.  
+> Un file di formato generato automaticamente non specifica la lunghezza o la lunghezza massima per un campo di tipo LOB. Tuttavia, è possibile modificare un file di formato e specificare la lunghezza o la lunghezza massima manualmente.  
   
 ### <a name="bulk-exporting-or-importing-sqlxml-documents"></a>Esportazione o importazione bulk di documenti SQLXML  
  Per l'esportazione o l'importazione bulk di dati SQLXML, utilizzare uno dei tipi di dati seguenti nel file di formato.  
@@ -295,11 +295,11 @@ FROM OPENROWSET('SQLNCLI', 'Server=Seattle1;Trusted_Connection=yes;',
       ORDER BY GroupName, Name') AS a;  
 ```  
   
-### <a name="b-using-the-microsoft-ole-db-provider-for-jet"></a>B. Utilizzo del provider Microsoft OLE DB per Jet  
+### <a name="b-using-the-microsoft-ole-db-provider-for-jet"></a>b. Utilizzo del provider Microsoft OLE DB per Jet  
  Nell'esempio seguente viene ottenuto l'accesso alla tabella `Customers` del database `Northwind` di [!INCLUDE[msCoName](../../includes/msconame-md.md)] Access tramite il provider [!INCLUDE[msCoName](../../includes/msconame-md.md)] OLE DB per Jet.  
   
 > [!NOTE]  
->  Nell'esempio si presuppone che Access sia installato. Per eseguire questo esempio, è necessario installare il database Northwind.  
+> Nell'esempio si presuppone che Access sia installato. Per eseguire questo esempio, è necessario installare il database Northwind.  
   
 ```sql  
 SELECT CustomerID, CompanyName  
@@ -315,7 +315,7 @@ GO
  L'esempio seguente seleziona tutti i dati della tabella `Customers` dell'istanza locale del database [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] `Northwind` e della tabella `Orders` del database `Northwind` di Access archiviato nello stesso computer.  
   
 > [!NOTE]  
->  Nell'esempio si presuppone che Access sia installato. Per eseguire questo esempio, è necessario installare il database Northwind.  
+> Nell'esempio si presuppone che Access sia installato. Per eseguire questo esempio, è necessario installare il database Northwind.  
   
 ```sql  
 USE Northwind  ;  

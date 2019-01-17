@@ -15,12 +15,12 @@ ms.assetid: 58ae749d-6ada-4f9c-bf00-de7c7a992a2d
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 0280e8039b5288186e910289eeb7c7566fdb0ae0
-ms.sourcegitcommit: 1a5448747ccb2e13e8f3d9f04012ba5ae04bb0a3
+ms.openlocfilehash: ae292a384a26c050976d4557793f6060ac3fe1b7
+ms.sourcegitcommit: 467b2c708651a3a2be2c45e36d0006a5bbe87b79
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51558728"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53980447"
 ---
 # <a name="create-a-database-mail-profile"></a>Creare un profilo di Posta elettronica database
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -28,9 +28,9 @@ ms.locfileid: "51558728"
   
 -   **Prima di iniziare:** [Prerequisiti](#Prerequisites), [Sicurezza](#Security)  
   
--   **Per creare profili privati di Posta elettronica database tramite:**  [Configurazione guidata posta elettronica database](#SSMSProcedure), [Transact-SQL](#PrivateProfile)  
+-   **Per creare un profilo privato di Posta elettronica database tramite la**  [Configurazione guidata Posta elettronica database](#SSMSProcedure), [Transact-SQL](#PrivateProfile)  
   
--   **Per creare profili pubblici di Posta elettronica database tramite:** [Configurazione guidata posta elettronica database](#SSMSProcedure), [Transact-SQL](#PublicProfile)  
+-   **Per creare un profilo pubblico di Posta elettronica database tramite la**  [Configurazione guidata Posta elettronica database](#SSMSProcedure), [Transact-SQL](#PublicProfile)  
   
 ##  <a name="BeforeYouBegin"></a> Prima di iniziare  
   
@@ -56,7 +56,7 @@ ms.locfileid: "51558728"
   
 -   Nella pagina **Gestione profili e account** selezionare l'opzione **Crea un nuovo profilo** e fare clic su **Avanti**.  
   
--   Nella pagina **Nuovo profilo** , specificare il nome e la descrizione del profilo e aggiungere gli account da includere nel profilo, quindi fare clic su **Avanti**.  
+-   Nella pagina **Nuovo profilo** specificare il nome e la descrizione del profilo e aggiungere gli account da includere nel profilo, quindi fare clic su **Avanti**.  
   
 -   Per completare la creazione del nuovo profilo, rivedere le azioni da eseguire nella pagina **Completamento procedura guidata** quindi fare clic su **Fine** .  
   

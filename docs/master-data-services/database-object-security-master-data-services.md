@@ -5,8 +5,7 @@ ms.date: 03/04/2017
 ms.prod: sql
 ms.prod_service: mds
 ms.reviewer: ''
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.topic: conceptual
 helpviewer_keywords:
 - database [Master Data Services], object security
@@ -15,12 +14,12 @@ ms.assetid: dd5ba503-7607-45d9-ad0d-909faaade179
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: d39d78d9fef6756804f69c8fb49ed1e880d94767
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: bbad98239ef2aabbea33a1874e5e6f3efad51c55
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52395386"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52783613"
 ---
 # <a name="database-object-security-master-data-services"></a>Sicurezza di oggetti di database (Master Data Services)
 
@@ -49,11 +48,11 @@ ms.locfileid: "52395386"
   
 |Azione|Entità a protezione diretta|Permissions|  
 |------------|----------------|-----------------|  
-|Creare, aggiornare ed eliminare i membri foglia e i relativi attributi.|stg.name_Leaf|Obbligatoria: INSERT<br /><br /> Facoltative: SELECT e UPDATE|  
+|Creare, aggiornare ed eliminare i membri foglia e i relativi attributi.|stg.name_Leaf|Obbligatoria: INSERT<br /><br /> Facoltativo: SELECT e UPDATE|  
 |Caricare i dati dalla tabella di staging Foglia nelle tabelle di database MDS appropriate.|stg.udp_name_Leaf|EXECUTE|  
-|Creare, aggiornare ed eliminare i membri consolidati e i relativi attributi.|stg.name_Consolidated|Obbligatoria: INSERT<br /><br /> Facoltative: SELECT e UPDATE|  
+|Creare, aggiornare ed eliminare i membri consolidati e i relativi attributi.|stg.name_Consolidated|Obbligatoria: INSERT<br /><br /> Facoltativo: SELECT e UPDATE|  
 |Caricare i dati dalla tabella di staging Consolidata nelle tabelle di database MDS appropriate.|stg.udp_name_Consolidated|EXECUTE|  
-|Spostare membri in una gerarchia esplicita.|stg.name_Relationship|Obbligatoria: INSERT<br /><br /> Facoltative: SELECT e UPDATE|  
+|Spostare membri in una gerarchia esplicita.|stg.name_Relationship|Obbligatoria: INSERT<br /><br /> Facoltativo: SELECT e UPDATE|  
 |Caricare i dati dalla tabella di staging Relazione nelle tabelle di database MDS appropriate.|stg.udp_name_Relationship|EXECUTE|  
 |Visualizzare gli errori che si verificati quando i dati delle tabelle di staging sono stati inseriti nelle tabelle di database MDS.|stg.udp_name_Relationship|SELECT|  
   

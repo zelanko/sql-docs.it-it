@@ -1,6 +1,7 @@
 ---
-title: Eseguire un failover manuale pianificato di un gruppo di disponibilità (SQL Server) | Microsoft Docs
-ms.custom: ''
+title: Eseguire un failover manuale pianificato di un gruppo di disponibilità
+description: Questo argomento descrive come eseguire un failover manuale pianificato di un gruppo di disponibilità Always On.
+ms.custom: seodec18
 ms.date: 10/25/2017
 ms.prod: sql
 ms.reviewer: ''
@@ -15,16 +16,16 @@ ms.assetid: 419f655d-3f9a-4e7d-90b9-f0bab47b3178
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 5b19d83a07e083598689595120b30857eea127ee
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d632a45f81658612c7c6f37e4de6dc535551fee4
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47854059"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53212160"
 ---
-# <a name="perform-a-planned-manual-failover-of-an-availability-group-sql-server"></a>Eseguire un failover manuale pianificato di un gruppo di disponibilità (SQL Server)
+# <a name="perform-a-planned-manual-failover-of-an-always-on-availability-group-sql-server"></a>Eseguire un failover manuale pianificato di un gruppo di disponibilità Always On (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-Questo argomento descrive come eseguire un failover manuale senza perdite di dati (*failover manuale pianificato*) in un gruppo di disponibilità AlwaysOn tramite [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../../includes/tsql-md.md)] o PowerShell in [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]. Per un gruppo di disponibilità il failover si verifica al livello di una replica di disponibilità. Un failover manuale pianificato, ad esempio un failover del gruppo di disponibilità AlwaysOn, comporta il passaggio della replica primaria precedente al ruolo secondario. Il failover attualmente comporta il passaggio della replica primaria precedente al ruolo secondario.  
+In questo argomento viene illustrato come eseguire un failover manuale senza perdite di dati ( *failover manuale pianificato*) in un gruppo di disponibilità AlwaysOn tramite [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../../includes/tsql-md.md)]o PowerShell in [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]. Per un gruppo di disponibilità il failover si verifica al livello di una replica di disponibilità. Un failover manuale pianificato, ad esempio un failover del gruppo di disponibilità AlwaysOn, comporta il passaggio della replica primaria precedente al ruolo secondario. Il failover attualmente comporta il passaggio della replica primaria precedente al ruolo secondario.  
   
 Un failover manuale pianificato è supportato solo quando la replica principale e la replica secondaria di destinazione sono in esecuzione in modalità commit sincrono e sono attualmente sincronizzate. Un failover manuale pianificato mantiene tutti i dati presenti nei database secondari associati al gruppo di disponibilità nella replica secondaria di destinazione. Dopo che la replica primaria precedente è passata al ruolo secondario, i relativi database diventano database secondari. Iniziano quindi a eseguire la sincronizzazione con i nuovi database primari. Dopo la transizione di tutti i database allo stato SYNCHRONIZED, la nuova replica secondaria diventa idonea a fungere da destinazione di un futuro failover manuale pianificato.  
   
@@ -107,7 +108,7 @@ Un failover manuale pianificato è supportato solo quando la replica principale 
     -   [Provider PowerShell per SQL Server](../../../relational-databases/scripting/sql-server-powershell-provider.md) 
     -   [Visualizzare la Guida di SQL Server PowerShell](../../../relational-databases/scripting/get-help-sql-server-powershell.md) 
 
-##  <a name="FollowUp"></a> Completamento: dopo il failover manuale su un gruppo di disponibilità 
+##  <a name="FollowUp"></a> Completamento: Dopo il failover manuale su un gruppo di disponibilità 
  Se è stato eseguito il failover al di fuori del [!INCLUDE[ssFosAuto](../../../includes/ssfosauto-md.md)] del gruppo di disponibilità, modificare i voti del quorum dei nodi di clustering di failover Windows Server per riflettere la nuova configurazione del gruppo di disponibilità. Per altre informazioni, vedere [Clustering di failover Windows Server &#40;WSFC&#41; con SQL Server](../../../sql-server/failover-clusters/windows/windows-server-failover-clustering-wsfc-with-sql-server.md). 
 
 <a name = "ReadScaleOutOnly"><a/>

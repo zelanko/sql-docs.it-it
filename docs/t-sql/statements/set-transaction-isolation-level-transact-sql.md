@@ -28,12 +28,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: bbedfe588a66e166f46e9240db65689a2b2a6459
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: 8d2029680262934370479ef2c4ec81792a821f1d
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51700347"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53359663"
 ---
 # <a name="set-transaction-isolation-level-transact-sql"></a>SET TRANSACTION ISOLATION LEVEL (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -82,9 +82,9 @@ SET TRANSACTION ISOLATION LEVEL READ UNCOMMITTED
   
  Il funzionamento di READ COMMITTED varia a seconda dell'impostazione dell'opzione di database READ_COMMITTED_SNAPSHOT:  
   
--   Se l'opzione READ_COMMITTED_SNAPSHOT è impostata su OFF (impostazione predefinita), [!INCLUDE[ssDE](../../includes/ssde-md.md)] utilizza blocchi condivisi per impedire che altre transazioni possano modificare le righe mentre la transazione corrente sta eseguendo un'operazione di lettura. I blocchi condivisi impediscono inoltre che l'istruzione possa leggere righe modificate da altre transazioni, fino al completamento di tali transazioni. Il tipo di blocco condiviso determina il momento in cui verrà rilasciato. I blocchi a livello di riga vengono rilasciati prima dell'elaborazione della riga successiva. I blocchi a livello di pagina vengono rilasciati nel momento in cui la pagina successiva viene letta, mentre i blocchi di tabella vengono rilasciati al termine dell'istruzione.  
+-   Se l'opzione READ_COMMITTED_SNAPSHOT è impostata su OFF (impostazione predefinita in SQL Server), [!INCLUDE[ssDE](../../includes/ssde-md.md)] usa blocchi condivisi per impedire che altre transazioni possano modificare le righe mentre la transazione corrente sta eseguendo un'operazione di lettura. I blocchi condivisi impediscono inoltre che l'istruzione possa leggere righe modificate da altre transazioni, fino al completamento di tali transazioni. Il tipo di blocco condiviso determina il momento in cui verrà rilasciato. I blocchi a livello di riga vengono rilasciati prima dell'elaborazione della riga successiva. I blocchi a livello di pagina vengono rilasciati nel momento in cui la pagina successiva viene letta, mentre i blocchi di tabella vengono rilasciati al termine dell'istruzione.  
   
--   Se READ_COMMITTED_SNAPSHOT è impostata su ON, [!INCLUDE[ssDE](../../includes/ssde-md.md)] utilizza il controllo delle versioni delle righe per presentare a ogni istruzione uno snapshot dei dati consistente dal punto di vista transazionale, rappresentativo dei dati esistenti al momento dell'avvio dell'istruzione. Non vengono utilizzati blocchi per proteggere i dati da aggiornamenti eseguiti da altre transazioni.
+-   Se READ_COMMITTED_SNAPSHOT è impostata su ON (impostazione predefinita nel database SQL di Azure), [!INCLUDE[ssDE](../../includes/ssde-md.md)] usa il controllo delle versioni delle righe per presentare a ogni istruzione uno snapshot dei dati coerente dal punto di vista transazionale, rappresentativo dei dati esistenti al momento dell'avvio dell'istruzione. Non vengono utilizzati blocchi per proteggere i dati da aggiornamenti eseguiti da altre transazioni.
 
 > [!IMPORTANT]  
 > La scelta di un livello di isolamento delle transazioni non ha effetto sui blocchi acquisiti per proteggere le modifiche dei dati. Una transazione ottiene sempre un blocco esclusivo su qualsiasi dato da essa modificato, che mantiene fino al suo completamento, indipendentemente dal livello di isolamento impostato per la transazione. Inoltre, un aggiornamento effettuato a livello di isolamento READ_COMMITTED usa blocchi di aggiornamento sulle righe di dati selezionate, mentre un aggiornamento effettuato a livello di isolamento SNAPSHOT usa versioni di riga per selezionare le righe da aggiornare. Per le operazioni di lettura, i livelli di isolamento delle transazioni definiscono essenzialmente il livello di protezione dagli effetti delle modifiche apportate da altre transazioni. Per altre informazioni vedere [Guida per il controllo delle versioni delle righe e il blocco della transazione](https://docs.microsoft.com/sql/relational-databases/sql-server-transaction-locking-and-row-versioning-guide).

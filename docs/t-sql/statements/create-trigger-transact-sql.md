@@ -29,12 +29,12 @@ ms.assetid: edeced03-decd-44c3-8c74-2c02f801d3e7
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 29bb936325bde06220d982948a1e6c599e9ce784
-ms.sourcegitcommit: b58d514879f182fac74d9819918188f1688889f3
+ms.openlocfilehash: 2ee63ff261df82926fd67f5014c09f894160d14e
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "50970512"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53213740"
 ---
 # <a name="create-trigger-transact-sql"></a>CREATE TRIGGER (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -262,7 +262,7 @@ SELECT * FROM deleted;
   
  In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] è possibile aggiornare le colonne di tipo **text**, **ntext** o **image** di tabelle o viste tramite il trigger INSTEAD OF.  
   
-> [!IMPORTANT]  
+> [!IMPORTANT]
 >  I tipi di dati **ntext**, **text** e **image** verranno rimossi in una versione futura di [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Evitare di utilizzare questi tipi di dati in un nuovo progetto di sviluppo e prevedere interventi di modifica nelle applicazioni che attualmente li utilizzano. Usare in alternativa [nvarchar(max)](../../t-sql/data-types/nchar-and-nvarchar-transact-sql.md), [varchar(max)](../../t-sql/data-types/char-and-varchar-transact-sql.md)e [varbinary(max)](../../t-sql/data-types/binary-and-varbinary-transact-sql.md) . I trigger AFTER e INSTEAD OF supportano i dati **varchar(MAX)**, **nvarchar(MAX)** e **varbinary(MAX)** nelle tabelle inserted e deleted.  
   
  Per i trigger sulle tabelle ottimizzate per la memoria, un blocco ATOMIC è l'unica istruzione *sql_statement* consentita al livello superiore. L'unico codice T-SQL consentito all'interno del blocco ATOMIC è quello consentito nelle procedure native.  
@@ -427,7 +427,7 @@ AS RAISERROR ('Notify Customer Relations', 16, 10);
 GO  
 ```  
   
-### <a name="b-using-a-dml-trigger-with-a-reminder-e-mail-message"></a>B. Utilizzo di un trigger DML con un messaggio di promemoria inviato tramite posta elettronica  
+### <a name="b-using-a-dml-trigger-with-a-reminder-e-mail-message"></a>b. Utilizzo di un trigger DML con un messaggio di promemoria inviato tramite posta elettronica  
  Nell'esempio seguente viene inviato un messaggio di posta elettronica a un utente specificato (`MaryM`) quando viene apportata una modifica alla tabella `Customer`.  
   
 ```sql  

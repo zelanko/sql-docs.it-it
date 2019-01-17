@@ -28,12 +28,12 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 2c7768b97ba5fc337ab06b42e61fb1e80330bc76
-ms.sourcegitcommit: b58d514879f182fac74d9819918188f1688889f3
+ms.openlocfilehash: 066b202a91f646dadd4a72182193e9fb0fcee6f1
+ms.sourcegitcommit: 467b2c708651a3a2be2c45e36d0006a5bbe87b79
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "50970973"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53979997"
 ---
 # <a name="with-commontableexpression-transact-sql"></a>WITH common_table_expression (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -66,7 +66,7 @@ Identificatore valido per l'espressione di tabella comune. *expression_name* dev
  *CTE_query_definition*  
  Specifica un'istruzione SELECT il cui set di risultati popola l'espressione di tabella comune. L'istruzione SELECT per *CTE_query_definition* deve soddisfare gli stessi requisiti necessari per creare una vista, con la differenza che una CTE non può definire un'altra CTE. Per altre informazioni, vedere la sezione Osservazioni e [CREATE VIEW &#40;Transact-SQL&#41;](../../t-sql/statements/create-view-transact-sql.md).  
   
- Se si definiscono più *CTE_query_definition*, è necessario creare un join delle definizioni di query in base a uno dei seguenti operatori sui set: UNION ALL, UNION, EXCEPT o INTERSECT.  
+ Se si definiscono più elementi *CTE_query_definition*, è necessario creare un join delle definizioni di query in base a uno dei seguenti operatori sui set: UNION ALL, UNION, EXCEPT o INTERSECT.  
   
 ## <a name="remarks"></a>Remarks  
   
@@ -202,7 +202,7 @@ GO
   
 ```  
   
-### <a name="b-using-a-common-table-expression-to-limit-counts-and-report-averages"></a>B. Utilizzo di un'espressione di tabella comune per limitare il numero medio di ordini  
+### <a name="b-using-a-common-table-expression-to-limit-counts-and-report-averages"></a>b. Utilizzo di un'espressione di tabella comune per limitare il numero medio di ordini  
  Nell'esempio seguente viene illustrato il numero medio di ordini di vendita all'anno per i venditori.  
   
 ```  

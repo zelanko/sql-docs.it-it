@@ -11,12 +11,12 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 manager: craigg
-ms.openlocfilehash: 09651f097f0ae07b41c1c38866b862f73c529486
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.openlocfilehash: 2049dc558264b2b231a7d6a12109b833cccaddfe
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51601932"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53208832"
 ---
 # <a name="upgrade-data-quality-services"></a>Aggiornare Data Quality Services
 
@@ -24,7 +24,7 @@ ms.locfileid: "51601932"
 
 Questo articolo offre informazioni su come aggiornare l'installazione esistente di [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] Data Quality Services (DQS). Come parte dell'aggiornamento di [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] Data Quality Server, è inoltre necessario aggiornare lo schema dei database DQS.  
   
-> [!IMPORTANT]  
+> [!IMPORTANT]
 >  -   Per evitare eventuali perdite di dati accidentali durante l'aggiornamento dello schema, è necessario eseguire il backup dei database DQS prima di aggiornare DQS. Per altre informazioni sul ripristino dei database DQS, vedere [Backup e ripristino di database DQS](../../data-quality-services/backing-up-and-restoring-dqs-databases.md).  
 > -   È possibile connettersi a [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] Data Quality Server usando la versione corrente o una precedente di Data Quality Client o [Trasformazione DQS Cleansing](../../integration-services/data-flow/transformations/dqs-cleansing-transformation.md) in Integration Services per eseguire le attività relative alla qualità dei dati.  
 > -   Dopo l'aggiornamento di Data Quality Services e Master Data Services, tutte le versioni precedenti del componente aggiuntivo Master Data Services per Excel non funzioneranno più. È possibile scaricare la versione [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] del componente aggiuntivo Master Data Services per Excel da [qui](https://go.microsoft.com/fwlink/?LinkID=506665).  

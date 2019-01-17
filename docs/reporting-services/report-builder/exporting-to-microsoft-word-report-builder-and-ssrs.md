@@ -1,23 +1,25 @@
 ---
 title: Esportazione in Microsoft Word (Generatore report e SSRS) | Microsoft Docs
-ms.date: 05/30/2017
+ms.date: 12/06/2018
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: report-builder
+description: L'estensione per il rendering di Word consente di eseguire il rendering di report impaginati nel formato  [!INCLUDE[ofprword](../../includes/ofprword-md.md)] (con estensione docx). Il formato è Office Open XML.
+ms.custom: seodec18
 ms.topic: conceptual
 ms.assetid: 0cd8ae26-4682-4473-8f15-af084951defd
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: b315779a4e6c16bdea162ebd5d70c4b9c12ec94b
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: e8bae0c0ef770acf460840abcc0989f8cdf4324e
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52393336"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53202420"
 ---
 # <a name="exporting-to-microsoft-word-report-builder-and-ssrs"></a>Esportazione in Microsoft Word (Generatore report e SSRS)
 
-  L'estensione per il rendering di Word consente di eseguire il rendering di report impaginati nel formato  [!INCLUDE[ofprword](../../includes/ofprword-md.md)] (con estensione docx). Il formato è Office Open XML.  
+  L'estensione per il rendering di Word consente di eseguire il rendering di report impaginati nel formato Microsoft Word (con estensione docx). Il formato è Office Open XML.  
   
  Il tipo di contenuto dei file generati da questo renderer è **application/vnd.openxmlformats-officedocument.wordprocessingml.document** e l'estensione dei file è docx.  
   
@@ -72,7 +74,7 @@ ms.locfileid: "52393336"
   
 -   **Espressione complessa:**  l'espressione è `="Average Sales " & Avg(Fields!YTDPurchase.Value, "Sales") & " Page Number " & Globals!PageNumber`  
   
--   **Espressione con sequenze di testo:** testo, **Average Sales**, espressione,  `=Avg(Fields!YTDPurchase.Value, "Sales)`, testo, **Page Number**ed espressione `=Globals!PageNumber`  
+-   **Espressione con sequenze di testo:** testo, **vendite medie** ed espressione, `=Avg(Fields!YTDPurchase.Value, "Sales)` e testo, **numero di pagina** ed espressione `=Globals!PageNumber`  
   
  Per evitare questo problema, usare più sequenze di testo invece di una sola espressione complessa quando si usano espressioni nei piè di pagina e nelle intestazioni. Le due espressioni seguenti sono equivalenti. La prima è un'espressione complessa, mentre nella seconda vengono utilizzate sequenze di testo. Il renderer di Word consente di analizzare correttamente solo la seconda espressione.  
   

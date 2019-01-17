@@ -25,12 +25,12 @@ ms.assetid: 5a3a27aa-03e8-4c98-a27e-809282379b21
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: e085aff8a426a748e49c450e1bbb6258881583e5
-ms.sourcegitcommit: f1cf91e679d1121d7f1ef66717b173c22430cb42
+ms.openlocfilehash: b12e453dcabb88363cf78e86a33bc4773b3c9a52
+ms.sourcegitcommit: 33712a0587c1cdc90de6dada88d727f8623efd11
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/29/2018
-ms.locfileid: "52586304"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53597122"
 ---
 # <a name="declare-cursor-transact-sql"></a>DECLARE CURSOR (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -66,7 +66,7 @@ DECLARE cursor_name CURSOR [ LOCAL | GLOBAL ]
  Definisce un cursore che crea una copia temporanea dei dati utilizzati dal cursore. La risposta alle richieste indirizzate al cursore viene formulata tramite questa tabella temporanea in **tempdb**. Le modifiche alle tabelle di base non vengono pertanto riportate nei dati restituiti dalle operazioni di recupero eseguite in questo cursore, in cui non è consentito apportare modifiche. Nella sintassi ISO, se viene omessa la parola chiave `INSENSITIVE`, le operazioni di eliminazione e aggiornamento di cui è stato eseguito il commit nelle tabelle sottostanti da parte di qualsiasi utente si riflettono nelle operazioni di recupero successive.  
   
  SCROLL  
- Specifica che tutte le opzioni di recupero (`FIRST`, `LAST`, `PRIOR`, `NEXT`, `RELATIVE`, `ABSOLUTE`) sono disponibili. Se l'opzione `SCROLL` non viene specificata in un'istruzione `DECLARE CURSOR` ISO, l'unica opzione di recupero supportata è `NEXT`. Non è possibile specificare l'opzione `SCROLL` se è specificata l'opzione `FAST_FORWARD`.  
+ Specifica che tutte le opzioni di recupero (`FIRST`, `LAST`, `PRIOR`, `NEXT`, `RELATIVE`, `ABSOLUTE`) sono disponibili. Se l'opzione `SCROLL` non viene specificata in un'istruzione `DECLARE CURSOR` ISO, l'unica opzione di recupero supportata è `NEXT`. Non è possibile specificare l'opzione `SCROLL` se è specificata l'opzione `FAST_FORWARD`. Se `SCROLL` non è specificato, è disponibile solo l'opzione di recupero `NEXT` e il cursore diventa `FORWARD_ONLY`.
   
  *select_statement*  
  Istruzione `SELECT` standard che definisce il set di risultati del cursore. Le parole chiave `FOR BROWSE` e `INTO` non sono consentite all'interno dell'argomento *select_statement* della dichiarazione di un cursore.  
@@ -79,49 +79,50 @@ DECLARE cursor_name CURSOR [ LOCAL | GLOBAL ]
  UPDATE [OF *column_name* [**,**...*n*]]  
  Definisce le colonne aggiornabili nel cursore. Se è specificato l'argomento OF <column_name> [, <... n>], è possibile apportare modifiche solo nelle colonne elencate. Se si specifica `UPDATE` senza un elenco di colonne, è possibile aggiornare tutte le colonne.  
   
- *cursor_name*  
- Nome del cursore server [!INCLUDE[tsql](../../includes/tsql-md.md)] definito. *cursor_name* deve essere conforme alle regole per gli identificatori.  
+*cursor_name*  
+Nome del cursore server [!INCLUDE[tsql](../../includes/tsql-md.md)] definito. *cursor_name* deve essere conforme alle regole per gli identificatori.  
   
- LOCAL  
- Specifica che l'ambito del cursore è locale rispetto al batch, alla stored procedure o al trigger in cui il cursore è stato creato. Il nome del cursore è valido solo in tale ambito. È possibile fare riferimento al cursore tramite variabili di cursore locali nel batch, nella stored procedure o nel trigger oppure tramite un parametro `OUTPUT` di stored procedure. Un parametro `OUTPUT` consente di passare il cursore locale al batch, alla stored procedure o al trigger chiamante, che può quindi assegnare il parametro a una variabile cursore per fare riferimento al cursore dopo l'esecuzione della stored procedure. Il cursore viene deallocato in modo implicito al termine del batch, della stored procedure o del trigger, a meno che non venga passato a un parametro `OUTPUT`. In tal caso, il cursore viene deallocato quando l'ultima variabile che vi fa riferimento viene deallocata o risulta esterna all'ambito di validità.  
+LOCAL  
+Specifica che l'ambito del cursore è locale rispetto al batch, alla stored procedure o al trigger in cui il cursore è stato creato. Il nome del cursore è valido solo in tale ambito. È possibile fare riferimento al cursore tramite variabili di cursore locali nel batch, nella stored procedure o nel trigger oppure tramite un parametro `OUTPUT` di stored procedure. Un parametro `OUTPUT` consente di passare il cursore locale al batch, alla stored procedure o al trigger chiamante, che può quindi assegnare il parametro a una variabile cursore per fare riferimento al cursore dopo l'esecuzione della stored procedure. Il cursore viene deallocato in modo implicito al termine del batch, della stored procedure o del trigger, a meno che non venga passato a un parametro `OUTPUT`. In tal caso, il cursore viene deallocato quando l'ultima variabile che vi fa riferimento viene deallocata o risulta esterna all'ambito di validità.  
   
- GLOBAL  
- Specifica che l'ambito del cursore è globale rispetto alla connessione. È possibile fare riferimento al nome del cursore in qualsiasi stored procedure o batch eseguiti tramite la connessione. Il cursore viene deallocato solo in modo implicito in fase di disconnessione.  
+GLOBAL  
+Specifica che l'ambito del cursore è globale rispetto alla connessione. È possibile fare riferimento al nome del cursore in qualsiasi stored procedure o batch eseguiti tramite la connessione. Il cursore viene deallocato solo in modo implicito in fase di disconnessione.  
   
 > [!NOTE]  
 >  Se gli argomenti `GLOBAL` e `LOCAL` vengono entrambi omessi, il valore predefinito dipende dall'impostazione dell'opzione di database **default to local cursor**.  
   
- FORWARD_ONLY  
- Specifica che è possibile scorrere il cursore solo dalla prima all'ultima riga. `FETCH NEXT` è l'unica opzione di recupero supportata. Se si specifica l'opzione `FORWARD_ONLY` senza la parola chiave `STATIC`, `KEYSET` o `DYNAMIC`, il cursore fungerà da cursore DYNAMIC. Se si omettono sia `FORWARD_ONLY` che `SCROLL`, l'impostazione predefinita è `FORWARD_ONLY`, a meno che non sia specificata la parola chiave `STATIC`, `KEYSET` o `DYNAMIC`. L'impostazione predefinita dei cursori `STATIC`, `KEYSET` e `DYNAMIC` è `SCROLL`. A differenza delle API di database, ad esempio ODBC e ADO, l'opzione `FORWARD_ONLY` è supportata con i cursori `STATIC`, `KEYSET` e `DYNAMIC` [!INCLUDE[tsql](../../includes/tsql-md.md)].  
-  
+FORWARD_ONLY  
+Specifica che il cursore può solo spostarsi in avanti e scorrere dalla prima all'ultima riga. `FETCH NEXT` è l'unica opzione di recupero supportata. Tutte le istruzioni INSERT, UPDATE e DELETE eseguite dall'utente corrente (o di cui è stato eseguito il commit da altri utenti) che interessano le righe del set di risultati sono visibili nel momento in cui le righe vengono recuperate. Poiché lo scorrimento all'indietro del cursore non è consentito, tuttavia, le modifiche apportate alle righe nel database dopo il recupero delle righe stesse non sono visibili tramite il cursore. I cursori forward-only sono dinamici per impostazione predefinita, vale a dire che tutte le modifiche vengono rilevate durante l'elaborazione della riga corrente. Questo consente maggiore rapidità di apertura del cursore e la visualizzazione nel set di risultati degli aggiornamenti apportati alle tabelle sottostanti. I cursori forward-only non supportano lo scorrimento all'indietro, ma le applicazioni possono tornare all'inizio del set di risultati chiudendo e riaprendo il cursore. Se si specifica l'opzione `FORWARD_ONLY` senza alcuna delle parole chiave `STATIC`, `KEYSET` o `DYNAMIC`, il cursore fungerà da cursore dinamico. Se si omettono sia `FORWARD_ONLY` che `SCROLL`, l'impostazione predefinita è `FORWARD_ONLY`, a meno che non sia specificata la parola chiave `STATIC`, `KEYSET` o `DYNAMIC`. L'impostazione predefinita dei cursori `STATIC`, `KEYSET` e `DYNAMIC` è `SCROLL`. A differenza delle API di database, ad esempio ODBC e ADO, l'opzione `FORWARD_ONLY` è supportata con i cursori `STATIC`, `KEYSET` e `DYNAMIC` [!INCLUDE[tsql](../../includes/tsql-md.md)].  
+   
  STATIC  
- Definisce un cursore che crea una copia temporanea dei dati utilizzati dal cursore. La risposta alle richieste indirizzate al cursore viene formulata tramite questa tabella temporanea in **tempdb**. Le modifiche alle tabelle di base non vengono pertanto riportate nei dati restituiti dalle operazioni di recupero eseguite in questo cursore, in cui non è consentito apportare modifiche.  
+Specifica che il cursore deve sempre visualizzare il set di risultati com'era quando il cursore è stato aperto la prima volta e creare una copia temporanea dei dati che deve usare. Tutte le richieste al cursore ricevono risposta da questa tabella temporanea in **tempdb**. Di conseguenza gli inserimenti, gli aggiornamenti e le eliminazioni eseguiti nelle tabelle di base non si riflettono nei dati restituiti dalle operazioni di recupero eseguite in questo cursore e le modifiche apportate all'appartenenza, all'ordine o ai valori del set di risultati dopo l'apertura del cursore non vengono rilevate da quest'ultimo. I cursori statici possono rilevare le proprie operazioni di aggiornamento, eliminazione e inserimento, anche se tale rilevamento non è obbligatorio per cursori di questo tipo. Si supponga, ad esempio, che un cursore statico recuperi una riga e che un'altra applicazione aggiorni in seguito tale riga. Se l'applicazione recupera nuovamente la riga dal cursore statico, i valori che rileva sono invariati, nonostante le modifiche apportate dall'altra applicazione. Sono supportati tutti i tipi di scorrimento. 
   
- KEYSET  
- Specifica che all'apertura del cursore l'appartenenza e l'ordine delle righe nel cursore sono fissi. Il set di chiavi che identifica le righe in modo univoco è incluso in una tabella di **tempdb** denominata **keyset**.  
-  
+KEYSET  
+Specifica che all'apertura del cursore l'appartenenza e l'ordine delle righe nel cursore sono fissi. Il set di chiavi che identifica le righe in modo univoco è incluso in una tabella di **tempdb** denominata **keyset**. Questo cursore offre funzionalità intermedie di cursore statico e cursore dinamico, per quanto riguarda la facoltà di quest'ultimo di rilevare le modifiche. Come un cursore statico, non sempre rileva le modifiche all'appartenenza e all'ordine del set di risultati. Come un cursore dinamico, rileva le modifiche ai valori delle righe nel set di risultati. I cursori gestiti da keyset vengono controllati da un set di identificatori univoci (chiavi), noti come keyset. Le chiavi sono costituite da un set di colonne che identificano in modo univoco le righe del set di risultati. Il keyset corrisponde al set di valori di chiave di tutte le righe restituite dall'istruzione della query. Con i cursori gestiti da keyset viene generata e salvata una chiave per ogni riga nel cursore e tale chiave viene archiviata nella workstation client o nel server. Quando si accede a ogni riga, la chiave archiviata viene usata per recuperare i valori correnti dei dati dall'origine dati. In un cursore gestito da keyset, quando il set di chiavi è completamente popolato, l'appartenenza del set di risultati è bloccata. Le aggiunte o gli aggiornamenti successivi che interessano l'appartenenza faranno parte del set di risultati solo quando verrà riaperto. Le modifiche ai valori dei dati, apportate dal proprietario del keyset o da altri processi, sono visibili mentre l'utente scorre il set di risultati:
+-  Se una riga viene eliminata, un tentativo di recuperarla restituisce un valore di `@@FETCH_STATUS` pari a -2, poiché la riga eliminata viene visualizzata come gap nel set di risultati. La chiave per la riga è presente nel keyset, ma la riga non esiste più nel set di risultati. 
+-  Gli inserimenti eseguiti all'esterno del cursore da altri processi sono visibili solo se il cursore viene chiuso e riaperto. Gli inserimenti eseguiti dall'interno del cursore sono visibili alla fine del set di risultati.
+-  Le operazioni di aggiornamento di valori di chiave dall'esterno del cursore sono simili a un'operazione di eliminazione della riga precedente seguita da un'operazione di inserimento della nuova riga. La riga con i nuovi valori non è visibile e i tentativi di recuperare la riga con i valori precedenti restituiranno il valore -2 per la funzione `@@FETCH_STATUS`. I nuovi valori sono visibili se l'aggiornamento viene effettuato tramite il cursore con l'aggiunta della clausola `WHERE CURRENT OF`. 
+
 > [!NOTE]  
 > Se la query fa riferimento ad almeno una tabella priva di indice univoco, il cursore keyset viene convertito in cursore statico.  
   
- Le modifiche a valori non chiave apportate nelle tabelle di base dal proprietario del cursore o confermate tramite commit da altri utenti sono visibili quando il proprietario scorre il cursore. Gli inserimenti eseguiti da altri utenti non sono visibili (tali inserimenti non possono essere eseguiti tramite un cursore [!INCLUDE[tsql](../../includes/tsql-md.md)] del server). Se una riga viene eliminata, il tentativo di recuperarla restituirà un valore -2 per la funzione `@@FETCH_STATUS`. Le operazioni di aggiornamento di valori di chiave dall'esterno del cursore sono simili a un'operazione di eliminazione della riga precedente seguita da un'operazione di inserimento della nuova riga. La riga con i nuovi valori non è visibile e i tentativi di recuperare la riga con i valori precedenti restituiranno il valore -2 per la funzione `@@FETCH_STATUS`. I nuovi valori sono visibili se l'aggiornamento viene effettuato tramite il cursore con l'aggiunta della clausola `WHERE CURRENT OF`.  
+DYNAMIC  
+Definisce un cursore che riflette tutte le modifiche apportate ai dati delle righe nel relativo set di risultati quando l'utente scorre il cursore e recupera un nuovo record, indipendentemente dal fatto che le modifiche vengano eseguite dall'interno del cursore o da altri utenti all'esterno del cursore stesso. Di conseguenza tutte le istruzioni di inserimento, aggiornamento ed eliminazione eseguite da tutti gli utenti sono visibili tramite il cursore. I valori dei dati, l'ordine e l'appartenenza delle righe possono cambiare a ogni operazione di recupero. L'opzione di recupero `ABSOLUTE` non è supportata con i cursori dinamici. Gli aggiornamenti eseguiti all'esterno del cursore risultano visibili solo dopo l'operazione di commit, a meno che il livello di isolamento della transazione non sia impostato su `UNCOMMITTED`. Si supponga, ad esempio, che un cursore dinamico recuperi due righe e un'altra applicazione aggiorni in seguito una di queste righe ed elimini l'altra. Se a questo punto il cursore dinamico recupera tali righe, non troverà la riga eliminata, ma visualizzerà i nuovi valori per la riga aggiornata. 
   
- DYNAMIC  
- Definisce un cursore in cui, durante lo scorrimento, vengono riportate tutte le modifiche ai dati apportate alle righe nel set di risultati. I valori dei dati, l'ordine e l'appartenenza delle righe possono cambiare a ogni operazione di recupero. L'opzione ABSOLUTE dell'istruzione FETCH non è supportata con cursori dinamici.  
-  
- FAST_FORWARD  
- Specifica un cursore `FORWARD_ONLY`, `READ_ONLY` con le ottimizzazioni delle prestazioni abilitate. Non è possibile specificare l'opzione `FAST_FORWARD` se è specificata l'opzione `SCROLL` o `FOR_UPDATE`.  
+FAST_FORWARD  
+Specifica un cursore `FORWARD_ONLY`, `READ_ONLY` con le ottimizzazioni delle prestazioni abilitate. Non è possibile specificare l'opzione `FAST_FORWARD` se è specificata l'opzione `SCROLL` o `FOR_UPDATE`. Questo tipo di cursore non consente modifiche ai dati dall'interno del cursore.  
   
 > [!NOTE]  
->  Le opzioni `FAST_FORWARD` e `FORWARD_ONLY` possono essere usate nella stessa istruzione `DECLARE CURSOR`.  
+> Le opzioni `FAST_FORWARD` e `FORWARD_ONLY` possono essere usate nella stessa istruzione `DECLARE CURSOR`.  
   
- READ_ONLY  
- Impedisce gli aggiornamenti eseguiti tramite il cursore. Non è possibile fare riferimento al cursore in una clausola `WHERE CURRENT OF` di un'istruzione `UPDATE` o `DELETE`. Questa opzione è prioritaria rispetto alla funzionalità di aggiornamento predefinita di un cursore.  
+READ_ONLY  
+Impedisce gli aggiornamenti eseguiti tramite il cursore. Non è possibile fare riferimento al cursore in una clausola `WHERE CURRENT OF` di un'istruzione `UPDATE` o `DELETE`. Questa opzione è prioritaria rispetto alla funzionalità di aggiornamento predefinita di un cursore.  
   
- SCROLL_LOCKS  
- Specifica che gli aggiornamenti o le eliminazioni posizionate eseguite tramite il cursore avranno esito positivo. Durante la lettura nel cursore [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] blocca le righe in modo che siano disponibili per modifiche successive. Non è possibile specificare l'opzione `SCROLL_LOCKS` se è specificata l'opzione `FAST_FORWARD` o `STATIC`.  
+SCROLL_LOCKS  
+Specifica che gli aggiornamenti o le eliminazioni posizionate eseguite tramite il cursore avranno esito positivo. Durante la lettura nel cursore [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] blocca le righe in modo che siano disponibili per modifiche successive. Non è possibile specificare l'opzione `SCROLL_LOCKS` se è specificata l'opzione `FAST_FORWARD` o `STATIC`.  
   
- OPTIMISTIC  
- Specifica che gli aggiornamenti o le eliminazioni posizionate eseguite tramite il cursore non avranno esito positivo se la riga ha subito un aggiornamento dopo la lettura nel cursore. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] non blocca le righe man mano che vengono lette nel cursore. Per determinare se la riga è stata modificata dopo la lettura nel cursore, vengono usati confronti tra i valori della colonna **timestamp** oppure un valore di checksum se la tabella non include una colonna **timestamp**. Se la riga è stata modificata, i tentativi di eseguire un aggiornamento o un'eliminazione posizionata hanno esito negativo. Non è possibile specificare l'opzione `OPTIMISTIC` se è specificata l'opzione `FAST_FORWARD`.  
+OPTIMISTIC  
+Specifica che gli aggiornamenti o le eliminazioni posizionate eseguite tramite il cursore non avranno esito positivo se la riga ha subito un aggiornamento dopo la lettura nel cursore. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] non blocca le righe man mano che vengono lette nel cursore. Per determinare se la riga è stata modificata dopo la lettura nel cursore, vengono usati confronti tra i valori della colonna **timestamp** oppure un valore di checksum se la tabella non include una colonna **timestamp**. Se la riga è stata modificata, i tentativi di eseguire un aggiornamento o un'eliminazione posizionata hanno esito negativo. Non è possibile specificare l'opzione `OPTIMISTIC` se è specificata l'opzione `FAST_FORWARD`.  
   
  TYPE_WARNING  
  Specifica che deve essere inviato un messaggio di avviso al client quando il cursore viene convertito in modo implicito dal tipo richiesto in un altro tipo.  
@@ -130,21 +131,21 @@ DECLARE cursor_name CURSOR [ LOCAL | GLOBAL ]
  Istruzione SELECT standard che definisce il set di risultati del cursore. Le parole chiave `COMPUTE`, `COMPUTE BY`, `FOR BROWSE` e `INTO` non sono consentite all'interno dell'argomento *select_statement* della dichiarazione di un cursore.  
   
 > [!NOTE]  
->  Nella dichiarazione di un cursore è possibile usare un hint per la query. Se tuttavia si usa anche la clausola `FOR UPDATE OF`, specificare `OPTION (<query_hint>)` subito dopo.  
+> Nella dichiarazione di un cursore è possibile usare un hint per la query. Se tuttavia si usa anche la clausola `FOR UPDATE OF`, specificare `OPTION (<query_hint>)` subito dopo.  
   
- Se le clausole nell'argomento *select_statement* sono in conflitto con la funzionalità del tipo di cursore richiesto, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] converte il cursore in modo implicito in un altro tipo. Per ulteriori informazioni, vedere l'argomento relativo alla conversione implicita dei cursori.  
+Se le clausole nell'argomento *select_statement* sono in conflitto con la funzionalità del tipo di cursore richiesto, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] converte il cursore in modo implicito in un altro tipo. Per ulteriori informazioni, vedere l'argomento relativo alla conversione implicita dei cursori.  
   
- FOR UPDATE [OF *column_name* [**,**...*n*]]  
- Definisce le colonne aggiornabili nel cursore. Se si specifica `OF <column_name> [, <... n>]`, è possibile apportare modifiche solo nelle colonne elencate. Se l'istruzione `UPDATE` viene specificata senza un elenco di colonne, è possibile aggiornare tutte le colonne, a meno che non sia stata specificata l'opzione di concorrenza `READ_ONLY`.  
+FOR UPDATE [OF *column_name* [**,**...*n*]]  
+Definisce le colonne aggiornabili nel cursore. Se si specifica `OF <column_name> [, <... n>]`, è possibile apportare modifiche solo nelle colonne elencate. Se l'istruzione `UPDATE` viene specificata senza un elenco di colonne, è possibile aggiornare tutte le colonne, a meno che non sia stata specificata l'opzione di concorrenza `READ_ONLY`.  
   
 ## <a name="remarks"></a>Remarks  
 `DECLARE CURSOR` definisce gli attributi di un cursore server [!INCLUDE[tsql](../../includes/tsql-md.md)], ad esempio il comportamento dello scorrimento e la query usata per compilare il set di risultati su cui il cursore opera. L'istruzione `OPEN` popola il set di risultati e l'istruzione `FETCH` restituisce una riga di questo set. L'istruzione `CLOSE` rilascia il set di risultati corrente associato al cursore. L'istruzione `DEALLOCATE` rilascia le risorse usate dal cursore.  
   
- La prima forma dell'istruzione `DECLARE CURSOR` dichiara il funzionamento del cursore tramite la sintassi ISO. La seconda forma dell'istruzione `DECLARE CURSOR` usa estensioni di [!INCLUDE[tsql](../../includes/tsql-md.md)] che consentono di definire cursori in base allo stesso tipo di cursore usato nelle funzioni di cursore delle API di database ODBC o ADO.  
+La prima forma dell'istruzione `DECLARE CURSOR` dichiara il funzionamento del cursore tramite la sintassi ISO. La seconda forma dell'istruzione `DECLARE CURSOR` usa estensioni di [!INCLUDE[tsql](../../includes/tsql-md.md)] che consentono di definire cursori in base allo stesso tipo di cursore usato nelle funzioni di cursore delle API di database ODBC o ADO.  
   
- Non è possibile combinare le due forme dell'istruzione. Se si specifica la parola chiave `SCROLL` o `INSENSITIVE` prima della parola chiave `CURSOR`, non è possibile specificare parole chiave tra le parole chiave `CURSOR` e `FOR <select_statement>`. Se si specifica una parola chiave tra le parole chiave `CURSOR` e `FOR <select_statement>`, non è possibile specificare `SCROLL` o `INSENSITIVE` prima della parola chiave `CURSOR`.  
+Non è possibile combinare le due forme dell'istruzione. Se si specifica la parola chiave `SCROLL` o `INSENSITIVE` prima della parola chiave `CURSOR`, non è possibile specificare parole chiave tra le parole chiave `CURSOR` e `FOR <select_statement>`. Se si specifica una parola chiave tra le parole chiave `CURSOR` e `FOR <select_statement>`, non è possibile specificare `SCROLL` o `INSENSITIVE` prima della parola chiave `CURSOR`.  
   
- Se un'istruzione `DECLARE CURSOR` che usa la sintassi [!INCLUDE[tsql](../../includes/tsql-md.md)] non specifica `READ_ONLY`, `OPTIMISTIC` o `SCROLL_LOCKS`, il valore predefinito viene stabilito come segue:  
+Se un'istruzione `DECLARE CURSOR` che usa la sintassi [!INCLUDE[tsql](../../includes/tsql-md.md)] non specifica `READ_ONLY`, `OPTIMISTIC` o `SCROLL_LOCKS`, il valore predefinito viene stabilito come segue:  
   
 -   Se l'istruzione `SELECT` non supporta aggiornamenti (autorizzazioni insufficienti, accesso a tabelle remote che non supportano aggiornamenti e così via), il cursore viene impostato come `READ_ONLY`.  
   
@@ -152,9 +153,9 @@ DECLARE cursor_name CURSOR [ LOCAL | GLOBAL ]
   
 -   L'impostazione predefinita dei cursori `DYNAMIC` e `KEYSET` è `OPTIMISTIC`.  
   
- È possibile fare riferimento a nomi di cursore solo tramite altre istruzioni [!INCLUDE[tsql](../../includes/tsql-md.md)]. Non è possibile fare riferimento ai nomi di cursore con funzioni API del database. Dopo la dichiarazione del cursore, ad esempio, non è possibile fare riferimento al nome del cursore tramite le funzioni o i metodi di OLE DB, ODBC o ADO. Le righe del cursore non possono essere recuperate tramite le funzioni o i metodi di recupero API, ma solo utilizzando istruzioni FETCH [!INCLUDE[tsql](../../includes/tsql-md.md)].  
+È possibile fare riferimento a nomi di cursore solo tramite altre istruzioni [!INCLUDE[tsql](../../includes/tsql-md.md)]. Non è possibile fare riferimento ai nomi di cursore con funzioni API del database. Dopo la dichiarazione del cursore, ad esempio, non è possibile fare riferimento al nome del cursore tramite le funzioni o i metodi di OLE DB, ODBC o ADO. Le righe del cursore non possono essere recuperate tramite le funzioni o i metodi di recupero API, ma solo utilizzando istruzioni FETCH [!INCLUDE[tsql](../../includes/tsql-md.md)].  
   
- Dopo la dichiarazione di un cursore è possibile eseguire le stored procedure di sistema seguenti per determinare le caratteristiche del cursore.  
+Dopo la dichiarazione di un cursore è possibile eseguire le stored procedure di sistema seguenti per determinare le caratteristiche del cursore.  
   
 |Stored procedure di sistema|Descrizione|  
 |------------------------------|-----------------|  
@@ -185,7 +186,7 @@ OPEN vend_cursor
 FETCH NEXT FROM vend_cursor;  
 ```  
   
-### <a name="b-using-nested-cursors-to-produce-report-output"></a>B. Utilizzo di cursori annidati per la generazione di report  
+### <a name="b-using-nested-cursors-to-produce-report-output"></a>b. Utilizzo di cursori annidati per la generazione di report  
  Nell'esempio seguente viene illustrato in che modo è possibile nidificare i cursori per generare report complessi. Il cursore interno viene dichiarato per ogni fornitore.  
   
 ```sql  

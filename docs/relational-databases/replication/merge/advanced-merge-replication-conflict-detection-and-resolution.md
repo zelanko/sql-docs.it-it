@@ -20,12 +20,12 @@ ms.assetid: 063d3d9c-ccb5-4fab-9d0c-c675997428b4
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 98cdf238c4e88e6121e96fec911ad86ba1a7db7e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 7cf815386b00ca70ceacbb549b9dbccd50c9a482
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47852349"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53206350"
 ---
 # <a name="advanced-merge-replication---conflict-detection-and-resolution"></a>Replica di tipo merge avanzata - Rilevamento e risoluzione dei conflitti
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -98,13 +98,13 @@ ms.locfileid: "47852349"
   
 -   [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]: [Specificare una sottoscrizione di tipo merge e la priorità per la risoluzione dei conflitti &#40;SQL Server Management Studio&#41;](../../../relational-databases/replication/specify-a-merge-subscription-type-and-conflict-resolution-priority.md)  
   
--   Programmazione [!INCLUDE[tsql](../../../includes/tsql-md.md)] della replica e programmazione di Replication Management Objects (RMO): [Create a Pull Subscription](../../../relational-databases/replication/create-a-pull-subscription.md) e [Create a Push Subscription](../../../relational-databases/replication/create-a-push-subscription.md)  
+-   Programmazione [!INCLUDE[tsql](../../../includes/tsql-md.md)] della replica e programmazione di Replication Management Objects (RMO): [Creare una sottoscrizione pull](../../../relational-databases/replication/create-a-pull-subscription.md) e [Creare una sottoscrizione push](../../../relational-databases/replication/create-a-push-subscription.md)  
   
 ### <a name="interactive-resolver"></a>Sistema di risoluzione interattivo  
  La replica prevede un'interfaccia utente del sistema di risoluzione interattivo che può essere utilizzata insieme al sistema di risoluzione dei conflitti predefinito basato sulla priorità o a un sistema di risoluzione dei conflitti di articolo. Quando si esegue la sincronizzazione su richiesta tramite Gestione sincronizzazione [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Windows, il sistema di risoluzione interattivo visualizza i dati del conflitto in fase di esecuzione e consente di selezionare il modo in cui risolvere i conflitti. Per ulteriori informazioni sull'attivazione della risoluzione interattiva e sull'avvio del sistema di risoluzione interattivo, vedere [Interactive Conflict Resolution](../../../relational-databases/replication/merge/advanced-merge-replication-conflict-interactive-resolution.md).  
   
 ## <a name="viewing-conflicts"></a>Visualizzazione dei conflitti  
- Il modo più diretto per visualizzare i conflitti consiste nell'utilizzare Visualizzatore conflitti di replica, disponibile in [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] (anche in[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] sono incluse stored procedure per l'esecuzione di query nelle tabelle dei conflitti). Il Visualizzatore conflitti e il sistema di risoluzione interattivo sono strumenti simili, ma il sistema di risoluzione interattivo consente di risolvere i conflitti al momento della sincronizzazione, mentre il Visualizzatore conflitti è concepito per visualizzare i conflitti dopo la risoluzione. Se i metadati del conflitto sono ancora disponibili nelle tabelle di sistema (vengono conservati per 14 giorni per impostazione predefinita), è possibile sovrascrivere i risultati della risoluzione del conflitto nel Visualizzatore conflitti. Tuttavia, se è richiesto un intervento diretto, è consigliabile utilizzare il sistema di risoluzione interattivo.  
+ Il modo più diretto per visualizzare i conflitti è usare Visualizzatore conflitti di replica, disponibile in [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] (anche in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] sono incluse stored procedure per l'esecuzione di query nelle tabelle dei conflitti). Il Visualizzatore conflitti e il sistema di risoluzione interattivo sono strumenti simili, ma il sistema di risoluzione interattivo consente di risolvere i conflitti al momento della sincronizzazione, mentre il Visualizzatore conflitti è concepito per visualizzare i conflitti dopo la risoluzione. Se i metadati del conflitto sono ancora disponibili nelle tabelle di sistema (vengono conservati per 14 giorni per impostazione predefinita), è possibile sovrascrivere i risultati della risoluzione del conflitto nel Visualizzatore conflitti. Tuttavia, se è richiesto un intervento diretto, è consigliabile utilizzare il sistema di risoluzione interattivo.  
   
 > [!NOTE]  
 >  I conflitti a livello di record logici non vengono visualizzati nel Visualizzatore conflitti. Per visualizzare informazioni relative a questi conflitti, utilizzare le stored procedure di replica. Per altre informazioni, vedere [Visualizzare le informazioni sui conflitti per le pubblicazioni di tipo merge &#40;programmazione Transact-SQL della replica&#41;](../../../relational-databases/replication/view-conflict-information-for-merge-publications.md).  
@@ -131,7 +131,7 @@ ms.locfileid: "47852349"
   
 -   [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]: [Visualizzare e risolvere i conflitti di dati per le pubblicazioni di tipo merge &#40;SQL Server Management Studio&#41;](../../../relational-databases/replication/view-and-resolve-data-conflicts-for-merge-publications.md)  
   
--   Programmazione [!INCLUDE[tsql](../../../includes/tsql-md.md)] della replica: [Visualizzare le informazioni sui conflitti per le pubblicazioni di tipo merge &#40;programmazione Transact-SQL della replica&#41;](../../../relational-databases/replication/view-conflict-information-for-merge-publications.md)  
+-   Programmazione della replica [!INCLUDE[tsql](../../../includes/tsql-md.md)]: [Visualizzare le informazioni sui conflitti per le pubblicazioni di tipo merge &#40;programmazione Transact-SQL della replica&#41;](../../../relational-databases/replication/view-conflict-information-for-merge-publications.md)  
   
 ## <a name="see-also"></a>Vedere anche  
  [Sincronizzare i dati](../../../relational-databases/replication/synchronize-data.md)  

@@ -60,12 +60,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: cc42802f6263e7e7609ef6c11aa6dda4114cee97
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 56dff4af5345359e5da37e4aae355f5c56b8228a
+ms.sourcegitcommit: 467b2c708651a3a2be2c45e36d0006a5bbe87b79
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52503648"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53980483"
 ---
 # <a name="alter-table-transact-sql"></a>ALTER TABLE (Transact-SQL)
 
@@ -733,7 +733,7 @@ Per altre informazioni, vedere [Funzionamento delle operazioni sugli indici onli
   
  Specifica una posizione in cui spostare le righe di dati attualmente presenti a livello foglia nell'indice cluster. La tabella viene spostata nella nuova posizione. Questa opzione è valida solo per i vincoli che creano un indice cluster.  
   
-> [!NOTE]  
+> [!NOTE]
 >  In questo contesto, default non è una parola chiave, ma un identificatore per il filegroup predefinito e deve essere delimitato, come in MOVE TO **"** default **"** o MOVE TO **[** default **]**. Se si specifica "**"** default **"**, l'opzione QUOTED_IDENTIFIER deve essere impostata su ON per la sessione corrente. Si tratta dell'impostazione predefinita. Per altre informazioni, vedere [SET QUOTED_IDENTIFIER &#40;Transact-SQL&#41;](../../t-sql/statements/set-quoted-identifier-transact-sql.md).  
   
 { CHECK | NOCHECK } CONSTRAINT  
@@ -791,7 +791,7 @@ Per la restrizione **SWITCH** durante la replica, vedere [Replicare tabelle e in
 Gli indici columnstore non cluster compilati per [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2016 CTP1 e per il database SQL prima della versione V12 sono in un formato di sola lettura. Prima di poter eseguire un'operazione PARTITION, è necessario ricompilare gli indici columnstore non cluster nel formato corrente, vale a dire in un formato aggiornabile.  
   
 SET **(** FILESTREAM_ON = { *partition_scheme_name* | *filestream_filegroup_name* |         **"** default **"** | **"** NULL **"** }**)**  
-**Si applica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (da[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]). [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] non supporta `FILESTREAM`.  
+**Si applica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (da [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]). [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] non supporta `FILESTREAM`.  
   
 Specifica dove vengono archiviati i dati FILESTREAM.  
   
@@ -892,7 +892,7 @@ Tutte le opzioni vengono applicate a una tabella con un indice cluster. Se nella
  Nome del set di colonne. Un set di colonne è una rappresentazione XML non tipizzata che combina tutte le colonne di tipo sparse di una tabella in un output strutturato. Un set di colonne non può essere aggiunto a una tabella che contiene colonne di tipo sparse. Per altre informazioni sui set di colonne, vedere [Utilizzare set di colonne](../../relational-databases/tables/use-column-sets.md).  
   
  { ENABLE | DISABLE } FILETABLE_NAMESPACE  
- **Si applica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (da[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]).  
+ **Si applica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (da [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]).  
   
  Consente di abilitare o disabilitare i vincoli definiti dal sistema su una tabella FileTable. Può essere utilizzato solo con una tabella FileTable.  
   
@@ -1119,7 +1119,7 @@ ALTER TABLE dbo.doc_exa ADD column_b VARCHAR(20) NULL ;
 GO  
 ```  
   
-#### <a name="b-adding-a-column-with-a-constraint"></a>B. Aggiunta di una colonna con un vincolo  
+#### <a name="b-adding-a-column-with-a-constraint"></a>b. Aggiunta di una colonna con un vincolo  
  Nell'esempio seguente viene aggiunta una nuova colonna con un vincolo `UNIQUE`.  
   
 ```sql  
@@ -1345,7 +1345,7 @@ GO
 ALTER TABLE dbo.doc_exb DROP COLUMN column_c, column_d;  
 ```  
   
-#### <a name="b-dropping-constraints-and-columns"></a>B. Eliminazione di vincoli e colonne  
+#### <a name="b-dropping-constraints-and-columns"></a>b. Eliminazione di vincoli e colonne  
  Nel primo esempio viene rimosso un vincolo `UNIQUE` da una tabella. Nel secondo esempio vengono rimossi due vincoli e una singola colonna.  
   
 ```sql  
@@ -1421,7 +1421,7 @@ DROP TABLE dbo.doc_exy ;
 GO  
 ```  
   
-#### <a name="b-changing-the-size-of-a-column"></a>B. Modifica delle dimensioni di una colonna  
+#### <a name="b-changing-the-size-of-a-column"></a>b. Modifica delle dimensioni di una colonna  
  Nell'esempio seguente vengono aumentate le dimensioni di una colonna **varchar** e la precisione e la scala di una colonna **decimal**. Poiché le colonne contengono dati, le relative dimensioni possono solo essere aumentate. Si noti inoltre che `col_a` è definito in un indice univoco. Le dimensioni di `col_a` possono ancora essere aumentate poiché il tipo di dati è **varchar** e l'indice non è il risultato di un vincolo PRIMARY KEY.  
   
 ```sql  
@@ -1528,7 +1528,7 @@ WITH (DATA_COMPRESSION = PAGE ON PARTITIONS(1) ) ;
   
  Per altri esempi sulla compressione dei dati, vedere [Compressione dei dati](../../relational-databases/data-compression/data-compression.md).  
   
-#### <a name="b-modifying-a-columnstore-table-to-change-archival-compression"></a>B. Modifica di una tabella columnstore per modificare la compressione dell'archivio  
+#### <a name="b-modifying-a-columnstore-table-to-change-archival-compression"></a>b. Modifica di una tabella columnstore per modificare la compressione dell'archivio  
  Nell'esempio seguente viene compressa una partizione di tabella columnstore applicando un algoritmo di compressione aggiuntivo. In questo modo si riducono le dimensioni della tabella, ma si aumenta il tempo necessario per l'archiviazione e il recupero. È utile per l'archiviazione o in situazioni in cui è richiesto uno spazio inferiore ed è possibile concedere più tempo per l'archiviazione e il recupero.  
   
 **Si applica a** : da [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] fino a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] e [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
@@ -1636,7 +1636,7 @@ ALTER TABLE dbo.cnst_example CHECK CONSTRAINT salary_cap;
 INSERT INTO dbo.cnst_example VALUES (4,'Eric James',110000) ;  
 ```  
   
-#### <a name="b-disabling-and-re-enabling-a-trigger"></a>B. Disabilitazione e riabilitazione di un trigger  
+#### <a name="b-disabling-and-re-enabling-a-trigger"></a>b. Disabilitazione e riabilitazione di un trigger  
  Nell'esempio seguente viene utilizzata l'opzione `DISABLE TRIGGER` di `ALTER TABLE` per disabilitare il trigger e consentire un inserimento che altrimenti violerebbe il trigger. `ENABLE TRIGGER` viene quindi utilizzato per abilitare nuovamente il trigger.  
   
 ```sql  
@@ -1690,7 +1690,7 @@ REBUILD WITH
 ;  
 ```  
   
-#### <a name="b-online-alter-column"></a>B. Modifica colonna online  
+#### <a name="b-online-alter-column"></a>b. Modifica colonna online  
  L'esempio seguente illustra come eseguire un'operazione di modifica colonna con l'opzione ONLINE.  
   
 **Si applica a** : da [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] fino a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] e [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
@@ -1730,7 +1730,7 @@ ALTER TABLE InsurancePolicy
 SET (SYSTEM_VERSIONING = ON (HISTORY_RETENTION_PERIOD = 1 YEAR));  
 ```  
   
-#### <a name="b-migrate-an-existing-solution-to-use-system-versioning"></a>B. Eseguire la migrazione di una soluzione esistente per usare il controllo delle versioni di sistema  
+#### <a name="b-migrate-an-existing-solution-to-use-system-versioning"></a>b. Eseguire la migrazione di una soluzione esistente per usare il controllo delle versioni di sistema  
  Nell'esempio seguente viene illustrato come eseguire la migrazione per il controllo delle versioni di sistema da una soluzione che usa i trigger per simulare il supporto temporale. In questo esempio si presuppone l'esistenza di un soluzione in cui siano usate una tabella `ProjectTask` e una tabella `ProjectTaskHistory` per la soluzione esistente, vale a dire le colonne `Changed Date` e `Revised Date` per i periodi. Tali colonne di periodo non devono usare il tipo di dati `datetime2` e la tabella `ProjectTask` deve avere una chiave primaria definita.  
 
 ```sql  
@@ -1799,7 +1799,7 @@ WHERE p.partition_id IS NOT NULL
     AND t.name = 'FactResellerSales';  
 ```  
   
-### <a name="b-determining-boundary-values-for-a-partitioned-table"></a>B. Determinazione dei valori limite per una tabella partizionata  
+### <a name="b-determining-boundary-values-for-a-partitioned-table"></a>b. Determinazione dei valori limite per una tabella partizionata  
  Tramite la query seguente vengono restituiti i valori limite per ogni partizione nella tabella `FactResellerSales` .  
   
 ```sql  

@@ -14,12 +14,12 @@ ms.assetid: 8f74dd31-c9ca-4537-8760-0c7648f0787d
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: f99cba0597faad9da7250097f1ca8e866bd00e21
-ms.sourcegitcommit: 1a5448747ccb2e13e8f3d9f04012ba5ae04bb0a3
+ms.openlocfilehash: 7d04286e2b8703e7d06a9913b421f69a94234b25
+ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51560428"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53591055"
 ---
 # <a name="revert-a-database-to-a-database-snapshot"></a>Ripristinare un database a uno snapshot del database
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -31,9 +31,9 @@ ms.locfileid: "51560428"
   
      [Prerequisiti](#Prerequisites)  
   
-     [Security](#Security)  
+     [Sicurezza](#Security)  
   
--   **To Revert a Database to a Database Snapshot, using:**  [Transact-SQL](#TsqlProcedure)  
+-   **Per ripristinare un database a uno snapshot del database tramite:**  [Transact-SQL](#TsqlProcedure)  
   
 ##  <a name="BeforeYouBegin"></a> Prima di iniziare  
   
@@ -101,7 +101,7 @@ ms.locfileid: "51560428"
   
      Per un'operazione di ripristino è necessario disporre delle autorizzazioni RESTORE DATABASE nel database di origine. Utilizzare quindi l'istruzione Transact-SQL per ripristinare il database:  
   
-     RESTORE DATABASE *nome_database* FROM DATABASE_SNAPSHOT **=***nome_snapshot_database*  
+     RESTORE DATABASE *nome_database* FROM DATABASE_SNAPSHOT **=**_nome_snapshot_database_  
   
      dove *nome_database* è il database di origine e *nome_snapshot_database* è il nome dello snapshot con cui ripristinare il database. Si noti che in questa istruzione è necessario specificare un nome di snapshot anziché un dispositivo di backup.  
   
@@ -124,7 +124,7 @@ ms.locfileid: "51560428"
   
 -   A. [Ripristino di uno snapshot nel database AdventureWorks](#Reverting_AW)  
   
--   B. [Ripristino di uno snapshot del database Sales](#Reverting_Sales)  
+-   b. [Ripristino di uno snapshot del database Sales](#Reverting_Sales)  
   
 ####  <a name="Reverting_AW"></a> A. Ripristino di uno snapshot nel database AdventureWorks  
  Nell'esempio si presuppone che per il database [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] esista un solo snapshot. Per l'esempio in cui viene creato lo snapshot usato per il ripristino, vedere [Creare uno snapshot del database &#40;Transact-SQL&#41;](../../relational-databases/databases/create-a-database-snapshot-transact-sql.md).  

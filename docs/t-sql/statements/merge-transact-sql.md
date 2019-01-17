@@ -25,12 +25,12 @@ ms.assetid: c17996d6-56a6-482f-80d8-086a3423eecc
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: c541081382065d327e4d056a860aad47462be5a1
-ms.sourcegitcommit: b58d514879f182fac74d9819918188f1688889f3
+ms.openlocfilehash: 939ba409a75d332d0aba97aa972db2ba9eecaf7a
+ms.sourcegitcommit: 467b2c708651a3a2be2c45e36d0006a5bbe87b79
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "50970522"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53980017"
 ---
 # <a name="merge-transact-sql"></a>MERGE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -251,7 +251,7 @@ SET
  Specifica il nome o l'ID di uno o più indici della tabella di destinazione per eseguire un join implicito con la tabella di origine. Per altre informazioni, vedere [Hint di tabella &#40;Transact-SQL&#41;](../../t-sql/queries/hints-transact-sql-table.md).  
   
  \<output_clause>  
- Restituisce una riga per ogni riga in *target_table* aggiornata, inserita o eliminata, senza alcun ordine specifico. Nella clausola di output è possibile specificare **$action**. **$action** è una colonna di tipo **nvarchar(10)** che restituisce per ogni riga uno dei tre valori 'INSERT', 'UPDATE' o 'DELETE', in base all'azione eseguita nella riga stessa. Per altre informazioni sugli argomenti di questa clausola, vedere [Clausola OUTPUT &#40;Transact-SQL&#41;](../../t-sql/queries/output-clause-transact-sql.md).  
+ Restituisce una riga per ogni riga in *target_table* aggiornata, inserita o eliminata, senza alcun ordine specifico. Nella clausola di output è possibile specificare **$action**. **$action** è una colonna di tipo **nvarchar(10)** che restituisce uno dei tre valori per ogni riga: 'INSERT', 'UPDATE' o 'DELETE', secondo l'azione eseguita su quella riga. Per altre informazioni sugli argomenti di questa clausola, vedere [Clausola OUTPUT &#40;Transact-SQL&#41;](../../t-sql/queries/output-clause-transact-sql.md).  
   
  OPTION ( \<query_hint> [ ,...n ] )  
  Specifica che vengono utilizzati hint di ottimizzazione per personalizzare il modo in cui il Motore di database elabora l'istruzione. Per altre informazioni, vedere [Hint per la query &#40;Transact-SQL&#41;](../../t-sql/queries/hints-transact-sql-query.md).  
@@ -317,7 +317,7 @@ SET
 ### <a name="a-using-merge-to-perform-insert-and-update-operations-on-a-table-in-a-single-statement"></a>A. Utilizzo di MERGE per eseguire operazioni INSERT e UPDATE in una tabella in un'unica istruzione  
  Uno scenario comune prevede l'aggiornamento di una o più colonne di una tabella nel caso in cui sia presente una riga corrispondente oppure l'inserimento dei dati come nuova riga nel caso in cui la riga corrispondente non sia presente. Questa operazione viene eseguita in genere passando i parametri a una stored procedure contenente le istruzioni UPDATE e INSERT appropriate. Con l'istruzione MERGE è possibile eseguire entrambe le attività in un'unica istruzione. Nell'esempio seguente viene illustrata una stored procedure nel database [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] che contiene un'istruzione INSERT e un'istruzione UPDATE. La stored procedure viene quindi modificata per eseguire le operazioni equivalenti utilizzando una singola istruzione MERGE.  
   
-```  
+```sql  
 CREATE PROCEDURE dbo.InsertUnitMeasure  
     @UnitMeasureCode nchar(3),  
     @Name nvarchar(25)  
@@ -386,10 +386,10 @@ DROP TABLE #MyTempTable;
 GO  
 ```  
   
-### <a name="b-using-merge-to-perform-update-and-delete-operations-on-a-table-in-a-single-statement"></a>B. Utilizzo di MERGE per eseguire operazioni UPDATE e DELETE in una tabella in un'unica istruzione  
+### <a name="b-using-merge-to-perform-update-and-delete-operations-on-a-table-in-a-single-statement"></a>b. Utilizzo di MERGE per eseguire operazioni UPDATE e DELETE in una tabella in un'unica istruzione  
  Nell'esempio seguente viene utilizzata l'istruzione MERGE per aggiornare la tabella `ProductInventory` nel database di esempio [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] con frequenza giornaliera, in base agli ordini elaborati nella tabella `SalesOrderDetail`. La colonna `Quantity` della tabella `ProductInventory` viene aggiornata sottraendo il numero di ordini effettuati ogni giorno per ciascun prodotto nella tabella `SalesOrderDetail`. Se il numero di ordini per un prodotto riduce il livello delle scorte del prodotto a zero o a un valore inferiore, la riga relativa a tale prodotto viene eliminata dalla tabella `ProductInventory`.  
   
-```  
+```sql  
 CREATE PROCEDURE Production.usp_UpdateInventory  
     @OrderDate datetime  
 AS  
@@ -414,9 +414,9 @@ EXECUTE Production.usp_UpdateInventory '20030501'
 ```  
   
 ### <a name="c-using-merge-to-perform-update-and-insert-operations-on-a-target-table-by-using-a-derived-source-table"></a>C. Utilizzo di MERGE per eseguire operazioni UPDATE e INSERT in una tabella di destinazione utilizzando una tabella di origine derivata  
- Nell'esempio seguente viene utilizzata l'istruzione MERGE per modificare la tabella `SalesReason` nel database [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] eseguendo l'aggiornamento o l'inserimento di righe. Quando il valore di `NewName` nella tabella di origine corrisponde a un valore della colonna `Name` nella tabella di destinazione (`SalesReason`), la colonna `ReasonType` viene aggiornata nella tabella di destinazione. Quando il valore di `NewName` non corrisponde, la riga di origine viene inserita nella tabella di destinazione. La tabella di origine è una tabella derivata che utilizza il costruttore di valori di tabella [!INCLUDE[tsql](../../includes/tsql-md.md)] per specificare più righe per la tabella di origine. Per altre informazioni sull'uso del costruttore di valori di tabella in una tabella derivata, vedere [Costruttore di valori di tabella &#40;Transact-SQL&#41;](../../t-sql/queries/table-value-constructor-transact-sql.md). Nell'esempio viene inoltre illustrato come archiviare i risultati della clausola OUTPUT in una variabile di tabella e viene fornito un riepilogo dei risultati dell'istruzione MERGE mediante l'esecuzione di un'operazione di selezione semplice che restituisce il numero di righe inserite e aggiornate.  
+ Nell'esempio seguente viene utilizzata l'istruzione MERGE per modificare la tabella `SalesReason` nel database [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] eseguendo l'aggiornamento o l'inserimento di righe. Quando il valore di `NewName` nella tabella di origine corrisponde a un valore della colonna `Name` nella tabella di destinazione (`SalesReason`), la colonna `ReasonType` viene aggiornata nella tabella di destinazione. Quando il valore di `NewName` non corrisponde, la riga di origine viene inserita nella tabella di destinazione. La tabella di origine è una tabella derivata che utilizza il costruttore di valori di tabella [!INCLUDE[tsql](../../includes/tsql-md.md)] per specificare più righe per la tabella di origine. Per altre informazioni sull'uso del costruttore di valori di tabella in una tabella derivata, vedere [Costruttore di valori di tabella &#40;Transact-SQL&#41;](../../t-sql/queries/table-value-constructor-transact-sql.md). Nell'esempio viene inoltre illustrato come archiviare i risultati della clausola OUTPUT in una variabile di tabella e quindi creare un riepilogo dei risultati dell'istruzione MERGE eseguendo una semplice operazione di selezione che restituisce il numero di righe inserite e aggiornate.  
   
-```  
+```sql  
 -- Create a temporary table variable to hold the output actions.  
 DECLARE @SummaryOfChanges TABLE(Change VARCHAR(20));  
   
@@ -440,7 +440,7 @@ GROUP BY Change;
 ### <a name="d-inserting-the-results-of-the-merge-statement-into-another-table"></a>D. Inserimento dei risultati dell'istruzione MERGE in un'altra tabella  
  Nell'esempio seguente vengono acquisiti i dati restituiti dalla clausola OUTPUT di un'istruzione MERGE e tali dati vengono inseriti in un'altra tabella. L'istruzione MERGE consente di aggiornare la colonna `Quantity` della tabella `ProductInventory` nel database [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)], in base agli ordini elaborati nella tabella `SalesOrderDetail`. In questo esempio vengono acquisite le righe aggiornate, inserite successivamente in un'altra tabella utilizzata per tenere traccia delle modifiche apportate alle scorte.  
   
-```  
+```sql  
 CREATE TABLE Production.UpdatedInventory  
     (ProductID INT NOT NULL, LocationID int, NewQty int, PreviousQty int,  
      CONSTRAINT PK_Inventory PRIMARY KEY CLUSTERED (ProductID, LocationID));  

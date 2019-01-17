@@ -5,8 +5,7 @@ ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: mds
 ms.reviewer: ''
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.topic: conceptual
 helpviewer_keywords:
 - subscription views [Master Data Services], creating
@@ -15,12 +14,12 @@ ms.assetid: a5e28961-af16-414a-9845-d2e06aac5214
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 23e50b94464d252431d153c9d68247cbff410b7d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f9619bca36ec488fdd5e25b5b9eb9a82370d7049
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47597050"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52754673"
 ---
 # <a name="create-a-subscription-view-to-export-data-master-data-services"></a>Creare una vista sottoscrizioni per esportare i dati (Master Data Services)
 
@@ -82,11 +81,11 @@ ms.locfileid: "47597050"
   
  Quando si fa clic su una vista, vengono visualizzate le informazioni seguenti.  
   
--   **Creata da**: nome dell'utente che ha creato la vista.  
+-   **Creato da**: Nome dell'utente che ha creato la vista.  
   
 -   **Il**: data e ora di creazione della vista.  
   
--   **Aggiornata da**: nome dell'ultimo utente che ha aggiornato la vista.  
+-   **Aggiornato da**: nome dell'utente che ha aggiornato la vista per ultimo.  
   
 -   **Il**: data e ora dell'ultimo aggiornamento della vista.  
   

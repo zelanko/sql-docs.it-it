@@ -41,12 +41,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current||>=aps-pdw-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: f6ee77ac0a4fc91f9a182c1d893d39d599228da4
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: d4370a2f60a17ee126be5940ec69dbdfc5a03d4f
+ms.sourcegitcommit: 467b2c708651a3a2be2c45e36d0006a5bbe87b79
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52524587"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53980317"
 ---
 # <a name="restore-statements-transact-sql"></a>Istruzioni RESTORE (Transact-SQL)
 Consente di ripristinare i backup del database SQL eseguiti tramite il comando BACKUP. 
@@ -167,7 +167,7 @@ FROM DATABASE_SNAPSHOT = database_snapshot_name
    } = { 'physical_backup_device_name' |  
       @physical_backup_device_name_var }   
 }   
-Note: URL is the format used to specify the location and the file name for the Microsoft Azure Blob. Although Microsoft Azure storage is a service, the implementation is similar to disk and tape to allow for a consistent and seemless restore experince for all the three devices.  
+Note: URL is the format used to specify the location and the file name for the Microsoft Azure Blob. Although Microsoft Azure storage is a service, the implementation is similar to disk and tape to allow for a consistent and seamless restore experience for all the three devices.  
 <files_or_filegroups>::=   
 {   
    FILE = { logical_file_name_in_backup | @logical_file_name_in_backup_var }   
@@ -428,7 +428,7 @@ In tutti gli esempi si presuppone che sia stato eseguito un backup completo del 
 Sono disponibili gli esempi seguenti per l'istruzione RESTORE:  
   
 - A. [Ripristino di un database completo](#restoring_full_db)  
-- B. [Ripristino di backup completi e differenziali del database](#restoring_full_n_differential_db_backups)  
+- b. [Ripristino di backup completi e differenziali del database](#restoring_full_n_differential_db_backups)  
 - C. [Ripristino di un database con la sintassi RESTART](#restoring_db_using_RESTART)  
 - D. [Ripristino di un database e spostamento dei file](#restoring_db_n_move_files)  
 - E. [Copia di un database tramite BACKUP e RESTORE](#copying_db_using_bnr)  
@@ -960,7 +960,7 @@ RESTORE DATABASE SalesInvoices2013
 FROM DISK = '\\xxx.xxx.xxx.xxx\backups\yearly\Invoices2013Full';  
 ```  
   
-### <a name="b-restore-a-full-and-differential-backup"></a>B. Ripristinare un backup completo e un backup differenziale  
+### <a name="b-restore-a-full-and-differential-backup"></a>b. Ripristinare un backup completo e un backup differenziale  
 L'esempio seguente ripristina un backup completo e quindi un backup differenziale nel database SalesInvoices2013  
   
 Il backup completo del database viene ripristinato usando il backup completo archiviato nella directory '\\\xxx.xxx.xxx.xxx\backups\yearly\Invoices2013Full'. Se il ripristino viene completato correttamente, viene ripristinato il backup differenziale nel database SalesInvoices2013.  Il backup differenziale è archiviato nella directory \\\xxx.xxx.xxx.xxx\backups\yearly\Invoices2013Diff.  

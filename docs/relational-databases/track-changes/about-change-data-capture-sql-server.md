@@ -1,6 +1,6 @@
 ---
 title: Informazioni su Change Data Capture (SQL Server) | Microsoft Docs
-ms.date: 03/14/2017
+ms.date: 01/02/2019
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
@@ -14,15 +14,15 @@ ms.assetid: 7d8c4684-9eb1-4791-8c3b-0f0bb15d9634
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 5fc24683d4272a4e93ac7d1e30581fa202588e1e
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: d8c51d95fe74171fe9b90c439c34ea37700419b2
+ms.sourcegitcommit: a11e733bd417905150567dfebc46a137df85a2fa
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52402746"
+ms.lasthandoff: 01/03/2019
+ms.locfileid: "53991874"
 ---
 # <a name="about-change-data-capture-sql-server"></a>Informazioni su Change Data Capture (SQL Server)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
   Change Data Capture consente di registrare le attività di inserimento, aggiornamento ed eliminazione applicate a una tabella di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , rendendo disponibili i dettagli delle modifiche in un formato relazionale facilmente utilizzabile. Le informazioni sulla colonna e i metadati necessari per applicare le modifiche a un ambiente di destinazione vengono acquisiti per le righe modificate e archiviati in tabelle delle modifiche che riflettono la struttura della colonna delle tabelle di origine con rilevamento. Per consentire ai consumer di accedere in modo sistematico ai dati delle modifiche, sono disponibili funzioni con valori di tabella.  
   
  Un buon esempio di consumer di dati cui questa tecnologia è destinata è un'applicazione ETL di estrazione, trasformazione e caricamento. Un'applicazione di questo tipo carica incrementalmente dati delle modifiche dalle tabelle di origine di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in un data warehouse oppure in un data mart. Anche se la rappresentazione delle tabelle di origine all'interno del data warehouse deve riflettere le modifiche in tali tabelle, una tecnologia end-to-end che aggiorna una replica dell'origine non è appropriata. È necessario invece un flusso affidabile di dati delle modifiche strutturato in modo che i consumer possano applicarlo a rappresentazioni di destinazione dei dati diverse. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Change Data Capture fornisce questa tecnologia.  
@@ -44,7 +44,7 @@ ms.locfileid: "52402746"
   
  Ogni operazione di inserimento o eliminazione applicata a una tabella di origine viene visualizzata in un'unica riga all'interno della tabella delle modifiche. Le colonne di dati della riga che costituisce il risultato di un'operazione di inserimento contengono i valori della colonna dopo l'inserimento, mentre le colonne di dati della riga che costituisce il risultato di un'operazione di eliminazione contengono i valori della colonna prima dell'eliminazione. Per eseguire un'operazione di aggiornamento sono necessarie due voci di riga, una per identificare i valori della colonna prima dell'aggiornamento e l'altra per identificare i valori della colonna dopo l'aggiornamento.  
   
- Ogni riga di una tabella delle modifiche contiene inoltre metadati aggiuntivi che consentono di interpretare l'attività di modifica. La colonna __$start_lsn identifica il numero di sequenza del file di log (LSN) del commit assegnato alla modifica. Il valore LSN di commit identifica le modifiche di cui è stato eseguito il commit all'interno della stessa transazione e ordina inoltre tali transazioni. La colonna \_\_$seqval può essere usata per ordinare più modifiche che si verificano all'interno di una stessa transazione, mentre la colonna \_\_$operation registra l'operazione associata alla modifica in base al seguente schema: 1 = eliminazione, 2 = inserimento, 3 = aggiornamento (prima dell'immagine) e 4 = aggiornamento (dopo l'immagine). La colonna \_\_$update_mask, infine, è una maschera di bit variabile con un bit definito per ogni colonna acquisita. Per le voci relative all'inserimento e all'eliminazione dei dati, tutti i bit della maschera di aggiornamento verranno sempre impostati. Per le righe aggiornate, tuttavia, saranno impostati solo i bit corrispondenti alle colonne modificate.  
+ Ogni riga di una tabella delle modifiche contiene inoltre metadati aggiuntivi che consentono di interpretare l'attività di modifica. La colonna __$start_lsn identifica il numero di sequenza del file di log (LSN) del commit assegnato alla modifica. Il valore LSN di commit identifica le modifiche di cui è stato eseguito il commit all'interno della stessa transazione e ordina inoltre tali transazioni. La colonna \_\_$seqval può essere usata per ordinare più modifiche che si verificano all'interno di una stessa transazione, La colonna \_\_$operation registra l'operazione associata alla modifica: 1 = eliminazione, 2 = inserimento, 3 = aggiornamento (prima dell'immagine) e 4 = aggiornamento (dopo l'immagine). La colonna \_\_$update_mask, infine, è una maschera di bit variabile con un bit definito per ogni colonna acquisita. Per le voci relative all'inserimento e all'eliminazione dei dati, tutti i bit della maschera di aggiornamento verranno sempre impostati. Per le righe aggiornate, tuttavia, saranno impostati solo i bit corrispondenti alle colonne modificate.  
   
 ## <a name="change-data-capture-validity-interval-for-a-database"></a>Intervallo di validità di Change Data Capture per un database  
  L'intervallo di validità di Change Data Capture per un database è rappresentato dal periodo di tempo durante il quale i dati delle modifiche sono disponibili per le istanze di acquisizione. L'intervallo di validità ha inizio nel momento in cui viene creata la prima istanza di acquisizione e si estende fino al momento corrente.  

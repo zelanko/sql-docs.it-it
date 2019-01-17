@@ -1,6 +1,7 @@
 ---
-title: Timeout lease e controllo integrità del gruppo di disponibilità SQL Server | Microsoft Docs
-ms.custom: ''
+title: Funzionamento del timeout lease e controllo integrità del gruppo di disponibilità
+description: Funzionamento e linee guida per i timeout lease, cluster e controllo integrità per i gruppi di disponibilità Always On.
+ms.custom: seodec18
 ms.date: 05/02/2018
 ms.prod: sql
 ms.reviewer: ''
@@ -10,14 +11,14 @@ ms.assetid: ''
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 25728b2c12d31d53f9638d08c952d75ae929bf9c
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: c1c337e4a43082cef846623073054ae75513dc31
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52393984"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53209080"
 ---
-# <a name="mechanics-and-guidelines-of-lease-cluster-and-health-check-timeouts"></a>Funzionamento e linee guida per i timeout lease, cluster e controllo integrità 
+# <a name="mechanics-and-guidelines-of-lease-cluster-and-health-check-timeouts-for-always-on-availability-groups"></a>Funzionamento e linee guida per i timeout lease, cluster e controllo integrità per i gruppi di disponibilità Always On 
 
 Le differenze nell'hardware, nel software e nelle configurazioni cluster, nonché le diverse esigenze di disponibilità e prestazioni delle applicazioni richiedono una configurazione specifica per i timeout controllo integrità, cluster e lease. Alcune applicazioni e carichi di lavoro richiedono un monitoraggio più aggressivo per limitare il tempo di inattività dopo gli errori hardware. Altre situazioni registrano una maggior tolleranza per i problemi di rete temporanei e le attese dovute all'uso intensivo delle risorse e possono accettare failover più lenti. 
 
@@ -128,7 +129,7 @@ Il meccanismo lease è controllato da un valore singolo specifico per ogni grupp
    
 ### <a name="health-check-values"></a>Valori del controllo integrità 
 
-Il controllo integrità Always On è gestito da due valori: FailureConditionLevel e HealthCheckTimeout. FailureConditionLevel indica il livello di tolleranza a condizioni di errore specifiche segnalate da `sp_server_diagnostics`, mentre HealthCheckTimeout consente di configurare il tempo per il quale la DLL della risorsa può funzionare senza ricevere un aggiornamento da `sp_server_diagnostics`. L'intervallo di aggiornamento per `sp_server_diagnostics` è sempre HealthCheckTimeout/3. 
+Due valori controllano il controllo integrità Always On: FailureConditionLevel e HealthCheckTimeout. FailureConditionLevel indica il livello di tolleranza a condizioni di errore specifiche segnalate da `sp_server_diagnostics`, mentre HealthCheckTimeout consente di configurare il tempo per il quale la DLL della risorsa può funzionare senza ricevere un aggiornamento da `sp_server_diagnostics`. L'intervallo di aggiornamento per `sp_server_diagnostics` è sempre HealthCheckTimeout/3. 
 
 Per configurare il livello della condizione di failover, usare l'opzione `FAILURE_CONDITION_LEVEL = <n>` dell'istruzione `CREATE` o `ALTER` `AVAILABILITY GROUP`, dove `<n>` è un numero intero incluso tra 1 e 5. Il comando seguente imposta il livello della condizione di errore su 1 per il gruppo di disponibilità "AG1": 
 
@@ -155,7 +156,7 @@ ALTER AVAILABILITY GROUP AG1 SET (HEALTH_CHECK_TIMEOUT =60000);
 
 ## <a name="see-also"></a>Vedere anche    
 
-[Repliche secondarie attive: Backup in repliche secondarie &#40;Gruppi di disponibilità AlwaysOn&#41;](active-secondaries-backup-on-secondary-replicas-always-on-availability-groups.md)
+[Repliche secondarie attive: Backup su repliche secondarie &#40;Gruppi di disponibilità Always On&#41;](active-secondaries-backup-on-secondary-replicas-always-on-availability-groups.md)
 
 [ALTER AVAILABILITY GROUP &#40;Transact-SQL&#41;](../../../t-sql/statements/alter-availability-group-transact-sql.md)         
 

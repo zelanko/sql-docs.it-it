@@ -5,8 +5,7 @@ ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: mds
 ms.reviewer: ''
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.topic: conceptual
 helpviewer_keywords:
 - models [Master Data Services], creating models
@@ -15,12 +14,12 @@ ms.assetid: 9bb3b3b3-bde8-44aa-ad62-eaae21188141
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: f21bdeceed35e7eb680d5dd1c2b74863e3a29dbb
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: f08318c5dbd42137b7c818e5bb4b0a3d1e34fae8
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52398787"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52748833"
 ---
 # <a name="create-a-model-master-data-services"></a>Creare un modello (Master Data Services)
 
@@ -59,19 +58,19 @@ ms.locfileid: "52398787"
   
 -   **Stato**: stato del modello. Quando si fa clic sul pulsante **Salva modello**, viene visualizzata l'immagine ![Aggiornamento](../master-data-services/media/mds-model-status-updating.png "Aggiornamento") che indica che il modello è in fase di aggiornamento. Se si verificano errori durante la creazione o la modifica di un modello, viene visualizzata l'immagine ![Errore](../master-data-services/media/mds-model-status-error.png "Errore"). In caso contrario, lo stato è OK e viene visualizzata l'immagine ![OK](../master-data-services/media/mds-model-status-ok.png "OK") .  
   
--   **Nome**: nome del modello.  
+-   **Nome**: Nome del modello.  
   
--   **Descrizione**: descrizione del modello.  
+-   **Descrizione**: Descrizione del modello.  
   
--   **Giorni di conservazione log**: numero di giorni per i quali il log per il modello viene conservato.  
+-   **Giorni di conservazione log**: numero di giorni di conservazione del log per il modello.  
   
--   **Creato da**: nome utente dell'utente che ha creato il modello.  
+-   **Creato da**: Nome utente dell'utente che ha creato il modello.  
   
--   **Data e ora di creazione**: data e ora di creazione del modello.  
+-   **Data e ora di creazione**: Data e ora di creazione del modello.  
   
--   **Aggiornato da**: nome utente dell'ultimo utente che ha aggiornato l'attributo.  
+-   **Aggiornato da**: Nome utente dell'utente che ha aggiornato il modello per ultimo.  
   
--   **Data e ora di aggiornamento**: data e ora dell'ultimo aggiornamento del modello.  
+-   **Data e ora di aggiornamento**: Data e ora dell'ultimo aggiornamento del modello.  
   
 ## <a name="next-steps"></a>Next Steps  
   

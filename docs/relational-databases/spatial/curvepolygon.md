@@ -11,19 +11,19 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 10532564d2310ad3b8eaf28c2693bafb423d81a2
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: b621fa1c1b21e6b1131c65524675c3da9890e6ac
+ms.sourcegitcommit: 467b2c708651a3a2be2c45e36d0006a5bbe87b79
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51658845"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53980157"
 ---
 # <a name="curvepolygon"></a>CurvePolygon
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   Un **CurvePolygon** è una superficie topologicamente chiusa definita da un anello di delimitazione esterno e nessuno o più anelli interni  
   
 > [!IMPORTANT]  
->  Per una descrizione dettagliata ed esempi delle funzionalità spaziali introdotte in [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], tra cui il sottotipo **CurvePolygon** , scaricare il white paper relativo alle [nuove funzionalità spaziali in SQL Server 2012](https://go.microsoft.com/fwlink/?LinkId=226407).  
+> Per una descrizione dettagliata ed esempi delle funzionalità spaziali introdotte in [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], tra cui il sottotipo **CurvePolygon** , scaricare il white paper relativo alle [nuove funzionalità spaziali in SQL Server 2012](https://go.microsoft.com/fwlink/?LinkId=226407).  
   
  Nei criteri seguenti vengono definiti attributi di un'istanza **CurvePolygon** :  
   
@@ -46,11 +46,11 @@ ms.locfileid: "51658845"
 3.  I punti iniziale e finale condividono le stesse coordinate X e Y.  
   
     > [!NOTE]  
-    >  I valori Z e ; vengono ignorati.  
+    > I valori Z e ; vengono ignorati.  
   
- L'esempio seguente illustra le istanze **CurvePolygon** accettate.  
+L'esempio seguente illustra le istanze **CurvePolygon** accettate.  
   
-```  
+```sql  
 DECLARE @g1 geometry = 'CURVEPOLYGON EMPTY';  
 DECLARE @g2 geometry = 'CURVEPOLYGON((0 0, 0 0, 0 0, 0 0))';  
 DECLARE @g3 geometry = 'CURVEPOLYGON((0 0 1, 0 0 2, 0 0 3, 0 0 3))'  
@@ -58,67 +58,57 @@ DECLARE @g4 geometry = 'CURVEPOLYGON(CIRCULARSTRING(1 3, 3 5, 4 7, 7 3, 1 3))';
 DECLARE @g5 geography = 'CURVEPOLYGON((-122.3 47, 122.3 -47, 125.7 -49, 121 -38, -122.3 47))';  
 ```  
   
- `@g3` viene accettata anche se i punti iniziale e finale hanno valori Z diversi perché i valori Z vengono ignorati. `@g5` viene accettata anche se l'istanza del tipo **geography** non è valida.  
+`@g3` viene accettata anche se i punti iniziale e finale hanno valori Z diversi perché i valori Z vengono ignorati. `@g5` viene accettata anche se l'istanza del tipo **geography** non è valida.  
   
- Gli esempi seguenti generano `System.FormatException`.  
+Gli esempi seguenti generano `System.FormatException`.  
   
-```  
+```sql  
 DECLARE @g1 geometry = 'CURVEPOLYGON((0 5, 0 0, 0 0, 0 0))';  
 DECLARE @g2 geometry = 'CURVEPOLYGON((0 0, 0 0, 0 0))';  
 ```  
   
- `@g1` non viene accettata perché i punti iniziale e finale non hanno lo stesso valore Y. `@g2` non viene accettata perché l'anello non dispone di un numero di punti sufficiente.  
+`@g1` non viene accettata perché i punti iniziale e finale non hanno lo stesso valore Y. `@g2` non viene accettata perché l'anello non dispone di un numero di punti sufficiente.  
   
 ### <a name="valid-instances"></a>Istanze valide  
- Perché un'istanza **CurvePolygon** sia valida, è necessario che l'anello interno e quello esterno soddisfino i criteri seguenti:  
+Perché un'istanza **CurvePolygon** sia valida, è necessario che l'anello interno e quello esterno soddisfino i criteri seguenti:  
   
 1.  Possono toccarsi solo in corrispondenza di singoli punti tangenti.  
-  
 2.  Non possono incrociarsi.  
-  
 3.  Ogni anello deve contenere almeno quattro punti.  
-  
 4.  Ogni anello deve essere un tipo di curva accettabile.  
   
- Le istanze**CurvePolygon** devono inoltre soddisfare criteri specifici a seconda del fatto che siano del tipo di dati **geometry** o **geography** .  
+Le istanze**CurvePolygon** devono inoltre soddisfare criteri specifici a seconda del fatto che siano del tipo di dati **geometry** o **geography** .  
   
 #### <a name="geometry-data-type"></a>Tipo di dati geometry  
- Un'istanza **geometryCurvePolygon** valida deve avere gli attributi seguenti:  
+Un'istanza **geometryCurvePolygon** valida deve avere gli attributi seguenti:  
   
 1.  Tutti gli anelli interni devono essere contenuti nell'anello esterno.  
-  
 2.  Può disporre di più anelli interni, ma un anello interno non può contenere un altro anello interno.  
-  
 3.  Nessun anello può incrociare se stesso o un altro anello.  
-  
 4.  Gli anelli possono toccarsi solo in corrispondenza di singoli punti tangenti (il numero di punti dove gli anelli si toccano deve essere limitato).  
-  
 5.  L'interno del poligono deve essere connesso.  
   
- L'esempio seguente illustra un'istanza **geometryCurvePolygon** valida.  
+L'esempio seguente illustra un'istanza **geometryCurvePolygon** valida.  
   
-```  
+```sql  
 DECLARE @g1 geometry = 'CURVEPOLYGON EMPTY';  
 DECLARE @g2 geometry = 'CURVEPOLYGON(CIRCULARSTRING(1 3, 3 5, 4 7, 7 3, 1 3))';  
 SELECT @g1.STIsValid(), @g2.STIsValid();  
 ```  
   
- Le istanze CurvePolygon dispongono delle stesse regole di validità delle istanze Polygon, ad eccezione del fatto che le istanze CurvePolygon possono accettare i nuovi tipi di segmento di arco circolare. Per altri esempi di istanze valide o non valide, vedere [Polygon](../../relational-databases/spatial/polygon.md).  
+Le istanze CurvePolygon dispongono delle stesse regole di validità delle istanze Polygon, ad eccezione del fatto che le istanze CurvePolygon possono accettare i nuovi tipi di segmento di arco circolare. Per altri esempi di istanze valide o non valide, vedere [Polygon](../../relational-databases/spatial/polygon.md).  
   
 #### <a name="geography-data-type"></a>Tipo di dati geography  
- Un'istanza **geographyCurvePolygon** valida deve avere gli attributi seguenti:  
+Un'istanza **geographyCurvePolygon** valida deve avere gli attributi seguenti:  
   
 1.  L'interno del poligono viene connesso utilizzando il lato sinistro della regola.  
-  
 2.  Nessun anello può incrociare se stesso o un altro anello.  
-  
 3.  Gli anelli possono toccarsi solo in corrispondenza di singoli punti tangenti (il numero di punti dove gli anelli si toccano deve essere limitato).  
-  
 4.  L'interno del poligono deve essere connesso.  
   
- Nell'esempio seguente viene illustrata un'istanza CurvePolygon geography valida.  
+Nell'esempio seguente viene illustrata un'istanza CurvePolygon geography valida.  
   
-```  
+```sql  
 DECLARE @g geography = 'CURVEPOLYGON((-122.3 47, 122.3 47, 125.7 49, 121 38, -122.3 47))';  
 SELECT @g.STIsValid();  
 ```  
@@ -133,7 +123,7 @@ DECLARE @g geometry;
 SET @g = geometry::Parse('CURVEPOLYGON EMPTY');  
 ```  
   
-### <a name="b-declaring-and-instantiating-a-geometry-instance-with-a-curvepolygon-in-the-same-statement"></a>B. Dichiarazione e creazione di un'istanza Geometry utilizzando un'istanza CurvePolygon nella stessa istruzione  
+### <a name="b-declaring-and-instantiating-a-geometry-instance-with-a-curvepolygon-in-the-same-statement"></a>b. Dichiarazione e creazione di un'istanza Geometry utilizzando un'istanza CurvePolygon nella stessa istruzione  
  Questo frammento di codice illustra come dichiarare e inizializzare un'istanza geometry con un'istanza **CurvePolygon** nella stessa istruzione:  
   
 ```sql  
@@ -182,7 +172,7 @@ IF @g2.STIsValid() = 1
 SELECT @g1.STIsValid() AS G1, @g2.STIsValid() AS G2;  
 ```  
   
- Sia per @g1 che per @g2 viene usato lo stesso anello di delimitazione esterno: un cerchio con un raggio di 5 ed entrambi usano un quadrato per un anello interno.  Tuttavia, l'istanza @g1 è valida, mentre l'istanza @g2 non lo è.  @g2 è non valida perché l'anello interno divide lo spazio interno delimitato dall'anello esterno in quattro aree separate.  Nel disegno seguente viene illustrata questa condizione:  
+ Sia per `@g1` che per `@g2` viene usato lo stesso anello di delimitazione esterno: un cerchio con un raggio di 5 ed entrambi usano un quadrato per un anello interno.  Tuttavia, l'istanza `@g1` è valida, mentre l'istanza `@g2` non lo è. @g2 è non valida perché l'anello interno divide lo spazio interno delimitato dall'anello esterno in quattro aree separate. Nel disegno seguente viene illustrata questa condizione:  
   
 ## <a name="see-also"></a>Vedere anche  
  [Polygon](../../relational-databases/spatial/polygon.md)   

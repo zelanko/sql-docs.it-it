@@ -1,7 +1,7 @@
 ---
 title: Opzioni per file e filegroup ALTER DATABASE (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 11/16/2018
+ms.date: 12/11/2018
 ms.prod: sql
 ms.prod_service: sql-database
 ms.reviewer: ''
@@ -43,12 +43,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: 1191ae28c9683a89d06830c942a22941fccfb943
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 5a91f7bf27dea953cde7186262c8b28b2cd0cf7e
+ms.sourcegitcommit: 85bfaa5bac737253a6740f1f402be87788d691ef
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52403557"
+ms.lasthandoff: 12/17/2018
+ms.locfileid: "53329016"
 ---
 # <a name="alter-database-transact-sql-file-and-filegroup-options"></a>Opzioni per file e filegroup ALTER DATABASE (Transact-SQL) 
 
@@ -144,8 +144,8 @@ Rimuove la descrizione del file logico da un'istanza di [!INCLUDE[ssNoVersion](.
 *logical_file_name*  
 Nome logico utilizzato in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] per fare riferimento al file.  
   
-> [!WARNING]  
-> Sarà possibile rimuovere un file di database con backup `FILE_SNAPSHOT` associati, ma non saranno eliminati tutti gli snapshot associati per evitare di invalidare i backup che fanno riferimento al file di database. Il file verrà troncato, ma non sarà eliminato fisicamente in modo da mantenere inalterati i backup FILE_SNAPSHOT. Per altre informazioni, vedere [Backup e ripristino di SQL Server con il servizio di archiviazione BLOB di Microsoft Azure](../../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md). **Si applica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (da[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]).  
+> [!WARNING]
+> Sarà possibile rimuovere un file di database con backup `FILE_SNAPSHOT` associati, ma non saranno eliminati tutti gli snapshot associati per evitare di invalidare i backup che fanno riferimento al file di database. Il file verrà troncato, ma non sarà eliminato fisicamente in modo da mantenere inalterati i backup FILE_SNAPSHOT. Per altre informazioni, vedere [Backup e ripristino di SQL Server con il servizio di archiviazione BLOB di Microsoft Azure](../../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md). **Si applica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (da [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]).  
   
 MODIFY FILE  
 Specifica il file da modificare. È possibile modificare una sola proprietà \<filespec> alla volta. L'opzione NAME deve essere sempre specificata in \<filespec> per identificare il file da modificare. Se si specifica l'opzione SIZE, le nuove dimensioni del file devono essere superiori a quelle correnti.  
@@ -341,15 +341,15 @@ I database di sola lettura non consentono modifiche dei dati e pertanto:
 - La compattazione del database non è possibile.  
 - Non vengono attivati blocchi nei database di sola lettura e ciò può portare a migliori prestazioni di esecuzione delle query.  
   
-> [!NOTE]  
+> [!NOTE]
 > La parola chiave `READONLY` verrà rimossa a partire da una delle prossime versioni di [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Evitare l'utilizzo di `READONLY` un nuovo progetto di sviluppo e prevedere interventi di modifica per le applicazioni in cui `READONLY` è utilizzato. In alternativa, usare `READ_ONLY` .  
   
 READ_WRITE | READWRITE  
 Specifica che il filegroup è di lettura/scrittura. Sono consentiti aggiornamenti degli oggetti contenuti nel filegroup. Per modificare questo stato, è necessario disporre dell'accesso esclusivo al database. Per altre informazioni, vedere la clausola SINGLE_USER.  
   
-> [!NOTE]  
+> [!NOTE]
 > La parola chiave `READWRITE` verrà rimossa a partire da una delle prossime versioni di [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Evitare l'uso di `READWRITE` in un nuovo progetto di sviluppo e prevedere interventi di modifica nelle applicazioni in cui è attualmente usata la parola chiave `READWRITE`. Usare al suo posto la parola chiave `READ_WRITE`.  
-  
+> 
 > [!TIP]
 > Per determinare lo stato di queste opzioni, è possibile esaminare la colonna **is_read_only** nella vista del catalogo  **sys.databases** oppure la proprietà **Updateability** della funzione `DATABASEPROPERTYEX`.  
   
@@ -428,7 +428,7 @@ ADD FILE
 GO  
 ```  
   
-### <a name="b-adding-a-filegroup-with-two-files-to-a-database"></a>B. Aggiunta di un filegroup con due file a un database  
+### <a name="b-adding-a-filegroup-with-two-files-to-a-database"></a>b. Aggiunta di un filegroup con due file a un database  
 Nell'esempio seguente viene creato il filegroup `Test1FG1` nel database [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] e vengono aggiunti due file da 5 MB al filegroup.  
   
 ```sql  
@@ -887,13 +887,13 @@ I database di sola lettura non consentono modifiche dei dati e pertanto:
 - La compattazione del database non è possibile.  
 - Non vengono attivati blocchi nei database di sola lettura e ciò può portare a migliori prestazioni di esecuzione delle query.  
   
-> [!NOTE]  
+> [!NOTE]
 >  La parola chiave READONLY verrà rimossa a partire da una delle prossime versioni di [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Evitarne l'utilizzo in un nuovo progetto di sviluppo e prevedere interventi di modifica nelle applicazioni in cui è attualmente implementata. Utilizzare READ_ONLY in alternativa.  
   
 READ_WRITE | READWRITE  
 Specifica che il filegroup è di lettura/scrittura. Sono consentiti aggiornamenti degli oggetti contenuti nel filegroup. Per modificare questo stato, è necessario disporre dell'accesso esclusivo al database. Per altre informazioni, vedere la clausola SINGLE_USER.  
   
-> [!NOTE]  
+> [!NOTE]
 >  La parola chiave `READWRITE` verrà rimossa a partire da una delle prossime versioni di [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Evitare l'uso di `READWRITE` in un nuovo progetto di sviluppo e prevedere interventi di modifica nelle applicazioni in cui è attualmente usata la parola chiave `READWRITE`. Usare al suo posto la parola chiave `READ_WRITE`.  
   
 Per determinare lo stato di queste opzioni, è possibile esaminare la colonna **is_read_only** nella vista del catalogo  **sys.databases** oppure la proprietà **Updateability** della funzione `DATABASEPROPERTYEX`.  
@@ -925,7 +925,7 @@ GO
   
 ```  
   
-### <a name="b-adding-a-filegroup-with-two-files-to-a-database"></a>B. Aggiunta di un filegroup con due file a un database  
+### <a name="b-adding-a-filegroup-with-two-files-to-a-database"></a>b. Aggiunta di un filegroup con due file a un database  
 Nell'esempio seguente viene creato il filegroup `Test1FG1` nel database [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] e vengono aggiunti due file da 5 MB al filegroup.  
   
 ```sql  
@@ -1092,5 +1092,6 @@ GO
 [sys.filegroups](../../relational-databases/system-catalog-views/sys-filegroups-transact-sql.md)   
 [sys.master_files](../../relational-databases/system-catalog-views/sys-master-files-transact-sql.md)   
 [DBCC SHRINKFILE](../../t-sql/database-console-commands/dbcc-shrinkfile-transact-sql.md)   
-[Filegroup con ottimizzazione per la memoria](../../relational-databases/in-memory-oltp/the-memory-optimized-filegroup.md) 
+[Filegroup con ottimizzazione per la memoria](../../relational-databases/in-memory-oltp/the-memory-optimized-filegroup.md)
 
+::: moniker-end

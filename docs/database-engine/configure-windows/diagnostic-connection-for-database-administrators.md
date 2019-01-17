@@ -21,12 +21,12 @@ ms.assetid: 993e0820-17f2-4c43-880c-d38290bf7abc
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 6d08609edc596006290d5e0bb062701c5f212ff8
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: c51655426d892c4d6e233bc72b7388d200bbce8a
+ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52514700"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53589396"
 ---
 # <a name="diagnostic-connection-for-database-administrators"></a>Connessione di diagnostica per gli amministratori di database
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -93,7 +93,7 @@ ms.locfileid: "52514700"
   
  La porta della connessione DAC viene assegnata dinamicamente da [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] durante l'avvio. Durante la connessione all'istanza predefinita, l'applicazione livello dati evita di usare una richiesta SSRP (Resolution Protocol) di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] al servizio SQL Server Browser. Essa si connette prima sulla porta TCP 1434. Se questo tentativo di connessione termina con esito negativo, la connessione DAC esegue una chiamata SSRP per ottenere la porta. Se [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser non è in attesa di richieste SSRP, la richiesta di connessione restituisce un errore. Vedere il log degli errori per ottenere il numero di porta su cui è in attesa la connessione DAC. Se [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] è configurato per accettare connessioni amministrative remote, è necessario inizializzare l'applicazione livello dati con un numero di porta esplicito:  
   
- **sqlcmd -S tcp:***\<server>,\<porta>*  
+ **sqlcmd -S tcp:**_\<server>,\<porta>_  
   
  Il log degli errori di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] elenca il numero di porta relativo all'applicazione livello dati, che per impostazione predefinita è 1434. Se [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] è configurato per accettare solo applicazioni livello dati locali, eseguire la connessione utilizzando l'adattatore loopback con il comando seguente:  
   

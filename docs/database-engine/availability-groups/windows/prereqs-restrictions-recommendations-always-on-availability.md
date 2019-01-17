@@ -1,6 +1,7 @@
 ---
-title: Prerequisiti, restrizioni e consigli per i gruppi di disponibilità AlwaysOn | Microsoft Docs
-ms.custom: ''
+title: Prerequisiti, restrizioni e consigli per i gruppi di disponibilità
+description: Descrizione dei prerequisiti, delle restrizioni e dei consigli per la distribuzione di un gruppo di disponibilità Always On.
+ms.custom: seodec18
 ms.date: 06/05/2018
 ms.prod: sql
 ms.reviewer: ''
@@ -19,14 +20,14 @@ ms.assetid: edbab896-42bb-4d17-8d75-e92ca11f7abb
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 0343bef5bcd6ba26539bfe3f4a726ab538bb24a1
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: e4aa84ac344bc9ca6d698f1ae3aa26f2a11f8072
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52516466"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53202990"
 ---
-# <a name="prereqs-restrictions-recommendations---always-on-availability-groups"></a>Prerequisiti, restrizioni e consigli per i gruppi di disponibilità AlwaysOn
+# <a name="prerequisites-restrictions-and-recommendations-for-always-on-availability-groups"></a>Prerequisiti, restrizioni e consigli per i gruppi di disponibilità Always On
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
   Questo articolo illustra considerazioni sulla distribuzione di [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)], inclusi prerequisiti, restrizioni e indicazioni su computer host, cluster WSFC (Windows Server Failover Cluster), istanze del server e gruppi di disponibilità. Per ognuno di questi componenti sono indicate le eventuali considerazioni sulla sicurezza e le autorizzazioni richieste.  
@@ -39,7 +40,7 @@ ms.locfileid: "52516466"
   
 ||Funzionalità dipendente|Hotfix|Collegamento|  
 |------|-----------------------|------------|----------|  
-|![Casella di controllo](../../../database-engine/availability-groups/windows/media/checkboxemptycenterxtraspacetopandright.gif "Casella di controllo")|[!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]|L'hotfix per .Net 3.5 SP1 aggiunge il supporto a SQL Client per le funzionalità AlwaysOn di Read-intent, readonly e multisubnetfailover. L'hotfix deve essere installato in ogni server di report di [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] .|KB 2654347: articolo relativo all' [hotfix per .Net 3.5 SP1 per aggiungere supporto alle funzionalità AlwaysOn](https://go.microsoft.com/fwlink/?LinkId=242896)|  
+|![Casella di controllo](../../../database-engine/availability-groups/windows/media/checkboxemptycenterxtraspacetopandright.gif "Casella di controllo")|[!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]|L'hotfix per .Net 3.5 SP1 aggiunge il supporto a SQL Client per le funzionalità AlwaysOn di Read-intent, readonly e multisubnetfailover. L'hotfix deve essere installato in ogni server di report di [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] .|ARTICOLO 2654347 DELLA KNOWLEDGE BASE [Hotfix per .Net 3.5 SP1 per aggiungere supporto alle funzionalità Always On](https://go.microsoft.com/fwlink/?LinkId=242896)|  
   
 
 ###  <a name="SystemRequirements"></a> Elenco di controllo: requisiti (sistema Windows)  
@@ -58,11 +59,11 @@ ms.locfileid: "52516466"
   
 ###  <a name="ComputerRecommendations"></a> Indicazioni per computer in cui sono ospitate repliche di disponibilità (sistema Windows)  
   
--   **Sistemi simili:**  per un gruppo di disponibilità specificato, tutte le repliche di disponibilità devono essere eseguite in sistemi simili in grado di gestire carichi di lavoro identici.  
+-   **Sistemi simili:**  Per un determinato gruppo di disponibilità, tutte le repliche di disponibilità devono essere in sistemi simili, in grado di gestire carichi di lavoro identici.  
   
--   **Schede di rete dedicate:**  per ottimizzare le prestazioni, usare una scheda di rete dedicata (scheda di interfaccia di rete) per [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)].  
+-   **Schede di rete dedicate:**  Per ottenere prestazioni ottimali, utilizzare una scheda di rete dedicata (scheda di interfaccia di rete) per [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)].  
   
--   **Spazio su disco sufficiente:**  in ogni computer in cui una replica di disponibilità è ospitata da un'istanza del server deve essere disponibile spazio su disco sufficiente per tutti i database nel gruppo di disponibilità. Tenere presente che, con l'aumentare delle dimensioni dei database primari, i database secondari corrispondenti aumentano di conseguenza.  
+-   **Spazio su disco sufficiente:**  Ogni computer in cui un'istanza del server ospita una replica di disponibilità deve disporre di spazio su disco sufficiente per tutti i database nel gruppo di disponibilità. Tenere presente che, con l'aumentare delle dimensioni dei database primari, i database secondari corrispondenti aumentano di conseguenza.  
   
 ###  <a name="PermissionsWindows"></a> Autorizzazioni (sistema Windows)  
  Per amministrare un cluster WSFC, l'utente deve essere un amministratore di sistema in ogni nodo del cluster.  
@@ -117,7 +118,7 @@ ms.locfileid: "52516466"
   
  **Contenuto della sezione**  
   
--   [Elenco di controllo: prerequisiti](#PrerequisitesSI)  
+-   [Elenco di controllo: Prerequisiti](#PrerequisitesSI)  
   
 -   [Utilizzo del thread da parte dei gruppi di disponibilità](#ThreadUsage)  
   
@@ -167,7 +168,7 @@ ms.locfileid: "52516466"
   
     -   Tramite un backup di una replica secondaria un thread viene mantenuto nella replica primaria per la durata dell'operazione di backup.  
   
- Per altre informazioni, vedere la pagina relativa alla [serie di informazioni su HADRON riguardanti l'uso del pool di lavoro per database abilitati HADRON in AlwaysOn](https://blogs.msdn.com/b/psssql/archive/2012/05/17/Always%20On-hadron-learning-series-worker-pool-usage-for-hadron-enabled-databases.aspx) (blog del Servizio Supporto Tecnico Clienti per gli ingegneri di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ).  
+ Per altre informazioni, vedere l'articolo relativo alla [serie di informazioni su Always On - HADRON: utilizzo del pool di lavoro per database abilitati HADRON](https://blogs.msdn.com/b/psssql/archive/2012/05/17/Always%20On-hadron-learning-series-worker-pool-usage-for-hadron-enabled-databases.aspx) (blog degli ingegneri del supporto tecnico di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]).  
   
 ###  <a name="PermissionsSI"></a> Autorizzazioni (istanza del server)  
   
@@ -186,7 +187,7 @@ ms.locfileid: "52516466"
   
 ###  <a name="RelatedContentSI"></a> Contenuto correlato (istanza del server)  
   
--   [serie di informazioni su HADRON riguardanti l'uso del pool di lavoro per database abilitati HADRON in AlwaysOn](https://blogs.msdn.com/b/psssql/archive/2012/05/17/Always%20On-hadron-learning-series-worker-pool-usage-for-hadron-enabled-databases.aspx)  
+-   [Serie di informazioni su Always On - HADRON: Utilizzo del pool di lavoro per database abilitati HADRON](https://blogs.msdn.com/b/psssql/archive/2012/05/17/Always%20On-hadron-learning-series-worker-pool-usage-for-hadron-enabled-databases.aspx)  
   
 ##  <a name="NetworkConnect"></a> Consigli sulla connettività di rete  
  Si consiglia di usare gli stessi collegamenti di rete per le comunicazioni tra nodi WSFC e le comunicazioni tra repliche di disponibilità.  L'utilizzo di collegamenti di rete separati può provocare comportamenti imprevisti in caso di errore di alcuni collegamenti (anche in modo intermittente).  
@@ -201,7 +202,7 @@ ms.locfileid: "52516466"
   
 -   [Restrizioni](#RestrictionsFCI)  
   
--   [Elenco di controllo: prerequisiti](#PrerequisitesFCI)  
+-   [Elenco di controllo: Prerequisiti](#PrerequisitesFCI)  
   
 -   [Attività correlate](#RelatedTasksFCIs)  
   
@@ -212,7 +213,7 @@ ms.locfileid: "52516466"
 > [!NOTE]  
 > Le istanze del cluster di failover supportano i volumi condivisi cluster. Per ulteriori informazioni sui volumi condivisi cluster, vedere [Informazioni sui volumi condivisi del cluster in un cluster di failover](https://technet.microsoft.com/library/dd759255.aspx).  
   
--   **I nodi del cluster di un'istanza del cluster di failover possono ospitare solo una replica per un gruppo di disponibilità specificato:** se si aggiunge una replica di disponibilità in un'istanza del cluster di failover, i nodi WSFC che sono i possibili proprietari dell'istanza del cluster di failover non possono ospitare un'altra replica per lo stesso gruppo di disponibilità.  Per evitare possibili conflitti è consigliabile configurare i proprietari possibili per l'istanza del cluster di failover. In tal modo si evita la possibilità che un singolo WSFC tenti l'hosting di due repliche di disponibilità per lo stesso gruppo di disponibilità.
+-   **I nodi del cluster di un'istanza del cluster di failover possono ospitare solo una replica per un gruppo di disponibilità specifico:**  Se si aggiunge una replica di disponibilità in un'istanza del cluster di failover, i nodi di WSFC che sono possibili proprietari dell'istanza del cluster di failover non possono ospitare un'altra replica per lo stesso gruppo di disponibilità.  Per evitare possibili conflitti è consigliabile configurare i proprietari possibili per l'istanza del cluster di failover. In tal modo si evita la possibilità che un singolo WSFC tenti l'hosting di due repliche di disponibilità per lo stesso gruppo di disponibilità.
   
      Inoltre tutte le altre repliche devono essere ospitate da un'istanza di SQL Server 2016 che risiede in un nodo del cluster diverso nello stesso cluster WSFC. L'unica eccezione è che quando viene eseguita la migrazione a un altro cluster, un gruppo di disponibilità può risiedere temporaneamente in due cluster. 
 
@@ -220,7 +221,7 @@ ms.locfileid: "52516466"
   > L'uso di Gestione cluster di failover per lo spostamento di un'*istanza di cluster di failover* che ospita un gruppo di disponibilità in un nodo che *ospita già* una replica dello stesso gruppo di disponibilità può causare la perdita della replica del gruppo di disponibilità, impedendo che venga portato online sul nodo di destinazione. Un singolo nodo di un cluster di failover non può ospitare più di una replica dello stesso gruppo di disponibilità. Per altre informazioni su come si verifica questa situazione e sulle misure da adottare, vedere il blog [Replica unexpectedly dropped in availability group](https://blogs.msdn.microsoft.com/alwaysonpro/2014/02/03/issue-replica-unexpectedly-dropped-in-availability-group/) (Replica rilasciata in modo inatteso nel gruppo di disponibilità). 
 
   
--   **Le istanze del cluster di failover non supportano il failover automatico da gruppi di disponibilità:**  le istanze del cluster di failover non supportano il failover automatico da gruppi di disponibilità, pertanto qualsiasi replica di disponibilità ospitata da un'istanza del cluster di failover può essere configurata solo per il failover manuale.  
+-   **Le istanze del cluster di failover non supportano il failover automatico da parte di gruppi di disponibilità:**  le istanze del cluster di failover non supportano il failover automatico da gruppi di disponibilità, quindi le repliche di disponibilità ospitate da un'istanza del cluster di failover possono essere configurate solo per il failover manuale.  
   
 -   **Modifica del nome di rete di un'istanza del cluster di failover:**  se è necessario modificare il nome di rete di un'istanza del cluster di failover che ospita una replica di disponibilità, è necessario rimuovere la replica dal relativo gruppo di disponibilità e riaggiungerla successivamente a questo gruppo. Non è possibile rimuovere la replica primaria, pertanto se si rinomina un'istanza del cluster di failover in cui è ospitata la replica primaria, è consigliabile eseguire il failover in una replica secondaria e successivamente rimuovere e poi riaggiungere la prima replica primaria. Si noti che la ridenominazione di un'istanza del cluster di failover può comportare la modifica dell'URL del relativo endpoint del mirroring del database. Quando si aggiunge la replica assicurarsi di specificare l'URL dell'endpoint corrente.  
   
@@ -242,7 +243,7 @@ ms.locfileid: "52516466"
   
 -   [Clustering di failover e gruppi di disponibilità &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/failover-clustering-and-always-on-availability-groups-sql-server.md)  
   
--   [Pagina relativa alla guida all'architettura di AlwaysOn in cui viene illustrata la compilazione di una soluzione a disponibilità elevata e di ripristino di emergenza usando istanze del cluster di failover e gruppi di disponibilità](https://technet.microsoft.com/library/jj215886.aspx)  
+-   [Guida all'architettura Always On: compilazione di una soluzione a disponibilità elevata e con ripristino di emergenza usando istanze del cluster di failover e gruppi di disponibilità](https://technet.microsoft.com/library/jj215886.aspx)  
   
 ##  <a name="PrerequisitesForAGs"></a> Prerequisiti e restrizioni dei gruppi di disponibilità  
  **Contenuto della sezione**  
@@ -257,16 +258,16 @@ ms.locfileid: "52516466"
   
 ###  <a name="RestrictionsAG"></a> Restrizioni (gruppi di disponibilità)  
   
--   **Le repliche di disponibilità devono essere ospitate da nodi diversi di un cluster WSFC:** per un gruppo di disponibilità specificato, le repliche di disponibilità devono essere ospitate da istanze del server in esecuzione in nodi diversi dello stesso cluster WSFC. L'unica eccezione è che quando viene eseguita la migrazione a un altro cluster, un gruppo di disponibilità può risiedere temporaneamente in due cluster.  
+-   **Le repliche di disponibilità devono essere ospitate da nodi diversi di un WSFC:**  Per un determinato gruppo di disponibilità, le repliche di disponibilità devono essere ospitate da istanze del server in esecuzione in nodi diversi dello stesso WSFC. L'unica eccezione è che quando viene eseguita la migrazione a un altro cluster, un gruppo di disponibilità può risiedere temporaneamente in due cluster.  
   
     > [!NOTE]  
     >  In ogni macchina virtuale presente nello stesso computer fisico può essere ospitata una replica di disponibilità per lo stesso gruppo di disponibilità, in quanto ogni macchina virtuale costituisce un computer distinto.  
   
--   **Nome univoco del gruppo di disponibilità:** ogni nome di gruppo di disponibilità deve essere univoco nel cluster WSFC. La lunghezza massima consentita per il nome del gruppo di disponibilità è 128 caratteri.  
+-   **Nome univoco del gruppo di disponibilità:**  Ogni nome di gruppo di disponibilità deve essere univoco in WSFC. La lunghezza massima consentita per il nome del gruppo di disponibilità è 128 caratteri.  
   
--   **Repliche di disponibilità:**  ogni gruppo di disponibilità supporta una replica primaria e fino a otto repliche secondarie. È possibile eseguire tutte le repliche in modalità con commit asincrono oppure fino a un massimo di tre in modalità con commit sincrono (una replica primaria con due repliche secondarie sincrone).  
+-   **Repliche di disponibilità:**  Ogni gruppo di disponibilità supporta una replica primaria e fino a otto repliche secondarie. È possibile eseguire tutte le repliche in modalità con commit asincrono oppure fino a un massimo di tre in modalità con commit sincrono (una replica primaria con due repliche secondarie sincrone).  
   
--   **Numero massimo di gruppi di disponibilità e database di disponibilità per computer:** il numero effettivo di database e gruppi di disponibilità che è possibile creare in un computer fisico o in una VM dipende dall'hardware e dal carico di lavoro, tuttavia non esiste un limite imposto. Microsoft ha eseguito test estensivi con 10 gruppi di disponibilità e 100 database per computer fisico. I segnali di sistemi di overload possono includere, a titolo esemplificativo, l'esaurimento del thread di lavoro, tempi di risposta lenti per visualizzazioni di sistema del gruppo di disponibilità e DMV e/o dump del sistema dispatcher bloccati. Assicurarsi di testare completamente l'ambiente con un carico di lavoro simile a quello di produzione per assicurare che possa gestire capacità di carico di lavoro di picco all'interno del contratto sul livello di servizio dell'applicazione. Per i contratti sul livello di servizio occorre considerare il carico in condizioni di errore e i tempi di risposta previsti.  
+-   **Numero massimo di gruppi di disponibilità e database di disponibilità per computer:** il numero effettivo di database e gruppi di disponibilità che è possibile creare in un computer (macchina virtuale o computer fisico) dipende dall'hardware e dal carico di lavoro, tuttavia non esiste un limite imposto. Microsoft ha eseguito test estensivi con 10 gruppi di disponibilità e 100 database per computer fisico. I segnali di sistemi di overload possono includere, a titolo esemplificativo, l'esaurimento del thread di lavoro, tempi di risposta lenti per visualizzazioni di sistema del gruppo di disponibilità e DMV e/o dump del sistema dispatcher bloccati. Assicurarsi di testare completamente l'ambiente con un carico di lavoro simile a quello di produzione per assicurare che possa gestire capacità di carico di lavoro di picco all'interno del contratto sul livello di servizio dell'applicazione. Per i contratti sul livello di servizio occorre considerare il carico in condizioni di errore e i tempi di risposta previsti.  
   
 -   **Non utilizzare Gestione cluster di failover per modificare i gruppi di disponibilità:**  
   
@@ -342,7 +343,7 @@ ms.locfileid: "52516466"
 |![Casella di controllo](../../../database-engine/availability-groups/windows/media/checkboxemptycenterxtraspacetopandright.gif "Casella di controllo")|Deve trattarsi di un database multiutente.|[sys.databases](../../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) (**user_access** = 0)|  
 |![Casella di controllo](../../../database-engine/availability-groups/windows/media/checkboxemptycenterxtraspacetopandright.gif "Casella di controllo")|Non deve essere utilizzato AUTO_CLOSE.|[sys.databases](../../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) (**is_auto_close_on** = 0)|  
 |![Casella di controllo](../../../database-engine/availability-groups/windows/media/checkboxemptycenterxtraspacetopandright.gif "Casella di controllo")|Utilizzare il modello di recupero con registrazione completa (noto anche come modalità di recupero con registrazione completa).|[sys.databases](../../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) (**recovery_model** = 1)|  
-|![Casella di controllo](../../../database-engine/availability-groups/windows/media/checkboxemptycenterxtraspacetopandright.gif "Casella di controllo")|Deve disporre di almeno un backup completo del database.<br /><br /> Nota: dopo aver impostato un database sulla modalità di recupero con registrazione completa, è necessario un backup completo per iniziare la catena di log del recupero con registrazione completa.|[Creazione di un backup completo del database &#40;SQL Server&#41;](../../../relational-databases/backup-restore/create-a-full-database-backup-sql-server.md)|  
+|![Casella di controllo](../../../database-engine/availability-groups/windows/media/checkboxemptycenterxtraspacetopandright.gif "Casella di controllo")|Deve disporre di almeno un backup completo del database.<br /><br /> Nota: Dopo aver impostato un database sulla modalità di recupero con registrazione completa, è necessario un backup completo per iniziare la catena di log del recupero con registrazione completa.|[Creazione di un backup completo del database &#40;SQL Server&#41;](../../../relational-databases/backup-restore/create-a-full-database-backup-sql-server.md)|  
 |![Casella di controllo](../../../database-engine/availability-groups/windows/media/checkboxemptycenterxtraspacetopandright.gif "Casella di controllo")|Non deve appartenere ad alcun gruppo di disponibilità esistente.|[sys.databases](../../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) (**group_database_id** = NULL)|  
 |![Casella di controllo](../../../database-engine/availability-groups/windows/media/checkboxemptycenterxtraspacetopandright.gif "Casella di controllo")|Non deve essere configurato per il mirroring del database.|[sys.database_mirroring](../../../relational-databases/system-catalog-views/sys-database-mirroring-transact-sql.md) Se il database non fa parte del mirroring, tutte le colonne con prefisso "mirroring_" sono NULL.|  
 |![Casella di controllo](../../../database-engine/availability-groups/windows/media/checkboxemptycenterxtraspacetopandright.gif "Casella di controllo")|Prima di aggiungere un database in cui è utilizzato FILESTREAM a un gruppo di disponibilità, verificare che FILESTREAM sia abilitato in ogni istanza del server in cui è o sarà ospitata una replica di disponibilità per il gruppo di disponibilità.|[Abilitare e configurare FILESTREAM](../../../relational-databases/blob/enable-and-configure-filestream.md)|  
@@ -355,11 +356,11 @@ ms.locfileid: "52516466"
   
 -   Se il percorso del file, inclusa la lettera di unità, di un database secondario differisce da quello del database primario corrispondente, si applicano le restrizioni seguenti:  
   
-    -   **[!INCLUDE[ssAoNewAgWiz](../../../includes/ssaonewagwiz-md.md)]/[!INCLUDE[ssAoAddDbWiz](../../../includes/ssaoadddbwiz-md.md)]:**  l'opzione **Completo** nella pagina[Seleziona sincronizzazione dati iniziale](../../../database-engine/availability-groups/windows/select-initial-data-synchronization-page-always-on-availability-group-wizards.md) non è supportata.  
+    -   **[!INCLUDE[ssAoNewAgWiz](../../../includes/ssaonewagwiz-md.md)]/[!INCLUDE[ssAoAddDbWiz](../../../includes/ssaoadddbwiz-md.md)]:**  l'opzione **Completo** nella pagina [Seleziona sincronizzazione dati iniziale](../../../database-engine/availability-groups/windows/select-initial-data-synchronization-page-always-on-availability-group-wizards.md) non è supportata.  
   
-    -   **RESTORE WITH MOVE:**  per creare i database secondari, i file di database devono essere RESTORED WITH MOVE in ogni istanza di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] in cui è ospitata una replica secondaria.  
+    -   **RESTORE WITH MOVE:**  per creare i database secondari, i file di database devono essere sottoposti a RESTORE WITH MOVE in ogni istanza di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] in cui è ospitata una replica secondaria.  
   
-    -   **Impatto sulle operazioni di aggiunta di file:**  un'operazione di aggiunta di file successiva nella replica primaria può generare un errore nei database secondari. Questo errore può causare la sospensione dei database secondari. Questa situazione, a sua volta, può causare l'attivazione dello stato NON IN SINCRONIZZAZIONE delle repliche secondarie.  
+    -   **Impatto sulle operazioni di aggiunta di file:**  un'operazione di aggiunta file successiva nella replica primaria potrebbe non riuscire nei database secondari. Questo errore può causare la sospensione dei database secondari. Questa situazione, a sua volta, può causare l'attivazione dello stato NON IN SINCRONIZZAZIONE delle repliche secondarie.  
   
         > [!NOTE]  
         >  Per informazioni sulla risposta a un'operazione di aggiunta di file errata, vedere [Risolvere i problemi relativi a una operazione di aggiunta file non riuscita &#40;Gruppi di disponibilità AlwaysOn&#41;](../../../database-engine/availability-groups/windows/troubleshoot-a-failed-add-file-operation-always-on-availability-groups.md).  
@@ -384,9 +385,9 @@ ms.locfileid: "52516466"
   
 -   [Microsoft SQL Server Always On Solutions Guide for High Availability and Disaster Recovery (Guida alle soluzioni AlwaysOn di Microsoft SQL Server per la disponibilità elevata e il ripristino di emergenza)](https://go.microsoft.com/fwlink/?LinkId=227600)  
   
--   [SQL Server AlwaysOn Team Blog: blog ufficiale del team di SQL Server AlwaysOn](https://blogs.msdn.microsoft.com/sqlalwayson/)  
+-   [SQL Server Always On Team Blog: blog ufficiale del team di SQL Server Always On](https://blogs.msdn.microsoft.com/sqlalwayson/)  
   
--   [serie di informazioni su HADRON riguardanti l'uso del pool di lavoro per database abilitati HADRON in AlwaysOn](https://blogs.msdn.com/b/psssql/archive/2012/05/17/Always%20On-hadron-learning-series-worker-pool-usage-for-hadron-enabled-databases.aspx)  
+-   [Serie di informazioni su Always On - HADRON: Utilizzo del pool di lavoro per database abilitati HADRON](https://blogs.msdn.com/b/psssql/archive/2012/05/17/Always%20On-hadron-learning-series-worker-pool-usage-for-hadron-enabled-databases.aspx)  
   
 ## <a name="see-also"></a>Vedere anche  
  [Panoramica di gruppi di disponibilità AlwaysOn &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   

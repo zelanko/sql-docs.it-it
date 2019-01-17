@@ -18,12 +18,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 62f34e574559c1d8685bb254200bed93c6c0a7e5
-ms.sourcegitcommit: 1a5448747ccb2e13e8f3d9f04012ba5ae04bb0a3
+ms.openlocfilehash: 9f57b07be679195794df5f0f9fe2329417a0b30f
+ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51559248"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53591765"
 ---
 # <a name="estimate-the-size-of-a-heap"></a>Stima delle dimensioni di un heap
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -31,23 +31,23 @@ ms.locfileid: "51559248"
   
 1.  Specificare il numero di righe che verranno incluse nella tabella:  
   
-     ***Num_Rows***  = numero di righe della tabella  
+     **_Num_Rows_**  = numero di righe della tabella  
   
 2.  Specificare il numero di colonne di lunghezza fissa e e variabile e calcolare lo spazio necessario per la loro archiviazione:  
   
      Calcolare lo spazio occupato da ognuno di questi gruppi di colonne all'interno della riga di dati. Le dimensioni di una colonna dipendono dal tipo di dati e dalla lunghezza specificata.  
   
-     ***Num_Cols***  = numero totale di colonne (a lunghezza fissa e a lunghezza variabile)  
+     **_Num_Cols_**  = numero totale di colonne (a lunghezza fissa e a lunghezza variabile)  
   
-     ***Fixed_Data_Size***  = dimensioni totali in byte di tutte le colonne a lunghezza fissa  
+     **_Fixed_Data_Size_**  = dimensioni totali in byte di tutte le colonne a lunghezza fissa  
   
-     ***Num_Variable_Cols***  = numero di colonne a lunghezza variabile  
+     **_Num_Variable_Cols_**  = numero di colonne a lunghezza variabile  
   
-     ***Max_Var_Size***  = dimensioni massime totali in byte di tutte le colonne a lunghezza variabile  
+     **_Max_Var_Size_**  = dimensioni massime totali in byte di tutte le colonne a lunghezza variabile  
   
 3.  Parte della riga, nota come mappa di bit null, è riservata alla gestione del supporto dei valori Null in una colonna. Calcolarne le dimensioni:  
   
-     ***Null_Bitmap***  = 2 + ((***Num_Cols*** + 7) / 8)  
+     **_Null_Bitmap_**  = 2 + ((**_Num_Cols_** + 7) / 8)  
   
      Solo l'integrale di questa espressione dovrebbe essere utilizzato. Eliminare le parti restanti.  
   
@@ -55,36 +55,36 @@ ms.locfileid: "51559248"
   
      Se la tabella include colonne di lunghezza variabile, determinare la quantità di spazio utilizzata per l'archiviazione delle colonne nella riga:  
   
-     ***Variable_Data_Size***  = 2 + (***Num_Variable_Cols*** x 2) + ***Max_Var_Size***  
+     **_Variable_Data_Size_**  = 2 + (**_Num_Variable_Cols_** x 2) + **_Max_Var_Size_**  
   
-     I byte aggiunti a ***Max_Var_Size*** servono a tenere traccia di ogni colonna a lunghezza variabile. Questa formula si basa sul presupposto che tutte le colonne a lunghezza variabile siano piene al 100%. Se si prevede una percentuale inferiore di utilizzo dello spazio di archiviazione delle colonne a lunghezza variabile, è possibile modificare il valore di ***Max_Var_Size*** in base a tale percentuale per ottenere una stima più accurata delle dimensioni complessive della tabella.  
+     I byte aggiunti a **_Max_Var_Size_** servono a tenere traccia di ogni colonna a lunghezza variabile. Questa formula si basa sul presupposto che tutte le colonne a lunghezza variabile siano piene al 100%. Se si prevede che verrà usata una percentuale inferiore dello spazio di archiviazione delle colonne a lunghezza variabile, è possibile modificare il valore di **_Max_Var_Size_** in base a tale percentuale per ottenere una stima più accurata delle dimensioni complessive della tabella.  
   
     > [!NOTE]  
-    >  È possibile combinare colonne **varchar**, **nvarchar**, **varbinary**o **sql_variant** che causano il superamento del limite di 8.060 byte previsto per la larghezza totale definita della tabella. La lunghezza di ogni colonna deve essere compresa nel limite di 8.000 byte per una colonna **varchar**, **nvarchar,****varbinary**o **sql_variant** . Le larghezze combinate di tali colonne possono tuttavia superare il limite di 8.060 byte in una tabella.  
+    >  È possibile combinare colonne **varchar**, **nvarchar**, **varbinary**o **sql_variant** che fanno eccedere gli 8.060 byte per la larghezza totale definita della tabella. La lunghezza di ognuna di queste colonne deve comunque essere compresa nel limite di 8.000 byte per una colonna **varchar**, **nvarchar, varbinary** o **sql_variant**. Le larghezze combinate di tali colonne possono tuttavia superare il limite di 8.060 byte in una tabella.  
   
-     Se non sono disponibili colonne di lunghezza variabile, impostare ***Variable_Data_Size*** su 0.  
+     Se non sono presenti colonne di lunghezza variabile, impostare **_Variable_Data_Size_** su 0.  
   
 5.  Calcolare le dimensioni totali della riga:  
   
-     ***Row_Size***  = ***Fixed_Data_Size*** + ***Variable_Data_Size*** + ***Null_Bitmap*** + 4  
+     **_Row_Size_**  = **_Fixed_Data_Size_** + **_Variable_Data_Size_** + **_Null_Bitmap_** + 4  
   
      Il valore 4 nel formula è l'overhead dell'intestazione di riga della riga di dati.  
   
 6.  Calcolare il numero di righe per pagina (8096 byte liberi per pagina):  
   
-     ***Rows_Per_Page***  = 8096 / (***Row_Size*** + 2)  
+     **_Rows_Per_Page_**  = 8096 / (**_Row_Size_** + 2)  
   
      Poiché le righe non si estendono su più pagine, il numero di righe per pagina deve essere arrotondato alla riga completa più vicina. Il valore 2 nella formula è per la voce di riga nella matrice di slot della pagina.  
   
 7.  Calcolare il numero di pagine necessario per archiviare tutte le righe:  
   
-     ***Num_Pages***  = ***Num_Rows*** / ***Rows_Per_Page***  
+     **_Num_Pages_**  = **_Num_Rows_** / **_Rows_Per_Page_**  
   
      Il numero di pagine stimato deve essere arrotondato alla pagina intera più vicina.  
   
 8.  Infine, calcolare la quantità di spazio necessaria per archiviare i dati nell'heap (8192 byte totali per pagina):  
   
-     Dimensioni dell'heap (byte) = 8192 x ***Num_Pages***  
+     Dimensioni dell'heap (byte) = 8192 x **_Num_Pages_**  
   
  Il calcolo non prende in considerazione i fattori seguenti:  
   

@@ -21,12 +21,12 @@ ms.assetid: 0e11f8c5-f79d-46c1-ab11-b68ef05d6787
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: f146b9aed0e8d5cf94e2028c83d7eb751202c309
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 75dbab8f45c8a617ed0a98829082170dcf85e310
+ms.sourcegitcommit: 1e7ec3b11f25d469163bdc9096a475411eacf79a
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47746339"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53265962"
 ---
 # <a name="encryptbykey-transact-sql"></a>ENCRYPTBYKEY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -96,7 +96,7 @@ EncryptByKey ( key_GUID , { 'cleartext' | @cleartext }
 >  L'uso delle funzioni di crittografia di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] con l'impostazione ANSI_PADDING OFF può provocare la perdita di dati a causa delle conversioni implicite. Per altre informazioni sull'impostazione ANSI_PADDING, vedere [SET ANSI_PADDING &#40;Transact-SQL&#41;](../../t-sql/statements/set-ansi-padding-transact-sql.md).  
   
 ## <a name="examples"></a>Esempi  
- La funzionalità illustrata negli esempi seguenti si basa sulle chiavi e sui certificati creati in [Procedura: Crittografia di una colonna di dati](../../relational-databases/security/encryption/encrypt-a-column-of-data.md).  
+ La funzionalità illustrata negli esempi seguenti si basa sulle chiavi e sui certificati creati in [Procedura: Crittografare una colonna di dati](../../relational-databases/security/encryption/encrypt-a-column-of-data.md).  
   
 ### <a name="a-encrypting-a-string-with-a-symmetric-key"></a>A. Crittografia di una stringa tramite una chiave simmetrica  
  Nell'esempio seguente viene aggiunta una colonna alla tabella `Employee`, quindi viene crittografato il valore del numero di previdenza sociale archiviato nella colonna `NationalIDNumber`.  
@@ -122,13 +122,13 @@ SET EncryptedNationalIDNumber
 GO  
 ```  
   
-### <a name="b-encrypting-a-record-together-with-an-authentication-value"></a>B. Crittografia di un record assieme a un valore di autenticazione  
+### <a name="b-encrypting-a-record-together-with-an-authentication-value"></a>b. Crittografia di un record assieme a un valore di autenticazione  
   
 ```  
 USE AdventureWorks2012;  
   
 -- Create a column in which to store the encrypted data.  
-ALTER TABLE Sales.CreditCard.   
+ALTER TABLE Sales.CreditCard   
     ADD CardNumber_Encrypted varbinary(128);   
 GO  
   

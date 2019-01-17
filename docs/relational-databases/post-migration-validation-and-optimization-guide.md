@@ -13,12 +13,12 @@ ms.assetid: 11f8017e-5bc3-4bab-8060-c16282cfbac1
 author: pelopes
 ms.author: harinid
 manager: craigg
-ms.openlocfilehash: 7dcb9f3efe8ffcc0e1dc2dbd0ff800f67f82d499
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: d85de6deffa9e140bc5f9bf489afd60e0dbbc948
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52506337"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53213620"
 ---
 # <a name="post-migration-validation-and-optimization-guide"></a>Guida di ottimizzazione e convalida post-migrazione
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -29,7 +29,7 @@ Il passaggio post-migrazione di [!INCLUDE[ssNoVersion](../includes/ssnoversion-m
 Di seguito sono riportati alcuni scenari comuni relativi alle prestazioni rilevati dopo la migrazione alla piattaforma [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] e viene indicato come risolverli. Sono inclusi gli scenari specifici della migrazione da [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] a [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] (versioni precedenti a versioni più recenti), nonché la migrazione dalla piattaforma esterna, ad esempio Oracle, DB2, MySQL e Sybase, a [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].
 
 ## <a name="CEUpgrade"></a> Regressioni delle query dovute a modifiche della versione CE
-
+ 
 **Si applica a:** migrazione da [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] a [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].
 
 Quando si esegue la migrazione da una versione precedente di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] a [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] o versioni successive e si aggiorna il [livello di compatibilità del database](../relational-databases/databases/view-or-change-the-compatibility-level-of-a-database.md) alla versione più recente disponibile, un carico di lavoro può essere esposto al rischio di regressione delle prestazioni.
@@ -48,7 +48,7 @@ Per altre informazioni su questo argomento, vedere [Mantenere la stabilità dell
 
 ## <a name="ParameterSniffing"></a> Sensibilità all'analisi dei parametri
 
-**Si applica a:** migrazione da piattaforma esterna, ad esempio Oracle, DB2, MySQL e Sybase, a [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].
+**Si applica a:** migrazione da piattaforma esterna (ad esempio Oracle, DB2, MySQL e Sybase) a [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].
 
 > [!NOTE]
 > Per le migrazioni da [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] a [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], se questo problema si verificava nell'istanza di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] di origine, la semplice migrazione a una versione più recente di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]  non risolverà il problema descritto in questo scenario. 
@@ -69,7 +69,7 @@ Un potenziale problema si presenta nel caso in cui durante questa prima compilaz
 
 ## <a name="MissingIndexes"></a> Indici mancanti
 
-**Si applica a:** migrazione da piattaforma esterna, ad esempio Oracle, DB2, MySQL e Sybase, e da [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] a [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].
+**Si applica a:** migrazione da piattaforma esterna (ad esempio Oracle, DB2, MySQL e Sybase) e da [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] a [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].
 
 Gli indici non corretti o mancanti causano un maggiore I/O che a sua volta determina un uso superiore della memoria e uno spreco di CPU. La causa del problema può essere la modifica del profilo del carico di lavoro, ad esempio l'uso di predicati diversi, che può avere invalidato la struttura degli indici esistente. Le prove di una strategia di indicizzazione inadeguata o di modifiche apportate al profilo del carico di lavoro includono:
 -   Ricerca di indici duplicati, ridondati, raramente usati e completamente inutilizzati.
@@ -87,7 +87,7 @@ Gli indici non corretti o mancanti causano un maggiore I/O che a sua volta deter
 
 ## <a name="InabilityPredicates"></a> Impossibilità di usare i predicati per filtrare i dati
 
-**Si applica a:** migrazione da piattaforma esterna, ad esempio Oracle, DB2, MySQL e Sybase, e da [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] a [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].
+**Si applica a:** migrazione da piattaforma esterna (ad esempio Oracle, DB2, MySQL e Sybase) e da [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] a [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].
 
 > [!NOTE]
 > Per le migrazioni da [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] a [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], se questo problema si verificava nell'istanza di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] di origine, la semplice migrazione a una versione più recente di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] non risolverà il problema descritto in questo scenario.
@@ -115,7 +115,7 @@ Alcuni esempi di predicati non SARGable:
 
 ## <a name="TableValuedFunctions"></a> Uso di funzioni con valori di tabella (con istruzioni multiple e inline)
 
-**Si applica a:** migrazione da piattaforma esterna, ad esempio Oracle, DB2, MySQL e Sybase, e da [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] a [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].
+**Si applica a:** migrazione da piattaforma esterna (ad esempio Oracle, DB2, MySQL e Sybase) e da [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] a [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].
 
 > [!NOTE]
 > Per le migrazioni da [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] a [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], se questo problema si verificava nell'istanza di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] di origine, la semplice migrazione a una versione più recente di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] non risolverà il problema descritto in questo scenario.

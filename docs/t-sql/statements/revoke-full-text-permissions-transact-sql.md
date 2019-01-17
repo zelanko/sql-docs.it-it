@@ -17,12 +17,12 @@ ms.assetid: ef617436-1e86-4573-900a-702e27a202b9
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: fc9ea383cf3ef6353e5bfe7d6b346924f13b2468
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 904f4c3b82a1f58ae6456820b1fae8e98f1c28dc
+ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47840609"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53590985"
 ---
 # <a name="revoke-full-text-permissions-transact-sql"></a>REVOKE - autorizzazioni per il catalogo full-text (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -57,10 +57,10 @@ REVOKE [ GRANT OPTION FOR ] permission [ ,...n ] ON
  *permission*  
  Nome di un'autorizzazione. I mapping validi tra le autorizzazioni e le entità a protezione diretta sono descritti nella sezione "Osservazioni" più avanti in questo argomento.  
   
- ON FULLTEXT CATALOG **::***full-text_catalog_name*  
+ ON FULLTEXT CATALOG **::**_full-text_catalog_name_  
  Specifica il catalogo full-text per cui viene revocata l'autorizzazione. Il qualificatore di ambito **::** è obbligatorio.  
   
- ON FULLTEXT STOPLIST **::***full-text_stoplist_name*  
+ ON FULLTEXT STOPLIST **::**_full-text_stoplist_name_  
  Specifica l'elenco di parole non significative full-text per cui viene revocata l'autorizzazione. Il qualificatore di ambito **::** è obbligatorio.  
   
  *database_principal*  
@@ -70,7 +70,7 @@ REVOKE [ GRANT OPTION FOR ] permission [ ,...n ] ON
   
 -   ruolo del database  
   
--   ruolo dell'applicazione  
+-   ruolo applicazione  
   
 -   utente del database sul quale viene eseguito il mapping a un account di accesso di Windows  
   
@@ -95,7 +95,7 @@ REVOKE [ GRANT OPTION FOR ] permission [ ,...n ] ON
   
 -   ruolo del database  
   
--   ruolo dell'applicazione  
+-   ruolo applicazione  
   
 -   utente del database sul quale viene eseguito il mapping a un account di accesso di Windows  
   

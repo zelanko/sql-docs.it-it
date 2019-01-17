@@ -13,12 +13,12 @@ author: jaszymas
 ms.author: jaszymas
 manager: craigg
 monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
-ms.openlocfilehash: 90a9b797862db65187d991bb6961cdfd0bda8959
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: a4d833d132a0b4928d021beaa4cd9fcdd695d6c6
+ms.sourcegitcommit: baca29731a1be4f8fa47567888278394966e2af7
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52523556"
+ms.lasthandoff: 01/04/2019
+ms.locfileid: "54046581"
 ---
 # <a name="tutorial-getting-started-with-always-encrypted-with-secure-enclaves-using-ssms"></a>Esercitazione: Introduzione ad Always Encrypted con enclave sicuri tramite SSMS
 [!INCLUDE [tsql-appliesto-ssver15-xxxx-xxxx-xxx](../../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
@@ -27,7 +27,7 @@ Questa esercitazione illustra come iniziare a usare [Always Encrypted con enclav
 - Come creare un ambiente semplice per i test e la valutazione di Always Encrypted con enclave sicuri.
 - Come crittografare i dati in locale ed eseguire query avanzate su colonne crittografate usando SQL Server Management Studio (SSMS).
 
-## <a name="prerequisites"></a>Prerequisiti
+## <a name="prerequisites"></a>Prerequisites
 
 Per iniziare a usare Always Encrypted con enclave sicuri sono necessari almeno due computer (possono essere macchine virtuali):
 
@@ -55,7 +55,7 @@ In alternativa è possibile installare SSMS in un altro computer.
 >[!NOTE]
 >Il computer HGS non deve appartenere a un dominio prima di iniziare la procedura.
 
-## <a name="step-1-configure-the-hgs-computer"></a>Passaggio 1: Configurare il computer
+## <a name="step-1-configure-the-hgs-computer"></a>Passaggio 1: Configurare il computer HGS
 
 In questo passaggio si configura il computer HGS per eseguire il servizio Sorveglianza host che supporta l'attestazione chiave host.
 
@@ -87,7 +87,7 @@ In questo passaggio si configura il computer HGS per eseguire il servizio Sorveg
 >[!NOTE]
 >In alternativa, per fare riferimento al computer HGS mediante un nome DNS, è possibile configurare un server di inoltro dai server DNS aziendali al nuovo controller di dominio HGS.  
 
-## <a name="step-2-configure-the-sql-server-computer-as-a-guarded-host"></a>Passaggio 2: Configurare il computer SQL Server come host controllato
+## <a name="step-2-configure-the-sql-server-computer-as-a-guarded-host"></a>Passaggio 2: Configurare il computer SQL Server come host sorvegliato
 In questo passaggio si configura il computer SQL Server come host controllato registrato con HGS usando l'attestazione chiave host.
 >[!NOTE]
 >L'attestazione chiave host è consigliata solo per l'uso in ambienti di test. Per gli ambienti di produzione è consigliabile usare l'attestazione TPM.
@@ -122,7 +122,8 @@ In questo passaggio si configura il computer SQL Server come host controllato re
 7. Nel computer SQL Server eseguire il comando seguente in una console di Windows PowerShell con privilegi elevati, per indicare al computer SQL Server dove eseguire l'attestazione. Assicurarsi di specificare l'indirizzo IP o il nome DNS del computer HGS in uso. 
 
    ```powershell
-   Set-HgsClientConfiguration -AttestationServerUrl https://<IP address or DNS name>/Attestation -KeyProtectionServerUrl https://<IP address or DNS name>/KeyProtection/  
+   # use http, and not https
+   Set-HgsClientConfiguration -AttestationServerUrl http://<IP address or DNS name>/Attestation -KeyProtectionServerUrl http://<IP address or DNS name>/KeyProtection/  
    ```
 
 Il risultato del comando precedente visualizzerà AttestationStatus = Passed.

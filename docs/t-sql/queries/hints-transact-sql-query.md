@@ -56,12 +56,12 @@ ms.assetid: 66fb1520-dcdf-4aab-9ff1-7de8f79e5b2d
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 42247b11f00524ba08dd74f41f11da35fdcb2026
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 2a4eb946a9b851342b1f997f2b491b0b0708138c
+ms.sourcegitcommit: c9d33ce831723ece69f282896955539d49aee7f8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52530347"
+ms.lasthandoff: 12/12/2018
+ms.locfileid: "53306278"
 ---
 # <a name="hints-transact-sql---query"></a>Hint (Transact-SQL) - Query
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -153,7 +153,7 @@ ms.locfileid: "52530347"
   
  Con questo hint per la query viene praticamente disabilitato l'utilizzo diretto di viste indicizzate e di relativi indici nel piano di query.  
   
- La vista indicizzata non viene espansa solo se nella sezione SELECT della query viene fatto riferimento diretto alla visualizzazione e se viene specificato WITH (NOEXPAND) o WITH (NOEXPAND, INDEX( *index_value* [ **,**_...n_ ] ) ). Per altre informazioni sull'hint per la query WITH (NOEXPAND), vedere [FROM](../../t-sql/queries/from-transact-sql.md).  
+ La vista indicizzata non viene espansa solo se nella sezione SELECT della query viene fatto riferimento diretto alla visualizzazione e se viene specificato WITH (NOEXPAND) o WITH (NOEXPAND, INDEX( *index_value* [ **,**_...n_ ] ) ). Per altre informazioni sull'hint per la query NOEXPAND, vedere [Utilizzo di NOEXPAND](../../t-sql/queries/hints-transact-sql-table.md#using-noexpand).  
   
  L'hint influisce solo sulle viste nella sezione SELECT delle istruzioni, comprese le sezioni delle istruzioni INSERT, UPDATE, MERGE e DELETE.  
   
@@ -296,7 +296,7 @@ ms.locfileid: "52530347"
   > Se si abilita la raccolta dell'evento esteso query_post_execution_showplan, verrà aggiunta un'infrastruttura di profilatura standard a ogni query in esecuzione nel server e le prestazioni generali del server potrebbero rallentare.      
   > Se invece si abilita la raccolta dell'evento esteso *query_thread_profile* per usare l'infrastruttura di profilatura leggera, l'overhead delle prestazioni verrà considerevolmente ridotto, ma le prestazioni generali del server verranno comunque rallentate.       
   > Se si abilita l'evento esteso query_plan_profile, l'infrastruttura di profilatura leggera verrà abilitata solo per una query eseguita con QUERY_PLAN_PROFILE e quindi gli altri carichi di lavoro sul server non ne saranno interessati. Usare questo hint per profilare una query specifica senza effetti sulle altre parti del carico di lavoro del server.
-  > Per altre informazioni sulla profilatura leggera, vedere [Developers Choice: Query progress – anytime, anywhere](https://blogs.msdn.microsoft.com/sql_server_team/query-progress-anytime-anywhere/) (La scelta degli sviluppatori: Stato query ovunque e in qualsiasi momento).
+  > Per altre informazioni sulla profilatura leggera, vedere [Infrastruttura di profilatura delle query](../../relational-databases/performance/query-profiling-infrastructure.md).
  
 È possibile eseguire una query nell'elenco di tutti i nomi USE HINT supportati usando la DMV [sys.dm_exec_valid_use_hints ](../../relational-databases/system-dynamic-management-views/sys-dm-exec-valid-use-hints-transact-sql.md).    
 
@@ -326,7 +326,7 @@ TABLE HINT **(**_exposed\_object\_name_ [ **,** \<table_hint> [ [**,** ]..._n_ ]
 > [!CAUTION] 
 > Se si specifica FORCESEEK con parametri, il numero di piani che possono essere considerati da Query Optimizer viene limitato più di quanto avvenga se si specifica FORCESEEK senza parametri. In questo caso potrebbe venire generato un errore "Impossibile generare il piano" con maggiore frequenza. In una versione futura, le modifiche interne a Query Optimizer potrebbero consentire di prendere in considerazione più piani.  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Remarks  
  Gli hint per la query non possono essere specificati in un'istruzione INSERT, eccetto quando viene usata una clausola SELECT all'interno dell'istruzione.  
   
  È possibile specificare gli hint per la query solo nella query di livello principale e non nelle sottoquery. Quando un hint di tabella viene specificato come hint per la query, l'hint può essere specificato nella query di livello superiore o in una sottoquery, tuttavia il valore specificato per *exposed_object_name* nella clausola TABLE HINT deve corrispondere esattamente al nome esposto nella query o nella sottoquery.  
@@ -359,7 +359,7 @@ OPTION (MERGE JOIN);
 GO    
 ```  
   
-### <a name="b-using-optimize-for"></a>B. Utilizzo di OPTIMIZE FOR  
+### <a name="b-using-optimize-for"></a>b. Utilizzo di OPTIMIZE FOR  
  L'esempio seguente indica a Query Optimizer di usare il valore `'Seattle'` per la variabile locale `@city_name` e di usare dati statistici per determinare il valore per la variabile locale `@postal_code` durante l'ottimizzazione della query. Nell'esempio viene utilizzato il database [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)].  
   
 ```sql  
@@ -521,7 +521,7 @@ GO
 ```  
   
 ### <a name="k-specifying-semantics-affecting-table-hints"></a>K. Specifica di hint di tabella che influiscono sulla semantica  
- Nell'esempio seguente sono contenuti due hint di tabella nella query: NOLOCK, che influisce sulla semantica, e INDEX, che non influisce sulla semantica. Per mantenere la semantica della query l'hint NOLOCK viene specificato nella clausola OPTIONS della guida di piano. Oltre all'hint NOLOCK, vengono specificati gli hint INDEX e FORCESEEK che sostituiscono l'hint INDEX che non influisce sulla semantica nella query quando l'istruzione viene compilata e ottimizzata. Nell'esempio viene utilizzato il database [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)].  
+ Nell'esempio seguente sono contenuti due hint di tabella nella query: NOLOCK, che influisce sulla semantica, e INDEX, che non influisce sulla semantica. Per mantenere la semantica della query l’hint NOLOCK viene specificato nella clausola OPTIONS della guida di piano. Oltre all'hint NOLOCK, vengono specificati gli hint INDEX e FORCESEEK che sostituiscono l'hint INDEX che non influisce sulla semantica nella query quando l'istruzione viene compilata e ottimizzata. Nell'esempio viene utilizzato il database [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)].  
   
 ```sql  
 EXEC sp_create_plan_guide   

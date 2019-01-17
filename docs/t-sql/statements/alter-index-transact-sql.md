@@ -47,12 +47,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: bddf69ebe967767c67f92782afdaaa2484fe2531
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 5e7779ffa5875e50040a0e066097b7eed852a97d
+ms.sourcegitcommit: 467b2c708651a3a2be2c45e36d0006a5bbe87b79
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52537777"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53980417"
 ---
 # <a name="alter-index-transact-sql"></a>ALTER INDEX (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -184,12 +184,12 @@ ALTER INDEX { index_name | ALL }
   
 |Uso della parola chiave ALL con questa operazione|Indici non supportati (l'istruzione ha esito negativo se la tabella include uno o più di questi indici)|  
 |----------------------------------------|----------------------------------------|  
-|REBUILD WITH ONLINE = ON|Indice XML<br /><br /> Indice spaziale<br /><br /> Indice columnstore: **si applica a:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (a partire da [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]) e [!INCLUDE[ssSDS](../../includes/sssds-md.md)].|  
+|REBUILD WITH ONLINE = ON|Indice XML<br /><br /> Indice spaziale<br /><br /> Indice columnstore: **Si applica a:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (a partire da [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]) e [!INCLUDE[ssSDS](../../includes/sssds-md.md)].|  
 |REBUILD PARTITION = *partition_number*|Indice non partizionato, indice XML, indice spaziale o indice disabilitato|  
 |REORGANIZE|Indici con ALLOW_PAGE_LOCKS impostato su OFF|  
 |REORGANIZE PARTITION = *partition_number*|Indice non partizionato, indice XML, indice spaziale o indice disabilitato|  
-|IGNORE_DUP_KEY = ON|Indice XML<br /><br /> Indice spaziale<br /><br /> Indice columnstore: **si applica a:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (a partire da [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]) e [!INCLUDE[ssSDS](../../includes/sssds-md.md)].|  
-|ONLINE = ON|Indice XML<br /><br /> Indice spaziale<br /><br /> Indice columnstore: **si applica a:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (a partire da [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]) e [!INCLUDE[ssSDS](../../includes/sssds-md.md)].|
+|IGNORE_DUP_KEY = ON|Indice XML<br /><br /> Indice spaziale<br /><br /> Indice columnstore: **Si applica a:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (a partire da [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]) e [!INCLUDE[ssSDS](../../includes/sssds-md.md)].|  
+|ONLINE = ON|Indice XML<br /><br /> Indice spaziale<br /><br /> Indice columnstore: **Si applica a:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (a partire da [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]) e [!INCLUDE[ssSDS](../../includes/sssds-md.md)].|
 |RESUMABLE = ON  | Indici ripristinabili non supportati con la parola chiave **ALL**. <br /><br /> **Si applica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (a partire da [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]) e [!INCLUDE[ssSDS](../../includes/sssds-md.md)] |   
   
 > [!WARNING]
@@ -300,7 +300,7 @@ Per gli indici columnstore in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-
   
 REORGANIZE WITH ( COMPRESS_ALL_ROW_GROUPS = { ON | **OFF** } )  
 
- **Si applica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (a partire da [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]) e [!INCLUDE[ssSDS](../../includes/sssds-md.md)]
+ **Si applica a:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (a partire da [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]) e [!INCLUDE[ssSDS](../../includes/sssds-md.md)]
 
 COMPRESS_ALL_ROW_GROUPS consente di forzare i rowgroup differenziali OPEN o CLOSED nel columnstore. Con questa opzione, non è necessario ricompilare l'indice columnstore per svuotare i rowgroup differenziali.  Grazie a questa opzione e ad altre funzionalità di deframmentazione per la rimozione e l'unione, nella maggior parte dei casi non è più necessario ricompilare l'indice.    
 
@@ -490,7 +490,7 @@ ALLOW_PAGE_LOCKS **=** { **ON** | OFF }
  Per altre informazioni, vedere [Configurazione di operazioni parallele sugli indici](../../relational-databases/indexes/configure-parallel-index-operations.md).  
   
 > [!NOTE]
-> Le operazioni parallele sugli indici sono disponibili solo in alcune edizioni di [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Per un elenco delle funzionalità supportate dalle edizioni di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], vedere [Edizioni e funzionalità supportate per [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]](../../sql-server/editions-and-supported-features-for-sql-server-2016.md).  
+> Le operazioni parallele sugli indici non sono disponibili in tutte le edizioni di [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Per un elenco delle funzionalità supportate dalle edizioni di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], vedere [Edizioni e funzionalità supportate per [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]](../../sql-server/editions-and-supported-features-for-sql-server-2016.md).  
   
  COMPRESSION_DELAY **=** { **0** |*duration [Minutes]* }  
  Questa funzionalità è disponibile a partire da [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]  
@@ -542,7 +542,7 @@ Il valore predefinito è 0 minuti.
   
 -   Fornire sia intervalli, sia singole partizioni, ad esempio ON PARTITIONS (2, 4, 6 TO 8).  
   
- È possibile specificare \<range> come numeri di partizione separati dalla parola TO, ad esempio ON PARTITIONS (6 TO 8).  
+ \<range> può essere specificato sotto forma di numeri di partizione separati dalla parola TO, ad esempio: ON PARTITIONS (6 TO 8).  
   
  Per impostare tipi diversi di compressione dei dati per partizioni diverse, specificare più volte l'opzione DATA_COMPRESSION, ad esempio:  
   
@@ -594,7 +594,7 @@ DATA_COMPRESSION = PAGE ON PARTITIONS (3, 5)
  
  RESUME 
  
-**Si applica a** : a partire da [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]  
+**Si applica a**: A partire da [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]  
 
 Riprende un'operazione sull'indice che è stata sospesa manualmente o a causa di un errore.
 
@@ -789,7 +789,7 @@ ALTER INDEX ALL ON table1 REBUILD;
 ALTER INDEX ALL ON dbo.table1 REBUILD;  
 ```
 
-## <a name="examples-columnstore-indexes"></a>Esempi: indici columnstore  
+## <a name="examples-columnstore-indexes"></a>Esempi: Indici columnstore  
  Questi esempio si applicano agli indici columnstore.  
   
 ### <a name="a-reorganize-demo"></a>A. Demo di REORGANIZE  
@@ -840,7 +840,6 @@ CREATE TABLE cci_target (
      )  
   
 -- Convert the table to a clustered columnstore index named inxcci_cci_target;  
-```sql
 CREATE CLUSTERED COLUMNSTORE INDEX idxcci_cci_target ON cci_target;  
 ```  
   
@@ -871,7 +870,7 @@ ALTER INDEX idxcci_cci_target ON cci_target REORGANIZE WITH (COMPRESS_ALL_ROW_GR
 ALTER INDEX idxcci_cci_target ON cci_target REORGANIZE WITH (COMPRESS_ALL_ROW_GROUPS = ON);  
 ```  
   
-### <a name="b-compress-closed-delta-rowgroups-into-the-columnstore"></a>B. Comprimere i rowgroup differenziali CLOSED nel columnstore  
+### <a name="b-compress-closed-delta-rowgroups-into-the-columnstore"></a>b. Comprimere i rowgroup differenziali CLOSED nel columnstore  
  In questo esempio l'opzione REORGANIZE viene usata per comprimere tutti i rowgroup differenziali CLOSED nel columnstore come rowgroup compresso.   Questa opzione non è necessaria ma può essere utile quando il motore di tuple non comprime i rowgroup in modo sufficientemente rapido.  
   
 ```sql  
@@ -884,9 +883,9 @@ ALTER INDEX cci_FactInternetSales2 ON FactInternetSales2 REORGANIZE PARTITION = 
 ```  
   
 ### <a name="c-compress-all-open-and-closed-delta-rowgroups-into-the-columnstore"></a>C. Comprimere tutti i rowgroup differenziali OPEN e CLOSED nel columnstore  
- **Si applica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (a partire da [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]) e [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 
+ **Si applica a:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (a partire da [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]) e [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 
   
- Il comando REORGANIZE WITH (COMPRESS_ALL_ROW_GROUPS = ON) comprime tutti i rowgroup differenziali OPEN e CLOSED nel columnstore come rowgroup compresso. In questo modo i deltastore vengono svuotati e tutte le righe vengono forzate per essere compresse nel columnstore. Si tratta di un'operazione utile soprattutto dopo aver eseguito numerose operazioni di inserimento, in quanto tali operazioni archiviano le righe in uno o più rowgroup delta.  
+ Il comando REORGANIZE WITH ( COMPRESS_ALL_ROW_GROUPS = ON ) comprime tutti i rowgroup differenziali OPEN e CLOSED nel columnstore come rowgroup compresso. In questo modo i deltastore vengono svuotati e tutte le righe vengono forzate per essere compresse nel columnstore. Si tratta di un'operazione utile soprattutto dopo aver eseguito numerose operazioni di inserimento, in quanto tali operazioni archiviano le righe in uno o più rowgroup delta.  
   
  L'operazione REORGANIZE combina i rowgroup per ottenere rowgroup contenenti fino a un numero massimo di righe \<= 1.024.576. Quando si comprimono tutti i rowgroup OPEN e CLOSED, non si ottengono pertanto tanti rowgroup compressi che contengono solo poche righe. I rowgroup devono essere il più possibile completi in modo da ridurre le dimensioni compresse e migliorare le prestazioni delle query.  
   
@@ -953,7 +952,7 @@ SELECT * FROM sys.column_store_row_groups;
  I risultati dell'istruzione SELECT mostrano che il rowgroup è COMPRESSED, il che significa che i segmenti di colonna del rowgroup vengono compressi e archiviati nel columnstore.  
   
 ### <a name="f-rebuild-a-partition-of-a-clustered-columnstore-index-offline"></a>F. Ricompilare una partizione di un indice columnstore cluster offline  
- **Si applica a** : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (a partire da [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)])  
+ **Si applica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (a partire da [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)])  
  
  Usare ALTER INDEX REBUILD con l'opzione partizione per ricompilare una partizione di un indice columnstore cluster di grandi dimensioni. In questo esempio viene ricompilata la partizione 12. A partire da [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], è consigliabile sostituire REBUILD con REORGANIZE.  
   
@@ -997,7 +996,7 @@ WITH (DATA_COMPRESSION = COLUMNSTORE);
 GO  
 ```  
   
-## <a name="examples-rowstore-indexes"></a>Esempi: indici rowstore  
+## <a name="examples-rowstore-indexes"></a>Esempi: Indici rowstore  
   
 ### <a name="a-rebuilding-an-index"></a>A. Ricompilazione di un indice  
  Nell'esempio seguente viene ricompilato un singolo indice della tabella `Employee` nel database [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)].  
@@ -1006,7 +1005,7 @@ GO
 ALTER INDEX PK_Employee_EmployeeID ON HumanResources.Employee REBUILD;  
 ```  
   
-### <a name="b-rebuilding-all-indexes-on-a-table-and-specifying-options"></a>B. Ricompilazione di tutti gli indici di una tabella e impostazione di opzioni  
+### <a name="b-rebuilding-all-indexes-on-a-table-and-specifying-options"></a>b. Ricompilazione di tutti gli indici di una tabella e impostazione di opzioni  
  Nell'esempio seguente viene specificata la parola chiave ALL. In questo modo vengono ricompilati tutti gli indici associati alla tabella Production.Product nel database [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)]. Vengono inoltre specificate tre opzioni.  
   
 **Si applica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (a partire da [!INCLUDE[ssKatmai](../../includes/ssKatmai-md.md)]) e [!INCLUDE[ssSDS](../../includes/sssds-md.md)].  
@@ -1033,10 +1032,10 @@ REBUILD WITH
 ```  
   
 ### <a name="c-reorganizing-an-index-with-lob-compaction"></a>C. Ricompilazione di un indice con la compattazione di dati LOB  
- Nell'esempio seguente viene riorganizzato un singolo indice cluster nel database [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)]. Poiché l'indice contiene un tipo di dati LOB al livello foglia, l'istruzione compatta inoltre tutte le pagine contenenti dati LOB. Si noti che non è necessario specificare l'opzione WITH (LOB_COMPACTION) perché il valore predefinito è ON.  
+ Nell'esempio seguente viene riorganizzato un singolo indice cluster nel database [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)]. Poiché l'indice contiene un tipo di dati LOB al livello foglia, l'istruzione compatta inoltre tutte le pagine contenenti dati LOB. Si noti che non è necessario specificare l'opzione WITH (LOB_COMPACTION = ON) perché il valore predefinito è ON.  
   
 ```sql  
-ALTER INDEX PK_ProductPhoto_ProductPhotoID ON Production.ProductPhoto REORGANIZE WITH (LOB_COMPACTION);  
+ALTER INDEX PK_ProductPhoto_ProductPhotoID ON Production.ProductPhoto REORGANIZE WITH (LOB_COMPACTION = ON);  
 ```  
   
 ### <a name="d-setting-options-on-an-index"></a>D. Impostazione di opzioni per un indice  

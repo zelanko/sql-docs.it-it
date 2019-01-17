@@ -1,6 +1,7 @@
 ---
-title: Aggiungere una replica secondaria a un gruppo di disponibilità (SQL Server) | Microsoft Docs
-ms.custom: ''
+title: Aggiungere una replica secondaria a un gruppo di disponibilità
+description: Informazioni su come aggiungere una replica secondaria a un gruppo di disponibilità Always On usando Transact-SQL (T-SQL), PowerShell o la Creazione guidata gruppo di disponibilità in SQL Server Management Studio (SSMS).
+ms.custom: seodec18
 ms.date: 05/17/2016
 ms.prod: sql
 ms.reviewer: ''
@@ -13,35 +14,17 @@ ms.assetid: 6669dcce-85f9-495f-aadf-7f62cff4a9da
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 834e84ea62e9cfa7b6398d67e2b59ba011d21979
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: ffebb3bc39d15f52aeda8e2deed54c49e011df4e
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52512326"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53213010"
 ---
-# <a name="add-a-secondary-replica-to-an-availability-group-sql-server"></a>Aggiungere una replica secondaria a un gruppo di disponibilità (SQL Server)
+# <a name="add-a-secondary-replica-to-an-always-on-availability-group"></a>Aggiungere una replica secondaria a un gruppo di disponibilità Always On
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   Questo argomento illustra come aggiungere una replica secondaria a un gruppo di disponibilità Always On esistente usando [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../../includes/tsql-md.md)]o PowerShell in [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)].  
-  
--   **Prima di iniziare:**  
-  
-     [Prerequisiti e restrizioni](#PrerequisitesRestrictions)  
-  
-     [Security](#Security)  
-  
--   **Per aggiungere una replica mediante:**  
-  
-     [SQL Server Management Studio](#SSMSProcedure)  
-  
-     [Transact-SQL](#TsqlProcedure)  
-  
-     [PowerShell](#PowerShellProcedure)  
-  
--   **Completamento:**  [Dopo l'aggiunta di una replica secondaria](#FollowUp)  
-  
-## <a name="before-you-begin"></a>Prima di iniziare  
- Prima di iniziare a creare il primo gruppo di disponibilità, è consigliabile leggere questa sezione.  
+
   
 ##  <a name="PrerequisitesRestrictions"></a> Prerequisiti e restrizioni  
   
@@ -73,7 +56,7 @@ ms.locfileid: "52512326"
   
          Per aggiungere repliche aggiuntive, ripetere i passaggi precedenti. Dopo avere specificato le repliche, fare clic su **OK** per completare l'operazione.  
   
-##  <a name="TsqlProcedure"></a> Uso di Transact-SQL  
+##  <a name="TsqlProcedure"></a> Utilizzo di Transact-SQL  
  **Per aggiungere una replica**  
   
 1.  Connettersi all'istanza di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] che ospita la replica primaria.  

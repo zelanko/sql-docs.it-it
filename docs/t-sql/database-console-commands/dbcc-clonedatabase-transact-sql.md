@@ -37,12 +37,12 @@ ms.assetid: ''
 author: pamela
 ms.author: pamela
 manager: amitban
-ms.openlocfilehash: fe1fef76dd083d5b464bd2021aebb0e74e695543
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: 51acbbb1bac63084a26abb68f461880df1409578
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51703919"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53204810"
 ---
 # <a name="dbcc-clonedatabase-transact-sql"></a>DBCC CLONEDATABASE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -206,14 +206,14 @@ I messaggi seguenti sono un esempio di quelli registrati nel registro errori dur
 ## <a name="examples"></a>Esempi  
   
 ### <a name="a-creating-a-clone-of-a-database-that-includes-schema-statistics-and-query-store"></a>A. Creazione del clone di un database che include schema, statistiche e archivio query 
-L'esempio seguente crea un clone del database AdventureWorks che include i dati dello schema, delle statistiche e dell'archivio query ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 e versioni successive)
+L'esempio seguente crea un clone del database AdventureWorks che include schema, statistiche e dati di Query Store ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 e versioni successive)
 
 ```sql  
 DBCC CLONEDATABASE (AdventureWorks, AdventureWorks_Clone);    
 GO 
 ```  
   
-### <a name="b-creating-a-schema-only-clone-of-a-database-without-statistics"></a>B. Creazione di un clone solo schema di un database senza statistiche 
+### <a name="b-creating-a-schema-only-clone-of-a-database-without-statistics"></a>b. Creazione di un clone solo schema di un database senza statistiche 
 L'esempio seguente crea un clone del database AdventureWorks che non include le statistiche ([!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] SP2 CU3 e versioni successive)
 
 ```sql  
@@ -222,7 +222,7 @@ GO
 ```  
 
 ### <a name="c-creating-a-schema-only-clone-of-a-database-without-statistics-and-query-store"></a>C. Creazione di un clone solo schema di un database senza statistiche e archivio query 
-L'esempio seguente crea un clone del database AdventureWorks che non include le statistiche e l'archivio query ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 e versioni successive)
+L'esempio seguente crea un clone del database AdventureWorks che non include le statistiche e i dati di Query Store ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 e versioni successive)
 
 ```sql  
 DBCC CLONEDATABASE (AdventureWorks, AdventureWorks_Clone) WITH NO_STATISTICS, NO_QUERYSTORE;    
@@ -230,7 +230,7 @@ GO
 ```  
 
 ### <a name="d-creating-a-clone-of-a-database-that-is-verified-for-production-use"></a>D. Creazione di un clone di un database verificato per l'uso in produzione
-L'esempio seguente crea un clone solo schema del database AdventureWorks senza statistiche e archivio query verificato per l'uso come database di produzione ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 e versioni successive).
+L'esempio seguente crea un clone solo schema del database AdventureWorks senza statistiche e dati di Query Store verificato per l'uso come database di produzione ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 e versioni successive).
 
 ```sql  
 DBCC CLONEDATABASE (AdventureWorks, AdventureWorks_Clone) WITH VERIFY_CLONEDB;    
@@ -238,7 +238,7 @@ GO
 ```  
   
 ### <a name="e-creating-a-clone-of-a-database-that-is-verified-for-production-use-that-includes-a-backup-of-the-cloned-database"></a>E. Creazione di un clone di un database verificato per l'uso in produzione che include un backup del database clonato
-L'esempio seguente crea un clone solo schema del database AdventureWorks senza statistiche e dati dell'archivio query verificato per l'uso come database di produzione.  Verrà inoltre creato un backup verificato del database clonato ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 e versioni successive).
+L'esempio seguente crea un clone solo schema del database AdventureWorks senza statistiche e dati dell'archivio query verificato per l'uso come database di produzione.  Verrà anche creato un backup verificato del database clonato ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 e versioni successive).
 
 ```sql  
 DBCC CLONEDATABASE (AdventureWorks, AdventureWorks_Clone) WITH VERIFY_CLONEDB, BACKUP_CLONEDB;    

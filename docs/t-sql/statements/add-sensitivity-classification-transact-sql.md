@@ -23,12 +23,12 @@ helpviewer_keywords:
 - information types
 - data classification
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: cbede7141154147bbb714d00d794d4b8af7cf8e0
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: 0fc010c3b02bfbe5e2c5fabb1f8e6313144d7efa
+ms.sourcegitcommit: 467b2c708651a3a2be2c45e36d0006a5bbe87b79
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51696402"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53979378"
 ---
 # <a name="add-sensitivity-classification-transact-sql"></a>ADD SENSITIVITY CLASSIFICATION (Transact-SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
@@ -87,7 +87,7 @@ ADD SENSITIVITY CLASSIFICATION TO
 ## <a name="remarks"></a>Remarks  
 
 - A un singolo oggetto è possibile aggiungere una sola classificazione. Aggiungendo una classificazione a un oggetto già classificato, la classificazione esistente verrà sovrascritta.
-- È possibile classificare più oggetti usando un singola istruzione `ADD SENSITIVITY CLASSIFICTION`.
+- È possibile classificare più oggetti usando un singola istruzione `ADD SENSITIVITY CLASSIFICATION`.
 - La vista di sistema [sys.sensitivity_classifications](../../relational-databases/system-catalog-views/sys-sensitivity-classifications-transact-sql.md) può essere usata per recuperare le informazioni sulla classificazione di riservatezza per un database.
 
 
@@ -108,7 +108,7 @@ ADD SENSITIVITY CLASSIFICATION TO
     WITH ( LABEL='Highly Confidential', INFORMATION_TYPE='Financial' )
 ```  
 
-### <a name="b-classifying-only-a-label"></a>B. Classificazione di una sola etichetta
+### <a name="b-classifying-only-a-label"></a>b. Classificazione di una sola etichetta
 L'esempio seguente classifica la colonna **dbo.customer.comments** con l'etichetta **Confidential** e l'ID etichetta **643f7acd-776a-438d-890c-79c3f2a520d6**. Il tipo di informazioni non è classificato per questa colonna.
 
 ```sql
