@@ -20,12 +20,12 @@ ms.assetid: 2408c264-6eca-4120-bb71-df043c7c2792
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 5acd726764c2b672287af418f088963a4a5acef7
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 451b92b502a22d8cefc32e8ea82570cd1e0187e1
+ms.sourcegitcommit: 467b2c708651a3a2be2c45e36d0006a5bbe87b79
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47711889"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53980547"
 ---
 # <a name="columnproperty-transact-sql"></a>COLUMNPROPERTY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -53,15 +53,15 @@ Per l'argomento *id*, l'argomento *property* specifica il tipo di informazioni c
 |valore|Descrizione|Valore restituito|  
 |---|---|---|
 |**AllowsNull**|Ammette valori Null.|1: TRUE<br /><br /> 0: FALSE<br /><br /> NULL: input non valido.|  
-|**ColumnId**|Valore di ID di colonna corrispondente a **sys.columns.column_id**.|ID colonna<br /><br /> **Nota:** quando si eseguono query su più colonne, potrebbero apparire spazi vuoti nella sequenza dei valori di ID di colonna.|  
+|**ColumnId**|Valore di ID di colonna corrispondente a **sys.columns.column_id**.|ID colonna<br /><br /> **Nota:** Quando si eseguono query su più colonne, potrebbero apparire degli spazi vuoti nella sequenza dei valori di ID di colonna.|  
 |**FullTextTypeColumn**|L'elemento TYPE COLUMN nella tabella in cui sono contenute le informazioni sui tipi di documenti di *column*.|ID di TYPE COLUMN full-text per l'espressione del nome della colonna passata come secondo parametro della funzione.|  
-|**GeneratedAlwaysType**|Valore di colonna generato dal sistema. Corrisponde a **sys.columns.generated_always_type**|**Si applica a**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] tramite [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> 0: non sempre generato<br /><br /> 1: sempre generato all'inizio della riga<br /><br /> 2: sempre generato alla fine della riga|  
+|**GeneratedAlwaysType**|Valore di colonna generato dal sistema. Corrisponde a **sys.columns.generated_always_type**|**Si applica a**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] tramite [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> 0: Sempre non generato<br /><br /> 1: Sempre generato all'inizio della riga<br /><br /> 2: Sempre generato alla fine della riga|  
 |**IsColumnSet**|La colonna è un set di colonne. Per altre informazioni, vedere [Usare set di colonne](../../relational-databases/tables/use-column-sets.md).|1: TRUE<br /><br /> 0: FALSE<br /><br /> NULL: input non valido.|  
 |**IsComputed**|La colonna è una colonna calcolata.|1: TRUE<br /><br /> 0: FALSE<br /><br /> NULL: input non valido.|  
 |**IsCursorType**|Il parametro di procedura è di tipo CURSOR.|1: TRUE<br /><br /> 0: FALSE<br /><br /> NULL: input non valido.|  
 |**IsDeterministic**|La colonna è tipo deterministico. Questa proprietà viene applicata solo alle colonne calcolate e alle colonne di una vista.|1: TRUE<br /><br /> 0: FALSE<br /><br /> NULL: input non valido. Non si tratta di una colonna calcolata o di una colonna di vista.|  
 |**IsFulltextIndexed**|La colonna è stata registrata per l'indicizzazione full-text.|1: TRUE<br /><br /> 0: FALSE<br /><br /> NULL: input non valido.|  
-|**IsHidden**|Valore di colonna generato dal sistema. Corrisponde a **sys.columns.is_hidden**|**Si applica a**: [!INCLUDE[ssCurrentLong](../../includes/sscurrent-md.md)] tramite [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> 0: non nascosto<br /><br /> 1: nascosto|  
+|**IsHidden**|Valore di colonna generato dal sistema. Corrisponde a **sys.columns.is_hidden**|**Si applica a**: [!INCLUDE[ssCurrentLong](../../includes/sscurrent-md.md)] tramite [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> 0: Non nascosto<br /><br /> 1: Hidden|  
 |**IsIdentity**|La colonna utilizza la proprietà IDENTITY.|1: TRUE<br /><br /> 0: FALSE<br /><br /> NULL: input non valido.|  
 |**IsIdNotForRepl**|La colonna controlla l'impostazione IDENTITY_INSERT.|1: TRUE<br /><br /> 0: FALSE<br /><br /> NULL: input non valido.|  
 |**IsIndexable**|La colonna può essere indicizzata.|1: TRUE<br /><br /> 0: FALSE<br /><br /> NULL: input non valido.|  
@@ -74,8 +74,8 @@ Per l'argomento *id*, l'argomento *property* specifica il tipo di informazioni c
 |**Precisione**|Lunghezza del tipo di dati della colonna o del parametro.|Lunghezza del tipo di dati specificato per la colonna.<br /><br /> -1: **xml** o tipi di dati per valori di grandi dimensioni<br /><br /> NULL: input non valido.|  
 |**Scala**|Scala del tipo di dati della colonna o del parametro.|Valore di scalabilità<br /><br /> NULL: input non valido.|  
 |**StatisticalSemantics**|La colonna è abilitata per l'indicizzazione semantica.|1: TRUE<br /><br /> 0: FALSE|  
-|**SystemDataAccess**|La colonna deriva da una funzione che accede ai dati nei cataloghi di sistema o nelle tabelle virtuali di sistema di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Questa proprietà è applicabile solo alle colonne calcolate e alle colonne di viste.|1 TRUE (accesso di sola lettura).<br /><br /> 0: FALSE<br /><br /> NULL: input non valido.|  
-|**UserDataAccess**|La colonna deriva da una funzione che accede ai dati nelle tabelle utente, incluse le tabelle temporanee e le viste, archiviate nell'istanza locale di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Questa proprietà è applicabile solo alle colonne calcolate e alle colonne di viste.|1 TRUE (accesso di sola lettura).<br /><br /> 0: FALSE<br /><br /> NULL: input non valido.|  
+|**SystemDataAccess**|La colonna deriva da una funzione che accede ai dati nei cataloghi di sistema o nelle tabelle virtuali di sistema di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Questa proprietà è applicabile solo alle colonne calcolate e alle colonne di viste.|1: TRUE (indica l'accesso in sola lettura).<br /><br /> 0: FALSE<br /><br /> NULL: input non valido.|  
+|**UserDataAccess**|La colonna deriva da una funzione che accede ai dati nelle tabelle utente, incluse le tabelle temporanee e le viste, archiviate nell'istanza locale di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Questa proprietà è applicabile solo alle colonne calcolate e alle colonne di viste.|1: TRUE (indica l'accesso in sola lettura).<br /><br /> 0: FALSE<br /><br /> NULL: input non valido.|  
 |**UsesAnsiTrim**|ANSI_PADDING è stato impostato su On al momento della creazione della tabella. Questa proprietà viene applicata solo alle colonne o ai parametri di tipo **char** o **varchar**.|1: TRUE<br /><br /> 0: FALSE<br /><br /> NULL: input non valido.|  
   
 ## <a name="return-types"></a>Tipi restituiti

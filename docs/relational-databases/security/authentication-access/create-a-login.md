@@ -24,12 +24,12 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 290dd7ad7be98334ebd7eccf49c29df89890bc13
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: 6b2e04e5b63000bcdd7100c297ecd9d90dd33f27
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53209100"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54125581"
 ---
 # <a name="create-a-login"></a>Creazione di un account di accesso
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -135,7 +135,7 @@ ms.locfileid: "53209100"
  Nella pagina **Mapping utenti** sono elencati tutti i possibili database e le appartenenze al ruolo dei database che possono essere applicati all'account di accesso. I database selezionati determinano le appartenenze al ruolo che sono disponibili per l'account di accesso. In questa pagina sono disponibili le opzioni seguenti.  
   
  **Utenti di cui è stato eseguito il mapping all'account di accesso seguente**  
- Consente di selezionare i database ai quali può accedere l'account di accesso specificato. Quando si seleziona un database, i rispettivi ruoli validi vengono visualizzati nel riquadro **Appartenenza a ruoli del database per:** *database_name* .  
+ Consente di selezionare i database ai quali può accedere l'account di accesso specificato. Quando si seleziona un database, i rispettivi ruoli validi vengono visualizzati nel riquadro **Appartenenza a ruoli del database per:** _database_name_ .  
   
  **Mappa**  
  Consente all'account di accesso di accedere al database sotto indicato.  
@@ -149,10 +149,10 @@ ms.locfileid: "53209100"
  **Schema predefinito**  
  Consente di specificare lo schema predefinito dell'utente. Lo schema predefinito dei nuovi utenti creati è **dbo**. È possibile specificare uno schema predefinito non ancora creato. Non è possibile specificare uno schema predefinito per un utente del quale è stato eseguito il mapping a un gruppo di Windows, un certificato o una chiave asimmetrica.  
   
- **Account Guest abilitato per:**  *database_name*  
+ **Guest account enabled for:**  _database_name_  
  Attributo di sola lettura che indica se l'account Guest è abilitato nel database selezionato. Utilizzare la pagina **Stato** della finestra di dialogo **Proprietà account di accesso** dell'account Guest per abilitare o disabilitare tale account.  
   
- **Appartenenza a ruoli del database per:**  *database_name*  
+ **Database role membership for:**  _database_name_  
  Consente di selezionare i ruoli per l'utente nel database specificato. Tutti gli utenti sono membri del ruolo **public** in ogni database e non possono essere eliminati. Per altre informazioni sui ruoli di database, vedere [Ruoli a livello di database](../../../relational-databases/security/authentication-access/database-level-roles.md).  
   
 ### <a name="securables"></a>Entità a protezione diretta  

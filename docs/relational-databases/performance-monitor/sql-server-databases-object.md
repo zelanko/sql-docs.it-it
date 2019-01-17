@@ -5,7 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-s.technology: performance
+ms.technology: performance
 ms.topic: conceptual
 helpviewer_keywords:
 - Availability Groups [SQL Server], monitoring
@@ -13,15 +13,15 @@ helpviewer_keywords:
 - SQLServer:Databases
 - Availability Groups [SQL Server], performance counters
 ms.assetid: a7f9e7d4-fff4-4c72-8b3e-3f18dffc8919
-author: MikeRayMSFT
-ms.author: mikeray
+author: julieMSFT
+ms.author: jrasnick
 manager: craigg
-ms.openlocfilehash: 554e582d23afa6ef62b8bc1fd5ab7c8f0c704f4c
-ms.sourcegitcommit: ca038f1ef180e4e1b27910bbc5d87822cd1ed176
+ms.openlocfilehash: 668fe6a825be365aa605febaaea7aafdd71ddf7d
+ms.sourcegitcommit: fa2f85b6deeceadc0f32aa7f5f4e2b6e4d99541c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52158918"
+ms.lasthandoff: 01/03/2019
+ms.locfileid: "53997573"
 ---
 # <a name="sql-server-databases-object"></a>SQL Server, oggetto di database
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -38,7 +38,7 @@ ms.locfileid: "52158918"
 |**Velocità effettiva di backup o ripristino/sec**|Velocità effettiva di lettura/scrittura delle operazioni di backup e ripristino di un database al secondo. Ad esempio, è possibile verificare come vengono modificate le prestazioni dell'operazione di backup del database quando vengono utilizzati più dispositivi di backup in parallelo o dispositivi più veloci. La velocità effettiva di un'operazione di backup o ripristino del database consente di determinare lo stato di avanzamento e le prestazioni delle operazioni di backup e di ripristino.|  
 |**Righe copia bulk/sec**|Numero di righe al secondo di cui viene eseguita la copia bulk.|  
 |**Velocità effettiva copia bulk/sec**|Quantità di copie bulk di dati eseguite al secondo (in kilobyte).|  
-|**Voci della tabella di commit**|Dimensioni della parte in memoria della tabella di commit per il database. Per altre informazioni, vedere [sys.dm_tran_commit_table &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/change-tracking-sys-dm-tran-commit-table.md).|  
+|**Voci della tabella di commit**|Dimensioni (conteggio righe) della parte in memoria della tabella di commit per il database. Per altre informazioni, vedere [sys.dm_tran_commit_table &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/change-tracking-sys-dm-tran-commit-table.md).|  
 |**Dimensioni file di dati (KB)**|Dimensioni cumulative in kilobyte di tutti i file di dati del database, inclusi eventuali incrementi automatici. Il monitoraggio di questo contatore consente, ad esempio, di determinare le dimensioni corrette di **tempdb**.|  
 |**Byte/sec analisi logiche DBCC**|Numero di byte di analisi di lettura logica al secondo per comandi DBCC (Database Command Console).|  
 |**Tempo di Commit gruppo/sec**|Tempo di blocco del gruppo (in microsecondi) al secondo.|

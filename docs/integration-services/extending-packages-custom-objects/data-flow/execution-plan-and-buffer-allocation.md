@@ -21,22 +21,22 @@ ms.assetid: 679d9ff0-641e-47c3-abb8-d1a7dcb279dd
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 7ff691e764392c65a49dc5527f8a44f8d036ac59
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d1ede86329f0082bac1927ca0c75fc64d6116a56
+ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47853289"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53591715"
 ---
 # <a name="execution-plan-and-buffer-allocation"></a>Piano di esecuzione e allocazione di buffer
   Prima dell'esecuzione, l'attività Flusso di dati esamina i propri componenti e genera un piano di esecuzione per ogni sequenza di componenti. In questa sezione vengono fornite informazioni sul piano di esecuzione, su come visualizzarlo e su come influisce sull'allocazione dei buffer di input e output.  
   
 ## <a name="understanding-the-execution-plan"></a>Informazioni sul piano di esecuzione  
- Un piano di esecuzione contiene thread di origine e thread di lavoro. Ogni thread contiene elenchi di operazioni che specificano elenchi di operazioni di output per i thread di origine oppure elenchi di operazioni di input e output per i thread di lavoro. I thread di origine in un piano di esecuzione rappresentano i componenti di origine nel flusso di dati e sono identificati da *SourceThread**n*, dove *n* è il numero in base zero del thread di origine.  
+ Un piano di esecuzione contiene thread di origine e thread di lavoro. Ogni thread contiene elenchi di operazioni che specificano elenchi di operazioni di output per i thread di origine oppure elenchi di operazioni di input e output per i thread di lavoro. I thread di origine in un piano di esecuzione rappresentano i componenti di origine nel flusso di dati e sono identificati nel piano di esecuzione da *SourceThreadn*, dove *n* è il numero in base zero del thread di origine.  
   
  Ogni thread di origine crea un buffer, imposta un listener e chiama il metodo <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.PrimeOutput%2A> sul componente di origine. Si tratta del punto in cui viene avviata l'esecuzione e hanno origine i dati, quando il componente di origine inizia ad aggiungere righe nei buffer di output forniti dall'attività Flusso di dati. Dopo l'inizio dell'esecuzione dei thread di origine, il lavoro viene bilanciato tra thread di lavoro.  
   
- Un thread di lavoro può contenere sia elenchi di lavoro di input che di output e viene identificato nel piano di esecuzione come *WorkThread**n*, dove *n* è il numero in base zero del thread di lavoro. Questi thread contengono elenchi di operazioni di output quando il grafico contiene un componente con output asincroni.  
+ Un thread di lavoro può contenere elenchi di lavoro di input e di output e viene identificato nel piano di esecuzione come *WorkThreadn*, dove *n* è il numero in base zero del thread di lavoro. Questi thread contengono elenchi di operazioni di output quando il grafico contiene un componente con output asincroni.  
   
  Nel piano di esecuzione di esempio seguente viene rappresentato un flusso di dati che contiene un componente di origine connesso a una trasformazione con un output asincrono connesso a un componente di destinazione. Nell'esempio WorkThread0 contiene un elenco di operazioni di output perché il componente di trasformazione ha un output asincrono.  
   

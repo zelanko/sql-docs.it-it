@@ -25,12 +25,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 2348a0ba8aa1fa0c3c01a1d59867a14abb4579f0
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d9b2fad9fc09736a335e8fc5797cda836f907191
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47808009"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53210970"
 ---
 # <a name="create-schema-transact-sql"></a>CREATE SCHEMA (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -123,8 +123,8 @@ CREATE SCHEMA schema_name [ AUTHORIZATION owner_name ] [;]
   
  Questo comportamento è necessario per permettere agli utenti che usano gruppi di Windows di creare e possedere oggetti. Può tuttavia comportare la creazione accidentale di schemi e utenti. Per evitare di creare implicitamente utenti e schema, creare sempre, quando possibile, in modo esplicito le entità database e assegnare uno schema predefinito. In alternativa, dichiarare in modo esplicito uno schema esistente quando si creano oggetti in un database, usando nomi oggetto costituiti da due o tre parti.  
 
->  [!NOTE]
->  La creazione implicita di un utente di Azure Active Directory non è possibile in [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]. Poiché per la creazione di un utente Azure AD da un provider esterno è necessario verificare lo stato dell'utente in AAD, la creazione dell'utente non riesce e viene visualizzato il messaggio di errore 2760: **Il nome di schema specificato "\<user_name@domain>" non esiste oppure non si ha l'autorizzazione per usarlo.** Quindi viene visualizzato l'errore 2759: **Istruzione CREATE SCHEMA non riuscita a causa di errori precedenti.** Per evitare questi errori, in primo luogo creare l'utente di Azure AD dal provider esterno, quindi eseguire nuovamente l'istruzione che crea l'oggetto.
+> [!NOTE]
+>  La creazione implicita di un utente di Azure Active Directory non è possibile in [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]. Poiché per la creazione di un utente Azure AD da un provider esterno è necessario verificare lo stato dell'utente in AAD, la creazione dell'utente non riesce con errore 2760: **Il nome di schema specificato "\<user_name@domain>" non esiste oppure non si ha l'autorizzazione per usarlo.** E quindi l'errore 2759: **Istruzione CREATE SCHEMA non riuscita a causa di errori precedenti.** Per evitare questi errori, in primo luogo creare l'utente di Azure AD dal provider esterno, quindi eseguire nuovamente l'istruzione che crea l'oggetto.
  
   
 ## <a name="deprecation-notice"></a>Informativa sulle funzionalità deprecate  
@@ -157,7 +157,7 @@ GO
   
 ## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Esempi: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] e [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
-### <a name="b-creating-a-schema-and-a-table-in-the-schema"></a>B. Creazione di uno schema e di una tabella nello schema  
+### <a name="b-creating-a-schema-and-a-table-in-the-schema"></a>b. Creazione di uno schema e di una tabella nello schema  
  Nell'esempio seguente viene creato lo schema `Sales` e poi la tabella `Sales.Region` nello schema.  
   
 ```  

@@ -20,12 +20,12 @@ ms.assetid: 49239d02-964e-47c0-9b7f-2b539151ee1b
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 47986d4615a6cc9425c8547fecd9527731072d65
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 19f3748634b86bcb4419f96a8abae36a72f20f88
+ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47695689"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53589215"
 ---
 # <a name="transport-security---database-mirroring---always-on-availability"></a>Disponibilità Always On per il mirroring dei database con sicurezza del trasporto
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -43,7 +43,7 @@ ms.locfileid: "47695689"
 ##  <a name="Authentication"></a> Autenticazione  
  L'autenticazione è il processo di verifica che un utente sia effettivamente colui che dichiara di essere. Per le connessioni tra endpoint del mirroring del database è necessaria l'autenticazione. Le richieste di connessione da parte del partner o del server di controllo del mirroring devono essere autenticate.  
   
- Il tipo di autenticazione utilizzata da un'istanza del server per il mirroring del database o [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] è una proprietà dell'endpoint del mirroring del database. Per gli endpoint del mirroring del database sono disponibili due tipi di sicurezza del trasporto, ovvero l'autenticazione di Windows (Security Support Provider Interface) e l'autenticazione basata sul certificato.  
+ Il tipo di autenticazione utilizzata da un'istanza del server per il mirroring del database o [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] è una proprietà dell'endpoint del mirroring del database. Per gli endpoint del mirroring del database sono disponibili due tipi di sicurezza del trasporto: l'autenticazione di Windows (Security Support Provider Interface, SSPI) e l'autenticazione basata su certificati.  
   
 ### <a name="windows-authentication"></a>Autenticazione di Windows  
  Con l'autenticazione di Windows, ogni istanza del server accede all'altra parte utilizzando le credenziali di Windows dell'account utente di Windows in cui è in esecuzione il processo. L'autenticazione di Windows potrebbe richiedere una configurazione manuale degli account di accesso, ad esempio:  
@@ -52,15 +52,15 @@ ms.locfileid: "47695689"
   
 -   Se le istanze di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sono in esecuzione come servizi con diversi account di dominio (in domini uguali o attendibili), è necessario creare l'account di accesso di ogni account in **master** in ognuna delle istanze del server remoto e a quell'account di accesso devono essere concesse le autorizzazioni CONNECT sull'endpoint.  
   
--   Se le istanze di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sono in esecuzione come account del servizio di rete, l'account di accesso di ogni account del computer host (*DomainName***\\***ComputerName$*) deve essere creato in **master** in ognuna delle istanze del server remoto e a quell'account di accesso devono essere concesse le autorizzazioni CONNECT sull'endpoint. Ciò avviene in quanto un'istanza del server che è in esecuzione con l'account del servizio di rete esegue l'autenticazione utilizzando l'account di dominio del computer host.  
+-   Se le istanze di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sono in esecuzione come account del servizio di rete, l'account di accesso di ogni account del computer host (_DomainName_**\\**_ComputerName$_) deve essere creato in **master** in ognuna delle istanze del server remoto e a quell'account di accesso devono essere concesse le autorizzazioni CONNECT sull'endpoint. Ciò avviene in quanto un'istanza del server che è in esecuzione con l'account del servizio di rete esegue l'autenticazione utilizzando l'account di dominio del computer host.  
   
 > [!NOTE]  
->  Per un esempio di impostazione di una sessione di mirroring del database mediante l'autenticazione di Windows, vedere [Esempio: Impostazione del mirroring del database tramite l'autenticazione di Windows &#40;Transact-SQL&#41;](../../database-engine/database-mirroring/example-setting-up-database-mirroring-using-windows-authentication-transact-sql.md).  
+>  Per un esempio di configurazione di una sessione di mirroring del database tramite l'autenticazione di Windows, vedere [Esempio: Impostazione del mirroring del database tramite l'autenticazione di Windows &#40;Transact-SQL&#41;](../../database-engine/database-mirroring/example-setting-up-database-mirroring-using-windows-authentication-transact-sql.md).  
   
 ### <a name="certificates"></a>Certificati  
  In alcuni casi, ad esempio quando le istanze del server non si trovano in domini di tipo trusted oppure quando [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] è in esecuzione come servizio locale, l'autenticazione di Windows non è disponibile. In tali casi al posto delle credenziali utente per l'autenticazione delle richieste di connessione sono necessari certificati. L'endpoint del mirroring di ogni istanza del server deve essere configurato con il proprio certificato creato localmente.  
   
- Il metodo di crittografia viene stabilito al momento della creazione del certificato. Per altre informazioni, vedere [Impostare l'endpoint del mirroring del database per l'uso di certificati per le connessioni in uscita &#40;Transact-SQL&#41;](../../database-engine/database-mirroring/database-mirroring-use-certificates-for-outbound-connections.md). Prestare attenzione nella gestione dei certificati utilizzati.  
+ Il metodo di crittografia viene stabilito al momento della creazione del certificato. Per altre informazioni, vedere [Allow a Database Mirroring Endpoint to Use Certificates for Outbound Connections &#40;Transact-SQL&#41;](../../database-engine/database-mirroring/database-mirroring-use-certificates-for-outbound-connections.md). Prestare attenzione nella gestione dei certificati utilizzati.  
   
  In un'istanza del server viene utilizzata la chiave privata del proprio certificato per stabilire la propria identità durante la configurazione di una connessione. Nell'istanza del server che riceve la richiesta di connessione viene utilizzata la chiave pubblica del certificato del mittente per autenticare l'identità del mittente. Considerare, ad esempio, due istanze del server, Server_A e Server_B. In Server_A viene utilizzata la propria chiave privata per crittografare l'intestazione di connessione prima di inviare una richiesta di connessione a Server_B. Server_B utilizza la chiave pubblica del certificato di Server_A per decrittografare l'intestazione di connessione. Se l'intestazione decrittografata è corretta, Server_B sa che l'intestazione è stata crittografata da Server_A e la connessione viene autenticata. Se l'intestazione decrittografata non è corretta, Server_B sa che la richiesta di connessione non è autentica e rifiuta la connessione.  
   
@@ -74,7 +74,7 @@ ms.locfileid: "47695689"
   
 |Valore di ALGORITHM|Descrizione|  
 |---------------------|-----------------|  
-|RC4|Specifica che l'endpoint deve utilizzare l'algoritmo RC4. Impostazione predefinita.<br /><br /> **\*\* Avviso \*\*** L'algoritmo RC4 è deprecato. [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)] È consigliabile utilizzare AES.|  
+|RC4|Specifica che l'endpoint deve utilizzare l'algoritmo RC4. Impostazione predefinita.<br /><br /> <strong>\*\* Avviso \*\*</strong> L'algoritmo RC4 è deprecato. [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)] È consigliabile utilizzare AES.|  
 |AES|Specifica che l'endpoint deve utilizzare l'algoritmo AES.|  
 |AES RC4|Specifica che due endpoint eseguiranno la negoziazione di un algoritmo di crittografia con l'endpoint corrente, dando la priorità all'algoritmo AES.|  
 |RC4 AES|Specifica che due endpoint eseguiranno la negoziazione di un algoritmo di crittografia con l'endpoint corrente, dando la priorità all'algoritmo RC4.|  
@@ -109,6 +109,6 @@ ms.locfileid: "47695689"
  [sys.database_mirroring_endpoints &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-mirroring-endpoints-transact-sql.md)   
  [sys.dm_db_mirroring_connections &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/database-mirroring-sys-dm-db-mirroring-connections.md)   
  [Risolvere i problemi relativi alla configurazione del mirroring del database &#40;SQL Server&#41;](../../database-engine/database-mirroring/troubleshoot-database-mirroring-configuration-sql-server.md)   
- [Risolvere i problemi relativi alla configurazione dei gruppi di disponibilità AlwaysOn &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/troubleshoot-always-on-availability-groups-configuration-sql-server.md)  
+ [Risolvere i problemi relativi alla configurazione di Gruppi di disponibilità AlwaysOn &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/troubleshoot-always-on-availability-groups-configuration-sql-server.md)  
   
   

@@ -12,12 +12,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 4b9d49756a4edb78fcda40f4c4d86bfbb299904d
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: b69d261470a674ef6a90a5bef9e0db7aebfbb44a
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52543503"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53205580"
 ---
 # <a name="a-guide-to-query-processing-for-memory-optimized-tables"></a>Guida all'elaborazione delle query per le tabelle con ottimizzazione per la memoria
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -273,7 +273,7 @@ GO
 |Stream Aggregate|`SELECT count(CustomerID) FROM dbo.Customer`|Si noti che l'operatore Hash Match non è supportato per l'aggregazione. Pertanto, in tutte le aggregazioni nelle stored procedure compilate in modo nativo viene utilizzato l'operatore Stream Aggregate, anche se il piano per la stessa query nel codice [!INCLUDE[tsql](../../includes/tsql-md.md)] interpretato utilizza l'operatore Hash Match.|  
   
 ## <a name="column-statistics-and-joins"></a>Statistiche di colonna e join  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] mantiene statistiche sui valori nelle colonne chiave di indice per facilitare la stima del costo di determinate operazioni, quali l'analisi e le ricerche sugli indici. Con [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] è inoltre possibile creare statistiche sulle colonne chiave non di indice, se create in modo esplicito dall'utente o create da Query Optimizer in risposta a una query con un predicato. La principale metrica nella stima dei costi è il numero di righe elaborate da un singolo operatore. Si noti che, per le tabelle basate su disco, il numero di pagine a cui accede un operatore specifico è significativo nella stima dei costi. Tuttavia, poiché il conteggio delle pagine non è importante per le tabelle ottimizzate per la memoria (è sempre zero), questa descrizione è incentrata sul conteggio delle righe. La stima inizia con gli operatori Index Seek e Index Scan nel piano e viene quindi estesa agli altri operatori, quale l'operatore di join. Il numero stimato di righe da elaborare da parte di un operatore di join è basato sulla stima per gli operatori Index Seek e Index Scan sottostanti. Per l'accesso del codice [!INCLUDE[tsql](../../includes/tsql-md.md)] interpretato alle tabelle ottimizzate per la memoria, è possibile osservare il piano di esecuzione effettivo per vedere la differenza tra il numero di righe stimato ed effettivo per gli operatori nel piano.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] mantiene statistiche sui valori nelle colonne chiave di indice per facilitare la stima del costo di determinate operazioni, quali l'analisi e le ricerche sugli indici. Con [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] è anche possibile creare statistiche sulle colonne chiave non di indice, se create in modo esplicito dall'utente o create da Query Optimizer in risposta a una query con un predicato. La principale metrica nella stima dei costi è il numero di righe elaborate da un singolo operatore. Si noti che, per le tabelle basate su disco, il numero di pagine a cui accede un operatore specifico è significativo nella stima dei costi. Tuttavia, poiché il conteggio delle pagine non è importante per le tabelle ottimizzate per la memoria (è sempre zero), questa descrizione è incentrata sul conteggio delle righe. La stima inizia con gli operatori Index Seek e Index Scan nel piano e viene quindi estesa agli altri operatori, quale l'operatore di join. Il numero stimato di righe da elaborare da parte di un operatore di join è basato sulla stima per gli operatori Index Seek e Index Scan sottostanti. Per l'accesso del codice [!INCLUDE[tsql](../../includes/tsql-md.md)] interpretato alle tabelle ottimizzate per la memoria, è possibile osservare il piano di esecuzione effettivo per vedere la differenza tra il numero di righe stimato ed effettivo per gli operatori nel piano.  
   
  Per l'esempio nella figura 1:  
   

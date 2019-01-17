@@ -1,6 +1,7 @@
 ---
-title: Aggiungere un failover avanzato del database a un gruppo di disponibilità (SQL Server) | Microsoft Docs
-ms.custom: ''
+title: Abilitare il failover avanzato del database per un gruppo di disponibilità
+description: Procedura per l'abilitazione del failover avanzato del database, che attiva un failover, se un database in un gruppo di disponibilità Always On non è più in grado di scrivere transazioni.
+ms.custom: seodec18
 ms.date: 09/25/2017
 ms.prod: sql
 ms.reviewer: mikeray
@@ -13,14 +14,14 @@ ms.assetid: ''
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 181ebdbd2b9d14876b8990bbf8d7b4da768acf39
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 4dee39cb437011c5e894eb54df91c7282db5fe08
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47706139"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53211660"
 ---
-# <a name="add-enhanced-database-failover-to-an-availability-group-sql-server"></a>Aggiungere un failover avanzato del database a un gruppo di disponibilità (SQL Server)
+# <a name="enable-enhanced-database-failover-to-a-database-in-an-always-on-availability-group"></a>Abilitare il failover avanzato del database per un database in un gruppo di disponibilità Always On
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 In SQL Server 2012 e 2014, se un database che fa parte di un gruppo di disponibilità nella replica primaria perde la possibilità di scrivere le transazioni, non attiva un failover anche se le repliche sono sincronizzate e configurate per il failover automatico.
@@ -37,7 +38,7 @@ Questo scenario prevede la stessa configurazione del gruppo di disponibilità de
 
 **Scenario 3**
 
-Viene configurato un gruppo di disponibilità tra l'istanza A e l'istanza B che contiene due database: DB1e DB2. La modalità di disponibilità è impostata su commit sincrono con failover automatico ed è abilitato il failover avanzato del database. Viene perso l'accesso al disco contenente i dati di DB2 e i file di log delle transazioni. Quando viene rilevato il problema, il gruppo di disponibilità effettuerà automaticamente il failover nell'istanza B.
+Viene configurato un gruppo di disponibilità tra l'istanza A e l'istanza B che contiene due database: DB1 e DB2. La modalità di disponibilità è impostata su commit sincrono con failover automatico ed è abilitato il failover avanzato del database. Viene perso l'accesso al disco contenente i dati di DB2 e i file di log delle transazioni. Quando viene rilevato il problema, il gruppo di disponibilità effettuerà automaticamente il failover nell'istanza B.
 
 ## <a name="configure-and-view-the-enhanced-database-failover-option"></a>Configurare e visualizzare l'opzione di failover avanzato del database
 

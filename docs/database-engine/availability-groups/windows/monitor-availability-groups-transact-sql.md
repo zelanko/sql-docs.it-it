@@ -1,6 +1,7 @@
 ---
-title: Monitorare Gruppi di disponibilità (Transact-SQL) | Microsoft Docs
-ms.custom: ''
+title: Monitorare i gruppi di disponibilità con Transact-SQL (T-SQL)
+description: Descrizione delle modalità di monitoraggio dei gruppi di disponibilità Always On usando Transact-SQL (T-SQL).
+ms.custom: seodec18
 ms.date: 05/17/2016
 ms.prod: sql
 ms.reviewer: ''
@@ -17,12 +18,12 @@ ms.assetid: 881a34de-8461-4811-8c62-322bf7226bed
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 51b67b193847ea554052d26ac55c8e9b7919478f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d14cb0b60074ce7cd2c11c80817ec5f0043651a0
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47832359"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53209430"
 ---
 # <a name="monitor-availability-groups-transact-sql"></a>Monitorare Gruppi di disponibilità (Transact-SQL)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -60,7 +61,7 @@ ms.locfileid: "47832359"
  Funzione[SERVERPROPERTY](../../../t-sql/functions/serverproperty-transact-sql.md)  
  Restituisce informazioni sulle proprietà del server in cui è specificato se [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] è abilitato e, in caso affermativo, se è stato avviato sull'istanza del server.  
   
- **Nomi delle colonne:** IsHadrEnabled, HadrManagerStatus  
+ **Nomi di colonna:** IsHadrEnabled, HadrManagerStatus  
   
 ##  <a name="WSFC"></a> Monitoraggio di Gruppi di disponibilità nel cluster WSFC  
  Per monitorare il cluster WSFC (Windows Server Failover Clustering) che ospita un'istanza del server locale abilitata per [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)], utilizzare le viste seguenti:  
@@ -188,7 +189,7 @@ ms.locfileid: "47832359"
 >  Il percorso della replica primaria è l'origine autorevole per un gruppo di disponibilità.  
   
 > [!NOTE]  
->  Per informazioni sui contatori delle prestazioni di [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] per i database di disponibilità (oggetto prestazioni **SQLServer:Database Replica** ), vedere [SQL Server, replica di database](../../../relational-databases/performance-monitor/sql-server-database-replica.md). Per monitorare l'attività dei log delle transazioni dei database di disponibilità, usare i contatori seguenti dell'oggetto prestazioni **SQLServer:Databases** : **Ora di scrittura scaricamento log (ms)**, **Scaricamenti log/sec**, **Mancati riscontri cache del pool di log/sec**, **Letture disco del pool di log/sec**e **Richieste del pool di log/sec**. Per altre informazioni, vedere [SQL Server, Databases Object](../../../relational-databases/performance-monitor/sql-server-databases-object.md).  
+>  Per informazioni sui contatori delle prestazioni di [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] per i database di disponibilità (oggetto prestazioni **SQLServer:Database Replica** ), vedere [SQL Server, replica di database](../../../relational-databases/performance-monitor/sql-server-database-replica.md). Inoltre, per monitorare l'attività del log delle transazioni sui database di disponibilità, usare i seguenti contatori dell'oggetto prestazione **SQLServer:Databases**: **Ora di scrittura scaricamento log (ms)**, **Scaricamenti log/sec**, **Mancati riscontri cache del pool di log/sec**, **Letture disco del pool di log/sec** e **Richieste del pool di log/sec**. Per altre informazioni, vedere [SQL Server, Databases Object](../../../relational-databases/performance-monitor/sql-server-databases-object.md).  
   
 ##  <a name="AGlisteners"></a> Monitoraggio dei listener del gruppo di disponibilità  
  Per monitorare i listener del gruppo di disponibilità sulle subnet del cluster WSFC, utilizzare le viste seguenti:  

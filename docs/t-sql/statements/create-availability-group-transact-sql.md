@@ -25,12 +25,12 @@ ms.assetid: a3d55df7-b4e4-43f3-a14b-056cba36ab98
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: f3b97043a2f9c348da76b8d0c15a448bf8106011
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 983ba238c0c5d5a0e355f49af734a72ae946ee79
+ms.sourcegitcommit: 467b2c708651a3a2be2c45e36d0006a5bbe87b79
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52510788"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53980397"
 ---
 # <a name="create-availability-group-transact-sql"></a>CREATE AVAILABILITY GROUP (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -84,7 +84,7 @@ CREATE AVAILABILITY GROUP group_name
      | PRIMARY_ROLE ( {   
             [ ALLOW_CONNECTIONS = { READ_WRITE | ALL } ]   
         [,] [ READ_ONLY_ROUTING_LIST = { ( '<server_instance>' [ ,...n ] ) | NONE } ]  
-        [,] [ READ_WRITE_ROUTING_URL = { ( '<server_instance>' ) ] 
+        [,] [ READ_WRITE_ROUTING_URL = { ( '<server_instance>' ) ] 
      } )  
      | SESSION_TIMEOUT = integer  
   
@@ -145,13 +145,13 @@ CREATE AVAILABILITY GROUP group_name
 >  Per visualizzare le preferenze di backup automatico di un gruppo di disponibilità esistente, selezionare la colonna **automated_backup_preference** o **automated_backup_preference_desc** della vista del catalogo [sys.availability_groups](../../relational-databases/system-catalog-views/sys-availability-groups-transact-sql.md). Si può anche usare [fn_hadr_backup_is_preferred_replica &#40;Transact-SQL&#41; ](../../relational-databases/system-functions/sys-fn-hadr-backup-is-preferred-replica-transact-sql.md) per determinare la replica di backup preferita.  Questa funzione restituisce 1 per almeno una delle repliche, anche quando `AUTOMATED_BACKUP_PREFERENCE = NONE`.  
   
  FAILURE_CONDITION_LEVEL **=** { 1 | 2 | **3** | 4 | 5 }  
- Specifica le condizioni di errore che attivano un failover automatico per il gruppo di disponibilità. FAILURE_CONDITION_LEVEL viene impostato a livello di gruppo ma è rilevante solo per le repliche di disponibilità configurate per la modalità di disponibilità con commit sincrono (AVAILABILITY_MODE **=** SYNCHRONOUS_COMMIT). Le condizioni di errore possono attivare anche un failover automatico solo se entrambe le repliche, primaria e secondaria, sono configurate per la modalità di failover automatico (FAILOVER_MODE **=** AUTOMATIC) e la replica secondaria è attualmente sincronizzata con la replica primaria.  
+ Specifica le condizioni di errore che attivano un failover automatico per il gruppo di disponibilità. FAILURE_CONDITION_LEVEL viene impostato a livello di gruppo ma è rilevante solo nelle repliche di disponibilità configurate per la modalità di disponibilità con commit sincrono (AVAILABILITY_MODE **=** SYNCHRONOUS_COMMIT). Le condizioni di errore possono attivare anche un failover automatico solo se entrambe le repliche, primaria e secondaria, sono configurate per la modalità di failover automatico (FAILOVER_MODE **=** AUTOMATIC) e la replica secondaria è attualmente sincronizzata con la replica primaria.  
   
  I livelli delle condizioni di errore (1-5) vanno dal livello 1, meno restrittivo, al livello 5, più restrittivo. Un livello di condizione specifico include tutti i livelli meno restrittivi. Il livello della condizione più restrittivo, ovvero il livello 5, include pertanto i quattro livelli della condizione meno restrittivi (1-4), il livello 4 include i livelli 1-3 e così via. Nella tabella seguente viene descritta la condizione di errore che corrisponde a ciascun livello.  
   
 |Level|Condizione di errore|  
 |-----------|-----------------------|  
-|1|Specifica che deve essere avviato un failover automatico quando si verifica una delle condizioni seguenti:<br /><br /> - Il servizio [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] non è attivo.<br /><br /> - Il lease del gruppo di disponibilità per la connessione al cluster WSFC scade poiché non viene ricevuto alcun ACK dall'istanza del server. Per altre informazioni, vedere [Funzionamento: timeout lease di SQL Server Always On](https://blogs.msdn.com/b/psssql/archive/2012/09/07/how-it-works-sql-server-AlwaysOn-lease-timeout.aspx).|  
+|1|Specifica che deve essere avviato un failover automatico quando si verifica una delle condizioni seguenti:<br /><br /> - Il servizio [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] non è attivo.<br /><br /> - Il lease del gruppo di disponibilità per la connessione al cluster WSFC scade poiché non viene ricevuto alcun ACK dall'istanza del server. Per altre informazioni, vedere [How It Works: SQL Server Always On Lease Timeout](https://blogs.msdn.com/b/psssql/archive/2012/09/07/how-it-works-sql-server-AlwaysOn-lease-timeout.aspx) (Funzionamento: timeout lease di SQL Server Always On).|  
 |2|Specifica che deve essere avviato un failover automatico quando si verifica una delle condizioni seguenti:<br /><br /> - L'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] non si connette al cluster e viene superata la soglia HEALTH_CHECK_TIMEOUT specificata dall'utente per il gruppo di disponibilità.<br /><br /> - La replica di disponibilità si trova in uno stato di errore.|  
 |3|Specifica che deve essere avviato un failover automatico in caso di errori interni di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] critici, ad esempio spinlock orfani, gravi violazioni dell'accesso in scrittura o dumping eccessivo.<br /><br /> Questo è il comportamento predefinito.|  
 |4|Specifica che deve essere avviato un failover automatico in caso di errori interni di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] con gravità moderata, ad esempio una condizione persistente di memoria insufficiente nel pool di risorse interno di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
@@ -163,7 +163,7 @@ CREATE AVAILABILITY GROUP group_name
  I valori FAILURE_CONDITION_LEVEL e HEALTH_CHECK_TIMEOUT definiscono *criteri di failover flessibili* per un gruppo specifico, fornendo un controllo granulare sulle condizioni che devono causare un failover automatico. Per altre informazioni, vedere [Criteri di failover flessibili per failover automatico di un gruppo di disponibilità &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/flexible-automatic-failover-policy-availability-group.md).  
   
  HEALTH_CHECK_TIMEOUT **=** *millisecondi*  
- Specifica il tempo di attesa, in millisecondi, per la restituzione delle informazioni sull'integrità del server da parte della stored procedure di sistema [sp_server_diagnostics](../../relational-databases/system-stored-procedures/sp-server-diagnostics-transact-sql.md) prima che il cluster WSFC presupponga che l'istanza del server sia lenta o bloccata. HEALTH_CHECK_TIMEOUT viene impostato a livello di gruppo ma è rilevante solo per le repliche di disponibilità configurate per la modalità di disponibilità con commit sincrono e che supportano il failover automatico (AVAILIBILITY_MODE **=** SYNCHRONOUS_COMMIT).  Un timeout del controllo di integrità può anche attivare un failover automatico solo se entrambe le repliche, primaria e secondaria, sono configurate per la modalità di failover automatico (FAILOVER_MODE **=** AUTOMATIC) e la replica secondaria è attualmente sincronizzata con la replica primaria.  
+ Specifica il tempo di attesa, in millisecondi, per la restituzione delle informazioni sull'integrità del server da parte della stored procedure di sistema [sp_server_diagnostics](../../relational-databases/system-stored-procedures/sp-server-diagnostics-transact-sql.md) prima che il cluster WSFC presupponga che l'istanza del server sia lenta o bloccata. HEALTH_CHECK_TIMEOUT viene impostato a livello di gruppo ma è rilevante solo nelle repliche di disponibilità configurate per la modalità di disponibilità con commit sincrono che supportano il failover automatico (AVAILABILITY_MODE **=** SYNCHRONOUS_COMMIT).  Un timeout del controllo di integrità può anche attivare un failover automatico solo se entrambe le repliche, primaria e secondaria, sono configurate per la modalità di failover automatico (FAILOVER_MODE **=** AUTOMATIC) e la replica secondaria è attualmente sincronizzata con la replica primaria.  
   
  Il valore predefinito di HEALTH_CHECK_TIMEOUT è 30000 millisecondi (30 secondi). Il valore minimo è 15000 millisecondi (15 secondi) e il valore massimo è 4294967295 millisecondi.  
   
@@ -295,7 +295,7 @@ CREATE AVAILABILITY GROUP group_name
   
 -   0 indica che questa replica di disponibilità non è destinata all'esecuzione dei backup. Ciò si rivela utile, ad esempio, per una replica di disponibilità remota in cui non si desidera eseguire mai il failover dei backup.  
   
- Per altre informazioni, vedere [Repliche secondarie attive: Backup in repliche secondarie &#40;gruppi di disponibilità Always On&#41;](../../database-engine/availability-groups/windows/active-secondaries-backup-on-secondary-replicas-always-on-availability-groups.md).  
+ Per altre informazioni, vedere [Repliche secondarie attive: Backup su repliche secondarie &#40;Gruppi di disponibilità Always On&#41;](../../database-engine/availability-groups/windows/active-secondaries-backup-on-secondary-replicas-always-on-availability-groups.md).  
   
  SECONDARY_ROLE **(** ... **)**  
  Specifica le impostazioni specifiche del ruolo che vengono applicate se questa replica di disponibilità è attualmente proprietaria del ruolo secondario, ovvero ogni volta che è una replica secondaria. All'interno delle parentesi, specificare uno o entrambe opzioni per il ruolo secondario. Se si specificano entrambe, usare un elenco delimitato da virgole.  
@@ -305,7 +305,7 @@ CREATE AVAILABILITY GROUP group_name
  ALLOW_CONNECTIONS **=** { NO | READ_ONLY | ALL }  
  Specifica se i database di una determinata replica di disponibilità che esegue il ruolo secondario, ovvero che funge da replica secondaria, possono accettare connessioni dai client, ovvero:  
   
- NO  
+ No  
  Non sono consentite connessioni utente ai database secondari di questa replica. I database non sono disponibili per l'accesso in lettura. Questo è il comportamento predefinito.  
   
  READ_ONLY  
@@ -314,7 +314,7 @@ CREATE AVAILABILITY GROUP group_name
  ALL  
  Sono consentite tutte le connessioni ai database nella replica secondaria per l'accesso in sola lettura.  
   
- Per altre informazioni, vedere [Repliche secondarie attive: Repliche secondarie leggibili &#40;Gruppi di disponibilità AlwaysOn&#41;](../../database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md).  
+ Per altre informazioni, vedere [Repliche secondarie attive: Repliche secondarie leggibili &#40;Gruppi di disponibilità Always On&#41;](../../database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md).  
   
  READ_ONLY_ROUTING_URL **='** TCP **://**_system-address_**:**_port_**'**  
  Specifica l'URL da usare per il routing delle richieste di connessione con finalità di lettura a questa replica di disponibilità. Si tratta dell'URL sul quale è in ascolto il motore di database di SQL Server. In genere, l'istanza predefinita del motore di database di SQL Server è in ascolto sulla porta TCP 1433.  
@@ -416,11 +416,11 @@ CREATE AVAILABILITY GROUP group_name
   
  LISTENER **'**_dns\_name_**'(** \<listener_option\> **)** Definisce un nuovo listener del gruppo di disponibilità per questo gruppo di disponibilità. LISTENER è un argomento facoltativo.  
   
-> [!IMPORTANT]  
+> [!IMPORTANT]
 >  Prima di creare il primo listener, è consigliabile leggere l'argomento [Creare o configurare un listener del gruppo di disponibilità &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/create-or-configure-an-availability-group-listener-sql-server.md).  
->   
+> 
 >  Dopo aver creato un listener per un gruppo di disponibilità specifico, è consigliabile effettuare le operazioni seguenti:  
->   
+> 
 >  -   Chiedere all'amministratore di rete di riservare l'indirizzo IP del listener per un uso esclusivo.  
 > -   Fornire il nome host DNS del listener agli sviluppatori dell'applicazione in modo da essere usato nelle stringhe di connessione per la richiesta di connessioni client al gruppo di disponibilità.  
   

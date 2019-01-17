@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 9d11d055-a3be-45aa-99a7-46447a94ed42
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 13e03572ee4ce886288f1c72b89a97b476d3b35c
-ms.sourcegitcommit: c7febcaff4a51a899bc775a86e764ac60aab22eb
+ms.openlocfilehash: f0d1e59f0f049373b0858b756618454659898dc2
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "52712572"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53211930"
 ---
 # <a name="data-sources-supported-by-reporting-services-ssrs"></a>Origini dei dati supportate da Reporting Services (SSRS)
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] recupera i dati di report dalle origini dati tramite un livello di dati modulare ed estensibile che usa estensioni per l'elaborazione dati. Per recuperare dati di report da un'origine dati, è necessario selezionare un'estensione per l'elaborazione dati che supporti il tipo di origine dati, la versione del software in esecuzione su di essa e la relativa piattaforma (32 bit o 64 bit [!INCLUDE[vcprx64](../../includes/vcprx64-md.md)]).  
@@ -81,23 +81,23 @@ ms.locfileid: "52712572"
 ## <a name="supported-data-sources"></a>Origini dati supportate  
  La tabella seguente elenca i provider di dati e le estensioni per l'elaborazione dati [!INCLUDE[msCoName](../../includes/msconame-md.md)] che è possibile usare per recuperare i dati per i set di dati e i modelli di report. Per ulteriori informazioni su un'estensione o un provider di dati, fare clic sul collegamento nella seconda colonna. Le colonne della tabella sono descritte come segue:  
   
--   Origine dei dati del report: il tipo di dati a cui si accede, ad esempio database relazionale, database multidimensionale, file flat o XML. In questa colonna è disponibile la risposta alla domanda "Quali tipi di dati [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] è in grado di usato per un report?"  
+-   Origine dei dati del report: il tipo di dati a cui si accede, ad esempio database relazionale, database multidimensionale, file flat o XML. In questa colonna è disponibile la risposta alla domanda "Quali tipi di dati possono essere usati da [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] per un report?"  
   
--   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Tipo di origine dati: uno dei tipi di origine dati disponibili nell'elenco a discesa quando si definisce un'origine dati in [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. Questo elenco viene compilato in base alle estensioni per l'elaborazione dati e ai provider di dati installati e registrati. In questa colonna è disponibile la risposta alla domanda "Quale tipo di origine dati deve essere selezionata nell'elenco a discesa quando si crea un'origine dati del report?"  
+-   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Tipo di origine dati: uno dei tipi di origine dei dati disponibili nell'elenco a discesa quando si definisce un'origine dei dati in [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. Questo elenco viene compilato in base alle estensioni per l'elaborazione dati e ai provider di dati installati e registrati. In questa colonna è disponibile la risposta alla domanda "Quale tipo di origine dati deve essere selezionata nell'elenco a discesa quando si crea un'origine dati del report?"  
   
--   Nome dell'estensione per l'elaborazione dati/provider di dati: l'estensione per l'elaborazione dati di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] o altro provider di dati corrispondente al tipo di origine dei dati di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] selezionato. In questa colonna è disponibile la risposta alla domanda" Quando si seleziona un tipo di origine dati, quale estensione per l'elaborazione dati o provider di dati corrispondente viene utilizzato?"  
+-   Nome dell'estensione per l'elaborazione dati/provider di dati: l'estensione per l'elaborazione dati di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] o altro provider di dati corrispondente al tipo di origine dei dati di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] selezionato. In questa colonna è disponibile la risposta alla domanda "Quando si seleziona un tipo di origine dati, quale estensione per l'elaborazione dati o provider di dati corrispondente viene usato?"  
   
--   Versione del provider di dati sottostante (facoltativo): alcuni tipi di origini dei dati supportano più di un provider di dati. Per un tipo di provider di dati, potrebbero essere disponibili versioni diverse dello stesso provider o implementazioni diverse di terze parti. Il provider viene spesso incluso nella stringa di connessione dopo aver configurato un'origine dati. In questa colonna è disponibile la risposta alla domanda "Dopo aver selezionato il tipo di origine dati, quale provider di dati occorre selezionare nella finestra di dialogo **Proprietà connessione** ?"  
+-   Versione del provider di dati sottostante (facoltativo): alcuni tipi di origine dati supportano più provider di dati. Per un tipo di provider di dati, potrebbero essere disponibili versioni diverse dello stesso provider o implementazioni diverse di terze parti. Il provider viene spesso incluso nella stringa di connessione dopo aver configurato un'origine dati. In questa colonna è disponibile la risposta alla domanda "Dopo aver selezionato il tipo di origine dei dati, quale provider di dati occorre selezionare nella finestra di dialogo **Proprietà connessione**?"  
   
--   *\<Piattaforma>* dell'origine dati: la piattaforma dell'origine dati supportata dall'estensione per l'elaborazione dati o dal provider di dati per l'origine dati di destinazione. In questa colonna è disponibile la risposta alla domanda "'L'estensione per l'elaborazione dati o il provider di dati sono in grado di recuperare dati da un'origine in questo tipo di piattaforma?"  
+-   *\<Piattaforma>* origine dati: la piattaforma dell'origine dei dati supportata dall'estensione per l'elaborazione dati o dal provider di dati per l'origine dei dati di destinazione. In questa colonna è disponibile la risposta alla domanda "L'estensione per l'elaborazione dati o il provider di dati sono in grado di recuperare dati da un'origine in questo tipo di piattaforma?"  
   
--   Versione dell'origine dati: la versione dell'origine dati di destinazione supportata dall'estensione per l'elaborazione dati o dal provider di dati. In questa colonna è disponibile la risposta alla domanda "'L'estensione per l'elaborazione dati o il provider di dati sono in grado di recuperare dati da questa versione dell'origine dati?"  
+-   Versione dell'origine dati: la versione dell'origine dati di destinazione supportata dall'estensione per l'elaborazione dati o dal provider di dati. In questa colonna è disponibile la risposta alla domanda "L'estensione per l'elaborazione dati o il provider di dati sono in grado di recuperare dati da questa versione dell'origine dati?"  
   
--   *\<Piattaforma>* RS: le piattaforme per il server di report e il client di creazione dei report in cui è possibile installare un provider di dati o un'estensione per l'elaborazione dati personalizzata. Le estensioni per l'elaborazione dati incorporate in [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] sono incluse in tutte le installazioni di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. Le estensioni per l'elaborazione dati e i provider di dati [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] devono essere compilati in modo nativo per una piattaforma specifica. In questa colonna è disponibile la risposta alla domanda "'L'estensione per l'elaborazione dati o il provider di dati può essere installato in questo tipo di piattaforma?"  
+-   *\<Piattaforma>* RS: le piattaforme per il server di report e il client di creazione dei report in cui è possibile installare un provider di dati o un'estensione per l'elaborazione dati personalizzata. Le estensioni per l'elaborazione dati incorporate in [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] sono incluse in tutte le installazioni di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. Le estensioni per l'elaborazione dati e i provider di dati [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] devono essere compilati in modo nativo per una piattaforma specifica. In questa colonna è disponibile la risposta alla domanda "L'estensione per l'elaborazione dati o il provider di dati può essere installato in questo tipo di piattaforma?"  
   
 ###  <a name="DataSourcesTable"></a> Tipi di origini dei dati  
   
-|Origine di<br /><br /> Dati di report|Tipo di origine dati di Reporting Services|Nome dell'estensione per l'elaborazione dati/provider di dati|Versione del provider di dati sottostante<br /><br /> (Facoltativo)|data<br /><br /> Origine<br /><br /> Piattaforma x86|Dati<br /><br /> Origine<br /><br /> Piattaforma x64|Versione dell'origine dati|RS<br /><br /> Piattaforma x86|RS<br /><br /> Piattaforma x64|  
+|Origine di<br /><br /> Dati di report|Tipo di origine dati di Reporting Services|Nome dell'estensione per l'elaborazione dati/provider di dati|Versione del provider di dati sottostante<br /><br /> (Facoltativo)|data<br /><br /> Origine<br /><br /> Piattaforma x86|data<br /><br /> Origine<br /><br /> Piattaforma x64|Versione dell'origine dati|RS<br /><br /> Piattaforma x86|RS<br /><br /> Piattaforma x64|  
 |-------------------------------|-----------------------------------------|------------------------------------------------------|-------------------------------------------------------|--------------------------------------|--------------------------------------|----------------------------|-------------------------|-------------------------|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] database relazionale|[Microsoft SQL Server](#MicrosoftSQLServer)|Estensione predefinita per l'elaborazione dati di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]|Estende System.Data.SqlClient|S|S|SQL Server 2008 e versioni successive.|S|S|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] database relazionale|OLEDB|Estensione predefinita per l'elaborazione dati di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]|Estende System.Data.OledbClient|S|S|SQL Server 2008 e versioni successive.|S|S|  
@@ -129,7 +129,7 @@ ms.locfileid: "52712572"
 ## <a name="reporting-services-data-processing-extensions"></a>Estensioni per l'elaborazione dati in Reporting Services  
  Le estensioni per l'elaborazione dati seguenti vengono installate automaticamente con [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] e [!INCLUDE[ss_dtbi](../../includes/ss-dtbi-md.md)]. Per altre informazioni, vedere [File di configurazione RsReportServer.config](../../reporting-services/report-server/rsreportdesigner-configuration-file.md) e [File di configurazione RSReportDesigner](../../reporting-services/report-server/rsreportserver-config-configuration-file.md).  
   
-> [!NOTE]  
+> [!NOTE]
 >  L'estensione per l'elaborazione dati di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] non è attualmente supportata.  
   
  Per altre informazioni sulle estensioni per l'elaborazione dati supportate da Generatore report, vedere [Connessioni dati, origini dati e stringhe di connessione in Generatore report](https://msdn.microsoft.com/library/7e103637-4371-43d7-821c-d269c2cc1b34) nella [documentazione relativa a Generatore report](https://go.microsoft.com/fwlink/?LinkId=154494) nel sito msdn.microsoft.com.  
@@ -192,7 +192,7 @@ Questa origine dati è stata deprecata. Usare il tipo di origine dati SQL Server
  [Torna alla tabella delle origini dati](#DataSourcesTable)  
   
 ####  <a name="OracleOLEDB"></a> OLE DB per Oracle  
- L'estensione per l'elaborazione dati OLE DB per Oracle non supporta i tipi di dati Oracle BLOB, CLOB, NCLOB, BFILE, UROWID.  
+ L'estensione per l'elaborazione dati OLE DB per Oracle non supporta i tipi di dati Oracle seguenti: BLOB, CLOB, NCLOB, BFILE, UROWID.  
   
  I parametri senza nome dipendenti dalla posizione sono supportati. I parametri denominati non sono supportati da questa estensione. Per usare i parametri denominati, usare l'estensione per l'elaborazione dati [Oracle](#OracleClient) .  
   
@@ -270,7 +270,7 @@ Per installare gli strumenti client Oracle è possibile seguire questa procedura
   
  Per altre informazioni, vedere [Tipo di connessione Teradata &#40;SSRS&#41;](../../reporting-services/report-data/teradata-connection-type-ssrs.md).  
   
- È inoltre possibile creare modelli basati su un database Teradata. Per altre informazioni, vedere il white paper seguente nel sito Teradata [Microsoft SQL Server 2012 Reporting Services and Teradata Corporation](https://www.teradata.com/white-papers/Microsoft-SQL-Server-2012-Reporting-Services-and-Teradata-Corporation/?type=WP)(Microsoft SQL Server 2012 Reporting e Teradata Corporation).  
+ È inoltre possibile creare modelli basati su un database Teradata. Per altre informazioni, vedere il white paper seguente nel sito Web Teradata relativo a [Microsoft SQL Server 2012 Reporting Services e Teradata Corporation](https://www.teradata.com/white-papers/Microsoft-SQL-Server-2012-Reporting-Services-and-Teradata-Corporation/?type=WP).  
   
  [Torna alla tabella delle origini dati](#DataSourcesTable)  
   
@@ -292,7 +292,7 @@ Per installare gli strumenti client Oracle è possibile seguire questa procedura
  Le credenziali specificate dipendono dall'implementazione utilizzata dall'applicazione client. Per altre informazioni, vedere [Tipo di connessione Elenco Microsoft SharePoint &#40;SSRS&#41;](../../reporting-services/report-data/sharepoint-list-connection-type-ssrs.md).  
   
 ###  <a name="XML"></a> Estensione per l'elaborazione dati XML  
- [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] include un'estensione per l'elaborazione dati XML che consente di usare dati XML in un report. I dati possono essere recuperati da un documento XML, da un servizio Web o da un'applicazione Web a cui è possibile accedere tramite un URL. Per altre informazioni, vedere [Tipo di connessione XML &#40;SSRS&#41;](../../reporting-services/report-data/xml-connection-type-ssrs.md). Per altre informazioni sulla finestra Progettazione query associata, vedere la sezione relativa alla progettazione di query basata su testo in [Interfaccia utente della finestra Progettazione query con interfaccia grafica](../../reporting-services/report-data/graphical-query-designer-user-interface.md). Per consultare degli esempi, vedere [Reporting Services: Using XML and Web Service Data Sources](https://go.microsoft.com/fwlink/?LinkId=81654).  
+ [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] include un'estensione per l'elaborazione dati XML che consente di usare dati XML in un report. I dati possono essere recuperati da un documento XML, da un servizio Web o da un'applicazione Web a cui è possibile accedere tramite un URL. Per altre informazioni, vedere [Tipo di connessione XML &#40;SSRS&#41;](../../reporting-services/report-data/xml-connection-type-ssrs.md). Per altre informazioni sulla finestra Progettazione query associata, vedere la sezione relativa alla progettazione di query basata su testo in [Interfaccia utente della finestra Progettazione query con interfaccia grafica](../../reporting-services/report-data/graphical-query-designer-user-interface.md). Per gli esempi, vedere [Reporting Services: uso di origini dati XML e servizio Web](https://go.microsoft.com/fwlink/?LinkId=81654).  
   
  [Torna alla tabella delle origini dati](#DataSourcesTable)  
   

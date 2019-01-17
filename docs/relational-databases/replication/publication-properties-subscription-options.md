@@ -13,12 +13,12 @@ ms.assetid: 31abd605-b273-419d-86df-d0ecf539a507
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: e1a0b583c66355245790004a8612afa0ace72999
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: a204ee5d34e37736ddd433636cf0e86564718b77
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53213130"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54128015"
 ---
 # <a name="publication-properties-subscription-options"></a>Proprietà pubblicazione, Opzioni sottoscrizione
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -59,7 +59,7 @@ ms.locfileid: "53213130"
  Determina se utilizzare un agente che sia indipendente da altre pubblicazioni del database. Questa opzione è di sola lettura, è impostata su **True** per impostazione predefinita per le pubblicazioni create con la Creazione guidata nuova pubblicazione e non può essere modificata dopo la creazione della pubblicazione. Per altre informazioni, vedere [Amministrazione dell'agente di replica](../../relational-databases/replication/agents/replication-agent-administration.md).  
   
  **Snapshot sempre disponibile**  
- Determina se vengono creati file di snapshot a ogni esecuzione dell'agente snapshot. È necessaria l'opzione **Agente di distribuzione indipendente**. Questa opzione è di sola lettura ed è impostata su **True** se è stata selezionata l'opzione **Crea uno snapshot immediatamente e mantieni lo snapshot disponibile per l'inizializzazione delle sottoscrizioni** nella pagina **Agente snapshot** della Creazione guidata nuova pubblicazione (opzione predefinita). Per altre informazioni, vedere [Creare e applicare lo snapshot](../../relational-databases/replication/create-and-apply-the-snapshot.md).  
+ Determina se vengono creati file di snapshot a ogni esecuzione dell'agente snapshot. È necessaria l'opzione **Agente di distribuzione indipendente**. Questa opzione è di sola lettura ed è impostata su **True** se è stata selezionata l'opzione **Crea uno snapshot immediatamente e mantieni lo snapshot disponibile per l'inizializzazione delle sottoscrizioni** nella pagina **Agente snapshot** della Creazione guidata nuova pubblicazione (opzione predefinita). Per altre informazioni, vedere [Creare e applicare lo snapshot](../../relational-databases/replication/create-and-apply-the-initial-snapshot.md).  
   
  **Consenti inizializzazione dai file di backup**  
  Solo[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] e versioni successive. Determina se consentire l'utilizzo dei file di backup per inizializzare le sottoscrizioni. Per altre informazioni, vedere [Inizializzazione di una sottoscrizione transazionale senza uno snapshot](../../relational-databases/replication/initialize-a-transactional-subscription-without-a-snapshot.md).  

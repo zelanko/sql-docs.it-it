@@ -19,15 +19,15 @@ helpviewer_keywords:
 - Stretch Database, wizard
 - Enable Database for Stretch Wizard
 ms.assetid: 855dd9fc-f80c-4dbc-bf46-55a9736bfe15
-author: MikeRayMSFT
-ms.author: mikeray
+author: douglaslMS
+ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 3be0f60c692334b577a7eb59fa25f385ef0af33c
-ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
+ms.openlocfilehash: a2a977be46826859cf286fff1750345d5346e2b9
+ms.sourcegitcommit: 33712a0587c1cdc90de6dada88d727f8623efd11
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43020464"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53596822"
 ---
 # <a name="get-started-by-running-the-enable-database-for-stretch-wizard"></a>Avviare la procedura guidata Abilitare il database per l'estensione
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly.md)]
@@ -178,7 +178,7 @@ Se si vuole usare un tipo diverso di funzione di filtro per selezionare le righe
   
 ##  <a name="KnownIssues"></a> Risoluzione dei problemi relativi alla procedura guidata  
  **La procedura guidata Abilitare il database per l'estensione non ha esito positivo.**  
- Se Estensione database non è ancora abilitata a livello di server e se si esegue la procedura guidata senza le autorizzazioni di amministratore di sistema per abilitarlo, la procedura guidata avrà esito negativo. Chiedere all'amministratore di sistema di abilitare Estensione database nell'istanza del server locale e quindi eseguire nuovamente la procedura guidata. Per ulteriori informazioni, vedere [Prerequisito: autorizzazioni per abilitare Stretch Database nel server](../../sql-server/stretch-database/enable-stretch-database-for-a-database.md#EnableTSQLServer).  
+ Se Estensione database non è ancora abilitata a livello di server e se si esegue la procedura guidata senza le autorizzazioni di amministratore di sistema per abilitarlo, la procedura guidata avrà esito negativo. Chiedere all'amministratore di sistema di abilitare Estensione database nell'istanza del server locale e quindi eseguire nuovamente la procedura guidata. Per altre informazioni, vedere [Prerequisito: Autorizzazioni per abilitare Stretch Database nel server](../../sql-server/stretch-database/enable-stretch-database-for-a-database.md#EnableTSQLServer).  
   
 ## <a name="next-steps"></a>Passaggi successivi  
  Abilitare tabelle aggiuntive per Estensione database. Monitorare la migrazione dei dati e gestire tabelle e database abilitati per l'estensione.  

@@ -13,12 +13,12 @@ ms.assetid: bea09522-ff47-4037-ab55-a98ea7c10099
 author: VanMSFT
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 8ca041f0bb84feab3773a1a7404d110c6d5c75f6
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: dc78ec53189ff3f9deae1a95895c12ac33cd25d7
+ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52526297"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53588616"
 ---
 # <a name="evaluate-a-policy-based-management-policy-on-a-schedule"></a>Valutare i criteri della gestione basata su criteri in una pianificazione
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -28,7 +28,7 @@ ms.locfileid: "52526297"
   
 -   **Prima di iniziare:**  
   
-     [Security](#Security)  
+     [Sicurezza](#Security)  
   
 -   **Per valutare i criteri in una pianificazione tramite:**  
   
@@ -38,7 +38,7 @@ ms.locfileid: "52526297"
   
 ###  <a name="Security"></a> Sicurezza  
   
-####  <a name="Permissions"></a> Autorizzazioni  
+####  <a name="Permissions"></a> Permissions  
  È necessaria l'appartenenza al ruolo PolicyAdministratorRole nel database msdb.  
   
 ##  <a name="SSMSProcedure"></a> Utilizzo di SQL Server Management Studio  
@@ -55,7 +55,7 @@ ms.locfileid: "52526297"
   
 5.  Fare clic con il pulsante destro del mouse sui criteri di cui si desidera valutare la pianificazione, quindi scegliere **Proprietà**.  
   
-6.  Nella finestra di dialogo **Apri criteri -***nome_criterio* selezionare **Su pianificazione** nell'elenco **Modalità di valutazione**.  
+6.  Nella finestra di dialogo **Apri criteri -**_nome_criterio_ selezionare **Su pianificazione** nell'elenco **Modalità di valutazione**.  
   
 7.  In **Pianificazione**fare clic su **Seleziona** per specificare una pianificazione esistente o su **Nuova** per creare una nuova pianificazione.  
   

@@ -10,12 +10,12 @@ ms.technology: developer
 ms.topic: conceptual
 ms.custom: seodec18
 ms.date: 12/12/2018
-ms.openlocfilehash: 498432a84d523c597d7c7c52c151dce003047ba2
-ms.sourcegitcommit: 40c3b86793d91531a919f598dd312f7e572171ec
+ms.openlocfilehash: c3ea066f93f2848ed822fdac24f37b2c5f179ac9
+ms.sourcegitcommit: bfa10c54e871700de285d7f819095d51ef70d997
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53328557"
+ms.lasthandoff: 01/14/2019
+ms.locfileid: "54254696"
 ---
 # <a name="develop-with-the-rest-apis-for-reporting-services"></a>Sviluppare con le API REST per Reporting Services
 
@@ -40,14 +40,14 @@ La coppia richiesta-risposta di un'API REST può essere suddivisa in cinque comp
 
 * Campi di intestazione del messaggio di richiesta HTTP:
 
-    * Un [metodo HTTP](https://www.w3.org/Protocols/rfc2616/rfc2616-sec9.html) necessario (noto anche come operazione o verbo) che indica al servizio il tipo di operazione richiesto. Le API REST di Reporting Services supportano i metodi DELETE, GET, HEAD, PUT, POST e PATCH.
+    * Un [metodo HTTP](http://www.w3.org/Protocols/rfc2616/rfc2616-sec9.html) necessario (noto anche come operazione o verbo) che indica al servizio il tipo di operazione richiesto. Le API REST di Reporting Services supportano i metodi DELETE, GET, HEAD, PUT, POST e PATCH.
     * Campi di intestazione aggiuntivi facoltativi, come richiesto dall'URI e dal metodo HTTP specificati.
 
 * Campi facoltativi del **corpo del messaggio di richiesta** HTTP per supportare l'operazione URI e HTTP. Le operazioni POST contengono ad esempio oggetti con codifica MIME che vengono passati come parametri complessi. Per le operazioni POST o PUT, il tipo di codifica MIME per il corpo deve essere specificato anche nell'intestazione della richiesta `Content-type`. Alcuni servizi richiedono l'uso di un tipo MIME specifico, ad esempio `application/json`.
 
 * Campi di **intestazione del messaggio di risposta** HTTP:
 
-    * Un [codice di stato HTTP](https://www.w3.org/Protocols/HTTP/HTRESP.html), compreso tra codici di riuscita 2xx e codici di errore 4xx o 5xx. In alternativa, può essere restituito un codice di stato definito dal servizio, come indicato nella documentazione dell'API.
+    * Un [codice di stato HTTP](http://www.w3.org/Protocols/HTTP/HTRESP.html), compreso tra codici di riuscita 2xx e codici di errore 4xx o 5xx. In alternativa, può essere restituito un codice di stato definito dal servizio, come indicato nella documentazione dell'API.
     * Campi di intestazione aggiuntivi facoltativi eventualmente necessari per supportare la risposta della richiesta, ad esempio un'intestazione della risposta `Content-type`.
 
 * Campi facoltativi del **corpo del messaggio di risposta** HTTP:

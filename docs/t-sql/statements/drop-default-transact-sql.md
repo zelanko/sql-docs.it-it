@@ -19,19 +19,19 @@ ms.assetid: d2d3af25-8877-46ba-95d9-1844961d97ee
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 1872a3a1cdcdbe112ead08b4bef1fc680ef90338
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: 72accd7718280b4994c3339531c8e5d0fef067c1
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51703729"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53210788"
 ---
 # <a name="drop-default-transact-sql"></a>DROP DEFAULT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Rimuove dal database corrente uno o più valori predefiniti creati dall'utente.  
   
-> [!IMPORTANT]  
+> [!IMPORTANT]
 >  L'istruzione DROP DEFAULT verrà rimossa a partire dalla prossima versione di [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Non utilizzare DROP DEFAULT in un nuovo progetto di sviluppo e prevedere interventi di modifica nelle applicazioni che attualmente la utilizzano. In alternativa, usare le definizioni di valori predefiniti che è possibile creare con la parola chiave DEFAULT dell'istruzione [ALTER TABLE](../../t-sql/statements/alter-table-transact-sql.md) o [CREATE TABLE](../../t-sql/statements/create-table-transact-sql.md).  
   
  ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
@@ -44,7 +44,7 @@ DROP DEFAULT [ IF EXISTS ] { [ schema_name . ] default_name } [ ,...n ] [ ; ]
   
 ## <a name="arguments"></a>Argomenti  
  *IF EXISTS*  
- **Si applica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (da[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] a [versione corrente](https://go.microsoft.com/fwlink/p/?LinkId=299658)).  
+ **Si applica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (da [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] a [versione corrente](https://go.microsoft.com/fwlink/p/?LinkId=299658)).  
   
  Rimuove in modo condizionale l'impostazione predefinita solo se esiste già.  
   
@@ -84,7 +84,7 @@ DROP DEFAULT IF EXISTS datedflt;
 GO  
 ```  
   
-### <a name="b-dropping-a-default-that-has-been-bound-to-a-column"></a>B. Eliminazione di un valore predefinito associato a una colonna  
+### <a name="b-dropping-a-default-that-has-been-bound-to-a-column"></a>b. Eliminazione di un valore predefinito associato a una colonna  
  Nell'esempio seguente viene disassociato e quindi eliminato il valore predefinito `EmergencyContactPhone` associato alla colonna `Contact` della tabella `phonedflt`.  
   
 ```  

@@ -25,12 +25,12 @@ ms.assetid: 57b42a74-94e1-4326-85f1-701b9de53c7d
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 79873bcd39eb9f5b03871345d230215fcf3e3814
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 0d4a3d885eb4f0d40d95f937ba252625e9e07de5
+ms.sourcegitcommit: 467b2c708651a3a2be2c45e36d0006a5bbe87b79
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47838209"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53979887"
 ---
 # <a name="susersid-transact-sql"></a>SUSER_SID (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -78,7 +78,7 @@ SUSER_SID ( [ 'login' ] [ , Param2 ] )
 SELECT SUSER_SID();  
 ```  
   
-### <a name="b-using-susersid-with-a-specific-login"></a>B. Utilizzo di SUSER_SID con un account di accesso specifico  
+### <a name="b-using-susersid-with-a-specific-login"></a>b. Utilizzo di SUSER_SID con un account di accesso specifico  
  Nell'esempio seguente viene restituito l'ID di sicurezza (SID) per l'account di accesso [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] `sa`.  
   
 **Si applica a**: da [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]

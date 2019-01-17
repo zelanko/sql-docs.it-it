@@ -22,12 +22,12 @@ ms.assetid: b7422911-7524-4bcd-9ab9-e460d5897b3d
 author: VanMSFT
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 864377bee6ee587e95321338d0c1a46f5c7523e2
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 31eb77b8223c13de9fe5a7e098a42462ed4fd915
+ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47742979"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53591755"
 ---
 # <a name="sql-server-audit-action-groups-and-actions"></a>Azioni e gruppi di azioni di SQL Server Audit
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -82,8 +82,8 @@ ms.locfileid: "47742979"
 |DATABASE_CHANGE_GROUP|Questo evento viene generato quando un database viene creato, modificato o eliminato. viene creato, modificato o eliminato. Equivale a [Audit Database Management Event Class](../../../relational-databases/event-classes/audit-database-management-event-class.md).|  
 |DATABASE_LOGOUT_GROUP|Questo evento viene generato quando un utente del database indipendente si disconnette da un database. Equivale alla classe di evento Audit Database Logout.|  
 |DATABASE_MIRRORING_LOGIN_GROUP|Questo evento viene generato per segnalare i messaggi di controllo correlati alla sicurezza del trasporto del mirroring del database. Equivale a [Audit Database Mirroring Login Event Class](../../../relational-databases/event-classes/audit-database-mirroring-login-event-class.md).|  
-|DATABASE_OBJECT_ACCESS_GROUP|Questo evento viene generato a ogni accesso a oggetti di database, ad esempio tipi di messaggio, assembly e contratti. Questo evento viene generato per qualsiasi accesso a qualsiasi database. Nota: questa situazione potrebbe provocare la creazione di record di controllo di grandi dimensioni.<br /><br /> Equivale a [Audit Database Object Access Event Class](../../../relational-databases/event-classes/audit-database-object-access-event-class.md).|  
-|DATABASE_OBJECT_CHANGE_GROUP|Questo evento viene generato quando si esegue un'istruzione CREATE, ALTER o DROP in oggetti di database, ad esempio schemi. L'evento viene generato ogni volta che un oggetto di database viene creato, modificato o eliminato. Nota: questa situazione potrebbe provocare la creazione di grandi quantità di record di controllo.<br /><br /> Equivale a [Audit Database Object Management Event Class](../../../relational-databases/event-classes/audit-database-object-management-event-class.md).|  
+|DATABASE_OBJECT_ACCESS_GROUP|Questo evento viene generato a ogni accesso a oggetti di database, ad esempio tipi di messaggio, assembly e contratti. Questo evento viene generato per qualsiasi accesso a qualsiasi database. Nota: Questa situazione potrebbe provocare la creazione di record di controllo di dimensioni elevate.<br /><br /> Equivale a [Audit Database Object Access Event Class](../../../relational-databases/event-classes/audit-database-object-access-event-class.md).|  
+|DATABASE_OBJECT_CHANGE_GROUP|Questo evento viene generato quando si esegue un'istruzione CREATE, ALTER o DROP in oggetti di database, ad esempio schemi. L'evento viene generato ogni volta che un oggetto di database viene creato, modificato o eliminato. Nota: Questa situazione può provocare la creazione di un numero elevato di record di controllo.<br /><br /> Equivale a [Audit Database Object Management Event Class](../../../relational-databases/event-classes/audit-database-object-management-event-class.md).|  
 |DATABASE_OBJECT_OWNERSHIP_CHANGE_GROUP|Questo evento viene generato in caso di modifica del proprietario di oggetti nell'ambito del database. Questo evento viene generato in caso di qualsiasi modifica del proprietario di oggetti per qualsiasi database del server. Equivale a [Audit Database Object Take Ownership Event Class](../../../relational-databases/event-classes/audit-database-object-take-ownership-event-class.md).|  
 |DATABASE_OBJECT_PERMISSION_CHANGE_GROUP|Questo evento viene generato quando è stata eseguita un'istruzione GRANT, REVOKE o DENY per oggetti di database, ad esempio assembly o schemi. Questo evento viene generato per qualsiasi modifica alle autorizzazioni per gli oggetti per qualsiasi database del server. Equivale a [Audit Database Object GDR Event Class](../../../relational-databases/event-classes/audit-database-object-gdr-event-class.md).|  
 |DATABASE_OPERATION_GROUP|Questo evento viene generato quando vengono effettuate operazioni in un database, ad esempio il checkpoint o la sottoscrizione di notifiche di query. nonché in caso di qualsiasi operazione effettuata su qualsiasi database. Equivale a [Audit Database Operation Event Class](../../../relational-databases/event-classes/audit-database-operation-event-class.md).|  
@@ -122,6 +122,9 @@ ms.locfileid: "47742979"
  Nei gruppi di azioni a livello di server sono comprese azioni relative a un'istanza di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Qualsiasi controllo dell'accesso agli oggetti dello schema in un database, ad esempio, viene registrato se il gruppo di azioni appropriato viene aggiunto a una specifica del controllo del server. In una specifica del controllo del database vengono registrati solo gli accessi agli oggetti dello schema del database specifico.  
   
  Le azioni a livello di server non consentono di applicare filtri dettagliati sulle azioni a livello di database. Per implementare l'applicazione di filtri dettagliati sull'azione, è necessario un controllo a livello di database, ad esempio un controllo di azioni SELECT nella tabella relativa ai clienti  per account di accesso nel gruppo relativo ai dipendenti. In una specifica del controllo di un database utente non includere oggetti con ambito server, ad esempio viste di sistema.  
+
+ > [!NOTE]
+ > A causa dell'overhead associato all'abilitazione del controllo a livello di transazione, a partire da [!INCLUDE[ssSQL15](../../../includes/sssql15-md.md)] SP2 CU3 e [!INCLUDE[ssSQL17](../../../includes/sssql17-md.md)] CU4, il controllo a livello di transazione è disabilitato per impostazione predefinita, a meno che la modalità di conformità ai criteri comuni non sia abilitata.  Se la modalità di conformità ai criteri comuni è disabilitata, sarà comunque possibile aggiungere un'azione da TRANSACTION_GROUP a una specifica di controllo, ma non verranno raccolte azioni di transazione.  A partire da [!INCLUDE[ssSQL15](../../../includes/sssql15-md.md)] SP2 CU3 e [!INCLUDE[ssSQL17](../../../includes/sssql17-md.md)] CU4 e versioni successive, se si intende configurare azioni di transazione da TRANSACTION_GROUP, assicurarsi che l'infrastruttura di controllo a livello di transazione sia abilitata procedendo all'abilitazione della modalità di conformità ai criteri comuni.  Tenere presente che in [!INCLUDE[ssSQL15](../../../includes/sssql15-md.md)] il controllo a livello di transazione può anche essere disabilitato con il flag di traccia 3427 a partire da SP1 CU2.
   
 ## <a name="database-level-audit-action-groups"></a>Gruppi di azioni di controllo a livello di database  
  I gruppi di azioni di controllo a livello di database sono analoghi alle classi di eventi di controllo della sicurezza di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Per ulteriori informazioni sulle classi degli eventi, vedere [SQL Server Event Class Reference](../../../relational-databases/event-classes/sql-server-event-class-reference.md).  

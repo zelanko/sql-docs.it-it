@@ -1,6 +1,7 @@
 ---
-title: Pagina Connetti a repliche secondarie esistenti | Microsoft Docs
-ms.custom: ''
+title: Pagina "Connetti a repliche secondarie esistenti" per i gruppi di disponibilità
+description: Descrizione delle diverse opzioni disponibili nella pagina "Connetti a repliche secondarie esistenti" della "Creazione guidata Gruppo di disponibilità" in SQL Server Management Studio.
+ms.custom: seodec18
 ms.date: 05/17/2016
 ms.prod: sql
 ms.reviewer: ''
@@ -13,14 +14,14 @@ ms.assetid: 850f1bc8-d7d0-425c-bd7b-03f0e9d3348e
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: f2feb2d658f6d333fbe1b1762ea8483562b79db5
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ee9e77356304670fa884c4ba8cf70667e040f940
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47753979"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53211230"
 ---
-# <a name="connect-to-existing-secondary-replicas-page"></a>Pagina Connetti a repliche secondarie esistenti
+# <a name="connect-to-existing-secondary-replicas-page---always-on-availability-groups"></a>Pagina Connetti a repliche secondarie esistenti - gruppi di disponibilità Always On
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   Questo argomento della Guida descrive le opzioni della pagina **Connetti a repliche secondarie esistenti** . Questo argomento viene utilizzato nella [!INCLUDE[ssAoAddRepWiz](../../../includes/ssaoaddrepwiz-md.md)] e nella [!INCLUDE[ssAoAddDbWiz](../../../includes/ssaoadddbwiz-md.md)] di [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)].  
   

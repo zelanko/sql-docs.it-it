@@ -36,12 +36,12 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 267e1c145a6a67976f1d057c0c98186f192f9247
-ms.sourcegitcommit: eb1f3a2f5bc296f74545f17d20c6075003aa4c42
+ms.openlocfilehash: 513ccaf7c50b7ca08d6651d516a4b5265d86d7fe
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52191071"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53210783"
 ---
 # <a name="cast-and-convert-transact-sql"></a>CAST e CONVERT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -51,7 +51,7 @@ ms.locfileid: "52191071"
 
 Queste funzioni convertono un'espressione da un tipo di dati a un altro.  
 
-**Esempio:** modificare il tipo di dati di input
+**Esempio:** Modificare il tipo di dati di input
 
 **Cast**
 ```sql  
@@ -103,7 +103,7 @@ Restituisce *expression* convertito in *data_type*.
 ## <a name="date-and-time-styles"></a>Stili date e time  
 Se il tipo di dati di *expression* è date o time, *style* può avere uno dei valori indicati nella tabella seguente. Gli altri valori vengono elaborati come 0. A partire da [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], gli unici stili supportati nella conversione dai tipi date e time in **datetimeoffset** sono 0 o 1. Tutti gli altri stili di conversione restituiscono l'errore 9809.
   
->  [!NOTE]  
+> [!NOTE]
 >  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] supporta il formato di data in stile arabo con l'algoritmo kuwaitiano.
   
 |Senza il secolo (aa) (<sup>1</sup>)|Con il secolo (aaaa)|Standard|Input/Output (<sup>3</sup>)|  
@@ -167,9 +167,9 @@ Se il tipo di dati di **expression** è **money** o *smallmoney*, *style* può a
   
 |valore|Output|  
 |---|---|
-|**0** (predefinito)|Nessun separatore delle migliaia a sinistra del separatore decimale e due cifre a destra del separatore decimale<br /><br />Esempio: 4235,98.|  
-|**1**|Separatore delle migliaia tre cifre a sinistra del separatore decimale e due cifre a destra del separatore decimale<br /><br />Esempio: 3.510,92.|  
-|**2**|Nessun separatore delle migliaia a sinistra del separatore decimale e quattro cifre a destra del separatore decimale<br /><br />Esempio: 4235,9819.|  
+|**0** (predefinito)|Nessun separatore delle migliaia a sinistra del separatore decimale e due cifre a destra del separatore decimale<br /><br />Esempio: 4235.98.|  
+|**1**|Separatore delle migliaia tre cifre a sinistra del separatore decimale e due cifre a destra del separatore decimale<br /><br />Esempio: 3,510.92.|  
+|**2**|Nessun separatore delle migliaia a sinistra del separatore decimale e quattro cifre a destra del separatore decimale<br /><br />Esempio: 4235.9819.|  
 |**126**|Equivalente allo stile 2 in caso di conversione in char(n) o varchar(n)|  
   
 ## <a name="xml-styles"></a>Stili xml
@@ -368,7 +368,7 @@ WHERE CONVERT(int, ListPrice) LIKE '3%';
 GO  
 ```  
   
-### <a name="b-using-cast-with-arithmetic-operators"></a>B. Utilizzo della funzione CAST con operatori aritmetici  
+### <a name="b-using-cast-with-arithmetic-operators"></a>b. Utilizzo della funzione CAST con operatori aritmetici  
 In questo esempio viene eseguito il calcolo di una sola colonna (`Computed`) dividendo il totale delle vendite dell'anno in corso (`SalesYTD`) per la percentuale di commissione (`CommissionPCT`). Questo valore viene arrotondato al numero intero più vicino e viene quindi eseguito il CAST del valore a un tipo di dati `int`.
   
 ```sql

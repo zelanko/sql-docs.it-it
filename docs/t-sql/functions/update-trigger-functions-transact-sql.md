@@ -26,12 +26,12 @@ ms.assetid: 8e3be25b-2e3b-4d1f-a610-dcbbd8d72084
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: d971857a0d46ff2ed0bd54588558ac74ab5eb549
-ms.sourcegitcommit: 08b3de02475314c07a82a88c77926d226098e23f
+ms.openlocfilehash: 9677ef3717fb83bdaf6ea108279b98a6598adced
+ms.sourcegitcommit: 467b2c708651a3a2be2c45e36d0006a5bbe87b79
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49119629"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53980347"
 ---
 # <a name="update---trigger-functions-transact-sql"></a>UPDATE - Funzioni di trigger (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -62,7 +62,7 @@ UPDATE ( column )
  In operazioni INSERT l'opzione IF UPDATE restituisce il valore TRUE in quanto nelle colonne vengono inseriti valori espliciti o impliciti (NULL).  
   
 > [!NOTE]  
->  La clausola IF UPDATE(*column*) funziona esattamente come un'istruzione IF, IF...ELSE o WHILE e può usare il blocco BEGIN...END. Per altre informazioni, vedere [Elementi del linguaggio per il controllo di flusso &#40;Transact-SQL&#41;](~/t-sql/language-elements/control-of-flow.md).  
+>  La clausola IF UPDATE(*column*) funziona esattamente come una clausola IF, IF...ELSE o WHILE e può usare il blocco BEGIN...END. Per altre informazioni, vedere [Elementi del linguaggio per il controllo di flusso &#40;Transact-SQL&#41;](~/t-sql/language-elements/control-of-flow.md).  
   
  UPDATE(*column*) può essere usata in qualsiasi punto del corpo di un trigger [!INCLUDE[tsql](../../includes/tsql-md.md)].  
   

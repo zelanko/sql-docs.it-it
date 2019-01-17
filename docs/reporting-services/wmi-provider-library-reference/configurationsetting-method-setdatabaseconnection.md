@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: c040aa78-92b8-41e4-9ae2-eff9fcdddc5b
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 701ba6cbdcc95895d55bd7db0fcc4468089f665f
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: f897c935cdd4c267440ccd5393e48dd718461c15
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52538099"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53206010"
 ---
 # <a name="configurationsetting-method---setdatabaseconnection"></a>Metodo di ConfigurationSetting - SetDatabaseConnection
   Imposta la connessione al database del server di report su un database del server di report specifico.  
@@ -67,10 +67,10 @@ public void BackupEncryptionKey(string Server,
 ## <a name="return-value"></a>Valore restituito  
  Restituisce un *HRESULT* che indica l'esito positivo o negativo della chiamata al metodo. Un valore pari a 0 indica l'esito positivo della chiamata al metodo. Un valore diverso da zero indica che si è verificato un errore.  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Remarks  
  Quando il parametro *CredentialsType* è impostato su 0 (Windows), è necessario impostare i parametri *UserName* e *Password* . Il parametro *UserName* deve avere il formato "dominio\nomeutente" e il valore deve rappresentare un account di accesso di Windows valido.  
   
- Quando il parametro *CredentialsType* è impostato su 1 ([!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]), il valore passato nel parametro *UserName* deve essere conforme ai requisiti di un nome account di accesso di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
+ Quando il parametro *CredentialsType* è impostato su 1 ([!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]), il valore passato nel parametro *UserName* deve essere conforme ai requisiti di un nome account di accesso di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
  Quando il parametro *CredentialsType* è impostato su 2 (servizio Windows), il server di report usa la sicurezza integrata per la connessione al database del server di report e i parametri *UserName* e *Password* vengono ignorati. Il servizio Web ReportServer userà l'account [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] o l'account del pool di applicazioni e l'account del servizio Windows per accedere al database del server di report.  
   

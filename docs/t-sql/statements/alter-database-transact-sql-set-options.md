@@ -30,12 +30,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: =azuresqldb-current||=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 6e89d2803fda21563b69bb2ba658df2f9a8f0bef
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 7a06414a9ca09ecfd02438827cbee6645ca381ae
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52545441"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53215387"
 ---
 # <a name="alter-database-set-options-transact-sql"></a>Opzioni ALTER DATABASE SET (Transact-SQL) 
 
@@ -510,7 +510,7 @@ EMERGENCY
 Il database è contrassegnato come READ_ONLY, la registrazione è disabilitata e l'accesso è limitato ai soli membri del ruolo predefinito del server sysadmin. L'opzione EMERGENCY viene usata principalmente per attività di risoluzione dei problemi. Ad esempio, è possibile impostare lo stato EMERGENCY per un database contrassegnato come sospetto a causa di un file di log danneggiato. In questo modo, l'amministratore di sistema potrà accedere in sola lettura al database. Solo i membri del ruolo predefinito del server sysadmin possono impostare lo stato EMERGENCY per un database.  
   
 > [!NOTE]  
-> **Autorizzazioni:** per impostare lo stato di un database su offline o emergency è necessaria l'autorizzazione ALTER DATABASE per il database dell'area di interesse. Per modificare lo stato di un database da offline a online è necessaria l'autorizzazione ALTER ANY DATABASE a livello di server.  
+> **Autorizzazioni:** per impostare lo stato di un database su offline o emergency, è necessaria l'autorizzazione ALTER DATABASE per il database dell'area di interesse. Per modificare lo stato di un database da offline a online è necessaria l'autorizzazione ALTER ANY DATABASE a livello di server.  
   
 Per determinare lo stato di questa opzione, è possibile esaminare le colonne state e state_desc nella vista del catalogo [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) oppure la proprietà Status della funzione [DATABASEPROPERTYEX](../../t-sql/functions/databasepropertyex-transact-sql.md). Per altre informazioni, vedere [Stati del database](../../relational-databases/databases/database-states.md).  
   
@@ -668,7 +668,7 @@ Vedere [ALTER DATABASE SET HADR](../../t-sql/statements/alter-database-transact-
   
 **\<mixed_page_allocation_option> ::=**  
   
-**Si applica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (da[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] a [versione corrente](https://go.microsoft.com/fwlink/p/?LinkId=299658)). 
+**Si applica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (da [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] a [versione corrente](https://go.microsoft.com/fwlink/p/?LinkId=299658)). 
   
 MIXED_PAGE_ALLOCATION {OFF | ON} controlla se il database può creare pagine iniziali usando un extent misto per le prime otto pagine di un indice o di una tabella.  
  
@@ -695,7 +695,7 @@ Per determinare l'impostazione corrente di questa opzione, è possibile esaminar
   
 **\<query_store_options> ::=**  
   
-**Si applica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (da[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]).  
+**Si applica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (da [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]).  
   
 ON | OFF | CLEAR [ ALL ]  
 Verifica se l'archivio di query è abilitato nel database e controlla la rimozione del contenuto dell'archivio di query. Per altre informazioni, vedere [Scenari di utilizzo di Query Store](../../relational-databases/performance/query-store-usage-scenarios.md). 
@@ -710,19 +710,19 @@ CLEAR
 Rimuove il contenuto di Query Store.  
   
 OPERATION_MODE  
-Descrive la modalità di funzionamento dell'archivio di query. I valori validi sono READ_ONLY e READ_WRITE. In modalità READ_WRITE l'archivio query raccoglie e mantiene le informazioni di statistiche sull'esecuzione di runtime e piani di query. In modalità READ_ONLY le informazioni possono essere lette dall'archivio di query, ma non vengono aggiunte nuove informazioni. Se lo spazio massimo allocato dell'archivio di query viene esaurito, la modalità di funzionamento dell'archivio di query passa a READ_ONLY.  
+Descrive la modalità di funzionamento dell'archivio di query. I valori validi sono READ_ONLY e READ_WRITE. In modalità READ_WRITE l'archivio query raccoglie e mantiene le informazioni di statistiche sull'esecuzione di runtime e piani di query. In modalità READ_ONLY le informazioni possono essere lette dall'archivio query, ma non vengono aggiunte nuove informazioni. Se lo spazio massimo allocato dell'archivio di query viene esaurito, la modalità di funzionamento dell'archivio di query passa a READ_ONLY.  
   
 CLEANUP_POLICY  
 Descrive i criteri di conservazione dati dell'archivio di query. STALE_QUERY_THRESHOLD_DAYS determina il numero di giorni in cui le informazioni per una query vengono conservate in Query Store. STALE_QUERY_THRESHOLD_DAYS è di tipo **bigint**.  
   
 DATA_FLUSH_INTERVAL_SECONDS  
-Determina la frequenza con cui i dati scritti nell'archivio di query vengono mantenuti su disco. Per ottimizzare le prestazioni, i dati raccolti dall'archivio di query vengono scritti in modo asincrono sul disco. La frequenza con cui si verifica questo trasferimento asincrono viene configurata tramite l'argomento DATA_FLUSH_INTERVAL_SECONDS. DATA_FLUSH_INTERVAL_SECONDS è di tipo **bigint**.  
+Determina la frequenza con cui i dati scritti nell'archivio query vengono mantenuti su disco. Per ottimizzare le prestazioni, i dati raccolti dall'archivio query vengono scritti in modo asincrono sul disco. La frequenza con cui si verifica questo trasferimento asincrono viene configurata tramite l'argomento DATA_FLUSH_INTERVAL_SECONDS. DATA_FLUSH_INTERVAL_SECONDS è di tipo **bigint**.  
   
 MAX_STORAGE_SIZE_MB  
 Determina lo spazio allocato per l'archivio di query. MAX_STORAGE_SIZE_MB è di tipo **bigint**.  
   
 INTERVAL_LENGTH_MINUTES  
-Determina l'intervallo di tempo in cui vengono aggregati i dati delle statistiche di esecuzione di runtime nell'archivio di query. Per ottimizzare l'utilizzo dello spazio, le statistiche di esecuzione di runtime nell'archivio di statistiche di runtime vengono aggregate in un intervallo di tempo fisso. L'intervallo di tempo predefinito viene configurato tramite l'argomento INTERVAL_LENGTH_MINUTES. INTERVAL_LENGTH_MINUTES è di tipo **bigint**.  
+Determina l'intervallo di tempo in cui vengono aggregati i dati delle statistiche di esecuzione di runtime nell'archivio query. Per ottimizzare l'utilizzo dello spazio, le statistiche di esecuzione di runtime nell'archivio di statistiche di runtime vengono aggregate in un intervallo di tempo fisso. L'intervallo di tempo predefinito viene configurato tramite l'argomento INTERVAL_LENGTH_MINUTES. INTERVAL_LENGTH_MINUTES è di tipo **bigint**.  
   
 SIZE_BASED_CLEANUP_MODE  
 Determina se la pulizia viene attivata automaticamente quando la quantità totale dei dati ha quasi raggiunto le dimensioni massime:  
@@ -866,7 +866,7 @@ NEW_BROKER
 Specifica che al database deve essere assegnato un nuovo identificatore di Service Broker. Poiché il database viene considerato una nuova istanza di Service Broker, tutte le conversazioni esistenti nel database vengono rimosse immediatamente senza generare messaggi di fine dialogo. Tutte le route che fanno riferimento all'identificatore di [!INCLUDE[ssSB](../../includes/sssb-md.md)] precedente devono essere ricreate con il nuovo identificatore.  
   
 ERROR_BROKER_CONVERSATIONS  
-Specifica che il recapito dei messaggi di [!INCLUDE[ssSB](../../includes/sssb-md.md)] è abilitato. In questo modo viene mantenuto l'identificatore [!INCLUDE[ssSB](../../includes/sssb-md.md)] esistente per il database. [!INCLUDE[ssSB](../../includes/sssb-md.md)] termina tutte le conversazioni nel database con un errore. Ciò consente alle applicazioni di eseguire operazioni regolari di pulizia per le conversazioni esistenti.  
+Specifica che il recapito dei messaggi di [!INCLUDE[ssSB](../../includes/sssb-md.md)] è abilitato. In questo modo viene mantenuto l'identificatore di [!INCLUDE[ssSB](../../includes/sssb-md.md)] esistente per il database. [!INCLUDE[ssSB](../../includes/sssb-md.md)] termina tutte le conversazioni nel database con un errore. Ciò consente alle applicazioni di eseguire operazioni regolari di pulizia per le conversazioni esistenti.  
   
 HONOR_BROKER_PRIORITY {ON | OFF}  
 ON  
@@ -1170,7 +1170,7 @@ GO
   
 ```  
   
-### <a name="b-setting-the-database-to-readonly"></a>B. Impostazione del database su READ_ONLY  
+### <a name="b-setting-the-database-to-readonly"></a>b. Impostazione del database su READ_ONLY  
 Per modificare lo stato di un database o di un filegroup impostandolo su READ_ONLY o READ_WRITE, è necessario l'accesso esclusivo al database. Nell'esempio seguente viene impostata la modalità `SINGLE_USER` per il database in modo da ottenere l'accesso esclusivo. Nell'esempio lo stato del database [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] viene quindi impostato su `READ_ONLY` e viene ripristinato l'accesso al database per tutti gli utenti.  
   
 > [!NOTE]  
@@ -1242,7 +1242,7 @@ SET CHANGE_TRACKING = OFF;
 ```  
   
 ### <a name="e-enabling-the-query-store"></a>E. Abilitazione dell'archivio di query  
-**Si applica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (da[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]).  
+**Si applica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (da [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]).  
   
 L'esempio seguente abilita l'archivio di query e configura i relativi parametri.  
   
@@ -1674,19 +1674,19 @@ CLEAR
 Rimuove il contenuto di Query Store.  
   
 OPERATION_MODE  
-Descrive la modalità di funzionamento dell'archivio di query. I valori validi sono READ_ONLY e READ_WRITE. In modalità READ_WRITE l'archivio query raccoglie e mantiene le informazioni di statistiche sull'esecuzione di runtime e piani di query. In modalità READ_ONLY le informazioni possono essere lette dall'archivio di query, ma non vengono aggiunte nuove informazioni. Se lo spazio massimo allocato dell'archivio di query viene esaurito, la modalità di funzionamento dell'archivio di query passa a READ_ONLY.  
+Descrive la modalità di funzionamento dell'archivio di query. I valori validi sono READ_ONLY e READ_WRITE. In modalità READ_WRITE l'archivio query raccoglie e mantiene le informazioni di statistiche sull'esecuzione di runtime e piani di query. In modalità READ_ONLY le informazioni possono essere lette dall'archivio query, ma non vengono aggiunte nuove informazioni. Se lo spazio massimo allocato dell'archivio di query viene esaurito, la modalità di funzionamento dell'archivio di query passa a READ_ONLY.  
   
 CLEANUP_POLICY  
 Descrive i criteri di conservazione dati dell'archivio di query. STALE_QUERY_THRESHOLD_DAYS determina il numero di giorni in cui le informazioni per una query vengono conservate in Query Store. STALE_QUERY_THRESHOLD_DAYS è di tipo **bigint**.  
   
 DATA_FLUSH_INTERVAL_SECONDS  
-Determina la frequenza con cui i dati scritti nell'archivio di query vengono mantenuti su disco. Per ottimizzare le prestazioni, i dati raccolti dall'archivio di query vengono scritti in modo asincrono sul disco. La frequenza con cui si verifica questo trasferimento asincrono viene configurata tramite l'argomento DATA_FLUSH_INTERVAL_SECONDS. DATA_FLUSH_INTERVAL_SECONDS è di tipo **bigint**.  
+Determina la frequenza con cui i dati scritti nell'archivio query vengono mantenuti su disco. Per ottimizzare le prestazioni, i dati raccolti dall'archivio query vengono scritti in modo asincrono sul disco. La frequenza con cui si verifica questo trasferimento asincrono viene configurata tramite l'argomento DATA_FLUSH_INTERVAL_SECONDS. DATA_FLUSH_INTERVAL_SECONDS è di tipo **bigint**.  
   
 MAX_STORAGE_SIZE_MB  
 Determina lo spazio allocato per l'archivio di query. MAX_STORAGE_SIZE_MB è di tipo **bigint**.  
   
 INTERVAL_LENGTH_MINUTES  
-Determina l'intervallo di tempo in cui vengono aggregati i dati delle statistiche di esecuzione di runtime nell'archivio di query. Per ottimizzare l'utilizzo dello spazio, le statistiche di esecuzione di runtime nell'archivio di statistiche di runtime vengono aggregate in un intervallo di tempo fisso. L'intervallo di tempo predefinito viene configurato tramite l'argomento INTERVAL_LENGTH_MINUTES. INTERVAL_LENGTH_MINUTES è di tipo **bigint**.  
+Determina l'intervallo di tempo in cui vengono aggregati i dati delle statistiche di esecuzione di runtime nell'archivio query. Per ottimizzare l'utilizzo dello spazio, le statistiche di esecuzione di runtime nell'archivio di statistiche di runtime vengono aggregate in un intervallo di tempo fisso. L'intervallo di tempo predefinito viene configurato tramite l'argomento INTERVAL_LENGTH_MINUTES. INTERVAL_LENGTH_MINUTES è di tipo **bigint**.  
   
 SIZE_BASED_CLEANUP_MODE  
 Determina se la pulizia viene attivata automaticamente quando la quantità totale dei dati ha quasi raggiunto le dimensioni massime:  
@@ -1981,7 +1981,7 @@ GO
   
 ```  
   
-### <a name="b-enabling-snapshot-isolation-on-a-database"></a>B. Abilitazione dell'isolamento dello snapshot in un database  
+### <a name="b-enabling-snapshot-isolation-on-a-database"></a>b. Abilitazione dell'isolamento dello snapshot in un database  
 Nell'esempio seguente viene abilitata l'opzione relativa al framework di isolamento dello snapshot per il database [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)].  
   
 ```sql  
@@ -2402,19 +2402,19 @@ CLEAR
 Rimuove il contenuto di Query Store.  
   
 OPERATION_MODE  
-Descrive la modalità di funzionamento dell'archivio di query. I valori validi sono READ_ONLY e READ_WRITE. In modalità READ_WRITE l'archivio query raccoglie e mantiene le informazioni di statistiche sull'esecuzione di runtime e piani di query. In modalità READ_ONLY le informazioni possono essere lette dall'archivio di query, ma non vengono aggiunte nuove informazioni. Se lo spazio massimo allocato dell'archivio di query viene esaurito, la modalità di funzionamento dell'archivio di query passa a READ_ONLY.  
+Descrive la modalità di funzionamento dell'archivio di query. I valori validi sono READ_ONLY e READ_WRITE. In modalità READ_WRITE l'archivio query raccoglie e mantiene le informazioni di statistiche sull'esecuzione di runtime e piani di query. In modalità READ_ONLY le informazioni possono essere lette dall'archivio query, ma non vengono aggiunte nuove informazioni. Se lo spazio massimo allocato dell'archivio di query viene esaurito, la modalità di funzionamento dell'archivio di query passa a READ_ONLY.  
   
 CLEANUP_POLICY  
 Descrive i criteri di conservazione dati dell'archivio di query. STALE_QUERY_THRESHOLD_DAYS determina il numero di giorni in cui le informazioni per una query vengono conservate in Query Store. STALE_QUERY_THRESHOLD_DAYS è di tipo **bigint**.  
   
 DATA_FLUSH_INTERVAL_SECONDS  
-Determina la frequenza con cui i dati scritti nell'archivio di query vengono mantenuti su disco. Per ottimizzare le prestazioni, i dati raccolti dall'archivio di query vengono scritti in modo asincrono sul disco. La frequenza con cui si verifica questo trasferimento asincrono viene configurata tramite l'argomento DATA_FLUSH_INTERVAL_SECONDS. DATA_FLUSH_INTERVAL_SECONDS è di tipo **bigint**.  
+Determina la frequenza con cui i dati scritti nell'archivio query vengono mantenuti su disco. Per ottimizzare le prestazioni, i dati raccolti dall'archivio query vengono scritti in modo asincrono sul disco. La frequenza con cui si verifica questo trasferimento asincrono viene configurata tramite l'argomento DATA_FLUSH_INTERVAL_SECONDS. DATA_FLUSH_INTERVAL_SECONDS è di tipo **bigint**.  
   
 MAX_STORAGE_SIZE_MB  
 Determina lo spazio allocato per l'archivio di query. MAX_STORAGE_SIZE_MB è di tipo **bigint**.  
   
 INTERVAL_LENGTH_MINUTES  
-Determina l'intervallo di tempo in cui vengono aggregati i dati delle statistiche di esecuzione di runtime nell'archivio di query. Per ottimizzare l'utilizzo dello spazio, le statistiche di esecuzione di runtime nell'archivio di statistiche di runtime vengono aggregate in un intervallo di tempo fisso. L'intervallo di tempo predefinito viene configurato tramite l'argomento INTERVAL_LENGTH_MINUTES. INTERVAL_LENGTH_MINUTES è di tipo **bigint**.  
+Determina l'intervallo di tempo in cui vengono aggregati i dati delle statistiche di esecuzione di runtime nell'archivio query. Per ottimizzare l'utilizzo dello spazio, le statistiche di esecuzione di runtime nell'archivio di statistiche di runtime vengono aggregate in un intervallo di tempo fisso. L'intervallo di tempo predefinito viene configurato tramite l'argomento INTERVAL_LENGTH_MINUTES. INTERVAL_LENGTH_MINUTES è di tipo **bigint**.  
   
 SIZE_BASED_CLEANUP_MODE  
 Determina se la pulizia viene attivata automaticamente quando la quantità totale dei dati ha quasi raggiunto le dimensioni massime:  
@@ -2683,7 +2683,7 @@ GO
   
 ```  
   
-### <a name="b-enabling-snapshot-isolation-on-a-database"></a>B. Abilitazione dell'isolamento dello snapshot in un database  
+### <a name="b-enabling-snapshot-isolation-on-a-database"></a>b. Abilitazione dell'isolamento dello snapshot in un database  
 Nell'esempio seguente viene abilitata l'opzione relativa al framework di isolamento dello snapshot per il database [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)].  
   
 ```sql  

@@ -9,15 +9,15 @@ helpviewer_keywords:
 - Stretch Database, enabling database
 - enabling database for Stretch Database
 ms.assetid: 37854256-8c99-4566-a552-432e3ea7c6da
-author: MikeRayMSFT
-ms.author: mikeray
+author: douglaslMS
+ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 3f2d95ea5ad60dda2b9d4e902aae80b0d2c06b9e
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: dda58d512602c5d592078275106eefc7ca26ebda
+ms.sourcegitcommit: 33712a0587c1cdc90de6dada88d727f8623efd11
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51696408"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53596892"
 ---
 # <a name="enable-stretch-database-for-a-database"></a>Enable Stretch Database for a database
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly.md)]
@@ -29,8 +29,8 @@ ms.locfileid: "51696408"
   
  L'abilitazione di Stretch Database in un database o una tabella richiede autorizzazioni db_owner. L'abilitazione di Stretch Database in un database richiede anche le autorizzazioni CONTROL DATABASE.  
 
- >   [!NOTE]
- > Se successivamente si disabilita Stretch Database, tenere presente che questa operazione per una tabella o per un database non elimina l'oggetto remoto. Se si vuole eliminare la tabella remota o il database remoto, è necessario eliminarlo tramite il portale di gestione di Azure. Gli oggetti remoti continuano a generare costi di Azure fino a quando non vengono eliminati manualmente. 
+> [!NOTE]
+> Se successivamente si disabilita Stretch Database, tenere presente che questa operazione per una tabella o per un database non elimina l'oggetto remoto. Se si vuole eliminare la tabella remota o il database remoto, è necessario eliminarlo tramite il portale di gestione di Azure. Gli oggetti remoti continuano a generare costi di Azure fino a quando non vengono eliminati manualmente. 
  
 ## <a name="before-you-get-started"></a>Prima di iniziare  
   
@@ -42,7 +42,7 @@ ms.locfileid: "51696408"
   
 -   Recuperare le informazioni sulla connessione e sull'account di accesso necessarie per creare un nuovo server di Azure o selezionare un server di Azure esistente.  
   
-##  <a name="EnableTSQLServer"></a> Prerequisito: abilitare Stretch Database nel server  
+##  <a name="EnableTSQLServer"></a> Prerequisito: Abilitare Stretch Database nel server  
  Prima di abilitare Stretch Database in un database o una tabella, è necessario abilitarlo nel server locale. Questa operazione richiede le autorizzazioni sysadmin o serveradmin.  
   
 -   Se si dispone delle autorizzazioni amministrative necessarie, la procedura guidata **Abilitare il database per l'estensione** configura il server per Estensione.  

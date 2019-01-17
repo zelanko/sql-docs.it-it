@@ -14,12 +14,12 @@ ms.assetid: 3c33a474-e507-4712-86fe-ae40e8370319
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: f4e85c73beea1db9b3db7032492321556bb17253
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 9db497d157ac6b48591fccb42c0eb6fd9dc34779
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47818768"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53208930"
 ---
 # <a name="user-assistance-in-sql-server-management-studio"></a>Documentazione per gli utenti in SQL Server Management Studio
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -46,7 +46,7 @@ In [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] la documentazi
   
     In questo elenco sono archiviati i segnalibri degli argomenti inseriti dall'utente per accedervi facilmente in seguito.  
   
-Uso della Guida (Guida di[!INCLUDE[msCoName](../includes/msconame_md.md)] Document Explorer) collega gli utenti alla documentazione relativa al visualizzatore della Guida, ma gli argomenti si trovano in un insieme separato dalla documentazione online di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] . Per informazioni sul visualizzatore della Guida, selezionare **Uso della Guida** dal menu ? della Documentazione online di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] .  
+Uso della Guida (Guida di [!INCLUDE[msCoName](../includes/msconame_md.md)] Document Explorer) collega gli utenti alla documentazione relativa alla visualizzatore della Guida, ma gli argomenti sono raccolti separatamente dalla documentazione online di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Per informazioni sul visualizzatore della Guida, selezionare **Uso della Guida** dal menu ? della Documentazione online di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] .  
   
 ## <a name="msdn-online-and-sql-server-communities"></a>MSDN Online e community di SQL Server  
 Per ottenere ulteriori informazioni, la Guida di [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] offre inoltre agli utenti la possibilità di contattare MSDN Online e le community dedicate a [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]presenti su Internet. È possibile effettuare le operazioni seguenti:  

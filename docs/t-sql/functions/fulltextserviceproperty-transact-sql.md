@@ -21,12 +21,12 @@ ms.assetid: b7dcacb0-af83-4807-9d1e-49148b56b59c
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: c56e70fc866c3666107677338feb3285cabb38b3
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 4fbdc84168ea3c0878924033347ca0c0fff3e514
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47812179"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53206160"
 ---
 # <a name="fulltextserviceproperty-transact-sql"></a>FULLTEXTSERVICEPROPERTY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -46,8 +46,8 @@ FULLTEXTSERVICEPROPERTY ('property')
  *property*  
  Espressione che contiene il nome della proprietà full-text a livello del servizio. Nella tabella seguente vengono descritte le proprietà e le informazioni restituite.  
   
-> [!NOTE]  
->  Le proprietà seguenti verranno rimosse in una versione futura di [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]: **ConnectTimeout**, **DataTimeout** e **ResourceUsage**. Evitare di utilizzare queste proprietà in un nuovo progetto di sviluppo e prevedere interventi di modifica nelle applicazioni in cui vengono utilizzate.  
+> [!NOTE]
+>  In una versione futura di [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] verranno rimosse le proprietà seguenti: **ConnectTimeout**, **DataTimeout** e **ResourceUsage**. Evitare di utilizzare queste proprietà in un nuovo progetto di sviluppo e prevedere interventi di modifica nelle applicazioni in cui vengono utilizzate.  
   
 |Proprietà|valore|  
 |--------------|-----------|  

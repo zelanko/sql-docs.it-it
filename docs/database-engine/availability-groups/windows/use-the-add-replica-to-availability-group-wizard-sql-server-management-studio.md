@@ -1,6 +1,7 @@
 ---
-title: Usare la procedura guidata Aggiungi replica a gruppo di disponibilità (SQL Server Management Studio) | Microsoft Docs
-ms.custom: ''
+title: Aggiungere una replica a un gruppo di disponibilità usano la procedura guidata in SSMS - SQL Server
+ms.description: Add a replica to an Always On availability group using the wizard found in SQL Server Management Studio.
+ms.custom: seodec18
 ms.date: 05/17/2016
 ms.prod: sql
 ms.reviewer: ''
@@ -15,14 +16,14 @@ ms.assetid: 60d962b6-2af4-4394-9190-61939a102bc0
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: d97f8773de23631a56106daba729e1b629bd0dd3
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 152d4b274fe2e966a30ffe09ba2939ba4cafef39
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47768330"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53202480"
 ---
-# <a name="use-the-add-replica-to-availability-group-wizard-sql-server-management-studio"></a>Utilizzare la procedura guidata Aggiungi replica a gruppo di disponibilità (SQL Server Management Studio)
+# <a name="add-a-replica-to-your-always-on-availability-group-using-the-availability-group-wizard-in-sql-server-management"></a>Aggiungere una replica al gruppo di disponibilità Always On usando la Creazione guidata gruppo di disponibilità in SQL Server Management Studio
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   Usare la procedura guidata **Aggiungi replica a gruppo di disponibilità** per aggiungere una nuova replica secondaria a un gruppo di disponibilità Always On esistente.  
   
@@ -74,12 +75,12 @@ ms.locfileid: "47768330"
   
 4.  Nella pagina **Connetti a repliche secondarie esistenti** , connettersi a ogni replica secondaria del gruppo di disponibilità. Per altre informazioni, vedere la pagina [Connetti a repliche secondarie esistenti &#40;procedura guidata Aggiungi replica: procedura guidata Aggiungi database&#41;](../../../database-engine/availability-groups/windows/connect-to-existing-secondary-replicas-page.md).  
   
-5.  Nella pagina **Specifica repliche** specificare e configurare una o più nuove repliche secondarie per il nuovo gruppo di disponibilità. In questa pagina sono incluse tre schede. Queste schede vengono presentate nella tabella seguente. Per altre informazioni, vedere [ &#40;Creazione guidata Gruppo di disponibilità: Aggiungi replica&#41;](../../../database-engine/availability-groups/windows/specify-replicas-page-new-availability-group-wizard-add-replica-wizard.md).  
+5.  Nella pagina **Specifica repliche** specificare e configurare una o più nuove repliche secondarie per il nuovo gruppo di disponibilità. In questa pagina sono incluse tre schede. Queste schede vengono presentate nella tabella seguente. Per altre informazioni, vedere la pagina[Specifica repliche&#40;Creazione guidata Gruppo di disponibilità: procedura guidata Aggiungi replica&#41;](../../../database-engine/availability-groups/windows/specify-replicas-page-new-availability-group-wizard-add-replica-wizard.md).  
   
     |Scheda|Breve descrizione|  
     |---------|-----------------------|  
     |**Repliche**|Utilizzare questa scheda per specificare ogni istanza di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] che ospiterà una nuova replica secondaria.|  
-    |**Endpoint**|Utilizzare questa scheda per verificare l'endpoint del mirroring di database esistente, se presente, per ogni nuova replica secondaria. Se tale endpoint risulta mancante in un'istanza del server i cui account del servizio utilizzano l'autenticazione di Windows, si tenterà di creare l'endpoint automaticamente.<br /><br /> <br /><br /> Nota: se un'istanza del server è in esecuzione in un account utente non di dominio, è necessario apportare una modifica manuale all'istanza del server prima di continuare con la procedura guidata. Per altre informazioni, vedere la sessione [Prerequisiti](#Prerequisites)più indietro in questo argomento.|  
+    |**Endpoint**|Utilizzare questa scheda per verificare l'endpoint del mirroring di database esistente, se presente, per ogni nuova replica secondaria. Se tale endpoint risulta mancante in un'istanza del server i cui account del servizio utilizzano l'autenticazione di Windows, si tenterà di creare l'endpoint automaticamente.<br /><br /> <br /><br /> Nota: Se qualsiasi istanza del server è in esecuzione in un account utente non di dominio, è necessario apportare una modifica manuale all'istanza del server prima di continuare con la procedura guidata. Per altre informazioni, vedere la sessione [Prerequisiti](#Prerequisites)più indietro in questo argomento.|  
     |**Preferenze di backup**|Utilizzare questa scheda per specificare le preferenze di backup per il gruppo di disponibilità nel suo complesso, se si desidera modificare l'impostazione corrente e per specificare le priorità di backup per le singole repliche di disponibilità.|  
   
 6.  Se le repliche selezionate contengono database con una chiave master del database, immettere le password per le chiavi master del database nella colonna **Password**. La colonna **Stato** visualizza **Password obbligatoria** per i database con una chiave master del database. L'opzione **Avanti** è disattivata finché non viene immessa la password corretta nella colonna **Password**. Dopo avere immesso le password, fare clic su **Aggiorna**. Se le password sono state immesse correttamente, la colonna Stato indica **Password immessa** e **Avanti** diventa disponibile.  
@@ -118,7 +119,7 @@ ms.locfileid: "47768330"
      Al termine della procedura guidata, fare clic su **Chiudi** per uscire.  
   
 > [!IMPORTANT]  
->  Dopo avere aggiunto una replica, vedere la sezione "Completamento: Dopo l'aggiunta di una replica secondaria" in [Aggiungere una replica secondaria a un gruppo di disponibilità &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/add-a-secondary-replica-to-an-availability-group-sql-server.md).  
+>  Dopo aver aggiunto una replica, vedere la sezione "Completamento: Dopo l'aggiunta di una replica secondaria" in [Aggiungere una replica secondaria a un gruppo di disponibilità &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/add-a-secondary-replica-to-an-availability-group-sql-server.md).  
   
 ##  <a name="RelatedTasks"></a> Attività correlate  
   

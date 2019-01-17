@@ -15,12 +15,12 @@ ms.assetid: 24bd987e-164a-48fd-b4f2-cbe16a3cd95e
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 41ed2ef9899e4c0df7cb6aa3aa8f00ac62d6ffb2
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: eaae67a3d08fd899a9a73e4e853b1dbc97dba9ee
+ms.sourcegitcommit: 2f5773f4bc02bfff4f2924226ac5651eb0c00924
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52535542"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53553213"
 ---
 # <a name="ssis-catalog"></a>Catalogo SSIS
   Il catalogo **SSISDB** è il punto centrale dell'utilizzo di progetti [!INCLUDE[ssISnoversion_md](../../includes/ssisnoversion-md.md)] (SSIS) che sono stati distribuiti nel server [!INCLUDE[ssISnoversion_md](../../includes/ssisnoversion-md.md)]. Ad esempio, è possibile impostare parametri di progetti e pacchetti, configurare ambienti per specificare valori di runtime per i pacchetti, eseguire e risolvere i problemi dei pacchetti e gestire le operazioni del server [!INCLUDE[ssISnoversion_md](../../includes/ssisnoversion-md.md)] .  
@@ -178,7 +178,7 @@ Per eseguire il **processo di manutenzione del server SSIS**, SSIS crea l'access
 |Numero massimo di versioni per progetto|MAX_PROJECT_VERSIONS|  
 |Livello di registrazione predefinito per l'intero server|SERVER_LOGGING_LEVEL|  
   
-##  <a name="Permissions"></a> Autorizzazioni  
+##  <a name="Permissions"></a> Permissions  
  I progetti, gli ambienti e i pacchetti sono contenuti in cartelle che sono oggetti a protezione diretta. È possibile concedere le autorizzazioni a una cartella, inclusa l'autorizzazione MANAGE_OBJECT_PERMISSIONS. L'autorizzazione MANAGE_OBJECT_PERMISSIONS consente di delegare l'amministrazione del contenuto di una cartella a un utente senza dover concedere all'utente l'appartenenza al ruolo ssis_admin. È inoltre possibile concedere autorizzazioni per progetti, ambienti e operazioni. Le operazioni includono l'inizializzazione di [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], la distribuzione di progetti, la creazione e l'avvio di esecuzioni, la convalida di progetti e pacchetti e la configurazione del catalogo **SSISDB** .  
   
  Per altre informazioni sui ruoli di database, vedere [Ruoli a livello di database](../../relational-databases/security/authentication-access/database-level-roles.md).  
@@ -322,7 +322,7 @@ Per eseguire il **processo di manutenzione del server SSIS**, SSIS crea l'access
   
      Nel catalogo vengono utilizzate stored procedure CLR.  
   
-5.  Fare clic su **Abilita l'esecuzione automatica della stored procedure di Integration Services all'avvio di SQL Server** per abilitare l'esecuzione della stored procedure [catalog.startup](../../integration-services/system-stored-procedures/catalog-startup.md) a ogni riavvio dell'istanza del server [!INCLUDE[ssIS](../../includes/ssis-md.md)].  
+5.  Fare clic su **Abilita l'esecuzione automatica della stored procedure di Integration Services all'avvio di SQL Server** per abilitare l'esecuzione della stored procedure [catalog.startup](../../integration-services/system-stored-procedures/catalog-startup.md) a ogni riavvio dell’istanza del server [!INCLUDE[ssIS](../../includes/ssis-md.md)] .  
   
      La stored procedure esegue la manutenzione dello stato delle operazioni per il catalogo SSISDB. Corregge lo stato di eventuali pacchetti in esecuzione in caso di arresto dell'istanza del server [!INCLUDE[ssIS](../../includes/ssis-md.md)].  
   
@@ -412,7 +412,7 @@ Per eseguire il **processo di manutenzione del server SSIS**, SSIS crea l'access
   
     ```  
   
-3.  Eseguire il backup del database SSISDB tramite la finestra di dialogo **Backup database** in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Per ulteriori informazioni, vedere [Procedura: Esecuzione del backup di un database (SQL Server Management Studio)](https://go.microsoft.com/fwlink/?LinkId=231812).  
+3.  Eseguire il backup del database SSISDB tramite la finestra di dialogo **Backup database** in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Per altre informazioni, vedere [Procedura: Eseguire il backup del database (SQL Server Management Studio)](https://go.microsoft.com/fwlink/?LinkId=231812).  
   
 4.  Generare lo script CREATE LOGIN per ##MS_SSISServerCleanupJobLogin##, effettuando le operazioni riportate di seguito. Per altre informazioni, vedere [CREATE LOGIN &#40;Transact-SQL&#41;](../../t-sql/statements/create-login-transact-sql.md).  
   
@@ -436,7 +436,7 @@ Per eseguire il **processo di manutenzione del server SSIS**, SSIS crea l'access
   
 ### <a name="to-restore-the-ssis-database"></a>Per ripristinare il database SSIS  
   
-1.  Se si ripristina il database SSISDB a un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in cui il catalogo SSISDB non è mai stato creato, abilitare Common Language Runtime (CLR) eseguendo la stored procedure sp_configure. Per altre informazioni, vedere [sp_configure &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md) e [Opzione clr enabled](https://go.microsoft.com/fwlink/?LinkId=231855).  
+1.  Se si ripristina il database SSISDB su un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in cui il catalogo SSISDB non è mai stato creato, abilitare Common Language Runtime (CLR) eseguendo la stored procedure `sp_configure`. Per altre informazioni, vedere [sp_configure &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md) e [Opzione clr enabled](https://go.microsoft.com/fwlink/?LinkId=231855).  
   
     ```  
     use master   
@@ -541,10 +541,10 @@ Per eseguire il **processo di manutenzione del server SSIS**, SSIS crea l'access
   
 2.  In [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]espandere il server locale e **Cataloghi di Integration Services**.  
   
-3.  Fare clic con il pulsante destro del mouse su **SSISDB**e quindi selezionare **Aggiornamento database** per avviare Aggiornamento guidato del database SSISDB.  
+3.  Fare clic con il pulsante destro del mouse su **SSISDB**e quindi selezionare **Aggiornamento database** per avviare Aggiornamento guidato del database SSISDB. In alternativa, avviare l'Aggiornamento guidato del database SSISDB eseguendo `C:\Program Files\Microsoft SQL Server\140\DTS\Binn\ISDBUpgradeWizard.exe` con autorizzazioni elevate nel server locale.
   
-     ![Avviare l'aggiornamento guidato di SSISDB](../../integration-services/service/media/ssisdb-upgrade-wizard-1.png "Avviare l'aggiornamento guidato di SSISDB")  
-  
+     ![Avviare l'Aggiornamento guidato del database SSISDB](../../integration-services/service/media/ssisdb-upgrade-wizard-1.png)
+
 4.  Nella pagina **Seleziona istanza** selezionare un'istanza di SQL Server nel server locale.  
   
     > [!IMPORTANT]  
@@ -579,7 +579,7 @@ Per eseguire il **processo di manutenzione del server SSIS**, SSIS crea l'access
 ###  <a name="prereq"></a> Prerequisiti  
 Eseguire questi passaggi preliminari prima di abilitare il supporto Always On per il database SSISDB.  
   
-1.  Configurare un cluster di failover di Windows Vedere il post del blog relativo all'[installazione della funzionalità e degli strumenti per il cluster di failover per Windows Server 2012](https://blogs.msdn.com/b/clustering/archive/2012/04/06/10291601.aspx) per le istruzioni. Installare la funzionalità e gli strumenti in tutti i nodi del cluster.  
+1.  Configurare un cluster di failover di Windows Vedere il post del blog relativo all’ [installazione della funzionalità e degli strumenti per il cluster di failover per Windows Server 2012](https://blogs.msdn.com/b/clustering/archive/2012/04/06/10291601.aspx) per le istruzioni. Installare la funzionalità e gli strumenti in tutti i nodi del cluster.  
   
 2.  Installare SQL Server 2016 con Integration Services (SSIS) in ogni nodo del cluster.  
   
@@ -598,7 +598,7 @@ Eseguire questi passaggi preliminari prima di abilitare il supporto Always On pe
 > -   Abilitare il **supporto SSIS per Always On** *dopo* aver aggiunto SSISDB a un gruppo di disponibilità Always On.  
 
 > [!NOTE]
-> Per altre informazioni su questa procedura, vedere la seguente procedura dettagliata con screenshot aggiuntivi nel blog dell'MVP della piattaforma dati Marcos Freccia relativo all'[aggiunta di SSISDB ai gruppi di disponibilità per SQL Server 2016](https://marcosfreccia.com/2017/04/28/adding-ssisdb-to-ag-for-sql-server-2016/).
+> Per altre informazioni, vedere la procedura dettagliata con screenshot aggiuntivi redatta da Marcos Freccia, Data Platform MVP: [Adding SSISDB to AG for SQL Server 2016](https://marcosfreccia.com/2017/04/28/adding-ssisdb-to-ag-for-sql-server-2016/) (Aggiunta di SSISDB a un gruppo di disponibilità per SQL Server 2016).
 
 ####  <a name="Step1"></a> Passaggio 1: Creare un catalogo di Integration Services  
   
@@ -608,9 +608,9 @@ Eseguire questi passaggi preliminari prima di abilitare il supporto Always On pe
   
 3.  Fare clic su **Abilitazione integrazione con CLR**. Nel catalogo vengono utilizzate stored procedure CLR.  
   
-4.  Fare clic su **Abilita l'esecuzione automatica della stored procedure di Integration Services all'avvio di SQL Server** per abilitare l'esecuzione della stored procedure [catalog.startup](../system-stored-procedures/catalog-startup.md) a ogni riavvio dell'istanza del server SSIS. La stored procedure esegue la manutenzione dello stato delle operazioni per il catalogo SSISDB. Corregge lo stato di eventuali pacchetti in esecuzione in caso di arresto dell'istanza del server SSIS.  
+4.  Fare clic su **Abilita l’esecuzione automatica della stored procedure di Integration Services all’avvio di SQL Server** per abilitare l’esecuzione della stored procedure [catalog.startup](../system-stored-procedures/catalog-startup.md) a ogni riavvio dell’istanza del server SSIS. La stored procedure esegue la manutenzione dello stato delle operazioni per il catalogo SSISDB. Corregge lo stato di eventuali pacchetti in esecuzione in caso di arresto dell'istanza del server SSIS.  
   
-5.  Immettere una **password**e quindi fare clic su **Ok**. La password consente di proteggere la chiave del database master utilizzata per crittografare i dati del catalogo. Salvare la password in un percorso sicuro. È consigliabile eseguire inoltre il backup della chiave master del database. Per ulteriori informazioni, vedere [Backup della chiave master di un database](../../relational-databases/security/encryption/back-up-a-database-master-key.md).  
+5.  Immettere una **password**e quindi fare clic su **Ok**. La password consente di proteggere la chiave del database master utilizzata per crittografare i dati del catalogo. Salvare la password in un percorso sicuro. È consigliabile eseguire inoltre il backup della chiave master del database. Per altre informazioni, vedere [Backup della chiave master di un database](../../relational-databases/security/encryption/back-up-a-database-master-key.md).  
   
 ####  <a name="Step2"></a> Passaggio 2: Aggiungere SSISDB a un gruppo di disponibilità Always On  
 Per aggiungere il database SSISDB a un gruppo di disponibilità Always On, si procede come per l'aggiunta di qualsiasi altro database utente a un gruppo di disponibilità. Vedere [Utilizzare la Creazione guidata Gruppo di disponibilità](../../database-engine/availability-groups/windows/use-the-availability-group-wizard-sql-server-management-studio.md).  
@@ -643,21 +643,21 @@ Se l'opzione **Abilita supporto per AlwaysOn** nel menu di scelta rapida risulta
   
 2.  Fare clic su **Riesegui** nell'aggiornamento guidato. Il controllo della regola "Verifica presenza di SSISDB in un gruppo di disponibilità AlwaysOn" viene superato.  
   
-3.  Fare clic su **Avanti** per continuare l'aggiornamento.  
+3.  Fare clic su **Avanti** per continuare l’aggiornamento.  
   
 4.  Dopo aver aggiornato tutti i nodi, aggiungere di nuovo il database SSISDB al gruppo di disponibilità Always On. Per altre informazioni, vedere [Aggiungere un database a un gruppo di disponibilità &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/availability-group-add-a-database.md).  
   
  Se durante l'aggiornamento di SQL Server non si verifica alcun blocco e se SSISDB è presente in un gruppo di disponibilità Always On, aggiornare separatamente SSISDB dopo aver aggiornato il motore di database di SQL Server. Usare l'aggiornamento guidato SSIS per aggiornare il database SSISDB come descritto nella procedura seguente.  
   
-1.  Spostare il database SSISDB dal gruppo di disponibilità, o eliminare quest'ultimo se SSISDB è l'unico database nel gruppo. Avviare **SQL Server Management Studio** nel **nodo primario** del gruppo di disponibilità per eseguire questa attività.  
+1.  Spostare il database SSISDB dal gruppo di disponibilità, o eliminare quest’ultimo se SSISDB è l'unico database nel gruppo. Avviare **SQL Server Management Studio** nel **nodo primario** del gruppo di disponibilità per eseguire questa attività.  
   
 2.  Rimuovere il database SSISDB da tutti i **nodi di replica**.  
   
-3.  Aggiornare il database SSISDB nel **nodo primario**. In**Esplora oggetti** di SQL Server Management Studio espandere i **Cataloghi di Integration Services**, fare clic con il pulsante destro del mouse su **SSISDB**e quindi scegliere **Aggiornamento database**. Seguire le istruzioni dell'**Aggiornamento guidato SSISDB** per aggiornare il database. Avviare l'**aggiornamento guidato di SSIDB** localmente nel **nodo primario**.  
+3.  Aggiornare il database SSISDB nel **nodo primario**. In**Esplora oggetti** di SQL Server Management Studio espandere i **Cataloghi di Integration Services**, fare clic con il pulsante destro del mouse su **SSISDB**e quindi scegliere **Aggiornamento database**. Seguire le istruzioni dell’ **Aggiornamento guidato SSISDB** per aggiornare il database. Avviare l'**aggiornamento guidato di SSIDB** localmente nel **nodo primario**.  
   
-4.  Seguire le istruzioni incluse in [Passaggio 2: Aggiungere SSISDB al gruppo di disponibilità AlwaysOn](#Step2) per aggiungere di nuovo il database SSISDB a un gruppo di disponibilità.  
+4.  Seguire le istruzioni al [Passaggio 2: Aggiungere SSISDB a un gruppo di disponibilità Always On](#Step2) per aggiungere di nuovo il database SSISDB a un gruppo di disponibilità.  
   
-5.  Seguire le istruzioni incluse in [Passaggio 3: Abilitare il supporto SSIS per AlwaysOn](#Step3).  
+5.  Seguire le istruzioni al [Passaggio 3: Abilitare il supporto SSIS per Always On](#Step3).  
   
 ##  <a name="RelatedContent"></a> Contenuto correlato  
   

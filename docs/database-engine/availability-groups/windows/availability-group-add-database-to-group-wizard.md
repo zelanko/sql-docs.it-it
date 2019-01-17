@@ -1,6 +1,7 @@
 ---
-title: Gruppo di disponibilità - Procedura guidata Aggiungi database a gruppo di disponibilità | Microsoft Docs
-ms.custom: ''
+title: Aggiungere un database a un gruppo di disponibilità con la "Creazione guidata Gruppo di disponibilità"
+description: Aggiungere un database a un gruppo di disponibilità Always On usando la "Creazione guidata Gruppo di disponibilità" in SQL Server Management Studio.
+ms.custom: seodec18
 ms.date: 05/17/2016
 ms.prod: sql
 ms.reviewer: ''
@@ -15,34 +16,26 @@ ms.assetid: 81e5e36d-735d-4731-8017-2654673abb88
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 25bea0c614d55774207692ab275917d7ecdcab2c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 32a8945392df4d45dd6904a3921d2cbc770a4674
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47724249"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53211570"
 ---
-# <a name="availability-group---add-database-to-group-wizard"></a>Procedura guidata Aggiungi database a gruppo di disponibilità
+# <a name="add-a-database-to-an-always-on-availability-group-with-the-availability-group-wizard"></a>Aggiungere un database a un gruppo di disponibilità Always On con la "Creazione guidata Gruppo di disponibilità"
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   Usare la procedura guidata Aggiungi database a gruppo di disponibilità per aggiungere uno o più database a un gruppo di disponibilità Always On esistente.  
   
 > [!NOTE]  
 >  Per informazioni sull'uso di [!INCLUDE[tsql](../../../includes/tsql-md.md)] o PowerShell per aggiungere un database, vedere [Aggiungere un database a un gruppo di disponibilità &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/availability-group-add-a-database.md).  
   
- **Contenuto dell'argomento:**  
-  
--   **Prima di iniziare:**  
-  
-     [Prerequisiti e restrizioni](#Prerequisites)  
-  
-     [Security](#Security)  
-  
--   **Per aggiungere un database usando**  [Procedura guidata Aggiungi database a gruppo di disponibilità (SQL Server Management Studio)](#SSMSProcedure)  
+
   
 ##  <a name="BeforeYouBegin"></a> Prima di iniziare  
  Se non è mai stato aggiunto un database a un gruppo di disponibilità, vedere la sezione "Database di disponibilità" in [Prerequisiti, restrizioni e consigli per i gruppi di disponibilità Always On &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/prereqs-restrictions-recommendations-always-on-availability.md).  
   
-###  <a name="Prerequisites"></a> Prerequisiti, restrizioni e raccomandazioni  
+##  <a name="Prerequisites"></a> Prerequisiti, restrizioni e raccomandazioni  
   
 -   È necessario essere connessi all'istanza del server che ospita la replica primaria corrente.  
   
@@ -56,13 +49,11 @@ ms.locfileid: "47724249"
   
      Se non è possibile usare la procedura guidata per eseguire la sincronizzazione dei dati iniziale completa, sarà necessario preparare i database secondari manualmente. Tale operazione può essere eseguita prima o dopo l'esecuzione della procedura guidata. Per altre informazioni, vedere [Preparare manualmente un database secondario per un gruppo di disponibilità &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/manually-prepare-a-secondary-database-for-an-availability-group-sql-server.md).  
   
-###  <a name="Security"></a> Sicurezza  
   
-####  <a name="Permissions"></a> Permissions  
+##  <a name="Permissions"></a> Permissions  
  È necessaria l'autorizzazione ALTER AVAILABILITY GROUP nel gruppo di disponibilità, l'autorizzazione CONTROL AVAILABILITY GROUP, l'autorizzazione ALTER ANY AVAILABILITY GROUP o l'autorizzazione CONTROL SERVER.  
   
-##  <a name="SSMSProcedure"></a> Utilizzo della procedura guidata Aggiungi database a gruppo di disponibilità (SQL Server Management Studio)  
- **Per utilizzare la procedura guidata Aggiungi database a gruppo di disponibilità**  
+##  <a name="use-the-new-availability-group-wizard"></a>Usare la "Creazione guidata Gruppo di disponibilità"
   
 1.  In Esplora oggetti connettersi all'istanza del server che ospita la replica primaria del gruppo di disponibilità ed espandere l'albero del server.  
   

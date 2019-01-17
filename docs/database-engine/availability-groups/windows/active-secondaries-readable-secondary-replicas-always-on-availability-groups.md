@@ -1,6 +1,7 @@
 ---
-title: 'Repliche secondarie attive: Repliche secondarie leggibili (gruppi di disponibilità AlwaysOn) | Microsoft Docs'
-ms.custom: ''
+title: Ripartire il carico di lavoro di sola lettura in una replica secondaria di un gruppo di disponibilità
+description: Informazioni sulla ripartizione di query e report di sola lettura in replica secondaria di un gruppo di disponibilità Always On in SQL Server.
+ms.custom: seodec18
 ms.date: 06/06/2016
 ms.prod: sql
 ms.reviewer: ''
@@ -17,14 +18,14 @@ ms.assetid: 78f3f81a-066a-4fff-b023-7725ff874fdf
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: e0c7c2b420adedaff0a67ff0f10c14d581f13f94
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.openlocfilehash: 653171f45dff58afe617f1d70380e4ce9f3ee600
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51604716"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53206270"
 ---
-# <a name="active-secondaries-readable-secondary-replicas-always-on-availability-groups"></a>Repliche secondarie attive: Repliche secondarie leggibili (gruppi di disponibilità Always On)
+# <a name="offload-read-only-workload-to-secondary-replica-of-an-always-on-availability-group"></a>Ripartire il carico di lavoro di sola lettura in una replica secondaria di un gruppo di disponibilità Always On
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
   Le funzionalità secondarie attive di [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] includono il supporto per l'accesso in sola lettura a una o più repliche secondarie (*repliche secondarie leggibili*). Una replica secondaria leggibile può essere in modalità di disponibilità con commit sincrono o asincrono. Una replica secondaria leggibile consente l'accesso in sola lettura a tutti i relativi database secondari. Tuttavia, i database secondari leggibili non sono impostati per la sola lettura. Sono dinamici. Un database secondario viene modificato in base ai cambiamenti apportati al database primario corrispondente. Per una replica secondaria tipica, i dati presenti nel database secondario, comprese le tabelle durevoli con ottimizzazione per la memoria, sono quasi in tempo reale. Inoltre, gli indici full-text sono sincronizzati con i database secondari. In molte circostanze, la latenza dei dati tra un database primario e il database secondario corrispondente è in genere solo di pochi secondi.  
@@ -35,22 +36,6 @@ ms.locfileid: "51604716"
 >  Nonostante non sia possibile scrivere dati nei database secondari, è possibile scrivere nei database di lettura-scrittura dell'istanza del server in cui è ospitata la replica secondaria, inclusi i database utente e quelli di sistema come **tempdb**.  
   
  [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] supporta anche il reindirizzamento delle richieste di connessione con finalità di lettura a una replica secondaria leggibile (*routing di sola lettura*). Per informazioni sul routing di sola lettura, vedere [Uso di un listener per connettersi a una replica secondaria di sola lettura (routing di sola lettura)](../../../database-engine/availability-groups/windows/listeners-client-connectivity-application-failover.md#ConnectToSecondary).  
-  
- **Contenuto dell'argomento**  
-  
--   [Vantaggi](../../../database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md#bkmk_Benefits)  
-  
--   [Prerequisiti per il gruppo di disponibilità](../../../database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md#bkmk_Prerequisites)  
-  
--   [Limitazioni e restrizioni](../../../database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md#bkmk_LimitationsRestrictions)  
-  
--   [Considerazioni sulle prestazioni](../../../database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md#bkmk_Performance)  
-  
--   [Considerazioni sulla pianificazione della capacità](../../../database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md#bkmk_CapacityPlanning)  
-  
--   [Attività correlate](../../../database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md#bkmk_RelatedTasks)  
-  
--   [Contenuto correlato](../../../database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md#RelatedContent)  
   
 ##  <a name="bkmk_Benefits"></a> Vantaggi  
  L'indirizzamento di connessioni di sola lettura a repliche secondarie leggibili offre i seguenti vantaggi:  
@@ -145,8 +130,8 @@ ms.locfileid: "51604716"
   
  Ciò significa che si verifica della latenza, in genere solo pochi secondi, tra la replica primaria e quella secondaria. In rari casi, tuttavia, ad esempio se problemi di rete compromettono la velocità effettiva, la latenza può diventare significativa. La latenza aumenta quando si verificano colli di bottiglia I/O e quando viene sospeso lo spostamento dati. Per monitorare lo spostamento dati sospeso, è possibile usare il [dashboard Always On](../../../database-engine/availability-groups/windows/use-the-always-on-dashboard-sql-server-management-studio.md) o la DMV [sys.dm_hadr_database_replica_states](../../../relational-databases/system-dynamic-management-views/sys-dm-hadr-database-replica-states-transact-sql.md) .  
   
-####  <a name="bkmk_LatencyWithInMemOLTP"></a> Latenza dei dati nei database con tabelle con ottimizzazione per la memoria  
- [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)] prevede alcune considerazioni speciali in relazione alla latenza dei dati per le repliche secondarie attive (vedere [[!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)]Repliche secondarie attive: Repliche secondarie leggibili](https://technet.microsoft.com/library/ff878253(v=sql.120).aspx)). A partire da [!INCLUDE[ssSQL15](../../../includes/sssql15-md.md)] , non esistono considerazioni speciali in relazione alla latenza dei dati per le tabelle con ottimizzazione per la memoria. La latenza dei dati prevista per le tabelle con ottimizzazione per la memoria è paragonabile a quella per le tabelle basate su disco.  
+####  <a name="bkmk_LatencyWithInMemOLTP"></a> Latenza dei dati nei database con tabelle ottimizzate per la memoria  
+ [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)] prevede alcune considerazioni speciali in relazione alla latenza dei dati per le repliche secondarie attive, vedere [[!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)]Repliche secondarie attive: repliche secondarie leggibili](https://technet.microsoft.com/library/ff878253(v=sql.120).aspx). A partire da [!INCLUDE[ssSQL15](../../../includes/sssql15-md.md)], non esistono considerazioni speciali in relazione alla latenza dei dati per le tabelle ottimizzate per la memoria. La latenza dei dati prevista per le tabelle con ottimizzazione per la memoria è paragonabile a quella per le tabelle basate su disco.  
   
 ###  <a name="ReadOnlyWorkloadImpact"></a> Impatto sui carichi di lavoro di sola lettura  
  Quando si configura una replica secondaria per l'accesso di sola lettura, nei carichi di lavoro di sola lettura dei database secondari si usano le risorse di sistema, ad esempio CPU e I/O (per le tabella basate su disco) dai thread della fase di rollforward, soprattutto se i carichi di lavoro di sola lettura nelle tabelle basate su disco prevedono l'esecuzione di molte operazioni di I/O. Non esiste alcun impatto I/O quando si accede alle tabelle con ottimizzazione per la memoria perché tutte le righe si trovano in memoria.  
@@ -252,7 +237,7 @@ GO
   
 ##  <a name="RelatedContent"></a> Contenuto correlato  
   
--   [SQL Server Always On Team Blog: The official SQL Server Always On Team Blog (Blog del team di SQL Server Always On: blog ufficiale del team di SQL Server Always On)](https://blogs.msdn.microsoft.com/sqlalwayson/)  
+-   [SQL Server Always On Team Blog (Blog del team SQL Server Always On): blog ufficiale del team di SQL Server Always On](https://blogs.msdn.microsoft.com/sqlalwayson/)  
   
 ## <a name="see-also"></a>Vedere anche  
  [Panoramica di gruppi di disponibilità AlwaysOn &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   

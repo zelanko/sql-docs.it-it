@@ -19,12 +19,12 @@ ms.assetid: fdb64e09-222a-47fe-b08b-999264ca261d
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 4222a9175e9c5ae1b813d87d67fcc8a34170249a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 13cb528700007174c20c5c6881b64a9c4282f036
+ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47714439"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53589416"
 ---
 # <a name="grant-full-text-permissions-transact-sql"></a>GRANT - autorizzazioni per il catalogo full-text (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -54,10 +54,10 @@ GRANT permission [ ,...n ] ON
  *permission*  
  Nome di un'autorizzazione. I mapping validi tra le autorizzazioni e le entità a protezione diretta sono descritti nella sezione "Osservazioni" più avanti in questo argomento.  
   
- ON FULLTEXT CATALOG **::***full-text_catalog_name*  
+ ON FULLTEXT CATALOG **::**_full-text_catalog_name_  
  Specifica il catalogo full-text per cui viene concessa l'autorizzazione. Il qualificatore di ambito **::** è obbligatorio.  
   
- ON FULLTEXT STOPLIST **::***full-text_stoplist_name*  
+ ON FULLTEXT STOPLIST **::**_full-text_stoplist_name_  
  Specifica l'elenco di parole non significative full-text per cui viene concessa l'autorizzazione. Il qualificatore di ambito **::** è obbligatorio.  
   
  *database_principal*  
@@ -65,7 +65,7 @@ GRANT permission [ ,...n ] ON
   
 -   utente del database  
 -   ruolo del database  
--   ruolo dell'applicazione  
+-   ruolo applicazione  
 -   utente del database sul quale viene eseguito il mapping a un account di accesso di Windows  
 -   utente del database sul quale viene eseguito il mapping a un gruppo di Windows  
 -   utente del database sul quale viene eseguito il mapping a un certificato  
@@ -80,7 +80,7 @@ AS *granting_principal*
   
 -   utente del database  
 -   ruolo del database  
--   ruolo dell'applicazione  
+-   ruolo applicazione  
 -   utente del database sul quale viene eseguito il mapping a un account di accesso di Windows  
 -   utente del database sul quale viene eseguito il mapping a un gruppo di Windows  
 -   utente del database sul quale viene eseguito il mapping a un certificato  
@@ -142,7 +142,7 @@ GRANT CONTROL
     TO Ted ;  
 ```  
   
-### <a name="b-granting-permissions-to-a-stoplist"></a>B. Concessione di autorizzazioni per un elenco di parole non significative  
+### <a name="b-granting-permissions-to-a-stoplist"></a>b. Concessione di autorizzazioni per un elenco di parole non significative  
  Nell'esempio seguente, a `Mary` viene concessa l'autorizzazione `VIEW DEFINITION` per l'elenco di parole non significative full-text `ProductStoplist`.  
   
 ```  

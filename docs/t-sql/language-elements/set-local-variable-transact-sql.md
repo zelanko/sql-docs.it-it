@@ -19,12 +19,12 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 839ef762a20d413f5e1c61ca45c46ad80a153d99
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: b29291d808b643f9ac66491ae200d6169eb5232a
+ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51697328"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53589635"
 ---
 # <a name="set-localvariable-transact-sql"></a>SET @local_variable (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -71,7 +71,7 @@ SET @local_variable {+= | -= | *= | /= | %= | &= | ^= | |= } expression
 ```  
   
 ## <a name="arguments"></a>Argomenti  
- **@** *local_variable*  
+ **@** _local_variable_  
  Nome di una variabile di qualsiasi tipo tranne **cursor**, **text**, **ntext**, **image** o **table**. I nomi delle variabili devono iniziare con un simbolo di chiocciola (**@**) e devono essere conformi alle regole per gli [identificatori](../../relational-databases/databases/database-identifiers.md).  
   
  *property_name*  
@@ -86,10 +86,10 @@ SET @local_variable {+= | -= | *= | /= | %= | &= | ^= | |= } expression
  { **.** | **::** }  
  Specifica un metodo di un tipo CRL definito dall'utente. Per un metodo di istanza (non statico), usare un punto (**.**). Per un metodo statico, usare una coppia di due punti (**::**). Per richiamare un metodo, una proprietà o un campo di un tipo CLR definito dall'utente, è necessario disporre dell'autorizzazione EXECUTE per il tipo.  
   
- *method_name* **(** *argument* [ **,**... *n* ] **)**  
+ _method_name_ **(** _argument_ [ **,**... *n* ] **)**  
  Metodo di un tipo definito dall'utente che accetta uno o più argomenti per modificare lo stato di un'istanza di un tipo. I metodi statici devono essere pubblici.  
   
- **@** *SQLCLR_local_variable*  
+ **@** _SQLCLR_local_variable_  
  È una variabile il cui tipo è situato in un assembly. Per altre informazioni, vedere [Concetti relativi alla programmazione dell'integrazione con CLR &#40;Common Language Runtime&#41;](../../relational-databases/clr-integration/common-language-runtime-clr-integration-programming-concepts.md).  
   
  *mutator_method*  
@@ -178,7 +178,7 @@ SET @local_variable {+= | -= | *= | /= | %= | &= | ^= | |= } expression
   
  Le variabili possono essere utilizzate solo nelle espressioni e non in sostituzione di parole chiave o nomi di oggetto. Per creare istruzioni [!INCLUDE[tsql](../../includes/tsql-md.md)] dinamiche, utilizzare EXECUTE.  
   
- Le regole di sintassi relative a SET **@***cursor_variable* non prevedono le parole chiave LOCAL e GLOBAL. Quando si usa la sintassi SET **@***cursor_variable* = CURSOR..., viene creato un cursore GLOBAL o LOCAL a seconda dell'impostazione dell'opzione del database predefinita.  
+ Le regole di sintassi relative a SET **@**_cursor_variable_ non prevedono le parole chiave LOCAL e GLOBAL. Quando viene usata la sintassi SET **@**_cursor_variable_ = CURSOR..., viene creato un cursore GLOBAL o LOCAL a seconda dell'impostazione dell'opzione di database default to local cursor.  
   
  Le variabili di cursore sono sempre locali, anche quando fanno riferimento a un cursore globale. Quando una variabile di cursore fa riferimento a un cursore globale, esistono sia un riferimento al cursore locale che un riferimento al cursore globale. Per ulteriori informazioni, vedere l'esempio C.  
   
@@ -189,7 +189,7 @@ SET @local_variable {+= | -= | *= | /= | %= | &= | ^= | |= } expression
  Non utilizzare una variabile in un'istruzione SELECT per concatenare valori, ovvero per elaborare valori aggregati. Si potrebbero verificare risultati di query imprevisti. Ciò è dovuto al fatto che non è garantito che tutte le espressioni nell'elenco SELECT, incluse le assegnazioni, siano eseguite esattamente una volta per ciascuna riga di output. Per altre informazioni, vedere [questo articolo della Knowledge Base](https://support.microsoft.com/kb/287515).  
   
 ## <a name="permissions"></a>Permissions  
- È richiesta l'appartenenza al ruolo public. Tutti gli utenti possono usare SET **@***local_variable*.  
+ È richiesta l'appartenenza al ruolo public. Tutti gli utenti possono usare SET **@**_local_variable_.  
   
 ## <a name="examples"></a>Esempi  
   
@@ -203,7 +203,7 @@ SELECT @myvar;
 GO  
 ```  
   
-### <a name="b-using-a-local-variable-assigned-a-value-by-using-set-in-a-select-statement"></a>B. Utilizzo in un'istruzione SELECT di una variabile locale a cui viene assegnato un valore tramite l'istruzione SET  
+### <a name="b-using-a-local-variable-assigned-a-value-by-using-set-in-a-select-statement"></a>b. Utilizzo in un'istruzione SELECT di una variabile locale a cui viene assegnato un valore tramite l'istruzione SET  
  Nell'esempio seguente viene creata una variabile locale denominata `@state` che viene quindi utilizzata in un'istruzione `SELECT` per individuare i nomi e i cognomi di tutti i dipendenti che risiedono nello stato dell'`Oregon`.  
   
 ```  

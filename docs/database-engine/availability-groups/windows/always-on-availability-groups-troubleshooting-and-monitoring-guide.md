@@ -1,6 +1,7 @@
 ---
-title: Guida alla risoluzione dei problemi e al monitoraggio dei gruppi di disponibilità Always On (SQL Server) | Microsoft Docs
-ms.custom: ag-guide
+title: Riferimento per il monitoraggio e la risoluzione dei problemi dei gruppi di disponibilità Always On
+description: Questa guida funge da pagina di riferimento e consente di iniziare rapidamente a monitorare i gruppi di disponibilità Always On e a risolverne alcuni problemi comuni.
+ms.custom: ag-guide, seodec18
 ms.date: 05/10/2016
 ms.prod: sql
 ms.reviewer: ''
@@ -10,19 +11,18 @@ ms.assetid: 8d6d9954-ff6b-4e58-882e-eff0174f0d07
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 6af848993830329f9f5bbc6b2dc42be416a36fcc
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 59ca941e6588f00140b4b57fa3a73904b6ad8f35
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52398864"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53215620"
 ---
 # <a name="always-on-availability-groups-troubleshooting-and-monitoring-guide"></a>Guida alla risoluzione dei problemi e al monitoraggio dei gruppi di disponibilità Always On
  Questa guida consente di iniziare rapidamente a monitorare i gruppi di disponibilità Always On e a risolvere alcuni problemi più comuni dei gruppi di disponibilità. Riporta contenuto originale nonché una pagina di destinazione con informazioni utili pubblicate anche altrove. Sebbene in questa guida non sia possibile trattare in modo approfondito tutti i problemi che possono verificarsi nell'ambito dei gruppi di disponibilità, l'utente troverà un'indicazione della direzione da seguire per l'analisi della causa principale e la risoluzione dei problemi. 
  
  Poiché i gruppi di disponibilità sono una tecnologia integrata, molti problemi riscontrati potrebbero essere sintomi di altri problemi nel sistema di database. Alcuni problemi sono causati dalle impostazioni del gruppo di disponibilità, ad esempio la sospensione di un database di disponibilità. Altri problemi possono riguardare altri aspetti di SQL Server, ad esempio le impostazioni di SQL Server, le distribuzioni dei file di database e i problemi di prestazioni del sistema non legati alla disponibilità. Inoltre, possono esistere altri problemi al di fuori di SQL Server legati, ad esempio all'I/O di rete, a TCP/IP, ad Active Directory e a WSFC. I problemi che emergono in un gruppo di disponibilità, in una replica o in un database richiedono spesso l'analisi di varie tecnologie in cui cercare la causa principale.  
   
-
   
 ##  <a name="BKMK_SCENARIOS"></a> Scenari di risoluzione dei problemi  
  Nella tabella seguente sono riportati collegamenti agli scenari di risoluzione dei problemi comuni per i gruppi di disponibilità. Questi sono suddivisi in categorie in base al tipo di scenario, ad esempio configurazione, connettività client, failover e prestazioni.  
@@ -65,12 +65,12 @@ ms.locfileid: "52398864"
 |-----------|-----------------|  
 |[Monitorare le prestazioni per i gruppi di disponibilità Always On](monitor-performance-for-always-on-availability-groups.md)|Descrive il processo di sincronizzazione dei dati per i gruppi di disponibilità, i controlli di flusso e le metriche utili per il monitoraggio di un gruppo di disponibilità. Viene illustrato anche come raccogliere le metriche per gli obiettivi RTO e RPO.|  
 |[Monitoraggio dei gruppi di disponibilità &#40;SQL Server&#41;](monitoring-of-availability-groups-sql-server.md)|Fornisce informazioni sugli strumenti per eseguire il monitoraggio di un gruppo di disponibilità.|  
-|[The Always On Health Model Part 1: Health Model Architecture (Modello di integrità Always On, parte 1: Architettura del modello di integrità)](https://blogs.msdn.com/b/sqlalwayson/archive/2012/02/09/overview-of-the-alwayson-manageability-health-model.aspx)|Fornisce una panoramica del modello di integrità Always On.|  
-|[The Always On health model, part 2: Extending the health model (Modello di integrità Always On, parte 2: Estensione del modello di integrità)](https://blogs.msdn.com/b/sqlalwayson/archive/2012/02/13/extending-the-alwayson-health-model.aspx)|Illustra come personalizzare il modello di integrità Always On e il dashboard Always On per visualizzare informazioni aggiuntive.|  
-|[Monitoring Always On health with PowerShell - Part 1: Basic cmdlet overview (Monitoraggio dell'integrità AlwaysOn con PowerShell, parte 1: Panoramica sui cmdlet di base)](https://blogs.msdn.com/b/sqlalwayson/archive/2012/02/13/monitoring-alwayson-health-with-powershell-part-1.aspx)|Fornisce una panoramica sui cmdlet PowerShell Always On che possono essere utilizzati per monitorare l'integrità di un gruppo di disponibilità.|  
-|[Monitoring Always On health with PowerShell, part 2: Advanced cmdlet usage (Monitoraggio dell'integrità Always On con PowerShell, parte 2: Utilizzo avanzato dei cmdlet)](https://blogs.msdn.com/b/sqlalwayson/archive/2012/02/13/monitoring-alwayson-health-with-powershell-part-2.aspx)|Fornisce informazioni sull'utilizzo avanzato dei cmdlet PowerShell Always On per monitorare l'integrità di un gruppo di disponibilità.|  
-|[Monitoring Always On health with PowerShell, part 3: A simple monitoring application (Monitoraggio dell'integrità Always On con PowerShell, parte 3: Applicazione di monitoraggio semplice)](https://blogs.msdn.com/b/sqlalwayson/archive/2012/02/15/monitoring-alwayson-health-with-powershell-part-3.aspx)|Illustra come monitorare automaticamente un gruppo di disponibilità con un'applicazione.|  
-|[Monitoring Always On health with PowerShell, part 4: Integration with SQL Server Agent (Monitoraggio dell'integrità Always On con PowerShell, parte 4: Integrazione con SQL Server Agent)](https://blogs.msdn.com/b/sqlalwayson/archive/2012/02/15/the-always-on-health-model-part-4.aspx)|Fornisce informazioni su come integrare il monitoraggio dei gruppi di disponibilità con SQL Server Agent e configurare la notifica delle entità appropriate in caso di problemi.|  
+|[Il modello di integrità Always On, parte 1: Architettura del modello di integrità](https://blogs.msdn.com/b/sqlalwayson/archive/2012/02/09/overview-of-the-alwayson-manageability-health-model.aspx)|Fornisce una panoramica del modello di integrità Always On.|  
+|[Il modello di integrità Always On, parte 2: Estensione del modello di integrità](https://blogs.msdn.com/b/sqlalwayson/archive/2012/02/13/extending-the-alwayson-health-model.aspx)|Illustra come personalizzare il modello di integrità Always On e il dashboard Always On per visualizzare informazioni aggiuntive.|  
+|[Monitoraggio dell'integrità Always On con PowerShell - Parte 1: Panoramica dei cmdlet di base](https://blogs.msdn.com/b/sqlalwayson/archive/2012/02/13/monitoring-alwayson-health-with-powershell-part-1.aspx)|Fornisce una panoramica sui cmdlet PowerShell Always On che possono essere utilizzati per monitorare l'integrità di un gruppo di disponibilità.|  
+|[Monitoraggio dell'integrità Always On con PowerShell - Parte 2: Utilizzo di cmdlet avanzati](https://blogs.msdn.com/b/sqlalwayson/archive/2012/02/13/monitoring-alwayson-health-with-powershell-part-2.aspx)|Fornisce informazioni sull'utilizzo avanzato dei cmdlet PowerShell Always On per monitorare l'integrità di un gruppo di disponibilità.|  
+|[Monitoraggio dell'integrità Always On con PowerShell - Parte 3: Semplice applicazione di monitoraggio](https://blogs.msdn.com/b/sqlalwayson/archive/2012/02/15/monitoring-alwayson-health-with-powershell-part-3.aspx)|Illustra come monitorare automaticamente un gruppo di disponibilità con un'applicazione.|  
+|[Monitoraggio dell'integrità Always On con PowerShell - Parte 4: Integrazione con SQL Server Agent](https://blogs.msdn.com/b/sqlalwayson/archive/2012/02/15/the-always-on-health-model-part-4.aspx)|Fornisce informazioni su come integrare il monitoraggio dei gruppi di disponibilità con SQL Server Agent e configurare la notifica delle entità appropriate in caso di problemi.|  
 
 ## <a name="next-steps"></a>Passaggi successivi  
  [SQL Server Always On Team Blog (Blog di SQL Server Always On)](https://blogs.msdn.com/b/sqlalwayson/)   

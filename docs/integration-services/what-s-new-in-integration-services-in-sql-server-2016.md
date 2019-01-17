@@ -15,12 +15,12 @@ ms.assetid: da6999c7-e5e3-4a59-a284-1da635995af1
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 93504e52da01f99536fd04581ef9af29c06afcc9
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: 7d5a8b82d60dcd4c2fae13af02310767e10700cd
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51640198"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53205840"
 ---
 # <a name="what39s-new-in-integration-services-in-sql-server-2016"></a>Novità&#39 di Integration Services in SQL Server 2016
 [!INCLUDE[feedback-stackoverflow-msdn-connect-md](../includes/feedback-stackoverflow-msdn-connect-md.md)]
@@ -180,7 +180,7 @@ La funzionalità di distribuzione dei pacchetti incrementale consente di distrib
   
 -   API del modello a oggetti di gestione (MOM, Management Object Model)  
   
- Per altre informazioni, vedere [Distribuire il progetto o i pacchetti Integration Services](../integration-services/packages/deploy-integration-services-ssis-projects-and-packages.md.  
+ Per altre informazioni, vedere [Distribuire progetti e pacchetti di Integration Services (SSIS)](../integration-services/packages/deploy-integration-services-ssis-projects-and-packages.md).  
 
 ####  <a name="encrypted"></a> Supporto per Crittografia sempre attiva nel catalogo SSIS  
  SSIS supporta già la funzionalità Crittografia sempre attiva in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Per altre informazioni, vedere i post di blog seguenti.  
@@ -326,7 +326,7 @@ La versione più recente del Feature Pack di Azure include l'attività di carica
    
  ![Proprietà TargetServerVersion nella finestra di dialogo delle proprietà del progetto](../integration-services/media/targetserverversion2.png "Proprietà TargetServerVersion nella finestra di dialogo delle proprietà del progetto")  
 
->   [!IMPORTANT]
+> [!IMPORTANT]
 > Se si sviluppano estensioni personalizzate di SSIS, vedere [Supporto multitargeting nei componenti personalizzati](../integration-services/extending-packages-custom-objects/support-multi-targeting-in-your-custom-components.md) e [Ottenere estensioni SSIS personalizzate supportate da più versioni di SSDT 2015 per SQL Server 2016](https://blogs.msdn.microsoft.com/ssis/2016/04/19/getting-your-ssis-custom-extensions-to-be-supported-by-the-multi-version-support-of-ssdt-2015-for-sql-server-2016/).  
 
 ### <a name="better-management-experience-in-sql-server-management-studio"></a>Migliore esperienza di gestione in SQL Server Management Studio

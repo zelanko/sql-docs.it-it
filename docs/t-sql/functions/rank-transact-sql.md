@@ -22,12 +22,12 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 537a2da418940ef267305078f0375d6c51716677
-ms.sourcegitcommit: b58d514879f182fac74d9819918188f1688889f3
+ms.openlocfilehash: fcd61180cde6b346351230f39b3503f2ecb51298
+ms.sourcegitcommit: 467b2c708651a3a2be2c45e36d0006a5bbe87b79
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "50970342"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53980137"
 ---
 # <a name="rank-transact-sql"></a>RANK (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -102,7 +102,7 @@ ProductID   Name                   LocationID   Quantity Rank
  (10 row(s) affected)  
 ```  
   
-### <a name="b-ranking-all-rows-in-a-result-set"></a>B. Classificazione di tutte le righe in un set di risultati  
+### <a name="b-ranking-all-rows-in-a-result-set"></a>b. Classificazione di tutte le righe in un set di risultati  
  Nell'esempio seguente vengono restituiti i primi dieci dipendenti classificati in base allo stipendio. Poiché non è specificata alcuna clausola PARTITION BY, la funzione RANK è stata applicata a tutte le righe nel set di risultati.  
   
 ```  

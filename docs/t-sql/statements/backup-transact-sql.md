@@ -43,16 +43,16 @@ helpviewer_keywords:
 - stripe sets [SQL Server]
 - cross-platform backups
 ms.assetid: 89a4658a-62f1-4289-8982-f072229720a1
-author: CarlRabeler
-ms.author: carlrab
+author: mashamsft
+ms.author: mathoma
 manager: craigg
 monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current||>=aps-pdw-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 48e1ef4a027c3bd62818bb85fd0218e033e620da
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: 9bb9f7368f9250bd96adb62c6af7e7711213e4fc
+ms.sourcegitcommit: 202ef5b24ed6765c7aaada9c2f4443372064bd60
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53203880"
+ms.lasthandoff: 01/12/2019
+ms.locfileid: "54242284"
 ---
 # <a name="backup-transact-sql"></a>BACKUP (Transact-SQL)
 
@@ -367,7 +367,7 @@ Specifica il testo in formato libero che descrive il set di backup. La stringa p
 NAME **=** { *backup_set_name* | **@**_backup\_set\_var_ }  
 Specifica il nome del set di backup. I nomi possono essere composti da un massimo di 128 caratteri. Se si omette NAME, al set di backup non viene assegnato alcun nome specifico.  
   
-{ EXPIREDATE **='**_date_**'** | RETAINDAYS **=** *days* }  
+{ EXPIREDATE **='**_date_**'** | RETAINDAYS **=** _days_ }  
 Indica quando è possibile sovrascrivere il set di backup per il backup specifico. Se si utilizzano entrambe le opzioni, RETAINDAYS ha la precedenza rispetto a EXPIREDATE.  
   
 Se nessuna delle due opzioni viene specificata, la data di scadenza è determinata dall'impostazione di configurazione **mediaretention**. Per altre informazioni, vedere [Opzioni di configurazione del server &#40;SQL Server&#41;](../../database-engine/configure-windows/server-configuration-options-sql-server.md)sia installato il servizio WMI.   
@@ -518,7 +518,7 @@ A partire da [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], non ha alcun e
   
 **Opzioni di monitoraggio**  
   
-STATS [ **=** *percentage* ]  
+STATS [ **=** _percentage_ ]  
 Visualizza un messaggio ad ogni completamento di *percentage* e consente di tenere traccia dello stato di avanzamento dell'operazione. Se si omette *percentage*, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] visualizza un messaggio dopo il completamento di ogni 10% dell'operazione.  
   
 L'opzione STATS segnala la percentuale di completamento in base alla soglia specificata per l'intervallo successivo. Si tratta approssimativamente della percentuale specificata. Con l'impostazione STATS=10, ad esempio, se la percentuale di completamento corrisponde al 40%, potrebbe venire indicata una percentuale uguale al 43%. Per i set di backup di grandi dimensioni ciò non rappresenta un problema, perché la percentuale di completamento aumenta molto lentamente tra le varie chiamate di I/O completate.  
@@ -564,14 +564,14 @@ Queste opzioni vengono usate solo con `BACKUP LOG`.
 > [!NOTE]  
 > Se non si desidera eseguire un backup del log, utilizzare il modello di recupero con registrazione minima. Per altre informazioni, vedere [Modelli di recupero &#40;SQL Server&#41;](../../relational-databases/backup-restore/recovery-models-sql-server.md).  
   
-{ NORECOVERY | STANDBY **=** *undo_file_name* }  
+{ NORECOVERY | STANDBY **=** _undo_file_name_ }  
   NORECOVERY 
 
 Consente di eseguire il backup della parte finale del log lasciando il database nello stato RESTORING. L'opzione NORECOVERY risulta utile quando si esegue il failover in un database secondario o per salvare la parte finale del log prima di un'operazione RESTORE.  
   
 Usare insieme le opzioni `NO_TRUNCATE` e `NORECOVERY` per eseguire un backup del log senza troncamento del log e quindi portare il database nello stato RESTORING in modo atomico.  
   
-STANDBY **=** *standby_file_name* 
+STANDBY **=** _standby_file_name_ 
 
 Consente di eseguire il backup della parte finale del log lasciando il database nello stato STANDBY e di sola lettura. La clausola STANDBY scrive i dati di standby (esecuzione del rollback ma con la possibilità di ulteriori ripristini). L'utilizzo dell'opzione STANDBY equivale all'esecuzione di BACKUP LOG WITH NORECOVERY seguita da RESTORE WITH STANDBY.  
   
@@ -1113,7 +1113,7 @@ Non ha alcun effetto. L'opzione è accettata in questa versione per compatibilit
   
 **Opzioni di monitoraggio**  
   
-STATS [ **=** *percentage* ]  
+STATS [ **=** _percentage_ ]  
 Visualizza un messaggio ad ogni completamento di *percentage* e consente di tenere traccia dello stato di avanzamento dell'operazione. Se si omette *percentage*, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] visualizza un messaggio dopo il completamento di ogni 10% dell'operazione.  
   
 L'opzione STATS segnala la percentuale di completamento in base alla soglia specificata per l'intervallo successivo. Si tratta approssimativamente della percentuale specificata. Con l'impostazione STATS=10, ad esempio, se la percentuale di completamento corrisponde al 40%, potrebbe venire indicata una percentuale uguale al 43%. Per i set di backup di grandi dimensioni ciò non rappresenta un problema, perché la percentuale di completamento aumenta molto lentamente tra le varie chiamate di I/O completate.  

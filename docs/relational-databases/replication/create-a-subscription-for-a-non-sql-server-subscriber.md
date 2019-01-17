@@ -15,16 +15,16 @@ ms.assetid: 5020ee68-b988-4d57-8066-67d183e61237
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: f4e6ffeeeb6c6c39b161c6957677f65843959b13
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 854e407cce5f229883e9b4f53e6a818d4532640b
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52540225"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53205240"
 ---
 # <a name="create-a-subscription-for-a-non-sql-server-subscriber"></a>Creazione di una sottoscrizione per un Sottoscrittore non SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  In questo argomento viene descritto come creare una sottoscrizione per un Sottoscrittore non SQL Server in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] tramite [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)]. La replica transazionale e la replica snapshot supportano la pubblicazione di dati su Sottoscrittori non[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Per informazioni sulle piattaforme di Sottoscrittori supportate, vedere [Non-SQL Server Subscribers](../../relational-databases/replication/non-sql/non-sql-server-subscribers.md).  
+  In questo argomento viene descritto come creare una sottoscrizione per un Sottoscrittore non SQL Server in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] tramite [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)]. La replica transazionale e la replica snapshot supportano la pubblicazione di dati su sottoscrittori non [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Per informazioni sulle piattaforme di Sottoscrittori supportate, vedere [Non-SQL Server Subscribers](../../relational-databases/replication/non-sql/non-sql-server-subscribers.md).  
   
  **Contenuto dell'argomento**  
   
@@ -35,7 +35,7 @@ ms.locfileid: "52540225"
      [Transact-SQL](#TsqlProcedure)  
   
 ##  <a name="SSMSProcedure"></a> Utilizzo di SQL Server Management Studio  
- Per creare una sottoscrizione per un Sottoscrittore non[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] :  
+ Per creare una sottoscrizione per un sottoscrittore non [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]:  
   
 1.  Installare e configurare il software client e il provider o i provider OLE DB appropriati sul database di distribuzione [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Per ulteriori informazioni, vedere [Oracle Subscribers](../../relational-databases/replication/non-sql/oracle-subscribers.md) e [IBM DB2 Subscribers](../../relational-databases/replication/non-sql/ibm-db2-subscribers.md).  
   
@@ -143,8 +143,8 @@ ms.locfileid: "52540225"
   
  Al termine della generazione dello snapshot da parte dell'agente, viene visualizzato un messaggio come ""[100%] Generato uno snapshot di 17 articoli."  
   
-##  <a name="TsqlProcedure"></a> Uso di Transact-SQL  
- È possibile creare sottoscrizioni push a Sottoscrittori[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a livello di programmazione tramite le stored procedure di replica.  
+##  <a name="TsqlProcedure"></a> Utilizzo di Transact-SQL  
+ È possibile creare sottoscrizioni push a sottoscrittori non [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a livello di programmazione usando le stored procedure di replica.  
   
 > [!IMPORTANT]  
 >  Se possibile, richiedere agli utenti di immettere le credenziali di sicurezza in fase di esecuzione. Se è necessario archiviare le credenziali in un file script, è fondamentale proteggere il file per evitare accessi non autorizzati.  

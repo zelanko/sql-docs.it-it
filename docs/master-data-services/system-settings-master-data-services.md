@@ -5,8 +5,7 @@ ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: mds
 ms.reviewer: ''
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.topic: conceptual
 helpviewer_keywords:
 - Master Data Services, system settings
@@ -15,12 +14,12 @@ ms.assetid: 83075cdf-f059-4646-8ba2-19be8202f130
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: f58c276968fd88b64ef5c48995eafbc553e14987
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: fabd4b6da2a6c7016d00e503918062f86f6ce147
+ms.sourcegitcommit: 7ea015dc8527de14e7bd4401f5c74c8402fab3d6
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52507278"
+ms.lasthandoff: 12/21/2018
+ms.locfileid: "53738117"
 ---
 # <a name="system-settings-master-data-services"></a>Impostazioni di sistema (Master Data Services)
 
@@ -113,7 +112,7 @@ ms.locfileid: "52507278"
 |**URL di Gestione dati master per le notifiche**|**MDMRootURL**|URL per l'applicazione Web [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)], usato nel collegamento presente nelle notifiche tramite posta elettronica, ad esempio `https://constoso/mds`.|  
 |**Intervallo posta elettronica di notifica**|**NotificationInterval**|Frequenza, in secondi, con cui vengono inviate le notifiche tramite posta elettronica. Il valore predefinito è **120** secondi (2 minuti).|  
 |**Numero di notifiche in un singolo messaggio di posta elettronica**|**NotificationsPerEmail**|Numero massimo di problemi di convalida che saranno elencati in un singolo messaggio di posta elettronica di notifica. Eventuali ulteriori problemi non vengono inclusi nel messaggio di posta elettronica, ma sono disponibili in [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)].|  
-|**Formato predefinito per la posta elettronica**|**EmailFormat**|Formato per tutte le notifiche tramite posta elettronica. Il valore predefinito è **HTML** o **1**. L'impostazione del database **2** indica **Testo**.<br /><br /> Nota: è possibile eseguire l'override di questa impostazione per un singolo utente in [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)], modificando e salvando il valore di **Formato posta elettronica** nella scheda **Generale** dell'utente.|  
+|**Formato predefinito per la posta elettronica**|**EmailFormat**|Formato per tutte le notifiche tramite posta elettronica. Il valore predefinito è **HTML** o **1**. L'impostazione del database **2** indica **Testo**.<br /><br /> Nota: è possibile eseguire l'override di questa impostazione per un singolo utente in [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] modificando e salvando il valore di **Formato posta elettronica** nella scheda **Generale** dell'utente.|  
 |**Espressione regolare per indirizzo di posta elettronica**|**EmailRegExPattern**|Nell'area funzionale **Autorizzazioni utenti e gruppi** di [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)], espressione regolare utilizzata per convalidare l'indirizzo di posta elettronica immesso nella scheda **Generale** di un utente. Per altre informazioni sulle espressioni regolari, vedere [Elementi del linguaggio di espressioni regolari](https://go.microsoft.com/fwlink/?LinkId=164401) in MSDN Library.|  
 |**Account di posta del database**|**EmailProfilePrincipalAccount**|Visualizza l'account di posta del database da utilizzare per l'invio delle notifiche tramite posta elettronica. Il profilo predefinito è **mds_email_user**.|  
 |**Profilo di Posta elettronica database**|**DatabaseMailProfile**|Profilo di posta del database da utilizzare per l'invio delle notifiche tramite posta elettronica. Il valore predefinito è vuoto.|  
@@ -128,7 +127,12 @@ ms.locfileid: "52507278"
   
 |Impostazione di Gestione configurazione|Impostazione di sistema|Descrizione|  
 |-----------------------------------|--------------------|-----------------|  
-||**SecurityMemberProcessInterval**|Nell'area funzionale **Autorizzazioni utenti e gruppi** di [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)], frequenza in secondi con cui vengono applicate le autorizzazioni di utenti e gruppi impostate in **Membri gerarchia**. Il valore predefinito è **3600** secondi (60 minuti).|  
+||**SecurityMemberProcessInterval**|Nell'area funzionale [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] **User and Group Permissions** functional area, the frequency, in seconds, that user and group permissions set on the **Hierarchy Members** tab are applied. Il valore predefinito è **3600** secondi (60 minuti).|  
+
+##  <a name="Performance"></a> Impostazioni delle prestazioni  
+|Impostazione di Gestione configurazione|Impostazione di sistema|Descrizione|  
+|-----------------------------------|--------------------|-----------------|  
+|**Impostazione di abilitazione del miglioramento delle prestazioni**|**PerformanceImprovementEnable**|Per ottenere buone prestazioni per la pagina relativa al caricamento delle autorizzazioni, questa impostazione è stata abilitata (**impostata su 1**). Tuttavia, in questa situazione, le prestazioni di creazione/modifica di entità, attributi, utenti o gruppi saranno ridotte. Per evitare che ciò accada è possibile disabilitare questa impostazione (**impostarla su 0**). Dopo aver modificato questa impostazione è necessario eseguire il comando "**EXEC [mdm].[udpPerformanceToggleSwitch];**" per assicurarsi che la vista e i dati siano corretti.|  
   
  Per altre informazioni, vedere [Applicare immediatamente autorizzazioni membri &#40;Master Data Services&#41;](../master-data-services/immediately-apply-member-permissions-master-data-services.md).  
   

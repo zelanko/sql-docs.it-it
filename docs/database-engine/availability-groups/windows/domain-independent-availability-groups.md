@@ -1,6 +1,7 @@
 ---
-title: Gruppi di disponibilità indipendenti dal dominio (SQL Server) | Microsoft Docs
-ms.custom: ''
+title: Creare un gruppo di disponibilità indipendente dal dominio
+description: Procedura per la creazione di un gruppo di disponibilità che usa un cluster di gruppi di lavoro. In questo modo si consente a SQL Server 2016 (e versioni successive) di distribuire un gruppo di disponibilità Always On in un cluster WSFC che non richiede Active Directory Domain Services e quindi non richiede che ogni server faccia parte dello stesso dominio.
+ms.custom: seodec18
 ms.date: 09/25/2017
 ms.prod: sql
 ms.reviewer: ''
@@ -12,14 +13,14 @@ ms.assetid: ''
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 0024663d9d16d191338abfa2604e6c969f0d58e5
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: c70aba3f6dc1648b70c9bc9a524052a7ba591793
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52415078"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53211910"
 ---
-# <a name="domain-independent-availability-groups"></a>Gruppi di disponibilità indipendenti dal dominio
+# <a name="create-a-domain-independent-availability-group"></a>Creare un gruppo di disponibilità indipendente dal dominio
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 I gruppi di disponibilità AlwaysOn richiedono un cluster di failover di Windows Server (WSFC) sottostante. Per distribuire un cluster WSFC tramite Windows Server 2012 R2 è necessario che i server che fanno parte di un cluster WSFC, anche detti nodi, siano aggiunti allo stesso dominio. Per altre informazioni su Active Directory Domain Services, vedere [questo articolo](https://technet.microsoft.com/library/cc759073(v=ws.10).aspx).

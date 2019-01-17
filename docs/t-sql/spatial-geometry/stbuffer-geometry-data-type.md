@@ -18,12 +18,12 @@ ms.assetid: ca6bf2dc-1d38-4503-b87e-f2ea033d36ba
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 8d18d64f08eacc5b2784c9101d77e90f4c5d33a6
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: fdb4a177f1d391877e6f1b9d0f7b37c9c001b955
+ms.sourcegitcommit: 467b2c708651a3a2be2c45e36d0006a5bbe87b79
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51702799"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53979477"
 ---
 # <a name="stbuffer-geometry-data-type"></a>STBuffer (tipo di dati geometry)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -67,7 +67,7 @@ Restituisce un oggetto geometrico che rappresenta l'unione di tutti i punti la c
   
  Un buffer negativo rimuove tutti i punti racchiusi nella distanza specificata del limite della geometria.  
   
- L'errore tra il buffer calcolato e quello teorico è max(tolerance, extents * 1.E-7) dove tolerance = distance \* 0,001. Per altre informazioni sulle estensioni, vedere la [Guida di riferimento ai metodi per il tipo di dati geometry](https://msdn.microsoft.com/library/d88e632b-6b2f-4466-a15f-9fbef1a347a7).  
+ L'errore tra il buffer teorico e quello calcolato è max(tolerance, extents * 1.E-7) dove tolerance = distance \* 0,001. Per altre informazioni sulle estensioni, vedere la [Guida di riferimento ai metodi per il tipo di dati geometry](https://msdn.microsoft.com/library/d88e632b-6b2f-4466-a15f-9fbef1a347a7).  
   
 ## <a name="examples"></a>Esempi  
   
@@ -79,7 +79,7 @@ Restituisce un oggetto geometrico che rappresenta l'unione di tutti i punti la c
  SELECT @g.STBuffer(-1).ToString();
  ```  
   
-### <a name="b-calling-stbuffer-with-parametervalue--0-on-a-polygon-instance"></a>B. Chiamata a STBuffer() con parameter_value < 0 in un'istanza Polygon  
+### <a name="b-calling-stbuffer-with-parametervalue--0-on-a-polygon-instance"></a>b. Chiamata a STBuffer() con parameter_value < 0 in un'istanza Polygon  
  Nell'esempio seguente viene restituita un'istanza `Polygon` con un buffer negativo:  
   
 ```

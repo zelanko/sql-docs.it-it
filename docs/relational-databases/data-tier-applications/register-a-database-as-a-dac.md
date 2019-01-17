@@ -19,23 +19,23 @@ ms.assetid: 08e52aa6-12f3-41dd-a793-14b99a083fd5
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: a9a3359957c543c809003c4289207cd4b325ee0c
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: cfcb3a58ee61e7cd4404ec32799fbc265acdc8f6
+ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52513229"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53591355"
 ---
 # <a name="register-a-database-as-a-dac"></a>Registrare un database come applicazione livello dati
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   Usare la procedura guidata **Registra applicazione livello dati** o uno script di Windows PowerShell per compilare una definizione di applicazione livello dati (DAC) che descrive gli oggetti contenuti in un database esistente e registrarla nel database di sistema **msdb** (**master** in [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)]).  
   
 -   **Prima di iniziare:**  [Limitazioni e restrizioni](#LimitationsRestrictions), [Autorizzazioni](#Permissions)  
   
--   **Per aggiornare un'applicazione livello dati tramite:**  [la procedura guidata Registra applicazione livello dati](#UsingRegisterDACWizard), [PowerShell](#RegisterDACPowerShell)  
+-   **Per aggiornare un'applicazione livello dati tramite la:**  [Procedura guidata Registra applicazione livello dati](#UsingRegisterDACWizard), [PowerShell](#RegisterDACPowerShell)  
   
 ## <a name="before-you-begin"></a>Prima di iniziare  
- Il processo di registrazione genera una definizione di applicazione livello dati che definisce gli oggetti nel database. La definizione dell'applicazione livello dati e il database combinati costituiscono un'istanza di applicazione livello dati. Se si registra un database come applicazione livello dati in un'istanza gestita del Motore di database, l'applicazione livello dati registrata viene incorporata in Utilità SQL Server al successivo invio del set di raccolta dell'utilità dall'istanza al punto di controllo dell'utilità. L'applicazione livello dati sarà quindi presente nel nodo **Applicazioni livello dati distribuite** nell'area [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] **Utility Explorer** and reported in the **Applicazioni livello dati distribuite** details page.  
+ Il processo di registrazione genera una definizione di applicazione livello dati che definisce gli oggetti nel database. La definizione dell'applicazione livello dati e il database combinati costituiscono un'istanza di applicazione livello dati. Se si registra un database come applicazione livello dati in un'istanza del motore di database, l'applicazione livello dati registrata viene incorporata in Utilità SQL Server al successivo invio del set di raccolta dell'utilità dall'istanza al punto di controllo dell'utilità. L'applicazione livello dati sarà quindi presente nel nodo **Deployed Data-tier Applications** (Applicazioni livello dati distribuite) in [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] **Utility Explorer** and reported in the **Deployed Data-tier Applications** details page.  
   
 ###  <a name="LimitationsRestrictions"></a> Limitazioni e restrizioni  
  La registrazione di un'applicazione livello dati può essere effettuata solo per un database in [!INCLUDE[ssSDS](../../includes/sssds-md.md)]o [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] Service Pack 4 (SP4) o versioni successive. La registrazione di un'applicazione livello dati non può essere eseguita se è stata già registrata un'applicazione livello dati per il database. Se, ad esempio, il database è stato creato distribuendo un'applicazione livello dati, non è possibile eseguire la procedura guidata **Registra applicazione livello dati**.  
@@ -109,7 +109,7 @@ ms.locfileid: "52513229"
  [Utilizzo della procedura guidata Registra applicazione livello dati](#UsingRegisterDACWizard)  
   
 ### <a name="validating-objects"></a>Convalida degli oggetti  
- **Controllo di**  *SchemaName* **.** *ObjectName* **.** - Consente di visualizzare un indicatore di stato durante la verifica delle dipendenze degli oggetti recuperati e della loro validità per l'applicazione livello dati. _NomeSchema_**.**_NomeOggetto_ identifica l'oggetto attualmente sottoposto a verifica.  
+ **Checking**  _SchemaName_ **.** _ObjectName_ **.** - Consente di visualizzare un indicatore di stato durante la verifica delle dipendenze degli oggetti recuperati e della loro validità per l'applicazione livello dati. _NomeSchema_**.**_NomeOggetto_ identifica l'oggetto attualmente sottoposto a verifica.  
   
  **< Indietro**: consente di tornare alla pagina **Imposta proprietà** per modificare le voci selezionate.  
   

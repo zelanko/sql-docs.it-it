@@ -1,7 +1,7 @@
 ---
 title: Guida sull'architettura di gestione della memoria | Microsoft Docs
 ms.custom: ''
-ms.date: 12/11/2018
+ms.date: 01/09/2019"
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -15,14 +15,15 @@ author: rothja
 ms.author: jroth
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 924b347e5fa8907fa1f2b9cb9b820a63808cbc3b
-ms.sourcegitcommit: 40c3b86793d91531a919f598dd312f7e572171ec
+ms.openlocfilehash: 31ebb5ef9994c3c853b8163f4f2ba58e8cbe7d3b
+ms.sourcegitcommit: 1f53b6a536ccffd701fc87e658ddac714f6da7a2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53328981"
+ms.lasthandoff: 01/10/2019
+ms.locfileid: "54206447"
 ---
 # <a name="memory-management-architecture-guide"></a>guida sull'architettura di gestione della memoria
+
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 ## <a name="windows-virtual-memory-manager"></a>Virtual Memory Manager di Windows  
@@ -70,7 +71,10 @@ Usando AWE e il privilegio Blocco di pagine in memoria, è possibile fornire al 
 > [!NOTE]
 > Le versioni precedenti di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] potrebbero essere eseguite in un sistema operativo a 32 bit. L'accesso a più di 4 gigabyte (GB) di memoria in un sistema operativo a 32 bit richiede estensioni AWE (Address Windowing Extensions) per la gestione della memoria. Queste estensioni non sono necessarie quando [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] è in esecuzione su sistemi operativi a 64 bit. Per altre informazioni su AWE, vedere [Spazio degli indirizzi di processo](https://msdn.microsoft.com/library/ms189334.aspx) e [Gestione della memoria per database di grandi dimensioni](https://msdn.microsoft.com/library/ms191481.aspx) nella documentazione di [!INCLUDE[ssKatmai](../includes/ssKatmai-md.md)].   
 
+<a name="changes-to-memory-management-starting-2012-11x-gm"></a>
+
 ## <a name="changes-to-memory-management-starting-with-includesssql11includessssql11-mdmd"></a>Modifiche apportate alla gestione della memoria a partire da [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]
+
 Nelle versioni precedenti di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] ([!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)], [!INCLUDE[ssKatmai](../includes/ssKatmai-md.md)] e [!INCLUDE[ssKilimanjaro](../includes/ssKilimanjaro-md.md)]), l'allocazione di memoria viene gestita con cinque meccanismi diversi:
 -  **Allocatore di pagine singole**, che include solo le allocazioni di memoria minori o uguali a 8 KB nel processo di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Le opzioni di configurazione *max server memory (MB)* e *min server memory (MB)* che determinano i limiti di memoria fisica usata dall'allocatore di pagine singole. Il pool di buffer è contemporaneamente il meccanismo per l'allocazione di pagine singole e il maggiore consumer di allocazioni di pagine singole.
 -  **Allocatore di più pagine**, per le allocazioni di memoria che richiedono più di 8 KB.

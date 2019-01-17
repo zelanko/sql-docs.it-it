@@ -1,21 +1,23 @@
 ---
-title: 'Report per dispositivi mobili di SQL Server: procedura dettagliata completa | Microsoft Docs'
-ms.date: 11/07/2017
+title: 'Report per dispositivi mobili di SQL Server: Procedura dettagliata completa'
+description: Procedura dettagliata per la creazione di report per dispositivi mobili per schermi di qualsiasi dimensione con Microsoft SQL Server Mobile Report Publisher nel portale Web di Reporting Services e la visualizzazione degli stessi nell'app Power BI per dispositivi mobili.
+ms.date: 12/07/2018
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: mobile-reports
+ms.custom: seodec18
 ms.topic: conceptual
 ms.assetid: e198575e-b154-4342-b944-2bf19ec49bfd
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 7db1fd9af6a36f0804819c389b06778ae04d2ebf
-ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
+ms.openlocfilehash: db6f8c664dff6f7234e43a3e3f11f6cc01e2eac4
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51813764"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53209710"
 ---
-# <a name="sql-server-mobile-reports-end-to-end-walk-through"></a>Report per dispositivi mobili di SQL Server: procedura dettagliata completa
+# <a name="sql-server-mobile-reports-end-to-end-walk-through"></a>Report per dispositivi mobili di SQL Server: Procedura dettagliata completa
 Procedura dettagliata per creare report per dispositivi mobili per schermi di qualsiasi dimensione con [!INCLUDE[PRODUCT_NAME](../../includes/ss-mobilereptpub-long.md)] nel portale Web di [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] e visualizzarli nell'app Power BI per dispositivi mobili.
 
 Consente di creare report per dispositivi mobili in un'area di progettazione con righe e colonne della griglia regolabili ed elementi flessibili del report per dispositivi mobili. È possibile connettersi a un'ampia gamma di origini dati locali, caricare cartelle di lavoro di Excel oppure creare report per dispositivi mobili, quindi salvarli in un portale Web di [!INCLUDE[PRODUCT_NAME](../../includes/ssrsnoversion.md)] e visualizzarli in un browser o nelle app Power BI per dispositivi mobili.  
@@ -30,14 +32,14 @@ Questo argomento illustra le operazioni seguenti:
 ## <a name="before-we-start"></a>Prima di iniziare  
 Per proseguire, sono necessari questi prodotti:  
   
-* Per creare origini dati e indicatori KPI e per pubblicare set di dati e report per dispositivi mobili, è necessario accedere a [!INCLUDE[ssRSCurrent_md](../install-windows/install-reporting-services-native-mode-report-server.md).  
-* Per [creare set di dati condivisi](../install-windows/install-report-builder.md).  
+* Per creare origini dati e indicatori KPI e per pubblicare set di dati e report per dispositivi mobili, è necessario accedere a un [server di report di Reporting Services in modalità nativa](../install-windows/install-reporting-services-native-mode-report-server.md).  
+* Per creare set di dati condivisi, [installare Generatore report](../install-windows/install-report-builder.md).  
 * Per creare report per dispositivi mobili, [installare SQL Server Mobile Report Publisher](https://go.microsoft.com/fwlink/?LinkId=717766).  
 * [Database di esempio AdventureWorks](https://github.com/Microsoft/sql-server-samples/releases).  
 *  OPPURE: database di esempio World Wide Importers, disponibile nella pagina [Esempi di Microsoft SQL Server](../../sample/microsoft-sql-server-samples.md).
 * Per visualizzare il risultato: 
   *   [Iscriversi al servizio Power BI](https://go.microsoft.com/fwlink/?LinkID=513879) e
-  *  [Scaricare l'app Power BI per dispositivi mobili](https://powerbi.microsoft.com/documentation/powerbi-power-bi-apps-for-mobile-devices/) per il proprio dispositivo mobile: telefono iOS o Android o dispositivo Windows 10.  
+  *  [Scaricare l'app Power BI per dispositivi mobili](https://docs.microsoft.com/en-us/power-bi/consumer/mobile/mobile-apps-for-mobile-devices) per il proprio dispositivo mobile: telefono iOS o Android o dispositivo Windows 10.  
 
   
 ## <a name="create-a-shared-data-source"></a>Creazione di un'origine dati condivisa  
@@ -77,7 +79,7 @@ Per creare il set di dati condiviso, usare uno strumento client di [!INCLUDE[PRO
 4. Nel campo Nome digitare il nome del server in cui è stata salvata l'origine dati, in questo formato:   
    
    Nome: https://*localhost*/ReportServer  
-   Elementi di tipo: origini dati (file con estensione rsds)  
+   Elementi di tipo: Origini dati (*.rsds)  
    
 5. Fare clic su **Apri**e passare all'origine dati creata sul server.  
    
@@ -281,7 +283,9 @@ Per visualizzare il report di [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnov
   
     ![PBI_iPad_SSMRP_LeftNavBiggr](../../reporting-services/mobile-reports/media/pbi-ipad-ssmrp-leftnavbiggr.png)  
       
->**Suggerimento**: toccare l'icona delle opzioni ![PBI_iPad_OptionsIcon](../../reporting-services/mobile-reports/media/pbi-ipad-optionsicon.png) in qualsiasi momento per passare dai report per dispositivi mobili nel portale Web di Reporting Services ai dashboard nel servizio Power BI.   
+> [!TIP]
+> Toccare l'icona delle opzioni ![PBI_iPad_OptionsIcon](../../reporting-services/mobile-reports/media/pbi-ipad-optionsicon.png) in qualsiasi momento per passare dai report per dispositivi mobili nel portale Web di Reporting Services ai dashboard nel servizio Power BI.  
+
   
 ## <a name="view-kpis-and-mobile-reports-in-the-power-bi-app"></a>Visualizzare gli indicatori KPI e i report per dispositivi mobili nell'app Power BI  
   
@@ -297,12 +301,10 @@ Toccare la scheda **Indicatori KPI** o **Report per dispositivi mobili** .
   
 Gli indicatori KPI e i report per dispositivi mobili vengono visualizzati nelle stesse cartelle in cui si trovano nel portale Web di Reporting Services.   
   
-### <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  
--  Vedere [Visualizzare report per dispositivi mobili e indicatori KPI di Reporting Services nell'app iPad](https://powerbi.microsoft.com/documentation/powerbi-mobile-ipad-kpis-mobile-reports)  (Power BI per iOS)  
--  Vedere [Visualizzare report per dispositivi mobili e indicatori KPI di Reporting Services nell'app iPhone](https://powerbi.microsoft.com/documentation/powerbi-mobile-iphone-kpis-mobile-reports) (Power BI per iOS)  
--  Vedere [Visualizzare report per dispositivi mobili di Reporting Services e indicatori KPI nell'app Android per Power BI](https://powerbi.microsoft.com/documentation/powerbi-mobile-android-kpis-mobile-reports)
--  Vedere [Report nell'app Power BI per dispositivi mobili per Windows 10](https://powerbi.microsoft.com/documentation/powerbi-mobile-win10-kpis-mobile-reports/)    
+-  l'articolo relativo ai [report per dispositivi mobili e indicatori KPI dei server di report locali nell'app Power BI per dispositivi mobili](https://docs.microsoft.com/power-bi/consumer/mobile/mobile-app-ssrs-kpis-mobile-on-premises-reports) per i dispositivi iOS e Android
+-  l'articolo relativo ai [report per dispositivi mobili e indicatori KPI dei server di report locali nell'app Power BI per dispositivi mobili per Windows 10](https://powerbi.microsoft.com/documentation/powerbi-mobile-win10-kpis-mobile-reports/)    
   
    
 
