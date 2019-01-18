@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod_service: sql-data-warehouse, pdw
 ms.service: sql-data-warehouse
-ms.component: design
+ms.subservice: design
 ms.reviewer: ''
 ms.topic: language-reference
 dev_langs:
@@ -14,12 +14,12 @@ author: ronortloff
 ms.author: rortloff
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 205d731e262514c0782cad09af6bf36d24b25bc5
-ms.sourcegitcommit: b29745051be2326268f165cf72f5eb95dc893564
+ms.openlocfilehash: fdebe91359fbe9d7c9ef7aaadc38ba096427f651
+ms.sourcegitcommit: 0a64d26f865a21f4bd967b2b72680fd8638770b8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50254417"
+ms.lasthandoff: 01/18/2019
+ms.locfileid: "54395387"
 ---
 # <a name="spspecialcolumns100-sql-data-warehouse"></a>sp_special_columns_100 (SQL Data Warehouse)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
@@ -52,13 +52,13 @@ sp_special_columns_100 [ @table_name = ] 'table_name'
   
  In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], se l'utente corrente è il proprietario di una tabella con il nome specificato, vengono restituite le colonne di tale tabella. Se *owner* non viene specificato e l'utente corrente non dispone di una tabella dell'oggetto specificato *name*, viene eseguita la ricerca per una tabella dell'oggetto specificato *nome* di proprietà del database proprietario. Se la tabella esiste, vengono restituite le colonne corrispondenti.  
   
- [ @qualifier=] '*qualificatore*'  
+ [ @qualifier=] '*qualifier*'  
  Nome del qualificatore di tabella. *qualificatore* viene **sysname**, con un valore predefinito è NULL. Vari prodotti DBMS supportano nomi di tabelle in tre parti (*composti*). In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] questa colonna rappresenta il nome del database. In alcuni prodotti rappresenta il nome del server dell'ambiente di database della tabella.  
   
  [ @col_type=] '*col_type*'  
  Tipo di colonna. *col_type* viene **char (** 1 **)**, con un valore predefinito di R. digitare R restituisce la colonna o ottimale set di colonne, tramite il recupero dei valori di colonna o le colonne, che consente di qualsiasi riga nell'oggetto specificato tabella che deve essere identificato in modo univoco. Una colonna può essere una pseudocolonna progettata a questo scopo oppure la colonna o le colonne di un indice univoco della tabella. Il tipo di colonna V restituisce le eventuali colonne della tabella specificata che vengono aggiornate automaticamente dall'origine dati in corrispondenza dell'aggiornamento di un valore della riga tramite una transazione.  
   
- [ @scope=] '*ambito*'  
+ [ @scope=] '*scope*'  
  Ambito minimo richiesto per ROWID. *ambito* viene **char (** 1 **)**, valore predefinito T. l'ambito C specifica che il valore ROWID è valido solo se posizionato in tale riga. L'ambito T indica che il valore ROWID è valido per la transazione.  
   
  [ @nullable=] '*nullable*'  
@@ -72,7 +72,7 @@ sp_special_columns_100 [ @table_name = ] 'table_name'
   
 ## <a name="result-sets"></a>Set di risultati  
   
-|Nome colonna|Tipo di dati|Description|  
+|Nome colonna|Tipo di dati|Descrizione|  
 |-----------------|---------------|-----------------|  
 |SCOPE|**smallint**|Ambito effettivo dell'ID della riga. Il Può essere 0, 1 o 2. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Restituisce sempre 0. Questo campo restituisce sempre un valore.<br /><br /> 0 = SQL_SCOPE_CURROW. La validità dell'ID di riga è garantita solo mentre si è posizionati in tale riga. Una selezione successiva in base all'ID di riga potrebbe non restituire la riga se questa è stata aggiornata o eliminata da un'altra transazione.<br /><br /> 1 = SQL_SCOPE_TRANSACTION. La validità dell'ID di riga è garantita per l'intera durata della transazione corrente.<br /><br /> 2 = SQL_SCOPE_SESSION. La validità dell'ID della riga è garantita per l'intera durata della sessione (oltre i limiti delle transazioni).|  
 |COLUMN_NAME|**sysname**|Nome della colonna per ogni colonna della *tabella*restituito. Questo campo restituisce sempre un valore.|  
