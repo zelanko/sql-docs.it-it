@@ -13,12 +13,12 @@ ms.assetid: c63d1160-3f3d-45df-99be-6fe081125fb5
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 1bdda5d95544df6b7cd7cc4108c3bd21dc8f50d1
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: fca3b535b31a3524389804442bb61370fb164008
+ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47779159"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53591535"
 ---
 # <a name="object-dependencies"></a>Dipendenze tra oggetti
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -29,10 +29,10 @@ Nella finestra di dialogo **Dipendenze oggetto (pagina Avanzate)** per l'oggetto
 Utilizzare questa finestra di dialogo per individuare le dipendenze prima di modificare o eliminare l'oggetto selezionato.  
   
 ## <a name="uielement-list"></a>Elenco degli elementi di interfaccia  
-**Oggetti che dipendono da** *<selected object>*  
+**Oggetti dipendenti da** _\<oggetto selezionato>_  
 Fare clic su questo pulsante per visualizzare un elenco di tutti gli oggetti registrati nelle dipendenze che dipendono dall'oggetto selezionato.  
   
-**Oggetti da cui** **dipende** *<selected object>*  
+**Oggetti da cui dipende** _\<oggetto selezionato>_ ****  
 Fare clic su questo pulsante per visualizzare un elenco di tutti gli oggetti registrati nelle dipendenze da cui dipende l'oggetto selezionato.  
   
 **Dipendenze**  
