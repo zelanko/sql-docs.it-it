@@ -19,12 +19,12 @@ ms.assetid: bea8ce8d-cf63-4257-840a-fc9adceade8c
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 5723f60855952e9e14e7cdff07ac312d10e38732
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: d8f51a507ff3dc2ee317b2b347c4c7b56b043694
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52526613"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53202880"
 ---
 # <a name="deploy-integration-services-ssis-projects-and-packages"></a>Distribuire progetti e pacchetti di Integration Services (SSIS)
   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] supporta due modelli di distribuzione, ovvero il modello di distribuzione del progetto e il modello di distribuzione del pacchetto legacy. Tramite il modello di distribuzione del progetto è possibile distribuire i progetti nel server [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] .  
@@ -76,7 +76,7 @@ Per altre informazioni sul modello di distribuzione del pacchetto legacy, vedere
 
 Se si modifica l'account del servizio SSIS in un account diverso da quello predefinito, per distribuire i pacchetti può essere necessario concedere autorizzazioni aggiuntive all'account del servizio non predefinito. Se l'account del servizio non predefinito non ha le autorizzazioni necessarie, può essere visualizzato il messaggio di errore seguente.
 
-*Errore di .NET durante l'esecuzione dell'aggregazione o routine definita dall'utente "deploy_project_internal": System.ComponentModel.Win32Exception: Il privilegio richiesto non appartiene al client.*
+*Errore di .NET Framework durante l'esecuzione dell'aggregazione o routine definita dall'utente "deploy_project_internal": System.ComponentModel.Win32Exception: Il client non dispone di un privilegio necessario.*
 
 Questo errore è in genere dovuto alla mancanza di autorizzazioni DCOM. Per correggere l'errore, eseguire le operazioni seguenti.
 
@@ -123,7 +123,7 @@ Per altre informazioni sull'errore descritto in questa sezione e sulle autorizza
   
      Per altre informazioni sull'aggiornamento di pacchetti, vedere [Aggiornare pacchetti di Integration Services](../../integration-services/install-windows/upgrade-integration-services-packages.md) e [Aggiornare i pacchetti di Integration Services mediante l'Aggiornamento guidato pacchetti SSIS](../../integration-services/install-windows/upgrade-integration-services-packages-using-the-ssis-package-upgrade-wizard.md).  
   
-3.  Distribuire il progetto nel server [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . Per altre informazioni, vedere le istruzioni riportate di seguito: [Per distribuire un progetto nel server Integration Services](#deploy).  
+3.  Distribuire il progetto nel server [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . Per ulteriori informazioni, vedere le istruzioni riportate di seguito: [Per distribuire un progetto nel server Integration Services](#deploy).  
   
 4.  (Facoltativo) Creare un ambiente per il progetto distribuito. 
   
@@ -273,7 +273,7 @@ static void Main()
   
 2.  Se il progetto e tutti i pacchetti superano la verifica di compatibilità, fare clic su **OK** per convertire il pacchetto.  
   
-> **NOTA:** per convertire un progetto nel modello di distribuzione del progetto usare la **Conversione guidata progetto di Integration Services**. Per altre informazioni, vedere [Integration Services Project Conversion Wizard](deploy-integration-services-ssis-projects-and-packages.md).  
+> **NOTA:** Per convertire un progetto nel modello di distribuzione del progetto usare la **Conversione guidata progetto di Integration Services**. Per altre informazioni, vedere [Integration Services Project Conversion Wizard](deploy-integration-services-ssis-projects-and-packages.md).  
 
 ## <a name="integration-services-deployment-wizard"></a>Distribuzione guidata Integration Services
   La **Distribuzione guidata Integration Services** supporta due modelli di distribuzione:
@@ -293,9 +293,9 @@ Avviare la procedura guidata in uno dei due modi seguenti:
 
 **OR**
 
- - Cercare il file eseguibile **ISDeploymentWizard.exe** nella cartella di installazione di SQL Server, ad esempio "C:\Programmi (x86)\Microsoft SQL Server\130\DTS\Binn". 
+ - Cercare il file eseguibile **ISDeploymentWizard.exe** nella cartella di installazione di SQL Server, ad esempio: "C:\Programmi (x86)\Microsoft SQL Server\130\DTS\Binn". 
  
- > **NOTA:** se viene visualizzata la pagina **Introduzione** , fare clic su **Avanti** per passare alla pagina **Seleziona origine** . 
+ > **NOTA:** Se viene visualizzata la pagina **Introduzione** , fare clic su **Avanti** per passare alla pagina **Seleziona origine** . 
  
  Le impostazioni in questa pagina sono diverse per ogni modello di distribuzione. Seguire la procedura nella sezione [Project Deployment Model](#ProjectModel) o nella sezione [Package Deployment Model](#PackageModel) in base al modello selezionato in questa pagina.  
   
@@ -409,13 +409,13 @@ Avviare la procedura guidata in uno dei due modi seguenti:
   
  Per distribuire il progetto ed eseguire i pacchetti, è inoltre possibile utilizzare [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] . Per altre informazioni, vedere gli argomenti nella sezione **Vedere anche** .  
   
-> [!TIP]  
+> [!TIP]
 >  Ad eccezione di catalog.deploy_project, è possibile generare facilmente le istruzioni Transact-SQL per le stored procedure elencate nella procedura descritta di seguito effettuando le operazioni seguenti:  
->   
+> 
 >  1.  In [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]espandere il nodo **Cataloghi di Integration Services** in Esplora oggetti e selezionare il pacchetto che si desidera eseguire.  
 > 2.  Fare clic con il pulsante destro del mouse sul pacchetto, quindi scegliere **Esegui**.  
 > 3.  In base alle esigenze, impostare i valori dei parametri, le proprietà di gestione connessione e le opzioni nella scheda **Avanzate** , ad esempio il livello di registrazione.  
->   
+> 
 >      Per altre informazioni sui livelli di registrazione, vedere [Abilitare la registrazione per l'esecuzione di pacchetti nel server SSIS](../../integration-services/performance/integration-services-ssis-logging.md#server_logging).  
 > 4.  Prima di fare clic su **OK** per eseguire il pacchetto, scegliere **Script**. Transact-SQL viene visualizzato in una finestra dell'editor di query in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
   

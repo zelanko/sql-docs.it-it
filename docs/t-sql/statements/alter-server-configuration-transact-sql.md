@@ -21,12 +21,12 @@ ms.assetid: f3059e42-5f6f-4a64-903c-86dca212a4b4
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 52149ae289f0cea89ff31a501acaaf8d0c7cbd3e
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 352cd03017b33247c66f7eb0090cd79d0d5cd532
+ms.sourcegitcommit: 467b2c708651a3a2be2c45e36d0006a5bbe87b79
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52545616"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53980097"
 ---
 # <a name="alter-server-configuration-transact-sql"></a>ALTER SERVER CONFIGURATION (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -196,7 +196,7 @@ SQLDUMPEREDUMPFLAGS
  Per identificare il cluster di destinazione, specificare uno dei valori seguenti:  
   
  *windows_cluster*  
- Nome netwirj di un cluster WSFC. È possibile specificare il nome breve o il nome di dominio completo. Per individuare l'indirizzo IP di destinazione di un nome breve, ALTER SERVER CONFIGURATION utilizza la risoluzione DNS. In alcuni casi, un nome breve potrebbe generare confusione e DNS potrebbe restituire l'indirizzo IP errato. È pertanto consigliabile specificare il nome di dominio completo.  
+ Nome rete di un cluster WSFC. È possibile specificare il nome breve o il nome di dominio completo. Per individuare l'indirizzo IP di destinazione di un nome breve, ALTER SERVER CONFIGURATION utilizza la risoluzione DNS. In alcuni casi, un nome breve potrebbe generare confusione e DNS potrebbe restituire l'indirizzo IP errato. È pertanto consigliabile specificare il nome di dominio completo.  
   
   > [!NOTE] 
   > Una migrazione tra cluster che usa questa impostazione non è più supportata. Per eseguire una migrazione tra cluster, usare un gruppo di disponibilità distribuito o un altro metodo, ad esempio il log shipping. 
@@ -237,10 +237,10 @@ SQLDUMPEREDUMPFLAGS
  OFF  
  Disabilita il partizionamento automatico dei nodi hardware NUMA di grandi dimensioni in nodi NUMA di dimensioni ridotte. Per modificare il valore corrente è necessario riavviare il motore di database.  
 
-> [!WARNING]  
+> [!WARNING]
 > Sono noti problemi di comportamento dell'istruzione ALTER SERVER CONFIGURATION se usata insieme all'opzione SOFT-NUMA e a SQL Server Agent.  È consigliabile eseguire le operazioni seguendo la sequenza riportata di seguito:  
 > 1) Arrestare l'istanza di SQL Server Agent.  
-> 2) Eseguire l'opzione ALTER SERVER CONFGURATION SOFT NUMA.  
+> 2) Eseguire l'opzione ALTER SERVER CONFIGURATION SOFT NUMA.  
 > 3) Riavviare l'istanza di SQL Server.  
 > 4) Avviare l'istanza di SQL Server Agent.  
   
@@ -285,7 +285,7 @@ ALTER SERVER CONFIGURATION
 SET PROCESS AFFINITY CPU=0 TO 63, 128 TO 191;  
 ```  
   
-#### <a name="b-setting-affinity-to-all-cpus-in-numa-nodes-0-and-7"></a>B. Impostazione dell'affinità su tutte le CPU nei nodi NUMA 0 e 7  
+#### <a name="b-setting-affinity-to-all-cpus-in-numa-nodes-0-and-7"></a>b. Impostazione dell'affinità su tutte le CPU nei nodi NUMA 0 e 7  
  Nell'esempio seguente l'affinità delle CPU viene impostata sui nodi `0` e `7`.  
   
 ```  
@@ -329,7 +329,7 @@ SET PROCESS AFFINITY CPU=AUTO;
 ALTER SERVER CONFIGURATION SET DIAGNOSTICS LOG ON;  
 ```  
   
-#### <a name="b-stopping-diagnostic-logging"></a>B. Arresto della registrazione dei dati di diagnostica  
+#### <a name="b-stopping-diagnostic-logging"></a>b. Arresto della registrazione dei dati di diagnostica  
  Nell'esempio seguente viene arrestata la registrazione dei dati di diagnostica.  
   
 ```  
@@ -387,7 +387,7 @@ SET BUFFER POOL EXTENSION ON
     (FILENAME = 'F:\SSDCACHE\Example.BPE', SIZE = 50 GB);  
 ```  
   
-#### <a name="b-modifying-buffer-pool-extension-parameters"></a>B. Modifica dei parametri dell'estensione del pool di buffer  
+#### <a name="b-modifying-buffer-pool-extension-parameters"></a>b. Modifica dei parametri dell'estensione del pool di buffer  
  Nell'esempio seguente vengono modificate le dimensioni di un file di estensione del pool di buffer. L'opzione di estensione del pool di buffer deve essere disabilitata prima di poter modificare uno qualsiasi dei parametri.  
   
 ```  
