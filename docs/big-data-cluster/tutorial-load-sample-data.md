@@ -5,17 +5,17 @@ description: Questa esercitazione illustra come caricare i dati di esempio in un
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 12/13/2018
+ms.date: 01/17/2019
 ms.topic: tutorial
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: a89b1bec266f590d6e96365436fe5339b9152f92
-ms.sourcegitcommit: 202ef5b24ed6765c7aaada9c2f4443372064bd60
+ms.openlocfilehash: 207d2d01278d96456bcec44814efe76fdae70fdf
+ms.sourcegitcommit: e3f5b70bbb4c66294df8c7b2c70186bdf2365af9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/12/2019
-ms.locfileid: "54241481"
+ms.lasthandoff: 01/18/2019
+ms.locfileid: "54397510"
 ---
 # <a name="tutorial-load-sample-data-into-a-sql-server-2019-big-data-cluster"></a>Esercitazione: Caricare i dati di esempio in un cluster di big data di SQL Server 2019
 
@@ -29,9 +29,9 @@ Questa esercitazione illustra come usare uno script per caricare i dati di esemp
 - [Un cluster di big data distribuita](deployment-guidance.md)
 - [Strumenti dei big Data](deploy-big-data-tools.md)
    - **mssqlctl**
-   - **Kubectl**
+   - **kubectl**
    - **sqlcmd**
-   - **CURL**
+   - **curl**
 
 ## <a id="sampledata"></a> Caricare dati di esempio
 
@@ -62,11 +62,11 @@ I passaggi seguenti descrivono come usare un client Windows per caricare i dati 
 
    | Parametro | Descrizione |
    |---|---|
-   | &LT; CLUSTER_NAMESPACE &GT; | Il nome è stato assegnato il cluster di big data. |
-   | &LT; SQL_MASTER_IP &GT; | L'indirizzo IP dell'istanza master. |
-   | &LT; SQL_MASTER_SA_PASSWORD &GT; | La password dell'amministratore di sistema per l'istanza master. |
-   | &LT; KNOX_IP &GT; | L'indirizzo IP del Gateway HDFS/Spark. |
-   | &LT; KNOX_PASSWORD &GT; | La password per il Gateway HDFS/Spark. |
+   | <CLUSTER_NAMESPACE> | Il nome è stato assegnato il cluster di big data. |
+   | <SQL_MASTER_IP> | L'indirizzo IP dell'istanza master. |
+   | <SQL_MASTER_SA_PASSWORD> | La password dell'amministratore di sistema per l'istanza master. |
+   | <KNOX_IP> | L'indirizzo IP del Gateway HDFS/Spark. |
+   | <KNOX_PASSWORD> | La password per il Gateway HDFS/Spark. |
 
    > [!TIP]
    > Uso [kubectl](cluster-troubleshooting-commands.md) per trovare gli indirizzi IP per l'istanza master di SQL Server e Knox. Eseguire `kubectl get svc -n <your-cluster-name>` ed esaminare gli indirizzi di EXTERNAL-IP per l'istanza master (**endpoint-master-pool**) e Knox (**servizio-sicurezza-lb** o **servizio-sicurezza-nodeport**).
@@ -98,11 +98,11 @@ I passaggi seguenti descrivono come usare un client Linux per caricare i dati di
 
    | Parametro | Descrizione |
    |---|---|
-   | &LT; CLUSTER_NAMESPACE &GT; | Il nome è stato assegnato il cluster di big data. |
-   | &LT; SQL_MASTER_IP &GT; | L'indirizzo IP dell'istanza master. |
-   | &LT; SQL_MASTER_SA_PASSWORD &GT; | La password dell'amministratore di sistema per l'istanza master. |
-   | &LT; KNOX_IP &GT; | L'indirizzo IP del Gateway HDFS/Spark. |
-   | &LT; KNOX_PASSWORD &GT; | La password per il Gateway HDFS/Spark. |
+   | <CLUSTER_NAMESPACE> | Il nome è stato assegnato il cluster di big data. |
+   | <SQL_MASTER_IP> | L'indirizzo IP dell'istanza master. |
+   | <SQL_MASTER_SA_PASSWORD> | La password dell'amministratore di sistema per l'istanza master. |
+   | <KNOX_IP> | L'indirizzo IP del Gateway HDFS/Spark. |
+   | <KNOX_PASSWORD> | La password per il Gateway HDFS/Spark. |
 
    > [!TIP]
    > Uso [kubectl](cluster-troubleshooting-commands.md) per trovare gli indirizzi IP per l'istanza master di SQL Server e Knox. Eseguire `kubectl get svc -n <your-cluster-name>` ed esaminare gli indirizzi di EXTERNAL-IP per l'istanza master (**endpoint-master-pool**) e Knox (**servizio-sicurezza-lb** o **servizio-sicurezza-nodeport**).
@@ -110,7 +110,7 @@ I passaggi seguenti descrivono come usare un client Linux per caricare i dati di
 1. Eseguire lo script di bootstrap.
 
    ```bash
-   ./bootstrap-sample-db.sh <CLUSTER_NAMESPACE> <SQL_MASTER_IP> <SQL_MASTER_SA_PASSWORD> <KNOX_IP> <KNOX_PASSWORD>
+   sudo env "PATH=$PATH" ./bootstrap-sample-db.sh <CLUSTER_NAMESPACE> <SQL_MASTER_IP> <SQL_MASTER_SA_PASSWORD> <KNOX_IP> <KNOX_PASSWORD>
    ```
 
 ## <a name="next-steps"></a>Passaggi successivi

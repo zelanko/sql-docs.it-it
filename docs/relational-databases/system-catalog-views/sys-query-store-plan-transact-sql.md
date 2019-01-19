@@ -1,5 +1,5 @@
 ---
-title: Sys. query_store_plan (Transact-SQL) | Microsoft Docs
+title: sys.query_store_plan (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/29/2018
 ms.prod: sql
@@ -22,14 +22,14 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: a5b7b4b9831fcfa04932ed05951b27bca7e4e4b0
-ms.sourcegitcommit: c7febcaff4a51a899bc775a86e764ac60aab22eb
+ms.openlocfilehash: 60b9137e52b34b79fa4faddbef7b9e4da8734142
+ms.sourcegitcommit: e3f5b70bbb4c66294df8c7b2c70186bdf2365af9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "52710772"
+ms.lasthandoff: 01/18/2019
+ms.locfileid: "54397610"
 ---
-# <a name="sysquerystoreplan-transact-sql"></a>Sys. query_store_plan (Transact-SQL)
+# <a name="sysquerystoreplan-transact-sql"></a>sys.query_store_plan (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-asdw-xxx-md.md)]
 
   Contiene informazioni su ogni piano di esecuzione associato a una query.  
@@ -57,7 +57,14 @@ ms.locfileid: "52710772"
 |**last_execution_time**|**datetimeoffset**|Ora dell'ultima esecuzione si riferisce all'ultima ora di fine del piano di query /.|  
 |**avg_compile_duration**|**float**|Pianificare le statistiche di compilazione.|  
 |**last_compile_duration**|**bigint**|Pianificare le statistiche di compilazione.|  
-  
+|**plan_forcing_type**|**int**|Tipo di utilizzo forzato del piano.<br /><br />
+0: Nessuno<br /><br />
+1: MANUAL<br /><br />
+2: AUTO| |**plan_forcing_type_desc**|**nvarchar(60)**|Text description of plan_forcing_type.<br /><br />
+NONE: Nessun utilizzo forzato del piano<br /><br />
+MANUAL: Piano forzato da utente<br /><br />
+AUTO: Piano forzato dall'ottimizzazione automatica |
+
 ## <a name="plan-forcing-limitations"></a>Limitazioni di uso forzato del piano
 Query Store è dotato di un meccanismo per imporre a Query Optimizer l'uso di determinati piani di esecuzione. Esistono tuttavia alcune limitazioni che possono impedire l'imposizione di un piano. 
 

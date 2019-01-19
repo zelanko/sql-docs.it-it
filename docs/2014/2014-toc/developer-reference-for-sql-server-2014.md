@@ -12,17 +12,19 @@ ms.assetid: e60866bf-c726-479e-8a38-6bced16f527c
 author: mightypen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 934262fb9f5e1e67ebf475310518f924aebbc4c1
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 8d3a1a2c3c5f1f4bce9a3662e1bc7c7bc49f2836
+ms.sourcegitcommit: e3f5b70bbb4c66294df8c7b2c70186bdf2365af9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53351471"
+ms.lasthandoff: 01/18/2019
+ms.locfileid: "54397600"
 ---
 # <a name="developer-reference-for-sql-server-2014"></a>Guida di riferimento per gli sviluppatori per SQL Server 2014
+
   Le tecnologie e le funzionalità seguenti consentono di sviluppare applicazioni per l'accesso ai dati di un database di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] .  
   
 ## <a name="programming-reference-sections"></a>Sezioni di riferimento alla programmazione  
+
  ![Icona cartella File piccola](../integration-services/media/filefolder-small.gif "icona cartella File piccola") [Common Language Runtime &#40;CLR&#41; concetti relativi alla programmazione di integrazione](../relational-databases/clr-integration/common-language-runtime-clr-integration-programming-concepts.md)  
   
  ![Icona cartella File piccola](../integration-services/media/filefolder-small.gif "icona cartella File piccola") [XML nativi](https://technet.microsoft.com/library/ms191274.aspx)  
@@ -60,6 +62,7 @@ ms.locfileid: "53351471"
  ![Icona cartella File piccola](../integration-services/media/filefolder-small.gif "icona cartella File piccola") [Guida per sviluppatori di Reporting Services](../reporting-services/reporting-services-features-and-tasks-ssrs.md)  
   
 ## <a name="other-programming-resources"></a>Ulteriori risorse di programmazione  
+
  Lo sviluppo di un'applicazione per l'accesso ai dati può richiedere l'utilizzo di una o più delle tecnologie seguenti:  
   
  [L'accesso ai dati in Visual Studio](https://go.microsoft.com/fwlink/?LinkId=129902)  

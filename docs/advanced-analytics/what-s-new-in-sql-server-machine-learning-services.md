@@ -3,20 +3,21 @@ title: Cosa&#39;nuovo - s SQL Server Machine Learning Services
 description: Nuovo gli annunci di funzionalità per ogni versione di SQL Server 2016 R Services, R Server, servizi Machine Learning di SQL Server 2017.
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 12/07/2018
+ms.date: 01/18/2019
 ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: f9e98d59318c9c7d43fd6f99195da972c4eca0c9
-ms.sourcegitcommit: 85bfaa5bac737253a6740f1f402be87788d691ef
+ms.openlocfilehash: 4a3450b308918e51b370865db4ad2bedeb8e004c
+ms.sourcegitcommit: e3f5b70bbb4c66294df8c7b2c70186bdf2365af9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/15/2018
-ms.locfileid: "53432494"
+ms.lasthandoff: 01/18/2019
+ms.locfileid: "54397620"
 ---
 # <a name="whats-new-in-sql-server-machine-learning-services"></a>Novità in servizi di SQL Server Machine Learning 
+
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 Funzionalità di Machine learning vengono aggiunti a SQL Server in ogni versione per continuare a espandere, estendere e approfondire l'integrazione tra la piattaforma dati, analitica avanzate e analisi scientifica dei dati. 
@@ -32,6 +33,7 @@ Questa versione aggiunge le funzionalità di richiesta per R e Python operazioni
 |   | [Estensione del linguaggio Java](java/extension-java.md) sia Windows che Linux è stata introdotta in anteprima di SQL Server 2019. È possibile rendere Java compilata di codice disponibili per SQL Server assegnando autorizzazioni e impostazione del percorso. App client con accesso a SQL Server può usare i dati ed eseguire il codice chiamando [sp_execute_external_script](https://docs.microsoft.com/sql/relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql), la stessa procedura usata per l'integrazione di R e Python in SQL Server. | 
 |  | Il [sp_execute_external_script](https://docs.microsoft.com/sql/relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql) introduce due nuovi parametri che consentono di generare facilmente più modelli di dati partizionati. Altre informazioni in questa esercitazione [creare i modelli basati su partizioni in R](tutorials/r-tutorial-create-models-per-partition.md). |
 |   | Supporto per il cluster di failover è ora supportato in Windows e Linux, presupponendo che il servizio Launchpad di SQL Server viene avviato in tutti i nodi. Per altre informazioni, vedere [installazione di cluster di failover di SQL Server](../sql-server/failover-clusters/install/sql-server-failover-cluster-installation.md). |
+
 ::: moniker-end
 
 ::: moniker range=">=sql-server-2017||=sqlallproducts-allversions"
@@ -71,7 +73,7 @@ Integrazione di T-SQL e Python è supportata tramite il [sp_execute_external_scr
 
 | Pacchetto | Descrizione |
 |---------|-------------|
-[**revoscalepy**](python/ref-py-revoscalepy.md)| Python equivalente di RevoScaleR. È possibile creare modelli di Python per la regressione lineare e logistica, alberi delle decisioni, alberi con Boosting e foreste casuali, tutti eseguibili in parallelo e in grado di in esecuzione in contesti di calcolo remoti. Questo pacchetto supporta l'utilizzo di più origini dati e contesti di calcolo remoti. I data scientist o sviluppatore può eseguire codice Python in un Server SQL remoto, per esplorare i dati e compilare modelli senza spostare i dati. |
+|[**revoscalepy**](python/ref-py-revoscalepy.md)| Python equivalente di RevoScaleR. È possibile creare modelli di Python per la regressione lineare e logistica, alberi delle decisioni, alberi con Boosting e foreste casuali, tutti eseguibili in parallelo e in grado di in esecuzione in contesti di calcolo remoti. Questo pacchetto supporta l'utilizzo di più origini dati e contesti di calcolo remoti. I data scientist o sviluppatore può eseguire codice Python in un Server SQL remoto, per esplorare i dati e compilare modelli senza spostare i dati. |
 |[**microsoftml**](python/ref-py-microsoftml.md) |Python-equivalente del pacchetto MicrosoftML R. |
 
 ### <a name="pre-trained-models"></a>Modelli con training preliminare
