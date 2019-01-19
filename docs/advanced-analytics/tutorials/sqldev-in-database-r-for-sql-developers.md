@@ -8,19 +8,21 @@ ms.topic: tutorial
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 8e5b0bc8633e956817e778a1d5a2d75a86df8588
-ms.sourcegitcommit: 33712a0587c1cdc90de6dada88d727f8623efd11
+ms.openlocfilehash: 8d3235c585d3ea56a64776fde841ccc6d71b1a4d
+ms.sourcegitcommit: 2e8783e6bedd9597207180941be978f65c2c2a2d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53596343"
+ms.lasthandoff: 01/19/2019
+ms.locfileid: "54405601"
 ---
-# <a name="tutorial-in-database-analytics-for-sql-developers-using-r"></a>Esercitazione: Analitica nel Database per sviluppatori SQL con R
+# <a name="tutorial-r-data-analytics-for-sql-developers"></a>Esercitazione: Analitica di dati R per sviluppatori SQL
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-In questa esercitazione per programmatori SQL indicazioni, informazioni sull'integrazione di R tramite la creazione e distribuzione di un computer basato su R imparando a usare soluzioni una [NYCTaxi_sample](demo-data-nyctaxi-in-sql.md) database in SQL Server. 
+In questa esercitazione per programmatori SQL indicazioni, informazioni sull'integrazione di R tramite la creazione e distribuzione di un computer basato su R imparando a usare soluzioni una [NYCTaxi_sample](demo-data-nyctaxi-in-sql.md) database in SQL Server. È possibile usare T-SQL, SQL Server Management Studio e un'istanza del motore di database con [servizi di Machine Learning] ([servizi di Machine Learning](../install/sql-machine-learning-services-windows-install.md) e il supporto del linguaggio R
 
-Questa esercitazione presenta funzioni R usate in un flusso di lavoro di modellazione dati. Passaggi includono l'esplorazione dei dati, creazione e training di un modello di classificazione binaria e la distribuzione del modello. Il modello che si compilerà consente di stimare se una corsa è probabile che risulterà in un suggerimento basato sull'ora del giorno, distanza percorsa e località di partenza. Tutto il codice R usato in questa esercitazione viene eseguito il wrapping nelle stored procedure da creare ed eseguire in Management Studio.
+Questa esercitazione presenta funzioni R usate in un flusso di lavoro di modellazione dati. Passaggi includono l'esplorazione dei dati, creazione e training di un modello di classificazione binaria e la distribuzione del modello. Il modello che si compilerà consente di stimare se una corsa è probabile che risulterà in un suggerimento basato sull'ora del giorno, distanza percorsa e località di partenza. 
+
+Tutto il codice R usato in questa esercitazione viene eseguito il wrapping nelle stored procedure da creare ed eseguire in Management Studio.
 
 ## <a name="background-for-sql-developers"></a>In background per sviluppatori SQL
 

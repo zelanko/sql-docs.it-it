@@ -19,12 +19,12 @@ ms.assetid: f417efd4-8c71-4f81-bc9c-af13bb4b88ad
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 40235280563039493bdd174de1c314809a424336
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: bb3351abb75827c3eac7f48687823ffeed76986c
+ms.sourcegitcommit: 2e8783e6bedd9597207180941be978f65c2c2a2d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47694089"
+ms.lasthandoff: 01/19/2019
+ms.locfileid: "54405611"
 ---
 # <a name="sysdmdbuncontainedentities-transact-sql"></a>sys.dm_db_uncontained_entities (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -38,7 +38,7 @@ ms.locfileid: "47694089"
 |**Nome colonna**|**Tipo**|**Descrizione**|  
 |*class*|**int**|1 = Oggetto o colonna (include moduli, XP, viste, sinonimi e tabelle).<br /><br /> 4 = Entità di database<br /><br /> 5 = Assembly<br /><br /> 6 = Tipo<br /><br /> 7 = Indice (indice full-text)<br /><br /> 12 = Trigger DDL database<br /><br /> 19 = Route<br /><br /> 30 = Specifica del controllo|  
 |*class_desc*|**nvarchar(120)**|Descrizione della classe dell'entità. Uno dei seguenti in base alla classe:<br /><br /> **OBJECT_OR_COLUMN**<br /><br /> **DATABASE_PRINCIPAL**<br /><br /> **ASSEMBLY**<br /><br /> **TYPE**<br /><br /> **INDEX**<br /><br /> **DATABASE_DDL_TRIGGER**<br /><br /> **ROUTE**<br /><br /> **AUDIT_SPECIFICATION**|  
-|*major_id*|**int**|ID dell'entità.<br /><br /> Se *classe* = 1, quindi object_id<br /><br /> Se *classe* = 4, quindi principal_id.<br /><br /> Se *classe* = 5, allora assembly_id.<br /><br /> Se *classe* = 6, allora user_type_id.<br /><br /> Se *classe* = 7 then index_id.<br /><br /> Se *classe* = 12, quindi OBJECT_ID.<br /><br /> Se *classe* = 19, Route_ID.<br /><br /> Se *classe* = 30, allora sys. database_audit_specifications.databse_specification_id.|  
+|*major_id*|**int**|ID dell'entità.<br /><br /> Se *classe* = 1, quindi object_id<br /><br /> Se *classe* = 4, quindi principal_id.<br /><br /> Se *classe* = 5, allora assembly_id.<br /><br /> Se *classe* = 6, allora user_type_id.<br /><br /> Se *classe* = 7 then index_id.<br /><br /> Se *classe* = 12, quindi OBJECT_ID.<br /><br /> Se *classe* = 19, Route_ID.<br /><br /> Se *classe* = 30, allora sys. database_audit_specifications.database_specification_id.|  
 |*statement_line_number*|**int**|Se la classe è un modulo, restituisce il numero di riga in cui si trova l'utilizzo non contenuto.  In caso contrario, il valore è Null.|  
 |*statement_ offset_begin*|**int**|Se la classe è un modulo, indica la posizione iniziale dell'utilizzo non contenuto partendo da 0. Il valore viene espresso in byte. In caso contrario, il valore restituito è Null.|  
 |*statement_ offset_end*|**int**|Se la classe è un modulo, indica la posizione finale dell'utilizzo non contenuto partendo da 0. Il valore viene espresso in byte. Il valore -1 indica la fine del modulo. In caso contrario, il valore restituito è Null.|  

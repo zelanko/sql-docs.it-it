@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: 12ec074501e93af586a5d495bd7984ad62f3fd88
-ms.sourcegitcommit: 202ef5b24ed6765c7aaada9c2f4443372064bd60
+ms.openlocfilehash: 900bd5fea075e304dae73a20168da952433f20be
+ms.sourcegitcommit: 2e8783e6bedd9597207180941be978f65c2c2a2d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/12/2019
-ms.locfileid: "54242142"
+ms.lasthandoff: 01/19/2019
+ms.locfileid: "54405821"
 ---
 # <a name="how-to-deploy-sql-server-big-data-clusters-on-kubernetes"></a>Come distribuire i cluster di big data di SQL Server in Kubernetes
 
@@ -43,7 +43,7 @@ Se si dispone già di un cluster Kubernetes che soddisfa di sopra dei prerequisi
 | Distribuzione di Kubernetes in: | Descrizione | Collegamento |
 |---|---|---|
 | **Minikube** | Un cluster Kubernetes a nodo singolo in una macchina virtuale. | [Istruzioni](deploy-on-minikube.md) |
-| **Servizi Kubernetes Azure (AKS)** | Un servizio di contenitore Kubernetes gestito in Azure. | [Istruzioni](deploy-on-aks.md) |
+| **Azure Kubernetes Services (AKS)** | Un servizio di contenitore Kubernetes gestito in Azure. | [Istruzioni](deploy-on-aks.md) |
 | **Più computer** | Un cluster Kubernetes distribuito nei computer fisici o macchine virtuali usando **kubeadm** | [Istruzioni](deploy-with-kubeadm.md) |
   
 > [!TIP]
@@ -53,7 +53,7 @@ Se si dispone già di un cluster Kubernetes che soddisfa di sopra dei prerequisi
 
 Prima di distribuire il cluster di big data di SQL Server 2019, innanzitutto [installare gli strumenti dei big data](deploy-big-data-tools.md):
 - **mssqlctl**
-- **Kubectl**
+- **kubectl**
 - **Azure Data Studio**
 - **Estensione di SQL Server 2019**
 
@@ -219,7 +219,7 @@ Al termine della distribuzione, l'output invia una notifica di esito positivo:
 
 Una volta completato lo script di distribuzione, è possibile ottenere l'indirizzo IP dell'istanza master di SQL Server mediante i passaggi descritti di seguito. Si userà questo indirizzo IP e porta numero 31433 per connettersi all'istanza master di SQL Server (ad esempio:  **\<ip-address\>, 31433**). Analogamente, per l'indirizzo IP del cluster di SQL Server i big Data. Tutti gli endpoint del cluster sono illustrati nella scheda endpoint del servizio nel portale di amministrazione Cluster. È possibile usare il portale di amministrazione Cluster per monitorare la distribuzione. È possibile accedere al portale con l'esterno indirizzo IP e porta numero per il `service-proxy-lb` (ad esempio: **https://\<ip-address\>: 30777/portale**). Le credenziali per accedere al portale di amministrazione sono i valori delle `CONTROLLER_USERNAME` e `CONTROLLER_PASSWORD` variabili di ambiente fornite sopra.
 
-### <a name="aks"></a>SERVIZIO CONTENITORE DI AZURE
+### <a name="aks"></a>AKS
 
 Se si usa servizio contenitore di AZURE, Azure fornisce il servizio di bilanciamento del carico di Azure. Eseguire il comando seguente:
 
@@ -248,7 +248,7 @@ kubectl get svc -n <your-cluster-name>
 
 Attualmente, l'unico modo per aggiornare un cluster di big data a una nuova versione è manualmente, rimuovere e ricreare il cluster. Ogni versione ha una versione univoca del **mssqlctl** che non è compatibile con la versione precedente. Inoltre, se un cluster precedente è stato necessario scaricare un'immagine in un nuovo nodo, l'immagine più recente potrebbe non essere compatibile con le immagini precedenti nel cluster. Per eseguire l'aggiornamento alla versione più recente, procedere come segue:
 
-1. Prima di eliminare il vecchio cluster, eseguire il backup dei dati nell'istanza di master di SQL Server e in HDFS. Per l'istanza master di SQL Server, è possibile usare [SQL Server backup e ripristino](data-ingestion-restore-databse.md). Per un HDFS, si [possibile copiare i dati con **curl**](data-ingestion-curl.md).
+1. Prima di eliminare il vecchio cluster, eseguire il backup dei dati nell'istanza di master di SQL Server e in HDFS. Per l'istanza master di SQL Server, è possibile usare [SQL Server backup e ripristino](data-ingestion-restore-database.md). Per un HDFS, si [possibile copiare i dati con **curl**](data-ingestion-curl.md).
 
 1. Eliminare il vecchio cluster con il `mssqlctl delete cluster` comando.
 
@@ -310,10 +310,10 @@ Per monitorare o risolvere i problemi di una distribuzione, usare **kubectl** pe
 
    | Servizio | Descrizione |
    |---|---|
-   | **master-endpoint-pool** | Fornisce l'accesso all'istanza master.<br/>(**EXTERNAL-IP, 31433** e il **SA** utente) |
-   | **servizio-mssql-controller-lb**<br/>**servizio-mssql-controller-nodeport** | Supporta gli strumenti e i client che gestiscono il cluster. |
-   | **servizio-proxy-lb**<br/>**servizio-proxy-nodeport** | Fornisce l'accesso per il [portale di amministrazione Cluster](cluster-admin-portal.md).<br/>(https://**EXTERNAL-IP**: 30777/portale)|
-   | **servizio-sicurezza-lb**<br/>**servizio-sicurezza-nodeport** | Fornisce l'accesso al gateway HDFS/Spark.<br/>(**EXTERNAL-IP** e il **radice** utente) |
+   | **endpoint-master-pool** | Fornisce l'accesso all'istanza master.<br/>(**EXTERNAL-IP, 31433** e il **SA** utente) |
+   | **service-mssql-controller-lb**<br/>**service-mssql-controller-nodeport** | Supporta gli strumenti e i client che gestiscono il cluster. |
+   | **service-proxy-lb**<br/>**service-proxy-nodeport** | Fornisce l'accesso per il [portale di amministrazione Cluster](cluster-admin-portal.md).<br/>(https://**EXTERNAL-IP**:30777/portal)|
+   | **service-security-lb**<br/>**service-security-nodeport** | Fornisce l'accesso al gateway HDFS/Spark.<br/>(**EXTERNAL-IP** e il **radice** utente) |
 
    > [!NOTE]
    > I nomi di servizio possono variare a seconda dell'ambiente di Kubernetes. Quando si distribuisce in Azure Kubernetes Service (AKS), i nomi del servizio deve terminare con **-lb**. Per le distribuzioni di minikube e kubeadm, terminano con i nomi di servizio **- nodeport**.

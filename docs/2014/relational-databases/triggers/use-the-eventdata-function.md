@@ -13,12 +13,12 @@ ms.assetid: 675b8320-9c73-4526-bd2f-91ba42c1b604
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 65103e99a6cba7d21daca85f3295135a43f435a5
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: a34a3e69e157894b29db48da19f44d1e35dad746
+ms.sourcegitcommit: 2e8783e6bedd9597207180941be978f65c2c2a2d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52776383"
+ms.lasthandoff: 01/19/2019
+ms.locfileid: "54405677"
 ---
 # <a name="use-the-eventdata-function"></a>Utilizzo della funzione EVENTDATA
   La funzione EVENTDATA consente di acquisire le informazioni relative a un evento che attiva un trigger DDL. La funzione restituisce un valore `xml`. XML Schema include le informazioni relative a:  
@@ -127,7 +127,7 @@ GO
 > [!NOTE]  
 >  Per la restituzione di dati sugli eventi è consigliabile utilizzare il metodo XQuery `value()` anziché il metodo `query()`. Il metodo `query()` restituisce output XML con le istanze CR/LF (ritorno a capo/avanzamento riga) trasformate con il carattere di escape e commerciale (&), mentre il metodo `value()` rende le istanze CR/LF invisibili nell'output.  
   
- Un esempio simile di trigger DDL è disponibile nel database di esempio [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] . Per visualizzare l'esempio, individuare la cartella Trigger database utilizzando [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Questa cartella si trova all'interno della cartella **Programmabilità** del database [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] . Fare clic con il pulsante destro del mouse su **ddlDatabseTriggerLog** e scegliere **Crea script per trigger database**. Il trigger DLL **ddlDatabseTriggerLog** è disabilitato per impostazione predefinita.  
+ Un esempio simile di trigger DDL è disponibile nel database di esempio [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] . Per visualizzare l'esempio, individuare la cartella Trigger database utilizzando [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Questa cartella si trova all'interno della cartella **Programmabilità** del database [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] . Fare doppio clic su **ddlDatabaseTriggerLog** e selezionare **crea Script per Trigger Database come**. Per impostazione predefinita, i trigger DDL **ddlDatabaseTriggerLog** è disabilitato.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Eventi DDL](../triggers/ddl-events.md)   

@@ -8,14 +8,14 @@ ms.topic: tutorial
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 7fbed76272903fb7a9b6eee037a070677411a0f5
-ms.sourcegitcommit: 33712a0587c1cdc90de6dada88d727f8623efd11
+ms.openlocfilehash: 4b3beca0f9e9a8c714e60bde7a2e7ff067e2265e
+ms.sourcegitcommit: 2e8783e6bedd9597207180941be978f65c2c2a2d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53596422"
+ms.lasthandoff: 01/19/2019
+ms.locfileid: "54405731"
 ---
-# <a name="tutorial-in-database-analytics-for-data-scientists-using-r"></a>Esercitazione: Analitica nel Database per i data Scientist usando R
+# <a name="tutorial-sql-development-for-r-data-scientists"></a>Esercitazione: Sviluppo di SQL Data Scientist possono dati R
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 In questa esercitazione per data Scientist, imparare a compilare la soluzione end-to-end per la modellazione predittiva basata sul supporto delle funzionalità di R in SQL Server 2016 o SQL Server 2017. Questa esercitazione Usa un' [NYCTaxi_sample](demo-data-nyctaxi-in-sql.md) database in SQL Server. 

@@ -8,19 +8,21 @@ ms.topic: tutorial
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: be4ac6b7f7c156ebeda843e8aa987ab45ef4057d
-ms.sourcegitcommit: 33712a0587c1cdc90de6dada88d727f8623efd11
+ms.openlocfilehash: ab28dafe062d7a8d492e702aa5570881ef77f1e0
+ms.sourcegitcommit: 2e8783e6bedd9597207180941be978f65c2c2a2d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53596682"
+ms.lasthandoff: 01/19/2019
+ms.locfileid: "54405621"
 ---
-# <a name="tutorial-in-database-python-analytics-for-sql-developers"></a>Esercitazione: Analitica di Python nel Database per sviluppatori SQL
+# <a name="tutorial-python-data-analytics-for-sql-developers"></a>Esercitazione: Analitica dei dati di Python per sviluppatori SQL
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-In questa esercitazione per programmatori SQL indicazioni, informazioni sull'integrazione di Python tramite la creazione e distribuzione di una macchina basata su Python e imparando a usare soluzioni una [NYCTaxi_sample](demo-data-nyctaxi-in-sql.md) database in SQL Server. 
+In questa esercitazione per programmatori SQL indicazioni, informazioni sull'integrazione di Python tramite la creazione e distribuzione di una macchina basata su Python e imparando a usare soluzioni una [NYCTaxi_sample](demo-data-nyctaxi-in-sql.md) database in SQL Server. È possibile usare T-SQL, SQL Server Management Studio e un'istanza del motore di database con [servizi di Machine Learning](../install/sql-machine-learning-services-windows-install.md) e podpora jazyka Python.
 
-Questa esercitazione presenta funzioni di Python usate in un flusso di lavoro di modellazione dati. Passaggi includono l'esplorazione dei dati, creazione e training di un modello di classificazione binaria e la distribuzione del modello. Si userà i dati di esempio dei Taxi di New York City e Commission Limosine, e il modello che si compilerà consente di stimare se una corsa è probabile che risulterà in un suggerimento basato sull'ora del giorno, distanza percorsa e località di partenza. Tutto il codice Python usato in questa esercitazione viene eseguito il wrapping nelle stored procedure da creare ed eseguire in Management Studio.
+Questa esercitazione presenta funzioni di Python usate in un flusso di lavoro di modellazione dati. Passaggi includono l'esplorazione dei dati, creazione e training di un modello di classificazione binaria e la distribuzione del modello. Si userà i dati di esempio dei Taxi di New York City e Commission Limosine, e il modello che si compilerà consente di stimare se una corsa è probabile che risulterà in un suggerimento basato sull'ora del giorno, distanza percorsa e località di partenza. 
+
+Tutto il codice Python usato in questa esercitazione viene eseguito il wrapping nelle stored procedure da creare ed eseguire in Management Studio.
 
 > [!NOTE]
 > Questa esercitazione è disponibile in R e Python. Per la versione di R, vedere [analitica nel database per gli sviluppatori di R](sqldev-in-database-r-for-sql-developers.md).
