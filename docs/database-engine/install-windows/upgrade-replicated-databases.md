@@ -17,12 +17,12 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 manager: craigg
-ms.openlocfilehash: 4256efa5952870ede608d96fa2659ce9d88f35da
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 279a5c55ddc305d62e3e09f1f8073057b4ff226b
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51668420"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54124611"
 ---
 # <a name="upgrade-replicated-databases"></a>Aggiornare database replicati
 
@@ -132,9 +132,9 @@ Se si prevede di aggiornare l'istanza di SQL Server a SQL 2016 o versione succes
  Per verificare che in seguito al ripristino del backup di un database replicato vengano mantenute le impostazioni di replica di una versione precedente, eseguire il ripristino in un server e un database con gli stessi nomi del server e del database utilizzati per la creazione della copia di backup.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Amministrazione &#40;Replica&#41;](../../relational-databases/replication/administration/administration-replication.md)   
+ [Replica di SQL Server](../../relational-databases/replication/sql-server-replication.md)  
+ [Domande frequenti sull'amministrazione della replica](../../relational-databases/replication/administration/frequently-asked-questions-for-replication-administrators.md)   
  [Compatibilità con le versioni precedenti della replica](../../relational-databases/replication/replication-backward-compatibility.md)   
- [Novità &#40;replica&#41;](../../relational-databases/replication/what-s-new-replication.md)   
  [Aggiornamenti di versione ed edizione supportati](../../database-engine/install-windows/supported-version-and-edition-upgrades.md)   
  [Eseguire l'aggiornamento di SQL Server](../../database-engine/install-windows/upgrade-sql-server.md)  
  [Upgrading a Replication Topology to SQL Server 2016](https://blogs.msdn.microsoft.com/sql_server_team/upgrading-a-replication-topology-to-sql-server-2016/) (Aggiornamento di una topologia di replica a SQL Server 2016)

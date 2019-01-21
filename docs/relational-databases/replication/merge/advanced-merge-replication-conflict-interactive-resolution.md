@@ -16,12 +16,12 @@ ms.assetid: 172c60c7-f605-4eb5-b185-54ae9e9d3c60
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: c701e9fb98bbabe013632a3fd93f91d368ec2784
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 20c748e6dea95ae06c2f0c8364b8720ca0d7a36a
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47849229"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54132751"
 ---
 # <a name="advanced-merge-replication-conflict---interactive-resolution"></a>Conflitti nella replica di tipo merge avanzata - Risoluzione interattiva
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -37,7 +37,7 @@ ms.locfileid: "47849229"
   
  Per utilizzare il sistema di risoluzione interattivo, è necessario che la risoluzione interattiva sia attivata per ogni articolo e sottoscrizione che la richiede. Dopo essere stato abilitato per uno o più articoli e sottoscrizioni, il sistema di risoluzione interattivo viene utilizzato quando viene rilevato un conflitto durante la sincronizzazione di tipo merge.  
   
- Per usare il sistema di risoluzione dei conflitti interattivo , vedere [Specificare la risoluzione interattiva dei conflitti per articoli di merge](../../../relational-databases/replication/publish/specify-interactive-conflict-resolution-for-merge-articles.md) e [Sincronizzare una sottoscrizione mediante Gestione sincronizzazione Microsoft Windows &#40;Gestione sincronizzazione Microsoft Windows&#41;](../../../relational-databases/replication/synchronize-a-subscription-using-windows-synchronization-manager.md).  
+ Per usare il sistema di risoluzione dei conflitti interattivo, vedere [Specify Merge Replication options](../../../relational-databases/replication/merge/specify-merge-replication-properties.md) (Specificare le opzioni di replica di merge) e [Sincronizzare una sottoscrizione mediante Gestione sincronizzazione Microsoft Windows](../../../relational-databases/replication/synchronize-a-subscription-using-windows-synchronization-manager.md).  
   
 ## <a name="see-also"></a>Vedere anche  
  [Rilevamento e risoluzione avanzati dei conflitti nella replica di tipo merge](../../../relational-databases/replication/merge/advanced-merge-replication-conflict-detection-and-resolution.md)  

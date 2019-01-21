@@ -15,12 +15,12 @@ ms.assetid: 7b18a04a-2c3d-4efe-a0bc-c3f92be72fd0
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 0f477276ef55689b6d79244f4493246f99aa9d34
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: cc911c9a5a3d02e097945ebfe4a74b8ddd9ee285
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52514197"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54128351"
 ---
 # <a name="tutorial-configure-replication-between-two-fully-connected-servers-transactional"></a>Esercitazione: Configurare la replica tra due server sempre connessi (replica transazionale)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -39,7 +39,7 @@ In questa esercitazione verranno illustrate le procedure per:
   
   
 ## <a name="prerequisites"></a>Prerequisites  
-Questa esercitazione è destinata agli utenti che hanno familiarità con le operazioni di base relative ai database ma con un'esperienza limitata delle operazioni di replica. Prima di iniziare questa esercitazione, è necessario completare [Esercitazione: Preparare SQL Server per la replica](../../relational-databases/replication/tutorial-preparing-the-server-for-replication.md).  
+Questa esercitazione è destinata agli utenti che hanno familiarità con le operazioni di base relative ai database ma con un'esperienza limitata delle operazioni di replica. Prima di iniziare questa esercitazione è necessario completare l'[Esercitazione: Preparare SQL Server per la replica](../../relational-databases/replication/tutorial-preparing-the-server-for-replication.md).  
   
 Per completare questa esercitazione, sono necessari SQL Server, SQL Server Management Studio (SSMS) e un database AdventureWorks:  
   
@@ -182,7 +182,7 @@ In questa sezione si aggiunge un sottoscrittore alla pubblicazione creata in pre
   
    ![Immissione di un nome per il database di sottoscrizione](media/tutorial-replicating-data-between-continuously-connected-servers/productreplica.png)
   
-8. Nella pagina **Sicurezza agente di distribuzione** selezionare il pulsante con i puntini di sospensione (**...**). Immettere <*Nome_server_pubblicazione*>**\repl_distribution** nella casella **Account processo**, immettere la password per l'account, selezionare **OK**, e quindi selezionare **Avanti**.
+8. Nella pagina **Sicurezza agente di distribuzione** selezionare il pulsante con i tre puntini (**…**). Immettere <*Nome_server_pubblicazione*>**\repl_distribution** nella casella **Account processo**, immettere la password per l'account, selezionare **OK**, e quindi selezionare **Avanti**.
 
    ![Informazioni dell'account di distribuzione nella finestra di dialogo "Sicurezza agente di distribuzione"](media/tutorial-replicating-data-between-continuously-connected-servers/adddistaccount.png)
   
@@ -226,7 +226,7 @@ In questa sezione vengono usati token di traccia per verificare che le modifiche
   
    A. Selezionare la scheda **Token di traccia**.  
    B. Selezionare **Inserisci utilità di traccia**.    
-   c. Visualizzare il tempo trascorso per il token di traccia nelle colonne **Dal server di pubblicazione al server di distribuzione**, **Dal server di distribuzione al Sottoscrittore**e **Latenza totale**. Il valore **In sospeso** indica che il token non ha raggiunto il punto specificato.
+   c. Visualizzare il tempo trascorso per il token di traccia nelle colonne seguenti: **Dal server di pubblicazione al server di distribuzione**, **Dal server di distribuzione al Sottoscrittore**, **Latenza totale**. Il valore **In sospeso** indica che il token non ha raggiunto il punto specificato.
 
    ![Informazioni per il token di traccia](media/tutorial-replicating-data-between-continuously-connected-servers/tracertoken.png)
 

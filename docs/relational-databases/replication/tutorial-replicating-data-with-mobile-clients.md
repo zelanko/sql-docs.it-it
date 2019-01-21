@@ -14,12 +14,12 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: bc09bcca6e70d80e256cba8cd8a1ad6a477a4742
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 9f967453ff629a7827d47b25085edd4aa304b1aa
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52545536"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54130721"
 ---
 # <a name="tutorial-configure-replication-between-a-server-and-mobile-clients-merge"></a>Esercitazione: Configurare la replica tra un server e più client per dispositivi mobili (replica di tipo merge)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -37,7 +37,7 @@ In questa esercitazione verranno illustrate le procedure per:
 > * Sincronizzare la sottoscrizione con la pubblicazione di tipo merge.
   
 ## <a name="prerequisites"></a>Prerequisites  
-Questa esercitazione è destinata agli utenti che hanno familiarità con le operazioni fondamentali relative ai database ma con un'esperienza limitata delle operazioni di replica. Prima di iniziare questa esercitazione, è necessario completare [Esercitazione: Preparare SQL Server per la replica](../../relational-databases/replication/tutorial-preparing-the-server-for-replication.md).  
+Questa esercitazione è destinata agli utenti che hanno familiarità con le operazioni fondamentali relative ai database ma con un'esperienza limitata delle operazioni di replica. Prima di iniziare questa esercitazione è necessario completare l'[Esercitazione: Preparare SQL Server per la replica](../../relational-databases/replication/tutorial-preparing-the-server-for-replication.md).  
   
 Per completare questa esercitazione, sono necessari SQL Server, SQL Server Management Studio (SSMS) e un database AdventureWorks: 
   
@@ -205,7 +205,7 @@ In questa sezione si aggiungerà una sottoscrizione alla pubblicazione di tipo m
 
    ![Selezioni per aggiungere un database al sottoscrittore](media/tutorial-replicating-data-with-mobile-clients/addsubdb.png)
   
-8. Nella pagina **Sicurezza agente di merge** selezionare il pulsante con i tre puntini (**...**). Immettere <*Nome_computer_sottoscrittore*>**\repl_merge** nella casella **Account processo** e specificare la password per questo account. Selezionare **OK**, **Avanti** e quindi di nuovo **Avanti**.  
+8. Nella pagina **Sicurezza agente di merge** selezionare il pulsante con i tre puntini (**…**). Immettere <*Nome_computer_sottoscrittore*>**\repl_merge** nella casella **Account processo** e specificare la password per questo account. Selezionare **OK**, **Avanti** e quindi di nuovo **Avanti**.  
 
    ![Selezioni per la sicurezza dell'agente di merge](media/tutorial-replicating-data-with-mobile-clients/mergeagentsecurity.png)
 
@@ -251,7 +251,7 @@ In questa sezione si aggiungerà una sottoscrizione alla pubblicazione di tipo m
 Per altre informazioni, vedere:  
 - [Sottoscrivere le pubblicazioni](../../relational-databases/replication/subscribe-to-publications.md)  
 - [Creare una sottoscrizione pull](../../relational-databases/replication/create-a-pull-subscription.md)  
-- [Snapshot per pubblicazioni di tipo merge con filtri con parametri](../../relational-databases/replication/snapshots-for-merge-publications-with-parameterized-filters.md)  
+- [Snapshot per pubblicazioni di tipo merge con filtri con parametri](../../relational-databases/replication/create-a-snapshot-for-a-merge-publication-with-parameterized-filters.md)  
 
 ## <a name="synchronize-the-subscription-to-the-merge-publication"></a>Sincronizzare la sottoscrizione con la pubblicazione di tipo merge
 

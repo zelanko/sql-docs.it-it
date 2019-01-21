@@ -13,12 +13,12 @@ ms.assetid: 5bdcd20f-532d-4ee6-b2c7-18dbb7584a87
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 0d3f8994e66f380899c09c4814fbb51a8469245f
-ms.sourcegitcommit: 96b2355d54dfad259826e88bdff91cc9344e16f2
+ms.openlocfilehash: d7a3b3027489b819cd5058f9080ca9633a2cf3ed
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51350565"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54132531"
 ---
 # <a name="database-properties-mirroring-page"></a>Proprietà database (pagina Mirroring)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -42,13 +42,13 @@ ms.locfileid: "51350565"
 |Se il mirroring è stato avviato.|Se il server di controllo del mirroring è stato cambiato nella procedura guidata, viene impostato di conseguenza.|  
   
  **Indirizzi di rete del server**  
- Esiste un'opzione equivalente per ognuna delle istanze del server, ovvero **Server principale**, **Server mirror**e **Server di controllo del mirroring**.  
+ Esiste un'opzione equivalente per ognuna delle istanze del server: **Server principale**, **Server mirror** e **Server di controllo del mirroring**.  
   
  Gli indirizzi di rete del server delle istanze del server sono specificati automaticamente al completamento della Configurazione guidata sicurezza mirroring del database. Dopo aver completato la procedura guidata, è possibile modificare gli indirizzi di rete manualmente, se necessario.  
   
  L'indirizzo di rete del server segue la sintassi di base illustrata di seguito:  
   
- TCP**://***fully_qualified_domain_name***:***port*  
+ TCP **://**_fully_qualified_domain_name_**:**_port_  
   
  dove  
   
@@ -95,12 +95,12 @@ TCP://DBSERVER9.COMPANYINFO.ADVENTURE-WORKS.COM:7022
  **Rimuovi mirroring**  
  Sull'istanza del server principale, fare clic per arrestare la sessione e rimuovere la configurazione del mirroring dai database. Verrà richiesta una conferma. Se si fa clic su **Sì**, la sessione verrà arrestata e il mirroring rimosso. Per informazioni sull'impatto della rimozione del mirroring del database, vedere [Rimozione del mirroring del database &#40;SQL Server&#41;](../../database-engine/database-mirroring/removing-database-mirroring-sql-server.md).  
   
-> **NOTA:** se si tratta dell'unico database con mirroring sull'istanza del server, il processo di monitoraggio viene rimosso.  
+> **NOTA:** Se si tratta dell'unico database con mirroring sull'istanza del server, il processo di monitoraggio viene rimosso.  
   
  **Failover**  
  Fare clic per eseguire manualmente il failover del database principale sul database mirror.  
   
-> **NOTA:** se la sessione di mirroring è in esecuzione in modalità a prestazioni elevate, il failover manuale non è supportato. Per eseguire il failover manualmente, è prima necessario modificare la modalità operativa in **Protezione elevata senza failover automatico (sincrona)**. Dopo il completamento del failover è possibile reimpostare la modalità su **Prestazioni elevate (asincrona)** per la nuova istanza del server principale.  
+> **NOTA:** Se la sessione di mirroring è in esecuzione in modalità a prestazioni elevate, il failover manuale non è supportato. Per eseguire il failover manualmente, è prima necessario modificare la modalità operativa in **Protezione elevata senza failover automatico (sincrona)**. Dopo il completamento del failover è possibile reimpostare la modalità su **Prestazioni elevate (asincrona)** per la nuova istanza del server principale.  
   
  Verrà richiesta una conferma. Se si fa clic su **Sì**, verrà tentato il failover. Il server principale prova a connettersi al server mirror utilizzando l'autenticazione di Windows. Se l'autenticazione di Windows non funziona, sul server principale viene visualizzata la finestra di dialogo **Connetti al server** . Se il server mirror usa l'autenticazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , selezionare **Autenticazione di SQL Server** nella casella **Autenticazione** . Nella casella di testo **Account di accesso** specificare l'account di accesso con cui connettersi al server mirror e nella casella di testo **Password** specificare la password per tale account.  
   
@@ -117,7 +117,7 @@ TCP://DBSERVER9.COMPANYINFO.ADVENTURE-WORKS.COM:7022
 |------------|--------------|-----------------|  
 |**Prestazioni elevate (asincrona)**|Null (se presente, non usato ma la sessione richiede un quorum)|Per massimizzare le prestazioni, il database mirror rimane sempre un passo indietro rispetto al database principale. La distanza tra i database è tuttavia solitamente ridotta. La perdita di un partner produce l'effetto seguente:<br /><br /> Se l'istanza del server mirror diventa non disponibile, le attività continuano nel server principale.<br /><br /> Se l'istanza del server principale diventa non disponibile, il server mirror si arresta. Tuttavia, se la sessione è priva di server di controllo del mirroring (opzione consigliata) o se il server di controllo del mirroring è connesso al server mirror, quest'ultimo rimane accessibile come standby a caldo (warm standby). Il proprietario del database può forzare il servizio sull'istanza del server mirror (con possibile perdita di dati).|  
 |**Protezione elevata senza failover automatico (sincrona)**|no|Tutte le transazioni di cui è stato eseguito il commit vengono scritte nel disco del server mirror.<br /><br /> Il failover manuale è possibile se i partner sono connessi tra loro.<br /><br /> La perdita di un partner produce l'effetto seguente:<br /><br /> Se l'istanza del server mirror diventa non disponibile, le attività continuano nel server principale.<br /><br /> Se l'istanza del server principale diventa non disponibile, il mirror si arresta ma è disponibile come standby a caldo (warm standby). Il proprietario del database può forzare il servizio sull'istanza del server mirror (con possibile perdita di dati).|  
-|**Protezione elevata con failover automatico (sincrona)**|Sì (obbligatorio)|Disponibilità massimizzata mediante l'utilizzo di un'istanza del server di controllo del mirroring per supportare il failover automatico. Si noti che è possibile selezionare l'opzione **Protezione elevata con failover automatico (sincrona)** solo se è già stato specificato un indirizzo del server di controllo del mirroring.<br /><br /> Il failover manuale è sempre possibile se i partner sono connessi tra loro.<br /><br /> **\*\* Importante \*\*** Se il server di controllo del mirroring viene disconnesso, è necessario che i partner siano connessi tra loro affinché il database sia disponibile. Per altre informazioni, vedere [Quorum: Impatto di un server di controllo del mirroring sulla disponibilità del database &#40;mirroring del database&#41;](../../database-engine/database-mirroring/quorum-how-a-witness-affects-database-availability-database-mirroring.md).<br /><br /> Nelle modalità operative sincrone, per tutte le transazioni con commit è garantita la scrittura su disco sul server mirror. In presenza di un server di controllo del mirroring, la perdita di un partner produce l'effetto seguente:<br /><br /> Se l'istanza del server principale diventa non disponibile, si verifica il failover automatico. L'istanza del server mirror passa al ruolo del server principale e il database del server mirror viene considerato come database principale.<br /><br /> Se l'istanza del server mirror diventa non disponibile, le attività continuano nel server principale.<br /><br /> <br /><br /> Per altre informazioni, vedere [Database Mirroring Operating Modes](../../database-engine/database-mirroring/database-mirroring-operating-modes.md).|  
+|**Protezione elevata con failover automatico (sincrona)**|Sì (obbligatorio)|Disponibilità massimizzata mediante l'utilizzo di un'istanza del server di controllo del mirroring per supportare il failover automatico. Si noti che è possibile selezionare l'opzione **Protezione elevata con failover automatico (sincrona)** solo se è già stato specificato un indirizzo del server di controllo del mirroring.<br /><br /> Il failover manuale è sempre possibile se i partner sono connessi tra loro.<br /><br /> **&#42;&#42; Importante &#42;&#42;** Se il server di controllo del mirroring viene disconnesso, è necessario che i partner siano connessi tra loro affinché il database sia disponibile. Per altre informazioni, vedere [Quorum: Impatto di un server di controllo del mirroring sulla disponibilità del database &#40;mirroring del database&#41;](../../database-engine/database-mirroring/quorum-how-a-witness-affects-database-availability-database-mirroring.md).<br /><br /> Nelle modalità operative sincrone, per tutte le transazioni con commit è garantita la scrittura su disco sul server mirror. In presenza di un server di controllo del mirroring, la perdita di un partner produce l'effetto seguente:<br /><br /> Se l'istanza del server principale diventa non disponibile, si verifica il failover automatico. L'istanza del server mirror passa al ruolo del server principale e il database del server mirror viene considerato come database principale.<br /><br /> Se l'istanza del server mirror diventa non disponibile, le attività continuano nel server principale.<br /><br /> <br /><br /> Per altre informazioni, vedere [Database Mirroring Operating Modes](../../database-engine/database-mirroring/database-mirroring-operating-modes.md).|  
   
  Dopo l'avvio del mirroring, è possibile cambiare la modalità operativa e salvare la modifica scegliendo **OK**.  
   

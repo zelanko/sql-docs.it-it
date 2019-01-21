@@ -21,12 +21,12 @@ ms.assetid: a8afcdbc-55db-4916-a219-19454f561f9e
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 881cb75b8f58bb20c8418fe18aaab6499b58e442
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 148fdfd642c18a2cc4e583edab73778cffa5c71e
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47612579"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54125271"
 ---
 # <a name="strategies-for-backing-up-and-restoring-snapshot-and-transactional-replication"></a>Strategie per il backup e il ripristino della replica snapshot e della replica transazionale
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -73,7 +73,7 @@ ms.locfileid: "47612579"
   
  **Per impostare l'opzione sync with backup**  
   
--   Programmazione [!INCLUDE[tsql](../../../includes/tsql-md.md)] della replica: [Attivare backup coordinati per la replica transazionale &#40;programmazione Transact-SQL della replica&#41;](../../../relational-databases/replication/administration/enable-coordinated-backups-for-transactional-replication.md)  
+-   Programmazione [!INCLUDE[tsql](../../../includes/tsql-md.md)] della replica: [Abilitare backup coordinati per la replica transazionale &#40;programmazione Transact-SQL della replica&#41;](../../../relational-databases/replication/administration/enable-coordinated-backups-for-transactional-replication.md)  
   
 ## <a name="restoring-databases-involved-in-replication"></a>Ripristino di database interessati da una replica  
  È possibile ripristinare tutti i database in una topologia di replica se sono disponibili backup recenti e viene eseguita la procedura appropriata. La procedura di ripristino per il database di pubblicazione dipende dal tipo di replica e dalle opzioni utilizzate, mentre quella per tutti gli altri database è indipendente da tali fattori.  
@@ -93,7 +93,7 @@ ms.locfileid: "47612579"
   
  Il ripristino dei database **msdb** e **master** , descritti in questa sezione, è identico per tutti i quattro tipi.  
   
-#### <a name="publication-database-snapshot-replication"></a>Database di pubblicazione: replica snapshot  
+#### <a name="publication-database-snapshot-replication"></a>Database di pubblicazione: Replica snapshot  
   
 1.  Ripristinare il backup più recente del database di pubblicazione. Andare al passaggio 2.  
   
@@ -103,7 +103,7 @@ ms.locfileid: "47612579"
   
      Per altre informazioni su come rimuovere la replica, vedere [sp_removedbreplication &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-removedbreplication-transact-sql.md).  
   
-#### <a name="publication-database-read-only-transactional-replication"></a>Database di pubblicazione: replica transazionale di sola lettura  
+#### <a name="publication-database-read-only-transactional-replication"></a>Database di pubblicazione: Replica transazionale di sola lettura  
   
 1.  Ripristinare il backup più recente del database di pubblicazione. Andare al passaggio 2.  
   
@@ -119,7 +119,7 @@ ms.locfileid: "47612579"
   
          Per altre informazioni su come eseguire l'agente di distribuzione, vedere [Avviare e arrestare un agente di replica &#40;SQL Server Management Studio&#41;](../../../relational-databases/replication/agents/start-and-stop-a-replication-agent-sql-server-management-studio.md) e [Concetti di base relativi ai file eseguibili dell'agente di replica](../../../relational-databases/replication/concepts/replication-agent-executables-concepts.md).  
   
-         Per altre informazioni su come verificare i comandi, vedere [Visualizzare comandi replicati e altre informazioni nel database di distribuzione &#40;programmazione Transact-SQL della replica&#41;](../../../relational-databases/replication/monitor/view-replicated-commands-and-information-in-distribution-database.md) e [Visualizzare le informazioni ed eseguire attività relative agli agenti associati a una sottoscrizione &#40;Monitoraggio replica&#41;](../../../relational-databases/replication/monitor/view-information-and-perform-tasks-for-subscription-agents.md).  
+         Per altre informazioni su come verificare i comandi, vedere [Visualizzare comandi replicati e altre informazioni nel database di distribuzione &#40;programmazione Transact-SQL della replica&#41;](../../../relational-databases/replication/monitor/view-replicated-commands-and-information-in-distribution-database.md) e [Visualizzare le informazioni ed eseguire attività usando Monitoraggio replica](../../../relational-databases/replication/monitor/view-information-and-perform-tasks-replication-monitor.md).  
   
     2.  Rimuovere la configurazione della replica dal server di pubblicazione, dal database di distribuzione e dai Sottoscrittori, quindi ricreare la configurazione. Quando si ricreano le sottoscrizioni, specificare che i dati sono già disponibili nel Sottoscrittore. Il ripristino viene completato.  
   
@@ -136,7 +136,7 @@ ms.locfileid: "47612579"
   
          Per altre informazioni su come eseguire l'agente di distribuzione, vedere [Avviare e arrestare un agente di replica &#40;SQL Server Management Studio&#41;](../../../relational-databases/replication/agents/start-and-stop-a-replication-agent-sql-server-management-studio.md) e [Concetti di base relativi ai file eseguibili dell'agente di replica](../../../relational-databases/replication/concepts/replication-agent-executables-concepts.md).  
   
-         Per altre informazioni su come verificare i comandi, vedere [Visualizzare comandi replicati e altre informazioni nel database di distribuzione &#40;programmazione Transact-SQL della replica&#41;](../../../relational-databases/replication/monitor/view-replicated-commands-and-information-in-distribution-database.md) e [Visualizzare le informazioni ed eseguire attività relative agli agenti associati a una sottoscrizione &#40;Monitoraggio replica&#41;](../../../relational-databases/replication/monitor/view-information-and-perform-tasks-for-subscription-agents.md).  
+         Per altre informazioni su come verificare i comandi, vedere [Visualizzare comandi replicati e altre informazioni nel database di distribuzione &#40;programmazione Transact-SQL della replica&#41;](../../../relational-databases/replication/monitor/view-replicated-commands-and-information-in-distribution-database.md) e [Visualizzare le informazioni ed eseguire attività usando Monitoraggio replica](../../../relational-databases/replication/monitor/view-information-and-perform-tasks-replication-monitor.md).  
   
     2.  Utilizzare l' [utilità tablediff](../../../tools/tablediff-utility.md) o un altro strumento per sincronizzare manualmente il server di pubblicazione con il Sottoscrittore. Questa operazione consente di recuperare i dati del database di sottoscrizione non inclusi nel backup del database di pubblicazione. Andare al passaggio c.  
   
@@ -150,7 +150,7 @@ ms.locfileid: "47612579"
   
          Per ulteriori informazioni su come specificare che i dati sono già disponibili nel Sottoscrittore, vedere [Initialize a Subscription Manually](../../../relational-databases/replication/initialize-a-subscription-manually.md).  
   
-#### <a name="publication-database-transactional-replication-with-updating-subscriptions"></a>Database di pubblicazione: replica transazionale con sottoscrizioni aggiornabili  
+#### <a name="publication-database-transactional-replication-with-updating-subscriptions"></a>Database di pubblicazione: Replica transazionale con sottoscrizioni aggiornabili  
   
 1.  Ripristinare il backup più recente del database di pubblicazione. Andare al passaggio 2.  
   
@@ -158,7 +158,7 @@ ms.locfileid: "47612579"
   
      Per altre informazioni su come eseguire l'agente di distribuzione, vedere [Avviare e arrestare un agente di replica &#40;SQL Server Management Studio&#41;](../../../relational-databases/replication/agents/start-and-stop-a-replication-agent-sql-server-management-studio.md) e [Concetti di base relativi ai file eseguibili dell'agente di replica](../../../relational-databases/replication/concepts/replication-agent-executables-concepts.md).  
   
-     Per altre informazioni su come verificare i comandi, vedere [Visualizzare comandi replicati e altre informazioni nel database di distribuzione &#40;programmazione Transact-SQL della replica&#41;](../../../relational-databases/replication/monitor/view-replicated-commands-and-information-in-distribution-database.md) e [Visualizzare le informazioni ed eseguire attività relative agli agenti associati a una sottoscrizione &#40;Monitoraggio replica&#41;](../../../relational-databases/replication/monitor/view-information-and-perform-tasks-for-subscription-agents.md).  
+     Per altre informazioni su come verificare i comandi, vedere [Visualizzare comandi replicati e altre informazioni nel database di distribuzione &#40;programmazione Transact-SQL della replica&#41;](../../../relational-databases/replication/monitor/view-replicated-commands-and-information-in-distribution-database.md) e [Visualizzare le informazioni ed eseguire attività usando Monitoraggio replica](../../../relational-databases/replication/monitor/view-information-and-perform-tasks-replication-monitor.md).  
   
 3.  Se si usano sottoscrizioni ad aggiornamento in coda, connettersi a ogni Sottoscrittore ed eliminare tutte le righe dalla tabella [MSreplication_queue &#40;Transact-SQL&#41;](../../../relational-databases/system-tables/msreplication-queue-transact-sql.md) nel database di sottoscrizione. Andare al passaggio 4.  
   
@@ -184,7 +184,7 @@ ms.locfileid: "47612579"
   
          Per ulteriori informazioni su come specificare che i dati sono già disponibili nel Sottoscrittore, vedere [Initialize a Subscription Manually](../../../relational-databases/replication/initialize-a-subscription-manually.md).  
   
-#### <a name="publication-database-peer-to-peer-transactional-replication"></a>Database di pubblicazione: replica transazionale peer-to-peer  
+#### <a name="publication-database-peer-to-peer-transactional-replication"></a>Database di pubblicazione: Replica transazionale peer-to-peer  
  Nella procedura seguente i database di pubblicazione **A**, **B**e **C** sono inclusi in una topologia di replica transazionale peer-to-peer. I database **A** e **C** sono online e funzionano correttamente. Il database **B** è il database da ripristinare. Il processo descritto, specialmente i passaggi 7, 10 e 11, è molto simile al processo per l'aggiunta di un nodo a una topologia peer-to-peer. Il modo più semplice per eseguire questi passaggi consiste nell'utilizzare la Configurazione guidata topologia peer-to-peer, ma è possibile utilizzare anche stored procedure.  
   
 1.  Eseguire gli agenti di distribuzione per sincronizzare le sottoscrizioni nei database **A** e **C**. Andare al passaggio 2.  
@@ -287,7 +287,7 @@ ms.locfileid: "47612579"
   
     2.  Contrassegnare tutte le pubblicazioni per la convalida. Reinizializzare eventuali sottoscrizioni che non superano la convalida. Il recupero viene completato.  
   
-         Per ulteriori informazioni sulla convalida, vedere [Validate Replicated Data](../../../relational-databases/replication/validate-replicated-data.md). Per altre informazioni sulla reinizializzazione, vedere [Reinizializzare le sottoscrizioni](../../../relational-databases/replication/reinitialize-subscriptions.md).  
+         Per ulteriori informazioni sulla convalida, vedere [Validate Replicated Data](../../../relational-databases/replication/validate-data-at-the-subscriber.md). Per altre informazioni sulla reinizializzazione, vedere [Reinizializzare le sottoscrizioni](../../../relational-databases/replication/reinitialize-subscriptions.md).  
   
 #### <a name="msdb-database-distributor"></a>Database msdb (database di distribuzione)  
   
@@ -303,7 +303,7 @@ ms.locfileid: "47612579"
   
 4.  Contrassegnare tutte le pubblicazioni per la convalida. Reinizializzare eventuali sottoscrizioni che non superano la convalida. Il recupero viene completato.  
   
-     Per ulteriori informazioni sulla convalida, vedere [Validate Replicated Data](../../../relational-databases/replication/validate-replicated-data.md). Per altre informazioni sulla reinizializzazione, vedere [Reinizializzare le sottoscrizioni](../../../relational-databases/replication/reinitialize-subscriptions.md).  
+     Per ulteriori informazioni sulla convalida, vedere [Validate Replicated Data](../../../relational-databases/replication/validate-data-at-the-subscriber.md). Per altre informazioni sulla reinizializzazione, vedere [Reinizializzare le sottoscrizioni](../../../relational-databases/replication/reinitialize-subscriptions.md).  
   
 #### <a name="master-database-distributor"></a>Database master (database di distribuzione)  
   

@@ -20,12 +20,12 @@ ms.assetid: f212397d-1bfd-496b-a246-668952891d09
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: bc8f5b10cd0dce7b3d9b6e8acc5b6018eff0e85a
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 0881bb74dbd5018d194464d6a8ce58161062a901
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52515456"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54130581"
 ---
 # <a name="monitor-performance-with-replication-monitor"></a>Monitoraggio delle prestazioni con Monitoraggio replica
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -77,7 +77,7 @@ ms.locfileid: "52515456"
   
     |Eccellenti|Buone|Discrete|Scarse|Critico|  
     |---------------|----------|----------|----------|--------------|  
-    |0 - 34%|35 - 59%|60 - 84%|85 - 99%|100% +|  
+    |0 – 34%|35 – 59%|60 – 84%|85 – 99%|100% +|  
   
 -   Per la replica di tipo merge la qualità delle prestazioni è indipendente dalla soglia. La soglia di elaborazione delle righe determina in realtà se il valore **Prestazioni critiche** viene visualizzato nella colonna **Stato** . La qualità delle prestazioni è determinata dal confronto tra le prestazioni delle singole sottoscrizioni e le prestazioni medie cronologiche delle sottoscrizioni, che utilizzano lo stesso tipo di connessione (remota o LAN), rispetto alla pubblicazione. In Monitoraggio replica viene visualizzato un valore dopo cinque sincronizzazioni con 50 o più modifiche eseguite con lo stesso tipo di connessione. Se sono state eseguite meno di cinque sincronizzazioni con 50 o più modifiche oppure la sincronizzazione più recente include meno di 50 modifiche, in Monitoraggio replica non viene visualizzato alcun valore.  
   
@@ -85,21 +85,21 @@ ms.locfileid: "52515456"
   
     |Eccellenti|Buone|Discrete|Scarse|  
     |---------------|----------|----------|----------|  
-    |151+%|76 - 150%|26 - 75%|0 - 25%|  
+    |151+%|76 – 150%|26 – 75%|0 – 25%|  
   
- Per altre informazioni sulla visualizzazione delle informazioni relative alle sottoscrizioni, vedere [Visualizzare le informazioni ed eseguire attività per una sottoscrizione &#40;Monitoraggio replica&#41;](../../../relational-databases/replication/monitor/view-information-and-perform-tasks-for-a-subscription-replication-monitor.md).  
+ Per altre informazioni sulla visualizzazione delle informazioni relative alle sottoscrizioni, vedere [Visualizzare le informazioni ed eseguire attività usando Monitoraggio replica](../../../relational-databases/replication/monitor/view-information-and-perform-tasks-replication-monitor.md).  
   
 ## <a name="determine-latency-with-tracer-tokens"></a>Determinazione della latenza con token di traccia  
  La replica transazionale consente di misurare la latenza di un sistema inserendo un token (una piccola quantità di dati) nel log delle transazioni del database di pubblicazione e misurando il tempo impiegato dal token per arrivare al database di distribuzione e ai Sottoscrittori. Il token consente inoltre di rilevare se i dati non raggiungono il database di distribuzione o il Sottoscrittore. Per altre informazioni, vedere [Misurazione della latenza e convalida delle connessioni per la replica transazionale](../../../relational-databases/replication/monitor/measure-latency-and-validate-connections-for-transactional-replication.md).  
   
 ## <a name="view-detailed-synchronization-performance-for-merge-replication"></a>Visualizzazione di statistiche dettagliate sulle prestazioni di sincronizzazione per la replica di tipo merge  
- Per la replica di tipo merge in Monitoraggio replica vengono visualizzate statistiche dettagliate di ogni articolo elaborato durante la sincronizzazione, inclusa la quantità di tempo impiegato in ogni fase di elaborazione (caricamento delle modifiche, download delle modifiche e così via). Ciò può essere utile per individuare tabelle specifiche che determinano rallentamenti ed è l'opzione migliore per risolvere problemi relativi alle prestazioni delle sottoscrizioni di tipo merge. Per altre informazioni sulla visualizzazione di statistiche dettagliate, vedere [Visualizzare le informazioni ed eseguire attività degli agenti associati a una sottoscrizione &#40;Monitoraggio replica&#41;](../../../relational-databases/replication/monitor/view-information-and-perform-tasks-for-subscription-agents.md).  
+ Per la replica di tipo merge in Monitoraggio replica vengono visualizzate statistiche dettagliate di ogni articolo elaborato durante la sincronizzazione, inclusa la quantità di tempo impiegato in ogni fase di elaborazione (caricamento delle modifiche, download delle modifiche e così via). Ciò può essere utile per individuare tabelle specifiche che determinano rallentamenti ed è l'opzione migliore per risolvere problemi relativi alle prestazioni delle sottoscrizioni di tipo merge. Per altre informazioni sulla visualizzazione di statistiche dettagliate, vedere [Visualizzare le informazioni ed eseguire attività usando Monitoraggio replica](../../../relational-databases/replication/monitor/view-information-and-perform-tasks-replication-monitor.md).  
   
 ## <a name="view-transactions-and-delivery-time-for-transactional-replication"></a>Visualizzazione delle transazioni e dei tempi di recapito della replica transazionale  
- Per la replica transazionale in Monitoraggio replica vengono visualizzate informazioni sul numero di transazioni nel database di distribuzione non ancora distribuite a un Sottoscrittore e il tempo stimato per la relativa distribuzione. Per altre informazioni, vedere [Visualizzare le informazioni ed eseguire attività relative agli agenti associati a una sottoscrizione &#40;Monitoraggio replica&#41;](../../../relational-databases/replication/monitor/view-information-and-perform-tasks-for-subscription-agents.md).  
+ Per la replica transazionale in Monitoraggio replica vengono visualizzate informazioni sul numero di transazioni nel database di distribuzione non ancora distribuite a un Sottoscrittore e il tempo stimato per la relativa distribuzione. Per altre informazioni, vedere [Visualizzare le informazioni ed eseguire attività usando Monitoraggio replica](../../../relational-databases/replication/monitor/view-information-and-perform-tasks-replication-monitor.md).  
   
 ## <a name="see-also"></a>Vedere anche  
- [Monitoraggio della replica](../../../relational-databases/replication/monitor/monitoring-replication-overview.md)   
+ [Monitoraggio della replica](../../../relational-databases/replication/monitor/monitoring-replication.md)   
  [Set Thresholds and Warnings in Replication Monitor](../../../relational-databases/replication/monitor/set-thresholds-and-warnings-in-replication-monitor.md)  
   
   

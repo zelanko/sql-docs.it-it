@@ -23,12 +23,12 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: bd3811f05891f7a270e059a7d36296f9d9ab3eae
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 157d307187333cdde730bfb6657ae9927db060c1
+ms.sourcegitcommit: 78e32562f9c1fbf2e50d3be645941d4aa457e31f
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47638719"
+ms.lasthandoff: 01/08/2019
+ms.locfileid: "54100896"
 ---
 # <a name="objectproperty-transact-sql"></a>OBJECTPROPERTY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -107,22 +107,23 @@ OBJECTPROPERTY ( id , property )
 |IsRule|Qualsiasi oggetto con ambito schema|Regola associata.<br /><br /> 1 = True<br /><br /> 0 = False|  
 |IsScalarFunction|Funzione|Funzione con valori scalari.<br /><br /> 1 = Funzione con valori scalari<br /><br /> 0 = Funzione senza valori scalari|  
 |IsSchemaBound|Funzione, vista|Funzione o vista associata a schema creata con la clausola SCHEMABINDING.<br /><br /> 1 = Associata a uno schema<br /><br /> 0 = Non associata a uno schema|  
-|IsSystemTable|Tabella|Tabella di sistema.<br /><br /> 1 = True<br /><br /> 0 = False|  
+|IsSystemTable|Tabella|Tabella di sistema.<br /><br /> 1 = True<br /><br /> 0 = False| 
+|IsSystemVerified|Object|SQL Server può verificare le proprietà di determinismo e precisione dell'oggetto.<br /><br /> 1 = True<br /><br /> 0 = False| 
 |IsTable|Tabella|Tabella.<br /><br /> 1 = True<br /><br /> 0 = False|  
 |IsTableFunction|Funzione|Funzione con valori di tabella.<br /><br /> 1 = Funzione con valori di tabella<br /><br /> 0 = Funzione senza valori di tabella|  
 |IsTrigger|Qualsiasi oggetto con ambito schema|Trigger.<br /><br /> 1 = True<br /><br /> 0 = False|  
 |IsUniqueCnst|Qualsiasi oggetto con ambito schema|Vincolo UNIQUE.<br /><br /> 1 = True<br /><br /> 0 = False|  
 |IsUserTable|Tabella|Tabella definita dall'utente.<br /><br /> 1 = True<br /><br /> 0 = False|  
 |IsView|Vista|Vista.<br /><br /> 1 = True<br /><br /> 0 = False|  
-|OwnerId|Qualsiasi oggetto con ambito schema|Proprietario dell'oggetto.<br /><br /> **Nota:** Il proprietario dello schema non deve necessariamente corrispondere al proprietario dell'oggetto. Ad esempio, gli oggetti figlio (per i quali il parametro *parent_object_id* è impostato su un valore diverso da Null) restituiscono sempre lo stesso ID di proprietario del padre.<br /><br /> Valore non Null = ID utente del database per il proprietario dell'oggetto.|  
+|OwnerId|Qualsiasi oggetto con ambito schema|Proprietario dell'oggetto.<br /><br /> **Nota:**  Il proprietario dello schema non deve necessariamente corrispondere al proprietario dell'oggetto. Ad esempio, gli oggetti figlio (per i quali il parametro *parent_object_id* è impostato su un valore diverso da Null) restituiscono sempre lo stesso ID di proprietario del padre.<br /><br /> Valore non Null = ID utente del database per il proprietario dell'oggetto.|  
 |TableDeleteTrigger|Tabella|La tabella include un trigger DELETE.<br /><br /> >1 = ID del primo trigger del tipo specificato.|  
 |TableDeleteTriggerCount|Tabella|La tabella include il numero di trigger DELETE specificato.<br /><br /> >0 = Numero di trigger DELETE.|  
 |TableFullTextMergeStatus|Tabella|**Si applica a**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] tramite [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> Indica se una tabella dispone di un indice full-text su cui è attualmente in corso un'operazione di unione.<br /><br /> 0 = La tabella non dispone di un indice full-text o sull'indice full-text non è in corso un'operazione di unione.<br /><br /> 1 = Sull'indice full-text è in corso un'operazione di unione.|  
 |TableFullTextBackgroundUpdateIndexOn|Tabella|**Si applica a**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] tramite [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> Nella tabella è abilitato l'indice full-text ad aggiornamento in background (rilevamento automatico delle modifiche).<br /><br /> 1 = TRUE<br /><br /> 0 = FALSE|  
 |TableFulltextCatalogId|Tabella|**Si applica a**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] tramite [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> ID del catalogo full-text contenente i dati dell'indice full-text per la tabella.<br /><br /> Valore diverso da zero = ID del catalogo full-text associato all'indice univoco che identifica le righe di una tabella con indicizzazione full-text.<br /><br /> 0 = La tabella non include un indice full-text.|  
 |TableFulltextChangeTrackingOn|Tabella|**Si applica a**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] tramite [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> Nella tabella è abilitato il rilevamento delle modifiche full-text.<br /><br /> 1 = TRUE<br /><br /> 0 = FALSE|  
-|TableFulltextDocsProcessed|Tabella|**Si applica a**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] tramite [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> Numero di righe elaborate dopo l'avvio dell'indicizzazione full-text. In una tabella sottoposta a indicizzazione ai fini della ricerca full-text tutte le colonne di una riga vengono considerate come appartenenti a un unico documento da indicizzare.<br /><br /> 0 = Nessuna ricerca per indicizzazione attiva oppure l'indicizzazione full-text è stata completata.<br /><br /> > 0 = Possibili valori (A o B): Numero di documenti elaborati dalle operazioni di inserimento o aggiornamento dopo l'avvio del popolamento con rilevamento delle modifiche Completo, Incrementale o Manuale. B) Numero di righe elaborate dalle operazioni di inserimento o aggiornamento dopo l'abilitazione del rilevamento delle modifiche con popolamento dell'indice ad aggiornamento in background, la modifica dello schema dell'indice full-text, la ricompilazione del catalogo full-text, il riavvio dell'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e così via.<br /><br /> NULL = La tabella non include un indice full-text.<br /><br /> Questa proprietà non monitora né conta le righe eliminate.|  
-|TableFulltextFailCount|Tabella|**Si applica a**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] tramite [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> Numero di righe non indicizzate dalla ricerca full-text.<br /><br /> 0 = Popolamento completato.<br /><br /> > 0 = Possibili valori (A o B): A) Numero di documenti non indicizzati dopo l'avvio del popolamento con rilevamento delle modifiche ad aggiornamento Completo, Incrementale e Manuale. B) Per il rilevamento delle modifiche con un indice ad aggiornamento in background, numero di righe non indicizzate dopo l'avvio o il riavvio del popolamento. Questa situazione può essere dovuta a una modifica dello schema, alla ricompilazione del catalogo, al riavvio del server e così via.<br /><br /> NULL = La tabella non include un indice full-text.|  
+|TableFulltextDocsProcessed|Tabella|**Si applica a**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] tramite [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> Numero di righe elaborate dopo l'avvio dell'indicizzazione full-text. In una tabella sottoposta a indicizzazione ai fini della ricerca full-text tutte le colonne di una riga vengono considerate come appartenenti a un unico documento da indicizzare.<br /><br /> 0 = Nessuna ricerca per indicizzazione attiva oppure l'indicizzazione full-text è stata completata.<br /><br /> > 0 = Può essere uno dei valori seguenti (A or B): A) Numero di documenti elaborati dalle operazioni di inserimento o aggiornamento dopo l'avvio del popolamento con rilevamento delle modifiche completo, incrementale o manuale. B) Numero di righe elaborate dalle operazioni di inserimento o aggiornamento dopo l'abilitazione del rilevamento delle modifiche con popolamento dell'indice ad aggiornamento in background, la modifica dello schema dell'indice full-text, la ricompilazione del catalogo full-text, il riavvio dell'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e così via.<br /><br /> NULL = La tabella non include un indice full-text.<br /><br /> Questa proprietà non monitora né conta le righe eliminate.|  
+|TableFulltextFailCount|Tabella|**Si applica a**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] tramite [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> Numero di righe non indicizzate dalla ricerca full-text.<br /><br /> 0 = Popolamento completato.<br /><br /> > 0 = Può essere uno dei valori seguenti (A or B): A) Numero di documenti non indicizzati dopo l'avvio del popolamento con rilevamento delle modifiche ad aggiornamento completo, incrementale e manuale. B) Per il rilevamento delle modifiche con un indice ad aggiornamento in background, numero di righe non indicizzate dopo l'avvio o il riavvio del popolamento. Questa situazione può essere dovuta a una modifica dello schema, alla ricompilazione del catalogo, al riavvio del server e così via.<br /><br /> NULL = La tabella non include un indice full-text.|  
 |TableFulltextItemCount|Tabella|**Si applica a**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] tramite [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> Numero di righe per cui l'indicizzazione full-text ha avuto esito positivo.|  
 |TableFulltextKeyColumn|Tabella|**Si applica a**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] tramite [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> ID della colonna associata all'indice univoco a colonna singola a cui viene fatto riferimento nella definizione dell'indice full-text.<br /><br /> 0 = La tabella non include un indice full-text.|  
 |TableFulltextPendingChanges|Tabella|**Si applica a**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] tramite [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> Numero di voci in sospeso del rilevamento delle modifiche da elaborare.<br /><br /> 0 = Il rilevamento delle modifiche non è abilitato.<br /><br /> NULL = La tabella non include un indice full-text.|  
@@ -199,7 +200,7 @@ GO
   
 ```  
   
-### <a name="b-verifying-that-a-scalar-valued-user-defined-function-is-deterministic"></a>B. Verifica che una funzione a valori scalari definita dall'utente sia deterministica  
+### <a name="b-verifying-that-a-scalar-valued-user-defined-function-is-deterministic"></a>b. Verifica che una funzione a valori scalari definita dall'utente sia deterministica  
  Nell'esempio seguente viene verificato se la funzione definita dall'utente con valori scalari `ufnGetProductDealerPrice`, che restituisce un valore **money**, è o meno deterministica.  
   
 ```  
@@ -216,7 +217,7 @@ GO
 0
 ```  
   
-### <a name="c-finding-the-tables-that-belong-to-a-specific-schema"></a>C. Ricerca di tabelle appartenenti a uno schema specifico  
+### <a name="c-finding-the-tables-that-belong-to-a-specific-schema"></a>C: Ricerca di tabelle appartenenti a uno schema specifico  
  L'esempio seguente restituisce tutte le tabelle nello schema dbo.  
   
 ```  
@@ -231,7 +232,7 @@ GO
   
 ## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Esempi: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] e [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
-### <a name="d-verifying-that-an-object-is-a-table"></a>D. Verifica che un oggetto sia una tabella  
+### <a name="d-verifying-that-an-object-is-a-table"></a>D: Verifica che un oggetto sia una tabella  
  Nell'esempio seguente viene verificato se `dbo.DimReseller` è una tabella nel database [!INCLUDE[ssawPDW](../../includes/ssawpdw-md.md)].  
   
 ```  

@@ -17,12 +17,12 @@ ms.assetid: 23e7e8c1-002f-4e69-8c99-d63e4100de64
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 58fa9cf55a0ef120266c0398734fc6671402634c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 51b083073e38c44708f4d017ee1fd1eb86278f24
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47785249"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54129311"
 ---
 # <a name="peer-to-peer---transactional-replication"></a>Peer-to-peer - Replica transazionale
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -46,7 +46,7 @@ ms.locfileid: "47785249"
  La replica peer-to-peer include l'opzione che consente di abilitare il rilevamento dei conflitti in una topologia peer-to-peer. Questa opzione consente di prevenire i problemi causati da conflitti non rilevati, incluso il comportamento incoerente dell'applicazione e la perdita di aggiornamenti. Se questa opzione è attivata, per impostazione predefinita, una modifica in conflitto viene considerata come un errore critico che impedisce il corretto funzionamento dell'agente di distribuzione. In caso di conflitto la topologia rimane in uno stato incoerente finché il conflitto non viene risolto manualmente e i dati non vengono resi coerenti nell'intera topologia. Per altre informazioni, vedere [Conflict Detection in Peer-to-Peer Replication](../../../relational-databases/replication/transactional/peer-to-peer-conflict-detection-in-peer-to-peer-replication.md).  
   
 > [!NOTE]  
->  Per prevenire potenziali incoerenze dei dati, evitare che si verifichino conflitti in una topologia peer-to-peer, anche quando il rilevamento dei conflitti è abilitato. Per garantire che le operazioni di scrittura relative a una determinata riga vengano eseguite in un unico nodo, le applicazioni che accedono e modificano i dati devono partizionare le operazioni di inserimento, aggiornamento ed eliminazione. Tale partizionamento assicura che modifiche apportate a una determinata riga in un singolo nodo vengano sincronizzate con tutti gli altri nodi della topologia prima che la riga venga modificata da un nodo diverso. Se un'applicazione richiede funzionalità avanzate di rilevamento e risoluzione dei conflitti, utilizzare la replica di tipo merge. Per altre informazioni, vedere [Replica di tipo merge](../../../relational-databases/replication/merge/merge-replication.md) e [Rilevare e risolvere i conflitti tra repliche di tipo merge](../../../relational-databases/replication/merge/advanced-merge-replication-resolve-merge-replication-conflicts.md).  
+>  Per prevenire potenziali incoerenze dei dati, evitare che si verifichino conflitti in una topologia peer-to-peer, anche quando il rilevamento dei conflitti è abilitato. Per garantire che le operazioni di scrittura relative a una determinata riga vengano eseguite in un unico nodo, le applicazioni che accedono e modificano i dati devono partizionare le operazioni di inserimento, aggiornamento ed eliminazione. Tale partizionamento assicura che modifiche apportate a una determinata riga in un singolo nodo vengano sincronizzate con tutti gli altri nodi della topologia prima che la riga venga modificata da un nodo diverso. Se un'applicazione richiede funzionalità avanzate di rilevamento e risoluzione dei conflitti, utilizzare la replica di tipo merge. Per altre informazioni, vedere [Replica di tipo merge](../../../relational-databases/replication/merge/merge-replication.md) e [Rilevare e risolvere i conflitti tra repliche di tipo merge](../../../relational-databases/replication/merge/advanced-merge-replication-conflict-detection-and-resolution.md).  
   
 ## <a name="peer-to-peer-topologies"></a>Topologie peer-to-peer  
  Negli scenari seguenti vengono illustrati gli utilizzi tipici della replica peer-to-peer.  
@@ -159,7 +159,7 @@ ms.locfileid: "47785249"
   
 ||Solo peer di SQL Server 2005 o una combinazione di peer di SQL Server 2005 con peer di SQL Server 2008 e versioni successive|Solo peer di SQL Server 2005 o una combinazione di peer di SQL Server 2005 con peer di SQL Server 2008 e versioni successive|Peer di SQL2008 e versioni successive|Peer di SQL2008 e versioni successive|  
 |-|------------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------|------------------------------|------------------------------|  
-|Aggiunta di un nodo alla topologia|2 nodi nella topologia completa: disattivazione non obbligatoria. Usare `sync_type = 'initialize with backup'`.|Più di due nodi: disattivazione obbligatoria.|`sync_type = 'replication support only'`: disattivazione obbligatoria.|`sync_type = 'initialize with backup'` e `'initialize from lsn'`: disattivazione non obbligatoria.|  
+|Aggiunta di un nodo alla topologia|Due nodi nella topologia completa: disattivazione non obbligatoria. Usare `sync_type = 'initialize with backup'`.|Più di due nodi: disattivazione obbligatoria.|`sync_type = 'replication support only'`: disattivazione obbligatoria.|`sync_type = 'initialize with backup'` e `'initialize from lsn'`: disattivazione non obbligatoria.|  
   
  Le modifiche dello schema di topologia (aggiunta o eliminazione di un articolo) richiedono la disattivazione. Per altre informazioni, vedere [Amministrare una topologia peer-to-peer &#40;programmazione Transact-SQL della replica&#41;](../../../relational-databases/replication/administration/administer-a-peer-to-peer-topology-replication-transact-sql-programming.md).  
   
@@ -169,7 +169,7 @@ ms.locfileid: "47785249"
   
  Le modifiche dello schema dell'articolo (aggiunta o eliminazione di una colonna) non richiedono mai la disattivazione.  
   
--   Aggiunta di un articolo: per aggiungere un articolo alla configurazione esistente è necessario disattivare il sistema, eseguire l'istruzione CREATE TABLE e caricare i dati iniziali in ciascun nodo nella topologia, quindi aggiungere il nuovo articolo in ogni nodo nella topologia.  
+-   Aggiunta di un articolo: per aggiungere un articolo alla configurazione esistente è necessario disattivare il sistema, eseguire l'istruzione CREATE TABLE e caricare i dati iniziali in ogni nodo nella topologia, quindi aggiungere il nuovo articolo in ogni nodo nella topologia.  
   
 -   Eliminazione di un articolo: per ottenere uno stato coerente in tutti i nodi è necessario disattivare la topologia  
   
@@ -182,6 +182,6 @@ ms.locfileid: "47785249"
 ## <a name="see-also"></a>Vedere anche  
  [Amministrare una topologia peer-to-peer &#40;programmazione Transact-SQL della replica&#41;](../../../relational-databases/replication/administration/administer-a-peer-to-peer-topology-replication-transact-sql-programming.md)   
  [Strategie per il backup e il ripristino della replica snapshot e della replica transazionale](../../../relational-databases/replication/administration/strategies-for-backing-up-and-restoring-snapshot-and-transactional-replication.md)   
- [Tipi di pubblicazioni per la replica transazionale](../../../relational-databases/replication/transactional/publication-types-for-transactional-replication.md)  
+ [Replica transazionale](../../../relational-databases/replication/transactional/transactional-replication.md)  
   
   

@@ -14,12 +14,12 @@ ms.assetid: 3ca82fb9-81e6-4c3c-94b3-b15f852b18bd
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: b85e937dc16ffe3e9561a6344829c9aae5af508c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f1d5269b19f8bfb04321ac23e01d1f85b8c0861e
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47791169"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54129461"
 ---
 # <a name="transactional-replication"></a>Replica transazionale
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -72,5 +72,15 @@ ms.locfileid: "47791169"
   
 ##  <a name="DistributionAgent"></a> Agente di distribuzione  
  L'agente di distribuzione viene eseguito nel server di distribuzione per le sottoscrizioni push e nel Sottoscrittore per le sottoscrizioni pull. e sposta le transazioni dal database di distribuzione al Sottoscrittore. Se una sottoscrizione è contrassegnata per la convalida, l'agente di distribuzione verifica anche se i dati nel server di pubblicazione e nel Sottoscrittore corrispondono.  
+
+## <a name="publication-types"></a>Tipi di pubblicazione 
+La replica transazionale offre quattro tipi di pubblicazione:  
+  
+|Tipo di pubblicazione|Descrizione|  
+|----------------------|-----------------|  
+|Pubblicazione transazionale standard|Appropriata per topologie in cui tutti i dati nel Sottoscrittore sono di sola lettura. (La replica transazionale non impone l'impostazione dei dati in sola lettura nel Sottoscrittore).<br /><br /> Le pubblicazioni transazionali standard vengono create per impostazione predefinita quando si utilizzano Transact-SQL o gli oggetti RMO (Replication Management Objects). Quando si utilizza la Creazione guidata nuova pubblicazione, tali pubblicazioni vengono create selezionando **Pubblicazione transazionale** nella pagina **Tipo di pubblicazione** .<br /><br /> Per altre informazioni sulla creazione di pubblicazioni, vedere [Pubblicare dati e oggetti di database](../../../relational-databases/replication/publish/publish-data-and-database-objects.md).|  
+|Pubblicazione transazionale con sottoscrizioni aggiornabili|Le caratteristiche di questo tipo di pubblicazione sono:<br /><br /> - Ogni posizione presenta dati identici con un unico server di pubblicazione e un unico sottoscrittore. <br /> - È possibile aggiornare le righe a livello del sottoscrittore<br /> - Questa topologia è più adatta agli ambienti server che necessitano di disponibilità elevata e di scalabilità per la lettura.<br /><br />Per altre informazioni, vedere [Sottoscrizioni aggiornabili](../../../relational-databases/replication/transactional/updatable-subscriptions-for-transactional-replication.md).|  
+|Topologia peer-to-peer|Le caratteristiche di questo tipo di pubblicazione sono:<br /> - Ogni posizione presenta dati identici e opera sia come server di pubblicazione che come sottoscrittore.<br /> - La stessa riga può essere modificata solo in una posizione alla volta.<br /> - Supporta il [rilevamento dei conflitti](../../../relational-databases/replication/transactional/peer-to-peer-conflict-detection-in-peer-to-peer-replication.md)  <br />- Questa topologia è più adatta agli ambienti server che necessitano di disponibilità elevata e di scalabilità per la lettura.<br /><br />Per altre informazioni, vedere [Peer-to-Peer Transactional Replication](../../../relational-databases/replication/transactional/peer-to-peer-transactional-replication.md).|  
+|Replica transazionale bidirezionale|Le caratteristiche di questo tipo di pubblicazione sono:<br />La replica bidirezionale è simile alla replica peer-to-peer, ma non offre la risoluzione dei conflitti. Inoltre, la replica bidirezionale è limitata a 2 server. <br /><br /> Per altre informazioni, vedere [Replica transazionale bidirezionale](../../../relational-databases/replication/transactional/bidirectional-transactional-replication.md) |  
   
   
