@@ -22,12 +22,12 @@ ms.assetid: 62eebc19-9f15-4245-94fa-b3fcd64a9d42
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: cad1677bccbb6db5516c1c93c79ad493ca8a27e0
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: 3a6b17b2e157042c41690c3c2cdf6ab92cd84a09
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51699926"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54125991"
 ---
 # <a name="create-aggregate-transact-sql"></a>CREATE AGGREGATE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -61,7 +61,7 @@ EXTERNAL NAME assembly_name [ .class_name ]
  *aggregate_name*  
  Nome della funzione di aggregazione che si desidera creare.  
   
- **@** *param_name*  
+ **@** _param_name_  
  Uno o più parametri della funzione di aggregazione definita dall'utente. Il valore di un parametro deve essere fornito dall'utente quando la funzione di aggregazione viene eseguita. Specificare un nome di parametro usando come primo carattere il simbolo di chiocciola (**@**). Il nome di parametro deve essere conforme alle regole per gli [identificatori](../../relational-databases/databases/database-identifiers.md). I parametri sono locali rispetto alla funzione.  
   
  *system_scalar_type*  
@@ -79,7 +79,7 @@ EXTERNAL NAME assembly_name [ .class_name ]
  *udt_type_name*  
  Nome di un tipo CLR definito dall'utente già creato nel database corrente. Se *udt_schema_name* viene omesso, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] presume che il tipo appartenga allo schema dell'utente corrente.  
   
- *assembly_name* [ **.***class_name* ]  
+ *assembly_name* [ **.**_class_name_ ]  
  Specifica l'assembly da associare alla funzione di aggregazione definita dall'utente e, facoltativamente, il nome dello schema a cui l'assembly appartiene e il nome della classe nell'assembly che implementa la funzione di aggregazione definita dall'utente. È necessario che l'assembly sia già stato creato nel database tramite un'istruzione CREATE ASSEMBLY. *class_name* deve essere un identificatore di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] valido e corrispondere al nome di una classe esistente nell'assembly. *class_name* può essere un nome qualificato con lo spazio dei nomi se il linguaggio di programmazione usato per scrivere la classe usa spazi dei nomi, ad esempio C#. Se *class_name* viene omesso, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] presume che equivalga ad *aggregate_name*.  
   
 ## <a name="remarks"></a>Remarks  

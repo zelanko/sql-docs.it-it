@@ -15,12 +15,12 @@ ms.assetid: 8851faa6-e6df-4ea5-a6ea-2a3471680fa3
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: bd5c45f61329a63825eac983d21aca7e3106920d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 7dadf635e055a06a8f86349c73d4921c124f7f4c
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47814080"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54123801"
 ---
 # <a name="optimize-merge-replication-performance-with-download-only-articles"></a>Ottimizzazione delle prestazioni della replica di tipo merge con gli articoli di solo download
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -43,7 +43,7 @@ ms.locfileid: "47814080"
   
  Gli articoli di solo download operano insieme ai sottoscrittori client, ovvero se un articolo è progettato come di solo download, non è possibile inserire, aggiornare o eliminare righe per tale articolo nei Sottoscrittori che utilizzano sottoscrizioni client. I server di pubblicazione e i Sottoscrittori che utilizzano il tipo di sottoscrizione server (generalmente Sottoscrittori che ripubblicano dati in altri Sottoscrittori) possono inserire, aggiornare ed eliminare dati. Per altre informazioni sulle sottoscrizioni client, vedere [Sottoscrivere le pubblicazioni](../../../relational-databases/replication/subscribe-to-publications.md).  
   
- Per specificare che un articolo è di solo download, vedere [Impostazione del tipo solo download per un articolo di tabella di merge](../../../relational-databases/replication/publish/specify-that-a-merge-table-article-is-download-only.md).  
+ Per specificare che un articolo è di solo download, vedere [Specificare le proprietà per la replica di tipo merge](../../../relational-databases/replication/merge/specify-merge-replication-properties.md).  
   
 ## <a name="using-different-article-types-in-your-applications"></a>Utilizzo di tipi di articolo differenti nelle applicazioni  
  Se si analizzano i requisiti dell'applicazione in uso, è possibile valutare la soluzione migliore tra massima flessibilità e prestazioni ottimali. Le applicazioni caratterizzate da numerosi conflitti e modifiche sia nel server di pubblicazione che nei Sottoscrittori utilizzeranno, ad esempio, una pubblicazione costituita da articoli standard. Alcune applicazioni, come quelle di automazione della forza vendita (SFA), possono contenere articoli potenzialmente soggetti a conflitti e altri articoli che fungono da tabelle di ricerca e che possono essere specificati come di solo download. Le applicazioni di immissione dati, ad esempio i sistemi POS (Point Of Sales) e le applicazioni di automazione del personale esterno (FFA), spesso partizionano i dati in modo da eliminare i conflitti e non consentirne il passaggio da un Sottoscrittore all'altro. In queste situazioni una combinazione di partizioni non sovrapposte, di articoli di solo download e di partizioni pre-calcolate garantisce prestazioni e scalabilità massime. Per ulteriori informazioni sulle partizioni non sovrapposte e pre-calcolate, vedere [Filtri di riga parametrizzati](../../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md).  

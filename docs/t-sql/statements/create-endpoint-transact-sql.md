@@ -32,12 +32,12 @@ ms.assetid: 6405e7ec-0b5b-4afd-9792-1bfa5a2491f6
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: c3920cdf30575d5b51948fe7789d568a1dacc961
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 41b6c0009c2cfc3c83a4326875c13083875166b3
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47596220"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54124581"
 ---
 # <a name="create-endpoint-transact-sql"></a>CREATE ENDPOINT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -54,7 +54,7 @@ ms.locfileid: "47596220"
   
      In questa parte viene definito il payload supportato dall'endpoint. I tipi di payload supportati sono [!INCLUDE[tsql](../../includes/tsql-md.md)], SERVICE BROKER e DATABASE MIRRORING. In questa parte è inoltre possibile includere informazioni specifiche della lingua.  
   
-> **Nota:** i servizi Web XML nativi (endpoint SOAP/HTTP) sono stati eliminati in [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)].  
+> **NOTA** I servizi Web XML nativi (endpoint SOAP/HTTP) sono stati eliminati in [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)].  
   
  ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -145,10 +145,10 @@ FOR DATABASE_MIRRORING (
   
  I seguenti argomenti sono validi solo per l'opzione TCP.  
   
- LISTENER_PORT **=***listenerPort*  
+ LISTENER_PORT **=**_listenerPort_  
  Specifica il numero della porta della quale il protocollo TCP/IP di Service Broker è in attesa delle connessioni. Per convenzione, viene utilizzato il valore 4022 ma sono validi tutti i numeri compresi tra 1024 e 32767.  
   
- LISTENER_IP **=** ALL | **(***4-part-ip* **)** | **(** "* ip_address_v6*" **)**  
+ LISTENER_IP **=** ALL | **(**_4-part-ip_ **)** | **(** "*ip_address_v6*" **)**  
  Specifica l'indirizzo IP in corrispondenza del quale verrà eseguita l'attesa dell'endpoint. Il valore predefinito è ALL. Ciò significa che il listener accetterà una connessione su qualsiasi indirizzo IP valido.  
   
  Se si configura il mirroring del database con un indirizzo IP anziché con un nome di dominio completo (`ALTER DATABASE SET PARTNER = partner_IP_address` o `ALTER DATABASE SET WITNESS = witness_IP_address`), è necessario specificare `LISTENER_IP =IP_address` anziché `LISTENER_IP=ALL` quando si creano gli endpoint del mirroring.  
@@ -230,7 +230,7 @@ FOR DATABASE_MIRRORING (
  DISABLED  
  Cancella i messaggi per i servizi ubicati altrove. Impostazione predefinita.  
   
- MESSAGE_FORWARD_SIZE **=***forward_size*  
+ MESSAGE_FORWARD_SIZE **=**_forward_size_  
  Specifica lo spazio di archiviazione massimo espresso in MB da allocare per l'endpoint durante l'archiviazione dei messaggi da inoltrare.  
   
  **Opzioni di DATABASE_MIRRORING**  
