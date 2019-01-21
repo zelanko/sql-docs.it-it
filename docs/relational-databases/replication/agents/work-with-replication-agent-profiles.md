@@ -16,12 +16,12 @@ ms.assetid: 9c290a88-4e9f-4a7e-aab5-4442137a9918
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: ef9738e2c6f2f2ff89f384b1c7ff46aba39b9fa2
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: c2b1729996b53bb3419838c0ce55dc30182c467f
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52536426"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54135445"
 ---
 # <a name="work-with-replication-agent-profiles"></a>Utilizzo dei profili agenti di replica
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -63,7 +63,7 @@ ms.locfileid: "52536426"
   
     -   Eliminare un profilo  
   
--   **Completamento:** [dopo avere modificato i parametri degli agenti](#FollowUp)  
+-   **Completamento:**  [dopo avere modificato i parametri degli agenti](#FollowUp)  
   
 ##  <a name="SSMSProcedure"></a> Utilizzo di SQL Server Management Studio  
   
@@ -93,7 +93,7 @@ ms.locfileid: "52536426"
   
 1.  Se nella finestra di dialogo **Profili agenti** vengono visualizzati i profili di più agenti, selezionare un agente.  
   
-2.  Fare clic sul pulsante delle proprietà (**...**) accanto a un profilo.  
+2.  Fare clic sul pulsante delle proprietà (**…**) accanto a un profilo.  
   
 3.  Visualizzare i parametri e i valori nella finestra di dialogo **Proprietà profilo \<NomeProfilo>**.  
   
@@ -134,7 +134,7 @@ ms.locfileid: "52536426"
   
 4.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
-##  <a name="TsqlProcedure"></a> Uso di Transact-SQL  
+##  <a name="TsqlProcedure"></a> Utilizzo di Transact-SQL  
   
 ###  <a name="Create_tsql"></a> Per creare un nuovo profilo agente  
   

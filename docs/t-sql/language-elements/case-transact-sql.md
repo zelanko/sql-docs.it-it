@@ -22,18 +22,18 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ce7020eb7270ffb24f1926c165a71e8db33774e0
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: cf5737166a8613cbf20df5b6c48a720c4d366a64
+ms.sourcegitcommit: 96032813f6bf1cba680b5e46d82ae1f0f2da3d11
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52400725"
+ms.lasthandoff: 01/15/2019
+ms.locfileid: "54299680"
 ---
 # <a name="case-transact-sql"></a>CASE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
 > [!div class="nextstepaction"]
-> [Contribuisci a migliorare la documentazione di SQL Server](https://80s3ignv.optimalworkshop.com/optimalsort/36yyw5kq-0)
+> [Condividi il feedback sul sommario della documentazione SQL](https://aka.ms/sqldocsurvey)
 
 Valuta un elenco di condizioni e restituisce una tra più espressioni di risultato possibili.  
   
@@ -162,7 +162,7 @@ GO
   
 ```  
   
-### <a name="b-using-a-select-statement-with-a-searched-case-expression"></a>B. Utilizzo di un'istruzione SELECT con un'espressione CASE avanzata  
+### <a name="b-using-a-select-statement-with-a-searched-case-expression"></a>b. Utilizzo di un'istruzione SELECT con un'espressione CASE avanzata  
  In un'istruzione `SELECT` l'espressione `CASE` avanzata consente di sostituire valori nel set di risultati in base ai valori di confronto. Nell'esempio seguente viene visualizzato il prezzo di listino come commento di testo in base alla fascia di prezzi per un prodotto.  
   
 ```  

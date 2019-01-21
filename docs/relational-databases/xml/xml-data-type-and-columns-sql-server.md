@@ -11,12 +11,12 @@ ms.assetid: 00db8f21-7d4b-4347-ae43-3a7c314d2fa1
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 1b831b54ed0755c8c7ef55364bdc0f8152f22b54
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 9bf35909dee176643cfb61513da71b61264a9488
+ms.sourcegitcommit: bfa10c54e871700de285d7f819095d51ef70d997
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51662503"
+ms.lasthandoff: 01/14/2019
+ms.locfileid: "54256676"
 ---
 # <a name="xml-data-type-and-columns-sql-server"></a>Colonne e tipo di dati XML (SQL Server)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -61,9 +61,9 @@ ms.locfileid: "51662503"
   
 -   Archiviazione nativa tramite il tipo di dati **xml** .  
   
-     I dati vengono archiviati in una rappresentazione interna che mantiene il contenuto XML e che contiene informazioni sulla gerarchia di contenimento, l'ordine dei documenti e i valori dell'elemento e dell'attributo. In particolare, viene mantenuto il contenuto InfoSet dei dati XML. Per altre informazioni su InfoSet, vedere [https://www.w3.org/TR/xml-infoset](https://go.microsoft.com/fwlink/?LinkId=48843). Il contenuto InfoSet potrebbe non essere una copia identica del testo XML, perché non vengono mantenute le informazioni seguenti: spazi vuoti non significativi, ordine degli attributi, prefissi degli spazi dei nomi e dichiarazione XML.  
+     I dati vengono archiviati in una rappresentazione interna che mantiene il contenuto XML e che contiene informazioni sulla gerarchia di contenimento, l'ordine dei documenti e i valori dell'elemento e dell'attributo. In particolare, viene mantenuto il contenuto InfoSet dei dati XML. Per altre informazioni su InfoSet, vedere [http://www.w3.org/TR/xml-infoset](https://go.microsoft.com/fwlink/?LinkId=48843). Il contenuto InfoSet potrebbe non essere una copia identica del testo XML, perché non vengono mantenute le informazioni seguenti: spazi vuoti non significativi, ordine degli attributi, prefissi degli spazi dei nomi e dichiarazione XML.  
   
-     Per il tipo di dati **xml** tipizzato, un tipo di dati **xml** associato a XML Schema, PSVI (Post-Schema Validation InfoSet) aggiunge all'InfoSet le informazioni sul tipo e viene codificato nella rappresentazione interna. Questo consente di migliorare in modo significativo la velocità di analisi. Per altre informazioni, vedere le specifiche relative allo schema XML W3C su [https://www.w3.org/TR/xmlschema-1](https://go.microsoft.com/fwlink/?LinkId=48881) e [https://www.w3.org/TR/xmlschema-2](https://go.microsoft.com/fwlink/?LinkId=4871).  
+     Per il tipo di dati **xml** tipizzato, un tipo di dati **xml** associato a XML Schema, PSVI (Post-Schema Validation InfoSet) aggiunge all'InfoSet le informazioni sul tipo e viene codificato nella rappresentazione interna. Questo consente di migliorare in modo significativo la velocità di analisi. Per altre informazioni, vedere le specifiche relative allo schema XML W3C su [http://www.w3.org/TR/xmlschema-1](https://go.microsoft.com/fwlink/?LinkId=48881) e [http://www.w3.org/TR/xmlschema-2](https://go.microsoft.com/fwlink/?LinkId=4871).  
   
 -   Mapping tra archiviazione XML e relazionale  
   
@@ -115,7 +115,7 @@ ms.locfileid: "51662503"
   
  L'archiviazione XML nativa è utile quando si utilizzano documenti XML con strutture diverse oppure conformi a schemi diversi o complessi, di cui è difficile eseguire il mapping a strutture relazionali.  
   
-#### <a name="example-modeling-xml-data-using-the-xml-data-type"></a>Esempio: modellazione di dati XML tramite il tipo di dati xml  
+#### <a name="example-modeling-xml-data-using-the-xml-data-type"></a>Esempio: modellazione di dati XML tramite il tipo di dati XML  
  Si consideri un manuale di prodotto in formato XML, composto da un capitolo per ogni argomento e con più sezioni in ogni capitolo. Una sezione può contenere sottosezioni e, di conseguenza, l'elemento \<sezione> è ricorsivo. I manuali dei prodotti includono elevati volumi di contenuto eterogeneo, ad esempio diagrammi e materiale tecnico, e i dati sono semistrutturati. Gli utenti possono avere l'esigenza di ricercare gli argomenti di interesse in un contesto specifico, ad esempio la sezione dedicata agli indici cluster nel capitolo dedicato all'indicizzazione, e di eseguire query su quantità tecniche.  
   
  Una colonna con tipo di dati **xml** costituisce un modello di archiviazione particolarmente appropriato per i documenti XML, perché mantiene il contenuto InfoSet dei dati XML. È possibile indicizzare la colonna XML per migliorare le prestazioni delle query.  

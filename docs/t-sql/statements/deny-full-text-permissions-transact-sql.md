@@ -19,12 +19,12 @@ ms.assetid: d86e9a1d-0938-4ec2-a169-2d0564f3642e
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: fd7cf407f3634824f18137ec4539c56d930221c0
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e6818a3ea8879b0fe49743e83261e120894cc359
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47800199"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54130751"
 ---
 # <a name="deny-full-text-permissions-transact-sql"></a>DENY - autorizzazioni per il catalogo full-text (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -52,10 +52,10 @@ DENY permission [ ,...n ] ON
  *permission*  
  Nome di un'autorizzazione. I mapping validi tra le autorizzazioni e le entità a protezione diretta sono descritti nella sezione "Osservazioni" più avanti in questo argomento.  
   
- ON FULLTEXT CATALOG **::***full-text_catalog_name*  
+ ON FULLTEXT CATALOG **::**_full-text_catalog_name_  
  Specifica il catalogo full-text per cui viene negata l'autorizzazione. Il qualificatore di ambito **::** è obbligatorio.  
   
- ON FULLTEXT STOPLIST **::***full-text_stoplist_name*  
+ ON FULLTEXT STOPLIST **::**_full-text_stoplist_name_  
  Specifica l'elenco di parole non significative full-text per cui viene negata l'autorizzazione. Il qualificatore di ambito **::** è obbligatorio.  
   
  *database_principal*  
@@ -65,7 +65,7 @@ DENY permission [ ,...n ] ON
   
 -   ruolo del database  
   
--   ruolo dell'applicazione  
+-   ruolo applicazione  
   
 -   utente del database sul quale viene eseguito il mapping a un account di accesso di Windows  
   
@@ -87,7 +87,7 @@ DENY permission [ ,...n ] ON
   
 -   ruolo del database  
   
--   ruolo dell'applicazione  
+-   ruolo applicazione  
   
 -   utente del database sul quale viene eseguito il mapping a un account di accesso di Windows  
   

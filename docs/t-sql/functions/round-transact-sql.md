@@ -20,18 +20,18 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 610540ad2c85f58169248cac8f09b77e5b3b4ade
-ms.sourcegitcommit: b58d514879f182fac74d9819918188f1688889f3
+ms.openlocfilehash: 002b2036c1d0c78d67b3278cd3932338ba4f4c9d
+ms.sourcegitcommit: 96032813f6bf1cba680b5e46d82ae1f0f2da3d11
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "50970203"
+ms.lasthandoff: 01/15/2019
+ms.locfileid: "54299638"
 ---
 # <a name="round-transact-sql"></a>ROUND (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
 > [!div class="nextstepaction"]
-> [Contribuisci a migliorare la documentazione di SQL Server](https://80s3ignv.optimalworkshop.com/optimalsort/36yyw5kq-0)
+> [Condividi il feedback sul sommario della documentazione SQL](https://aka.ms/sqldocsurvey)
 
 Restituisce un valore numerico arrotondato alla lunghezza o alla precisione specificata.  
   
@@ -100,7 +100,7 @@ GO
 123.9990    124.0000      
 ```  
   
-### <a name="b-using-round-and-rounding-approximations"></a>B. Utilizzo della funzione ROUND e delle approssimazioni di arrotondamento  
+### <a name="b-using-round-and-rounding-approximations"></a>b. Utilizzo della funzione ROUND e delle approssimazioni di arrotondamento  
  Nell'esempio seguente vengono illustrati l'arrotondamento e l'approssimazione.  
   
 ```  

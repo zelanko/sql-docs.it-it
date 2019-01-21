@@ -17,12 +17,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 0c77e32b019f9b801daaa58e480d4825725f15e8
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: d1f2c1cc7c40e3992f2cd28a777b48e0f927cf87
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51697262"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54135851"
 ---
 # <a name="database-engine-scripting"></a>Script del motore di database
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -62,7 +62,7 @@ ms.locfileid: "51697262"
   
 -   Usare il menu di [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] **File**/**Apri** per aprire il file in una nuova finestra dell'editor di query del [!INCLUDE[ssDE](../../includes/ssde-md.md)] .  
   
--   Usare il parametro **-i***input_file* per eseguire il file con l'utilità **sqlcmd**.  
+-   Usare il parametro **-i**_input_file_ per eseguire il file con l'utilità **sqlcmd** .  
   
 -   Usare il parametro **-QueryFromFile** per eseguire il file con il cmdlet **Invoke-Sqlcmd** negli script di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] PowerShell.  
   

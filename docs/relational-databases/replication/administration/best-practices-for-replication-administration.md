@@ -14,16 +14,16 @@ ms.assetid: 850e8a87-b34c-4934-afb5-a1104f118ba8
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 791c9fc5b7a411a094d6fedc8aa16290baeea234
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: aaf073341709e2c612f89d70f566f3b2dd09283d
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47763349"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54130331"
 ---
 # <a name="best-practices-for-replication-administration"></a>Procedure consigliate per l'amministrazione della replica
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  Dopo aver configurato la replica, è importante comprendere in che modo amministrare una topologia di replica. In questo argomento sono contenute procedure consigliate di base relative a diverse aree, con collegamenti ad altre informazioni per ogni area. Oltre ad attenersi a tali procedure, provare a familiarizzare con domande e problemi comuni leggendo l'argomento [Domande frequenti per gli amministratori di replica](../../../relational-databases/replication/administration/frequently-asked-questions-for-replication-administrators.md).  
+  Dopo aver configurato la replica, è importante comprendere in che modo amministrare una topologia di replica. In questo argomento sono contenute procedure consigliate di base relative a diverse aree, con collegamenti ad altre informazioni per ogni area. Oltre ad attenersi a tali procedure, provare a familiarizzare con domande e problemi comuni leggendo: [Domande frequenti per gli amministratori di replica](../../../relational-databases/replication/administration/frequently-asked-questions-for-replication-administrators.md).  
   
  È preferibile suddividere le procedure consigliate in due aree:  
   
@@ -88,7 +88,7 @@ ms.locfileid: "47763349"
   
 -   Parametri degli agenti  
   
--   Maintenance  
+-   Manutenzione  
   
  Dopo aver configurato la replica, è consigliabile sviluppare dati di riferimento per le prestazioni in modo da poter stabilire il comportamento della replica in presenza del carico di lavoro tipico delle applicazioni e della topologia in uso. Utilizzare Monitoraggio replica e Monitor di sistema per stabilire i valori tipici per le cinque dimensioni seguenti delle prestazioni della replica:  
   
@@ -114,16 +114,16 @@ ms.locfileid: "47763349"
 ## <a name="monitor-the-replication-topology"></a>Monitorare la topologia di replica  
  Dopo aver impostato la topologia di replica e aver configurato soglie e avvisi, è consigliabile monitorare regolarmente la replica. Il monitoraggio di una topologia di replica rappresenta un aspetto essenziale della distribuzione di una replica. Dato che l'attività di replica viene distribuita, è fondamentale monitorarne l'attività e lo stato su tutti i computer interessati. Per monitorare la replica è possibile utilizzare gli strumenti seguenti:  
   
--   Monitoraggio replica è lo strumento più importante per il monitoraggio di una replica in quanto consente di controllare lo stato generale di una topologia di replica. Per altre informazioni, vedere [Monitoring Replication](../../../relational-databases/replication/monitor/monitoring-replication-overview.md).  
+-   Monitoraggio replica è lo strumento più importante per il monitoraggio di una replica in quanto consente di controllare lo stato generale di una topologia di replica. Per altre informazioni, vedere [Monitoring Replication](../../../relational-databases/replication/monitor/monitoring-replication.md).  
   
--   [!INCLUDE[tsql](../../../includes/tsql-md.md)] e gli oggetti RMO (Replication Management Objects) includono interfacce per il monitoraggio della replica. Per altre informazioni, vedere [Monitoring Replication](../../../relational-databases/replication/monitor/monitoring-replication-overview.md).  
+-   [!INCLUDE[tsql](../../../includes/tsql-md.md)] e gli oggetti RMO (Replication Management Objects) includono interfacce per il monitoraggio della replica. Per altre informazioni, vedere [Monitoring Replication](../../../relational-databases/replication/monitor/monitoring-replication.md).  
   
 -   Il monitoraggio delle prestazioni della replica può essere effettuato anche mediante Monitor di sistema. Per altre informazioni, vedere [Monitoring Replication with System Monitor](../../../relational-databases/replication/monitor/monitoring-replication-with-system-monitor.md).  
   
 ## <a name="validate-data-periodically"></a>Convalidare i dati periodicamente  
  La procedura di convalida non è richiesta per la replica, ma è consigliabile eseguirla periodicamente per quella transazionale e di tipo merge. Tale procedura consente di verificare che i dati nel Sottoscrittore corrispondano ai dati nel server di pubblicazione. Una convalida riuscita indica che in quel particolare momento tutte le modifiche del server di pubblicazione sono state replicate nel Sottoscrittore (e dal Sottoscrittore nel server di pubblicazione se il Sottoscrittore supporta gli aggiornamenti) e che i due database sono sincronizzati.  
   
- È consigliabile eseguire la convalida in base alla pianificazione del backup del database di pubblicazione. Se, ad esempio, per il database di pubblicazione è stato impostato un backup completo ogni settimana, è possibile eseguire una convalida ogni settimana al termine del backup. Per altre informazioni, vedere [Convalidare i dati replicati](../../../relational-databases/replication/validate-replicated-data.md).  
+ È consigliabile eseguire la convalida in base alla pianificazione del backup del database di pubblicazione. Se, ad esempio, per il database di pubblicazione è stato impostato un backup completo ogni settimana, è possibile eseguire una convalida ogni settimana al termine del backup. Per altre informazioni, vedere [Convalidare i dati replicati](../../../relational-databases/replication/validate-data-at-the-subscriber.md).  
   
 ## <a name="use-agent-profiles-to-change-agent-parameters-if-necessary"></a>Utilizzare i profili agenti per modificare i parametri dell'agente, se necessario  
  I profili agenti consentono di impostare facilmente i parametri dell'agente di replica. È inoltre possibile specificare tali parametri dalla riga di comando dell'agente, sebbene sia generalmente più corretto utilizzare un profilo agente predefinito oppure creare un nuovo profilo se è necessario modificare il valore di un parametro. Se, ad esempio, si utilizza la replica di tipo merge e un Sottoscrittore passa da una connessione a banda larga a una connessione remota, provare a utilizzare il profilo a **collegamento lento** per l'agente di merge. Tale profilo utilizza un set di parametri che sono più adatti per il collegamento di comunicazione più lento. Per altre informazioni, vedere [Replication Agent Profiles](../../../relational-databases/replication/agents/replication-agent-profiles.md).  
@@ -150,6 +150,6 @@ ms.locfileid: "47763349"
  Per altre informazioni, vedere [Apportare modifiche allo schema nei database di pubblicazione](../../../relational-databases/replication/publish/make-schema-changes-on-publication-databases.md).  
   
 ## <a name="see-also"></a>Vedere anche  
- [Amministrazione &#40;Replica&#41;](../../../relational-databases/replication/administration/administration-replication.md)  
+ [Domande frequenti sull'amministrazione della replica](../../../relational-databases/replication/administration/frequently-asked-questions-for-replication-administrators.md)  
   
   

@@ -16,14 +16,17 @@ ms.assetid: 5fc4f6d1-1f6f-444e-9aeb-827f85e1c405
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: ab2820f37466cfd14a9d29791a7999a70b48dade
-ms.sourcegitcommit: b1990ec4491b5a8097c3675334009cb2876673ef
+ms.openlocfilehash: ed4bb739f6ca74e5e0744af1ed40b37196995213
+ms.sourcegitcommit: 96032813f6bf1cba680b5e46d82ae1f0f2da3d11
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/17/2018
-ms.locfileid: "49383576"
+ms.lasthandoff: 01/15/2019
+ms.locfileid: "54299058"
 ---
 # <a name="start-the-sql-server-import-and-export-wizard"></a>Avviare l'Importazione/Esportazione guidata SQL Server
+
+  > [!div class="nextstepaction"]
+  > [Condividi il feedback sul sommario della documentazione SQL](https://aka.ms/sqldocsurvey)
 
 Avviare l'Importazione/Esportazione guidata [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in uno dei modi descritti in questo argomento per importare ed esportare dati da qualsiasi origine dati supportata.
 
@@ -116,7 +119,7 @@ Se si vuole eseguire la procedura guidata, ma [!INCLUDE[msCoName](../../includes
 
     -   **Se si preferisce visualizzare screenshot.** Esaminare questo semplice esempio end-to-end in una singola pagina: [Iniziare con questo semplice esempio dell'Importazione/Esportazione guidata](../../integration-services/import-export-data/get-started-with-this-simple-example-of-the-import-and-export-wizard.md).
 
-    -   **Se si preferisce guardare un video.** Questo video di YouTube della durata di quattro minuti illustra la procedura guidata e descrive come importare ed esportare dati in Excel con istruzioni chiare e semplici: [Using the SQL Server Import and Export Wizard to Export to Excel](https://go.microsoft.com/fwlink/?linkid=829049) (Uso dell'Importazione/Esportazione guidata SQL Server per l'esportazione in Excel).
+    -   **Se si preferisce guardare un video.** Questo video di YouTube della durata di quattro minuti illustra la procedura guidata e descrive come importare ed esportare dati in Excel con istruzioni chiare e semplici: [Uso dell'Importazione/Esportazione guidata SQL Server per l'esportazione in Excel](https://go.microsoft.com/fwlink/?linkid=829049) .
 
 -   **Altre informazioni sul funzionamento della procedura guidata.**
 

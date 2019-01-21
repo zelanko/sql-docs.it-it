@@ -22,12 +22,12 @@ ms.assetid: 895b1ad7-ffb9-4a5c-bda6-e1dfbd56d9bf
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 8d10759ad75dd1df48aa3f59d3c17ab9f632755d
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: e58d15af6605a8b50440fcff6e181a39c58098f4
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52539192"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54134368"
 ---
 # <a name="enhance-general-replication-performance"></a>Miglioramento delle prestazioni generali della replica
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -78,7 +78,7 @@ ms.locfileid: "52539192"
   
     -   Per la replica di tipo merge, può essere più conveniente utilizzare i gestori delle logiche di business. Per altre informazioni, vedere [Eseguire logiche di business durante la sincronizzazione di tipo merge](../../../relational-databases/replication/merge/execute-business-logic-during-merge-synchronization.md).  
   
-     Se si utilizzano trigger per mantenere l'integrità referenziale in tabelle pubblicate per la replica di tipo merge, specificare l'ordine di elaborazione delle tabelle in modo da ridurre il numero di tentativi necessari per l'agente di merge. Per altre informazioni, vedere [Specificare l'ordine di elaborazione degli articoli di merge](../../../relational-databases/replication/merge/specify-the-processing-order-of-merge-articles.md).  
+     Se si utilizzano trigger per mantenere l'integrità referenziale in tabelle pubblicate per la replica di tipo merge, specificare l'ordine di elaborazione delle tabelle in modo da ridurre il numero di tentativi necessari per l'agente di merge. Per altre informazioni, vedere [Specify merge replication options](../../../relational-databases/replication/merge/specify-merge-replication-properties.md) (Specificare le opzioni per la replica di tipo merge).  
   
 -   Limitare l'utilizzo dei tipi di dati LOB (Large Object).  
   
@@ -118,7 +118,7 @@ ms.locfileid: "52539192"
   
      Se è necessario inviare ai Sottoscrittori quantità di modifiche elevate, può essere più conveniente reinizializzarle tutte con un nuovo snapshot anziché utilizzare la replica per spostare le singole modifiche. Per altre informazioni, vedere [Reinizializzare le sottoscrizioni](../../../relational-databases/replication/reinitialize-subscriptions.md).  
   
-     Per la replica transazionale, nella scheda **Comandi non distribuiti** di Monitoraggio replica vengono visualizzate informazioni relative al numero di transazioni presenti nel database di distribuzione e non ancora distribuite in un Sottoscrittore e al tempo stimato per la relativa distribuzione. Per altre informazioni, vedere [Visualizzare le informazioni ed eseguire attività relative agli agenti associati a una sottoscrizione &#40;Monitoraggio replica&#41;](../../../relational-databases/replication/monitor/view-information-and-perform-tasks-for-subscription-agents.md).  
+     Per la replica transazionale, nella scheda **Comandi non distribuiti** di Monitoraggio replica vengono visualizzate informazioni relative al numero di transazioni presenti nel database di distribuzione e non ancora distribuite in un Sottoscrittore e al tempo stimato per la relativa distribuzione. Per altre informazioni, vedere [Visualizzare le informazioni ed eseguire attività usando Monitoraggio replica](../../../relational-databases/replication/monitor/view-information-and-perform-tasks-replication-monitor.md).  
   
 ## <a name="snapshot-considerations"></a>Considerazioni sugli snapshot  
   
@@ -144,8 +144,7 @@ ms.locfileid: "52539192"
   
      La compressione dei file di snapshot nella cartella snapshot alternativa può ridurre i requisiti di archiviazione su disco degli snapshot e semplificare il trasferimento dei file di snapshot sui supporti rimovibili.  
   
-     Gli snapshot compressi, in alcuni casi, consentono di migliorare le prestazioni relative al trasferimento di file di snapshot in rete. La compressione dello snapshot richiede, tuttavia, un'ulteriore elaborazione da parte dell'agente snapshot per la generazione dei file di snapshot e da parte dell'agente di distribuzione o dell'agente di merge per l'applicazione di tali file. Questo può rallentare il processo di generazione degli snapshot e, in alcuni casi, aumentare il tempo necessario per applicarli. Inoltre, poiché non è possibile riprendere gli snapshot compressi in caso di errore della rete, tali snapshot non sono adatti per le reti non affidabili. Quando si utilizzano snapshot compressi in rete, è necessario considerare tutti i pro e contro. Per ulteriori informazioni, vedere [Alternate Snapshot Folder Locations](../../../relational-databases/replication/alternate-snapshot-folder-locations.md) e [Compressed Snapshots](../../../relational-databases/replication/compressed-snapshots.md).  
-  
+     Gli snapshot compressi, in alcuni casi, consentono di migliorare le prestazioni relative al trasferimento di file di snapshot in rete. La compressione dello snapshot richiede, tuttavia, un'ulteriore elaborazione da parte dell'agente snapshot per la generazione dei file di snapshot e da parte dell'agente di distribuzione o dell'agente di merge per l'applicazione di tali file. Questo può rallentare il processo di generazione degli snapshot e, in alcuni casi, aumentare il tempo necessario per applicarli. Inoltre, poiché non è possibile riprendere gli snapshot compressi in caso di errore della rete, tali snapshot non sono adatti per le reti non affidabili. Quando si utilizzano snapshot compressi in rete, è necessario considerare tutti i pro e contro. Per altre informazioni, vedere [Modificare le opzioni snapshot](../../../relational-databases/replication/snapshot-options.md). 
 -   Provare a inizializzare una sottoscrizione manualmente.  
   
      In alcuni scenari, ad esempio quelli che comportano l'utilizzo di set di dati iniziali di grandi dimensioni, è preferibile inizializzare una sottoscrizione utilizzando un metodo diverso dallo snapshot. Per altre informazioni, vedere [Inizializzazione di una sottoscrizione transazionale senza uno snapshot](../../../relational-databases/replication/initialize-a-transactional-subscription-without-a-snapshot.md).  
@@ -154,11 +153,11 @@ ms.locfileid: "52539192"
   
 -   Ridurre i livelli di dettaglio degli agenti di replica eccetto durante le operazioni iniziali di verifica, monitoraggio o debug.  
   
-     Ridurre i parametri **-HistoryVerboseLevel** e **-OutputVerboseLevel** degli agenti di distribuzione o di merge. per ridurre il numero di nuove righe inserite ai fini del rilevamento della cronologia e dell'output degli agenti. I messaggi precedenti sulla cronologia con lo stesso stato vengono invece aggiornati in base alle nuove informazioni relative alla cronologia. Aumentare i livelli di dettaglio ai fini della verifica, del monitoraggio e del debug in modo da ottenere il maggior numero possibile di informazioni sull'attività degli agenti.  
+     Ridurre i parametri **–HistoryVerboseLevel** e **–OutputVerboseLevel** degli agenti di distribuzione o di merge. per ridurre il numero di nuove righe inserite ai fini del rilevamento della cronologia e dell'output degli agenti. I messaggi precedenti sulla cronologia con lo stesso stato vengono invece aggiornati in base alle nuove informazioni relative alla cronologia. Aumentare i livelli di dettaglio ai fini della verifica, del monitoraggio e del debug in modo da ottenere il maggior numero possibile di informazioni sull'attività degli agenti.  
   
--   Usare il parametro **-MaxBCPThreads** dell'agente snapshot, dell'agente di merge e dell'agente di distribuzione in modo che il numero di thread specificati non superi il numero di processori installati nel computer. Questo parametro specifica il numero di operazioni di copia bulk che è possibile eseguire in parallelo quando lo snapshot viene creato e applicato.  
+-   Usare il parametro **–MaxBCPThreads** dell'agente snapshot, dell'agente di merge e dell'agente di distribuzione in modo che il numero di thread specificati non superi il numero di processori installati nel computer. Questo parametro specifica il numero di operazioni di copia bulk che è possibile eseguire in parallelo quando lo snapshot viene creato e applicato.  
   
--   Usare il parametro **-UseInprocLoader** dell'agente di distribuzione e dell'agente di merge, tenendo presente che non è possibile usarlo se le tabelle pubblicate includono colonne XML. Grazie alla specifica di tale parametro, l'agente utilizzerà il comando BULK INSERT al momento dell'applicazione dello snapshot.  
+-   Usare il parametro **–UseInprocLoader** dell'agente di distribuzione e dell'agente di merge, tenendo presente che non è possibile usarlo se le tabelle pubblicate includono colonne XML. Grazie alla specifica di tale parametro, l'agente utilizzerà il comando BULK INSERT al momento dell'applicazione dello snapshot.  
   
  I parametri degli agenti possono essere specificati nei profili agente e dalla riga di comando. Per altre informazioni, vedere:  
   

@@ -16,12 +16,12 @@ ms.assetid: 0d5d2742-2614-43de-9ab9-864addb6299b
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: f35ed02444cc1fc4773eec528af73df76cde5bb5
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 7f238b5b31c4e354562091bb80768b7db1e9af5c
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52534677"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54131851"
 ---
 # <a name="connect-clients-to-a-database-mirroring-session-sql-server"></a>Connessione di client a una sessione di mirroring del database (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -88,7 +88,7 @@ Network=dbnmpntw;
 #### <a name="server-attribute"></a>Attributo Server  
  La stringa di connessione deve includere un attributo **Server** indicante il nome partner iniziale, che dovrebbe identificare l'istanza del server principale corrente.  
   
- Il modo più semplice per identificare l'istanza del server è specificarne il nome, *<nome_server>*[**\\***<nome_istanza_SQL_Server>*]. Ad esempio  
+ Il modo più semplice per identificare l'istanza del server è specificarne il nome, *<nome_server>*[**\\**_<nome_istanza_SQL_Server>_]. Esempio:  
   
  `Server=Partner_A;`  
   
@@ -132,7 +132,7 @@ Server=123.34.45.56,4724;
 |Driver ODBC|**Failover_Partner**|  
 |ADO (ActiveX Data Objects)|**Partner di failover**|  
   
- Il modo più semplice per identificare l'istanza del server è tramite il relativo nome di sistema, *<nome_server>*[**\\***<nome_istanza_SQL_Server>*].  
+ Il modo più semplice per identificare l'istanza del server è tramite il nome di sistema, *<nome_server>*[**\\**_\<nome_istanza_SQL_Server>_].  
   
  In alternativa, è possibile specificare l'indirizzo IP e il numero di porta nell'attributo **Partner di failover** . Se il tentativo di connessione iniziale non riesce durante la prima connessione al database, il tentativo di connessione al partner di failover non dovrà più utilizzare necessariamente il DNS e SQL Server Browser. Una volta stabilita una connessione, il nome partner di failover sarà sovrascritto dal nome partner di failover. In questo modo, se si verifica un failover, le connessioni reindirizzate richiederanno il DNS e SQL Server Browser.  
   
@@ -169,7 +169,7 @@ Server=123.34.45.56,4724;
   
  Il tempo di riesecuzione dei tentativi viene calcolato mediante la formula seguente:  
   
- *RetryTime* **=** *PreviousRetryTime* **+(** 0,08 **\****LoginTimeout***)**  
+ _RetryTime_ **=** _PreviousRetryTime_ **+(** 0,08 **&#42;**_LoginTimeout_**)**  
   
  Dove *PreviousRetryTime* è inizialmente pari a 0.  
   
@@ -177,10 +177,10 @@ Server=123.34.45.56,4724;
   
 |Arrotondamento|Calcolo*RetryTime* |Tempo di riesecuzione per tentativo|  
 |-----------|-----------------------------|----------------------------|  
-|1|0 **+(** 0.08 **\*** 15 **)**|1,2 secondi|  
-|2|1.2 **+(** 0.08 **\*** 15 **)**|2,4 secondi|  
-|3|2.4 **+(** 0.08 **\*** 15 **)**|3,6 secondi|  
-|4|3.6 **+(** 0.08 **\*** 15 **)**|4,8 secondi|  
+|1|0 **+(** 0,08 **&#42;** 15 **)**|1,2 secondi|  
+|2|1,2 **+(** 0,08 **&#42;** 15 **)**|2,4 secondi|  
+|3|2,4 **+(** 0,08 **&#42;** 15 **)**|3,6 secondi|  
+|4|3,6 **+(** 0,08 **&#42;** 15 **)**|4,8 secondi|  
   
  Nella figura seguente vengono illustrati questi tempi di riesecuzione dei tentativi di connessione successivi, per ognuno dei quali si verifica il timeout.  
   

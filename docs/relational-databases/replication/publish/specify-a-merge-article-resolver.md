@@ -15,32 +15,19 @@ ms.assetid: a40083b3-4f7b-4a25-a5a3-6ef67bdff440
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: ef65d698db19d1ada3c9c5260f19fa39c4140e95
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 216387f82df57f8f3485ba95566fecf36c0ca897
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47821939"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54136001"
 ---
 # <a name="specify-a-merge-article-resolver"></a>Impostazione di un sistema di risoluzione dei conflitti dell'articolo di merge
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   In questo argomento viene descritto come specificare un sistema di risoluzione dell'articolo di merge in [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] tramite [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../../includes/tsql-md.md)].  
+
   
- **Contenuto dell'argomento**  
-  
--   **Prima di iniziare:**  
-  
-     [Indicazioni](#Recommendations)  
-  
--   **Per specificare un sistema di risoluzione dell'articolo di merge, utilizzando**  
-  
-     [SQL Server Management Studio](#SSMSProcedure)  
-  
-     [Transact-SQL](#TsqlProcedure)  
-  
-##  <a name="BeforeYouBegin"></a> Prima di iniziare  
-  
-###  <a name="Recommendations"></a> Indicazioni  
+##  <a name="recommendations"></a>Indicazioni  
   
 -   La replica di tipo merge consente i tipi di sistemi di risoluzione dei conflitti dell'articolo indicati di seguito:  
   
@@ -112,7 +99,7 @@ ms.locfileid: "47821939"
     > [!NOTE]  
     >  Il percorso di installazione predefinito del file eseguibile dell'agente di merge è [!INCLUDE[ssInstallPath](../../../includes/ssinstallpath-md.md)]COM.  
   
-#### <a name="to-specify-a-custom-resolver-when-defining-a-merge-article"></a>Per specificare un sistema di risoluzione personalizzato durante la definizione di un articolo di merge  
+## <a name="specify-a-custom-resolver-when-defining-a-merge-article"></a>Specificare un sistema di risoluzione personalizzato durante la definizione di un articolo di merge  
   
 1.  Se si intende utilizzare un sistema di risoluzione dei conflitti personalizzato, crearlo e registrarlo utilizzando la procedura sopra riportata.  
   
@@ -120,7 +107,7 @@ ms.locfileid: "47821939"
   
 3.  Nel database di pubblicazione del server di pubblicazione eseguire [sp_addmergearticle &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md). Specificare il nome del sistema di risoluzione ottenuto al passaggio 2 per **@article_resolver** ed eventuale input obbligatorio per il sistema di risoluzione personalizzato utilizzando il parametro **@resolver_info** . Per sistemi di risoluzione personalizzati basati su stored procedure, **@resolver_info** corrisponde al nome della stored procedure. Per altre informazioni sull'input richiesto per i sistemi di risoluzione dei conflitti forniti da [!INCLUDE[msCoName](../../../includes/msconame-md.md)], vedere [Sistemi di risoluzione dei conflitti basati su Microsoft COM](../../../relational-databases/replication/merge/advanced-merge-replication-conflict-com-based-resolvers.md).  
   
-#### <a name="to-specify-or-change-a-custom-resolver-for-an-existing-merge-article"></a>Per specificare o modificare un sistema di risoluzione personalizzato per un articolo di merge esistente  
+## <a name="specify-or-change-a-custom-resolver-for-an-existing-merge-article"></a>Specificare o modificare un sistema di risoluzione personalizzato per un articolo di merge esistente  
   
 1.  Per determinare se per un articolo è stato definito un sistema di risoluzione personalizzato oppure per ottenere il nome del sistema di risoluzione, eseguire [sp_helpmergearticle &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-helpmergearticle-transact-sql.md). Se per l'articolo è stato definito un sistema di risoluzione personalizzato, il relativo nome verrà visualizzato nel campo **article_resolver** . Eventuale input fornito al sistema di risoluzione verrà visualizzato nel campo **resolver_info** del set di risultati.  
   
@@ -130,7 +117,7 @@ ms.locfileid: "47821939"
   
 4.  Per modificare l'eventuale input richiesto per il sistema di risoluzione personalizzato, eseguire nuovamente [sp_changemergearticle &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql.md). Specificare il valore **resolver_info** per **@property** ed eventuale input obbligatorio per il sistema di risoluzione personalizzato per **@value**. Per sistemi di risoluzione personalizzati basati su stored procedure, **@resolver_info** corrisponde al nome della stored procedure. Per altre informazioni sull'input richiesto, vedere [Sistemi di risoluzione dei conflitti basati su Microsoft COM](../../../relational-databases/replication/merge/advanced-merge-replication-conflict-com-based-resolvers.md).  
   
-#### <a name="to-unregister-a-custom-conflict-resolver"></a>Per annullare la registrazione di un sistema di risoluzione dei conflitti personalizzato  
+## <a name="unregister-a-custom-conflict-resolver"></a>Annullare la registrazione di un sistema di risoluzione dei conflitti personalizzato  
   
 1.  Nel server di pubblicazione eseguire [sp_enumcustomresolvers &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-enumcustomresolvers-transact-sql.md) e prendere nota del nome del sistema di risoluzione personalizzato da rimuovere nel campo **value** del set di risultati.  
   

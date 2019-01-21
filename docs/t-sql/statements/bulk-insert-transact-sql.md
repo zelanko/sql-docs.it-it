@@ -27,18 +27,18 @@ ms.assetid: be3984e1-5ab3-4226-a539-a9f58e1e01e2
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: ace2295a1d8d75b9311597f25c99540c4090ce6e
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: 8d0dd1d58614f24e33f8fd7afdda43db2114fec6
+ms.sourcegitcommit: 96032813f6bf1cba680b5e46d82ae1f0f2da3d11
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51703899"
+ms.lasthandoff: 01/15/2019
+ms.locfileid: "54300378"
 ---
 # <a name="bulk-insert-transact-sql"></a>BULK INSERT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
 > [!div class="nextstepaction"]
-> [Contribuisci a migliorare la documentazione di SQL Server](https://80s3ignv.optimalworkshop.com/optimalsort/36yyw5kq-0)
+> [Condividi il feedback sul sommario della documentazione SQL](https://aka.ms/sqldocsurvey)
 
 Importa un file di dati in una tabella o una vista di database in un formato specificato dall'utente in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
 
@@ -93,7 +93,7 @@ BULK INSERT
  *table_name*  
  Nome della tabella o della vista in cui eseguire l'importazione bulk dei dati. È possibile utilizzare solo le viste in cui tutte le colonne fanno riferimento alla stessa tabella di base. Per altre informazioni sulle restrizioni per il caricamento dei dati nelle viste, vedere [INSERT &#40;Transact-SQL&#41;](../../t-sql/statements/insert-transact-sql.md).  
   
- **'** *data_file* **'**  
+ **'** _data_file_ **'**  
  Percorso completo del file contenente i dati da importare nella tabella o nella vista specificata. L'istruzione BULK INSERT consente di importare dati da un disco, ad esempio unità di rete, dischi floppy, dischi rigidi e così via.   
  
  *data_file* deve specificare un percorso valido dal server in cui è in esecuzione [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Se *data_file* corrisponde a un file remoto, è necessario specificare il nome UNC (Universal Naming Convention). Il formato del nome UNC è \\\\*NomeSistema*\\*NomeCondivisione*\\*Percorso*\\*NomeFile*. Ad esempio   
@@ -110,7 +110,7 @@ A partire da [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1, dat
 > Il database SQL di Azure non supporta la lettura da file di Windows.
 
 
-**'** *data_source_name* **'**   
+**'** _data_source_name_ **'**   
 **Si applica a:** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1.   
 Origine dati esterna denominata che punta alla posizione dell'archiviazione BLOB di Azure del file che verrà importato. L'origine dati esterna deve essere creata tramite l'opzione `TYPE = BLOB_STORAGE` aggiunta in [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1. Per altre informazioni, vedere [CREATE EXTERNAL DATA SOURCE](../../t-sql/statements/create-external-data-source-transact-sql.md).    
  
@@ -120,7 +120,7 @@ FROM 'data/orders.dat'
 WITH ( DATA_SOURCE = 'MyAzureBlobStorageAccount');
 ```
 
- BATCHSIZE **=***batch_size*  
+ BATCHSIZE **=**_batch_size_  
  Specifica il numero di righe in un batch. Ogni batch viene copiato nel server come singola transazione. In caso di errori, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] esegue il commit o il rollback della transazione per ogni batch. Per impostazione predefinita, tutti i dati inclusi nel file di dati specificato costituiscono un batch. Per alcune considerazioni relative alle prestazioni, vedere la sezione "Osservazioni" di seguito in questo argomento.  
   
  CHECK_CONSTRAINTS  
@@ -136,7 +136,7 @@ WITH ( DATA_SOURCE = 'MyAzureBlobStorageAccount');
 > [!NOTE]  
 >  L'opzione MAXERRORS non viene applicata al controllo dei vincoli.  
   
- CODEPAGE **=** { **'** ACP **'** | **'** OEM **'** | **'** RAW **'** | **'***code_page***'** }  
+ CODEPAGE **=** { **'** ACP **'** | **'** OEM **'** | **'** RAW **'** | **'**_code_page_**'** }  
  Specifica la tabella codici dei dati contenuti nel file di dati. CODEPAGE è pertinente solo se i dati contengono colonne di tipo **char**, **varchar** o **text** con valori carattere maggiori di **127** o minori di **32**.  
 
 ```sql
@@ -156,7 +156,7 @@ WITH ( CODEPAGE=65001 ); -- UTF-8 encoding
 |ACP|Le colonne con tipo di dati **char**, **varchar** o **text** vengono convertire dalla tabella codici [!INCLUDE[vcpransi](../../includes/vcpransi-md.md)]/[!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows (ISO 1252) a quella di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |OEM (predefinito)|Le colonne con tipo di dati **char**, **varchar** o **text** vengono convertire dalla tabella codici OEM di sistema a quella di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |RAW|Non viene eseguita alcuna conversione da una tabella codici a un'altra. Si tratta dell'opzione più rapida.|  
-|*code_page*|Numero specifico della tabella codici, ad esempio 850.<br /><br /> **\*\* Importante \*\*** Le versioni precedenti a [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] non supportano la tabella codici 65001 (codifica UTF-8).|  
+|*code_page*|Numero specifico della tabella codici, ad esempio 850.<br /><br /> **&#42;&#42; Importante &#42;&#42;** Le versioni precedenti a [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] non supportano la tabella codici 65001 (codifica UTF-8).|  
   
  DATAFILETYPE **=** { **'char'** | **'native'** | **'widechar'** | **'widenative'** }  
  Specifica che l'operazione di importazione viene eseguita tramite BULK INSERT utilizzando il valore specificato per il tipo di file di dati.  
@@ -168,7 +168,7 @@ WITH ( CODEPAGE=65001 ); -- UTF-8 encoding
 |**widechar**|Caratteri Unicode.<br /><br /> Per altre informazioni, vedere [Usare il formato carattere Unicode per importare o esportare dati &#40;SQL Server&#41;](../../relational-databases/import-export/use-unicode-character-format-to-import-or-export-data-sql-server.md).|  
 |**widenative**|Tipi di dati nativi (database), ad eccezione delle colonne di tipo **char**, **varchar** e **text**, in cui i dati vengono archiviati in formato Unicode. Creare il file di dati **widenative** tramite l'importazione bulk dei dati da [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tramite l'utilità **bcp**.<br /><br /> Il valore **widenative** rappresenta un'alternativa con prestazioni migliori rispetto a **widechar**. Se il file di dati contiene caratteri estesi [!INCLUDE[vcpransi](../../includes/vcpransi-md.md)], specificare **widenative**.<br /><br /> Per altre informazioni, vedere [Usare il formato Unicode nativo per importare o esportare dati &#40;SQL Server&#41;](../../relational-databases/import-export/use-unicode-native-format-to-import-or-export-data-sql-server.md).|  
   
-  ERRORFILE **='***file_name***'**  
+  ERRORFILE **='**_file_name_**'**  
  Specifica il file utilizzato per raccogliere le righe che contengono errori di formattazione e non possono essere convertite in un set di righe OLE DB. Tali righe vengono copiate nel file degli errori dal file di dati così come sono.  
   
  Il file degli errori viene creato durante l'esecuzione del comando. Se il file esiste già, viene generato un errore. Viene inoltre creato un file di controllo con estensione ERROR.txt. Questo file contiene un riferimento a ogni riga nel file degli errori e offre informazioni di diagnostica. Una volta corretti gli errori, è possibile caricare i dati.   
@@ -179,7 +179,7 @@ A partire da [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)], `error_file
 **Si applica a:** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1.
 Origine dati esterna denominata che punta alla posizione di archiviazione BLOB di Azure del file degli errori rilevati durante l'importazione. L'origine dati esterna deve essere creata tramite l'opzione `TYPE = BLOB_STORAGE` aggiunta in [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1. Per altre informazioni, vedere [CREATE EXTERNAL DATA SOURCE](../../t-sql/statements/create-external-data-source-transact-sql.md).
  
- FIRSTROW **=***first_row*  
+ FIRSTROW **=**_first_row_  
  Specifica il numero della prima riga da caricare. Il valore predefinito è la prima riga nel file di dati specificato. FIRSTROW è in base 1.  
   
 > [!NOTE]  
@@ -202,13 +202,13 @@ Origine dati esterna denominata che punta alla posizione dell'archiviazione BLOB
  KEEPNULLS  
  Specifica che durante l'operazione di importazione bulk le colonne vuote devono mantenere un valore Null. Ciò significa che durante l'operazione non verranno inseriti eventuali valori predefiniti per le colonne vuote. Per altre informazioni, vedere [Mantenere i valori Null o usare i valori predefiniti durante l'importazione in blocco &#40;SQL Server&#41;](../../relational-databases/import-export/keep-nulls-or-use-default-values-during-bulk-import-sql-server.md).  
   
- KILOBYTES_PER_BATCH **=** *kilobytes_per_batch*  
+ KILOBYTES_PER_BATCH **=** _kilobytes_per_batch_  
  Specifica il numero approssimativo di kilobyte (KB) di dati per ogni batch come *kilobytes_per_batch*. Per impostazione predefinita, il valore KILOBYTES_PER_BATCH è sconosciuto. Per alcune considerazioni relative alle prestazioni, vedere la sezione "Osservazioni" di seguito in questo argomento.  
   
- LASTROW**=***last_row*  
+ LASTROW**=**_last_row_  
  Specifica il numero dell'ultima riga da caricare. Il valore predefinito è 0, che indica l'ultima riga nel file di dati specificato.  
   
- MAXERRORS **=** *max_errors*  
+ MAXERRORS **=** _max_errors_  
  Specifica il numero massimo di errori di sintassi consentiti nei dati prima dell'annullamento dell'operazione di importazione bulk. Ogni riga che non è possibile importare tramite l'operazione di importazione bulk viene ignorata e considerata come errore. Se non si specifica *max_errors*, il valore predefinito è 10.  
   
 > [!NOTE]  
@@ -220,7 +220,7 @@ Origine dati esterna denominata che punta alla posizione dell'archiviazione BLOB
  *n*  
  Segnaposto che indica la possibilità di specificare più colonne.  
   
- ROWS_PER_BATCH **=***rows_per_batch*  
+ ROWS_PER_BATCH **=**_rows_per_batch_  
  Indica il numero approssimativo di righe di dati nel file di dati.  
   
  Per impostazione predefinita, tutti i dati nel file di dati vengono inviati al server come singola transazione e il numero di righe nel batch non è noto per Query Optimizer. Se si specifica ROWS_PER_BATCH (con valore > 0), il server utilizza questo valore per ottimizzare l'operazione di importazione bulk. Il valore specificato per ROWS_PER_BATCH deve essere più o meno uguale al numero effettivo di righe. Per alcune considerazioni relative alle prestazioni, vedere la sezione "Osservazioni" di seguito in questo argomento.  
@@ -247,7 +247,7 @@ FIELDQUOTE **=** 'field_quote'
 **Si applica a:** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1.   
 Specifica il carattere da usare come carattere virgolette nel file CSV. Se non viene specificato alcun carattere, viene usato il carattere virgolette (") in base alla definizione dello standard [RFC 4180](https://tools.ietf.org/html/rfc4180).
   
- FORMATFILE **='***format_file_path***'**  
+ FORMATFILE **='**_format_file_path_**'**  
  Specifica il percorso completo di un file di formato. Un file di formato descrive il file di dati contenente le risposte archiviate create tramite l'utilità **bcp** nella stessa tabella o vista. È consigliabile utilizzare il file di formato nei casi seguenti:  
   
 -   Il file di dati contiene un numero di colonne maggiore o minore rispetto alla tabella o alla vista.  
@@ -261,10 +261,10 @@ Specifica il carattere da usare come carattere virgolette nel file CSV. Se non v
 **Si applica a:** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1.   
 A partire da [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1, format_file_path può essere presente nell'archiviazione BLOB di Azure.
 
- FIELDTERMINATOR **='***carattere_terminazione_campo***'**  
+ FIELDTERMINATOR **='**_field_terminator_**'**  
  Specifica il carattere di terminazione del campo da usare per i file di dati di tipo **char** e **widechar**. Il carattere di terminazione del campo predefinito è \t (carattere di tabulazione). Per altre informazioni, vedere [Impostazione dei caratteri di terminazione del campo e della riga &#40;SQL Server&#41;](../../relational-databases/import-export/specify-field-and-row-terminators-sql-server.md).  
 
- ROWTERMINATOR **='***carattere_terminazione_riga***'**  
+ ROWTERMINATOR **='**_row_terminator_**'**  
  Specifica il carattere di terminazione della riga da usare per i file di dati di tipo **char** e **widechar**. Il carattere di terminazione della riga predefinito è **\r\n** (carattere di nuova riga).  Per altre informazioni, vedere [Impostazione dei caratteri di terminazione del campo e della riga &#40;SQL Server&#41;](../../relational-databases/import-export/specify-field-and-row-terminators-sql-server.md).  
 
   
@@ -304,7 +304,7 @@ CREATE TABLE t_float(c1 float, c2 decimal (5,4));
   
  ```
  <?xml version="1.0"?> 
- <BCPFORMAT xmlns="https://schemas.microsoft.com/sqlserver/2004/bulkload/format" xmlns:xsi="https://www.w3.org/2001/XMLSchema-instance"> 
+ <BCPFORMAT xmlns="https://schemas.microsoft.com/sqlserver/2004/bulkload/format" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"> 
  <RECORD> 
  <FIELD ID="1" xsi:type="CharTerm" TERMINATOR="\t" MAX_LENGTH="30"/> 
  <FIELD ID="2" xsi:type="CharTerm" TERMINATOR="\r\n" MAX_LENGTH="30"/>  </RECORD>  <ROW> 
@@ -401,7 +401,7 @@ BULK INSERT AdventureWorks2012.Sales.SalesOrderDetail
 > [!IMPORTANT]
 > Il database SQL di Azure non supporta la lettura da file di Windows.
   
-### <a name="b-using-the-firetriggers-argument"></a>B. Utilizzo dell'argomento FIRE_TRIGGERS  
+### <a name="b-using-the-firetriggers-argument"></a>b. Utilizzo dell'argomento FIRE_TRIGGERS  
  Nell'esempio seguente viene specificato l'argomento `FIRE_TRIGGERS`.  
   
 ```  

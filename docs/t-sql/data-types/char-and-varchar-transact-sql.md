@@ -25,18 +25,18 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: e3eae62b963843c369731ca0abd800c9552c37d3
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: d2f36af646ee1fb41279b8401c5e2bdf18ed6896
+ms.sourcegitcommit: 96032813f6bf1cba680b5e46d82ae1f0f2da3d11
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51698821"
+ms.lasthandoff: 01/15/2019
+ms.locfileid: "54299388"
 ---
 # <a name="char-and-varchar-transact-sql"></a>char and varchar (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
 > [!div class="nextstepaction"]
-> [Contribuisci a migliorare la documentazione di SQL Server](https://80s3ignv.optimalworkshop.com/optimalsort/36yyw5kq-0)
+> [Condividi il feedback sul sommario della documentazione SQL](https://aka.ms/sqldocsurvey)
 
 Tipi di dati carattere a lunghezza fissa, **char**, o a lunghezza variabile, **varchar**. A partire da [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)], quando si usano regole di confronto che supportano UTF-8, questi tipi di dati archiviano l'intera gamma dei dati di tipo carattere [Unicode](../../relational-databases/collations/collation-and-unicode-support.md#Unicode_Defn) e usano la codifica dei caratteri [UTF-8 ](https://www.wikipedia.org/wiki/UTF-8). Se si specificano regole di confronto non UTF-8, questi tipi di dati archiviano solo un subset dei caratteri supportati dalla tabella codici corrispondente di tali regole di confronto.
   
@@ -52,7 +52,7 @@ Agli oggetti che usano **char** o **varchar** vengono assegnate le regole di con
 
 Le codifiche multibyte in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] includono:
 -   Set di caratteri DBCS (Double Byte Character Set) per alcune lingue asiatiche orientali che usano le tabelle codici 936 e 950 (cinese), 932 (giapponese) o 949 (coreano).
--   UTF-8 con tabella codici 65001. **Si applica a** : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (a partire da [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]))
+-   UTF-8 con tabella codici 65001. **Si applica a:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (a partire da [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)])
 
 In presenza di siti che supportano più lingue:
 - A partire da [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)], è consigliabile usare le regole di confronto abilitate per UTF-8 per il supporto di Unicode e per ridurre al minimo i problemi di conversione dei caratteri. 
@@ -96,7 +96,7 @@ SELECT DATALENGTH(@myVariable), DATALENGTH(@myNextVariable);
 GO  
 ```  
   
-### <a name="b-showing-the-default-value-of-n-when-varchar-is-used-with-cast-and-convert"></a>B. Visualizzazione del valore predefinito di n se varchar viene utilizzato con CAST e CONVERT.  
+### <a name="b-showing-the-default-value-of-n-when-varchar-is-used-with-cast-and-convert"></a>b. Visualizzazione del valore predefinito di n se varchar viene utilizzato con CAST e CONVERT.  
 L'esempio seguente indica che il valore predefinito di *n* è 30 quando i tipi di dati `char` e `varchar` vengono usati con le funzioni `CAST` e `CONVERT`.
   
 ```sql

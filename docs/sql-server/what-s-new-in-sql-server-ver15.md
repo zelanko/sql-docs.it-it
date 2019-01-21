@@ -1,6 +1,6 @@
 ---
 title: Novità di SQL Server 2019 | Microsoft Docs
-ms.date: 12/07/2018
+ms.date: 01/09/2019
 ms.prod: sql-server-2018
 ms.reviewer: ''
 ms.technology: release-landing
@@ -9,16 +9,19 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 0d36e43d4015d0edf2271ee86ea0d2f7a761ce8d
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: e0a5dab4eeccc5c4e31a151ec9611d7ed8367a78
+ms.sourcegitcommit: 96032813f6bf1cba680b5e46d82ae1f0f2da3d11
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53207780"
+ms.lasthandoff: 01/15/2019
+ms.locfileid: "54300178"
 ---
 # <a name="whats-new-in-sql-server-2019"></a>Novità di SQL Server 2019
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
+
+  > [!div class="nextstepaction"]
+  > [Condividi il feedback sul sommario della documentazione SQL](https://aka.ms/sqldocsurvey)
 
 [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] si basa sulle versioni precedenti per sviluppare SQL Server come piattaforma che offre una scelta di linguaggi di sviluppo, tipi di dati, sistemi operativi ed elaborazione locale o nel cloud. Questo articolo riepiloga le novità di SQL Server 2019. Per altre informazioni e problemi noti, vedere le [Note sulla versione di SQL Server 2019](sql-server-ver15-release-notes.md).
 
@@ -39,7 +42,7 @@ Community Technology Preview (CTP) 2.2 è la versione pubblica più recente di [
 
 ## <a name="previous-ctps"></a>Versioni di CTP precedenti
 
-Le versioni di CTP precedenti hanno aggiunto o modificato le funzionalità seguenti per [!INCLUDE[sql-server-2019](..\includes\sssqlv15-md.md)].
+Le versioni di CTP precedenti hanno aggiunto o modificato le funzionalità seguenti per [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)].
 
 - [Cluster Big Data](#bigdatacluster) 
   - Distribuire un cluster Big Data con contenitori SQL e Spark Linux in Kubernetes (CTP 2.0)

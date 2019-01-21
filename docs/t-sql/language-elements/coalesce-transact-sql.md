@@ -22,15 +22,18 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 63c65bb6348afa4d095971b5833f26e8e33dd5a1
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 111d7cb0790bd0cbdb9c9bb17a6ebcb78ac3b04a
+ms.sourcegitcommit: 96032813f6bf1cba680b5e46d82ae1f0f2da3d11
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47666767"
+ms.lasthandoff: 01/15/2019
+ms.locfileid: "54298608"
 ---
 # <a name="coalesce-transact-sql"></a>COALESCE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+
+  > [!div class="nextstepaction"]
+  > [Condividi il feedback sul sommario della documentazione SQL](https://aka.ms/sqldocsurvey)
 
 Valuta gli argomenti seguendo l'ordine e restituisce il valore corrente della prima espressione che inizialmente non restituisce `NULL`. Ad esempio, `SELECT COALESCE(NULL, NULL, 'third_value', 'fourth_value');` restituisce il terzo valore perché il terzo valore è il primo valore non Null. 
   
@@ -125,7 +128,7 @@ COALESCE(Class, Color, ProductNumber) AS FirstNotNull
 FROM Production.Product;  
 ```  
   
-### <a name="b-running-a-complex-example"></a>B. Esecuzione di un esempio complesso  
+### <a name="b-running-a-complex-example"></a>b. Esecuzione di un esempio complesso  
  Nell'esempio seguente viene illustrata una tabella `wages` che include tre colonne con informazioni sulla retribuzione annua dei dipendenti, ovvero retribuzione oraria, stipendio e commissione. Un dipendente tuttavia riceve un solo tipo di paga. Per determinare l'importo totale pagato a tutti i dipendenti, utilizzare la funzione `COALESCE` per ottenere solo i valori non Null delle colonne `hourly_wage`, `salary` e `commission`.  
   
 ```sql  
@@ -190,7 +193,7 @@ GO
  (12 row(s) affected)
  ```  
   
-### <a name="c-simple-example"></a>C: esempio semplice  
+### <a name="c-simple-example"></a>C: Esempio semplice  
  Nell'esempio seguente viene illustrato come `COALESCE` seleziona i dati dalla prima colonna in cui è presente un valore non Null. Si supponga per questo esempio che la tabella `Products` contenga i dati seguenti:  
   
  ```  
@@ -220,7 +223,7 @@ FROM Products ;
   
  Si noti che nella prima riga, il valore `FirstNotNull` è `PN1278`, non `Socks, Mens`. Ciò è dovuto al fatto che la colonna `Name`non è stata specificata come parametro per `COALESCE` nell'esempio.  
   
-### <a name="d-complex-example"></a>D: esempio complesso  
+### <a name="d-complex-example"></a>D: Esempio complesso  
  L'esempio seguente usa `COALESCE` per confrontare i valori in tre colonne e restituire solo il valore non Null trovato nelle colonne.  
   
 ```sql  

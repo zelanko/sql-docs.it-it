@@ -16,12 +16,12 @@ ms.assetid: 1ab2635d-0992-4c99-b17d-041d02ec9a7c
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 41346b81aa56f9ed4d83494092834535611cb905
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: cbda6137d9b844b13485c63488fad9efa85366c7
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47794539"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54131561"
 ---
 # <a name="replication-security-best-practices"></a>Procedure consigliate per la sicurezza della replica
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -39,7 +39,7 @@ ms.locfileid: "47794539"
   
     -   [Replication Agent Executables Concepts](../../../relational-databases/replication/concepts/replication-agent-executables-concepts.md)  
   
--   Eseguire ogni agente di replica con un diverso account di Windows e utilizzare l'autenticazione di Windows per tutte le connessioni agli agenti di replica. Per altre informazioni su come specificare gli account, vedere [Gestire gli account di accesso e le password nella replica](../../../relational-databases/replication/security/manage-logins-and-passwords-in-replication.md).  
+-   Eseguire ogni agente di replica con un diverso account di Windows e utilizzare l'autenticazione di Windows per tutte le connessioni agli agenti di replica. Per altre informazioni su come specificare gli account, vedere [Controllo di identità e accesso (replica)](../../../relational-databases/replication/security/identity-and-access-control-replication.md).  
   
 -   Concedere agli agenti solo le autorizzazioni necessarie. Per ulteriori informazioni, vedere la sezione relativa alle autorizzazioni necessarie per gli agenti in [Replication Agent Security Model](../../../relational-databases/replication/security/replication-agent-security-model.md).  
   
@@ -67,7 +67,7 @@ ms.locfileid: "47794539"
   
     -   Verificare che un determinato agente, ad esempio l'agente di distribuzione per una sottoscrizione, stabilisca connessioni utilizzando lo stesso account in ogni computer.  
   
-    -   Nei casi in cui è necessaria l'autenticazione di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , l'accesso alle condivisioni snapshot UNC spesso non è disponibile, ad esempio, può essere bloccato da un firewall. In tal caso, è possibile trasferire lo snapshot ai Sottoscrittori tramite FTP. Per altre informazioni, vedere [Trasferire snapshot tramite FTP](../../../relational-databases/replication/transfer-snapshots-through-ftp.md).  
+    -   Nei casi in cui è necessaria l'autenticazione di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , l'accesso alle condivisioni snapshot UNC spesso non è disponibile, ad esempio, può essere bloccato da un firewall. In tal caso, è possibile trasferire lo snapshot ai Sottoscrittori tramite FTP. Per altre informazioni, vedere [Trasferire snapshot tramite FTP](../../../relational-databases/replication//publish/deliver-a-snapshot-through-ftp.md).  
   
 ## <a name="see-also"></a>Vedere anche  
  [Abilitare connessioni crittografate al motore di database &#40;Gestione configurazione SQL Server&#41;](../../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md)   
@@ -75,6 +75,6 @@ ms.locfileid: "47794539"
  [Proteggere il sottoscrittore](../../../relational-databases/replication/security/secure-the-subscriber.md)   
  [Proteggere il database di distribuzione](../../../relational-databases/replication/security/secure-the-distributor.md)   
  [Proteggere il server di pubblicazione](../../../relational-databases/replication/security/secure-the-publisher.md)   
- [Sicurezza e protezione #40;replica&#41;](../../../relational-databases/replication/security/security-and-protection-replication.md)  
+ [Visualizzare e modificare le impostazioni di sicurezza della replica](../../../relational-databases/replication/security/view-and-modify-replication-security-settings.md)  
   
   

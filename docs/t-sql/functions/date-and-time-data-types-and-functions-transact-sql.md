@@ -21,18 +21,18 @@ ms.assetid: 83e378a2-6e89-4c80-bc4f-644958d9e0a9
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: d52233102f5ebe9a812e8071556afa4aff0316f4
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: b95da5f74481fed0053f31cde326fe271e79abc9
+ms.sourcegitcommit: 96032813f6bf1cba680b5e46d82ae1f0f2da3d11
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52511707"
+ms.lasthandoff: 01/15/2019
+ms.locfileid: "54299218"
 ---
 # <a name="date-and-time-data-types-and-functions-transact-sql"></a>Funzioni e tipi di dati di data e ora (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
 > [!div class="nextstepaction"]
-> [Contribuisci a migliorare la documentazione di SQL Server](https://80s3ignv.optimalworkshop.com/optimalsort/36yyw5kq-0)
+> [Condividi il feedback sul sommario della documentazione SQL](https://aka.ms/sqldocsurvey)
 
 Le sezioni in questo argomento trattano tutti i tipi di dati e le funzioni di data e ora [!INCLUDE[tsql](../../includes/tsql-md.md)].
 -   [Tipi di dati di data e ora](#DateandTimeDataTypes)  
@@ -99,11 +99,11 @@ Le seguenti tabelle elencano le funzioni di data e ora [!INCLUDE[tsql](../../inc
 |Funzione|Sintassi|Valore restituito|Tipo di dati restituito|Determinismo|  
 |---|---|---|---|---|
 |[DATEFROMPARTS](../../t-sql/functions/datefromparts-transact-sql.md)|DATEFROMPARTS  ( *year*, *month*, *day* )|Restituisce un valore di tipo **date** per l'anno, il mese e il giorno specificati.|**data**|Deterministico|  
-|[DATETIME2FROMPARTS](../../t-sql/functions/datetime2fromparts-transact-sql.md)|DATETIME2FROMPARTS  ( *year*, *month*, *day*, *hour*, *minute*, *seconds*, *fractions*, *precision*)|Restituisce un valore **datetime2** per la data e l'ora specificate, con la precisione indicata.|**datetime2(** *precision* **)**|Deterministico|  
+|[DATETIME2FROMPARTS](../../t-sql/functions/datetime2fromparts-transact-sql.md)|DATETIME2FROMPARTS  ( *year*, *month*, *day*, *hour*, *minute*, *seconds*, *fractions*, *precision*)|Restituisce un valore **datetime2** per la data e l'ora specificate, con la precisione indicata.|**datetime2(** _precision_ **)**|Deterministico|  
 |[DATETIMEFROMPARTS](../../t-sql/functions/datetimefromparts-transact-sql.md)|DATETIMEFROMPARTS  ( *year*, *month*, *day*, *hour*, *minute*, *seconds*, *milliseconds*)|Restituisce un valore di tipo **datetime** per la data e l'ora specificate.|**datetime**|Deterministico|  
-|[DATETIMEOFFSETFROMPARTS](../../t-sql/functions/datetimeoffsetfromparts-transact-sql.md)|DATETIMEOFFSETFROMPARTS  ( *year*, *month*, *day*, *hour*, *minute*, *seconds*, *fractions*, *hour_offset*, *minute_offset*, *precision*)|Restituisce un valore **datetimeoffset** per la data e l'ora specificate, con gli offset e la precisione indicati.|**datetimeoffset(** *precision* **)**|Deterministico|  
+|[DATETIMEOFFSETFROMPARTS](../../t-sql/functions/datetimeoffsetfromparts-transact-sql.md)|DATETIMEOFFSETFROMPARTS  ( *year*, *month*, *day*, *hour*, *minute*, *seconds*, *fractions*, *hour_offset*, *minute_offset*, *precision*)|Restituisce un valore **datetimeoffset** per la data e l'ora specificate, con gli offset e la precisione indicati.|**datetimeoffset(** _precision_ **)**|Deterministico|  
 |[SMALLDATETIMEFROMPARTS](../../t-sql/functions/smalldatetimefromparts-transact-sql.md)|SMALLDATETIMEFROMPARTS  ( *year*, *month*, *day*, *hour*, *minute* )|Restituisce un valore di tipo **smalldatetime** per la data e l'ora specificate.|**smalldatetime**|Deterministico|  
-|[TIMEFROMPARTS](../../t-sql/functions/timefromparts-transact-sql.md)|TIMEFROMPARTS  ( *hour*, *minute*, *seconds*, *fractions*, *precision* )|Restituisce un valore **time** per l'ora specificata, con la precisione indicata.|**time(** *precision* **)**|Deterministico|  
+|[TIMEFROMPARTS](../../t-sql/functions/timefromparts-transact-sql.md)|TIMEFROMPARTS  ( *hour*, *minute*, *seconds*, *fractions*, *precision* )|Restituisce un valore **time** per l'ora specificata, con la precisione indicata.|**time(** _precision_ **)**|Deterministico|  
   
 ###  <a name="GetDateandTimeDifference"></a> Funzioni che restituiscono valori di differenza di data e ora
   
@@ -127,10 +127,10 @@ Le seguenti tabelle elencano le funzioni di data e ora [!INCLUDE[tsql](../../inc
 |---|---|---|---|---|
 |[@@DATEFIRST](../../t-sql/functions/datefirst-transact-sql.md)|@@DATEFIRST|Restituisce il valore corrente, per la sessione, di SET DATEFIRST.|**tinyint**|Non deterministica|  
 |[SET DATEFIRST](../../t-sql/statements/set-datefirst-transact-sql.md)|SET DATEFIRST { *number* &#124; **@***number_var* }|Imposta il primo giorno della settimana su un numero compreso tra 1 e 7.|Non applicabile|Non applicabile|  
-|[SET DATEFORMAT](../../t-sql/statements/set-dateformat-transact-sql.md)|SET DATEFORMAT { *format* &#124; **@***format_var* }|Imposta l'ordine delle datepart (mese/giorno/anno) per l'immissione di dati **datetime** o **smalldatetime**.|Non applicabile|Non applicabile|  
+|[SET DATEFORMAT](../../t-sql/statements/set-dateformat-transact-sql.md)|SET DATEFORMAT { *format* &#124; **@**_format_var_ }|Imposta l'ordine delle datepart (mese/giorno/anno) per l'immissione di dati **datetime** o **smalldatetime**.|Non applicabile|Non applicabile|  
 |[@@LANGUAGE](../../t-sql/functions/language-transact-sql.md)|@@LANGUAGE|Restituisce il nome della lingua attualmente in uso. @@LANGUAGE non è una funzione di data o ora. Comunque, l'impostazione della lingua può influire sull'output di funzioni di data.|Non applicabile|Non applicabile|  
-|[SET LANGUAGE](../../t-sql/statements/set-language-transact-sql.md)|SET LANGUAGE { [ N ] **'***language***'** &#124; **@***language_var* }|Imposta la lingua per la sessione e i messaggi di sistema. SET LANGUAGE non è una data o una funzione dell'ora. Comunque, l'impostazione della lingua influisce sull'output di funzioni di data.|Non applicabile|Non applicabile|  
-|[sp_helplanguage](../../relational-databases/system-stored-procedures/sp-helplanguage-transact-sql.md)|**sp_helplanguage** [ [ **@language =** ] **'***language***'** ]|Restituisce informazioni su formati della data di tutte le lingue supportate. **sp_helplanguage** non è una stored procedure relativa a data o ora. Comunque, l'impostazione della lingua influisce sull'output di funzioni di data.|Non applicabile|Non applicabile|  
+|[SET LANGUAGE](../../t-sql/statements/set-language-transact-sql.md)|SET LANGUAGE { [ N ] **'**_language_**'** &#124; **@***language_var* }|Imposta la lingua per la sessione e i messaggi di sistema. SET LANGUAGE non è una data o una funzione dell'ora. Comunque, l'impostazione della lingua influisce sull'output di funzioni di data.|Non applicabile|Non applicabile|  
+|[sp_helplanguage](../../relational-databases/system-stored-procedures/sp-helplanguage-transact-sql.md)|**sp_helplanguage** [ [ **@language =** ] **'**_language_**'** ]|Restituisce informazioni su formati della data di tutte le lingue supportate. **sp_helplanguage** non è una stored procedure relativa a data o ora. Comunque, l'impostazione della lingua influisce sull'output di funzioni di data.|Non applicabile|Non applicabile|  
   
 ###  <a name="ValidateDateandTimeValues"></a> Funzioni che convalidano i valori di data e ora
   

@@ -16,19 +16,19 @@ ms.assetid: 10de5ec6-d3cf-42ef-aa62-1bdf3fbde841
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: aa1307b7910f1d7db80ce2a6242852638494cba4
-ms.sourcegitcommit: 96b2355d54dfad259826e88bdff91cc9344e16f2
+ms.openlocfilehash: b15e3f46c277daf7004abf0bc2212ab59364b632
+ms.sourcegitcommit: 96032813f6bf1cba680b5e46d82ae1f0f2da3d11
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51350054"
+ms.lasthandoff: 01/15/2019
+ms.locfileid: "54298548"
 ---
 # <a name="sql-server-database-engine-backward-compatibility"></a>Compatibilità con le versioni precedenti del Motore di database di SQL Server
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
   Negli argomenti della sezione relativa alla compatibilità con le versioni precedenti vengono descritte le modifiche di comportamento tra le versioni di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].
 
 > [!div class="nextstepaction"]
-> [Contribuisci a migliorare la documentazione di SQL Server](https://80s3ignv.optimalworkshop.com/optimalsort/36yyw5kq-0)  
+> [Condividi il feedback sul sommario della documentazione SQL](https://aka.ms/sqldocsurvey)  
   
 |Argomento|Descrizione|  
 |-----------|-----------------|  

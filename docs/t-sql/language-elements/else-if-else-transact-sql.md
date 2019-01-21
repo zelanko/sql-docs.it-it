@@ -21,15 +21,18 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 3d6e241d73040a30fcca5de3114110089259ab8b
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 15c28ceccbdaf6d4c4b69e9e15c356cffc0c085c
+ms.sourcegitcommit: 96032813f6bf1cba680b5e46d82ae1f0f2da3d11
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52532755"
+ms.lasthandoff: 01/15/2019
+ms.locfileid: "54298448"
 ---
 # <a name="else-ifelse-transact-sql"></a>ELSE (IF...ELSE) (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+
+  > [!div class="nextstepaction"]
+  > [Condividi il feedback sul sommario della documentazione SQL](https://aka.ms/sqldocsurvey)
 
   Impone le condizioni per l'esecuzione di un'istruzione [!INCLUDE[tsql](../../includes/tsql-md.md)]. L'istruzione [!INCLUDE[tsql](../../includes/tsql-md.md)] (*sql_statement*) che segue *Boolean_expression* viene eseguita se *Boolean_expression* restituisce TRUE. La parola chiave facoltativa ELSE rappresenta un'istruzione [!INCLUDE[tsql](../../includes/tsql-md.md)] alternativa che viene eseguita quando l'argomento *Boolean_expression* restituisce FALSE o NULL.  
   
@@ -72,7 +75,7 @@ ELSE PRINT 'Boolean_expression is false.' ;
 GO  
 ```  
   
-### <a name="b-using-a-query-as-part-of-a-boolean-expression"></a>B. Utilizzo di una query come parte di un'espressione booleana  
+### <a name="b-using-a-query-as-part-of-a-boolean-expression"></a>b. Utilizzo di una query come parte di un'espressione booleana  
  Nell'esempio seguente viene eseguita una query come parte dell'espressione booleana. Poiché nella tabella `Product` sono presenti 10 biciclette che soddisfano la clausola `WHERE`, verrà eseguita la prima istruzione di stampa. Modificare `> 5` in `> 15` per ottenere il modo in cui potrebbe essere eseguita la seconda parte dell'istruzione.  
   
 ```  
@@ -137,7 +140,7 @@ GO
   
 ## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Esempi: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] e [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
-### <a name="e-using-a-query-as-part-of-a-boolean-expression"></a>B. Uso di una query come parte di un'espressione booleana  
+### <a name="e-using-a-query-as-part-of-a-boolean-expression"></a>E: Utilizzo di una query come parte di un'espressione booleana  
  L'esempio seguente usa `IF...ELSE` per determinare quale delle due risposte visualizzare all'utente, in base al peso di un elemento nella tabella `DimProduct`.  
   
 ```  

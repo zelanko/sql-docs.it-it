@@ -15,12 +15,12 @@ ms.assetid: 3a5daefd-08a8-4565-b54f-28ad01a47d32
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: fb896309e39a2abe054ce470fd9cec33b690181c
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: b858639e60419d955a32981ceeac56d8acc42110
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52535566"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54133181"
 ---
 # <a name="restore-a-sql-server-database-to-a-point-in-time-full-recovery-model"></a>Ripristino di un database di SQL Server fino a un punto specifico all'interno di un backup (modello di recupero con registrazione completa)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -34,7 +34,7 @@ ms.locfileid: "52535566"
   
      [Indicazioni](#Recommendations)  
   
-     [Security](#Security)  
+     [Sicurezza](#Security)  
   
 -   **Per ripristinare un database di SQL Server in un punto nel tempo mediante:**  
   
@@ -126,7 +126,7 @@ ms.locfileid: "52535566"
   
 14. Selezionare **Chiedi conferma prima del ripristino di ogni backup** se si desidera ricevere una richiesta di conferma prima di ciascuna operazione di ripristino. L'operazione non è normalmente necessaria, a meno che le dimensioni del database siano elevate e si desideri monitorare lo stato dell'operazione di ripristino.  
   
-##  <a name="TsqlProcedure"></a> Uso di Transact-SQL  
+##  <a name="TsqlProcedure"></a> Utilizzo di Transact-SQL  
  **Before you begin**  
   
  Un momento specifico viene sempre ripristinato da un backup del log. In ogni istruzione RESTORE LOG della sequenza di ripristino, è necessario specificare l'ora o la transazione di destinazione in una clausola STOPAT identica. Come prerequisito per un ripristino temporizzato, è necessario innanzitutto ripristinare un backup completo del database il cui endpoint sia precedente rispetto al momento di ripristino di destinazione. Il backup completo del database può essere precedente rispetto al backup completo del database più recente purché vengano ripristinati tutti i backup del log successivi, fino al backup del log contenente la data e ora specifica di destinazione compreso.  
@@ -135,11 +135,11 @@ ms.locfileid: "52535566"
   
  **Sintassi [!INCLUDE[tsql](../../includes/tsql-md.md)] di base**  
   
- RESTORE LOG *nome_database* FROM <dispostivo_backup> WITH STOPAT **=***ora***,** RECOVERY...  
+ RESTORE LOG *nome_database* FROM <dispostivo_backup> WITH STOPAT **=**_ora_**,** RECOVERY...  
   
  Il punto di recupero è l'ultimo commit delle transazioni eseguito in corrispondenza o prima del valore **datetime** specificato da *time*.  
   
- Per ripristinare solo le modifiche apportate prima di un punto nel tempo specifico, specificare WITH STOPAT **=** *time* per ogni backup da ripristinare. Questo garantisce che il momento nel tempo desiderato non venga superato.  
+ Per ripristinare solo le modifiche apportate prima di un punto nel tempo specifico, specificare WITH STOPAT **=** _time_ per ogni backup da ripristinare. Questo garantisce che il momento nel tempo desiderato non venga superato.  
   
  **Per ripristinare un database fino a un punto nel tempo**  
   
@@ -155,7 +155,7 @@ ms.locfileid: "52535566"
   
 3.  Ripristinare l'ultimo backup del database differenziale, se presente, senza recuperare il database (RESTORE DATABASE *database_name* FROM *backup_device* WITH NORECOVERY).  
   
-4.  Applicare ogni backup del log delle transazioni nella stessa sequenza di creazione, specificando l'ora in cui si intende arrestare il ripristino del log (RESTORE DATABASE *none_database* FROM <dispostivo_backup WITH STOPAT**=***ora***,** RECOVERY).  
+4.  Applicare ogni backup del log delle transazioni nella stessa sequenza di creazione, specificando l'ora in cui si intende arrestare il ripristino del log (RESTORE DATABASE *database_name* FROM <backup_device> WITH STOPAT**=**_time_**,** RECOVERY).  
   
     > [!NOTE]  
     >  Le opzioni RECOVERY e STOPAT. Se il backup del log delle transazioni non contiene i dati corrispondenti all'ora richiesta, ad esempio se l'ora specificata è successiva al periodo di tempo gestito dal log delle transazioni, viene generato un messaggio di avviso e il database non viene recuperato.  

@@ -17,12 +17,12 @@ ms.assetid: f7df51ef-c088-4efc-b247-f91fb2c6ff32
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 8b57bcb42bfc48563e73b783bd7b04a9905a5e43
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d0e5b67288e9cc9d0491f30dc98b3edf9c01c0f1
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47717839"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54135721"
 ---
 # <a name="change-publication-and-article-properties"></a>Modifica delle proprietà di pubblicazioni e articoli
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -95,8 +95,8 @@ ms.locfileid: "47717839"
 |Modifica del proprietario della tabella di destinazione.|**sp_changemergearticle**|**destination_owner**|Nuovo snapshot.<br /><br /> Reinizializzazione delle sottoscrizioni.|  
   
 ## <a name="see-also"></a>Vedere anche  
- [Amministrazione &#40;replica&#41;](../../../relational-databases/replication/administration/administration-replication.md)   
- [Creare e applicare lo snapshot](../../../relational-databases/replication/create-and-apply-the-snapshot.md)   
+ [Domande frequenti sull'amministrazione della replica](../../../relational-databases/replication/administration/frequently-asked-questions-for-replication-administrators.md)   
+ [Creare e applicare lo snapshot](../../../relational-databases/replication/create-and-apply-the-initial-snapshot.md)   
  [Reinizializzare le sottoscrizioni](../../../relational-databases/replication/reinitialize-subscriptions.md)   
  [sp_addmergefilter &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addmergefilter-transact-sql.md)   
  [sp_articlecolumn &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-articlecolumn-transact-sql.md)   

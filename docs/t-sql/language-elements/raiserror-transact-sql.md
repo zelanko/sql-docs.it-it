@@ -30,15 +30,18 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 23294229be50c987be4b2f59568889910b605596
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 0875e5013e2a5f12468d99414ff94252ac66453a
+ms.sourcegitcommit: 96032813f6bf1cba680b5e46d82ae1f0f2da3d11
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52502855"
+ms.lasthandoff: 01/15/2019
+ms.locfileid: "54300298"
 ---
 # <a name="raiserror-transact-sql"></a>RAISERROR (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+
+  > [!div class="nextstepaction"]
+  > [Condividi il feedback sul sommario della documentazione SQL](https://aka.ms/sqldocsurvey)
 
   Consente di generare un messaggio di errore e di inizializzare l'elaborazione dell'errore per la sessione. RAISERROR può fare riferimento a un messaggio definito dall'utente archiviato nella vista del catalogo sys.messages oppure compilare un messaggio in modo dinamico. Il messaggio viene restituito come messaggio di errore del server all'applicazione chiamante o a un blocco CATCH associato di un costrutto TRY...CATCH. Per le nuove applicazioni è invece necessario usare [THROW](../../t-sql/language-elements/throw-transact-sql.md).  
   
@@ -249,7 +252,7 @@ BEGIN CATCH
 END CATCH;  
 ```  
   
-### <a name="b-creating-an-ad-hoc-message-in-sysmessages"></a>B. Creazione di un messaggio ad hoc in sys.messages  
+### <a name="b-creating-an-ad-hoc-message-in-sysmessages"></a>b. Creazione di un messaggio ad hoc in sys.messages  
  Nell'esempio seguente viene illustrato come generare un messaggio archiviato nella vista del catalogo sys.messages. Il messaggio è stato aggiunto alla vista del catalogo sys.messages tramite la stored procedure di sistema `sp_addmessage` come numero di messaggio `50005`.  
   
 ```  

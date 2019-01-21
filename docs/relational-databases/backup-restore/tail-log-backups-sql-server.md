@@ -15,15 +15,15 @@ helpviewer_keywords:
 - tail-log backups
 - backups [SQL Server], tail-log backups
 ms.assetid: 313ddaf6-ec54-4a81-a104-7ffa9533ca58
-author: MikeRayMSFT
-ms.author: mikeray
+author: mashamsft
+ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: d4272379809eabde398a6b50c54d39c7139419d9
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 47876b387c06c1ba65e6a1a04fcbcee616097166
+ms.sourcegitcommit: 202ef5b24ed6765c7aaada9c2f4443372064bd60
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52535023"
+ms.lasthandoff: 01/12/2019
+ms.locfileid: "54241852"
 ---
 # <a name="tail-log-backups-sql-server"></a>Backup della parte finale del log [SQL Server]
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -31,7 +31,7 @@ ms.locfileid: "52535023"
   
  Un *backup della parte finale del log* acquisisce qualsiasi record di log di cui non è stato eseguito il backup (la *parte finale del log*) per prevenire perdita di dati e mantenere intatta la catena di log. Prima che sia possibile recuperare un database [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] nel punto temporale più recente, è necessario eseguire il backup della parte finale del log delle transazioni. Il backup della parte finale del log sarà l'ultimo backup di interesse nel piano di recupero per il database.  
   
-> **NOTA:** non in tutti gli scenari di ripristino è necessario un backup della parte finale del log. Se il punto di recupero è contenuto in un backup del log precedente, non è necessario un backup della parte finale del log. Non è inoltre necessario eseguire il backup della parte finale del log se il punto di recupero è incluso in un backup del log precedente o se si sta spostando o sostituendo (sovrascrivendo) il database e non è necessario ripristinarlo fino a un punto nel tempo dopo l'ultimo backup.  
+> **NOTA** Non in tutti gli scenari di ripristino è necessario un backup della parte finale del log. Se il punto di recupero è contenuto in un backup del log precedente, non è necessario un backup della parte finale del log. Non è inoltre necessario eseguire il backup della parte finale del log se il punto di recupero è incluso in un backup del log precedente o se si sta spostando o sostituendo (sovrascrivendo) il database e non è necessario ripristinarlo fino a un punto nel tempo dopo l'ultimo backup.  
   
    ##  <a name="TailLogScenarios"></a> Scenari in cui è necessario un backup della parte finale del log  
  È consigliabile eseguire un backup della parte finale del log negli scenari seguenti:  
@@ -48,7 +48,7 @@ ms.locfileid: "52535023"
   
 |Opzione BACKUP LOG|Commenti|  
 |-----------------------|--------------|  
-|NORECOVERY|Utilizzare NORECOVERY ogni volta che si intende procedere con un'operazione di ripristino sul database. NORECOVERY porta il database nello stato di ripristino. Questo assicura che il database non si modifichi dopo il backup della parte finale del log. Il log verrà troncato a meno che non venga specificata anche l'opzione NO_TRUNCATE o COPY_ONLY.<br /><br /> **Importante**: non usare NO_TRUNCATE, a meno che il database non sia danneggiato.|  
+|NORECOVERY|Utilizzare NORECOVERY ogni volta che si intende procedere con un'operazione di ripristino sul database. NORECOVERY porta il database nello stato di ripristino. Questo assicura che il database non si modifichi dopo il backup della parte finale del log. Il log verrà troncato a meno che non venga specificata anche l'opzione NO_TRUNCATE o COPY_ONLY.<br /><br /> **Importante:** non usare NO_TRUNCATE, a meno che il database non sia danneggiato.|  
 |CONTINUE_AFTER_ERROR|Utilizzare CONTINUE_AFTER_ERROR solo se si sta eseguendo il backup della parte finale di un database danneggiato.<br /><br /> Quando si utilizza il backup della parte finale di un database danneggiato, alcuni dei metadati normalmente acquisiti nei backup dei log potrebbero essere non disponibili. Per altre informazioni, vedere [Backup della parte finale del log con metadati di backup incompleti](#IncompleteMetadata)in questo argomento.|  
   
 ##  <a name="IncompleteMetadata"></a> Backup della parte finale del log con metadati di backup incompleti  

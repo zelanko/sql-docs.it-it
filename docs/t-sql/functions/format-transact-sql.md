@@ -18,18 +18,18 @@ ms.assetid: dad6f24c-b8d9-4dbe-a561-9b167b8f20c8
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: b9616a482a220c1c15813fc548ad959dccf46e10
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: 64341fd261cb1c1e419b925049cf86403a64ab3e
+ms.sourcegitcommit: 96032813f6bf1cba680b5e46d82ae1f0f2da3d11
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51703099"
+ms.lasthandoff: 01/15/2019
+ms.locfileid: "54299598"
 ---
 # <a name="format-transact-sql"></a>FORMAT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
 
 > [!div class="nextstepaction"]
-> [Contribuisci a migliorare la documentazione di SQL Server](https://80s3ignv.optimalworkshop.com/optimalsort/36yyw5kq-0)
+> [Condividi il feedback sul sommario della documentazione SQL](https://aka.ms/sqldocsurvey)
 
 
 Restituisce un valore formattato con il formato specificato e impostazioni cultura facoltative in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Utilizzare la funzione FORMAT per formattare in base alle impostazioni locali i valori numerici e di data/ora come stringhe. Per le conversioni di tipi di dati generali, utilizzare CAST o CONVERT.  
@@ -76,11 +76,11 @@ FORMAT ( value, format [, culture ] )
   
 |Category|Tipo|Tipo .NET|  
 |--------------|----------|---------------|  
-|Numeric|bigint|Int64|  
+|Numeric|BIGINT|Int64|  
 |Numeric|INT|Int32|  
 |Numeric|SMALLINT|Int16|  
 |Numeric|TINYINT|Byte|  
-|Numeric|decimal|SqlDecimal|  
+|Numeric|Decimal|SqlDecimal|  
 |Numeric|NUMERIC|SqlDecimal|  
 |Numeric|FLOAT|Double|  
 |Numeric|REAL|Single|  
@@ -127,7 +127,7 @@ Saturday, October 01, 2011   01 October 2011               Samstag, 1. Oktober 2
 (1 row(s) affected)  
 ```  
   
-### <a name="b-format-with-custom-formatting-strings"></a>B. FORMAT con stringhe di formattazione personalizzate  
+### <a name="b-format-with-custom-formatting-strings"></a>b. FORMAT con stringhe di formattazione personalizzate  
  Nell'esempio seguente vengono illustrati i valori numerici di formattazione specificando un formato personalizzato. Nell'esempio si presuppone che la data corrente sia il 27 settembre 2012. Per altre informazioni su questi e altri formati personalizzati, vedere [Stringhe di formato numerico personalizzato](https://msdn.microsoft.com/library/0c899ak8.aspx).  
   
 ```sql  

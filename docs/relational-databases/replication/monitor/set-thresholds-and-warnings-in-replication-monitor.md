@@ -18,12 +18,12 @@ ms.assetid: 3a409c2c-b77e-4001-b81a-1dcd918618ec
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: e20f280df7054596f357c4864ef95177ca3e9cf5
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b3783bbaa861ad857efce87b82c50536757fd499
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47749629"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54135472"
 ---
 # <a name="set-thresholds-and-warnings-in-replication-monitor"></a>Impostazione di valore soglia e avvisi in Monitoraggio replica
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -164,6 +164,6 @@ ms.locfileid: "47749629"
 5.  Scegliere **Chiudi**.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Monitoraggio della replica](../../../relational-databases/replication/monitor/monitoring-replication-overview.md)  
+ [Monitoraggio della replica](../../../relational-databases/replication/monitor/monitoring-replication.md)  
   
   

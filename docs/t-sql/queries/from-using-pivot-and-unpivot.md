@@ -25,15 +25,18 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d07dc597f293414c2c4fae2704085ac4449038cf
-ms.sourcegitcommit: 110e5e09ab3f301c530c3f6363013239febf0ce5
+ms.openlocfilehash: b8781f155f96fa9e80270eaf6f75f2438eae4549
+ms.sourcegitcommit: 96032813f6bf1cba680b5e46d82ae1f0f2da3d11
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/10/2018
-ms.locfileid: "48905772"
+ms.lasthandoff: 01/15/2019
+ms.locfileid: "54299478"
 ---
 # <a name="from---using-pivot-and-unpivot"></a>FROM - Uso di PIVOT e UNPIVOT
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+
+  > [!div class="nextstepaction"]
+  > [Condividi il feedback sul sommario della documentazione SQL](https://aka.ms/sqldocsurvey)
 
   È possibile usare gli operatori relazionali `PIVOT` e `UNPIVOT` per modificare un'espressione con valori di tabella in un'altra tabella. `PIVOT` ruota un'espressione con valori di tabella convertendo i valori univoci di una colonna nell'espressione in più colonne nell'output ed esegue le aggregazioni necessarie sui valori di colonna restanti da includere nell'output finale. `UNPIVOT` esegue l'operazione opposta rispetto a PIVOT ruotando le colonne di un'espressione con valori di tabella in valori di colonna.  
   

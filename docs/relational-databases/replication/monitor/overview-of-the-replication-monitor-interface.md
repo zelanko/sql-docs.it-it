@@ -14,12 +14,12 @@ ms.assetid: 078f0e34-7153-45c4-8725-778b5bef88da
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 2deb67c8fff00cc2780fc28e4a04e938db41c4a4
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 4c6df1fe4c6954539afe8043ffb36c89e5f428fc
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47764649"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54128551"
 ---
 # <a name="overview-of-the-replication-monitor-interface"></a>Panoramica dell'interfaccia di Monitoraggio replica
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -106,7 +106,7 @@ ms.locfileid: "47764649"
   
      In questa scheda vengono visualizzate informazioni dettagliate su agenti e processi utilizzati da tutti i tipi di replica. La scheda consente anche di avviare e arrestare ciascun agente e processo.  
   
- Per altre informazioni, vedere [Visualizzare le informazioni ed eseguire attività relative a un server di pubblicazione &#40;Monitoraggio replica&#41;](../../../relational-databases/replication/monitor/view-information-and-perform-tasks-for-a-publisher-replication-monitor.md).  
+ Per altre informazioni, vedere [Visualizzare le informazioni ed eseguire attività relative a un server di pubblicazione &#40;Monitoraggio replica&#41;](../../../relational-databases/replication/monitor/view-information-and-perform-tasks-replication-monitor.md).  
   
  In Monitoraggio replica è incluso inoltre un menu di scelta rapida per il nodo del server di pubblicazione. Fare clic con il pulsante destro del mouse su un server di pubblicazione nel riquadro sinistro per:  
   
@@ -179,7 +179,7 @@ ms.locfileid: "47764649"
   
          I messaggi di errore disponibili offrono informazioni dettagliate sul motivo per cui un agente non è in esecuzione e rappresentano un punto di partenza per la risoluzione di problemi relativi agli agenti associati a una pubblicazione.  
   
- Per altre informazioni, vedere [Visualizzare le informazioni ed eseguire attività per una pubblicazione &#40;Monitoraggio replica&#41;](../../../relational-databases/replication/monitor/view-information-and-perform-tasks-for-a-publication-replication-monitor.md) e [Visualizzare le informazioni ed eseguire attività relative agli agenti associati a una pubblicazione &#40;Monitoraggio replica&#41;](../../../relational-databases/replication/monitor/view-information-and-perform-tasks-for-publication-agents.md).  
+ Per altre informazioni, vedere [Visualizzare le informazioni ed eseguire attività usando Monitoraggio replica](../../../relational-databases/replication/monitor/view-information-and-perform-tasks-replication-monitor.md).  
   
  Monitoraggio replica include inoltre un menu di scelta rapida per il nodo delle pubblicazioni. Fare clic con il pulsante destro del mouse su una pubblicazione nel riquadro sinistro per:  
   
@@ -218,7 +218,7 @@ ms.locfileid: "47764649"
   
          In questa scheda vengono incluse statistiche dettagliate per ogni articolo elaborato durante la sincronizzazione, incluso l'intervallo di tempo impiegato in ogni fase di elaborazione (caricamento delle modifiche, download delle modifiche e così via). Questa scheda può agevolare l'identificazione di tabelle specifiche che causano rallentamenti ed è il luogo ideale per risolvere problemi relativi alle prestazioni delle sottoscrizioni di tipo merge.  
   
- Per altre informazioni, vedere [Visualizzare le informazioni ed eseguire attività per una sottoscrizione &#40;Monitoraggio replica&#41;](../../../relational-databases/replication/monitor/view-information-and-perform-tasks-for-a-subscription-replication-monitor.md) e [Visualizzare le informazioni ed eseguire attività relative agli agenti associati a una sottoscrizione &#40;Monitoraggio replica&#41;](../../../relational-databases/replication/monitor/view-information-and-perform-tasks-for-subscription-agents.md).  
+ Per altre informazioni, vedere [Visualizzare le informazioni ed eseguire attività usando Monitoraggio replica](../../../relational-databases/replication/monitor/view-information-and-perform-tasks-replication-monitor.md).
   
 ## <a name="viewing-information-and-performing-tasks-related-to-agent-profiles"></a>Visualizzazione delle informazioni ed esecuzione di attività relative ai profili degli agenti  
  Monitoraggio replica include un certo numero di finestre di dialogo per la gestione dei profili degli agenti. I profili degli agenti sono set di parametri relativi a un agente che ne determinano il comportamento. Per altre informazioni, vedere [Replication Agent Profiles](../../../relational-databases/replication/agents/replication-agent-profiles.md). Di seguito vengono descritte le finestre di dialogo associate ai profili:  
@@ -236,6 +236,6 @@ ms.locfileid: "47764649"
      Questa finestra di dialogo consente di creare un nuovo profilo, che può facoltativamente includere i valori di un profilo esistente.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Monitoraggio della replica](../../../relational-databases/replication/monitor/monitoring-replication-overview.md)  
+ [Monitoraggio della replica](../../../relational-databases/replication/monitor/monitoring-replication.md)  
   
   
