@@ -25,15 +25,18 @@ ms.assetid: 5a3a27aa-03e8-4c98-a27e-809282379b21
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: b12e453dcabb88363cf78e86a33bc4773b3c9a52
-ms.sourcegitcommit: 33712a0587c1cdc90de6dada88d727f8623efd11
+ms.openlocfilehash: af3a010f835223a875da7df5028ac1406798c479
+ms.sourcegitcommit: 96032813f6bf1cba680b5e46d82ae1f0f2da3d11
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53597122"
+ms.lasthandoff: 01/15/2019
+ms.locfileid: "54300102"
 ---
 # <a name="declare-cursor-transact-sql"></a>DECLARE CURSOR (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+
+  > [!div class="nextstepaction"]
+  > [Condividi il feedback sul sommario della documentazione SQL](https://aka.ms/sqldocsurvey)
 
   Definisce gli attributi di un cursore del server [!INCLUDE[tsql](../../includes/tsql-md.md)], ad esempio lo scorrimento e la query utilizzata per compilare il set di risultati su cui agisce il cursore. L'istruzione `DECLARE CURSOR` supporta sia la sintassi basata sullo standard ISO che una sintassi che usi un set di estensioni [!INCLUDE[tsql](../../includes/tsql-md.md)].  
   
@@ -83,7 +86,7 @@ DECLARE cursor_name CURSOR [ LOCAL | GLOBAL ]
 Nome del cursore server [!INCLUDE[tsql](../../includes/tsql-md.md)] definito. *cursor_name* deve essere conforme alle regole per gli identificatori.  
   
 LOCAL  
-Specifica che l'ambito del cursore è locale rispetto al batch, alla stored procedure o al trigger in cui il cursore è stato creato. Il nome del cursore è valido solo in tale ambito. È possibile fare riferimento al cursore tramite variabili di cursore locali nel batch, nella stored procedure o nel trigger oppure tramite un parametro `OUTPUT` di stored procedure. Un parametro `OUTPUT` consente di passare il cursore locale al batch, alla stored procedure o al trigger chiamante, che può quindi assegnare il parametro a una variabile cursore per fare riferimento al cursore dopo l'esecuzione della stored procedure. Il cursore viene deallocato in modo implicito al termine del batch, della stored procedure o del trigger, a meno che non venga passato a un parametro `OUTPUT`. In tal caso, il cursore viene deallocato quando l'ultima variabile che vi fa riferimento viene deallocata o risulta esterna all'ambito di validità.  
+Specifica che l'ambito del cursore è locale rispetto al batch, alla stored procedure o al trigger in cui il cursore è stato creato. Il nome del cursore è valido solo in tale ambito. È possibile fare riferimento al cursore tramite variabili di cursore locali nel batch, nella stored procedure o nel trigger oppure tramite un parametro `OUTPUT` di stored procedure. Un parametro `OUTPUT` consente di passare il cursore locale al batch, alla stored procedure o al trigger chiamante, che può quindi assegnare il parametro a una variabile cursore per fare riferimento al cursore dopo l'esecuzione della stored procedure. Il cursore viene deallocato in modo implicito al termine del batch, della stored procedure o del trigger, a meno che non venga passato a un parametro `OUTPUT`. In tal caso`OUTPUT`, il cursore viene deallocato quando l'ultima variabile che vi fa riferimento viene deallocata o risulta esterna all'ambito di validità.  
   
 GLOBAL  
 Specifica che l'ambito del cursore è globale rispetto alla connessione. È possibile fare riferimento al nome del cursore in qualsiasi stored procedure o batch eseguiti tramite la connessione. Il cursore viene deallocato solo in modo implicito in fase di disconnessione.  
