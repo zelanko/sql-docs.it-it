@@ -1,7 +1,7 @@
 ---
-title: "Passaggio 3: Test del pacchetto creato nella lezione 3 dell'esercitazione | Microsoft Docs"
+title: "Passaggio 3: Testare il pacchetto creato nella lezione 3 dell'esercitazione | Microsoft Docs"
 ms.custom: ''
-ms.date: 03/01/2017
+ms.date: 01/04/2019
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
@@ -11,18 +11,19 @@ ms.assetid: 1096a476-93cf-4474-86f5-27d6357eb380
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: ca00f40146d5019f770e3141d3961e40ed526ccc
-ms.sourcegitcommit: 1a5448747ccb2e13e8f3d9f04012ba5ae04bb0a3
+ms.openlocfilehash: 31f08374ad46929c52305cb6558b603a03b439bd
+ms.sourcegitcommit: dd794633466b1da8ead9889f5e633bdf4b3389cd
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51559159"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54143341"
 ---
-# <a name="lesson-3-3---testing-the-lesson-3-tutorial-package"></a>Lezione 3-3 - Test del pacchetto creato nella lezione 3 dell'esercitazione
-In questa attività verrà eseguito il pacchetto Lesson 3.dtsx. Durante l'esecuzione del pacchetto, nella finestra Registra eventi verranno elencate le voci di log scritte nel file di log. Al termine dell'esecuzione del pacchetto sarà possibile verificare il contenuto del file di log generato dal provider di log.  
+# <a name="lesson-3-3-test-the-lesson-3-tutorial-package"></a>Lezione 3-3: Testare il pacchetto creato nella lezione 3 dell'esercitazione
+
+In questa attività viene eseguito il pacchetto **Lesson 3.dtsx**. Mentre il pacchetto viene eseguito, nella finestra **Eventi del log** sono elencate le voci di log che SSIS scrive nel file di log del provider di log. Al termine dell'esecuzione del pacchetto è possibile visualizzare il contenuto del file di log.  
   
-## <a name="checking-the-package-layout"></a>Verifica del layout del pacchetto  
-Prima di testare il pacchetto è consigliabile verificare che il flusso di controllo e il flusso di dati nel pacchetto della lezione 3 contengano gli oggetti visualizzati nelle figure seguenti. Il flusso di controllo deve essere identico a quello nella lezione 2. Il flusso di dati deve essere identico a quello nelle lezioni 1 e 2.  
+## <a name="check-the-package-layout"></a>Verificare il layout del pacchetto  
+Prima di testare il pacchetto, verificare che il flusso di controllo e il flusso di dati nel pacchetto della lezione 3 contengano gli oggetti visualizzati nelle figure seguenti. Il flusso di controllo deve essere identico alla lezione 2 e il flusso di dati deve essere identico alle lezioni 1 e 2.  
   
 **Flusso di controllo**  
   
@@ -32,22 +33,22 @@ Prima di testare il pacchetto è consigliabile verificare che il flusso di contr
   
 ![Flusso di dati nel pacchetto](../integration-services/media/task9lesson1data.gif "Flusso di dati nel pacchetto")  
   
-### <a name="to-run-the-lesson-3-tutorial-package"></a>Per eseguire il pacchetto creato nella lezione 3 dell'esercitazione  
+## <a name="run-the-lesson-3-tutorial-package"></a>Eseguire il pacchetto creato nella lezione 3 dell'esercitazione  
   
-1.  Scegliere Registra eventi dal menu SSIS.  
+1.  Selezionare **Eventi del log** dal menu SSIS.  
   
-2.  Scegliere **Avvia debug** dal menu **Debug**.  
+2.  Selezionare **Avvia debug** dal menu **Debug**.  
   
-3.  Al termine dell'esecuzione del pacchetto, scegliere **Arresta debug** dal menu **Debug**.  
+3.  Al termine dell'esecuzione del pacchetto, selezionare **Arresta debug** dal menu **Debug**.  
   
-### <a name="to-examine-the-generated-log-file"></a>Per esaminare il file di log generato  
+## <a name="examine-the-generated-log-file"></a>Esaminare il file di log generato  
   
 -   Aprire il file TutorialLog.log in Blocco note o in un altro editor di testo.  
   
--   Sebbene la semantica delle informazioni generate per gli eventi **PipelineExecutionPlan** e **PipelineExecutionTrees** esuli dall'ambito di questa esercitazione, si può notare che nella prima riga sono elencati i campi di informazione specificati nella scheda **Dettagli** della finestra di dialogo **Configura log SSIS** . È inoltre possibile verificare che i due eventi selezionati, PipelineExecutionPlan e PipelineExecutionTrees, sono stati inseriti nel log per ogni iterazione del ciclo Foreach.  
+-   Una descrizione completa delle informazioni generate per gli eventi **PipelineExecutionPlan** e **PipelineExecutionTrees** esula dall'ambito di questa esercitazione.  Nel file di log si può osservare che nella prima riga sono elencati i campi di informazione specificati nella scheda **Dettagli** della finestra di dialogo **Configura log SSIS**. È anche possibile verificare che [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] ha inserito nel log i due eventi selezionati, **PipelineExecutionPlan** e **PipelineExecutionTrees**, per ogni iterazione del ciclo Foreach.  
   
 ## <a name="next-lesson"></a>Lezione successiva  
-[Lezione 4: Aggiungere il reindirizzamento del flusso errato tramite SSIS](../integration-services/lesson-4-add-error-flow-redirection-with-ssis.md)  
+[Lezione 4: Aggiungere il reindirizzamento del flusso degli errori con SSIS](../integration-services/lesson-4-add-error-flow-redirection-with-ssis.md)  
   
   
   

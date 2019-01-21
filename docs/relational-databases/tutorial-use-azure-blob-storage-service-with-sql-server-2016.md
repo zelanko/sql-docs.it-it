@@ -1,7 +1,7 @@
 ---
 title: 'Esercitazione: Uso del servizio di archiviazione BLOB di Azure con SQL Server 2016 | Microsoft Docs'
 ms.custom: ''
-ms.date: 01/07/2016
+ms.date: 01/09/2019
 ms.prod: sql
 ms.technology: ''
 ms.prod_service: database-engine
@@ -15,14 +15,15 @@ ms.assetid: e69be67d-da1c-41ae-8c9a-6b12c8c2fb61
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: abbccb66ca86fb80991c6f0733e1cbfa0ee8a8e8
-ms.sourcegitcommit: ba7fb4b9b4f0dbfe77a7c6906a1fde574e5a8e1e
+ms.openlocfilehash: 1af4926f367b79c7e4cc9117042d0b21e4f47b77
+ms.sourcegitcommit: 1f53b6a536ccffd701fc87e658ddac714f6da7a2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/26/2018
-ms.locfileid: "52302844"
+ms.lasthandoff: 01/10/2019
+ms.locfileid: "54206352"
 ---
 # <a name="tutorial-use-azure-blob-storage-service-with-sql-server-2016"></a>Esercitazione: Uso del servizio di archiviazione BLOB di Azure con SQL Server 2016
+
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 Benvenuti nell'esercitazione sull'uso di SQL Server 2016 nel servizio di archiviazione BLOB di Microsoft Azure. Questa esercitazione descrive come usare il servizio di archiviazione BLOB di Microsoft Azure per i file di dati e i backup di SQL Server.  
   
@@ -30,7 +31,8 @@ Il supporto di integrazione di SQL Server per il servizio di archiviazione BLOB 
 
 Nell'esercitazione viene illustrato come usare i file di dati di SQL Server nel servizio di archiviazione BLOB di Microsoft Azure in più sezioni. Ogni sezione è incentrata su un'attività specifica e le sezioni devono essere completate in sequenza. In primo luogo, si apprenderà come creare un nuovo contenitore nell'archiviazione BLOB con criteri di accesso archiviati e una firma di accesso condiviso. Successivamente, verrà illustrato come creare le credenziali di SQL Server per poter integrare SQL Server con l'archivio BLOB di Azure. Verrà quindi eseguito il backup di un database nel servizio di archiviazione BLOB e ne verrà eseguito il ripristino in una macchina virtuale di Azure. Verrà quindi usato il backup del log delle transazioni di snapshot di file di SQL Server 2016 per il ripristino temporizzato e in un nuovo database. Infine, l'esercitazione descriverà l'uso di stored procedure e funzioni di sistema dei metadati per consentire di comprendere e usare i backup di snapshot di file.
   
-## <a name="prerequisites"></a>Prerequisites  
+## <a name="prerequisites"></a>Prerequisites
+
 Per completare l'esercitazione è necessario conoscere i concetti di backup e ripristino di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] e la sintassi T-SQL. Per usare questa esercitazione, sono necessari un account di archiviazione di Azure, SQL Server Management Studio (SSMS), l'accesso a un'istanza di SQL Server locale, l'accesso a una macchina virtuale di Azure che esegue SQL Server 2016 e un database AdventureWorks2016. Inoltre, l'account utente usato per eseguire i comandi BACKUP e RESTORE deve essere incluso nel ruolo del database **db_backup operator** con autorizzazioni **Modifica qualsiasi credenziale**. 
 
 - Ottenere un [account Azure](https://azure.microsoft.com/offers/ms-azr-0044p/) gratuito.
@@ -42,6 +44,7 @@ Per completare l'esercitazione è necessario conoscere i concetti di backup e ri
 - Assegnare l'account utente al ruolo [db_backupoperator](https://docs.microsoft.com/sql/relational-databases/security/authentication-access/database-level-roles) e concedere le autorizzazioni [Modifica qualsiasi credenziale](https://docs.microsoft.com/sql/t-sql/statements/alter-credential-transact-sql). 
  
 ## <a name="1---create-stored-access-policy-and-shared-access-storage"></a>1: Creare criteri di accesso archiviati e l'archivio di accesso condiviso
+
 In questa lezione si userà uno script di [Azure PowerShell](https://azure.microsoft.com/documentation/articles/powershell-install-configure/) per creare una firma di accesso condiviso in un contenitore BLOB di Azure tramite criteri di accesso archiviati.  
   
 > [!NOTE]  
@@ -129,6 +132,7 @@ Per creare i criteri per il contenitore e generare una chiave di firma di access
 
 
 ## <a name="2---create-a-sql-server-credential-using-a-shared-access-signature"></a>2: Creare credenziali di SQL Server usando una firma di accesso condiviso
+
 In questa sezione verranno create credenziali per archiviare le informazioni sulla sicurezza che saranno poi usate da SQL Server per scrivere e leggere dal contenitore di Azure creato nel passaggio precedente.  
   
 Una credenziale di SQL Server è un oggetto utilizzato per archiviare le informazioni di autenticazione necessarie per connettersi a una risorsa all'esterno di SQL Server. Nelle credenziali vengono archiviati il percorso URI del contenitore di archiviazione e i valori della firma di accesso condivisa per questo contenitore.  
@@ -169,6 +173,7 @@ Per creare credenziali di SQL Server, seguire questa procedura:
 7.  Ripetere i passaggi 5 e 6 per tutte le istanze di SQL Server aggiuntive che devono avere accesso al contenitore di Azure.  
 
 ## <a name="3---database-backup-to-url"></a>3: Backup del database su URL
+
 In questa sezione si esegue un backup del database AdventureWorks2016 presente nell'istanza di SQL Server 2016 nel contenitore di Azure creato nella [sezione 1](#1---create-stored-access-policy-and-shared-access-storage).
   
 > [!NOTE]  
@@ -200,6 +205,7 @@ Per eseguire il backup di un database nell'archiviazione BLOB, seguire questi pa
 
 
 ## <a name="4----restore-database-to-virtual-machine-from-url"></a>4: Ripristinare il database in una macchina virtuale da un URL
+
 In questa sezione il database AdventureWorks2016 viene ripristinato nell'istanza di SQL Server 2016 nella macchina virtuale di Azure.
   
 > [!NOTE]  
@@ -235,7 +241,8 @@ Per ripristinare il database AdventureWorks2016 dall'archivio BLOB di Azure nell
   
    ![File di dati all'interno del contenitore in Azure](media/tutorial-use-azure-blob-storage-service-with-sql-server-2016/data-files-in-container.png)
 
-# <a name="5---backup-database-using-file-snapshot-backup"></a>5: Eseguire il backup del database con il backup di snapshot di file
+## <a name="5---backup-database-using-file-snapshot-backup"></a>5: Eseguire il backup del database con il backup di snapshot di file
+
 In questa sezione si eseguirà il backup del database AdventureWorks2016 nella macchina virtuale di Azure usando il backup di snapshot di file per eseguire un backup quasi istantaneo con gli snapshot di Azure. Per altre informazioni sui backup di snapshot, vedere [Backup di snapshot di file per i file di database in Azure](../relational-databases/backup-restore/file-snapshot-backups-for-database-files-in-azure.md)  
   
 Per eseguire il backup del database AdventureWorks2016 usando un backup di snapshot, eseguire queste operazioni:  
@@ -275,6 +282,7 @@ Per eseguire il backup del database AdventureWorks2016 usando un backup di snaps
     ![Backup di snapshot in Azure](media/tutorial-use-azure-blob-storage-service-with-sql-server-2016/snapshot-backup-on-azure.PNG)
 
 ## <a name="6----generate-activity-and-backup-log-using-file-snapshot-backup"></a>6: Generare attività e backup del log usando il backup di snapshot di file
+
 In questa sezione viene generata un'attività nel database AdventureWorks2016 e periodicamente vengono eseguiti i backup del log delle transazioni tramite backup di snapshot di file. Per altre informazioni sui backup di snapshot di file, vedere [Backup di snapshot di file per i file di database in Azure](../relational-databases/backup-restore/file-snapshot-backups-for-database-files-in-azure.md).  
   
 Per generare un'attività nel database AdventureWorks2016 e creare periodicamente backup del log delle transazioni tramite backup di snapshot di file, seguire questa procedura:  
@@ -340,6 +348,7 @@ Per generare un'attività nel database AdventureWorks2016 e creare periodicament
     ![Snapshot multipli nel contenitore di Azure](media/tutorial-use-azure-blob-storage-service-with-sql-server-2016/tutorial-snapshots-in-container.png)
 
 ## <a name="7---restore-a-database-to-a-point-in-time"></a>7: Ripristinare un database fino a un punto nel tempo
+
 In questa sezione il database AdventureWorks2016 verrà ripristinato in base a un dato momento tra due backup del log delle transazioni.  
   
 Con i backup tradizionali, per eseguire il ripristino temporizzato, è necessario usare il backup completo del database, ad esempio un backup differenziale, e tutti i file di log delle transazioni fino a e subito dopo il momento in base al quale si esegue il ripristino. Per i backup di snapshot di file sono necessari solo i due file di backup del log che rappresentano i due limiti del periodo di tempo a cui si riferisce il ripristino. Sono necessari due soli set di backup di snapshot di file di log poiché ogni backup del log crea uno snapshot di ogni file del database (file di dati e file di log).  
@@ -378,6 +387,7 @@ Per ripristinare un database in base a un momento specifico dal set di backup di
     ![18-thousand-rows.JPG](media/tutorial-use-azure-blob-storage-service-with-sql-server-2016/18-thousand-rows.png)
 
 ## <a name="8----restore-as-new-database-from-log-backup"></a>8: Ripristinare come nuovo database dal backup del log
+
 In questa sezione il database AdventureWorks2016 verrà ripristinato come nuovo database dal backup del log delle transazioni dello snapshot di file.  
   
 In questo scenario viene eseguito un ripristino in un'istanza di SQL Server in una macchina virtuale diversa per l'analisi business e la creazione di report. Il ripristino in un'altra istanza in una macchina virtuale diversa ripartisce il carico di lavoro su una macchina virtuale dedicata con dimensioni adatte allo scopo eliminando le richieste di risorse dal sistema transazionale.  
@@ -411,6 +421,7 @@ Per ripristinare un database in un nuovo database da un backup del log delle tra
     ![Contenitore di Azure con i file di log e di dati per il nuovo database](media/tutorial-use-azure-blob-storage-service-with-sql-server-2016/new-db-in-azure-container.png)
 
 ## <a name="9---manage-backup-sets-and-file-snapshot-backups"></a>9: Gestire set di backup e backup di snapshot di file
+
 In questa sezione verrà eliminato un set di backup tramite la stored procedure di sistema [sp_delete_backup &#40;Transact-SQL&#41;](../relational-databases/system-stored-procedures/snapshot-backup-sp-delete-backup.md). Questa stored procedure di sistema elimina il file di backup e lo snapshot del file in ogni file di database associato a questo set di backup.  
   
 > [!NOTE]  
@@ -440,6 +451,7 @@ Per eliminare un set di backup di snapshot di file, seguire questi passaggi:
     ![Riquadro dei risultati con i 2 snapshot di file eliminati](media/tutorial-use-azure-blob-storage-service-with-sql-server-2016/results-of-two-deleted-snapshot-files.png)
 
 ## <a name="10---remove-resources"></a>10: Rimuovere le risorse
+
 Dopo aver completato questa esercitazione, per risparmiare risorse, assicurarsi di eliminare il gruppo di risorse creato in questa esercitazione. 
 
 Per eliminare il gruppo di risorse, eseguire il codice PowerShell seguente:
@@ -463,11 +475,12 @@ Per eliminare il gruppo di risorse, eseguire il codice PowerShell seguente:
 
 
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedere anche
+
 [File di dati di SQL Server in Microsoft Azure](../relational-databases/databases/sql-server-data-files-in-microsoft-azure.md)  
 [Backup di snapshot di file per i file di database in Azure](../relational-databases/backup-restore/file-snapshot-backups-for-database-files-in-azure.md)  
 [Backup di SQL Server nell'URL](../relational-databases/backup-restore/sql-server-backup-to-url.md) 
-[Uso delle firme di accesso condiviso, parte 1: conoscere il modello di firma di accesso condiviso](https://azure.microsoft.com/documentation/articles/storage-dotnet-shared-access-signature-part-1/)  
+[Firme di accesso condiviso, Parte 1: Informazioni sul modello di firma di accesso condiviso](https://azure.microsoft.com/documentation/articles/storage-dotnet-shared-access-signature-part-1/)  
 [Create Container](https://msdn.microsoft.com/library/azure/dd179468.aspx)  
 [Set Container ACL](https://msdn.microsoft.com/library/azure/dd179391.aspx)  
 [Get Container ACL](https://msdn.microsoft.com/library/azure/dd179469.aspx)

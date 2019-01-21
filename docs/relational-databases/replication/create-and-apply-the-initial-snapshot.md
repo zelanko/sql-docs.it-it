@@ -1,7 +1,7 @@
 ---
 title: Creare e applicare lo snapshot iniziale | Microsoft Docs
 ms.custom: ''
-ms.date: 03/14/2017
+ms.date: 11/20/2018
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
@@ -14,70 +14,78 @@ ms.assetid: 742727a1-5189-44ec-b3ae-6fd7aa1f5347
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 62abe846572eff13f44658cdea33670ca2b0bf1c
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 8d537dedf9cf84cafd0b61cfac6605f1b0457fb8
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51657550"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54135611"
 ---
 # <a name="create-and-apply-the-initial-snapshot"></a>Creazione e applicazione dello snapshot iniziale
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  In questo argomento viene descritto come creare e applicare lo snapshot iniziale in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] tramite [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../includes/tsql-md.md)]o RMO (Replication Management Objects). Per le pubblicazioni di tipo merge che utilizzano filtri con parametri è necessario uno snapshot a due parti. Per altre informazioni, vedere [Creazione di uno snapshot per una pubblicazione di tipo merge con filtri con parametri](../../relational-databases/replication/create-a-snapshot-for-a-merge-publication-with-parameterized-filters.md).  
+In questo argomento viene descritto come creare e applicare lo snapshot iniziale in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] tramite [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../includes/tsql-md.md)]o RMO (Replication Management Objects). Per le pubblicazioni di tipo merge che utilizzano filtri con parametri è necessario uno snapshot a due parti. Per altre informazioni, vedere [Creazione di uno snapshot per una pubblicazione di tipo merge con filtri con parametri](../../relational-databases/replication/create-a-snapshot-for-a-merge-publication-with-parameterized-filters.md).  
+  Gli snapshot vengono generati dall'agente snapshot al termine della creazione di una pubblicazione. La generazione può essere eseguita:  
   
- **Contenuto dell'argomento**  
+-   Immediatamente. Per impostazione predefinita, per una pubblicazione di tipo merge uno snapshot viene generato immediatamente dopo la creazione di una pubblicazione mediante la Creazione guidata nuova pubblicazione.    
+-   A un'ora pianificata. Specificare una pianificazione nella pagina **Agente snapshot** della Creazione guidata nuova pubblicazione o quando si utilizzano stored procedure o Replication Management Objects (RMO).    
+-   Manualmente. Eseguire l'agente snapshot dal prompt dei comandi o da [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Per altre informazioni sull'esecuzione degli agenti, vedere [Concetti di base relativi ai file eseguibili dell'agente di replica](../../relational-databases/replication/concepts/replication-agent-executables-concepts.md) e [Avviare e arrestare un agente di replica &#40;SQL Server Management Studio&#41;](../../relational-databases/replication/agents/start-and-stop-a-replication-agent-sql-server-management-studio.md).  
   
--   **Per creare e applicare lo snapshot iniziale, utilizzando:**  
+Per la replica di tipo merge, viene generato uno snapshot a ogni esecuzione dell'agente snapshot. Per la replica transazionale, la generazione dello snapshot dipende dall'impostazione della proprietà di pubblicazione **immediate_sync**. Se tale proprietà è impostata su TRUE, ovvero il valore predefinito quando si utilizza la Creazione guidata nuova pubblicazione, viene generato uno snapshot ogni volta che viene eseguito l'agente snapshot, che può essere applicato a un Sottoscrittore in qualsiasi momento. Se invece è impostata su FALSE, ovvero il valore predefinito quando si utilizza **sp_addpublication**, lo snapshot viene generato solo se è stata aggiunta una nuova sottoscrizione dopo l'ultima esecuzione dell'agente snapshot. Per poter eseguire la sincronizzazione, è necessario che i sottoscrittori attendano il completamento dell'agente snapshot.  
   
-     [SQL Server Management Studio](#SSMSProcedure)  
+Per impostazione predefinita, una volta generati gli snapshot vengono salvati nella cartella snapshot predefinita nel server di distribuzione. È anche possibile salvare i file di snapshot su supporti rimovibili come dischi rimovibili, CD-ROM o in posizioni diverse dalla cartella snapshot predefinita. È inoltre possibile comprimere i file in modo da semplificarne l'archiviazione e il trasferimento ed eseguire script prima o dopo aver applicato lo snapshot nel Sottoscrittore. Per altre informazioni su queste opzioni, vedere [Snapshot Options](../../relational-databases/replication/snapshot-options.md).  
   
-     [Transact-SQL](#TsqlProcedure)  
+Se lo snapshot è per una pubblicazione di tipo merge che utilizza filtri con parametri, verrà creato utilizzando un processo a due fasi. Viene innanzitutto creato uno snapshot dello schema contenente gli script di replica e lo schema degli oggetti pubblicati, ma non i dati. Ogni sottoscrizione viene quindi inizializzata con uno snapshot che include gli script e lo schema copiati dallo snapshot dello schema e i dati appartenenti alla partizione della sottoscrizione. Per altre informazioni, vedere [Snapshots for Merge Publications with Parameterized Filters](../../relational-databases/replication/create-a-snapshot-for-a-merge-publication-with-parameterized-filters.md).  
   
-     [Oggetti RMO (Replication Management Objects)](#RMOProcedure)  
+Dopo aver creato lo snapshot nel server di pubblicazione e averlo archiviato in una posizione snapshot predefinita o alternativa, sarà possibile trasferirlo nel Sottoscrittore e applicarlo. L'agente di distribuzione (per la replica snapshot o transazionale) o l'agente di merge (per la replica di tipo merge) trasferisce lo snapshot e applica lo schema e i file di dati al database di sottoscrizione sul Sottoscrittore durante la sincronizzazione iniziale. Per impostazione predefinita, se si utilizza la Creazione guidata nuova sottoscrizione la sincronizzazione iniziale viene eseguita subito dopo la creazione di una sottoscrizione. Questo comportamento è controllato dall'opzione **Inizializza quando** della pagina **Inizializza sottoscrizioni** della procedura guidata. Gli snapshot generati in seguito all'inizializzazione di una sottoscrizione non vengono applicati a un Sottoscrittore a meno che la sottoscrizione non sia contrassegnata per la reinizializzazione. Per altre informazioni, vedere [Reinizializzare le sottoscrizioni](../../relational-databases/replication/reinitialize-subscriptions.md).  
   
-##  <a name="SSMSProcedure"></a> Utilizzo di SQL Server Management Studio  
- Per impostazione predefinita, se [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent è in esecuzione, l'agente snapshot genera uno snapshot subito dopo la creazione di una pubblicazione mediante la Creazione guidata nuova pubblicazione. Sempre per impostazione predefinita, tale snapshot viene quindi applicato dall'agente di distribuzione (per la replica snapshot e transazionale) o dall'agente di merge (per le sottoscrizioni di tipo merge) per tutte le sottoscrizioni. È anche possibile generare uno snapshot utilizzando [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] e Monitoraggio replica. Per informazioni sull'avvio di Monitoraggio replica, vedere [Avviare Monitoraggio replica](../../relational-databases/replication/monitor/start-the-replication-monitor.md).  
+Dopo aver applicato lo snapshot iniziale, l'agente di distribuzione o l'agente di merge propaga gli aggiornamenti successivi e le altre modifiche dei dati. La distribuzione e l'applicazione degli snapshot nei Sottoscrittori hanno effetto solamente sui Sottoscrittori in attesa dello snapshot iniziale o di nuovi snapshot, mentre non hanno alcun effetto sui Sottoscrittori della pubblicazione in cui sono già state eseguite operazioni di inserimento, aggiornamento ed eliminazione o altre modifiche dei dati pubblicati.  
+
+Per visualizzare o modificare la posizione della cartella snapshot predefinita, vedere  
   
-#### <a name="to-create-a-snapshot-in-management-studio"></a>Per creare uno snapshot in Management Studio  
+-   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]: [Modificare le opzioni snapshot](../../relational-databases/replication/snapshot-options.md)  
   
-1.  Connettersi al server di pubblicazione in [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]e quindi espandere il nodo del server.  
+-   Programmazione della replica e programmazione di RMO: [Configurare la pubblicazione e la distribuzione](../../relational-databases/replication/configure-publishing-and-distribution.md)  
+
+## <a name="default-snapshot-location"></a>Posizione predefinita degli snapshot
+
+ Specificare la posizione predefinita degli snapshot nella pagina **Cartella snapshot** della Configurazione guidata distribuzione. Per altre informazioni sull'uso di questa procedura guidata, vedere [Configurare la pubblicazione e la distribuzione](../../relational-databases/replication/configure-publishing-and-distribution.md). Se si crea una pubblicazione su un server non configurato come server di distribuzione, specificare una posizione predefinita degli snapshot nella pagina **Cartella snapshot** della Creazione guidata nuova pubblicazione. Per altre informazioni sull'uso di questa procedura guidata, vedere [Creare una pubblicazione](../../relational-databases/replication/publish/create-a-publication.md).  
   
-2.  Espandere la cartella **Replica** e quindi la cartella **Pubblicazioni locali** .  
+ Modificare la posizione predefinita degli snapshot nella pagina **Server di pubblicazione** della finestra di dialogo **Proprietà database di distribuzione - \<DatabaseDistribuzione>**. Per altre informazioni, vedere [Visualizzare e modificare le proprietà del server di pubblicazione e del database di distribuzione](../../relational-databases/replication/view-and-modify-distributor-and-publisher-properties.md). Impostare la cartella snapshot per ogni pubblicazione nella finestra di dialogo **Proprietà pubblicazione - \<Pubblicazione**. Per altre informazioni, vedere [View and Modify Publication Properties](../../relational-databases/replication/publish/view-and-modify-publication-properties.md).  
   
-3.  Fare clic con il pulsante destro del mouse sulla pubblicazione per la quale si desidera creare uno snapshot, quindi scegliere **Visualizza stato agente snapshot**.  
+### <a name="modify-the-default-snapshot-location"></a>Modificare la posizione predefinita degli snapshot  
   
-4.  Nella finestra di dialogo **Visualizza stato agente snapshot - \<Pubblicazione>** fare clic su **Avvia**.  
+1.  Nella pagina **Server di pubblicazione** della finestra di dialogo **Proprietà database di distribuzione - \<DatabaseDistribuzione>** fare clic sul pulsante delle proprietà (**…**) per il server di pubblicazione di cui si vuole modificare la posizione predefinita degli snapshot.  
   
+2.  Nella finestra di dialogo **Proprietà server di pubblicazione - \<Server di pubblicazione>** immettere un valore per la proprietà **Cartella snapshot predefinita**.  
+  
+    > [!NOTE]  
+    >  L'agente snapshot deve disporre delle autorizzazioni di scrittura per la directory specificata, mentre l'agente di distribuzione o l'agente di merge deve disporre delle autorizzazioni di lettura. Se si usano sottoscrizioni pull, è necessario specificare una directory condivisa come percorso UNC (Universal Naming Convention), ad esempio \\\nomecomputer\snapshot. Per altre informazioni, vedere [Proteggere la cartella snapshot](../../relational-databases/replication/security/secure-the-snapshot-folder.md).  
+  
+3.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
+
+## <a name="create-snapshot"></a>Creare snapshot
+Per impostazione predefinita, se SQL Server Agent è in esecuzione, l'agente di snapshot genera immediatamente uno snapshot dopo aver creato una pubblicazione con la Creazione guidata nuova pubblicazione. Sempre per impostazione predefinita, tale snapshot viene quindi applicato dall'agente di distribuzione (per la replica snapshot e transazionale) o dall'agente di merge (per le sottoscrizioni di tipo merge) per tutte le sottoscrizioni. È anche possibile generare uno snapshot utilizzando [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] e Monitoraggio replica. Per informazioni sull'avvio di Monitoraggio replica, vedere [Avviare Monitoraggio replica](../../relational-databases/replication/monitor/start-the-replication-monitor.md).  
+
+### <a name="using-sql-server-management-studio"></a>Utilizzo di SQL Server Management Studio
+
+1.  Connettersi al server di pubblicazione in [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]e quindi espandere il nodo del server.    
+2.  Espandere la cartella **Replica** e quindi la cartella **Pubblicazioni locali** .    
+3.  Fare clic con il pulsante destro del mouse sulla pubblicazione per la quale si desidera creare uno snapshot, quindi scegliere **Visualizza stato agente snapshot**.    
+4.  Nella finestra di dialogo **Visualizza stato agente snapshot - \<Pubblicazione>** fare clic su **Avvia**.    
  Al termine della generazione dello snapshot, verrà visualizzato un messaggio del tipo "[100%] Generato uno snapshot di 17 articoli."  
   
-#### <a name="to-create-a-snapshot-in-replication-monitor"></a>Per creare uno snapshot in Monitoraggio replica  
+### <a name="in-replication-monitor"></a>In Monitoraggio replica  
   
-1.  In Monitoraggio replica espandere un gruppo di server di pubblicazione nel riquadro di sinistra e quindi espandere un server di pubblicazione.  
-  
-2.  Fare clic con il pulsante destro del mouse sulla pubblicazione per la quale si desidera generare uno snapshot, quindi scegliere **Genera snapshot**.  
-  
+1.  In Monitoraggio replica espandere un gruppo di server di pubblicazione nel riquadro di sinistra e quindi espandere un server di pubblicazione.    
+2.  Fare clic con il pulsante destro del mouse sulla pubblicazione per la quale si desidera generare uno snapshot, quindi scegliere **Genera snapshot**.    
 3.  Per visualizzare lo stato dell'agente snapshot, fare clic sulla scheda **Agenti** . Per informazioni più dettagliate, fare clic con il pulsante destro del mouse sull'agente snapshot nella griglia e scegliere **Visualizza dettagli**.  
-  
-#### <a name="to-apply-a-snapshot"></a>Per applicare uno snapshot  
-  
-1.  Al termine della generazione, lo snapshot verrà applicato mediante la sincronizzazione della sottoscrizione con l'agente di distribuzione o l'agente di merge:  
-  
-    -   Se l'agente è impostato per l'esecuzione continua, ovvero l'impostazione predefinita per la replica transazionale, lo snapshot verrà applicato automaticamente al termine della generazione.  
-  
-    -   Se è invece impostato per l'esecuzione in base a una pianificazione, lo snapshot verrà applicato alla successiva esecuzione pianificata dell'agente.  
-  
-    -   Se l'agente è impostato per l'esecuzione su richiesta, lo snapshot verrà applicato alla successiva esecuzione dell'agente.  
-  
-     Per ulteriori informazioni sulla sincronizzazione delle sottoscrizioni, vedere [Synchronize a Push Subscription](../../relational-databases/replication/synchronize-a-push-subscription.md) e [Synchronize a Pull Subscription](../../relational-databases/replication/synchronize-a-pull-subscription.md).  
-  
-##  <a name="TsqlProcedure"></a> Uso di Transact-SQL  
- Gli snapshot iniziali possono essere creati a livello di programmazione creando ed eseguendo un processo dell'agente snapshot o eseguendo il file eseguibile dell'agente snapshot da un file batch. Dopo la generazione, lo snapshot iniziale viene trasferito e applicato al Sottoscrittore la prima volta che la sottoscrizione viene sincronizzata. Se si esegue l'agente snapshot da un prompt dei comandi o un file batch, sarà necessario rieseguirlo ogni volta che lo snapshot esistente diventa non valido.  
+
+## <a name="using-transact-sql"></a>Utilizzo di Transact-SQL
+Gli snapshot iniziali possono essere creati a livello di programmazione creando ed eseguendo un processo dell'agente snapshot o eseguendo il file eseguibile dell'agente snapshot da un file batch. Dopo la generazione, lo snapshot iniziale viene trasferito e applicato al Sottoscrittore la prima volta che la sottoscrizione viene sincronizzata. Se si esegue l'agente snapshot da un prompt dei comandi o un file batch, sarà necessario rieseguirlo ogni volta che lo snapshot esistente diventa non valido.  
   
 > [!IMPORTANT]  
 >  Se possibile, richiedere agli utenti di immettere le credenziali di sicurezza in fase di esecuzione. Se è necessario archiviare le credenziali in un file script, è fondamentale proteggere il file per evitare accessi non autorizzati.  
-  
-#### <a name="to-create-and-run-a-snapshot-agent-job-to-generate-the-initial-snapshot"></a>Per creare ed eseguire un processo dell'agente snapshot per generare lo snapshot iniziale  
-  
+
 1.  Creare una pubblicazione snapshot, transazionale o di tipo merge. Per altre informazioni, vedere [Create a Publication](../../relational-databases/replication/publish/create-a-publication.md).  
   
 2.  Eseguire [sp_addpublication_snapshot &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addpublication-snapshot-transact-sql.md). Specificare **@publication** e i parametri seguenti:  
@@ -97,8 +105,19 @@ ms.locfileid: "51657550"
   
 4.  Nel database di pubblicazione del server di pubblicazione eseguire [sp_startpublication_snapshot &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-startpublication-snapshot-transact-sql.md), specificando il valore **@publication** dal passaggio 1.  
   
-#### <a name="to-run-the-snapshot-agent-to-generate-the-initial-snapshot"></a>Per eseguire l'agente snapshot per generare lo snapshot iniziale  
+## <a name="apply-a-snapshot"></a>Applicare uno snapshot  
+
+### <a name="using-sql-server-management-studio"></a>Utilizzo di SQL Server Management Studio
   
+1.  Al termine della generazione, lo snapshot verrà applicato mediante la sincronizzazione della sottoscrizione con l'agente di distribuzione o l'agente di merge:   
+    -   Se l'agente è impostato per l'esecuzione continua, ovvero l'impostazione predefinita per la replica transazionale, lo snapshot verrà applicato automaticamente al termine della generazione.   
+    -   Se è invece impostato per l'esecuzione in base a una pianificazione, lo snapshot verrà applicato alla successiva esecuzione pianificata dell'agente.    
+    -   Se l'agente è impostato per l'esecuzione su richiesta, lo snapshot verrà applicato alla successiva esecuzione dell'agente.  
+  
+     Per ulteriori informazioni sulla sincronizzazione delle sottoscrizioni, vedere [Synchronize a Push Subscription](../../relational-databases/replication/synchronize-a-push-subscription.md) e [Synchronize a Pull Subscription](../../relational-databases/replication/synchronize-a-pull-subscription.md).  
+  
+###   <a name="use-transact-sql"></a>Usare Transact-SQL  
+ 
 1.  Creare una pubblicazione snapshot, transazionale o di tipo merge. Per altre informazioni, vedere [Create a Publication](../../relational-databases/replication/publish/create-a-publication.md).  
   
 2.  Aggiungere articoli alla pubblicazione. Per altre informazioni, vedere [definire un articolo](../../relational-databases/replication/publish/define-an-article.md).  
@@ -106,27 +125,18 @@ ms.locfileid: "51657550"
 3.  Dal prompt dei comandi o in un file batch avviare l' [Agente merge repliche](../../relational-databases/replication/agents/replication-snapshot-agent.md) eseguendo **snapshot.exe**con gli argomenti della riga di comando seguenti:  
   
     -   **-Publication**  
-  
     -   **-Publisher**  
-  
-    -   **-Distributor**  
-  
-    -   **-PublisherDB**  
-  
+    -   **-Distributor**   
+    -   **-PublisherDB**   
     -   **-ReplicationType**  
   
      Se si usano l'autenticazione di SQL Server, è inoltre necessario specificare gli argomenti seguenti:  
   
-    -   **-DistributorLogin**  
-  
-    -   **-DistributorPassword**  
-  
-    -   **-DistributorSecurityMode** = **0**  
-  
-    -   **-PublisherLogin**  
-  
-    -   **-PublisherPassword**  
-  
+    -   **-DistributorLogin**    
+    -   **-DistributorPassword**   
+    -   **-DistributorSecurityMode** = **0**    
+    -   **-PublisherLogin**    
+    -   **-PublisherPassword**    
     -   **-PublisherSecurityMode** = **0**  
   
 ###  <a name="TsqlExample"></a> Esempi (Transact-SQL)  
@@ -249,7 +259,6 @@ REM --Start the Snapshot Agent to generate the snapshot for AdvWorksSalesOrdersM
  [Create a Pull Subscription](../../relational-databases/replication/create-a-pull-subscription.md)   
  [Create a Push Subscription](../../relational-databases/replication/create-a-push-subscription.md)   
  [Specify Synchronization Schedules](../../relational-databases/replication/specify-synchronization-schedules.md)   
- [Creare e applicare lo snapshot](../../relational-databases/replication/create-and-apply-the-snapshot.md)   
  [Inizializzare una sottoscrizione con uno snapshot](../../relational-databases/replication/initialize-a-subscription-with-a-snapshot.md)   
  [Replication Management Objects Concepts](../../relational-databases/replication/concepts/replication-management-objects-concepts.md)   
  [Replication Security Best Practices](../../relational-databases/replication/security/replication-security-best-practices.md)   

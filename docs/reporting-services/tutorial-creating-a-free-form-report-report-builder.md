@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 87288b59-faf2-4b1d-a8e4-a7582baedf2f
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: d89562ce168d8cf5662fc7af96da3d89cdafe509
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+ms.openlocfilehash: d473ba8f0a16fd161ec2c6edce2cd6de51a08f36
+ms.sourcegitcommit: dd794633466b1da8ead9889f5e633bdf4b3389cd
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50021925"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54143491"
 ---
 # <a name="tutorial-creating-a-free-form-report-report-builder"></a>Esercitazione: Creazione di un report in formato libero (Generatore report)
 In questa esercitazione viene creato un rapporto impaginato che ha l'aspetto di un notiziario. Ogni pagina visualizza testo statico, elementi visivi di riepilogo e dati di vendita di esempio dettagliati.
@@ -22,7 +22,7 @@ In questa esercitazione viene creato un rapporto impaginato che ha l'aspetto di 
 
 Nel report le informazioni vengono raggruppate per territorio e vengono visualizzati il nome del responsabile vendite del territorio e informazioni dettagliate e riepilogative relative alle vendite. Si inizia con un'area dati elenco come base per il report in formato libero, quindi si aggiunge un pannello decorativo con un'immagine, testo statico contenente dati, una tabella per la visualizzazione di informazioni dettagliate e facoltativamente grafici a torta e istogrammi per la visualizzazione di informazioni di riepilogo.  
   
-Il tempo stimato per il completare l'esercitazione è di 20 minuti.  
+Tempo previsto per il completamento di questa esercitazione: 20 minuti.  
   
 ## <a name="requirements"></a>Requisiti  
 Per altre informazioni sui requisiti, vedere [Prerequisiti per le esercitazioni &#40;Generatore report&#41;](../reporting-services/prerequisites-for-tutorials-report-builder.md).  
@@ -48,11 +48,11 @@ Per altre informazioni sui requisiti, vedere [Prerequisiti per le esercitazioni 
   
 1.  Nel riquadro Dati report fare clic su **Nuovo** > **Origine dati**.  
   
-2.  Nella casella **Nome** digitare **ListDataSource**  
+2.  Nella casella **Nome** digitare: **ListDataSource**  
   
 3.  Fare clic su **Usa una connessione incorporata nel report**.  
   
-4.  Verificare che il tipo di connessione sia Microsoft SQL Server, quindi nella casella **Stringa di connessione** digitare **Origine dati = \<nomeserver>**  
+4.  Verificare che il tipo di connessione sia Microsoft SQL Server, quindi nella casella **Stringa di connessione** digitare: **Origine dati = \<nomeserver>**  
   
     **\<nomeserver>**, ad esempio Report001 specifica un computer in cui viene installata un'istanza del motore di database di SQL Server. Poiché i dati di questo report non vengono estratti da un database di SQL Server, non è necessario includere il nome di un database. Per analizzare la query viene usato il database predefinito nel server specificato.  
   
@@ -64,7 +64,7 @@ Per altre informazioni sui requisiti, vedere [Prerequisiti per le esercitazioni 
   
 1.  Nel riquadro Dati report fare clic su **Nuovo** > **Set di dati**.  
   
-2.  Nella casella **Nome** digitare **ListDataset**.  
+2.  Nella casella **Nome** digitare: **ListDataset**.  
   
 3.  Fare clic su **Utilizzare un set di dati incorporato nel report**, quindi verificare che l'origine dati sia **ListDataSource**.  
   
@@ -215,7 +215,7 @@ Nella parte sinistra del report è ora presente un elemento grafico verticale co
     *  **20 pt**.
     *  **Cremisi**.  
   
-9. Posizionare il cursore sotto il testo digitato nel passaggio 3 e digitare: **Salve** con uno spazio dopo la parola, per separare il testo e il campo che si aggiungerà nel passaggio successivo.  
+9. Posizionare il cursore sotto il testo digitato nel passaggio 3 e digitare: **Salve** con uno spazio dopo la parola per separare il testo e il campo che si aggiungerà nel passaggio successivo.  
  
 10. Trascinare il campo `[FullName]` da ListDataSet nel riquadro dei dati del report nella casella di testo e posizionarlo dopo "Salve", quindi digitare una virgola (,).  
    
@@ -244,7 +244,7 @@ Nella parte sinistra del report è ora presente un elemento grafico verticale co
       *  **10 pt**.
       *  **Nero**.  
  
-20. Posizionare il cursore all'interno della casella di testo, sotto il testo fittizio, e digitare: **Congratulazioni per le vendite totali di**, con uno spazio dopo la parola per separare il testo e il campo che verrà aggiunto nel passaggio successivo. 
+20. Posizionare il cursore all'interno della casella di testo, sotto il testo fittizio, e digitare: **Congratulazioni per le vendite totali di**, con uno spazio dopo la parola per separare il testo e il campo che si aggiungerà nel passaggio successivo. 
   
 21. Trascinare il campo Sales nella casella di testo, posizionarlo dopo il testo digitato nel passaggio precedente, quindi digitare un punto esclamativo (!).  
 
@@ -458,7 +458,7 @@ I rettangoli consentono di controllare la modalità di rendering del report. Pos
   
     ![report-builder-free-form-column](../reporting-services/media/report-builder-free-form-column.png)
 
-12. Selezionare l'asse del grafico e nella scheda *Home** > **Numero** > **Valuta**.
+12. Selezionare l'asse del grafico e quindi nella scheda **Home** > **Numero** > **Valuta**.
 
 13. Selezionare **Diminuisci decimali** due volte, in modo che il numero indichi solo i dollari e non i centesimi.      
 ### <a name="to-verify-the-charts-are-inside-the-rectangle"></a>Per verificare che i grafici siano all'interno del rettangolo  

@@ -11,12 +11,12 @@ helpviewer_keywords:
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 1c72f5294a7727b7d5a7903e0c12f8daa8c93cbf
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: a63d6e347f83e63f7f99a2e06e1122b1c93934b0
+ms.sourcegitcommit: bfa10c54e871700de285d7f819095d51ef70d997
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52394150"
+ms.lasthandoff: 01/14/2019
+ms.locfileid: "54257056"
 ---
 # <a name="upgrade-sql-server-instances-running-on-windows-server-20082008-r22012-clusters"></a>Aggiornare istanze di SQL Server in esecuzione in cluster di Windows Server 2008/2008 R2/2012
 
@@ -46,12 +46,12 @@ La strategia di migrazione appropriata dipende da alcuni parametri della topolog
 
 |                                   | Richiede tutti gli oggetti server e tutti i nomi rete virtuale | Richiede tutti gli oggetti server e tutti i nomi rete virtuale | Non richiede gli oggetti server/i nomi rete virtuale\* | Non richiede gli oggetti server/i nomi rete virtuale\* |
 |-----------------------------------|--------------------------------------|--------------------------------------------------------------------|------------|------------|
-| ***Gruppi di disponibilità (S/N)***                  | ***S***                              | ***N***                                                            | ***S***    | ***N***    |
+| **_Gruppi di disponibilità (S/N)_**                  | **_S_**                              | **_N_**                                                            | **_S_**    | **_N_**    |
 | **Il cluster usa solo istanze di cluster di failover di SQL Server**         | [Scenario 3](#scenario-3-cluster-has-sql-fcis-only-and-uses-availability-groups)                           | [Scenario 2](#scenario-2-cluster-to-migrate-has-sql-fcis-only-and-no-ag)                                                        | [Scenario 1](#scenario-1-cluster-to-migrate-uses-strictly-availability-groups-windows-server-2008-r2-sp1) | [Scenario 2](#scenario-2-cluster-to-migrate-has-sql-fcis-only-and-no-ag) |
 | **Il cluster usa istanze autonome** | [Scenario 5](#scenario-5-cluster-has-some-non-fci-and-uses-availability-groups)                           | [Scenario 4](#scenario-4-cluster-has-some-non-fci-and-no-availability-groups)                                                         | [Scenario 1](#scenario-1-cluster-to-migrate-uses-strictly-availability-groups-windows-server-2008-r2-sp1) | [Scenario 4](#scenario-4-cluster-has-some-non-fci-and-no-availability-groups) |
 \* Esclusi i nomi di listener di gruppi di disponibilità
 
-## <a name="scenario-1-windows-cluster-with-sql-server-availability-groups-and-no-failover-cluster-instances-fcis"></a>Scenario 1: cluster Windows con gruppi di disponibilità di SQL Server e nessuna istanza del cluster di failover
+## <a name="scenario-1-windows-cluster-with-sql-server-availability-groups-and-no-failover-cluster-instances-fcis"></a>Scenario 1: Cluster Windows con gruppi di disponibilità di SQL Server e nessuna istanza del cluster di failover
 Se la configurazione di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] usa esclusivamente gruppi di disponibilità e non usa istanze del cluster di failover, è possibile eseguire la migrazione in un nuovo cluster creando una distribuzione parallela di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] in un altro cluster Windows con Windows Server 2016/2012 R2. Dopo questa operazione è possibile creare un gruppo di disponibilità distribuito in cui il cluster di destinazione sia un cluster secondario rispetto al cluster di produzione corrente. Ciò richiede l'aggiornamento a [!INCLUDE[sssql15-md](../../../includes/sssql15-md.md)] o versione successiva.
 
 ###  <a name="to-perform-the-upgrade"></a>Per eseguire l'aggiornamento
@@ -87,7 +87,7 @@ Se la configurazione di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.
 
 11. Riprendere il traffico verso il listener.
 
-## <a name="scenario-2-windows-clusters-with-sql-server-failover-cluster-instances-fcis"></a>Scenario 2: cluster Windows con istanze del cluster di failover
+## <a name="scenario-2-windows-clusters-with-sql-server-failover-cluster-instances-fcis"></a>Scenario 2: Cluster Windows con istanze del cluster di failover di SQL Server
 
 Se l'ambiente di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] usa solo istanze del cluster di failover di SQL Server, è possibile eseguire la migrazione in un nuovo cluster creando un ambiente parallelo di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] in un altro cluster Windows con Windows Server 2016/2012 R2. La migrazione al cluster di destinazione viene eseguita tramite il "furto" dei nomi rete virtuale delle istanze di cluster di failover di SQL Server precedenti e l'acquisizione di tali nomi nei nuovi cluster. Questa operazione crea tempo di inattività aggiuntivo a seconda dei tempi di propagazione del DNS.
 
@@ -120,7 +120,7 @@ Se l'ambiente di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] us
 
 12. Man mano che i computer tornano online dopo il riavvio, avviare ognuno dei ruoli di istanza di cluster di failover di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] in Gestione cluster di failover.
 
-## <a name="scenario-3-windows-cluster-has-both-sql-fcis-and-sql-server-availability-groups"></a>Scenario 3: cluster Windows con istanze del cluster di failover e gruppi di disponibilità di SQL Server
+## <a name="scenario-3-windows-cluster-has-both-sql-fcis-and-sql-server-availability-groups"></a>Scenario 3: Cluster Windows con istanze del cluster di failover e gruppi di disponibilità di SQL Server
 
 Se la configurazione di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] non usa istanze di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] autonome, ma solo istanze di cluster di failover di SQL Server all'interno di almeno un gruppo di disponibilità, è possibile eseguire la migrazione in un nuovo cluster tramite metodi simili a quelli dello scenario senza gruppi di disponibilità e senza istanze autonome. Prima di copiare le tabelle di sistema nei dischi condivisi delle istanze di cluster di failover di destinazione, è necessario rilasciare tutti i gruppi di disponibilità nell'ambiente originale. Dopo la migrazione di tutti i database nei computer di destinazione, i gruppi di disponibilità verranno ricreati con gli stessi nomi di schema e di listener. In questo modo, nel cluster di destinazione le risorse WSFC verranno formate e gestite correttamente. **È necessario abilitare Always On in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Configuration Manager per ogni computer nell'ambiente di destinazione prima della migrazione.**
 
@@ -158,7 +158,7 @@ Se la configurazione di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.
 
 16. Nel nuovo gruppo di disponibilità creare un listener con lo stesso nome del listener del gruppo di disponibilità originale.
 
-## <a name="scenario-4-windows-cluster-with-standalone-sql-server-instances-and-no-availability-groups"></a>Scenario 4: cluster Windows con istanze di SQL Server autonome e nessun gruppo di disponibilità
+## <a name="scenario-4-windows-cluster-with-standalone-sql-server-instances-and-no-availability-groups"></a>Scenario 4: Cluster Windows con istanze di SQL Server autonome e nessun gruppo di disponibilità
 
 La migrazione di un cluster con istanze autonome è un processo simile alla migrazione di un cluster di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] contenente solo istanze di cluster di failover. Tuttavia, anziché modificare il nome rete virtuale della risorsa cluster nome rete dell'istanza di cluster di failover, si modifica il nome del computer originale autonomo e si "ruba" il nome del computer precedente nel computer di destinazione. Questa operazione comporta un tempo di inattività aggiuntivo rispetto agli scenari senza istanze autonome, poiché non è possibile aggiungere il computer autonomo di destinazione al cluster WSFC finché non è stato acquisito il nome rete del computer precedente.
 
@@ -194,7 +194,7 @@ La migrazione di un cluster con istanze autonome è un processo simile alla migr
 
 15. Man mano che i computer tornano online dopo il riavvio, avviare ognuno dei ruoli di istanza di cluster di failover di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] in Gestione cluster di failover.
 
-## <a name="scenario-5-windows-cluster-with-standalone-sql-server-instances-and-availability-groups"></a>Scenario 5: cluster Windows con istanze di SQL Server autonome e gruppi di disponibilità
+## <a name="scenario-5-windows-cluster-with-standalone-sql-server-instances-and-availability-groups"></a>Scenario 5: Cluster Windows con istanze di SQL Server autonome e gruppi di disponibilità
 
 La migrazione di un cluster che usa gruppi di disponibilità con repliche autonome è un processo simile alla migrazione di un cluster con istanze del cluster di failover tramite gruppi di disponibilità. È comunque necessario eliminare i gruppi di disponibilità originali e crearli di nuovo nel cluster di destinazione. Il processo tuttavia comporta un tempo di inattività maggiore a causa dei costi aggiuntivi per la migrazione di istanze autonome. **È necessario abilitare Always On per ogni istanza di cluster di failover nell'ambiente di destinazione prima della migrazione.**
 
@@ -242,7 +242,7 @@ La migrazione di un cluster che usa gruppi di disponibilità con repliche autono
 
 ### [!INCLUDE[sshadrc-md](../../../includes/sshadrc-md.md)]
 
--   **Endpoint** **del mirroring** **del database**
+-   **Endpoint del mirroring del database**
 
     Dal punto di vista di SQL Server, nella nuova istanza di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] viene eseguita la migrazione dell'endpoint del mirroring del database e delle tabelle di sistema. Prima di eseguire la migrazione, assicurarsi che nei firewall siano applicate regole appropriate e che non ci siano altri processi in ascolto sulla stessa porta.
 
@@ -256,17 +256,17 @@ La migrazione di un cluster che usa gruppi di disponibilità con repliche autono
 
 ### <a name="replication"></a>Replica
 
--   **Database di distribuzione,** **server di pubblicazione** **e sottoscrittori** **remoti**
+-   **Database di distribuzione, server di pubblicazione e sottoscrittori remoti**
 
     La relazione tra un database di distribuzione e un server di pubblicazione si basa solo sul nome rete virtuale dei computer che li ospitano, nome che viene risolto correttamente nel nuovo computer. Anche la migrazione dei processi di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Agent implica la migrazione delle tabelle di sistema, perché l'esecuzione dei diversi agenti di replica possa continuare come di consueto. Prima della migrazione è necessario che tutti gli account di Windows che eseguono [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Agent stesso o un qualsiasi processo di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Agent abbiano le stesse autorizzazioni nell'ambiente di destinazione. La comunicazione con il server di pubblicazione e con i sottoscrittori viene eseguita come di consueto.
 
--   **Cartella** **snapshot**
+-   **Cartella snapshot**
 
     Prima della migrazione è necessario che tutte le condivisioni di rete usate da qualsiasi funzionalità di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] siano accessibili da parte dei computer nell'ambiente di destinazione con le stesse autorizzazioni dell'ambiente originale. È necessario verificare che questa condizione sia soddisfatta prima di eseguire la migrazione.
 
 ### <a name="service-broker"></a>Service Broker
 
--   **Endpoint di** **Service** **Broker**
+-   **Endpoint di Service Broker**
 
     Dal punto di vista di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], l'endpoint non crea alcun problema. Prima della migrazione è necessario assicurarsi che nessun processo sia in ascolto sulla stessa porta e che nessuna regola del firewall blocchi tale porta o che quest'ultima sia consentita in modo specifico da una regola del firewall.
 
@@ -278,7 +278,7 @@ La migrazione di un cluster che usa gruppi di disponibilità con repliche autono
 
     Le route dipendono dal nome rete virtuale della destinazione, che sia per i nomi computer che per i nomi rete di istanze di cluster di failover di SQL Server viene risolto in modo appropriato nei computer corretti nel nuovo ambiente. Anche eventuali altri nomi rete virtuale a cui si faccia riferimento devono essere reindirizzati ai nuovi computer.
 
--   **Associazioni** **ai servizi** **remoti**
+-   **Associazioni ai servizi remoti**
 
     Dopo la migrazione, le associazioni ai servizi remoti funzionano come previsto, man mano che viene eseguita la migrazione degli utenti che usano tali associazioni.
 
@@ -288,7 +288,7 @@ La migrazione di un cluster che usa gruppi di disponibilità con repliche autono
 
     I processi devono essere sottoposti a migrazione insieme ai database di sistema. Nel computer di destinazione, SQL Server Agent o gli utenti che eseguono un processo SQL Server Agent hanno le stesse autorizzazioni specificate nei prerequisiti.
 
--   **Avvisi e** **operatori**
+-   **Avvisi e operatori**
 
     Gli avvisi e gli operatori devono essere sottoposti a migrazione con i database di sistema.
 

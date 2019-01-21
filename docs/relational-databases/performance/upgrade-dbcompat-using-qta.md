@@ -18,12 +18,12 @@ ms.assetid: 07f8f594-75b4-4591-8c29-d63811e7753e
 author: pmasl
 ms.author: pelopes
 manager: amitban
-ms.openlocfilehash: 28bd264498c681542c9cb27e79cdd21f3cf0821c
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 2270917dad9f366b09fbc7cbc0d88c286fe6761c
+ms.sourcegitcommit: bfa10c54e871700de285d7f819095d51ef70d997
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52509940"
+ms.lasthandoff: 01/14/2019
+ms.locfileid: "54257096"
 ---
 # <a name="upgrading-databases-by-using-the-query-tuning-assistant"></a>Aggiornamento di database mediante l'Assistente ottimizzazione query
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -65,7 +65,7 @@ L'Assistente ottimizzazione query rileva possibili criteri noti di regressioni d
 
 I criteri di Stima della cardinalità cercati dall'Assistente ottimizzazione query sono i seguenti: 
 -  **Indipendenza rispetto a correlazione**: se il presupposto di indipendenza offre stime migliori per la query specifica, l'hint per la query `USE HINT ('ASSUME_MIN_SELECTIVITY_FOR_FILTER_ESTIMATES')` fa sì che [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] generi un piano di esecuzione usando una selettività minima quando stima predicati `AND` per i filtri per rendere conto della correlazione. Per altre informazioni, vedere [Hint per le query USE HINT](../../t-sql/queries/hints-transact-sql-query.md#use_hint) e [Versioni di Stima della cardinalità](../../relational-databases/performance/cardinality-estimation-sql-server.md#versions-of-the-ce).
--  **Indipendenza semplice rispetto a indipendenza di base**: se un'indipendenza di join diversa offre stime migliori per la query specifica, l'hint per la query `USE HINT ('ASSUME_JOIN_PREDICATE_DEPENDS_ON_FILTERS')` fa sì che [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] generi un piano di esecuzione mediante il presupposto Simple Containment (Indipendenza semplice) anziché mediante il presupposto predefinito Base Containment (Indipendenza di base). Per altre informazioni, vedere [Hint per le query USE HINT](../../t-sql/queries/hints-transact-sql-query.md#use_hint) e [Versioni di Stima della cardinalità](../../relational-databases/performance/cardinality-estimation-sql-server.md#versions-of-the-ce).
+-  **Indipendenza semplice rispetto a indipendenza del database**: se un'indipendenza di join diversa offre stime migliori per la query specifica, l'hint per la query `USE HINT ('ASSUME_JOIN_PREDICATE_DEPENDS_ON_FILTERS')` fa sì che [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] generi un piano di esecuzione mediante il presupposto Simple Containment (Indipendenza semplice) anziché mediante il presupposto predefinito Base Containment (Indipendenza di base). Per altre informazioni, vedere [Hint per le query USE HINT](../../t-sql/queries/hints-transact-sql-query.md#use_hint) e [Versioni di Stima della cardinalità](../../relational-databases/performance/cardinality-estimation-sql-server.md#versions-of-the-ce).
 -  **Stima di cardinalità fissa della funzione con valori di tabella a più istruzioni (MSTVF)** di 100 righe rispetto a 1 riga: se la stima fissa predefinita per le funzioni con valori di tabella di 100 righe non restituisce un piano più efficiente di quello ottenuto usando la stima fissa predefinita per le funzioni con valori di tabella di 1 riga (corrispondente all'impostazione predefinita con il modello Query Optimizer Stima della cardinalità di [!INCLUDE[ssKilimanjaro](../../includes/ssKilimanjaro-md.md)] e versioni precedenti), l'hint per la query `QUERYTRACEON 9488` viene usato per generare un piano di esecuzione. Per altre informazioni su MSTVF, vedere [Creare funzioni definite dall'utente &#40;Motore di database&#41;](../../relational-databases/user-defined-functions/create-user-defined-functions-database-engine.md#TVF).
 
 > [!NOTE]
@@ -98,10 +98,10 @@ L'Assistente ottimizzazione Query è una funzionalità basata sulla sessione che
 
        ![Finestra nuove impostazioni di aggiornamento del database](../../relational-databases/performance/media/qta-new-session-settings.png "Finestra nuove impostazioni di aggiornamento del database")
 
-        > [!IMPORTANT]
-        > Il valore *Dimensioni massime* proposto è un valore arbitrario, che può essere adatto a un carico di lavoro di breve durata.   
-        > Tenere tuttavia presente che questo valore può essere insufficiente per contenere informazioni sui carichi di lavoro baseline e successivi all'aggiornamento del database in caso di carichi di lavoro particolarmente intensi, ad esempio quando è necessario generare più piani diversi.   
-        > Se si prevede uno scenario del genere immettere un valore più elevato, adatto alle esigenze contingenti.
+       > [!IMPORTANT]
+       > Il valore *Dimensioni massime* proposto è un valore arbitrario, che può essere adatto a un carico di lavoro di breve durata.   
+       > Tenere tuttavia presente che questo valore può essere insufficiente per contenere informazioni sui carichi di lavoro baseline e successivi all'aggiornamento del database in caso di carichi di lavoro particolarmente intensi, ad esempio quando è necessario generare più piani diversi.   
+       > Se si prevede uno scenario del genere immettere un valore più elevato, adatto alle esigenze contingenti.
 
 4.  La finestra **Regolazione** completa la configurazione della sessione e indica i passaggi successivi per aprire e svolgere la sessione. Al termine fare clic su **Fine**.
 
@@ -123,7 +123,7 @@ L'Assistente ottimizzazione Query è una funzionalità basata sulla sessione che
     -  **Nome sessione**: nome generato dal sistema e costituito dal nome del database e dalla data e ora di creazione della sessione.
     -  **Stato**: stato della sessione (Attiva o Chiusa).
     -  **Descrizione**: elemento generato dal sistema che include il livello di compatibilità del database di destinazione selezionato dall'utente e il numero di giorni per il carico di lavoro del ciclo aziendale.
-    -  **Ora avvio**: data e ora di creazione della sessione.
+    -  **Ora avvio**: Data e ora di creazione della sessione.
 
     ![Pagina Gestione delle sessioni dell'Assistente ottimizzazione query](../../relational-databases/performance/media/qta-session-management.png "Pagina Gestione delle sessioni dell'Assistente ottimizzazione query")
 
@@ -164,7 +164,7 @@ L'Assistente ottimizzazione Query è una funzionalità basata sulla sessione che
         -  **Testo query**: istruzione [!INCLUDE[tsql](../../includes/tsql-md.md)] che può essere espansa facendo clic sul pulsante **...**.
         -  **Esecuzioni**: numero di esecuzioni della query per l'intera raccolta del carico di lavoro.
         -  **Metrica baseline**: metrica selezionata (Durata o CpuTime) in millisecondi per la raccolta di dati baseline prima dell'aggiornamento di compatibilità del database.
-        -  **Metrica osservata**: metrica selezionata (Durata o CpuTime) in ms per la raccolta di dati dopo l'aggiornamento di compatibilità del database.
+        -  **Metrica osservata**: metrica selezionata (Durata o CpuTime) in millisecondi per la raccolta di dati dopo l'aggiornamento di compatibilità del database.
         -  **% di modifica**: percentuale di variazione della metrica selezionata tra lo stato prima e dopo l'aggiornamento di compatibilità del database. Un numero negativo rappresenta la quantità di regressione misurata per la query.
         -  **Ottimizzabile**: *True* o *False* a seconda che la query sia o meno idonea per la sperimentazione.
 
@@ -185,7 +185,7 @@ L'Assistente ottimizzazione Query è una funzionalità basata sulla sessione che
     -  **ID query** 
     -  **Testo query**: istruzione [!INCLUDE[tsql](../../includes/tsql-md.md)] che può essere espansa facendo clic sul pulsante **...**.
     -  **Stato**: visualizza lo stato di sperimentazione corrente per la query.
-    -  **Metrica baseline**: la metrica selezionata (Durata o CpuTime) in ms per le query eseguita nel **Passaggio 2 passaggio secondario 3**, che rappresenta la query regredita dopo l'aggiornamento di compatibilità del database.
+    -  **Metrica baseline**: la metrica selezionata (Durata o CpuTime) in ms per le query eseguita nel **Passaggio 2, passaggio secondario 3** che rappresenta la query regredita dopo l'aggiornamento di compatibilità del database.
     -  **Metrica osservata**: la metrica selezionata (durata o CpuTime) in ms per la query dopo la sperimentazione, per un'ottimizzazione proposta con risultati soddisfacenti.
     -  **% di modifica**: percentuale di modifica per la metrica selezionata tra lo stato prima e dopo la sperimentazione, che rappresenta la quantità di miglioramento misurata per la query con l'ottimizzazione proposta.
     -  **Opzione di query**: collegamento all'hint proposto che migliora la metrica di esecuzione di query.

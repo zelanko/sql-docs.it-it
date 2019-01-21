@@ -31,15 +31,18 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: edcf0a919c0bcf5dbcbd1490b016c49ab7e46d8a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 326b2dd3eed9db3f6ca71cc276fc68314092c181
+ms.sourcegitcommit: 96032813f6bf1cba680b5e46d82ae1f0f2da3d11
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47698099"
+ms.lasthandoff: 01/15/2019
+ms.locfileid: "54299228"
 ---
 # <a name="begin-transaction-transact-sql"></a>BEGIN TRANSACTION (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+
+  > [!div class="nextstepaction"]
+  > [Condividi il feedback sul sommario della documentazione SQL](https://aka.ms/sqldocsurvey)
 
   Contrassegna il punto di inizio di una transazione locale esplicita. Le transazioni esplicite iniziano con l'istruzione BEGIN TRANSACTION e terminano con l'istruzione COMMIT o ROLLBACK.  
 
@@ -134,7 +137,7 @@ COMMIT TRAN T1;
   
  BEGIN TRAN M2 WITH MARK  
   
- Messaggio 3920, livello 16, stato 1, linea 3  
+ "Server: messaggio 3920, livello 16, stato 1, riga 3"  
   
  L'opzione WITH MARK viene applicata solo alla prima istruzione BEGIN TRAN WITH MARK.  
   
@@ -157,7 +160,7 @@ DELETE FROM HumanResources.JobCandidate
 COMMIT;  
 ```
 
-### <a name="b-rolling-back-a-transaction"></a>B. Rollback di una transazione
+### <a name="b-rolling-back-a-transaction"></a>b. Rollback di una transazione
 **SI APPLICA A:** SQL Server (a partire dalla versione 2008), database SQL di Azure, Azure SQL Data Warehouse, Parallel Data Warehouse
 
 Nell'esempio seguente viene illustrato l'effetto del rollback di una transazione. In questo esempio l'istruzione ROLLBACK esegue il rollback dell'istruzione INSERT, ma la tabella creata sarà ancora presente.

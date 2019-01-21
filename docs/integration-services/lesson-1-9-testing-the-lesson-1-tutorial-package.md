@@ -1,7 +1,7 @@
 ---
-title: "Passaggio 9: Test del pacchetto creato nella lezione 1 dell'esercitazione | Microsoft Docs"
+title: "Passaggio 9: Testare il pacchetto creato nella lezione 1 dell'esercitazione | Microsoft Docs"
 ms.custom: ''
-ms.date: 03/03/2017
+ms.date: 01/03/2019
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
@@ -11,15 +11,16 @@ ms.assetid: 9aee7acf-797b-46f2-830d-80ab64a9f0b6
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 0b140ea28397ace096c5b37db26a661fd7194647
-ms.sourcegitcommit: 7e828cd92749899f4e1e45ef858ceb9a88ba4b6a
+ms.openlocfilehash: dde0ffe53ab5763230cafa752d687ab42d3a60c5
+ms.sourcegitcommit: dd794633466b1da8ead9889f5e633bdf4b3389cd
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51629544"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54143221"
 ---
-# <a name="lesson-1-9---testing-the-lesson-1-tutorial-package"></a>Lezione 1-9 - Test del pacchetto creato nella lezione 1 dell'esercitazione
-In questa lezione sono state eseguite le operazioni seguenti:  
+# <a name="lesson-1-9-test-the-lesson-1-package"></a>Lezione 1-9: Testare il pacchetto della lezione 1
+
+In questa esercitazione verranno effettuate le attività seguenti:  
   
 -   Creazione di un nuovo progetto [!INCLUDE[ssIS](../includes/ssis-md.md)] .  
   
@@ -27,12 +28,13 @@ In questa lezione sono state eseguite le operazioni seguenti:
   
 -   Aggiunta di un flusso di dati che preleva i dati da un'origine file flat, esegue le necessarie trasformazioni Ricerca sui dati e configura i dati per la destinazione.  
   
-Il pacchetto è ora completo. A questo punto, è necessario testarlo.  
+Il pacchetto è ora completo e pronto per essere testato.
   
-## <a name="checking-the-package-layout"></a>Verifica del layout del pacchetto  
-Prima di testare il pacchetto è consigliabile verificare che il flusso di controllo e il flusso di dati nel pacchetto della lezione 1 contengano gli oggetti visualizzati nelle figure seguenti.  
+## <a name="check-the-package-components"></a>Controllare i componenti del pacchetto
   
-**Flusso di controllo**  
+Prima di testare il pacchetto, verificare che il flusso di controllo e il flusso di dati nel pacchetto della lezione 1 contengano gli oggetti visualizzati nelle figure seguenti.  
+  
+**Flusso di controllo** 
   
 ![Flusso di controllo nel pacchetto](../integration-services/media/task9lesson1control.gif "Flusso di controllo nel pacchetto")  
   
@@ -40,15 +42,15 @@ Prima di testare il pacchetto è consigliabile verificare che il flusso di contr
   
 ![Flusso di dati nel pacchetto](../integration-services/media/task9lesson1data.gif "Flusso di dati nel pacchetto")  
   
-### <a name="to-run-the-lesson-1-tutorial-package"></a>Per eseguire il pacchetto creato nella lezione 1 dell'esercitazione  
+## <a name="run-the-lesson-1-package"></a>Eseguire il pacchetto della lezione 1  
   
-1.  Scegliere **Avvia debug** dal menu **Debug**.  
+1.  Selezionare **Avvia debug** dal menu **Debug**.  
   
-    Il pacchetto verrà eseguito e verranno aggiunte 1097 righe alla tabella dei fatti **NewFactCurrencyRate** in **AdventureWorksDW2012**.  
+    Il pacchetto viene eseguito e vengono aggiunte 1.097 righe alla tabella dei fatti **NewFactCurrencyRate** in **AdventureWorksDW2012**. Per verificare questo risultato, selezionare la scheda **Flusso di dati**.
   
-2.  Al termine dell'esecuzione del pacchetto, scegliere **Arresta debug** dal menu **Debug**.  
+2.  Al termine dell'esecuzione del pacchetto, selezionare **Arresta debug** dal menu **Debug**.  
   
-## <a name="next-lesson"></a>Lezione successiva  
+## <a name="go-to-next-lesson"></a>Passare alla lezione successiva
 [Lezione 2: Aggiungere cicli con SSIS](../integration-services/lesson-2-adding-looping-with-ssis.md)  
   
 ## <a name="see-also"></a>Vedere anche  

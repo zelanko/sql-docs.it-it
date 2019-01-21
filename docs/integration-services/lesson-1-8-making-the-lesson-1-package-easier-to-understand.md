@@ -1,7 +1,7 @@
 ---
-title: 'Passaggio 8: Semplificazione della comprensione del pacchetto della lezione 1 | Microsoft Docs'
+title: 'Passaggio 8: Annotare e formattare il pacchetto della lezione 1 | Microsoft Docs'
 ms.custom: ''
-ms.date: 03/14/2017
+ms.date: 01/03/2019
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
@@ -11,48 +11,51 @@ ms.assetid: e3751e53-77c7-47d0-8fe8-73ed1a53413a
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 61eea29c0c8094bf5f5c70df4488a950b860bc4c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d5890cf61593d894daf7539d324922bfcf0d8651
+ms.sourcegitcommit: dd794633466b1da8ead9889f5e633bdf4b3389cd
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47806049"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54143631"
 ---
-# <a name="lesson-1-8---making-the-lesson-1-package-easier-to-understand"></a>Lezione 1-8 - Semplificazione della comprensione del pacchetto della lezione 1
-Dopo avere completato la configurazione del pacchetto della lezione 1, può essere utile riordinarne il layout. Se le forme nel layout del flusso di controllo e del flusso di dati sono di dimensioni casuali o se non sono allineate o raggruppate, può risultare più difficile comprendere la funzionalità del pacchetto.  
+# <a name="lesson-1-8-annotate-and-format-the-lesson-1-package"></a>Lezione 1-8: Annotare e formattare il pacchetto della lezione 1 
+
+Dopo avere completato la configurazione del pacchetto della lezione 1, è il momento probabilmente di riordinarne il layout. Se le forme nei layout di controllo e del flusso di dati sono di dimensioni diverse o non sono disposte in modo uniforme, potrebbe essere più difficile comprendere il pacchetto.  
   
-[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Data Tools sono disponibili strumenti che consentono di formattare facilmente e rapidamente il layout dei pacchetti. Le caratteristiche di formattazione includono la possibilità di impostare forme di dimensioni uguali, di allineare le forme e di modificare la spaziatura orizzontale e verticale tra le forme.  
+[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Strumenti dati fornisce strumenti per formattare agevolmente il layout del pacchetto. Le caratteristiche di formattazione includono la possibilità di impostare forme di dimensioni uguali, di allineare le forme e di modificare la spaziatura orizzontale e verticale tra le forme.  
   
 Un altro modo per rendere più comprensibili le funzionalità del pacchetto consiste nell'aggiunta di annotazioni descrittive.  
   
-In questa attività verranno utilizzate le funzionalità di formattazione di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Data Tools per migliorare il layout del flusso di dati e aggiungere un'annotazione al flusso di dati.  
+In questa attività verranno utilizzate le funzionalità di formattazione di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Data Tools per migliorare il layout del flusso di dati e aggiungere un'annotazione.  
   
-### <a name="to-format-the-layout-of-the-data-flow"></a>Per formattare il layout del flusso di dati  
+## <a name="format-the-layout-of-the-data-flow"></a>Formattare il layout del flusso di dati  
   
-1.  Se il pacchetto della lezione 1 non è aperto, fare doppio clic su Lesson 1.dtsx in Esplora soluzioni.  
+1.  Se il pacchetto della lezione 1 non è aperto, fare doppio clic su **Lesson 1.dtsx** in **Esplora soluzioni**.  
   
-2.  Fare clic sulla scheda **Flusso di dati** .  
+2.  Selezionare la scheda **Flusso di dati**.  
   
-3.  Posizionare il cursore in alto a destra rispetto alla trasformazione Extract Sample Currency, fare clic e trascinare il cursore su tutti i componenti del flusso di dati.  
+3.  Per selezionare tutti i componenti del flusso di dati in una sola volta, usare **Modifica** > **Seleziona tutto**.
   
-4.  Scegliere **Rendi uguali** dal menu **Formato**e quindi fare clic su **Entrambe**.  
+4.  Selezionare **Rendi uguali** dal menu **Formato**e quindi selezionare **Entrambe**.  
   
-5.  Con gli oggetti del flusso di dati selezionati, scegliere **Allinea** dal menu **Formato**e quindi fare clic su **A sinistra**.  
+5.  Con gli oggetti del flusso di dati selezionati, selezionare **Allinea** dal menu **Formato**e quindi fare clic su **Al centro**.  
+
+6.  Con gli oggetti del flusso di dati selezionati, scegliere **Spaziatura verticale** dal menu **Formato**, quindi selezionare **Rendi uguali**.  
   
-### <a name="to-add-an-annotation-to-the-data-flow"></a>Per aggiungere un'annotazione al flusso di dati  
+## <a name="add-an-annotation-to-the-data-flow"></a>Aggiungere un'annotazione al flusso di dati  
   
-1.  Fare clic con il pulsante destro del mouse in un punto qualsiasi dello sfondo dell'area di progettazione del flusso di dati e quindi scegliere **Aggiungi annotazione**.  
+1.  Fare clic con il pulsante destro del mouse in un punto qualsiasi dello sfondo dell'area di progettazione del flusso di dati e quindi selezionare **Aggiungi annotazione**.  
   
-2.  Digitare o incollare il testo seguente nella casella delle annotazioni.  
+2.  Immettere o incollare il testo seguente nella casella delle annotazioni.  
   
-    **Tramite il flusso di dati vengono estratti dati da un file, vengono cercati valori nella colonna CurrencyKey della tabella DimCurrency e nella colonna DateKey della tabella DimDate e vengono scritti i dati nella tabella NewFactCurrencyRate.**  
+        The data flow extracts data from a file, looks up values in the CurrencyKey column in the DimCurrency table and the DateKey column in the DimDate table, and writes the data to the NewFactCurrencyRate table.
   
-    Per eseguire il wrapping del testo nella casella delle annotazioni, inserire il cursore nel punto in cui si desidera iniziare una nuova riga e premere INVIO.  
+    Per eseguire il wrapping del testo nella casella delle annotazioni, inserire il cursore nel punto in cui si desidera iniziare una nuova riga e premere **INVIO**.  
   
     Se non si inserisce alcun testo nella casella delle annotazioni, quest'ultima scomparirà quando si farà clic al suo esterno.  
   
-## <a name="next-steps"></a>Next Steps  
-[Passaggio 9: Test del pacchetto creato nella lezione 1 dell'esercitazione](../integration-services/lesson-1-9-testing-the-lesson-1-tutorial-package.md)  
+## <a name="go-to-next-task"></a>Esecuzione del passaggio successivo
+[Passaggio 9: Testare il pacchetto della lezione 1](../integration-services/lesson-1-9-testing-the-lesson-1-tutorial-package.md)  
   
   
   

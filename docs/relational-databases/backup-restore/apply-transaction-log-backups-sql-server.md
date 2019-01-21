@@ -14,15 +14,15 @@ helpviewer_keywords:
 - transaction log backups [SQL Server], quantity needed for restore sequence
 - backups [SQL Server], log backups
 ms.assetid: 9b12be51-5469-46f9-8e86-e938e10aa3a1
-author: MikeRayMSFT
-ms.author: mikeray
+author: mashamsft
+ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: ea3ebc57689e6dd0a3da1b0cde158354d7309f2c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b1e4927c1eb0dba333091f231a624db3c8cb7e45
+ms.sourcegitcommit: 202ef5b24ed6765c7aaada9c2f4443372064bd60
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47618079"
+ms.lasthandoff: 01/12/2019
+ms.locfileid: "54242172"
 ---
 # <a name="apply-transaction-log-backups-sql-server"></a>Applicazione dei backup di log delle transazioni (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -34,11 +34,11 @@ ms.locfileid: "47618079"
 ##  <a name="Requirements"></a> Requisiti per ripristinare i backup dei log delle transazioni  
  Per applicare un backup del log delle transazioni devono essere soddisfatti i requisiti seguenti:  
   
--   **Numero sufficiente di backup del log per una sequenza di ripristino:** per completare una sequenza di ripristino, è necessario che sia disponibile il backup di un numero sufficiente di record del log. I backup del log necessari, incluso il [backup della parte finale del log](../../relational-databases/backup-restore/tail-log-backups-sql-server.md) se richiesto, devono essere disponibili prima dell'inizio della sequenza di ripristino.  
+-   **Numero sufficiente di backup del log per una sequenza di ripristino:** Per completare una sequenza di ripristino, è necessario che sia disponibile il backup di un numero sufficiente di record del log. I backup del log necessari, incluso il [backup della parte finale del log](../../relational-databases/backup-restore/tail-log-backups-sql-server.md) se richiesto, devono essere disponibili prima dell'inizio della sequenza di ripristino.  
   
--   **Ordine di ripristino corretto:**  è necessario ripristinare innanzitutto il backup completo o il backup differenziale del database immediatamente precedente. Tutti i log delle transazioni creati dopo tale backup completo o differenziale devono essere ripristinati in ordine cronologico. Se uno dei backup del log delle transazioni appartenente a questa catena di log non è presente o risulta danneggiato, è possibile ripristinare soltanto i log delle transazioni antecedenti al log delle transazioni non più disponibile.  
+-   **Ordine di ripristino corretto:**  È necessario ripristinare innanzitutto il backup completo o il backup differenziale del database immediatamente precedente. Tutti i log delle transazioni creati dopo tale backup completo o differenziale devono essere ripristinati in ordine cronologico. Se uno dei backup del log delle transazioni appartenente a questa catena di log non è presente o risulta danneggiato, è possibile ripristinare soltanto i log delle transazioni antecedenti al log delle transazioni non più disponibile.  
   
--   **Database non ancora recuperato:**  non è possibile recuperare il database finché non viene applicato il log delle transazioni finale. Se si esegue il recupero del database dopo aver ripristinato uno dei backup del log delle transazioni intermedi, ovvero antecedenti all'estremità della catena di log, non sarà possibile eseguire il ripristino del database successivamente a tale punto senza riavviare l'intera sequenza di ripristino a partire dal backup completo del database.  
+-   **Database non ancora recuperato:**  Non è possibile recuperare il database finché non viene applicato il log delle transazioni finale. Se si esegue il recupero del database dopo aver ripristinato uno dei backup del log delle transazioni intermedi, ovvero antecedenti all'estremità della catena di log, non sarà possibile eseguire il ripristino del database successivamente a tale punto senza riavviare l'intera sequenza di ripristino a partire dal backup completo del database.  
   
     > **SUGGERIMENTO** È consigliabile ripristinare tutti i backup del log (RESTORE LOG *nome_database* WITH NORECOVERY). Dopo aver ripristinato l'ultimo backup del log, recuperare il database in un'operazione separata (RESTORE DATABASE *nome_database* WITH RECOVERY).  
   
@@ -47,7 +47,7 @@ ms.locfileid: "47618079"
   
  Si supponga, ad esempio, che una serie di backup del log delle transazioni includa una transazione con esecuzione prolungata. L'inizio della transazione viene registrato nel primo backup del log delle transazioni, mentre la fine della transazione viene registrata nel secondo backup del log delle transazioni. Il primo backup del log delle transazioni non include un record di un'operazione di commit o rollback. Se viene eseguita un'operazione di recupero quando è applicato il primo backup del log delle transazioni, la transazione con esecuzione prolungata verrà considerata incompleta e verrà eseguito il rollback delle modifiche dei dati registrate nel primo backup del log delle transazioni. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] non è possibile applicare il secondo backup del log delle transazioni dopo questo punto.  
   
-> **NOTA:** in alcuni casi, durante il ripristino del log è possibile aggiungere un file in modo esplicito.  
+> **NOTA:** In alcuni casi, durante il ripristino del log è possibile aggiungere un file in modo esplicito.  
   
 ##  <a name="PITrestore"></a> Usare i backup del log per eseguire il ripristino fino al momento dell'errore  
  Si osservi a titolo di esempio la sequenza di eventi seguente:  
@@ -61,19 +61,19 @@ ms.locfileid: "47618079"
 |20.00|Backup del log delle transazioni|  
 |21.45|Si verifica un errore.|  
   
-> **NOTA:** per la spiegazione di questa sequenza esemplificativa di backup, vedere [Backup di log delle transazioni &#40;SQL Server&#41;](../../relational-databases/backup-restore/transaction-log-backups-sql-server.md).  
+> **NOTA:** Per la spiegazione di questa sequenza esemplificativa di backup, vedere [Backup di log delle transazioni &#40;SQL Server&#41;](../../relational-databases/backup-restore/transaction-log-backups-sql-server.md).  
   
  Per ripristinare lo stato del database corrispondente alle ore 21.45 (punto di errore), è possibile utilizzare una delle procedure alternative seguenti:  
   
- **Alternativa 1: ripristino del database dal backup completo più recente**  
+ **Alternativa 1: ripristinare il database da un backup completo più recente**  
   
 1.  Creare un backup della parte finale del log delle transazioni attivo a partire dal momento dell'errore.  
   
 2.  Non ripristinare del backup completo del database delle 18.00. Ripristinare invece il backup completo del database più recente effettuato alle 18.00, quindi applicare il backup del log effettuato alle 20.00 e il backup della parte finale del log.  
   
- **Alternativa 2: ripristino del database da un backup completo precedente**  
+ **Alternativa 2: ripristinare il database da un backup completo precedente**  
   
-> **NOTA:** questa procedura alternativa è utile nel caso non sia possibile usare del backup completo del database delle 18.00. Questa procedura richiede più tempo di quello necessario per il ripristino del backup completo del database delle 18.00.  
+> **NOTA:** Questa procedura alternativa è utile nel caso non sia possibile utilizzare il backup completo del database effettuato alle 18.00 del backup completo del database delle 18.00. Questa procedura richiede più tempo di quello necessario per il ripristino del backup completo del database delle 18.00.  
   
 1.  Creare un backup della parte finale del log delle transazioni attivo a partire dal momento dell'errore.  
   
@@ -81,9 +81,9 @@ ms.locfileid: "47618079"
   
      Questa procedura alternativa mostra quale sia il livello di sicurezza supplementare garantito dal mantenimento di una catena di backup del log delle transazioni eseguiti in una serie di backup completi del database.  
   
-> **NOTA:** in alcuni casi è anche possibile usare i log delle transazioni per ripristinare un database fino a un punto nel tempo specifico. Per altre informazioni, vedere [Ripristinare un database di SQL Server fino a un punto specifico &#40;modello di recupero con registrazione completa&#41;](../../relational-databases/backup-restore/restore-a-sql-server-database-to-a-point-in-time-full-recovery-model.md).  
+> **NOTA:** In alcuni casi è anche possibile utilizzare i log delle transazioni per ripristinare un database fino a un punto nel tempo specifico. Per altre informazioni, vedere [Ripristinare un database di SQL Server fino a un punto specifico &#40;modello di recupero con registrazione completa&#41;](../../relational-databases/backup-restore/restore-a-sql-server-database-to-a-point-in-time-full-recovery-model.md).  
   
-##  <a name="RelatedTasks"></a> Attività correlate  
+##  <a name="RelatedTasks"></a> Related tasks  
  **Per applicare un backup del log delle transazioni**  
   
 -   [Ripristinare un backup del log delle transazioni &#40;SQL Server&#41;](../../relational-databases/backup-restore/restore-a-transaction-log-backup-sql-server.md)  

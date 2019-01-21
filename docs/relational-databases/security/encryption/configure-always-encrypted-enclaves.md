@@ -1,7 +1,7 @@
 ---
 title: Configurare Always Encrypted con enclave sicuri | Microsoft Docs
 ms.custom: ''
-ms.date: 09/24/2018
+ms.date: 01/09/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -11,14 +11,15 @@ author: jaszymas
 ms.author: jaszymas
 manager: craigg
 monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
-ms.openlocfilehash: 246fa155a8de930cd81d65df633d3f47bed9f56e
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 0cfe8b4bf09b545a5141a2896eb757254265e092
+ms.sourcegitcommit: 1f53b6a536ccffd701fc87e658ddac714f6da7a2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52534768"
+ms.lasthandoff: 01/10/2019
+ms.locfileid: "54206407"
 ---
 # <a name="configure-always-encrypted-with-secure-enclaves"></a>Configurare Always Encrypted con enclave sicuri
+
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../../../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
 [Always Encrypted con enclave sicuri](always-encrypted-enclaves.md) estende la funzionalità [Always Encrypted](always-encrypted-database-engine.md) esistente per abilitare funzionalità più avanzate per i dati sensibili, mantenendo i dati riservati.
@@ -26,14 +27,14 @@ ms.locfileid: "52534768"
 Per configurare Always Encrypted con enclave sicuri, usare il flusso di lavoro seguente:
 
 1. Configurare l'attestazione del servizio Sorveglianza host (HGS).
-2. Installa [!INCLUDE[sql-server-2019](..\..\..\includes\sssqlv15-md.md)] nel computer SQL Server.
+2. Installare [!INCLUDE[sql-server-2019](../../../includes/sssqlv15-md.md)] nel computer SQL Server.
 3. Installare gli strumenti nel computer client/di sviluppo.
 4. Configurare il tipo di enclave nell'istanza di SQL Server.
 5. Effettuare il provisioning delle chiavi abilitate per l'enclave.
 6. Crittografare le colonne che contengono dati sensibili.
 
->[!NOTE]
->Per un'esercitazione dettagliata su come configurare l'ambiente di test e provare le funzionalità di Always Encrypted con enclave sicuri in SSMS, vedere [Esercitazione: Introduzione ad Always Encrypted con enclave sicuri tramite SSMS](../tutorial-getting-started-with-always-encrypted-enclaves.md).
+> [!NOTE]
+> Per un'esercitazione dettagliata su come configurare l'ambiente di test e provare le funzionalità di Always Encrypted con enclave sicuri in SSMS, vedere [Esercitazione: Introduzione ad Always Encrypted con enclave sicuri tramite SSMS](../tutorial-getting-started-with-always-encrypted-enclaves.md).
 
 ## <a name="configure-your-environment"></a>Configurare l'ambiente
 
@@ -45,7 +46,7 @@ Il computer che esegue SQL Server deve disporre del sistema operativo e della ve
 
 *SQL Server*:
 
-- [!INCLUDE[sql-server-2019](..\..\..\includes\sssqlv15-md.md)] o versioni successive
+- [!INCLUDE[sql-server-2019](../../../includes/sssqlv15-md.md)] o versioni successive
 
 *Windows*:
 
@@ -134,7 +135,7 @@ Nel computer client/di sviluppo:
    ```
 
     > [!NOTE]
-    > I calcoli avanzati sono disabilitati per impostazione predefinita in [!INCLUDE[sql-server-2019](..\..\..\includes\sssqlv15-md.md)]. Devono essere abilitati tramite l'istruzione precedente dopo ogni riavvio dell'istanza di SQL Server.
+    > I calcoli avanzati sono disabilitati per impostazione predefinita in [!INCLUDE[sql-server-2019](../../../includes/sssqlv15-md.md)]. Devono essere abilitati tramite l'istruzione precedente dopo ogni riavvio dell'istanza di SQL Server.
 
 ## <a name="provision-enclave-enabled-keys"></a>Effettuare il provisioning delle chiavi abilitate per l'enclave
 
@@ -502,7 +503,7 @@ Esistono diversi modi per abilitare la funzionalità di enclave per una colonna 
 
 Ecco i tre approcci per l'abilitazione degli enclave per colonne esistenti:
 
-#### <a name="option-1-rotate-the-column-master-key-to-replace-it-with-an-enclave-enabled-column-master-key"></a>Opzione 1: Ruotare la chiave master della colonna per sostituirla con una chiave master della colonna abilitata per l'enclave.
+#### <a name="option-1-rotate-the-column-master-key-to-replace-it-with-an-enclave-enabled-column-master-key"></a>Opzione 1: ruotare la chiave master della colonna per sostituirla con una chiave master della colonna abilitata per l'enclave.
   
 - Vantaggi:
   - Non richiede di crittografare di nuovo i dati, pertanto è in genere l'approccio più rapido. È un approccio consigliato per le colonne che contengono grandi quantità di dati, a condizione che tutte le colonne per cui è necessario abilitare i calcoli avanzati usino già la crittografia deterministica e, di conseguenza, non debbano essere crittografate di nuovo.
@@ -524,7 +525,7 @@ Ecco i tre approcci per l'abilitazione degli enclave per colonne esistenti:
   - Non consente di convertire in modo selettivo alcune delle colonne, associate a una determinata chiave master della colonna.
   - Introduce l'overhead di gestione delle chiavi: è necessario creare una nuova chiave master della colonna e renderla disponibile per le applicazioni che eseguono query sulle colonne interessate.
 
-#### <a name="option-3-re-encrypting-selected-columns-with-a-new-enclave-enabled-column-encryption-key-and-randomized-encryption-if-needed-on-the-client-side"></a>Opzione 3: crittografare nuovamente le colonne selezionate con una nuova chiave di crittografia di colonna abilitata per l'enclave e la crittografia casuale (se necessario) sul lato client.
+#### <a name="option-3-re-encrypting-selected-columns-with-a-new-enclave-enabled-column-encryption-key-and-randomized-encryption-if-needed-on-the-client-side"></a>Opzione 3: crittografare nuovamente le colonne selezionate con una nuova chiave di crittografia di colonna abilitata per l'enclave e la crittografia casuale, se necessario, sul lato client.
   
 - Vantaggi:
   - Consente di abilitare la funzionalità di enclave in modo selettivo per una sola colonna o un piccolo subset di colonne.
@@ -758,7 +759,7 @@ Il modo più rapido per provare query avanzate sulle colonne abilitate per l'enc
 2.  Abilitare Parametrizzazione per Always Encrypted.
     
     1.  Selezionare **Query** dal menu principale di SQL Server Management Studio.
-    2.  Selezionare **Opzioni query...**.
+    2.  Selezionare **Opzioni query**.
     3.  Passare a **Esecuzione** > **Avanzata**.
     4.  Selezionare o deselezionare Abilita parametrizzazione per Always Encrypted.
     5.  Fare clic su OK.
@@ -860,7 +861,7 @@ Inoltre, l'applicazione deve essere conforme alle linee guida comuni che si appl
 Per informazioni dettagliate sullo sviluppo di applicazioni .NET Framework con Always Encrypted, vedere gli articoli seguenti:
 
 - [Sviluppare con Always Encrypted e il provider di dati .NET Framework](develop-using-always-encrypted-with-net-framework-data-provider.md)
-- [Always Encrypted: Proteggere i dati sensibili nel database SQL e archiviare le chiavi di crittografia in Azure Key Vault](https://docs.microsoft.com/azure/sql-database/sql-database-always-encrypted)
+- [Always Encrypted: proteggere i dati sensibili nel database SQL e archiviare le chiavi di crittografia in Azure Key Vault](https://docs.microsoft.com/azure/sql-database/sql-database-always-encrypted)
 
 #### <a name="example"></a>Esempio
 

@@ -1,5 +1,5 @@
 ---
-title: Esercitazione su SQL Server Management Studio (SSMS) | Microsoft Docs
+title: 'Esercitazione: SQL Server Management Studio (SSMS) | Microsoft Docs'
 ms.custom: ''
 ms.date: 08/30/2017
 ms.prod: sql
@@ -23,18 +23,18 @@ ms.assetid: d2bade70-07cf-4d94-b5d2-88aecb538ed1
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 5deb2b29c70187bb0222e21df7193f300f7eb7b0
-ms.sourcegitcommit: b58d514879f182fac74d9819918188f1688889f3
+ms.openlocfilehash: f8b1560ef694885ae0debbf06f2d61d23c5d0f66
+ms.sourcegitcommit: 96032813f6bf1cba680b5e46d82ae1f0f2da3d11
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "50970542"
+ms.lasthandoff: 01/15/2019
+ms.locfileid: "54299398"
 ---
 # <a name="tutorials-for-sql-server-management-studio-ssms"></a>Esercitazioni per SQL Server Management Studio (SSMS)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 > [!div class="nextstepaction"]
-> [Contribuisci a migliorare la documentazione di SQL Server](https://80s3ignv.optimalworkshop.com/optimalsort/36yyw5kq-0)
+> [Condividi il feedback sul sommario della documentazione SQL](https://aka.ms/sqldocsurvey)
 
 L'esercitazione su SQL Server Management Studio (SSMS) illustra l'ambiente integrato per gestire l'infrastruttura di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] presenta un'interfaccia grafica per la configurazione, il monitoraggio e l'amministrazione di istanze di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Consente anche di distribuire, monitorare e aggiornare i componenti livello dati usati dalle applicazioni, ad esempio i database. [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] offre anche [!INCLUDE[tsql](../../includes/tsql-md.md)]e gli editor di linguaggio MDX, DMX e XML per la modifica e il debug di script.  
   
@@ -81,7 +81,7 @@ Per eseguire l'esercitazione è necessario che sia installato quanto segue:
 
   -   Installare la versione più recente di [SQL Server Management Studio (SSMS)](../download-sql-server-management-studio-ssms.md).  
 
-La prima sezione descrive come creare un database. Altri database di esempio sono disponibili qui: [Database di esempio AdventureWorks](https://github.com/Microsoft/sql-server-samples/releases). Le istruzioni per il ripristino dei database in SSMS sono disponibili in [Ripristino di un database](https://docs.microsoft.com/sql/relational-databases/backup-restore/restore-a-database-backup-using-ssms). 
+La prima sezione descrive come creare un database. Altri database di esempio sono disponibili qui: [Database di esempio AdventureWorks](https://github.com/Microsoft/sql-server-samples/releases). Le istruzioni per il ripristino dei database in SSMS sono disponibili in: [Ripristino di un database](https://docs.microsoft.com/sql/relational-databases/backup-restore/restore-a-database-backup-using-ssms). 
 
 
   

@@ -12,12 +12,12 @@ ms.assetid: ef4df75d-0f36-4c8b-b36c-e427f65f91ca
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: e63f83970eaf4d96f4d4f02494716914e8ca6a9c
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 8f5db32be5b749ad2f9b83050c3d4edb0ae30c27
+ms.sourcegitcommit: 170c275ece5969ff0c8c413987c4f2062459db21
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51662930"
+ms.lasthandoff: 01/11/2019
+ms.locfileid: "54226478"
 ---
 # <a name="mssqlserver1505"></a>MSSQLSERVER_1505
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -31,7 +31,7 @@ ms.locfileid: "51662930"
 |Origine evento|MSSQLSERVER|  
 |Componente|SQLEngine|  
 |Nome simbolico|DUP_KEY|  
-|Testo del messaggio|Istruzione CREATE UNIQUE INDEX interrotta. Trovata chiave duplicata per il nome di oggetto '%.* ls' e il nome di indice '%.\*ls'.  Valore della chiave duplicata: %ls.|  
+|Testo del messaggio|Istruzione CREATE UNIQUE INDEX interrotta. Trovata chiave duplicata per il nome di oggetto '%.\*ls' and index name '%.\*ls'.  Valore della chiave duplicata: %ls.|  
   
 ## <a name="explanation"></a>Spiegazione  
 Questo errore si verifica quando si tenta di creare un indice univoco e il valore duplicato specificato è presente in più di una riga della tabella. Un indice univoco viene creato quando si crea un indice e si specifica la parola chiave UNIQUE o quando si crea un vincolo UNIQUE. Nella tabella non può essere contenuta alcuna riga con valori duplicati nelle colonne definite nell'indice o nel vincolo.  
@@ -60,7 +60,7 @@ Prendere in considerazione le seguenti soluzioni:
   
 -   Selezionare le colonne definite come NOT NULL quando si scelgono le colonne per un indice o un vincolo univoco. In questo modo viene eliminata la possibilità di una violazione di univocità causata più di una riga contiene NULL nei valori della chiave.  
   
--   Se i valori duplicati sono il risultato di errori di immissione di dati, correggere manualmente i dati e quindi creare l'indice o il vincolo. Per informazioni sulla rimozione di righe duplicate in una tabella, vedere l'articolo 139444 della Knowledge Base [How to remove duplicate rows from a table in SQL Server](https://support.microsoft.com/kb/139444) (Come rimuovere righe duplicate da una tabella in SQL Server).  
+-   Se i valori duplicati sono il risultato di errori di immissione di dati, correggere manualmente i dati e quindi creare l'indice o il vincolo. Per informazioni sulla rimozione di righe duplicate in una tabella, vedere l'articolo 139444 della Knowledge Base: [How to remove duplicate rows from a table in SQL Server](https://support.microsoft.com/kb/139444) (Come rimuovere le righe duplicate da una tabella in SQL Server)  
   
 ## <a name="see-also"></a>Vedere anche  
 [CREATE INDEX &#40;Transact-SQL&#41;](~/t-sql/statements/create-index-transact-sql.md)  

@@ -12,12 +12,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 4d7adb7156a6f61ef76f62d1eeff9a4689208815
-ms.sourcegitcommit: c7febcaff4a51a899bc775a86e764ac60aab22eb
+ms.openlocfilehash: ddbafb58662497dc2ee9c513aa206d826d5db8c1
+ms.sourcegitcommit: 170c275ece5969ff0c8c413987c4f2062459db21
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "52712482"
+ms.lasthandoff: 01/11/2019
+ms.locfileid: "54226698"
 ---
 # <a name="sample-database-for-in-memory-oltp"></a>Database di esempio per OLTP in memoria
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -48,7 +48,7 @@ ms.locfileid: "52712482"
   
 -   [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]  
   
--   Per il test delle prestazioni, un server con specifiche simili all'ambiente di produzione. Per questo particolare esempio sono necessari almeno 16 GB di memoria disponibili per SQL Server. Per linee guida generali sull'hardware per OLTP in memoria, vedere il post di blog: [Hardware considerations for In-Memory OLTP in SQL Server 2014](blog-hardware-in-memory-oltp.md) (Considerazioni sull'hardware per OLTP in memoria in SQL Server 2014)
+-   Per il test delle prestazioni, un server con specifiche simili all'ambiente di produzione. Per questo particolare esempio sono necessari almeno 16 GB di memoria disponibili per SQL Server. Per linee guida generali sull'hardware per OLTP in memoria, vedere il post di blog seguente: [Considerazioni sull'hardware per OLTP in memoria in SQL Server 2014](blog-hardware-in-memory-oltp.md)
 
 ##  <a name="InstallingtheIn-MemoryOLTPsamplebasedonAdventureWorks"></a> Installazione dell'esempio di In-Memory OLTP basato su AdventureWorks  
  Per installare l'esempio, seguire i passaggi riportati di seguito.  
@@ -148,7 +148,7 @@ ms.locfileid: "52712482"
   
 -   *Colonne calcolate*. Le colonne calcolate SalesOrderNumber e TotalDue vengono omesse, poiché in [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] non sono supportate colonne calcolate nelle tabelle ottimizzate per la memoria. La nuova vista Sales.vSalesOrderHeader_extended_inmem riflette le colonne SalesOrderNumber e TotalDue. Pertanto, può essere utilizzata qualora queste colonne fossero necessarie.  
 
-    - **Applies to:** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1.  
+    - **Si applica a:** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1.  
 A partire da [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1, le colonne calcolate sono supportate in indici e tabelle ottimizzate per la memoria.
 
   
@@ -313,7 +313,7 @@ A partire da [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1, le 
   
  Passaggi dell'installazione:  
   
-1.  Scaricare ed eseguire il pacchetto di installazione x64 per le utilità RML dalla pagina seguente: [Download Report Markup Language (RML) for SQL Server](https://www.microsoft.com/en-us/download/details.aspx?id=4511) (Scaricare RML (Report Markup Language) per SQL Server)
+1.  Scaricare ed eseguire il pacchetto di installazione x64 per le utilità RML dalla pagina seguente: [RML Utilities for SQL Server](https://www.microsoft.com/en-us/download/details.aspx?id=4511)
 
 2.  Se viene visualizzata una finestra di dialogo indicante l'utilizzo di determinati file, scegliere 'Continua'.  
   
@@ -387,7 +387,7 @@ END
  Le istruzioni e le misure seguenti usano un carico di lavoro che inserisce 10 milioni di ordini di vendita. Per le istruzioni su come eseguire un carico di lavoro in scala ridotta inserendo 1 milione di ordini di vendita, vedere le istruzioni in "In-Memory OLTP\readme.txt" che fa parte dell'archivio SQLServer2016CTP3Samples.zip.  
   
 ##### <a name="memory-optimized-tables"></a>Tabelle con ottimizzazione per la memoria  
- Si inizierà eseguendo il carico di lavoro nelle tabelle ottimizzate per la memoria. Tramite il comando seguente vengono aperti 100 thread, ognuno in esecuzione per 5.000 iterazioni.  Tramite ogni iterazione vengono inseriti 20 ordini vendita in transazioni separate. Vi sono 20 inserimenti per ogni iterazione per compensare il fatto che il database viene utilizzato per generare i dati da inserire. Ciò produce un totale pari a 20 * 5.000 \* 100 = 10.000.000 di inserimenti di ordini vendita.  
+ Si inizierà eseguendo il carico di lavoro nelle tabelle ottimizzate per la memoria. Tramite il comando seguente vengono aperti 100 thread, ognuno in esecuzione per 5.000 iterazioni.  Tramite ogni iterazione vengono inseriti 20 ordini vendita in transazioni separate. Vi sono 20 inserimenti per ogni iterazione per compensare il fatto che il database viene utilizzato per generare i dati da inserire. Ciò produce un totale pari a 20 \* 5.000 \* 100 = 10.000.000 di inserimenti di ordini vendita.  
   
  Aprire il prompt dei comandi RML ed eseguire il comando riportato di seguito:  
   
@@ -434,9 +434,9 @@ ostress.exe -S. -E -dAdventureWorks2016CTP3 -Q"EXEC Demo.usp_DemoReset"
 ###  <a name="Troubleshootingslow-runningtests"></a> Risoluzione dei problemi relativi ai test con esecuzione prolungata  
  I risultati dei test variano in genere a seconda dell'hardware e del livello di concorrenza utilizzato durante l'esecuzione del test. Se i risultati non sono quelli previsti, è opportuno verificare alcune informazioni:  
   
--   Numero di transazioni simultanee. Quando si esegue il carico di lavoro in un solo thread, il miglioramento delle prestazioni con OLTP in memoria sarà probabilmente minore di 2 volte. La contesa di latch è un grande problema solo se vi è un livello elevato di concorrenza.  
+-   Numero di transazioni simultanee. Quando si esegue il carico di lavoro in un solo thread, il miglioramento delle prestazioni con OLTP in memoria sarà probabilmente inferiore di 2 volte. La contesa di latch è un grande problema solo se vi è un livello elevato di concorrenza.  
   
--   Numero contenuto di core disponibili in SQL Server. Ciò significa che vi sarà un livello basso di concorrenza nel sistema, dal momento che vi possono essere tante esecuzioni simultanee di transazioni quanti sono i core disponibili in SQL.  
+-   Numero contenuto di core disponibili in SQL Server: Ciò significa che vi sarà un livello basso di concorrenza nel sistema, dal momento che vi possono essere tante esecuzioni simultanee di transazioni quanti sono i core disponibili in SQL.  
   
     -   Sintomo: se l'utilizzo della CPU è elevato durante l'esecuzione del carico di lavoro nelle tabelle basate su disco, ciò significa che non vi sono molte contese, puntando a una mancanza di concorrenza.  
   

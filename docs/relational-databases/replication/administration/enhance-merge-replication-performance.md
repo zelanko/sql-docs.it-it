@@ -20,12 +20,12 @@ ms.assetid: f929226f-b83d-4900-a07c-a62f64527c7f
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: c5cb5603b98701597847e1997c17714affa7b923
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 931c881651b87fd7ab8ce4b47a4e24710ce8c487
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52535276"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54136071"
 ---
 # <a name="enhance-merge-replication-performance"></a>Miglioramento delle prestazioni della replica di tipo merge
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -102,9 +102,9 @@ ms.locfileid: "52535276"
   
      Se si aggiorna il Sottoscrittore a [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] o versione successiva, viene aggiornato anche l'agente di merge utilizzato dalle sottoscrizioni nel Sottoscrittore. Per poter utilizzare molte delle nuove funzionalità e ottimizzazioni delle prestazioni, è necessario l'agente di merge di [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] o versione successiva.  
   
--   Se la sincronizzazione di una sottoscrizione avviene con una connessione veloce e le modifiche vengono inviate dal server di pubblicazione e dal Sottoscrittore, usare il parametro **-ParallelUploadDownload** per l'agente di merge.  
+-   Se la sincronizzazione di una sottoscrizione avviene con una connessione veloce e le modifiche vengono inviate dal server di pubblicazione e dal Sottoscrittore, usare il parametro **–ParallelUploadDownload** per l'agente di merge.  
   
-     In [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] è stato introdotto un nuovo parametro dell'agente di merge, ovvero **-ParallelUploadDownload**. L'impostazione di questo parametro consente di elaborare in parallelo le modifiche caricate nel server di pubblicazione e le modifiche scaricate nel Sottoscrittore. Ciò è utile negli ambienti caratterizzati da volumi di traffico elevati con un'ampia larghezza di banda di rete. I parametri degli agenti possono essere specificati nei profili agente e dalla riga di comando. Per altre informazioni, vedere:  
+     [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] ha introdotto un nuovo parametro dell'agente di merge, ovvero **–ParallelUploadDownload**. L'impostazione di questo parametro consente di elaborare in parallelo le modifiche caricate nel server di pubblicazione e le modifiche scaricate nel Sottoscrittore. Ciò è utile negli ambienti caratterizzati da volumi di traffico elevati con un'ampia larghezza di banda di rete. I parametri degli agenti possono essere specificati nei profili agente e dalla riga di comando. Per altre informazioni, vedere:  
   
     -   [Usare i profili agenti di replica](../../../relational-databases/replication/agents/work-with-replication-agent-profiles.md)  
   
@@ -136,16 +136,16 @@ ms.locfileid: "52535276"
   
 -   Creare snapshot preliminari e/o consentire ai Sottoscrittori di richiedere la generazione e l'applicazione di snapshot alla prima sincronizzazione.  
   
-     Utilizzare una o entrambe le opzioni per generare snapshot per le pubblicazioni che utilizzando filtri con parametri. Se non si specifica alcuna opzione, le sottoscrizioni vengono inizializzate tramite una serie di istruzioni SELECT e INSERT, anziché tramite l'utilità **bcp** . Questo processo risulta decisamente più lento. Per altre informazioni, vedere [Snapshots for Merge Publications with Parameterized Filters](../../../relational-databases/replication/snapshots-for-merge-publications-with-parameterized-filters.md).  
+     Utilizzare una o entrambe le opzioni per generare snapshot per le pubblicazioni che utilizzando filtri con parametri. Se non si specifica alcuna opzione, le sottoscrizioni vengono inizializzate tramite una serie di istruzioni SELECT e INSERT, anziché tramite l'utilità **bcp** . Questo processo risulta decisamente più lento. Per altre informazioni, vedere [Snapshots for Merge Publications with Parameterized Filters](../../../relational-databases/replication/create-a-snapshot-for-a-merge-publication-with-parameterized-filters.md).  
   
 ## <a name="maintenance-and-monitoring-considerations"></a>Considerazioni sulla manutenzione e sul monitoraggio  
   
 -   Eseguire occasionalmente la reindicizzazione delle tabelle di sistema per la replica di tipo merge.  
   
-     Come parte della manutenzione per la replica di tipo merge, controllare occasionalmente l'aumento delle dimensioni delle tabelle di sistema associate alla replica di tipo merge: **MSmerge_contents**, **MSmerge_genhistory**e **MSmerge_tombstone**, **MSmerge_current_partition_mappings**e **MSmerge_past_partition_mappings**. Reindicizzare periodicamente queste tabelle. Per altre informazioni, vedere [Riorganizzare e ricompilare gli indici](../../../relational-databases/indexes/reorganize-and-rebuild-indexes.md).  
+     Come parte della manutenzione per la replica di tipo merge, controllare occasionalmente l'aumento delle dimensioni delle tabelle di sistema associate alla replica di tipo merge: **MSmerge_contents**, **MSmerge_genhistory** e **MSmerge_tombstone**, **MSmerge_current_partition_mappings**, e **MSmerge_past_partition_mappings**. Reindicizzare periodicamente queste tabelle. Per altre informazioni, vedere [Riorganizzare e ricompilare gli indici](../../../relational-databases/indexes/reorganize-and-rebuild-indexes.md).  
   
 -   Monitorare le prestazioni della sincronizzazione utilizzando la scheda **Cronologia sincronizzazione** in Monitoraggio replica.  
   
-     Per la replica di tipo merge in Monitoraggio replica nella scheda **Cronologia sincronizzazione** vengono visualizzate statistiche dettagliate di ogni articolo elaborato durante la sincronizzazione, inclusa la quantità di tempo impiegato in ogni fase di elaborazione (caricamento delle modifiche, download delle modifiche e così via). Ciò può essere utile per individuare tabelle specifiche che determinano rallentamenti ed è l'opzione migliore per risolvere problemi relativi alle prestazioni delle sottoscrizioni di tipo merge. Per altre informazioni sulla visualizzazione di statistiche dettagliate, vedere [Visualizzare le informazioni ed eseguire attività relative agli agenti associati a una sottoscrizione &#40;Monitoraggio replica&#41;](../../../relational-databases/replication/monitor/view-information-and-perform-tasks-for-subscription-agents.md).  
+     Per la replica di tipo merge in Monitoraggio replica nella scheda **Cronologia sincronizzazione** vengono visualizzate statistiche dettagliate di ogni articolo elaborato durante la sincronizzazione, inclusa la quantità di tempo impiegato in ogni fase di elaborazione (caricamento delle modifiche, download delle modifiche e così via). Ciò può essere utile per individuare tabelle specifiche che determinano rallentamenti ed è l'opzione migliore per risolvere problemi relativi alle prestazioni delle sottoscrizioni di tipo merge. Per altre informazioni sulla visualizzazione di statistiche dettagliate, vedere [Visualizzare le informazioni ed eseguire attività usando Monitoraggio replica](../../../relational-databases/replication/monitor/view-information-and-perform-tasks-replication-monitor.md).  
   
   

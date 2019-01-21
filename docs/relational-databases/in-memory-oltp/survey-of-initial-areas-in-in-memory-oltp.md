@@ -12,15 +12,18 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 31a4e59da5f3555f79ac6fe6b82fa2d03721a81b
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 21d42cb015227b06021878e37b4c1b94bd96a446
+ms.sourcegitcommit: 96032813f6bf1cba680b5e46d82ae1f0f2da3d11
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52519455"
+ms.lasthandoff: 01/15/2019
+ms.locfileid: "54300398"
 ---
 # <a name="survey-of-initial-areas-in-in-memory-oltp"></a>Indagine sulle aree iniziali di OLTP in memoria
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+
+  > [!div class="nextstepaction"]
+  > [Condividi il feedback sul sommario della documentazione SQL](https://aka.ms/sqldocsurvey)
 
   
 Questo articolo è per gli sviluppatori che hanno premura di imparare in poco tempo le basi delle caratteristiche di prestazione di OLTP in memoria di Microsoft SQL Server e Database SQL di Azure.  
@@ -108,8 +111,8 @@ Una sequenza di accurati post di blog spiega in modo elegante gli indici columns
 #### <a name="bulk-importation-of-data"></a>Importazione bulk di dati
 
 1. [Indici columnstore cluster: caricamento bulk](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2014/07/27/clustered-column-store-index-bulk-loading-the-data/)
-2. [Clustered Columnstore Index: Data Load Optimizations - Minimal Logging](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2016/01/10/clustered-columnstore-index-data-load-optimizations-minimal-logging/) (Indici columnstore cluster: ottimizzazioni del caricamento dati con registrazione minima)
-3. [Indici columnstore cluster: ottimizzazioni del caricamento dati con importazione bulk parallela](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2016/02/28/clustered-columnstore-index-parallel-bulk-import/) (Indici columnstore cluster: ottimizzazioni del caricamento dati con importazione bulk parallela)
+2. [Indici columnstore cluster: ottimizzazioni del caricamento dati con registrazione minima](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2016/01/10/clustered-columnstore-index-data-load-optimizations-minimal-logging/)
+3. [Indici columnstore cluster: ottimizzazioni del caricamento dati con importazione bulk parallela](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2016/02/28/clustered-columnstore-index-parallel-bulk-import/)
 
 
 
@@ -217,7 +220,7 @@ Nel database SQL di Azure non è necessario e non è possibile creare un FILEGRO
 
 Lo script T-SQL di esempio seguente abilita un database per OLTP in memoria e configura tutte le impostazioni consigliate. Funziona con SQL Server e il database SQL di Azure: [enable-in-memory-oltp.sql](https://raw.githubusercontent.com/Microsoft/sql-server-samples/master/samples/features/in-memory/t-sql-scripts/enable-in-memory-oltp.sql).
 
-Si noti che non tutte le funzionalità di SQL Server sono supportate per i database con un filegroup MEMORY_OPTIMIZED_DATA. Per informazioni dettagliate sulle limitazioni vedere [Funzionalità di SQL Server non supportate per OLTP in memoria](unsupported-sql-server-features-for-in-memory-oltp.md)
+Si noti che non tutte le funzionalità di SQL Server sono supportate per i database con un filegroup MEMORY_OPTIMIZED_DATA. Per informazioni dettagliate sulle limitazioni, vedere: [Funzionalità di SQL Server non supportate per OLTP in memoria](unsupported-sql-server-features-for-in-memory-oltp.md)
   
 <a name="create-a-memory-optimized-table-26y"></a>  
   
@@ -361,7 +364,7 @@ Le sottosezioni seguenti descrivono brevemente come funzionano internamente le f
 ### <a name="how-memory-optimized-tables-perform-faster"></a>Prestazioni più rapide delle tabelle ottimizzate per la memoria  
   
   
-**Duplice natura:** una tabella ottimizzata per la memoria a una duplice natura: una rappresentazione nella memoria attiva e una nel disco rigido. Per ogni transazione viene eseguito il commit per entrambe le rappresentazioni della tabella. Le transazioni usano la rappresentazione nella memoria attiva più veloce. Le tabelle con ottimizzazione per la memoria possono sfruttare la maggiore velocità della memoria attiva rispetto al disco. Inoltre, la maggiore flessibilità della memoria attiva semplifica l'uso di una struttura di tabella più avanzata ottimizzata per la velocità. La struttura avanzata è anche priva di pagine, quindi evita problemi di sovraccarico e contesa associati a latch e spinlock.  
+**Duplice natura:** una tabella ottimizzata per la memoria ha una duplice natura: una rappresentazione nella memoria attiva e una nel disco rigido. Per ogni transazione viene eseguito il commit per entrambe le rappresentazioni della tabella. Le transazioni usano la rappresentazione nella memoria attiva più veloce. Le tabelle con ottimizzazione per la memoria possono sfruttare la maggiore velocità della memoria attiva rispetto al disco. Inoltre, la maggiore flessibilità della memoria attiva semplifica l'uso di una struttura di tabella più avanzata ottimizzata per la velocità. La struttura avanzata è anche priva di pagine, quindi evita problemi di sovraccarico e contesa associati a latch e spinlock.  
   
   
 **Nessun blocco:** la tabella ottimizzata per la memoria si basa su un approccio *ottimistico* volto a raggiungere contemporaneamente gli obiettivi di integrità dei dati e di concorrenza e alta velocità effettiva. Durante la transazione, la tabella non inserisce blocchi in alcune versione delle righe aggiornate dei dati. Questo consente di ridurre notevolmente le contese in alcuni sistemi con volumi elevati.  
@@ -405,7 +408,7 @@ Nel resto di questa sezione sono elencate alcune delle principali considerazioni
 - [Dimensioni di tabelle e righe per le tabelle con ottimizzazione per la memoria](../../relational-databases/in-memory-oltp/table-and-row-size-in-memory-optimized-tables.md)  
   
   
-**Partizionare le tabelle di grandi dimensioni:** un modo per soddisfare la richiesta di grandi quantità di memoria attiva consiste nel partizionare le tabelle di grandi dimensioni in parti in memoria che archiviano righe di dati *attive recenti* e in altre parti su disco che archiviano righe *non attive legacy* , ad esempio ordini di vendita già consegnati e completati. Questo partizionamento è un processo manuale di progettazione e implementazione. Vedere:  
+**Partizionare le tabelle di grandi dimensioni:** un modo per soddisfare la richiesta di grandi quantità di memoria attiva consiste nel partizionare le tabelle di grandi dimensioni in parti in memoria che archiviano righe di dati *attive recenti* e in altre parti su disco che archiviano righe *non attive legacy*, ad esempio ordini di vendita già consegnati e completati. Questo partizionamento è un processo manuale di progettazione e implementazione. Vedere:  
   
 - [Partizionamento a livello di applicazione](../../relational-databases/in-memory-oltp/application-level-partitioning.md)  
 - [Modello di applicazione per il partizionamento di tabelle con ottimizzazione per la memoria](../../relational-databases/in-memory-oltp/application-pattern-for-partitioning-memory-optimized-tables.md)  

@@ -14,12 +14,12 @@ ms.assetid: 5a9e4ddf-3cb1-4baf-94d6-b80acca24f64
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 04e138f38923745d0095344959bc5876fc213b00
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 5f6d488b46f576ed5c5d97358ec8674a64be46bd
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52507437"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54135361"
 ---
 # <a name="frequently-asked-questions-for-replication-administrators"></a>Domande frequenti per gli amministratori di replica
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -44,9 +44,9 @@ ms.locfileid: "52507437"
 ### <a name="when-is-a-subscription-available-when-can-the-subscription-database-be-used"></a>Quando è disponibile una sottoscrizione? Quando è possibile utilizzare il database di sottoscrizione?  
  Una sottoscrizione è disponibile dopo che al database di sottoscrizione è stato applicato lo snapshot. Anche se il database di sottoscrizione è accessibile prima di questo momento, non dovrebbe essere utilizzato prima che sia stato applicato lo snapshot. Utilizzare Monitoraggio replica per verificare lo stato della generazione e dell'applicazione dello snapshot.  
   
--   Lo snapshot viene generato dall'agente snapshot. Visualizzare lo stato della generazione dello snapshot nella scheda **Agenti** per una pubblicazione in Monitoraggio replica. Per altre informazioni, vedere [Visualizzare le informazioni ed eseguire attività relative agli agenti associati a una pubblicazione &#40;Monitoraggio replica&#41;](../../../relational-databases/replication/monitor/view-information-and-perform-tasks-for-publication-agents.md).  
+-   Lo snapshot viene generato dall'agente snapshot. Visualizzare lo stato della generazione dello snapshot nella scheda **Agenti** per una pubblicazione in Monitoraggio replica. Per altre informazioni, vedere [Visualizzare le informazioni ed eseguire attività usando Monitoraggio replica](../../../relational-databases/replication/monitor/view-information-and-perform-tasks-replication-monitor.md).  
   
--   Lo snapshot viene applicato dall'agente di distribuzione o dall'agente di merge. Visualizzare lo stato dell'applicazione dello snapshot nella pagina **Agente di distribuzione** o **Agente di merge** di Monitoraggio replica. Per altre informazioni, vedere [Visualizzare le informazioni ed eseguire attività relative agli agenti associati a una sottoscrizione &#40;Monitoraggio replica&#41;](../../../relational-databases/replication/monitor/view-information-and-perform-tasks-for-subscription-agents.md).  
+-   Lo snapshot viene applicato dall'agente di distribuzione o dall'agente di merge. Visualizzare lo stato dell'applicazione dello snapshot nella pagina **Agente di distribuzione** o **Agente di merge** di Monitoraggio replica. Per altre informazioni, vedere [Visualizzare le informazioni ed eseguire attività usando Monitoraggio replica](../../../relational-databases/replication/monitor/view-information-and-perform-tasks-replication-monitor.md).  
   
 ### <a name="what-happens-if-the-snapshot-agent-has-not-completed-when-the-distribution-or-merge-agent-starts"></a>Cosa accade se l'agente snapshot non ha concluso la propria attività quando viene avviato l'agente di distribuzione o l'agente di merge?  
  L'esecuzione dell'agente di distribuzione o di merge in contemporanea con quella dell'agente snapshot non genera un errore. Tuttavia, è necessario considerare quanto segue:  
@@ -96,7 +96,7 @@ ms.locfileid: "52507437"
  Queste informazioni sono disponibili tramite [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]e diverse stored procedure di replica. Per altre informazioni, vedere [Distributor and Publisher Information Script](../../../relational-databases/replication/administration/distributor-and-publisher-information-script.md).  
   
 ### <a name="does-replication-encrypt-data"></a>La replica crittografa i dati?  
- No. La replica non crittografa i dati archiviati nel database o trasferiti nella rete. Per altre informazioni, vedere la sezione "Crittografia" nell'argomento [Panoramica della sicurezza &#40;replica&#41;](../../../relational-databases/replication/security/security-overview-replication.md).  
+ No. La replica non crittografa i dati archiviati nel database o trasferiti nella rete. Per altre informazioni, vedere la sezione "Crittografia" nell'argomento [Visualizzazione e modifica delle impostazioni di sicurezza della replica](../../../relational-databases/replication/security/view-and-modify-replication-security-settings.md).  
   
 ### <a name="how-do-i-replicate-data-over-the-internet"></a>Come si replicano i dati su Internet?  
  È possibile replicare i dati su Internet utilizzando:  
@@ -142,8 +142,9 @@ ms.locfileid: "52507437"
   
 -   Eseguire le istruzioni GRANT direttamente nel database di sottoscrizione.  
   
--   Per eseguire le istruzioni, utilizzare uno script post-snapshot. Per altre informazioni, vedere [Eseguire gli script prima e dopo l'applicazione dello snapshot](../../../relational-databases/replication/execute-scripts-before-and-after-the-snapshot-is-applied.md).  
-  
+-   Per eseguire le istruzioni, utilizzare uno script post-snapshot. Per altre informazioni, vedere [Eseguire gli script prima e dopo l'applicazione dello snapshot](../../../relational-databases/replication/snapshot-options.md#execute-scripts-before-and-after-snapshot-is-applied).  
+
+ 
 -   Per eseguire le istruzioni, utilizzare la stored procedure [sp_addscriptexec](../../../relational-databases/system-stored-procedures/sp-addscriptexec-transact-sql.md) .  
   
 ### <a name="what-happens-to-permissions-granted-in-a-subscription-database-if-a-subscription-is-reinitialized"></a>Cosa accade alle autorizzazioni concesse in un database di sottoscrizione se una sottoscrizione viene reinizializzata?  
@@ -169,7 +170,7 @@ ms.locfileid: "52507437"
  Sì. I database interessati alla replica richiedono alcune considerazioni speciali per i database. Per altre informazioni, vedere [Eseguire il backup e ripristino di database replicati](../../../relational-databases/replication/administration/back-up-and-restore-replicated-databases.md).  
   
 ### <a name="does-replication-affect-the-size-of-the-transaction-log"></a>La replica influisce sulla dimensione del log delle transazioni?  
- A differenza della replica di tipo merge e della replica snapshot, la replica transazionale può influire sulla dimensione del log delle transazioni. Se un database include una o più pubblicazioni transazionali, il log non viene troncato finché tutte le transazioni significative per le pubblicazioni non sono state recapitate al database di distribuzione. Se la dimensione del log delle transazioni aumenta in modo eccessivo e l'agente di lettura log viene eseguito in base a una pianificazione, è consigliabile ridurre l'intervallo tra le esecuzioni oppure impostare l'esecuzione in modalità continua. Se l'agente viene impostato per l'esecuzione in modalità continua (impostazione predefinita) verificare che venga eseguito. Per altre informazioni sul controllo dello stato dell'agente di lettura log, vedere [Visualizzare le informazioni ed eseguire attività relative agli agenti associati a una pubblicazione &#40;Monitoraggio replica&#41;](../../../relational-databases/replication/monitor/view-information-and-perform-tasks-for-publication-agents.md).  
+ A differenza della replica di tipo merge e della replica snapshot, la replica transazionale può influire sulla dimensione del log delle transazioni. Se un database include una o più pubblicazioni transazionali, il log non viene troncato finché tutte le transazioni significative per le pubblicazioni non sono state recapitate al database di distribuzione. Se la dimensione del log delle transazioni aumenta in modo eccessivo e l'agente di lettura log viene eseguito in base a una pianificazione, è consigliabile ridurre l'intervallo tra le esecuzioni oppure impostare l'esecuzione in modalità continua. Se l'agente viene impostato per l'esecuzione in modalità continua (impostazione predefinita) verificare che venga eseguito. Per altre informazioni sul controllo dello stato dell'agente di lettura log, vedere [Visualizzare le informazioni ed eseguire attività usando Monitoraggio replica](../../../relational-databases/replication/monitor/view-information-and-perform-tasks-replication-monitor.md).  
   
  Inoltre, se nel database di pubblicazione o in quello di distribuzione è stata impostata l'opzione 'sync with backup', il troncamento del log delle transazioni avviene solo dopo il backup di tutte le transazioni. Se la dimensione del log delle transazioni sta aumentando in modo eccessivo e questa azione è stata impostata, è consigliabile accorciare l'intervallo tra l'esecuzione di operazioni di backup di tale log. Per altre informazioni sul backup e il ripristino dei database coinvolti nella replica transazionale, vedere [Strategie di backup e ripristino della replica snapshot e della replica transazionale](../../../relational-databases/replication/administration/strategies-for-backing-up-and-restoring-snapshot-and-transactional-replication.md).  
   
@@ -186,12 +187,12 @@ ms.locfileid: "52507437"
  Eliminare in primo luogo l'articolo dalla pubblicazione usando [sp_droparticle](../../../relational-databases/system-stored-procedures/sp-droparticle-transact-sql.md), [sp_dropmergearticle](../../../relational-databases/system-stored-procedures/sp-dropmergearticle-transact-sql.md) o la finestra di dialogo **Proprietà pubblicazione - \<Pubblicazione>**, quindi eliminarlo dal database usando `DROP <Object>`. Dopo l'aggiunta di sottoscrizioni non è possibile eliminare articoli dalle pubblicazioni snapshot o transazionali: è necessario eliminare prima le sottoscrizioni. Per altre informazioni, vedere [Aggiungere ed eliminare articoli in pubblicazioni esistenti](../../../relational-databases/replication/publish/add-articles-to-and-drop-articles-from-existing-publications.md).  
   
 ### <a name="how-do-i-add-or-drop-columns-on-a-published-table"></a>Come si aggiungono o si eliminano colonne in una tabella pubblicata?  
- [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] supporta una vasta gamma di modifiche dello schema sugli oggetti pubblicati, inclusa l'aggiunta e l'eliminazione di colonne. Ad esempio, se si esegue ALTER TABLE ... DROP COLUMN nel server di pubblicazione, l'istruzione viene replicata ai Sottoscrittori e poi eseguita per eliminare la colonna. I Sottoscrittori che eseguono versioni di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] precedenti a [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] supportano l'aggiunta e l'eliminazione di colonne tramite le stored procedure [sp_repladdcolumn](../../../relational-databases/system-stored-procedures/sp-repladdcolumn-transact-sql.md) e [sp_repldropcolumn](../../../relational-databases/system-stored-procedures/sp-repldropcolumn-transact-sql.md). Per altre informazioni, vedere [Apportare modifiche allo schema nei database di pubblicazione](../../../relational-databases/replication/publish/make-schema-changes-on-publication-databases.md).  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] supporta una vasta gamma di modifiche dello schema sugli oggetti pubblicati, inclusa l'aggiunta e l'eliminazione di colonne. Ad esempio, se si esegue ALTER TABLE … DROP COLUMN nel server di pubblicazione, l'istruzione viene replicata ai Sottoscrittori e poi eseguita per eliminare la colonna. I Sottoscrittori che eseguono versioni di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] precedenti a [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] supportano l'aggiunta e l'eliminazione di colonne tramite le stored procedure [sp_repladdcolumn](../../../relational-databases/system-stored-procedures/sp-repladdcolumn-transact-sql.md) e [sp_repldropcolumn](../../../relational-databases/system-stored-procedures/sp-repldropcolumn-transact-sql.md). Per altre informazioni, vedere [Apportare modifiche allo schema nei database di pubblicazione](../../../relational-databases/replication/publish/make-schema-changes-on-publication-databases.md).  
   
 ## <a name="replication-maintenance"></a>Manutenzione della replica  
   
 ### <a name="how-do-i-determine-if-the-data-at-subscribers-is-synchronized-with-data-at-the-publisher"></a>Come si stabilisce se i dati nei Sottoscrittori sono sincronizzati con quelli nel server di pubblicazione?  
- Utilizzando la convalida. La convalida segnala se uno specifico Sottoscrittore è sincronizzato con il server di pubblicazione. Per altre informazioni, vedere [Convalidare i dati replicati](../../../relational-databases/replication/validate-replicated-data.md). A differenza dell'[utilità tablediff](../../../tools/tablediff-utility.md), la convalida non offre informazioni sulle eventuali righe che non sono sincronizzate correttamente.  
+ Utilizzando la convalida. La convalida segnala se uno specifico Sottoscrittore è sincronizzato con il server di pubblicazione. Per altre informazioni, vedere [Convalidare i dati replicati](../../../relational-databases/replication/validate-data-at-the-subscriber.md). A differenza dell' [utilità tablediff](../../../tools/tablediff-utility.md) , la convalida non offre informazioni sulle eventuali righe che non sono sincronizzate correttamente.  
   
 ### <a name="how-do-i-add-a-table-to-an-existing-publication"></a>Come si aggiunge una tabella a una pubblicazione esistente?  
  Per aggiungere una tabella o un altro oggetto, non è necessario arrestare l'attività sui database di pubblicazione o di sottoscrizione. Aggiungere una tabella a una pubblicazione usando la finestra di dialogo **Proprietà pubblicazione - \<Pubblicazione>** o le stored procedure [sp_addarticle](../../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md) e [sp_addmergearticle](../../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md). Per altre informazioni, vedere [Aggiungere ed eliminare articoli in pubblicazioni esistenti](../../../relational-databases/replication/publish/add-articles-to-and-drop-articles-from-existing-publications.md).  
@@ -209,7 +210,7 @@ ms.locfileid: "52507437"
  Le azioni necessarie per rimuovere la replica da un database dipendono dalla funzione del database come database di pubblicazione, di sottoscrizione o entrambi.  
   
 ### <a name="how-do-i-determine-whether-there-are-transactions-or-rows-to-be-replicated"></a>In che modo è possibile determinare se vi sono transazioni o righe da replicare?  
- Per la replica transazionale, utilizzare le stored procedure o la scheda **Comandi non distribuiti** di Monitoraggio replica. Per altre informazioni, vedere [Visualizzare comandi replicati e altre informazioni nel database di distribuzione &#40;programmazione Transact-SQL della replica&#41;](../../../relational-databases/replication/monitor/view-replicated-commands-and-information-in-distribution-database.md) e [Visualizzare le informazioni ed eseguire attività relative agli agenti associati a una sottoscrizione &#40;Monitoraggio replica&#41;](../../../relational-databases/replication/monitor/view-information-and-perform-tasks-for-subscription-agents.md).  
+ Per la replica transazionale, utilizzare le stored procedure o la scheda **Comandi non distribuiti** di Monitoraggio replica. Per altre informazioni, vedere [Visualizzare comandi replicati e altre informazioni nel database di distribuzione &#40;programmazione Transact-SQL della replica&#41;](../../../relational-databases/replication/monitor/view-replicated-commands-and-information-in-distribution-database.md) e [Visualizzare le informazioni ed eseguire attività usando Monitoraggio replica](../../../relational-databases/replication/monitor/view-information-and-perform-tasks-replication-monitor.md).  
   
  Per la replica di tipo merge, utilizzare la stored procedure **sp_showpendingchanges**. Per altre informazioni, vedere [sp_showpendingchanges &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-showpendingchanges-transact-sql.md).  
   
@@ -220,7 +221,7 @@ ms.locfileid: "52507437"
   
 -   Tempo stimato per il recapito dei comandi al Sottoscrittore. Se questo valore è maggiore del tempo necessario per generare uno snapshot e applicarlo al Sottoscrittore, potrebbe risultare conveniente reinizializzare il Sottoscrittore. Per altre informazioni, vedere [Reinizializzare le sottoscrizioni](../../../relational-databases/replication/reinitialize-subscriptions.md).  
   
- Per altre informazioni, vedere [sp_replmonitorsubscriptionpendingcmds &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-replmonitorsubscriptionpendingcmds-transact-sql.md) e [Visualizzare le informazioni ed eseguire attività relative agli agenti associati a una sottoscrizione &#40;Monitoraggio replica&#41;](../../../relational-databases/replication/monitor/view-information-and-perform-tasks-for-subscription-agents.md).  
+ Per altre informazioni, vedere [sp_replmonitorsubscriptionpendingcmds &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-replmonitorsubscriptionpendingcmds-transact-sql.md) e [Visualizzare le informazioni ed eseguire attività usando Monitoraggio replica](../../../relational-databases/replication/monitor/view-information-and-perform-tasks-replication-monitor.md).  
   
 ## <a name="replication-and-other-database-features"></a>Replica e altre funzionalità del database  
   
@@ -231,7 +232,7 @@ ms.locfileid: "52507437"
  Sì. Non vi sono considerazioni speciali, poiché tutti i dati vengono archiviati su un solo set di dischi nel cluster.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Amministrazione &#40;replica&#41;](../../../relational-databases/replication/administration/administration-replication.md)   
+ [Domande frequenti sull'amministrazione della replica](../../../relational-databases/replication/administration/frequently-asked-questions-for-replication-administrators.md)   
  [Best Practices for Replication Administration](../../../relational-databases/replication/administration/best-practices-for-replication-administration.md)  
   
   

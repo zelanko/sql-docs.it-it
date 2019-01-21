@@ -1,7 +1,7 @@
 ---
-title: 'Passaggio 1: Copia del pacchetto della lezione 2 | Microsoft Docs'
+title: 'Passaggio 1: Copiare il pacchetto della lezione 2 | Microsoft Docs'
 ms.custom: ''
-ms.date: 03/14/2017
+ms.date: 01/04/2019
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
@@ -11,56 +11,51 @@ ms.assetid: 4bd91402-4e37-41de-ab78-8ca5a1948a37
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 992e258fad0d69542942d2ead4df8cf08b36c391
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: c8741daaa12ceabf382c61cdcadefe094b8cc04a
+ms.sourcegitcommit: dd794633466b1da8ead9889f5e633bdf4b3389cd
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52536795"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54143211"
 ---
-# <a name="lesson-3-1---copying-the-lesson-2-package"></a>Lezione 3-1 - Copia del pacchetto della lezione 2
-In questa attività si procederà alla creazione di una copia del pacchetto della lezione 2, denominato Lesson 2.dtsx. In alternativa è possibile aggiungere al progetto il pacchetto completo della lezione 2 incluso nell'esercitazione e successivamente copiarlo. Questa nuova copia verrà usata per il resto della lezione 3.  
+# <a name="lesson-3-1-copy-the-lesson-2-package"></a>Lezione 3-1: Copiare il pacchetto della lezione 2
+
+In questa attività si procederà alla creazione di una copia del pacchetto Lesson 2.dts creato nella lezione 2. Se non è stata completata la lezione 2, è possibile aggiungere al progetto il pacchetto della lezione 2 completato incluso nell'esercitazione e quindi copiarlo. Questa nuova copia verrà usata per tutto il seguito della lezione 3.
+
+## <a name="create-the-lesson-3-package"></a>Creare il pacchetto della lezione 3
+
+Attenersi alla procedura seguente se si sta copiando la lezione 2 completata.  Per copiare la lezione 2 di esempio, vedere la sezione successiva.
+
+1.  Se [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Data Tools non è già aperto, selezionare **Start** > **Tutti i programmi** > **Microsoft SQL Server 2017** e quindi selezionare **SQL Server Data Tools**.
+
+2.  Nel menu **File** selezionare **Apri** > **Progetto/Soluzione**, selezionare la cartella **Esercitazione SSIS** e quindi **Apri** e fare doppio clic su **SSIS Tutorial.sln**.
+
+3.  In **Esplora soluzioni** fare clic con il pulsante destro del mouse su **Lesson 2.dtsx** e quindi selezionare **Copia**.
+
+4.  In **Esplora soluzioni** fare clic con il pulsante destro del mouse su **Pacchetti SSIS** e quindi selezionare **Incolla**.
+
+    Il nome predefinito del pacchetto copiato è Lesson 3.dtsx.
+
+5.  In **Esplora soluzioni** fare doppio clic su **Lesson 3.dtsx** per aprire il pacchetto
+
+6.  Fare clic con il pulsante destro del mouse in un punto qualsiasi dell'area di progettazione **Flusso di controllo** e selezionare **Proprietà**.
+
+7.  Nella finestra **Proprietà** aggiornare la proprietà **Name** impostandola su **Lesson 3**.
+
+8.  Selezionare la casella relativa alla proprietà **ID**, fare clic sulla freccia a discesa e quindi selezionare **\<Genera nuovo ID>**.
+
+## <a name="add-the-completed-lesson-2-package"></a>Aggiungere il pacchetto della lezione 2 completato
+
+1.  Aprire [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Data Tools e il progetto SSIS Tutorial.
+
+2.  In **Esplora soluzioni** fare clic con il pulsante destro del mouse su **Pacchetti SSIS** e selezionare **Aggiungi pacchetto esistente**.
+
+3.  Nella finestra di dialogo **Aggiungi copia del pacchetto esistente** in **Posizione pacchetto** selezionare **File system**.
+
+4.  Selezionare il pulsante sfoglia **(...)**, passare a **Lesson 2.dtsx** nel computer e quindi selezionare **Apri**.
+
+5.  Copiare e incollare il pacchetto della lezione 3, come illustrato nei passaggi 3-8 della sezione precedente.  
   
-### <a name="to-create-the-lesson-3-package"></a>Per creare il pacchetto della lezione 3  
-  
-1.  Se [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Data Tools non è già aperto fare clic su **Start**, scegliere **Tutti i programmi**, **Microsoft SQL Server 2012**e quindi fare clic su **SQL Server Data Tools**.  
-  
-2.  Scegliere **Apri** dal menu **File**, fare clic su **Progetto/Soluzione**, selezionare **SSIS Tutorial** , fare clic su **Apri**e quindi fare doppio clic su **SSIS Tutorial.sln**.  
-  
-3.  In Esplora soluzioni fare clic con il pulsante destro del mouse su **Lesson 2.dtsx**e fare clic su **Copia**.  
-  
-4.  In Esplora soluzioni fare clic con il pulsante destro del mouse su **Pacchetti SSIS**e fare clic su **Incolla**.  
-  
-    Per impostazione predefinita, il pacchetto copiato viene denominato Lesson 3.dtsx.  
-  
-5.  In Esplora soluzioni fare doppio clic su **Lesson 3.dtsx** per aprire il pacchetto.  
-  
-6.  Fare clic con il pulsante destro del mouse in un punto qualsiasi dello sfondo della scheda **Flusso di controllo** e scegliere **Proprietà**.  
-  
-7.  Nella finestra Proprietà aggiornare la proprietà **Name** impostandola su **Lesson 3**.  
-  
-8.  Fare clic sulla casella relativa alla proprietà **ID** e quindi fare clic su **<Generate New ID>** nell'elenco.  
-  
-### <a name="to-add-the-completed-lesson2-package"></a>Per aggiungere il pacchetto della lezione 2 completato  
-  
-1.  Aprire [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] e aprire il progetto SSIS Tutorial.  
-  
-2.  In Esplora soluzioni fare clic con il pulsante destro del mouse su **Pacchetti SSIS**e selezionare **Aggiungi pacchetto esistente**.  
-  
-3.  Nella finestra di dialogo **Aggiungi copia del pacchetto esistente** , in **Posizione pacchetto**, selezionare **File system**.  
-  
-4.  Fare clic sul pulsante sfoglia **(...)**, passare a **Lesson 2.dtsx** nel computer, quindi fare clic su **Apri**.  
-  
-    Per scaricare tutti i pacchetti di lezioni di questa esercitazione, effettuare le operazioni seguenti.  
-  
-    1.  Passare alla pagina degli [esempi del prodotto di Integration Services](https://go.microsoft.com/fwlink/?LinkId=275027)  
-  
-    2.  Fare clic sulla scheda **DOWNLOADS** .  
-  
-    3.  Fare clic sul file SQL2012.Integration_Services.Create_Simple_ETL_Tutorial.Sample.zip.  
-  
-5.  Copiare e incollare il pacchetto della lezione 3, come illustrato nei passaggi 3-8 della procedura precedente.  
-  
-## <a name="next-task-in-lesson"></a>Attività successiva della lezione  
-[Passaggio 2: Aggiunta e configurazione di funzionalità di registrazione](../integration-services/lesson-3-2-adding-and-configuring-logging.md)  
+## <a name="go-to-next-task"></a>Esecuzione del passaggio successivo
+[Passaggio 2: Aggiungere e configurare le funzionalità di registrazione](../integration-services/lesson-3-2-adding-and-configuring-logging.md)  
   

@@ -17,12 +17,12 @@ ms.assetid: 41c3f2c4-ee04-460a-9822-bb9ae4036c2e
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 52f86e1750858ec7fabcb8fab30dcd23b4306ace
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: ab81a9e76ea17a683062431da678fa679ceffdee
+ms.sourcegitcommit: 170c275ece5969ff0c8c413987c4f2062459db21
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52509427"
+ms.lasthandoff: 01/11/2019
+ms.locfileid: "54226638"
 ---
 # <a name="ftp-task"></a>Attività FTP
   L'attività FTP consente di caricare e scaricare file di dati, nonché di gestire directory nei server. Un pacchetto può ad esempio scaricare file di dati da un server remoto o da un indirizzo Internet nell'ambito del flusso di lavoro di un pacchetto di [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . È possibile utilizzare l'attività FTP per gli scopi seguenti:  
@@ -40,7 +40,7 @@ ms.locfileid: "52509427"
   
  Per l'accesso a un file o a una directory locale, l'attività FTP utilizza un percorso archiviato in una variabile o una gestione connessione file. Per l'accesso a un file o a una directory remota, invece, l'attività FTP utilizza un percorso archiviato in una variabile oppure specificato direttamente sul server remoto, come indicato nella gestione connessione FTP. Per altre informazioni, vedere [Gestione connessione file](../../integration-services/connection-manager/file-connection-manager.md) e [Variabili di Integration Services &#40;SSIS&#41;](../../integration-services/integration-services-ssis-variables.md).  
   
- Questo significa che l'attività FTP può ricevere più file ed eliminare più file remoti, ma se utilizza una gestione connessione può inviare ed eliminare un solo file locale alla volta, poiché una gestione connessione file può accedere a un solo file. Per accedere a più file locali, è necessario specificarne il percorso utilizzando una variabile. Una variabile contenente "C:\Test\\*.txt" specifica ad esempio un percorso per l'eliminazione o l'invio di tutti i file con estensione txt presenti nella directory Test.  
+ Questo significa che l'attività FTP può ricevere più file ed eliminare più file remoti, ma se utilizza una gestione connessione può inviare ed eliminare un solo file locale alla volta, poiché una gestione connessione file può accedere a un solo file. Per accedere a più file locali, è necessario specificarne il percorso utilizzando una variabile. Una variabile contenente "C:\Test\&#42;.txt" specifica ad esempio un percorso per l'eliminazione o l'invio di tutti i file con estensione txt presenti nella directory Test.  
   
  In alternativa, per inviare più file e accedere a più file e directory locali è possibile eseguire più volte l'attività FTP includendola in un ciclo Foreach, che è in grado di eseguire un'enumerazione su tutti i file in una directory tramite l'enumeratore For Each File. Per altre informazioni, vedere [Contenitore Ciclo Foreach](../../integration-services/control-flow/foreach-loop-container.md).  
   
@@ -87,7 +87,7 @@ ms.locfileid: "52509427"
 > [!IMPORTANT]  
 >  La gestione connessione FTP supporta solo l'autenticazione anonima e l'autenticazione di base. Non supporta l'autenticazione di Windows.  
   
- **Argomenti correlati**: [FTP Connection Manager](../../integration-services/connection-manager/ftp-connection-manager.md), [FTP Connection Manager Editor](../../integration-services/connection-manager/ftp-connection-manager-editor.md)  
+ **Argomenti correlati**: [Gestione connessione FTP](../../integration-services/connection-manager/ftp-connection-manager.md), [Editor gestione connessione FTP](../../integration-services/connection-manager/ftp-connection-manager-editor.md)  
   
  **StopOnFailure**  
  Consente di specificare il termine dell'attività FTP in caso di esito negativo di un'operazione FTP.  
@@ -147,7 +147,7 @@ ms.locfileid: "52509427"
  **RemoteVariable**  
  Consente di selezionare una variabile esistente definita dall'utente o di creare una variabile definita dall'utente facendo clic su \<**Nuova variabile**>.  
   
- **Argomenti correlati:** [Variabili di Integration Services &#40;SSIS&#41;](../../integration-services/integration-services-ssis-variables.md), Aggiungi variabile  
+ **Argomenti correlati:** [Variabili di Integration Services &#40;SSIS&#41;](../../integration-services/integration-services-ssis-variables.md), Aggiungere una variabile  
   
 #### <a name="isremotepathvariable--false"></a>IsRemotePathVariable = False  
  **RemotePath**  
@@ -161,13 +161,13 @@ ms.locfileid: "52509427"
  **LocalVariable**  
  Consente di selezionare una variabile esistente definita dall'utente o di creare una variabile facendo clic su \<**Nuova variabile**>.  
   
- **Argomenti correlati:** [Variabili di Integration Services &#40;SSIS&#41;](../../integration-services/integration-services-ssis-variables.md), Aggiungi variabile  
+ **Argomenti correlati:** [Variabili di Integration Services &#40;SSIS&#41;](../../integration-services/integration-services-ssis-variables.md), Aggiungere una variabile  
   
 #### <a name="islocalpathvariable--false"></a>IsLocalPathVariable = False  
  **LocalPath**  
  Selezionare una gestione connessione file esistente oppure crearne una nuova facendo clic su \<**Nuova connessione**>.  
   
- **Argomenti correlati:** [Gestione connessione file flat](../../integration-services/connection-manager/flat-file-connection-manager.md)  
+ **Argomenti correlati**: [Gestione connessione file flat](../../integration-services/connection-manager/flat-file-connection-manager.md)  
   
 ## <a name="see-also"></a>Vedere anche  
  [Attività di Integration Services](../../integration-services/control-flow/integration-services-tasks.md)   

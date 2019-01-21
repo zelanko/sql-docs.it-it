@@ -1,7 +1,7 @@
 ---
 title: 'Lezione 1: Creare un progetto e un pacchetto di base con SSIS | Microsoft Docs'
 ms.custom: ''
-ms.date: 03/03/2017
+ms.date: 01/03/2019
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
@@ -11,31 +11,41 @@ ms.assetid: 84d0b877-603f-4f8e-bb6b-671558ade5c2
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: a4431e593a74c7f6a656f78cd70abfd19c813bdd
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: 56c6d8a971026f6efac7d7e76c9ab1efd13b95d1
+ms.sourcegitcommit: 1c01af5b02fe185fd60718cc289829426dc86eaa
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51642078"
+ms.lasthandoff: 01/10/2019
+ms.locfileid: "54185017"
 ---
-# <a name="lesson-1-create-a-project-and-basic-package-with-ssis"></a>Lezione 1: Creare un progetto e un pacchetto di base
+# <a name="lesson-1-create-a-project-and-basic-package-with-ssis"></a>Lezione 1: Creare un progetto e un pacchetto di base con SSIS
 
-In questa lezione verrà creato un pacchetto ETL semplice che estrae i dati da un'unica origine file flat, trasforma i dati usando due componenti di trasformazione Ricerca e scrive tali dati in una copia della tabella dei fatti **FactCurrencyRate** di **AdventureWorksDW2012**. In questa lezione si imparerà a creare nuovi pacchetti, aggiungere e configurare connessioni origine e destinazione dati e usare nuovi componenti flusso di controllo e flusso di dati.  
+In questa lezione viene creato un pacchetto ETL semplice che estrae i dati da un'unica origine file flat, li trasformai usando due trasformazioni Ricerca e scrive i dati trasformati in una copia della tabella dei fatti **FactCurrencyRate** del database di esempio **AdventureWorksDW2012**. In questa lezione si apprenderà come creare nuovi pacchetti, aggiungere e configurare connessioni origine e destinazione dati e usare nuovi componenti flusso di controllo e flusso di dati.  
   
-> [!IMPORTANT]  
-> Per eseguire questa esercitazione, è necessario il database di esempio **AdventureWorksDW2012** . Per altre informazioni sull'installazione e la distribuzione di **AdventureWorksDW2012**, vedere gli [esempi di Reporting Services su CodePlex](https://go.microsoft.com/fwlink/p/?LinkID=526910).  
+Prima di creare un pacchetto è necessario conoscere bene la formattazione usata nei dati di origine e nella destinazione. Sarà quindi possibile definire le trasformazioni necessarie per eseguire il mapping tra i dati di origine e la destinazione.  
+
+## <a name="prerequisites"></a>Prerequisites
+
+Questa esercitazione si basa su Microsoft SQL Server Data Tools, un set di pacchetti di esempio e un database di esempio.
+
+* Per installare SQL Server Data Tools, vedere [Scaricare SQL Server Data Tools](../ssdt/download-sql-server-data-tools-ssdt.md).  
   
-## <a name="understanding-the-package-requirements"></a>Informazioni sui requisiti del pacchetto  
-Per questa esercitazione è richiesto Microsoft SQL Server Data Tools.  
+* Per scaricare tutti i pacchetti di lezioni di questa esercitazione:
+
+    1.  Passare alla pagina [Integration Services tutorial files](https://www.microsoft.com/en-us/download/details.aspx?id=56827) (File dell'esercitazione su Integration Services).
+
+    2.  Selezionare il pulsante **DOWNLOAD** (Scarica).
+
+    3.  Selezionare il file **Creating a Simple ETL Package.zip** e quindi selezionare **Next** (Avanti).
+
+    4.  Al termine del download, decomprimere il contenuto in una directory locale.  
+
+* Per installare e distribuire il database di esempio **AdventureWorksDW2012**, vedere [Installare e configurare il database di esempio AdventureWorks - SQL](../samples/adventureworks-install-configure.md).
   
-Per altre informazioni sull'installazione di SQL Server Data Tools, vedere [Scaricare SQL Server Data Tools (SSDT)](https://msdn.microsoft.com/data/hh297027).  
+## <a name="look-at-the-source-data"></a>Esaminare i dati di origine
+In questa esercitazione i dati di origine sono costituiti da dati valutari cronologici all'interno del file flat **SampleCurrencyData.txt**. I dati di origine sono contenuti nelle quattro colonne seguenti: il tasso medio della valuta, un codice valuta, un codice data e il tasso di fine giornata.  
   
-Prima di creare un pacchetto è necessario conoscere bene la formattazione usata nei dati di origine e nella destinazione. Dopo avere acquisito familiarità con questi due formati di dati sarà possibile definire le trasformazioni necessarie per eseguire il mapping tra i dati di origine e la destinazione.  
-  
-### <a name="looking-at-the-source"></a>Esame dell'origine  
-In questa esercitazione vengono usati i dati valutari contenuti nel file flat SampleCurrencyData.txt. I dati di origine sono contenuti nelle quattro colonne seguenti: il tasso medio della valuta, un codice valuta, un codice data e il tasso di fine giornata.  
-  
-Di seguito viene riportato un esempio dei dati di origine contenuti nel file SampleCurrencyData.txt:  
+Ecco un esempio dei dati di origine presenti nel file SampleCurrencyData.txt:  
   
 <pre>1.00070049USD9/3/05 0:001.001201442  
 1.00020004USD9/4/05 0:001  
@@ -48,10 +58,10 @@ Di seguito viene riportato un esempio dei dati di origine contenuti nel file Sam
 1.00020004USD9/11/05 0:001.001101211  
 1.00020004USD9/12/05 0:000.99970009</pre>  
   
-Quando si usano dati di origine di file flat, è importante capire in che modo Gestione connessione file flat interpreta i relativi dati. Se l'origine del file flat è Unicode, tutte le colonne vengono definite nella gestione connessione file flat come [DT_WSTR] con una larghezza predefinita di 50. Se l'origine del file flat è con codifica ANSI, le colonne sono definite come [DT_STR] con una larghezza di 50. Le impostazioni predefinite sono liberamente modificabili per adattare al meglio i tipi di colonna ai dati. Per farlo, è necessario esaminare il tipi di dati della destinazione di scrittura dei dati e scegliere il tipo corretto all'interno di Gestione connessione file flat.  
+Quando si usano dati di origine file flat, è importante capire in che modo Gestione connessione file flat interpreta i dati dei file di questo tipo. Se l'origine del file flat è Unicode, tutte le colonne vengono definite nella gestione connessione file flat come [DT_WSTR] con una larghezza predefinita di 50. Se la codifica dell'origine file flat è ANSI, le colonne sono definite come [DT_STR] con una larghezza predefinita pari a 50. Sarà probabilmente necessario cambiare le impostazioni predefinite per adattare meglio i tipi di colonna stringa ai dati. È necessario esaminare il tipo di dati della destinazione e quindi scegliere il tipo corrispondente all'interno di Gestione connessione file flat.  
   
-### <a name="looking-at-the-destination"></a>Esame della destinazione  
-La destinazione finale dei dati di origine è una copia della tabella dei fatti **FactCurrencyRate** in **AdventureWorksDW**. La tabella **FactCurrencyRate** presenta quattro colonne ed ha relazioni con due tabelle delle dimensioni, come illustrato nella tabella seguente.  
+## <a name="look-at-the-destination-data"></a>Esaminare i dati di destinazione
+La destinazione dei dati di origine è una copia della tabella dei fatti **FactCurrencyRate** in **AdventureWorksDW**. La tabella **FactCurrencyRate** presenta quattro colonne ed ha relazioni con due tabelle delle dimensioni, come illustrato nella tabella seguente.  
   
 |Nome colonna|Tipo di dati|Tabella di ricerca|Colonna di ricerca|  
 |---------------|-------------|----------------|-----------------|  
@@ -60,8 +70,8 @@ La destinazione finale dei dati di origine è una copia della tabella dei fatti 
 |DateKey|int (FK)|DimDate|DateKey (PK)|  
 |EndOfDayRate|FLOAT|None|None|  
   
-### <a name="mapping-source-data-to-be-compatible-with-the-destination"></a>Mapping dei dati di origine per la compatibilità con la destinazione  
-L'analisi dei formati dei dati di origine e di destinazione indica che per i valori **CurrencyKey** e **DateKey** saranno necessarie le ricerche. Tramite le trasformazioni mediante le quali verranno svolte queste ricerche si otterranno i valori **CurrencyKey** e **DateKey** usando le chiavi alternative ottenute dalle tabelle delle dimensioni **DimCurrency** e **DimDate** .  
+## <a name="map-the-source-data-to-the-destination"></a>Eseguire il mapping dei dati di origine alla destinazione  
+L'analisi dei formati dei dati di origine e di destinazione indica che per i valori **CurrencyKey** e **DateKey** sono necessarie ricerche. Le trasformazioni che eseguono queste ricerche ottengono tali valori tramite le chiavi alternative derivate dalle tabelle delle dimensioni **DimCurrency** e **DimDate**.  
   
 |Colonna file flat|Nome tabella|Nome colonna|Tipo di dati|  
 |--------------------|--------------|---------------|-------------|  
@@ -73,24 +83,24 @@ L'analisi dei formati dei dati di origine e di destinazione indica che per i val
 ## <a name="lesson-tasks"></a>Argomenti della lezione  
 In questa lezione sono incluse le attività seguenti:  
   
--   [Passaggio 1: Creazione di un nuovo progetto di Integration Services](../integration-services/lesson-1-1-creating-a-new-integration-services-project.md)  
+-   [Passaggio 1: Creare un nuovo progetto di Integration Services](../integration-services/lesson-1-1-creating-a-new-integration-services-project.md)  
   
--   [Passaggio 2: Aggiunta e configurazione di una gestione connessione file flat](../integration-services/lesson-1-2-adding-and-configuring-a-flat-file-connection-manager.md)  
+-   [Passaggio 2: Aggiungere e configurare una gestione connessione file flat](../integration-services/lesson-1-2-adding-and-configuring-a-flat-file-connection-manager.md)  
   
--   [Passaggio 3: Aggiunta e configurazione di una gestione connessione OLE DB](../integration-services/lesson-1-3-adding-and-configuring-an-ole-db-connection-manager.md)  
+-   [Passaggio 3: Aggiungere e configurare una gestione connessione OLE DB](../integration-services/lesson-1-3-adding-and-configuring-an-ole-db-connection-manager.md)  
   
--   [Passaggio 4: Aggiunta di un'attività Flusso di dati al pacchetto](../integration-services/lesson-1-4-adding-a-data-flow-task-to-the-package.md)  
+-   [Passaggio 4: Aggiungere un'attività Flusso di dati al pacchetto](../integration-services/lesson-1-4-adding-a-data-flow-task-to-the-package.md)  
   
--   [Passaggio 5: Aggiunta e configurazione dell'origine file flat](../integration-services/lesson-1-5-adding-and-configuring-the-flat-file-source.md)  
+-   [Passaggio 5: Aggiungere e configurare l'origine file flat](../integration-services/lesson-1-5-adding-and-configuring-the-flat-file-source.md)  
   
--   [Passaggio 6: Aggiunta e configurazione delle trasformazioni Ricerca](../integration-services/lesson-1-6-adding-and-configuring-the-lookup-transformations.md)  
+-   [Passaggio 6: Aggiungere e configurare le trasformazioni Ricerca](../integration-services/lesson-1-6-adding-and-configuring-the-lookup-transformations.md)  
   
--   [Passaggio 7: Aggiunta e configurazione della destinazione OLE DB](../integration-services/lesson-1-7-adding-and-configuring-the-ole-db-destination.md)  
+-   [Passaggio 7: Aggiungere e configurare la destinazione OLE DB](../integration-services/lesson-1-7-adding-and-configuring-the-ole-db-destination.md)  
   
--   [Passaggio 8: Semplificazione della comprensione del pacchetto della lezione 1](../integration-services/lesson-1-8-making-the-lesson-1-package-easier-to-understand.md)  
+-   [Passaggio 8: Annotare e formattare il pacchetto della lezione 1](../integration-services/lesson-1-8-making-the-lesson-1-package-easier-to-understand.md)  
   
--   [Passaggio 9: Test del pacchetto creato nella lezione 1 dell'esercitazione](../integration-services/lesson-1-9-testing-the-lesson-1-tutorial-package.md)  
+-   [Passaggio 9: Testare il pacchetto della lezione 1](../integration-services/lesson-1-9-testing-the-lesson-1-tutorial-package.md)  
   
 ## <a name="start-the-lesson"></a>Inizio della lezione  
-[Passaggio 1: Creazione di un nuovo progetto di Integration Services](../integration-services/lesson-1-1-creating-a-new-integration-services-project.md)  
+[Passaggio 1: Creare un nuovo progetto di Integration Services](../integration-services/lesson-1-1-creating-a-new-integration-services-project.md)  
   

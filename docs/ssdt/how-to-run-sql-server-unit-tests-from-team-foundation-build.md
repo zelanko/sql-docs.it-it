@@ -11,19 +11,19 @@ ms.assetid: 24f5b85d-d6f9-415f-b09f-933b78dc0b67
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 1857f503abe300127d92c26ba5591407b863ebc0
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 8faabc4655cd3aff4d6f15790a4f0e03dd60b8e8
+ms.sourcegitcommit: 170c275ece5969ff0c8c413987c4f2062459db21
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52527924"
+ms.lasthandoff: 01/11/2019
+ms.locfileid: "54226538"
 ---
 # <a name="how-to-run-sql-server-unit-tests-from-team-foundation-build"></a>Procedura: Eseguire unit test di SQL Server da Team Foundation Build
 È possibile usare Team Foundation Build per eseguire gli unit test di SQL Server come parte di un test di verifica della compilazione (BVT). È possibile configurare gli unit test per distribuire il database, generare dati di test e quindi eseguire i test selezionati. Se non si ha familiarità con Team Foundation Build, è consigliabile esaminare le informazioni riportate di seguito prima di applicare le procedure descritte in questo argomento:  
   
 -   [Creazione e definizione di unit test di SQL Server](../ssdt/creating-and-defining-sql-server-unit-tests.md)  
   
--   [Procedura: configurare ed eseguire test pianificati dopo la compilazione dell'applicazione](https://msdn.microsoft.com/library/ms182465(VS.100).aspx)  
+-   [Procedura: Configurare ed eseguire test pianificati dopo la compilazione dell'applicazione](https://msdn.microsoft.com/library/ms182465(VS.100).aspx)  
   
 -   [Creare una definizione di compilazione di base](https://msdn.microsoft.com/library/ms181716(VS.100).aspx)  
   
@@ -262,7 +262,7 @@ In questa procedura vengono archiviati tutti i file della soluzione. In questi f
   
 9. Fare clic su **OK**.  
   
-10. In **Test automatizzati** nel gruppo **Base** specificare i test da eseguire. Per impostazione predefinita, verranno eseguiti i test contenuti nei file denominati *test\*.dll della soluzione.  
+10. In **Test automatizzati** nel gruppo **Base** specificare i test da eseguire. Per impostazione predefinita verranno eseguiti i test contenuti nei file denominati \*test\*.dll della soluzione.  
   
 11. Nel menu **File** scegliere **Salva** *NomeProgetto*.  
   

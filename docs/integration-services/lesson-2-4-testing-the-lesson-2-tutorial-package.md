@@ -1,7 +1,7 @@
 ---
-title: "Passaggio 4: Test del pacchetto creato nella lezione 2 dell'esercitazione | Microsoft Docs"
+title: "Passaggio 4: Testare il pacchetto creato nella lezione 2 dell'esercitazione | Microsoft Docs"
 ms.custom: ''
-ms.date: 03/01/2017
+ms.date: 01/03/2019
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
@@ -11,23 +11,22 @@ ms.assetid: 0e8c0a25-8f79-41df-8ed2-f82a74b129cd
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 5f612768d1e4cd6bff6be8204b38c0a99e1eb285
-ms.sourcegitcommit: 7e828cd92749899f4e1e45ef858ceb9a88ba4b6a
+ms.openlocfilehash: 2c17b7679a10d9273578c74dfa452b120ae2d87b
+ms.sourcegitcommit: dd794633466b1da8ead9889f5e633bdf4b3389cd
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51629514"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54143201"
 ---
-# <a name="lesson-2-4---testing-the-lesson-2-tutorial-package"></a>Lezione 2-4 - Test del pacchetto creato nella lezione 2 dell'esercitazione
-Dopo aver configurato il contenitore Ciclo Foreach e la gestione connessione file flat, il pacchetto creato nella lezione 2 consente di eseguire un'iterazione dell'insieme di 14 file flat contenuti nella cartella Sample Data. Ogni volta che viene trovato un nome di file corrispondente ai criteri specificati, il contenitore Ciclo Foreach popola la variabile definita dall'utente con il nome del file. Tale variabile aggiorna di conseguenza la proprietà ConnectionString della gestione connessione file flat e viene stabilita una connessione al nuovo file flat. Il contenitore Ciclo Foreach quindi esegue l'attività del flusso di dati non modificati sui dati del nuovo file flat prima di connettersi al file successivo contenuto nella cartella.  
-  
-Utilizzare la procedura seguente per verificare la funzionalità relativa ai cicli aggiunta al pacchetto.  
+# <a name="lesson-2-4-test-the-lesson-2-tutorial-package"></a>Lezione 2-4: Testare il pacchetto creato nella lezione 2 dell'esercitazione
+
+Dopo aver configurato il contenitore Ciclo Foreach e la gestione connessione file flat, il pacchetto creato nella lezione 2 consente di eseguire un'iterazione dei 14 file flat contenuti nella cartella Dati di esempio. Ogni volta che un nome di file corrisponde ai criteri specificati, il contenitore Ciclo Foreach popola la variabile definita dall'utente con il nome del file. Tale variabile aggiorna di conseguenza la proprietà ConnectionString della gestione connessione file flat, che stabilisce una connessione al nuovo file flat. Il contenitore Ciclo Foreach esegue quindi l'attività del flusso di dati non modificati sui dati del nuovo file flat.  
   
 > [!NOTE]  
-> Se si esegue il pacchetto della lezione 1, sarà necessario eliminare i record da dbo.NewFactCurrencyRate in AdventureWorksDW2012 prima di eseguire il pacchetto di questa lezione. In caso contrario, il pacchetto non verrà eseguito correttamente e verranno generati errori indicanti una violazione del vincolo di chiave primaria. Verranno restituiti gli stessi errori se si esegue il pacchetto selezionando Debug/Avvia debug (o premendo F5) perché verranno eseguite entrambe le lezioni 1 e 2. Tramite la lezione 2 si tenterà di inserire record già inseriti nella lezione 1.  
+> Se si esegue il pacchetto della lezione 1, è necessario eliminare i record dalla tabella dbo.NewFactCurrencyRate nel database AdventureWorksDW2012 prima di eseguire il pacchetto da questa lezione. La lezione 2 tenta di inserire record già inseriti nella lezione 1, provocando un errore.  
   
-## <a name="checking-the-package-layout"></a>Verifica del layout del pacchetto  
-Prima di testare il pacchetto, è consigliabile verificare che il flusso di controllo e il flusso di dati nel pacchetto della lezione 2 contengano gli oggetti visualizzati nei diagrammi seguenti. Il flusso di dati deve essere identico a quello nella lezione 1.  
+## <a name="check-the-package-layout"></a>Verificare il layout del pacchetto  
+Prima di testare il pacchetto, verificare che il flusso di controllo e il flusso di dati nel pacchetto della lezione 2 contengano gli oggetti visualizzati nelle figure seguenti. Il flusso di dati della lezione 2 è lo stesso della lezione 1.  
   
 **Flusso di controllo**  
   
@@ -37,19 +36,19 @@ Prima di testare il pacchetto, è consigliabile verificare che il flusso di cont
   
 ![Flusso di dati nel pacchetto](../integration-services/media/task9lesson1data.gif "Flusso di dati nel pacchetto")  
   
-### <a name="to-test-the-lesson-2-tutorial-package"></a>Per testare il pacchetto creato nella lezione 2 dell'esercitazione  
+## <a name="test-the-lesson-2-tutorial-package"></a>Testare il pacchetto creato nella lezione 2 dell'esercitazione  
   
-1.  In **Esplora soluzioni**fare clic con il pulsante destro del mouse su **Lesson 2.dtsx** e scegliere **Esegui pacchetto**.  
+1.  In **Esplora soluzioni** fare clic con il pulsante destro del mouse su **Lesson 2.dtsx** e selezionare **Esegui pacchetto**.  
   
-    Il pacchetto verrà eseguito. È possibile verificare lo stato di ogni ciclo nella finestra Output o facendo clic sulla scheda **Stato** . Ad esempio, viene evidenziato che sono state aggiunte 1097 righe alla tabella di destinazione dal file Currency_VEB.txt.  
+    Il pacchetto viene eseguito. È possibile verificare lo stato di ogni ciclo nella finestra **Output** o facendo clic sulla scheda **Stato**. Ad esempio, viene evidenziato che sono state aggiunte 1097 righe alla tabella di destinazione dal file Currency_VEB.txt.  
   
-2.  Al termine dell'esecuzione del pacchetto, scegliere **Arresta debug** dal menu **Debug**.  
+2.  Al termine dell'esecuzione del pacchetto, selezionare **Arresta debug** dal menu **Debug**.  
   
-## <a name="next-lesson"></a>Lezione successiva  
-[Lezione 5: Aggiungere configurazioni del pacchetto SSIS per il modello di distribuzione del pacchetto](../integration-services/lesson-5-add-ssis-package-configurations-for-the-package-deployment-model.md)  
+## <a name="go-to-next-lesson"></a>Esecuzione del passaggio successivo  
+[Lezione 3: Aggiungere la registrazione con SSIS](../integration-services/lesson-3-add-logging-with-ssis.md)  
   
 ## <a name="see-also"></a>Vedere anche  
-[Esecuzione di progetti e pacchetti](~/integration-services/packages/deploy-integration-services-ssis-projects-and-packages.md)  
+[Esecuzione di progetti e pacchetti](../integration-services/packages/deploy-integration-services-ssis-projects-and-packages.md)  
   
   
   
