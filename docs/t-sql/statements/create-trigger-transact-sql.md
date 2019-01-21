@@ -29,18 +29,18 @@ ms.assetid: edeced03-decd-44c3-8c74-2c02f801d3e7
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 2ee63ff261df82926fd67f5014c09f894160d14e
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: c4efa300619192caf4e07bf22de80d061d653477
+ms.sourcegitcommit: 96032813f6bf1cba680b5e46d82ae1f0f2da3d11
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53213740"
+ms.lasthandoff: 01/15/2019
+ms.locfileid: "54299258"
 ---
 # <a name="create-trigger-transact-sql"></a>CREATE TRIGGER (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
 > [!div class="nextstepaction"]
-> [Contribuisci a migliorare la documentazione di SQL Server](https://80s3ignv.optimalworkshop.com/optimalsort/36yyw5kq-0)
+> [Condividi il feedback sul sommario della documentazione SQL](https://aka.ms/sqldocsurvey)
 
 Crea un trigger DML, DDL o LOGON. Un trigger è una stored procedure di tipo speciale che viene eseguita automaticamente quando si verifica un evento nel server di database. I trigger DML vengono eseguiti quando un utente tenta di modificare dati tramite un evento DML (Data Manipulation Language). Gli eventi DML sono istruzioni INSERT, UPDATE o DELETE eseguite su una tabella o una vista. Questi trigger vengono attivati quando viene generato un evento valido, indipendentemente dal fatto che esistano o meno righe di tabella interessate. Per altre informazioni, vedere [DML Triggers](../../relational-databases/triggers/dml-triggers.md).  
   

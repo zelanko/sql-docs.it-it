@@ -25,12 +25,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: cd062ba7ea48de6cce202b964dea9d80754b75f9
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: 757d06003da83e2506e2912f0f5e7cd6a03a3e52
+ms.sourcegitcommit: e2fa721b6f46c18f1825dd1b0d56c0a6da1b2be1
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53215590"
+ms.lasthandoff: 01/11/2019
+ms.locfileid: "54211112"
 ---
 # <a name="alter-login-transact-sql"></a>ALTER LOGIN (Transact-SQL)
 
@@ -209,22 +209,29 @@ ALTER LOGIN Mary5 ENABLE;
 ```sql  
 ALTER LOGIN Mary5 WITH PASSWORD = '<enterStrongPasswordHere>';  
 ```  
+
+### <a name="c-changing-the-password-of-a-login-when-logged-in-as-the-login"></a>C. Modifica della password di un account di accesso quando si è eseguito l'accesso con tale account 
+ Se si tenta di modificare la password dell'account di accesso con cui si è attualmente connessi e non è disponibile l'autorizzazione `ALTER ANY LOGIN`, è necessario specificare l'opzione `OLD_PASSWORD`.    
   
-### <a name="c-changing-the-name-of-a-login"></a>C. Modifica del nome di un account di accesso  
+```sql  
+ALTER LOGIN Mary5 WITH PASSWORD = '<enterStrongPasswordHere>' OLD_PASSWORD = '<oldWeakPasswordHere>';  
+```  
+
+### <a name="d-changing-the-name-of-a-login"></a>D. Modifica del nome di un account di accesso  
  Nell'esempio seguente viene modificato il nome dell'account di accesso `Mary5` in `John2`.  
   
 ```sql  
 ALTER LOGIN Mary5 WITH NAME = John2;  
 ```  
   
-### <a name="d-mapping-a-login-to-a-credential"></a>D. Mapping tra un account di accesso e una credenziale  
+### <a name="e-mapping-a-login-to-a-credential"></a>E. Mapping tra un account di accesso e una credenziale  
  Nell'esempio seguente sull'account di accesso `John2` viene eseguito il mapping alla credenziale `Custodian04`.  
   
 ```sql  
 ALTER LOGIN John2 WITH CREDENTIAL = Custodian04;  
 ```  
   
-### <a name="e-mapping-a-login-to-an-extensible-key-management-credential"></a>E. Mapping di un account di accesso a una credenziale EKM  
+### <a name="f-mapping-a-login-to-an-extensible-key-management-credential"></a>F. Mapping di un account di accesso a una credenziale EKM  
  Nell'esempio seguente viene eseguito il mapping dell'account di accesso `Mary5` alla credenziale EKM `EKMProvider1`.  
   
   

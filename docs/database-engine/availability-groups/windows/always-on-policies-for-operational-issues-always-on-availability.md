@@ -14,12 +14,12 @@ ms.assetid: afa5289c-641a-4c03-8749-44862384ec5f
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 6d9d780473346a446811595d850aafd4da9d5930
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: 07cc3b6b11d4f40792ede3c0d2a9668c5ada0db6
+ms.sourcegitcommit: 170c275ece5969ff0c8c413987c4f2062459db21
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53214170"
+ms.lasthandoff: 01/11/2019
+ms.locfileid: "54226558"
 ---
 # <a name="policy-based-management-for-operational-issues-with-always-on-availability-groups"></a>Gestione basata su criteri dei problemi operativi con i gruppi di disponibilità Always On
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -49,7 +49,7 @@ ms.locfileid: "53214170"
 ##  <a name="Always OnPBM"></a> Criteri predefiniti e problemi  
  Nella tabella seguente sono riepilogati i criteri predefiniti.  
   
-|Nome criteri|Problema|Categoria**\***|Facet|  
+|Nome criteri|Problema|Categoria **&#42;**|Facet|  
 |-----------------|-----------|--------------------|-----------|  
 |Stato del cluster WSFC|[Il servizio cluster WSFC è offline](../../../database-engine/availability-groups/windows/wsfc-cluster-service-is-offline.md).|Critico|Istanza di SQL Server|  
 |Stato online del gruppo di disponibilità|[Gruppo di disponibilità offline](../../../database-engine/availability-groups/windows/availability-group-is-offline.md).|Critico|gruppo di disponibilità|  
@@ -67,7 +67,7 @@ ms.locfileid: "53214170"
 |Stato di sincronizzazione dei dati del database di disponibilità|[Lo stato della sincronizzazione dei dati del database di disponibilità non è integro](../../../database-engine/availability-groups/windows/data-synchronization-state-of-availability-database-is-not-healthy.md).|Avviso|Database di disponibilità|  
   
 > [!IMPORTANT]
->  **\*** Per i criteri Always On, i nomi delle categorie vengono usati come ID. La modifica del nome di una categoria Always On causa l'interruzione della funzionalità di valutazione dell'integrità. Evitare quindi di modificare i nomi di categorie Always On.  
+>  **&#42;** Per i criteri Always On, i nomi delle categorie vengono usati come ID. La modifica del nome di una categoria Always On causa l'interruzione della funzionalità di valutazione dell'integrità. Evitare quindi di modificare i nomi di categorie Always On.  
   
 ##  <a name="Dashboard"></a> Dashboard Always On  
  Il dashboard Always On fornisce una vista immediata dell'integrità di un gruppo di disponibilità. Nel dashboard Always On sono incluse le nuove funzionalità seguenti:  

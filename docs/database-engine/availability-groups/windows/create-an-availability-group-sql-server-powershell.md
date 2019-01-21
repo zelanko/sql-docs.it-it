@@ -13,12 +13,12 @@ ms.assetid: bc69a7df-20fa-41e1-9301-11317c5270d2
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 58b0010f2440a95b698bb37d99e8e3bc11cce218
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: 57330040f7fc5ba1fdd48278b69a46bcf7eaee46
+ms.sourcegitcommit: 170c275ece5969ff0c8c413987c4f2062459db21
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53209980"
+ms.lasthandoff: 01/11/2019
+ms.locfileid: "54226548"
 ---
 # <a name="create-an-always-on-availability-group-using-powershell"></a>Creare un gruppo di disponibilità Always On con PowerShell
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -63,7 +63,7 @@ ms.locfileid: "53209980"
 ###  <a name="SummaryPSStatements"></a> Riepilogo delle attività e cmdlet di PowerShell corrispondenti  
  Nella tabella seguente sono elencate le attività di base necessarie per la configurazione di un gruppo di disponibilità e sono indicate le attività supportate dai cmdlet di PowerShell. È necessario eseguire le attività [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] nell'ordine con cui sono elencate nella tabella.  
   
-|Attività|Cmdlet di PowerShell (se disponibile) o istruzione Transact-SQL|Posizione in cui eseguire l'attività**\***|  
+|Attività|Cmdlet di PowerShell (se disponibile) o istruzione Transact-SQL|Posizione in cui eseguire l'attività **&#42;**|  
 |----------|--------------------------------------------------------------------|---------------------------------|  
 |Creare un endpoint del mirroring del database (una volta per ogni istanza di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] )|**New-SqlHadrEndPoint**|Eseguire in ogni istanza del server in cui non è presente l'endpoint del mirroring del database.<br /><br /> Nota: Per modificare un endpoint del mirroring del database esistente, usare **Set-SqlHadrEndpoint**.|  
 |Creare un gruppo di disponibilità|Usare innanzitutto il cmdlet **New-SqlAvailabilityReplica** con il parametro **-AsTemplate** per creare un oggetto della replica di disponibilità in memoria per ognuna delle due repliche di disponibilità da includere nel gruppo di disponibilità.<br /><br /> Creare quindi il gruppo di disponibilità tramite il cmdlet **New-SqlAvailabilityGroup** e facendo riferimento agli oggetti replica di disponibilità.|Eseguire nell'istanza del server che dovrà ospitare la replica primaria iniziale.|  

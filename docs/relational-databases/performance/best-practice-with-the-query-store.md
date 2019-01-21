@@ -14,12 +14,12 @@ author: julieMSFT
 ms.author: jrasnick
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 2203e8fe68861fd0e69dae352fef8c015e76859f
-ms.sourcegitcommit: 40c3b86793d91531a919f598dd312f7e572171ec
+ms.openlocfilehash: 8b46686dfb440e9d0d9fa68fcaf23d51eea86c97
+ms.sourcegitcommit: dd794633466b1da8ead9889f5e633bdf4b3389cd
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53328971"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54143471"
 ---
 # <a name="best-practice-with-the-query-store"></a>Procedure consigliate per l'archivio query
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
@@ -329,17 +329,17 @@ WHERE is_forced_plan = 1;
   
 ##  <a name="Renaming"></a> Evitare di rinominare i database se sono presenti query con piani forzati  
 
- I piani di esecuzione fanno riferimento agli oggetti con nomi in tre parti `database.schema.object`.   
+I piani di esecuzione fanno riferimento agli oggetti con nomi in tre parti `database.schema.object`.   
 
 Se si rinomina un database, l'uso forzato del piano avrà esito negativo e questo provoca la ricompilazione in tutte le esecuzioni di query successive.  
 
-##  <a name="Recovery"></a> Usare i flag di traccia nei server critici per migliorare il ripristino di emergenza
+##  <a name="Recovery"></a> Usare i flag di traccia nei server cruciali
  
-I flag di traccia globali 7745 e 7752 consentono di migliorare le prestazioni di Query Store in scenari di disponibilità elevata e di ripristino di emergenza. Per altre informazioni, vedere [Flag di traccia](../..//t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md)
+I flag di traccia globali 7745 e 7752 possono essere usati per migliorare la disponibilità dei database tramite Query Store. Per altre informazioni, vedere [Flag di traccia](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md).
   
-Il flag di traccia 7745 previene il comportamento predefinito quando Query Store scrive i dati sul disco prima dell'arresto di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].
+-  Il flag di traccia 7745 previene il comportamento predefinito quando Query Store scrive i dati sul disco prima dell'arresto di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Questo significa che i dati di Query Store che sono stati raccolti ma non sono ancora stati salvati su disco andranno persi. 
   
-Il flag di traccia 7752 abilita il caricamento asincrono di Query Store e consente anche a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] di eseguire le query prima che Query Store sia stato caricato completamente. Il comportamento predefinito di Query Store impedisce l'esecuzione di query prima del ripristino di Query Store.
+-  Il flag di traccia 7752 abilita il caricamento asincrono di Query Store. Questo consente di portare online un database ed eseguire query prima del completamento del ripristino di Query Store. Il comportamento predefinito consiste nell'eseguire il caricamento sincrono di Query Store. Il comportamento predefinito impedisce l'esecuzione delle query prima del completamento del ripristino di Query Store, ma evita anche l'esclusione di query nella raccolta di dati.
 
 > [!IMPORTANT]
 > Se si usa Query Store per informazioni dettagliate sui carichi di lavoro Just-In-Time in [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], prevedere l'installazione delle correzioni di scalabilità delle prestazioni in [KB 4340759](https://support.microsoft.com/help/4340759) appena possibile. 

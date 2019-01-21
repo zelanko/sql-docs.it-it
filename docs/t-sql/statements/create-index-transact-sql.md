@@ -55,18 +55,18 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 55f5056f65daa3c9f52809087f4cf6773d708910
-ms.sourcegitcommit: 467b2c708651a3a2be2c45e36d0006a5bbe87b79
+ms.openlocfilehash: 8a77956d457e70566cbebef0e92d952b0b1158d9
+ms.sourcegitcommit: 96032813f6bf1cba680b5e46d82ae1f0f2da3d11
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53980507"
+ms.lasthandoff: 01/15/2019
+ms.locfileid: "54300508"
 ---
 # <a name="create-index-transact-sql"></a>CREATE INDEX (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
 > [!div class="nextstepaction"]
-> [Contribuisci a migliorare la documentazione di SQL Server](https://80s3ignv.optimalworkshop.com/optimalsort/36yyw5kq-0)
+> [Condividi il feedback sul sommario della documentazione SQL](https://aka.ms/sqldocsurvey)
 
 Crea un indice relazionale per una tabella o una vista. Viene detto anche indice rowstore, perché è un indice ad albero b-tree sia cluster che non cluster. È possibile creare un indice rowstore prima che siano presenti dati nella tabella. Usare un indice rowstore per migliorare le prestazioni delle query, in particolare quando le query effettuano le selezioni da colonne specifiche o richiedono valori da organizzare in base a un ordine particolare.  
   
@@ -278,7 +278,7 @@ Crea un indice che specifica l'ordinamento logico di una tabella. Quando si util
   
  Gli indici filtrati non si applicano agli indici XML e full-text. Per gli indici UNIQUE, solo le righe selezionate devono avere valori di indice univoci. Gli indici filtrati non consentono l'opzione IGNORE_DUP_KEY.  
   
-ON *partition_scheme_name* **( *column_name* )**  
+ON _partition_scheme_name_ **( *column_name* )**  
 **Si applica a** : da [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] fino a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] e [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
   
  Specifica lo schema di partizione che definisce i filegroup a cui verrà eseguito il mapping delle partizioni di un indice partizionato. È necessario che lo schema di partizione sia presente nel database e sia stato creato eseguendo [CREATE PARTITION SCHEME](../../t-sql/statements/create-partition-scheme-transact-sql.md) o [ALTER PARTITION SCHEME](../../t-sql/statements/alter-partition-scheme-transact-sql.md). *column_name* specifica la colonna in base alla quale verrà eseguita la partizione di un indice partizionato. La colonna deve corrispondere all'argomento della funzione di partizione usata da *partition_scheme_name* per tipo di dati, lunghezza e precisione. *column_name* non è limitato alle colonne nella definizione dell'indice. È possibile specificare qualsiasi colonna della tabella di base tranne quando si esegue la partizione di un indice UNIQUE. In questo caso il valore *column_name* deve essere scelto tra quelli usati come chiave univoca. Questa restrizione consente a [!INCLUDE[ssDE](../../includes/ssde-md.md)] di verificare l'univocità dei valori di chiave all'interno di una singola partizione.  
@@ -476,7 +476,7 @@ RESUMABLE **=** { ON | **OFF**}
 
  L'operazione sull'indice OFF non è ripristinabile.
 
-MAX_DURATION **=** *time* [**MINUTES**] usato con **RESUMABLE = ON** (richiede **ONLINE = ON**).
+MAX_DURATION **=** _time_ [**MINUTES**] usato con **RESUMABLE = ON** (richiede **ONLINE = ON**).
  
 **Si applica a**: [!INCLUDE[ssSDS](../../includes/sssds-md.md)] e [!INCLUDE[ssNoVersion](../../includes/sssqlv15-md.md)] come funzionalità in anteprima pubblica
 
@@ -696,7 +696,7 @@ INSERT INTO t1 VALUES (1, 0);
   
 -   Le nuove opzioni per gli indici possono essere specificate solo usando WITH (**_option\_name_ = ON | OFF**).  
 -   Non è possibile specificare opzioni utilizzando in una stessa istruzione sia la sintassi compatibile con le versioni precedenti, sia la nuova sintassi. Se ad esempio si specifica WITH (**DROP_EXISTING, ONLINE = ON**), l'istruzione avrà esito negativo.  
--   Quando si crea un indice XML le opzioni devono essere specificate usando WITH (***option_name*= ON | OFF**).  
+-   Quando si crea un indice XML le opzioni devono essere specificate usando WITH (**_option_name_= ON | OFF**).  
   
 ## <a name="dropexisting-clause"></a>Clausola DROP_EXISTING  
  È possibile utilizzare la clausola DROP_EXISTING per ricompilare l'indice, aggiungere o eliminare colonne, modificare opzioni, modificare il tipo di ordinamento delle colonne oppure cambiare lo schema di partizione o il filegroup.  

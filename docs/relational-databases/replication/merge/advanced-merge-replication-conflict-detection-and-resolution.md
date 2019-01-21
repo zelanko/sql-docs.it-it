@@ -20,30 +20,32 @@ ms.assetid: 063d3d9c-ccb5-4fab-9d0c-c675997428b4
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 7cf815386b00ca70ceacbb549b9dbccd50c9a482
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: 88f175d5d3658a61964ab7d7daba1be88438e2cd
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53206350"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54130571"
 ---
 # <a name="advanced-merge-replication---conflict-detection-and-resolution"></a>Replica di tipo merge avanzata - Rilevamento e risoluzione dei conflitti
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   Se un server di pubblicazione e un Sottoscrittore sono connessi e viene eseguita la sincronizzazione, l'agente di merge rileva l'eventuale presenza di conflitti. Se vengono rilevati dei conflitti, l'agente utilizza un sistema di risoluzione dei conflitti, specificato al momento dell'aggiunta di un articolo a una pubblicazione, per determinare quali dati vengono accettati e propagati agli altri siti.  
+
+ La replica di tipo merge prevede diversi metodi per rilevare e risolvere i conflitti. Il metodo predefinito è appropriato alla maggior parte delle applicazioni:  
+  
+-   Se si verifica un conflitto tra un server di pubblicazione e un Sottoscrittore, la modifica nel server di pubblicazione viene confermata e quella nel Sottoscrittore viene ignorata.   
+-   Se si verifica un conflitto tra due Sottoscrittori che utilizzano sottoscrizioni client (tipo predefinito per le sottoscrizioni pull), verrà confermata la modifica del primo Sottoscrittore che eseguirà la sincronizzazione con il server di pubblicazione e la modifica del secondo Sottoscrittore verrà ignorata. Per informazioni sulla scelta delle sottoscrizioni client e server, vedere [Specificare una sottoscrizione di tipo merge e la priorità per la risoluzione dei conflitti &#40;SQL Server Management Studio&#41;](../../../relational-databases/replication/specify-a-merge-subscription-type-and-conflict-resolution-priority.md).   
+-   Se si verifica un conflitto tra due Sottoscrittori che utilizzano sottoscrizioni server (tipo predefinito per le sottoscrizioni push), verrà confermata la modifica del Sottoscrittore con valore di priorità più alto e la modifica del secondo Sottoscrittore verrà ignorata. Se i valori di priorità sono uguali, verrà confermata la modifica del primo Sottoscrittore che eseguirà la sincronizzazione con il server di pubblicazione.  
   
 > [!NOTE]  
 >  Sebbene un Sottoscrittore esegua la sincronizzazione con il server di pubblicazione, i conflitti in genere si verificano tra gli aggiornamenti effettuati in diversi Sottoscrittori anziché tra gli aggiornamenti effettuati in un Sottoscrittore e nel server di pubblicazione.  
   
- La procedura di rilevamento e risoluzione dei conflitti dipende dalle opzioni seguenti, descritte in questo argomento:  
-  
--   Se si specifica il rilevamento a livello di colonna, a livello di riga o a livello di record logico.  
-  
+ La procedura di rilevamento e risoluzione dei conflitti dipende dalle opzioni seguenti, descritte in questo argomento:    
+-   Se si specifica il rilevamento a livello di colonna, a livello di riga o a livello di record logico.    
 -   Se si specifica il meccanismo predefinito di risoluzione basato sulla priorità o un sistema di risoluzione dei conflitti dell'articolo. Il sistema di risoluzione dei conflitti dell'articolo può essere costituito da:  
   
-    -   Un *gestore della logica di business* creato con codice gestito.  
-  
-    -   Un *sistema di risoluzione personalizzato*basato sul modello COM.  
-  
+    -   Un *gestore della logica di business* creato con codice gestito.   
+    -   Un *sistema di risoluzione personalizzato*basato sul modello COM.    
     -   Un sistema di risoluzione basato sul modello COM implementato da [!INCLUDE[msCoName](../../../includes/msconame-md.md)].  
   
      Se si utilizza il meccanismo di risoluzione predefinito, la procedura è determinata inoltre dal tipo di sottoscrizione selezionato: client o server.  
@@ -51,18 +53,32 @@ ms.locfileid: "53206350"
 ## <a name="conflict-detection"></a>Rilevamento dei conflitti  
  Una modifica dei dati viene considerata o meno un conflitto in base al tipo di rilevamento dei conflitti impostato per un articolo:  
   
--   Se si seleziona il rilevamento dei conflitti a livello di colonna, le modifiche vengono considerate in conflitto se vengono apportate alla stessa colonna e alla stessa riga in più di un nodo di replica.  
-  
--   Se si seleziona il rilevamento a livello di riga, le modifiche vengono considerate in conflitto se vengono apportate a qualsiasi colonna nella stessa riga in più di un nodo di replica (le colonne interessate nelle righe corrispondenti non devono necessariamente essere le stesse).  
-  
+-   Se si seleziona il rilevamento dei conflitti a livello di colonna, le modifiche vengono considerate in conflitto se vengono apportate alla stessa colonna e alla stessa riga in più di un nodo di replica.    
+-   Se si seleziona il rilevamento a livello di riga, le modifiche vengono considerate in conflitto se vengono apportate a qualsiasi colonna nella stessa riga in più di un nodo di replica (le colonne interessate nelle righe corrispondenti non devono necessariamente essere le stesse).    
 -   Se si seleziona il rilevamento a livello di record logico, le modifiche vengono considerate in conflitto se vengono apportate a qualsiasi riga nello stesso record logico in più di un nodo di replica (le colonne interessate nelle righe corrispondenti non devono necessariamente essere le stesse).  
   
  Per altre informazioni, vedere [Rilevamento e risoluzione dei conflitti nei record logici](../../../relational-databases/replication/merge/advanced-merge-replication-conflict-resolving-in-logical-record.md).  
   
- Per specificare il livello di rilevamento e risoluzione dei conflitti di un articolo, vedere [specifica del livello di risoluzione e rilevamento dei conflitti per articoli di Merge](../../../relational-databases/replication/publish/specify-the-conflict-tracking-and-resolution-level-for-merge-articles.md).  
+ Per specificare il rilevamento dei conflitti e il livello di risoluzione per un articolo, vedere [Specify merge replication properties](../../../relational-databases/replication/merge/specify-merge-replication-properties.md) (Specificare le proprietà per la replica di tipo merge).  
   
 ## <a name="conflict-resolution"></a>Risoluzione dei conflitti  
  Dopo il rilevamento di un conflitto, l'agente di merge avvia il sistema di risoluzione dei conflitti selezionato e lo utilizza per determinare il valore in conflitto che prevale. La riga che prevale viene applicata al server di pubblicazione e al Sottoscrittore, mentre i dati della riga non confermata vengono inseriti in una tabella dei conflitti. I conflitti vengono risolti immediatamente dopo l'esecuzione del sistema di risoluzione, a meno che non si scelga di risolvere i conflitti in modo interattivo.  
+
+Risolvere i conflitti della replica di tipo merge [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  Se un server di pubblicazione e un Sottoscrittore sono connessi e viene eseguita la sincronizzazione, l'agente di merge rileva l'eventuale presenza di conflitti. Se si verificano conflitti, l'agente di merge utilizza un sistema di risoluzione dei conflitti per determinare quali dati verranno accettati e propagati agli altri siti.  
+  
+> [!NOTE]  
+>  Sebbene un Sottoscrittore esegua la sincronizzazione con il server di pubblicazione, i conflitti in genere si verificano tra gli aggiornamenti effettuati in diversi Sottoscrittori, anziché tra gli aggiornamenti effettuati in un Sottoscrittore e nel server di pubblicazione.  
+  
+ La replica di tipo merge prevede diversi metodi per rilevare e risolvere i conflitti. Il metodo predefinito è appropriato alla maggior parte delle applicazioni:  
+  
+-   Se si verifica un conflitto tra un server di pubblicazione e un Sottoscrittore, la modifica nel server di pubblicazione viene confermata e quella nel Sottoscrittore viene ignorata.  
+  
+-   Se si verifica un conflitto tra due Sottoscrittori che utilizzano sottoscrizioni client (tipo predefinito per le sottoscrizioni pull), verrà confermata la modifica del primo Sottoscrittore che eseguirà la sincronizzazione con il server di pubblicazione e la modifica del secondo Sottoscrittore verrà ignorata. Per informazioni sulla scelta delle sottoscrizioni client e server, vedere [Specificare una sottoscrizione di tipo merge e la priorità per la risoluzione dei conflitti &#40;SQL Server Management Studio&#41;](../../../relational-databases/replication/specify-a-merge-subscription-type-and-conflict-resolution-priority.md).  
+  
+-   Se si verifica un conflitto tra due Sottoscrittori che utilizzano sottoscrizioni server (tipo predefinito per le sottoscrizioni push), verrà confermata la modifica del Sottoscrittore con valore di priorità più alto e la modifica del secondo Sottoscrittore verrà ignorata. Se i valori di priorità sono uguali, verrà confermata la modifica del primo Sottoscrittore che eseguirà la sincronizzazione con il server di pubblicazione.  
+  
+ Per ulteriori informazioni sul rilevamento e la risoluzione dei conflitti per la replica di tipo merge, vedere [Advanced Merge Replication Conflict Detection and Resolution](../../../relational-databases/replication/merge/advanced-merge-replication-conflict-detection-and-resolution.md).  
   
 ### <a name="resolver-types"></a>Tipi di sistemi di risoluzione  
  Nella replica di tipo merge la risoluzione dei conflitti viene eseguita a livello di articolo. Per le pubblicazioni composte da numerosi articoli è possibile utilizzare diversi sistemi di risoluzione per articoli diversi oppure lo stesso sistema di risoluzione per un solo articolo, più articoli o per tutti gli articoli di una pubblicazione.  

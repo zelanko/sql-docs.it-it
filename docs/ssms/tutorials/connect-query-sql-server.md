@@ -11,17 +11,17 @@ ms.reviewer: sstein
 manager: craigg
 ms.prod: sql
 ms.technology: ssms
-ms.openlocfilehash: 274e91c482ada16847cb2b2e704ac9d953567d7d
-ms.sourcegitcommit: 40c3b86793d91531a919f598dd312f7e572171ec
+ms.openlocfilehash: 99119431d65cc8780cba24fbd891a1688844a769
+ms.sourcegitcommit: 96032813f6bf1cba680b5e46d82ae1f0f2da3d11
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53328591"
+ms.lasthandoff: 01/15/2019
+ms.locfileid: "54300308"
 ---
 # <a name="tutorial-connect-to-and-query-a-sql-server-instance-by-using-sql-server-management-studio"></a>Esercitazione: Connettersi a un'istanza di SQL Server ed eseguire query con SQL Server Management Studio
 
 > [!div class="nextstepaction"]
-> [Contribuisci a migliorare la documentazione di SQL Server](https://80s3ignv.optimalworkshop.com/optimalsort/36yyw5kq-0)
+> [Condividi il feedback sul sommario della documentazione SQL](https://aka.ms/sqldocsurvey)
 
 Questa esercitazione illustra come usare SQL Server Management Studio (SSMS) per connettersi all'istanza di SQL Server ed eseguire alcuni comandi Transact-SQL (T-SQL) di base. Questo articolo illustra come eseguire le operazioni seguenti:
 

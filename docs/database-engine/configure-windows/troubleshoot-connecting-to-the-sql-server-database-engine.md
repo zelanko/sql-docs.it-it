@@ -14,15 +14,19 @@ ms.assetid: 474c365b-c451-4b07-b636-1653439f4b1f
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 853f3c26f729db2256ad859174eeef16d4698453
-ms.sourcegitcommit: 85fd3e1751de97a16399575397ab72ebd977c8e9
+ms.openlocfilehash: d70a08ac868aa28a38f3e32a9fb32024bc345193
+ms.sourcegitcommit: 96032813f6bf1cba680b5e46d82ae1f0f2da3d11
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/17/2018
-ms.locfileid: "53531076"
+ms.lasthandoff: 01/15/2019
+ms.locfileid: "54300468"
 ---
 # <a name="troubleshoot-connecting-to-the-sql-server-database-engine"></a>Risolvere i problemi di connessione al motore di database di SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+
+
+  > [!div class="nextstepaction"]
+  > [Condividi il feedback sul sommario della documentazione SQL](https://aka.ms/sqldocsurvey)
 
 Di seguito sono elencate tutte le tecniche di risoluzione dei problemi che è possibile usare quando non è possibile connettersi al motore di database di SQL Server. I passaggi non seguono l'ordine dei problemi più frequenti dei quali probabilmente sono già stati tentati i passaggi. I passaggi seguono invece un ordine basato sulla complessità, dai problemi di base ai problemi più complessi. Nei passaggi si presuppone che la connessione a SQL Server venga stabilita da un altro computer usando il protocollo TCP/IP, che è la situazione più comune. I passaggi sono stati scritti per SQL Server 2016 con SQL Server e le applicazioni client che eseguono Windows 10. I passaggi tuttavia si applicano in genere alle altre versioni di SQL Server e ad altri sistemi operativi con leggere differenze.
 

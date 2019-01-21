@@ -16,12 +16,12 @@ ms.assetid: 378d2d63-50b9-420b-bafb-d375543fda17
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 44e11edc9608dc4c10634ea58af1c0140bba666f
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: e20ad7cab67a87dd7bb76be0117ee87752e3e66f
+ms.sourcegitcommit: 170c275ece5969ff0c8c413987c4f2062459db21
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53207440"
+ms.lasthandoff: 01/11/2019
+ms.locfileid: "54226668"
 ---
 # <a name="failover-and-failover-modes-always-on-availability-groups"></a>Failover e modalità di failover (gruppi di disponibilità AlwaysOn)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -84,9 +84,9 @@ ms.locfileid: "53207440"
 |-|-------------------------------|---------------------------------------------------------|------------------------------------------------------------|  
 |Failover automatico|no|no|Sì|  
 |Failover manuale pianificato|no|Sì|Sì|  
-|failover forzato|Sì|Sì|Sì**\***|  
+|failover forzato|Sì|Sì|Sì **&#42;**|  
   
- **\*** Se si esegue un comando di failover forzato su una replica secondaria sincronizzata, la replica secondaria si comporta come con un failover manuale.  
+ **&#42;** Se si esegue un comando di failover forzato su una replica secondaria sincronizzata, la replica secondaria si comporta come per un failover manuale.  
   
  Il periodo di tempo di non disponibilità del database durante un failover dipende dal tipo di failover e da ciò che lo ha causato.  
   
@@ -351,7 +351,7 @@ ms.locfileid: "53207440"
   
 -   [Microsoft SQL Server Always On Solutions Guide for High Availability and Disaster Recovery (Guida alle soluzioni AlwaysOn di Microsoft SQL Server per la disponibilità elevata e il ripristino di emergenza)](https://go.microsoft.com/fwlink/?LinkId=227600)  
   
--   [SQL Server Always On Team Blog (Blog del team SQL Server Always On): blog ufficiale del team di SQL Server Always On](https://blogs.msdn.microsoft.com/sqlalwayson/)  
+-   [SQL Server Always On Team Blog: blog ufficiale del team di SQL Server Always On](https://blogs.msdn.microsoft.com/sqlalwayson/)  
   
 ## <a name="see-also"></a>Vedere anche  
  [Panoramica di gruppi di disponibilità AlwaysOn &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   

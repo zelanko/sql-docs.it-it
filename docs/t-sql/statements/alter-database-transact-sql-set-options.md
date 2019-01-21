@@ -2,7 +2,7 @@
 title: Opzioni di ALTER DATABASE SET (Transact-SQL) | Microsoft Docs
 description: Informazioni su come impostare le opzioni di database, ad esempio l'ottimizzazione automatica, la crittografia, Query Store in un'istanza di SQL Server o in un database SQL di Azure
 ms.custom: ''
-ms.date: 10/02/2018
+ms.date: 1/10/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -30,12 +30,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: =azuresqldb-current||=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 7a06414a9ca09ecfd02438827cbee6645ca381ae
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: 1dee3b66253935a979aa483de87c42dc4bb53e3f
+ms.sourcegitcommit: e2fa721b6f46c18f1825dd1b0d56c0a6da1b2be1
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53215387"
+ms.lasthandoff: 01/11/2019
+ms.locfileid: "54211132"
 ---
 # <a name="alter-database-set-options-transact-sql"></a>Opzioni ALTER DATABASE SET (Transact-SQL) 
 
@@ -704,10 +704,13 @@ ON
 Abilita Query Store.  
   
 OFF  
-Disabilita Query Store. Si tratta del valore predefinito.   
+Disabilita Query Store. Si tratta del valore predefinito.
   
 CLEAR  
-Rimuove il contenuto di Query Store.  
+Rimuove il contenuto di Query Store.
+
+> [!NOTE]  
+> Per Azure SQL Data Warehouse, è necessario eseguire `ALTER DATABASE SET QUERY_STORE` dal database utente. L'esecuzione dell'istruzione da un'altra istanza del data warehouse non è supportata.
   
 OPERATION_MODE  
 Descrive la modalità di funzionamento dell'archivio di query. I valori validi sono READ_ONLY e READ_WRITE. In modalità READ_WRITE l'archivio query raccoglie e mantiene le informazioni di statistiche sull'esecuzione di runtime e piani di query. In modalità READ_ONLY le informazioni possono essere lette dall'archivio query, ma non vengono aggiunte nuove informazioni. Se lo spazio massimo allocato dell'archivio di query viene esaurito, la modalità di funzionamento dell'archivio di query passa a READ_ONLY.  

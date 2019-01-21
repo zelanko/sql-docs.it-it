@@ -1,6 +1,6 @@
 ---
 title: Guida di ottimizzazione e convalida post-migrazione | Microsoft Docs
-ms.date: 5/03/2017
+ms.date: 01/09/2019
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
@@ -13,23 +13,25 @@ ms.assetid: 11f8017e-5bc3-4bab-8060-c16282cfbac1
 author: pelopes
 ms.author: harinid
 manager: craigg
-ms.openlocfilehash: d85de6deffa9e140bc5f9bf489afd60e0dbbc948
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: 7e9e96ee56895c38a8c242d3cd48804884f581d1
+ms.sourcegitcommit: 1f53b6a536ccffd701fc87e658ddac714f6da7a2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53213620"
+ms.lasthandoff: 01/10/2019
+ms.locfileid: "54206367"
 ---
 # <a name="post-migration-validation-and-optimization-guide"></a>Guida di ottimizzazione e convalida post-migrazione
+
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 Il passaggio post-migrazione di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] è molto importante per riconciliare l'accuratezza e la completezza dei dati, nonché per individuare problemi di prestazioni relativi al carico di lavoro.
 
-# <a name="common-performance-scenarios"></a>Scenari comuni relativi alle prestazioni 
+## <a name="common-performance-scenarios"></a>Scenari comuni relativi alle prestazioni
+
 Di seguito sono riportati alcuni scenari comuni relativi alle prestazioni rilevati dopo la migrazione alla piattaforma [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] e viene indicato come risolverli. Sono inclusi gli scenari specifici della migrazione da [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] a [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] (versioni precedenti a versioni più recenti), nonché la migrazione dalla piattaforma esterna, ad esempio Oracle, DB2, MySQL e Sybase, a [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].
 
 ## <a name="CEUpgrade"></a> Regressioni delle query dovute a modifiche della versione CE
- 
+
 **Si applica a:** migrazione da [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] a [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].
 
 Quando si esegue la migrazione da una versione precedente di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] a [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] o versioni successive e si aggiorna il [livello di compatibilità del database](../relational-databases/databases/view-or-change-the-compatibility-level-of-a-database.md) alla versione più recente disponibile, un carico di lavoro può essere esposto al rischio di regressione delle prestazioni.
@@ -126,6 +128,7 @@ Le funzioni con valori di tabella restituiscono un tipo di dati tabella che può
 > Poiché la tabella di output di una funzione con valori di tabella con istruzioni multiple non viene creata in fase di compilazione, Query Optimizer di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] si basa sull'euristica e non su statistiche effettive per determinare le stime delle righe. L'aggiunta di indici alle tabelle di base non risolverà il problema. Per le funzioni con valori di tabella con istruzioni multiple, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] usa una stima fissa di 1 per il numero di righe che si prevede verrà restituito da una funzione con valori di tabella con istruzioni multiple (a partire da [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] questa stima fissa è di 100 righe).
 
 ### <a name="steps-to-resolve"></a>Procedura di risoluzione
+
 1.  Se la funzione con valori di tabella con istruzioni multiple è un'istruzione singola, convertirla in funzione inline con valori di tabella.
 
     ```sql
@@ -142,7 +145,8 @@ Le funzioni con valori di tabella restituiscono un tipo di dati tabella che può
     RETURN
     END
     ```
-    Per 
+
+    L'esempio di formato inline viene visualizzato successivamente.
 
     ```sql
     CREATE FUNCTION dbo.tfnGetRecentAddress_inline(@ID int)
@@ -158,7 +162,8 @@ Le funzioni con valori di tabella restituiscono un tipo di dati tabella che può
 
 2.  Se è più complessa, valutare l'uso dei risultati intermedi archiviati nelle tabelle ottimizzate per la memoria o nelle tabelle temporanee.
 
-##  <a name="Additional_Reading"></a> Ulteriori informazioni  
+##  <a name="Additional_Reading"></a> Ulteriori informazioni
+
  [Procedure consigliate per l'archivio query](../relational-databases/performance/best-practice-with-the-query-store.md)  
 [Tabelle con ottimizzazione per la memoria](../relational-databases/in-memory-oltp/memory-optimized-tables.md)  
 [Funzioni definite dall'utente](../relational-databases/user-defined-functions/user-defined-functions.md)  

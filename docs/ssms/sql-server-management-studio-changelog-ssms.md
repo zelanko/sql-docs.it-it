@@ -11,16 +11,19 @@ ms.assetid: 3dc76cc1-3b4c-4719-8296-f69ec1b476f9
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: e9dd7920f18ab6a04b6993f8398204a9425e5ffa
-ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
+ms.openlocfilehash: c854d2e332d38443646de560a906826c419705b7
+ms.sourcegitcommit: 96032813f6bf1cba680b5e46d82ae1f0f2da3d11
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/18/2018
-ms.locfileid: "53591905"
+ms.lasthandoff: 01/15/2019
+ms.locfileid: "54300548"
 ---
 # <a name="sql-server-management-studio---changelog-ssms"></a>SQL Server Management Studio - Changelog (SSMS)
-
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+
+  > [!div class="nextstepaction"]
+  > [Condividi il feedback sul sommario della documentazione SQL](https://aka.ms/sqldocsurvey)
+
 Questo articolo fornisce informazioni dettagliate sugli aggiornamenti, i miglioramenti e le correzioni di bug per le versioni correnti e precedenti di SSMS. Scaricare le [versioni precedenti di SSMS](#previous-ssms-releases).
 
 
@@ -226,7 +229,7 @@ Se manca l'etichetta *Anteprima 5* o *Anteprima 6*, significa che la modifica è
 - **Opzioni SSMS**
   - Correzione di un problema per cui la pagina "**Strumenti | Opzioni | Esplora oggetti di SQL Server** | Comandi" non viene ridimensionata correttamente.
   - Per impostazione predefinita, SSMS ora disabilita il download automatico di DTD nell'editor XMLA. L'editor di script XMLA usa il servizio di linguaggio XML e per impostazione predefinita impedisce di scaricare automaticamente DTD per file XMLA potenzialmente dannosi.  Questo comportamento viene definito disattivando l'impostazione "Automatically download DTDs and Schemas" (Scarica automaticamente DTD e schemi) in Strumenti->Opzioni->Ambiente->Editor di testo->XML->Varie.  
-  - [Novità in Anteprima 5] Ripristinata la scelta rapida da tastiera CTRL+D, disponibile nella versione precedente di SSMS. Per informazioni dettagliate, vederehttps://feedback.azure.com/forums/908035/suggestions/35544754
+  - [Novità in Anteprima 5] Ripristinata la scelta rapida da tastiera CTRL+D, disponibile nella versione precedente di SSMS. Per informazioni dettagliate, vedere https://feedback.azure.com/forums/908035/suggestions/35544754
 
 - **Editor SSMS**
   - Correzione di un problema per cui nella "Tabella di sistema SQL" in cui il ripristino dei colori predefiniti imposta il colore verde limone anziché il verde predefinito, rendendo difficile la lettura su uno sfondo bianco. Per informazioni dettagliate, vedere https://feedback.azure.com/forums/908035-sql-server/suggestions/32896906)
@@ -234,7 +237,7 @@ Se manca l'etichetta *Anteprima 5* o *Anteprima 6*, significa che la modifica è
   - Correzione di un problema di IntelliSense in Azure quando l'utente non possiede le credenziali per l'accesso master
   - Correzione di frammenti di codice per la creazione di "tabelle temporanee" che vengono interrotti quando le regole di confronto del database di destinazione fanno distinzione tra maiuscole e minuscole.
   - [Novità in Anteprima 6] Nuova funzione TRANSLATE ora riconosciuta da IntelliSense. Per informazioni dettagliate, vedere https://feedback.azure.com/forums/908035-sql-server/suggestions/32898430
-  - [Novità in Anteprima 6] Funzionalità IntelliSense migliorata nella funzione FORMAT predefinita. Per informazioni dettagliate, vederehttps://feedback.azure.com/forums/908035-sql-server/suggestions/32898676
+  - [Novità in Anteprima 6] Funzionalità IntelliSense migliorata nella funzione FORMAT predefinita. Per informazioni dettagliate, vedere https://feedback.azure.com/forums/908035-sql-server/suggestions/32898676
   - [Novità in Anteprima 6] LAG e LEAD vengono ora riconosciuti come funzioni predefinite. Per informazioni dettagliate, vedere https://feedback.azure.com/forums/908035-sql-server/suggestions/32898757
   - [Novità in Anteprima 6] Correzione di un problema per cui IntelliSense genera un avviso quando si usa "ALTER TABLE...ADD CONSTRAINT...WITH(ONLINE=ON)"
 
@@ -1048,7 +1051,7 @@ The connection is broken and recovery is not possible. The client driver attempt
   - La finestra di progettazione **Nuova tabella/vista** mostra il prompt di accesso obsoleto e non funziona per l'autenticazione di Azure AD.
   - La funzionalità **Modifica le prime 200 righe** non supporta l'autenticazione di Azure AD.
   - Il componente **Server registrato** non supporta l'autenticazione di Azure AD.
-  - L'**Ottimizzazione guidata motore di database** non è supportata per l'autenticazione di Azure AD. Esiste un problema noto per cui il messaggio di errore visualizzato all'utente è poco chiaro: *Impossibile caricare il file o l'assembly 'Microsoft.IdentityModel.Clients.ActiveDirectory,…*, invece del previsto *Ottimizzazione guidata motore di database non supporta database SQL di Microsoft Azure. * (DTAClient).
+  - L'**Ottimizzazione guidata motore di database** non è supportata per l'autenticazione di Azure AD. Esiste un problema noto per cui il messaggio di errore visualizzato all'utente è poco chiaro: *Impossibile caricare il file o l'assembly 'Microsoft.IdentityModel.Clients.ActiveDirectory,…*, invece del previsto *Ottimizzazione guidata motore di database non supporta database SQL di Microsoft Azure.*  (DTAClient).
 
 **Analysis Services (AS)**
 

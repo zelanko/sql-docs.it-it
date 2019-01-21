@@ -14,18 +14,18 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||=azuresqldb-mi-current'
-ms.openlocfilehash: 3067b05783d7a83118e87dc8db4cdc6a83d40a1c
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: d2769749327f01af9548ad608a42e6d030fd3842
+ms.sourcegitcommit: 96032813f6bf1cba680b5e46d82ae1f0f2da3d11
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52515996"
+ms.lasthandoff: 01/15/2019
+ms.locfileid: "54300666"
 ---
 # <a name="download-and-install-sql-server-data-tools-ssdt-for-visual-studio"></a>Scaricare e installare SQL Server Data Tools (SSDT) per Visual Studio
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md.md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 > [!div class="nextstepaction"]
-> [Contribuisci a migliorare la documentazione di SQL Server](https://80s3ignv.optimalworkshop.com/optimalsort/36yyw5kq-0)
+> [Condividi il feedback sul sommario della documentazione SQL](https://aka.ms/sqldocsurvey)
 
 **SQL Server Data Tools** è uno strumento di sviluppo moderno che consente di compilare database relazionali SQL Server, database SQL di Azure, modelli di dati di Analysis Services (AS), pacchetti di Integration Services (IS) e report di Reporting Services (RS). Con SSDT è possibile progettare e distribuire qualsiasi tipo di contenuto SQL Server con la stessa facilità con la quale si sviluppa un'applicazione in Visual Studio.
 
@@ -61,7 +61,7 @@ Il programma di installazione elenca le istanze di Visual Studio disponibili per
   
 Numero di versione: 15.8.2  
 Numero di build: 14.0.16182.0  
-Data versione: 5 novembre 2018  
+Data di rilascio: 5 novembre 2018  
 
 Per un elenco completo delle modifiche, vedere il [log delle modifiche](changelog-for-sql-server-data-tools-ssdt.md).
 
@@ -109,16 +109,19 @@ Dopo aver completato questa procedura, quanto segue può essere eseguito offline
 
 Per le opzioni disponibili, eseguire `SSDT-Setup-ENU.exe /help`
 
+> [!NOTE]
+> Se si usa una versione completa di Visual Studio 2017, creare una cartella offline solo per SSDT e quindi eseguire `SSDT-Setup-ENU.exe` da questa nuova cartella (non aggiungere SSDT a un altro layout offline di Visual Studio 2017). Se si aggiunge il layout SSDT a un layout offline di Visual Studio esistente, i componenti di runtime necessari (exe) non vengono creati in tale layout.
+
 ## <a name="supported-sql-versions"></a>Versioni di SQL supportate
   
 |Modelli di progetto|Piattaforme SQL supportate|  
 |-------------------|--------------------|  
 Database relazionali|  SQL Server 2005* - SQL Server 2017<br> (usare SSDT 17.x o SSDT per Visual Studio 2017 per la connessione a [SQL Server in Linux](../linux/sql-server-linux-overview.md))<br /><br />Database SQL di Azure<br /><br />Azure SQL Data Warehouse (supporta solo query, i progetti di database non sono ancora supportati)<br /><br />  * Il supporto per SQL Server 2005 è deprecato<br /><br /> e si consiglia di passare a una versione di SQL supportata ufficialmente|
   |Modelli di Analysis Services<br /><br />Report di Reporting Services | SQL Server 2008 - SQL Server 2017|
-  |pacchetti di Integration Services| SQL Server 2012 - SQL Server 2017    |
+  |pacchetti di Integration Services| SQL Server 2014 - SQL Server 2017    |
   
 ## <a name="dacfx"></a>DacFx
-SSDT per Visual Studio 2015 e SSDT per Visual Studio 2017 usano entrambi DacFx 17.4.1: [scaricare Data-Tier Application Framework (DacFx) 17.4.1](https://www.microsoft.com/download/details.aspx?id=56508).
+Sia SSDT per Visual Studio 2015 che SSDT per Visual Studio 2017 usano DacFx 17.4.1: [Download del framework applicazione livello dati (DacFx) 17.4.1](https://www.microsoft.com/download/details.aspx?id=56508).
 
 ## <a name="previous-versions"></a>Versioni precedenti
 

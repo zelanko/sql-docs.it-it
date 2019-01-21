@@ -16,12 +16,12 @@ ms.assetid: 7b4fd480-9eaf-40dd-9a07-77301e44e2ac
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: a71962ea2e0a6d40534a9884fbb026e3d90aaf1c
-ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
+ms.openlocfilehash: b1b43a2c739de3ae0f23871c7bc023b3f215b4ce
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/18/2018
-ms.locfileid: "53590485"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54126642"
 ---
 # <a name="replication-distribution-agent"></a>Agente distribuzione repliche
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -144,9 +144,9 @@ distrib [-?]
 |**2**|Specifica che SSL viene utilizzato e che il certificato viene verificato.|  
  
  > [!NOTE]  
- >  Un certificato SSL valido è definito con un nome di dominio completo del Server SQL. Affinché l'agente possa connettersi correttamente quando si imposta - EncryptionLevel su 2, creare un alias nel Server SQL locale. Il parametro 'Nome alias' deve corrispondere al nome del server e il parametro 'Server' deve essere impostato sul nome completo dell'istanza di SQL Server.
+ >  Un certificato SSL valido è definito con un nome di dominio completo del Server SQL. Affinché l'agente possa connettersi correttamente quando si imposta - EncryptionLevel su 2, creare un alias nel Server SQL locale. Il parametro ‘Nome Alias’ deve essere il nome del server e il parametro ‘Server’ deve essere impostato per il nome completo di SQL Server.
 
- Per altre informazioni, vedere [Panoramica della sicurezza &#40;replica&#41;](../../../relational-databases/replication/security/security-overview-replication.md).  
+ Per altre informazioni, vedere [Visualizzare e modificare le impostazioni di sicurezza della replica](../../../relational-databases/replication/security/view-and-modify-replication-security-settings.md).  
   
  **-ErrorFile** _error_path_and_file_name_  
  Percorso e nome del file degli errori generato dall'agente di distribuzione. Tale file viene generato nel punto in cui si verifica l'errore durante l'applicazione delle transazioni di replica nel Sottoscrittore. Gli errori che si verificano nel server di pubblicazione e nel server di distribuzione non vengono registrati in questo file. Il file contiene le transazioni di replica non riuscite e i relativi messaggi di errore. Se il percorso viene omesso, il file degli errori viene generato nella directory corrente dell'agente di distribuzione. Il file degli errori ha lo stesso nome dell'agente di distribuzione e ha un'estensione err. Se il nome file specificato esiste già, i messaggi di errore vengono aggiunti al file. Questo parametro può essere composto da un massimo di 256 caratteri Unicode.  
@@ -276,7 +276,7 @@ distrib [-?]
  Specifica il tipo di sottoscrizione per la distribuzione. Un valore **0** indica una sottoscrizione push, un valore **1** indica una sottoscrizione pull e un valore **2** indica una sottoscrizione anonima.  
   
  **-TransactionsPerHistory** [ **0**| **1**|... **10000**]  
- Specifica l'intervallo delle transazioni per la registrazione della cronologia. Se il numero di transazioni di cui è stato eseguito il commit dopo l'ultima istanza di registrazione della cronologia è maggiore rispetto al valore di questa opzione, viene registrato un messaggio di cronologia. Il valore predefinito è 100. Un valore di **0** indica **TransactionsPerHistory**infinito. Vedere il parametro precedente **-MessageInterval**.  
+ Specifica l'intervallo delle transazioni per la registrazione della cronologia. Se il numero di transazioni di cui è stato eseguito il commit dopo l'ultima istanza di registrazione della cronologia è maggiore rispetto al valore di questa opzione, viene registrato un messaggio di cronologia. Il valore predefinito è 100. Un valore di **0** indica **TransactionsPerHistory**infinito. See the preceding **–MessageInterval**parameter.  
   
  **-UseDTS**  
  Deve essere specificato come parametro per una pubblicazione che consente la trasformazione dei dati.  

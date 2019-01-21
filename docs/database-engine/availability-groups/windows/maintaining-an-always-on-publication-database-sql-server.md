@@ -14,12 +14,12 @@ ms.assetid: 55b345fe-2eb9-4b04-a900-63d858eec360
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: c1c8c674eb0e86d0b78348f07fb95259327582cc
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: 00de66d272688a7b61b4847e38a41f4738457d92
+ms.sourcegitcommit: 96032813f6bf1cba680b5e46d82ae1f0f2da3d11
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53208730"
+ms.lasthandoff: 01/15/2019
+ms.locfileid: "54300148"
 ---
 # <a name="manage-a-replicated-publisher-database-as-part-of-an-always-on-availability-group"></a>Gestire un server di pubblicazione replicato come parte di un gruppo di disponibilità Always On
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -77,7 +77,7 @@ ms.locfileid: "53208730"
     > [!NOTE]  
     >  Quando viene rimosso un gruppo di disponibilità contenente database membro pubblicati o viene rimosso un database pubblicato da un gruppo di disponibilità, tutte le copie dei database pubblicati rimarranno nello stato di recupero. Se ripristinati, saranno tutti visualizzati come database pubblicato. Sarà necessario mantenere una sola copia con i metadati di pubblicazione. Per disabilitare la replica per una copia del database pubblicato, è necessario prima rimuovere tutte le sottoscrizioni e le pubblicazioni dal database.  
   
-     Eseguire **sp_dropsubscription** per rimuovere le sottoscrizioni della pubblicazione. Accertarsi di impostare il parametro *@ignore_distributributor* su 1 per mantenere i metadati per il database di pubblicazione attivo nel server di distribuzione.  
+     Eseguire **sp_dropsubscription** per rimuovere le sottoscrizioni della pubblicazione. Accertarsi di impostare il parametro *@ignore_distributor* su 1 per mantenere i metadati per il database di pubblicazione attivo nel server di distribuzione.  
   
     ```  
     USE MyDBName;  
@@ -115,7 +115,7 @@ ms.locfileid: "53208730"
   
 -   [Replica, Rilevamento modifiche, Change Data Capture e Gruppi di disponibilità AlwaysOn &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/replicate-track-change-data-capture-always-on-availability.md)  
   
--   [Amministrazione &#40;Replica&#41;](../../../relational-databases/replication/administration/administration-replication.md)  
+-   [Domande frequenti sull'amministrazione della replica](../../../relational-databases/replication/administration/frequently-asked-questions-for-replication-administrators.md)  
   
 -   [Sottoscrittori della replica e gruppi di disponibilità AlwaysOn &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/replication-subscribers-and-always-on-availability-groups-sql-server.md)  
   

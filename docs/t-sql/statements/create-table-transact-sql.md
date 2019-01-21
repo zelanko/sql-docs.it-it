@@ -47,18 +47,18 @@ ms.assetid: 1e068443-b9ea-486a-804f-ce7b6e048e8b
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 60938c31712e8bb6b08579cab099baaaf99bb0aa
-ms.sourcegitcommit: 467b2c708651a3a2be2c45e36d0006a5bbe87b79
+ms.openlocfilehash: 4cb25fff7ac946808ecad9cb4d0e8594f32ad5a2
+ms.sourcegitcommit: 96032813f6bf1cba680b5e46d82ae1f0f2da3d11
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53980387"
+ms.lasthandoff: 01/15/2019
+ms.locfileid: "54300568"
 ---
 # <a name="create-table-transact-sql"></a>CREATE TABLE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
 > [!div class="nextstepaction"]
-> [Contribuisci a migliorare la documentazione di SQL Server](https://80s3ignv.optimalworkshop.com/optimalsort/36yyw5kq-0)
+> [Condividi il feedback sul sommario della documentazione SQL](https://aka.ms/sqldocsurvey)
 
 Crea una nuova tabella in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
   
@@ -990,6 +990,8 @@ INSERT INTO #MyTempTable VALUES (1);
 ```  
   
  Se si creano più tabelle temporanee all'interno di una sola stored procedure o di un singolo batch, è necessario che i nomi delle tabelle siano diversi.  
+ 
+ Se si include *schema_name* quando si crea o accede a una tabella temporanea, viene ignorato.  Tutte le tabelle temporanee vengono create nello schema dbo.
   
  Se viene creata una tabella temporanea locale in una stored procedure o in un'applicazione che può essere eseguita contemporaneamente da più utenti, [!INCLUDE[ssDE](../../includes/ssde-md.md)] deve essere in grado di distinguere le tabelle create dai vari utenti. A tale scopo, [!INCLUDE[ssDE](../../includes/ssde-md.md)] aggiunge internamente un suffisso numerico a ogni nome di tabella temporanea locale. Il nome completo di una tabella temporanea archiviato nella tabella **sysobjects** in **tempdb** è composto dal nome di tabella specificato nell'istruzione CREATE TABLE e dal suffisso numerico generato dal sistema. Per lasciare spazio per tale suffisso, il valore *table_name* specificato per un nome di tabella temporanea locale non può superare i 116 caratteri.  
   
