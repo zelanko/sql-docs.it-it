@@ -18,16 +18,16 @@ helpviewer_keywords:
 - identity columns [SQL Server], IDENTITY property
 - autonumbers, identity numbers
 ms.assetid: 8429134f-c821-4033-a07c-f782a48d501c
-author: CarlRabeler
-ms.author: carlrab
+author: VanMSFT
+ms.author: vanto
 manager: craigg
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 09422e46babcb966fdc4c86153e91439a5e46c88
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: af536ef3867d3f74ce04a8a8fef8b93e224f09c0
+ms.sourcegitcommit: c6e71ed14198da67afd7ba722823b1af9b4f4e6f
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52507395"
+ms.lasthandoff: 01/16/2019
+ms.locfileid: "54326642"
 ---
 # <a name="create-table-transact-sql-identity-property"></a>CREATE TABLE (Transact-SQL) IDENTITY (proprietà)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-asdw-xxx-md.md)]
@@ -78,7 +78,7 @@ IDENTITY [ (seed , increment) ]
   
  Ogni tabella può includere una sola colonna Identity.  
   
- Nelle tabelle ottimizzate per la memoria il valore di inizializzazione e l'incremento devono essere impostati su 1,1. Se si imposta il valore di inizializzazione o incremento su un valore diverso da 1 viene visualizzato l'errore seguente: L'uso di valori di inizializzazione e di incremento diversi da 1 non è supportato in tabelle con ottimizzazione per la memoria.  
+ Nelle tabelle ottimizzate per la memoria il valore di inizializzazione e l'incremento devono essere impostati su 1,1. Se il valore di inizializzazione o l'incremento vengono impostati su un valore diverso da 1, viene restituito l'errore seguente: L'uso di valori diversi da 1 per il valore di inizializzazione e l'incremento non è supportato con le tabelle con ottimizzazione per la memoria.  
   
 ## <a name="examples"></a>Esempi  
   
@@ -110,7 +110,7 @@ VALUES
    ('Pirkko', 'O', 'Koskitalo');  
 ```  
   
-### <a name="b-using-generic-syntax-for-finding-gaps-in-identity-values"></a>B. Uso della sintassi generica per individuare interruzioni nella sequenza di valori Identity  
+### <a name="b-using-generic-syntax-for-finding-gaps-in-identity-values"></a>b. Uso della sintassi generica per individuare interruzioni nella sequenza di valori Identity  
  Nell'esempio seguente viene illustrato l'uso di una sintassi generica per individuare le interruzioni nella sequenza di valori Identity create in seguito alla rimozione di dati.  
   
 > [!NOTE]  

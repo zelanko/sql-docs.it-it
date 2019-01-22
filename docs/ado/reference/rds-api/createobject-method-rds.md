@@ -14,12 +14,12 @@ ms.assetid: dec96be6-0b31-4953-9c9a-e962b5afcd18
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: ed2d80793d70418e02d22bf104d21b6d3bec6c4d
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.openlocfilehash: d220a9abc0e2dc72d7ab65306b514a9925b4fc43
+ms.sourcegitcommit: 480961f14405dc0b096aa8009855dc5a2964f177
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51599532"
+ms.lasthandoff: 01/22/2019
+ms.locfileid: "54419926"
 ---
 # <a name="createobject-method-rds"></a>Metodo CreateObject (Servizi Desktop remoto)
 Crea il proxy per l'oggetto business di destinazione e restituisce un puntatore a esso. I proxy pacchetti esegue il marshalling dei dati e per lo stub del lato server per le comunicazioni con l'oggetto business alla invierà le richieste e i dati tramite Internet. Per gli oggetti di componente in-process, non vengono utilizzati proxy, viene fornito solo un puntatore all'oggetto.  
@@ -32,8 +32,8 @@ Crea il proxy per l'oggetto business di destinazione e restituisce un puntatore 
   
 |Protocollo|Sintassi|  
 |--------------|------------|  
-|HTTP|Oggetto set = DataSpace.CreateObject ("ProgId", "https://awebsrvr")|  
-|HTTPS|Oggetto set = DataSpace.CreateObject ("ProgId", "https://awebsrvr")|  
+|HTTP|Set object = DataSpace.CreateObject("ProgId", "https\://awebsrvr")|  
+|HTTPS|Set object = DataSpace.CreateObject("ProgId", "https\://awebsrvr")|  
 |DCOM|Set object = DataSpace.CreateObject("ProgId", "computername")|  
 |In-Process|Set object = DataSpace.CreateObject("ProgId", "")|  
   
@@ -41,7 +41,7 @@ Crea il proxy per l'oggetto business di destinazione e restituisce un puntatore 
  *Oggetto*  
  Una variabile oggetto che restituisce un oggetto che rappresenta il tipo specificato nel *ProgID*.  
   
- *Spazio dati*  
+ *DataSpace*  
  Una variabile oggetto che rappresenta un [Servizi Desktop remoto. DataSpace](../../../ado/reference/rds-api/dataspace-object-rds.md) oggetto utilizzato per creare un'istanza del nuovo oggetto.  
   
  *ProgID*  

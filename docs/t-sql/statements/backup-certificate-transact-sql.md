@@ -25,16 +25,16 @@ helpviewer_keywords:
 - decryption [SQL Server]
 - cryptography [SQL Server], certificates
 ms.assetid: 509b9462-819b-4c45-baae-3d2d90d14a1c
-author: CarlRabeler
-ms.author: carlrab
+author: VanMSFT
+ms.author: vanto
 manager: craigg
 monikerRange: '>=aps-pdw-2016||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: bf65c24924d7e585131d90d01c42cf551ae4997d
-ms.sourcegitcommit: 7d702a1d01ef72ad5e133846eff6b86ca2edaff1
+ms.openlocfilehash: bc908bd4186035bb1c9089139532c9fa413c8a8a
+ms.sourcegitcommit: c6e71ed14198da67afd7ba722823b1af9b4f4e6f
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48798561"
+ms.lasthandoff: 01/16/2019
+ms.locfileid: "54327422"
 ---
 # <a name="backup-certificate-transact-sql"></a>BACKUP CERTIFICATE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-pdw-md.md)]
@@ -104,7 +104,7 @@ BACKUP CERTIFICATE sales05 TO FILE = 'c:\storedcerts\sales05cert';
 GO  
 ```  
   
-### <a name="b-exporting-a-certificate-and-a-private-key"></a>B. Esportazione di un certificato e di una chiave privata  
+### <a name="b-exporting-a-certificate-and-a-private-key"></a>b. Esportazione di un certificato e di una chiave privata  
  Nell'esempio seguente la chiave privata del certificato di cui si esegue il backup verrà crittografata con la password `997jkhUbhk$w4ez0876hKHJH5gh`.  
   
 ```  

@@ -17,16 +17,16 @@ helpviewer_keywords:
 - database permissions [SQL Server], granting
 - GRANT statement, databases
 ms.assetid: 499e5ed6-945c-4791-ab45-68dec0b9c289
-author: CarlRabeler
-ms.author: carlrab
+author: VanMSFT
+ms.author: vanto
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 34a23cc197b1720df2e2a1dae4cbc28c4bf70554
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 07680455783316fd3854b9b45ba7f5077a58d3f9
+ms.sourcegitcommit: c6e71ed14198da67afd7ba722823b1af9b4f4e6f
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47682239"
+ms.lasthandoff: 01/16/2019
+ms.locfileid: "54327492"
 ---
 # <a name="grant-database-permissions-transact-sql"></a>GRANT - autorizzazioni per database (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -110,7 +110,7 @@ permission | ALL [ PRIVILEGES ]
 ## <a name="remarks"></a>Remarks
   
 > [!IMPORTANT]  
->  Una combinazione di autorizzazioni ALTER e REFERENCE potrebbe consentire in alcuni casi al beneficiario di visualizzare dati o eseguire funzioni non autorizzate. Un utente con autorizzazione ALTER per una tabella e autorizzazione REFERENCE per una funzione può ad esempio creare una colonna calcolata su una funzione e determinarne l'esecuzione. In questo caso, è inoltre necessario disporre dell'autorizzazione SELECT per la colonna calcolata.
+>  Una combinazione di autorizzazioni ALTER e REFERENCE potrebbe consentire in alcuni casi al beneficiario di visualizzare dati o eseguire funzioni non autorizzate. Ad esempio un utente con autorizzazione ALTER per una tabella e autorizzazione REFERENCE per una funzione può creare una colonna calcolata su una funzione e determinarne l'esecuzione. In questo caso, è inoltre necessario disporre dell'autorizzazione SELECT per la colonna calcolata.
   
  Un database è un'entità a protezione diretta contenuta nel server padre nella gerarchia delle autorizzazioni. Nella tabella seguente sono elencate le autorizzazioni più specifiche e limitate che è possibile concedere per un database, insieme alle autorizzazioni più generali che le includono in modo implicito.  
   
@@ -226,7 +226,7 @@ GRANT CREATE TABLE TO MelanieK;
 GO  
 ```  
   
-### <a name="b-granting-showplan-permission-to-an-application-role"></a>B. Concessione dell'autorizzazione SHOWPLAN a un ruolo applicazione  
+### <a name="b-granting-showplan-permission-to-an-application-role"></a>b. Concessione dell'autorizzazione SHOWPLAN a un ruolo applicazione  
  Nell'esempio seguente viene concessa l'autorizzazione `SHOWPLAN` per il database `AdventureWorks2012` al ruolo applicazione `AuditMonitor`.  
   
 **Si applica a**: da [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]

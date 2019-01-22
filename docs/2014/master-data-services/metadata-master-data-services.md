@@ -1,7 +1,7 @@
 ---
 title: Metadati (Master Data Services) | Microsoft Docs
 ms.custom: ''
-ms.date: 03/06/2017
+ms.date: 01/19/2019
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.technology:
@@ -16,12 +16,12 @@ ms.assetid: ac1aabe3-d8d4-4d7a-8954-50ee3c185d81
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 2050e1fe428108713d4cfed8473feec592bc1daa
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 186329f71e19f23801fb366fe2117067fbf70c6c
+ms.sourcegitcommit: 480961f14405dc0b096aa8009855dc5a2964f177
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48185011"
+ms.lasthandoff: 01/22/2019
+ms.locfileid: "54419887"
 ---
 # <a name="metadata-master-data-services"></a>Metadati (Master Data Services)
   In [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] i metadati definiti dall'utente sono informazioni utilizzate per descrivere gli oggetti modello. È ad esempio possibile tenere traccia dei proprietari di un particolare modello o entità oppure dei sistemi di origine tramite cui vengono forniti dati a un'entità.  
@@ -33,7 +33,7 @@ ms.locfileid: "48185011"
 ## <a name="metadata-entities"></a>Entità dei metadati  
  Nel modello Metadati sono incluse cinque entità, ognuna delle quali rappresenta un tipo di oggetto modello di dati master che supporta i metadati definiti dall'utente. Ad esempio, il **definizione metadati modello** entità contiene membri che rappresentano modelli e il **definizione metadati attributo** entità contiene membri che rappresentano tutti gli attributi in tutti i modelli.  
   
- Per definire i metadati per un oggetto modello, è necessario popolare uno di questi attributi del membro. Ad esempio, nelle **definizione metadati entità** entità, è possibile popolare l'attributo Description del membro Price con il testo: **il prezzo del prodotto quando è venduto a un cliente**.  
+ Per definire i metadati per un oggetto modello, è necessario popolare uno di questi attributi del membro. Ad esempio, nelle **definizione metadati entità** entità, è possibile popolare l'attributo Description del membro Price con il testo: **Il prezzo del prodotto quando è venduto a un cliente**.  
   
  I membri nel modello Metadati vengono aggiornati automaticamente ogni volta che gli oggetti modello che supportano i metadati definiti dall'utente vengono aggiunti o eliminati.  
   
@@ -55,7 +55,7 @@ ms.locfileid: "48185011"
 |Descrizione dell'attività|Argomento|  
 |----------------------|-----------|  
 |Aggiungere metadati a un oggetto modello.|[Aggiungere metadati &#40;Master Data Services&#41;](add-metadata-master-data-services.md)
-)|  
+|&nbsp;|&nbsp;|
   
 ## <a name="related-content"></a>Contenuto correlato  
   

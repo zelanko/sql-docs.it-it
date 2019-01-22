@@ -15,15 +15,15 @@ helpviewer_keywords:
 - denying permissions [SQL Server], endpoints
 - permissions [SQL Server], endpoints
 ms.assetid: 3ac40457-7529-4eda-95a4-5247345cc8cf
-author: CarlRabeler
-ms.author: carlrab
+author: VanMSFT
+ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 932080377094ae17767856a9ced0256e05e0fe81
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: b2599cd81950f20b8f1771e5508318955fd8eb80
+ms.sourcegitcommit: c6e71ed14198da67afd7ba722823b1af9b4f4e6f
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52544059"
+ms.lasthandoff: 01/16/2019
+ms.locfileid: "54326312"
 ---
 # <a name="deny-endpoint-permissions-transact-sql"></a>DENY - autorizzazioni per endpoint (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -105,7 +105,7 @@ DENY VIEW DEFINITION ON ENDPOINT::Mirror7 TO ZArifin;
 GO  
 ```  
   
-### <a name="b-denying-take-ownership-permission-with-cascade-option"></a>B. Negazione dell'autorizzazione TAKE OWNERSHIP con l'opzione CASCADE  
+### <a name="b-denying-take-ownership-permission-with-cascade-option"></a>b. Negazione dell'autorizzazione TAKE OWNERSHIP con l'opzione CASCADE  
  Nell'esempio seguente viene negata l'autorizzazione `TAKE OWNERSHIP` per l'endpoint `Shipping83` all'utente di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] `PKomosinski` e alle entità a cui l'utente `PKomosinski` ha concesso l'autorizzazione `TAKE OWNERSHIP`.  
   
 ```  

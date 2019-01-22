@@ -15,12 +15,12 @@ ms.assetid: e69be67d-da1c-41ae-8c9a-6b12c8c2fb61
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 1af4926f367b79c7e4cc9117042d0b21e4f47b77
-ms.sourcegitcommit: 1f53b6a536ccffd701fc87e658ddac714f6da7a2
+ms.openlocfilehash: e6833381664fa71f61e6e021d81154afdb0945cb
+ms.sourcegitcommit: c6e71ed14198da67afd7ba722823b1af9b4f4e6f
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/10/2019
-ms.locfileid: "54206352"
+ms.lasthandoff: 01/16/2019
+ms.locfileid: "54327772"
 ---
 # <a name="tutorial-use-azure-blob-storage-service-with-sql-server-2016"></a>Esercitazione: Uso del servizio di archiviazione BLOB di Azure con SQL Server 2016
 
@@ -87,19 +87,19 @@ Per creare i criteri per il contenitore e generare una chiave di firma di access
     $resourceGroupName=$prefixName + 'rg'   
   
     # Add an authenticated Azure account for use in the session   
-    Login-AzureRmAccount    
+    Connect-AzAccount    
   
     # Set the tenant, subscription and environment for use in the rest of   
-    Set-AzureRmContext -SubscriptionId $subscriptionID   
+    Set-AzContext -SubscriptionId $subscriptionID   
   
     # Create a new resource group - comment out this line to use an existing resource group  
-    New-AzureRmResourceGroup -Name $resourceGroupName -Location $locationName   
+    New-AzResourceGroup -Name $resourceGroupName -Location $locationName   
   
     # Create a new Azure Resource Manager storage account - comment out this line to use an existing Azure Resource Manager storage account  
-    New-AzureRmStorageAccount -Name $storageAccountName -ResourceGroupName $resourceGroupName -Type Standard_RAGRS -Location $locationName   
+    New-AzStorageAccount -Name $storageAccountName -ResourceGroupName $resourceGroupName -Type Standard_RAGRS -Location $locationName   
   
     # Get the access keys for the Azure Resource Manager storage account  
-    $accountKeys = Get-AzureRmStorageAccountKey -ResourceGroupName $resourceGroupName -Name $storageAccountName  
+    $accountKeys = Get-AzStorageAccountKey -ResourceGroupName $resourceGroupName -Name $storageAccountName  
   
     # Create a new storage account context using an Azure Resource Manager storage account  
     $storageContext = New-AzureStorageContext -StorageAccountName $storageAccountName -StorageAccountKey $accountKeys[0].Value
@@ -125,7 +125,7 @@ Per creare i criteri per il contenitore e generare una chiave di firma di access
     Write-Host $tSql 
 
     # Once you're done with the tutorial, remove the resource group to clean up the resources. 
-    # Remove-AzureRmResourceGroup -Name $resourceGroupName  
+    # Remove-AzResourceGroup -Name $resourceGroupName  
     ```  
 
 3.  Dopo aver completato lo script, l'istruzione CREATE CREDENTIAL sarà aggiunta agli Appunti perché sia possibile usarla nella sezione successiva.  
@@ -464,13 +464,13 @@ Per eliminare il gruppo di risorse, eseguire il codice PowerShell seguente:
   $resourceGroupName=$prefixName + 'rg'   
   
   # Adds an authenticated Azure account for use in the session   
-  Login-AzureRmAccount    
+  Connect-AzAccount    
   
   # Set the tenant, subscription and environment for use in the rest of   
-  Set-AzureRmContext -SubscriptionId $subscriptionID    
+  Set-AzContext -SubscriptionId $subscriptionID    
     
   # Remove the resource group
-  Remove-AzureRmResourceGroup -Name $resourceGroupName   
+  Remove-AzResourceGroup -Name $resourceGroupName   
   ```
 
 

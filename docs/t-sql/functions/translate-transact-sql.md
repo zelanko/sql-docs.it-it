@@ -1,7 +1,7 @@
 ---
 title: TRANSLATE (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 12/16/2016
+ms.date: 01/19/2019
 ms.prod: sql
 ms.prod_service: sql-database
 ms.reviewer: ''
@@ -17,19 +17,21 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: '>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a72ef38b960e00a88c7d4e1e0038e32a897a46d9
-ms.sourcegitcommit: 467b2c708651a3a2be2c45e36d0006a5bbe87b79
+ms.openlocfilehash: 591d2dcbb8a14cff7e4595bdeeab93787f51c5cf
+ms.sourcegitcommit: 480961f14405dc0b096aa8009855dc5a2964f177
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53980117"
+ms.lasthandoff: 01/22/2019
+ms.locfileid: "54419876"
 ---
 # <a name="translate-transact-sql"></a>TRANSLATE (Transact-SQL)
+
 [!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]
 
 Restituisce la stringa fornita come primo argomento dopo che alcuni caratteri specificati nel secondo argomento sono stati convertiti in un set di caratteri di destinazione specificato nel terzo argomento.
 
-## <a name="syntax"></a>Sintassi   
+## <a name="syntax"></a>Sintassi
+
 ```
 TRANSLATE ( inputString, characters, translations) 
 ```
@@ -45,7 +47,8 @@ TRANSLATE ( inputString, characters, translations)
 *translations*   
  [Espressione](../../t-sql/language-elements/expressions-transact-sql.md) di stringa contenente i caratteri di sostituzione. Il tipo di dati e la lunghezza di *translations* devono corrispondere al tipo di dati e alla lunghezza di *characters*.
 
-## <a name="return-types"></a>Tipi restituiti   
+## <a name="return-types"></a>Tipi restituiti
+
 Restituisce un'espressione di caratteri dello stesso tipo di dati di `inputString` in cui i caratteri del secondo argomento vengono sostituiti con i caratteri corrispondenti del terzo argomento.
 
 ## <a name="remarks"></a>Remarks   
@@ -57,15 +60,19 @@ Il comportamento della funzione `TRANSLATE` è simile all'uso di più funzioni [
 
 `TRANSLATE` riconosce sempre le regole di confronto SC.
 
-## <a name="examples"></a>Esempi   
+## <a name="examples"></a>Esempi
 
-### <a name="a-replace-square-and-curly-braces-with-regular-braces"></a>A. Sostituire le parentesi quadrate e graffe con parentesi normali    
+### <a name="a-replace-square-and-curly-braces-with-regular-braces"></a>A. Sostituire le parentesi quadrate e graffe con parentesi normali
+
 La query seguente sostituisce le parentesi quadrate e graffe nella stringa di input con parentesi normali:
-```
+
+```sql
 SELECT TRANSLATE('2*[3+4]/{7-2}', '[]{}', '()()');
 ```
+
 [!INCLUDE[ssResult_md](../../includes/ssresult-md.md)]
-```
+
+```plain_text
 2*(3+4)/(7-2)
 ```
 
@@ -98,8 +105,10 @@ REPLACE
 );
 ```
 
-###  <a name="b-convert-geojson-points-into-wkt"></a>b. Convertire i punti GeoJSON in WKT (well-known text)    
-GeoJSON è un formato per la codifica di un'ampia gamma di strutture di dati geografici. La funzione `TRANSLATE` consente agli sviluppatori di convertire facilmente i punti GeoJSON in formato WKT e viceversa. La query seguente sostituisce le parentesi quadrate e graffe nell'input con parentesi normali:   
+###  <a name="b-convert-geojson-points-into-wkt"></a>b. Convertire i punti GeoJSON in WKT (well-known text)
+
+GeoJSON è un formato per la codifica di un'ampia gamma di strutture di dati geografici. La funzione `TRANSLATE` consente agli sviluppatori di convertire facilmente i punti GeoJSON in formato WKT e viceversa. La query seguente sostituisce le parentesi quadrate e graffe nell'input con parentesi normali:
+
 ```sql
 SELECT TRANSLATE('[137.4, 72.3]' , '[,]', '( )') AS Point,
     TRANSLATE('(137.4 72.3)' , '( )', '[,]') AS Coordinates;
@@ -107,11 +116,9 @@ SELECT TRANSLATE('[137.4, 72.3]' , '[,]', '( )') AS Point,
 
 [!INCLUDE[ssResult_md](../../includes/ssresult-md.md)]   
 
-
 |Punto  |Coordinate |  
----------|--------- |
-(137.4  72.3) |[137.4,72.3] |
-
+|---------|--------- |
+|(137.4  72.3) |[137.4,72.3] |
 
 ### <a name="c-use-the-translate-function"></a>C. Usare la funzione TRANSLATE
 
@@ -128,6 +135,7 @@ I risultati sono:
 
 
 ## <a name="see-also"></a>Vedere anche
+
  [CONCAT &#40;Transact-SQL&#41;](../../t-sql/functions/concat-transact-sql.md)  
  [CONCAT_WS &#40;Transact-SQL&#41;](../../t-sql/functions/concat-ws-transact-sql.md)  
  [FORMATMESSAGE &#40;Transact-SQL&#41;](../../t-sql/functions/formatmessage-transact-sql.md)  

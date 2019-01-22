@@ -22,12 +22,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 60b9137e52b34b79fa4faddbef7b9e4da8734142
-ms.sourcegitcommit: e3f5b70bbb4c66294df8c7b2c70186bdf2365af9
+ms.openlocfilehash: ea7c955718dbe6d2437b44b915057fc095151dc4
+ms.sourcegitcommit: 480961f14405dc0b096aa8009855dc5a2964f177
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/18/2019
-ms.locfileid: "54397610"
+ms.lasthandoff: 01/22/2019
+ms.locfileid: "54419796"
 ---
 # <a name="sysquerystoreplan-transact-sql"></a>sys.query_store_plan (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-asdw-xxx-md.md)]
@@ -35,7 +35,7 @@ ms.locfileid: "54397610"
   Contiene informazioni su ogni piano di esecuzione associato a una query.  
   
 |Nome colonna|Tipo di dati|Descrizione|  
-|-----------------|---------------|-----------------|  
+|-----------------|---------------|-----------------|
 |**plan_id**|**bigint**|Chiave primaria.|  
 |**query_id**|**bigint**|Chiave esterna. Crea un join al [Sys. query_store_query &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-store-query-transact-sql.md).|  
 |**plan_group_id**|**bigint**|ID del gruppo del piano. Query basate su cursori richiedono in genere più (popolare e recuperare) piani. Popolare e si applica ai piani di recupero vengono compilati insieme nello stesso gruppo.<br /><br /> 0 indica che piano non è presente in un gruppo.|  
@@ -57,13 +57,8 @@ ms.locfileid: "54397610"
 |**last_execution_time**|**datetimeoffset**|Ora dell'ultima esecuzione si riferisce all'ultima ora di fine del piano di query /.|  
 |**avg_compile_duration**|**float**|Pianificare le statistiche di compilazione.|  
 |**last_compile_duration**|**bigint**|Pianificare le statistiche di compilazione.|  
-|**plan_forcing_type**|**int**|Tipo di utilizzo forzato del piano.<br /><br />
-0: Nessuno<br /><br />
-1: MANUAL<br /><br />
-2: AUTO| |**plan_forcing_type_desc**|**nvarchar(60)**|Text description of plan_forcing_type.<br /><br />
-NONE: Nessun utilizzo forzato del piano<br /><br />
-MANUAL: Piano forzato da utente<br /><br />
-AUTO: Piano forzato dall'ottimizzazione automatica |
+|**plan_forcing_type**|**int**|Tipo di utilizzo forzato del piano.<br /><br />0: Nessuno<br /><br />1: MANUAL<br /><br />2: AUTO|  
+|**plan_forcing_type_desc**|**nvarchar(60)**|Descrizione di plan_forcing_type testo.<br /><br />NONE: Nessun utilizzo forzato del piano<br /><br />MANUAL: Piano forzato da utente<br /><br />AUTO: Piano forzato dall'ottimizzazione automatica|  
 
 ## <a name="plan-forcing-limitations"></a>Limitazioni di uso forzato del piano
 Query Store è dotato di un meccanismo per imporre a Query Optimizer l'uso di determinati piani di esecuzione. Esistono tuttavia alcune limitazioni che possono impedire l'imposizione di un piano. 

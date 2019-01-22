@@ -14,15 +14,15 @@ helpviewer_keywords:
 - system objects [SQL Server]
 - GRANT statement, system objects
 ms.assetid: 9d4e89f4-478f-419a-8b50-b096771e3880
-author: CarlRabeler
-ms.author: carlrab
+author: VanMSFT
+ms.author: vanto
 manager: craigg
-ms.openlocfilehash: c90b3d751484520f86ef6d56c8516c79707e9eef
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 8925e71fb7ed3ea6d53f29b438602cae65820fa6
+ms.sourcegitcommit: c6e71ed14198da67afd7ba722823b1af9b4f4e6f
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47619449"
+ms.lasthandoff: 01/16/2019
+ms.locfileid: "54327612"
 ---
 # <a name="grant-system-object-permissions-transact-sql"></a>GRANT - autorizzazioni per oggetti di sistema (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -86,7 +86,7 @@ GRANT VIEW SERVER STATE to Sylvester1;
 GO  
 ```  
   
-### <a name="b-granting-execute-permission-on-an-extended-stored-procedure"></a>B. Concessione dell'autorizzazione EXECUTE per una stored procedure estesa  
+### <a name="b-granting-execute-permission-on-an-extended-stored-procedure"></a>b. Concessione dell'autorizzazione EXECUTE per una stored procedure estesa  
  Nell'esempio seguente viene concessa l'autorizzazione `EXECUTE` per `xp_readmail` a `Sylvester1`.  
   
 ```  

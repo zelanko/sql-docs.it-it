@@ -19,18 +19,18 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 428fae933e960c30ff876ffbe2a8a5674ec52773
-ms.sourcegitcommit: b58d514879f182fac74d9819918188f1688889f3
+ms.openlocfilehash: 6a1c1624965ad311bb7df039957da8fd25a3321c
+ms.sourcegitcommit: 96032813f6bf1cba680b5e46d82ae1f0f2da3d11
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "50970442"
+ms.lasthandoff: 01/15/2019
+ms.locfileid: "54299018"
 ---
 # <a name="concat-transact-sql"></a>CONCAT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-all-md](../../includes/tsql-appliesto-ss2012-all-md.md)]
 
 > [!div class="nextstepaction"]
-> [Contribuisci a migliorare la documentazione di SQL Server](https://80s3ignv.optimalworkshop.com/optimalsort/36yyw5kq-0)
+> [Condividi il feedback sul sommario della documentazione SQL](https://aka.ms/sqldocsurvey)
 
 Questa funzione restituisce una stringa risultante dalla concatenazione o unione in join end-to-end di due o più valori di stringa. Per l'aggiunta di un valore di separazione durante la concatenazione, vedere [CONCAT_WS](../../t-sql/functions/concat-ws-transact-sql.md).
   
@@ -86,7 +86,7 @@ Happy Birthday 11/25
 (1 row(s) affected)  
 ```  
   
-### <a name="b-using-concat-with-null-values"></a>B. Utilizzo di CONCAT con valori NULL  
+### <a name="b-using-concat-with-null-values"></a>b. Utilizzo di CONCAT con valori NULL  
   
 ```sql
 CREATE TABLE #temp (  

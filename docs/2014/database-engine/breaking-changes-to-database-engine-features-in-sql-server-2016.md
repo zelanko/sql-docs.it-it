@@ -1,7 +1,7 @@
 ---
 title: Modifiche di rilievo apportate al Database del motore Features in SQL Server 2014 | Microsoft Docs
 ms.custom: ''
-ms.date: 11/27/2018
+ms.date: 01/19/2019
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.technology: release-landing
@@ -13,12 +13,12 @@ ms.assetid: 47edefbd-a09b-4087-937a-453cd5c6e061
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: fe4dc2f55b8d9b1bc9475e936341d24d16ce77a6
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: cfb905cb56c053d44b93021838915d3a628241a0
+ms.sourcegitcommit: 480961f14405dc0b096aa8009855dc5a2964f177
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53375273"
+ms.lasthandoff: 01/22/2019
+ms.locfileid: "54420206"
 ---
 # <a name="breaking-changes-to-database-engine-features-in-sql-server-2014"></a>Modifiche che possono causare problemi di funzionamento apportate alle funzionalità del Motore di database in SQL Server 2014.
   In questo argomento vengono descritte le modifiche di rilievo nel [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] [!INCLUDE[ssDE](../includes/ssde-md.md)] e versioni precedenti di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Tali modifiche potrebbero interrompere il funzionamento di applicazioni, funzionalità o script basati su versioni precedenti di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. È possibile che questi problemi si verifichino quando viene effettuato un aggiornamento. Per altre informazioni, vedere [Use Upgrade Advisor to Prepare for Upgrades](../sql-server/install/use-upgrade-advisor-to-prepare-for-upgrades.md).  
@@ -42,7 +42,6 @@ ms.locfileid: "53375273"
 |ALTER TABLE|L'istruzione ALTER TABLE supporta unicamente nomi di tabella in due parti (schema.oggetto). Specificare un nome di tabella utilizzando i seguenti formati di ora non riesce in fase di compilazione dell'errore 117:<br /><br /> server.database.schema.tabella<br /><br /> .database.schema.tabella<br /><br /> ..schema.tabella<br /><br /> Nelle versioni precedenti l'uso del formato server.database.schema.tabella genera l'errore 4902. L'uso del formato .database.schema.tabella o ..schema.tabella è supportato. Per risolvere il problema, rimuovere l'uso di un prefisso in quattro parti.|  
 |Esplorazione dei metadati|L'esecuzione di una query su una vista tramite FOR BROWSE o SET NO_BROWSETABLE ON comporta la restituzione dei metadati della vista, non dell'oggetto sottostante. Questo comportamento corrisponde ad altri metodi di esplorazione dei metadati.|  
 |SOUNDEX|Con il livello di compatibilità del database 110, la funzione SOUNDEX consente di implementare nuove regole che potrebbero generare una differenza tra i valori calcolati dalla funzione e quelli calcolati con livelli di compatibilità precedenti. Dopo aver effettuato l'aggiornamento al livello di compatibilità 110, potrebbe essere necessario ricompilare gli indici, gli heap o i vincoli CHECK in cui viene usata la funzione SOUNDEX. Per altre informazioni, vedere [SOUNDEX &#40;Transact-SQL&#41;](/sql/t-sql/functions/soundex-transact-sql)
- .|  
 |Messaggio sul numero di righe per le istruzioni DML che hanno esito negativo|In [!INCLUDE[ssSQL11](../includes/sssql11-md.md)], [!INCLUDE[ssDE](../includes/ssde-md.md)] invierà regolarmente il token TDS DONE con RowCount: 0 ai client quando un'istruzione DML non riesce. Nelle versioni precedenti di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] un valore errato -1 viene inviato al client quando l'istruzione DML non riuscita si trova all'interno di un blocco TRY-CATCH e il [!INCLUDE[ssDE](../includes/ssde-md.md)] attiva la parametrizzazione automatica oppure il blocco TRY-CATCH non si trova sullo stesso livello dell'istruzione non riuscita. Ad esempio, se un blocco TRY-CATCH chiama una stored procedure e un'istruzione DML nella procedura ha esito negativo, il client riceverà erroneamente un valore -1.<br /><br /> Le applicazioni basate su questo comportamento errato avranno esito negativo.|  
 |SERVERPROPERTY ('edizione')|Edizione del prodotto installata per l'istanza di [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]. Usare il valore di questa proprietà per determinare le funzionalità e i limiti, come il numero massimo di CPU, supportati dal prodotto installato.<br /><br /> In base all'edizione Enterprise installata, può restituire 'Enterprise Edition' o ' Enterprise Edition: Core-based Licensing'. Le edizioni Enterprise sono differenziate in base alla capacità di calcolo massima per una sola istanza di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Per altre informazioni sui limiti di capacità di calcolo in [!INCLUDE[ssSQL11](../includes/sssql11-md.md)], vedere [Compute Capacity Limits by Edition of SQL Server](../sql-server/compute-capacity-limits-by-edition-of-sql-server.md).|  
 |CREATE LOGIN|Il `CREATE LOGIN WITH PASSWORD = '` *password* `' HASHED` opzione non può essere usata con hash creati da [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 7 o versioni precedenti.|  
@@ -146,11 +145,11 @@ ms.locfileid: "53375273"
 #### <a name="affected-xquery-functions-and-operators"></a>Funzioni e operatori XQuery interessati  
  Gli operatori e le funzioni XQuery seguenti gestiscono correttamente le coppie di surrogati UTF-16 in [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]:  
   
--   **fn: String-length**. Tuttavia, se una coppia di surrogati non valide o parziali viene passata come argomento, il comportamento delle **lunghezza della stringa** è definito.  
+-   **fn:string-length**. Tuttavia, se una coppia di surrogati non valide o parziali viene passata come argomento, il comportamento delle **lunghezza della stringa** è definito.  
   
 -   **fn:substring**.  
   
--   **fn: contiene**. Tuttavia, se una coppia di surrogati parziale viene passata come valore, **contiene** possono restituire risultati imprevisti, poiché potrebbe trovare la coppia di surrogati parziale contenuta nella coppia di surrogati con formato corretto.  
+-   **fn:contains**. Tuttavia, se una coppia di surrogati parziale viene passata come valore, **contiene** possono restituire risultati imprevisti, poiché potrebbe trovare la coppia di surrogati parziale contenuta nella coppia di surrogati con formato corretto.  
   
 -   **fn:concat**. Tuttavia, se una coppia di surrogati parziale viene passata come valore, **concat** può generare coppie di surrogati non corrette o coppie di surrogati parziale.  
   
@@ -179,7 +178,7 @@ ms.locfileid: "53375273"
   
  Le funzioni e gli operatori seguenti dimostrano il nuovo comportamento descritto in precedenza solo quando il livello di compatibilità è 110 o superiore:  
   
--   **fn: contiene**.  
+-   **fn:contains**.  
   
 -   **fn:concat**.  
   
@@ -189,7 +188,7 @@ ms.locfileid: "53375273"
   
  Le funzioni seguenti dimostrano il nuovo comportamento descritto in precedenza solo quando l'URI dello spazio dei nomi predefinito corrisponde allo spazio dei nomi nell'indicazione finale, vale a dire [ http://www.w3.org/2005/xpath-functions ](http://www.w3.org/2005/xpath-functions). Quando il livello di compatibilità è impostato su 110 o su un valore superiore, per impostazione predefinita [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] associa lo spazio dei nomi della funzione predefinita a questo spazio dei nomi. Tuttavia, queste funzioni dimostrano il nuovo comportamento quando questo spazio dei nomi viene usato indipendentemente dal livello di compatibilità.  
   
--   **fn: String-length**  
+-   **fn:string-length**  
   
 -   **fn:substring**  
   
@@ -215,7 +214,7 @@ ms.locfileid: "53375273"
 |visualizzazione|Descrizione|  
 |----------|-----------------|  
 |sys.dm_os_sys_info|Sono state rimosse le colonne cpu_ticks_in_ms e sqlserver_start_time_cpu_ticks.|  
-|Sys.dm_exec_query_resource_semaphoressys.dm_exec_query_memory_grants|La colonna resource_semaphore_id non è un ID univoco in [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)]. La modifica può influire sulla risoluzione dei problemi relativi all'esecuzione di query. Per altre informazioni, vedere [DM exec_query_resource_semaphores &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-exec-query-resource-semaphores-transact-sql).|  
+|sys.dm_exec_query_resource_semaphoressys.dm_exec_query_memory_grants|La colonna resource_semaphore_id non è un ID univoco in [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)]. La modifica può influire sulla risoluzione dei problemi relativi all'esecuzione di query. Per altre informazioni, vedere [DM exec_query_resource_semaphores &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-exec-query-resource-semaphores-transact-sql).|  
   
 ### <a name="errors-and-events"></a>Errori ed eventi  
   

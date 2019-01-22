@@ -1,7 +1,7 @@
 ---
 title: Funzione SQLGetDiagField | Microsoft Docs
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 01/19/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -20,14 +20,15 @@ ms.assetid: 1dbc4398-97a8-4585-bb77-1f7ea75e24c4
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 386b2352db8912c0af4a1571cbfc2d7e7f5384c6
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: f975b15d07bf837c0f5fe5d2649cc78b341d23c6
+ms.sourcegitcommit: 480961f14405dc0b096aa8009855dc5a2964f177
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53203980"
+ms.lasthandoff: 01/22/2019
+ms.locfileid: "54420166"
 ---
 # <a name="sqlgetdiagfield-function"></a>Funzione SQLGetDiagField
+
 **Conformità**  
  Versione introdotta: Conformità agli standard 3.0 di ODBC: ISO 92  
   
@@ -36,8 +37,7 @@ ms.locfileid: "53203980"
   
 ## <a name="syntax"></a>Sintassi  
   
-```  
-  
+```cpp
 SQLRETURN SQLGetDiagField(  
      SQLSMALLINT     HandleType,  
      SQLHANDLE       Handle,  
@@ -189,38 +189,59 @@ SQLRETURN SQLGetDiagField(
   
 |Istruzione SQL<br /><br /> eseguito|Valore di<br /><br /> SQL_DIAG_DYNAMIC_FUNCTION|Valore di<br /><br /> SQL_DIAG_DYNAMIC_FUNCTION_CODE|  
 |--------------------------------|-----------------------------------------------|-----------------------------------------------------|  
-|*ALTER-dominio-istruzione*|"ALTER DOMINIO"|SQL_DIAG_ALTER_DOMAIN|  
-|*ALTER-tabella-istruzione*|"ALTER TABLE"|SQL_DIAG_ALTER_TABLE|  
-|*definizione di asserzione*|"CREAZIONE DI ASSERZIONE"|SQL_DIAG_CREATE_ASSERTION|  
-|*definizione di set di caratteri*|"CREAZIONE DI SET DI CARATTERI"|SQL_DIAG_CREATE_CHARACTER_SET|  
-|*definizione di regole di confronto*|"CREAZIONE DI REGOLE DI CONFRONTO"|SQL_DIAG_CREATE_COLLATION|  
-|*Create-index-istruzione*|"CREA INDICE"|SQL_DIAG_CREATE_INDEX|  
-|*Create-tabella-istruzione*|"CREAZIONE DI TABELLA"|SQL_DIAG_CREATE_TABLE|  
-|*Create-view-istruzione*|"CREATE VIEW"|SQL_DIAG_CREATE_VIEW|  
-|*Specifica di cursore.*|"SELECT DEL CURSORE"|SQL_DIAG_SELECT_CURSOR|  
-|*posizionato Delete-istruzione*|"CURSORE DINAMICA DI ELIMINAZIONE"|SQL_DIAG_DYNAMIC_DELETE_CURSOR|  
-|*la ricerca Delete-istruzione*|"ELIMINARE WHERE"|SQL_DIAG_DELETE_WHERE|  
-n-definizione *|"CREA DOMINIO"|SQL_DIAG_CREATE_DOMAIN|  
-|*istruzione di asserzione DROP*|"DROP ASSERZIONE"|SQL_DIAG_DROP_ASSERTION|  
-|*DROP-carattere-set-istruzione*|"IL SET DI CARATTERI DI RILASCIO"|SQL_DIAG_DROP_CHARACTER_SET|  
-|*DROP-regole di confronto-istruzione*|"ELENCO DELLE REGOLE DI CONFRONTO"|SQL_DIAG_DROP_COLLATION|  
-|*DROP-dominio-istruzione*|"DROP DOMINIO"|SQL_DIAG_DROP_DOMAIN|  
-|*DROP-index-istruzione*|"DROP INDEX"|SQL_DIAG_DROP_INDEX|  
-|*DROP-schema-istruzione*|"DROP SCHEMA"|SQL_DIAG_DROP_SCHEMA|  
-|*DROP-tabella-istruzione*|"DROP TABLE"|SQL_DIAG_DROP_TABLE|  
-|*DROP-conversione-istruzione*|"DROP TRADUZIONE"|SQL_DIAG_DROP_TRANSLATION|  
-|*DROP-view-istruzione*|"DROP VIEW"|SQL_DIAG_DROP_VIEW|  
--istruzione *|PANNELLO "CONCEDI"|SQL_DIAG_GRANT|  
-|*Insert-istruzione*|"INSERT"|SQL_DIAG_INSERT|  
-|*ODBC-procedure-extension*|"CHIAMA"|CHIAMATA SQL_DIAG_|  
-|*REVOKE-istruzione*|"REVOKE"|SQL_DIAG_REVOKE|  
-|*definizione dello schema*|"CREAZIONE DI SCHEMI"|SQL_DIAG_CREATE_SCHEMA|  
-|*definizione di traduzione*|"CREAZIONE DI TRADUZIONE"|SQL_DIAG_CREATE_TRANSLATION|  
-|*posizionato a Update-istruzione*|"AGGIORNAMENTO DINAMICO CURSOR"|SQL_DIAG_DYNAMIC_UPDATE_CURSOR|  
-|*la ricerca Update-istruzione*|"AGGIORNARE LA POSIZIONE"|SQL_DIAG_UPDATE_WHERE|  
+|*alter-domain-statement*|"ALTER DOMINIO"|SQL_DIAG_ALTER_DOMAIN|  
+|*alter-table-statement*|"ALTER TABLE"|SQL_DIAG_ALTER_TABLE|  
+|*assertion-definition*|"CREAZIONE DI ASSERZIONE"|SQL_DIAG_CREATE_ASSERTION|  
+|*character-set-definition*|"CREAZIONE DI SET DI CARATTERI"|SQL_DIAG_CREATE_CHARACTER_SET|  
+|*collation-definition*|"CREAZIONE DI REGOLE DI CONFRONTO"|SQL_DIAG_CREATE_COLLATION|  
+|*domainn-definition*|"CREA DOMINIO"|SQL_DIAG_CREATE_DOMAIN|
+|*create-index-statement*|"CREA INDICE"|SQL_DIAG_CREATE_INDEX|  
+|*create-table-statement*|"CREAZIONE DI TABELLA"|SQL_DIAG_CREATE_TABLE|  
+|*create-view-statement*|"CREATE VIEW"|SQL_DIAG_CREATE_VIEW|  
+|*cursor-specification*|"SELECT DEL CURSORE"|SQL_DIAG_SELECT_CURSOR|  
+|*delete-statement-positioned*|"CURSORE DINAMICA DI ELIMINAZIONE"|SQL_DIAG_DYNAMIC_DELETE_CURSOR|  
+|*delete-statement-searched*|"ELIMINARE WHERE"|SQL_DIAG_DELETE_WHERE|  
+|*drop-assertion-statement*|"DROP ASSERZIONE"|SQL_DIAG_DROP_ASSERTION|  
+|*drop-character-set-stmt*|"IL SET DI CARATTERI DI RILASCIO"|SQL_DIAG_DROP_CHARACTER_SET|  
+|*drop-collation-statement*|"ELENCO DELLE REGOLE DI CONFRONTO"|SQL_DIAG_DROP_COLLATION|  
+|*drop-domain-statement*|"DROP DOMINIO"|SQL_DIAG_DROP_DOMAIN|  
+|*drop-index-statement*|"DROP INDEX"|SQL_DIAG_DROP_INDEX|  
+|*drop-schema-statement*|"DROP SCHEMA"|SQL_DIAG_DROP_SCHEMA|  
+|*drop-table-statement*|"DROP TABLE"|SQL_DIAG_DROP_TABLE|  
+|*drop-translation-statement*|"DROP TRADUZIONE"|SQL_DIAG_DROP_TRANSLATION|  
+|*drop-view-statement*|"DROP VIEW"|SQL_DIAG_DROP_VIEW|  
+|*grantstatement*|PANNELLO "CONCEDI"|SQL_DIAG_GRANT|
+|*insert-statement*|"INSERT"|SQL_DIAG_INSERT|  
+|*ODBC-procedure-extension*|"CHIAMA"|SQL_DIAG_ CALL|  
+|*revoke-statement*|"REVOKE"|SQL_DIAG_REVOKE|  
+|*schema-definition*|"CREAZIONE DI SCHEMI"|SQL_DIAG_CREATE_SCHEMA|  
+|*translation-definition*|"CREAZIONE DI TRADUZIONE"|SQL_DIAG_CREATE_TRANSLATION|  
+|*update-statement-positioned*|"AGGIORNAMENTO DINAMICO CURSOR"|SQL_DIAG_DYNAMIC_UPDATE_CURSOR|  
+|*update-statement-searched*|"AGGIORNARE LA POSIZIONE"|SQL_DIAG_UPDATE_WHERE|  
 |Unknown|*stringa vuota*|SQL_DIAG_UNKNOWN_STATEMENT|  
-  
-## <a name="sequence-of-status-records"></a>Sequenza di record di stato  
+
+<!--
+These two malformed table rows were fixed by educated GUESS only.
+Each pair starts with the original flawed row.
+Flawed because treated as only two cells by HTML render,
+and because missing info anyway.
+Also, these flawed rows lacked '|' as their first nonWhitespace character (although markdown technically allows this omission, unfortunately).
+Arguably the following SQL.H file shows the sequence of the flawed rows in the table was suboptimal also.
+
+ftp://www.fpc.org/fpc32/VS6Disk1/VC98/INCLUDE/SQL.H
+
+GeneMi , 2019/01/19
+- - - - - - - - - - - - - -
+
+n-definition*|"CREATE DOMAIN"|SQL_DIAG_CREATE_DOMAIN|  
+|*domain-definition*|"CREATE DOMAIN"|SQL_DIAG_CREATE_DOMAIN|
+
+-statement*|"GRANT"|SQL_DIAG_GRANT|  
+|*grant-statement*|"GRANT"|SQL_DIAG_GRANT|
+-->
+
+## <a name="sequence-of-status-records"></a>Sequenza di record di stato
+
  Record di stato vengono posizionati in una sequenza basata sul numero di riga e il tipo della diagnostica. Gestione Driver determina l'ordine finale in cui restituire i record di stato che genera. Il driver determina l'ordine finale in cui restituire i record di stato che genera.  
   
  Se i record di diagnostica vengono inviati da Gestione Driver e il driver, Driver Manager è responsabile ordinandoli.  
@@ -254,7 +275,7 @@ n-definizione *|"CREA DOMINIO"|SQL_DIAG_CREATE_DOMAIN|
   
 |Per informazioni su|Vedere|  
 |---------------------------|---------|  
-|Recupero di più campi di una struttura di dati di diagnostica|[Funzione SQLGetDiagRec](../../../odbc/reference/syntax/sqlgetdiagrec-function.md)|  
+|Recupero di più campi di una struttura di dati di diagnostica|[Funzione SQLGetDiagRec](sqlgetdiagrec-function.md)|  
   
 ## <a name="see-also"></a>Vedere anche  
  [Riferimento all'API ODBC](../../../odbc/reference/syntax/odbc-api-reference.md)   

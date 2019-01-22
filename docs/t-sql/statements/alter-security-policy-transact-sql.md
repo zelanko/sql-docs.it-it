@@ -17,15 +17,15 @@ dev_langs:
 helpviewer_keywords:
 - ALTER SECURITY POLICY statement
 ms.assetid: a8efc37e-113d-489c-babc-b914fea2c316
-author: CarlRabeler
-ms.author: carlrab
+author: VanMSFT
+ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 1476efcf0060344279a1bd78a25057e25c54bb2a
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 5eb2b34e078d6fa48b3b9bc8e0be6b1b6c367732
+ms.sourcegitcommit: 9c99f992abd5f1c174b3d1e978774dffb99ff218
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52519777"
+ms.lasthandoff: 01/17/2019
+ms.locfileid: "54361511"
 ---
 # <a name="alter-security-policy-transact-sql"></a>ALTER SECURITY POLICY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -81,7 +81,7 @@ ALTER SECURITY POLICY schema_name.security_policy_name
  Non è possibile modificare l'operazione ALTER per la quale verrà applicato un predicato di blocco, poiché l'operazione viene usata per identificare in modo univoco il predicato. In alternativa, è necessario eliminare il predicato e aggiungerne uno nuovo per la nuova operazione.  
   
  WITH ( STATE = { ON | OFF } )  
- Abilita o disabilita il criterio di sicurezza per l'applicazione dei relativi predicati di sicurezza alle tabelle di destinazione. Se non specificato, il criterio di sicurezza creato è disabilitato.  
+ Abilita o disabilita il criterio di sicurezza per l'applicazione dei relativi predicati di sicurezza alle tabelle di destinazione. Se non specificato, il criterio di sicurezza creato è abilitato.  
   
  NOT FOR REPLICATION  
  Indica che il criterio di sicurezza non deve essere eseguito quando un agente di replica modifica l'oggetto di destinazione. Per altre informazioni, vedere [Controllare il comportamento di trigger e vincoli durante la sincronizzazione &#40;programmazione Transact-SQL della replica&#41;](../../relational-databases/replication/control-behavior-of-triggers-and-constraints-in-synchronization.md).  
@@ -117,7 +117,7 @@ ALTER SECURITY POLICY pol1
     ON myschema.mytable;  
 ```  
   
-### <a name="b-enabling-an-existing-policy"></a>B. Abilitazione di un criterio esistente  
+### <a name="b-enabling-an-existing-policy"></a>b. Abilitazione di un criterio esistente  
  L'esempio seguente usa la sintassi di ALTER per abilitare un criterio di sicurezza.  
   
 ```  

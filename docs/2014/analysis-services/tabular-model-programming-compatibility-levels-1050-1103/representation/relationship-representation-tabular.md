@@ -1,7 +1,7 @@
 ---
 title: Rappresentazione della relazione (tabulare) | Microsoft Docs
 ms.custom: ''
-ms.date: 06/13/2017
+ms.date: 01/19/2019
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.technology:
@@ -12,17 +12,17 @@ ms.assetid: 86a5eff8-4e07-444b-ac15-5695f09aa105
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: c62af4be43978f36f46594757964a9fcdae58ce5
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 3d11d0b6a1e1be93cb3c521bb32782dcb127e822
+ms.sourcegitcommit: 480961f14405dc0b096aa8009855dc5a2964f177
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48058901"
+ms.lasthandoff: 01/22/2019
+ms.locfileid: "54420156"
 ---
 # <a name="relationship-representation-tabular"></a>Rappresentazione di una relazione (tabulare)
   Una relazione è una connessione tra due tabelle di dati e consente di stabilire in che modo devono essere correlati i dati nelle due tabelle.  
   
- Visualizzare [Relationship Representation (Tabular)](relationship-representation-tabular.md) per una spiegazione dettagliata su come creare e modificare la rappresentazione della relazione.  
+ Per una spiegazione dettagliata su come creare e modificare la rappresentazione della relazione, vedere [Relationship Representation (Tabular)](relationship-representation-tabular.md) .  
   
 ## <a name="relationship-representation"></a>Rappresentazione di una relazione  
  Nei modelli tabulari, più relazioni possono essere definite tra due tabelle. Quando vengono definite più relazioni tra due tabelle, solo una di queste può essere definita come relazione predefinita per il modello e viene denominata come relazione attiva. Tutte le altre relazioni vengono denominate come inattive.  
@@ -32,8 +32,7 @@ ms.locfileid: "48058901"
   
  Nei frammenti di codice seguenti viene mostrato come creare una relazione nei modelli tabulari, come attivare una relazione e come definire una chiave primaria in una tabella (diversa da "RowNumber"). Per creare una relazione attiva, è necessario definire una chiave primaria nella tabella di chiave primaria, PKTableName, della relazione (uno dei lati della relazione). Nell'esempio la chiave primaria viene creata in PKColumnName se nella colonna non è definita alcuna chiave primaria. È possibile creare relazioni inattive senza necessità di disporre di una chiave primaria nella colonna chiave primaria.  
   
-```  
-  
+```cs
 private Boolean createRelationship(string PKTableName, string PKColumnName, string MVTableName, string MVColumnName, AMO.Database tabularDb, string cubeName, Boolean forceActive)  
 {  
     //verify input parameters  

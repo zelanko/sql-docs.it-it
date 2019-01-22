@@ -14,18 +14,18 @@ ms.assetid: dfac8ade-eebe-4ebe-a199-feb740ed5bae
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 0aba0eeb6d3d6450a0493a4cf06a8c58bb21d23a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 6737a995db78f2a5ba625ddf200a0171582026ae
+ms.sourcegitcommit: 480961f14405dc0b096aa8009855dc5a2964f177
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47655999"
+ms.lasthandoff: 01/22/2019
+ms.locfileid: "54419736"
 ---
 # <a name="installing-the-software-odbc"></a>Installazione del software (ODBC)
 > [!IMPORTANT]  
 >  Questa funzionalità verrà rimossa in una versione futura di Windows. Evitare di usare questa funzionalità in un nuovo progetto di sviluppo e prevedere interventi di modifica nelle applicazioni in cui è attualmente implementata. In alternativa, usare il driver ODBC fornito da Oracle.  
   
- Il Driver ODBC per Oracle è uno dei componenti di accesso ai dati. Fornito con gli altri componenti ODBC, ad esempio Amministrazione origine dati di ODBC e deve essere già installato. Il driver sono disponibili anche in "I driver e altri download" nel sito Web Online servizio supporto tecnico Microsoft all'indirizzo www.microsoft.com.  
+ Il Driver ODBC per Oracle è uno dei componenti di accesso ai dati. Fornito con gli altri componenti ODBC, ad esempio Amministrazione origine dati di ODBC e deve essere già installato. Il driver sono disponibili anche in "I driver e altri download" nel sito Web servizi di supporto tecnico Microsoft Online nella [www.microsoft.com](https://www.microsoft.com).  
   
  Software di rete deve essere installato in base alla propria documentazione. Il Driver ODBC per Oracle non richiede nessun considerazioni sull'installazione speciale, purché il software di rete è supportato.  
   

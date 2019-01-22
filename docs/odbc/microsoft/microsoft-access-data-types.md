@@ -1,7 +1,7 @@
 ---
 title: I tipi di dati Microsoft Access | Microsoft Docs
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 01/19/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -18,12 +18,12 @@ ms.assetid: b537348a-bea0-4bd6-84a4-52a75292957f
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 11f45698a5ad8b7fd05052cbb2d23520790c425a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b99fd70e0119aa01d384066aaa2f3b91eed152b4
+ms.sourcegitcommit: 480961f14405dc0b096aa8009855dc5a2964f177
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47692979"
+ms.lasthandoff: 01/22/2019
+ms.locfileid: "54420176"
 ---
 # <a name="microsoft-access-data-types"></a>Tipi di dati Microsoft Access
 Nella tabella seguente illustra i tipi di dati Microsoft Access, tipi di dati utilizzati per creare tabelle e tipi di dati SQL ODBC.  
@@ -38,8 +38,8 @@ Nella tabella seguente illustra i tipi di dati Microsoft Access, tipi di dati ut
 |DATA/ORA|DATETIME|SQL_TIMESTAMP|  
 |GUID|GUID|SQL_GUID|  
 |BINARIO LONG|LONGBINARY|SQL_LONGVARBINARY|  
-|TESTO LUNGO|LONGTEXT|SQL_WLONGVARCHAR SQL_LONGVARCHAR [2] [3]|  
-|MEMO|LONGTEXT|SQL_WLONGVARCHAR SQL_LONGVARCHAR [2] [3]|  
+|TESTO LUNGO|LONGTEXT|SQL_LONGVARCHAR[2] SQL_WLONGVARCHAR[3]|  
+|MEMO|LONGTEXT|SQL_LONGVARCHAR[2] SQL_WLONGVARCHAR[3]|  
 |NUMERO (Dimensione campo = CELIBE / nubile)|SINGOLO|SQL_REAL|  
 |NUMERO (Dimensione campo = valore DOUBLE)|DOUBLE|SQL_DOUBLE|  
 |NUMERO (Dimensione campo = BYTE)|BYTE SENZA SEGNO|SQL_TINYINT|  
@@ -47,8 +47,8 @@ Nella tabella seguente illustra i tipi di dati Microsoft Access, tipi di dati ut
 |NUMERO (Dimensione campo = valore LONG INTEGER)|LONG|SQL_INTEGER|  
 |NUMERIC|NUMERIC|SQL_NUMERIC|  
 |OLE|LONGBINARY|SQL_LONGVARBINARY|  
-|TEXT|VARCHAR|SQL_WVARCHAR SQL_VARCHAR [1] [2]|  
-ARBINARY|VARBINARY|SQL_VARBINARY|  
+|TEXT|VARCHAR|SQL_VARCHAR[1] SQL_WVARCHAR[2]|  
+|VARBINARY|VARBINARY|SQL_VARBINARY|  
   
  [1] solo le applicazioni di accesso 4.0. Lunghezza massima di 4000 byte. Comportamento simile a LONGBINARY.  
   
@@ -61,7 +61,7 @@ ARBINARY|VARBINARY|SQL_VARBINARY|
   
  La tabella seguente illustra le limitazioni sui tipi di dati Microsoft Access.  
   
-|Tipo di dati|Description|  
+|Tipo di dati|Descrizione|  
 |---------------|-----------------|  
 |BINARY, VARBINARY e VARCHAR|Creazione di una colonna BINARY, VARBINARY o VARCHAR pari a zero o di lunghezza non specificata restituisce effettivamente una colonna di 510 byte.|  
 |BYTE|Anche se un campo del numero di accesso ai Microsoft con una dimensione pari a BYTE senza segno, un numero negativo può essere inserito nel campo quando si usa il driver Microsoft Access.|  

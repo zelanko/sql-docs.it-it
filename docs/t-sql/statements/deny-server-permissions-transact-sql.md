@@ -15,15 +15,15 @@ helpviewer_keywords:
 - servers [SQL Server], permissions
 - DENY statement, servers
 ms.assetid: 68d6b2a9-c36f-465a-9cd2-01d43a667e99
-author: CarlRabeler
-ms.author: carlrab
+author: VanMSFT
+ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 679d4a46b4904c6396cb7fb84e941016248c6526
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: 9f480a406983fa0e4bdce4c100b4ccb4d44c5c3a
+ms.sourcegitcommit: 9c99f992abd5f1c174b3d1e978774dffb99ff218
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51699809"
+ms.lasthandoff: 01/17/2019
+ms.locfileid: "54361591"
 ---
 # <a name="deny-server-permissions-transact-sql"></a>DENY - autorizzazioni per server (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -156,7 +156,7 @@ DENY CONNECT SQL TO Annika CASCADE;
 GO  
 ```  
   
-### <a name="b-denying-create-endpoint-permission-to-a-sql-server-login-using-the-as-option"></a>B. Negazione dell'autorizzazione CREATE ENDPOINT a un account di accesso di SQL Server con l'opzione AS  
+### <a name="b-denying-create-endpoint-permission-to-a-sql-server-login-using-the-as-option"></a>b. Negazione dell'autorizzazione CREATE ENDPOINT a un account di accesso di SQL Server con l'opzione AS  
  Nell'esempio seguente viene negata l'autorizzazione `CREATE ENDPOINT` all'utente `ArifS`. Nell'esempio viene utilizzata l'opzione `AS` per specificare `MandarP` come entità da cui l'entità che esegue l'istruzione deriva il diritto di effettuare l'operazione.  
   
 ```  

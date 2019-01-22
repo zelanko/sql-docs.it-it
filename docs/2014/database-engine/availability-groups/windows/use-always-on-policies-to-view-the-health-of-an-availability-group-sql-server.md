@@ -1,7 +1,7 @@
 ---
 title: Usare i criteri AlwaysOn per visualizzare l'integrità di un gruppo di disponibilità (SQL Server) | Microsoft Docs
 ms.custom: ''
-ms.date: 06/13/2017
+ms.date: 01/19/2019
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.technology: high-availability
@@ -12,12 +12,12 @@ ms.assetid: 6f1bcbc3-1220-4071-8e53-4b957f5d3089
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 9ff043a40449664385360b073451b0217727a5c0
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 12a183718ee13915fd6236caf943fea03819e723
+ms.sourcegitcommit: 480961f14405dc0b096aa8009855dc5a2964f177
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53355236"
+ms.lasthandoff: 01/22/2019
+ms.locfileid: "54420126"
 ---
 # <a name="use-alwayson-policies-to-view-the-health-of-an-availability-group-sql-server"></a>Utilizzare i criteri AlwaysOn per visualizzare l'integrità di un gruppo di disponibilità (SQL Server)
   In questo argomento viene illustrato come determinare l'integrità operativa di un gruppo di disponibilità AlwaysOn utilizzando i criteri AlwaysOn in [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] o PowerShell in [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]. Per informazioni sulla gestione basata su criteri AlwaysOn, vedere [i criteri AlwaysOn per problemi operativi con gruppi di disponibilità AlwaysOn (SQL Server)](always-on-policies-for-operational-issues-always-on-availability.md).  
@@ -61,9 +61,10 @@ ms.locfileid: "53355236"
   
      Ad esempio, il comando seguente mostra tutti i gruppi di disponibilità con stato di integrità "Error" nell'istanza del server `Computer\Instance`.  
   
-    ```  
-    Get-ChildItem SQLSERVER:\Sql\Computer\Instance\AvailabilityGroups `   
-    | Test-SqlAvailabilityGroup | Where-Object { $_.HealthState -eq "Error" }  
+    ```powershell
+    Get-ChildItem SQLSERVER:\Sql\Computer\Instance\AvailabilityGroups |
+        Test-SqlAvailabilityGroup |
+        Where-Object { $_.HealthState -eq "Error" }  
     ```  
   
      `Test-SqlAvailabilityReplica`  
@@ -71,7 +72,7 @@ ms.locfileid: "53355236"
   
      Ad esempio, il seguente comando valuta l'integrità della replica di disponibilità denominata `MyReplica` nel gruppo di disponibilità `MyAg` e restituisce un breve riepilogo.  
   
-    ```  
+    ```powershell
     Test-SqlAvailabilityReplica `   
     -Path SQLSERVER:\Sql\Computer\Instance\AvailabilityGroups\MyAg\AvailabilityReplicas\MyReplica  
     ```  
@@ -81,9 +82,9 @@ ms.locfileid: "53355236"
   
      Ad esempio, il seguente comando valuta l'integrità di tutte i database di disponibilità nel gruppo di disponibilità `MyAg` e restituisce un breve riepilogo per ognuno di essi.  
   
-    ```  
-    Get-ChildItem SQLSERVER:\Sql\Computer\Instance\AvailabilityGroups\MyAg\DatabaseReplicaStates `   
-     | Test-SqlDatabaseReplicaState  
+    ```powershell
+    Get-ChildItem SQLSERVER:\Sql\Computer\Instance\AvailabilityGroups\MyAg\DatabaseReplicaStates |
+        Test-SqlDatabaseReplicaState  
     ```  
   
      Questi cmdlet accettano le opzioni seguenti:  
@@ -98,11 +99,10 @@ ms.locfileid: "53355236"
   
      Ad esempio, il seguente comando `Test-SqlAvailabilityGroup` specifica il parametro `-ShowPolicyDetails` per mostrare i risultati della valutazione per ciascun criterio eseguita da questo cmdlet per ciascun criterio della gestione basata su criteri eseguito sul gruppo di disponibilità `MyAg`.  
   
-    ```  
+    ```powershell
     Test-SqlAvailabilityGroup `   
     -Path SQLSERVER:\Sql\Computer\Instance\AvailabilityGroups\AgName `  
     -ShowPolicyDetails  
-  
     ```  
   
     > [!NOTE]  
@@ -117,11 +117,11 @@ ms.locfileid: "53355236"
 ##  <a name="RelatedContent"></a> Contenuto correlato  
  **SQL Server AlwaysOn Team blog: monitoraggio dell'integrità AlwaysOn con PowerShell:**  
   
--   [Parte 1: Panoramica su Cmdlet di base](https://blogs.msdn.com/b/sqlalwayson/archive/2012/02/13/monitoring-alwayson-health-with-powershell-part-1.aspx)  
+-   [Parte 1: Panoramica dei cmdlet di base](https://blogs.msdn.com/b/sqlalwayson/archive/2012/02/13/monitoring-alwayson-health-with-powershell-part-1.aspx)  
   
--   [Parte 2: Utilizzo avanzato di Cmdlet](https://blogs.msdn.com/b/sqlalwayson/archive/2012/02/13/monitoring-alwayson-health-with-powershell-part-2.aspx)  
+-   [Parte 2: Utilizzo di cmdlet avanzati](https://blogs.msdn.com/b/sqlalwayson/archive/2012/02/13/monitoring-alwayson-health-with-powershell-part-2.aspx)  
   
--   [Parte 3: Un'applicazione di monitoraggio semplice](https://blogs.msdn.com/b/sqlalwayson/archive/2012/02/15/monitoring-alwayson-health-with-powershell-part-3.aspx)  
+-   [Parte 3: Semplice applicazione di monitoraggio](https://blogs.msdn.com/b/sqlalwayson/archive/2012/02/15/monitoring-alwayson-health-with-powershell-part-3.aspx)  
   
 -   [Parte 4: Integrazione con SQL Server Agent](https://blogs.msdn.com/b/sqlalwayson/archive/2012/02/15/the-always-on-health-model-part-4.aspx)  
   

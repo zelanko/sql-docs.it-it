@@ -1,7 +1,7 @@
 ---
 title: Configurazione dei protocolli di rete predefiniti di SQL Server | Microsoft Docs
 ms.custom: ''
-ms.date: 07/11/2017
+ms.date: 01/19/2019
 ms.prod: sql
 ms.prod_service: high-availability
 ms.reviewer: ''
@@ -14,12 +14,12 @@ ms.assetid: 635ea361-a797-4971-bd05-e3415862bc5c
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 197b694f0ff68b459bff7517bbf5701a0452d48f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f98a6e019790e7bc4e102a400c6f28f53c344e92
+ms.sourcegitcommit: 480961f14405dc0b096aa8009855dc5a2964f177
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47622089"
+ms.lasthandoff: 01/22/2019
+ms.locfileid: "54419617"
 ---
 # <a name="default-sql-server-network-protocol-configuration"></a>Configurazione dei protocolli di rete predefiniti di SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -32,16 +32,16 @@ Usare il nodo Configurazione di rete [!INCLUDE[ssNoVersion_md](../../includes/ss
 
 Nella tabella seguente viene descritta la configurazione dopo l'installazione.
 
-Edizione | Presenza di nuova installazione o installazione precedente | Shared Memory | TCP/IP    | Named Pipes
+|Edizione | Presenza di nuova installazione o installazione precedente | Shared Memory | TCP/IP | Named Pipes|
 | -------- | -- | -- | -- | --  |  
-Enterprise  | Nuova installazione  | Abilitata   | Abilitata   | Disabilitate per le connessioni di rete.
-Standard    | Nuova installazione  | Abilitata   | Abilitata   | Disabilitate per le connessioni di rete.
-Web | Nuova installazione  | Abilitata   | Abilitata   | Disabilitate per le connessioni di rete.
-Developer   | Nuova installazione  | Abilitata   | Disabilitata  | Disabilitate per le connessioni di rete.
-Copia di valutazione  | Nuova installazione  | Abilitata   | Abilitata   | Disabilitate per le connessioni di rete.
-SQL Server Express  | Nuova installazione  | Abilitata   | Disabilitata  | Disabilitate per le connessioni di rete.
-Tutte le edizioni    | L'installazione precedente è presente, ma non viene aggiornata.   | Come in una nuova installazione  | Come in una nuova installazione  | Come in una nuova installazione
-Tutte le edizioni    | Aggiornamento   | Abilitata   | Impostazioni mantenute dall'installazione precedente.    | Impostazioni mantenute dall'installazione precedente.
+|Enterprise | Nuova installazione | Abilitata | Abilitata | Disabilitate per le connessioni di rete.|
+|Standard | Nuova installazione | Abilitata | Abilitata | Disabilitate per le connessioni di rete.|
+|Web | Nuova installazione | Abilitata | Abilitata | Disabilitate per le connessioni di rete.|
+|Developer | Nuova installazione | Abilitata | Disabilitata | Disabilitate per le connessioni di rete.|
+|Copia di valutazione | Nuova installazione | Abilitata | Abilitata | Disabilitate per le connessioni di rete.|
+|SQL Server Express | Nuova installazione | Abilitata | Disabilitata | Disabilitate per le connessioni di rete.|
+|Tutte le edizioni | L'installazione precedente è presente, ma non viene aggiornata. | Come in una nuova installazione | Come in una nuova installazione | Come in una nuova installazione|
+|Tutte le edizioni | Aggiornamento | Abilitata | Impostazioni mantenute dall'installazione precedente. | Impostazioni mantenute dall'installazione precedente.|
 
 
 >[!NOTE]
