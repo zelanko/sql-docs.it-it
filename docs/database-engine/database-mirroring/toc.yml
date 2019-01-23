@@ -1,143 +1,159 @@
-- name: Endpoint del mirroring del database
-  href: the-database-mirroring-endpoint-sql-server.md
-- name: Aree endpoint
-  items:
-    - name: Sicurezza trasporto per il mirroring del database e i gruppi di disponibilità AlwaysOn
-      href: transport-security-database-mirroring-always-on-availability.md
-    - name: Creare un endpoint del mirroring del database per l'autenticazione Windows (Transact-SQL)
-      href: create-a-database-mirroring-endpoint-for-windows-authentication-transact-sql.md
-    - name: Configurare gli account di accesso per il mirroring del database o i gruppi di disponibilità AlwaysOn
-      href: set-up-login-accounts-database-mirroring-always-on-availability.md
-    - name: Concessione dell'accesso alla rete a un endpoint per il mirroring del database utilizzando l'autenticazione di Windows
-      href: database-mirroring-allow-network-access-windows-authentication.md
-    - name: Utilizzare certificati per un endpoint del mirroring del database (Transact-SQL)
-      href: use-certificates-for-a-database-mirroring-endpoint-transact-sql.md
-      items:
-        - name: Impostazione dell'endpoint del mirroring del database per l'utilizzo di certificati per le connessioni in uscita (Transact-SQL)
-          href: database-mirroring-use-certificates-for-outbound-connections.md
-        - name: Impostazione dell'endpoint del mirroring del database per l'utilizzo di certificati per le connessioni in entrata (Transact-SQL)
-          href: database-mirroring-use-certificates-for-inbound-connections.md
-- name: Mirroring del database
+items:
+- name: Panoramica
   href: database-mirroring-sql-server.md
   items:
-    - name: Prerequisiti restrizioni e indicazioni per il mirroring del database
-      href: prerequisites-restrictions-and-recommendations-for-database-mirroring.md
-    - name: Modalità di funzionamento del mirroring del database
-      href: database-mirroring-operating-modes.md
+  - name: Prerequisiti restrizioni e indicazioni per il mirroring del database
+    href: prerequisites-restrictions-and-recommendations-for-database-mirroring.md
+  - name: Stati di mirroring
+    href: mirroring-states-sql-server.md
+  - name: Modalità di funzionamento del mirroring del database
+    href: database-mirroring-operating-modes.md
+  - name: Server di controllo del mirroring del database
+    href: database-mirroring-witness.md
+- name: Procedure
+  items:
+  - name: Configurazione
+    items:
+    - name: Distribuzione
       items:
-        - name: Modifica della protezione delle transazioni in una sessione di mirroring del database (Transact-SQL)
-          href: change-transaction-safety-in-a-database-mirroring-session-transact-sql.md
-    - name: Server di controllo del mirroring del database
-      href: database-mirroring-witness.md
-      items:
-        - name: 'Quorum: Impatto di un server di controllo del mirroring sulla disponibilità del database'
-          href: quorum-how-a-witness-affects-database-availability-database-mirroring.md
-        - name: Aggiungere un server di controllo del mirroring del database tramite l'autenticazione di Windows (Transact-SQL)
-          href: add-a-database-mirroring-witness-using-windows-authentication-transact-sql.md
-        - name: Aggiunta o sostituzione di un server di controllo del mirroring del database (SQL Server Management Studio)
-          href: add-or-replace-a-database-mirroring-witness-sql-server-management-studio.md
-        - name: Rimuovere il server di controllo del mirroring da una sessione di mirroring del database (SQL Server)
-          href: remove-the-witness-from-a-database-mirroring-session-sql-server.md
-    - name: Cambio di ruolo durante una sessione di mirroring del database
-      href: role-switching-during-a-database-mirroring-session-sql-server.md
-      items:
-        - name: Failover manuale in una sessione di mirroring del database (Transact-SQL)
-          href: manually-fail-over-a-database-mirroring-session-transact-sql.md
-        - name: Failover manuale di una sessione di mirroring del database (SQL Server Management Studio)
-          href: manually-fail-over-a-database-mirroring-session-sql-server-management-studio.md
-        - name: Utilizzo forzato del servizio in una sessione di mirroring del database (Transact-SQL)
-          href: force-service-in-a-database-mirroring-session-transact-sql.md
-        - name: Stimare l'interruzione del servizio durante il cambio di ruolo
-          href: estimate-the-interruption-of-service-during-role-switching-database-mirroring.md
-    - name: Possibili errori durante il mirroring del database
-      href: possible-failures-during-database-mirroring.md
-    - name: Stati di mirroring (SQL Server)
-      href: mirroring-states-sql-server.md
-    - name: Impostazione del mirroring del database
-      href: setting-up-database-mirroring-sql-server.md
-      items:
-        - name: Preparazione di un database mirror per il mirroring
-          href: prepare-a-mirror-database-for-mirroring-sql-server.md
-          items:
-            - name: Impostazione di un database mirror crittografato
-              href: set-up-an-encrypted-mirror-database.md
-            - name: Impostazione di un database mirror per l'utilizzo della proprietà Trustworthy (Transact-SQL)
-              href: set-up-a-mirror-database-to-use-the-trustworthy-property-transact-sql.md
-        - name: Specificare un indirizzo di rete del server (Mirroring del database)
-          href: specify-a-server-network-address-database-mirroring.md
-        - name: Stabilire una sessione di mirroring del database tramite autenticazione di Windows (SQL Server Management Studio)
-          href: establish-database-mirroring-session-windows-authentication.md
-          items:
-            - name: Avvio della Configurazione guidata sicurezza mirroring del database (SQL Server Management Studio)
-              href: start-the-configuring-database-mirroring-security-wizard.md
-              items:
-                - name: Aggiunta server di controllo del mirroring (Configurazione guidata sicurezza mirroring del database)
-                  href: include-witness-server-configure-database-mirroring-security-wizard.md
-                - name: Selezione dei server da configurare (Configurazione guidata sicurezza mirroring del database)
-                  href: choose-servers-to-configure-configure-database-mirroring-security-wizard.md
-                - name: Istanza server principale (Configurazione guidata sicurezza mirroring del database)
-                  href: principal-server-instance-configure-database-mirroring-security-wizard.md
-                - name: Istanza server mirror (Configurazione guidata sicurezza mirroring del database)
-                  href: mirror-server-instance-configure-database-mirroring-security-wizard.md
-                - name: Istanza server di controllo del mirroring (Configurazione guidata sicurezza mirroring del database)
-                  href: witness-server-instance-configure-database-mirroring-security-wizard.md
-                - name: Account di servizio (Configurazione guidata sicurezza mirroring del database)
-                  href: service-accounts-configure-database-mirroring-security-wizard.md
-        - name: Stabilire una sessione di mirroring del database tramite autenticazione di Windows (Transact-SQL)
-          href: database-mirroring-establish-session-windows-authentication.md
-          items:
-            - name: 'Esempio: Impostazione del mirroring del database tramite l''autenticazione di Windows (Transact-SQL)'
-              href: example-setting-up-database-mirroring-using-windows-authentication-transact-sql.md
+      - name: Configurazione del mirroring del database
+        href: setting-up-database-mirroring-sql-server.md
+      - name: Preparazione di un database mirror per il mirroring
+        href: prepare-a-mirror-database-for-mirroring-sql-server.md
+      - name: Configurare un database mirror crittografato
+        href: set-up-an-encrypted-mirror-database.md
+      - name: Configurare un database mirror per usare la proprietà trustworthy
+        href: set-up-a-mirror-database-to-use-the-trustworthy-property-transact-sql.md
+      - name: Specificare un indirizzo di rete del server
+        href: specify-a-server-network-address-database-mirroring.md
+      - name: Stabilire una sessione di mirroring del database
+        href: establish-database-mirroring-session-windows-authentication.md
+        items:
+        - name: "Esempio: Configurazione del mirroring del database tramite l'autenticazione di Windows (Transact-SQL)"
+          href: example-setting-up-database-mirroring-using-windows-authentication-transact-sql.md
         - name: 'Esempio: Impostazione del mirroring del database tramite certificati (Transact-SQL)'
           href: example-setting-up-database-mirroring-using-certificates-transact-sql.md
-        - name: Risoluzione dei problemi relativi alla configurazione del mirroring del database
-          href: troubleshoot-database-mirroring-configuration-sql-server.md
-    - name: Connessione di client a una sessione di mirroring del database
+      - name: Aggiornamento di istanze con mirroring
+        href: upgrading-mirrored-instances.md
+      - name: Rimuovere il mirroring del database
+        href: remove-database-mirroring-sql-server.md
+    - name: Controllo
+      items:
+      - name: Aggiungere un server di controllo del mirroring usando l'autenticazione di Windows
+        href: add-a-database-mirroring-witness-using-windows-authentication-transact-sql.md
+      - name: Aggiungere o sostituire un server di controllo del mirroring
+        href: add-or-replace-a-database-mirroring-witness-sql-server-management-studio.md
+      - name: Rimuovere il server di controllo del mirroring
+        href: remove-the-witness-from-a-database-mirroring-session-sql-server.md
+  - name: Amministrazione
+    items:
+    - name: Visualizzare lo stato di un database con mirroring
+      href: view-the-state-of-a-mirrored-database-sql-server-management-studio.md
+    - name: Sospendere o riprendere il mirroring del database
+      href: pause-or-resume-a-database-mirroring-session-sql-server.md
+    - name: Connettere i client
       href: connect-clients-to-a-database-mirroring-session-sql-server.md
-    - name: Sospensione e ripresa del mirroring del database
-      href: pausing-and-resuming-database-mirroring-sql-server.md
+    - name: Usare valori di soglia avvisi e avvisi per le metriche delle prestazioni di mirroring
+      href: use-warning-thresholds-and-alerts-on-mirroring-performance-metrics-sql-server.md
+    - name: Modificare il livello di sicurezza delle transazioni
+      href: change-transaction-safety-in-a-database-mirroring-session-transact-sql.md
+    - name: Stimare l'interruzione durante il cambio di ruolo
+      href: estimate-the-interruption-of-service-during-role-switching-database-mirroring.md
+    - name: Failover manuale (T-SQL)
+      href: manually-fail-over-a-database-mirroring-session-transact-sql.md
+    - name: Failover manuale (SSMS)
+      href: manually-fail-over-a-database-mirroring-session-sql-server-management-studio.md
+    - name: Forzare il failover del servizio
+      href: force-service-in-a-database-mirroring-session-transact-sql.md
+    - name: Risoluzione dei problemi relativi alla configurazione del mirroring del database
+      href: troubleshoot-database-mirroring-configuration-sql-server.md
+  - name: Security
+    items:
+    - name: Configurare gli account di accesso per il mirroring del database o i gruppi di disponibilità AlwaysOn
+      href: set-up-login-accounts-database-mirroring-always-on-availability.md
+    - name: Creare un endpoint per l'autenticazione di Windows
+      href: create-a-database-mirroring-endpoint-for-windows-authentication-transact-sql.md
+    - name: Consentire l'accesso alla rete a un endpoint
+      href: database-mirroring-allow-network-access-windows-authentication.md
+    - name: Usare certificati per un endpoint
+      href: use-certificates-for-a-database-mirroring-endpoint-transact-sql.md
       items:
-        - name: Sospendere o riprendere una sessione di mirroring del database (SQL Server)
-          href: pause-or-resume-a-database-mirroring-session-sql-server.md
-    - name: Rimozione del mirroring del database
-      href: removing-database-mirroring-sql-server.md
-      items:
-        - name: Rimuovere il mirroring del database (SQL Server)
-          href: remove-database-mirroring-sql-server.md
-    - name: Aggiornamento di istanze con mirroring
-      href: upgrading-mirrored-instances.md
+      - name: Usare certificati per le connessioni in uscita
+        href: database-mirroring-use-certificates-for-outbound-connections.md
+      - name: Usare certificati per le connessioni in entrata
+        href: database-mirroring-use-certificates-for-inbound-connections.md
+- name: Concetti
+  items:
+  - name: Interoperabilità e coesistenza
+    href: database-mirroring-interoperability-and-coexistence-sql-server.md
+    items:
+    - name: Mirroring del database e istanze del cluster di failover di SQL Server)
+      href: database-mirroring-and-sql-server-failover-cluster-instances.md
+    - name: Mirroring del database e log shipping
+      href: database-mirroring-and-log-shipping-sql-server.md
+    - name: Mirroring di database e cataloghi full-text
+      href: database-mirroring-and-full-text-catalogs-sql-server.md
+    - name: Mirroring e snapshot del database
+      href: database-mirroring-and-database-snapshots-sql-server.md
+    - name: Mirroring e replica del database
+      href: database-mirroring-and-replication-sql-server.md
+  - name: Amministrazione
+    items:
     - name: Monitoraggio del mirroring del database
       href: monitoring-database-mirroring-sql-server.md
-      items:
-        - name: Utilizzare i valori di soglia avvisi e avvisi sulle metriche delle prestazioni di mirroring
-          href: use-warning-thresholds-and-alerts-on-mirroring-performance-metrics-sql-server.md
-        - name: Avviare Monitoraggio mirroring del database (SQL Server Management Studio)
-          href: start-database-mirroring-monitor-sql-server-management-studio.md
-          items:
-            - name: Panoramica di Monitoraggio mirroring del database
-              href: database-mirroring-monitor-overview.md
-            - name: Registra database con mirroring
-              href: register-mirrored-database.md
-            - name: Monitoraggio mirroring del database (pagina Stato)
-              href: database-mirroring-monitor-status-page.md
-            - name: Cronologia di mirroring del database
-              href: database-mirroring-history.md
-            - name: Monitoraggio mirroring del database (pagina Avvisi)
-              href: database-mirroring-monitor-warnings-page.md
-            - name: Imposta valori soglia avvisi
-              href: set-warning-thresholds.md
-        - name: Visualizzazione dello stato di un database con mirroring (SQL Server Management Studio)
-          href: view-the-state-of-a-mirrored-database-sql-server-management-studio.md
-    - name: 'Mirroring del database: Interoperabilità e coesistenza'
-      href: database-mirroring-interoperability-and-coexistence-sql-server.md
-      items:
-        - name: Mirroring del database e istanze del cluster di failover di SQL Server)
-          href: database-mirroring-and-sql-server-failover-cluster-instances.md
-        - name: Mirroring del database e log shipping
-          href: database-mirroring-and-log-shipping-sql-server.md
-        - name: Mirroring di database e cataloghi full-text
-          href: database-mirroring-and-full-text-catalogs-sql-server.md
-        - name: Mirroring e snapshot del database
-          href: database-mirroring-and-database-snapshots-sql-server.md
-        - name: Mirroring e replica del database
-          href: database-mirroring-and-replication-sql-server.md
+    - name: Cambio di ruolo
+      href: role-switching-during-a-database-mirroring-session-sql-server.md
+    - name: 'Quorum: Impatto di un server di controllo del mirroring sulla disponibilità del database'
+      href: quorum-how-a-witness-affects-database-availability-database-mirroring.md
+    - name: Server di controllo del mirroring del database
+      href: database-mirroring-witness.md
+    - name: Possibili cause degli errori
+      href: possible-failures-during-database-mirroring.md
+    - name: Sospensione e ripresa del mirroring del database
+      href: pausing-and-resuming-database-mirroring-sql-server.md
+    - name: Rimozione del mirroring del database
+      href: removing-database-mirroring-sql-server.md
+  - name: Security
+    items:
+    - name: Endpoint
+      href: the-database-mirroring-endpoint-sql-server.md
+    - name: Sicurezza del trasporto
+      href: transport-security-database-mirroring-always-on-availability.md
+- name: Riferimento
+  items:
+  - name: Configurazione guidata sicurezza mirroring del database
+    href: start-the-configuring-database-mirroring-security-wizard.md
+    items:
+    - name: Aggiunta server di controllo del mirroring
+      href: include-witness-server-configure-database-mirroring-security-wizard.md
+    - name: Selezione dei server da configurare
+      href: choose-servers-to-configure-configure-database-mirroring-security-wizard.md
+    - name: Istanza server principale
+      href: principal-server-instance-configure-database-mirroring-security-wizard.md
+    - name: Istanza server mirror
+      href: mirror-server-instance-configure-database-mirroring-security-wizard.md
+    - name: Istanza server di controllo del mirroring
+      href: witness-server-instance-configure-database-mirroring-security-wizard.md
+    - name: Account di servizio
+      href: service-accounts-configure-database-mirroring-security-wizard.md
+  - name: Monitoraggio mirroring del database
+    href: start-database-mirroring-monitor-sql-server-management-studio.md
+    items:
+    - name: Panoramica di Monitoraggio mirroring del database
+      href: database-mirroring-monitor-overview.md
+    - name: Registra database con mirroring
+      href: register-mirrored-database.md
+    - name: Pagina Stato del mirroring del database
+      href: database-mirroring-monitor-status-page.md
+    - name: Cronologia di mirroring del database
+      href: database-mirroring-history.md
+    - name: Pagina Avvisi del mirroring del database
+      href: database-mirroring-monitor-warnings-page.md
+    - name: Imposta valori soglia avvisi
+      href: set-warning-thresholds.md
+ms.openlocfilehash: f2734702c74cfb8e8caca54b9800981e314c30a2
+ms.sourcegitcommit: a192814756570bcbce3b1dbbb05acb24a79d1530
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54457644"

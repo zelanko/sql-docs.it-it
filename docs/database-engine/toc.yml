@@ -20,55 +20,57 @@ items:
   - name: Modifiche di rilievo in SQL Server 2016
     href: breaking-changes-to-database-engine-features-in-sql-server-2016.md
 - name: Install
-  href: ../database-engine/install-windows/installation-for-sql-server-2016.md
+  href: ../database-engine/install-windows/toc.yml
 - name: Configura
-  href: ../database-engine/configure-windows/configure-database-engine-instances-sql-server.md
-- name: Disponibilità elevata
+  href: ../database-engine/configure-windows/toc.yml
+- name: Continuità aziendale
   href: sql-server-business-continuity-dr.md
   items:
   - name: Gruppi di disponibilità
-    href: ../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md
+    href: availability-groups/windows/toc.yml
+  - name: Istanza del cluster di failover
+    href: ../sql-server/failover-clusters/toc.yml
   - name: Mirroring del database
-    href: ../database-engine/database-mirroring/the-database-mirroring-endpoint-sql-server.md
+    href: database-mirroring/toc.yml
   - name: Log shipping
-    href: ../database-engine/log-shipping/about-log-shipping-sql-server.md
+    href: log-shipping/toc.yml
 - name: Concetti
   items:
-  - name: BLOB
+  - name: BLOB +
     href: ../relational-databases/blob/binary-large-object-blob-data-sql-server.md
-  - name: Regole di confronto
+  - name: Regole di confronto +
     href: ../relational-databases/collations/collation-and-unicode-support.md
-  - name: Cursori
+  - name: Cursori +
     href: ../relational-databases/cursors.md
-  - name: Raccolta dati
+  - name: Raccolta dati +
     href: ../relational-databases/data-collection/data-collection.md
-  - name: Compressione dati
+  - name: Compressione dei dati +
     href: ../relational-databases/data-compression/data-compression.md
-  - name: Posta elettronica database
+  - name: Posta elettronica database +
     href: ../relational-databases/database-mail/database-mail.md
-  - name: Database
+  - name: Database +
     href: ../relational-databases/databases/databases.md
-  - name: Errori ed eventi
+  - name: Errori ed eventi +
     href: ../relational-databases/errors-events/errors-and-events-reference-database-engine.md
-  - name: Classi di eventi
+  - name: Classi di eventi +
     href: ../relational-databases/event-classes/sql-server-event-class-reference.md
-  - name: Eventi estesi
+  - name: Eventi estesi +
     href: ../relational-databases/extended-events/extended-events.md
-  - name: Grafici
+  - name: Grafi +
     href: ../relational-databases/graphs/sql-graph-overview.md
-  - name: Dati gerarchici
+  - name: Dati gerarchici +
     href: ../relational-databases/hierarchical-data-sql-server.md
-  - name: Importare ed esportare
+  - name: Importare ed esportare +
     href: ../relational-databases/import-export/overview-import-export.md
-  - name: OLTP in memoria
+  - name: OLTP in memoria +
     href: ../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md
-  - name: Indici
+  - name: Indici +
     href: ../relational-databases/indexes/indexes.md
-  - name: JSON
+  - name: JSON +
     href: ../relational-databases/json/json-data-sql-server.md
-  - name: Server collegati
+  - name: Server collegati +
     href: ../relational-databases/linked-servers/linked-servers-database-engine.md
-  - name: Piani di manutenzione
+  - name: Piani di manutenzione +
     href: ../relational-databases/maintenance-plans/maintenance-plans.md
   - name: Join
     href: ../relational-databases/performance/joins.md
@@ -134,9 +136,9 @@ items:
     href: ../relational-databases/views/views.md
   - name: xml
     href: ../relational-databases/xml/xml-data-sql-server.md
-ms.openlocfilehash: db1f978a972f560a98ef75c0fefe37584bd1a1be
-ms.sourcegitcommit: 2420c57d2952add3697dbe0467ee1d755c5c2ee5
+ms.openlocfilehash: 7cfe273f18b2ac5f8fd8635f8f9508077833a8fa
+ms.sourcegitcommit: a192814756570bcbce3b1dbbb05acb24a79d1530
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47217227"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54457604"

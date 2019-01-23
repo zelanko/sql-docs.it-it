@@ -10,12 +10,12 @@ ms.assetid: 04ba51b6-cdc7-409c-8d7e-26ead13e614d
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: a424f6fa95a7b295722750f9bb68db9ef30d66a4
-ms.sourcegitcommit: bfa10c54e871700de285d7f819095d51ef70d997
+ms.openlocfilehash: b4ac8b044308ad7bfb2431e35429558b9deb3cf5
+ms.sourcegitcommit: 2e8783e6bedd9597207180941be978f65c2c2a2d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/14/2019
-ms.locfileid: "54257246"
+ms.lasthandoff: 01/19/2019
+ms.locfileid: "54405881"
 ---
 # <a name="database-engine-errors"></a>Errori del motore di database
 
@@ -927,7 +927,7 @@ La tabella contiene i numeri di messaggio di errore e la descrizione, ovvero il 
 |   1846    |   16  |   no  |   Impossibile trovare il componente writer del servizio Copia Shadow del volume (VSS) SQL per il database '%ls' durante la creazione dello snapshot VSS recuperato automaticamente per il controllo DBCC online.  |
 |   1847    |   16  |   no  |   La versione corrente del sistema operativo non supporta gli snapshot del servizio Copia Shadow del volume (VSS) recuperati automaticamente.  |
 |   1848    |   16  |   no  |   Il servizio Copia Shadow del volume (VSS) non è riuscito a creare uno snapshot recuperato automaticamente del database '%ls'  per il controllo DBCC online.   |
-|   1849    |   16  |   no  |   Istruzione CREATE DATABASE non riuscita perché i filegroup FILESTREAM sono stati dichiarati e ALLOW_SNAPSHOT_ISOLATION o READ_COMMITTED_SNAPSHOT è impostato su ON nel database modello. Impostare ALLOW_SNAPSHOT_ISOLATION e READ_COMMITTED_SNAPSHOT su OFF nel database modello oppure creare il database senza dichiarare alcun filegroup FILESTREAM, impostare ALLOW_SNAPSHOT_ISOLATION e READ_COMMITTED_SNAPSHOT su OFF nel nuovo database, quindi utilizzare l'istruzione ALTER DATABASE per aggiungere file e filegroup FILESTREAM.    |
+|   1849    |   16  |   no  |   Istruzione CREATE DATABASE non riuscita perché i filegroup FILESTREAM sono stati dichiarati e ALLOW_SNAPSHOT_ISOLATION o READ_COMMITTED_SNAPSHOT è impostato su ON nel database modello. Impostare ALLOW_SNAPSHOT_ISOLATION e READ_COMMITTED_SNAPSHOT su OFF nel database modello oppure creare il database senza dichiarare alcun filegroup FILESTREAM, impostare ALLOW_SNAPSHOT_ISOLATION e READ_COMMITTED_SNAPSHOT su OFF nel nuovo database, quindi usare l'istruzione ALTER DATABASE per aggiungere file e filegroup FILESTREAM.   |
 |   1901    |   16  |   no  |   Impossibile creare l'indice o le statistiche '%.*ls' sulla vista '%.* ls' perché la colonna chiave '%.*ls' è imprecisa, calcolata e non persistente. Provare a rimuovere il riferimento alla colonna nella chiave dell'indice della vista o delle statistiche oppure a impostare la colonna come precisa. Se la colonna è calcolata in una tabella di base, provare a contrassegnarla come PERSISTED in tale tabella. |
 |   1902    |   16  |   no  |   Impossibile creare più di un indice cluster in %S_MSG '%.*ls'. Prima di creare un nuovo indice, eliminare l'indice cluster esistente '%.* ls'.   |
 |   [1904](mssqlserver-1904-database-engine-error.md)   |   16  |   no  |   Per l'oggetto %S_MSG '%.*ls' nella tabella '%.* ls' sono presenti %d nomi di colonna nell'elenco chiavi %S_MSG. Il limite massimo per l'elenco delle colonne chiave per indici o statistiche è di %d.    |
