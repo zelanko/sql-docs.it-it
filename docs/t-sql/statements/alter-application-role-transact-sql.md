@@ -18,15 +18,15 @@ helpviewer_keywords:
 - ALTER APPLICATION ROLE statement
 - application roles [SQL Server], modifying
 ms.assetid: c6cd5d0f-18f4-49be-b161-64d9c5569086
-author: CarlRabeler
-ms.author: carlrab
+author: VanMSFT
+ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 58cac793f7bcf356f8055c27b598c9521f0c7bce
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b272b3b5df01931cfabf1f19945bba477cc680bc
+ms.sourcegitcommit: c6e71ed14198da67afd7ba722823b1af9b4f4e6f
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47690229"
+ms.lasthandoff: 01/16/2019
+ms.locfileid: "54326712"
 ---
 # <a name="alter-application-role-transact-sql"></a>ALTER APPLICATION ROLE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -70,7 +70,7 @@ ALTER APPLICATION ROLE application_role_name
  I ruoli applicazione sono visibili nella vista del catalogo sys.database_principals.  
   
 > [!CAUTION]  
->  Il comportamento degli schemi in [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] è diverso rispetto alle versioni precedenti di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. È possibile che il codice in cui gli schemi sono equivalenti agli utenti del database non restituisca risultati corretti. Non utilizzare le viste del catalogo delle versioni precedenti, inclusa sysobjects, nei database in cui sia già stata utilizzata una delle istruzioni DLL seguenti: CREATE SCHEMA, ALTER SCHEMA, DROP SCHEMA, CREATE USER, ALTER USER, DROP USER, CREATE ROLE, ALTER ROLE, DROP ROLE, CREATE APPROLE, ALTER APPROLE, DROP APPROLE, ALTER AUTHORIZATION. In questi database è necessario usare le nuove viste del catalogo, in cui si tiene conto della separazione tra entità e schemi introdotta in [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]. Per altre informazioni sulle viste del catalogo, vedere [Viste del catalogo &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md).  
+>  Il comportamento degli schemi in [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] è diverso rispetto alle versioni precedenti di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. È possibile che il codice in cui gli schemi sono equivalenti agli utenti del database non restituisca risultati corretti. Le viste del catalogo precedenti, inclusa sysobjects, non devono essere usate in un database in cui è stata usata una delle istruzioni DDL seguenti: CREATE SCHEMA, ALTER SCHEMA, DROP SCHEMA, CREATE USER, ALTER USER, DROP USER, CREATE ROLE, ALTER ROLE, DROP ROLE, CREATE APPROLE, ALTER APPROLE, DROP APPROLE, ALTER AUTHORIZATION. In questi database è necessario usare le nuove viste del catalogo, in cui si tiene conto della separazione tra entità e schemi introdotta in [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]. Per altre informazioni sulle viste del catalogo, vedere [Viste del catalogo &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md).  
   
 ## <a name="permissions"></a>Permissions  
  È richiesta l'autorizzazione ALTER ANY APPLICATION ROLE nel database. Per modificare lo schema predefinito, è inoltre richiesta l'autorizzazione ALTER per il ruolo applicazione. Un ruolo applicazione può modificare il proprio schema predefinito, ma non il nome o la password.  
@@ -91,7 +91,7 @@ ALTER APPLICATION ROLE weekly_receipts
 GO  
 ```  
   
-### <a name="b-changing-the-password-of-application-role"></a>B. Modifica della password del ruolo applicazione  
+### <a name="b-changing-the-password-of-application-role"></a>b. Modifica della password del ruolo applicazione  
  Nell'esempio seguente viene modificata la password del ruolo applicazione `receipts_ledger`.  
   
 ```  

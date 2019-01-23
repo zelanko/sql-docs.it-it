@@ -1,7 +1,7 @@
 ---
 title: Opzione di failover di rilevamento dell'integrità del database | Documenti Microsoft
 ms.custom: ''
-ms.date: 04/28/2017
+ms.date: 01/19/2019
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: high-availability
@@ -16,12 +16,12 @@ ms.assetid: d74afd28-25c3-48a1-bc3f-e353bee615c2
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 04f1834ebc282044164b2e1d2b77e784b3260973
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 7bb2a0c9582fcf5e0092ef23009b9270a7b0d010
+ms.sourcegitcommit: 480961f14405dc0b096aa8009855dc5a2964f177
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52525115"
+ms.lasthandoff: 01/22/2019
+ms.locfileid: "54419966"
 ---
 # <a name="availability-group-database-level-health-detection-failover-option"></a>Opzione di failover di rilevamento dell'integrità a livello di database di un gruppo di disponibilità
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -35,8 +35,8 @@ L'opzione di rilevamento dell'integrità a livello di database di un gruppo di d
 
 Ad esempio, con l'opzione di rilevamento dell'integrità a livello di database attivata, se SQL Server non è riuscito a scrivere nel file di log delle transazioni per uno dei database, lo stato di quel database cambia per indicare l'errore e il gruppo di disponibilità ne effettuerà subito il failover in modo tale che l'applicazione possa riconnettersi e continuare a lavorare con un'interruzione minima quando i database sono di nuovo online.
 
-<a name="enabling-database-level-health-detection"></a>Abilitazione del rilevamento dell'integrità a livello di database
-----
+### <a name="enabling-database-level-health-detection"></a>Abilitazione del rilevamento dell'integrità a livello di database
+
 Sebbene sia generalmente consigliata, l'opzione Integrità database è **disattivata per impostazione predefinita**, allo scopo di mantenere la compatibilità con le impostazioni predefinite nelle versioni precedenti.
 
 Esistono diversi modi semplici per abilitare l'impostazione di rilevamento dell'integrità a livello di database:
@@ -52,7 +52,7 @@ Esistono diversi modi semplici per abilitare l'impostazione di rilevamento dell'
 
 3. Sintassi Transact-SQL per **CREATE AVAILABILITY GROUP**. Il parametro DB_FAILOVER accetta i valori ON o OFF.
 
-   ```Transact-SQL
+   ```sql
    CREATE AVAILABILITY GROUP [Contoso-ag]
    WITH (DB_FAILOVER=ON)
    FOR DATABASE [AutoHa-Sample]
@@ -65,7 +65,7 @@ Esistono diversi modi semplici per abilitare l'impostazione di rilevamento dell'
 
 4. Sintassi Transact-SQL per **ALTER AVAILABILITY GROUP**. Il parametro DB_FAILOVER accetta i valori ON o OFF.
 
-   ```Transact-SQL
+   ```sql
    ALTER AVAILABILITY GROUP [Contoso-ag] SET (DB_FAILOVER = ON);
 
    ALTER AVAILABILITY GROUP [Contoso-ag] SET (DB_FAILOVER = OFF);
@@ -89,16 +89,16 @@ Il rilevamento dell'integrità a livello di database implementa criteri di failo
 
 La DMV di sistema sys.availability_groups mostra una colonna db_failover che indica se l'opzione di rilevamento dell'integrità a livello di database è disattivata (0) o attivata (1).
 
-```Transact-SQL
+```sql
 select name, db_failover from sys.availability_groups
 ```
 
 
 Output di esempio della dmv:
 
-NAME  |  db_failover
----------|---------
-| Contoso-ag |  1  |
+|NAME  |  db_failover|
+|---------|---------|
+| Contoso-ag | 1  |
 
 ### <a name="errorlog"></a>ErrorLog
 Il log degli errori di SQL Server (o il testo da sp_readerrorlog) mostrerà il messaggio di errore 41653 dopo il failover di un gruppo di disponibilità a causa dei controlli di rilevamento dell'integrità a livello di database.
@@ -116,7 +116,7 @@ Ad esempio, questo estratto del log degli errori mostra che la scrittura del log
 >
 >**2016-04-25 12:20:21.15 spid79      Errore: 41653, gravità: 21, stato: 1.**
 >
->**2016-04-25 12:20:21.15 spid79      Si è verificato un errore del database 'AutoHa-Sample' (tipo di errore: 2 'DB_SHUTDOWN') causando un errore del gruppo di disponibilità 'Contoso-ag'.  Per informazioni sugli errori rilevati, vedere il log degli errori di SQL Server.  Se questa condizione persiste, contattare l'amministratore di sistema.**
+>**2016-04-25 12:20:21.15 spid79      Si è verificato un errore del database 'AutoHa-Sampl' (tipo di errore: 2 ' DB_SHUTDOWN') causando un errore del gruppo di disponibilità 'Contoso-ag'.  Per informazioni sugli errori rilevati, vedere il log degli errori di SQL Server.  Se questa condizione persiste, contattare l'amministratore di sistema.**
 >
 >2016-04-25 12:20:21.17 spid79      Informazioni sullo stato del database 'AutoHa-Sample' -  LSN finalizzato: '(34:664:1)'    LSN di commit: '(34:656:1)'    Tempo di commit: 'Apr 25 2016 12:19PM'
 >
@@ -135,7 +135,8 @@ Questo XEvent viene attivato solo nella replica primaria. L'XEvent viene attivat
 Di seguito è riportato un esempio per creare una sessione XEvent che acquisisce questo evento. Poiché non è stato specificato alcun percorso, il file di output XEvent deve trovarsi nel percorso del log degli errori di SQL Server predefinito. Eseguire questa operazione nella replica primaria del gruppo di disponibilità:
 
 Script di esempio per una sessione di eventi estesi
-```
+
+```sql
 CREATE EVENT SESSION [AlwaysOn_dbfault] ON SERVER
 ADD EVENT sqlserver.availability_replica_database_fault_reporting
 ADD TARGET package0.event_file(SET filename=N'dbfault.xel',max_file_size=(5),max_rollover_files=(4))
@@ -151,32 +152,32 @@ Con SQL Server Management Studio connettersi all'istanza primaria di Server SQL,
 
 Descrizione dei campi:
 
-|Dati della colonna    | Descrizione
-|---------|---------
-|availability_group_id  |ID del gruppo di disponibilità.
-|availability_group_name    |Nome del gruppo di disponibilità.
-|availability_replica_id    |ID della replica di disponibilità.
-|availability_replica_name  |Nome della replica di disponibilità.
-|database_name  |Nome del database che segnala l'errore.
-|database_replica_id    |ID del database della replica di disponibilità.
-|failover_ready_replicas    |Numero di repliche secondarie per il failover automatico sincronizzate.
-|fault_type     | ID errore segnalato. I valori possibili sono:  <br/> 0: nessuno <br/>1: sconosciuto<br/>2: arresto
-|is_critical    | Questo valore deve sempre restituire true per l'XEvent a partire da SQL Server 2016.
+|Dati della colonna | Descrizione|
+|---------|---------|
+|availability_group_id |ID del gruppo di disponibilità.|
+|availability_group_name |Nome del gruppo di disponibilità.|
+|availability_replica_id |ID della replica di disponibilità.|
+|availability_replica_name |Nome della replica di disponibilità.|
+|database_name |Nome del database che segnala l'errore.|
+|database_replica_id |ID del database della replica di disponibilità.|
+|failover_ready_replicas |Numero di repliche secondarie per il failover automatico sincronizzate.|
+|fault_type  | ID errore segnalato. I valori possibili sono:  <br/> 0: nessuno <br/>1: sconosciuto<br/>2: arresto|
+|is_critical | Questo valore deve sempre restituire true per l'XEvent a partire da SQL Server 2016.|
 
 
 In questo output di esempio fault_type indica che si è verificato un evento critico nel gruppo di disponibilità Contoso-ag nella replica denominata SQLSERVER-1, a causa del nome di database AutoHa-Sample2, con tipo di errore 2: arresto.
 
-|Campo  | valore
-|---------|---------
-|availability_group_id |    24E6FE58-5EE8-4C4E-9746-491CFBB208C1
-|availability_group_name |  Contoso-ag
-|availability_replica_id    | 3EAE74D1-A22F-4D9F-8E9A-DEFF99B1F4D1
-|availability_replica_name |    SQLSERVER-1
-|database_name |    AutoHa-Sample2
-|database_replica_id | 39971379-8161-4607-82E7-098590E5AE00
-|failover_ready_replicas |  1
-|fault_type |   2
-|is_critical    | True
+|Campo  | valore|
+|---------|---------|
+|availability_group_id | 24E6FE58-5EE8-4C4E-9746-491CFBB208C1|
+|availability_group_name | Contoso-ag|
+|availability_replica_id | 3EAE74D1-A22F-4D9F-8E9A-DEFF99B1F4D1|
+|availability_replica_name | SQLSERVER-1|
+|database_name | AutoHa-Sample2|
+|database_replica_id | 39971379-8161-4607-82E7-098590E5AE00|
+|failover_ready_replicas | 1|
+|fault_type | 2|
+|is_critical | True|
 
 
 ### <a name="related-references"></a>Riferimenti correlati

@@ -1,7 +1,7 @@
 ---
 title: Architettura e guida per la progettazione degli indici di SQL Server | Microsoft Docs
 ms.custom: ''
-ms.date: 07/06/2018
+ms.date: 01/19/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -23,12 +23,12 @@ author: rothja
 ms.author: jroth
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 217fe5bc510d5f25eaddfad69fa08ad4dd760c8f
-ms.sourcegitcommit: c7febcaff4a51a899bc775a86e764ac60aab22eb
+ms.openlocfilehash: e294759588beeb5d79f4613848ca49634d8e40cf
+ms.sourcegitcommit: 480961f14405dc0b096aa8009855dc5a2964f177
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "52712702"
+ms.lasthandoff: 01/22/2019
+ms.locfileid: "54420186"
 ---
 # <a name="sql-server-index-architecture-and-design-guide"></a>Architettura e guida per la progettazione degli indici di SQL Server
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -218,7 +218,7 @@ Usare queste viste dei metadati per visualizzare gli attributi degli indici. In 
 |-|-|
 |[sys.indexes &#40;Transact-SQL&#41;](../relational-databases/system-catalog-views/sys-indexes-transact-sql.md)|[sys.index_columns &#40;Transact-SQL&#41;](../relational-databases/system-catalog-views/sys-index-columns-transact-sql.md)|  
 |[sys.partitions &#40;Transact-SQL&#41;](../relational-databases/system-catalog-views/sys-partitions-transact-sql.md)|[sys.internal_partitions &#40;Transact-SQL&#41;](../relational-databases/system-catalog-views/sys-internal-partitions-transact-sql.md)|
-[sys.dm_db_index_operational_stats &#40;Transact-SQL&#41;](../relational-databases/system-dynamic-management-views/sys-dm-db-index-operational-stats-transact-sql.md)|[sys.dm_db_index_physical_stats &#40;Transact-SQL&#41;](../relational-databases/system-dynamic-management-views/sys-dm-db-index-physical-stats-transact-sql.md)|  
+|[sys.dm_db_index_operational_stats &#40;Transact-SQL&#41;](../relational-databases/system-dynamic-management-views/sys-dm-db-index-operational-stats-transact-sql.md)|[sys.dm_db_index_physical_stats &#40;Transact-SQL&#41;](../relational-databases/system-dynamic-management-views/sys-dm-db-index-physical-stats-transact-sql.md)|  
 |[sys.column_store_segments &#40;Transact-SQL&#41;](../relational-databases/system-catalog-views/sys-column-store-segments-transact-sql.md)|[sys.column_store_dictionaries &#40;Transact-SQL&#41;](../relational-databases/system-catalog-views/sys-column-store-dictionaries-transact-sql.md)|  
 |[sys.column_store_row_groups &#40;Transact-SQL&#41;](../relational-databases/system-catalog-views/sys-column-store-row-groups-transact-sql.md)|[sys.dm_db_column_store_row_group_operational_stats &#40;Transact-SQL&#41;](../relational-databases/system-dynamic-management-views/sys-dm-db-column-store-row-group-operational-stats-transact-sql.md)|
 |[sys.dm_db_column_store_row_group_physical_stats &#40;Transact-SQL&#41;](../relational-databases/system-dynamic-management-views/sys-dm-db-column-store-row-group-physical-stats-transact-sql.md)|[sys.dm_column_store_object_pool &#40;Transact-SQL&#41;](../relational-databases/system-dynamic-management-views/sys-dm-column-store-object-pool-transact-sql.md)|  
@@ -824,7 +824,7 @@ Gli indici non cluster sono uno dei tipi di indice possibili in una tabella otti
 
 ### <a name="in-memory-nonclustered-index-architecture"></a>Architettura dell'indice non cluster in memoria
 
-Gli indici non cluster in memoria sono implementati mediante una struttura di dati albero Bw, inizialmente concepita e descritta da Microsoft Research nel 2011. Un albero Bw è una variazione priva di latch e blocco di un albero B. Per altri dettagli, vedere [Albero Bw: un albero B per nuove piattaforme Hardware](https://www.microsoft.com/research/publication/the-bw-tree-a-b-tree-for-new-hardware/). 
+Gli indici non cluster in memoria sono implementati mediante una struttura di dati albero Bw, inizialmente concepita e descritta da Microsoft Research nel 2011. Un albero Bw è una variazione priva di latch e blocco di un albero B. Per altri dettagli, vedere [The Bw-Tree: A B-tree for New Hardware Platforms](https://www.microsoft.com/research/publication/the-bw-tree-a-b-tree-for-new-hardware/) (L'albero Bw: un albero B per le nuove piattaforme hardware). 
 
 A un livello elevato l'albero Bw può essere interpretato come una mappa di pagine organizzate in base all'ID della pagina (PidMap), una struttura per allocare e riusare gli ID di pagine (PidAlloc) e un set di pagine collegate nella mappa di pagine e tra di loro. Questi tre sottocomponenti di alto livello costituiscono la struttura interna di base di un albero Bw.
 
@@ -858,7 +858,7 @@ Un'operazione di divisione è effettuata in due passaggi atomici. Nell'immagine 
 
 **Passaggio 1:** Assegnare due nuove pagine P1 e P2 e suddividere le righe dalla pagina P1 precedente in queste nuove pagine, inclusa la riga appena inserita. Un nuovo slot nella tabella di mapping della pagina viene usato per archiviare l'indirizzo fisico della pagina P2. Le due pagine, P1 e P2, non sono ancora accessibili ad alcuna operazione simultanea. Il puntatore logico da P1 a P2 è impostato. Poi l'aggiornamento della tabella di mapping della pagina per modificare il puntatore dal vecchio P1 al nuovo P1, avviene in un unico passaggio atomico. 
 
-**Passaggio 2:** La pagina non foglia punta a P1 ma non è presente alcun puntatore diretto da una pagina non foglia per P2. P2 è raggiungibile solo tramite P1. Per creare un puntatore da una pagina non foglia a P2, allocare una nuova pagina non foglia (pagina di indice interno), copiare tutte le righe dalla pagina foglia precedente e aggiungere una nuova riga in modo che punti a P2. Una volta terminata questa operazione, eseguita in un unico passaggio atomico, aggiornare la tabella di mapping della pagina per modificare il puntatore dalla pagina non foglia precedente alla nuova pagina non foglia.
+**Passaggio 2:** La pagina non foglia punta a P1 ma non è presente alcun puntatore diretto da una pagina non foglia a P2. P2 è raggiungibile solo tramite P1. Per creare un puntatore da una pagina non foglia a P2, allocare una nuova pagina non foglia (pagina di indice interno), copiare tutte le righe dalla pagina foglia precedente e aggiungere una nuova riga in modo che punti a P2. Una volta terminata questa operazione, eseguita in un unico passaggio atomico, aggiornare la tabella di mapping della pagina per modificare il puntatore dalla pagina non foglia precedente alla nuova pagina non foglia.
 
 #### <a name="merge-page"></a>Unire le pagine
 Quando un'operazione `DELETE` restituisce una pagina con meno del 10% della dimensione massima della pagina (attualmente 8 KB) o con una sola riga, la pagina verrà unita a una pagina contigua.
@@ -869,7 +869,7 @@ Nell'immagine seguente, si supponga che un'operazione `DELETE` eliminerà il val
 
 ![hekaton_tables_23g](../relational-databases/in-memory-oltp/media/HKNCI_Merge.gif "Unione di pagine")
 
-**Passaggio 1:** Viene creata una pagina delta che rappresenta il valore di chiave 10 (triangolo blu) e il suo puntatore nella pagina non foglia Pp1 è impostato per la nuova pagina delta. Viene anche creata una pagina speciale delta di tipo unione (triangolo verde) e viene collegata in modo da puntare alla pagina delta. In questa fase le due pagine (pagina delta e pagina delta di tipo unione) non sono visibili per le transazioni simultanee. In un unico passaggio atomico, il puntatore alla pagina di livello foglia P1 nella tabella di mapping della pagina viene aggiornato per puntare alla pagina delta di tipo unione. Dopo questo passaggio, la voce relativa al valore chiave 10 in Pp1 punta alla pagina delta dell'unione. 
+**Passaggio 1:** Viene creata una pagina delta che rappresenta il valore di chiave 10 (triangolo blu) e il suo puntatore nella pagina non foglia Pp1 viene impostato sulla nuova pagina delta. Viene anche creata una pagina speciale delta di tipo unione (triangolo verde) e viene collegata in modo da puntare alla pagina delta. In questa fase le due pagine (pagina delta e pagina delta di tipo unione) non sono visibili per le transazioni simultanee. In un unico passaggio atomico, il puntatore alla pagina di livello foglia P1 nella tabella di mapping della pagina viene aggiornato per puntare alla pagina delta di tipo unione. Dopo questo passaggio, la voce relativa al valore chiave 10 in Pp1 punta alla pagina delta dell'unione. 
 
 **Passaggio 2:** La riga che rappresenta il valore chiave 7 nella pagina non foglia Pp1 deve essere rimosso e la voce per il valore chiave 10 aggiornato per puntare a P1. A tale scopo, viene allocata una nuova pagina non foglia Pp2 e vengono copiate tutte le righe a partire da Pp1, tranne la riga che rappresenta il valore chiave 7. La riga per il valore chiave 10 viene quindi aggiornata per puntare alla pagina P1. Dopo questa operazione, eseguita in un unico passaggio atomico, la voce della tabella di mapping di pagina che punta a Pp1 viene aggiornata per puntare a Pp2. Pp1 non è più raggiungibile. 
 

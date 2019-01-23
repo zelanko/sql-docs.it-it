@@ -17,23 +17,23 @@ author: aliceku
 ms.author: aliceku
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 38077378d0980d351c4c65ca25b1574b7a7d7bc2
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: db55b4763dc0a5956d419fd45ced58073e2affbb
+ms.sourcegitcommit: c6e71ed14198da67afd7ba722823b1af9b4f4e6f
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51673577"
+ms.lasthandoff: 01/16/2019
+ms.locfileid: "54327872"
 ---
 # <a name="always-encrypted-wizard"></a>Procedura guidata Always Encrypted
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
 Usare la **procedura guidata Always Encrypted** per proteggere i dati sensibili archiviati in un database di SQL Server. Always Encrypted consente ai client di eseguire la crittografia dei dati sensibili all'interno delle applicazioni client e non rivelare le chiavi di crittografia di SQL Server. Di conseguenza, Always Encrypted crea una separazione tra chi possiede i dati (e può visualizzarli) e chi gestisce i dati (ma non può accedervi).  Per una descrizione completa della funzionalità, vedere [Always Encrypted &#40;Motore di database&#41;](../../../relational-databases/security/encryption/always-encrypted-database-engine.md).  
  
- - Per una procedura dettagliata end-to-end che spiega come configurare Always Encrypted con la procedura guidata e come usarlo in un'applicazione client, vedere [Always Encrypted - Proteggere i dati sensibili nel database SQL con la crittografia del database e archiviare le chiavi di crittografia nell'archivio certificati di Windows](https://azure.microsoft.com/documentation/articles/sql-database-always-encrypted/).  
+ - Per una procedura dettagliata completa che spiega come configurare Always Encrypted con la procedura guidata e come usarlo in un'applicazione client, vedere [Esercitazione database SQL: Proteggere i dati sensibili con Always Encrypted](https://azure.microsoft.com/documentation/articles/sql-database-always-encrypted/).  
  
  - Per informazioni sull'uso della procedura guidata, vedere il video relativo alla [protezione dei dati sensibili con Always Encrypted](https://channel9.msdn.com/events/DataDriven/SQLServer2016/AlwaysEncrypted). Vedere anche il blog del team di sicurezza di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] sulla [procedura guidata per la crittografia di SSMS e su come abilitare Always Encrypted in pochi semplici passaggi](https://blogs.msdn.com/b/sqlsecurity/archive/2015/11/01/ssms-encryption-wizard-enabling-always-encrypted-made-easy.aspx).  
  
- - **Autorizzazioni:** per eseguire query su colonne crittografate e selezionare chiavi usando la procedura guidata è necessario avere le autorizzazioni `VIEW ANY COLUMN MASTER KEY DEFINITION` e `VIEW ANY COLUMN ENCRYPTION KEY DEFINITION` . Per creare nuove chiavi, sono necessarie anche le autorizzazioni `ALTER ANY COLUMN MASTER KEY` e `ALTER ANY COLUMN ENCRYPTION KEY` .  
+ - **Autorizzazioni:** per eseguire query su colonne crittografate e selezionare chiavi usando la procedura guidata è necessario avere le autorizzazioni `VIEW ANY COLUMN MASTER KEY DEFINITION` e `VIEW ANY COLUMN ENCRYPTION KEY DEFINITION`. Per creare nuove chiavi, sono necessarie anche le autorizzazioni `ALTER ANY COLUMN MASTER KEY` e `ALTER ANY COLUMN ENCRYPTION KEY` .  
  
  #### <a name="to-open-the-always-encrypted-wizard"></a>Per aprire la procedura guidata Always Encrypted  
  
@@ -57,7 +57,7 @@ Usare la **procedura guidata Always Encrypted** per proteggere i dati sensibili 
  
    - **Archiviazione di una chiave master nell'insieme di credenziali delle chiavi di Azure** Per altre informazioni, vedere [Introduzione all'insieme di credenziali delle chiavi di Azure](https://azure.microsoft.com/documentation/articles/key-vault-get-started/).  
  
- - Per generare una chiave master della colonna nell'insieme di credenziali delle chiavi di Azure, l'utente deve avere le autorizzazioni **WrapKey**, **UnwrapKey**, **Verify**e **Sign** per l'insieme di credenziali delle chiavi. Potrebbero essere necessarie anche le autorizzazioni **Get**, **List**, **Create**, **Delete**, **Update**, **Import**, **Backup**e **Restore** . Per altre informazioni, vedere [Che cos'è un insieme di credenziali delle chiavi di Azure?](https://azure.microsoft.com/documentation/articles/key-vault-whatis/) e   [Set-AzureRmKeyVaultAccessPolicy](https://msdn.microsoft.com/library/mt603625.aspx).  
+ - Per generare una chiave master della colonna nell'insieme di credenziali delle chiavi di Azure, l'utente deve avere le autorizzazioni **WrapKey**, **UnwrapKey**, **Verify**e **Sign** per l'insieme di credenziali delle chiavi. Potrebbero essere necessarie anche le autorizzazioni **Get**, **List**, **Create**, **Delete**, **Update**, **Import**, **Backup**e **Restore** . Per altre informazioni, vedere [Che cos'è Azure Key Vault?](https://azure.microsoft.com/documentation/articles/key-vault-whatis/) e [Set-AzKeyVaultAccessPolicy](https://msdn.microsoft.com/library/mt603625.aspx).  
  
  - La procedura guidata supporta solo queste due opzioni. I moduli di protezione hardware e gli archivi dei clienti devono essere configurati con [CREATE COLUMN MASTER KEY &#40;Transact-SQL&#41;](../../../t-sql/statements/create-column-master-key-transact-sql.md)[!INCLUDE[tsql](../../../includes/tsql-md.md)].  
  

@@ -21,16 +21,16 @@ helpviewer_keywords:
 - CREATE CREDENTIAL statement
 - credentials [SQL Server], CREATE CREDENTIAL statement
 ms.assetid: d5e9ae69-41d9-4e46-b13d-404b88a32d9d
-author: CarlRabeler
-ms.author: carlrab
+author: VanMSFT
+ms.author: vanto
 manager: craigg
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: e0481611eb666b893395581805c923cf03921ad9
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 91cc75f835320b6cf15c20cbb7d72101dc2868df
+ms.sourcegitcommit: c6e71ed14198da67afd7ba722823b1af9b4f4e6f
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52509377"
+ms.lasthandoff: 01/16/2019
+ms.locfileid: "54327782"
 ---
 # <a name="create-credential-transact-sql"></a>CREATE CREDENTIAL (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
@@ -65,12 +65,12 @@ WITH IDENTITY = 'identity_name'
  SECRET **='**_secret_**'**  
  Specifica il segreto richiesto per l'autenticazione in uscita.  
   
- Quando la credenziale viene usata per accedere ad Azure Key Vault, l'argomento **SECRET** di **CREATE CREDENTIAL** richiede che l'*\<ID client>* (senza trattini) e il valore *\<Secret>* di un'**Entità servizio** in Azure Active Directory vengano passati insieme senza essere separati da uno spazio. Vedere l'esempio C riportato di seguito. Quando le credenziali usano una firma di accesso condiviso, il valore di **SECRET** è il token della firma di accesso condiviso. Vedere l'esempio D riportato di seguito.  Per informazioni sulla creazione di criteri di accesso archiviati e una firma di accesso condiviso in un contenitore di Azure, vedere [Lezione 1: Creare criteri di accesso archiviati e una firma di accesso condiviso](../../relational-databases/lesson-1-create-stored-access-policy-and-shared-access-signature.md).  
+ Quando la credenziale viene usata per accedere ad Azure Key Vault, l'argomento **SECRET** di **CREATE CREDENTIAL** richiede che l'*\<ID client>* (senza trattini) e il valore *\<Secret>* di un'**Entità servizio** in Azure Active Directory vengano passati insieme senza essere separati da uno spazio. Vedere l'esempio C riportato di seguito. Quando le credenziali usano una firma di accesso condiviso, il valore di **SECRET** è il token della firma di accesso condiviso. Vedere l'esempio D riportato di seguito.  Per informazioni sulla creazione di criteri di accesso archiviati e una firma di accesso condiviso in un contenitore di Azure, vedere [Lezione 1: Creare criteri di accesso archiviati e una firma di accesso condiviso in un contenitore di Azure](../../relational-databases/lesson-1-create-stored-access-policy-and-shared-access-signature.md).  
   
  FOR CRYPTOGRAPHIC PROVIDER *cryptographic_provider_name*  
  Specifica il nome di un *provider EKM (Extensible Key Management)*. Per altre informazioni sulla gestione delle chiavi, vedere [Extensible Key Management &#40;EKM&#41;](../../relational-databases/security/encryption/extensible-key-management-ekm.md).  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Remarks  
 
  Se IDENTITY è un utente di Windows, il segreto può essere la password. Il segreto viene crittografato con la chiave master del servizio. Se la chiave master del servizio viene rigenerata, il segreto viene ricrittografato con la nuova chiave master del servizio.  
   
@@ -82,7 +82,7 @@ WITH IDENTITY = 'identity_name'
   
  A un account di accesso è possibile eseguire il mapping di più credenziali, a condizione che vengano utilizzate con provider distinti. È possibile eseguire il mapping di una sola credenziale per provider per ogni account di accesso. Sulla stessa credenziale è possibile eseguire il mapping ad altri account di accesso.  
   
-## <a name="permissions"></a>Autorizzazioni  
+## <a name="permissions"></a>Permissions  
  È richiesta l'autorizzazione **ALTER ANY CREDENTIAL**.  
   
 ## <a name="examples"></a>Esempi  
@@ -96,7 +96,7 @@ CREATE CREDENTIAL AlterEgo WITH IDENTITY = 'Mary5',
 GO  
 ```  
   
-### <a name="b-creating-a-credential-for-ekm"></a>B. Creazione di una credenziale per EKM  
+### <a name="b-creating-a-credential-for-ekm"></a>b. Creazione di una credenziale per EKM  
  Nell'esempio seguente viene usato un account creato in precedenza e denominato `User1OnEKM` in un modulo EKM tramite gli strumenti di gestione di EKM, con un tipo di account di base e una password. L'account **sysadmin** nel server crea una credenziale usata per connettersi all'account EKM e la assegna all'account `User1` di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]:  
   
 ```  
@@ -121,7 +121,7 @@ GO
 > [!IMPORTANT]  
 >  L'argomento **IDENTITY** di **CREATE CREDENTIAL** richiede il nome dell'insieme di credenziali delle chiavi. L'argomento **SECRET** di **CREATE CREDENTIAL** richiede che i valori per *\<ID client>* (senza trattini) e *\<Secret>* siano passati insieme senza spazi aggiunti.  
   
- Nell'esempio seguente l'**ID client** (`EF5C8E09-4D2A-4A76-9998-D93440D8115D`) viene immesso con tutti i trattini rimossi come stringa `EF5C8E094D2A4A769998D93440D8115D` e il **Segreto** è rappresentato dalla stringa *SECRET_DBEngine*.  
+ Nell'esempio seguente l' **ID client** (`EF5C8E09-4D2A-4A76-9998-D93440D8115D`) viene immesso con tutti i trattini rimossi come stringa `EF5C8E094D2A4A769998D93440D8115D` e il **Segreto** è rappresentato dalla stringa *SECRET_DBEngine*.  
   
 ```  
 USE master;  
@@ -146,7 +146,7 @@ EXEC ('CREATE CREDENTIAL Azure_EKM_TDE_cred
 ### <a name="d-creating-a-credential-using-a-sas-token"></a>D. Creazione di una credenziale mediante un token di firma di accesso condiviso  
  **Si applica a**: da [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] alla [versione corrente](https://go.microsoft.com/fwlink/p/?LinkId=299658).  
   
- Nell'esempio seguente viene creata una credenziale di firma di accesso condiviso usando un token di firma di accesso condiviso.  Per un'esercitazione sulla creazione di criteri di accesso archiviati e di una firma di accesso condiviso in un contenitore di Azure e sulla creazione, in un secondo momento, di una credenziale usando la firma di accesso condiviso, vedere [Tutorial: Using the Microsoft Azure Blob storage service with SQL Server 2016 databases](../../relational-databases/tutorial-use-azure-blob-storage-service-with-sql-server-2016.md) (Esercitazione: Uso del servizio di archiviazione BLOB di Azure con i database di SQL Server 2016).  
+ Nell'esempio seguente viene creata una credenziale di firma di accesso condiviso usando un token di firma di accesso condiviso.  Per un'esercitazione sulla creazione di criteri di accesso archiviati e di una firma di accesso condiviso in un contenitore di Azure e sulla creazione, in un secondo momento, di una credenziale usando la firma di accesso condiviso, vedere [Esercitazione: Uso del servizio di archiviazione BLOB di Microsoft Azure con i database di SQL Server 2016](../../relational-databases/tutorial-use-azure-blob-storage-service-with-sql-server-2016.md).  
   
 > [!IMPORTANT]  
 >  L'argomento **CREDENTIAL NAME** richiede che il nome corrisponda al percorso del contenitore, inizi con https e non contenga una barra finale. L'argomento **IDENTITY** richiede il nome, *SHARED ACCESS SIGNATURE*. L'argomento **SECRET** richiede il token della firma di accesso condiviso.  

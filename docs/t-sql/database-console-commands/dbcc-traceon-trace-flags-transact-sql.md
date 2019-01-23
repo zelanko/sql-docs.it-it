@@ -1,7 +1,7 @@
 ---
 title: Flag di traccia (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 01/09/2019
+ms.date: 01/15/2019
 ms.prod: sql
 ms.prod_service: sql-database
 ms.reviewer: ''
@@ -21,12 +21,12 @@ ms.assetid: b971b540-1ac2-435b-b191-24399eb88265
 author: pmasl
 ms.author: pelopes
 manager: craigg
-ms.openlocfilehash: 90f27a36b455b4c0b497b43d5b302684a1a7a9ba
-ms.sourcegitcommit: 1f53b6a536ccffd701fc87e658ddac714f6da7a2
+ms.openlocfilehash: f57bd4ef770d4958c09bd54fb19718e8e8c641df
+ms.sourcegitcommit: 9c99f992abd5f1c174b3d1e978774dffb99ff218
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/10/2019
-ms.locfileid: "54206467"
+ms.lasthandoff: 01/17/2019
+ms.locfileid: "54361691"
 ---
 # <a name="dbcc-traceon---trace-flags-transact-sql"></a>DBCC TRACEON - Flag di traccia (Transact-SQL)
 
@@ -145,6 +145,7 @@ Nella tabella seguente vengono elencati e descritti i flag di traccia disponibil
 |**9488**|<a name="9488"></a>Imposta il valore fisso di stima per le funzioni con valori di tabella sul valore predefinito 1 (corrispondente all'impostazione predefinita nel modello di stima della cardinalità di Query Optimizer di [!INCLUDE[ssKilimanjaro](../../includes/ssKilimanjaro-md.md)] e versioni precedenti) quando viene usato il modello di stima della cardinalità di Query Optimizer delle versioni da [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br />**Ambito**: globale, sessione o query|
 |**9495**|Disabilita il parallelismo durante l'inserimento per le operazioni INSERT...SELECT e si applica sia alle tabelle utente che alle tabelle temporanee. Per altre informazioni, vedere questo [articolo del supporto tecnico Microsoft](https://support.microsoft.com/kb/3180087).<br /><br />**Ambito**: globale o sessione| 
 |**9567**|Abilita la compressione del flusso di dati per i gruppi di disponibilità Always On durante il seeding automatico. Durante il seeding automatico, la compressione può ridurre significativamente i tempi di trasferimento e aumenta il carico sul processore. Per altre informazioni, vedere [Inizializzare automaticamente un gruppo di disponibilità Always On](../../database-engine/availability-groups/windows/automatically-initialize-always-on-availability-group.md) e [Ottimizzare la compressione per un gruppo di disponibilità](../../database-engine/availability-groups/windows/tune-compression-for-availability-group.md).<br /><br />**Ambito**: globale o sessione|
+|**9571**|Disabilita il seeding automatico di gruppi di disponibilità nel percorso del database predefinito. Per altre informazioni, vedere [Layout dei dischi](../../database-engine/availability-groups/windows/automatic-seeding-secondary-replicas.md).<br /><br />**Ambito**: globale o sessione| 
 |**9591**|Disabilita la compressione dei blocchi di log nei gruppi di disponibilità Always On. La compressione dei blocchi di log è il comportamento predefinito usato con le repliche sincrone e asincrone in [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] e [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]. In [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] la compressione viene usata solo con la replica asincrona. <br /><br />**Ambito**: globale o sessione|
 |**9592**|Abilita la compressione dei flussi di log per i gruppi di disponibilità sincroni. Per impostazione predefinita, questa funzionalità è disabilitata per i gruppi di disponibilità sincroni perché la compressione aggiunge latenza. Per altre informazioni, vedere [Tune compression for availability group (Ottimizzare la compressione per il gruppo di disponibilità)](../../database-engine/availability-groups/windows/tune-compression-for-availability-group.md).<br /><br />**Ambito**: globale o sessione| 
 |**9929**|Riduce i file del checkpoint In memoria a 1 MB. Per altre informazioni, vedere questo [articolo del supporto tecnico Microsoft](https://support.microsoft.com/kb/3147012).<br /><br />**Ambito**: solo globale|  

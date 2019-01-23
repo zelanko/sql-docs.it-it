@@ -14,12 +14,12 @@ ms.assetid: c1f29c27-5168-48cb-b649-7029e4816906
 author: aliceku
 ms.author: aliceku
 manager: craigg
-ms.openlocfilehash: 253dd918fb3fec410e2bcf28d6fba7cd24786d04
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 3bdc541e919e9a30d4ab043ef9c13d78a2f4b445
+ms.sourcegitcommit: c6e71ed14198da67afd7ba722823b1af9b4f4e6f
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52522917"
+ms.lasthandoff: 01/16/2019
+ms.locfileid: "54327352"
 ---
 # <a name="sql-server-tde-extensible-key-management-using-azure-key-vault---setup-steps"></a>Extensible Key Management TDE di SQL Server con Azure Key Vault - Passaggi di configurazione
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -69,7 +69,7 @@ Versione di SQL Server  |Collegamento di installazione ridistribuibile
      Installare e avviare la versione più recente di [Azure PowerShell](https://azure.microsoft.com/documentation/articles/powershell-install-configure/) 5.2.0 o successiva. Accedere al proprio account Azure con il comando seguente:  
   
     ```powershell  
-    Login-AzureRmAccount  
+    Connect-AzAccount  
     ```  
   
      L'istruzione restituisce:  
@@ -83,14 +83,14 @@ Versione di SQL Server  |Collegamento di installazione ridistribuibile
     ```  
   
     > [!NOTE]  
-    >  Se si hanno più sottoscrizioni e si vuole specificare quale usare per l'insieme di credenziali, usare `Get-AzureRmSubscription` per visualizzare le sottoscrizioni e `Select-AzureRmSubscription` per scegliere quella appropriata. In caso contrario, PowerShell ne selezionerà automaticamente una per impostazione predefinita.  
+    >  Se si hanno più sottoscrizioni e si vuole specificare quale usare per l'insieme di credenziali, usare `Get-AzSubscription` per visualizzare le sottoscrizioni e `Select-AzSubscription` per scegliere quella appropriata. In caso contrario, PowerShell ne selezionerà automaticamente una per impostazione predefinita.  
   
 2.  **Creare un nuovo gruppo di risorse**  
   
      Tutte le risorse di Azure create con Azure Resource Manager devono essere incluse in gruppi di risorse. Creare un gruppo di risorse per ospitare l'insieme di credenziali delle chiavi. In questo esempio viene utilizzato `ContosoDevRG`. Scegliere un nome **univoco** per il gruppo di risorse e l'insieme di credenziali delle chiavi perché tutti i nomi di insiemi di credenziali delle chiavi sono univoci a livello globale.  
   
     ```powershell  
-    New-AzureRmResourceGroup -Name ContosoDevRG -Location 'East Asia'  
+    New-AzResourceGroup -Name ContosoDevRG -Location 'East Asia'  
     ```  
   
      L'istruzione restituisce:  
@@ -109,10 +109,10 @@ Versione di SQL Server  |Collegamento di installazione ridistribuibile
   
 3.  **Creare un insieme di credenziali delle chiavi**  
   
-     Il cmdlet `New-AzureRmKeyVault` richiede il nome di un gruppo di risorse, un nome dell'insieme di credenziali delle chiavi e una posizione geografica. Ad esempio, per un insieme di credenziali delle chiavi denominato `ContosoDevKeyVault`, digitare:  
+     Il cmdlet `New-AzKeyVault` richiede il nome di un gruppo di risorse, un nome dell'insieme di credenziali delle chiavi e una posizione geografica. Ad esempio, per un insieme di credenziali delle chiavi denominato `ContosoDevKeyVault`, digitare:  
   
     ```powershell  
-    New-AzureRmKeyVault -VaultName 'ContosoDevKeyVault' `  
+    New-AzKeyVault -VaultName 'ContosoDevKeyVault' `  
        -ResourceGroupName 'ContosoDevRG' -Location 'East Asia'  
     ```  
   
@@ -152,20 +152,20 @@ Versione di SQL Server  |Collegamento di installazione ridistribuibile
     > [!IMPORTANT]  
     >  L'entità servizio di Azure Active Directory deve avere almeno le autorizzazioni `get`, `wrapKey` e `unwrapKey` per l'insieme di credenziali delle chiavi.  
   
-     Come illustrato di seguito, usare l' **ID client** della parte 1 per il parametro `ServicePrincipalName` . `Set-AzureRmKeyVaultAccessPolicy` viene eseguito automaticamente e non produce output se riesce.  
+     Come illustrato di seguito, usare l' **ID client** della parte 1 per il parametro `ServicePrincipalName` . `Set-AzKeyVaultAccessPolicy` viene eseguito automaticamente e non produce output se riesce.  
   
     ```powershell  
-    Set-AzureRmKeyVaultAccessPolicy -VaultName 'ContosoDevKeyVault'`  
+    Set-AzKeyVaultAccessPolicy -VaultName 'ContosoDevKeyVault'`  
       -ServicePrincipalName EF5C8E09-4D2A-4A76-9998-D93440D8115D `  
       -PermissionsToKeys get, wrapKey, unwrapKey  
     ```  
   
-     Chiamare il cmdlet `Get-AzureRmKeyVault` per verificare le autorizzazioni. Nella sezione "Criteri di accesso" dell'output dell'istruzione il nome dell'applicazione AAD dovrebbe essere elencato come un altro tenant che ha accesso a questo insieme di credenziali delle chiavi.  
+     Chiamare il cmdlet `Get-AzKeyVault` per verificare le autorizzazioni. Nella sezione "Criteri di accesso" dell'output dell'istruzione il nome dell'applicazione AAD dovrebbe essere elencato come un altro tenant che ha accesso a questo insieme di credenziali delle chiavi.  
   
        
 5.  **Generare una chiave asimmetrica nell'insieme di credenziali delle chiavi**  
   
-     Esistono due modi per generare una chiave nell'insieme di credenziali delle chiavi di Azure: 1) importare una chiave esistente o 2) crearne una nuova.  
+     Esistono due modi per generare una chiave in Azure Key Vault: 1) importare una chiave esistente o 2) creare una nuova chiave.  
                   
       > [!NOTE]
         >  SQL Server supporta solo chiavi RSA a 2048 bit.
@@ -262,7 +262,7 @@ Versione di SQL Server  |Collegamento di installazione ridistribuibile
 -   [C. Spiegazione dei codici di errore per Connettore SQL Server](../../../relational-databases/security/encryption/sql-server-connector-maintenance-troubleshooting.md#AppendixC)  
   
   
-## <a name="part-iv-configure-includessnoversionincludesssnoversion-mdmd"></a>Parte 4: Eseguire la configurazione [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]  
+## <a name="part-iv-configure-includessnoversionincludesssnoversion-mdmd"></a>Parte 4: Configurare[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]  
  Vedere [B. Domande frequenti](../../../relational-databases/security/encryption/sql-server-connector-maintenance-troubleshooting.md#AppendixB) per visualizzare una nota sui livelli minimi di autorizzazione necessari per ogni azione in questa sezione.  
   
 1.  **Avviare sqlcmd.exe o [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Management Studio**  

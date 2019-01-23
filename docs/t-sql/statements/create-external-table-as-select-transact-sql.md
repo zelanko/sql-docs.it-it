@@ -5,7 +5,7 @@ ms.date: 08/10/2017
 ms.prod_service: sql-data-warehouse, pdw
 ms.reviewer: ''
 ms.service: sql-data-warehouse
-ms.component: design
+ms.subservice: design
 ms.topic: conceptual
 f1_keywords:
 - CREATE EXTERNAL TABLE AS SELECT
@@ -21,12 +21,12 @@ author: ronortloff
 ms.author: rortloff
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 16d8cdfb5400e213b57dd9f81f85df370662355e
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: d1c06397b74ecab0f29cb293d7efa591b36fa1ac
+ms.sourcegitcommit: 0a64d26f865a21f4bd967b2b72680fd8638770b8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51697209"
+ms.lasthandoff: 01/18/2019
+ms.locfileid: "54395402"
 ---
 # <a name="create-external-table-as-select-transact-sql"></a>CREATE EXTERNAL TABLE AS SELECT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
@@ -168,7 +168,7 @@ CREATE EXTERNAL TABLE [ [database_name  . [ schema_name ] . ] | schema_name . ] 
   
 -   Spostamento esterno delle partizioni  
   
- **SI APPLICA A:** [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]come prerequisito per la creazione di una tabella esterna, l'amministratore del dispositivo deve configurare la connettività di Hadoop. Per altre informazioni, vedere l'argomento relativo alla configurazione delle connessioni ai dati esterni nella documentazione della piattaforma di strumenti analitici che può essere scaricata da [qui](https://www.microsoft.com/download/details.aspx?id=48241).  
+ **SI APPLICA A:**  [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]come prerequisito per la creazione di una tabella esterna, l'amministratore dell'appliance deve configurare la connettività di Hadoop. Per altre informazioni, vedere l'argomento relativo alla configurazione delle connessioni ai dati esterni nella documentazione della piattaforma di strumenti analitici che può essere scaricata da [qui](https://www.microsoft.com/download/details.aspx?id=48241).  
   
 ## <a name="limitations-and-restrictions"></a>Limitazioni e restrizioni  
  Poiché i dati della tabella esterna si trovano all'esterno del database, le operazioni di backup e ripristino funzioneranno solo per i dati archiviati nel database. Ciò significa che il backup e il ripristino verranno eseguiti solo per i metadati.  
@@ -217,7 +217,7 @@ WITH (
 ) AS SELECT * FROM dimCustomer;  
 ```  
   
-### <a name="b-use-a-query-hint-with-create-external-table-as-select-cetas"></a>B. Usare un hint per la query con CREATE EXTERNAL TABLE AS SELECT (CETAS)  
+### <a name="b-use-a-query-hint-with-create-external-table-as-select-cetas"></a>b. Usare un hint per la query con CREATE EXTERNAL TABLE AS SELECT (CETAS)  
  Questa query illustra la sintassi di base per l'uso di un hint di join per la query con l'istruzione CETAS. Dopo l'inoltro della query il database usa la strategia hash join per generare il piano di query. Per altre informazioni sugli hint di join e su come usare la clausola OPTION, vedere [Clausola OPTION &#40;Transact-SQL&#41;](../../t-sql/queries/option-clause-transact-sql.md).  
   
 > [!NOTE]  

@@ -1,7 +1,7 @@
 ---
 title: Configurare il database di distribuzione di SQL Server nel gruppo di disponibilità | Microsoft Docs
 ms.custom: ''
-ms.date: 11/13/2018
+ms.date: 01/16/2019
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: replication
@@ -20,12 +20,12 @@ ms.assetid: 94d52169-384e-4885-84eb-2304e967d9f7
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 5b2f6defed7ad897f3464aec1b8b99391a2b9149
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: d23495f210a2c5979a5e5abecd9f43e4f5b62c02
+ms.sourcegitcommit: 12911093559b4e006189d7a7d32b8d0474961cd5
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54126451"
+ms.lasthandoff: 01/17/2019
+ms.locfileid: "54372683"
 ---
 # <a name="set-up-replication-distribution-database-in-always-on-availability-group"></a>Configurare il database di distribuzione repliche nel gruppo di disponibilità Always On
 
@@ -34,7 +34,9 @@ In questo articolo viene illustrato come configurare i database di distribuzione
 SQL Server 2017 CU6 e SQL Server 2016 SP2-CU3 introducono il supporto per i database di distribuzione repliche in un gruppo di disponibilità tramite i meccanismi seguenti:
 
 - Il gruppo di disponibilità del database di distribuzione deve avere un listener. Quando il server di pubblicazione aggiunge il server di distribuzione, usa il nome del listener come nome del server di distribuzione.
-- I processi di replica vengono creati con il nome del listener come nome del server di distribuzione.
+- I processi di replica vengono creati con il nome del listener come nome del server di distribuzione. I processi di snapshot di replica, di lettura log e dell'agente di distribuzione (sottoscrizione push) creati nel server di distribuzione vengono creati in tutte le repliche secondarie del gruppo di disponibilità per il database di distribuzione.
+ >[!NOTE]
+ >I progetti dell'agente di distribuzione per le sottoscrizioni pull vengono creati nel server di sottoscrizione e non nel server di distribuzione. 
 - Un nuovo processo consente di monitorare lo stato dei database di distribuzione (primari o secondari nel gruppo di disponibilità) e di disabilitare o abilitare i processi di replica in base allo stato dei database di distribuzione.
 
 Dopo aver configurato un database di distribuzione nel gruppo di disponibilità in base ai passaggi descritti di seguito, i processi di runtime e la configurazione delle repliche possono essere eseguiti correttamente prima e dopo il failover del gruppo di disponibilità del database di distribuzione.

@@ -1,7 +1,7 @@
 ---
 title: APPROX_COUNT_DISTINCT (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 07/23/2018
+ms.date: 01/17/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -15,12 +15,12 @@ author: joesackmsft
 ms.author: josack
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 5b0eb2db49a4bda6fc8be884790c3caf9cfdb7bd
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 718d03619165f94ae9b0820a7c2c6319549069be
+ms.sourcegitcommit: 12911093559b4e006189d7a7d32b8d0474961cd5
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47836725"
+ms.lasthandoff: 01/17/2019
+ms.locfileid: "54372643"
 ---
 # <a name="approxcountdistinct-transact-sql"></a>APPROX_COUNT_DISTINCT (Transact-SQL)
 [!INCLUDE[appliesto-xx-asdb-asdw-pdw-md](../../includes/appliesto-xx-asdb-asdw-pdw-md.md)]
@@ -56,7 +56,7 @@ APPROX_COUNT_DISTINCT ( expression )
 
 L'implementazione della funzione garantisce un tasso di errore fino al 2% con una probabilità del 97%. 
 
-`APPROX_COUNT_DISTINCT` richiede meno memoria rispetto a un'operazione COUNT DISTINCT completa.  Dato il footprint di memoria più piccolo, è meno probabile che `APPROX_COUNT_DISTINCT` causi lo spill della memoria su disco rispetto a un'operazione COUNT DISTINCT precisa. 
+`APPROX_COUNT_DISTINCT` richiede meno memoria rispetto a un'operazione COUNT DISTINCT completa.  Dato il footprint di memoria più piccolo, è meno probabile che `APPROX_COUNT_DISTINCT` causi lo spill della memoria su disco rispetto a un'operazione COUNT DISTINCT precisa. Per altre informazioni sull'algoritmo usato per ottenere questo risultato, vedere [HyperLogLog](https://en.wikipedia.org/wiki/HyperLogLog).
 
 > [!NOTE]
 > Con le stringhe sensibili alle regole di confronto, la versione in anteprima pubblica di APPROX_COUNT_DISTINCT usa una corrispondenza binaria e fornisce i risultati che verrebbero generati in presenza di regole di confronto BIN e non BIN2. 
@@ -79,7 +79,7 @@ Approx_Distinct_OrderKey
 15164704
 ```
   
-### <a name="b-using-approxcountdistinct-with-group-by"></a>B. Uso di APPROX_COUNT_DISTINCT con GROUP BY 
+### <a name="b-using-approxcountdistinct-with-group-by"></a>b. Uso di APPROX_COUNT_DISTINCT con GROUP BY 
 Questo esempio restituisce il numero approssimativo di chiavi di ordine diverse in base allo stato dell'ordine dalla tabella orders. 
   
 ```sql

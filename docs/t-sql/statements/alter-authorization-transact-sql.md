@@ -23,16 +23,16 @@ helpviewer_keywords:
 - search property lists [SQL Server], permissions
 - TAKE OWNERSHIP
 ms.assetid: 8c805ae2-91ed-4133-96f6-9835c908f373
-author: CarlRabeler
-ms.author: carlrab
+author: VanMSFT
+ms.author: vanto
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 6855f45379f113f91c54b46e3d1c77a913c853f3
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 3c7f31849aa75d0102f1406a49faf0d1c8c6a8e9
+ms.sourcegitcommit: c6e71ed14198da67afd7ba722823b1af9b4f4e6f
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47730709"
+ms.lasthandoff: 01/16/2019
+ms.locfileid: "54327544"
 ---
 # <a name="alter-authorization-transact-sql"></a>ALTER AUTHORIZATION (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -171,7 +171,7 @@ ALTER AUTHORIZATION ON
  Se l'entità di destinazione non è un database e l'entità sta per essere trasferita a un nuovo proprietario, verranno eliminate tutte le autorizzazioni per la destinazione.    
     
 > [!CAUTION]    
->  Il comportamento degli schemi in [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] è diverso rispetto alle versioni precedenti di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. È possibile che il codice in cui gli schemi sono equivalenti agli utenti del database non restituisca risultati corretti. Non utilizzare le viste del catalogo delle versioni precedenti, inclusa sysobjects, nei database in cui sia già stata utilizzata una delle istruzioni DLL seguenti: CREATE SCHEMA, ALTER SCHEMA, DROP SCHEMA, CREATE USER, ALTER USER, DROP USER, CREATE ROLE, ALTER ROLE, DROP ROLE, CREATE APPROLE, ALTER APPROLE, DROP APPROLE, ALTER AUTHORIZATION. In questi database è necessario usare le nuove viste del catalogo, in cui si tiene conto della separazione tra entità e schemi introdotta in [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]. Per altre informazioni sulle viste del catalogo, vedere [Viste del catalogo &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md).    
+>  Il comportamento degli schemi in [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] è diverso rispetto alle versioni precedenti di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. È possibile che il codice in cui gli schemi sono equivalenti agli utenti del database non restituisca risultati corretti. Le viste del catalogo precedenti, inclusa sysobjects, non devono essere usate in un database in cui è stata usata una delle istruzioni DDL seguenti: CREATE SCHEMA, ALTER SCHEMA, DROP SCHEMA, CREATE USER, ALTER USER, DROP USER, CREATE ROLE, ALTER ROLE, DROP ROLE, CREATE APPROLE, ALTER APPROLE, DROP APPROLE, ALTER AUTHORIZATION. In questi database è necessario usare le nuove viste del catalogo, in cui si tiene conto della separazione tra entità e schemi introdotta in [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]. Per altre informazioni sulle viste del catalogo, vedere [Viste del catalogo &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md).    
     
  Si noti inoltre quanto segue:    
     
@@ -306,7 +306,7 @@ ALTER AUTHORIZATION ON Sprockets TO MichikoOsada;
 ALTER AUTHORIZATION ON OBJECT::Sprockets TO MichikoOsada;    
 ```    
     
-### <a name="b-transfer-ownership-of-a-view-to-the-schema-owner"></a>B. Trasferire la proprietà di una vista al proprietario dello schema    
+### <a name="b-transfer-ownership-of-a-view-to-the-schema-owner"></a>b. Trasferire la proprietà di una vista al proprietario dello schema    
  Nell'esempio seguente la proprietà della vista `ProductionView06` viene trasferita al proprietario dello schema che la contiene. La vista è inclusa nello schema `Production`.    
     
 ```    

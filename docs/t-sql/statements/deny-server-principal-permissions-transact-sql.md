@@ -19,15 +19,15 @@ helpviewer_keywords:
 - servers [SQL Server], permissions
 - logins [SQL Server], denying access
 ms.assetid: 859affa7-0567-47d1-9490-57c1abbd619b
-author: CarlRabeler
-ms.author: carlrab
+author: VanMSFT
+ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 6435471a8913135ecc59388c6b5de559d7ab3582
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: bb2b43324d9147dfdd55f3109842dceb2ffcb975
+ms.sourcegitcommit: 9c99f992abd5f1c174b3d1e978774dffb99ff218
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47804299"
+ms.lasthandoff: 01/17/2019
+ms.locfileid: "54361611"
 ---
 # <a name="deny-server-principal-permissions-transact-sql"></a>Autorizzazioni per entità server DENY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -125,7 +125,7 @@ DENY IMPERSONATE ON LOGIN::WanidaBenshoof TO [AdvWorks\YoonM];
 GO  
 ```  
   
-### <a name="b-denying-view-definition-permission-with-cascade"></a>B. Negazione dell'autorizzazione VIEW DEFINITION con CASCADE  
+### <a name="b-denying-view-definition-permission-with-cascade"></a>b. Negazione dell'autorizzazione VIEW DEFINITION con CASCADE  
  Nell'esempio seguente viene negata l'autorizzazione `VIEW DEFINITION` per l'account di accesso di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] `EricKurjan` all'account accesso di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] `RMeyyappan`. L'opzione `CASCADE` indica che l'autorizzazione `VIEW DEFINITION` per `EricKurjan` verrà negata anche alle entità a cui `RMeyyappan` ha concesso tale autorizzazione.  
   
 ```  

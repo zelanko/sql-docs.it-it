@@ -15,12 +15,12 @@ author: julieMSFT
 ms.author: jrasnick
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: fd046f665745ca9456acb6a2c30e28ff9a6fc082
-ms.sourcegitcommit: c51f7f2f5d622a1e7c6a8e2270bd25faba0165e7
+ms.openlocfilehash: 9406b4afe6ed3c99bf729b0598020413b4a1c045
+ms.sourcegitcommit: 9c99f992abd5f1c174b3d1e978774dffb99ff218
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53626400"
+ms.lasthandoff: 01/17/2019
+ms.locfileid: "54361661"
 ---
 # <a name="monitoring-performance-by-using-the-query-store"></a>Monitoraggio delle prestazioni con Query Store
 [!INCLUDE[appliesto-ss-asdb-xxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -44,14 +44,14 @@ ms.locfileid: "53626400"
   
 2.  Nella finestra di dialogo **Proprietà database** selezionare la pagina **Archivio query** .  
   
-3.  Nella casella **Modalità operativa (richiesta)** selezionare **Attivato**.  
+3.  Nella casella **Modalità operativa (richiesta)** selezionare **Lettura/Scrittura**.  
   
 #### <a name="use-transact-sql-statements"></a>Usare istruzioni Transact-SQL  
   
 Per abilitare l'archivio query, usare l'istruzione **ALTER DATABASE** . Ad esempio  
   
 ```sql  
-ALTER DATABASE AdventureWorks2012 SET QUERY_STORE = ON;  
+ALTER DATABASE AdventureWorks2012 SET QUERY_STORE (OPERATION_MODE = READ_WRITE); 
 ```  
   
 Per altre opzioni della sintassi correlate all'archivio query, vedere [Opzioni ALTER DATABASE SET &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-set-options.md).  

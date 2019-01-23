@@ -11,12 +11,12 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 4df60da8f70eaddd0aeea28d7bb498a8273e1486
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 82afdd3febbd85efc137cc8877f5759ad6428ede
+ms.sourcegitcommit: cb9c54054449c586360c9cb634e33f505939a1c9
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52543953"
+ms.lasthandoff: 01/15/2019
+ms.locfileid: "54317781"
 ---
 # <a name="dynamic-data-masking"></a>Mascheramento dati dinamici
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -94,7 +94,7 @@ WHERE is_masked = 1;
  Poiché l'aggiunta di una maschera di dati dinamici viene implementata come modifica dello schema nella tabella sottostante, l'operazione non può essere eseguita in una colonna con dipendenze. Per aggirare questa limitazione, è possibile rimuovere la dipendenza, aggiungere la maschera di dati dinamici e quindi ricreare la dipendenza. Ad esempio, se la dipendenza è dovuta a un indice che dipende dalla colonna, è possibile eliminare l'indice, aggiungere la maschera e quindi ricreare l'indice dipendente.
  
 
-## <a name="security-note-bypassing-masking-using-inference-or-brute-force-techniques"></a>Nota sulla sicurezza: Ignorare il mascheramento usando tecniche di attacchi di forza bruta o inferenza
+## <a name="security-note-bypassing-masking-using-inference-or-brute-force-techniques"></a>Nota sulla sicurezza: ignorare il mascheramento usando tecniche di attacchi di forza bruta o inferenza
 
 Il mascheramento dei dati dinamici è progettato per semplificare lo sviluppo di applicazioni, limitando l'esposizione dei dati in un set di query predefinito usato dall'applicazione. Nonostante possa essere utile anche per prevenire l'esposizione accidentale dei dati sensibili durante l'accesso diretto a un database di protezione, è importante notare che gli utenti senza privilegi con autorizzazioni per le query ad hoc possono applicare le tecniche per ottenere l'accesso ai dati effettivi. Se è necessario concedere l'accesso ad hoc, usare il Controllo per monitorare tutte le attività del database e attenuare questo scenario.
  

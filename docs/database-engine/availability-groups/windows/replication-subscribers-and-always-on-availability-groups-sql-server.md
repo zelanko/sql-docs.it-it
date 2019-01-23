@@ -1,7 +1,7 @@
 ---
 title: Sottoscrittori della replica e gruppi di disponibilità AlwaysOn (SQL Server) | Microsoft Docs
 ms.custom: ''
-ms.date: 03/08/2018
+ms.date: 01/16/2019
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: high-availability
@@ -14,20 +14,20 @@ ms.assetid: 0995f269-0580-43ed-b8bf-02b9ad2d7ee6
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 46348ec891fba60479633f824a96232290859cd3
-ms.sourcegitcommit: 96032813f6bf1cba680b5e46d82ae1f0f2da3d11
+ms.openlocfilehash: 3148948d4ccc162a18f114ed99c36393b3b78c86
+ms.sourcegitcommit: 12911093559b4e006189d7a7d32b8d0474961cd5
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/15/2019
-ms.locfileid: "54298508"
+ms.lasthandoff: 01/17/2019
+ms.locfileid: "54372668"
 ---
 # <a name="replication-subscribers-and-always-on-availability-groups-sql-server"></a>Sottoscrittori della replica e gruppi di disponibilità AlwaysOn (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-  Quando viene eseguito il failover di un gruppo di disponibilità AlwaysOn contenente un database che opera come sottoscrittore di replica, la sottoscrizione di replica potrebbe non venire completata. Per i sottoscrittori transazionali, l'agente di distribuzione continuerà a replicare automaticamente se la sottoscrizione utilizza il nome del listener del gruppo di disponibilità del sottoscrittore. Per i sottoscrittori di merge, un amministratore di replica deve riconfigurare manualmente il sottoscrittore ricreando la sottoscrizione.  
+  Quando viene eseguito il failover di un gruppo di disponibilità AlwaysOn contenente un database che opera come sottoscrittore di replica, la sottoscrizione di replica potrebbe non venire completata. Per i sottoscrittori push della replica transazionale, l'agente di distribuzione continuerà a replicare automaticamente dopo un failover se la sottoscrizione è stata creata usando il nome del listener del gruppo di disponibilità. Per i sottoscrittori pull della replica transazionale, l'agente di distribuzione continuerà a replicare automaticamente dopo un failover se la sottoscrizione è stata creata usando il nome del listener del gruppo di disponibilità e il server sottoscrizione originale è attivo e in esecuzione. Questo avviene perché i processi dell'agente di distribuzione vengono creati solo nel sottoscrittore originale (replica primaria del gruppo di disponibilità). Per i sottoscrittori di merge, un amministratore di replica deve riconfigurare manualmente il sottoscrittore ricreando la sottoscrizione.  
   
 ## <a name="what-is-supported"></a>Operazioni supportate  
- La replica di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] supporta il failover automatico del server di pubblicazione e il failover automatico dei sottoscrittori transazionali. Il failover di un server di distribuzione in un database di disponibilità non è supportato. I sottoscrittori della replica di tipo merge possono far parte di un gruppo di disponibilità, tuttavia sono necessarie azioni manuali per configurare il nuovo sottoscrittore dopo un failover. Non è possibile combinare i gruppi di disponibilità con gli scenari Websync e SQL Server Compact.  
+ La replica di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] supporta il failover automatico del server di pubblicazione e il failover automatico dei sottoscrittori transazionali. I sottoscrittori della replica di tipo merge possono far parte di un gruppo di disponibilità, tuttavia sono necessarie azioni manuali per configurare il nuovo sottoscrittore dopo un failover. Non è possibile combinare i gruppi di disponibilità con gli scenari Websync e SQL Server Compact.  
   
 ## <a name="how-to-create-transactional-subscription-in-an-always-on-environment"></a>Come creare una sottoscrizione transazionale in un ambiente AlwaysOn  
  Per la replica transazionale, usare i passaggi seguenti per configurare un gruppo di disponibilità del sottoscrittore e impostarne il failover:  

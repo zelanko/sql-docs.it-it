@@ -18,12 +18,12 @@ ms.assetid: 07f8f594-75b4-4591-8c29-d63811e7753e
 author: pmasl
 ms.author: pelopes
 manager: amitban
-ms.openlocfilehash: 2270917dad9f366b09fbc7cbc0d88c286fe6761c
-ms.sourcegitcommit: bfa10c54e871700de285d7f819095d51ef70d997
+ms.openlocfilehash: f2df34057c02171701aefb878cfb79c56f97a699
+ms.sourcegitcommit: cb9c54054449c586360c9cb634e33f505939a1c9
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/14/2019
-ms.locfileid: "54257096"
+ms.lasthandoff: 01/15/2019
+ms.locfileid: "54317801"
 ---
 # <a name="upgrading-databases-by-using-the-query-tuning-assistant"></a>Aggiornamento di database mediante l'Assistente ottimizzazione query
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -138,7 +138,7 @@ L'Assistente ottimizzazione Query è una funzionalità basata sulla sessione che
     > [!NOTE]
     > Il pulsante **Sessioni** torna ad aprire la pagina **Gestione delle sessioni**, lasciando invariata la sessione attiva.
 
-    Questo passaggio include 3 passaggi secondari:
+    Questo passaggio include tre passaggi secondari:
 
     1.  **Raccolta di dati baseline** richiede all'utente di eseguire il ciclo del carico di lavoro rappresentativo, in modo che Query Store possa raccogliere una baseline. Dopo il completamento del carico di lavoro, selezionare **Esecuzione del carico di lavoro completata** e fare clic su **Avanti**.
 

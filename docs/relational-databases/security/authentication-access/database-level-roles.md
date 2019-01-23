@@ -1,7 +1,7 @@
 ---
 title: Ruoli a livello di database | Microsoft Docs
 ms.custom: ''
-ms.date: 06/29/2017
+ms.date: 01/19/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -39,14 +39,15 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f90a0ac06ed8852410874ffc2fb4a26b04ebf3c8
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d8d205e184f31e628cf9629b702e21e43c200e38
+ms.sourcegitcommit: 480961f14405dc0b096aa8009855dc5a2964f177
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47780829"
+ms.lasthandoff: 01/22/2019
+ms.locfileid: "54420096"
 ---
 # <a name="database-level-roles"></a>Ruoli a livello di database
+
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
   Per una facile gestione delle autorizzazioni dei database, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] fornisce diversi *ruoli* rappresentanti entità di sicurezza all'interno delle quali sono raggruppate altre entità. I ruoli sono analoghi ai ***gruppi*** nel sistema operativo [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Windows. L'ambito delle autorizzazioni dei ruoli a livello di database è l'intero database.  
@@ -92,8 +93,8 @@ Questi ruoli del database si trovano solo nel database master virtuale. Le autor
 
 |Nome ruolo|Descrizione|  
 |--------------------|-----------------|
-**dbmanager** | Può creare ed eliminare database. Un membro del ruolo dbmanager che crea un database diventa il proprietario del database e questo permette all'utente di connettersi al database come utente dbo. L'utente dbo ha tutte le autorizzazioni database nel database. I membri del ruolo dbmanager non hanno necessariamente l'autorizzazione necessaria per accedere ai database di cui non sono proprietari.
-**loginmanager** | Può creare ed eliminare account di accesso nel database master virtuale.  
+|**dbmanager** | Può creare ed eliminare database. Un membro del ruolo dbmanager che crea un database diventa il proprietario del database e questo permette all'utente di connettersi al database come utente dbo. L'utente dbo ha tutte le autorizzazioni database nel database. I membri del ruolo dbmanager non hanno necessariamente l'autorizzazione necessaria per accedere ai database di cui non sono proprietari.|
+|**loginmanager** | Può creare ed eliminare account di accesso nel database master virtuale.|
 
 > [!NOTE]
 > L'entità a livello di server e l'amministratore di Azure Active Directory (se configurato) hanno tutte le autorizzazioni in [!INCLUDE[ssSDS_md](../../../includes/sssds-md.md)] e [!INCLUDE[ssSDW_md](../../../includes/sssdw-md.md)] senza dover essere membri di alcun ruolo. Per altre informazioni, vedere [Autenticazione e autorizzazione del database SQL: concessione dell'accesso](https://azure.microsoft.com/documentation/articles/sql-database-manage-logins/). 

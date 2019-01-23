@@ -205,7 +205,7 @@ items:
       items:
       - name: Cluster di failover
         href: /sql/sql-server/failover-clusters/
-        homepage: /sql/sql-server/failover-clusters/high-availability-solutions-sql-server
+        homepage: /sql/database-engine/sql-server-business-continuity-dr
         items:
         - name: Install
           href: /sql/sql-server/failover-clusters/install/
@@ -416,7 +416,7 @@ items:
         - name: Pacchetti
           href: /sql/integration-services/packages/
           homepage: /sql/integration-services/packages/deploy-integration-services-ssis-projects-and-packages
-        - name: restazioni
+        - name: Prestazioni
           href: /sql/integration-services/performance/
           homepage: /sql/integration-services/performance/monitor-running-packages-and-other-operations
         - name: Scalabilità orizzontale
@@ -666,7 +666,7 @@ items:
       - name: Partizioni
         href: /sql/relational-databases/partitions/
         homepage: /sql/relational-databases/partitions/partitioned-tables-and-indexes
-      - name: restazioni
+      - name: Prestazioni
         href: /sql/relational-databases/performance/
         homepage: /sql/relational-databases/performance/performance-center-for-sql-server-database-engine-and-azure-sql-database
         items:
@@ -1210,9 +1210,9 @@ items:
       - name: SSMA Sybase
         href: /sql/ssma/sybase/
         homepage: /sql/ssma/sybase/installing-ssma-for-sybase-sybasetosql
-ms.openlocfilehash: 529f9ba70c4beb5a5fb5deeb5830c90a26c06941
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: 86248c41335dace268bd4d68a459fc8eb2728d2e
+ms.sourcegitcommit: a192814756570bcbce3b1dbbb05acb24a79d1530
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54125219"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54457684"

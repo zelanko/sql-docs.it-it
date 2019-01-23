@@ -1,6 +1,6 @@
 ---
 title: Supplemento alla privacy di SQL Server | Microsoft Docs
-ms.date: 4/25/2018
+ms.date: 01/19/2019
 ms.prod: sql
 ms.reviewer: ''
 ms.custom: ''
@@ -10,14 +10,15 @@ helpviewer_keywords: ''
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 179573dbe83167067ea2b6b4ec6ffd856dcb42e2
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 06116a52b35acb2ffef584e751e2c7285ce99551
+ms.sourcegitcommit: 480961f14405dc0b096aa8009855dc5a2964f177
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52409728"
+ms.lasthandoff: 01/22/2019
+ms.locfileid: "54420026"
 ---
 # <a name="sql-server-privacy-supplement"></a>Supplemento alla privacy di SQL Server
+
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 In questo articolo viene riepilogato il comportamento di vari oggetti dati usati in SQL Server e la modalità con cui tali oggetti vengono usati per passare le informazioni in modo riservato o personale. Questo articolo funge da supplemento all'[Informativa sulla privacy di Microsoft](https://go.microsoft.com/fwlink/?LinkId=521839). La classificazione dei dati in questo articolo si applica solo alle versioni del prodotto SQL Server locale. Non si applica agli elementi seguenti:
@@ -43,12 +44,13 @@ Informazioni correlate alle credenziali usate per proteggere gli account di acce
 
 ### <a name="permitted-usage-scenarios"></a>Scenari di utilizzo consentiti
 
-|Scenario  |Restrizioni di accesso  |Requisiti di mantenimento |
+|Scenario |Restrizioni di accesso |Requisiti di mantenimento |
 |---------|---------|---------|
-|Queste credenziali non lasciano mai il computer dell'utente tramite il feedback sull'utilizzo.     |-         |-         |
-|I dump di arresto anomalo del sistema possono contenere dati di controllo di accesso.     |-         |Dump di arresto anomalo del sistema: massimo 30 giorni.         |
-|Queste credenziali non lasciano mai il computer dell'utente mediante il feedback utente a meno che il cliente non le inserisca manualmente    |Limite all'uso interno Microsoft senza accesso per terze parti.         |Feedback utente: massimo 1 anno         |
- |
+|Queste credenziali non lasciano mai il computer dell'utente tramite il feedback sull'utilizzo. |- |- |
+|I dump di arresto anomalo del sistema possono contenere dati di controllo di accesso. |- |Dump di arresto anomalo: massimo 30 giorni. |
+|Queste credenziali non lasciano mai il computer dell'utente mediante il feedback utente a meno che il cliente non le inserisca manualmente |Limite all'uso interno Microsoft senza accesso per terze parti. |Commenti e suggerimenti degli utenti: massimo 1 anno|
+|&nbsp;|&nbsp;|&nbsp;|
+
 ## <a name="customer-content"></a>Contenuto del cliente
 
 Si definiscono contenuto del cliente i dati archiviati nelle tabelle utente, direttamente o indirettamente. I dati includono valori letterali o statistiche dell'utente all'interno di testi di query che possono essere archiviati nelle tabelle utente.
@@ -60,11 +62,12 @@ Si definiscono contenuto del cliente i dati archiviati nelle tabelle utente, dir
 - Testi di query contenenti valori letterali.
 
 ### <a name="permitted-usage-scenarios"></a>Scenari di utilizzo consentiti
+
 |Scenario  |Restrizioni di accesso  |Requisiti di mantenimento |
 |---------|---------|---------|
 |Questi dati non lasciano mai il computer dell'utente tramite il feedback sull'utilizzo. |- |- |
 |I dump di arresto anomalo del sistema possono includere contenuto del cliente ed essere inviati a Microsoft. |- |Dump di arresto anomalo: massimo 30 giorni. |
-|I clienti possono dare il proprio consenso all'invio a Microsoft di feedback utente che include contenuto del cliente. |Limite all'uso interno Microsoft senza accesso per terze parti. Microsoft può rendere disponibili i dati al cliente originale. |Feedback utente: massimo 1 anno |
+|I clienti possono dare il proprio consenso all'invio a Microsoft di feedback utente che include contenuto del cliente. |Limite all'uso interno Microsoft senza accesso per terze parti. Microsoft può rendere disponibili i dati al cliente originale. |Commenti e suggerimenti degli utenti: massimo 1 anno |
 
 ## <a name="end-user-identifiable-information-euii"></a>Informazioni personali dell'utente finale
 
@@ -88,7 +91,7 @@ Dati ricevuti da un utente o generati dall'uso del prodotto.
 |Questi dati non lasciano mai il computer dell'utente tramite il feedback sull'utilizzo. |- |- |
 |I dump di arresto anomalo del sistema possono includere informazioni personali dell'utente finale e possono essere inviati a Microsoft. |- |Dump di arresto anomalo: massimo 30 giorni |
 |L'ID di identificazione del cliente può essere inviato a Microsoft per offrire nuove funzionalità ibride e cloud che gli utenti hanno sottoscritto. |- |Attualmente non esiste alcuna funzionalità ibrida o cloud di questo tipo.|
-|I clienti possono dare il proprio consenso all'invio a Microsoft di feedback utente che include contenuto del cliente.|Limite all'uso interno Microsoft senza accesso per terze parti. Microsoft può rendere disponibili i dati al cliente originale. |Feedback utente: massimo 1 anno |
+|I clienti possono dare il proprio consenso all'invio a Microsoft di feedback utente che include contenuto del cliente.|Limite all'uso interno Microsoft senza accesso per terze parti. Microsoft può rendere disponibili i dati al cliente originale. |Commenti e suggerimenti degli utenti: massimo 1 anno |
 
 ## <a name="internet-based-services-data"></a>Dati dei servizi basati su Internet
 
@@ -130,17 +133,17 @@ I dati riportati si seguito sono considerati metadati di sistema se non includon
 - Nomi degli eventi e codici di errore
 - Impostazioni hardware e identificazione, ad esempio il produttore OEM
 
-Microsoft esamina i valori dei nomi di applicazione impostati da altri programmi che usano SQL Server (esempio: SharePoint o programmi in pacchetto di terze parti) e include queste informazioni nei metadati di sistema inviate a Microsoft quando sono abilitati i dati di utilizzo. I clienti non devono inserire dati personali, ad esempio le informazioni personali dell'utente finale, nei campi di metadati di sistema o creare applicazioni progettate per archiviare dati personali in questi campi. 
+Microsoft esamina i valori dei nomi di applicazione impostati da altri programmi che usano SQL Server (ad esempio SharePoint o programmi di terze parti includono queste informazioni nei metadati di sistema inviati Microsoft quando sono abilitati i dati di utilizzo). I clienti non devono inserire dati personali, ad esempio le informazioni personali dell'utente finale, nei campi di metadati di sistema o creare applicazioni progettate per archiviare dati personali in questi campi. 
 
 ### <a name="permitted-usage-scenarios"></a>Scenari di utilizzo consentiti
 
 |Scenario  |Restrizioni di accesso  |Requisiti di mantenimento|
 |---------|---------|---------|
 |Possono essere usati da Microsoft per migliorare le funzionalità e/o eliminare bug nelle funzionalità correnti.|Limite all'uso interno Microsoft senza accesso per terze parti. |Minimo 90 giorni - Massimo 3 anni |
-|Possono essere usati per offrire suggerimenti al cliente.  Ad esempio, si può consigliare, in base all'utilizzo del prodotto, di valutare l'uso della funzionalità *X* poiché consentirebbe prestazioni superiori. |Microsoft può rendere disponibili i dati al cliente originale, ad esempio mediante i dashboard. |Registri di protezione dei dati del cliente: minimo 3 anni - massimo 6 anni |
-Possono essere usati da Microsoft per la pianificazione futura dei prodotti. |Microsoft può condividere queste informazioni con altri fornitori di hardware e software per migliorare il funzionamento dei loro prodotti con il software Microsoft. |Minimo 90 giorni - Massimo 3 anni|
+|Possono essere usati per offrire suggerimenti al cliente.  Ad esempio, si può consigliare, in base all'utilizzo del prodotto, di valutare l'uso della funzionalità *X* poiché consentirebbe prestazioni superiori. |Microsoft può rendere disponibili i dati al cliente originale, ad esempio mediante i dashboard. |Registri di protezione dei dati dei clienti: minimo 3 anni, massimo 6 anni |
+|Possono essere usati da Microsoft per la pianificazione futura dei prodotti. |Microsoft può condividere queste informazioni con altri fornitori di hardware e software per migliorare il funzionamento dei loro prodotti con il software Microsoft. |Minimo 90 giorni - Massimo 3 anni|
 |Possono essere usati da Microsoft per offrire servizi basati su cloud in base al feedback utente generato. Ad esempio, un dashboard cliente che illustra l'utilizzo di funzionalità in tutte le installazioni di SQL Server all'interno di un'organizzazione. |Microsoft può rendere disponibili i dati al cliente originale, ad esempio mediante i dashboard. |Minimo 90 giorni - Massimo 3 anni |
-|I clienti possono dare il proprio consenso all'invio a Microsoft di feedback utente che include contenuto del cliente. |Limite all'uso interno Microsoft senza accesso per terze parti. Microsoft può rendere disponibili i dati al cliente originale. |Feedback utente: massimo 1 anno |
+|I clienti possono dare il proprio consenso all'invio a Microsoft di feedback utente che include contenuto del cliente. |Limite all'uso interno Microsoft senza accesso per terze parti. Microsoft può rendere disponibili i dati al cliente originale. |Commenti e suggerimenti degli utenti: massimo 1 anno |
 |Il nome del database e il nome dell'applicazione possono essere usati per classificare i database e le applicazioni in categorie note, ad esempio quelli che potrebbero eseguire software fornito da Microsoft o da altre società.|Limite all'uso interno Microsoft senza accesso per terze parti.|Minimo 90 giorni - Massimo 3 anni |
 
 ## <a name="object-metadata"></a>Metadati degli oggetti

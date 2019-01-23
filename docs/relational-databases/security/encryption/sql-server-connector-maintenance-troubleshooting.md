@@ -12,12 +12,12 @@ ms.assetid: 7f5b73fc-e699-49ac-a22d-f4adcfae62b1
 author: aliceku
 ms.author: aliceku
 manager: craigg
-ms.openlocfilehash: b7bf2dcebf6b9b453a0f5ff839b9eb627698899e
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 48db6ede27c4ca7565ca4de1b0eab798c1eb2ef7
+ms.sourcegitcommit: c6e71ed14198da67afd7ba722823b1af9b4f4e6f
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52520686"
+ms.lasthandoff: 01/16/2019
+ms.locfileid: "54327842"
 ---
 # <a name="sql-server-connector-maintenance-amp-troubleshooting"></a>Manutenzione e risoluzione dei problemi di Connettore SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -40,11 +40,11 @@ ms.locfileid: "52520686"
 -   **In PowerShell:** creare una nuova chiave asimmetrica (con un nome diverso dalla chiave asimmetrica TDE corrente) nell'insieme di credenziali delle chiavi.  
   
     ```powershell  
-    Add-AzureRmKeyVaultKey -VaultName 'ContosoDevKeyVault' `  
+    Add-AzKeyVaultKey -VaultName 'ContosoDevKeyVault' `  
       -Name 'Key2' -Destination 'Software'  
     ```  
   
--   **Uso di [!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)] o sqlcmd.exe:** usare le istruzioni seguenti, come illustrato nella sezione 3 del passaggio 3.  
+-   **Con [!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)] o sqlcmd.exe:** usare le istruzioni seguenti, come illustrato nella sezione 3 del passaggio 3.  
   
      Importare la nuova chiave asimmetrica.  
   
@@ -152,7 +152,7 @@ In sintesi, ecco i passaggi necessari:
 * Concedere le autorizzazioni all'entità servizio di SQL Server per l'uso di questo nuovo insieme di credenziali.  
 * Modificare le credenziali di SQL Server usate dal motore di database in modo da riflettere il nuovo nome dell'insieme di credenziali, se necessario.  
   
-I backup delle chiavi possono essere ripristinati nelle aree di Azure, a condizione che rimangano nella stessa area geografica o nel cloud nazionale: Stati Uniti, Canada, Giappone, Australia, India, Asia Pacifico, Europa, Brasile, Cina, Governo degli Stati Uniti o Germania.  
+I backup delle chiavi possono essere ripristinati in aree diverse di Azure, purché rimangano nella stessa area geografica o nello stesso cloud nazionale: Stati Uniti, Canada, Giappone, Australia, India, Asia Pacifico, Europa, Brasile, Cina, US Government o Germania.  
   
   
 ##  <a name="AppendixB"></a> B. Domande frequenti  
