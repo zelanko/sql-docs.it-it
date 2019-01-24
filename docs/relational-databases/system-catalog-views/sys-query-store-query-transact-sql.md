@@ -1,7 +1,7 @@
 ---
-title: Sys. query_store_query (Transact-SQL) | Microsoft Docs
+title: sys.query_store_query (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 11/29/2018
+ms.date: 01/23/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -22,14 +22,14 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: ff4b428c87da7180869cb3b0c51f4a8fb118a351
-ms.sourcegitcommit: c7febcaff4a51a899bc775a86e764ac60aab22eb
+ms.openlocfilehash: 397f7d5317fd5033f735b938f7d2f11ec80417bc
+ms.sourcegitcommit: 3d50caa30681bf384f5628b1dd3e06e24fc910cd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "52711852"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54838088"
 ---
-# <a name="sysquerystorequery-transact-sql"></a>Sys. query_store_query (Transact-SQL)
+# <a name="sysquerystorequery-transact-sql"></a>sys.query_store_query (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-asdw-xxx-md.md)]
 
   Contiene informazioni sulle query e le statistiche di esecuzione runtime aggregate complessivo associato.  
@@ -37,35 +37,35 @@ ms.locfileid: "52711852"
 |Nome colonna|Tipo di dati|Descrizione|  
 |-----------------|---------------|-----------------|  
 |**query_id**|**bigint**|Chiave primaria.|  
-|**query_text_id**|**bigint**|Chiave esterna. Crea un join al [query_store_query_text &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-store-query-text-transact-sql.md)|  
-|**context_settings_id**|**bigint**|Chiave esterna. Crea un join al [sys.query_context_settings &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-context-settings-transact-sql.md).|  
-|**object_id**|**bigint**|ID dell'oggetto di database che fa parte della query (stored procedure, trigger, funzioni definite dall'utente CLR/UDAgg, ecc.). 0 se non viene eseguita la query come parte di un oggetto di database (query ad hoc).|  
-|**batch_sql_handle**|**varbinary(64)**|ID del batch di istruzione della query fa parte di. Popolato solo se la query fa riferimento a tabelle temporanee o variabili di tabella.|  
+|**query_text_id**|**bigint**|Chiave esterna. Joins to [sys.query_store_query_text &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-store-query-text-transact-sql.md)|  
+|**context_settings_id**|**bigint**|Chiave esterna. Joins to [sys.query_context_settings &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-context-settings-transact-sql.md).<br/>**Nota:** Azure SQL Data Warehouse restituirà sempre zero (0).|  
+|**object_id**|**bigint**|ID dell'oggetto di database che fa parte della query (stored procedure, trigger, funzioni definite dall'utente CLR/UDAgg, ecc.). 0 se non viene eseguita la query come parte di un oggetto di database (query ad hoc).<br/>**Nota:** Azure SQL Data Warehouse restituirà sempre zero (0).|  
+|**batch_sql_handle**|**varbinary(64)**|ID del batch di istruzione della query fa parte di. Popolato solo se la query fa riferimento a tabelle temporanee o variabili di tabella.<br/>**Nota:** Azure SQL Data Warehouse verrà sempre restituito *NULL*.|  
 |**query_hash**|**binary(8)**|Hash MD5 della singola query, basata sull'albero query logica. Include gli hint per query optimizer.|  
-|**is_internal_query**|**bit**|La query è stata generata internamente.|  
-|**query_parameterization_type**|**tinyint**|Tipo di parametrizzazione:<br /><br /> 0: nessuno<br /><br /> 1 - utente<br /><br /> 2 - semplice<br /><br /> 3 - forzato|  
-|**query_parameterization_type_desc**|**nvarchar(60)**|Descrizione testuale per il tipo di parametrizzazione automatica.|  
+|**is_internal_query**|**bit**|La query è stata generata internamente.<br/>**Nota:** Azure SQL Data Warehouse restituirà sempre zero (0).|  
+|**query_parameterization_type**|**tinyint**|Tipo di parametrizzazione:<br /><br /> 0: nessuno<br /><br /> 1 - utente<br /><br /> 2 - semplice<br /><br /> 3 - forzato<br/>**Nota:** Azure SQL Data Warehouse restituirà sempre zero (0).|  
+|**query_parameterization_type_desc**|**nvarchar(60)**|Descrizione testuale per il tipo di parametrizzazione automatica.<br/>**Nota:** Azure SQL Data Warehouse verrà sempre restituito *None*.|  
 |**initial_compile_start_time**|**datetimeoffset**|Compilare ora di inizio.|  
 |**last_compile_start_time**|**datetimeoffset**|Compilare ora di inizio.|  
 |**last_execution_time**|**datetimeoffset**|Ora dell'ultima esecuzione si riferisce all'ultima ora di fine del piano di query /.|  
-|**last_compile_batch_sql_handle**|**varbinary(64)**|Handle dell'ultimo batch SQL in cui query è stata usata l'ora dell'ultima. Può essere fornita come input per [DM exec_sql_text &#40;Transact-SQL&#41; ](../../relational-databases/system-dynamic-management-views/sys-dm-exec-sql-text-transact-sql.md) per ottenere il testo completo del batch.|  
-|**last_compile_batch_offset_start**|**bigint**|Informazioni che possono essere fornite a DM exec_sql_text insieme last_compile_batch_sql_handle.|  
-|**last_compile_batch_offset_end**|**bigint**|Informazioni che possono essere fornite a DM exec_sql_text insieme last_compile_batch_sql_handle.|  
-|**count_compiles**|**bigint**|Statistiche della compilazione.|  
+|**last_compile_batch_sql_handle**|**varbinary(64)**|Handle dell'ultimo batch SQL in cui query è stata usata l'ora dell'ultima. Può essere fornita come input per [DM exec_sql_text &#40;Transact-SQL&#41; ](../../relational-databases/system-dynamic-management-views/sys-dm-exec-sql-text-transact-sql.md) per ottenere il testo completo del batch.<br/>**Nota:** Azure SQL Data Warehouse verrà sempre restituito *NULL*.|  
+|**last_compile_batch_offset_start**|**bigint**|Informazioni che possono essere fornite a DM exec_sql_text insieme last_compile_batch_sql_handle.<br/>**Nota:** Azure SQL Data Warehouse restituirà sempre zero (0).|
+|**last_compile_batch_offset_end**|**bigint**|Informazioni che possono essere fornite a DM exec_sql_text insieme last_compile_batch_sql_handle.<br/>**Nota:** Azure SQL Data Warehouse restituirà sempre zero (0).|  
+|**count_compiles**|**bigint**|Statistiche della compilazione.<br/>**Nota:** Azure SQL Data Warehouse restituirà sempre uno (1).|  
 |**avg_compile_duration**|**float**|Statistiche di compilazione in microsecondi.|  
 |**last_compile_duration**|**bigint**|Statistiche di compilazione in microsecondi.|  
-|**avg_bind_duration**|**float**|Statistiche di associazione in microsecondi.|  
-|**last_bind_duration**|**bigint**|Statistiche di associazione.|  
-|**avg_bind_cpu_time**|**float**|Statistiche di associazione.|  
-|**last_bind_cpu_time**|**bigint**|Statistiche di associazione.|  
-|**avg_optimize_duration**|**float**|Statistiche di ottimizzazione espressa in microsecondi.|  
-|**last_optimize_duration**|**bigint**|Statistiche di ottimizzazione.|  
-|**avg_optimize_cpu_time**|**float**|Statistiche di ottimizzazione espressa in microsecondi.|  
-|**last_optimize_cpu_time**|**bigint**|Statistiche di ottimizzazione.|  
-|**avg_compile_memory_kb**|**float**|Compilare le statistiche di memoria.|  
-|**last_compile_memory_kb**|**bigint**|Compilare le statistiche di memoria.|  
-|**max_compile_memory_kb**|**bigint**|Compilare le statistiche di memoria.|  
-|**is_clouddb_internal_query**|**bit**|Sempre 0 in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in locale.|  
+|**avg_bind_duration**|**float**|Statistiche di associazione in microsecondi.<br/>**Nota:** Azure SQL Data Warehouse restituirà sempre zero (0).|  
+|**last_bind_duration**|**bigint**|Statistiche di associazione.<br/>**Nota:** Azure SQL Data Warehouse restituirà sempre zero (0).|  
+|**avg_bind_cpu_time**|**float**|Statistiche di associazione.<br/>**Nota:** Azure SQL Data Warehouse restituirà sempre zero (0).|  
+|**last_bind_cpu_time**|**bigint**|Statistiche di associazione.<br/>**Nota:** Azure SQL Data Warehouse restituirà sempre zero (0).|  
+|**avg_optimize_duration**|**float**|Statistiche di ottimizzazione espressa in microsecondi.<br/>**Nota:** Azure SQL Data Warehouse restituirà sempre zero (0).|
+|**last_optimize_duration**|**bigint**|Statistiche di ottimizzazione.<br/>**Nota:** Azure SQL Data Warehouse restituirà sempre zero (0).|
+|**avg_optimize_cpu_time**|**float**|Statistiche di ottimizzazione espressa in microsecondi.<br/>**Nota:** Azure SQL Data Warehouse restituirà sempre zero (0).|
+|**last_optimize_cpu_time**|**bigint**|Statistiche di ottimizzazione.<br/>**Nota:** Azure SQL Data Warehouse restituirà sempre zero (0).|
+|**avg_compile_memory_kb**|**float**|Compilare le statistiche di memoria.<br/>**Nota:** Azure SQL Data Warehouse restituirà sempre zero (0).|
+|**last_compile_memory_kb**|**bigint**|Compilare le statistiche di memoria.<br/>**Nota:** Azure SQL Data Warehouse restituirà sempre zero (0).|
+|**max_compile_memory_kb**|**bigint**|Compilare le statistiche di memoria.<br/>**Nota:** Azure SQL Data Warehouse restituirà sempre zero (0).|
+|**is_clouddb_internal_query**|**bit**|Sempre 0 in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in locale.<br/>**Nota:** Azure SQL Data Warehouse restituirà sempre zero (0).|
   
 ## <a name="permissions"></a>Permissions  
  Richiede la **VIEW DATABASE STATE** l'autorizzazione.  

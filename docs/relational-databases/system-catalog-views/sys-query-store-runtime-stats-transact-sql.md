@@ -1,7 +1,7 @@
 ---
-title: Sys. query_store_runtime_stats (Transact-SQL) | Microsoft Docs
+title: sys.query_store_runtime_stats (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 11/29/2018
+ms.date: 01/23/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -22,21 +22,21 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: b53020f747b84c824ae8cd816c3b7ba1975df80b
-ms.sourcegitcommit: c7febcaff4a51a899bc775a86e764ac60aab22eb
+ms.openlocfilehash: 41916bbd0efabca03cc25e0c087a8c1a7a3d4070
+ms.sourcegitcommit: 3d50caa30681bf384f5628b1dd3e06e24fc910cd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "52712432"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54838128"
 ---
-# <a name="sysquerystoreruntimestats-transact-sql"></a>Sys. query_store_runtime_stats (Transact-SQL)
+# <a name="sysquerystoreruntimestats-transact-sql"></a>sys.query_store_runtime_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-asdw-xxx-md.md)]
 
   Contiene informazioni sulle informazioni statistiche esecuzione runtime per la query.  
   
 |Nome colonna|Tipo di dati|Descrizione|  
 |-----------------|---------------|-----------------|  
-|**runtime_stats_id**|**bigint**|Identificatore della riga che rappresenta le statistiche di esecuzione runtime per il **plan_id**, **execution_type** e **runtime_stats_interval_id**. È univoco solo per gli ultimi intervalli di statistiche di runtime. Per l'intervallo attualmente attivo possono esistere più righe che rappresenta le statistiche di runtime per il piano fa **plan_id**, con il tipo di esecuzione rappresentato dal **execution_type**. In genere, una riga rappresenta le statistiche di runtime che vengono scaricate su disco, mentre altri (s) rappresentano lo stato in memoria. Per ottenere lo stato effettivo per ogni intervallo è pertanto necessario aggregare le metriche, raggruppare **plan_id**, **execution_type** e **runtime_stats_interval_id**. |  
+|**runtime_stats_id**|**bigint**|Identificatore della riga che rappresenta le statistiche di esecuzione runtime per il **plan_id**, **execution_type** e **runtime_stats_interval_id**. È univoco solo per gli ultimi intervalli di statistiche di runtime. Per l'intervallo attualmente attivo possono esistere più righe che rappresenta le statistiche di runtime per il piano fa **plan_id**, con il tipo di esecuzione rappresentato dal **execution_type**. In genere, una riga rappresenta le statistiche di runtime che vengono scaricate su disco, mentre altri (s) rappresentano lo stato in memoria. Per ottenere lo stato effettivo per ogni intervallo è pertanto necessario aggregare le metriche, raggruppare **plan_id**, **execution_type** e **runtime_stats_interval_id**.<br/>**Nota:** Azure SQL Data Warehouse restituirà sempre zero (0).|
 |**plan_id**|**bigint**|Chiave esterna. Crea un join al [Sys. query_store_plan &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-store-plan-transact-sql.md).|  
 |**runtime_stats_interval_id**|**bigint**|Chiave esterna. Crea un join al [sys.query_store_runtime_stats_interval &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-store-runtime-stats-interval-transact-sql.md).|  
 |**execution_type**|**tinyint**|Determina il tipo di esecuzione di query:<br /><br /> 0 - esecuzione normale (correttamente completata)<br /><br /> 3 - client ha avviato ha interrotto l'esecuzione<br /><br /> 4 - eccezione ha interrotto l'esecuzione|  
@@ -49,51 +49,51 @@ ms.locfileid: "52712432"
 |**min_duration**|**bigint**|Durata minima per il piano di query entro l'intervallo di aggregazione (espresso in microsecondi).|  
 |**max_duration**|**bigint**|Durata massima per il piano di query entro l'intervallo di aggregazione (espresso in microsecondi).|  
 |**stdev_duration**|**float**|Deviazione standard della durata per il piano di query entro l'intervallo di aggregazione (espresso in microsecondi).|  
-|**avg_cpu_time**|**float**|Tempo medio di CPU per il piano di query entro l'intervallo di aggregazione (espresso in microsecondi).|  
-|**last_cpu_time**|**bigint**|Ultimo tempo di CPU per la query prevede entro l'intervallo di aggregazione (espresso in microsecondi).|  
-|**min_cpu_time**|**bigint**|Tempo minimo di CPU per il piano di query entro l'intervallo di aggregazione (espresso in microsecondi).|  
-|**max_cpu_time**|**bigint**|Tempo di CPU massimo per il piano di query entro l'intervallo di aggregazione (espresso in microsecondi).|  
-|**stdev_cpu_time**|**float**|Deviazione standard di tempo della CPU per il piano di query entro l'intervallo di aggregazione (espresso in microsecondi).|  
-|**avg_logical_io_reads**|**float**|Numero medio dei / o logiche legge per il piano di query entro l'intervallo di aggregazione. (espresso come un numero di pagine da 8KB lettura).|  
-|**last_logical_io_reads**|**bigint**|Ultimo numero dei / o logiche legge per il piano di query entro l'intervallo di aggregazione. (espresso come un numero di pagine da 8KB lettura).|  
-|**min_logical_io_reads**|**bigint**|Numero minimo dei / o logiche legge per il piano di query entro l'intervallo di aggregazione. (espresso come un numero di pagine da 8KB lettura).|  
-|**max_logical_io_reads**|**bigint**|Numero massimo dei / o logiche legge per il piano di query entro l'intervallo di aggregazione. (espresso come un numero di pagine da 8KB lettura). |  
-|**stdev_logical_io_reads**|**float**|Numero dei / o logiche legge la deviazione standard per il piano di query entro l'intervallo di aggregazione. (espresso come un numero di pagine da 8KB lettura).|  
-|**avg_logical_io_writes**|**float**|Numero medio dei / o logiche scrive per il piano di query entro l'intervallo di aggregazione.|  
-|**last_logical_io_writes**|**bigint**|Ultimo numero dei / o logiche scrive per il piano di query entro l'intervallo di aggregazione.|  
-|**min_logical_io_writes**|**bigint**|Numero minimo dei / o logiche scrive per il piano di query entro l'intervallo di aggregazione.|  
-|**max_logical_io_writes**|**bigint**|Numero massimo dei / o logiche scrive per il piano di query entro l'intervallo di aggregazione.|  
-|**stdev_logical_io_writes**|**float**|Numero dei / o logiche scrive la deviazione standard per il piano di query entro l'intervallo di aggregazione.|  
-|**avg_physical_io_reads**|**float**|Numero medio dei / o fisiche legge per il piano di query entro l'intervallo di aggregazione (espresso come un numero di pagine da 8KB lettura).|  
-|**last_physical_io_reads**|**bigint**|Ultimo numero dei / o fisiche legge per il piano di query entro l'intervallo di aggregazione (espresso come un numero di pagine da 8KB lettura).|  
-|**min_physical_io_reads**|**bigint**|Numero minimo dei / o fisiche legge per il piano di query entro l'intervallo di aggregazione (espresso come un numero di pagine da 8KB lettura).|  
-|**max_physical_io_reads**|**bigint**|Numero massimo dei / o fisiche legge per il piano di query entro l'intervallo di aggregazione (espresso come un numero di pagine da 8KB lettura).|  
-|**stdev_physical_io_reads**|**float**|Numero dei / o fisiche legge la deviazione standard per il piano di query entro l'intervallo di aggregazione (espresso come un numero di pagine da 8KB lettura).|  
-|**avg_clr_time**|**float**|Tempo medio di CLR per il piano di query entro l'intervallo di aggregazione (espresso in microsecondi).|  
-|**last_clr_time**|**bigint**|Ultima ora CLR per la query prevede entro l'intervallo di aggregazione (espresso in microsecondi).|  
-|**min_clr_time**|**bigint**|Tempo minimo di CLR per il piano di query entro l'intervallo di aggregazione (espresso in microsecondi).|  
-|**max_clr_time**|**bigint**|Tempo massimo di CLR per il piano di query entro l'intervallo di aggregazione (espresso in microsecondi).|  
-|**stdev_clr_time**|**float**|Deviazione standard di tempo CLR per il piano di query entro l'intervallo di aggregazione (espresso in microsecondi).|  
-|**avg_dop**|**float**|Media DOP (grado di parallelismo) per il piano di query entro l'intervallo di aggregazione.|  
-|**last_dop**|**bigint**|Ultimo valore DOP (grado di parallelismo) per il piano di query entro l'intervallo di aggregazione.|  
-|**min_dop**|**bigint**|Minimo DOP (grado di parallelismo) per il piano di query entro l'intervallo di aggregazione.|  
-|**max_dop**|**bigint**|Massimo grado di Parallelismo (grado di parallelismo) per il piano di query entro l'intervallo di aggregazione.|  
-|**stdev_dop**|**float**|Deviazione standard DOP (grado di parallelismo) per il piano di query entro l'intervallo di aggregazione.|  
-|**avg_query_max_used_memory**|**float**|Memoria Media autorizzazione (indicato come il numero di pagine da 8 KB) per il piano di query entro l'intervallo di aggregazione. Sempre 0 per query che usano in modo nativo compilati procedure ottimizzate per la memoria.|  
-|**last_query_max_used_memory**|**bigint**|Ultimo concessione di memoria (indicato come il numero di pagine da 8 KB) per il piano di query entro l'intervallo di aggregazione. Sempre 0 per query che usano in modo nativo compilati procedure ottimizzate per la memoria.|  
-|**min_query_max_used_memory**|**bigint**|Minima concessione di memoria (indicato come il numero di pagine da 8 KB) per il piano di query entro l'intervallo di aggregazione. Sempre 0 per query che usano in modo nativo compilati procedure ottimizzate per la memoria.|  
-|**max_query_max_used_memory**|**bigint**|Massima concessione di memoria (indicato come il numero di pagine da 8 KB) per il piano di query entro l'intervallo di aggregazione. Sempre 0 per query che usano in modo nativo compilati procedure ottimizzate per la memoria.|  
-|**stdev_query_max_used_memory**|**float**|Deviazione standard (indicata come il numero di pagine da 8 KB) concessione di memoria per il piano di query entro l'intervallo di aggregazione. Sempre 0 per query che usano in modo nativo compilati procedure ottimizzate per la memoria.|  
-|**avg_rowcount**|**float**|Numero medio di righe restituite per il piano di query entro l'intervallo di aggregazione.|  
-|**last_rowcount**|**bigint**|Numero di righe restituite dall'ultima esecuzione del piano di query entro l'intervallo di aggregazione.|  
-|**min_rowcount**|**bigint**|Numero minimo di righe restituite per la query prevede entro l'intervallo di aggregazione.|  
+|**avg_cpu_time**|**float**|Tempo medio di CPU per il piano di query entro l'intervallo di aggregazione (espresso in microsecondi).<br/>**Nota:** Azure SQL Data Warehouse restituirà sempre zero (0).|
+|**last_cpu_time**|**bigint**|Ultimo tempo di CPU per la query prevede entro l'intervallo di aggregazione (espresso in microsecondi).<br/>**Nota:** Azure SQL Data Warehouse restituirà sempre zero (0).|
+|**min_cpu_time**|**bigint**|Tempo minimo di CPU per il piano di query entro l'intervallo di aggregazione (espresso in microsecondi).<br/>**Nota:** Azure SQL Data Warehouse restituirà sempre zero (0).|
+|**max_cpu_time**|**bigint**|Tempo di CPU massimo per il piano di query entro l'intervallo di aggregazione (espresso in microsecondi).<br/>**Nota:** Azure SQL Data Warehouse restituirà sempre zero (0).|
+|**stdev_cpu_time**|**float**|Deviazione standard di tempo della CPU per il piano di query entro l'intervallo di aggregazione (espresso in microsecondi).<br/>**Nota:** Azure SQL Data Warehouse restituirà sempre zero (0).|
+|**avg_logical_io_reads**|**float**|Numero medio dei / o logiche legge per il piano di query entro l'intervallo di aggregazione. (espresso come un numero di pagine da 8KB lettura).<br/>**Nota:** Azure SQL Data Warehouse restituirà sempre zero (0).|
+|**last_logical_io_reads**|**bigint**|Ultimo numero dei / o logiche legge per il piano di query entro l'intervallo di aggregazione. (espresso come un numero di pagine da 8KB lettura).<br/>**Nota:** Azure SQL Data Warehouse restituirà sempre zero (0).|
+|**min_logical_io_reads**|**bigint**|Numero minimo dei / o logiche legge per il piano di query entro l'intervallo di aggregazione. (espresso come un numero di pagine da 8KB lettura).<br/>**Nota:** Azure SQL Data Warehouse restituirà sempre zero (0).|
+|**max_logical_io_reads**|**bigint**|Numero massimo dei / o logiche legge per il piano di query entro l'intervallo di aggregazione. (espresso come un numero di pagine da 8KB lettura).<br/>**Nota:** Azure SQL Data Warehouse restituirà sempre zero (0).|
+|**stdev_logical_io_reads**|**float**|Numero dei / o logiche legge la deviazione standard per il piano di query entro l'intervallo di aggregazione. (espresso come un numero di pagine da 8KB lettura).<br/>**Nota:** Azure SQL Data Warehouse restituirà sempre zero (0).|
+|**avg_logical_io_writes**|**float**|Numero medio dei / o logiche scrive per il piano di query entro l'intervallo di aggregazione.<br/>**Nota:** Azure SQL Data Warehouse restituirà sempre zero (0).|
+|**last_logical_io_writes**|**bigint**|Ultimo numero dei / o logiche scrive per il piano di query entro l'intervallo di aggregazione.<br/>**Nota:** Azure SQL Data Warehouse restituirà sempre zero (0).|
+|**min_logical_io_writes**|**bigint**|Numero minimo dei / o logiche scrive per il piano di query entro l'intervallo di aggregazione.<br/>**Nota:** Azure SQL Data Warehouse restituirà sempre zero (0).|
+|**max_logical_io_writes**|**bigint**|Numero massimo dei / o logiche scrive per il piano di query entro l'intervallo di aggregazione.<br/>**Nota:** Azure SQL Data Warehouse restituirà sempre zero (0).|
+|**stdev_logical_io_writes**|**float**|Numero dei / o logiche scrive la deviazione standard per il piano di query entro l'intervallo di aggregazione.<br/>**Nota:** Azure SQL Data Warehouse restituirà sempre zero (0).|
+|**avg_physical_io_reads**|**float**|Numero medio dei / o fisiche legge per il piano di query entro l'intervallo di aggregazione (espresso come un numero di pagine da 8KB lettura).<br/>**Nota:** Azure SQL Data Warehouse restituirà sempre zero (0).|
+|**last_physical_io_reads**|**bigint**|Ultimo numero dei / o fisiche legge per il piano di query entro l'intervallo di aggregazione (espresso come un numero di pagine da 8KB lettura).<br/>**Nota:** Azure SQL Data Warehouse restituirà sempre zero (0).|
+|**min_physical_io_reads**|**bigint**|Numero minimo dei / o fisiche legge per il piano di query entro l'intervallo di aggregazione (espresso come un numero di pagine da 8KB lettura).<br/>**Nota:** Azure SQL Data Warehouse restituirà sempre zero (0).|
+|**max_physical_io_reads**|**bigint**|Numero massimo dei / o fisiche legge per il piano di query entro l'intervallo di aggregazione (espresso come un numero di pagine da 8KB lettura).<br/>**Nota:** Azure SQL Data Warehouse restituirà sempre zero (0).|
+|**stdev_physical_io_reads**|**float**|Numero dei / o fisiche legge la deviazione standard per il piano di query entro l'intervallo di aggregazione (espresso come un numero di pagine da 8KB lettura).<br/>**Nota:** Azure SQL Data Warehouse restituirà sempre zero (0).|
+|**avg_clr_time**|**float**|Tempo medio di CLR per il piano di query entro l'intervallo di aggregazione (espresso in microsecondi).<br/>**Nota:** Azure SQL Data Warehouse restituirà sempre zero (0).|
+|**last_clr_time**|**bigint**|Ultima ora CLR per la query prevede entro l'intervallo di aggregazione (espresso in microsecondi).<br/>**Nota:** Azure SQL Data Warehouse restituirà sempre zero (0).|
+|**min_clr_time**|**bigint**|Tempo minimo di CLR per il piano di query entro l'intervallo di aggregazione (espresso in microsecondi).<br/>**Nota:** Azure SQL Data Warehouse restituirà sempre zero (0).|
+|**max_clr_time**|**bigint**|Tempo massimo di CLR per il piano di query entro l'intervallo di aggregazione (espresso in microsecondi).<br/>**Nota:** Azure SQL Data Warehouse restituirà sempre zero (0).|
+|**stdev_clr_time**|**float**|Deviazione standard di tempo CLR per il piano di query entro l'intervallo di aggregazione (espresso in microsecondi).<br/>**Nota:** Azure SQL Data Warehouse restituirà sempre zero (0).|
+|**avg_dop**|**float**|Media DOP (grado di parallelismo) per il piano di query entro l'intervallo di aggregazione.<br/>**Nota:** Azure SQL Data Warehouse restituirà sempre zero (0).|
+|**last_dop**|**bigint**|Ultimo valore DOP (grado di parallelismo) per il piano di query entro l'intervallo di aggregazione.<br/>**Nota:** Azure SQL Data Warehouse restituirà sempre zero (0).|
+|**min_dop**|**bigint**|Minimo DOP (grado di parallelismo) per il piano di query entro l'intervallo di aggregazione.<br/>**Nota:** Azure SQL Data Warehouse restituirà sempre zero (0).|
+|**max_dop**|**bigint**|Massimo grado di Parallelismo (grado di parallelismo) per il piano di query entro l'intervallo di aggregazione.<br/>**Nota:** Azure SQL Data Warehouse restituirà sempre zero (0).|
+|**stdev_dop**|**float**|Deviazione standard DOP (grado di parallelismo) per il piano di query entro l'intervallo di aggregazione.<br/>**Nota:** Azure SQL Data Warehouse restituirà sempre zero (0).|
+|**avg_query_max_used_memory**|**float**|Memoria Media autorizzazione (indicato come il numero di pagine da 8 KB) per il piano di query entro l'intervallo di aggregazione. Sempre 0 per query che usano in modo nativo compilati procedure ottimizzate per la memoria.<br/>**Nota:** Azure SQL Data Warehouse restituirà sempre zero (0).|
+|**last_query_max_used_memory**|**bigint**|Ultimo concessione di memoria (indicato come il numero di pagine da 8 KB) per il piano di query entro l'intervallo di aggregazione. Sempre 0 per query che usano in modo nativo compilati procedure ottimizzate per la memoria.<br/>**Nota:** Azure SQL Data Warehouse restituirà sempre zero (0).|
+|**min_query_max_used_memory**|**bigint**|Minima concessione di memoria (indicato come il numero di pagine da 8 KB) per il piano di query entro l'intervallo di aggregazione. Sempre 0 per query che usano in modo nativo compilati procedure ottimizzate per la memoria.<br/>**Nota:** Azure SQL Data Warehouse restituirà sempre zero (0).|
+|**max_query_max_used_memory**|**bigint**|Massima concessione di memoria (indicato come il numero di pagine da 8 KB) per il piano di query entro l'intervallo di aggregazione. Sempre 0 per query che usano in modo nativo compilati procedure ottimizzate per la memoria.<br/>**Nota:** Azure SQL Data Warehouse restituirà sempre zero (0).|
+|**stdev_query_max_used_memory**|**float**|Deviazione standard (indicata come il numero di pagine da 8 KB) concessione di memoria per il piano di query entro l'intervallo di aggregazione. Sempre 0 per query che usano in modo nativo compilati procedure ottimizzate per la memoria.<br/>**Nota:** Azure SQL Data Warehouse restituirà sempre zero (0).|
+|**avg_rowcount**|**float**|Numero medio di righe restituite per il piano di query entro l'intervallo di aggregazione.<br/>**Nota:** Azure SQL Data Warehouse restituirà sempre zero (0).|
+|**last_rowcount**|**bigint**|Numero di righe restituite dall'ultima esecuzione del piano di query entro l'intervallo di aggregazione.<br/>**Nota:** Azure SQL Data Warehouse restituirà sempre zero (0).|
+|**min_rowcount**|**bigint**|Numero minimo di righe restituite per la query prevede entro l'intervallo di aggregazione.<br/>**Nota:** Azure SQL Data Warehouse restituirà sempre zero (0).|
 |**max_rowcount**|**bigint**|Numero massimo di righe restituite per la query prevede entro l'intervallo di aggregazione.|  
 |**stdev_rowcount**|**float**|Numero di righe restituite deviazione standard per il piano di query entro l'intervallo di aggregazione.|
-|**avg_log_bytes_used**|**float**|Numero medio di byte nel log del database utilizzato dal piano di query, entro l'intervallo di aggregazione. Si applica **solo al Database SQL di Azure**.|    
-|**last_log_bytes_used**|**bigint**|Numero di byte nel log del database utilizzate durante l'ultima esecuzione del piano di query, entro l'intervallo di aggregazione. Si applica **solo al Database SQL di Azure**.|  
-|**min_log_bytes_used**|**bigint**|Numero minimo di byte nel log del database utilizzato dal piano di query, entro l'intervallo di aggregazione.  Si applica **solo al Database SQL di Azure**.|  
-|**max_log_bytes_used**|**bigint**|Numero massimo di byte nel log del database utilizzato dal piano di query, entro l'intervallo di aggregazione.  Si applica **solo al Database SQL di Azure**.| 
-|**stdev_log_bytes_used**|**float**|Deviazione standard del numero di byte nel log del database utilizzato da un piano di query, entro l'intervallo di aggregazione.  Si applica **solo al Database SQL di Azure**.|
+|**avg_log_bytes_used**|**float**|Numero medio di byte nel log del database utilizzato dal piano di query, entro l'intervallo di aggregazione. Si applica **solo al Database SQL di Azure**.<br/>**Nota:** Azure SQL Data Warehouse restituirà sempre zero (0).|
+|**last_log_bytes_used**|**bigint**|Numero di byte nel log del database utilizzate durante l'ultima esecuzione del piano di query, entro l'intervallo di aggregazione. Si applica **solo al Database SQL di Azure**.<br/>**Nota:** Azure SQL Data Warehouse restituirà sempre zero (0).|
+|**min_log_bytes_used**|**bigint**|Numero minimo di byte nel log del database utilizzato dal piano di query, entro l'intervallo di aggregazione.  Si applica **solo al Database SQL di Azure**.<br/>**Nota:** Azure SQL Data Warehouse restituirà sempre zero (0).|
+|**max_log_bytes_used**|**bigint**|Numero massimo di byte nel log del database utilizzato dal piano di query, entro l'intervallo di aggregazione.  Si applica **solo al Database SQL di Azure**.<br/>**Nota:** Azure SQL Data Warehouse restituirà sempre zero (0).|
+|**stdev_log_bytes_used**|**float**|Deviazione standard del numero di byte nel log del database utilizzato da un piano di query, entro l'intervallo di aggregazione.  Si applica **solo al Database SQL di Azure**.<br/>**Nota:** Azure SQL Data Warehouse restituirà sempre zero (0).|
   
 ## <a name="permissions"></a>Permissions  
  Richiede la **VIEW DATABASE STATE** l'autorizzazione.  

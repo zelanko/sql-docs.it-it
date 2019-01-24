@@ -1,7 +1,7 @@
 ---
-title: query_store_query_text (Transact-SQL) | Microsoft Docs
+title: sys.query_store_query_text (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 11/29/2018
+ms.date: 01/23/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -22,14 +22,14 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 8b5fe04b5852eeebc858067505eaa0342ad8cb87
-ms.sourcegitcommit: c7febcaff4a51a899bc775a86e764ac60aab22eb
+ms.openlocfilehash: e41eca10cf5db5e34b5e9e9122eb56a1a236315e
+ms.sourcegitcommit: 3d50caa30681bf384f5628b1dd3e06e24fc910cd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "52712242"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54838078"
 ---
-# <a name="sysquerystorequerytext-transact-sql"></a>query_store_query_text (Transact-SQL)
+# <a name="sysquerystorequerytext-transact-sql"></a>sys.query_store_query_text (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-asdw-xxx-md.md)]
 
   Contiene il [!INCLUDE[tsql](../../includes/tsql-md.md)] testo e l'handle SQL della query.  
@@ -39,8 +39,8 @@ ms.locfileid: "52712242"
 |**query_text_id**|**bigint**|Chiave primaria.|  
 |**query_sql_text**|**nvarchar(max)**|Testo SQL della query, come specificato dall'utente. Include gli spazi vuoti, suggerimenti e commenti.|  
 |**statement_sql_handle**|**vabinary(64)**|Handle SQL della singola query.|  
-|**is_part_of_encrypted_module**|**bit**|Testo della query è una parte di un modulo crittografato.|  
-|**has_restricted_text**|**bit**|Testo della query contiene una password o altri termini unmentionable.|  
+|**is_part_of_encrypted_module**|**bit**|Testo della query è una parte di un modulo crittografato.<br/>**Nota:** Azure SQL Data Warehouse restituirà sempre zero (0).|
+|**has_restricted_text**|**bit**|Testo della query contiene una password o altri termini unmentionable.<br/>**Nota:** Azure SQL Data Warehouse restituirà sempre zero (0).|
   
 ## <a name="permissions"></a>Permissions  
  Richiede la **VIEW DATABASE STATE** l'autorizzazione.  

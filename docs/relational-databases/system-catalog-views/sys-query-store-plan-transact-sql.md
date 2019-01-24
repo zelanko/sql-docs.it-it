@@ -1,7 +1,7 @@
 ---
 title: sys.query_store_plan (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 11/29/2018
+ms.date: 01/23/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -22,12 +22,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: ea7c955718dbe6d2437b44b915057fc095151dc4
-ms.sourcegitcommit: 480961f14405dc0b096aa8009855dc5a2964f177
+ms.openlocfilehash: 8a1b27787c1b987c4fc881c3d1e170efae937670
+ms.sourcegitcommit: 3d50caa30681bf384f5628b1dd3e06e24fc910cd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/22/2019
-ms.locfileid: "54419796"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54838098"
 ---
 # <a name="sysquerystoreplan-transact-sql"></a>sys.query_store_plan (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-asdw-xxx-md.md)]
@@ -43,20 +43,20 @@ ms.locfileid: "54419796"
 |**compatibility_level**|**smallint**|Livello di compatibilità del database del database di cui viene fatto riferimento nella query.|  
 |**query_plan_hash**|**binary(8)**|Hash MD5 del singolo piano.|  
 |**query_plan**|**nvarchar(max)**|Showplan XML per il piano di query.|  
-|**is_online_index_plan**|**bit**|Piano è stato usato durante la compilazione di un indice online.|  
-|**is_trivial_plan**|**bit**|Piano è un semplice (output nella fase 0 di query optimizer).|  
-|**is_parallel_plan**|**bit**|Piano è parallelo.|  
-|**is_forced_plan**|**bit**|Piano viene contrassegnato come forzata quando l'utente esegue stored procedure **sys.sp_query_store_force_plan**. Meccanismo di utilizzo forzato *non garantisce* verrà utilizzato per la query fa riferimento esattamente questo piano **query_id**. Uso forzato del piano fa in modo che query da compilare nuovamente e in genere produce esattamente il piano identici o simile al piano di cui fa riferimento **plan_id**. Se uso forzato del piano non riesce, **force_failure_count** viene incrementato e **last_force_failure_reason** viene popolato con il motivo dell'errore.|  
-|**is_natively_compiled**|**bit**|Piano include procedure ottimizzate per la memoria compilate in modo nativo. (0 = FALSE, 1 = TRUE).|  
-|**force_failure_count**|**bigint**|Numero di volte in cui è Impossibile forzare l'utilizzo di questo piano. Può essere incrementato solo quando la query viene ricompilata (*non a ogni esecuzione*). Viene reimpostato su 0 ogni volta **is_plan_forced** viene modificato da **FALSE** al **TRUE**.|  
-|**last_force_failure_reason**|**int**|Motivo di uso forzato del piano perché non è riuscito.<br /><br /> 0: nessun errore, in caso contrario, numero di errore dell'errore che ha causato l'utilizzo forzato esito negativo<br /><br /> 8637: ONLINE_INDEX_BUILD<br /><br /> 8683: INVALID_STARJOIN<br /><br /> 8684: TIME_OUT<br /><br /> 8689: NO_DB<br /><br /> 8690: HINT_CONFLICT<br /><br /> 8691: SETOPT_CONFLICT<br /><br /> 8694: DQ_NO_FORCING_SUPPORTED<br /><br /> 8698: NO_PLAN<br /><br /> 8712: NO_INDEX<br /><br /> 8713: VIEW_COMPILE_FAILED<br /><br /> \<altro valore >: GENERAL_FAILURE|  
-|**last_force_failure_reason_desc**|**nvarchar(128)**|Descrizione testuale del last_force_failure_reason_desc.<br /><br /> ONLINE_INDEX_BUILD: query tenta di modificare i dati mentre la tabella di destinazione ha un indice che viene compilato online<br /><br /> INVALID_STARJOIN: piano contiene specifica StarJoin non valida<br /><br /> TIME_OUT: Numero di Query Optimizer ha superato di operazioni consentite durante la ricerca del piano specificato dal piano forzato<br /><br /> NO_DB: Un database specificato nel piano non esiste<br /><br /> HINT_CONFLICT: Impossibile compilare la query piano è in conflitto con un hint di query<br /><br /> DQ_NO_FORCING_SUPPORTED: Impossibile eseguire query piano è in conflitto con l'uso di query distribuita o operazioni full-text.<br /><br /> NO_PLAN: Query processor non è stato possibile generare il piano di query perché il piano forzato non è stato possibile verificare la validità per la query<br /><br /> NO_INDEX: Indice specificato nel piano non è più presente<br /><br /> VIEW_COMPILE_FAILED: Non è stato possibile forzare il piano di query a causa di un problema in una vista indicizzata a cui fa riferimento il piano<br /><br /> GENERAL_FAILURE: errore generale di forzatura (non coperte da motivi sopra)|  
+|**is_online_index_plan**|**bit**|Piano è stato usato durante la compilazione di un indice online. <br/>**Nota:** Azure SQL Data Warehouse restituirà sempre zero (0).|  
+|**is_trivial_plan**|**bit**|Piano è un semplice (output nella fase 0 di query optimizer). <br/>**Nota:** Azure SQL Data Warehouse restituirà sempre zero (0).|  
+|**is_parallel_plan**|**bit**|Piano è parallelo. <br/>**Nota:** Azure SQL Data Warehouse restituirà sempre uno (1).|  
+|**is_forced_plan**|**bit**|Piano viene contrassegnato come forzata quando l'utente esegue stored procedure **sys.sp_query_store_force_plan**. Meccanismo di utilizzo forzato *non garantisce* verrà utilizzato per la query fa riferimento esattamente questo piano **query_id**. Uso forzato del piano fa in modo che query da compilare nuovamente e in genere produce esattamente il piano identici o simile al piano di cui fa riferimento **plan_id**. Se uso forzato del piano non riesce, **force_failure_count** viene incrementato e **last_force_failure_reason** viene popolato con il motivo dell'errore. <br/>**Nota:** Azure SQL Data Warehouse restituirà sempre zero (0).|  
+|**is_natively_compiled**|**bit**|Piano include procedure ottimizzate per la memoria compilate in modo nativo. (0 = FALSE, 1 = TRUE). <br/>**Nota:** Azure SQL Data Warehouse restituirà sempre zero (0).|  
+|**force_failure_count**|**bigint**|Numero di volte in cui è Impossibile forzare l'utilizzo di questo piano. Può essere incrementato solo quando la query viene ricompilata (*non a ogni esecuzione*). Viene reimpostato su 0 ogni volta **is_plan_forced** viene modificato da **FALSE** al **TRUE**. <br/>**Nota:** Azure SQL Data Warehouse restituirà sempre zero (0).|  
+|**last_force_failure_reason**|**int**|Motivo di uso forzato del piano perché non è riuscito.<br /><br /> 0: nessun errore, in caso contrario, numero di errore dell'errore che ha causato l'utilizzo forzato esito negativo<br /><br /> 8637: ONLINE_INDEX_BUILD<br /><br /> 8683: INVALID_STARJOIN<br /><br /> 8684: TIME_OUT<br /><br /> 8689: NO_DB<br /><br /> 8690: HINT_CONFLICT<br /><br /> 8691: SETOPT_CONFLICT<br /><br /> 8694: DQ_NO_FORCING_SUPPORTED<br /><br /> 8698: NO_PLAN<br /><br /> 8712: NO_INDEX<br /><br /> 8713: VIEW_COMPILE_FAILED<br /><br /> \<altro valore >: GENERAL_FAILURE <br/>**Nota:** Azure SQL Data Warehouse restituirà sempre zero (0).|  
+|**last_force_failure_reason_desc**|**nvarchar(128)**|Descrizione testuale del last_force_failure_reason_desc.<br /><br /> ONLINE_INDEX_BUILD: query tenta di modificare i dati mentre la tabella di destinazione ha un indice che viene compilato online<br /><br /> INVALID_STARJOIN: piano contiene specifica StarJoin non valida<br /><br /> TIME_OUT: Numero di Query Optimizer ha superato di operazioni consentite durante la ricerca del piano specificato dal piano forzato<br /><br /> NO_DB: Un database specificato nel piano non esiste<br /><br /> HINT_CONFLICT: Impossibile compilare la query piano è in conflitto con un hint di query<br /><br /> DQ_NO_FORCING_SUPPORTED: Impossibile eseguire query piano è in conflitto con l'uso di query distribuita o operazioni full-text.<br /><br /> NO_PLAN: Query processor non è stato possibile generare il piano di query perché il piano forzato non è stato possibile verificare la validità per la query<br /><br /> NO_INDEX: Indice specificato nel piano non è più presente<br /><br /> VIEW_COMPILE_FAILED: Non è stato possibile forzare il piano di query a causa di un problema in una vista indicizzata a cui fa riferimento il piano<br /><br /> GENERAL_FAILURE: errore generale di forzatura (non coperte da motivi sopra) <br/>**Nota:** Azure SQL Data Warehouse verrà sempre restituito *NONE*.|  
 |**count_compiles**|**bigint**|Pianificare le statistiche di compilazione.|  
 |**initial_compile_start_time**|**datetimeoffset**|Pianificare le statistiche di compilazione.|  
 |**last_compile_start_time**|**datetimeoffset**|Pianificare le statistiche di compilazione.|  
 |**last_execution_time**|**datetimeoffset**|Ora dell'ultima esecuzione si riferisce all'ultima ora di fine del piano di query /.|  
-|**avg_compile_duration**|**float**|Pianificare le statistiche di compilazione.|  
-|**last_compile_duration**|**bigint**|Pianificare le statistiche di compilazione.|  
+|**avg_compile_duration**|**float**|Pianificare le statistiche di compilazione. <br/>**Nota:** Azure SQL Data Warehouse restituirà sempre zero (0).|  
+|**last_compile_duration**|**bigint**|Pianificare le statistiche di compilazione. <br/>**Nota:** Azure SQL Data Warehouse restituirà sempre zero (0).|  
 |**plan_forcing_type**|**int**|Tipo di utilizzo forzato del piano.<br /><br />0: Nessuno<br /><br />1: MANUAL<br /><br />2: AUTO|  
 |**plan_forcing_type_desc**|**nvarchar(60)**|Descrizione di plan_forcing_type testo.<br /><br />NONE: Nessun utilizzo forzato del piano<br /><br />MANUAL: Piano forzato da utente<br /><br />AUTO: Piano forzato dall'ottimizzazione automatica|  
 
