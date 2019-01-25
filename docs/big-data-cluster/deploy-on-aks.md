@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: 8e6e91836b3daf0392da082df1f4ec806e9faf94
-ms.sourcegitcommit: 202ef5b24ed6765c7aaada9c2f4443372064bd60
+ms.openlocfilehash: a5dcc1c2726eaf234056fc77979df4d21a0dea17
+ms.sourcegitcommit: 299b63e04498eba22659970cd077f247c1657931
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/12/2019
-ms.locfileid: "54241242"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54898926"
 ---
 # <a name="configure-azure-kubernetes-service-for-sql-server-2019-big-data-cluster-preview-deployments"></a>Configurare Azure Kubernetes Service per le distribuzioni di cluster (anteprima) di SQL Server 2019 dei big Data
 
@@ -26,7 +26,7 @@ Servizio contenitore di AZURE rende più semplice creare, configurare e gestire 
 Questo articolo descrive i passaggi per la distribuzione di Kubernetes nel servizio contenitore di AZURE tramite la CLI di Azure. Se non hai una sottoscrizione di Azure, creare un account gratuito prima di iniziare.
 
 > [!TIP] 
-> Per un esempio di script python che consente di distribuire cluster di big data sia servizio contenitore di AZURE e SQL Server, vedere [distribuire un cluster di big data in Azure Kubernetes Service (AKS) di SQL Server](https://github.com/Microsoft/sql-server-samples/tree/master/samples/features/sql-big-data-cluster/deployment/aks).
+> Per un esempio di script python che consente di distribuire cluster di big data sia servizio contenitore di AZURE e SQL Server, vedere [Guida introduttiva: Distribuire SQL Server in Azure Kubernetes Service (AKS) del cluster dei big data](quickstart-big-data-cluster-deploy.md).
 
 ## <a name="prerequisites"></a>Prerequisiti
 
@@ -106,6 +106,6 @@ Un gruppo di risorse di Azure è un gruppo logico in Azure le risorse vengono di
 
 ## <a name="next-steps"></a>Passaggi successivi
 
-I passaggi descritti in questo articolo è configurato un cluster Kubernetes nel servizio contenitore di AZURE. Il passaggio successivo consiste nel distribuire SQL Server 2019 dei big data per il cluster.
+I passaggi descritti in questo articolo è configurato un cluster Kubernetes nel servizio contenitore di AZURE. Il passaggio successivo consiste nel distribuire SQL Server 2019 dei big data per il cluster. Per altre informazioni su come distribuire i cluster di big data, vedere l'articolo seguente:
 
-[Guida introduttiva: Distribuire il cluster di big data di SQL Server in Azure Kubernetes Service (AKS)](quickstart-big-data-cluster-deploy.md)
+[Come distribuire i cluster di big data di SQL Server in Kubernetes](deployment-guidance.md)

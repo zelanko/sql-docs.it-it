@@ -10,16 +10,16 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: ab8633ef6741ae1d1a3a973796eec1de0cc12c37
-ms.sourcegitcommit: 12911093559b4e006189d7a7d32b8d0474961cd5
+ms.openlocfilehash: 0413da85b4f213eb75a1b9ed5d80852663870c74
+ms.sourcegitcommit: 299b63e04498eba22659970cd077f247c1657931
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/17/2019
-ms.locfileid: "54372636"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54898957"
 ---
 # <a name="install-sql-server-2019-big-data-tools"></a>Installare strumenti di SQL Server 2019 big data
 
-Questo articolo vengono descritti gli strumenti client che devono essere installati per la creazione, la gestione, e tramite SQL Server 2019 dei big data cluster (anteprima).
+Questo articolo vengono descritti gli strumenti client che devono essere installati per la creazione, la gestione, e tramite SQL Server 2019 dei big data cluster (anteprima). La sezione seguente fornisce un elenco di strumenti e i collegamenti alle istruzioni di installazione. Prima di distribuire un cluster di big data, configurare gli strumenti contrassegnato come obbligatorio in Windows o Linux.
 
 [!INCLUDE [Limited public preview note](../includes/big-data-cluster-preview-note.md)]
 
@@ -63,5 +63,10 @@ Nella tabella precedente vengono tutti gli strumenti comuni che vengono usati co
 Gli altri strumenti sono necessarie solo in determinati scenari. **Interfaccia della riga di comando Azure** può essere utilizzato per gestire servizi di Azure associati alla distribuzione di AKS. **MSSQL-cli** è uno strumento facoltativo ma utile che consente di connettersi all'istanza master di SQL Server nel cluster ed eseguire query dalla riga di comando. E **sqlcmd** e **curl** sono necessarie se si prevede di installare dati di esempio con lo script di GitHub.
 
 ## <a name="next-steps"></a>Passaggi successivi
+
+Dopo aver configurato gli strumenti, distribuire un cluster di big data di SQL Server 2019 Kubernetes nel Cloud o in locale. Per altre informazioni, vedere gli articoli di distribuzione seguenti:
+
+- [Guida introduttiva: Distribuire il cluster di big data di SQL Server in Azure Kubernetes Service (AKS)](quickstart-big-data-cluster-deploy.md)
+- [Come distribuire i cluster di big data di SQL Server in Kubernetes](deployment-guidance.md)
 
 Per altre informazioni sui cluster di big data, vedi [quali sono i cluster di SQL Server 2019 dei big data?](big-data-cluster-overview.md).

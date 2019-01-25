@@ -8,19 +8,19 @@ ms.topic: tutorial
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 76e3fdca639ed576b6b0664042aea5df2b5a9f74
-ms.sourcegitcommit: 2e8783e6bedd9597207180941be978f65c2c2a2d
+ms.openlocfilehash: b6822892547b8fa4ff3ad4dced02908d10cd39ec
+ms.sourcegitcommit: 299b63e04498eba22659970cd077f247c1657931
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/19/2019
-ms.locfileid: "54405781"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54898996"
 ---
 # <a name="lesson-1-explore-and-visualize-the-data"></a>Lezione 1: Esplorare e visualizzare i dati
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 Questo articolo fa parte di un'esercitazione per sviluppatori SQL su come usare R in SQL Server.
 
-In questa lezione verrà esaminato i dati di esempio e quindi generati alcuni tracciati usando [rxHistogram](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxhistogram) dalla [RevoScaleR](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler) e il tipo generico [Hist](https://www.rdocumentation.org/packages/graphics/versions/3.5.0/topics/hist) funzione in r di base. Queste funzioni R sono già inclusi [!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)].
+In questo passaggio verrà esaminare i dati di esempio e quindi generati alcuni tracciati usando [rxHistogram](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxhistogram) dalla [RevoScaleR](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler) e il tipo generico [Hist](https://www.rdocumentation.org/packages/graphics/versions/3.5.0/topics/hist) funzione in r di base. Queste funzioni R sono già inclusi [!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)].
 
 Degli obiettivi principali di questa lezione è che mostra come chiamare funzioni R [!INCLUDE[tsql](../../includes/tsql-md.md)] nelle stored procedure e salvare i risultati in formati di file dell'applicazione:
 

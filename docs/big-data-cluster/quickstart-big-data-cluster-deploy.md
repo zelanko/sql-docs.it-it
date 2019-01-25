@@ -10,12 +10,12 @@ ms.topic: quickstart
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: 39c79c39c04d64656b83004425d476896cbc75db
-ms.sourcegitcommit: 202ef5b24ed6765c7aaada9c2f4443372064bd60
+ms.openlocfilehash: 3495d41028f72093b58f546d3da2139ff02b848d
+ms.sourcegitcommit: 299b63e04498eba22659970cd077f247c1657931
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/12/2019
-ms.locfileid: "54241702"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54898986"
 ---
 # <a name="quickstart-deploy-sql-server-big-data-cluster-on-azure-kubernetes-service-aks"></a>Guida introduttiva: Distribuire il cluster di big data di SQL Server in Azure Kubernetes Service (AKS)
 
@@ -33,7 +33,7 @@ La distribuzione di cluster di big data predefinita usata in questo esempio è c
 - Una sottoscrizione di Azure.
 - [Gli strumenti dei big data](deploy-big-data-tools.md):
    - **mssqlctl**
-   - **Kubectl**
+   - **kubectl**
    - **Azure Data Studio**
    - **Estensione di SQL Server 2019**
    - **Comando di Azure**
@@ -80,12 +80,12 @@ Usare la procedura seguente per eseguire lo script di distribuzione. Questo scri
    | **Area di Azure** | L'area di Azure per il nuovo cluster servizio contenitore di AZURE (impostazione predefinita **westus**). |
    | **Dimensioni della macchina** | Il [dimensioni della macchina](https://docs.microsoft.com/azure/virtual-machines/windows/sizes) da usare per i nodi del cluster servizio contenitore di AZURE (impostazione predefinita **Standard_L4s**). |
    | **Nodi di lavoro** | Il numero di nodi di lavoro del cluster servizio contenitore di AZURE (impostazione predefinita **3**). |
-   | **Nome del cluster** | Nome del cluster servizio contenitore di AZURE sia il cluster di big data. Solo i caratteri alfanumerici minuscoli e senza spazi, deve essere il nome del cluster. (impostazione predefinita **sqlbigdata**). |
+   | **Nome del cluster** | Nome del cluster servizio contenitore di AZURE sia il cluster di big data. Solo i caratteri alfanumerici minuscoli e senza spazi, deve essere il nome del cluster. (default **sqlbigdata**). |
    | **Password** | Password per l'istanza master, un gateway HDFS/Spark e un controller (impostazione predefinita **MySQLBigData2019**). |
    | **Utente controller** | Nome utente dell'utente controller (impostazione predefinita: **admin**). |
 
    > [!IMPORTANT]
-   > Ogni attestazione di volume permanente nel cluster richiede un disco collegato. Cluster di big data richiede attualmente 21 attestazioni di volume permanente. Quando si sceglie una dimensione di macchina virtuale di Azure e il numero di nodi, assicurarsi che il numero totale di dischi che possono essere collegati tra i nodi sia maggiore o uguale a 21. Ad esempio, il [Standard_L4s](https://docs.microsoft.com/azure/virtual-machines/windows/sizes-storage#ls-series) dimensioni della macchina supportano 16 dischi collegati, tre nodi significa che è possibile collegare 48 dischi.
+   > Il valore predefinito **Standard_L4s** le dimensioni del computer potrebbero non essere disponibili in ogni area di Azure. Se si seleziona una dimensione di macchina diverso, assicurarsi che il numero totale di dischi che possono essere collegati tra i nodi del cluster è maggiore o uguale a 21. Ogni attestazione di volume permanente nel cluster richiede un disco collegato. Cluster di big data richiede attualmente 21 attestazioni di volume permanente. Ad esempio, il [Standard_L4s](https://docs.microsoft.com/azure/virtual-machines/windows/sizes-storage#ls-series) dimensioni della macchina supportano 16 dischi collegati, tre nodi significa che è possibile collegare 48 dischi.
 
    > [!NOTE]
    > Il `sa` account sia un amministratore di sistema nell'istanza master di SQL Server che viene creato durante l'installazione. Dopo aver creato la distribuzione, il `MSSQL_SA_PASSWORD` variabile di ambiente diventa individuabile eseguendo `echo $MSSQL_SA_PASSWORD` nel contenitore istanza master. Per motivi di sicurezza, modificare il `sa` password nell'istanza di master dopo la distribuzione. Per altre informazioni, vedere [modificare la password SA](../linux/quickstart-install-connect-docker.md#sapassword).
@@ -236,6 +236,8 @@ az group delete -n <resource group name>
 ```
 
 ## <a name="next-steps"></a>Passaggi successivi
+
+Lo script di distribuzione configurato Azure Kubernetes Service e inoltre distribuito un cluster di big data di SQL Server 2019. È anche possibile scegliere personalizzare le distribuzioni future tramite le installazioni manuali. Per altre informazioni sul modo i big data più si distribuiscono cluster, nonché come personalizzare le distribuzioni, vedere [come distribuire i dati di grandi dimensioni di SQL Server di cluster in Kubernetes](deployment-guidance.md).
 
 Ora che viene distribuito il cluster di big data di SQL Server, è possibile caricare i dati di esempio ed esplorare le esercitazioni:
 

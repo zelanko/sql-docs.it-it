@@ -20,18 +20,18 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 2018d96233a1dea6f4b2d7cfa612f19df878610f
-ms.sourcegitcommit: 96032813f6bf1cba680b5e46d82ae1f0f2da3d11
+ms.openlocfilehash: 50841053266c475a140f056826ac40ca0e70906c
+ms.sourcegitcommit: 5ca813d045e339ef9bebe0991164a5d39c8c742b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/15/2019
-ms.locfileid: "54300028"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54880504"
 ---
 # <a name="spexecutesql-transact-sql"></a>sp_executesql (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   > [!div class="nextstepaction"]
-  > [Condividi i tuoi commenti su SQL Docs sommario.](https://aka.ms/sqldocsurvey)
+  > [Condividi il feedback sul sommario della documentazione SQL](https://aka.ms/sqldocsurvey)
 
   Esegue un'istruzione o un batch [!INCLUDE[tsql](../../includes/tsql-md.md)] che può essere riutilizzato più volte o che è stato compilato in modo dinamico. L'istruzione o il batch [!INCLUDE[tsql](../../includes/tsql-md.md)] può contenere parametri incorporati.  
   
@@ -62,7 +62,7 @@ sp_executesql [ @stmt = ] statement
  Ogni parametro incluso in \@stmt deve avere una voce corrispondente in entrambe le \@params elenco di definizioni di parametro e il parametro di elenco di valori.  
   
  [ \@params= ] N'\@*parameter_name**data_type* [ ,... *n* ] '  
- Stringa che contiene le definizioni di tutti i parametri che sono stati incorporati in \@stmt. La stringa deve essere una costante o una variabile Unicode. Ogni definizione di parametro è costituita da un nome del parametro e da un tipo di dati. *n* è un segnaposto che indica definizioni di parametro aggiuntive. Ogni parametro specificato in \@stmtmust essere definite in \@params. Se il [!INCLUDE[tsql](../../includes/tsql-md.md)] istruzione o il batch nel \@stmt non contiene parametri, \@params non è obbligatorio. Il valore predefinito per questo parametro è NULL.  
+ Stringa che contiene le definizioni di tutti i parametri che sono stati incorporati in \@stmt. La stringa deve essere una costante o una variabile Unicode. Ogni definizione di parametro è costituita da un nome del parametro e da un tipo di dati. *n* è un segnaposto che indica definizioni di parametro aggiuntive. Ogni parametro specificato in \@stmt deve essere definito in \@params. Se il [!INCLUDE[tsql](../../includes/tsql-md.md)] istruzione o il batch nel \@stmt non contiene parametri, \@params non è obbligatorio. Il valore predefinito per questo parametro è NULL.  
   
  [ \@param1 =] '*value1*'  
  Valore per il primo parametro definito nella stringa di parametri. Il valore può essere una costante o una variabile Unicode. Deve esistere un valore di parametro per ogni parametro incluso in \@stmt. I valori non sono necessari se il [!INCLUDE[tsql](../../includes/tsql-md.md)] istruzione o il batch in \@stmt non ha parametri.  

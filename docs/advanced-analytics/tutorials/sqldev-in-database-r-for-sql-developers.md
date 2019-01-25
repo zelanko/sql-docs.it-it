@@ -8,12 +8,12 @@ ms.topic: tutorial
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 8d3235c585d3ea56a64776fde841ccc6d71b1a4d
-ms.sourcegitcommit: 2e8783e6bedd9597207180941be978f65c2c2a2d
+ms.openlocfilehash: 2c9cce03a5a2255353702fd99b8efb6e3e598ad5
+ms.sourcegitcommit: 299b63e04498eba22659970cd077f247c1657931
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/19/2019
-ms.locfileid: "54405601"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54898976"
 ---
 # <a name="tutorial-r-data-analytics-for-sql-developers"></a>Esercitazione: Analitica di dati R per sviluppatori SQL
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -65,4 +65,4 @@ Questa esercitazione presuppone la conoscenza delle operazioni di base dei datab
 ## <a name="next-steps"></a>Passaggi successivi
 
 > [!div class="nextstepaction"]
-> [Configurare il database dei Taxi di NYC](demo-data-nyctaxi-in-sql.md)
+> [Esplorare e visualizzare i dati usando funzioni R nelle stored procedure](../tutorials/sqldev-explore-and-visualize-the-data.md)
