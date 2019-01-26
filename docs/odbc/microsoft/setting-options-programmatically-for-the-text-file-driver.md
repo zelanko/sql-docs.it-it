@@ -16,19 +16,20 @@ ms.assetid: cbde2ca1-5d4e-4444-a371-a72f3ac4d92a
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 7cd6188de21c40b1edb5a365724451b44189e462
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 04bd9a37d87c91fe3f42cbb1fdf464660ba5a299
+ms.sourcegitcommit: 1e28f923cda9436a4395a405ebda5149202f8204
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47821309"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "55044418"
 ---
 # <a name="setting-options-programmatically-for-the-text-file-driver"></a>Impostazione delle opzioni a livello di codice per il driver file di testo
-|Opzione|Description|Metodo|  
+
+|Opzione|Descrizione|Metodo|  
 |------------|-----------------|------------|  
 |Nome origine dati|Un nome che identifica l'origine dati, ad esempio Payroll o personale.|Per impostare questa opzione in modo dinamico, usare il **DSN** parola chiave in una chiamata a [SQLConfigDataSource](../../odbc/microsoft/sqlconfigdatasource-text-file-driver.md).|  
 |Definire il formato|Consente di visualizzare il **Definisci formato testo** nella finestra di dialogo e consente di specificare lo schema per le singole tabelle nella directory di origine dati.|Questa opzione non può essere impostata in modo dinamico mediante una chiamata a [SQLConfigDataSource](../../odbc/microsoft/sqlconfigdatasource-text-file-driver.md).|  
-|Description|Una descrizione facoltativa dei dati nell'origine dati; ad esempio, "Hire data, cronologia degli stipendi e situazione corrente di tutti i dipendenti."|Per impostare questa opzione in modo dinamico, usare il **DESCRIPTION** parola chiave in una chiamata a [SQLConfigDataSource](../../odbc/microsoft/sqlconfigdatasource-text-file-driver.md).|  
+|Descrizione|Una descrizione facoltativa dei dati nell'origine dati; ad esempio, "Hire data, cronologia degli stipendi e situazione corrente di tutti i dipendenti."|Per impostare questa opzione in modo dinamico, usare il **DESCRIPTION** parola chiave in una chiamata a [SQLConfigDataSource](../../odbc/microsoft/sqlconfigdatasource-text-file-driver.md).|  
 |Directory|Seleziona directory di destinazione.|Per impostare questa opzione in modo dinamico, usare il **DEFAULTDIR** parola chiave in una chiamata a [SQLConfigDataSource](../../odbc/microsoft/sqlconfigdatasource-text-file-driver.md).|  
 |Elenco di estensioni|Elenca le estensioni dei file di testo sull'origine dati. Quando viene usato il driver di testo, viene creato un file senza estensione quando viene eseguita l'istruzione CREATE TABLE con un nome che non dispone di estensione. Altri driver di creare un file con estensione predefinita quando non viene specificato estensione. Per creare un file con estensione txt, l'estensione deve essere incluso nel nome. Per visualizzare i file senza estensione nel **Definisci formato testo** nella finestra di dialogo "*." deve essere aggiunto all'elenco di estensioni.|Per impostare questa opzione in modo dinamico, usare il **EXTENSIONS** parola chiave in una chiamata a [SQLConfigDataSource](../../odbc/microsoft/sqlconfigdatasource-text-file-driver.md).|  
 |Read Only|Definisce il database in sola lettura.|Per impostare questa opzione in modo dinamico, usare il **READONLY** parola chiave in una chiamata a [SQLConfigDataSource](../../odbc/microsoft/sqlconfigdatasource-text-file-driver.md).|  

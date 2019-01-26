@@ -10,12 +10,12 @@ ms.prod: sql
 ms.custom: sql-linux
 ms.technology: linux
 ms.assetid: 31c8c92e-12fe-4728-9b95-4bc028250d85
-ms.openlocfilehash: 87bffa2c93442aabc2dd6f193373e024466ecea6
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: adfd7ad72fcc9f9e3e619c7798d68c536e4370e4
+ms.sourcegitcommit: 1e28f923cda9436a4395a405ebda5149202f8204
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52397103"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "55044537"
 ---
 # <a name="configure-failover-cluster-instance---sql-server-on-linux-rhel"></a>Configurare l'istanza del cluster di failover: SQL Server su Linux (RHEL)
 
@@ -272,10 +272,12 @@ Questo esempio viene creato un'istanza FCI NewLinFCIGrp del gruppo. Il nome del 
 9.  Infine, eseguire il failover sul nodo originale e rimuovere il vincolo con più sedi.
 
 <!---
+
 |Distribution |Topic 
 |----- |-----
 |**Red Hat Enterprise Linux with HA add-on** |[Configure](sql-server-linux-shared-disk-cluster-red-hat-7-configure.md)<br/>[Operate](sql-server-linux-shared-disk-cluster-red-hat-7-operate.md)
 |**SUSE Linux Enterprise Server with HA add-on** |[Configure](sql-server-linux-shared-disk-cluster-sles-configure.md)
+
 -->
 ## <a name="summary"></a>Riepilogo
 

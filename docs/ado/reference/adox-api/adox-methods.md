@@ -14,14 +14,15 @@ ms.assetid: 8de11ef7-034c-4613-91df-2244171f0b9a
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 7df30f8e277985e16dc0066d80906a2a3694e310
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 389c9352790dee136cf4167415206b25f6efc4c0
+ms.sourcegitcommit: 1e28f923cda9436a4395a405ebda5149202f8204
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47631339"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "55044587"
 ---
 # <a name="adox-methods"></a>Metodi ADOX
+
 |||  
 |-|-|  
 |[Append (colonne)](../../../ado/reference/adox-api/append-method-adox-columns.md)|Aggiunge un nuovo **colonna** dell'oggetto per il **colonne** raccolta.|  
@@ -37,7 +38,7 @@ ms.locfileid: "47631339"
 |[Elimina](../../../ado/reference/adox-api/delete-method-adox-collections.md)|Rimuove un oggetto da una raccolta.|  
 |[GetObjectOwner](../../../ado/reference/adox-api/getobjectowner-method-adox.md)|Restituisce il proprietario di un oggetto in un catalogo.|  
 |[GetPermissions](../../../ado/reference/adox-api/getpermissions-method-adox.md)|Restituisce le autorizzazioni per un gruppo o utente in un oggetto.|  
-|[SetObjectOwner (ADOX)](../../../ado/reference/adox-api/setobjectowner-method.md)|Specifica il proprietario di un oggetto in un catalogo.|  
+|[SetObjectOwner](../../../ado/reference/adox-api/setobjectowner-method.md)|Specifica il proprietario di un oggetto in un catalogo.|  
 |[SetPermissions](../../../ado/reference/adox-api/setpermissions-method-adox.md)|Specifica le autorizzazioni per utente o gruppo su un oggetto.|  
   
 ## <a name="see-also"></a>Vedere anche  

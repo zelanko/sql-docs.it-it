@@ -11,12 +11,12 @@ ms.topic: conceptual
 author: yualan
 ms.author: alayu
 manager: craigg
-ms.openlocfilehash: faaa59e8607f707bb43f31638880f771ae7ae6ab
-ms.sourcegitcommit: 189a28785075cd7018c98e9625c69225a7ae0777
+ms.openlocfilehash: 26e93209e2cbd9809d607f90c7eff4da32d2cd98
+ms.sourcegitcommit: 1e28f923cda9436a4395a405ebda5149202f8204
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53030485"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "55045030"
 ---
 # <a name="dashboards-in-includename-sosincludesname-sos-shortmd"></a>Dashboard in [!INCLUDE[name-sos](../includes/name-sos-short.md)]
 
@@ -84,16 +84,17 @@ Configurazione di esempio Insight dettagli riquadro a comparsa
     },
     "value": "second_column_and_condition_check_value_column_for_summary_list_view",
 ```
+
 |proprietà|Tipo|Valore|Valore predefinito|description|comment|
 |:---|:---|:---|:---|:---|:---|
 |dettagli|oggetto JSON|||proprietà obbligatorie per definire le definizioni di dettaglio insight all'interno della struttura||
 |queryFile|string|||il percorso del file query sql detail informazioni dettagliate e il nome relativo al percorso del file package. JSON||
 |Etichetta|oggetto JSON|||proprietà obbligatorie per definire ogni voce nella visualizzazione elenco riepilogo|in futuro il nome di questa proprietà per modificare, ad esempio 'summaryList'|
-|Icona|string|||indicare il nome dell'icona per il rendering per ogni elemento della visualizzazione elenco di riepilogo.|verrà documentato elenco (da definire) di icone supportate|
+|icon|string|||indicare il nome dell'icona per il rendering per ogni elemento della visualizzazione elenco di riepilogo.|verrà documentato elenco (da definire) di icone supportate|
 |column|string|||indicare il nome della prima colonna nella visualizzazione elenco di riepilogo dal set di risultati query|in futuro verrà modificato il nome di questa proprietà per nome più intuitiva|
 |Valore|string|||indicare il nome della seconda colonna nella visualizzazione elenco di riepilogo dal set di risultati di query. Il valore di questa colonna viene utilizzato per controllare le condizioni e impostare colori per ogni punto di colore elementi di visualizzazione elenco di riepilogo|in futuro verrà modificato il nome di questa proprietà su un valore più intuitiva|
 |condizione|oggetto JSON|||definisce il controllo della condizione di valore della colonna e determinare di colore per ogni elemento della visualizzazione elenco di riepilogo||
-|if|string|sempre, equals, notEquals, greaterThan, lessThan, greaterThanOrEquals, lessThanOrEquals||operatore di controllo di condizione|in futuro verrà modificato il nome della proprietà da-operatore|
+|if|string|always, equals, notEquals, greaterThan, lessThan, greaterThanOrEquals, lessThanOrEquals||operatore di controllo di condizione|in futuro verrà modificato il nome della proprietà da-operatore|
 |equals|string|||valore del controllo di condizione|in futuro verrà modificato il nome della proprietà 'value'|
 
 ## <a name="insight-actions"></a>Azioni di Insight

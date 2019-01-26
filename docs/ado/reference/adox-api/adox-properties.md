@@ -14,28 +14,29 @@ ms.assetid: 2ddf19e4-312e-4d21-8053-a6fc4b738ad4
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 6218ef0c0d39aa1393c5b467c4d8d96960c487f4
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 176afb0ed710087ec150838e1e6bc6c49eb9e908
+ms.sourcegitcommit: 1e28f923cda9436a4395a405ebda5149202f8204
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47637229"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "55044665"
 ---
 # <a name="adox-properties"></a>Proprietà ADOX
+
 |||  
 |-|-|  
 |[ActiveConnection](../../../ado/reference/adox-api/activeconnection-property-adox.md)|Indica l'oggetto ADO **connessione** dell'oggetto a cui appartiene il catalogo.|  
 |[Attributi](../../../ado/reference/adox-api/attributes-property-adox.md)|Descrive le caratteristiche della colonna.|  
-|[In cluster](../../../ado/reference/adox-api/clustered-property-adox.md)|Indica se l'indice è cluster.|  
+|[Cluster](../../../ado/reference/adox-api/clustered-property-adox.md)|Indica se l'indice è cluster.|  
 |[Command](../../../ado/reference/adox-api/command-property-adox.md)|Specifica un oggetto ADO **comando** oggetto che può essere utilizzato per creare o eseguire la procedura.|  
-|[conteggio](../../../ado/reference/ado-api/count-property-ado.md)|Indica il numero di oggetti in una raccolta.|  
-|[Proprietà DateCreated](../../../ado/reference/adox-api/datecreated-property-adox.md)|Indica la data che di creazione dell'oggetto.|  
+|[Count](../../../ado/reference/ado-api/count-property-ado.md)|Indica il numero di oggetti in una raccolta.|  
+|[DateCreated](../../../ado/reference/adox-api/datecreated-property-adox.md)|Indica la data che di creazione dell'oggetto.|  
 |[DateModified](../../../ado/reference/adox-api/datemodified-property-adox.md)|Indica la data che dell'ultima modifica dell'oggetto.|  
-|[Proprietà DefinedSize](../../../ado/reference/adox-api/definedsize-property-adox.md)|Indica la dimensione massima definita della colonna.|  
+|[DefinedSize](../../../ado/reference/adox-api/definedsize-property-adox.md)|Indica la dimensione massima definita della colonna.|  
 |[DeleteRule](../../../ado/reference/adox-api/deleterule-property-adox.md)|Indica l'azione eseguita quando viene eliminata una chiave primaria.|  
-|[Proprietà IndexNulls](../../../ado/reference/adox-api/indexnulls-property-adox.md)|Indica se i record con valori null nei rispettivi campi indice avere voci di indice.|  
+|[IndexNulls](../../../ado/reference/adox-api/indexnulls-property-adox.md)|Indica se i record con valori null nei rispettivi campi indice avere voci di indice.|  
 |[Elemento](../../../ado/reference/ado-api/item-property-ado.md)|Indica un membro specifico di una raccolta, per nome o numero ordinale.|  
-|[Nome](../../../ado/reference/adox-api/name-property-adox.md)|Indica il nome dell'oggetto.|  
+|[Name](../../../ado/reference/adox-api/name-property-adox.md)|Indica il nome dell'oggetto.|  
 |[NumericScale](../../../ado/reference/adox-api/numericscale-property-adox.md)|Indica la scala di un valore numerico nella colonna.|  
 |[ParentCatalog](../../../ado/reference/adox-api/parentcatalog-property-adox.md)|Specifica il catalogo padre di una tabella o colonna per fornire l'accesso a proprietà specifiche del provider.|  
 |[Precisione](../../../ado/reference/adox-api/precision-property-adox.md)|Indica la precisione massima dei valori dei dati nella colonna.|  

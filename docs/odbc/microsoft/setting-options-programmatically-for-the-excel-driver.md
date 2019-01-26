@@ -16,19 +16,20 @@ ms.assetid: b5ee3636-4591-427a-a65a-a2d5926fcc1a
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: c62503611e88435b139a00b180d3e087769b7fda
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 271f61247b6083abd31657fe319bce234bc16f50
+ms.sourcegitcommit: 1e28f923cda9436a4395a405ebda5149202f8204
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47786584"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "55044338"
 ---
 # <a name="setting-options-programmatically-for-the-excel-driver"></a>Impostazione delle opzioni a livello di codice per il driver Excel
-|Opzione|Description|Metodo|  
+
+|Opzione|Descrizione|Metodo|  
 |------------|-----------------|------------|  
 |Nome origine dati|Un nome che identifica l'origine dati, ad esempio Payroll o personale.|Per impostare questa opzione in modo dinamico, usare il **DSN** parola chiave in una chiamata a [SQLConfigDataSource](../../odbc/microsoft/odbc-jet-sqlconfigdatasource-excel-driver.md).|  
 |Database|Un'origine dati Microsoft Access da impostare senza selezionare o creare un database. Se viene specificato alcun database al momento dell'installazione, l'utente verrà chiesto di scegliere un file di database durante la connessione all'origine dati.|Per impostare questa opzione in modo dinamico, usare il **DBQ** parola chiave in una chiamata a [SQLConfigDataSource](../../odbc/microsoft/odbc-jet-sqlconfigdatasource-excel-driver.md).|  
-|Description|Una descrizione facoltativa dei dati nell'origine dati; ad esempio, "Hire data, cronologia degli stipendi e situazione corrente di tutti i dipendenti."|Per impostare questa opzione in modo dinamico, usare il **DESCRIPTION** parola chiave in una chiamata a [SQLConfigDataSource](../../odbc/microsoft/odbc-jet-sqlconfigdatasource-excel-driver.md).|  
+|Descrizione|Una descrizione facoltativa dei dati nell'origine dati; ad esempio, "Hire data, cronologia degli stipendi e situazione corrente di tutti i dipendenti."|Per impostare questa opzione in modo dinamico, usare il **DESCRIPTION** parola chiave in una chiamata a [SQLConfigDataSource](../../odbc/microsoft/odbc-jet-sqlconfigdatasource-excel-driver.md).|  
 |Directory|Consente di visualizzare la directory attualmente selezionata.<br /><br /> Per i file di Microsoft Excel versione 3.0 o 4.0, la visualizzazione del percorso con l'etichetta "Directory", mentre per Microsoft Excel 5.0, 7.0, 97 o file, la visualizzazione del percorso con l'etichetta "Cartella di lavoro".|Per impostare questa opzione in modo dinamico, usare il **DEFAULTDIR** parola chiave in una chiamata a [SQLConfigDataSource](../../odbc/microsoft/odbc-jet-sqlconfigdatasource-excel-driver.md).|  
 |Read Only|Definisce il database in sola lettura.|Per impostare questa opzione in modo dinamico, usare il **READONLY** parola chiave in una chiamata a [SQLConfigDataSource](../../odbc/microsoft/odbc-jet-sqlconfigdatasource-excel-driver.md).|  
 |Righe da analizzare|Il numero di righe da esaminare per determinare il tipo di dati di ogni colonna. Il tipo di dati viene determinato dato il numero massimo di tipi di dati disponibili. Se vengono rilevati dati che non corrisponde al tipo di dati previsto per la colonna, il tipo di dati restituirà come valore NULL.<br /><br /> Per il driver di Microsoft Excel, è possibile immettere un numero da 1 a 16 per le righe da analizzare. Il valore predefinito è 8, mentre Se è impostato su 0, vengono analizzate tutte le righe. (Un numero di fuori del limite verrà restituito un errore).|Per impostare questa opzione in modo dinamico, usare il **MAXSCANROWS** parola chiave in una chiamata a [SQLConfigDataSource](../../odbc/microsoft/odbc-jet-sqlconfigdatasource-excel-driver.md).|  

@@ -16,20 +16,21 @@ ms.assetid: 1690eb71-0cd3-4c00-9e15-f6a3ac5316dd
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 5227985c56d5e2fd4730c86fe9182c8b16b2cb02
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 57bc9dd31299a70c5c8a2272dd49b577f58b7bb0
+ms.sourcegitcommit: 1e28f923cda9436a4395a405ebda5149202f8204
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47804459"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "55044467"
 ---
 # <a name="setting-options-programmatically-for-the-access-driver"></a>Impostazione delle opzioni a livello di codice per il driver Access
-|Opzione|Description|Metodo|  
+
+|Opzione|Descrizione|Metodo|  
 |------------|-----------------|------------|  
 |Dimensioni del buffer|Le dimensioni del buffer interno, espressa in kilobyte, che viene utilizzata da Microsoft Access per trasferire i dati da e verso il disco. Le dimensioni del buffer predefinita sono 2048 KB (visualizzato come 2048). Possono essere immessi numeri interi divisibili per 256.|Per impostare questa opzione in modo dinamico, usare la parola chiave MAXBUFFERSIZE in una chiamata a [SQLConfigDataSource](../../odbc/microsoft/sqlconfigdatasource-access-driver.md).|  
 |Nome origine dati|Un nome che identifica l'origine dati, ad esempio Payroll o personale.|Per impostare questa opzione in modo dinamico, usare il **DSN** parola chiave in una chiamata a [SQLConfigDataSource](../../odbc/microsoft/sqlconfigdatasource-access-driver.md).|  
 |Database|Un'origine dati Microsoft Access da impostare senza selezionare o creare un database. Se viene specificato alcun database al momento dell'installazione, l'utente verrà chiesto di scegliere un file di database durante la connessione all'origine dati.|Per impostare questa opzione in modo dinamico, usare il **DBQ** parola chiave in una chiamata a [SQLConfigDataSource](../../odbc/microsoft/sqlconfigdatasource-access-driver.md).|  
-|Description|Una descrizione facoltativa dei dati nell'origine dati; ad esempio, "Hire data, cronologia degli stipendi e situazione corrente di tutti i dipendenti."|Per impostare questa opzione in modo dinamico, usare il **DESCRIPTION** parola chiave in una chiamata a [SQLConfigDataSource](../../odbc/microsoft/sqlconfigdatasource-access-driver.md).|  
+|Descrizione|Una descrizione facoltativa dei dati nell'origine dati; ad esempio, "Hire data, cronologia degli stipendi e situazione corrente di tutti i dipendenti."|Per impostare questa opzione in modo dinamico, usare il **DESCRIPTION** parola chiave in una chiamata a [SQLConfigDataSource](../../odbc/microsoft/sqlconfigdatasource-access-driver.md).|  
 |Exclusive|Se il **esclusivo** casella è selezionata, il database verrà aperto in modalità esclusiva e sono accessibili da un solo utente alla volta. Le prestazioni sono ottimizzate durante l'esecuzione in modalità esclusiva.|Per impostare questa opzione in modo dinamico, usare il **esclusivo** parola chiave in una chiamata a [SQLConfigDataSource](../../odbc/microsoft/sqlconfigdatasource-access-driver.md).|  
 |ImplicitCommitSync|Determina come le modifiche apportate all'esterno di una transazione vengono scritti nel database. Questo valore è inizialmente impostato su "Sì", il che significa che il driver Microsoft Access rimarrà in attesa per i commit in una transazione interna/implicita per essere completati.|Questa opzione è inclusa nel **Imposta opzioni avanzate** finestra di dialogo per il driver Microsoft Access.|  
 |Timeout di pagina|Specifica il periodo di tempo, espresso in millisecondi, che una pagina, se non utilizzato, rimane nel buffer prima della rimozione. Per il driver Microsoft Access, il valore predefinito è 500 millisecondi (0,5 secondi). Questa opzione si applica a tutte le origini dati che usano il driver ODBC.<br /><br /> Il timeout della pagina non può essere 0 a causa di un ritardo inerente. Il timeout della pagina non può essere minore del ritardo inerente, anche se è impostata l'opzione di timeout della pagina di sotto di tale valore.|Per impostare questa opzione in modo dinamico, usare il **PAGETIMEOUT** parola chiave in una chiamata a [SQLConfigDataSource](../../odbc/microsoft/sqlconfigdatasource-access-driver.md).|  

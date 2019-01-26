@@ -10,12 +10,12 @@ ms.prod: sql
 ms.custom: sql-linux
 ms.technology: linux
 ms.assetid: 0250ba2b-8cdd-450e-9109-bf74f70e1247
-ms.openlocfilehash: c43ec2c3b010d43c25b1b9f2740480952a9e9ff8
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: d1b002df5c526c4b888bac1b203b54af4e21a3e0
+ms.sourcegitcommit: 1e28f923cda9436a4395a405ebda5149202f8204
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52402326"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "55044977"
 ---
 # <a name="sql-server-on-linux-vdi-client-sdk-specification"></a>SQL Server nel client Linux VDI SDK specifica
 
@@ -298,6 +298,7 @@ Per altre informazioni, vedere "Terminazione anomala" più indietro in questo do
 | |**NOERROR** |Funzione completata.
 | |**VD_E_PROTOCOL** |Il set di dispositivo virtuale non è attualmente aperto.
 | |**VD_E_INVALID** |Il pBuffer non è un indirizzo valido.
+
 La sezione Osservazioni il processo che richiama la funzione GetBufferHandle è responsabile del richiamo ClientVirtualDevice::CompleteCommand durante il trasferimento dei dati è stato completato.
 
 ## <a name="clientvirtualdevicesetmapbufferhandle"></a>ClientVirtualDeviceSet::MapBufferHandle

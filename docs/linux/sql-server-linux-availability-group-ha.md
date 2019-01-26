@@ -10,12 +10,12 @@ ms.assetid: edd75f68-dc62-4479-a596-57ce8ad632e5
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: a76cadf3fafc1980d6600d406b30492b6a6bc2fa
-ms.sourcegitcommit: af1d9fc4a50baf3df60488b4c630ce68f7e75ed1
+ms.openlocfilehash: a9d09f9f769d195600c8af97b347831340837d91
+ms.sourcegitcommit: 1e28f923cda9436a4395a405ebda5149202f8204
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/06/2018
-ms.locfileid: "51031024"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "55044934"
 ---
 # <a name="high-availability-and-data-protection-for-availability-group-configurations"></a>Elevata disponibilità e protezione dei dati per le configurazioni di gruppo di disponibilità
 
@@ -59,12 +59,13 @@ Questa configurazione è costituita da tre repliche sincrone. Per impostazione p
 
 Un gruppo di disponibilità con tre repliche sincrone può fornire la protezione dei dati, la disponibilità elevata e scalabilità in lettura. La tabella seguente descrive il comportamento di disponibilità. 
 
-| |scalabilità in lettura|Disponibilità elevata & </br> protezione dei dati | Protezione dei dati
-|:---|---|---|---
-|`REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT=`|0 |1<sup>*</sup>|2
-|Interruzione primaria | Failover manuale. Potrebbe verificarsi la perdita di dati. Nuova replica primaria è R / w. |Failover automatico. Nuova replica primaria è R / w. |Failover automatico. Nuovo database primario non è disponibile per le transazioni utente fino a quando i database primario viene ripristinato e join di gruppo di disponibilità secondario. 
-|Interruzione di una replica secondaria  | La replica primaria è R / w. Nessun failover automatico se l'area primaria non riesce. |La replica primaria è R / w. Nessun failover automatico se l'area primaria non riesce anche. | Database primario non è disponibile per le transazioni utente. 
-<sup>*</sup> Impostazione predefinita
+| |read-scale|Disponibilità elevata & </br> protezione dei dati | Protezione dei dati|
+|:---|---|---|---|
+|`REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT=`|0 |1<sup>\*</sup>|2|
+|Interruzione primaria | Failover manuale. Potrebbe verificarsi la perdita di dati. Nuova replica primaria è R / w. |Failover automatico. Nuova replica primaria è R / w. |Failover automatico. Nuovo database primario non è disponibile per le transazioni utente fino a quando i database primario viene ripristinato e join di gruppo di disponibilità secondario. |
+|Interruzione di una replica secondaria  | La replica primaria è R / w. Nessun failover automatico se l'area primaria non riesce. |La replica primaria è R / w. Nessun failover automatico se l'area primaria non riesce anche. | Database primario non è disponibile per le transazioni utente. |
+
+<sup>\*</sup> Default
 
 <a name="twoSynch"></a>
 
@@ -76,15 +77,16 @@ Questa configurazione abilita la protezione dei dati. Come le altre configurazio
 
 Un gruppo di disponibilità con due repliche sincrone fornisce scalabilità in lettura e la protezione dati. La tabella seguente descrive il comportamento di disponibilità. 
 
-| |scalabilità in lettura |Protezione dei dati
-|:---|---|---
-|`REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT=`|0 <sup>*</sup>|1
-|Interruzione primaria | Failover manuale. Potrebbe verificarsi la perdita di dati. Nuova replica primaria è R / w.| Failover automatico. Nuovo database primario non è disponibile per le transazioni utente fino a quando i database primario viene ripristinato e join di gruppo di disponibilità secondario.
-|Interruzione di una replica secondaria  |La replica primaria è L/S, esecuzione esposta alla perdita di dati. |Database primario non è disponibile per le transazioni utente fino al recupero della replica secondaria.
-<sup>*</sup> Impostazione predefinita
+| |read-scale |Protezione dei dati|
+|:---|---|---|
+|`REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT=`|0 <sup>\*</sup>|1|
+|Interruzione primaria | Failover manuale. Potrebbe verificarsi la perdita di dati. Nuova replica primaria è R / w.| Failover automatico. Nuovo database primario non è disponibile per le transazioni utente fino a quando i database primario viene ripristinato e join di gruppo di disponibilità secondario.|
+|Interruzione di una replica secondaria  |La replica primaria è L/S, esecuzione esposta alla perdita di dati. |Database primario non è disponibile per le transazioni utente fino al recupero della replica secondaria.|
 
->[!NOTE]
->Lo scenario precedente è il comportamento prima dell'aggiornamento Cumulativo 1 di SQL Server 2017. 
+<sup>\*</sup> Default
+
+> [!NOTE]
+> Lo scenario precedente è il comportamento prima dell'aggiornamento Cumulativo 1 di SQL Server 2017. 
 
 <a name = "configOnly"></a>
 
@@ -99,38 +101,39 @@ Un gruppo di disponibilità con repliche sincrone due (o più) e una replica di 
 
 Nel diagramma gruppo di disponibilità, una replica primaria esegue il push dei dati di configurazione per la replica secondaria e la replica di sola configurazione. La replica secondaria riceve anche i dati dell'utente. La replica di sola configurazione non riceve i dati dell'utente. La replica secondaria è in modalità di disponibilità sincroni. La replica di sola configurazione non contiene i database nel gruppo di disponibilità - solo i metadati sul gruppo di disponibilità. I dati di configurazione di replica di sola configurazione viene eseguito il commit in modo sincrono.
 
->[!NOTE]
->Un gruppo di availabilility con replica di sola configurazione è nuovo per SQL Server 2017 da CU1. Tutte le istanze di SQL Server nel gruppo di disponibilità devono essere SQL Server 2017 da CU1 o versione successiva. 
+> [!NOTE]
+> Un gruppo di availabilility con replica di sola configurazione è nuovo per SQL Server 2017 da CU1. Tutte le istanze di SQL Server nel gruppo di disponibilità devono essere SQL Server 2017 da CU1 o versione successiva. 
 
 Il valore predefinito per `REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT` è 0. La tabella seguente descrive il comportamento di disponibilità. 
 
-| |Disponibilità elevata & </br> protezione dei dati | Protezione dei dati
-|:---|---|---
-|`REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT=`|0 <sup>*</sup>|1
-|Interruzione primaria | Failover automatico. Nuova replica primaria è R / w. | Failover automatico. Nuovo database primario non è disponibile per le transazioni utente. 
-|Interruzione di servizio di replica secondaria | Replica primaria è L/S, esecuzione esposta alla perdita di dati (se primario ha esito negativo e non può essere ripristinato). Nessun failover automatico se l'area primaria non riesce anche. | Database primario non è disponibile per le transazioni utente. Nessuna replica per eseguire il failover se l'area primaria non riesce. 
-|Interruzione di servizio di configurazione solo replica | La replica primaria è R / w. Nessun failover automatico se l'area primaria non riesce anche. | La replica primaria è R / w. Nessun failover automatico se l'area primaria non riesce anche. 
-|Database secondario sincrono + configurazione solo un'interruzione di replica| Database primario non è disponibile per le transazioni utente. Nessun failover automatico. | Database primario non è disponibile per le transazioni utente. Per eseguire il failover se nessuna replica primario si verifica un errore anche. 
-<sup>*</sup> Impostazione predefinita
+| |Disponibilità elevata & </br> protezione dei dati | Protezione dei dati|
+|:---|---|---|
+|`REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT=`|0 <sup>\*</sup>|1|
+|Interruzione primaria | Failover automatico. Nuova replica primaria è R / w. | Failover automatico. Nuovo database primario non è disponibile per le transazioni utente. |
+|Interruzione di servizio di replica secondaria | Replica primaria è L/S, esecuzione esposta alla perdita di dati (se primario ha esito negativo e non può essere ripristinato). Nessun failover automatico se l'area primaria non riesce anche. | Database primario non è disponibile per le transazioni utente. Nessuna replica per eseguire il failover se l'area primaria non riesce. |
+|Interruzione di servizio di configurazione solo replica | La replica primaria è R / w. Nessun failover automatico se l'area primaria non riesce anche. | La replica primaria è R / w. Nessun failover automatico se l'area primaria non riesce anche. |
+|Database secondario sincrono + configurazione solo un'interruzione di replica| Database primario non è disponibile per le transazioni utente. Nessun failover automatico. | Database primario non è disponibile per le transazioni utente. Per eseguire il failover se nessuna replica primario si verifica un errore anche. |
 
->[!NOTE]
->L'istanza di SQL Server che ospita la replica di sola configurazione può ospitare anche altri database. Anche possibile partecipare come un database di sola configurazione per più di un gruppo di disponibilità. 
+<sup>\*</sup> Default
+
+> [!NOTE]
+> L'istanza di SQL Server che ospita la replica di sola configurazione può ospitare anche altri database. Anche possibile partecipare come un database di sola configurazione per più di un gruppo di disponibilità. 
 
 ## <a name="requirements"></a>Requisiti
 
-* Tutte le repliche in un gruppo di disponibilità con una replica di sola configurazione devono essere SQL Server 2017 CU 1 o versione successiva.
-* Qualsiasi edizione di SQL Server può ospitare una replica di sola configurazione, incluso SQL Server Express. 
-* Il gruppo di disponibilità richiede almeno una replica secondaria - oltre alla replica primaria.
-* Le repliche di sola configurazione non vengono conteggiati per il numero massimo di repliche per ogni istanza di SQL Server. SQL Server standard edition consente fino a tre repliche, SQL Server Enterprise Edition consente fino a 9.
+- Tutte le repliche in un gruppo di disponibilità con una replica di sola configurazione devono essere SQL Server 2017 CU 1 o versione successiva.
+- Qualsiasi edizione di SQL Server può ospitare una replica di sola configurazione, incluso SQL Server Express. 
+- Il gruppo di disponibilità richiede almeno una replica secondaria - oltre alla replica primaria.
+- Le repliche di sola configurazione non vengono conteggiati per il numero massimo di repliche per ogni istanza di SQL Server. SQL Server standard edition consente fino a tre repliche, SQL Server Enterprise Edition consente fino a 9.
 
 ## <a name="considerations"></a>Considerazioni
 
-* Replica di sola configurazione non più di uno per ogni gruppo di disponibilità. 
-* Una replica di sola configurazione non può essere una replica primaria.
-* Non è possibile modificare la modalità di disponibilità di una replica di sola configurazione. Per passare da una replica di sola configurazione a una replica secondaria sincrona o asincrona, rimuovere la replica di sola configurazione e aggiungere una replica secondaria con la modalità di disponibilità necessari. 
-* Una replica di sola configurazione è sincrona con i metadati del gruppo di disponibilità. Non sono presenti dati utente. 
-* Un gruppo di disponibilità con una replica primaria e replica solo di una configurazione, ma nessuna replica secondaria non è valido. 
-* È possibile creare un gruppo di disponibilità in un'istanza di SQL Server Express edition. 
+- Replica di sola configurazione non più di uno per ogni gruppo di disponibilità. 
+- Una replica di sola configurazione non può essere una replica primaria.
+- Non è possibile modificare la modalità di disponibilità di una replica di sola configurazione. Per passare da una replica di sola configurazione a una replica secondaria sincrona o asincrona, rimuovere la replica di sola configurazione e aggiungere una replica secondaria con la modalità di disponibilità necessari. 
+- Una replica di sola configurazione è sincrona con i metadati del gruppo di disponibilità. Non sono presenti dati utente. 
+- Un gruppo di disponibilità con una replica primaria e replica solo di una configurazione, ma nessuna replica secondaria non è valido. 
+- È possibile creare un gruppo di disponibilità in un'istanza di SQL Server Express edition. 
 
 <a name="pacemakerNotify"></a>
 
@@ -144,14 +147,14 @@ Questo processo richiede almeno una replica di disponibilità per la promozione 
 
 Ad esempio, un gruppo di disponibilità con tre repliche sincrone: una replica primaria e due repliche secondarie sincrone.
 
-- `REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT` è 1; (3 / 2 -> 1).
+- `REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT` is 1; (3 / 2 -> 1).
 
 - Il numero necessario di repliche a cui rispondere per pre-innalzamento azione è 2. (3 - 1 = 2). 
 
 In questo scenario, è necessario rispondere per il failover venga attivato due repliche. Per il failover automatico ha esito positivo dopo un'interruzione della replica primaria, sia nelle repliche secondarie desidera essere aggiornate e rispondere per la notifica pre-innalzamento. Se sono online e sincrona, hanno lo stesso numero di sequenza. Il gruppo di disponibilità Alza di livello uno di essi. Se solo una delle repliche secondarie risponde per la pre-innalzamento azione, l'agente delle risorse non può garantire che il database secondario che ha risposto ha il sequence_number più elevato, e non viene attivato un failover.
 
->[!IMPORTANT]
->Quando `REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT` è 0 esiste il rischio di perdita dei dati. Durante un'interruzione della replica primaria, l'agente delle risorse non attiva automaticamente il failover. È possibile attendere per il database primario per il ripristino o eseguire manualmente il failover usando `FORCE_FAILOVER_ALLOW_DATA_LOSS`.
+> [!IMPORTANT]
+> Quando `REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT` è 0 esiste il rischio di perdita dei dati. Durante un'interruzione della replica primaria, l'agente delle risorse non attiva automaticamente il failover. È possibile attendere per il database primario per il ripristino o eseguire manualmente il failover usando `FORCE_FAILOVER_ALLOW_DATA_LOSS`.
 
 È possibile scegliere di eseguire l'override del comportamento predefinito e impedire la risorsa del gruppo di disponibilità di impostazione `REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT` automaticamente.
 
@@ -167,8 +170,8 @@ Per ripristinare il valore predefinito, in base alla configurazione di gruppo di
 sudo pcs resource update <**ag1**> required_synchronized_secondaries_to_commit=
 ```
 
->[!NOTE]
->Quando si eseguono i comandi precedenti, il database primario è temporaneamente abbassata di livello a quello secondario, quindi promossa nuovamente. L'aggiornamento della risorsa fa in modo che tutte le repliche arrestare e riavviare. Il nuovo valore per`REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT` viene impostato solo dopo il riavvio delle repliche, non istantaneamente.
+> [!NOTE]
+> Quando si eseguono i comandi precedenti, il database primario è temporaneamente abbassata di livello a quello secondario, quindi promossa nuovamente. L'aggiornamento della risorsa fa in modo che tutte le repliche arrestare e riavviare. Il nuovo valore per`REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT` viene impostato solo dopo il riavvio delle repliche, non istantaneamente.
 
 ## <a name="see-also"></a>Vedere anche
 

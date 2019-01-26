@@ -8,14 +8,15 @@ ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 92992847e2806e18014d2d6828a5f5019ad100b3
-ms.sourcegitcommit: ee76332b6119ef89549ee9d641d002b9cabf20d2
+ms.openlocfilehash: c67fd63af6ed3492b8064be037ed4f8f5dff338f
+ms.sourcegitcommit: 1e28f923cda9436a4395a405ebda5149202f8204
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/20/2018
-ms.locfileid: "53645426"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "55044408"
 ---
 # <a name="revoscaler-r-library-in-sql-server"></a>RevoScaleR (libreria R in SQL Server)
+
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 **RevoScaleR** è una libreria di funzioni di analisi scientifica dei dati ad alte prestazioni da Microsoft. Funzioni supportano l'importazione dei dati, la trasformazione dei dati, attività di riepilogo, visualizzazione e analisi.
@@ -55,7 +56,7 @@ SQL Server e R usare diversi tipi di dati in alcuni casi. Per un elenco dei mapp
 | Funzione| Descrizione|
 | ------- | ---------- |
 | [RxInSqlServer](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxinsqlserver) |  Creare un oggetto di contesto di calcolo di SQL Server per trasferire i calcoli a un'istanza remota. Numerosi **RevoScaleR** funzioni accettano il contesto di calcolo come argomento. |
-[rxGetComputeContext / rxSetComputeContext](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxsetcomputecontext) | Ottiene o imposta il contesto di calcolo attivo. |
+|[rxGetComputeContext / rxSetComputeContext](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxsetcomputecontext) | Ottiene o imposta il contesto di calcolo attivo. |
 | [RxSqlServerData](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxsqlserverdata) | Creare un oggetto di dati basato su una query di SQL Server o una tabella. |
 | [RxOdbcData](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxodbcdata) | Creare un'origine dati basata su una connessione ODBC. |
 | [RxXdfData](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxxdfdata) | Creare un'origine dati basata su un file XDF locale. I file XDF vengono spesso utilizzati per l'offload dei dati in memoria su disco. Un file XDF può essere utile quando si utilizzano più dati possono essere trasferiti dal database in un unico batch, o altri dati che possono adattarsi alla memoria. Ad esempio, se si spostano regolarmente grandi quantità di dati da un database in una workstation locale, invece di query del database più volte per ogni operazione R, è possibile utilizzare il file XDF come un tipo di cache per salvare i dati in locale e quindi lavorare nell'area di lavoro R.|
@@ -104,7 +105,7 @@ Dopo aver creato un oggetto origine dati, è possibile usare l'oggetto per caric
 |[rxCrossTabs](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxcrosstabs) <sup>*</sup> |Basato su formula tabulazione incrociata di dati. | 
 |[rxCube](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxcube) <sup>*</sup> |Alternativo basato su formula tabulazione incrociata progettata per un'efficiente rappresentazione restituzione dei risultati del cubo. Scrittura dell'output al file con estensione xdf non supportato. | 
 |[rxMarginals](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxmarginals)  |Riepilogo marginale per tra tabelle. | 
-|[As.xtabs](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/as.xtabs)  |Converte incrociata i risultati della tabulazione in un oggetto xtabs. | 
+|[as.xtabs](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/as.xtabs)  |Converte incrociata i risultati della tabulazione in un oggetto xtabs. | 
 |[rxChiSquaredTest](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxchisquaredtest)  |Esegue il Test del chi quadrato xtabs objektu. Utilizzato con piccoli set di dati e non suddividere i dati. | 
 |[rxFisherTest](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxchisquaredtest)  |Esegue Test esatto di Fisher xtabs objektu. Utilizzato con piccoli set di dati e non suddividere i dati. | 
 |[rxKendallCor](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxchisquaredtest)  |Calcola Tau classifica il coefficiente di correlazione di Kendall utilizzando xtabs oggetto. | 

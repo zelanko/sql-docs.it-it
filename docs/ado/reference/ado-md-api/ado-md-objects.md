@@ -14,20 +14,21 @@ ms.assetid: 2a32e873-3282-4520-a7ed-89493f1da80e
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 3e7f6cb865ec06e1031cd627316821ef4f666a64
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 42b0aed3c63b1303e4d8743ea441348c351be822
+ms.sourcegitcommit: 1e28f923cda9436a4395a405ebda5149202f8204
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47828710"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "55044917"
 ---
 # <a name="ado-md-objects"></a>Oggetti ADO MD
+
 |||  
 |-|-|  
 |[Axis](../../../ado/reference/ado-md-api/axis-object-ado-md.md)|Rappresenta un posizionali o asse di filtro di un set di celle, che contiene i membri selezionati di una o più dimensioni.|  
 |[Catalogo](../../../ado/reference/ado-md-api/catalog-object-ado-md.md)|Contiene informazioni sullo schema multidimensionale (vale a dire, i cubi e sottostante dimensioni, gerarchie, livelli e membri) specifiche di un provider di dati multidimensionali (dati Multidimensionali).|  
-|[cella](../../../ado/reference/ado-md-api/cell-object-ado-md.md)|Rappresenta i dati in corrispondenza dell'intersezione di coordinate assiali, contenuti in un set di celle.|  
-|[Set di celle](../../../ado/reference/ado-md-api/cellset-object-ado-md.md)|Rappresenta i risultati di una query multidimensionale. È una raccolta di celle selezionate da cubi o altri set di celle.|  
+|[Cell](../../../ado/reference/ado-md-api/cell-object-ado-md.md)|Rappresenta i dati in corrispondenza dell'intersezione di coordinate assiali, contenuti in un set di celle.|  
+|[Cellset](../../../ado/reference/ado-md-api/cellset-object-ado-md.md)|Rappresenta i risultati di una query multidimensionale. È una raccolta di celle selezionate da cubi o altri set di celle.|  
 |[CubeDef](../../../ado/reference/ado-md-api/cubedef-object-ado-md.md)|Rappresenta un cubo da uno schema multidimensionale, contenente un set di dimensioni correlate.|  
 |[Dimension](../../../ado/reference/ado-md-api/dimension-object-ado-md.md)|Rappresenta una delle dimensioni di un cubo multidimensionale, contenente una o più gerarchie dei membri.|  
 |[Hierarchy](../../../ado/reference/ado-md-api/hierarchy-object-ado-md.md)|Rappresenta uno dei modi in cui i membri di una dimensione possono essere aggregati o "raggruppati". Una dimensione può essere aggregata una o più gerarchie.|  
@@ -37,7 +38,7 @@ ms.locfileid: "47828710"
   
  Inoltre, il **catalogo** l'oggetto è connesso a un oggetto ADO **connessione** oggetto, che è incluso con la libreria ADO standard:  
   
-|Object|Description|  
+|Object|Descrizione|  
 |------------|-----------------|  
 |[Connessione](../../../ado/reference/ado-api/connection-object-ado.md)|Rappresenta una connessione aperta a un'origine dati.|  
   

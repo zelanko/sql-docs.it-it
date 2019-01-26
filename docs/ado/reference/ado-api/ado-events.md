@@ -14,19 +14,20 @@ ms.assetid: 0ded5ad9-8f83-4224-95af-38512783b972
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 28c64bbe66da1adf6ad4d3a0f9484789ee2a71dd
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 50bdb3117b01d68f03208d6db501d44f05a849ce
+ms.sourcegitcommit: 1e28f923cda9436a4395a405ebda5149202f8204
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47838231"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "55044884"
 ---
 # <a name="ado-events"></a>Eventi ADO
+
 |||  
 |-|-|  
 |[BeginTransComplete](../../../ado/reference/ado-api/begintranscomplete-committranscomplete-and-rollbacktranscomplete-events-ado.md)|Chiamato dopo il **BeginTrans** operazione.|  
 |[CommitTransComplete](../../../ado/reference/ado-api/begintranscomplete-committranscomplete-and-rollbacktranscomplete-events-ado.md)|Chiamato dopo il **CommitTrans** operazione.|  
-|[Eventi ConnectComplete](../../../ado/reference/ado-api/connectcomplete-and-disconnect-events-ado.md)|Chiamato dopo l'avvio di una connessione.|  
+|[ConnectComplete](../../../ado/reference/ado-api/connectcomplete-and-disconnect-events-ado.md)|Chiamato dopo l'avvio di una connessione.|  
 |[Disconnetti](../../../ado/reference/ado-api/connectcomplete-and-disconnect-events-ado.md)|Chiamato dopo la fine di una connessione.|  
 |[EndOfRecordset](../../../ado/reference/ado-api/endofrecordset-event-ado.md)|Chiamato quando viene eseguito un tentativo per spostarsi in una riga successiva alla fine del **Recordset**.|  
 |[ExecuteComplete](../../../ado/reference/ado-api/executecomplete-event-ado.md)|Chiamato dopo l'esecuzione di un comando è terminata.|  
@@ -50,7 +51,7 @@ ms.locfileid: "47838231"
  [Raccolte di ADO](../../../ado/reference/ado-api/ado-collections.md)   
  [Proprietà dinamiche ADO](../../../ado/reference/ado-api/ado-dynamic-properties.md)   
  [Costanti enumerate ADO](../../../ado/reference/ado-api/ado-enumerated-constants.md)   
- [Appendice b: errori ADO](../../../ado/guide/appendixes/appendix-b-ado-errors.md)   
+ [Appendice b: Errori ADO](../../../ado/guide/appendixes/appendix-b-ado-errors.md)   
  [Gestione degli eventi ADO](../../../ado/guide/data/handling-ado-events.md)   
  [Metodi ADO](../../../ado/reference/ado-api/ado-methods.md)   
  [Modello a oggetti ADO](../../../ado/reference/ado-api/ado-object-model.md)   

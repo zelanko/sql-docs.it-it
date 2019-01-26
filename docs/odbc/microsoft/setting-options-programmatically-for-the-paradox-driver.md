@@ -16,19 +16,20 @@ ms.assetid: 7996d3f8-b5f5-4cac-8a66-fc96a42b603e
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 50862270598172f8ff9e8572e9f201cbeb826bc5
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: fd92344552371e2e052a958485340b70522cc121
+ms.sourcegitcommit: 1e28f923cda9436a4395a405ebda5149202f8204
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47637239"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "55044517"
 ---
 # <a name="setting-options-programmatically-for-the-paradox-driver"></a>Impostazione delle opzioni a livello di codice per il driver Paradox
-|Opzione|Description|Metodo|  
+
+|Opzione|Descrizione|Metodo|  
 |------------|-----------------|------------|  
 |Directory|Imposta la directory di destinazione.|Per impostare questa opzione in modo dinamico, usare il **DEFAULTDIR** parola chiave in una chiamata a [SQLConfigDataSource](../../odbc/microsoft/sqlconfigdatasource-paradox-driver.md).|  
 |Sequenza di ordinamento|La sequenza nella quale vengono ordinati i campi.<br /><br /> La sequenza può essere ASCII (predefinito), internazionale, Finnish-Swedish o Danish-Norwegian.|Per impostare questa opzione in modo dinamico, usare il **COLLATINGSEQUENCE** parola chiave in una chiamata a [SQLConfigDataSource](../../odbc/microsoft/sqlconfigdatasource-paradox-driver.md).|  
-|Description|Una descrizione facoltativa dei dati nell'origine dati; ad esempio, "Hire data, cronologia degli stipendi e situazione corrente di tutti i dipendenti."|Per impostare questa opzione in modo dinamico, usare il **DESCRIPTION** parola chiave in una chiamata a [SQLConfigDataSource](../../odbc/microsoft/sqlconfigdatasource-paradox-driver.md).|  
+|Descrizione|Una descrizione facoltativa dei dati nell'origine dati; ad esempio, "Hire data, cronologia degli stipendi e situazione corrente di tutti i dipendenti."|Per impostare questa opzione in modo dinamico, usare il **DESCRIPTION** parola chiave in una chiamata a [SQLConfigDataSource](../../odbc/microsoft/sqlconfigdatasource-paradox-driver.md).|  
 |Exclusive|Se il **esclusivo** casella è selezionata, il database verrà aperto in modalità esclusiva e sono accessibili da un solo utente alla volta. Le prestazioni sono ottimizzate durante l'esecuzione in modalità esclusiva.|Per impostare questa opzione in modo dinamico, usare il **esclusivo** parola chiave in una chiamata a [SQLConfigDataSource](../../odbc/microsoft/sqlconfigdatasource-paradox-driver.md).|  
 |Stile NET|Il tipo di accesso di rete da utilizzare per l'accesso ai dati Paradox: entrambi "3.*x*" per Paradox 3. *x* o "4. *x*"per Paradox 4. *x* o 5. *x*. Può essere impostato su "3. *x*"o" 4. *x*"se la versione 4 Paradox. *x* o 5. *x*; se la versione è 3 Paradox. *x*, lo stile deve essere "3. *x*".|Per impostare questa opzione in modo dinamico, usare il **PARADOXNETSTYLE** parola chiave in una chiamata a [SQLConfigDataSource](../../odbc/microsoft/sqlconfigdatasource-paradox-driver.md).|  
 |Timeout di pagina|Specifica il periodo di tempo, in decimi di secondo, che una pagina, se non utilizzato, rimane nel buffer prima della rimozione. Il valore predefinito è 600 decimi di secondo (60 secondi). Questa opzione si applica a tutte le origini dati che usano il driver ODBC.<br /><br /> Il timeout della pagina non può essere 0 a causa di un ritardo inerente. Il timeout della pagina non può essere minore del ritardo inerente, anche se è impostata l'opzione di timeout della pagina di sotto di tale valore.|Per impostare questa opzione in modo dinamico, usare il **PAGETIMEOUT** parola chiave in una chiamata a [SQLConfigDataSource](../../odbc/microsoft/sqlconfigdatasource-paradox-driver.md).|  

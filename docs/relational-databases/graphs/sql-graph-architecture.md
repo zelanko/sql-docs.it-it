@@ -15,12 +15,12 @@ author: shkale-msft
 ms.author: shkale
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 3e742e1b5c8ed1b0149292aeee5a3c0e518d9783
-ms.sourcegitcommit: 96032813f6bf1cba680b5e46d82ae1f0f2da3d11
+ms.openlocfilehash: e4c7c5bae386f142dff45be8a1b1371f104cfab3
+ms.sourcegitcommit: 1e28f923cda9436a4395a405ebda5149202f8204
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/15/2019
-ms.locfileid: "54300188"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "55044547"
 ---
 # <a name="sql-graph-architecture"></a>Architettura di grafi SQL  
 [!INCLUDE[tsql-appliesto-ss2017-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-xxxx-xxx-md.md)]
@@ -135,6 +135,7 @@ Le funzioni predefinite seguenti vengono aggiunti. Queste funzionalità permette
 Scopri il [!INCLUDE[tsql-md](../../includes/tsql-md.md)] estensioni introdotte in SQL Server e Database SQL di Azure, che consentono la creazione e l'esecuzione di query su oggetti grafo. Le estensioni del linguaggio di query consentono di query e attraversare il grafo usando sintassi grafica ASCII.
  
 ### <a name="data-definition-language-ddl-statements"></a>Istruzioni Data Definition Language (DDL)
+
 |Attività   |Articolo correlato  |Note
 |---  |---  |---  |
 |CREATE TABLE |[CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-sql-graph.md)|`CREATE TABLE ` viene ora estesa per supportare la creazione di una tabella AS nodi o bordi di AS. Si noti che una tabella edge può o non abbiano gli attributi definiti dall'utente.  |
@@ -145,6 +146,7 @@ Scopri il [!INCLUDE[tsql-md](../../includes/tsql-md.md)] estensioni introdotte i
 
 
 ### <a name="data-manipulation-language-dml-statements"></a>Istruzioni Data Manipulation Language (DML)
+
 |Attività   |Articolo correlato  |Note
 |---  |---  |---  |
 |INSERT |[INSERT &#40;Transact-SQL&#41;](../../t-sql/statements/insert-sql-graph.md)|Inserimento in una tabella nodi equivale all'inserimento in una tabella relazionale. I valori per `$node_id` colonna generata automaticamente. Tentativo di inserire un valore in `$node_id` o `$edge_id` colonna verrà generato un errore. Gli utenti devono fornire valori per `$from_id` e `$to_id` colonne durante l'inserimento in una tabella bordi. `$from_id` e `$to_id` sono il `$node_id` valori dei nodi che si connette un determinato bordo.  |
@@ -154,6 +156,7 @@ Scopri il [!INCLUDE[tsql-md](../../includes/tsql-md.md)] estensioni introdotte i
 
 
 ### <a name="query-statements"></a>Istruzioni di query
+
 |Attività   |Articolo correlato  |Note
 |---  |---  |---  |
 |SELECT |[SELECT &#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md)|I nodi e archi vengono archiviati internamente come tabelle, di conseguenza la maggior parte delle operazioni supportate in una tabella in SQL Server o Database SQL di Azure sono supportata nelle tabelle di nodo e bordo  |
