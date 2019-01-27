@@ -9,19 +9,19 @@ ms.topic: conceptual
 ms.date: 06/27/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: 5467362b32733e6ef10036bf9b45d38fe3150a1e
-ms.sourcegitcommit: c51f7f2f5d622a1e7c6a8e2270bd25faba0165e7
+ms.openlocfilehash: 44ed335524d21cd4931722a20be4eb0da5681603
+ms.sourcegitcommit: 1e28f923cda9436a4395a405ebda5149202f8204
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53626355"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "55044708"
 ---
 # <a name="whats-new-in-analytics-platform-system-a-scale-out-mpp-data-warehouse"></a>Quali sono le novità nel sistema di piattaforma Analitica, di un data warehouse di tipo scale-out MPP
 Vedere Novità gli ultimi aggiornamenti di Appliance per Microsoft Analitica piattaforma di strumenti analitici. I punti di accesso è un'appliance di scalabilità orizzontale in locale che ospita MPP SQL Server Parallel Data Warehouse. 
 
 ::: moniker range=">= aps-pdw-2016-au7 || = sqlallproducts-allversions"
 <a name="h2-aps-cu7.3"></a>
-## <a name="aps-cu73"></a>CU7.3 APS
+## <a name="aps-cu73"></a>APS CU7.3
 Data di rilascio: dicembre 2018
 
 ### <a name="common-subexpression-elimination"></a>Eliminazione di sottoespressioni comuni
@@ -31,6 +31,7 @@ APS CU7.3 migliora le prestazioni delle query con l'eliminazione di sottoespress
 Microsoft ha rilasciato una nuova versione dei connettori di Informatica per i punti di accesso che funziona con versione 10.2.0 Informatica. I nuovi connettori possono essere scaricati dal [sito di download](https://www.microsoft.com/download/details.aspx?id=57472).
 
 #### <a name="supported-versions"></a>Versioni supportate
+
 | Versione piattaforma di strumenti analitici | informatica PowerCenter | Driver |
 |:---|:---|:---|
 | APS 2016 | 9.6.1 | SQL Server Native Client 11.x |
@@ -153,7 +154,7 @@ APS AU6 supporta questi miglioramenti di compatibilità di T-SQL.  Questi elemen
 
 **Tipi di dati**
 
-- [Varchar (max)][], [nvarchar (max)][] e [varbinary (max)][]. Questi tipi di dati LOB hanno una dimensione massima di 2 GB. Per caricare questi oggetti di uso [utilità bcp][]. PolyBase e dwloader non attualmente supportano questi tipi di dati. 
+- [VARCHAR(MAX)][], [NVARCHAR(MAX)][] e [varbinary (max)][]. Questi tipi di dati LOB hanno una dimensione massima di 2 GB. Per caricare questi oggetti di uso [utilità bcp][]. PolyBase e dwloader non attualmente supportano questi tipi di dati. 
 - [SYSNAME][]
 - [UNIQUEIDENTIFIER][]
 - [NUMERIC][] e tipi di dati decimale.
@@ -215,8 +216,8 @@ The proper formats have at least two big advantages.  One big advantage is that 
 [Regole di confronto SQL a livello di colonna]: ~/relational-databases/collations/collation-and-unicode-support.md
 
 [Indici non cluster in indici columnstore cluster]:/sql/t-sql/statements/create-index-transact-sql
-[VARCHAR (MAX)]:/sql/t-sql/data-types/char-and-varchar-transact-sql
-[NVARCHAR (MAX)]:/sql/t-sql/data-types/nchar-and-nvarchar-transact-sql
+[VARCHAR(MAX)]:/sql/t-sql/data-types/char-and-varchar-transact-sql
+[NVARCHAR(MAX)]:/sql/t-sql/data-types/nchar-and-nvarchar-transact-sql
 [VARBINARY (MAX)]:/sql/t-sql/data-types/binary-and-varbinary-transact-sql
 [SYSNAME]:/sql/relational-databases/system-catalog-views/sys-types-transact-sql
 [SELECT...INTO]:/sql/t-sql/queries/select-into-clause-transact-sql
