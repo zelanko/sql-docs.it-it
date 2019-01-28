@@ -9,18 +9,19 @@ ms.technology: ''
 ms.author: mikeray
 author: MikeRayMSFT
 manager: craigg
-ms.openlocfilehash: efb72426b1eceff0dbbf88676fb0aa9a83134cae
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: 35243a3f983f711968f8012eaa23eefdacb11a31
+ms.sourcegitcommit: 1e28f923cda9436a4395a405ebda5149202f8204
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51701839"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "55044987"
 ---
 # <a name="sql-server-managing-partners"></a>Partner di gestione per SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 Per gestire i servizi di SQL Server, è possibile scegliere tra una vasta gamma di strumenti leader nel settore.  In questo articolo vengono evidenziate le aziende partner Microsoft con soluzioni di gestione che supportano Microsoft SQL Server.
 
 ## <a name="our-management-partners"></a>I partner di gestione Microsoft
+
 | Partner | Descrizione | Collegamenti |
 | --- | --- | --- | --- |
 |![idera][1] |**IDERA**<br>SQL Compliance Manager è una soluzione di controllo completa che consente di vedere chi ha fatto cosa, come e quando nelle istanze SQL Server per garantire la conformità alle normative e ai requisiti di protezione dei dati.<br><br>[Requisiti di sistema][idera_requirements]|<!--[Marketplace][idera_marketplace]<br>-->[Sito Web][idera_website]<br>[Twitter][idera_twitter]<br>[Video][idera_youtube] | |
