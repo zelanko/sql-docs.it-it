@@ -9,22 +9,25 @@ ms.prod: sql
 ms.author: mikeray
 author: MikeRayMSFT
 manager: craigg
-ms.openlocfilehash: 1dbe3213ae6b5774cd08efa6f6a24b799f74a6a7
-ms.sourcegitcommit: 0bb306da5374d726b1e681cd4b5459cb50d4a87a
+ms.openlocfilehash: 426b0eed5b53760e872ebd18b11fce4de5ff22b9
+ms.sourcegitcommit: 1e28f923cda9436a4395a405ebda5149202f8204
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2018
-ms.locfileid: "53731998"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "55044924"
 ---
 # <a name="sql-server-monitoring-partners"></a>Partner di monitoraggio per SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 Per monitorare i servizi di SQL Server, è possibile scegliere tra una vasta gamma di strumenti leader nel settore. In questo articolo vengono evidenziate le aziende partner Microsoft con soluzioni di monitoraggio che supportano Microsoft SQL Server.
 
 <!--
+
 |![PartnerShortName][1] |**PartnerShortName**<br>PartnerShortName Brief description of the type of products that partner provides. <br><br>List of supported versions of SQL Server, OS, OS platforms/distros Server 2005 SP4 - SQL Server 2016 on Windows |[Datasheet][PartnerShortName_datasheet]<br>[Marketplace][PartnerShortName_marketplace]<br>[Website][PartnerShortName_website]<br>[Twitter][PartnerShortName_twitter]<br>[Video][PartnerShortName_youtube]|[![veem_video](./media/partner-hadr-sql-server/PartnerShortName_video.png)](https://www.youtube.com/channel/**************)
+
 -->
 
 ## <a name="microsoft-monitoring-partners"></a>Partner di monitoraggio Microsoft
+
 | Partner | Descrizione | Collegamenti |
 | --- | --- | --- | --- |
 |[![idera][1]][idera_website] |**IDERA**<br>SQL Diagnostic Manager è una potente soluzione di monitoraggio e diagnostica delle prestazioni in grado di avvisare in modo proattivo gli amministratori da una console centrale se vengono rilevati problemi di integrità, disponibilità e prestazioni negli ambienti SQL Server.<br><br>[Requisiti di sistema][idera_requirements]|<!--[Marketplace][idera_marketplace]<br>-->[Sito Web][idera_website]<br>[Twitter][idera_twitter]<br>[Video][idera_youtube] | |
