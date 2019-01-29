@@ -10,12 +10,12 @@ ms.assetid: 04ba51b6-cdc7-409c-8d7e-26ead13e614d
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: b4ac8b044308ad7bfb2431e35429558b9deb3cf5
-ms.sourcegitcommit: 2e8783e6bedd9597207180941be978f65c2c2a2d
+ms.openlocfilehash: bd33483d148b3f94ae54c1a1b94dbaf21acbac27
+ms.sourcegitcommit: 1e28f923cda9436a4395a405ebda5149202f8204
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/19/2019
-ms.locfileid: "54405881"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "55045084"
 ---
 # <a name="database-engine-errors"></a>Errori del motore di database
 
@@ -578,6 +578,7 @@ La tabella contiene i numeri di messaggio di errore e la descrizione, ovvero il 
 |   &nbsp;  |   &nbsp;  |&nbsp;     |   &nbsp;  |
 
 ## <a name="errors-1000-to-1999"></a>Errori da 1000 a 1999
+
 | Errore| Severity | Evento registrato | Descrizione|
 | :------ | :------| :------| :----------------------------- |
 |   1001    |   16  |   no  |   Riga %d: la specifica %d per la lunghezza o la precisione non è valida.   |
@@ -1009,6 +1010,7 @@ La tabella contiene i numeri di messaggio di errore e la descrizione, ovvero il 
 |   &nbsp;  |   &nbsp;  |&nbsp;     |   &nbsp;  |
 
 ## <a name="errors-2000-to-2999"></a>Errori da 2000 a 2999
+
 | Errore| Severity | Evento registrato | Descrizione|
 | :------ | :------| :------| :----------------------------- |
 |   2002    |   16  |   no  |   Impossibile creare una procedura per la replica con un numero di gruppo maggiore di 1.   |
@@ -1381,6 +1383,7 @@ La tabella contiene i numeri di messaggio di errore e la descrizione, ovvero il 
 |   &nbsp;  |   &nbsp;  |&nbsp;     |   &nbsp;  |
 
 ## <a name="errors-3000---3999"></a>Errori da 3000 a 3999
+
 | Errore| Severity | Evento registrato | Descrizione|
 | :------ | :------| :------| :----------------------------- |
 |   3002    |   16  |   no  |   Impossibile eseguire il backup o il ripristino di uno snapshot di database.   |
@@ -1821,6 +1824,7 @@ La tabella contiene i numeri di messaggio di errore e la descrizione, ovvero il 
 |   &nbsp;  |   &nbsp;  |&nbsp;     |   &nbsp;  |
 
 ## <a name="errors-4000-to-4999"></a>Errori da 4000 a 4999
+
 | Errore| Severity | Evento registrato | Descrizione|
 | :------ | :------| :------| :----------------------------- |
 |   4001    |   10  |   no  |   Invio di sp_reset_connection dal client mentre vi sono richieste in sospeso. Disconnessione del server.  |
@@ -3155,6 +3159,7 @@ La tabella contiene i numeri di messaggio di errore e la descrizione, ovvero il 
 |   &nbsp;  |   &nbsp;  |&nbsp;     |   &nbsp;  |
 
 ## <a name="errors-7000-to-7999"></a>Errori da 7000 a 7999
+
 | Errore| Severity | Evento registrato | Descrizione|
 | :------ | :------| :------| :----------------------------- |
 |   7000    |   16  |   no  |   Il tipo di dati del parametro per l'handle di documento OPENXML deve essere int. |
@@ -3598,6 +3603,7 @@ La tabella contiene i numeri di messaggio di errore e la descrizione, ovvero il 
 |   &nbsp;  |   &nbsp;  |&nbsp;     |   &nbsp;  |
 
 ## <a name="errors-8000-to-8999"></a>Errori da 8000 a 8999
+
 | Errore| Severity | Evento registrato | Descrizione|
 | :------ | :------| :------| :----------------------------- |
 |   8001    |   16  |   no  |   Il flusso del protocollo RPC (Remote Procedure Call) TDS (Tabular Data Stream) in entrata non è corretto. Metadati per il parametro sql_variant non validi. |
