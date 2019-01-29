@@ -47,12 +47,12 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current||>=aps-pdw-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 9bb9f7368f9250bd96adb62c6af7e7711213e4fc
-ms.sourcegitcommit: 202ef5b24ed6765c7aaada9c2f4443372064bd60
+ms.openlocfilehash: 1237e85271949279a96ddd149536189b9940a919
+ms.sourcegitcommit: a94cf79160e22fa8b4bafe3e6e50bb54e20b1bca
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/12/2019
-ms.locfileid: "54242284"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54805777"
 ---
 # <a name="backup-transact-sql"></a>BACKUP (Transact-SQL)
 
@@ -1132,9 +1132,9 @@ Eventuali problemi correlati alla proprietà e alle autorizzazioni per l'URL pos
 L'esempio esegue un backup COPY_ONLY di `Sales` nel servizio di archiviazione BLOB di Microsoft Azure.  Il nome dell'account di archiviazione è `mystorageaccount`, mentre  il nome del contenitore è `myfirstcontainer`.  Sono stati creati criteri di accesso archiviati con diritti di lettura, scrittura ed elenco.  Le credenziali di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], `https://mystorageaccount.blob.core.windows.net/myfirstcontainer`, sono stati create usando una firma di accesso condiviso associata a criteri di accesso archiviati.  Per informazioni sul backup di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] nel servizio di archiviazione BLOB di Microsoft Azure, vedere [Backup e ripristino di SQL Server con il servizio di archiviazione BLOB di Microsoft Azure](../../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md) e [Backup di SQL Server nell'URL](../../relational-databases/backup-restore/sql-server-backup-to-url.md).
 
 ```sql  
-BACKUP DATABASE Sales WITH COPY_ONLY
+BACKUP DATABASE Sales
 TO URL = 'https://mystorageaccount.blob.core.windows.net/myfirstcontainer/Sales_20160726.bak'
-WITH STATS = 5;
+WITH STATS = 5, COPY_ONLY;
 ```
 
   
@@ -1274,7 +1274,7 @@ Queste DMV contengono informazioni su tutte le operazioni di backup, ripristino 
 - [sys.pdw_loader_backup_runs &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-pdw-loader-backup-runs-transact-sql.md)  
 - [sys.pdw_loader_backup_run_details &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-pdw-loader-backup-run-details-transact-sql.md)  
 - [sys.pdw_loader_run_stages &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-pdw-loader-run-stages-transact-sql.md)  
-## <a name="performance"></a>restazioni  
+## <a name="performance"></a>Prestazioni  
 Per eseguire un backup, [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] esegue prima il backup dei metadati e quindi esegue un backup parallelo dei dati di database archiviati nei nodi di calcolo. I dati vengono copiati direttamente da ogni nodo di calcolo nella directory di backup. Per ottenere le migliori prestazioni per lo spostamento dei dati dai nodi di calcolo alla directory di backup, [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] controlla il numero di nodi di calcolo che copiano i dati contemporaneamente.  
   
 ## <a name="locking"></a>Utilizzo di blocchi  

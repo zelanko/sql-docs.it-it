@@ -17,12 +17,12 @@ author: aliceku
 ms.author: aliceku
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: db55b4763dc0a5956d419fd45ced58073e2affbb
-ms.sourcegitcommit: c6e71ed14198da67afd7ba722823b1af9b4f4e6f
+ms.openlocfilehash: 696d3bfc454e396f8cc590d3178f8ae54b89128a
+ms.sourcegitcommit: a94cf79160e22fa8b4bafe3e6e50bb54e20b1bca
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/16/2019
-ms.locfileid: "54327872"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54805717"
 ---
 # <a name="always-encrypted-wizard"></a>Procedura guidata Always Encrypted
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -35,13 +35,13 @@ Usare la **procedura guidata Always Encrypted** per proteggere i dati sensibili 
  
  - **Autorizzazioni:** per eseguire query su colonne crittografate e selezionare chiavi usando la procedura guidata è necessario avere le autorizzazioni `VIEW ANY COLUMN MASTER KEY DEFINITION` e `VIEW ANY COLUMN ENCRYPTION KEY DEFINITION`. Per creare nuove chiavi, sono necessarie anche le autorizzazioni `ALTER ANY COLUMN MASTER KEY` e `ALTER ANY COLUMN ENCRYPTION KEY` .  
  
- #### <a name="to-open-the-always-encrypted-wizard"></a>Per aprire la procedura guidata Always Encrypted  
+ #### <a name="to-open-the-always-encrypted-wizard"></a>Per aprire la procedura guidata Always Encrypted
  
  1.  Connettersi a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] con il componente Esplora oggetti di [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)].  
    
  2.  Fare clic con il pulsante destro del mouse sul database, scegliere **Attività**, quindi fare clic su **Crittografa colonne**.  
    
- ## <a name="column-selection-page"></a>Pagina Selezione colonna  
+ ## <a name="column-selection-page"></a>Pagina Selezione colonna
  - Individuare una tabella e una colonna e quindi selezionare un tipo di crittografia (deterministico o casuale) e una chiave di crittografia per le colonne selezionate. Per decrittografare una colonna attualmente crittografata, selezionare **Testo non crittografato**. Per applicare una nuova chiave di crittografia a una colonna, selezionare una chiave di crittografia diversa e la procedura guidata decrittograferà la colonna per puoi crittografarla nuovamente con la nuova chiave. La crittografia di tabelle temporali e in memoria è supportata da [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , ma non può essere configurata con questa procedura guidata.  
  
 ## <a name="master-key-configuration-page"></a>Pagina Configurazione della chiave master  

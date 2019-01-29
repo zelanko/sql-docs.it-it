@@ -14,12 +14,12 @@ ms.assetid: 83075cdf-f059-4646-8ba2-19be8202f130
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: fabd4b6da2a6c7016d00e503918062f86f6ce147
-ms.sourcegitcommit: 7ea015dc8527de14e7bd4401f5c74c8402fab3d6
+ms.openlocfilehash: 4a76d8d657f2451c52aea74c99576ffd89b30c8c
+ms.sourcegitcommit: 1e28f923cda9436a4395a405ebda5149202f8204
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2018
-ms.locfileid: "53738117"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "55044487"
 ---
 # <a name="system-settings-master-data-services"></a>Impostazioni di sistema (Master Data Services)
 
@@ -130,6 +130,7 @@ ms.locfileid: "53738117"
 ||**SecurityMemberProcessInterval**|Nell'area funzionale [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] **User and Group Permissions** functional area, the frequency, in seconds, that user and group permissions set on the **Hierarchy Members** tab are applied. Il valore predefinito è **3600** secondi (60 minuti).|  
 
 ##  <a name="Performance"></a> Impostazioni delle prestazioni  
+
 |Impostazione di Gestione configurazione|Impostazione di sistema|Descrizione|  
 |-----------------------------------|--------------------|-----------------|  
 |**Impostazione di abilitazione del miglioramento delle prestazioni**|**PerformanceImprovementEnable**|Per ottenere buone prestazioni per la pagina relativa al caricamento delle autorizzazioni, questa impostazione è stata abilitata (**impostata su 1**). Tuttavia, in questa situazione, le prestazioni di creazione/modifica di entità, attributi, utenti o gruppi saranno ridotte. Per evitare che ciò accada è possibile disabilitare questa impostazione (**impostarla su 0**). Dopo aver modificato questa impostazione è necessario eseguire il comando "**EXEC [mdm].[udpPerformanceToggleSwitch];**" per assicurarsi che la vista e i dati siano corretti.|  

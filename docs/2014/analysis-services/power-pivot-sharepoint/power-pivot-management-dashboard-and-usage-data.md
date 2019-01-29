@@ -11,12 +11,12 @@ ms.assetid: 541c8b1f-c6c2-423d-a97d-65c379967e0c
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: f9a2172bdefebdbfd327d8d253e32cd63c254d8e
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: cf132a6cd6e15002b36ba7ecdced512e3686e433
+ms.sourcegitcommit: b51edbe07a0a2fdb5f74b5874771042400baf919
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52419873"
+ms.lasthandoff: 01/28/2019
+ms.locfileid: "55087712"
 ---
 # <a name="powerpivot-management-dashboard-and-usage-data"></a>Dati di utilizzo e dashboard di gestione PowerPivot
   Il dashboard di gestione PowerPivot è una raccolta di report e web part predefiniti in Amministrazione centrale SharePoint che consente di amministrare una distribuzione di PowerPivot per SharePoint di SQL Server. Nel dashboard di gestione sono disponibili informazioni relative all'integrità del server, all'attività della cartella di lavoro e all'aggiornamento dati. I dati utilizzati nel dashboard provengono dalla raccolta dati di utilizzo di SharePoint.  
@@ -67,7 +67,7 @@ ms.locfileid: "52419873"
 ### <a name="change-the-current-service-application"></a>Modificare l'applicazione di servizio corrente.  
  Per modificare l'applicazione di servizio PowerPivot corrente nel dashboard di gestione:  
   
-1.  Nella parte alta del dashboard di gestione PowerPivot si noti il nome dell'applicazione di servizio corrente, ad esempio **Applicazione di servizio PowerPivot predefinita**.  
+1.  Nella parte superiore del dashboard di gestione PowerPivot, prendere nota del nome dell'applicazione del servizio corrente, ad esempio **applicazione di servizio PowerPivot predefinita**.  
   
 2.  Nel dashboard **Azioni** fare clic su **Elenca applicazioni di servizio**.  
   

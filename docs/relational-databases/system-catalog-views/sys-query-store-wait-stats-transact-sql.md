@@ -20,12 +20,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 620413448f7bd6c10af2d0e7333cd9eb793ef41a
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 43cd85210c437520d2f72b7e9a16fbe2aab84514
+ms.sourcegitcommit: b51edbe07a0a2fdb5f74b5874771042400baf919
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52521248"
+ms.lasthandoff: 01/28/2019
+ms.locfileid: "55087840"
 ---
 # <a name="sysquerystorewaitstats-transact-sql"></a>sys.query_store_wait_stats (Transact-SQL)
 
@@ -46,7 +46,7 @@ ms.locfileid: "52521248"
 |**avg_query_wait_time_ms**|**float**|Media durata dell'attesa per il piano di query per ogni esecuzione all'interno della categoria di attesa e intervallo di aggregazione (segnalata in millisecondi).|
 |**last_query_wait_time_ms**|**bigint**|Ultimo durata dell'attesa per il piano di query entro l'intervallo di aggregazione e categoria (segnalato in millisecondi) di attesa.|
 |**min_query_wait_time_ms**|**bigint**|Valore minimo `CPU wait` ora per il piano di query entro l'intervallo di aggregazione e categoria (segnalato in millisecondi) di attesa.|
-|**max_query_wait_time_ms**|**bigint**|Attesa di CPU di massimo ' ' tempo per il piano di query entro l'intervallo di aggregazione e categoria (segnalato in millisecondi) di attesa.|
+|**max_query_wait_time_ms**|**bigint**|Massimo `CPU wait` ora per il piano di query entro l'intervallo di aggregazione e categoria (segnalato in millisecondi) di attesa.|
 |**stdev_query_wait_time_ms**|**float**|`Query wait` deviazione standard della durata per la query prevede entro l'intervallo di aggregazione e categoria (segnalato in millisecondi) di attesa.|
 
 ## <a name="wait-categories-mapping-table"></a>Tabella di mapping di categorie di attesa
@@ -63,28 +63,28 @@ ms.locfileid: "52521248"
 |**5**|**Latch del buffer**|PAGELATCH_%|
 |**6**|**Buffer dei / o**|PAGEIOLATCH_%|
 |**7**|**Compilazione***|RESOURCE_SEMAPHORE_QUERY_COMPILE|
-|**8**|**CLR SQL**|CLR%, SQLCLR%|
-|**9**|**Il mirroring**|% DBMIRROR|
+|**8**|**SQL CLR**|CLR%, SQLCLR%|
+|**9**|**Il mirroring**|DBMIRROR%|
 |**10**|**Transazione**|XACT%, DTC%, TRAN_MARKLATCH_%, MSQL_XACT_%, TRANSACTION_MUTEX|
-|**11**|**Inattività**|% SLEEP_, LAZYWRITER_SLEEP, SQLTRACE_BUFFER_FLUSH, SQLTRACE_INCREMENTAL_FLUSH_SLEEP, SQLTRACE_WAIT_ENTRIES, FT_IFTS_SCHEDULER_IDLE_WAIT, XE_DISPATCHER_WAIT, REQUEST_FOR_DEADLOCK_SEARCH, LOGMGR_QUEUE, ONDEMAND_TASK_QUEUE, CHECKPOINT_ CODA, XE_TIMER_EVENT|
-|**12**|**Preemptive**|% PREEMPTIVE_|
+|**11**|**Idle**|% SLEEP_, LAZYWRITER_SLEEP, SQLTRACE_BUFFER_FLUSH, SQLTRACE_INCREMENTAL_FLUSH_SLEEP, SQLTRACE_WAIT_ENTRIES, FT_IFTS_SCHEDULER_IDLE_WAIT, XE_DISPATCHER_WAIT, REQUEST_FOR_DEADLOCK_SEARCH, LOGMGR_QUEUE, ONDEMAND_TASK_QUEUE, CHECKPOINT_ CODA, XE_TIMER_EVENT|
+|**12**|**Preemptive**|PREEMPTIVE_%|
 |**13**|**Service Broker**|% BROKER_ **(ma non BROKER_RECEIVE_WAITFOR)**|
 |**14**|**I/o Log di TRAN**|LOGMGR, LOGBUFFER, LOGMGR_RESERVE_APPEND, LOGMGR_FLUSH, LOGMGR_PMM_LOG, CHKPT, WRITELOGF|
 |**15**|**IO rete**|ASYNC_NETWORK_IO, NET_WAITFOR_PACKET, PROXY_NETWORK_IO, EXTERNAL_SCRIPT_NETWORK_IOF|
 |**16**|**Parallelism**|CXPACKET, EXCHANGE|
 |**17**|**Memoria**|RESOURCE_SEMAPHORE, CMEMTHREAD, CMEMPARTITIONED, EE_PMOLOCK, MEMORY_ALLOCATION_EXT, RESERVED_MEMORY_ALLOCATION_EXT, MEMORY_GRANT_UPDATE|
-|**18**|**Attesa di utente**|BROKER_RECEIVE_WAITFOR WAITFOR, WAIT_FOR_RESULTS,|
+|**18**|**Attesa di utente**|WAITFOR, WAIT_FOR_RESULTS, BROKER_RECEIVE_WAITFOR|
 |**19**|**Traccia**|TRACEWRITE, SQLTRACE_LOCK, SQLTRACE_FILE_BUFFER, SQLTRACE_FILE_WRITE_IO_COMPLETION, SQLTRACE_FILE_READ_IO_COMPLETION, SQLTRACE_PENDING_BUFFER_WRITERS, SQLTRACE_SHUTDOWN, QUERY_TRACEOUT, TRACE_EVTNOTIFF|
 |**20**|**Ricerca full-Text**|FT_RESTART_CRAWL, FULLTEXT GATHERER, MSSEARCH, FT_METADATA_MUTEX, FT_IFTSHC_MUTEX, FT_IFTSISM_MUTEX, FT_IFTS_RWLOCK, FT_COMPROWSET_RWLOCK, FT_MASTER_MERGE, FT_PROPERTYLIST_CACHE, FT_MASTER_MERGE_COORDINATOR, PWAIT_RESOURCE_SEMAPHORE_FT_PARALLEL_QUERY_SYNC|
 |**21**|**Altro disco i/o**|ASYNC_IO_COMPLETION, IO_COMPLETION, BACKUPIO, WRITE_COMPLETION, IO_QUEUE_LIMIT, IO_RETRY|
-|**22**|**Replica**|SE_REPL_ %, REPL_ %, % HADR_ **(ma non HADR_THROTTLE_LOG_RATE_GOVERNOR)**, PWAIT_HADR_ %, REPLICA_WRITES, FCB_REPLICA_WRITE, FCB_REPLICA_READ, PWAIT_HADRSIM|
+|**22**|**Replica**|SE_REPL_%, REPL_%, HADR_% **(but not HADR_THROTTLE_LOG_RATE_GOVERNOR)**, PWAIT_HADR_%, REPLICA_WRITES, FCB_REPLICA_WRITE, FCB_REPLICA_READ, PWAIT_HADRSIM|
 |**23**|**Rate Governor di log**|LOG_RATE_GOVERNOR, POOL_LOG_RATE_GOVERNOR, HADR_THROTTLE_LOG_RATE_GOVERNOR, INSTANCE_LOG_RATE_GOVERNOR|
 
 **Compilazione** categoria di attesa non è attualmente supportata.
 
 ## <a name="permissions"></a>Permissions
 
- Richiede la **VIEW DATABASE STATE** l'autorizzazione.  
+ È necessaria l'autorizzazione `VIEW DATABASE STATE`.  
   
 ## <a name="see-also"></a>Vedere anche
 

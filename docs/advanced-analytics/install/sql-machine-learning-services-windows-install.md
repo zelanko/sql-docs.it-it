@@ -8,12 +8,12 @@ ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 2f323ac135ed41ff15c1d41a17407d03138e4807
-ms.sourcegitcommit: 12911093559b4e006189d7a7d32b8d0474961cd5
+ms.openlocfilehash: 6fd14582fdae0d76463b8d8739d214882b78f999
+ms.sourcegitcommit: 32a55df1275ad169bb1457243dc8caa8b48b206f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/17/2019
-ms.locfileid: "54372693"
+ms.lasthandoff: 01/28/2019
+ms.locfileid: "55147009"
 ---
 # <a name="install-sql-server-machine-learning-services-on-windows"></a>Installare SQL Server Machine Learning Services in Windows
 
@@ -29,7 +29,9 @@ Questo articolo illustra come installare il componente di machine learning trami
 
 + È necessaria un'istanza di motore di database. È possibile installare solo le funzionalità R o Python, anche se è possibile aggiungerli in modo incrementale a un'istanza esistente.
 
-- L'installazione di servizi di Machine Learning è *non è supportato* in un cluster di failover in SQL Server 2017. Tuttavia, si *è supportata* con SQL Server 2019. 
++ Per la continuità aziendale, [Availabilty gruppi AlwaysOn](https://docs.microsoft.com/sql/database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server) sono supportati per i servizi di Machine Learning. È necessario installare servizi di Machine Learning e configurare pacchetti, in ogni nodo.
+
++ L'installazione di servizi di Machine Learning è *non è supportato* in un cluster di failover in SQL Server 2017. Tuttavia, si *è supportata* con SQL Server 2019. 
  
 + Non installare servizi di Machine Learning in un controller di dominio. La parte di servizi di Machine Learning del programma di installazione avrà esito negativo.
 

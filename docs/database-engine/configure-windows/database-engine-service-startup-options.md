@@ -26,12 +26,12 @@ ms.assetid: d373298b-f6cf-458a-849d-7083ecb54ef5
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 4a4a31e52cbaa9e91219c2e67341de968d5c7e2c
-ms.sourcegitcommit: c51f7f2f5d622a1e7c6a8e2270bd25faba0165e7
+ms.openlocfilehash: e0c9cf64fa8e2b4304e2ba25536a298edbd306ac
+ms.sourcegitcommit: 1e28f923cda9436a4395a405ebda5149202f8204
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53626331"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "55044328"
 ---
 # <a name="database-engine-service-startup-options"></a>Opzioni di avvio del servizio del motore di database
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -49,6 +49,7 @@ ms.locfileid: "53626331"
   
 ## <a name="list-of-startup-options"></a>Elenco delle opzioni di avvio  
 ### <a name="default-startup-options"></a>Opzioni di avvio predefinite  
+
 |Opzioni|Descrizione|  
 |-----------------------------|-----------------|  
 |**-d**  *master_file_path*|Percorso completo del file del database master (in genere, C:\Programmi\Microsoft SQL Server\MSSQL.*n*\MSSQL\Data\master.mdf). Se non si imposta questa opzione, vengono utilizzati i parametri esistenti nel Registro di sistema.|  
@@ -56,6 +57,7 @@ ms.locfileid: "53626331"
 |**-l**  *master_log_path*|Percorso completo del file di log del database master (in genere C:\Programmi\Microsoft SQL Server\MSSQL.*n*\MSSQL\Data\mastlog.ldf). Se non si specifica questa opzione, vengono utilizzati i parametri esistenti nel Registro di sistema.|  
   
 ### <a name="other-startup-options"></a>Altre opzioni di avvio   
+
 |Opzioni |Descrizione|   
 |---------------------------|-----------------|  
 |**-c**|Riduce i tempi necessari per l'avvio quando si avvia [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dal prompt dei comandi. Il [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] viene in genere avviato come servizio chiamando Gestione controllo servizi. Considerato che [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] non viene avviato come servizio quando viene eseguito l'avvio dal prompt dei comandi, usare **-c** per ignorare questo passaggio.|  

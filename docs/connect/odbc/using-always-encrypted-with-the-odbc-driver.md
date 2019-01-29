@@ -9,12 +9,12 @@ ms.assetid: 02e306b8-9dde-4846-8d64-c528e2ffe479
 ms.author: v-chojas
 manager: craigg
 author: MightyPen
-ms.openlocfilehash: f91ba6d5e7120f26c4ce4f8572eea779cdddebfc
-ms.sourcegitcommit: 170c275ece5969ff0c8c413987c4f2062459db21
+ms.openlocfilehash: 72ff999a4b88bff5d8b78f8e8b936da18b8a4e16
+ms.sourcegitcommit: 1e28f923cda9436a4395a405ebda5149202f8204
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/11/2019
-ms.locfileid: "54226688"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "55044948"
 ---
 # <a name="using-always-encrypted-with-the-odbc-driver-for-sql-server"></a>Uso di Always Encrypted con ODBC Driver for SQL Server
 [!INCLUDE[Driver_ODBC_Download](../../includes/driver_odbc_download.md)]
@@ -417,6 +417,7 @@ L'impostazione di `SQL_COPT_SS_CEKEYSTOREPROVIDER` attributo di connessione cons
 ```
 SQLRETURN SQLSetConnectAttr( SQLHDBC ConnectionHandle, SQLINTEGER Attribute, SQLPOINTER ValuePtr, SQLINTEGER StringLength);
 ```
+
 | Argomento | Descrizione |
 |:---|:---|
 |`ConnectionHandle`|[Input] Handle di connessione. Deve essere un handle di connessione valida, ma i provider caricati tramite handle di una connessione sono accessibili da qualsiasi altro nello stesso processo.|
@@ -451,6 +452,7 @@ Recupero di questo attributo di connessione consente a un'applicazione client de
 ```
 SQLRETURN SQLGetConnectAttr( SQLHDBC ConnectionHandle, SQLINTEGER Attribute, SQLPOINTER ValuePtr, SQLINTEGER BufferLength, SQLINTEGER * StringLengthPtr);
 ```
+
 | Argomento | Descrizione |
 |:---|:---|
 |`ConnectionHandle`|[Input] Handle di connessione. Deve essere un handle di connessione valida, ma i provider caricati tramite handle di una connessione sono accessibili da qualsiasi altro nello stesso processo.|
@@ -477,6 +479,7 @@ unsigned int dataSize;
 char data[];
 } CEKEYSTOREDATA;
 ```
+
 | Argomento | Descrizione |
 |:---|:---|
 |`name`|[Input] Al momento di Set, il nome del provider per cui i dati vengono inviati. Ignorato su Get. Stringa con terminazione null, i caratteri "wide".|
@@ -489,6 +492,7 @@ Oggetto `SQLSetConnectAttr` chiamare usando il `SQL_COPT_SS_CEKEYSTOREDATA` attr
 ```
 SQLRETURN SQLSetConnectAttr( SQLHDBC ConnectionHandle, SQLINTEGER Attribute, SQLPOINTER ValuePtr, SQLINTEGER StringLength);
 ```
+
 | Argomento | Descrizione |
 |:---|:---|
 |`ConnectionHandle`| [Input] Handle di connessione. Deve essere un handle di connessione valida, ma i provider caricati tramite handle di una connessione sono accessibili da qualsiasi altro nello stesso processo.|
@@ -508,6 +512,7 @@ Una chiamata a `SQLGetConnectAttr` usando il `SQL_COPT_SS_CEKEYSTOREDATA` attrib
 ```
 SQLRETURN SQLGetConnectAttr( SQLHDBC ConnectionHandle, SQLINTEGER Attribute, SQLPOINTER ValuePtr, SQLINTEGER BufferLength, SQLINTEGER * StringLengthPtr);
 ```
+
 | Argomento | Descrizione |
 |:---|:---|
 |`ConnectionHandle`|[Input] Handle di connessione. Deve essere un handle di connessione valida, ma i provider caricati tramite handle di una connessione sono accessibili da qualsiasi altro nello stesso processo.|

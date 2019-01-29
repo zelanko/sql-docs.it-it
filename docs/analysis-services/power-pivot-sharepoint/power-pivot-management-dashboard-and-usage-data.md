@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 7158c0c441c11f87c4cc4989ca66061318a60df4
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: f53c8835da14fc3ee41eb9598303f80c062a0e82
+ms.sourcegitcommit: b51edbe07a0a2fdb5f74b5874771042400baf919
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52419702"
+ms.lasthandoff: 01/28/2019
+ms.locfileid: "55087750"
 ---
 # <a name="power-pivot-management-dashboard-and-usage-data"></a>Dati di utilizzo e dashboard di gestione PowerPivot
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -55,7 +55,7 @@ ms.locfileid: "52419702"
 ### <a name="change-the-current-service-application"></a>Modificare l'applicazione di servizio corrente.  
  Per modificare l'applicazione del servizio [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] corrente nel dashboard di gestione:  
   
-1.  Nella parte superiore del dashboard di gestione [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] si noti il nome dell'applicazione del servizio corrente, ad esempio **Default [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] Service Application** (Applicazione del servizio predefinita).  
+1.  Nella parte superiore del [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] dashboard di gestione, prendere nota del nome dell'applicazione del servizio corrente, ad esempio **predefinito [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] applicazione di servizio**.  
   
 2.  Nel dashboard **Azioni** fare clic su **Elenca applicazioni di servizio**.  
   

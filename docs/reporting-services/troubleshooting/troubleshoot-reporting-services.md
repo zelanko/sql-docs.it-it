@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 6eeed553-512d-4603-9b14-0492a9d052b5
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 40f54f79c918f580d758dec342508dec96ae5b45
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 13a85c169421f4ab794ed95f8696d32e5215f6c9
+ms.sourcegitcommit: b51edbe07a0a2fdb5f74b5874771042400baf919
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47686129"
+ms.lasthandoff: 01/28/2019
+ms.locfileid: "55087930"
 ---
 # <a name="troubleshoot-reporting-services"></a>Risoluzione dei problemi di Reporting Services
   Gli argomenti di questa sezione consentono di identificare e risolvere i problemi di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].  
@@ -32,7 +32,7 @@ ms.locfileid: "47686129"
 
 +  [Risolvere i problemi di pubblicazione o visualizzazione di un report in un server di report in modalità nativa](../../reporting-services/troubleshooting/troubleshoot-publishing-or-viewing-a-report-on-a-native-mode-report-server.md)  
 
-+  [Risolvere i problemi di connessione al server e al database con Reporting Serivces](troubleshoot-server-and-database-connection-problems-with-reporting-services.md)  
++  [Risolvere i problemi di connessione al server e al database con Reporting Services](troubleshoot-server-and-database-connection-problems-with-reporting-services.md)  
 
  ![Icona della cartella file piccola](../../reporting-services/troubleshooting/media/filefolder-small.png)   **Guida di riferimento a errori ed eventi**  
  + [Guida di riferimento a errori ed eventi &#40;Reporting Services&#41;](../../reporting-services/troubleshooting/errors-and-events-reference-reporting-services.md)  

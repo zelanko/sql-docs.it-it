@@ -42,12 +42,12 @@ ms.assetid: e57b9160-4b78-4353-abb2-bfdbdf523d7a
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: a598cb35b1b54151abb1393d231c23fb9a7ef0aa
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: f34497270485668a8f1bcd5d0486a2fc5a9fc1fa
+ms.sourcegitcommit: 1e28f923cda9436a4395a405ebda5149202f8204
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51667440"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "55047249"
 ---
 # <a name="sql-server-profiler-dialog-boxes"></a>Finestre di dialogo di SQL Server Profiler
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -55,6 +55,7 @@ Microsoft [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] è uno s
 ## <a name="trace-properties"></a>Proprietà traccia
 ### <a name="general-tab"></a>Scheda Generale
 Usare la scheda **Generale** della finestra di dialogo **Proprietà traccia** per visualizzare o specificare le proprietà di una traccia.  
+
 |Elemento|Descrizione
 |---|---
 |**Nome traccia** |Consente di specificare il nome della traccia.  
@@ -74,6 +75,7 @@ Usare la scheda **Generale** della finestra di dialogo **Proprietà traccia** pe
 
 ### <a name="events-selection-tab"></a>Scheda Selezione eventi
 Usare la scheda **Selezione eventi** della finestra di dialogo **Proprietà traccia** per visualizzare o specificare le colonne di dati e gli eventi inseriti nella traccia.  
+
 |Elemento|Descrizione
 |---|---
 |Colonna**Eventi** |È possibile specificare gli eventi inseriti nella traccia selezionando o deselezionando la casella di controllo nella colonna di evento. Le colonne**Eventi** sono organizzate in base alla categoria di evento. Le classi di evento specificate nel modello vengono selezionate automaticamente. Per altre informazioni, vedere [SQL Server Event Class Reference](../../relational-databases/event-classes/sql-server-event-class-reference.md).  
@@ -87,6 +89,7 @@ Usare la scheda **Selezione eventi** della finestra di dialogo **Proprietà trac
 ## <a name="trace-template-properties"></a>Proprietà modello di traccia 
 ### <a name="new-general-tab"></a>Nuovo (scheda Generale)
 Utilizzare la scheda **Generale** della finestra di dialogo **Proprietà modello di traccia** per creare nuovi modelli di traccia utilizzando le opzioni seguenti. Per accedere a questa finestra di dialogo, nel menu **File** di [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] scegliere **Modelli**e quindi fare clic su **Nuovo**.
+
 |Elemento|Descrizione
 |---|---
 |**Tipo server**|Consente di specificare il tipo di server per il quale verrà utilizzato il modello.  
@@ -96,6 +99,7 @@ Utilizzare la scheda **Generale** della finestra di dialogo **Proprietà modello
 
 ### <a name="edit-general-tab"></a>Modifica (scheda Generale)
  Utilizzare la scheda **Generale** della finestra di dialogo **Proprietà modello di traccia** per visualizzare o modificare i modelli di traccia esistenti utilizzando le opzioni seguenti. Per accedere a questa finestra di dialogo, scegliere [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] **dal menu** File **di**e quindi fare clic su **Modifica modello**.  
+
 |Elemento|Descrizione
 |---|---
 |**Tipo server**|Consente di specificare il tipo di server per il quale verrà utilizzato il modello.  
@@ -104,6 +108,7 @@ Utilizzare la scheda **Generale** della finestra di dialogo **Proprietà modello
 
 ### <a name="events-selection-tab"></a>Scheda Selezione eventi
 Utilizzare la scheda **Selezione eventi** della finestra di dialogo **Proprietà modello di traccia** per visualizzare, modificare o specificare classi di evento e colonne di dati da includere in un modello di traccia di [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] .  
+
 |Elemento|Descrizione
 |---|---
 |Colonna**Eventi** |Consente di specificare gli eventi che devono essere inseriti nella traccia selezionando o deselezionando la casella di controllo nella colonna di evento. Gli eventi sono organizzati in base alla categoria. Se è stato selezionato **Basa il nuovo modello sul seguente modello esistente** nella scheda **Generale** , gli eventi vengono selezionati automaticamente in base al modello indicato. Per ulteriori informazioni sulle classi degli eventi, vedere [SQL Server Event Class Reference](../../relational-databases/event-classes/sql-server-event-class-reference.md).  
@@ -113,10 +118,12 @@ Utilizzare la scheda **Selezione eventi** della finestra di dialogo **Proprietà
 |**Mostra tutte le colonne**|Consente di visualizzare tutte le colonne di dati disponibili. Se si sta creando un nuovo modello non basato su uno esistente, questa opzione è selezionata per impostazione predefinita. Deselezionare questa casella di controllo per nascondere tutte le colonne di dati non selezionate nella griglia **Selezione eventi** .  
 |**Filtri colonne**|Consente di aprire la finestra di dialogo **Modifica filtro** , che visualizza un'icona di filtro a sinistra dell'etichetta della colonna di dati. Utilizzare la finestra di dialogo **Modifica filtro** per modificare i filtri delle colonne di dati.  
 |**Organizza colonne**|Consente di modificare l'ordine delle colonne nella traccia e di raggruppare i risultati in base a una o più colonne. 
+
 ## <a name="trace-file-properties"></a>Proprietà file di traccia 
 ### <a name="general-tab"></a>Scheda Generale
 Utilizzare la scheda **Generale** della finestra di dialogo **Proprietà file di traccia** per visualizzare le proprietà di un file di traccia.  
 Per visualizzare questa finestra, aprire un file di traccia e quindi scegliere **Proprietà** dal menu **File**.  
+
 |Elemento|Descrizione
 |---|---
 |**Nome file**|Il percorso e il nome del file di traccia visualizzato.  
@@ -126,9 +133,11 @@ Per visualizzare questa finestra, aprire un file di traccia e quindi scegliere *
 |**Dimensioni file (KB)**|Dimensioni in kilobyte (KB) del file di traccia.  
 |**Data creazione**|Data e ora di creazione del file di traccia.  
 |**Ultima modifica** |Data e ora di modifica del file di traccia.  
+
 ### <a name="events-selection-tab"></a>Scheda Selezione eventi
 Utilizzare la scheda **Selezione eventi** della finestra di dialogo **Proprietà modello di traccia** per visualizzare le proprietà delle colonne della traccia o per eliminare colonne di dati dalla traccia.  
 Per visualizzare questa finestra, aprire un file di traccia Scegliere **Proprietà** dal menu **File**e quindi fare clic sulla scheda **Selezione eventi** .  
+
 |Elemento|Descrizione
 |---|---
 |Colonna**Eventi** |Consente di visualizzare gli eventi inseriti nella traccia organizzati per categoria. Inizialmente sono selezionati tutti gli eventi della traccia. È possibile selezionare gli eventi selezionando le rispettive caselle o colonne di dati. Se si seleziona la casella corrispondente all'evento, verranno selezionate tutte le colonne di dati disponibili per tale evento. Se si seleziona la colonna di dati corrispondente all'evento, quest'ultimo viene selezionato insieme a tutte le altre colonne necessarie. Se si sta visualizzando un file o una tabella di traccia, è possibile deselezionare le caselle di controllo relative agli eventi o alle colonne di dati per ridurre la quantità di dati visibili nella finestra di traccia, facilitandone in tal modo l'analisi. È inoltre possibile modificare i filtri colonna per ridurre la quantità di dati visibili nella finestra di traccia. Per ulteriori informazioni sulle classi degli eventi, vedere [SQL Server Event Class Reference](../../relational-databases/event-classes/sql-server-event-class-reference.md).  
@@ -138,10 +147,12 @@ Per visualizzare questa finestra, aprire un file di traccia Scegliere **Propriet
 |**Mostra tutte le colonne**|Consente di visualizzare tutte le colonne di dati disponibili. Per impostazione predefinita, vengono visualizzate solo le colonne di dati selezionate. Deselezionare questa casella di controllo per nascondere tutte le colonne di dati non selezionate nella griglia **Selezione eventi** .  
 |**Filtri colonne**|Apre la finestra di dialogo **Modifica filtro** che visualizza un'icona di filtro a sinistra delle etichette delle colonne di dati filtrate. Utilizzare la finestra di dialogo **Modifica filtro** per modificare i filtri delle colonne di dati.  
 |**Organizza colonne**|Dopo avere selezionato **Eventi** e le colonne di dati da inserire nella traccia, fare clic su **Organizza colonne** per forzare il riordinamento della colonna nella finestra dei risultati della traccia.  
+
 ## <a name="trace-table-properties"></a>Proprietà tabella di traccia
 ### <a name="events-selection-tab"></a>Scheda Selezione eventi
 Utilizzare la scheda **Selezione eventi** nella finestra di dialogo **Proprietà tabella di traccia** per visualizzare le proprietà degli eventi e delle colonne di dati della traccia o per rimuovere eventi e colonne.  
 Per visualizzare questa finestra, aprire una tabella di traccia mediante [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] , scegliere **Proprietà** dal menu **File**e quindi fare clic sulla scheda **Selezione eventi** .  
+
 |Elemento|Descrizione
 |---|---
 |Colonna**Eventi** |Consente di visualizzare gli eventi inseriti nella traccia organizzati per categoria. È possibile selezionare gli eventi selezionando le rispettive caselle o colonne di dati. Se si seleziona la casella corrispondente all'evento, verranno selezionate tutte le colonne di dati disponibili per tale evento. Se si seleziona la colonna di dati corrispondente all'evento, quest'ultimo viene selezionato insieme a tutte le altre colonne necessarie. Se si sta visualizzando un file o una tabella di traccia, è possibile deselezionare le caselle di controllo relative agli eventi o alle colonne di dati per ridurre la quantità di dati visibili nella finestra di traccia, facilitandone in tal modo l'analisi. È inoltre possibile modificare i filtri colonna per ridurre la quantità di dati visibili nella finestra di traccia. Per ulteriori informazioni sulle classi degli eventi, vedere [SQL Server Event Class Reference](../../relational-databases/event-classes/sql-server-event-class-reference.md).  
@@ -151,6 +162,7 @@ Per visualizzare questa finestra, aprire una tabella di traccia mediante [!INCLU
 |**Mostra tutte le colonne**|Consente di visualizzare tutte le colonne di dati disponibili. Per impostazione predefinita, vengono visualizzate solo le colonne di dati selezionate. Deselezionare questa casella di controllo per nascondere tutte le colonne di dati non selezionate nella griglia **Selezione eventi** .  
 |**Filtri colonne**|Consente di aprire la finestra di dialogo **Modifica filtro** che visualizza un'icona di filtro a sinistra dell'etichetta di colonna. È possibile utilizzare questa finestra di dialogo per modificare i filtri delle colonne di dati.  
 |**Organizza colonne** |Dopo avere selezionato **Eventi** e le colonne di dati da inserire nella traccia, fare clic su **Organizza colonne** per forzare il riordinamento della colonna nella finestra dei risultati della traccia.  
+
 ## <a name="performance-counters-limit"></a>Limite contatori prestazioni
 Utilizzare la finestra di dialogo Limite contatori prestazioni per limitare le informazioni generate da un file di log delle prestazioni del monitoraggio di sistema quando viene correlato con una traccia di [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] . La finestra di dialogo consente di selezionare i contatori da visualizzare e utilizzare per la correlazione.  
 La finestra di dialogo **Limite contatori prestazioni** viene popolata con i contatori e gli oggetti prestazioni contenuti nel file di log delle prestazioni.  
@@ -162,6 +174,7 @@ Per selezionare tutti i contatori relativi a un oggetto prestazione, selezionare
 ## <a name="toolsoptions-general-options-page"></a>Strumenti/Opzioni (pagina Opzioni generali)
 Usare la finestra di dialogo **Opzioni generali** per visualizzare o specificare le opzioni seguenti.  
 ### <a name="display-options"></a>Opzioni di visualizzazione  
+
 |Elemento|Descrizione
 |---|---
 |**Nome carattere**|Visualizza il nome del carattere utilizzato nella griglia dei risultati della traccia durante l'esecuzione delle tracce.  
@@ -169,23 +182,30 @@ Usare la finestra di dialogo **Opzioni generali** per visualizzare o specificare
 |**Scegli carattere**|Consente di aprire una finestra di dialogo per la modifica delle impostazioni del carattere.  
 |**Visualizza valori di data e ora in base alle impostazioni internazionali**|Visualizza i valori di data e ora in base alle impostazioni internazionali configurate nel computer in uso. Se questa opzione non viene selezionata, i valori di data e ora vengono visualizzati in base al formato predefinito utilizzato da Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]in cui sono inclusi i millisecondi. Si noti che l'attivazione o la disattivazione di questa casella di controllo modifica il formato di visualizzazione delle colonne relative all'ora, ad esempio **StartTime** ed **EndTime**. Tuttavia, non vengono modificati i parametri del valore **DateTime** negli eventi del linguaggio o nelle RPC (Remote Procedure Call).  
 |**Mostra i valori nella colonna Durata in microsecondi**|Visualizza i valori in microsecondi nella colonna di dati **Durata** delle tracce. Per impostazione predefinita, i valori nella colonna **Durata** vengono visualizzati in millisecondi.  
+
 ### <a name="tracing-options"></a>Opzioni di traccia  
+
 |Elemento|Descrizione
 |---|---
 |**Avvia traccia non appena viene stabilita una connessione**|La traccia viene avviata utilizzando il modello predefinito non appena viene stabilita una connessione.  
 |**Aggiorna la definizione di traccia in caso di modifica della versione del provider**|Consente di applicare a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] la definizione di traccia più recente quando il provider viene aggiornato. Questo elemento non è selezionato per impostazione predefinita. [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] viene forzato a recuperare la definizione di traccia dal server e a ricreare il file su disco, se un file esiste.  
+
 ### <a name="file-rollover-options"></a>Opzioni rollover file  
+
 |Elemento|Descrizione
 |---|---
 |**Carica tutti i file di rollover in sequenza senza chiedere conferma**|I file di rollover vengono caricati automaticamente all'apertura del file di traccia. Se durante la creazione della traccia sono stati creati più file, la selezione di questa opzione determina il caricamento automatico di tutti i file di rollover.  
 |**Chiedi conferma prima di caricare file di rollover**|[!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] chiede conferma prima di aggiungere un file di rollover quando è aperto un file di traccia.  
 |**Non caricare mai file di rollover successivi**|[!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] non esegue mai il caricamento di file di rollover consecutivi quando è aperto un file di traccia.  
+
 ### <a name="replay-options"></a>Opzioni di riproduzione  
+
 |Elemento|Descrizione
 |---|---
 |**Numero predefinito di thread di riproduzione**|Consente di specificare il numero di thread di riproduzione da utilizzare simultaneamente. Un numero elevato determina un maggior consumo di risorse durante la riproduzione, ma migliora la simultaneità della riproduzione.  
 |**Intervallo di attesa predefinito Health Monitor (sec)**|Consente di specificare l'intervallo di attesa in secondi per la riproduzione. Il valore predefinito è 3600 secondi (1 ora). Questa impostazione influisce sulla quantità di tempo durante la quale è consentita l'esecuzione di un thread prima che questo venga terminato da Health Monitor.  
 |**Intervallo di polling predefinito Health Monitor (sec)**|Consente di specificare l'intervallo di polling in secondi di Health Monitor durante la riproduzione. Il valore predefinito è 60 secondi. Questo valore consente di configurare la frequenza con cui Health Monitor esegue il polling di candidati per la terminazione.
+
 ## <a name="source-table-database-engine-tuning-advisor-select-workload-table"></a>Tabella di origine (Seleziona tabella carico di lavoro di Ottimizzazione guidata motore di database)
 Questa finestra di dialogo viene usata in Microsoft SQL Server Profiler e in Ottimizzazione guidata per selezionare tabelle.  
 - In Profiler usare la finestra di dialogo **Tabella di origine** per specificare una tabella di origine per una tabella di traccia. Si tratta di una tabella dalla quale viene caricata una traccia e il cui contenuto viene visualizzato o utilizzato per riprodurre la traccia.  
@@ -197,18 +217,22 @@ Questa finestra di dialogo viene usata in Microsoft SQL Server Profiler e in Ott
 |**Database**|Consente di specificare il database che include la tabella di traccia.  
 |**Proprietario**|Indica il proprietario della tabella di traccia. Questo campo viene popolato automaticamente con il valore **dbo**.  
 |**Tabella**|Consente di specificare il nome della tabella di traccia dalla quale leggere la traccia.  
+
 ## <a name="destination-table"></a>Tabella di destinazione
 Utilizzare la finestra di dialogo **Tabella di destinazione** per specificare la tabella in cui si desidera archiviare la traccia.  
+
 |Elemento|Descrizione
 |---|---
 |**SQL Server**|Indica l'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a cui si è attualmente connessi. Questo campo viene popolato automaticamente e non è possibile aggiornarlo. Per modificare il server fare clic su **Annulla** e connettersi all'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in cui si desidera archiviare la tabella di traccia.  
 |**Database**|Consente di specificare il database in cui si desidera archiviare la tabella di traccia.  
 |**Proprietario**|Indica il proprietario della tabella di traccia. Questo campo viene popolato automaticamente con il valore **dbo**.  
 |**Tabella**|Consente di specificare il nome della tabella in cui si desidera archiviare la traccia.  
+
 ## <a name="replay-configuration"></a>Configurazione riproduzione
 ### <a name="basic-replay-options"></a>Opzioni di base di riproduzione
 Nella finestra di dialogo **Configurazione riproduzione** usare la pagina **Opzioni di base di riproduzione** per specificare la modalità di riproduzione di un file o una tabella di traccia.  
 Per visualizzare questa finestra utilizzare [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] per aprire un file o una tabella di traccia che contiene gli eventi appropriati per la riproduzione. Per altre informazioni, vedere [Requisiti per la riproduzione](../../tools/sql-server-profiler/replay-requirements.md). Con la tabella o il file di traccia aperto, scegliere **Avvia** dal menu **Riproduci**e quindi connettersi all'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in cui riprodurre la traccia.  
+
 |Elemento|Descrizione
 |---|---
 |**Server di riproduzione**|Consente di visualizzare l'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a cui connettersi per la riproduzione.  
@@ -219,9 +243,11 @@ Per visualizzare questa finestra utilizzare [!INCLUDE[ssSqlProfiler](../../inclu
 |**Riproduci gli eventi nell'ordine in cui sono stati inseriti nella traccia**|Gli eventi vengono riprodotti in modo sequenziale. Utilizzare questa opzione per riprodurre una traccia a scopi di debug.  
 |**Riproduci gli eventi usando più thread** |Gli eventi vengono riprodotti simultaneamente. Questa opzione offre una riproduzione più veloce rispetto alla riproduzione degli eventi sequenziale, ma non permette l'utilizzo a scopi di debug. Gli eventi vengono ordinati in base ai relativi identificatori di processo di sistema (SPID).  
 |**Visualizza risultati di riproduzione**|Consente di visualizzare i risultati di riproduzione in [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]. 
+
 ### <a name="advanced-replay-options"></a>Opzioni avanzate di riproduzione
 La scheda **Opzioni avanzate di riproduzione** della finestra di dialogo **Configurazione riproduzione** consente di specificare la modalità di riproduzione di un file di traccia.  
 Per visualizzare questa finestra utilizzare [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] per aprire un file o una tabella di traccia che contiene gli eventi appropriati per la riproduzione. Per altre informazioni, vedere [Requisiti per la riproduzione](../../tools/sql-server-profiler/replay-requirements.md). Con la tabella o il file di traccia aperto, scegliere **Avvia** dal menu **Riproduci**, connettersi all'istanza di SQL Server in cui si vuole riprodurre la traccia e quindi fare clic sulla scheda **Opzioni avanzate di riproduzione** .  
+
 |Elemento|Descrizione
 |---|---
 |**Riproduci SPID di sistema**|Consente di specificare se [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] esegue la riproduzione degli SPID (System Process Identifier).  
@@ -234,9 +260,11 @@ Per visualizzare questa finestra utilizzare [!INCLUDE[ssSqlProfiler](../../inclu
 |**Intervallo di polling Health Monitor (sec)**|Consente di specificare l'intervallo di polling in secondi di Health Monitor durante la riproduzione. Il valore predefinito è 60 secondi. Questo valore consente di configurare la frequenza con cui Health Monitor esegue il polling di candidati per la terminazione.  
 |**Abilita monitoraggio processi bloccati di SQL Server**|Consente di abilitare un processo che esegue la ricerca di processi bloccati e di blocco.  
 |**Intervallo di attesa monitoraggio processi bloccati (sec)**|Consente di configurare la frequenza con cui i processi bloccati o di blocco vengono cercati tramite il monitoraggio dei processi bloccati.  
+
 ## <a name="find-dialog-box"></a>Trova - finestra di dialogo
 Usare la finestra di dialogo **Trova** per eseguire la ricerca all'interno di una traccia in base a parole o caratteri specifici. Per annullare la ricerca in corso, premere ESC.  
  Per aprire questa finestra di dialogo in [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)], scegliere **Trova** dal menu **Modifica**.  
+
 |Elemento|Descrizione
 |---|---
 |**Trova**|Immettere il testo che si desidera cercare. La ricerca individua tutte le stringhe contenenti la stringa specificata. Ad esempio, se si cerca "Completed", viene individuata la stringa "SQL:BatchCompleted." I caratteri jolly (*, ? e così via) non sono supportati.  
@@ -245,6 +273,7 @@ Usare la finestra di dialogo **Trova** per eseguire la ricerca all'interno di un
 |**Parola intera**|Consente di limitare l'ambito della ricerca alle parole intere. Deselezionare la casella di controllo **Parola intera** per cercare un insieme di caratteri all'interno di una parola.  
 |**Trova successivo**|Consente di trovare l'esempio successivo dei caratteri specificati nella casella **Trova** .  
 |**Trova precedente**|Consente di eseguire una ricerca all'indietro per trovare l'esempio precedente dei caratteri specificati nella casella **Trova** .  
+
  ## <a name="organize-columns"></a>Organizza colonne
 Utilizzare la finestra di dialogo **Organizza colonne** per selezionare le colonne di dati per il raggruppamento o l'aggregazione degli eventi visualizzati in una traccia, in modo da semplificare la visualizzazione e l'analisi di tabelle o di file di traccia di grandi dimensioni.  
 - A seguito di un'operazione di aggregazione, tutti gli eventi presenti nella traccia vengono spostati e compressi in corrispondenza del rispettivo tipo di classe di evento. A sinistra del nome della classe di evento viene visualizzato un segno più (**+**). Quando si fa clic sul segno più, la classe di evento si espande ed è possibile visualizzare tutti gli eventi del tipo in questione.  
@@ -261,6 +290,7 @@ Consente di spostare i nomi delle colonne di dati sotto **Gruppi** per raggruppa
 |**Colonne**|Elenco delle colonne di dati disponibili che possono essere spostate in **Gruppi**. Fare clic sul segno più (**+**) a sinistra di **Colonne** per espandere l'elenco.  
 |**Su**|Dopo aver selezionato una colonna di dati, fare clic su **Su** per spostare le colonne di dati all'interno di **Gruppi**. Facendo clic su **Su** , è inoltre possibile riorganizzare la visualizzazione delle colonne nella finestra di traccia.  
 |**Giù**|Dopo aver selezionato una colonna di dati, fare clic su **Giù** per spostare le colonne di dati all'esterno di **Gruppi**. Facendo clic su **Giù** , è inoltre possibile riorganizzare la visualizzazione delle colonne nella finestra di traccia.  
+
 ## <a name="edit-filter"></a>Modifica filtro
 Utilizzare la finestra di dialogo **Modifica filtro** per creare e modificare i filtri delle colonne di dati in una traccia. Fare clic sul nome di una colonna di dati nell'elenco per visualizzare nel riquadro adiacente i criteri di filtro disponibili per la colonna di dati. Immettere i criteri di filtro e fare clic su **OK** per applicarli alla colonna di dati selezionata. La presenza dell'icona del filtro a sinistra del nome della colonna di dati nell'elenco indica che la colonna dispone già di un filtro configurato.  
  >[!NOTE]
@@ -268,6 +298,7 @@ Utilizzare la finestra di dialogo **Modifica filtro** per creare e modificare i 
 
 ## <a name="select-template-name"></a>Nome modello
 Utilizzare la finestra di dialogo **Seleziona nome modello** per selezionare un modello di traccia esistente di [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] ed esportarlo in un file nel sistema operativo. È inoltre possibile utilizzare questa finestra di dialogo per selezionare o immettere un nome diverso per il salvataggio di un modello di traccia, ad esempio quando si modifica un modello di traccia esistente. Per accedere a questa finestra di dialogo durante l'esportazione di un modello, scegliere [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] **dal menu** File **di**e quindi fare clic su **Esporta modello**. Per accedere a questa finestra di dialogo durante la modifica del nome di un modello, scegliere **Modelli** dal menu **File**, quindi scegliere **Modifica modello**e fare clic su **Salva con nome**.  
+
 |Elemento|Descrizione
 |---|---
 |**Tipo server**|Selezionare il tipo di server dal quale si desidera scegliere un modello. Questa opzione è disponibile solo durante l'esportazione di un modello.  

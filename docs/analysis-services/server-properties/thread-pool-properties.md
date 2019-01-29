@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: ee8f8c4a222b2949f49c8be019b6e4f6724cfa04
-ms.sourcegitcommit: f46fd79fd32a894c8174a5cb246d9d34db75e5df
+ms.openlocfilehash: d46ff8318543d4e2a4b4dc547c9f19640d463f49
+ms.sourcegitcommit: b51edbe07a0a2fdb5f74b5874771042400baf919
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/26/2018
-ms.locfileid: "53785962"
+ms.lasthandoff: 01/28/2019
+ms.locfileid: "55087870"
 ---
 # <a name="thread-pool-properties"></a>Proprietà dei pool di thread
 [!INCLUDE[ssas-appliesto-sqlas-all-aas](../../includes/ssas-appliesto-sqlas-all-aas.md)]
@@ -173,13 +173,13 @@ ms.locfileid: "53785962"
   
  I nodi NUMA vengono ignorati. Sarà disponibile un solo pool di thread IOProcess e verrà creata un'affinità tra tutti i thread di questo pool di thread e tutti i processori logici. Per impostazione predefinita (dove PerNumaNode=-1), si tratta dell'impostazione operativa se il computer dispone di meno di 4 nodi NUMA.  
   
- ![Corrispondenza pool NUMA, processore e thread](../../analysis-services/server-properties/media/ssas-threadpool-numaex0.PNG "corrispondenza pool Numa, processore e thread")  
+ ![NUMA, processore e thread del pool di corrispondenza](../../analysis-services/server-properties/media/ssas-threadpool-numaex0.PNG "Numa, processore e thread del pool di corrispondenza")  
   
  **Impostazione PerNumaNode=1**  
   
  I pool di thread IOProcess vengono creati per ogni nodo NUMA. L'utilizzo di pool di thread distinti migliora l'accesso coordinato alle risorse locali, ad esempio alla cache locale su un nodo NUMA.  
   
- ![Corrispondenza pool NUMA, processore e thread](../../analysis-services/server-properties/media/ssas-threadpool-numaex1.PNG "corrispondenza pool Numa, processore e thread")  
+ ![NUMA, processore e thread del pool di corrispondenza](../../analysis-services/server-properties/media/ssas-threadpool-numaex1.PNG "Numa, processore e thread del pool di corrispondenza")  
   
  **Impostazione PerNumaNode=2**  
   
@@ -187,7 +187,7 @@ ms.locfileid: "53785962"
   
  Nell'esempio seguente, in un sistema con 4 nodi NUMA e 32 processori logici l'impostazione di **PerNumaNode** su 2 produrrebbe 32 pool di thread IOProcess. Per i primi 8 pool di thread verrebbe creata un'affinità tra i thread e tutti i processori logici presenti nel nodo NUMA 0, ma con il processore ideale impostato su 0, 1, 2, fino a 7. Per i successivi 8 pool di thread verrebbe creata un'affinità con tutti i processori logici presenti nel nodo NUMA 1, con il processore ideale impostato su 8, 9, 10, fino a 15, e così via.  
   
- ![Corrispondenza pool NUMA, processore e thread](../../analysis-services/server-properties/media/ssas-threadpool-numaex2.PNG "corrispondenza pool Numa, processore e thread")  
+ ![NUMA, processore e thread del pool di corrispondenza](../../analysis-services/server-properties/media/ssas-threadpool-numaex2.PNG "Numa, processore e thread del pool di corrispondenza")  
   
  A questo livello di affinità, l'utilità di pianificazione tenta sempre di usare per primo il processore logico ideale all'interno del nodo NUMA preferito. Se il processore logico non è disponibile, l'utilità di pianificazione sceglie un altro processore all'interno dello stesso nodo o, se non sono disponibili altri thread, all'interno dello stesso gruppo di processori. Per altre informazioni ed esempi, vedere [Impostazioni di configurazione di Analysis Services 2012 (blog di Wordpress)](http://go.microsoft.com/fwlink/?LinkId=330387).  
   

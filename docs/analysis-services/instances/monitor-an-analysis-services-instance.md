@@ -9,17 +9,17 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 1ac0f94b7f12cdba6237b2694114580f56dc6597
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 39cc5a22165d07aafce29e4216548c4e8d226892
+ms.sourcegitcommit: b51edbe07a0a2fdb5f74b5874771042400baf919
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52540463"
+ms.lasthandoff: 01/28/2019
+ms.locfileid: "55087630"
 ---
 # <a name="monitoring-overview"></a>Panoramica del monitoraggio
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas-all-aas.md)]
 
-Analysis Services include numerosi strumenti che consentono di monitorare ed e ottimizzare le prestazioni dei server. La scelta dello strumento dipende dal tipo di monitoraggio o di ottimizzazione da eseguire e dagli eventi specifici da monitorare.
+Analysis Services include numerosi strumenti che consentono di monitorare e ottimizzare le prestazioni dei server. La scelta dello strumento dipende dal tipo di monitoraggio o di ottimizzazione da eseguire e dagli eventi specifici da monitorare.
 
 Per altre informazioni sul monitoraggio di SQL Server Analysis Services, vedere la [Guida operativa di SQL Server 2008 R2](http://go.microsoft.com/fwlink/?LinkID=225539).  
   
