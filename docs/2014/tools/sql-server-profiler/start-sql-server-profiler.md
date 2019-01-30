@@ -24,7 +24,7 @@ ms.locfileid: "52775563"
 # <a name="start-sql-server-profiler"></a>Avviare SQL Server Profiler
   È possibile avviare [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] in diversi modi per supportare la raccolta dell'output di traccia in numerosi scenari. [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] può essere avviato dal menu **Start**, dal menu **Strumenti** in Ottimizzazione guidata [!INCLUDE[ssDE](../../includes/ssde-md.md)] e da diverse posizioni all'interno di [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
   
- Quando si avvia [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] per la prima volta e si sceglie **Nuova traccia** dal menu **File **, l'applicazione visualizza la finestra di dialogo** Connetti al server[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in cui è possibile specificare l'istanza di**  alla quale si vuole connettersi.  
+ Quando si avvia [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] per la prima volta e si sceglie **Nuova traccia** dal menu **File**, l'applicazione visualizza la finestra di dialogo **Connetti al server**[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in cui è possibile specificare l'istanza di alla quale si vuole connettersi.  
   
 ### <a name="to-start-sql-server-profiler-from-the-start-menu"></a>Per avviare SQL Server Profiler dal menu Start  
   
