@@ -21,12 +21,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 8827614f494702d4e738d336e96cd96b92f949d1
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 3d52fb28dd1093b81d8a46ec6a8d2dd3cce49807
+ms.sourcegitcommit: dc3543e81e32451568133e9b1b560f7ee76d7fb5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52514311"
+ms.lasthandoff: 01/31/2019
+ms.locfileid: "55428658"
 ---
 # <a name="sysdmdbindexoperationalstats-transact-sql"></a>sys.dm_db_index_operational_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -60,14 +60,14 @@ sys.dm_db_index_operational_stats (
     
  La funzione predefinita [DB_ID](../../t-sql/functions/db-id-transact-sql.md) può essere specificato.    
     
- *object_id* | NULL | 0 | IMPOSTAZIONE PREDEFINITA    
+ *object_id* | NULL | 0 | DEFAULT    
  ID oggetto della tabella o vista in cui si trova l'indice. *object_id* è di tipo **int**.    
     
  Gli input validi sono il numero di ID di una tabella o vista, NULL, 0 o DEFAULT. Il valore predefinito è 0. NULL, 0 e DEFAULT sono valori equivalenti in questo contesto.    
     
  Specificare NULL per restituire le informazioni memorizzate nella cache per tutte le tabelle e le viste nel database specificato. Se si specifica NULL per *object_id*, è necessario specificare NULL anche per *index_id* e *partition_number*.    
     
- *index_id* | 0 | NULL | -1 | IMPOSTAZIONE PREDEFINITA    
+ *index_id* | 0 | NULL | -1 | DEFAULT    
  ID dell'indice. *index_id* viene **int**. Gli input validi sono il numero di ID di un indice, 0 se *object_id* è un heap, NULL, -1 o DEFAULT. Il valore predefinito è -1. NULL, -1 e DEFAULT sono valori equivalenti in questo contesto.    
     
  Specificare NULL per restituire le informazioni memorizzate nella cache per tutti gli indici per una vista o tabella di base. Se si specifica NULL per *index_id*, è necessario specificare NULL anche per *partition_number*.    
@@ -85,9 +85,9 @@ sys.dm_db_index_operational_stats (
 |-----------------|---------------|-----------------|    
 |**database_id**|**smallint**|ID del database.|    
 |**object_id**|**int**|ID della tabella o vista.|    
-|**index_id**|**int**|ID dell'indice o dell'heap.<br /><br /> 0 = heap|    
-|**hobt_id**|**bigint**|**Si applica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (da[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] alla [versione corrente](https://go.microsoft.com/fwlink/p/?LinkId=299658)), [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].<br /><br /> ID dell'heap di dati o set di righe dell'albero B che tiene traccia di dati interne per un indice columnstore.<br /><br /> NULL - non è un set di righe columnstore interno.<br /><br /> Per altre informazioni, vedere [sys.internal_partitions &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-internal-partitions-transact-sql.md)|    
-|**partition_number**|**int**|Numero di partizione in base 1 all'interno dell'indice o heap.|    
+|**index_id**|**int**|ID dell'indice o dell'heap.<br /><br /> 0 = heap| 
+|**partition_number**|**int**|Numero di partizione in base 1 all'interno dell'indice o heap.| 
+|**hobt_id**|**bigint**|**Si applica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (da[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] alla [versione corrente](https://go.microsoft.com/fwlink/p/?LinkId=299658)), [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].<br /><br /> ID dell'heap di dati o set di righe dell'albero B che tiene traccia di dati interne per un indice columnstore.<br /><br /> NULL - non è un set di righe columnstore interno.<br /><br /> Per altre informazioni, vedere [sys.internal_partitions &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-internal-partitions-transact-sql.md)|       
 |**leaf_insert_count**|**bigint**|Conteggio cumulativo degli inserimenti al livello foglia.|    
 |**leaf_delete_count**|**bigint**|Conteggio cumulativo delle eliminazioni al livello foglia. leaf_delete_count viene incrementato solo per i record eliminati non contrassegnati come fantasma prima di tutto. Per i record eliminati vengono in primo luogo, fantasma **leaf_ghost_count** viene incrementato invece.|    
 |**leaf_update_count**|**bigint**|Conteggio cumulativo degli aggiornamenti al livello foglia.|    

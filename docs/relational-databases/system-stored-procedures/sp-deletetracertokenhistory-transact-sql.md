@@ -16,12 +16,12 @@ ms.assetid: 9ae1be14-0d2f-40b1-9d6e-22d79726abf4
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 70853b86d60eab82feb1fe12b03fabbd61dafb6e
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: f8f1a91210cbd263a9225cef54bcf27a81bf2bf4
+ms.sourcegitcommit: dc3543e81e32451568133e9b1b560f7ee76d7fb5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53211920"
+ms.lasthandoff: 01/31/2019
+ms.locfileid: "55428598"
 ---
 # <a name="spdeletetracertokenhistory-transact-sql"></a>sp_deletetracertokenhistory (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -42,24 +42,27 @@ sp_deletetracertokenhistory [ @publication = ] 'publication'
 ```  
   
 ## <a name="arguments"></a>Argomenti  
- [  **@publication=** ] **'***pubblicazione***'**  
+ [ **@publication=** ] **'***publication***'**  
  Nome della pubblicazione in cui è stato inserito il token di traccia. *pubblicazione* viene **sysname**, non prevede alcun valore predefinito.  
   
- [  **@tracer_id=** ] *tracer_id*  
+ [ **@tracer_id=** ] *tracer_id*  
  ID del token di traccia da eliminare. *tracer_id* viene **int**, con un valore predefinito NULL. Se **null**, quindi vengono eliminati tutti i token di traccia appartenenti alla pubblicazione.  
   
- [  **@cutoff_date=** ] *cutoff_date*  
+ [ **@cutoff_date=** ] *cutoff_date*  
  Specifica un valore di cambio data in modo che tutti i token di traccia inseriti nella pubblicazione prima di tale data vengano rimossi. *cutoff_date* è di tipo datetime, un valore predefinito NULL.  
   
- [  **@publisher=** ] **'***publisher***'**  
+ [ **@publisher=** ] **'***publisher***'**  
  Nome del server di pubblicazione. *server di pubblicazione* viene **sysname**, con un valore predefinito è NULL.  
   
 > [!NOTE]
->  Questo parametro deve essere specificato solo per non - [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] i server di pubblicazione.  
+>  Questo parametro deve essere specificato solo per non - [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] i server di pubblicazione o quando si esegue la stored procedure dal database di distribuzione.  
   
- [  **@publisher_db=** ] **'***publisher_db***'**  
+ [ **@publisher_db=** ] **'***publisher_db***'**  
  Nome del database di pubblicazione. *publisher_db* viene **sysname**, con un valore predefinito NULL. Questo parametro viene ignorato se la stored procedure viene eseguita nel server di pubblicazione.  
   
+> [!NOTE]
+>  Questo parametro deve essere specificato quando si esegue la stored procedure dal database di distribuzione.  
+
 ## <a name="return-code-values"></a>Valori restituiti  
  **0** (esito positivo) o **1** (errore)  
   
