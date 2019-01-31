@@ -10,12 +10,12 @@ ms.assetid: e8f1b16b-ea40-4e12-886c-967ebda4e6e4
 author: julieMSFT
 ms.author: jrasnick
 manager: craigg
-ms.openlocfilehash: 59bca7e526dff250873cd7de2912b1b69f775bc9
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: bacf9a8a08008b23309d2d8c08b9310c491abf2a
+ms.sourcegitcommit: b51edbe07a0a2fdb5f74b5874771042400baf919
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53369303"
+ms.lasthandoff: 01/28/2019
+ms.locfileid: "55087680"
 ---
 # <a name="monitor-sql-server-components"></a>Monitorare i componenti di SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -131,7 +131,7 @@ Di seguito viene descritto il processo di acquisizione dei dati di evento e di u
   
      Ai fini dell'analisi, i dati evento acquisiti e salvati vengono caricati nell'applicazione utilizzata per l'acquisizione. 
      
-     È, ad esempio, possibile caricare nuovamente in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] una traccia Eventi estesi per attività di visualizzazione e analisi. Per altre informazioni, vedere [Visualizzazione avanzata dei dati di destinazione da eventi estesi in SQL Server](../../relational-databases/extended-events/advanced-viewing-of-target-data-from-extended-events-in-sql-server.md).
+     È ad esempio possibile caricare nuovamente in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] una traccia Eventi estesi acquisita per attività di visualizzazione e analisi. Per altre informazioni, vedere [Visualizzazione avanzata dei dati di destinazione da eventi estesi in SQL Server](../../relational-databases/extended-events/advanced-viewing-of-target-data-from-extended-events-in-sql-server.md).
 
      È possibile caricare nuovamente in [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] dati Traccia SQL per attività di visualizzazione e analisi. Per altre informazioni, vedere [Visualizzare e analizzare le tracce con SQL Server Profiler](../../tools/sql-server-profiler/view-and-analyze-traces-with-sql-server-profiler.md).  
   

@@ -11,12 +11,12 @@ ms.assetid: 3dc76cc1-3b4c-4719-8296-f69ec1b476f9
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: c854d2e332d38443646de560a906826c419705b7
-ms.sourcegitcommit: 96032813f6bf1cba680b5e46d82ae1f0f2da3d11
+ms.openlocfilehash: 8f7de9a4f6e99c60b0bbe560d57f6e7adf397c2e
+ms.sourcegitcommit: b51edbe07a0a2fdb5f74b5874771042400baf919
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/15/2019
-ms.locfileid: "54300548"
+ms.lasthandoff: 01/28/2019
+ms.locfileid: "55087910"
 ---
 # <a name="sql-server-management-studio---changelog-ssms"></a>SQL Server Management Studio - Changelog (SSMS)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -308,13 +308,13 @@ Se manca l'etichetta *Anteprima 5* o *Anteprima 6*, significa che la modifica è
   - Correzione di un problema per cui non è possibile collegare un database quando il nome file fisico del file con estensione mdf non corrisponde al nome file originale
   - Correzione di un problema per cui SSMS non trova un piano di ripristino valido o ne trova uno non ottimale. Per informazioni dettagliate, vedere https://feedback.azure.com/forums/908035-sql-server/suggestions/32897752.
   - Correzione di un arresto anomalo di SSMS durante il tentativo di ripristino di un backup di URL. Si tratta di una regressione introdotta nelle anteprime precedenti.
-  - [Novità in Anteprima 5] Risolto un problema per cui nella procedura guidata "Collega database" non vengono visualizzati file secondari rinominati. Ora tali file vengono visualizzati con l'aggiunta di un commento, ad esempio "Non trovato". Per informazioni dettagliate, vedere https://feedback.azure.com/forums/908035/suggestions/32897434
+  - [Novità in Anteprima 5] Risolto un problema per cui nella procedura guidata "Collega database" non vengono visualizzati file secondari rinominati. Tali file vengono ora visualizzati con l'aggiunta di un commento, ad esempio "Non trovato". Per informazioni dettagliate, vedere https://feedback.azure.com/forums/908035/suggestions/32897434
 
 - **Monitoraggio attività processi**
   - Correzione di un arresto anomalo quando si usa Monitoraggio attività processi (con filtri)
 
 - **Supporto di istanza gestita**
-  - Miglioramento del supporto di istanze gestite: disabilitazione delle opzioni non supportate nell'interfaccia utente e correzione di un problema dell'opzione Visualizza log di controllo per la gestione della destinazione di controllo URL.
+  - Miglioramento del supporto di istanze gestite: disabilitazione delle opzioni non supportate nell'interfaccia utente e risoluzione di un problema di Visualizza log di controllo per la gestione della destinazione di controllo URL.
   - La procedura guidata "Genera e pubblica script" include clausole CREATE DATABASE non supportate
   - Statistiche sulle query dinamiche è stata disabilitata per le istanze di CL
   - Proprietà database -> File genera codice script errato per ALTER DB ADD FILE

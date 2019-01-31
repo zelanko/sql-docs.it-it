@@ -7,12 +7,12 @@ ms.technology: report-server-sharepoint
 ms.topic: conceptual
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: e9b2d920b55e412f3b9fa119db0a7cf893659fca
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 8c5e406cdab8f4950a897cc66556e54a1faa53f1
+ms.sourcegitcommit: a94cf79160e22fa8b4bafe3e6e50bb54e20b1bca
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52502823"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54805727"
 ---
 # <a name="deploy-the-sql-server-reporting-services-report-viewer-web-part-on-a-sharepoint-site"></a>Distribuire la web part Visualizzatore report di SQL Server Reporting Services in un sito di SharePoint
 
@@ -20,7 +20,7 @@ ms.locfileid: "52502823"
 
 La web part Visualizzatore report è una web part personalizzata che può essere usata per visualizzare i report di SQL Server Reporting Services (modalità nativa) nel sito di SharePoint. La web part può essere usata per visualizzare, stampare ed esportare report in un server di report. La web part Visualizzatore report è associata ai file di definizione dei report (con estensione rdl) elaborati da un server di report di SQL Server Reporting Services o da un server di report di Microsoft Power BI. Questa web part Visualizzatore report non può essere usata con i report di Power BI ospitati nel server di report di Microsoft Power BI.
 
-Usare le istruzioni seguenti per distribuire manualmente il pacchetto di soluzioni che consente di aggiungere la web part Visualizzatore report a un ambiente SharePoint Server 2013 o SharePoint Server 2016. La distribuzione della soluzione è un passaggio obbligatorio per la configurazione della web part.
+Usare le istruzioni seguenti per distribuire manualmente il pacchetto di soluzioni che consente di aggiungere la web part Visualizzatore report a un ambiente SharePoint Server 2013, SharePoint Server 2016 o SharePoint Server 2019. La distribuzione della soluzione è un passaggio obbligatorio per la configurazione della web part.
 
 **La web part Visualizzatore report è un pacchetto di soluzione autonomo e non è associato alla modalità integrata SharePoint per SQL Server Reporting Services.**
 
@@ -32,6 +32,7 @@ Usare le istruzioni seguenti per distribuire manualmente il pacchetto di soluzio
 >
 
 **Versioni supportate di SharePoint Server:**
+* SharePoint Server 2019
 * SharePoint Server 2016
 * SharePoint Server 2013
 
@@ -67,7 +68,7 @@ Questa sezione descrive come distribuire il pacchetto della soluzione alla farm 
     Install-SPSolution -Identity ReportViewerWebPart.wsp -CompatibilityLevel "14,15" -GACDeployment -WebApplication {URL to web application}
     ```
 
-    **SharePoint 2016**
+    **SharePoint Server 2016 e 2019**
 
     ```
     Install-SPSolution -Identity ReportViewerWebPart.wsp -GACDeployment -WebApplication {URL to web application}

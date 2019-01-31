@@ -14,12 +14,12 @@ author: craigg-msft
 ms.author: craigg
 manager: jhubbard
 monikerRange: = sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: f7252b672eb29206bbd77cc92cdb3de68f3d6c91
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: c243af9bdc0963ba83e94f8e35d90b68c5874a2c
+ms.sourcegitcommit: 1e28f923cda9436a4395a405ebda5149202f8204
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52524326"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "55044378"
 ---
 # <a name="sql-server-2016-release-notes"></a>Note sulla versione di SQL Server 2016
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -39,6 +39,7 @@ ms.locfileid: "52524326"
 L'installazione di SQL Server 2016 SP2 può richiedere il riavvio dopo l'installazione. Come procedura consigliata, è opportuno pianificare ed eseguire un riavvio dopo l'installazione di SQL Server 2016 SP2.
 
 Miglioramenti relativi a prestazioni e scalabilità inclusi in SQL Server 2016 SP2.
+
 |Funzionalità|Descrizione|Ulteriori informazioni|
 |   --- |   --- |   --- |
 |Procedura di pulizia del database di distribuzione migliorata |   Una tabella del database di distribuzione di dimensioni eccessive è la causa di una situazione di blocco e di deadlock. Grazie a una procedura di pulizia migliorata è possibile eliminare scenari di blocco e di deadlock di questo genere. |   [KB4040276](https://support.microsoft.com/help/4040276/fix-indirect-checkpoints-on-the-tempdb-database-cause-non-yielding)  |
@@ -53,6 +54,7 @@ Miglioramenti relativi a prestazioni e scalabilità inclusi in SQL Server 2016 S
 |Aggiornamento delle statistiche automatico migliorato per le statistiche incrementali |    In alcuni scenari, quando si è verificato un certo numero di modifiche ai dati tra più partizioni in una tabella in modo tale che il contatore di modifiche totali per le statistiche incrementate supera la soglia di aggiornamenti automatici, ma nessuna delle singole partizioni supera la soglia di aggiornamenti automatici, l'aggiornamento delle statistiche potrebbe venire rimandato finché nella tabella non si verifica un numero molto più elevato di modifiche. Questo comportamento è stato corretto con il flag di traccia 11024.   |       |
 
 Miglioramenti relativi a supporto e diagnostica in SQL Server 2016 SP2.
+
 |Funzionalità |Descrizione   |Ulteriori informazioni   |
 |   --- |   --- |   --- |
 |Supporto DTC completo per i database in un gruppo di disponibilità    |   Le transazioni tra database per i database che fanno parte di un gruppo di disponibilità non sono attualmente supportate per SQL Server 2016. Con SQL Server 2016 SP2, viene introdotto il supporto completo per le transazioni distribuite con i database di un gruppo di disponibilità.   |       |
@@ -110,12 +112,12 @@ La tabella seguente contiene un riepilogo dei principali miglioramenti disponibi
 |CREATE o ALTER|Consentono la distribuzione di oggetti, ad esempio stored procedure, trigger, funzioni definite dall'utente e visualizzazioni.|[Blog sul motore di database di SQL Server](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2016/11/17/create-or-alter-another-great-language-enhancement-in-sql-server-2016-sp1/)|
 |Supporto DROP TABLE per la replica|Supporto DDL DROP TABLE per la replica per consentire l'eliminazione degli articoli relativi alla replica.|[KB 3170123](https://support.microsoft.com/help/3170123/supports-drop-table-ddl-for-articles-that-are-included-in-transactiona)|
 |Firma del driver RsFx FileStream|Il driver RsFx FileStream viene firmato e certificato usando il dashboard del centro per sviluppatori di hardware Windows (portale per sviluppatori) che consente di installare il driver RsFx FileStream di SQL Server 2016 SP1 in Windows Server 2016 o Windows 10 senza alcun problema.|[La migrazione dei carichi di lavoro SAP a SQL Server è 2,5 volte più veloce](https://blogs.msdn.microsoft.com/sql_server_team/migrating-sap-workloads-to-sql-server-just-got-2-5x-faster/)|
-|Privilegi LPIM per l'account del servizio SQL, identificazione a livello di codice|Consentono agli amministratori di database di verificare a livello di programmazione se il privilegio Blocco di pagine in memoria (LPIM) è attivo al momento dell'avvio di servizio.|[Scelta degli sviluppatori: identificare a livello di codice i privilegi LPIM e IFI in SQL Server](https://blogs.msdn.microsoft.com/sql_server_team/developers-choice-programmatically-identify-lpim-and-ifi-privileges-in-sql-server)|
+|Privilegi LPIM per l'account del servizio SQL, identificazione a livello di codice|Consentono agli amministratori di database di verificare a livello di programmazione se il privilegio Blocco di pagine in memoria (LPIM) è attivo al momento dell'avvio di servizio.|[Developers Choice: identificare a livello di codice i privilegi LPIM e IFI in SQL Server](https://blogs.msdn.microsoft.com/sql_server_team/developers-choice-programmatically-identify-lpim-and-ifi-privileges-in-sql-server)|
 |Pulizia manuale rilevamento modifiche|Una nuova stored procedure elimina su richiesta la tabella interna del rilevamento delle modifiche.| [KB 3173157](https://support.microsoft.com/help/3173157/adds-a-stored-procedure-for-the-manual-cleanup-of-the-change-tracking)|
 |Modifiche dell'operatore parallelo INSERT...SELECT per le tabelle temporanee locali|Nuovo operatore INSERT parallelo nelle operazioni INSERT..SELECT.|[Team di consulenza clienti di SQL Server](https://blogs.msdn.microsoft.com/sqlcat/2016/07/21/real-world-parallel-insert-what-else-you-need-to-know/)|
 |Showplan XML|Diagnostica ampliata che include avvisi di concessione e memoria massima abilitata per una query, flag di traccia abilitati e altre informazioni di diagnostica. | [KB 3190761](https://support.microsoft.com/help/3190761/update-to-improve-diagnostics-by-expose-data-type-of-the-parameters-fo)|
 |Storage Class Memory|Ottimizzare l'elaborazione delle transazioni usando Storage Class Memory in Windows Server 2016, che consente di accelerare i tempi di commit delle transazioni per ordini di grandezza.|[Blog sul motore di database di SQL Server](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2016/12/02/transaction-commit-latency-acceleration-using-storage-class-memory-in-windows-server-2016sql-server-2016-sp1/)|
-|USE HINT|Usare l'opzione di query `OPTION(USE HINT('<option>'))` per modificare il comportamento di Query Optimizer usando hint supportati per il livello di query. A differenza di QUERYTRACEON, l'opzione USE HINT non richiede privilegi sysadmin.|[Scelta degli sviluppatori: hint USE HINT per la query](https://blogs.msdn.microsoft.com/sql_server_team/developers-choice-use-hint-query-hints/)|
+|USE HINT|Usare l'opzione di query `OPTION(USE HINT('<option>'))` per modificare il comportamento di Query Optimizer usando hint supportati per il livello di query. A differenza di QUERYTRACEON, l'opzione USE HINT non richiede privilegi sysadmin.|[Developers Choice: Hint per le query USE HINT](https://blogs.msdn.microsoft.com/sql_server_team/developers-choice-use-hint-query-hints/)|
 |Aggiunte di XEvent|Nuove funzionalità di diagnostica di XEvent e Perfmon migliorano la risoluzione dei problemi di latenza.|[Eventi estesi](https://docs.microsoft.com/sql/relational-databases/extended-events/extended-events)|
 
 Inoltre, tenere presenti le correzioni seguenti:
@@ -143,7 +145,7 @@ L'installazione di SQL Server 2016 SP1 può richiedere il riavvio dopo l'install
 ### ![repl_icon_warn](../database-engine/availability-groups/windows/media/repl-icon-warn.gif) <a name="bkmk_ga_instalpatch"></a> Install Patch Requirement (GA) 
 **Problema e impatto per i clienti:** Microsoft ha identificato un problema con i file binari di Microsoft VC++ 2013 Runtime che vengono installati come prerequisito da SQL Server 2016. È disponibile un aggiornamento per risolvere questo problema. Se questo aggiornamento dei file binari di VC++ Runtime non viene installato, potrebbero verificarsi problemi di stabilità di SQL Server 2016 in determinati scenari. Prima di installare SQL Server 2016, verificare se il computer richiede la patch descritta in [KB 3164398](https://support.microsoft.com/kb/3164398). La patch è inclusa anche nell'[aggiornamento cumulativo 1 (CU1) per SQL Server 2016 RTM](https://www.microsoft.com/download/details.aspx?id=53338). 
 
-**Risoluzione:** usare una delle soluzioni seguenti:
+**Soluzione:** Usare una delle soluzioni seguenti:
 
 - Installare l'aggiornamento per Visual C++ 2013 e Visual C++ Redistributable Package ( [KB 3138367](https://support.microsoft.com/kb/3138367)). La soluzione nella KB è la soluzione consigliata. È possibile installarlo prima o dopo l'installazione di SQL Server 2016. 
 
@@ -163,7 +165,7 @@ L'installazione di SQL Server 2016 SP1 può richiedere il riavvio dopo l'install
 
     - **Microsoft Update:** l'aggiornamento è disponibile tramite Microsoft Update come aggiornamento critico per SQL Server 2016 non correlato alla sicurezza. Quando si esegue l'installazione tramite Microsoft Update, SQL Server 2016 richiede quindi il riavvio del server. 
 
-    - **Area download:** infine, l'aggiornamento è disponibile nell'Area download Microsoft. È possibile scaricare il software per l'aggiornamento e installarlo nei server in cui è presente SQL Server 2016. 
+    - **Area download:** l'aggiornamento è infine disponibile nell'Area download Microsoft. È possibile scaricare il software per l'aggiornamento e installarlo nei server in cui è presente SQL Server 2016. 
 
 
 ### <a name="bkmk_ga_stretch"></a>Stretch Database
@@ -176,17 +178,17 @@ L'installazione di SQL Server 2016 SP1 può richiedere il riavvio dopo l'install
 
 #### <a name="problem-with-an-index-that-uses-the-include-keyword"></a>Problema relativo a un indice che usa la parola chiave INCLUDE
 
-**Problema e impatto per i clienti:** se si cerca di abilitare Stretch Database in una tabella che include un indice che usa la parola chiave INCLUDE per includere altre colonne nell'indice, l'operazione non riesce e viene visualizzato un errore.
+**Problema e impatto per i clienti:** se si tenta di abilitare Stretch Database in una tabella con un indice che usa la parola chiave INCLUDE per includere altre colonne nell'indice, l'operazione non riesce e viene visualizzato un errore.
 
-**Soluzione alternativa:** eliminare l'indice che include la parola chiave INCLUDE, abilitare Stretch Database nella tabella, quindi ricreare l'indice. In questo caso, assicurarsi di seguire i criteri e le procedure di manutenzione dell'organizzazione per eliminare o ridurre al minimo l'impatto per gli utenti della tabella interessata.
+**Soluzione alternativa:** eliminare l'indice che include la parola chiave INCLUDE, abilitare Stretch Database nella tabella e quindi ricreare l'indice. In questo caso, assicurarsi di seguire i criteri e le procedure di manutenzione dell'organizzazione per eliminare o ridurre al minimo l'impatto per gli utenti della tabella interessata.
 
 ### <a name="bkmk_ga_query_store"></a>Query Store
 
 #### <a name="problem-with-automatic-data-cleanup-on-editions-other-than-enterprise-and-developer"></a>Problema relativo alla pulizia automatica dei dati nelle edizioni diverse da Enterprise e Developer
 
- **Problema e impatto per i clienti:** la pulizia automatica dei dati ha esito negativo nelle edizioni diverse da Enterprise e Developer. Di conseguenza, se i dati non vengono eliminati manualmente, lo spazio usato da Query Store aumenterà nel tempo fino a quando non viene raggiunto il limite configurato. Se non viene risolto, questo problema determinerà anche l'esaurimento dello spazio su disco allocato per i log degli errori, dato che a ogni tentativo di pulizia viene generato un file di dump. Il periodo di attivazione della pulizia dipende dalla frequenza del carico di lavoro, ma non supera i 15 minuti.
+ **Problema e impatto per i clienti:** la pulizia automatica dei dati non riesce nelle edizioni diverse da Enterprise e Developer. Di conseguenza, se i dati non vengono eliminati manualmente, lo spazio usato da Query Store aumenterà nel tempo fino a quando non viene raggiunto il limite configurato. Se non viene risolto, questo problema determinerà anche l'esaurimento dello spazio su disco allocato per i log degli errori, dato che a ogni tentativo di pulizia viene generato un file di dump. Il periodo di attivazione della pulizia dipende dalla frequenza del carico di lavoro, ma non supera i 15 minuti.
 
- **Soluzione alternativa:** se si prevede di usare l'archivio query in edizioni diverse da Enterprise e Developer, è necessario disattivare i criteri di pulizia in modo esplicito. Questa operazione si può eseguire da SQL Server Management Studio (pagina delle proprietà del database) oppure tramite script Transact-SQL:
+ **Soluzione alternativa:** se si prevede di usare Query Store in edizioni diverse da Enterprise e Developer, è necessario disattivare i criteri di pulizia in modo esplicito. Questa operazione si può eseguire da SQL Server Management Studio (pagina delle proprietà del database) oppure tramite script Transact-SQL:
 
 ```ALTER DATABASE <database name> SET QUERY_STORE (OPERATION_MODE = READ_WRITE, CLEANUP_POLICY = (STALE_QUERY_THRESHOLD_DAYS = 0), SIZE_BASED_CLEANUP_MODE = OFF)```
 
@@ -216,7 +218,7 @@ Inoltre, eseguire periodicamente le stored procedure dell'archivio query per pul
 
  **Guida sensibile al contesto:** in base alla progettazione, quando si preme F1 in [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] viene visualizzata nel browser la versione online degli articoli della Guida sensibile al contesto. Il problema è costituito dalla visualizzazione della Guida basata su browser anche se è stata installata e configurata la Guida locale. 
 
-**Aggiornamento**: in SQL Server Management Studio e Visual Studio l'applicazione Help Viewer potrebbe bloccarsi durante l'aggiunta della documentazione. Per risolvere questo problema, eseguire la procedura seguente. Per altre informazioni su questo problema, vedere [Il visualizzatore della Guida di Visual Studio si blocca](https://msdn.microsoft.com/library/mt654096.aspx).    
+**Aggiornamento del contenuto:** In SQL Server Management Studio e Visual Studio l'applicazione Visualizzatore della Guida potrebbe bloccarsi durante l'aggiunta della documentazione. Per risolvere questo problema, eseguire la procedura seguente. Per altre informazioni su questo problema, vedere [Il visualizzatore della Guida di Visual Studio si blocca](https://msdn.microsoft.com/library/mt654096.aspx).    
     
 * Aprire il file %LOCALAPPDATA%\Microsoft\HelpViewer2.2\HlpViewer_SSMS16_en-US.settings | HlpViewer_VisualStudio14_en-US.settings nel Blocco note e impostare una data futura nel codice seguente.
 

@@ -1,7 +1,7 @@
 ---
 title: 'Lezione 6: Usare parametri con il modello di distribuzione del progetto in SSIS | Microsoft Docs'
 ms.custom: ''
-ms.date: 03/01/2017
+ms.date: 01/11/2019
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
@@ -11,36 +11,37 @@ ms.assetid: 9216f18c-1762-4f2d-8c22-bd0ab7107555
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 51e6bc7f3bb1a1326245a4e7cfee67402d816a8e
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: dba1354e7bbd61db29330503aa28fdfe0cae8860
+ms.sourcegitcommit: 5ca813d045e339ef9bebe0991164a5d39c8c742b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51638109"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54880404"
 ---
-# <a name="lesson-6-using-parameters-with-the-project-deployment-model-in-ssis"></a>Lezione 6: Usare parametri con il modello di distribuzione del progetto in SSIS
-In SQL Server 2012 è disponibile un nuovo modello di distribuzione in cui è possibile distribuire i progetti nel server Integration Services. Il server Integration Services consente di gestire ed eseguire pacchetti e di configurare i valori di runtime per i pacchetti.  
+# <a name="lesson-6-use-parameters-with-the-project-deployment-model-in-ssis"></a>Lezione 6: Usare parametri con il modello di distribuzione del progetto in SSIS
+
+SQL Server 2012 ha introdotto un nuovo modello di distribuzione in cui è possibile distribuire i progetti nel server Integration Services. Il server Integration Services consente di gestire ed eseguire pacchetti e di configurare i valori di runtime per i pacchetti.  
   
-In questa lezione verrà modificato il pacchetto creato nella [Lezione 5: Aggiungere configurazioni di pacchetto SSIS per il modello di distribuzione dei pacchetti](../integration-services/lesson-5-add-ssis-package-configurations-for-the-package-deployment-model.md) per usare il modello di distribuzione dei progetti. Sostituire il valore di configurazione con un parametro per specificare la posizione dei dati di esempio. È inoltre possibile copiare il pacchetto della lezione 5 completato incluso nell'esercitazione.  
+In questa lezione si modifica il pacchetto creato nella [Lezione 5: Aggiungere configurazioni del pacchetto SSIS per il modello di distribuzione del pacchetto](../integration-services/lesson-5-add-ssis-package-configurations-for-the-package-deployment-model.md) per usare il modello di distribuzione del progetto. Sostituire il valore di configurazione con un parametro per specificare la posizione dei dati di esempio. È inoltre possibile copiare il pacchetto della lezione 5 completato incluso nell'esercitazione.  
   
-Mediante la configurazione guidata progetti di Integration Services convertire il progetto nel modello di distribuzione del progetto e utilizzare un parametro anziché un valore di configurazione per impostare la proprietà Directory. In questa lezione vengono illustrati solo alcuni dei passaggi per convertire i pacchetti esistenti SSIS nel nuovo modello di distribuzione del progetto.  
+La Conversione guidata progetto di Integration Services consente di convertire il progetto nel modello di distribuzione del progetto. Questo modello usa un parametro anziché un valore di configurazione per impostare la proprietà Directory. In questa lezione vengono illustrati solo alcuni dei passaggi per convertire i pacchetti esistenti SSIS nel nuovo modello di distribuzione del progetto.  
   
-Quando il pacchetto viene di nuovo eseguito, il servizio Integration Services usa il parametro per popolare il valore della variabile e la variabile a sua volta aggiorna la proprietà Directory. Di conseguenza, tramite il pacchetto viene eseguita un'iterazione della nuova cartella dei dati specificata dal valore del parametro anziché della cartella impostata nel file di configurazione del pacchetto.  
+Quando si esegue di nuovo il pacchetto, il server [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] usa il parametro per popolare il valore della variabile. La variabile a sua volta aggiorna la proprietà Directory. Il pacchetto esegue l'iterazione nei file della cartella di dati specificata dal nuovo parametro.  
   
-> [!IMPORTANT]  
-> Per eseguire questa esercitazione, è necessario il database di esempio **AdventureWorksDW2012** . Per altre informazioni sull'installazione e sulla distribuzione di **AdventureWorksDW2012**, vedere [Considerazioni per l'installazione di esempi e di database di esempio di SQL Server](https://technet.microsoft.com/library/ms161556%28v=sql.105%29).  
-  
+> [!NOTE]
+> Se non è ancora stato fatto, vedere [Lezione 1: Prerequisiti](../integration-services/lesson-1-create-a-project-and-basic-package-with-ssis.md#prerequisites).
+    
 ## <a name="lesson-tasks"></a>Argomenti della lezione  
 In questa lezione sono incluse le attività seguenti:  
   
-1.  [Passaggio 1: Copia del pacchetto della lezione 5](../integration-services/lesson-6-1-copying-the-lesson-5-package.md)  
+1.  [Passaggio 1: Copiare il pacchetto della lezione 5](../integration-services/lesson-6-1-copying-the-lesson-5-package.md)  
   
-2.  [Passaggio 2: Conversione del progetto nel modello di distribuzione del progetto](../integration-services/lesson-6-2-converting-the-project-to-the-project-deployment-model.md)  
+2.  [Passaggio 2: Convertire il progetto nel modello di distribuzione del progetto](../integration-services/lesson-6-2-converting-the-project-to-the-project-deployment-model.md)  
   
-3.  [Passaggio 3: Test del pacchetto della lezione 6](../integration-services/lesson-6-3-testing-the-lesson-6-package.md)  
+3.  [Passaggio 3: Testare il pacchetto della lezione 6](../integration-services/lesson-6-3-testing-the-lesson-6-package.md)  
   
-4.  [Passaggio 4: Distribuzione del pacchetto della lezione 6](../integration-services/lesson-6-4-deploying-the-lesson-6-package.md)  
+4.  [Passaggio 4: Distribuire il pacchetto della lezione 6](../integration-services/lesson-6-4-deploying-the-lesson-6-package.md)  
   
 ## <a name="start-the-lesson"></a>Inizio della lezione  
-[Passaggio 1: Copia del pacchetto della lezione 5](../integration-services/lesson-6-1-copying-the-lesson-5-package.md)  
+[Passaggio 1: Copiare il pacchetto della lezione 5](../integration-services/lesson-6-1-copying-the-lesson-5-package.md)  
   

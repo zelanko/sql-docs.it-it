@@ -1,7 +1,7 @@
 ---
 title: Impostare o modificare le regole di confronto del server | Microsoft Docs
 ms.custom: ''
-ms.date: 12/03/2017
+ms.date: 01/22/2019
 ms.prod: sql
 ms.reviewer: carlrab
 ms.technology: ''
@@ -13,12 +13,12 @@ ms.assetid: 3242deef-6f5f-4051-a121-36b3b4da851d
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 231cc69c164e9ac4d91477710f959b073420c08e
-ms.sourcegitcommit: 4df7db58095384152195039d91a01d2bee6bd07d
+ms.openlocfilehash: 629ab86b869e36ec816dc99070f11a88147a1ca8
+ms.sourcegitcommit: e6e5da19b393f30b068552a18c911495cbc32952
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/06/2018
-ms.locfileid: "52954395"
+ms.lasthandoff: 01/22/2019
+ms.locfileid: "54443697"
 ---
 # <a name="set-or-change-the-server-collation"></a>Impostazione o modifica di regole di confronto del server
 
@@ -61,8 +61,8 @@ ms.locfileid: "52954395"
   
 ## <a name="setting-the-server-collation-in-managed-instance"></a>Impostazione delle regole di confronto del server in Istanza gestita
 
-È possibile specificare regole di confronto del server in Istanza gestita di database SQL di Azure (anteprima) durante la creazione dell'istanza (attualmente solo con PowerShell). Le regole di confronto predefinite corrispondono a **SQL_Latin1_General_CP1_CI_AS**. Regole di confronto solo Unicode e nuove regole di confronto UTF-8 a livello di server non possono essere specificate come regole di confronto a livello di server.
-Per un modello di script che illustri come impostare le regole di confronto a livello di server in Istanza gestita di database SQL di Azure, vedere [Impostare regole di confronto di Istanza gestita usando il modello di Resource Manager](https://docs.microsoft.com/azure/sql-database/scripts/sql-managed-instance-create-powershell-azure-resource-manager-template). Se si sta eseguendo la migrazione di database da SQL Server a Istanza gestita, controllare le regole di confronto del server nel database SQL Server di origine tramite la funzione `SERVERPROPERTY(N'Collation')` e creare un'Istanza gestita che corrisponda alle regole di confronto di SQL Server. La migrazione di un database da SQL Server a Istanza gestita con regole di confronto a livello di server non corrispondenti può causare diversi errori imprevisti nell'esecuzione di query. Non è possibile modificare le regole di confronto a livello di server nell'Istanza gestita esistente.
+È possibile specificare regole di confronto a livello di server in Istanza gestita di database SQL di Azure (anteprima) durante la creazione dell'istanza, ma non è possibile cambiarle in seguito. È possibile impostare regole di confronto a livello di server tramite il [portale di Azure](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-get-started#create-a-managed-instance) o tramite [PowerShell e il modello di Resource Manager ](https://docs.microsoft.com/azure/sql-database/scripts/sql-managed-instance-create-powershell-azure-resource-manager-template) durante la creazione dell'istanza. Le regole di confronto predefinite corrispondono a **SQL_Latin1_General_CP1_CI_AS**. Regole di confronto solo Unicode e nuove regole di confronto UTF-8 a livello di server non possono essere specificate come regole di confronto a livello di server.
+Se si sta eseguendo la migrazione di database da SQL Server a Istanza gestita, controllare le regole di confronto del server nel database SQL Server di origine tramite la funzione `SERVERPROPERTY(N'Collation')` e creare un'Istanza gestita che corrisponda alle regole di confronto di SQL Server. La migrazione di un database da SQL Server a Istanza gestita con regole di confronto a livello di server non corrispondenti può causare diversi errori imprevisti nell'esecuzione di query. Non è possibile modificare le regole di confronto a livello di server nell'Istanza gestita esistente.
 
 ## <a name="see-also"></a>Vedere anche
 

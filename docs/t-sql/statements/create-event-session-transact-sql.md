@@ -23,12 +23,12 @@ ms.assetid: 67683027-2b0f-47aa-b223-604731af8b4d
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: a87156a7987b3386f452944c49076d47fdaffa59
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: c2335efbd97872975fd6779081e7a5a693266e02
+ms.sourcegitcommit: a192814756570bcbce3b1dbbb05acb24a79d1530
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52401326"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54457674"
 ---
 # <a name="create-event-session-transact-sql"></a>CREATE EVENT SESSION (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -181,7 +181,7 @@ ON SERVER
  WITH ( \<event_session_options> [ ,...*n*] ) Specifica le opzioni da usare con la sessione dell'evento.  
   
  MAX_MEMORY =*size* [ KB | **MB** ]  
- La quantità di memoria allocata alla sessione per la memorizzazione degli eventi nel buffer. Il valore predefinito è 4 MB. *size* è un numero intero e può essere espresso in kilobyte (KB) o megabyte (MB).  
+ La quantità di memoria allocata alla sessione per la memorizzazione degli eventi nel buffer. Il valore predefinito è 4 MB. *size* è un numero intero e può essere espresso in kilobyte (KB) o megabyte (MB). La quantità massima non può superare i 2 GB, vale a dire meno di 2048 MB. Non è consigliabile, tuttavia, usare valori di memoria espressi in GB.
   
  EVENT_RETENTION_MODE = { **ALLOW_SINGLE_EVENT_LOSS** | ALLOW_MULTIPLE_EVENT_LOSS | NO_EVENT_LOSS }  
  Specifica la modalità di memorizzazione dell'evento da utilizzare per la gestione della perdita di eventi.  
@@ -237,10 +237,10 @@ ON SERVER
  **OFF**  
  La sessione dell'evento non ha inizio all'avvio.  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Remarks  
 L'ordine di precedenza degli operatori logici prevede `NOT` come operatore con precedenza massima, seguito da `AND` e quindi da `OR`.  
   
-## <a name="permissions"></a>Autorizzazioni  
+## <a name="permissions"></a>Permissions  
 È necessaria l'autorizzazione `ALTER ANY EVENT SESSION`.  
   
 ## <a name="examples"></a>Esempi  

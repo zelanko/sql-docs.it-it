@@ -12,12 +12,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||=azuresqldb-mi-current'
-ms.openlocfilehash: 39f2ebeca9f19c8c00707c9e5427c797dfc09881
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 5121af5edf195454ec6a27d5a586a921c2853b4c
+ms.sourcegitcommit: b51edbe07a0a2fdb5f74b5874771042400baf919
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52519765"
+ms.lasthandoff: 01/28/2019
+ms.locfileid: "55087640"
 ---
 # <a name="previous-releases-of-sql-server-data-tools-ssdt-and-ssdt-bi"></a>Versioni precedenti di SQL Server Data Tools (SSDT e SSDT-BI)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -34,10 +34,12 @@ Gli ultimi download messi a disposizione possono essere usati nel caso molto imp
 
 |Versione di SSDT| Visual Studio 2017|
 |:---|:---|
+|15.8.2|[SSDT per VS2017 15.8.2](https://go.microsoft.com/fwlink/?linkid=2038031)|
 |15.8.0|[SSDT per VS2017 15.8.0](https://go.microsoft.com/fwlink/?linkid=2014060)|
 |15.7.1|[SSDT per VS2017 15.7.1](https://go.microsoft.com/fwlink/?LinkId=875613)|
 |15.7.0|[SSDT per VS2017 15.7.0](https://go.microsoft.com/fwlink/?LinkId=874716)|
 |15.6.0|[SSDT per Visual Studio 2017 15.6.0](https://go.microsoft.com/fwlink/?LinkId=871368)|
+
 <br>
 
 |Versione di SSDT| Visual Studio 2015|
@@ -45,11 +47,13 @@ Gli ultimi download messi a disposizione possono essere usati nel caso molto imp
 |17.4|[SSDT per VS2015 17.4](https://go.microsoft.com/fwlink/?linkid=863440)|
 |17.3|[SSDT per VS2015 17.3](https://go.microsoft.com/fwlink/?linkid=858660)|
 |16.5|[SSDT for VS2015 16.5](https://go.microsoft.com/fwlink/?LinkID=832313)|  
+
 <br>
 
 |Versione di SSDT| Visual Studio 2013|
 |:---|:---|
 |16.5|[SSDT for VS2013 16.5](https://go.microsoft.com/fwlink/?LinkID=832308)|  
+
 <br>
 
 
@@ -57,7 +61,7 @@ Gli ultimi download messi a disposizione possono essere usati nel caso molto imp
 
   
 ## <a name="links-to-download-pages"></a>Collegamenti alle pagine di download 
-**Motore di database relazionale SQL**  
+**SQL relazionale: motore di database**  
   
 Fornisce modelli per la creazione di database relazionali per il sistema di gestione di database relazionali (RDBMS, Relational Database Management System) e il database SQL di Azure. SSDT è indipendente dalla versione di progettazione del database relazionale. È possibile usare Visual Studio 2012 o 2013 con qualsiasi versione del motore di database di SQL Server o del database SQL di Azure.  
   
@@ -71,7 +75,7 @@ Fornisce modelli per la creazione di database relazionali per il sistema di gest
   
 I clienti di Visual Studio 2013 possono scaricare una versione di anteprima di SSDT per provare le nuove funzionalità non ancora disponibili nella versione finale del prodotto.  
   
-**SQL BI: Analysis Services, Reporting Services, Integration services**  
+**SQL BI: Analysis Services, Reporting Services, servizi di integrazione**  
   
 I modelli di Business Intelligence vengono usati per creare modelli SSAS, report SSRS e pacchetti SSIS. Le finestre di progettazione di BI sono legate a versioni specifiche di SQL Server. Per usare le nuove caratteristiche di Business Intelligence, installare una finestra di progettazione di BI con versione più recente.  
   

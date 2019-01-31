@@ -1,7 +1,7 @@
 ---
-title: 'Passaggio 2: Conversione del progetto nel modello di distribuzione del progetto | Microsoft Docs'
+title: 'Passaggio 2: Convertire il progetto nel modello di distribuzione del progetto | Microsoft Docs'
 ms.custom: ''
-ms.date: 03/01/2017
+ms.date: 01/11/2019
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
@@ -11,48 +11,47 @@ ms.assetid: 80964293-f1f5-4da7-b1fb-00ab8c30c1c5
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: ce29d9e39b2abd46845a035183e6dee80f6c7236
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: cfa218409ae82f5e59f81e110cffafb1775c6dd3
+ms.sourcegitcommit: 5ca813d045e339ef9bebe0991164a5d39c8c742b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47767709"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54880415"
 ---
-# <a name="lesson-6-2---converting-the-project-to-the-project-deployment-model"></a>Lezione 6-2 - Conversione del progetto nel modello di distribuzione del progetto
-In questa attività verrà usata la Conversione guidata progetto di Integration Services per convertire il progetto nel modello di distribuzione del progetto.  
+# <a name="lesson-6-2-convert-the-project-to-the-project-deployment-model"></a>Lezione 6-2: Convertire il progetto nel modello di distribuzione del progetto
+
+In questa attività viene usata la Conversione guidata progetto di Integration Services per convertire il progetto nel modello di distribuzione del progetto.  
   
-### <a name="converting-the-project-to-the-project-deployment-model"></a>Conversione del progetto nel modello di distribuzione del progetto  
+1.  Selezionare **Converti nel modello di distribuzione del progetto** dal menu **Progetto**.  
   
-1.  Scegliere Converti nel modello di distribuzione del progetto dal menu Progetto.  
+2.  Nella **pagina introduttiva** della **Conversione guidata progetto di Integration Services** verificare i passaggi e quindi selezionare **Avanti**.  
   
-2.  Nella pagina introduttiva della Conversione guidata progetto di Integration Services verificare i passaggi e quindi fare clic su Avanti.  
+3.  Nella pagina **Seleziona pacchetti** deselezionare nell'elenco **Pacchetti** tutte le caselle di controllo, ad eccezione di **Lesson 6.dtsx** e quindi selezionare **Avanti**.  
   
-3.  Nella pagina Seleziona pacchetti deselezionare nell'elenco Pacchetti tutte le caselle di controllo, ad eccezione di Lesson 6.dtsx, quindi fare clic su Avanti.  
+4.  Nella pagina **Specifica proprietà del progetto** selezionare **Avanti**.  
   
-4.  Nella pagina Specifica proprietà del progetto fare clic su Avanti.  
+5.  Nella pagina **Aggiorna attività Esegui pacchetto** selezionare **Avanti**.  
   
-5.  Nella pagina Aggiorna attività Esegui pacchetto fare clic su Avanti.  
+6.  Nella pagina **Seleziona configurazioni** assicurarsi che sia selezionato il pacchetto **Lesson 6.dtsx** nell'elenco **Configurazioni**, quindi selezionare **Avanti**.  
   
-6.  Nella pagina Seleziona configurazioni assicurarsi che sia selezionato il pacchetto Lesson 6.dtsx nell'elenco Configurazioni e quindi fare clic su Avanti.  
+7.  Nella pagina **Crea parametri** verificare che sia selezionato il pacchetto **Lesson 6.dtsx**.  Verificare che l'**ambito** sia **Pacchetto** nell'elenco delle **proprietà di configurazione** e quindi selezionare **Avanti**.  
   
-7.  Nella pagina Crea parametri assicurarsi che sia selezionato il pacchetto Lesson 6.dtsx e che Ambito sia impostato su Pacchetto nell'elenco Proprietà di configurazione, quindi fare clic su Avanti.  
+8.  Nella pagina **Configura parametri** verificare che i valori per **Nome** e **Valore** corrispondano a quelli specificati nella lezione 5 per i valori relativi a variabile e configurazione, quindi selezionare **Avanti**.  
   
-8.  Nella pagina Configura parametri verificare che i valori per Nome e Valore corrispondano al nome e al valore specificato nella lezione 5 per i valori relativi a variabile e configurazione, quindi fare clic su Avanti.  
+9. Nel riquadro **Riepilogo** della pagina **Verifica** si noti che la procedura guidata ha usato le informazioni disponibili nel file di configurazione per impostare le **proprietà** da convertire.  
   
-9. Nel riquadro Riepilogo della pagina Verifica si noti che la procedura guidata ha usato le informazioni disponibili nel file di configurazione per impostare le proprietà da convertire.  
+10. Selezionare **Converti**.  
   
-10. Fare clic su Converti.  
+    Al termine della conversione viene visualizzato un messaggio di avviso per indicare che le modifiche non vengono salvate finché non si salva il progetto. Selezionare **OK** per chiudere la finestra dell'avviso.  
   
-    Al termine della conversione, viene visualizzato un messaggio di avviso che indica che le modifiche verranno salvate solo dopo il salvataggio del progetto in Visual Studio. Fare clic su OK nella finestra di dialogo di avviso.  
+11. Nella **Conversione guidata progetto di Integration Services** selezionare **Chiudi**.  
   
-11. Nella Conversione guidata progetto di Integration Services fare clic su Chiudi.  
+12. In **SQL Server Data Tools** selezionare il menu **File** e quindi **Salva** per salvare il pacchetto convertito.  
   
-12. In SQL Server Data Tools scegliere Salva dal menu File per salvare il pacchetto convertito.  
+13. Selezionare la scheda **Parametri** e verificare se il pacchetto ora contiene un parametro per **VarFolderName**. Il valore del parametro è lo stesso percorso specificato per la cartella **New Sample Data** nel file di configurazione della lezione 5.  
   
-13. Fare clic sulla scheda Parametri e verificare che il pacchetto includa un parametro per VarFolderName e che il valore corrisponda al percorso specificato per la cartella New Sample Data del file di configurazione della lezione 5.  
-  
-## <a name="next-task-in-lesson"></a>Attività successiva della lezione  
-[Passaggio 3: Test del pacchetto della lezione 6](../integration-services/lesson-6-3-testing-the-lesson-6-package.md)  
+## <a name="go-to-next-task"></a>Esecuzione del passaggio successivo
+[Passaggio 3: Testare il pacchetto della lezione 6](../integration-services/lesson-6-3-testing-the-lesson-6-package.md)  
   
   
   

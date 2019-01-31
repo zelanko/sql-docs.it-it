@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.date: 09/24/2018
 ms.prod: sql
 ms.prod_service: polybase, sql-data-warehouse, pdw
-ms.openlocfilehash: 13684012e1b5f7bfa17fbaf2fdf2ce5e0af4c72d
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: eaa93142b7a00f581d90dcb0a7be4a94a4ae6477
+ms.sourcegitcommit: ee76381cfb1c16e0a063315c9c7005f10e98cfe6
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52521453"
+ms.lasthandoff: 01/26/2019
+ms.locfileid: "55072856"
 ---
 # <a name="troubleshoot-polybase-kerberos-connectivity"></a>Risolvere i problemi di connettività di PolyBase Kerberos
 
@@ -25,7 +25,7 @@ ms.locfileid: "52521453"
 
 Questo articolo può essere usato come guida per eseguire il debug dei problemi usando lo strumento di diagnostica.
 
-## <a name="prerequisites"></a>Prerequisiti
+## <a name="prerequisites"></a>Prerequisites
 
 1. SQL Server 2016 RTM CU6 / SQL Server 2016 SP1 CU3 / SQL Server 2017 o versione successiva con PolyBase installato
 1. Un cluster Hadoop (Cloudera o Hortonworks) protetto con Kerberos (Active Directory o MIT)
@@ -38,13 +38,13 @@ Questo articolo può essere usato come guida per eseguire il debug dei problemi 
 1. Risorsa protetta (HDFS, MR2, YARN, cronologia processo e così via)
 1. Centro distribuzione chiavi (definito controller di dominio in Active Directory)
 
-Ogni risorsa protetta di Hadoop è registrata nel **Centro distribuzione chiavi (KDC)** con un **nome dell'entità servizio (SPN)** univoco come parte del processo di protezione del cluster Hadoop con Kerberos. L'obiettivo è consentire al client di ottenere un ticket utente temporaneo, detto **Ticket Granting Ticket (TGT)**, in modo da richiedere un altro ticket temporaneo, detto **ticket di servizio (ST)**, dal Centro distribuzione chiavi per il nome dell'entità servizio specifico al quale vuole accedere.  
+Ogni risorsa protetta di Hadoop è registrata nel **Centro distribuzione chiavi (KDC)** con un **nome dell'entità servizio (SPN)** univoco quando Kerberos viene configurato nel cluster Hadoop. L'obiettivo è consentire al client di ottenere un ticket utente temporaneo, detto **Ticket Granting Ticket (TGT)**, in modo da richiedere un altro ticket temporaneo, detto **ticket di servizio (ST)**, dal Centro distribuzione chiavi per il nome dell'entità servizio specifico al quale vuole accedere.  
 
 In PolyBase, quando è richiesta l'autenticazione per qualsiasi risorsa protetta con Kerberos, viene eseguito il seguente handshake a quattro vie:
 
-1. SQL Server si connette a KDC e ottiene un ticket TGT per l'utente. Il TGT viene crittografato usando la chiave privata del KDC.
-1. SQL Server chiama la risorsa protetta di Hadoop, ad esempio Hadoop Distributed File System (HDFS), e determina per quale SPN è necessario un ST.
-1. SQL Server torna al KDC, passa di nuovo il TGT e richiede un ST per accedere a quella particolare risorsa protetta. Il ticket ST viene crittografato usando la chiave privata del servizio protetto.
+1. SQL Server si connette a KDC e ottiene un ticket TGT per l'utente. Il ticket TGT viene crittografato usando la chiave privata del KDC.
+1. SQL Server chiama la risorsa protetta di Hadoop, Hadoop Distributed File System, e determina per quale SPN è necessario un ticket di servizio.
+1. SQL Server torna al KDC, passa di nuovo il ticket TGT e richiede un ticket di servizio per accedere a quella particolare risorsa protetta. Il ticket ST viene crittografato usando la chiave privata del servizio protetto.
 1. SQL Server inoltra il ticket ST in Hadoop e viene autenticato per la creazione di una sessione per quel servizio.
 
 ![](./media/polybase-sqlserver.png)
@@ -53,7 +53,7 @@ I problemi di autenticazione rientrano in uno o più dei quattro passaggi preced
 
 ## <a name="troubleshooting"></a>Risoluzione dei problemi
 
-PolyBase ha più XML di configurazione che contengono le proprietà del cluster Hadoop. In particolare, questi sono i file:
+PolyBase ha i seguenti file XML di configurazione che contengono le proprietà del cluster Hadoop:
 
 - core-site.xml
 - hdfs-site.xml
@@ -64,11 +64,11 @@ PolyBase ha più XML di configurazione che contengono le proprietà del cluster 
 
 Questi file si trovano in:
 
-\\[Unità di sistema\\]:{percorso installazione}\\{istanza}\\{nome}\\MSSQL\\Binn\\PolyBase\\Hadoop\\conf
+`\[System Drive\]:{install path}\{instance}\{name}\MSSQL\Binn\PolyBase\Hadoop\conf`
 
-Il percorso predefinito per SQL Server 2016, ad esempio, è "C:\\Programmi\\Microsoft SQL Server\\MSSQL13.MSSQLSERVER\\MSSQL\\Binn\\PolyBase\\Hadoop\\conf".
+Ad esempio, il valore predefinito per SQL Server 2016 è `C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\MSSQL\Binn\PolyBase\Hadoop\conf`.
 
-Aggiornare uno dei file di configurazione di PolyBase, **core-site.xml**, con le tre proprietà indicate di seguito con i valori impostati in base all'ambiente:
+Aggiornare  **core-site.xml** aggiungendo le tre proprietà indicate di seguito. Impostare i valori in base all'ambiente:
 
 ```xml
 <property>
@@ -99,9 +99,9 @@ Lo strumento viene eseguito in modo indipendente da SQL Server, quindi non è ne
 | Argomento | Descrizione|
 | --- | --- |
 | *Indirizzo del nodo del nome* | IP o nome di dominio completo del nodo del nome. Si riferisce all'argomento "LOCATION" in CREATE EXTERNAL DATA SOURCE T-SQL.|
-| *Porta del nodo del nome* | La porta del nodo del nome. Si riferisce all'argomento "LOCATION" in CREATE EXTERNAL DATA SOURCE T-SQL. In genere è 8020. |
-| *Entità servizio* | L'entità servizio di amministratore per il KDC. Deve corrispondere all'oggetto usato come argomento "IDENTITY" in CREATE DATABASE SCOPED CREDENTIAL T-SQL.|
-| *Password del servizio* | Anziché digitare la password nella console, archiviarla in un file e passare il percorso del file qui. Il contenuto del file deve corrispondere all'oggetto usato come argomento "SECRET" in CREATE DATABASE SCOPED CREDENTIAL T-SQL. |
+| *Porta del nodo del nome* | La porta del nodo del nome. Si riferisce all'argomento "LOCATION" in CREATE EXTERNAL DATA SOURCE T-SQL. Ad esempio, 8020. |
+| *Entità servizio* | L'entità servizio di amministratore per il KDC. Corrisponde all'argomento "IDENTITY" in `CREATE DATABASE SCOPED CREDENTIAL` T-SQL.|
+| *Password del servizio* | Anziché digitare la password nella console, archiviarla in un file e passare il percorso del file qui. Il contenuto del file deve corrispondere all'oggetto usato come argomento "SECRET" in `CREATE DATABASE SCOPED CREDENTIAL` T-SQL. |
 | *Percorso del file HDFS remoto (facoltativo) * | Percorso di un file esistente a cui accedere. Se non è specificato, verrà usata la radice "/". |
 
 ## <a name="example"></a>Esempio
@@ -116,7 +116,7 @@ I seguenti estratti provengono da un centro distribuzione chiavi (KDC) MIT. I ri
 
 ## <a name="checkpoint-1"></a>Checkpoint 1
 
-Deve essere presente un dump esadecimale di un ticket con entità server = krbtgt /*MYREALM.COM@MYREALM.COM*. Questo indica SQL Server ha eseguito correttamente l'autenticazione nel KDC e ha ricevuto un TGT. In caso contrario, il problema riguarda esclusivamente SQL Server e il KDC e non Hadoop.
+Deve essere presente un dump esadecimale di un ticket con `Server Principal = krbtgt/MYREALM.COM@MYREALM.COM`. Indica che SQL Server ha eseguito correttamente l'autenticazione nel KDC e ha ricevuto un ticket TGT. In caso contrario, il problema riguarda esclusivamente SQL Server e il KDC e non Hadoop.
 
 PolyBase **non** supporta le relazioni di trust tra AD e MIT e deve essere configurato per lo stesso KDC come è stato configurato nel cluster Hadoop. In tali ambienti la creazione manuale di un account di servizio per il KDC e l'uso dell'account per eseguire l'autenticazione funzionano.
 
@@ -185,7 +185,7 @@ Un secondo dump esadecimale indica che SQL Server ha usato correttamente il TGT 
 
 ## <a name="checkpoint-4"></a>Checkpoint 4
 
-Infine, le proprietà del file del percorso di destinazione devono essere stampate insieme a un messaggio di conferma. Ciò indica che SQL Server è stato autenticato da Hadoop usando il ticket ST e che è stato concesso a una sessione di accedere alla risorsa protetta.
+Infine, le proprietà del file del percorso di destinazione devono essere stampate insieme a un messaggio di conferma. Le proprietà del file confermano che SQL Server è stato autenticato da Hadoop usando il ticket di servizio e che a una sessione è stato concesso di accedere alla risorsa protetta.
 
 Quando si raggiunge questo punto viene confermato che: (i) i tre attori sono in grado di comunicare correttamente, (ii) core-site.xml e jaas.conf sono corretti e (iii) il KDC ha riconosciuto le credenziali.
 
@@ -202,8 +202,8 @@ Se è stato eseguito lo strumento e le proprietà del file del percorso di desti
 | --- | --- |
 | org.apache.hadoop.security.AccessControlException<br>SIMPLE authentication is not enabled. Available:[TOKEN, KERBEROS] | Per core-site.xml la proprietà hadoop.security.authentication non è impostata su "KERBEROS".|
 |javax.security.auth.login.LoginException<br>Client not found in Kerberos database  (6) - CLIENT_NOT_FOUND |    L'entità servizio dell'amministratore specificata non esiste nell'area di autenticazione specificata in core-site.xml.|
-| javax.security.auth.login.LoginException<br> Checksum failed |    L'entità servizio dell'amministratore esiste, ma la password non è valida. |
-| Native config name: C:\Windows\krb5.ini<br>Loaded from native config | Questa non è un'eccezione, ma indica che krb5LoginModule di Java ha rilevato configurazioni client personalizzate nel computer. Controllare le impostazioni client personalizzate perché possono essere la causa del problema. |
+| javax.security.auth.login.LoginException<br> Checksum failed |L'entità servizio dell'amministratore esiste, ma la password non è valida. |
+| Native config name: C:\Windows\krb5.ini<br>Loaded from native config | Questa messaggio indica che krb5LoginModule di Java ha rilevato configurazioni client personalizzate nel computer. Controllare le impostazioni client personalizzate perché possono essere la causa del problema. |
 | javax.security.auth.login.LoginException<br>java.lang.IllegalArgumentException<br>Illegal principal name admin_user@CONTOSO.COM: org.apache.hadoop.security.authentication.util.KerberosName$NoMatchingRule: No rules applied to admin_user@CONTOSO.COM | Aggiungere la proprietà "hadoop.security.auth_to_local" a core-site.xml con le regole appropriate in base al cluster Hadoop. |
 | java.net.ConnectException<br>Attempting to access external filesystem at URI: hdfs://10.193.27.230:8020<br>Call From IAAS16981207/10.107.0.245 to 10.193.27.230:8020 failed on connection exception | L'autenticazione per il KDC è riuscita, ma non è stato possibile accedere al nodo del nome Hadoop. Controllare l'IP e la porta del nodo del nome. Verificare che il firewall sia disabilitato in Hadoop. |
 | java.io.FileNotFoundException<br>File does not exist: /test/data.csv |    L'autenticazione è riuscita, ma il percorso specificato non esiste. Controllare il percorso o eseguire prima un test con la radice "/" . |
@@ -212,9 +212,9 @@ Se è stato eseguito lo strumento e le proprietà del file del percorso di desti
 
 ### <a name="mit-kdc"></a>KDC MIT  
 
-Tutti i nomi dell'entità servizio registrati nel Centro distribuzione chiavi, inclusi gli amministratori, possono essere visualizzati eseguendo **kadmin.local** > (account di accesso dell'amministratore) > **listprincs** nell'host del Centro distribuzione chiavi o in qualsiasi client del Centro distribuzione chiavi configurato. Se il cluster Hadoop è stato correttamente protetto con Kerberos, deve essere presente un nome dell'entità servizio per ognuno dei diversi servizi disponibili nel cluster (ad esempio nn, dn, rm, yarn, spnego e così via). I file keytab corrispondenti (sostitutivi della password) sono disponibili in **/etc/security/keytabs**, per impostazione predefinita. Vengono crittografati usando la chiave privata del KDC.  
+Tutti i nomi dell'entità servizio registrati nel Centro distribuzione chiavi, inclusi gli amministratori, possono essere visualizzati eseguendo **kadmin.local** > (account di accesso dell'amministratore) > **listprincs** nell'host del Centro distribuzione chiavi o in qualsiasi client del Centro distribuzione chiavi configurato. Se Kerberos è stato correttamente configurato nel cluster Hadoop, deve essere presente un SPN per ognuno dei servizi disponibili nel cluster, ad esempio `nn`, `dn`, `rm`, `yarn`, `spnego` e così via. I file keytab corrispondenti (sostitutivi della password) sono disponibili in **/etc/security/keytabs**, per impostazione predefinita. Vengono crittografati usando la chiave privata del KDC.  
 
-Può anche essere opportuno usare lo strumento [kinit](https://web.mit.edu/kerberos/krb5-1.12/doc/user/user_commands/kinit.html) per verificare le credenziali di amministratore nel Centro distribuzione chiavi a livello locale. Un esempio di utilizzo è: *kinit identity@MYREALM.COM*. La richiesta di una password indica che l'identità esiste.  Per impostazione predefinita, i log del Centro distribuzione chiavi sono disponibili in **/var/log/krb5kdc.log**. Il file contiene tutte le richieste di ticket, incluso l'indirizzo IP del client che ha effettuato la richiesta. Devono essere presenti due richieste provenienti dall'indirizzo IP del computer SQL Server in cui è stato eseguito lo strumento: la prima per il ticket TGT dal server di autenticazione specificata come **AS\_REQ** e la seconda, **TGS\_REQ** , per il ticket di servizio dal server di concessione dei ticket.
+Può anche essere opportuno usare [`kinit`](https://web.mit.edu/kerberos/krb5-1.12/doc/user/user_commands/kinit.html)per verificare le credenziali di amministratore nel KDC a livello locale. Un esempio di utilizzo è:  `kinit identity@MYREALM.COM`. La richiesta di una password indica che l'identità esiste.  Per impostazione predefinita, i log del Centro distribuzione chiavi sono disponibili in **/var/log/krb5kdc.log**. Il file contiene tutte le richieste di ticket, incluso l'indirizzo IP del client che ha effettuato la richiesta. Devono essere presenti due richieste provenienti dall'indirizzo IP del computer SQL Server in cui è stato eseguito lo strumento: la prima per il ticket TGT dal server di autenticazione specificata come **AS\_REQ** e la seconda, **TGS\_REQ** , per il ticket di servizio dal server di concessione dei ticket.
 
 ```bash
  [root@MY-KDC log]# tail -2 /var/log/krb5kdc.log 
@@ -224,7 +224,33 @@ Può anche essere opportuno usare lo strumento [kinit](https://web.mit.edu/kerb
 
 ### <a name="active-directory"></a>Active Directory 
 
-In Active Directory è possibile visualizzare i nomi dell'entità servizio passando a Pannello di controllo > Utenti e computer di Active Directory> *AreaAutenticazione* > *UnitàOrganizzativa*. Se il cluster Hadoop è stato correttamente protetto con Kerberos, deve essere presente un nome dell'entità servizio per ognuno dei diversi servizi disponibili (ad esempio nn, dn, rm, yarn, spnego e così via).
+In Active Directory è possibile visualizzare i nomi dell'entità servizio passando a Pannello di controllo > Utenti e computer di Active Directory> *AreaAutenticazione* > *UnitàOrganizzativa*. Se Kerberos è configurato correttamente nel cluster Hadoop, è presente un SPN per ognuno dei servizi disponibili, ad esempio `nn`, `dn`, `rm`, `yarn`, `spnego` e così via.
+
+### <a name="general-debugging-tips"></a>Suggerimenti generali per il debug
+
+È utile avere esperienza Java per esaminare i log ed eseguire il debug dei problemi di Kerberos, che sono indipendenti dalla funzionalità PolyBase di SQL server.
+
+Se si riscontrano ancora problemi ad accedere a Kerberos, attenersi alla procedura seguente per eseguire il debug:
+
+1. Verificare di poter accedere ai dati di Hadoop Distributed File System Kerberos dall'esterno di SQL Server. È possibile effettuare le operazioni seguenti: 
+
+    - Scrivere un programma Java proprio oppure
+    - Usare la classe `HdfsBridge` dalla cartella di installazione di PolyBase. Ad esempio
+
+      ```java
+      -classpath ".\Hadoop\conf;.\Hadoop\*;.\Hadoop\HDP2_2\*" com.microsoft.polybase.client.HdfsBridge 10.193.27.232 8020 admin_user C:\temp\kerberos_pass.txt
+      ```
+
+     Nell'esempio precedente, `admin_user` include solo il nome utente e nessuna parte di dominio.
+
+2. Se è possibile accedere ai dati di Hadoop Distributed File System Kerberos dall'esterno di PolyBase:
+    - Esistono due tipi di autenticazione Kerberos: L'autenticazione Active Directory Kerberos e l'autenticazione MIT Kerberos.
+    - Verificare che l'utente sia presente nell'account di dominio e usare lo stesso account utente per accedere al sistema HDFS.
+
+3. Per Active Directory Kerberos, assicurarsi che sia possibile vedere il ticket memorizzato nella cache usando il comando `klist` in Windows.
+    - Accedere al computer PolyBase ed eseguire `klist` e `klist tgt` nel prompt dei comandi per verificare se KDC, il nome utente e i tipi di crittografia sono corretti.
+
+4.  Se KDC può supportare solo AES256, assicurarsi che i [file dei criteri JCE](http://www.oracle.com/technetwork/java/javase/downloads/index.html) siano installati.
 
 ## <a name="see-also"></a>Vedere anche
 

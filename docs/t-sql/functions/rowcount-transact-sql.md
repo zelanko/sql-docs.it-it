@@ -22,12 +22,12 @@ ms.assetid: 97a47998-81d9-4331-a244-9eb8b6fe4a56
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: e3607ad38e58c5bc1315bc8d01bd0d188d704261
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 3f3919729fc29933d348f8ef0e10d697c5e00646
+ms.sourcegitcommit: a94cf79160e22fa8b4bafe3e6e50bb54e20b1bca
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47781699"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54805707"
 ---
 # <a name="x40x40rowcount-transact-sql"></a>&#x40;&#x40;ROWCOUNT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -54,7 +54,7 @@ ms.locfileid: "47781699"
   
 -   Reimpostare @@ROWCOUNT su 0 senza restituire il valore al client.  
   
- Le istruzioni che effettuano un'assegnazione semplice impostano sempre il valore di @@ROWCOUNT su 1. Non vengono inviate righe al client. Esempi di istruzioni di questo tipo sono: SET @*local_variable*, RETURN, READTEXT e le istruzioni di selezione senza query, ad esempio SELECT GETDATE() o SELECT **'***testo generico***'**.  
+ Le istruzioni che effettuano un'assegnazione semplice impostano sempre il valore di @@ROWCOUNT su 1. Non vengono inviate righe al client. Esempi di istruzioni di questo tipo sono: SET @*local_variable*, RETURN, READTEXT e le istruzioni di selezione senza query quali SELECT GETDATE() o SELECT **'***testo generico***'**.  
   
  Le istruzioni che effettuano un'assegnazione in una query o usano RETURN in una query impostano il valore di @@ROWCOUNT sul numero di righe modificate o lette dalla query, ad esempio: SELECT @*local_variable* = c1 FROM t1.  
   
@@ -64,7 +64,7 @@ ms.locfileid: "47781699"
   
  Le istruzioni EXECUTE mantengono il precedente valore di @@ROWCOUNT.  
   
- Le istruzioni USE, SET \<opzione>, DEALLOCATE CURSOR, CLOSE CURSOR, BEGIN TRANSACTION e COMMIT TRANSACTION reimpostano il valore di ROWCOUNT su 0.  
+ Le istruzioni di tipo USE, SET \<opzione>, DEALLOCATE CURSOR, CLOSE CURSOR, PRINT, RAISERROR, BEGIN TRANSACTION, e COMMIT TRANSACTION reimpostano il valore di ROWCOUNT su 0.  
   
  Nelle stored procedure compilate in modo nativo viene mantenuto il valore @@ROWCOUNT precedente. Le istruzioni [!INCLUDE[tsql](../../includes/tsql-md.md)] nelle stored procedure compilate in modo nativo non prevedono l'impostazione di @@ROWCOUNT. Per altre informazioni, vedere [Natively Compiled Stored Procedures](../../relational-databases/in-memory-oltp/natively-compiled-stored-procedures.md) (Stored procedure compilate in modo nativo).  
   

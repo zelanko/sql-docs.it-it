@@ -13,20 +13,20 @@ author: joesackmsft
 ms.author: josack
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 768f9d00e1eea9b97c32d35c240befdaf555122f
-ms.sourcegitcommit: bfa10c54e871700de285d7f819095d51ef70d997
+ms.openlocfilehash: e07bfa316330a24e9a7b9db5a2486ddd7cad470c
+ms.sourcegitcommit: b51edbe07a0a2fdb5f74b5874771042400baf919
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/14/2019
-ms.locfileid: "54254926"
+ms.lasthandoff: 01/28/2019
+ms.locfileid: "55087801"
 ---
 # <a name="intelligent-query-processing-in-sql-databases"></a>Elaborazione di query intelligenti nei database SQL
 
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
-La famiglia di funzionalità di **elaborazione di query intelligenti** include funzionalità ad ampio spettro che migliorano le prestazioni di carichi di lavoro esistenti con un impegno minimo per l'implementazione.
+La famiglia di funzionalità di **elaborazione di query intelligenti** include funzionalità ad ampio spettro che migliorano le prestazioni di carichi di lavoro esistenti con un impegno minimo per l'implementazione.  È possibile trarre automaticamente vantaggio da questa famiglia di funzionalità passando al livello di compatibilità del database applicabile.
 
-![Funzionalità di elaborazione di query intelligenti](./media/3_IQPFeatureFamily2.png)
+![Funzionalità di elaborazione di query intelligenti](./media/3_IQPFeatureFamily.png)
 
 ## <a name="adaptive-query-processing"></a>Elaborazione di query adattive
 

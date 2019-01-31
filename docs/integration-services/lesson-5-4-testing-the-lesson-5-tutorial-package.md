@@ -1,7 +1,7 @@
 ---
-title: "Passaggio 4: Test del pacchetto creato nella lezione 5 dell'esercitazione | Microsoft Docs"
+title: 'Passaggio 4: Testare il pacchetto della lezione 5 | Microsoft Docs'
 ms.custom: ''
-ms.date: 03/01/2017
+ms.date: 01/08/2019
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
@@ -11,20 +11,21 @@ ms.assetid: 5215b77d-c2ec-4b25-a3de-ca49ea197d74
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 3f23e1e6e9321d4211c53a176242c81cad6ff8bb
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 36b0fe9670eceb2520c1c792cf247a9d4da47598
+ms.sourcegitcommit: 5ca813d045e339ef9bebe0991164a5d39c8c742b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47664559"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54880454"
 ---
-# <a name="lesson-5-4---testing-the-lesson-5-tutorial-package"></a>Lezione 5-4 - Test del pacchetto creato nella lezione 5 dell'esercitazione
-In fase di esecuzione, il pacchetto ottiene il valore della proprietà **Directory** da una variabile aggiornata in fase di esecuzione, anziché utilizzare il nome della directory originale specificato quando è stato creato il pacchetto. Il valore della variabile è popolato dal file SSISTutorial.dtsConfig file.  
+# <a name="lesson-5-4-test-the-lesson-5-package"></a>Lezione 5-4: Testare il pacchetto della lezione 5
+
+In fase di esecuzione il pacchetto ottiene il valore della proprietà **Directory** da una variabile di configurazione anziché dal nome della directory specificato quando è stato creato il pacchetto. Il valore della variabile proviene dal file **SSISTutorial.dtsConfig**.  
   
-Per verificare che il pacchetto esegua l'aggiornamento della proprietà Directory con il nuovo valore in fase di esecuzione, eseguire semplicemente il pacchetto. Poiché solo tre file di dati di esempio sono stati copiati nella nuova directory, il flusso di dati verrà eseguito solo tre volte anziché essere reiterato nei 14 file della cartella originale.  
+Per verificare se il pacchetto aggiorna la proprietà **Directory** con il nuovo valore in fase di esecuzione, eseguire il pacchetto. Poiché nella nuova directory sono presenti solo tre file di dati di esempio, il flusso di dati viene eseguito solo tre volte.  
   
 ## <a name="checking-the-package-layout"></a>Verifica del layout del pacchetto  
-Prima di testare il pacchetto è consigliabile verificare che il flusso di controllo e il flusso di dati nel pacchetto della lezione 5 contengano gli oggetti visualizzati nelle figure seguenti. Il flusso di controllo deve essere identico a quello nella lezione 4. Il flusso di dati deve essere identico a quello nella lezione 4.  
+Prima di testare il pacchetto, verificare che il flusso di controllo e il flusso di dati nel pacchetto della lezione 5 siano simili agli oggetti visualizzati nelle figure seguenti:  
   
 **Flusso di controllo**  
   
@@ -34,11 +35,11 @@ Prima di testare il pacchetto è consigliabile verificare che il flusso di contr
   
 ![Flusso di dati nel pacchetto](../integration-services/media/task9lesson1data.gif "Flusso di dati nel pacchetto")  
   
-### <a name="to-test-the-lesson-5-tutorial-package"></a>Per testare il pacchetto creato nella lezione 5 dell'esercitazione  
+## <a name="test-the-lesson-5-package"></a>Testare il pacchetto della lezione 5  
   
-1.  Scegliere **Avvia debug** dal menu **Debug**.  
+1.  Selezionare **Avvia debug** dal menu **Debug**.  
   
-2.  Al termine dell'esecuzione del pacchetto, scegliere **Arresta debug** dal menu **Debug**.  
+2.  Al termine dell'esecuzione del pacchetto, selezionare **Arresta debug** dal menu **Debug**.  
   
 ## <a name="next-lesson"></a>Lezione successiva  
 [Lezione 6: Usare parametri con il modello di distribuzione del progetto in SSIS](../integration-services/lesson-6-using-parameters-with-the-project-deployment-model-in-ssis.md)  

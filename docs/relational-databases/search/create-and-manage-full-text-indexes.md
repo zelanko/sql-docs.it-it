@@ -14,12 +14,12 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: ba2842966623d1f820bcb0d8df969634922da57d
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: d92ef10b48115ddb26307a9d89260185d8d65b4a
+ms.sourcegitcommit: 1e28f923cda9436a4395a405ebda5149202f8204
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51669020"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "55044527"
 ---
 # <a name="create-and-manage-full-text-indexes"></a>Creazione e gestione di indici full-text
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -51,6 +51,7 @@ Per altre informazioni, vedere [Popolare gli indici full-text](../../relational-
 
 ##  <a name="view"></a> Visualizzare le proprietà di un indice full-text
 ### <a name="view-the-properties-of-a-full-text-index-with-transact-sql"></a>Visualizzare le proprietà di un indice full-text con Transact-SQL
+
 |Catalogo o vista a gestione dinamica|Descrizione|  
 |----------------------------------------|-----------------|  
 |[sys.fulltext_index_catalog_usages &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-fulltext-index-catalog-usages-transact-sql.md)|Restituisce una riga per ogni catalogo full-text in riferimento all'indice full-text.|  
@@ -76,7 +77,7 @@ Per altre informazioni, vedere [Popolare gli indici full-text](../../relational-
     |----------|-----------------|  
     |**Generale**|Sono contenute le proprietà di base dell'indice full-text, incluse diverse proprietà modificabili e alcune proprietà non modificabili quali il nome del database, il nome della tabella e il nome della colonna chiave full-text. Le proprietà modificabili sono le seguenti:<br /><br /> **Elenco di parole non significative indice full-text**<br /><br /> **Indicizzazione full-text abilitata**<br /><br /> **Rilevamento delle modifiche**<br /><br /> **Elenco delle proprietà di ricerca**<br /><br />Per altre informazioni, vedere [Proprietà indice full-text &#40;pagina Generale&#41;](https://msdn.microsoft.com/library/f4dff61c-8c2f-4ff9-abe4-70a34421448f).|  
     |**Colonne**|Consente di visualizzare le colonne della tabella disponibili per l'indicizzazione full-text. La colonna o le colonne selezionate contengono indici full-text. È possibile selezionare il numero desiderato di colonne disponibili da includere nell'indice full-text. Per altre informazioni, vedere [Proprietà indice full-text &#40;pagina Colonne&#41;](https://msdn.microsoft.com/library/75e52edb-0d07-4393-9345-8b5af4561e35).|  
-    |**Pianificazioni**|Utilizzare questa pagina per creare o gestire le pianificazioni per un processo di SQL Server Agent che consente di avviare un popolamento incrementale della tabella per i popolamenti dell'indice full-text. Per altre informazioni, vedere [Popolare gli indici full-text](../../relational-databases/search/populate-full-text-indexes.md).<br /><br /> Nota: dopo avere chiuso la finestra di dialogo **Proprietà indice full-text** , eventuali nuove pianificazioni vengono associate a un processo di SQL Server Agent (avviare Popolamento incrementale tabella in *database_name*.*table_name*).|  
+    |**Pianificazioni**|Utilizzare questa pagina per creare o gestire le pianificazioni per un processo di SQL Server Agent che consente di avviare un popolamento incrementale della tabella per i popolamenti dell'indice full-text. Per altre informazioni, vedere [Popolare gli indici full-text](../../relational-databases/search/populate-full-text-indexes.md).<br /><br /> Nota: Dopo avere chiuso la finestra di dialogo **Proprietà indice full-text**, eventuali nuove pianificazioni vengono associate a un processo di SQL Server Agent (Avvio del popolamento incrementale della tabella in *nome_database*.*nome_tabella*).|  
   
 6.  [!INCLUDE[clickOK](../../includes/clickok-md.md)] per salvare le modifiche e uscire dalla finestra di dialogo **Proprietà indice full-text**.  
   
