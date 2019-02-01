@@ -13,12 +13,12 @@ ms.assetid: 132bebfd-0206-4d23-829a-b38e5ed17bc9
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: e8f0eaa3be9d6dbdd27eb52ce66ebc652dd19f7d
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: 5f505d46526aede97ac01c8f3de1b11450aeed8d
+ms.sourcegitcommit: 032273bfbc240fe22ac6c1f6601a14a6d99573f7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54127002"
+ms.lasthandoff: 02/01/2019
+ms.locfileid: "55513876"
 ---
 # <a name="log-shipping-and-replication-sql-server"></a>Log shipping e replica (SQL Server)
   Il log shipping coinvolge due copie di un unico database che in genere risiedono in computer diversi. In un momento dato solo una copia del database risulta disponibile per i client. Questa copia è nota come database primario. Gli aggiornamenti al database primario apportati dai client vengono propagati attraverso il log shipping all'altra copia del database, nota come database secondario. Il processo di log shipping prevede l'applicazione nel database secondario del log delle transazioni relativo a ogni operazione di inserimento, aggiornamento o eliminazione eseguita sul database primario.  
@@ -109,9 +109,9 @@ ms.locfileid: "54127002"
   
     -   Se la pubblicazione non è filtrata, sarà possibile aggiornare il database di pubblicazione eseguendo la sincronizzazione con il Sottoscrittore più aggiornato.  
   
-    -   Se la pubblicazione è filtrata, l'aggiornamento del database di pubblicazione potrebbe non essere possibile. Si consideri una tabella partizionata in modo che ogni sottoscrizione riceve i dati dei clienti solo per una singola area: Nord, est, Sud e Ovest. Se per ogni partizione di dati è disponibile almeno un Sottoscrittore, la sincronizzazione con un Sottoscrittore per ogni partizione dovrebbe consentire di aggiornare il database di pubblicazione. Tuttavia, se ad esempio i dati nella partizione Ovest non sono stati replicati in alcun Sottoscrittore, questi dati nel server di pubblicazione non potranno essere aggiornati. In questo caso è consigliabile reinizializzare tutte le sottoscrizioni in modo da garantire la convergenza dei dati nel server di pubblicazione e nei Sottoscrittori. Per altre informazioni, vedere [Reinizializzare le sottoscrizioni](../../relational-databases/replication/reinitialize-subscriptions.md).  
+    -   Se la pubblicazione è filtrata, l'aggiornamento del database di pubblicazione potrebbe non essere possibile. Considerare una tabella partizionata in modo che ogni sottoscrizione riceva i dati relativi ai clienti solo per una singola area: Nord, Est, Sud e Ovest. Se per ogni partizione di dati è disponibile almeno un Sottoscrittore, la sincronizzazione con un Sottoscrittore per ogni partizione dovrebbe consentire di aggiornare il database di pubblicazione. Tuttavia, se ad esempio i dati nella partizione Ovest non sono stati replicati in alcun Sottoscrittore, questi dati nel server di pubblicazione non potranno essere aggiornati. In questo caso è consigliabile reinizializzare tutte le sottoscrizioni in modo da garantire la convergenza dei dati nel server di pubblicazione e nei Sottoscrittori. Per altre informazioni, vedere [Reinizializzare le sottoscrizioni](../../relational-databases/replication/reinitialize-subscriptions.md).  
   
-     Se si esegue la sincronizzazione con un Sottoscrittore che esegue una versione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] precedente a [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)], la sottoscrizione non può essere anonima, ma deve essere una sottoscrizione client o una sottoscrizione server (chiamate sottoscrizioni locali e sottoscrizioni globali nelle versioni precedenti del prodotto). Per altre informazioni, vedere [Sincronizzare i dati](../../relational-databases/replication/synchronize-data.md).  
+     Se si esegue la sincronizzazione con un Sottoscrittore che esegue una versione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] precedente a [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)], la sottoscrizione non può essere anonima, ma deve essere una sottoscrizione client o una sottoscrizione server (chiamate sottoscrizioni locali e sottoscrizioni globali nelle versioni precedenti del prodotto). Per altre informazioni, vedere [Sincronizzare i dati](../../relational-databases/replication/synchronize-data.md).   
   
 ## <a name="see-also"></a>Vedere anche  
  [Replica di SQL Server](../../relational-databases/replication/sql-server-replication.md)   
