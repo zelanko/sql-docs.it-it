@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.date: 06/27/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: 44ed335524d21cd4931722a20be4eb0da5681603
-ms.sourcegitcommit: 1e28f923cda9436a4395a405ebda5149202f8204
+ms.openlocfilehash: 3731f60047e22da7209b6c131ab93b28a20a99c2
+ms.sourcegitcommit: c4870cb5bebf9556cdb4d8b35ffcca265fb07862
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/25/2019
-ms.locfileid: "55044708"
+ms.lasthandoff: 02/02/2019
+ms.locfileid: "55652590"
 ---
 # <a name="whats-new-in-analytics-platform-system-a-scale-out-mpp-data-warehouse"></a>Quali sono le novità nel sistema di piattaforma Analitica, di un data warehouse di tipo scale-out MPP
 Vedere Novità gli ultimi aggiornamenti di Appliance per Microsoft Analitica piattaforma di strumenti analitici. I punti di accesso è un'appliance di scalabilità orizzontale in locale che ospita MPP SQL Server Parallel Data Warehouse. 
@@ -28,14 +28,14 @@ Data di rilascio: dicembre 2018
 APS CU7.3 migliora le prestazioni delle query con l'eliminazione di sottoespressioni comuni in query optimizer di SQL. Il miglioramento migliora le query in due modi. Il vantaggio prima è la possibilità di identificare ed eliminare tali espressioni consentono di ridurre il tempo di compilazione di SQL. Il vantaggio di secondo e più importante è operazioni di spostamento dei dati per queste sottoespressioni ridondanti sono state eliminate in questo modo il tempo di esecuzione per le query diventa più veloce. Una descrizione dettagliata di questa funzionalità è reperibile [qui](common-sub-expression-elimination.md).
 
 ### <a name="aps-informatica-connector-for-informatica-1020-published"></a>Connettore di APS Informatica per Informatica 10.2.0 pubblicato
-Microsoft ha rilasciato una nuova versione dei connettori di Informatica per i punti di accesso che funziona con versione 10.2.0 Informatica. I nuovi connettori possono essere scaricati dal [sito di download](https://www.microsoft.com/download/details.aspx?id=57472).
+Microsoft ha rilasciato una nuova versione dei connettori di Informatica per i punti di accesso che funziona con Informatica versione 10.2.0 e 10.2.0 1 degli aggiornamenti rapidi. I nuovi connettori possono essere scaricati dal [sito di download](https://www.microsoft.com/download/details.aspx?id=57472).
 
 #### <a name="supported-versions"></a>Versioni supportate
 
 | Versione piattaforma di strumenti analitici | informatica PowerCenter | Driver |
 |:---|:---|:---|
 | APS 2016 | 9.6.1 | SQL Server Native Client 11.x |
-| APS 2016 e versioni successive | 10.2.0 | SQL Server Native Client 11.x |
+| APS 2016 e versioni successive | 10.2.0, 10.2.0 Hotfix 1 | SQL Server Native Client 11.x |
 
 <a name="h2-aps-cu7.2"></a>
 ## <a name="aps-cu72"></a>APS CU7.2
