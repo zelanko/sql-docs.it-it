@@ -23,12 +23,12 @@ ms.assetid: 419f907b-8a72-4d6c-80cb-301df44c24c1
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 9bfeddd0aad93427a3f65c44364d3749981ccbae
-ms.sourcegitcommit: 170c275ece5969ff0c8c413987c4f2062459db21
+ms.openlocfilehash: a44c62bfa8c85999112887dcacd54bfd176dfaa1
+ms.sourcegitcommit: dc3543e81e32451568133e9b1b560f7ee76d7fb5
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/11/2019
-ms.locfileid: "54226528"
+ms.lasthandoff: 01/31/2019
+ms.locfileid: "55428648"
 ---
 # <a name="create-sequence-transact-sql"></a>CREATE SEQUENCE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
@@ -129,7 +129,7 @@ Se per la creazione si utilizza l'opzione **CACHE**, un arresto imprevisto, ad e
   
 3.  Il valore calcolato viene restituito all'istruzione di chiamata.  
   
- **Opzione CACHE quando la cache è esaurita**  
+**Opzione CACHE quando la cache è esaurita**  
   
  Il processo seguente si verifica ogni volta che viene richiesto un oggetto sequenza per generare il valore successivo per l'opzione **CACHE** se la cache è esaurita.  
   
@@ -139,7 +139,7 @@ Se per la creazione si utilizza l'opzione **CACHE**, un arresto imprevisto, ad e
   
 3.  Viene bloccata la riga della tabella di sistema per l'oggetto sequenza e il valore calcolato nel passaggio 2 (l'ultimo valore) viene scritto nella tabella di sistema. Viene generato un Xevent di cache esaurita per notificare all'utente il nuovo valore persistente.  
   
- **Opzione NO CACHE**  
+**Opzione NO CACHE**  
   
  Il processo seguente si verifica ogni volta che viene generato un oggetto sequenza per generare il valore successivo per l'opzione **NO CACHE**.  
   
