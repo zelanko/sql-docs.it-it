@@ -1,7 +1,7 @@
 ---
 title: Informazioni sul supporto Java EE | Microsoft Docs
 ms.custom: ''
-ms.date: 07/11/2018
+ms.date: 01/21/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -11,12 +11,12 @@ ms.assetid: a9448b80-b7a3-49cf-8bb4-322c73676005
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 76032ffa6737e39556a9047e91b0d2666ddea39b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: da575f8c0fecd03e21bc2d24800cde05105a5a3c
+ms.sourcegitcommit: 879a5c6eca99e0e9cc946c653d4ced165905d9c6
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47702139"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "55736928"
 ---
 # <a name="understanding-java-ee-support"></a>Informazioni sul supporto Java EE
 
@@ -35,6 +35,8 @@ Per JDBC Driver 6.2, il driver è incluso **mssql-jdbc-6.2.2.jre7.jar** oppure *
 Per JDBC Driver 6.4, il driver è incluso **mssql-jdbc-6.4.0.jre7.jar**, **mssql-jdbc-6.4.0.jre8.jar**, o **mssql-jdbc-6.4.0.jre9.jar**.
 
 Per JDBC Driver 7.0, il driver è incluso **mssql-jdbc-7.0.0.jre8.jar**, o **mssql-jdbc-7.0.0.jre10.jar**.
+
+Per i 7.2 di Driver JDBC, il driver è incluso **mssql-jdbc-7.2.0.jre8.jar**, o **mssql-jdbc-7.2.0.jre11.jar**.
   
 Il nome della classe viene usato quando si carica il driver con la classe JDBC DriverManager, nonché quando è necessario specificare il nome della classe del driver in qualsiasi configurazione del driver. Per configurare un'origine dati all'interno di un server applicazioni Java EE potrebbe ad esempio essere necessario immettere il nome della classe del driver.  
   

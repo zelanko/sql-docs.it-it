@@ -1,7 +1,7 @@
 ---
 title: La connessione tramite la crittografia SSL | Microsoft Docs
 ms.custom: ''
-ms.date: 07/11/2018
+ms.date: 01/21/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -11,12 +11,12 @@ ms.assetid: ec91fa8a-ab7e-4c1e-a05a-d7951ddf33b1
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 78cdeb64cbd0bc76109c7bd3db784c2262ae80ff
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 14f33ac9e6ab8d17954039f4ae0fca1f11e46af5
+ms.sourcegitcommit: 879a5c6eca99e0e9cc946c653d4ced165905d9c6
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47812189"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "55737132"
 ---
 # <a name="connecting-with-ssl-encryption"></a>Connessione tramite la crittografia SSL
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -64,8 +64,7 @@ String connectionUrl =
 > [!NOTE]  
 >  In alternativa, è possibile impostare il valore delle proprietà di connessione usando i metodi **setter** appropriati offerti dalla classe [SQLServerDataSource](../../connect/jdbc/reference/sqlserverdatasource-class.md).  
   
- Se la proprietà di connessione **encrypt** è impostata su **true**, la proprietà **trustServerCertificate** è impostata su **false** e il nome del server nella stringa di connessione non corrisponde al nome del server nel certificato SSL di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], viene restituito l'errore seguente: The driver couldn't establish a secure connection to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] by using Secure Sockets Layer (SSL) encryption (Il driver non è stato in grado di stabilire una connessione protetta a SQL Server tramite crittografia SSL (Secure Sockets Layer)). Errore: "java.security.cert.CertificateException: Impossibile convalidare il nome del server in un certificato durante l'inizializzazione di SSL (Secure Sockets Layer)".  
-  
+ Se il **crittografare** è impostata su **true** e il **trustServerCertificate** è impostata su **false** e se il server nome nel stringa di connessione non corrisponde al nome di server nel certificato SSL, verrà generato l'errore seguente: `The driver couldn't establish a secure connection to SQL Server by using Secure Sockets Layer (SSL) encryption. Error: "java.security.cert.CertificateException: Failed to validate the server name in a certificate during Secure Sockets Layer (SSL) initialization."`. A partire dalla versione 7.2, il driver supporta la corrispondenza dei caratteri jolly nell'etichetta più a sinistra del nome del server nel certificato SSL.
 ## <a name="see-also"></a>Vedere anche  
  [Uso della crittografia SSL](../../connect/jdbc/using-ssl-encryption.md)   
  [Protezione delle applicazioni del driver JDBC](../../connect/jdbc/securing-jdbc-driver-applications.md)  
