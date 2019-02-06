@@ -132,7 +132,7 @@ Specifica il nome del nuovo indice.
   
 Se la tabella ha già un indice columnstore cluster, è possibile specificare lo stesso nome dell'indice esistente oppure usare l'opzione DROP_EXISTING per specificare un nuovo nome.  
   
-ON [*database_name*. [*schema_name* ] . |  *schema_name* . ] *table_name*  
+ON [*database_name*. [*schema_name* ] . | *schema_name* . ] *table_name*  
    Specifica il nome composto da una, due o tre parti della tabella da archiviare come indice columnstore cluster. Se la tabella è un heap o un indice cluster, viene convertita da rowstore a columnstore. Se la tabella è già un columnstore, questa istruzione consente di ricompilare l'indice columnstore cluster.  
   
 #### <a name="with-options"></a>Opzioni WITH  
@@ -215,7 +215,7 @@ Creare un indice columnstore non cluster in memoria in una tabella rowstore arch
     Specifica le colonne da archiviare. Un indice columnstore non cluster è limitato a 1024 colonne.  
    Ogni colonna deve essere di un tipo di dati supportato per gli indici columnstore. Vedere [Limitazioni e restrizioni](../../t-sql/statements/create-columnstore-index-transact-sql.md#LimitRest) per un elenco di tipi di dati supportati.  
 
-ON [*database_name*. [*schema_name* ] . |  *schema_name* . ] *table_name*  
+ON [*database_name*. [*schema_name* ] . | *schema_name* . ] *table_name*  
    Specifica il nome composto da una, due o tre parti della tabella che contiene l'indice.  
 
 #### <a name="with-options"></a>Opzioni WITH
