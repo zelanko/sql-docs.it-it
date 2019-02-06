@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: 4876b890067bd851167bc1e3e3c355c9701569d5
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: af6d4df964820ced9f4d79b67859e010a895bc29
+ms.sourcegitcommit: 99847f34e949a5c3c58565d76be3abf5b80f9632
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52405096"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "55742121"
 ---
 # <a name="pdw-certificate-provisioning---analytics-platform-system"></a>Provisioning del certificato PDW - sistema di piattaforma Analitica
 Il **Provisioning del certificato PDW** pagina del sistema di piattaforma Analitica **Configuration Manager** Importa o rimuove il certificato usato dall'area PDW. L'uso, un certificato per crittografare le connessioni consente una comunicazione protetta il nodo di controllo tramite client di SQL Server, gli strumenti che utilizzano i driver di SQL Server PDW, il [Console di amministrazione](monitor-the-appliance-by-using-the-admin-console.md), e carica di Integration Services.  
@@ -41,7 +41,10 @@ Il percorso di certificazione deve contenere il nome di dominio completo che vie
 Utilizzare il sistema di piattaforma Analitica**Configuration Manager** per aggiungere o rimuovere il certificato attendibile. Direttamente usando lo strumento di configurazione certificato di servizi di Microsoft Windows HTTP (**winHttpCertCfg.exe**) per gestire il certificato non è supportata.  
   
 ## <a name="import-or-remove-the-certificate"></a>Importare o rimuovere il certificato  
-Le istruzioni seguenti illustrano come importare o rimuovere il certificato del dispositivo.  
+Le istruzioni seguenti illustrano come importare o rimuovere il certificato del dispositivo.
+
+> [!WARNING]
+> Per rinnovare un certificato scaduto, che è necessario rimuovere il certificato esistente prima di importare una nuova.
   
 ### <a name="to-import-the-certificate"></a>Per importare il certificato  
   
@@ -69,7 +72,7 @@ SQL Server PDW non crittograferà connessione corrente usando il certificato imp
   
 SQL Server PDW continueranno a crittografare le connessioni correnti, ma non utilizzerà la rimozione del certificato per le nuove connessioni.  
   
-![Certificato PDW strumento DWConfig](./media/pdw-certificate-provisioning/SQL_Server_PDW_DWConfig_ApplPDWCert.png "SQL_Server_PDW_DWConfig_ApplPDWCert")  
+![DWConfig Appliance PDW Certificate](./media/pdw-certificate-provisioning/SQL_Server_PDW_DWConfig_ApplPDWCert.png "SQL_Server_PDW_DWConfig_ApplPDWCert")  
   
 ## <a name="see-also"></a>Vedere anche  
 [Avviare Gestione configurazione &#40;sistema di piattaforma Analitica&#41;](launch-the-configuration-manager.md)  
