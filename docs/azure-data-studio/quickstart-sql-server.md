@@ -11,12 +11,12 @@ ms.topic: quickstart
 author: yualan
 ms.author: alayu
 manager: craigg
-ms.openlocfilehash: 9e25008836b72ac8860953c5a1f98c13d7540d92
-ms.sourcegitcommit: dd794633466b1da8ead9889f5e633bdf4b3389cd
+ms.openlocfilehash: 4dfe47c44a6bc5e706db3123d167802bfd74dddc
+ms.sourcegitcommit: 5ef24b3229b4659ede891b0af2125ef22bd94b96
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54143451"
+ms.lasthandoff: 02/06/2019
+ms.locfileid: "55759984"
 ---
 # <a name="quickstart-connect-and-query-sql-server-using-includename-sosincludesname-sos-shortmd"></a>Guida introduttiva: Connettersi ed eseguire query usando SQL Server [!INCLUDE[name-sos](../includes/name-sos-short.md)]
 Con questa guida introduttiva viene illustrato come utilizzare [!INCLUDE[name-sos](../includes/name-sos-short.md)] per connettersi a SQL Server e quindi utilizzare istruzioni Transact-SQL (T-SQL) per creare il *TutorialDB* utilizzato [!INCLUDE[name-sos](../includes/name-sos-short.md)] esercitazioni.
@@ -37,7 +37,7 @@ Se non si dispone di alcun SQL Server, selezionare la piattaforma usata dai coll
 
    
 1. Avviare **[!INCLUDE[name-sos](../includes/name-sos-short.md)]**.
-1. Alla prima esecuzione di  *[!INCLUDE[name-sos](../includes/name-sos-short.md)]* verrà mostrata la finestra di dialogo **Connessione**.  Se essa non appare, fare clic sull'icona **Nuova connessione** nella pagina **SERVER**:
+1. Alla prima esecuzione di  *[!INCLUDE[name-sos](../includes/name-sos-short.md)]* verrà mostrata la finestra di dialogo **Connessione**.  Se il **connessione** finestra di dialogo non si apre, fare clic sui **nuova connessione** icona nel **server** pagina:
    
    ![Icona "Nuova connessione"](media/quickstart-sql-server/new-connection-icon.png)
 
@@ -69,10 +69,10 @@ La procedura seguente crea un database denominato **TutorialDB**:
       FROM sys.databases
       WHERE name = N'TutorialDB'
    )
-   CREATE DATABASE [TutorialDB]
+      CREATE DATABASE [TutorialDB];
    GO
-
-   ALTER DATABASE [TutorialDB] SET QUERY_STORE=ON
+   IF SERVERPROPERTY('ProductVersion') > '12'
+       ALTER DATABASE [TutorialDB] SET QUERY_STORE=ON;
    GO
    ```
 1. Per eseguire la query, fare clic su **Esegui** .
@@ -93,21 +93,21 @@ L'editor di query è ancora connesso al *master* database, ma si vuole creare un
 1. Incollare il frammento di codice seguente nella finestra query, quindi fare clic su **Esegui**:
 
    > [!NOTE]
-   > È possibile aggiungere lo script o sovrascrivere la query precedente nell'editor. Si noti che il clic su **Esegui** esegue solo la query selezionata. Se nulla è selezionato, tutte le query presenti nel foglio vengono eseguite. Se nulla è selezionato, tutte le query presenti nel foglio vengono eseguite. 
+   > È possibile aggiungere lo script o sovrascrivere la query precedente nell'editor. Si noti che il clic su **Esegui** esegue solo la query selezionata. Se nulla è selezionato, tutte le query presenti nel foglio vengono eseguite. Se non si effettuano selezioni, fare clic su **eseguire** esegue tutte le query nell'editor.
 
    ```sql
    -- Create a new table called 'Customers' in schema 'dbo'
    -- Drop the table if it already exists
    IF OBJECT_ID('dbo.Customers', 'U') IS NOT NULL
-   DROP TABLE dbo.Customers
+      DROP TABLE dbo.Customers;
    GO
    -- Create the table in the specified schema
    CREATE TABLE dbo.Customers
    (
-      CustomerId        INT    NOT NULL   PRIMARY KEY, -- primary key column
-      Name      [NVARCHAR](50)  NOT NULL,
-      Location  [NVARCHAR](50)  NOT NULL,
-      Email     [NVARCHAR](50)  NOT NULL
+       CustomerId  int NOT NULL PRIMARY KEY, -- primary key column
+       Name        nvarchar(50) NOT NULL,
+       Location    nvarchar(50) NOT NULL,
+       Email       nvarchar(50) NOT NULL
    );
    GO
    ```
@@ -121,7 +121,7 @@ Dopo il completamento della query, la nuova tabella **dbo.Customers** è visuali
    ```sql
    -- Insert rows into table 'Customers'
    INSERT INTO dbo.Customers
-      ([CustomerId],[Name],[Location],[Email])
+      ([CustomerId], [Name], [Location], [Email])
    VALUES
       ( 1, N'Orlando', N'Australia', N''),
       ( 2, N'Keith', N'India', N'keith0@adventure-works.com'),
