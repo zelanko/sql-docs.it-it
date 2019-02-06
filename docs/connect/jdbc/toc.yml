@@ -172,6 +172,8 @@ items:
         href: using-basic-data-types.md
       - name: Uso dei tipi di dati spaziali
         href: use-spatial-datatypes.md
+      - name: Utilizzo di dati Sql_variant
+        href: using-sql-variant-datatype.md
       - name: Informazioni sulle transazioni
         href: understanding-transactions.md
       - name: Utilizzo di una connessione
@@ -269,10 +271,10 @@ items:
       - name: Versione di esempio di Azure Key Vault 6.2.2
         href: azure-key-vault-sample-version-6.2.2.md
       - name: Versione di esempio di Azure Key Vault 7.0.0
-        href: azure-key-vault-sample-version-7-0-0.md
-ms.openlocfilehash: 3c63ab259dc117d5f0d7a5193dacdcd4cdc90f9d
-ms.sourcegitcommit: 182d77997133a6e4ee71e7a64b4eed6609da0fba
+        href: azure-key-vault-sample.md
+ms.openlocfilehash: 0cbb07039cfce807ee3223b52bdc41fe77409773
+ms.sourcegitcommit: 879a5c6eca99e0e9cc946c653d4ced165905d9c6
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50051133"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "55736802"
