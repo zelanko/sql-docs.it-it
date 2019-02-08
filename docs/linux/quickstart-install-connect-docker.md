@@ -13,12 +13,13 @@ ms.custom: sql-linux, seodec18
 ms.prod_service: linux
 ms.assetid: 82737f18-f5d6-4dce-a255-688889fdde69
 moniker: '>= sql-server-linux-2017 || >= sql-server-2017 || =sqlallproducts-allversions'
-ms.openlocfilehash: f7c9612bac16463c1ea82d9e5a83bbad9f371700
-ms.sourcegitcommit: e3f5b70bbb4c66294df8c7b2c70186bdf2365af9
+zone_pivot_groups: cs1-command-shell
+ms.openlocfilehash: d6d8a20044d60ab83f9d649827397bf363dd2696
+ms.sourcegitcommit: db552ff344e021c154acb3d0a728475ec4420899
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/18/2019
-ms.locfileid: "54397630"
+ms.lasthandoff: 02/07/2019
+ms.locfileid: "55832123"
 ---
 # <a name="quickstart-run-sql-server-container-images-with-docker"></a>Guida introduttiva: Eseguire le immagini del contenitore SQL Server con Docker
 
@@ -58,13 +59,17 @@ any changes to one section should be duplicated in the other-->
 
 1. Eseguire il pull dal registro contenitori di Microsoft l'immagine del contenitore SQL Server 2017 su Linux.
 
+   ::: zone pivot="cs1-bash"
    ```bash
    sudo docker pull mcr.microsoft.com/mssql/server:2017-latest
    ```
+   ::: zone-end
 
+   ::: zone pivot="cs1-powershell"
    ```PowerShell
    docker pull mcr.microsoft.com/mssql/server:2017-latest
    ```
+   ::: zone-end
 
    > [!TIP]
    > Se si vuole provare l'immagine di anteprima di SQL Server 2019, vedere la [versione di anteprima di SQL Server 2019 di questo articolo](quickstart-install-connect-docker.md?view=sql-server-linux-ver15#pullandrun2019).
@@ -75,17 +80,22 @@ any changes to one section should be duplicated in the other-->
 
 2. Per eseguire l'immagine del contenitore con Docker, è possibile usare il comando seguente da una shell Bash (Linux/macOS) o da un prompt dei comandi PowerShell con privilegi elevati.
 
+
+   ::: zone pivot="cs1-bash"
    ```bash
    sudo docker run -e 'ACCEPT_EULA=Y' -e 'SA_PASSWORD=<YourStrong!Passw0rd>' \
       -p 1433:1433 --name sql1 \
       -d mcr.microsoft.com/mssql/server:2017-latest
    ```
+   ::: zone-end
 
+   ::: zone pivot="cs1-powershell"
    ```PowerShell
    docker run -e "ACCEPT_EULA=Y" -e "SA_PASSWORD=<YourStrong!Passw0rd>" `
       -p 1433:1433 --name sql1 `
       -d mcr.microsoft.com/mssql/server:2017-latest
    ```
+   ::: zone-end
 
    > [!NOTE]
    > La password deve essere conforme ai criteri password predefiniti di SQL Server, altrimenti il contenitore non potrà configurare SQL Server e smetterà di funzionare. Per impostazione predefinita, la password deve contenere almeno 8 caratteri e contenere caratteri di tre delle quattro categorie seguenti: Lettere maiuscole, lettere minuscole, cifre in Base 10 e simboli. È possibile esaminare il log degli errori eseguendo il comando [docker logs](https://docs.docker.com/engine/reference/commandline/logs/).
@@ -105,13 +115,18 @@ any changes to one section should be duplicated in the other-->
 
 3. Per visualizzare i contenitori di Docker, usare il comando `docker ps`.
 
+
+   ::: zone pivot="cs1-bash"
    ```bash
    sudo docker ps -a
    ```
+   ::: zone-end
 
+   ::: zone pivot="cs1-powershell"
    ```PowerShell
    docker ps -a
    ```
+   ::: zone-end
 
    L'output risultante dovrebbe essere simile allo screenshot seguente:
 
@@ -140,13 +155,17 @@ L'impostazione di `-h` e `--name` sullo stesso valore è un buon modo per identi
 
 1. Eseguire il pull dell'anteprima di SQL Server 2019 immagine del contenitore Linux dall'Hub Docker.
 
+   ::: zone pivot="cs1-bash"
    ```bash
    sudo docker pull mcr.microsoft.com/mssql/server:2019-CTP2.2-ubuntu
    ```
+   ::: zone-end
 
+   ::: zone pivot="cs1-powershell"
    ```PowerShell
    docker pull mcr.microsoft.com/mssql/server:2019-CTP2.2-ubuntu
    ```
+   ::: zone-end
 
    > [!TIP]
    > Questa Guida introduttiva Usa l'anteprima di SQL Server 2019 immagine Docker. Se si vuole eseguire l'immagine di SQL Server 2017, vedere la [versione di SQL Server 2017 di questo articolo](quickstart-install-connect-docker.md?view=sql-server-linux-2017#pullandrun2017).
@@ -157,17 +176,21 @@ L'impostazione di `-h` e `--name` sullo stesso valore è un buon modo per identi
 
 2. Per eseguire l'immagine del contenitore con Docker, è possibile usare il comando seguente da una shell Bash (Linux/macOS) o da un prompt dei comandi PowerShell con privilegi elevati.
 
+   ::: zone pivot="cs1-bash"
    ```bash
    sudo docker run -e 'ACCEPT_EULA=Y' -e 'SA_PASSWORD=<YourStrong!Passw0rd>' \
       -p 1433:1433 --name sql1 \
       -d mcr.microsoft.com/mssql/server:2019-CTP2.2-ubuntu
    ```
+   ::: zone-end
 
+   ::: zone pivot="cs1-powershell"
    ```PowerShell
    docker run -e "ACCEPT_EULA=Y" -e "SA_PASSWORD=<YourStrong!Passw0rd>" `
       -p 1433:1433 --name sql1 `
       -d mcr.microsoft.com/mssql/server:2019-CTP2.2-ubuntu
    ```
+   ::: zone-end
 
    > [!NOTE]
    > La password deve essere conforme ai criteri password predefiniti di SQL Server, altrimenti il contenitore non potrà configurare SQL Server e smetterà di funzionare. Per impostazione predefinita, la password deve contenere almeno 8 caratteri e contenere caratteri di tre delle quattro categorie seguenti: Lettere maiuscole, lettere minuscole, cifre in Base 10 e simboli. È possibile esaminare il log degli errori eseguendo il comando [docker logs](https://docs.docker.com/engine/reference/commandline/logs/).
@@ -187,13 +210,17 @@ L'impostazione di `-h` e `--name` sullo stesso valore è un buon modo per identi
 
 3. Per visualizzare i contenitori di Docker, usare il comando `docker ps`.
 
+   ::: zone pivot="cs1-bash"
    ```bash
    sudo docker ps -a
    ```
+   ::: zone-end
 
+   ::: zone pivot="cs1-powershell"
    ```PowerShell
    docker ps -a
    ```
+   ::: zone-end
 
    L'output risultante dovrebbe essere simile allo screenshot seguente:
 
@@ -225,24 +252,30 @@ La procedura seguente usa lo strumento da riga di comando di SQL Server, **sqlcm
 
 1. Usare il comando `docker exec -it` per avviare una shell Bash interattiva all'interno del contenitore in esecuzione. Nell'esempio seguente `sql1` è il nome specificato dal parametro `--name`quando è stato creato il contenitore.
 
+   ::: zone pivot="cs1-bash"
    ```bash
    sudo docker exec -it sql1 "bash"
    ```
+   ::: zone-end
 
+   ::: zone pivot="cs1-powershell"
    ```PowerShell
    docker exec -it sql1 "bash"
    ```
+   ::: zone-end
 
-1. Una volta all'interno del contenitore, eseguire la connessione in locale con sqlcmd. Sqlcmd non è incluso nel percorso per impostazione predefinita, quindi occorre specificare il percorso completo.
+2. Una volta all'interno del contenitore, eseguire la connessione in locale con sqlcmd. Sqlcmd non è incluso nel percorso per impostazione predefinita, quindi occorre specificare il percorso completo.
 
+   ::: zone pivot="cs1-bash"
    ```bash
    /opt/mssql-tools/bin/sqlcmd -S localhost -U SA -P '<YourNewStrong!Passw0rd>'
    ```
+   ::: zone-end
 
    > [!TIP]
    > È possibile omettere la password nella riga di comanda perché sia richiesto di essere immessa.
 
-1. Se la connessione viene eseguita correttamente, il prompt dei comandi **sqlcmd** sarà: `1>`.
+3. Se la connessione viene eseguita correttamente, il prompt dei comandi **sqlcmd** sarà: `1>`.
 
 ## <a name="create-and-query-data"></a>Creare i dati e recuperarli tramite query
 
@@ -258,13 +291,13 @@ La seguente procedura consente di creare un nuovo database denominato `TestDB`.
    CREATE DATABASE TestDB
    ```
 
-1. Nella riga successiva scrivere una query perché vengano restituiti i nomi di tutti database nel server:
+2. Nella riga successiva scrivere una query perché vengano restituiti i nomi di tutti database nel server:
 
    ```sql
    SELECT Name from sys.Databases
    ```
 
-1. I due comandi precedenti non sono stati eseguiti immediatamente. È necessario digitare `GO` in una nuova riga per eseguire i comandi precedenti:
+3. I due comandi precedenti non sono stati eseguiti immediatamente. È necessario digitare `GO` in una nuova riga per eseguire i comandi precedenti:
 
    ```sql
    GO
@@ -280,19 +313,19 @@ Creare poi una nuova tabella `Inventory` e inserire due nuove righe.
    USE TestDB
    ```
 
-1. Creare una nuova tabella denominata `Inventory`:
+2. Creare una nuova tabella denominata `Inventory`:
 
    ```sql
    CREATE TABLE Inventory (id INT, name NVARCHAR(50), quantity INT)
    ```
 
-1. Inserire i dati nella nuova tabella:
+3. Inserire i dati nella nuova tabella:
 
    ```sql
    INSERT INTO Inventory VALUES (1, 'banana', 150); INSERT INTO Inventory VALUES (2, 'orange', 154);
    ```
 
-1. Digitare `GO` per eseguire i comandi precedenti:
+4. Digitare `GO` per eseguire i comandi precedenti:
 
    ```sql
    GO
@@ -308,7 +341,7 @@ A questo punto, eseguire una query per restituire i dati dalla tabella `Inventor
    SELECT * FROM Inventory WHERE quantity > 152;
    ```
 
-1. Eseguire il comando:
+2. Eseguire il comando:
 
    ```sql
    GO
@@ -322,7 +355,7 @@ A questo punto, eseguire una query per restituire i dati dalla tabella `Inventor
    QUIT
    ```
 
-1. Per uscire dal prompt dei comandi interattivo nel contenitore, digitare `exit`. Dopo la chiusura della shell Bash interattiva, il contenitore continua l'esecuzione.
+2. Per uscire dal prompt dei comandi interattivo nel contenitore, digitare `exit`. Dopo la chiusura della shell Bash interattiva, il contenitore continua l'esecuzione.
 
 ## <a id="connectexternal"></a> Eseguire la connessione dall'esterno del contenitore
 
@@ -332,17 +365,21 @@ La procedura seguente usa **sqlcmd** all'esterno del contenitore per stabilire l
 
 1. Trovare l'indirizzo IP del computer che ospita il contenitore. Su Linux usare **ifconfig** o **ip addr**. Su Windows usare **ipconfig**.
 
-1. Eseguire sqlcmd specificando l'indirizzo IP e la porta mappata alla porta 1433 nel contenitore. In questo esempio, che è la stessa porta, la porta 1433, nel computer host. Se è stata specificata un'altra porta mappata nel computer host, è necessario utilizzarlo qui.
+2. Eseguire sqlcmd specificando l'indirizzo IP e la porta mappata alla porta 1433 nel contenitore. In questo esempio, che è la stessa porta, la porta 1433, nel computer host. Se è stata specificata un'altra porta mappata nel computer host, è necessario utilizzarlo qui.
 
+   ::: zone pivot="cs1-bash"
    ```bash
    sqlcmd -S 10.3.2.4,1433 -U SA -P '<YourNewStrong!Passw0rd>'
    ```
+   ::: zone-end
 
+   ::: zone pivot="cs1-powershell"
    ```PowerShell
    sqlcmd -S 10.3.2.4,1433 -U SA -P "<YourNewStrong!Passw0rd>"
    ```
+   ::: zone-end
 
-1. Eseguire i comandi Transact-SQL. Al termine, digitare `QUIT`.
+3. Eseguire i comandi Transact-SQL. Al termine, digitare `QUIT`.
 
 Altri strumenti usati comunemente per connettersi a SQL Server sono:
 
@@ -355,15 +392,19 @@ Altri strumenti usati comunemente per connettersi a SQL Server sono:
 
 Se si vuole rimuovere il contenitore di SQL Server usato in questa esercitazione, eseguire i comandi seguenti:
 
-```bash
+   ::: zone pivot="cs1-bash"
+   ```bash
 sudo docker stop sql1
 sudo docker rm sql1
-```
+   ```
+   ::: zone-end
 
-```PowerShell
+   ::: zone pivot="cs1-powershell"
+   ```PowerShell
 docker stop sql1
 docker rm sql1
-```
+   ```
+   ::: zone-end
 
 > [!WARNING]
 > Se si arresta e si rimuove un contenitore, i dati di SQL Server eventualmente presenti nel contenitore vengono eliminati in modo definitivo. Se occorre conservare i dati, [creare un file di backup e copiarlo all'esterno del contenitore](tutorial-restore-backup-in-sql-server-container.md) oppure usare una [tecnica di persistenza dei dati del contenitore](sql-server-linux-configure-docker.md#persist).
