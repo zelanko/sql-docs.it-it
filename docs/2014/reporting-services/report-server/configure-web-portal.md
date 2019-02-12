@@ -12,13 +12,13 @@ helpviewer_keywords:
 ms.assetid: e918986c-af15-48f6-8178-256aed829c6a
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 81be4bb3802888a8471308135775723c9ba0fd9e
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+manager: kfile
+ms.openlocfilehash: 005c9fe0ff5ba3f998e80a93ea19d85c87331403
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52419862"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56028583"
 ---
 # <a name="configure-report-manager-native-mode"></a>Configurare Gestione report (modalità nativa)
   Gestione report è un'applicazione front-end Web utilizzata per visualizzare report, gestire il contenuto del server di report e concedere l'accesso utente a un server di report in modalità nativa. Gestione report viene installato con il servizio Web ReportServer all'interno della stessa istanza del server di report e facoltativamente configurato se si seleziona l'opzione **Installa la configurazione predefinita della modalità nativa** del programma di installazione. Può essere configurato anche come attività di post-installazione. In questo argomento vengono fornite informazioni sui seguenti scenari di configurazione di Gestione report:  

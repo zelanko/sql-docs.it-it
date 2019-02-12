@@ -16,13 +16,13 @@ helpviewer_keywords:
 ms.assetid: 21edec6d-9897-48fb-8c75-182305b1dbdb
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: b81c8eb53247caa2a0f0a4d931df10f9f43cd602
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 368ee35385a7147c849a4800cf9419b19986545d
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48221281"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56020502"
 ---
 # <a name="report-server-item-properties"></a>Proprietà degli elementi del server di report
   Le proprietà degli elementi sono proprietà specifiche degli elementi del database del server di report. Tali elementi includono report, report collegati, cartelle, risorse, modelli e origini dati.  
@@ -32,7 +32,7 @@ ms.locfileid: "48221281"
 ## <a name="item-properties"></a>Proprietà degli elementi  
  Le proprietà seguenti si applicano a tutti gli elementi nel database del server di report.  
   
-|Proprietà|Description|  
+|Proprietà|Descrizione|  
 |--------------|-----------------|  
 |**CreatedBy**|Nome dell'utente che ha originariamente aggiunto l'elemento al database del server di report.|  
 |**CreationDate**|Data e ora di aggiunta dell'elemento al database del server di report.|  
@@ -41,7 +41,7 @@ ms.locfileid: "48221281"
 |**ID**|ID di un elemento nel database del server di report.|  
 |**ModifiedBy**|Nome dell'utente che ha apportato l'ultima modifica all'elemento nel database del server di report.|  
 |**ModifiedDate**|Data e ora dell'ultima modifica dell'elemento.|  
-|**Nome**|Nome di un elemento nel database del server di report.|  
+|**Name**|Nome di un elemento nel database del server di report.|  
 |**Percorso**|Percorso completo dell'elemento. Il percorso di un elemento nel database del server di report può essere composto da un massimo di 260 caratteri.|  
 |**Dimensione**|Dimensione, in byte, di un elemento nel database del server di report.|  
 |**Tipo**|Tipo di un elemento nel database del server di report.|  
@@ -50,17 +50,17 @@ ms.locfileid: "48221281"
 ## <a name="folder-properties"></a>Proprietà delle cartelle  
  Oltre alle proprietà degli elementi elencate in precedenza, la proprietà seguente si applica alle cartelle nel database del server di report.  
   
-|Proprietà|Description|  
+|Proprietà|Descrizione|  
 |--------------|-----------------|  
 |**Reserved**|Valore restituito dal metodo <xref:ReportService2010.ReportingService2010.GetProperties%2A> per le cartelle riservate dal server di report. Le cartelle riservate includono Utenti, Report personali e /. Le cartelle riservate non possono essere modificate o rimosse.|  
   
 ## <a name="report-properties"></a>Proprietà dei report  
  Oltre alle proprietà degli elementi elencate in precedenza, le proprietà seguenti si applicano ai report nel database del server di report.  
   
-|Proprietà|Description|  
+|Proprietà|Descrizione|  
 |--------------|-----------------|  
 |**Lingua**|Lingua usata in un report. Il valore è un codice della lingua definito nella specifica Internet Engineering Task Force (IETF) RFC1766. La prima parte è costituita da una designazione di due caratteri della lingua di base. La seconda parte è separata da un trattino e definisce la variazione o il sottolinguaggio della lingua. Se un valore non viene specificato nell'elemento `Style` associato all'elemento `Body` nella definizione del report, il valore predefinito è costituito dalla lingua del server di report.|  
-|`ReportProcessingTimeout`|Timeout, in secondi, per un singolo report. Se questo valore è impostato, il server di report tenta di arrestare l'elaborazione di un report quando scade il tempo specificato. I valori validi sono `-1` attraverso `2`,`147`,`483`,`647`. Se il valore è `-1` durante l'elaborazione non si verifica il timeout del report. Se il valore è `null`, per il timeout per l'elaborazione del report viene usato il valore della proprietà di sistema `ReportProcessingTimeout`. Il valore predefinito è `null`. Per altre informazioni, vedere [Proprietà di sistema del server di report](reporting-services-properties-report-server-system-properties.md).|  
+|`ReportProcessingTimeout`|Timeout, in secondi, per un singolo report. Se questo valore è impostato, il server di report tenta di arrestare l'elaborazione di un report quando scade il tempo specificato. I valori validi sono compresi tra `-1` e `2`.`147`.`483`.`647`. Se il valore è `-1` durante l'elaborazione non si verifica il timeout del report. Se il valore è `null`, per il timeout per l'elaborazione del report viene usato il valore della proprietà di sistema `ReportProcessingTimeout`. Il valore predefinito è `null`. Per altre informazioni, vedere [Proprietà di sistema del server di report](reporting-services-properties-report-server-system-properties.md).|  
 |**ExecutionDate**|Data e ora dell'ultima creazione di uno snapshot del report.|  
 |**CanRunUnattended**|Valore che indica se un report può essere eseguito automaticamente in base a una pianificazione. Se questa proprietà è impostata su `true`, i valori predefiniti per i parametri del report sono definiti e le credenziali dell'origine dati sono archiviate con il report oppure l'opzione per il recupero delle credenziali è impostata su `None`. Se questa proprietà è impostata su `false`, i prerequisiti per l'esecuzione automatica di un report non sono soddisfatti. Per altre informazioni, vedere [Configurare l'account di esecuzione automatica &#40;Gestione configurazione SSRS&#41;](../../install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md).|  
 |**HasParameterDefaultValues**|Valore che indica se per il report sono impostati valori predefiniti validi per tutti i parametri. Il valore è `true` anche se un report non dispone di parametri. Se questa proprietà è impostata su `false`, uno o più parametri del report non dispongono di un valore predefinito valido.|  
@@ -71,7 +71,7 @@ ms.locfileid: "48221281"
 ## <a name="resource-properties"></a>Proprietà delle risorse  
  Oltre alle proprietà degli elementi elencate in precedenza, la proprietà seguente si applica alle risorse nel database del server di report.  
   
-|Proprietà|Description|  
+|Proprietà|Descrizione|  
 |--------------|-----------------|  
 |**MimeType**|Tipo MIME di una risorsa nel database del server di report.|  
   

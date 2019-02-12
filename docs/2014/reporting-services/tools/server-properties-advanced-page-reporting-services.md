@@ -1,7 +1,7 @@
 ---
 title: Proprietà server (pagina Avanzate) - Reporting Services | Microsoft Docs
 ms.custom: ''
-ms.date: 2016-10-18
+ms.date: 10/18/2016
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.technology:
@@ -12,13 +12,13 @@ f1_keywords:
 ms.assetid: 07b78a84-a6aa-4502-861d-349720ef790e
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 8756be81a5517602558ab974bb63310e19c32049
-ms.sourcegitcommit: 08b3de02475314c07a82a88c77926d226098e23f
+manager: kfile
+ms.openlocfilehash: 21379656c56fa1e28b8cd098d046fb4fe721179c
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49119874"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56041582"
 ---
 # <a name="server-properties-advanced-page---reporting-services"></a>Proprietà server (pagina Avanzate) - Reporting Services
   Questa pagina consente di impostare le proprietà di sistema nel server di report. Le proprietà di sistema possono essere impostate in diversi modi. Questo strumento fornisce un'interfaccia utente grafica che consente di impostare le proprietà senza dovere scrivere codice.  
@@ -54,7 +54,7 @@ ms.locfileid: "49119874"
  Specifica il numero massimo di giorni per cui è possibile conservare un parametro archiviato. I valori validi sono `-1` e i valori compresi tra `+1` e `2,147,483,647`. Il valore predefinito è `180` giorni.  
   
  **StoredParametersThreshold**  
- Specifica il numero massimo di valori dei parametri che possono essere archiviati dal server di report. I valori validi sono `-1` e i valori compresi tra `+1` e `2,147,483,647`. Il valore predefinito è `1500`.  
+ Specifica il numero massimo di valori dei parametri che possono essere archiviati nel server di report. I valori validi sono `-1` e i valori compresi tra `+1` e `2,147,483,647`. Il valore predefinito è `1500`.  
   
  **UseSessionCookies**  
  Indica se il server di report deve utilizzare cookie di sessione per le comunicazioni con i browser dei client. Il valore predefinito è `true`.  

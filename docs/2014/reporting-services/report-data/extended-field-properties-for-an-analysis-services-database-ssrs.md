@@ -10,23 +10,23 @@ ms.topic: conceptual
 ms.assetid: 1d7d87e2-bf0d-4ebb-a287-80b5a967a3f2
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: a4636dd2c129a6efad2bb9349082e5bcfe40fd9e
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: a8600fd0e9da41644e99950a7d3df1d7d4764b99
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48076730"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56038452"
 ---
 # <a name="extended-field-properties-for-an-analysis-services-database-ssrs"></a>Proprietà di campo estese per un database di Analysis Services (SSRS)
   L'estensione per l'elaborazione dati di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] supporta proprietà di campo estese. Le proprietà di campo estese sono proprietà aggiuntive rispetto alle proprietà di campo `Value` e `IsMissing`, disponibili nell'origine dei dati e supportate dall'estensione per l'elaborazione dati. Le proprietà estese non vengono visualizzate nel riquadro Dati report all'interno della raccolta di campi per un set di dati del report. È possibile includere valori di proprietà di campo estese nel report scrivendo espressioni che essi sono specificati per nome usando l'elemento predefinito `Fields` raccolta.  
   
- Le proprietà estese includono proprietà predefinite e proprietà personalizzate. Le proprietà predefinite sono comuni a più origini dati che vengono mappate ai nomi delle proprietà di campo specifico e sono accessibili tramite l'elemento predefinito `Fields` raccolta in base al nome. Le proprietà personalizzate sono specifiche per ogni provider di dati ed è possibile accedervi mediante la raccolta predefinita `Fields` solo tramite la sintassi che utilizza il nome della proprietà estesa come stringa.  
+ Le proprietà estese includono proprietà predefinite e proprietà personalizzate. Le proprietà predefinite sono comuni a più origini dati, per le quali viene eseguito il mapping a nomi di proprietà di campo specifiche e risultano accessibili per nome tramite la raccolta predefinita `Fields`. Le proprietà personalizzate sono specifiche per ogni provider di dati ed è possibile accedervi mediante la raccolta predefinita `Fields` solo tramite la sintassi che utilizza il nome della proprietà estesa come stringa.  
   
  Quando si usa la finestra Progettazione query MDX con interfaccia grafica di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] per definire la query, a quest'ultima viene automaticamente aggiunto un set predefinito di proprietà delle celle e delle dimensioni. Nel report è possibile utilizzare solo le proprietà estese specificatamente elencate nella query MDX. A seconda del report, potrebbe essere opportuno modificare il testo del comando MDX in modo che includa altre proprietà personalizzate o delle dimensioni definite nel cubo. Per altre informazioni sui campi estesi disponibili nelle origini dati di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], vedere [Creazione e uso di valori di proprietà &#40;MDX&#41;](../../analysis-services/creating-and-using-property-values-mdx.md).  
   
 ## <a name="working-with-field-properties-in-a-report"></a>Utilizzo delle proprietà di campo in un report  
- Le proprietà di campo estese includono proprietà predefinite e proprietà specifiche del provider di dati. Le proprietà di campo non vengono visualizzate con l'elenco dei campi nel riquadro **Dati report** , sebbene siano incluse nella query compilata per un set di dati. Non è possibile pertanto trascinarle nell'area di progettazione del report. In alternativa, è necessario trascinare il campo nel report e quindi modificare il `Value` proprietà del campo impostando la proprietà che si desidera utilizzare. Se, ad esempio, i dati delle celle di un cubo sono già stati formattati, è possibile usare la proprietà di campo FormattedValue usando l'espressione seguente: `=Fields!FieldName.FormattedValue`.  
+ Le proprietà di campo estese includono proprietà predefinite e proprietà specifiche del provider di dati. Le proprietà di campo non vengono visualizzate con l'elenco dei campi nel riquadro **Dati report** , sebbene siano incluse nella query compilata per un set di dati. Non è possibile pertanto trascinarle nell'area di progettazione del report. È invece necessario trascinare il campo nel report e quindi modificare la proprietà `Value` del campo impostando la proprietà che si desidera utilizzare. Se, ad esempio, i dati delle celle di un cubo sono già stati formattati, è possibile usare la proprietà di campo FormattedValue usando l'espressione seguente: `=Fields!FieldName.FormattedValue`.  
   
  Per fare riferimento a una proprietà estesa non predefinita, utilizzare la sintassi seguente in un'espressione:  
   
@@ -47,7 +47,7 @@ ms.locfileid: "48076730"
 |------------------|--------------|---------------------------------------|  
 |`Value`|`Object`|Specifica il valore dei dati del campo.|  
 |`IsMissing`|`Boolean`|Indica se il campo è stato trovato nel set di dati risultante.|  
-|`UniqueName`|`String`|Restituisce il nome completo di un livello. Ad esempio, il `UniqueName` valore per un dipendente potrebbe essere *[Employee]. [ Reparto dipendente]. [Reparto]. & [vendite]. & [responsabile vendite Nord America]. America].&[272]*.|  
+|`UniqueName`|`String`|Restituisce il nome completo di un livello. Ad esempio, il `UniqueName` valore per un dipendente potrebbe essere *[Employee]. [ Reparto dipendente]. [Reparto]. & [vendite]. & [responsabile vendite Nord America]. America.&[272]*.|  
 |`BackgroundColor`|`String`|Restituisce il colore di sfondo definito nel database per il campo.|  
 |`Color`|`String`|Restituisce il colore di primo piano definito nel database per l'elemento.|  
 |`FontFamily`|`String`|Restituisce il nome del tipo di carattere definito nel database per l'elemento.|  
@@ -129,7 +129,7 @@ CELL PROPERTIES
   
  Sebbene le proprietà facciano parte dell'istruzione MDX SELECT, non sono incluse nelle colonne del set di risultati. I dati sono tuttavia disponibili per un report mediante la caratteristica delle proprietà estese. Nel riquadro risultati di una query MDX di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]fare doppio clic sulla cella per visualizzare i relativi valori delle proprietà, se impostati nel cubo. Se si fa doppio clic sulla prima cella Order Count contenente 1,379, verrà visualizzata una finestra popup con le proprietà della cella seguenti:  
   
-|Proprietà|valore|  
+|Proprietà|Value|  
 |--------------|-----------|  
 |CellOrdinal|0|  
 |Value|2481|  
@@ -141,7 +141,7 @@ CELL PROPERTIES
 |FONT_SIZE|(null)|  
 |FONT_FLAGS|(null)|  
   
- Se si crea un set di dati del report con questa query e lo si associa a una tabella, sarà possibile visualizzare la proprietà VALUE predefinita per un campo, ad esempio `=Fields!Month_of_Year!Value`. Se si imposta questa espressione come espressione di ordinamento per la tabella, i risultati saranno nella tabella viene ordinata alfabeticamente in base al mese perché Usa il campo del valore un `String` tipo di dati. Per ordinare la tabella in modo che i mesi si trovino nell'ordine di successione nell'anno, con gennaio primo e dicembre ultimo, utilizzare l'espressione seguente:  
+ Se si crea un set di dati del report con questa query e lo si associa a una tabella, sarà possibile visualizzare la proprietà VALUE predefinita per un campo, ad esempio `=Fields!Month_of_Year!Value`. Se si imposta questa espressione come espressione di ordinamento per la tabella, la tabella verrà ordinata alfabeticamente in base al mese poiché il tipo di dati del campo Value è `String`. Per ordinare la tabella in modo che i mesi si trovino nell'ordine di successione nell'anno, con gennaio primo e dicembre ultimo, utilizzare l'espressione seguente:  
   
 ```  
 =Fields!Month_of_Year("MEMBER_VALUE")  
@@ -151,7 +151,7 @@ CELL PROPERTIES
   
 ## <a name="see-also"></a>Vedere anche  
  [Espressioni &#40;Generatore report e SSRS&#41;](../report-design/expressions-report-builder-and-ssrs.md)   
- [Raccolte predefinite nelle espressioni &#40;Report e SSRS&#41;](../report-design/built-in-collections-in-expressions-report-builder.md)   
+ [Raccolte predefinite nelle espressioni &#40;Generatore report e SSRS&#41;](../report-design/built-in-collections-in-expressions-report-builder.md)   
  [Raccolta di campi del set di dati &#40;Generatore report e SSRS&#41;](dataset-fields-collection-report-builder-and-ssrs.md)  
   
   

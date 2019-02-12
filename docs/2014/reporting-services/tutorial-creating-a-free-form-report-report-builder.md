@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 87288b59-faf2-4b1d-a8e4-a7582baedf2f
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: 97082f1fcfc739e622c976b4dff0c1dbe4e6a79d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 9e1246a32f890c5842a1d1a9c8ad0202c160a171
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48068991"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56013752"
 ---
 # <a name="tutorial-creating-a-free-form-report-report-builder"></a>Esercitazione: Creazione di un report in formato libero (Generatore report)
   In questa esercitazione viene illustrato come creare un report in formato libero di SSRS che sia simile a una lettera tipo. È possibile disporre gli elementi dei report in modo da creare un form, con caselle di testo, immagini e altre aree dati.  
@@ -46,7 +46,7 @@ ms.locfileid: "48068991"
   
 -   [Aggiungere una visualizzazione dei dati di riepilogo](#Visualization)  
   
- Il tempo stimato per il completare l'esercitazione è di 20 minuti.  
+ Tempo previsto per il completamento di questa esercitazione: 20 minuti.  
   
 ## <a name="requirements"></a>Requisiti  
  Per altre informazioni sui requisiti, vedere [Prerequisiti per le esercitazioni &#40;Generatore report&#41;](../reporting-services/report-builder-tutorials.md).  
@@ -75,7 +75,7 @@ ms.locfileid: "48068991"
   
 3.  Fare clic su **Usa una connessione incorporata nel report**.  
   
-4.  Verificare che il tipo di connessione sia Microsoft SQL Server, quindi nella casella **Stringa di connessione** digitare **Origine dati = \<nomeserver>**  
+4.  Verificare che il tipo di connessione sia Microsoft SQL Server, quindi nella casella **Stringa di connessione** digitare: **Origine dati = \<nomeserver>**  
   
      \<NomeServer >, ad esempio Report001, specifica un computer in cui è installata un'istanza del motore di Database SQL Server. Poiché i dati del report non vengono estratti da un database di SQL Server, non è necessario includere il nome di un database. Per analizzare la query viene utilizzato il database predefinito nel server specificato.  
   
@@ -245,7 +245,7 @@ ms.locfileid: "48068991"
   
 8.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
-9. Posizionare il cursore sotto il testo digitato nel passaggio 3 e digitare: **Salve** .  
+9. Posizionare il cursore sotto il testo digitato nel passaggio 3 e digitare: **Hello** .  
   
     > [!NOTE]  
     >  Assicurarsi di includere lo spazio aggiuntivo dopo la parola "Salve". Lo spazio consente di separare il testo dal campo che si aggiungerà nel passaggio successivo.  
@@ -279,7 +279,7 @@ ms.locfileid: "48068991"
   
      ![Aggiungi testo newsletter](../../2014/tutorials/media/tutorial-newslettertext.png "Aggiungi testo newsletter")  
   
-20. Posizionare il cursore sotto il testo incollato nel passaggio 15, quindi digitare: **Congratulazioni per le vendite totali di** .  
+20. Posizionare il cursore sotto il testo digitato nel passaggio 15 e digitare: **Congratulazioni per le vendite totali di** .  
   
     > [!NOTE]  
     >  Assicurarsi di includere lo spazio aggiuntivo dopo la parola "di". Lo spazio consente di separare il testo dal campo che si aggiungerà nel passaggio successivo.  
@@ -466,7 +466,7 @@ ms.locfileid: "48068991"
   
 10. Fare clic con il pulsante destro del mouse sul titolo del grafico, quindi scegliere **Proprietà titolo**.  
   
-11. In Testo del titolo nella finestra di dialogo **Proprietà titolo grafico** digitare: **le Quantità di prodotto vendute**.  
+11. Nel **proprietà titolo grafico** della finestra di dialogo nel testo del titolo, tipo: **Quantità di prodotto vendute**.  
   
 12. Fare clic sulla scheda **Tipo di carattere** , quindi nell'elenco **Dimensioni** fare clic su **10pt**.  
   
@@ -500,7 +500,7 @@ ms.locfileid: "48068991"
   
 10. Fare clic con il pulsante destro del mouse sul titolo del grafico, quindi scegliere **Proprietà titolo**.  
   
-11. In Testo del titolo nella finestra di dialogo **Proprietà titolo grafico** digitare: **le Vendite prodotto**.  
+11. Nel **proprietà titolo grafico** della finestra di dialogo nel testo del titolo, tipo: **Vendite prodotto**.  
   
 12. Fare clic sulla scheda **Tipo di carattere** , quindi nell'elenco **Dimensioni** fare clic suk **10pt**e infine fare clic su **OK**.  
   
@@ -519,7 +519,7 @@ ms.locfileid: "48068991"
   
 1.  Fare clic sul rettangolo aggiunto in precedenza nel corso della lezione.  
   
-     Nel riquadro proprietà, il `Name` proprietà Visualizza il nome del rettangolo.  
+     La proprietà `Name` nel riquadro Proprietà indica il nome del rettangolo.  
   
      ![Nome del rettangolo](../../2014/tutorials/media/tutorial-rectanglename.png "nome del rettangolo")  
   

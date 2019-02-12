@@ -15,13 +15,13 @@ helpviewer_keywords:
 ms.assetid: 4436ce48-397d-42c7-9b5d-2a267e2a1b2c
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: a69f0a79ce10a17825490bd77e48a26d0d823af4
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: a461f3dfa1dca66efb2708e15f56c7fa30c58dc6
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48184251"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56037462"
 ---
 # <a name="deploying-a-delivery-extension"></a>Distribuzione di un'estensione per il recapito
   Le estensioni per il recapito forniscono le informazioni di configurazione in un file di configurazione XML. Il file XML è conforme all'elemento XML Schema definito per le estensioni per il recapito. Le estensioni per il recapito forniscono l'infrastruttura per l'impostazione e la modifica del file di configurazione.  
@@ -35,9 +35,9 @@ ms.locfileid: "48184251"
   
  Nella tabella riportata di seguito vengono descritti gli attributi dell'elemento `Extension` per le estensioni per il recapito.  
   
-|attribute|Description|  
+|attribute|Descrizione|  
 |---------------|-----------------|  
-|`Name`|Nome univoco per l'estensione, ad esempio "Posta elettronica server di report" per l'estensione per il recapito tramite posta elettronica o "Condivisione file server di report" per l'estensione per il recapito tramite condivisione. La lunghezza massima consentita per l'attributo `Name` è di 255 caratteri. Il nome deve essere univoco all'interno di tutte le voci di `Extension` elemento di un file di configurazione. Se è presente un nome duplicato, il server di report restituirà un errore.|  
+|`Name`|Nome univoco per l'estensione, ad esempio "Posta elettronica server di report" per l'estensione per il recapito tramite posta elettronica o "Condivisione file server di report" per l'estensione per il recapito tramite condivisione. La lunghezza massima consentita per l'attributo `Name` è di 255 caratteri. Il nome deve essere univoco all'interno di tutte le voci dell'elemento `Extension` di un file di configurazione. Se è presente un nome duplicato, il server di report restituirà un errore.|  
 |`Type`|Elenco delimitato da virgole che include lo spazio dei nomi completo insieme al nome dell'assembly.|  
 |`Visible`|Il valore `false` indica che l'estensione per il recapito non deve essere visibile nelle interfacce utente. Se l'attributo non è incluso, il valore predefinito è `true`.|  
   
@@ -55,7 +55,7 @@ ms.locfileid: "48184251"
   
 2.  Dopo aver copiato il file di assembly, aprire il file RSReportServer.config Il file RSReportServer. config si trova in %ProgramFiles%\Microsoft SQL Server\MSRS10_50. \<NomeIstanza > Services\ReportServer. directory. È necessario immettere una voce nel file di configurazione per il file di assembly di estensioni per il recapito. È possibile aprire il file di configurazione con [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] o con un semplice editor di testo, ad esempio Blocco note.  
   
-3.  Individuare il `Delivery` elemento nel file RSReportServer. config. È necessario immettere una voce per l'estensione per il recapito appena creata nel percorso seguente:  
+3.  Individuare l'elemento `Delivery` nel file RSReportServer.config. È necessario immettere una voce per l'estensione per il recapito appena creata nel percorso seguente:  
   
     ```  
     <Extensions>  
@@ -99,7 +99,7 @@ ms.locfileid: "48184251"
   
 2.  Dopo aver copiato il file di assembly, aprire il file RSReportServer.config Il file RSReportServer. config si trova in %ProgramFiles%\Microsoft SQL Server\MSRS10_50. \<NomeIstanza > Services\ReportServer. directory. È necessario immettere una voce nel file di configurazione per il file di assembly di estensioni per il recapito. È possibile aprire il file di configurazione con Visual Studio .NET o un editor di testo semplice, ad esempio Blocco note.  
   
-3.  Individuare il `DeliveryUI` elemento nel file RSReportServer. config. È necessario immettere una voce per l'estensione per il recapito appena creata nel percorso seguente:  
+3.  Individuare l'elemento `DeliveryUI` nel file RSReportServer.config. È necessario immettere una voce per l'estensione per il recapito appena creata nel percorso seguente:  
   
     ```  
     <Extensions>  

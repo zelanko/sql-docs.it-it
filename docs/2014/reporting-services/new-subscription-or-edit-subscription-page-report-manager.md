@@ -10,18 +10,18 @@ ms.topic: conceptual
 ms.assetid: e02d6529-ce67-4305-b7f0-433997e99c21
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: a89c8c66eab37f20c8816823b44cefcfb77ad9ef
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: a6194516bfc230c73df928bda5095c106776beff
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48208395"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56030132"
 ---
 # <a name="new-subscription-or-edit-subscription-page-report-manager"></a>Pagina Nuova sottoscrizione o Modifica sottoscrizione (Gestione report)
   La pagina Nuova sottoscrizione o Modifica sottoscrizione consente di creare una nuova sottoscrizione o modificare una sottoscrizione esistente per un report. Le opzioni disponibili in questa pagina variano a seconda dell'assegnazione di ruolo associata all'utente. Gli utenti con autorizzazioni avanzate avranno a disposizione un maggior numero di opzioni.  
   
- Le sottoscrizioni sono supportate per i report che possono essere eseguiti in modo automatico. È fondamentale che il report utilizzi credenziali archiviate o non utilizzi credenziali. Per i report con parametri è necessario specificare un valore predefinito. È possibile che le sottoscrizioni vengano disattivate se si modificano le impostazioni di esecuzione del report o si rimuovono i valori predefiniti per i parametri. Per altre informazioni, vedere [creare e gestire sottoscrizioni per server di Report in modalità nativa](../../2014/reporting-services/create-manage-subscriptions-native-mode-report-servers.md).  
+ Le sottoscrizioni sono supportate per i report che possono essere eseguiti in modo automatico. È fondamentale che il report utilizzi credenziali archiviate o non utilizzi credenziali. Per i report con parametri è necessario specificare un valore predefinito. È possibile che le sottoscrizioni vengano disattivate se si modificano le impostazioni di esecuzione del report o si rimuovono i valori predefiniti per i parametri. Per altre informazioni, vedere [Creare e gestire sottoscrizioni per server di report in modalità nativa](../../2014/reporting-services/create-manage-subscriptions-native-mode-report-servers.md).  
   
 > [!NOTE]  
 >  Questa funzionalità non è disponibile in ogni edizione di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Per un elenco delle funzionalità supportate dalle edizioni di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], vedere [Features Supported by the Editions of SQL Server 2014](../../2014/getting-started/features-supported-by-the-editions-of-sql-server-2014.md).  
@@ -37,7 +37,7 @@ ms.locfileid: "48208395"
   
 3.  Nel menu a discesa eseguire uno dei passaggi seguenti:  
   
-    -   fare clic su **Gestisci**. Verrà visualizzata la pagina delle proprietà Generale per il report. Selezionare la scheda **Sottoscrizioni** . Nella barra degli strumenti, fare clic su **nuova sottoscrizione**, oppure selezionare una sottoscrizione esistente e fare clic su **modificare**.  
+    -   fare clic su **Gestisci**. Verrà visualizzata la pagina delle proprietà Generale per il report. Selezionare la scheda **Sottoscrizioni** . Nella barra degli strumenti fare clic su **Nuova sottoscrizione**o selezionare una sottoscrizione esistente e fare clic su **Modifica**.  
   
     -   Fare clic su **Sottoscrivi**. Viene visualizzata la pagina **Nuova sottoscrizione** per il report.  
   

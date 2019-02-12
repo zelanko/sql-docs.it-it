@@ -12,14 +12,14 @@ f1_keywords:
 - "10518"
 ms.assetid: 47650a82-3b0c-4e32-8565-e9332bdcf4d6
 author: maggiesmsft
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: 6b41dd0e97f8a729d2c58b7fd6b8f0d443fe9c3d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.author: maghan
+manager: kfile
+ms.openlocfilehash: b663f9cd95d055fe8736ee2232bbc273fe89798e
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48115759"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56015017"
 ---
 # <a name="map-meridian-properties-dialog-box-labels"></a>Finestra di dialogo Proprietà meridiani mappa, Etichette
   Usare la **MapMeridian proprietà** finestra di dialogo per modificare le opzioni di etichetta per la griglia verticale nel viewport della mappa. Un meridiano rappresenta il valore seguente a seconda del sistema di coordinate specificato per il viewport:  
@@ -31,8 +31,8 @@ ms.locfileid: "48115759"
  Fare clic sul pulsante **Espressione** (*fx*) per modificare un'espressione che imposta il valore per l'opzione.  
   
 ## <a name="options"></a>Opzioni  
- **Intervallo**  
- Digitare un valore intero in gradi che specifica l'intervallo tra meridiani. Per impostazione predefinita, è selezionato **Automatico** . * Automatico * indica che il valore è determinato automaticamente dai dati spaziali.  
+ **Interval**  
+ Digitare un valore intero in gradi che specifica l'intervallo tra meridiani. Per impostazione predefinita, è selezionato **Automatico** . **Automatico** indica che il valore è determinato automaticamente dai dati spaziali.  
   
  **Mostra etichette**  
  Selezionare questa opzione per visualizzare le etichette per i meridiani.  
