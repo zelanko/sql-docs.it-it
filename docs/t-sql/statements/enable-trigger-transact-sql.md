@@ -23,19 +23,19 @@ ms.assetid: 6e21f0ad-68d0-432f-9c7c-a119dd2d3fc9
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: a92ebf725860db4537b03d4d5eb917475774201a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 86b23a92006e4a2f3e3896cd1fe20c8b566d14e4
+ms.sourcegitcommit: c4870cb5bebf9556cdb4d8b35ffcca265fb07862
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47599439"
+ms.lasthandoff: 02/02/2019
+ms.locfileid: "55652520"
 ---
 # <a name="enable-trigger-transact-sql"></a>ENABLE TRIGGER (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  Abilita un trigger DML, DDL o LOGON.  
+Abilita un trigger DML, DDL o LOGON.  
   
- ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -45,41 +45,41 @@ ON { object_name | DATABASE | ALL SERVER } [ ; ]
 ```  
   
 ## <a name="arguments"></a>Argomenti  
- *schema_name*  
- Nome dello schema a cui appartiene il trigger. *schema_name* non può essere specificato per i trigger DDL o LOGON.  
+*schema_name*  
+Nome dello schema a cui appartiene il trigger. *schema_name* non può essere specificato per i trigger DDL o LOGON.  
   
- *trigger_name*  
- Nome del trigger da abilitare.  
+*trigger_name*  
+Nome del trigger da abilitare.  
   
- ALL  
- Indica che vengono abilitati tutti i trigger definiti nell'ambito della clausola ON.  
+ALL  
+Indica che vengono abilitati tutti i trigger definiti nell'ambito della clausola ON.  
   
- *object_name*  
- Nome della tabella o della vista su cui deve essere eseguito il trigger DML *trigger_name*.  
+*object_name*  
+Nome della tabella o della vista su cui deve essere eseguito il trigger DML *trigger_name*.  
   
- DATABASE  
- Per un trigger DDL, indica che *trigger_name* è stato creato o modificato per essere eseguito con ambito database.  
+DATABASE  
+Per un trigger DDL, indica che *trigger_name* è stato creato o modificato per essere eseguito con ambito database.  
   
- ALL SERVER  
- **Si applica a**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] tramite [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+ALL SERVER  
+**Si applica a**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] tramite [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
- Per un trigger DDL, indica che *trigger_name* è stato creato o modificato per essere eseguito con ambito server. ALL SERVER si applica anche ai trigger LOGON.  
+Per un trigger DDL, indica che *trigger_name* è stato creato o modificato per essere eseguito con ambito server. ALL SERVER si applica anche ai trigger LOGON.  
   
 > [!NOTE]  
 >  Questa opzione non è disponibile in un database indipendente.  
   
 ## <a name="remarks"></a>Remarks  
- L'abilitazione di un trigger non comporta la sua creazione ex-novo. Un trigger disabilitato continua a esistere come oggetto nel database corrente, ma non verrà mai attivato. Se si abilita un trigger, questo verrà attivato ogni volta che vengono eseguite istruzioni [!INCLUDE[tsql](../../includes/tsql-md.md)] per le quali è stato programmato in origine. I trigger vengono disabilitati tramite [DISABLE TRIGGER](../../t-sql/statements/disable-trigger-transact-sql.md). I trigger DML definiti su tabelle possono essere disabilitati o abilitati anche tramite [ALTER TABLE](../../t-sql/statements/alter-table-transact-sql.md).  
+L'abilitazione di un trigger non comporta la sua creazione ex-novo. Un trigger disabilitato continua a esistere come oggetto nel database corrente, ma non viene attivato. Se si abilita un trigger, questo verrà attivato ogni volta che vengono eseguite istruzioni [!INCLUDE[tsql](../../includes/tsql-md.md)] per le quali è stato programmato in origine. I trigger vengono disabilitati tramite [DISABLE TRIGGER](../../t-sql/statements/disable-trigger-transact-sql.md). I trigger DML definiti su tabelle possono essere disabilitati o abilitati anche tramite [ALTER TABLE](../../t-sql/statements/alter-table-transact-sql.md).  
   
 ## <a name="permissions"></a>Permissions  
- Per abilitare un trigger DML, un utente deve disporre almeno dell'autorizzazione ALTER per la tabella o vista in base alla quale il trigger è stato creato.  
+Per abilitare un trigger DML, un utente deve avere almeno l'autorizzazione ALTER per la tabella o vista in base alla quale il trigger è stato creato.  
   
- Per abilitare un trigger DDL con ambito server (ON ALLA SERVER) o un trigger LOGON, è necessario disporre dell'autorizzazione CONTROL SERVER per il server. Per abilitare un trigger DDL nell'ambito del database (ON DATABASE), un utente deve disporre almeno dell'autorizzazione ALTER ANY DATABASE DDL TRIGGER nel database corrente.  
+Per abilitare un trigger DDL con ambito server (ON ALL SERVER) o un trigger LOGON, un utente deve avere l'autorizzazione CONTROL SERVER per il server. Per abilitare un trigger DDL nell'ambito del database (ON DATABASE), un utente deve avere almeno l'autorizzazione ALTER ANY DATABASE DDL TRIGGER nel database corrente.  
   
 ## <a name="examples"></a>Esempi  
   
 ### <a name="a-enabling-a-dml-trigger-on-a-table"></a>A. Abilitazione di un trigger DML in una tabella  
- Nell'esempio seguente il trigger `uAddress` creato nella tabella `Address` del database AdventureWorks viene disabilitato e quindi abilitato.  
+Nell'esempio seguente il trigger `uAddress` creato nella tabella `Address` del database AdventureWorks viene disabilitato e quindi abilitato.  
   
 ```  
 DISABLE TRIGGER Person.uAddress ON Person.Address;  
@@ -88,8 +88,8 @@ ENABLE Trigger Person.uAddress ON Person.Address;
 GO  
 ```  
   
-### <a name="b-enabling-a-ddl-trigger"></a>B. Abilitazione di un trigger DDL  
- Nell'esempio seguente viene creato un trigger DDL `safety` con ambito database, che viene quindi disabilitato e poi abilitato.  
+### <a name="b-enabling-a-ddl-trigger"></a>b. Abilitazione di un trigger DDL  
+Nell'esempio seguente viene creato un trigger DDL `safety` con ambito database, che viene quindi disabilitato e poi abilitato.  
   
 ```  
 CREATE TRIGGER safety   
@@ -106,7 +106,7 @@ GO
 ```  
   
 ### <a name="c-enabling-all-triggers-that-were-defined-with-the-same-scope"></a>C. Abilitazione di tutti i trigger definiti nello stesso ambito  
- Nell'esempio seguente vengono abilitati tutti i trigger DDL creati nell'ambito del server.  
+Nell'esempio seguente vengono abilitati tutti i trigger DDL creati nell'ambito del server.  
   
 **Si applica a**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] tramite [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   

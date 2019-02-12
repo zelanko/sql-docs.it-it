@@ -47,12 +47,12 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current||>=aps-pdw-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 1237e85271949279a96ddd149536189b9940a919
-ms.sourcegitcommit: a94cf79160e22fa8b4bafe3e6e50bb54e20b1bca
+ms.openlocfilehash: a098756919cec261d9416149a508b311c48cd147
+ms.sourcegitcommit: 97340deee7e17288b5eec2fa275b01128f28e1b8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54805777"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55421498"
 ---
 # <a name="backup-transact-sql"></a>BACKUP (Transact-SQL)
 
@@ -71,7 +71,7 @@ Nella riga seguente fare clic su qualsiasi nome di prodotto. Viene visualizzato 
 > [!div class="mx-tdCol2BreakAll"]  
 > |||| 
 > |---|---|---| 
-> |**_\* SQL Server \*_** &nbsp;|[Database SQL<br />Istanza gestita](backup-transact-sql.md?view=azuresqldb-mi-current)|[Parallel<br />Data Warehouse](backup-transact-sql.md?view=aps-pdw-2016)|  
+> |**_\* SQL Server \*_** &nbsp;|[Istanza gestita<br />database SQL](backup-transact-sql.md?view=azuresqldb-mi-current)|[Parallel<br />Data Warehouse](backup-transact-sql.md?view=aps-pdw-2016)|  
 
 &nbsp;
 
@@ -940,13 +940,13 @@ WITH STATS = 5;
 > [!div class="mx-tdCol2BreakAll"]  
 > |||| 
 > |---|---|---| 
-> |[SQL Server](backup-transact-sql.md?view=sql-server-2016)|**_\* Database SQL<br />Istanza gestita \*_** &nbsp;|[Parallel<br />Data Warehouse](backup-transact-sql.md?view=aps-pdw-2016)|  
+> |[SQL Server](backup-transact-sql.md?view=sql-server-2016)|**_\* Istanza gestita<br />database SQL\*_** &nbsp;|[Parallel<br />Data Warehouse](backup-transact-sql.md?view=aps-pdw-2016)|  
 
 &nbsp;
 
 ## <a name="azure-sql-database-managed-instance"></a>Istanza gestita di database SQL di Azure
 
-Esegue il backup di un database SQL posizionato/ospitato in un'istanza gestita di database SQL di Azure. [Istanza gestita](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance) di database SQL ha backup automatici e consente agli utenti di creare backup `COPY_ONLY` dei database completi. I backup differenziali, del log e di snapshot di file non sono supportati.  
+Esegue il backup di un database SQL posizionato/ospitato in un'istanza gestita di database SQL di Azure. Un'[istanza gestita](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance) di database SQL ha backup automatici e consente agli utenti di creare backup `COPY_ONLY` dei database completi. I backup differenziali, del log e di snapshot di file non sono supportati.  
 
 ## <a name="syntax"></a>Sintassi  
   
@@ -990,7 +990,7 @@ Specifica un backup completo del database. Durante un backup del database, l'ist
 > [!IMPORTANT]
 > Un backup del database creato in un'istanza gestita può essere ripristinato solo in un'altra istanza gestita. Non può essere ripristinato in un'istanza locale di SQL Server (in modo analogo a un backup di un database di SQL Server 2016 che non può essere ripristinato in un'istanza di SQL Server 2012).
   
-Quando si ripristina un backup creato da BACKUP DATABASE (*backup dei dati*), viene ripristinato l'intero backup. Per eseguire il ripristino da backup automatici di Istanza gestita di database SQL di Azure, vedere [SQL Database Restore](https://docs.microsoft.com/azure/sql-database/sql-database-restore)  
+Quando si ripristina un backup creato da BACKUP DATABASE (*backup dei dati*), viene ripristinato l'intero backup. Per eseguire il ripristino dai backup automatici di un'istanza gestita di database SQL di Azure, vedere [Ripristino del database SQL](https://docs.microsoft.com/azure/sql-database/sql-database-restore).  
   
 { *database_name* | **@**_database\_name\_var_ }   
 Nome del database da cui viene eseguito il backup completo del database. Se indicato in forma di variabile (**@**_database\_name\_var_), questo nome può essere specificato come costante stringa (**@**_database\_name\_var_**=**_database name_) oppure come variabile di tipo stringa di caratteri, ad eccezione del tipo di dati **ntext** o **text**.  
@@ -1118,7 +1118,7 @@ Visualizza un messaggio ad ogni completamento di *percentage* e consente di tene
   
 L'opzione STATS segnala la percentuale di completamento in base alla soglia specificata per l'intervallo successivo. Si tratta approssimativamente della percentuale specificata. Con l'impostazione STATS=10, ad esempio, se la percentuale di completamento corrisponde al 40%, potrebbe venire indicata una percentuale uguale al 43%. Per i set di backup di grandi dimensioni ciò non rappresenta un problema, perché la percentuale di completamento aumenta molto lentamente tra le varie chiamate di I/O completate.  
   
-## <a name="limitations-for-sql-database-managed-instance"></a>Limitazioni di Istanza gestita di database SQL
+## <a name="limitations-for-sql-database-managed-instance"></a>Limitazioni per un'istanza gestita di database SQL
 La dimensione massima della striscia di backup corrisponde a 195 GB (dimensione massima di un oggetto BLOB). Aumentare il numero di strisce nel comando di backup per ridurre la dimensione delle singole strisce e rimanere entro questo limite.
 
 ## <a name="security"></a>Security  
@@ -1148,7 +1148,7 @@ WITH STATS = 5, COPY_ONLY;
 > [!div class="mx-tdCol2BreakAll"]  
 > |||| 
 > |---|---|---| 
-> |[SQL Server](backup-transact-sql.md?view=sql-server-2016)|[Database SQL<br />Istanza gestita](backup-transact-sql.md?view=azuresqldb-mi-current)|**_\* Parallel<br />Data Warehouse \*_** &nbsp;|  
+> |[SQL Server](backup-transact-sql.md?view=sql-server-2016)|[Istanza gestita<br />database SQL](backup-transact-sql.md?view=azuresqldb-mi-current)|**_\* Parallel<br />Data Warehouse \*_** &nbsp;|  
 
 &nbsp;
 

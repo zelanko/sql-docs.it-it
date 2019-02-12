@@ -23,19 +23,19 @@ ms.assetid: d686f2f5-e03a-4ffe-a566-6036628f46f1
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 320c11c78f95f644e373b1cd410858a81e72edad
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 112d46b26d8b4e03e8842aa17b8f1ad54976e19a
+ms.sourcegitcommit: c4870cb5bebf9556cdb4d8b35ffcca265fb07862
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47804489"
+ms.lasthandoff: 02/02/2019
+ms.locfileid: "55652530"
 ---
 # <a name="drop-xml-schema-collection-transact-sql"></a>DROP XML SCHEMA COLLECTION (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Elimina l'intera raccolta di XML Schema e tutti i relativi componenti.  
+Elimina l'intera raccolta di XML Schema e tutti i relativi componenti.  
   
- ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -45,22 +45,22 @@ DROP XML SCHEMA COLLECTION [ relational_schema. ]sql_identifier
 ```  
   
 ## <a name="arguments"></a>Argomenti  
- *relational_schema*  
- Identifica il nome dello schema relazionale. Se viene omesso, viene utilizzato lo schema relazionale predefinito.  
+*relational_schema*  
+Identifica il nome dello schema relazionale. Se viene omesso, viene utilizzato lo schema relazionale predefinito.  
   
- *sql_identifier*  
- Nome della raccolta di XML Schema da rimuovere.  
+*sql_identifier*  
+Nome della raccolta di XML Schema da rimuovere.  
   
 ## <a name="remarks"></a>Remarks  
- La rimozione di una raccolta di XML Schema è un'operazione transazionale. Ciò significa che quando si rimuove una raccolta di XML Schema all'interno di una transazione e successivamente si esegue il rollback della transazione, la raccolta di XML Schema non viene rimossa.  
+La rimozione di una raccolta di XML Schema è un'operazione transazionale. Quando si rimuove una raccolta di XML Schema all'interno di una transazione e successivamente si esegue il rollback della transazione, la raccolta di XML Schema non viene rimossa.  
   
- Non è possibile rimuovere una raccolta di XML Schema quando è in uso e pertanto la raccolta da rimuovere non può essere:  
+Non è possibile rimuovere una raccolta di XML Schema quando è in uso e pertanto la raccolta da rimuovere non può essere in una delle condizioni seguenti:  
   
 -   Associato a una colonna o un parametro di tipo **xml**.  
   
 -   Specificato in un vincolo di tabella.  
   
--   Contenuto in un riferimento di una stored procedure o funzione associata a uno schema. Ad esempio, la funzione seguente bloccherà la raccolta di XML Schema `MyCollection` poiché viene specificato `WITH SCHEMABINDING`. Se si rimuove tale specifica, verrà rimosso il blocco su XML SCHEMA COLLECTION.  
+-   Contenuto in un riferimento di una stored procedure o funzione associata a uno schema. Ad esempio, la funzione seguente blocca la raccolta di XML Schema `MyCollection` perché specifica `WITH SCHEMABINDING`. Se si rimuove tale specifica, verrà rimosso il blocco su XML SCHEMA COLLECTION.  
   
     ```  
     CREATE FUNCTION dbo.MyFunction()  
@@ -75,10 +75,10 @@ DROP XML SCHEMA COLLECTION [ relational_schema. ]sql_identifier
     ```  
   
 ## <a name="permissions"></a>Permissions  
- Per rimuovere una raccolta XML SCHEMA COLLECTION è richiesta l'autorizzazione DROP per la raccolta.  
+Per rimuovere una raccolta XML SCHEMA COLLECTION è richiesta l'autorizzazione DROP per la raccolta.  
   
 ## <a name="examples"></a>Esempi  
- Nell'esempio seguente viene illustrato come rimuovere una raccolta di XML Schema.  
+Nell'esempio seguente viene illustrato come rimuovere una raccolta di XML Schema.  
   
 ```  
 DROP XML SCHEMA COLLECTION ManuInstructionsSchemaCollection;  

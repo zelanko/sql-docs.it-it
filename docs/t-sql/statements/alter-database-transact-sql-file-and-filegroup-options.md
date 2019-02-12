@@ -43,12 +43,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: 5a91f7bf27dea953cde7186262c8b28b2cd0cf7e
-ms.sourcegitcommit: 85bfaa5bac737253a6740f1f402be87788d691ef
+ms.openlocfilehash: 3ed1de27dacbd8104a9125fe105b50689a4fd9c9
+ms.sourcegitcommit: 97340deee7e17288b5eec2fa275b01128f28e1b8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/17/2018
-ms.locfileid: "53329016"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55421248"
 ---
 # <a name="alter-database-transact-sql-file-and-filegroup-options"></a>Opzioni per file e filegroup ALTER DATABASE (Transact-SQL) 
 
@@ -65,7 +65,7 @@ Nella riga seguente fare clic su qualsiasi nome di prodotto. Viene visualizzato 
 > [!div class="mx-tdCol2BreakAll"]
 > |||
 > |-|-|-|
-> |**_\* SQL Server \*_**<br />&nbsp;|[Database SQL<br />Istanza gestita](alter-database-transact-sql-file-and-filegroup-options.md?view=azuresqldb-mi-current)|
+> |**_\* SQL Server \*_**<br />&nbsp;|[Istanza gestita<br />database SQL](alter-database-transact-sql-file-and-filegroup-options.md?view=azuresqldb-mi-current)|
 
 &nbsp;
 
@@ -709,13 +709,13 @@ GO
 > [!div class="mx-tdCol2BreakAll"]
 > |||
 > |-|-|-|
-> |[SQL Server](alter-database-transact-sql-file-and-filegroup-options.md?view=sql-server-2016)|**_\* Database SQL<br />Istanza gestita \*_**<br />&nbsp;|
+> |[SQL Server](alter-database-transact-sql-file-and-filegroup-options.md?view=sql-server-2016)|**_\* Istanza gestita<br />database SQL\*_**<br />&nbsp;|
 
 &nbsp;
 
 ## <a name="azure-sql-database-managed-instance"></a>Istanza gestita di database SQL di Azure
 
-Usare questa istruzione con un database nell'Istanza gestita di database SQL di Azure.
+Usare questa istruzione con un database nell'istanza gestita di database SQL di Azure.
 
 ## <a name="syntax-for-databases-in-a-managed-instance"></a>Sintassi per i database in un'istanza gestita
 

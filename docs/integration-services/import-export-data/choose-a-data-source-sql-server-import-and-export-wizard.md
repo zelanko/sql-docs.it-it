@@ -1,7 +1,7 @@
 ---
 title: Scelta origine dati (Importazione/Esportazione guidata SQL Server) | Microsoft Docs
 ms.custom: ''
-ms.date: 03/16/2017
+ms.date: 01/28/2019
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
@@ -13,20 +13,23 @@ ms.assetid: ebf28a62-dfc1-4b39-9db5-df1919e5fccb
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: c8e337704f95b432c30a6451aabe8a85b4609d5b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a93eb928b8d9a756380879ad8cc30475ffd223e9
+ms.sourcegitcommit: 92c524119d7df5daf69ec144d532ddcb2e46abc0
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47806016"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55290421"
 ---
 # <a name="choose-a-data-source-sql-server-import-and-export-wizard"></a>Scelta origine dati (Importazione/Esportazione guidata SQL Server)
-  Dopo la pagina di benvenuto, l'Importazione/Esportazione guidata [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] mostra **Scelta origine dati**. In questa pagina è necessario fornire informazioni sull'origine dati e su come connettersi a tale origine.
+  Dopo la pagina di benvenuto, l'Importazione/Esportazione guidata [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] visualizza **Scelta origine dati**. In questa pagina è necessario fornire informazioni sull'origine dati e su come connettersi a tale origine.
   
 Per informazioni sulle origini dati che è possibile usare, vedere [Quali origini dati e destinazioni è possibile usare](../../integration-services/import-export-data/import-and-export-data-with-the-sql-server-import-and-export-wizard.md#wizardSources)
 
+> [!NOTE]
+> Importazione/esportazione guidata [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usa SQL Server Integration Services (SSIS). Di conseguenza, le stesse limitazioni che si applicano a SSIS sono valide anche per la procedura guidata.  Ad esempio, le colonne ErrorCode ed ErrorColumn che vengono aggiunte per impostazione predefinita, come descritto in [Gestione degli errori nei dati](../../integration-services/data-flow/error-handling-in-data.md).
+
 ## <a name="screen-shot-of-the-choose-a-data-source-page"></a>Screenshot della pagina Scegliere un'origine dati 
-Lo screenshot seguente mostra la prima parte della pagina **Scegliere un'origine dati** della procedura guidata. Il resto della pagina presenta un numero variabile di opzioni a seconda dell'origine dati scelta.
+L'immagine seguente mostra la prima parte della pagina **Scelta origine dati** della procedura guidata. Il resto della pagina presenta un numero variabile di opzioni a seconda dell'origine dati scelta.
 
 ![Scegliere l'origine](../../integration-services/import-export-data/media/choose-source.png)
 
@@ -66,10 +69,12 @@ Per connettersi a un'origine dati di uso comune, vedere una delle pagine seguent
 
 Per informazioni su come connettersi a un'origine dati non elencata qui, vedere [The Connection Strings Reference](https://www.connectionstrings.com/). Questo sito di terze parti contiene stringhe di connessione di esempio e altre informazioni sui provider di dati e sulle informazioni di connessione richieste dai provider.
 
-## <a name="whats-next"></a>Quali sono le operazioni successive?  
+## <a name="whats-next"></a>Quali sono le operazioni successive?
  Dopo avere fornito informazioni sull'origine dei dati e su come connettersi a tale origine, la pagina successiva è **Scelta destinazione**. In questa pagina fornire informazioni sulla destinazione per i dati e su come connettersi a tale destinazione. Per altre informazioni, vedere [Scelta destinazione](../../integration-services/import-export-data/choose-a-destination-sql-server-import-and-export-wizard.md).
- 
+
 ## <a name="see-also"></a>Vedere anche
 [Iniziare con questo semplice esempio dell'Importazione/Esportazione guidata](../../integration-services/import-export-data/get-started-with-this-simple-example-of-the-import-and-export-wizard.md)
 
+[!INCLUDE[get-help-options](../../includes/paragraph-content/get-help-options.md)]
 
+[!INCLUDE[contribute-to-content](../../includes/paragraph-content/contribute-to-content.md)]

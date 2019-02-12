@@ -15,12 +15,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: a794cdf7990f5b4a1ca2325d7d2d4433030b08a9
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 9cde8c26570bc0dec3cefe10dd1c7b2bb1ddb71c
+ms.sourcegitcommit: dc3543e81e32451568133e9b1b560f7ee76d7fb5
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52545773"
+ms.lasthandoff: 01/31/2019
+ms.locfileid: "55428608"
 ---
 # <a name="set-the-sql-server-connection-for-the-sql-server-agent-service-sql-server-management-studio"></a>Set the SQL Server Connection for the SQL Server Agent Service (SQL Server Management Studio)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -36,7 +36,7 @@ In questo argomento viene illustrato come impostare la connessione tra [!INCLUDE
   
     [Limitazioni e restrizioni](#Restrictions)  
   
-    [Security](#Security)  
+    [Sicurezza](#Security)  
   
 -   **Per impostare Connessione SQL Server per SQL Server Agent tramite:**  
   
@@ -73,7 +73,7 @@ Per altre informazioni sulle autorizzazioni di Windows necessarie per l'account 
   
 2.  Fare clic con il pulsante destro del mouse su **SQL Server Agent** e scegliere **Proprietà**.  
   
-3.  Nella finestra di dialogo **Proprietà SQL Server Agent**_nome_server_ fare clic su **Connessione**in **Seleziona una pagina**.  
+3.  Nella finestra di dialogo **Proprietà SQL Server Agent** fare clic su **Connessione** in **Selezione pagina**.  
   
 4.  In **Connessione SQL Server**selezionare **Usa autenticazione di Windows** per abilitare la connessione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent a un'istanza del [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde_md.md)] con l'autenticazione di [!INCLUDE[msCoName](../../includes/msconame_md.md)] Windows. Per le connessioni ai database di [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] e versioni successive è necessario utilizzare l'autenticazione di Windows.  
   

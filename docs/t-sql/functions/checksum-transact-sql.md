@@ -21,12 +21,12 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 6febad4b4bbb9de2dcec7d0c7fc93adb0403947e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 7feb3a0e82a1c3737f9d8723ecd26c741b334e17
+ms.sourcegitcommit: 032273bfbc240fe22ac6c1f6601a14a6d99573f7
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47795579"
+ms.lasthandoff: 02/01/2019
+ms.locfileid: "55513911"
 ---
 # <a name="checksum-transact-sql"></a>CHECKSUM (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-asdw-xxx-md.md)]
@@ -37,7 +37,7 @@ La funzione `CHECKSUM` restituisce il valore di checksum calcolato su una riga d
   
 ## <a name="syntax"></a>Sintassi  
   
-```sql
+```
 CHECKSUM ( * | expression [ ,...n ] )  
 ```  
   
@@ -60,13 +60,13 @@ Un altro tipo di dati non confrontabile è **sql_variant** con uno qualsiasi dei
  **int**  
   
 ## <a name="remarks"></a>Remarks  
-La funzione CHECKSUM calcola un valore hash, denominato checksum, sul relativo elenco di argomenti. Usare questo valore hash per la creazione degli indici hash. Se la funzione `CHECKSUM` ha argomenti di colonna e viene compilato un indice sul valore di CHECKSUM calcolato, il risultato sarà un indice hash, che può essere utilizzato per eseguire ricerche di uguaglianza sulle colonne.
+`CHECKSUM` calcola un valore hash, denominato checksum, sul relativo elenco di argomenti. Usare questo valore hash per la creazione degli indici hash. Se la funzione `CHECKSUM` ha argomenti di colonna e viene compilato un indice sul valore di `CHECKSUM` calcolato, il risultato sarà un indice hash, che può essere utilizzato per eseguire ricerche di uguaglianza sulle colonne.
   
-La funzione `CHECKSUM` soddisfa le proprietà di una funzione hash: quando `CHECKSUM` viene applicata su due elenchi di espressioni qualsiasi restituisce lo stesso valore se gli elementi corrispondenti dei due elenchi sono dello stesso tipo di dati e risultano uguali quando vengono confrontati tramite l'operatore di uguaglianza (=). Ai fini della funzione `CHECKSUM`, i valori Null di un tipo specificato vengono considerati uguali ai fini del confronto. Se almeno uno dei valori nell'elenco di espressioni cambia, è probabile che cambi anche il valore di checksum dell'elenco. Questo comportamento non è tuttavia garantito. Per rilevare se i valori sono stati modificati, è pertanto consigliabile usare `CHECKSUM` solo se l'applicazione può tollerare una modifica mancata occasionale. In caso contrario, prendere in considerazione l'uso di [HashBytes](../../t-sql/functions/hashbytes-transact-sql.md). In presenza di un algoritmo hash MD5 specificato, le probabilità che HashBytes restituisca lo stesso risultato per due diversi input sono notevolmente inferiori rispetto a CHECKSUM.
+La funzione `CHECKSUM` soddisfa le proprietà di una funzione hash: quando `CHECKSUM` viene applicata su due elenchi di espressioni qualsiasi restituisce lo stesso valore se gli elementi corrispondenti dei due elenchi sono dello stesso tipo di dati e risultano uguali quando vengono confrontati tramite l'operatore di uguaglianza (=). Ai fini della funzione `CHECKSUM`, i valori Null di un tipo specificato vengono considerati uguali ai fini del confronto. Se almeno uno dei valori nell'elenco di espressioni cambia, è probabile che cambi anche il valore di checksum dell'elenco. Questo comportamento non è tuttavia garantito. Per rilevare se i valori sono stati modificati, è pertanto consigliabile usare `CHECKSUM` solo se l'applicazione può tollerare una modifica mancata occasionale. In caso contrario, prendere in considerazione l'uso di `HASHBYTES`. In presenza di un algoritmo hash MD5 specificato, le probabilità che `HASHBYTES` restituisca lo stesso risultato per due diversi input sono notevolmente inferiori rispetto a `CHECKSUM`.
   
-L'ordine di espressione influisce sul valore `CHECKSUM` calcolato. L'ordine delle colonne usate per CHECKSUM(\*) corrisponde all'ordine delle colonne specificato nella definizione della tabella o della vista, incluse le colonne calcolate.
+L'ordine di espressione influisce sul valore `CHECKSUM` calcolato. L'ordine delle colonne usate per `CHECKSUM(*)` corrisponde all'ordine delle colonne specificato nella definizione della tabella o della vista, incluse le colonne calcolate.
   
-Il valore di CHECKSUM dipende dalle regole di confronto. Lo stesso valore archiviato con regole di confronto diverse restituirà un valore di checksum diverso.
+Il valore di `CHECKSUM` dipende dalle regole di confronto. Lo stesso valore archiviato con regole di confronto diverse restituirà un valore di `CHECKSUM` diverso.
   
 ## <a name="examples"></a>Esempi  
 Negli esempi seguenti viene illustrato l'uso di `CHECKSUM` per compilare indici hash.
@@ -75,6 +75,7 @@ Per compilare l'indice hash, il primo esempio aggiunge una colonna checksum calc
   
 ```sql
 -- Create a checksum index.  
+
 SET ARITHABORT ON;  
 USE AdventureWorks2012;   
 GO  
@@ -91,6 +92,7 @@ In questo esempio viene illustrato l'uso di un indice checksum come indice hash.
 /*Use the index in a SELECT query. Add a second search   
 condition to catch stray cases where checksums match,   
 but the values are not the same.*/  
+
 SELECT *   
 FROM Production.Product  
 WHERE CHECKSUM(N'Bearing Ball') = cs_Pname  

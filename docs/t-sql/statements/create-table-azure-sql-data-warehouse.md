@@ -13,12 +13,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 7dae0b33b2b3a9100aada7505e61f3e75f8bf66c
-ms.sourcegitcommit: 467b2c708651a3a2be2c45e36d0006a5bbe87b79
+ms.openlocfilehash: 48044f9c24942079f66ee4675c1aa01bb6549532
+ms.sourcegitcommit: 31c8f9eab00914e056e9219093dbed1b0b4542a6
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53980482"
+ms.lasthandoff: 01/31/2019
+ms.locfileid: "55484860"
 ---
 # <a name="create-table-azure-sql-data-warehouse"></a>CREATE TABLE (Azure SQL Data Warehouse)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
@@ -289,7 +289,7 @@ Per i limiti minimi e massimi, vedere [Limiti di capacità di SQL Data Warehouse
 ### <a name="determining-the-number-of-table-partitions"></a>Determinazione del numero di partizioni della tabella
 Ogni tabella definita dall'utente è suddivisa in tabelle più piccole che vengono archiviate in percorsi separati detti distribuzioni. [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] usa 60 distribuzioni. In [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] il numero di distribuzioni dipende dal numero di nodi di calcolo.
  
-Ogni distribuzione contiene tutte le partizioni della tabella. Ad esempio, se sono presenti 60 distribuzioni e quattro partizioni di tabella, vi saranno 320 partizioni. Se la tabella è un indice columnstore cluster, esisterà un solo indice columnstore per partizione, ovvero saranno disponibili 320 indici columnstore.
+Ogni distribuzione contiene tutte le partizioni della tabella. Ad esempio, se sono presenti 60 distribuzioni e quattro partizioni di tabella oltre a una partizione vuota, vi saranno 300 partizioni (5 x 60= 300). Se la tabella è un indice columnstore cluster, esisterà un solo indice columnstore per partizione, ovvero saranno disponibili 300 indici columnstore.
 
 Si consiglia di usare un numero inferiore di partizioni di tabella per garantire che ogni indice columnstore abbia righe a sufficienza per poter sfruttare i vantaggi degli indici columnstore. Per altre informazioni, vedere gli articoli relativi a [partizionamento delle tabelle in SQL Data Warehouse](https://azure.microsoft.com/documentation/articles/sql-data-warehouse-tables-partition/) e [indicizzazione delle tabelle in SQL Data Warehouse](https://azure.microsoft.com/documentation/articles/sql-data-warehouse-tables-index/)  
 

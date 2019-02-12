@@ -1,7 +1,7 @@
 ---
 title: ALTER DATABASE SCOPED CONFIGURATION (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 01/22/2019
+ms.date: 01/28/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -22,12 +22,12 @@ ms.assetid: 63373c2f-9a0b-431b-b9d2-6fa35641571a
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: d7bb8abac5765265e93282ae88266ece24d8a8a5
-ms.sourcegitcommit: 3d50caa30681bf384f5628b1dd3e06e24fc910cd
+ms.openlocfilehash: d8d0a557640795462f4da21345f07df9db96be97
+ms.sourcegitcommit: 97340deee7e17288b5eec2fa275b01128f28e1b8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/24/2019
-ms.locfileid: "54838121"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55421318"
 ---
 # <a name="alter-database-scoped-configuration-transact-sql"></a>ALTER DATABASE SCOPED CONFIGURATION (Transact-SQL)
 
@@ -216,8 +216,8 @@ GLOBAL_TEMPORARY_TABLE_AUTODROP = { ON | OFF }
 
 Consente di impostare le funzionalità di eliminazione automatica per le [tabelle temporanee globali](create-table-transact-sql.md). Il valore predefinito è ON, il che significa che le tabelle temporanee globali vengono eliminate automaticamente quando non sono usate in nessuna sessione. Se impostato su OFF, le tabelle temporanee globali devono essere eliminate in modo esplicito usando un'istruzione DROP TABLE, altrimenti verranno eliminate automaticamente al riavvio del server.
 
-- Nel server logico [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] è possibile impostare questa opzione nei singoli database utente del server logico.
-- In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e nell'Istanza gestita di [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] questa opzione è impostata in `TempDB` e l'impostazione dei singoli database utente non ha effetto.
+- Con database singoli e pool elastici di [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], questa opzione può essere impostata nei singoli database utente del server di database SQL.
+- In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e nell'istanza gestita di [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] questa opzione è impostata in `TempDB` e l'impostazione dei singoli database utente non ha effetto.
 
 DISABLE_INTERLEAVED_EXECUTION_TVF = { ON | OFF }
 

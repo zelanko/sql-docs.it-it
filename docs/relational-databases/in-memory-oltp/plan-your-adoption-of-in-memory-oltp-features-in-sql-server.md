@@ -1,7 +1,7 @@
 ---
 title: Pianificare l'adozione delle funzionalità OLTP in memoria in SQL Server | Microsoft Docs
 ms.custom: ''
-ms.date: 11/21/2017
+ms.date: 01/28/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -12,12 +12,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 4adfad731797d7c210787bdfaae3defa3e0a12ea
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: e3671c2b89c60a48431d52e631c11e9f06971a55
+ms.sourcegitcommit: 97340deee7e17288b5eec2fa275b01128f28e1b8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52519556"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55421188"
 ---
 # <a name="plan-your-adoption-of-in-memory-oltp-features-in-sql-server"></a>Pianificare l'adozione delle funzionalità OLTP in memoria in SQL Server
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -59,7 +59,7 @@ Una tabella ottimizzata per la memoria che contiene 200 GB di dati richiede più
 
 Per un database ospitato nel servizio cloud del database SQL di Azure, il livello di servizio scelto influisce sulla quantità di memoria attiva che il database può usare. È consigliabile monitorare l'utilizzo della memoria del database tramite un avviso. Per informazioni dettagliate, vedere:
 
-- Esaminare i limiti di archiviazione di OLTP in memoria per il [piano tariffario](https://docs.microsoft.com/azure/sql-database/sql-database-service-tiers#single-database-service-tiers-and-performance-levels)
+- Esaminare i limiti di archiviazione di OLTP in memoria per il [piano tariffario](https://docs.microsoft.com/azure/sql-database/sql-database-service-tiers#standalone-database-service-tiers-and-performance-levels)
 - [Monitorare l'archiviazione di OLTP in memoria](https://azure.microsoft.com/documentation/articles/sql-database-in-memory-oltp-monitoring/)
 
 #### <a name="memory-optimized-table-variables"></a>Variabili di tabella con ottimizzazione per la memoria
@@ -118,7 +118,7 @@ Per le linee guida per verificare se le funzionalità di OLTP in memoria possono
 
 
 
-## <a name="b-unsupported-features"></a>B. Funzionalità non supportate
+## <a name="b-unsupported-features"></a>b. Funzionalità non supportate
 
 Le funzionalità non supportate in alcuni scenari di OLTP in memoria sono descritte in:
 
@@ -147,7 +147,7 @@ Le variabili di tabella non sono transazionali. Di conseguenza, le [variabili di
 
 ### <a name="b3-readpast-table-hint"></a>B.3 Hint di tabella READPAST
 
-Nessuna query può applicare l'[hint di tabella](../../t-sql/queries/hints-transact-sql-table.md) READPAST alle tabelle ottimizzate per la memoria.
+Nessuna query può applicare l' [hint di tabella](../../t-sql/queries/hints-transact-sql-table.md) READPAST alle tabelle ottimizzate per la memoria.
 
 L'hint READPAST è utile in scenari con più sessioni che accedono e modificano lo stesso set di piccole dimensioni di righe, ad esempio nell'elaborazione di una coda.
 
@@ -194,7 +194,7 @@ Il comando [DBCC CHECKDB](../../t-sql/database-console-commands/dbcc-checkdb-tra
 
 
 
-## <a name="d-performance"></a>D. restazioni
+## <a name="d-performance"></a>D. Prestazioni
 
 In questa sezione vengono descritte situazioni in cui le prestazioni delle tabelle ottimizzate per la memoria non raggiungono la loro completa potenzialità.
 
@@ -284,7 +284,7 @@ Quando il piano di query per una procedura nativa richiede una fase di aggregazi
 
 
 
-## <a name="f-application-design-transactions-and-retry-logic"></a>F. Progettazione di applicazioni: transazioni e logica ripetizione tentativi
+## <a name="f-application-design-transactions-and-retry-logic"></a>F. Progettazione di applicazioni: transazioni e logica di ripetizione dei tentativi
 
 Una transazione che coinvolge una tabella ottimizzata per la memoria può diventare dipendente di un'altra transazione che coinvolge la stessa tabella. Se il numero di transazioni dipendenti raggiunge o supera il valore massimo consentito, tutte le transazioni dipendenti avranno esito negativo.
 

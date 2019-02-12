@@ -1,7 +1,7 @@
 ---
 title: ALTER AUTHORIZATION (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 08/07/2017
+ms.date: 01/28/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -27,14 +27,15 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 3c7f31849aa75d0102f1406a49faf0d1c8c6a8e9
-ms.sourcegitcommit: c6e71ed14198da67afd7ba722823b1af9b4f4e6f
+ms.openlocfilehash: 4960dae2aad32a75f612b1b07e4aacdeb6a3d4d9
+ms.sourcegitcommit: 97340deee7e17288b5eec2fa275b01128f28e1b8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/16/2019
-ms.locfileid: "54327544"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55421228"
 ---
 # <a name="alter-authorization-transact-sql"></a>ALTER AUTHORIZATION (Transact-SQL)
+
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   Modifica la proprietà di un'entità a protezione diretta.    
@@ -196,6 +197,7 @@ ALTER AUTHORIZATION ON
 ### <a name="for-sql-server"></a>Per SQL Server:  
 **Requisiti per il nuovo proprietario:**   
 La nuova entità proprietario deve essere uno dei valori seguenti:  
+
 -   Un account di accesso con autenticazione di SQL Server.  
 -   Un account di accesso con autenticazione di Windows che rappresenta un utente di Windows (non un gruppo).  
 -   Un utente di Windows che esegue l'autenticazione usando un account di accesso con autenticazione di Windows che rappresenta un gruppo di Windows.  
@@ -206,6 +208,7 @@ Chi non è membro del ruolo predefinito del server **sysadmin**, deve avere alme
 ### <a name="for-azure-sql-database"></a>Per il database SQL di Azure:  
 **Requisiti per il nuovo proprietario:**   
 La nuova entità proprietario deve essere uno dei valori seguenti:  
+
 -   Un account di accesso con autenticazione di SQL Server.  
 -   Un utente federato (non un gruppo) presente in Azure AD.  
 -   Un utente gestito (non un gruppo) o un'applicazione presente in Azure AD.    
@@ -217,7 +220,8 @@ La nuova entità proprietario deve essere uno dei valori seguenti:
 È necessario connettersi al database di destinazione per modificare il proprietario di tale database.  
 
 Il proprietario di un database può essere modificato dai tipi seguenti di account. 
-* L'account di accesso dell'entità di livello servizio (l'amministratore di SQL Azure indicato durante la creazione del server logico).  
+
+* L'account di accesso dell'entità di livello servizio (l'amministratore di SQL Azure indicato durante la creazione del server di database SQL).  
 * L'amministratore di Azure Active Directory per il server SQL di Azure.   
 * Il proprietario corrente del database.   
  

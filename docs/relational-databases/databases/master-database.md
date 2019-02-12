@@ -1,7 +1,7 @@
 ---
 title: Database master | Microsoft Docs
 ms.custom: ''
-ms.date: 07/30/2018
+ms.date: 01/28/2019
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
@@ -14,21 +14,23 @@ ms.assetid: 660e909f-61eb-406b-bbce-8864dd629ba0
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 1b14a63222721f21848518cbee5acfe99feb4d0f
-ms.sourcegitcommit: 2e8783e6bedd9597207180941be978f65c2c2a2d
+ms.openlocfilehash: 7369d4793b803b538435267399b2deaff777ba21
+ms.sourcegitcommit: 97340deee7e17288b5eec2fa275b01128f28e1b8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/19/2019
-ms.locfileid: "54405861"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55421168"
 ---
 # <a name="master-database"></a>Database master
+
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   Nel database **master** vengono registrate tutte le informazioni a livello di sistema relative a un sistema [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . inclusi i metadati a livello globale dell'istanza quali gli account di accesso, gli endpoint, i server collegati e le impostazioni di configurazione di sistema. In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], gli oggetti di sistema non sono più archiviati nel database **master** , ma sono archiviati nel [database Resource](../../relational-databases/databases/resource-database.md). Nel database **master** vengono inoltre registrate l'esistenza di tutti gli altri database e la posizione dei relativi file di database, nonché le informazioni di inizializzazione per [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Non è pertanto possibile avviare [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] se il database **master** non è disponibile.  
 
 > [!IMPORTANT]
-> Per il server logico del database SQL di Azure, si applicano solo il database master e il database tempdb. Per il concetto di server logico e database master logico, vedere [Che cos'è un server logico SQL di Azure?](https://docs.microsoft.com/azure/sql-database/sql-database-servers-databases#what-is-an-azure-sql-logical-server). Per una descrizione di tempdb nel contesto del database SQL di Azure, vedere [Database tempdb nel database SQL](tempdb-database.md#tempdb-database-in-sql-database). Per Istanza gestita di database SQL di Azure si applicano tutti i database di sistema. Per altre informazioni sulle istanze gestite nel database SQL di Azure, vedere [Informazioni su Istanza gestita](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance)
+> Per i singoli database e i pool elastici di database SQL di Azure, si applicano solo il database master e il database tempdb. Per altre informazioni, vedere [Informazioni sul server di database SQL di Azure](https://docs.microsoft.com/azure/sql-database/sql-database-servers#what-is-an-azure-sql-database-server). Per una descrizione di tempdb nel contesto del database SQL di Azure, vedere [Database tempdb nel database SQL](tempdb-database.md#tempdb-database-in-sql-database). Per Istanza gestita di database SQL di Azure si applicano tutti i database di sistema. Per altre informazioni sulle istanze gestite nel database SQL di Azure, vedere [Informazioni su Istanza gestita](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance)
   
-## <a name="physical-properties-of-master"></a>Proprietà fisiche del database master  
+## <a name="physical-properties-of-master"></a>Proprietà fisiche del database master
+
 Nella tabella seguente sono illustrati i valori di configurazione iniziali dei file di dati e di log del database **master** per SQL Server e per Istanza gestita di database SQL di Azure. Le dimensioni di questi file possono variare leggermente a seconda dell'edizione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 |File|Nome logico|Nome fisico|Aumento di dimensioni del file|  
@@ -39,13 +41,14 @@ Nella tabella seguente sono illustrati i valori di configurazione iniziali dei f
 Per informazioni su come spostare i file di dati e di log del database **master** , vedere [Spostare i database di sistema](../../relational-databases/databases/move-system-databases.md).  
 
 > [!IMPORTANT]
-> Per il server logico del database SQL di Azure, l'utente non ha alcun controllo sulle dimensioni del database **master**.
+> Per il server di database SQL di Azure, l'utente non ha alcun controllo sulle dimensioni del database **master**.
   
-### <a name="database-options"></a>Opzioni di database  
+### <a name="database-options"></a>Opzioni di database
+
 Nella tabella seguente è indicato il valore predefinito di ogni opzione del database **master** per SQL Server e per Istanza gestita di database SQL di Azure e viene specificato se il valore è modificabile. Per visualizzare le impostazioni correnti di queste opzioni, usare la vista del catalogo [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) .  
   
 > [!IMPORTANT]
-> Per il server logico del database SQL di Azure, l'utente non ha alcun controllo su queste opzioni del database.
+> Per i database singoli e i pool elastici di database SQL di Azure, l'utente non ha alcun controllo su queste opzioni del database.
 
 |Opzione di database|Valore predefinito|Modificabile|  
 |---------------------|-------------------|---------------------|  

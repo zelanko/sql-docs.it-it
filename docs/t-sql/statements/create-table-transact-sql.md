@@ -47,12 +47,12 @@ ms.assetid: 1e068443-b9ea-486a-804f-ce7b6e048e8b
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: cbf03f09ce4d72a738fe018bd0ca0cd67af3d107
-ms.sourcegitcommit: 3d50caa30681bf384f5628b1dd3e06e24fc910cd
+ms.openlocfilehash: 81d4a9bf01c4c9a958d8ae2b7292a1130250bbf4
+ms.sourcegitcommit: 97340deee7e17288b5eec2fa275b01128f28e1b8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/24/2019
-ms.locfileid: "54838148"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55421398"
 ---
 # <a name="create-table-transact-sql"></a>CREATE TABLE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -926,7 +926,7 @@ DATA_COMPRESSION = PAGE ON PARTITIONS (3, 5)
   
  MEMORY_OPTIMIZED  
    
-**Si applica a** : da [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] fino a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] e [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]. Istanza gestita di database SQL di Azure non supporta tabelle ottimizzate per la memoria. 
+**Si applica a** : da [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] fino a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] e [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]. Un'istanza gestita di database SQL di Azure non supporta tabelle ottimizzate per la memoria. 
   
  Il valore ON indica che la tabella è ottimizzata per la memoria. Le tabelle ottimizzate per la memoria fanno parte della funzionalità OLTP in memoria, che viene usata ottimizzare le prestazioni dell'elaborazione delle transazioni. Per un'introduzione a OLTP in memoria, vedere [Avvio rapido 1: Tecnologie OLTP in memoria per migliorare le prestazioni di Transact-SQL](../../relational-databases/in-memory-oltp/survey-of-initial-areas-in-in-memory-oltp.md). Per informazioni più dettagliate sulle tabelle ottimizzate per la memoria, vedere [Tabelle con ottimizzazione per la memoria](../../relational-databases/in-memory-oltp/memory-optimized-tables.md).  
   

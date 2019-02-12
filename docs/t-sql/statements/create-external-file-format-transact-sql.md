@@ -21,12 +21,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a25ec8508701f99602392176ef8210588e872b36
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 8a0d6bedfb15334850e3cf21eed6dadfd21abf1f
+ms.sourcegitcommit: 31c8f9eab00914e056e9219093dbed1b0b4542a6
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52517713"
+ms.lasthandoff: 01/31/2019
+ms.locfileid: "55484850"
 ---
 # <a name="create-external-file-format-transact-sql"></a>CREATE EXTERNAL FILE FORMAT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2016-xxxx-asdw-pdw-md.md)]
@@ -104,7 +104,7 @@ WITH (
  *file_format_name*  
  Specifica un nome per il formato di file esterno.
   
- FORMAT_TYPE = [ PARQUET | ORC | RCFILE | PARQUET] Specifica il formato dei dati esterni.
+ FORMAT_TYPE = [ PARQUET | ORC | RCFILE | DELIMITEDTEXT] Specifica il formato dei dati esterni.
   
    -   PARQUET specifica un formato Parquet.
   
@@ -171,7 +171,7 @@ PolyBase usa solo il formato di data personalizzato per l'importazione dei dati.
   
 -   DateTimeOffset: 'yyyy-MM-dd HH:mm:ss'  
   
--   Time: 'HH:mm:ss'  
+-   Ora: 'HH:mm:ss'  
   
 Nella tabella seguente sono riportati **esempi di formati di data**:
   
@@ -297,7 +297,7 @@ Note sulla tabella:
 ## <a name="locking"></a>Utilizzo di blocchi  
  Acquisisce un blocco condiviso per l'oggetto EXTERNAL FILE FORMAT.
   
-## <a name="performance"></a>restazioni
+## <a name="performance"></a>Prestazioni
  L'uso dei file compressi implica sempre un compromesso tra il trasferimento di una minore quantità di dati tra l'origine dati esterna e SQL Server e l'incremento dell'utilizzo della CPU per comprimere e decomprimere i dati.
   
  I file di testo compressi Gzip non sono possono essere suddivisi. Per migliorare le prestazioni dei file di testo compressi Gzip, si consiglia di generare più file da archiviare nella stessa directory all'interno dell'origine dati esterna. Questa struttura di file consente a PolyBase di leggere e decomprimere i dati più rapidamente usando più processi di lettura e decompressione. Il numero ideale di file compressi è il numero massimo di processi del lettore dati per ogni nodo di calcolo. In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] il numero massimo di processi di lettura dati è di 8 per ogni nodo, ad eccezione di Azure SQL Data Warehouse Gen2, in cui è di 20 processi per ogni nodo. In [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] il numero massimo di processi del lettore dati per ogni nodo varia in base al punto di disconnessione singolo. Per informazioni dettagliate, vedere il [blog sui modelli e le strategie di caricamento di Azure SQL Data Warehouse](https://blogs.msdn.microsoft.com/sqlcat/2017/05/17/azure-sql-data-warehouse-loading-patterns-and-strategies/).  
@@ -320,7 +320,7 @@ WITH (
 );  
 ```  
   
-### <a name="b-create-an-rcfile-external-file-format"></a>B. Creare un formato di file esterno RCFILE  
+### <a name="b-create-an-rcfile-external-file-format"></a>b. Creare un formato di file esterno RCFILE  
  In questo esempio viene creato un formato di file esterno per un file RC che usa il metodo di serializzazione/deserializzazione org.apache.hadoop.hive.serde2.columnar.LazyBinaryColumnarSerDe. Specifica anche di usare il codec predefinito per il metodo di compressione dei dati. Se non si specifica DATA_COMPRESSION, per impostazione predefinita la compressione non viene usata.
   
 ```  

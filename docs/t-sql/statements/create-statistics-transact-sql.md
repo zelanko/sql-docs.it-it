@@ -27,12 +27,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 12ca90e681e82e56485fa0feb33326aba49fac97
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: edaaf496dc8f58c2db8b3e01938b43d2437b39f8
+ms.sourcegitcommit: dc3543e81e32451568133e9b1b560f7ee76d7fb5
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54133751"
+ms.lasthandoff: 01/31/2019
+ms.locfileid: "55428628"
 ---
 # <a name="create-statistics-transact-sql"></a>CREATE STATISTICS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -247,7 +247,7 @@ MAXDOP = *max_degree_of_parallelism*
 ### <a name="examples-use-the-adventureworks-database"></a>Gli esempi usano il database AdventureWorks.  
 
 ### <a name="a-using-create-statistics-with-sample-number-percent"></a>A. Utilizzo di CREATE STATISTICS con l'opzione SAMPLE number PERCENT  
- Nell'esempio seguente vengono create le statistiche `ContactMail1` utilizzando un campionamento casuale del 5% delle colonne `BusinessEntityID` e `EmailPromotion` della tabella `Contact` del database [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)].  
+ Nell'esempio seguente vengono create le statistiche `ContactMail1` usando un campione casuale del 5% delle colonne `BusinessEntityID` e `EmailPromotion` della tabella `Person` del database [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)].  
   
 ```sql  
 CREATE STATISTICS ContactMail1  
@@ -256,7 +256,7 @@ CREATE STATISTICS ContactMail1
 ```  
   
 ### <a name="b-using-create-statistics-with-fullscan-and-norecompute"></a>b. Utilizzo di CREATE STATISTICS con le opzioni FULLSCAN e NORECOMPUTE  
- Nell'esempio seguente vengono create le statistiche `ContactMail2` per tutte le righe nelle colonne `BusinessEntityID` e `EmailPromotion` della tabella `Contact` e viene disabilitato il ricalcolo automatico delle statistiche.  
+ Nell'esempio seguente vengono create le statistiche `NamePurchase` per tutte le righe nelle colonne `BusinessEntityID` e `EmailPromotion` della tabella `Person` e viene disabilitato il ricalcolo automatico delle statistiche.  
   
 ```sql  
 CREATE STATISTICS NamePurchase  
@@ -289,7 +289,7 @@ CREATE STATISTICS CustomerStats1 ON DimCustomer (CustomerKey, EmailAddress) WITH
 ```  
 
 ### <a name="e-using-create-statistics-with-fullscan-and-persistsamplepercent"></a>E. Uso di CREATE STATISTICS con le opzioni FULLSCAN e PERSIST_SAMPLE_PERCENT  
- L'esempio seguente crea le statistiche `ContactMail2` per tutte le righe nelle colonne `BusinessEntityID` e `EmailPromotion` della tabella `Contact` e imposta una percentuale di campionamento pari al 100% per tutti gli aggiornamenti successivi che non specificano in modo esplicito una percentuale di campionamento.  
+ L'esempio seguente crea le statistiche `NamePurchase` per tutte le righe nelle colonne `BusinessEntityID` e `EmailPromotion` della tabella `Person` e imposta una percentuale di campionamento pari al 100% per tutti gli aggiornamenti successivi che non specificano in modo esplicito una percentuale di campionamento.  
   
 ```sql  
 CREATE STATISTICS NamePurchase  

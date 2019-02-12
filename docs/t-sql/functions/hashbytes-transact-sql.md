@@ -20,12 +20,12 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 8924de6099e947e02023ea92853ee84a94b0f48d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ee8626047df76aaf9186295c092623a7cee6d263
+ms.sourcegitcommit: 7c052fc969d0f2c99ad574f99076dc1200d118c3
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47804259"
+ms.lasthandoff: 02/01/2019
+ms.locfileid: "55570664"
 ---
 # <a name="hashbytes-transact-sql"></a>HASHBYTES (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -52,7 +52,7 @@ HASHBYTES ( '<algorithm>', { @input | 'input' } )
  **'** *input* **'**  
  Specifica un'espressione che restituisce un carattere o una stringa binaria di cui eseguire l'hashing.  
   
- L'output è conforme allo standard dell'algoritmo, ovvero 128 bit (16 byte) per MD2, MD4 e MD5 e 160 bit (20 byte) per SHA e SHA1; 256 bit (32 byte) per SHA2_256 e 512 bit (64 byte) per SHA2_512.  
+ L'output è conforme allo standard dell'algoritmo: 128 bit (16 byte) per MD2, MD4 e MD5; 160 bit (20 byte) per SHA e SHA1; 256 bit (32 byte) per SHA2_256 e 512 bit (64 byte) per SHA2_512.  
   
 **Si applica a**: da [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
   
@@ -60,43 +60,45 @@ HASHBYTES ( '<algorithm>', { @input | 'input' } )
   
 ## <a name="return-value"></a>Valore restituito  
  **varbinary** (non più di 8000 byte)  
-  
+
+## <a name="remarks"></a>Remarks  
+È consigliabile usare `CHECKSUM` o `BINARY_CHECKSUM` come alternative per calcolare un valore hash.
+
+Gli algoritmi MD2, MD4, MD5, SHA e SHA1 non sono disponibili nel livello di compatibilità 130 e superiore. Usare invece SHA2_256 o SHA2_512.
+
 ## <a name="examples"></a>Esempi  
-  
-### <a name="a-return-the-hash-of-a-variable"></a>A: Restituire l'hash di una variabile  
+### <a name="return-the-hash-of-a-variable"></a>Restituire l'hash di una variabile  
  Nell'esempio seguente viene restituito l'hash `SHA1` dei dati **nvarchar** archiviati nella variabile `@HashThis`.  
   
-```  
+```sql  
 DECLARE @HashThis nvarchar(4000);  
 SET @HashThis = CONVERT(nvarchar(4000),'dslfdkjLK85kldhnv$n000#knf');  
 SELECT HASHBYTES('SHA1', @HashThis);  
-  
 ```  
   
-### <a name="b-return-the-hash-of-a-table-column"></a>B: Restituire l'hash di una colonna di tabella  
+### <a name="return-the-hash-of-a-table-column"></a>Restituire l'hash di una colonna di tabella  
  Nell'esempio seguente viene restituito l'hash SHA1 dei valori della colonna `c1` nella tabella `Test1`.  
   
-```  
+```sql  
 CREATE TABLE dbo.Test1 (c1 nvarchar(50));  
 INSERT dbo.Test1 VALUES ('This is a test.');  
 INSERT dbo.Test1 VALUES ('This is test 2.');  
 SELECT HASHBYTES('SHA1', c1) FROM dbo.Test1;  
-  
 ```  
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
 ```  
-  
 -------------------------------------------  
 0x0E7AAB0B4FF0FD2DFB4F0233E2EE7A26CD08F173  
 0xF643A82F948DEFB922B12E50B950CEE130A934D6  
   
 (2 row(s) affected)  
-  
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Scelta di un algoritmo di crittografia](../../relational-databases/security/encryption/choose-an-encryption-algorithm.md)  
-  
+[Scelta di un algoritmo di crittografia](../../relational-databases/security/encryption/choose-an-encryption-algorithm.md)  
+[CHECKSUM_AGG &#40;Transact-SQL&#41;](../../t-sql/functions/checksum-agg-transact-sql.md)  
+[CHECKSUM &#40;Transact-SQL&#41;](../../t-sql/functions/checksum-transact-sql.md)  
+[BINARY_CHECKSUM  &#40;Transact-SQL&#41;](../../t-sql/functions/binary-checksum-transact-sql.md)  
   

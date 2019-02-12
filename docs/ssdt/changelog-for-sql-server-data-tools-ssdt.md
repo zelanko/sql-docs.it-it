@@ -12,12 +12,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||=azuresqldb-mi-current'
-ms.openlocfilehash: 53a852b5293cfc013c170723f0e031cc3800e27c
-ms.sourcegitcommit: b51edbe07a0a2fdb5f74b5874771042400baf919
+ms.openlocfilehash: a82fe061c8886dc88af8b44faf4b4fb86ccda2e6
+ms.sourcegitcommit: dc3543e81e32451568133e9b1b560f7ee76d7fb5
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/28/2019
-ms.locfileid: "55087890"
+ms.lasthandoff: 01/31/2019
+ms.locfileid: "55428678"
 ---
 # <a name="changelog-for-sql-server-data-tools-ssdt"></a>Log delle modifiche per SQL Server Data Tools (SSDT)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -32,9 +32,9 @@ Data di rilascio: 28 gennaio 2019
 
 ### <a name="whats-new"></a>Novità
 **SSIS:**
-1. Aggiunta l'origine Power Query (anteprima) per SSIS 2017.
-2. Aggiunto di nuovo il supporto per SSIS 2012.
-3. Aggiunte origine e destinazione Oracle per SSIS 2019.
+1. Aggiunta l'origine Power Query (anteprima) per SSIS in ADF 2017.
+2. Aggiunto di nuovo il supporto per SQL Server 2012.
+3. Aggiunte origine e destinazione Oracle per SQL Server 2019.
 4. Risolto il problema dell'impossibilità di caricare un'attività Script o un componente di script durante la migrazione da versioni di SSIS precedenti.
 5. Risolto il problema del mancato funzionamento del visualizzatore dati in Windows 7 SP1 e in Windows 8.1.
 6. Risolto il problema dell'arresto anomalo di Visual Studio, in alcuni casi, durante il salvataggio del pacchetto. 

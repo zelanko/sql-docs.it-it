@@ -28,12 +28,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: a24090fdcb1bd8b8576f545dfef11764f22a192f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a8c027df69ca11c88c82195c2d621ecd33f470d6
+ms.sourcegitcommit: 97340deee7e17288b5eec2fa275b01128f28e1b8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47595689"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55421148"
 ---
 # <a name="create-route-transact-sql"></a>CREATE ROUTE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md )]
@@ -85,7 +85,7 @@ WHERE database_id = DB_ID()
  Specifica per quanti secondi [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] mantiene la route nella tabella di routing. Al termine di questo periodo di tempo, la route scade e non viene più presa in considerazione da [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] per la scelta della route per una nuova conversazione. Se le clausola viene omessa, il valore *route_lifetime* è Null e la route ha durata illimitata.  
   
  ADDRESS **='**_next\_hop\_address_**'**  
-Per Istanza gestita di database SQL, `ADDRESS` deve essere locale. 
+Per l'istanza gestita di database SQL, `ADDRESS` deve essere locale. 
 
 Specifica l'indirizzo di rete per la route. Il parametro *next_hop_address* specifica un indirizzo TCP/IP nel formato seguente:  
   
@@ -153,7 +153,7 @@ CREATE ROUTE ExpenseRoute
     ADDRESS = 'TCP://www.Adventure-Works.com:1234' ;  
 ```  
   
-### <a name="b-creating-a-tcpip-route-by-using-a-netbios-name"></a>B. Creazione di una route TCP/IP utilizzando un nome NetBIOS  
+### <a name="b-creating-a-tcpip-route-by-using-a-netbios-name"></a>b. Creazione di una route TCP/IP utilizzando un nome NetBIOS  
  Nell'esempio seguente viene creata una route per il servizio `//Adventure-Works.com/Expenses`. La route specifica che i messaggi per questo servizio verranno trasmessi tramite TCP alla porta `1234` nell'host identificato dal nome NetBIOS `SERVER02`. All'arrivo, il messaggio verrà recapitato dall'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] di destinazione all'istanza di database identificata dall'ID univoco `D8D4D268-00A3-4C62-8F91-634B89C1E315`.  
   
 ```  

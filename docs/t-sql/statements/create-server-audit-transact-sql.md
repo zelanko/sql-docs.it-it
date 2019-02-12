@@ -23,12 +23,12 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: 7d1607e46888c4ea42f2e9e01fc9086a947045e2
-ms.sourcegitcommit: c6e71ed14198da67afd7ba722823b1af9b4f4e6f
+ms.openlocfilehash: 6bac04d2c3e60496c73f1cc91c1adb89c82b606a
+ms.sourcegitcommit: 97340deee7e17288b5eec2fa275b01128f28e1b8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/16/2019
-ms.locfileid: "54327502"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55421098"
 ---
 # <a name="create-server-audit-transact-sql"></a>CREATE SERVER AUDIT (Transact-SQL)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -78,7 +78,7 @@ CREATE SERVER AUDIT audit_name
  TO { FILE | APPLICATION_LOG | SECURITY_LOG | URL | EXTERNAL_MONITOR } Determina la posizione della destinazione del controllo. Le opzioni possibili sono un file binario, il registro applicazioni di Windows o il registro di sicurezza di Windows. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Se non si configurano impostazioni aggiuntive in Windows, non sarà possibile scrivere nel registro di sicurezza di Windows. Per altre informazioni, vedere [Scrivere eventi di controllo di SQL Server nel registro di sicurezza](../../relational-databases/security/auditing/write-sql-server-audit-events-to-the-security-log.md).  
 
 > [!IMPORTANT]
-> In Istanza gestita di database SQL di Azure il controllo SQL opera a livello di server. Le uniche posizioni possibili sono `URL` o `EXTERNAL_MONITOR`.
+> Nell'istanza gestita di database SQL di Azure il controllo SQL opera a livello di server. Le uniche posizioni possibili sono `URL` o `EXTERNAL_MONITOR`.
   
  FILEPATH ='*os_file_path*'  
  Percorso del log di controllo. Il nome del file viene generato in base al nome e al GUID del controllo.  

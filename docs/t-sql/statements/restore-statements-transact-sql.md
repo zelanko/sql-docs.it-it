@@ -41,12 +41,12 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current||>=aps-pdw-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 72d978967591fbffa8d25b3954c78256149f7592
-ms.sourcegitcommit: 1e28f923cda9436a4395a405ebda5149202f8204
+ms.openlocfilehash: a3257e1c92460f29eef8a9f82749746d18ee8a28
+ms.sourcegitcommit: 97340deee7e17288b5eec2fa275b01128f28e1b8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/25/2019
-ms.locfileid: "55045094"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55421418"
 ---
 # <a name="restore-statements-transact-sql"></a>Istruzioni RESTORE (Transact-SQL)
 Consente di ripristinare i backup del database SQL eseguiti tramite il comando BACKUP. 
@@ -64,7 +64,7 @@ Nella riga seguente fare clic su qualsiasi nome di prodotto. Viene visualizzato 
 > [!div class="mx-tdCol2BreakAll"]
 > ||||
 > |-|-|-|
-> |**_\* SQL Server \*_**|[Database SQL<br />Istanza gestita](restore-statements-transact-sql.md?view=azuresqldb-mi-current)|[Parallel<br />Data Warehouse](restore-statements-transact-sql.md?view=aps-pdw-2016)
+> |**_\* SQL Server \*_**|[Istanza gestita<br />database SQL](restore-statements-transact-sql.md?view=azuresqldb-mi-current)|[Parallel<br />Data Warehouse](restore-statements-transact-sql.md?view=aps-pdw-2016)
 
 &nbsp;
 
@@ -708,7 +708,7 @@ RESTORE DATABASE Sales
 > [!div class="mx-tdCol2BreakAll"]
 > ||||
 > |-|-|-|
-> |[SQL Server](restore-statements-transact-sql.md?view=sql-server-2016)|**_\* Database SQL<br />Istanza gestita \*_**|[Parallel<br />Data Warehouse](restore-statements-transact-sql.md?view=aps-pdw-2016)
+> |[SQL Server](restore-statements-transact-sql.md?view=sql-server-2016)|**_\* Istanza gestita<br />database SQL\*_**|[Parallel<br />Data Warehouse](restore-statements-transact-sql.md?view=aps-pdw-2016)
 
 &nbsp;
 
@@ -723,7 +723,7 @@ Per informazioni sugli altri comandi RESTORE supportati, vedere:
 - [RESTORE VERIFYONLY (Transact-SQL)](../../t-sql/statements/restore-statements-verifyonly-transact-sql.md)   
 
 > [!IMPORTANT]
-> Per eseguire il ripristino da backup automatici di Istanza gestita di database SQL di Azure, vedere [Ripristino del database SQL](https://docs.microsoft.com/azure/sql-database/sql-database-recovery-using-backups).
+> Per eseguire il ripristino da backup automatici di un'istanza gestita di database SQL di Azure, vedere [Ripristino del database SQL](https://docs.microsoft.com/azure/sql-database/sql-database-recovery-using-backups).
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -775,7 +775,7 @@ Si applicano le seguenti limitazioni:
 - Non è possibile ripristinare i backup contenenti database con oggetti in memoria attivi in un'istanza gestita per utilizzo generico.
 - Attualmente non è possibile ripristinare i backup contenenti database in modalità di sola lettura. Questa limitazione verrà rimossa a breve.
 
-Per altre informazioni, vedere [Istanza gestita](/azure/sql-database/sql-database-managed-instance).
+Per altre informazioni, vedere [Istanza gestita](/azure/sql-database/sql-database-managed-instance)
 
 ## <a name="restoring-an-encrypted-database"></a>Ripristino di un database crittografato  
 Per ripristinare un database crittografato, è necessario poter accedere alla chiave asimmetrica o al certificato utilizzato per crittografare il database. Non è possibile effettuare l'operazione di ripristino del database senza almeno uno di questi due elementi. Di conseguenza, il certificato utilizzato per crittografare la chiave di crittografia del database deve essere conservato fino a quando il backup è necessario. Per altre informazioni, vedere [SQL Server Certificates and Asymmetric Keys](../../relational-databases/security/sql-server-certificates-and-asymmetric-keys.md).  
@@ -840,7 +840,7 @@ WHERE r.command = 'RESTORE DATABASE'
 > [!div class="mx-tdCol2BreakAll"]
 > ||||
 > |-|-|-|
-> |[SQL Server](restore-statements-transact-sql.md?view=sql-server-2016)|[Database SQL<br />Istanza gestita](restore-statements-transact-sql.md?view=azuresqldb-mi-current)|**_\* Parallel<br />Data Warehouse \*_**
+> |[SQL Server](restore-statements-transact-sql.md?view=sql-server-2016)|[Istanza gestita<br />database SQL](restore-statements-transact-sql.md?view=azuresqldb-mi-current)|**_\* Parallel<br />Data Warehouse \*_**
 
 &nbsp;
 

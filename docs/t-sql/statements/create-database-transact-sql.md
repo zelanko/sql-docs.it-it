@@ -2,7 +2,7 @@
 title: CREATE DATABASE (Transact-SQL) | Microsoft Docs
 description: Sintassi di creazione database per SQL Server, database SQL di Azure, Azure SQL Data Warehouse e Parallel Data Warehouse
 ms.custom: ''
-ms.date: 11/16/2018
+ms.date: 01/28/2019
 ms.prod: sql
 ms.prod_service: sql-database
 ms.reviewer: ''
@@ -38,12 +38,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-current||=azuresqldb-mi-current||=azure-sqldw-latest||>=aps-pdw-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: d0ba661f6cc2c19b00dd5c51be9b3dfeb1d47a6e
-ms.sourcegitcommit: c6e71ed14198da67afd7ba722823b1af9b4f4e6f
+ms.openlocfilehash: 76f0d24c3c8eb0c2cfa77b69d45d8f5d88517a4f
+ms.sourcegitcommit: 7c052fc969d0f2c99ad574f99076dc1200d118c3
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/16/2019
-ms.locfileid: "54327887"
+ms.lasthandoff: 02/01/2019
+ms.locfileid: "55570844"
 ---
 # <a name="create-database"></a>CREATE DATABASE
 
@@ -62,7 +62,7 @@ Nella riga seguente fare clic su qualsiasi nome di prodotto. Viene visualizzato 
 > [!div class="mx-tdCol2BreakAll"]
 > |||||
 > |-|-|-|-| 
-> |**_\* SQL Server \*_** | [Database SQL<br />server logico](create-database-transact-sql.md?view=azuresqldb-current) | [Database SQL<br />Istanza gestita](create-database-transact-sql.md?view=azuresqldb-mi-current) | [SQL Data<br />Warehouse](create-database-transact-sql.md?view=azure-sqldw-latest) | [Parallel<br />Data Warehouse](create-database-transact-sql.md?view=aps-pdw-2016) |
+> |**_\* SQL Server \*_** | [Database singolo/pool elastico<br />database SQL](create-database-transact-sql.md?view=azuresqldb-current) | [Istanza gestita<br />database SQL](create-database-transact-sql.md?view=azuresqldb-mi-current) | [SQL Data<br />Warehouse](create-database-transact-sql.md?view=azure-sqldw-latest) | [Parallel<br />Data Warehouse](create-database-transact-sql.md?view=aps-pdw-2016) |
 
 &nbsp;
 
@@ -893,15 +893,15 @@ GO
 > [!div class="mx-tdCol2BreakAll"]
 > |||||
 > |-|-|-|-| 
-> |[SQL Server](create-database-transact-sql.md?view=sql-server-2016)| **_\* Database SQL<br />server logico \*_**  | [Database SQL<br />Istanza gestita](create-database-transact-sql.md?view=azuresqldb-mi-current) | [SQL Data<br />Warehouse](create-database-transact-sql.md?view=azure-sqldw-latest) | [Parallel<br />Data Warehouse](create-database-transact-sql.md?view=aps-pdw-2016) |
+> |[SQL Server](create-database-transact-sql.md?view=sql-server-2016)| **_\*Database singolo/pool elastico<br />database SQL\*_**  | [Istanza gestita<br />database SQL](create-database-transact-sql.md?view=azuresqldb-mi-current) | [SQL Data<br />Warehouse](create-database-transact-sql.md?view=azure-sqldw-latest) | [Parallel<br />Data Warehouse](create-database-transact-sql.md?view=aps-pdw-2016) |
 
 &nbsp;
 
-## <a name="azure-sql-database-logical-server"></a>Server logico di database SQL di Azure
+## <a name="azure-sql-database-single-databaseelastic-pool"></a>Database singolo/pool elastico di database SQL di Azure
 
 ## <a name="overview"></a>Panoramica
 
-Nel server logico del database SQL di Azure, questa istruzione può essere usata con un server SQL di Azure per creare un database singolo o un database in un pool elastico. Con questa istruzione si specificano il nome del database, le regole di confronto, le dimensioni massime, l'edizione, obiettivo di servizio e, se applicabile, il pool elastico per il nuovo database. Può anche essere usata per creare il database in un pool elastico. Inoltre, può essere usata per creare una copia del database in un altro server logico.
+Nel database singolo/pool elastico del database SQL di Azure, questa istruzione può essere usata con un server SQL di Azure per creare un database singolo o un database in un pool elastico. Con questa istruzione si specificano il nome del database, le regole di confronto, le dimensioni massime, l'edizione, obiettivo di servizio e, se applicabile, il pool elastico per il nuovo database. Può anche essere usata per creare il database in un pool elastico. Inoltre, può essere usata per creare una copia del database in un altro server di database SQL.
 
 ## <a name="syntax"></a>Sintassi 
 
@@ -973,7 +973,7 @@ EDITION
  
 Specifica il livello del servizio del database. 
 
-Database singoli e in pool in un server logico. I valori disponibili sono: 'basic', 'standard', 'premium', 'GeneralPurpose', 'BusinessCritical' e 'Hyperscale'. 
+Database singoli e in pool in un database singolo/pool elastico. I valori disponibili sono: 'basic', 'standard', 'premium', 'GeneralPurpose', 'BusinessCritical' e 'Hyperscale'. 
   
 Quando si specifica EDITION ma non MAXSIZE, MAXSIZE viene impostato sulle dimensioni minime supportate dall'edizione.  
   
@@ -984,7 +984,7 @@ Specifica le dimensioni massime del database. MAXSIZE deve essere valido per il 
 > [!NOTE]
 > L'argomento **MAXSIZE** non è applicabile ai singoli database nel livello di servizio Hyperscale. I database di livello Hyperscale possono crescere in base alle necessità, fino a 100 TB. Il servizio database SQL aggiunge automaticamente l'archiviazione: non è necessaria impostare le dimensioni massime.
 
-**Modello basato su DTU per database singoli e in pool in un server logico**
+**Modello basato su DTU per database singoli e in pool in un server di database SQL**
 
 |**MAXSIZE**|**Base**|**S0-S2**|**S3-S12**|**P1-P6**| **P11-P15** |
 |-----------------|---------------|------------------|-----------------|-----------------|-----------------|-----------------| 
@@ -1014,7 +1014,7 @@ Specifica le dimensioni massime del database. MAXSIZE deve essere valido per il 
 
 Il valore MAXSIZE per il modello basato su DTU, se specificato, deve essere un valore valido presente nella tabella precedente per il livello di servizio specificato.
  
-**Modello basato su vCore per database singoli e in pool in un server logico**
+**Modello basato su vCore per database singoli e in pool in un server di database SQL**
 
 **Livello di servizio Utilizzo generico: piattaforma di calcolo generazione 4**
 
@@ -1063,10 +1063,10 @@ Le seguenti regole vengono applicate agli argomenti MAXSIZE ed EDITION:
 
 SERVICE_OBJECTIVE
 
-- **Per database singoli e in pool in un server logico**
+- **Per database singoli e in pool**
 
   - Specifica il livello di prestazioni. I valori disponibili per l'obiettivo di servizio sono:  `S0`, `S1`, `S2`, `S3`, `S4`, `S6`, `S7`, `S9`, `S12`, `P1`, `P2`, `P4`, `P6`, `P11`, `P15`, `GP_GEN4_1`, `GP_GEN4_2`, `GP_GEN4_4`, `GP_GEN4_8`, `GP_GEN4_16`, `GP_GEN4_24`, `BC_GEN4_1` `BC_GEN4_2` `BC_GEN4_4` `BC_GEN4_8` `BC_GEN4_16`, `BC_GEN4_24`, `GP_Gen5_2`, `GP_Gen5_4`,    `GP_Gen5_8`,    `GP_Gen5_16`,   `GP_Gen5_24`,   `GP_Gen5_32`,   `GP_Gen5_48`,   `GP_Gen5_80`, `BC_Gen5_2`,  `BC_Gen5_4`,    `BC_Gen5_8`,    `BC_Gen5_16`,   `BC_Gen5_24`,   `BC_Gen5_32`,   `BC_Gen5_48`,   `BC_Gen5_80`. 
- - **Per database singoli su un server logico nel livello di servizio Hyperscale** Specifica il livello di prestazioni. I valori disponibili per l'obiettivo di servizio sono: `HS_GEN4_1` `HS_GEN4_2` `HS_GEN4_4` `HS_GEN4_8` `HS_GEN4_16`, `HS_GEN4_24`, `HS_Gen5_2`, `HS_Gen5_4`, `HS_Gen5_8`, `HS_Gen5_16`, `HS_Gen5_24`, `HS_Gen5_32`, `HS_Gen5_48`, `HS_Gen5_80`. 
+ - **Per database singoli nel livello di servizio Hyperscale** Specifica il livello di prestazioni. I valori disponibili per l'obiettivo di servizio sono: `HS_GEN4_1` `HS_GEN4_2` `HS_GEN4_4` `HS_GEN4_8` `HS_GEN4_16`, `HS_GEN4_24`, `HS_Gen5_2`, `HS_Gen5_4`, `HS_Gen5_8`, `HS_Gen5_16`, `HS_Gen5_24`, `HS_Gen5_32`, `HS_Gen5_48`, `HS_Gen5_80`. 
  
 - **Per i database in un'istanza gestita**
 
@@ -1232,7 +1232,7 @@ CREATE DATABASE TestDB3 COLLATE Japanese_XJIS_140  (MAXSIZE = 100 MB, EDITION = 
 > [!div class="mx-tdCol2BreakAll"]
 > |||||
 > |-|-|-|-| 
-> |[SQL Server](create-database-transact-sql.md?view=sql-server-2016)| [Database SQL<br />server logico](create-database-transact-sql.md?view=azuresqldb-current)| **_\* Database SQL<br />Istanza gestita \*_**   | [SQL Data<br />Warehouse](create-database-transact-sql.md?view=azure-sqldw-latest) | [Parallel<br />Data Warehouse](create-database-transact-sql.md?view=aps-pdw-2016) |
+> |[SQL Server](create-database-transact-sql.md?view=sql-server-2016)| [Database singolo/pool elastico<br />database SQL](create-database-transact-sql.md?view=azuresqldb-current)| **_\* Istanza gestita<br />database SQL\*_**   | [SQL Data<br />Warehouse](create-database-transact-sql.md?view=azure-sqldw-latest) | [Parallel<br />Data Warehouse](create-database-transact-sql.md?view=aps-pdw-2016) |
 
 &nbsp;
 
@@ -1240,7 +1240,7 @@ CREATE DATABASE TestDB3 COLLATE Japanese_XJIS_140  (MAXSIZE = 100 MB, EDITION = 
 
 ## <a name="overview"></a>Panoramica
 
-Nell'Istanza gestita di database SQL di Azure, questa istruzione consente di creare un database. Quando si crea un database in un'istanza gestita, si specificano il nome del database e le regole di confronto. 
+Nell'istanza gestita di database SQL di Azure, questa istruzione viene usata per creare un database. Quando si crea un database in un'istanza gestita, si specificano il nome del database e le regole di confronto. 
 
 ## <a name="syntax"></a>Sintassi
 
@@ -1305,7 +1305,7 @@ Vedere [ALTER DATABASE](alter-database-transact-sql.md?&tabs=sqldbmi)
 > [!div class="mx-tdCol2BreakAll"]
 > |||||
 > |-|-|-|-| 
-> |[SQL Server](create-database-transact-sql.md?view=sql-server-2016)| [Database SQL<br />server logico](create-database-transact-sql.md?view=azuresqldb-current)| [Database SQL<br />Istanza gestita](create-database-transact-sql.md?view=azuresqldb-mi-current)| **_\* SQL Data<br />Warehouse \*_**    | [Parallel<br />Data Warehouse](create-database-transact-sql.md?view=aps-pdw-2016) |
+> |[SQL Server](create-database-transact-sql.md?view=sql-server-2016)| [Database singolo/pool elastico<br />database SQL](create-database-transact-sql.md?view=azuresqldb-current)| [Istanza gestita<br />database SQL](create-database-transact-sql.md?view=azuresqldb-mi-current)| **_\* SQL Data<br />Warehouse \*_**    | [Parallel<br />Data Warehouse](create-database-transact-sql.md?view=aps-pdw-2016) |
 
 &nbsp;
 
@@ -1313,7 +1313,7 @@ Vedere [ALTER DATABASE](alter-database-transact-sql.md?&tabs=sqldbmi)
 
 ## <a name="overview"></a>Panoramica
 
-In Azure SQL Data Warehouse, questa istruzione può essere usata con un server logico SQL di Azure per creare un database di SQL Data Warehouse. Con questa istruzione è possibile specificare il nome del database, le regole di confronto, le dimensioni massime, l'edizione e l'obiettivo di servizio.
+In Azure SQL Data Warehouse, questa istruzione può essere usata con un server di database SQL di Azure per creare un database di SQL Data Warehouse. Con questa istruzione è possibile specificare il nome del database, le regole di confronto, le dimensioni massime, l'edizione e l'obiettivo di servizio.
 
 ## <a name="syntax"></a>Sintassi  
   
@@ -1330,6 +1330,7 @@ CREATE DATABASE database_name [ COLLATE collation_name ]
     SERVICE_OBJECTIVE = { 
          'DW100' | 'DW200' | 'DW300' | 'DW400' | 'DW500' | 'DW600' 
         | 'DW1000' | 'DW1200' | 'DW1500' | 'DW2000' | 'DW3000' | 'DW6000' 
+        |'DW100c' | 'DW200c' | 'DW300c' | 'DW400c' | 'DW500c'
         | 'DW1000c' | 'DW1500c' | 'DW2000c' | 'DW2500c' | 'DW3000c' | 'DW5000c' 
         | 'DW6000c' | 'DW7500c' | 'DW10000c' | 'DW15000c' | 'DW30000c'
     }  
@@ -1423,7 +1424,7 @@ CREATE DATABASE TestDW COLLATE Latin1_General_100_CI_AS_KS_WS
 > [!div class="mx-tdCol2BreakAll"]
 > |||||
 > |-|-|-|-| 
-> |[SQL Server](create-database-transact-sql.md?view=sql-server-2016)| [Database SQL<br />server logico](create-database-transact-sql.md?view=azuresqldb-current)| [Database SQL<br />Istanza gestita](create-database-transact-sql.md?view=azuresqldb-mi-current)|[SQL Data<br />Warehouse](create-database-transact-sql.md?view=azure-sqldw-latest)|  **_\* Parallel<br />Data Warehouse \*_** |
+> |[SQL Server](create-database-transact-sql.md?view=sql-server-2016)| [Database singolo/pool elastico<br />database SQL](create-database-transact-sql.md?view=azuresqldb-current)| [Istanza gestita<br />database SQL](create-database-transact-sql.md?view=azuresqldb-mi-current)|[SQL Data<br />Warehouse](create-database-transact-sql.md?view=azure-sqldw-latest)|  **_\* Parallel<br />Data Warehouse \*_** |
 
 &nbsp;
 

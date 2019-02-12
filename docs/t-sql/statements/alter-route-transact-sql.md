@@ -23,12 +23,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: 19b533df8417345796f76f4e365d633e5b707eda
-ms.sourcegitcommit: fc6a6eedcea2d98c93e33d39c1cecd99fbc9a155
+ms.openlocfilehash: 304e5ec2722f8556c2d9c873f4ff5c3cfab4b7d2
+ms.sourcegitcommit: 97340deee7e17288b5eec2fa275b01128f28e1b8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49169029"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55421088"
 ---
 # <a name="alter-route-transact-sql"></a>ALTER ROUTE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
@@ -84,7 +84,7 @@ WHERE database_id = DB_ID();
   
  ADDRESS **='**_next\_hop\_address_'  
 
- Per Istanza gestita di database SQL di Azure, `ADDRESS` deve essere locale.
+ Per l'istanza gestita di database SQL di Azure, `ADDRESS` deve essere locale.
 
  Specifica l'indirizzo di rete per la route. Il parametro *next_hop_address* specifica un indirizzo TCP/IP nel formato seguente:  
   
@@ -154,7 +154,7 @@ ALTER ROUTE ExpenseRoute
      SERVICE_NAME = '//Adventure-Works.com/Expenses';  
 ```  
   
-### <a name="b-changing-the-target-database-for-a-route"></a>B. Modifica del database di destinazione per una route  
+### <a name="b-changing-the-target-database-for-a-route"></a>b. Modifica del database di destinazione per una route  
  Nell'esempio seguente il database di destinazione per la route `ExpenseRoute` viene modificato e impostato sul database identificato dall'ID univoco `D8D4D268-00A3-4C62-8F91-634B89B1E317.`  
   
 ```  

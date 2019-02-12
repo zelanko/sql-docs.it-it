@@ -2,7 +2,7 @@
 title: Database tempdb | Microsoft Docs
 description: Questo argomento illustra i dettagli relativi alla configurazione e all'uso del database tempdb in SQL Server e nel database SQL di Azure
 ms.custom: P360
-ms.date: 07/17/2018
+ms.date: 01/28/2019
 ms.prod: sql
 ms.prod_service: database-engine
 ms.technology: ''
@@ -18,14 +18,15 @@ ms.author: sstein
 manager: craigg
 ms.reviewer: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 29682619886dc257ba2b2583f4c4d256158df797
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: df57b6d99e07b107770db1a98a7a97e76c392254
+ms.sourcegitcommit: 97340deee7e17288b5eec2fa275b01128f28e1b8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52535309"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55421272"
 ---
 # <a name="tempdb-database"></a>Database tempdb
+
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   Il database di sistema **tempdb** è una risorsa globale disponibile per tutti gli utenti connessi all'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o al database SQL. Tempdb viene usato per contenere:  
   
@@ -39,7 +40,7 @@ ms.locfileid: "52535309"
   > Ogni oggetto interno usa un minimo di nove pagine: una pagina IAM e un extent di otto pagine. Per altre informazioni sulle pagine e sugli extent, vedere [Pagine ed extent](../../relational-databases/pages-and-extents-architecture-guide.md#pages-and-extents).
 
   > [!IMPORTANT]
-  > Il server logico del database SQL di Azure supporta tabelle temporanee globali e stored procedure temporanee globali archiviate in tempdb e con ambito a livello di database. Le tabelle temporanee globali e le stored procedure temporanee globali vengono condivise per le sessioni di tutti gli utenti all'interno dello stesso database SQL di Azure. Le sessioni utente di altri database SQL di Azure non possono accedere alle tabelle temporanee globali. Per altre informazioni, vedere [Tabelle temporanee globali con ambito database (database SQL di Azure)](../../t-sql/statements/create-table-transact-sql.md#database-scoped-global-temporary-tables-azure-sql-database). [Istanza gestita di Azure SQL Database](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance)) supporta gli stessi oggetti temporanei di SQL Server. Per il server logico del database SQL di Azure, si applicano solo il database master e il database tempdb. Per il concetto di server logico e database master logico, vedere [Che cos'è un server logico SQL di Azure?](https://docs.microsoft.com/azure/sql-database/sql-database-servers-databases#what-is-an-azure-sql-logical-server). Per una descrizione di tempdb nel contesto del server logico del database SQL di Azure, vedere [Database tempdb nel database SQL](#tempdb-database-in-sql-database). Per Istanza gestita di database SQL di Azure si applicano tutti i database di sistema. 
+  > I singoli database e i pool elastici di database SQL di Azure supportano tabelle temporanee globali e stored procedure temporanee globali archiviate in tempdb e con ambito a livello di database. Le tabelle temporanee globali e le stored procedure temporanee globali vengono condivise per le sessioni di tutti gli utenti all'interno dello stesso database SQL di Azure. Le sessioni utente di altri database SQL di Azure non possono accedere alle tabelle temporanee globali. Per altre informazioni, vedere [Tabelle temporanee globali con ambito database (database SQL di Azure)](../../t-sql/statements/create-table-transact-sql.md#database-scoped-global-temporary-tables-azure-sql-database). [Istanza gestita di Azure SQL Database](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance)) supporta gli stessi oggetti temporanei di SQL Server. Per i singoli database e i pool elastici di database SQL di Azure, si applicano solo il database master e il database tempdb. Per altre informazioni, vedere [Informazioni sul server di database SQL di Azure](https://docs.microsoft.com/azure/sql-database/sql-database-servers-databases#what-is-an-azure-sql-database-server). Per una descrizione di tempdb nel contesto di singoli database e pool elastici di database SQL di Azure, vedere [Database tempdb nel database SQL](#tempdb-database-in-sql-database). Per Istanza gestita di database SQL di Azure si applicano tutti i database di sistema.
 
 - **Archivi delle versioni**, raccolte di pagine di dati che contengono le righe di dati usate dalle caratteristiche che supportano il controllo delle versioni delle righe. Vengono utilizzati due archivi delle versioni: uno comune e uno per la compilazione di indici online. Gli archivi delle versioni contengono:
   - Versioni di riga generate dalle transazioni di modifica dei dati in un database in cui viene usato il Read committed tramite isolamento del controllo delle versioni delle righe o transazioni di isolamento dello snapshot.  
@@ -48,6 +49,7 @@ ms.locfileid: "52535309"
 Le operazioni all'interno di **tempdb** sono a registrazione minima in modo che sia possibile eseguire il rollback delle transazioni. **tempdb** viene ricreato ogni volta che [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] viene avviato in modo che il sistema inizi sempre con una copia pulita del database. Poiché le tabelle e le stored procedure temporanee vengono eliminate automaticamente al momento della disconnessione e poiché al momento della chiusura del sistema non vi sono connessioni attive, nessuna parte del database **tempdb** viene salvata per le sessioni successive di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Le operazioni di backup e di ripristino non sono consentite nel database **tempdb**.  
   
 ## <a name="physical-properties-of-tempdb-in-sql-server"></a>Proprietà fisiche di tempdb in SQL Server
+
  La tabella seguente elenca i valori di configurazione iniziali di dati e file di log di **tempdb** in SQL Server, basati sulle impostazioni predefinite per il database modello. Le dimensioni di questi file possono variare leggermente a seconda dell'edizione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 |File|Nome logico|Nome fisico|Dimensioni iniziali|Aumento di dimensioni del file|  
@@ -61,10 +63,12 @@ Le operazioni all'interno di **tempdb** sono a registrazione minima in modo che 
 > [!NOTE]
 > Il valore predefinito per il numero di file di dati si basa sulle linee guida generali in [KB 2154845](https://support.microsoft.com/kb/2154845/).  
   
-### <a name="moving-the-tempdb-data-and-log-files-in-sql-server"></a>Spostamento dei file di dati e di log di tempdb in SQL Server  
+### <a name="moving-the-tempdb-data-and-log-files-in-sql-server"></a>Spostamento dei file di dati e di log di tempdb in SQL Server 
+ 
  Per spostare i file di log e i dati **tempdb** , vedere [Spostare i database di sistema](../../relational-databases/databases/move-system-databases.md).  
   
-### <a name="database-options-for-tempdb-in-sql-server"></a>Opzioni di database per tempdb in SQL Server  
+### <a name="database-options-for-tempdb-in-sql-server"></a>Opzioni di database per tempdb in SQL Server 
+ 
  Nella tabella seguente sono elencati i valori predefiniti delle singole opzioni di database di **tempdb** e viene indicato se l'opzione è modificabile. Per visualizzare le impostazioni correnti di queste opzioni, usare la vista del catalogo [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) .  
   
 |Opzione di database|Valore predefinito|Modificabile|  

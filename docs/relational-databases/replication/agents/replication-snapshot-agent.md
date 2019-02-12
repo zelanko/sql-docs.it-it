@@ -16,12 +16,12 @@ ms.assetid: 2028ba45-4436-47ed-bf79-7c957766ea04
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: cc33bb52ec613d8e31cd8f61525dc7012ad01d48
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: 96e9da6c6bf1c394032abff79b7b869e08f4d3e9
+ms.sourcegitcommit: 032273bfbc240fe22ac6c1f6601a14a6d99573f7
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54129791"
+ms.lasthandoff: 02/01/2019
+ms.locfileid: "55513861"
 ---
 # <a name="replication-snapshot-agent"></a>Agente snapshot repliche
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -177,7 +177,7 @@ snapshot [ -?]
  Numero di secondi prima del timeout di accesso. Il valore predefinito è **15** secondi.  
   
  **-MaxBcpThreads** _number_of_threads_  
- Specifica il numero di operazioni di copia bulk che possono essere eseguite in parallelo. Il numero massimo di connessioni ODBC e thread presenti simultaneamente corrisponde a **MaxBcpThreads** o al numero di richieste di copia bulk presenti nella transazione di sincronizzazione nel database di distribuzione, a seconda di quale sia il valore minore. **MaxBcpThreads** deve avere un valore maggiore di **0** e non ha un limite massimo specificato a livello di codice. Il valore predefinito è **1**.  
+ Specifica il numero di operazioni di copia bulk che possono essere eseguite in parallelo. Il numero massimo di connessioni ODBC e thread presenti simultaneamente corrisponde a **MaxBcpThreads** o al numero di richieste di copia bulk presenti nella transazione di sincronizzazione nel database di distribuzione, a seconda di quale sia il valore minore. **MaxBcpThreads** deve avere un valore maggiore di **0** e non ha un limite massimo specificato a livello di codice. Il valore predefinito è due volte il numero di processori.  
   
  \- **MaxNetworkOptimization** [ **0**| **1**]  
  Indica se le eliminazioni irrilevanti vengono inviate al Sottoscrittore. Le eliminazioni irrilevanti sono comandi DELETE inviati ai Sottoscrittori per righe che non appartengono alla partizione del Sottoscrittore. Le eliminazioni irrilevanti non influiscono sulla convergenza o sull'integrità dei dati, ma possono comportare traffico di rete non necessario. Il valore predefinito di **MaxNetworkOptimization** è **0**. Impostando **MaxNetworkOptimization** su **1** è possibile ridurre al minimo le possibilità di eliminazioni irrilevanti, riducendo pertanto il traffico e ottimizzando le prestazioni di rete. L'impostazione di questo parametro su **1** comporta inoltre l'aumento dell'archiviazione di metadati e può provocare una riduzione delle prestazioni nel server di pubblicazione se sono presenti più livelli di filtri di join e filtri di subset complessi. Valutare inoltre attentamente la topologia di replica e impostare **MaxNetworkOptimization** su **1** solo se il traffico di rete dovuto a eliminazioni irrilevanti è eccessivo.  

@@ -1,7 +1,7 @@
 ---
 title: Hint per la query (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 10/22/2018
+ms.date: 02/04/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -56,12 +56,12 @@ ms.assetid: 66fb1520-dcdf-4aab-9ff1-7de8f79e5b2d
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 2a4eb946a9b851342b1f997f2b491b0b0708138c
-ms.sourcegitcommit: c9d33ce831723ece69f282896955539d49aee7f8
+ms.openlocfilehash: 96f34d4ececcb05f91e5fc6329a598907269501e
+ms.sourcegitcommit: 879a5c6eca99e0e9cc946c653d4ced165905d9c6
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/12/2018
-ms.locfileid: "53306278"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "55736968"
 ---
 # <a name="hints-transact-sql---query"></a>Hint (Transact-SQL) - Query
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -264,7 +264,9 @@ ms.locfileid: "53306278"
 *  'DISABLE_BATCH_MODE_ADAPTIVE_JOINS'       
    Disabilita i join adattivi in modalità batch. Per altre informazioni, vedere [Join adattivi in modalità batch](../../relational-databases/performance/adaptive-query-processing.md#batch-mode-adaptive-joins).
 *  'DISABLE_BATCH_MODE_MEMORY_GRANT_FEEDBACK'       
-   Disabilita il feedback delle concessioni di memoria in modalità batch. Per altre informazioni, vedere [Feedback delle concessioni di memoria in modalità batch](../../relational-databases/performance/adaptive-query-processing.md#batch-mode-memory-grant-feedback).
+   Disabilita il feedback delle concessioni di memoria in modalità batch. Per altre informazioni, vedere [Feedback delle concessioni di memoria in modalità batch](../../relational-databases/performance/adaptive-query-processing.md#batch-mode-memory-grant-feedback).   
+* 'DISABLE_DEFERRED_COMPILATION_TV'    
+  Disabilita la compilazione posticipata delle variabili di tabella. Per altre informazioni, vedere [Compilazione posticipata delle variabili di tabella](../../t-sql/data-types/table-transact-sql.md#table-variable-deferred-compilation).
 *  'DISABLE_INTERLEAVED_EXECUTION_TVF'      
    Disabilita l'esecuzione interleaved per funzioni con valori di tabella a più istruzioni. Per altre informazioni, vedere [Esecuzione interleaved per funzioni con valori di tabella a più istruzioni](../../relational-databases/performance/adaptive-query-processing.md#interleaved-execution-for-multi-statement-table-valued-functions).
 *  'DISABLE_OPTIMIZED_NESTED_LOOP'      
@@ -292,11 +294,11 @@ ms.locfileid: "53306278"
 *  'QUERY_PLAN_PROFILE'      
  Abilita la profilatura leggera per la query. Quando una query contenente questo nuovo hint termina, viene generato un nuovo evento esteso, query_plan_profile. Questo evento esteso espone le statistiche di esecuzione e il codice XML del piano di esecuzione effettivo in modo simile all'evento esteso query_post_execution_showplan, ma solo per le query contenenti il nuovo hint. **Si applica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (a partire da [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 CU3 e [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU11). 
 
-  > [!NOTE]
-  > Se si abilita la raccolta dell'evento esteso query_post_execution_showplan, verrà aggiunta un'infrastruttura di profilatura standard a ogni query in esecuzione nel server e le prestazioni generali del server potrebbero rallentare.      
-  > Se invece si abilita la raccolta dell'evento esteso *query_thread_profile* per usare l'infrastruttura di profilatura leggera, l'overhead delle prestazioni verrà considerevolmente ridotto, ma le prestazioni generali del server verranno comunque rallentate.       
-  > Se si abilita l'evento esteso query_plan_profile, l'infrastruttura di profilatura leggera verrà abilitata solo per una query eseguita con QUERY_PLAN_PROFILE e quindi gli altri carichi di lavoro sul server non ne saranno interessati. Usare questo hint per profilare una query specifica senza effetti sulle altre parti del carico di lavoro del server.
-  > Per altre informazioni sulla profilatura leggera, vedere [Infrastruttura di profilatura delle query](../../relational-databases/performance/query-profiling-infrastructure.md).
+   > [!NOTE]
+   > Se si abilita la raccolta dell'evento esteso query_post_execution_showplan, verrà aggiunta un'infrastruttura di profilatura standard a ogni query in esecuzione nel server e le prestazioni generali del server potrebbero rallentare.      
+   > Se invece si abilita la raccolta dell'evento esteso *query_thread_profile* per usare l'infrastruttura di profilatura leggera, l'overhead delle prestazioni verrà considerevolmente ridotto, ma le prestazioni generali del server verranno comunque rallentate.       
+   > Se si abilita l'evento esteso query_plan_profile, l'infrastruttura di profilatura leggera verrà abilitata solo per una query eseguita con QUERY_PLAN_PROFILE e quindi gli altri carichi di lavoro sul server non ne saranno interessati. Usare questo hint per profilare una query specifica senza effetti sulle altre parti del carico di lavoro del server.
+   > Per altre informazioni sulla profilatura leggera, vedere [Infrastruttura di profilatura delle query](../../relational-databases/performance/query-profiling-infrastructure.md).
  
 È possibile eseguire una query nell'elenco di tutti i nomi USE HINT supportati usando la DMV [sys.dm_exec_valid_use_hints ](../../relational-databases/system-dynamic-management-views/sys-dm-exec-valid-use-hints-transact-sql.md).    
 

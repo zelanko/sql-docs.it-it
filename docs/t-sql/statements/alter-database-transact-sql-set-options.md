@@ -2,7 +2,7 @@
 title: Opzioni di ALTER DATABASE SET (Transact-SQL) | Microsoft Docs
 description: Informazioni su come impostare le opzioni di database, ad esempio l'ottimizzazione automatica, la crittografia, Query Store in un'istanza di SQL Server o in un database SQL di Azure
 ms.custom: ''
-ms.date: 1/10/2019
+ms.date: 01/28/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -30,12 +30,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: =azuresqldb-current||=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 1dee3b66253935a979aa483de87c42dc4bb53e3f
-ms.sourcegitcommit: e2fa721b6f46c18f1825dd1b0d56c0a6da1b2be1
+ms.openlocfilehash: 077af312704185c66c2aa2cd5d8c777af2b90776
+ms.sourcegitcommit: 97340deee7e17288b5eec2fa275b01128f28e1b8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/11/2019
-ms.locfileid: "54211132"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55421458"
 ---
 # <a name="alter-database-set-options-transact-sql"></a>Opzioni ALTER DATABASE SET (Transact-SQL) 
 
@@ -54,7 +54,7 @@ Nella riga seguente fare clic su qualsiasi nome di prodotto. Viene visualizzato 
 > [!div class="mx-tdCol2BreakAll"]  
 > |||
 > |---|---| 
-> |**_\* SQL Server \*_** &nbsp;|[Database SQL<br />server logico](alter-database-transact-sql-set-options.md?view=azuresqldb-current)|[Database SQL<br />Istanza gestita](alter-database-transact-sql-set-options.md?view=azuresqldb-mi-current)|||  
+> |**_\* SQL Server \*_** &nbsp;|[Database singolo/pool elastico<br />database SQL](alter-database-transact-sql-set-options.md?view=azuresqldb-current)|[Istanza gestita<br />database SQL](alter-database-transact-sql-set-options.md?view=azuresqldb-mi-current)|||  
 
 &nbsp;
 
@@ -1282,11 +1282,11 @@ SET QUERY_STORE = ON
 > [!div class="mx-tdCol2BreakAll"]  
 > |||
 > |---|---| 
-> |[SQL Server](alter-database-transact-sql-set-options.md?view=sql-server-2016)|**_\* Database SQL<br />server logico \*_** &nbsp;|[Database SQL<br />Istanza gestita](alter-database-transact-sql-set-options.md?view=azuresqldb-mi-current)|
+> |[SQL Server](alter-database-transact-sql-set-options.md?view=sql-server-2016)|**_\*Database singolo/pool elastico<br />database SQL\*_** &nbsp;|[Istanza gestita<br />database SQL](alter-database-transact-sql-set-options.md?view=azuresqldb-mi-current)|
 
 &nbsp;
 
-## <a name="azure-sql-database-logical-server"></a>Server logico di database SQL di Azure
+## <a name="azure-sql-database-single-databaseelastic-pool"></a>Database singolo/pool elastico di database SQL di Azure
 
 I livelli di compatibilità sono opzioni `SET`, ma sono descritti in [Livello di compatibilità ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md).  
   
@@ -1629,7 +1629,7 @@ Per modificare questo stato, è necessario disporre dell'accesso esclusivo al da
 Controlla l'accesso degli utenti al database.  
   
 RESTRICTED_USER  
-RESTRICTED_USER consente la connessione al database solo ai membri del ruolo predefinito del database db_owner e ai membri dei ruoli predefiniti del server dbcreator e sysadmin, senza tuttavia imporre un limite al numero di connessioni. Tutte le connessioni al database vengono interrotte entro l'intervallo di tempo specificato nella clausola di interruzione dell'istruzione ALTER DATABASE. Dopo l'impostazione dello stato RESTRICTED_USER per il database, qualsiasi tentativo di connessione da parte di utenti non qualificati viene rifiutato.  **RESTRICTED_USER** non può essere modificato con l'Istanza gestita di database SQL.
+RESTRICTED_USER consente la connessione al database solo ai membri del ruolo predefinito del database db_owner e ai membri dei ruoli predefiniti del server dbcreator e sysadmin, senza tuttavia imporre un limite al numero di connessioni. Tutte le connessioni al database vengono interrotte entro l'intervallo di tempo specificato nella clausola di interruzione dell'istruzione ALTER DATABASE. Dopo l'impostazione dello stato RESTRICTED_USER per il database, qualsiasi tentativo di connessione da parte di utenti non qualificati viene rifiutato.  **RESTRICTED_USER** non può essere modificato con l'istanza gestita di database SQL.
   
 MULTI_USER  
 Consente la connessione al database a tutti gli utenti che dispongono di autorizzazioni appropriate.  
@@ -2069,7 +2069,7 @@ SET QUERY_STORE = ON
 > [!div class="mx-tdCol2BreakAll"]  
 > |||
 > |---|---|
-> |[SQL Server](alter-database-transact-sql-set-options.md?view=sql-server-2016)|[Database SQL<br />server logico](alter-database-transact-sql-set-options.md?view=azuresqldb-current) |**_\* Database SQL<br />Istanza gestita \*_** &nbsp;|
+> |[SQL Server](alter-database-transact-sql-set-options.md?view=sql-server-2016)|[Database singolo/pool elastico<br />database SQL](alter-database-transact-sql-set-options.md?view=azuresqldb-current) |**_\* Istanza gestita<br />database SQL\*_** &nbsp;|
 
 
 
@@ -2357,7 +2357,7 @@ Per modificare questo stato, è necessario disporre dell'accesso esclusivo al da
 Controlla l'accesso degli utenti al database.  
   
 RESTRICTED_USER  
-RESTRICTED_USER consente la connessione al database solo ai membri del ruolo predefinito del database db_owner e ai membri dei ruoli predefiniti del server dbcreator e sysadmin, senza tuttavia imporre un limite al numero di connessioni. Tutte le connessioni al database vengono interrotte entro l'intervallo di tempo specificato nella clausola di interruzione dell'istruzione ALTER DATABASE. Dopo l'impostazione dello stato RESTRICTED_USER per il database, qualsiasi tentativo di connessione da parte di utenti non qualificati viene rifiutato.  **RESTRICTED_USER** non può essere modificato con l'Istanza gestita di database SQL.
+RESTRICTED_USER consente la connessione al database solo ai membri del ruolo predefinito del database db_owner e ai membri dei ruoli predefiniti del server dbcreator e sysadmin, senza tuttavia imporre un limite al numero di connessioni. Tutte le connessioni al database vengono interrotte entro l'intervallo di tempo specificato nella clausola di interruzione dell'istruzione ALTER DATABASE. Dopo l'impostazione dello stato RESTRICTED_USER per il database, qualsiasi tentativo di connessione da parte di utenti non qualificati viene rifiutato.  **RESTRICTED_USER** non può essere modificato con l'istanza gestita di database SQL.
   
 MULTI_USER  
 Consente la connessione al database a tutti gli utenti che dispongono di autorizzazioni appropriate.  

@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 7482b4a2ac81541cdd9f6317d7f76291e34aa162
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: b2e318d8426f9c78e0065377dcb27a6186e31c0d
+ms.sourcegitcommit: bbdf51f0d56acfa6bcc4a5c4fe2c9f3cd4225edc
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52420652"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56079467"
 ---
 # <a name="configure-http-access-to-analysis-services-on-iis-80"></a>Configurare l'accesso HTTP ad Analysis Services in IIS 8.0
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -111,6 +111,8 @@ ms.locfileid: "52420652"
     -   \<drive>:\inetpub\wwwroot\OLAP\MSMDPUMP.ini  
   
     -   \<unità >: \inetpub\wwwroot\OLAP\Resources  
+> [!NOTE]  
+>  Gestione IIS potrà non essere in grado di connettersi ad Analysis Services nella versione corrente, se il Database è un backup da una precedente. Ciò è dovuto a modifiche nel MSMDPUMP e debba essere risolti copiando il file msmdpump. dll dalla versione precedente funzionante.
   
 ##  <a name="bkmk_appPool"></a> Passaggio 2: Creare un pool di applicazioni e una directory virtuale in IIS  
  Successivamente, creare un pool di applicazioni e un endpoint al data pump.  

@@ -1,7 +1,7 @@
 ---
 title: Connettersi a SQL Server o al database SQL di Azure | Microsoft Docs
 ms.custom: ''
-ms.date: 08/25/2017
+ms.date: 01/28/2019
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.reviewer: ''
@@ -11,18 +11,19 @@ ms.assetid: 9803a8a0-a8f1-4b65-87b8-989b06850194
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: e07d1bb2c38fdf5284a09d49a7b81419872720b6
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b8770ad0e7a5d04a2a1de96c15cb709b8321a5d6
+ms.sourcegitcommit: 97340deee7e17288b5eec2fa275b01128f28e1b8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47847421"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55421288"
 ---
 # <a name="connect-to-a-sql-server-or-azure-sql-database"></a>Connettersi a SQL Server o al database SQL di Azure
+
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 Per usare server e database, è prima di tutto necessario connettersi al server. È possibile connettersi a più server contemporaneamente.
 
-[SQL Server Management Studio (SSMS)](../download-sql-server-management-studio-ssms.md) supporta diversi tipi di connessioni. Questo articolo fornisce dettagli per la connessione a SQL Server e al database SQL di Azure, ovvero per la connessione a un server logico di Azure SQL. Per informazioni sulle altre opzioni di connessione, vedere i [collegamenti](#see-also) nella parte inferiore della pagina.
+[SQL Server Management Studio (SSMS)](../download-sql-server-management-studio-ssms.md) supporta diversi tipi di connessioni. Questo articolo fornisce dettagli per la connessione a SQL Server e al database SQL di Azure, ovvero per la connessione a un singolo database o a un pool elastico di Azure SQL. Per informazioni sulle altre opzioni di connessione, vedere i [collegamenti](#see-also) nella parte inferiore della pagina.
   
 ## <a name="connecting-to-a-server"></a>Connessione a un server  
 

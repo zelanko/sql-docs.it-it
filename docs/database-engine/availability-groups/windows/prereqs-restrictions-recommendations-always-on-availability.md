@@ -2,7 +2,7 @@
 title: Prerequisiti, restrizioni e consigli per i gruppi di disponibilità
 description: Descrizione dei prerequisiti, delle restrizioni e dei consigli per la distribuzione di un gruppo di disponibilità Always On.
 ms.custom: seodec18
-ms.date: 06/05/2018
+ms.date: 01/31/2019
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: high-availability
@@ -20,12 +20,12 @@ ms.assetid: edbab896-42bb-4d17-8d75-e92ca11f7abb
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: e4aa84ac344bc9ca6d698f1ae3aa26f2a11f8072
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: 28d0e3c791fc838a292d1846613af34fdabd32a4
+ms.sourcegitcommit: 7c052fc969d0f2c99ad574f99076dc1200d118c3
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53202990"
+ms.lasthandoff: 02/01/2019
+ms.locfileid: "55570804"
 ---
 # <a name="prerequisites-restrictions-and-recommendations-for-always-on-availability-groups"></a>Prerequisiti, restrizioni e consigli per i gruppi di disponibilità Always On
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -160,7 +160,7 @@ ms.locfileid: "53202990"
     -   Un'istanza di SQL Server usa fino a 100 thread per la fase di rollforward parallelo per le repliche secondarie. Ogni database usa fino a metà del numero totale di core CPU, ma non più di 16 thread per ogni database. Se il numero totale di thread necessari per una singola istanza supera 100, SQL Server usa un unico thread di fase di rollforward per tutti i database rimanenti. I thread di rollforward seriale vengono rilasciati dopo ~15 secondi di inattività. 
     
     > [!NOTE]
-    > I database vengono scelti per il passaggio al thread singolo in base ai relativi ID di database in ordine crescente. Di conseguenza, l'ordine di creazione dei database deve essere considerato per le istanze di SQL Server che ospitano più database nel gruppo di disponibilità rispetto ai thread di lavoro disponibili. Ad esempio, in un sistema con 32 core CPU o più, tutti i database a partire dal settimo aggiunto al gruppo di disponibilità saranno in modalità di rollforward seriale, indipendentemente dal carico di lavoro di rollforward effettivo per ogni database. I database che richiedono il rollforward parallelo devono essere aggiunti per primi al gruppo di disponibilità.    
+    > I database vengono scelti per il passaggio al thread singolo in base ai relativi ID di database in ordine crescente. Di conseguenza, l'ordine di creazione dei database deve essere considerato per le istanze di SQL Server che ospitano più database nel gruppo di disponibilità rispetto ai thread di lavoro disponibili. Ad esempio, in un sistema con 32 core CPU o più, i primi sei database (ordinati in base all'ID di database) in un gruppo di disponibilità o i gruppi useranno la modalità di rollforward parallelo e tutti i database successivi useranno la modalità di rollforward singolo.
   
 -   Inoltre, nei gruppi di disponibilità vengono utilizzati thread non condivisi, come riportato di seguito:  
   

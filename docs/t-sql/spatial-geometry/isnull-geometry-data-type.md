@@ -17,17 +17,17 @@ ms.assetid: f95813a5-26c0-48aa-bfb8-56d2a0980788
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 89bbf3581f8a62750338d1d7ea360fc46ea36479
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 4b861d170316dbc9d66c7f8e7954910438031f1b
+ms.sourcegitcommit: 032273bfbc240fe22ac6c1f6601a14a6d99573f7
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47682029"
+ms.lasthandoff: 02/01/2019
+ms.locfileid: "55513801"
 ---
 # <a name="isnull-geometry-data-type"></a>IsNull (tipo di dati geometry)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-Il tipo di un'istanza **geometry** è Null. Restituisce 0 se l'istanza è diversa da Null.
+Il tipo di un'istanza **geometry** è Null. Restituisce 0 se l'istanza non è Null.
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -41,9 +41,9 @@ Il tipo di un'istanza **geometry** è Null. Restituisce 0 se l'istanza è divers
  Tipo CLR: **SqlBoolean**  
   
 ## <a name="remarks"></a>Remarks  
- `IsNull` può essere usato per verificare se un'istanza **geometry** è Null. Questa verifica potrebbe produrre risultati piuttosto confusi, poiché restituisce 0 se l'istanza è diversa da Null, ma restituisce Null se l'istanza è Null.  
+ `IsNull` può essere usato per verificare se un'istanza **geometry** è Null. `IsNull` restituisce 0 se l'istanza non è Null, ma Null se l'istanza è Null.  
   
- Questo metodo viene utilizzato principalmente dall'infrastruttura di SQL Server. Non è consigliabile utilizzare `IsNull` per verificare se un'istanza è Null.  
+ Questo metodo viene usato principalmente dall'infrastruttura di SQL Server. Non è consigliabile usare `IsNull` per verificare se un'istanza è Null.  
   
 
 ## <a name="see-also"></a>Vedere anche  

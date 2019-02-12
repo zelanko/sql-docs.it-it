@@ -20,12 +20,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 7f962d98bc60ea8fedc585add7617ddf938db6f4
-ms.sourcegitcommit: eddf8cede905d2adb3468d00220a347acd31ae8d
+ms.openlocfilehash: 23f7329c6964f59cb0b7cb9f0d2db6d3b4b825ad
+ms.sourcegitcommit: 97340deee7e17288b5eec2fa275b01128f28e1b8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/24/2018
-ms.locfileid: "49960765"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55420948"
 ---
 # <a name="collate-transact-sql"></a>COLLATE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -99,7 +99,7 @@ FROM fn_helpcollations();
 -   Durante il ripristino o il collegamento di un database è necessario che le regole di confronto predefinite del database e quelle delle colonne o dei parametri di tipo **char**, **varchar** e **text** presenti nel database siano supportate dal sistema operativo.  
   
 > [!NOTE]
-> Le regole di confronto del server di Istanza gestita di [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] sono **SQL_Latin1_General_CP1_CI_AS** e non possono essere modificate.
+> Le regole di confronto del server dell'istanza gestita di [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] sono **SQL_Latin1_General_CP1_CI_AS** e non possono essere modificate.
 
 > [!NOTE]
 > Le conversioni tra tabelle codici sono supportate per i tipi di dati **char** e **varchar**, ma non per il tipo di dati **text**. L'eventuale perdita di dati che si verifica durante la conversione tra tabelle codici non viene segnalata.  
@@ -153,7 +153,7 @@ Colima
 Chiapas
 ```  
   
-### <a name="b-additional-examples"></a>B. Esempi aggiuntivi  
+### <a name="b-additional-examples"></a>b. Esempi aggiuntivi  
  Per altri esempi in cui viene usata la clausola **COLLATE**, vedere [CREATE DATABASE](../../t-sql/statements/create-database-transact-sql.md?&tabs=sqlserver#examples), esempio **G. Creazione di un database e specifica di un nome delle regole di confronto e delle opzioni** e [ALTER TABLE](../../t-sql/statements/alter-table-transact-sql.md#alter_column), esempio **V. Modifica delle regole di confronto di una colonna**.  
   
 ## <a name="see-also"></a>Vedere anche  

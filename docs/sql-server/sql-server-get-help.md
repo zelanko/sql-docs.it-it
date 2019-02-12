@@ -9,12 +9,12 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || >= sql-server-linux-2017 || = sqlallproducts-allversions'
-ms.openlocfilehash: 3a24215479af1aca6e1e742d5c62ba8995aaa4a8
-ms.sourcegitcommit: b51edbe07a0a2fdb5f74b5874771042400baf919
+ms.openlocfilehash: fca6676b5cb7532faf7bf88cf04159c28b0fa36b
+ms.sourcegitcommit: 7c052fc969d0f2c99ad574f99076dc1200d118c3
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/28/2019
-ms.locfileid: "55087670"
+ms.lasthandoff: 02/01/2019
+ms.locfileid: "55570694"
 ---
 # <a name="sql-server-help-and-feedback"></a>Guida e commenti di SQL Server
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md.md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -25,6 +25,21 @@ Siamo interessati a conoscere le opinioni degli utenti per migliorare i prodotti
 Il team di progettazione di SQL Server monitora attentamente il forum [User Voice](https://feedback.azure.com/forums/908035-sql-server) su SQL Server. Se si vuole segnalare un problema relativo a SQL Server, ad esempio un arresto anomalo del sistema, prestazioni lente, un comportamento imprevisto e così via, User Voice è lo strumento ideale. 
 
 In [User Voice](https://feedback.azure.com/forums/908035-sql-server) è anche possibile non solo segnalare al team di progettazione quali miglioramenti potrebbero essere apportati, ma anche lasciare indicazioni o suggerimenti sulle funzionalità. 
+
+## <a name="i-want-to-give-feedback-about-sql-server-documentation"></a>Si vogliono inviare commenti e suggerimenti sulla documentazione di SQL Server
+Il modo migliore per contattare il team del contenuto di SQL Server è tramite problemi Git. Nella parte inferiore della maggior parte delle pagine è disponibile un'opzione per inviare un problema Git: 
+
+![Commenti e suggerimenti sul contenuto con problema Git](media/sql-server-get-help/git-issues.png)
+
+Per qualsiasi cosa si voglia condividere: suggerimenti, idee, commenti, è possibile farlo registrando un problema Git generale all'indirizzo [https://aka.ms/SQLDocsFeedback](https://aka.ms/SQLDocsFeedback). 
+
+È sufficiente selezionare il pulsante 'Nuovo problema' per iniziare. 
+
+![Nuovo problema Git](media/sql-server-get-help/new-git-issue.png)
+
+
+Il team del contenuto di SQL Server richiede inoltre spesso commenti e suggerimenti tramite sondaggi. Se si ha tempo da dedicare, è possibile condividere la propria esperienza con Microsoft all'indirizzo [https://aka.ms/SQLDocSurvey](https://aka.ms/SQLDocSurvey).
+
 
 ## <a name="i-want-to-make-a-suggestion-about-sql-server-management-studio"></a>Si vuole lasciare un suggerimento su SQL Server Management Studio
 Anche il team di SQL Server Management Studio (SSMS) monitora attentamente il forum [User Voice](https://feedback.azure.com/forums/908035-sql-server) su SQL Server, che è quindi lo strumento ideale per segnalare problemi o inviare suggerimenti. 
@@ -94,7 +109,5 @@ Se è stato rilevato un errore nella documentazione, oppure se si desidera dare 
 
 Tutti i contenuti pubblici vengono rivisti dal team responsabile dei contenuti relativi a SQL per garantirne la coerenza e la precisione tecnica. 
 
-## <a name="i-want-to-provide-feedback-for-sql-docs-content"></a>Si vogliono inviare commenti sul contenuto della documentazione di SQL
-Per condividere la propria opinione sull'esperienza con la documentazione di SQL, è possibile rispondere al sondaggio disponibile all'indirizzo [https://aka.ms/SQLDocSurvey](https://aka.ms/SQLDocSurvey). Per rispondere alle domande, saranno sufficienti 10-15 minuti. 
 
-Per condividere idee, suggerimenti, commenti o altro con il team dei contenuti di SQL, andare all'indirizzo [https://aka.ms/SQLDocsFeedback](https://aka.ms/SQLDocsFeedback). 
+
