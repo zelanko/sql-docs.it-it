@@ -77,7 +77,6 @@
 
     "globalMetadata": {
       "layout": "Conceptual",
-      "bilingual_type": "hover over",
       "uhfHeaderId": "MSDocsHeader-DocsSQL",
       "contributors_to_exclude": ["hexiaokai", "openpublishingbuild","sudeepku","saldana","iRaindrop"],
       "searchScope": ["sql"],
