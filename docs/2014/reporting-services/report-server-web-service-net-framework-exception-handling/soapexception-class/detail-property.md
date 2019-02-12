@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: c1ddaeb6-c540-49fa-b06e-b6359d377ee8
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: cba6c585d94615a1afa5d09ffb62a84da2177616
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 383e356a85597a6b6564584fc375e83f258241b9
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48223041"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56019362"
 ---
 # <a name="detail-property"></a>Proprietà Detail
   La proprietà **Detail** della classe [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] **SoapException** ha la struttura XML seguente:  
@@ -48,7 +48,7 @@ ms.locfileid: "48223041"
  Nome del prodotto. Il valore predefinito è **Microsoft SQL Server Reporting Services**.  
   
  **ProductVersion**  
- Versione di [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]. La lunghezza massima è di 15 caratteri. Il formato del numero di versione deve essere analogo a 8.00.0xxx.00.  
+ Versione di [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]. La lunghezza massima è di 15 caratteri. Il formato del numero di versione deve essere come segue: 8.00.0xxx.00.  
   
  **ProductLocaleId**  
  ID delle impostazioni locali o della lingua della DLL INTL dell'applicazione (ad esempio, 0x41A).  

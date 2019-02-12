@@ -1,5 +1,5 @@
 ---
-title: 'Esercitazione: Aggiungere un parametro al report (Generatore report) | Microsoft Docs'
+title: 'Esercitazione: Aggiungere un parametro al Report (Generatore Report) | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: eab34ec4-b3ad-4a76-95cc-07b2f75ee6d7
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: 0ec3f74d9237d917fd4b5d94e029cb5a15ea6e59
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: cf5f7a4bee10b58f644d98fe03ada0a9e8d0faa3
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48190301"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56018882"
 ---
 # <a name="tutorial-add-a-parameter-to-your-report-report-builder"></a>Esercitazione: Aggiungere un parametro al report (Generatore report)
   Aggiungere un parametro al report per consentire agli utenti di filtrare i dati del report dall'origine dati o nel report. I parametri di report vengono creati automaticamente per ogni parametro di query incluso in una query del set di dati. Il tipo di dati determina il modo in cui il parametro viene presentato sulla barra degli strumenti della visualizzazione report.  
@@ -55,9 +55,9 @@ ms.locfileid: "48190301"
 10. [Salvare il Report](#Save)  
   
 > [!NOTE]  
->  In questa esercitazione, i passaggi per la procedura guidata sono consolidati in un'unica procedura. Per istruzioni dettagliate su come selezionare un server di report, come scegliere un'origine dati e come creare un set di dati, vedere la prima esercitazione di questa serie: [Esercitazione: Creazione di un report tabella semplice &#40;Generatore report&#41;](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md).  
+>  In questa esercitazione, i passaggi per la procedura guidata sono consolidati in un'unica procedura. Per istruzioni dettagliate su come selezionare un server di report, scegliere un'origine dati e creare un set di dati, vedere la prima esercitazione di questa serie: [Esercitazione: Creazione di un Report tabella semplice &#40;Generatore Report&#41;](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md).  
   
- Tempo stimato per il completamento dell'esercitazione: 25 minuti.  
+ Tempo previsto per il completamento di questa esercitazione: 25 minuti.  
   
 ## <a name="requirements"></a>Requisiti  
  Per informazioni sui requisiti, vedere [Prerequisiti per le esercitazioni &#40;Generatore report&#41;](../reporting-services/report-builder-tutorials.md).  
@@ -119,7 +119,7 @@ ms.locfileid: "48190301"
   
      Questa query non contiene parametri di query. Verranno aggiunti più avanti in questa esercitazione.  
   
-11. Nella barra degli strumenti Progettazione query fare clic su **Esegui** (**!**). Nel set di risultati vengono visualizzate 11 righe di dati che mostrano la quantità di articoli venduti per ogni sottocategoria in quattro punti vendita e sono incluse le colonne seguenti: StoreID, Subcategory, Quantity.  
+11. Nella barra degli strumenti Progettazione query fare clic su **Esegui** (**!**). Il set di risultati vengono visualizzate 11 righe di dati che mostrano la quantità di articoli venduti per ogni sottocategoria in quattro punti vendita e include le colonne seguenti: StoreID, Subcategory, Quantity.  
   
 12. Scegliere **Avanti**.  
   
@@ -269,7 +269,7 @@ ms.locfileid: "48190301"
   
  Nel report viene visualizzata la quantità venduta di accessori, cineprese e fotocamere SLR digitali per l'identificatore del punto vendita **200**.  
   
-##  <a name="DefaultValues"></a> 4 core. Specificare i valori predefiniti così che il report possa essere eseguito automaticamente  
+##  <a name="DefaultValues"></a> 4c. Specificare i valori predefiniti così che il report possa essere eseguito automaticamente  
  È possibile specificare un valore predefinito per ciascun parametro in modo che il report venga eseguito automaticamente.  
   
 #### <a name="to-specify-a-default-value-from-a-dataset"></a>Per specificare un valore predefinito da un set di dati  
@@ -306,7 +306,7 @@ ms.locfileid: "48190301"
   
  Per la *@StoreID*, il Visualizzatore di report viene visualizzato il valore "Contoso Catalog Store". Questo è il nome visualizzato per l'identificatore del negozio **200**. Nel report viene visualizzata la quantità venduta di accessori, cineprese e fotocamere SLR digitali per l'identificatore del punto vendita **200**.  
   
-##  <a name="NameValue"></a> 4D. Cercare un valore da un set di dati che disponga di coppie nome/valore  
+##  <a name="NameValue"></a> 4d. Cercare un valore da un set di dati che disponga di coppie nome/valore  
  Un set di dati potrebbe contenere sia l'identificatore e che il campo del nome corrispondente. Quando si dispone solo di un identificatore, è possibile cercare il nome corrispondente in un set di dati creato che include coppie nome/valore.  
   
 #### <a name="to-look-up-a-value-from-a-dataset"></a>Per cercare un valore in un set di dati  
@@ -327,7 +327,7 @@ ms.locfileid: "48190301"
   
 7.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
-     L'intestazione di colonna store contiene il testo visualizzato per un'espressione complessa:  **< \<Expr >>**.  
+     L'intestazione di colonna store contiene il testo visualizzato per un'espressione complessa: **<\<Expr>>**.  
   
 8.  Visualizzare l'anteprima del report.  
   
@@ -422,7 +422,7 @@ ms.locfileid: "48190301"
   
 14. [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
-15. Fare clic nella casella di testo di fronte all'espressione appena creata, quindi digitare quanto segue: Valori del parametro selezionati:.  
+15. Fare clic nella casella di testo che precede l'espressione appena creata e quindi digitare quanto segue: Valori del parametro selezionati:.  
   
 16. Visualizzare l'anteprima del report.  
   

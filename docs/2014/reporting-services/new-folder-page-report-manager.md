@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 9212fc68-f0a6-4f79-83c1-84baf4d1957e
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: fbe0e3b1226eca1c739d9ddb2abeff594d36793e
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: b4af24352b24741fffe53f9eae6675a9a43b4595
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48053591"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56020589"
 ---
 # <a name="new-folder-page-report-manager"></a>Pagina Nuova cartella (Gestione report)
   La pagina Nuova cartella consente di creare una nuova cartella nella gerarchia di cartelle del server di report. La cartella creata è una cartella virtuale archiviata in un database del server di report. La cartella non viene creata nel file system del computer in uso.  
@@ -35,7 +35,7 @@ ms.locfileid: "48053591"
 2.  Nella barra degli strumenti fare clic su **Nuova cartella**.  
   
 ## <a name="options"></a>Opzioni  
- **Nome**  
+ **Name**  
  Consente di specificare il nome della cartella. Il nome deve includere almeno un carattere alfanumerico. È inoltre possibile utilizzare spazi e alcuni simboli. Non utilizzare i caratteri ; ? : \@ & = +, $ / * \< > | "oppure / per specificare un nome.  
   
  **Descrizione**  
@@ -45,7 +45,7 @@ ms.locfileid: "48053591"
  [Creare, eliminare o modificare una cartella &#40;gestione Report&#41;](report-server/create-delete-or-modify-a-folder-report-manager.md)   
  [Pagina delle proprietà generale, cartelle di &#40;gestione Report&#41;](../../2014/reporting-services/general-properties-page-folders-report-manager.md)   
  [Gestione report &#40;modalità nativa SSRS&#41;](../../2014/reporting-services/report-manager-ssrs-native-mode.md)   
- [Contenuto della pagina &#40;gestione Report&#41;](../../2014/reporting-services/contents-page-report-manager.md)   
+ [Pagina Contenuto &#40;Gestione report&#41;](../../2014/reporting-services/contents-page-report-manager.md)   
  [Guida F1 di gestione report](../../2014/reporting-services/report-manager-f1-help.md)   
  [Pagina delle proprietà generale, cartelle di &#40;gestione Report&#41;](../../2014/reporting-services/general-properties-page-folders-report-manager.md)  
   

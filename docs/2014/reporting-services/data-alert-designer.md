@@ -17,13 +17,13 @@ helpviewer_keywords:
 ms.assetid: b2018116-cf1a-4e54-b29c-39e0ca2bda77
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 89f395d7456eaca66d2f225fd47e4cf957186fe2
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+manager: kfile
+ms.openlocfilehash: 61eaf801c3033200626c0a28294be2d3af66efb1
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52518008"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56018073"
 ---
 # <a name="data-alert-designer"></a>Finestra di progettazione Avviso dati
   Le definizioni di avviso dati vengono create e modificate nella finestra di progettazione Avviso dati. Una definizione di avviso è una raccolta di metadati, inclusi i dati del report a cui si è interessati, le regole che i dati del report devono soddisfare per creare istanze di avviso dati e inviare messaggi di avviso dati, i destinatari del messaggio di avviso e così via.  

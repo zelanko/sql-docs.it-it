@@ -11,14 +11,14 @@ f1_keywords:
 - sql12.rtp.rptwizard.designtable.f1
 ms.assetid: c64c659b-2926-4773-8cbb-0d8d22b640f3
 author: maggiesmsft
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: a3f26a52cc101a671e5587bd07e39503dfcfd0e8
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.author: maghan
+manager: kfile
+ms.openlocfilehash: a59d959443c2e9a021bf570147fd8dba5eb85aba
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48222969"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56018193"
 ---
 # <a name="design-the-table-report-wizard"></a>Progettazione tabella (Creazione guidata report)
   Utilizzare questa pagina della Creazione guidata report per selezionare i campi da inserire nel report.  
@@ -30,7 +30,7 @@ ms.locfileid: "48222969"
  **Campi visualizzati**  
  Consente di visualizzare i campi assegnati alla pagina, al gruppo o ai dettagli. Per eliminare il campo dall'elenco, fare clic su **Rimuovi** .  
   
- **Pagina**  
+ **Page**  
  Consente di visualizzare l'elenco dei campi visualizzati a livello di pagina. Per modificare l'ordine dei campi, selezionare un campo e quindi fare clic sul pulsante freccia in su o freccia in giù.  
   
  **Gruppo**  

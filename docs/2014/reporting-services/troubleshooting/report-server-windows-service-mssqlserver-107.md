@@ -12,13 +12,13 @@ helpviewer_keywords:
 ms.assetid: 52b5704b-27f9-400a-a821-d8fa0786afe4
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: cf34475a4b2b79251284db6d36018b0c6d243d8c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 5351b052a26b2a4f5b9bc9d91f93aa2e4cdc5357
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48106061"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56020283"
 ---
 # <a name="report-server-windows-service-mssqlserver-107"></a>Servizio Windows ReportServer (MSSQLServer) 107
     
@@ -51,7 +51,7 @@ ms.locfileid: "48106061"
 ## <a name="internal-only"></a>Solo interno  
   
 ## <a name="see-also"></a>Vedere anche  
- [Configurare l'Account del servizio ReportServer &#40;Gestione configurazione SSRS&#41;](../install-windows/configure-the-report-server-service-account-ssrs-configuration-manager.md)   
+ [Configurare l'account del servizio del server di report &#40;Gestione configurazione SSRS&#41;](../install-windows/configure-the-report-server-service-account-ssrs-configuration-manager.md)   
  [Gestione configurazione Reporting Services &#40;modalità nativa&#41;](../../sql-server/install/reporting-services-configuration-manager-native-mode.md)   
  [Avviare e arrestare il servizio del server di report](../report-server/start-and-stop-the-report-server-service.md)  
   

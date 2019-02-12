@@ -12,13 +12,13 @@ f1_keywords:
 ms.assetid: 7ad59850-8135-4c4d-95e9-6d705b6d77a8
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 3f3756fb68ba46b1ac7b34237753dbd57d0b6775
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: bdc8abebbf713372caf31429082f9d3fda4cfc42
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48146251"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56018243"
 ---
 # <a name="general-properties-page-models-report-manager"></a>Pagina delle proprietà Generale, Modelli (Gestione report)
   La pagina delle proprietà Generale per i modelli di report consente di rinominare, eliminare, spostare o sostituire il file di definizione del modello, con estensione smdl. Nella parte superiore della pagina vengono visualizzati il nome dell'utente che ha creato o modificato il modello e la data e ora di creazione o modifica.  
@@ -35,16 +35,16 @@ ms.locfileid: "48146251"
 3.  Scegliere **Gestisci**dal menu a discesa. Verrà visualizzata la pagina delle proprietà Generale per il modello.  
   
 ## <a name="options"></a>Opzioni  
- **Nome**  
+ **Name**  
  Consente di specificare il nome del modello. Il nome deve includere almeno un carattere alfanumerico. È inoltre possibile utilizzare spazi e alcuni simboli. Il nome non può contenere i caratteri seguenti:  
   
- ; ? : \@ & = +, $ / * \< > | " /  
+ ; ? : \@ & = + , $ / * \< > | " /  
   
  **Descrizione**  
  Indica una descrizione del modello. Questa descrizione viene visualizzata nella pagina Contenuto per gli utenti autorizzati ad accedere al modello.  
   
  **Nascondi in visualizzazione elenco**  
- Selezionare questa casella di controllo per nascondere l'elemento quando è impostata la visualizzazione Elenco per la cartella. La visualizzazione Elenco rappresenta una modalità di visualizzazione per il contenuto delle cartelle supportata in Gestione report. È possibile impostare questa opzione [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] per definire come questo elemento viene visualizzato in Gestione Report. Per altre informazioni sulle modalità di visualizzazione in Gestione Report, vedere [pagina contenuto &#40;gestione Report&#41;](../../2014/reporting-services/contents-page-report-manager.md).  
+ Selezionare questa casella di controllo per nascondere l'elemento quando è impostata la visualizzazione Elenco per la cartella. La visualizzazione Elenco rappresenta una modalità di visualizzazione per il contenuto delle cartelle supportata in Gestione report. È possibile impostare questa opzione in [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] per definire la modalità di visualizzazione di questo elemento in Gestione report. Per altre informazioni sulle modalità di visualizzazione in Gestione Report, vedere [pagina contenuto &#40;gestione Report&#41;](../../2014/reporting-services/contents-page-report-manager.md).  
   
  **Applica**  
  Fare clic per salvare le modifiche.  
@@ -60,7 +60,7 @@ ms.locfileid: "48146251"
   
  La copia aperta è identica alla definizione del modello originale pubblicata inizialmente nel server di report. Le eventuali proprietà impostate nel modello dopo la pubblicazione, ad esempio le proprietà dell'origine dati, non sono incluse nel file aperto.  
   
- È possibile modificare la definizione del modello e salvarla come nuovo file in una cartella condivisa, quindi caricare la definizione del modello nel server di report come nuovo elemento. Le modifiche apportate alla definizione del modello mentre è aperto in [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] (o un'altra applicazione) non vengono salvate direttamente nel server di report. Per pubblicare il modello modificato nel server di report, è necessario caricare il file.  
+ È possibile modificare la definizione del modello e salvarla come nuovo file in una cartella condivisa, quindi caricare la definizione del modello nel server di report come nuovo elemento. Le modifiche apportate alla definizione del modello mentre il file è aperto in [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] o in un'altra applicazione non vengono salvate direttamente nel server di report. Per pubblicare il modello modificato nel server di report, è necessario caricare il file.  
   
  Si noti che se si desidera aprire il modello di report in Progettazione modelli, è necessario salvare il modello come file con estensione smdl, quindi aggiungere il file smdl a un progetto in Progettazione modelli.  
   
@@ -71,7 +71,7 @@ ms.locfileid: "48146251"
  Fare clic per rigenerare un modello predefinito che sostituisce la versione corrente. Questa opzione viene visualizzata dopo la generazione del modello. Il modello generato è basato sull'origine dati condivisa. Non è possibile personalizzare il modello prima di generarlo. Dopo la generazione è tuttavia possibile fare clic su **Modifica** per aprire la definizione del modello, salvarla nel file system, quindi aggiungerla a un progetto in Progettazione modelli. Dopo avere personalizzato il modello, è possibile caricarlo nel server di report come nuovo elemento oppure fare clic su **Aggiorna** in questa pagina per sostituire il modello generato con la versione modificata in Progettazione modelli.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Associare un Report o modello a un'origine dati condivisa &#40;SSRS&#41;](report-data/bind-a-report-or-model-to-a-shared-data-source-ssrs.md)   
+ [Associare un report o un modello a un'origine dati condivisa &#40;SSRS&#41;](report-data/bind-a-report-or-model-to-a-shared-data-source-ssrs.md)   
  [Guida sensibile al contesto del server di report in Management Studio](tools/report-server-in-management-studio-f1-help.md)  
   
   

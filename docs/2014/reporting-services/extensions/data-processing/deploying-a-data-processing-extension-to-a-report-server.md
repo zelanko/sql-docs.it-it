@@ -1,5 +1,5 @@
 ---
-title: "Procedura: Distribuire un'estensione per l'elaborazione dati in un server di report | Microsoft Docs"
+title: "Procedura: Distribuire un'estensione di elaborazione dei dati in un Server di Report | Microsoft Docs"
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -14,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: e00dface-70f8-434b-9763-8ebee18737d2
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: cf4013f5a557dde93cf628f55e108c5a4e1772ed
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: db03408b8ed7909f534b5dad09dbb742f7edc6c9
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48160748"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56017973"
 ---
-# <a name="how-to-deploy-a-data-processing-extension-to-a-report-server"></a>Procedura: Distribuzione di un'estensione per l'elaborazione dati in un server di report
+# <a name="how-to-deploy-a-data-processing-extension-to-a-report-server"></a>Procedura: Distribuire un'estensione di elaborazione dei dati in un Server di Report
   I server di report utilizzano le estensioni per l'elaborazione dati per il recupero e l'elaborazione di dati nei report visualizzabili. È necessario distribuire l'assembly dell'estensione per l'elaborazione dati in un server di report come assembly privato. È inoltre necessario creare una voce nel file di configurazione del server di report, ovvero RSReportServer.config.  
   
 ## <a name="procedures"></a>Procedure  
@@ -36,7 +36,7 @@ ms.locfileid: "48160748"
   
 2.  Dopo aver copiato il file di assembly, aprire il file RSReportServer.config che si trova nella directory ReportServer. È necessario immettere una voce nel file di configurazione per il file di assembly dell'estensione per l'elaborazione dati. È possibile aprire il file di configurazione in Visual Studio o in un semplice editor di testo, ad esempio Blocco note.  
   
-3.  Individuare il `Data` elemento nel file RSReportServer. config. È necessario immettere una voce per l'estensione per l'elaborazione dati appena creata nel percorso seguente:  
+3.  Individuare l'elemento `Data` nel file RSReportServer.config. È necessario immettere una voce per l'estensione per l'elaborazione dati appena creata nel percorso seguente:  
   
     ```  
     <Extensions>  

@@ -13,13 +13,13 @@ helpviewer_keywords:
 ms.assetid: d21f7493-bcf7-4e9e-9886-55ebdc1f1037
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 5482a935a5357d4557a6ffd202feac6be07900e9
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 71ccf123b9c8f5dba751affaae0374c90b5a8d99
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48130360"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56020223"
 ---
 # <a name="update-a-resource-report-manager"></a>Aggiornare una risorsa (Gestione report)
   L'aggiornamento di una risorsa viene eseguito mediante la sostituzione con una versione più recente. Le risorse sono elementi archiviati in un server di report che includono contenuto da un file caricato dall'utente. È possibile sostituire una risorsa esistente mediante l'importazione di contenuto di file diverso o nuovo nella risorsa esistente. Con l'aggiornamento di una risorsa è possibile aggiornare contenuto mantenendo le proprietà e le impostazioni di sicurezza esistenti nella risorsa.  
@@ -45,7 +45,7 @@ ms.locfileid: "48130360"
  Se la risorsa in corso di aggiornamento contiene un'immagine utilizzata nel report, per visualizzare l'immagine aggiornata sarà necessario aggiornare il report.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Contenuto della pagina &#40;gestione Report&#41;](../contents-page-report-manager.md)   
+ [Pagina Contenuto &#40;Gestione report&#41;](../contents-page-report-manager.md)   
  [Pagina Carica file &#40;Gestione report&#41;](../upload-file-page-report-manager.md)   
  [Caricare file in una cartella](upload-files-to-a-folder.md)   
  [Guida sensibile al contesto di Gestione report](../report-manager-f1-help.md)  

@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: 79ab0572-43e9-4dc4-9b5a-cd8b627b8274
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: d91acd160949d0438c73d21ac3e422f57a3522cb
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: f4122aa579766d80cfac6600753d4a8f8a672ae9
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48081684"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56017913"
 ---
 # <a name="create-a-data-driven-subscription-ssrs-tutorial"></a>Creare una sottoscrizione guidata dai dati (esercitazione su SSRS)
   In [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] sono disponibili sottoscrizioni guidate dai dati che consentono di personalizzare la distribuzione di un report in base ai dati dinamici del Sottoscrittore. Le sottoscrizioni guidate dai dati sono progettate per i tipi di scenari seguenti:  
@@ -34,7 +34,7 @@ ms.locfileid: "48081684"
   
  L'esercitazione è suddivisa in tre lezioni:  
   
- [Lezione 1: Creazione di un database di esempio del Sottoscrittore](lesson-1-creating-a-sample-subscriber-database.md)  
+ [Lezione 1: Creazione di un Database Sottoscrittore di esempio](lesson-1-creating-a-sample-subscriber-database.md)  
  In questa lezione verranno descritte le procedure per la creazione di un database di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] locale che contiene informazioni sui Sottoscrittori.  
   
  [Lezione 2: Modifica delle proprietà dell'origine dati del report](lesson-2-modifying-the-report-data-source-properties.md)  
@@ -56,7 +56,7 @@ ms.locfileid: "48081684"
   
 -   È necessario che il servizio SQL Server Agent sia in esecuzione.  
   
--   Un report con parametri. Questa esercitazione si presuppone che il report di esempio `Sales Orders` è stato creato utilizzando l'esercitazione [creare un Report tabella semplice &#40;esercitazione su SSRS&#41;](create-a-basic-table-report-ssrs-tutorial.md).  
+-   Un report con parametri. In questa esercitazione si presuppone l'uso del report di esempio `Sales Orders` creato durante l'esercitazione [Creare un report di tabelle semplice &#40;Esercitazione su SSRS&#41;](create-a-basic-table-report-ssrs-tutorial.md).  
   
 -   Il database di esempio [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] che contiene i dati per il report di esempio.  
   
@@ -67,7 +67,7 @@ ms.locfileid: "48081684"
  **Tempo previsto per il completamento dell'esercitazione:** 30 minuti. Ulteriori 30 minuti qualora l'esercitazione sul report di base non venga completata.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Sottoscrizioni guidate dai dati](subscriptions/data-driven-subscriptions.md)   
- [Creare un Report tabella semplice &#40;esercitazione su SSRS&#41;](create-a-basic-table-report-ssrs-tutorial.md)  
+ [Data-Driven Subscriptions](subscriptions/data-driven-subscriptions.md)   
+ [Creare un report tabella semplice &#40;esercitazione su SSRS&#41;](create-a-basic-table-report-ssrs-tutorial.md)  
   
   

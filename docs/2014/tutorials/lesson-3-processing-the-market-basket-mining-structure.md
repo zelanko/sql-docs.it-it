@@ -1,25 +1,24 @@
 ---
-title: 'Lezione 3: Elaborazione della struttura di Data Mining Market Basket | Microsoft Docs'
+title: "Lezione 3: L'elaborazione della struttura di Data Mining Market Basket | Microsoft Docs"
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: 095a043f-cf6f-45bb-a021-ae4e1b535c65
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 979738186c9af128087049e71fa248d41fd27b50
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: ce2c2e6944d524a38edc331d2cd128ca7cf7d419
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48192251"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56018263"
 ---
 # <a name="lesson-3-processing-the-market-basket-mining-structure"></a>Lezione 3: Elaborazione della struttura di data mining Market Basket
-  In questa lezione si userà il [INSERT INTO &#40;DMX&#41; ](/sql/dmx/insert-into-dmx) istruzione e viste vAssocSeqLineItems e vAssocSeqOrders del [!INCLUDE[ssSampleDBDWobject](../includes/sssampledbdwobject-md.md)] modelli di database di esempio per elaborare le strutture di data mining e data mining che si creato nella [lezione 1: creazione della struttura di Data Mining Market Basket](../../2014/tutorials/lesson-1-creating-the-market-basket-mining-structure.md) e [lezione 2: aggiunta di modelli di Data Mining alla struttura di Data Mining Market Basket](../../2014/tutorials/lesson-2-adding-mining-models-to-the-market-basket-mining-structure.md).  
+  In questa lezione si userà il [INSERT INTO &#40;DMX&#41; ](/sql/dmx/insert-into-dmx) istruzione e viste vAssocSeqLineItems e vAssocSeqOrders del [!INCLUDE[ssSampleDBDWobject](../includes/sssampledbdwobject-md.md)] modelli di database di esempio per elaborare le strutture di data mining e data mining che si creato in [lezione 1: Creazione della struttura di Data Mining Market Basket](../../2014/tutorials/lesson-1-creating-the-market-basket-mining-structure.md) e [lezione 2: Aggiunta di modelli di Data Mining alla struttura di Data Mining Market Basket](../../2014/tutorials/lesson-2-adding-mining-models-to-the-market-basket-mining-structure.md).  
   
  Quando si elabora una struttura di data mining, [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] legge i dati di origine e compila le strutture che supportano i modelli di data mining. Quando si elabora un modello di data mining, i dati definiti dalla struttura di data mining vengono elaborati tramite l'algoritmo di data mining selezionato. L'algoritmo ricerca tendenze e schemi e quindi archivia queste informazioni nel modello di data mining. Il modello di data mining non contiene pertanto i dati di origine effettivi, bensì le informazioni individuate dall'algoritmo. Per altre informazioni sull'elaborazione dei modelli di data mining, vedere [considerazioni e requisiti di elaborazione &#40;Data Mining&#41;](../../2014/analysis-services/data-mining/processing-requirements-and-considerations-data-mining.md).  
   
@@ -193,6 +192,6 @@ RELATE [<case key>] TO [<foreign key>]
  Nella lezione successiva verranno create diverse stime basate sui modelli di data mining aggiunti alla struttura Market Basket.  
   
 ## <a name="next-lesson"></a>Lezione successiva  
- [Lezione 4: Esecuzione delle stime relative a Market Basket](../../2014/tutorials/lesson-4-executing-market-basket-predictions.md)  
+ [Lezione 4: L'esecuzione di stime di mercato sugli acquisti](../../2014/tutorials/lesson-4-executing-market-basket-predictions.md)  
   
   

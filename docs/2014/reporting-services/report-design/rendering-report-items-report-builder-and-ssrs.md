@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 99ebb4dc-41cc-42ac-82dd-a2b0e31155a0
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: 2330060b0a659715f8a8b80c3d2e1fbe24e93d04
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 1b1bed586c6ec2878fd2a63f7d9ca8bce46bab53
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48050900"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56017701"
 ---
 # <a name="rendering-report-items-report-builder-and-ssrs"></a>Rendering degli elementi del report (Generatore report e SSRS)
   Il numero, le dimensioni e la posizione degli elementi del report influiscono sulla modalità di paginazione del corpo del report da parte dei renderer. Di seguito è riportata una descrizione della modalità di rendering dei vari elementi del report.  
@@ -78,7 +78,7 @@ ms.locfileid: "48050900"
   
 -   Intestazioni di colonna e intestazioni di riga ripetute.  
   
-     Le intestazioni hanno la precedenza rispetto ai piè di pagina. I gruppi ripetuti interni hanno la priorità rispetto ai gruppi esterni. Gli elementi con il `RepeatWith` proprietà impostata che si trovano più vicino all'area dati di destinazione hanno priorità rispetto agli elementi più lontani dall'area dati.  
+     Le intestazioni hanno la precedenza rispetto ai piè di pagina. I gruppi ripetuti interni hanno la priorità rispetto ai gruppi esterni. Gli elementi con la proprietà `RepeatWith` impostata che si trovano più vicino all'area dati di destinazione hanno la priorità rispetto agli elementi che si trovano a una distanza maggiore.  
   
 -   Elementi di report di piccole dimensioni, ad esempio caselle di testo o rettangoli, con la proprietà KeepTogether esplicita impostata su `true`.  
   
@@ -108,7 +108,7 @@ ms.locfileid: "48050900"
 ## <a name="see-also"></a>Vedere anche  
  [Paginazione in Reporting Services &#40;Generatore report e SSRS&#41;](pagination-in-reporting-services-report-builder-and-ssrs.md)   
  [Tipi di rendering &#40;Generatore report e SSRS&#41;](rendering-behaviors-report-builder-and-ssrs.md)   
- [Funzionalità interattiva per estensioni di Rendering del Report diversi &#40;Report e SSRS&#41;](../report-builder/interactive-functionality-different-report-rendering-extensions.md)   
+ [Funzionalità interattiva per estensioni per il rendering di report differenti &#40;Generatore report e SSRS&#41;](../report-builder/interactive-functionality-different-report-rendering-extensions.md)   
  [Elenchi &#40;Generatore report e SSRS&#41;](tables-matrices-and-lists-report-builder-and-ssrs.md)  
   
   

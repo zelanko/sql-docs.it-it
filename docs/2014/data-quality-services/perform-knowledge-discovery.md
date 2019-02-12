@@ -12,15 +12,15 @@ f1_keywords:
 - sql12.dqs.kb.kbmap.f1
 - sql12.dqs.kb.kbterms.f1
 ms.assetid: 34a0ea16-02e6-46ed-90bc-dede68687f63
-author: douglaslMS
-ms.author: douglasl
+author: leolimsft
+ms.author: lle
 manager: craigg
-ms.openlocfilehash: 627c3d071609b1b0053e7f8b79d20b9bff08c921
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 1577fbdfd4133e419ab5dfe6520efd5e19893cb8
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52505582"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56019672"
 ---
 # <a name="perform-knowledge-discovery"></a>Esecuzione dell'individuazione delle informazioni
   In questo argomento viene descritto come compilare una Knowledge Base tramite l'individuazione delle informazioni. Durante il processo di individuazione in [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) vengono analizzati i dati in un'origine dati di esempio tramite un processo computerizzato e vengono aggiunte le informazioni ottenute dalla Knowledge Base. Tali informazioni possono essere modificate e migliorate nel passaggio **Gestisci valori di dominio** dell'attività di individuazione delle informazioni o nell'attività di gestione del dominio.  
@@ -186,7 +186,7 @@ ms.locfileid: "52505582"
   
 11. Fare clic su **Fine** per completare l'attività di individuazione delle informazioni. Se non sono stati controllati tutti i domini, verrà visualizzata una finestra popup. Fare clic su **Sì** per continuare il controllo o su **No** per procedere. Se si fa clic su NO, verrà visualizzata un'altra finestra popup con le opzioni seguenti:  
   
-    1.  **Pubblicare**: La knowledge base verrà pubblicata per l'utente corrente o di altri utenti da usare. La Knowledge Base non verrà bloccata, lo stato della Knowledge Base nella relativa tabella verrà impostato come vuoto e saranno disponibili entrambe le attività, Gestione dominio e Individuazione informazioni. Verrà di nuovo visualizzata la home page. Per completare il processo, fare clic su **Sì** nella finestra popup.  
+    1.  **Publish**: La knowledge base verrà pubblicata per l'utente corrente o di altri utenti da usare. La Knowledge Base non verrà bloccata, lo stato della Knowledge Base nella relativa tabella verrà impostato come vuoto e saranno disponibili entrambe le attività, Gestione dominio e Individuazione informazioni. Verrà di nuovo visualizzata la home page. Per completare il processo, fare clic su **Sì** nella finestra popup.  
   
     2.  **No**: Il lavoro verrà salvato, la knowledge base rimarrà bloccata e lo stato della knowledge base verrà impostato su In lavorazione. Entrambe le attività Gestione dominio e Individuazione informazioni saranno disponibili. Verrà di nuovo visualizzata la home page.  
   

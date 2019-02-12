@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 5db74e0b-8be8-4b47-b386-faab56dffa9b
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: 77a4a9b2749eefbe43cac04351fd1d2bd2c9300e
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: cfc294f1ae01241dbcabfff954aa42c242f6aad7
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48138740"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56018233"
 ---
 # <a name="position-labels-in-a-chart-report-builder-and-ssrs"></a>Posizionamento di etichette in un grafico (Generatore report e SSRS)
   Poiché ogni tipo di grafico è caratterizzato da una forma diversa, le etichette dei punti dati vengono collocate in una posizione ottimale in modo da non interferire con il grafico. La posizione predefinita delle etichette varia a seconda del tipo di grafico:  
@@ -79,7 +79,7 @@ ms.locfileid: "48138740"
   
 6.  Selezionare un valore per la proprietà BarLabelStyle.  
   
- Quando la barra di etichettare style è impostato su `Outside`, le etichette vengono posizionate all'esterno della barra, purché quest'ultima rientri nell'area del grafico. Se l'etichetta non può essere posizionata all'esterno della barra ma all'interno dell'area del grafico, verrà inserita nella posizione più vicina all'estremità della barra.  
+ Quando lo stile delle etichette del grafico a barre è impostato su `Outside`, le etichette vengono posizionate all'esterno della barra, a condizione che la posizione rientri nell'area del grafico. Se l'etichetta non può essere posizionata all'esterno della barra ma all'interno dell'area del grafico, verrà inserita nella posizione più vicina all'estremità della barra.  
   
 ### <a name="to-change-the-position-of-point-labels-in-an-area-column-line-or-scatter-chart"></a>Per modificare la posizione delle etichette dei punti dati in un grafico ad area, a linee, a dispersione o in un istogramma  
   
@@ -96,11 +96,11 @@ ms.locfileid: "48138740"
 6.  Selezionare un valore per la proprietà Position.  
   
 ## <a name="see-also"></a>Vedere anche  
- [I grafici a torta &#40;Report e SSRS&#41;](charts-report-builder-and-ssrs.md)   
- [Grafici a barre &#40;Report e SSRS&#41;](bar-charts-report-builder-and-ssrs.md)   
+ [Grafici a torta &#40;Generatore report e SSRS&#41;](charts-report-builder-and-ssrs.md)   
+ [Grafici a barre &#40;Generatore report e SSRS&#41;](bar-charts-report-builder-and-ssrs.md)   
  [Formattazione delle etichette degli assi in un grafico &#40;Generatore report e SSRS&#41;](formatting-axis-labels-on-a-chart-report-builder-and-ssrs.md)   
- [Formattazione delle etichette degli assi come date o valute &#40;Generatore report e SSRSSSRS&#41;](format-axis-labels-as-dates-or-currencies-report-builder-and-ssrs.md)   
- [Le etichette dei punti di visualizzazione dei dati all'esterno di un grafico a torta &#40;Report e SSRS&#41;](display-data-point-labels-outside-a-pie-chart-report-builder-and-ssrs.md)   
+ [Formattazione delle etichette degli assi come date o valute &#40;Generatore report e SSRS&#41;](format-axis-labels-as-dates-or-currencies-report-builder-and-ssrs.md)   
+ [Visualizzare le etichette dei punti dati al di fuori di un grafico a torta &#40;Generatore report e SSRS&#41;](display-data-point-labels-outside-a-pie-chart-report-builder-and-ssrs.md)   
  [Formattazione dei punti dati di un grafico &#40;Generatore report e SSRS&#41;](formatting-data-points-on-a-chart-report-builder-and-ssrs.md)  
   
   

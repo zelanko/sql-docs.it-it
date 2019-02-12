@@ -4,25 +4,24 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 ms.assetid: f420509c-51aa-4170-8c25-64c2954f4bb9
-author: craigg-msft
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: fdf146743a74ff3e546072287848b033f365bc8a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+author: markingmyname
+ms.author: maghan
+manager: kfile
+ms.openlocfilehash: c34062acefc2dfd847790a39cea35b03727f49ff
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48187331"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56018912"
 ---
-# <a name="lesson-1-create-the-rdl-schema-visual-studio-project"></a>Lezione 1: Creazione del progetto di Visual Studio per lo schema RDL
+# <a name="lesson-1-create-the-rdl-schema-visual-studio-project"></a>Lezione 1: Creare il progetto di Visual Studio Schema RDL
   Per questa esercitazione verrà creata una semplice applicazione console. Questa esercitazione si presuppone cui si sta sviluppando [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[vs_dev10_long](../includes/vs-dev10-long-md.md)].  
   
 > [!NOTE]  
->  Quando si accede al servizio Web ReportServer in esecuzione su [!INCLUDE[ssExpress](../includes/ssexpress-md.md)] with Advanced Services, è necessario aggiungere "_SQLExpress" al percorso "ReportServer". Esempio:  
+>  Quando si accede al servizio Web ReportServer in esecuzione su [!INCLUDE[ssExpress](../includes/ssexpress-md.md)] with Advanced Services, è necessario aggiungere "_SQLExpress" al percorso "ReportServer". Ad esempio:  
 >   
 >  `http://myserver/reportserver_sqlexpress/reportservice2010.asmx"`  
   
@@ -198,7 +197,7 @@ ms.locfileid: "48187331"
     ```  
   
 ## <a name="next-lesson"></a>Lezione successiva  
- Nella lezione successiva verrà utilizzato lo strumento per la definizione di XML Schema (Xsd.exe) per generare classi dallo schema RDL e includerle nel progetto. Visualizzare [lezione 2: generare classi dallo Schema RDL mediante lo strumento xsd](../../2014/tutorials/lesson-2-generate-classes-from-the-rdl-schema-using-the-xsd-tool.md).  
+ Nella lezione successiva verrà utilizzato lo strumento per la definizione di XML Schema (Xsd.exe) per generare classi dallo schema RDL e includerle nel progetto. Vedere [lezione 2: Generare classi dallo Schema RDL mediante lo strumento xsd](../../2014/tutorials/lesson-2-generate-classes-from-the-rdl-schema-using-the-xsd-tool.md).  
   
 ## <a name="see-also"></a>Vedere anche  
  [Aggiornamento dei report mediante le classi generate dallo Schema RDL &#40;esercitazione su SSRS&#41;](../../2014/tutorials/updating-reports-using-classes-generated-from-the-rdl-schema-ssrs-tutorial.md)   

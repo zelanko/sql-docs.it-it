@@ -12,13 +12,13 @@ f1_keywords:
 ms.assetid: 23537d52-4356-450f-a671-5921cef2431f
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: af0db1ac3d03fa03ea7bb3267656597d164c5302
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 4f92c0886bf3e1e5d5022cde96ad39671588225d
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48222209"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56019342"
 ---
 # <a name="server-properties-general-page"></a>Proprietà server (pagina Generale)
   Questa pagina consente di visualizzare o modificare il titolo utilizzato in Gestione report, abilitare o disabilitare la cartella Report personali, selezionare una definizione di ruolo per la sicurezza della cartella Report personali e abilitare o disabilitare il controllo di stampa client.  
@@ -28,10 +28,10 @@ ms.locfileid: "48222209"
  La modalità del server determina le proprietà del server che è possibile impostare. Se si gestisce un server di report configurato per la modalità integrata SharePoint, non è possibile abilitare Report personali o impostare il titolo dell'applicazione per Gestione report.  
   
 ## <a name="options"></a>Opzioni  
- **Nome**  
+ **Name**  
  Consente di digitare il nome di un'applicazione che verrà visualizzato in Gestione report. Per impostazione predefinita, il valore è [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. Il nome specificato compare solamente in Gestione report.  
   
- **Versione**  
+ **Version**  
  Questa proprietà è di sola lettura. Specifica la versione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] in uso.  
   
  **Edizione**  
@@ -50,7 +50,7 @@ ms.locfileid: "48222209"
  Consente di specificare una definizione di ruolo da utilizzare per la sicurezza della cartella Report personali. La definizione di ruolo identifica il set delle attività che sono supportate in ogni cartella Report personali.  
   
  **Abilitare il download per il controllo di stampa client ActiveX**  
- Imposta il `EnableClientPrinting` proprietà sistema del server di report. Se si abilita la stampa su client, gli utenti con autorizzazioni di amministrazione nel computer locale possono eseguire il download di un controllo ActiveX firmato per la stampa dei report HTML. Per altre informazioni, vedere [abilitare e disabilitare la stampa sul lato Client per Reporting Services](../report-server/enable-and-disable-client-side-printing-for-reporting-services.md).  
+ Consente di impostare la proprietà di sistema `EnableClientPrinting` del server di report. Se si abilita la stampa su client, gli utenti con autorizzazioni di amministrazione nel computer locale possono eseguire il download di un controllo ActiveX firmato per la stampa dei report HTML. Per altre informazioni, vedere [Abilitare e disabilitare la stampa sul lato client per Reporting Services](../report-server/enable-and-disable-client-side-printing-for-reporting-services.md).  
   
 ## <a name="see-also"></a>Vedere anche  
  [Impostare le proprietà di un server di report &#40;Management Studio&#41;](set-report-server-properties-management-studio.md)   

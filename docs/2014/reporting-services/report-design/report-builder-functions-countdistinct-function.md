@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 902c251e-e1e8-41d2-ac20-5bb6138ac410
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: bd681b0616aa175c68104da48577ad5dc19f1897
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 5122fe6ddecacb492539573aa769e34164e699f2
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48191227"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56021532"
 ---
 # <a name="countdistinct-function-report-builder-and-ssrs"></a>Funzione CountDistinct (Generatore report e SSRS)
   Restituisce un conteggio di tutti i distinti valori non Null specificati dall'espressione, valutato nel contesto dell'ambito specificato.  
@@ -39,10 +39,10 @@ CountDistinct(expression, scope, recursive)
  (`String`) Facoltativo. Nome di un set di dati, gruppo o area dati che contiene gli elementi del report a cui applicare la funzione di aggregazione. Se si omette *scope* , viene usato l'ambito corrente.  
   
  *ricorsivi*  
- (**Enumerated Type**) Facoltativo. `Simple` (impostazione predefinita) o `RdlRecursive`. Specifica se eseguire l'aggregazione in modo ricorsivo.  
+ (**Enumerated Type**) Facoltativo. `Simple` (valore predefinito) o `RdlRecursive`. Specifica se eseguire l'aggregazione in modo ricorsivo.  
   
 ## <a name="return-type"></a>Tipo restituito  
- Restituisce un `Integer`.  
+ Restituisce un valore `Integer`.  
   
 ## <a name="remarks"></a>Note  
  Il valore di *scope* deve essere una costante di tipo stringa e non può essere un'espressione. Per aggregazioni o aggregazioni esterne che non specificano altre aggregazioni, *scope* deve fare riferimento all'ambito corrente o a un ambito contenitore. Per le aggregazioni di aggregazioni, le aggregazioni nidificate possono specificare un ambito figlio.  
@@ -62,7 +62,7 @@ CountDistinct(expression, scope, recursive)
  Per altre informazioni sulle aggregazioni ricorsive, vedere [Creazione di gruppi di gerarchie ricorsive &#40;Generatore report e SSRS&#41;](creating-recursive-hierarchy-groups-report-builder-and-ssrs.md).  
   
 ## <a name="example"></a>Esempio  
- L'esempio di codice seguente illustra un'espressione che calcola il numero di valori non Null univoci di `Size` per l'ambito predefinito e per un ambito di gruppo padre. L'espressione viene aggiunta in una riga di una cella che appartiene al gruppo figlio `GroupbySubcategory`. Il gruppo padre è `GroupbyCategory`. L'espressione visualizza i risultati per `GroupbySubcategory` (ambito predefinito) e quindi per `GroupbyCategory` (ambito del gruppo padre).  
+ L'esempio di codice seguente illustra un'espressione che calcola il numero di valori non Null univoci di `Size` per l'ambito predefinito e per un ambito di gruppo padre. L'espressione viene aggiunta a una riga di una cella che appartiene al gruppo figlio `GroupbySubcategory`. Il gruppo padre è `GroupbyCategory`. L'espressione visualizza i risultati per `GroupbySubcategory` (ambito predefinito) e quindi per `GroupbyCategory` (ambito del gruppo padre).  
   
 > [!NOTE]  
 >  Le espressioni non devono contenere ritorni a capo e interruzioni di riga, che sono inclusi nell'esempio di codice per supportare i renderer della documentazione. Se si copia l'esempio seguente, rimuovere i ritorni a capo da ogni riga.  
@@ -73,9 +73,9 @@ CountDistinct(expression, scope, recursive)
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Uso delle espressioni nei report di &#40;Report e SSRS&#41;](expression-uses-in-reports-report-builder-and-ssrs.md)   
+ [Utilizzo delle espressioni nei report &#40;Generatore report e SSRS&#41;](expression-uses-in-reports-report-builder-and-ssrs.md)   
  [Esempi di espressioni &#40;Generatore report e SSRS&#41;](expression-examples-report-builder-and-ssrs.md)   
  [Tipi di dati nelle espressioni &#40;Generatore report e SSRS&#41;](expressions-report-builder-and-ssrs.md)   
- [Ambito di espressioni per totali, aggregazioni e raccolte predefinite &#40;Report e SSRS&#41;](expression-scope-for-totals-aggregates-and-built-in-collections.md)  
+ [Ambito di espressioni per totali, aggregazioni e raccolte predefinite &#40;Generatore report e SSRS&#41;](expression-scope-for-totals-aggregates-and-built-in-collections.md)  
   
   
