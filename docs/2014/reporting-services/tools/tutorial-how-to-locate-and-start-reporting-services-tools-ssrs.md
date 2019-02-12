@@ -21,16 +21,16 @@ helpviewer_keywords:
 ms.assetid: 51ad69d8-fe92-4662-a7cd-d235692f0c03
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: c8c8c175eaaf84df788a9b7cbc90e637d51d5c07
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 03fb1d70046fe784fecafd8d9b3092ce21962498
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48105502"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56036902"
 ---
 # <a name="tutorial-how-to-locate-and-start-reporting-services-tools-ssrs"></a>Esercitazione: Individuazione e avvio degli strumenti di Reporting Services (SSRS)
-  In questa esercitazione vengono descritti gli strumenti utilizzati per configurare un server di report, gestire le operazioni e il contenuto del server di report, nonché creare e pubblicare report. In questa esercitazione vengono descritte le procedure per individuare e aprire ogni strumento. Se si ha già familiarità con gli strumenti, è possibile passare ad altre esercitazioni che consentono di acquisire capacità importanti per l'uso di [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]. Per altre informazioni sulle altre esercitazioni, vedere [esercitazioni su Reporting Services &#40;SSRS&#41;](../reporting-services-tutorials-ssrs.md).  
+  In questa esercitazione vengono descritti gli strumenti utilizzati per configurare un server di report, gestire le operazioni e il contenuto del server di report, nonché creare e pubblicare report. In questa esercitazione vengono descritte le procedure per individuare e aprire ogni strumento. Se si ha familiarità con gli strumenti, è possibile passare ad altre esercitazioni che consentono di acquisire capacità importanti per l'utilizzo di [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]. Per altre informazioni sulle altre esercitazioni, vedere [esercitazioni su Reporting Services &#40;SSRS&#41;](../reporting-services-tutorials-ssrs.md).  
   
  Contenuto dell'argomento:  
   
@@ -59,7 +59,7 @@ ms.locfileid: "48105502"
   
 -   Configurare l'elaborazione automatica del report e il relativo recapito per posta elettronica.  
   
- **Installazione:** Gestione configurazione [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] viene installato quando si installa la modalità nativa di [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]. Per altre informazioni, vedere [Installare un server di report in modalità nativa di Reporting Services](../install-windows/install-reporting-services-native-mode-report-server.md)  
+ **Installazione:** [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] Configuration Manager viene installato quando si installa la modalità nativa di [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]. Per altre informazioni, vedere [Installare un server di report in modalità nativa di Reporting Services](../install-windows/install-reporting-services-native-mode-report-server.md)  
   
 #### <a name="to-start-the-reporting-services-configuration-manager"></a>Per avviare Gestione configurazione Reporting Services  
   
@@ -90,7 +90,7 @@ ms.locfileid: "48105502"
 ##  <a name="bkmk_report_manager"></a> Gestione report (modalità nativa)  
  Uso [gestione Report &#40;modalità nativa SSRS&#41; ](../report-manager-ssrs-native-mode.md) per impostare le autorizzazioni, gestire sottoscrizioni e pianificazioni e usare i report. Con Gestione report è inoltre possibile visualizzare i report.  
   
- **Installazione:** gestione Report viene installato quando installa [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] in modalità nativa: [installare Reporting Services in modalità Server di Report nativa](../install-windows/install-reporting-services-native-mode-report-server.md)  
+ **Installazione:** Gestione report viene installato quando installa [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] in modalità nativa: [Installare un server di report in modalità nativa di Reporting Services](../install-windows/install-reporting-services-native-mode-report-server.md)  
   
  Per aprire Gestione report è necessario disporre di autorizzazioni sufficienti (inizialmente, solo i membri del gruppo Administrators locale dispongono delle autorizzazioni per l'accesso alle funzionalità di Gestione report). Gestione report offre diverse pagine e opzioni a seconda delle assegnazioni di ruolo dell'utente corrente. Per gli utenti che non dispongono di autorizzazioni verrà visualizzata una pagina vuota. Per gli utenti con autorizzazioni per la visualizzazione di report verranno visualizzati collegamenti per aprire i report. Per sapere di più sulle autorizzazioni, vedere [Ruoli e autorizzazioni &#40;Reporting Services&#41;](../security/roles-and-permissions-reporting-services.md).  
   
@@ -104,7 +104,7 @@ ms.locfileid: "48105502"
   
 4.  Se si esegue Gestione Report nel server di report locale, vedere [configurare un Server di Report in modalità nativa per l'amministrazione locale &#40;SSRS&#41;](../report-server/configure-a-native-mode-report-server-for-local-administration-ssrs.md).  
   
- **Passaggi successivi:** [configurare Gestione Report &#40;in modalità nativa&#41;](../report-server/configure-web-portal.md).  
+ **Passaggi successivi:** [Configurare Gestione Report &#40;modalità nativa&#41;](../report-server/configure-web-portal.md).  
   
 ##  <a name="bkmk_managements_studio"></a> Management Studio  
  Gli amministratori del server di report possono utilizzare [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] per gestire un server di report insieme ad altri componenti server di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Per altre informazioni, vedere [Use SQL Server Management Studio](../../database-engine/use-sql-server-management-studio.md).  
@@ -136,7 +136,7 @@ ms.locfileid: "48105502"
   
      **Or**  
   
-     Fare clic su **avviare**, scegliere **tutti i programmi**, scegliere [!INCLUDE[ssCurrentUI](../../../includes/sscurrentui-md.md)], quindi fare clic su **SQL Server Data Tools (SSDT)**.  
+     Fare clic su **Start**, scegliere **Tutti i programmi**, [!INCLUDE[ssCurrentUI](../../../includes/sscurrentui-md.md)], quindi fare clic su **SQL Server Data Tools (SSDT)**.  
   
 2.  Scegliere **Nuovo** dal menu **File**e quindi fare clic su **Progetto**.  
   
@@ -155,7 +155,7 @@ ms.locfileid: "48105502"
 ##  <a name="bkmk_report_builder"></a> Generatore report  
  Uso [Generatore Report &#40;SSRS&#41; ](report-builder-authoring-environment-ssrs.md) per creare report in un [!INCLUDE[msCoName](../../includes/msconame-md.md)] ambiente di creazione simile a Office. È possibile personalizzare e aggiornare tutti i report esistenti, sia che siano stati creati in Progettazione report o nelle versioni precedenti di Generatore report. Per informazioni sul percorso del file ReportBuilder3.msi che si esegue per installare Generatore report nel computer locale, rivolgersi all'amministratore.  
   
- **Installazione:** clic-versione ClickOnce di Generatore report viene installata in uno dei modi [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] in modalità nativa o in modalità SharePoint. La versione autonoma di Generatore report è un download separato.  Visualizzare [installare la versione autonoma di Generatore Report &#40;Generatore Report&#41;](../install-windows/install-report-builder.md)  
+ **Installazione:** Fare clic su-versione ClickOnce di Generatore report viene installata in uno dei modi [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] in modalità nativa o in modalità SharePoint. La versione autonoma di Generatore report è un download separato.  Visualizzare [installare la versione autonoma di Generatore Report &#40;Generatore Report&#41;](../install-windows/install-report-builder.md)  
   
 #### <a name="to-start-report-builder-clickonce-from-report-manager-native-mode"></a>Per avviare la versione ClickOnce di Generatore report da Gestione report (modalità nativa)  
   
@@ -169,7 +169,7 @@ ms.locfileid: "48105502"
   
 1.  Nella barra degli indirizzi del browser digitare l'URL seguente:  
   
-     **http://\<servername > /reportserver/reportbuilder/ReportBuilder_3_0_0_0.application**  
+     **http://\<servername>/reportserver/reportbuilder/ReportBuilder_3_0_0_0.application**  
   
 2.  Premere INVIO.  
   

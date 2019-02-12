@@ -19,18 +19,18 @@ helpviewer_keywords:
 ms.assetid: 0c2e8587-1dda-4e7b-8ef8-646fcda051fc
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 80aa9e3838440e93cf92c7efb7f93723a1bdbdef
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 4edf20d92883c5446a4e63472e006acc3763084d
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48205931"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56024152"
 ---
 # <a name="msreportserverinstance-class"></a>classe MSReportServer_Instance
   La classe MSReportServer_Instance fornisce le informazioni di base necessarie a un client per la connessione a un server di report installato.  
   
- Per un elenco di tutti i membri di questo tipo, vedere [membri di MSReportServer_Instance](msreportserver-instance-members.md)  
+ Per un elenco di tutti i membri di questo tipo, vedere [Membri di MSReportServer_Instance](msreportserver-instance-members.md)  
   
 ## <a name="syntax"></a>Sintassi  
   

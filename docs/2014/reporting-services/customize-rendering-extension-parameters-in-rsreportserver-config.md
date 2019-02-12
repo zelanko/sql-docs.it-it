@@ -17,13 +17,13 @@ helpviewer_keywords:
 ms.assetid: 3bf7ab2b-70bb-41c8-acda-227994d15aed
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 83f12c0641768722156322e6e5a655b9e5e5a88b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: a412f39db5b86deca61297a97d49bea6aa89f720
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48220931"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56035792"
 ---
 # <a name="customize-rendering-extension-parameters-in-rsreportserverconfig"></a>Personalizzare i parametri di estensione per il rendering in RSReportServer.config.
   È possibile specificare i parametri di estensione per il rendering nel file di configurazione RSReportServer per sostituire il comportamento di rendering predefinito per i report in esecuzione in un server di report di [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] . È possibile modificare i parametri di estensione per il rendering per ottenere gli obiettivi seguenti:  
@@ -41,16 +41,16 @@ ms.locfileid: "48220931"
 ## <a name="finding-and-modifying-rsreportserverconfig"></a>Individuazione e modifica del file RSReportServer.config  
  Le impostazioni di configurazione per i formati di output del report vengono specificate come parametri di estensione per il rendering nel file RSReportServer.config. Per specificare i parametri di estensione per il rendering nei file di configurazione, è necessario saper definire le strutture XML per l'impostazione dei parametri di rendering. È possibile modificare due strutture XML:  
   
--   Il `OverrideNames` elemento definisce il nome visualizzato e la lingua dell'estensione per il rendering.  
+-   L'elemento `OverrideNames` definisce il nome visualizzato e la lingua dell'estensione per il rendering.  
   
--   Il `DeviceInfo` struttura XML definisce le impostazioni informazioni dispositivo utilizzate da un'estensione per il rendering. La maggior parte dei parametri di estensione per il rendering viene specificata come impostazioni relative alle informazioni sul dispositivo.  
+-   La struttura XML `DeviceInfo` definisce le impostazioni relative alle informazioni sul dispositivo utilizzate da un'estensione per il rendering. La maggior parte dei parametri di estensione per il rendering viene specificata come impostazioni relative alle informazioni sul dispositivo.  
   
  Per modificare il file, è possibile utilizzare un editor di testo. Il file RSReportServer.config si trova nella cartella \Reporting Services\Report Server\Bin. Per altre informazioni su come modificare il file di configurazione, vedere [Modificare un file di configurazione di Reporting Services &#40;RSreportserver.config&#41;](report-server/modify-a-reporting-services-configuration-file-rsreportserver-config.md).  
   
 ## <a name="changing-the-display-name"></a>Modifica del nome visualizzato  
- Il nome di un'estensione per il rendering viene visualizzato nell'elenco Esporta sulla barra degli strumenti del report. Tra i nomi visualizzati predefiniti vi sono Archivio Web, File TIFF e File Acrobat (PDF). È possibile sostituire il nome visualizzato predefinito con un valore personalizzato specificando il `OverrideNames` elemento nei file di configurazione. Se si stanno definendo due istanze di un'unica estensione per il rendering, è inoltre possibile utilizzare l'elemento `OverrideNames` per distinguere ogni istanza nell'elenco Esporta.  
+ Il nome di un'estensione per il rendering viene visualizzato nell'elenco Esporta sulla barra degli strumenti del report. Tra i nomi visualizzati predefiniti vi sono Archivio Web, File TIFF e File Acrobat (PDF). È possibile sostituire il nome visualizzato predefinito con un valore personalizzato specificando l'elemento `OverrideNames` nei file di configurazione. Se si stanno definendo due istanze di un'unica estensione per il rendering, è inoltre possibile utilizzare l'elemento `OverrideNames` per distinguere ogni istanza nell'elenco Esporta.  
   
- Poiché i nomi visualizzati sono localizzati, è necessario impostare il `Language` attributo se si sta sostituendo il nome visualizzato predefinito con un valore personalizzato. In caso contrario, eventuali nomi specificati verranno ignorati. La lingua impostata deve essere valida per il computer del server di report. Se, ad esempio, il server di report è in esecuzione in un sistema operativo francese, è necessario specificare "fr-FR" come valore dell'attributo.  
+ Poiché i nomi visualizzati sono localizzati, se si sta sostituendo il nome visualizzato predefinito con un valore personalizzato, è necessario impostare l'attributo `Language`. In caso contrario, eventuali nomi specificati verranno ignorati. La lingua impostata deve essere valida per il computer del server di report. Se, ad esempio, il server di report è in esecuzione in un sistema operativo francese, è necessario specificare "fr-FR" come valore dell'attributo.  
   
  Nell'esempio seguente viene illustrato come definire un nome personalizzato in un server di report inglese:  
   
@@ -63,7 +63,7 @@ ms.locfileid: "48220931"
 ```  
   
 ## <a name="changing-device-information-settings"></a>Modifica delle impostazioni relative alle informazioni sul dispositivo  
- Per modificare le impostazioni predefinite relative alle informazioni sul dispositivo utilizzate da un'estensione per il rendering già distribuita nel server di report, digitare la struttura XML `DeviceInfo` nei file di configurazione. Ogni estensione per il rendering supporta impostazioni relative alle informazioni sui dispositivi specifici per quella estensione. Per visualizzare l'elenco completo di tali impostazioni, vedere [il passaggio di impostazioni informazioni dispositivo alle estensioni di Rendering](report-server-web-service/net-framework/passing-device-information-settings-to-rendering-extensions.md).  
+ Per modificare le impostazioni predefinite relative alle informazioni sul dispositivo utilizzate da un'estensione per il rendering già distribuita nel server di report, digitare la struttura XML `DeviceInfo` nei file di configurazione. Ogni estensione per il rendering supporta impostazioni relative alle informazioni sui dispositivi specifici per quella estensione. Per l'elenco completo delle impostazioni relative alle informazioni sul dispositivo, vedere [Passaggio delle impostazioni relative alle informazioni sul dispositivo alle estensioni per il rendering](report-server-web-service/net-framework/passing-device-information-settings-to-rendering-extensions.md).  
   
  Nell'esempio seguente vengono illustrate la struttura XML e la sintassi per la modifica delle impostazioni predefinite dell'estensione per il rendering delle immagini:  
   
@@ -90,7 +90,7 @@ ms.locfileid: "48220931"
   
 -   Specificare un nome univoco per l'estensione.  
   
-     Ogni istanza deve avere un valore univoco per il `Name` attributo. Nell'esempio seguente vengono utilizzati i nomi "IMAGE (EMF Landscape)" e "IMAGE (EMF Portrait)" per distinguere tra le due istanze.  
+     L'attributo `Name` di ogni istanza deve avere un valore univoco. Nell'esempio seguente vengono utilizzati i nomi "IMAGE (EMF Landscape)" e "IMAGE (EMF Portrait)" per distinguere tra le due istanze.  
   
      Fare attenzione quando si modifica il nome di un'estensione per il rendering già distribuita. Gli sviluppatori che specificano estensioni per il rendering a livello di programmazione utilizzano i nomi delle estensioni per identificare l'istanza da utilizzare per un'operazione di rendering specifica. Se nel server di report sono in esecuzione applicazioni di [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] personalizzate, verificare che lo sviluppatore sia informato se si modifica il nome di un'estensione esistente o se ne aggiunge uno nuovo.  
   

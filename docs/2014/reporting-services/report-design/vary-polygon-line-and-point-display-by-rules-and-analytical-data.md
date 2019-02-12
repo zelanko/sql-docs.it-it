@@ -20,13 +20,13 @@ f1_keywords:
 ms.assetid: 7f1f5584-37b4-4fa2-ae44-8988c5f0c744
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: d5c6ca9ae7bca2b9c6dc55f65cbbb95917fd96db
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: fc596a1075a2795f9db622bc2cdecc1e7885c0da
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48158911"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56027252"
 ---
 # <a name="vary-polygon-line-and-point-display-by-rules-and-analytical-data-report-builder-and-ssrs"></a>Variare la visualizzazione di poligoni, linee e punti in base a regole e dati analitici (Generatore report e SSRS)
   Le opzioni di visualizzazione per poligoni, linee e punti su un livello mappa vengono controllate impostando le opzioni del livello, le regole per gli elementi della mappa sul livello o sostituendo le opzioni per specifici elementi incorporati della mappa su un livello.  
@@ -122,7 +122,7 @@ ms.locfileid: "48158911"
   
  Nelle tabelle seguenti vengono mostrati esempi di formati diversi che è possibile utilizzare.  
   
-|Parola chiave e formato|Description|Esempio di testo visualizzato nella legenda|  
+|Parola chiave e formato|Descrizione|Esempio di testo visualizzato nella legenda|  
 |------------------------|-----------------|---------------------------------------------------|  
 |`#FROMVALUE {C0}`|Visualizza la valuta del valore totale senza posizioni decimali|$400|  
 |`#FROMVALUE {C2}`|Visualizza la valuta del valore totale con due posizioni decimali.|$400.55|  
@@ -130,7 +130,7 @@ ms.locfileid: "48158911"
 |`#FROMVALUE{N0} - #TOVALUE{N0}`|Visualizza i valori numerici effettivi dell'inizio e della fine dell'intervallo.|10 - 790|  
   
 ## <a name="see-also"></a>Vedere anche  
- [Modificare legende della mappa, scala dei colori e regole associate &#40;Report e SSRS&#41;](change-map-legends-color-scale-and-associated-rules-report-builder-and-ssrs.md)   
+ [Modificare legende della mappa, scala dei colori e regole associate &#40;Generatore report e SSRS&#41;](change-map-legends-color-scale-and-associated-rules-report-builder-and-ssrs.md)   
  [Mappe &#40;Generatore report e SSRS&#41;](maps-report-builder-and-ssrs.md)   
  [Creazione guidata mappa e Creazione guidata livello mappa &#40;Generatore report e SSRS&#41;](map-wizard-and-map-layer-wizard-report-builder-and-ssrs.md)  
   

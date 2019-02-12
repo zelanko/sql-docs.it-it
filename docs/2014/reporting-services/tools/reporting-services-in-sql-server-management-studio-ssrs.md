@@ -12,13 +12,13 @@ helpviewer_keywords:
 ms.assetid: 60685458-9108-47bf-820a-5e7db454d408
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: f6cbd9cc0723f6b1ce01799423a88c6a0f62e801
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: d11f943dcbe22080609c8e10a457e2c64d904de2
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48132183"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56036762"
 ---
 # <a name="reporting-services-in-sql-server-management-studio-ssrs"></a>Reporting Services di SQL Server Management Studio (SSRS)
   Gli amministratori del server di report possono usare [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] per:  
@@ -33,17 +33,17 @@ ms.locfileid: "48132183"
   
  In questa sezione sono disponibili istruzioni dettagliate per l'esecuzione di varie attività con i report usando [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]. La creazione e la gestione di pianificazioni condivise possono essere inoltre eseguiti utilizzando Gestione report.  
   
-## <a name="in-this-section"></a>Argomenti della sezione  
+## <a name="in-this-section"></a>In questa sezione  
   
 -   [Eseguire la connessione a un server di report in Management Studio](connect-to-a-report-server-in-management-studio.md)  
   
--   [Impostare le proprietà Server di Report &#40;Management Studio&#41;](set-report-server-properties-management-studio.md)  
+-   [Impostare le proprietà di un server di report &#40;Management Studio&#41;](set-report-server-properties-management-studio.md)  
   
 -   [Creare, eliminare o modificare un ruolo &#40;Management Studio&#41;](../security/role-definitions-create-delete-or-modify.md)  
   
 -   [Eliminare un elemento &#40;Management Studio&#41;](delete-an-item-management-studio.md)  
   
--   [Annulla processi Server di Report &#40;Management Studio&#41;](cancel-report-server-jobs-management-studio.md)  
+-   [Annulla processi server di report &#40;Management Studio&#41;](cancel-report-server-jobs-management-studio.md)  
   
 ## <a name="see-also"></a>Vedere anche  
  [Guida sensibile al contesto del server di report in Management Studio](report-server-in-management-studio-f1-help.md)   

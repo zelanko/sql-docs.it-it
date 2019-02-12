@@ -12,15 +12,15 @@ helpviewer_keywords:
 - upgrading caching for Lookup transformation
 - upgrading Lookup transformation
 ms.assetid: d9b2c281-91ee-4e20-bdf0-0cd77d4a4241
-author: mashamsft
-ms.author: douglasl
+author: leolimsft
+ms.author: lle
 manager: craigg
-ms.openlocfilehash: 652cec720eae440106a0c8e30bd9910140dcff0a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 159779bc43edf7d30182e86aee545e6e9db8135a
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48182621"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56032372"
 ---
 # <a name="upgrade-lookup-transformations"></a>Aggiornare le trasformazioni Ricerca
   Quando si esegue l'aggiornamento da [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], è consigliabile modificare il pacchetto per sfruttare le nuove caratteristiche della trasformazione Ricerca. La trasformazione supporta i tipi di memorizzazione nella cache e le opzioni di output dei dati disponibili in [!INCLUDE[ssISversion2005](../../includes/ssisversion2005-md.md)]. Per altre informazioni sulle altre gli output di dati e la memorizzazione nella cache, vedere [trasformazione ricerca](../../integration-services/data-flow/transformations/lookup-transformation.md).  

@@ -1,5 +1,5 @@
 ---
-title: 'Nuova assegnazione di ruolo di sistema: Modifica pagina Assegnazioni ruolo di sistema (gestione Report) | Microsoft Docs'
+title: 'Nuova assegnazione di ruolo di sistema: Modificare la pagina Assegnazioni ruolo di sistema (gestione Report) | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -10,15 +10,15 @@ ms.topic: conceptual
 ms.assetid: 62a22ab9-1eb4-4ce5-8dd7-06b5ed2d9a2a
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 26a2ca4499787fce12508e55bb5197b6f0c6f527
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 7c1354228c1afbebe519a94d16973d024b84caac
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48053991"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56032392"
 ---
-# <a name="new-system-role-assignments-edit-system-role-assignments-page-report-manager"></a>Pagina Nuova assegnazione ruolo a livello di sistema: Modifica assegnazioni ruolo a livello di sistema (Gestione report)
+# <a name="new-system-role-assignments-edit-system-role-assignments-page-report-manager"></a>Nuova assegnazione di ruolo di sistema: Modificare la pagina Assegnazioni ruolo di sistema (gestione Report)
   La pagina Nuova assegnazione ruolo a livello di sistema o Modifica assegnazioni ruolo a livello di sistema consente di impostare la sicurezza per il server di report. Il sistema di sicurezza è interamente basato sulle assegnazioni di ruolo, tramite le quali utenti o gruppi specifici vengono mappati alle attività che possono eseguire. L'elenco di attività è rappresentato in forma di definizione di ruolo selezionabile per la creazione dell'assegnazione di ruolo.  
   
  A livello di sistema, le assegnazioni di ruolo create o modificate vengono applicate al server di report nel suo complesso. Ad esempio, la possibilità di creare pianificazioni condivise viene impostata a livello di sistema perché le pianificazioni condivise vengono utilizzate in tutto il sistema.  
@@ -52,9 +52,9 @@ ms.locfileid: "48053991"
  **Roles**  
  Fornisce un elenco di ruoli a livello di sistema che è possibile assegnare agli altri utenti. È possibile specificare più ruoli per una singola assegnazione di ruolo.  
   
- Gestione report non consente di visualizzare le attività incluse in ogni ruolo né di aggiungere o modificare le attività. I ruoli devono essere utilizzati come sono definiti. Per creare, modificare o eliminare ruoli, usare [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)]. Per altre informazioni, vedere [creare, eliminare o modificare un ruolo &#40;Management Studio&#41;](security/role-definitions-create-delete-or-modify.md).  
+ Gestione report non consente di visualizzare le attività incluse in ogni ruolo né di aggiungere o modificare le attività. I ruoli devono essere utilizzati come sono definiti. Per creare, modificare o eliminare ruoli, usare [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)]. Per altre informazioni, vedere [Creare, eliminare o modificare un ruolo &#40;Management Studio&#41;](security/role-definitions-create-delete-or-modify.md).  
   
- Si noti che se si usa [!INCLUDE[ssExpressEd2005](../includes/ssexpressed2005-md.md)] with Advanced Services, è necessario usare i ruoli predefiniti forniti.  
+ Si noti che, se si utilizza [!INCLUDE[ssExpressEd2005](../includes/ssexpressed2005-md.md)] with Advanced Services, è necessario utilizzare i ruoli predefiniti forniti.  
   
  **Descrizioni**  
  Visualizza informazioni aggiuntive sul ruolo. La descrizione di un ruolo predefinito, ad esempio Utente sistema o Amministratore sistema, contiene un riassunto delle attività supportate da ciascun ruolo.  

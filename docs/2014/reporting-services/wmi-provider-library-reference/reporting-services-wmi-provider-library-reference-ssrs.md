@@ -18,13 +18,13 @@ helpviewer_keywords:
 ms.assetid: 17ba711d-7eff-4423-9168-63dc425a3428
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: e5f5958b52e59f3eb741f0f593a49e865dfb300e
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 302e7f1b58fdb2a63af9f2a1b4e9dad3127c6d57
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48217931"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56034512"
 ---
 # <a name="reporting-services-wmi-provider-library-reference-ssrs"></a>Riferimento della libreria del provider WMI Reporting Services (SSRS)
   Il provider WMI (Windows Management Instrumentation) di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] supporta operazioni WMI che consentono di scrivere script e codice per modificare le impostazioni del server di report e di Gestione report.  
@@ -42,6 +42,6 @@ ms.locfileid: "48217931"
   
 ## <a name="see-also"></a>Vedere anche  
  [Accedere al provider WMI per Reporting Services](../tools/access-the-reporting-services-wmi-provider.md)   
- [Riferimento tecnico &#40;SSRS&#41;](../technical-reference-ssrs.md)  
+ [Guida di riferimento tecnico &#40;SSRS&#41;](../technical-reference-ssrs.md)  
   
   

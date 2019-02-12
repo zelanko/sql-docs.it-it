@@ -14,23 +14,23 @@ helpviewer_keywords:
 ms.assetid: 3af42de3-67ef-41c2-bc8a-7045baec6f63
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 3cd097e0a59a51529ae3fa373ad1e7e8b84b6b9c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 7d0ec49168e4a23a019eb91fc708e286bf0e1ac4
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48095897"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56037042"
 ---
 # <a name="link-a-report-to-a-model-as-a-clickthrough-report"></a>Collegare un report a un modello come report click-through
-  Invece di utilizzare i modelli di report click-through predefiniti, è possibile creare un report con Generatore report e quindi collegarlo a un'entità specifica nel modello di report. Quando l'utente che visualizza il report fa clic sui dati interattivi nel report principale, questo report viene visualizzato come report click-through. Per collegare un report a un'entità, utilizzare [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] gestione Report.  
+  Invece di utilizzare i modelli di report click-through predefiniti, è possibile creare un report con Generatore report e quindi collegarlo a un'entità specifica nel modello di report. Quando l'utente che visualizza il report fa clic sui dati interattivi nel report principale, questo report viene visualizzato come report click-through. Per collegare un report a un'entità, utilizzare Gestione report di [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] .  
   
 > [!IMPORTANT]  
 >  L'entità primaria, o di base, che viene utilizzata nel report deve coincidere con quella a cui il report è collegato.  
   
 ### <a name="to-start-report-manager-from-a-browser"></a>Per avviare Gestione report da un browser  
   
-1.  Apri [!INCLUDE[msCoName](../includes/msconame-md.md)] Internet Explorer 6.0 o versione successiva.  
+1.  Aprire [!INCLUDE[msCoName](../includes/msconame-md.md)] Internet Explorer 6.0 o versione successiva.  
   
 2.  Nella barra degli indirizzi del browser digitare l'URL di Gestione report. Per impostazione predefinita, l'URL è http://\<*ComputerName*> / reports.  
   

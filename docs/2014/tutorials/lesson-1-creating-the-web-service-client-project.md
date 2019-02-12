@@ -4,21 +4,20 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 ms.assetid: 0070daa6-56b0-4663-83b2-44c96acafad8
-author: craigg-msft
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: bf5a2f15aaed3c50c456eb635b34a19973a51f21
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+author: markingmyname
+ms.author: maghan
+manager: kfile
+ms.openlocfilehash: aa992d78e8075459115fb4a298b8c8dba02a8157
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48080801"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56025292"
 ---
-# <a name="lesson-1-creating-the-web-service-client-project"></a>Lezione 1: Creazione del progetto client per il servizio Web
+# <a name="lesson-1-creating-the-web-service-client-project"></a>Lezione 1: Creazione del progetto di Client del servizio Web
   Per questa esercitazione verrà creata una semplice applicazione console che accede al servizio Web ReportServer. Nelle procedure si presuppone che l'ambiente di sviluppo utilizzato sia [!INCLUDE[vsprvs](../includes/vsprvs-md.md)].  
   
 ### <a name="to-create-a-console-application"></a>Per creare un'applicazione console  
@@ -38,7 +37,7 @@ ms.locfileid: "48080801"
      Espandere il nodo del progetto in Esplora soluzioni. Un file con il nome predefinito Program.cs (Module1.vb per [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[vbprvb](../includes/vbprvb-md.md)]) è stato aggiunto al progetto.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Lezione 2: Aggiunta di un riferimento Web](../../2014/tutorials/lesson-2-adding-a-web-reference.md)   
+ [Lezione 2: Aggiunge un riferimento Web](../../2014/tutorials/lesson-2-adding-a-web-reference.md)   
  [L'accesso al servizio Web ReportServer con Visual Basic o Visual C#&#35; &#40;esercitazione su SSRS&#41;](../../2014/tutorials/access-report-server-web-service-vb-vcsharp-ssrs-tutorial.md)  
   
   
