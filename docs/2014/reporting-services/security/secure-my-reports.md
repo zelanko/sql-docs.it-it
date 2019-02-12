@@ -16,13 +16,13 @@ helpviewer_keywords:
 ms.assetid: 3b23a382-13b8-4196-9a93-7fe62d03a63c
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: f6f52a6d9a1a28d103f407da049814bbf4a6c0f6
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 1ff256deda15e2abdecbff4dc94cc1dcd9d2d5c4
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48166311"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56035172"
 ---
 # <a name="secure-my-reports"></a>Proteggere i report personali
   La caratteristica Report personali è un'area di lavoro gestita dall'utente nella quale è possibile eseguire varie operazioni sui report. Per garantire che la cartella Report personali possa essere utilizzata in base alle caratteristiche per cui è stata progettata, le autorizzazioni necessarie per questa cartella sono meno restrittive rispetto a quelle di altre cartelle disponibili a livello generale. Per gli utenti con autorizzazioni di sola visualizzazione ed esecuzione di report in altre cartelle, potrebbe essere necessario un set di autorizzazioni più ampio che consenta di gestire le cartelle Report personali e il contenuto di cui sono proprietari. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] sono disponibili un'assegnazione e una definizione di ruoli specifici per questo scopo.  
@@ -49,14 +49,14 @@ ms.locfileid: "48166311"
 ## <a name="denying-access-to-my-reports"></a>Negazione delle autorizzazioni di accesso alla funzionalità Report personali  
  È possibile impedire a determinati utenti di accedere alla funzionalità Report personali eseguendo le operazioni seguenti:  
   
--   Disabilitazione della funzionalità Report personali nella pagina Impostazioni sito. Per altre informazioni, vedere [abilitare e disabilitare la funzionalità report personali](../report-server/enable-and-disable-my-reports.md).  
+-   Disabilitazione della funzionalità Report personali nella pagina Impostazioni sito. Per altre informazioni, vedere [Abilitare e disabilitare la funzionalità Report personali](../report-server/enable-and-disable-my-reports.md).  
   
 -   Rimozione di tutte le attività dal ruolo **Report personali** .  
   
  Quando si disabilita la funzionalità Report personali, il collegamento alla cartella Report personali viene rimosso da Gestione report. La struttura di cartelle sottostante che supporta la funzionalità Report personali, ovvero la cartella Cartelle utenti e le relative sottocartelle, sarà comunque disponibile e accessibile da un utente che ne conosce il percorso. Se si rimuovono le attività dal ruolo **Report personali** , l'accesso alla cartella verrà impedito.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Proteggere i report e risorse](secure-reports-and-resources.md)   
+ [Garantire la sicurezza di report e risorse](secure-reports-and-resources.md)   
  [Proteggere le cartelle](secure-folders.md)   
  [Concessione di autorizzazioni in un server di report in modalità nativa](granting-permissions-on-a-native-mode-report-server.md)  
   

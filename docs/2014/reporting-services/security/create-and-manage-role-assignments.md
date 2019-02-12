@@ -16,13 +16,13 @@ helpviewer_keywords:
 ms.assetid: 086d0987-b43c-4834-8372-e08fb4b432f8
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: b26701352b94150a61fe0586f4c32cdf3db87137
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 88c864b3e3243ab7cb380b4af5b092757585115d
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48211011"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56023742"
 ---
 # <a name="create-and-manage-role-assignments"></a>Creare e gestire assegnazioni di ruolo
   Un' *assegnazione di ruolo* rappresenta criteri di sicurezza che determinano se un utente o un gruppo può accedere a un elemento specifico del server di report oppure eseguire una determinata operazione. Un'assegnazione di ruolo è costituita da un unico nome di un account utente o di gruppo e da una o più definizioni di ruolo.  
@@ -42,7 +42,7 @@ ms.locfileid: "48211011"
   
  Per creare un'assegnazione di ruolo, è necessario appartenere al gruppo locale Administrators nel server di report. È possibile delegare tale compito assegnando altri utenti al ruolo **Gestione contenuto** .  
   
- Per altre informazioni, vedere [Concedere l'accesso utente a un server di report &#40;Gestione report&#41;](grant-user-access-to-a-report-server.md).  
+ Per altre informazioni, vedere [Grant User Access to a Report Server &#40;Report Manager&#41;](grant-user-access-to-a-report-server.md).  
   
 ## <a name="creating-a-system-level-role-assignment"></a>Creazione di un'assegnazione di ruolo a livello di sistema  
  Per creare o gestire un'assegnazione di ruolo a livello di sistema, utilizzare Gestione report e aprire la pagina Impostazioni sito.  
@@ -51,7 +51,7 @@ ms.locfileid: "48211011"
   
  Le assegnazioni di ruolo a livello di sistema includono un'ampia gamma di autorizzazioni, ma non includono autorizzazioni appartenenti a un'assegnazione di ruolo a livello di elemento. Contrariamente alle autorizzazioni di sistema in un computer, i ruoli di sistema nei server di report non definiscono le autorizzazioni complete che includono il set completo di tutte le possibili operazioni, ma specificano solo un set di attività il cui ambito è il sito del server di report. Le autorizzazioni definite tramite assegnazioni di ruolo a livello di sistema determinano se gli utenti possono visualizzare proprietà dell'applicazione, ad esempio l'immagine o il titolo della Home page, visualizzare o gestire pianificazioni condivise o utilizzare Generatore report.  
   
- Per altre informazioni, vedere [concedere l'accesso utente a un Server di Report &#40;gestione Report&#41; ](grant-user-access-to-a-report-server.md) e [dei ruoli predefiniti](role-definitions-predefined-roles.md).  
+ Per altre informazioni, vedere [Concedere l'accesso utente a un server di report &#40;Gestione report&#41;](grant-user-access-to-a-report-server.md) e [Ruoli predefiniti](role-definitions-predefined-roles.md).  
   
 ## <a name="modifying-a-role-assignment"></a>Modifica di assegnazioni di ruolo  
  Un'assegnazione di ruolo può essere modificata in qualsiasi momento. Le modifiche hanno effetto quando l'assegnazione viene salvata, ma non vengono applicate durante una sessione utente. Se infatti si modifica un'assegnazione di ruolo per negare l'accesso al report mentre è aperto da un utente, l'utente può comunque continuare a utilizzarlo fino a quando non chiude la propria sessione.  
@@ -68,7 +68,7 @@ ms.locfileid: "48211011"
  [Modificare o eliminare un'assegnazione di ruolo &#40;Gestione report&#41;](role-assignments-modify-or-delete.md)   
  [Assegnazioni di ruolo](role-assignments.md)   
  [Definizioni di ruolo](role-definitions.md)   
- [Ruoli predefiniti](role-definitions-predefined-roles.md)   
+ [Predefined Roles](role-definitions-predefined-roles.md)   
  [Concessione di autorizzazioni in un server di report in modalità nativa](granting-permissions-on-a-native-mode-report-server.md)  
   
   

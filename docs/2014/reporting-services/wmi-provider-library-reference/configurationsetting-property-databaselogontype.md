@@ -18,13 +18,13 @@ helpviewer_keywords:
 ms.assetid: 6b592582-4c35-4029-ab86-982fff47d8d6
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 98dc45752779a6610d735040e16bc5783447396d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: a8bbbcc9ba9f1eefad4801a0e9294affea4ef39a
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48107063"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56020588"
 ---
 # <a name="databaselogontype-property-wmi-msreportserverconfigurationsetting"></a>Proprietà DatabaseLogonType (MSReportServer_ConfigurationSetting WMI)
   Specifica se il server di report usa un account del servizio [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows, un account utente di Windows o un account di accesso di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] per accedere al database del server di report. Di sola lettura.  
@@ -54,9 +54,9 @@ public int DatabaseLogonType;
   
 -   2 per accedere come servizio  
   
- Se si specifica 0 (Windows), è necessario impostare il valore [DatabaseLogonAccount](configurationsetting-property-databaselogonaccount.md) proprietà su un account utente di Windows valido corrispondente.  
+ Se si specifica 0 (Windows), è necessario impostare il valore nella proprietà [DatabaseLogonAccount](configurationsetting-property-databaselogonaccount.md) su un account utente di Windows valido corrispondente.  
   
- Se si specifica 1 (SQL Server), assicurarsi che il valore della [DatabaseLogonAccount](configurationsetting-property-databaselogonaccount.md) corrisponde a un valore valido [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] account di accesso.  
+ Se si specifica 1 (SQL Server), accertarsi che il valore di [DatabaseLogonAccount](configurationsetting-property-databaselogonaccount.md) corrisponda a un account di accesso di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] valido.  
   
  Se si specifica 2 (servizio Windows), il server di report usa un account di [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] e l'account del servizio Windows per accedere al database del server di report. La proprietà DatabaseLogonAccount viene ignorata.  
   

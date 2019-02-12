@@ -16,13 +16,13 @@ helpviewer_keywords:
 ms.assetid: 723d1cb0-c2e7-4763-8690-a6a7a8bbbb90
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 4064188dee8f8902712962c93715e6ebce839b03
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 4269c5219dc52df82f46f1d495d895321fc6f276
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48173181"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56023592"
 ---
 # <a name="cache-a-report-report-manager"></a>Memorizzare un report nella cache (Gestione report)
   Per ottimizzare le prestazioni, è possibile configurare le proprietà relative alla memorizzazione nella cache per un report. Quando un report viene memorizzato nella cache, una copia del report visualizzabile viene salvata per un breve periodo di tempo. Il primo utente che richiede il report deve attendere il completamento di tutte le elaborazioni prima di visualizzare il report. Gli utenti successivi che richiedono il report all'interno del periodo di memorizzazione nella cache possono visualizzarlo immediatamente perché l'elaborazione è già stata eseguita.  
@@ -50,7 +50,7 @@ ms.locfileid: "48173181"
 7.  Fare clic su **Applica**.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Impostare le proprietà di elaborazione dei Report](set-report-processing-properties.md)   
- [La memorizzazione dei report &#40;SSRS&#41;](caching-reports-ssrs.md)  
+ [Impostare proprietà di elaborazione dei report](set-report-processing-properties.md)   
+ [Memorizzazione dei report nella cache &#40;SSRS&#41;](caching-reports-ssrs.md)  
   
   

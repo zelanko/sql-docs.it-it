@@ -16,26 +16,26 @@ helpviewer_keywords:
 ms.assetid: 2144c020-3253-4b47-8cda-e14c928bb471
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 9814db13e9d360f390456283077bd42973b978d1
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 1859d70c0ee0c10571897c4695eb64179b313168
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48071151"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56024852"
 ---
 # <a name="grant-user-access-to-a-report-server-report-manager"></a>Concedere l'accesso utente a un server di report (Gestione report)
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] usa la sicurezza basata sui ruoli per concedere agli utenti l'accesso a un server di report. In una nuova installazione del server di report, solo gli utenti che appartengono al gruppo Administrators locale dispongono delle autorizzazioni per accedere al contenuto ed eseguire operazioni sul server di report. Per rendere disponibile il server di report agli altri utenti, è necessario creare assegnazioni di ruolo che associano gli account utente o gli account di gruppo a un ruolo predefinito che specifica una raccolta di attività.  
   
- **Server di report in modalità SharePoint** : per un server di report configurato per la modalità integrata SharePoint, l'accesso da un sito di SharePoint viene configurato mediante le autorizzazioni relative. I livelli di autorizzazione sul sito di SharePoint determinano l'accesso al contenuto e alle operazioni del server di report. Per concedere le autorizzazioni a un sito di SharePoint, è necessario disporre dei privilegi di amministratore. Per altre informazioni, vedere [Concessione di autorizzazioni per elementi del server di report in un sito di SharePoint](granting-permissions-on-report-server-items-on-a-sharepoint-site.md).  
+ **Server di report in modalità SharePoint:** Per un server di report configurato per la modalità integrata SharePoint, l'accesso da un sito di SharePoint viene configurato mediante le autorizzazioni relative. I livelli di autorizzazione sul sito di SharePoint determinano l'accesso al contenuto e alle operazioni del server di report. Per concedere le autorizzazioni a un sito di SharePoint, è necessario disporre dei privilegi di amministratore. Per altre informazioni, vedere [Concessione di autorizzazioni per elementi del server di report in un sito di SharePoint](granting-permissions-on-report-server-items-on-a-sharepoint-site.md).  
   
- **Server di report in modalità nativa** : questo argomento è incentrato su un server di report configurato per la modalità nativa e l'uso di Gestione report per assegnare utenti a un ruolo. Sono disponibili due tipi di ruoli:  
+ **Server di report in modalità nativa:** Questo argomento è incentrato su un server di report configurato per la modalità nativa e l'uso di gestione Report per assegnare gli utenti a un ruolo. Sono disponibili due tipi di ruoli:  
   
 -   Ruoli a livello di elemento, utilizzati per visualizzare, aggiungere e gestire contenuto del server di report, sottoscrizioni, elaborazione e cronologia dei report. I ruoli a livello di elemento vengono definiti per il nodo radice, ovvero la cartella Home, oppure per cartelle o elementi specifici nei livelli inferiori della gerarchia.  
   
 -   Ruoli a livello di sistema, che concedono l'accesso a un'ampia gamma di operazioni sul sito non associate ad alcun elemento specifico, ad esempio l'utilizzo di Generatore report e di pianificazioni condivise.  
   
-     I due tipi di ruoli sono complementari e devono essere utilizzati insieme. Per questa ragione, l'aggiunta di un utente a un server di report è un'operazione suddivisa in due parti. Se si assegna un utente a un ruolo a livello di elemento, è necessario assegnarlo anche a un ruolo a livello di sistema. Quando si assegna un utente a un ruolo, è necessario selezionare un ruolo già definito. Per creare, modificare o eliminare ruoli, usare [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]. Per altre informazioni, vedere [creare, eliminare o modificare un ruolo &#40;Management Studio&#41;](role-definitions-create-delete-or-modify.md).  
+     I due tipi di ruoli sono complementari e devono essere utilizzati insieme. Per questa ragione, l'aggiunta di un utente a un server di report è un'operazione suddivisa in due parti. Se si assegna un utente a un ruolo a livello di elemento, è necessario assegnarlo anche a un ruolo a livello di sistema. Quando si assegna un utente a un ruolo, è necessario selezionare un ruolo già definito. Per creare, modificare o eliminare ruoli, usare [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]. Per altre informazioni, vedere [Creare, eliminare o modificare un ruolo &#40;Management Studio&#41;](role-definitions-create-delete-or-modify.md).  
   
 ## <a name="before-you-start"></a>Prima di iniziare  
  Esaminare l'elenco seguente prima di aggiungere utenti a un server di report in modalità nativa.  
@@ -86,9 +86,9 @@ ms.locfileid: "48071151"
 7.  Ripetere le operazioni per creare assegnazioni per utenti o gruppi aggiuntivi.  
   
 ## <a name="see-also"></a>Vedere anche  
- (create-e-Gestisci-ruolo-assignments.md)   
+ (create-and-manage-role-assignments.md)   
  [Nuova assegnazione ruolo: Modifica assegnazione ruolo &#40;gestione Report&#41;](../new-role-assignment-edit-role-assignment-page-report-manager.md)   
- [Pagina delle proprietà sicurezza, gli elementi &#40;gestione Report&#41;](../security-properties-page-items-report-manager.md)   
+ [Pagina delle proprietà sicurezza, Elementi&#40;Gestione report&#41;](../security-properties-page-items-report-manager.md)   
  [Assegnazioni di ruolo](role-assignments.md)   
  [Definizioni di ruolo](role-definitions.md)  
   

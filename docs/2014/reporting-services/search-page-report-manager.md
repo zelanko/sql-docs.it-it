@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 51ffdc07-e1b9-4ed7-acb3-dd98d7cce273
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: f848f0f2f168304d5ceb9d3be92ed793b4579fe7
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 51f062efce64d7e8f29e156c51b2972624f46d5e
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48206131"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56037354"
 ---
 # <a name="search-page-report-manager"></a>Pagina Cerca (Gestione report)
   Utilizzare la pagina Risultati ricerca per visualizzare i risultati di un'operazione di ricerca eseguita in report, report collegati, modelli di report, origini dei dati condivise, cartelle o risorse. I risultati della ricerca vengono visualizzati in ordine alfabetico e possono essere ordinati in base al tipo, al nome o alla descrizione.  

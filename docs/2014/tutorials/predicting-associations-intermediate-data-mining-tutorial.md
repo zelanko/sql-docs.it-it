@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: 9140c5f2-b340-45a6-9c27-d870d15aafea
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 8a66c6284ea53f65351a964e3f24492c569521af
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+manager: kfile
+ms.openlocfilehash: bee5ca4ded1b2fd5cbda0712cb766c825b9d0318
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52544258"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56022362"
 ---
 # <a name="predicting-associations-intermediate-data-mining-tutorial"></a>Stima delle associazioni (Esercitazione intermedia sul data mining)
   Dopo avere elaborato i modelli, è possibile utilizzare le informazioni sulle associazioni archiviate nei modelli per creare stime. Nell'attività finale di questa lezione verrà illustrato come compilare query di stima rispetto nei modelli di associazione creati. In questa lezione si presuppone che l'utente abbia familiarità con l'utilizzo del generatore delle query di stima e desideri apprendere come compilare query di stima mediante modelli di associazione. Per altre informazioni su come usare generatore Query di stima, vedere [interfacce di Data Mining Query](../../2014/analysis-services/data-mining/data-mining-query-tools.md).  
@@ -125,7 +124,7 @@ ms.locfileid: "52544258"
 |Modello|$SUPPORT|$PROBABILITY|$ADJUSTEDPROBABILITY|  
 |-----------|--------------|------------------|--------------------------|  
 |Sport-100|4334|0.291...|0.252...|  
-|Water Bottle|2866|0,192...|0.175...|  
+|Water Bottle|2866|0.192...|0.175...|  
 |Patch Kit|2113|0.142...|0.132|  
   
 ## <a name="working-with-results"></a>Utilizzo dei risultati  

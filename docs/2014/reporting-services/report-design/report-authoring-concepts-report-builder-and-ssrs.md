@@ -13,13 +13,13 @@ helpviewer_keywords:
 ms.assetid: 99311b36-5dc5-4039-ac93-4d2826701327
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: df8a54eb3f130da611c5ad79bcb411fe8318da88
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: b7aa95480780c89dadcbcba4b4d08016adae50f4
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48220011"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56026796"
 ---
 # <a name="report-authoring-concepts-report-builder-and-ssrs"></a>Concetti relativi alla creazione di report (Generatore report e SSRS)
   In questa sezione vengono definiti brevemente i concetti principali utilizzati nella documentazione di Generatore report e Progettazione report. Per definizioni di parole o termini specifici, vedere [Glossario &#40;Generatore report&#41;](../report-builder/glossary-report-builder.md).  
@@ -27,8 +27,8 @@ ms.locfileid: "48220011"
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
-## <a name="in-this-section"></a>Argomenti della sezione  
- [I report, parti del Report e definizioni di Report &#40;Report e SSRS&#41;](reports-report-parts-and-report-definitions-report-builder-and-ssrs.md)  
+## <a name="in-this-section"></a>In questa sezione  
+ [Report, parti del report e definizioni dei report &#40;Generatore report e SSRS&#41;](reports-report-parts-and-report-definitions-report-builder-and-ssrs.md)  
  Vengono illustrati i vari termini utilizzati per descrivere un report nei diversi stati, inclusi la definizione iniziale, il report pubblicato e il report così come viene visualizzato dall'utente.  
   
  [Incorporate e condivise le connessioni dati o origini dati &#40;Report e SSRS&#41;](../embedded-and-shared-data-connections-or-data-sources-report-builder-and-ssrs.md)  
@@ -37,7 +37,7 @@ ms.locfileid: "48220011"
  [Set di dati condivisi e incorporati &#40;Generatore report e SSRS&#41;](../report-data/embedded-and-shared-datasets-report-builder-and-ssrs.md)  
  Vengono illustrate le differenze nella creazione, archiviazione e gestione di set di dati incorporati e condivisi.  
   
- [Aree dati e mappe &#40;Report e SSRS&#41;](maps-report-builder-and-ssrs.md)  
+ [Aree dati e mappe &#40;Generatore report e SSRS&#41;](maps-report-builder-and-ssrs.md)  
  Vengono descritti i tipi di aree dati che è possibile aggiungere a un layout del report. Le aree dati determinano l'aspetto di un report, ovvero tabella, matrice, elenco o grafico.  
   
  [Concetto dei parametri del report &#40;Report e SSRS&#41;](report-parameters-concepts-report-builder-and-ssrs.md)  

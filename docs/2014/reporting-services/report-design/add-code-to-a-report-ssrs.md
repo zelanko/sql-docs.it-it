@@ -16,20 +16,20 @@ helpviewer_keywords:
 ms.assetid: 00ef8fc6-99fe-49b2-8a22-7eb475881dc4
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: 35b3e47ea475da9e135368ca65f94dfff1943883
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 2f117c8ba2bc933747c725662100cf438dcd67a1
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48155081"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56027901"
 ---
 # <a name="add-code-to-a-report-ssrs"></a>Aggiungere codice a un report (SSRS)
   In qualsiasi espressione, è possibile chiamare un codice personalizzato. Il codice può essere fornito nei due modi seguenti:  
   
 -   Codice scritto in [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] direttamente incorporato nel report. Se il codice si riferisce a un [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] che non è <xref:System.Math> o <xref:System.Convert>, è necessario aggiungere il riferimento al report. Per altre informazioni, vedere [Aggiungere un riferimento a un assembly in un report &#40;SSRS&#41;](add-an-assembly-reference-to-a-report-ssrs.md). Per altre informazioni sugli altri riferimenti che è possibile creare a partire dal codice, vedere [Riferimenti a codice personalizzato e ad assembly in espressioni in Progettazione report &#40;SSRS&#41;](custom-code-and-assembly-references-in-expressions-in-report-designer-ssrs.md).  
   
--   Fornire un assembly di codice personalizzato mediante [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]. L'eventuale assembly personalizzato dovrà essere installato sia nel computer in cui viene creato il report sia nel server di report in cui viene visualizzato il report. Per altre informazioni, vedere [utilizzo di assembly personalizzati con i report](../custom-assemblies/using-custom-assemblies-with-reports.md).  
+-   Fornire un assembly di codice personalizzato mediante [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]. L'eventuale assembly personalizzato dovrà essere installato sia nel computer in cui viene creato il report sia nel server di report in cui viene visualizzato il report. Per altre informazioni, vedere [Utilizzo di assembly personalizzati con i report](../custom-assemblies/using-custom-assemblies-with-reports.md).  
   
 ### <a name="to-add-embedded-code-to-a-report"></a>Per aggiungere codice incorporato a un report  
   
@@ -59,8 +59,8 @@ ms.locfileid: "48155081"
      Se si aggiunge questa espressione a una cella della tabella in cui sono visualizzati i valori della categoria, ogni qualvolta la parola "Bike" è nel campo del set di dati per la riga, nella cella della tabella viene visualizzata invece la parola "Bicycle".  
   
 ## <a name="see-also"></a>Vedere anche  
- [Finestra di dialogo Proprietà report, codice](../report-properties-dialog-box-code.md)   
+ [Finestra di dialogo Proprietà report, Codice](../report-properties-dialog-box-code.md)   
  [Esempi di espressioni &#40;Generatore report e SSRS&#41;](expression-examples-report-builder-and-ssrs.md)   
- [Riferimenti alla raccolta Parameters &#40;Report e SSRS&#41;](built-in-collections-parameters-collection-references-report-builder.md)  
+ [Riferimenti alla raccolta dei parametri &#40;Generatore report e SSRS&#41;](built-in-collections-parameters-collection-references-report-builder.md)  
   
   

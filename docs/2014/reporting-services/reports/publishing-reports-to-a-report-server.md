@@ -23,13 +23,13 @@ helpviewer_keywords:
 ms.assetid: bd7aa5e0-61ce-43fd-8f74-5d1aeed078bb
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 7a3efdc60e34555aeb0cf706c7f8ab219fd64d7e
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 4f028a70d2f1d26f18f7940f89364c23dc5050b8
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48182571"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56021587"
 ---
 # <a name="publishing-reports-to-a-report-server"></a>Pubblicazione dei report in un server di report
   Dopo aver progettato e testato un report o set di report, è possibile usare le funzionalità di distribuzione predefinite [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] per pubblicare il report in un server di report. sia singolarmente sia includendoli in un progetto server di report. La pubblicazione di un progetto server report è il modo più semplice per pubblicare più report. [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] viene usato il termine *distribuire*, anziché il termine *pubblicare*. I due termini sono perfettamente equivalenti.  
@@ -60,7 +60,7 @@ ms.locfileid: "48182571"
   
 ## <a name="see-also"></a>Vedere anche  
  [Finestra di dialogo Pagine delle proprietà del progetto](../tools/project-property-pages-dialog-box.md)   
- [Gestione contenuto del Server di report &#40;modalità nativa SSRS&#41;](../report-server/report-server-content-management-ssrs-native-mode.md)   
+ [Gestione contenuto del server di report &#40;modalità nativa SSRS&#41;](../report-server/report-server-content-management-ssrs-native-mode.md)   
  [Aggiornare i report](../install-windows/upgrade-reports.md)  
   
   

@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: fff24978-e3bd-4fac-8cd7-d6aa81f3cc25
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: 4c0128e6e7bb5ca0020d8dbcf34858d0f5d6bf2a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: d998c2f9ecc19167f34530e6fa2d0190f71287ce
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48085710"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56037182"
 ---
 # <a name="change-a-chart-type-report-builder-and-ssrs"></a>Modificare un tipo di grafico (Generatore report e SSRS)
   Quando si inserisce innanzitutto un grafico in un report, il **Seleziona tipo di grafico** viene visualizzata la finestra. Se si elimina questa finestra di dialogo, per impostazione predefinita viene aggiunto un istogramma.  
@@ -39,7 +39,7 @@ ms.locfileid: "48085710"
   
 ## <a name="see-also"></a>Vedere anche  
  [Grafici &#40;Generatore report e SSRS&#41;](charts-report-builder-and-ssrs.md)   
- [I misuratori &#40;Report e SSRS&#41;](gauges-report-builder-and-ssrs.md)   
- [Aggiungere un grafico a un Report &#40;Report e SSRS&#41;](add-a-chart-to-a-report-report-builder-and-ssrs.md)  
+ [Misuratori &#40;Generatore report e SSRS&#41;](gauges-report-builder-and-ssrs.md)   
+ [Aggiungere un grafico a un report &#40;Generatore report e SSRS&#41;](add-a-chart-to-a-report-report-builder-and-ssrs.md)  
   
   

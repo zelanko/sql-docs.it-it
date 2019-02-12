@@ -17,13 +17,13 @@ helpviewer_keywords:
 ms.assetid: b5cbc453-5986-423e-af44-1f243ef3edb1
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 90928774eb2429430da0cbc1e8904ec5b1dc0c08
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: d77a978ca0d1f8f1f175871d5acd6de0aa5c6e64
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48161731"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56019122"
 ---
 # <a name="set-report-processing-properties"></a>Impostare proprietà di elaborazione dei report
   Le proprietà di esecuzione dei report consentono di controllarne le modalità di esecuzione e devono essere impostate singolarmente per ogni report.  
@@ -57,10 +57,10 @@ ms.locfileid: "48161731"
  Quando si verifica questa condizione, il server di report disabilita la sottoscrizione alla successiva pianificazione di esecuzione. Per riattivare la sottoscrizione, aprire e quindi salvare la sottoscrizione. Quando si apre la sottoscrizione, il server di report aggiorna i valori dei parametri della sottoscrizione in modo che corrispondano a quelli specificati per lo snapshot. Per altre informazioni, vedere [Sottoscrizioni e recapito &#40;Reporting Services&#41;](../subscriptions/subscriptions-and-delivery-reporting-services.md).  
   
 ## <a name="see-also"></a>Vedere anche  
- [Impostare le opzioni di elaborazione &#40;Reporting Services in SharePoint la modalità integrata&#41;](../set-processing-options-reporting-services-in-sharepoint-integrated-mode.md)   
- [Configurare le proprietà di esecuzione per un Report &#40;gestione Report&#41;](../reports/configure-execution-properties-for-a-report-report-manager.md)   
+ [Impostare le opzioni di elaborazione &#40;Reporting Services in modalità integrata SharePoint&#41;](../set-processing-options-reporting-services-in-sharepoint-integrated-mode.md)   
+ [Configurare le proprietà di esecuzione per un report &#40;Gestione report&#41;](../reports/configure-execution-properties-for-a-report-report-manager.md)   
  [Concetti relativi a Reporting Services &#40;SSRS&#41;](../reporting-services-concepts-ssrs.md)   
- [Procedura: Aggiunta di uno snapshot alla cronologia del report](add-a-snapshot-to-report-history-report-manager.md)   
+ [Procedura: Aggiunta di uno Snapshot alla cronologia del Report](add-a-snapshot-to-report-history-report-manager.md)   
  [Specificare le credenziali e le informazioni sulla connessione per le origini dati del report](../report-data/specify-credential-and-connection-information-for-report-data-sources.md)  
   
   

@@ -3,7 +3,6 @@ title: Metodo value() (tipo di dati xml) | Microsoft Docs
 ms.custom: ''
 ms.date: 07/26/2017
 ms.prod: sql
-ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
 ms.technology: t-sql
 ms.topic: language-reference
@@ -13,15 +12,15 @@ helpviewer_keywords:
 - value method
 - value() method
 ms.assetid: 298a7361-dc9a-4902-9b1e-49a093cd831d
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
-ms.openlocfilehash: c44abf761d2576dd0e73c7c88fb9e52a823d25eb
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: 0a208baaf237987c9f3e544da4d02dca72b191f9
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51697909"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56021452"
 ---
 # <a name="value-method-xml-data-type"></a>Metodo value() (tipo di dati xml)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -74,7 +73,7 @@ SELECT @ProdID
   
  Benché nell'istanza XML sia presente un solo attributo `ProductID`, in base alle regole della tipizzazione statica è necessario specificare in modo esplicito che l'espressione di percorso restituisce un singleton. Alla fine dell'espressione di percorso viene pertanto specificato `[1]`. Per altre informazioni sulla tipizzazione statica, vedere [XQuery e tipizzazione statica](../../xquery/xquery-and-static-typing.md).  
   
-### <a name="b-using-the-value-method-to-retrieve-a-value-from-an-xml-type-column"></a>B. Utilizzo del metodo value() per recuperare un valore da una colonna di tipo xml  
+### <a name="b-using-the-value-method-to-retrieve-a-value-from-an-xml-type-column"></a>b. Utilizzo del metodo value() per recuperare un valore da una colonna di tipo xml  
  La query seguente viene eseguita su una colonna di tipo **xml** (`CatalogDescription`) nel database `AdventureWorks`. La query recupera i valori dell'attributo `ProductModelID` da ognuna delle istanze XML archiviate nella colonna.  
   
 ```  

@@ -17,13 +17,13 @@ f1_keywords:
 ms.assetid: 26a4baf2-7bc5-4634-b136-552687ffa477
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: 0b2dc831119ae6356761b525f76fe11b37236724
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 12daff3490a0ca11fefa5c120952b30499118a4d
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48111747"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56037432"
 ---
 # <a name="formatting-text-and-placeholders-report-builder-and-ssrs"></a>Formattazione di testo e segnaposto (Generatore report e SSRS)
   Una casella di testo può essere un elemento del report o una cella singola all'interno di un'area dati contenente testo, un campo calcolato, un indicatore di misura a un campo in un database o una combinazione di questi tre elementi. È possibile combinare tipi di carattere e colori, aggiungere grassetto e corsivo e utilizzare stili di paragrafo, quali allineamento e rientri sporgenti. È possibile formattare un'intera casella di testo oppure testo, numeri, espressioni o campi specifici all'interno della casella.  
@@ -34,7 +34,7 @@ ms.locfileid: "48111747"
   
  In questa illustrazione la casella di testo dispone di un bordo e tutto il testo è presente nella stessa casella, sebbene con formattazioni diverse.  
   
- Per iniziare rapidamente, vedere [Esercitazione: Formattazione di testo &#40;Generatore report&#41;](../tutorial-format-text-report-builder.md).  
+ Per un'introduzione rapida, vedere [Esercitazione: Formattazione di testo &#40;Generatore report&#41;](../tutorial-format-text-report-builder.md).  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
@@ -46,7 +46,7 @@ ms.locfileid: "48111747"
   
 -   Trascinare un campo dal riquadro **Dati report** e rilasciarlo nella casella di testo. Se si trascina l'espressione in un punto diverso del corpo del report, verrà creata una nuova casella di testo contenente il segnaposto. Il valore di questo segnaposto sarà l'espressione del campo che corrisponde al campo rilasciato.  
   
--   Fare clic con il pulsante destro del mouse in un punto qualsiasi all'interno della casella di testo e scegliere **Inserisci segnaposto**. Nella finestra di dialogo **Proprietà segnaposto** è possibile specificare un'espressione come valore del segnaposto. Per altre informazioni, vedere [finestra di dialogo Proprietà segnaposto, generale &#40;Generatore Report e SSRS&#41;](../placeholder-properties-dialog-box-general-report-builder-and-ssrs.md).  
+-   Fare clic con il pulsante destro del mouse in un punto qualsiasi all'interno della casella di testo e scegliere **Inserisci segnaposto**. Nella finestra di dialogo **Proprietà segnaposto** è possibile specificare un'espressione come valore del segnaposto. Per altre informazioni, vedere [Finestra di dialogo Proprietà segnaposto, Generale &#40;Generatore report e SSRS&#41;](../placeholder-properties-dialog-box-general-report-builder-and-ssrs.md).  
   
 -   Digitare un'espressione semplice o complessa nella casella di testo. Se, ad esempio, nella casella di testo si digita **Name: [Nome]** , il testo **[Nome]** verrà visualizzato come segnaposto tramite cui viene rappresentata l'espressione `=Fields!Name.Value`.  
   
@@ -78,6 +78,6 @@ ms.locfileid: "48111747"
  [Elenchi &#40;Generatore report e SSRS&#41;](tables-matrices-and-lists-report-builder-and-ssrs.md)   
  [Finestra di dialogo Proprietà segnaposto, Generale &#40;Generatore report e SSRS&#41;](../placeholder-properties-dialog-box-general-report-builder-and-ssrs.md)   
  [Esportazione in Microsoft Excel &#40;Generatore report e SSRS&#41;](../report-builder/exporting-to-microsoft-excel-report-builder-and-ssrs.md)   
- [Le caselle di testo &#40;Report e SSRS&#41;](text-boxes-report-builder-and-ssrs.md)  
+ [Caselle di testo &#40;Generatore report e SSRS&#41;](text-boxes-report-builder-and-ssrs.md)  
   
   

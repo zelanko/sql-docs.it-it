@@ -18,13 +18,13 @@ helpviewer_keywords:
 ms.assetid: e37eecf6-bf83-4015-be76-bac2ae9d344d
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: a03753602b0a44cac213cf001406bd537ede695b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 68875a9d3f93fc952d0f1d384e526a65e1f20fab
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48079921"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56022032"
 ---
 # <a name="iswebserviceenabled-property-wmi-msreportserverconfigurationsetting"></a>Proprietà IsWebServiceEnabled (MSReportServer_ConfigurationSetting WMI)
   Indica se il servizio Web ReportServer è abilitato. Di sola lettura.  
@@ -40,7 +40,7 @@ public boolean IsWebServiceEnabled;
 ```  
   
 ## <a name="property-values"></a>Valori della proprietà  
- Sola lettura `Boolean` valore. Un valore di `true` indica che il servizio Web ReportServer è abilitato.  
+ Valore `Boolean` di sola lettura. Un valore `true` indica che il servizio Web ReportServer è abilitato.  
   
 ## <a name="example-code"></a>Codice di esempio  
  [Classe MSReportServer_ConfigurationSetting](msreportserver-configurationsetting-class.md)  

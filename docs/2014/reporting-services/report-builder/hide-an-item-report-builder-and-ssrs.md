@@ -13,13 +13,13 @@ f1_keywords:
 ms.assetid: 9d78f8de-959b-456f-8947-687fa6e2ba91
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: 50ac9bd023b8fb581f423a039b629015de7b423d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: a67d093576076e9822427773afb710c57f801827
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48196401"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56025492"
 ---
 # <a name="hide-an-item-report-builder-and-ssrs"></a>Nascondere un elemento (Generatore report e SSRS)
   Impostare la visibilità di un elemento del report quando si desidera nascondere in modo condizionale un elemento in base a un parametro del report o ad altre espressioni specificate.  
@@ -71,7 +71,7 @@ ms.locfileid: "48196401"
 3.  Nella finestra di dialogo **Visibilità colonne** eseguire i passaggi 3 e 4 della prima procedura.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Azione drill-down &#40;Report e SSRS&#41;](../report-design/drilldown-action-report-builder-and-ssrs.md)   
+ [Azione di drill-down &#40;Generatore report e SSRS &#41;](../report-design/drilldown-action-report-builder-and-ssrs.md)   
  [Aggiungere un'azione Espandi o Comprimi a un elemento &#40;Generatore report e SSRS&#41;](../report-design/add-an-expand-or-collapse-action-to-an-item-report-builder-and-ssrs.md)   
  [Esempi di espressioni &#40;Generatore report e SSRS&#41;](../report-design/expression-examples-report-builder-and-ssrs.md)  
   

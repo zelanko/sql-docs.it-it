@@ -12,13 +12,13 @@ f1_keywords:
 ms.assetid: fbf68c59-7afc-4afe-bfcd-40ce84629af0
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: 60a6c6a9271245e36c3e491b946c36e175f12d12
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 18390c8cb1df552b746f16c5eb569f08063e7763
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48209471"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56026562"
 ---
 # <a name="formulas-in-report-model-queries-report-builder-and-ssrs"></a>Formule nelle query del modello di report (Generatore report e SSRS)
   Le formule sono calcoli eseguiti su valori in un report che utilizzano un modello di report come origine dati. Una formula può includere funzioni, operatori, costanti e riferimenti a campi oppure entità. Le formule consentono di combinare, aggregare, filtrare e restituire dati sia numerici sia di testo. È possibile creare formule e salvarle come nuovi campi oppure modificare quelle esistenti.  
@@ -53,7 +53,7 @@ ms.locfileid: "48209471"
  **Operatore di concatenazione del testo.** Utilizzare la e commerciale (&) per unire, o concatenare, una o più stringhe di testo al fine di restituire un'unica stringa.  
   
 ##  <a name="Constants"></a> Costanti  
- Si tratta di valori che non vengono calcolati e che pertanto non cambiano. Generatore report vengono utilizzate le costanti seguenti: `True`, `False`, e `Empty`. Tali costanti vengono utilizzate per valutare i campi booleani. Ad esempio, si supponga di disporre di un campo denominato IsDiscontinued. Gli unici valori validi per questo campo sono True, False o Empty (" ").  
+ Si tratta di valori che non vengono calcolati e che pertanto non cambiano. In Generatore report vengono utilizzate le costanti seguenti: `True`, `False` e `Empty`. Tali costanti vengono utilizzate per valutare i campi booleani. Ad esempio, si supponga di disporre di un campo denominato IsDiscontinued. Gli unici valori validi per questo campo sono True, False o Empty (" ").  
   
 ##  <a name="Functions"></a> Funzioni  
  Si tratta di formule predefinite che consentono di eseguire calcoli usando valori specifici, denominati *argomenti*, in un ordine stabilito. Gli argomenti possono essere valori letterali o campi oppure combinazioni dei due. Quando si utilizzano i campi nelle formule, il nome rappresenta ogni istanza del campo. Se l'argomento è un valore letterale, potrebbe essere necessario indicare i caratteri che vengono utilizzati.  

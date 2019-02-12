@@ -15,13 +15,13 @@ helpviewer_keywords:
 ms.assetid: 3876c01e-f81d-4cce-9104-5106a8c369e6
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 1fc6c16004ba2a3bba7d11b49a351fcb3fc1641e
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+manager: kfile
+ms.openlocfilehash: a4bcdd91fb11301de3f3f22fddbf8f4d6c27fbde
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53362553"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56020762"
 ---
 # <a name="deprecated-features-in-sql-server-reporting-services-in-sql-server-2014"></a>Funzionalità deprecate di SQL Server Reporting Services in SQL Server 2014
   In questo argomento si descrivono le funzionalità di [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] deprecate. Le funzionalità sono ancora disponibili nella versione in cui sono deprecate, tuttavia sono pianificate per essere rimosse in una versione successiva di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. È consigliabile non usare le funzionalità deprecate nelle nuove applicazioni.  
@@ -30,11 +30,11 @@ ms.locfileid: "53362553"
   
 -   [Funzionalità deprecate in SQL Server 2014 Reporting Services](#bkmk_2014)  
   
--   [Funzionalità deprecate di SQL Server 2012 SP1 Reporting Services](#bkmk_2012sp1)  
+-   [SQL Server 2012 SP1 Reporting Services Deprecated Features](#bkmk_2012sp1)  
   
 -   [Funzionalità deprecate in SQL Server 2012 Reporting Services](#bkmk_2012)  
   
--   [Funzionalità deprecate in SQL Server 2008 R2 Reporting Services](#bkmk_kj)  
+-   [SQL Server 2008 R2 Reporting Services Deprecated Features](#bkmk_kj)  
   
 ##  <a name="bkmk_2014"></a> Funzionalità deprecate in SQL Server 2014 Reporting Services  
   

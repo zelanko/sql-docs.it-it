@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 7bb3166f-9374-4449-b66a-ffb77298507d
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 8c58757e975f4a5ef68804f190aafeec0197a902
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: d83f8d097c74b0a7171d0e91e1d36ad716a00415
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48128261"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56023542"
 ---
 # <a name="upload-file-page-report-manager"></a>Pagina Carica file (Gestione report)
   La pagina Carica file consente di pubblicare un file dal file system nel database del server di report. I file caricati vengono rappresentati come elementi nella gerarchia di cartelle del server di report.  
@@ -50,7 +50,7 @@ ms.locfileid: "48128261"
  **Sfoglia**  
  Fare clic per selezionare un file nel file system.  
   
- **Nome**  
+ **Name**  
  Consente di digitare il nome del file nel modo in cui si desidera venga visualizzato nello spazio dei nomi del server di report. Il nome deve includere almeno un carattere alfanumerico. È inoltre possibile utilizzare spazi e alcuni simboli. Non utilizzare i caratteri ; ? : \@ & = +, $ * \< > | "oppure / per specificare il nome di un elemento.  
   
  **Sovrascrivi se esistente**  
@@ -58,7 +58,7 @@ ms.locfileid: "48128261"
   
 ## <a name="see-also"></a>Vedere anche  
  [Gestione report &#40;modalità nativa SSRS&#41;](../../2014/reporting-services/report-manager-ssrs-native-mode.md)   
- [Contenuto della pagina &#40;gestione Report&#41;](../../2014/reporting-services/contents-page-report-manager.md)   
+ [Pagina Contenuto &#40;Gestione report&#41;](../../2014/reporting-services/contents-page-report-manager.md)   
  [Guida F1 di gestione report](../../2014/reporting-services/report-manager-f1-help.md)   
  [Caricare file in una cartella](report-server/upload-files-to-a-folder.md)  
   

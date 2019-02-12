@@ -19,16 +19,16 @@ helpviewer_keywords:
 ms.assetid: 2280fff6-3de7-44b1-87da-5db0ec975928
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 5076b0d7eb5e81a71aafc840521d7924c83433a9
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 90a41365f249c112b7ac1c0a07bdfd1186c6a97b
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48189531"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56032477"
 ---
 # <a name="using-reporting-services-security-policy-files"></a>Utilizzo di file di criteri di sicurezza di Reporting Services
-  In [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] le informazioni sui criteri di sicurezza dei componenti sono archiviate in tre file di configurazione che vengono copiati nel file system durante l'installazione. Questi file possono contenere una combinazione di criteri di sicurezza per uso interno e definiti dall'utente per gli assembly del codice in [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]. I tre file di configurazione corrispondono a tre componenti a sicurezza diretta in [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)], ovvero il server di report e il servizio Windows, l'applicazione Web Gestione report e la finestra di anteprima Progettazione report.  
+  In [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] le informazioni sui criteri di sicurezza dei componenti sono archiviate in tre file di configurazione che vengono copiati nel file system durante l'installazione. Questi file possono contenere una combinazione di criteri di sicurezza per uso interno e definiti dall'utente per gli assembly del codice in [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]. I tre file di configurazione corrispondono alle tre componenti di entità a protezione diretta [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]: Finestra di anteprima di server di report e del servizio Windows, l'applicazione Web gestione Report e progettazione Report.  
   
 > [!NOTE]  
 >  In Progettazione report sono disponibili due modalità di anteprima, ovvero la scheda di anteprima e la finestra popup di anteprima visualizzate quando il Progetto report viene avviato in modalità **DebugLocal**. La scheda **Anteprima** non è un componente a protezione diretta e non applica alcuna impostazione dei criteri di sicurezza. La finestra di anteprima consente di simulare le funzionalità del server di report e pertanto dispone di un file di configurazione di criteri che l'utente o un amministratore deve modificare per utilizzare assembly ed estensioni personalizzati in Progettazione report.  
@@ -38,7 +38,7 @@ ms.locfileid: "48189531"
 ## <a name="policy-files-in-reporting-services"></a>File di criteri di Reporting Services  
  Nella tabella seguente vengono elencati i file di configurazione dei criteri di [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)], i percorsi (presupponendo un'installazione predefinita) e le rispettive funzioni.  
   
-|Nome file|Percorso (installazione predefinita)|Description|  
+|Nome file|Percorso (installazione predefinita)|Descrizione|  
 |---------------|---------------------------------------|-----------------|  
 |rssrvpolicy.config|C:\Programmi\Microsoft SQL Server\MSRS10_50.MSSQLSERVER\Reporting Services\ReportServer|File di configurazione dei criteri del server di report. Questi criteri di sicurezza influiscono principalmente sulle espressioni del report e sugli assembly personalizzati dopo che un report è stato distribuito in un server di report. Questo file di criteri influisce inoltre sulle estensioni per i dati personalizzati, il recapito e il rendering e sulle estensioni di sicurezza distribuite nel server di report.|  
 |rsmgrpolicy.config|C:\Programmi\Microsoft SQL Server\MSRS10_50.MSSQLSERVER\Reporting Services\ReportManager|File di configurazione dei criteri di Gestione report. Questi criteri di sicurezza influiscono su tutti gli assembly che estendono Gestione report; ad esempio estensioni dell'interfaccia utente della sottoscrizione per il recapito personalizzato.|  

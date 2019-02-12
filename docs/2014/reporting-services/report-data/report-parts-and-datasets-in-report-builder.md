@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 1fe86481-9c41-4535-a4b7-c7c4d780cab6
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 00094e630c9beaf7f5093d944f267a2884c22da7
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 7c6cb19da853387f4684c301e183276a0f4b7e96
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48059343"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56027672"
 ---
 # <a name="report-parts-and-datasets-in-report-builder"></a>Parti del report e set di dati in Generatore report
   In Generatore report il modo più semplice per includere dati in un report consiste nell'aggiungere parti del report esistenti dalla Raccolta parti del report. Nelle parti del report sono contenuti i set di dati dai quali dipendono, chiamati *set di dati dipendenti*. I set di dati dipendenti sono basati sulle origini dati condivise e possono essere set di dati incorporati o condivisi.  
@@ -57,13 +57,13 @@ ms.locfileid: "48059343"
 2.  Quando si esce da Generatore report o si avvia un nuovo report, viene richiesto di salvare il report. Se non si effettua questa operazione, alla successiva apertura del report e pubblicazione degli elementi del report, si potrebbero pubblicare nuove copie degli stessi set di dati. Per impedire il salvataggio di più copie di set di dati condivisi nel server di report, si consiglia di salvare il report.  
   
 > [!IMPORTANT]  
->  Per assicurarsi di poter utilizzare i dati di un set di dati condiviso, è necessario comprendere i principi che regolano la protezione degli elementi del report. Per ulteriori informazioni, vedere [Proteggere gli elementi del set di dati condiviso](../security/secure-shared-dataset-items.md).  
+>  Per assicurarsi di poter utilizzare i dati di un set di dati condiviso, è necessario comprendere i principi che regolano la protezione degli elementi del report. Per altre informazioni, vedere [Proteggere gli elementi del set di dati condiviso](../security/secure-shared-dataset-items.md).  
   
   
 ## <a name="see-also"></a>Vedere anche  
  [Visualizzazione di progettazione report &#40;Generatore report&#41;](../report-builder/report-design-view-report-builder.md)   
  [Sicurezza &#40;Generatore report&#41;](../report-builder/security-report-builder.md)   
- [Parti di report &#40;Report e SSRS&#41;](../report-parts-report-builder-and-ssrs.md)   
+ [Parti del report &#40;Generatore report e SSRS&#41;](../report-parts-report-builder-and-ssrs.md)   
  [Set di dati condivisi e incorporati del report &#40;Generatore report e SSRS&#41;](report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)  
   
   

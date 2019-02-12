@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 8dc4998b-a214-49b6-96e7-fbc179015209
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: c3dc4a6627486c3449819da1e7987b8b8ae8f569
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 90e9a4ae2d0d119f8992cf89cb388075c264c042
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48109611"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56037472"
 ---
 # <a name="add-and-modify-a-line-report-builder-and-ssrs"></a>Aggiungere e modificare una linea (Generatore report e SSRS)
   È possibile aggiungere una linea al report se si desidera inserire un elemento grafico per separare le varie sezioni. L'aspetto della linea può essere personalizzato modificando le proprietà, come il colore o lo stile. Ad esempio, è necessario incorporare i colori aziendali nel report.  
@@ -38,6 +38,6 @@ ms.locfileid: "48109611"
     >  Se si imposta lo stile di linea su **doppie** e la lunghezza riga è 1 1/2 pt o più ristretto, la riga potrebbe non visualizzata come doppia quando si esegue il report in Generatore Report, progettazione Report o gestione Report. Risulterà doppia quando si esporta il report in altri formati, ad esempio Microsoft Word e Acrobat PDF.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Rettangoli e linee &#40;Report e SSRS&#41;](rectangles-and-lines-report-builder-and-ssrs.md)  
+ [Rettangoli e linee &#40;Generatore report e SSRS&#41;](rectangles-and-lines-report-builder-and-ssrs.md)  
   
   

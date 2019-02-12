@@ -1,5 +1,5 @@
 ---
-title: 'Lesson 8: Create a Data Filter (Lezione 8: Creare un filtro di dati) | Microsoft Docs'
+title: 'Lezione 8: Creare un filtro dei dati | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -10,15 +10,15 @@ ms.topic: conceptual
 ms.assetid: 19ccbdba-e3da-40a4-b652-32c628cf32e5
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: d5004ad7cb8283be11d7e89f96ee46bd29ccccd6
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 581da37baeead00355e6ada1b822731833e5adaf
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48189921"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56037065"
 ---
-# <a name="lesson-8-create-a-data-filter"></a>Lezione 8: Creare un filtro di dati
+# <a name="lesson-8-create-a-data-filter"></a>Lezione 8: Creare un filtro dei dati
   Dopo aver aggiunto un'azione drill-through nel report padre, il passaggio successivo consiste nel creare un filtro di dati per la tabella di dati definita per il report figlio.  
   
  È possibile creare un filtro basato su tabella **o** un filtro query per il report drill-through. In questa lezione vengono fornite le istruzioni per entrambe le opzioni.  
@@ -44,7 +44,7 @@ ms.locfileid: "48189921"
   
 5.  Fare clic su di uguale (**=**) operatore nel **operatore** elenco a discesa.  
   
-6.  Fare clic sul pulsante espressione accanto al **valore** campo, fare clic su **parametri** nel **categoria** area e quindi fare doppio clic `productid` nel  **I valori** area. Il campo **Imposta espressione per: Valore** dovrebbe contenere ora un'espressione simile a **=Parameters!productid.Value**.  
+6.  Fare clic sul pulsante espressione accanto al **valore** campo, fare clic su **parametri** nel **categoria** area e quindi fare doppio clic `productid` nel  **I valori** area. Il **imposta espressione per: Valore** campo deve contenere un'espressione simile a **= parametri! productid. Valore**.  
   
 7.  Fare clic su **OK,** e **OK** nuovamente il **proprietà Tablix** nella finestra di dialogo.  
   
@@ -56,9 +56,9 @@ ms.locfileid: "48189921"
   
 2.  Creare una nuova funzione che accetta un parametro, `productid`, di tipo Integer, restituisce un oggetto `datatable` e consente di eseguire le operazioni riportate di seguito.  
   
-    1.  Crea un'istanza del set di dati, `DataSet2`, che è stato creato nel passaggio 2 della [lezione 4: definire una connessione dati e un tabella di dati per il Report figlio](lesson-4-define-a-data-connection-and-data-table-for-child-report.md).  
+    1.  Crea un'istanza del set di dati, `DataSet2`, che è stato creato nel passaggio 2 della [lezione 4: Definire una connessione dati e un tabella di dati per il Report figlio](lesson-4-define-a-data-connection-and-data-table-for-child-report.md).  
   
-    2.  Creare una connessione al database di SQL Server per eseguire la query definita nella **Lezione 4: Definire una connessione dati e una tabella di dati per il report figlio**.  
+    2.  Creare una connessione al database di SQL Server per eseguire la query definita **lezione 4: Definire i dati di un connessione e una tabella dati per il Report figlio**.  
   
     3.  Tramite la query verranno restituiti i dati non filtrati.  
   
@@ -166,9 +166,9 @@ ms.locfileid: "48189921"
   
 2.  Creare una nuova funzione che accetta un parametro, `productid`, di tipo Integer, restituisce un oggetto `datatable` e consente di eseguire le operazioni riportate di seguito.  
   
-    1.  Crea un'istanza del set di dati, `DataSet2`, che è stato creato nel passaggio 2 della [lezione 4: definire una connessione dati e un tabella di dati per il Report figlio](lesson-4-define-a-data-connection-and-data-table-for-child-report.md).  
+    1.  Crea un'istanza del set di dati, `DataSet2`, che è stato creato nel passaggio 2 della [lezione 4: Definire una connessione dati e un tabella di dati per il Report figlio](lesson-4-define-a-data-connection-and-data-table-for-child-report.md).  
   
-    2.  Creare una connessione al database di SQL Server per eseguire la query definita in **Lezione 4: Definire una connessione dati e una tabella di dati per il report figlio**.  
+    2.  Creare una connessione al database di SQL Server per eseguire la query definita **lezione 4: Definire i dati di un connessione e una tabella dati per il Report figlio**.  
   
     3.  Nella query sarà incluso un parametro, `productid`, per garantire che i dati restituiti vengano filtrati in base a `ProductID` selezionato nel report padre.  
   

@@ -1,25 +1,24 @@
 ---
-title: 'Lezione 3: Elaborazione della struttura di Data Mining Bike Buyer | Microsoft Docs'
+title: "Lezione 3: L'elaborazione della struttura di Data Mining Bike Buyer | Microsoft Docs"
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: e748c2cd-339d-4e82-82f1-be2d0fc41b61
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 77c49a7b1616d1a54c652efee05ff1e827d07caf
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 2e3f85016b32884b9a6b809e28d20d9985f97cd9
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48053831"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56025332"
 ---
-# <a name="lesson-3-processing-the-bike-buyer-mining-structure"></a>Lezione 3: Elaborazione della struttura di data mining Bike Buyer
-  In questa lezione si utilizzerà l'inserimento in istruzione e la vista vTargetMail il [!INCLUDE[ssSampleDBDWobject](../includes/sssampledbdwobject-md.md)] per elaborare le strutture di data mining e modelli di data mining creato nel database di esempio [lezione 1: creazione della struttura di Data Mining Bike Buyer](../../2014/tutorials/lesson-1-creating-the-bike-buyer-mining-structure.md) e [lezione 2: aggiunta di modelli di Data Mining alla struttura di Data Mining Bike Buyer](../../2014/tutorials/lesson-2-adding-mining-models-to-the-bike-buyer-mining-structure.md).  
+# <a name="lesson-3-processing-the-bike-buyer-mining-structure"></a>Lezione 3: L'elaborazione della struttura di Data Mining Bike Buyer
+  In questa lezione si utilizzerà l'inserimento in istruzione e la vista vTargetMail il [!INCLUDE[ssSampleDBDWobject](../includes/sssampledbdwobject-md.md)] per elaborare le strutture di data mining e modelli di data mining creato nel database di esempio [lezione 1: Creazione della struttura di Data Mining Bike Buyer](../../2014/tutorials/lesson-1-creating-the-bike-buyer-mining-structure.md) e [lezione 2: Aggiunta di modelli di Data Mining alla struttura di Data Mining Bike Buyer](../../2014/tutorials/lesson-2-adding-mining-models-to-the-bike-buyer-mining-structure.md).  
   
  Quando si elabora una struttura di data mining, [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] legge i dati di origine e compila le strutture che supportano i modelli di data mining. Quando si elabora un modello di data mining, i dati definiti dalla struttura di data mining vengono elaborati tramite l'algoritmo di data mining selezionato. L'algoritmo ricerca tendenze e schemi e quindi archivia queste informazioni nel modello di data mining. Il modello di data mining non contiene pertanto i dati di origine effettivi, bensì le informazioni individuate dall'algoritmo. Per altre informazioni sull'elaborazione dei modelli di data mining, vedere [considerazioni e requisiti di elaborazione &#40;Data Mining&#41;](../../2014/analysis-services/data-mining/processing-requirements-and-considerations-data-mining.md).  
   
@@ -178,6 +177,6 @@ OPENQUERY([<datasource>],'<SELECT statement>')
  Nella lezione successiva verrà esplorato il contenuto dei modelli di data mining aggiunti alla struttura di data mining in questa lezione.  
   
 ## <a name="next-lesson"></a>Lezione successiva  
- [Lezione 4: Esplorazione dei modelli di data mining Bike Buyer](../../2014/tutorials/lesson-4-browsing-the-bike-buyer-mining-models.md)  
+ [Lezione 4: Esplorazione di modelli di Data Mining Bike Buyer](../../2014/tutorials/lesson-4-browsing-the-bike-buyer-mining-models.md)  
   
   
