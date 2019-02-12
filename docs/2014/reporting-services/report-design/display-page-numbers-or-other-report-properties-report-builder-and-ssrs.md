@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: c7d95245-4709-4d04-acb4-59bf71e60d97
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: 8bfb730a7c19e4aa2481ed50ec69b5356c955584
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 0aa360b52f6928db53a473712c38bbfc2d05de78
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48148817"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56037823"
 ---
 # <a name="display-page-numbers-or-other-report-properties-report-builder-and-ssrs"></a>Visualizzare i numeri di pagina o altre proprietà del report (Generatore report e SSRS)
   Aggiungere numeri di pagina, un titolo di report, un nome file e altre proprietà alle intestazioni o ai piè di pagina del report è un'operazione semplice. Queste proprietà sono archiviate come campi nella cartella Campi predefiniti nel riquadro dei dati del report:  
@@ -35,7 +35,7 @@ ms.locfileid: "48148817"
   
 -   ID utente  
   
--   Lingua  
+-   Linguaggio  
   
  Per un numero di pagina, potrebbe essere necessario aggiungere la parola 'Pagina' prima del numero. Inoltre, potrebbe essere necessario indicare anche il numero complessivo di pagine.  
   
@@ -63,7 +63,7 @@ ms.locfileid: "48148817"
   
 1.  Fare clic con il pulsante destro del mouse sulla casella di testo che contiene [&PageNumber], quindi scegliere **Espressioni**.  
   
-     La casella di testo **Imposta espressione per: Valore** contiene l'espressione =Globals!PageNumber.  
+     Il **imposta espressione per: Valore** casella di testo contiene l'espressione = Globals! PageNumber.  
   
 2.  Posizionare il cursore dopo il segno = e digitare `"Page " &`.  
   
@@ -84,7 +84,7 @@ ms.locfileid: "48148817"
 4.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
 ## <a name="see-also"></a>Vedere anche  
- [Intestazioni di pagina e piè di pagina &#40;Report e SSRS&#41;](page-headers-and-footers-report-builder-and-ssrs.md)   
- [Formattazione del testo in una casella di testo &#40;Report e SSRS&#41;](format-text-in-a-text-box-report-builder-and-ssrs.md)  
+ [Intestazioni di pagina e piè di pagina &#40;Generatore report e SSRS&#41;](page-headers-and-footers-report-builder-and-ssrs.md)   
+ [Formattare il testo in una casella di testo &#40;Generatore report e SSRS&#41;](format-text-in-a-text-box-report-builder-and-ssrs.md)  
   
   
