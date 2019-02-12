@@ -16,13 +16,13 @@ helpviewer_keywords:
 ms.assetid: 8c0bdd18-8905-4e22-9774-a240fc81a8a7
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 4f3299b67ffb55723a59326ec884d9ad30617e24
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 0cddac844ac9603da32a4fabc47fa71a8ddcd226
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48212662"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56036602"
 ---
 # <a name="using-the-rsclientprint-control-in-custom-applications"></a>Utilizzo del controllo RSClientPrint in applicazioni personalizzate
   Il controllo [!INCLUDE[msCoName](../../../includes/msconame-md.md)] ActiveX **RSPrintClient** consente la stampa sul lato client dei report visualizzati nel Visualizzatore HTML. Offre una finestra di dialogo **Stampa** per consentire all'utente di avviare un processo di stampa, visualizzare un'anteprima di un report, specificare le pagine da stampare e modificare i margini. Durante la stampa sul lato client, il server di report esegue il rendering del report con l'estensione per il rendering Immagine (EMF) e utilizza le funzionalità di stampa del sistema operativo per creare il processo di stampa e inviarlo a una stampante.  
@@ -44,7 +44,7 @@ ms.locfileid: "48212662"
 -   Leggere gli argomenti della documentazione online relativi al rendering in formato immagine (EMF) per comprendere le modalità di rendering delle pagine nell'anteprima e nell'output di stampa.  
   
 ## <a name="rsprintclient-overview"></a>Cenni preliminari su RSPrintClient  
- Il controllo visualizza una finestra di dialogo di stampa personalizzata che supporta funzionalità comuni ad altre finestre di dialogo di stampa, inclusi l'anteprima di stampa, la selezione delle pagine per specificare pagine e intervalli, i margini delle pagine e l'orientamento. Il controllo è distribuito come file CAB. Il testo della finestra di dialogo **Stampa** è localizzato in tutte le lingue supportate da [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Per stampare il report, il controllo ActiveX **RSPrintClient** usa l'estensione per il rendering delle immagini (EMF). Vengono utilizzate le informazioni sul dispositivo EMF seguenti: StartPage, EndPage, MarginBottom, MarginLeft, MarginTop, MarginRight, PageHeight e PageWidth. Le altre impostazioni del dispositivo per il rendering in formato immagine non sono supportate.  
+ Il controllo visualizza una finestra di dialogo di stampa personalizzata che supporta funzionalità comuni ad altre finestre di dialogo di stampa, inclusi l'anteprima di stampa, la selezione delle pagine per specificare pagine e intervalli, i margini delle pagine e l'orientamento. Il controllo è distribuito come file CAB. Il testo della finestra di dialogo **Stampa** è localizzato in tutte le lingue supportate da [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Per stampare il report, il controllo ActiveX **RSPrintClient** usa l'estensione per il rendering delle immagini (EMF). Viene usati le informazioni sul dispositivo EMF seguenti: StartPage, EndPage, MarginBottom, MarginLeft, MarginTop, MarginRight, PageHeight e PageWidth. Le altre impostazioni del dispositivo per il rendering in formato immagine non sono supportate.  
   
 ### <a name="language-support"></a>Supporto delle lingue  
  Il controllo include stringhe testo per l'interfaccia utente in diverse lingue e accetta valori di input in vari sistemi di misura. La lingua e il sistema di misura usati vengono determinati dalle proprietà **Culture** e **UICulture**. che accettano entrambe valori LCID. Se si specifica un identificatore LCID per una lingua che è una variante di una lingua supportata, verrà utilizzata la lingua più simile corrispondente. Se si specifica un LCID di una lingua non supportata e per la quale non esiste un LCID simile corrispondente, verrà utilizzato l'inglese (Stati Uniti).  
@@ -67,7 +67,7 @@ ms.locfileid: "48212662"
   
 ### <a name="rsclientprint-properties"></a>Proprietà di RSClientPrint  
   
-|Proprietà|Tipo|LS|Default|Description|  
+|Proprietà|Tipo|LS|Impostazione predefinita|Descrizione|  
 |--------------|----------|--------|-------------|-----------------|  
 |MarginLeft|Double|LS|Impostazione del report|Recupera o imposta il margine sinistro. Il valore predefinito è di 12,2 mm se non viene specificato un valore diverso dallo sviluppatore o nel report.|  
 |MarginRight|Double|LS|Impostazione del report|Recupera o imposta il margine destro. Il valore predefinito è di 12,2 mm se non viene specificato un valore diverso dallo sviluppatore o nel report.|  
@@ -75,8 +75,8 @@ ms.locfileid: "48212662"
 |MarginBottom|Double|LS|Impostazione del report|Recupera o imposta il margine inferiore. Il valore predefinito è di 12,2 mm se non viene specificato un valore diverso dallo sviluppatore o nel report.|  
 |PageWidth|Double|LS|Impostazione del report|Recupera o imposta la larghezza della pagina. Il valore predefinito è di 215,9 mm se non viene specificato un valore diverso dallo sviluppatore o nella definizione del report.|  
 |PageHeight|Double|LS|Impostazione del report|Recupera o imposta l'altezza della pagina. Il valore predefinito è di 279,4 mm se non viene specificato un valore diverso dallo sviluppatore o nella definizione del report.|  
-|Impostazioni cultura|Int32|LS|Impostazioni locali del browser|Specifica l'identificatore delle impostazioni locali (LCID). Questo valore determina l'unità di misura per l'input dell'utente. Ad esempio, se un utente digita `3`, il valore verrà misurato in millimetri se la lingua è il francese e in pollici se la lingua inglese (Stati Uniti). I valori validi sono: 1028, 1031, 1033, 1036, 1040, 1041, 1042, 2052, 3082.|  
-|UICulture|String|LS|Impostazioni internazionali del client|Specifica la lingua delle stringhe della finestra di dialogo. Per il testo della finestra di dialogo di stampa sono disponibili le lingue seguenti: cinese semplificato, cinese tradizionale, inglese, francese, tedesco, italiano, giapponese, coreano e spagnolo. I valori validi sono: 1028, 1031, 1033, 1036, 1040, 1041, 1042, 2052, 3082.|  
+|Impostazioni cultura|Int32|LS|Impostazioni locali del browser|Specifica l'identificatore delle impostazioni locali (LCID). Questo valore determina l'unità di misura per l'input dell'utente. Ad esempio, se un utente digita `3`, il valore verrà misurato in millimetri se la lingua è il francese e in pollici se la lingua inglese (Stati Uniti). I valori validi includono: 1028, 1031, 1033, 1036, 1040, 1041, 1042, 2052, 3082.|  
+|UICulture|String|LS|Impostazioni internazionali del client|Specifica la lingua delle stringhe della finestra di dialogo. Il testo nella finestra di dialogo di stampa è localizzato nelle lingue seguenti: Cinese semplificato, cinese tradizionale, inglese, francese, tedesco, italiano, giapponese, coreano e spagnolo. I valori validi includono: 1028, 1031, 1033, 1036, 1040, 1041, 1042, 2052, 3082.|  
 |Authenticate|Boolean|LS|False|Specifica se il controllo genera un comando GET per il server di report per avviare una sessione per la stampa fuori sessione.|  
   
 ### <a name="when-to-set-the-authenticate-property"></a>Quando impostare la proprietà Authenticate  
@@ -104,7 +104,7 @@ ms.locfileid: "48212662"
 ### <a name="rsprintclient-support-for-the-print-method"></a>Supporto di RSPrintClient per il metodo di stampa  
  L'oggetto **RSClientPrint** supporta il metodo **Print** usato per avviare la finestra di dialogo di stampa. Il metodo **Print** include gli argomenti descritti di seguito.  
   
-|Argomento|I/O|Tipo|Description|  
+|Argomento|I/O|Tipo|Descrizione|  
 |--------------|----------|----------|-----------------|  
 |ServerPath|In|String|Specifica la directory virtuale del server di report (ad esempio, https://adventure-works/reportserver).|  
 |ReportPathParameters|In|String|Specifica il nome completo del report nello spazio dei nomi delle cartelle del server di report, inclusi i parametri. I report vengono recuperati mediante l'accesso a un URL, ad esempio "/AdventureWorks Sample Reports/Employee Sales Summary&EmpID=1234"|  

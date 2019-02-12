@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 08e6d8b5-d88c-4ed2-9c05-55c757e00014
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 590d24fb56a91ce4bea13e5404c24a395986a397
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 12f37232f9f108a2764123d1bce567e9048a8b6d
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48098811"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56035012"
 ---
 # <a name="secure-shared-dataset-items"></a>Proteggere gli elementi del set di dati condiviso
   In un server di report gli elementi del set di dati condiviso possono essere utilizzati da più report. È possibile proteggere set di dati condivisi per controllare il livello di accesso degli utenti. Per impostazione predefinita, solo i membri del gruppo **Administrators** predefinito possono visualizzare set di dati condivisi, modificare proprietà, abilitare la memorizzazione nella cache, creare piani di aggiornamento della cache ed eliminare elementi, mentre per tutti gli altri utenti è necessario creare assegnazioni di ruolo che consentano l'accesso a un set di dati condiviso.  
@@ -47,12 +47,12 @@ ms.locfileid: "48098811"
 |Utilizzo di report|Visualizzare la definizione del set di dati condiviso.|Gestione contenuto<br /><br /> Generatore report|  
 |Impostazione della sicurezza per singoli elementi|Creare e modificare assegnazioni di ruolo che controllano l'accesso al set di dati condiviso. Questa attività deve essere utilizzata con l'attività Visualizzazione di report o Gestione di report. In caso contrario non avrà alcun effetto, poiché l'utente non potrà selezionare l'elemento.|Gestione contenuto|  
   
- Per altre informazioni, vedere [le attività a livello di elemento](tasks-and-permissions-item-level-tasks.md) e [dei ruoli predefiniti](role-definitions-predefined-roles.md).  
+ Per altre informazioni, vedere [Attività a livello di elemento](tasks-and-permissions-item-level-tasks.md) e [Predefined Roles](role-definitions-predefined-roles.md)(Ruoli predefiniti).  
   
 ## <a name="see-also"></a>Vedere anche  
- [Gestire origini dati condivise](../report-data/manage-shared-datasets.md)   
+ [Gestire set di dati condivisi](../report-data/manage-shared-datasets.md)   
  [Proteggere le cartelle](secure-folders.md)   
- [Proteggere i report e risorse](secure-reports-and-resources.md)   
+ [Garantire la sicurezza di report e risorse](secure-reports-and-resources.md)   
  [Concessione di autorizzazioni in un server di report in modalità nativa](granting-permissions-on-a-native-mode-report-server.md)   
  [Concessione di autorizzazioni in un server di report in modalità nativa](granting-permissions-on-a-native-mode-report-server.md)  
   

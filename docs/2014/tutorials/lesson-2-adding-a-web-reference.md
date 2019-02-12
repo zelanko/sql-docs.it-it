@@ -1,29 +1,28 @@
 ---
-title: 'Lezione 2: Aggiunta di un riferimento Web | Microsoft Docs'
+title: 'Lezione 2: Aggiunge un riferimento Web | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 ms.assetid: a2c2b8b8-6b13-45ca-ab3b-1582447b6807
-author: craigg-msft
-ms.author: douglasl
+author: VanMSFT
+ms.author: vanto
 manager: craigg
-ms.openlocfilehash: be009e76b1de70b405cf8b4e3faff2c1461f6dcd
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: dd4b9edc8c054a7fa2ec84bdc8d892e5b5a903a3
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48102511"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56031764"
 ---
-# <a name="lesson-2-adding-a-web-reference"></a>Lezione 2: Aggiunta di un riferimento Web
+# <a name="lesson-2-adding-a-web-reference"></a>Lezione 2: Aggiunge un riferimento Web
   L'individuazione di un servizio Web è il processo che consente a un client di individuare un servizio Web e ottenerne la descrizione. Il processo di individuazione di un servizio Web in [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] implica l'interrogazione di un sito Web in base a un algoritmo predeterminato. Scopo di questo processo è quello di individuare la descrizione del servizio, ovvero un documento XML scritto nel linguaggio WSDL (Web Services Description Language).  
   
  Nella descrizione del servizio vengono indicati i servizi disponibili e le modalità di interazione con tali servizi. Senza una descrizione del servizio non è possibile interagire con un servizio Web a livello di programmazione.  
   
- L'applicazione deve disporre di un mezzo per comunicare con il servizio Web e per individuarlo in fase di esecuzione. Questo risultato si ottiene tramite l'aggiunta di un riferimento Web al progetto del servizio Web, operazione che consente di generare una classe proxy che si interfaccia con il servizio Web e ne fornisce una rappresentazione locale. Per ulteriori informazioni, vedere gli argomenti relativi alla generazione di un proxy del servizio Web XML nella documentazione di [!INCLUDE[vsprvs](../includes/vsprvs-md.md)].  
+ L'applicazione deve disporre di un mezzo per comunicare con il servizio Web e per individuarlo in fase di esecuzione. Questo risultato si ottiene tramite l'aggiunta di un riferimento Web al progetto del servizio Web, operazione che consente di generare una classe proxy che si interfaccia con il servizio Web e ne fornisce una rappresentazione locale. Per altre informazioni, vedere "Procedura: Generare un Proxy del servizio Web XML"nel [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] documentazione.  
   
 ### <a name="to-add-a-web-reference"></a>Per aggiungere un riferimento Web  
   
@@ -53,7 +52,7 @@ ms.locfileid: "48102511"
   
 ## <a name="see-also"></a>Vedere anche  
  [Servizio Web ReportServer](../reporting-services/report-server-web-service/report-server-web-service.md)   
- [Lezione 3: Accesso al servizio Web](../../2014/tutorials/lesson-3-accessing-the-web-service.md)   
+ [Lezione 3: L'accesso al servizio Web](../../2014/tutorials/lesson-3-accessing-the-web-service.md)   
  [L'accesso al servizio Web ReportServer con Visual Basic o Visual C#&#35; &#40;esercitazione su SSRS&#41;](../../2014/tutorials/access-report-server-web-service-vb-vcsharp-ssrs-tutorial.md)  
   
   

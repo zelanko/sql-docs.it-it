@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 23eed41b-283a-49df-a3aa-062dde8d6354
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 5b0ae98d40a6f5e1e2c830c2d5aca4cc1c99e230
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 122fb28e82050fc134b86c2dc79559dec8d02478
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48181651"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56032423"
 ---
 # <a name="general-properties-page-resources-report-manager"></a>Pagina delle proprietà Generale, Risorse (Gestione report)
   La pagina delle proprietà Generale per le risorse consente di rinominare, eliminare, spostare o sostituire una risorsa. Nella parte superiore della pagina viene visualizzato il nome dell'utente che ha aggiunto la risorsa o ne ha modificato le proprietà.  
@@ -35,7 +35,7 @@ ms.locfileid: "48181651"
 3.  Scegliere **Gestisci**dal menu a discesa. Viene visualizzata la pagina delle proprietà Generale per la risorsa.  
   
 ## <a name="options"></a>Opzioni  
- **Nome**  
+ **Name**  
  Digitare un nome per la risorsa. Il nome deve includere almeno un carattere alfanumerico. È inoltre possibile utilizzare spazi e alcuni simboli. Non utilizzare i caratteri ; ? : \@ & = +, $ / * \< > | "oppure / per specificare un nome.  
   
  **Descrizione**  

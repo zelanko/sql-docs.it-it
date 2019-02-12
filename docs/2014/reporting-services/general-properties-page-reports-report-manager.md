@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 66c99d28-ab41-45f0-bf02-ed560293595d
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: e8606f2ee9afeb0e5e3ab0663290471b0d2d4463
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 408d86a821d2596172570f513ee8398e43298f91
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48206163"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56030272"
 ---
 # <a name="general-properties-page-reports-report-manager"></a>Pagina delle proprietà Generale, Report (Gestione report)
   La pagina delle proprietà Generale per i report consente di rinominare, eliminare, spostare o sostituire la definizione del report. È inoltre possibile utilizzare questa pagina per creare un report collegato. Nella parte superiore della pagina vengono visualizzati il nome dell'utente che ha creato o modificato il report e la data e ora di modifica.  
@@ -33,8 +33,8 @@ ms.locfileid: "48206163"
 3.  Scegliere **Gestisci**dal menu a discesa. Verrà visualizzata la pagina delle proprietà Generale per il report.  
   
 ## <a name="options"></a>Opzioni  
- **Nome**  
- Digitare un nome per il report. Il nome deve includere almeno un carattere alfanumerico. È inoltre possibile utilizzare spazi e alcuni simboli. Non utilizzare i caratteri ; ? : \@ & = +, $ * \< >  
+ **Name**  
+ Digitare un nome per il report. Il nome deve includere almeno un carattere alfanumerico. È inoltre possibile utilizzare spazi e alcuni simboli. Non utilizzare i caratteri ; ? : \@ & = + , $ * \< >  
   
  " o / quando si specifica un nome.  
   
@@ -61,7 +61,7 @@ ms.locfileid: "48206163"
   
  La copia che viene aperta è identica alla definizione del report originale pubblicata inizialmente nel server di report. Le eventuali proprietà impostate nel report dopo la pubblicazione (ad esempio, parametri e proprietà dell'origine dei dati) non sono disponibili nel file della definizione aperto.  
   
- È possibile modificare la definizione del report e salvarla come un nuovo file in una cartella condivisa, quindi caricare la definizione del report come un nuovo elemento nel server di report. Le modifiche apportate alla definizione del report mentre è aperto in [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] (o un'altra applicazione) non vengono salvate direttamente nel server di report. Per pubblicare il report modificato nel server di report è necessario caricare il file.  
+ È possibile modificare la definizione del report e salvarla come un nuovo file in una cartella condivisa, quindi caricare la definizione del report come un nuovo elemento nel server di report. Le modifiche apportate alla definizione del report mentre il file è aperto in [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] o in un'altra applicazione non vengono salvate direttamente nel server di report. Per pubblicare il report modificato nel server di report è necessario caricare il file.  
   
  **Sostituisci**  
  Fare clic per sostituire la definizione del report utilizzata nel report corrente con una definizione diversa contenuta in un file con estensione rdl presente nel file system. Se si aggiorna la definizione di un report è necessario reimpostare le impostazioni dell'origine dei dati dopo l'aggiornamento.  

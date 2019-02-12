@@ -9,14 +9,14 @@ ms.technology:
 ms.topic: conceptual
 ms.assetid: 9c69792d-d7c4-453b-ae2f-6d2d071d8606
 author: maggiesmsft
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: 853bed4a458fd7f3e7472c563b0cd973bb3eea5f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.author: maghan
+manager: kfile
+ms.openlocfilehash: 845013f002bc0d0937ae012ef033aaea1d45cc89
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48063381"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56025882"
 ---
 # <a name="check-for-updates-or-turn-updates-off-report-builder-and-ssrs"></a>Verificare o disattivare gli aggiornamenti (Generatore report e SSRS)
   Ogni volta che si apre un report, Generatore report consente di verificare se le istanze pubblicate delle parti del report in tale report sono state aggiornate nel server di report o nel sito di SharePoint integrato con un server di report. Consente di verificare inoltre le modifiche negli elementi dipendenti delle parti di report, ad esempio nel set di dati e nei parametri. Se qualsiasi parte di report o le relative dipendenze sono state aggiornate sul sito o sul server, in una barra informazioni del report in uso viene visualizzato il numero di parti aggiornate. È possibile scegliere di visualizzare e accettare, o rifiutare, gli aggiornamenti oppure di ignorare la barra informazioni.  
@@ -37,7 +37,7 @@ ms.locfileid: "48063381"
 -   Visualizzare l'area di progettazione all'esterno del report o nel corpo del report, quindi scegliere **verificare la presenza di aggiornamenti**.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Parti di report &#40;Report e SSRS&#41;](report-parts-report-builder-and-ssrs.md)   
+ [Parti del report &#40;Generatore report e SSRS&#41;](report-parts-report-builder-and-ssrs.md)   
  [Pubblicare e ripubblicare parti del Report &#40;Report e SSRS&#41;](report-design/publish-and-republish-report-parts-report-builder-and-ssrs.md)   
  [Ricerca di parti del Report e impostazione di una cartella predefinita &#40;Report e SSRS&#41;](report-design/browse-for-report-parts-and-set-a-default-folder-report-builder-and-ssrs.md)   
  [Risolvere i problemi di parti del Report &#40;Report e SSRS&#41;](../../2014/reporting-services/troubleshoot-report-parts-report-builder-and-ssrs.md)   

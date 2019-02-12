@@ -23,13 +23,13 @@ helpviewer_keywords:
 ms.assetid: 68c31a85-261c-4ec4-b8df-1f9842b46f8a
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: ce835764cc8964fdd5b6dfb5a6cb19a383ea79b0
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 0bd8ee198a2627d9caaba340c4357bb0de0f30aa
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48088861"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56014802"
 ---
 # <a name="reporting-services-delivery-extension-settings"></a>Impostazioni delle estensioni per il recapito di Reporting Services
   [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] include un'estensione per il recapito tramite posta elettronica e un'estensione per il recapito tramite condivisione file. Il recapito tramite posta elettronica consente di inviare un report a singoli utenti o gruppi tramite posta elettronica. Il recapito tramite condivisione file consente di inviare automaticamente i report visualizzabili a una condivisione nella rete. È possibile utilizzare una delle estensioni per il recapito supportate con sottoscrizioni standard o con sottoscrizioni guidate dai dati. Le impostazioni di recapito specifiche del tipo di estensione per il recapito vengono passate ogni volta che si chiamano i metodi <xref:ReportService2010.ReportingService2010.CreateSubscription%2A>, <xref:ReportService2010.ReportingService2010.CreateDataDrivenSubscription%2A>, <xref:ReportService2010.ReportingService2010.SetSubscriptionProperties%2A> e <xref:ReportService2010.ReportingService2010.SetDataDrivenSubscriptionProperties%2A>. Per recuperare un elenco di impostazioni per il recapito a livello di programmazione, utilizzare il metodo <xref:ReportService2010.ReportingService2010.GetExtensionSettings%2A>.  
@@ -40,7 +40,7 @@ ms.locfileid: "48088861"
 ## <a name="e-mail-delivery-settings"></a>Impostazioni di recapito tramite posta elettronica  
  Nella tabella seguente sono elencate le impostazioni di recapito tramite posta elettronica per le sottoscrizioni che utilizzano la posta elettronica del server di report.  
   
-|Impostazione|valore|  
+|Impostazione|Value|  
 |-------------|-----------|  
 |**TO**|Indirizzo di posta elettronica visualizzato nella riga `To` del messaggio. Se sono presenti più indirizzi di posta elettronica, vengono separati da un punto e virgola. Obbligatorio.|  
 |**CC**|Indirizzo di posta elettronica visualizzato nella riga `Cc` del messaggio. Se sono presenti più indirizzi di posta elettronica, vengono separati da un punto e virgola. Facoltativo.|  
@@ -56,7 +56,7 @@ ms.locfileid: "48088861"
 ## <a name="file-share-delivery-settings"></a>Impostazioni di recapito tramite condivisione file  
  Nella tabella seguente sono elencate le impostazioni di recapito tramite condivisione file per le sottoscrizioni.  
   
-|Impostazione|valore|  
+|Impostazione|Value|  
 |-------------|-----------|  
 |**FILENAME**|Nome del file salvato nel disco.|  
 |**FILEEXTN**|Indica se includere un'estensione di file per il report visualizzabile. Il valore può essere `true` o `false`.|  

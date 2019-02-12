@@ -9,14 +9,14 @@ ms.technology:
 ms.topic: conceptual
 ms.assetid: 56d2d0d7-1eb6-4c6b-aaf4-0521723ef4af
 author: maggiesmsft
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: 7f735e1a46e5b42ec226d3d885dad00d11dcc39f
-ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
+ms.author: maghan
+manager: kfile
+ms.openlocfilehash: 5952850708057016c5f9b8144254682a7f47fd9d
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/18/2018
-ms.locfileid: "53589360"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56029392"
 ---
 # <a name="save-reports-to-your-computer-report-builder"></a>Salvare i report nel computer in uso (Generatore report)
   In Generatore report è possibile salvare le definizioni di un report nel computer. Tuttavia, quando vengono salvati nel computer in uso, gli altri utenti non possono visualizzare i report; inoltre i report che fanno riferimento alle origini dati condivise o che consentono di archiviare esternamente gli elementi del report, ad esempio immagini e sottoreport, potrebbero non essere eseguiti esternamente. È consigliabile salvare i report in un server di report o in un sito di SharePoint.  

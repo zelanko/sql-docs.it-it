@@ -13,13 +13,13 @@ f1_keywords:
 ms.assetid: 05819637-729b-4cf6-82de-91a99f184ec6
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: 1a41fc472566b8838ff9fc3a771e687c03dbc072
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 1e33b0c3e957e13ea6178a3d7e65279a3be84794
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48120588"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56034722"
 ---
 # <a name="add-interactive-sort-to-a-table-or-matrix-report-builder-and-ssrs"></a>Aggiungere un ordinamento interattivo a una tabella o a una matrice (Generatore report e SSRS)
   È possibile aggiungere pulsanti di ordinamento interattivo per consentire agli utenti di modificare l'ordinamento di righe e colonne in tabelle e matrici. Questa caratteristica è disponibile solo nei formati di rendering che supportano l'interazione dell'utente, ad esempio HTML.  

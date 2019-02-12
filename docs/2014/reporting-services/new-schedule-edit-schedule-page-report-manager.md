@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 52a4d250-e185-4116-a29c-d809940a00fb
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 7c69e1d2021e4c92dc87bd866ec851d0a3349fe1
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 97af25216bd0f1e30531fcb43e182672cd299ac6
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48139461"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56034548"
 ---
 # <a name="new-schedule-edit-schedule-page-report-manager"></a>Nuova pianificazione: Modifica pianificazione (gestione Report)
   Utilizzare la pagina Nuova pianificazione/Modifica pianificazione per creare una pianificazione per un report. Le pianificazioni vengono utilizzate con le sottoscrizioni, per aggiornare i report memorizzati nella cache e per creare snapshot autonomi o nella cronologia dei report.  
@@ -79,7 +79,7 @@ ms.locfileid: "48139461"
   
 -   **Ora** definisce una pianificazione eseguita a intervalli di ore. Utilizzare le opzioni nella sezione **Date di inizio e fine** per specificare il giorno di esecuzione della pianificazione.  
   
--   **Giorno** definisce una pianificazione eseguita nei giorni selezionati a un'ora specifica. È possibile specificare i giorni nei modi seguenti: ogni \< *giorno*>, ogni giorno feriale e ogni \< *numero*> giorni. La selezione di un'opzione determina la disattivazione delle altre anche se può sembrare che siano selezionati altri giorni.  
+-   **Giorno** definisce una pianificazione eseguita nei giorni selezionati a un'ora specifica. È possibile specificare i giorni nei modi seguenti: Ogni \< *giorno*>, ogni giorno feriale e ogni \< *numero*> giorni. La selezione di un'opzione determina la disattivazione delle altre anche se può sembrare che siano selezionati altri giorni.  
   
 -   **Settimana** definisce una pianificazione eseguita settimanalmente a un'ora specifica. È possibile impostare un intervallo di una o più settimane intere (ad esempio, ogni due settimane) oppure di alcuni giorni della settimana.  
   

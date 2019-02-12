@@ -12,14 +12,14 @@ f1_keywords:
 - sql12.rtp.rptdesigner.reportproperties.pagesetup.f1
 ms.assetid: f9d406dd-a87c-4321-bf23-339d90654062
 author: maggiesmsft
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: c9331aede0a02f0f84bd2ae76998efeb8edc075b
-ms.sourcegitcommit: 110e5e09ab3f301c530c3f6363013239febf0ce5
+ms.author: maghan
+manager: kfile
+ms.openlocfilehash: d1dcf20ef0a282d28ce8c50c5935100b48fb57e6
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/10/2018
-ms.locfileid: "48905071"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56029422"
 ---
 # <a name="report-properties-dialog-box-page-setup"></a>Finestra di dialogo Proprietà report, Imposta pagina
   Selezionare **Imposta pagina** nel **proprietà Report**, finestra di dialogo per impostare le opzioni di pagina per l'intero report.  
@@ -55,7 +55,7 @@ ms.locfileid: "48905071"
  **A sinistra**  
  Imposta la distanza tra il margine sinistro del report e il margine sinistro delle righe del report.  
   
- **Ok**  
+ **Right**  
  Imposta la distanza tra il margine destro del report e il margine destro delle righe del report.  
   
 ## <a name="see-also"></a>Vedere anche  

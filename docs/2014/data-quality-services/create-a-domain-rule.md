@@ -10,15 +10,15 @@ f1_keywords:
 - sql12.dqs.dm.rules.f1
 - sql12.dqs.dm.testdomainrule.f1
 ms.assetid: 339fa10d-e22c-4468-b366-080c33f1a23f
-author: douglaslMS
-ms.author: douglasl
+author: leolimsft
+ms.author: lle
 manager: craigg
-ms.openlocfilehash: 809ac3ce20bbda443840c807ac05fd6ade7cc225
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 750773c728b2cbe026aac404f90a13928802a4bc
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53365113"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56022952"
 ---
 # <a name="create-a-domain-rule"></a>Creare una regola di dominio
   In questo argomento viene descritto come creare una regola di dominio in [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS). Una regola di dominio è una condizione utilizzata per convalidare, correggere e standardizzare i valori di dominio. Una regola di dominio deve rimanere valida in tutto il dominio affinché i valori di dominio vengano considerati accurati e conformi ai requisiti aziendali. Le regole di dominio possono includere le regole di convalida utilizzate per convalidare i valori di dominio, ma non per correggere i dati in un progetto Data Quality. Le regole includono anche le regole di standardizzazione applicate ai dati validi e utilizzate per la correzione dei dati.  
@@ -114,8 +114,8 @@ ms.locfileid: "53365113"
 |La lunghezza è uguale a|Solo i valori costituiti dal numero di caratteri definito dall'operando saranno validi.|Operando di esempio: 3<br /><br /> Valore valido: BB1<br /><br /> Valore non valido: AA|  
 |La lunghezza è maggiore o uguale a|Solo i valori costituiti dal numero di caratteri definito dall'operando o da un numero di caratteri maggiore saranno validi.|Operando di esempio: 3<br /><br /> Valori validi: BB1, BBAA<br /><br /> Valore non valido: AA|  
 |La lunghezza è minore o uguale a|Solo i valori costituiti dal numero di caratteri definito dall'operando o da un numero di caratteri minore saranno validi.|Operando di esempio: 3<br /><br /> Valori validi: BB1, AA<br /><br /> Valore non valido: BBAA|  
-|Il valore è uguale a|Solo i valori identici all'operando saranno validi.|Operando di esempio: BB1<br /><br /> Valore valido: BB1<br /><br /> Valore non valido: BB, BB1 #|  
-|Il valore è diverso da|Solo i valori non identici all'operando saranno validi.|Operando di esempio: BB1<br /><br /> Valore valido: BB, BB1 #<br /><br /> Valore non valido: BB1|  
+|Il valore è uguale a|Solo i valori identici all'operando saranno validi.|Operando di esempio: BB1<br /><br /> Valore valido: BB1<br /><br /> Valore non valido: BB, BB1#|  
+|Il valore è diverso da|Solo i valori non identici all'operando saranno validi.|Operando di esempio: BB1<br /><br /> Valore valido: BB, BB1#<br /><br /> Valore non valido: BB1|  
 |Il valore contiene|Solo i valori in cui tutti i caratteri sono contenuti all'interno dell'operando, in qualsiasi ordine, saranno validi.|Operando di esempio: A1<br /><br /> Valori validi: A1, AA1<br /><br /> Valore non valido: 1A, AA|  
 |Il valore non contiene|Solo i valori non contenuti all'interno dell'operando saranno validi.|Operando di esempio: A1<br /><br /> Valori validi: 1A, AA<br /><br /> Valori non validi: A1, AA1|  
 |Il valore inizia con|Solo i valori che iniziano con i caratteri dell'operando saranno validi.|Operando di esempio: AA<br /><br /> Valori validi: AA1<br /><br /> Valori non validi: 1AAB|  
@@ -126,8 +126,8 @@ ms.locfileid: "53365113"
 |Il valore non è in|Solo i valori non presenti nel set dell'operando saranno validi.|Operando di esempio: [A1, B1]<br /><br /> Valori validi: AA, 11<br /><br /> Valori non validi: A1, B1|  
 |Il valore corrisponde al modello|Solo i valori che corrispondono al modello di caratteri, cifre o caratteri speciali dell'operando saranno validi.<br /><br /> È possibile usare qualsiasi lettera (A...Z) come modello per qualsiasi lettera, senza distinzione tra maiuscole e minuscole. È possibile usare qualsiasi cifra (0...9) come modello per qualsiasi cifra. Qualsiasi carattere speciale, tranne lettere o cifre, può essere utilizzato come modello per se stesso. Le parentesi quadre, [], definiscono la corrispondenza facoltativa.|Operando di esempio: AA:000 (modello di *eventuali* due caratteri seguiti da due punti (:), seguiti dal *qualsiasi* tre cifre.<br /><br /> Valori validi: AB:012, df:257<br /><br /> Valori non validi: abc:123, FJ-369<br /><br /> Per ulteriori informazioni sulle regole basate su un modello in DQS e gli esempi, vedere [Ricerche nelle regole di dominio DQS](https://blogs.msdn.com/b/dqs/archive/2012/10/08/pattern-matching-in-dqs-domain-rules.aspx).|  
 |Il valore non corrisponde al modello|Solo i valori che non corrispondono al modello di caratteri, cifre o caratteri speciali dell'operando saranno validi.|Operando di esempio: A1 (valore non deve corrispondere un motivo *eventuali* un carattere seguito da *qualsiasi* una cifra.)<br /><br /> Valori validi: AB1, A, A:5<br /><br /> Valori non validi: B7, c9|  
-|Il valore contiene il modello|Solo i valori che contengono il modello di caratteri, cifre o caratteri speciali dell'operando saranno validi.|Operando di esempio: AA-12 (il valore contiene un modello di *eventuali* due caratteri seguiti da un trattino (-), seguito da *qualsiasi* due cifre.)<br /><br /> Valori validi: AAA-01, ab-975<br /><br /> Valore non valido: A7, AA-6, C-45, aa; 98|  
-|Il valore non contiene il modello|Solo i valori che non contengono il modello di caratteri dell'operando saranno validi.|Operando di esempio: AB-12 (valore non deve contenere un modello del *eventuali* due caratteri seguiti da un trattino (-), seguito da *qualsiasi* due cifre.)<br /><br /> Valori validi: A7, AA-6, C-45, aa; 98<br /><br /> Valore non valido: AAA-01, ab-975|  
+|Il valore contiene il modello|Solo i valori che contengono il modello di caratteri, cifre o caratteri speciali dell'operando saranno validi.|Operando di esempio: AA-12 (il valore contiene un modello di *eventuali* due caratteri seguiti da un trattino (-), seguito da *qualsiasi* due cifre.)<br /><br /> Valori validi: AAA-01, ab-975<br /><br /> Valore non valido: A7, AA-6, C-45, aa;98|  
+|Il valore non contiene il modello|Solo i valori che non contengono il modello di caratteri dell'operando saranno validi.|Operando di esempio: AB-12 (valore non deve contenere un modello del *eventuali* due caratteri seguiti da un trattino (-), seguito da *qualsiasi* due cifre.)<br /><br /> Valori validi: A7, AA-6, C-45, aa;98<br /><br /> Valore non valido: AAA-01, ab-975|  
 |Valore corrispondente a un'espressione regolare|Solo i valori uguali all'espressione regolare dell'operando saranno considerati validi.<br /><br /> Non includere l'ancoraggio "^" o l'ancoraggio "$" nell'espressione regolare perché in DQS tali ancoraggi vengono aggiunti automaticamente a una clausola che contiene la condizione Il valore è uguale all'espressione regolare. In alternativa, è possibile includere l'espressione regolare contenente gli ancoraggi "^" e "$" tra parentesi. Per ulteriori informazioni sulle espressioni regolari, vedere [Elementi del linguaggio di espressioni regolari](https://go.microsoft.com/fwlink/?LinkId=225561).|Operando di esempio: [1-5] + (ogni carattere deve essere una cifra numerica compresa tra 1 e 5, ripetuta una o più volte)<br /><br /> Valori validi: 123, 12345, 14352<br /><br /> Valori non validi: 456, ABC|  
 |Valore non corrispondente a un'espressione regolare|Solo i valori che non corrispondono all'espressione regolare dell'operando saranno considerati validi.|Operando di esempio: [1-5] + (la stringa non deve essere costituita solo da cifre numeriche comprese tra 1 e 5)<br /><br /> Valori validi: 456, ABC<br /><br /> Valore non valido: 123, 123456, 14352|  
   

@@ -18,13 +18,13 @@ helpviewer_keywords:
 ms.assetid: 9e1ee42d-b388-4929-89c7-8741b956c3be
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: b40693cd426779f7878c1101fb57efa12ce4e6de
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: b6413a1cf3e25575078c2f126439cc03ca95a933
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48057261"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56023892"
 ---
 # <a name="setservicestate-method-wmi-msreportserverconfigurationsetting"></a>Metodo SetServiceState (MSReportServer_ConfigurationSetting WMI)
   Attiva e disattiva i servizi Windows ReportServer e Web ReportServer.  
@@ -44,13 +44,13 @@ public void SetSecureConnectionLevel(Boolean EnableWindowsService,
   
 ## <a name="parameters"></a>Parametri  
  *EnableWindowsService*  
- Oggetto `Boolean` valore che indica lo stato del servizio Windows. Un valore di `true` avvio di Windows Server di Report del servizio; un valore di `false` Arresta il servizio di Windows.  
+ Valore `Boolean` che indica lo stato del servizio Windows. Un valore `true` avvia il servizio Windows ReportServer; un valore `false` arresta il servizio Windows.  
   
  *EnableWebService*  
  Valore `Boolean` che indica lo stato del servizio Web [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. Un valore `true` avvia il servizio Web ReportServer; un valore `false` arresta il servizio Web.  
   
  *EnableReportManager*  
- Oggetto `Boolean` valore che indica lo stato desiderato di gestione Report.  
+ Valore `Boolean` che indica lo stato desiderato per Gestione report.  
   
  *HRESULT*  
  [out] Valore che indica se la chiamata ha avuto esito positivo o negativo.  

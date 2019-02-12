@@ -18,13 +18,13 @@ helpviewer_keywords:
 ms.assetid: 55c6c8b6-dfad-499f-befa-042c1caba17f
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 8144e84f386255c8d04cccee94913a7c184b6a9e
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 2e83bf191eb16fa2e96782f4781bbd142bc04ee7
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48158991"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56033732"
 ---
 # <a name="instanceid-property-wmi-msreportserverinstance"></a>Proprietà InstanceID (MSReportServer_Instance WMI)
   Questo oggetto supporta l'infrastruttura di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] e non può essere utilizzato direttamente dal codice.  

@@ -11,14 +11,14 @@ f1_keywords:
 - "10023"
 ms.assetid: 3a0672ad-c969-455b-b952-585164ce1dda
 author: maggiesmsft
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: bb8ac0237fc9175f29471a66b7e3916122b55707
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.author: maghan
+manager: kfile
+ms.openlocfilehash: 207aa0b0657670d93dbdfc92b80a0c3d3285de7d
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48082287"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56030202"
 ---
 # <a name="dataset-properties-dialog-box-parameters-report-builder"></a>Finestra di dialogo Proprietà set di dati, Parametri (Generatore report)
   Selezionare **parametri** nel **proprietà set di dati** finestra di dialogo per aggiungere, modificare ed eliminare parametri di query.  
@@ -80,7 +80,7 @@ ms.locfileid: "48082287"
  [Guida di Generatore report per finestre di dialogo, riquadri e procedure guidate](../../2014/reporting-services/report-builder-help-for-dialog-boxes-panes-and-wizards.md)   
  [Finestra di dialogo Proprietà set di dati, la Query &#40;Generatore Report&#41;](report-data/dataset-properties-dialog-box-query-report-builder.md)   
  [Espressioni &#40;Generatore report e SSRS&#41;](report-design/expressions-report-builder-and-ssrs.md)   
- [Esercitazione: Aggiungere un parametro al report &#40;Generatore report&#41;](tutorial-add-a-parameter-to-your-report-report-builder.md)   
+ [Esercitazione: Aggiungere un parametro al Report &#40;Generatore Report&#41;](tutorial-add-a-parameter-to-your-report-report-builder.md)   
  [Parametri report &#40;Generatore report e Progettazione report&#41;](report-design/report-parameters-report-builder-and-report-designer.md)   
  [Set di dati condivisi e incorporati del report &#40;Generatore report e SSRS&#41;](report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)   
  [Finestre di progettazione query &#40;Generatore report&#41;](../../2014/reporting-services/query-designers-report-builder.md)   

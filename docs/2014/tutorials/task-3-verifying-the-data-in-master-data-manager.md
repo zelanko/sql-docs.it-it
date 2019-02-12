@@ -1,24 +1,21 @@
 ---
-title: 'Attività 3: Verifica dei dati in Gestione dati Master | Microsoft Docs'
+title: 'Attività 3: Verifica per determinare se i dati in Gestione dati Master | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- data-quality-services
-- integration-services
-- master-data-services
+ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: d88953d2-2258-40ac-b3bf-2ef502f9b5fd
-author: douglaslms
-ms.author: douglasl
+author: leolimsft
+ms.author: lle
 manager: craigg
-ms.openlocfilehash: 09dfc672e446e1265ee29625a8bf3a2d1e16f77f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 230c8bbeb2736a3f9810a65dd445013d22e41f03
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48108851"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56022922"
 ---
 # <a name="task-3-verifying-the-data-in-master-data-manager"></a>Attività 3: Verifica dei dati in Gestione dati master
   In questa attività è verificare che il **Supplier** entità viene creata sul **MDS** usando **applicazione Web gestione dati Master**.  
@@ -32,6 +29,6 @@ ms.locfileid: "48108851"
 3.  Esaminare i dati archiviati in MDS. Se non è possibile visualizzare i dati, verificare di aver selezionato **Suppliers** per il **Model** nella home page prima di avviare **Esplora**. È possibile aggiungere o eliminare dall'elenco di fornitori utilizzando **Add Member** e **Elimina membro** pulsanti sulla barra degli strumenti.  
   
 ## <a name="next-step"></a>Passaggio successivo  
- [Attività 4 &#40;facoltativo&#41;: la combinazione, corrispondenza e pubblicazione di un nuovo Set di dati](../../2014/tutorials/task-4-optional-combining-matching-and-publishing-new-set-of-data.md)  
+ [Attività 4 &#40;facoltativo&#41;: Combinazione, corrispondenza e pubblicazione di un nuovo Set di dati](../../2014/tutorials/task-4-optional-combining-matching-and-publishing-new-set-of-data.md)  
   
   

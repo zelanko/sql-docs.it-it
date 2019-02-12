@@ -12,25 +12,25 @@ f1_keywords:
 ms.assetid: b0599e01-6dc3-4484-80d4-022a412e0ebd
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 13a64b2cd44f5df1dfe8201b56c351937849364a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 089bd1fbfeaf86c2f5a96e2cfcf790a90431a452
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48141541"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56036532"
 ---
 # <a name="delete-catalog-items-management-studio"></a>Elimina elementi catalogo (Management Studio)
   Questa pagina consente di eliminare pianificazioni condivise e definizioni di ruolo.  
   
- Se si elimina una pianificazione condivisa utilizzata da più report e sottoscrizioni, nel server di report vengono create singole pianificazioni per ogni report e sottoscrizione da cui è stata utilizzata in precedenza la pianificazione condivisa. Ogni nuova pianificazione conterrà la data, l'ora e il criterio di occorrenza specificati nella pianificazione condivisa. Si noti che in [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] non è disponibile una funzionalità di gestione centrale delle singole pianificazioni. Se si elimina una pianificazione condivisa, è necessario gestire le informazioni sulla pianificazione per ogni singolo elemento. Prima di eliminare una pianificazione condivisa, utilizzare il [pagina Reports](schedule-properties-reports-page.md) per verificare i report che attualmente utilizzano la pianificazione condivisa.  
+ Se si elimina una pianificazione condivisa utilizzata da più report e sottoscrizioni, nel server di report vengono create singole pianificazioni per ogni report e sottoscrizione da cui è stata utilizzata in precedenza la pianificazione condivisa. Ogni nuova pianificazione conterrà la data, l'ora e il criterio di occorrenza specificati nella pianificazione condivisa. Si noti che in [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] non è disponibile una funzionalità di gestione centrale delle singole pianificazioni. Se si elimina una pianificazione condivisa, è necessario gestire le informazioni sulla pianificazione per ogni singolo elemento. Prima di eliminare una pianificazione condivisa, utilizzare la pagina [Report](schedule-properties-reports-page.md) per verificare i report da cui attualmente viene utilizzata la pianificazione.  
   
  Per le definizioni di ruolo, è possibile eliminare solo le definizioni non attivamente utilizzate in un'assegnazione di ruolo. Se si tenta di eliminare un ruolo attualmente in uso, tale ruolo non viene eliminato dal server di report e viene visualizzato un messaggio di errore. Se la pagina contiene una singola definizione di ruolo non attualmente in uso, la definizione viene eliminata quando si fa clic su **OK**. Se la pagina contiene più ruoli, non è possibile selezionare i ruoli da conservare o da rimuovere. Facendo clic su **OK**vengono eliminate tutte le definizioni di ruolo non utilizzate.  
   
  Non è possibile annullare un'operazione di eliminazione. Se si desidera recuperare un elemento eliminato, è necessario ricrearlo o ripristinare una copia di backup del database del server di report.  
   
 ## <a name="options"></a>Opzioni  
- **Nome**  
+ **Name**  
  Indica il nome dell'elemento che si sta eliminando.  
   
  **Tipo**  
@@ -48,6 +48,6 @@ ms.locfileid: "48141541"
 ## <a name="see-also"></a>Vedere anche  
  [Eliminare un elemento &#40;Management Studio&#41;](delete-an-item-management-studio.md)   
  [Guida sensibile al contesto del server di report in Management Studio](report-server-in-management-studio-f1-help.md)   
- [Creare, modificare ed eliminare pianificazioni](../subscriptions/create-modify-and-delete-schedules.md)  
+ [Create, Modify, and Delete Schedules](../subscriptions/create-modify-and-delete-schedules.md)  
   
   

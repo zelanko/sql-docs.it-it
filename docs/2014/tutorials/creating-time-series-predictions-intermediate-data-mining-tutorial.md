@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: fb22cffa-ac99-4d34-ac4a-9c93068e33e8
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 109c4eb07dd34aa5ef3e41d794edfc39ffffcac8
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: ca1aa4022931c78f6139a8058c05adc707af5e77
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48119871"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56027992"
 ---
 # <a name="creating-time-series-predictions-intermediate-data-mining-tutorial"></a>Creazione di stime basate su serie temporali (Esercitazione intermedia sul data mining)
   Nelle attività precedenti di questa lezione è stato creato un modello Time Series e sono stati esplorati i risultati. Per impostazione predefinita, in [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] viene sempre creato un set di cinque (5) stime per un modello Time Series e i valori stimati vengono visualizzati come parte del grafico di previsione. È tuttavia possibile creare previsioni compilando query di stima DMX (Data Mining Extensions).  
@@ -88,41 +87,41 @@ ms.locfileid: "48119871"
   
 |$TIME|Amount|  
 |-----------|------------|  
-|7/25 o 2008|99978.00|  
-|8/25 o 2008|145575.07|  
-|9/25 o 2008|116835.19|  
-|10/25 o 2008|116537.38|  
-|11/25 o 2008|107760.55|  
+|7/25/2008|99978.00|  
+|8/25/2008|145575.07|  
+|9/25/2008|116835.19|  
+|10/25/2008|116537.38|  
+|11/25/2008|107760.55|  
   
  **M200 Europe PredictQuantity**  
   
 |$TIME|Quantity|  
 |-----------|--------------|  
-|7/25 o 2008|52|  
-|8/25 o 2008|67|  
-|9/25 o 2008|58|  
-|10/25 o 2008|57|  
-|11/25 o 2008|54|  
+|7/25/2008|52|  
+|8/25/2008|67|  
+|9/25/2008|58|  
+|10/25/2008|57|  
+|11/25/2008|54|  
   
  **M200 North America - PredictAmount**  
   
 |$TIME|Amount|  
 |-----------|------------|  
-|7/25 o 2008|348533.93|  
-|8/25 o 2008|340097.98|  
-|9/25 o 2008|257986.19|  
-|10/25 o 2008|374658.24|  
-|11/25 o 2008|379241.44|  
+|7/25/2008|348533.93|  
+|8/25/2008|340097.98|  
+|9/25/2008|257986.19|  
+|10/25/2008|374658.24|  
+|11/25/2008|379241.44|  
   
  **M200 North America - PredictQuantity**  
   
 |$TIME|Quantity|  
 |-----------|--------------|  
-|7/25 o 2008|272|  
-|8/25 o 2008|152|  
-|9/25 o 2008|250|  
-|10/25 o 2008|181|  
-|11/25 o 2008|290|  
+|7/25/2008|272|  
+|8/25/2008|152|  
+|9/25/2008|250|  
+|10/25/2008|181|  
+|11/25/2008|290|  
   
 > [!WARNING]  
 >  Le date utilizzate nel database di esempio sono state modificate per questa versione. Se si utilizza una versione precedente dei dati di esempio, è possibile che vengano visualizzati risultati diversi.  
@@ -178,7 +177,7 @@ ms.locfileid: "48119871"
     > [!NOTE]  
     >  Per visualizzare la tabella creata, creare una connessione al motore di database dell'istanza in cui sono stati salvati i dati, quindi creare una query.  
   
-## <a name="conclusion"></a>Conclusioni  
+## <a name="conclusion"></a>Conclusione  
  Si è appreso come compilare un modello Time Series di base, interpretare le previsioni e creare stime.  
   
  Le attività restanti in questa esercitazione sono facoltative e descrivono stime avanzate basate su serie temporali. Se si decide di procedere, verrà illustrata la procedura per aggiungere nuovi dati al modello e creare stime nella serie estesa. Verrà inoltre illustrata la procedura per eseguire una stima incrociata, tramite la tendenza nel modello ma sostituendo i dati con una nuova serie di dati.  

@@ -12,13 +12,13 @@ helpviewer_keywords:
 ms.assetid: fe5ac055-26e3-4c3d-843c-c12eb7e6e4db
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: c105177a9957bfe6f8d4492796e98824e9f2f8f4
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: e5023fbfcf7ebdd9e5a012fafb128aac25424ddb
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48063791"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56016653"
 ---
 # <a name="virtualdirectoryreportmanager-property-wmi-msreportserverconfigurationsetting"></a>Proprietà VirtualDirectoryReportManager (MSReportServer_ConfigurationSetting WMI)
   Restituisce la directory virtuale per Gestione report. Di sola lettura.  

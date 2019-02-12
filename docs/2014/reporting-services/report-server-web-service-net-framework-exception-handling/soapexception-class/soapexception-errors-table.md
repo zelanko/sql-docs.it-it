@@ -13,13 +13,13 @@ helpviewer_keywords:
 ms.assetid: 3dbf1b5a-bd2a-4385-925d-5d095d72014c
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 7a9068f74f2c059dd4208e9b5b7228705a522ff5
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: b2bd827eb6c1ff4abf5e531d54bbdde66b44249c
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48168207"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56027242"
 ---
 # <a name="soapexception-errors-table"></a>Tabella degli errori SoapException
   Il server di report genera errori e messaggi di errore nell'eccezione SOAP in base agli errori che si verificano in [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]. Nella tabella seguente sono illustrati gli errori a cui è possibile accedere dai metodi tramite un oggetto **SoapException** nel servizio Web ReportServer. La tabella è organizzata in base al metodo o ai metodi che generano l'eccezione.  

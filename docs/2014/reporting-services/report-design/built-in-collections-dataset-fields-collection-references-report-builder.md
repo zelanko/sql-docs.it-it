@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 006c6bd3-d776-4c20-9092-32e40688ac49
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: f6ea6edf61734e794cc588c82aefa4e60141365c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 906cda310ff4478854d2b308332571fa6dbdd155
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48093309"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56037161"
 ---
 # <a name="dataset-fields-collection-references-report-builder-and-ssrs"></a>Riferimenti alla raccolta di campi del set di dati (Generatore report e SSRS)
   In ogni set di dati di un report è contenuta una raccolta Campi. La raccolta Campi rappresenta il set di campi specificati dalla query del set di dati, più qualsiasi campo calcolato aggiuntivo creato dall'utente. Dopo la creazione di un set di dati, la raccolta di campi viene visualizzata nel riquadro **Dati report** .  
@@ -41,7 +41,7 @@ ms.locfileid: "48093309"
  `=IIF(IsNothing(Fields!MiddleName.Value),"No Middle Name",Fields!MiddleName.Value)`  
   
 ### <a name="detecting-missing-fields-for-dynamic-queries-at-run-time"></a>Rilevamento di campi mancanti per query dinamiche in fase di esecuzione  
- Per impostazione predefinita, agli elementi della raccolta Campi sono associate due proprietà: Value e IsMissing. La proprietà IsMissing indica se un campo definito per un set di dati in fase di progettazione è incluso nei campi recuperati in fase di runtime. La query può ad esempio chiamare una stored procedure in cui il set di risultati varia in base a un parametro di input oppure la query può essere `SELECT * FROM` *\<table>*, in cui la definizione della tabella è stata modificata.  
+ Per impostazione predefinita, gli elementi nella raccolta di campi hanno due proprietà: Value e IsMissing. La proprietà IsMissing indica se un campo definito per un set di dati in fase di progettazione è incluso nei campi recuperati in fase di runtime. La query può ad esempio chiamare una stored procedure in cui il set di risultati varia in base a un parametro di input oppure la query può essere `SELECT * FROM` *\<table>*, in cui la definizione della tabella è stata modificata.  
   
 > [!NOTE]  
 >  IsMissing consente di rilevare le modifiche nello schema del set di dati tra la fase di progettazione e quella di runtime per qualsiasi tipo di origine dati. IsMissing non può essere usata per rilevare membri vuoti in un cubo multidimensionale e non è correlata ai concetti di linguaggio di query MDX di `EMPTY` e `NON EMPTY`.  
@@ -89,7 +89,7 @@ End Function
 ### <a name="using-extended-field-properties"></a>Utilizzo delle proprietà di campo estese  
  Le proprietà di campo estese sono proprietà aggiuntive definite in un campo dall'estensione per l'elaborazione dati determinata dal tipo di origine dati per il set di dati. Tali proprietà sono predefinite o specifiche per un tipo di origine dati. Per altre informazioni, vedere [Proprietà di campo estese per un database di Analysis Services &#40;SSRS&#41;](../report-data/extended-field-properties-for-an-analysis-services-database-ssrs.md).  
   
- Se si specifica una proprietà che non è supportata per il campo, l'espressione restituisce `null` (`Nothing` in [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]). Se un provider di dati non supporta le proprietà di campo estese o se il campo non viene trovato quando la query viene eseguita, il valore della proprietà è `null` (`Nothing` nelle [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]) per le proprietà di tipo `String` e `Object`, e zero (0) per le proprietà di tipo `Integer`. Un'estensione per l'elaborazione dati può sfruttare le proprietà predefinite ottimizzando le query che includono tale sintassi.  
+ Se si specifica una proprietà non supportata per un campo specifico, tale espressione restituirà `null` (`Nothing` in [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]). Se un provider di dati non supporta le proprietà di campo estese o se il campo non viene trovato durante l'esecuzione della query, il valore della proprietà è `null` (`Nothing` in [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]) per le proprietà di tipo `String` e `Object` e zero (0) per le proprietà di tipo `Integer`. Un'estensione per l'elaborazione dati può sfruttare le proprietà predefinite ottimizzando le query che includono tale sintassi.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Esempi di espressioni &#40;Generatore report e SSRS&#41;](expression-examples-report-builder-and-ssrs.md)   

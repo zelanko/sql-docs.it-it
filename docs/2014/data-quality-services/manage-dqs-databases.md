@@ -7,21 +7,21 @@ ms.reviewer: ''
 ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: 655a67aa-d662-42f2-b982-c6217125ada8
-author: douglaslMS
-ms.author: douglasl
+author: leolimsft
+ms.author: lle
 manager: craigg
-ms.openlocfilehash: 6dda82b297b04f21fe1b4d2b7255c65b5b8a4aef
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: bd5a24a76963532c7fa70100bfccc171ba3c90ff
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53366233"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56023802"
 ---
 # <a name="manage-dqs-databases"></a>Manage DQS Databases
   In questa sezione vengono fornite le informazioni sulle attività di gestione di database che possono essere eseguite nei database DQS, ad esempio il backup e il ripristino oppure il collegamento o lo scollegamento.  
   
 ##  <a name="BackupRestore"></a> Backup e ripristino dei database DQS  
- Le operazioni di backup e di ripristino dei database di SQL Server sono operazioni comuni che gli amministratori di database eseguono per impedire la perdita di dati in caso di emergenza recuperando i dati dai database di backup. [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)] viene implementato principalmente con due database di SQL Server: Database DQS_MAIN e DQS_PROJECTS. Le procedure di backup e ripristino dei database di [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) sono simili a quelle degli altri database di SQL Server. Esistono tuttavia tre problemi associati al backup e al ripristino dei database DQS:  
+ Le operazioni di backup e di ripristino dei database di SQL Server sono operazioni comuni che gli amministratori di database eseguono per impedire la perdita di dati in caso di emergenza recuperando i dati dai database di backup. [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)] viene implementato principalmente con due database di SQL Server: DQS_MAIN e DQS_PROJECTS. Le procedure di backup e ripristino dei database di [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) sono simili a quelle degli altri database di SQL Server. Esistono tuttavia tre problemi associati al backup e al ripristino dei database DQS:  
   
 -   Le operazioni di backup e di ripristino dei database di DQS devono essere sincronizzate. In caso contrario, la versione ripristinata del [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)] non funzionerà.  
   

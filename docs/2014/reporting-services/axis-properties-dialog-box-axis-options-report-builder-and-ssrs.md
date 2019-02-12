@@ -12,17 +12,17 @@ f1_keywords:
 - "10138"
 ms.assetid: b276e210-7a12-48ae-971b-7dabae51df11
 author: maggiesmsft
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: c2911f9ac2da57e284bd6841df7b4b1ec5b2b105
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.author: maghan
+manager: kfile
+ms.openlocfilehash: 690f092b98a76ddd9ccc18d15f4250e7e856efa0
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48144181"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56030651"
 ---
 # <a name="axis-properties-dialog-box-axis-options-report-builder-and-ssrs"></a>Finestra di dialogo Proprietà asse, Opzioni asse (Generatore report e SSRS)
-  Selezionare **opzioni dell'asse** nel **orizzontale** oppure **proprietà asse verticale** finestra di dialogo per definire l'aspetto dell'asse specificato del grafico. Nelle versioni precedenti di [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] il grafico visualizzava tutte le etichette sull'asse x per impostazione predefinita. In [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 2008, tuttavia, il grafico ignora le etichette allo scopo di produrre un'immagine più pulita sul grafico ed evitare la sovrapposizione delle etichette. Per altre informazioni, vedere [Formattazione delle etichette degli assi in un grafico &#40;Generatore report e SSRS&#41;](report-design/formatting-axis-labels-on-a-chart-report-builder-and-ssrs.md).  
+  Selezionare **opzioni dell'asse** nel **orizzontale** oppure **proprietà asse verticale** finestra di dialogo per definire l'aspetto dell'asse specificato del grafico. Nelle versioni precedenti di [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]il grafico visualizzava tutte le etichette sull'asse x per impostazione predefinita. In [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 2008, tuttavia, il grafico ignora le etichette allo scopo di produrre un'immagine più pulita sul grafico ed evitare la sovrapposizione delle etichette. Per altre informazioni, vedere [Formattazione delle etichette degli assi in un grafico &#40;Generatore report e SSRS&#41;](report-design/formatting-axis-labels-on-a-chart-report-builder-and-ssrs.md).  
   
 ## <a name="options"></a>Opzioni  
  **Abilita cambi di scala**  
@@ -51,7 +51,7 @@ ms.locfileid: "48144181"
  **Massimo**  
  Digitare un'espressione o un valore per il valore massimo dell'asse X. Se omesso, il valore massimo viene determinato in base ai dati restituiti dal set di dati.  
   
- **Intervallo**  
+ **Interval**  
  Digitare un'espressione o un valore per l'intervallo tra le etichette degli assi. Digitare, ad esempio, 1 per visualizzare ogni etichetta di categoria sull'asse. Digitare 2 per visualizzare tutte le altre etichette di categoria. Se questo valore viene omesso, le etichette vengono calcolate automaticamente in base ai valori del set di dati.  
   
  **Tipo di intervallo**  
@@ -68,6 +68,6 @@ ms.locfileid: "48144181"
  [Formattazione delle etichette degli assi come date o valute &#40;Generatore report e SSRSSSRS&#41;](report-design/format-axis-labels-as-dates-or-currencies-report-builder-and-ssrs.md)   
  [Tracciare i dati su un asse secondario &#40;Report e SSRS&#41;](report-design/plot-data-on-a-secondary-axis-report-builder-and-ssrs.md)   
  [Grafici sparkline e barre dei dati &#40;Generatore report e SSRS&#41;](report-design/sparklines-and-data-bars-report-builder-and-ssrs.md)   
- [Aggiungere o rimuovere i margini da un grafico &#40;Report e SSRS&#41;](report-design/add-or-remove-margins-from-a-chart-report-builder-and-ssrs.md)  
+ [Aggiungere o rimuovere i margini da un grafico &#40;Generatore report e SSRS&#41;](report-design/add-or-remove-margins-from-a-chart-report-builder-and-ssrs.md)  
   
   

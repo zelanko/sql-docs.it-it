@@ -12,20 +12,20 @@ f1_keywords:
 - "10184"
 ms.assetid: db718f8f-f185-422f-871c-96f0749e5893
 author: maggiesmsft
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: 4b939fe20f4bcd280c00dc6279ebb1c8ba3a1f45
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.author: maghan
+manager: kfile
+ms.openlocfilehash: c6a9c5445e5ed0371922a7c5aad929519ed4e0d5
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48082247"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56022782"
 ---
 # <a name="legend-properties-dialog-box-general-report-builder-and-ssrs"></a>Finestra di dialogo Proprietà legenda, Generale (Generatore report e SSRS)
   La finestra di dialogo **Legenda** consente di definire l'aspetto e il layout della legenda nel grafico. Per altre informazioni, vedere [formattazione della legenda in un grafico &#40;Generatore Report e SSRS&#41;](report-design/chart-legend-formatting-report-builder.md).  
   
 ## <a name="options"></a>Opzioni  
- **Nome**  
+ **Name**  
  Digitare un nome per la legenda.  
   
  **Layout**  
@@ -50,11 +50,11 @@ ms.locfileid: "48082247"
 ## <a name="see-also"></a>Vedere anche  
  [Grafici &#40;Generatore report e SSRS&#41;](report-design/charts-report-builder-and-ssrs.md)   
  [Formattazione dei colori delle serie in un grafico &#40;Generatore report e SSRS&#41;](report-design/formatting-series-colors-on-a-chart-report-builder-and-ssrs.md)   
- [Formattazione della legenda in un grafico &#40;Report e SSRS&#41;](report-design/chart-legend-formatting-report-builder.md)   
+ [Formattazione della legenda in un grafico &#40;Generatore report e SSRS&#41;](report-design/chart-legend-formatting-report-builder.md)   
  [Formattazione delle etichette degli assi in un grafico &#40;Generatore report e SSRS&#41;](report-design/formatting-axis-labels-on-a-chart-report-builder-and-ssrs.md)   
  [Definire i colori in un grafico mediante la tavolozza &#40;Generatore report e SSRS&#41;](report-design/define-colors-on-a-chart-using-a-palette-report-builder-and-ssrs.md)   
  [Tracciare i dati su un asse secondario &#40;Report e SSRS&#41;](report-design/plot-data-on-a-secondary-axis-report-builder-and-ssrs.md)   
- [Formattazione della legenda in un grafico &#40;Report e SSRS&#41;](report-design/chart-legend-formatting-report-builder.md)   
- [Aggiungere una media mobile a un grafico &#40;Report e SSRS&#41;](report-design/add-a-moving-average-to-a-chart-report-builder-and-ssrs.md)  
+ [Formattazione della legenda in un grafico &#40;Generatore report e SSRS&#41;](report-design/chart-legend-formatting-report-builder.md)   
+ [Aggiungere una media mobile a un grafico &#40;Generatore report e SSRS&#41;](report-design/add-a-moving-average-to-a-chart-report-builder-and-ssrs.md)  
   
   

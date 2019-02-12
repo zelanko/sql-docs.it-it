@@ -12,16 +12,16 @@ helpviewer_keywords:
 ms.assetid: 8b87bb59-6083-44cb-ab34-493855b41585
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: fb73ae268b088d27a96f7b24fbe8d0c7971b0c23
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 7892e0699c9815cdf16b3f40e553f95d38ac51df
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48210371"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56036612"
 ---
 # <a name="dock-the-report-data-pane-in-report-designer-ssrs"></a>Ancorare il riquadro dei dati del report in Progettazione report (SSRS)
-  In Progettazione Report di [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], nel riquadro dei dati del Report vengono visualizzati una visualizzazione gerarchica di oggetti dati che è possibile usare in un report, tra cui origini dati, set di dati, campi, parametri e immagini. Le origini dati presenti in questa vista possono essere incorporate o fare riferimento a origini dati condivise visualizzate in Esplora soluzioni.  
+  In [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] nel riquadro dei dati del report di Progettazione report viene visualizzata una vista gerarchica di oggetti dati che è possibile utilizzare in un report, ad esempio origini dati, set di dati, campi, parametri e immagini. Le origini dati presenti in questa vista possono essere incorporate o fare riferimento a origini dati condivise visualizzate in Esplora soluzioni.  
   
 ### <a name="to-display-the-report-data-pane"></a>Per visualizzare il riquadro Dati report  
   
@@ -44,7 +44,7 @@ ms.locfileid: "48210371"
      Per passare tra gli ultimi due stati visualizzati, fare doppio clic sulla barra del titolo del riquadro Dati report.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Riquadro dati report](../report-data/report-data-pane.md)   
+ [Riquadro Dati report](../report-data/report-data-pane.md)   
  [Connessioni dati, origini dati e stringhe di connessione in Reporting Services](../data-connections-data-sources-and-connection-strings-in-reporting-services.md)  
   
   

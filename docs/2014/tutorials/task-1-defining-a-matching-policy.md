@@ -4,21 +4,18 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- data-quality-services
-- integration-services
-- master-data-services
+ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: 6f89a720-fce5-4f60-bef3-a159bbc9f25c
-author: douglaslms
-ms.author: douglasl
+author: leolimsft
+ms.author: lle
 manager: craigg
-ms.openlocfilehash: 55739fd6cf7b6c395c2e7a66c3d80fad22607a83
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 85a6ca52573bec3d7e6c19e68f809048ed0786db
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52394194"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56033872"
 ---
 # <a name="task-1-defining-a-matching-policy"></a>Attività 1: Definizione di criteri di corrispondenza
   In questa attività vengono creati criteri di corrispondenza in cui è contenuta una regola. Alla regola è associato un prerequisito, **Supplier ID**, il che significa che gli ID dei fornitori devono corrispondere prima di usare gli altri domini nella regola. Nella regola vengono utilizzati altri due domini: **Nome fornitore** con **somiglianza** valore impostato su **70%** e **Contact Email** con **somiglianza** valore impostato su **30%**.  

@@ -1,24 +1,23 @@
 ---
-title: 'Lezione 3: Elaborazione della serie temporale di strutture e modelli | Microsoft Docs'
+title: 'Lezione 3: La serie temporale di elaborazione struttura e i modelli | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: 16e27b57-eae1-47a7-a02c-47b6ed487d87
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 605476076746aafe6336c82a8cd6c5b2a32b30c9
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 493d27c9836eb765c655eba5bbb004e4d48cde40
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48061661"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56026272"
 ---
-# <a name="lesson-3-processing-the-time-series-structure-and-models"></a>Lezione 3: Elaborazione di strutture e modelli Time Series
+# <a name="lesson-3-processing-the-time-series-structure-and-models"></a>Lezione 3: La serie temporale di elaborazione struttura e modelli
   In questa lezione si userà il [INSERT INTO &#40;DMX&#41; ](/sql/dmx/insert-into-dmx) istruzione per l'elaborazione della serie temporale, strutture e modelli creati di data mining.  
   
  Quando si elabora una struttura di data mining, [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] legge i dati di origine e compila le strutture che supportano i modelli di data mining. È sempre necessario elaborare i modelli e le strutture di data mining al momento della creazione. Se si specifica una struttura di data mining utilizzando INSERT INTO, l'istruzione elabora la struttura e tutti i modelli di data mining associati.  
@@ -123,7 +122,7 @@ OPENQUERY (<source data definition>)
     FROM vTimeSeries ORDER BY [ReportingDate]')  
     ```  
   
-     La query di origine fa riferimento il [!INCLUDE[ssSampleDBDWobject](../includes/sssampledbdwobject-md.md)] origine dati definita nel progetto di esempio IntermediateTutorial. Utilizza tale origine dati per accedere alla vista vTimeSeries contenente i dati di origine che verranno utilizzati per il training del modello di data mining. Se non ha familiarità con questo progetto o le viste, vedere[lezione 2: compilazione di uno Scenario di previsione &#40;esercitazione intermedia sul Data Mining dei dati&#41;](../../2014/tutorials/lesson-2-building-a-forecasting-scenario-intermediate-data-mining-tutorial.md).  
+     La query di origine fa riferimento il [!INCLUDE[ssSampleDBDWobject](../includes/sssampledbdwobject-md.md)] origine dati definita nel progetto di esempio IntermediateTutorial. Utilizza tale origine dati per accedere alla vista vTimeSeries contenente i dati di origine che verranno utilizzati per il training del modello di data mining. Se non ha familiarità con questo progetto o le viste, vedere[lezione 2: Creazione di uno Scenario di previsione &#40;esercitazione intermedia sul Data Mining&#41;](../../2014/tutorials/lesson-2-building-a-forecasting-scenario-intermediate-data-mining-tutorial.md).  
   
      L'istruzione completa dovrebbe risultare analoga alla seguente:  
   
@@ -147,11 +146,11 @@ OPENQUERY (<source data definition>)
  Al termine dell'esecuzione della query, è possibile creare stime utilizzando i modelli di data mining elaborati. Nella lezione successiva verranno create diverse stime basate sui modelli di data mining creati.  
   
 ## <a name="next-lesson"></a>Lezione successiva  
- [Lezione 4: Creazione di stime basate su serie temporali usando DMX](../../2014/tutorials/lesson-4-creating-time-series-predictions-using-dmx.md)  
+ [Lezione 4: Creazione di stime basate su serie temporali utilizzando DMX](../../2014/tutorials/lesson-4-creating-time-series-predictions-using-dmx.md)  
   
 ## <a name="see-also"></a>Vedere anche  
  [Requisiti e considerazioni sull'elaborazione &#40;Data Mining&#41;](../../2014/analysis-services/data-mining/processing-requirements-and-considerations-data-mining.md)   
  [&#60;query sull'origine dati&#62;](/sql/dmx/source-data-query)   
- [LA FUNZIONE OPENQUERY &AMP;#40;DMX&AMP;#41;](/sql/dmx/source-data-query-openquery)  
+ [OPENQUERY &#40;DMX&#41;](/sql/dmx/source-data-query-openquery)  
   
   

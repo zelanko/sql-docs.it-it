@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 7168c8d3-cef5-4c4a-a0bf-fff1ac5b8b71
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: e12227fa9390b733ad28ec02a5b31c13a4204c26
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+manager: kfile
+ms.openlocfilehash: 1177dfb7260959940eb89a31dde740e290ab73f8
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52512548"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56023753"
 ---
 # <a name="tutorial-creating-drillthrough-and-main-reports-report-builder"></a>Esercitazione: Creazione di report drill-through e report principali (Generatore report)
   In questa esercitazione verrà illustrato come creare due tipi di report: un report drill-through e un report principale. I dati di vendita di esempio utilizzati in questi report vengono recuperati da un cubo di Analysis Services. Nell'illustrazione seguente vengono mostrati i report creati.  
@@ -239,7 +239,7 @@ ms.locfileid: "52512548"
   
 6.  Scegliere **Avanti**.  
   
-##  <a name="DTotals"></a> 1 giorno. Aggiungere subtotali e totali  
+##  <a name="DTotals"></a> 1d. Aggiungere subtotali e totali  
  Dopo avere creato i gruppi, è possibile aggiungere e formattare delle righe nelle quali visualizzare i valori di aggregazione per i campi. È anche possibile scegliere se mostrare tutti i dati o lasciare che sia l'utente a espandere e comprimere in modo interattivo i dati raggruppati.  
   
 #### <a name="to-add-subtotals-and-totals"></a>Per aggiungere subtotali e totali  
@@ -250,7 +250,7 @@ ms.locfileid: "52512548"
   
 2.  Scegliere **Avanti**.  
   
-##  <a name="DStyle"></a> 1E. Scegliere uno stile  
+##  <a name="DStyle"></a> 1e. Scegliere uno stile  
  Uno stile specifica lo stile del carattere, il set di colori e uno stile del bordo.  
   
 #### <a name="to-specify-a-style"></a>Per specificare uno stile  
@@ -555,7 +555,7 @@ ms.locfileid: "52512548"
   
      I passaggi 3 e 4 consentono di specificare i dati da visualizzare nella matrice.  
   
-##  <a name="MTotals"></a> 1 giorno. Aggiungere subtotali e totali  
+##  <a name="MTotals"></a> 1d. Aggiungere subtotali e totali  
  Nei report è possibile mostrare subtotali e totali complessivi. I dati nei report principali sono visualizzati come un indicatore; il totale complessivo verrà rimosso dopo avere completato la procedura guidata.  
   
 #### <a name="to-add-subtotals-and-grand-totals"></a>Per aggiungere subtotali e totali complessivi  
@@ -566,7 +566,7 @@ ms.locfileid: "52512548"
   
 2.  Scegliere **Avanti**.  
   
-##  <a name="MStyle"></a> 1E. Scegliere uno stile  
+##  <a name="MStyle"></a> 1e. Scegliere uno stile  
  Applicare lo stile Ardesia al report. Si tratta dello stesso stile che utilizza il report drill-through.  
   
 #### <a name="to-specify-a-style"></a>Per specificare uno stile  

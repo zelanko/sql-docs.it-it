@@ -1,5 +1,5 @@
 ---
-title: 'Esercitazione: Aggiungere un grafico a torta al report (Generatore report) | Microsoft Docs'
+title: 'Esercitazione: Aggiungere un istogramma al Report (Generatore Report) | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
@@ -10,15 +10,15 @@ ms.topic: conceptual
 ms.assetid: 63480059-b7b9-44b5-9d7f-91780db708b6
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: ee60121e4356b8b54a943ab7373fafd504e5778f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 24c8e48ef26d3db2bc7662a36d40725c84b1bbc7
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48104132"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56026774"
 ---
-# <a name="tutorial-add-a-column-chart-to-your-report-report-builder"></a>Esercitazione: Aggiungere un istogramma al report (Generatore report)
+# <a name="tutorial-add-a-column-chart-to-your-report-report-builder"></a>Esercitazione: Aggiungere un istogramma al Report (Generatore Report)
   In un istogramma le serie vengono visualizzate come set di barre verticali raggruppate per categoria. Un istogramma può essere utile per:  
   
 -   Mostrare le modifiche apportate in un determinato periodo di tempo.  
@@ -53,7 +53,7 @@ ms.locfileid: "48104132"
 9. [Salvare il Report](#Save)  
   
 > [!NOTE]  
->  In questa esercitazione, i passaggi per la procedura guidata sono consolidati in un'unica procedura. Per istruzioni dettagliate su come selezionare un server di report, come scegliere un'origine dati e come creare un set di dati, vedere la prima esercitazione di questa serie: [Esercitazione: Creazione di un report tabella semplice &#40;Generatore report&#41;](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md).  
+>  In questa esercitazione, i passaggi per la procedura guidata sono consolidati in un'unica procedura. Per istruzioni dettagliate su come selezionare un server di report, scegliere un'origine dati e creare un set di dati, vedere la prima esercitazione di questa serie: [Esercitazione: Creazione di un Report tabella semplice &#40;Generatore Report&#41;](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md).  
   
  Tempo previsto per il completamento di questa esercitazione: 15 minuti.  
   
@@ -111,20 +111,20 @@ ms.locfileid: "48104132"
   
 8.  (Facoltativo) Fare clic sul pulsante Esegui (**!**) per visualizzare i dati sui quali verrà basato il grafico.  
   
-9. Fare clic su **Avanti**.  
+9. Scegliere **Avanti**.  
   
 ##  <a name="ChartType"></a> 2. Scegliere il tipo di grafico  
  È possibile scegliere tra diversi tipi di grafico predefiniti.  
   
 #### <a name="to-add-a-column-chart"></a>Per aggiungere un istogramma  
   
-1.  L'istogramma è il tipo di grafico predefinito nella pagina **Scegliere un tipo di grafico** . Fare clic su **Avanti**.  
+1.  L'istogramma è il tipo di grafico predefinito nella pagina **Scegliere un tipo di grafico** . Scegliere **Avanti**.  
   
 2.  Nella pagina **Disponi campi del grafico** trascinare il campo SalesDate in **Categorie**. Le categorie vengono visualizzate sull'asse orizzontale.  
   
 3.  Trascinare il campo Sales in **Valori**. Nella casella **Valori** viene visualizzato Sum(Sales) perché per ogni data viene aggregata la somma dei totali di vendita. I valori vengono visualizzati sull'asse verticale.  
   
-4.  Fare clic su **Avanti**.  
+4.  Scegliere **Avanti**.  
   
 5.  Nel **scegliere uno stile** pagina, nella casella di stili, selezionare uno stile.  
   
@@ -210,7 +210,7 @@ ms.locfileid: "48104132"
   
 1.  Passare alla visualizzazione di progettazione report.  
   
-2.  Selezionare le parole **titolo del grafico** nella parte superiore del grafico e quindi digitare il seguente testo: **totali ordini di vendita Store**.  
+2.  Selezionare le parole **titolo del grafico** nella parte superiore del grafico e quindi digitare il testo seguente: **Store totali ordini di vendita**.  
   
 3.  Fare clic su **Esegui** per visualizzare l'anteprima del report.  
   
@@ -237,7 +237,7 @@ ms.locfileid: "48104132"
   
 9. Fare doppio clic sul titolo dell'asse verticale lateralmente al grafico e fare clic su **proprietà titolo asse**.  
   
-10. Sostituire il testo di **testo titolo** campo con il testo seguente: **totale vendite (in migliaia)**. È anche possibile specificare diverse opzioni relative alla formattazione del titolo.  
+10. Sostituire il testo di **testo titolo** campo con il testo seguente: **Totale vendite (in migliaia)**. È anche possibile specificare diverse opzioni relative alla formattazione del titolo.  
   
 11. [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   

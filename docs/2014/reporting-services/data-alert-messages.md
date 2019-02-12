@@ -10,16 +10,16 @@ ms.topic: conceptual
 ms.assetid: 6819720c-d848-4b90-9b51-89501b4f4645
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: b987446144cf63651e056cf49a5791bacce705b6
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: e71c7e2c933afc0da1a09adbb26cc5e08bc9747f
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48085712"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56035632"
 ---
 # <a name="data-alert-messages"></a>Messaggi di avviso dati
-  [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] Gli avvisi dati di Reporting Services consentono di recapitare due tipi di messaggi di avviso dati tramite posta elettronica: messaggi con risultati degli avvisi dati e messaggi con descrizioni degli errori. I messaggi con i risultati consentono di tenere informati tutti i destinatari sulle modifiche ai dati dei report di interesse comune e importanti per le decisioni aziendali. Se per qualche motivo si verifica un errore e i risultati non sono disponibili, viene inviato il messaggio di errore.  
+  [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] gli avvisi dati di recapitare due tipi di messaggi di avviso dati tramite posta elettronica: Messaggi con risultati degli avvisi dati e i messaggi con descrizioni degli errori. I messaggi con i risultati consentono di tenere informati tutti i destinatari sulle modifiche ai dati dei report di interesse comune e importanti per le decisioni aziendali. Se per qualche motivo si verifica un errore e i risultati non sono disponibili, viene inviato il messaggio di errore.  
   
  Il proprietario della definizione di avviso dati può inoltre visualizzare le informazioni sull'istanza di avviso dati in Gestione avvisi dati. Per altre informazioni, vedere [Gestione avvisi dati per utenti di SharePoint](../../2014/reporting-services/data-alert-manager-for-sharepoint-users.md).  
   
@@ -64,7 +64,7 @@ ms.locfileid: "48085712"
 
   
 ## <a name="see-also"></a>Vedere anche  
- [Finestra di progettazione avviso dati](../../2014/reporting-services/data-alert-designer.md)   
+ [Finestra di progettazione Avviso dati](../../2014/reporting-services/data-alert-designer.md)   
  [Avvisi dati di Reporting Services](../ssms/agent/alerts.md)  
   
   

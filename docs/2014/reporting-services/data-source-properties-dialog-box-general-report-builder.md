@@ -11,14 +11,14 @@ f1_keywords:
 - "10018"
 ms.assetid: b956f43a-8426-4679-acc1-00f405d5ff5b
 author: maggiesmsft
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: 2568f22f30ffb722aa7438f9b83f35a7e39f1f5c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.author: maghan
+manager: kfile
+ms.openlocfilehash: e64f98f376e704716a40eedcda8351331280fb9e
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48138731"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56031852"
 ---
 # <a name="data-source-properties-dialog-box-general-report-builder"></a>Finestra di dialogo Proprietà origine dati, Generale (Generatore report)
   Selezionare **Generale** nella finestra di dialogo **Proprietà origine dati** per selezionare un'origine dati condivisa in un server di report o modificare le informazioni di connessione per un'origine dati incorporata nel report.  
@@ -41,7 +41,7 @@ ms.locfileid: "48138731"
  Se le credenziali specificate sono incomplete, ad esempio se è necessaria una password, in Generatore report vengono nuovamente richieste le credenziali della fase di progettazione quando è necessario connettersi all'origine dati. Le credenziali della fase di progettazione vengono archiviate e non vengono più richieste.  
   
 ## <a name="options"></a>Opzioni  
- **Nome**  
+ **Name**  
  Consente di digitare il nome dell'origine dati. Tale nome deve essere univoco all'interno del report. Per impostazione predefinita, all'origine dei dati viene assegnato un nome generico, ad esempio DataSource1 o DataSource2.  
   
  **Usa una connessione condivisa**  
@@ -67,7 +67,7 @@ ms.locfileid: "48138731"
 ## <a name="see-also"></a>Vedere anche  
  [Aggiungere dati a un Report &#40;Report e SSRS&#41;](report-data/report-datasets-ssrs.md)   
  [Aggiungere e verificare una connessione dati o un'origine dati &#40;Report e SSRS&#41;](report-data/add-and-verify-a-data-connection-report-builder-and-ssrs.md)   
- [Connessioni dati, origini dati e stringhe di connessione in Generatore Report](../../2014/reporting-services/data-connections-data-sources-and-connection-strings-in-report-builder.md)   
+ [Connessioni dati, origini dati e stringhe di connessione in Generatore report](../../2014/reporting-services/data-connections-data-sources-and-connection-strings-in-report-builder.md)   
  [Finestra di dialogo proprietà, le credenziali dell'origine dati &#40;Generatore Report&#41;](../../2014/reporting-services/data-source-properties-dialog-box-credentials-report-builder.md)   
  [Guida di Generatore report per finestre di dialogo, riquadri e procedure guidate](../../2014/reporting-services/report-builder-help-for-dialog-boxes-panes-and-wizards.md)  
   

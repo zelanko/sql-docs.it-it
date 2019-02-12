@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: 6b46db51-7c30-467d-a251-50f50647fe21
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: b18501020d1764399315202d2c7efe9a31549172
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 5567ee441075f015a7d6418761b30d29c591698f
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48167221"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56035132"
 ---
 # <a name="predefined-roles"></a>Predefined Roles
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] viene installato con ruoli predefiniti che è possibile utilizzare per concedere l'accesso alle operazioni del server di report. Ogni ruolo predefinito definisce una raccolta di attività correlate. È possibile assegnare account utente e di gruppo ai ruoli predefiniti per fornire accesso immediato alle operazioni del server di report.  
@@ -31,7 +31,7 @@ ms.locfileid: "48167221"
   
 2.  Individuare gli utenti e i gruppi che devono accedere al server di report e il livello di autorizzazioni richiesto. La maggior parte degli utenti dovrebbe essere assegnata al ruolo **Visualizzazione** o al ruolo **Generatore report** . Il ruolo **Server di pubblicazione** dovrebbe essere utilizzato per un numero più limitato di utenti. Il ruolo **Gestione contenuto**dovrebbe essere assegnato a pochissimi utenti.  
   
-3.  Quando si è pronti ad assegnare account utente e di gruppo a specifici ruoli, utilizzare Gestione report. Per altre informazioni, vedere [Concedere l'accesso utente a un server di report &#40;Gestione report&#41;](grant-user-access-to-a-report-server.md).  
+3.  Quando si è pronti ad assegnare account utente e di gruppo a specifici ruoli, utilizzare Gestione report. Per altre informazioni, vedere [Concedere l'accesso utente a un server di report &#40;Gestione report&#41;](grant-user-access-to-a-report-server.md)dovrebbe essere assegnato a pochissimi utenti.  
   
 ##  <a name="bkmk_rolelist"></a> Definizioni di ruolo predefinite  
  I ruoli predefiniti sono determinati dalle attività che supportano. È possibile modificare questi ruoli o sostituirli con altri ruoli personalizzati.  
@@ -40,7 +40,7 @@ ms.locfileid: "48167221"
   
  Nella tabella seguente sono descritti i ruoli predefiniti, l'ambito e la modalità di utilizzo.  
   
-|Ruolo predefinito|ambito|Description|  
+|Ruolo predefinito|ambito|Descrizione|  
 |---------------------|-----------|-----------------|  
 |[Ruolo Gestione contenuto](#bkmk_content)|Elemento|Include tutte le attività a livello di elemento. Gli utenti assegnati a questo ruolo dispongono dell'autorizzazione completa per gestire il contenuto del server di report, inclusa la possibilità di concedere autorizzazioni ad altri utenti e di definire la struttura della cartella per l'archiviazione di altri elementi.|  
 |[Ruolo Server di pubblicazione](#bkmk_publisher)|Elemento|Gli utenti assegnati a questo ruolo possono aggiungere elementi a un server di report, con la possibilità di creare e gestire le cartelle che contengono questi elementi.|  
@@ -58,7 +58,7 @@ ms.locfileid: "48167221"
 ### <a name="content-manager-tasks"></a>Attività del ruolo Gestione contenuto  
  Nella tabella seguente vengono elencate le attività incluse nel ruolo **Gestione contenuto** .  
   
-|Attività|Description|  
+|Attività|Descrizione|  
 |----------|-----------------|  
 |Utilizzo di report|Leggere le definizioni dei report.|  
 |Creazione di report collegati|Creare report collegati basati su un report non collegato.|  
@@ -70,7 +70,7 @@ ms.locfileid: "48167221"
 |Gestione della cronologia dei report|Creare, visualizzare ed eliminare la cronologia dei report, visualizzare le proprietà della cronologia dei report e visualizzare e modificare le impostazioni che determinano le limitazioni per la cronologia degli snapshot e le modalità di funzionamento della memorizzazione nella cache.|  
 |Gestione di report|Aggiungere ed eliminare report, modificare i parametri dei report, visualizzare e modificare le proprietà dei report, visualizzare e modificare le origini dei dati per il contenuto dei report, visualizzare e modificare le definizioni dei report e impostare i criteri di sicurezza a livello dei report.|  
 |Gestione di risorse|Creare, modificare ed eliminare risorse e visualizzarne e modificarne le proprietà.|  
-|Impostazione dei criteri di sicurezza per gli elementi|Definire criteri di sicurezza per report, report collegati, cartelle, risorse e origini dei dati. Per altre informazioni, vedere [elementi a sicurezza diretta](securable-items.md).|  
+|Impostazione dei criteri di sicurezza per gli elementi|Definire criteri di sicurezza per report, report collegati, cartelle, risorse e origini dei dati. Per altre informazioni, vedere [Elementi a sicurezza diretta](securable-items.md).|  
 |Visualizzazione di origini dei dati|Visualizzare origini dei dati condivise nella gerarchia di cartelle.|  
 |Visualizzazione di report|Eseguire report e visualizzare le proprietà dei report.|  
 |Visualizzazione di modelli|Visualizzare i modelli nella gerarchia di cartelle, utilizzare i modelli come origine dei dati per un report ed eseguire query in base al modello per recuperare i dati.|  
@@ -95,7 +95,7 @@ ms.locfileid: "48167221"
 ### <a name="publisher-tasks"></a>Attività del server di pubblicazione  
  Nella tabella seguente vengono elencate le attività incluse nel ruolo **Server di pubblicazione** .  
   
-|Attività|Description|  
+|Attività|Descrizione|  
 |----------|-----------------|  
 |Creazione di report collegati|Creare report collegati e pubblicarli in una cartella del server di report.|  
 |Gestione di origini dei dati|Creare ed eliminare elementi delle origini dei dati condivise e visualizzare e modificare le proprietà e il contenuto delle origini dei dati.|  
@@ -117,7 +117,7 @@ ms.locfileid: "48167221"
 ### <a name="browser-tasks"></a>Attività del ruolo Visualizzazione  
  Nella tabella seguente vengono elencate le attività incluse nella definizione di ruolo **Visualizzazione** .  
   
-|Attività|Description|  
+|Attività|Descrizione|  
 |----------|-----------------|  
 |Visualizzazione di report|Eseguire report e visualizzare le proprietà dei report.|  
 |Visualizzazione di risorse|Visualizzare risorse e proprietà delle risorse.|  
@@ -136,7 +136,7 @@ ms.locfileid: "48167221"
 ### <a name="report-builder-tasks"></a>Attività incluse nel ruolo Generatore report  
  Nella tabella seguente vengono elencate le attività incluse nella definizione di ruolo **Generatore report** .  
   
-|Attività|Description|  
+|Attività|Descrizione|  
 |----------|-----------------|  
 |Utilizzo di report|Leggere le definizioni dei report.|  
 |Visualizzazione di report|Eseguire report e visualizzare le proprietà dei report.|  
@@ -158,7 +158,7 @@ ms.locfileid: "48167221"
 ### <a name="my-reports-tasks"></a>Attività Report personali  
  Nella tabella seguente vengono elencate le attività incluse nel ruolo **Report personali** .  
   
-|Attività|Description|  
+|Attività|Descrizione|  
 |----------|-----------------|  
 |Creazione di report collegati|Creare report collegati basati su report archiviati nella cartella Report personali dell'utente.|  
 |Gestione di cartelle|Creare, visualizzare ed eliminare cartelle e visualizzarne e modificarne le proprietà.|  
@@ -186,10 +186,10 @@ ms.locfileid: "48167221"
 ### <a name="system-administrator-tasks"></a>Attività del ruolo Amministratore sistema  
  Nella tabella seguente vengono elencate le attività incluse nel ruolo **Amministratore sistema** .  
   
-|Attività|Description|  
+|Attività|Descrizione|  
 |----------|-----------------|  
 |Esecuzione delle definizioni dei report|Avviare l'esecuzione della definizione del report senza pubblicarlo in un server di report.|  
-|Gestisci processi|Visualizzare e annullare processi in esecuzione. Per altre informazioni, vedere [gestire un processo in esecuzione](../subscriptions/manage-a-running-process.md).|  
+|Gestisci processi|Visualizzare e annullare processi in esecuzione. Per altre informazioni, vedere [Gestire un processo in esecuzione](../subscriptions/manage-a-running-process.md).|  
 |Gestione delle proprietà del server di report|Visualizzare e modificare proprietà relative al server di report e agli elementi gestiti dal server di report.<br /><br /> Questa attività supporta la ridenominazione di Gestione report, l'attivazione della funzionalità Report personali e la definizione delle impostazioni predefinite della cronologia dei report.|  
 |Gestione di ruoli|Creare, visualizzare, modificare ed eliminare definizioni di ruolo.<br /><br /> I membri del ruolo **Amministratore sistema** possono utilizzare la pagina Impostazioni sito per gestire i ruoli.|  
 |Gestione di pianificazioni condivise|Creare, visualizzare, modificare ed eliminare pianificazioni condivise che vengono utilizzate per eseguire o aggiornare i report.|  
@@ -202,7 +202,7 @@ ms.locfileid: "48167221"
   
 ### <a name="system-user-tasks"></a>Attività del ruolo Utente sistema  
   
-|Attività|Description|  
+|Attività|Descrizione|  
 |----------|-----------------|  
 |Esecuzione delle definizioni dei report|Eseguire un report senza pubblicarlo in un server di report.|  
 |Visualizzazione delle proprietà del server di report|Visualizzare proprietà relative al server di report, ad esempio il nome dell'applicazione, lo stato di attivazione della funzionalità Report personali e le impostazioni predefinite della cronologia dei report.<br /><br /> Se si rimuove questa attività dal ruolo **Utente sistema** , la pagina Impostazioni sito non sarà più disponibile. Non verrà inoltre visualizzato il titolo dell'applicazione nella parte superiore di ogni pagina. Per impostazione predefinita, il titolo per Gestione report è "[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]".|  
@@ -214,7 +214,7 @@ ms.locfileid: "48167221"
  [Creare, eliminare o modificare un ruolo &#40;Management Studio&#41;](role-definitions-create-delete-or-modify.md)   
  [Concedere l'accesso utente a un server di report &#40;Gestione report&#41;](grant-user-access-to-a-report-server.md)   
  [Modificare o eliminare un'assegnazione di ruolo &#40;Gestione report&#41;](role-assignments-modify-or-delete.md)   
- [Concessione di autorizzazioni in un server di report in modalità nativa](granting-permissions-on-a-native-mode-report-server.md)   
+ [Granting Permissions on a Native Mode Report Server](granting-permissions-on-a-native-mode-report-server.md)   
  [Attività e autorizzazioni](tasks-and-permissions.md)  
   
   

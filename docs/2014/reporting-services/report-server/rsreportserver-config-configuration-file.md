@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 60e0a0b2-8a47-4eda-a5df-3e5e403dbdbc
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 4cab512c13e324c9593f6983ede6851c9d87cc7e
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+manager: kfile
+ms.openlocfilehash: 3b532758e9a8631adeacd00a4fce8d9029cfcd1b
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53366783"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56015602"
 ---
 # <a name="rsreportserver-configuration-file"></a>RSReportServer Configuration File
   Nel file **RsReportServer.config** vengono archiviate le impostazioni utilizzate da Gestione report, dal servizio Web ReportServer e dall'elaborazione in background. Tutte le applicazioni [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] vengono eseguite all'interno di un singolo processo tramite cui è possibile leggere le impostazioni di configurazione archiviate nel file RSReportServer.config. Il file RSReportServer.config viene utilizzato nei server di report sia in modalità nativa, sia in modalità SharePoint. Nelle due modalità non vengono tuttavia utilizzate tutte le stesse impostazioni disponibili nel file di configurazione. La versione per la modalità SharePoint del file è più piccola, poiché molte delle impostazioni per la modalità SharePoint sono archiviate nei database di configurazione di SharePoint anziché nel file. In questo argomento viene descritto il file di configurazione predefinito installato per la modalità nativa e la modalità SharePoint e alcune delle impostazioni e dei comportamenti importanti controllati dal file di configurazione.  
@@ -35,7 +35,7 @@ ms.locfileid: "53366783"
   
 -   [Autenticazione (file RSReportServer. config)](#bkmk_Authentication)  
   
--   [Servizio (file RSReportServer. config)](#bkmk_service)  
+-   [Service (RSReportServer.config file)](#bkmk_service)  
   
 -   [Configurazione generale delle estensioni per interfaccia utente di distribuzione](#bkmk_ui)  
   

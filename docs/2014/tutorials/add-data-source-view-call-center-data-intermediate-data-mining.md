@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 12/29/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: a448e7e4-dbd1-4d31-90bc-4d4a1c23b352
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: f212c6436af0e35c7cfaceadf8c519765d0a07a6
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 5da7978db04b0fdf6e1d4f7740857fc5c0cf90ed
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48171947"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56035042"
 ---
 # <a name="adding-a-data-source-view-for-call-center-data-intermediate-data-mining-tutorial"></a>Aggiunta di una vista origine dati per i dati del call center (Esercitazione intermedia sul data mining)
   In questa attività verrà aggiunta una vista origine dati da utilizzare per accedere ai dati del call center. Gli stessi dati verranno utilizzati per compilare sia il modello di rete neurale iniziale per l'esplorazione, sia il modello di regressione logistica che verrà utilizzato per preparare i consigli.  
@@ -70,7 +69,7 @@ ms.locfileid: "48171947"
 |FactCallCenterID|Una chiave arbitraria creata durante l'importazione dei dati nel data warehouse.<br /><br /> Questa colonna identifica record univoci e deve essere utilizzata come chiave del case per il modello di data mining.|  
 |DateKey|La data dell'operazione del call center, espressa come un Integer. Le chiavi della data di tipo Integer vengono spesso utilizzate nei data warehouse, ma è consigliabile ottenere la data nel formato di data/ora se si prevede di eseguire il raggruppamento in base ai valori di data.<br /><br /> Le date non sono univoche perché il fornitore presenta un report distinto per ogni turno di ogni giorno lavorativo.|  
 |WageType|Viene indicato se il giorno è un giorno feriale, festivo o un fine settimana.<br /><br /> È possibile che vi sia una differenza nella qualità del servizio clienti nei fine settimana e giorni della settimana, quindi si utilizzerà questa colonna come input.|  
-|Turno|Indica il turno per il quale vengono registrate le chiamate. In questo call center la giornata lavorativa viene divisa in quattro turni: AM, PM1, PM2 e Midnight.<br /><br /> È possibile che il turno influisca sulla qualità del servizio clienti, quindi si utilizzerà questa colonna come input.|  
+|Turno|Indica il turno per il quale vengono registrate le chiamate. Questo call center divide il giorno lavorativo in quattro turni: AM, PM1, PM2 e Midnight.<br /><br /> È possibile che il turno influisca sulla qualità del servizio clienti, quindi si utilizzerà questa colonna come input.|  
 |LevelOneOperators|Indica il numero di operatori di livello 1 in servizio.<br /><br /> I dipendenti del call center iniziano a Livello 1, pertanto questi dipendenti sono meno esperti.|  
 |LevelTwoOperators|Indica il numero di operatori di livello 2 in servizio.<br /><br /> Per qualificarsi come operatore di livello 2, un dipendente deve registrare un determinato numero di ore di servizio.|  
 |TotalOperators|Numero complessivo di operatori presenti durante il turno.|  

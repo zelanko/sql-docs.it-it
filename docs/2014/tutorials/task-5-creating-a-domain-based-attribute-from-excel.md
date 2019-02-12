@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- data-quality-services
-- integration-services
-- master-data-services
+ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: 07cbc624-2c6b-4568-96e4-f18663a05d80
-author: douglaslms
-ms.author: douglasl
+author: leolimsft
+ms.author: lle
 manager: craigg
-ms.openlocfilehash: 73d495f35e09ce893e9f8e763a7daa83851c1463
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 1a2826bb0c9b542837e05b7f600c9ce7d934fd4e
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48146341"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56031602"
 ---
 # <a name="task-5-creating-a-domain-based-attribute-from-excel"></a>Attività 5: Creazione di un attributo basato su dominio di Excel
-  In questa attività si converte il **lo stato** attributo delle **Supplier** entità sotto forma di un **attributo basato su dominio**. Dopo aver configurato l'attributo State da uno basato su dominio e pubblicarlo in MDS, una nuova entità denominata **lo stato** verrà creato nel server MDS con tutti i valori nella colonna e il **stato** attributo del **Supplier** entità verrà popolato con i valori di **stato** entità. A questo punto, il **Suppliers** modello deve disporre di due entità: **Supplier** e **stato** in cui la **stato** attributo del  **Supplier** entità è un attributo basato su dominio che dipende **stato** entità.  
+  In questa attività si converte il **lo stato** attributo delle **Supplier** entità sotto forma di un **attributo basato su dominio**. Dopo aver configurato l'attributo State da uno basato su dominio e pubblicarlo in MDS, una nuova entità denominata **lo stato** verrà creato nel server MDS con tutti i valori nella colonna e il **stato** attributo del **Supplier** entità verrà popolato con i valori di **stato** entità. A questo punto, il **Suppliers** modello deve disporre di due entità: **Supplier** e **stato** in cui il **stato** attributo del **Supplier** entità è un attributo basato su dominio che dipende da **stato** entità.  
   
 1.  Passare a **Excel** finestra dotata **Cleansed and Matched Suppliers. xlsx** aprire.  
   
@@ -44,6 +41,6 @@ ms.locfileid: "48146341"
      ![Excel - elenco a discesa elenco con gli stati](../../2014/tutorials/media/et-creatingadomainbasedattributefromexcel-03.jpg "Excel - elenco a discesa elenco con gli Stati")  
   
 ## <a name="next-step"></a>Passaggio successivo  
- [Attività 6: Verifica della creazione dell'attributo basato su dominio tramite Gestione dati master](../../2014/tutorials/task-6-verify-domain-based-attribute-master-data-manager.md)  
+ [Attività 6: Verificare che l'attributo basato su dominio viene creato tramite Gestione dati Master](../../2014/tutorials/task-6-verify-domain-based-attribute-master-data-manager.md)  
   
   

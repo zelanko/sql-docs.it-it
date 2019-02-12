@@ -18,13 +18,13 @@ helpviewer_keywords:
 ms.assetid: 2f99a288-d4aa-4c64-b310-e457a2aef2c5
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: efb68eefbaff0f984c38393c9bf863f0654716fd
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 341a5ca0a25729acbf38e961f714f13aedc0dfd4
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48162571"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56031205"
 ---
 # <a name="upload-files-to-a-folder"></a>Caricare file in una cartella
   È possibile caricare file dal file system e archiviarli come elementi gestiti in un database del server di report. La funzionalità di un file caricato dipende dal tipo di file.  
@@ -60,7 +60,7 @@ Icona di risorsa generica
 |Visualizzazione del contenuto di una cartella|Visualizzazione di risorse, Visualizzazione di report|  
   
 ## <a name="see-also"></a>Vedere anche  
- [Gestione report &#40;modalità nativa SSRS&#41;]... / report-manager-ssrs-native-mode.md)   
+ [Report Manager  &#40;SSRS Native Mode&#41;]../report-manager-ssrs-native-mode.md)   
  [Concessione di autorizzazioni in un server di report in modalità nativa](../security/granting-permissions-on-a-native-mode-report-server.md)   
  [Attività e autorizzazioni](../security/tasks-and-permissions.md)   
  [Caricare un file o un report &#40;Gestione report&#41;](../reports/upload-a-file-or-report-report-manager.md)  

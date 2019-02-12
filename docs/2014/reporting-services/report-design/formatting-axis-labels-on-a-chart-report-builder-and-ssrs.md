@@ -27,13 +27,13 @@ helpviewer_keywords:
 ms.assetid: ddf50dd5-5314-42ff-97f4-c3a4a17cfcdd
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: 55f7b30650abdacc9a7fe85ec1e9de77d36cecd7
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 80cc037b98e527815f1b0b2e7010c1411da03c16
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48185391"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56023582"
 ---
 # <a name="formatting-axis-labels-on-a-chart-report-builder-and-ssrs"></a>Formattazione delle etichette degli assi in un grafico (Generatore report e SSRS)
   Nei tipi di grafico basati su coordinate (grafico a barre, ad area, a punti, a linee, con intervalli e istogramma) sono inclusi due assi utilizzati per la classificazione e la visualizzazione di relazioni tra dati. A ogni asse verranno applicati tipi diversi di formattazione.  
@@ -52,14 +52,14 @@ ms.locfileid: "48185391"
   
  Quando si trascina un campo dal set di dati alla superficie del grafico, verrà determinato se tale campo appartiene all'asse delle categorie o dei valori.  
   
- L'asse dei valori è in genere l'asse verticale del grafico, ovvero l'asse Y. Viene utilizzato per visualizzare i valori di dati numerici da tracciare. Un campo trascinato nell'area dei campi dati verrà tracciato sull'asse dei valori. L'asse delle categorie è in genere l'asse orizzontale del grafico, ovvero l'asse X. Per i grafici a barre, questi assi sono invertiti. Nei tipi di grafico a barre, infatti, l'asse delle categorie corrisponde all'asse verticale, mentre l'asse dei valori a quello orizzontale. Per altre informazioni, vedere [i grafici a barre &#40;Generatore Report e SSRS&#41;](charts-report-builder-and-ssrs.md).  
+ L'asse dei valori è in genere l'asse verticale del grafico, ovvero l'asse Y. Viene utilizzato per visualizzare i valori di dati numerici da tracciare. Un campo trascinato nell'area dei campi dati verrà tracciato sull'asse dei valori. L'asse delle categorie è in genere l'asse orizzontale del grafico, ovvero l'asse X. Per i grafici a barre, questi assi sono invertiti. Nei tipi di grafico a barre, infatti, l'asse delle categorie corrisponde all'asse verticale, mentre l'asse dei valori a quello orizzontale. Per altre informazioni, vedere [Grafici a barre &#40;Generatore report e SSRS&#41;](charts-report-builder-and-ssrs.md).  
   
 ## <a name="how-the-chart-calculates-axis-label-intervals"></a>Calcolo degli intervalli delle etichette degli assi  
  Prima di formattare le etichette degli assi, è necessario comprendere in che modo vengono calcolati i relativi intervalli. In questo modo sarà possibile impostare le proprietà necessarie per ottenere il comportamento desiderato per le etichette degli assi.  
   
  La scala dell'asse è associata a un valore minimo e a un valore massimo che definiscono l'intervallo dei dati da visualizzare lungo l'asse. Questi valori minimo e massimo vengono calcolati lungo ogni asse in base ai valori del set di risultati. Sull'asse dei valori la scala verrà sempre determinata dal numero minimo e massimo nel campo valori. Sull'asse delle categorie i tipi di valori minimo e massimo vengono determinati in base al tipo del campo categoria. I campi di un set di dati possono essere classificati in uno di tre tipi di campo categoria disponibili, illustrati nella tabella seguente.  
   
-|Tipo di campo categoria|Description|Esempio|  
+|Tipo di campo categoria|Descrizione|Esempio|  
 |-------------------------|-----------------|-------------|  
 |Numeric|Le categorie vengono tracciate in ordine numerico lungo l'asse X.|In un report sulle vendite basato sul numero di identificazione del dipendente vengono visualizzati i numeri di identificazione dei dipendenti lungo l'asse X.|  
 |Data/ora|Le categorie vengono tracciate in ordine cronologico lungo l'asse X.|In un report sulle vendite basato sul mese vengono visualizzate le date formattate lungo l'asse X.|  
@@ -92,13 +92,13 @@ ms.locfileid: "48185391"
  Il campo Name viene tracciato lungo l'asse delle categorie. Viene calcolato un numero di etichette compreso tra quattro e sei e vengono determinate le impostazioni di adattamento automatico delle etichette sull'asse delle categorie in modo da evitare la sovrapposizione. Di conseguenza, è possibile che alcune etichette delle categorie vengano omesse. È possibile ignorare le opzioni di adattamento in modo indipendente per ogni asse.  
   
 ## <a name="displaying-all-labels-on-the-category-axis"></a>Visualizzazione di tutte le etichette sull'asse delle categorie.  
- Sull'asse dei valori gli intervalli forniscono una misura coerente dei punti dati del grafico. Sull'asse delle categorie è tuttavia possibile che tale funzionalità provochi la visualizzazione delle categorie senza etichette. In genere, si desidera che tutte le categorie siano identificate da etichette. È possibile impostare il numero di intervalli su 1 per visualizzare tutte le categorie.  Per altre informazioni, vedere [specificare un intervallo dell'asse &#40;Generatore Report e SSRS&#41;](specify-an-axis-interval-report-builder-and-ssrs.md).  
+ Sull'asse dei valori gli intervalli forniscono una misura coerente dei punti dati del grafico. Sull'asse delle categorie è tuttavia possibile che tale funzionalità provochi la visualizzazione delle categorie senza etichette. In genere, si desidera che tutte le categorie siano identificate da etichette. È possibile impostare il numero di intervalli su 1 per visualizzare tutte le categorie.  Per altre informazioni, vedere [Specificare un intervallo dell'asse &#40;Generatore report e SSRS&#41;](specify-an-axis-interval-report-builder-and-ssrs.md).  
   
 > [!NOTE]  
 >  Se si sostituiscono le caratteristiche di assegnazione automatica di etichette con un intervallo manuale su un asse, è necessario che tutti gli altri elementi del grafico vengano ridimensionati in modo appropriato. Di conseguenza, è possibile che si ottengano risultati imprevisti per il ridimensionamento e il posizionamento delle etichette o per le dimensioni di altri elementi del grafico.  
   
 ## <a name="variable-axis-intervals"></a>Intervalli variabili degli assi  
- Nel grafico vengono calcolati circa cinque intervalli di etichette degli assi indipendentemente dalle dimensioni del grafico stesso. Nei grafici di larghezza o di altezza maggiore, se vengono visualizzate solo cinque etichette su un asse, tra un'etichetta e l'altra etichetta appaiono gap più ampi. In questo modo diventa più difficile identificare il valore di ogni punto dati rispetto all'asse. Per evitare questo comportamento nei grafici con tali caratteristiche, è possibile impostare un intervallo variabile degli assi. Verrà calcolato il numero ottimale di etichette che è possibile visualizzare sull'asse in base alla larghezza o all'altezza del grafico, a seconda dell'asse corrispondente. Per altre informazioni, vedere [specificare un intervallo dell'asse &#40;Generatore Report e SSRS&#41;](specify-an-axis-interval-report-builder-and-ssrs.md).  
+ Nel grafico vengono calcolati circa cinque intervalli di etichette degli assi indipendentemente dalle dimensioni del grafico stesso. Nei grafici di larghezza o di altezza maggiore, se vengono visualizzate solo cinque etichette su un asse, tra un'etichetta e l'altra etichetta appaiono gap più ampi. In questo modo diventa più difficile identificare il valore di ogni punto dati rispetto all'asse. Per evitare questo comportamento nei grafici con tali caratteristiche, è possibile impostare un intervallo variabile degli assi. Verrà calcolato il numero ottimale di etichette che è possibile visualizzare sull'asse in base alla larghezza o all'altezza del grafico, a seconda dell'asse corrispondente. Per altre informazioni, vedere [Specificare un intervallo dell'asse &#40;Generatore report e SSRS&#41;](specify-an-axis-interval-report-builder-and-ssrs.md).  
   
 ## <a name="sorting-axis-values"></a>Ordinamento dei valori degli assi  
  Le categorie vengono visualizzate lungo l'asse X nell'ordine in cui appaiono nel set di risultati. È possibile modificare l'ordine di raggruppamento aggiungendo un comando SORT alla query oppure ordinando il set di dati tramite un'espressione. Le aree dati del grafico vengono ordinate allo stesso modo di tutte le altre aree dati. Per altre informazioni su come ordinare i dati, vedere [Ordinare i dati in un'area dati &#40;Generatore report e SSRS&#41;](sort-data-in-a-data-region-report-builder-and-ssrs.md).  
@@ -113,18 +113,18 @@ ms.locfileid: "48185391"
 -   Selezionare un campo o digitare un'espressione per l'opzione **Campo categoria** nella finestra di dialogo **Proprietà serie** . Verranno aggiunti intervalli dell'asse per tutti i valori nel campo categoria specificato.  
   
 ## <a name="adding-or-removing-side-margins-from-the-category-axis"></a>Aggiunta o rimozione di margini laterali dall'asse delle categorie  
- Nei tipi di grafico a barre, istogramma e a dispersione vengono automaticamente aggiunti margini laterali alle estremità dell'asse X. Non è possibile modificare le dimensioni del margine. In tutti gli altri tipi di grafico non vengono aggiunti margini laterali. Per altre informazioni, vedere [aggiungere o rimuovere i margini da un grafico &#40;Generatore Report e SSRS&#41;](add-or-remove-margins-from-a-chart-report-builder-and-ssrs.md).  
+ Nei tipi di grafico a barre, istogramma e a dispersione vengono automaticamente aggiunti margini laterali alle estremità dell'asse X. Non è possibile modificare le dimensioni del margine. In tutti gli altri tipi di grafico non vengono aggiunti margini laterali. Per altre informazioni, vedere [Aggiungere o rimuovere i margini da un grafico &#40;Generatore report e SSRS&#41;](add-or-remove-margins-from-a-chart-report-builder-and-ssrs.md).  
   
-## <a name="in-this-section"></a>Argomenti della sezione  
- [Formattazione delle etichette degli assi come date o valute &#40;Report e SSRS&#41;](format-axis-labels-as-dates-or-currencies-report-builder-and-ssrs.md)  
+## <a name="in-this-section"></a>In questa sezione  
+ [Formattazione delle etichette degli assi come date o valute &#40;Generatore report e SSRS&#41;](format-axis-labels-as-dates-or-currencies-report-builder-and-ssrs.md)  
   
- [Posizionamento di etichette in un grafico &#40;Report e SSRS&#41;](position-labels-in-a-chart-report-builder-and-ssrs.md)  
+ [Posizionamento di etichette in un grafico &#40;Generatore report e SSRS&#41;](position-labels-in-a-chart-report-builder-and-ssrs.md)  
   
- [Specificare un intervallo dell'asse &#40;Report e SSRS&#41;](specify-an-axis-interval-report-builder-and-ssrs.md)  
+ [Specificare un intervallo dell'asse &#40;Generatore report e SSRS&#41;](specify-an-axis-interval-report-builder-and-ssrs.md)  
   
- [Aggiungere o rimuovere i margini da un grafico &#40;Report e SSRS&#41;](add-or-remove-margins-from-a-chart-report-builder-and-ssrs.md)  
+ [Aggiungere o rimuovere i margini da un grafico &#40;Generatore report e SSRS&#41;](add-or-remove-margins-from-a-chart-report-builder-and-ssrs.md)  
   
- [Specificare una scala logaritmica &#40;Report e SSRS&#41;](specify-a-logarithmic-scale-report-builder-and-ssrs.md)  
+ [Specificare una scala logaritmica &#40;Generatore report e SSRS&#41;](specify-a-logarithmic-scale-report-builder-and-ssrs.md)  
   
 ## <a name="see-also"></a>Vedere anche  
  [Formattazione di un grafico &#40;Generatore report e SSRS&#41;](formatting-a-chart-report-builder-and-ssrs.md)   

@@ -18,13 +18,13 @@ helpviewer_keywords:
 ms.assetid: 55f2863f-1ac1-4519-b512-e7f11c0ea5ea
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 6f66f21b5c866688bd5c348f26788f4a869aca88
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: c9192e0845a5a6df9c7b848a3f91368dd15cfc60
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48151951"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56025062"
 ---
 # <a name="databaselogonaccount-property-wmi-msreportserverconfigurationsetting"></a>Proprietà DatabaseLogonAccount (MSReportServer_ConfigurationSetting WMI)
   Specifica l'account di accesso utilizzato dal server di report al momento della connessione al database del server di report. Sola lettura.  
@@ -46,7 +46,7 @@ public string DatabaseLogonAccount;
  [Classe MSReportServer_ConfigurationSetting](msreportserver-configurationsetting-class.md)  
   
 ## <a name="remarks"></a>Note  
- I valori validi per questa proprietà varieranno in base al valore di [DatabaseLogonType](configurationsetting-property-databaselogontype.md) proprietà.  
+ I valori validi per questa proprietà varieranno a seconda del valore della proprietà [DatabaseLogonType](configurationsetting-property-databaselogontype.md) .  
   
  Questa proprietà viene ignorata se il [DatabaseLogonType](configurationsetting-property-databaselogontype.md) è impostata su `2 (Service)`.  
   

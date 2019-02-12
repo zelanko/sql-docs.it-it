@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 10798e41-24c3-4e69-893b-7ee6af7fc958
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 24e303409568f028ff57cf189cad4f1022111e82
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 72bd3d617fa14e785b29b9c89e3d53d7d5dd3da4
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48202731"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56032752"
 ---
 # <a name="general-properties-page-shared-datasets-report-manager"></a>Pagina delle proprietà Generale, Set di dati condivisi (Gestione report)
   La pagina Set di dati condiviso consente di visualizzare e gestire le proprietà di un elemento del set di dati condiviso.  
@@ -37,7 +37,7 @@ ms.locfileid: "48202731"
 3.  Nell'elenco a discesa fare clic su **Gestisci**. Verrà visualizzata la pagina delle proprietà Generale.  
   
 ## <a name="options"></a>Opzioni  
- **Nome**  
+ **Name**  
  Digitare un nome per il set di dati condiviso utilizzato per identificare l'elemento nella gerarchia di cartelle del server di report.  
   
  **Descrizione**  
@@ -66,11 +66,11 @@ ms.locfileid: "48202731"
   
 ## <a name="see-also"></a>Vedere anche  
  [Gestione report &#40;modalità nativa SSRS&#41;](../../2014/reporting-services/report-manager-ssrs-native-mode.md)   
- [Contenuto della pagina &#40;gestione Report&#41;](../../2014/reporting-services/contents-page-report-manager.md)   
+ [Pagina Contenuto &#40;Gestione report&#41;](../../2014/reporting-services/contents-page-report-manager.md)   
  [Guida F1 di gestione report](../../2014/reporting-services/report-manager-f1-help.md)   
  [Opzioni di aggiornamento cache &#40;gestione Report&#41;](../../2014/reporting-services/cache-refresh-options-report-manager.md)   
  [Pagina memorizzazione nella cache, set di dati condivisi &#40;gestione Report&#41;](../../2014/reporting-services/caching-page-shared-datasets-report-manager.md)   
- [Gestire origini dati condivise](report-data/manage-shared-datasets.md)   
- [Cache set di dati condivisi &#40;SSRS&#41;](report-server/cache-shared-datasets-ssrs.md)  
+ [Gestire set di dati condivisi](report-data/manage-shared-datasets.md)   
+ [Memorizzare nella cache set di dati condivisi &#40;SSRS&#41;](report-server/cache-shared-datasets-ssrs.md)  
   
   

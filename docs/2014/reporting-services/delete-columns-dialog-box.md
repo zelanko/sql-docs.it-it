@@ -15,13 +15,13 @@ helpviewer_keywords:
 ms.assetid: 44587147-1013-4937-a26c-4fd023eea578
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 46bc4a7b3767a18ba6e7f3b5869a56dd259e1285
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 6207c9a80ca2a18e182d57127da1fc1133086144
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48094961"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56026492"
 ---
 # <a name="delete-columns-dialog-box"></a>Finestra di dialogo Elimina colonne
   Utilizzare la finestra di dialogo **Elimina colonne** per eliminare colonne da un'area dati tabella, matrice o elenco. Per le colonne associate a gruppi, è possibile eliminare anche la definizione di gruppo.  

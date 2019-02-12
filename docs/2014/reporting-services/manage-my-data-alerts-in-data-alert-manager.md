@@ -13,13 +13,13 @@ helpviewer_keywords:
 ms.assetid: e0e4ffdf-bd4c-4ebd-872b-07486cbb47c2
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 7dd75468674f4013c3587f98ef32d112c8442438
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: a79771080b1b9c2b7009e7d6228e943e48edbc04
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48188661"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56027102"
 ---
 # <a name="manage-my-data-alerts-in-data-alert-manager"></a>Gestire gli avvisi dati in Gestione avvisi dati
   Gli utenti di SharePoint possono visualizzare un elenco degli avvisi dati creati e le informazioni sugli avvisi. Possono inoltre eliminare i propri avvisi, aprire definizioni di avviso per la modifica nella finestra di progettazione Avviso dati ed eseguire i propri avvisi. Nella figura seguente sono illustrate le funzionalità disponibili per gli utenti in Gestione avvisi dati.  
@@ -47,7 +47,7 @@ ms.locfileid: "48188661"
   
 -   Fare clic con il pulsante destro del mouse sull'avviso dati per il quale si desidera modificare la definizione, quindi scegliere **Modifica**.  
   
-     La definizione di avviso viene aperta in Gestione avvisi dati. Per altre informazioni, vedere [modificare un avviso dati in Alert Designer](edit-a-data-alert-in-alert-designer.md) e [finestra di progettazione avviso dati](../../2014/reporting-services/data-alert-designer.md).  
+     La definizione di avviso viene aperta in Gestione avvisi dati. Per altre informazioni, vedere [Modificare un avviso dati nella finestra di progettazione di avvisi](edit-a-data-alert-in-alert-designer.md) e [Finestra di progettazione Avviso dati](../../2014/reporting-services/data-alert-designer.md).  
   
     > [!NOTE]  
     >  La definizione di avviso dati può essere modificata solo dall'utente che l'ha creata.  

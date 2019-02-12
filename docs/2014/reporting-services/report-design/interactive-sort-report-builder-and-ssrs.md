@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 00cafed5-1a3c-4ce0-a1fb-ff1e2613f495
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: d096f978b138de32c9aae7cdadd1480484dd095f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 5c62d4244b025ab987100a58aef1b2a10a7efa17
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48206121"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56022970"
 ---
 # <a name="interactive-sort-report-builder-and-ssrs"></a>Ordinamento interattivo (Generatore report e SSRS)
   È possibile aggiungere pulsanti di ordinamento interattivo per consentire a un utente di passare dall'ordine crescente a quello decrescente e viceversa per le righe di una tabella o per le righe e le colonne di una matrice. In genere l'ordinamento interattivo viene utilizzato per aggiungere un pulsante di ordinamento a ogni intestazione di colonna. L'utente può quindi scegliere la colonna in base alla quale eseguire l'ordinamento.  
@@ -28,17 +28,17 @@ ms.locfileid: "48206121"
   
  Quando si aggiunge un ordinamento interattivo, è necessario specificare quanto segue:  
   
--   **Tipo di ordinamento:** per righe o colonne.  
+-   **Gli elementi da ordinare:** Righe o colonne?  
   
--   **Elemento in base al quale eseguire l'ordinamento:** un campo visualizzato in una colonna della tabella o un campo non visualizzato.  
+-   **Tipo di ordinamento da:** Un campo visualizzato in una colonna della tabella? un campo non visualizzato.  
   
--   **Contesto in cui eseguire l'ordinamento:** ad esempio, nelle righe associate a gruppi di righe, nelle colonne associate a gruppi di colonne, nelle righe di dettaglio, nei gruppi figlio all'interno di un gruppo padre o in gruppi padre e figlio insieme.  
+-   **Contesto in cui eseguire l'ordinamento:** Ad esempio, è possibile ordinare nelle righe associate a gruppi di righe; colonne associate a gruppi di colonne; righe di dettaglio; gruppi figlio all'interno di un gruppo padre o gruppi padre e figlio insieme.  
   
--   **Casella di testo a cui aggiungere il pulsante di ordinamento:** nell'intestazione della colonna o nell'intestazione della riga di gruppo.  
+-   **Casella di testo cui aggiungere il pulsante di ordinamento:** Nell'intestazione di colonna o nell'intestazione della riga di gruppo?  
   
--   **Eventuale sincronizzazione dell'ordinamento per più aree dati:** è possibile progettare un report per far sì che quando l'utente passa da un ordinamento all'altro vengano ordinate anche le altre aree dati con lo stesso predecessore.  
+-   **Se si desidera sincronizzare l'ordinamento per più aree dati:** È possibile progettare un report in modo che quando l'utente attiva l'ordinamento, ordinate anche le altre aree dati con lo stesso predecessore.  
   
- Per istruzioni dettagliate, vedere [aggiungere un ordinamento interattivo a una tabella o matrice &#40;Generatore Report e SSRS&#41;](add-interactive-sort-to-a-table-or-matrix-report-builder-and-ssrs.md).  
+ Per istruzioni dettagliate, vedere [Aggiungere un ordinamento interattivo a una tabella o a una matrice &#40;Generatore report e SSRS&#41;](add-interactive-sort-to-a-table-or-matrix-report-builder-and-ssrs.md).  
   
  Nella tabella seguente sono riepilogati gli effetti che è possibile ottenere tramite i pulsanti di ordinamento interattivo.  
   
@@ -50,16 +50,16 @@ ms.locfileid: "48206121"
 |Ordinamento delle righe per più gruppi di righe e righe di dettaglio in una tabella|Gruppi, ma è necessario ridefinire l'espressione di raggruppamento|Intestazione della colonna|Aggregazione del campo del set di dati in base al quale eseguire l'ordinamento|Area dati|  
 |Sincronizzazione dell'ordinamento per più aree dati|Gruppi|In genere, intestazione della colonna|Espressione di raggruppamento|Set di dati|  
   
- Il componente Elaborazione report applica l'ordinamento interattivo dopo aver applicato le espressioni di ordinamento di tutti i gruppi e di tutte le aree dati. Per altre informazioni, vedere [Filtrare, raggruppare e ordinare i dati &#40;Generatore report e SSRS&#41;](filter-group-and-sort-data-report-builder-and-ssrs.md).  
+ Il componente Elaborazione report applica l'ordinamento interattivo dopo aver applicato le espressioni di ordinamento di tutti i gruppi e di tutte le aree dati. Per altre informazioni, vedere [Filtro, raggruppamento e ordinamento di dati &#40;Generatore report e SSRS&#41;](filter-group-and-sort-data-report-builder-and-ssrs.md).  
   
 ## <a name="adding-interactive-sort-for-multiple-groups"></a>Aggiunta dell'ordinamento interattivo per più gruppi  
  In una tabella che include gruppi di righe nidificati, ciascuno dei quali basato su un solo campo del set di dati, è possibile aggiungere un pulsante di ordinamento interattivo che ordini i valori del gruppo padre, quelli del gruppo figlio o delle righe di dettaglio. Tuttavia, potrebbe essere necessario mettere l'utente in condizione di ordinare la tabella in base ai valori del gruppo padre e figlio senza dovere fare clic più volte.  
   
- A questo scopo, è necessario riprogettare la tabella affinché venga raggruppata in un'espressione che combina più campi. Per un set di dati che include i conteggi dell'inventario, ad esempio, se nella tabella originale il raggruppamento è stato effettuato in base alla dimensione, quindi al colore, è possibile specificare un singolo gruppo con un'espressione di raggruppamento che rappresenti una combinazione di dimensione e colore. Per altre informazioni, vedere [aggiungere un ordinamento interattivo a una tabella o matrice &#40;Generatore Report e SSRS&#41;](add-interactive-sort-to-a-table-or-matrix-report-builder-and-ssrs.md).  
+ A questo scopo, è necessario riprogettare la tabella affinché venga raggruppata in un'espressione che combina più campi. Per un set di dati che include i conteggi dell'inventario, ad esempio, se nella tabella originale il raggruppamento è stato effettuato in base alla dimensione, quindi al colore, è possibile specificare un singolo gruppo con un'espressione di raggruppamento che rappresenti una combinazione di dimensione e colore. Per altre informazioni, vedere [Aggiungere un ordinamento interattivo a una tabella o a una matrice &#40;Generatore report e SSRS&#41;](add-interactive-sort-to-a-table-or-matrix-report-builder-and-ssrs.md).  
   
 ## <a name="see-also"></a>Vedere anche  
  [Ordinamento dei dati in un'area dati &#40;Generatore report e SSRS&#41;](sort-data-in-a-data-region-report-builder-and-ssrs.md)   
  [Filtro, raggruppamento e ordinamento di dati &#40;Generatore report e SSRS&#41;](filter-group-and-sort-data-report-builder-and-ssrs.md)   
- [Aggiungere un ordinamento interattivo a una tabella o una matrice &#40;Report e SSRS&#41;](add-interactive-sort-to-a-table-or-matrix-report-builder-and-ssrs.md)  
+ [Aggiungere un ordinamento interattivo a una tabella o a una matrice &#40;Generatore report e SSRS&#41;](add-interactive-sort-to-a-table-or-matrix-report-builder-and-ssrs.md)  
   
   

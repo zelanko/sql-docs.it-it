@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 4c64e58a-ed83-4e29-a422-9baaac2be4b8
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 0b5865ecbca2ea5577fccf0c28faeabf27b9573d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: cb6d9de69656d40b3a5fd87c5353c6d0b8f0ef5f
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48053141"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56033862"
 ---
 # <a name="report-history-page-report-manager"></a>Pagina Cronologia report (Gestione report)
   La pagina Cronologia report consente di visualizzare gli snapshot del report generati e archiviati nel corso del tempo. A seconda delle opzioni impostate nel server di report, è possibile che la cronologia del report includa solo gli snapshot più recenti.  
@@ -56,7 +56,7 @@ ms.locfileid: "48053141"
   
 ## <a name="see-also"></a>Vedere anche  
  [Visualizzare o eliminare la cronologia del Report &#40;gestione Report&#41;](../../2014/reporting-services/view-or-delete-report-history-report-manager.md)   
- [Aggiunta di uno Snapshot alla cronologia del Report &#40;gestione Report&#41;](report-server/add-a-snapshot-to-report-history-report-manager.md)   
+ [Aggiungere uno snapshot alla cronologia del report &#40;Gestione report&#41;](report-server/add-a-snapshot-to-report-history-report-manager.md)   
  [Pagina delle proprietà Generale, Report &#40;Gestione report&#41;](../../2014/reporting-services/general-properties-page-reports-report-manager.md)   
  [Guida F1 di gestione report](../../2014/reporting-services/report-manager-f1-help.md)   
  [Pagina delle proprietà Opzioni snapshot &#40;gestione Report&#41;](../../2014/reporting-services/snapshot-options-properties-page-report-manager.md)  

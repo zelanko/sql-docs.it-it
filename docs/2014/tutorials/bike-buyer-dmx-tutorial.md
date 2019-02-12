@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 10/19/2018
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - DMX [Analysis Services], tutorials
@@ -16,13 +15,13 @@ helpviewer_keywords:
 ms.assetid: 4b634cc1-86dc-42ec-9804-a19292fe8448
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: af20e220b4f1c2010606fec0d50e51025c73d31f
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+manager: kfile
+ms.openlocfilehash: 3cf9a0c9e6059330c0b8edbd8228f617ba093564
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53366723"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56025252"
 ---
 # <a name="bike-buyer-dmx-tutorial"></a>Esercitazione su DMX per Bike Buyer
   In questa esercitazione vengono descritte le procedure per la creazione, il training e l'esplorazione di modelli di data mining utilizzando il linguaggio di query DMX (Data Mining Extensions). Questi modelli di data mining verranno quindi utilizzati per la creazione di stime relative alla probabilità che un cliente acquisti una bicicletta.  

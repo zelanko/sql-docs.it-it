@@ -13,13 +13,13 @@ f1_keywords:
 ms.assetid: ca59d1cd-d782-4298-aa61-4f312c32eb50
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: bf9f11b8b56333dba7c0d2a5066712017ea194cb
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 056cc6b6385b2f57c52dbaaceedf75d342254c89
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48215261"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56036132"
 ---
 # <a name="column-visibility-dialog-box"></a>Finestra di dialogo Visibilità colonne
   Utilizzare la finestra di dialogo **Visibilità colonne** per visualizzare o nascondere la colonna selezionata quando il report viene eseguito per la prima volta oppure per utilizzare un altro elemento del report per attivare/disattivare la visibilità della colonna.  
@@ -37,7 +37,7 @@ ms.locfileid: "48215261"
  **Mostra o Nascondi in base a un'espressione**  
  Selezionare questa opzione per modificare l'impostazione di visibilità iniziale tramite un'espressione.  
   
- Digitare un'espressione che restituisce un `Boolean` valore del `True` per nascondere l'elemento e `False` per visualizzare l'elemento. Fare clic sul pulsante Espressione (*fx*) per modificare l'espressione.  
+ Digitare un'espressione che restituisca un valore `Boolean` `True` per nascondere l'elemento e `False` per visualizzarlo. Fare clic sul pulsante Espressione (*fx*) per modificare l'espressione.  
   
  **Visualizzazione può essere attivata/disattivata tramite questo elemento del report**  
  Selezionare questa opzione per visualizzare l'immagine dell'elemento Toggle che consente all'utente di visualizzare o nascondere l'elemento del report in un visualizzatore di report HTML.  
@@ -47,7 +47,7 @@ ms.locfileid: "48215261"
 ## <a name="see-also"></a>Vedere anche  
  [Esempi di espressioni &#40;Generatore report e SSRS&#41;](report-design/expression-examples-report-builder-and-ssrs.md)   
  [Aggiungere un'azione Espandi o Comprimi a un elemento &#40;Generatore report e SSRS&#41;](report-design/add-an-expand-or-collapse-action-to-an-item-report-builder-and-ssrs.md)   
- [Immagini &#40;Report e SSRS&#41;](report-design/images-report-builder-and-ssrs.md)   
+ [Immagini &#40;Generatore report e SSRS&#41;](report-design/images-report-builder-and-ssrs.md)   
  [Guida sensibile al contesto di Progettazione report](tools/report-designer-f1-help.md)  
   
   

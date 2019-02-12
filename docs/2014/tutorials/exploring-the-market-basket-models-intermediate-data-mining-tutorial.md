@@ -4,24 +4,23 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: da1c9cb7-6c32-4b9b-96ec-ecea772aeb77
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: c71dfded020167ddd9d01c458f370882dc493fbc
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 8a7b2f97cbda0594698c6cbaa68019a6493f1e74
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48211941"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56035302"
 ---
 # <a name="exploring-the-market-basket-models-intermediate-data-mining-tutorial"></a>Esplorazione dei modelli Market Basket (Esercitazione intermedia sul data mining)
   Ora che è stata compilata la `Association` modello, è possibile esaminarlo utilizzando il [!INCLUDE[msCoName](../includes/msconame-md.md)] visualizzatore Microsoft Association nel **visualizzatore modello di Data Mining** scheda della finestra di progettazione modelli di Data Mining. In questa esercitazione viene descritto l'utilizzo del visualizzatore per esplorare le relazioni tra elementi. Il visualizzatore consente di visualizzare immediatamente i prodotti che tendono a comparire insieme e di ottenere un'idea generale degli schemi risultanti.  
   
- Il [!INCLUDE[msCoName](../includes/msconame-md.md)] Visualizzatore Association Rules contiene tre schede: **regole**, **set di elementi**, e **rete di dipendenze**. Poiché ogni scheda rivela una vista leggermente diversa dei dati, quando si esplora un modello, in genere si passa diverse volte da un riquadro all'altro man mano che si ottengono le informazioni.  
+ Il [!INCLUDE[msCoName](../includes/msconame-md.md)] Visualizzatore Association Rules contiene tre schede: **Le regole**, **set di elementi**, e **rete di dipendenze**. Poiché ogni scheda rivela una vista leggermente diversa dei dati, quando si esplora un modello, in genere si passa diverse volte da un riquadro all'altro man mano che si ottengono le informazioni.  
   
 -   [Scheda rete di dipendenze](#bkmk_DepNet)  
   
@@ -81,11 +80,11 @@ ms.locfileid: "48211941"
 ##  <a name="bkmk_Itemsets"></a> Scheda set di elementi  
  Il passaggio successivo consiste nell'ottenere maggiori informazioni sulle regole e sui set di elementi generati dal modello per i prodotti Touring Tire e Touring Tire Tube. Il **set di elementi** scheda vengono visualizzate tre importanti tipi di informazioni relative ai set di elementi che il [!INCLUDE[msCoName](../includes/msconame-md.md)] individuati dall'algoritmo di associazione:  
   
--   **Supporto:** il numero di transazioni in cui si verifica il set di elementi.  
+-   **Supporto:** Il numero di transazioni in cui si verifica il set di elementi.  
   
--   **Dimensioni:** il numero di elementi al suo interno.  
+-   **Dimensioni:** Il numero di elementi al suo interno.  
   
--   **Elementi:** un elenco degli elementi inclusi in ogni set di elementi.  
+-   **Elementi:** Elenco di elementi inclusi in ogni set di elementi.  
   
  L'algoritmo consente di generare molti set di elementi a seconda della modalità di impostazione dei parametri. Ciascun set di elementi visualizzato rappresenta transazioni relative alla vendita dell'elemento. Usando i controlli nella parte superiore del **set di elementi** scheda, è possibile filtrare il visualizzatore per visualizzare solo i set di elementi che contengono un set di elementi e supporto dimensioni specificate.  
   
@@ -138,13 +137,13 @@ ms.locfileid: "48211941"
 ##  <a name="bkmk_Rules"></a> Scheda regole  
  Il **regole** scheda vengono visualizzate le informazioni seguenti che sono correlate alle regole che l'algoritmo trova.  
   
--   **Probabilità:** il *probabilità* di una regola, definita come la probabilità dell'elemento di destra dato l'elemento a sinistra.  
+-   **Probabilità:** Il *probabilità* di una regola, definita come la probabilità dell'elemento di destra dato l'elemento a sinistra.  
   
--   **Importanza:** una misura dell'utilità di una regola. Un valore superiore indica una regola migliore.  
+-   **Importanza:** Una misura dell'utilità di una regola. Un valore superiore indica una regola migliore.  
   
      L'importanza viene fornita per aiutare a misurare l'utilità di una regola, perché la probabilità da sola può essere fuorviante. Ad esempio, se ogni transazione contenesse una bottiglia d'acqua (si supponga che la bottiglia d'acqua venga aggiunta automaticamente agli acquisti di ogni cliente nell'ambito di una promozione), il modello creerebbe una regola che stima che la bottiglia di acqua dispone di una probabilità pari a 1. Sulla base della sola probabilità, questa regola è molto accurata, ma non fornisce informazioni utili.  
   
--   **Regola:** la definizione della regola. Per un modello Market Basket, una regola descrive una specifica combinazione di elementi.  
+-   **Regola:** La definizione della regola. Per un modello Market Basket, una regola descrive una specifica combinazione di elementi.  
   
  Ogni regola può essere utilizzata per fare previsioni sulla presenza di un elemento in una transazione in base alla presenza di altri elementi. Proprio come nel **set di elementi** scheda, è possibile filtrare le regole in modo che siano visualizzate solo le regole più interessanti. Se si utilizza un modello di data mining che non dispone di regole, potrebbe essere necessario modificare i parametri dell'algoritmo per abbassare la soglia di probabilità per le regole.  
   
@@ -197,7 +196,7 @@ ms.locfileid: "48211941"
  [Il filtro di una tabella nidificata in un modello di Data Mining &#40;esercitazione intermedia sul Data Mining&#41;](../../2014/tutorials/filtering-a-nested-table-in-a-mining-model-intermediate-data-mining-tutorial.md)  
   
 ## <a name="see-also"></a>Vedere anche  
- [Lezione 3: Compilazione di uno Scenario Market Basket &#40;esercitazione intermedia sul Data Mining&#41;](../../2014/tutorials/lesson-3-building-a-market-basket-scenario-intermediate-data-mining-tutorial.md)   
+ [Lezione 3: Creazione di uno Scenario Market Basket &#40;esercitazione intermedia sul Data Mining&#41;](../../2014/tutorials/lesson-3-building-a-market-basket-scenario-intermediate-data-mining-tutorial.md)   
  [Lezione 4: Compilazione di una Scenario di Clustering delle sequenze &#40;esercitazione intermedia sul Data Mining&#41;](../../2014/tutorials/lesson-4-build-sequence-clustering-scenario-intermediate-data-mining.md)   
  [Algoritmo Microsoft Association Rules](../../2014/analysis-services/data-mining/microsoft-association-algorithm.md)   
  [Riferimento tecnico per l'algoritmo Microsoft Association Rules](../../2014/analysis-services/data-mining/microsoft-association-algorithm-technical-reference.md)  

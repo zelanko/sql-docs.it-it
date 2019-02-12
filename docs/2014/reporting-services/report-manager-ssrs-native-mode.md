@@ -19,14 +19,14 @@ helpviewer_keywords:
 - components [Reporting Services], Report Manager
 ms.assetid: 80949f9d-58f5-48e3-9342-9e9bf4e57896
 author: maggiesmsft
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: c3a102af211ccaa8fad3d7792cf868653ca4797d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.author: maghan
+manager: kfile
+ms.openlocfilehash: e5d96e743587a0f4c00e7f5f7777b95667e1ea84
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48176941"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56036572"
 ---
 # <a name="report-manager--ssrs-native-mode"></a>Gestione report (modalità nativa SSRS)
   Gestione report è uno strumento di gestione e accesso ai report basato sul Web che consente di amministrare una singola istanza del server di report da una postazione remota su una connessione HTTP. e offre funzionalità di visualizzatore di report e di navigazione. Contenuto dell'argomento:  
@@ -48,7 +48,7 @@ ms.locfileid: "48176941"
   
 -   Configurare le proprietà di esecuzione del report, la cronologia del report e i parametri del report.  
   
--   Creare modelli di report che si connettono e recuperano dati da un [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] origine dati o da un [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] origine dati relazionale.  
+-   Creare modelli di report che si connettono e recuperano dati da un'origine dati di [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] o da un'origine dati relazionale di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] .  
   
 -   Impostare la sicurezza degli elementi di un modello per consentire l'accesso a entità specifiche del modello o per eseguire il mapping delle entità a report click-through predefiniti creati in precedenza.  
   
@@ -67,7 +67,7 @@ ms.locfileid: "48176941"
   
  Gestione report viene utilizzato solo per un server di report in esecuzione in modalità nativa. Non è supportato per un server di report configurato per la modalità integrata SharePoint.  
   
- Alcune funzionalità di gestione Report sono disponibili solo in determinate edizioni di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Per ulteriori informazioni, vedere [Features Supported by the Editions of SQL Server 2014](../../2014/getting-started/features-supported-by-the-editions-of-sql-server-2014.md).  
+ Alcune funzionalità di Gestione report sono disponibili solo in determinate edizioni di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Per ulteriori informazioni, vedere [Features Supported by the Editions of SQL Server 2014](../../2014/getting-started/features-supported-by-the-editions-of-sql-server-2014.md).  
   
  In una nuova installazione solo gli amministratori locali dispongono di autorizzazioni sufficienti per utilizzare il contenuto e le impostazioni. Per concedere le autorizzazioni agli altri utenti, un amministratore locale deve creare le assegnazioni di ruolo appropriate per gestire l'accesso al server di report. Le pagine dell'applicazione e le operazioni che saranno in seguito disponibili per un utente dipendono dalle assegnazioni di ruolo di tale utente. Per altre informazioni, vedere [Concedere l'accesso utente a un server di report &#40;Gestione report&#41;](security/grant-user-access-to-a-report-server.md).  
   
@@ -85,7 +85,7 @@ ms.locfileid: "48176941"
   
 #### <a name="to-start-report-manager-from-a-browser"></a>Per avviare Gestione report da un browser  
   
-1.  Apri [!INCLUDE[msCoName](../includes/msconame-md.md)] Internet Explorer 7.0 o versione successiva.  
+1.  Aprire [!INCLUDE[msCoName](../includes/msconame-md.md)] Internet Explorer 7.0 o versione successiva.  
   
 2.  Nella barra degli indirizzi del browser digitare l'URL di Gestione report.  
   
@@ -101,7 +101,7 @@ ms.locfileid: "48176941"
 ##  <a name="bkmk_icon_descriptions"></a> Descrizioni delle icone  
  Nella tabella seguente vengono descritte le icone utilizzate in Gestione report. Per altre informazioni sulle icone visualizzate sulla barra degli strumenti di report, vedere [visualizzatore HTML e barra degli strumenti Report](html-viewer-and-the-report-toolbar.md).  
   
-|Icona|Description|Azione|  
+|Icona|Descrizione|Azione|  
 |----------|-----------------|------------|  
 |![Icona di report](media/hlp-16doc.gif "Icona di report")|Report|Fare clic sul nome o sull'icona del report per aprire il report. Il report viene aperto in una finestra separata.|  
 |![Icona di modello](media/model-icon.gif "Icona di modello")|Modello di report|Fare clic sull'icona del modello di report per aprire la pagina delle proprietà del modello.|  
@@ -118,7 +118,7 @@ ms.locfileid: "48176941"
  [Pianificazione per Reporting Services e supporto Browser per Power View &#40;Reporting Services 2014&#41;](../../2014/reporting-services/browser-support-for-reporting-services-and-power-view.md)   
  [Generatore report &#40;SSRS&#41;](tools/report-builder-authoring-environment-ssrs.md)   
  [Strumenti di Reporting Services](tools/reporting-services-tools.md)   
- [Gestione contenuto del Server di report &#40;modalità nativa SSRS&#41;](report-server/report-server-content-management-ssrs-native-mode.md)   
+ [Gestione contenuto del server di report &#40;modalità nativa SSRS&#41;](report-server/report-server-content-management-ssrs-native-mode.md)   
  [Visualizzare ed esplorare i report in modalità nativa con Web part di SharePoint &#40;SSRS&#41;](reports/view-and-explore-native-mode-reports-using-sharepoint-web-parts-ssrs.md)   
  [Guida sensibile al contesto di Gestione report](../../2014/reporting-services/report-manager-f1-help.md)  
   
