@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 4a53a1a8-d1e1-47ef-b1fc-63352ece7d3c
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 91d0f854c3023d91214e7537692381b412e8726a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 4140fe03cb091a119942c563afe7f41ae69c5103
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48121503"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56038532"
 ---
 # <a name="choose-item-location-page-report-manager"></a>Pagina Scegli percorso elemento (Gestione report)
   La pagina Scegli percorso elemento consente di selezionare una cartella per un nuovo report collegato o per un nuovo modello. Se si crea un modello o un report collegato per un gruppo di utenti specifico, potrebbe essere utile inserire l'elemento in una cartella contenente altri report e modelli utilizzati dallo stesso gruppo. È necessario selezionare una cartella esistente e per la quale si dispone delle autorizzazioni per l'aggiunta di contenuto.  

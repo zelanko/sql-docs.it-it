@@ -15,19 +15,19 @@ helpviewer_keywords:
 ms.assetid: d1b8dbf0-4462-402e-92dd-0e4835002b6e
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 18b5d73d3ec4a6bc77a249d66af9b6d22c4e6be1
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 47a2cc499c9361b8d68be107cd874bebdfe74861
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48107101"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56038112"
 ---
 # <a name="role-definitions"></a>Definizioni di ruolo
   In [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] per *definizione**del ruolo* si intende una raccolta denominata di attività che definiscono le operazioni disponibili in un server di report. Le definizioni di ruolo rendono disponibili le regole utilizzate dal server di report per implementare la sicurezza. Quando un utente tenta di eseguire un'attività, ad esempio la pubblicazione di un report, nel server di report viene innanzitutto valutata l'assegnazione di ruolo dell'utente per stabilire se questa attività è inclusa nella relativa definizione di ruolo. Se l'attività è inclusa nella definizione di ruolo, la richiesta viene inoltrata.  
   
 ## <a name="using-roles-to-authorize-access-to-a-report-server"></a>Utilizzo dei ruoli per autorizzare l'accesso al server di report  
- Un ruolo diventa operativo solo quando viene utilizzato in un'assegnazione di ruolo. Per altre informazioni sulla sicurezza dei ruoli, vedere [assegnazioni di ruolo](role-assignments.md).  
+ Un ruolo diventa operativo solo quando viene utilizzato in un'assegnazione di ruolo. Per altre informazioni sulla sicurezza tramite i ruoli, vedere [Assegnazioni di ruolo](role-assignments.md).  
   
 ## <a name="types-of-role-definitions"></a>Tipi di definizioni di ruolo  
  Le definizioni di ruolo possono essere a livello di elemento o a livello di sistema. Una *definizione di ruolo a livello di elemento* descrive le attività correlate a elementi archiviati e gestiti in un server di report, ad esempio report, cartella e modelli. La gestione di report, la visualizzazione di cartelle e la gestione di singole sottoscrizioni sono esempi di attività che è possibile includere nelle definizioni di ruolo a livello di elemento. Una *definizione di ruolo a livello di sistema* include le attività applicabili al sito nell'insieme. La visualizzazione delle proprietà del server di report è un esempio di attività che è possibile includere in questo ruolo di sistema.  
@@ -39,14 +39,14 @@ ms.locfileid: "48107101"
   
 -   Amministratore sistema e Utente sistema sono definizioni di ruolo a livello di sistema che è possibile utilizzare per autorizzare l'accesso alle operazioni nel sito.  
   
- Per altre informazioni, vedere [ruoli predefiniti](role-definitions-predefined-roles.md).  
+ Per altre informazioni, vedere [Ruoli predefiniti](role-definitions-predefined-roles.md).  
   
 ## <a name="creating-a-role-definition"></a>Creazione di una definizione di ruolo  
  Per creare un ruolo, utilizzare Management Studio per specificare un nome e le attività che contiene. È necessario creare una definizione di ruolo distinta per le attività a livello di elemento e di sistema. Nei ruoli è possibile includere attività a livello di sistema o di elemento, ma non entrambe. Per creare una definizione di ruolo è necessario specificare un nome e scegliere un set di attività per questa definizione. Per creare una definizione di ruolo, è necessario disporre delle autorizzazioni appropriate. Queste autorizzazioni vengono concesse tramite l'attività "Impostazione della sicurezza per singoli elementi". Per impostazione predefinita, questa attività può essere eseguita dagli amministratori e dagli utenti con ruolo predefinito **Gestione contenuto** .  
   
- Un ruolo deve avere un nome univoco. Per essere valida, la definizione deve contenere almeno un'attività. Per altre informazioni, vedere [attività e autorizzazioni](tasks-and-permissions.md).  
+ Un ruolo deve avere un nome univoco. Per essere valida, la definizione deve contenere almeno un'attività. Per altre informazioni, vedere [Attività e autorizzazioni](tasks-and-permissions.md).  
   
- Per creare una definizione di ruolo, usare [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]. Per altre informazioni, vedere [creare, eliminare o modificare un ruolo &#40;Management Studio&#41;](role-definitions-create-delete-or-modify.md).  
+ Per creare una definizione di ruolo, usare [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]. Per altre informazioni, vedere [Creare, eliminare o modificare un ruolo &#40;Management Studio&#41;](role-definitions-create-delete-or-modify.md).  
   
  Dopo aver creato una definizione di ruolo, è possibile utilizzarla selezionandola in un'assegnazione di ruolo. Per altre informazioni, vedere [Concedere l'accesso utente a un server di report &#40;Gestione report&#41;](grant-user-access-to-a-report-server.md).  
   
@@ -61,6 +61,6 @@ ms.locfileid: "48107101"
  [Creare, eliminare o modificare un ruolo &#40;Management Studio&#41;](role-definitions-create-delete-or-modify.md)   
  [Concedere l'accesso utente a un server di report &#40;Gestione report&#41;](grant-user-access-to-a-report-server.md)   
  [Modificare o eliminare un'assegnazione di ruolo &#40;Gestione report&#41;](role-assignments-modify-or-delete.md)   
- [Impostare le autorizzazioni per elementi del Server di Report in un sito di SharePoint &#40;Reporting Services in SharePoint la modalità integrata&#41;](set-permissions-for-report-server-items-on-a-sharepoint-site.md)  
+ [Impostare autorizzazioni per gli elementi del server di report in un sito di SharePoint &#40;Reporting Services in modalità integrata SharePoint&#41;](set-permissions-for-report-server-items-on-a-sharepoint-site.md)  
   
   

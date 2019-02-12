@@ -8,21 +8,21 @@ ms.topic: overview
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 59ec5bbacf23d0f86f88a17a68faaf27162ebdcb
-ms.sourcegitcommit: 33712a0587c1cdc90de6dada88d727f8623efd11
+ms.openlocfilehash: 283f39efa34721aea7613ac1a9cba115dc3311a8
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53596792"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56032952"
 ---
-# <a name="machine-learning-services-r-python-in-sql-server-2017"></a>Servizi di Machine Learning (R, Python) in SQL Server 2017
+# <a name="machine-learning-services-r-python-in-sql-server-2017"></a>Machine Learning Services (R, Python) in SQL Server 2017
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 Machine Learning Services di SQL Server 2017 è un componente aggiuntivo a un'istanza di motore di database, utilizzato per l'esecuzione di codice R e Python in SQL Server. La funzionalità include [pacchetti di Microsoft R e Python](#components) per prestazioni elevate analitica predittiva e machine learning. Codice viene eseguito in un framework di estendibilità, isolata da processi del motore di base, ma completamente disponibile per i dati relazionali come stored procedure, come script T-SQL contenente le istruzioni di R o Python o R o Python codice contenente T-SQL. 
 
 Se è stato usato in precedenza [SQL Server 2016 R Services](r/sql-server-r-services.md), servizi di Machine Learning in SQL Server 2017 è la prossima generazione di supporto di R, con le versioni aggiornate di base R, RevoScaleR, MicrosoftML, e altre librerie introdotti nel 2016. 
 
-Nel Database SQL di Azure [Machine Learning Services (con R)](https://docs.microsoft.com/azure/sql-database/sql-database-connect-query-r) è attualmente in anteprima pubblica.
+Nel Database SQL di Azure [Machine Learning Services (con R)](https://docs.microsoft.com/azure/sql-database/sql-database-machine-learning-services-overview) è attualmente in anteprima pubblica.
 
 La proposta di valore della chiave di servizi di Machine Learning è la potenza dei pacchetti Python e R enterprise per offrire l'analitica avanzata a livello di scalabilità e la possibilità di trasferire i calcoli e l'elaborazione di dove risiedono i dati, eliminando la necessità di estrarre i dati tra la rete.
 
@@ -126,10 +126,10 @@ Servizi di SQL Server 2017 Machine Learning è la prossima generazione di SQL Se
 
 | Nome prodotto | Versione del motore | Data di rilascio |
 |--------------|---------|--------------|
-| SQL Server 2017 Machine Learning Services (In-Database) | R Server 9.2.1 <br/> Server di Python 9.2 | Ottobre 2017 |
-| Machine Learning Server (Standalone) di SQL Server 2017 | R Server 9.2.1 <br/> Server di Python 9.2 | Ottobre 2017 |
+| SQL Server 2017 Machine Learning Services (In-Database) | R Server 9.2.1 <br/> Python Server 9.2 | Ottobre 2017 |
+| SQL Server 2017 Machine Learning Server (Standalone) | R Server 9.2.1 <br/> Python Server 9.2 | Ottobre 2017 |
 | SQL Server 2016 R Services (In-Database) | R Server 9.1  | Luglio 2017  |
-| R Server (Standalone) di SQL Server 2016  |  R Server 9.1 | Luglio 2017 |
+| SQL Server 2016 R Server (Standalone)  |  R Server 9.1 | Luglio 2017 |
 
 Per versioni del pacchetto dalla versione, vedere la versione di eseguire il mapping nel [i componenti di eseguire l'aggiornamento di R e Python](r/use-sqlbindr-exe-to-upgrade-an-instance-of-sql-server.md#version-map).
 

@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 4b194714-46f7-4f0e-9632-7f89d9600762
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: daca0d1d73663ef43d5645fe8be6c239de704e6d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 9a73e75c61fe3911919ed5112a1a6afff406adcd
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48219971"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56016732"
 ---
 # <a name="set-a-no-data-message-for-a-data-region-report-builder-and-ssrs"></a>Impostare una proprietà NoDataMessage per un'area dati (Generatore report e SSRS)
   Per specificare il testo da visualizzare nel report visualizzabile al posto di un'area dati senza dati, impostare la proprietà NoRowsMessage di un'area dati tabella, matrice o elenco, la proprietà NoDataMessage di un'area dati del grafico e la proprietà NoDataText per la scala dei colori per una mappa. In fase di esecuzione Elaborazione report esegue la query per ogni set di dati in un report. Tale query non può restituire alcun set di risultati. Per un'area dati associata a un set di dati vuoto, è possibile specificare il testo da visualizzare anziché visualizzare un'area dati vuota. È anche possibile impostare la proprietà NoRowsMessage per un sottoreport quando in nessun set di dati del sottoreport sono presenti dati in fase di esecuzione.  
@@ -59,10 +59,10 @@ ms.locfileid: "48219971"
      In alternativa, nell'elenco a discesa fare clic su **Espressione** per aprire la finestra di dialogo **Espressione** e creare un'espressione.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Sottoreport &#40;Report e SSRS&#41;](../report-design/subreports-report-builder-and-ssrs.md)   
+ [Sottoreport &#40;Generatore report e SSRS&#41;](../report-design/subreports-report-builder-and-ssrs.md)   
  [Tabelle, matrici ed elenchi &#40;Generatore report e SSRS&#41;](../report-design/create-invoices-and-forms-with-lists-report-builder-and-ssrs.md)   
  [Grafici &#40;Generatore report e SSRS&#41;](../report-design/charts-report-builder-and-ssrs.md)   
  [Mappe &#40;Generatore report e SSRS&#41;](../report-design/maps-report-builder-and-ssrs.md)   
- [Sottoreport &#40;Report e SSRS&#41;](../report-design/subreports-report-builder-and-ssrs.md)  
+ [Sottoreport &#40;Generatore report e SSRS&#41;](../report-design/subreports-report-builder-and-ssrs.md)  
   
   

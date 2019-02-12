@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 1d3b2573-e29d-480d-9dde-d26379c86618
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 60c12e1ea7f184770d07fcd4af42b81ca41d13db
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 731d0eb5f61bd9b9002e674a9dc276db5621591a
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48082017"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56030562"
 ---
 # <a name="add-and-verify-a-data-connection-or-data-source-report-builder-and-ssrs"></a>Aggiungere e verificare una connessione dati o un'origine dati (Generatore report e SSRS)
   In Generatore report è possibile aggiungere un'origine dati condivisa dal server di report o creare un'origine dati incorporata per il report in uso. In Progettazione report è possibile creare un'origine dati condivisa o un'origine dati incorporata e distribuirla a un server di report.  
@@ -59,7 +59,7 @@ ms.locfileid: "48082017"
   
     2.  Specificare una stringa di connessione utilizzando una delle alternative seguenti:  
   
-    -   Digitare la stringa di connessione direttamente nella casella di testo **Stringa di connessione** . Per un elenco di esempi di stringhe di connessione, vedere [connessioni dati, origini dati e stringhe di connessione in Generatore Report](../data-connections-data-sources-and-connection-strings-in-report-builder.md).  
+    -   Digitare la stringa di connessione direttamente nella casella di testo **Stringa di connessione** . Per esempi di stringhe di connessione, vedere [Connessioni dati, origini dati e stringhe di connessione in Generatore report](../data-connections-data-sources-and-connection-strings-in-report-builder.md).  
   
     -   Fare clic sul pulsante relativo all'espressione (**fx)** ) per creare un'espressione che restituisca una stringa di connessione. Nella finestra di dialogo **Espressione** digitare l'espressione nel riquadro relativo. [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
@@ -81,9 +81,9 @@ ms.locfileid: "48082017"
   
 2.  Fare clic su **Test connessione**.  
   
-3.  Se la connessione riesce, verrà visualizzato il messaggio seguente: "Creazione connessione completata". [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
+3.  Se la connessione ha esito positivo, viene visualizzato il messaggio seguente: "Creata connessione completata". [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
-4.  In caso contrario, verrà visualizzato il messaggio: "Impossibile connettersi all'origine dati".  
+4.  Se la connessione non riesce, viene visualizzato il messaggio seguente: "Impossibile connettersi all'origine dati".  
   
 5.  Fare clic su **Dettagli**e utilizzare le informazioni per risolvere il problema.  
   

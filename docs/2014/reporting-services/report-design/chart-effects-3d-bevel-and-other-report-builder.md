@@ -12,20 +12,20 @@ f1_keywords:
 ms.assetid: 18ef2119-2931-43ae-9078-f39b460462dd
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: c3d9abd6c84d6d6abe0d30eac06d113a81ebcd0e
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 26fbda6dacd20b3ec02061b41a7e1de2f3b2d1ff
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48188671"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56038272"
 ---
 # <a name="3d-bevel-and-other-effects-in-a-chart-report-builder-and-ssrs"></a>Effetti 3D, smussature e altri effetti in un grafico (Generatore report e SSRS)
   Gli effetti tridimensionali (3D) possono essere utilizzati per fornire profondità e aggiungere un impatto visivo al grafico. Ad esempio, se si desidera evidenziare una particolare sezione di un grafico a torta esplosa, è possibile ruotare e modificare la prospettiva del grafico in modo che si noti prima di tutto tale sezione. Quando al grafico vengono applicati effetti 3D, tutti i colori delle sfumature e gli stili di tratteggio vengono disabilitati.  
   
  Gli effetti tridimensionali possono essere applicati a singoli grafici ed è possibile visualizzare grafici 2D e 3D nello stesso report.  
   
- Per tutti i tipi di grafico, è possibile aggiungere effetti tridimensionali a un'area del grafico nella finestra di dialogo **Proprietà area grafico** selezionando **Abilita 3D**. Per altre informazioni, vedere [aggiungere effetti 3D a un grafico &#40;Generatore Report e SSRS&#41;](chart-effects-add-3d-effects-report-builder.md).  
+ Per tutti i tipi di grafico, è possibile aggiungere effetti tridimensionali a un'area del grafico nella finestra di dialogo **Proprietà area grafico** selezionando **Abilita 3D**. Per altre informazioni, vedere [Aggiungere effetti 3D a un grafico &#40;Generatore report e SSRS&#41;](chart-effects-add-3d-effects-report-builder.md).  
   
  Per aumentare l'impatto visivo dei grafici, è anche possibile aggiungere gli stili smussato, rilievo e trama nei grafici a barre, a torta e ad anello, nonché negli istogrammi. Per altre informazioni, vedere [Aggiungere stili smussato, rilievo e trama a un grafico &#40;Generatore report e SSRS&#41;](chart-effects-add-bevel-emboss-or-texture-report-builder.md).  
   

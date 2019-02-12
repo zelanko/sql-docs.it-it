@@ -23,13 +23,13 @@ f1_keywords:
 ms.assetid: 4fb9faac-511e-404a-b8d7-1f2e3cb47b11
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: 18228ba7240b2d26462545463d8cf5fdf8636a5a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 9dfeb15d58f34759da6c340f66ce5935c0b71e41
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48098441"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56038002"
 ---
 # <a name="page-headers-and-footers-report-builder-and-ssrs"></a>Intestazioni di pagina e piè di pagina (Generatore report e SSRS)
   Un report può contenere un'intestazione e un piè di pagina, posizionati rispettivamente nella parte superiore e inferiore di ogni pagina. Le intestazioni e i piè di pagina possono contenere testo statico, immagini, linee, rettangoli, bordi, colore di sfondo, immagini di sfondo ed espressioni. Le espressioni includono riferimenti ai campi del set di dati per i report contenenti un solo set di dati e chiamate di funzioni di aggregazione che includono il set di dati come ambito.  
@@ -58,9 +58,9 @@ ms.locfileid: "48098441"
   
 |Elementi supportati nell'espressione|Aggregazioni ReportItems|Aggregazioni Dataset (l'ambito deve essere il nome del set di dati)|  
 |-----------------------------|----------------------------|----------------------------------------------------------|  
-|Caselle di testo nel corpo del report|Sì|no|  
-|&PageNumber|Sì|no|  
-|&TotalPages|Sì|no|  
+|Caselle di testo nel corpo del report|Yes|No|  
+|&PageNumber|Yes|No|  
+|&TotalPages|Yes|No|  
 |Funzione di aggregazione|Sì. Ad esempio,<br /><br /> `=First(ReportItems!TXT_LastName.Value)`|Sì. Ad esempio,<br /><br /> `=Max(Quantity.Value,"DataSet1")`|  
 |Raccolta Fields per gli elementi della pagina|Indirettamente. Ad esempio,<br /><br /> `=Sum(ReportItems!Textbox1.Value)`|Sì. Ad esempio,<br /><br /> `=Sum(Fields!Quantity.Value,"DataSet1")`|  
 |Immagine con associazione a dati|Indirettamente. Ad esempio, `=ReportItems!TXT_Photo.Value`|Sì. Ad esempio,<br /><br /> `=First(Fields!Photo.Value,"DataSet1")`|  
@@ -128,7 +128,7 @@ ms.locfileid: "48098441"
  Per altre informazioni, vedere [Esportazione in Microsoft Excel &#40;Generatore report e SSRS&#41;](../report-builder/exporting-to-microsoft-excel-report-builder-and-ssrs.md).  
   
 ## <a name="see-also"></a>Vedere anche  
- [Incorporare un'immagine in un Report &#40;Report e SSRS&#41;](embed-an-image-in-a-report-report-builder-and-ssrs.md)   
- [Rettangoli e linee &#40;Report e SSRS&#41;](rectangles-and-lines-report-builder-and-ssrs.md)  
+ [Incorporare un'immagine in un report &#40;Generatore report e SSRS&#41;](embed-an-image-in-a-report-report-builder-and-ssrs.md)   
+ [Rettangoli e linee &#40;Generatore report e SSRS&#41;](rectangles-and-lines-report-builder-and-ssrs.md)  
   
   

@@ -12,15 +12,15 @@ f1_keywords:
 - sql12.dqs.dqproject.correction.f1
 - sql12.dqs.dqproject.interactivecleansing.f1
 ms.assetid: c96b13ad-02a6-4646-bcc7-b4a8d490f5cc
-author: douglaslMS
-ms.author: douglasl
+author: leolimsft
+ms.author: lle
 manager: craigg
-ms.openlocfilehash: ad4feee8fe6a47b82196f6684a9c56b663a42c71
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: aa900fc136729eace74af6ceaf8d6f26b7900f99
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52392274"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56038332"
 ---
 # <a name="cleanse-data-using-dqs-internal-knowledge"></a>Pulizia dei dati mediante le informazioni interne di DQS
   In questo argomento viene descritto come eseguire la pulizia dei dati utilizzando un progetto Data Quality in [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS). La pulizia dei dati viene eseguita sui dati di origine utilizzando una Knowledge Base incorporata in DQS e confrontando tali dati con un set di dati di alta qualità. Per altre informazioni, vedere [Compilazione di una Knowledge Base](../../2014/data-quality-services/building-a-knowledge-base.md).  
@@ -157,15 +157,15 @@ ms.locfileid: "52392274"
   
     -   **Dati e informazioni pulizia**: Fare clic sul pulsante di opzione per esportare i dati seguenti per ogni dominio:  
   
-        -   **\<Dominio > _Source**: Il valore originale nel dominio.  
+        -   **\<Domain>_Source**: Il valore originale nel dominio.  
   
-        -   **\<Dominio > _Output**: I valori puliti nel dominio.  
+        -   **\<Domain>_Output**: I valori puliti nel dominio.  
   
-        -   **\<Dominio > _Reason**: Il motivo specificato per la correzione del valore.  
+        -   **\<Domain>_Reason**: Il motivo specificato per la correzione del valore.  
   
-        -   **\<Dominio > _Confidence**: Il livello di confidenza per tutti i termini corretti. Viene visualizzato come valore decimale equivalente al valore percentuale corrispondente. Un livello di confidenza del 95% viene ad esempio visualizzato come 0,9500000.  
+        -   **\<Domain>_Confidence**: Il livello di confidenza per tutti i termini corretti. Viene visualizzato come valore decimale equivalente al valore percentuale corrispondente. Un livello di confidenza del 95% viene ad esempio visualizzato come 0,9500000.  
   
-        -   **\<Dominio > _Status**: Lo stato del valore del dominio dopo la pulizia dei dati. Ad esempio **Suggeriti**, **Nuovi**, **Non validi**, **Con correzione**o **Corretti**.  
+        -   **\<Domain>_Status**: Lo stato del valore del dominio dopo la pulizia dei dati. Ad esempio **Suggeriti**, **Nuovi**, **Non validi**, **Con correzione**o **Corretti**.  
   
         -   **Stato record**: Oltre a includere un campo di stato per ogni dominio mappata **(\<NomeDominio > _Status**), il **stato Record** campo viene visualizzato lo stato di un record. Se uno stato del dominio nel record è *Nuovi* o *Corretti*, il valore di **Stato record** viene impostato su *Corretti*. Se uno stato del dominio nel record è *Suggeriti*, *Non validi*o *Con correzione*, il valore di **Stato record** viene impostato sul rispettivo valore. Ad esempio, se uno stato del dominio nel record è *Suggeriti*, il valore di **Stato record** viene impostato su *Suggeriti*.  
   

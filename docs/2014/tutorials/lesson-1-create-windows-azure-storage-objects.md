@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: security
 ms.topic: conceptual
 ms.assetid: 74edd1fd-ab00-46f7-9e29-7ba3f1a446c5
-author: craigg-msft
-ms.author: craigg
+author: VanMSFT
+ms.author: vanto
 manager: craigg
-ms.openlocfilehash: d238284bb53e4ce6acc5d482ae66c0b21a760da6
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 449f86b80b93055bb23fe4cd32ace10e15724dbc
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53373793"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56038342"
 ---
 # <a name="lesson-1-create-windows-azure-storage-objects"></a>Lezione 1: Creare gli oggetti di archiviazione di Azure di Windows
   Prima di creare i backup di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] nell'archiviazione del cloud, è necessario creare prima un account di archiviazione e, successivamente, un contenitore BLOB. Nella lezione 1 vengono illustrati i passaggi per l'accesso al portale di gestione di Windows Azure e per la creazione di un account di archiviazione e di un contenitore BLOB.  
@@ -26,7 +25,7 @@ ms.locfileid: "53373793"
   
 1.  Accedere al portale di gestione di Windows Azure utilizzando l'account. Se non hai un account di Windows Azure, [visita versione di valutazione gratuita di Windows Azure 3 mesi](https://go.microsoft.com/fwlink/?LinkId=271927).  
   
-     ![Schermata di accesso ad Azure di Windows](../../2014/tutorials/media/windowazurelogin-backuptocloud.gif "schermata di accesso ad Azure di Windows")  
+     ![Windows Azure Login Screen](../../2014/tutorials/media/windowazurelogin-backuptocloud.gif "Windows Azure Login Screen")  
   
 2.  Utilizzare le istruzioni passo passo dettagliate [qui](https://go.microsoft.com/fwlink/?LinkId=271926), per creare un account di archiviazione.  
   

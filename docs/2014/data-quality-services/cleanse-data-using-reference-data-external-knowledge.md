@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: 158009e9-8069-4741-8085-c14a5518d3fc
-author: douglaslMS
-ms.author: douglasl
+author: leolimsft
+ms.author: lle
 manager: craigg
-ms.openlocfilehash: 101d5ba77dce4ef384e1d9ade52e8e847828d685
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: e35d5ae9390a6b316ec41ce20a2983c1c78a1696
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52532414"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56029532"
 ---
 # <a name="cleanse-data-using-reference-data-external-knowledge"></a>Pulire i dati mediante le informazioni dei dati di riferimento (esterni)
   In questo argomento viene descritto come pulire i dati utilizzando le informazioni dei provider di dati di riferimento. Mentre tutti i passaggi per l'esecuzione di un'attività di pulizia rimangono gli stessi per la pulizia dei dati mediante le informazioni dei provider di dati di riferimento, come descritto in [Pulire i dati mediante DQS &#40;informazioni interne&#41;](../../2014/data-quality-services/cleanse-data-using-dqs-internal-knowledge.md), in questo argomento vengono illustrate le informazioni specifiche per la pulizia dei dati mediante il servizio dati di riferimento in [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS).  
@@ -64,7 +64,7 @@ ms.locfileid: "52532414"
     > [!NOTE]  
     >  Nella pagina **Pulisci** vengono visualizzate le informazioni sui domini associati al servizio dati di riferimento nei due modi seguenti:  
     >   
-    >  -   Viene visualizzato un messaggio sotto le **avviare** pulsante: "Domini \<Domain1 >, \<dominio 2 >,... \<DomainN> vengono puliti usando il provider di servizi di dati di riferimento". In questo esempio, verrà visualizzato il messaggio seguente: "Verifica dell'indirizzo di dominio viene pulita usando il provider del servizio dati di riferimento."  
+    >  -   Viene visualizzato un messaggio sotto le **avviare** pulsante: "Domains \<Domain1>, \<Domain2>,... \<DomainN> vengono puliti usando il provider di servizi di dati di riferimento". In questo esempio, verrà visualizzato il messaggio seguente: "Verifica dell'indirizzo di dominio viene pulita usando il provider del servizio dati di riferimento."  
     > -   L'icona ![Dominio collegato al servizio dati di riferimento ](../../2014/data-quality-services/media/dqs-rdsindicator.JPG "Dominio collegato al servizio dati di riferimento") viene visualizzata nell'area **Profiler** per i domini associati al provider del servizio dati di riferimento. Nell'esempio l'icona verrà visualizzata per il dominio composito **Verifica indirizzo** .  
   
 4.  Verificare i valori di dominio nella pagina **Gestisci e visualizza i risultati** . Il servizio dati di riferimento può visualizzare più suggerimenti, se disponibili, per un valore a seconda del numero massimo di suggerimenti specificato nella casella **Candidati suggeriti** durante l'esecuzione del mapping del dominio al servizio dati di riferimento. Per l'indirizzo US seguente vengono visualizzati, ad esempio, due suggerimenti:  

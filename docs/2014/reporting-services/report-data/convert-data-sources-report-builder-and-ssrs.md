@@ -13,13 +13,13 @@ helpviewer_keywords:
 ms.assetid: 0e099c7e-8c03-43eb-9ea3-76e52d9ebbe3
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 3bd7ed750917129496caf9febe711df9fd0cebc3
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: bc8c9b65c70fef86887ed80a8049b4e930188ffe
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48090991"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56038392"
 ---
 # <a name="convert-a-data-source-from-embedded-to-shared-report-builder-and-ssrs"></a>Convertire un'origine dati da incorporata a condivisa (Generatore report e SSRS)
   Ogni origine dati nel riquadro dei dati del report è incorporata e specifica del report oppure è condivisa. In Generatore report un'origine dati condivisa punta a un'origine dati condivisa pubblicata in un server di report o in un sito di SharePoint. In Progettazione report un'origine dati condivisa punta a un'origine dati condivisa nella cartella **Origini dati condivise** di Esplora soluzioni.  
@@ -63,7 +63,7 @@ ms.locfileid: "48090991"
      Nel riquadro dei dati del report, l'icona dell'origine dati viene modificata nell'icona dell'origine dati condivisa.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Gestire origini dati del Report](manage-report-data-sources.md)   
+ [Gestire origini dati dei report](manage-report-data-sources.md)   
  [Connessioni dati, origini dati e stringhe di connessione in Reporting Services](../data-connections-data-sources-and-connection-strings-in-reporting-services.md)  
   
   

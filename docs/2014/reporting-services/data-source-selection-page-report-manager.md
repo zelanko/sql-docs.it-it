@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 7f7e8b19-0c0b-4b1f-9cc1-057099aa07eb
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: db1e01a18d755076585c64ee3518492c8f5de561
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 1bfcb23c4ed497d2705ece469e2949c332cdfcdf
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48091141"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56032322"
 ---
 # <a name="data-source-selection-page-report-manager"></a>Pagina di selezione dell'origine dei dati (Gestione report)
   La pagina di selezione dell'origine dati consente di selezionare un'origine dati condivisa esistente da utilizzare con un report o un modello di report. È inoltre possibile utilizzare questa pagina per selezionare un'origine dati diversa. Per visualizzare il tipo di origine dati o la stringa di connessione, è necessario navigare fino all'origine dati condivisa e visualizzare le pagine delle proprietà.  
@@ -47,7 +47,7 @@ ms.locfileid: "48091141"
  Fare clic per copiare l'origine dati selezionata nella pagina delle proprietà delle origini dati.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Gestire origini dati del Report](report-data/manage-report-data-sources.md)   
+ [Gestire origini dati dei report](report-data/manage-report-data-sources.md)   
  [Specificare le credenziali e le informazioni sulla connessione per le origini dati del report](report-data/specify-credential-and-connection-information-for-report-data-sources.md)   
  [Pagina delle proprietà Origini dati &#40;Gestione report&#41;](../../2014/reporting-services/data-sources-properties-page-report-manager.md)   
  [Pagina Nuova origine dati &#40;Gestione report&#41;](../../2014/reporting-services/new-data-source-page-report-manager.md)   

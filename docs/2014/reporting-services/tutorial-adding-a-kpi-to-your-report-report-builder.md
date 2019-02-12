@@ -1,5 +1,5 @@
 ---
-title: 'Esercitazione: Aggiunta di un indicatore di prestazioni chiave al report (Generatore report) | Microsoft Docs'
+title: 'Esercitazione: Aggiunta di un indicatore KPI al Report (Generatore Report) | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
@@ -10,15 +10,15 @@ ms.topic: conceptual
 ms.assetid: 1bf77859-0b33-4f40-abaf-ebeeb6ebb1f8
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: 595e05361087ad821b8baeaf6a676936626eb1e2
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 5362e72fefa36102737e362a1b4ec8b11b96c77f
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48056522"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56037662"
 ---
-# <a name="tutorial-adding-a-kpi-to-your-report-report-builder"></a>Esercitazione: Aggiunta di un indicatore di prestazioni chiave al report (Generatore report)
+# <a name="tutorial-adding-a-kpi-to-your-report-report-builder"></a>Esercitazione: Aggiunta di un indicatore KPI al Report (Generatore Report)
   Un indicatore di prestazioni di chiave (KPI) è un valore misurabile dotato di significato aziendale. In questa esercitazione verrà illustrato come includere un indicatore KPI in un report. In questo scenario l'indicatore KPI è il riepilogo delle vendite in base alle sottocategorie del prodotto. Lo stato corrente dell'indicatore KPI viene mostrato tramite colori, misuratori e indicatori.  
   
  Nell'illustrazione seguente viene mostrato il report che verrà creato.  
@@ -45,7 +45,7 @@ ms.locfileid: "48056522"
 7.  [Salvare il Report](#Save)  
   
 > [!NOTE]  
->  In questa esercitazione, i passaggi della procedura guidata sono consolidati in due procedure: una per la creazione del set di dati e un'altra per la creazione di una tabella. Per istruzioni dettagliate su come selezionare un server di report, scegliere un'origine dati, creare un set di dati ed eseguire la procedura guidata, vedere la prima esercitazione di questa serie: [Esercitazione: Creazione di un report tabella semplice &#40;Generatore report&#41;](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md).  
+>  In questa esercitazione, i passaggi della procedura guidata sono consolidati in due procedure: una per la creazione del set di dati e un'altra per la creazione di una tabella. Per istruzioni dettagliate su come selezionare un server di report, scegliere un'origine dati, creare un set di dati ed eseguire la procedura guidata, vedere la prima esercitazione di questa serie: [Esercitazione: Creazione di un Report tabella semplice &#40;Generatore Report&#41;](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md).  
   
  Tempo previsto per il completamento di questa esercitazione: 15 minuti.  
   
@@ -75,7 +75,7 @@ ms.locfileid: "48056522"
   
 5.  Scegliere **Avanti**.  
   
-6.  Nella pagina **Scegliere una connessione a un'origine dei dati** selezionare un'origine dati esistente o individuare il server di report e selezionare un'origine dati. Se non vi è alcuna origine dati disponibile o non si dispone dell'accesso a un server di report, è possibile utilizzare un'origine dati incorporata. Per altre informazioni, vedere [Esercitazione: Creazione di un report tabella semplice &#40;Generatore report&#41;](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md).  
+6.  Nella pagina **Scegliere una connessione a un'origine dei dati** selezionare un'origine dati esistente o individuare il server di report e selezionare un'origine dati. Se non vi è alcuna origine dati disponibile o non si dispone dell'accesso a un server di report, è possibile utilizzare un'origine dati incorporata. Per altre informazioni, vedere [esercitazione: Creazione di un Report tabella semplice &#40;Generatore Report&#41;](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md).  
   
 7.  Scegliere **Avanti**.  
   
@@ -159,7 +159,7 @@ ms.locfileid: "48056522"
   
 12. Scegliere **Fine**.  
   
-     La tabella viene aggiunta all'area di progettazione. Nella tabella sono presenti cinque colonne e altrettante righe. Nel riquadro Gruppi di righe sono visualizzati tre gruppi di righe: SalesDate, Subcategory e Details. I dati dettaglio costituiscono tutti i dati recuperati dalla query del set di dati.  
+     La tabella viene aggiunta all'area di progettazione. Nella tabella sono presenti cinque colonne e altrettante righe. Nel riquadro gruppi di righe vengono visualizzati tre gruppi di righe: SalesDate, Subcategory e Details. I dati dettaglio costituiscono tutti i dati recuperati dalla query del set di dati.  
   
 13. Fare clic su **Esegui** per visualizzare l'anteprima del report.  
   
@@ -172,7 +172,7 @@ ms.locfileid: "48056522"
   
 1.  Nella tabella, fare doppio clic su due celle verso il basso dal `[Sum(Sales)]` cella (riga del subtotale che visualizza le vendite per una sottocategoria) e quindi fare clic su **proprietà casella di testo**.  
   
-2.  In **riempire**, fare clic sul **fx** accanto al **colore di riempimento** l'opzione e immettere l'espressione seguente nella **imposta espressione per: BackgroundColor** campo:  
+2.  In **riempire**, fare clic sul **fx** accanto al **colore di riempimento** l'opzione e immettere l'espressione seguente nella **imposta espressione per: BackgroundColor** field:  
   
  `=IIF(Sum(Fields!Sales.Value) >= 5000 ,"Lime", IIF(Sum(Fields!Sales.Value) < 2500, "Red","Yellow"))`  
   

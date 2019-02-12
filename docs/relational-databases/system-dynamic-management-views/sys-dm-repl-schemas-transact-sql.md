@@ -3,7 +3,6 @@ title: sys.dm_repl_schemas (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
-ms.reviewer: ''
 ms.technology: system-objects
 ms.topic: language-reference
 f1_keywords:
@@ -19,12 +18,12 @@ ms.assetid: 6f5fefff-8492-4360-bd5b-a97287367914
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 2aa0b4e885d586e64c6c613e07d2969d77885715
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 430f7d53baa507a86f4b9060a41ce513adeef904
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47763381"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56031182"
 ---
 # <a name="sysdmreplschemas-transact-sql"></a>sys.dm_repl_schemas (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -32,15 +31,15 @@ ms.locfileid: "47763381"
   Restituisce informazioni sulle colonne di tabella pubblicate dalla replica.  
   
  
-|Nome colonna|Tipo di dati|Description|  
+|Nome colonna|Tipo di dati|Descrizione|  
 |-----------------|---------------|-----------------|  
 |**artcache_schema_address**|**varbinary(8)**|Indirizzo in memoria della struttura dello schema nella cache per l'articolo di tabella pubblicato.|  
 |**tabid**|**bigint**|ID della tabella replicata.|  
-|**IndexID**|**smallint**|ID di un indice cluster nella tabella pubblicata.|  
+|**indexid**|**smallint**|ID di un indice cluster nella tabella pubblicata.|  
 |**idSch**|**bigint**|ID dello schema di tabella.|  
 |**tabschema**|**nvarchar(510)**|Nome dello schema di tabella.|  
 |**ccTabschema**|**smallint**|Lunghezza in caratteri dello schema di tabella.|  
-|**TabName**|**nvarchar(510)**|Nome della tabella pubblicata.|  
+|**tabname**|**nvarchar(510)**|Nome della tabella pubblicata.|  
 |**ccTabname**|**smallint**|Lunghezza in caratteri del nome della tabella pubblicata.|  
 |**rowsetid_delete**|**bigint**|ID della riga eliminata.|  
 |**rowsetid_insert**|**bigint**|ID della riga inserita.|  

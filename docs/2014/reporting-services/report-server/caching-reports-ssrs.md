@@ -22,13 +22,13 @@ helpviewer_keywords:
 ms.assetid: 146542c3-8efd-4b89-a8d8-77d22896630e
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 7f026e83f5f968480b9484c0a1251929a299055b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: e0e063b662d83655eb9c8a99b8ec1317dfffa263
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48069415"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56029702"
 ---
 # <a name="caching-reports-ssrs"></a>Memorizzazione dei report nella cache (SSRS)
   Nel server di report è possibile memorizzare nella cache una copia di un report già elaborato, che verrà utilizzata quando un utente apre il report. Per l'utente, l'unico elemento disponibile per determinare che il report è una copia memorizzata nella cache è rappresentato dalla data e dall'ora di esecuzione del report. Se la data e l'ora non sono quelle correnti e se il report non è uno snapshot, significa che il report è stato recuperato dalla cache.  
@@ -63,7 +63,7 @@ ms.locfileid: "48069415"
   
  La memorizzazione nella cache del report è particolarmente utile se si desidera memorizzare nella cache più istanze di un report con parametri, dove vengono utilizzati valori di parametro diversi per generare istanze del report diverse. Si noti che nel report è possibile specificare solo parametri basati su query.  
   
- Quando si specifica una pianificazione o si crea una sottoscrizione guidata dai dati, è necessario pianificare la frequenza con cui i report vengono recapitati alla cache. Per recapitare le nuove copie alla cache, è necessario che le vecchie copie siano scadute. Pertanto, le proprietà di esecuzione del report devono essere configurate per includere le impostazioni di scadenza della cache. Le impostazioni di scadenza devono essere coerenti con la pianificazione della sottoscrizione definita dall'utente. Se, ad esempio, si crea una sottoscrizione che deve essere eseguita ogni notte, anche la cache deve scadere ogni notte prima dell'ora di esecuzione della sottoscrizione. Se le Proprietà di esecuzione non prevedono l'ora di scadenza, i recapiti più recenti vengono ignorati. Per altre informazioni sui piani di aggiornamento della cache, vedere [pianificazioni](../subscriptions/schedules.md). Per altre informazioni sull'impostazione delle proprietà, vedere [impostare le proprietà di elaborazione di Report](set-report-processing-properties.md). Per altre informazioni sulle sottoscrizioni guidate dai dati, vedere [sottoscrizioni guidate dai dati](../subscriptions/data-driven-subscriptions.md).  
+ Quando si specifica una pianificazione o si crea una sottoscrizione guidata dai dati, è necessario pianificare la frequenza con cui i report vengono recapitati alla cache. Per recapitare le nuove copie alla cache, è necessario che le vecchie copie siano scadute. Pertanto, le proprietà di esecuzione del report devono essere configurate per includere le impostazioni di scadenza della cache. Le impostazioni di scadenza devono essere coerenti con la pianificazione della sottoscrizione definita dall'utente. Se, ad esempio, si crea una sottoscrizione che deve essere eseguita ogni notte, anche la cache deve scadere ogni notte prima dell'ora di esecuzione della sottoscrizione. Se le Proprietà di esecuzione non prevedono l'ora di scadenza, i recapiti più recenti vengono ignorati. Per altre informazioni sui piani di aggiornamento della cache, vedere [Pianificazioni](../subscriptions/schedules.md). Per altre informazioni sull'impostazione delle proprietà, vedere [Impostare proprietà di elaborazione dei report](set-report-processing-properties.md). Per altre informazioni sull'uso delle sottoscrizioni guidate dai dati, vedere [Sottoscrizioni guidate dai dati](../subscriptions/data-driven-subscriptions.md).  
   
 ## <a name="conditions-that-cause-cache-expiration"></a>Condizioni che determinano la scadenza della cache  
  Un report memorizzato nella cache può venire invalidato a causa della modifica degli elementi seguenti: definizione del report, parametri del report, credenziali dell'origine dei dati oppure opzioni di esecuzione del report. Se si elimina un report memorizzato nella cache, anche la copia del report presente nella cache viene eliminata.  
@@ -71,8 +71,8 @@ ms.locfileid: "48069415"
  Se per qualsiasi motivo non è possibile eseguire il rendering del report da un'istanza memorizzata nella cache (ad esempio se i valori dei parametri specificati da un utente sono diversi da quelli utilizzati per creare il report memorizzato nella cache) il report viene eseguito nuovamente dal server di report.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Impostare le opzioni di elaborazione &#40;Reporting Services in SharePoint la modalità integrata&#41;](../set-processing-options-reporting-services-in-sharepoint-integrated-mode.md)   
- [Impostare le proprietà di elaborazione dei Report](set-report-processing-properties.md)   
+ [Impostare le opzioni di elaborazione &#40;Reporting Services in modalità integrata SharePoint&#41;](../set-processing-options-reporting-services-in-sharepoint-integrated-mode.md)   
+ [Impostare proprietà di elaborazione dei report](set-report-processing-properties.md)   
  [Concetti relativi a Reporting Services &#40;SSRS&#41;](../reporting-services-concepts-ssrs.md)   
  [Precaricare la cache &#40;Gestione report&#41;](preload-the-cache-report-manager.md)   
  [Pianificazioni](../subscriptions/schedules.md)   

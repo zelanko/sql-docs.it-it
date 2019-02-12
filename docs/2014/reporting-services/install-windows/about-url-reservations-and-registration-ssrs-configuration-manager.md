@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: c2c460c3-e749-4efd-aa02-0f8a98ddbc76
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: fb50a9f9674e13c1032091fbae6da55170d44863
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+manager: kfile
+ms.openlocfilehash: fb1f04a10837088a9c427d6c0994af4334e8988f
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53374323"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56035102"
 ---
 # <a name="about-url-reservations-and-registration--ssrs-configuration-manager"></a>Informazioni su prenotazioni e registrazione URL (Gestione configurazione SSRS)
   Gli URL per le applicazioni di Reporting Services vengono definiti come prenotazioni URL in HTTP.SYS. Una prenotazione URL definisce la sintassi di un endpoint dell'URL in un'applicazione Web. Le prenotazioni URL vengono definite sia per il servizio Web ReportServer sia per Gestione report quando si configurano le applicazioni nel server di report. Le prenotazioni URL vengono create automaticamente quando si configurano gli URL tramite il programma di installazione o lo strumento di configurazione di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] :  
@@ -63,7 +63,7 @@ ms.locfileid: "53374323"
   
 |Prenotazione URL in HTTP.SYS|URL|Spiegazione|  
 |---------------------------------|---------|-----------------|  
-|http://+:80/reportserver|http://\<nomecomputer > / reportserver<br /><br /> http://\<IPAddress > / reportserver<br /><br /> http://localhost/reportserver|La prenotazione URL specifica un carattere jolly (+) sulla porta 80. In questo modo nella coda del server di report viene inserita qualsiasi richiesta in ingresso che specifica un host per la risoluzione nel computer server di report sulla porta 80. Si noti che con tale prenotazione URL è possibile utilizzare il numero desiderato di URL per accedere al server di report.<br /><br /> Si tratta della prenotazione URL predefinita per un server di report [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] per la maggior parte dei sistemi operativi.|  
+|http://+:80/reportserver|http://\<nomecomputer > / reportserver<br /><br /> http://\<IPAddress>/reportserver<br /><br /> http://localhost/reportserver|La prenotazione URL specifica un carattere jolly (+) sulla porta 80. In questo modo nella coda del server di report viene inserita qualsiasi richiesta in ingresso che specifica un host per la risoluzione nel computer server di report sulla porta 80. Si noti che con tale prenotazione URL è possibile utilizzare il numero desiderato di URL per accedere al server di report.<br /><br /> Si tratta della prenotazione URL predefinita per un server di report [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] per la maggior parte dei sistemi operativi.|  
 |http://123.45.67.0:80/reportserver|http://123.45.67.0/reportserver|Questa prenotazione URL specifica un indirizzo IP ed è molto più restrittiva della prenotazione URL con carattere jolly. Solo gli URL che includono l'indirizzo IP possono essere utilizzati per la connessione al server di report. Specifica questa prenotazione URL, una richiesta a un server di report all'indirizzo http://\<nomecomputer > / reportserver o http://localhost/reportserver avrebbe esito negativo.|  
   
 ##  <a name="DefaultURLs"></a> URL predefiniti  
@@ -88,10 +88,10 @@ ms.locfileid: "53374323"
 |-------------------|-----------------|-----------------|----------------------------------------|  
 |Istanza predefinita|servizio Web ReportServer|http://\<nomeserver > / reportserver|http://\<nomeserver >: 80/reportserver|  
 |Istanza predefinita|Gestione report|http://\<nomeserver > / reportserver|http://\<nomeserver >: 80/reportserver|  
-|Istanza denominata|servizio Web ReportServer|http://\<nomeserver > / ReportServer _\<NomeIstanza >|http://\<nomeserver >: 80/reportserver_\<NomeIstanza >|  
+|Istanza denominata|servizio Web ReportServer|http://\<servername>/reportserver_\<instancename>|http://\<nomeserver >: 80/reportserver_\<NomeIstanza >|  
 |Istanza denominata|Gestione report|http://\<nomeserver > / Reports _\<NomeIstanza >|http://\<nomeserver >: 80/reports_\<NomeIstanza >|  
-|SQL Server Express|servizio Web ReportServer|http://\<nomeserver > / reportserver_SQLExpress|http://\<nomeserver >: 80/reportserver_SQLExpress|  
-|SQL Server Express|Gestione report|http://\<nomeserver > / reports_SQLExpress|http://\<nomeserver >: 80/reports_SQLExpress|  
+|SQL Server Express|servizio Web ReportServer|http://\<servername>/reportserver_SQLExpress|http://\<nomeserver >: 80/reportserver_SQLExpress|  
+|SQL Server Express|Gestione report|http://\<servername>/reports_SQLExpress|http://\<servername>:80/reports_SQLExpress|  
   
 ##  <a name="URLPermissionsAccounts"></a> Autenticazione e identità del servizio per gli URL di Reporting Services  
  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] specificano l'account del servizio del server di report. L'account con cui viene eseguito il servizio viene utilizzato per tutti gli URL creati per le applicazioni di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] in esecuzione nella stessa istanza. L'identità del servizio dell'istanza del server di report viene archiviata nel file RSReportServer.config.  

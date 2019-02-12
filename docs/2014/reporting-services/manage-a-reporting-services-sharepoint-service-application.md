@@ -10,16 +10,16 @@ ms.topic: conceptual
 ms.assetid: bfda2e04-2d82-4534-bb50-90925f7386ae
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 7b11c64fe270eeff5fad8631d8d75dfd3bd9c60b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 472582e7a365a3e9bb9e94e4cb26a1b923519544
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48135146"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56016262"
 ---
 # <a name="manage-a-reporting-services-sharepoint-service-application"></a>Gestire un'applicazione di servizio SharePoint di Reporting Services
-  [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] Le applicazioni di servizio vengono gestite da Amministrazione centrale SharePoint. Le pagine Gestione e Proprietà consentono di aggiornare la configurazione dell'applicazione di servizio e le attività di amministrazione comuni.  
+  [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] vengono gestite da Amministrazione centrale SharePoint. Le pagine Gestione e Proprietà consentono di aggiornare la configurazione dell'applicazione di servizio e le attività di amministrazione comuni.  
   
  In questo argomento vengono illustrate le informazioni seguenti:  
   
@@ -38,13 +38,13 @@ ms.locfileid: "48135146"
 -   [Avvisi e sottoscrizioni provisioning](#bkmk_provisionsubscriptions)  
   
 ## <a name="to-open-service-application-properties-page"></a>Per aprire la pagina delle proprietà delle applicazioni di servizio  
- Per aprire la pagina delle proprietà di un'applicazione di servizio [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)], completare le azioni seguenti:  
+ Per aprire la pagina delle proprietà di un'applicazione di servizio [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] , completare le azioni seguenti:  
   
 1.  Nel gruppo Gestione applicazioni di Amministrazione centrale fare clic su **Gestisci applicazioni di servizio**.  
   
 2.  Fare clic accanto al nome dell'applicazione di servizio oppure sulla colonna **Tipo** per selezionare l'intera riga, quindi fare clic su **Proprietà** sulla barra multifunzione di SharePoint.  
   
- Per altre informazioni sulle proprietà dell'applicazione di servizio, vedere [Step 3: Create a Reporting Services Service Application](../../2014/sql-server/install/install-reporting-services-sharepoint-mode-for-sharepoint-2013.md#bkmk_create_serrviceapplication).  
+ Per altre informazioni sulle proprietà dell'applicazione di servizio, vedere [passaggio 3: Creare un'applicazione di servizio Reporting Services](../../2014/sql-server/install/install-reporting-services-sharepoint-mode-for-sharepoint-2013.md#bkmk_create_serrviceapplication).  
   
 ##  <a name="bkmk_openpages"></a> Per aprire le pagine di gestione delle applicazioni di servizio  
  Per aprire le pagine di gestione di un'applicazione di servizio [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] , completare le azioni seguenti:  
@@ -91,10 +91,10 @@ ms.locfileid: "48135146"
   
 |Impostazione|Commenti|  
 |-------------|--------------|  
-|Abilita registrazione di esecuzione|Il valore predefinito è TRUE.<br /><br /> Consente di specificare se il server di report deve generare log di traccia, nonché il numero di giorni per cui conservare tali log. . I log vengono archiviati nel computer del server di report, nella cartella \Microsoft SQL Server\MSSQL.n\ReportServer\Log. Viene creato un nuovo file di log a ogni riavvio del servizio. Per altre informazioni sui file di log, vedere [Report Server Service Trace Log](report-server/report-server-service-trace-log.md)|  
+|Abilita registrazione di esecuzione|Il valore predefinito è TRUE.<br /><br /> Consente di specificare se il server di report deve generare log di traccia, nonché il numero di giorni per cui conservare tali log. . I log vengono archiviati nel computer del server di report, nella cartella \Microsoft SQL Server\MSSQL.n\ReportServer\Log. Viene creato un nuovo file di log a ogni riavvio del servizio. Per ulteriori informazioni sui file di log, vedere [Report Server Service Trace Log](report-server/report-server-service-trace-log.md).|  
 |Giorni di mantenimento del log di esecuzione|Il valore predefinito è 60 giorni.|  
   
- In [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] è supportata la registrazione ULS di SharePoint.  Per altre informazioni, vedere [Abilitare gli eventi di Reporting Services per il log di traccia di SharePoint &#40;ULS&#41;](report-server/turn-on-reporting-services-events-for-the-sharepoint-trace-log-uls.md)  
+ [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] è supportata la registrazione ULS di SharePoint.  Per altre informazioni, vedere [Abilitare gli eventi di Reporting Services per il log di traccia di SharePoint &#40;ULS&#41;](report-server/turn-on-reporting-services-events-for-the-sharepoint-trace-log-uls.md)  
   
 ###  <a name="bkmk_security_settings_section"></a> Impostazioni di sicurezza  
   
@@ -126,9 +126,9 @@ ms.locfileid: "48135146"
 > [!IMPORTANT]  
 >  La modifica periodica della chiave di crittografia di Reporting Services è una procedura consigliata ai fini della sicurezza. È consigliabile modificare la chiave immediatamente dopo un aggiornamento della versione principale di Reporting Services. Modificando la chiave di crittografia di Reporting Services dopo un aggiornamento si riduce il rischio di ulteriori interruzioni del servizio rispetto invece all'eseguire questa operazione all'esterno del ciclo di aggiornamento.  
   
-|Pagina|Description|  
+|Pagina|Descrizione|  
 |----------|-----------------|  
-|Backup della chiave di crittografia|1) Digitare una password nelle caselle **Password:** e **Conferma password** , quindi fare clic su **Esporta**. Se la password digitata non soddisfa i requisiti di complessità dei criteri di dominio, verrà visualizzato un avviso.<br /><br /> 2) Viene chiesto di specificare un percorso in cui salvare il file della chiave. È consigliabile archiviare i file della chiave in un computer separato da quello che è in esecuzione [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]. Il nome file predefinito corrisponde al nome dell'applicazione di servizio.|  
+|Backup della chiave di crittografia|1) Digitare una password nelle caselle **Password:** e **Conferma password** , quindi fare clic su **Esporta**. Se la password digitata non soddisfa i requisiti di complessità dei criteri di dominio, verrà visualizzato un avviso.<br /><br /> 2) Viene chiesto di specificare un percorso in cui salvare il file della chiave. Valutare l'opportunità di archiviare il file della chiave in un computer distinto da quello che esegue [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]. Il nome file predefinito corrisponde al nome dell'applicazione di servizio.|  
 |Ripristina chiave di crittografia|1) Digitare o individuare il file della chiave nella casella **Percorso file**<br /><br /> 2) Nella casella **Password** digitare la password usata per eseguire il backup del file di crittografia.<br /><br /> 3) Fare clic su **OK**|  
 |Cambia chiave di crittografia|Questa operazione comporta la creazione di una chiave nuova e l'esecuzione di una nuova operazione di crittografia del contenuto crittografato. Se si dispone di grandi quantità di contenuto, questa operazione può richiedere diverse ore.<br /><br /> Al termine dell'operazione di modifica della chiave di crittografia, è consigliabile eseguire un backup della nuova chiave.|  
 |Elimina contenuto crittografato|Il contenuto eliminato non può essere recuperato.<br /><br /> **\*\* Importante \*\*** L'azione di eliminazione e ricreazione della chiave simmetrica non può essere invertita o annullata. e può comportare conseguenze significative nell'installazione corrente. Se si elimina la chiave, verranno eliminati anche tutti i dati esistenti crittografati con questa chiave simmetrica. I dati eliminati possono includere stringhe di connessione a origini dei dati esterne per i report, stringhe di connessione archiviate e alcune informazioni relative alle sottoscrizioni.|  
@@ -154,7 +154,7 @@ ms.locfileid: "48135146"
 Get-SPRSServiceApplication | select typename, name, service, ueaccountname  
 ```  
   
- Per altre informazioni, vedere [cmdlet di PowerShell per Reporting Services SharePoint Mode](../../2014/reporting-services/powershell-cmdlets-for-reporting-services-sharepoint-mode.md).  
+ Per altre informazioni, vedere [PowerShell cmdlets for Reporting Services SharePoint Mode](../../2014/reporting-services/powershell-cmdlets-for-reporting-services-sharepoint-mode.md)(Cmdlet di PowerShell per la modalità SharePoint di Reporting Services).  
   
 ### <a name="options"></a>Opzioni  
  **Specifica account di esecuzione**  
@@ -192,7 +192,7 @@ Get-SPRSServiceApplication | select typename, name, service, ueaccountname
   
 2.  Nella pagina Associazioni applicazione di servizio modificare la visualizzazione in **Applicazioni di servizio**.  
   
-3.  Trovare e fare clic sul nome del nuovo [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] applicazione del servizio. È possibile fare clic anche sull' **impostazione predefinita** del nome del gruppo proxy di applicazione per aggiungere il proxy per impostare il gruppo piuttosto che completare i passaggi seguenti.  
+3.  Trovare e fare clic sul nome della nuova applicazione di servizio di [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] . È possibile fare clic anche sull' **impostazione predefinita** del nome del gruppo proxy di applicazione per aggiungere il proxy per impostare il gruppo piuttosto che completare i passaggi seguenti.  
   
 4.  Nella casella di selezione **Modifica il gruppo di connessioni seguente** scegliere **Personalizza**.  
   

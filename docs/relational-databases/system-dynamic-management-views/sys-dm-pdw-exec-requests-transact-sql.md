@@ -2,8 +2,8 @@
 title: sys.dm_pdw_exec_requests (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/09/2017
-ms.prod: ''
-ms.prod_service: sql-data-warehouse, pdw
+ms.prod: sql
+ms.technology: data-warehouse
 ms.reviewer: ''
 ms.topic: language-reference
 dev_langs:
@@ -13,12 +13,12 @@ author: ronortloff
 ms.author: rortloff
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: ed96138b4808448fef815fad90342e671f37ed5f
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: edbed9f5f0e8672c4f779431f810099b50470a9a
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52409593"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56016792"
 ---
 # <a name="sysdmpdwexecrequests-transact-sql"></a>sys.dm_pdw_exec_requests (Transact-SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
@@ -28,8 +28,8 @@ ms.locfileid: "52409593"
 |Nome colonna|Tipo di dati|Descrizione|Intervallo|  
 |-----------------|---------------|-----------------|-----------|  
 |request_id|**nvarchar(32)**|Chiave per questa visualizzazione. Id numerico univoco associato alla richiesta.|Deve essere univoco tra tutte le richieste nel sistema.|  
-|session_id|**nvarchar(32)**|Id numerico univoco associato alla sessione in cui è stata eseguita la query. Visualizzare [DM pdw_exec_sessions &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-exec-sessions-transact-sql.md).||  
-|status|**nvarchar(32)**|Stato corrente della richiesta.|'In esecuzione', 'Sospeso', 'Completed', 'Annullata', "Non riuscito".|  
+|session_id|**nvarchar(32)**|Id numerico univoco associato alla sessione in cui è stata eseguita la query. See [sys.dm_pdw_exec_sessions &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-exec-sessions-transact-sql.md).||  
+|status|**nvarchar(32)**|Stato corrente della richiesta.|'Running', 'Suspended', 'Completed', 'Cancelled', 'Failed'.|  
 |submit_time|**datetime**|Ora in cui è stata inviata la richiesta per l'esecuzione.|Valido **datetime** inferiore o uguale a start_time e ora corrente.|  
 |start_time|**datetime**|Ora di inizio dell'esecuzione della richiesta.|NULL per le richieste in coda. in caso contrario, validi **datetime** minore o uguale all'ora corrente.|  
 |end_compile_time|**datetime**|Ora in cui il motore completato la compilazione della richiesta.|NULL per le richieste che non sono stati compilati ancora; in caso contrario, un valore valido **datetime** minore start_time e minore o uguale all'ora corrente.|

@@ -4,25 +4,24 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: 1a6c138e-643b-4ae6-ad08-93631f149c20
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 559f6aa6b31b8998703a93e84dc100ce375cbda8
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: a86ddf0a715fc3a2313f555e898b3bd94cf66d8c
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48139531"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56030592"
 ---
 # <a name="modifying-the-forecasting-structure-intermediate-data-mining-tutorial"></a>Modifica della struttura di previsione (Esercitazione intermedia sul data mining)
   La struttura di data mining creata nell'attività precedente contiene un singolo modello di previsione. Prima di elaborare ed esaminare il modello, è necessario alterarne leggermente la struttura e modificarne una proprietà.  
   
 ## <a name="modifying-the-mining-structure"></a>Modifica della struttura di data mining  
- È possibile modificare la struttura di data mining utilizzando il **struttura di Data Mining** scheda della finestra di progettazione modelli di Data Mining. Quando è stato creato il modello con Creazione guidata modello di data mining, sono state utilizzate solo tre colonne: ReportingDate, ModelRegion e Quantity. Tuttavia, il **Forecasting** tabella contiene anche una colonna quantità che è possibile usare per prevedere l'importo delle vendite. Tramite il **struttura di Data Mining** scheda, è possibile aggiungere questa colonna dalla vista origine dati alla struttura di data mining.  
+ È possibile modificare la struttura di data mining utilizzando il **struttura di Data Mining** scheda della finestra di progettazione modelli di Data Mining. Una volta creato il modello con Creazione guidata di Data Mining, è stato usato tre colonne: ReportingDate, ModelRegion e Quantity. Tuttavia, il **Forecasting** tabella contiene anche una colonna quantità che è possibile usare per prevedere l'importo delle vendite. Tramite il **struttura di Data Mining** scheda, è possibile aggiungere questa colonna dalla vista origine dati alla struttura di data mining.  
   
 #### <a name="to-add-the-amount-column-to-the-forecasting-mining-structure"></a>Per aggiungere la colonna Amount alla struttura di data mining Forecasting  
   
@@ -54,7 +53,7 @@ ms.locfileid: "48139531"
  [Personalizzazione ed elaborazione del modello di previsione &#40;esercitazione intermedia sul Data Mining&#41;](../../2014/tutorials/customize-process-forecasting-model-intermediate-data-mining-tutorial.md)  
   
 ## <a name="see-also"></a>Vedere anche  
- [Strutture di data mining &#40;Analysis Services - Data Mining&#41;](../../2014/analysis-services/data-mining/mining-structures-analysis-services-data-mining.md)   
- [Modelli di data mining &#40;Analysis Services - Data Mining&#41;](../../2014/analysis-services/data-mining/mining-models-analysis-services-data-mining.md)  
+ [Strutture di data mining &#40;Analysis Services - Data mining&#41;](../../2014/analysis-services/data-mining/mining-structures-analysis-services-data-mining.md)   
+ [Modelli di data mining &#40;Analysis Services - Data mining&#41;](../../2014/analysis-services/data-mining/mining-models-analysis-services-data-mining.md)  
   
   

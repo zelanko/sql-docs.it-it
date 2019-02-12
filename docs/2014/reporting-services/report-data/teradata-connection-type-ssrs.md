@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: b02779c2-a6b9-453c-815f-adad53353952
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: b11e02c807abe8fa4231d15129f5ae3b96d5c05a
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+manager: kfile
+ms.openlocfilehash: 4ce9fb555cce7913939eb8e611a319d7a938c064
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53366563"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56016512"
 ---
 # <a name="teradata-connection-type-ssrs"></a>Tipo di connessione Teradata (SSRS)
   Per includere dati da un database relazionale di Teradata nel report, è necessario disporre di un set di dati basato su un'origine dati del report di tipo Teradata. Questo tipo di origine dati predefinito è basato sull'estensione per l'elaborazione dati del provider gestito .NET per Teradata.  

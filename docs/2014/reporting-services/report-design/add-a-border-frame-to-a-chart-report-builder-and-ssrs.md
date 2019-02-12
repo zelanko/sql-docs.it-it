@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: ca0c5040-40bb-4cb7-bc2b-5bcbe73858bb
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: 4eeac09776fec458b1f887769cc690e158eab40b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: a15dbae1d2192c31165e04fb21ada9d0807d591e
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48160071"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56038482"
 ---
 # <a name="add-a-border-frame-to-a-chart-report-builder-and-ssrs"></a>Aggiungere un bordo o un frame a un grafico (Generatore report e SSRS)
   Per aumentare l'impatto visivo di un grafico è possibile utilizzare un bordo/frame intorno alla parte esterna del grafico. È possibile selezionare un bordo o un frame utilizzando la finestra di dialogo **Proprietà grafico** o il riquadro Proprietà. Non è possibile applicare i bordi del grafico ad altre aree dati.  

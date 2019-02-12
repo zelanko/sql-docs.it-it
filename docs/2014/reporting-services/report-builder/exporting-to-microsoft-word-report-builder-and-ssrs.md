@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 0cd8ae26-4682-4473-8f15-af084951defd
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: dc149e8d8af6b2b5f08d849f3fda261849ff9d8f
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+manager: kfile
+ms.openlocfilehash: 30401dfbc8d9ea9e4c77dad1516b9301d6dae833
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53361093"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56030402"
 ---
 # <a name="exporting-to-microsoft-word-report-builder-and-ssrs"></a>Esportazione in Microsoft Word (Generatore report e SSRS)
   L'estensione per il rendering di Word consente di eseguire il rendering di report nel formato nativo di [!INCLUDE[ofprword](../../includes/ofprword-md.md)] 2007-2010. Il formato è Office Open XML.  
@@ -77,9 +77,9 @@ ms.locfileid: "53361093"
   
  Questa situazione si verifica in quanto tramite il renderer di Word nel report viene eseguita l'analisi dei campi correlati alla paginazione, ad esempio **PageNumber** e **TotalPages** , e viene gestito solo un riferimento semplice, non le chiamate a una funzione. In questo caso, tramite l'espressione viene chiamata la funzione **ToString** . Le due espressioni seguenti sono equivalenti ed entrambe consentono di eseguire correttamente il rendering quando il report viene visualizzato in anteprima in Generatore report o Progettazione report o viene eseguito il rendering del report pubblicato in Gestione report o in una raccolta di SharePoint. Tuttavia, il renderer di Word consente di analizzare correttamente solo la seconda espressione ed eseguire il rendering dei numeri di pagina corretti.  
   
--   **Espressione complessa:**  L'espressione è `="Average Sales " & Avg(Fields!YTDPurchase.Value, "Sales") & " Page Number " & Globals!PageNumber`  
+-   **Espressione complessa:**  l'espressione è `="Average Sales " & Avg(Fields!YTDPurchase.Value, "Sales") & " Page Number " & Globals!PageNumber`  
   
--   **Espressione con sequenze di testo:** Testo, **Average Sales**ed espressione `=Avg(Fields!YTDPurchase.Value, "Sales)`e testo **numero di pagina**ed espressione `=Globals!PageNumber`  
+-   **Espressione con sequenze di testo:** testo, **vendite medie** ed espressione, `=Avg(Fields!YTDPurchase.Value, "Sales)` e testo, **numero di pagina** ed espressione `=Globals!PageNumber`  
   
  Per evitare questo problema, usare più sequenze di testo invece di una sola espressione complessa quando si usano espressioni nei piè di pagina e nelle intestazioni. Le due espressioni seguenti sono equivalenti. La prima è un'espressione complessa, mentre nella seconda vengono utilizzate sequenze di testo. Il renderer di Word consente di analizzare correttamente solo la seconda espressione.  
   

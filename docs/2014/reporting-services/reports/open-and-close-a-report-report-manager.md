@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: a9db1caf-1e7d-41ee-9aed-e09fd0712f9b
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: b8db59646eb8bbb4d4bbe35c0fc54e4b243d4b28
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 41d67805a939cd6b5826dd227cc02e348e48dc32
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48065731"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56034398"
 ---
 # <a name="open-and-close-a-report-report-manager"></a>Aprire e chiudere un report (Gestione report)
   È possibile utilizzare Gestione report per visualizzare i report pubblicati in un server di report. Per impostazione predefinita, tutti i report vengono aperti in formato HTML. Dopo avere aperto un report, è possibile esportarlo per visualizzarlo in altri formati di applicazioni. Se il report contiene caratteristiche interattive o se si tratta di un report di Generatore report contenente dati interattivi, sarà possibile fare clic sui collegamenti per visualizzare report o dati aggiuntivi.  
@@ -42,8 +42,8 @@ ms.locfileid: "48065731"
      La chiusura di un report non ne comporta la rimozione dalla cache del browser. Per disconnettere il report è necessario chiudere il browser.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Ricerca di report e altri elementi &#40;Report e SSRS&#41;](../report-builder/searching-for-reports-and-other-items-report-builder-and-ssrs.md)   
- [Contenuto della pagina &#40;gestione Report&#41;](../contents-page-report-manager.md)   
+ [Ricerca di report e altri elementi &#40;Generatore report e SSRS&#41;](../report-builder/searching-for-reports-and-other-items-report-builder-and-ssrs.md)   
+ [Pagina Contenuto &#40;Gestione report&#41;](../contents-page-report-manager.md)   
  [Ricerca, visualizzazione e gestione dei report &#40;Generatore report e SSRS&#41;](../report-builder/finding-viewing-and-managing-reports-report-builder-and-ssrs.md)   
  [Gestione contenuto del server di report &#40;modalità nativa SSRS&#41;](../report-server/report-server-content-management-ssrs-native-mode.md)  
   

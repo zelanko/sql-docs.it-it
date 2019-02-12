@@ -12,13 +12,13 @@ helpviewer_keywords:
 ms.assetid: 3a26dccc-6ad6-48f5-a882-f96c6c0dd405
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: daaa0d4a48f1e5feb90fdf2fd8270b287fa7fc97
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 3216a1978378676ef74c0ec11a57d73a9ba528ab
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48145891"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56037812"
 ---
 # <a name="design-reports-with-report-designer-ssrs"></a>Progettare report con Progettazione report (SSRS)
   Progettazione report consente di ottenere report e soluzioni di creazione di report [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] completi. Tale strumento offre un'interfaccia grafica in cui è possibile definire origini dati, set di dati, query, posizioni di layout del report per aree dati e campi, nonché caratteristiche interattive, quali l'interazione tra parametri e set di report.  
@@ -118,7 +118,7 @@ ms.locfileid: "48145891"
   
     -   Premere F5.  
   
-     Se si usa una configurazione di progetto che compila il report senza distribuirlo, il report specificato nella `StartItem` proprietà della configurazione corrente viene aperto in una finestra di anteprima distinta.  
+     Se si utilizza una configurazione del progetto che compila il report senza distribuirlo, il report specificato nella proprietà `StartItem` della configurazione corrente viene aperto in una finestra di anteprima separata.  
   
     > [!NOTE]  
     >  Per utilizzare la modalità debug, è necessario impostare un elemento iniziale. In Esplora soluzioni, fare clic sul progetto report, fare clic su **delle proprietà**e in `StartItem`, selezionare il nome del report da visualizzare.  
@@ -175,7 +175,7 @@ ms.locfileid: "48145891"
   
  Nella seguente tabella vengono elencati i livelli di errore.  
   
-|Livello di errore|Description|  
+|Livello di errore|Descrizione|  
 |-----------------|-----------------|  
 |0|Problemi di compilazione più gravi e inevitabili che impediscono la visualizzazione in anteprima e la distribuzione di report.|  
 |1|Problemi di compilazione gravi che modificano drasticamente il layout del report.|  
@@ -183,7 +183,7 @@ ms.locfileid: "48145891"
 |3|Problemi di compilazione minori che modificano il layout del report in maniera meno significativa e quasi impercettibile.|  
 |4|Utilizzato solamente per pubblicare avvisi.|  
   
- Quando si tenta di visualizzare in anteprima o distribuire un report contenente elementi di report nuovi in [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)], ad esempio mappe e barre dei dati, tali elementi possono essere rimossi dal report. Per impostazione predefinita, la proprietà ErrorLevel della configurazione è impostata su 2. Pertanto la compilazione del report potrebbe non essere eseguita correttamente in caso di rimozione della mappa. Se tuttavia si imposta il valore della proprietà ErrorLevel su 0 o 1, la mappa viene rimossa, viene visualizzato un avviso e il processo di compilazione continua.  
+ Quando si tenta di visualizzare in anteprima o di distribuire un report contenente elementi di report nuovi in [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]quali mappe e barre dei dati, tali elementi possono essere rimossi dal report. Per impostazione predefinita, la proprietà ErrorLevel della configurazione è impostata su 2. Pertanto la compilazione del report potrebbe non essere eseguita correttamente in caso di rimozione della mappa. Se tuttavia si imposta il valore della proprietà ErrorLevel su 0 o 1, la mappa viene rimossa, viene visualizzato un avviso e il processo di compilazione continua.  
   
   
 ## <a name="see-also"></a>Vedere anche  

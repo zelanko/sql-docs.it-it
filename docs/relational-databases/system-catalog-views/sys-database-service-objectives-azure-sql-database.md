@@ -2,10 +2,9 @@
 title: database_service_objectives (Database SQL di Azure) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/30/2016
-ms.prod: ''
+ms.service: sql-database
 ms.prod_service: sql-database, sql-data-warehouse
 ms.reviewer: ''
-ms.technology: system-objects
 ms.topic: conceptual
 keywords:
 - pool elastico
@@ -17,12 +16,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: = azuresqldb-current || = azure-sqldw-latest || = sqlallproducts-allversions
-ms.openlocfilehash: a8b37ada1fa7c6024a5454ed907b886e513c151c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 7a073dba8a05aa6f098bdf2b2ce1666d4cc324be
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47769309"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56028522"
 ---
 # <a name="sysdatabaseserviceobjectives-azure-sql-database"></a>database_service_objectives (Database SQL di Azure)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-asdw-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-asdw-xxx-md.md)]
@@ -30,16 +29,16 @@ ms.locfileid: "47769309"
 Restituisce l'edizione (livello di servizio), l'obiettivo di servizio (piano tariffario) e nome del pool elastico, se presente, per un database SQL di Azure o Azure SQL Data Warehouse. Se connessi al database master in un server di Database SQL di Azure, restituisce informazioni su tutti i database. Per Azure SQL Data Warehouse, è necessario essere connessi al database master.  
   
   
- Per informazioni sui prezzi, vedere [prestazioni e opzioni del Database SQL: Database SQL-prezzi](https://azure.microsoft.com/pricing/details/sql-database/) e [prezzi di SQL Data Warehouse](https://azure.microsoft.com/pricing/details/sql-data-warehouse/).  
+ Per informazioni sui prezzi, vedere [opzioni del Database SQL e le prestazioni: Database SQL-prezzi](https://azure.microsoft.com/pricing/details/sql-database/) e [SQL Data Warehouse prezzi](https://azure.microsoft.com/pricing/details/sql-data-warehouse/).  
   
  Per modificare le impostazioni del servizio, vedere [ALTER DATABASE (Database SQL di Azure)](../../t-sql/statements/alter-database-azure-sql-database.md) e [ALTER DATABASE (Azure SQL Data Warehouse)](../../t-sql/statements/alter-database-azure-sql-data-warehouse.md).  
   
  La vista database_service_objectives contiene le colonne seguenti.  
   
-|Nome colonna|Tipo di dati|Description|  
+|Nome colonna|Tipo di dati|Descrizione|  
 |-----------------|---------------|-----------------|  
 |database_id|INT|ID del database, univoco all'interno di un'istanza del server di Database SQL di Azure. Sottoponibile a join con [Sys. Databases &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md).|  
-|edition|sysname|Il livello di servizio per il database o data warehouse: **base**, **Standard**, **Premium** oppure **Data Warehouse**.|  
+|edition|sysname|Il livello di servizio per il database o data warehouse: **Base**, **Standard**, **Premium** oppure **Data Warehouse**.|  
 |service_objective|sysname|Il piano tariffario del database. Se il database è in un pool elastico, restituisce **ElasticPool**.<br /><br /> Nel **base** tier, restituisce **base**.<br /><br /> **Database singolo in un livello di servizio standard** restituisce uno dei seguenti: S0, S1, S2, S3, S4, S6, S7, S9 o S12.<br /><br /> **Database singolo in un livello premium** restituisce delle operazioni seguenti: P1, P2, P4, P6, P11 o P15.<br /><br /> **SQL Data Warehouse** restituisce DW100 tramite DW10000c.|  
 |nome_pool_elastico|sysname|Il nome del [pool elastico](https://azure.microsoft.com/documentation/articles/sql-database-elastic-pool/) a cui appartiene il database. Restituisce **NULL** se il database è un database singolo o un warehoue dati.|  
   

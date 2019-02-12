@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 2c4adf2f-e9c4-4fae-bd3c-97fe64436caf
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: d218103d5a8de6b10ad5b1981f13ac4526f59aee
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+manager: kfile
+ms.openlocfilehash: 77d52ac48c46e798f16e9af2adc3b349fe86ba2d
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53358243"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56037112"
 ---
 # <a name="sharepoint-list-connection-type-ssrs"></a>Tipo di connessione dell'elenco SharePoint (SSRS)
   Per includere dati da un elenco Microsoft SharePoint nel report, è necessario aggiungere o creare un set di dati basato su un'origine dati del report di tipo Elenco Microsoft SharePoint. Si tratta di un tipo di origine dati predefinito basato sull'estensione per i dati dell'Elenco SharePoint di Microsoft SQL Server Reporting Services. Utilizzare questo tipo di origine dati per connettersi e recuperare i dati dell'elenco dai siti [!INCLUDE[SPF2010](../../includes/spf2010-md.md)], [!INCLUDE[SPS2010](../../includes/sps2010-md.md)], [!INCLUDE[winSPServ](../../includes/winspserv-md.md)] 3.0 e [!INCLUDE[offSPServ](../../includes/offspserv-md.md)] 2007.  
@@ -43,8 +43,8 @@ ms.locfileid: "53358243"
 |-|---------------------------|-----------------------------------------|----------------------------------------|  
 |Elenco SharePoint di una farm locale|Autenticazione di Windows (integrata) o token utente di SharePoint|Yes|Yes|  
 ||Archiviate, su richiesta, nessuna (con le credenziali di Windows<sup>1</sup>)|Yes|No|  
-|Elenco SharePoint remoto|Autenticazione di Windows (integrata) o token utente di SharePoint|Yes|Non<sup>2</sup>|  
-||Archiviate, su richiesta, nessuna (con le credenziali di Windows<sup>1</sup>)|Yes|Non<sup>2</sup>|  
+|Elenco SharePoint remoto|Autenticazione di Windows (integrata) o token utente di SharePoint|Yes|No<sup>2</sup>|  
+||Archiviate, su richiesta, nessuna (con le credenziali di Windows<sup>1</sup>)|Yes|No<sup>2</sup>|  
   
  **tabella 2**  
   
@@ -52,8 +52,8 @@ ms.locfileid: "53358243"
 |-|---------------------------|-----------------------------------------|----------------------------------------|  
 |Elenco SharePoint di una farm locale|Autenticazione di Windows (integrata) o token utente di SharePoint|Yes|Yes|  
 ||Archiviate, su richiesta, nessuna (con le credenziali di Windows<sup>1</sup>)|No|No|  
-|Elenco SharePoint remoto|Autenticazione di Windows (integrata) o token utente di SharePoint|Yes|Non<sup>2</sup>|  
-||Archiviate, su richiesta, nessuna (con le credenziali di Windows<sup>1</sup>)|No|Non<sup>2</sup>|  
+|Elenco SharePoint remoto|Autenticazione di Windows (integrata) o token utente di SharePoint|Yes|No<sup>2</sup>|  
+||Archiviate, su richiesta, nessuna (con le credenziali di Windows<sup>1</sup>)|No|No<sup>2</sup>|  
   
  <sup>1</sup> credenziali archiviate e credenziali su richiesta con credenziali non Windows non è supportato.  
   

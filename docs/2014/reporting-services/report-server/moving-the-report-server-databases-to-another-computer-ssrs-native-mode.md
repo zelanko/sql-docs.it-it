@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 44a9854d-e333-44f6-bdc7-8837b9f34416
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: b353e2034a7a21d963bed48e7ee7e670f677f70c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: e7cbe523d7edb8872814c3280c8e7c8a06cbf84a
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48078581"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56016623"
 ---
 # <a name="moving-the-report-server-databases-to-another-computer-ssrs-native-mode"></a>Spostamento di database del server di report in un altro computer (modalità nativa SSRS)
   È possibile spostare i database del server di report usati in un'installazione [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] in un'istanza di un computer diverso. I database reportserver e reportservertempdb devono essere spostati o copiati insieme. Per un'installazione di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] sono necessari entrambi i database. Il database reportservertempdb deve essere correlato tramite il nome al database reportserver primario che si sta spostando.  
@@ -215,16 +215,16 @@ GO
 7.  Fare clic su **Avanti** , quindi su **Fine**.  
   
 > [!NOTE]  
->  Oggetto [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] l'installazione richiede che il [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] istanza include la `RSExecRole` ruolo. Quando si imposta la connessione al database del server di report tramite lo strumento di configurazione di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] , vengono eseguite le operazioni di creazione dei ruoli, registrazione dell'account di accesso e assegnazione di ruoli. Se per configurare la connessione si utilizzano approcci alternativi, in particolare l'utilità della riga di comando rsconfig.exe, il server di report non si troverà in uno stato attivo. Per renderlo disponibile il server di report, potrebbe essere necessario scrivere codice WMI. Per altre informazioni, vedere [Accedere al provider WMI per Reporting Services](../tools/access-the-reporting-services-wmi-provider.md).  
+>  Per un'installazione di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] è necessario che nell'istanza di [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] sia incluso il ruolo `RSExecRole`. Quando si imposta la connessione al database del server di report tramite lo strumento di configurazione di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] , vengono eseguite le operazioni di creazione dei ruoli, registrazione dell'account di accesso e assegnazione di ruoli. Se per configurare la connessione si utilizzano approcci alternativi, in particolare l'utilità della riga di comando rsconfig.exe, il server di report non si troverà in uno stato attivo. Per renderlo disponibile il server di report, potrebbe essere necessario scrivere codice WMI. Per altre informazioni, vedere [Accedere al provider WMI per Reporting Services](../tools/access-the-reporting-services-wmi-provider.md).  
   
 ## <a name="see-also"></a>Vedere anche  
  [Creare RSExecRole](../security/create-the-rsexecrole.md)   
- [Avviare e arrestare il servizio Server di Report](start-and-stop-the-report-server-service.md)   
- [Configurare una connessione di Database Server di Report &#40;Gestione configurazione SSRS&#41;](../../sql-server/install/configure-a-report-server-database-connection-ssrs-configuration-manager.md)   
- [Configurare l'Account di esecuzione automatica &#40;Gestione configurazione SSRS&#41;](../install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md)   
+ [Avviare e arrestare il servizio del server di report](start-and-stop-the-report-server-service.md)   
+ [Configurare una connessione del database del server di report &#40;Gestione configurazione SSRS&#41;](../../sql-server/install/configure-a-report-server-database-connection-ssrs-configuration-manager.md)   
+ [Configurare l'account di esecuzione automatica &#40;Gestione configurazione SSRS&#41;](../install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md)   
  [Gestione configurazione Reporting Services &#40;modalità nativa&#41;](../../sql-server/install/reporting-services-configuration-manager-native-mode.md)   
- [Utilità rsconfig &#40;SSRS&#41;](../tools/rsconfig-utility-ssrs.md)   
+ [utilità rsconfig &#40;SSRS&#41;](../tools/rsconfig-utility-ssrs.md)   
  [Configurare e gestire chiavi di crittografia &#40;Gestione configurazione SSRS&#41;](../install-windows/ssrs-encryption-keys-manage-encryption-keys.md)   
- [Database del Server di report &#40;modalità nativa SSRS&#41;](report-server-database-ssrs-native-mode.md)  
+ [Database del server di report &#40;modalità nativa SSRS&#41;](report-server-database-ssrs-native-mode.md)  
   
   

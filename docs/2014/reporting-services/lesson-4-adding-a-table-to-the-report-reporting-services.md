@@ -1,5 +1,5 @@
 ---
-title: 'Lezione 4: Aggiunta di una tabella al report (Reporting Services) | Microsoft Docs'
+title: 'Lezione 4: Aggiunta di una tabella al Report (Reporting Services) | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
@@ -10,15 +10,15 @@ ms.topic: conceptual
 ms.assetid: 5ddf2914-bcdd-427d-8cba-0ccb8342f819
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: d990d18498547434a6f7774dfcee076d2986ee40
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: d6255750df935fd3112f0e3b41941983a4882a0b
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48220811"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56033232"
 ---
-# <a name="lesson-4-adding-a-table-to-the-report-reporting-services"></a>Lezione 4: Aggiunta di una tabella al report (Reporting Services)
+# <a name="lesson-4-adding-a-table-to-the-report-reporting-services"></a>Lezione 4: Aggiunta di una tabella al Report (Reporting Services)
   Dopo aver definito il set di dati, è possibile iniziare la progettazione del report. È possibile creare un layout del report trascinando le aree dati, le caselle di testo, le immagini e altri elementi che si desidera includere nel report e rilasciandoli nell'area di progettazione.  
   
  Le *aree dati*sono elementi che contengono righe ripetute di dati provenienti dai set di dati sottostanti. In un report di base è disponibile una sola area dati, tuttavia è possibile aggiungerne altre, ad esempio se si desidera aggiungere un grafico al report tabulare. Dopo avere aggiunto un'area dati, è possibile aggiungervi dei campi.  
@@ -47,7 +47,7 @@ ms.locfileid: "48220811"
     > [!NOTE]  
     >  L'intestazione di colonna è Totale riga. Progettazione report crea automaticamente un nome descrittivo per la colonna suddividendo LineTotal in due parole.  
   
-     Nel diagramma riportato di seguito è illustrata un'area dati della tabella popolata con i campi seguenti: Date, Order, Product, Qty e Line Total.  
+     Il diagramma seguente mostra un'area dati tabella che è stata popolata con i campi seguenti: Date, Order, Product, Qty e totale della riga.  
   
      ![Progettazione, tabella con riga di intestazione e riga di dettaglio](../../2014/tutorials/media/rs-basictabledetailsdesign.gif "progettazione, tabella con riga di intestazione e riga di dettaglio")  
   
@@ -68,7 +68,7 @@ ms.locfileid: "48220811"
 >  Per salvare il report, scegliere **Salva tutti** nel menu **File** .  
   
 ## <a name="next-steps"></a>Passaggi successivi  
- È stata aggiunta un'area dati tabella al report, all'area dati sono stati aggiunti campi ed è stato visualizzato in anteprima il report. Il passaggio successivo consiste nella formattazione delle intestazioni di colonna e dei valori di data e valuta. Vedere [Lezione 5: Formattazione di un report &#40;Reporting Services&#41;](../reporting-services/lesson-5-formatting-a-report-reporting-services.md).  
+ È stata aggiunta un'area dati tabella al report, all'area dati sono stati aggiunti campi ed è stato visualizzato in anteprima il report. Il passaggio successivo consiste nella formattazione delle intestazioni di colonna e dei valori di data e valuta. Vedere [lezione 5: Formattazione di un Report &#40;Reporting Services&#41;](../reporting-services/lesson-5-formatting-a-report-reporting-services.md).  
   
 ## <a name="see-also"></a>Vedere anche  
  [Tabelle &#40;Generatore report e SSRS&#41;](report-design/tables-report-builder-and-ssrs.md)   

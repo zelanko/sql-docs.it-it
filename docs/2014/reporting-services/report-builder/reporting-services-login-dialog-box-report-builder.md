@@ -12,20 +12,20 @@ f1_keywords:
 ms.assetid: daf5eec6-f9d2-475c-8c65-9cf74e5523a2
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: f593da2103d0efda0b70e5628e23249e437fedfb
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: ce767793dc0994c30bba1301a193f0736c7e2e14
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48223211"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56030422"
 ---
 # <a name="reporting-services-login-dialog-box-report-builder"></a>Finestra di dialogo Accesso a Reporting Services (Generatore report)
   Utilizzare la finestra di dialogo **Accesso a Reporting Services** per specificare le credenziali per la pubblicazione di report nel server di report. Per supporto con queste credenziali, rivolgersi all'amministratore del server di report.  
   
 ## <a name="options"></a>Opzioni  
  **Server**  
- Indica il nome del server di report. Ad esempio, `http://localhost/reportserver`. Per i server di report che utilizzano una porta diversa da quella predefinita, ovvero 80, includere il numero di porta. Ad esempio, `http://localhost:8080/reportserver`.  
+ Indica il nome del server di report. Ad esempio, `http://localhost/reportserver`. Per i server di report che utilizzano una porta diversa da quella predefinita, ovvero 80, includere il numero di porta. Ad esempio `http://localhost:8080/reportserver`.  
   
  **Nome utente**  
  Consente di digitare il nome utente da utilizzare per l'accesso al servizio Web.  

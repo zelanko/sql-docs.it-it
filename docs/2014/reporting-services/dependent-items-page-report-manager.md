@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 4dcfb311-e9c3-4c5d-b2e0-018d79f37d2e
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: f43168d9085ba513094f9cce05c16a173c260e68
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 73549c4e578b65d87da4c9863f537bc898973657
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48197585"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56030072"
 ---
 # <a name="dependent-items-page-report-manager"></a>Pagina Elementi dipendenti (Gestione report)
   La pagina Elementi dipendenti consente di visualizzare un elenco di report e modelli che fanno riferimento a un'origine dati condivisa. L'icona disponibile per ogni tipo di elemento indica se si tratta di un report o un modello. Questa pagina può essere visualizzata nella visualizzazione Elenco o Dettagli. Se per ogni elemento si desidera visualizzare un numero maggiore di informazioni, è consigliabile utilizzare la visualizzazione Dettagli. In tale visualizzazione sono infatti disponibili opzioni aggiuntive per la pagina. Per semplificare la gestione dell'origine dati condivisa, questa pagina fornisce collegamenti ai report e ai modelli che utilizzano l'origine dati, metriche relative all'ultima esecuzione del report o del modello, nonché i pulsanti Elimina e Sposta, che consentono di rimuovere in modo semplice report e modelli non più utilizzati o di spostarli in una posizione diversa mentre si stabilisce se sono ancora necessari.  
@@ -35,7 +35,7 @@ ms.locfileid: "48197585"
 4.  Selezionare la scheda **Elementi dipendenti** .  
   
 ## <a name="options"></a>Opzioni  
- **Nome**  
+ **Name**  
  Consente di visualizzare il nome del report o del modello. Fare clic sul nome del report per aprirlo. Fare clic sul nome del modello per aprire le relative pagine delle proprietà.  
   
  **Descrizione**  
@@ -65,7 +65,7 @@ ms.locfileid: "48197585"
 ## <a name="see-also"></a>Vedere anche  
  [Guida F1 di gestione report](../../2014/reporting-services/report-manager-f1-help.md)   
  [Gestione report &#40;modalità nativa SSRS&#41;](../../2014/reporting-services/report-manager-ssrs-native-mode.md)   
- [Contenuto della pagina &#40;gestione Report&#41;](../../2014/reporting-services/contents-page-report-manager.md)   
+ [Pagina Contenuto &#40;Gestione report&#41;](../../2014/reporting-services/contents-page-report-manager.md)   
  [Guida sensibile al contesto di Gestione report](../../2014/reporting-services/report-manager-f1-help.md)  
   
   

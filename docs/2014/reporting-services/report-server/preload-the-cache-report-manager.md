@@ -13,13 +13,13 @@ helpviewer_keywords:
 ms.assetid: 152a1051-8aa5-4c01-bc85-f8be8971b0cd
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: e83d32be1dbb93a75c1d46f3edf7f46d8a0f8a7d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: ff32fcd498d7998f79b480369d90a07f974f6dc6
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48209501"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56035082"
 ---
 # <a name="preload-the-cache-report-manager"></a>Precaricare la cache (Gestione report)
   Per precaricare la cache per un set di dati condiviso, è possibile creare un piano di aggiornamento della cache per il set di dati stesso.  
@@ -87,7 +87,7 @@ ms.locfileid: "48209501"
   
 8.  Scegliere **Avanti**.  
   
-9. Specificare la query o il comando per il recupero dei dati relativi ai sottoscrittori. Se lo si desidera, aumentare il periodo di timeout per le query che richiedono un'elaborazione prolungata. Esempio:  
+9. Specificare la query o il comando per il recupero dei dati relativi ai sottoscrittori. Se lo si desidera, aumentare il periodo di timeout per le query che richiedono un'elaborazione prolungata. Ad esempio:  
   
     ```  
     Select * from UserInfo  
@@ -121,10 +121,10 @@ ms.locfileid: "48209501"
 18. Fare clic su **Applica**.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Sottoscrizioni guidate dai dati](../subscriptions/data-driven-subscriptions.md)   
+ [Data-Driven Subscriptions](../subscriptions/data-driven-subscriptions.md)   
  [Creare una sottoscrizione guidata dai dati &#40;esercitazione su SSRS&#41;](../create-a-data-driven-subscription-ssrs-tutorial.md)   
  [Prestazioni, snapshot, memorizzazione nella cache &#40;Reporting Services&#41;](performance-snapshots-caching-reporting-services.md)   
- [Impostare le proprietà di elaborazione dei Report](set-report-processing-properties.md)   
- [La memorizzazione dei report &#40;SSRS&#41;](caching-reports-ssrs.md)  
+ [Impostare proprietà di elaborazione dei report](set-report-processing-properties.md)   
+ [Memorizzazione dei report nella cache &#40;SSRS&#41;](caching-reports-ssrs.md)  
   
   

@@ -15,16 +15,16 @@ helpviewer_keywords:
 ms.assetid: 26fd74dc-d02f-40f7-aeb3-50ce05e9e6b9
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 6b5d14f94a9fdd71a628ddecdc1b91bad8e11e54
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 2b3f2f6fc33a5722fdae20e3b3b351ab23c61f45
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48096683"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56034132"
 ---
 # <a name="initializing-custom-assembly-objects"></a>Inizializzazione di oggetti assembly personalizzati
-  In alcuni casi, potrebbe essere necessario inizializzare valori di proprietà e campi nelle classi di assembly personalizzate quando si crea un'istanza di tali classi. In genere, è necessario inizializzare le classi personalizzate con i valori disponibili nelle raccolte di oggetti globali del report. A tale scopo, è possibile eseguire l'override del metodo **OnInit** dell'oggetto **Code** di un report. Per accedere al metodo **OnInit**, usare l'elemento **Code** della definizione del report. Per l'inizializzazione di valori di campo o proprietà delle classi in un assembly personalizzato da usare in un report sono disponibili due tecniche. È possibile dichiarare e creare una nuova istanza della classe tramite **OnInit** oppure è possibile chiamare un metodo disponibile pubblicamente tramite **OnInit**.  
+  In alcuni casi, potrebbe essere necessario inizializzare valori di proprietà e campi nelle classi di assembly personalizzate quando si crea un'istanza di tali classi. In genere, è necessario inizializzare le classi personalizzate con i valori disponibili nelle raccolte di oggetti globali del report. A tale scopo, è possibile eseguire l'override del metodo **OnInit** dell'oggetto **Code** di un report. Per accedere al metodo **OnInit**, usare l'elemento **Code** della definizione del report. Esistono due tecniche per l'inizializzazione della proprietà o valori dei campi delle classi in un assembly personalizzato che si intende usare nel report: È possibile dichiarare e creare una nuova istanza della classe utilizzando **OnInit**, oppure è possibile chiamare un metodo disponibile pubblicamente utilizzando **OnInit**.  
   
 ## <a name="global-object-collections-and-initialization"></a>Raccolte di oggetti globali e inizializzazione  
  Per l'inizializzazione delle variabili delle classi personalizzate sono disponibili diverse raccolte. È possibile usare le raccolte **Globals** e **User**. Le raccolte **Parameters**, **Fields** e **ReportItems** non sono disponibili nel ciclo di vita del report durante il quale viene richiamato il metodo **OnInit**. Per usare le raccolte condivise **Globals** o **User**, è necessario includere il riferimento all'oggetto **Report**. Ad esempio, per inizializzare la classe personalizzata in base alla lingua corrente dell'utente che accede al report, l'elemento **Code** può essere simile al seguente:  

@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: 4bd25e15-9d9e-4528-b7bc-ccb856643aec
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 3d83e8034885d83056ea6258ede86072239f6e74
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: d2d0e73d1d9a4058ff63320552604b2bfa1bca8a
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48224477"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56031682"
 ---
 # <a name="customizing-and-processing-the-forecasting-model-intermediate-data-mining-tutorial"></a>Personalizzazione ed elaborazione del modello di previsione (Esercitazione intermedia sul data mining)
   L'algoritmo [!INCLUDE[msCoName](../includes/msconame-md.md)] Time Series fornisce parametri che influiscono sulle modalità di creazione di un modello e di analisi dei dati temporali. La modifica di queste proprietà può influire in modo significativo sul modo in cui il modello di data mining esegue le stime.  
@@ -25,7 +24,7 @@ ms.locfileid: "48224477"
   
 1.  Si personalizzerà il modo in cui il modello gestisce i periodi di tempo aggiungendo un nuovo valore per il *PERIODICITY_HINT* parametro.  
   
-2.  Si conosceranno altri due importanti parametri per l'algoritmo Microsoft Time Series: FORECAST_METHOD che consente di controllare il metodo utilizzato per la previsione e PREDICTION_SMOOTHING che consente di personalizzare la combinazione di stime a lungo e breve termine.  
+2.  Si apprenderà sulle due altri parametri importanti per l'algoritmo Microsoft Time Series: FORECAST_METHOD che consente di controllare il metodo utilizzato per la previsione e PREDICTION_SMOOTHING che consente di personalizzare la combinazione delle stime a breve termine e a lungo termine.  
   
 3.  Facoltativamente, si indicherà in che modo si desidera che l'algoritmo attribuisca i valori mancanti.  
   
@@ -68,7 +67,7 @@ ms.locfileid: "48224477"
 ## <a name="handling-missing-data-optional"></a>Gestione di dati mancanti (facoltativo)  
  In diversi casi, è possibile che nei dati di vendita siano presenti gap riempiti con valori Null oppure che un negozio non sia stato in grado di inviare il report prima della scadenza, lasciando una cella vuota alla fine della serie. In questi scenari, in [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] viene generato l'errore seguente e il modello non viene elaborato.  
   
- "Errore (Data mining): timestamp non sincronizzati a partire dalla serie \<nome serie >, del modello di data mining, \<nome modello >. Tutte le serie temporali devono terminare allo stesso contrassegno temporale e i punti dati non possono essere omessi arbitrariamente. Se si imposta il parametro MISSING_VALUE_SUBSTITUTION su Previous o su una costante numerica, i punti dati mancanti verranno aggiunti automaticamente ove possibile."  
+ "Errore (Data mining): Timestamp non sincronizzati a partire dalla serie \<nome serie >, del modello di data mining, \<nome modello >. Tutte le serie temporali devono terminare allo stesso contrassegno temporale e i punti dati non possono essere omessi arbitrariamente. Se si imposta il parametro MISSING_VALUE_SUBSTITUTION su Previous o su una costante numerica, i punti dati mancanti verranno aggiunti automaticamente ove possibile."  
   
  Per evitare l'errore, è possibile impostare [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] in modo da fornire automaticamente nuovi valori per riempire i gap tramite i metodi seguenti:  
   
@@ -105,8 +104,8 @@ ms.locfileid: "48224477"
  [Esplorazione del modello di previsione &#40;esercitazione intermedia sul Data Mining&#41;](../../2014/tutorials/exploring-the-forecasting-model-intermediate-data-mining-tutorial.md)  
   
 ## <a name="see-also"></a>Vedere anche  
- [Riferimento tecnico per algoritmo Microsoft Time Series](../../2014/analysis-services/data-mining/microsoft-time-series-algorithm-technical-reference.md)   
+ [Riferimento tecnico per l'algoritmo Microsoft Time Series](../../2014/analysis-services/data-mining/microsoft-time-series-algorithm-technical-reference.md)   
  [Algoritmo Microsoft Time Series](../../2014/analysis-services/data-mining/microsoft-time-series-algorithm.md)   
- [Requisiti e considerazioni sull'elaborazione &#40;Data Mining&#41;](../../2014/analysis-services/data-mining/processing-requirements-and-considerations-data-mining.md)  
+ [Requisiti e considerazioni sull'elaborazione &#40;data mining&#41;](../../2014/analysis-services/data-mining/processing-requirements-and-considerations-data-mining.md)  
   
   

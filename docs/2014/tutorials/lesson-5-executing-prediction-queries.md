@@ -1,24 +1,23 @@
 ---
-title: 'Lezione 5: Esecuzione di query di stima | Microsoft Docs'
+title: "Lezione 5: L'esecuzione di query di stima | Microsoft Docs"
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: 0037bd2f-aa2d-464b-bf86-b0210f0438b1
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 1ad048ec7efe492b604ad930450c83d3c6da666c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: a5f4d6dd79f62541e207df688349f694680e2421
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48139971"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56038412"
 ---
-# <a name="lesson-5-executing-prediction-queries"></a>Lezione 5: Esecuzione di query di stima
+# <a name="lesson-5-executing-prediction-queries"></a>Lezione 5: L'esecuzione di query di stima
   In questa lezione si userà il [SELECT FROM \<model > PREDICTION JOIN (DMX)](/sql/dmx/select-from-model-cases-dmx) forma dell'istruzione SELECT per creare due tipi diversi di stime basate su albero delle decisioni del modello creato in [ Lezione 2: Aggiunta di modelli di Data Mining alla struttura di Data Mining di associazione](../../2014/tutorials/lesson-2-adding-mining-models-to-the-market-basket-mining-structure.md). Di seguito è riportata la definizione di questi tipi di stima.  
   
  Query singleton  

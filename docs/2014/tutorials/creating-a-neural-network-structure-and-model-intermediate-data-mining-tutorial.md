@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 12/29/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - discretization [Analysis Services]
@@ -16,13 +15,13 @@ helpviewer_keywords:
 ms.assetid: 3f16215c-531e-4ecf-a11f-ee7c6a764463
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 144f2f754dc93be29f6be8fc786afa354a96c911
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+manager: kfile
+ms.openlocfilehash: 6787db165770f944838a312ecd3e0386d161da38
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52395804"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56037722"
 ---
 # <a name="creating-a-neural-network-structure-and-model-intermediate-data-mining-tutorial"></a>Creazione di una struttura e di un modello di rete neurale (Esercitazione intermedia sul data mining)
   Per creare un modello di data mining, è innanzitutto necessario utilizzare la Creazione guidata modello di data mining per creare una nuova struttura di data mining basata sulla nuova vista origine dati. In questa attività verrà utilizzata la procedura guidata per creare una struttura di data mining e, contemporaneamente, il modello di data mining associato basato sull'algoritmo [!INCLUDE[msCoName](../includes/msconame-md.md)] Neural Network.  
@@ -122,7 +121,7 @@ ms.locfileid: "52395804"
   
  ![distribuzione dei valori del livello servizio](../../2014/tutorials/media/skt-service-grade-valuesc.gif "distribuzione dei valori del livello servizio")  
   
- Di conseguenza, quando si elabora il modello, gli output possono essere raggruppati in modo diverso dal previsto. Ad esempio, se si usa il clustering per identificare i gruppi di procedure di valori, l'algoritmo divide i valori di ServiceGrade in intervalli come questo: 0,0748051948 - 0,09716216215. Benché questo raggruppamento sia matematicamente preciso, gli intervalli potrebbero non essere altrettanto significativi per gli utenti aziendali.  
+ Di conseguenza, quando si elabora il modello, gli output possono essere raggruppati in modo diverso dal previsto. Ad esempio, se si usa il clustering per identificare i gruppi di procedure di valori, l'algoritmo divide i valori di ServiceGrade in intervalli come questo: 0.0748051948 - 0.09716216215. Benché questo raggruppamento sia matematicamente preciso, gli intervalli potrebbero non essere altrettanto significativi per gli utenti aziendali.  
   
  In questo passaggio per rendere più intuitiva, il risultato si raggrupperanno i valori numerici in modo diverso, la creazione di copie della colonna di dati numerici.  
   
@@ -140,26 +139,26 @@ ms.locfileid: "52395804"
 |Value|SUPPORT|  
 |-----------|-------------|  
 |Missing|0|  
-|0,09875|120|  
+|0.09875|120|  
   
  Suddiviso tramite clustering  
   
 |Value|SUPPORT|  
 |-----------|-------------|  
-|\< 0,0748051948|34|  
-|0,0748051948 - 0,09716216215|27|  
-|0,09716216215 - 0.13297297295|39|  
+|\< 0.0748051948|34|  
+|0.0748051948 - 0.09716216215|27|  
+|0.09716216215 - 0.13297297295|39|  
 |0.13297297295 - 0.167499999975|10|  
-|> = 0.167499999975|10|  
+|>= 0.167499999975|10|  
   
  Suddiviso in base al metodo delle aree uguali  
   
 |Value|SUPPORT|  
 |-----------|-------------|  
-|\< 0,07|26|  
-|-0,07 0.00|22|  
-|0,09 - 0.11|36|  
-|> = 0,12|36|  
+|\< 0.07|26|  
+|0.07 - 0.00|22|  
+|0.09 - 0.11|36|  
+|>= 0.12|36|  
   
 > [!NOTE]  
 >  È possibile ottenere tali statistiche dal nodo delle statistiche marginali del modello al termine dell'elaborazione di tutti i dati. Per altre informazioni sul nodo delle statistiche marginali, vedere [modello di contenuto di Data Mining per i modelli di rete neurale &#40;Analysis Services - Data Mining&#41;](../../2014/analysis-services/data-mining/mining-model-content-for-neural-network-models-analysis-services-data-mining.md).  

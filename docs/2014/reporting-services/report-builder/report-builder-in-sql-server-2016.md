@@ -15,13 +15,13 @@ helpviewer_keywords:
 ms.assetid: 55bf4f9c-d037-412f-ae57-3fc39ce32fa5
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: 7df0a7c71dbc0298b2f9448f19287f83d34a8617
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: a0c9605bfafac3611b9a24f25bb7e46c194ed22c
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48209541"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56030482"
 ---
 # <a name="report-builder-in-sql-server-2014"></a>Generatore report in SQL Server 2014
   Generatore report è un ambiente per la creazione di report destinato a utenti aziendali che preferiscono lavorare nell'ambiente [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Office. Quando si progetta un report, si specifica dove ottenere i dati, quali dati ottenere e come visualizzarli. Quando si esegue il report, Elaborazione report utilizza tutte le informazioni specificate, recupera i dati e li combina con il layout per generare il report. È possibile visualizzare l'anteprima dei report in Generatore report oppure pubblicare un report in un server di report o in un server di report in modalità integrata SharePoint dove potrà essere eseguito da altri utenti.  
@@ -38,7 +38,7 @@ ms.locfileid: "48209541"
   
 -   **Avviare la procedura guidata di tabella, matrice o grafico**. Scegliere una connessione all'origine dati, trascinare campi per creare una query del set dei dati, selezionare un layout e uno stile e personalizzare il report.  
   
--   **Avviare la creazione guidata della mappa** per creare report di visualizzazione dei dati aggregati su uno sfondo geografico o geometrico. I dati di una mappa possono essere dati spaziali di una query [!INCLUDE[tsql](../../includes/tsql-md.md)] o di un file di forma ESRI (Environmental Systems Research Institute, Inc.) . È anche possibile aggiungere un [!INCLUDE[msCoName](../../../includes/msconame-md.md)] sfondo a tessere mappa Bing.  
+-   **Avviare la creazione guidata della mappa** per creare report di visualizzazione dei dati aggregati su uno sfondo geografico o geometrico. I dati di una mappa possono essere dati spaziali di una query [!INCLUDE[tsql](../../includes/tsql-md.md)] o di un file di forma ESRI (Environmental Systems Research Institute, Inc.) . È inoltre possibile aggiungere un sfondo a tessera mappa di [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Bing.  
   
 
   
@@ -82,19 +82,19 @@ ms.locfileid: "48209541"
  [Esercitazione: Creazione di un Report grafico rapido Offline](tutorial-create-a-quick-chart-report-offline-report-builder.md)  
  Vengono fornite informazioni preliminari su Generatore report e sulle procedure guidate disponibili per la creazione di report. Viene inoltre fornito un set di dati iniziale da utilizzare per evitare di connettersi a un'origine dati.  
   
- [Pianificazione di un Report &#40;Generatore Report&#41;](../report-design/planning-a-report-report-builder.md)  
+ [Pianificazione di un report &#40;Generatore report&#41;](../report-design/planning-a-report-report-builder.md)  
  Vengono fornite informazioni sugli aspetti che è necessario considerare prima di iniziare a compilare il report.  
   
- [Concetti relativi alla creazione di report &#40;Report e SSRS&#41;](../report-design/report-authoring-concepts-report-builder-and-ssrs.md)  
+ [Concetti relativi alla creazione di report &#40;Generatore report e SSRS&#41;](../report-design/report-authoring-concepts-report-builder-and-ssrs.md)  
  Vengono definiti i concetti principali utilizzati in tutta la documentazione relativa a Generatore report.  
   
- [Visualizzazione di progettazione report &#40;Generatore Report&#41;](report-design-view-report-builder.md)  
+ [Visualizzazione di progettazione report &#40;Generatore report&#41;](report-design-view-report-builder.md)  
  Vengono illustrati i diversi riquadri e le diverse aree della visualizzazione di progettazione report.  
   
- [Visualizzazione di progettazione set di dati condiviso &#40;Generatore Report&#41;](shared-dataset-design-view-report-builder.md)  
+ [Visualizzazione di progettazione set di dati condivisi &#40;Generatore report&#41;](shared-dataset-design-view-report-builder.md)  
  Vengono illustrati i diversi riquadri e le diverse aree della visualizzazione di progettazione del set di dati condiviso.  
   
- [Tasti di scelta rapida &#40;Generatore Report&#41;](keyboard-shortcuts-report-builder.md)  
+ [Tasti di scelta rapida &#40;Generatore report&#41;](keyboard-shortcuts-report-builder.md)  
  Vengono descritti i tasti di scelta rapida disponibili per la navigazione e la progettazione di report in Generatore report.  
   
  [Avviare Generatore Report &#40;Generatore Report&#41;](start-report-builder.md)  

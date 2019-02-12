@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 4bad1b6e-7d94-4b17-9502-ccd3dce0fdd9
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: 0b0f0b2087471d8f0c905b1a173eff57a0be7fd4
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 80b5920bdcf3aa3f1db9c649115613f6dca34ab5
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48096697"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56031211"
 ---
 # <a name="print-reports-report-builder-and-ssrs"></a>Stampa di report (Generatore report e SSRS)
   Dopo avere salvato un report in un server di report, è possibile visualizzarlo e stamparlo da un browser, da Gestione report o da qualsiasi applicazione utilizzata per visualizzare un report esportato. Prima di salvare un report, è possibile stamparlo durante l'anteprima.  
@@ -34,25 +34,25 @@ ms.locfileid: "48096697"
 3.  Per la maggior parte dei report esportati, la stampa include tutti gli elementi visibili, esattamente come sono visualizzati sullo schermo. Lo spazio vuoto nell'area di progettazione del report viene conservato. Per aggiungere o rimuovere le pagine vuote aggiuntive orizzontalmente, impostare la larghezza della pagina del report.  
   
 > [!NOTE]  
->  Le stampe di report HTML possono contenere solo il contenuto della prima pagina, se si utilizza il comando Stampa del browser. Per ottenere risultati migliori, stampare i report HTML con la funzionalità di stampa su client di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Per altre informazioni, vedere [stampare report da un Browser con il controllo di stampa &#40;Generatore Report e SSRS&#41;](print-reports-from-a-browser-with-the-print-control-report-builder-and-ssrs.md).  
+>  Le stampe di report HTML possono contenere solo il contenuto della prima pagina, se si utilizza il comando Stampa del browser. Per ottenere risultati migliori, stampare i report HTML con la funzionalità di stampa su client di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Per altre informazioni, vedere [Stampare i report da un browser con il controllo di stampa &#40;Generatore report e SSRS&#41;](print-reports-from-a-browser-with-the-print-control-report-builder-and-ssrs.md).  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
-## <a name="in-this-section"></a>Argomenti della sezione  
- [Stampare i report da un Browser con il controllo di stampa &#40;Report e SSRS&#41;](print-reports-from-a-browser-with-the-print-control-report-builder-and-ssrs.md)  
+## <a name="in-this-section"></a>In questa sezione  
+ [Stampare i report da un browser con il controllo di stampa &#40;Generatore report e SSRS&#41;](print-reports-from-a-browser-with-the-print-control-report-builder-and-ssrs.md)  
  Descrive come utilizzare la funzionalità di stampa sul lato client per stampare report dal browser o da Gestione report.  
   
- [Stampare i report da altre applicazioni &#40;Report e SSRS&#41;](print-reports-from-other-applications-report-builder-and-ssrs.md)  
+ [Stampare i report da altre applicazioni &#40;Generatore report e SSRS&#41;](print-reports-from-other-applications-report-builder-and-ssrs.md)  
  Descrive come stampare report esportati in un'altra applicazione.  
   
- [Stampare un Report &#40;Report e SSRS&#41;](print-a-report-report-builder-and-ssrs.md)  
- Vengono fornite istruzioni dettagliate su come stampare un report, come controllare i margini di una pagina e come specificare il formato carta per i report di cui verrà eseguito il rendering da renderer di interruzioni di pagina manuali, ovvero PDF, immagine o stampa.  
+ [Stampare un report &#40;Generatore report e SSRS&#41;](print-a-report-report-builder-and-ssrs.md)  
+ Vengono fornite istruzioni dettagliate su come stampare un report, come controllare i margini in una pagina e su come specificare il formato della carta per i report che verranno sottoposti a rendering da renderer di interruzioni di pagina: PDF, immagine o stampa.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Esportazione di report &#40;Report e SSRS&#41;](export-reports-report-builder-and-ssrs.md)   
- [Intestazioni di pagina e piè di pagina &#40;Report e SSRS&#41;](../report-design/page-headers-and-footers-report-builder-and-ssrs.md)   
- [Immagini &#40;Report e SSRS&#41;](../report-design/images-report-builder-and-ssrs.md)   
+ [Intestazioni di pagina e piè di pagina &#40;Generatore report e SSRS&#41;](../report-design/page-headers-and-footers-report-builder-and-ssrs.md)   
+ [Immagini &#40;Generatore report e SSRS&#41;](../report-design/images-report-builder-and-ssrs.md)   
  [Paginazione in Reporting Services &#40;Generatore report e SSRS&#41;](../report-design/pagination-in-reporting-services-report-builder-and-ssrs.md)  
   
   

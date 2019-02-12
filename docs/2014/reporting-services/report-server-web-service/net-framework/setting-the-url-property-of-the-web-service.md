@@ -18,16 +18,16 @@ helpviewer_keywords:
 ms.assetid: 4eac4e40-dafb-4403-acde-13df317c8ec8
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: c43dccbe5ee989a747110b9ffd0f6376532679df
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 06a5ec6ec02544354307f426534d583b0cfe8150
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48211151"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56016242"
 ---
 # <a name="setting-the-url-property-of-the-web-service"></a>Impostazione della proprietà Url del servizio Web
-  In qualsiasi momento nelle applicazioni [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] è possibile modificare l'URL di base del servizio Web ReportServer a cui è attualmente diretta l'applicazione. A tale scopo, è sufficiente impostare la proprietà **Url** dell'oggetto servizio. Esempio:  
+  In qualsiasi momento nelle applicazioni [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] è possibile modificare l'URL di base del servizio Web ReportServer a cui è attualmente diretta l'applicazione. A tale scopo, è sufficiente impostare la proprietà **Url** dell'oggetto servizio. Ad esempio:  
   
 ```vb  
 Dim rs As New ReportingService2010()  

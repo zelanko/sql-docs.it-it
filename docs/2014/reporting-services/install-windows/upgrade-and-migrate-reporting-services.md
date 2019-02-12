@@ -15,13 +15,13 @@ helpviewer_keywords:
 ms.assetid: 851a19a8-07ab-4d42-992f-1986c4c8df55
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 28f25620cede6c626280a8a095c66457344679d2
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+manager: kfile
+ms.openlocfilehash: 5028e1034a7f94cc877d6164b15f6f7b925a661e
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53363013"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56017182"
 ---
 # <a name="upgrade-and-migrate-reporting-services"></a>Upgrade and Migrate Reporting Services
   In questo argomento viene fornita una panoramica delle opzioni di aggiornamento e migrazione per [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. Sono disponibili due approcci generali per l'aggiornamento di una distribuzione di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .  
@@ -113,7 +113,7 @@ ms.locfileid: "53363013"
   
 -   Eseguire il backup di eventuali personalizzazioni nelle directory virtuali di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] esistenti in IIS.  
   
--   Rimuovere certificati SSL non validi.  In questa operazione sono inclusi i certificati scaduti e quelli che non si intende aggiornare prima dell'aggiornamento di Reporting Services.  Certificati non validi causerà l'esito negativo e verrà scritto un messaggio di errore simile al seguente nel file di Reporting Services Log: **Wmiproviderexception: Un certificato Secure Sockets Layer (SSL) non è configurato nel sito Web.** .  
+-   Rimuovere certificati SSL non validi.  In questa operazione sono inclusi i certificati scaduti e quelli che non si intende aggiornare prima dell'aggiornamento di Reporting Services.  Certificati non validi causerà l'esito negativo e verrà scritto un messaggio di errore simile al seguente nel file di Reporting Services Log: **Microsoft.ReportingServices.WmiProvider.WMIProviderException: Un certificato Secure Sockets Layer (SSL) non è configurato nel sito Web.** .  
   
  Prima di aggiornare un ambiente di produzione, eseguire sempre un aggiornamento di prova in un ambiente di pre-produzione che abbia la stessa configurazione dell'ambiente di produzione.  
   

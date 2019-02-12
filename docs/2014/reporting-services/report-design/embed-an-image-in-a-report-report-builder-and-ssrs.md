@@ -13,13 +13,13 @@ f1_keywords:
 ms.assetid: aed77345-5eeb-41f0-96c9-db6b4a11ec6f
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: 85a131bb3090405df1c525a55b6863547e804d2c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: b1541073379aa27c932fcadf7558de7d34c57e8d
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48064891"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56037862"
 ---
 # <a name="embed-an-image-in-a-report-report-builder-and-ssrs"></a>Incorporare un'immagine in un report (Generatore report e SSRS)
   Un report può includere un'immagine incorporata. L'incorporamento di un'immagine assicura che l'immagine sia sempre disponibile per il report, ma può influire sulle dimensioni della definizione del report, ovvero il file che definisce il report. Le immagini incorporate in un report sono elencate nel riquadro dei dati del report.  
@@ -64,8 +64,8 @@ ms.locfileid: "48064891"
 3.  Fare clic nella casella di testo accanto alla proprietà **MIMEType** e selezionare un nuovo tipo MIME nell'elenco a discesa.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Immagini &#40;Report e SSRS&#41;](images-report-builder-and-ssrs.md)   
- [Aggiungere un'immagine con associazione a dati &#40;Generatore report e SSRS&#41;](add-a-data-bound-image-report-builder-and-ssrs.md)   
+ [Immagini &#40;Generatore report e SSRS&#41;](images-report-builder-and-ssrs.md)   
+ [Aggiungere un'immagine di sfondo &#40;Generatore report e SSRS&#41;](add-a-data-bound-image-report-builder-and-ssrs.md)   
  [Finestra di dialogo Proprietà immagine, Generale &#40;Generatore report e SSRS&#41;](../image-properties-dialog-box-general-report-builder-and-ssrs.md)  
   
   

@@ -21,13 +21,13 @@ helpviewer_keywords:
 ms.assetid: 53f1318d-bd2d-4c08-b19f-c8b698b5b3d3
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 2bd52ce353ff30a22aa1771c07359554e20f6e8e
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+manager: kfile
+ms.openlocfilehash: cdd2e2bd7d668ca276cdc62d988f7334a6709e6b
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52541846"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56038262"
 ---
 # <a name="rskeymgmt-utility-ssrs"></a>Utilità rskeymgmt (SSRS)
   Questa utilità consente di estrarre, ripristinare, creare ed eliminare la chiave simmetrica utilizzata per proteggere i dati riservati del server di report dall'accesso non autorizzato. Questa utilità viene inoltre utilizzata per unire in join istanze del server di report in un'implementazione basata sulla scalabilità orizzontale. La *distribuzione con scalabilità orizzontale di un server di report* fa riferimento a più istanze del server di report che condividono lo stesso database del server di report.  
@@ -79,14 +79,14 @@ ms.locfileid: "52541846"
  **-r**  *installationID*  
  Consente di rimuovere le informazioni relative alla chiave simmetrica per un'istanza specifica del server di report, quindi di rimuovere il server di report da un'implementazione basata sulla scalabilità orizzontale. *installationID* è un valore GUID disponibile nel file RSReportserver.config.  
   
- `-f`  *File*  
+ `-f`  *file*  
  Consente di specificare il percorso completo del file in cui è archiviata una copia di backup delle chiavi simmetriche.  
   
  Per l'argomento **rskeymgmt -e**, la chiave simmetrica viene scritta nel file specificato.  
   
  Per l'argomento **rskeymgmt -a**, il valore di chiave simmetrica archiviato nel file viene applicato all'istanza del server di report.  
   
- `-p`  *Password*  
+ `-p`  *password*  
  (Obbligatorio per `-f`) Consente di specificare la password utilizzata per eseguire il backup o applicare una chiave simmetrica. Questo valore non può essere omesso.  
   
  `-i`  
@@ -101,7 +101,7 @@ ms.locfileid: "52541846"
  `-u`  *useraccount*  
  Consente di specificare l'account amministratore nel computer remoto che si sta unendo in join alla distribuzione con scalabilità orizzontale Se non si specifica un account, vengono utilizzate le credenziali dell'utente corrente.  
   
- `-v`  *Password*  
+ `-v`  *password*  
  (Obbligatorio per `-u`) Consente di specificare la password di un account amministratore nel computer remoto che si desidera unire in join alla distribuzione con scalabilità orizzontale.  
   
  **-t**  *trace*  

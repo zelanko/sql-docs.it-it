@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: f37edda0-19e6-489e-b544-8751fa6b6cfb
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 30576bc7ff9cb2049dc035a9f7b4efa152f5f3b5
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: e2e0a15c9b60faf43a7e067d696f2a6cdeb5b7b1
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48192141"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56031985"
 ---
 # <a name="data-sources-properties-page-report-manager"></a>Pagina delle proprietà Origini dati (Gestione report)
   La pagina delle proprietà Origini dati consente di definire la modalità di connessione del report corrente a un'origine dati esterna. In questa pagina è possibile sostituire le informazioni di connessione all'origine dati pubblicate originalmente con il report. Se per un report vengono utilizzate più origini dati, nella pagina delle proprietà è disponibile una sezione specifica per ogni origine dati. Le origini dati vengono elencate nell'ordine in cui sono definite nel report.  
@@ -67,17 +67,17 @@ ms.locfileid: "48192141"
  **Credenziali fornite dall'utente che esegue il report**  
  Tutti gli utenti devono digitare un nome utente e una password per accedere all'origine dati. È possibile specificare il testo per il messaggio di richiesta delle credenziali utente. La stringa di testo predefinita è "Immettere nome utente e password per accedere all'origine dati".  
   
- Selezionare **Usa come credenziali di Windows per la connessione all'origine dei dati** se l'utente fornisce credenziali di autenticazione di Windows. Non selezionare questa casella di controllo se si usa l'autenticazione del database (ad esempio, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] autenticazione).  
+ Selezionare **Usa come credenziali di Windows per la connessione all'origine dei dati** se l'utente fornisce credenziali di autenticazione di Windows. Non selezionare questa casella di controllo se si utilizza l'autenticazione del database, ad esempio l'autenticazione di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] .  
   
  **Credenziali archiviate in modo sicuro nel server di report**  
  Consente di archiviare nome utente e password in forma crittografata nel database del server di report. Selezionare questa opzione per eseguire un report in modo automatico, ad esempio nel caso di report avviati tramite pianificazioni o eventi anziché da un'azione dell'utente. Se si utilizza la sicurezza predefinita, il nome utente deve essere un account di dominio di Windows. Specificare l'account nel formato seguente: \<dominio >\\< nome utente\>. L'account specificato deve disporre di autorizzazioni di accesso locale nel computer che ospita l'origine dati utilizzata dal report.  
   
- Selezionare **Usa come credenziali di Windows per la connessione all'origine dei dati** se vengono utilizzate credenziali di autenticazione di Windows. Non selezionare questa casella di controllo se si usa l'autenticazione del database (ad esempio, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] autenticazione).  
+ Selezionare **Usa come credenziali di Windows per la connessione all'origine dei dati** se vengono utilizzate credenziali di autenticazione di Windows. Non selezionare questa casella di controllo se si utilizza l'autenticazione del database, ad esempio l'autenticazione di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] .  
   
- Selezionare **Rappresenta l'utente autenticato dopo che è stata stabilita una connessione all'origine dei dati** per consentire la delega delle credenziali, ma solo se un'origine dati supporta la rappresentazione. Per [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] database, questa opzione imposta la funzione SETUSER.  
+ Selezionare **Rappresenta l'utente autenticato dopo che è stata stabilita una connessione all'origine dei dati** per consentire la delega delle credenziali, ma solo se un'origine dati supporta la rappresentazione. Nei database di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] questa opzione consente di impostare la funzione SETUSER.  
   
 > [!TIP]  
->  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]supporta solo le credenziali dell'account di Windows. Pertanto, selezionare entrambe le opzioni "Usano come credenziali di Windows quando ci si connette all'origine dati" e "Rappresenta l'utente autenticato dopo che è stata stabilita una connessione all'origine dati" per un [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] zdroj dat.  
+>  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]supporta solo le credenziali dell'account di Windows. Pertanto, selezionare entrambe le opzioni "Usa come credenziali di Windows per la connessione all'origine dei dati" e "Rappresenta l'utente autenticato dopo che è stata stabilita una connessione all'origine dei dati" per un'origine dati di [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] .  
   
  **Sicurezza integrata di Windows**  
  Consente di utilizzare le credenziali di Windows dell'utente corrente per accedere all'origine dati. Selezionare questa opzione se le credenziali utilizzate per l'accesso a un'origine dati corrispondono a quelle utilizzate per l'accesso al dominio di rete. È consigliabile utilizzare questa opzione quando per il dominio è abilitata l'autenticazione Kerberos oppure quando l'origine dei dati si trova nello stesso computer del server di report. Se l'autenticazione Kerberos non è abilitata, le credenziali di Windows possono essere passate a un altro computer. Se sono necessarie ulteriori connessioni al computer, i dati previsti non verranno visualizzati e verrà invece visualizzato un errore.  
@@ -95,7 +95,7 @@ ms.locfileid: "48192141"
  Fare clic per salvare le modifiche.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Gestire origini dati del Report](report-data/manage-report-data-sources.md)   
+ [Gestire origini dati dei report](report-data/manage-report-data-sources.md)   
  [Specificare le credenziali e le informazioni sulla connessione per le origini dati del report](report-data/specify-credential-and-connection-information-for-report-data-sources.md)   
  [Guida sensibile al contesto di Gestione report](../../2014/reporting-services/report-manager-f1-help.md)  
   

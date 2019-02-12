@@ -10,18 +10,18 @@ ms.topic: conceptual
 ms.assetid: fef19359-a618-4d21-a7e4-e391cdefd4eb
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: 673dcead751bf5db8da326de5cfe8e3aa18288a3
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: a18d86d6e67eb88e9ce0d63298cab86ade9a8bb2
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48114341"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56038072"
 ---
 # <a name="exploring-the-flexibility-of-a-tablix-data-region-report-builder-and-ssrs"></a>Esplorazione della flessibilità di un'area dati Tablix (Generatore report e SSRS)
   Quando si aggiunge una tabella, una matrice o un'area dati elenco dalla scheda Inserisci sulla barra multifunzione, si può partire con un modello iniziale per un'area dati Tablix ma non si è limitati all'utilizzo di tale modello. Per continuare a sviluppare la modalità di visualizzazione dei dati è possibile aggiungere o rimuovere caratteristiche dell'area dati Tablix quali gruppi, righe e colonne.  
   
- Quando si elimina un gruppo di righe o colonne, è possibile scegliere di eliminare le righe e le colonne utilizzate per visualizzare i valori del gruppo. È inoltre possibile aggiungere o rimuovere righe e colonne manualmente. Per comprendere come vengono usate le righe e colonne per visualizzare i dati dettaglio e di gruppo, vedere [area dati Tablix &#40;Generatore Report e SSRS&#41;](../tablix-data-region-report-builder-and-ssrs.md).  
+ Quando si elimina un gruppo di righe o colonne, è possibile scegliere di eliminare le righe e le colonne utilizzate per visualizzare i valori del gruppo. È inoltre possibile aggiungere o rimuovere righe e colonne manualmente. Per informazioni sull'uso di righe e colonne per la visualizzazione di dati dettaglio e dei gruppi, vedere [Area dati Tablix &#40;Generatore report e SSRS&#41;](../tablix-data-region-report-builder-and-ssrs.md).  
   
  Dopo avere modificato la struttura dell'area dati Tablix, è possibile impostare le proprietà per controllare la modalità di rendering dell'area dati nel report. È ad esempio è possibile ripetere intestazioni di colonna all'inizio di ogni pagina o mantenere un'intestazione di gruppo con il gruppo. Per altre informazioni, vedere [Controllo della visualizzazione dell'area dati Tablix in una pagina del report &#40;Generatore report e SSRS&#41;](controlling-the-tablix-data-region-display-on-a-report-page.md).  
   
