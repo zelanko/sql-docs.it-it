@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 31d99d9b-2303-4bae-9466-fb67b97cf11a
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: f8fca88baa1a3886f06e0c812164d0c759e7d835
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 2181e4ab949eef70c5ba9cb06c4fc8cfe82435dc
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48156456"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56031592"
 ---
 # <a name="general-properties-page-folders-report-manager"></a>Pagina delle proprietà Generale, Cartelle (Gestione report)
   La pagina delle proprietà Generale per le cartelle consente di visualizzare e impostare le proprietà per le cartelle create. Nella pagina delle proprietà Generale vengono visualizzati il nome dell'utente che ha creato o modificato la cartella e la data e ora di creazione o modifica.  
@@ -35,7 +35,7 @@ ms.locfileid: "48156456"
 2.  Nell'intestazione della cartella, nella barra degli strumenti, fare clic su **Impostazioni cartella**.  
   
 ## <a name="options"></a>Opzioni  
- **Nome**  
+ **Name**  
  Digitare un nome per la cartella. Il nome deve includere almeno un carattere alfanumerico. È inoltre possibile utilizzare spazi e alcuni simboli. Non utilizzare i caratteri ; ? : \@ & = +, $ * \< > | "oppure / per specificare un nome.  
   
  **Descrizione**  

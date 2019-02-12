@@ -22,13 +22,13 @@ helpviewer_keywords:
 ms.assetid: 05da5f3d-9222-43a9-893b-aa10f0f690f8
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 81ad874c4d7e3c417058b2403c1307893300feaa
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 231fbf5211654d126f09ceb048501c7b2eacf0c3
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48118781"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56039582"
 ---
 # <a name="create-modify-and-delete-schedules"></a>Create, Modify, and Delete Schedules
   In questo argomento vengono fornite informazioni sulla creazione, la modifica e l'eliminazione di pianificazioni.  
@@ -200,8 +200,8 @@ ms.locfileid: "48118781"
  Se si elimina una pianificazione condivisa utilizzata da più report e sottoscrizioni, nel server di report vengono create singole pianificazioni per ogni report e sottoscrizione da cui è stata utilizzata in precedenza la pianificazione condivisa. Ogni nuova pianificazione conterrà la data, l'ora e il criterio di occorrenza specificati nella pianificazione condivisa. Si noti che in [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] non è disponibile una funzionalità di gestione centrale delle singole pianificazioni. Se si elimina una pianificazione condivisa, sarà necessario gestire le informazioni sulla pianificazione per ogni elemento singolo. Prima di eliminare una pianificazione condivisa, utilizzare la pagina [Report](../tools/schedule-properties-reports-page.md) per verificare i report che la utilizzano attualmente.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Pianificazioni](schedules.md)   
- [Sospendere e riprendere le pianificazioni condivise](pause-and-resume-shared-schedules.md)   
+ [Schedules](schedules.md)   
+ [Pause and Resume Shared Schedules](pause-and-resume-shared-schedules.md)   
  [Memorizzare nella cache un report &#40;Gestione report&#41;](../report-server/cache-a-report-report-manager.md)   
  [Aggiungere uno snapshot alla cronologia del report &#40;Gestione report&#41;](../report-server/add-a-snapshot-to-report-history-report-manager.md)  
   

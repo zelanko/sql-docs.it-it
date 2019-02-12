@@ -27,13 +27,13 @@ helpviewer_keywords:
 ms.assetid: 473e574e-f1ff-4ef9-bda6-7028b357ac42
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: bc8c6adf930df4d6eaf721db4782d5d1627439c5
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 84199b2bf01101a1bcc67b6e3d0870824a116860
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48166271"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56013592"
 ---
 # <a name="manage-a-running-process"></a>Manage a Running Process
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] consente di monitorare lo stato dei processi in esecuzione nel server di report. Tramite il server di report viene effettuata un'analisi a intervalli regolari dei processi in corso e vengono scritte informazioni sullo stato nel database del server di report o nei database dell'applicazione di servizio per la modalità SharePoint. Un processo è considerato in corso se è in esecuzione una delle operazioni seguenti, ovvero esecuzione di query su un server di database locale o remoto, elaborazione di report e rendering di report.  
@@ -76,7 +76,7 @@ ms.locfileid: "48166271"
   
 ### <a name="how-to-cancel-report-processing-or-subscription"></a>Annullamento di un'elaborazione del report o di una sottoscrizione  
   
-1.  In [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]connettersi al server di report. Per istruzioni, vedere [Connetti al Server di Report in Management Studio](../tools/connect-to-a-report-server-in-management-studio.md).  
+1.  In [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]connettersi al server di report. Per istruzioni, vedere [Eseguire la connessione a un server di report in Management Studio](../tools/connect-to-a-report-server-in-management-studio.md).  
   
 2.  Aprire la cartella **Processi** .  
   
@@ -86,20 +86,20 @@ ms.locfileid: "48166271"
   
 1.  Aprire il file RSReportServer.config in un editor di testo.  
   
-2.  Trovare `IsNotificationService`.  
+2.  Individuare `IsNotificationService`.  
   
-3.  Impostarla su `False`.  
+3.  Impostarlo su `False`.  
   
 4.  Salvare il file.  
   
 5.  In Gestione report eliminare la sottoscrizione guidata dai dati dalla scheda Sottoscrizioni del report o da **Sottoscrizioni personali**.  
   
-6.  Dopo aver eliminato la sottoscrizione, nel file RSReportServer. config, individuare `IsNotificationService` e impostarlo su `True`.  
+6.  Dopo avere eliminato la sottoscrizione, nel file RSReportServer.config individuare `IsNotificationService` e impostarlo su `True`.  
   
 7.  Salvare il file.  
   
 ### <a name="configuring-frequency-settings-for-retrieving-job-status"></a>Configurazione delle impostazioni di frequenza per il recupero dello stato di un processo  
- Un processo in esecuzione viene archiviato nel database temporaneo del server di report. Per controllare la frequenza con la quale il server di report esegue l'analisi dei processi in corso e l'intervallo trascorso il quale lo stato di un processo cambia da nuovo a in esecuzione, è possibile modificare le impostazioni di configurazione nel file RSReportServer.config. Il `RunningRequestsDbCycle` impostazione specifica con quale frequenza il server di report esegue l'analisi dei processi in esecuzione. Per impostazione predefinita, le informazioni sullo stato vengono registrate ogni 60 secondi. Il `RunningRequestsAge` impostazione specifica l'intervallo in corrispondenza del quale un processo passa da nuovo a in esecuzione.  
+ Un processo in esecuzione viene archiviato nel database temporaneo del server di report. Per controllare la frequenza con la quale il server di report esegue l'analisi dei processi in corso e l'intervallo trascorso il quale lo stato di un processo cambia da nuovo a in esecuzione, è possibile modificare le impostazioni di configurazione nel file RSReportServer.config. L'impostazione `RunningRequestsDbCycle` consente di specificare la frequenza con la quale il server di report esegue l'analisi dei processi in esecuzione. Per impostazione predefinita, le informazioni sullo stato vengono registrate ogni 60 secondi. L'impostazione `RunningRequestsAge` consente di specificare l'intervallo dopo il quale un processo passa da nuovo a in esecuzione.  
   
 ##  <a name="bkmk_sharepoint"></a> Visualizzare e annullare i processi (modalità SharePoint)  
  La gestione di processi in una distribuzione della modalità SharePoint viene completata utilizzando Amministrazione centrale SharePoint, per ogni applicazione del servizio [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .  
@@ -120,7 +120,7 @@ ms.locfileid: "48166271"
  I processi possono essere gestiti a livello di programmazione o mediante l'utilizzo di uno script. Per altre informazioni, vedere <xref:ReportService2010.ReportingService2010.ListJobs%2A>e <xref:ReportService2010.ReportingService2010.CancelJob%2A>.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Annulla processi Server di Report &#40;Management Studio&#41;](../tools/cancel-report-server-jobs-management-studio.md)   
+ [Annulla processi server di report &#40;Management Studio&#41;](../tools/cancel-report-server-jobs-management-studio.md)   
  [Proprietà processo &#40;Management Studio&#41;](../tools/job-properties-management-studio.md)   
  [Modificare un file di configurazione di Reporting Services &#40;RSreportserver.config&#41;](../report-server/modify-a-reporting-services-configuration-file-rsreportserver-config.md)   
  [File di configurazione RSReportServer](../report-server/rsreportserver-config-configuration-file.md)   

@@ -13,13 +13,13 @@ helpviewer_keywords:
 ms.assetid: 79113505-1ce8-4f8c-9260-d861838f7813
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: 1de13a23edc8a248008dcdad415e58e108e9d0e7
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: c13019d5845e0c580b28fef750683044d344a9ab
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48202031"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56017282"
 ---
 # <a name="planning-a-report-report-builder"></a>Pianificazione di un report (Generatore report)
   Generatore report consente di creare molti tipi di report. Ad esempio è possibile creare report in cui vengono mostrati dati di vendita dettagliati o riepilogativi, tendenze di marketing e di vendite, report operativi o dashboard. È possibile anche creare report con funzionalità avanzate di formattazione del testo, ad esempio per gli ordini di vendita, i cataloghi del prodotto o lettere tipo. Tutti questi report vengono creati utilizzando combinazioni diverse degli stessi blocchi predefiniti di compilazione di Generatore report. Per creare un report utile, facilmente comprensibile, può essere opportuno innanzitutto una pianificazione. Di seguito sono riportate alcune considerazioni da tenere presenti prima di iniziare:  
@@ -38,7 +38,7 @@ ms.locfileid: "48202031"
   
 -   **Dati che devono essere letti dai lettori Filtro dei dati o del formato per lettori diversi**  
   
-     Potrebbe essere necessario restringere l'ambito del report a utenti o percorsi specifici oppure a un particolare periodo di tempo. Per filtrare i dati del report, utilizzare i parametri per recuperare e visualizzare solo i dati desiderati. Per altre informazioni, vedere [Report Parameters &#40;Report Builder and Report Designer&#41;](report-parameters-report-builder-and-report-designer.md).  
+     Potrebbe essere necessario restringere l'ambito del report a utenti o percorsi specifici oppure a un particolare periodo di tempo. Per filtrare i dati del report, utilizzare i parametri per recuperare e visualizzare solo i dati desiderati. Per ulteriori informazioni, vedere la pagina relativa al [Parametri report &#40;Generatore report e Progettazione report&#41;](report-parameters-report-builder-and-report-designer.md).  
   
 -   **Creazione di calcoli personalizzati**  
   
@@ -50,11 +50,11 @@ ms.locfileid: "48202031"
   
 -   **Modalità di recapito del report**  
   
-     È possibile salvare il report nel computer locale e continuare a utilizzarlo o eseguirlo in locale per informazioni personali. Tuttavia, per condividere il report con altri, è necessario salvarlo in un server di report configurato in modalità nativa o in un server di report in modalità integrata SharePoint. Salvando il report in un server si consente ad altri utenti di poterlo eseguire allorché necessario. In alternativa, l'amministratore del server di report può configurare una sottoscrizione al report o il recapito del report ad altri utenti tramite posta elettronica. È possibile recapitare il report in un formato di esportazione specifico, se desiderato. Per altre informazioni, vedere [ricerca, visualizzazione e gestione dei report &#40;Generatore Report e SSRS &#41; ](../report-builder/finding-viewing-and-managing-reports-report-builder-and-ssrs.md).  
+     È possibile salvare il report nel computer locale e continuare a utilizzarlo o eseguirlo in locale per informazioni personali. Tuttavia, per condividere il report con altri, è necessario salvarlo in un server di report configurato in modalità nativa o in un server di report in modalità integrata SharePoint. Salvando il report in un server si consente ad altri utenti di poterlo eseguire allorché necessario. In alternativa, l'amministratore del server di report può configurare una sottoscrizione al report o il recapito del report ad altri utenti tramite posta elettronica. È possibile recapitare il report in un formato di esportazione specifico, se desiderato. Per altre informazioni, vedere [Ricerca, visualizzazione e gestione dei report &#40;Generatore report SSRS&#41;](../report-builder/finding-viewing-and-managing-reports-report-builder-and-ssrs.md).  
   
 ## <a name="see-also"></a>Vedere anche  
  [Generatore report in SQL Server 2014](../report-builder/report-builder-in-sql-server-2016.md)   
- [Concetti relativi alla creazione di report &#40;Report e SSRS&#41;](report-authoring-concepts-report-builder-and-ssrs.md)   
+ [Concetti relativi alla creazione di report &#40;Generatore report e SSRS&#41;](report-authoring-concepts-report-builder-and-ssrs.md)   
  [Esercitazioni su &#40;Generatore Report&#41;](../report-builder-tutorials.md)  
   
   

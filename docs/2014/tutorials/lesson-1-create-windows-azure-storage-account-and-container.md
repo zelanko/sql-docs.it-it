@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: security
 ms.topic: conceptual
 ms.assetid: efdbd930-cde5-41b0-90ad-58a6cc68dddc
-author: craigg-msft
-ms.author: craigg
+author: VanMSFT
+ms.author: vanto
 manager: craigg
-ms.openlocfilehash: edeefac46805ba74b011d7c86202c7d5dbcdec14
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 8a1f8cef9f29c856ab0bc02480221e583a0078f3
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53367153"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56039932"
 ---
 # <a name="lesson-1-create-windows-azure-storage-account-and-container"></a>Lezione 1: creare un account e un contenitore di Archiviazione di Microsoft Azure
   Prima di poter avviare l'archiviazione di file di dati di SQL Server nel servizio di archiviazione Windows Azure, è innanzitutto necessario creare un account del servizio di archiviazione Windows Azure con un contenitore BLOB e una firma di accesso condivisa. Nella lezione 1 vengono illustrati i passaggi per l'accesso al portale di gestione di Windows Azure e per la creazione di un account di archiviazione, di un contenitore BLOB e di una firma di accesso condivisa.  

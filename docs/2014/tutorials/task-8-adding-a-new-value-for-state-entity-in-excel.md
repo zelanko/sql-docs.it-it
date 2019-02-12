@@ -4,21 +4,18 @@ ms.custom: ''
 ms.date: 04/27/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- data-quality-services
-- integration-services
-- master-data-services
+ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: a763d76b-06a3-4d51-9614-01fc9fb1c158
-author: douglaslms
-ms.author: douglasl
+author: leolimsft
+ms.author: lle
 manager: craigg
-ms.openlocfilehash: 04fe6fa0a9036ca3835fd4bc0afcb0e35854fd85
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 04ed80887a2a81a2179dcec423b9e22b3f9d43ef
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48222157"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56032032"
 ---
 # <a name="task-8-adding-a-new-value-for-state-entity-in-excel"></a>Attività 8: Aggiunta di un nuovo valore per l'entità State in Excel
   In questa attività viene aggiunto un valore per l'entità State in Excel e viene pubblicata la modifica nel server MDS.  
@@ -33,7 +30,7 @@ ms.locfileid: "48222157"
   
 4.  Fare doppio clic su **stato** nell'elenco. Tutti i membri del **stato** deve essere visualizzato entità da MDS nel foglio di lavoro.  
   
-5.  A questo punto, aggiungere una riga alla fine con i valori seguenti: **Carolina del Nord** per **Name** e **NC** per **codice**. La codifica tramite colori consente di differenziare tutti i record nuovi/aggiornati dagli altri record.  
+5.  A questo punto, aggiungere una riga alla fine con i seguenti valori: **Carolina del Nord** per **Name** e **NC** per **codice**. La codifica tramite colori consente di differenziare tutti i record nuovi/aggiornati dagli altri record.  
   
      ![Excel - Aggiungi Nord Carolina agli stati](../../2014/tutorials/media/et-addinganewvalueforstateentityinexcel-02.jpg "Excel - Aggiungi Nord Carolina agli Stati")  
   
@@ -51,11 +48,11 @@ ms.locfileid: "48222157"
   
 10. Si noti che **codifica a colori** per la riga con **Carolina del Nord** come il **stato** è ora stessa degli altri record.  
   
-11. **Facoltativo:** verificare che il nuovo membro (NC) viene aggiunto al **stato** entità utilizzando la **Esplora** in **gestione dati Master**.  
+11. **Facoltativo:** Verificare che il nuovo membro (NC) viene aggiunto al **lo stato** entità tramite il **Explorer** nel **gestione dati Master**.  
   
 12. In Excel, fare doppio clic il **lo stato** foglio di lavoro nella parte inferiore, fare clic su **eliminare** per eliminare il foglio di lavoro. L'eliminazione del foglio di lavoro non comporta l'eliminazione dei dati dal server MDS.  
   
 ## <a name="next-step"></a>Passaggio successivo  
- [Attività 9: Creazione di una gerarchia derivata mediante Gestione dati master](../../2014/tutorials/task-9-creating-a-derived-hierarchy-using-master-data-manager.md)  
+ [Attività 9: Creazione di una gerarchia derivata mediante gestione dati Master](../../2014/tutorials/task-9-creating-a-derived-hierarchy-using-master-data-manager.md)  
   
   

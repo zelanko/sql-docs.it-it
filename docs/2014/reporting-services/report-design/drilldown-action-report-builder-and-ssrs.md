@@ -40,13 +40,13 @@ f1_keywords:
 ms.assetid: 1f8d1ef2-0daf-40c6-9ba7-3b391249bcd4
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: 3bf939773ac419a8ace4ec9de7425b23f78dd816
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 0b939882e5021eb08925f974bad71d1720c6eff7
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48211551"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56029712"
 ---
 # <a name="drilldown-action-report-builder-and-ssrs"></a>Azione di drill-down (Generatore report e SSRS)
   Fornendo più o meno icone in una casella di testo, è possibile consentire agli utenti di nascondere e visualizzare gli elementi in modo interattivo. Questa azione viene chiamata *drill-down* . Per una tabella o una matrice, è possibile visualizzare o nascondere le righe e le colonne statiche o le righe e le colonne associate ai gruppi.  
@@ -72,7 +72,7 @@ ms.locfileid: "48211551"
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
 ## <a name="comparing-drilldown-and-drillthrough-reports"></a>Confronto tra report drill-down e drill-through  
- In un report drill-down un utente fa clic su un pulsante più o meno per espandere o comprimere una sezione di un report per mostrare dati dettaglio. I un report drill-through l'utente fa clic su un collegamento relativo a un valore di riepilogo, aprendo in questo modo un report separato, correlato contenente dati dettaglio. I dati dettaglio vengono recuperati solo quando il report dettagli è in esecuzione. I report drill-through richiedono in genere un numero di risorse minore rispetto ai report drill-down. Per altre informazioni, vedere [Drill-through, drill-down, sottoreport e aree dati annidate &#40;Generatore report e SSRS&#41;](drillthrough-drilldown-subreports-and-nested-data-regions.md).  
+ In un report drill-down un utente fa clic su un pulsante più o meno per espandere o comprimere una sezione di un report per mostrare dati dettaglio. I un report drill-through l'utente fa clic su un collegamento relativo a un valore di riepilogo, aprendo in questo modo un report separato, correlato contenente dati dettaglio. I dati dettaglio vengono recuperati solo quando il report dettagli è in esecuzione. I report drill-through richiedono in genere un numero di risorse minore rispetto ai report drill-down. Per altre informazioni, vedere [Drill-through, drill-down, sottoreport e aree dati nidificate &#40;Generatore report e SSRS&#41;](drillthrough-drilldown-subreports-and-nested-data-regions.md).  
   
 ## <a name="rendering-extension-support-for-hidden-report-items"></a>Supporto delle estensioni per il rendering per elementi del report nascosti  
  L'elemento Toggle per visualizzare e nascondere gli elementi del report è supportato solo dalle estensioni per il rendering che supportano funzioni di interattività con gli utenti, ad esempio l'estensione per il rendering HTML utilizzata durante l'esecuzione di un report in Generatore report e in Gestione report. Le altre estensioni per il rendering consentono di visualizzare gli elementi nascosti. Nell'elenco seguente viene descritto il supporto per gli elementi del report con visibilità condizionale:  
@@ -86,7 +86,7 @@ ms.locfileid: "48211551"
  Per altre informazioni, vedere [Tipi di rendering  &#40;Generatore report e SSRS &#41;](rendering-behaviors-report-builder-and-ssrs.md).  
   
 ## <a name="see-also"></a>Vedere anche  
- [Drill-through, drill-down, sottoreport e aree dati nidificate &#40;Report e SSRS&#41;](drillthrough-drilldown-subreports-and-nested-data-regions.md)   
+ [Drill-through, drill-down, sottoreport e aree dati nidificate &#40;Generatore report e SSRS&#41;](drillthrough-drilldown-subreports-and-nested-data-regions.md)   
  [Ordinamento interattivo, mappe documento e collegamenti &#40;Generatore report e SSRS&#41;](interactive-sort-document-maps-and-links-report-builder-and-ssrs.md)   
  [Esempi di espressioni &#40;Generatore report e SSRS&#41;](expression-examples-report-builder-and-ssrs.md)  
   

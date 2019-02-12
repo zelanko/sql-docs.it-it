@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 76d3ac86-650c-46fe-8086-8b3edcea3882
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: 0ec516a74d28ff868e8a20d1c3d5cd568d3420ee
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+manager: kfile
+ms.openlocfilehash: 9e3bae5d7a41d87cf07fab455b434b935636375f
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53352790"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56016462"
 ---
 # <a name="expressions-report-builder-and-ssrs"></a>Espressioni (Generatore report e SSRS)
   Le espressioni vengono ampiamente utilizzate in un report per recuperare, calcolare, visualizzare, raggruppare, ordinare, filtrare, parametrizzare e formattare i dati. Molte proprietà dell'elemento del report possono essere impostate su un'espressione tramite la quale è possibile controllare il contenuto, la progettazione e l'interattività del report. Le espressioni sono scritte in [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)], salvate nella definizione del report e valutate dall'elaboratore di report durante l'esecuzione del report.  

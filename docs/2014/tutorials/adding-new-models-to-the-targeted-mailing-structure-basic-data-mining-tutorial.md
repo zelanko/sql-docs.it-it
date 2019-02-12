@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: 512c6888-60f1-46e4-9639-bc448395b8d7
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 790809a04e4a322901a5f7398a02226cf984e2a0
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 285ee82110ffdef521d75fb43343f4889663e981
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48206971"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56015455"
 ---
 # <a name="adding-new-models-to-the-targeted-mailing-structure-basic-data-mining-tutorial"></a>Aggiunta di nuovi modelli alla struttura Targeted Mailing (Esercitazione di base sul data mining)
   In questa attività verranno definiti due modelli aggiuntivi utilizzando la **modelli di Data Mining** scheda della finestra di progettazione modelli di Data Mining. Per creare i modelli, verranno utilizzati gli algoritmi Microsoft Clustering e Microsoft Naive Bayes, per la loro capacità di stimare un valore discreto (ad esempio, l'acquisto di una bicicletta). Per altre informazioni su questi algoritmi, vedere [algoritmo Microsoft Clustering](../../2014/analysis-services/data-mining/microsoft-clustering-algorithm.md) e [all'algoritmo Microsoft Naive Bayes](../../2014/analysis-services/data-mining/microsoft-naive-bayes-algorithm.md)  
@@ -56,7 +55,7 @@ ms.locfileid: "48206971"
   
 ## <a name="see-also"></a>Vedere anche  
  [Aggiungere modelli di Data Mining a una struttura &#40;Analysis Services - Data Mining&#41;](../../2014/analysis-services/data-mining/add-mining-models-to-a-structure-analysis-services-data-mining.md)   
- [Progettazione modelli di Data Mining](../../2014/analysis-services/data-mining/data-mining-designer.md)   
+ [Progettazione modelli di data mining](../../2014/analysis-services/data-mining/data-mining-designer.md)   
  [Spostamento di oggetti di data mining](../../2014/analysis-services/data-mining/moving-data-mining-objects.md)  
   
   

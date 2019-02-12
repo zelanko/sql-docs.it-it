@@ -15,13 +15,13 @@ helpviewer_keywords:
 ms.assetid: 01daf21c-19c6-448d-ac30-accb54ad83da
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 9306340695cffd621335d094e182898512c757c5
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+manager: kfile
+ms.openlocfilehash: 3ca90cb195ca7627dfc28808a2281293a0a2e278
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53367833"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56014542"
 ---
 # <a name="feature-reference-reporting-services"></a>Guida di riferimento alle funzionalità (Reporting Services)
   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] include numerosi strumenti e applicazioni che è possibile usare per la creazione, la gestione e la visualizzazione di report. In questa sezione sono disponibili argomenti specifici che descrivono le finestre di dialogo, le pagine Web e le procedure guidate di tali strumenti e applicazioni.  

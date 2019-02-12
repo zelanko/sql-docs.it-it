@@ -12,13 +12,13 @@ f1_keywords:
 ms.assetid: c8b22236-a8b1-4e15-b1ff-4e1909b602d3
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: cfe2b65ec8f8260d87636384953101e3c674a0d9
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: bb8c7b6467b862d13f242debf0d963012b44bb61
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48149701"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56015487"
 ---
 # <a name="user-role-properties-management-studio"></a>Proprietà ruolo utente (Management Studio)
   Questa pagina consente di visualizzare le attività incluse in una definizione di ruolo a livello di elemento. La pagina consente inoltre di modificare l'elenco di attività o una descrizione di ruolo.  
@@ -31,7 +31,7 @@ ms.locfileid: "48149701"
 >  Le assegnazioni di ruolo a livello di utente vengono utilizzate solo in un server di report in esecuzione in modalità nativa. Se il server di report è configurato per l'integrazione con SharePoint, in questa pagina vengono visualizzate informazioni di sola lettura sui ruoli e sui livelli di autorizzazione definiti nel sito di SharePoint.  
   
 ## <a name="options"></a>Opzioni  
- **Nome**  
+ **Name**  
  Consente di specificare il nome della definizione di ruolo.  
   
  **Descrizione**  

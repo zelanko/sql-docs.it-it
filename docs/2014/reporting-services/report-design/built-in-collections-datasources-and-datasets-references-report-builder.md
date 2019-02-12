@@ -10,16 +10,16 @@ ms.topic: conceptual
 ms.assetid: f951a4aa-da55-4e43-8579-4a5d4480d11f
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: 0b2d11854134eb7b83182b35b113b591687f2775
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: b3663c9cdb9fd83dc0caa4298a81f73adcae87cd
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48095111"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56039272"
 ---
 # <a name="datasources-and-datasets-collection-references-report-builder-and-ssrs"></a>Riferimenti a raccolte DataSources e DataSets (Generatore report e SSRS)
-  La raccolta `DataSources` rappresenta tutte le origini dati utilizzate in un report. Analogamente, il `DataSets` raccolta rappresenta tutti i set di dati per tutte le origini dati in un report. Usare il riquadro **Dati report** per ottenere una visualizzazione gerarchica dei set di dati del report organizzati sotto l'origine dati cui fanno riferimento. Se si includono riferimenti a queste raccolte, durante l'anteprima del report questi valori non verranno visualizzati. Le raccolte sono disponibili solo dopo la pubblicazione del report in un server di report.  
+  La raccolta `DataSources` rappresenta tutte le origini dati utilizzate in un report. Analogamente, la raccolta `DataSets` rappresenta tutti i set di dati per tutte le origini dati disponibili in un report. Usare il riquadro **Dati report** per ottenere una visualizzazione gerarchica dei set di dati del report organizzati sotto l'origine dati cui fanno riferimento. Se si includono riferimenti a queste raccolte, durante l'anteprima del report questi valori non verranno visualizzati. Le raccolte sono disponibili solo dopo la pubblicazione del report in un server di report.  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
@@ -33,7 +33,7 @@ ms.locfileid: "48095111"
 |`Type`|`String`|Tipo di provider di dati per l'origine dati. Ad esempio, `SQL`.|  
   
 ## <a name="datasets"></a>DataSets  
- La raccolta `DataSets` rappresenta i set di dati a cui si fa riferimento nella definizione del report. È possibile scegliere di includere la query nel report in una casella di testo, in modo che un utente interessato ai dati effettivi contenuti nel report possa vedere il testo del comando originale. Questa raccolta non è disponibile in modalità **Anteprima** . Nella tabella seguente vengono descritti i membri del `DataSets` raccolta.  
+ La raccolta `DataSets` rappresenta i set di dati a cui si fa riferimento nella definizione del report. È possibile scegliere di includere la query nel report in una casella di testo, in modo che un utente interessato ai dati effettivi contenuti nel report possa vedere il testo del comando originale. Questa raccolta non è disponibile in modalità **Anteprima** . Nella tabella seguente vengono descritti i membri della raccolta `DataSets`.  
   
 |**Membro**|`Type`|**Descrizione**|  
 |----------------|--------------|---------------------|  

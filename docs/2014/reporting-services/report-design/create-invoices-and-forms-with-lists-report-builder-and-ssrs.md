@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: c33231a5-b3a8-42e4-95bc-d05bdf2222f5
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: 7026a1fcdfa3a030761d11c2f8d763220fd436d8
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+manager: kfile
+ms.openlocfilehash: 9e9d03ee424f9e192a7218f289bfe133456789d7
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53375223"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56029682"
 ---
 # <a name="lists-report-builder-and-ssrs"></a>Elenchi (Generatore report e SSRS)
   Un'area dati elenco viene ripetuta con ogni gruppo o riga nel set di dati del report. È possibile utilizzare un elenco per creare form o report in formato libero, ad esempio fatture, o in combinazione ad altre aree dati, nonché definire elenchi contenenti il numero desiderato di elementi del report. Per offrire più gruppi di dati, gli elenchi possono essere nidificati l'uno nell'altro.  

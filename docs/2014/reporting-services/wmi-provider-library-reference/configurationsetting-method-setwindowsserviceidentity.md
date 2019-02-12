@@ -18,13 +18,13 @@ helpviewer_keywords:
 ms.assetid: 9bbc734c-9e69-48c2-8bec-8abe7c6cc987
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: aff708a3455c98ae0671b4970cd654d54f7dda36
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+manager: kfile
+ms.openlocfilehash: fd4d7e271b23cdcd7dc9641a53f9dd046f030b9a
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52399304"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56015873"
 ---
 # <a name="setwindowsserviceidentity-method-wmi-msreportserverconfigurationsetting"></a>Metodo SetWindowsServiceIdentity (MSReportServer_ConfigurationSetting WMI)
   Consente l'esecuzione del servizio Windows ReportServer in base a un utente di Windows specificato e concede a tale account autorizzazioni per il file system sufficienti, in modo da consentire il funzionamento del server di report.  

@@ -12,14 +12,14 @@ f1_keywords:
 - sql12.rtp.rptdesigner.pictureproperties.size.f1
 ms.assetid: 144a5da4-a3c3-4856-942e-7b7c60e2f6fa
 author: maggiesmsft
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: 97dce14bed313a8044486f4e7609557e2ad13057
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.author: maghan
+manager: kfile
+ms.openlocfilehash: 0d9610544543e88fd8e50e9d3ccc2fc64ecb84a5
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48112682"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56016112"
 ---
 # <a name="image-properties-dialog-box-size-report-builder-and-ssrs"></a>Finestra di dialogo Proprietà immagine, Dimensioni (Generatore report e SSRS)
   Selezionare **Dimensioni** nella finestra di dialogo **Proprietà immagine** per formattare le dimensioni delle immagini visualizzate in un campo o nell'area di progettazione o per modificare la quantità di spazio aggiuntivo tra il bordo di una cella o di una casella di testo e l'immagine o il valore che questa contiene.  
@@ -40,7 +40,7 @@ ms.locfileid: "48112682"
  **A sinistra**  
  Specificare la spaziatura o la quantità di spazio tra il bordo sinistro di una cella o di una casella di testo e il valore che questa contiene.  
   
- **Ok**  
+ **Right**  
  Specificare la spaziatura o la quantità di spazio tra il bordo destro di una cella o di una casella di testo e il valore che questa contiene.  
   
  **Top**  
@@ -52,7 +52,7 @@ ms.locfileid: "48112682"
 ## <a name="see-also"></a>Vedere anche  
  [Finestra di dialogo Proprietà generali di immagine &#40;Report e SSRS&#41;](../../2014/reporting-services/image-properties-dialog-box-general-report-builder-and-ssrs.md)   
  [Esempi di espressioni &#40;Generatore report e SSRS&#41;](report-design/expression-examples-report-builder-and-ssrs.md)   
- [Immagini &#40;Report e SSRS&#41;](report-design/images-report-builder-and-ssrs.md)   
+ [Immagini &#40;Generatore report e SSRS&#41;](report-design/images-report-builder-and-ssrs.md)   
  [Guida di Generatore report per finestre di dialogo, riquadri e procedure guidate](../../2014/reporting-services/report-builder-help-for-dialog-boxes-panes-and-wizards.md)  
   
   

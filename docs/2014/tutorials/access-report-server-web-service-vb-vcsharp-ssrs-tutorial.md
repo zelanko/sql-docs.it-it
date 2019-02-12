@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 dev_langs:
 - VB
@@ -14,15 +13,15 @@ helpviewer_keywords:
 - Reporting Services, Web service
 - Web service [Reporting Services], tutorials
 ms.assetid: cf688163-4ac0-475b-b6dd-6f2f05b553c6
-author: craigg-msft
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: 44a9bd204b352ee0ab891dceb65922cc877704c7
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+author: markingmyname
+ms.author: maghan
+manager: kfile
+ms.openlocfilehash: 9f8c549bef9d07f7b206f4dd8a9a652c8c72896f
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53366683"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56015622"
 ---
 # <a name="accessing-the-report-server-web-service-using-visual-basic-or-visual-c-ssrs-tutorial"></a>Accesso al servizio Web ReportServer con Visual Basic o Visual C# (esercitazione SSRS)
   L'esercitazione seguente viene illustrato come accedere al servizio Web ReportServer da un'applicazione creata con [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[vbprvb](../includes/vbprvb-md.md)] oppure [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[csprcs](../includes/csprcs-md.md)].  
@@ -52,7 +51,7 @@ ms.locfileid: "53366683"
 > [!NOTE]  
 >  Gli esempi non vengono installati automaticamente durante l'installazione, ma possono essere installati in qualsiasi momento. Per informazioni sugli esempi, vedere [SQL Server Product Samples](https://go.microsoft.com/fwlink/?LinkId=182887).  
   
- **Tempo stimato per completare l'esercitazione:** 60 minuti  
+ **Tempo previsto per il completamento dell'esercitazione:** 60 minuti  
   
 ## <a name="tasks"></a>Attività  
  [Lezione 1: Creazione del progetto di Client del servizio Web](../../2014/tutorials/lesson-1-creating-the-web-service-client-project.md)  

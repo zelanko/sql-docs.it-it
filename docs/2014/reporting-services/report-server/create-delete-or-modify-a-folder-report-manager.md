@@ -17,13 +17,13 @@ helpviewer_keywords:
 ms.assetid: d62159a8-ec67-4e28-a9f1-05a9250065bb
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 89b1476adadf6b409d68dbf524a9352d6b7cb6ab
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 61f1decb93244bfd2b52718dd448ac3eb016499f
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48129339"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56016613"
 ---
 # <a name="create-delete-or-modify-a-folder-report-manager"></a>Creare, eliminare o modificare una cartella (Gestione report)
   È possibile creare cartelle per organizzare e gestire gli elementi pubblicati in un server di report. La creazione di cartelle consente agli utenti di individuare in modo semplice i report desiderati. Per gli utenti con ruolo di gestione del contenuto, le cartelle costituiscono una struttura per l'applicazione di autorizzazioni. È possibile creare assegnazioni di ruolo su cartelle specifiche per limitare l'accesso a report in fase di sviluppo o che non devono essere distribuiti su larga scala.  
@@ -36,7 +36,7 @@ ms.locfileid: "48129339"
   
      Verrà visualizzata la pagina **Nuova cartella** .  
   
-3.  Digitare il nome della cartella. I nomi di cartella possono includere spazi, ma non caratteri riservati utilizzati per la codifica degli URL, ad esempio ; ? : \@ & = +, $ / * \< > |. Non è possibile digitare una serie di nomi di cartella per creare più cartelle contemporaneamente.  
+3.  Digitare il nome della cartella. I nomi di cartella possono includere spazi, ma non caratteri riservati utilizzati per la codifica degli URL, ad esempio ; ? : \@ & = + , $ / * \< > |. Non è possibile digitare una serie di nomi di cartella per creare più cartelle contemporaneamente.  
   
 4.  Se lo si desidera, digitare una descrizione.  
   
@@ -75,8 +75,8 @@ ms.locfileid: "48129339"
 7.  Fare clic su **Applica** per salvare le modifiche.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Pagina nuova cartella &#40;gestione Report&#41;](../new-folder-page-report-manager.md)   
- [Contenuto della pagina &#40;gestione Report&#41;](../contents-page-report-manager.md)   
+ [Pagina Nuova cartella &#40;Gestione report&#41;](../new-folder-page-report-manager.md)   
+ [Pagina Contenuto &#40;Gestione report&#41;](../contents-page-report-manager.md)   
  [Ricerca, visualizzazione e gestione dei report &#40;Generatore report e SSRS&#41;](../report-builder/finding-viewing-and-managing-reports-report-builder-and-ssrs.md)  
   
   

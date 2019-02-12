@@ -9,15 +9,15 @@ ms.topic: conceptual
 f1_keywords:
 - sql12.dqs.kb.openkb.f1
 ms.assetid: a5f010a5-b762-41c9-881b-bf0c192dca83
-author: douglaslMS
-ms.author: douglasl
+author: leolimsft
+ms.author: lle
 manager: craigg
-ms.openlocfilehash: 5baacbca2f7882314ac62c1ef98e22ba6eca9aa8
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: e7b217d8bc099924e89783492991bd12a2275adb
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52507539"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56031232"
 ---
 # <a name="open-a-knowledge-base"></a>Apertura di una Knowledge Base
   In questo argomento viene descritto come aprire una Knowledge Base esistente in [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) e prepararla per le attività di gestione del dominio, individuazione delle informazioni o aggiunta di criteri di corrispondenza.  
@@ -77,9 +77,9 @@ ms.locfileid: "52507539"
 ##  <a name="State"></a> Stato di una Knowledge Base  
  Nel campo Stato viene indicata la fase di un'attività a cui si trova la Knowledge Base. Se si apre la Knowledge Base, verrà aperta in quella fase.  
   
--   **\<Vuoto >**: Il campo stato è vuoto per una knowledge base se la knowledge base è stata pubblicata facendo **Publish** nell'attività Gestione dominio e scegliendo **Sì - pubblica la knowledge base e Chiudi**.  
+-   **\<Empty>**: Il campo stato è vuoto per una knowledge base se la knowledge base è stata pubblicata facendo **Publish** nell'attività Gestione dominio e scegliendo **Sì - pubblica la knowledge base e Chiudi**.  
   
--   **In lavorazione**: Lavoro sulla knowledge base è stato salvato facendo **Publish** nell'attività Gestione dominio e scegliendo **No - Salva il lavoro sulla knowledge base e uscire**.  
+-   **In Work**: Lavoro sulla knowledge base è stato salvato facendo **Publish** nell'attività Gestione dominio e scegliendo **No - Salva il lavoro sulla knowledge base e uscire**.  
   
 -   **Gestione del dominio**: Sono stati immessi dati per un dominio nella knowledge base, ma la knowledge base non è stata pubblicata e il lavoro rimane nell'attività Gestione dominio. L'attività Individuazione informazioni non è disponibile. Ciò si verifica quando si fa clic su **Chiudi** nella schermata **Gestione dominio** .  
   

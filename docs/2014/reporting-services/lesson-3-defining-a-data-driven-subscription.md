@@ -1,5 +1,5 @@
 ---
-title: 'Lesson 3: Defining a Data-Driven Subscription (Lezione 3: Definizione di una sottoscrizione guidata dai dati) | Microsoft Docs'
+title: 'Lezione 3: Definizione di una sottoscrizione guidata dai dati | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -10,21 +10,21 @@ ms.topic: conceptual
 ms.assetid: 89197b9b-7502-4fe2-bea3-ed7943eebf3b
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: ccb9733badf6ec9bac12d383c20d4aea5090c0a6
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 54fd143d2b3af2596ff44a313b2d35b29fc1604a
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48058731"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56015541"
 ---
-# <a name="lesson-3-defining-a-data-driven-subscription"></a>Lesson 3: Defining a Data-Driven Subscription
+# <a name="lesson-3-defining-a-data-driven-subscription"></a>Lezione 3: Definizione di una sottoscrizione guidata dai dati
   In questa lezione verranno utilizzate le pagine di sottoscrizione guidate dai dati per connettersi a un'origine dei dati di sottoscrizione, verrà compilata una query che recupera i dati di sottoscrizione e sarà eseguito il mapping tra il set di risultati e le opzioni di recapito e del report.  
   
 > [!NOTE]  
 >  Prima di iniziare, verificare che il servizio [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Agent sia in esecuzione. Se non è in esecuzione, non è possibile salvare la sottoscrizione.  
   
- In questa lezione si presuppone che le lezioni 1 e 2 siano state completate e che l'origine dati del report utilizzi credenziali archiviate.  Per altre informazioni, vedere [Lezione 2: Modifica delle proprietà dell'origine dei dati del report](../reporting-services/lesson-2-modifying-the-report-data-source-properties.md)  
+ In questa lezione si presuppone che le lezioni 1 e 2 siano state completate e che l'origine dati del report utilizzi credenziali archiviate.  Per altre informazioni, vedere [Lezione 2: Modifica delle proprietà dell'origine dati del report](../reporting-services/lesson-2-modifying-the-report-data-source-properties.md)  
   
  Contenuto dell'argomento:  
   
@@ -96,7 +96,7 @@ ms.locfileid: "48058731"
   
 1.  Per **Nome file**selezionare **Estrai il valore dal database**. Selezionare il campo **Ordine**.  
   
-2.  Per **Percorso**selezionare **Specificare un valore statico**. In valore impostazione digitare il nome di una condivisione file pubblica per cui si dispone delle autorizzazioni di scrittura (ad esempio, `\\mycomputer\public\myreports`).  
+2.  Per **Percorso**selezionare **Specificare un valore statico**. In Valore impostazione digitare il nome di una condivisione file pubblica per la quale si dispone di autorizzazioni di scrittura, ad esempio `\\mycomputer\public\myreports`.  
   
 3.  Per **Formato di rendering**selezionare **Estrai il valore dal database**. Selezionare **Formato**.  
   
@@ -141,8 +141,8 @@ ms.locfileid: "48058731"
 ## <a name="see-also"></a>Vedere anche  
  [Creare una sottoscrizione guidata dai dati &#40;esercitazione su SSRS&#41;](../reporting-services/create-a-data-driven-subscription-ssrs-tutorial.md)   
  [Sottoscrizioni e recapito &#40;Reporting Services&#41;](subscriptions/subscriptions-and-delivery-reporting-services.md)   
- [Sottoscrizioni guidate dai dati](subscriptions/data-driven-subscriptions.md)   
+ [Data-Driven Subscriptions](subscriptions/data-driven-subscriptions.md)   
  [Creare, modificare ed eliminare una sottoscrizione guidata dai dati](subscriptions/create-modify-and-delete-data-driven-subscriptions.md)   
- [Usare un'origine dati esterna per i dati del sottoscrittore &#40;sottoscrizione guidata dai dati&#41;](subscriptions/use-an-external-data-source-for-subscriber-data-data-driven-subscription.md)  
+ [Utilizzare un'origine dei dati esterna per i dati del Sottoscrittore &#40;sottoscrizione guidata dai dati&#41;](subscriptions/use-an-external-data-source-for-subscriber-data-data-driven-subscription.md)  
   
   

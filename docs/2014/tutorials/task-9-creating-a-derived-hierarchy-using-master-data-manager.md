@@ -4,21 +4,18 @@ ms.custom: ''
 ms.date: 12/29/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- data-quality-services
-- integration-services
-- master-data-services
+ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: 3bd2ec05-933f-4947-b1fe-c9226961eb7d
-author: douglaslms
-ms.author: douglasl
+author: leolimsft
+ms.author: lle
 manager: craigg
-ms.openlocfilehash: 3004c9d5ae6637f288a87c50444b46fb958e7d22
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 6b3bc7d64e10e4803a2c2c069ab4b21cf8b139ec
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48076881"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56039332"
 ---
 # <a name="task-9-creating-a-derived-hierarchy-using-master-data-manager"></a>Attività 9: Creazione di una gerarchia derivata mediante Gestione dati master
   In questa attività viene creata una gerarchia derivata mediante Gestione dati master. Questa gerarchia derivata viene ricavata dalle relazioni tra attributi basati su dominio tra il **Supplier** e **stato** entità.  
@@ -41,11 +38,11 @@ ms.locfileid: "48076881"
   
      ![Salva derivata pulsante della gerarchia](../../2014/tutorials/media/et-creatingaderivedhierarchyusingmdm-03.jpg "Salva derivata pulsante della gerarchia")  
   
-7.  Trascinare **Supplier** dalla **livelli disponibili: SuppliersInState** al **livelli correnti: SuppliersInState**.  
+7.  Trascinare **Supplier** da **livelli disponibili: SuppliersInState** a **livelli correnti: SuppliersInState**.  
   
      ![Entità e gerarchie al livello corrente disponibili](../../2014/tutorials/media/et-creatingaderivedhierarchyusingmdm-04.jpg "entità e gerarchie al livello corrente disponibili")  
   
-8.  Trascinare **lo stato** dalla **livelli disponibili: SuppliersInState** al **livelli correnti: SuppliersInState**. Nella schermata debba già **livelli correnti** come illustrato nell'immagine seguente.  
+8.  Trascinare **lo stato** da **livelli disponibili: SuppliersInState** a **livelli correnti: SuppliersInState**. Nella schermata debba già **livelli correnti** come illustrato nell'immagine seguente.  
   
      ![Livelli correnti e anteprima della gerarchia derivata](../../2014/tutorials/media/et-creatingaderivedhierarchyusingmdm-05.jpg "livelli correnti e anteprima della gerarchia derivata")  
   
@@ -64,6 +61,6 @@ ms.locfileid: "48076881"
      ![In Esplora gerarchia derivata](../../2014/tutorials/media/et-creatingaderivedhierarchyusingmdm-07.jpg "Esplora gerarchia derivata")  
   
 ## <a name="next-step"></a>Passaggio successivo  
- [Lezione 5: Automatizzazione della pulizia e della corrispondenza tramite SSIS](../../2014/tutorials/lesson-5-automating-the-cleansing-and-matching-using-ssis.md)  
+ [Lezione 5: Automatizzazione della pulizia e corrispondenza tramite SSIS](../../2014/tutorials/lesson-5-automating-the-cleansing-and-matching-using-ssis.md)  
   
   

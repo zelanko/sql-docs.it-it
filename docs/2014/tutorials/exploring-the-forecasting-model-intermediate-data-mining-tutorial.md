@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: 0a00f409-050f-4b92-9763-ba31a6aa3052
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: d49bda5b1616a2052542b6047c1291dd64763e1d
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+manager: kfile
+ms.openlocfilehash: 607f300fbf2138796bb02c66c62386fcc93e6a45
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52401706"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56040032"
 ---
 # <a name="exploring-the-forecasting-model-intermediate-data-mining-tutorial"></a>Esplorazione del modello di previsione (Esercitazione intermedia sul data mining)
   Dopo aver creato il modello di data mining previsione, è possibile esplorare i risultati usando il **visualizzatore modello di Data Mining** scheda della finestra di progettazione modelli di Data Mining. Il [!INCLUDE[msCoName](../includes/msconame-md.md)] Visualizzatore Time Series contiene due schede: **I grafici** e **modello**.  
@@ -50,17 +49,17 @@ ms.locfileid: "52401706"
   
      Il grafico conterrà solo le sei linee delle serie seguenti, in modo da consentire di confrontare più facilmente le tendenze per le biciclette M200 e T1000.  
   
-    -   **M200 Europe: Quantità**  
+    -   **M200 Europe: Quantity**  
   
-    -   **M200 North America: Quantità**  
+    -   **M200 North America: Quantity**  
   
-    -   **M200 Pacific: Quantità**  
+    -   **M200 Pacific: Quantity**  
   
-    -   **T1000 Europe: Quantità**  
+    -   **T1000 Europe: Quantity**  
   
-    -   **T1000 North America: Quantità**  
+    -   **T1000 North America: Quantity**  
   
-    -   **T1000 Pacific: Quantità**  
+    -   **T1000 Pacific: Quantity**  
   
  ![Serie di stima delle quantità M200 e T1000](../../2014/tutorials/media/6series-defaultforecasting.gif "serie stima delle quantità M200 e T1000")  
   

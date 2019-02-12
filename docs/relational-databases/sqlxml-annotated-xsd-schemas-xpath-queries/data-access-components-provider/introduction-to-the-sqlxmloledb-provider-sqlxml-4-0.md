@@ -12,16 +12,16 @@ helpviewer_keywords:
 - adExecuteStream flag
 - SQLXMLOLEDB Provider, about SQLXMLOLEDB Provider
 ms.assetid: 2e3f3817-4209-4bf4-9f46-248c95bc6f1b
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 8d62031bdd9614cb4dafb8c7c8e18bf9e3b90cb8
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: f8abf4d73342105bf244adbccfe59e550b9f70c4
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51657820"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56030092"
 ---
 # <a name="introduction-to-the-sqlxmloledb-provider-sqlxml-40"></a>Introduzione al provider SQLXMLOLEDB (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -40,13 +40,13 @@ oTestCommand.Execute , , adExecuteStream
 ## <a name="sqlxmloledb-provider-specific-properties"></a>Proprietà specifiche del provider SQLXMLOLEDB  
  Il provider SQLXMLOLEDB espone le proprietà di connessione specifiche riportate di seguito.  
   
-|Connessione<br /><br /> proprietà|Default<br /><br /> (se disponibile)|Description|  
+|Connessione<br /><br /> proprietà|Impostazione predefinita<br /><br /> (se disponibile)|Descrizione|  
 |-----------------------------|----------------------------|-----------------|  
 |Provider di dati||Specifica il PROGID del provider OLE DB tramite il quale SQLXMLOLEDB esegue i comandi. A partire da SQLXML 4.0 e [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)], questo provider è contenuto in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client. Il valore di questa proprietà è pertanto limitato a "SQLNCLI11". Per altre informazioni, vedere [Programmazione in SQL Server Native Client](../../../relational-databases/native-client/sql-server-native-client-programming.md).|  
   
  Il provider SQLXMLOLEDB espone le proprietà dei comandi specifiche riportate di seguito.  
   
-|Comando<br /><br /> proprietà|Default<br /><br /> (se disponibile)|Description|  
+|Comando<br /><br /> proprietà|Impostazione predefinita<br /><br /> (se disponibile)|Descrizione|  
 |--------------------------|----------------------------|-----------------|  
 |Percorso di base|""|Specifica il percorso file di base. Tale percorso viene utilizzato per specificare la posizione dei file XSL (XML Stylesheet Language) o dei file dello schema di mapping. Il percorso del file di base viene utilizzato anche per risolvere i percorsi relativi di XSL o il mapping di file di schema che sono stati specificati nella proprietà XSL o Schema di Mapping.<br /><br /> Per un esempio in cui viene utilizzata questa proprietà, vedere [esecuzione di query XPath &#40;SQLXMLOLEDB Provider&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/data-access-components-provider/executing-xpath-queries-sqlxmloledb-provider.md).|  
 |ClientSideXML|False|Impostare questa proprietà su False se si desidera che il processo di conversione del set di righe in XML venga eseguito sul client anziché sul server. Questa operazione si rivela utile quando si desidera spostare il carico delle prestazioni al livello intermedio.<br /><br /> Per un esempio in cui viene utilizzata questa proprietà, vedere [esecuzione di query SQL &#40;SQLXMLOLEDB Provider&#41; ](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/data-access-components-provider/executing-sql-queries-sqlxmloledb-provider.md) o [modelli che contengono SQL le query con esecuzione &#40;SQLXMLOLEDB Provider&#41; ](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/data-access-components-provider/executing-templates-that-contain-sql-queries-sqlxmloledb-provider.md).|  
@@ -59,7 +59,7 @@ oTestCommand.Execute , , adExecuteStream
   
  Nella tabella seguente contiene descrizioni di ss valori di proprietà Flags di flusso.  
   
-|Valore proprietà|Description|  
+|Valore proprietà|Descrizione|  
 |--------------------|-----------------|  
 |STREAM_FLAGS_DISALLOW_URL|Gli URL non sono consentiti per gli schemi di mapping o XSL.|  
 |STREAM_FLAGS_DISALLOW_ABSOLTE_PATH|Un percorso specificato per uno schema di mapping o per XSL deve essere relativo al percorso di base del modello stesso.|  

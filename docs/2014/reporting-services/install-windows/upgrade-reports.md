@@ -19,13 +19,13 @@ helpviewer_keywords:
 ms.assetid: a1a10c67-7462-4562-9b07-a8822188a161
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 2b80d5a5fcdc5b95b7d82ce1e5f5deebd4de5f7d
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+manager: kfile
+ms.openlocfilehash: 637b434a50aaa49c7d0f3ba87e8505368620d596
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52538338"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56015042"
 ---
 # <a name="upgrade-reports"></a>Upgrade Reports
   I file di definizione del report (con estensione rdl) esistenti vengono aggiornati automaticamente nei modi seguenti:  

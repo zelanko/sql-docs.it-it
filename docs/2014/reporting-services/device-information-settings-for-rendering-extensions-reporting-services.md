@@ -10,20 +10,20 @@ ms.topic: conceptual
 ms.assetid: 947b0ee1-bb35-4b4e-9527-dc501566e7d1
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 1dca610c7d18f43552b02340f81455910927a633
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: fd9eaf6c8fc7bc29ddf6ba84745fed69fe6cc569
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48114021"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56013122"
 ---
 # <a name="device-information-settings-for-rendering-extensions-reporting-services"></a>Impostazioni relative alle informazioni sul dispositivo per le estensioni per il rendering (Reporting Services)
   In [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]le impostazioni relative alle informazioni sul dispositivo vengono usate per passare i parametri di rendering a un'estensione per il rendering. Ogni estensione per il rendering accetta un set specifico di impostazioni.  
   
-## <a name="in-this-section"></a>Argomenti della sezione  
+## <a name="in-this-section"></a>In questa sezione  
   
-|Argomento|Description|  
+|Argomento|Descrizione|  
 |-----------|-----------------|  
 |[Impostazioni relative alle informazioni sul dispositivo ATOM](../../2014/reporting-services/atom-device-information-settings.md)|Descrive le impostazioni relative alle informazioni sul dispositivo associate all'output del rendering conforme a Atom.|  
 |[Impostazioni relative alle informazioni sul dispositivo CSV](csv-device-information-settings.md)|Descrive le impostazioni relative alle informazioni sul dispositivo associate all'output del rendering CSV.|  

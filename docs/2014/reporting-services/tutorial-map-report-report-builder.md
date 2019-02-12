@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 8d831356-7efa-40cc-ae95-383b3eecf833
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: 43135554b1340b92f4801a0f08e002142b443981
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+manager: kfile
+ms.openlocfilehash: 8fe9eaf39f101e6f64946e7c60a04765e4099d5a
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53359863"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56040162"
 ---
 # <a name="tutorial-map-report-report-builder"></a>Esercitazione: Report mappa (Generatore report)
   Questa esercitazione intende fornire un approfondimento delle funzionalità della mappa che è possibile utilizzare per visualizzare i dati del report rispetto a uno sfondo geografico.  
@@ -359,7 +359,7 @@ ms.locfileid: "53359863"
   
  Ogni regione che contiene un negozio è caratterizzata da un colore basato sulla tavolozza dei colori per lo stile scelto nella procedura guidata.  
   
-###  <a name="ColorRules"></a> 6B. Specificare le regole colori per i poligoni  
+###  <a name="ColorRules"></a> 6b. Specificare le regole colori per i poligoni  
  Per creare una regola per variare il colore di ogni regione in base alle vendite dei negozi, è necessario specificare i valori di intervallo, il numero di divisioni all'interno dell'intervallo che si desidera visualizzare e i colori da utilizzare.  
   
 ##### <a name="to-specify-color-rules-for-all-polygons-that-have-associated-data"></a>Per specificare le regole colori per tutti i poligoni a cui sono associati dati  
@@ -415,7 +415,7 @@ ms.locfileid: "53359863"
   
  La scala dei colori visualizza le vendite annuali nel formato della valuta per ogni intervallo.  
   
-###  <a name="NewLegend"></a> 6 g. Creare una nuova legenda  
+###  <a name="NewLegend"></a> 6d. Creare una nuova legenda  
  Per impostazione predefinita, tutte le regole vengono visualizzate nella prima legenda. Per migliorare la visualizzazione per una mappa, è possibile aggiungere legende.  
   
  Per modificare la visualizzazione predefinita, è possibile eseguire due passaggi: creare una nuova legenda e quindi associare i risultati della regola per un livello mappa alla nuova legenda.  
@@ -438,7 +438,7 @@ ms.locfileid: "53359863"
   
  La legenda si espande per visualizzare il titolo.  
   
-###  <a name="Associate"></a> 6E. Associare la legenda e le regole colori  
+###  <a name="Associate"></a> 6e. Associare la legenda e le regole colori  
  Ogni legenda può visualizzare uno o più set di risultati della regola.  
   
 ##### <a name="to-associate-a-legend-with-color-rules"></a>Per associare una legenda alle regole colori  

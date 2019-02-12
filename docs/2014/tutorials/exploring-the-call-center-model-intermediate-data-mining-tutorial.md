@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: 9095212c-9068-4dd8-85ce-17a467adeabb
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: e6b1995ad715ea529da548f06e0643be076abe96
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+manager: kfile
+ms.openlocfilehash: a6aa4074aa04af86e478b57b1870fd0dd855bea8
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52518905"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56037762"
 ---
 # <a name="exploring-the-call-center-model-intermediate-data-mining-tutorial"></a>Esplorazione del modello Call Center (Esercitazione intermedia sul data mining)
   Dopo aver compilato il modello esplorativo, è possibile utilizzarlo per ottenere ulteriori informazioni sui dati tramite gli strumenti seguenti disponibili in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)].  
@@ -110,8 +109,8 @@ ms.locfileid: "52518905"
   
 |attribute|Value|Predilige \< 0,07|Predilige >= 0,12|  
 |---------------|-----------|--------------------|----------------------|  
-|Average Time Per Issue|89.087 120.000||Punteggio:  100<br /><br /> Probabilità di Value1: % 4.45<br /><br /> Probabilità di Value2: % 51.94<br /><br /> Livello di accuratezza per Value1: 0.19<br /><br /> Livello di accuratezza per Value2: 1,94|  
-|Average Time Per Issue|44.000 70.597|Punteggio: 92,35<br /><br /> Probabilità di Value1: 60,06%<br /><br /> Probabilità di Value2: 8,30%<br /><br /> Livello di accuratezza per Value1: versione 2.61<br /><br /> Livello di accuratezza per Value2: 0,31||  
+|Average Time Per Issue|89.087 - 120.000||Punteggio:  100<br /><br /> Probabilità di Value1: 4.45 %<br /><br /> Probabilità di Value2: 51.94 %<br /><br /> Livello di accuratezza per Value1: 0.19<br /><br /> Livello di accuratezza per Value2: 1.94|  
+|Average Time Per Issue|44.000 - 70.597|Punteggio: 92.35<br /><br /> Probabilità di Value1: 60.06 %<br /><br /> Probabilità di Value2: 8.30 %<br /><br /> Livello di accuratezza per Value1: 2.61<br /><br /> Livello di accuratezza per Value2: 0.31||  
   
  [Torna all'inizio](#bkmk_NNviewer)  
   

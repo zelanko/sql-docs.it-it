@@ -12,19 +12,19 @@ helpviewer_keywords:
 ms.assetid: 82fc4ba2-291a-4939-a025-271b8d687c54
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: c040f3afade749772ae1560e9f99af8cd4ac0a85
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 4e145eb63a357c628d46ce4c57218cbac1dfc149
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48114291"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56029146"
 ---
 # <a name="rename-a-report-server-computer"></a>Rinominare un computer del server di report
   La ridenominazione di un computer provoca una corrispondente modifica del nome del server Web e dell'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , se presente sullo stesso computer. In alcuni casi, dopo una modifica del nome del computer potrebbe non essere possibile accedere a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Utilizzare la procedura descritta in questo argomento per riconfigurare un server di report dopo la modifica del nome del computer.  
   
 ## <a name="renaming-a-sql-server-database-engine"></a>Ridenominazione di un Motore di database di SQL Server  
- Se si rinomina il [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] istanza in esecuzione il database del server di report, eseguire le operazioni seguenti:  
+ Se si rinomina l'istanza di [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] che esegue il database del server di report, effettuare le operazioni seguenti:  
   
 1.  Avviare lo strumento di configurazione Reporting Services e connettersi al server di report che utilizza il database del server di report sul server rinominato.  
   
@@ -39,9 +39,9 @@ ms.locfileid: "48114291"
 ## <a name="renaming-a-report-server-computer"></a>Ridenominazione di un computer server di report  
  Se si rinomina un computer in cui viene eseguito un server di report, eseguire le operazioni seguenti:  
   
-1.  Aprire **RSReportServer. config** in un editor di testo e modificare il `UrlRoot` impostazione in modo da riflettere il nuovo nome del server. L'impostazione `UrlRoot` viene utilizzata nelle estensioni per il recapito per comporre l'URL utilizzato per accedere agli elementi archiviati sul server di report. Modificare l'indirizzo URL server di report è necessario aggiornare il `UrlRoot` impostazione in modo che le sottoscrizioni continuino a recapitare i report come previsto.  
+1.  Aprire **RSReportServer. config** in un editor di testo e modificare il `UrlRoot` impostazione in modo da riflettere il nuovo nome del server. L'impostazione `UrlRoot` viene utilizzata nelle estensioni per il recapito per comporre l'URL utilizzato per accedere agli elementi archiviati sul server di report. Per modificare l'indirizzo URL del server di report è necessario aggiornare l'impostazione `UrlRoot` in modo che le sottoscrizioni continuino a recapitare i report come previsto.  
   
-2.  Nello stesso file, se è impostato, modificare il `ReportServerUrl` impostazione in modo da riflettere il nuovo nome del server. Si noti che questa impostazione non viene utilizzata in ogni installazione. Se è vuota, non eseguire alcuna operazione.  
+2.  Nello stesso file, se impostato, modificare l'impostazione `ReportServerUrl` per riflettere il nuovo nome del server. Si noti che questa impostazione non viene utilizzata in ogni installazione. Se è vuota, non eseguire alcuna operazione.  
   
     > [!NOTE]  
     >  Se si utilizza Windows Internet Naming Service (WINS) sulla rete aziendale, il server di report e Gestione report potrebbero continuare a essere disponibili con il nome precedente per un determinato periodo di tempo. WINS esegue il mapping di un indirizzo IP a ogni computer incluso nel servizio. Dopo che WINS ha aggiornato l'indirizzo IP per il computer rinominato, il precedente nome del computer non potrà più essere utilizzato per accedere a un server di report o a Gestione report.  
@@ -50,7 +50,7 @@ ms.locfileid: "48114291"
  [File di configurazione RSReportServer](rsreportserver-config-configuration-file.md)   
  [Gestione configurazione Reporting Services &#40;modalità nativa&#41;](../../sql-server/install/reporting-services-configuration-manager-native-mode.md)   
  [Server di report di Reporting Services &#40;modalità nativa&#41;](reporting-services-report-server-native-mode.md)   
- [Avviare e arrestare il servizio Server di Report](start-and-stop-the-report-server-service.md)   
- [Utilità rsconfig &#40;SSRS&#41;](../tools/rsconfig-utility-ssrs.md)  
+ [Avviare e arrestare il servizio del server di report](start-and-stop-the-report-server-service.md)   
+ [utilità rsconfig &#40;SSRS&#41;](../tools/rsconfig-utility-ssrs.md)  
   
   

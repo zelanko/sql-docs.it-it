@@ -2,10 +2,9 @@
 title: Viste del catalogo del Database SQL di Azure | Microsoft Docs
 ms.custom: ''
 ms.date: 08/20/2015
-ms.prod: ''
+ms.service: sql-database
 ms.reviewer: ''
 ms.prod_service: sql-database
-ms.technology: system-objects
 ms.topic: language-reference
 dev_langs:
 - TSQL
@@ -16,12 +15,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: 697ebec75445cabbc8aa48f10cf97f1659800829
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a910006616f559c553c28523a2cdc1db32af00df
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47837119"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56030842"
 ---
 # <a name="azure-sql-database-catalog-views"></a>Viste del catalogo del database SQL di Azure
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]

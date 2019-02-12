@@ -12,13 +12,13 @@ f1_keywords:
 ms.assetid: 423360de-9bed-462e-921f-60a5abab004f
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: 3071399edd3a7138d4cee68a162f0c44cfca29ac
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: d4540cdd9d0d8c196e9f304508fd60edd99f2174
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48218231"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56032972"
 ---
 # <a name="report-builder-options-dialog-box-settings-report-builder"></a>Finestra di dialogo Opzioni Generatore report, Impostazioni (Generatore report)
   Scegliere il **Generatore Report** pulsante e quindi fare clic su **opzioni** per impostare le opzioni per la visualizzazione dei file recenti e le connessioni. È anche possibile modificare il server di report predefinito o aggiungerne uno se tale server non è disponibile.  

@@ -15,13 +15,13 @@ helpviewer_keywords:
 ms.assetid: 6a303135-c0ef-44cd-a423-1cea8df3dcf3
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 7f4722a2b338b0187bdd93cb9501e626c42acf02
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 4da46abbfb586a2968f92a04538f5a82e06898c6
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48166891"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56031222"
 ---
 # <a name="connect-filter-or-documents-web-part-reporting-services-in-sharepoint-integrated-mode"></a>Connettere una web part Filtro o Documenti (Reporting Services in modalità integrata SharePoint)
   Se si utilizza un prodotto SharePoint, è possibile creare un dashboard o una pagina web part in cui sono incluse una web part di filtro o una web part Documenti e una web part Visualizzatore report. Le versioni supportate sono [!INCLUDE[SPF2010](../includes/spf2010-md.md)] o [!INCLUDE[SPS2010](../includes/sps2010-md.md)]. Sono anche supportate le versioni [!INCLUDE[winSPServ3](../includes/winspserv3-md.md)] e [!INCLUDE[offSPServ](../includes/offspserv-md.md)] 2007. Se si connette una web part di filtro, quando l'utente seleziona un valore di filtro in una web part di filtro, tale valore verrà inviato a un report con parametri nella stessa pagina. Se si connette una web part Documenti, quando l'utente fa clic su un report disponibile nella raccolta Documenti, tale report verrà visualizzato in una web part Visualizzatore report adiacente.  
@@ -77,8 +77,8 @@ ms.locfileid: "48166891"
 11. Archiviare le modifiche e salvare la pagina.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Aggiungere la Web Part Visualizzatore Report a una pagina Web &#40;Reporting Services in SharePoint la modalità integrata&#41;](report-server-sharepoint/add-reporting-services-content-types-to-a-sharepoint-library.md)   
- [Web Part Visualizzatore report in un sito di SharePoint](../../2014/reporting-services/report-viewer-web-part-on-a-sharepoint-site.md)   
+ [Aggiungere la web part Visualizzatore report a una pagina Web &#40;Reporting Services in modalità integrata SharePoint&#41;](report-server-sharepoint/add-reporting-services-content-types-to-a-sharepoint-library.md)   
+ [Web part Visualizzatore report in un sito di SharePoint](../../2014/reporting-services/report-viewer-web-part-on-a-sharepoint-site.md)   
  [Personalizzare la web part Visualizzatore report](../../2014/reporting-services/customize-the-report-viewer-web-part.md)  
   
   

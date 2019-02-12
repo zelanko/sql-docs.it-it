@@ -13,14 +13,14 @@ helpviewer_keywords:
 - data sources
 ms.assetid: f417782c-b85a-4c4d-8a40-839176daba56
 author: maggiesmsft
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: 1862d4d8a1437f223e688b0b2b95ad5b5768e6a8
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.author: maghan
+manager: kfile
+ms.openlocfilehash: 97a619b1618c1e733a61e5cd9ea825e07efddcac
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48224438"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56031952"
 ---
 # <a name="embedded-and-shared-data-connections-or-data-sources-report-builder-and-ssrs"></a>Connessioni dati o origini dati incorporate e condivise (Generatore report e SSRS)
   Nei report vengono usate le connessioni dati per il recupero di dati per un report quando viene eseguita una query o viene elaborato il report. È possibile scegliere da un elenco di tipi di connessione dati incorporati per la connessione a un database relazionale, un database multidimensionale, un servizio Web o ad altre origini di dati. Per la descrizione delle connessioni dati vengono usati i termini riportati di seguito.  
@@ -45,11 +45,11 @@ ms.locfileid: "48224438"
 ## <a name="shared-data-sources"></a>Origini dati condivise  
  Le origini dati condivise sono utili quando si usano spesso le stesse origini dati. Si consiglia di usare le origini dati condivise il più possibile. Rendono i report e l'accesso ai report più facile da gestire, offrono una maggiore protezione dei report e delle origini dati usate. Se è necessaria un'origine dati condivisa, chiedere all'amministratore di sistema di creare una.  
   
- In Generatore report non è possibile creare un'origine dati condivisa. È possibile individuare e selezionare un'origine dati condivisa dal server di report. Per altre informazioni, vedere [connessioni dati, origini dati e stringhe di connessione in Generatore Report](../../2014/reporting-services/data-connections-data-sources-and-connection-strings-in-report-builder.md).  
+ In Generatore report non è possibile creare un'origine dati condivisa. È possibile individuare e selezionare un'origine dati condivisa dal server di report. Per altre informazioni, vedere [Data Connections, Data Sources, and Connection Strings in Report Builder](../../2014/reporting-services/data-connections-data-sources-and-connection-strings-in-report-builder.md).  
   
  In Progettazione report non è possibile individuare un'origine dati condivisa nel server di report. È possibile creare origini dati condivisi come parte di un progetto in Esplora soluzioni e scegliere se distribuirle in un server di report. È possibile scegliere di usarle solo in locale a causa delle differenze nelle credenziali richieste dal computer in uso o dal server di report. Per altre informazioni, vedere [Connessioni dati, origini dati e stringhe di connessione in Reporting Services](../../2014/reporting-services/data-connections-data-sources-and-connection-strings-in-reporting-services.md).  
   
- L'icona seguente indica un elemento di origine dati condivisa nella gerarchia di cartelle del server di report: ![icona dell'origine dati condivisa](media/hlp-16datasource.png "icona di origine dati condivisa")  
+ L'icona seguente indica un elemento dell'origine dati condivisa nella gerarchia di cartelle del server di report: ![Icona di origine dati condivisa](media/hlp-16datasource.png "Icona di origine dati condivisa")  
   
 ## <a name="embedded-data-sources"></a>Origini dati incorporate  
  Una connessione a un'origine dati incorporata è una connessione dati salvata nella definizione del report. Le informazioni di connessione a un'origine dati incorporata possono essere usate solo dal report che la contiene. Per definire e gestire le origini dati incorporate, usare la finestra di dialogo **Proprietà origine dati** .  
@@ -57,7 +57,7 @@ ms.locfileid: "48224438"
 ##  <a name="Comparing"></a> Confronto tra incorporate e origini dati condivise  
  Nella tabella seguente vengono riepilogate le differenze fra le origini dati incorporate e quelle condivise:  
   
-|Description|Origine dati<br /><br /> origine dati|Condivisa<br /><br /> origine dati|  
+|Descrizione|Origine dati<br /><br /> origine dati|Condivisa<br /><br /> origine dati|  
 |-----------------|------------------------------|----------------------------|  
 |La connessione dati è incorporata nella definizione del report.|![Disponibile](media/greencheck.gif "Disponibile")||  
 |Il puntatore alla connessione dati nel server di report è incorporato nella definizione del report.||![Disponibile](media/greencheck.gif "Disponibile")|  
@@ -70,8 +70,8 @@ ms.locfileid: "48224438"
   
 ## <a name="see-also"></a>Vedere anche  
  [Aggiungere dati a un Report &#40;Report e SSRS&#41;](report-data/report-datasets-ssrs.md)   
- [Concetti relativi alla creazione di report &#40;Report e SSRS&#41;](report-design/report-authoring-concepts-report-builder-and-ssrs.md)   
- [Origini dati supportate da Reporting Services &#40;SSRS&#41;](create-deploy-and-manage-mobile-and-paginated-reports.md)   
+ [Concetti relativi alla creazione di report &#40;Generatore report e SSRS&#41;](report-design/report-authoring-concepts-report-builder-and-ssrs.md)   
+ [Origini dei dati supportate da Reporting Services &#40;SSRS&#41;](create-deploy-and-manage-mobile-and-paginated-reports.md)   
  [Aggiungere e verificare una connessione dati o un'origine dati &#40;Report e SSRS&#41;](report-data/add-and-verify-a-data-connection-report-builder-and-ssrs.md)   
  [Set di dati condivisi e incorporati &#40;Generatore report e SSRS&#41;](report-data/embedded-and-shared-datasets-report-builder-and-ssrs.md)  
   

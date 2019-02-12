@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: e9339227-6c2e-4c4b-8be2-8c1960bc4a8d
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 8e91853bba6b33ed57cc0152e266994d4e0ef528
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: b7f4f543952fd86cf6c3c66f9f4b2c51019b1869
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48092908"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56039353"
 ---
 # <a name="creating-a-sequence-clustering-mining-model-structure-intermediate-data-mining-tutorial"></a>Creazione di una struttura del modello di data mining Sequence Clustering (Esercitazione intermedia sul data mining)
   Il primo passaggio nella creazione di un modello di data mining Sequence Clustering consiste nell'utilizzo della Creazione guidata modello di data mining per la creazione di una nuova struttura di data mining e di un modello di data mining sulla base dell'algoritmo [!INCLUDE[msCoName](../includes/msconame-md.md)] Sequence Clustering.  
@@ -73,7 +72,7 @@ ms.locfileid: "48092908"
     |Tabelle/Colonne|Tipo di contenuto|Tipo di dati|  
     |---------------------|------------------|---------------|  
     |IncomeGroup|Discrete|Testo|  
-    |OrderNumber|Key|Testo|  
+    |OrderNumber|Chiave|Testo|  
     |Region|Discrete|Testo|  
     |vAssocSeqLineItems|||  
     |Line Number|Key Sequence|Long|  
@@ -91,7 +90,7 @@ ms.locfileid: "48092908"
  [Elaborazione del modello Sequence Clustering](../../2014/tutorials/processing-the-sequence-clustering-model.md)  
   
 ## <a name="see-also"></a>Vedere anche  
- [Progettazione modelli di Data Mining](../../2014/analysis-services/data-mining/data-mining-designer.md)   
+ [Progettazione modelli di data mining](../../2014/analysis-services/data-mining/data-mining-designer.md)   
  [Microsoft Sequence Clustering Algorithm](../../2014/analysis-services/data-mining/microsoft-sequence-clustering-algorithm.md)  
   
   

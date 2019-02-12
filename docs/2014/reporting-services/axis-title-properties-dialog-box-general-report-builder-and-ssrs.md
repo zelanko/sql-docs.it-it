@@ -12,14 +12,14 @@ f1_keywords:
 - sql12.rtp.rptdesigner.axistitleproperties.general.f1
 ms.assetid: e4ef6cc0-ec84-4a89-86ed-a3f8523402d9
 author: maggiesmsft
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: 3e20efdcc1d5ca2833896ae583583ed04449b996
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.author: maghan
+manager: kfile
+ms.openlocfilehash: 070b47688067e493321ce25d05f09eec6e44197e
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48064931"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56038852"
 ---
 # <a name="axis-title-properties-dialog-box-general-report-builder-and-ssrs"></a>Finestra di dialogo Proprietà titolo asse, Generale (Generatore report e SSRS)
   Selezionare **Generale** nella finestra di dialogo **Proprietà titolo asse** per definire il titolo dell'asse. Il titolo dell'asse è visualizzato sotto l'asse x o accanto all'asse y.  
@@ -44,6 +44,6 @@ ms.locfileid: "48064931"
  [Specificare un intervallo dell'asse &#40;Generatore report e SSRS&#41;](report-design/specify-an-axis-interval-report-builder-and-ssrs.md)   
  [Formattazione delle etichette degli assi come date o valute &#40;Generatore report e SSRSSSRS&#41;](report-design/format-axis-labels-as-dates-or-currencies-report-builder-and-ssrs.md)   
  [Tracciare i dati su un asse secondario &#40;Report e SSRS&#41;](report-design/plot-data-on-a-secondary-axis-report-builder-and-ssrs.md)   
- [Finestra di dialogo Proprietà asse, opzioni asse &#40;Report e SSRS&#41;](../../2014/reporting-services/axis-properties-dialog-box-axis-options-report-builder-and-ssrs.md)  
+ [Finestra di dialogo Proprietà asse, Opzioni asse &#40;Generatore report e SSRS&#41;](../../2014/reporting-services/axis-properties-dialog-box-axis-options-report-builder-and-ssrs.md)  
   
   

@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 8f873ef9-27a3-40e5-b58b-6774f8027a58
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: 39fa21f9bb7af15885abdf1d8c78d2651e2fbdab
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: effd50dc38610b4a3f059df8609cb9279e268b13
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48079161"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56017142"
 ---
 # <a name="rendering-behaviors-report-builder--and-ssrs"></a>Tipi di rendering (Generatore report e SSRS)
   A seconda del renderer selezionato, vengono applicate regole specifiche al corpo del report e al relativo contenuto durante il rendering di un report. La disposizione degli elementi del report in una pagina dipende dalla combinazione dei seguenti fattori:  
@@ -129,8 +129,8 @@ ms.locfileid: "48079161"
 -   Le interruzioni di pagina logiche definite su elementi contenuti in celle di tabella o matrice non vengono mantenute. Questo comportamento non viene applicato agli elementi negli elenchi.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Funzionalità interattiva per estensioni di Rendering del Report diversi &#40;Report e SSRS&#41;](../report-builder/interactive-functionality-different-report-rendering-extensions.md)   
+ [Funzionalità interattiva per estensioni per il rendering di report differenti &#40;Generatore report e SSRS&#41;](../report-builder/interactive-functionality-different-report-rendering-extensions.md)   
  [Rendering in formato HTML &#40;Generatore report e SSRS&#41;](../report-builder/rendering-to-html-report-builder-and-ssrs.md)   
- [Pagina Layout e Rendering della &#40;Report e SSRS&#41;](page-layout-and-rendering-report-builder-and-ssrs.md)  
+ [Layout e rendering della pagina &#40;Generatore report e SSRS&#41;](page-layout-and-rendering-report-builder-and-ssrs.md)  
   
   

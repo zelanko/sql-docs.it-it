@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: e8d6896d-f886-4390-8b5d-96f0a50c250c
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: c40f02e86f736b96398de4bb9e3d1183de2f9c6e
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 54082236bed728d81d060b73ecdc03fb53d82825
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48162861"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56016598"
 ---
 # <a name="use-an-office-data-connection-odc-with-reports-reporting-services-in-sharepoint-integrated-mode"></a>Utilizzare una connessione Office Data Connection (odc) ai report (Reporting Services in modalità integrata SharePoint)
   In particolari scenari è possibile utilizzare un file Office Data Connection (odc) esistente per fornire informazioni di connessione a un report di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. Quando si vuole creare un'origine dati condivisa, è possibile usare un file con estensione odc al posto di un file con estensione rsds. Nel server di report il file con estensione odc viene infatti utilizzato in modo analogo del file con estensione rsds, ovvero per il recupero del tipo dell'origine dati, della stringa di connessione e delle informazioni relative alle credenziali.  
@@ -35,7 +35,7 @@ ms.locfileid: "48162861"
   
 -   Nel file odc deve essere specificata una stringa di connessione.  
   
--   Le credenziali possono essere impostate su `None`, `Stored`, o `Integrated`. Se il metodo di credenziali è impostato su `Stored`, il server di report verrà richiesto all'utente le credenziali invece di usare le credenziali archiviate. perché non è in grado di utilizzare credenziali archiviate definite nel file con estensioni odc.  
+-   Le credenziali possono essere impostate su `None`, `Stored` o `Integrated`. Se per le credenziali è selezionata l'opzione `Stored`, anziché utilizzare le credenziali archiviate il server di report visualizzerà un messaggio per richiederle all'utente, perché non è in grado di utilizzare credenziali archiviate definite nel file con estensioni odc.  
   
 -   Lo schema dell'origine dati deve essere identico a quello utilizzato per creare il report. Se le strutture di dati sono diverse, il report non verrà eseguito.  
   

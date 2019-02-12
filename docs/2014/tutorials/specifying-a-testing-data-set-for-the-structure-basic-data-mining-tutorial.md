@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: 75cd508f-b126-418b-848d-3c4c3e6c303f
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 1e0bee469bd6dbbc93a48051e7c2e236c6c65c74
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 21eaa86fb1ff594e8b9d2b779b787276ee13ab4b
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48180921"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56028892"
 ---
 # <a name="specifying-a-testing-data-set-for-the-structure-basic-data-mining-tutorial"></a>Specifica di un set di dati di testing per la struttura (Esercitazione di base sul data mining)
   Nelle schermate finali della Creazione guidata modello di data mining si suddivideranno i dati in un set di testing e un set di training. Si assegnerà quindi un nome alla struttura e si abiliterà il drill-through sul modello.  
@@ -57,7 +56,7 @@ ms.locfileid: "48180921"
   
 ## <a name="see-also"></a>Vedere anche  
  [Abilitare il drill-through per un modello di Data Mining](../../2014/analysis-services/data-mining/enable-drillthrough-for-a-mining-model.md)   
- [Query drill-through &#40;Data Mining&#41;](../../2014/analysis-services/data-mining/drillthrough-queries-data-mining.md)   
+ [Query drill-through &#40;Data mining&#41;](../../2014/analysis-services/data-mining/drillthrough-queries-data-mining.md)   
  [Specificare i dati di Training &#40;Creazione guidata di Data Mining&#41;](../../2014/analysis-services/specify-the-training-data-data-mining-wizard.md)  
   
   

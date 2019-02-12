@@ -13,20 +13,20 @@ helpviewer_keywords:
 ms.assetid: 1d652605-9313-4c75-98b4-ba4dcbbb222d
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 283d810adec697ce2a78f60358a2c00e33be5cb3
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: becdcfd5e975b5d333e7b326adb4d9b7e283c86a
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48092907"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56040132"
 ---
 # <a name="data-processing-extensions-overview"></a>Cenni preliminari sulle estensioni per l'elaborazione dati
   Le estensioni per l'elaborazione dati in [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] consentono di eseguire la connessione a un'origine dati e di recuperare i dati. Fungono inoltre da ponte tra un'origine dati e un set di dati. Le estensioni per l'elaborazione dati di [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] sono modellate in base a un subset delle interfacce dei provider di dati [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)].  
   
  Nella tabella seguente sono elencate le estensioni per l'elaborazione dati incluse in [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)].  
   
-|Estensione per l'elaborazione dati|Description|  
+|Estensione per l'elaborazione dati|Descrizione|  
 |-------------------------------|-----------------|  
 |Estensione per l'elaborazione dati per [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]|Utilizza il provider di dati .NET Framework per SQL Server per la connessione a e il recupero dei dati da [!INCLUDE[ssDEnoversion](../../../includes/ssdenoversion-md.md)].|  
 |Estensione per l'elaborazione dati per OLE DB|Usa il provider di dati .NET Framework per OLE DB. Con questa estensione, il server di report può eseguire una query su qualsiasi origine dati che dispone di un provider OLE DB.|  

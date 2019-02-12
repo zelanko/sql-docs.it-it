@@ -15,13 +15,13 @@ f1_keywords:
 ms.assetid: df49e4e3-f279-4c63-a03b-b70c095f4ba2
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: 19c2f599a00548ed85853720c0aad86d38950c74
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 66dadc7a6163b8da7024818a9ecee16d5b3df696
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48222521"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56029302"
 ---
 # <a name="text-boxes-report-builder-and-ssrs"></a>Caselle di testo (Generatore report e SSRS)
   In genere si pensa a una casella di testo come a una casella autonoma contenente testo in un'area quale [!INCLUDE[msCoName](../../includes/msconame-md.md)] Office PowerPoint. In Generatore report, alcune caselle di testo sono di questo tipo e consentono di visualizzare un testo letterale per titoli, descrizioni ed etichette o un testo dinamico basato sulle espressioni. Tuttavia anche in tutte le celle di una tabella o di una matrice (area dati Tablix) è contenuta una casella di testo che può essere formattata esattamente come le caselle di testo autonome di un report.  
@@ -41,7 +41,7 @@ ms.locfileid: "48222521"
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
 ##  <a name="GrowShrinkTextBox"></a> Espansione e riduzione di una casella di testo  
- Per impostazione predefinita, le caselle di testo presentano dimensioni fisse. È possibile ridurre o espandere verticalmente una casella di testo in base al contenuto. Per altre informazioni, vedere [espansione o riduzione di una casella di testo &#40;Generatore Report e SSRS&#41;](allow-a-text-box-to-grow-or-shrink-report-builder-and-ssrs.md).  
+ Per impostazione predefinita, le caselle di testo presentano dimensioni fisse. È possibile ridurre o espandere verticalmente una casella di testo in base al contenuto. Per altre informazioni, vedere [Espansione o riduzione di una casella di testo &#40;Generatore report e SSRS&#41;](allow-a-text-box-to-grow-or-shrink-report-builder-and-ssrs.md).  
   
 ## <a name="orienting-a-text-box"></a>Orientamento di una casella di testo  
  Orientando le caselle di testo è possibile migliorare la leggibilità dei report, supportare un orientamento di testo specifico delle impostazioni locali, adattare più colonne in un report stampato con dimensioni di pagina fisse e creare report più soddisfacenti dal punto di vista grafico. Una casella di testo può essere orientata in diverse direzioni: orizzontale, verticale o con una rotazione di 270 gradi. L'opzione verticale è più usata per le lingue dell'Asia orientale, che si scrivono dall'alto verso il basso. Nella maggior parte dei renderer l'opzione verticale consente di gestire la proprietà di rotazione del glifo in modo che il testo venga scritto dall'alto verso il basso, ma i caratteri non risultino ai lati. Per le altre lingue, le opzioni verticale e di 270 gradi determinano che il testo venga scritto lateralmente.  
@@ -54,19 +54,19 @@ ms.locfileid: "48222521"
   
  L'orientamento viene impostato sulla casella di testo e si applica a tutto il testo contenuto nella casella. Non è possibile specificare un orientamento diverso per varie parti della casella di testo.  
   
- Per iniziare rapidamente con la modifica l'orientamento del testo, vedere la sezione sulla rotazione del testo nel [esercitazione: formattazione di testo &#40;Generatore Report&#41;](../tutorial-format-text-report-builder.md). Per altre informazioni, vedere [impostare orientamento della casella di testo &#40;Generatore Report e SSRS&#41;](set-text-box-orientation-report-builder-and-ssrs.md).  
+ Per iniziare rapidamente con la modifica l'orientamento del testo, vedere la sezione sulla rotazione del testo nel [esercitazione: Formattazione di testo &#40;Generatore report&#41;](../tutorial-format-text-report-builder.md). Per altre informazioni, vedere [impostare orientamento della casella di testo &#40;Generatore Report e SSRS&#41;](set-text-box-orientation-report-builder-and-ssrs.md).  
   
 ##  <a name="HowTo"></a> Procedure  
- [Aggiunta, spostamento o eliminazione di una casella di testo &#40;Report e SSRS&#41;](add-move-or-delete-a-text-box-report-builder-and-ssrs.md)  
+ [Aggiungere, spostare o eliminare una casella di testo &#40;Generatore report e SSRS&#41;](add-move-or-delete-a-text-box-report-builder-and-ssrs.md)  
   
- [Formattazione del testo in una casella di testo &#40;Report e SSRS&#41;](format-text-in-a-text-box-report-builder-and-ssrs.md)  
+ [Formattare il testo in una casella di testo &#40;Generatore report e SSRS&#41;](format-text-in-a-text-box-report-builder-and-ssrs.md)  
   
- [Impostare l'orientamento della casella di testo &#40;Report e SSRS&#41;](set-text-box-orientation-report-builder-and-ssrs.md)  
+ [Impostare l'orientamento della casella di testo &#40;Generatore report e SSRS&#41;](set-text-box-orientation-report-builder-and-ssrs.md)  
   
- [Espansione o riduzione di una casella di testo &#40;Report e SSRS&#41;](allow-a-text-box-to-grow-or-shrink-report-builder-and-ssrs.md)  
+ [Espansione o riduzione di una casella di testo &#40;Generatore report e SSRS&#41;](allow-a-text-box-to-grow-or-shrink-report-builder-and-ssrs.md)  
   
 ## <a name="see-also"></a>Vedere anche  
- [Formattazione di testo e segnaposto &#40;Report e SSRS&#41;](formatting-text-and-placeholders-report-builder-and-ssrs.md)   
- [Formattazione di numeri e date di &#40;Report e SSRS&#41;](formatting-numbers-and-dates-report-builder-and-ssrs.md)  
+ [Formattazione di testo e segnaposto &#40;Generatore report e SSRS&#41;](formatting-text-and-placeholders-report-builder-and-ssrs.md)   
+ [Formattazione di numeri e date &#40;Generatore report e SSRS&#41;](formatting-numbers-and-dates-report-builder-and-ssrs.md)  
   
   

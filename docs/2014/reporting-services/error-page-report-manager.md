@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 8311ed32-00f3-451d-8279-946429f5fee1
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 19d1fdd45018e436dddab95cfe01173ec63f794d
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+manager: kfile
+ms.openlocfilehash: 43a591e8fa9f590550b53a16891f8c1880cbcf99
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52511668"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56029232"
 ---
 # <a name="error-page-report-manager"></a>Pagina Errore (Gestione report)
   La pagina Errore consente di visualizzare informazioni dettagliate su una condizione di errore. Gli errori di server locali o basati su sessione vengono visualizzati in questa pagina. Gli errori di convalida correlati a controlli specifici della pagina vengono visualizzati accanto al controllo.  
@@ -27,7 +27,7 @@ ms.locfileid: "52511668"
   
 -   Se vengono visualizzati messaggi di errore simili al seguente, vedere [Configure a Report Server for Remote Administration](report-server/configure-a-report-server-for-remote-administration.md).  
   
-     Impossibile trovare il computer. "Il server RPC non è disponibile. (Eccezione da HRESULT: 0x800706ba) ".  
+     Impossibile trovare il computer. "Il server RPC non è disponibile. (Eccezione da HRESULT: 0x800706BA)".  
   
 -   È possibile impostare le proprietà di un server di report [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] in modo che vengano restituite ulteriori informazioni sulle condizioni di errore che si verificano nei server remoti. Se un messaggio di errore contiene il testo "Per altre informazioni su questo errore, passare al server di report nel computer server locale oppure abilitare errori remoti", vedere [Abilita errori remoti &#40;Reporting Services&#41;](report-server/enable-remote-errors-reporting-services.md).  
   

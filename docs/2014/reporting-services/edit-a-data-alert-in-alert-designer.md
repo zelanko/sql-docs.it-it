@@ -15,13 +15,13 @@ helpviewer_keywords:
 ms.assetid: dde3664d-90b5-4b12-969e-39152c86e58a
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 511a057721f1dbd8273fe1909c4eaae31dd128f3
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: d9d658bed81c38078f64981cbfb3be6b289ffb22
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48119441"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56029342"
 ---
 # <a name="edit-a-data-alert-in-alert-designer"></a>Modificare un avviso dati nella finestra di progettazione di avvisi
   È possibile aprire una definizione di avviso dati da modificare tramite Gestione avvisi dati. La definizione di avviso può essere modificata solo dall'utente che l'ha creata. Per altre informazioni sull'apertura di gestione avvisi dati, vedere [Gestire gli avvisi dati in Gestione avvisi dati](manage-my-data-alerts-in-data-alert-manager.md).  
@@ -38,7 +38,7 @@ ms.locfileid: "48119441"
   
      La definizione di avviso viene aperta in Gestione avvisi dati.  
   
-2.  Aggiornare le regole e le impostazioni di pianificazione e di posta elettronica. Per altre informazioni, vedere [finestra di progettazione avviso dati](../../2014/reporting-services/data-alert-designer.md) e [creare un avviso nella finestra di progettazione avviso dati](create-a-data-alert-in-data-alert-designer.md).  
+2.  Aggiornare le regole e le impostazioni di pianificazione e di posta elettronica. Per altre informazioni, vedere [Finestra di progettazione Avviso dati](../../2014/reporting-services/data-alert-designer.md) e [Creare un avviso dati nella finestra di progettazione Avviso dati](create-a-data-alert-in-data-alert-designer.md).  
   
     > [!NOTE]  
     >  Non è possibile scegliere un feed di dati diverso. Per utilizzare un feed di dati diverso, è necessario creare una nuova definizione di avviso dati.  

@@ -4,21 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- data-quality-services
-- integration-services
-- master-data-services
+ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: 6e90517a-910c-4c33-8f11-92ac3cff4fdc
-author: douglaslms
-ms.author: douglasl
+author: leolimsft
+ms.author: lle
 manager: craigg
-ms.openlocfilehash: 042cff6f687bb54466afb2334ad95402de319e94
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: ef3d063db5578485e89dc18b4a5e93af800b15fe
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48207111"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56037732"
 ---
 # <a name="task-6-verify-that-the-domain-based-attribute-is-created-using-master-data-manager"></a>Attività 6: Verifica della creazione dell'attributo basato su dominio tramite Gestione dati master
   In questa attività si verifica che l'entità **State** venga creata in **MDS** e che l'attributo **State** dell'entità **Supplier** sia un attributo basato su dominio che dipende dall'entità **State** tramite **Gestione dati master**.  
@@ -29,7 +26,7 @@ ms.locfileid: "48207111"
   
 3.  Assicurarsi che il modello **Suppliers** sia selezionato e fare clic su **Esplora risorse**. Se **Esplora risorse** è già aperto è possibile aggiornare la pagina.  
   
-4.  Passando il puntatore su **Entità** nella barra dei menu, si noti che ora sono presenti due entità: **Supplier** e **State**.  
+4.  Posizionare il mouse sopra **entità** nella barra dei menu e si noti che ora sono presenti due entità: **Supplier** e **stato**.  
   
      ![Menu entità con stato e fornitore](../../2014/tutorials/media/et-verifythatthedbaiscreatedusingmdm-01.jpg "Menu entità con stato e fornitore")  
   
@@ -41,7 +38,7 @@ ms.locfileid: "48207111"
   
 8.  Ripetere i passaggi precedenti per gli altri stati.  
   
-    |codice|nome|  
+    |Codice|nome|  
     |----------|----------|  
     |CA|California|  
     |CO|Colorado|  
@@ -82,6 +79,6 @@ ms.locfileid: "48207111"
      ![Stato attributo con codici e nomi aggiornati](../../2014/tutorials/media/et-verifythatthedbaiscreatedusingmdm-02.jpg "stato attributo con codici e nomi aggiornati")  
   
 ## <a name="next-step"></a>Passaggio successivo  
- [Attività 7: Visualizzazione degli aggiornamenti eseguiti tramite Gestione dati master in Excel](../../2014/tutorials/task-7-viewing-updates-made-using-master-data-manager-in-excel.md)  
+ [Attività 7: Visualizzazione degli aggiornamenti eseguiti tramite Gestione dati Master in Excel](../../2014/tutorials/task-7-viewing-updates-made-using-master-data-manager-in-excel.md)  
   
   

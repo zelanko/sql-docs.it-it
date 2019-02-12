@@ -12,13 +12,13 @@ helpviewer_keywords:
 ms.assetid: 10266c94-d4da-4f4a-8cdd-5a64f57ada5e
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 4658a709e21e101d35f49424f218ea73a21e27e6
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 69035945199fa1b07c2d778ffd581f83827cfb0b
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48070411"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56040802"
 ---
 # <a name="version-property--wmi-msreportserverconfigurationsetting"></a>Proprietà Version (WMI MSReportServer_ConfigurationSetting)
   Restituisce la versione del server di report in formato Major.Minor.Build.Revision. Di sola lettura.  
@@ -34,7 +34,7 @@ public string Version;
 ```  
   
 ## <a name="property-value"></a>Valore proprietà  
- Oggetto `string` che contiene la versione del server di report.  
+ Valore `string` che contiene la versione del server di report.  
   
 ## <a name="example-code"></a>Codice di esempio  
  [Classe MSReportServer_ConfigurationSetting](msreportserver-configurationsetting-class.md)  

@@ -15,13 +15,13 @@ helpviewer_keywords:
 ms.assetid: 0fd91f77-0143-476b-9af0-87293be78e44
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 88cd7f9323740df84f9123a37c69765f37fb14ec
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 055c0b60ae13f1933d0de753a3096f9b48786aa2
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48182711"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56034822"
 ---
 # <a name="secure-folders"></a>Proteggere le cartelle
   La sicurezza di tutto il contenuto di un server di report si basa sulle impostazioni di sicurezza delle cartelle. Poiché che la sicurezza viene ereditata tramite la struttura di cartelle, è possibile consentire determinati tipi di accesso a sezioni diverse, grandi o piccole, della gerarchia di cartelle.  
@@ -37,14 +37,14 @@ ms.locfileid: "48182711"
   
 |Selezionare questa attività|Per concedere l'autorizzazione per|  
 |----------------------|---------------------------|  
-|Visualizzazione di cartelle|Visualizzare la gerarchia di cartelle e le proprietà di sola lettura che indicano quando la cartella è stata creata e modificata.<br /><br /> Gli elementi inclusi nella cartella possono essere visualizzati solo dagli utenti nelle cui assegnazioni di ruolo sono incluse anche le attività "Visualizzazione di report", "Visualizzazione di modelli", "Visualizzazione di risorse" e "Visualizzazione di origini dei dati".|  
+|Visualizzazione di cartelle|Visualizzare la gerarchia di cartelle e le proprietà di sola lettura che indicano quando la cartella è stata creata e modificata.<br /><br /> Gli utenti non possono visualizzare gli elementi nella cartella a meno che non sono assegnati a ruoli che includono anche le attività seguenti: "Visualizzazione di report," "Visualizzazione di modelli", "Visualizzazione di risorse" e "Visualizzazione di origini dati".|  
 |Gestione di cartelle|Visualizzare le proprietà di una cartella, modificare il nome o la descrizione o spostare la cartella in un'altra posizione. Questa attività consente agli utenti di creare cartelle.|  
 |Gestione di report|Aggiungere report dal file system a una cartella e pubblicare i report da Progettazione report nel server di report.|  
 |Gestione di origini dei dati|Aggiungere nuove origini dei dati condivise a una cartella e modificare quelle esistenti.|  
 |Impostazione della sicurezza per singoli elementi|Creare e modificare assegnazioni di ruolo che controllano l'accesso alla cartella. Questa attività deve essere utilizzata con l'attività "Visualizzazione di cartelle" o "Gestione di cartelle". In caso contrario, non si avrà alcun effetto in quanto l'utente non sarà in grado di selezionare l'elemento.|  
   
 ## <a name="see-also"></a>Vedere anche  
- [Proteggere i report e risorse](secure-reports-and-resources.md)   
+ [Garantire la sicurezza di report e risorse](secure-reports-and-resources.md)   
  [Proteggere le origini dei dati condivise](secure-shared-data-source-items.md)   
  [Concessione di autorizzazioni in un server di report in modalità nativa](granting-permissions-on-a-native-mode-report-server.md)  
   

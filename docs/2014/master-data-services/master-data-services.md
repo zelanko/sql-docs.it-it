@@ -8,15 +8,15 @@ ms.technology:
 - master-data-services
 ms.topic: conceptual
 ms.assetid: f6cd850f-b01b-491f-972c-f966b9fe4190
-author: douglaslms
-ms.author: douglasl
+author: leolimsft
+ms.author: lle
 manager: craigg
-ms.openlocfilehash: 3794e92f2463ed82e19f5ba8a80c6df483e9ade5
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 841f2383b47a40ffd4b8a5d5357b08a9504a30c2
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53369043"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56036542"
 ---
 # <a name="master-data-services"></a>Master Data Services
   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] (MDS) è la soluzione [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] per la gestione dei dati master. Nella gestione dei dati master vengono descritti gli sforzi fatti da un'organizzazione per individuare e definire elenchi non transazionali di dati, con l'obiettivo della compilazione di elenchi principali gestibili. In un progetto di gestione dei dati master in genere è inclusa una valutazione e la ristrutturazione dei processi aziendali interni insieme all'implementazione della tecnologia di gestione dei dati master. Il risultato di una soluzione di gestione dei dati master riuscita sono dei dati affidabili, centralizzati che possono essere analizzati e dar luogo a decisioni aziendali ottimali.  

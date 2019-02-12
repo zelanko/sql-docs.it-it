@@ -15,13 +15,13 @@ helpviewer_keywords:
 ms.assetid: d203886f-faa1-4a02-88f5-dd4c217181ef
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 4c8a1a3b41bd30702a04ce6cbb49b70bc561e508
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+manager: kfile
+ms.openlocfilehash: ac63791bd33d9f6f774cd1d56601a28d3683b249
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53369893"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56037142"
 ---
 # <a name="xml-query-syntax-for-xml-report-data-ssrs"></a>Sintassi di query XML per i dati del report XML (SSRS)
   In [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]è possibile creare set di dati per origini dati XML. Dopo aver definito un'origine dati, è possibile creare una query per il set di dati. In base al tipo di dati XML a cui punta l'origine dei dati, è possibile creare la query del set di dati includendo un elemento `Query` XML o un percorso di elemento. Un file XML `Query` inizia con un  **\<Query >** tag e include spazi dei nomi ed elementi XML che variano a seconda dell'origine dati. Un percorso di elemento è indipendente dallo spazio dei nomi e specifica i nodi e gli attributi dei nodi dei dati XML sottostanti da utilizzare tramite una sintassi di tipo XPath. Per altre informazioni sui percorsi di elementi, vedere [Sintassi del percorso di elemento per i dati del report XML &#40;SSRS&#41;](report-data-ssrs.md).  
@@ -89,9 +89,9 @@ ms.locfileid: "53369893"
 |Elemento Query XML|Campi risultanti nel set di dati|  
 |-----------------------|-------------------------------------|  
 |\<Query/>|Valore a: https://schemas.microsoft.com/...<br /><br /> Valore b: https://schemas.microsoft.com/...<br /><br /> Valore di c: https://schemas.microsoft.com/...|  
-|\<XmlDP:query xmlns:xmldp = "https://schemas.microsoft.com/sqlserver/2005/02/reporting/XmlDPQuery" xmlns:ns = "https://schemas.microsoft.com/..." ><br /><br /> \<XmlDP:ElementPath > radice {}/ns:Element2 / nodo\</xmldp:ElementPath ><br /><br /> \</XmlDP:query >|Value D<br /><br /> Value E<br /><br /> Value F|  
+|\<xmldp:Query xmlns:xmldp="https://schemas.microsoft.com/sqlserver/2005/02/reporting/XmlDPQuery" xmlns:ns="https://schemas.microsoft.com/..."><br /><br /> \<XmlDP:ElementPath > radice {}/ns:Element2 / nodo\</xmldp:ElementPath ><br /><br /> \</xmldp:Query>|Value D<br /><br /> Value E<br /><br /> Value F|  
   
-#### <a name="xml-document-dpnamespacexml"></a>Documento XML: Dpnamespace. Xml  
+#### <a name="xml-document-dpnamespacexml"></a>Documento XML: DPNamespace.xml  
  È possibile copiare il codice XML seguente e salvarlo in un URL disponibile per Progettazione report, per l'uso come origine dati XML, ad esempio, http://localhost/DPNamespace.xml.  
   
 ```  

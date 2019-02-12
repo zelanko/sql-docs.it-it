@@ -16,13 +16,13 @@ helpviewer_keywords:
 ms.assetid: d8143a4b-08a1-4c38-9d00-8e50818ee380
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: dc6189daffb2e099023ff6adb0d247c28c922545
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 1e5cc37546e72384b0c264e80f5f7501c7e19402
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48114361"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56016362"
 ---
 # <a name="identifying-execution-state"></a>Identificazione dello stato di esecuzione
   HTTP (Hypertext Transfer Protocol) è un protocollo senza connessione e senza stato, ovvero non indica automaticamente se diverse richieste provengono dallo stesso client o se una singola istanza di un browser continua a visualizzare attivamente una pagina o un sito. Le sessioni creano una connessione logica per gestire lo stato tra server e client tramite HTTP. Le informazioni specifiche dell'utente relative a una particolare sessione sono note come stato della sessione.  

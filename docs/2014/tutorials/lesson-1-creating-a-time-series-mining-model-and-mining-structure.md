@@ -4,21 +4,20 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: b201f2b8-9ab5-425b-9ff3-fe321a60a7b7
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 5ea66ce1ef677e150a93fbd873c8b97f939e19e1
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 2513bc3837dd224f6561eb0015ced538ea3add8c
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48174021"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56014162"
 ---
-# <a name="lesson-1-creating-a-time-series-mining-model-and-mining-structure"></a>Lezione 1: Creazione di un modello di data mining Time Series e di una struttura di data mining
+# <a name="lesson-1-creating-a-time-series-mining-model-and-mining-structure"></a>Lezione 1: Creazione di una serie temporale, modello di Data Mining e struttura di Data Mining
   In questa lezione verrà creato un modello di data mining che consente di eseguire una stima di valori nel tempo in base a dati cronologici. Al momento della creazione del modello, la struttura sottostante verrà generata automaticamente e potrà essere utilizzata come base per nuovi modelli di data mining.  
   
  Questa lezione presuppone che l'utente abbia familiarità con i modelli di previsione e con i requisiti dell'algoritmo Microsoft Time Series. Per altre informazioni, vedere [Algoritmo Microsoft Time Series](../../2014/analysis-services/data-mining/microsoft-time-series-algorithm.md).  
@@ -196,7 +195,7 @@ CREATE MINING MODEL [Mining Model Name]
  Nella prossima lezione, si aggiungerà un modello di data mining per i **Forecasting_MIXED** struttura di data mining appena creato.  
   
 ## <a name="next-lesson"></a>Lezione successiva  
- [Lezione 2: Aggiunta di modelli di data mining alla struttura di data mining Time Series](../../2014/tutorials/lesson-2-adding-mining-models-to-the-time-series-mining-structure.md)  
+ [Lezione 2: Aggiunta di modelli di Data Mining per la struttura di Data Mining Time Series](../../2014/tutorials/lesson-2-adding-mining-models-to-the-time-series-mining-structure.md)  
   
 ## <a name="see-also"></a>Vedere anche  
  [Contenuto dei modelli per i modelli Time Series di data mining &#40;Analysis Services - Data Mining&#41;](../../2014/analysis-services/data-mining/mining-model-content-for-time-series-models-analysis-services-data-mining.md)   

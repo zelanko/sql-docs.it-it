@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 8f1d0a76-afed-480f-98fb-89e2d4eb09b1
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: b8a4d21b2db6673fda184bdd7ed391dd2af8b48d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: ce182fda15373e15baffcda73cc777c2cf154065
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48105871"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56011122"
 ---
 # <a name="adding-data-to-a-tablix-data-region-report-builder-and-ssrs"></a>Aggiunta di dati a un'area dati Tablix (Generatore report e SSRS)
   Per visualizzare i dati di un set di dati del report in una tabella o una matrice, specificare in ogni cella dati il nome di un campo del set di dati da visualizzare. È possibile visualizzare dati dettaglio o dati raggruppati. Se si aggiungono gruppi a una tabella o una matrice, vengono automaticamente aggiunte le righe e le colonne per i valori e i dati di gruppo. È quindi possibile aggiungere subtotali e totali per i dati.  

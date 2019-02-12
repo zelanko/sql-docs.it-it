@@ -18,13 +18,13 @@ helpviewer_keywords:
 ms.assetid: fd5549e7-b874-41e2-866e-2f58caf6f733
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 44db8007a7b8abfed99d65c93037dd647cc4cb41
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 70b4e9e4dcaf70a34287ae6b216b9faf1749b55b
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48074439"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56016202"
 ---
 # <a name="secureconnectionlevel-property-wmi-msreportserverconfigurationsetting"></a>Proprietà SecureConnectionLevel (MSReportServer_ConfigurationSetting WMI)
   Restituisce il livello di connessione protetta specificato nel file RSReportServer.config. Di sola lettura.  
@@ -40,7 +40,7 @@ public Integer SecureConnectionLevel;
 ```  
   
 ## <a name="property-values"></a>Valori della proprietà  
- Un `Integer` valore che rappresenta il livello di connessione protetta. I valori restituiti indicano se SSL è o non è configurato. Il valore maggiore di o pari a 1 indica che SSL è abilitato. Il valore 0 indica che SSL è disattivato.  
+ Valore `Integer` che rappresenta il livello di connessione protetto. I valori restituiti indicano se SSL è o non è configurato. Il valore maggiore di o pari a 1 indica che SSL è abilitato. Il valore 0 indica che SSL è disattivato.  
   
 ## <a name="example-code"></a>Codice di esempio  
  [Classe MSReportServer_ConfigurationSetting](msreportserver-configurationsetting-class.md)  

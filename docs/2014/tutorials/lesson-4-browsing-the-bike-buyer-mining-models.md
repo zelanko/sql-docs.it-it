@@ -4,22 +4,21 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: 8de3c500-f881-42da-a096-b6c03300d58d
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: f04abc5506e78e332b188cfc87c727b0000ca621
-ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
+manager: kfile
+ms.openlocfilehash: 709df371d840d4b24e420b4fcd08750fd31e8075
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50147346"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56011530"
 ---
-# <a name="lesson-4-browsing-the-bike-buyer-mining-models"></a>Lezione 4: Esplorazione dei modelli di data mining Bike Buyer
-  In questa lezione si userà il [SELECT (DMX)](/sql/dmx/select-dmx) istruzione per esplorare il contenuto dell'albero delle decisioni e di data mining di clustering di modelli creati nella [lezione 2: aggiunta di modelli di Data Mining alla struttura di Data Mining predittiva](../../2014/tutorials/lesson-2-adding-mining-models-to-the-bike-buyer-mining-structure.md).  
+# <a name="lesson-4-browsing-the-bike-buyer-mining-models"></a>Lezione 4: Esplorazione di modelli di Data Mining Bike Buyer
+  In questa lezione si userà il [SELECT (DMX)](/sql/dmx/select-dmx) istruzione per esplorare il contenuto dell'albero delle decisioni e di data mining di clustering di modelli creati nella [lezione 2: Aggiunta di modelli di Data Mining alla struttura di Data Mining predittiva](../../2014/tutorials/lesson-2-adding-mining-models-to-the-bike-buyer-mining-structure.md).  
   
  Le colonne contenute in un modello di data mining non sono quelle definite dalla struttura di data mining ma sono un set specifico di colonne che descrivono le tendenze e gli schemi individuati dall'algoritmo. Queste colonne del modello di data mining sono descritte nel [set di righe DMSCHEMA_MINING_MODEL_CONTENT](https://docs.microsoft.com/bi-reference/schema-rowsets/data-mining/dmschema-mining-model-content-rowset) set di righe dello schema. La colonna MODEL_NAME nel set di righe dello schema del contenuto, ad esempio, contiene il nome del modello di data mining. Per un modello di data mining di clustering, la colonna NODE_CAPTION contiene il nome di ogni cluster e la colonna NODE_DESCRIPTION contiene una descrizione delle caratteristiche di ogni cluster. È possibile esplorare queste colonne tramite SELECT FROM \<modello >. CONTENUTO istruzione DMX. Questa istruzione consente anche di esplorare i dati utilizzati per creare il modello di data mining. Per utilizzare questa istruzione è necessario che sia abilitato il drill-through nella struttura di data mining. Per altre informazioni sull'istruzione, vedere [SELECT FROM &#60;modello&#62;. I casi &#40;DMX&#41;](/sql/dmx/select-from-model-content-dmx).  
   
@@ -258,6 +257,6 @@ SELECT DISTINCT [<column>]
  Nella lezione successiva verrà utilizzato il modello di data mining dell'albero delle decisioni per stimare se i clienti potenziali diventeranno acquirenti di biciclette.  
   
 ## <a name="next-lesson"></a>Lezione successiva  
- [Lezione 5: Esecuzione di query di stima](../../2014/tutorials/lesson-5-executing-prediction-queries.md)  
+ [Lezione 5: L'esecuzione di query di stima](../../2014/tutorials/lesson-5-executing-prediction-queries.md)  
   
   

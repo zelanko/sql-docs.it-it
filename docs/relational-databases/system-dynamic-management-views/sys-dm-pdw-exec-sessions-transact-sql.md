@@ -2,8 +2,8 @@
 title: sys.dm_pdw_exec_sessions (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/07/2017
-ms.prod: ''
-ms.prod_service: sql-data-warehouse, pdw
+ms.prod: sql
+ms.technology: data-warehouse
 ms.reviewer: ''
 ms.topic: language-reference
 dev_langs:
@@ -13,19 +13,19 @@ author: ronortloff
 ms.author: rortloff
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: dade699d433ce2b7ab95d3f09f370adedc8bcf2e
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 41042d1dff7a64a8a2d2fe093276f61ab254da56
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51664060"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56039862"
 ---
 # <a name="sysdmpdwexecsessions-transact-sql"></a>sys.dm_pdw_exec_sessions (Transact-SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
 
   Contiene informazioni su tutte le sessioni attualmente o recentemente aperte nell'appliance. Elenca una riga per ogni sessione.  
   
-|Nome colonna|Tipo di dati|Description|Intervallo|  
+|Nome colonna|Tipo di dati|Descrizione|Intervallo|  
 |-----------------|---------------|-----------------|-----------|  
 |session_id|**nvarchar(32)**|Id della query corrente o dell'ultima query eseguita (se la sessione viene terminata e la query è stata in esecuzione al momento della terminazione). Chiave per questa visualizzazione.|Deve essere univoco in tutte le sessioni nel sistema.|  
 |status|**nvarchar(10)**|Per le sessioni correnti, indica se la sessione è attualmente attivo o inattivo. Per le sessioni precedenti, la sessione potrebbe mostrare lo stato chiuso o terminato (se la sessione è stata chiusa forzatamente).|'ACTIVE', 'CLOSED', 'IDLE', 'TERMINATE'|  

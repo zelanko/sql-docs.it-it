@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 7685acfd-1c8d-420c-993c-903236fbe1ff
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: d84ee2971ca430d87220d07ec461180f5c31f759
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 8b43eebafb47a2f9173825ea79b5ba035e27ebca
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48166401"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56029542"
 ---
 # <a name="lookupset-function-report-builder-and-ssrs"></a>Funzione LookupSet (Generatore report e SSRS)
   Viene restituito il set di valori corrispondenti per il nome specificato da un set di dati contenente coppie nome/valore.  
@@ -33,24 +33,24 @@ LookupSet(source_expression, destination_expression, result_expression, dataset)
   
 #### <a name="parameters"></a>Parametri  
  *source_expression*  
- (`Variant`) Espressione valutata nell'ambito corrente che specifica il nome o la chiave da ricercare, Ad esempio, `=Fields!ID.Value`.  
+ (`Variant`) Espressione valutata nell'ambito corrente che specifica il nome o la chiave da ricercare, Ad esempio `=Fields!ID.Value`.  
   
  *destination_expression*  
- (`Variant`) Espressione valutata per ogni riga in un set di dati che specifica il nome o la chiave con cui eseguire la corrispondenza, Ad esempio, `=Fields!CustomerID.Value`.  
+ (`Variant`) Espressione valutata per ogni riga in un set di dati che specifica il nome o la chiave con cui eseguire la corrispondenza, Ad esempio `=Fields!CustomerID.Value`.  
   
  *result_expression*  
- (`Variant`) Espressione valutata per la riga nel set di dati in cui *source_expression* = *destination_expression*, che specifica il valore da recuperare. Ad esempio, `=Fields!PhoneNumber.Value`.  
+ (`Variant`) Espressione valutata per la riga nel set di dati in cui *source_expression* = *destination_expression*, che specifica il valore da recuperare. Ad esempio `=Fields!PhoneNumber.Value`.  
   
  *set di dati*  
  Costante che specifica il nome di un set di dati nel report, ad esempio "InformazioniDiContatto".  
   
 ## <a name="return"></a>Return  
- Restituisce un `VariantArray`, o `Nothing` se non esiste alcuna corrispondenza.  
+ Restituisce `VariantArray` o `Nothing` se non viene rilevata alcuna corrispondenza.  
   
 ## <a name="remarks"></a>Note  
- Usare `LookupSet` per recuperare un set di valori dal set di dati specificato per una coppia nome/valore in cui è presente una relazione 1-a-molti. Ad esempio, per un identificatore di cliente in una tabella, è possibile usare `LookupSet` per recuperare tutti i numeri di telefono relativi al cliente da un set di dati che non è associato all'area dati.  
+ Usare la funzione `LookupSet` per recuperare un set di valori dal set di dati specificato per una coppia nome/valore in cui è presente una relazione uno-a-molti. Per un identificatore di cliente in una tabella, ad esempio, è possibile usare la funzione `LookupSet` per recuperare tutti i numeri di telefono relativi al cliente da un set di dati non associato all'area dati.  
   
- `LookupSet` esegue le operazioni seguenti:  
+ Tramite la funzione `LookupSet` vengono effettuate le operazioni seguenti:  
   
 -   Valuta l'espressione di origine nell'ambito corrente.  
   
@@ -72,7 +72,7 @@ LookupSet(source_expression, destination_expression, result_expression, dataset)
   
 -   Le espressioni di origine, di destinazione e di risultato non possono includere riferimenti a variabili di report o di gruppo.  
   
--   `LookupSet` non può essere usato come espressione per gli elementi di report seguenti:  
+-   La funzione `LookupSet` non può essere utilizzata come espressione per gli elementi del report seguenti:  
   
     -   Stringhe di connessione dinamiche per un'origine dati.  
   
@@ -98,9 +98,9 @@ LookupSet(source_expression, destination_expression, result_expression, dataset)
 ```  
   
 ## <a name="example"></a>Esempio  
- Poiché `LookupSet` restituisce una raccolta di oggetti, è possibile visualizzare l'espressione di risultato direttamente in una casella di testo. È possibile concatenare il valore di ogni oggetto nella raccolta come stringa.  
+ Poiché tramite `LookupSet` viene restituita una raccolta di oggetti, non è possibile visualizzare direttamente l'espressione di risultato in una casella di testo. È possibile concatenare il valore di ogni oggetto nella raccolta come stringa.  
   
- Usare la [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] funzione `Join` creare una stringa delimitata da un set di oggetti. Usare una virgola come separatore per combinare gli oggetti in un'unica riga. In alcuni renderer, è possibile usare un avanzamento riga di [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] (`vbCrLF`) come separatore per elencare ogni valore su una nuova riga.  
+ Usare la funzione `Join` di [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] per creare una stringa delimitata da un set di oggetti. Usare una virgola come separatore per combinare gli oggetti in un'unica riga. In alcuni renderer, è possibile usare un avanzamento riga di [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] (`vbCrLF`) come separatore per elencare ogni valore su una nuova riga.  
   
  L'espressione seguente, quando viene usata come proprietà Value per una casella di testo, Usa `Join` per creare un elenco.  
   
@@ -148,9 +148,9 @@ End Function
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Uso delle espressioni nei report di &#40;Report e SSRS&#41;](expression-uses-in-reports-report-builder-and-ssrs.md)   
+ [Utilizzo delle espressioni nei report &#40;Generatore report e SSRS&#41;](expression-uses-in-reports-report-builder-and-ssrs.md)   
  [Esempi di espressioni &#40;Generatore report e SSRS&#41;](expression-examples-report-builder-and-ssrs.md)   
  [Tipi di dati nelle espressioni &#40;Generatore report e SSRS&#41;](expressions-report-builder-and-ssrs.md)   
- [Ambito di espressioni per totali, aggregazioni e raccolte predefinite &#40;Report e SSRS&#41;](expression-scope-for-totals-aggregates-and-built-in-collections.md)  
+ [Ambito di espressioni per totali, aggregazioni e raccolte predefinite &#40;Generatore report e SSRS&#41;](expression-scope-for-totals-aggregates-and-built-in-collections.md)  
   
   

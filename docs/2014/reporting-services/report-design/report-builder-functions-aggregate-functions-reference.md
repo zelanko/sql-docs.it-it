@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: db6542ee-02d0-4073-90e6-cba8f9510fbb
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: 7d3a6843ea643ac447e42a1d78f5f2e7b3bc09da
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 51dac05945565e7952141b247f3f3e326e7ad9d5
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48194117"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56040882"
 ---
 # <a name="aggregate-functions-reference-report-builder-and-ssrs"></a>Riferimento a funzioni di aggregazione (Generatore report e SSRS)
   Per includere valori aggregati nel report, è possibile utilizzare funzioni di aggregazione predefinite nelle espressioni. La funzione di aggregazione predefinita per i campi numerici è SUM. È possibile modificare l'espressione e utilizzare una funzione di aggregazione predefinita o specificare un ambito differente. L'ambito identifica il set di dati da utilizzare per il calcolo.  
@@ -56,11 +56,11 @@ ms.locfileid: "48194117"
 |**Funzione**|**Descrizione**|  
 |------------------|---------------------|  
 |[Avg](report-builder-functions-avg-function.md)|Restituisce la media di tutti i valori numerici non Null specificati dall'espressione, valutata nell'ambito specificato.|  
-|[conteggio](report-builder-functions-count-function.md)|Restituisce il conteggio dei valori non Null specificati dall'espressione, valutato nel contesto dell'ambito specificato.|  
+|[Count](report-builder-functions-count-function.md)|Restituisce il conteggio dei valori non Null specificati dall'espressione, valutato nel contesto dell'ambito specificato.|  
 |[CountDistinct](report-builder-functions-countdistinct-function.md)|Restituisce un conteggio di tutti i distinti valori non Null specificati dall'espressione, valutato nel contesto dell'ambito specificato.|  
 |[Max](report-builder-functions-max-function.md)|Restituisce il valore massimo di tutti i valori numerici non Null specificati dall'espressione, nel contesto dell'ambito specificato. È possibile utilizzare questa funzione per specificare il valore massimo di un asse del grafico per controllare la scala.|  
 |[Min](report-builder-functions-min-function.md)|Restituisce il valore minimo di tutti i valori numerici non Null specificati dall'espressione, nel contesto dell'ambito specificato. È possibile utilizzare questa funzione per specificare il valore minimo di un asse del grafico per controllare la scala.|  
-|[Funzione StDev](report-builder-functions-stdev-function.md)|Restituisce la deviazione standard di tutti i valori numerici non Null specificati dall'espressione, valutata nell'ambito specificato.|  
+|[StDev](report-builder-functions-stdev-function.md)|Restituisce la deviazione standard di tutti i valori numerici non Null specificati dall'espressione, valutata nell'ambito specificato.|  
 |[StDevP](report-builder-functions-stdevp-function.md)|Restituisce la deviazione standard di popolazione di tutti i valori numerici non Null specificati dall'espressione, valutata nell'ambito specificato.|  
 |[Sum](report-builder-functions-sum-function.md)|Restituisce la somma di tutti i valori numerici non Null specificati dall'espressione, valutata nell'ambito specificato.|  
 |[Union](report-builder-functions-union-function.md)|Restituisce l'unione di tutti i valori di dati spaziali non Null di tipo `SqlGeometry` o `SqlGeography` specificati dall'espressione, valutati nell'ambito specificato.|  
@@ -72,19 +72,19 @@ ms.locfileid: "48194117"
   
 |Percorso nel report|Campi|Parametri|ReportItems|PageNumber<br /><br /> TotalPages|DataSource<br /><br /> DataSet|Variabili|RenderFormat|  
 |------------------------|------------|----------------|-----------------|-------------------------------|----------------------------|---------------|------------------|  
-|Intestazione di pagina<br /><br /> Piè di pagina|Sì|Sì|Al massimo uno<br /><br /> Nota 1|Sì|Sì|Sì|Sì|  
-|Corpo|Sì<br /><br /> Nota 2|Sì|Solo elementi nell'ambito corrente o in un ambito contenitore<br /><br /> Nota 3|no|Sì|Sì|Sì|  
-|Parametro del report|no|Solo i parametri precedenti dell'elenco<br /><br /> Nota 4|no|no|no|no|no|  
-|Campo|Sì|Sì|no|no|no|no|no|  
-|Parametro della query|no|Sì|no|no|no|no|no|  
-|Espressione di raggruppamento|Sì|Sì|no|no|Sì|no|no|  
-|Espressione di ordinamento|Sì|Sì|no|no|Sì|Sì<br /><br /> Nota 5|no|  
-|Espressione filtro|Sì|Sì|no|no|Sì|Sì<br /><br /> Nota 6|no|  
-|codice|no|Sì<br /><br /> Nota 7|no|no|no|no|no|  
-|Lingua del report|no|Sì|no|no|no|no|no|  
-|Variabili|Sì|Sì|no|no|Sì|Ambito corrente o contenitore|no|  
-|Aggregazioni|Sì|Sì|Solo nell'intestazione di pagina/piè di pagina|Solo nelle aggregazioni dell'elemento del report|Sì|no|no|  
-|Funzioni di ricerca|Sì|Sì|Sì|no|Sì|no|no|  
+|Intestazione di pagina<br /><br /> Piè di pagina|Yes|Yes|Al massimo uno<br /><br /> Nota 1|Yes|Yes|Yes|Yes|  
+|Body|Yes<br /><br /> Nota 2|Yes|Solo elementi nell'ambito corrente o in un ambito contenitore<br /><br /> Nota 3|No|Yes|Yes|Yes|  
+|Parametro del report|No|Solo i parametri precedenti dell'elenco<br /><br /> Nota 4|No|No|No|No|No|  
+|Campo|Yes|Yes|No|No|No|No|No|  
+|Parametro della query|No|Yes|No|No|No|No|No|  
+|Espressione di raggruppamento|Yes|Yes|No|No|Yes|No|No|  
+|Espressione di ordinamento|Yes|Yes|No|No|Yes|Yes<br /><br /> Nota 5|No|  
+|Espressione filtro|Yes|Yes|No|No|Yes|Yes<br /><br /> Nota 6|No|  
+|Codice|No|Yes<br /><br /> Nota 7|No|No|No|No|No|  
+|Lingua del report|No|Yes|No|No|No|No|No|  
+|Variabili|Yes|Yes|No|No|Yes|Ambito corrente o contenitore|No|  
+|Aggregazioni|Yes|Yes|Solo nell'intestazione di pagina/piè di pagina|Solo nelle aggregazioni dell'elemento del report|Yes|No|No|  
+|Funzioni di ricerca|Yes|Yes|Yes|No|Yes|No|No|  
   
 -   **Nota 1.** ReportItems deve essere incluso nella pagina del report visualizzabile; in caso contrario, il relativo valore è Null. Se la visibilità di un elemento del report dipende da un'espressione che restituisce False, l'elemento del report non sarà presente nella pagina.  
   
@@ -107,13 +107,13 @@ ms.locfileid: "48194117"
   
 |Contesto|RunningValue|RowNumber|Primo<br /><br /> Ultimo|Previous|Sum e altre funzioni di ordinamento preliminare|Aggregazioni ReportItem|Funzioni di ricerca|Funzione di aggregazione|  
 |-------------|------------------|---------------|--------------------|--------------|-------------------------------------|---------------------------|----------------------|------------------------|  
-|Valore corrente|no|no|no|no|Sì|no|Sì|no|  
-|Primo<br /><br /> Ultimo|no|no|no|no|Sì|no|no|no|  
-|Previous|Sì|Sì|Sì|no|Sì|no|Sì|no|  
-|Sum e altre funzioni di ordinamento preliminare|no|no|no|no|Sì|no|Sì|no|  
-|Aggregazioni ReportItem|no|no|no|no|no|no|no|no|  
-|Funzioni di ricerca|Sì|Sì<br /><br /> Nota 1|Sì<br /><br /> Nota 1|Sì<br /><br /> Nota 1|Sì<br /><br /> Nota 1|Sì<br /><br /> Nota 1|no|no|  
-|Funzione di aggregazione|no|no|no|no|no|no|no|no|  
+|Valore corrente|No|No|No|No|Yes|No|Yes|No|  
+|Primo<br /><br /> Ultimo|No|No|No|No|Yes|No|No|No|  
+|Previous|Yes|Yes|Yes|No|Yes|No|Yes|No|  
+|Sum e altre funzioni di ordinamento preliminare|No|No|No|No|Yes|No|Yes|No|  
+|Aggregazioni ReportItem|No|No|No|No|No|No|No|No|  
+|Funzioni di ricerca|Yes|Yes<br /><br /> Nota 1|Yes<br /><br /> Nota 1|Yes<br /><br /> Nota 1|Yes<br /><br /> Nota 1|Yes<br /><br /> Nota 1|No|No|  
+|Funzione di aggregazione|No|No|No|No|No|No|No|No|  
   
 -   **Nota 1.** Le funzioni di aggregazione sono consentite solo all'interno dell'espressione *Source* di una funzione di ricerca se tale funzione non è contenuta in un'aggregazione. Le funzioni di aggregazione non sono consentite all'interno di espressioni *Destination* o *Result* di una funzione di ricerca.  
   
@@ -122,7 +122,7 @@ ms.locfileid: "48194117"
   
 |**Funzione**|**Descrizione**|  
 |------------------|---------------------|  
-|[RowNumber](report-builder-functions-rownumber-function.md)|Restituisce il conteggio parziale del numero di righe per l'ambito specificato. Il `RowNumber` funzione riavvia il conteggio da 1, non da 0.|  
+|[RowNumber](report-builder-functions-rownumber-function.md)|Restituisce il conteggio parziale del numero di righe per l'ambito specificato. La funzione `RowNumber` riavvia il conteggio da 1, non da 0.|  
 |[RunningValue](report-builder-functions-runningvalue-function.md)|Restituisce un'aggregazione parziale di tutti i valori numerici non Null specificati dall'espressione, valutata per l'ambito specificato.|  
   
 ##  <a name="RetrievingRowCounts"></a> Recupero di conteggi delle righe  
@@ -142,13 +142,13 @@ ms.locfileid: "48194117"
 |[Funzione Multilookup](report-builder-functions-multilookup-function.md)|Restituisce il set di valori di prima corrispondenza per un set di nomi da un set di dati che contiene coppie nome/valore.|  
   
 ##  <a name="RetrievingPostsortValues"></a> Recupero di valori dipendenti dall'ordinamento  
- Le funzioni predefinite seguenti restituiscono il primo, l'ultimo o il precedente valore all'interno di un ambito specificato. Queste funzioni dipendono dal tipo di ordinamento dei valori dei dati. Utilizzare queste funzioni, ad esempio, per trovare il primo e l'ultimo valore in una pagina o per creare un'intestazione di pagina in formato dizionario. Usare `Previous` per confrontare un valore di una riga con il precedente valore della riga all'interno di un ambito specifico, ad esempio, per trovare in percentuale anno sui valori di anno in una tabella.  
+ Le funzioni predefinite seguenti restituiscono il primo, l'ultimo o il precedente valore all'interno di un ambito specificato. Queste funzioni dipendono dal tipo di ordinamento dei valori dei dati. Utilizzare queste funzioni, ad esempio, per trovare il primo e l'ultimo valore in una pagina o per creare un'intestazione di pagina in formato dizionario. Usare `Previous` per confrontare il valore di una riga con il valore della riga precedente in un ambito specificato, ad esempio per trovare i valori in percentuale anno dopo anno in una tabella.  
   
 |**Funzione**|**Descrizione**|  
 |------------------|---------------------|  
 |[Primo](report-builder-functions-first-function.md)|Restituisce il primo valore nell'ambito specificato dell'espressione specificata.|  
 |[Ultimo](report-builder-functions-last-function.md)|Restituisce l'ultimo valore nell'ambito specificato dell'espressione specificata.|  
-|[Indietro](report-builder-functions-previous-function.md)|Restituisce il valore o il valore di aggregazione specificato per l'istanza precedente di un elemento all'interno dell'ambito specificato.|  
+|[Previous](report-builder-functions-previous-function.md)|Restituisce il valore o il valore di aggregazione specificato per l'istanza precedente di un elemento all'interno dell'ambito specificato.|  
   
 ##  <a name="RetrievingServerAggregates"></a> Recupero di aggregazioni server  
  La funzione predefinita seguente recupera aggregazioni personalizzate dal provider di dati. Ad esempio, usando un tipo di origine dati di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , è possibile recuperare le aggregazioni calcolate sul server dell'origine dati da usare in un'intestazione di gruppo.  
@@ -160,20 +160,20 @@ ms.locfileid: "48194117"
 ##  <a name="TestingforScope"></a> Verifica dell'ambito  
  La funzione predefinita seguente controlla il contesto corrente di un elemento del report per verificare se è un membro di un ambito specifico.  
   
-|Funzione|Description|  
+|Funzione|Descrizione|  
 |--------------|-----------------|  
 |[InScope](report-builder-functions-inscope-function.md)|Indica se l'istanza corrente di un elemento è inclusa nell'ambito specificato.|  
   
 ##  <a name="RetrievingRecursiveLevel"></a> Recupero del livello ricorsivo  
- La funzione predefinita seguente recupera il livello corrente quando viene elaborata una gerarchia ricorsiva. Usare il risultato di questa funzione con il `Padding` proprietà in una casella di testo per controllare il livello di rientro di una gerarchia visiva per un gruppo ricorsivo. Per altre informazioni, vedere [Creazione di gruppi di gerarchie ricorsive &#40;Generatore report e SSRS&#41;](creating-recursive-hierarchy-groups-report-builder-and-ssrs.md).  
+ La funzione predefinita seguente recupera il livello corrente quando viene elaborata una gerarchia ricorsiva. Usare il risultato di questa funzione con la proprietà `Padding` in una casella di testo per controllare il livello di rientro di una gerarchia visiva per un gruppo ricorsivo. Per altre informazioni, vedere [Creazione di gruppi di gerarchie ricorsive &#40;Generatore report e SSRS&#41;](creating-recursive-hierarchy-groups-report-builder-and-ssrs.md).  
   
-|Funzione|Description|  
+|Funzione|Descrizione|  
 |--------------|-----------------|  
 |[Level](report-builder-functions-level-function.md)|Restituisce il livello di nidificazione corrente in una gerarchia ricorsiva.|  
   
 ## <a name="see-also"></a>Vedere anche  
- [Uso delle espressioni nei report di &#40;Report e SSRS&#41;](expression-uses-in-reports-report-builder-and-ssrs.md)   
+ [Utilizzo delle espressioni nei report &#40;Generatore report e SSRS&#41;](expression-uses-in-reports-report-builder-and-ssrs.md)   
  [Esempi di espressioni &#40;Generatore report e SSRS&#41;](expression-examples-report-builder-and-ssrs.md)   
- [Ambito di espressioni per totali, aggregazioni e raccolte predefinite &#40;Report e SSRS&#41;](expression-scope-for-totals-aggregates-and-built-in-collections.md)  
+ [Ambito di espressioni per totali, aggregazioni e raccolte predefinite &#40;Generatore report e SSRS&#41;](expression-scope-for-totals-aggregates-and-built-in-collections.md)  
   
   

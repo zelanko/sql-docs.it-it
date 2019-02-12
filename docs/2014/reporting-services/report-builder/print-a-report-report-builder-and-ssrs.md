@@ -10,18 +10,18 @@ ms.topic: conceptual
 ms.assetid: b96936c9-c387-41a9-8c19-6eb325769ffd
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: 081f7b0c748b06a87e8497582ffc8dabbda3e57f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 312fdd9defc0cbc0f19c312e32e0eb8038cbc918
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48095201"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56013882"
 ---
 # <a name="print-a-report-report-builder-and-ssrs"></a>Stampare un report (Generatore report e SSRS)
   Dopo avere salvato un report in un server di report, è possibile visualizzarlo e stamparlo da un browser, da Gestione report o da qualsiasi applicazione utilizzata per visualizzare un report esportato. Prima di salvare un report, è possibile stamparlo durante l'anteprima.  
   
- Quando si stampa un report, è possibile specificare le dimensioni della pagina da utilizzare. Le dimensioni del foglio determinano il numero di pagine del report e la quantità di dati contenuta in ogni pagina. Il formato della carta influisce solo sui report visualizzati con i renderer di interruzioni di pagina manuali: PDF, immagine e stampa. L'impostazione del formato della carta non influisce su altri renderer. Per altre informazioni, vedere [Tipi di rendering  &#40;Generatore report e SSRS &#41;](../report-design/rendering-behaviors-report-builder-and-ssrs.md).  
+ Quando si stampa un report, è possibile specificare le dimensioni della pagina da utilizzare. Le dimensioni del foglio determinano il numero di pagine del report e la quantità di dati contenuta in ogni pagina. Formato della carta influisce solo sui report visualizzati con i renderer di interruzioni di pagina manuali: PDF, immagine e stampa. L'impostazione del formato della carta non influisce su altri renderer. Per altre informazioni, vedere [Tipi di rendering  &#40;Generatore report e SSRS &#41;](../report-design/rendering-behaviors-report-builder-and-ssrs.md).  
   
  È possibile esportare un report in un renderer di interruzione di pagina manuale oppure fare clic sul pulsante Stampa per stampare una copia del report dalla barra degli strumenti del visualizzatore di report in Gestione report o in un'anteprima in Generatore report. Potrebbe essere necessario impostare il formato della carta o altre proprietà di impostazione pagina. Usare la finestra di dialogo **Proprietà report** per modificare le proprietà di impostazione della pagina, tra cui il formato della carta.  
   
@@ -100,6 +100,6 @@ ms.locfileid: "48095201"
  [Stampa di report &#40;Generatore report e SSRS&#41;](print-reports-report-builder-and-ssrs.md)   
  [Esportazione di report &#40;Report e SSRS&#41;](export-reports-report-builder-and-ssrs.md)   
  [Finestra di dialogo Proprietà report, Imposta pagina &#40;Generatore report&#41;](../report-properties-dialog-box-page-setup-report-builder.md)   
- [Visualizzazione di progettazione report &#40;Generatore Report&#41;](report-design-view-report-builder.md)  
+ [Visualizzazione di progettazione report &#40;Generatore report&#41;](report-design-view-report-builder.md)  
   
   
