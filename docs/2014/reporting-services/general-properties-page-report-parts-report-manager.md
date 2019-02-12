@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 93ddce72-31f1-42f7-abd5-8191acbb00c5
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: bdbf9f69b3e1df0471b731363387542ce1fb4a3c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: a3872636fdfda37165bdf6cb83aa13aa51b230b2
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48136247"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56040482"
 ---
 # <a name="general-properties-page-report-parts-report-manager"></a>Pagina delle proprietà Generale, Parti di report (Gestione report)
   La pagina delle proprietà consente di visualizzare e gestire le proprietà generali per una parte di report.  
@@ -50,7 +50,7 @@ ms.locfileid: "48136247"
  **Dimensione**  
  Specifica le dimensioni file della parte di report. Di sola lettura.  
   
- **Nome**  
+ **Name**  
  Digitare un nome per identificare la parte di report.  
   
  **Descrizione**  
@@ -80,8 +80,8 @@ ms.locfileid: "48136247"
 ## <a name="see-also"></a>Vedere anche  
  [Gestione di parti di Report](report-design/managing-report-parts.md)   
  [Gestione report &#40;modalità nativa SSRS&#41;](../../2014/reporting-services/report-manager-ssrs-native-mode.md)   
- [Contenuto della pagina &#40;gestione Report&#41;](../../2014/reporting-services/contents-page-report-manager.md)   
- [Parti di report &#40;Report e SSRS&#41;](report-parts-report-builder-and-ssrs.md)   
+ [Pagina Contenuto &#40;Gestione report&#41;](../../2014/reporting-services/contents-page-report-manager.md)   
+ [Parti del report &#40;Generatore report e SSRS&#41;](report-parts-report-builder-and-ssrs.md)   
  [Guida F1 di gestione report](../../2014/reporting-services/report-manager-f1-help.md)   
  [Parti del report e set di dati in Generatore report](report-data/report-parts-and-datasets-in-report-builder.md)  
   

@@ -16,13 +16,13 @@ helpviewer_keywords:
 ms.assetid: 4ad1e5bc-f510-4752-b4f6-589e55317a90
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 81faaac64b045911ca6b8cfc6dabaa5389ce8a5a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: bbd72a6eadac5f65d292b742885c1af957a637e1
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48159521"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56039682"
 ---
 # <a name="define-parameters-in-the-mdx-query-designer-for-analysis-services-report-builder-and-ssrs"></a>Definizione dei parametri in Progettazione query MDX per Analysis Services (Generatore report e SSRS)
   Per parametrizzare una query MDX per un'origine dati di [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] , è necessario aggiungere un parametro di query alla query. In Progettazione query MDX, è possibile aggiungere un parametro di query sia in modalità progettazione sia in modalità query specificando un filtro. Dopo avere definito la query tramite un parametro di query, in Reporting Services vengono creati automaticamente un parametro di report e un set di dati per l'elenco dei valori validi. In questo modo un utente può specificare un valore che viene passato direttamente alla query.  
@@ -32,7 +32,7 @@ ms.locfileid: "48159521"
   
 ### <a name="to-define-a-query-parameter-in-mdx-in-design-mode"></a>Per definire un parametro di query MDX in modalità progettazione  
   
-1.  Nel riquadro dati Report fare clic su un set di dati creato da un [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] tipo di origine dati e quindi fare clic su **Query**. La finestra Progettazione query MDX verrà aperta in modalità progettazione.  
+1.  Nel riquadro Dati report fare clic con il pulsante destro del mouse su un set di dati creato da un tipo di origine dati di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] e fare clic su **Query**. La finestra Progettazione query MDX verrà aperta in modalità progettazione.  
   
 2.  Trascinare una dimensione nell'area filtro e rilasciarla nella prima cella della colonna **Dimensione** .  
   
@@ -56,7 +56,7 @@ ms.locfileid: "48159521"
   
 ### <a name="to-define-a-query-parameter-in-mdx-in-query-mode"></a>Per definire un parametro di query MDX in modalità query  
   
-1.  Nel riquadro dati Report fare clic su un set di dati creato da un [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] tipo di origine dati e quindi fare clic su **Query**. La finestra Progettazione query MDX verrà aperta in modalità progettazione.  
+1.  Nel riquadro Dati report fare clic con il pulsante destro del mouse su un set di dati creato da un tipo di origine dati di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] e fare clic su **Query**. La finestra Progettazione query MDX verrà aperta in modalità progettazione.  
   
 2.  Fare clic su **Progettazione** nella barra degli strumenti per passare alla modalità query.  
   
@@ -83,7 +83,7 @@ ms.locfileid: "48159521"
      Per visualizzare il set di dati dei valori disponibili per il parametro del report, fare clic con il pulsante destro del mouse su un'area vuota nel riquadro Dati report e selezionare **Mostra set di dati nascosti**. Nel riquadro dei dati del report verranno visualizzati tutti i set di dati contenuti nel report.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Tipo di connessione di Analysis Services per MDX &#40;SSRS&#41;](analysis-services-connection-type-for-mdx-ssrs.md)   
+ [Tipo di connessione Analysis Services per MDX &#40;SSRS&#41;](analysis-services-connection-type-for-mdx-ssrs.md)   
  [Interfaccia utente di Progettazione query MDX di Analysis Services](analysis-services-mdx-query-designer-user-interface.md)  
   
   

@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: f2e42303-e355-4c1f-bb3b-3338fbdd230d
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 45546e63eff82c5ba4467193811b572756331513
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: cb76a3dfff5ec980d94e3ecf27de6b588c98cf1a
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48201501"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56040512"
 ---
 # <a name="add-data-to-a-report-report-builder-and-ssrs"></a>Aggiungere dati a un report (Generatore report e SSRS)
   Per aggiungere dati a un rapporto, è necessario creare set di dati. Ogni set di dati rappresenta il set di risultati dall'esecuzione di un comando di query su un'origine dati. Le colonne del set di risultati sono la raccolta di campi. Le righe del set di risultati sono i dati. Un set di dati non contiene i dati effettivi. Un set di dati contiene le informazioni necessarie per recuperare un set di dati specifico da un'origine dati.  
@@ -39,7 +39,7 @@ ms.locfileid: "48201501"
   
  È inoltre possibile aggiungere set di dati a un report aggiungendo parti del report che includono i set di dati da cui dipendono. [!INCLUDE[ssRBrptparts](../../../includes/ssrbrptparts-md.md)]  
   
- Per informazioni su come creare un report in cui sono visualizzati i dati di un database [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], vedere [Esercitazione: Creazione di un report tabella semplice &#40;Generatore report&#41;](../tutorial-creating-a-basic-table-report-report-builder.md). Per creare un report comprendente i propri dati, vedere [Esercitazione: Creare un report grafico rapido offline &#40;Generatore report&#41;](../report-builder/tutorial-create-a-quick-chart-report-offline-report-builder.md).  
+ Per informazioni su come creare un report che visualizza i dati da un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] del database, vedere [esercitazione: Creazione di un Report tabella semplice &#40;Generatore Report&#41;](../tutorial-creating-a-basic-table-report-report-builder.md). Per compilare un report che include i propri dati, vedere [esercitazione: Creare un Report grafico rapido Offline &#40;Generatore Report&#41;](../report-builder/tutorial-create-a-quick-chart-report-offline-report-builder.md).  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
@@ -66,7 +66,7 @@ ms.locfileid: "48201501"
   
 -   [Tabelle, matrici ed elenchi &#40;Generatore report e SSRS&#41;](../report-design/create-invoices-and-forms-with-lists-report-builder-and-ssrs.md)  
   
--   [Grafici &#40;Report e SSRS&#41;](../report-design/charts-report-builder-and-ssrs.md)  
+-   [Grafici &#40;Generatore report e SSRS&#41;](../report-design/charts-report-builder-and-ssrs.md)  
   
 -   [Grafici sparkline e barre dei dati &#40;Generatore report e SSRS&#41;](../report-design/sparklines-and-data-bars-report-builder-and-ssrs.md)  
   
@@ -74,9 +74,9 @@ ms.locfileid: "48201501"
   
 -   [Parametri report &#40;Generatore report e Progettazione report&#41;](../report-design/report-parameters-report-builder-and-report-designer.md)  
   
--   [Parti di report &#40;Report e SSRS&#41;](../report-parts-report-builder-and-ssrs.md)  
+-   [Parti del report &#40;Generatore report e SSRS&#41;](../report-parts-report-builder-and-ssrs.md)  
   
--   [Filtrare, raggruppare e ordinare i dati &#40;Report e SSRS&#41;](../report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)  
+-   [Filtro, raggruppamento e ordinamento di dati &#40;Generatore report e SSRS&#41;](../report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)  
   
  ![Icona freccia usata con il collegamento Torna all'inizio](../../2014-toc/media/uparrow16x16.gif "Icona freccia usata con il collegamento Torna all'inizio") [Torna all'inizio](#BackToTop)  
   
@@ -110,17 +110,17 @@ ms.locfileid: "48201501"
   
  [Aggiunta, modifica e aggiornamento di campi nel riquadro dei dati del report &#40;Generatore report e SSRS&#41;](add-edit-refresh-fields-in-the-report-data-pane-report-builder-and-ssrs.md)  
   
- [Compilare una Query in Progettazione Query relazionale &#40;Report e SSRS&#41;](build-a-query-in-the-relational-query-designer-report-builder-and-ssrs.md)  
+ [Compilare una query in Progettazione query relazionale &#40;Generatore report e SSRS&#41;](build-a-query-in-the-relational-query-designer-report-builder-and-ssrs.md)  
   
- [Visualizzazione di set di dati nascosti per i valori dei parametri di dati multidimensionali &#40;Report e SSRS&#41;](show-hidden-datasets-for-parameter-values-multidimensional-data.md)  
+ [Visualizzare set di dati nascosti per i valori dei parametri di dati multidimensionali &#40;Generatore report e SSRS&#41;](show-hidden-datasets-for-parameter-values-multidimensional-data.md)  
   
  [Aggiungere un filtro a un set di dati &#40;Generatore report e SSRS&#41;](add-a-filter-to-a-dataset-report-builder-and-ssrs.md)  
   
- [Impostare una proprietà Nodatamessage per un'area dati &#40;Report e SSRS&#41;](set-a-no-data-message-for-a-data-region-report-builder-and-ssrs.md)  
+ [Impostare una proprietà NoDataMessage per un'area dati &#40;Generatore report e SSRS&#41;](set-a-no-data-message-for-a-data-region-report-builder-and-ssrs.md)  
   
- [Associare un parametro di Query a un parametro di Report &#40;Report e SSRS&#41;](associate-a-query-parameter-with-a-report-parameter-report-builder-and-ssrs.md)  
+ [Associazione di un parametro di query a un parametro di report &#40;Generatore report e SSRS&#41;](associate-a-query-parameter-with-a-report-parameter-report-builder-and-ssrs.md)  
   
- [Definizione dei parametri in Progettazione Query MDX per Analysis Services &#40;Report e SSRS&#41;](define-parameters-in-the-mdx-query-designer-for-analysis-services.md)  
+ [Definizione dei parametri in Progettazione query MDX per Analysis Services &#40;Generatore report e SSRS&#41;](define-parameters-in-the-mdx-query-designer-for-analysis-services.md)  
   
  ![Icona freccia usata con il collegamento Torna all'inizio](../../2014-toc/media/uparrow16x16.gif "Icona freccia usata con il collegamento Torna all'inizio") [Torna all'inizio](#BackToTop)  
   
@@ -139,6 +139,6 @@ ms.locfileid: "48201501"
   
 ## <a name="see-also"></a>Vedere anche  
  [Visualizzazione di progettazione report &#40;Generatore report&#41;](../report-builder/report-design-view-report-builder.md)   
- [Concetti relativi alla creazione di report &#40;Report e SSRS&#41;](../report-design/report-authoring-concepts-report-builder-and-ssrs.md)  
+ [Concetti relativi alla creazione di report &#40;Generatore report e SSRS&#41;](../report-design/report-authoring-concepts-report-builder-and-ssrs.md)  
   
   

@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: 8bf03c45-caf5-4eda-9314-e4f8f24a159f
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: c70d749a560ff5dcc39d36d84e8c9ff09b44894f
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+manager: kfile
+ms.openlocfilehash: 5a26f9c950dd09b8e47c83089415bd2b3d47458f
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52404196"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56041052"
 ---
 # <a name="implement-dynamic-security-by-using-row-filters"></a>Implementare la sicurezza dinamica mediante i filtri di riga
   In questa lezione supplementare verrà creato un ruolo aggiuntivo che implementa la sicurezza dinamica. La sicurezza dinamica offre la sicurezza a livello di riga in base al nome o all'ID di accesso dell'utente attualmente connesso. Per altre informazioni, vedere [Ruoli &#40;SSAS tabulare&#41;](../analysis-services/tabular-models/roles-ssas-tabular.md).  
@@ -199,7 +198,7 @@ ms.locfileid: "52404196"
      Questo utente non può esplorare né eseguire una query sui dati delle vendite Internet per territori diversi da quello a cui appartiene poiché il filtro di riga definito per la tabella Territorio vendita nel ruolo utente Addetti alle vendite per territorio protegge in effetti tutti i dati correlati agli altri territori di vendita.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Funzione USERNAME &#40;DAX&#41;](https://msdn.microsoft.com/library/hh230954.aspx)   
+ [USERNAME Function &#40;DAX&#41;](https://msdn.microsoft.com/library/hh230954.aspx)   
  [Funzione LOOKUPVALUE &#40;DAX&#41;](https://msdn.microsoft.com/library/gg492170.aspx)   
  [Funzione CUSTOMDATA &#40;DAX&#41;](https://msdn.microsoft.com/library/hh213140.aspx)  
   

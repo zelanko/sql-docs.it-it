@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: dc0c27a4-7e31-4a15-a0bc-3a02479d5b02
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: bbc1b3eaabe4760cd8f0778f1c2e2659e4c6db74
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 84a55d4f18b52d103997fdafee2fc2c84d9495f6
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48095711"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56040732"
 ---
 # <a name="plan-a-map-report-report-builder-and-ssrs"></a>Pianificare un report mappa (Generatore report e SSRS)
   Report validi presentano informazioni che consentono una migliore comprensione e determinano azioni specifiche. Per presentare i dati analitici, ad esempio i totali delle vendite o i dati demografici, rispetto a uno sfondo geografico, è possibile aggiungere una mappa al report. Una mappa può contenere più livelli, in ciascuno dei quali vengono visualizzati elementi della mappa definiti da un tipo specifico di dati spaziali, ossia punti che rappresentano posizioni, linee che rappresentano percorsi o poligoni che rappresentano aree. È possibile associare i dati analitici agli elementi della mappa su ogni livello.  
@@ -59,11 +59,11 @@ ms.locfileid: "48095711"
   
 -   File di forma ESRI, compresi i file di forma disponibili pubblicamente che è possibile cercare su Internet.  
   
--   Dati spaziali provenienti dalle origini dati spaziali di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
+-   Dati spaziali provenienti dalle origini dati spaziali di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .  
   
 -   Mappe dai report nella raccolta mappe.  
   
--   Siti di terze parti che offrono dati spaziali come file di forma ESRI o [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] dati spaziali.  
+-   Siti di terze parti che offrono dati spaziali come file di forma ESRI o dati spaziali di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .  
   
 -   Tessere mappa di Bing che forniscono uno sfondo per la vista mappa. Per visualizzare le sezioni in una mappa, è necessario configurare il server di report per supportare i servizi Web di Bing Maps.  
   
@@ -114,7 +114,7 @@ ms.locfileid: "48095711"
 |-----------------|-----------------|----------------|-----------------------------|  
 |![rs_MapType_Polygon_Basic](../media/rs-maptype-polygon-basic.gif "rs_MapType_Polygon_Basic")|Mappa di base|Polygon|Mappa che visualizza solo le aree, ad esempio i territori di vendita.<br /><br /> Opzioni: variazione del colore mediante la tavolozza o utilizzo di un solo colore. Una tavolozza è un set predefinito di colori. Una volta assegnati tutti i colori di una tavolozza, vengono assegnate anche le sfumature.|  
 |![rs_MapType_Polygon_ColorAnalytical](../media/rs-maptype-polygon-coloranalytical.gif "rs_MapType_Polygon_ColorAnalytical")|Mappa analitica a colori|Polygon|Mappa che visualizza i dati analitici variando il colore, ad esempio i dati di vendita per area.|  
-|![rs_MapType_Polygon_Bubble](../media/rs-maptype-polygon-bubble.gif "rs_MapType_Polygon_Bubble")|Mappa a bolle|Poligono|Mappa che visualizza i dati analitici variando le dimensioni delle bolle al centro delle aree, ad esempio i dati di vendita per area.<br /><br /> Opzioni: variazione dei colori dell'area in base a un secondo campo analitico e indicazione delle regole colore.|  
+|![rs_MapType_Polygon_Bubble](../media/rs-maptype-polygon-bubble.gif "rs_MapType_Polygon_Bubble")|Mappa a bolle|Polygon|Mappa che visualizza i dati analitici variando le dimensioni delle bolle al centro delle aree, ad esempio i dati di vendita per area.<br /><br /> Opzioni: variazione dei colori dell'area in base a un secondo campo analitico e indicazione delle regole colore.|  
 |![rs_MapType_Line_Basic](../media/rs-maptype-line-basic.gif "rs_MapType_Line_Basic")|Mappa linea di base|Riga|Mappa che visualizza solo le linee, ad esempio gli itinerari di recapito.<br /><br /> Opzioni: variazione del colore mediante la tavolozza o utilizzo di un solo colore.|  
 |![rs_MapType_Line_Analytical](../media/rs-maptype-line-analytical.gif "rs_MapType_Line_Analytical")|Mappa linea analitica|Riga|Mappa che varia il colore e lo spessore della linea, ad esempio il numero di pacchetti recapitati e le metriche di puntualità per itinerari.<br /><br /> Opzioni: variazione dello spessore della linea in base a un campo analitico, variazione del colore della linea in base a un secondo campo analitico e indicazione delle regole colore.|  
 |![rs_MapType_Marker_Basic](../media/rs-maptype-marker-basic.gif "rs_MapType_Marker_Basic")|Mappa con marcatori di base|Punto|Mappa che visualizza un marcatore per ogni posizione, ad esempio le città.<br /><br /> Opzioni: variazione del colore mediante la tavolozza o utilizzo di un solo colore e modifica dello stile del marcatore.|  
@@ -163,8 +163,8 @@ ms.locfileid: "48095711"
   
 ## <a name="see-also"></a>Vedere anche  
  [Personalizzare i dati e la visualizzazione di una mappa o di un livello mappa &#40;Generatore report e SSRS&#41;](customize-the-data-and-display-of-a-map-or-map-layer-report-builder-and-ssrs.md)   
- [Esercitazione: Report mappa &#40;Generatore report&#41;](../tutorial-map-report-report-builder.md)   
+ [Esercitazione: Report mappa &#40;Generatore Report&#41;](../tutorial-map-report-report-builder.md)   
  [Mappe &#40;Generatore report e SSRS&#41;](maps-report-builder-and-ssrs.md)   
- [Risolvere i problemi di report: I report di mappa &#40;Report e SSRS&#41;](troubleshoot-reports-map-reports-report-builder-and-ssrs.md)  
+ [Risolvere problemi relativi ai report: Eseguire il mapping di report &#40;Report e SSRS&#41;](troubleshoot-reports-map-reports-report-builder-and-ssrs.md)  
   
   

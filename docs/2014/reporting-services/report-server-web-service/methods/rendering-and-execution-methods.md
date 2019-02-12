@@ -16,13 +16,13 @@ helpviewer_keywords:
 ms.assetid: 12626aad-f0be-4653-87d0-60eb3a3fff78
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: e3d21be1658d6f638ef8af9abd1f1241c2f459ae
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: e70d3e48df832eb8fc3a6661ed9d4b549922a095
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48104151"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56040252"
 ---
 # <a name="rendering-and-execution-methods"></a>Metodi di rendering e di esecuzione
   Per gestire l'esecuzione, il rendering e la memorizzazione nella cache degli elementi, è possibile utilizzare i metodi seguenti.  

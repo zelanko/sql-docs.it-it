@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: f87ce79b-00d7-4458-a17e-e253a20f720d
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: 05ea4e197a727db6afffeedc3c26be676e358f73
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 6bd9094c0b8e14bfc71440b72fb02bd69fd47cfb
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48101061"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56040782"
 ---
 # <a name="hide-a-page-header-or-footer-on-the-first-or-last-page-report-builder-and-ssrs"></a>Nascondere un'intestazione o un piè di pagina nella prima o nell'ultima pagina (Generatore report e SSRS)
   In un report è possibile includere un'intestazione e un piè di pagina, posizionati rispettivamente nella parte superiore e inferiore di ogni pagina. Dopo aver aggiunto un'intestazione o un piè di pagina, è possibile nasconderlo selettivamente nella prima e nell'ultima pagina di un report.  
@@ -49,8 +49,8 @@ ms.locfileid: "48101061"
 5.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
 ## <a name="see-also"></a>Vedere anche  
- [Intestazioni di pagina e piè di pagina &#40;Report e SSRS&#41;](page-headers-and-footers-report-builder-and-ssrs.md)   
+ [Intestazioni di pagina e piè di pagina &#40;Generatore report e SSRS&#41;](page-headers-and-footers-report-builder-and-ssrs.md)   
  [Paginazione in Reporting Services &#40;Generatore report e SSRS&#41;](pagination-in-reporting-services-report-builder-and-ssrs.md)   
- [Aggiungere o rimuovere un'intestazione di pagina o piè di pagina &#40;Report e SSRS&#41;](add-or-remove-a-page-header-or-footer-report-builder-and-ssrs.md)  
+ [Aggiungere o rimuovere un'intestazione o un piè di pagina &#40;Generatore report e SSRS&#41;](add-or-remove-a-page-header-or-footer-report-builder-and-ssrs.md)  
   
   

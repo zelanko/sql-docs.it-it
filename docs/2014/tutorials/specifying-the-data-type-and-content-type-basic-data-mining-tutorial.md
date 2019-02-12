@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: 72484d27-3ef1-4f16-813c-2f43231fc2da
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: b97cec782c7f95de42ee64d7db0ce56ffa916c3e
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 583a6fda2dbb4698405a3d69f33955531b3c1c10
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48176607"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56040203"
 ---
 # <a name="specifying-the-data-type-and-content-type-basic-data-mining-tutorial"></a>Impostazione del tipo di dati e contenuto (Esercitazione di base sul data mining)
   Ora che sono state selezionate le colonne da utilizzare per la compilazione della struttura e il training dei modelli, apportare le modifiche necessarie ai tipi di dati e di contenuto predefiniti impostati dalla procedura guidata.  
@@ -31,25 +30,25 @@ ms.locfileid: "48176607"
   
     |colonna|Tipo di contenuto|Tipo di dati|  
     |------------|------------------|---------------|  
-    |**Riga indirizzo 1**|**Discreta**|**Text**|  
-    |**Riga indirizzo 2**|**Discreta**|**Text**|  
+    |**Riga indirizzo 1**|**Discreta**|**per**|  
+    |**Riga indirizzo 2**|**Discreta**|**per**|  
     |**Età**|**continua**|**Long**|  
     |**Bike Buyer**|**Discreta**|**Long**|  
-    |**Commute Distance**|**Discreta**|**Text**|  
+    |**Commute Distance**|**Discreta**|**per**|  
     |**CustomerKey**|**Key**|**Long**|  
     |**DateLastPurchase**|**continua**|**Data**|  
-    |**Email Address**|**Discreta**|**Text**|  
-    |**English Education**|**Discreta**|**Text**|  
-    |**English Occupation**|**Discreta**|**Text**|  
-    |**firstName**|**Discreta**|**Text**|  
-    |**Gender**|**Discreta**|**Text**|  
-    |**Geography Key**|**Discreta**|**Text**|  
-    |**House Owner Flag**|**Discreta**|**Text**|  
-    |**Last Name**|**Discreta**|**Text**|  
-    |**Marital Status**|**Discreta**|**Text**|  
+    |**Email Address**|**Discreta**|**per**|  
+    |**English Education**|**Discreta**|**per**|  
+    |**English Occupation**|**Discreta**|**per**|  
+    |**FirstName**|**Discreta**|**per**|  
+    |**Gender**|**Discreta**|**per**|  
+    |**Geography Key**|**Discreta**|**per**|  
+    |**House Owner Flag**|**Discreta**|**per**|  
+    |**Last Name**|**Discreta**|**per**|  
+    |**Marital Status**|**Discreta**|**per**|  
     |**Number Cars Owned**|**Discreta**|**Long**|  
     |**Number Children At Home**|**Discreta**|**Long**|  
-    |**Region**|**Discreta**|**Text**|  
+    |**Region**|**Discreta**|**per**|  
     |**Total Children**|**Discreta**|**Long**|  
     |**Yearly Income**|**continua**|**Double**|  
   
@@ -62,7 +61,7 @@ ms.locfileid: "48176607"
  [Creazione di una struttura modello di Data Mining Targeted Mailing &#40;esercitazione di base di Data Mining&#41;](../../2014/tutorials/creating-a-targeted-mailing-mining-model-structure-basic-data-mining-tutorial.md)  
   
 ## <a name="see-also"></a>Vedere anche  
- [I tipi di contenuto &#40;Data Mining&#41;](../../2014/analysis-services/data-mining/content-types-data-mining.md)   
- [Tipi di dati &#40;Data Mining&#41;](../../2014/analysis-services/data-mining/data-types-data-mining.md)  
+ [Tipi di contenuto &#40;Data mining&#41;](../../2014/analysis-services/data-mining/content-types-data-mining.md)   
+ [Tipi di dati &#40;Data mining&#41;](../../2014/analysis-services/data-mining/data-types-data-mining.md)  
   
   

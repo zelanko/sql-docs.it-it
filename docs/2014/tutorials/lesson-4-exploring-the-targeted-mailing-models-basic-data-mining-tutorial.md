@@ -4,21 +4,20 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: 1e00c5b9-a9f8-4503-99ee-377c9cc02d7f
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 820a65ce9d45a72fe6a7629aebb7bb10374dbfae
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 97db61dc3b9adf2e345957c8e08aa752e51286e0
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48147315"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56039902"
 ---
-# <a name="lesson-4-exploring-the-targeted-mailing-models-basic-data-mining-tutorial"></a>Lezione 4: Esplorazione dei modelli di mailing diretto (Esercitazione di base sul data mining)
+# <a name="lesson-4-exploring-the-targeted-mailing-models-basic-data-mining-tutorial"></a>Lezione 4: Esplorazione dei modelli di Mailing diretto (esercitazione di base di Data Mining)
   Dopo avere elaborato i modelli nel progetto, è possibile esplorarli per individuare tendenze interessanti. Poiché l'analisi dei numeri dei modelli può risultare difficile e complessa, SQL Server Data Mining offre alcuni strumenti visivi che consentono di analizzare i dati e comprendere le regole e le relazioni che gli algoritmi hanno individuato all'interno dei dati. È inoltre possibile utilizzare vari test di accuratezza per convalidare il set di dati o per individuare il modello che garantisce le prestazioni migliori prima di distribuirlo.  
   
  Quando si usa [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] per esplorare i modelli, ogni modello creato viene elencato nella **visualizzatore modello di Data Mining** scheda della finestra di progettazione modelli di Data Mining. Per esplorare i modelli, è possibile utilizzare i visualizzatori. Questi visualizzatori sono disponibili anche in [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)].  
@@ -55,7 +54,7 @@ ms.locfileid: "48147315"
  [Lezione 5: Testare i modelli &#40;esercitazione di base di Data Mining&#41;](../../2014/tutorials/lesson-5-testing-models-basic-data-mining-tutorial.md)  
   
 ## <a name="see-also"></a>Vedere anche  
- [Attività del Visualizzatore modelli e procedure dettagliate di data mining](../../2014/analysis-services/data-mining/mining-model-viewer-tasks-and-how-tos.md)   
+ [Attività e procedure relative al visualizzatore modello di data mining](../../2014/analysis-services/data-mining/mining-model-viewer-tasks-and-how-tos.md)   
  [Visualizzatori modello di data mining](../../2014/analysis-services/data-mining/data-mining-model-viewers.md)  
   
   

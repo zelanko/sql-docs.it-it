@@ -14,15 +14,15 @@ helpviewer_keywords:
 - operators [XQuery]
 - xml data type [SQL Server], XQuery
 ms.assetid: 39ca3d2e-e928-4333-872b-75c4ccde8e79
-author: douglaslMS
-ms.author: douglasl
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 5ba69530f6c9cb8451211a2dcec333d347062b74
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 2786295b344cfc2df6ae613e42a39f71aee4d3d8
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51671860"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56038892"
 ---
 # <a name="xquery-operators-against-the-xml-data-type"></a>Operatori di XQuery per il tipo di dati xml
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -56,9 +56,9 @@ WHERE  AdditionalContactInfo.value('
       'bit')= cast(1 as bit)  
 ```  
   
- È un altro modo per osservare come funziona la query precedente: ogni valore di numero telefonico telefono recuperati dal **AdditionalContactInfo** colonna viene confrontata con il set di due numeri di telefono. Se il numero è presente nel set, nel risultato viene restituito il cliente.  
+ È presente un altro modo per osservare come funziona la query precedente: Ogni valore di numero telefonico telefono recuperati dal **AdditionalContactInfo** colonna viene confrontata con il set di due numeri di telefono. Se il numero è presente nel set, nel risultato viene restituito il cliente.  
   
-### <a name="b-using-a-numeric-operator"></a>B. Utilizzo di un operatore numerico  
+### <a name="b-using-a-numeric-operator"></a>b. Utilizzo di un operatore numerico  
  L'operatore + nella query è un operatore per i valori, perché viene applicato a un singolo elemento. Ad esempio, il valore 1 viene aggiunto alle dimensioni di un lotto restituite dalla query:  
   
 ```sql

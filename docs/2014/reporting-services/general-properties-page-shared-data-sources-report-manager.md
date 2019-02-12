@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 1b344449-6f7c-47d2-a737-972d88c0faf8
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: bdbca550f6ecb985248975b6dce332fb9ca05fe9
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 990e6b8f74eb2066175bcf92a22e2478ba4ef6de
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48218318"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56040403"
 ---
 # <a name="general-properties-page-shared-data-sources-report-manager"></a>Pagina delle proprietà Generale, Origini dati condivise (Gestione report)
   La pagina delle proprietà Generale consente di visualizzare o modificare le proprietà di un elemento origine dati condivisa. Quando si fa clic su **Applica**, tutte le modifiche apportate alle proprietà vengono applicate a tutti i report che fanno riferimento all'origine dei dati condivisa.  
@@ -33,7 +33,7 @@ ms.locfileid: "48218318"
 3.  Scegliere **Gestisci**dal menu a discesa. Verrà visualizzata la pagina delle proprietà Generale per l'origine dati condivisa.  
   
 ## <a name="options"></a>Opzioni  
- **Nome**  
+ **Name**  
  Consente di specificare il nome dell'origine dati condivisa, utilizzato per identificare l'elemento nello spazio dei nomi del server di report.  
   
  **Descrizione**  
@@ -46,12 +46,12 @@ ms.locfileid: "48218318"
  Selezionare questa opzione per abilitare o disabilitare l'origine dei dati condivisa. È possibile disabilitare l'origine dei dati condivisa per evitare che vengano elaborati tutti i report, i modelli di report e le sottoscrizioni guidate dai dati che fanno riferimento a tale origine dei dati.  
   
  **Tipo di origine dati**  
- Consente di selezionare l'estensione per l'elaborazione dati utilizzata per elaborare i dati dall'origine dei dati. Il server di report include estensioni per l'elaborazione dati per [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], Oracle, XML, SAP, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)], ODBC e OLE DB. È possibile che siano disponibili ulteriori estensioni per l'elaborazione dati di terze parti.  
+ Consente di selezionare l'estensione per l'elaborazione dati utilizzata per elaborare i dati dall'origine dei dati. Il server di report include le estensioni per l'elaborazione dati per [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], Oracle, XML, SAP, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)], ODBC e OLE DB. È possibile che siano disponibili ulteriori estensioni per l'elaborazione dati di terze parti.  
   
- Si noti che se si utilizza [!INCLUDE[ssExpress](../includes/ssexpress-md.md)] Edition with Advanced Services, è possibile scegliere solo origini dati di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
+ Si noti che se si utilizza [!INCLUDE[ssExpress](../includes/ssexpress-md.md)] Edition with Advanced Services, è possibile scegliere solo origini dati di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] .  
   
  **Stringa di connessione**  
- Specificare la stringa di connessione utilizzata dal server di report per la connessione all'origine dati. Il tipo di connessione determina la sintassi da utilizzare. Ad esempio, una stringa di connessione per l'estensione per l'elaborazione dei dati XML è rappresentata da un URL per un documento XML. In una stringa di connessione tipica vengono in genere specificati il server di database e un file di dati. Nell'esempio seguente viene illustrata una stringa di connessione utilizzata per connettersi al [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssSampleDBnormal](../includes/sssampledbnormal-md.md)] database:  
+ Specificare la stringa di connessione utilizzata dal server di report per la connessione all'origine dati. Il tipo di connessione determina la sintassi da utilizzare. Ad esempio, una stringa di connessione per l'estensione per l'elaborazione dei dati XML è rappresentata da un URL per un documento XML. In una stringa di connessione tipica vengono in genere specificati il server di database e un file di dati. Nell'esempio seguente viene illustrata una stringa di connessione utilizzata per la connessione al database [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssSampleDBnormal](../includes/sssampledbnormal-md.md)] :  
   
 ```  
 data source=<a SQL Server instance>;initial catalog=AdventureWorks2012  
@@ -71,9 +71,9 @@ data source=<a SQL Server instance>;initial catalog=AdventureWorks2012
  **Credenziali archiviate in modo sicuro nel server di report**  
  Consente di archiviare nome utente e password in forma crittografata nel database del server di report. Selezionare questa opzione per eseguire un report in modo automatico, ad esempio nel caso di report avviati tramite pianificazioni o eventi anziché da un'azione dell'utente. Se si utilizza la sicurezza predefinita, il nome utente deve essere un account di dominio di Windows. Specificare l'account nel formato seguente: \<dominio >\\< nome utente\>. L'account specificato deve disporre di autorizzazioni di accesso locale nel computer che ospita l'origine dati utilizzata dal report.  
   
- Selezionare **Usa come credenziali di Windows per la connessione all'origine dei dati** se vengono utilizzate credenziali di autenticazione di Windows. Non selezionare questa casella di controllo se si usa l'autenticazione del database (ad esempio, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] autenticazione).  
+ Selezionare **Usa come credenziali di Windows per la connessione all'origine dei dati** se vengono utilizzate credenziali di autenticazione di Windows. Non selezionare questa casella di controllo se si utilizza l'autenticazione del database, ad esempio l'autenticazione di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] .  
   
- Se si utilizza l'autenticazione del database, selezionare **Rappresenta l'utente autenticato dopo che è stata stabilita una connessione all'origine dei dati (Connetti tramite)** per consentire la delega delle credenziali del database, ma solo se un server di database supporta la rappresentazione. Per [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] database, questa opzione imposta la funzione SETUSER.  
+ Se si utilizza l'autenticazione del database, selezionare **Rappresenta l'utente autenticato dopo che è stata stabilita una connessione all'origine dei dati (Connetti tramite)** per consentire la delega delle credenziali del database, ma solo se un server di database supporta la rappresentazione. Nei database di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] questa opzione consente di impostare la funzione SETUSER.  
   
  **Sicurezza integrata di Windows**  
  Consente di utilizzare le credenziali di Windows dell'utente corrente per accedere all'origine dati. Selezionare questa opzione se le credenziali utilizzate per l'accesso a un'origine dati corrispondono a quelle utilizzate per l'accesso al dominio di rete. È consigliabile utilizzare questa opzione quando per il dominio è attivato il protocollo Kerberos oppure quando l'origine dati è disponibile nello stesso computer del server di report. Se l'autenticazione Kerberos non è abilitata, le credenziali di Windows possono essere passate a un altro computer. Se sono necessarie ulteriori connessioni al computer, i dati previsti non verranno visualizzati e verrà invece visualizzato un errore.  

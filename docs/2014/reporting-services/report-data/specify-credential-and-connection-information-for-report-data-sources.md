@@ -28,13 +28,13 @@ helpviewer_keywords:
 ms.assetid: fee1a663-a313-424a-aed2-5082bfd114b3
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: ce1866d4ffde34052a05ec6fbcbcd2c0dacaea42
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 52fac65fdc332f6c0868af84fbeb84c195e1b0f8
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48082245"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56039262"
 ---
 # <a name="specify-credential-and-connection-information-for-report-data-sources"></a>Specificare le credenziali e le informazioni sulla connessione per le origini dati del report
   Un server di report utilizza credenziali per connettersi a origini dei dati esterne che forniscono contenuto ai report o informazioni sui destinatari alle sottoscrizioni guidate dai dati. È possibile specificare credenziali che utilizzano l'autenticazione di Windows, l'autenticazione del database, l'autenticazione personalizzata o che non utilizzano alcuna autenticazione. Quando si invia una richiesta di connessione in rete, il server di report rappresenterà un account utente o l'account di esecuzione automatica. Per altre informazioni sul contesto di protezione in cui viene eseguita una richiesta di connessione, vedere [Configurazione dell'origine dei dati e connessioni di rete](#DataSourceConfigurationConnections) più avanti in questo argomento.  
@@ -111,7 +111,7 @@ ms.locfileid: "48082245"
     2.  Se l'account è incluso nell'elenco, selezionarlo e quindi fare clic su **Rimuovi**.  
   
 #### <a name="using-impersonation-with-stored-credentials"></a>Utilizzo della rappresentazione con le credenziali archiviate  
- È inoltre possibile utilizzare le credenziali per rappresentare l'identità di un altro utente. Per i database di SQL Server, tramite la rappresentazione delle opzioni comporta il [SETUSER](/sql/t-sql/statements/setuser-transact-sql) (funzione).  
+ È inoltre possibile utilizzare le credenziali per rappresentare l'identità di un altro utente. Per i database di SQL Server, l'uso delle opzioni di rappresentazione comporta l'impostazione della funzione [SETUSER](/sql/t-sql/statements/setuser-transact-sql) .  
   
 > [!IMPORTANT]  
 >  Non utilizzare la rappresentazione per i report che supportano le sottoscrizioni o che utilizzano pianificazioni per generare la cronologia dei report o aggiornare gli snapshot dell'esecuzione dei report.  
@@ -138,14 +138,14 @@ ms.locfileid: "48082245"
 |None|Rappresenta l'account di esecuzione automatica.|Per [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], Oracle, ODBC e OLE DB:<br /><br /> Vengono utilizzate le credenziali definite nella stringa di connessione. La connessione ha esito negativo sul server di report se l'account di esecuzione automatica non è definito.<br /><br /> Per [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]:<br /><br /> La connessione ha sempre esito negativo se non vengono specificate credenziali, anche se l'account di esecuzione automatica è stato definito.<br /><br /> Per XML:<br /><br /> La connessione viene eseguita come utente anonimo se l'account di esecuzione automatica è definito; in caso contrario, la connessione ha esito negativo.|  
   
 ## <a name="setting-credentials-programmatically"></a>Impostazione di credenziali a livello di programmazione  
- È possibile impostare le credenziali tramite codice per controllare l'accesso ai report e al server di report. Per altre informazioni, vedere [origini dati e metodi di connessione](../report-server-web-service/methods/data-sources-and-connection-methods.md).  
+ È possibile impostare le credenziali tramite codice per controllare l'accesso ai report e al server di report. Per altre informazioni, vedere [Origini dati e metodi di connessione](../report-server-web-service/methods/data-sources-and-connection-methods.md).  
   
 ## <a name="see-also"></a>Vedere anche  
- [Origini dati supportate da Reporting Services &#40;SSRS&#41;](../create-deploy-and-manage-mobile-and-paginated-reports.md)   
+ [Origini dei dati supportate da Reporting Services &#40;SSRS&#41;](../create-deploy-and-manage-mobile-and-paginated-reports.md)   
  [Connessioni dati, origini dati e stringhe di connessione in Reporting Services](../data-connections-data-sources-and-connection-strings-in-reporting-services.md)   
- [Gestire origini dati del Report](../../integration-services/connection-manager/data-sources.md)   
+ [Gestire origini dati dei report](../../integration-services/connection-manager/data-sources.md)   
  [Gestione report &#40;modalità nativa SSRS&#41;](../report-manager-ssrs-native-mode.md)   
- [Creare, eliminare o modificare un'origine dati condivisa &#40;gestione Report&#41;](../create-delete-or-modify-a-shared-data-source-report-manager.md)   
- [Configurare le proprietà di origine dati per un Report &#40;gestione Report&#41;](configure-data-source-properties-for-a-report-report-manager.md)  
+ [Creare, eliminare o modificare un'origine dei dati condivisa &#40;Gestione report&#41;](../create-delete-or-modify-a-shared-data-source-report-manager.md)   
+ [Configurare le proprietà delle origini dati per un report &#40;Gestione report&#41;](configure-data-source-properties-for-a-report-report-manager.md)  
   
   
