@@ -18,13 +18,13 @@ helpviewer_keywords:
 ms.assetid: bd6f958f-cce6-4e79-8a0f-9475da2919ce
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 3cbc3a76c1f6e5c67297f44c312fe0497666a9b8
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+manager: kfile
+ms.openlocfilehash: 859c7d2cb6545c6a15e1e3e40aff28720921fb27
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52505632"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56023122"
 ---
 # <a name="rsexe-utility-ssrs"></a>RS.exe Utility (SSRS)
   L'utilità rs.exe elabora lo script fornito in un file di input. Utilizzare questa utilità per automatizzare le attività di amministrazione e distribuzione dei server di report.  
@@ -74,7 +74,7 @@ ms.locfileid: "52505632"
  `-u` [*domain*\\]*username*  
  (Facoltativo) Consente di specificare l'account utente utilizzato per connettersi al server di report. Se si omettono `-u` e `-p`, verrà utilizzato l'account utente di Windows corrente.  
   
- `-p` *Password*  
+ `-p` *password*  
  (Obbligatorio se si specifica `-u`) Consente di specificare la password da utilizzare con l'argomento `-u`. Per questo valore viene applicata la distinzione tra maiuscole e minuscole.  
   
  `-e`  
@@ -96,7 +96,7 @@ ms.locfileid: "52505632"
  **-b**  
  (Facoltativo) Specifica che i comandi del file di script vengano eseguiti come batch. Se uno o più comandi hanno esito negativo, verrà eseguito il rollback dell'intero batch. Vi sono tuttavia comandi non eseguibili in batch. Tali comandi verranno eseguiti normalmente e verrà eseguito un rollback solo in caso di eccezioni generate e non gestite nell'ambito dello script. Se lo script gestisce un'eccezione e completa normalmente la routine `Main`, verrà eseguito il commit del batch. Se si omette questo parametro, i comandi verranno eseguiti senza la creazione di un batch. Per altre informazioni, vedere [Batching Methods](../report-server-web-service-net-framework-soap-headers/batching-methods.md).  
   
- `-v` *GlobalVar*  
+ `-v` *globalvar*  
  (Facoltativo) Consente di specificare le variabili globali utilizzate nello script. Se lo script utilizza variabili globali, è necessario specificare questo argomento. Il valore specificato deve essere valido per la variabile globale definita nel file con estensione rss. È necessario specificare una variabile globale per ogni argomento **-v**.  
   
  L'argomento `-v` viene specificato nella riga di comando ed è utilizzato per impostare il valore per una variabile globale definita in fase di esecuzione nello script. Se, ad esempio, lo script contiene un variabile denominata *parentFolder*, è possibile specificare un nome per la cartella nella riga di comando:  

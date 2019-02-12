@@ -14,14 +14,14 @@ helpviewer_keywords:
 - Expression dialog box [Reporting Services]
 ms.assetid: e6c74ccb-4594-4d4f-b958-618d710e34eb
 author: maggiesmsft
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: a231e4fcc071338f4fcf168475bde86514470b41
-ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
+ms.author: maghan
+manager: kfile
+ms.openlocfilehash: 43f27ea78bec3f7b81f49d44a6bd56274367f2b5
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/18/2018
-ms.locfileid: "53590835"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56021686"
 ---
 # <a name="expression-dialog-box"></a>Finestra di dialogo Espressione
   Usare la **espressione** finestra di dialogo per scrivere [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[vbprvb](../includes/vbprvb-md.md)] le proprietà degli elementi delle espressioni di report. Le espressioni possono essere utilizzate per impostare molte proprietà, ad esempio il colore, il tipo di carattere e i bordi. In fase di esecuzione, il componente Elaborazione report valuta le espressioni e sostituisce il valore della proprietà con il risultato.  

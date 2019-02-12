@@ -9,15 +9,15 @@ ms.topic: conceptual
 f1_keywords:
 - sql12.dqs.kb.importprojectvalues.f1
 ms.assetid: f23e38e2-39e0-42d7-abd5-34d8fcca5d2a
-author: douglaslMS
-ms.author: douglasl
+author: leolimsft
+ms.author: lle
 manager: craigg
-ms.openlocfilehash: 4239776908aaca1f6f925baa6ce412dcc71bc343
-ms.sourcegitcommit: af1d9fc4a50baf3df60488b4c630ce68f7e75ed1
+ms.openlocfilehash: 07992b9a5150e6b81d869aa21831e019c32ae6e4
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/06/2018
-ms.locfileid: "51032358"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56020012"
 ---
 # <a name="import-cleansing-project-values-into-a-domain"></a>Importazione dei valori di un progetto di pulizia in un dominio
   In [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS), è possibile importare informazioni sulla qualità dei dati raccolta durante il processo di pulizia in un processo di pulizia Data Quality o in un pacchetto di Integration Services contenente il componente di pulizia di DQS in un dominio. Ciò garantisce che le informazioni attendibili non vadano perse e che la Knowledge Base venga continuamente migliorata.  
@@ -71,7 +71,7 @@ ms.locfileid: "51032358"
     > [!NOTE]  
     >  Per ulteriori informazioni sull'utilizzo di valori nella scheda **Valori di dominio** , vedere [Change Domain Values](../../2014/data-quality-services/change-domain-values.md).  
   
-##  <a name="FollowUp"></a> Completamento: Dopo avere importato i valori di progetto in un dominio  
+##  <a name="FollowUp"></a> Completamento: Dopo avere importato i valori del progetto in un dominio  
  Dopo avere importato le informazioni sulla qualità dei dati raccolta durante il processo di pulizia in un dominio, è possibile eseguire attività di gestione relative ai domini sul dominio e sui relativi valori. Per altre informazioni, vedere [Gestione di un dominio](../../2014/data-quality-services/managing-a-domain.md).  
   
 ##  <a name="Values"></a> Valori che verranno importati  

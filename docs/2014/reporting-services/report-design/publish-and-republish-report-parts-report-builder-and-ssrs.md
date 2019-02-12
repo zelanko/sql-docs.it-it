@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 92dce484-f39b-403c-9caf-d8772bc3aca3
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: 1ecface6931e73f2153e32ee9ae71ed22ca56057
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 375d4c87b444411c0882ecb748976df40ed98412
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48136901"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56027122"
 ---
 # <a name="publish-and-republish-report-parts-report-builder-and-ssrs"></a>Pubblicare e ripubblicare parti del report (Generatore report e SSRS)
   È possibile pubblicare una parte del report con le impostazioni predefinite in un percorso predefinito o modificare i metadati della parte del report, ad esempio il nome e la descrizione, e salvarla altrove in un server di report. Il salvataggio può avvenire anche in un sito di SharePoint integrato con un server di report, se si dispone delle opportune autorizzazioni.  
@@ -35,7 +35,7 @@ ms.locfileid: "48136901"
   
      In caso contrario, scegliere **Consente di verificare e modificare le parti del report prima di eseguire la pubblicazione**.  
   
-3.  Modifica del nome e della descrizione della parte di report: fare doppio clic sul nome per modificarlo e selezionare il campo **Descrizione** per aggiungere una descrizione.  
+3.  Modificare la descrizione e nome di parte di report: Fare doppio clic sul nome per modificarlo e selezionare il **descrizione** campo per aggiungere una descrizione.  
   
     > [!NOTE]  
     >  È opportuno attribuire alla parte di report un nome e una descrizione in modo da facilitarne l'identificazione da parte degli utenti durante la ricerca. La lunghezza massima per il nome di una parte di report è 260 caratteri per il percorso intero, inclusi i nomi delle cartelle nel server, seguito dal nome effettivo della parte di report.  
@@ -58,10 +58,10 @@ ms.locfileid: "48136901"
 >  Se pubblicata come nuova parte di report, presenterà un nuovo ID univoco. Non riceverà più gli aggiornamenti quando la parte di report originale viene modificata.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Parti di report &#40;Report e SSRS&#41;](../report-parts-report-builder-and-ssrs.md)   
- [Parti del report e set di dati in Generatore Report](../report-data/report-parts-and-datasets-in-report-builder.md)   
+ [Parti del report &#40;Generatore report e SSRS&#41;](../report-parts-report-builder-and-ssrs.md)   
+ [Parti del report e set di dati in Generatore report](../report-data/report-parts-and-datasets-in-report-builder.md)   
  [Risolvere i problemi di parti del Report &#40;Report e SSRS&#41;](../troubleshoot-report-parts-report-builder-and-ssrs.md)   
  [Verificare o gli aggiornamenti Turn Off &#40;Report e SSRS&#41;](../check-for-updates-or-turn-updates-off-report-builder-and-ssrs.md)   
- [Ricerca di parti del Report e impostazione di una cartella predefinita &#40;Report e SSRS&#41;](browse-for-report-parts-and-set-a-default-folder-report-builder-and-ssrs.md)  
+ [Ricerca di parti del report e impostazione di una cartella predefinita &#40;Generatore report e SSRS&#41;](browse-for-report-parts-and-set-a-default-folder-report-builder-and-ssrs.md)  
   
   

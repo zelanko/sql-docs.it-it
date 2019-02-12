@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 1c1e265e-52a2-4de3-96fd-ca4abae01c02
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: db11e53b9fb6efb50a7bb676798626f5886ff9e5
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+manager: kfile
+ms.openlocfilehash: 59b1574f7c302a5cf3adc3bee04881eefd176080
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53362739"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56032012"
 ---
 # <a name="plan-for-report-design-and-report-deployment-reporting-services-2014"></a>Pianificare la progettazione e la distribuzione di report (Reporting Services 2014)
   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] sono disponibili diversi approcci per la creazione e distribuzione di report. Utilizzare questo argomento per la pianificazione di un ambiente di creazione di report e un server di report che interagiscono. In questo argomento viene fornita una panoramica del supporto delle definizioni di report mediante i componenti [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] . Una definizione di report è un file XML scritto in linguaggio RDL (Report Definition Language) o RDLC (Report Definition Language for Clients). Ogni definizione di report è conforme a una versione di schema specifica elencata all'inizio del file.  

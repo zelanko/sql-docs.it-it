@@ -10,16 +10,16 @@ ms.topic: conceptual
 ms.assetid: f0bd1c4c-e8b5-467f-b5a1-541f19c7e3e2
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: eb066c069d9cc1e15d442627e018818b35097e82
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: b566b27ca060f84fe976a3827e5f657ca43bf741
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48174011"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56022602"
 ---
 # <a name="interactive-functionality-for-different-report-rendering-extensions-report-builder-and-ssrs"></a>Funzionalità interattiva per estensioni per il rendering di report differenti (Generatore report e SSRS)
-  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] sono disponibili caratteristiche interattive che consentono di utilizzare un report in fase di esecuzione. Solo alcuni formati di rendering dei report supportano l'intera gamma di caratteristiche interattive. È possibile utilizzare la tabella seguente per comprendere la modalità di utilizzo delle diverse caratteristiche interattive in formati specifici.  
+  In [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] sono disponibili caratteristiche interattive che consentono di utilizzare un report in fase di esecuzione. Solo alcuni formati di rendering dei report supportano l'intera gamma di caratteristiche interattive. È possibile utilizzare la tabella seguente per comprendere la modalità di utilizzo delle diverse caratteristiche interattive in formati specifici.  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
@@ -114,6 +114,6 @@ ms.locfileid: "48174011"
  [Ordinamento interattivo, mappe documento e collegamenti &#40;Generatore report e SSRS&#41;](../report-design/interactive-sort-document-maps-and-links-report-builder-and-ssrs.md)   
  [Matrici &#40;Generatore report e SSRS&#41;](../report-design/create-a-matrix-report-builder-and-ssrs.md)   
  [Tabelle, matrici ed elenchi &#40;Generatore report e SSRS&#41;](../report-design/create-invoices-and-forms-with-lists-report-builder-and-ssrs.md)   
- [Grafici &#40;Report e SSRS&#41;](../report-design/charts-report-builder-and-ssrs.md)  
+ [Grafici &#40;Generatore report e SSRS&#41;](../report-design/charts-report-builder-and-ssrs.md)  
   
   

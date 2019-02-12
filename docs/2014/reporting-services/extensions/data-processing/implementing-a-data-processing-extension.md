@@ -16,13 +16,13 @@ helpviewer_keywords:
 ms.assetid: 8dc2b44e-5ad9-411d-a29f-7213e29321a9
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 4ca26d9b4af7adebda9f5bf0021ba7871f8425aa
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+manager: kfile
+ms.openlocfilehash: 1bbbe9114e8d8b507a4df81ae11f1b6984b9383f
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53358295"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56017793"
 ---
 # <a name="implementing-a-data-processing-extension"></a>Implementazione di un'estensione per l'elaborazione dati
   Le estensioni per l'elaborazione dati in [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] consentono di eseguire la connessione a un'origine dati e di recuperare i dati. Fungono inoltre da ponte tra un'origine dati e un set di dati. Le estensioni per l'elaborazione dati di [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] sono modellate in base a un subset delle interfacce dei provider di dati [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)].  

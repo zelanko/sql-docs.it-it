@@ -12,16 +12,16 @@ helpviewer_keywords:
 ms.assetid: 8bc0bb53-ad8a-464d-bb6a-7fea5fa62c5c
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 4bffdacee7496c27f41db7897861e3ec1f015dc1
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: bc714c2ffb7f4483823e7e49e9825c070a0b9672
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48173601"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56021412"
 ---
 # <a name="add-a-new-or-existing-report-to-a-report-project-ssrs"></a>Aggiungere un report nuovo o esistente a un progetto report (SSRS)
-  In [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], è possibile aggiungere un nuovo report tramite la creazione guidata Report o aggiungendo un nuovo report vuoto al progetto. È anche possibile aggiungere un report esistente. Dopo l'aggiunta di un report, il relativo nome verrà visualizzato nella cartella **Report** nel progetto.  
+  Per aggiungere un nuovo report in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], è possibile utilizzare la Creazione guidata report o aggiungere un nuovo report vuoto al progetto. È anche possibile aggiungere un report esistente. Dopo l'aggiunta di un report, il relativo nome verrà visualizzato nella cartella **Report** nel progetto.  
   
 > [!NOTE]  
 >  Per visualizzare in anteprima un report con le origini dati esistenti, è necessario disporre delle autorizzazioni per l'origine dati dal client di creazione report. Per altre informazioni, vedere [creare un'origine dati condivisa o un Embedded &#40;SSRS&#41;](../create-an-embedded-or-shared-data-source-ssrs.md).  
@@ -40,7 +40,7 @@ ms.locfileid: "48173601"
   
     -   **Selezione tipo di report.** Nel terzo passaggio si seleziona il tipo di report desiderato. È possibile selezionare un report tabulare o matrice. Un report tabella include un numero fisso di colonne. Un report matrice, o a campi incrociati, include un numero variabile di colonne in base ai risultati della query. In un report mappa i dati analitici vengono visualizzati su uno sfondo geografico.  
   
-    -   **Scegliere uno stile.** In questo passaggio si applica uno stile al report tramite un modello di stili. Selezionare un modello per applicare stili di carattere, colore e bordo al report. In Progettazione report sono disponibili sei modelli di stile: Ardesia, Foresta, Aziendale, Grassetto, Oceano e Generico. È inoltre possibile aggiungere ulteriori modelli di stili.  
+    -   **Scegliere uno stile.** In questo passaggio si applica uno stile al report tramite un modello di stili. Selezionare un modello per applicare stili di carattere, colore e bordo al report. Progettazione report sono disponibili sei modelli di stile: Ardesia, foresta, azienda, grassetto, Oceano e generico. È inoltre possibile aggiungere ulteriori modelli di stili.  
   
         > [!NOTE]  
         >  È possibile modificare i modelli esistenti o aggiungerne di nuovi modificando il file StyleTemplates XML in \Programmi\Microsoft Visual Studio 10.0\Common7\IDE\PrivateAssemblies\Business Intelligence Wizards\Reports\Styles\\< lang\>cartella, dove \<lang > è il linguaggio in uso (ad esempio, se si usa la versione in lingua inglese di [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)], il nome della cartella è "EN"). Questa cartella è disponibile nel computer in cui è installato Progettazione report. Sono disponibili due copie del file StyleTemplates.xml. Per modificare gli stili applicati tramite Creazione guidata report, modificare il file nella cartella creata per la lingua in uso.  

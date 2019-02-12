@@ -2,10 +2,9 @@
 title: sp_set_database_firewall_rule (Database SQL di Azure) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/04/2017
-ms.prod: ''
+ms.service: sql-database
 ms.prod_service: sql-database
 ms.reviewer: ''
-ms.technology: system-objects
 ms.topic: language-reference
 f1_keywords:
 - sp_set_database_firewall_rule
@@ -22,12 +21,12 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: 8530d8a2d19a5dd9f50fb437626202565435222a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 93acd6ad9e904e1e3db5dfe7e244b459e7853d70
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47800679"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56025462"
 ---
 # <a name="spsetdatabasefirewallrule-azure-sql-database"></a>sp_set_database_firewall_rule (Database di SQL Azure)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
@@ -45,10 +44,10 @@ sp_set_database_firewall_rule [@name = ] [N]'name'
 ```  
   
 ## <a name="arguments"></a>Argomenti  
- **[@name**  =] [N]'*nome*'  
+ **[@name** = ] [N]'*name*'  
  Il nome utilizzato per descrivere e distinguere l'impostazione del firewall a livello di database. *nome* viene **nvarchar (128)** non prevede alcun valore predefinito. L'identificatore di Unicode `N` è facoltativo per [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]. 
   
- **[@start_ip_address**  =] '*start_ip_address*'  
+ **[@start_ip_address** =] '*start_ip_address*'  
  L'indirizzo IP più basso nell'intervallo dell'impostazione del firewall a livello di database. Gli indirizzi IP uguali o maggiori di questo possono tentare la connessione all'istanza del [!INCLUDE[ssSDS](../../includes/sssds-md.md)]. L'indirizzo IP più basso possibile è `0.0.0.0`. *start_ip_address* viene **varchar (50)** non prevede alcun valore predefinito.  
   
  [**@end_ip_address** =] '*end_ip_address*'  
@@ -89,7 +88,7 @@ EXECUTE sp_set_database_firewall_rule N'Example DB Setting 1', '0.0.0.4', '0.0.0
   
 ## <a name="see-also"></a>Vedere anche  
  [Firewall del Database SQL di Azure](https://azure.microsoft.com/documentation/articles/sql-database-firewall-configure/)   
- [Procedura: configurare le impostazioni del Firewall (Database SQL di Azure)](https://azure.microsoft.com/documentation/articles/sql-database-configure-firewall-settings/)   
+ [Procedura: Configurare le impostazioni del Firewall (Database SQL di Azure)](https://azure.microsoft.com/documentation/articles/sql-database-configure-firewall-settings/)   
  [sp_set_firewall_rule &#40;Database SQL di Azure&#41;](../../relational-databases/system-stored-procedures/sp-set-firewall-rule-azure-sql-database.md)   
  [sp_delete_database_firewall_rule &#40;Database SQL di Azure&#41;](../../relational-databases/system-stored-procedures/sp-delete-database-firewall-rule-azure-sql-database.md)   
  [Sys. database_firewall_rules &#40;Database SQL di Azure&#41;](../../relational-databases/system-catalog-views/sys-database-firewall-rules-azure-sql-database.md)  

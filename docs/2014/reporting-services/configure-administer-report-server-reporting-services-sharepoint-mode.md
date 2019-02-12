@@ -10,16 +10,16 @@ ms.topic: conceptual
 ms.assetid: 846e86d0-fbbb-426c-97f9-f179cd42b390
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 335300f5b8e7f91c3595cdb26cb531bb589c782a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: ca5f2b01894818680b6b760a1f2b8a342d43d8ce
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48085621"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56022897"
 ---
 # <a name="configuration-and-administration-of-a-report-server-reporting-services-sharepoint-mode"></a>Configurazione e amministrazione di un server di report (modalità SharePoint di Reporting Services)
-  [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] è una piattaforma basata su server che fornisce una gamma completa di strumenti pronti da usare e servizi che consentono di creare, distribuire e gestire report per l'organizzazione, nonché programmare funzionalità che consentono di estendere e personalizzare la creazione di report funzionalità. È possibile integrare l'ambiente di gestione dei report con un prodotto SharePoint per sfruttare i vantaggi dell'utilizzo dell'ambiente di collaborazione fornito dai siti di SharePoint.  
+  [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] Microsoft SQL Server 2016 Reporting Services è una piattaforma di creazione di report basata su server che fornisce una gamma completa di strumenti e servizi pronti per l'uso che consentono di creare, distribuire e gestire report per l'organizzazione nonché di programmare caratteristiche che consentono di estendere e personalizzare la funzionalità di report. È possibile integrare l'ambiente di gestione dei report con un prodotto SharePoint per sfruttare i vantaggi dell'utilizzo dell'ambiente di collaborazione fornito dai siti di SharePoint.  
   
 ## <a name="in-this-section"></a>Contenuto della sezione  
  Utilizzare le sezioni seguenti per meglio comprendere concetti, scenari di distribuzione, procedure e altro ancora per l'integrazione dell'ambiente [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] con un prodotto o una tecnologia SharePoint:  

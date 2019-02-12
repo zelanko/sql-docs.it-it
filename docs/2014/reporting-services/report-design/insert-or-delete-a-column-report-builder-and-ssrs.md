@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: e9db79e2-7e7d-4359-a706-cb746c94182a
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: 8bba223000110229c6df9098c263afaea30d711a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 4f3d77e65361081a2c06e9e10c25b1bf6757d5d6
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48117343"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56019402"
 ---
 # <a name="insert-or-delete-a-column-report-builder-and-ssrs"></a>Inserire o eliminare una colonna (Generatore report e SSRS)
   È possibile aggiungere o eliminare colonne in un'area dati Tablix. L'area dati Tablix può essere una tabella, una matrice o un elenco. Le procedure riportate di seguito non sono applicabili alle aree dati del grafico e del misuratore.  
@@ -59,7 +59,7 @@ ms.locfileid: "48117343"
 -   Fare clic con il pulsante destro del mouse su una cella di un gruppo di colonne nell'area dei gruppi di colonne di un'area dati Tablix in corrispondenza della quale si vuole eliminare una colonna e quindi scegliere **Elimina colonne**.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Informazioni sui gruppi &#40;Report e SSRS&#41;](understanding-groups-report-builder-and-ssrs.md)   
+ [Informazioni sui gruppi &#40;Generatore report e SSRS&#41;](understanding-groups-report-builder-and-ssrs.md)   
  [Area dati Tablix &#40;Generatore report e SSRS&#41;](../tablix-data-region-report-builder-and-ssrs.md)   
  [Tabelle &#40;Generatore report e SSRS&#41;](tables-report-builder-and-ssrs.md)   
  [Matrici &#40;Generatore report e SSRS&#41;](create-a-matrix-report-builder-and-ssrs.md)   

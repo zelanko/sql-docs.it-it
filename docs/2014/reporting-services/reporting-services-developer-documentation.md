@@ -15,20 +15,20 @@ helpviewer_keywords:
 ms.assetid: d8afa405-1012-4349-a72d-e10d94f8453d
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 16c0f4451b66b0aa0c004476a4dc332acf973a1c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 97d59933a1df11123b153e11f7ae75d926829dcb
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48116011"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56023442"
 ---
 # <a name="developer39s-guide-reporting-services"></a>Per gli sviluppatori&#39;Guida (Reporting Services)
-  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] offre diverse interfacce di programmazione che è possibile usare nelle proprie applicazioni. È possibile utilizzare le caratteristiche e le funzionalità esistenti di [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] per compilare strumenti di gestione e di creazione di report personalizzati nei siti Web e nelle applicazioni Windows oppure per estendere la piattaforma [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)].  
+  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] offre diverse interfacce di programmazione che è possibile usare nelle proprie applicazioni. È possibile utilizzare le caratteristiche e le funzionalità esistenti di [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] per compilare strumenti di gestione e di creazione di report personalizzati nei siti Web e nelle applicazioni Windows oppure per estendere la piattaforma [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] .  
   
  L'estensione della piattaforma [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] include la creazione di nuovi componenti e risorse che è possibile utilizzare per l'accesso ai dati, il recapito dei report e altro ancora. È possibile offrire questi componenti e risorse alle società che utilizzano [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] nell'organizzazione.  
   
-## <a name="in-this-section"></a>Argomenti della sezione  
+## <a name="in-this-section"></a>In questa sezione  
  [Integrazione di Reporting Services nelle applicazioni](application-integration/integrating-reporting-services-into-applications.md)  
  Viene fornita una panoramica sull'utilizzo di [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] per l'integrazione dei report nelle applicazioni personalizzate. Viene descritto come utilizzare l'accesso con URL diretto e quando utilizzare il servizio Web per accedere al server di report.  
   
@@ -39,7 +39,7 @@ ms.locfileid: "48116011"
  [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] supporta un set completo di richieste basate su URL che è possibile utilizzare come punto di accesso semplice e rapido per la navigazione e la visualizzazione dei report. È possibile utilizzare questa tecnologia insieme al servizio Web ReportServer per integrare una soluzione completa di creazione di report nelle applicazioni aziendali personalizzate. L'accesso con URL è particolarmente utile in caso di integrazione dei report come parte di un portale Web o in caso di visualizzazione dei report da un browser.  
   
  [Estensioni di Reporting Services](extensions/reporting-services-extensions.md)  
- L'architettura modulare di [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] è progettata per offrire estendibilità. È disponibile un'API in codice gestito che consente di sviluppare, installare e gestire in modo semplice le estensioni usate da numerosi componenti di [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]. È possibile creare assembly usando [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)] e aggiungere nuove funzionalità di rendering, sicurezza, recapito ed elaborazione dati di [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] per soddisfare le esigenze aziendali in continua evoluzione.  
+ L'architettura modulare di [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] è progettata per offrire estendibilità. È disponibile un'API in codice gestito che consente di sviluppare, installare e gestire in modo semplice le estensioni usate da numerosi componenti di [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] . È possibile creare assembly usando [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)] e aggiungere nuove funzionalità di rendering, sicurezza, recapito ed elaborazione dati di [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] per soddisfare le esigenze aziendali in continua evoluzione.  
   
  [Elementi dei report personalizzati](custom-report-items/custom-report-items.md)  
  Viene descritto come creare elementi dei report personalizzati per aggiungere funzionalità a RDL o per estendere le funzionalità dei controlli esistenti.  

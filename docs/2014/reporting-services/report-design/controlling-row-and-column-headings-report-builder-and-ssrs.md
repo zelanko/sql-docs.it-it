@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 4be6e836-158e-4bc9-8870-7f394d7c7e11
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: b8732495ad9eadf6660104f9a3edb4c991dce800
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: f844db8f44e501ef373de73d0b0676730877db62
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48183471"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56019932"
 ---
 # <a name="controlling-row-and-column-headings-report-builder-and-ssrs"></a>Controllo delle intestazioni di riga e di colonna (Generatore report e SSRS)
   Una tabella, una matrice o un'area dati elenco possono estendersi orizzontalmente o verticalmente in più pagine. È possibile specificare se ripetere le intestazioni di riga o di colonna in ogni pagina. In un renderer interattivo, quale Gestione report o un'anteprima del report, è inoltre possibile specificare se bloccare le intestazioni di riga o di colonna per mantenerle visualizzate quando si scorre in senso orizzontale o verso il basso un report. Nella prima riga di una tabella o di una matrice in genere sono contenute intestazioni di colonna che identificano i dati di ogni colonna, mentre nella prima colonna sono contenute intestazioni di riga che identificano i dati di ogni riga. Per i gruppi nidificati, è possibile ripetere il set iniziale di intestazioni di riga e di colonna contenenti etichette di gruppo. Per impostazione predefinita, in un'area dati elenco non sono incluse intestazioni.  
@@ -113,7 +113,7 @@ ms.locfileid: "48183471"
   
  ![Gruppi di righe, modalità avanzata con membri statici](../media/rs-tableheaderdynamicwithgroupheadercelladvanced.gif "Gruppi di righe, modalità avanzata con membri statici")  
   
- Vengono elencati i membri Tablix seguenti: **Statico**, (**Statico**), Categoria e (**Dettagli**). Un membro Tablix che include le parentesi () indica l'assenza di un'intestazione di gruppo corrispondente. Per ripetere o bloccare le intestazioni di colonna, selezionare il membro Tablix statico superiore e impostare le proprietà nel riquadro Proprietà.  
+ Sono elencati i membri Tablix seguenti: **Statica**, (**statici**), categoria e (**dettagli**). Un membro Tablix che include le parentesi () indica l'assenza di un'intestazione di gruppo corrispondente. Per ripetere o bloccare le intestazioni di colonna, selezionare il membro Tablix statico superiore e impostare le proprietà nel riquadro Proprietà.  
   
  [Torna all'inizio](#Top)  
   
@@ -140,7 +140,7 @@ ms.locfileid: "48183471"
   
  ![Gruppi di righe, modalità avanzata, senza intestazione gruppo.](../media/rs-tableheaderdynamicwithnogroupheadercelladvanced.gif "Gruppi di righe, modalità avanzata, senza intestazione gruppo.")  
   
- Nel riquadro Gruppi di righe vengono elencati i membri Tablix seguenti: (**Statico**), (Categoria), (**Statico**) e (**Dettagli**). Per ripetere o bloccare le intestazioni di colonna, selezionare il membro Tablix (**Statico**) superiore e impostare le proprietà nel riquadro Proprietà.  
+ Nel riquadro Gruppi di righe sono elencati i seguenti membri Tablix: (**Statici**), (categoria), (**statici**), e (**dettagli**). Per ripetere o bloccare le intestazioni di colonna, selezionare il membro Tablix (**Statico**) superiore e impostare le proprietà nel riquadro Proprietà.  
   
  [Torna all'inizio](#Top)  
   

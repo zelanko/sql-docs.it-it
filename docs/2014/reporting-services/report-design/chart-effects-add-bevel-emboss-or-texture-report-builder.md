@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 737cfc80-b39e-497c-817b-b46693deb58f
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: 2e6e59b2562928d22a3d9e0b74830d630d77728d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 2076f53b428320f8635de98f7993232e65c2e29c
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48072011"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56019033"
 ---
 # <a name="add-bevel-emboss-and-texture-styles-to-a-chart-report-builder-and-ssrs"></a>Aggiungere stili smussato, rilievo e trama a un grafico (Generatore report e SSRS)
   Quando si utilizzano determinati tipi di grafico, è possibile specificare un effetto di disegno per aumentarne l'effetto visivo. Tali effetti vengono applicati solo alle serie, mentre non influiscono su altri elementi del grafico.  
@@ -25,7 +25,7 @@ ms.locfileid: "48072011"
   
  Quando si utilizza una variante di un grafico a barre o di un istogramma, è possibile applicare stili di trama, ad esempio cilindro, spicchio e chiaroscuro, alle singole barre o colonne.  
   
- Oltre a questi stili di disegno, è possibile aggiungere bordi e ombreggiature a molti elementi del grafico per conferire un effetto ottico di profondità. Per altre informazioni su altri modi per formattare il grafico, vedere [formattazione di un grafico &#40;Generatore Report e SSRS&#41;](formatting-a-chart-report-builder-and-ssrs.md).  
+ Oltre a questi stili di disegno, è possibile aggiungere bordi e ombreggiature a molti elementi del grafico per conferire un effetto ottico di profondità. Per altre informazioni su altri modi per formattare il grafico, vedere [Formattazione di un grafico &#40;Generatore report e SSRS&#41;](formatting-a-chart-report-builder-and-ssrs.md).  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
@@ -61,9 +61,9 @@ ms.locfileid: "48072011"
  ![Grafico a barre con effetto di disegno LightToDark](../media/rs-bardrawingeffects-lighttodark.gif "Grafico a barre con effetto di disegno LightToDark")  
   
 ## <a name="see-also"></a>Vedere anche  
- [Grafici a barre &#40;Report e SSRS&#41;](charts-report-builder-and-ssrs.md)   
+ [Grafici a barre &#40;Generatore report e SSRS&#41;](charts-report-builder-and-ssrs.md)   
  [Istogrammi &#40;Generatore report e SSRS&#41;](column-charts-report-builder-and-ssrs.md)   
- [I grafici a torta &#40;Report e SSRS&#41;](pie-charts-report-builder-and-ssrs.md)   
- [Formattazione di un grafico &#40;Report e SSRS&#41;](formatting-a-chart-report-builder-and-ssrs.md)  
+ [Grafici a torta &#40;Generatore report e SSRS&#41;](pie-charts-report-builder-and-ssrs.md)   
+ [Formattazione di un grafico &#40;Generatore report e SSRS&#41;](formatting-a-chart-report-builder-and-ssrs.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: 'Lesson 5: Formatting a Report (Reporting Services) (Lezione 5: Formattazione di un report (Reporting Services)) | Microsoft Docs'
+title: 'Lezione 5: Formattazione di un Report (Reporting Services) | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -10,15 +10,15 @@ ms.topic: conceptual
 ms.assetid: ae46efa9-6e04-48ec-afb4-5a2314dcb05a
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: df56110f96364f4cecd3c9d8d25d39e3fca74392
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 37e5ff9cd40dd8c79efcde8c7cb072493a2ff95a
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48181041"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56026288"
 ---
-# <a name="lesson-5-formatting-a-report-reporting-services"></a>Lesson 5: Formatting a Report (Reporting Services)
+# <a name="lesson-5-formatting-a-report-reporting-services"></a>Lezione 5: Formattazione di un Report (Reporting Services)
   Dopo avere aggiunto un'area dati e alcuni campi al report Sales Orders, è possibile formattare i campi relativi a data e valuta e le intestazioni di colonna.  
   
  Contenuto dell'argomento:  
@@ -93,10 +93,10 @@ ms.locfileid: "48181041"
 5.  Per salvare il report, scegliere **Salva tutti** nel menu **File** .  
   
 ## <a name="next-steps"></a>Passaggi successivi  
- Sono stati formattati le intestazioni di colonna e i valori di data e valuta. È possibile aggiungere gruppi e totali al report. Vedere [Lezione 6: Aggiunta di gruppi e totali &#40;Reporting Services&#41;](../reporting-services/lesson-6-adding-grouping-and-totals-reporting-services.md).  
+ Sono stati formattati le intestazioni di colonna e i valori di data e valuta. È possibile aggiungere gruppi e totali al report. Vedere [lezione 6: Aggiunta di gruppi e totali &#40;Reporting Services&#41;](../reporting-services/lesson-6-adding-grouping-and-totals-reporting-services.md).  
   
 ## <a name="see-also"></a>Vedere anche  
- [Formattazione di numeri e date di &#40;Report e SSRS&#41;](report-design/formatting-numbers-and-dates-report-builder-and-ssrs.md)   
+ [Formattazione di numeri e date &#40;Generatore report e SSRS&#41;](report-design/formatting-numbers-and-dates-report-builder-and-ssrs.md)   
  [Tipi di rendering &#40;Generatore report e SSRS&#41;](report-design/rendering-behaviors-report-builder-and-ssrs.md)  
   
   

@@ -2,8 +2,7 @@
 title: sp_pdw_log_user_data_masking (SQL Data Warehouse) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: ''
-ms.prod_service: sql-data-warehouse, pdw
+ms.service: sql-data-warehouse
 ms.reviewer: ''
 ms.topic: language-reference
 dev_langs:
@@ -13,12 +12,12 @@ author: ronortloff
 ms.author: rortloff
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 23d7846bd72329a62579765679687204a8e14ec5
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a0d9a6ec090e799b4b6f0aad7e7335d1e36999dd
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47630239"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56022978"
 ---
 # <a name="sppdwloguserdatamasking-sql-data-warehouse"></a>sp_pdw_log_user_data_masking (SQL Data Warehouse)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
@@ -28,7 +27,7 @@ ms.locfileid: "47630239"
 > [!IMPORTANT]  
 >  Il [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] log attività interessate da **sp_pdw_log_user_data_masking** certezze [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] i log attività. **sp_pdw_log_user_data_masking** influisce sui registri delle transazioni del database o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] i log degli errori.  
   
- **Sfondo:** nella configurazione predefinita [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] log attività contengono completi [!INCLUDE[tsql](../../includes/tsql-md.md)] istruzioni ed è possibile in alcuni casi includono i dati utente contenuti nelle operazioni, ad esempio **Inserisci**,  **UPDATE**, e **selezionare** istruzioni. In caso di un problema nell'appliance, in questo modo, l'analisi delle condizioni che ha causato il problema senza la necessità di riprodurre il problema. Allo scopo di impedire che i dati utente su cui scrivere [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] i log attività, i clienti possono scegliere di abilitare il mascheramento dei dati utente tramite questa stored procedure. Le istruzioni verranno ancora scritti [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] i log attività, ma tutti i valori letterali nelle istruzioni che possono contenere i dati dell'utente verranno applicata la maschera; sostituiti con alcuni valori costanti predefinite.  
+ **Sfondo:** Nella configurazione predefinita [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] log attività contengono completi [!INCLUDE[tsql](../../includes/tsql-md.md)] istruzioni ed è possibile in alcuni casi includono i dati utente contenuti nelle operazioni, ad esempio **Inserisci**, **UPDATE**, e **Seleziona** istruzioni. In caso di un problema nell'appliance, in questo modo, l'analisi delle condizioni che ha causato il problema senza la necessità di riprodurre il problema. Allo scopo di impedire che i dati utente su cui scrivere [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] i log attività, i clienti possono scegliere di abilitare il mascheramento dei dati utente tramite questa stored procedure. Le istruzioni verranno ancora scritti [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] i log attività, ma tutti i valori letterali nelle istruzioni che possono contenere i dati dell'utente verranno applicata la maschera; sostituiti con alcuni valori costanti predefinite.  
   
  Quando transparent data encryption è abilitato nell'appliance, mascheramento dei dati utente in [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] i log attività vengono attivati automaticamente.  
   
@@ -41,7 +40,7 @@ sp_pdw_log_user_data_masking [ [ @masking_mode = ] value ] ;
 ```  
   
 #### <a name="parameters"></a>Parametri  
- [  **@masking_mode=** ] *masking_mode*  
+ [ **@masking_mode=** ] *masking_mode*  
  Determina se sono abilitati transparent data encryption log utente maschera dati. *masking_mode* viene **int**, e può essere uno dei valori seguenti:  
   
 -   0 = disabilitato, utente i dati vengono visualizzati nei [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] i log attività.  

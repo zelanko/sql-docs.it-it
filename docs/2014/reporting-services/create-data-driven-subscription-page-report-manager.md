@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 814b4653-572a-48c7-847f-b310ba0f3046
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 041553621a9f85cf4ca4f409f25b05cb2660c12b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: d3abebe357646aab1a09e3bc6a59130461d268bd
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48116857"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56027042"
 ---
 # <a name="create-data-driven-subscription-page-report-manager"></a>Pagine Creazione di una sottoscrizione guidata dai dati (Gestione report)
   Le pagine Creazione di una sottoscrizione guidata dai dati consentono di compilare o modificare una sottoscrizione che esegue una query su un database sottoscrittore per ottenere informazioni sulla sottoscrizione ogni volta che la sottoscrizione viene eseguita. Le sottoscrizioni guidate dai dati utilizzano i risultati della query per determinare i destinatari della sottoscrizione, le impostazioni di recapito e i valori dei parametri del report. In fase di esecuzione, il server di report esegue una query per recuperare i valori utilizzati per le impostazioni di sottoscrizione. È possibile utilizzare queste pagine per definire la query e assegnare i valori della query alle impostazioni della sottoscrizione. I valori e le opzioni che è possibile impostare per una sottoscrizione guidata dai dati sono suddivisi in più pagine, in modo simile a una procedura guidata. La procedura è composta da un totale di sette pagine.  
@@ -53,7 +53,7 @@ ms.locfileid: "48116857"
   
 -   Selezionare **Condivisione file Server report** per recapitare i report in una condivisione file. Il report verrà recapitato come file statico, disconnesso dal server di report. Per ulteriori informazioni, vedere [File Share Delivery in Reporting Services](subscriptions/file-share-delivery-in-reporting-services.md).  
   
--   Selezionare **Messaggio di posta elettronica da Server report** per recapitare i report nella posta in arrivo. Per altre informazioni, vedere [Recapito tramite posta elettronica in Reporting Services](subscriptions/e-mail-delivery-in-reporting-services.md).  
+-   Selezionare **Messaggio di posta elettronica da Server report** per recapitare i report nella posta in arrivo. Per altre informazioni, vedere [E-Mail Delivery in Reporting Services](subscriptions/e-mail-delivery-in-reporting-services.md).  
   
 -   Selezionare **Provider recapito Null** per recapitare i report nel database del server di report. Questa opzione consente di creare snapshot del report. Selezionare questa opzione se si desidera precaricare nel server di report snapshot del report specifici degli utenti o con parametri in base a una pianificazione specifica. Per altre informazioni, vedere [Memorizzazione dei report nella cache &#40;SSRS&#41;](report-server/caching-reports-ssrs.md).  
   
@@ -91,7 +91,7 @@ ms.locfileid: "48116857"
  **Timeout**  
  Consente di specificare un valore di timeout per la query. Questo valore deve essere sufficiente per consentire il completamento dell'elaborazione della query.  
   
- **Convalida**  
+ **Validate**  
  Fare clic su **Convalida** per verificare la query. Per continuare è necessario che la query generi risultati validi. Se non si fa clic su **Convalida**, la query viene comunque convalidata quando si fa clic su **Avanti**.  
   
 ## <a name="set-delivery-options-page-4"></a>Impostazione delle opzioni di recapito (pagina 4)  
@@ -152,7 +152,7 @@ ms.locfileid: "48116857"
  Consente di impostare una pianificazione eseguita a intervalli di ore.  
   
  **Giornaliero**  
- Consente di impostare una pianificazione eseguita nei giorni selezionati a un'ora specifica. È possibile specificare i giorni nei modi seguenti: ogni  *\<giorno >*, ogni giorno feriale e ogni  *\<numero >* giorno. La selezione di un'opzione determina la disattivazione delle altre anche se può sembrare che siano selezionati altri giorni.  
+ Consente di impostare una pianificazione eseguita nei giorni selezionati a un'ora specifica. È possibile specificare i giorni nei modi seguenti: Ogni  *\<giorno >*, ogni giorno feriale e ogni  *\<numero >* giorno. La selezione di un'opzione determina la disattivazione delle altre anche se può sembrare che siano selezionati altri giorni.  
   
  **Settimanale**  
  Consente di impostare una pianificazione eseguita settimanalmente a un'ora specifica. È possibile impostare un intervallo di una o più settimane intere (ad esempio, ogni due settimane) oppure i giorni della settimana.  
@@ -171,7 +171,7 @@ ms.locfileid: "48116857"
   
 ## <a name="see-also"></a>Vedere anche  
  [Gestione report &#40;modalità nativa SSRS&#41;](../../2014/reporting-services/report-manager-ssrs-native-mode.md)   
- [Sottoscrizioni guidate dai dati](subscriptions/data-driven-subscriptions.md)   
+ [Data-Driven Subscriptions](subscriptions/data-driven-subscriptions.md)   
  [Creare una sottoscrizione guidata dai dati &#40;esercitazione su SSRS&#41;](create-a-data-driven-subscription-ssrs-tutorial.md)   
  [Specificare le credenziali e le informazioni sulla connessione per le origini dati del report](report-data/specify-credential-and-connection-information-for-report-data-sources.md)   
  [Sottoscrizioni e recapito &#40;Reporting Services&#41;](subscriptions/subscriptions-and-delivery-reporting-services.md)   

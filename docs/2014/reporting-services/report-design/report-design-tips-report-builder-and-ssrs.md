@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: c1490ff0-5b8a-43c1-8d22-e459395db4f6
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: 69f989fd4714aaafed94f1b8a9fb3ad077cc7cf8
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: a3abfb7cbecbf496c7c2083d5d75b1833069d12c
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48065721"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56029412"
 ---
 # <a name="report-design-tips-report-builder-and-ssrs"></a>Suggerimenti relativi alla progettazione di report (Generatore report e SSRS)
   Usare i suggerimenti seguenti per progettare i report.  
@@ -156,7 +156,7 @@ ms.locfileid: "48065721"
   
     4.  Nelle intestazioni di colonna modificare la proprietà della casella di testo WritingMode per usare il testo verticale.  
   
- La combinazione di questo comportamento, ovvero le proprietà relative alla larghezza e all'altezza degli elementi del report, le dimensioni del corpo del report, la definizione dell'altezza e della larghezza di pagina, le impostazioni dei margini del report padre e il supporto specifico del renderer per paging, consente di determinare quali elementi del report disporre in una pagina di cui è stato eseguito il rendering. Per altre informazioni, vedere [Paginazione in Reporting Service &#40;Generatore report e SSRS&#41;](pagination-in-reporting-services-report-builder-and-ssrs.md).  
+ La combinazione di questo comportamento, ovvero le proprietà relative alla larghezza e all'altezza degli elementi del report, le dimensioni del corpo del report, la definizione dell'altezza e della larghezza di pagina, le impostazioni dei margini del report padre e il supporto specifico del renderer per paging, consente di determinare quali elementi del report disporre in una pagina di cui è stato eseguito il rendering. Per altre informazioni, vedere [Paginazione in Reporting Services &#40;Generatore report e SSRS&#41;](pagination-in-reporting-services-report-builder-and-ssrs.md).  
   
 ## <a name="see-also"></a>Vedere anche  
  [Generatore report in SQL Server 2014](../report-builder/report-builder-in-sql-server-2016.md)   

@@ -4,21 +4,20 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: a73ac60b-660f-458a-bd2f-993fbeba7226
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: d6aa8d340b64f98193b31b6ebc6321407cff8368
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: d6384910858d87a80aa3c8f897bc88e45f4504fb
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48082681"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56025802"
 ---
-# <a name="lesson-1-creating-the-bike-buyer-mining-structure"></a>Lezione 1: Creazione della struttura di data mining Bike Buyer
+# <a name="lesson-1-creating-the-bike-buyer-mining-structure"></a>Lezione 1: Creazione della struttura di Data Mining Bike Buyer
   In questa lezione verrà creata una struttura di data mining che consente di stimare se un potenziale cliente di [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] acquisterà una bicicletta. Se non si ha familiarità con le strutture di data mining e sul loro ruolo nel data mining, vedere [strutture di Data Mining &#40;Analysis Services - Data Mining&#41;](../../2014/analysis-services/data-mining/mining-structures-analysis-services-data-mining.md).  
   
  La struttura di data mining Bike Buyer che verrà creato in questa lezione supporta l'aggiunta di modelli di data mining in base il [algoritmo Microsoft Clustering](../../2014/analysis-services/data-mining/microsoft-clustering-algorithm.md)[algoritmo Microsoft Decision Trees](../../2014/analysis-services/data-mining/microsoft-decision-trees-algorithm.md). Nelle lezioni successive si utilizzeranno i modelli di data mining di clustering per esaminare le diverse modalità di raggruppamento dei clienti e si utilizzeranno modelli di data mining di albero delle decisioni per stimare se un potenziale cliente acquisterà una bicicletta.  
@@ -215,6 +214,6 @@ WITH HOLDOUT (<holdout specifier>)
  Nella lezione successiva verranno aggiunti modelli di data mining alla struttura appena creata.  
   
 ## <a name="next-lesson"></a>Lezione successiva  
- [Lezione 2: Aggiunta di modelli di data mining alla struttura di data mining Bike Buyer](../../2014/tutorials/lesson-2-adding-mining-models-to-the-bike-buyer-mining-structure.md)  
+ [Lezione 2: Aggiunta di modelli di Data Mining alla struttura di Data Mining Bike Buyer](../../2014/tutorials/lesson-2-adding-mining-models-to-the-bike-buyer-mining-structure.md)  
   
   

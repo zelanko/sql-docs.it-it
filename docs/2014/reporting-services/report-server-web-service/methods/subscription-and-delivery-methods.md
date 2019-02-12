@@ -16,13 +16,13 @@ helpviewer_keywords:
 ms.assetid: a8637501-1817-4ccc-b07d-dd9ed5608805
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 5598122d95d3c90bcd91a32b8423117e05dc2a90
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 8d3b16e33ff38107706a506803300d0499bfd3fc
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48163596"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56027962"
 ---
 # <a name="subscription-and-delivery-methods"></a>Metodi di sottoscrizione e recapito
   È possibile utilizzare questi metodi per creare e gestire le sottoscrizioni e il recapito degli elementi del catalogo.  

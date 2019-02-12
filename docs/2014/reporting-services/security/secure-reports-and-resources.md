@@ -16,13 +16,13 @@ helpviewer_keywords:
 ms.assetid: 63cd55c7-fd2a-49e3-a3f8-59eb1a1c6e83
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: aded4422e6036ae2840d9e55278034a13f03665d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: a12d538f034f4a3d96726ced32b74f02ec6e73c3
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48129491"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56023522"
 ---
 # <a name="secure-reports-and-resources"></a>Garantire la sicurezza di report e risorse
   È possibile impostare la sicurezza per singoli report e risorse e controllare quindi i livelli di accesso concessi ai vari utenti per questi elementi. Per impostazione predefinita, solo i membri del gruppo **Administrators** predefinito possono eseguire report, visualizzare risorse, modificare proprietà ed eliminare elementi. Per tutti gli altri utenti è necessario creare assegnazioni di ruolo che consentano l'accesso a un report o a una risorsa.  
@@ -62,7 +62,7 @@ ms.locfileid: "48129491"
  Per ridurre il rischio di includere in un report collegamenti che eseguono inavvertitamente script dannosi, associare collegamenti ipertestuali solo ai dati provenienti da origini attendibili. Verificare che i dati restituiti da query ed espressioni che determinano l'associazione di dati a collegamenti ipertestuali non creino collegamenti che possano essere sfruttati da utenti malintenzionati. Ad esempio, non basare un collegamento ipertestuale su un'espressione che concatena dati da più campi del set di dati. Se necessario, passare al report e utilizzare "Visualizza origine" per verificare la presenza di script e URL sospetti.  
   
 ## <a name="mitigating-sql-injection-attacks-in-a-parameterized-report"></a>Riduzione del rischio di attacchi intrusivi nel codice SQL in un report con parametri  
- In qualsiasi report che includa un parametro di tipo `String`, assicurarsi di usare un elenco di valori disponibili (noto anche come elenco di valori validi) e assicurarsi che ogni utente che esegue il report disponga solo delle autorizzazioni necessarie per visualizzare i dati nel report. Quando si definisce un parametro di tipo `String`, viene visualizzata una casella di testo che può accettare qualsiasi valore. Un elenco di valori disponibili consente di limitare i valori che è possibile immettere. Se un parametro di report è correlato a un parametro di query e non si utilizza un elenco di valori disponibili, un utente potrebbe digitare nella casella di testo sintassi SQL, esponendo il report e il server a un potenziale attacco intrusivo nel codice SQL. Se l'utente dispone di autorizzazioni sufficienti per eseguire la nuova istruzione SQL, è possibile che nel server si verifichino risultati non desiderati.  
+ In qualsiasi report che includa un parametro di tipo `String` accertarsi di utilizzare un elenco di valori disponibili, anche detto elenco di valori validi, e assicurarsi che ogni utente che esegue il report disponga solo delle autorizzazioni necessarie per visualizzare i dati del report. Quando si definisce un parametro di tipo `String`, viene visualizzata una casella di testo che può accettare qualsiasi valore. Un elenco di valori disponibili consente di limitare i valori che è possibile immettere. Se un parametro di report è correlato a un parametro di query e non si utilizza un elenco di valori disponibili, un utente potrebbe digitare nella casella di testo sintassi SQL, esponendo il report e il server a un potenziale attacco intrusivo nel codice SQL. Se l'utente dispone di autorizzazioni sufficienti per eseguire la nuova istruzione SQL, è possibile che nel server si verifichino risultati non desiderati.  
   
  Se un parametro di report non è correlato a un parametro di query e i valori del parametro sono inclusi nel report, un utente potrebbe digitare nel valore del parametro un URL o la sintassi di un'espressione ed eseguire il rendering del report in formato Excel o HTML. Se il report viene in seguito visualizzato da un altro utente che fa clic sul contenuto dei parametri di cui è stato eseguito il rendering, è possibile che venga inavvertitamente eseguito il collegamento o lo script dannoso.  
   
@@ -72,11 +72,11 @@ ms.locfileid: "48129491"
 >  Nelle versioni precedenti della documentazione è incluso un esempio di creazione di una query dinamica come espressione. Questo tipo di query crea una vulnerabilità agli attacchi intrusivi nel codice SQL e pertanto non è consigliabile.  
   
 ## <a name="securing-confidential-reports"></a>sicurezza di report con contenuto riservato  
- È consigliabile proteggere i report che contengono informazioni riservate in corrispondenza del livello di accesso ai dati, richiedendo agli utenti di specificare le credenziali per l'accesso ai dati riservati. Per altre informazioni, vedere [specificare le credenziali e informazioni di connessione per origini dati del Report](../report-data/specify-credential-and-connection-information-for-report-data-sources.md). È inoltre possibile proteggere una cartella in modo da renderla inaccessibile agli utenti non autorizzati. Per altre informazioni, vedere [Proteggere le cartelle](secure-folders.md).  
+ È consigliabile proteggere i report che contengono informazioni riservate in corrispondenza del livello di accesso ai dati, richiedendo agli utenti di specificare le credenziali per l'accesso ai dati riservati. Per altre informazioni, vedere [Specificare le credenziali e le informazioni sulla connessione per le origini dati del report](../report-data/specify-credential-and-connection-information-for-report-data-sources.md). È inoltre possibile proteggere una cartella in modo da renderla inaccessibile agli utenti non autorizzati. Per altre informazioni, vedere [Proteggere le cartelle](secure-folders.md).  
   
 ## <a name="see-also"></a>Vedere anche  
- (create-e-Gestisci-ruolo-assignments.md)   
- [Configurare l'accesso a Generatore Report](../report-server/configure-report-builder-access.md)   
+ (create-and-manage-role-assignments.md)   
+ [Configurare l'accesso a Generatore report](../report-server/configure-report-builder-access.md)   
  [Concessione di autorizzazioni in un server di report in modalità nativa](granting-permissions-on-a-native-mode-report-server.md)   
  [Proteggere le origini dei dati condivise](secure-shared-data-source-items.md)   
  [Archiviare le credenziali in un'origine dati di Reporting Services](../report-data/store-credentials-in-a-reporting-services-data-source.md)  

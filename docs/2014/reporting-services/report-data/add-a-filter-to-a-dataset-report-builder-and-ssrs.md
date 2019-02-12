@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: eed37e74-6a43-4d7c-9959-2d5fa6a6aba9
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: a7ab54f0f2cf6d1ee4a8358df9062e125a9b496a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 38b71bc3f92a8cb6d3c514c4115395cb3bd619ef
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48048901"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56020482"
 ---
 # <a name="add-a-filter-to-a-dataset-report-builder-and-ssrs"></a>Aggiungere un filtro a un set di dati (Generatore report e SSRS)
   Aggiungere un filtro a un set di dati per limitare i dati di un report dopo averli recuperati da un'origine dati esterna. Quando si aggiunge un filtro a un set di dati, tutte le parti di report o aree dati utilizzano solo dati che soddisfano le condizioni del filtro.  

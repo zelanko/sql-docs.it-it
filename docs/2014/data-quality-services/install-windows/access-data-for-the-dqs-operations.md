@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: 88dfb9ea-6321-4eaf-b9e4-45d36ef048f6
-author: douglaslMS
-ms.author: douglasl
+author: leolimsft
+ms.author: lle
 manager: craigg
-ms.openlocfilehash: 71ef931fc857841365919073cb470c725c3714e0
-ms.sourcegitcommit: af1d9fc4a50baf3df60488b4c630ce68f7e75ed1
+ms.openlocfilehash: 951ff99f6c1e234a0c2861b12ae8f54815f1e37e
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/06/2018
-ms.locfileid: "51030700"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56019922"
 ---
 # <a name="access-data-for-the-dqs-operations"></a>Accedere ai dati per le operazioni DQS
   Per utilizzare i dati di origine per operazioni [!INCLUDE[ssDQSnoversion](../../includes/ssdqsnoversion-md.md)] (DQS) ed esportare i dati elaborati, è possibile effettuare una delle operazioni seguenti:  
@@ -40,13 +40,13 @@ ms.locfileid: "51030700"
   
 4.  Nel riquadro sinistro della finestra di dialogo **Proprietà account di accesso** fare clic su **Mapping utenti** .  
   
-5.  Nel riquadro di destra selezionare la casella di controllo sotto la colonna **Mappa** per il database **DQS_STAGING_DATA** , quindi selezionare i ruoli seguenti nel riquadro **Appartenenza a ruoli del database per: DQS_STAGING_DATA** :  
+5.  Nel riquadro di destra, selezionare la casella di controllo sotto le **mappa** colonna per il **DQS_STAGING_DATA** del database e quindi selezionare i ruoli seguenti nel **Database l'appartenenza al ruolo per: DQS_STAGING_DATA** pane:  
   
-    -   **db_datareader**: consente di leggere i dati da tabelle e viste.  
+    -   **db_datareader**: Leggere i dati da tabelle e viste.  
   
-    -   **db_datawriter**: consente di aggiungere, eliminare o modificare i dati nelle tabelle.  
+    -   **db_datawriter**: Aggiungere, eliminare o modificare i dati nelle tabelle.  
   
-    -   **db_ddladmin**: consente di creare, modificare o eliminare tabelle e viste.  
+    -   **db_ddladmin**: Creare, modificare o eliminare tabelle e viste.  
   
 6.  Nella finestra di dialogo **Proprietà account di accesso** fare clic su **OK** per applicare le modifiche.  
   

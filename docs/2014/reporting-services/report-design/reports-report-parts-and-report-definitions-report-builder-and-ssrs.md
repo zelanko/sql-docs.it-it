@@ -13,16 +13,16 @@ helpviewer_keywords:
 ms.assetid: 2d746550-f8cc-4e97-8a06-d0f03cffc18d
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: e5ec066e467ba83c33b95d46b4ed3cc593ecc551
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 7534c317f2e690e0766299961f4f21d35a674702
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48220311"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56020647"
 ---
 # <a name="reports-report-parts-and-report-definitions-report-builder-and-ssrs"></a>Report, parti del report e definizioni dei report (Generatore report e SSRS)
-  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Usa vari termini per descrivere un report nei diversi stati, inclusi la definizione iniziale, il report pubblicato e il report così come viene visualizzato all'utente.  
+  In [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] vengono usati vari termini per descrivere un report nei diversi stati, inclusi la definizione iniziale, il report pubblicato e il report così come viene visualizzato dall'utente.  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
@@ -45,7 +45,7 @@ ms.locfileid: "48220311"
 ## <a name="published-reports"></a>Report pubblicati  
  Dopo aver creato un file con estensione rdl, è possibile salvarlo in locale o in una cartella personale, ad esempio la cartella Report personali, sul server di report. Quando il report è pronto per la visualizzazione da parte di altri utenti, è possibile pubblicarlo salvandolo da Generatore report in una cartella pubblica nel server di report, caricandolo tramite Gestione report o distribuendo una soluzione di progetto report da Progettazione report. Un report pubblicato è un elemento archiviato in un database del server di report e gestito su un server di report o in un sito di SharePoint.  
   
- Un report pubblicato viene protetto mediante l'assegnazioni di ruolo utilizzando il modello di sicurezza basata sui ruoli di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . L'accesso ai report pubblicati viene eseguito tramite URL, web part di SharePoint o Gestione report. In alternativa, è possibile passare ai report pubblicati e aprirli in Generatore report.  
+ Un report pubblicato viene protetto mediante l'assegnazioni di ruolo usando il modello di sicurezza basata sui ruoli di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . L'accesso ai report pubblicati viene eseguito tramite URL, web part di SharePoint o Gestione report. In alternativa, è possibile passare ai report pubblicati e aprirli in Generatore report.  
   
 ### <a name="report-snapshots"></a>Snapshot del report  
  I report possono essere pubblicati anche sotto forma di snapshot che contiene sia informazioni sul layout che dati, ad esempio l'ora di inizio di esecuzione del report. Gli snapshot dei report non vengono salvati in un formato di rendering specifico, ma ne viene eseguito il rendering nel formato di visualizzazione finale, ad esempio HTML, solo quando vengono richiesti da un utente o un'applicazione. Per altre informazioni, vedere [Ricerca e visualizzazione di report in Gestione report &#40;Generatore report e SSRS&#41;](../report-builder/finding-and-viewing-reports-in-the-web-portal-report-builder-and-ssrs.md).  
@@ -64,7 +64,7 @@ ms.locfileid: "48220311"
  Sottoscrivere un report, che viene recapitato a una cartella Posta in arrivo o a una condivisione file in un formato di output specificato dall'utente. Il formato di rendering predefinito per un report è HTML 4.0. Oltre al formato HTML, sono disponibili vari formati di output in cui è possibile eseguire il rendering dei report, inclusi i formati Excel, Word, XML, PDF, TIFF e CSV. Come per i report pubblicati, anche i report visualizzabili non possono essere modificati o salvati nuovamente su un server di report. Per altre informazioni, vedere [esportazione di report &#40;Generatore Report e SSRS&#41;](../report-builder/export-reports-report-builder-and-ssrs.md).  
   
 ## <a name="see-also"></a>Vedere anche  
- [Concetti relativi alla creazione di report &#40;Report e SSRS&#41;](report-authoring-concepts-report-builder-and-ssrs.md)   
+ [Concetti relativi alla creazione di report &#40;Generatore report e SSRS&#41;](report-authoring-concepts-report-builder-and-ssrs.md)   
  [Generatore report in SQL Server 2014](../report-builder/report-builder-in-sql-server-2016.md)   
  [Installare, disinstallare e supporto di Generatore Report](../install-uninstall-and-report-builder-support.md)   
  [Ricerca, visualizzazione e gestione dei report &#40;Generatore report e SSRS&#41;](../report-builder/finding-viewing-and-managing-reports-report-builder-and-ssrs.md)   

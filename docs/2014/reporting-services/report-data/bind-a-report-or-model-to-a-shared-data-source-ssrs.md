@@ -13,13 +13,13 @@ helpviewer_keywords:
 ms.assetid: 23cc15f2-2883-48e2-bc6c-fa0ab61a2e21
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: ca6d2e98bc631a675aee3d4968103c9981775019
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+manager: kfile
+ms.openlocfilehash: 68de06ba5b7c281238a8729776367c3d5b611395
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52521775"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56020672"
 ---
 # <a name="bind-a-report-or-model-to-a-shared-data-source-ssrs"></a>Associare un report o un modello a un'origine dati condivisa (SSRS)
   In alcune situazioni, ad esempio quando si sposta un report o un modello da un server di test a uno di produzione, potrebbe essere necessario salvare il file nel computer locale e quindi caricarlo in un altro server di report. Quando si carica il report o il modello nel nuovo server, è necessario riassociarlo a un'origine dei dati condivisa archiviata nel nuovo server di report. Se il report o il modello non viene riassociato, non funzionerà correttamente quando vi si accede dal nuovo server di report.  

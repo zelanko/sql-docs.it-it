@@ -17,13 +17,13 @@ f1_keywords:
 ms.assetid: 58b96555-d876-4f61-bff8-db5764b9f5f9
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: 3baf73ba7f2c9e5d4d206234b1c9b874fbb15c59
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+manager: kfile
+ms.openlocfilehash: bb45eb7274763446358a0336a9b2a415bc4543b8
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53366263"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56023502"
 ---
 # <a name="report-parameters-report-builder-and-report-designer"></a>Parametri report (Generatore report e Progettazione report)
   Questo argomento descrive gli usi comuni dei parametri di report SSRS, le proprietà che è possibile impostare e altre informazioni sui parametri. I parametri del report consentono di controllare i dati del report, connettere report correlati e variare la presentazione del report.  
@@ -227,7 +227,7 @@ ms.locfileid: "53366263"
 ##  <a name="bkmk_Related_Topics"></a> Contenuto correlato  
  [Configurazione dei parametri di report SSRS (quiz)](https://go.microsoft.com/fwlink/p/?LinkID=306443)  
   
- [Esercitazione: Aggiungere un parametro al Report &#40;Generatore Report&#41;](../tutorial-add-a-parameter-to-your-report-report-builder.md)  
+ [Esercitazione: Aggiungere un parametro al report &#40;Generatore report&#41;](../tutorial-add-a-parameter-to-your-report-report-builder.md)  
   
  [Errori imprevisti di per InvalidReportParameterException nel servizio di creazione di report](https://go.microsoft.com/fwlink/p/?LinkId=393118)  
   

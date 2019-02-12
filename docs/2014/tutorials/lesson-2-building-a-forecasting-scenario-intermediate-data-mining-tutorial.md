@@ -1,11 +1,10 @@
 ---
-title: 'Lezione 2: Compilazione di uno Scenario di previsione (esercitazione intermedia di Data Mining) | Microsoft Docs'
+title: 'Lezione 2: Creazione di uno Scenario di previsione (esercitazione intermedia di Data Mining) | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - time series [Analysis Services]
@@ -14,18 +13,18 @@ helpviewer_keywords:
 ms.assetid: 9a988156-c900-4c22-97fa-f6b0c1aea9e2
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 67e4843931587d9c627b229bc221a784237cc5d8
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: ee814dc0891e70dfeccf2b96383d1d7b5c324aa8
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48122601"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56020782"
 ---
-# <a name="lesson-2-building-a-forecasting-scenario-intermediate-data-mining-tutorial"></a>Lezione 2: Compilazione di uno scenario di previsione (Esercitazione intermedia sul data mining)
+# <a name="lesson-2-building-a-forecasting-scenario-intermediate-data-mining-tutorial"></a>Lezione 2: Creazione di uno Scenario di previsione (esercitazione intermedia di Data Mining)
   In qualità di analista delle vendite di [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)], si supponga di aver ricevuto la richiesta di stimare le vendite dei prodotti del prossimo anno. In particolare, viene richiesto di confrontare le previsioni per le diverse regioni e linee di prodotti. È stato inoltre richiesto di determinare se le vendite dei singoli prodotti sono da mettere in relazione al periodo dell'anno.  
   
- Per trovare le informazioni richieste, in questa lezione si riepilogano i dati di vendita mensili dell'azienda e le cifre sulle vendite verranno suddivise in tre regioni: Europa, America del nord e Pacifico.  
+ Per trovare le informazioni richieste, in questa lezione si riepilogano i dati di vendita dell'azienda a livello mensile e si visualizzerà un riepilogo anche dati relativi alle vendite suddivise in tre regioni: Europa, America del Nord e il Pacifico.  
   
  Dopo aver completato le attività di questa lezione, sarà possibile rispondere alle domande seguenti:  
   
@@ -41,10 +40,10 @@ ms.locfileid: "48122601"
   
 -   Nella seconda parte viene illustrata la creazione di un modello Time Series generale, basato su tutte le aree. È possibile usare questo modello generale per *stime incrociate*.  
   
- Per completare le attività in questa lezione, elencate di seguito, si userà il [!INCLUDE[ssSampleDBDWobject](../includes/sssampledbdwobject-md.md)] dell'origine dati creata nel [lezione 1: creazione della soluzione di Data Mining i dati intermedi &#40;esercitazione intermedia sul Data Mining dei dati&#41; ](../../2014/tutorials/lesson-1-create-solution-intermediate-data-mining-tutorial.md).  
+ Per completare le attività in questa lezione, elencate di seguito, si userà il [!INCLUDE[ssSampleDBDWobject](../includes/sssampledbdwobject-md.md)] dell'origine dati creata nel [lezione 1: Creazione della soluzione intermedia di Data Mining &#40;esercitazione intermedia sul Data Mining&#41;](../../2014/tutorials/lesson-1-create-solution-intermediate-data-mining-tutorial.md).  
   
 > [!WARNING]  
->  Le date di [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] database di esempio sono stati aggiornati per questa versione. Se si utilizza una versione precedente di [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)], è possibile compilare il modello seguendo questi passaggi, ma è possibile che vengano visualizzati risultati diversi.  
+>  Le date nel database di esempio [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] sono state aggiornate per questa versione. Se si utilizza una versione precedente di [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)], è possibile compilare il modello seguendo questi passaggi, ma è possibile che vengano visualizzati risultati diversi.  
   
  **Creazione di un modello di stima semplice**  
   
@@ -78,16 +77,16 @@ ms.locfileid: "48122601"
 ## <a name="all-lessons"></a>Tutte le lezioni  
  [Lezione 1: Creazione della soluzione intermedia di Data Mining &#40;esercitazione intermedia sul Data Mining&#41;](../../2014/tutorials/lesson-1-create-solution-intermediate-data-mining-tutorial.md)  
   
- Lezione 2: Scenario di previsione (Esercitazione intermedia sul data mining)  
+ Lezione 2: Previsione Scenario (esercitazione intermedia di Data Mining)  
   
- [Lezione 3: Compilazione di uno Scenario Market Basket &#40;esercitazione intermedia sul Data Mining&#41;](../../2014/tutorials/lesson-3-building-a-market-basket-scenario-intermediate-data-mining-tutorial.md)  
+ [Lezione 3: Creazione di uno Scenario Market Basket &#40;esercitazione intermedia sul Data Mining&#41;](../../2014/tutorials/lesson-3-building-a-market-basket-scenario-intermediate-data-mining-tutorial.md)  
   
  [Lezione 4: Compilazione di una Scenario di Clustering delle sequenze &#40;esercitazione intermedia sul Data Mining&#41;](../../2014/tutorials/lesson-4-build-sequence-clustering-scenario-intermediate-data-mining.md)  
   
  [Lezione 5: Creazione di reti neurali e modelli di regressione logistica &#40;esercitazione intermedia sul Data Mining&#41;](../../2014/tutorials/lesson-5-build-models-intermediate-data-mining-tutorial.md)  
   
 ## <a name="see-also"></a>Vedere anche  
- [Esercitazione di base di Data Mining](../../2014/tutorials/basic-data-mining-tutorial.md)   
+ [Esercitazione di base sul data mining](../../2014/tutorials/basic-data-mining-tutorial.md)   
  [Esercitazione intermedia sul Data Mining &#40;Analysis Services - Data Mining&#41;](../../2014/tutorials/intermediate-data-mining-tutorial-analysis-services-data-mining.md)   
  [Algoritmo Microsoft Time Series](../../2014/analysis-services/data-mining/microsoft-time-series-algorithm.md)  
   

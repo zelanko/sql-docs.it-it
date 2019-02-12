@@ -4,21 +4,20 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 ms.assetid: 5ad8b31c-43b0-4481-a31b-090cbed4a438
-author: craigg-msft
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: c9555f2ec58aefa5f0a3b071b0d4cf7c8ee7ff14
-ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
+author: markingmyname
+ms.author: maghan
+manager: kfile
+ms.openlocfilehash: d4c51002c8c829417c63a0dd6c59a3538604fd81
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51813874"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56025642"
 ---
-# <a name="lesson-3-load-a-report-definition-from-the-report-server"></a>Lezione 3: Caricamento della definizione di un report dal Server report
+# <a name="lesson-3-load-a-report-definition-from-the-report-server"></a>Lezione 3: Caricare una definizione del Report dal Server di Report
   Dopo aver creato il progetto e generato le classi dallo schema RDL, è possibile caricare la definizione di un report dal server di report.  
   
 ### <a name="to-load-a-report-definition"></a>Per caricare la definizione di un report  
@@ -98,7 +97,7 @@ ms.locfileid: "51813874"
     ```  
   
 ## <a name="next-lesson"></a>Lezione successiva  
- Nella lezione successiva si scriverà il codice per l'aggiornamento della definizione del report caricata dal server di report. Visualizzare [lezione 4: aggiornare la definizione del Report a livello di programmazione](../../2014/tutorials/lesson-4-update-the-report-definition-programmatically.md).  
+ Nella lezione successiva si scriverà il codice per l'aggiornamento della definizione del report caricata dal server di report. Vedere [lezione 4: Aggiornare la definizione del Report a livello di programmazione](../../2014/tutorials/lesson-4-update-the-report-definition-programmatically.md).  
   
 ## <a name="see-also"></a>Vedere anche  
  [Aggiornamento dei report mediante le classi generate dallo Schema RDL &#40;esercitazione su SSRS&#41;](../../2014/tutorials/updating-reports-using-classes-generated-from-the-rdl-schema-ssrs-tutorial.md)   

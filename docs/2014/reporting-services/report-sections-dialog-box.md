@@ -9,14 +9,14 @@ ms.technology:
 ms.topic: conceptual
 ms.assetid: 1ff14dfa-d56b-449f-bef1-cc217f3c14b7
 author: maggiesmsft
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: d665b824e48e5400ab341909180302c0101fc357
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.author: maghan
+manager: kfile
+ms.openlocfilehash: eb397f8ab7e953c81d37e354506ef3435fccba2f
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48095251"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56022572"
 ---
 # <a name="report-sections-dialog-box"></a>Finestra di dialogo Sezione del report
   Quando si apre un report, progettazione Report consente di verificare che il report contiene solo una definizione del linguaggio RDL (Report)  **\<sezione >** elemento. L'apertura di un report con più elementi **\<sezione>** non è supportata.  

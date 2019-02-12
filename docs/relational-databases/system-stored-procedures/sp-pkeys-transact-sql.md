@@ -3,7 +3,6 @@ title: sp_pkeys (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
-ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
 ms.technology: system-objects
 ms.topic: language-reference
@@ -19,12 +18,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: da9b788e69decf1c209eec846fbeccc811e70374
-ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
+ms.openlocfilehash: 759d666f725eb6ebad49b3dffe2cd93bf9469eb0
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/18/2018
-ms.locfileid: "53589765"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56022932"
 ---
 # <a name="sppkeys-transact-sql"></a>sp_pkeys (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -47,12 +46,12 @@ sp_pkeys [ @table_name = ] 'name'
  [ @table_name=] '*nome*'  
  È la tabella per cui restituire informazioni. *nome* viene **sysname**, non prevede alcun valore predefinito. I criteri di ricerca con caratteri jolly non sono supportati.  
   
- [ @table_owner=] '*proprietario*'  
+ [ @table_owner= ] '*owner*'  
  Viene indicato il proprietario della tabella specificata. *proprietario* viene **sysname**, con un valore predefinito è NULL. I criteri di ricerca con caratteri jolly non sono supportati. Se *proprietario* non viene specificato, si applicano le regole di visibilità della tabella predefinite del sistema DBMS sottostante.  
   
  In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], se l'utente corrente è il proprietario di una tabella con il nome specificato, vengono restituite le colonne di tale tabella. Se il *proprietario* non viene specificato e l'utente corrente non dispone di una tabella con la proprietà specificata *nome*, viene eseguita la ricerca per una tabella con la proprietà specificata *nome* di proprietà di proprietario del database. Se viene individuata, vengono restituite le colonne di tale tabella.  
   
- [ @table_qualifier=] '*qualificatore*'  
+ [ @table_qualifier= ] '*qualifier*'  
  Qualificatore di tabella. *qualificatore* viene **sysname**, con un valore predefinito è NULL. Vari prodotti DBMS supportano nomi di tabelle in tre parti (_qualificatore_**.** _owner_**.** _nome_). In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] questa colonna rappresenta il nome del database. In alcuni prodotti rappresenta il nome del server dell'ambiente di database della tabella.  
   
 ## <a name="return-code-values"></a>Valori restituiti  

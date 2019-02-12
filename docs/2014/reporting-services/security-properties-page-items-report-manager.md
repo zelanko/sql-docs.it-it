@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 351b8503-354f-4b1b-a7ac-f1245d978da0
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 87bdd8c30468f18a30de5bcb3ee122469ac3958c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 9b38c5820a1680726b3c69d2e09c1d29600a71b4
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48189611"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56024472"
 ---
 # <a name="security-properties-page-items-report-manager"></a>Pagina delle proprietà sicurezza, Elementi (Gestione report)
   Utilizzare la pagina delle proprietà sicurezza per visualizzare o modificare le impostazioni di sicurezza che regolano l'accesso a cartelle, report, modelli, risorse e origini dei dati condivise. Questa pagina è disponibile per gli elementi per i quali l'utente è autorizzato a definire le impostazioni di sicurezza.  
@@ -51,7 +51,7 @@ ms.locfileid: "48189611"
  Selezionare la casella di controllo accanto al nome del gruppo o dell'utente che si desidera eliminare e fare clic su **Elimina**. Non è possibile eliminare l'ultima assegnazione di ruolo rimasta o un'assegnazione di ruolo predefinita, ad esempio "BUILTIN\Administrators", che rappresenta la base di riferimento per la sicurezza del server di report. L'eliminazione di un'assegnazione di ruolo non comporta l'eliminazione di account utente, account di gruppo o definizioni di ruolo.  
   
  **Nuova assegnazione ruolo**  
- Fare clic per visualizzare la pagina Nuova assegnazione ruolo nella quale è possibile creare assegnazioni di ruolo aggiuntive per l'elemento corrente. Per altre informazioni, vedere [nuova assegnazione ruolo: modifica pagina Assegnazioni ruolo &#40;gestione Report&#41;](../../2014/reporting-services/new-role-assignment-edit-role-assignment-page-report-manager.md).  
+ Fare clic per visualizzare la pagina Nuova assegnazione ruolo nella quale è possibile creare assegnazioni di ruolo aggiuntive per l'elemento corrente. Per altre informazioni, vedere [nuova assegnazione ruolo: Modifica assegnazione ruolo &#40;gestione Report&#41;](../../2014/reporting-services/new-role-assignment-edit-role-assignment-page-report-manager.md).  
   
  **Ripristina sicurezza padre**  
  Fare clic per impostare le stesse impostazioni di sicurezza della cartella padre del livello immediatamente superiore. Se il meccanismo di ereditarietà non è mai interrotto in tutta la gerarchia di cartelle del server di report, verranno utilizzate le impostazioni di sicurezza della cartella principale, ovvero Home.  
@@ -64,7 +64,7 @@ ms.locfileid: "48189611"
   
 ## <a name="see-also"></a>Vedere anche  
  [Guida F1 di gestione report](../../2014/reporting-services/report-manager-f1-help.md)   
- [Ruoli predefiniti](security/role-definitions-predefined-roles.md)   
+ [Predefined Roles](security/role-definitions-predefined-roles.md)   
  [Concessione di autorizzazioni in un server di report in modalità nativa](security/granting-permissions-on-a-native-mode-report-server.md)   
  [Assegnazioni di ruolo](security/role-assignments.md)   
  [Definizioni di ruolo](security/role-definitions.md)  

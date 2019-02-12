@@ -13,13 +13,13 @@ f1_keywords:
 ms.assetid: dc3c365b-c263-402a-bf6f-c2a7081db073
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: 34337c9418151e873726e5b04fd62e41f18c004c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 8578b33bb47a6bcf8c38ae091c4e959085c30b06
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48100325"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56020730"
 ---
 # <a name="specify-a-chart-area-for-a-series-report-builder-and-ssrs"></a>Specificare un'area del grafico per una serie (Generatore report e SSRS)
   Il grafico è il contenitore di livello superiore che include il bordo esterno, il titolo del grafico e la legenda. Per impostazione predefinita, il grafico contiene una sola area predefinita. L'area del grafico non è visibile sulla superficie del grafico, ma è possibile considerarla come un contenitore che include solo le etichette e il titolo degli assi, nonché l'area tracciato di una o più serie. Nell'illustrazione seguente viene mostrato il concetto di aree del grafico all'interno di un singolo grafico.  
@@ -44,11 +44,11 @@ ms.locfileid: "48100325"
 4.  (Facoltativo) Allineare le aree del grafico in senso verticale. A questo scopo, fare clic con il pulsante destro del mouse sul grafico e scegliere **Proprietà area grafico**. In **Allineamento**selezionare un'altra area del grafico con la quale si desidera allineare l'area del grafico selezionata.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Più serie in un grafico &#40;Report e SSRS&#41;](multiple-series-on-a-chart-report-builder-and-ssrs.md)   
- [Formattazione dei punti dati in un grafico &#40;Report e SSRS&#41;](formatting-data-points-on-a-chart-report-builder-and-ssrs.md)   
+ [Più serie in un grafico &#40;Generatore report e SSRS&#41;](multiple-series-on-a-chart-report-builder-and-ssrs.md)   
+ [Formattazione dei punti dati di un grafico &#40;Generatore report e SSRS&#41;](formatting-data-points-on-a-chart-report-builder-and-ssrs.md)   
  [Definire i colori in un grafico mediante la tavolozza &#40;Generatore report e SSRS&#41;](define-colors-on-a-chart-using-a-palette-report-builder-and-ssrs.md)   
  [Grafici polari &#40;Generatore report e SSRS&#41;](charts-report-builder-and-ssrs.md)   
  [Grafici con forme &#40;Generatore report e SSRS&#41;](shape-charts-report-builder-and-ssrs.md)   
- [I grafici a torta &#40;Report e SSRS&#41;](pie-charts-report-builder-and-ssrs.md)  
+ [Grafici a torta &#40;Generatore report e SSRS&#41;](pie-charts-report-builder-and-ssrs.md)  
   
   

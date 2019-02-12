@@ -2,8 +2,8 @@
 title: Sys.pdw_nodes_pdw_physical_databases (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/09/2017
-ms.prod: ''
-ms.prod_service: sql-data-warehouse, pdw
+ms.prod: sql
+ms.technology: data-warehouse
 ms.reviewer: ''
 ms.topic: language-reference
 dev_langs:
@@ -13,19 +13,19 @@ author: ronortloff
 ms.author: rortloff
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: ceb8690acf691908c789cca280ecea1e9158ab97
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 7ffa7e044b5771bcf1181ee3aa0e22dfbdd8e555
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47685199"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56020632"
 ---
 # <a name="syspdwnodespdwphysicaldatabases-transact-sql"></a>sys.pdw_nodes_pdw_physical_databases (Transact-SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
 
   Contiene una riga per ogni database fisico in un nodo di calcolo. Informazioni di aggregazione fisica del database per ottenere informazioni dettagliate sui database. Per combinare le informazioni, aggiungere il `sys.pdw_nodes_pdw_physical_databases` per il `sys.pdw_database_mappings` e `sys.databases` tabelle.  
   
-|Nome colonna|Tipo di dati|Description|  
+|Nome colonna|Tipo di dati|Descrizione|  
 |-----------------|---------------|-----------------|  
 |database_id|**int**|L'ID di oggetto per il database. Si noti che questo valore non è uguale a un database_id nel [Sys. Databases &#40;Transact-SQL&#41; ](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) visualizzazione.|  
 |physical_name|**sysname**|Il nome fisico per il database nei nodi di calcolo/Shell. Questo valore è uguale a un valore nella colonna physical_name il [sys.pdw_database_mappings &#40;Transact-SQL&#41; ](../../relational-databases/system-catalog-views/sys-pdw-database-mappings-transact-sql.md) visualizzazione.|  
@@ -47,7 +47,7 @@ JOIN sys.pdw_nodes_pdw_physical_databases AS PD
 ORDER BY D.database_id, PD.pdw_node_ID;  
 ```  
   
-### <a name="b-using-syspdwnodespdwphysicaldatabases-to-gather-detailed-object-information"></a>B. Per raccogliere le informazioni sull'oggetto dettagliate utilizza sys.pdw_nodes_pdw_physical_databases  
+### <a name="b-using-syspdwnodespdwphysicaldatabases-to-gather-detailed-object-information"></a>b. Per raccogliere le informazioni sull'oggetto dettagliate utilizza sys.pdw_nodes_pdw_physical_databases  
  La query seguente mostra le informazioni sugli indici e include informazioni utili relative al database, gli oggetti appartengono a oggetti nel database.  
   
 ```  

@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: c200a97b-67f2-499f-8374-3ed1ebe3f33c
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: fc01da68aeaa393631aca6146a41e6eb88ecb14e
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+manager: kfile
+ms.openlocfilehash: 6b65d798c2de3cfe4b1fd14f50ea0dbb68bd624a
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53376633"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56026512"
 ---
 # <a name="create-a-document-map-report-builder-and-ssrs"></a>Creare una mappa documento (Generatore report e SSRS)
   Una mappa documento offre un set di collegamenti a elementi di report in un report visualizzabile. Quando si visualizza un report che include una mappa documento, accanto al report viene visualizzato un riquadro distinto. Gli utenti possono fare clic sui collegamenti della mappa documento per passare alla pagina del report in cui viene visualizzato l'elemento specifico. Le sezioni del report e i gruppi sono disposti in una gerarchia di collegamenti. Se si fa clic sugli elementi nella mappa documento, il report viene aggiornato e viene visualizzata l'area del report corrispondente all'elemento nella mappa documento.  

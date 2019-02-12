@@ -3,8 +3,6 @@ title: I tipi di dati parametro | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
-ms.prod_service: connectivity
-ms.reviewer: ''
 ms.technology: connectivity
 ms.topic: conceptual
 helpviewer_keywords:
@@ -15,13 +13,14 @@ helpviewer_keywords:
 ms.assetid: fd7e99d8-d26a-408c-9733-6ffccde99f75
 author: MightyPen
 ms.author: genemi
+ms.reviewer: ''
 manager: craigg
-ms.openlocfilehash: e6c2a73aec119b7572cad93dedb2994235329cb2
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e1f1097927f61355cf4a50f4287397d823fd3177
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47826030"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56020114"
 ---
 # <a name="parameter-data-types"></a>Tipi di dati parametro
 Anche se ogni parametro specificato con **SQLBindParameter** è definiti utilizzando un tipo di dati SQL, i parametri in un'istruzione SQL non contengono intrinsechi dati digitare. Di conseguenza, i marcatori di parametro possono essere incluso in un'istruzione SQL solo se i tipi di dati possono essere dedotto da un altro operando nell'istruzione. Ad esempio, in un'espressione aritmetica, ad esempio? + COLUMN1, il tipo di dati del parametro può essere dedotto dal tipo di dati della colonna denominata rappresentato da COLUMN1. Un'applicazione non è possibile utilizzare un marcatore di parametro se non è possibile determinare il tipo di dati.  

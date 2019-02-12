@@ -2,8 +2,8 @@
 title: sys.dm_pdw_dms_workers (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/07/2017
-ms.prod: ''
-ms.prod_service: sql-data-warehouse, pdw
+ms.prod: sql
+ms.technology: data-warehouse
 ms.reviewer: ''
 ms.topic: language-reference
 dev_langs:
@@ -13,19 +13,19 @@ author: ronortloff
 ms.author: rortloff
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 5ddc8e7ee7f160d6673e9a698075e923740041b8
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 756943d49a794781d9422071dd5e233ce4e37806
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51663020"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56027362"
 ---
 # <a name="sysdmpdwdmsworkers-transact-sql"></a>sys.dm_pdw_dms_workers (Transact-SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
 
   Contiene informazioni su tutti i ruoli di lavoro completato i passaggi di migrazione del database.  
   
-|Nome colonna|Tipo di dati|Description|Intervallo|  
+|Nome colonna|Tipo di dati|Descrizione|Intervallo|  
 |-----------------|---------------|-----------------|-----------|  
 |request_id|**nvarchar(32)**|Query che fanno parte di questo ruolo di lavoro del servizio migrazione del database.<br /><br /> request_id step_index e dms_step_index formano la chiave per questa visualizzazione.|Vedere in request_id [DM pdw_exec_requests &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-exec-requests-transact-sql.md).|  
 |step_index|**int**|Questo ruolo di lavoro DMS fa parte del passaggio di query.<br /><br /> request_id step_index e dms_step_index formano la chiave per questa visualizzazione.|Vedere in step_index [DM pdw_request_steps &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-request-steps-transact-sql.md).|  

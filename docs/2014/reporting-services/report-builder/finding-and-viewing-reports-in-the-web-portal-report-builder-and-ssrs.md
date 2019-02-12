@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 8556807e-f2e2-4a7b-bb1b-ac5ea1872e51
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 5ceabe8f88101209257724d3e3e2b011c49cffc6
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+manager: kfile
+ms.openlocfilehash: f3edcd0860fab4bc91bfa0a63e2a7ae3a61b10b4
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52532368"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56020617"
 ---
 # <a name="finding-and-viewing-reports-in-report-manager-report-builder-and-ssrs"></a>Ricerca e visualizzazione di report in Gestione report (Generatore report e SSRS)
   Gestione report è uno strumento basato sul Web in cui sono disponibili funzionalità per la visualizzazione e la gestione dei report. Fa parte di un'installazione del server di report. Per aprire Gestione report, digitare l'URL relativo in una finestra del browser. Per informazioni sui requisiti del browser, vedere [Planning for Reporting Services e supporto Browser per Power View &#40;Reporting Services 2014&#41;](../browser-support-for-reporting-services-and-power-view.md). Per ulteriori informazioni sulla configurazione di un URL di Gestione report nel server di report, rivolgersi all'amministratore di sistema. Per altre informazioni, vedere [Configurare Gestione report &#40;modalità nativa&#41;](../report-server/configure-web-portal.md).  

@@ -35,13 +35,13 @@ f1_keywords:
 ms.assetid: 9dcf3fc8-bf9c-4a14-a03d-e78254aa4098
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: cf80cbb87916ccf6887f3d6508126c5770d7666c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 24b1fbcacee78de2448100d9b46f79b412140a66
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48220851"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56017803"
 ---
 # <a name="tables-matrices-and-lists-report-builder-and-ssrs"></a>Tabelle, matrici ed elenchi (Generatore report e SSRS)
   Tabelle, matrici ed elenchi sono aree dati in cui i dati del report vengono visualizzati in celle suddivise in righe e colonne. Nelle celle sono contenuti in genere dati di testo, ad esempio testo, date e numeri ma possono essere contenuti anche misuratori, grafici o elementi del report come le immagini. Tabelle, matrici ed elenchi frequentemente sono definiti collettivamente aree dati Tablix.  
@@ -56,7 +56,7 @@ ms.locfileid: "48220851"
   
  ![RS_TableMatrixList](../media/rs-tablematrixlist.gif "RS_TableMatrixList")  
   
- Per una rapida introduzione a tabelle, matrici ed elenchi, vedere [Esercitazione: creazione di un report tabella semplice &#40;Generatore report&#41;](../tutorial-creating-a-basic-table-report-report-builder.md), [Esercitazione: creazione di un report matrice &#40;Generatore report&#41;](../tutorial-creating-a-matrix-report-report-builder.md), e [Esercitazione: creazione di un report in formato libero &#40;Generatore report&#41;](../tutorial-creating-a-free-form-report-report-builder.md).  
+ Per iniziare rapidamente con le tabelle, matrici ed elenchi, vedere [esercitazione: Creazione di un Report tabella semplice &#40;Generatore Report&#41;](../tutorial-creating-a-basic-table-report-report-builder.md), [esercitazione: Creazione di un Report matrice &#40;Generatore Report&#41;](../tutorial-creating-a-matrix-report-report-builder.md), e [esercitazione: Creazione di un Report in formato libero &#40;Generatore Report&#41;](../tutorial-creating-a-free-form-report-report-builder.md).  
   
 > [!NOTE]  
 >  È possibile pubblicare tabelle matrici ed elenchi separatamente da un report come parte del report. [!INCLUDE[ssRBrptparts](../../includes/ssrbrptparts-md.md)]  
@@ -82,7 +82,7 @@ ms.locfileid: "48220851"
   
  ![Nuova matrice aggiunta dalla casella degli strumenti selezionata](../media/rs-matrixtemplatenewselected.gif "Nuova matrice aggiunta dalla casella degli strumenti selezionata")  
   
- È possibile raggruppare i dati per più campi o espressioni in gruppi di righe e di colonne. In fase di esecuzione, quando si combinano i dati del report e le aree dati, le dimensioni di una matrice aumentano orizzontalmente e verticalmente nella pagina quando si aggiungono colonne per i gruppi di colonne e righe per i gruppi di righe. I valori contenuti nelle celle della matrice rappresentano valori aggregati che hanno come ambito l'intersezione dei gruppi di righe e di colonne ai quali appartiene la cella. Ad esempio, se la matrice dispone di un gruppo di righe (Category) e di due gruppi di colonne (Territory e Year) che consentono di visualizzare la somma di vendite, nel report vengono visualizzate due celle con somme di vendite per ogni valore nel gruppo Category. L'ambito delle celle sono le due intersezioni: Category e Territory e Category e Year. La matrice può includere gruppi nidificati e adiacenti. I gruppi nidificati presentano una relazione padre-figlio mentre i gruppi adiacenti una relazione di tipo peer. È possibile aggiungere subtotali per alcuni o tutti i livelli di gruppi di righe e colonne nidificati all'interno della matrice.  
+ È possibile raggruppare i dati per più campi o espressioni in gruppi di righe e di colonne. In fase di esecuzione, quando si combinano i dati del report e le aree dati, le dimensioni di una matrice aumentano orizzontalmente e verticalmente nella pagina quando si aggiungono colonne per i gruppi di colonne e righe per i gruppi di righe. I valori contenuti nelle celle della matrice rappresentano valori aggregati che hanno come ambito l'intersezione dei gruppi di righe e di colonne ai quali appartiene la cella. Ad esempio, se la matrice dispone di un gruppo di righe (Category) e di due gruppi di colonne (Territory e Year) che consentono di visualizzare la somma di vendite, nel report vengono visualizzate due celle con somme di vendite per ogni valore nel gruppo Category. L'ambito delle celle sono le due intersezioni: Categoria e Territory e alla categoria e anno. La matrice può includere gruppi nidificati e adiacenti. I gruppi nidificati presentano una relazione padre-figlio mentre i gruppi adiacenti una relazione di tipo peer. È possibile aggiungere subtotali per alcuni o tutti i livelli di gruppi di righe e colonne nidificati all'interno della matrice.  
   
  Per migliorare la lettura dei dati della matrice ed evidenziare i dati desiderati, è possibile unire celle o dividere orizzontalmente e verticalmente e applicare la formattazione ai dati e alle intestazioni di gruppo.  
   
@@ -131,51 +131,51 @@ ms.locfileid: "48220851"
 ##  <a name="HowTo"></a> Procedure  
  In questa sezione vengono elencate le procedure in cui viene illustrato dettagliatamente come usare tabelle, matrici ed elenchi nei report; come visualizzare i dati in righe e colonne, aggiungere ed eliminare colonne, unire celle e includere subtotali per i gruppi di righe e di colonne.  
   
--   [Aggiungere un gruppo di dettagli &#40;Report e SSRS&#41;](add-a-details-group-report-builder-and-ssrs.md)  
+-   [Aggiungere un gruppo dettagli &#40;Generatore report e SSRS&#41;](add-a-details-group-report-builder-and-ssrs.md)  
   
--   [Aggiungere un totale a un gruppo o area dati Tablix &#40;Report e SSRS&#41;](add-a-total-to-a-group-or-tablix-data-region-report-builder-and-ssrs.md)  
+-   [Aggiungere un totale a un gruppo o a un'area dati Tablix &#40;Generatore report e SSRS&#41;](add-a-total-to-a-group-or-tablix-data-region-report-builder-and-ssrs.md)  
   
--   [Modifica di un elemento all'interno di una cella &#40;Report e SSRS&#41;](change-an-item-within-a-cell-report-builder-and-ssrs.md)  
+-   [Modificare un elemento in una cella &#40;Generatore report e SSRS&#41;](change-an-item-within-a-cell-report-builder-and-ssrs.md)  
   
--   [Modificare l'altezza di riga o la larghezza di colonna &#40;Report e SSRS&#41;](change-row-height-or-column-width-report-builder-and-ssrs.md)  
+-   [Modificare l'altezza di riga o la larghezza di colonna &#40;Generatore report e SSRS&#41;](change-row-height-or-column-width-report-builder-and-ssrs.md)  
   
--   [Inserire o eliminare una colonna &#40;Report e SSRS&#41;](insert-or-delete-a-column-report-builder-and-ssrs.md)  
+-   [Inserire o eliminare una colonna &#40;Generatore report e SSRS&#41;](insert-or-delete-a-column-report-builder-and-ssrs.md)  
   
--   [Inserire o eliminare una riga &#40;Report e SSRS&#41;](insert-or-delete-a-row-report-builder-and-ssrs.md)  
+-   [Inserire o eliminare una riga &#40;Generatore report e SSRS&#41;](insert-or-delete-a-row-report-builder-and-ssrs.md)  
   
--   [Unione di celle in un'area dati &#40;Report e SSRS&#41;](merge-cells-in-a-data-region-report-builder-and-ssrs.md)  
+-   [Unire le celle in un'area dati &#40;Generatore report e SSRS&#41;](merge-cells-in-a-data-region-report-builder-and-ssrs.md)  
   
--   [Creare un gruppo di gerarchie ricorsive &#40;Report e SSRS&#41;](create-a-recursive-hierarchy-group-report-builder-and-ssrs.md)  
+-   [Creare un gruppo di gerarchie ricorsive &#40;Generatore report e SSRS&#41;](create-a-recursive-hierarchy-group-report-builder-and-ssrs.md)  
   
--   [Aggiungere o eliminare un gruppo in un'area dati &#40;Report e SSRS&#41;](add-or-delete-a-group-in-a-data-region-report-builder-and-ssrs.md)  
+-   [Aggiunta o eliminazione di un gruppo in un'area dati &#40;Generatore report e SSRS&#41;](add-or-delete-a-group-in-a-data-region-report-builder-and-ssrs.md)  
   
--   [Visualizzare intestazioni e piè di pagina con un gruppo di &#40;Report e SSRS&#41;](display-headers-and-footers-with-a-group-report-builder-and-ssrs.md)  
+-   [Visualizzare intestazioni e piè di pagina con un gruppo &#40;Generatore report e SSRS&#41;](display-headers-and-footers-with-a-group-report-builder-and-ssrs.md)  
   
--   [Creare un Report con rientri &#40;Report e SSRS&#41;](create-a-stepped-report-report-builder-and-ssrs.md)  
+-   [Creazione di un report con rientri &#40;Generatore report e SSRS&#41;](create-a-stepped-report-report-builder-and-ssrs.md)  
   
--   [Aggiungere, spostare o eliminare una tabella, matrice o elenco &#40;Report e SSRS&#41;](add-move-or-delete-a-table-matrix-or-list-report-builder-and-ssrs.md)  
+-   [Aggiunta, spostamento o eliminazione di una tabella, una matrice o un elenco &#40;Generatore report e SSRS&#41;](add-move-or-delete-a-table-matrix-or-list-report-builder-and-ssrs.md)  
   
 
   
 ##  <a name="InThisSection"></a> Contenuto della sezione  
  Negli argomenti seguenti sono disponibili ulteriori informazioni sull'utilizzo dell'area dati Tablix.  
   
- [Un'area dati Tablix &#40;Report e SSRS&#41;](../tablix-data-region-report-builder-and-ssrs.md)  
+ [Area dati Tablix &#40;Generatore report e SSRS&#41;](../tablix-data-region-report-builder-and-ssrs.md)  
  Vengono illustrati i concetti chiave correlati all'area dati Tablix, ad esempio le aree della Tablix, i dati di dettaglio e raggruppati, i gruppi di colonne e di righe, e le righe e colonne statiche e dinamiche.  
   
- [Aggiunta di dati a un'area dati Tablix &#40;Report e SSRS&#41;](adding-data-to-a-tablix-data-region-report-builder-and-ssrs.md)  
+ [Aggiunta di dati a un'area dati Tablix &#40;Generatore report e SSRS&#41;](adding-data-to-a-tablix-data-region-report-builder-and-ssrs.md)  
  Vengono fornite informazioni dettagliate sull'aggiunta dei dati di dettaglio e raggruppati, dei subtotali e totali e delle etichette a un'area dati Tablix.  
   
- [Controllare la visualizzazione dell'area dati Tablix in una pagina del Report &#40;Report e SSRS&#41;](controlling-the-tablix-data-region-display-on-a-report-page.md)  
+ [Controllo della visualizzazione dell'area dati Tablix in una pagina del report &#40;Generatore report e SSRS&#41;](controlling-the-tablix-data-region-display-on-a-report-page.md)  
  Vengono descritte le proprietà di un'area dati Tablix che è possibile modificare per cambiarne l'aspetto quando viene visualizzata in un report.  
   
- [Controllo delle intestazioni di colonna e riga &#40;Report e SSRS&#41;](controlling-row-and-column-headings-report-builder-and-ssrs.md)  
+ [Controllo delle intestazioni di riga e di colonna &#40;Generatore report e SSRS&#41;](controlling-row-and-column-headings-report-builder-and-ssrs.md)  
  Viene descritto come controllare le intestazioni di riga e di colonna quando le analisi di un'area dati di tabella, matrice o elenco si estendono orizzontalmente o verticalmente in più pagine.  
   
- [Creazione di gruppi di gerarchie ricorsive &#40;Report e SSRS&#41;](creating-recursive-hierarchy-groups-report-builder-and-ssrs.md)  
+ [Creazione di gruppi di gerarchie ricorsive &#40;Generatore report e SSRS&#41;](creating-recursive-hierarchy-groups-report-builder-and-ssrs.md)  
  Viene descritto come visualizzare i dati ricorsivi dove la relazione tra padre e figlio viene rappresentata dai campi nel set di dati.  
   
- [Informazioni sui gruppi &#40;Report e SSRS&#41;](understanding-groups-report-builder-and-ssrs.md)  
+ [Informazioni sui gruppi &#40;Generatore report e SSRS&#41;](understanding-groups-report-builder-and-ssrs.md)  
  Vengono illustrati i gruppi e quando vengono usati; vengono inoltre descritti i gruppi disponibili per le differenti aree dati Tablix.  
   
 

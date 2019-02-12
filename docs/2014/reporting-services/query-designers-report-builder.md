@@ -11,21 +11,21 @@ helpviewer_keywords:
 - query designers
 ms.assetid: 553f0d4e-8b1d-4148-9321-8b41a1e8e1b9
 author: maggiesmsft
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: a13f04338eb780a8d5efa839a5570ea0c5737752
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.author: maghan
+manager: kfile
+ms.openlocfilehash: 5d8ce7b33fe281b32b1fc7758d1f7340884e492f
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48155971"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56020622"
 ---
 # <a name="query-designers-report-builder"></a>Finestre di progettazione query (Generatore report)
   In Generatore report sono incluse finestre Progettazione query con interfaccia grafica e basate su testo che consentono di compilare query per il report. A ciascun tipo di origine dati è associata una progettazione query. Alcune origini dati supportano finestre di progettazione che consentono di compilare in modo interattivo una query. Altre origini dati utilizzano una finestra Progettazione query basata su testo. Un'origine dati SQL Server supporta entrambi i tipi di progettazione, con interfaccia grafica e basata su testo.  
   
  Negli argomenti seguenti viene descritta l'interfaccia utente di ogni finestra Progettazione query.  
   
-## <a name="in-this-section"></a>Argomenti della sezione  
+## <a name="in-this-section"></a>In questa sezione  
   
 -   [Interfaccia utente della finestra di progettazione Query MDX di Analysis Services &#40;Generatore Report&#41;](../../2014/reporting-services/analysis-services-mdx-query-designer-user-interface-report-builder.md)  
   

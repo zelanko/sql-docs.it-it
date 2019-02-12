@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: 086d6546-7299-41bc-bca9-083a15a53679
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 1cfb1dcfb635bbd7c70babcbd5a157c919c36892
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 46873ce2a5a8ad006fafb2c0311e895c6305cd6a
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48110041"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56017963"
 ---
 # <a name="customize-the-report-viewer-web-part"></a>Personalizzare la web part Visualizzatore report
   È possibile utilizzare la web part Visualizzatore report per visualizzare report eseguiti in un server di report configurato per l'integrazione con SharePoint. I report che è possibile visualizzare includo file di definizione dei report, con estensione rdl, e report di Generatore report. I report vengono automaticamente aperti nella web part Visualizzatore report in una nuova pagina, tuttavia è possibile aggiungere la web part Visualizzatore report a una pagina Web o a un sito esistente se si desidera che il report risulti sempre visibile all'interno della pagina.  
@@ -59,10 +59,10 @@ ms.locfileid: "48110041"
   
  Le proprietà personalizzate della web part Visualizzatore report sono elencate di seguito.  
   
-|Proprietà|Description|  
+|Proprietà|Descrizione|  
 |--------------|-----------------|  
 |Report|Percorso completo di un report presente nel sito di SharePoint corrente oppure in un sito disponibile nella stessa farm o applicazione Web. Se si desidera impostare proprietà aggiuntive, per ottenere risultati ottimali fare clic su Applica dopo avere specificato l'URL del report.|  
-|Destinazione collegamento ipertestuale|Codice HTML standard che specifica il frame di destinazione per la visualizzazione dei contenuti collegati nel documento corrente. Per i report che includono collegamenti ipertestuali a siti Web esterni, è possibile specificare se un documento di destinazione sostituisce il report esistente nella finestra corrente oppure viene aperto in una nuova finestra del browser. I valori validi includono `_Top`, `_Blank`, e `_Self`. `_Top` utilizza la finestra corrente, `_Blank` carica il documento in una nuova finestra del browser e `_Self` apre il documento nel frame corrente. Anche se nel linguaggio HTML `_Parent` è un valore valido per l'attributo Target, non utilizzare tale valore per una web part Visualizzatore report incorporata in una pagina.|  
+|Destinazione collegamento ipertestuale|Codice HTML standard che specifica il frame di destinazione per la visualizzazione dei contenuti collegati nel documento corrente. Per i report che includono collegamenti ipertestuali a siti Web esterni, è possibile specificare se un documento di destinazione sostituisce il report esistente nella finestra corrente oppure viene aperto in una nuova finestra del browser. I valori validi includono `_Top`, `_Blank` e `_Self`. `_Top` utilizza la finestra corrente, `_Blank` carica il documento in una nuova finestra del browser e `_Self` apre il documento nel frame corrente. Anche se nel linguaggio HTML `_Parent` è un valore valido per l'attributo Target, non utilizzare tale valore per una web part Visualizzatore report incorporata in una pagina.|  
 |Titolo web part generato automaticamente|Titolo generato che include il nome della web part Visualizzatore report seguito dal nome del report, separati da un trattino. Se il report non ha titolo, verrà utilizzato il nome di file del report. Tale titolo è visibile quando si aggiunge una web part a una pagina. Se questa casella di controllo è selezionata, il titolo verrà generato a ogni aggiornamento della pagina.|  
 |Collegamento Dettagli per il titolo della web part generato automaticamente|Collegamento ipertestuale generato automaticamente e visualizzato sopra la web part. È possibile fare clic sul collegamento per aprire il report in una nuova pagina, in modalità Pagina intera.|  
 |Mostra voce di menu Generatore report|Visualizza o nasconde l'opzione del menu **Azioni** che consente di aprire Generatore report.|  
@@ -76,9 +76,9 @@ ms.locfileid: "48110041"
 |Mostra controllo zoom|Visualizza o nasconde il controllo zoom sulla barra degli strumenti.|  
 |Mostra pulsante feed ATOM|Visualizza o nasconde il pulsante del feed ATOM sulla barra degli strumenti.<br /><br /> ![htmlviewer_datafeed](media/htmlviewer-datafeed.gif "htmlviewer_datafeed")|  
 |Posizione barra degli strumenti|Determina la posizione della barra degli strumenti all'interno del visualizzatore di report. I valori validi includono `Top` e `Bottom`.|  
-|Area dei messaggi di richiesta|I valori validi includono `Displayed`, `Collapsed`, e `Hidden`. `Displayed` Consente di visualizzare l'area dei parametri per i report che includono valori con parametri e richiedono l'input dell'utente prima dell'esecuzione. Usare `Hidden` se tutti i parametri del report sono specificati e non si desidera l'area dei parametri siano visibili agli utenti.|  
+|Area dei messaggi di richiesta|I valori validi includono `Displayed`, `Collapsed` e `Hidden`. `Displayed` consente di visualizzare l'area Parametri per i report che includono valori con parametri e richiedono l'input dell'utente prima dell'esecuzione. Utilizzare `Hidden` se tutti i parametri del report sono specificati e non si desidera visualizzare l'area relativa.|  
 |Larghezza area parametri|È possibile specificare l'unità di misura e il valore. Il valore predefinito è 200 pixel. L'unico requisito per questa proprietà è che il valore sia maggiore di zero.|  
-|Mappa documento|Controllo per la navigazione del report che viene definito nel report e consente di accedere con un clic a sezioni specifiche del report. È disponibile nei report HTML. La mappa documento è visualizzata in un'area comprimibile accanto all'area di visualizzazione del report. I valori validi includono `Displayed`, `Collapsed`, e `Hidden`. Se per un determinato report è definita una mappa documento, quest'area verrà espansa per impostazione predefinita, a meno che non sia contrassegnata come nascosta o compressa nelle proprietà della web part. Se la mappa documento è compressa, sarà possibile fare clic sulla freccia per espanderla.|  
+|Mappa documento|Controllo per la navigazione del report che viene definito nel report e consente di accedere con un clic a sezioni specifiche del report. È disponibile nei report HTML. La mappa documento è visualizzata in un'area comprimibile accanto all'area di visualizzazione del report. I valori validi includono `Displayed`, `Collapsed` e `Hidden`. Se per un determinato report è definita una mappa documento, quest'area verrà espansa per impostazione predefinita, a meno che non sia contrassegnata come nascosta o compressa nelle proprietà della web part. Se la mappa documento è compressa, sarà possibile fare clic sulla freccia per espanderla.|  
 |Larghezza area mappa documento|È possibile specificare l'unità di misura e il valore. Il valore predefinito è 200 pixel. L'unico requisito per questa proprietà è che il valore sia maggiore di zero.|  
 |Carica parametri|Consente di recuperare le proprietà dei parametri per il report. Non tutti i report utilizzano parametri. Se il report non dispone di parametri, non verrà restituito alcun valore. Mentre si impostano le proprietà per un report appena caricato, è possibile che venga visualizzato un errore per segnalare che la connessione all'origine dei dati è stata eliminata. In questo caso, reimpostare la connessione e quindi completare l'impostazione delle proprietà dei parametri, dopo aver specificato la connessione. Per altre informazioni sull'impostazione della connessione, vedere [Creare e gestire origini dati condivise &#40;Reporting Services in modalità integrata SharePoint&#41;](../../2014/reporting-services/create-manage-shared-data-sources-reporting-services-sharepoint-integrated-mode.md).<br /><br /> Per ottenere risultati ottimali, fare clic su **Applica** prima di fare clic su Carica parametri.<br /><br /> Dopo il caricamento delle proprietà dei parametri, è possibile impostarle come avviene normalmente nella pagina delle proprietà dei parametri del report. Per altre informazioni sull'impostazione dei parametri, vedere [Impostare i parametri per un report pubblicato &#40;Reporting Services in modalità integrata SharePoint&#41;](report-design/set-parameters-on-a-published-report-sharepoint-integrated-mode.md).|  
   
@@ -93,7 +93,7 @@ ms.locfileid: "48110041"
  L'area Parametri contiene alcuni campi in cui è possibile immettere valori prima dell'esecuzione del report e viene utilizzata solo se la definizione del report include parametri. Se è visualizzata l'area Parametri o l'area Credenziali, le dimensioni dell'area di visualizzazione del report verranno modificate in modo da utilizzare la parte rimanente della web part. È possibile personalizzare la larghezza dell'area Parametri impostando le proprietà della web part. È inoltre possibile specificare le etichette da visualizzare accanto ai singoli parametri della pagina. Per altre informazioni sulla modifica dei parametri, vedere [Impostare i parametri per un report pubblicato &#40;Reporting Services in modalità integrata SharePoint&#41;](report-design/set-parameters-on-a-published-report-sharepoint-integrated-mode.md).  
   
 ## <a name="see-also"></a>Vedere anche  
- [Web Part Visualizzatore report in un sito di SharePoint](../../2014/reporting-services/report-viewer-web-part-on-a-sharepoint-site.md)   
- [Aggiungere la Web Part Visualizzatore Report a una pagina Web &#40;Reporting Services in SharePoint la modalità integrata&#41;](report-server-sharepoint/add-reporting-services-content-types-to-a-sharepoint-library.md)  
+ [Web part Visualizzatore report in un sito di SharePoint](../../2014/reporting-services/report-viewer-web-part-on-a-sharepoint-site.md)   
+ [Aggiungere la Web part Visualizzatore report a una pagina Web &#40;Reporting Services in modalità integrata SharePoint&#41;](report-server-sharepoint/add-reporting-services-content-types-to-a-sharepoint-library.md)  
   
   

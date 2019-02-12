@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 4f3b2c7d-3669-457f-899b-b758d1db3426
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: daaae13c2bda044a304fbe9c8b8602174b05a679
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 33710b2ee804f299d5769c5e2443bdd68ce77be2
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48057647"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56020373"
 ---
 # <a name="rendering-data-regions-report-builder-and-ssrs"></a>Rendering delle aree dati (Generatore report e SSRS)
   Oltre ai comportamenti di rendering generali che si applicano a tutti gli elementi del report, le aree dati prevedono comportamenti aggiuntivi di paginazione e rendering. Le regole di rendering specifiche delle aree dati includono il modo in cui aumentano le dimensioni dell'area dati, la modalità di rendering di celle speciali, ad esempio la cella d'angolo o le celle di intestazione, e la modalità di rendering di un'area dati per la lettura da destra a sinistra. In questo argomento viene descritto il rendering delle varie parti di un'area dati.  
@@ -42,7 +42,7 @@ ms.locfileid: "48057647"
  L'angolo superiore sinistro è denominato angolo Tablix. L'angolo Tablix può contenere altri elementi del report ma, se nell'angolo vengono inserite interruzioni di pagina logiche, queste verranno ignorate quando verrà eseguito il rendering dell'area dati Tablix.  
   
 ### <a name="tablix-body"></a>Corpo Tablix  
- Il rendering del corpo Tablix, costituito da celle Tablix, viene eseguito in base alle regole di paginazione e ai comportamenti di rendering degli elementi del report. Per altre informazioni, vedere [Rendering degli elementi del Report &#40;Generatore Report e SSRS&#41;](rendering-report-items-report-builder-and-ssrs.md).  
+ Il rendering del corpo Tablix, costituito da celle Tablix, viene eseguito in base alle regole di paginazione e ai comportamenti di rendering degli elementi del report. Per altre informazioni, vedere [Rendering degli elementi del report &#40;Generatore report e SSRS&#41;](rendering-report-items-report-builder-and-ssrs.md).  
   
 ## <a name="chart-gauge-and-map-data-regions"></a>Aree dati di grafici, misuratori e mappe  
  Il comportamento delle aree dati di grafici, misuratori e mappe è simile a quello delle immagini quando ne viene eseguito il rendering e vengono visualizzate nel corpo del report. Ai valori nell'area dati è possibile che siano associate azioni, ad esempio il collegamento a un altro report o il passaggio a un segnalibro. È possibile eseguire il rendering anche di tali azioni, se il renderer lo supporta.  
@@ -50,7 +50,7 @@ ms.locfileid: "48057647"
 ## <a name="see-also"></a>Vedere anche  
  [Paginazione in Reporting Services &#40;Generatore report e SSRS&#41;](pagination-in-reporting-services-report-builder-and-ssrs.md)   
  [Tipi di rendering &#40;Generatore report e SSRS&#41;](rendering-behaviors-report-builder-and-ssrs.md)   
- [Funzionalità interattiva per estensioni di Rendering del Report diversi &#40;Report e SSRS&#41;](../report-builder/interactive-functionality-different-report-rendering-extensions.md)   
+ [Funzionalità interattiva per estensioni per il rendering di report differenti &#40;Generatore report e SSRS&#41;](../report-builder/interactive-functionality-different-report-rendering-extensions.md)   
  [Rendering degli elementi del report &#40;Generatore report e SSRS&#41;](rendering-report-items-report-builder-and-ssrs.md)   
  [Elenchi &#40;Generatore report e SSRS&#41;](tables-matrices-and-lists-report-builder-and-ssrs.md)   
  [Grafici &#40;Generatore report e SSRS&#41;](charts-report-builder-and-ssrs.md)   

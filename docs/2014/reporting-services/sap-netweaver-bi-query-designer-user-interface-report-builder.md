@@ -13,17 +13,17 @@ helpviewer_keywords:
 - query designers, SAP
 ms.assetid: 8edda06d-1608-498b-bd50-10905e54f6ce
 author: maggiesmsft
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: af04c7697d685fe36c34b09060302756f6f51214
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.author: maghan
+manager: kfile
+ms.openlocfilehash: 34248f660d31d6993ce21a0bcced0e0857b685cb
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48127429"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56029132"
 ---
 # <a name="sap-netweaver-bi-query-designer-user-interface-report-builder"></a>Interfaccia utente di Progettazione query SAP NetWeaver BI (Generatore report)
-  In [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] è disponibile una finestra Progettazione query con interfaccia grafica per la compilazione di query MDX (Multidimensional Expression) per un'origine dati SAP NetWeaver® Business Intelligence. Nella finestra Progettazione query con interfaccia grafica MDX sono disponibili due modalità: progettazione e query. In ogni modalità è disponibile un riquadro metadati dal quale è possibile trascinare membri da un InfoCube, un MultiProvider o una query Web definita sull'origine dei dati per la compilazione di una query MDX che recupera dati quando il report viene elaborato.  
+  [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] offre una finestra Progettazione query con interfaccia grafica per la compilazione di query MDX (Multidimensional Expression) per un'origine dati SAP NetWeaver® Business Intelligence. La finestra Progettazione query con interfaccia grafica MDX è disponibili due modalità: Modalità di progettazione e Query. In ogni modalità è disponibile un riquadro metadati dal quale è possibile trascinare membri da un InfoCube, un MultiProvider o una query Web definita sull'origine dei dati per la compilazione di una query MDX che recupera dati quando il report viene elaborato.  
   
 > [!IMPORTANT]  
 >  Gli utenti accedono alle origini dati quando creano ed eseguono query. È necessario concedere autorizzazioni minime per le origini dati, ad esempio autorizzazioni di sola lettura.  
@@ -49,15 +49,15 @@ ms.locfileid: "48127429"
 ### <a name="toolbar-for-the-graphical-query-designer-in-design-mode-toolbar"></a>Barra degli strumenti della finestra Progettazione query con interfaccia grafica in modalità progettazione  
  I pulsanti della barra degli strumenti di Progettazione query consentono di progettare query MDX utilizzando l'interfaccia grafica. Nella tabella seguente vengono illustrati i pulsanti con le relative funzioni.  
   
-|Button|Description|  
+|Button|Descrizione|  
 |------------|-----------------|  
 |**Modifica come testo**|Consente di passare dalla finestra Progettazione query basata su testo alla finestra Progettazione query con interfaccia grafica e viceversa. Non è disponibile per questo tipo di origine dati.|  
 |**Importa**|Consente di importare una query esistente da un file di definizione di report (con estensione rdl) nel file system.|  
 |![Aggiornamento campi set di dati](media/rsqdicon-refreshfields.gif "Aggiornamento campi set di dati")|Consente di aggiornare i metadati dall'origine dati.|  
-|![Aggiungi membro calcolato](../analysis-services/media/rsqdicon-addcalculatedmember.gif "Aggiungi membro calcolato")|Consente di visualizzare la finestra di dialogo **Generatore membri calcolati** ,|  
+|![Add calculated member](../analysis-services/media/rsqdicon-addcalculatedmember.gif "Add calculated member")|Consente di visualizzare la finestra di dialogo **Generatore membri calcolati** ,|  
 |![Visualizza/nascondi celle vuote](../analysis-services/media/rsqdicon-showemptycells.gif "Visualizza/nascondi celle vuote")|Consente di visualizzare o nascondere le celle vuote nel riquadro Dati. Questa operazione equivale a utilizzare la clausola NON EMPTY in MDX.|  
 |![Esecuzione automatica della query](../analysis-services/media/rsqdicon-autoexecute.gif "Esecuzione automatica della query")|Consente di eseguire automaticamente la query e visualizza il risultato a ogni modifica, ad esempio, quando viene eliminata una colonna nel riquadro Dati. I risultati verranno visualizzati nel riquadro Dati.|  
-|![Eliminare](../analysis-services/media/rsqdicon-delete.gif "Delete")|Consente di eliminare dalla query la colonna selezionata nel riquadro Dati.|  
+|![Elimina](../analysis-services/media/rsqdicon-delete.gif "Elimina")|Consente di eliminare dalla query la colonna selezionata nel riquadro Dati.|  
 |![Icona della finestra di dialogo Parametri query](../analysis-services/media/iconqueryparameter.gif "Icona della finestra di dialogo Parametri query")|Consente di visualizzare la finestra di dialogo **Variabili** . Questo pulsante è abilitato solo quando il cubo selezionato è una query sul cubo, dato che solo le query sui cubi supportano le variabili. Quando si assegna un valore predefinito a una variabile, viene creato un parametro corrispondente del report.|  
 |![Esecuzione della query](../analysis-services/media/rsqdicon-run.gif "Esecuzione della query")|Consente di eseguire la query di e visualizzare i risultati nel riquadro Dati.|  
 |![Annullamento della query](../analysis-services/media/rsqdicon-cancel.gif "Annullamento della query")|Consente di annullare la query.|  
@@ -91,13 +91,13 @@ ms.locfileid: "48127429"
   
 -   **Modifica come testo**  
   
--   **Aggiungi membro calcolato** (![Aggiungi membro calcolato](../analysis-services/media/rsqdicon-addcalculatedmember.gif "Aggiungi membro calcolato"))  
+-   **Aggiungi membro calcolato** (![Add calculated member](../analysis-services/media/rsqdicon-addcalculatedmember.gif "Add calculated member"))  
   
 -   **Mostra celle vuote** (![Visualizza/nascondi celle vuote](../analysis-services/media/rsqdicon-showemptycells.gif "Visualizza/nascondi celle vuote"))  
   
 -   **Esecuzione automatica** (![Esecuzione automatica della query](../analysis-services/media/rsqdicon-autoexecute.gif "Esecuzione automatica della query"))  
   
--   **Eliminare** (![eliminare](../analysis-services/media/rsqdicon-delete.gif "eliminare"))  
+-   **Elimina** (![Elimina](../analysis-services/media/rsqdicon-delete.gif "Elimina"))  
   
 ## <a name="see-also"></a>Vedere anche  
  [Finestre di progettazione query &#40;Generatore report&#41;](../../2014/reporting-services/query-designers-report-builder.md)  

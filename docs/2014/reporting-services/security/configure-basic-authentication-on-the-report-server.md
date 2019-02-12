@@ -13,13 +13,13 @@ helpviewer_keywords:
 ms.assetid: 8faf2938-b71b-4e61-a172-46da2209ff55
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 2cf353aedff8d906ebb2aa53a4bab269f6083854
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: a605117b6d2b1011d9285c0fb02275e5abeb35ac
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48071291"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56019332"
 ---
 # <a name="configure-basic-authentication-on-the-report-server"></a>configurazione dell'autenticazione di base nel server di report
   Per impostazione predefinita, tramite Reporting Services vengono accettate richieste che consentono di specificare l'autenticazione con negoziazione e NTLM. Se la distribuzione include applicazioni client o browser che utilizzano l'autenticazione di base, è necessario aggiungere questo tipo di autenticazione all'elenco di tipi supportati. Inoltre, se si desidera utilizzare Generatore report, è necessario abilitare l'accesso anonimo ai relativi file.  
@@ -41,7 +41,7 @@ ms.locfileid: "48071291"
   
      Il file si trova in  *\<unità >:* \Programmi\Microsoft SQL Server\MSRS12. Services\ReportServer MSSQLSERVER\Reporting.  
   
-2.  Trovare <`Authentication`>.  
+2.  Individuare <`Authentication`>.  
   
 3.  Tra le strutture XML seguenti, copiare quella che corrisponde meglio alle proprie esigenze. Nella prima struttura XML sono disponibili segnaposti per la specifica di tutti gli elementi, descritti nella sezione successiva:  
   
@@ -68,7 +68,7 @@ ms.locfileid: "48071291"
   
 4.  Incollare la struttura sulle voci esistenti per <`Authentication`>.  
   
-     Se si usa più tipi di autenticazione, aggiungere solo il `RSWindowsBasic` elemento ma non eliminare le voci relative `RSWindowsNegotiate`, `RSWindowsNTLM`, o `RSWindowsKerberos`.  
+     Se si utilizzano più tipi di autenticazione, aggiungere solo l'elemento `RSWindowsBasic`, ma non eliminare le voci relative a `RSWindowsNegotiate`, `RSWindowsNTLM` o `RSWindowsKerberos`.  
   
      Per supportare il browser Safari, non è possibile configurare il server di report per l'utilizzo di più tipi di autenticazione. È necessario specificare solo `RSWindowsBasic` ed eliminare le altre voci.  
   
@@ -87,7 +87,7 @@ ms.locfileid: "48071291"
   
 |Elemento|Obbligatorio|Valori validi|  
 |-------------|--------------|------------------|  
-|LogonMethod|Sì<br /><br /> Se non si specifica un valore, verrà utilizzato 3.|`2` = Accesso alla rete, destinato ai server ad alte prestazioni per l'autenticazione di password in testo normale.<br /><br /> `3` = Accesso non crittografato, che mantiene le credenziali di accesso nel pacchetto di autenticazione inviato con ogni richiesta HTTP, consentendo al server di rappresentare l'utente quando ci si connette ad altri server nella rete. Valore predefinito.<br /><br /> Nota: i valori 0 (per accesso interattivo) e 1 (per accesso batch) NON sono supportati in [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)].|  
+|LogonMethod|Yes<br /><br /> Se non si specifica un valore, verrà utilizzato 3.|`2` = accesso alla rete, destinato ai server ad alte prestazioni per l'autenticazione di password in testo normale.<br /><br /> `3` = accesso non crittografato, che mantiene le credenziali di accesso nel pacchetto di autenticazione inviato con ogni richiesta HTTP, consentendo al server di rappresentare l'utente in caso di connessione ad altri server della rete. Valore predefinito.<br /><br /> Nota: I valori 0 (per accesso interattivo) e 1 (per accesso batch) non sono supportati in [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)].|  
 |Realm|Facoltativo|Specifica una partizione delle risorse che include le caratteristiche di autorizzazione e autenticazione utilizzate per controllare l'accesso alle risorse protette nell'organizzazione.|  
 |DefaultDomain|Facoltativo|Specifica il dominio utilizzato dal server per autenticare l'utente. Questo valore è facoltativo, ma se non viene specificato il server di report utilizzerà il nome del computer come dominio. Se il computer è un membro di dominio, tale dominio rappresenta il dominio predefinito. Se il server di report è stato installato in un controller di dominio, il dominio utilizzato è quello controllato dal computer.|  
   
@@ -136,17 +136,17 @@ ms.locfileid: "48071291"
     </configuration>  
     ```  
   
-     Modalità di autenticazione deve essere impostata su `Windows` se si include un file Web. config.  
+     Se si include un file Web.config, la modalità di autenticazione deve essere impostata su `Windows`.  
   
      `Identity impersonate` può essere `True` o `False`.  
   
     -   Impostarla su `False` se non si desidera che ASP.NET legga il token di sicurezza. La richiesta verrà eseguita nel contesto di sicurezza del servizio del server di report.  
   
-    -   Impostarla su `True` se si vuole che ASP.NET legga il token di sicurezza dal livello host. Se questa opzione viene impostata su `True`, è necessario specificare anche `userName` e `password` per definire un account anonimo. Le credenziali specificate determineranno il contesto di sicurezza in cui viene generata la richiesta.  
+    -   Impostarla su `True` se si desidera che ASP.NET legga il token di sicurezza dal livello host. Se questa opzione viene impostata su `True`, è necessario specificare anche `userName` e `password` per definire un account anonimo. Le credenziali specificate determineranno il contesto di sicurezza in cui viene generata la richiesta.  
   
 5.  Salvare il file Web.config nella cartella ReportBuilder\bin.  
   
-6.  Aprire file RSReportServer. config, nella sezione Servizi individuare `IsReportManagerEnabled` e aggiungere l'impostazione seguente sotto di essa:  
+6.  Aprire file RSReportServer.config, quindi nella sezione Servizi individuare `IsReportManagerEnabled` e aggiungere di seguito l'impostazione seguente:  
   
     ```  
     <IsReportBuilderAnonymousAccessEnabled>True</IsReportBuilderAnonymousAccessEnabled>  
@@ -157,7 +157,7 @@ ms.locfileid: "48071291"
 8.  Riavviare il server di report.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Domini applicazione per applicazioni del Server di Report](../report-server/application-domains-for-report-server-applications.md)   
+ [Domini applicazione per applicazioni del server di report](../report-server/application-domains-for-report-server-applications.md)   
  [Sicurezza e protezione di Reporting Services](reporting-services-security-and-protection.md)  
   
   

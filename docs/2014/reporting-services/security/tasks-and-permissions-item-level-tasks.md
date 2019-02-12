@@ -12,16 +12,16 @@ helpviewer_keywords:
 ms.assetid: fdeb7bc3-167a-4342-84e3-32e3faa1fa39
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: ec3d958d709b1b0307b4df9be8a3d05165d0a92a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: a22c255712aa3e5e6c93cd04a37f5c66d25ac140
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48150201"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56018113"
 ---
 # <a name="item-level-tasks"></a>Attività a livello di elemento
-  Un'attività a livello di elemento è una raccolta di autorizzazioni correlate a un report, una cartella, un modello di report, una risorsa o un'origine dati condivisa. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] include anche attività a livello di sistema applicabili all'intero sito del server di report. Per altre informazioni, vedere [Attività a livello di sistema](tasks-and-permissions-system-level-tasks.md). Per altre informazioni sulle attività e le autorizzazioni in generale, vedere [attività e autorizzazioni](tasks-and-permissions.md).  
+  Un'attività a livello di elemento è una raccolta di autorizzazioni correlate a un report, una cartella, un modello di report, una risorsa o un'origine dati condivisa. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] include anche attività a livello di sistema applicabili all'intero sito del server di report. Per altre informazioni, vedere [Attività a livello di sistema](tasks-and-permissions-system-level-tasks.md). Per ulteriori informazioni sulle attività e le autorizzazioni in generale, vedere [Tasks and Permissions](tasks-and-permissions.md).  
   
 > [!NOTE]  
 >  Se si gestiscono queste attività a livello di programmazione, è necessario utilizzare metodi che supportano attività a livello di elemento. Per altre informazioni, vedere <xref:ReportService2010.ReportingService2010.ListTasks%2A> e <xref:ReportService2010.ReportingService2010.ListRoles%2A>.  

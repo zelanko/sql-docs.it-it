@@ -12,18 +12,18 @@ helpviewer_keywords:
 ms.assetid: e0137273-85b8-45f0-83e5-38a50481768f
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 7a3e1d824567358d54afef75c22d78613b883b5c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: ca003e937f5e9547fa1bda0243967a8ff1d8331a
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48133291"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56019322"
 ---
 # <a name="report-manager-f1-help"></a>Guida sensibile al contesto di Gestione report
   Negli argomenti seguenti vengono fornite informazioni a livello di pagina per lo strumento Gestione report di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] . È disponibile un argomento per ogni pagina dell'applicazione. È possibile che non tutte le pagine siano accessibili in quanto il livello di accesso dipende dalle impostazioni di sicurezza. Per accedere a questi argomenti da Gestione report, fare clic su **Guida** sulla barra degli strumenti principale.  
   
-## <a name="in-this-section"></a>Argomenti della sezione  
+## <a name="in-this-section"></a>In questa sezione  
   
 -   [Pagina Scegli collegamento](../../2014/reporting-services/choose-link-page-report-manager.md)  
   
@@ -104,9 +104,9 @@ ms.locfileid: "48133291"
  Per ulteriori informazioni su Gestione report e [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)], vedere la documentazione online di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] in MSDN.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Gestione contenuto del Server di report &#40;modalità nativa SSRS&#41;](report-server/report-server-content-management-ssrs-native-mode.md)   
+ [Gestione contenuto del server di report &#40;modalità nativa SSRS&#41;](report-server/report-server-content-management-ssrs-native-mode.md)   
  [Riferimento della funzionalità (Reporting Services)](feature-reference-reporting-services.md)   
- [Gestione contenuto del Server di report &#40;modalità nativa SSRS&#41;](report-server/report-server-content-management-ssrs-native-mode.md)   
+ [Gestione contenuto del server di report &#40;modalità nativa SSRS&#41;](report-server/report-server-content-management-ssrs-native-mode.md)   
  [Gestione report](../../2014/reporting-services/report-manager-ssrs-native-mode.md)   
  [Cenni preliminari sul componente di Reporting Services](tools/reporting-services-tools.md)  
   

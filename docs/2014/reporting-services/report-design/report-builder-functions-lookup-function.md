@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: e60e5bab-b286-4897-9685-9ff12703517d
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: 066982863d07cd125b5904e4c7467ffe9da5b107
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: efed574d2fc68fc88d5352b6bb6db09e6cab4076
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48217501"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56026042"
 ---
 # <a name="lookup-function-report-builder-and-ssrs"></a>Funzione Lookup (Generatore report e SSRS)
   Viene restituito il primo valore corrispondente per il nome specificato da un set di dati contenente coppie nome/valore.  
@@ -33,24 +33,24 @@ Lookup(source_expression, destination_expression, result_expression, dataset)
   
 #### <a name="parameters"></a>Parametri  
  *source_expression*  
- (`Variant`) Espressione valutata nell'ambito corrente che specifica il nome o la chiave da ricercare, Ad esempio, `=Fields!ProdID.Value`.  
+ (`Variant`) Espressione valutata nell'ambito corrente che specifica il nome o la chiave da ricercare, Ad esempio `=Fields!ProdID.Value`.  
   
  *destination_expression*  
- (`Variant`) Espressione valutata per ogni riga in un set di dati che specifica il nome o la chiave con cui eseguire la corrispondenza, Ad esempio, `=Fields!ProductID.Value`.  
+ (`Variant`) Espressione valutata per ogni riga in un set di dati che specifica il nome o la chiave con cui eseguire la corrispondenza, Ad esempio `=Fields!ProductID.Value`.  
   
  *result_expression*  
- (`Variant`) Espressione valutata per la riga nel set di dati in cui *source_expression* = *destination_expression*, che specifica il valore da recuperare. Ad esempio, `=Fields!ProductName.Value`.  
+ (`Variant`) Espressione valutata per la riga nel set di dati in cui *source_expression* = *destination_expression*, che specifica il valore da recuperare. Ad esempio `=Fields!ProductName.Value`.  
   
  *set di dati*  
  Costante che specifica il nome di un set di dati nel report, ad esempio, "Prodotti".  
   
 ## <a name="return"></a>Return  
- Restituisce un `Variant`, o `Nothing` se non esiste alcuna corrispondenza.  
+ Restituisce `Variant` o `Nothing` se non viene rilevata alcuna corrispondenza.  
   
 ## <a name="remarks"></a>Note  
- Usare `Lookup` per recuperare il valore dal set di dati specificato per una coppia nome/valore in cui è presente una relazione 1 a 1. Ad esempio per un campo ID in una tabella, è possibile utilizzare `Lookup` per recuperare il campo Nome corrispondente da un set di dati non associato all'area dati.  
+ Utilizzare la funzione `Lookup` per recuperare il valore dal set di dati specificato per una coppia nome/valore in cui esiste una relazione uno-a-uno. Ad esempio per un campo ID in una tabella, è possibile utilizzare `Lookup` per recuperare il campo Nome corrispondente da un set di dati non associato all'area dati.  
   
- `Lookup` esegue le operazioni seguenti:  
+ Tramite la funzione `Lookup` vengono effettuate le operazioni seguenti:  
   
 -   Valuta l'espressione di origine nell'ambito corrente.  
   
@@ -72,7 +72,7 @@ Lookup(source_expression, destination_expression, result_expression, dataset)
   
 -   Le espressioni di origine, di destinazione e di risultato non possono includere riferimenti a variabili di report o di gruppo.  
   
--   `Lookup` non può essere usato come espressione per gli elementi di report seguenti:  
+-   La funzione `Lookup` non può essere utilizzata come espressione per gli elementi del report seguenti:  
   
     -   Stringhe di connessione dinamiche per un'origine dati.  
   
@@ -98,9 +98,9 @@ Lookup(source_expression, destination_expression, result_expression, dataset)
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Uso delle espressioni nei report di &#40;Report e SSRS&#41;](expression-uses-in-reports-report-builder-and-ssrs.md)   
+ [Utilizzo delle espressioni nei report &#40;Generatore report e SSRS&#41;](expression-uses-in-reports-report-builder-and-ssrs.md)   
  [Esempi di espressioni &#40;Generatore report e SSRS&#41;](expression-examples-report-builder-and-ssrs.md)   
  [Tipi di dati nelle espressioni &#40;Generatore report e SSRS&#41;](expressions-report-builder-and-ssrs.md)   
- [Ambito di espressioni per totali, aggregazioni e raccolte predefinite &#40;Report e SSRS&#41;](expression-scope-for-totals-aggregates-and-built-in-collections.md)  
+ [Ambito di espressioni per totali, aggregazioni e raccolte predefinite &#40;Generatore report e SSRS&#41;](expression-scope-for-totals-aggregates-and-built-in-collections.md)  
   
   

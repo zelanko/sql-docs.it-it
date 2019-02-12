@@ -12,13 +12,13 @@ f1_keywords:
 ms.assetid: 57b00017-69ae-4e71-8d78-44744e208ac7
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: 08dc61c366937c3f1b4f90e009bf8a2460a7e4d5
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+manager: kfile
+ms.openlocfilehash: d6b0523bad560c2ca84396562a46d52a91fe0cb8
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53365903"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56020363"
 ---
 # <a name="chart-types-report-builder-and-ssrs"></a>Tipi di grafico (Generatore report e SSRS)
   È importante scegliere un tipo di grafico appropriato per il tipo di dati da visualizzare. Tale scelta risulta infatti fondamentale per una corretta interpretazione dei dati visualizzati nel grafico. Se ad esempio il set di dati contiene un numero di punti dati particolarmente elevato rispetto alla dimensioni del grafico, è opportuno rappresentarlo in un grafico ad area, a linee o a dispersione. Per informazioni dettagliate sulla preparazione dei dati in base al tipo di grafico selezionato, vedere [Grafici &#40;Generatore report e SSRS&#41;](charts-report-builder-and-ssrs.md).  

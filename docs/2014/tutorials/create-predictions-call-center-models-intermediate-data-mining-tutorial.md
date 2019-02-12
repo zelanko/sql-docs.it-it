@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: 5be0cec7-f639-4eeb-835e-e3204ae619e9
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 792e3e8eb7e27f41aa03523d93dba02379213a17
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+manager: kfile
+ms.openlocfilehash: 30f24ab457669f572189d2eb13deca3f672f5e18
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53372973"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56025412"
 ---
 # <a name="creating-predictions-for-the-call-center-models-intermediate-data-mining-tutorial"></a>Creazione di stime per i modelli Call Center (Esercitazione intermedia sul data mining)
   Dopo aver appreso i concetti di base sulle interazioni tra turni, numero di operatori, chiamate e livello del servizio, è possibile creare alcune query di stima che possono essere utilizzate per l'analisi e la pianificazione aziendali. Verranno innanzitutto create alcune stime del modello esplorativo per testare alcune ipotesi. Verranno quindi create stime bulk utilizzando il modello di regressione logistica.  
@@ -158,7 +157,7 @@ ms.locfileid: "53372973"
 |PM1|giorno festivo|0.165|0.40056055|  
 |PM2|giorno festivo|0.165|0.338532973|  
 |AM|giorno feriale|0.165|0.370847617|  
-|mezzanotte|giorno feriale|0,08|0.352999173|  
+|mezzanotte|giorno feriale|0.08|0.352999173|  
 |PM1|giorno feriale|0.165|0.317419177|  
 |PM2|giorno feriale|0.105|0.311672027|  
   

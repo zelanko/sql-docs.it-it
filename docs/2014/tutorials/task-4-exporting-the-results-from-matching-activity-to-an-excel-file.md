@@ -4,21 +4,18 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- data-quality-services
-- integration-services
-- master-data-services
+ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: 644454c4-3c5a-469a-90ec-e51dc7fb99fc
-author: douglaslms
-ms.author: douglasl
+author: leolimsft
+ms.author: lle
 manager: craigg
-ms.openlocfilehash: abded209f6367308c23e548962e1d4a5362791f0
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: c9424f2ba21fb4b93e359c8662974a82c62b4895
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48127631"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56020442"
 ---
 # <a name="task-4-exporting-the-results-from-matching-activity-to-an-excel-file"></a>Attività 4: Esportazione dei risultati dell'attività di corrispondenza in un file di Excel
   In questa attività vengono esportati i risultati dell'attività di corrispondenza in un file di Excel.  
@@ -37,7 +34,7 @@ ms.locfileid: "48127631"
   
     2.  **Record più lungo:** il record superstite è quello con il maggior numero di termini nei campi di origine.  
   
-    3.  **Il record più completo e più lungo:** il record superstite è quello con il maggior numero di campi popolati e con il maggior numero di termini in ogni campo.  
+    3.  **Record più completo e più lungo:** il record superstite è quello con il maggior numero di campi popolati e di termini in ogni campo.  
   
      ![Esportare i risultati dalla pagina corrispondenza](../../2014/tutorials/media/et-exportingtheresultsfrommatoanexcelfile.jpg "esportare i risultati dalla pagina corrispondenza")  
   

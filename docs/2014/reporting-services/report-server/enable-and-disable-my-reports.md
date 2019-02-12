@@ -16,13 +16,13 @@ helpviewer_keywords:
 ms.assetid: 16c76e82-9fd4-417c-9ed3-a7d5bcd1dba2
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: d30e91edb402af3797bf88aa67492032206159cc
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 21b24350f3ab377170a51333716b710b4a3f44ad
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48064951"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56020132"
 ---
 # <a name="enable-and-disable-my-reports"></a>Abilitare e disabilitare la funzionalità Report personali
   La caratteristica Report personali consente di assegnare spazio di archiviazione personale nel database del server di report. Gli utenti possono servirsi di tale spazio di archiviazione per salvare i propri report in una cartella privata. L'amministratore del server di report può attivare o disabilitare questa caratteristica oppure modificarne il funzionamento cambiando le impostazioni di sicurezza che determinano i vari tipi di operazioni che gli utenti possono eseguire in questa area di lavoro.  
@@ -32,7 +32,7 @@ ms.locfileid: "48064951"
 ## <a name="how-to-enable-and-disable-my-reports"></a>Come abilitare e disabilitare la funzionalità Report personali  
  Per abilitare Report personali tramite [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], connettersi all'istanza del server di report e aprire la pagina **Proprietà server** . Quindi, nella scheda **Generale** selezionare l'opzione **Abilita una cartella Report personali per ogni utente** .  
   
- La definizione di ruolo utilizzata per la funzionalità Report personali determina le azioni supportate nell'area di lavoro Report personali. Ad esempio, se per il ruolo Report personali non viene selezionata l'attività "Creazione di report collegati", gli utenti appartenenti a questo ruolo non potranno creare report collegati nelle cartelle Report personali. Per altre informazioni, vedere [Proteggere i report personali](../security/secure-my-reports.md).  
+ La definizione di ruolo utilizzata per la funzionalità Report personali determina le azioni supportate nell'area di lavoro Report personali. Ad esempio, se per il ruolo Report personali non viene selezionata l'attività "Creazione di report collegati", gli utenti appartenenti a questo ruolo non potranno creare report collegati nelle cartelle Report personali. Per altre informazioni, vedere [Protezione dei report](../security/secure-my-reports.md).  
   
  Per disattivare Report personali, deselezionare **Abilita una cartella Report personali per ogni utente**. Se si disattiva la funzionalità Report personali, per gli utenti non verrà più visualizzato alcun riferimento alla cartella Report personali. Le cartelle in cui sono effettivamente archiviati i dati, ovvero le sottocartelle di Cartelle utenti, devono essere eliminate manualmente dopo la disabilitazione della caratteristica.  
   
@@ -52,7 +52,7 @@ ms.locfileid: "48064951"
  Si noti che, se si attiva la funzionalità Report personali, viene creata automaticamente una cartella Report personali per ogni utente con account di dominio che fa clic sul collegamento Report personali, anche se tale utente non desidera o non necessita di una cartella Report personali. Non esiste una soluzione per determinare quali cartelle sono in uso. È necessario controllare le cartelle manualmente per verificare se contengono dati.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Proteggere i report personali](../security/secure-my-reports.md)   
+ [Protezione dei report](../security/secure-my-reports.md)   
  [Gestione contenuto del server di report &#40;modalità nativa SSRS&#41;](report-server-content-management-ssrs-native-mode.md)  
   
   

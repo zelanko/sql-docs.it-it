@@ -13,16 +13,16 @@ helpviewer_keywords:
 - node tests [SQLXML]
 - location path for XPath query
 ms.assetid: f46c30bf-1e24-4435-9ac2-f8ba43a8ff94
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 2883b1645dfe1114fc40f63c576797b477ae0ea5
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 15d5389f9a16d676aa5d644b030455d4c63adf7b
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47792019"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56027403"
 ---
 # <a name="specifying-a-node-test-in-the-location-path-sqlxml-40"></a>Specifica di un test di nodo nel percorso (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -36,7 +36,7 @@ ms.locfileid: "47792019"
   
  In questo esempio `child` è l'asse e `Customer` è il test di nodo. Il tipo di nodo principale per il **figlio** asse viene  **\<elemento >**. Pertanto, il test di nodo è TRUE se il  **\<cliente >** nodo è un  **\<elemento >** nodo. Se il nodo di contesto non dispone  **\<cliente >** elementi figlio, viene restituito un set di nodi vuoto.  
   
-## <a name="node-test-example-2"></a>Test di nodo: esempio 2  
+## <a name="node-test-example-2"></a>Test di nodo: Esempio 2  
  Percorso della posizione `attribute::CustomerID` consente di selezionare il **CustomerID** attributo del nodo di contesto.  
   
  Nell'esempio `attribute` è l'asse e `CustomerID` è il test di nodo. Il tipo di nodo principale di **attributo** asse viene  **\<attributo >**. Pertanto, il test di nodo è TRUE se **CustomerID** è un  **\<attributo >** nodo. Se il nodo di contesto non dispone **CustomerID**, viene restituito un set di nodi vuoto.  

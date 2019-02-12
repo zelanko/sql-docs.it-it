@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: e67136cc-f8c6-4cb3-ba0b-c966c636256c
-author: douglaslMS
-ms.author: douglasl
+author: leolimsft
+ms.author: lle
 manager: craigg
-ms.openlocfilehash: 2f1da635e524b746bb96d0d19876285c869679e2
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: bf9bcf7f96616d4c0ac49fa361a145bc69ec1d55
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52395514"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56020383"
 ---
 # <a name="data-cleansing"></a>Data Cleansing
   La pulizia dei dati è il processo di analisi della qualità dei dati in un'origine dati, con l'approvazione o il rifiuto manuale dei suggerimenti del sistema e la conseguente modifica dei dati. La pulizia dei dati in [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) include un processo assistito da computer, che analizza la conformità dei dati alle informazioni in una Knowledge Base, e un processo interattivo, che consente all'amministratore dei dati di rivedere e modificare i risultati del processo assistito da computer per assicurarsi che la pulizia dei dati risponda esattamente alle aspettative.  
@@ -67,7 +67,7 @@ ms.locfileid: "52395514"
   
 -   **Nuovo**: valori validi per i quali non sono disponibili informazioni sufficienti (suggerimenti) in DQS e dei quali non è pertanto possibile eseguire il mapping ad altre schede. Questa scheda contiene inoltre valori che presentano un livello di confidenza inferiore al valore *soglia di suggerimento automatico* , ma sufficientemente elevato per essere contrassegnati come validi.  
   
--   **Non è valido**: valori contrassegnati come non validi nel dominio della Knowledge Base o valori non conformi a una regola di dominio o ai dati di riferimento. Questa scheda conterrà anche valori rifiutati dall'utente nelle altre quattro schede durante il processo di pulizia interattiva.  
+-   **Invalid**: valori contrassegnati come non validi nel dominio della Knowledge Base o valori non conformi a una regola di dominio o ai dati di riferimento. Questa scheda conterrà anche valori rifiutati dall'utente nelle altre quattro schede durante il processo di pulizia interattiva.  
   
 -   **Correzione**: I valori corretti da DQS durante il processo di pulizia automatico perché è stata trovata una correzione per il valore con un livello di confidenza superiore di *soglia di correzione automatica* valore. Questa scheda conterrà anche valori per i quali l'utente ha specificato un valore corretto nella colonna **Correggi in** durante la pulizia interattiva e che ha quindi approvato facendo clic sul pulsante di opzione nella colonna **Approva** in una delle altre quattro schede.  
   

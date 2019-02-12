@@ -13,13 +13,13 @@ helpviewer_keywords:
 ms.assetid: 980a66c7-a18b-4af7-8954-45726fa517d6
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: d049c93c74ebc60b708ab9c5f1b5da37b5a6d924
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 03107ceb9c09cd3a48a0d547882b02b951d4d3c2
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48056261"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56020152"
 ---
 # <a name="move-or-delete-an-item-report-manager"></a>Spostare o eliminare un elemento (Gestione report)
   I report e gli altri elementi relativi ai report pubblicati in un server di report vengono archiviati in cartelle. È possibile spostare gli elementi in una cartella diversa e i riferimenti a tali elementi vengono mantenuti automaticamente dal server di report. Prima di eliminare un elemento, verificare se sono presenti altri elementi che dipendono da esso.  
@@ -38,7 +38,7 @@ ms.locfileid: "48056261"
 |![Icona di origine dati condivisa](../media/hlp-16datasource.png "Icona di origine dati condivisa")|Origine dati condivisa|  
 ||Set di dati condiviso|  
   
- Non tutti gli elementi possono essere spostati. Non è possibile spostare elementi associati a un report, ad esempio le sottoscrizioni o la cronologia del report. Tali elementi si spostano insieme ai report a essi associati. Analogamente, non è possibile spostare elementi disponibili all'esterno della gerarchia di cartelle, ad esempio le pianificazioni condivise. Non è possibile spostare gli elementi se non si dispone delle autorizzazioni appropriate. L'autorizzazione per lo spostamento di un elemento viene concessa a un utente selezionando le attività seguenti nell'assegnazione di ruolo dell'utente per l'elemento specifico: "Gestione di report", "Gestione modelli", "Gestione di cartelle" e "Gestione di origini dei dati".  
+ Non tutti gli elementi possono essere spostati. Non è possibile spostare elementi associati a un report, ad esempio le sottoscrizioni o la cronologia del report. Tali elementi si spostano insieme ai report a essi associati. Analogamente, non è possibile spostare elementi disponibili all'esterno della gerarchia di cartelle, ad esempio le pianificazioni condivise. Non è possibile spostare gli elementi se non si dispone delle autorizzazioni appropriate. L'autorizzazione per spostare un elemento verrà comunicata quando vengono selezionate le seguenti operazioni nell'assegnazione di ruolo per l'elemento in questione: "Gestione report," "Gestisci modelli", "Gestione di cartelle" e "Gestione di origini dati".  
   
 #### <a name="to-move-an-item-from-within-the-contents-page"></a>Per spostare un elemento dalla pagina Contenuto  
   

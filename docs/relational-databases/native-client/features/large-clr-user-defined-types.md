@@ -3,6 +3,7 @@ title: Tipi definiti dall'utente CLR di grandi dimensioni | Microsoft Docs
 ms.custom: ''
 ms.date: 03/17/2017
 ms.reviewer: ''
+ms.prod: sql
 ms.technology: native-client
 ms.topic: reference
 helpviewer_keywords:
@@ -12,12 +13,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 5989488d0890f747993473ac08324ef361f3de9b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 0176ba03151b084cb26eda03969b1e83afb1820d
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47748259"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56020273"
 ---
 # <a name="large-clr-user-defined-types"></a>Tipi CLR definiti dall'utente di grandi dimensioni
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -27,7 +28,7 @@ ms.locfileid: "47748259"
   
  Per altre informazioni, vedere [Large CLR User-Defined tipi &#40;OLE DB&#41; ](../../../relational-databases/native-client/ole-db/large-clr-user-defined-types-ole-db.md) e [Large CLR User-Defined tipi &#40;ODBC&#41;](../../../relational-databases/native-client/odbc/large-clr-user-defined-types-odbc.md).  
   
-## <a name="use-cases"></a>Modalità di utilizzo comuni  
+## <a name="use-cases"></a>Casi d'uso  
  Per ODBC, il supporto per i tipi definiti dall'utente di grandi dimensioni include la possibilità di inviare i valori di tali tipi in parti come parametri data-at-execution. Questa operazione viene eseguita dall'uso di SQLPutData.  
   
  Per OLE DB, il supporto per i tipi definiti dall'utente di grandi dimensioni include la possibilità di eseguire il flusso dei valori di tali tipi al e dal server usando l'associazione ISequentialStream.  

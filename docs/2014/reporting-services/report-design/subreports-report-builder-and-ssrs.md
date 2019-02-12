@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: ab5bea3a-109e-4c25-92d9-494df7c52dd8
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: 785557e57defba45f23c7a4abb041d4e8ba04884
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: b73227ae13d9534a98e4fc68030f5447f8db9cf7
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48165331"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56023512"
 ---
 # <a name="subreports-report-builder-and-ssrs"></a>Sottoreport (Generatore report e SSRS)
   Un sottoreport è un elemento del report in cui viene visualizzato un altro report all'interno del corpo del report principale. A livello concettuale, un sottoreport in un report è simile a un frame in una pagina Web. Un sottoreport viene utilizzato per incorporare un report in un altro report. Qualsiasi report può essere utilizzato come sottoreport. Il report visualizzato come sottoreport è archiviato in un server di report, solitamente nella stessa cartella del report padre. È possibile progettare il report padre per il passaggio di parametri al sottoreport. Un sottoreport può essere ripetuto all'interno di aree dati, utilizzando un parametro per filtrare i dati in ogni istanza del sottoreport.  
@@ -36,7 +36,7 @@ ms.locfileid: "48165331"
   
  Utilizzare le aree dati per annidare gruppi di dati dalla stessa origine dati all'interno di un'unica area dati. I sottoreport sono utili per annidare gruppi di dati da diverse origini dati all'interno di un'unica area dati, riutilizzare un sottoreport in più report padre o visualizzare un report autonomo all'interno di un altro report. È possibile, ad esempio, creare un catalogo di prodotti e sottoprodotti inserendo più sottoreport nel corpo di un altro report.  
   
- Le aree dati offrono invece un livello di funzionalità e flessibilità analogo a quello dei sottoreport, ma con prestazioni migliori. Poiché infatti ogni istanza di un sottoreport viene elaborata dal server di report come report distinto, le prestazioni possono risultare rallentate. Per altre informazioni, vedere [Aree dati nidificate &#40;Generatore report e SSRS&#41;](nested-data-regions-report-builder-and-ssrs.md).  
+ Le aree dati offrono invece un livello di funzionalità e flessibilità analogo a quello dei sottoreport, ma con prestazioni migliori. Poiché infatti ogni istanza di un sottoreport viene elaborata dal server di report come report distinto, le prestazioni possono risultare rallentate. Per altre informazioni, vedere [Aree dati annidate &#40;Generatore report e SSRS&#41;](nested-data-regions-report-builder-and-ssrs.md).  
   
 ## <a name="using-parameters-in-subreports"></a>Utilizzo di parametri nei sottoreport  
  Per passare parametri dal report padre al sottoreport, definire un parametro di report nel report utilizzato come sottoreport. Quando si inserisce il sottoreport nel report padre, è possibile selezionare il parametro di report e un valore da passare dal report padre al parametro di report nel sottoreport.  
@@ -56,6 +56,6 @@ ms.locfileid: "48165331"
  In Generatore report, per visualizzare in anteprima un sottoreport in un report principale, entrambi i report devono trovarsi nello stesso server di report oppure è necessario specificare il percorso completo del sottoreport.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Drill-through, drill-down, sottoreport e aree dati nidificate &#40;Report e SSRS&#41;](drillthrough-drilldown-subreports-and-nested-data-regions.md)  
+ [Drill-through, drill-down, sottoreport e aree dati annidate &#40;Generatore report e SSRS&#41;](drillthrough-drilldown-subreports-and-nested-data-regions.md)  
   
   

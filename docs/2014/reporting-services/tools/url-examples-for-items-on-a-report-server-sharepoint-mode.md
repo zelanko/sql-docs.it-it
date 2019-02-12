@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 54cb861a-8cec-445c-875d-599fb9bd1973
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 763d33dd182883f3b781b3e7e70cf91eda906044
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 9138f2b27518a3b271bd14628b753ba5f729b3f6
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48157931"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56026532"
 ---
 # <a name="url-examples-for-published-report-items-on-a-report-server-in-sharepoint-mode-ssrs"></a>Esempi di URL per elementi di report pubblicati in un server di report in modalità SharePoint (SSRS)
   Per pubblicare report ed elementi correlati in una raccolta di SharePoint, è possibile pubblicare il contenuto mediante gli strumenti di creazione di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], ad esempio Progettazione report, oppure caricare il contenuto tramite le azioni sito di SharePoint.  
@@ -32,7 +32,7 @@ ms.locfileid: "48157931"
   
  Per accedere al contenuto del server di report e proteggerlo, è possibile utilizzare gli elementi della gerarchia Web indicati di seguito. Altri oggetti, quali elenchi e pagine, non vengono utilizzati per accedere al contenuto del server di report e non sono pertanto descritti nella tabella seguente.  
   
-|Object|Description|  
+|Object|Descrizione|  
 |------------|-----------------|  
 |Applicazione Web di SharePoint|Le applicazioni Web di SharePoint possono essere installate come server autonomi o in una farm contenente una raccolta di server virtuali. Un'applicazione Web dispone di un URL, ad esempio http:*//nomeserver*, e può contenere più siti.|  
 |Sito|Un sito può essere un sito padre o un sito secondario di un'applicazione Web.|  
@@ -76,7 +76,7 @@ ms.locfileid: "48157931"
  Una definizione di report può includere un file di immagine archiviato come file esterno. È possibile fare riferimento al file nella definizione del report impostando l'URL completo del file di immagine. Il file può essere archiviato in un sito di SharePoint o in un computer remoto.  
   
 > [!IMPORTANT]  
->  Se l'URL esterno è per un'immagine in un sito di SharePoint, verrà visualizzata l'icona di immagine interrotta quando si visualizza in anteprima il report in Generatore report. Quando si carica il report nel sito di SharePoint e il rendering del report in modalità connessa, verrà visualizzata l'icona di immagine interrotta se si dispone solo `View Items` autorizzazioni.  
+>  Se l'URL esterno è per un'immagine in un sito di SharePoint, verrà visualizzata l'icona di immagine interrotta quando si visualizza in anteprima il report in Generatore report. Quando si carica il report nel sito di SharePoint e si esegue il rendering del report nella modalità connessa, verrà visualizzata l'icona di immagine interrotta se si dispone solo delle autorizzazioni `View Items`.  
   
  Indipendentemente dalla modalità del server di report, i riferimenti a un file di immagine esterno inclusi in un report devono essere rappresentati da URL completi. Inoltre, in genere il riferimento a un file di immagine esterno richiede la configurazione dell'account per l'esecuzione automatica del report.  
   
@@ -136,7 +136,7 @@ ms.locfileid: "48157931"
  Quando un server di report viene eseguito in modalità integrata SharePoint, il concetto di risorsa è più limitato. In questo caso il concetto di risorsa viene utilizzato per l'archiviazione di report che fanno riferimento a un'immagine esterna. Ciò è valido se il report è uno snapshot o una copia mantenuta per uso interno.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Pubblicare un Report in una raccolta di SharePoint](../reports/publish-a-report-to-a-sharepoint-library.md)   
+ [Pubblicare un report in una raccolta di SharePoint](../reports/publish-a-report-to-a-sharepoint-library.md)   
  [Pubblicare un'origine dati condivisa in una raccolta di SharePoint](../reports/publish-a-shared-data-source-to-a-sharepoint-library.md)   
  [Finestra di dialogo Pagine delle proprietà del progetto](project-property-pages-dialog-box.md)  
   

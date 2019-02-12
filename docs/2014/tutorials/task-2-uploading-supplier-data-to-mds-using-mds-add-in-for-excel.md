@@ -4,21 +4,18 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- data-quality-services
-- integration-services
-- master-data-services
+ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: 598deb57-e0cc-4e0a-aeb1-94432c094c67
-author: douglaslms
-ms.author: douglasl
+author: leolimsft
+ms.author: lle
 manager: craigg
-ms.openlocfilehash: 36e50a34f708bc13da489591d73ca0521cdb5a6b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 1cbaacd23fcaa1e28d6cce6d64a168d0fab4befc
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48101211"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56025662"
 ---
 # <a name="task-2-uploading-supplier-data-to-mds-using-mds-add-in-for-excel"></a>Attività 2: Caricamento dei dati fornitore in MDS utilizzando il componente aggiuntivo MDS per excel
   In questa attività si pubblicano i dati puliti e fornitore **MDS** usando la **il componente aggiuntivo MDS per Excel**. Creare un'entità denominata **Supplier** nel **Suppliers** modello creato nella lezione precedente. All'entità sarà associato un attributo per ogni colonna nel file di Excel. Gli attributi Name e Code dell'entità Supplier corrispondono per la **SupplierID** e **Supplier Name** colonne in Excel.  
@@ -66,6 +63,6 @@ ms.locfileid: "48101211"
 15. Mantieni **Excel** aprire.  
   
 ## <a name="next-task"></a>Attività successiva  
- [Attività 3: Verifica dei dati in Gestione dati master](../../2014/tutorials/task-3-verifying-the-data-in-master-data-manager.md)  
+ [Attività 3: Verifica per determinare se i dati in Gestione dati Master](../../2014/tutorials/task-3-verifying-the-data-in-master-data-manager.md)  
   
   

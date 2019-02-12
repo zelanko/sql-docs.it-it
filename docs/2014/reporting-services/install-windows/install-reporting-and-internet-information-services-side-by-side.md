@@ -12,13 +12,13 @@ helpviewer_keywords:
 ms.assetid: 9b651fa5-f582-4f18-a77d-0dde95d9d211
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 8b9724139d6a89e345d1a8dd0c967f51afe5f8c6
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 9fed65b504d8e76cdd6c827126ab752950ae821c
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48183481"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56025372"
 ---
 # <a name="install-reporting-services-and-internet-information-services-side-by-side-ssrs-native-mode"></a>Installare side-by-side Reporting Services e Internet Information Services (modalità nativa SSRS)
   È possibile installare ed eseguire [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)][!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] (SSRS) e Internet Information Services (IIS) nello stesso computer. La versione di IIS utilizzata determina i problemi di interoperabilità che è necessario risolvere.  
@@ -27,7 +27,7 @@ ms.locfileid: "48183481"
 |-|  
 |[!INCLUDE[applies](../../includes/applies-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Modalità nativa|  
   
-|Versione di IIS|Problemi|Description|  
+|Versione di IIS|Problemi|Descrizione|  
 |-----------------|------------|-----------------|  
 |IIS 6.0, 7.0, 8.0, 8.5|Richieste destinate a un'applicazione vengono accettate da un'applicazione diversa.<br /><br /> HTTP.SYS applica regole di precedenza per le prenotazioni URL. Le richieste inviate ad applicazioni con lo stesso nome di directory virtuale e che eseguono congiuntamente il monitoraggio della porta 80 potrebbero non raggiungere la destinazione desiderata se la prenotazione URL è debole rispetto alla prenotazione URL di un'altra applicazione.|In determinate condizioni, un endpoint registrato che prevale su un altro endpoint URL nello schema di prenotazione degli URL potrebbe ricevere richieste HTTP destinate all'altra applicazione.<br /><br /> L'utilizzo di nomi univoci per le directory virtuali per il servizio Web ReportServer e Gestione report consente di evitare questo conflitto.<br /><br /> Informazioni dettagliate su questo scenario vengono fornite nel presente argomento.|  
   
@@ -50,12 +50,12 @@ ms.locfileid: "48183481"
 |http://+:80|Riceve le richieste che non sono già state ricevute da altre applicazioni, per qualsiasi endpoint dell'applicazione di cui è stato eseguito il mapping all'opzione **Tutti assegnati**.|  
 |http://*:80|Riceve le richieste che non sono già state ricevute da altre applicazioni, per gli endpoint dell'applicazione di cui è stato eseguito il mapping all'opzione **Non assegnati**.|  
   
- Un'indicazione di un conflitto di porte è la visualizzazione del messaggio di errore seguente: "System.IO.FileLoadException: Il processo non può accedere al file perché è in uso da un altro processo. (Eccezione da HRESULT: 0x80070020)".  
+ Un'indicazione di un conflitto di porte è che si vedranno il messaggio di errore seguente: 'System.IO.FileLoadException: Il processo non è possibile accedere al file perché è in uso da un altro processo. (Eccezione da HRESULT: 0x80070020).'  
   
 ## <a name="url-reservations-for-iis-60-70-80-85-with-includesssql14includessssql14-mdmd-reporting-services"></a>Prenotazioni URL per IIS 6.0, 7.0, 8.0, 8.5 con [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Reporting Services  
  Stabilite le regole di precedenza descritte nella sezione precedente, è possibile iniziare a comprendere in che modo le prenotazioni URL definite per Reporting Services e IIS agevolino l'interoperabilità. Reporting Services riceve le richieste che specificano in modo esplicito i nomi delle directory virtuali per le proprie applicazioni, mentre IIS riceve tutte le richieste rimanenti che possono pertanto essere dirette ad applicazioni eseguite all'interno del modello di processo di IIS.  
   
-|Applicazione|Prenotazione URL|Description|Ricezione richiesta|  
+|Applicazione|Prenotazione URL|Descrizione|Ricezione richiesta|  
 |-----------------|---------------------|-----------------|---------------------|  
 |Server di report|http://+:80/ReportServer|Carattere jolly complesso sulla porta 80, con directory virtuale del server di report.|Riceve sulla porta 80 tutte le richieste che specificano la directory virtuale del server di report. Il servizio Web ReportServer riceve tutte le richieste all'indirizzo http://\<nomecomputer>/reportserver.|  
 |Gestione report|http://+:80/Reports|Carattere jolly complesso sulla porta 80, con directory virtuale Reports.|Riceve sulla porta 80 tutte le richieste che specificano la directory virtuale reports. Gestione report riceve tutte le richieste a http://\<nomecomputer > / reports.|  
@@ -74,13 +74,13 @@ ms.locfileid: "48183481"
   
  Per garantire che tutte le applicazioni ricevano richieste, adottare le linee guida seguenti:  
   
--   Per le installazioni di Reporting Services, utilizzare nomi delle directory virtuali che non siano già utilizzati da un sito Web di IIS sulla stessa porta di Reporting Services. Se si verifica un conflitto, installare Reporting Services in modalità "solo file", utilizzando l'opzione Installa senza configurare l'opzione server dell'Installazione guidata, in modo che sia possibile configurare le directory virtuali al termine dell'installazione. Un'indicazione della configurazione come conflitto è la visualizzazione del messaggio di errore seguente: System.IO.FileLoadException: Il processo non può accedere al file perché è in uso da un altro processo. (Eccezione da HRESULT: 0x80070020).  
+-   Per le installazioni di Reporting Services, utilizzare nomi delle directory virtuali che non siano già utilizzati da un sito Web di IIS sulla stessa porta di Reporting Services. Se si verifica un conflitto, installare Reporting Services in modalità "solo file", utilizzando l'opzione Installa senza configurare l'opzione server dell'Installazione guidata, in modo che sia possibile configurare le directory virtuali al termine dell'installazione. Un'indicazione che la configurazione presenta un conflitto è che è visualizzato il messaggio di errore: System.IO.FileLoadException: Il processo non è possibile accedere al file perché è in uso da un altro processo. (Eccezione da HRESULT: 0x80070020).  
   
 -   Per installazioni da configurare manualmente, adottare le convenzioni di denominazione predefinite negli URL configurati. Se si installa [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)] come istanza denominata, includere il nome dell'istanza al momento della creazione di una directory virtuale.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Configurare gli URL di Server di Report &#40;Gestione configurazione SSRS&#41;](configure-report-server-urls-ssrs-configuration-manager.md)   
+ [Configurare gli URL del server di report &#40;Gestione configurazione SSRS&#41;](configure-report-server-urls-ssrs-configuration-manager.md)   
  [Configurare un URL &#40;Gestione configurazione SSRS&#41;](configure-a-url-ssrs-configuration-manager.md)   
- [Installare Server di Report di Reporting Services in modalità nativa](install-reporting-services-native-mode-report-server.md)  
+ [Installare un server di report in modalità nativa di Reporting Services](install-reporting-services-native-mode-report-server.md)  
   
   

@@ -18,13 +18,13 @@ helpviewer_keywords:
 ms.assetid: 8f15e2c6-a647-4b05-a519-1743b5d8654c
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 0fefdbe7100f9d8c22b6ed0026748b095ca63253
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: e3911bfcd923b26251c81809c9671981e0ff84e9
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48108141"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56018043"
 ---
 # <a name="control-report-distribution"></a>Controllare la distribuzione dei report
   È possibile configurare un server di report in modo da ridurre i rischi di sicurezza associati alla distribuzione tramite posta elettronica e condivisione file.  

@@ -17,13 +17,13 @@ helpviewer_keywords:
 ms.assetid: 6bc17af5-883c-4bfa-87d9-48cd7056d145
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: a7deac283e848ec932b266ac77cf4f5575da5d38
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: bec5c1b3d2df5c6a721179de5848fd90c08fdd4e
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48057841"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56018023"
 ---
 # <a name="integrating-reporting-services-using-soap"></a>Integrazione di Reporting Services tramite SOAP
   L'API SOAP di [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] offre diversi endpoint del servizio Web per lo sviluppo di soluzioni di creazione di report personalizzate. Gli endpoint rientrano attualmente in due categorie, ovvero gestione ed esecuzione. La funzionalità di gestione viene esposta tramite gli endpoint <xref:ReportService2005>, <xref:ReportService2006> e <xref:ReportService2010>. L'endpoint <xref:ReportService2005> viene utilizzato per la gestione di un server di report configurato in modalità nativa, mentre l'endpoint <xref:ReportService2006> viene utilizzato per la gestione di un server di report configurato per la modalità integrata SharePoint. L'endpoint <xref:ReportService2010> unisce le funzionalità di <xref:ReportService2005> e <xref:ReportService2006> e può gestire gli oggetti in un server di report configurati per la modalità nativa o per la modalità integrata SharePoint.  
@@ -33,7 +33,7 @@ ms.locfileid: "48057841"
   
  La funzionalità di esecuzione viene esposta tramite l'endpoint <xref:ReportExecution2005> e viene utilizzata quando il server di report è configurato in modalità nativa o in modalità integrata SharePoint. Negli argomenti seguenti viene illustrato come utilizzare questi endpoint per lo sviluppo di soluzioni di creazione di report in [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows, in SharePoint e nelle applicazioni Web.  
   
-## <a name="in-this-section"></a>Argomenti della sezione  
+## <a name="in-this-section"></a>In questa sezione  
  [Uso dell'API SOAP in un'applicazione Windows](integrating-reporting-services-using-soap-windows-application.md)  
  Viene descritto come utilizzare l'API SOAP per integrare [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] in un ambiente Windows.  
   

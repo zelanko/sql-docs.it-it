@@ -2,10 +2,8 @@
 title: continuous_copy_status (Database SQL di Azure) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/03/2017
-ms.prod: ''
-ms.prod_service: sql-database
+ms.service: sql-database
 ms.reviewer: ''
-ms.technology: system-objects
 ms.topic: language-reference
 f1_keywords:
 - sys.dm_continuous_copy_status_TSQL
@@ -22,12 +20,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: 9cbd0997a7d675c0c7630b730d6ba7514070ab8f
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: d5e62117f620a93d61d9216ad46383c116c930ac
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51665940"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56023882"
 ---
 # <a name="sysdmcontinuouscopystatus-azure-sql-database"></a>sys.dm_continuous_copy_status (database SQL di Azure)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
@@ -37,14 +35,14 @@ ms.locfileid: "51665940"
 Se si usa Database SQL V12 è necessario utilizzare [DM geo_replication_link_status](../../relational-databases/system-dynamic-management-views/sys-dm-geo-replication-link-status-azure-sql-database.md) (poiché *continuous_copy_status* si applica solo alla versione 11).
 
   
-|Nome colonna|Tipo di dati|Description|  
+|Nome colonna|Tipo di dati|Descrizione|  
 |-----------------|---------------|-----------------|  
 |**copy_guid**|**uniqueidentifier**|ID univoco del database di replica.|  
 |**partner_server**|**sysname**|Nome del server di database SQL collegato.|  
 |**partner_database**|**sysname**|Nome del database collegato nel server di database SQL collegato.|  
 |**last_replication**|**datetimeoffset**|Timestamp dell'ultima transazione replicata applicata.|  
 |**replication_lag_sec**|**int**|Differenza di tempo in secondi tra l'ora corrente e il timestamp dell'ultimo commit della transazione completato nel database primario che non è stato riconosciuto dal database secondario attivo.|  
-|**replication_state**|**tinyint**|Lo stato della replica di copia continua per questo database. Di seguito sono i valori possibili e le relative descrizioni.<br /><br /> 1: il seeding. La destinazione della replica viene sottoposta a seeding ed è dal punto di vista transazionale in uno stato non coerente. Finché il seeding non viene completato, non è possibile connettersi al database secondario attivo. <br />2: esegue l'aggiornamento. Il database secondario attivo attualmente esegue l'aggiornamento al database primario e si trova in uno stato coerente dal punto di vista transazionale.<br />3: nuovamente il seeding. Il database secondario attivo automaticamente viene sottoposto nuovamente a seeding a causa di un errore di replica irreversibile.<br />4: sospesa. Non è presente una relazione di copia continua attiva. Questo stato indica in genere che la larghezza di banda disponibile per l'interlink è insufficiente per il livello di attività di transazione nel database primario. La relazione di copia continua tuttavia rimane invariata.|  
+|**replication_state**|**tinyint**|Lo stato della replica di copia continua per questo database. Di seguito sono i valori possibili e le relative descrizioni.<br /><br /> 1: Seeding. La destinazione della replica viene sottoposta a seeding ed è dal punto di vista transazionale in uno stato non coerente. Finché il seeding non viene completato, non è possibile connettersi al database secondario attivo. <br />2: Aggiornamento. Il database secondario attivo attualmente esegue l'aggiornamento al database primario e si trova in uno stato coerente dal punto di vista transazionale.<br />3: Nuovo seeding. Il database secondario attivo automaticamente viene sottoposto nuovamente a seeding a causa di un errore di replica irreversibile.<br />4: Sospeso. Non è presente una relazione di copia continua attiva. Questo stato indica in genere che la larghezza di banda disponibile per l'interlink è insufficiente per il livello di attività di transazione nel database primario. La relazione di copia continua tuttavia rimane invariata.|  
 |**replication_state_desc**|**nvarchar(256)**|Descrizione di replication_state. I valori possibili sono:<br /><br /> SEEDING<br /><br /> CATCH_UP<br /><br /> RE_SEEDING<br /><br /> SUSPENDED|  
 |**is_rpo_limit_reached**|**bit**|Questo valore è sempre impostato su 0|  
 |**is_target_role**|**bit**|0 = Origine della relazione di copia<br /><br /> 1 = Destinazione della relazione di copia|  

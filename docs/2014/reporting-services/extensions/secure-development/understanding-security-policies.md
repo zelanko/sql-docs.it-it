@@ -22,13 +22,13 @@ helpviewer_keywords:
 ms.assetid: a9bf043a-139a-4929-9a58-244815323df0
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 8871e43e88d042d4afc89a83dfd035a3709687e6
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 49a7568135604fc09d42c47d4226050b9a294096
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48061950"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56021472"
 ---
 # <a name="understanding-security-policies"></a>Informazioni sui criteri di sicurezza
   Qualsiasi codice eseguito da un server di report deve far parte di criteri di sicurezza dall'accesso di codice specifici. Tali criteri di sicurezza sono costituiti da gruppi di codice che eseguono il mapping dell'evidenza a un insieme di set di autorizzazioni denominati. I gruppi di codice sono spesso associati a un set di autorizzazioni denominato che specifica le autorizzazioni consentite per il codice appartenente al gruppo specifico. In fase di esecuzione l'evidenza viene usata da un host trusted o dal caricatore per determinare i gruppi di codice cui il codice appartiene e, di conseguenza, le autorizzazioni per concedere il codice. [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] aderisce a questo tipo di architettura relativa ai criteri di sicurezza come definito da Common Language Runtime (CLR) di [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)]. Nelle sezioni seguenti vengono descritti i diversi tipi di codice in [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] e le regole dei criteri associate.  

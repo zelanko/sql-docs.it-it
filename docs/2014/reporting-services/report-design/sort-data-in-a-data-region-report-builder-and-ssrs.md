@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 2fcb9be2-1daa-4c92-ad00-5f63cdf39f70
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: 254cd7875988103fd6dc479d66794f4d2627179d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 57933ec6894d36af0ab8a54236ff75655fab6967
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48120001"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56019416"
 ---
 # <a name="sort-data-in-a-data-region-report-builder-and-ssrs"></a>Ordinamento dei dati in un'area dati (Generatore report e SSRS)
   Per modificare l'ordinamento dei dati in un'area dati quando si esegue un report per la prima volta, è necessario impostare l'espressione di ordinamento nel gruppo o nell'area dati. Per impostazione predefinita, l'espressione di ordinamento per un gruppo viene impostata automaticamente su un valore identico a quello dell'espressione di raggruppamento.  
@@ -27,7 +27,7 @@ ms.locfileid: "48120001"
   
 -   In un'area dati del misuratore in genere non è necessario ordinare i dati, in quanto nel misuratore viene visualizzato un solo valore relativo a un intervallo. Se è necessario ordinare i dati in un misuratore, definire innanzitutto un gruppo e quindi impostare l'espressione di ordinamento per il gruppo.  
   
- Per altre informazioni, vedere [Filtrare, raggruppare e ordinare i dati &#40;Generatore report e SSRS&#41;](filter-group-and-sort-data-report-builder-and-ssrs.md).  
+ Per altre informazioni, vedere [Filtro, raggruppamento e ordinamento di dati &#40;Generatore report e SSRS&#41;](filter-group-and-sort-data-report-builder-and-ssrs.md).  
   
  Per un'area dati Tablix è inoltre possibile aggiungere un pulsante di ordinamento interattivo nella parte superiore di un'intestazione di colonna, in modo da consentire all'utente di modificare l'ordinamento di gruppi o righe di dettagli. Per altre informazioni, vedere [Ordinamento interattivo &#40;Generatore report e SSRS&#41;](interactive-sort-report-builder-and-ssrs.md).  
   

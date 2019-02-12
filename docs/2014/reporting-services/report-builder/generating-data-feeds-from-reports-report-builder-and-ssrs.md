@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 4e00789f-6967-42e5-b2b4-03181fdb1e2c
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: ff83364a11c50ce5403b434052bdb28d53aaf2b3
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+manager: kfile
+ms.openlocfilehash: 17f63e9c4f6d1e560e6945a1ae6f01100d59703a
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53377593"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56020682"
 ---
 # <a name="generating-data-feeds-from-reports-report-builder-and-ssrs"></a>Generazione di feed di dati dai report (Generatore report e SSRS)
   L'estensione per il rendering Atom di [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] consente di generare un documento di servizio Atom in cui sono elencati i feed di dati disponibili in un report e i feed di dati delle aree dati di un report. Questa estensione viene usata per generare feed di dati conformi ad Atom, leggibili e scambiabili con applicazioni che possono usare i feed di dati generati dai report. Ad esempio è possibile usare l'estensione per il rendering Atom per generare feed di dati che, in seguito, possono essere usati nel client [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] .  
@@ -57,7 +57,7 @@ ms.locfileid: "53377593"
   
  ![RS_Atom_PeerDynamicColumns](../media/rs-atom-peerdynamiccolumns.gif "RS_Atom_PeerDynamicColumns")  
   
- Il documento di servizio Atom generato da questo report include due feed di dati, uno per ogni colonna peer dinamica: Territorio e anno. Nel diagramma seguente viene mostrato il contenuto di ogni feed di dati.  
+ Il documento di servizio Atom generato da questo report include due feed di dati, uno per ogni colonna peer dinamica: territorio e anno. Nel diagramma seguente viene mostrato il contenuto di ogni feed di dati.  
   
  ![RS_Atom_PeerDynamicDataFeeds](../media/rs-atom-peerdynamicdatafeeds.gif "RS_Atom_PeerDynamicDataFeeds")  
   

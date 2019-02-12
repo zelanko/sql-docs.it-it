@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 5b55fff2-1b15-4156-83ef-15ad9cf9f509
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 24804b6233e701ef0c27f113a294987156b6174c
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+manager: kfile
+ms.openlocfilehash: 1be357ab864a0d7249a2f9d4529591813b4a01ed
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53363373"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56028012"
 ---
 # <a name="xml-connection-type-ssrs"></a>Tipo di connessione XML (SSRS)
   Per includere dati nel report da un'origine dati XML, è necessario disporre di un set di dati basato su un'origine dati del report di tipo XML. Questo tipo di origine dati incorporato è basato sull'estensione per i dati XML. Utilizzare questo tipo di origine dati per connettersi e recuperare dati da documenti XML, servizi Web o valori XML incorporati nella query.  
@@ -110,7 +110,7 @@ ms.locfileid: "53363373"
   
  Per altre informazioni sulla sintassi di query, vedere [Sintassi di query XML per i dati del report XML &#40;SSRS&#41;](report-data-ssrs.md) nella documentazione di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [Documentazione online](https://go.microsoft.com/fwlink/?linkid=121312) su msdn.microsoft.com.  
   
- Per esempi, vedere [Reporting Services: Utilizzando XML and Web Service Data Sources](https://go.microsoft.com/fwlink/?LinkId=81654).  
+ Per gli esempi, vedere [Reporting Services: uso di origini dati XML e servizio Web](https://go.microsoft.com/fwlink/?LinkId=81654).  
   
 ### <a name="requirements-for-retrieving-xml-web-service-data"></a>Requisiti per il recupero di dati del servizio Web XML  
  Lo schema non viene rilevato automaticamente dall'estensione per l'elaborazione dati XML. È pertanto necessario essere in grado di individuare i metodi SOAP tramite i quali verranno recuperati i dati desiderati. È inoltre necessario comprendere lo spazio dei nomi o lo schema di indirizzamento che il servizio Web utilizza per i dati.  

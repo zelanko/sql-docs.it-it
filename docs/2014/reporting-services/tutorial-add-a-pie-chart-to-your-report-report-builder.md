@@ -1,5 +1,5 @@
 ---
-title: 'Esercitazione: Aggiungere un grafico a torta al report (Generatore report) | Microsoft Docs'
+title: 'Esercitazione: Aggiungere un grafico a torta al Report (Generatore Report) | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
@@ -10,15 +10,15 @@ ms.topic: conceptual
 ms.assetid: eaadf7bf-c312-428a-b214-0a1fbf959c3f
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: 12c567f91d526d3ac44485704f7c76fdfa345c11
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 30966fc1ccc592539e543869aef03f555ca59b2d
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48202531"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56020102"
 ---
-# <a name="tutorial-add-a-pie-chart-to-your-report-report-builder"></a>Esercitazione: Aggiungere un grafico a torta al report (Generatore report)
+# <a name="tutorial-add-a-pie-chart-to-your-report-report-builder"></a>Esercitazione: Aggiungere un grafico a torta al Report (Generatore Report)
   Nei grafici a torta e in quelli ad anello i dati vengono visualizzati come percentuali rispetto a un valore intero. I grafici a torta vengono utilizzati principalmente per eseguire confronti tra gruppi. I grafici a torta e ad anello, insieme ai grafici a piramide e a imbuto, costituiscono un gruppo di grafici noti come grafici con forme. I grafici con forme non includono assi. Quando un campo numerico viene inserito in un grafico con forme, viene calcolata la percentuale di ogni valore rispetto al totale.  
   
  Se sono presenti troppi punti dati su un grafico a torta, le etichette dei punti dati potrebbero essere difficili da leggere. In questo caso è preferibile utilizzare un grafico a linee. Utilizzare grafici a torta solo dopo avere aggregato i dati in pochi punti dati.  
@@ -45,9 +45,9 @@ ms.locfileid: "48202531"
 7.  [Salvare il Report](#Save)  
   
 > [!NOTE]  
->  In questa esercitazione, i passaggi per la procedura guidata sono consolidati in due procedure. Per istruzioni dettagliate su come selezionare un server di report, aggiungere un'origine dati e un set di dati, vedere la prima esercitazione di questa serie: [Esercitazione: Creazione di un report tabella semplice &#40;Generatore report&#41;](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md).  
+>  In questa esercitazione, i passaggi per la procedura guidata sono consolidati in due procedure. Per istruzioni dettagliate su come selezionare un server di report, aggiungere un'origine dati e aggiungere un set di dati, vedere la prima esercitazione di questa serie: [Esercitazione: Creazione di un Report tabella semplice &#40;Generatore Report&#41;](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md).  
   
- Il tempo stimato per il completare l'esercitazione è di 10 minuti.  
+ Tempo previsto per il completamento di questa esercitazione: 10 minuti  
   
 ## <a name="requirements"></a>Requisiti  
  Per altre informazioni sui requisiti, vedere [Prerequisiti per le esercitazioni &#40;Generatore report&#41;](../reporting-services/report-builder-tutorials.md).  

@@ -4,21 +4,18 @@ ms.custom: ''
 ms.date: 04/27/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- data-quality-services
-- integration-services
-- master-data-services
+ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: 24ba466d-a7d3-49e7-9111-b348399c9e58
-author: douglaslms
-ms.author: douglasl
+author: leolimsft
+ms.author: lle
 manager: craigg
-ms.openlocfilehash: 8900b595bcb90eb7ca0712d2b6e7e3010c4a7b24
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 2a3861e7de24e4fdf43ea11cf447b448c9d17b48
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48180911"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56022862"
 ---
 # <a name="task-9-adding-union-all-transform-to-combine-correct-and-corrected-records"></a>Attività 9: Aggiunta della trasformazione Unione input multipli a Combina record corretti e con correzione
   In questa attività viene aggiunta la trasformazione Unione input multipli al flusso di dati. La trasformazione Unione input multipli consente di combinare più input in un unico output. Nello scenario attuale i record corretti e con correzione vengono combinati in un flusso.  
@@ -46,6 +43,6 @@ ms.locfileid: "48180911"
 7.  Ciò **connector** deve essere denominato **con correzione**. Poiché si hanno solo due condizioni **corretti** e **con correzione**, e una condizione è già stata utilizzata, il **selezione Input e Output** finestra di dialogo non viene visualizzata questa volta. Se i collegamenti si sovrappongono, spostarne uno a sinistra e l'altro a destra trascinando il collegamento a sinistra o a destra.  
   
 ## <a name="next-step"></a>Passaggio successivo  
- [Attività 10: Aggiunta della trasformazione Raggruppamento fuzzy per l'identificazione di duplicati](../../2014/tutorials/task-10-adding-fuzzy-group-transform-to-identify-duplicates.md)  
+ [Attività 10: Aggiunta della trasformazione Raggruppamento Fuzzy per identificare i duplicati](../../2014/tutorials/task-10-adding-fuzzy-group-transform-to-identify-duplicates.md)  
   
   

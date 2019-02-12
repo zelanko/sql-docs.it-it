@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 4791a157-b028-4698-905d-f1dd0887aa0d
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: 764f4a6f84b710be9ac0b6a7c6a8f4989530ca8f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 13383c305b9e2e8f1c1ece754c55e5d0f0bd6955
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48179541"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56022815"
 ---
 # <a name="drillthrough-drilldown-subreports-and-nested-data-regions-report-builder-and-ssrs"></a>Drill-through, drill-down, sottoreport e aree dati nidificate (Generatore report e SSRS)
   È possibile organizzare i dati in vari modi per mostrare la relazione da generale a dettagliata.  È possibile inserire tutti i dati nel report, ma impostarli in modo che rimangano nascosti finché un utente non farà clic per rivelare i dettagli. Questa è un'azione di tipo *drill-down* . È possibile visualizzare i dati in un'area dati, ad esempio una tabella o un grafico, *annidata* in un'altra area dati, ad esempio una tabella o una matrice. È possibile visualizzare i dati in un *sottoreport* completamente contenuto in un report principale. In alternativa, è possibile inserire i dati di dettaglio in report *drill-through* , ovvero report separati che vengono visualizzati quando un utente fa clic su un collegamento.  
@@ -25,7 +25,7 @@ ms.locfileid: "48179541"
   
  A. Report drill-through  
   
- B. sottoreport  
+ b. sottoreport  
   
  C. Aree dati nidificate  
   
@@ -45,7 +45,7 @@ ms.locfileid: "48179541"
 |Recupero di dati|I dati vengono recuperati contemporaneamente al report principale|I dati vengono recuperati un report drill-through alla volta|I dati vengono tutti recuperati contemporaneamente al report principale|  
 |Elaborazione ed esecuzione del rendering|Con il report principale|Quando si fa clic sul collegamento|Con il report principale|  
 |Modalità di esecuzione|Più lenta (ma recupera tutti i dati con il report principale)|Più veloce (ma non recupera tutti i dati con il report principale)|Più veloce (e recupera tutti i dati con il report principale)|  
-|Utilizzo di parametri|Sì|Sì|no|  
+|Utilizzo di parametri|Yes|Yes|No|  
 |Possibilità di riutilizzo|Come report o come sottoreport o report drill-through in altri report|Come report o come sottoreport o report drill-through in altri report|No|  
 |Posizione|Esterna al report principale, uguale o diversa dal server di report|Esterna al report principale, uguale al server di report|Interna al report principale|  
 |Visualizzazione|Nel report principale|In un report diverso|Nel report principale|  
@@ -83,19 +83,19 @@ ms.locfileid: "48179541"
 
   
 ##  <a name="InThisSection"></a> Contenuto della sezione  
- [Report drill-through &#40;Report e SSRS&#41;](drillthrough-reports-report-builder-and-ssrs.md)  
+ [Report drill-through &#40;Generatore report e SSRS&#41;](drillthrough-reports-report-builder-and-ssrs.md)  
  Sono illustrati i report che vengono visualizzati quando un utente fa clic su un collegamento in un report principale.  
   
- [Sottoreport &#40;Report e SSRS&#41;](subreports-report-builder-and-ssrs.md)  
+ [Sottoreport &#40;Generatore report e SSRS&#41;](subreports-report-builder-and-ssrs.md)  
  Vengono descritti i report visualizzati nel corpo del report principale.  
   
- [Aree dati nidificate &#40;Report e SSRS&#41;](nested-data-regions-report-builder-and-ssrs.md)  
+ [Aree dati annidate &#40;Generatore report e SSRS&#41;](nested-data-regions-report-builder-and-ssrs.md)  
  Viene descritto come nidificare un'area dati all'interno di un'altra, ad esempio un grafico all'interno di una matrice.  
   
- [Azione drill-down &#40;Report e SSRS&#41;](drilldown-action-report-builder-and-ssrs.md)  
+ [Azione di drill-down &#40;Generatore report e SSRS &#41;](drilldown-action-report-builder-and-ssrs.md)  
  Viene spiegato l'utilizzo dell'azione drill-down per nascondere e mostrare elementi del report.  
   
- [Specifica di percorsi di elementi esterni &#40;Report e SSRS&#41;](specifying-paths-to-external-items-report-builder-and-ssrs.md)  
+ [Specifica di percorsi di elementi esterni &#40;Generatore report e SSRS&#41;](specifying-paths-to-external-items-report-builder-and-ssrs.md)  
  Viene spiegato come fare riferimento a elementi esterni al file di definizione del report.  
   
 ## <a name="see-also"></a>Vedere anche  

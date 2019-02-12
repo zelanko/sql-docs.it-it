@@ -12,13 +12,13 @@ helpviewer_keywords:
 ms.assetid: 309dffe5-00f5-404f-bb63-9e6046253ae0
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: 6af3783ca583dfa328b32ee6cfb4eaf8cd73b4dc
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 24ebd92281a66e258aef10a47a50e3e76b7a2d9e
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48100623"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56019421"
 ---
 # <a name="find-text-numbers-or-dates-in-a-report-reporting-services-in-sharepoint-integrated-mode"></a>Individuare testo, numeri o date in un report (Reporting Services in modalità integrata SharePoint)
   È possibile cercare contenuto in un report digitando la parola o la frase che si desidera trovare (la lunghezza massima di un termine di ricerca è 256 caratteri). La ricerca è una tecnica di navigazione in cui viene trovato un valore corrispondente a un criterio nel report e la selezione viene spostata sulla parte del report che contiene tale valore.  
@@ -44,6 +44,6 @@ ms.locfileid: "48100623"
 4.  Per cercare le occorrenze successive dello stesso valore, fare clic su **Avanti**.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Aggiungere la Web Part Visualizzatore Report a una pagina Web &#40;Reporting Services in SharePoint la modalità integrata&#41;](../report-server-sharepoint/add-reporting-services-content-types-to-a-sharepoint-library.md)  
+ [Aggiungere la Web part Visualizzatore report a una pagina Web &#40;Reporting Services in modalità integrata SharePoint&#41;](../report-server-sharepoint/add-reporting-services-content-types-to-a-sharepoint-library.md)  
   
   

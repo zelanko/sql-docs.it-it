@@ -31,15 +31,15 @@ f1_keywords:
 - "10244"
 - sql12.rtp.rptdesigner.seriesproperties.action.f1
 ms.assetid: 2c5d915b-4f97-42cf-b8f1-49ca3ff3d0f9
-author: maggiesmsft
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: f68471e05ea1fd8e3b2680e81bd3e8512a2c79bf
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+author: markingmyname
+ms.author: maghan
+manager: kfile
+ms.openlocfilehash: 63c9b4e601faad155d6f843b6ccef2f1cac7698a
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53370653"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56017983"
 ---
 # <a name="action-properties-dialog-box-report-builder-and-ssrs"></a>Finestra di dialogo Proprietà azione (Generatore report e SSRS)
   È possibile utilizzare la finestra di dialogo **Azione** per abilitare opzioni dei collegamenti ipertestuali per un grafico, un misuratore e gli elementi della mappa che supportano i collegamenti. Definire un'azione in modo che un utente possa fare clic sul report e collegarsi a un URL, a un report diverso nello stesso server di report o in un sito di SharePoint integrato con un server di report oppure a un percorso diverso nello stesso report.  
@@ -84,7 +84,7 @@ ms.locfileid: "53370653"
  **Valore**  
  Digitare o selezionare un valore da passare per il parametro denominato nel report drill-through. Fare clic sul pulsante **Espressione** (*fx*) per modificare l'espressione.  
   
- **Omettere**  
+ **Omit**  
  Selezionare questa opzione per impedire l'esecuzione del parametro. Per impostazione predefinita, questa casella di controllo è deselezionata e non è attiva. Per selezionare la casella di controllo, fare clic sul pulsante **Espressione** (*fx*) e digitare **True** o creare un'espressione. La casella di controllo viene selezionata quando si fa clic su **OK** nella finestra di dialogo **Espressione** .  
   
  **Vai al segnalibro**  

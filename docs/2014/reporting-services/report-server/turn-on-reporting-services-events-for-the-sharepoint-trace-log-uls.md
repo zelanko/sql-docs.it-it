@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 81110ef6-4289-405c-a931-e7e9f49e69ba
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 2f4f0217fd3941e236e132487041020f0c1ec3f2
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+manager: kfile
+ms.openlocfilehash: e062d516b929f436c6a255a9dfb28e69568133e5
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53371343"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56025142"
 ---
 # <a name="turn-on-reporting-services-events-for-the-sharepoint-trace-log-uls"></a>Abilitare gli eventi di Reporting Services per il log di traccia di SharePoint (ULS)
   A partire da [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)], tramite i server [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] in modalità SharePoint è possibile scrivere gli eventi di [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] nel log di traccia del Servizio di registrazione unificato (ULS, Unified Logging Service) di SharePoint. [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] sono disponibili nella pagina di monitoraggio di Amministrazione centrale SharePoint.  

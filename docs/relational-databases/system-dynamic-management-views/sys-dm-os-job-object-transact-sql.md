@@ -2,10 +2,8 @@
 title: Sys.dm_os_job_object (Database SQL di Azure) | Microsoft Docs
 ms.custom: ''
 ms.date: 04/17/2018
-ms.prod: ''
-ms.prod_service: sql-database
+ms.service: sql-database
 ms.reviewer: ''
-ms.technology: system-objects
 ms.topic: language-reference
 f1_keywords:
 - sys.dm_db_resource_stats
@@ -22,12 +20,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: 6517ba1223f90aa95f475e050553e02af26f0dcf
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 074981f19f0eb74a7e7c7d4e82466957f0ff98b8
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47780419"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56022202"
 ---
 # <a name="sysdmosjobobject-azure-sql-database"></a>Sys.dm_os_job_object (Database SQL di Azure)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
@@ -36,7 +34,7 @@ Restituisce una riga singola che descrive la configurazione dell'oggetto process
 
 Un oggetto processo è un costrutto di Windows che implementa la governance delle risorse di CPU, memoria e i/o a livello di sistema operativo. Per altre informazioni sugli oggetti di processo, vedere [gli oggetti processo](/windows/desktop/ProcThread/job-objects). 
   
-|Colonne|Tipo di dati|Description|  
+|Colonne|Tipo di dati|Descrizione|  
 |-------------|---------------|-----------------|  
 |cpu_rate|**int**|Specifica la parte di cicli del processore che possono usare i thread di SQL Server durante ogni intervallo di pianificazione. Il valore viene indicato come percentuale di cicli disponibili entro un intervallo di pianificazione del ciclo di 10000. Ad esempio, il valore 100 indica che i thread possono usare core CPU viene loro piena capacità.|
 |cpu_affinity_mask|**bigint**|Una maschera di bit che descrive quale processori logici il processo di SQL Server può utilizzare all'interno del gruppo di processori. Ad esempio, cpu_affinity_mask 255 (1111 1111 in formato binario) significa che i primi otto processori logici sono utilizzabile.|

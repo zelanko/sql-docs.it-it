@@ -9,14 +9,14 @@ ms.technology:
 ms.topic: conceptual
 ms.assetid: 593de30c-69f0-42a8-8467-16e78647b74c
 author: maggiesmsft
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: a68cc175ec8339fc9af0554a6b9c5c5b6f7386ba
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.author: maghan
+manager: kfile
+ms.openlocfilehash: ee2dd2c9776402dd639858e2a330f31d02b04635
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48135163"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56017712"
 ---
 # <a name="sharepoint-list-query-designer"></a>Progettazione query di elenco di SharePoint
   In Progettazione report sono disponibili due finestre Progettazione query, una con interfaccia grafica e una basata su testo, per la creazione di query in cui vengono specificati i dati da recuperare da un sito di SharePoint per un set di dati del report. Utilizzare la finestra Progettazione query con interfaccia grafica per esplorare i metadati dell'elenco SharePoint, compilare in modo interattivo una query e visualizzarne i risultati. Utilizzare Progettazione query basata su testo per visualizzare la query compilata nella finestra Progettazione query con interfaccia grafica, modificare una query o digitare i comandi della query. È inoltre possibile importare una query esistente da un file o un report.  
@@ -64,7 +64,7 @@ ms.locfileid: "48135163"
  Per aggiungere o rimuovere campi in questo riquadro, selezionare o deselezionare le caselle di controllo relative ai campi della tabella o della vista nel riquadro Elenchi SharePoint.  
   
 ###  <a name="AppliedFilters"></a> Riquadro Filtri applicati  
- Nel riquadro Filtri applicati vengono visualizzati i criteri utilizzati per limitare il numero delle righe di dati recuperate in fase di esecuzione. I criteri specificati in questo riquadro vengono utilizzati per generare un [!INCLUDE[tsql](../includes/tsql-md.md)] clausola WHERE. Quando si seleziona l'opzione di parametro, viene creato automaticamente un parametro del report. I parametri del report basati sui parametri di query consentono all'utente di specificare i valori affinché la query controlli i dati nel report.  
+ Nel riquadro Filtri applicati vengono visualizzati i criteri utilizzati per limitare il numero delle righe di dati recuperate in fase di esecuzione. I criteri specificati in questo riquadro sono usati per generare una clausola WHERE di [!INCLUDE[tsql](../includes/tsql-md.md)] . Quando si seleziona l'opzione di parametro, viene creato automaticamente un parametro del report. I parametri del report basati sui parametri di query consentono all'utente di specificare i valori affinché la query controlli i dati nel report.  
   
  Vengono visualizzate le colonne seguenti:  
   
@@ -86,7 +86,7 @@ ms.locfileid: "48135163"
 ### <a name="graphical-query-designer-toolbar"></a>Barra degli strumenti della finestra Progettazione query con interfaccia grafica  
  Nella barra degli strumenti di Progettazione query relazionale sono disponibili i pulsanti seguenti, che consentono di specificare o visualizzare i risultati di una query.  
   
-|Button|Description|  
+|Button|Descrizione|  
 |------------|-----------------|  
 |**Modifica come testo**|Consente di passare alla finestra Progettazione query basata su testo per visualizzare la query generata automaticamente o per modificare la query.|  
 |**Importa**|Consente di importare una query esistente da un file o un report. Sono supportati i tipi di file con estensione sql e rdl.|  

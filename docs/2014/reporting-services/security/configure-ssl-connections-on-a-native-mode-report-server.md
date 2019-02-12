@@ -12,13 +12,13 @@ helpviewer_keywords:
 ms.assetid: 212f2042-456a-4c0a-8d76-480b18f02431
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: d08af66f091793bd0d317a43fb7d1f75fe2c3b0b
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+manager: kfile
+ms.openlocfilehash: 6f557d777941e6c5da6d099c0121a5ff5498afc3
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53350533"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56017772"
 ---
 # <a name="configure-ssl-connections-on-a-native-mode-report-server"></a>Configurare connessioni SSL in un server di report in modalità nativa
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] La modalità nativa usa il servizio SSL HTTP (Secure Sockets Layer) per stabilire connessioni crittografate a un server di report. Se si dispone di un file di certificato (con estensione cer) installato in un archivio certificati locale nel server di report, è possibile associare il certificato a una prenotazione di URL di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] per supportare le connessioni al server di report tramite un canale crittografato.  

@@ -9,14 +9,14 @@ ms.technology:
 ms.topic: conceptual
 ms.assetid: 5ddc97a7-7ee5-475d-bc49-3b814dce7e19
 author: maggiesmsft
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: bc5bf036d3d00033077ad0054572c0375b6b6f55
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.author: maghan
+manager: kfile
+ms.openlocfilehash: 4e868988ae1bea8953e143cba540c35654311c03
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53366600"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56020712"
 ---
 # <a name="plan-for-map-report-support"></a>Pianificare il supporto dei report mappa
   [!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)] supporta i report di mappa che utilizzano origini dati spaziali. I dati spaziali possono provenire da database di SQL Server, da file di forma ESRI o dalla raccolta mappe installata con Reporting Services o Generatore report. In una mappa è inoltre possibile visualizzare uno sfondo a sezioni di Bing Map. L'autore del report è possibile creare un report che specifica i dati spaziali o sezioni di Bing map come dinamici e recuperati in fase di esecuzione o come statici e incorporati nella definizione del report.  
@@ -51,6 +51,6 @@ ms.locfileid: "53366600"
  Per altre informazioni, [Maps &#40;Generatore Report e SSRS&#41;](report-design/maps-report-builder-and-ssrs.md).  
   
 ## <a name="see-also"></a>Vedere anche  
- [Risolvere i problemi di report: Eseguire il mapping di report &#40;Report e SSRS&#41;](report-design/troubleshoot-reports-map-reports-report-builder-and-ssrs.md)  
+ [Risolvere problemi relativi ai report: Eseguire il mapping di report &#40;Report e SSRS&#41;](report-design/troubleshoot-reports-map-reports-report-builder-and-ssrs.md)  
   
   

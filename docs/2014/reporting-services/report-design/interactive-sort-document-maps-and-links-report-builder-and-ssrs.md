@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: cc6ef408-4a76-408a-9d3f-033481fe21cf
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: 68e73b7fc2d7b1982724da4040c4912473f30d78
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+manager: kfile
+ms.openlocfilehash: 62ed0c324711ab38460c59ecc0e74291a1080d2d
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53352568"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56017732"
 ---
 # <a name="interactive-sort-document-maps-and-links-report-builder-and-ssrs"></a>Ordinamento interattivo, mappe documento e collegamenti (Generatore report e SSRS)
   In ambienti basati sul Web è possibile aggiungere alcune caratteristiche per consentire agli utenti di interagire con i report. Gli utenti possono inoltre modificare l'ordinamento dei valori nel report, visualizzare o nascondere elementi nel report oppure fare clic sui collegamenti che consentono di passare ad altri report o pagine Web. È inoltre possibile aggiungere un sommario o una mappa documento. Gli utenti del report possono fare clic su elementi nel sommario o mappa documento per passare alle aree all'interno di un report.  

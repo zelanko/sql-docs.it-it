@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: e4f86ab3-bdb3-4e4a-9a9d-7ae7abdf4dc4
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: 9c2d62baacb116ff0417063e5287303a7b599f43
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+manager: kfile
+ms.openlocfilehash: 5370eb821ed018e451fbb3f1992ccbb3df22c834
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53357226"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56022993"
 ---
 # <a name="varp-function-report-builder-and-ssrs"></a>Funzione VarP (Generatore report e SSRS)
   Viene restituita la varianza della popolazione di tutti i valori numerici non Null specificati dall'espressione, valutata nel contesto dell'ambito specificato.  

@@ -11,15 +11,15 @@ f1_keywords:
 - sql12.dqs.kb.kbmatchingmap.f1
 - sql12.dqs.kb.kbmatchingpolicy.f1
 ms.assetid: cce77a06-ca31-47b6-8146-22edf001d605
-author: douglaslMS
-ms.author: douglasl
+author: leolimsft
+ms.author: lle
 manager: craigg
-ms.openlocfilehash: 37a65dc6a237803822f2d3214e7209f60e89d6bb
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: b5fff7c8804feab436271d60f3e5542b372ada60
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52539645"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56025352"
 ---
 # <a name="create-a-matching-policy"></a>Creazione di criteri di corrispondenza
   In questo argomento viene descritto come creare dei criteri di corrispondenza in una Knowledge Base di [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS). La preparazione del processo di corrispondenza in DQS si effettua eseguendo l'attività dei criteri di corrispondenza su dati di esempio. In tale attività vengono create e testate una o più regole di corrispondenza nei criteri, quindi viene pubblicata la Knowledge Base per rendere le regole di corrispondenza pubblicamente disponibili per l'uso. In una Knowledge Base può essere presente solo un set di criteri di corrispondenza, ma tali criteri possono contenere più regole di corrispondenza.  

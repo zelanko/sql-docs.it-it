@@ -14,18 +14,18 @@ helpviewer_keywords:
 ms.assetid: fa0d84e2-4c21-432c-aa7c-23517da75253
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 40cf4da099d5b9a9055b6fcd266c1f6169d8aaee
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 52d0771d07efddd949961761d90f241f146c0af4
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48086911"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56025832"
 ---
 # <a name="reporting-services-report-server-native-mode"></a>Reporting Services Report Server (Native Mode)
   Un server di report configurato per la modalità nativa viene eseguito come server applicazioni che fornisce tutte le funzionalità di elaborazione e gestione esclusivamente tramite i componenti di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].  
   
- È possibile usare [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] o Gestione report per gestire i report di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. Utilizzare Gestione configurazione [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] per gestire un server di report in modalità nativa.  
+ Per gestire report di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] sia Gestione report. Utilizzare Gestione configurazione [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] per gestire un server di report in modalità nativa.  
   
  Se il server di report è configurato per la modalità SharePoint, è necessario utilizzare le pagine di gestione contenuto nel sito di SharePoint per gestire report, origini dati condivise e altri elementi del server di report.  
   
@@ -78,7 +78,7 @@ ms.locfileid: "48086911"
   
 -   Bilanciamento delle richieste di elaborazione di report inviate al server tramite la pianificazione dell'elaborazione dei report stessi e l'indicazione di quali possono essere eseguiti su richiesta e quali vengono caricati dalla cache.  
   
- Le autorizzazioni per eseguire le attività di gestione vengono fornite in due ruoli predefiniti, ovvero **Amministratore sistema** e **Gestione contenuto**. Per gestire in modo efficiente contenuto di un server di report, è necessario che un utente sia assegnato a entrambi ruoli. Per altre informazioni su questi ruoli predefiniti, vedere [Ruoli e autorizzazioni &#40;Reporting Services&#41;](../security/roles-and-permissions-reporting-services.md).  
+ L'autorizzazione per eseguire attività di gestione vengono fornite tramite due ruoli predefiniti: **Amministratore di sistema** e **Content Manager**. Per gestire in modo efficiente contenuto di un server di report, è necessario che un utente sia assegnato a entrambi ruoli. Per altre informazioni su questi ruoli predefiniti, vedere [Ruoli e autorizzazioni &#40;Reporting Services&#41;](../security/roles-and-permissions-reporting-services.md).  
   
  Gli strumenti per la gestione dei contenuti del server di report includono [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] o Gestione report. [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] consente di impostare valori predefiniti e di abilitare funzionalità. Gestione report consente di concedere agli utenti l'accesso a elementi e operazioni del server di report, visualizzare e utilizzare report e altri tipi di contenuto, nonché visualizzare e utilizzare tutti gli elementi condivisi e le funzionalità di distribuzione del report.  
   

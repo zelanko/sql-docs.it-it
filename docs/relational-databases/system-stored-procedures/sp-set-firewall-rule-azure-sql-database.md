@@ -2,10 +2,8 @@
 title: sp_set_firewall_rule (Database SQL di Azure) | Microsoft Docs
 ms.custom: ''
 ms.date: 07/28/2016
-ms.prod: ''
-ms.prod_service: sql-database, sql-data-warehouse
+ms.service: sql-database
 ms.reviewer: ''
-ms.technology: system-objects
 ms.topic: language-reference
 f1_keywords:
 - sp_set_firewall_rule
@@ -22,12 +20,12 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 monikerRange: = azuresqldb-current || = azure-sqldw-latest || = sqlallproducts-allversions
-ms.openlocfilehash: c5ce548a1a1a982a363b9c79e7861f01474bdc18
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a096814c7d037fe517614e2701d5a821edcaa053
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47758409"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56024692"
 ---
 # <a name="spsetfirewallrule-azure-sql-database"></a>sp_set_firewall_rule (Database di SQL Azure)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-asdw-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-asdw-xxx-md.md)]
@@ -47,11 +45,11 @@ sp_set_firewall_rule [@name =] 'name',
 ## <a name="arguments"></a>Argomenti  
  Nella tabella seguente vengono illustrati gli argomenti supportati e le opzioni presenti nella [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
   
-|nome|Datatype|Description|  
+|nome|Datatype|Descrizione|  
 |----------|--------------|-----------------|  
-|[@name =] 'name'|**NVARCHAR (128)**|Nome utilizzato per descrivere e distinguere l'impostazione del firewall a livello di server.|  
-|[@start_ip_address =] 'start_ip_address'|**VARCHAR (50)**|L'indirizzo IP più basso nell'intervallo dell'impostazione del firewall a livello di server. Gli indirizzi IP uguali o maggiori di questo possono tentare la connessione al server del [!INCLUDE[ssSDS](../../includes/sssds-md.md)]. L'indirizzo IP più basso possibile è `0.0.0.0`.|  
-|[@end_ip_address =] 'end_ip_address'|**VARCHAR (50)**|L'indirizzo IP più alto nell'intervallo dell'impostazione del firewall a livello di server. Gli indirizzi IP uguali o minori di questo possono tentare la connessione al server del [!INCLUDE[ssSDS](../../includes/sssds-md.md)]. L'indirizzo IP più alto possibile è `255.255.255.255`.<br /><br /> Nota: Tentativi di connessione di Azure sono consentiti quando sia questo campo e il *start_ip_address* campo equals `0.0.0.0`.|  
+|[@name =] 'name'|**NVARCHAR(128)**|Nome utilizzato per descrivere e distinguere l'impostazione del firewall a livello di server.|  
+|[@start_ip_address =] 'start_ip_address'|**VARCHAR(50)**|L'indirizzo IP più basso nell'intervallo dell'impostazione del firewall a livello di server. Gli indirizzi IP uguali o maggiori di questo possono tentare la connessione al server del [!INCLUDE[ssSDS](../../includes/sssds-md.md)]. L'indirizzo IP più basso possibile è `0.0.0.0`.|  
+|[@end_ip_address =] 'end_ip_address'|**VARCHAR(50)**|L'indirizzo IP più alto nell'intervallo dell'impostazione del firewall a livello di server. Gli indirizzi IP uguali o minori di questo possono tentare la connessione al server del [!INCLUDE[ssSDS](../../includes/sssds-md.md)]. L'indirizzo IP più alto possibile è `255.255.255.255`.<br /><br /> Nota: Tentativi di connessione di Azure sono consentiti quando sia questo campo e il *start_ip_address* campo equals `0.0.0.0`.|  
   
 ## <a name="remarks"></a>Note  
  I nomi delle impostazioni del firewall a livello di server devono essere univoci. Se il nome dell'impostazione fornito per la stored procedure esiste già nella tabella delle impostazioni del firewall, gli indirizzi IP iniziale e finale verranno aggiornati. In caso contrario, verrà creata una nuova impostazione del firewall a livello di server.  
@@ -85,5 +83,5 @@ exec sp_set_firewall_rule N'Example setting 1', '0.0.0.2', '0.0.0.4';
   
 ## <a name="see-also"></a>Vedere anche  
  [Firewall del Database SQL di Azure](https://azure.microsoft.com/documentation/articles/sql-database-firewall-configure/)   
- [Procedura: configurare le impostazioni del Firewall (Database SQL di Azure)](https://azure.microsoft.com/documentation/articles/sql-database-configure-firewall-settings/)   
+ [Procedura: Configurare le impostazioni del Firewall (Database SQL di Azure)](https://azure.microsoft.com/documentation/articles/sql-database-configure-firewall-settings/)   
  [Sys. firewall_rules &#40;Database SQL di Azure&#41;](../../relational-databases/system-catalog-views/sys-firewall-rules-azure-sql-database.md)

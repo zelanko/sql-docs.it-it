@@ -12,15 +12,15 @@ helpviewer_keywords:
 - create,data quality project
 - data quality project,create
 ms.assetid: 19c52d2b-d28e-4449-ab59-5fe0dc326cd9
-author: douglaslMS
-ms.author: douglasl
+author: leolimsft
+ms.author: lle
 manager: craigg
-ms.openlocfilehash: 3f5cec577ba63659e33aa564d5ae4225f8594429
-ms.sourcegitcommit: af1d9fc4a50baf3df60488b4c630ce68f7e75ed1
+ms.openlocfilehash: dff9b07ddf0bd5062c1e10a2d31fe2fe1fa5c50f
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/06/2018
-ms.locfileid: "51029998"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56020172"
 ---
 # <a name="create-a-data-quality-project"></a>Creare un progetto Data Quality
   In questo argomento viene descritto come creare un progetto Data Quality mediante il [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)]. Un progetto Data Quality viene utilizzato per eseguire l'attività di pulizia o di corrispondenza in [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS).  
@@ -51,13 +51,13 @@ ms.locfileid: "51029998"
   
     4.  Nell'area **Seleziona attività** fare clic su un'attività che si desidera eseguire utilizzando questo progetto Data Quality:  
   
-        -   **Pulizia**: selezionare questa attività per pulire i dati di origine.  
+        -   **Pulizia**: Selezionare questa attività per pulire i dati di origine.  
   
-        -   **Corrispondenza**: selezionare questa attività per eseguire una corrispondenza. Questa attività è disponibile solo se la Knowledge Base selezionata per il progetto Data Quality contiene i criteri di corrispondenza.  
+        -   **Corrispondenza**: Selezionare questa attività per eseguire la corrispondenza. Questa attività è disponibile solo se la Knowledge Base selezionata per il progetto Data Quality contiene i criteri di corrispondenza.  
   
 4.  Fare clic su **Crea** per creare un progetto Data Quality.  
   
-##  <a name="FollowUp"></a> Completamento: fasi successive alla creazione di un progetto Data Quality  
+##  <a name="FollowUp"></a> Completamento: Dopo aver creato un progetto Data Quality  
  Dopo avere creato un progetto Data Quality, viene visualizzata una procedura guidata che è possibile utilizzare per eseguire l'attività selezionata: pulizia o corrispondenza. Per altre informazioni sulle attività di pulizia e corrispondenza, vedere [Pulizia dei dati](../../2014/data-quality-services/data-cleansing.md) e [Corrispondenza di dati](../../2014/data-quality-services/data-matching.md).  
   
   

@@ -1,5 +1,5 @@
 ---
-title: 'Esercitazione: Creazione di un report tabella semplice (Generatore report) | Microsoft Docs'
+title: 'Esercitazione: Creazione di un Report tabella semplice (Generatore Report) | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
@@ -10,15 +10,15 @@ ms.topic: conceptual
 ms.assetid: d9e30521-f8ae-4c45-89c3-d40727f622f7
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: 438ea8d61900a78c6522cf8897b960598d8d3976
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: fa3c6f3f6d1a0870fca88871ad3effe642f547e6
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48189111"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56020432"
 ---
-# <a name="tutorial-creating-a-basic-table-report-report-builder"></a>Esercitazione: Creazione di un report tabella semplice (Generatore report)
+# <a name="tutorial-creating-a-basic-table-report-report-builder"></a>Esercitazione: Creazione di un Report tabella semplice (Generatore Report)
   In questa esercitazione viene illustrato come creare un report tabella semplice basato sui dati di vendita di esempio. Nell'illustrazione seguente viene mostrato il report che verrà creato.  
   
  ![rs_CreateBasicReportTutorial](../../2014/tutorials/media/rs-createbasicreporttutorial.gif "rs_CreateBasicReportTutorial")  
@@ -50,7 +50,7 @@ ms.locfileid: "48189111"
   
 7.  [Esportare il Report](#Export)  
   
- Il tempo stimato per il completare l'esercitazione è di 20 minuti.  
+ Tempo previsto per il completamento di questa esercitazione: 20 minuti.  
   
 ## <a name="requirements"></a>Requisiti  
  Per altre informazioni sui requisiti, vedere [Prerequisiti per le esercitazioni &#40;Generatore report&#41;](../reporting-services/report-builder-tutorials.md).  
@@ -191,7 +191,7 @@ ms.locfileid: "48189111"
   
 6.  Scegliere **Avanti**.  
   
-##  <a name="Subtotals"></a> 1 giorno. Aggiungere le righe Subtotale e Totale in Creazione guidata tabella  
+##  <a name="Subtotals"></a> 1d. Aggiungere le righe Subtotale e Totale in Creazione guidata tabella  
  Dopo avere creato dei gruppi, è possibile aggiungere e formattare delle righe nelle quali visualizzare valori di aggregazione per i campi. È possibile scegliere se mostrare tutti i dati o lasciare che sia l'utente a espandere e comprimere in modo interattivo i dati raggruppati.  
   
 #### <a name="to-add-subtotals-and-totals"></a>Per aggiungere subtotali e totali  
@@ -216,7 +216,7 @@ ms.locfileid: "48189111"
   
 4.  Scegliere **Avanti**.  
   
-##  <a name="Style"></a> 1E. Scegliere uno stile in Creazione guidata tabella  
+##  <a name="Style"></a> 1e. Scegliere uno stile in Creazione guidata tabella  
  Uno stile specifica lo stile del carattere, il set di colori e uno stile del bordo.  
   
 #### <a name="to-specify-a-table-style"></a>Per specificare uno stile della tabella  
@@ -229,7 +229,7 @@ ms.locfileid: "48189111"
   
 3.  Scegliere **Fine**.  
   
- La tabella viene aggiunta all'area di progettazione. La tabella dispone di 5 colonne e 5 righe. Nel riquadro Gruppi di righe sono visualizzati tre gruppi di righe: SalesDate, Subcategory e Details. I dati dettaglio costituiscono tutti i dati recuperati dalla query del set di dati.  
+ La tabella viene aggiunta all'area di progettazione. La tabella dispone di 5 colonne e 5 righe. Nel riquadro gruppi di righe vengono visualizzati tre gruppi di righe: SalesDate, Subcategory e Details. I dati dettaglio costituiscono tutti i dati recuperati dalla query del set di dati.  
   
 ##  <a name="FormatCurrency"></a> 2. Formattare i dati come valuta  
  Per impostazione predefinita, i dati di riepilogo del campo Sales riportano un numero generico. È possibile formattare tale numero come valuta. Attivare o disattivare **Stili segnaposto** per visualizzare caselle di testo formattate e testo segnaposto come valori di esempio.  

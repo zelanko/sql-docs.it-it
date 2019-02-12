@@ -18,13 +18,13 @@ helpviewer_keywords:
 ms.assetid: 4a65162c-33de-485e-8fd3-2bd6bff8bf8d
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 2c6971b8ef85aba6202af111b114e16db137eab4
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: ef5793aa278d9d1a1b9a10f45a68dd5a97442f69
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48091381"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56019132"
 ---
 # <a name="databaselogontimeout-property-wmi-msreportserverconfigurationsetting"></a>Proprietà DatabaseLogonTimeout (MSReportServer_ConfigurationSetting WMI)
   Specifica il numero di secondi di attesa prima che un tentativo di accesso al database del server di report abbia esito negativo. Il valore **0** indica un tempo di attesa indefinito. Sola lettura.  

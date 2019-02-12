@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 32be8fcc-e87d-4c45-a644-dff45776a981
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: 67e1fe559e8bbb4c9c484671737223766c4a0554
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+manager: kfile
+ms.openlocfilehash: 525eccd52a0a680304533ac73bb852f4f5c4e74c
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53358153"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56017672"
 ---
 # <a name="report-builder-ssrs"></a>Generatore report (SSRS)
   Generatore report è un ambiente per la creazione di report destinato a utenti aziendali che preferiscono lavorare nell'ambiente [!INCLUDE[msCoName](../../includes/msconame-md.md)] Office. Quando si progetta un report, si specifica dove ottenere i dati, quali dati ottenere e come visualizzarli. Quando si esegue il report, Elaborazione report utilizza tutte le informazioni specificate, recupera i dati e li combina con il layout per generare il report.  

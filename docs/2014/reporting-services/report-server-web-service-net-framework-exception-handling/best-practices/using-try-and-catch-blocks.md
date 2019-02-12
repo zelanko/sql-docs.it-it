@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: a7a9ef53-e3b6-4bf7-81f3-d85615954e6f
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 217ae6ee4fb118b6d0f9388c71c451200624faa5
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 3284b833fa6d16cca8c833fc572afb2ef07e3d66
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48121731"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56021636"
 ---
 # <a name="using-try-and-catch-blocks"></a>Uso di blocchi try e catch
   Dopo avere limitato le richieste non valide al server di report aggiungendo istruzioni condizionali al codice, è necessario fornire funzionalità adeguate di gestione delle eccezioni tramite l'utilizzo di blocchi try/catch. Questa tecnica fornisce un ulteriore livello di protezione dalle richieste non valide. Se una richiesta al server di report viene inserita in un blocco try e tale richiesta comporta la generazione di un'eccezione nel server di report, l'eccezione viene intercettata nel blocco catch, impedendo l'arresto imprevisto dell'applicazione. Dopo che l'eccezione è stata intercettata, è possibile utilizzarla per indicare all'utente di eseguire un'operazione diversa o semplicemente per visualizzare un messaggio descrittivo in cui viene indicato che si è verificato un errore. È quindi possibile utilizzare un blocco finally per la pulizia delle risorse. Idealmente, è consigliabile creare un piano generale di gestione delle eccezioni per evitare la duplicazione non necessaria dei blocchi try/catch.  

@@ -1,30 +1,29 @@
 ---
-title: 'Lezione 3: Accesso al servizio Web | Microsoft Docs'
+title: "Lezione 3: L'accesso al servizio Web | Microsoft Docs"
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 ms.assetid: c3e4c198-ab35-4548-9471-1b4e6b6e5dfd
-author: craigg-msft
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: c93def5590b634d2fb3f8374b5fb875fd2d740eb
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+author: markingmyname
+ms.author: maghan
+manager: kfile
+ms.openlocfilehash: 09671f8880f9f7745359961d9c6c126a893d26a7
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48108301"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56024832"
 ---
-# <a name="lesson-3-accessing-the-web-service"></a>Lezione 3: Accesso al servizio Web
-  Dopo avere aggiunto al progetto un riferimento al servizio Web ReportServer, il passaggio successivo consiste nel creare un'istanza della classe proxy del servizio Web. Per accedere ai metodi del servizio Web, è quindi possibile eseguire una chiamata dalla classe proxy. Quando l'applicazione chiama questi metodi, il proxy generato dal codice della classe [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] gestisce le comunicazioni tra l'applicazione e il servizio Web.  
+# <a name="lesson-3-accessing-the-web-service"></a>Lezione 3: L'accesso al servizio Web
+  Dopo avere aggiunto al progetto un riferimento al servizio Web ReportServer, il passaggio successivo consiste nel creare un'istanza della classe proxy del servizio Web. Per accedere ai metodi del servizio Web, è quindi possibile eseguire una chiamata dalla classe proxy. Quando l'applicazione chiama questi metodi, il codice della classe proxy generato da [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] gestisce le comunicazioni tra l'applicazione e il servizio Web.  
   
- In primo luogo, si creerà un'istanza della classe proxy del servizio Web, <xref:ReportService2010.ReportingService2010>. quindi verrà utilizzata la classe proxy per chiamare il metodo <xref:ReportService2010.ReportingService2010.GetProperties%2A> del servizio Web. La chiamata del metodo verrà utilizzata per recuperare il nome e la descrizione di uno dei report di esempio, ovvero Company Sales.  
+ Verrà innanzitutto creata un'istanza della classe proxy del servizio Web, ovvero <xref:ReportService2010.ReportingService2010>, quindi verrà utilizzata la classe proxy per chiamare il metodo <xref:ReportService2010.ReportingService2010.GetProperties%2A> del servizio Web. La chiamata del metodo verrà utilizzata per recuperare il nome e la descrizione di uno dei report di esempio, ovvero Company Sales.  
   
 > [!NOTE]  
->  Quando si accede a un servizio Web in esecuzione in [!INCLUDE[ssExpress](../includes/ssexpress-md.md)] with Advanced Services, è necessario aggiungere "$SQLExpress" al percorso "ReportServer". Esempio:  
+>  Quando si accede a un servizio Web in esecuzione in [!INCLUDE[ssExpress](../includes/ssexpress-md.md)] with Advanced Services, è necessario aggiungere "$SQLExpress" al percorso "ReportServer". Ad esempio:  
 >   
 >  `http://<Server Name>/reportserver$sqlexpress/reportservice2010.asmx"`  
   
@@ -114,14 +113,14 @@ ms.locfileid: "48108301"
   
 4.  Salvare la soluzione.  
   
- Il codice di esempio di questa procedura dettagliata Usa il <xref:ReportService2010.ReportingService2010.GetProperties%2A> metodo del servizio Web per recuperare le proprietà dei report di esempio Company Sales 2012. Il <xref:ReportService2010.ReportingService2010.GetProperties%2A> metodo accetta due argomenti: il nome del report per il quale si desidera recuperare informazioni sulle proprietà e una matrice di **Property []** gli oggetti che contiene i nomi delle proprietà i cui valori da recuperare. Il metodo restituisce anche una matrice di **Property []** gli oggetti che contiene i nomi e valori delle proprietà specificate nell'argomento properties.  
+ Nel codice di esempio dell'esercitazione viene utilizzato il metodo <xref:ReportService2010.ReportingService2010.GetProperties%2A> del servizio Web per recuperare le proprietà del report di esempio Company Sales 2012. Il <xref:ReportService2010.ReportingService2010.GetProperties%2A> metodo accetta due argomenti: il nome del report per il quale si desidera recuperare informazioni sulle proprietà e una matrice di **Property []** gli oggetti che contiene i nomi delle proprietà i cui valori da recuperare. Il metodo restituisce anche una matrice di **Property []** gli oggetti che contiene i nomi e valori delle proprietà specificate nell'argomento properties.  
   
 > [!NOTE]  
 >  Se si fornisce un oggetto vuoto **Property []** matrice per l'argomento di proprietà, vengono restituite tutte le proprietà disponibili.  
   
  Nel codice dell'esempio precedente viene utilizzato il metodo <xref:ReportService2010.ReportingService2010.GetProperties%2A> per restituire il nome e la descrizione del report di esempio Company Sales 2012, quindi viene utilizzato un ciclo `foreach` per scrivere le proprietà e i valori nella console.  
   
- Per altre informazioni sulla creazione e utilizzo di una classe proxy per il servizio Web ReportServer, vedere [creazione di Proxy del servizio Web](../reporting-services/report-server-web-service/net-framework/creating-the-web-service-proxy.md).  
+ Per ulteriori informazioni sulla creazione e l'utilizzo di una classe proxy per il servizio Web ReportServer, vedere [Creating the Web Service Proxy](../reporting-services/report-server-web-service/net-framework/creating-the-web-service-proxy.md).  
   
 ## <a name="see-also"></a>Vedere anche  
  [Lezione 4: Esecuzione dell'applicazione &#40;VB, VC&#35;&#41;](../../2014/tutorials/lesson-4-running-the-application-vb-vcsharp.md)   

@@ -4,22 +4,21 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: 03fe44c5-6452-4ed0-95f6-9682670c0f52
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 7bcc33e35ff0cdfcd46a73f939083ea23091673d
-ms.sourcegitcommit: 3cd6068f3baf434a4a8074ba67223899e77a690b
+manager: kfile
+ms.openlocfilehash: de65fb7a85154f607cd8f266faec4621cdc41476
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/19/2018
-ms.locfileid: "49462047"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56025222"
 ---
-# <a name="lesson-2-adding-mining-models-to-the-bike-buyer-mining-structure"></a>Lezione 2: Aggiunta di modelli di data mining alla struttura di data mining Bike Buyer
-  In questa lezione verranno aggiunti due modelli di data mining alla struttura di data mining Bike Buyer creata [lezione 1: creazione della struttura di Data Mining Bike Buyer](../../2014/tutorials/lesson-1-creating-the-bike-buyer-mining-structure.md). Uno di questi modelli consentirà di esplorare i dati e l'altro di creare stime.  
+# <a name="lesson-2-adding-mining-models-to-the-bike-buyer-mining-structure"></a>Lezione 2: Aggiunta di modelli di Data Mining alla struttura di Data Mining Bike Buyer
+  In questa lezione verranno aggiunti due modelli di data mining alla struttura di data mining Bike Buyer creata [lezione 1: Creazione della struttura di Data Mining Bike Buyer](../../2014/tutorials/lesson-1-creating-the-bike-buyer-mining-structure.md). Uno di questi modelli consentirà di esplorare i dati e l'altro di creare stime.  
   
  Per esplorare la modalità di potenziali clienti possono essere suddivise base alle rispettive caratteristiche, si creerà un modello di data mining basato sul [algoritmo Microsoft Clustering](../../2014/analysis-services/data-mining/microsoft-clustering-algorithm.md). In una lezione successiva verrà esaminato il modo in cui questo algoritmo individua cluster di clienti che condividono caratteristiche simili. È possibile riscontrare, ad esempio, che determinati clienti tendono a vivere nelle stesse aree, a usare la bicicletta per recarsi al lavoro e ad avere una formazione scolastica analoga. Questi cluster possono essere utilizzati per comprendere più a fondo la correlazione tra vari clienti e queste informazioni possono essere utilizzate come base per una strategia di marketing rivolta a un particolare segmento di clientela.  
   
@@ -275,6 +274,6 @@ ADD MINING MODEL [<mining model name>]
  Nella lezione successiva verranno elaborati i modelli e la struttura di data mining.  
   
 ## <a name="next-lesson"></a>Lezione successiva  
- [Lezione 3: Elaborazione della struttura di data mining Bike Buyer](../../2014/tutorials/lesson-3-processing-the-bike-buyer-mining-structure.md)  
+ [Lezione 3: L'elaborazione della struttura di Data Mining Bike Buyer](../../2014/tutorials/lesson-3-processing-the-bike-buyer-mining-structure.md)  
   
   

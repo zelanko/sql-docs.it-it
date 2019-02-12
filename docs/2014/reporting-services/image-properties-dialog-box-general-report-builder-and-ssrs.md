@@ -12,20 +12,20 @@ f1_keywords:
 - sql12.rtp.rptdesigner.pictureproperties.general.f1
 ms.assetid: c2218b93-f7fe-46ef-995f-d7dadf9752ec
 author: maggiesmsft
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: afd91dda1a6a4694980d0976f1ceae9db928c36a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.author: maghan
+manager: kfile
+ms.openlocfilehash: cbbe4fe5917419bc07cef81629c7b2e38b7cff15
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48108431"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56019637"
 ---
 # <a name="image-properties-dialog-box-general-report-builder-and-ssrs"></a>Finestra di dialogo Proprietà immagine, Generale (Generatore report e SSRS)
   Selezionare **Generale** nella finestra di dialogo **Proprietà immagine** per aggiungere un'immagine, modificare il nome predefinito dell'immagine e aggiungere il testo della descrizione comando.  
   
 ## <a name="options"></a>Opzioni  
- **Nome**  
+ **Name**  
  Digitare un nome per l'elemento. Il nome deve essere univoco nel report. Per impostazione predefinita, viene assegnato un nome generale, ad esempio Immagine1 o Immagine2.  
   
  **Descrizione comando**  
@@ -58,7 +58,7 @@ ms.locfileid: "48108431"
   
 ## <a name="see-also"></a>Vedere anche  
  [Esempi di espressioni &#40;Generatore report e SSRS&#41;](report-design/expression-examples-report-builder-and-ssrs.md)   
- [Immagini &#40;Report e SSRS&#41;](report-design/images-report-builder-and-ssrs.md)   
+ [Immagini &#40;Generatore report e SSRS&#41;](report-design/images-report-builder-and-ssrs.md)   
  [Guida di Generatore report per finestre di dialogo, riquadri e procedure guidate](../../2014/reporting-services/report-builder-help-for-dialog-boxes-panes-and-wizards.md)  
   
   
