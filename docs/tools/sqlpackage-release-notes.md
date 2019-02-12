@@ -10,21 +10,44 @@ ms.topic: conceptual
 author: pensivebrian
 ms.author: broneill
 manager: kenvh
-ms.openlocfilehash: 69b3b5c9574578b286b882b7d2125b0bb984759b
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: f9fe0558b169acea58bb98a4f9a07267549aa58f
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52413749"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56013002"
 ---
 # <a name="sqlpackage-release-notes"></a>note sulla versione di Sqlpackage
 
 **[Scaricare la versione più recente](sqlpackage-download.md)**
 
+## <a name="sqlpackage-181"></a>sqlpackage 18.1
+
+Data di rilascio: 1 febbraio 2019  
+Compilazione 15.0.4316.1 
+
+La versione include le seguenti funzionalità e correzioni:
+
+- Aggiunta del supporto per le regole di confronto UTF8.
+- Le prestazioni correggere utilizzare lo strumento di stima di cardinalità legacy per le query engineering inverse.
+- Abilitare gli indici columnstore non cluster su un viste indicizzate.
+- Risolto un problema di prestazioni del confronto schema significativo durante la generazione di uno script.
+- Risolto la logica di rilevamento di deviazione di schema per ignorare alcune sessioni xevent.
+- Ordinamento di tabelle grafi importazione fisso.
+- Correzione di tabelle esterne con autorizzazioni per oggetti di esportazione.
+- Spostare in .NET Core 2.2 
+- Usare l'archiviazione di memoria supportata per confronto schema in .NET Core.
+
+Questa versione include le compilazioni cross-platform preview di sqlpackage destinate a .NET Core 2.2, e possono eseguire in macOS e Linux. Questa versione di anteprima presenta i seguenti problemi noti:
+
+- Non sono supportati i collaboratori di compilazione e distribuzione.
+- File con estensione dacpac e bacpac meno recenti che usano la serializzazione dei dati json non sono supportati.
+- Riferimento .dacpacs (ad esempio master.dacpac) non possono essere risolti a causa di problemi con i sistemi di file tra maiuscole e minuscole.
+  - Soluzione alternativa consiste nel convertire in maiuscolo il nome del file di riferimento (ad esempio MASTER. FILE BACPAC).
 ## <a name="sqlpackage-180"></a>sqlpackage 18.0
 
 Data di rilascio: 24 ottobre 2018  
-Build: 15.0.4200.1 
+Compilazione 15.0.4200.1 
 
 La versione include le seguenti funzionalità e correzioni:
 
@@ -42,7 +65,7 @@ La versione include le seguenti funzionalità e correzioni:
 ## <a name="sqlpackage-178"></a>sqlpackage 17.8
 
 Data di rilascio: 22 giugno 2018  
-Build: 14.0.4079.2  
+Compilazione 14.0.4079.2  
 
 La versione include le correzioni seguenti:
 
@@ -54,7 +77,7 @@ La versione include le correzioni seguenti:
 ## <a name="sqlpackage-1741"></a>sqlpackage 17.4.1
 
 Data di rilascio: 25 gennaio 2018  
-Build: 14.0.3917.1
+Compilazione 14.0.3917.1
 
 La versione include le correzioni seguenti:
 
@@ -67,7 +90,7 @@ La versione include le correzioni seguenti:
 ## <a name="sqlpackage-1740"></a>sqlpackage 17.4.0
 
 Data di rilascio: 12 dicembre 2017  
-Build: 14.0.3881.1
+Compilazione 14.0.3881.1
 
 La versione include le correzioni seguenti:
 
@@ -76,22 +99,3 @@ La versione include le correzioni seguenti:
 - Aggiunto /DiagnosticsFile:"C:\Temp\sqlpackage.log" parametro della riga di comando per specificare un percorso di file per salvare le informazioni di diagnostica.
 - Parametro della riga di comando /Diagnostics aggiunto per registrare le informazioni di diagnostica nella console.
 
-## <a name="sqlpackage-on-macos-and-linux-net-core-preview"></a>Sqlpackage in macOS e Linux .NET Core (anteprima)
-
-Data di rilascio: 15 novembre 2018  
-Build: 15.0.4240.1
-
-Questa versione contiene la build di anteprima lo sviluppo multipiattaforma di sqlpackage destinata a .NET Core 2.1 e possa eseguire in macOS e Linux. 
-
-La versione include le correzioni seguenti:
-
-- Spostare in .NET Core 2.1 
-- Supporto per i tipi CLR UDT, inclusi i tipi UDT CLR SQL: SqlHierarchyId, SqlGeometry e SqlGeography.
-
-Questa versione è un'anteprima anticipata con problemi noti seguenti:
-
-- Il parametro /p:CommandTimeout è hardcoded su 120.
-- Non sono supportati i collaboratori di compilazione e distribuzione.
-- File con estensione dacpac e bacpac meno recenti che usano la serializzazione dei dati json non sono supportati.
-- Riferimento .dacpacs (ad esempio master.dacpac) non possono essere risolti a causa di problemi con i sistemi di file tra maiuscole e minuscole.
-  - Soluzione alternativa consiste nel convertire in maiuscolo il nome del file di riferimento (ad esempio MASTER. FILE BACPAC).

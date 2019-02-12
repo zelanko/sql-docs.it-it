@@ -99,7 +99,7 @@ ms.locfileid: "55044487"
   
 |Impostazione di Gestione configurazione|Impostazione di sistema|Descrizione|  
 |-----------------------------------|--------------------|-----------------|  
-|**Numero di cui incrementare nuove regole business**|**BusinessRuleDefaultPriorityIncrement**|Nell'area funzionale [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] **System Administration** functional area, the number the priority of each new business rule is incremented by. Il valore predefinito è **10**.|  
+|**Numero di cui incrementare nuove regole business**|**BusinessRuleDefaultPriorityIncrement**|Nell'area funzionale **Amministrazione sistema** di [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)], numero in base a cui viene incrementata la priorità di ogni nuova regola business. Il valore predefinito è **10**.|  
 |**Numero di membri a cui applicare regole business**|**BusinessRuleRealtimeMemberCount**|Nell'area funzionale [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] **Explorer** functional area, the maximum number of members in the grid to apply business rules to. Nel [!INCLUDE[ssMDSXLS](../includes/ssmdsxls-md.md)], numero massimo di membri nel foglio di lavoro attivo a cui applicare le regole di business. Il valore predefinito è **10000**.|  
 |**Regola business eseguita per prima dallo script utente**|**BusinessRuleUserScriptExecuteFirst**|In genere l'azione della regola business viene eseguita con la sequenza "Valore predefinito", "Modifica valore", "Convalida", "Azione esterna", "Script azione definito dall'utente". Se questa impostazione viene modificata e impostata su **1**, "Script azione definita dall'utente" diventa il primo passaggio nell'esecuzione dell'azione della regola business. Questa è un'impostazione nascosta. Il valore predefinito è **0**.|  
   
@@ -127,7 +127,7 @@ ms.locfileid: "55044487"
   
 |Impostazione di Gestione configurazione|Impostazione di sistema|Descrizione|  
 |-----------------------------------|--------------------|-----------------|  
-||**SecurityMemberProcessInterval**|Nell'area funzionale [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] **User and Group Permissions** functional area, the frequency, in seconds, that user and group permissions set on the **Hierarchy Members** tab are applied. Il valore predefinito è **3600** secondi (60 minuti).|  
+||**SecurityMemberProcessInterval**|Nell'area funzionale **Autorizzazioni utenti e gruppi** di [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)], frequenza in secondi con cui vengono applicate le autorizzazioni di utenti e gruppi impostate in **Membri gerarchia**. Il valore predefinito è **3600** secondi (60 minuti).|  
 
 ##  <a name="Performance"></a> Impostazioni delle prestazioni  
 

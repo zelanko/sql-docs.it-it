@@ -200,13 +200,13 @@ Se è stato eseguito lo strumento e le proprietà del file del percorso di desti
 
 | Eccezione e messaggi | Causa | 
 | --- | --- |
-| org.apache.hadoop.security.AccessControlException<br>SIMPLE authentication is not enabled. Available:[TOKEN, KERBEROS] | Per core-site.xml la proprietà hadoop.security.authentication non è impostata su "KERBEROS".|
-|javax.security.auth.login.LoginException<br>Client not found in Kerberos database  (6) - CLIENT_NOT_FOUND |    L'entità servizio dell'amministratore specificata non esiste nell'area di autenticazione specificata in core-site.xml.|
-| javax.security.auth.login.LoginException<br> Checksum failed |L'entità servizio dell'amministratore esiste, ma la password non è valida. |
-| Native config name: C:\Windows\krb5.ini<br>Loaded from native config | Questa messaggio indica che krb5LoginModule di Java ha rilevato configurazioni client personalizzate nel computer. Controllare le impostazioni client personalizzate perché possono essere la causa del problema. |
+| org.apache.hadoop.security.AccessControlException<br>SIMPLE l'autenticazione non è abilitata. Available:[TOKEN, KERBEROS] | Per core-site.xml la proprietà hadoop.security.authentication non è impostata su "KERBEROS".|
+|javax.security.auth.login.LoginException<br>Client non trovato nel database Kerberos (6) - CLIENT_NOT_FOUND |    L'entità servizio dell'amministratore specificata non esiste nell'area di autenticazione specificata in core-site.xml.|
+| javax.security.auth.login.LoginException<br> Checksum non è riuscita |L'entità servizio dell'amministratore esiste, ma la password non è valida. |
+| Native config name: C:\Windows\krb5.ini<br>Caricamento dalla configurazione nativa | Questa messaggio indica che krb5LoginModule di Java ha rilevato configurazioni client personalizzate nel computer. Controllare le impostazioni client personalizzate perché possono essere la causa del problema. |
 | javax.security.auth.login.LoginException<br>java.lang.IllegalArgumentException<br>Illegal principal name admin_user@CONTOSO.COM: org.apache.hadoop.security.authentication.util.KerberosName$NoMatchingRule: No rules applied to admin_user@CONTOSO.COM | Aggiungere la proprietà "hadoop.security.auth_to_local" a core-site.xml con le regole appropriate in base al cluster Hadoop. |
-| java.net.ConnectException<br>Attempting to access external filesystem at URI: hdfs://10.193.27.230:8020<br>Call From IAAS16981207/10.107.0.245 to 10.193.27.230:8020 failed on connection exception | L'autenticazione per il KDC è riuscita, ma non è stato possibile accedere al nodo del nome Hadoop. Controllare l'IP e la porta del nodo del nome. Verificare che il firewall sia disabilitato in Hadoop. |
-| java.io.FileNotFoundException<br>File does not exist: /test/data.csv |    L'autenticazione è riuscita, ma il percorso specificato non esiste. Controllare il percorso o eseguire prima un test con la radice "/" . |
+| java.net.ConnectException<br>Tentativo di accesso esterno del file System nell'URI: hdfs://10.193.27.230:8020<br>Call From IAAS16981207/10.107.0.245 to 10.193.27.230:8020 failed on connection exception | L'autenticazione per il KDC è riuscita, ma non è stato possibile accedere al nodo del nome Hadoop. Controllare l'IP e la porta del nodo del nome. Verificare che il firewall sia disabilitato in Hadoop. |
+| java.io.FileNotFoundException<br>File inesistente: /test/data.csv |    L'autenticazione è riuscita, ma il percorso specificato non esiste. Controllare il percorso o eseguire prima un test con la radice "/" . |
 
 ## <a name="debugging-tips"></a>Suggerimenti per il debug
 

@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: v-kaywon
 ms.author: v-kaywon
 manager: mbarwin
-ms.openlocfilehash: 531286af24740e37e125708a4b874b6aba27c3dc
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 5c82c32922712b377fd732b6745b1761e9f32a82
+ms.sourcegitcommit: afc0c3e46a5fec6759fe3616e2d4ba10196c06d1
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52403426"
+ms.lasthandoff: 02/08/2019
+ms.locfileid: "55890002"
 ---
 # <a name="using-always-encrypted-with-the-php-drivers-for-sql-server"></a>Uso di Always Encrypted con i driver PHP per SQL Server
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -157,7 +157,7 @@ Gli esempi seguenti illustrano il filtraggio dei dati basata su valori crittogra
  -   Quando si esegue una query con parametri associati, il driver PHP determina automaticamente il tipo SQL per l'utente, a meno che l'utente specifica in modo esplicito il tipo SQL quando si usa il driver SQLSRV.
  -   Tutti i valori stampati dal programma saranno in testo non crittografato, perché il driver decrittografa in modo trasparente i dati recuperati dalle colonne SSN e BirthDate.
  
-Nota: Le query possono eseguire confronti di uguaglianza nelle colonne crittografate a solo se la crittografia è deterministica. Per altre informazioni, vedere [Selezione della crittografia deterministica o casuale](../../relational-databases/security/encryption/always-encrypted-database-engine.md#selecting--deterministic-or-randomized-encryption).
+Nota: Le query possono eseguire confronti di uguaglianza nelle colonne crittografate solo se la crittografia è deterministica. Per altre informazioni, vedere [Selezione della crittografia deterministica o casuale](../../relational-databases/security/encryption/always-encrypted-database-engine.md#selecting--deterministic-or-randomized-encryption).
 
 SQLSRV:
 ```
@@ -255,7 +255,7 @@ A differenza di ODBC Driver for SQL Server, l'abilitazione di Always Encrypted a
 
 Per ridurre il numero di chiamate a un archivio chiavi master della colonna per decrittografare le chiavi di crittografia di colonna (CEK), il driver memorizza nella cache il testo non crittografato dei Cek in memoria. Dopo aver ricevuto la CEK che lo crittografato (chiave ECEK) dai metadati del database, il driver ODBC tenta innanzitutto di trovare CEK crittografato corrispondente al valore della chiave crittografato nella cache. Il driver chiama l'archivio chiavi contenente la chiave CMK solo se non riesce a trovare il testo non crittografato corrispondente CEK nella cache.
 
-Nota: In ODBC Driver for SQL Server, le voci nella cache vengono eliminate dopo un timeout di due ore. Questo comportamento significa che per una determinata chiave ECEK, il driver contatta l'archivio chiavi una sola volta durante il ciclo di vita dell'applicazione o ogni due ore, a seconda del valore è minore.
+Nota: In ODBC Driver for SQL Server, non vengono rimosse le voci nella cache dopo un timeout di due ore. Questo comportamento significa che per una determinata chiave ECEK, il driver contatta l'archivio chiavi una sola volta durante il ciclo di vita dell'applicazione o ogni due ore, a seconda del valore è minore.
 
 ## <a name="working-with-column-master-key-stores"></a>Uso degli archivi delle chiavi master delle colonne
 
@@ -269,7 +269,7 @@ Per il Driver Microsoft 5.3.0 per PHP per SQL Server, sono supportati solo i Pro
 
 Il Driver ODBC per SQL Server in Windows include un provider di archivio chiavi master di colonna predefiniti per Store il certificato di Windows, denominato `MSSQL_CERTIFICATE_STORE`. (Questo provider non disponibile in macOS o Linux). A questo provider, la chiave CMK è archiviata localmente nel computer client e alcuna configurazione aggiuntiva per l'applicazione non è necessario usarlo con il driver. Tuttavia, l'applicazione deve avere accesso al certificato e la relativa chiave privata nell'archivio. Per altre informazioni, vedere [Creare e archiviare chiavi master della colonna (Always Encrypted)](../../relational-databases/security/encryption/create-and-store-column-master-keys-always-encrypted.md).
 
-### <a name="using-azure-key-vault"></a>Con Azure Key Vault
+### <a name="using-azure-key-vault"></a>Uso di EKM con Azure Key Vault
 
 Azure Key Vault offre un modo per archiviare le chiavi di crittografia, le password e altri segreti tramite Azure e può essere utilizzato per archiviare le chiavi per Always Encrypted. Il Driver ODBC per SQL Server (versione 17 e versioni successive) include un provider dell'archivio chiavi master predefinito per Azure Key Vault. Configurazione di Azure Key Vault di gestire le opzioni di connessione seguente: `KeyStoreAuthentication`, `KeyStorePrincipalId`, e `KeyStoreSecret`. 
  -   `KeyStoreAuthentication` può assumere uno dei due valori stringa possibili: `KeyVaultPassword` e `KeyVaultClientSecret`. Questi valori consentono di controllare il tipo di credenziali di autenticazione con le altre due parole chiave.
@@ -288,23 +288,23 @@ SQLSRV:
 
 Utilizzo di un account Azure Active Directory:
 ```
-$connectionInfo = array("Database"=>$databaseName, "UID"=>$uid, "PWD"=>$pwd, "ColumnEncryption"=>"Enabled", "KeyStoreAuthentication"=>"KeyVaultPassword", "KeyStorePrincipalId"=>$AADUsername, "KeyStoreAuthentication"=>$AADPassword);
+$connectionInfo = array("Database"=>$databaseName, "UID"=>$uid, "PWD"=>$pwd, "ColumnEncryption"=>"Enabled", "KeyStoreAuthentication"=>"KeyVaultPassword", "KeyStorePrincipalId"=>$AADUsername, "KeyStoreSecret"=>$AADPassword);
 $conn = sqlsrv_connect($server, $connectionInfo);
 ```
 Utilizzo di un ID client dell'applicazione Azure e un segreto:
 ```
-$connectionInfo = array("Database"=>$databaseName, "UID"=>$uid, "PWD"=>$pwd, "ColumnEncryption"=>"Enabled", "KeyStoreAuthentication"=>"KeyVaultClientSecret", "KeyStorePrincipalId"=>$applicationClientID, "KeyStoreAuthentication"=>$applicationClientSecret);
+$connectionInfo = array("Database"=>$databaseName, "UID"=>$uid, "PWD"=>$pwd, "ColumnEncryption"=>"Enabled", "KeyStoreAuthentication"=>"KeyVaultClientSecret", "KeyStorePrincipalId"=>$applicationClientID, "KeyStoreSecret"=>$applicationClientSecret);
 $conn = sqlsrv_connect($server, $connectionInfo);
 ```
 
 PDO_SQLSRV: Utilizzo di un account Azure Active Directory:
 ```
-$connectionInfo = "Database = $databaseName; ColumnEncryption = Enabled; KeyStoreAuthentication = KeyVaultPassword; KeyStorePrincipalId = $AADUsername; KeyStoreAuthentication = $AADPassword;";
+$connectionInfo = "Database = $databaseName; ColumnEncryption = Enabled; KeyStoreAuthentication = KeyVaultPassword; KeyStorePrincipalId = $AADUsername; KeyStoreSecret = $AADPassword;";
 $conn = new PDO("sqlsrv:server = $server; $connectionInfo", $uid, $pwd);
 ```
 Utilizzo di un ID client dell'applicazione Azure e un segreto:
 ```
-$connectionInfo = "Database = $databaseName; ColumnEncryption = Enabled; KeyStoreAuthentication = KeyVaultClientSecret; KeyStorePrincipalId = $applicationClientID; KeyStoreAuthentication = $applicationClientSecret;";
+$connectionInfo = "Database = $databaseName; ColumnEncryption = Enabled; KeyStoreAuthentication = KeyVaultClientSecret; KeyStorePrincipalId = $applicationClientID; KeyStoreSecret = $applicationClientSecret;";
 $conn = new PDO("sqlsrv:server = $server; $connectionInfo", $uid, $pwd);
 ```
 
