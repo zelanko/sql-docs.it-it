@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 5cf38068-65d1-4fe8-81f3-a404d8fbc663
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: 0162c6e640c13e743d3ad816e7fcb3286758f635
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: ae8fddf7e008c1c97c30c18deb2d8aec60b77415
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48222251"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56009583"
 ---
 # <a name="browse-for-report-parts-and-set-a-default-folder-report-builder-and-ssrs"></a>Ricerca di parti del report e impostazione di una cartella predefinita (Generatore report e SSRS)
   Il modo più semplice per creare un report consiste nell'aggiungere parti del report esistenti, ad esempio tabelle e grafici, al report in uso dalla raccolta di parti del report. Quando una parte di report viene aggiunta al report in uso, vengono aggiunti anche tutti gli elementi necessari affinché funzioni. Ad esempio, qualsiasi parte di report che consenta la visualizzazione dei dati dipende da un set di dati, ovvero una query e una connessione a un'origine dati. Dopo aver aggiunto la parte di report al report in uso, è possibile modificarla in base alle necessità.  
@@ -65,9 +65,9 @@ ms.locfileid: "48222251"
   
 ## <a name="see-also"></a>Vedere anche  
  [Verificare o gli aggiornamenti Turn Off &#40;Report e SSRS&#41;](../check-for-updates-or-turn-updates-off-report-builder-and-ssrs.md)   
- [Parti di report &#40;Report e SSRS&#41;](../report-parts-report-builder-and-ssrs.md)   
- [Parti del report e set di dati in Generatore Report](../report-data/report-parts-and-datasets-in-report-builder.md)   
+ [Parti del report &#40;Generatore report e SSRS&#41;](../report-parts-report-builder-and-ssrs.md)   
+ [Parti del report e set di dati in Generatore report](../report-data/report-parts-and-datasets-in-report-builder.md)   
  [Risolvere i problemi di parti del Report &#40;Report e SSRS&#41;](../troubleshoot-report-parts-report-builder-and-ssrs.md)   
- [Pubblicare e ripubblicare parti del Report &#40;Report e SSRS&#41;](publish-and-republish-report-parts-report-builder-and-ssrs.md)  
+ [Pubblicare e ripubblicare parti del report &#40;Generatore report e SSRS&#41;](publish-and-republish-report-parts-report-builder-and-ssrs.md)  
   
   

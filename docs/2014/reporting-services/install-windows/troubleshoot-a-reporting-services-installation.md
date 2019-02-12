@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: e2536f7f-d90c-4571-9ffd-6bbfe69018d6
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: b017b37228702adddf3cf50a8f9fb125b28074a9
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+manager: kfile
+ms.openlocfilehash: 9205097462a2c9bcc08334e4d83716a224d3b786
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53350261"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56043332"
 ---
 # <a name="troubleshoot-a-reporting-services-installation"></a>Risoluzione dei problemi di installazione di Reporting Services
   Se non è possibile installare [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] a causa di errori restituiti durante l'installazione, utilizzare le indicazioni fornite in questo argomento per risolvere le condizioni che costituiscono la causa più probabile degli errori di installazione.  
@@ -113,7 +113,7 @@ ms.locfileid: "53350261"
         Get-SPServiceInstance -all |where {$_.TypeName -like "SQL Server Reporting*"} | Start-SPServiceInstance  
         ```  
   
-2.  Verificare i [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] servizio Mostra lo stato "**avviato**" nella pagina: Amministrazione centrale SharePoint 2010 -> "**Gestione applicazioni**"->"**Gestisci servizi nel Server**"  
+2.  Verificare i [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] servizio Mostra lo stato "**avviato**" nella pagina: SharePoint 2010 Central Administration -> "**Application Management**" -> "**Manage Services on Server**"  
   
 ###  <a name="bkmk_cmdlets_not_recognized"></a> I cmdlet di PowerShell per Reporting Services non sono disponibili e i comandi non sono riconosciuti  
  **Descrizione:** quando si tenta di eseguire un cmdlet di PowerShell per [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], viene visualizzato un messaggio di errore simile al seguente:  

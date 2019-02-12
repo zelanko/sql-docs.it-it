@@ -20,12 +20,12 @@ ms.assetid: b280dd96-c80f-4c51-bc06-a88d42174acb
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 3164d17169e0a90416c8131825c3d61b1ff5fe16
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 62a061632b5f598932fe29499519d7eb897c78a6
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51677590"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56041742"
 ---
 # <a name="conditional-expressions-xquery"></a>Espressioni condizionali (XQuery)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -40,7 +40,7 @@ else
   <expression3>  
 ```  
   
- In base al valore booleano effettivo di `expression1`, viene valutata `expression2` oppure `expression3`. Esempio:  
+ In base al valore booleano effettivo di `expression1`, viene valutata `expression2` oppure `expression3`. Ad esempio:  
   
 -   Se l'espressione di test `expression1` restituisce una sequenza vuota, il risultato è False.  
   
@@ -75,7 +75,7 @@ if ( sql:variable("@v")="FirstName" ) then
 ')  
 ```  
   
- Risultato:  
+ Questo è il risultato:  
   
 ```  
 <FirstName>fname</FirstName>  
@@ -107,7 +107,7 @@ WHERE ProductModelID = 19
   
  Nella query precedente, la condizione nel **se** espressione controlla se sono presenti più di due elementi figlio <`Features`>. In caso affermativo, restituisce l'elemento `\<there-is-more/>` nel risultato.  
   
- Risultato:  
+ Questo è il risultato:  
   
 ```  
 <Product ProductModelID="19" ProductModelName="Mountain 100">  
@@ -142,7 +142,7 @@ FROM Production.ProductModel
 where ProductModelID=7  
 ```  
   
- Risultato:  
+ Questo è il risultato:  
   
 ```  
 <WorkCenterLocation LocationID="30" />  

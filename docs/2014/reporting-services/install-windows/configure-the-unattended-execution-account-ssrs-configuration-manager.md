@@ -18,25 +18,25 @@ helpviewer_keywords:
 ms.assetid: 4e50733e-bd8c-4bf6-8379-98b1531bb9ca
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 16a92441dd7e3088b6be0f8235f6719b6bc7cdb2
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 22810ae8acf19782997245a3746c70f95628fd1b
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48192531"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56012072"
 ---
 # <a name="configure-the-unattended-execution-account-ssrs-configuration-manager"></a>Configurare l'account di esecuzione automatica (Gestione configurazione SSRS)
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] offre un account speciale da usare per l'elaborazione automatica dei report e per l'invio di richieste di connessione in rete. L'account viene utilizzato nei modi seguenti:  
   
--   Inviare richieste di connessione in rete per i report che utilizzano l'autenticazione del database oppure connettersi a origini dati del report esterne che non richiedono né utilizzano l'autenticazione. Per altre informazioni, vedere [specificare le credenziali e informazioni di connessione per origini dati del Report](../../integration-services/connection-manager/data-sources.md) nella documentazione Online di SQL Server.  
+-   Inviare richieste di connessione in rete per i report che utilizzano l'autenticazione del database oppure connettersi a origini dati del report esterne che non richiedono né utilizzano l'autenticazione. Per altre informazioni, vedere [Specificare le credenziali e le informazioni sulla connessione per le origini dati del report](../../integration-services/connection-manager/data-sources.md) nella documentazione online di SQL Server.  
   
 -   Recuperare file di immagine esterni utilizzati nel report. Se si desidera utilizzare un file di immagine che non è accessibile tramite l'accesso anonimo, sarà possibile configurare l'account per l'esecuzione automatica dei report e concedere a tale account l'autorizzazione di accesso al file desiderato.  
   
  L'esecuzione automatica del report si riferisce a qualsiasi processo di esecuzione del report avviato da un evento che può essere sia un evento determinato dalla pianificazione, sia un evento di aggiornamento dei dati, piuttosto che da una richiesta dell'utente. Il server di report utilizza l'account per l'esecuzione automatica del report per accedere al computer che ospita l'origine dei dati esterna. Tale account è necessario perché le credenziali dell'account del servizio del server di report non vengono mai utilizzate per la connessione ad altri computer.  
   
 > [!IMPORTANT]  
->  La configurazione di questo account è facoltativa. Se tuttavia si sceglie di non configurarlo, si disporrà di un minor numero di opzioni per la connessione ad alcune origini dei dati e potrebbe risultare impossibile recuperare file di immagine da computer remoti. Se si configura l'account, sarà necessario mantenerlo aggiornato. In particolare, se si consente la scadenza delle password oppure le informazioni dell'account vengono modificate in Active Directory, alla successiva elaborazione di un report verrà visualizzato l'errore seguente: "Accesso non riuscito (rsLogonFailed) Errore durante l'accesso: nome utente sconosciuto o password errata". La corretta manutenzione dell'account per l'elaborazione automatica dei report è essenziale, anche se non si intende recuperare immagini esterne o inviare richieste di connessione a computer esterni. Se si configura l'account ma successivamente ci si accorge che non viene utilizzato, sarà possibile eliminarlo per evitare di svolgere le attività di manutenzione di routine per gli account.  
+>  La configurazione di questo account è facoltativa. Se tuttavia si sceglie di non configurarlo, si disporrà di un minor numero di opzioni per la connessione ad alcune origini dei dati e potrebbe risultare impossibile recuperare file di immagine da computer remoti. Se si configura l'account, sarà necessario mantenerlo aggiornato. In particolare, se si consente la scadenza di una password o se si modificano le informazioni sull'account in Active Directory, si verificherà l'errore seguente alla successiva elaborazione di un report: "Accesso non riuscito (rsLogonFailed). Errore di accesso: nome utente sconosciuto o password non valida". La corretta manutenzione dell'account per l'elaborazione automatica dei report è essenziale, anche se non si intende recuperare immagini esterne o inviare richieste di connessione a computer esterni. Se si configura l'account ma successivamente ci si accorge che non viene utilizzato, sarà possibile eliminarlo per evitare di svolgere le attività di manutenzione di routine per gli account.  
   
 ## <a name="how-to-configure-the-account"></a>Come configurare l'account  
  È necessario utilizzare un account utente di dominio. Affinché possa essere utilizzato per lo scopo previsto, questo account deve essere diverso da quello utilizzato per l'esecuzione del servizio del server di report. Utilizzare un account con autorizzazioni minime (è sufficiente l'accesso in sola lettura con autorizzazioni di connessione di rete) e accesso limitato ai soli computer in cui risiedono le origini dati e le risorse utilizzate dal server di report. Per altre informazioni, vedere [Gestione configurazione Reporting Services &#40;modalità nativa&#41;](../../sql-server/install/reporting-services-configuration-manager-native-mode.md).  
@@ -54,7 +54,7 @@ ms.locfileid: "48192531"
   
 1.  Creare o selezionare un account di dominio che abbia accesso ai computer e ai server che forniscono dati o servizi a un server di report. È consigliabile utilizzare un account che disponga di autorizzazioni limitate, ad esempio autorizzazioni di sola lettura.  
   
-2.  Aprire un prompt dei comandi: nel menu **Start** scegliere **Esegui**, digitare **cmd**e quindi fare clic su **OK**.  
+2.  Aprire un prompt dei comandi: Nel **avviare** menu, fare clic su **eseguito**, tipo **cmd**e quindi fare clic su **OK**.  
   
 3.  Digitare il comando seguente per configurare l'account su un'istanza del server di report locale:  
   

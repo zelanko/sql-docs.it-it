@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: 89fddca5-bd96-4128-9072-5348d1b6e02c
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: d2eecd40de68a6678b3011d15fc13f7cf9757022
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 42be2520e6961dcf990635a18fcc7d237876b869
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48111871"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56010342"
 ---
 # <a name="text-based-query-designer-user-interface-report-builder"></a>Interfaccia utente di Progettazione query basata su testo (Generatore report)
   La finestra Progettazione query basata su testo consente di specificare una query tramite il linguaggio di query supportato dall'origine dati, eseguire la query e visualizzare i risultati in fase di progettazione. È possibile specificare più istruzioni [!INCLUDE[tsql](../../../includes/tsql-md.md)] , la sintassi della query o dei comandi per estensioni per l'elaborazione dati personalizzata e query che vengono specificate come espressioni. Poiché non esegue la pre-elaborazione della query e può gestire qualsiasi tipo di sintassi della query, la finestra Progettazione query basata su testo rappresenta lo strumento di progettazione query predefinito per molti tipi di origine dati.  
@@ -37,12 +37,12 @@ ms.locfileid: "48111871"
 ## <a name="text-based-query-designer-toolbar"></a>Barra degli strumenti di Progettazione query basata su testo  
  La finestra Progettazione query basata su testo include una sola barra degli strumenti per tutti i tipi di comandi. Nella tabella seguente sono elencati tutti i pulsanti contenuti nella barra degli strumenti con la rispettiva funzione.  
   
-|Button|Description|  
+|Button|Descrizione|  
 |------------|-----------------|  
 |**Modifica come testo**|Consente di passare dalla finestra Progettazione query basata su testo alla finestra Progettazione query con interfaccia grafica e viceversa. Le finestre Progettazione query con interfaccia grafica non sono supportate da tutti i tipi di origine dati.|  
 |**Importa**|Consente di importare una query esistente da un file o un report. Sono supportati solo i tipi di file con estensione sql e rdl.|  
 |![Esecuzione della query](../../analysis-services/media/rsqdicon-run.gif "Esecuzione della query")|Consente di eseguire la query e di visualizzare il set di risultati nel riquadro Risultati.|  
-|**Tipo di comando**|Selezionare **Text**, **StoredProcedure**o **TableDirect**. Se una stored procedure dispone di parametri, facendo clic su **Esegui** sulla barra degli strumenti viene visualizzata la finestra di dialogo **Definisci parametri query** ed è possibile inserire i valori desiderati.<br /><br /> Nota: se una stored procedure restituisce più set di risultati, solo il primo set viene usato per popolare il set di dati.|  
+|**Tipo di comando**|Selezionare **Text**, **StoredProcedure**o **TableDirect**. Se una stored procedure dispone di parametri, facendo clic su **Esegui** sulla barra degli strumenti viene visualizzata la finestra di dialogo **Definisci parametri query** ed è possibile inserire i valori desiderati.<br /><br /> Nota: Se una stored procedure restituisce più set di risultati, solo il primo set è utilizzato per popolare il set di dati.|  
   
 ### <a name="command-type-text"></a>Tipo di comando Text  
  Quando si crea un set di dati di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , per impostazione predefinita viene visualizzata la finestra Progettazione query relazionale. Per passare alla finestra Progettazione query basata su testo, fare clic sul pulsante **Modifica come testo** sulla barra degli strumenti. La finestra Progettazione query basata su testo include due riquadri, il riquadro Query e il riquadro Risultati. Nella figura seguente vengono etichettati tutti i riquadri.  

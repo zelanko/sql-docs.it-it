@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 5b1c403d-6afd-44c8-b5f6-5ecff2a29a45
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: d0d844f9f58b22a2982c19ca0347bd75f41da1a0
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 5967303b875ed7bc2ddaba8d1c77c169d0025d04
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48106907"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56015652"
 ---
 # <a name="countrows-function-report-builder-and-ssrs"></a>Funzione CountRows (Generatore report e SSRS)
   Restituisce il numero di righe nell'ambito specificato, incluse le righe con valori Null.  
@@ -36,13 +36,13 @@ CountRows(scope, recursive)
  (`String`) Nome di un set di dati, area dati o gruppo che contiene gli elementi del report da conteggiare.  
   
  *ricorsivi*  
- (**Enumerated Type**) Facoltativo. `Simple` (impostazione predefinita) o `RdlRecursive`. Specifica se eseguire l'aggregazione in modo ricorsivo.  
+ (**Enumerated Type**) Facoltativo. `Simple` (valore predefinito) o `RdlRecursive`. Specifica se eseguire l'aggregazione in modo ricorsivo.  
   
 ## <a name="return-type"></a>Tipo restituito  
- Restituisce un `Integer`.  
+ Restituisce un valore `Integer`.  
   
 ## <a name="remarks"></a>Note  
- `CountRows` conteggia tutte le righe nell'ambito specificato, incluse le righe con valori null.  
+ `CountRows` conteggia tutte le righe nell'ambito specificato, incluse le righe con valori Null.  
   
  Il valore di *scope* non può essere un'espressione e deve fare riferimento all'ambito corrente o a un ambito di contenuto.  
   
@@ -58,9 +58,9 @@ CountRows(scope, recursive)
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Uso delle espressioni nei report di &#40;Report e SSRS&#41;](expression-uses-in-reports-report-builder-and-ssrs.md)   
+ [Utilizzo delle espressioni nei report &#40;Generatore report e SSRS&#41;](expression-uses-in-reports-report-builder-and-ssrs.md)   
  [Esempi di espressioni &#40;Generatore report e SSRS&#41;](expression-examples-report-builder-and-ssrs.md)   
  [Tipi di dati nelle espressioni &#40;Generatore report e SSRS&#41;](expressions-report-builder-and-ssrs.md)   
- [Ambito di espressioni per totali, aggregazioni e raccolte predefinite &#40;Report e SSRS&#41;](expression-scope-for-totals-aggregates-and-built-in-collections.md)  
+ [Ambito di espressioni per totali, aggregazioni e raccolte predefinite &#40;Generatore report e SSRS&#41;](expression-scope-for-totals-aggregates-and-built-in-collections.md)  
   
   

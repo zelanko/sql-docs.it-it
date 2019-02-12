@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 4fe513da-f3c5-479c-9fec-8662b91a0d6d
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: 7b41acb95312ac9675d711c0c02817e58dfe2106
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 552ca2c2d53ae073ab50c8db64c185a5d0bd1675
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48221711"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56042852"
 ---
 # <a name="specifying-paths-to-external-items-report-builder-and-ssrs"></a>Specifica di percorsi di elementi esterni (Generatore report e SSRS)
   Nelle proprietà degli elementi del report è possibile specificare percorsi che facciano riferimento a elementi esterni al file di definizione del report archiviati in un server di report, ad esempio report drill-through, sottoreport e file di immagini.  
@@ -42,11 +42,11 @@ ms.locfileid: "48221711"
   
     -   **Nel server di report:** Un percorso completo inizia da **/** la cartella Home, ad esempio /Report/TuttiSottoreport/Sottoreport1.  
   
-    -   **In un sito di SharePoint** È necessario specificare il nome del report in un'espressione, includendo l'URL completo dell'elemento e l'estensione di file rdl, Ad esempio, `="http://server/site/library/folder/Report1.rdl"`.  
+    -   **In un sito di SharePoint** È necessario specificare il nome del report in un'espressione, includendo l'URL completo dell'elemento e l'estensione di file rdl, Ad esempio `="http://server/site/library/folder/Report1.rdl"`.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Aggiungere un'immagine esterna &#40;Report e SSRS&#41;](add-an-external-image-report-builder-and-ssrs.md)   
- [Aggiungere un sottoreport e parametri &#40;Generatore report e SSRS&#41;](add-a-subreport-and-parameters-report-builder-and-ssrs.md)   
+ [Aggiungere un'immagine esterna &#40;Generatore report e SSRS&#41;](add-an-external-image-report-builder-and-ssrs.md)   
+ [Aggiungere un sottoreport e di parametri &#40;Generatore report e SSRS&#41;](add-a-subreport-and-parameters-report-builder-and-ssrs.md)   
  [Aggiungere un'azione drill-through a un report &#40;Generatore report e SSRS&#41;](add-a-drillthrough-action-on-a-report-report-builder-and-ssrs.md)  
   
   

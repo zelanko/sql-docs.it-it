@@ -13,18 +13,18 @@ helpviewer_keywords:
 ms.assetid: 60b85dd8-b4fb-4ad9-be6a-e7c89ac076fe
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: dd75a21625eb3ab31c9b1655e0f85943470cee54
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 014a08a2ce19192835117d1fca44bcd0e67f4eef
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48117465"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56011948"
 ---
 # <a name="mhtml-device-information-settings"></a>Impostazioni relative alle informazioni sul dispositivo MHTML
   Nella tabella seguente sono elencate le impostazioni relative alle informazioni sul dispositivo per il rendering dei report in formato MHTML (archivio Web).  
   
-|Impostazione|valore|  
+|Impostazione|Value|  
 |-------------|-----------|  
 |**JavaScript**|Indica se JavaScript è supportato nel report visualizzabile.|  
 |**OutlookCompat**|Indica se eseguire il rendering con metadati aggiuntivi che comportano una visualizzazione migliore del report in Outlook, Il valore predefinito è `true`.|  
@@ -33,8 +33,8 @@ ms.locfileid: "48117465"
   
 ## <a name="see-also"></a>Vedere anche  
  <xref:ReportExecution2005.ReportExecutionService.Render%2A>   
- [Il passaggio di impostazioni informazioni dispositivo a estensioni per il Rendering](report-server-web-service/net-framework/passing-device-information-settings-to-rendering-extensions.md)   
- [Personalizzare i parametri di estensione per il rendering in RSReportServer.Config](customize-rendering-extension-parameters-in-rsreportserver-config.md)   
+ [Passaggio delle impostazioni relative alle informazioni sul dispositivo alle estensioni per il rendering](report-server-web-service/net-framework/passing-device-information-settings-to-rendering-extensions.md)   
+ [Personalizzare i parametri di estensione per il rendering in RSReportServer.config.](customize-rendering-extension-parameters-in-rsreportserver-config.md)   
  [Riferimento tecnico &#40;SSRS&#41;](../../2014/reporting-services/technical-reference-ssrs.md)  
   
   

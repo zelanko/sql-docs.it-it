@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: 57381914-3106-4dc4-acd4-7ed5b565cca6
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 16ba4327d2ca82e2c85c104b1617fdea68849654
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: bb19d703480532c66ff06de8c6885779652f8385
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48165321"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56013612"
 ---
 # <a name="delete-an-item-management-studio"></a>Eliminare un elemento (Management Studio)
   Se si è connessi a un'istanza del server di report in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)], è possibile eliminare definizioni di ruolo e pianificazioni condivise, ma non è possibile eliminare report, modelli o altri elementi. Per eliminare contenuto del server di report, utilizzare Gestione report. In alternativa, se il server di report è configurato per la modalità integrata SharePoint, utilizzare le caratteristiche di gestione di elementi nella raccolta di SharePoint in cui è presente il contenuto.  

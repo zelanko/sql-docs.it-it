@@ -17,13 +17,13 @@ helpviewer_keywords:
 ms.assetid: 58e61636-88a2-4338-ae5f-3dd210aee887
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 16a1851a46b6602bc9d92d5c7e0111ece8701d43
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 5ad01c88f549346a598a54cc0addae92d222b271
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48222511"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56010943"
 ---
 # <a name="configure-and-manage-encryption-keys-ssrs-configuration-manager"></a>Configurare e gestire chiavi di crittografia (Gestione configurazione SSRS)
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] usa le chiavi di crittografia per proteggere le credenziali e le informazioni di connessione archiviate in un database del server di report. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]supporta la crittografia tramite una combinazione di chiavi pubbliche, private e simmetriche utilizzate per proteggere dati sensibili. La chiave simmetrica viene creata durante l'inizializzazione del server di report al momento dell'installazione o della configurazione dello stesso e viene utilizzata dal server di report per crittografare dati sensibili archiviati in tale server. Le chiavi pubblica e privata vengono create dal sistema operativo e sono utilizzate per proteggere la chiave simmetrica. Per ogni istanza del server di report che contiene dati sensibili in un database del server di report viene creata una coppia di chiavi pubblica e privata.  
@@ -45,23 +45,23 @@ ms.locfileid: "48222511"
   
 -   Aggiunta o rimozione di un'istanza del server di report da una distribuzione del server di report con scalabilità orizzontale in cui più server di report condividono sia un unico database del server di report sia la chiave simmetrica che consente la crittografia reversibile per quel database.  
   
-## <a name="in-this-section"></a>Argomenti della sezione  
- [Inizializzare un Server di Report &#40;Gestione configurazione SSRS&#41;](ssrs-encryption-keys-initialize-a-report-server.md)  
+## <a name="in-this-section"></a>In questa sezione  
+ [Inizializzare un server di report &#40;Gestione configurazione SSRS&#41;](ssrs-encryption-keys-initialize-a-report-server.md)  
  Illustra come vengono create le chiavi di crittografia.  
   
  [Eseguire il backup e il ripristino delle chiavi di crittografia di Reporting Services](ssrs-encryption-keys-back-up-and-restore-encryption-keys.md)  
  Illustra come eseguire il backup delle chiavi di crittografia e ripristinarle per eseguire il recupero o la migrazione di un'installazione del server di report.  
   
- [Store dati crittografati di Report Server &#40;Gestione configurazione SSRS&#41;](ssrs-encryption-keys-store-encrypted-report-server-data.md)  
+ [Archiviare i dati crittografati del server di report &#40;Gestione configurazione SSRS &#41;](ssrs-encryption-keys-store-encrypted-report-server-data.md)  
  Descrive la crittografia in un server di report.  
   
- [Eliminare e ricreare chiavi di crittografia &#40;Gestione configurazione SSRS&#41;](ssrs-encryption-keys-delete-and-re-create-encryption-keys.md)  
+ [Eliminare e ricreare chiavi di crittografia &#40;Gestione configurazione SSRS &#41;](ssrs-encryption-keys-delete-and-re-create-encryption-keys.md)  
  Illustra come sostituire una chiave simmetrica con una nuova versione e come iniziare nuovamente nel caso in cui non sia possibile convalidare le chiavi simmetriche.  
   
- [Aggiungere e rimuovere le chiavi di crittografia per la distribuzione con scalabilità orizzontale &#40;Gestione configurazione SSRS&#41;](add-and-remove-encryption-keys-for-scale-out-deployment.md)  
+ [Aggiungere e rimuovere le chiavi di crittografia per una distribuzione con scalabilità orizzontale &#40;Gestione configurazione SSRS &#41;](add-and-remove-encryption-keys-for-scale-out-deployment.md)  
  Illustra come aggiungere e rimuovere le chiavi di crittografia per controllare quali server di report fanno parte di una distribuzione con scalabilità orizzontale.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Store dati crittografati di Report Server &#40;Gestione configurazione SSRS&#41;](ssrs-encryption-keys-store-encrypted-report-server-data.md)  
+ [Archiviare i dati crittografati del server di report &#40;Gestione configurazione SSRS &#41;](ssrs-encryption-keys-store-encrypted-report-server-data.md)  
   
   

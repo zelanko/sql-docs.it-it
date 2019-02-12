@@ -19,13 +19,13 @@ helpviewer_keywords:
 ms.assetid: 16c21dec-6b46-4497-9a0c-1b0f2b6ab8fc
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: deac736b28aa9b50c20d3a831685f1f2be62590c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 2ad59a4389e8a214e12a80eef6e81127a8958562
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48167691"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56012442"
 ---
 # <a name="report-server-web-service"></a>servizio Web ReportServer
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] consente di accedere alle funzionalità complete del server di report tramite il servizio Web ReportServer. Il servizio Web ReportServer è un servizio Web XML con un'API SOAP. Il servizio usano SOAP su HTTP e funge da interfaccia di comunicazione tra i programmi client e il server di report. Il servizio Web fornisce due endpoint, uno per l'esecuzione dei report e uno per la gestione dei report, con metodi che espongono le funzionalità del server di report e consentono di creare strumenti personalizzati per qualsiasi parte del ciclo di vita del report.  
@@ -42,7 +42,7 @@ ms.locfileid: "48167691"
  ![Opzioni di sviluppo del servizio Web ReportServer](../../../2014/reporting-services/media/reportserviceswebserviceprog-01.gif "Opzioni di sviluppo del servizio Web ReportServer")  
 Opzioni di sviluppo dei servizi Web disponibili in Reporting Services  
   
-## <a name="in-this-section"></a>Argomenti della sezione  
+## <a name="in-this-section"></a>In questa sezione  
  [Metodi del servizio Web di Report Server](../report-server-web-service/methods/report-server-web-service-methods.md)  
  Vengono descritti i metodi e le caratteristiche di ogni servizio Web ReportServer.  
   
@@ -56,7 +56,7 @@ Opzioni di sviluppo dei servizi Web disponibili in Reporting Services
  Sono incluse informazioni sullo sviluppo di applicazioni e servizi Web che chiamano l'API SOAP di Reporting Services.  
   
  [Eseguire lo script con l'utilità rs.exe e il servizio Web](../tools/script-with-the-rs-exe-utility-and-the-web-service.md)  
- Viene fornita una panoramica sull'ambiente di scripting [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].  
+ Viene fornita una panoramica sull'ambiente di scripting [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .  
   
  [Riferimento tecnico &#40;SSRS&#41;](../../../2014/reporting-services/technical-reference-ssrs.md)  
  È incluso materiale di riferimento specifico dei metodi dei servizi Web ReportServer e dei tipi complessi corrispondenti.  

@@ -17,19 +17,19 @@ helpviewer_keywords:
 ms.assetid: f3f5d85f-9359-4508-bc5a-7f78a3cf7421
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: fae03147c4e5364ae7c41590c88c9b6791a6370c
-ms.sourcegitcommit: 08b3de02475314c07a82a88c77926d226098e23f
+manager: kfile
+ms.openlocfilehash: 75123271b73c166f87be0ab1a83242736fa966ca
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49119988"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56009705"
 ---
 # <a name="report-server-web-service-endpoints"></a>Endpoint del servizio Web ReportServer
   Il servizio Web ReportServer fornisce diversi endpoint per la gestione di un server di report e per l'esecuzione e la navigazione dei report.  
   
 ## <a name="the-management-endpoints"></a>Endpoint di gestione  
- Per la gestione degli oggetti in un server di report sono disponibili tre endpoint, <xref:ReportService2005>, <xref:ReportService2006> e <xref:ReportService2010>. L'endpoint <xref:ReportService2005> viene utilizzato per la gestione degli oggetti in un server di report configurato per la modalità nativa. L'endpoint <xref:ReportService2006> viene utilizzato per la gestione degli oggetti in un server di report configurato per la modalità integrata SharePoint. Il <xref:ReportService2010> endpoint unisce le funzionalità di <xref:ReportService2005> e <xref:ReportService2006> e può gestire gli oggetti in un server di report configurati per la modalità nativa o la modalità integrata SharePoint.  
+ Per la gestione degli oggetti in un server di report sono disponibili tre endpoint, <xref:ReportService2005>, <xref:ReportService2006> e <xref:ReportService2010>. L'endpoint <xref:ReportService2005> viene utilizzato per la gestione degli oggetti in un server di report configurato per la modalità nativa. L'endpoint <xref:ReportService2006> viene utilizzato per la gestione degli oggetti in un server di report configurato per la modalità integrata SharePoint. L'endpoint <xref:ReportService2010> unisce le funzionalità di <xref:ReportService2005> e <xref:ReportService2006> e può gestire gli oggetti in un server di report configurati per la modalità nativa o per la modalità integrata SharePoint.  
   
 > [!IMPORTANT]  
 >  Quando un server di report è configurato per la modalità integrata SharePoint, le API di <xref:ReportService2005> restituiscono un errore `rsOperationNotSupportedSharePointMode`. Se il server di report è configurato per la modalità nativa, le API di <xref:ReportService2006> restituiscono un errore `rsOperationNotSupportedNativeMode`. In modo analogo, se le API specifiche della modalità in <xref:ReportService2010> vengono utilizzate in modalità non previste, restituiranno gli errori corrispondenti.  
@@ -65,9 +65,9 @@ http://<Server Name>/<Site Name>/_vti_bin/ReportServer/ReportExecution2005.asmx?
 ## <a name="sharepoint-proxy-endpoints"></a>Endpoint proxy di SharePoint  
  Quando un server di report è configurato per la modalità integrata SharePoint ed è stato installato il componente aggiuntivo [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)], nel server SharePoint viene installato un set di endpoint proxy. Gli endpoint proxy rappresentano l'API principale per lo sviluppo di soluzioni di report quando un server di report è configurato per la modalità integrata SharePoint. Quando lo sviluppo viene eseguito negli endpoint proxy, il componente aggiuntivo [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] gestisce lo scambio di credenziali tra il server SharePoint e il server di report nella modalità di autenticazione Account attendibile. Quando lo sviluppo viene eseguito negli endpoint del server di report, l'applicazione chiamante deve gestire lo scambio di credenziali nella modalità di autenticazione Account attendibile. Nella tabella seguente sono elencati gli endpoint installati con il componente aggiuntivo [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)].  
   
-|Endpoint proxy|Description|  
+|Endpoint proxy|Descrizione|  
 |--------------------|-----------------|  
-|<xref:ReportService2006>|Fornisce le API per la gestione di un server di report configurato per la modalità integrata SharePoint. **Nota:** questo endpoint è deprecato in [!INCLUDE[ssKilimanjaro](../../../includes/sskilimanjaro-md.md)].|  
+|<xref:ReportService2006>|Fornisce le API per la gestione di un server di report configurato per la modalità integrata SharePoint. **Nota:**  Questo endpoint è deprecato in [!INCLUDE[ssKilimanjaro](../../../includes/sskilimanjaro-md.md)].|  
 |<xref:ReportService2010>|Fornisce le API per la gestione di un server di report configurato per la modalità nativa o la modalità integrata SharePoint.|  
 |<xref:ReportExecution2005>|Fornisce le API per l'esecuzione e la navigazione dei report.|  
 |<xref:ReportServiceAuthentication>|Fornisce le API per l'autenticazione degli utenti rispetto a un server di report quando l'applicazione Web SharePoint è configurata per l'autenticazione basata su form.|  

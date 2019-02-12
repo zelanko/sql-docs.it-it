@@ -19,13 +19,13 @@ f1_keywords:
 ms.assetid: 4be5b463-3ce2-483d-a3c6-dae752cb543e
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: 49bcb746b5f6b1312609ead4dedadba44a180855
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 4733ba204671ec3ed691e77626fb08861b7e6763
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48139614"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56043392"
 ---
 # <a name="report-and-group-variables-collections-references-report-builder-and-ssrs"></a>Riferimenti a raccolte di variabili di report e di gruppo (Generatore report e SSRS)
   Quando un calcolo complesso viene utilizzato più volte nelle espressioni di un report, è possibile creare una variabile che può essere di report o di gruppo. I nomi delle variabili devono essere univoci in un report.  
@@ -53,12 +53,12 @@ ms.locfileid: "48139614"
     > [!NOTE]  
     >  Non è possibile controllare quando l'elaboratore di report inizializza una variabile o valuta un'espressione che aggiorna una variabile. L'ordine di esecuzione per l'inizializzazione delle variabili non è definito.  
   
- Per altre informazioni sulle sessioni, vedere [anteprima dei report in Generatore Report](../report-builder/previewing-reports-in-report-builder.md).  
+ Per altre informazioni, vedere [Anteprima di report in Generatore report](../report-builder/previewing-reports-in-report-builder.md).  
   
 ## <a name="group-variables"></a>Variabili di gruppo  
  Utilizzare una variabile di gruppo per calcolare un'espressione complessa nell'ambito di un gruppo. Una variabile di gruppo è valida solo nell'ambito del gruppo e dei relativi gruppi figlio.  
   
- Si supponga, ad esempio, che in un'area dati vengano visualizzati dati di inventario per elementi che rientrano in diverse categorie di imposta e che si desideri applicare aliquote d'imposta diverse per ogni categoria. I dati verranno raggruppati in base alla categoria e verrà definita una variabile *Tax* nel gruppo padre. Verrà quindi definita una variabile di gruppo per *ItemTax* per ogni categoria di imposta e ogni sottogruppo di categorie diverso verrà assegnato alla variabile di gruppo corretta. Esempio:  
+ Si supponga, ad esempio, che in un'area dati vengano visualizzati dati di inventario per elementi che rientrano in diverse categorie di imposta e che si desideri applicare aliquote d'imposta diverse per ogni categoria. I dati verranno raggruppati in base alla categoria e verrà definita una variabile *Tax* nel gruppo padre. Verrà quindi definita una variabile di gruppo per *ItemTax* per ogni categoria di imposta e ogni sottogruppo di categorie diverso verrà assegnato alla variabile di gruppo corretta. Ad esempio:  
   
 -   Per il gruppo padre basato su `[Category]`, definire la variabile *Tax* con un valore `[Tax]`. Si supponga che i valori di categoria siano Food e Clothing.  
   
@@ -74,7 +74,7 @@ ms.locfileid: "48139614"
   
 ## <a name="see-also"></a>Vedere anche  
  [Filtro, raggruppamento e ordinamento di dati &#40;Generatore report e SSRS&#41;](filter-group-and-sort-data-report-builder-and-ssrs.md)   
- [Raccolte predefinite nelle espressioni &#40;Report e SSRS&#41;](built-in-collections-in-expressions-report-builder.md)   
+ [Raccolte predefinite nelle espressioni &#40;Generatore report e SSRS&#41;](built-in-collections-in-expressions-report-builder.md)   
  [Esempi di espressioni &#40;Generatore report e SSRS&#41;](expression-examples-report-builder-and-ssrs.md)  
   
   

@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: 6fa378aa-442f-4d2f-beab-02a0fb5cd3ce
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 32578d4810140314964d3e7e2ceaa8d836aa99bd
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 6d703bc03c6ad715efad06612b06210f8bad4bc1
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48137391"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56010420"
 ---
 # <a name="design-view"></a>Visualizzazione Progettazione
   Utilizzare Visualizzazione progettazione per disporre gli elementi nel report. Tale visualizzazione viene talvolta denominata superficie di progettazione o visualizzazione Layout.  
@@ -43,7 +43,7 @@ ms.locfileid: "48137391"
   
  Per vedere le relazioni esistenti tra i gruppi, attivare la modalità Avanzata per il Riquadro di raggruppamento. In questa modalità è possibile vedere la gerarchia dei membri dei gruppi, ovvero ottenere una rappresentazione visiva delle celle dell'area dati che corrispondono a ogni gruppo.  
   
- Per altre informazioni, vedere [Riquadro di raggruppamento](grouping-pane.md).  
+ Per altre informazioni, vedere [Raggruppamento date](grouping-pane.md).  
   
 ## <a name="page-header-and-page-footer"></a>Intestazione pagina e Piè di pagina  
  Nella parte superiore e inferiore di ogni pagina sono presenti rispettivamente un'intestazione e un piè di pagina. Le intestazioni e i piè di pagina possono contenere testo statico, immagini, linee, rettangoli, bordi, colore di sfondo e immagini di sfondo. Per aggiungere elementi del report all'intestazione o al piè di pagina, fare clic con il pulsante destro del mouse sull'area di progettazione e scegliere Intestazione o Piè di pagina. Le sezioni dell'intestazione e del piè di pagina vengono visualizzate nell'area di progettazione.  
@@ -52,7 +52,7 @@ ms.locfileid: "48137391"
  Utilizzare il riquadro Proprietà per visualizzare nell'area di progettazione le proprietà dell'elemento del report selezionato o nel Riquadro di raggruppamento le proprietà del gruppo selezionato. In alternativa, è possibile fare clic con il pulsante destro del mouse su un gruppo o elemento del report selezionato, quindi scegliere **Proprietà** per aprire la finestra di dialogo **Proprietà** corrispondente per l'elemento del report o il gruppo.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Intestazioni di pagina e piè di pagina &#40;Report e SSRS&#41;](../report-design/page-headers-and-footers-report-builder-and-ssrs.md)   
+ [Intestazioni di pagina e piè di pagina &#40;Generatore report e SSRS&#41;](../report-design/page-headers-and-footers-report-builder-and-ssrs.md)   
  [Suggerimenti relativi alla progettazione di report &#40;Generatore report e SSRS&#41;](../report-design/report-design-tips-report-builder-and-ssrs.md)  
   
   

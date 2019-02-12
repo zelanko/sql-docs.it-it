@@ -13,13 +13,13 @@ helpviewer_keywords:
 ms.assetid: 81b9f4ad-800b-4688-8b47-a5a83dc8ff10
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 202d2331364480cfdac89019dfa918c327544b26
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: aace9882e358bcd5e5626cc625ed3dbbe4495cce
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48090261"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56017042"
 ---
 # <a name="create-a-native-mode-report-server-database--ssrs-configuration-manager"></a>Creare un database del server di report in modalità nativa (Gestione configurazione SSRS)
   In [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] in modalità nativa viene utilizzato un database di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] per l'archiviazione interna. Il database è obbligatorio e viene utilizzato per archiviare report pubblicati, modelli, origini dati condivise, dati di sessione, risorse e metadati del server.  
@@ -33,7 +33,7 @@ ms.locfileid: "48090261"
 ## <a name="when-to-create-or-configure-the-report-server-databases"></a>Casi in cui creare o configurare i database del server di report  
  È necessario creare e configurare il database del server di report se il server di report è stato installato in modalità "solo file".  
   
- Se è stato installato [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] nella configurazione predefinita per la modalità nativa, il database del server di report è stato creato e configurato automaticamente quando è stata installata l'istanza del server di report. È possibile utilizzare Gestione configurazione di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] per visualizzare o modificare le impostazioni configurate dal programma di installazione.  
+ Se [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] è stato installato nella configurazione predefinita per la modalità nativa, il database del server di report è stato creato e configurato automaticamente durante l'installazione dell'istanza del server di report. È possibile utilizzare Gestione configurazione di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] per visualizzare o modificare le impostazioni configurate dal programma di installazione.  
   
 ##  <a name="rsdbrequirements"></a> Prima di iniziare  
  La creazione o la configurazione di un database del server di report è un processo che comprende diversi passaggi. Prima di creare il database del server di report, determinare il modo in cui effettuare le operazioni seguenti:  
@@ -116,12 +116,12 @@ ms.locfileid: "48090261"
   
 7.  Esaminare le informazioni incluse nella pagina Riepilogo per verificare che le impostazioni siano corrette, quindi scegliere **Avanti**.  
   
-8.  Verificare la connessione facendo clic su un URL nella pagina URL server di report o URL Gestione report. Perché il test abbia esito positivo, è necessario che gli URL siano stati definiti. Se la connessione al database del server di report è valida, in una finestra del browser verrà visualizzata la gerarchia di cartelle del server di report o Gestione report. Per altre informazioni, vedere [Verify a Reporting Services Installation](verify-a-reporting-services-installation.md) in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] documentazione Online.  
+8.  Verificare la connessione facendo clic su un URL nella pagina URL server di report o URL Gestione report. Perché il test abbia esito positivo, è necessario che gli URL siano stati definiti. Se la connessione al database del server di report è valida, in una finestra del browser verrà visualizzata la gerarchia di cartelle del server di report o Gestione report. Per altre informazioni, vedere [Verificare un'installazione di Reporting Services](verify-a-reporting-services-installation.md) nella documentazione online di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
 ## <a name="see-also"></a>Vedere anche  
- [Configurare una connessione di Database Server di Report &#40;Gestione configurazione SSRS&#41;](../../sql-server/install/configure-a-report-server-database-connection-ssrs-configuration-manager.md)   
+ [Configurare una connessione del database del server di report &#40;Gestione configurazione SSRS&#41;](../../sql-server/install/configure-a-report-server-database-connection-ssrs-configuration-manager.md)   
  [Database &#40;modalità nativa SSRS&#41;](../../sql-server/install/database-ssrs-native-mode.md)   
- [Gestire un Server di Report di Reporting Services in modalità nativa](../report-server/manage-a-reporting-services-native-mode-report-server.md)   
+ [Gestione di un server di report in modalità nativa](../report-server/manage-a-reporting-services-native-mode-report-server.md)   
  [Gestione configurazione Reporting Services &#40;modalità nativa&#41;](../../sql-server/install/reporting-services-configuration-manager-native-mode.md)  
   
   

@@ -12,13 +12,13 @@ f1_keywords:
 ms.assetid: 7d36faae-5bcc-446a-9eba-f42349cafacb
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: 3fcba9c2af2344ca39d2ef781a1384580a7afeaa
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: e5961a4d4984a4da5abd788903a05789de862db7
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48108671"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56011303"
 ---
 # <a name="add-custom-locations-to-a-map-report-builder-and-ssrs"></a>Aggiungere percorsi personalizzati a una mappa (Generatore report e SSRS)
   Dopo avere aggiunto una mappa a un report, è possibile aggiungere percorsi punto personalizzati.  

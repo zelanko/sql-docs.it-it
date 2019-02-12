@@ -16,13 +16,13 @@ helpviewer_keywords:
 ms.assetid: 753c2542-0e97-4d8f-a5dd-4b07a5cd10ab
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 712ae71efdf9ac4faea36dcacd6842406dff358f
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+manager: kfile
+ms.openlocfilehash: 61d397edfe1bb9125c702ad3d568a4425f1c54e3
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53357109"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56043302"
 ---
 # <a name="authentication-with-the-report-server"></a>Autenticazione con il server di report
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] (SSRS) offre molte opzioni configurabili per l'autenticazione di utenti e applicazioni client rispetto al server di report. Per impostazione predefinita, il server di report utilizza l'autenticazione integrata di Windows e presuppone la presenza di relazioni attendibili per cui le risorse client e quelle di rete si trovano nello stesso dominio trusted. A seconda della topologia di rete e delle esigenze specifiche dell'organizzazione, è possibile personalizzare il protocollo di autenticazione usato per l'autenticazione integrata di Windows, usare l'autenticazione di base o l'estensione di autenticazione basata su moduli personalizzata indicata. Ogni tipo di autenticazione può essere singolarmente abilitato o disabilitato. È possibile abilitare più di un tipo di autenticazione se si desidera che il server di report accetti richieste di più tipi.  
@@ -83,7 +83,7 @@ ms.locfileid: "53357109"
 ## <a name="see-also"></a>Vedere anche  
  [Concessione di autorizzazioni in un server di report in modalità nativa](granting-permissions-on-a-native-mode-report-server.md)   
  [File di configurazione RSReportServer](../report-server/rsreportserver-config-configuration-file.md)   
- (create-e-Gestisci-ruolo-assignments.md)   
+ (create-and-manage-role-assignments.md)   
  [Specificare le credenziali e le informazioni sulla connessione per le origini dati del report](../report-data/specify-credential-and-connection-information-for-report-data-sources.md)  
  [Implementazione di un'estensione di sicurezza](../extensions/security-extension/implementing-a-security-extension.md)   
  [Configurare connessioni SSL in un server di report in modalità nativa](configure-ssl-connections-on-a-native-mode-report-server.md)   

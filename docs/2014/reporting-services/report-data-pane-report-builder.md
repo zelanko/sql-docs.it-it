@@ -13,14 +13,14 @@ helpviewer_keywords:
 - Report Data pane
 ms.assetid: 1492aa39-aeb1-4509-ab97-b9edd0901b7e
 author: maggiesmsft
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: 81ab7f53f546c3b048551a0f3acd3866c29a8eb9
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.author: maghan
+manager: kfile
+ms.openlocfilehash: b73080811e001b67ea52e3cbc9572eb014162e68
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48179381"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56010352"
 ---
 # <a name="report-data-pane-report-builder"></a>Riquadro dei dati del report (Generatore report)
   Usare il riquadro **Dati report** per visualizzare i parametri, le origini dati, i set di dati, le raccolte di campi e le immagini attualmente definiti nel report. Nel riquadro dei dati del report è riportata una visualizzazione gerarchica degli elementi che rappresentano i dati del report. I nodi di livello superiore rappresentano campi, parametri, immagini e riferimenti a origini dati predefiniti. Espandere ogni nodo per visualizzare gli elementi dei dati. Ad esempio, quando si espande il nodo di un'origine dati, verranno visualizzati i set di dati definiti per tale origine dati. Quando si espande un set di dati, verrà visualizzata la relativa raccolta di campi. Trascinare gli elementi nell'area di progettazione del report o nel riquadro Raggruppamento per collegare i dati agli elementi del report selezionati nella pagina del report. Per altre informazioni, vedere [Visualizzazione di progettazione report &#40;Generatore report&#41;](report-builder/report-design-view-report-builder.md).  
@@ -30,7 +30,7 @@ ms.locfileid: "48179381"
  Rappresenta campi di uso comune in un report, ad esempio il nome del report o il numero di pagina. Per altre informazioni, vedere [Raccolte predefinite nelle espressioni &#40;Generatore report e SSRS&#41;](report-design/built-in-collections-in-expressions-report-builder.md).  
   
  **Parametri**  
- Rappresenta la raccolta dei parametri del report, che possono essere a valore singolo o multivalore. Per altre informazioni, vedere [Report Parameters &#40;Report Builder and Report Designer&#41;](report-design/report-parameters-report-builder-and-report-designer.md).  
+ Rappresenta la raccolta dei parametri del report, che possono essere a valore singolo o multivalore. Per ulteriori informazioni, vedere la pagina relativa al [Parametri report &#40;Generatore report e Progettazione report&#41;](report-design/report-parameters-report-builder-and-report-designer.md).  
   
  **Immagini**  
  Rappresenta il set di immagini utilizzato nel report. Per altre informazioni, vedere [Immagini &#40;Generatore report e SSRS&#41;](report-design/images-report-builder-and-ssrs.md).  

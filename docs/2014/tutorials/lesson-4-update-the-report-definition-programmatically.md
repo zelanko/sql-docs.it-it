@@ -4,21 +4,20 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 ms.assetid: 1f0a1d46-6d6d-4f67-b51e-06dbbbffacf9
-author: craigg-msft
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: 5b1b996e2135953e862b27d992d22c6a7666904c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+author: markingmyname
+ms.author: maghan
+manager: kfile
+ms.openlocfilehash: 703643f2c51ec86090cb03ba7089080dfe416620
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48137131"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56012702"
 ---
-# <a name="lesson-4-update-the-report-definition-programmatically"></a>Lezione 4: Aggiornamento della definizione del report a livello di programmazione
+# <a name="lesson-4-update-the-report-definition-programmatically"></a>Lezione 4: Aggiornare la definizione del Report a livello di codice
   Dopo aver caricato la definizione del report dal server di report e aver definito un riferimento alla definizione mediante il campo del report, è necessario aggiornare la definizione del report. Per questo esempio verrà aggiornata la proprietà `Description` per il report.  
   
 ### <a name="to-update-the-report-definition"></a>Per aggiornare la definizione del report  
@@ -89,7 +88,7 @@ ms.locfileid: "48137131"
     ```  
   
 ## <a name="next-lesson"></a>Lezione successiva  
- Nella lezione successiva la definizione del report aggiornata verrà salvata nel server di report. Visualizzare [lezione 5: pubblicare la definizione del Report nel Server di Report](../../2014/tutorials/lesson-5-publish-the-report-definition-to-the-report-server.md).  
+ Nella lezione successiva la definizione del report aggiornata verrà salvata nel server di report. Vedere [lezione 5: Pubblicare la definizione del Report nel Server di Report](../../2014/tutorials/lesson-5-publish-the-report-definition-to-the-report-server.md).  
   
 ## <a name="see-also"></a>Vedere anche  
  [Aggiornamento dei report mediante le classi generate dallo Schema RDL &#40;esercitazione su SSRS&#41;](../../2014/tutorials/updating-reports-using-classes-generated-from-the-rdl-schema-ssrs-tutorial.md)  

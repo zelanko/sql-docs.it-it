@@ -15,12 +15,12 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: b5ef89fc257782f7977efbee371a40e188893bc7
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: 418259da44f85c3dadbadc413affc937991b2974
+ms.sourcegitcommit: db552ff344e021c154acb3d0a728475ec4420899
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53216060"
+ms.lasthandoff: 02/07/2019
+ms.locfileid: "55832103"
 ---
 # <a name="determining-effective-database-engine-permissions"></a>Determinare le autorizzazioni valide per il motore di database
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -63,12 +63,12 @@ I ruoli predefiniti del server e del database hanno autorizzazioni preconfigurat
 >    ON SRM.member_principal_id = SP2.principal_id
 >  WHERE SP1.is_fixed_role = 1 -- Remove for SQL Server 2008
 >  ORDER BY SP1.name;
-```
+> ```
 > [!NOTE]
->  * All logins are members of the public role and cannot be removed. 
->  * This query checks tables in the master database but it can be executed in any database for the on premises product. 
+>  * Tutti gli account di accesso sono membri del ruolo public e non possono essere rimossi. 
+>  * Questa query controlla le tabelle nel database master, ma può essere eseguita in qualsiasi database per il prodotto locale. 
 
-To determine who is a member of a fixed database role, execute the following query in each database.
+Per determinare i membri di un ruolo predefinito del database, eseguire la query seguente in ogni database.
 ```sql
 SELECT DP1.name AS DatabaseRoleName, 
    isnull (DP2.name, 'No members') AS DatabaseUserName 
@@ -117,11 +117,11 @@ La query seguente restituisce un elenco delle autorizzazioni concesse o negate a
 >    ON pr.principal_id = pe.grantee_principal_id
 >  WHERE is_fixed_role = 0 -- Remove for SQL Server 2008
 >  ORDER BY pr.name, type_desc;
-```
+> ```
 
-### Database Permissions
+### <a name="database-permissions"></a>Autorizzazioni per il database
 
-The following query returns a list of the permissions that have been granted or denied at the database level. This query should be executed in each database.   
+La query seguente restituisce un elenco delle autorizzazioni concesse o negate a livello di database. Questa query deve essere eseguita in ogni database.   
 ```sql
 SELECT pr.type_desc, pr.name, 
  isnull (pe.state_desc, 'No permission statements') AS state_desc, 

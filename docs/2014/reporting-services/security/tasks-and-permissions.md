@@ -18,13 +18,13 @@ helpviewer_keywords:
 ms.assetid: d7ff90b5-b976-4270-b9ad-9d7b801d8263
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: ce940bd22b9fbc5d2628cdeae3a0eea376f2bc99
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 097e61db74fbe2d1ba46ac35c6245745309d00af
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48165277"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56010882"
 ---
 # <a name="tasks-and-permissions"></a>Attività e autorizzazioni
   In [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]il termine *attività* indica tutte le azioni che un utente o un amministratore può eseguire. Le attività sono predefinite. Non è possibile creare attività personalizzate né modificare le attività predefinite a livello di programmazione o tramite altri strumenti. Sono disponibili complessivamente venticinque attività che comprendono l'intero set di operazioni disponibili nella sicurezza basata sui ruoli. I seguenti sono alcuni esempi di attività: "Visualizzazione di report", "Gestione di report" e "Gestione delle proprietà del server di report".  
@@ -39,14 +39,14 @@ Autorizzazioni e attività
 ## <a name="system-and-item-level-tasks"></a>Attività a livello di sistema e a livello di elemento  
  Le attività si suddividono in due categorie: a livello di sistema e a livello di elemento. Un ruolo può includere attività di una sola delle due categorie. Nella tabella seguente vengono illustrate le singole categorie di attività.  
   
-|Category|Description|  
+|Category|Descrizione|  
 |--------------|-----------------|  
 |[Attività a livello di elemento](tasks-and-permissions-item-level-tasks.md)|Azioni che vengono eseguite su elementi gestiti da un server di report, ad esempio cartelle, report, modelli di report e risorse.<br /><br /> Le attività a livello di elemento sono definite a livello di ambito dello spazio dei nomi della cartella del server di report. Tutti gli elementi a cui si accede tramite le cartelle del server di report o tramite URL, sono protetti da assegnazioni di ruolo che includono attività a livello di elemento.|  
 |[Attività a livello di sistema](tasks-and-permissions-system-level-tasks.md)|Azioni che vengono eseguite a livello di sistema, ad esempio gestione di processi o di pianificazioni condivise utilizzabili con numerosi elementi. Le attività a livello di sistema sono definite a livello di ambito al di fuori dello spazio dei nomi della cartella del server di report.|  
   
 ## <a name="see-also"></a>Vedere anche  
  [Definizioni di ruolo](role-definitions.md)   
- [Ruoli predefiniti](role-definitions-predefined-roles.md)   
+ [Predefined Roles](role-definitions-predefined-roles.md)   
  [Concessione di autorizzazioni in un server di report in modalità nativa](granting-permissions-on-a-native-mode-report-server.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: 'Esercitazione: Aggiungere un grafico a barre al report (Generatore report) | Microsoft Docs'
+title: 'Esercitazione: Aggiungere un grafico a barre al Report (Generatore Report) | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
@@ -10,15 +10,15 @@ ms.topic: conceptual
 ms.assetid: 6956ebd6-0217-4087-a4fa-5cc1c3804691
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: 25d3fafc654ab1c272d7688e49d67cd2af5d1820
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 0b21826cb926dbd5f8b0315f490b20850c6ccd23
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48106801"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56041422"
 ---
-# <a name="tutorial-add-a-bar-chart-to-your-report-report-builder"></a>Esercitazione: Aggiungere un grafico a barre al report (Generatore report)
+# <a name="tutorial-add-a-bar-chart-to-your-report-report-builder"></a>Esercitazione: Aggiungere un grafico a barre al Report (Generatore Report)
   In un grafico a barre i dati delle categorie vengono visualizzati orizzontalmente per gli scopi seguenti:  
   
 -   Migliorare la leggibilità dei nomi di categoria lunghi.  
@@ -55,7 +55,7 @@ ms.locfileid: "48106801"
 10. [Salvare il Report](#Save)  
   
 > [!NOTE]  
->  In questa esercitazione, i passaggi per la procedura guidata sono consolidati in un'unica procedura. Per istruzioni dettagliate su come selezionare un server di report, creare un set di dati e scegliere un'origine dati, vedere la prima esercitazione di questa serie: [Esercitazione: Creazione di un report di tabelle semplici &#40;Generatore report&#41;](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md).  
+>  In questa esercitazione, i passaggi per la procedura guidata sono consolidati in un'unica procedura. Per istruzioni dettagliate su come selezionare un server di report, creare un set di dati e scegliere un'origine dati, vedere la prima esercitazione di questa serie: [Esercitazione: Creazione di un Report tabella semplice &#40;Generatore Report&#41;](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md).  
   
  Tempo previsto per il completamento di questa esercitazione: 15 minuti.  
   
@@ -246,7 +246,7 @@ ms.locfileid: "48106801"
   
 1.  Passare alla visualizzazione di progettazione report.  
   
-2.  Selezionare le parole **titolo del grafico** nella parte superiore del grafico e quindi digitare il seguente testo: **vendite per 2008 e 2009**.  
+2.  Selezionare le parole **titolo del grafico** nella parte superiore del grafico e quindi digitare il testo seguente: **Vendite per 2008 e 2009**.  
   
 3.  Fare clic in un punto qualsiasi all'esterno del testo.  
   
@@ -294,7 +294,7 @@ ms.locfileid: "48106801"
   
 5.  Scegliere **Aggiungi**. Verrà visualizzato un nuovo filtro vuoto.  
   
-6.  Nelle **espressione**, digitare **[Sum(SalesYear2009)]**. Verrà creata l'espressione sottostante `=Sum(Fields!SalesYear2009.Value)`, che è possibile vedere se si sceglie il **fx** pulsante.  
+6.  Nelle **espressione**, digitare **[Sum(SalesYear2009)]**. Viene creata l'espressione sottostante `=Sum(Fields!SalesYear2009.Value)`, che può essere visualizzata facendo clic sul pulsante **fx** .  
   
 7.  Verificare che il tipo di dati sia **Text**.  
   

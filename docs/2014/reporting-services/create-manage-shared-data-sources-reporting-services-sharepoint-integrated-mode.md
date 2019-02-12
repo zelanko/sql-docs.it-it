@@ -12,14 +12,14 @@ helpviewer_keywords:
 - shared data sources [Reporting Services]
 ms.assetid: 2d3428e4-a810-4e66-a287-ff18e57fad76
 author: maggiesmsft
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: 89ac992a05c043dc22dd2ff3ef85d62284b77955
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.author: maghan
+manager: kfile
+ms.openlocfilehash: 3253c8c13b950f661ee7ddc7925aac19221d3173
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48181411"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56011182"
 ---
 # <a name="create-and-manage-shared-data-sources-reporting-services-in-sharepoint-integrated-mode"></a>Creare e gestire origini dati condivise (Reporting Services in modalità integrata SharePoint)
   Quando si esegue un report da una raccolta di SharePoint, le informazioni di connessione possono essere definite all'interno del report o in un file esterno collegato al report. Se le informazioni di connessione sono incorporate nel report, si parlerà di origine dati personalizzata. Se le informazioni di connessione sono definite in un file esterno, si parlerà di origine dati condivisa. Il file esterno può essere un file dell'origine dei dati del server di report (con estensione rsds) o un file di connessione dati (con estensione odc).  
@@ -51,7 +51,7 @@ ms.locfileid: "48181411"
   
     -   Selezionare **Richiedi credenziali** se si vuole che l'utente immetta le proprie credenziali ogni volta che esegue il report. Non selezionare questa opzione se si desidera pianificare una sottoscrizione o l'elaborazione di dati per il report.  
   
-    -   Selezionare **Credenziali archiviate** se si preferisce accedere ai dati usando un unico set di credenziali. Le credenziali vengono crittografate prima dell'archiviazione. È possibile selezionare opzioni che determinano la modalità di autenticazione delle credenziali archiviate. Selezionare Usa come credenziali di Windows se le credenziali archiviate appartengono all'account utente di Windows. Selezionare **Imposta contesto di esecuzione sull'account seguente** se si vuole impostare il contesto di esecuzione sul server di database. Per [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] database, questa opzione imposta la funzione SETUSER. Per altre informazioni, vedere [SETUSER &#40;Transact-SQL&#41;](/sql/t-sql/statements/setuser-transact-sql).  
+    -   Selezionare **Credenziali archiviate** se si preferisce accedere ai dati usando un unico set di credenziali. Le credenziali vengono crittografate prima dell'archiviazione. È possibile selezionare opzioni che determinano la modalità di autenticazione delle credenziali archiviate. Selezionare Usa come credenziali di Windows se le credenziali archiviate appartengono all'account utente di Windows. Selezionare **Imposta contesto di esecuzione sull'account seguente** se si vuole impostare il contesto di esecuzione sul server di database. Nei database di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] questa opzione consente di impostare la funzione SETUSER. Per altre informazioni, vedere [SETUSER &#40;Transact-SQL&#41;](/sql/t-sql/statements/setuser-transact-sql).  
   
     -   Selezionare **Credenziali non necessarie** se si preferisce specificare le credenziali nella stringa di connessione o eseguire il report usando un account con privilegi minimi configurato nel server di report. Se questo account non è configurato nel server di report, verrà visualizzato un messaggio di richiesta delle credenziali ed eventuali operazioni pianificate definite per il report non verranno eseguite.  
   

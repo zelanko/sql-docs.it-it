@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - data mining [Analysis Services], tutorials
@@ -15,16 +14,16 @@ helpviewer_keywords:
 ms.assetid: 651eef38-772e-4d97-af51-075b1b27fc5a
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: f31a323320487623339170043112fceb7ba65d3b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: c2f1c5a8ae897284f07c3fd6c65d9735099a41fa
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48109421"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56041402"
 ---
-# <a name="lesson-3-building-a-market-basket-scenario-intermediate-data-mining-tutorial"></a>Lezione 3: Compilazione di uno scenario Market Basket (Esercitazione intermedia sul data mining)
-  Il reparto marketing di [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] desideri migliorare il sito Web della società per promuovere le vendite. Durante l'aggiornamento del sito, si desidera essere in grado di prevedere quali siano i prodotti che i clienti potrebbero essere interessati ad acquistare sulla base dei prodotti già inclusi tra i rispettivi acquisti. Il reparto marketing desidera inoltre capire meglio il comportamento di acquisto del cliente, in modo da poter progettare il sito Web in modo da visualizzare nella stessa area gli elementi che tendono a essere acquistati insieme. Il team sa che il data mining è particolarmente utile per questo tipo di *Market basket analysis* e chiede di sviluppare un modello di data mining.  
+# <a name="lesson-3-building-a-market-basket-scenario-intermediate-data-mining-tutorial"></a>Lezione 3: Compilazione di uno Scenario Market Basket (esercitazione intermedia di Data Mining)
+  Il reparto marketing di [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] intende migliorare il sito Web aziendale per promuovere le vendite. Durante l'aggiornamento del sito, si desidera essere in grado di prevedere quali siano i prodotti che i clienti potrebbero essere interessati ad acquistare sulla base dei prodotti già inclusi tra i rispettivi acquisti. Il reparto marketing desidera inoltre capire meglio il comportamento di acquisto del cliente, in modo da poter progettare il sito Web in modo da visualizzare nella stessa area gli elementi che tendono a essere acquistati insieme. Il team sa che il data mining è particolarmente utile per questo tipo di *Market basket analysis* e chiede di sviluppare un modello di data mining.  
   
  Dopo aver completato le attività di questa lezione, si otterrà un modello di data mining in cui saranno visualizzati i gruppi di articoli riferiti a precedenti transazioni del cliente. Inoltre, è possibile utilizzare il modello di data mining per prevedere gli ulteriori articoli che un cliente può essere interessato ad acquistare.  
   
@@ -50,17 +49,17 @@ ms.locfileid: "48109421"
 ## <a name="all-lessons"></a>Tutte le lezioni  
  [Lezione 1: Creazione della soluzione intermedia di Data Mining &#40;esercitazione intermedia sul Data Mining&#41;](../../2014/tutorials/lesson-1-create-solution-intermediate-data-mining-tutorial.md)  
   
- [Lezione 2: Compilazione di uno Scenario di previsione &#40;esercitazione intermedia sul Data Mining&#41;](../../2014/tutorials/lesson-2-building-a-forecasting-scenario-intermediate-data-mining-tutorial.md)  
+ [Lezione 2: Creazione di uno Scenario di previsione &#40;esercitazione intermedia sul Data Mining&#41;](../../2014/tutorials/lesson-2-building-a-forecasting-scenario-intermediate-data-mining-tutorial.md)  
   
- Lezione 3: Scenario Market basket (Esercitazione intermedia sul data mining)  
+ Lezione 3: Scenario market Basket (esercitazione intermedia di Data Mining)  
   
  [Lezione 4: Compilazione di una Scenario di Clustering delle sequenze &#40;esercitazione intermedia sul Data Mining&#41;](../../2014/tutorials/lesson-4-build-sequence-clustering-scenario-intermediate-data-mining.md)  
   
  [Lezione 5: Creazione di reti neurali e modelli di regressione logistica &#40;esercitazione intermedia sul Data Mining&#41;](../../2014/tutorials/lesson-5-build-models-intermediate-data-mining-tutorial.md)  
   
 ## <a name="see-also"></a>Vedere anche  
- [Esercitazione di base di Data Mining](../../2014/tutorials/basic-data-mining-tutorial.md)   
- [Lezione 2: Compilazione di uno Scenario di previsione &#40;esercitazione intermedia sul Data Mining&#41;](../../2014/tutorials/lesson-2-building-a-forecasting-scenario-intermediate-data-mining-tutorial.md)   
+ [Esercitazione di base sul data mining](../../2014/tutorials/basic-data-mining-tutorial.md)   
+ [Lezione 2: Creazione di uno Scenario di previsione &#40;esercitazione intermedia sul Data Mining&#41;](../../2014/tutorials/lesson-2-building-a-forecasting-scenario-intermediate-data-mining-tutorial.md)   
  [Lezione 4: Compilazione di una Scenario di Clustering delle sequenze &#40;esercitazione intermedia sul Data Mining&#41;](../../2014/tutorials/lesson-4-build-sequence-clustering-scenario-intermediate-data-mining.md)  
   
   

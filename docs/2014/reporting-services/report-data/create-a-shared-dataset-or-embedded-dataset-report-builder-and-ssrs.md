@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: d1d7bc71-f0e9-4ce5-b3ad-6fee54388a31
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 39f8f2b9f8926a81c808e82f57cad13934336902
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 95772746d8f13993962f67bff863865dec519f70
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48133261"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56011162"
 ---
 # <a name="create-a-shared-dataset-or-embedded-dataset-report-builder-and-ssrs"></a>Creare un set di dati condiviso o un set di dati incorporato (Generatore report e SSRS)
   È possibile creare un set di dati incorporato, usato in un report singolo, o un set di dati condiviso da salvare in un server di report, usato in più report. Per creare un set di dati, è necessario disporre di un'origine dati incorporata o condivisa.  
@@ -117,7 +117,7 @@ ms.locfileid: "48133261"
  [Finestre di progettazione query &#40;Generatore report&#41;](../query-designers-report-builder.md)   
  [Guida di Generatore report per finestre di dialogo, riquadri e procedure guidate](../report-builder-help-for-dialog-boxes-panes-and-wizards.md)   
  [Aggiungere dati a un Report &#40;Report e SSRS&#41;](report-datasets-ssrs.md)   
- [Connessioni dati, origini dati e stringhe di connessione in Generatore Report](../data-connections-data-sources-and-connection-strings-in-report-builder.md)   
+ [Connessioni dati, origini dati e stringhe di connessione in Generatore report](../data-connections-data-sources-and-connection-strings-in-report-builder.md)   
  [Set di dati condivisi e incorporati &#40;Generatore report e SSRS&#41;](embedded-and-shared-datasets-report-builder-and-ssrs.md)  
   
   

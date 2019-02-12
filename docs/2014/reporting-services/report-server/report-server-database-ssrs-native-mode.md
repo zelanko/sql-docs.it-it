@@ -17,13 +17,13 @@ helpviewer_keywords:
 ms.assetid: 0fc5c033-3fe1-4cea-86c7-66ea5e424d65
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: b1ee55e0ec602ee2723b9e31b5dc80c611071b8e
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 6e0a2d0a723629ae1e9b7e7277ff646c63a86aec
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48073881"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56043262"
 ---
 # <a name="report-server-database-ssrs-native-mode"></a>Database del server di report (modalità nativa SSRS)
   Un server di report è un server senza stato (stateless) che usa il [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] to store metadata and object definitions. In un'installazione di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] in modalità nativa vengono usati due database per separare i requisiti per l'archiviazione persistente dei dati da quelli per l'archiviazione temporanea. I database vengono creati assieme e associati in base al nome. Per impostazione predefinita, i nomi dei database sono rispettivamente **reportserver** e **reportservertempdb**.  
@@ -32,7 +32,7 @@ ms.locfileid: "48073881"
   
  I database possono essere eseguiti in istanze locali o remote del [!INCLUDE[ssDE](../../includes/ssde-md.md)] . La scelta di un'istanza locale può essere utile se sono disponibili risorse di sistema sufficienti o si desidera utilizzare un numero inferiore di licenze software, ma l'esecuzione dei database in un computer remoto consente di ottenere migliori prestazioni.  
   
- È possibile trasferire o riutilizzare un database del server di report esistente di un'installazione precedente o un'istanza diversa con un'altra istanza del server di report. Lo schema del database del server di report deve essere compatibile con l'istanza del server di report. Se il formato del database è obsoleto, verrà richiesto di eseguire l'aggiornamento al formato corrente. Le versioni più recenti non sono compatibili con una versione precedente. Se si dispone di un database del server di report più recente, non è possibile utilizzarlo con una versione precedente di istanze di un server di report. Per altre informazioni sulle modalità di aggiornamento dei database del server di report a formati più recenti, vedere [esegue l'aggiornamento di un Database del Server di Report](../install-windows/upgrade-a-report-server-database.md).  
+ È possibile trasferire o riutilizzare un database del server di report esistente di un'installazione precedente o un'istanza diversa con un'altra istanza del server di report. Lo schema del database del server di report deve essere compatibile con l'istanza del server di report. Se il formato del database è obsoleto, verrà richiesto di eseguire l'aggiornamento al formato corrente. Le versioni più recenti non sono compatibili con una versione precedente. Se si dispone di un database del server di report più recente, non è possibile utilizzarlo con una versione precedente di istanze di un server di report. Per altre informazioni sulla modalità di aggiornamento dei database del server di report ai formati più recenti, vedere [Aggiornare un database del server di report](../install-windows/upgrade-a-report-server-database.md).  
   
 > [!IMPORTANT]  
 >  La struttura della tabella per i database è ottimizzata per le operazioni server e non deve essere modificata né regolata. [!INCLUDE[msCoName](../../includes/msconame-md.md)] potrebbe modificare la struttura della tabella da una versione a quella successiva. La modifica o l'estensione del database può impedire o limitare la possibilità di eseguire aggiornamenti o applicare service pack in futuro. Modificando o estendendo il database, inoltre, si potrebbero introdurre modifiche che impediscono il corretto funzionamento del server di report. Ad esempio se si abilita READ_COMMITTED_SNAPSHOT sul database ReportServer, si interromperà la funzionalità dell'ordinamento interattiva.  
@@ -66,11 +66,11 @@ ms.locfileid: "48073881"
  Se si esegue il backup del database temporaneo e successivamente lo si ripristina, è necessario eliminare il contenuto. In genere è opportuno eliminare sempre il contenuto del database temporaneo, ma in questo caso è necessario riavviare il servizio Windows ReportServer dopo l'eliminazione del contenuto.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Ospitare un Database del Server di Report in un Cluster di Failover SQL Server](../install-windows/host-a-report-server-database-in-a-sql-server-failover-cluster.md)   
+ [Ospitare un database del server di report in un cluster di failover di SQL Server](../install-windows/host-a-report-server-database-in-a-sql-server-failover-cluster.md)   
  [Archiviare i dati crittografati del server di report &#40;Gestione configurazione SSRS &#41;](../install-windows/ssrs-encryption-keys-store-encrypted-report-server-data.md)   
- [Reporting Services Report Server](../reporting-services-report-server.md)   
+ [Server di report di Reporting Services](../reporting-services-report-server.md)   
  [Amministrare un database del server di report &#40;modalità nativa SSRS&#41;](report-server-database-ssrs-native-mode.md)   
- [Creare un Database del Server di Report &#40;Gestione configurazione SSRS&#41;](../../sql-server/install/create-a-report-server-database-ssrs-configuration-manager.md)   
+ [Creare un database del server di report &#40;Gestione configurazione SSRS&#41;](../../sql-server/install/create-a-report-server-database-ssrs-configuration-manager.md)   
  [Operazioni di backup e ripristino per Reporting Services](../install-windows/backup-and-restore-operations-for-reporting-services.md)  
   
   

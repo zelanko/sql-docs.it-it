@@ -12,14 +12,14 @@ f1_keywords:
 - "10522"
 ms.assetid: 8c0310ba-eedd-4c9f-95bd-1f9e2a1a8ed3
 author: maggiesmsft
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: 0e1fd77ed97e42eaadd76f7b9c50f74d6b5007a6
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.author: maghan
+manager: kfile
+ms.openlocfilehash: 411dd5fdcd58b9f009ffe8fbdefa39e39c273435
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48162741"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56012882"
 ---
 # <a name="map-viewport-properties-dialog-box-optimization"></a>Finestra di dialogo Proprietà viewport mappa, Ottimizzazione
   Selezionare **Ottimizzazione** nella finestra di dialogo **Proprietà viewport mappa** per controllare la risoluzione per la visualizzazione di una mappa in un report.  
@@ -32,7 +32,7 @@ ms.locfileid: "48162741"
  **Prestazioni**  
  Scorrere il puntatore più vicino a **Prestazioni** per semplificare la mappa e visualizzare un minor numero di dettagli.  
   
- **Qualità**  
+ **Quality**  
  Scorrere il puntatore più vicino a **Qualità** per tracciare la mappa con un maggior numero di dettagli.  
   
  **Risoluzione mappa**  
@@ -40,6 +40,6 @@ ms.locfileid: "48162741"
   
 ## <a name="see-also"></a>Vedere anche  
  [Mappe &#40;Generatore report e SSRS&#41;](report-design/maps-report-builder-and-ssrs.md)   
- [Risolvere i problemi di report: I report di mappa &#40;Report e SSRS&#41;](report-design/troubleshoot-reports-map-reports-report-builder-and-ssrs.md)  
+ [Risolvere problemi relativi ai report: Eseguire il mapping di report &#40;Report e SSRS&#41;](report-design/troubleshoot-reports-map-reports-report-builder-and-ssrs.md)  
   
   

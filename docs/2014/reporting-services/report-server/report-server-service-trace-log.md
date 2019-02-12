@@ -15,13 +15,13 @@ helpviewer_keywords:
 ms.assetid: 2fde08b2-137d-4f4b-88e5-216030216e0d
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 3d5dba03f5e64d06d7c1d8dddd4df36b3f9326e4
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+manager: kfile
+ms.openlocfilehash: 1c04e3d642b267660b8527502a248a386c8ba93d
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53358123"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56010672"
 ---
 # <a name="report-server-service-trace-log"></a>Report Server Service Trace Log
   Il log di traccia del server di report di [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] è un file di testo ASCII che contiene informazioni dettagliate relative alle operazioni del servizio del server di report, ad esempio operazioni eseguite dal servizio Web ReportServer, da Gestione report e dall'elaborazione in background. Nel file di log di traccia sono contenute inoltre informazioni ridondanti, che vengono registrate in altri file di log, e informazioni aggiuntive non disponibili altrove. Le informazioni contenute nel log di traccia sono utili se si esegue il debug di un'applicazione che include un server di report o se è necessario analizzare un problema specifico scritto nel log eventi o nel log di esecuzione.  

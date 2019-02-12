@@ -16,13 +16,13 @@ helpviewer_keywords:
 ms.assetid: cd5fa70c-5218-40d5-9ae6-02d798b5c485
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 20b64e86aa63b88175b505659e78dce35b2250bb
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+manager: kfile
+ms.openlocfilehash: ee69a2cd6081b83d6b4a549169cffbe86584ed31
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53361263"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56034072"
 ---
 # <a name="relational-query-designer-user-interface-report-builder"></a>Interfaccia utente di Progettazione query relazionale (Generatore report)
   Generatore report fornisce una finestra di Progettazione query con interfaccia grafica e una finestra Progettazione query basata su testo per la creazione di una query che specifica i dati da recuperare da [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] e [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssSDS](../../includes/sssds-md.md)] database relazionali e [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssDWCurrentFull](../../../includes/ssdwcurrentfull-md.md)] per un set di dati di report. Utilizzare la finestra Progettazione query con interfaccia grafica per esplorare i metadati, compilare in modo interattivo una query e visualizzarne i risultati. Utilizzare Progettazione query basata su testo per visualizzare la query compilata nella finestra Progettazione query con interfaccia grafica o per modificare una query. È inoltre possibile importare una query esistente da un file o un report.  

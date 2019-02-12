@@ -15,13 +15,13 @@ helpviewer_keywords:
 ms.assetid: c875ff87-ee7d-443a-a702-bdb4b6c27c6e
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 70c4c6cb0a72a4feffad2323dc1dd22534560f3a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 450ecc2a61951e0a6b0fa587002ed99a5fb59c4d
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48099041"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56041372"
 ---
 # <a name="connect-to-a-report-server-in-management-studio"></a>Eseguire la connessione a un server di report in Management Studio
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] fornisce Esplora oggetti, che consente di connettersi a qualsiasi server della famiglia [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e di visualizzarne graficamente il contenuto. Per Reporting Services, è possibile utilizzare Esplora oggetti per effettuare le operazioni seguenti:  
@@ -105,11 +105,11 @@ ms.locfileid: "48099041"
 |----------------|-----------|-----------------|  
 |Server di report in modalità nativa, connesso come l'istanza predefinita o denominata:<br /><br /> \<nome server>\<_istanza><br /><br /> La connessione al server di report viene eseguita mediante il provider WMI del server di report.|Visualizzazione e impostazione delle proprietà e dei valori predefiniti del server.<br /><br /> Visualizzazione e annullamento di processi.<br /><br /> Creazione e gestione di pianificazioni condivise.<br /><br /> Creazione, modifica o eliminazione di definizioni di ruolo.|Assegnato al ruolo di Amministratore sistema.|  
 |Server di report in modalità nativa, connesso come l'istanza predefinita o denominata tramite l'endpoint al servizio Web ReportServer:<br /><br /> http://\<nomeserver > / reportserver<br /><br /> La specifica di un URL per server di report fornisce una modalità alternativa per connettersi al server di report.|Visualizzazione e impostazione delle proprietà e dei valori predefiniti del server.<br /><br /> Visualizzazione e annullamento di processi.<br /><br /> Creazione e gestione di pianificazioni condivise.<br /><br /> Creazione, modifica o eliminazione di definizioni di ruolo.|Assegnato al ruolo di Amministratore sistema.|  
-|Server di report in modalità integrata SharePoint, connesso mediante il sito di SharePoint:<br /><br /> http://\<server Web > /\<SitoSharePoint >|Visualizzazione e impostazione delle proprietà e dei valori predefiniti del server.<br /><br /> Visualizzazione e annullamento di processi.<br /><br /> Creazione e gestione di pianificazioni condivise definite per il sito cui si è connessi.<br /><br /> Visualizzazione dei livelli di autorizzazione definiti per il sito cui si è connessi.|Livello di autorizzazione Controllo completo sul sito di SharePoint cui si è connessi.|  
+|Server di report in modalità integrata SharePoint, connesso mediante il sito di SharePoint:<br /><br /> http://\<webserver>/\<SharePointSite>|Visualizzazione e impostazione delle proprietà e dei valori predefiniti del server.<br /><br /> Visualizzazione e annullamento di processi.<br /><br /> Creazione e gestione di pianificazioni condivise definite per il sito cui si è connessi.<br /><br /> Visualizzazione dei livelli di autorizzazione definiti per il sito cui si è connessi.|Livello di autorizzazione Controllo completo sul sito di SharePoint cui si è connessi.|  
 |Server di report in modalità integrata SharePoint, connesso mediante il nome dell'istanza del server di report:<br /><br /> \<nome server>\<_istanza>|Visualizzazione e impostazione delle proprietà e dei valori predefiniti del server.<br /><br /> Visualizzazione e annullamento di processi.|Livello di autorizzazione Controllo completo sul sito di SharePoint integrato con il server di report.<br /><br /> Si noti che quando si esegue la connessione al server di report anziché al sito di SharePoint, il numero di attività che è possibile eseguire si riduce in modo significativo. Questa situazione si verifica perché il server di report può restituire solo dati dell'applicazione archiviati o gestiti nel database del server di report e non nella configurazione di SharePoint e in database del contenuto.|  
   
 ## <a name="see-also"></a>Vedere anche  
- [Configurare una connessione di Database Server di Report &#40;Gestione configurazione SSRS&#41;](../../sql-server/install/configure-a-report-server-database-connection-ssrs-configuration-manager.md)   
- [Reporting Services in SQL Server Management Studio &#40;SSRS&#41;](reporting-services-in-sql-server-management-studio-ssrs.md)  
+ [Configurare una connessione del database del server di report &#40;Gestione configurazione SSRS&#41;](../../sql-server/install/configure-a-report-server-database-connection-ssrs-configuration-manager.md)   
+ [Reporting Services di SQL Server Management Studio &#40;SSRS&#41;](reporting-services-in-sql-server-management-studio-ssrs.md)  
   
   

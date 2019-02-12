@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 4b97c470-cde0-4bb1-a46e-5f5f5553feaa
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: f22f6ee3509619e1e9ad44959684eda90952c2f9
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: eb60f8152ad49b68723367cfb4f9f3941511954e
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48065071"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56041722"
 ---
 # <a name="add-move-or-delete-a-table-matrix-or-list-report-builder-and-ssrs"></a>Aggiunta, spostamento o eliminazione di una tabella, una matrice o un elenco (Generatore report e SSRS)
   In un'area dati vengono visualizzati i dati di un set di dati del report. Le aree dati includono tabelle, matrici, elenchi, grafici e misuratori. Per nidificare un'area dati in un'altra, aggiungere separatamente ogni area dati, quindi trascinare l'area dati figlio nell'area dati padre.  

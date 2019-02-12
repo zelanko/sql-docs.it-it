@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: 7299e498-0a1a-4821-a22a-5199bb773ce0
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: d888ef0f3019e38e043ebe00c68e03f82e924f13
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 6b159467fc511292ecb1ae3832a04c73dabdd251
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48067244"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56009643"
 ---
 # <a name="secure-shared-data-source-items"></a>Proteggere le origini dei dati condivise
   È possibile impostare la sicurezza per un'origine dei dati condivisa in modo da abilitarne o disabilitarne l'accesso.  
@@ -41,10 +41,10 @@ ms.locfileid: "48067244"
 |Impostazione della sicurezza per singoli elementi|Creare e modificare assegnazioni di ruolo che controllano l'accesso all'origine dei dati condivisa. Questa attività deve essere utilizzata con l'attività Visualizzazione di origini dei dati o Gestione di origini dei dati. In caso contrario non avrà alcun effetto, poiché l'utente non potrà selezionare l'elemento.|  
   
 ## <a name="see-also"></a>Vedere anche  
- [Gestire origini dati del Report](../report-data/manage-report-data-sources.md)   
+ [Gestire origini dati dei report](../report-data/manage-report-data-sources.md)   
  [Proteggere le cartelle](secure-folders.md)   
- [Proteggere i report e risorse](secure-reports-and-resources.md)   
+ [Garantire la sicurezza di report e risorse](secure-reports-and-resources.md)   
  [Concessione di autorizzazioni in un server di report in modalità nativa](granting-permissions-on-a-native-mode-report-server.md)   
- [Archiviare le credenziali in un'origine dati di Reporting Services](../report-data/store-credentials-in-a-reporting-services-data-source.md)  
+ [Store Credentials in a Reporting Services Data Source](../report-data/store-credentials-in-a-reporting-services-data-source.md)  
   
   

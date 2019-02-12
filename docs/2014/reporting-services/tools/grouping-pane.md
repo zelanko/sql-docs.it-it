@@ -15,13 +15,13 @@ helpviewer_keywords:
 ms.assetid: 8b4bd0b3-ec97-48f8-8bfb-82a53a2f35a1
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: 70301dae9505cce59e924cd37149e32314f6868d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: fe230d9e3ed5259da9decc87e044005184b7d989
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48204668"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56043182"
 ---
 # <a name="grouping-pane"></a>Riquadro di raggruppamento
   Nel riquadro di raggruppamento vengono visualizzati i gruppi di righe e di colonne dell'area dati Tablix selezionata. Il riquadro Raggruppamento non è disponibile per le aree dati Grafico e Misuratore. Il riquadro di raggruppamento è costituito da un riquadro Gruppi di righe e da un riquadro Gruppi di colonne e include due modalità: predefinita e avanzata. Nella modalità predefinita è riportata una visualizzazione gerarchica dei membri dinamici dei gruppi di righe e di colonne. Nella modalità avanzata vengono visualizzati sia i membri dinamici che quelli statici dei gruppi di righe e di colonne. Un gruppo è un set di dati denominato che deriva da un set di dati del report visualizzato in un'area dati. I gruppi sono organizzati in gerarchie che includono membri statici e dinamici. Per altre informazioni, vedere [Informazioni sui gruppi &#40;Generatore report e SSRS&#41;](../report-design/understanding-groups-report-builder-and-ssrs.md).  
@@ -70,7 +70,7 @@ ms.locfileid: "48204668"
   
 -   `Hidden` (Indici per tabelle con ottimizzazione per la memoria). Proprietà di tipo Boolean. Indica se è necessario nascondere inizialmente la riga o la colonna.  
   
--   **ToggleItem.** Proprietà di tipo String. Il nome della casella di testo alla quale aggiungere l'immagine dell'elemento Toggle. La casella di testo deve trovarsi nello stesso ambito del gruppo o in un ambito contenitore.  
+-   **ToggleItem.** Stringa. Il nome della casella di testo alla quale aggiungere l'immagine dell'elemento Toggle. La casella di testo deve trovarsi nello stesso ambito del gruppo o in un ambito contenitore.  
   
  Per altre informazioni su come è possibile controllare questo comportamento in un'area data Tablix, vedere [Controllo della visualizzazione dell'area dati Tablix in una pagina del report &#40;Generatore report e SSRS&#41;](../report-design/controlling-the-tablix-data-region-display-on-a-report-page.md).  
   
@@ -83,6 +83,6 @@ ms.locfileid: "48204668"
 ## <a name="see-also"></a>Vedere anche  
  [Tabelle, matrici ed elenchi &#40;Generatore report e SSRS&#41;](../report-design/create-invoices-and-forms-with-lists-report-builder-and-ssrs.md)   
  [Espressioni &#40;Generatore report e SSRS&#41;](../report-design/expressions-report-builder-and-ssrs.md)   
- [Filtrare, raggruppare e ordinare i dati &#40;Report e SSRS&#41;](../report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)  
+ [Filtro, raggruppamento e ordinamento di dati &#40;Generatore report e SSRS&#41;](../report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)  
   
   

@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: adc95cc0-d15a-413d-bc5a-302eab37a069
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 7b62c631972aee6f56ec8f62db51b2e402000011
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 069c8900d5d9939567dd5e59f2f5f6547b0044af
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48117811"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56041712"
 ---
 # <a name="embedded-and-shared-datasets-report-builder-and-ssrs"></a>Set di dati condivisi e incorporati (Generatore report e SSRS)
   In un report un set di dati rappresenta i dati del report restituiti dall'esecuzione di una query in un'origine dati esterna. Il set di dati dipende dalla connessione dati contenente le informazioni sull'origine dati esterna. I dati stessi non sono inclusi nella definizione del report. Nel set di dati sono contenuti un comando di query, una raccolta campi, parametri, filtri e opzioni dei dati in cui sono incluse la distinzione tra maiuscole e minuscole e le regole di confronto. Esistono due tipi di set di dati:  
@@ -50,7 +50,7 @@ ms.locfileid: "48117811"
     |Testo della query|Configurare la query, anche definendola come espressione.|Impossibile modificare la query.|  
     |Parametri della query|Non può fare riferimento ai parametri del report<br /><br /> Include valori predefiniti<br /><br /> Include un flag di sola lettura|Configurare parametri non contrassegnati come di sola lettura nella definizione|  
     |Filtri|Definisci filtri|Impossibile visualizzare o modificare i filtri del set di dati che fanno parte della definizione<br /><br /> Può creare filtri aggiuntivi|  
-    |Origine dati|Deve essere un'origine dati condivisa|Impossibile modificare l'origine dati condivisa|  
+    |origine dati|Deve essere un'origine dati condivisa|Impossibile modificare l'origine dati condivisa|  
     |Campi|Campi dal comando di query<br /><br /> I campi calcolati non fanno parte della definizione del set di dati|Visualizzare campi, ma non modificarli<br /><br /> La raccolta di campi è statica basata sulla query al momento dell'aggiunta del set di dati condiviso al report. Per aggiornare, fare clic su **Aggiorna campi** nella finestra di dialogo **Proprietà set di dati** . La raccolta di campi effettivi è qualsiasi risultato restituito dalla query corrente nella definizione.<br /><br /> Aggiungere campi calcolati|  
     |Set di dati|Opzioni dei dati quale la distinzione tra maiuscole e minuscole|Eseguire l'override di opzioni dei dati nell'istanza|  
   
@@ -60,11 +60,11 @@ ms.locfileid: "48117811"
  Per creare o modificare un set di dati incorporato, utilizzare il riquadro dei dati del report. Dopo aver creato un set di dati, è possibile configurare le proprietà nella finestra di dialogo **Proprietà set di dati** .  
   
 ## <a name="see-also"></a>Vedere anche  
- [Incorporate e condivise le connessioni dati o origini dati &#40;Report e SSRS&#41;](../embedded-and-shared-data-connections-or-data-sources-report-builder-and-ssrs.md)   
+ [Connessioni dati o origini dati incorporate e condivise &#40;Generatore report e SSRS&#41;](../embedded-and-shared-data-connections-or-data-sources-report-builder-and-ssrs.md)   
  [Creare un set di dati condiviso o un set di dati incorporato &#40;Generatore report e SSRS&#41;](create-a-shared-dataset-or-embedded-dataset-report-builder-and-ssrs.md)   
  [Aggiungere dati a un Report &#40;Report e SSRS&#41;](report-datasets-ssrs.md)   
  [Raccolta di campi del set di dati &#40;Generatore report e SSRS&#41;](dataset-fields-collection-report-builder-and-ssrs.md)   
- [Connessioni dati, origini dati e stringhe di connessione in Generatore Report](../data-connections-data-sources-and-connection-strings-in-report-builder.md)   
+ [Connessioni dati, origini dati e stringhe di connessione in Generatore report](../data-connections-data-sources-and-connection-strings-in-report-builder.md)   
  [Connessioni dati, origini dati e stringhe di connessione in Reporting Services](../data-connections-data-sources-and-connection-strings-in-reporting-services.md)  
   
   

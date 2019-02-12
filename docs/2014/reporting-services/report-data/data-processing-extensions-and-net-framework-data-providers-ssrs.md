@@ -17,13 +17,13 @@ helpviewer_keywords:
 ms.assetid: 42a5afb5-f4c8-4957-b1fd-77bf39afa5be
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 0f127b201d3141fc3480aa4f1c07ae0e69a03f38
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: fdbd49f103727d877efa3cefd4551666666b40ca
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48093067"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56041762"
 ---
 # <a name="data-processing-extensions-and-net-framework-data-providers-ssrs"></a>Estensioni per l'elaborazione dati e provider di dati .NET Framework (SSRS)
   Un'estensione per l'elaborazione dati di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] è un componente installato con [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], progettato per recuperare i dati da un tipo specifico di origine dati e offrire funzionalità aggiuntive per supportare la progettazione e l'elaborazione dei report. Un'estensione per l'elaborazione dati di [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] è un componente reso disponibile da [!INCLUDE[msCoName](../../includes/msconame-md.md)] o da terze parti in grado di supportare le interfacce <xref:System.Data> che consentono di recuperare e modificare i dati da un tipo specifico di origine dati.  
@@ -48,7 +48,7 @@ ms.locfileid: "48093067"
 >  Per poter accedere ai dati di un'origine dati mediante un provider di dati [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] o un'estensione per l'elaborazione dati personalizzata, è necessario che questi ultimi vengano installati e registrati. L'estensione per l'elaborazione dati deve essere installata e registrata nel client per la gestione dei report per creare il report e nel server di report per visualizzare il report pubblicato. Non tutti i provider di dati vengono progettati per il funzionamento in un ambiente server. Per altre informazioni, vedere [Registrare un provider di dati .NET Framework standard &#40;SSRS&#41;](register-a-standard-net-framework-data-provider-ssrs.md) e [Distribuzione di un'estensione per l'elaborazione dati](../extensions/data-processing/deploying-a-data-processing-extension.md).  
   
 ## <a name="see-also"></a>Vedere anche  
- [Cenni preliminari sulle estensioni di elaborazione dei dati](../extensions/data-processing/data-processing-extensions-overview.md)   
+ [Cenni preliminari sulle estensioni per l'elaborazione dati](../extensions/data-processing/data-processing-extensions-overview.md)   
  [Set di dati condivisi e incorporati del report &#40;Generatore report e SSRS&#41;](report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)  
   
   

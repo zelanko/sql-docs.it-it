@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: e2358653-35bc-4496-810a-d3ccf02f229f
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: 99d7bcaf87fec0181392fd8673cb90df37849308
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: fa140a2c4311a3bfa77ba056fc957bacbb99e5d9
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48082831"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56043272"
 ---
 # <a name="page-layout-and-rendering-report-builder-and-ssrs"></a>Layout e rendering della pagina (Generatore report e SSRS)
   Quando si creano report è importante capire il comportamento dei renderer di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] per assicurarsi che il report visualizzabile corrisponda a quanto desiderato, inclusi il layout e le interruzioni di pagina. Sicuramente si desidera anche verificare che il report visualizzabile si adatti al formato della carta usato comunemente.  
@@ -44,7 +44,7 @@ ms.locfileid: "48082831"
   
  È possibile impostare proprietà relative agli elementi di report per nasconderli o visualizzarli inizialmente nella pagina. È inoltre possibile impostare proprietà di visibilità per righe, colonne o gruppi per le aree dati e fornire interruttori per consentire all'utente di visualizzare o nascondere i dati del report in modo interattivo, nonché impostare la visibilità, iniziale o meno, usando espressioni, ad esempio quelle basate sui parametri di report.  
   
- Durante l'elaborazione del report, i relativi dati vengono combinati con gli elementi di layout del report e successivamente inviati a un renderer del report. In base a regole predefinite per l'espansione degli elementi di report, il renderer determina il livello di adattamento dei dati in ogni pagina. Per progettare un report leggibile ottimizzato per il renderer da utilizzare, è necessario comprendere le regole utilizzate per controllare la paginazione in [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. Per altre informazioni, vedere [Paginazione in Reporting Service &#40;Generatore report e SSRS&#41;](pagination-in-reporting-services-report-builder-and-ssrs.md).  
+ Durante l'elaborazione del report, i relativi dati vengono combinati con gli elementi di layout del report e successivamente inviati a un renderer del report. In base a regole predefinite per l'espansione degli elementi di report, il renderer determina il livello di adattamento dei dati in ogni pagina. Per progettare un report leggibile ottimizzato per il renderer da utilizzare, è necessario comprendere le regole utilizzate per controllare la paginazione in [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. Per altre informazioni, vedere [Paginazione in Reporting Services &#40;Generatore report e SSRS&#41;](pagination-in-reporting-services-report-builder-and-ssrs.md).  
   
 ##  <a name="RenderingExtensions"></a> Renderer  
  In Reporting Services è disponibile un set di renderer, anche definiti estensioni per il rendering, che è possibile usare per esportare i report in formati diversi. Sono disponibili tre tipi di renderer:  
@@ -54,9 +54,9 @@ ms.locfileid: "48082831"
     > [!NOTE]  
     >  Sebbene non fornisca un'esportazione diretta in un formato diverso, il rendering Atom genera file di dati dai report.  
   
--   **Renderer di interruzioni di pagina software** I renderer di interruzioni di pagina software mantengono il layout e la formattazione del report. Il file risultante è ottimizzato per la visualizzazione su schermo e il recapito, ad esempio in una pagina Web. Il renderer di interruzioni pagina software disponibili sono: [!INCLUDE[msCoName](../../includes/msconame-md.md)] Excel, [!INCLUDE[msCoName](../../includes/msconame-md.md)] Word, archivio Web (MHTML) e HTML.  
+-   **Renderer di interruzioni di pagina software** I renderer di interruzioni di pagina software mantengono il layout e la formattazione del report. Il file risultante è ottimizzato per la visualizzazione su schermo e il recapito, ad esempio in una pagina Web. I renderer di interruzioni pagina software disponibili sono: [!INCLUDE[msCoName](../../includes/msconame-md.md)] Excel, [!INCLUDE[msCoName](../../includes/msconame-md.md)] Word, archivio Web (MHTML) e HTML.  
   
--   **Renderer di interruzioni di pagina manuali** I renderer di interruzioni di pagina manuali mantengono il layout e la formattazione del report. Il file risultante è ottimizzato per garantire una stampa coerente o per la visualizzazione del report online in formato libro. I renderer di interruzioni di pagina manuali disponibili sono: TIFF e PDF.  
+-   **Renderer di interruzioni di pagina manuali** I renderer di interruzioni di pagina manuali mantengono il layout e la formattazione del report. Il file risultante è ottimizzato per garantire una stampa coerente o per la visualizzazione del report online in formato libro. Sono supportati i renderer di interruzioni pagina manuali disponibili: TIFF e PDF.  
   
  Quando si visualizza un report in anteprima in Generatore report o Progettazione report oppure si esegue un report in Gestione report, il report viene sempre prima sottoposto a rendering in HTML. Dopo avere eseguito il report, sarà possibile esportarlo nei vari formati di file. Per altre informazioni, vedere [esportazione di report &#40;Generatore Report e SSRS&#41;](../report-builder/export-reports-report-builder-and-ssrs.md).  
   
@@ -95,33 +95,33 @@ ms.locfileid: "48082831"
 ##  <a name="HowTo"></a> Procedure  
  In questa sezione vengono elencate le procedure in cui viene mostrato in dettaglio l'utilizzo della paginazione nei report.  
   
--   [Aggiungere un'interruzione di pagina &#40;Report e SSRS&#41;](add-a-page-break-report-builder-and-ssrs.md)  
+-   [Aggiungere un'interruzione di pagina &#40;Generatore report e SSRS&#41;](add-a-page-break-report-builder-and-ssrs.md)  
   
--   [Visualizzare le intestazioni di colonna e riga in più pagine &#40;Report e SSRS&#41;](display-row-and-column-headers-on-multiple-pages-report-builder-and-ssrs.md)  
+-   [Visualizzare le intestazioni di riga e colonna in più pagine &#40;Generatore report e SSRS&#41;](display-row-and-column-headers-on-multiple-pages-report-builder-and-ssrs.md)  
   
--   [Aggiungere o rimuovere un'intestazione di pagina o piè di pagina &#40;Report e SSRS&#41;](add-or-remove-a-page-header-or-footer-report-builder-and-ssrs.md)  
+-   [Aggiungere o rimuovere un'intestazione o un piè di pagina &#40;Generatore report e SSRS&#41;](add-or-remove-a-page-header-or-footer-report-builder-and-ssrs.md)  
   
--   [Mantenere visibili le intestazioni durante lo scorrimento di un Report &#40;Report e SSRS&#41;](keep-headers-visible-when-scrolling-through-a-report-report-builder-and-ssrs.md)  
+-   [Visualizzazione delle intestazioni durante lo scorrimento di un report &#40;Generatore report e SSRS&#41;](keep-headers-visible-when-scrolling-through-a-report-report-builder-and-ssrs.md)  
   
--   [Visualizzare i numeri di pagina o altre proprietà del Report &#40;Report e SSRS&#41;](display-page-numbers-or-other-report-properties-report-builder-and-ssrs.md)  
+-   [Visualizzare i numeri di pagina o altre proprietà del report &#40;Generatore report e SSRS&#41;](display-page-numbers-or-other-report-properties-report-builder-and-ssrs.md)  
   
--   [Nascondere un'intestazione di pagina o piè di pagina nella prima o nell'ultima pagina &#40;Report e SSRS&#41;](hide-a-page-header-or-footer-on-the-first-or-last-page-report-builder-and-ssrs.md)  
+-   [Nascondere un'intestazione o un piè di pagina nella prima o nell'ultima pagina &#40;Generatore report e SSRS&#41;](hide-a-page-header-or-footer-on-the-first-or-last-page-report-builder-and-ssrs.md)  
   
   
   
 ##  <a name="InThisSection"></a> Contenuto della sezione  
  Negli argomenti seguenti vengono fornite ulteriori informazioni sul layout e sul rendering della pagina.  
   
- [Intestazioni di pagina e piè di pagina &#40;Report e SSRS&#41;](page-headers-and-footers-report-builder-and-ssrs.md)  
+ [Intestazioni di pagina e piè di pagina &#40;Generatore report e SSRS&#41;](page-headers-and-footers-report-builder-and-ssrs.md)  
  Vengono fornite informazioni sull'utilizzo di intestazioni e piè di pagina nei report e sul controllo della paginazione attraverso questi elementi.  
   
- [Pagina di controllo di interruzioni, intestazioni, colonne e righe &#40;Report e SSRS&#41;](controlling-page-breaks-headings-columns-and-rows-report-builder-and-ssrs.md)  
+ [Controllo di interruzioni di pagina, intestazioni, colonne e righe &#40;Generatore report e SSRS&#41;](controlling-page-breaks-headings-columns-and-rows-report-builder-and-ssrs.md)  
  Vengono fornite informazioni sull'utilizzo delle interruzioni di pagina.  
   
   
   
 ## <a name="see-also"></a>Vedere anche  
- [Funzionalità interattiva per estensioni di Rendering del Report diversi &#40;Report e SSRS&#41;](../report-builder/interactive-functionality-different-report-rendering-extensions.md)   
+ [Funzionalità interattiva per estensioni per il rendering di report differenti &#40;Generatore report e SSRS&#41;](../report-builder/interactive-functionality-different-report-rendering-extensions.md)   
  [Esportazione di report &#40;Report e SSRS&#41;](../report-builder/export-reports-report-builder-and-ssrs.md)  
   
   

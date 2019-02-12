@@ -12,13 +12,13 @@ helpviewer_keywords:
 ms.assetid: 27af5195-c845-40e0-9a9c-efe569424022
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: e629b706cec435ac027f7a90f50bf12e1cb81879
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: accae7ea31570550a77e4b73c80e2617ad27fef5
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48136411"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56041512"
 ---
 # <a name="configure-data-source-properties-for-a-report--report-manager"></a>Configurare le proprietà delle origini dati per un report (Gestione report)
   Quando si esegue un report, il server di report recupera informazioni sulla proprietà per determinare come connettersi a un'origine dati. Il tipo di origine dati, la stringa di connessione e le informazioni sulle credenziali sono specificati nelle pagine delle proprietà dell'origine dati del report pubblicato. È possibile impostare le proprietà per modificare le informazioni sulla connessione all'origine dati rispetto ai valori originali specificati al momento della creazione del report.  
@@ -57,14 +57,14 @@ ms.locfileid: "48136411"
   
     -   Se l'origine dati non usa credenziali (ad esempio, se l'origine dati è un file XML a cui si accede dal file system), fare clic su **Credenziali non necessarie**. È necessario specificare questo tipo di credenziali solo se l'operazione risulta valida per l'origine dati specifica. Se si seleziona questa opzione per un'origine dati che richiede l'autenticazione, la connessione non verrà stabilita. Se si seleziona questa opzione, assicurarsi inoltre di configurare l'account di esecuzione automatica che consente al server di report di connettersi agli altri computer per recuperare dati o file quando le credenziali utente non sono disponibili.  
   
- Per altre informazioni sulla configurazione delle credenziali, vedere [specificare le credenziali e informazioni di connessione per origini dati del Report](specify-credential-and-connection-information-for-report-data-sources.md). Per altre informazioni sull'account di esecuzione automatica, vedere [Configurare l'account di esecuzione automatica &#40;Gestione configurazione SSRS&#41;](../install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md).  
+ Per altre informazioni sulla configurazione delle credenziali, vedere [Specificare le credenziali e le informazioni sulla connessione per le origini dati del report](specify-credential-and-connection-information-for-report-data-sources.md). Per altre informazioni sull'account di esecuzione automatica, vedere [Configurare l'account di esecuzione automatica &#40;Gestione configurazione SSRS&#41;](../install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md).  
   
 ## <a name="see-also"></a>Vedere anche  
- [Contenuto della pagina &#40;gestione Report&#41;](../contents-page-report-manager.md)   
+ [Pagina Contenuto &#40;Gestione report&#41;](../contents-page-report-manager.md)   
  [Pagina Nuova origine dati &#40;Gestione report&#41;](../new-data-source-page-report-manager.md)   
  [Creare, modificare ed eliminare origini dati condivise &#40;SSRS&#41;](create-modify-and-delete-shared-data-sources-ssrs.md)   
- [Gestire origini dati del Report](manage-report-data-sources.md)   
- [Creare, eliminare o modificare un'origine dati condivisa &#40;gestione Report&#41;](../create-delete-or-modify-a-shared-data-source-report-manager.md)   
+ [Gestire origini dati dei report](manage-report-data-sources.md)   
+ [Creare, eliminare o modificare un'origine dei dati condivisa &#40;Gestione report&#41;](../create-delete-or-modify-a-shared-data-source-report-manager.md)   
  [Pagina delle proprietà Origini dati &#40;Gestione report&#41;](../data-sources-properties-page-report-manager.md)  
   
   

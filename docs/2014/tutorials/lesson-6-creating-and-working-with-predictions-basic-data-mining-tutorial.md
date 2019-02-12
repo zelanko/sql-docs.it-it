@@ -4,21 +4,20 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: b213cb58-2c40-4c89-b08b-d3c36a4afad3
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 9ff8c21dd55154d28096fdd98e680bd404be4e38
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: df86c46bdae8a40a5fa49d38517e8e5588d50e09
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48171601"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56041392"
 ---
-# <a name="lesson-6-creating-and-working-with-predictions-basic-data-mining-tutorial"></a>Lezione 6: Creazione e utilizzo di stime (Esercitazione di base sul data mining)
+# <a name="lesson-6-creating-and-working-with-predictions-basic-data-mining-tutorial"></a>Lezione 6: Creazione e utilizzo di stime (esercitazione di base di Data Mining)
   Finora si è eseguito il training, il testing e l'esplorazione dei modelli di data mining creati. Ora è possibile iniziare a utilizzare i modelli per identificare le persone con la più alta probabilità di rispondere alla nuova campagna di mailing diretto.  
   
  In questa lezione che si creerà una query per stimare quali i clienti sono con maggiore probabili acquisteranno una bicicletta. Verrà inoltre recuperato il *probabilità* che la stima sia corretta, in modo che il reparto marketing può decidere se a è possibile decidere se usare la stima o No.  
@@ -27,7 +26,7 @@ ms.locfileid: "48171601"
   
  In questa lezione sono inclusi gli argomenti seguenti:  
   
- [Creazione di stime &#40;esercitazione di base di Data Mining&#41;](../../2014/tutorials/creating-predictions-basic-data-mining-tutorial.md)  
+ [Creazione di stime &#40;Esercitazione di base sul data mining&#41;](../../2014/tutorials/creating-predictions-basic-data-mining-tutorial.md)  
   
  [Usando il drill-through sui dati della struttura &#40;esercitazione di base di Data Mining&#41;](../../2014/tutorials/using-drillthrough-on-structure-data-basic-data-mining-tutorial.md)  
   
@@ -38,7 +37,7 @@ ms.locfileid: "48171601"
  [Lezione 5: Testare i modelli &#40;esercitazione di base di Data Mining&#41;](../../2014/tutorials/lesson-5-testing-models-basic-data-mining-tutorial.md)  
   
 ## <a name="next-task-in-lesson"></a>Attività successiva della lezione  
- [Creazione di stime &#40;esercitazione di base di Data Mining&#41;](../../2014/tutorials/creating-predictions-basic-data-mining-tutorial.md)  
+ [Creazione di stime &#40;Esercitazione di base sul data mining&#41;](../../2014/tutorials/creating-predictions-basic-data-mining-tutorial.md)  
   
 ## <a name="see-also"></a>Vedere anche  
  [Contenuto dei modelli di albero delle decisioni di data mining &#40;Analysis Services - Data Mining&#41;](../../2014/analysis-services/data-mining/mining-model-content-for-decision-tree-models-analysis-services-data-mining.md)   

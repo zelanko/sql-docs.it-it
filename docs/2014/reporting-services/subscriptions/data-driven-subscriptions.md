@@ -13,13 +13,13 @@ helpviewer_keywords:
 ms.assetid: ba009f62-0d4f-45e7-a27c-36fd5f0cd3a8
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 71ab6239172ea39a8adcee9ca017a5408079a8d5
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+manager: kfile
+ms.openlocfilehash: ca57a64268beb85e08a56c79184338a872bceed0
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53357153"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56011842"
 ---
 # <a name="data-driven-subscriptions"></a>sottoscrizioni guidate dai dati
   Una sottoscrizione guidata dai dati consente di utilizzare i dati di sottoscrizione dinamici recuperati da un'origine dei dati esterna in fase di esecuzione. In una sottoscrizione guidata dai dati è inoltre possibile utilizzare testo statico e valori predefiniti specificati al momento della definizione della sottoscrizione. È possibile utilizzare le sottoscrizioni guidate dai dati per eseguire le operazioni seguenti:  

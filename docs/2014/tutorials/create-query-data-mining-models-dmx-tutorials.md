@@ -1,31 +1,30 @@
 ---
-title: "Creazione e l'esecuzione di query modelli di Data Mining con DMX: esercitazioni (Analysis Services - Data Mining) | Microsoft Docs"
+title: 'Creazione ed esecuzione di query su modelli di Data Mining con DMX: Esercitazioni (Analysis Services - Data Mining) | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - content queries [DMX]
 ms.assetid: 145b81a7-c0c3-4ca3-bb32-0b482423b9a0
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 4cc23d274fc086168f580031d9dd7f44b1afd05c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 22ed01105a32f460bcbeb2c067299fdf62af2eed
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48176991"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56012522"
 ---
-# <a name="creating-and-querying-data-mining-models-with-dmx-tutorials-analysis-services---data-mining"></a>Creazione ed esecuzione di query sui modelli di data mining con DMX: esercitazioni (Analysis Services - Data mining)
+# <a name="creating-and-querying-data-mining-models-with-dmx-tutorials-analysis-services---data-mining"></a>Creazione ed esecuzione di query su modelli di Data Mining con DMX: Esercitazioni (Analysis Services - Data Mining)
   Dopo aver creato una soluzione di data mining utilizzando [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], è possibile creare query sui modelli di data mining per stimare le tendenze, recuperare modelli nei dati e misurare l'accuratezza dei modelli di data mining.  
   
  Le esercitazioni pratiche riportate nell'elenco seguente consentono di imparare a compilare ed eseguire query di data mining utilizzando [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] in modo che sia possibile ottenere il massimo dai tuoi dati.  
   
-## <a name="in-this-section"></a>Argomenti della sezione  
+## <a name="in-this-section"></a>In questa sezione  
   
 -   [Esercitazione su DMX per Bike Buyer](../../2014/tutorials/bike-buyer-dmx-tutorial.md)  
   
@@ -39,10 +38,10 @@ ms.locfileid: "48176991"
   
      Questa esercitazione consente di creare un modello di stima per illustrare l'utilizzo dell'istruzione CREATE MODEL (DMX). È quindi possibile aggiungere modelli correlati e personalizzare il comportamento di ognuno modificando i parametri dell'algoritmo Microsoft Time Series. Infine, è possibile creare stime e aggiornarle con i nuovi dati. La capacità di aggiornare una serie temporale durante l'esecuzione di stime è stata aggiunta in [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)].  
   
-## <a name="reference"></a>Riferimento  
- [Algoritmi di Data Mining &#40;Analysis Services - Data Mining&#41;](../../2014/analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining.md)  
+## <a name="reference"></a>Riferimenti  
+ [Algoritmi di data mining &#40;Analysis Services - Data mining&#41;](../../2014/analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining.md)  
   
- [Le estensioni di Data Mining di dati &#40;DMX&#41; riferimento](/sql/dmx/data-mining-extensions-dmx-reference)  
+ [Guida di riferimento a DMX &#40;Data Mining Extensions&#41;](/sql/dmx/data-mining-extensions-dmx-reference)  
   
 ## <a name="related-sections"></a>Sezioni correlate  
   
@@ -55,8 +54,8 @@ ms.locfileid: "48176991"
      Questa esercitazione contiene numerose lezioni indipendenti, ognuna delle quali presenta un tipo di modello diverso. In ogni lezione viene illustrato il processo di creazione, esplorazione e personalizzazione di un modello, oltre al processo di creazione di query di stima.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Soluzioni di Data Mining](../../2014/analysis-services/data-mining/data-mining-solutions.md)   
- [Strumenti di Data Mining](../../2014/analysis-services/data-mining/data-mining-tools.md)   
+ [Soluzioni di data mining](../../2014/analysis-services/data-mining/data-mining-solutions.md)   
+ [Strumenti di data mining](../../2014/analysis-services/data-mining/data-mining-tools.md)   
  [Progetti di data mining](../../2014/analysis-services/data-mining/data-mining-projects.md)  
   
   

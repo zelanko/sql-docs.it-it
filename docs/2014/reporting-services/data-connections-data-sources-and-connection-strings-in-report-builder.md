@@ -11,14 +11,14 @@ f1_keywords:
 - "10421"
 ms.assetid: 7e103637-4371-43d7-821c-d269c2cc1b34
 author: maggiesmsft
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: 682b3db94bbac8e3d77b30fed90fb33885cca465
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.author: maghan
+manager: kfile
+ms.openlocfilehash: 5821d8d747609abfc8433a3ff9ad0ecf2676be7d
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48183491"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56011013"
 ---
 # <a name="data-connections-data-sources-and-connection-strings-in-report-builder"></a>Connessioni dati, origini dati e stringhe di connessione in Generatore report
   Per includere dati in un report, è possibile creare connessioni dati e set di dati. In una connessione dati sono incluse informazioni sulla modalità di accesso a un'origine dati esterna. In un set di dati è incluso un comando di query che consente di specificare i dati da includere tramite la connessione dati.  
@@ -49,17 +49,17 @@ ms.locfileid: "48183491"
   
 |**Origine dati**|**Esempio**|**Descrizione**|  
 |---------------------|-----------------|---------------------|  
-|Database di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] nel server locale|`data source="(local)";initial catalog=AdventureWorks2012`|Impostare il tipo di origine dati `SQL Server`.|  
-|Database dell'istanza di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]|`Data Source=localhost\MSSQL12.InstanceName; Initial Catalog= AdventureWorks2012`|Impostare il tipo di origine dati `SQL Server`.|  
-|Database di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Express|`Data Source=localhost\MSSQL12.SQLEXPRESS; Initial Catalog= AdventureWorks2012`|Impostare il tipo di origine dati `SQL Server`.|  
-|Database di [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] nel server locale|`data source=localhost;initial catalog=Adventure Works DW 2012`|Impostare il tipo di origine dati `SQL Server Analysis Services`.|  
-|Elenco SharePoint|`data source=http://MySharePointWeb/MySharePointSite/`|Impostare il tipo di origine dati `SharePoint List`.|  
+|Database di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] nel server locale|`data source="(local)";initial catalog=AdventureWorks2012`|Impostare il tipo di origine dati su `SQL Server`.|  
+|Database dell'istanza di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]|`Data Source=localhost\MSSQL12.InstanceName; Initial Catalog= AdventureWorks2012`|Impostare il tipo di origine dati su `SQL Server`.|  
+|Database di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Express|`Data Source=localhost\MSSQL12.SQLEXPRESS; Initial Catalog= AdventureWorks2012`|Impostare il tipo di origine dati su `SQL Server`.|  
+|Database di [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] nel server locale|`data source=localhost;initial catalog=Adventure Works DW 2012`|Impostare il tipo di origine dati su `SQL Server Analysis Services`.|  
+|Elenco SharePoint|`data source=http://MySharePointWeb/MySharePointSite/`|Impostare il tipo di origine dati su `SharePoint List`.|  
 ||||  
 |Modelli di report|Non applicabile.|Non è necessaria una stringa di connessione per un modello di report. In Generatore report individuare il server di report e selezionare il file con estensione smdl che rappresenta il modello di report.|  
 |Server Oracle|`data source=myserver`|Impostare il tipo di origine dati su `Oracle`. È necessario installare gli strumenti client Oracle nel computer di Generatore report e nel server di report.|  
 |Origine dati SAP NetWeaver BI|`DataSource=http://mySAPNetWeaverBIServer:8000/sap/bw/xml/soap/xmla`|Impostare il tipo di origine dati su `SAP NetWeaver BI`.|  
 |Origine dati Hyperion Essbase|`Data Source=http://localhost:13080/aps/XMLA; Initial Catalog=Sample`|Impostare il tipo di origine dati su `Hyperion Essbase`.|  
-|Origine dati Teradata|`data source=` *\<NN &GT;. \<NNN &GT;. \<NNN &GT;. \<N &GT;* `;`|Impostare il tipo di origine dati su `Teradata`. La stringa di connessione è un indirizzo IP (Internet Protocol) nel formato in quattro campi, ognuno dei quali può contenere da una a tre cifre.|  
+|Origine dati Teradata|`data source=` *\<NN>.\<NNN>.\<NNN>.\<N>* `;`|Impostare il tipo di origine dati su `Teradata`. La stringa di connessione è un indirizzo IP (Internet Protocol) nel formato in quattro campi, ognuno dei quali può contenere da una a tre cifre.|  
 |Origine dati Teradata|`Database=` *\<nome database>* `; data source=` *\<NN*N *>.\<NNN>.\<NNN>.\<N*NN*>*`;Use X Views=False;Restrict to Default Database=True`|Impostare il tipo di origine dati su `Teradata`, analogamente all'esempio precedente. Utilizzare solo il database predefinito specificato nel tag Database e non individuare automaticamente le relazioni dei dati.|  
 |Origine dati XML, servizio Web|`data source=http://adventure-works.com/results.aspx`|Impostare il tipo di origine dati su `XML`. La stringa di connessione è un URL per un servizio Web che supporta Web Services Definition Language (WSDL).|  
 |Origine dati XML, documento XML|`http://localhost/XML/Customers.xml`|Impostare il tipo di origine dati su `XML`. La stringa di connessione è un URL per il documento XML.|  
@@ -81,6 +81,6 @@ ms.locfileid: "48183491"
   
 ## <a name="see-also"></a>Vedere anche  
  [Aggiungere dati a un Report &#40;Report e SSRS&#41;](report-data/report-datasets-ssrs.md)   
- [Parti di report &#40;Report e SSRS&#41;](report-parts-report-builder-and-ssrs.md)  
+ [Parti del report &#40;Generatore report e SSRS&#41;](report-parts-report-builder-and-ssrs.md)  
   
   

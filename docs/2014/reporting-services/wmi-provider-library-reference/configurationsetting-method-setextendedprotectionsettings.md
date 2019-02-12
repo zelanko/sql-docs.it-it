@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 2d8e7232-42f4-41b6-98eb-c856f6c85d8c
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 58c5e499f1ffb418361527677a7ce94050bbf5c3
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+manager: kfile
+ms.openlocfilehash: 8be8d3a78c1303a607f2219d9a54338f938e6ba3
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52399194"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56015922"
 ---
 # <a name="setextendedprotectionsettings-method-wmi-msreportserverconfigurationsetting"></a>Metodo SetExtendedProtectionSettings (MSReportServer_ConfigurationSetting WMI)
   Il metodo SetExtendedProtectionSettings viene usato per impostare le proprietà RSWindowsExtendedProtectionLevel e RSWindowsExtendedProtectionScenario nel file di configurazione RSReportServer.config di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].  

@@ -20,13 +20,13 @@ helpviewer_keywords:
 ms.assetid: a8139a9d-4aeb-4e64-96f3-564edf60479f
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 396542d6c29a463eae83442e3b3398b68cd01b11
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: fa4be367b9f04fb8d96bb228b7d040aae0e120d5
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48180353"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56041262"
 ---
 # <a name="query-design-tools-in-report-designer-sql-server-data-tools-ssrs"></a>Strumenti per la progettazione di query in Progettazione report in SQL Server Data Tools (SSRS)
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] include svariati strumenti per la progettazione di query che è possibile usare per creare query sui set di dati in Progettazione report. La disponibilità di un particolare strumento di progettazione query dipende dal tipo di origine dei dati utilizzato. Inoltre, in alcuni strumenti di progettazione query sono disponibili modalità alternative, così che sia possibile scegliere se lavorare in modalità visiva o direttamente nel linguaggio query. In questo argomento si illustrano tutti gli strumenti disponibili e si descrivono i tipi di origine dei dati supportati da ognuno di essi. Vengono quindi descritti gli strumenti seguenti:  
@@ -55,7 +55,7 @@ ms.locfileid: "48180353"
  È consigliabile utilizzare la finestra Progettazione query basata su testo per creare query complesse, impiegare stored procedure, eseguire query sui dati XML e scrivere query dinamiche. A seconda dell'origine dei dati, è possibile attivare/disattivare il pulsante **Modifica come testo** sulla barra degli strumenti per passare dalla finestra Progettazione query con interfaccia grafica alla finestra Progettazione query basata su testo e viceversa. Per altre informazioni, vedere [Interfaccia utente di Progettazione query basata su testo](../text-based-query-designer-user-interface.md).  
   
 ##  <a name="Graphical"></a> Finestra Progettazione query con interfaccia grafica  
- La finestra Progettazione query con interfaccia grafica viene usata per creare o modificare query [!INCLUDE[tsql](../../includes/tsql-md.md)] eseguite su un database relazionale. Questo strumento di progettazione delle query viene utilizzato in diversi prodotti di [!INCLUDE[msCoName](../../../includes/msconame-md.md)] e in altri componenti di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. A seconda del tipo di origine dei dati, esso supporta le modalità Text, StoredProcedure e TableDirect. Nella figura seguente viene illustrata la finestra Progettazione query con interfaccia grafica.  
+ La finestra Progettazione query con interfaccia grafica viene usata per creare o modificare query [!INCLUDE[tsql](../../includes/tsql-md.md)] eseguite su un database relazionale. Questo strumento di progettazione delle query viene utilizzato in diversi prodotti di [!INCLUDE[msCoName](../../../includes/msconame-md.md)] e in altri componenti di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . A seconda del tipo di origine dei dati, esso supporta le modalità Text, StoredProcedure e TableDirect. Nella figura seguente viene illustrata la finestra Progettazione query con interfaccia grafica.  
   
  ![Finestra Progettazione query con interfaccia grafica per query SQL](../media/rsqd-dsaw-sql.gif "Finestra Progettazione query con interfaccia grafica per query SQL")  
   
@@ -83,7 +83,7 @@ ms.locfileid: "48180353"
  Per utilizzare la Progettazione query DMX, è necessario definire un'origine dei dati che includa un modello di data mining valido e disponibile. Quando si definisce un set di dati per l'origine dei dati, è possibile aprire la query nella finestra Progettazione query DMX. Se necessario, utilizzare i pulsanti MDX e DMX sulla barra degli strumenti per passare dalla modalità MDX a DMX e viceversa. Dopo aver selezionato il modello, è possibile creare query di stima di data mining che forniscano dati a un report. Per altre informazioni, vedere [Interfaccia utente di Progettazione query DMX di Analysis Services](analysis-services-dmx-query-designer-user-interface.md).  
   
 ##  <a name="SAPBW"></a> Progettazione query Sap NetWeaver BI  
- La finestra Progettazione query [!INCLUDE[SAP_DPE_BW_1](../../../includes/sap-dpe-bw-1-md.md)] consente di recuperare dati da un database di [!INCLUDE[SAP_DPE_BW_1](../../../includes/sap-dpe-bw-1-md.md)] . Per usare questa finestra di Progettazione query, è necessario disporre di un [!INCLUDE[SAP_DPE_BW_1](../../../includes/sap-dpe-bw-1-md.md)] origine dati che ha almeno un InfoCube, MultiProvider o query Web definita. Nella figura seguente viene illustrato lo strumento Progettazione query [!INCLUDE[SAP_DPE_BW_1](../../../includes/sap-dpe-bw-1-md.md)] .  
+ La finestra Progettazione query [!INCLUDE[SAP_DPE_BW_1](../../../includes/sap-dpe-bw-1-md.md)] consente di recuperare dati da un database di [!INCLUDE[SAP_DPE_BW_1](../../../includes/sap-dpe-bw-1-md.md)] . Per usarla, è necessario disporre di un'origine dei dati di [!INCLUDE[SAP_DPE_BW_1](../../../includes/sap-dpe-bw-1-md.md)] che includa almeno una query InfoCube, MultiProvider o Web definita. Nella figura seguente viene illustrato lo strumento Progettazione query [!INCLUDE[SAP_DPE_BW_1](../../../includes/sap-dpe-bw-1-md.md)] .  
   
  ![Progettazione query mediante MDX in modalità progettazione](../media/rsqd-dssapbw-mdx-designmode.gif "Progettazione query mediante MDX in modalità progettazione")  
   

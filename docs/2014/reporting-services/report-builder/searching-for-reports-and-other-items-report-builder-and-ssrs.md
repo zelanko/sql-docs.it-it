@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 6a586659-5c2b-453b-8f40-a3a469277b17
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 533514facc1b34d9a8fa03a71d983ed2f01d2137
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+manager: kfile
+ms.openlocfilehash: 5ce08fdfd140f6e9e1bc744efc65c1059b44b9c4
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52532399"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56041472"
 ---
 # <a name="searching-for-reports-and-other-items-report-builder--and-ssrs"></a>Ricerca di report e altri elementi (Generatore report e SSRS)
   È possibile utilizzare Gestione report per cercare elementi specifici in un server di report utilizzando il nome o la descrizione degli elementi come criteri di ricerca. È possibile cercare report pubblicati, modelli di report, cartelle, origini dei dati condivise e risorse. Non è possibile cercare pianificazioni, proprietari, assegnazioni di ruolo, snapshot specifici della cronologia dei report o sottoscrizioni. La ricerca viene eseguita nel database del server di report in cui vengono archiviati gli elementi.  

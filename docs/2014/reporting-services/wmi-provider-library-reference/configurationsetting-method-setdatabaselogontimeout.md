@@ -18,13 +18,13 @@ helpviewer_keywords:
 ms.assetid: b8773596-5b98-4355-a4ab-4412e1317c67
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 1d3d01b2042d163fdee45a87b7341a1a3b6dd3ce
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 6d864f76898e98c904fd35682984bf60b97c77c9
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48126784"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56042332"
 ---
 # <a name="setdatabaselogontimeout-method-wmi-msreportserverconfigurationsetting"></a>Metodo SetDatabaseLogonTimeout (MSReportServer_ConfigurationSetting WMI)
   Specifica il valore di timeout predefinito per le connessioni al database del server di report.  

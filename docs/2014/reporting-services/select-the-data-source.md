@@ -11,14 +11,14 @@ f1_keywords:
 - sql12.rtp.rptwizard.selectdatasource.f1
 ms.assetid: cdd84ad8-7c6a-41ac-bf51-1b0973434829
 author: maggiesmsft
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: aa201b447d9263e32aecf7d525e9460b8c0a8b37
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.author: maghan
+manager: kfile
+ms.openlocfilehash: 6afc3b709daf906aec429ae92da785ecff681a48
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48166961"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56011822"
 ---
 # <a name="select-the-data-source"></a>Selezione origine dati
   Utilizzare questa pagina della Creazione guidata report per definire un'origine dati per il report.  
@@ -30,11 +30,11 @@ ms.locfileid: "48166961"
  **Nuova origine dati**  
  Selezionare **Nuova origine dati** per definire una nuova origine dei dati. Le informazioni dell'origine dati verranno utilizzate solo per il report corrente.  
   
- **Nome**  
+ **Name**  
  Consente di digitare un nome per la connessione all'origine dati. Tale nome deve essere univoco all'interno del report.  
   
  **Tipo**  
- Consente di selezionare il tipo di origine dati usata. Se, ad esempio, si utilizza un database di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], selezionare [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
+ Consente di selezionare il tipo di origine dati usata. Se, ad esempio, si utilizza un database di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] , selezionare [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
   
  **Stringa di connessione**  
  Consente di digitare una stringa di connessione per l'origine dati. Per altre informazioni sulle stringhe di connessione, vedere [connessioni dati, origini dati e stringhe di connessione in Reporting Services](../../2014/reporting-services/data-connections-data-sources-and-connection-strings-in-reporting-services.md).  
@@ -47,7 +47,7 @@ ms.locfileid: "48166961"
  Selezionare questa opzione per archiviare l'origine dati nel progetto, anziché nel report, come origine dati condivisa. In questo modo, potrà essere utilizzata come origine dati per altri report nel progetto.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Incorporate e condivise le connessioni dati o origini dati &#40;Report e SSRS&#41;](../../2014/reporting-services/embedded-and-shared-data-connections-or-data-sources-report-builder-and-ssrs.md)   
+ [Connessioni dati o origini dati incorporate e condivise &#40;Generatore report e SSRS&#41;](../../2014/reporting-services/embedded-and-shared-data-connections-or-data-sources-report-builder-and-ssrs.md)   
  [Specificare le credenziali e le informazioni sulla connessione per le origini dati del report](report-data/specify-credential-and-connection-information-for-report-data-sources.md)   
  [Reporting Services Report Server](../../2014/reporting-services/reporting-services-report-server.md)   
  [RSReportDesigner - file di configurazione](report-server/rsreportdesigner-configuration-file.md)   

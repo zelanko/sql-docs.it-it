@@ -1,25 +1,24 @@
 ---
-title: 'Lezione 4: Esecuzione di stime di mercato sugli acquisti | Microsoft Docs'
+title: "Lezione 4: L'esecuzione di stime di mercato sugli acquisti | Microsoft Docs"
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: b3238f1b-ea04-4253-ade2-838a806b62fe
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 6db486a5d497ba6b6c5bfe312197d78a5656d388
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 3b49fc242eb8b2242269c5af33cc094937bbe0de
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48177497"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56041432"
 ---
-# <a name="lesson-4-executing-market-basket-predictions"></a>Lezione 4: Esecuzione delle stime relative a Market Basket
-  In questa lezione si utilizzerà la DMX `SELECT` istruzione per creare stime in base all'associazione di modelli creati nella [lezione 2: aggiunta di modelli di Data Mining alla struttura di Data Mining Market Basket](../../2014/tutorials/lesson-2-adding-mining-models-to-the-market-basket-mining-structure.md). Una query della stima viene creata utilizzando l'istruzione DMX `SELECT` e aggiungendo una clausola `PREDICTION JOIN` Per altre informazioni sulla sintassi di un prediction join, vedere [SELECT FROM &#60;modello&#62; PREDICTION JOIN &#40;DMX&#41;](/sql/dmx/select-from-model-cases-dmx).  
+# <a name="lesson-4-executing-market-basket-predictions"></a>Lezione 4: L'esecuzione di stime di mercato sugli acquisti
+  In questa lezione si utilizzerà la DMX `SELECT` istruzione per creare stime in base all'associazione di modelli creati nella [lezione 2: Aggiunta di modelli di Data Mining alla struttura di Data Mining Market Basket](../../2014/tutorials/lesson-2-adding-mining-models-to-the-market-basket-mining-structure.md). Una query della stima viene creata utilizzando l'istruzione DMX `SELECT` e aggiungendo una clausola `PREDICTION JOIN` Per altre informazioni sulla sintassi di un prediction join, vedere [SELECT FROM &#60;modello&#62; PREDICTION JOIN &#40;DMX&#41;](/sql/dmx/select-from-model-cases-dmx).  
   
  Il **SELECT FROM \<model > PREDICTION JOIN** modulo del `SELECT` istruzione contiene tre parti:  
   
@@ -147,7 +146,7 @@ SELECT <select list> FROM [<mining model>]
   
 8.  Sulla barra degli strumenti, scegliere il **Execute** pulsante.  
   
-     La query restituisce una tabella che contiene tre prodotti: HL Mountain Tire, Fender Set – Mountain e ML Mountain Tire. Nella tabella vengono elencati questi prodotti restituiti in ordine di probabilità. Il prodotto restituito con la maggiore probabilità di essere incluso nello stesso carrello acquisti dei tre prodotti specificati nella query viene visualizzato all'inizio della tabella. I due prodotti che seguono sono quelli con la seconda maggiore probabilità di essere inclusi nel carrello acquisti. La tabella contiene anche le statistiche che descrivono l'accuratezza della stima.  
+     La query restituisce una tabella che contiene tre prodotti: HL Mountain Tire, Fender Set - Mountain e ML Mountain Tire. Nella tabella vengono elencati questi prodotti restituiti in ordine di probabilità. Il prodotto restituito con la maggiore probabilità di essere incluso nello stesso carrello acquisti dei tre prodotti specificati nella query viene visualizzato all'inizio della tabella. I due prodotti che seguono sono quelli con la seconda maggiore probabilità di essere inclusi nel carrello acquisti. La tabella contiene anche le statistiche che descrivono l'accuratezza della stima.  
   
 ## <a name="create-a-prediction-by-using-a-model-with-a-minimumprobability-of-001"></a>Creazione di una stima utilizzando un modello con il valore 0,01 per MINIMUM_PROBABILITY  
   
@@ -219,7 +218,7 @@ SELECT <select list> FROM [<mining model>]
   
 8.  Sulla barra degli strumenti, scegliere il **Execute** pulsante.  
   
-     La query restituisce una tabella che contiene tre prodotti: HL Mountain Tire, Water Bottle e Fender Set – Mountain. Nella tabella vengono elencati questi prodotti in ordine di probabilità. Il prodotto visualizzato nella parte superiore della tabella è il prodotto con la maggiore probabilità di essere incluso nello stesso carrello acquisti dei tre prodotti specificati nella query. I due prodotti rimanenti sono quelli con la seconda maggiore probabilità di essere inclusi nel carrello acquisti. La tabella contiene anche le statistiche che descrivono l'accuratezza della stima.  
+     La query restituisce una tabella che contiene tre prodotti: HL Mountain Tire, Water Bottle e Fender Set - Mountain. Nella tabella vengono elencati questi prodotti in ordine di probabilità. Il prodotto visualizzato nella parte superiore della tabella è il prodotto con la maggiore probabilità di essere incluso nello stesso carrello acquisti dei tre prodotti specificati nella query. I due prodotti rimanenti sono quelli con la seconda maggiore probabilità di essere inclusi nel carrello acquisti. La tabella contiene anche le statistiche che descrivono l'accuratezza della stima.  
   
      Si può notare i risultati di questa query il valore della *MINIMUM_PROBABILITY* parametro ha effetto sui risultati restituiti dalla query.  
   
@@ -228,7 +227,7 @@ SELECT <select list> FROM [<mining model>]
  Per informazioni su come usare DMX in un altro scenario predittivo, vedere [esercitazione su DMX per Bike Buyer](../../2014/tutorials/bike-buyer-dmx-tutorial.md).  
   
 ## <a name="see-also"></a>Vedere anche  
- [Esempi di Query del modello di associazione](../../2014/analysis-services/data-mining/association-model-query-examples.md)   
+ [Esempi di query sul modello di associazione](../../2014/analysis-services/data-mining/association-model-query-examples.md)   
  [Interfacce di query di data mining](../../2014/analysis-services/data-mining/data-mining-query-tools.md)  
   
   

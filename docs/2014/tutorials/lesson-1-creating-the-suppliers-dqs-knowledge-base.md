@@ -4,21 +4,18 @@ ms.custom: ''
 ms.date: 04/27/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- data-quality-services
-- integration-services
-- master-data-services
+ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: 78825ccb-30fc-463c-8140-435532e2ecd2
-author: douglaslms
-ms.author: douglasl
+author: leolimsft
+ms.author: lle
 manager: craigg
-ms.openlocfilehash: f2b4fa3328f2c504be6c1ff761a558a6102a5299
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 7aa0e4755de7f358596c7ce477367d84646fd176
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48176491"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56010953"
 ---
 # <a name="lesson-1-creating-the-suppliers-dqs-knowledge-base"></a>Lezione 1: Creazione di una Knowledge Base DQS Suppliers.
   In questa lezione, si crea una knowledge base DQS denominata **Suppliers** con le informazioni (metadati) sui dati fornitore. È possibile utilizzare la Knowledge Base per effettuare attività di pulizia e di corrispondenza nei dati di input del fornitore. Tramite l'attività di pulizia è possibile identificare i dati errati/non validi, correggere i dati errati, proporre correzioni/suggerimenti, standardizzare i dati, nonché arricchire i dati con ulteriori informazioni. Tramite l'attività di corrispondenza è possibile confrontare i dati e identificare in essi i record simili, ma leggermente diversi, al fine di rimuovere i dati duplicati.  
@@ -46,6 +43,6 @@ ms.locfileid: "48176491"
 -   Pubblicazione della Knowledge Base in modo da poterla utilizzare nelle attività di pulizia e di corrispondenza.  
   
 ## <a name="next-step"></a>Passaggio successivo  
- [Attività 1: Creazione di una Knowledge Base e dei domini](../../2014/tutorials/task-1-creating-a-knowledge-base-and-domains.md)  
+ [Attività 1: Creazione di una Knowledge Base e domini](../../2014/tutorials/task-1-creating-a-knowledge-base-and-domains.md)  
   
   

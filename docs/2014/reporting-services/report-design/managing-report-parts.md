@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 41947b4c-8ecf-4e4f-b30e-66e1d6692b74
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: ea7896e5f7c394539793ca65496824691275963d
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+manager: kfile
+ms.openlocfilehash: f7564a37766972782a5c118ced64298b7f4ce076
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52393754"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56010842"
 ---
 # <a name="managing-report-parts"></a>Gestione di parti di report
   A partire [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], parti del report possono essere pubblicate nei server di report e riutilizzate in altri report e da altri utenti se hanno le autorizzazioni appropriate.  

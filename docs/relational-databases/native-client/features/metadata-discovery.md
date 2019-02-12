@@ -3,6 +3,7 @@ title: Individuazione dei metadati | Documenti di Microsoft
 ms.custom: ''
 ms.date: 03/14/2017
 ms.reviewer: ''
+ms.prod: sql
 ms.technology: native-client
 ms.topic: reference
 ms.assetid: ec3c0f4f-f838-43ce-85f2-cf2761e2aac5
@@ -10,12 +11,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 82f65fbc963c933289ab1de13888884ec2b3cd94
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 1d3144524e5b3fbd1c93b5483365d4931c68c987
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47599688"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56043212"
 ---
 # <a name="metadata-discovery"></a>Individuazione dei metadati
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

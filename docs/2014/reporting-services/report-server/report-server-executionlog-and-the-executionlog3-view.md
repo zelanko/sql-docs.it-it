@@ -13,13 +13,13 @@ helpviewer_keywords:
 ms.assetid: a7ead67d-1404-4e67-97e7-4c7b0d942070
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 8972427f2ba2529880715ca12d85a560a02eb31f
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+manager: kfile
+ms.openlocfilehash: 6e11a7d35550c881157ab4be6aa78048346653c8
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52405010"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56011253"
 ---
 # <a name="report-server-execution-log-and-the-executionlog3-view"></a>Log di esecuzione del server di report e la vista ExecutionLog3
   Nel log di esecuzione del server di report sono incluse informazioni sui report eseguiti in uno o più server in una distribuzione con scalabilità orizzontale in modalità nativa o in una farm di SharePoint. Il log consente di conoscere la frequenza con cui un report viene richiesto, i formati di output più usati e i millisecondi dedicati a ogni fase dell'elaborazione. Nel log, inoltre, sono contenute informazioni sul tempo impiegato per l'esecuzione di una query del set di dati di un report e su quello speso per l'elaborazione dei dati. Se si è un amministratore del server di report, è possibile esaminare le informazioni sul log, identificare le attività con esecuzione prolungata e inviare suggerimenti agli autori del report sulle aree del report, set di dati o elaborazione, che potrebbero essere migliorate.  
@@ -115,10 +115,10 @@ select * from ExecutionLog3 order by TimeStart DESC
 |ItemPath|Percorso in cui viene archiviato un report o un elemento del report.|  
 |UserName|Identificatore dell'utente.|  
 |ExecutionID|L'identificatore interno associato a una richiesta. Le richieste nelle sessioni dello stesso utente condividono lo stesso ID esecuzione.|  
-|RequestType|I valori possibili sono:<br />**Interattivo**<br />**Sottoscrizione**<br /><br /> <br /><br /> L'analisi dei dati del log filtrati in base RequestType=Subscription e ordinati per TimeStart può rivelare periodi di utilizzo eccessivo della sottoscrizione ed è pertanto necessario modificare alcune delle sottoscrizioni del report a un'ora diversa.|  
+|RequestType|I valori possibili sono:<br />**Interactive**<br />**Sottoscrizione**<br /><br /> <br /><br /> L'analisi dei dati del log filtrati in base RequestType=Subscription e ordinati per TimeStart può rivelare periodi di utilizzo eccessivo della sottoscrizione ed è pertanto necessario modificare alcune delle sottoscrizioni del report a un'ora diversa.|  
 |Formato|Formato di rendering.|  
 |Parametri|Valori dei parametri usati per l'esecuzione del report.|  
-|ItemAction|I valori possibili sono:<br /><br /> **Rendering**<br /><br /> **Sort**<br /><br /> **BookMarkNavigation**<br /><br /> **DocumentNavigation**<br /><br /> **GetDocumentMap**<br /><br /> **FindString**<br /><br /> **Eseguire**<br /><br /> **RenderEdit**|  
+|ItemAction|I valori possibili sono:<br /><br /> **Rendering**<br /><br /> **Sort**<br /><br /> **BookMarkNavigation**<br /><br /> **DocumentNavigation**<br /><br /> **GetDocumentMap**<br /><br /> **Findstring**<br /><br /> **Eseguire**<br /><br /> **RenderEdit**|  
 |TimeStart|Ora di inizio e ora dell'arresto, che indicano la durata dell'elaborazione del report.|  
 |TimeEnd||  
 |TimeDataRetrieval|Numero di millisecondi impiegati per il recupero dei dati.|  

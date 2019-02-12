@@ -14,14 +14,14 @@ helpviewer_keywords:
 - Query Builder [Reporting Services]
 ms.assetid: 1b0904ea-28c1-448e-b56c-c0fdfbc8b222
 author: maggiesmsft
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: 6bf7bfb94237b34056502d08f5cec8e4d5b80bb9
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.author: maghan
+manager: kfile
+ms.openlocfilehash: 6f6a7e4e8e6d4a70ecb3695819f3648c86034b4e
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48056301"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56013164"
 ---
 # <a name="query-builder-report-wizard"></a>Generatore di query (Creazione guidata report)
   Utilizzare un generatore di query per specificare una query che recuperi un set di risultati da utilizzare in un report. È possibile scegliere tra due generatori di query:  
@@ -41,7 +41,7 @@ ms.locfileid: "48056301"
  **Importa**  
  Consente di aprire la finestra di dialogo **Importa query** e di visualizzare i file con estensione rdl e sql per qualsiasi report disponibile. È possibile utilizzare la query importata così com'è oppure modificarla nel generatore di query.  
   
- **\! (Esegui)**  
+ **\! (Run)**  
  Consente di eseguire la query e di restituire un set di risultati nel caso in cui la query sia valida. Si noti che non è possibile eseguire la query nel caso in cui questa sia un'espressione. Per verificare una query basata su un'espressione, è necessario visualizzare l'anteprima del report.  
   
  **Tipo di comando**  

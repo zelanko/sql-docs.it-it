@@ -15,13 +15,13 @@ f1_keywords:
 ms.assetid: 70eef636-6d8c-495e-83fc-dc0fe9771658
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: 6e3e43a8b2f39d4396945d47ee7e943e64fd1195
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: f55324123716289fec88b9d9bc531dccb22848d3
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48072431"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56043232"
 ---
 # <a name="tablix-data-region-cells-rows-and-columns-report-builder-and-ssrs"></a>Celle, righe e colonne dell'area dati Tablix (Generatore report e SSRS)
   Per controllare la modalità di visualizzazione in un report dei dati di righe e colonne di un'area dati Tablix, è necessario comprendere in che modo specificare righe e colonne relative a dati dettaglio, dati di gruppo, etichette e totali. Per visualizzare i dati, in molti casi è possibile utilizzare le strutture predefinite per una tabella, una matrice o un elenco. Per altre informazioni, vedere [tabelle &#40;Generatore Report e SSRS&#41;](tables-report-builder-and-ssrs.md), [matrici &#40;Generatore Report e SSRS&#41;](create-a-matrix-report-builder-and-ssrs.md), oppure [Elenca &#40;Generatore Report e SSRS&#41;](create-invoices-and-forms-with-lists-report-builder-and-ssrs.md).  
@@ -39,7 +39,7 @@ ms.locfileid: "48072431"
 ### <a name="row-and-column-handles"></a>Handle di riga e colonna  
  Quando si seleziona un'area dati Tablix, le icone degli handle di riga e colonna indicano lo scopo di ogni riga e colonna. Gli handle indicano le righe e le colonne che si trovano all'interno o all'esterno di un gruppo. Nella tabella seguente sono indicate alcune visualizzazioni degli handle.  
   
-|Icona|Description|  
+|Icona|Descrizione|  
 |----------|-----------------|  
 |![Handle di riga con 3 linee parallele per la riga di dettaglio](../media/rs-icontablix-detailsrow.gif "Handle di riga con 3 linee parallele per la riga di dettaglio")|Solo il gruppo di dettagli nella gerarchia dei gruppi di righe|  
 |![Handle di riga con riga di dettaglio e un gruppo esterno](../media/rs-icontablix-groupwithdetails.gif "Handle di riga con riga di dettaglio e un gruppo esterno")|Un gruppo esterno e il gruppo di dettagli figlio|  
@@ -121,6 +121,6 @@ ms.locfileid: "48072431"
  È possibile dividere una cella precedentemente unita. Le celle possono essere divise orizzontalmente nelle colonne o verticalmente tra le righe. Per dividere una cella in un blocco di celle, dividere prima la cella in orizzontale, quindi in verticale, ripetendo l'operazione più volte fino al raggiungimento del risultato desiderato.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Un'area dati Tablix &#40;Report e SSRS&#41;](../tablix-data-region-report-builder-and-ssrs.md)  
+ [Area dati Tablix &#40;Generatore report e SSRS&#41;](../tablix-data-region-report-builder-and-ssrs.md)  
   
   

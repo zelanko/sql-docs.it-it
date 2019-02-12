@@ -16,13 +16,13 @@ helpviewer_keywords:
 ms.assetid: 8e255792-d9ef-496f-a26c-9e969c1209a0
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: d6f4508dda8496d9065655f5a8e298feaa4e9ad3
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: e7f600e646e4690ed735b908861bd61516337cfd
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48134031"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56042862"
 ---
 # <a name="limit-report-history-report-manager"></a>Limitare la cronologia dei report (Gestione report)
   La cronologia di un report è una raccolta di snapshot del report creati nel tempo. È possibile creare la cronologia del report su richiesta o pianificare la frequenza di creazione di uno snapshot e della relativa aggiunta alla cronologia.  
@@ -48,7 +48,7 @@ ms.locfileid: "48134031"
 4.  Selezionare le opzioni per il report e fare clic su **Applica**. Per informazioni dettagliate su ogni opzione, vedere [Pagina delle proprietà Opzioni snapshot &#40;Gestione report&#41;](../snapshot-options-properties-page-report-manager.md).  
   
 ## <a name="see-also"></a>Vedere anche  
- [Aggiunta di uno Snapshot alla cronologia del Report &#40;gestione Report&#41;](../report-server/add-a-snapshot-to-report-history-report-manager.md)   
+ [Aggiungere uno snapshot alla cronologia del report &#40;Gestione report&#41;](../report-server/add-a-snapshot-to-report-history-report-manager.md)   
  [Gestione report &#40;modalità nativa SSRS&#41;](../report-manager-ssrs-native-mode.md)  
   
   

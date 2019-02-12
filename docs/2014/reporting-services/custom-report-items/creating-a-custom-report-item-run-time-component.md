@@ -13,13 +13,13 @@ helpviewer_keywords:
 ms.assetid: b3e15a4a-98f8-4dbb-b847-bbcb20327051
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 3a5c489125d4a35b5c886ba6d6304b22ceec5c4a
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+manager: kfile
+ms.openlocfilehash: cfaaa8504a018bad1740c1fb381471e9b4b82878
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53375353"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56011043"
 ---
 # <a name="creating-a-custom-report-item-run-time-component"></a>Creazione di un componente runtime dell'elemento del report personalizzato
   Il componente runtime dell'elemento del report personalizzato viene implementato come componente [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] usando un linguaggio conforme a CLS e viene chiamato in fase di esecuzione dal componente Elaborazione report. Le proprietà del componente runtime vengono definite nell'ambiente di progettazione modificando il componente della modalità progettazione corrispondente dell'elemento del report personalizzato.  
@@ -137,6 +137,6 @@ namespace Microsoft.Samples.ReportingServices
  [Architettura di un elemento del report personalizzato](custom-report-item-architecture.md)   
  [Creazione di un componente dell'elemento del report personalizzato per la fase di progettazione](creating-a-custom-report-item-design-time-component.md)   
  [Librerie di classi dell'elemento del report personalizzato](custom-report-item-class-libraries.md)   
- [Come si fa: Distribuire un elemento del Report personalizzato](how-to-deploy-a-custom-report-item.md)  
+ [Procedura: Distribuire un elemento del report personalizzato](how-to-deploy-a-custom-report-item.md)  
   
   

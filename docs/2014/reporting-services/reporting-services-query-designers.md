@@ -11,14 +11,14 @@ helpviewer_keywords:
 - query designers [Reporting Services]
 ms.assetid: 07efd3f1-804f-45f7-b62a-3e727a3d9835
 author: maggiesmsft
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: 1e8a2fabc77b4b2ca5d8a27b83c29c233148032e
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.author: maghan
+manager: kfile
+ms.openlocfilehash: 45273aa1bce0e0caec60ce415762f0c52fe67a98
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48219493"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56010812"
 ---
 # <a name="reporting-services-query-designers"></a>Strumenti di progettazione query in Reporting Services
   [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] include finestre Progettazione query con interfaccia grafica e basata su testo per la compilazione di query per ogni tipo di origine dati nel report.  
@@ -33,9 +33,9 @@ ms.locfileid: "48219493"
   
 -   **In base alla differenza nel linguaggio di query.** Un linguaggio di query come [!INCLUDE[tsql](../includes/tsql-md.md)] , ad esempio, può presentare differenze nella sintassi a seconda del tipo di origine dati, mentre la sintassi dei linguaggi [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[tsql](../includes/tsql-md.md)] e Oracle SQL presenta alcune differenze in un comando di query.  
   
--   **In base al supporto per la parte indicante lo schema di un nome di oggetto di database.** Se un'origine dei dati prevede l'utilizzo degli schemi negli identificatori di oggetto di database, è necessario specificare il nome dello schema nella query per gli eventuali nomi che non utilizzano lo schema predefinito. Ad esempio, `SELECT FirstName, LastName FROM [Person].[Person]`.  
+-   **In base al supporto per la parte indicante lo schema di un nome di oggetto di database.** Se un'origine dei dati prevede l'utilizzo degli schemi negli identificatori di oggetto di database, è necessario specificare il nome dello schema nella query per gli eventuali nomi che non utilizzano lo schema predefinito. Ad esempio `SELECT FirstName, LastName FROM [Person].[Person]`.  
   
--   **In base al supporto per i parametri di query.** Il supporto dei parametri varia a seconda del provider di dati. Alcuni provider di dati supportano i parametri denominati, ad esempio `SELECT Col1, Col2 FROM Table WHERE <parameter identifier><parameter name> = <value>`. Altri supportano invece i parametri senza nome, ad esempio `SELECT Col1, Col2 FROM Table WHERE <column name> = ?`. L'identificatore di parametro potrebbero essere diversi provider di dati. ad esempio, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] viene utilizzato il "at" (@) simbolo, Oracle Usa i due punti (:). Alcuni provider di dati non supportano parametri.  
+-   **In base al supporto per i parametri di query.** Il supporto dei parametri varia a seconda del provider di dati. Alcuni provider di dati supportano i parametri denominati, ad esempio `SELECT Col1, Col2 FROM Table WHERE <parameter identifier><parameter name> = <value>`. Altri supportano invece i parametri senza nome, ad esempio `SELECT Col1, Col2 FROM Table WHERE <column name> = ?`. L'identificatore di parametro può variare a seconda del provider di dati. In [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] viene ad esempio usato il simbolo @, mentre in Oracle vengono usati due punti (:). Alcuni provider di dati non supportano parametri.  
   
 -   **In base alla possibilità di importare query.** Per un'origine dati [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] è ad esempio possibile importare una query da un file di definizione di report (con estensione rdl) o da un file sql.  
   
@@ -61,9 +61,9 @@ ms.locfileid: "48219493"
 -   [Interfaccia utente di Progettazione query basata su testo](../../2014/reporting-services/text-based-query-designer-user-interface.md)  
   
 ## <a name="see-also"></a>Vedere anche  
- [Origini dati supportate da Reporting Services &#40;SSRS&#41;](create-deploy-and-manage-mobile-and-paginated-reports.md)   
+ [Origini dei dati supportate da Reporting Services &#40;SSRS&#41;](create-deploy-and-manage-mobile-and-paginated-reports.md)   
  [Aggiungere dati da origini dati esterne &#40;SSRS&#41;](report-data/add-data-from-external-data-sources-ssrs.md)   
  [Estensioni per l'elaborazione dati e provider di dati .NET Framework &#40;SSRS&#41;](report-data/data-processing-extensions-and-net-framework-data-providers-ssrs.md)   
- [Le estensioni &#40;SSRS&#41;](extensions-ssrs.md)  
+ [Estensioni &#40;SSRS&#41;](extensions-ssrs.md)  
   
   

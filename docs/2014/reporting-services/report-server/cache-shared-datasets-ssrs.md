@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 4acb1bbe-1c04-4979-b893-dc1b1c5039b6
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: f0e1d1e31588945a12eed2d82ddf05ad2a7977e7
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 4e7f3faff05a318c302f12ded3a6ec4c864b7054
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48183131"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56012372"
 ---
 # <a name="cache-shared-datasets-ssrs"></a>Memorizzare nella cache set di dati condivisi (SSRS)
   I risultati della query per un set di dati condiviso possono essere copiati in una cache per fornire dati coerenti per più report e migliorare il tempo di risposta per la query del set di dati. In modo analogo ai report, è possibile configurare un set di dati condiviso da memorizzare nella cache al momento del primo utilizzo o specificando una pianificazione.  
@@ -57,7 +57,7 @@ ms.locfileid: "48183131"
  È possibile specificare la quantità di tempo in cui mantenere i dati nella cache prima che scadano. Per altre informazioni, vedere [Pagina Memorizzazione nella cache, set di dati condivisi &40 #;Gestione report&#41;](../caching-page-shared-datasets-report-manager.md).  
   
 ## <a name="preloading-the-cache"></a>Precaricamento della cache  
- È possibile precaricare la cache creando un piano di aggiornamento che consente di specificare la frequenza di aggiornamento della cache tramite una pianificazione condivisa o specifica per l'elemento. Per evitare che per uno stesso elemento siano presenti più voci nella cache, è necessario specificare una pianificazione in base alla quale il tempo per l'elaborazione della query sull'origine dati esterna sia sufficiente. Se ad esempio il tempo necessario per l'esecuzione della query è di 20 minuti, l'aggiornamento deve essere pianificato con frequenza maggiore di 20 minuti. Per altre informazioni, vedere [pianificazioni](../subscriptions/schedules.md).  
+ È possibile precaricare la cache creando un piano di aggiornamento che consente di specificare la frequenza di aggiornamento della cache tramite una pianificazione condivisa o specifica per l'elemento. Per evitare che per uno stesso elemento siano presenti più voci nella cache, è necessario specificare una pianificazione in base alla quale il tempo per l'elaborazione della query sull'origine dati esterna sia sufficiente. Se ad esempio il tempo necessario per l'esecuzione della query è di 20 minuti, l'aggiornamento deve essere pianificato con frequenza maggiore di 20 minuti. Per altre informazioni, vedere [Schedules](../subscriptions/schedules.md).  
   
  Per creare un piano di aggiornamento della cache per un set di dati condiviso, è necessario che siano rispettate le condizioni seguenti.  
   

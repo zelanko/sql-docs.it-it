@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 4b8fa41f-a727-4f23-8efb-fd9bb0d4cd1d
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: 742cfa14b1e93632910fca00312379432021246f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 03ac60e59b1859ed4e77f3db5e355a1fb9f556f3
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48184335"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56042932"
 ---
 # <a name="controlling-page-breaks-headings-columns-and-rows-report-builder-and-ssrs"></a>Controllo di interruzioni di pagina, intestazioni, colonne e righe (Generatore report e SSRS)
   Un'interruzione di pagina consente di suddividere un report in più pagine per la visualizzazione e la stampa. Consentono inoltre di adattare il contenuto alle pagine dei report in modo da ottenere una visualizzazione ottimale quando si visualizza l'anteprima di un report o si esporta il report in un altro formato.  
@@ -34,6 +34,6 @@ ms.locfileid: "48184335"
  [Elenchi &#40;Generatore report e SSRS&#41;](tables-matrices-and-lists-report-builder-and-ssrs.md)   
  [Controllo della visualizzazione dell'area dati Tablix in una pagina del report &#40;Generatore report e SSRS&#41;](controlling-the-tablix-data-region-display-on-a-report-page.md)   
  [Riquadro di raggruppamento &#40;Generatore report&#41;](grouping-pane-report-builder.md)   
- [Visualizzare intestazioni e piè di pagina con un gruppo di &#40;Report e SSRS&#41;](display-headers-and-footers-with-a-group-report-builder-and-ssrs.md)  
+ [Visualizzare intestazioni e piè di pagina con un gruppo &#40;Generatore report e SSRS&#41;](display-headers-and-footers-with-a-group-report-builder-and-ssrs.md)  
   
   

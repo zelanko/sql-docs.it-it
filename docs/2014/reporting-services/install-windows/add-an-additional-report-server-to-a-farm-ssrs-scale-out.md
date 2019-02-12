@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: c1a6b683-15cf-44ae-ac60-ceee63a60aaf
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 290e88a1f96b6cec6d4120464bb098abb0f422ad
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+manager: kfile
+ms.openlocfilehash: 03928e651b742061e726b9c92683d9d4e9aebd08
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53360463"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56014832"
 ---
 # <a name="add-an-additional-report-server-to-a-farm-ssrs-scale-out"></a>Aggiungere un ulteriore server di report a una farm (con scalabilità orizzontale SSRS)
   L'aggiunta di un secondo o altri server di report in modalità SharePoint alla farm di SharePoint può migliorare le prestazioni e il tempo di risposta dell'elaborazione del server di report. Se le prestazioni risultano rallentate dopo aver aggiunto altri utenti, report e applicazioni al server di report, l'aggiunta di ulteriori server di report può migliorare le prestazioni. È inoltre consigliabile aggiungere un secondo server di report per aumentare la disponibilità dei server di report in caso di problemi hardware o di manutenzione generale di singoli server di report nell'ambiente. A partire dalla versione [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] , la procedura per la scalabilità orizzontale dell'ambiente [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] in modalità SharePoint segue la distribuzione standard della farm di SharePoint e sfrutta le funzionalità di bilanciamento del carico di SharePoint.  

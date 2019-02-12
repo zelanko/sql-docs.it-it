@@ -33,13 +33,13 @@ f1_keywords:
 ms.assetid: a1d691b2-c5ae-420f-af60-b7c54a7385a4
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: 99f2edaac2962fe2a11f70b0fea18f892ed740a5
-ms.sourcegitcommit: fc6a6eedcea2d98c93e33d39c1cecd99fbc9a155
+manager: kfile
+ms.openlocfilehash: f27196d59a8e2dd65fb935c79338ecac7995cf22
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49169261"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56041112"
 ---
 # <a name="change-map-legends-color-scale-and-associated-rules-report-builder-and-ssrs"></a>Modificare legende della mappa, scala dei colori e regole associate (Generatore report e SSRS)
   In una mappa possono essere incluse legende, una scala dei colori e una scala distanza. Questi parti di una mappa consentono agli utenti di interpretare la visualizzazione dei dati sulla mappa.  
@@ -320,7 +320,7 @@ ms.locfileid: "49169261"
  [Mappe &#40;Generatore report e SSRS&#41;](maps-report-builder-and-ssrs.md)   
  [Aggiungere, modificare o eliminare una mappa o un livello mappa &#40;Generatore report e SSRS&#41;](add-change-or-delete-a-map-or-map-layer-report-builder-and-ssrs.md)   
  [Personalizzare i dati e la visualizzazione di una mappa o di un livello mappa &#40;Generatore report e SSRS&#41;](customize-the-data-and-display-of-a-map-or-map-layer-report-builder-and-ssrs.md)   
- [Risoluzione dei problemi relativi alle parti del report: report mappa &#40;Generatore report e SSRS&#41;](troubleshoot-reports-map-reports-report-builder-and-ssrs.md)   
+ [Risolvere problemi relativi ai report: Report mappa &#40;Generatore report e SSRS&#41;](troubleshoot-reports-map-reports-report-builder-and-ssrs.md)   
  [Creazione guidata mappa e Creazione guidata livello mappa &#40;Generatore report e SSRS&#41;](map-wizard-and-map-layer-wizard-report-builder-and-ssrs.md)  
   
   

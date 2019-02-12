@@ -17,13 +17,13 @@ helpviewer_keywords:
 ms.assetid: 1cade8ec-729c-4df8-a428-e75c9ad86369
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: f0112a4a9ae89dbfc2aedad38c16056a4d246964
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 5b80a150bb44690bb4fbc836ba12f41fa8f82c28
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48174711"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56043062"
 ---
 # <a name="use-an-external-data-source-for-subscriber-data-data-driven-subscription"></a>Utilizzare un'origine dei dati esterna per i dati del Sottoscrittore (sottoscrizione guidata dai dati)
   In una sottoscrizione guidata dai dati i dati di sottoscrizione dinamici vengono ottenuti tramite una query o un comando che consente di recuperare i dati da un'origine dei dati esterna. I dati di sottoscrizione possono essere recuperati da qualsiasi origine dei dati supportata che soddisfi i requisiti per l'elaborazione della sottoscrizione guidata dai dati. La sintassi della query o del comando deve essere valida per un'estensione per l'elaborazione dati installata con il server di report.  
@@ -81,7 +81,7 @@ ms.locfileid: "48174711"
   
 ## <a name="see-also"></a>Vedere anche  
  [Creare, modificare ed eliminare una sottoscrizione guidata dai dati](data-driven-subscriptions.md)   
- [Sottoscrizioni guidate dai dati](data-driven-subscriptions.md)   
+ [Data-Driven Subscriptions](data-driven-subscriptions.md)   
  [Sottoscrizioni e recapito &#40;Reporting Services&#41;](subscriptions-and-delivery-reporting-services.md)  
   
   

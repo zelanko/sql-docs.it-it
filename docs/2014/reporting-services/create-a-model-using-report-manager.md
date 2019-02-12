@@ -13,13 +13,13 @@ helpviewer_keywords:
 ms.assetid: 8e5d2bd3-48ec-45f3-afee-6d86797c8f28
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 781a9f469692f26cc7742920935531f6cb0f2353
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: adbcaf8bdbae605941422a4e5b6d3df9ed7031f2
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48064851"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56010443"
 ---
 # <a name="create-a-model-using-report-manager"></a>Creare un modello tramite Gestione report
   È possibile generare modelli da un cubo di [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] , da un database di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] o da un database Oracle utilizzando Gestione report. I modelli di report vengono generati da origini dei dati condivise che vengono pubblicate nel server di report. Se non esiste un'origine dei dati condivisa, è necessario crearla.  
@@ -41,13 +41,13 @@ ms.locfileid: "48064851"
   
 5.  Verificare che la casella di controllo **Attiva questa origine dei dati** sia selezionata.  
   
-6.  Dalla lista **Tipo di connessione** selezionare il tipo di origine dei dati a cui connettersi. Il tipo di connessione deve essere uno dei seguenti: **Oracle**, **Microsoft SQL Server** o **Microsoft SQL Server Analysis Services**.  
+6.  Dalla lista **Tipo di connessione** selezionare il tipo di origine dei dati a cui connettersi. Il tipo di connessione deve essere uno dei seguenti: **Oracle**, **Microsoft SQL Server** oppure **Microsoft SQL Server Analysis Services**.  
   
 7.  Nella casella **Stringa di connessione** specificare la stringa di connessione che punta al database.  
   
 8.  Selezionare il metodo di connessione che gli utenti di Generatore report dovranno utilizzare per connettersi al database.  
   
-    -   Autenticazione di Windows: selezionare questa opzione affinché gli utenti di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] vengano autenticati dal sistema operativo. Questa opzione consente l'utilizzo in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] delle caratteristiche di sicurezza di Windows, ad esempio la crittografia della password, per l'autenticazione degli utenti. Si consiglia di selezionare questa opzione.  
+    -   Autenticazione di Windows: Selezionare questa opzione quando si desidera che il sistema operativo per eseguire l'autenticazione [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] agli utenti. Questa opzione consente l'utilizzo in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] delle caratteristiche di sicurezza di Windows, ad esempio la crittografia della password, per l'autenticazione degli utenti. Si consiglia di selezionare questa opzione.  
   
     -   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Autenticazione: Selezionare questa opzione quando si desidera che gli utenti utilizzino un [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] account di accesso è stato creato. Gli utenti dovranno fornire un nome e una password di accesso validi per [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] .  
   

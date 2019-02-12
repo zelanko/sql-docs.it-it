@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: f6641f59-5267-4f57-8957-63b93d1a9679
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 4342504d0d62f2c611c680c58fcdeae1f046f29b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 458a04b87bf8aedd0d772e18ceb9cbc669fe6ba4
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48078101"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56042352"
 ---
 # <a name="snapshot-options-properties-page-report-manager"></a>Pagina delle proprietà Opzioni snapshot (Gestione report)
   Utilizzare la pagina delle proprietà Opzioni snapshot per pianificare gli snapshot del report da aggiungere alla cronologia del report e impostare limiti per il numero di snapshot del report archiviati nella cronologia.  
@@ -62,9 +62,9 @@ ms.locfileid: "48078101"
  Fare clic per salvare le modifiche.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Aggiunta di uno Snapshot alla cronologia del Report &#40;gestione Report&#41;](report-server/add-a-snapshot-to-report-history-report-manager.md)   
+ [Aggiungere uno snapshot alla cronologia del report &#40;Gestione report&#41;](report-server/add-a-snapshot-to-report-history-report-manager.md)   
  [Gestione report &#40;modalità nativa SSRS&#41;](../../2014/reporting-services/report-manager-ssrs-native-mode.md)   
- [Creare, modificare ed eliminare snapshot nella cronologia del Report](report-server/create-modify-and-delete-snapshots-in-report-history.md)   
+ [Creare, modificare ed eliminare snapshot nella cronologia dei report](report-server/create-modify-and-delete-snapshots-in-report-history.md)   
  [Guida sensibile al contesto di Gestione report](../../2014/reporting-services/report-manager-f1-help.md)  
   
   

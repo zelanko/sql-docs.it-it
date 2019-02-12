@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 59ddc4b8-9517-4d3f-9c88-a07e9907cecb
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: e549fa2b443d0ec634c6d226b79bbcc33d674a3c
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+manager: kfile
+ms.openlocfilehash: 01fcf6ef333a9b7c8a5c99630e6e9573f70d8059
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53376133"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56011233"
 ---
 # <a name="saving-reports-report-builder"></a>Salvataggio di report (Generatore report)
   In Generatore report è possibile salvare un report in un server di report, in una raccolta di SharePoint, in una condivisione file su cui si dispone di autorizzazioni di scrittura o nel computer in uso. Il report può essere salvato nello stesso percorso da cui è stato aperto, in un percorso diverso oppure con un nuovo nome nello stesso percorso o in un percorso diverso. Per impostazione predefinita, il salvataggio di un report viene eseguito nuovamente nel percorso da cui è stato aperto il report. Durante il salvataggio di un report, l'elemento che viene effettivamente salvato è la definizione del report che ne descrive il layout. Non vengono salvati i dati. Ogni volta che si esegue il report, i dati del report vengono aggiornati ed è probabile che siano diversi rispetto all'esecuzione precedente del report.  

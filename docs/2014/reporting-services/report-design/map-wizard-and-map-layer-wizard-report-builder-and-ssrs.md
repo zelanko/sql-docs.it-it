@@ -14,13 +14,13 @@ f1_keywords:
 ms.assetid: 48cbe18b-1290-4107-8a1c-ec6acd71f73b
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: a0f004a2d145356e38816b65fc2cd5c2a1972074
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+manager: kfile
+ms.openlocfilehash: aa0ccc9d3b2ca01e1b2279f71ef2815c81e060e3
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53362913"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56011852"
 ---
 # <a name="map-wizard-and-map-layer-wizard-report-builder-and-ssrs"></a>Creazione guidata mappa e Creazione guidata livello mappa (Generatore report e SSRS)
   La Creazione guidata mappa e la Creazione guidata livello mappa consentono di automatizzare l'attività di creazione di una mappa, di aggiunta di un livello mappa o di modifica delle opzioni di livello mappa in un livello esistente.  
@@ -271,7 +271,7 @@ ms.locfileid: "53362913"
  ![Icona freccia usata con il collegamento Torna all'inizio](../../2014-toc/media/uparrow16x16.gif "Icona freccia usata con il collegamento Torna all'inizio") [Torna all'inizio](#BackToTop)  
   
 ## <a name="see-also"></a>Vedere anche  
- [Risolvere i problemi di report: Eseguire il mapping di report &#40;Report e SSRS&#41;](troubleshoot-reports-map-reports-report-builder-and-ssrs.md)   
+ [Risolvere problemi relativi ai report: Report mappa &#40;Generatore report e SSRS&#41;](troubleshoot-reports-map-reports-report-builder-and-ssrs.md)   
  [Pianificare un report mappa &#40;Generatore report e SSRS&#41;](plan-a-map-report-report-builder-and-ssrs.md)   
  [Mappe &#40;Generatore report e SSRS&#41;](maps-report-builder-and-ssrs.md)  
   

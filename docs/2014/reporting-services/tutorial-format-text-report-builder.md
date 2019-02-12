@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 67d8513e-8a70-464b-b87f-e91d010cfd82
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: ff0a14a546a14d37461193b71b4d682deb25925a
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+manager: kfile
+ms.openlocfilehash: 9e509fb84ffd35085e7930925fd71499a6c96c87
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53350100"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56030621"
 ---
 # <a name="tutorial-format-text-report-builder"></a>Esercitazione: Formattazione di testo (Generatore Report)
   In questa esercitazione sarà possibile applicare una formattazione al testo in modi diversi. Dopo avere impostato l'origine dati e il set di dati per il report vuoto, sarà possibile scegliere i passaggi che si desidera esplorare.  
@@ -71,11 +71,11 @@ ms.locfileid: "53350100"
   
 1.  Nel riquadro dei dati del report fare clic su **Nuova**, quindi su **Origine dati**.  
   
-2.  Nel **nome** , digitare: **TextDataSource**  
+2.  Nella casella **Nome** digitare: **TextDataSource**  
   
 3.  Fare clic su **Usa una connessione incorporata nel report**.  
   
-4.  Verificare che il tipo di connessione sia Microsoft SQL Server, quindi nella casella **Stringa di connessione** digitare: **Origine dati = \<nomeserver >**  
+4.  Verificare che il tipo di connessione sia Microsoft SQL Server, quindi nella casella **Stringa di connessione** digitare: **Origine dati = \<nomeserver>**  
   
     > [!NOTE]  
     >  L'espressione \<servername >, ad esempio Report001, specifica un computer in cui è installata un'istanza del motore di Database SQL Server. Per questa esercitazione non sono necessari dati specifici. È sufficiente una connessione a un database di [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] . Se in **Connessioni a origini dati** è già disponibile una connessione, è possibile selezionarla e passare alla procedura successiva, ovvero "Per creare un set di dati". Per altre informazioni, vedere [Modalità alternative di acquisizione di una connessione dati &#40;Generatore report&#41;](../reporting-services/alternative-ways-to-get-a-data-connection-report-builder.md).  
@@ -88,7 +88,7 @@ ms.locfileid: "53350100"
   
 2.  Verificare che l'origine dati sia **TextDataSource**.  
   
-3.  Nel **nome** , digitare: **TextDataset.**  
+3.  Nella casella **Nome** digitare: **TextDataset.**  
   
 4.  Verificare che il tipo di query **Testo** sia selezionato, quindi fare clic su **Progettazione query**.  
   

@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: f81c48cc-f038-4f57-988d-e9a3cbb46424
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: cb41b6fe5e19d69c68e7942dd1581eb7792a06af
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 3f740965cdc0b3c17e1a889975fae72bf37a85a6
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48117851"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56043052"
 ---
 # <a name="controlling-the-tablix-data-region-display-on-a-report-page-report-builder-and-ssrs"></a>Controllo della visualizzazione dell'area dati Tablix in una pagina del report (Generatore report e SSRS)
   In questo argomento vengono descritte le proprietà di un'area dati Tablix che è possibile modificare per cambiare l'aspetto di tale area quando visualizzata in un report.  
@@ -56,7 +56,7 @@ ms.locfileid: "48117851"
 ## <a name="controlling-how-tablix-row-and-column-groups-render"></a>Controllo della visualizzazione di gruppi di colonne e righe Tablix  
  Per controllare come vengono visualizzati i gruppi di aree dati Tablix occorre considerare la struttura di gruppo. Un'area dati Tablix può disporre di quattro aree, come mostrato nella figura seguente:  
   
- ![Aree dell'area dati Tablix](../media/rs-tablixareas.gif "aree dell'area dati Tablix")  
+ ![Tablix data region areas](../media/rs-tablixareas.gif "Tablix data region areas")  
   
  L'area del gruppo di righe e l'area del gruppo di colonne contengono intestazioni di gruppo. Quando per un'area dati Tablix sono previste intestazioni di gruppo, è possibile controllare come le righe e le colonne vengono ripetute impostando proprietà nella pagina **Generale** della finestra di dialogo **Proprietà Tablix** .  
   
@@ -75,8 +75,8 @@ ms.locfileid: "48117851"
 ## <a name="see-also"></a>Vedere anche  
  [Collegamento di più aree dati allo stesso set di dati &#40;Generatore report e SSRS&#41;](linking-multiple-data-regions-to-the-same-dataset-report-builder-and-ssrs.md)   
  [Aree dati annidate &#40;Generatore report e SSRS&#41;](nested-data-regions-report-builder-and-ssrs.md)   
- [Ambito di espressioni per totali, aggregazioni e raccolte predefinite &#40;Report e SSRS&#41;](expression-scope-for-totals-aggregates-and-built-in-collections.md)   
- [Pagina di controllo di interruzioni, intestazioni, colonne e righe &#40;Report e SSRS&#41;](controlling-page-breaks-headings-columns-and-rows-report-builder-and-ssrs.md)   
+ [Ambito di espressioni per totali, aggregazioni e raccolte predefinite &#40;Generatore report e SSRS&#41;](expression-scope-for-totals-aggregates-and-built-in-collections.md)   
+ [Controllo di interruzioni di pagina, intestazioni, colonne e righe &#40;Generatore report e SSRS&#41;](controlling-page-breaks-headings-columns-and-rows-report-builder-and-ssrs.md)   
  [Area dati Tablix &#40;Generatore report e SSRS&#41;](../tablix-data-region-report-builder-and-ssrs.md)   
  [Tabelle &#40;Generatore report e SSRS&#41;](tables-report-builder-and-ssrs.md)   
  [Matrici &#40;Generatore report e SSRS&#41;](create-a-matrix-report-builder-and-ssrs.md)   

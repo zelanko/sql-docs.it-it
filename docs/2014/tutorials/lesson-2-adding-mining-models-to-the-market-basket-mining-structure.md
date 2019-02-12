@@ -4,22 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: d96a7a7d-35d7-4b34-abb5-f0822c256253
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 2265baf4c4a342692ae67afcbcc50a0bb0d0a283
-ms.sourcegitcommit: 3cd6068f3baf434a4a8074ba67223899e77a690b
+manager: kfile
+ms.openlocfilehash: b9573d9359983e33cf23533787c26039572710ea
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/19/2018
-ms.locfileid: "49461977"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56041452"
 ---
 # <a name="lesson-2-adding-mining-models-to-the-market-basket-mining-structure"></a>Lezione 2: Aggiunta di modelli di data mining alla struttura di data mining Market Basket
-  In questa lezione verranno aggiunti due modelli di data mining alla struttura di data mining Market Basket creata nella [lezione 1: creazione della struttura di Data Mining Market Basket](../../2014/tutorials/lesson-1-creating-the-market-basket-mining-structure.md). Questi modelli di data mining consentiranno di creare stime.  
+  In questa lezione verranno aggiunti due modelli di data mining alla struttura di data mining Market Basket creata in [lezione 1: Creazione della struttura di Data Mining Market Basket](../../2014/tutorials/lesson-1-creating-the-market-basket-mining-structure.md). Questi modelli di data mining consentiranno di creare stime.  
   
  Per stimare quali tipi di prodotti i clienti tendono ad acquistare contemporaneamente, si creerà due modelli di data mining utilizzando il [algoritmo Microsoft Association Rules](../../2014/analysis-services/data-mining/microsoft-association-algorithm.md) e due valori diversi per il *MINIMUM_PROBABILTY* parametro.  
   
@@ -286,6 +285,6 @@ ADD MINING MODEL [<mining model name>]
  Nella lezione successiva verranno elaborati la struttura di data mining Market Basket insieme ai relativi modelli di data mining associati.  
   
 ## <a name="next-lesson"></a>Lezione successiva  
- [Lezione 3: Elaborazione della struttura di data mining Market Basket](../../2014/tutorials/lesson-3-processing-the-market-basket-mining-structure.md)  
+ [Lezione 3: L'elaborazione della struttura di Data Mining Market Basket](../../2014/tutorials/lesson-3-processing-the-market-basket-mining-structure.md)  
   
   

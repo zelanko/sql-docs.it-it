@@ -12,13 +12,13 @@ f1_keywords:
 ms.assetid: f49aedc6-f145-4df1-8f69-d5d910f492c6
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 9513e66b92a97f1d546d7b33cc20849e8bff868a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 89d8b7165bf32d4d4d300f753b9c3821b6f23134
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48161441"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56041172"
 ---
 # <a name="server-properties-security-page---reporting-services"></a>Proprietà server (pagina sicurezza) - Reporting Services
   Questa pagina consente di disattivare le caratteristiche che potrebbero compromettere un server di report. La disattivazione di queste caratteristiche comporta l'impostazione di determinati limiti, ma consente di migliorare la sicurezza globale del server di report riducendo i rischi di minacce specifiche.  
@@ -34,9 +34,9 @@ ms.locfileid: "48161441"
  **Consenti reporting ad hoc**  
  Consente di specificare se gli utenti possono eseguire query ad hoc da un report di Generatore report, nel caso in cui i nuovi report vengano generati automaticamente quando un utente fa clic su dati di interesse.  
   
- L'impostazione di questa opzione determina se il valore della proprietà `EnableLoadReportDefinition` nel server di report è impostato su `True` o su `False`. Se si deseleziona questa opzione, la proprietà verrà impostata su `False` e report server non genererà report click-through creati durante l'esplorazione dei dati. Tutte le chiamate al metodo `LoadReportDefinition` verranno bloccate.  
+ L'impostazione di questa opzione determina se il valore della proprietà `EnableLoadReportDefinition` nel server di report è impostato su `True` o su `False`. Se si deseleziona questa opzione, la proprietà viene impostata su `False` e nel server di report non verranno generati report click-through creati durante l'esplorazione dei dati. Tutte le chiamate al metodo `LoadReportDefinition` verranno bloccate.  
   
- La disattivazione di questa opzione consente una minaccia in base al quale un utente malintenzionato lancia un attacco denial of service tramite overload del server di report con `LoadReportDefinition` richieste.  
+ La disattivazione di questa opzione consente di attenuare i rischi di attacchi Denial of Service condotti da utenti malintenzionati tramite overload del server di report con richieste `LoadReportDefinition`.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Impostare le proprietà di un server di report &#40;Management Studio&#41;](set-report-server-properties-management-studio.md)   

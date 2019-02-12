@@ -13,13 +13,13 @@ f1_keywords:
 ms.assetid: a9697101-aa52-4a62-8f33-fad8f5bc2a0c
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: c5399dd2ae5979fad310bbb048e9c3f3c2147db5
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 9f9f1dd070ecfd2f680ce68460e2adc5c9727097
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48199991"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56041672"
 ---
 # <a name="define-query-parameters-dialog-box"></a>Finestra di dialogo Definisci parametri query
   Utilizzare la finestra di dialogo **Definisci parametri query** per specificare i valori dei parametri quando si esegue una query in Progettazione query in fase di progettazione per visualizzare dati di esempio. I parametri di query consentono di filtrare i dati nell'origine dati e di limitare la quantità di dati elaborati da un report. Questi valori non vengono salvati nella definizione del report.  

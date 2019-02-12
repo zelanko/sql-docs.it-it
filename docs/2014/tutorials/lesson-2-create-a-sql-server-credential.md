@@ -4,22 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: security
 ms.topic: conceptual
 ms.assetid: 64f8805c-1ddc-4c96-a47c-22917d12e1ab
-author: craigg-msft
-ms.author: craigg
+author: VanMSFT
+ms.author: vanto
 manager: craigg
-ms.openlocfilehash: b1a59c1e32773ddc022319a9357ea61802864a77
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: fbea11b0500c075105bff885cdb1cd8264b320d6
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53372583"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56014082"
 ---
 # <a name="lesson-2-create-a-sql-server-credential"></a>Lezione 2: Creare le credenziali di SQL Server
-  **Credenziali:** una credenziale di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] è un oggetto usato per archiviare le informazioni di autenticazione necessarie per la connessione a una risorsa all'esterno di SQL Server.  In questo caso, nei processi di backup e ripristino di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] le credenziali vengono utilizzate per l'autenticazione per il servizio di archiviazione BLOB di Windows Azure. Nelle credenziali vengono archiviati il nome dell'account di archiviazione e i relativi valori della **chiave di accesso** . Una volta create, le credenziali devono essere specificate nell'opzione WITH CREDENTIAL durante l'esecuzione delle istruzioni BACKUP/RESTORE. Per altre informazioni su come visualizzare, copiare o rigenerare le **access keys**dell'account di archiviazione, vedere la pagina relativa alle [chiavi di accesso dell'account di archiviazione](https://msdn.microsoft.com/library/windowsazure/hh531566.aspx).  
+  **Credenziale:** una credenziale di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] è un oggetto usato per archiviare le informazioni di autenticazione necessarie per la connessione a una risorsa all'esterno di SQL Server.  In questo caso, nei processi di backup e ripristino di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] le credenziali vengono utilizzate per l'autenticazione per il servizio di archiviazione BLOB di Windows Azure. Nelle credenziali vengono archiviati il nome dell'account di archiviazione e i relativi valori della **chiave di accesso** . Una volta create, le credenziali devono essere specificate nell'opzione WITH CREDENTIAL durante l'esecuzione delle istruzioni BACKUP/RESTORE. Per altre informazioni su come visualizzare, copiare o rigenerare le **access keys**dell'account di archiviazione, vedere la pagina relativa alle [chiavi di accesso dell'account di archiviazione](https://msdn.microsoft.com/library/windowsazure/hh531566.aspx).  
   
  Per informazioni generali sulle credenziali, vedere la pagina relativa alle [credenziali](../relational-databases/security/authentication-access/credentials-database-engine.md).  
   

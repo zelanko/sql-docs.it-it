@@ -3,6 +3,7 @@ title: Modifica delle password a livello di codice | Microsoft Docs
 ms.custom: ''
 ms.date: 03/16/2017
 ms.reviewer: ''
+ms.prod: sql
 ms.technology: native-client
 ms.topic: reference
 helpviewer_keywords:
@@ -21,12 +22,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 2d296eb992dc9683faee721e2b825105c82f362e
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: c42f8bf47d90bde4f6ffdaa3bb7e22b88c238bb7
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51675040"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56010629"
 ---
 # <a name="changing-passwords-programmatically"></a>Modifica delle password a livello di programmazione
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -42,15 +43,15 @@ ms.locfileid: "51675040"
   
 |Codice di errore di SQL Server|Messaggio di errore|  
 |---------------------------|-------------------|  
-|15113|Accesso non riuscito per l'utente '%.*ls' Motivo: impossibile convalidare la password. L'account è bloccato.|  
-|18463|Accesso non riuscito per l'utente '%.*ls'. Motivo: impossibile modificare la password. Impossibile utilizzare la password in questo momento.|  
-|18464|Accesso non riuscito per l'utente '%.*ls'. Motivo: impossibile modificare la password. La password non soddisfa i criteri di Windows in quanto è troppo breve.|  
-|18465|Accesso non riuscito per l'utente '%.*ls'. Motivo: impossibile modificare la password. La password non soddisfa i criteri di Windows in quanto è troppo lunga.|  
-|18466|Accesso non riuscito per l'utente '%.*ls'. Motivo: impossibile modificare la password. La password non soddisfa i criteri di Windows in quanto non è sufficientemente complessa.|  
-|18467|Accesso non riuscito per l'utente '%.*ls'. Motivo: impossibile modificare la password. La password non soddisfa i requisiti della DLL per il filtro delle password.|  
-|18468|Accesso non riuscito per l'utente '%.*ls'. Motivo: impossibile modificare la password. Si è verificato un errore imprevisto durante la convalida della password.|  
-|18487|Accesso non riuscito per l'utente '%.*ls'. Motivo: la password dell'account è scaduta.|  
-|18488|Accesso non riuscito per l'utente '%.*ls'. Motivo: è necessario modificare la password dell'account.|  
+|15113|Accesso non riuscito per l'utente ' %. * motivo ls': Impossibile convalidare la password. L'account è bloccato.|  
+|18463|Accesso non riuscito per l'utente '%.*ls'. Motivo: Modifica della password non riuscita. Impossibile utilizzare la password in questo momento.|  
+|18464|Accesso non riuscito per l'utente '%.*ls'. Motivo: Modifica della password non riuscita. La password non soddisfa i criteri di Windows in quanto è troppo breve.|  
+|18465|Accesso non riuscito per l'utente '%.*ls'. Motivo: Modifica della password non riuscita. La password non soddisfa i criteri di Windows in quanto è troppo lunga.|  
+|18466|Accesso non riuscito per l'utente '%.*ls'. Motivo: Modifica della password non riuscita. La password non soddisfa i criteri di Windows in quanto non è sufficientemente complessa.|  
+|18467|Accesso non riuscito per l'utente '%.*ls'. Motivo: Modifica della password non riuscita. La password non soddisfa i requisiti della DLL per il filtro delle password.|  
+|18468|Accesso non riuscito per l'utente '%.*ls'. Motivo: Modifica della password non riuscita. Si è verificato un errore imprevisto durante la convalida della password.|  
+|18487|Accesso non riuscito per l'utente '%.*ls'. Motivo: La password dell'account è scaduta.|  
+|18488|Accesso non riuscito per l'utente '%.*ls'. Motivo: La password dell'account deve essere modificata.|  
   
 ## <a name="sql-server-native-client-ole-db-provider"></a>Provider OLE DB di SQL Server Native Client  
  Il [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] provider OLE DB Native Client supporta la scadenza password mediante un'interfaccia utente e a livello di codice.  

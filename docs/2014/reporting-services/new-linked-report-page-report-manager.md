@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: fefb46e8-6901-4d50-a3f8-7c49ad72e7b1
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: baca8a9c339ff55ad25f390ac73a2957fdd26447
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 11ccc376b2c325056acbe545f8ac7310b4386245
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48119371"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56010872"
 ---
 # <a name="new-linked-report-page-report-manager"></a>Pagina Nuovo report collegato (Gestione report)
   La pagina Nuovo report collegato consente di creare un report collegato. Un report collegato è un report con impostazioni e proprietà proprie, ma collegato alla definizione di un altro report. I report collegati sono utili per utilizzare un report di base con alcune variazioni per gruppi o utenti specifici, ad esempio un report che restituisca dati diversi in base a un codice internazionale specificato come parametro. I report collegati vengono in genere creati da un report con parametri, se l'esigenza è quella di variare e quindi salvare valori di parametri diversi per ogni istanza del report. È comunque possibile creare un report collegato da qualsiasi report accessibile.  
@@ -45,7 +45,7 @@ ms.locfileid: "48119371"
 4.  Nella barra degli strumenti dell'elemento fare clic su **Crea report collegato**.  
   
 ## <a name="options"></a>Opzioni  
- **Nome**  
+ **Name**  
  Specificare il nome del report collegato. Il nome deve includere almeno un carattere alfanumerico. È inoltre possibile utilizzare spazi e alcuni simboli. I caratteri ; ? : \@ & = +, $ / * \< > | "oppure / per specificare un nome.  
   
  **Descrizione**  

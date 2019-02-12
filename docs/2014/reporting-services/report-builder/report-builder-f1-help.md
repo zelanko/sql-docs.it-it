@@ -15,14 +15,14 @@ helpviewer_keywords:
 - Help, dialog boxes
 - user interface, dialog boxes
 author: maggiesmsft
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: 7de56465834506c6ac4a72d2608f179d4ce41a1e
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.author: maghan
+manager: kfile
+ms.openlocfilehash: d58568873ebb3a96676bc17f2b5ef46a9ca68234
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48051691"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56043032"
 ---
 # <a name="report-builder-f1-help"></a>Guida sensibile al contesto di Generatore report
   In questa sezione contiene informazioni della Guida relative procedure guidate, viste, riquadri e le finestre di dialogo di Generatore Report. È anche possibile aprire la Guida premendo F1 o facendo clic sul pulsante della Guida in una finestra di dialogo.  

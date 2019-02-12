@@ -2,10 +2,8 @@
 title: Sys.server_resource_stats (Database SQL di Azure) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/28/2018
-ms.prod: ''
-ms.prod_service: sql-database
+ms.service: sql-database
 ms.reviewer: carlrab, edmaca
-ms.technology: ''
 ms.topic: language-reference
 f1_keywords:
 - resource_stats
@@ -21,12 +19,12 @@ ms.assetid: ''
 author: jovanpop-msft
 ms.author: jovanpop
 manager: craigg
-ms.openlocfilehash: 82cd70d9f1baa7741f4ecc449167d5c56e7fe954
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: b8a5aaa7d0aecd992905e0eaf53ef362f24b1485
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52392634"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56009653"
 ---
 # <a name="sysserverresourcestats-azure-sql-database"></a>Sys.server_resource_stats (Database SQL di Azure)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
@@ -42,10 +40,10 @@ Il **sys.server_resource_stats** visualizzazione contiene diverse definizioni a 
 |----------------------------|---------------|-----------------|  
 |start_time|**datetime2**|Ora UTC che indica l'inizio dell'intervallo di reporting di quindici secondi|  
 |end_time|**datetime**|Ora UTC che indica la fine dell'intervallo di reporting di quindici secondi|
-|resource_type|nvarchar (128)|Tipo di risorsa per il quale vengono fornite metriche|
-|resource_name|nvarchar (128)|Nome della risorsa.|
-|sku|nvarchar (128)|Gestito istanza livello di servizio dell'istanza. Di seguito sono indicati i valori possibili: <br><ul><li>Utilizzo generico</li></ul><ul><li>Business Critical</li></ul>|
-|hardware_generation|nvarchar (128)|Identificatore di generazione di hardware: ad esempio Gen 4 o generazione 5|
+|resource_type|Nvarchar(128)|Tipo di risorsa per il quale vengono fornite metriche|
+|resource_name|nvarchar(128)|Nome della risorsa.|
+|sku|nvarchar(128)|Gestito istanza livello di servizio dell'istanza. Di seguito sono indicati i valori possibili: <br><ul><li>Utilizzo generico</li></ul><ul><li>Business Critical</li></ul>|
+|hardware_generation|nvarchar(128)|Identificatore di generazione di hardware: ad esempio Gen 4 o generazione 5|
 |virtual_core_count|INT|Rappresenta i numero di core virtuali per ogni istanza (8, 16 o 24 in anteprima pubblica)|
 |avg_cpu_percent|Decimal(5,2)|Utilizzo di calcolo medio in percentuale del limite del livello di servizio istanza gestita utilizzato dall'istanza. Viene calcolata come somma del tempo di CPU di tutti i pool di risorse per tutti i database nell'istanza e diviso per tempo di CPU disponibile per tale livello nell'intervallo specificato.|
 |reserved_storage_mb|BIGINT|Spazio di archiviazione per istanza riservata (quantità di spazio di archiviazione spazio quel cliente acquistato per l'istanza gestita)|

@@ -13,13 +13,13 @@ f1_keywords:
 ms.assetid: 08ec3818-f63a-4e89-b52c-750e47f48b85
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: da49fc88b7736bbe161bab4dfec39ab7fdb43c82
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+manager: kfile
+ms.openlocfilehash: c85c464c6ebf32d81c08c319999aa2c6d8b1514c
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53350117"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56043402"
 ---
 # <a name="formatting-data-points-on-a-chart-report-builder-and-ssrs"></a>Formattazione dei punti dati di un grafico (Generatore report e SSRS)
   Per punto dati si intende l'entità singola più piccola di un grafico. Nei grafici senza forme la rappresentazione dei punti dati dipende dal relativo tipo di grafico. Una serie di linee è ad esempio costituita da uno o più punti dati connessi. Nei grafici con forme i punti dati sono rappresentati dai singoli segmenti o sezioni che costituiscono l'intero grafico. In un grafico a torta, ad esempio, ogni parte è un punto dati. Per altre informazioni, vedere [Tipi di grafico &#40;Generatore report e SSRS&#41;](chart-types-report-builder-and-ssrs.md).  

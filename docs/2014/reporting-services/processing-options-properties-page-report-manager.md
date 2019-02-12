@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 28f07c70-7132-4d15-9505-4fdf31dc9cc0
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: cc57e9b4e38377769006738ed44427b4a52c06ea
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 7265c833b5fbfe4c2018de895d7a488501304486
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48076491"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56013102"
 ---
 # <a name="processing-options-properties-page-report-manager"></a>Pagina delle proprietà Opzioni di elaborazione (Gestione report)
   Utilizzare la pagina delle proprietà Opzioni di elaborazione per impostare le proprietà di esecuzione del report per il report selezionato. Le opzioni disponibili in questa pagina consentono di impostare la tempistica di elaborazione dei dati per il report. È possibile impostare queste opzioni per recuperare i dati di un report durante gli orari con minore attività. Nel caso di un report utilizzato frequentemente, è possibile impostare la memorizzazione temporanea di copie del report nella cache per evitare attese se più utenti accedono allo stesso report a intervalli di pochi minuti l'uno dall'altro.  
@@ -62,7 +62,7 @@ ms.locfileid: "48076491"
  Tale valore viene applicato all'elaborazione dei report in un server di report. L'impostazione non ha effetto sull'elaborazione dei dati nel server di database che fornisce i dati per il report. Il valore specificato deve tuttavia essere sufficiente per consentire il completamento dell'elaborazione sia dei dati che del report. Il conteggio dell'elaborazione del report inizia nel momento in cui viene selezionato il report e termina all'apertura del report.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Impostare le proprietà di elaborazione dei Report](report-server/set-report-processing-properties.md)   
+ [Impostare proprietà di elaborazione dei report](report-server/set-report-processing-properties.md)   
  [Memorizzazione dei report nella cache &#40;SSRS&#41;](report-server/caching-reports-ssrs.md)   
  [Create, Modify, and Delete Schedules](subscriptions/create-modify-and-delete-schedules.md)   
  [Guida sensibile al contesto di Gestione report](../../2014/reporting-services/report-manager-f1-help.md)  

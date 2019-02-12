@@ -17,13 +17,13 @@ helpviewer_keywords:
 ms.assetid: 201afe5f-acc9-4a37-b5ec-121dc7df2a61
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: ff8e8792079fcca8ed4affa373964ec6cb39fe1d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 2f036d86b7bcdef97de03a80c0b9b615f08eda82
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48111020"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56012463"
 ---
 # <a name="delete-and-re-create-encryption-keys--ssrs-configuration-manager"></a>Eliminare e ricreare chiavi di crittografia (Gestione configurazione SSRS)
   Le attività di eliminazione e ricreazione di chiavi di crittografia non rientrano nella manutenzione di routine delle chiavi di crittografia. Tali attività vengono eseguite in risposta a una specifica minaccia al server di report oppure come ultima risorsa quando non è più possibile accedere a un database del server di report.  
@@ -41,7 +41,7 @@ ms.locfileid: "48111020"
   
 #### <a name="how-to-re-create-encryption-keys-reporting-services-configuration-tool"></a>Come ricreare chiavi di crittografia (strumento di configurazione di Reporting Services)  
   
-1.  Disabilitare il servizio Web ReportServer e l'accesso HTTP modificando la `IsWebServiceEnabled` proprietà nel file RSReportServer. config. Questo passaggio arresta temporaneamente l'invio delle richieste di autenticazione al server di report senza arrestare completamente il server. È necessario disporre di un servizio minimo per poter ricreare le chiavi.  
+1.  Disabilitare il servizio Web ReportServer e l'accesso HTTP modificando la proprietà `IsWebServiceEnabled` nel file rsreportserver.config. Questo passaggio arresta temporaneamente l'invio delle richieste di autenticazione al server di report senza arrestare completamente il server. È necessario disporre di un servizio minimo per poter ricreare le chiavi.  
   
      Se vengono ricreate chiavi di crittografia per una distribuzione con scalabilità orizzontale del server di report, disabilitare questa proprietà in tutte le istanze presenti nella distribuzione.  
   
@@ -49,7 +49,7 @@ ms.locfileid: "48111020"
   
     2.  Aprire il file rsreportserver.config.  
   
-    3.  Per il `IsWebServiceEnabled` proprietà, specificare `False`e quindi salvare le modifiche.  
+    3.  Per la proprietà `IsWebServiceEnabled`, specificare `False`, quindi salvare le modifiche.  
   
 2.  Avviare lo strumento di configurazione di Reporting Services e quindi connettersi all'istanza del server di report che si desidera configurare.  
   
@@ -57,7 +57,7 @@ ms.locfileid: "48111020"
   
 4.  Riavviare il servizio Windows ReportServer. Se si ricreano chiavi di crittografia per una distribuzione con scalabilità orizzontale, riavviare il servizio su tutte le istanze.  
   
-5.  Riabilitare il servizio Web e l'accesso HTTP modificando la `IsWebServiceEnabled` proprietà nel file RSReportServer. config. Se si utilizza una distribuzione con scalabilità orizzontale, eseguire questa procedura per tutte le istanze.  
+5.  Riabilitare il servizio Web ReportServer e l'accesso HTTP modificando la proprietà `IsWebServiceEnabled` nel file rsreportserver.config. Se si utilizza una distribuzione con scalabilità orizzontale, eseguire questa procedura per tutte le istanze.  
   
 #### <a name="how-to-re-create-encryption-keys-rskeymgmt"></a>Come ricreare chiavi di crittografia (rskeymgmt)  
   
@@ -110,7 +110,7 @@ ms.locfileid: "48111020"
   
 1.  Digitare di nuovo la stringa di connessione per ogni origine dei dati condivisa.  
   
-2.  Digitare di nuovo il nome utente e la password per ogni report e origine dati condivisa che utilizza le credenziali archiviate, quindi salvare. Per altre informazioni, vedere [specificare le credenziali e informazioni di connessione per origini dati del Report](../../integration-services/connection-manager/data-sources.md) in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] documentazione Online.  
+2.  Digitare di nuovo il nome utente e la password per ogni report e origine dati condivisa che utilizza le credenziali archiviate, quindi salvare. Per altre informazioni, vedere [Specificare le credenziali e le informazioni sulla connessione per le origini dati del report](../../integration-services/connection-manager/data-sources.md) in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Documentazione online.  
   
 3.  Aprire ogni sottoscrizione guidata dai dati e digitare di nuovo le credenziali per l'accesso al database di sottoscrizione.  
   
@@ -118,6 +118,6 @@ ms.locfileid: "48111020"
   
 ## <a name="see-also"></a>Vedere anche  
  [Configurare e gestire chiavi di crittografia &#40;Gestione configurazione SSRS&#41;](ssrs-encryption-keys-manage-encryption-keys.md)   
- [Store dati crittografati di Report Server &#40;Gestione configurazione SSRS&#41;](ssrs-encryption-keys-store-encrypted-report-server-data.md)  
+ [Archiviare i dati crittografati del server di report &#40;Gestione configurazione SSRS &#41;](ssrs-encryption-keys-store-encrypted-report-server-data.md)  
   
   

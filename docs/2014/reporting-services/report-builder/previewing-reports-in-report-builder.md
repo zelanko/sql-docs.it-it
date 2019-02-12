@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: ba6b5bdd-d8c6-4aa8-ba32-3a10b11969d4
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: 16a1f51e5dec779dc185f1f1e4012a3d26069a40
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 0c84c1c87aa492ebc0643a72de863504eec883c6
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48081081"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56041562"
 ---
 # <a name="previewing-reports-in-report-builder"></a>Anteprima di report in Generatore report
   Durante la creazione di un report, è utile visualizzarne spesso l'anteprima per verificare che il contenuto visualizzato corrisponda a quanto desiderato. Per visualizzare l'anteprima del report, fare clic su **Esegui**. Il report viene visualizzato nella modalità di anteprima.  
@@ -82,6 +82,6 @@ ms.locfileid: "48081081"
  [Tabelle, matrici ed elenchi &#40;Generatore report e SSRS&#41;](../report-design/create-invoices-and-forms-with-lists-report-builder-and-ssrs.md)   
  [Grafici &#40;Generatore report e SSRS&#41;](../report-design/charts-report-builder-and-ssrs.md)   
  [Tabelle, matrici ed elenchi &#40;Generatore report e SSRS&#41;](../report-design/create-invoices-and-forms-with-lists-report-builder-and-ssrs.md)   
- [Salvataggio di report &#40;Generatore Report&#41;](saving-reports-report-builder.md)  
+ [Salvataggio di report &#40;Generatore report&#41;](saving-reports-report-builder.md)  
   
   

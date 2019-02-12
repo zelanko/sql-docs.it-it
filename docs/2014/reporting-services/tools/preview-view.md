@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: 108255d1-5be8-47c1-80f3-1f2a055e4d02
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 5ac2aa3d352de78fae6c3d9613bef2df390e46fa
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+manager: kfile
+ms.openlocfilehash: e3644de6d5a11e801e2b41d7d7aa517bad771714
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53354035"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56033262"
 ---
 # <a name="preview-view"></a>Visualizzazione Anteprima
   Utilizzare la visualizzazione **Anteprima** per visualizzare il report di cui è stato eseguito il rendering. Quando si visualizza l'anteprima di un report, Progettazione report esegue il report localmente e lo visualizza nella visualizzazione Anteprima. Nella modalità di anteprima, il report viene completamente elaborato. Se la query del report è complessa o il report contiene una grande quantità di dati, la visualizzazione dell'anteprima potrebbe impiegare alcuni minuti la prima volta. Per le modifiche successive che riguardano solo il formato del report, l'anteprima utilizza i dati nella cache.  
@@ -64,7 +64,7 @@ ms.locfileid: "53354035"
  **Aggiorna**  
  Scegliere questa opzione per aggiornare la cache dei dati ed eseguire nuovamente il report.  
   
- **Stampa**  
+ **Print**  
  Selezionare questa opzione per stampare il report.  
   
  **Layout di stampa**  
@@ -82,7 +82,7 @@ ms.locfileid: "53354035"
  **Testo di ricerca**  
  Consente di digitare il testo da cercare nel report. Non è possibile utilizzare operatori di ricerca. Fare clic su **Trova** per cercare la prima occorrenza.  
   
- **trovare**  
+ **Find**  
  Selezionare questa opzione per iniziare la ricerca del testo desiderato nel report.  
   
  **Trova successivo**  

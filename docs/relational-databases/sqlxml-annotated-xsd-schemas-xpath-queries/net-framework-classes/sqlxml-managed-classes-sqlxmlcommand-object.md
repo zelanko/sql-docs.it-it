@@ -28,16 +28,16 @@ helpviewer_keywords:
 - ClientSideXML property
 - CommandStream property
 ms.assetid: c1f9e0bb-a89d-4d6a-a96e-289ef516a3a6
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: e3ae51af994665ac4234dc44e84fb5c2c405aa1e
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 5ac8e2b23988f09b21f21ed5cfded790871a25a9
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52502556"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56041502"
 ---
 # <a name="sqlxml-managed-classes---sqlxmlcommand-object"></a>Classi gestite SQLXML - Oggetto SqlXmlCommand
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -56,7 +56,7 @@ public SqlXmlCommand(string cnString)
 ## <a name="methods"></a>Metodi  
  Oggetto TheSqlXmlCommand supporta diversi metodi, inclusi i seguenti metodi per l'esecuzione di un comando:  
   
- void ExecuteNonQuery)  
+ void ExecuteNonQuery()  
  Esegue il comando, ma non restituisce alcun valore. Questo metodo è utile se si desidera eseguire un comando senza query, ovvero un comando che non restituisca alcun valore. Un esempio di questo comportamento consiste nell'eseguire un updategram o un Diffgram che aggiorna record ma non restituisce alcun valore.  
   
  Stream ExecuteStream()  
@@ -73,7 +73,7 @@ public SqlXmlCommand(string cnString)
  SqlXmlParameter CreateParameter()  
  Crea un oggetto SqlXmlParameter. È possibile impostare i valori per il *Name* e *valore* i parametri di questo oggetto. Questo metodo è utile se si desidera passare parametri a un comando. Per un esempio funzionante, vedere [l'esecuzione di query SQL &#40;classi gestite SQLXML&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/net-framework-classes/executing-sql-queries-sqlxml-managed-classes.md).  
   
- ClearParameters() void  
+ void ClearParameters()  
  Cancella i parametri creati per un oggetto comando specifico. Questo metodo è utile se si desidera eseguire più query sullo stesso oggetto comando.  
   
 ## <a name="properties"></a>Proprietà  

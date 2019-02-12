@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: c1e68a88-0f82-415d-becc-78d180d4f845
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 9ca2338983aae168dce33bd0cd21b37ccac6e9fd
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: b11844e6b184099a9c6146d290a0dc081429f5d0
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48051341"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56042766"
 ---
 # <a name="creating-a-data-source-view-basic-data-mining-tutorial"></a>Creazione di una vista origine dati (Esercitazione di base sul data mining)
   Una vista origine dati si basa su un'origine dati e definisce un subset dei dati che è possibile utilizzare nelle strutture di data mining. È inoltre possibile utilizzare la vista origine dati per aggiungere colonne, creare aggregazioni e colonne calcolate nonché aggiungere viste denominate. Le viste origine dati consentono di selezionare i dati correlati al progetto, stabilire relazioni tra tabelle e modificare la struttura dei dati senza modificare l'origine dati originale. Per altre informazioni, vedere [Viste origine dati in modelli multidimensionali](../analysis-services/multidimensional-models/data-source-views-in-multidimensional-models.md).  
@@ -51,6 +50,6 @@ ms.locfileid: "48051341"
  [Lezione 2: Compilazione di una struttura di Mailing diretto &#40;esercitazione di base di Data Mining&#41;](../../2014/tutorials/lesson-2-building-a-targeted-mailing-structure-basic-data-mining-tutorial.md)  
   
 ## <a name="see-also"></a>Vedere anche  
- [Definizione di un tipo di dati della vista origine &#40;Analysis Services&#41;](../analysis-services/multidimensional-models/defining-a-data-source-view-analysis-services.md)  
+ [Definizione di una vista origine dati &#40;Analysis Services&#41;](../analysis-services/multidimensional-models/defining-a-data-source-view-analysis-services.md)  
   
   

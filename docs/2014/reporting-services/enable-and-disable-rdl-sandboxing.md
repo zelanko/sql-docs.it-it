@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: d5619e9f-ec5b-4376-9b34-1f74de6fade7
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: f49c20c8efe233bb49194364943f7ebb95ed6497
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+manager: kfile
+ms.openlocfilehash: 2db60863c1ae8c21e391d62182cb27a52558a1e1
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52415279"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56013182"
 ---
 # <a name="enable-and-disable-rdl-sandboxing"></a>Abilitare e disabilitare la funzionalità RDL Sandboxing
   La caratteristica RDL (Report Definition Language) Sandboxing consente di rilevare e limitare l'utilizzo di tipi specifici di risorse in base a singoli tenant in un ambiente in cui più tenant utilizzano una sola Web farm di server di report. Un esempio di questo tipo è rappresentato dai servizi di hosting in cui è possibile gestire una sola Web farm di server di report utilizzati da più tenant e probabilmente da società diverse. L'amministratore del server di report può abilitare questa caratteristica per ottenere gli obiettivi seguenti:  

@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: c5b15bec-6fde-4174-bcde-d043307244dd
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: d0b8526bf0a56f550659e613988b31c20f1ccde7
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+manager: kfile
+ms.openlocfilehash: 5aa1492942e76011eac784bbea90e41b7a3a2484
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53372623"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56011172"
 ---
 # <a name="native-to-sharepoint-migration-ssrs"></a>Migrazione dalla modalità nativa alla modalità SharePoint (SSRS)
   Non è possibile eseguire l'aggiornamento o la conversione da una modalità server all'altra di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Non è possibile, ad esempio, eseguire l'aggiornamento o la conversione da un server di report in modalità nativa a un server di report in modalità SharePoint. Non è possibile copiare i database del server di report tra modalità poiché in essi vengono utilizzati schemi del database diversi. È possibile eseguire la migrazione del contenuto da un server di report a un altro. Gli strumenti utilizzati dipendono dal tipo di modalità del server di report configurata per il server di origine e di destinazione.  

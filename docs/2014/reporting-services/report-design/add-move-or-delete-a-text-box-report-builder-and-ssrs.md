@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: f042cf81-d933-4ac7-9287-c074a46bde98
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: 0ca387618f1b996f620a1697053196926ed9dfd5
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: d75b32b9b1e25c23855d35e0f8e77bbf78c24688
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48123007"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56010175"
 ---
 # <a name="add-move-or-delete-a-text-box-report-builder-and-ssrs"></a>Aggiungere, spostare o eliminare una casella di testo (Generatore report e SSRS)
   Le caselle di testo costituiscono l'elemento utilizzato più di frequente nei report. È possibile aggiungere una casella di testo al corpo del report per visualizzare informazioni diverse, ad esempio titoli, scelte di parametri, campi incorporati e date.  
@@ -74,8 +74,8 @@ ms.locfileid: "48123007"
     >  Se facendo clic nella casella di testo è stata attivata la modalità di modifica, premere ESC per selezionare la casella di testo.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Le caselle di testo &#40;Report e SSRS&#41;](text-boxes-report-builder-and-ssrs.md)   
+ [Caselle di testo &#40;Generatore report e SSRS&#41;](text-boxes-report-builder-and-ssrs.md)   
  [Espressioni &#40;Generatore report e SSRS&#41;](expressions-report-builder-and-ssrs.md)   
- [Tasti di scelta rapida &#40;Generatore Report&#41;](../report-builder/keyboard-shortcuts-report-builder.md)  
+ [Tasti di scelta rapida &#40;Generatore report&#41;](../report-builder/keyboard-shortcuts-report-builder.md)  
   
   

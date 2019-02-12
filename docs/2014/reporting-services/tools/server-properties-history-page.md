@@ -12,13 +12,13 @@ f1_keywords:
 ms.assetid: be9d8018-a46f-4625-9ae1-138ebe6b38ba
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: eaa801caa34181262c5ac8879d9b2a77ba127fdd
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: b2e6fb7ad7c50395aa40b31a98e9bd6bd8743875
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48206061"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56042732"
 ---
 # <a name="server-properties-history-page"></a>Proprietà server (pagina Cronologia)
   Utilizzare questa pagina per impostare un valore predefinito relativo al numero di copie di cronologia dei report da mantenere. Il valore predefinito rappresenta un'impostazione iniziale che definisce i limiti della cronologia di tutti i report. È possibile modificare queste impostazioni per singoli report.  

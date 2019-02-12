@@ -21,13 +21,13 @@ helpviewer_keywords:
 ms.assetid: 1544472c-2803-448d-af52-e901cb457a00
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: b052ccbd1b91ea66f150dc0995eeeb33994a5e53
-ms.sourcegitcommit: 60739bcb48ccce17bca4e11a85df443e93ca23e3
+manager: kfile
+ms.openlocfilehash: 714fe10abac63da9abdb7c1415e8f6abbfba11b0
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52439523"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56012094"
 ---
 # <a name="report-design-view-report-builder"></a>Visualizzazione di progettazione report (Generatore report)
   La finestra Generatore report è progettata per semplificare l'organizzazione delle risorse del report e per consentire una più rapida compilazione dei report necessari. L'area di progettazione si trova al centro della finestra, con la barra multifunzione nella parte superiore mentre i riquadri Dati report, Raggruppamento e Proprietà nonché Raccolta parti del report sono a sinistra, in basso e a destra. Nell'area di progettazione vengono aggiunti e organizzati gli elementi del report. Sulla barra multifunzione le voci di menu tradizionali sono suddivise in categorie che è possibile individuare e utilizzare facilmente. I riquadri consentono di aggiungere, selezionare e organizzare le risorse del report, nonché di modificare le proprietà degli elementi del report.  

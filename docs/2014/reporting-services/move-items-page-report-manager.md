@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: fc83b8d2-bc79-4b56-8970-34a1cbbcc176
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: a6c4d822448b452cd66cbc59beffb8fe2d6f0fb5
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 96d3310c489dea5aadc3e9b7e873dbb89ceee9bb
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48082751"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56009686"
 ---
 # <a name="move-items-page-report-manager"></a>Pagina Spostamento elementi (Gestione report)
   La pagina di spostamento degli elementi consente di spostare un report, una cartella o altri elementi in una nuova posizione nel server di report. È possibile digitare il percorso della nuova posizione oppure utilizzare una visualizzazione albero per selezionare una nuova posizione nello spazio dei nomi del server di report. Si possono spostare solo gli elementi per i quali si dispone delle autorizzazioni per lo spostamento e che sono archiviati nel server di report corrente.  

@@ -11,20 +11,20 @@ f1_keywords:
 - sql12.rtp.rptdesigner.shareddatasource.general.f1
 ms.assetid: 8dc51d5a-39e0-4870-8874-9e3d1626e16d
 author: maggiesmsft
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: c92df0a13d3257535316e65d8da0cff74192c38b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.author: maghan
+manager: kfile
+ms.openlocfilehash: e743eac09bc3a39899c6cc6a86674b428f369717
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48070152"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56041232"
 ---
 # <a name="shared-data-source-properties-dialog-box-general"></a>Finestra di dialogo Proprietà origine dati condivisa, Generale
   Utilizzare la finestra di dialogo **Proprietà origine dati condivisa** per visualizzare e modificare le informazioni di connessione relative a un'origine dati condivisa nel report.  
   
 ## <a name="options"></a>Opzioni  
- **Nome**  
+ **Name**  
  Consente di digitare il nome dell'origine dati. Tale nome deve essere univoco all'interno del report. Per impostazione predefinita, all'origine dei dati viene assegnato un nome generico, ad esempio DataSource1 o DataSource2.  
   
  **Tipo**  

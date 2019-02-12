@@ -17,14 +17,14 @@ helpviewer_keywords:
 - modules [Reporting Services]
 ms.assetid: 7ffec331-6365-4c13-8e58-b77a48cffb44
 author: maggiesmsft
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: 0d3c218b5e72e231179443c146a6ea3c23747d4e
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.author: maghan
+manager: kfile
+ms.openlocfilehash: e33547643adf7345bbbc7c020dcbd11959bb6119
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48180611"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56012030"
 ---
 # <a name="supported-access-report-features-ssrs"></a>Caratteristiche supportate dei report di Access (SSRS)
   Quando si importa un report in Progettazione report, il processo di importazione converte il report di Access [!INCLUDE[msCoName](../includes/msconame-md.md)] in un file RDL (Report Definition Language) [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]. [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] supporta molte caratteristiche di Access; tuttavia, a causa delle differenze tra Access e [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)], alcuni elementi vengono modificati leggermente o non sono supportati. In questo argomento vengono descritte le modalità di conversione delle caratteristiche dei report di Access in file RDL.  
@@ -57,7 +57,7 @@ ms.locfileid: "48180611"
   
 |||||  
 |-|-|-|-|  
-|Image|Etichetta|Riga|Rectangle|  
+|Image|Label|Riga|Rectangle|  
 |SubForm|SubReport<br /><br /> **Nota** controllo mentre SubReport viene convertito nel report principale, il sottoreport vero e proprio viene convertito separatamente.|TextBox||  
   
  In [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] non sono supportati i seguenti controlli:  
@@ -85,7 +85,7 @@ ms.locfileid: "48180611"
 |IsHyperlink|IsVisible|StampaSezioneUnita (gruppo)|Left|  
 |LeftMargin|InclinazioneLinea|LineSpacing|CollegaCampiSecondari|  
 |CollegaCampiMaster|NuovaRigaOColonna|PageFooter|PageHeader|  
-|Pagine|Immagine|EspansioneImmagine (report)|ReadingOrder|  
+|Pages|Immagine|EspansioneImmagine (report)|ReadingOrder|  
 |RipetiSezione|RightMargin|RunningSum|SizeMode|  
 |TextAlign|TOP|TopMargin|Larghezza|  
   
@@ -263,8 +263,8 @@ ms.locfileid: "48180611"
   
 |||||  
 |-|-|-|-|  
-|Avg|Count|Max|Min|  
-|StDev|StDevP|SUM|Var|  
+|Avg|Conteggio|Max|Min|  
+|StDev|StDevP|Sum|Var|  
 |VarP||||  
   
 #### <a name="text-functions"></a>Funzioni di testo  

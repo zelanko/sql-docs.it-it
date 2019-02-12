@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: e3d61228-2aa4-42cc-955e-602dbf3406a7
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: 7565cf64d64197a261c36fb755e3f20a65f1fa27
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+manager: kfile
+ms.openlocfilehash: 7bd3261a6669b1677fbfeff23b0017e622600007
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53356460"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56012742"
 ---
 # <a name="lesson-6-adding-grouping-and-totals-reporting-services"></a>Lezione 6: Aggiunta di gruppi e totali (Reporting Services)
   È possibile aggiungere gruppi e totali al report per organizzare e riepilogare i dati.  

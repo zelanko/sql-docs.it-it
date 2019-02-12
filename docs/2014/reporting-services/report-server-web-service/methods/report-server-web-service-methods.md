@@ -18,13 +18,13 @@ helpviewer_keywords:
 ms.assetid: ce5afa27-e90c-44a7-b204-098a065b3665
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: df2849f2aabfd7d69645d5fd82dbec8195df27b8
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 44a9c9eda59b5bfd69d8d22f81f470a4ab46c21c
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48059041"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56014652"
 ---
 # <a name="report-server-web-service-methods"></a>Metodi del servizio Web ReportServer
   I servizi Web ReportServer includono diverse categorie di metodi basate sulle caratteristiche dei componenti. Questi metodi vengono forniti tramite diversi endpoint del servizio Web (tre per la gestione e uno per l'esecuzione dei report) esposti come membri delle classi <xref:ReportService2010.ReportingService2010> e <xref:ReportExecution2005.ReportExecutionService>. Queste classi possono essere generate tramite uno strumento della classe proxy, ad esempio wsdl.exe incluso in [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] SDK. Per altre informazioni sui servizi Web ReportServer e [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)], vedere [Compilazione di applicazioni tramite servizio Web e .NET Framework](../net-framework/building-applications-using-the-web-service-and-the-net-framework.md).  
@@ -32,7 +32,7 @@ ms.locfileid: "48059041"
 ## <a name="endpoints-and-methods"></a>Endpoint e metodi  
  Nella tabella seguente vengono elencati gli endpoint del servizio Web ReportServer e le categorie di metodi forniti dall'endpoint <xref:ReportService2010.ReportingService2010>. Per altre informazioni sui metodi disponibili in altri endpoint, vedere [Riferimento tecnico &#40;SSRS&#41;](../../technical-reference-ssrs.md).  
   
-|Argomento|Description|  
+|Argomento|Descrizione|  
 |-----------|-----------------|  
 |[Endpoint del servizio Web ReportServer](report-server-web-service-endpoints.md)|Descrive gli endpoint di gestione ed esecuzione del servizio Web ReportServer.|  
 |[Metodi di gestione dello spazio dei nomi del server di report](report-server-namespace-management-methods.md)|Descrive i metodi che è possibile utilizzare per gestire il database del server di report. In particolare, è possibile gestire le cartelle e le risorse e impostare le proprietà dell'elemento.|  

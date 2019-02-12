@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: d3392c0b-7b62-4d27-bc04-2bd0c5487d08
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: 1219998db8ec07de6e03aa14b3aefaee6515e235
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+manager: kfile
+ms.openlocfilehash: 2dae0498da8fe1387b6b082d7cc6ae37af27d464
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53366173"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56010192"
 ---
 # <a name="add-a-hyperlink-to-a-url-report-builder-and-ssrs"></a>Aggiungere un collegamento ipertestuale a un URL (Generatore report e SSRS)
   È possibile aggiungere un collegamento ipertestuale a un elemento di report quando si desidera che gli utenti siano in grado di fare clic su un collegamento in un report e aprire una finestra del browser relativa all'URL specificato. Un collegamento ipertestuale può essere un URL statico o un'espressione che restituisce un URL. Se in un database è disponibile un campo contenente URL, sarà possibile usare tale campo nell'espressione per ottenere un elenco dinamico di collegamenti ipertestuali nel report. È possibile aggiungere collegamenti ipertestuali a caselle di testo, immagini, grafici e misuratori. È necessario garantire che l'utente acceda all'URL specificato.  
@@ -28,7 +28,7 @@ ms.locfileid: "53366173"
   
  È possibile aggiungere un collegamento ipertestuale a un URL in qualsiasi elemento che dispone di una proprietà **Azione** , ad esempio una casella di testo, un'immagine o una serie calcolata in un grafico. Quando l'utente fa clic sul tale elemento del report, viene eseguita l'azione definita. Per altre informazioni, vedere [Finestra di dialogo Proprietà azione &#40;Generatore report e SSRS&#41;](../action-properties-dialog-box-report-builder-and-ssrs.md) e [Specifica di percorsi di elementi esterni &#40;Generatore report e SSRS&#41;](specifying-paths-to-external-items-report-builder-and-ssrs.md).  
   
- Per iniziare rapidamente, vedere [esercitazione: Formattare il testo &#40;Generatore Report&#41;](../tutorial-format-text-report-builder.md).  
+ Per un'introduzione rapida, vedere [Esercitazione: Formattazione di testo &#40;Generatore report&#41;](../tutorial-format-text-report-builder.md).  
   
 > [!NOTE]  
 >  I collegamenti associati ai campi del set di dati possono essere esposti ad alterazioni per finalità dannose. Per altre informazioni, vedere [Garantire la sicurezza di report e risorse](../security/secure-reports-and-resources.md) nella [documentazione online](https://go.microsoft.com/fwlink/?LinkId=154888) di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sul sito msdn.microsoft.com.  

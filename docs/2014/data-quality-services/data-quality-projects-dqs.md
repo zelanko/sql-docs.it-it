@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: a43fc9c0-19b6-414a-8661-4c7c55e0c03e
-author: douglaslMS
-ms.author: douglasl
+author: leolimsft
+ms.author: lle
 manager: craigg
-ms.openlocfilehash: f5e9ac249f6fd3c6626084f254ad60889066c334
-ms.sourcegitcommit: af1d9fc4a50baf3df60488b4c630ce68f7e75ed1
+ms.openlocfilehash: 8f4fbe5a3990348edc2e8b3716ca869c4166e145
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/06/2018
-ms.locfileid: "51029811"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56043282"
 ---
 # <a name="data-quality-projects-dqs"></a>Progetti Data Quality (DQS)
   Un progetto di qualità dei dati in [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) consiste nell'utilizzo di una Knowledge Base per migliorare la qualità dei dati di origine eseguendo attività di *pulizia dei dati* e di *individuazione di corrispondenze tra dati* ed esportando quindi i dati risultanti in un database SQL Server o in un file csv. È possibile creare un progetto di qualità dei dati come progetto di pulizia o come progetto di corrispondenza per eseguire le rispettive attività. È possibile eseguire progetti di pulizia e di individuazione delle corrispondenze utilizzando la stessa Knowledge Base, poiché le informazioni per la pulizia e per l'individuazione di corrispondenze possono essere inserite all'interno della stessa Knowledge Base.  
@@ -28,7 +28,7 @@ ms.locfileid: "51029811"
   
 -   Fornisce una procedura guidata per supportare le attività di pulizia e individuazione delle corrispondenze e consente di esportare i dati selezionati in un database SQL Server o in un file csv. L'amministratore dei dati può utilizzare il progetto di qualità dei dati per eseguire e controllare i passaggi di pulizia e di individuazione delle corrispondenze sia computerizzati che interattivi.  
   
-##  <a name="Cleansing"></a> Progetto Data Quality: attività di pulizia dei dati  
+##  <a name="Cleansing"></a> Progetto Data Quality: Attività di pulizia  
  I progetti Data Quality di pulizia consentono di pulire i dati di origine in base a una Knowledge Base. L'attività di pulizia dei dati in DQS è un processo in due passaggi:  
   
 1.  Un processo *computerizzato* di pulizia dei dati tramite cui vengono analizzati i dati di origine in base alle informazioni incluse nella Knowledge Base e vengono proposte modifiche. I dati elaborati vengono suddivisi da DQS in categorie (suggerito, nuovo, non valido, con correzione e corretto), quindi vengono presentati all'utente per ulteriore elaborazione.  
@@ -37,8 +37,8 @@ ms.locfileid: "51029811"
   
  Per informazioni dettagliate sull'attività di pulizia in un progetto di qualità dei dati, vedere [Data Cleansing](../../2014/data-quality-services/data-cleansing.md).  
   
-##  <a name="Matching"></a> Progetto Data Quality: attività di individuazione delle corrispondenze  
- Un progetto Data Quality di corrispondenza tra dati consente di eseguire l'attività di individuazione di corrispondenze in base ai criteri di corrispondenza in una Knowledge Base per impedire la duplicazione dei dati mediante l'identificazione di corrispondenze esatte e approssimative e permettendo quindi la rimozione dei dati duplicati. Si consiglia di pulire i dati prima di eseguire su questi l'individuazione di corrispondenze. A tale scopo, procedere come indicato di seguito:  
+##  <a name="Matching"></a> Progetto Data Quality: Attività di corrispondenza  
+ Un progetto Data Quality di corrispondenza tra dati consente di eseguire l'attività di individuazione di corrispondenze in base ai criteri di corrispondenza in una Knowledge Base per impedire la duplicazione dei dati mediante l'identificazione di corrispondenze esatte e approssimative e permettendo quindi la rimozione dei dati duplicati. Si consiglia di pulire i dati prima di eseguire su questi l'individuazione di corrispondenze. A tale scopo:  
   
 1.  Creare un progetto Data Quality, selezionare l'attività **Pulizia** , completare l'attività di pulizia sui dati di origine, quindi esportarli in una tabella di un database di SQL Server.  
   

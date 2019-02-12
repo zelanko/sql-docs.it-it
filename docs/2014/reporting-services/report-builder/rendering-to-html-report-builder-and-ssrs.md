@@ -10,20 +10,20 @@ ms.topic: conceptual
 ms.assetid: cf559b0a-499a-4d74-b520-b382b87e0b17
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: eea42bfc7b02c4964f34ebc6fe5f4b067a33d21e
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 1905dbe53d5c869c25fcf6f9b07b46bf48dcaf98
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48084541"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56013250"
 ---
 # <a name="rendering-to-html-report-builder-and-ssrs"></a>Rendering in formato HTML (Generatore report e SSRS)
   L'estensione per il rendering HTML consente di eseguire il rendering di un report in formato HTML. Può inoltre generare pagine HTML complete o frammenti di HTML da incorporare in altre pagine HTML. Tutto il codice HTML viene generato con la codifica UTF-8.  
   
  Per i report visualizzati in un browser, inclusi quelli eseguiti in Gestione report, viene utilizzata l'estensione per il rendering HTML per impostazione predefinita.  
   
- Per i report visualizzati in un browser, inclusi quelli eseguiti in Gestione report, viene utilizzata l'estensione per il rendering HTML per impostazione predefinita. L'estensione per il rendering HTML può generare frammenti HTML o documenti HTML completi. Se il codice HTML viene generato un frammento, il `HEAD`, `HTML`, e `BODY` tag del documento HTML vengono rimossi. Viene eseguito il rendering solo del contenuto del tag `BODY`. Questa funzionalità è particolarmente utile se si desidera incorporare il frammento HTML nel codice HTML prodotto da un'altra applicazione.  
+ Per i report visualizzati in un browser, inclusi quelli eseguiti in Gestione report, viene utilizzata l'estensione per il rendering HTML per impostazione predefinita. L'estensione per il rendering HTML può generare frammenti HTML o documenti HTML completi. Se viene generato un frammento HTML, i tag `HEAD`, `HTML` e `BODY` del documento HTML vengono rimossi. Viene eseguito il rendering solo del contenuto del tag `BODY`. Questa funzionalità è particolarmente utile se si desidera incorporare il frammento HTML nel codice HTML prodotto da un'altra applicazione.  
   
  In alcuni scenari i parametri del report possono essere utilizzati per avviare attacchi intrusivi negli script durante il rendering di report in HTML. Per altre informazioni sulla sicurezza dei report, vedere [Garantire la sicurezza di report e risorse](../security/secure-reports-and-resources.md).  
   
@@ -102,7 +102,7 @@ ms.locfileid: "48084541"
 ## <a name="see-also"></a>Vedere anche  
  [Paginazione in Reporting Services &#40;Generatore report e SSRS&#41;](../report-design/pagination-in-reporting-services-report-builder-and-ssrs.md)   
  [Tipi di rendering &#40;Generatore report e SSRS&#41;](../report-design/rendering-behaviors-report-builder-and-ssrs.md)   
- [Funzionalità interattiva per estensioni di Rendering del Report diversi &#40;Report e SSRS&#41;](interactive-functionality-different-report-rendering-extensions.md)   
+ [Funzionalità interattiva per estensioni per il rendering di report differenti &#40;Generatore report e SSRS&#41;](interactive-functionality-different-report-rendering-extensions.md)   
  [Rendering degli elementi del report &#40;Generatore report e SSRS&#41;](../report-design/rendering-report-items-report-builder-and-ssrs.md)   
  [Tabelle, matrici ed elenchi &#40;Generatore report e SSRS&#41;](../report-design/create-invoices-and-forms-with-lists-report-builder-and-ssrs.md)  
   

@@ -11,13 +11,13 @@ ms.topic: reference
 ms.assetid: 67bd266b-1484-4863-8152-060a993420a9
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 8eeb349c91dd87175f8baaabad75acccc8a622d6
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: b35b22e4eb80ba4b391cbac6c854248db3f9553c
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48094993"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56009573"
 ---
 # <a name="accessing-the-wmi-provider-programmatically"></a>Accesso al provider WMI a livello di programmazione
   Pagina in costruzione.  

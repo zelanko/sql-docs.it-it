@@ -17,13 +17,13 @@ f1_keywords:
 ms.assetid: b5e9ef21-11b7-4ed2-838e-d8eecdb5c5f0
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: 320737c3a84eb1f01899c14dfb2f4c1eefb60856
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+manager: kfile
+ms.openlocfilehash: 90a8f755b49e0b4f931325de25abea3654cc7d1f
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53354470"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56013962"
 ---
 # <a name="maps-report-builder-and-ssrs"></a>Mappe (Generatore report e SSRS)
   Per visualizzare i dati aziendali su uno sfondo geografico, è possibile aggiungere una mappa al report. Il tipo di mappa da selezionare dipende da quali informazioni si desidera comunicare nel report. È possibile aggiungere una mappa che visualizza solo le posizioni, una mappa a bolle in cui le dimensioni di queste ultime variano in base al numero di unità familiari presenti in un'area, una mappa con marcatori in cui lo stile del marcatore cambia a seconda del prodotto più remunerativo per ogni negozio oppure una mappa linea che consente di visualizzare gli itinerari tra i diversi negozi.  
@@ -274,6 +274,6 @@ ms.locfileid: "53354470"
   
  [Aggiungere percorsi personalizzati a una mappa &#40;Generatore report e SSRS&#41;](add-custom-locations-to-a-map-report-builder-and-ssrs.md)  
   
- [Risolvere i problemi di report: Eseguire il mapping di report &#40;Report e SSRS&#41;](troubleshoot-reports-map-reports-report-builder-and-ssrs.md)  
+ [Risolvere problemi relativi ai report: Eseguire il mapping di report &#40;Report e SSRS&#41;](troubleshoot-reports-map-reports-report-builder-and-ssrs.md)  
   
   

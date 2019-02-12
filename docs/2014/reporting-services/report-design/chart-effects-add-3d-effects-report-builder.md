@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: ab9625d8-6557-4a4d-8123-eefa7c066ff5
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: b554ec2044e95304c995a0dde7d67c444fa2dc05
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: de398500fb9511ae083277e1c23087a743f3d8e3
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48166121"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56009633"
 ---
 # <a name="add-3d-effects-to-a-chart-report-builder-and-ssrs"></a>Aggiungere effetti 3D a un grafico (Generatore report e SSRS)
   Gli effetti tridimensionali (3D) possono essere utilizzati per fornire profondità e aggiungere un impatto visivo al grafico. Ad esempio, se si desidera evidenziare una particolare sezione di un grafico a torta esplosa, è possibile ruotare e modificare la prospettiva del grafico in modo che si noti prima di tutto tale sezione. Quando al grafico vengono applicati effetti 3D, tutti i colori delle sfumature e gli stili di tratteggio vengono disabilitati.  
@@ -30,7 +30,7 @@ ms.locfileid: "48166121"
   
 2.  In **Opzioni 3D**selezionare l'opzione **Abilita 3D** .  
   
-3.  (Facoltativo) In **Opzioni 3D**è possibile impostare un'ampia varietà di proprietà relative alle opzioni degli angoli e delle scene 3D. Per altre informazioni su queste proprietà, vedere [3D, smussature e altri effetti in un grafico &#40;Generatore Report e SSRS&#41;](chart-effects-3d-bevel-and-other-report-builder.md).  
+3.  (Facoltativo) In **Opzioni 3D**è possibile impostare un'ampia varietà di proprietà relative alle opzioni degli angoli e delle scene 3D. Per altre informazioni su queste proprietà, vedere [Effetti 3D, smussature e altri effetti in un grafico &#40;Generatore report e SSRS&#41;](chart-effects-3d-bevel-and-other-report-builder.md).  
   
 4.  Fare clic su **OK**.  
   
@@ -85,8 +85,8 @@ ms.locfileid: "48166121"
     4.  Per la proprietà **DrawingStyle** , specificare il valore **Cilindro** .  
   
 ## <a name="see-also"></a>Vedere anche  
- [3D, smussature e altri effetti in un grafico &#40;Report e SSRS&#41;](chart-effects-3d-bevel-and-other-report-builder.md)   
+ [Effetti 3D, smussature e altri effetti in un grafico &#40;Generatore report e SSRS&#41;](chart-effects-3d-bevel-and-other-report-builder.md)   
  [Formattazione di un grafico &#40;Generatore report e SSRS&#41;](formatting-a-chart-report-builder-and-ssrs.md)   
- [Grafici &#40;Report e SSRS&#41;](charts-report-builder-and-ssrs.md)  
+ [Grafici &#40;Generatore report e SSRS&#41;](charts-report-builder-and-ssrs.md)  
   
   

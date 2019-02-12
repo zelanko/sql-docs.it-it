@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 958ef51f-2699-4cb2-a92e-3b4322e36a30
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 304c1048c206f179d5e29d3b5aa097d21a124512
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 9ca7b2b7ed4cc66a3c47b2f2ad8044775d69c6ed
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48065331"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56015002"
 ---
 # <a name="modify-a-reporting-services-configuration-file-rsreportserverconfig"></a>Modify a Reporting Services Configuration File (RSreportserver.config)
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] le impostazioni dell'applicazione vengono archiviate in un set di file di configurazione. Durante l'installazione vengono creati i file di configurazione per ogni istanza del server di report installata. All'interno di ogni file, i valori vengono impostati in questa fase o nel momento in cui si utilizzano strumenti e applicazioni per configurare un server per l'esecuzione di operazioni. In alcuni casi, è necessario modificare direttamente un file per aggiungere o configurare impostazioni avanzate. Le impostazioni di configurazione sono specificate come elementi o attributi XML. Se si conoscono il linguaggio XML e i file di configurazione, è possibile utilizzare un editor di testo o di codice per modificare le impostazioni definibili dall'utente.  
@@ -94,11 +94,11 @@ ms.locfileid: "48065331"
 ## <a name="see-also"></a>Vedere anche  
  [File di configurazione RSReportServer](rsreportserver-config-configuration-file.md)   
  [File di configurazione ReportingServicesService](reportingservicesservice-configuration-file.md)   
- [RSReportDesigner - file di configurazione](rsreportdesigner-configuration-file.md)   
+ [File di configurazione RSReportDesigner](rsreportdesigner-configuration-file.md)   
  [Distribuzione di un'estensione per l'elaborazione dati](../extensions/data-processing/deploying-a-data-processing-extension.md)   
  [Distribuzione di un'estensione per il recapito](../extensions/delivery-extension/deploying-a-delivery-extension.md)   
  [Distribuzione di un'estensione per il rendering](../extensions/rendering-extension/deploying-a-rendering-extension.md)   
- [Procedura: Distribuire un elemento del report personalizzato](../custom-report-items/how-to-deploy-a-custom-report-item.md)   
+ [Procedura: Distribuire un elemento del Report personalizzato](../custom-report-items/how-to-deploy-a-custom-report-item.md)   
  [File di configurazione di Reporting Services](reporting-services-configuration-files.md)  
   
   

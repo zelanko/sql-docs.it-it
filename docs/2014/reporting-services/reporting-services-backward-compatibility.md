@@ -15,20 +15,20 @@ helpviewer_keywords:
 ms.assetid: 675b0e0e-cfee-4790-9675-80fc3ea6d30f
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 253b4e2178f7a3e2e20d3b1263f83ff184d3b9c7
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: b36b196f28bf029d68729c6c8e88116646829705
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48051001"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56010542"
 ---
 # <a name="reporting-services-backward-compatibility"></a>Compatibilità con le versioni precedenti di Reporting Services
   In questa sezione verranno descritte le differenze di funzionamento tra le versioni di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]. Vengono illustrate caratteristiche che non sono più disponibili o che verranno rimosse a partire da una delle prossime versioni. Vengono anche descritte modifiche essenziali apportate al prodotto che causeranno l'interruzione del funzionamento di applicazioni personalizzate in cui è inclusa la funzionalità di [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)].  
   
-## <a name="in-this-section"></a>Argomenti della sezione  
+## <a name="in-this-section"></a>In questa sezione  
   
-|Argomento|Description|  
+|Argomento|Descrizione|  
 |-----------|-----------------|  
 |[Funzionalità non più disponibili di SQL Server Reporting Services in SQL Server 2014](discontinued-functionality-to-sql-server-reporting-services-in-sql-server.md)|Vengono descritte le funzionalità disponibili nelle versioni precedenti di [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] , ma che sono state rimosse nelle versioni successive.|  
 |[Funzionalità deprecate di SQL Server Reporting Services in SQL Server 2014](deprecated-features-in-sql-server-reporting-services-ssrs.md)|Vengono descritte le funzionalità disponibili in questa versione di [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] per la compatibilità con le versioni precedenti, ma che verranno rimosse in una versione futura di SQL Server.|  

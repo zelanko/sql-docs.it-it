@@ -12,13 +12,13 @@ helpviewer_keywords:
 ms.assetid: 52ed9e74-f2c8-488b-a2c2-6dfbc2a2c8cc
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: 7372f5457e047772febf4cf040da3f897ae033a2
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+manager: kfile
+ms.openlocfilehash: 0ae207d14e45c51cee51190bdf0849f0e49d8c05
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53362903"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56013602"
 ---
 # <a name="reporting-services-reports-ssrs"></a>Report di Reporting Services (SSRS)
   I report di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] sono definizioni di report basate su XML che includono i dati e gli elementi di layout dei report. Su un file system client, i file di definizione di report hanno estensione .rdl. Dopo la pubblicazione, il report si converte in un elemento di report archiviato nel server di report o nel sito di SharePoint. I report sono una parte della piattaforma di report basata su server fornita da [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)].  

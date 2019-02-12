@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: fcc2db5c-5c26-4607-ae2b-f65c80360536
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: ff2a701c3425fce737c75c6fb0b6bc01698d8277
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 8b8a9b295df0cfa4d49e0964a6d6c83e62fefb8e
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48227141"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56031642"
 ---
 # <a name="images-report-builder-and-ssrs"></a>Immagini (Generatore report e SSRS)
   Un'immagine è un elemento del report in cui è incluso un riferimento a un'immagine incorporata nel report o archiviata in un database, nel server di report o in un'altra posizione nel Web. Un'immagine può essere rappresentata da un'immagine ripetuta con le righe di dati. Inoltre è possibile utilizzare un'immagine come sfondo per determinati elementi del report.  
@@ -45,7 +45,7 @@ ms.locfileid: "48227141"
 ##  <a name="EmbedImages"></a> Incorporamento di immagini  
  È possibile incorporare immagini in un report in modo che tutti i dati delle immagini vengano archiviati all'interno della definizione del report. Quando si incorpora un'immagine, all'immagine viene applicata la codifica MIME e viene archiviata come testo nella definizione del report. L'utilizzo di un'immagine incorporata assicura che l'immagine sia sempre disponibile per il report, ma comporta anche un aumento delle dimensioni della definizione del report.  
   
- Per altre informazioni sull'incorporamento di un'immagine, vedere [Embed an Image in a Report &#40;Report Builder and SSRS&#41;](embed-an-image-in-a-report-report-builder-and-ssrs.md).  
+ Per altre informazioni sull'incorporamento di un'immagine, vedere [Incorporare un'immagine in un report &#40;Generatore report e SSRS&#41;](embed-an-image-in-a-report-report-builder-and-ssrs.md).  
   
 
   
@@ -56,7 +56,7 @@ ms.locfileid: "48227141"
   
  Quando il report viene eseguito in Generatore report o Progettazione report, vengono utilizzate le credenziali dell'utente per visualizzare l'immagine. Quando il report viene eseguito sul server di report, è possibile che l'immagine nel report non venga visualizzata se le credenziali del server non sono sufficienti per accedere all'immagine. In tal caso, rivolgersi all'amministratore di sistema.  
   
- Per altre informazioni sull'aggiunta di un'immagine esterna a un report, vedere [Add an External Image &#40;Report Builder and SSRS&#41;](add-an-external-image-report-builder-and-ssrs.md).  
+ Per altre informazioni sull'aggiunta di un'immagine esterna a un report, vedere [Aggiungere un'immagine esterna &#40;Generatore report e SSRS&#41;](add-an-external-image-report-builder-and-ssrs.md).  
   
  
   
@@ -66,28 +66,28 @@ ms.locfileid: "48227141"
 > [!NOTE]  
 >  Alcune estensioni per il rendering, ad esempio l'estensione per il rendering HTML, visualizzano l'immagine di sfondo del corpo del report nel corpo, nell'intestazione di pagina e nel piè di pagina. È possibile definire un'immagine di sfondo diversa per l'intestazione e il piè di pagina, ma se non si definisce alcuna immagine viene utilizzata l'immagine di sfondo del corpo. Altre estensioni per il rendering, ad esempio l'estensione per il rendering delle immagini, non visualizzano l'immagine di sfondo del corpo nell'intestazione e nel piè di pagina.  
   
- Per altre informazioni sull'aggiunta di un'immagine di sfondo, vedere [Add a Background Image &#40;Report Builder and SSRS&#41;](add-a-background-image-report-builder-and-ssrs.md).  
+ Per altre informazioni sull'aggiunta di un'immagine di sfondo, vedere [Aggiungere un'immagine di sfondo &#40;Generatore report e SSRS&#41;](add-a-background-image-report-builder-and-ssrs.md).  
   
  
   
 ##  <a name="DataboundImages"></a> Immagini associate a dati  
- È possibile aggiungere a un report immagini archiviate in un database. L'elemento immagine del report utilizzato è identico a quello utilizzato per le immagini statiche, ma dispone di un set di proprietà che indica che l'immagine è archiviata in un database. Per visualizzare istruzioni sull'utilizzo di immagini con associazione a dati, vedere [Add a Data-Bound Image &#40;Report Builder and SSRS&#41;](add-a-data-bound-image-report-builder-and-ssrs.md).  
+ È possibile aggiungere a un report immagini archiviate in un database. L'elemento immagine del report utilizzato è identico a quello utilizzato per le immagini statiche, ma dispone di un set di proprietà che indica che l'immagine è archiviata in un database. Per visualizzare istruzioni sull'utilizzo di immagini con associazione a dati, vedere [Aggiungere un'immagine di sfondo &#40;Generatore report e SSRS&#41;](add-a-data-bound-image-report-builder-and-ssrs.md).  
   
 
   
 ##  <a name="HowTo"></a> Procedure  
- [Aggiungere un'immagine esterna &#40;Report e SSRS&#41;](add-an-external-image-report-builder-and-ssrs.md)  
+ [Aggiungere un'immagine esterna &#40;Generatore report e SSRS&#41;](add-an-external-image-report-builder-and-ssrs.md)  
   
- [Incorporare un'immagine in un Report &#40;Report e SSRS&#41;](embed-an-image-in-a-report-report-builder-and-ssrs.md)  
+ [Incorporare un'immagine in un report &#40;Generatore report e SSRS&#41;](embed-an-image-in-a-report-report-builder-and-ssrs.md)  
   
- [Aggiungere un'immagine di sfondo &#40;Report e SSRS&#41;](add-a-background-image-report-builder-and-ssrs.md)  
+ [Aggiungere un'immagine di sfondo &#40;Generatore report e SSRS&#41;](add-a-background-image-report-builder-and-ssrs.md)  
   
- [Aggiungere un'immagine con associazione a dati &#40;Report e SSRS&#41;](add-a-data-bound-image-report-builder-and-ssrs.md)  
+ [Aggiungere un'immagine di sfondo &#40;Generatore report e SSRS&#41;](add-a-data-bound-image-report-builder-and-ssrs.md)  
   
   
   
 ## <a name="see-also"></a>Vedere anche  
- [Esportazione in un File di immagine &#40;Report e SSRS&#41;](../report-builder/exporting-to-an-image-file-report-builder-and-ssrs.md)   
+ [Esportazione in un file di immagine &#40;Generatore report e SSRS&#41;](../report-builder/exporting-to-an-image-file-report-builder-and-ssrs.md)   
  [Tipi di rendering &#40;Generatore report e SSRS&#41;](rendering-behaviors-report-builder-and-ssrs.md)  
   
   

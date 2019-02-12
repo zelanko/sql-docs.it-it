@@ -1,9 +1,9 @@
 ---
-title: Sys.pdw_nodes_partitions (Transact-SQL) | Microsoft Docs
+title: sys.pdw_nodes_partitions (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/03/2017
-ms.prod: ''
-ms.prod_service: sql-data-warehouse, pdw
+ms.prod: sql
+ms.technology: data-warehouse
 ms.reviewer: ''
 ms.topic: language-reference
 dev_langs:
@@ -13,19 +13,19 @@ author: ronortloff
 ms.author: rortloff
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: aadbe305d7ad72858a46b1df2af4ef2cb0e940be
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e70d11a9161461a01189bbfe69e1959eed124543
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47843359"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56012552"
 ---
 # <a name="syspdwnodespartitions-transact-sql"></a>sys.pdw_nodes_partitions (Transact-SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
 
   Contiene una riga per ogni partizione di tutte le tabelle e la maggior parte dei tipi di indici in una [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] database. Tutte le tabelle e indici contengono almeno una partizione, indipendentemente dal fatto che vengono partizionate in modo esplicito o meno.  
   
-|Nome colonna|Tipo di dati|Description|  
+|Nome colonna|Tipo di dati|Descrizione|  
 |-----------------|---------------|-----------------|  
 |partition_id|`bigint`|ID della partizione. Valore univoco all'interno di un database.|  
 |object_id|`int`|ID dell'oggetto a cui appartiene la partizione. Ogni tabella o vista è costituita da almeno una partizione.|  
@@ -42,13 +42,13 @@ ms.locfileid: "47843359"
   
 ## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Esempi: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] e [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
 
-### <a name="example-a-display-rows-in-each-partition-within-each-distribution"></a>Esempio a righe di visualizzazione in ogni partizione all'interno di ogni distribuzione 
+### <a name="example-a-display-rows-in-each-partition-within-each-distribution"></a>Esempio A: Visualizzare le righe in ogni partizione all'interno di ogni distribuzione 
 
 Applicabile a: [!INCLUDE[ssSDW](../../includes/sssdw-md.md)], [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]
  
 Per visualizzare il numero di righe in ogni partizione all'interno di ogni distribuzione, usare [DBCC PDW_SHOWPARTITIONSTATS (SQL Server PDW)](../../t-sql/database-console-commands/dbcc-pdw-showpartitionstats-transact-sql.md) .
 
-### <a name="example-b-uses-system-views-to-view-rows-in-each-partition-of-each-distribution-of-a-table"></a>Esempio b: viste di sistema viene utilizzata per visualizzare le righe in ogni partizione di ogni distribuzione di una tabella
+### <a name="example-b-uses-system-views-to-view-rows-in-each-partition-of-each-distribution-of-a-table"></a>Esempio B: Usa le viste di sistema per visualizzare le righe in ogni partizione di ogni distribuzione di una tabella
 
 Applicabile a: [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]
  

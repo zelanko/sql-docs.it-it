@@ -10,15 +10,15 @@ f1_keywords:
 - sql12.dqs.dm.testcdrule.f1
 - sql12.dqs.dm.cdrules.f1
 ms.assetid: 0f3f5ba4-cc47-4d66-866e-371a042d1f21
-author: douglaslMS
-ms.author: douglasl
+author: leolimsft
+ms.author: lle
 manager: craigg
-ms.openlocfilehash: e413c2a6057476fb44d5a7a106c8374621b9937c
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: b50eb916b114387f9d80202cf0993e830e79aecd
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52415678"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56012025"
 ---
 # <a name="create-a-cross-domain-rule"></a>Creare una regola tra domini
   In questo argomento viene descritto come creare una regola tra domini per un dominio composito in una Knowledge Base in [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS). Una regola tra domini consente di testare la relazione tra i valori nei singoli domini inclusi in un dominio composito. Una regola tra domini deve rimanere valida in tutto un dominio composito affinché i valori di dominio vengano considerati accurati e conformi ai requisiti aziendali. Una regola tra domini viene utilizzata per convalidare, correggere e standardizzare i valori di dominio.  

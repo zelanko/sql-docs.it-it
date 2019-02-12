@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: 93bd1b19-061b-409f-8dc2-ec416b2f4b39
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 5cfb22d29120f7ee27e378329045c79f57252d61
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: c5534c1946cc07e35f64ab3baf3654a589a60706
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48194291"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56017152"
 ---
 # <a name="upload-documents-to-a-sharepoint-library-reporting-services-in-sharepoint-mode"></a>Caricare documenti in una raccolta di SharePoint (Reporting Services in modalità SharePoint)
   Definizioni e modelli di report possono essere caricati in una raccolta di SharePoint. Quando si carica un elemento del server di report, è necessario selezionare una raccolta o una cartella all'interno di una raccolta. Gli elementi del server di report non possono infatti essere caricati in un elenco o in una pagina.  
@@ -28,7 +28,7 @@ ms.locfileid: "48194291"
  Non è possibile caricare un file dell'origine dati (con estensione rds). Tali file tuttavia possono essere pubblicati da uno strumento di progettazione, ad esempio Progettazione report, in una raccolta di SharePoint. Durante la pubblicazione viene creato un nuovo file con estensione rsds utilizzando il file rds originale della soluzione. È inoltre possibile creare un nuovo file con estensione rsds in una raccolta di SharePoint, quindi impostare le proprietà di connessione all'origine dati nei report e nei modelli caricati in modo che venga utilizzata la nuova connessione.  
   
 > [!NOTE]  
->  Il server di report deve essere configurato per la modalità SharePoint e l'istanza del prodotto SharePoint deve disporre del componente aggiuntivo [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)], che fornisce file di programma per l'archiviazione di elementi del server di report, nonché l'accesso a questi elementi da un sito di SharePoint.  
+>  Il server di report deve essere configurato per la modalità SharePoint e l'istanza del prodotto SharePoint deve disporre del componente aggiuntivo [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] , che fornisce file di programma per l'archiviazione di elementi del server di report, nonché l'accesso a questi elementi da un sito di SharePoint.  
   
  Per caricare un documento in una raccolta, è necessario disporre dell'autorizzazione "Aggiunta elementi" a livello del sito. Se si usano le impostazioni di sicurezza predefinite, questa autorizzazione viene concessa ai membri del gruppo **Proprietari** che dispongono del livello di autorizzazione Controllo completo e del gruppo **Membri** che dispongono del livello di autorizzazione Collaborazione.  
   
@@ -49,7 +49,7 @@ ms.locfileid: "48194291"
  Un report può contenere parametri che consentono agli utenti di filtrare i dati. È possibile configurare i parametri in modo che utilizzino valori specifici o modificare la visualizzazione di tali parametri per gli utenti. Per altre informazioni, vedere [Impostare i parametri per un report pubblicato &#40;Reporting Services in modalità integrata SharePoint&#41;](report-design/set-parameters-on-a-published-report-sharepoint-integrated-mode.md).  
   
 ## <a name="see-also"></a>Vedere anche  
- [Pubblicare un Report in una raccolta di SharePoint](reports/publish-a-report-to-a-sharepoint-library.md)   
+ [Pubblicare un report in una raccolta di SharePoint](reports/publish-a-report-to-a-sharepoint-library.md)   
  [Pubblicare un'origine dati condivisa in una raccolta di SharePoint](reports/publish-a-shared-data-source-to-a-sharepoint-library.md)   
  [Concessione di autorizzazioni per elementi del server di report in un sito di SharePoint](security/granting-permissions-on-report-server-items-on-a-sharepoint-site.md)  
   

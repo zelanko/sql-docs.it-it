@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: af73681d-ce1c-4b6e-b195-6df3d2fb5275
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 74bc6afe0c5c3bddd4b36ebe844ae963da8fbe28
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 2017defaba74071b1a12bee14a5d8907e4c71cda
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48185491"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56041802"
 ---
 # <a name="time-series-predictions-using-updated-data-intermediate-data-mining-tutorial"></a>Stime basate su serie temporali utilizzando dati aggiornati (Esercitazione intermedia sul data mining)
     
@@ -70,7 +69,7 @@ ms.locfileid: "48185491"
   
     4.  Trascinare il campo Quantity dal **modello di Data Mining** riquadro le **criteri/argomento** colonna.  
   
-    5.  Nel **criteri/argomento** colonna, dopo il nome del campo, digitare il testo seguente: **5,extend_model_cases**  
+    5.  Nel **criteri/argomento** colonna, dopo il nome del campo, digitare il testo seguente:  **5,EXTEND_MODEL_CASES**  
   
          Il testo completo della **criteri/argomento** casella di testo deve essere il seguente: `[Forecasting].[Quantity],5,EXTEND_MODEL_CASES`  
   
@@ -102,7 +101,7 @@ ms.locfileid: "48185491"
  [Tempo di stime basate su serie utilizzando dati di sostituzione &#40;esercitazione intermedia sul Data Mining dei dati&#41;](../../2014/tutorials/time-series-predictions-replacement-data-intermediate-data-mining.md)  
   
 ## <a name="see-also"></a>Vedere anche  
- [Riferimento tecnico per algoritmo Microsoft Time Series](../../2014/analysis-services/data-mining/microsoft-time-series-algorithm-technical-reference.md)   
- [Contenuto dei modelli per i modelli Time Series di data mining &#40;Analysis Services - Data Mining&#41;](../../2014/analysis-services/data-mining/mining-model-content-for-time-series-models-analysis-services-data-mining.md)  
+ [Riferimento tecnico per l'algoritmo Microsoft Time Series](../../2014/analysis-services/data-mining/microsoft-time-series-algorithm-technical-reference.md)   
+ [Contenuto dei modelli di data mining per i modelli Time Series &#40;Analysis Services - Data mining&#41;](../../2014/analysis-services/data-mining/mining-model-content-for-time-series-models-analysis-services-data-mining.md)  
   
   

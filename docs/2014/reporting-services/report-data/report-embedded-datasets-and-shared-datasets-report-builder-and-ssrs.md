@@ -12,13 +12,13 @@ f1_keywords:
 ms.assetid: c5852c8a-40e4-424d-a847-64eb151448ff
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 278cbff64973a76afd82ae7f01e8c81d12f20e5a
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+manager: kfile
+ms.openlocfilehash: 3c1e16950a2092feb69159cdcad18c4b7d6f69fe
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53373393"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56012692"
 ---
 # <a name="report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs"></a>Set di dati condivisi e incorporati del report (Generatore report e SSRS)
   Un set di dati consente di specificare i dati che si desidera utilizzare da una connessione dati. È basato su una connessione dati salvata nel report come origine dati incorporata o come riferimento a un'origine dati condivisa su un server di report. Nel set di dati è inclusa una query che specifica un set di campi. Quando si trascinano questi campi nell'area di progettazione, è possibile creare espressioni che restituiscono i dati effettivi quando si esegue il report.  

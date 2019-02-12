@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: a14cd7f1-7a10-4ec6-af6a-f5f0676a0308
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 70db9a9ff6ed8aa5c9a960ae40009369341b99b4
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 648b9d561ae340b67ed5e2d1aa878969e5a3bc47
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48068041"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56016752"
 ---
 # <a name="adding-a-data-source-view-with-nested-tables-intermediate-data-mining-tutorial"></a>Aggiunta di una vista origine dati con tabelle nidificate (Esercitazione intermedia sul data mining)
   Per creare un modello di analisi degli acquisti, è necessario utilizzare una vista origine dati che supporti dati associativi. Questa vista origine dati verrà utilizzata anche per lo scenario di clustering delle sequenze.  
@@ -82,7 +81,7 @@ ms.locfileid: "48068041"
   
 ## <a name="see-also"></a>Vedere anche  
  [Esercitazione intermedia sul Data Mining &#40;Analysis Services - Data Mining&#41;](../../2014/tutorials/intermediate-data-mining-tutorial-analysis-services-data-mining.md)   
- [Strutture di data mining &#40;Analysis Services - Data Mining&#41;](../../2014/analysis-services/data-mining/mining-structures-analysis-services-data-mining.md)   
- [Modelli di data mining &#40;Analysis Services - Data Mining&#41;](../../2014/analysis-services/data-mining/mining-models-analysis-services-data-mining.md)  
+ [Strutture di data mining &#40;Analysis Services - Data mining&#41;](../../2014/analysis-services/data-mining/mining-structures-analysis-services-data-mining.md)   
+ [Modelli di data mining &#40;Analysis Services - Data mining&#41;](../../2014/analysis-services/data-mining/mining-models-analysis-services-data-mining.md)  
   
   

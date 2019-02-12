@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 0445b0ac-acae-4462-80fb-fe9735ac66db
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: 3c4ccc300b260c6a0ee7d512756876015f57994f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 89dc9cf211a9ab66c5617b6ef545795f332546f0
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48123461"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56014582"
 ---
 # <a name="add-or-delete-a-group-in-a-chart-report-builder-and-ssrs"></a>Aggiungere o eliminare un gruppo in un grafico (Generatore report e SSRS)
   Fare clic nell'area dati del grafico per visualizzare il **i dati del grafico** riquadro. Creare gruppi trascinando i campi del set di dati nelle aree **Gruppi di categorie** e **Gruppi di serie** . Per aggiungere gruppi nidificati, aggiungere più campi all'area.  
@@ -57,6 +57,6 @@ ms.locfileid: "48123461"
 2.  Fare clic con il pulsante destro del mouse sul gruppo nell'area **Gruppi di categorie** o **Gruppi di serie** e quindi su **Elimina**.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Grafici &#40;Report e SSRS&#41;](charts-report-builder-and-ssrs.md)  
+ [Grafici &#40;Generatore report e SSRS&#41;](charts-report-builder-and-ssrs.md)  
   
   

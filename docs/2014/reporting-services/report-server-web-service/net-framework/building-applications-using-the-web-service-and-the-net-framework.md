@@ -21,13 +21,13 @@ helpviewer_keywords:
 ms.assetid: 92a9678c-bc4f-4d7a-ba44-85989bfe27ca
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 062d7c811f0d2201fd1a0954005860a95511fb3a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: aaeee6b11a4eac966efd18fc61fbf68ffc18df9a
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48105851"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56014532"
 ---
 # <a name="building-applications-using-the-web-service-and-the-net-framework"></a>Compilazione di applicazioni tramite servizio Web e .NET Framework
   Con [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)], è possibile utilizzare costrutti di programmazione familiari, ad esempio metodi, tipi primitivi e tipi complessi definiti dall'utente, per utilizzare i servizi Web. [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] include un'infrastruttura e strumenti che è possibile utilizzare per creare i client del servizio Web che possono chiamare qualsiasi servizio Web conforme agli standard del World Wide Web Consortium (W3C).  
@@ -48,9 +48,9 @@ ms.locfileid: "48105851"
   
      A tale scopo, chiamare un metodo del servizio Web e fornire gli argomenti necessari. Per altre informazioni sui metodi del servizio Web, vedere [Metodi del servizio Web ReportServer](../methods/report-server-web-service-methods.md). Per altre informazioni sulla chiamata, vedere [Chiamata ai metodi del servizio Web](calling-web-service-methods.md).  
   
-## <a name="in-this-section"></a>Argomenti della sezione  
+## <a name="in-this-section"></a>In questa sezione  
   
-|Argomento|Description|  
+|Argomento|Descrizione|  
 |-----------|-----------------|  
 |[Creazione del proxy del servizio Web](creating-the-web-service-proxy.md)|Vengono descritte le modalità di aggiunta di una classe proxy al progetto utilizzando [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)].|  
 |[Autenticazione del servizio Web](web-service-authentication.md)|Viene descritto in che modo vengono autenticate le chiamate al servizio Web ReportServer.|  

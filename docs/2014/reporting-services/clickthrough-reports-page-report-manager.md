@@ -12,13 +12,13 @@ f1_keywords:
 ms.assetid: e96cdeba-452b-45a8-9bcf-b75d76261e31
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: df688c3948c30bae3feef03fefbc1171e5c98491
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: eb1c984abec2667a09587eda673ed02176aa8e8e
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48220730"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56010574"
 ---
 # <a name="clickthrough-reports-page-report-manager"></a>Pagina Report click-through (Gestione report)
   Un report click-through consente di visualizzare una tabella di dati correlati quando si fa clic sui dati interattivi inclusi nel report. Questi report vengono generati dal server di report in base alle informazioni incluse nel modello utilizzato per creare il report. Se non si desidera utilizzare i report click-through generati dal server di report, è possibile creare report personalizzati da pubblicare in un server di report e di cui eseguire il mapping a punti dati interattivi definiti nel modello. I report personalizzati devono essere creati in Generatore report dallo stesso modello, quindi pubblicati nel server di report. Per eseguire il mapping dei report personalizzati agli elementi nel modello, utilizzare la pagina Report click-through in Gestione report.  
@@ -32,7 +32,7 @@ ms.locfileid: "48220730"
  Sebbene sia possibile selezionare qualsiasi report per cui si dispone di accesso, è opportuno selezionare solo i report creati specificamente per il modello di cui si esegue la configurazione.  
   
 > [!NOTE]  
->  Report click-through non sono disponibili in tutte le edizioni di [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Per un elenco delle funzionalità supportate dalle edizioni di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], vedere [Features Supported by the Editions of SQL Server 2014](../../2014/getting-started/features-supported-by-the-editions-of-sql-server-2014.md). Se non si è certi dell'edizione di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] utilizzata nell'organizzazione, contattare l'amministratore del database.  
+>  I report click-through non sono disponibili in tutte le edizioni di [!INCLUDE[msCoName](../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Per un elenco delle funzionalità supportate dalle edizioni di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], vedere [Features Supported by the Editions of SQL Server 2014](../../2014/getting-started/features-supported-by-the-editions-of-sql-server-2014.md). Se non si è certi dell'edizione di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] utilizzata nell'organizzazione, contattare l'amministratore del database.  
   
 ## <a name="navigation"></a>Navigazione  
  Utilizzare la procedura riportata di seguito per navigare fino a questo percorso nell'interfaccia utente.  

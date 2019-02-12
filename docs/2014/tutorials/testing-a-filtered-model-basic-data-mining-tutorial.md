@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: f0d74f8c-600d-4df5-a742-695e6947a071
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: e1264808911226150bc908e356e1b08ab90e72fc
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: baa4910b2849c4eb2dd04c6d0115c83683ee8bea
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48055001"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56011142"
 ---
 # <a name="testing-a-filtered-model-basic-data-mining-tutorial"></a>Test di un modello filtrato (Esercitazione di base sul data mining)
   Ora che è stato possibile determinare che il `TM_Decision_Tree` modello è il più accurato, sarà necessario personalizzare il modello per meglio soddisfare le esigenze del [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] campagna di mailing. In particolare, il reparto marketing desidera sapere se esistono differenze tra i clienti di sesso maschile e femminile. Le informazioni possono aiutarli a decidere quali riviste utilizzare per la pubblicità e quali prodotti includere nei mailing.  
@@ -88,7 +87,7 @@ ms.locfileid: "48055001"
   
  [Esplorazione del modello di albero delle decisioni &#40;esercitazione di base di Data Mining&#41;](../../2014/tutorials/exploring-the-decision-tree-model-basic-data-mining-tutorial.md)  
   
- [Test dell'accuratezza con i grafici di accuratezza &#40;esercitazione di base di Data Mining&#41;](../../2014/tutorials/testing-accuracy-with-lift-charts-basic-data-mining-tutorial.md)  
+ [Test dell'accuratezza con i grafici di accuratezza &#40;Esercitazione di base sul data mining&#41;](../../2014/tutorials/testing-accuracy-with-lift-charts-basic-data-mining-tutorial.md)  
   
 #### <a name="to-explore-the-filtered-models"></a>Per esplorare i modelli filtrati  
   
@@ -130,15 +129,15 @@ ms.locfileid: "48055001"
  Per un esempio di come applicare filtri a tabelle nidificate, vedere [esercitazione intermedia sul Data Mining dei dati &#40;Analysis Services - Data Mining&#41;](../../2014/tutorials/intermediate-data-mining-tutorial-analysis-services-data-mining.md).  
   
 ## <a name="previous-task-in-lesson"></a>Attività precedente della lezione  
- [Test dell'accuratezza con i grafici di accuratezza &#40;esercitazione di base di Data Mining&#41;](../../2014/tutorials/testing-accuracy-with-lift-charts-basic-data-mining-tutorial.md)  
+ [Test dell'accuratezza con i grafici di accuratezza &#40;Esercitazione di base sul data mining&#41;](../../2014/tutorials/testing-accuracy-with-lift-charts-basic-data-mining-tutorial.md)  
   
 ## <a name="next-lesson"></a>Lezione successiva  
  [Lezione 6: Creazione e utilizzo di stime &#40;esercitazione di base di Data Mining&#41;](../../2014/tutorials/lesson-6-creating-and-working-with-predictions-basic-data-mining-tutorial.md)  
   
 ## <a name="see-also"></a>Vedere anche  
  [Esercitazione intermedia sul Data Mining &#40;Analysis Services - Data Mining&#41;](../../2014/tutorials/intermediate-data-mining-tutorial-analysis-services-data-mining.md)   
- [Procedure dettagliate e le attività del modello di data mining](../../2014/analysis-services/data-mining/mining-model-tasks-and-how-tos.md)   
+ [Attività e procedure relative al modello di data mining](../../2014/analysis-services/data-mining/mining-model-tasks-and-how-tos.md)   
  [Eliminare un filtro da un modello di Data Mining](../../2014/analysis-services/data-mining/delete-a-filter-from-a-mining-model.md)   
- [Filtri per i modelli di Data Mining &#40;Analysis Services - Data Mining&#41;](../../2014/analysis-services/data-mining/filters-for-mining-models-analysis-services-data-mining.md)  
+ [Filtri per i modelli di data mining &#40;Analysis Services - Data mining&#41;](../../2014/analysis-services/data-mining/filters-for-mining-models-analysis-services-data-mining.md)  
   
   

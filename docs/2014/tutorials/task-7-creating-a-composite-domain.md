@@ -4,21 +4,18 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- data-quality-services
-- integration-services
-- master-data-services
+ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: ae778647-1df0-4952-9a69-0ef6177eea9c
-author: douglaslms
-ms.author: douglasl
+author: leolimsft
+ms.author: lle
 manager: craigg
-ms.openlocfilehash: d804e3d2b7f851f8142f0e9c95158cb56ea521ed
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: c48144ca3720565c3c745ffd8aa39b0896e1fb66
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53371703"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56013792"
 ---
 # <a name="task-7-creating-a-composite-domain"></a>Attività 7: Creazione di un dominio composito
   In questa attività si crea un dominio composito, **Address Validation**, che comprende **Address Line**, **City**, **stato**e  **Codice postale** domini. Un dominio composito consente di definire una regola tra domini che interessa più domini di una regola. Vi sono altri vantaggi correlati a un dominio composito, quale la possibilità di analizzare un valore di campo in più domini.  Ad esempio, un valore per un campo Nome completo può essere analizzato in domini diversi First Name, Middle Name e Last Name. In questa esercitazione viene definita solo una regola tra domini. Visualizzare [Managing a Composite Domain](https://msdn.microsoft.com/library/hh510399.aspx) per altri dettagli.  

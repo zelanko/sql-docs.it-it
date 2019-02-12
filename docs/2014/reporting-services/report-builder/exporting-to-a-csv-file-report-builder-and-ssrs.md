@@ -10,18 +10,18 @@ ms.topic: conceptual
 ms.assetid: 68ec746e-8c82-47f5-8c3d-dbe403a441e5
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: 76c8b145b5ad43cdba6a2d55cdcf62fedc0e2ff3
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: fdd1083f5e8d8e725378dd5cbec62351249ec1bd
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48225957"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56043252"
 ---
 # <a name="exporting-to-a-csv-file-report-builder-and-ssrs"></a>Esportazione in un file CSV (Generatore report e SSRS)
   L'estensione per il rendering CSV (Comma-Separated Value) consente di eseguire il rendering di report come rappresentazione bidimensionale dei dati di un report in un formato di testo normale standardizzato, facilmente leggibile e interscambiabile con numerose applicazioni.  
   
- Per la separazione dei campi e delle righe con l'estensione per il rendering CSV viene utilizzato un delimitatore di stringhe di caratteri che è possibile configurare per impostare un carattere diverso dalla virgola. Il file risultante può essere aperto in un foglio di calcolo, ad esempio [!INCLUDE[ofprexcel](../../includes/ofprexcel-md.md)], oppure utilizzato come formato di importazione per altri programmi. Il report esportato viene salvato come file con estensione csv e restituisce il tipo MIME di `text/csv`.  
+ Per la separazione dei campi e delle righe con l'estensione per il rendering CSV viene usato un delimitatore di stringhe di caratteri che è possibile configurare per impostare un carattere diverso dalla virgola. Il file risultante può essere aperto in un foglio di calcolo, ad esempio [!INCLUDE[ofprexcel](../../includes/ofprexcel-md.md)] , oppure usato come formato di importazione per altri programmi. Il report esportato viene salvato come file con estensione csv e restituisce il tipo MIME `text/csv`.  
   
  Se si desidera usare dati correlati a grafici, barre dei dati, grafici sparkline, misuratori e indicatori in [!INCLUDE[ofprexcel](../../includes/ofprexcel-md.md)], esportare il report in un file CSV, quindi aprire il file in [!INCLUDE[msCoName](../../includes/msconame-md.md)] Excel.  
   
@@ -54,7 +54,7 @@ ms.locfileid: "48225957"
   
 -   Elementi personalizzati del report  
   
--   Linea  
+-   Riga  
   
 -   Image  
   
@@ -148,7 +148,7 @@ ms.locfileid: "48225957"
 ## <a name="see-also"></a>Vedere anche  
  [Paginazione in Reporting Services &#40;Generatore report e SSRS&#41;](../report-design/pagination-in-reporting-services-report-builder-and-ssrs.md)   
  [Tipi di rendering &#40;Generatore report e SSRS&#41;](../report-design/rendering-behaviors-report-builder-and-ssrs.md)   
- [Funzionalità interattiva per estensioni di Rendering del Report diversi &#40;Report e SSRS&#41;](interactive-functionality-different-report-rendering-extensions.md)   
+ [Funzionalità interattiva per estensioni per il rendering di report differenti &#40;Generatore report e SSRS&#41;](interactive-functionality-different-report-rendering-extensions.md)   
  [Rendering degli elementi del report &#40;Generatore report e SSRS&#41;](../report-design/rendering-report-items-report-builder-and-ssrs.md)   
  [Tabelle, matrici ed elenchi &#40;Generatore report e SSRS&#41;](../report-design/create-invoices-and-forms-with-lists-report-builder-and-ssrs.md)  
   
