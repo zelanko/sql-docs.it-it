@@ -1,6 +1,6 @@
 ---
 title: Origini dati supportate nei modelli 1400 tabulari di SQL Server Analysis Services | Microsoft Docs
-ms.date: 05/07/2018
+ms.date: 02/12/2019
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: tabular-models
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 856e15e7365128bc79d119afe267334fb8470832
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 4c900c6f1683b9f4c96355a759c604022515d2ce
+ms.sourcegitcommit: 89a7bd9ccbcb19bb92a1f4ba75576243a58584e8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38041659"
+ms.lasthandoff: 02/13/2019
+ms.locfileid: "56159756"
 ---
 # <a name="data-sources-supported-in-sql-server-analysis-services-tabular-1400-models"></a>Origini dati supportate in SQL Server Analysis Services i modelli tabulari 1400
 
@@ -29,17 +29,22 @@ Per Azure Analysis Services, vedere [origini dati supportate in Azure Analysis S
 
 ## <a name="cloud-data-sources"></a>Origini dati cloud
 
-|Origine dati di Azure  |In memoria  |DirectQuery  |
+|Origine dati  |In memoria  |DirectQuery  |
 |---------|---------|---------|
-|Database SQL di Azure     |   Sì      |    Sì      |
-|Azure SQL Data Warehouse     |   Sì      |   Sì       |
-|Archiviazione BLOB Azure     |   Sì       |    no      |
-|Archiviazione tabelle di Azure    |   Sì       |    no      |
-|Azure Cosmos DB      |  Sì        |  no        |
-|Azure Data Lake Store     |   Sì       |    no      |
-|Azure HDInsight HDFS     |     Sì     |   no       |
-|Azure HDInsight Spark (Beta)     |   Sì       |   no       |
+|Database SQL di Azure     |   Yes      |    Yes      |
+|Azure SQL Data Warehouse     |   Yes      |   Yes       |
+|Archiviazione BLOB di Azure     |   Yes       |    No      |
+|Archiviazione tabelle di Azure    |   Yes       |    No      |
+|Azure Cosmos DB     |  Yes        |  No        |
+|Azure Data Lake Store (Gen1)<sup>[1](#gen2)</sup>      |   Yes       |    No      |
+|Azure HDInsight HDFS    |     Yes     |   No       |
+|Azure HDInsight Spark <sup> [2](#databricks)</sup>     |   Yes       |   No       |
 ||||
+
+<a name="gen2">1</a> -Gen2 Azure Data Lake Store non è attualmente supportata.   
+<a name="databricks">2</a> - azure Databricks tramite il connettore non è attualmente supportato di Spark.   
+
+
 
 **Provider**   
 In memoria e i modelli DirectQuery, la connessione a origini dati di Azure usano Provider di dati .NET Framework per SQL Server.
@@ -69,10 +74,10 @@ In memoria e i modelli DirectQuery, la connessione a origini dati di Azure usano
 |Documento JSON     | 
 |Righe dal file binario     | 
 |Database MySQL     | 
-|Database PostgreSQL    | Sì | no
-|SAP HANA   | Sì | no
-|SAP Business Warehouse    | Sì | no
-|Database di Sybase     | Sì | no
+|Database PostgreSQL    | Yes | No
+|SAP HANA   | Yes | No
+|SAP Business Warehouse    | Yes | No
+|Database di Sybase     | Yes | No
 |||
 
 |File  |  
@@ -87,7 +92,7 @@ In memoria e i modelli DirectQuery, la connessione a origini dati di Azure usano
 |Servizi online  |  
 |---------|---------|
 |Dynamics 365      |
-|Forum di Exhange Online     |
+|Exhange Online     |
 |Oggetti Salesforce    | 
 |Report di Salesforce     |
 |Elenchi SharePoint Online     |
