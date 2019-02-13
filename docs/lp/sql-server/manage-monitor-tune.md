@@ -4,20 +4,21 @@ hide_bc: true
 title: Gestire, monitorare, ottimizzare SQL Server
 description: Informazioni sulle funzionalità che consentono di gestire, monitorare e ottimizzare SQL Server.
 ms.topic: hub-page
+ms.prod: sql
 featureFlags:
 - clicktale
-ms.openlocfilehash: 425b610e649c5e05b499920263c3f07add95f260
-ms.sourcegitcommit: e3f5b70bbb4c66294df8c7b2c70186bdf2365af9
+ms.openlocfilehash: 1ce47990045946eb2df9d3bec8385159f898510f
+ms.sourcegitcommit: bbdf51f0d56acfa6bcc4a5c4fe2c9f3cd4225edc
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/18/2019
-ms.locfileid: "54397500"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56079397"
 ---
 <div id="main" class="v2">
     <div class="container">
         <ul class="cardsY panelContent featuredContent">
             <li>
-                <a href="https://www.microsoft.com/sql-server/sql-server-downloads">
+                <a href="https://www.microsoft.com/evalcenter/evaluate-sql-server-2019-ctp">
                     <div class="cardSize">
                         <div class="cardPadding">
                             <div class="card">
@@ -27,7 +28,7 @@ ms.locfileid: "54397500"
                                     </div>
                                 </div>
                                 <div class="cardText">
-                                    <span class="likeAnH3">Scaricare SQL Server</span>
+                                    <span class="likeAnH3">Provare SQL Server 2019 (anteprima)</span>
                                 </div>
                             </div>
                         </div>
