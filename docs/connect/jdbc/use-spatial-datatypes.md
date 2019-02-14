@@ -1,7 +1,7 @@
 ---
 title: Usando tipi di dati spaziali | Microsoft Docs
 ms.custom: ''
-ms.date: 07/30/2018
+ms.date: 01/21/2018
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -11,12 +11,12 @@ ms.assetid: ''
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 0a51d15875051fbe2a2a034526a95c16bed076db
-ms.sourcegitcommit: ef78cc196329a10fc5c731556afceaac5fd4cb13
+ms.openlocfilehash: 4d00692b0b5872b1020f900587a24a3116aee9be
+ms.sourcegitcommit: 879a5c6eca99e0e9cc946c653d4ced165905d9c6
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/19/2018
-ms.locfileid: "49460546"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "55737012"
 ---
 # <a name="using-spatial-datatypes"></a>Uso dei tipi di dati spaziali
 
@@ -107,50 +107,50 @@ Queste sono le nuove API pubbliche che sono state introdotte con questa aggiunta
 |Metodo|Descrizione|
 |:------|:----------|
 |Geometria STGeomFromText (wkt String, int SRID)| Costruttore per un'istanza Geometry da una rappresentazione WKT (Well-Known Text) OGC (Open Geospatial Consortium) integrata con qualsiasi valore Z (innalzamento) e M (misura) appartenente all'istanza.
-|STGeomFromWKB Geometry (byte [] Well-Known Binary)| Costruttore per un'istanza Geometry di una rappresentazione WKB (Well-Known Binary) OGC (Open Geospatial Consortium).
+|Geometry STGeomFromWKB(byte[] wkb)| Costruttore per un'istanza Geometry di una rappresentazione WKB (Well-Known Binary) OGC (Open Geospatial Consortium).
 |Geometrie deserializzare (byte [] Well-Known Binary)| Costruttore per un'istanza Geometry da un formato di SQL Server interno per i dati spaziali.
 |Analisi della geometria (stringa wkt)| Costruttore per un'istanza Geometry da una rappresentazione WKT (Well-Known Text) OGC (Open Geospatial Consortium). Identificatore SRID è impostato sul valore predefinito 0.
 |Punto di geometria (double x, y double, int SRID)| Costruttore per un'istanza di geometria che rappresenta un'istanza del punto dai relativi valori X e Y e un identificatore SRID.
-|Stastext (stringa)| Restituisce una rappresentazione WKT (Well-Known Text) OGC (Open Geospatial Consortium) di un'istanza Geometry. Il testo non conterrà alcun valore Z (innalzamento) o M (misura) appartenente all'istanza.
-|Byte [] Stasbinary| Restituisce la rappresentazione WKB (Well-Known Binary) OGC (Open Geospatial Consortium) di un'istanza Geometry. Il valore non conterrà alcun valore Z o M appartenente all'istanza.
-|Serialize () di byte]| Restituisce i byte che rappresentano un formato SQL Server interno di tipo Geometry.
+|String STAsText()| Restituisce una rappresentazione WKT (Well-Known Text) OGC (Open Geospatial Consortium) di un'istanza Geometry. Il testo non conterrà alcun valore Z (innalzamento) o M (misura) appartenente all'istanza.
+|byte[] STAsBinary()| Restituisce la rappresentazione WKB (Well-Known Binary) OGC (Open Geospatial Consortium) di un'istanza Geometry. Il valore non conterrà alcun valore Z o M appartenente all'istanza.
+|byte[] serialize()| Restituisce i byte che rappresentano un formato SQL Server interno di tipo Geometry.
 |hasM() booleano| Restituisce se l'oggetto contiene un valore M (misura).
 |hasZ() booleano| Restituisce se l'oggetto contiene un valore Z (innalzamento).
 |GetX (Double)| Restituisce il valore della coordinata X.
 |GetY (Double)| Restituisce il valore della coordinata Y.
 |GetM() Double| Restituisce il valore M (misura) dell'oggetto.
 |GetZ() Double| Restituisce il valore Z (innalzamento) dell'oggetto.
-|getSrid() int| Restituisce il valore di identificatore di riferimento spaziale (SRID).
-|IsNull (booleano)| Restituisce se l'oggetto Geometry è null.
-|int Stnumpoints| Restituisce il numero di punti nell'oggetto di geometria.
+|int getSrid()| Restituisce il valore di identificatore di riferimento spaziale (SRID).
+|boolean isNull()| Restituisce se l'oggetto Geometry è null.
+|int STNumPoints()| Restituisce il numero di punti nell'oggetto di geometria.
 |Stgeometrytype (stringa)| Restituisce il nome del tipo OGC (Open Geospatial Consortium) rappresentato da un'istanza di geometria.
 |Stringa Astextzm| Restituisce la rappresentazione Well-Known Text (WKT) dell'oggetto Geometry.
-|ToString (String)| Restituisce la rappresentazione stringa dell'oggetto Geometry.
+|String toString()| Restituisce la rappresentazione stringa dell'oggetto Geometry.
 
 ### <a name="geography"></a>Geography
 
 |Metodo|Descrizione|
 |:------|:----------|
 |STGeomFromText Geography (wkt String, int SRID)| Costruttore per un'istanza Geography da una rappresentazione WKT (Well-Known Text) OGC (Open Geospatial Consortium) integrata con qualsiasi valore Z (innalzamento) e M (misura) appartenente all'istanza.
-|STGeomFromWKB Geography (byte [] Well-Known Binary)| Costruttore per un'istanza Geography di una rappresentazione WKB (Well-Known Binary) OGC (Open Geospatial Consortium).
+|Geography STGeomFromWKB(byte[] wkb)| Costruttore per un'istanza Geography di una rappresentazione WKB (Well-Known Binary) OGC (Open Geospatial Consortium).
 |Geography deserializzare (byte [] Well-Known Binary)| Costruttore per un'istanza di geografia da un formato di SQL Server interno per i dati spaziali.
 |Analisi di geografia WKT (Well stringa)| Costruttore per un'istanza Geography da una rappresentazione WKT (Well-Known Text) OGC (Open Geospatial Consortium). Identificatore SRID è impostato sul valore predefinito 0.
-|Punto geografico (lat, lon double, int SRID doppio)| Costruttore per un'istanza Geography che rappresenta un'istanza Point dai relativi valori di latitudine e longitudine e un identificatore SRID.
-|Stastext (stringa)| Restituisce una rappresentazione WKT (Well-Known Text) OGC (Open Geospatial Consortium) di un'istanza Geography. Il testo non conterrà alcun valore Z (innalzamento) o M (misura) appartenente all'istanza.
-|Byte [] STAsBinary())| Restituisce una rappresentazione WKB (Well-Known Binary) OGC (Open Geospatial Consortium) di un'istanza Geography. Il valore non conterrà alcun valore Z o M appartenente all'istanza.
-|Serialize () di byte]| Restituisce i byte che rappresentano un formato SQL Server interno di tipo Geography.
+|Punto geografico (lon, lat double, int SRID doppio)| Costruttore per un'istanza Geography che rappresenta un'istanza Point dalla latitudine e longitudine e un identificatore SRID.
+|String STAsText()| Restituisce una rappresentazione WKT (Well-Known Text) OGC (Open Geospatial Consortium) di un'istanza Geography. Il testo non conterrà alcun valore Z (innalzamento) o M (misura) appartenente all'istanza.
+|byte[] STAsBinary())| Restituisce una rappresentazione WKB (Well-Known Binary) OGC (Open Geospatial Consortium) di un'istanza Geography. Il valore non conterrà alcun valore Z o M appartenente all'istanza.
+|byte[] serialize()| Restituisce i byte che rappresentano un formato SQL Server interno di tipo Geography.
 |hasM() booleano| Restituisce se l'oggetto contiene un valore M (misura).
 |hasZ() booleano| Restituisce se l'oggetto contiene un valore Z (innalzamento).
-|GetLatitude() Double| Restituisce il valore di latitudine.
+|Double getLatitude()| Restituisce il valore di latitudine.
 |GetLongitude() Double| Restituisce il valore di longitudine.
 |GetM() Double| Restituisce il valore M (misura) dell'oggetto.
 |GetZ() Double| Restituisce il valore Z (innalzamento) dell'oggetto.
-|getSrid() int| Restituisce il valore di identificatore di riferimento spaziale (SRID).
-|IsNull (booleano)| Restituisce se l'oggetto di geografia è null.
-|int Stnumpoints| Restituisce il numero di punti nell'oggetto di geografia.
-|Stringa STGeographyType()| Restituisce il nome del tipo OGC (Open Geospatial Consortium) rappresentato da un'istanza di geografia.
+|int getSrid()| Restituisce il valore di identificatore di riferimento spaziale (SRID).
+|boolean isNull()| Restituisce se l'oggetto di geografia è null.
+|int STNumPoints()| Restituisce il numero di punti nell'oggetto di geografia.
+|String STGeographyType()| Restituisce il nome del tipo OGC (Open Geospatial Consortium) rappresentato da un'istanza di geografia.
 |Stringa Astextzm| Restituisce la rappresentazione Well-Known Text (WKT) dell'oggetto Geografia.
-|ToString (String)| Restituisce la rappresentazione stringa dell'oggetto Geography.
+|String toString()| Restituisce la rappresentazione stringa dell'oggetto Geography.
 
 ## <a name="limitations-of-spatial-datatypes"></a>Limitazioni dei tipi di dati spaziali
 

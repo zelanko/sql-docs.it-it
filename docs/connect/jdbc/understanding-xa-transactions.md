@@ -1,7 +1,7 @@
 ---
 title: Informazioni sulle transazioni XA | Microsoft Docs
 ms.custom: ''
-ms.date: 07/11/2018
+ms.date: 01/21/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -11,12 +11,12 @@ ms.assetid: 574e326f-0520-4003-bdf1-62d92c3db457
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 8231b574516c11995dc5f91e5cf59fcdcfb6dc04
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 5d88840ef429258ad425e867efc4b744f6a5d3c5
+ms.sourcegitcommit: 879a5c6eca99e0e9cc946c653d4ced165905d9c6
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52393835"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "55736942"
 ---
 # <a name="understanding-xa-transactions"></a>Informazioni sulle transazioni XA
 
@@ -45,9 +45,9 @@ Le seguenti linee guida aggiuntive si applicano alle transazioni a "regime di co
 
 - Quando si usano le transazioni XA con Microsoft Distributed Transaction Coordinator (MS DTC), è possibile che la versione corrente di MS DTC non supporti il comportamento dei rami XA a regime di controllo stretto ("tightly-coupled"). In MS DTC è ad esempio presente un mapping uno-a-uno tra un ID di transazione dei rami XA (XID) e un ID di transazione MS DTC e il lavoro eseguito da ognuno dei rami XA a regime di controllo libero ("loosely-coupled") viene isolato da quello degli altri rami.  
   
-     L'hotfix fornito in [MSDTC and Tightly Coupled Transactions](https://support.microsoft.com/kb/938653) (MS DTC e transazioni a regime di controllo stretto) fornisce il supporto per i rami XA a "regime di controllo stretto" ("tightly-coupled") in caso di mapping tra più rami XA con lo stesso ID di transazione globale (GTRID) e un singolo ID di transazione MS DTC. Questo supporto consente a più rami XA a "regime di controllo stretto" ("tightly-coupled") di vedere le modifiche degli altri rami nello strumento di gestione delle risorse, ad esempio [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+     L'hotfix fornito in [MSDTC and Tightly Coupled Transactions](https://support.microsoft.com/kb/938653) (MS DTC e transazioni strettamente associate) fornisce il supporto per i rami XA strettamente associati in caso di mapping tra più rami XA con lo stesso ID di transazione globale (GTRID) e un singolo ID di transazione MS DTC. Questo supporto consente a più rami XA strettamente associati di vedere le modifiche degli altri rami nello strumento di gestione delle risorse, ad esempio [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].
   
-- Un flag [SSTRANSTIGHTLYCPLD](../../connect/jdbc/reference/sstranstightlycpld-field-sqlserverxaresource.md) consente alle applicazioni di usare le transazioni XA a "regime di controllo stretto" ("tightly-coupled") con ID di transazione dei rami XA (BQUAL) diversi ma con lo stesso ID di transazione globale (GTRID) e ID di formato (FormatID). Per utilizzare questa funzionalità, è necessario impostare il [SSTRANSTIGHTLYCPLD](../../connect/jdbc/reference/sstranstightlycpld-field-sqlserverxaresource.md) sul parametro del metodo XAResource.start flag:  
+- Un flag [SSTRANSTIGHTLYCPLD](../../connect/jdbc/reference/sstranstightlycpld-field-sqlserverxaresource.md) consente alle applicazioni di usare le transazioni XA strettamente associate con ID di transazione dei rami XA (BQUAL) diversi ma con lo stesso ID di transazione globale (GTRID) e ID di formato (FormatID). Per utilizzare questa funzionalità, è necessario impostare il [SSTRANSTIGHTLYCPLD](../../connect/jdbc/reference/sstranstightlycpld-field-sqlserverxaresource.md) sul parametro del metodo XAResource.start flag:
   
     ```java
     xaRes.start(xid, SQLServerXAResource.SSTRANSTIGHTLYCPLD);  
@@ -61,11 +61,12 @@ Per utilizzare le origini dei dati XA con Microsoft Distributed Transaction Coor
 > I componenti della transazione distribuita JDBC sono inclusi nella directory xa dell'installazione del driver JDBC. Tali componenti includono i file xa_install.sql e sqljdbc_xa.dll.  
 
 > [!NOTE]  
-> A partire da SQL Server 2019 versione CTP 2.0 di anteprima pubblica, stored procedure di XA di JDBC sono inclusi i componenti delle transazioni distribuite nel motore di SQL Server che può essere abilitato o disabilitato con un sistema. Per abilitare i componenti necessari eseguire le transazioni distribuite XA utilizza il driver JDBC, eseguire stored procedura seguente.
+> A partire da SQL Server 2019 anteprima pubblica di versioni da CTP 2.0, il XA JDBC i componenti delle transazioni distribuite sono inclusi nel motore di SQL Server e possono essere abilitati o disabilitati con un sistema di stored procedure.
+> Per abilitare i componenti necessari eseguire le transazioni distribuite XA utilizza il driver JDBC, eseguire la stored procedure seguente.
 >
 > EXEC sp_sqljdbc_xa_install
 >
-> Per disabilitare i componenti installati in precedenza, eseguire la seguente stored procedure. 
+> Per disabilitare i componenti installati in precedenza, eseguire la stored procedure seguente.
 >
 > EXEC sp_sqljdbc_xa_uninstall
 
@@ -83,7 +84,7 @@ In Windows Vista e versioni successive:
   
 4. Fare clic sulla scheda **Sicurezza** nella finestra di dialogo **Proprietà - DTC locale**.  
   
-5. Selezionare la casella di controllo **Abilita transazioni XA** e quindi fare clic su **OK**. Il servizio MS DTC verrà riavviato.  
+5. Selezionare la casella di controllo **Abilita transazioni XA** e quindi fare clic su **OK**. Il servizio MS DTC verrà riavviato.
   
 6. Fare di nuovo clic su **OK** per chiudere la finestra di dialogo **Proprietà** e quindi chiudere **Servizi componenti**.  
   
@@ -104,11 +105,11 @@ Per configurare i componenti delle transazioni distribuite del driver JDBC, proc
   
 È possibile configurare solo una versione alla volta dell'assembly sqljdbc_xa.dll in ogni istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. È possibile che le applicazioni debbano usare versioni diverse del driver JDBC per connettersi alla stessa istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tramite la stessa connessione XA. In tal caso è necessario installare nell'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] il file sqljdbc_xa.dll, fornito con la versione più recente del driver JDBC.  
   
-È possibile verificare la versione del file sqljdbc_xa.dll attualmente installata nell'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in tre modi diversi:  
+È possibile verificare la versione del file sqljdbc_xa.dll attualmente installata nell'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in tre modi:
   
 1. Aprire la directory LOG del computer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] che parteciperà alle transazioni distribuite. Selezionare e aprire il file "ERRORLOG" di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Eseguire la ricerca della frase "Using 'SQLJDBC_XA.dll' version ..." nel file "ERRORLOG".  
   
-2. Aprire la directory Binn del computer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] che parteciperà alle transazioni distribuite. Selezionare l'assembly sqljdbc_xa. dll.  
+2. Aprire la directory Binn del computer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] che parteciperà alle transazioni distribuite. Selezionare l'assembly sqljdbc_xa. dll.
 
     - In Windows Vista o versione successiva: fare clic con il pulsante destro del mouse su sqljdbc_xa.dll, quindi scegliere Proprietà. Fare clic sulla scheda **Dettagli**. Nel campo **Versione file** è indicata la versione del file sqljdbc_xa.dll attualmente installata nell'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
@@ -128,11 +129,11 @@ Sono disponibili due impostazioni del Registro di sistema (valori DWORD) per con
 Queste impostazioni sono specifiche dell'istanza di SQL Server e devono essere create nella seguente chiave del Registro di sistema:  
 
 ```bash
-HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\MSSQL\<version>.<instance_name>\XATimeout  
+HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\MSSQL<version>.<instance_name>\XATimeout  
 ```
 
 > [!NOTE]  
-> Per SQL Server a 32 bit in esecuzione in computer a 64 bit, le impostazioni del Registro di sistema devono essere create nella seguente chiave: `HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Microsoft\Microsoft SQL Server\MSSQL\<version>.<instance_name>\XATimeout`
+> Per SQL Server a 32 bit in esecuzione in computer a 64 bit, le impostazioni del Registro di sistema devono essere create nella seguente chiave: `HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Microsoft\Microsoft SQL Server\MSSQL<version>.<instance_name>\XATimeout`
   
 Un valore di timeout viene impostato per ogni transazione all'avvio e SQL Server esegue il rollback della transazione se il timeout scade. Il timeout viene determinato in base a queste impostazioni del Registro di sistema e a seconda di ciò che ha specificato l'utente tramite XAResource.setTransactionTimeout(). Di seguito sono riportati alcuni esempi su come vengono interpretati questi valori di timeout:  
   
@@ -146,18 +147,18 @@ Un valore di timeout viene impostato per ogni transazione all'avvio e SQL Server
   
 - `XADefaultTimeout = 30`, `XAMaxTimeout = 60`
   
-     Indica che tutte le transazioni avranno un timeout di 30 secondi se il client non specifica alcun timeout. Se il client specifica un timeout, verrà utilizzato il timeout del client, a condizione che sia minore di 60 secondi (il valore massimo).  
+     Indica che tutte le transazioni avranno un timeout di 30 secondi se il client non specifica alcun timeout. Se il client specifica un timeout, viene utilizzato il timeout del client, a condizione che sia minore di 60 secondi (il valore massimo).  
   
 - `XADefaultTimeout = 0`, `XAMaxTimeout = 30`
   
-     Indica che tutte le transazioni avranno un timeout di 30 secondi (il valore massimo) se il client non specifica alcun timeout. Se il client specifica un timeout, verrà utilizzato il timeout del client, a condizione che sia minore di 30 secondi (il valore massimo).  
+     Indica che tutte le transazioni avranno un timeout di 30 secondi (il valore massimo) se il client non specifica alcun timeout. Se il client specifica un timeout, viene utilizzato il timeout del client, a condizione che sia minore di 30 secondi (il valore massimo).  
   
 ### <a name="upgrading-sqljdbcxadll"></a>Aggiornamento di sqljdbc_xa.dll
 
 Quando si installa una nuova versione del driver JDBC, è consigliabile utilizzare il file sqljdbc_xa.dll della nuova versione per aggiornare il file sqljdbc_xa.dll nel server.  
   
 > [!IMPORTANT]  
-> Aggiornare il file sqljdbc_xa.dll durante il periodo di manutenzione o quando nessuna transazione MS DTC è in corso.  
+> Aggiornare il file sqljdbc_xa.dll durante il periodo di manutenzione o quando non è in corso nessuna transazione MS DTC.
   
 1. Scaricare il file sqljdbc_xa. dll usando il [!INCLUDE[tsql](../../includes/tsql-md.md)] comandi **DBCC sqljdbc_xa (gratuito)**.  
   
@@ -167,7 +168,7 @@ Quando si installa una nuova versione del driver JDBC, è consigliabile utilizza
   
 ### <a name="configuring-the-user-defined-roles"></a>Configurazione dei ruoli definiti dall'utente
 
-Per concedere a un utente specifico l'autorizzazione necessaria per partecipare alle transazioni distribuite con il driver JDBC, aggiungere l'utente al ruolo SqlJDBCXAUser. Utilizzare, ad esempio, il codice [!INCLUDE[tsql](../../includes/tsql-md.md)] seguente per aggiungere un utente denominato 'shelby' (utente di accesso standard SQL denominato 'shelby') al ruolo SqlJDBCXAUser:  
+Per concedere a un utente specifico l'autorizzazione necessaria per partecipare alle transazioni distribuite con il driver JDBC, aggiungere l'utente al ruolo SqlJDBCXAUser. Usare, ad esempio, il codice [!INCLUDE[tsql](../../includes/tsql-md.md)] seguente per aggiungere un utente denominato 'shelby' (utente di accesso standard SQL denominato 'shelby') al ruolo SqlJDBCXAUser:  
 
 ```sql
 USE master  

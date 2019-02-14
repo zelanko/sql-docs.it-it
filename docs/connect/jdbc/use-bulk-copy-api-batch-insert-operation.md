@@ -1,7 +1,7 @@
 ---
 title: Usando l'API della copia Bulk per l'operazione di inserimento Batch per il Driver JDBC MSSQL | Microsoft Docs
 ms.custom: ''
-ms.date: 07/27/2018
+ms.date: 01/21/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -11,12 +11,12 @@ ms.assetid: ''
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: b205e27f24693a2dfaa6fcff2245cf45288a12b0
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: c3d3c7cc4d8dd7beeb620a211b2f41a1d1105a04
+ms.sourcegitcommit: 879a5c6eca99e0e9cc946c653d4ced165905d9c6
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47696561"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "55737102"
 ---
 # <a name="using-bulk-copy-api-for-batch-insert-operation"></a>Uso dell'API di copia bulk per un'operazione di inserimento batch
 
@@ -65,7 +65,7 @@ Sono attualmente presenti queste limitazioni che si applicano a questa funzional
 * Le query che contengono espressioni INSERT-SELECT di inserimento (ad esempio, `INSERT INTO TABLE SELECT * FROM TABLE2`), non sono supportati.
 * Inserire le query che contengono più espressioni valore (ad esempio, `INSERT INTO TABLE VALUES (1, 2) (3, 4)`), non sono supportati.
 * Query di accodamento sono aggiungendo la clausola OPTION, unito in join con più tabelle o seguita da un'altra query, non sono supportate.
-* A causa di limitazioni dell'API della copia Bulk, `DATETIME`, `SMALLDATETIME`,`GEOMETRY`, e `GEOGRAPHY` tipi di dati, non sono supportati per questa funzionalità.
+* A causa di limitazioni dell'API della copia Bulk, `MONEY`, `SMALLMONEY`, `DATE`, `DATETIME`, `DATETIMEOFFSET`, `SMALLDATETIME`, `TIME`, `GEOMETRY`, e `GEOGRAPHY` tipi di dati, non sono attualmente supportate per questo oggetto funzionalità.
 
 Se la query ha esito negativo a causa non correlati a errori di "SQL server", il driver registreranno il messaggio di errore e del fallback per la logica per l'inserimento batch originale.
 
