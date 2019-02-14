@@ -10,12 +10,12 @@ ms.topic: quickstart
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: 3495d41028f72093b58f546d3da2139ff02b848d
-ms.sourcegitcommit: 299b63e04498eba22659970cd077f247c1657931
+ms.openlocfilehash: 6873ee04323ffbc813553237d79e523023a48618
+ms.sourcegitcommit: 009bee6f66142c48477849ee03d5177bcc3b6380
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/24/2019
-ms.locfileid: "54898986"
+ms.lasthandoff: 02/13/2019
+ms.locfileid: "56231068"
 ---
 # <a name="quickstart-deploy-sql-server-big-data-cluster-on-azure-kubernetes-service-aks"></a>Guida introduttiva: Distribuire il cluster di big data di SQL Server in Azure Kubernetes Service (AKS)
 
@@ -171,56 +171,7 @@ Al termine dello script di distribuzione, l'output invia una notifica di esito p
 2018-11-15 16:10:25.0583 UTC | INFO | Cluster deployed successfully.
 ```
 
-Il cluster di big data di SQL Server è stato distribuito nel servizio contenitore di AZURE. È ora possibile usare Studio di Azure Data per connettersi all'istanza master di SQL Server e gli endpoint HDFS/Spark usando Azure Data Studio.
-
-### <a id="master"></a> Istanza master
-
-L'istanza master di SQL Server è un'istanza di SQL Server tradizionale che contiene i database relazionali di SQL Server. I passaggi seguenti descrivono come connettersi all'istanza master usando Azure Data Studio.
-
-1. Dalla riga di comando, trovare l'indirizzo IP dell'istanza master con il comando seguente:
-
-   ```
-   kubectl get svc endpoint-master-pool -n <your-cluster-name>
-   ```
-
-1. In Azure Data Studio, premere **F1** > **nuova connessione**.
-
-1. Nelle **tipo di connessione**, selezionare **Microsoft SQL Server**.
-
-1. Digitare l'indirizzo IP dell'istanza master di SQL Server nella **nome Server** (ad esempio: **\<Indirizzo IP\>, 31433**).
-
-1. Immettere un account di accesso SQL **nome utente** (`SA`) e **Password** (la password specificata nello script di distribuzione).
-
-1. Modificare la destinazione **nome del Database** a uno dei database relazionali.
-
-   ![Connettersi all'istanza master](./media/quickstart-big-data-cluster-deploy/connect-to-cluster.png)
-
-1. Premere **Connect**e il **Dashboard di Server** dovrebbe essere visualizzato.
-
-### <a id="hdfs"></a> Gateway HDFS/Spark
-
-Il **gateway HDFS/Spark** consente di connettersi per funzionare con il pool di archiviazione HDFS e per eseguire processi Spark. I passaggi seguenti descrivono come connettersi con Azure Data Studio.
-
-1. Dalla riga di comando, trovare l'indirizzo IP del gateway di HDFS/Spark con il comando seguente:
-
-   ```
-   kubectl get svc service-security-lb -n <your-cluster-name>
-   ```
- 
-1. In Azure Data Studio, premere **F1** > **nuova connessione**.
-
-1. Nelle **tipo di connessione**, selezionare **cluster di big data di SQL Server**.
-   
-   > [!TIP]
-   > Se non viene visualizzato il **cluster di big data di SQL Server** connessione digitare, assicurarsi di avere installato la [estensione SQL Server 2019](../azure-data-studio/sql-server-2019-extension.md) e che Data Studio di Azure è stato riavviato dopo l'estensione completata l'installazione.
-
-1. Digitare l'indirizzo IP del cluster di big data nelle **nome Server** (non specificare una porta).
-
-1. Immettere `root` per il **utente** e specificare il **Password** per il cluster di big data inserito nello script di distribuzione.
-
-   ![Connettersi al gateway HDFS/Spark](./media/quickstart-big-data-cluster-deploy/connect-to-cluster-hdfs-spark.png)
-
-1. Premere **Connect**e il **Dashboard di Server** dovrebbe essere visualizzato.
+Il cluster di big data di SQL Server è stato distribuito nel servizio contenitore di AZURE. È ora possibile usare Studio di Azure Data per connettersi al cluster. Per altre informazioni, vedere [Connetti a SQL Server del cluster di big data con Azure Data Studio](connect-to-big-data-cluster.md).
 
 ## <a name="clean-up"></a>Pulizia
 

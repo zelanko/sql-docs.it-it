@@ -14,12 +14,12 @@ ms.prod_service: linux
 ms.assetid: 82737f18-f5d6-4dce-a255-688889fdde69
 moniker: '>= sql-server-linux-2017 || >= sql-server-2017 || =sqlallproducts-allversions'
 zone_pivot_groups: cs1-command-shell
-ms.openlocfilehash: d6d8a20044d60ab83f9d649827397bf363dd2696
-ms.sourcegitcommit: db552ff344e021c154acb3d0a728475ec4420899
+ms.openlocfilehash: 5cbd3fe2058b120a77772f2ac597f993ab3f508e
+ms.sourcegitcommit: 009bee6f66142c48477849ee03d5177bcc3b6380
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55832123"
+ms.lasthandoff: 02/13/2019
+ms.locfileid: "56231018"
 ---
 # <a name="quickstart-run-sql-server-container-images-with-docker"></a>Guida introduttiva: Eseguire le immagini del contenitore SQL Server con Docker
 
@@ -244,7 +244,29 @@ L'impostazione di `-h` e `--name` sullo stesso valore è un buon modo per identi
 
 ## <a id="sapassword"></a> Modificare la password dell'amministratore di sistema
 
-[!INCLUDE [Change docker password](../includes/sql-server-linux-change-docker-password.md)]
+<!-- This section was pasted in from includes/sql-server-linux-change-docker-password.md, to better support zone pivots. 2019/02/11 -->
+
+L'account **SA** è un amministratore di sistema dell'istanza di SQL Server creato durante l'installazione. Dopo aver creato il contenitore SQL Server, la variabile di ambiente `MSSQL_SA_PASSWORD` specificata diventa individuabile eseguendo `echo $MSSQL_SA_PASSWORD` nel contenitore. Per motivi di sicurezza, modificare la password dell'amministratore di sistema.
+
+1. Scegliere una password complessa da usare per l'utente SA.
+
+1. Usare `docker exec` per eseguire **sqlcmd** per modificare la password usando Transact-SQL. Sostituire `<YourStrong!Passw0rd>` e `<YourNewStrong!Passw0rd>` con valori di password.
+
+   ::: zone pivot="cs1-bash"
+   ```bash
+   sudo docker exec -it sql1 /opt/mssql-tools/bin/sqlcmd \
+      -S localhost -U SA -P '<YourStrong!Passw0rd>' \
+      -Q 'ALTER LOGIN SA WITH PASSWORD="<YourNewStrong!Passw0rd>"'
+   ```
+   ::: zone-end
+
+   ::: zone pivot="cs1-powershell"
+   ```PowerShell
+   docker exec -it sql1 /opt/mssql-tools/bin/sqlcmd `
+      -S localhost -U SA -P "<YourStrong!Passw0rd>" `
+      -Q "ALTER LOGIN SA WITH PASSWORD='<YourNewStrong!Passw0rd>'"
+   ```
+   ::: zone-end
 
 ## <a name="connect-to-sql-server"></a>Connessione a SQL Server
 
