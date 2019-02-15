@@ -8,15 +8,15 @@ ms.technology:
 - reporting-services-native
 ms.topic: conceptual
 ms.assetid: c87e16fe-c12a-4c9d-a9df-7a94e229fd04
-author: maggiesMSFT
-ms.author: maggies
+author: markingmyname
+ms.author: maghan
 manager: kfile
-ms.openlocfilehash: 09c16397bae867309fce5d47cc5f0397825d7953
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 7fcda429cced68aa0868fae88ee022b59b097a8e
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56027194"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56298259"
 ---
 # <a name="union-function-report-builder-and-ssrs"></a>Funzione Union (Generatore report e SSRS)
   Viene restituita l'unione di tutti i valori numerici non Null specificati dall'espressione, valutata nell'ambito specificato.  

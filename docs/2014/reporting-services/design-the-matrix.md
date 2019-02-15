@@ -10,15 +10,15 @@ ms.topic: conceptual
 f1_keywords:
 - sql12.rtp.rptwizard.designmatrix.f1
 ms.assetid: ecd8cae0-3f19-4f3e-90d9-4ddfe1d0eec8
-author: maggiesmsft
+author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.openlocfilehash: 0319a8eefd4b77cf60fb445868dbb6cc67a72ac8
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 82e6ab018b367459c9f75a54e863a49243f36acd
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56030122"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56297819"
 ---
 # <a name="design-the-matrix"></a>Progettazione matrice
   Utilizzare questa pagina della Creazione guidata report per selezionare i campi per il report.  

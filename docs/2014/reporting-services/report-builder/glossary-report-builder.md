@@ -8,15 +8,15 @@ ms.technology:
 - reporting-services-native
 ms.topic: conceptual
 ms.assetid: 525820a2-7eba-4982-8518-e6db041b1fc6
-author: maggiesMSFT
-ms.author: maggies
+author: markingmyname
+ms.author: maghan
 manager: kfile
-ms.openlocfilehash: 414f817adbbafd0e85cf5503336965ed86567caf
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: cae3e0395279ee8bb2b301c65628dc92c8e820fb
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56013932"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56298669"
 ---
 # <a name="glossary-report-builder"></a>Glossario (Generatore report)
   
@@ -185,7 +185,7 @@ ms.locfileid: "56013932"
 |assegnazione di ruolo a livello di elemento|Criteri di sicurezza che si applicano a un elemento nella cartella del server di report.|  
 |assegnazione di ruolo a livello di elemento|Modello di sicurezza che definisce un ruolo utilizzato per controllare l'accesso o l'interazione con un elemento nello spazio dei nomi della cartella del server di report.|  
 |indicatore di prestazioni chiave (KPI)|Metrica standardizzata quantificabile che riflette una variabile aziendale critica, ad esempio una quota di mercato, misurata nel tempo.|  
-|parola chiave|Parola riservata in SQL Server che esegue una funzione specifica, ad esempio la definizione, la modifica o l'accesso agli oggetti di database. Ad esempio: SELECT, FROM, e and.|  
+|parola chiave|Parola riservata in SQL Server che esegue una funzione specifica, ad esempio la definizione, la modifica o l'accesso agli oggetti di database. Esempio: SELECT, FROM, e and.|  
 |Indicatore KPI|Vedere: indicatore di prestazioni chiave (KPI)|  
 |campo etichette|Campo del set di dati di un report che identifica un'etichetta per un campo chiave corrispondente. I parametri e le aree dati possono visualizzare l'etichetta per un campo chiave anziché il valore.|  
 |latenza|Quantità di tempo che intercorre tra il completamento di una modifica dei dati in un server e il momento in cui tale modifica è visibile in un altro server.|  

@@ -10,15 +10,15 @@ ms.topic: conceptual
 helpviewer_keywords:
 - query designers
 ms.assetid: 553f0d4e-8b1d-4148-9321-8b41a1e8e1b9
-author: maggiesmsft
+author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.openlocfilehash: 5d8ce7b33fe281b32b1fc7758d1f7340884e492f
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: cf13d793f9cfc4aa0e1bdf5fa3ae7862bf8d1719
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56020622"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56296559"
 ---
 # <a name="query-designers-report-builder"></a>Finestre di progettazione query (Generatore report)
   In Generatore report sono incluse finestre Progettazione query con interfaccia grafica e basate su testo che consentono di compilare query per il report. A ciascun tipo di origine dati è associata una progettazione query. Alcune origini dati supportano finestre di progettazione che consentono di compilare in modo interattivo una query. Altre origini dati utilizzano una finestra Progettazione query basata su testo. Un'origine dati SQL Server supporta entrambi i tipi di progettazione, con interfaccia grafica e basata su testo.  

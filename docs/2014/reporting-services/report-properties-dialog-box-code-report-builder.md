@@ -10,15 +10,15 @@ ms.topic: conceptual
 f1_keywords:
 - "10081"
 ms.assetid: 24a479e4-3084-4442-8692-889895f111ad
-author: maggiesmsft
+author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.openlocfilehash: a2b67336419aca8dc1fc59910f6c273f7be891f0
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 5a5d2460e4a7aca8c413858df00c4d6c4d08859e
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56017112"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56297829"
 ---
 # <a name="report-properties-dialog-box-code-report-builder"></a>Finestra di dialogo Proprietà report, Codice (Generatore report)
   Selezionare **Codice** nella finestra di dialogo **Proprietà report** per definire il codice personalizzato da utilizzare nelle espressioni all'interno del report.  

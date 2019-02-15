@@ -11,15 +11,15 @@ f1_keywords:
 - "10520"
 - sql12.rtp.rptdesigner.reportproperties.customcode.f1
 ms.assetid: 955d4b11-17b4-4f1c-9690-6e7af54caea7
-author: maggiesmsft
+author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.openlocfilehash: 7c8a7cbcfb55856b3842f37aac08a8cf42dec0d1
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: eae136b7627a079356baeb4d723d2201e7d7c05e
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56027222"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56289569"
 ---
 # <a name="report-properties-dialog-box-code"></a>Finestra di dialogo Proprietà report, Codice
   Selezionare **codice**nel **proprietà Report** finestra di dialogo per definire il codice personalizzato da utilizzare nelle espressioni all'interno del report.  

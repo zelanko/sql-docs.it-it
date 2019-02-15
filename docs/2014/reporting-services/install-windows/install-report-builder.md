@@ -8,15 +8,15 @@ ms.technology:
 - reporting-services-native
 ms.topic: conceptual
 ms.assetid: 6b2291bb-1d20-4d08-81cb-a16dd8e01faf
-author: maggiesMSFT
-ms.author: maggies
+author: markingmyname
+ms.author: maghan
 manager: kfile
-ms.openlocfilehash: 830854a26d3f9b05465ee37aac6a9b7584750fe2
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: fe09fad05cc445b99ded7a35dc1e6b04b07f6450
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56012712"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56296859"
 ---
 # <a name="install-the-stand-alone-version-of-report-builder-report-builder"></a>Installare la versione autonoma di Generatore report (Generatore report)
   È possibile installare Generatore Report dal [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] feature pack di sul [Microsoft Download Center](https://go.microsoft.com/fwlink/?LinkID=168472) o in un percorso come una cartella pubblica per cui dispone il file reportbuilder3_x86.msi, ovvero il pacchetto di Windows Installer per Generatore Report, è stato scaricato.  

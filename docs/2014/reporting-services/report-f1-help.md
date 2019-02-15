@@ -8,15 +8,15 @@ ms.technology:
 - reporting-services-native
 ms.topic: conceptual
 ms.assetid: 775706be-41a7-4ae7-bad6-349f5ebd9e4d
-author: maggiesmsft
+author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.openlocfilehash: 2fcaaf1e12e685ef029d758216eb10f9b21526bc
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: f4bbbdc167bac7457ed14415422bf4e362630b69
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56041732"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56284999"
 ---
 # <a name="report-f1-help"></a>Guida sensibile al contesto del report
   Negli argomenti di questa sezione vengono fornite informazioni sulle opzioni che è possibile impostare nel report nella finestra di dialogo **Proprietà report** . Per aprire la finestra di dialogo **Proprietà report** , fare clic con il pulsante destro del mouse sullo sfondo in Progettazione report, quindi fare clic su **Proprietà report**.  

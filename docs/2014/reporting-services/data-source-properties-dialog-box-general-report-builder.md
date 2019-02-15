@@ -10,15 +10,15 @@ ms.topic: conceptual
 f1_keywords:
 - "10018"
 ms.assetid: b956f43a-8426-4679-acc1-00f405d5ff5b
-author: maggiesmsft
+author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.openlocfilehash: e64f98f376e704716a40eedcda8351331280fb9e
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 977a7dcb943b3479dd5649cfcf842aefcf469e90
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56031852"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56285719"
 ---
 # <a name="data-source-properties-dialog-box-general-report-builder"></a>Finestra di dialogo Proprietà origine dati, Generale (Generatore report)
   Selezionare **Generale** nella finestra di dialogo **Proprietà origine dati** per selezionare un'origine dati condivisa in un server di report o modificare le informazioni di connessione per un'origine dati incorporata nel report.  

@@ -10,15 +10,15 @@ ms.topic: conceptual
 f1_keywords:
 - "10026"
 ms.assetid: 07ccca3f-86ed-4f7e-99bd-0a5e1c64a733
-author: maggiesmsft
+author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.openlocfilehash: c70902ba9ee7bb45f135613a2401b48e8d96d0ad
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: e31320957e2d458a4a4693319951c42144b2b4df
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56015534"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56285659"
 ---
 # <a name="define-query-parameters-dialog-box-report-builder"></a>Finestra di dialogo Definisci parametri query (Generatore report)
   Utilizzare la finestra di dialogo **Definisci parametri query** per specificare i valori dei parametri quando si esegue una query in Progettazione query in fase di progettazione per visualizzare dati di esempio. I parametri di query consentono di filtrare i dati nell'origine dati e di limitare la quantità di dati elaborati da un report. Questi valori non vengono salvati nella definizione del report.  
