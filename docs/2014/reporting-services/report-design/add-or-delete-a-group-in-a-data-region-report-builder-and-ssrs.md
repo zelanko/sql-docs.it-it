@@ -8,15 +8,15 @@ ms.technology:
 - reporting-services-native
 ms.topic: conceptual
 ms.assetid: 4de53c3c-c6fc-49ce-b692-3609fc0b3ec5
-author: maggiesMSFT
-ms.author: maggies
+author: markingmyname
+ms.author: maghan
 manager: kfile
-ms.openlocfilehash: 827221a60598a6a9f4179a86783c05512072f5b0
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: a7b4f0a499ccbb41e185774cac687f8a8be3c2d5
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56026502"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56292599"
 ---
 # <a name="add-or-delete-a-group-in-a-data-region-report-builder-and-ssrs"></a>Aggiunta o eliminazione di un gruppo in un'area dati (Generatore report e SSRS)
   È possibile aggiungere un gruppo a un'area dati quando si desidera organizzare i dati in base a un valore o a un set di espressioni specifico per la visualizzazione e i calcoli. A un gruppo sono associati un nome e un'espressione che consentono di identificare quali dati di un set di dati appartengono al gruppo. Per altre informazioni sui gruppi, vedere [Informazioni sui gruppi &#40;Generatore report e SSRS&#41;](understanding-groups-report-builder-and-ssrs.md).  

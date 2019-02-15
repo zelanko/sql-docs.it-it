@@ -8,15 +8,15 @@ ms.technology:
 - reporting-services-native
 ms.topic: conceptual
 ms.assetid: 5ddc97a7-7ee5-475d-bc49-3b814dce7e19
-author: maggiesmsft
+author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.openlocfilehash: 4e868988ae1bea8953e143cba540c35654311c03
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 44b196d9c8ff508e6a878d51000bea95d8011907
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56020712"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56293920"
 ---
 # <a name="plan-for-map-report-support"></a>Pianificare il supporto dei report mappa
   [!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)] supporta i report di mappa che utilizzano origini dati spaziali. I dati spaziali possono provenire da database di SQL Server, da file di forma ESRI o dalla raccolta mappe installata con Reporting Services o Generatore report. In una mappa è inoltre possibile visualizzare uno sfondo a sezioni di Bing Map. L'autore del report è possibile creare un report che specifica i dati spaziali o sezioni di Bing map come dinamici e recuperati in fase di esecuzione o come statici e incorporati nella definizione del report.  

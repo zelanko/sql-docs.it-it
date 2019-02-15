@@ -14,15 +14,15 @@ helpviewer_keywords:
 - deleting shared data sources
 - modifying shared data sources
 ms.assetid: cd7bace3-f8ec-4ee3-8a9f-2f217cdca9f2
-author: maggiesmsft
+author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.openlocfilehash: 99e083439e49d522ddc84f1f32454b0c4777237b
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 240799493cc113a0885b0b957849aea25f97593a
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56025872"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56293739"
 ---
 # <a name="create-delete-or-modify-a-shared-data-source-report-manager"></a>Creare, eliminare o modificare un'origine dei dati condivisa (Gestione report)
   Un'origine dati condivisa consente di specificare le proprietà di connessione per un'origine dati. Se si dispone di un'origine dati utilizzata da un numero elevato di report, modelli o sottoscrizioni guidate dai dati, creare un'origine dati condivisa per eliminare l'overhead provocato dalla necessità di gestire le stesse informazioni sulla connessione in più posizioni.  

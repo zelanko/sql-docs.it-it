@@ -8,15 +8,15 @@ ms.technology:
 - reporting-services-native
 ms.topic: conceptual
 ms.assetid: 1262f283-9fc2-4bc1-9c79-457f7642abc7
-author: maggiesMSFT
-ms.author: maggies
+author: markingmyname
+ms.author: maghan
 manager: kfile
-ms.openlocfilehash: c446593803d54a3829c024f590eaf95250d7cfe6
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 183309b2ce9f002c83628168079be597535dbbb8
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56043312"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56298279"
 ---
 # <a name="display-the-same-data-on-a-matrix-and-a-chart-report-builder"></a>Visualizzare dati identici in una matrice e in un grafico (Generatore report)
   Se si desidera visualizzare gli stessi dati in una matrice e in un grafico, è necessario impostare determinate proprietà su entrambe le aree dati per specificare lo stesso set di dati, nonché le stesse espressioni per filtri, gruppi, ordinamenti e dati.  

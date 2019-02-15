@@ -13,15 +13,15 @@ helpviewer_keywords:
 - Hyperion Essbase query designer
 - query designers, Hyperion
 ms.assetid: d89a6773-dbe5-48e5-bda9-db0e67100696
-author: maggiesmsft
+author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.openlocfilehash: fc7951df4e0cb3f6bf3b03d820cdd2f78797b714
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 78edb97c624cab763aeb1153d6f905bba7362b2b
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56030172"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56293857"
 ---
 # <a name="hyperion-essbase-query-designer-user-interface-report-builder"></a>Interfaccia utente di Progettazione query Hyperion Essbase (Generatore report)
   [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] è disponibile una finestra Progettazione query con interfaccia grafica per la compilazione di query MDX (Multidimensional Expression) per un'origine dati [!INCLUDE[extEssbase](../includes/extessbase-md.md)] . La finestra Progettazione query con interfaccia grafica MDX è disponibili due modalità: Modalità di progettazione e Query. In ogni modalità è disponibile un riquadro Metadati dal quale è possibile trascinare membri da un cubo selezionato nell'origine dei dati per compilare una query MDX che recuperi dati quando il report viene elaborato.  

@@ -8,15 +8,15 @@ ms.technology:
 - reporting-services-native
 ms.topic: conceptual
 ms.assetid: 74f726fc-2167-47af-9093-1644e03ef01f
-author: maggiesMSFT
-ms.author: maggies
+author: markingmyname
+ms.author: maghan
 manager: kfile
-ms.openlocfilehash: ceba0cdab54d825cfc28e1c156ca33767dfb8b8f
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 0b1c8e61d66dbbf2eeeaf6f23f031f27f46e5069
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56013556"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56295660"
 ---
 # <a name="exporting-to-microsoft-excel-report-builder-and-ssrs"></a>Esportazione in Microsoft Excel (Generatore report e SSRS)
   L'estensione di [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] per il rendering di Excel consente di eseguire il rendering di un report nel formato nativo di [!INCLUDE[ofprexcel](../../../includes/ofprexcel-md.md)] 2007-2010. Con l'estensione per il rendering di Excel, la larghezza delle colonne in Excel si riflette con più accuratezza nella larghezza delle colonne nei report.  

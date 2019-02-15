@@ -8,15 +8,15 @@ ms.technology:
 - reporting-services-native
 ms.topic: conceptual
 ms.assetid: 3a62e345-d67f-4387-a7ca-e5c4728a7b16
-author: maggiesmsft
+author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.openlocfilehash: 776d52c5e34bb44942fc4dedfee83164f3121166
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: a063c20ce3fdb98cc86232bbe1492e7e0c603408
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56022102"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56296024"
 ---
 # <a name="chart-dialog-boxes-report-builder-and-ssrs"></a>Finestre di dialogo relative ai grafici (Generatore report e SSRS)
   In questa sezione sono contenuti argomenti della Guida relativi ad alcune finestre di dialogo dei grafici. In alternativa, è possibile accedere alla Guida premendo F1 o facendo clic sul pulsante ? visualizzato nella finestra di dialogo.  

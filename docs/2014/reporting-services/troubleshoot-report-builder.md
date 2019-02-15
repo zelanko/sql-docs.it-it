@@ -8,15 +8,15 @@ ms.technology:
 - reporting-services-native
 ms.topic: conceptual
 ms.assetid: 3806fc48-56f8-44d1-a3c1-df8c33cce0a3
-author: maggiesmsft
+author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.openlocfilehash: 22eb90e4fc162d2805f760e8f0b3152c3791111f
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 78f9232b45be9c70a8a244ff97af7d401419d49a
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56017692"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56297169"
 ---
 # <a name="troubleshoot-report-builder"></a>Risoluzione dei problemi relativi a Generatore report
   Generatore report è uno strumento per la creazione di report di [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] che è possibile utilizzare per compilare report da molti tipi di origini dati diversi e per pubblicarli in un server di report o in un sito di SharePoint. I report creati dall'utente sono visualizzabili in Generatore Report in un Web browser o come parte di un [!INCLUDE[msCoName](../includes/msconame-md.md)] applicazione Windows o un sito di SharePoint.  

@@ -8,15 +8,15 @@ ms.technology:
 - reporting-services-native
 ms.topic: conceptual
 ms.assetid: 15c2bc9b-428a-47ac-9630-8dde925d0595
-author: maggiesMSFT
-ms.author: maggies
+author: markingmyname
+ms.author: maghan
 manager: kfile
-ms.openlocfilehash: 1b35399504c840d81573366401ea8f4978f47f58
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 7511a4b6a441d00ca51eb29daed29cef616e6473
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56026052"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56297409"
 ---
 # <a name="nested-data-regions-report-builder-and-ssrs"></a>Aree dati nidificate (Generatore report e SSRS)
   È possibile nidificare un'area dati, ad esempio un grafico, all'interno di un'altra, quale una matrice, in genere per visualizzare in modo conciso riepiloghi dei dati o fornire una rappresentazione visiva, nonché una visualizzazione di tipo tabella o matrice.  
