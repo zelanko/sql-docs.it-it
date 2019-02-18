@@ -11,12 +11,12 @@ ms.assetid: 3dc76cc1-3b4c-4719-8296-f69ec1b476f9
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 8f7de9a4f6e99c60b0bbe560d57f6e7adf397c2e
-ms.sourcegitcommit: b51edbe07a0a2fdb5f74b5874771042400baf919
+ms.openlocfilehash: e3b3789b28a63d91dd11ce9238b9c3e4a35325be
+ms.sourcegitcommit: 769b71f01052ec9b4fc5eb02d9da9a1a58118029
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/28/2019
-ms.locfileid: "55087910"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56319382"
 ---
 # <a name="sql-server-management-studio---changelog-ssms"></a>SQL Server Management Studio - Changelog (SSMS)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -607,7 +607,7 @@ Azure SQL Data Warehouse:
 **SQL Server Management Studio (SSMS) - Generale** 
 
 Piano di manutenzione:   
-- Risolto un problema per cui durante il tentativo di modificare la pianificazione di un piano di manutenzione esistente veniva generata un'eccezione. Per informazioni dettagliate, vedere [SSMS 17.6 crashes when clicking on a schedule in a maintenance plan](https://feedback.azure.com/forums/908035-sql-server/suggestions/33712924) (Arresti anomali di SSMS 17.6 se si seleziona una pianificazione in un piano di manutenzione).
+- Risolto un problema per cui durante il tentativo di modificare la pianificazione di un piano di manutenzione esistente veniva generata un'eccezione. Per informazioni dettagliate, vedere [SSMS 17.6 crashes when clicking on a schedule in a maintenance plan](https://feedback.azure.com/forums/908035-sql-server/suggestions/33712924) (Arresto anomalo di SSMS 17.6 se si seleziona una pianificazione in un piano di manutenzione).
 
 Always On: 
 - Risolto un problema per cui il dashboard della latenza di Always On latenza non funzionava con SQL Server 2012.
@@ -834,7 +834,7 @@ Profiler XE:
 - Aggiunta delle azioni database\_name e client\_hostname agli eventi appropriati nelle sessioni di Profiler XEvent. Per applicare la modifica, potrebbe essere necessario eliminare le istanze della sessione QuickSessionStandard o QuickSessionTSQL sui server - [Connect 3142981](https://connect.microsoft.com/SQLServer/feedback/details/3142981)
 
 Riga di comando:
-- Aggiunta una nuova opzione della riga di comando ("-G") che può essere usata per la connessione automatica di SSMS a un server/database usando l'autenticazione di Active Directory (integrata o della password). Per altre informazioni dettagliate, vedere [Utilità Ssms](ssms-utility.md).
+- Aggiunta una nuova opzione della riga di comando ("-G") che può essere usata per la connessione automatica di SSMS a un server/database usando l'autenticazione di Active Directory (integrata o della password). Per altre informazioni, vedere [Utilità Ssms](ssms-utility.md).
 
 Procedura guidata Importa file flat:
 - Possibilità di selezionare un nome di schema diverso da quello predefinito ("dbo") quando si crea la tabella.
@@ -893,8 +893,8 @@ Disponibile a livello generale| Numero di build: 14.0.17199.0
 
 ### <a name="enhancements"></a>Miglioramenti
 
-- È stata aggiunta la nuova procedura guidata "Importa file flat" per semplificare l'importazione di file con estensione CSV mediante un framework intelligente, che richiede livelli minimi di intervento dell'utente o conoscenza specifica dell'argomento. Per informazioni dettagliate, vedere [Procedura guidata per l'importazione di file flat in SQL](../relational-databases/import-export/import-flat-file-wizard.md).
-- Nodo "XEvent Profiler" aggiunto a Esplora oggetti. Per altre informazioni dettagliate, vedere [Usare il profiler XEvent di SQL Server Management Studio](../relational-databases/extended-events/use-the-ssms-xe-profiler.md).
+- È stata aggiunta la nuova procedura guidata "Importa file flat" per semplificare l'importazione di file con estensione CSV mediante un framework intelligente, che richiede livelli minimi di intervento dell'utente o conoscenza specifica dell'argomento. Per informazioni dettagliate, vedere [Import Flat File to SQL Wizard](../relational-databases/import-export/import-flat-file-wizard.md) (Procedura guidata Importa file flat in SQL).
+- Nodo "XEvent Profiler" aggiunto a Esplora oggetti. Per altre informazioni, vedere [Usare il profiler XEvent di SQL Server Management Studio](../relational-databases/extended-events/use-the-ssms-xe-profiler.md).
 - Aggiornamento del filtro e della categorizzazione delle attese nel report cronologico attese di Performance Dashboard.
 - È stato aggiunto il controllo della sintassi della funzione "Stima".
 - È stato aggiunto il controllo della sintassi delle query di gestione librerie esterne.
