@@ -10,15 +10,15 @@ ms.topic: conceptual
 helpviewer_keywords:
 - Domains
 ms.assetid: 5350214c-7333-41d0-ae83-1b7d8454ebec
-author: douglaslMS
-ms.author: douglasl
+author: leolimsft
+ms.author: lle
 manager: craigg
-ms.openlocfilehash: b124775b451740c03a5c15fbb1ac281328cc7717
-ms.sourcegitcommit: c19696d3d67161ce78aaa5340964da3256bf602d
+ms.openlocfilehash: ccf8b81bb7393f8268584bc78115cf6051f0901f
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/29/2018
-ms.locfileid: "52617341"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56038632"
 ---
 # <a name="introduction-to-data-quality-services"></a>Introduzione a Data Quality Services
 
@@ -48,7 +48,7 @@ ms.locfileid: "52617341"
   
 -   **Monitoraggio:** la registrazione e la determinazione dello stato delle attività relative alla qualità dei dati. Il monitoraggio consente di verificare che la soluzione per la qualità dei dati funzioni come previsto. Per altre informazioni, vedere [DQS Administration](../data-quality-services/dqs-administration.md).  
   
--   **Knowledge Base:** Data Quality Services è una soluzione basata sulle informazioni in cui i dati vengono analizzati in base alla conoscenza creata con DQS. Consente di creare processi per la qualità dei dati in grado di migliorare costantemente le informazioni sui dati e, di conseguenza, la qualità dei dati stessi.  
+-   **Knowledge Base:** SQL Data Quality Services è una soluzione basata sulle informazioni in cui i dati vengono analizzati in base alla conoscenza creata con DQS. Consente di creare processi per la qualità dei dati in grado di migliorare costantemente le informazioni sui dati e, di conseguenza, la qualità dei dati stessi.  
   
  Il processo DQS viene illustrato nella figura seguente:  
   

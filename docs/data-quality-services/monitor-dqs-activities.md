@@ -13,15 +13,15 @@ helpviewer_keywords:
 - monitoring activity
 - activity monitoring
 ms.assetid: 1d4c76f3-0d7b-498e-b792-4db4a0349814
-author: douglaslMS
-ms.author: douglasl
+author: leolimsft
+ms.author: lle
 manager: craigg
-ms.openlocfilehash: 84e084b6db8576f4bd1f7c7d020ac9fe908a0eec
-ms.sourcegitcommit: c19696d3d67161ce78aaa5340964da3256bf602d
+ms.openlocfilehash: a9bc3aa9f703cc53b50bc499f44ffc6b7971dcfd
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/29/2018
-ms.locfileid: "52617531"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56020403"
 ---
 # <a name="monitor-dqs-activities"></a>Monitorare le attività DQS
 
@@ -52,19 +52,19 @@ ms.locfileid: "52617531"
   
 3.  Nella schermata Monitoraggio attività vengono visualizzate le informazioni su ogni attività in una griglia di attività. Nella griglia di attività vengono visualizzate le informazioni seguenti su ciascuna attività DQS:  
   
-     **ID**: valore intero. Numero univoco dell'attività generato dal sistema per il monitoraggio delle attività.  
+     **ID**:  Valore intero. Numero univoco dell'attività generato dal sistema per il monitoraggio delle attività.  
   
-     **Nome**: nome della Knowledge Base o del progetto Data Quality usato per l'attività.  
+     **Nome**: Nome della Knowledge Base o del progetto Data Quality utilizzato per l'attività.  
   
-     **Attivo**: indica se l'attività è attualmente attiva o meno. I valori possibili sono i seguenti:  
+     **Attivo**: Indica se l'attività è attualmente attiva o meno. I valori possibili sono i seguenti:  
   
     -   **Attivo**: l'attività è attualmente in esecuzione.  
   
-    -   **Completato**: l'attività è finita.  
+    -   **Completato**: l'attività è stata completata.  
   
-    -   **Terminato**: l'attività è stata terminata utilizzando la schermata Monitoraggio attività dall'amministratore DQS o l'attività è stata annullata dall'utente durante l'esecuzione nell'area funzionale corrispondente nel [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)].  
+    -   **Terminato**: l'attività è stata terminata usando la schermata Monitoraggio attività dall'amministratore DQS o l'attività è stata annullata dall'utente durante l'esecuzione nell'area funzionale corrispondente nel [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)].  
   
-     **Tipo**: indica il tipo di attività. **Sottotipo** : indica il flusso di lavoro specifico eseguito per un tipo di attività. Vengono monitorati i tipi di attività seguenti:  
+     **Tipo**: Indica il tipo di attività. **Sottotipo** : indica il flusso di lavoro specifico eseguito per un tipo di attività. Vengono monitorati i tipi di attività seguenti:  
   
     -   Sottotipi di**Gestione informazioni** :  
   
@@ -84,36 +84,36 @@ ms.locfileid: "52617531"
   
         -   **Pulizia**  
   
-     **Stato corrente**: indica lo stato corrente di un'attività. Lo stato dell'attività è determinato dall'ultimo processo di calcolo. Possono essere presenti diversi processi di calcolo in un'attività, ad esempio l'esecuzione ripetuta del processo di individuazione all'interno dell'attività di individuazione delle informazioni. Lo stato può pertanto cambiare diverse volte nel corso dell'attività.  
+     **Stato corrente**: Indica lo stato corrente di un'attività. Lo stato dell'attività è determinato dall'ultimo processo di calcolo. Possono essere presenti diversi processi di calcolo in un'attività, ad esempio l'esecuzione ripetuta del processo di individuazione all'interno dell'attività di individuazione delle informazioni. Lo stato può pertanto cambiare diverse volte nel corso dell'attività.  
   
      **Stato corrente** può avere i valori seguenti:  
   
     -   **In esecuzione**: il processo di calcolo è in esecuzione.  
   
-    -   **Riuscito**: questo stato viene impostato prima dell'esecuzione di un processo computazionale e dopo che è stato eseguito correttamente.  
+    -   **Riuscito**: questo stato viene impostato prima dell'esecuzione di un processo di calcolo e dopo il completamento del processo stesso.  
   
     -   **Non riuscito**: il processo di calcolo non è riuscito.  
   
     -   **Arrestato**: il processo di calcolo è stato arrestato.  
   
-     **DQKB**: nome della Knowledge Base usata per l'attività.  
+     **DQKB**: Nome della Knowledge Base utilizzata per l'attività.  
   
-     **Utente**: nome dell'utente che ha iniziato l'attività oppure dell'ultimo utente che l'ha usata, se non corrispondono.  
+     **Utente**: Nome dell'utente che ha iniziato l'attività oppure dell'ultimo utente che ha utilizzato l'attività, se non corrispondono.  
   
-     **Ora di inizio attività**: data e ora di inizio dell'attività  
+     **Ora di inizio attività**: Data e ora di inizio dell'attività.  
   
-     **Tempo trascorso**: tempo trascorso dall'inizio dell'attività. Il valore viene visualizzato nella notazione HH:MM:SS.  
+     **Tempo trascorso**: Tempo trascorso dall'inizio dell'attività. Il valore viene visualizzato nella notazione HH:MM:SS.  
   
-     **Ora di fine attività**: data e ora di fine dell'attività.  
+     **Ora di fine attività**: Data e ora di fine dell'attività.  
   
 ##  <a name="Filter"></a> Filtrare le informazioni delle attività DQS  
  È possibile utilizzare il riquadro dei filtri (**Filtra per**, **Valore**, **Da data**e **A data**) nella schermata Monitoraggio attività per filtrare e visualizzare le attività necessarie in base a un determinato criterio di filtro. Per filtrare i record dell'attività:  
   
 1.  Decidere il criterio di filtro: specificare se si desidera filtrare i record dell'attività in base a un valore di una delle colonne nella griglia di attività (basato su valori) o in base a un intervallo di date oppure in base a entrambi i criteri.  
   
-    1.  **Filtro in base a un valore**: selezionare un criterio di filtro nell'elenco **Filtra per** , quindi selezionare il valore appropriato in base a cui applicare il filtro nell'elenco **Valore** . Dopo aver selezionato un'opzione nell'elenco **Filtra per** , l'elenco **Valore** viene aggiornato con i valori possibili. È possibile applicare un filtro in base ai campi seguenti nei record dell'attività: **Attivo**, **Tipo**, **Sottotipo**, **Stato corrente**, **DQKB**e **Utente**.  
+    1.  **Filtro in base a un valore**: selezionare un criterio di filtro nell'elenco **Filtra per** , quindi selezionare il valore appropriato in base a cui applicare il filtro nell'elenco **Valore**. Dopo aver selezionato un'opzione nell'elenco **Filtra per** , l'elenco **Valore** viene aggiornato con i valori possibili. È possibile applicare un filtro in base ai campi seguenti nei record dell'attività: **Attivo**, **Tipo**, **Sottotipo**, **Stato corrente**, **DQKB** e **Utente**.  
   
-    2.  **Filtro in base a intervallo di date**: selezionare le date appropriate nei controlli di data **Da data** e **A data** . Per impostazione predefinita, la data visualizzata in **Da data** precede di due giorni la data corrente e la data visualizzata in **A data** è la data corrente. Il filtro non viene applicato in base alle date di *inizio* e di *fine* , ma in base all'intervallo. Questo significa che verranno visualizzate tutte le attività in esecuzione durante l'intervallo di date selezionato.  
+    2.  **Filtro in base a un intervallo di date**: selezionare le date appropriate nei controlli di data **Da data** e **A data**. Per impostazione predefinita, la data visualizzata in **Da data** precede di due giorni la data corrente e la data visualizzata in **A data** è la data corrente. Il filtro non viene applicato in base alle date di *inizio* e di *fine* , ma in base all'intervallo. Questo significa che verranno visualizzate tutte le attività in esecuzione durante l'intervallo di date selezionato.  
   
 2.  Fare clic sull'icona **Aggiorna l'elenco di attività** per applicare il filtro e visualizzare solo le attività DQS filtrate.  
   
@@ -124,7 +124,7 @@ ms.locfileid: "52617531"
   
 2.  Nel riquadro inferiore vengono visualizzati i dettagli dell'attività selezionata nelle 2 schede seguenti:  
   
-    -   **Fasi attività**: viene visualizzata una griglia dei processi di calcolo (fasi attività) associati all'attività selezionata. In questa scheda è possibile che vengano visualizzate diverse fasi per un'attività. Ciò può verificarsi quando la stessa fase dell'attività è stata eseguita più volte dall'utente. Ad esempio, nel caso in cui la fase dell'attività è stata arrestata e avviata di nuovo. Nella griglia in questa scheda vengono visualizzate le informazioni seguenti per ogni fase associata all'attività: **Tipo**, **Stato corrente**, **Ora di inizio**, **Tempo trascorso**e **Ora di fine**.  
+    -   **Fasi attività**: visualizza una griglia dei processi di calcolo (fasi attività) associati all'attività selezionata. In questa scheda è possibile che vengano visualizzate diverse fasi per un'attività. Ciò può verificarsi quando la stessa fase dell'attività è stata eseguita più volte dall'utente. Ad esempio, nel caso in cui la fase dell'attività è stata arrestata e avviata di nuovo. Nella griglia in questa scheda vengono visualizzate le informazioni seguenti per ogni fase associata all'attività: **Tipo**, **Stato corrente**, **Ora di inizio**, **Tempo trascorso** e **Ora di fine**.  
   
     -   **Profiler**: vengono visualizzate le informazioni di profiling per le attività correnti e passate. Per le attività correnti, contiene informazioni parziali ma coerenti. Le informazioni di profiling di un'attività vengono esportate in un file di Excel quando si esportano i dettagli dell'attività corrispondenti in un file di Excel. Le informazioni sono disponibili nei fogli **Profiler - Origine** e **Profiler - Campi** del file di Excel esportato.  
   
@@ -141,8 +141,8 @@ ms.locfileid: "52617531"
     |----------------|-----------------|  
     |Attività|Contiene le informazioni (colonne) sull'attività come riportato nella griglia di attività.|  
     |Processi|Contiene le informazioni (colonne) sui processi nell'attività come riportato nella scheda **Fasi attività** .|  
-    |Profiler - Origine|Per il sottotipo **Pulizia** contiene le informazioni seguenti sull'attività: Record, Record corretti, Record con correzione e Record non validi.<br /><br /> Per i sottotipi **Individuazione informazioni**, **Gestione dominio**, **Criteri di corrispondenza**e **Corrispondenza** contiene le informazioni seguenti sull'attività: Record, Valori totali, Nuovi valori, Valori univoci e Nuovi valori univoci.|  
-    |Profiler - Campi|Per i sottotipi **Pulizia** e **Pulizia SSIS** contiene le informazioni seguenti sull'attività: Campo, Dominio, Valori con correzione, Valori consigliati, Completezza e Accuratezza.<br /><br /> Per i sottotipi **Individuazione informazioni**, **Gestione dominio**, **Criteri di corrispondenza**e **Corrispondenza** contiene le informazioni seguenti sull'attività: Campo, Dominio, Nuovo, Univoco, Valido nel dominio e Completezza.|  
+    |Profiler - Origine|Per il sottotipo **Pulizia**, contiene le seguenti informazioni sull'attività:   Record, Record corretti, Record con correzione e Record non validi.<br /><br /> Per i sottotipi **Individuazione informazioni**, **Gestione dominio**, **Criteri di corrispondenza** e **Corrispondenza** contiene le informazioni seguenti sull'attività:   Record, Valori totali, Nuovi valori, Valori univoci e Nuovi valori univoci.|  
+    |Profiler - Campi|Per i sottotipi **Pulizia** e **Pulizia SSIS**, contiene le seguenti informazioni sull'attività:   Campo, Dominio, Valori con correzione, Valori consigliati, Completezza e Accuratezza.<br /><br /> Per i sottotipi **Individuazione informazioni**, **Gestione dominio**, **Criteri di corrispondenza** e **Corrispondenza** contiene le informazioni seguenti sull'attività:   Campo, Dominio, Nuovo, Univoco, Valido nel dominio e Completezza.|  
   
 ##  <a name="Terminate"></a> Terminare un'attività DQS  
  Gli amministratori DQS (ruolo dqs_administrator) possono terminare un'attività in esecuzione (attiva) non di tipo **Pulizia SSIS**. Quando viene terminata un'attività, vengono arrestati tutti i processi in esecuzione nell'attività e viene rimosso tutto ciò che è correlato all'attività. Questa operazione non può essere annullata. Terminare un'attività nella schermata Monitoraggio attività equivale ad annullare la rispettiva attività facendo clic su **Annulla** durante l'esecuzione nell'area funzionale del [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)]. Per terminare un'attività:  

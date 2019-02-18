@@ -13,15 +13,15 @@ helpviewer_keywords:
 - create,data quality project
 - data quality project,create
 ms.assetid: 19c52d2b-d28e-4449-ab59-5fe0dc326cd9
-author: douglaslMS
-ms.author: douglasl
+author: leolimsft
+ms.author: lle
 manager: craigg
-ms.openlocfilehash: c2b2adb2a1dc2c4c668bb094553f0961dc74439d
-ms.sourcegitcommit: c19696d3d67161ce78aaa5340964da3256bf602d
+ms.openlocfilehash: c63f6407548f3e46bb64a3b7dddffa741426d3a0
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/29/2018
-ms.locfileid: "52616812"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56036462"
 ---
 # <a name="create-a-data-quality-project"></a>Creare un progetto Data Quality
 
@@ -61,7 +61,7 @@ ms.locfileid: "52616812"
   
 4.  Fare clic su **Crea** per creare un progetto Data Quality.  
   
-##  <a name="FollowUp"></a> Completamento: fasi successive alla creazione di un progetto Data Quality  
+##  <a name="FollowUp"></a> Completamento: dopo la creazione di un progetto Data Quality  
  Dopo avere creato un progetto Data Quality, viene visualizzata una procedura guidata che è possibile utilizzare per eseguire l'attività selezionata: pulizia o corrispondenza. Per altre informazioni sulle attività di pulizia e corrispondenza, vedere [Pulizia dei dati](../data-quality-services/data-cleansing.md) e [Corrispondenza di dati](../data-quality-services/data-matching.md).  
   
   

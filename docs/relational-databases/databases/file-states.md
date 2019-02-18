@@ -30,12 +30,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: e54445a926dbb6f7d1e03720f31ee0bd9a1601cd
-ms.sourcegitcommit: 1a5448747ccb2e13e8f3d9f04012ba5ae04bb0a3
+ms.openlocfilehash: 1831c0f3420ad89b5a3dd850e0692ddf7b56b555
+ms.sourcegitcommit: f8ad5af0f05b6b175cd6d592e869b28edd3c8e2c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51560338"
+ms.lasthandoff: 02/07/2019
+ms.locfileid: "55807491"
 ---
 # <a name="file-states"></a>Stati dei file
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -49,7 +49,7 @@ ms.locfileid: "51560338"
 |State|Definizione|  
 |-----------|----------------|  
 |ONLINE|Il file è disponibile per tutte le operazioni. I file del filegroup primario sono sempre online se il database stesso è online. Se un file del filegroup primario non è online, il database non sarà online e gli stati dei file secondari risulteranno indefiniti.|  
-|OFFLINE|Il file non è accessibile e potrebbe non essere presente sul disco. I file vengono portati offline a seguito di un'azione esplicita da parte dell'utente e rimangono tali finché l'utente non interviene.<br /><br /> **\*\* Attenzione \*\*** Un file deve essere portato offline solo se è danneggiato, ma può essere ripristinato. Per riportare online un file impostato su offline, è necessario ripristinare il file dal backup. Per altre informazioni sul ripristino di un singolo file, vedere [RESTORE &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-transact-sql.md).|  
+|OFFLINE|Il file non è accessibile e potrebbe non essere presente sul disco. I file vengono portati offline a seguito di un'azione esplicita da parte dell'utente e rimangono tali finché l'utente non interviene.<br /><br /> **\*\* Attenzione \*\*** Lo stato di un file può essere impostato su offline se è danneggiato, ma può essere ripristinato. Per riportare online un file impostato su offline, è necessario ripristinare il file dal backup. Per altre informazioni sul ripristino di un singolo file, vedere [RESTORE &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-transact-sql.md). <br /><br /> Un file di database viene impostato su OFFLINE quando un database è in recupero con registrazione completa o con registrazione minima delle operazioni bulk e un file viene eliminato. La voce in sys.master_files persiste fino a quando un log delle transazioni viene troncato oltre il valore drop_lsn. Per altre informazioni, vedere [Log delle transazioni (SQL Server)](../../relational-databases/logs/the-transaction-log-sql-server.md#Truncation). |  
 |RESTORING|Il file è in fase di ripristino. Questo stato indica che è stato eseguito un comando di ripristino che interessa l'intero file e non solo una pagina e rimarrà attivo fino al completamento dell'operazione di ripristino e di recupero del file.|  
 |RECOVERY PENDING|Il recupero del file è stato posticipato. Questo stato viene attivato automaticamente durante un processo di ripristino a fasi in cui il file non viene ripristinato e recuperato. Per risolvere l'errore e consentire il completamento del processo di recupero, è necessario un ulteriore intervento da parte dell'utente. Per altre informazioni, vedere [Ripristini a fasi &#40;SQL Server&#41;](../../relational-databases/backup-restore/piecemeal-restores-sql-server.md).|  
 |SUSPECT|Non è stato possibile recuperare il file durante un processo di ripristino online. Se il file è incluso nel filegroup primario, anche il database viene contrassegnato come suspect, ovvero sospetto. In caso contrario, solo il file sarà sospetto mentre il database risulterà ancora online.<br /><br /> Lo stato suspect rimarrà attivo finché il file non viene reso disponibile mediante uno dei metodi seguenti:<br /><br /> Ripristino e recupero<br /><br /> DBCC CHECKDB con REPAIR_ALLOW_DATA_LOSS|  
@@ -65,5 +65,3 @@ ms.locfileid: "51560338"
  [DBCC CHECKDB &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-checkdb-transact-sql.md)  
   
  [Filegroup e file di database](../../relational-databases/databases/database-files-and-filegroups.md)  
-  
-  

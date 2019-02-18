@@ -19,12 +19,12 @@ ms.assetid: 9f2feb3c-ea9b-4992-8202-2aeed4f9a6dd
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 63af3d34937b221a50f7c6217ae9c73c41d1cbb6
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: a9f6cc5a6ba2c63add3742602b89bbb627677286
+ms.sourcegitcommit: db552ff344e021c154acb3d0a728475ec4420899
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53209300"
+ms.lasthandoff: 02/07/2019
+ms.locfileid: "55832083"
 ---
 # <a name="prepare-a-secondary-database-for-an-always-on-availability-group"></a>Preparare un database secondario per un gruppo di disponibilità Always On
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -194,36 +194,36 @@ Questo argomento illustra come preparare un database per un gruppo di disponibil
         GO  
         ```  
   
-5.  Dopo il ripristino del backup completo, è necessario creare un backup del log nel database primario. Ad esempio, l'istruzione [!INCLUDE[tsql](../../../includes/tsql-md.md)] seguente esegue il backup del log in un file di backup denominato *E:\MyDB1_log.bak*:  
+5.  Dopo il ripristino del backup completo, è necessario creare un backup del log nel database primario. Ad esempio, l'istruzione [!INCLUDE[tsql](../../../includes/tsql-md.md)] seguente esegue il backup del log in un file di backup denominato *E:\MyDB1_log.trn*:  
   
     ```  
     BACKUP LOG MyDB1   
-      TO DISK = 'E:\MyDB1_log.bak'   
+      TO DISK = 'E:\MyDB1_log.trn'   
     GO  
     ```  
   
 6.  Prima di creare il join del database alla replica secondaria, è necessario applicare il backup del log richiesto ed eventuali backup del log successivi.  
   
-     Ad esempio, l'istruzione [!INCLUDE[tsql](../../../includes/tsql-md.md)] seguente ripristina il primo log da *C:\MyDB1.bak*:  
+     Ad esempio, l'istruzione [!INCLUDE[tsql](../../../includes/tsql-md.md)] seguente ripristina il primo log da *C:\MyDB1.trn*:  
   
     ```  
     RESTORE LOG MyDB1   
-      FROM DISK = 'E:\MyDB1_log.bak'   
+      FROM DISK = 'E:\MyDB1_log.trn'   
         WITH FILE=1, NORECOVERY  
     GO  
     ```  
   
 7.  Se vengono eseguiti altri backup del log prima del join del database alla replica secondaria, è inoltre necessario ripristinare tutti questi backup, in sequenza, nell'istanza del server che ospita la replica secondaria utilizzando RESTORE WITH NORECOVERY.  
   
-     Ad esempio, l'istruzione [!INCLUDE[tsql](../../../includes/tsql-md.md)] seguente ripristina altri due log da *E:\MyDB1_log.bak*:  
+     Ad esempio, l'istruzione [!INCLUDE[tsql](../../../includes/tsql-md.md)] seguente ripristina altri due log da *E:\MyDB1_log.trn*:  
   
     ```  
     RESTORE LOG MyDB1   
-      FROM DISK = 'E:\MyDB1_log.bak'   
+      FROM DISK = 'E:\MyDB1_log.trn'   
         WITH FILE=2, NORECOVERY  
     GO  
     RESTORE LOG MyDB1   
-      FROM DISK = 'E:\MyDB1_log.bak'   
+      FROM DISK = 'E:\MyDB1_log.trn'   
         WITH FILE=3, NORECOVERY  
     GO  
     ```  

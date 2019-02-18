@@ -8,15 +8,15 @@ ms.reviewer: ''
 ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: 486e4216-a946-4c6e-828c-61bc905f7ec1
-author: douglaslMS
-ms.author: douglasl
+author: leolimsft
+ms.author: lle
 manager: craigg
-ms.openlocfilehash: 273d0e9df4a5cd5a2649fcd8ada4fe9891393dcd
-ms.sourcegitcommit: c19696d3d67161ce78aaa5340964da3256bf602d
+ms.openlocfilehash: 677432f74ac67ecdcc835520cf4cfc208cbc33de
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/29/2018
-ms.locfileid: "52617941"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56024722"
 ---
 # <a name="install-data-quality-services"></a>Installare Data Quality Services
 
@@ -26,7 +26,7 @@ ms.locfileid: "52617941"
   
 |Componente DQS|Descrizione|  
 |-------------------|-----------------|  
-|[!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)]|[!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] viene installato nel motore di database di [!INCLUDE[ssNoversion](../../includes/ssNoVersion-md.md)] e include tre database, DQS_MAIN, DQS_PROJECTS e DQS_STAGING_DATA. In DQS_MAIN sono contenuti il motore DQS, le stored procedure DQS e gli articoli della Knowledge Base pubblicati. In DQS_PROJECTS sono contenute le informazioni sul progetto Data Quality. DQS_STAGING_DATA è l'area di gestione temporanea in cui è possibile copiare i dati di origine per eseguire operazioni DQS e, successivamente, esportare i dati elaborati.|  
+|[!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)]|[!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] viene installato nel motore di database di [!INCLUDE[ssNoversion](../../includes/ssNoVersion-md.md)] e include tre database: DQS_MAIN, DQS_PROJECTS e DQS_STAGING_DATA. In DQS_MAIN sono contenuti il motore DQS, le stored procedure DQS e gli articoli della Knowledge Base pubblicati. In DQS_PROJECTS sono contenute le informazioni sul progetto Data Quality. DQS_STAGING_DATA è l'area di gestione temporanea in cui è possibile copiare i dati di origine per eseguire operazioni DQS e, successivamente, esportare i dati elaborati.|  
 |[!INCLUDE[ssDQSClient](../../includes/ssdqsclient-md.md)]|[!INCLUDE[ssDQSClient](../../includes/ssdqsclient-md.md)] è un'applicazione autonoma che consente di connettersi a [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)]e offre un'interfaccia utente grafica estremamente intuitiva per effettuare operazioni di qualità dei dati e altre attività amministrative correlate a DQS.|  
   
 > [!IMPORTANT]  
@@ -38,11 +38,11 @@ ms.locfileid: "52617941"
   
  L'installazione di DQS è un processo in tre fasi:  
   
--   [Attività di preinstallazione](#PreInstallationTasks): verificare i requisiti di sistema prima di installare DQS.  
+-   [Attività di preinstallazione](#PreInstallationTasks): verifica dei requisiti di sistema prima dell'installazione di DQS.  
   
--   [Attività di installazione di Data Quality Services](#DQSInstallation): installare DQS tramite il programma di installazione di SQL Server.  
+-   [Attività di installazione di SQL Data Quality Services](#DQSInstallation): installazione di DQS tramite il programma di installazione di SQL Server.  
   
--   [Attività di post-installazione](#PostInstallationTasks): eseguire queste attività dopo il completamento dell'installazione di SQL Server per completare l'installazione di DQS.  
+-   [Attività di post-installazione](#PostInstallationTasks): attività da eseguire dopo il completamento dell'installazione di DQS eseguita tramite il programma di installazione di SQL Server.  
   
 > [!NOTE]  
 >  In questo argomento non sono incluse le istruzioni per l'esecuzione dell'installazione dalla riga di comando. Per informazioni sulle opzioni della riga di comando per l'installazione di [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] e del client, vedere [Parametri delle funzionalità](../../database-engine/install-windows/install-sql-server-from-the-command-prompt.md#Feature) in [Installazione di SQL Server dal prompt dei comandi](../../database-engine/install-windows/install-sql-server-from-the-command-prompt.md).  
@@ -52,7 +52,7 @@ ms.locfileid: "52617941"
   
 |Componente DQS|Requisiti minimi di sistema|  
 |-------------------|---------------------------------|  
-|[!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)]|Memoria (RAM) minima: 2 GB/Consigliata: almeno 4 GB<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssNoVersion-md.md)] Motore di database. Per altre informazioni, vedere [Informazioni sul Motore di database di SQL Server](../../database-engine/install-windows/install-sql-server-database-engine.md).|  
+|[!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)]|Memoria (RAM): Minima: 2 GB. Consigliata: almeno 4 GB<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssNoVersion-md.md)] Motore di database. Per altre informazioni, vedere [Informazioni sul Motore di database di SQL Server](../../database-engine/install-windows/install-sql-server-database-engine.md).|  
 |[!INCLUDE[ssDQSClient](../../includes/ssdqsclient-md.md)]|.NET Framework 4.0 (installato durante l'installazione di [!INCLUDE[ssDQSClient](../../includes/ssdqsclient-md.md)] , se non è già presente)<br /><br /> Internet Explorer 6.0 SP1 o versione successiva|  
   
 > [!IMPORTANT]  
@@ -116,7 +116,7 @@ ms.locfileid: "52617941"
                     [Accedere ai dati per le operazioni DQS](../../data-quality-services/install-windows/access-data-for-the-dqs-operations.md).  
   
 ## <a name="see-also"></a>Vedere anche  
- [Video su come installare e configurare DQS](https://go.microsoft.com/fwlink/?LinkId=238241)   
+ [Video: Install and Configure DQS](https://go.microsoft.com/fwlink/?LinkId=238241)  (Installare e configurare DQS)  
  [Aggiornare gli assembly SQLCLR dopo l'aggiornamento di .NET Framework](../../data-quality-services/install-windows/upgrade-sqlclr-assemblies-after-net-framework-update.md)   
  [Esportare e importare le Knowledge Base di DQS con DQSInstaller.exe](../../data-quality-services/install-windows/export-and-import-dqs-knowledge-bases-using-dqsinstaller-exe.md)   
  [Aggiornare Data Quality Services](../../database-engine/install-windows/upgrade-data-quality-services.md)   

@@ -13,15 +13,15 @@ f1_keywords:
 - sql13.dqs.dqproject.correction.f1
 - sql13.dqs.dqproject.export.f1
 ms.assetid: c96b13ad-02a6-4646-bcc7-b4a8d490f5cc
-author: douglaslMS
-ms.author: douglasl
+author: leolimsft
+ms.author: lle
 manager: craigg
-ms.openlocfilehash: af37e0dd65edebe2037d305d085e5c65872d03f8
-ms.sourcegitcommit: c19696d3d67161ce78aaa5340964da3256bf602d
+ms.openlocfilehash: 0f4cd86a9c93d07ccf25665f3aff2d11e437d3f8
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/29/2018
-ms.locfileid: "52617651"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56011540"
 ---
 # <a name="cleanse-data-using-dqs-internal-knowledge"></a>Pulizia dei dati mediante le informazioni interne di DQS
 
@@ -101,9 +101,9 @@ ms.locfileid: "52617651"
   
 -   **Soglia di correzione automatica**: qualsiasi valore con un livello di confidenza al di sopra di questa soglia viene corretto automaticamente da DQS. L'amministratore dei dati può tuttavia ignorare la modifica durante la pulizia interattiva. È possibile specificare il valore soglia di correzione automatica nella scheda **Impostazioni generali** della schermata **Configurazione** . Per altre informazioni, vedere [Configurazione dei valori soglia per le attività di pulizia e di individuazione delle corrispondenze](../data-quality-services/configure-threshold-values-for-cleansing-and-matching.md).  
   
--   **Soglia di suggerimento automatico**: qualsiasi valore con un livello di confidenza al di sopra di questa soglia, ma al di sotto della soglia di correzione automatica, viene suggerito come valore sostitutivo. In DQS la modifica viene apportata solo se approvata dall'amministratore dei dati. È possibile specificare il valore soglia di suggerimento automatico nella scheda **Impostazioni generali** della schermata **Configurazione** . Per altre informazioni, vedere [Configurazione dei valori soglia per le attività di pulizia e di individuazione delle corrispondenze](../data-quality-services/configure-threshold-values-for-cleansing-and-matching.md).  
+-   **Soglia di suggerimento automatico**:  qualsiasi valore con un livello di confidenza al di sopra di questa soglia, ma al di sotto della soglia di correzione automatica viene suggerito come valore sostitutivo. In DQS la modifica viene apportata solo se approvata dall'amministratore dei dati. È possibile specificare il valore soglia di suggerimento automatico nella scheda **Impostazioni generali** della schermata **Configurazione** . Per altre informazioni, vedere [Configurazione dei valori soglia per le attività di pulizia e di individuazione delle corrispondenze](../data-quality-services/configure-threshold-values-for-cleansing-and-matching.md).  
   
--   **Altro**: qualsiasi valore al di sotto del valore soglia di suggerimento automatico non viene modificato da DQS.  
+-   **Altro**:  qualsiasi valore al di sotto del valore soglia di suggerimento automatico non viene modificato da DQS.  
   
  In base al livello di confidenza, i valori vengono visualizzati nelle cinque schede seguenti:  
   
@@ -147,11 +147,11 @@ ms.locfileid: "52617651"
     > [!IMPORTANT]  
     >  Se si utilizza la versione a 64 bit di Excel, non è possibile esportare i propri dati puliti in un file di Excel. È possibile eseguire l'esportazione solo in un database di SQL Server o in un file con estensione csv.  
   
-    1.  **SQL Server**: scegliere **DQS_STAGING_DATA** come database di destinazione se si desidera esportare i dati in esso, quindi specificare un nome di tabella che verrà creata per archiviare i dati esportati. Altrimenti, se si desidera esportare i dati in un database diverso, sceglierlo e specificare un nome di tabella che verrà creata per archiviare i dati esportati. Il database di destinazione deve essere presente nella stessa istanza di SQL Server di [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)] per essere visualizzato nell'elenco a discesa **Database** .  
+    1.  **SQL Server**: scegliere **DQS_STAGING_DATA** come database di destinazione se si vuole esportare qui i dati, quindi specificare un nome di tabella che verrà creata per archiviare i dati esportati. Altrimenti, se si desidera esportare i dati in un database diverso, sceglierlo e specificare un nome di tabella che verrà creata per archiviare i dati esportati. Il database di destinazione deve essere presente nella stessa istanza di SQL Server di [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)] per essere visualizzato nell'elenco a discesa **Database** .  
   
-    2.  **File CSV**: fare clic su **Sfoglia**e specificare il nome e il percorso del file csv nel quale si desidera esportare i dati puliti. È anche possibile digitare il nome per il file csv insieme al percorso completo in cui si desidera esportare i dati puliti, Ad esempio, "c:\ExportedData.csv". Il file viene salvato nel computer in cui è installato [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)] .  
+    2.  **File CSV**: fare clic su **Sfoglia** e specificare il nome e il percorso del file con estensione csv nel quale si vuole esportare i dati puliti. È anche possibile digitare il nome per il file csv insieme al percorso completo in cui si desidera esportare i dati puliti, Ad esempio, "c:\ExportedData.csv". Il file viene salvato nel computer in cui è installato [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)] .  
   
-    3.  **File di Excel**: fare clic su **Sfoglia**e specificare il nome e il percorso del file di Excel nel quale si desidera esportare i dati puliti. È anche possibile digitare il nome per il file di Excel insieme al percorso completo in cui si desidera esportare i dati puliti, Ad esempio, "c:\ExportedData.xlsx". Il file viene salvato nel computer in cui è installato [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)] .  
+    3.  **File di Excel**: fare clic su **Sfoglia** e specificare il nome e il percorso del file di Excel nel quale si vuole esportare i dati puliti. È anche possibile digitare il nome per il file di Excel insieme al percorso completo in cui si desidera esportare i dati puliti, Ad esempio, "c:\ExportedData.xlsx". Il file viene salvato nel computer in cui è installato [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)] .  
   
 2.  Selezionare la casella di controllo **Standardizzare output** per standardizzare l'output in base al formato selezionato per il dominio. Ad esempio, modificare il valore stringa in caratteri maiuscoli o cambiare al maiuscolo l'iniziale della parola. Per informazioni sulla specifica del formato di output di un dominio, vedere l'elenco **Formato output in** in [Imposta proprietà del dominio](../data-quality-services/set-domain-properties.md).  
   
@@ -161,15 +161,15 @@ ms.locfileid: "52617651"
   
     -   **Dati e informazioni pulizia**: fare clic sul pulsante di opzione per esportare i dati seguenti per ogni dominio:  
   
-        -   **\<Dominio>_Source**: il valore originale nel dominio.  
+        -   **\<Dominio>_Source**: valore originale nel dominio.  
   
-        -   **\<Dominio>_Output**: i valori puliti nel dominio.  
+        -   **\<Dominio>_Output**: valori puliti nel dominio.  
   
-        -   **\<Dominio>_Reason**: il motivo specificato per la correzione del valore.  
+        -   **\<Dominio>_Reason**: motivo specificato per la correzione del valore.  
   
-        -   **\<Dominio>_Confidence**: il livello di attendibilità per tutti i termini corretti. Viene visualizzato come valore decimale equivalente al valore percentuale corrispondente. Un livello di confidenza del 95% viene ad esempio visualizzato come 0,9500000.  
+        -   **\<Dominio>_Confidence**: livello di confidenza per tutti i termini corretti. Viene visualizzato come valore decimale equivalente al valore percentuale corrispondente. Un livello di confidenza del 95% viene ad esempio visualizzato come 0,9500000.  
   
-        -   **\<Dominio>_Status**: lo stato del valore del dominio dopo la pulizia dei dati. Ad esempio **Suggeriti**, **Nuovi**, **Non validi**, **Con correzione**o **Corretti**.  
+        -   **\<Dominio>_Status**: stato del valore del dominio dopo la pulizia dei dati. Ad esempio **Suggeriti**, **Nuovi**, **Non validi**, **Con correzione**o **Corretti**.  
   
         -   **Stato record**: oltre a includere un campo di stato per ogni dominio di cui è stato eseguito il mapping **(\<NomeDominio>_Status**), il campo **Stato record** visualizza lo stato di un record. Se uno stato del dominio nel record è *Nuovi* o *Corretti*, il valore di **Stato record** viene impostato su *Corretti*. Se uno stato del dominio nel record è *Suggeriti*, *Non validi*o *Con correzione*, il valore di **Stato record** viene impostato sul rispettivo valore. Ad esempio, se uno stato del dominio nel record è *Suggeriti*, il valore di **Stato record** viene impostato su *Suggeriti*.  
   
@@ -191,15 +191,15 @@ ms.locfileid: "52617651"
   
  La scheda **Profiler** fornisce le statistiche seguenti per i dati di origine, per campo e dominio:  
   
--   **Record**: il numero di record nei dati di esempio analizzati per l'attività di pulizia dei dati  
+-   **Record**: numero di record nei dati di esempio analizzati per l'attività di pulizia dei dati  
   
--   **Record corretti**: il numero di record che sono risultati corretti  
+-   **Record corretti**: numero di record che sono risultati corretti  
   
--   **Record con correzione**: il numero di record cui sono state apportate correzioni  
+-   **Record con correzione**: numero di record ai quali sono state apportate correzioni  
   
--   **Record suggeriti**: il numero di record che sono stati suggeriti  
+-   **Record suggeriti**: numero di record che sono stati suggeriti  
   
--   **Record non validi**: il numero di record che sono risultati non validi  
+-   **Record non validi**: numero di record che sono risultati non validi  
   
  Le statistiche relative ai campi includono:  
   
@@ -207,13 +207,13 @@ ms.locfileid: "52617651"
   
 -   **Dominio**: nome del dominio di cui è stato eseguito il mapping al campo  
   
--   **Valori con correzione**: il numero di valori di dominio che sono stati corretti  
+-   **Valori con correzione**: numero di valori di dominio che sono stati corretti  
   
--   **Valori consigliati**: il numero di valori di dominio che sono stati suggeriti  
+-   **Valori suggeriti**: numero di valori di dominio che sono stati suggeriti  
   
--   **Completezza**: la completezza di ogni campo di origine di cui è stato eseguito il mapping per l'attività di pulizia  
+-   **Completezza**: completezza di ogni campo di origine di cui è stato eseguito il mapping per l'attività di pulizia  
   
--   **Accuratezza**: l'accuratezza di ogni campo di origine di cui è stato eseguito il mapping per l'attività di pulizia  
+-   **Accuratezza**: accuratezza di ogni campo di origine di cui è stato eseguito il mapping per l'attività di pulizia  
   
  Il profiling DQS fornisce due dimensioni della qualità dei dati: *completezza* (l'entità della presenza dei dati) e *accuratezza* (la misura entro cui i dati possono essere utilizzati per gli scopi previsti). Se il profiling suggerisce che un campo è relativamente incompleto, è necessario rimuoverlo dalla Knowledge Base di un progetto Data Quality. È possibile che il profiling non fornisca statistiche di completezza affidabili per i domini compositi. Se sono necessarie statistiche di completezza, utilizzare domini singoli anziché domini compositi. Se si desidera utilizzare domini compositi, è consigliabile creare una Knowledge Base con domini singoli di cui eseguire il profiling per determinare la completezza, quindi creare un altro dominio con un dominio composito per il processo di pulizia. Ad esempio, il profiling potrebbe mostrare una completezza del 95% per record relativi a indirizzi, utilizzando un dominio composito, ma potrebbe esservi un livello di incompletezza molto più alto per una delle colonne, ad esempio una colonna relativa al codice postale (CAP). In questo esempio, è necessario misurare la completezza della colonna del CAP con un solo dominio. Il profiling fornirà probabilmente statistiche di accuratezza affidabili per i domini compositi perché è possibile misurare l'accuratezza di più colonne allo stesso tempo. Il valore di questi dati sta nell'aggregazione composta, pertanto è consigliabile misurarne l'accuratezza con un dominio composito.  
   

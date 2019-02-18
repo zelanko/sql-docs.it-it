@@ -12,15 +12,15 @@ f1_keywords:
 - sql13.dqs.administration.configuration.createDirectRDS.f1
 - sql13.dqs.admin.config.rds.f1
 ms.assetid: fae745e7-57a7-4cbc-8979-56ea8e392e4e
-author: douglaslMS
-ms.author: douglasl
+author: leolimsft
+ms.author: lle
 manager: craigg
-ms.openlocfilehash: bd0987cfe98f8cb72531bf807494af1867646dcf
-ms.sourcegitcommit: c19696d3d67161ce78aaa5340964da3256bf602d
+ms.openlocfilehash: b0246f3aa83dace474b482d2998206b8418738a0
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/29/2018
-ms.locfileid: "52617235"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56030782"
 ---
 # <a name="configure-dqs-to-use-reference-data"></a>Configurazione di DQS per l'utilizzo di dati di riferimento
 
@@ -83,7 +83,7 @@ ms.locfileid: "52617235"
   
  È ora possibile utilizzare i servizi dati di riferimento dal provider del servizio dati di riferimento di terze parti online diretto appena aggiunto in DQS.  
   
-##  <a name="FollowUp"></a> Completamento: Dopo avere Configurato DQS per l'utilizzo dei dati di riferimento  
+##  <a name="FollowUp"></a> Completamento: fasi successive alla configurazione di DQS per l'uso dei dati di riferimento  
  È ora necessario eseguire il mapping dei domini della Knowledge Base richiesti ai dati di riferimento disponibili dai provider di dati appena configurati. Per eseguire tale operazione, vedere [Collegare un dominio o un dominio composito ai dati di riferimento](../data-quality-services/attach-domain-or-composite-domain-to-reference-data.md).  
   
   

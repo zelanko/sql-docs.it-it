@@ -26,17 +26,17 @@ ms.assetid: 7033aac9-a944-4156-9ff4-6ef65717a28b
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 20099478d1d2dd047b1f17fe963c8fc45b1418fa
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f734607cffa14f9714a7c165add067600cfa3447
+ms.sourcegitcommit: 5ef24b3229b4659ede891b0af2125ef22bd94b96
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47670272"
+ms.lasthandoff: 02/06/2019
+ms.locfileid: "55760124"
 ---
 # <a name="set-statistics-io-transact-sql"></a>SET STATISTICS IO (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  Impone in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] la visualizzazione di informazioni sulla quantità di attività del disco generata da istruzioni [!INCLUDE[tsql](../../includes/tsql-md.md)].  
+  Determina la visualizzazione in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] di informazioni sulla quantità di attività del disco generata dalle istruzioni [!INCLUDE[tsql](../../includes/tsql-md.md)].  
   
  ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -48,22 +48,22 @@ SET STATISTICS IO { ON | OFF }
 ```  
   
 ## <a name="remarks"></a>Remarks  
- Quando l'opzione STATISTICS IO è impostata su ON, vengono visualizzate informazioni statistiche. Quando è impostata su OFF, le informazioni non vengono visualizzate.  
+ Quando STATISTICS IO è impostato su ON, le informazioni statistiche vengono visualizzate, mentre quando è impostato su OFF le informazioni non vengono visualizzate.   
   
- Quando l'opzione viene impostata su ON, tutte le successive istruzioni [!INCLUDE[tsql](../../includes/tsql-md.md)] restituiscono le informazioni statistiche fino a quando l'opzione non viene reimpostata su OFF.  
+ Dopo che questa opzione è stata impostata su ON, tutte le istruzioni [!INCLUDE[tsql](../../includes/tsql-md.md)] restituiscono le informazioni statistiche fino a quando l'opzione non viene impostata su OFF.  
   
  Nella tabella seguente viene visualizzato un elenco di elementi di output e la relativa descrizione.  
   
 |Elemento di output|Significato|  
 |-----------------|-------------|  
 |**Tabella**|Nome della tabella.|  
-|**Scan count**|Numero di ricerche/analisi avviate dopo aver raggiunto il livello foglia in qualsiasi direzione per recuperare tutti i valori in modo da costruire il set di dati finale per l'output.<br /><br /> Il conteggio analisi è 0 se l'indice utilizzato è univoco o cluster in una chiave primaria e si cerca un unico valore. Ad esempio `WHERE Primary_Key_Column = <value>`.<br /><br /> Il conteggio analisi è 1 quando si cerca un valore usando un indice cluster non univoco definito in una colonna chiave non primaria. Questa operazione viene effettuata per verificare valori duplicati per il valore di chiave che si sta cercando. Ad esempio `WHERE Clustered_Index_Key_Column = <value>`.<br /><br /> Il conteggio analisi è N quando N è il numero di ricerche/analisi differenti avviate verso sinistra o destra nel livello foglia dopo aver individuato un valore di chiave utilizzando la chiave di indice.|  
+|**Scan count**|Numero di ricerche o analisi avviate dopo aver raggiunto il livello foglia in qualsiasi direzione per recuperare tutti i valori al fine di costruire il set di dati finale per l'output.<br /><br /> Il conteggio analisi è 0 se l'indice usato è un indice univoco o cluster in una chiave primaria e se si sta cercando un solo valore. Ad esempio, `WHERE Primary_Key_Column = <value>`.<br /><br /> Il conteggio analisi è 1 quando si cerca un valore usando un indice cluster non univoco definito in una colonna chiave non primaria. Questo processo viene eseguito per verificare la presenza di valori duplicati per il valore di chiave che si sta cercando. Ad esempio, `WHERE Clustered_Index_Key_Column = <value>`.<br /><br /> Il conteggio analisi è N quando N è il numero delle diverse ricerche o analisi avviate sul lato sinistro o destro al livello foglia dopo aver individuato un valore di chiave usando la chiave dell'indice.|  
 |**logical reads**|Numero di pagine lette dalla cache dei dati.|  
 |**physical reads**|Numero di pagine lette dal disco.|  
 |**read-ahead reads**|Numero di pagine inserite nella cache per la query.|  
 |**lob logical reads**|Numero di pagine lette dalla cache dei dati di tipo valore **text**, **ntext**, **image** o di grandi dimensioni (**varchar(max)**, **nvarchar(max)**, **varbinary(max)**).|  
-|**lob physical reads**|Numero di pagine lette dal disco di tipo valore **text**, **ntext**, **image** o di grandi dimensioni.|  
-|**lob read-ahead reads**|Numero di pagine inserite nella cache per la query di tipo valore **text**, **ntext**, **image** o di grandi dimensioni.|  
+|**lob physical reads**|Numero di pagine di tipo **text**, **ntext**, **image** o di tipo valore di grandi dimensioni lette dal disco.|  
+|**lob read-ahead reads**|Numero di pagine di tipo **text**, **ntext**, **image** o di tipo valore di grandi dimensioni inserite nella cache per la query.|  
   
  L'opzione SET STATISTICS IO viene impostata in fase di esecuzione, non in fase di analisi.  
   
@@ -71,7 +71,7 @@ SET STATISTICS IO { ON | OFF }
 >  Durante il recupero di colonne LOB da parte di istruzioni Transact-SQL, alcune operazioni di recupero possono richiedere più volte l'attraversamento dell'albero LOB. Per questo motivo SET STATISTICS IO può segnalare un numero di letture logiche superiore al previsto.  
   
 ## <a name="permissions"></a>Permissions  
- Per utilizzare l'opzione SET STATISTICS IO, gli utenti devono disporre delle autorizzazioni appropriate per eseguire l'istruzione [!INCLUDE[tsql](../../includes/tsql-md.md)]. Non sarà necessario disporre dell'autorizzazione SHOWPLAN.  
+ Per utilizzare l'opzione SET STATISTICS IO, gli utenti devono disporre delle autorizzazioni appropriate per eseguire l'istruzione [!INCLUDE[tsql](../../includes/tsql-md.md)]. L'autorizzazione SHOWPLAN non è necessaria.  
   
 ## <a name="examples"></a>Esempi  
  Nell'esempio seguente viene illustrato il numero di letture logiche e fisiche utilizzate da [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] per l'elaborazione delle istruzioni.  

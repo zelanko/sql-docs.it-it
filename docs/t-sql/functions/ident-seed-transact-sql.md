@@ -20,19 +20,19 @@ ms.assetid: e4cb8eb8-affb-4810-a8a9-0110af3c247a
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 336a961a07b7d1f1ce9be2e1abc751f1cbc787eb
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ef3bfdbb21839bd7f4f60ba1a731e39ec1f42c1f
+ms.sourcegitcommit: bbdf51f0d56acfa6bcc4a5c4fe2c9f3cd4225edc
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47711979"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56079307"
 ---
 # <a name="identseed-transact-sql"></a>IDENT_SEED (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  Restituisce il valore di inizializzazione originale, come dato di tipo **numeric**(**@@** MAXPRECISION,0), specificato durante la creazione di una colonna Identity in una tabella o una vista. La modifica del valore corrente di una colonna Identity utilizzando DBCC CHECKIDENT non comporta anche la modifica del valore restituito da questa funzione.  
+  Restituisce il valore di inizializzazione originale, come dato di tipo **numeric**(**@@** MAXPRECISION,0), specificato durante la creazione di una colonna Identity in una tabella o una vista. La modifica del valore corrente di una colonna Identity usando DBCC CHECKIDENT non comporta anche la modifica del valore restituito da questa funzione.  
   
- ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icona di collegamento a un articolo](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un articolo")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -49,9 +49,9 @@ IDENT_SEED ( 'table_or_view' )
  **numeric**  
   
 ## <a name="exceptions"></a>Eccezioni  
- Restituisce NULL in caso di errore o se un chiamante non dispone dell'autorizzazione necessaria per visualizzare l'oggetto.  
+ Restituisce NULL in caso di errore o se un chiamante non ha l'autorizzazione necessaria per visualizzare l'oggetto.  
   
- In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] un utente può visualizzare esclusivamente i metadati delle entità a sicurezza diretta di cui è proprietario o per cui ha ricevuto un'autorizzazione. Di conseguenza, le funzioni predefinite di creazione dei metadati come IDENT_SEED possono restituire NULL se l'utente non dispone di alcuna autorizzazione per l'oggetto. Per altre informazioni, vedere [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
+ In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] un utente può visualizzare solo i metadati delle entità a protezione diretta di cui è proprietario o per cui ha ricevuto un'autorizzazione. Le funzioni predefinite di creazione dei metadati, ad esempio IDENT_SEED, non potranno quindi restituire NULL se l'utente non ha autorizzazioni per l'oggetto. Per altre informazioni, vedere [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
   
 ## <a name="examples"></a>Esempi  
   
@@ -65,8 +65,8 @@ SELECT IDENT_SEED('Person.Address') AS Identity_Seed;
 GO  
 ```  
   
-### <a name="b-returning-the-seed-value-from-multiple-tables"></a>B. Restituzione del valore di inizializzazione da più tabelle  
- Nell'esempio seguente vengono restituite le tabelle del database [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] che includono una colonna Identity con un valore di inizializzazione.  
+### <a name="b-returning-the-seed-value-from-multiple-tables"></a>b. Restituzione del valore di inizializzazione da più tabelle  
+ L'esempio seguente restituisce le tabelle del database [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] che includono una colonna Identity con un valore di inizializzazione.  
   
 ```  
 USE AdventureWorks2012;  
@@ -99,5 +99,4 @@ dbo                AWBuildVersion                         1
  [IDENT_INCR &#40;Transact-SQL&#41;](../../t-sql/functions/ident-incr-transact-sql.md)   
  [DBCC CHECKIDENT &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-checkident-transact-sql.md)   
  [sys.identity_columns &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-identity-columns-transact-sql.md)  
-  
   

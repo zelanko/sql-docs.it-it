@@ -8,15 +8,15 @@ ms.reviewer: ''
 ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: ef217717-6d05-443e-af26-44dc745a349d
-author: douglaslMS
-ms.author: douglasl
+author: leolimsft
+ms.author: lle
 manager: craigg
-ms.openlocfilehash: a491ae673059d9373067428ef226d5819a7a34ad
-ms.sourcegitcommit: c19696d3d67161ce78aaa5340964da3256bf602d
+ms.openlocfilehash: 92112b0211536bcb964d71e538a92311b2579117
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/29/2018
-ms.locfileid: "52617701"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56027132"
 ---
 # <a name="reference-data-services-in-dqs"></a>Servizi dati di riferimento in DQS
 
@@ -57,7 +57,7 @@ ms.locfileid: "52617701"
 ##  <a name="HowToCleanse"></a> Come pulire i dati utilizzando i dati di riferimento  
  La pulizia dei dati in DQS utilizzando dati di riferimento prevede i tre passaggi seguenti:  
   
-1.  **Configurazione dei dettagli del provider di dati di riferimento in DQS**: prima che sia possibile utilizzare dati di riferimento in DQS, è necessario configurare i dettagli del servizio dati di riferimento in DQS.  
+1.  **Configurazione dei dettagli del provider di dati di riferimento in DQS**: prima di poter usare dati di riferimento in DQS, è necessario configurare i dettagli del servizio dati di riferimento in DQS.  
   
     1.  Se si utilizza Marketplace, fornire una chiave account Marketplace valida, passare alla categoria dati [Data Quality Services](https://go.microsoft.com/fwlink/?LinkId=227587) in Marketplace, quindi effettuare la sottoscrizione ai provider desiderati.  
   
@@ -67,7 +67,7 @@ ms.locfileid: "52617701"
   
 2.  **Eseguire il mapping di un dominio/dominio composito in una Knowledge Base al servizio dati di riferimento**: eseguire il mapping di un dominio/dominio composito al servizio dati di riferimento appropriato sottoscritto/aggiunto nel passaggio 1.  
   
-3.  **Utilizzare i domini con mapping per l'attività Pulizia in un progetto Data Quality**: durante la creazione di un progetto Data Quality per l'attività **Pulizia** , selezionare la Knowledge Base che contiene i domini/domini compositi di cui è stato eseguito il mapping ai servizi dati di riferimento nel passaggio 2 ed eseguire l'attività di pulizia.  
+3.  **Usare i domini con mapping per l'attività Pulizia in un progetto Data Quality**: durante la creazione di un progetto Data Quality per l'attività **Pulizia**, selezionare la Knowledge Base che contiene i domini/domini compositi di cui è stato eseguito il mapping ai servizi dati di riferimento nel passaggio 2 ed eseguire l'attività di pulizia.  
   
 ## <a name="related-tasks"></a>Attività correlate  
   

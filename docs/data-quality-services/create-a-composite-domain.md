@@ -11,15 +11,15 @@ f1_keywords:
 - sql13.dqs.kb.createcd.f1
 - sql13.dqs.dm.cdproperties.f1
 ms.assetid: c7f0bd84-a02e-4a81-885d-985e6415c499
-author: douglaslMS
-ms.author: douglasl
+author: leolimsft
+ms.author: lle
 manager: craigg
-ms.openlocfilehash: 81173982e9c44b135a3ba98312839ac799461988
-ms.sourcegitcommit: c19696d3d67161ce78aaa5340964da3256bf602d
+ms.openlocfilehash: 6aae15d10385a3668a247db8482615d0510155b8
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/29/2018
-ms.locfileid: "52616861"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56026212"
 ---
 # <a name="create-a-composite-domain"></a>Creazione di un dominio composito
 
@@ -38,7 +38,7 @@ ms.locfileid: "52616861"
   
 ###  <a name="Security"></a> Sicurezza  
   
-####  <a name="Permissions"></a> Autorizzazioni  
+####  <a name="Permissions"></a> Permissions  
  È necessario disporre del ruolo dqs_kb_editor o dqs_administrator nel database DQS_MAIN per creare un dominio composito.  
   
 ##  <a name="ParsingKnowledgeDiscoveryActivity"></a> Creazione di un dominio composito nell'attività di individuazione delle informazioni  
@@ -87,13 +87,13 @@ ms.locfileid: "52616861"
   
     -   **In ordine**: analizza i valori del campo in base all'ordine dei domini nel dominio composito. Il primo valore verrà incluso nel primo dominio, il secondo valore nel secondo e così via.  
   
-    -   **Delimitatori**: analizza i valori del campo in base al delimitatore selezionato dai pulsanti di opzione visualizzati quando viene selezionata l'opzione Delimitatori. Il valore può essere **Tabulazione**, **Punto e virgola**, **Virgola**, **Spazio**o **Altro**. Se il valore è **Altro**, immettere il valore che servirà come delimitatore.  
+    -   **Delimitatori**: analizza i valori del campo in base al delimitatore selezionato con i pulsanti di opzione visualizzati quando viene selezionata l'opzione Delimitatori. Il valore può essere **Tabulazione**, **Punto e virgola**, **Virgola**, **Spazio**o **Altro**. Se il valore è **Altro**, immettere il valore che servirà come delimitatore.  
   
 5.  Se è stato selezionato **Delimitatori** per il metodo di analisi, è inoltre possibile selezionare **Usa analisi Knowledge Base**. Per altre informazioni, vedere [Knowledge-Based Parsing](#KnowledgeBaseParsing).  
   
 6.  Fare clic su **Fine** per completare l'attività di gestione del dominio, come descritto in [Sospensione dell'attività di gestione del dominio](https://msdn.microsoft.com/library/ab6505ad-3090-453b-bb01-58435e7fa7c0).  
   
-##  <a name="FollowUp"></a> Completamento: Dopo la creazione di un dominio composito  
+##  <a name="FollowUp"></a> Completamento: dopo la creazione di un dominio composito  
  Dopo avere creato un dominio composito, è possibile eseguire ulteriori attività di gestione sul dominio, quali l'individuazione delle informazioni per aggiungere informazioni o l'aggiunta di criteri di corrispondenza al dominio. Per altre informazioni, vedere [Eseguire l'individuazione delle informazioni](../data-quality-services/perform-knowledge-discovery.md), [Gestione di un dominio](../data-quality-services/managing-a-domain.md) o [Creare criteri di corrispondenza](../data-quality-services/create-a-matching-policy.md).  
   
 ##  <a name="KnowledgeBaseParsing"></a> Knowledge-Based Parsing  

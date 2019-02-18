@@ -1,7 +1,7 @@
 ---
 title: sql_variant (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 9/12/2017
+ms.date: 09/12/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -21,12 +21,12 @@ ms.assetid: 01229779-8bc1-4c7d-890a-8246d4899250
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 004562a308419d2be70afd13defa617c26c0b0d4
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 4baff479bdd7145cc2fd65f07fd2c476a20311a5
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47785892"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56013502"
 ---
 # <a name="sqlvariant-transact-sql"></a>sql_variant (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -93,7 +93,7 @@ Il tipo di dati **sql_variant** è incluso nella parte iniziale dell'elenco dell
 Per i confronti **sql_variant** vengono applicate le regole seguenti:
 -   Nei confronti tra valori **sql_variant** con tipi di dati di base diversi appartenenti a gruppi di tipi di dati diversi, il valore appartenente al gruppo di tipi di dati che occupa un livello più alto nella gerarchia viene considerato il valore maggiore.  
 -   Nei confronti di valori **sql_variant** con tipi di dati di base diversi appartenenti allo stesso gruppo, il valore del tipo di dati di base che appartiene a un gruppo di livello inferiore nella gerarchia viene convertito in modo implicito nell'altro tipo di dati, dopodiché viene eseguito il confronto.  
--   Quando vengono confrontati i valori **sql_variant** dei tipi di dati **char**, **varchar**, **nchar** o **nvarchar**, vengono messe a confronto per prime le regole di confronto in base ai criteri seguenti: LCID, versione LCID, flag di confronto e ID di ordinamento. Per ognuno di questi criteri il confronto viene eseguito con valori interi e nell'ordine elencato. Se tutti questi criteri sono uguali, i valori effettivi della stringa vengono confrontati in base alle regole di confronto.  
+-   Quando vengono confrontati i valori **sql_variant** dei tipi di dati **char**, **varchar**, **nchar** o **nvarchar**, le relative regole di confronto vengono prima confrontate in base ai criteri seguenti: LCID, versione LCID, flag di confronto e ID di ordinamento. Per ognuno di questi criteri il confronto viene eseguito con valori interi e nell'ordine elencato. Se tutti questi criteri sono uguali, i valori effettivi della stringa vengono confrontati in base alle regole di confronto.  
   
 ## <a name="converting-sqlvariant-data"></a>Conversione di dati sql_variant  
 Nel caso del tipo di dati **sql_variant**, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] supporta la conversione implicita in **sql_variant** degli oggetti con tipi di dati diversi. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] non supporta tuttavia le conversioni implicite dal tipo di dati **sql_variant** in oggetti con un tipo di dati diverso.
@@ -136,7 +136,7 @@ decimal      8           2
 (1 row(s) affected)  
 ```  
   
-### <a name="b-using-a-sqlvariant-as-a-variable"></a>B. Uso di un tipo sql_variant come variabile   
+### <a name="b-using-a-sqlvariant-as-a-variable"></a>b. Uso di un tipo sql_variant come variabile   
  Nell'esempio seguente viene creata una variabile con il tipo di dati sql_variant e in seguito vengono recuperate le informazioni di `SQL_VARIANT_PROPERTY` su una variabile denominata @v1.  
   
 ```sql    

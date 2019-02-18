@@ -10,15 +10,15 @@ ms.topic: conceptual
 f1_keywords:
 - sql13.dqs.dm.domainproperties.f1
 ms.assetid: 8a3c88ca-31d6-4f75-9aca-cf027c6d9845
-author: douglaslMS
-ms.author: douglasl
+author: leolimsft
+ms.author: lle
 manager: craigg
-ms.openlocfilehash: bbc9e37e328e917b02177d99846806c883d74944
-ms.sourcegitcommit: c19696d3d67161ce78aaa5340964da3256bf602d
+ms.openlocfilehash: 27e16c4c353aecb14e29e590bf42241078e0cf11
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/29/2018
-ms.locfileid: "52617221"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56029982"
 ---
 # <a name="set-domain-properties"></a>Impostare le proprietà di un dominio
 
@@ -44,7 +44,7 @@ ms.locfileid: "52617221"
   
 3.  Fare clic su **Fine** per completare l'attività di gestione del dominio, come descritto in [Sospensione dell'attività di gestione del dominio](https://msdn.microsoft.com/library/ab6505ad-3090-453b-bb01-58435e7fa7c0).  
   
-##  <a name="FollowUp"></a> Completamento: fasi successive all'impostazione delle proprietà di un dominio  
+##  <a name="FollowUp"></a> Completamento: fasi successive all'impostazione delle proprietà del dominio  
  Dopo avere impostato le proprietà di un dominio, è possibile eseguire ulteriori attività di gestione del dominio, quali l'individuazione delle informazioni per aggiungere informazioni al dominio o l'aggiunta di criteri di corrispondenza al dominio. Per altre informazioni, vedere [Eseguire l'individuazione delle informazioni](../data-quality-services/perform-knowledge-discovery.md), [Gestione di un dominio](../data-quality-services/managing-a-domain.md) o [Creare criteri di corrispondenza](../data-quality-services/create-a-matching-policy.md).  
   
 ##  <a name="Properties"></a> Proprietà dominio  
@@ -53,7 +53,7 @@ ms.locfileid: "52617221"
  Dopo la creazione di un dominio è possibile modificarne il nome o la descrizione. Il nome del dominio deve essere univoco per la Knowledge Base. La descrizione può contenere fino a 256 caratteri.  
   
 ###  <a name="Type"></a> Tipo di dati  
- Quando si crea il dominio, selezionare uno dei tipi di dati seguenti per i valori nel dominio: **Stringa** (valore predefinito), **Data**, **Intero**o **Decimale**. Dopo avere creato il dominio, è possibile visualizzare il tipo di dati ma non modificarli. Tramite il tipo di dati selezionato per un dominio viene definito il tipo di dati di origine di cui è possibile eseguire il mapping al dominio. Per altre informazioni sui tipi di dati supportati per ognuno dei quattro tipi di dati del dominio in DQS, vedere [Tipi di dati di SQL Server e SSIS supportati per i domini DQS](../data-quality-services/supported-sql-server-and-ssis-data-types-for-dqs-domains.md).  
+ Quando si crea il dominio, selezionare uno dei seguenti tipi di dati per i valori nel dominio: **Stringa** (valore predefinito), **Data**, **Intero** o **Decimale**. Dopo avere creato il dominio, è possibile visualizzare il tipo di dati ma non modificarli. Tramite il tipo di dati selezionato per un dominio viene definito il tipo di dati di origine di cui è possibile eseguire il mapping al dominio. Per altre informazioni sui tipi di dati supportati per ognuno dei quattro tipi di dati del dominio in DQS, vedere [Tipi di dati di SQL Server e SSIS supportati per i domini DQS](../data-quality-services/supported-sql-server-and-ssis-data-types-for-dqs-domains.md).  
   
 ###  <a name="Leading"></a> Utilizza valori iniziali  
  Selezionare questa casella di controllo per specificare che venga restituito il valore iniziale in un gruppo di sinonimi anziché un valore di cui è sinonimo. Deselezionare **Utilizza valori iniziali** per specificare che ogni valore di sinonimo verrà restituito nella forma corretta e non verrà sostituito dal valore iniziale per il gruppo.  

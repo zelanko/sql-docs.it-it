@@ -16,17 +16,17 @@ ms.assetid: 311f682f-7f1b-43b6-9ea0-24e36b64f73a
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 663733493bba7e96d8bb55519013128fd62a2eaf
-ms.sourcegitcommit: 5d6e1c827752c3aa2d02c4c7653aefb2736fffc3
+ms.openlocfilehash: bc02cf0c9076f036bb2b199e4eb0627103e4c03b
+ms.sourcegitcommit: f8ad5af0f05b6b175cd6d592e869b28edd3c8e2c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/10/2018
-ms.locfileid: "49072235"
+ms.lasthandoff: 02/07/2019
+ms.locfileid: "55807451"
 ---
 # <a name="at-time-zone-transact-sql"></a>AT TIME ZONE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
-  Converte un elemento *inputdate* nel valore *datetimeoffset* corrispondente nel fuso orario di destinazione. Se *inputdate* viene specificato senza informazioni relative alla differenza, la funzione applica la differenza di fuso orario presumendo che il valore di *inputdate* venga specificato nel fuso orario di destinazione. Se *inputdate* viene specificato come un valore *datetimeoffset*, la clausola **AT TIME ZONE** lo converte nel fuso orario di destinazione usando le regole di conversione del fuso orario.  
+  Converte un elemento *inputdate* nel valore *datetimeoffset* corrispondente nel fuso orario di destinazione. Quando *inputdate* viene specificato senza informazioni relative alla differenza, la funzione applica la differenza del fuso orario presumendo che *inputdate* sia nel fuso orario di destinazione. Se *inputdate* viene specificato come un valore *datetimeoffset*, la clausola **AT TIME ZONE** lo converte nel fuso orario di destinazione usando le regole di conversione del fuso orario.  
   
  L'implementazione di **AT TIME ZONE** si basa su un meccanismo di Windows per convertire i valori **datetime** tra fusi orari.  
   
@@ -43,18 +43,18 @@ inputdate AT TIME ZONE timezone
  Espressione che può essere risolta in un valore **smalldatetime**, **datetime**, **datetime2**, o **datetimeoffset**.  
   
  *timezone*  
- Nome del fuso orario di destinazione. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] si basa sui fusi orari che vengono archiviati nel Registro di sistema di Windows. Tutti i fusi orari installati nel computer sono archiviati nell'hive del Registro di sistema seguente: **KEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Time Zones**. Un elenco dei fusi orari installati viene anche esposto attraverso la vista [sys.time_zone_info &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-time-zone-info-transact-sql.md).  
+ Nome del fuso orario di destinazione. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] si basa sui fusi orari che vengono archiviati nel Registro di sistema di Windows. I fusi orari installati nel computer sono archiviati nell'hive del Registro di sistema seguente: **KEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Time Zones**. Un elenco dei fusi orari installati viene anche esposto attraverso la vista [sys.time_zone_info &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-time-zone-info-transact-sql.md).  
   
 ## <a name="return-types"></a>Tipi restituiti  
- Restituisce il tipo di dati di **datetimeoffset**  
+ Restituisce il tipo di dati di **datetimeoffset**.  
   
 ## <a name="return-value"></a>Valore restituito  
  Il valore **datetimeoffset** nel fuso orario di destinazione.  
   
 ## <a name="remarks"></a>Remarks  
- **AT TIME ZONE** applica le regole specifiche per la conversione di valori di input nei tipi di dati **smalldatetime**, **datetime** e **datetime2** che rientrano in un intervallo che è interessato dalla modifica dell'ora legale:  
+ **AT TIME ZONE** applica regole specifiche per la conversione dei valori di input in tipi di dati **smalldatetime**, **datetime** e **datetime2** che rientrano in un intervallo interessato da un passaggio all'ora legale (DST):  
   
--   Quando l'ora viene spostata in avanti, c'è uno scostamento nell'ora locale la cui durata dipende dalla durata della regolazione dell'orologio (in genere 1 ora, ma può essere anche 30 o 45 minuti, a seconda del fuso orario). In tal caso, i singoli momenti contenuti in questo scostamento vengono convertiti con la differenza *dopo* il cambio dell'ora.  
+-   Quando l'orologio viene spostato in avanti, vi è uno scostamento nell'ora locale uguale alla durata della regolazione dell'orologio. Questa durata è in genere di 1 ora, ma può essere di 30 o 45 minuti, a seconda del fuso orario. I singoli momenti contenuti in questo scostamento vengono convertiti con la differenza *dopo* il passaggio all'ora legale.  
   
     ```  
     /*  
@@ -133,7 +133,7 @@ SELECT SalesOrderID, OrderDate,
 FROM Sales.SalesOrderHeader;  
 ```  
   
-### <a name="b-convert-values-between-different-time-zones"></a>B. Convertire i valori tra fusi orari diversi  
+### <a name="b-convert-values-between-different-time-zones"></a>b. Convertire i valori tra fusi orari diversi  
  Nell'esempio seguente vengono convertiti valori tra fusi orari diversi:  
   
 ```  
@@ -169,5 +169,4 @@ FOR SYSTEM_TIME AS OF @ASOF;
 ## <a name="see-also"></a>Vedere anche  
  [Tipi di data e ora](../../t-sql/data-types/date-and-time-types.md)   
  [Funzioni e tipi di dati di data e ora &#40;Transact-SQL&#41;](../../t-sql/functions/date-and-time-data-types-and-functions-transact-sql.md)  
-  
   

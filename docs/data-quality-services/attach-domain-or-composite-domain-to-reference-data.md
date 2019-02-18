@@ -11,15 +11,15 @@ f1_keywords:
 - sql13.dqs.dm.refdata.f1
 - sql13.dqs.dm.refcatalog.f1
 ms.assetid: 36af981c-d0d0-4dc6-afe5-bbb3c97845dc
-author: douglaslMS
-ms.author: douglasl
+author: leolimsft
+ms.author: lle
 manager: craigg
-ms.openlocfilehash: 358b1779ebc24f17035cb50eda77c7249456ff9a
-ms.sourcegitcommit: c19696d3d67161ce78aaa5340964da3256bf602d
+ms.openlocfilehash: 6b3b52b0fbdfcd5ccdd7c841bf1a7b73f54857b8
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/29/2018
-ms.locfileid: "52617082"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56010722"
 ---
 # <a name="attach-domain-or-composite-domain-to-reference-data"></a>Collegare un dominio o un dominio composito ai dati di riferimento
 
@@ -35,7 +35,7 @@ ms.locfileid: "52617082"
   
  Uno schema di servizio dati di riferimento può contenere una colonna obbligatoria di cui è necessario eseguire il mapping con il dominio appropriato qualora si scegliesse di utilizzare il servizio dati di riferimento. La colonna obbligatoria in uno schema dati di riferimento viene identificata con "(M)" per il nome della colonna. Ad esempio, **AddressLine** è la colonna di schema obbligatoria in **Melissa Data - Address Data** e **CompanyName** è la colonna di schema obbligatoria in **Digital Trowel Inc. - Us companies and professional data for SQL users**.  
   
- In questo argomento, si creeranno quattro domini: **Riga indirizzo**, **Città**, **Stato**e **CAP**in un dominio composito, **Verifica indirizzo**, collegare il dominio composito al servizio dati di riferimento **Melissa Data - Controllo indirizzo**, quindi eseguire il mapping dei singoli domini all'interno del dominio composito alle colonne appropriate nello schema del servizio dati di riferimento.  
+ In questo argomento si creeranno quattro domini: **Riga indirizzo**, **Città**, **Stato**e **CAP** In un dominio composito, **Verifica indirizzo**, collegare il dominio composito al servizio dati di riferimento **Melissa Data - Controllo indirizzo**, quindi eseguire il mapping dei singoli domini all'interno del dominio composito alle colonne appropriate nello schema del servizio dati di riferimento.  
   
 ## <a name="before-you-begin"></a>Prima di iniziare  
   
@@ -55,7 +55,7 @@ ms.locfileid: "52617082"
   
 3.  Nella schermata **Nuova Knowledge Base** digitare un nome per la nuova Knowledge Base, fare clic sull'attività **Gestione dominio** , quindi fare clic su **Crea**.  
   
-4.  Nello schermata **Gestione dominio** fare clic sull'icona **Crea un dominio** per creare un dominio. Creare i quattro domini seguenti: **Riga indirizzo**, **Città**, **Stato**e **CAP**.  
+4.  Nello schermata **Gestione dominio** fare clic sull'icona **Crea un dominio** per creare un dominio. Creare i quattro domini seguenti: **Riga indirizzo**, **Città**, **Stato** e **CAP**.  
   
 5.  Fare clic sull'icona **Crea un dominio composito** per creare un dominio composito. Nella finestra di dialogo **Crea un dominio composito** digitare **Verifica indirizzo** nella casella **Nome dominio composito** e includervi tutti i domini creati nel passaggio 3. Fare clic su **OK**.  
   

@@ -8,15 +8,15 @@ ms.reviewer: ''
 ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: c8f3fbae-02c4-464d-a35c-7108f48c58cb
-author: douglaslMS
-ms.author: douglasl
+author: leolimsft
+ms.author: lle
 manager: craigg
-ms.openlocfilehash: 2ee52cac510d4166666d9f93fbb31da2bcde4fef
-ms.sourcegitcommit: c19696d3d67161ce78aaa5340964da3256bf602d
+ms.openlocfilehash: 343a5ea33ed805cc3e5f2c4ce6e91b7546276e00
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/29/2018
-ms.locfileid: "52616641"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56015240"
 ---
 # <a name="upgrade-dqs-databases-schema-after-installing-sql-server-update"></a>Aggiornare lo schema dei database DQS dopo l'installazione dell'aggiornamento di SQL Server
 
@@ -31,7 +31,7 @@ An error occurred in the Microsoft .NET Framework while trying to load assembly 
  L'aggiornamento dello schema dei database DQS non influisce sui dati esistenti nei database DQS (Knowledge Base, progetti Data Quality e risultati esportati nel database DQS_STAGING_DATA). Tuttavia, è necessario eseguire il backup dei database DQS prima di aggiornare il relativo schema per evitare eventuali perdite di dati accidentali durante l'aggiornamento dello schema. Per altre informazioni sul ripristino dei database DQS, vedere [Backup e ripristino di database DQS](../../data-quality-services/backing-up-and-restoring-dqs-databases.md).  
   
 > [!NOTE]  
->  Per la maggior parte degli aggiornamenti di SQL Server è richiesto un aggiornamento allo schema dei database DQS. Per informazioni sugli aggiornamenti di SQL Server per i quali è richiesto un aggiornamento allo schema dei database DQS, vedere il grafico nel passaggio 1.A in [Upgrade DQS: Installing Cumulative Updates or Hotfix Patches on Data Quality Services](https://go.microsoft.com/fwlink/?LinkID=251565)(Aggiornare DQS: installazione di aggiornamenti cumulativi o di patch di hotfix in Data Quality Services).  
+>  Per la maggior parte degli aggiornamenti di SQL Server è richiesto un aggiornamento allo schema dei database DQS. Per informazioni sugli aggiornamenti di SQL Server per i quali è richiesto un aggiornamento allo schema dei database DQS, vedere il grafico nel passaggio 1.A in [Upgrade DQS: Installing Cumulative Updates or Hotfix Patches on Data Quality Services](https://go.microsoft.com/fwlink/?LinkID=251565) (Aggiornare DQS: installazione di aggiornamenti cumulativi o di patch di hotfix in Data Quality Services).  
   
 ## <a name="prerequisites"></a>Prerequisites  
   
@@ -64,7 +64,7 @@ An error occurred in the Microsoft .NET Framework while trying to load assembly 
 ## <a name="next-steps"></a>Next Steps  
  Accedere al server Data Quality aggiornato da un'applicazione client Data Quality.  
   
- Per altre informazioni sull'aggiornamento dello schema dei database DQS in seguito all'installazione degli aggiornamenti di SQL Server e dei relativi passaggi di risoluzione dei problemi, vedere [Upgrade DQS: Installing Cumulative Updates or Hotfix Patches on Data Quality Services](https://go.microsoft.com/fwlink/?LinkID=251565)(Aggiornare DQS: installazione di aggiornamenti cumulativi o di patch di hotfix in Data Quality Services).  
+ Per altre informazioni sull'aggiornamento dello schema dei database DQS in seguito all'installazione degli aggiornamenti di SQL Server e dei relativi passaggi di risoluzione dei problemi, vedere [Upgrade DQS: Installing Cumulative Updates or Hotfix Patches on Data Quality Services](https://go.microsoft.com/fwlink/?LinkID=251565) (Aggiornare DQS: installazione di aggiornamenti cumulativi o di patch di hotfix in Data Quality Services).  
   
 ## <a name="see-also"></a>Vedere anche  
  [Installare Data Quality Services](../../data-quality-services/install-windows/install-data-quality-services.md)   

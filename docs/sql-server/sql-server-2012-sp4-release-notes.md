@@ -3,7 +3,7 @@ title: Note sulla versione di SQL Server 2012 Service Pack | Microsoft Docs
 ms.prod: sql
 ms.technology: install
 ms.custom: ''
-ms.date: 2/26/2018
+ms.date: 02/26/2018
 ms.reviewer: ''
 ms.topic: conceptual
 ms.assetid: 67cb8b3e-3d82-47f4-840d-0f12a3bff565
@@ -11,12 +11,12 @@ author: craigg-msft
 ms.author: craigg
 manager: jhubbard
 monikerRange: = sql-server-2014 || = sqlallproducts-allversions
-ms.openlocfilehash: 49dea1b469a7e8e79810e4a0ab2da6c40b97d3cb
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: d9e89edc1deb8e16dc69c58a7f959db74c1e6024
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52503267"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56017062"
 ---
 # <a name="sql-server-2012-service-pack-release-notes"></a>Note sulla versione di SQL Server 2012 Service Pack
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -131,14 +131,14 @@ Per un elenco completo dei bug e dei problemi noti risolti in questo Service Pac
 ### <a name="reinstalling--instances-of-sql-server-failover-cluster-fails-if-you-use-the-same-ip-address"></a>La reinstallazione di istanze del cluster di failover di SQL Server non riesce se si usa lo stesso indirizzo IP  
 **Problema:** se si specifica un indirizzo IP non corretto durante un'installazione di un'istanza del cluster di failover di SQL Server, l'installazione non riesce. Dopo la disinstallazione dell'istanza con errori, e in caso di tentativo di reinstallazione dell'istanza del cluster di failover di SQL Server con lo stesso nome istanza, e indirizzo IP corretto, l'installazione non viene completata. L'errore è dovuto al gruppo di risorse duplicate lasciato dall'installazione precedente.  
   
-**Soluzione alternativa:** per risolvere il problema, utilizzare un nome istanza diverso durante la reinstallazione oppure eliminare manualmente il gruppo di risorse prima della reinstallazione. Per altre informazioni, vedere la pagina relativa all' [aggiunta o alla rimozione di nodi in un cluster di failover di SQL Server](failover-clusters/install/add-or-remove-nodes-in-a-sql-server-failover-cluster-setup.md). 
+**Soluzione alternativa:** per risolvere il problema, usare un nome istanza diverso durante la reinstallazione oppure eliminare manualmente il gruppo di risorse prima della reinstallazione. Per altre informazioni, vedere la pagina relativa all' [aggiunta o alla rimozione di nodi in un cluster di failover di SQL Server](failover-clusters/install/add-or-remove-nodes-in-a-sql-server-failover-cluster-setup.md). 
   
 ### <a name="analysis-services-and-powerpivot"></a>Analysis Services e PowerPivot  
   
 ##### <a name="powerpivot-configuration-tool-does-not-create-the-powerpivot-gallery"></a>Tramite lo strumento di configurazione PowerPivot non viene creata la raccolta PowerPivot  
-**Problema:** tramite lo strumento di configurazione PowerPivot viene eseguito il provisioning del sito di un team, pertanto non viene creata alcuna raccolta PowerPivot.  
+**Problema:** lo strumento di configurazione PowerPivot esegue il provisioning di un sito del team, pertanto non viene creata alcuna raccolta PowerPivot.  
   
-**Soluzione alternativa:** creare una nuova applicazione (libreria).  
+**Soluzione alternativa:** creare una nuova app (libreria).  
   
 1.  Verificare che la funzionalità per le raccolte siti **Integrazione della funzionalità di PowerPivot per le raccolte siti** sia attiva.  
   
@@ -154,7 +154,7 @@ Per un elenco completo dei bug e dei problemi noti risolti in questo Service Pac
 ### <a name="reporting-services"></a>Reporting Services  
   
 #### <a name="install-and-configure-sharepoint-server-2013-prior-to-installing-reporting-services"></a>Installare e configurare SharePoint Server 2013 prima di installare Reporting Services  
-**Problema:** completare le operazioni richieste seguenti **prima** di installare SQL Server Reporting Services (SSRS).  
+**Problema:** completare le operazioni seguenti **prima** di installare SQL Server Reporting Services (SSRS).  
   
 1.  Eseguire l'Utilità preparazione prodotti SharePoint 2013.  
   
@@ -165,9 +165,9 @@ Per un elenco completo dei bug e dei problemi noti risolti in questo Service Pac
 **Soluzione alternativa:**  se è stata installata la modalità SharePoint di [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] prima che la farm di SharePoint venisse configurata, la soluzione alternativa richiesta dipenderà dagli altri componenti installati.  
   
 #### <a name="power-view-in-sharepoint-server-2013-requires-microsoftanalysisservicesspclientdll"></a>Per Power View in SharePoint Server 2013 è richiesto il file Microsoft.AnalysisServices.SPClient.dll  
-**Problema:** [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] non installa un componente obbligatorio, ovvero **Microsoft.AnalysisServices.SPClient.dll**. Se si installano SharePoint Server 2013 Preview e [!INCLUDE[ssSQL11SP1](../includes/sssql11sp1-md.md)][!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] in modalità SharePoint ma non si scarica né si installa il pacchetto di installazione di PowerPivot per SharePoint 2013, **spPowerPivot.msi**, Power View non funzionerà e verranno mostrati i sintomi riportati di seguito.  
+**Problema:** [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] non installa un componente obbligatorio, ovvero **Microsoft.AnalysisServices.SPClient.dll**. Se si installano SharePoint Server 2013 Preview e [!INCLUDE[ssSQL11SP1](../includes/sssql11sp1-md.md)][!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] in modalità SharePoint ma non si scarica né si installa il pacchetto di installazione di PowerPivot per SharePoint 2013, **spPowerPivot.msi** , Power View non funzionerà e verranno mostrati i sintomi riportati di seguito.  
   
-**Sintomi:** quando si tenta di creare un report Power View, viene visualizzato un messaggio di errore simile al seguente:  
+**Sintomi:** quando si prova a creare un report Power View, viene visualizzato un messaggio di errore simile al seguente:  
   
 -   "Impossibile creare una connessione all'origine dei dati...''  
   
@@ -178,16 +178,16 @@ Nei dettagli interni dell'errore sarà presente un messaggio simile al seguente:
 **Soluzione alternativa:** installare il pacchetto di installazione di PowerPivot per SharePoint 2013 (**spPowerPivot.msi**) in SharePoint Server 2013. Il pacchetto di installazione è disponibile come parte del Feature Pack di [!INCLUDE[ssSQL11SP1](../includes/sssql11sp1-md.md)] . Il Feature Pack può essere scaricato dall'Area Download [!INCLUDE[msCoName](../includes/msconame-md.md)] in corrispondenza di [SQL Server 2012 SP1 Feature Pack](https://go.microsoft.com/fwlink/p/?LinkID=268266)  
   
 #### <a name="power-view-sheets-in-a-powerpivot-workbook-are-deleted-after-a-scheduled-data-refresh"></a>I fogli di Power View in una cartella di lavoro di PowerPivot vengono eliminati dopo un aggiornamento dati pianificato  
-**Problema**: nel componente aggiuntivo PowerPivot per SharePoint l'uso di **Scheduled Data Refresh** in una cartella di lavoro con Power View comporterà l'eliminazione di tutti i fogli di Power View.  
+**Problema**: nel componente aggiuntivo PowerPivot per SharePoint l'uso dell'**aggiornamento dati pianificato** in una cartella di lavoro con Power View comporterà l'eliminazione di tutti i fogli di Power View.  
   
-**Soluzione alternativa**: per utilizzare **Scheduled Data Refresh** con cartelle di lavoro di Power View, creare una cartella di lavoro di PowerPivot come modello di dati. Creare una cartella di lavoro separata con i fogli di Excel e di Power View tramite cui è possibile collegarsi alla cartella di lavoro di PowerPivot con il modello di dati. È consigliabile pianificare per l'aggiornamento dati solo la cartella di lavoro di PowerPivot con il modello di dati.  
+**Soluzione alternativa**: per usare l'**aggiornamento dati pianificato** con le cartelle di lavoro di Power View, creare una cartella di lavoro di PowerPivot che funge semplicemente da modello di dati. Creare una cartella di lavoro separata con i fogli di Excel e di Power View tramite cui è possibile collegarsi alla cartella di lavoro di PowerPivot con il modello di dati. È consigliabile pianificare per l'aggiornamento dati solo la cartella di lavoro di PowerPivot con il modello di dati.  
   
 ### <a name="data-quality-services"></a>Data Quality Services  
   
 #### <a name="dqs-available-in-the-incorrect-edition-of-sql-server-2012"></a>DQS disponibile nell'edizione errata di SQL Server 2012  
 **Problema:** nella versione [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] RTM la funzionalità Data Quality Services (DQS) è disponibile nelle edizioni di SQL Server diverse da Enterprise, Business Intelligence e Developer. Dopo aver installato SQL Server 2012 SP1, DQS non sarà disponibile in alcuna edizione, ad eccezione di Enterprise, Business Intelligence e Developer.  
   
-**Soluzione alternativa**: se DQS viene usato in un'edizione non supportata, eseguire l'aggiornamento a un'edizione supportata o rimuovere dalle applicazioni la dipendenza da questa funzionalità.  
+**Soluzione alternativa**: se si usa DQS in un'edizione non supportata, eseguire l'aggiornamento a un'edizione supportata o rimuovere dalle applicazioni la dipendenza da questa funzionalità.  
   
 ### <a name="sql-server-express"></a>SQL Server Express  
   

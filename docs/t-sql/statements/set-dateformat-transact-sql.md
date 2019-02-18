@@ -28,17 +28,17 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 6ce3a973f84664769ced971eedb28a1c13faeae8
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 9262ca6e0f2dce018ae925b05e306cc43753a0b7
+ms.sourcegitcommit: 5ef24b3229b4659ede891b0af2125ef22bd94b96
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52519701"
+ms.lasthandoff: 02/06/2019
+ms.locfileid: "55759974"
 ---
 # <a name="set-dateformat-transact-sql"></a>SET DATEFORMAT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-  Imposta l'ordine delle parti della data relative a mese, giorno e anno per l'interpretazione di stringhe di caratteri **date**, **smalldatetime**, **datetime**, **datetime2** e **datetimeoffset**.  
+  Imposta l'ordine delle parti della data relative a mese, giorno e anno per l'interpretazione di stringhe di caratteri della data. Queste stringhe sono di tipo **data**, **smalldatetime**, **datetime**, **datetime2** o **datetimeoffset**.  
   
  Per una panoramica di tutti i tipi di dati e delle funzioni di data e ora [!INCLUDE[tsql](../../includes/tsql-md.md)], vedere [Funzioni e tipi di dati di data e ora &#40;Transact-SQL&#41;](../../t-sql/functions/date-and-time-data-types-and-functions-transact-sql.md).  
   
@@ -55,9 +55,9 @@ SET DATEFORMAT { format | @format_var }
  Ordine delle parti della data. I parametri validi sono **mdy**, **dmy**, **ymd**, **ydm**, **myd** e **dym**. Può essere un valore Unicode o un valore DBCS (Double Byte Character Set) convertito in Unicode. L'impostazione predefinita per l'inglese (Stati Uniti) è **mdy**. Per il valore predefinito di DATEFORMAT di tutte le lingue supportate, vedere [sp_helplanguage &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helplanguage-transact-sql.md).  
   
 ## <a name="remarks"></a>Remarks  
- Il valore di DATEFORMAT **ydm** non è supportato per i tipi di dati **date**, **datetime2** e **datetimeoffset**.  
+ Il valore **ydm** di DATEFORMAT non è supportato per i tipi di dati **date**, **datetime2** e **datetimeoffset**.  
   
- L'effetto dell'impostazione DATEFORMAT sull'interpretazione di stringhe di caratteri potrebbe essere diverso per i valori **datetime** e **smalldatetime** rispetto ai valori **date**, **datetime2** e **datetimeoffset**, a seconda del formato di stringa. Questa impostazione influisce sull'interpretazione di stringhe di caratteri nel momento in cui queste vengono convertite in valori di data per l'archiviazione nel database. Non influisce sulla visualizzazione di valori del tipo di dati date archiviati nel database o sul formato di archiviazione di questi.  
+ L'impostazione DATEFORMAT può interpretare le stringhe di caratteri in modo diverso per i tipi di dati date, a seconda del relativo formato stringa. Ad esempio, le interpretazioni di **datetime** e **smalldatetime** potrebbero non corrispondere a **date**, **datetime2** o  **datetimeoffset**. DATEFORMAT influisce sull'interpretazione di stringhe di caratteri nel momento in cui queste vengono convertite in valori di data per il database. Non influisce sulla visualizzazione di valori del tipo di dati date o sul loro formato di archiviazione nel database.  
   
  Alcuni formati delle stringhe di caratteri, ad esempio ISO 8601, sono interpretati indipendentemente dall'impostazione DATEFORMAT.  
   
@@ -91,6 +91,4 @@ GO
   
 ## <a name="see-also"></a>Vedere anche  
  [Istruzioni SET &#40;Transact-SQL&#41;](../../t-sql/statements/set-statements-transact-sql.md)  
-  
-  
 

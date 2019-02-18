@@ -1,7 +1,7 @@
 ---
 title: time (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 6/7/2017
+ms.date: 06/07/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -23,12 +23,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ff303fd066e1a12ccbd33e1479648001fe5a389b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 03f63929d54039399a292e086315c0b8d660f206
+ms.sourcegitcommit: bbdf51f0d56acfa6bcc4a5c4fe2c9f3cd4225edc
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47762589"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56079457"
 ---
 # <a name="time-transact-sql"></a>time (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -45,7 +45,7 @@ ms.locfileid: "47762589"
 |Sintassi|**time** [ (*fractional seconds scale*) ]|  
 |Utilizzo|DECLARE \@MyTime **time(7)**<br /><br /> CREATE TABLE Table1 ( Column1 **time(7)** )|  
 |*fractional seconds scale*|Specifica il numero di cifre per la parte frazionaria dei secondi.<br /><br /> Può essere un numero intero compreso tra 0 e 7. Per Informatica, può essere un numero intero compreso tra 0 e 3.<br /><br /> La scala frazionaria predefinita è 7 (100 ns).|  
-|Formato predefinito dei valori letterali stringa<br /><br /> (utilizzato per client legacy)|hh:mm:ss[.nnnnnnn] per Informatica)<br /><br /> Per ulteriori informazioni, vedere la sezione seguente relativa alla compatibilità con le versioni precedenti per i client legacy.|  
+|Formato predefinito dei valori letterali stringa<br /><br /> (utilizzato per client legacy)|hh:mm:ss[.nnnnnnn] per Informatica)<br /><br /> Per altre informazioni, vedere la sezione [Compatibilità con le versioni precedenti dei client legacy](#BackwardCompatibilityforDownlevelClients).|  
 |Intervallo|da 00:00:00.0000000 a 23:59:59.9999999 (da 00:00:00.000 a 23:59:59.999 per Informatica)|  
 |Intervalli di elementi|hh rappresenta un numero di due cifre tra 0 e 23 indicante l'ora.<br /><br /> mm rappresenta un numero di due cifre tra 0 e 59 indicante i minuti.<br /><br /> ss rappresenta un numero di due cifre tra 0 e 59 indicante i secondi.<br /><br /> n\* rappresenta un numero composto da un numero di cifre da 0 a 7 e compreso tra 0 e 9999999, indicante i secondi frazionari. Per Informatica, n\* è un numero composto da un numero di cifre da zero a tre, compreso tra 0 e 999.|  
 |Lunghezza in caratteri|da 8 posizioni minimo (hh:mm:ss) a 16 massimo (hh:mm:ss.nnnnnnn). Per Informatica, il massimo è 12 (hh:mm:ss.nnn).|  
@@ -121,8 +121,7 @@ SELECT @timeTo AS 'time(3)', @timeFrom AS 'time(4)';
 --(1 row(s) affected)  
 ```  
   
- Se viene eseguita la conversione in  
-                    **date**, la conversione ha esito negativo e viene generato il messaggio di errore 206: "Conflitto del tipo di operando: date è incompatibile con time".  
+ Se la conversione viene eseguita in **date**, ha esito negativo e viene generato il messaggio di errore 206: "Conflitto del tipo di operando: date è incompatibile con time".  
   
  Quando viene eseguita la conversione in **datetime**, vengono copiati i valori di ore, minuti e secondi e il componente della data viene impostato su "1900-01-01". Quando la precisione dei secondi frazionari del valore **time(n)** è maggiore di tre cifre, il risultato di **datetime** viene troncato. Nel codice seguente vengono illustrati i risultati della conversione di un valore `time(4)` in un valore `datetime`.  
   

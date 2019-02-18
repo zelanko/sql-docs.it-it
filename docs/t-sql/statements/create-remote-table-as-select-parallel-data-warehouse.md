@@ -2,8 +2,8 @@
 title: CREATE REMOTE TABLE AS SELECT (Parallel Data Warehouse) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/10/2017
-ms.prod: ''
-ms.prod_service: pdw
+ms.prod: sql
+ms.service: data-warehouse
 ms.reviewer: ''
 ms.topic: conceptual
 ms.assetid: 16ef8191-7587-45a3-9ee9-7d99b7088de3
@@ -11,12 +11,12 @@ author: ronortloff
 ms.author: rortloff
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 0f8e3992c7097167c82caf6350f571787fd71373
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: bc410f1a3c232eaed8f5f64603c95581361476c4
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47795589"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56024682"
 ---
 # <a name="create-remote-table-as-select-parallel-data-warehouse"></a>CREATE REMOTE TABLE AS SELECT (Parallel Data Warehouse)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md.md)]
@@ -68,7 +68,7 @@ CREATE REMOTE TABLE [ database_name . [ schema_name ] . | schema_name. ] table_n
  Nome o indirizzo IPv4 del server remoto. Gli indirizzi IPv6 non sono supportati. È possibile specificare un'istanza denominata di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] nel formato **Nome_computer\Nome_istanza** o **Indirizzo_IP\Nome_istanza**. Il server deve essere remoto e pertanto non può essere specificato come (local).  
   
  Numero *porta* TCP  
- Numero della porta TCP usata per la connessione. Per un'istanza di SQL Server che non è in ascolto sulla porta predefinita 1433, è possibile specificare un numero di porta TCP compreso tra 0 e 65535. Ad esempio: **ServerA, 1450** o **10.192.14.27,1435**  
+ Numero della porta TCP usata per la connessione. Per un'istanza di SQL Server che non è in ascolto sulla porta predefinita 1433, è possibile specificare un numero di porta TCP compreso tra 0 e 65535. Ad esempio **ServerA,1450** o **10.192.14.27,1435**  
   
 > [!NOTE]  
 >  È consigliabile connettersi a un server remoto tramite indirizzo IP. A seconda della configurazione di rete, la connessione tramite nome computer potrebbe richiedere passaggi aggiuntivi perché sia possibile usare il server DNS non appliance per risolvere il nome server in modo corretto. Questo passaggio non è necessario se ci si connette con un indirizzo IP. Per altre informazioni, vedere la sezione relativa all'uso di un server d'inoltro DNS per risolvere i nomi DNS non di appliance (piattaforma di strumenti analitici) nella [!INCLUDE[pdw-product-documentation](../../includes/pdw-product-documentation-md.md)].  
@@ -144,7 +144,7 @@ AT ( 'Data Source = SQLA, 1433; User ID = David; Password = e4n8@3;' )
 AS SELECT <select_criteria>;  
 ```  
   
-### <a name="b-querying-the-sysdmpdwdmsworkers-dmv-for-remote-table-copy-status"></a>B. Query del DMV sys.dm_pdw_dms_workers per lo stato della copia di tabelle remote  
+### <a name="b-querying-the-sysdmpdwdmsworkers-dmv-for-remote-table-copy-status"></a>b. Query del DMV sys.dm_pdw_dms_workers per lo stato della copia di tabelle remote  
  Questa query illustra come visualizzare lo stato della copia di tabelle remote.  
   
 ```  

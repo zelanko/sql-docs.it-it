@@ -3,7 +3,6 @@ title: WITH XMLNAMESPACES (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
-ms.prod_service: sql-database
 ms.reviewer: ''
 ms.technology: t-sql
 ms.topic: language-reference
@@ -19,15 +18,15 @@ helpviewer_keywords:
 - WITH XMLNAMESPACES clause
 - declaring XML namespaces
 ms.assetid: 3b32662b-566f-454d-b7ca-e247002a9a0b
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
-ms.openlocfilehash: fbc0773b08ea682a9bc8e4803572b9ceae3d28d3
-ms.sourcegitcommit: bfa10c54e871700de285d7f819095d51ef70d997
+ms.openlocfilehash: ee0c340ebc917d7ced83b453d1cfd6126ff42f2e
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/14/2019
-ms.locfileid: "54256176"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56026602"
 ---
 # <a name="with-xmlnamespaces"></a>WITH XMLNAMESPACES
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -87,11 +86,13 @@ DEFAULT <xml_namespace_uri>
 -   Il prefisso di spazio dei nomi XML `xml` non può essere sovrascritto da uno spazio dei nomi diverso dall'URI dello spazio dei nomi `'http://www.w3.org/XML/1998/namespace'`. A questo URI non può essere assegnato un prefisso diverso.  
   
 -   Il prefisso di spazio dei nomi XML `xsi` non può essere dichiarato nuovamente se la direttiva ELEMENTS XSINIL è utilizzata nella query.  
-  
+
+-   Non è necessario dichiarare che "http://www.w3.org/2001/XMLSchema-instance" usi lo spazio dei nomi dello standard xsi. Viene aggiunto in modo implicito dal processore XML/XPATH se non viene specificato e le espressioni xpath possono usare il prefisso xsi, purché lo schema "http://www.w3.org/2001/XMLSchema-instance" sia dichiarato correttamente nel documento xml.
+
 -   I valori stringa dell'URI sono codificati in base alla tabella codici delle regole di confronto del database corrente e vengono convertite internamente in Unicode.  
   
 -   Gli spazi vuoti dell'URI dello spazio dei nomi XML verranno compressi in base alle regole XSD di compressione degli spazi vuoti usate per **xs:anyURI**. Non viene eseguita alcuna operazione di sostituzione con entità o sostituzione con caratteri nei valori di URI dello spazio dei nomi XML.  
-  
+
 -   Nell'URI dello spazio dei nomi XML verrà controllato se sono inclusi caratteri XML 1.0 non validi. Se il controllo ha esito positivo, verrà generato un errore, ad esempio U+0007.  
   
 -   In seguito alla compressione di tutti gli spazi vuoti, l'URI dello spazio dei nomi XML non può essere una stringa di lunghezza zero. In caso contrario viene generato un errore per segnalare che un URI dello spazio dei nomi vuoto non è valido.  

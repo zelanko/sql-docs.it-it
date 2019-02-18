@@ -17,12 +17,12 @@ ms.assetid: 07f8f594-75b4-4591-8c29-d63811d7753e
 author: pmasl
 ms.author: pelopes
 manager: amitban
-ms.openlocfilehash: 39f3d82d65eb0dd05b8459742febd67d2bc56790
-ms.sourcegitcommit: 0bb306da5374d726b1e681cd4b5459cb50d4a87a
+ms.openlocfilehash: 481a2fe18c99621b8331ab204a99e1d7efd37f24
+ms.sourcegitcommit: afc0c3e46a5fec6759fe3616e2d4ba10196c06d1
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2018
-ms.locfileid: "53732028"
+ms.lasthandoff: 02/08/2019
+ms.locfileid: "55889982"
 ---
 # <a name="query-profiling-infrastructure"></a>Infrastruttura di profilatura delle query
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -93,7 +93,12 @@ Durante l'esecuzione di una sessione di eventi estesi che usa l'evento *query_th
 
 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 include una versione rivista della profilatura lightweight con un overhead minimo. La profilatura lightweight può essere anche abilitata a livello globale tramite il [flag di traccia 7412](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) per le versioni indicate nella sezione precedente *Si applica a*. Una nuova DMF [sys.dm_exec_query_statistics_xml](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-statistics-xml-transact-sql.md) viene introdotta per restituire il piano di esecuzione query per le richieste in elaborazione.
 
-A partire da [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 CU3 e [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU11, se la profilatura lightweight non è abilitata globalmente, è possibile usare il nuovo argomento **QUERY_PLAN_PROFILE** dell'[hint per la query USE HINT](../../t-sql/queries/hints-transact-sql-query.md#use_hint) per abilitare la profilatura a livello di query per qualsiasi sessione. Al termine dell'esecuzione di una query contenente questo nuovo hint, viene generato anche un nuovo evento esteso ***query_plan_profile*** che fornisce l'XML di un piano di esecuzione effettivo simile all'evento esteso *query_post_execution_showplan*. È possibile configurare una sessione di esempio che usa questo evento esteso come illustrato nell'esempio che segue:
+A partire da [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 CU3 e [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU11, se la profilatura lightweight non è abilitata globalmente, è possibile usare il nuovo argomento **QUERY_PLAN_PROFILE** dell'[hint per la query USE HINT](../../t-sql/queries/hints-transact-sql-query.md#use_hint) per abilitare la profilatura a livello di query per qualsiasi sessione. Al termine dell'esecuzione di una query contenente questo nuovo hint, viene generato anche un nuovo evento esteso ***query_plan_profile*** che fornisce l'XML di un piano di esecuzione effettivo simile all'evento esteso *query_post_execution_showplan*. 
+
+> [!NOTE]
+> L'evento esteso *query_plan_profile* si avvale anche della profilatura leggera benché non venga usato l'hint per la query. 
+
+Una sessione di esempio che usa l'evento esteso *query_plan_profile* può essere configurata come illustrato nell'esempio seguente:
 
 ```sql
 CREATE EVENT SESSION [PerfStats_LWP_Plan] ON SERVER

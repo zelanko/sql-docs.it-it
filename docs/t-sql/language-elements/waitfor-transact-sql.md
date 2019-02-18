@@ -27,17 +27,17 @@ ms.assetid: 8e896e73-af27-4cae-a725-7a156733f3bd
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: b4f4707f6f021d7395596bd1c1ab4af8230ac50d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 5884c549160834cec6412e4524667a460344d66f
+ms.sourcegitcommit: f8ad5af0f05b6b175cd6d592e869b28edd3c8e2c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47595727"
+ms.lasthandoff: 02/07/2019
+ms.locfileid: "55807481"
 ---
 # <a name="waitfor-transact-sql"></a>WAITFOR (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  Blocca l'esecuzione di un batch, una stored procedure o una transazione fino all'ora specificata o finché è trascorso l'intervallo di tempo specificato oppure finché un'istruzione specifica modifica o restituisce almeno una riga.  
+  Blocca l'esecuzione di un batch, una stored procedure o una transazione fino all'ora specificata o fino a quando non è trascorso l'intervallo di tempo specificato oppure finché un'istruzione specificata non modifica o restituisce almeno una riga.  
   
  ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -59,13 +59,13 @@ WAITFOR
  Periodo di tempo specificato che deve trascorrere (massimo 24 ore) prima che l'esecuzione di un batch, una stored procedure o una transazione possa continuare.  
   
  '*time_to_pass*'  
- Periodo di tempo di attesa. *time_to_pass* può essere specificato in uno dei formati validi per i dati **datetime** oppure come variabile locale. Non è possibile specificare date, pertanto la parte relativa alla data del valore **datetime** non è consentita. La formattazione è hh:mm[[:ss].mss].
+ Periodo di tempo di attesa. *time_to_pass* può essere specificato in un formato dati **datetime** o come variabile locale. Non è possibile specificare date, pertanto la parte relativa alla data del valore **datetime** non è consentita. *time_to_pass* è formattato come hh:mm[[:ss].mss].
   
  TIME  
  Ora specificata di esecuzione del batch, della stored procedure o della transazione.  
   
  '*time_to_execute*'  
- Ora in cui l'istruzione WAITFOR viene interrotta. *time_to_execute* può essere specificato in uno dei formati validi per i dati **datetime** oppure come variabile locale. Non è possibile specificare date, pertanto la parte relativa alla data del valore **datetime** non è consentita. La formattazione è hh:mm[[:ss].mss] e può includere facoltativamente la data 1900-01-01.
+ Ora in cui l'istruzione WAITFOR viene interrotta. *time_to_execute* può essere specificato in un formato dati **datetime** oppure come variabile locale. Non è possibile specificare date, pertanto la parte relativa alla data del valore **datetime** non è consentita. *time_to_execute* è formattato come hh:mm[[:ss].mss] e può includere facoltativamente la data 1900-01-01.
   
  *receive_statement*  
  Istruzione RECEIVE valida.  
@@ -88,7 +88,7 @@ WAITFOR
 ## <a name="remarks"></a>Remarks  
  Durante l'esecuzione dell'istruzione WAITFOR la transazione è in esecuzione e pertanto non possono essere eseguite altre richieste nell'ambito della stessa transazione.  
   
- Il ritardo di tempo effettivo può variare rispetto al tempo specificato in *time_to_pass*, *time_to_execute* o *timeout* e dipende dal livello di attività del server. Il contatore del tempo viene avviato alla pianificazione del thread associato all'istruzione WAITFOR. Se il server è occupato, è possibile che il thread non venga pianificato immediatamente e che il ritardo di tempo risulti superiore al tempo specificato.  
+ Il ritardo effettivo può variare rispetto al tempo specificato in *time_to_pass*, *time_to_execute* o *timeout* e dipende dal livello di attività del server. Il contatore del tempo viene avviato alla pianificazione del thread dell'istruzione WAITFOR. Se il server è occupato, è possibile che il thread non venga pianificato immediatamente e che il ritardo risulti superiore al tempo specificato.  
   
  WAITFOR non modifica la semantica di una query. Se una query non è in grado di restituire righe, WAITFOR attenderà all'infinito oppure finché non viene raggiunto il valore dell'argomento TIMEOUT, se specificato.  
   
@@ -98,9 +98,9 @@ WAITFOR
   
  Se la query supera il valore specificato dall'opzione query wait, l'argomento dell'istruzione WAITFOR può essere completato senza essere eseguito. Per altre informazioni sull'opzione di configurazione, vedere [Configurare l'opzione di configurazione del server query wait](../../database-engine/configure-windows/configure-the-query-wait-server-configuration-option.md). Per visualizzare i processi attivi e in attesa, usare [sp_who](../../relational-databases/system-stored-procedures/sp-who-transact-sql.md).  
   
- A ogni istruzione WAITFOR è associato un thread. Se nello stesso server sono specificate numerose istruzioni WAITFOR, è possibile che numerosi thread siano in attesa dell'esecuzione di queste istruzioni. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] esegue il monitoraggio del numero di thread associati alle istruzioni WAITFOR e ne seleziona casualmente alcuni per forzarne l'uscita se si verifica una mancanza di thread a livello di server.  
+ A ogni istruzione WAITFOR è associato un thread. Se nello stesso server sono specificate numerose istruzioni WAITFOR, è possibile che numerosi thread siano in attesa dell'esecuzione di queste istruzioni. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] monitora il numero di thread dell'istruzione WAITFOR e ne seleziona casualmente alcuni per forzarne l'uscita se nel server inizia a verificarsi una condizione di "thread starvation".  
   
- È possibile creare un deadlock mediante l'esecuzione di una query con l'istruzione WAITFOR all'interno di una transazione che include anche blocchi che impediscono di apportare modifiche al set di righe a cui l'istruzione WAITFOR sta cercando di accedere. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] identifica questi scenari e restituisce un set di risultati vuoto se esiste la probabilità che si verifichi tale deadlock.  
+ L'esecuzione di una query con WAITFOR all'interno di una transazione che include anche blocchi che impediscono le modifiche al set di righe a cui accede l'istruzione WAITFOR può creare un deadlock. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] identifica questi scenari e restituisce un set di risultati vuoto se esiste la probabilità che si verifichi tale deadlock.  
   
 > [!CAUTION]  
 >  L'inclusione di WAITFOR rallenterà il completamento del processo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e può generare un messaggio di timeout nell'applicazione. Se necessario, regolare l'impostazione di timeout per la connessione a livello di applicazione.  
@@ -120,7 +120,7 @@ END;
 GO  
 ```  
   
-### <a name="b-using-waitfor-delay"></a>B. Utilizzo di WAITFOR DELAY  
+### <a name="b-using-waitfor-delay"></a>b. Utilizzo di WAITFOR DELAY  
  Nell'esempio seguente la stored procedure viene eseguita dopo un ritardo di due ore.  
   
 ```  
@@ -132,7 +132,7 @@ GO
 ```  
   
 ### <a name="c-using-waitfor-delay-with-a-local-variable"></a>C. Utilizzo di WAITFOR DELAY con una variabile locale  
- Nell'esempio seguente viene illustrato l'utilizzo di una variabile locale con l'opzione `WAITFOR DELAY`. Viene creata una stored procedure in modo che attenda un periodo di tempo variabile, quindi vengono restituite informazioni sul numero di ore, minuti e secondi trascorsi.  
+ Nell'esempio seguente viene illustrato l'utilizzo di una variabile locale con l'opzione `WAITFOR DELAY`. Questa stored procedure rimane in attesa per un periodo di tempo variabile e quindi restituisce all'utente informazioni sul numero di ore, minuti e secondi trascorsi.  
   
 ```  
 IF OBJECT_ID('dbo.TimeDelay_hh_mm_ss','P') IS NOT NULL  
@@ -173,5 +173,4 @@ GO
  [Elementi del linguaggio per il controllo di flusso &#40;Transact-SQL&#41;](~/t-sql/language-elements/control-of-flow.md)   
  [datetime &#40;Transact-SQL&#41;](../../t-sql/data-types/datetime-transact-sql.md)   
  [sp_who &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-who-transact-sql.md)  
-  
   

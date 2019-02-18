@@ -1,7 +1,7 @@
 ---
 title: Precedenza dei tipi di dati (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 07/23/2017
+ms.date: 7/23/2017
 ms.prod: sql
 ms.prod_service: sql-database
 ms.reviewer: ''
@@ -19,17 +19,17 @@ ms.assetid: f4c804ab-ed3f-43b1-a024-c9ac6944b66b
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 6bd65fe0ef44b672e689aebd99b5f166ce562d23
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 630e2e06013c09d0597c0eefbf69a66e2824f3a9
+ms.sourcegitcommit: bbdf51f0d56acfa6bcc4a5c4fe2c9f3cd4225edc
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56020305"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56079337"
 ---
 # <a name="data-type-precedence-transact-sql"></a>Precedenza dei tipi di dati (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
-Quando due espressioni di tipi di dati diversi vengono combinate da un operatore, le regole per la precedenza dei tipi di dati specificano che i tipi con precedenza inferiore vengano convertiti nei tipi con precedenza superiore. Se la conversione non è una conversione implicita supportata, viene generato un errore. Se a entrambe le espressioni dell'operando è associato lo stesso tipo di dati, quest'ultimo viene assegnato al risultato dell'operazione.
+Quando un operatore combina espressioni di tipi di dati diversi, il tipo di dati con precedenza inferiore viene per prima cosa convertito nel tipo di dati con precedenza superiore. Se la conversione non è una conversione implicita supportata, viene generato un errore. Se le espressioni dell'operando combinate dall'operatore hanno lo stesso tipo di dati, questo sarà il tipo di dati del risultato dell'operazione.
   
 Per i tipi di dati [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utilizza l'ordine di precedenza seguente:
   
@@ -68,5 +68,4 @@ Per i tipi di dati [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] uti
 [Tipi di dati &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)  
 [Espressioni &#40; Transact-SQL &#41;](../../t-sql/language-elements/expressions-transact-sql.md)  
 [CAST e CONVERT &#40;Transact-SQL&#41;](../../t-sql/functions/cast-and-convert-transact-sql.md)
-  
   

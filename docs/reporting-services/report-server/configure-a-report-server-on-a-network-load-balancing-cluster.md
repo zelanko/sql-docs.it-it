@@ -6,13 +6,13 @@ manager: kfile
 ms.prod: reporting-services, reporting-services-sharepoint, reporting-services-native
 ms.technology: report-server
 ms.topic: conceptual
-ms.date: 10/3/2018
-ms.openlocfilehash: f9b56ce33635d51b989801b34eea279b53bd4041
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.date: 10/03/2018
+ms.openlocfilehash: 26c8423308b07c570cf289113a00fbd07a1133aa
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52396134"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56041772"
 ---
 # <a name="configure-a-report-server-on-a-network-load-balancing-cluster"></a>Configurare un server di report in un cluster per il bilanciamento del carico di rete
 
