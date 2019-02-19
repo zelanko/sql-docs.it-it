@@ -6,14 +6,14 @@ ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: report-design
 ms.topic: conceptual
 ms.assetid: 7b50b101-daf8-4fb0-ae04-57384755779f
-author: maggiesMSFT
-ms.author: maggies
-ms.openlocfilehash: 76172811a5c6807b31c8c2b660a0620976fab1ed
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: b0eba548573866c89dffe91df44c4ba78f1417c0
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47818819"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56285329"
 ---
 # <a name="report-builder-functions---count-function"></a>Funzioni di Generatore report - Funzione Count
   Restituisce il conteggio dei valori non Null specificati dall'espressione, valutato nel contesto dell'ambito specificato.  
@@ -61,7 +61,7 @@ Count(expression, scope, recursive)
  Esempio  
   
 ## <a name="description"></a>Descrizione  
- Nell'esempio di codice seguente è illustrata un'espressione che calcola il numero di valori non Null di `Size` per l'ambito predefinito e per un ambito di gruppo padre. L'espressione viene aggiunta in una riga di una cella che appartiene al gruppo figlio `GroupbySubcategory`. Il gruppo padre è `GroupbyCategory`. L'espressione visualizza i risultati per `GroupbySubcategory` (ambito predefinito) e quindi per `GroupbyCategory` (ambito del gruppo padre).  
+ Nell'esempio di codice seguente è illustrata un'espressione che calcola il numero di valori non Null di `Size` per l'ambito predefinito e per un ambito di gruppo padre. L'espressione viene aggiunta a una riga di una cella che appartiene al gruppo figlio `GroupbySubcategory`. Il gruppo padre è `GroupbyCategory`. L'espressione visualizza i risultati per `GroupbySubcategory` (ambito predefinito) e quindi per `GroupbyCategory` (ambito del gruppo padre).  
   
 > [!NOTE]  
 >  Le espressioni non devono contenere ritorni a capo e interruzioni di riga, che sono inclusi nell'esempio per supportare i renderer della documentazione. Se si copia l'esempio seguente, rimuovere i ritorni a capo da ogni riga.  

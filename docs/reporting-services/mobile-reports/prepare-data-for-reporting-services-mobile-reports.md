@@ -6,14 +6,14 @@ ms.prod_service: reporting-services-native
 ms.technology: mobile-reports
 ms.topic: conceptual
 ms.assetid: 8adce9ad-6a08-4d20-b1cf-d3c45544d8de
-author: maggiesMSFT
-ms.author: maggies
-ms.openlocfilehash: 9ded496c3509420d54325dc054e018048ede0732
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: fc62408e329f0ea6e75e96a6da272237f3a0ac7b
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47774399"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56288479"
 ---
 # <a name="prepare-data-for-reporting-services-mobile-reports"></a>Preparare i dati per report di Reporting Services per dispositivi mobili
   

@@ -6,14 +6,14 @@ ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: report-design
 ms.topic: conceptual
 ms.assetid: aa7ad08f-dd49-401e-9619-522e27055bb9
-author: maggiesMSFT
-ms.author: maggies
-ms.openlocfilehash: 88717ffe6cdb7711b1b9ca19a1f57edd5930b7e9
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 70a4aa215fa2ef743d260970cb44c4a7b144504b
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47664060"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56288389"
 ---
 # <a name="images-text-boxes-rectangles-and-lines-report-builder-and-ssrs"></a>Immagini, caselle di testo, rettangoli e linee (Generatore report e SSRS)
   Oltre alle aree dati quali tabelle, matrici e grafici, nei report impaginati di [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] vengono usati altri elementi, ad esempio immagini, caselle di testo e rettangoli, per aumentarne l'impatto visivo, evidenziare le informazioni più importanti o fornire informazioni correlate. È possibile modificare la formattazione di un elemento del report. È possibile, ad esempio, aggiungere un bordo o un riempimento, modificare la visibilità o la direzione iniziale oppure specificare valori esatti per le dimensioni e la posizione dell'elemento.  
@@ -28,7 +28,7 @@ ms.locfileid: "47664060"
  Ogni cella di una tabella o matrice è anche una casella di testo che può essere formattata esattamente come le caselle di testo autonome.  
   
  [Rettangoli e linee &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/rectangles-and-lines-report-builder-and-ssrs.md)  
- Le **linee** vengono visualizzate in orizzontale, verticale o diagonale. Una linea è definita da un punto iniziale e un punto finale e da vari stili, ad esempio spessore e colore. A una linea non è associato alcun dato.  
+ Le**linee** vengono visualizzate in orizzontale, verticale o diagonale. Una linea è definita da un punto iniziale e un punto finale e da vari stili, ad esempio spessore e colore. A una linea non è associato alcun dato.  
   
  I**rettangoli** possono essere utilizzati come elementi grafici o come contenitori per altri elementi del report. Se utilizzato come elemento grafico, un rettangolo ha le stesse proprietà di una linea. Come contenitore, un rettangolo funge da contenitore padre per tutti gli elementi del report al suo interno. Posizionando gli elementi del report in un contenitore padre, è possibile controllarne l'aspetto in ogni pagina del report.  
   

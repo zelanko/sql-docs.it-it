@@ -6,14 +6,14 @@ ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: report-design
 ms.topic: conceptual
 ms.assetid: 902c251e-e1e8-41d2-ac20-5bb6138ac410
-author: maggiesMSFT
-ms.author: maggies
-ms.openlocfilehash: 9b1cbc3721c90beae1203cb1f9391b7d86b071b1
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 7fdf0446082a3cfde45f3093e2d6cd0b5077e3b8
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47816200"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56287869"
 ---
 # <a name="report-builder-functions---countdistinct-function"></a>Funzioni di Generatore report - Funzione CountDistinct
   Restituisce un conteggio di tutti i distinti valori non Null specificati dall'espressione, valutato nel contesto dell'ambito specificato.  
@@ -59,7 +59,7 @@ CountDistinct(expression, scope, recursive)
  Per altre informazioni sulle aggregazioni ricorsive, vedere [Creazione di gruppi di gerarchie ricorsive &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/creating-recursive-hierarchy-groups-report-builder-and-ssrs.md).  
   
 ## <a name="example"></a>Esempio  
- L'esempio di codice seguente illustra un'espressione che calcola il numero di valori non Null univoci di `Size` per l'ambito predefinito e per un ambito di gruppo padre. L'espressione viene aggiunta in una riga di una cella che appartiene al gruppo figlio `GroupbySubcategory`. Il gruppo padre è `GroupbyCategory`. L'espressione visualizza i risultati per `GroupbySubcategory` (ambito predefinito) e quindi per `GroupbyCategory` (ambito del gruppo padre).  
+ L'esempio di codice seguente illustra un'espressione che calcola il numero di valori non Null univoci di `Size` per l'ambito predefinito e per un ambito di gruppo padre. L'espressione viene aggiunta a una riga di una cella che appartiene al gruppo figlio `GroupbySubcategory`. Il gruppo padre è `GroupbyCategory`. L'espressione visualizza i risultati per `GroupbySubcategory` (ambito predefinito) e quindi per `GroupbyCategory` (ambito del gruppo padre).  
   
 > [!NOTE]  
 >  Le espressioni non devono contenere ritorni a capo e interruzioni di riga, che sono inclusi nell'esempio di codice per supportare i renderer della documentazione. Se si copia l'esempio seguente, rimuovere i ritorni a capo da ogni riga.  
