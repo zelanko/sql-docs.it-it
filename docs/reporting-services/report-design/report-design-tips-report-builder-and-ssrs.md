@@ -6,14 +6,14 @@ ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: report-design
 ms.topic: conceptual
 ms.assetid: c1490ff0-5b8a-43c1-8d22-e459395db4f6
-author: maggiesMSFT
-ms.author: maggies
-ms.openlocfilehash: 2a68a953609b8f76b4ea441d3d35fbf04a72af7a
-ms.sourcegitcommit: c7febcaff4a51a899bc775a86e764ac60aab22eb
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 0151fd3fa25a52e8868c17c892878bcc6b04b0e1
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "52711242"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56284941"
 ---
 # <a name="report-design-tips-report-builder-and-ssrs"></a>Suggerimenti relativi alla progettazione di report (Generatore report e SSRS)
   Usare i suggerimenti seguenti per progettare report impaginati di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .  

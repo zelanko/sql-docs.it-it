@@ -6,14 +6,14 @@ ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: report-design
 ms.topic: conceptual
 ms.assetid: a8d24287-8557-4b03-bea7-ca087f449b62
-author: maggiesMSFT
-ms.author: maggies
-ms.openlocfilehash: 92156defdf08b3828fde898c7043a941bbd7326b
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 9cb351a5627dd525dd1eeb7bbeb9b7a9be821bc0
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52394014"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56297479"
 ---
 # <a name="expression-scope-for-totals-aggregates-and-built-in-collections"></a>Ambito di espressioni per totali, aggregazioni e raccolte predefinite
   Quando si scrivono espressioni, si noterà che il termine *ambito* viene utilizzato in molti contesti. Può infatti specificare i dati da utilizzare per la valutazione di un'espressione, il set di caselle di testo in una pagina di cui è stato eseguito il rendering, il set di elementi del report che possono essere mostrati o nascosti in base a un elemento Toggle. Il termine *ambito* verrà utilizzato in argomenti correlati alla valutazione di un'espressione, alla sintassi della funzione di aggregazione, alla visibilità condizionale nonché nei messaggi di errore relativi a queste aree. Per comprendere il significato di *ambito* in un contesto specifico, utilizzare le descrizioni seguenti:  

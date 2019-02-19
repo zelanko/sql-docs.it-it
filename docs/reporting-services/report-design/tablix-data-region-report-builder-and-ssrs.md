@@ -6,14 +6,14 @@ ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: report-design
 ms.topic: conceptual
 ms.assetid: 99f83b32-4b86-4d40-973c-9a328d23ac8b
-author: maggiesMSFT
-ms.author: maggies
-ms.openlocfilehash: 10d60f74bc24f16ff82bef8131c75b80b4b0b506
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: edb8b0fd67611dfce4902e31720a20b1ec5463bb
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47595919"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56295271"
 ---
 # <a name="tablix-data-region-report-builder-and-ssrs"></a>Area dati Tablix (Generatore report e SSRS)
   In [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)], l'area dati Tablix è un elemento del report di layout generalizzato in cui i dati del report impaginati vengono visualizzati in celle suddivise in righe e colonne. I dati del report possono essere dati dettaglio recuperati direttamente dall'origine dati o dati dettaglio aggregati organizzati in gruppi specificati dall'utente. Ogni cella della Tablix può contenere qualsiasi elemento del report, ad esempio una casella di testo, un'immagine o un'altra area dati, ad esempio un grafico, un misuratore o un'area Tablix. Per aggiungere più elementi del report a una cella, aggiungere innanzitutto un rettangolo da utilizzare come contenitore. Aggiungere elementi del report al rettangolo.  

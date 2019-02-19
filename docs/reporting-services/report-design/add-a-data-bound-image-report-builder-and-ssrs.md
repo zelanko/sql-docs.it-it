@@ -6,14 +6,14 @@ ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: report-design
 ms.topic: conceptual
 ms.assetid: df4c38d4-bfcc-41c4-aa6d-952ca6fd7a2e
-author: maggiesMSFT
-ms.author: maggies
-ms.openlocfilehash: 945ee262e8d507a62aa954eec847e3b7bd4ac308
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 13186bed8bae4f695f908cceb7c4884acd87ca74
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52524488"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56292799"
 ---
 # <a name="add-a-data-bound-image-report-builder-and-ssrs"></a>Aggiungere un'immagine con associazione a dati (Generatore report e SSRS)
   Un report può includere un riferimento a un'immagine archiviata in un database. Tale immagine è nota come *immagine con associazione a dati*. Le immagini visualizzate insieme ai nomi di prodotti in un catalogo sono esempi di immagini con associazione a dati.  
@@ -35,9 +35,9 @@ ms.locfileid: "52524488"
   
 5.  (Facoltativo) Nella casella di testo **Descrizione comando** digitare il testo da visualizzare quando il puntatore del mouse viene posizionato nel report sottoposto a rendering per HTML.  
   
-6.  In **Selezionare l'origine dell'immagine** selezionare **Database**.  
+6.  In **Selezionare l'origine dell'immagine**selezionare **Database**.  
   
-7.  In **Utilizzare questo campo** selezionare il campo che contiene le immagini nel report.  
+7.  In **Utilizzare questo campo**selezionare il campo che contiene le immagini nel report.  
   
 8.  In **Utilizzare questo tipo MIME** selezionare il tipo MIME, o il formato di file, dell'immagine, ad esempio bmp.  
   

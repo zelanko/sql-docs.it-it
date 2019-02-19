@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- configmgr-client
+ms.technology: configuration
 ms.topic: conceptual
 helpviewer_keywords:
 - shared memory [SQL Server]
@@ -24,12 +23,12 @@ ms.assetid: 6565fb7d-b076-4447-be90-e10d0dec359a
 author: craigg-msft
 ms.author: craigg
 manager: craigg
-ms.openlocfilehash: 86a15b6617b85de2e0a44287344ef47c92546072
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 9c167994c7145bce348b6959a57533e398e1d6bb
+ms.sourcegitcommit: ca9b5cb6bccfdba4cdbe1697adf5c673b4713d6c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48068566"
+ms.lasthandoff: 02/18/2019
+ms.locfileid: "56407551"
 ---
 # <a name="choosing-a-network-protocol"></a>Scelta di un protocollo di rete
   Per connettersi al [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] è necessario che sia abilitato un protocollo di rete. [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] può gestire le richieste su più protocolli contemporaneamente. I client eseguono la connessione a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] con un unico protocollo. Se il programma client non conosce il protocollo sul quale [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] è in attesa, configurarlo per l'esecuzione di tentativi in sequenza su più protocolli. Utilizzare Gestione configurazione [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] per abilitare, disabilitare e configurare i protocolli di rete.  
@@ -62,6 +61,6 @@ ms.locfileid: "48068566"
 ## <a name="enabling-the-protocol"></a>Abilitazione del protocollo  
  Per il corretto funzionamento, è necessario abilitare il protocollo sia nel client che nel server. Il server può restare in attesa di richieste su tutti i protocolli abilitati contemporaneamente. I computer client possono sceglierne uno oppure tentare tutti i protocolli nell'ordine indicato in Gestione configurazione [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
- Per una breve esercitazione sulla configurazione di protocolli e sulla connessione di [!INCLUDE[ssDE](../../includes/ssde-md.md)], vedere [Esercitazione: Introduzione al Motore di database](../../relational-databases/tutorial-getting-started-with-the-database-engine.md).  
+ Per una breve esercitazione sulla configurazione dei protocolli e sulla connessione al [!INCLUDE[ssDE](../../includes/ssde-md.md)], vedere [Esercitazione: Introduzione al motore di database](../../relational-databases/tutorial-getting-started-with-the-database-engine.md).  
   
   

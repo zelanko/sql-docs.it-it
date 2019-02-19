@@ -13,14 +13,15 @@ helpviewer_keywords:
 ms.assetid: 2a3f2ac6-667e-4498-8b73-9c40beb993f5
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: dc06ca21a1fa953db107b1c166bc9d05cebd67f1
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e0e1b099d3bd92d5dad8d96f4911585c28f54caa
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47832299"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56294349"
 ---
 # <a name="convert-cri-dialog-box-report-builder"></a>Finestra di dialogo per la conversione degli elementi del report personalizzati (Generatore report)
+
   In questo report sono contenuti elementi del report personalizzati con funzionalità non supportate. Gli elementi del report personalizzati sono estensioni del linguaggio RDL (Report Definition Language) che supportano gli oggetti personalizzati che consentono di visualizzare i dati in un report e contengono componenti della fase di progettazione e della fase di esecuzione resi disponibili dai fornitori di software di terze parti.  
   
 > [!NOTE]  

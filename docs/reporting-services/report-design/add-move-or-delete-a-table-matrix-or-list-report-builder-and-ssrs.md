@@ -6,14 +6,14 @@ ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: report-design
 ms.topic: conceptual
 ms.assetid: 4b97c470-cde0-4bb1-a46e-5f5f5553feaa
-author: maggiesMSFT
-ms.author: maggies
-ms.openlocfilehash: a54558b4e7b104f7d33e33b14393bf845c576712
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 4911bd9df522331c19388300d45557be35e9facd
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47784959"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56297179"
 ---
 # <a name="add-move-or-delete-a-table-matrix-or-list-report-builder-and-ssrs"></a>Aggiunta, spostamento o eliminazione di una tabella, una matrice o un elenco (Generatore report e SSRS)
   In un report impaginato di [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] , in un'area dati vengono visualizzati i dati di un set di dati del report. Le aree dati includono tabelle, matrici, elenchi, grafici e misuratori. Per nidificare un'area dati in un'altra, aggiungere separatamente ogni area dati, quindi trascinare l'area dati figlio nell'area dati padre.  

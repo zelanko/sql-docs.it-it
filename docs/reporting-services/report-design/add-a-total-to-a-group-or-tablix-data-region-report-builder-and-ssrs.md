@@ -6,14 +6,14 @@ ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: report-design
 ms.topic: conceptual
 ms.assetid: cf1b96c3-7f0f-4c94-ad08-5239c77ccfe4
-author: maggiesMSFT
-ms.author: maggies
-ms.openlocfilehash: 7dcceaba7b972e69462fa19333375630c295d8ad
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 623fcc417e43802d016eda48a77bd9c9699512bb
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53215630"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56294129"
 ---
 # <a name="add-a-total-to-a-group-or-tablix-data-region-report-builder-and-ssrs"></a>Aggiungere un totale a un gruppo o a un'area dati Tablix (Generatore report e SSRS)
  In un report impaginato di [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] è possibile aggiungere totali in un'area dati Tablix per un gruppo o per l'intera area dati. Per impostazione predefinita, un totale è la somma dei dati numerici non Null presenti in un gruppo o nell'area dati dopo che sono stati applicati i filtri. Per aggiungere totali per un gruppo, fare clic su **Aggiungi totale** nel menu di scelta rapida per il gruppo nel riquadro di raggruppamento. Per aggiungere totali per una cella singola nell'area del corpo della Tablix, fare clic su **Aggiungi totale** nel menu di scelta rapida per la cella. Il comando **Aggiungi totale** è sensibile al contesto ed è abilitato solo per i campi numerici. A seconda della cella Tablix che si seleziona, è possibile aggiungere un totale per una sola cella selezionando una cella nell'area del corpo della Tablix o per l'intero gruppo selezionando una cella nell'area del gruppo di righe o del gruppo di colonne Tablix. Per altre informazioni sulle aree Tablix, vedere [Area dati Tablix &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/tablix-data-region-report-builder-and-ssrs.md).  

@@ -6,14 +6,14 @@ ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: tools
 ms.topic: conceptual
 ms.assetid: 32be8fcc-e87d-4c45-a644-dff45776a981
-author: maggiesMSFT
-ms.author: maggies
-ms.openlocfilehash: ed90c887a9aeaeca9939511e215464b0b51ba226
-ms.sourcegitcommit: c7febcaff4a51a899bc775a86e764ac60aab22eb
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 68728f18f72aed6316f3764d81889f1ab5368d25
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "52711672"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56295299"
 ---
 # <a name="report-builder-authoring-environment-ssrs"></a>Ambiente di creazione di Generatore report (SSRS)
   Generatore report [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] è un ambiente di creazione e modifica autonomo per la creazione di report impaginati di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] all'esterno di Visual Studio. Quando si progetta un report, si specifica dove ottenere i dati, quali dati ottenere e come visualizzarli. Quando si esegue il report, Elaborazione report utilizza tutte le informazioni specificate, recupera i dati e li combina con il layout per generare il report. È possibile installarlo dal portale Web di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] o dall'Area download Microsoft.  

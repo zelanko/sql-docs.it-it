@@ -8,14 +8,14 @@ description: Informazioni sull'uso di una casella di testo per inserire in un re
 ms.custom: seodec18
 ms.topic: conceptual
 ms.assetid: dd0410ea-8839-4e8c-9944-8cdfe5465591
-author: maggiesMSFT
-ms.author: maggies
-ms.openlocfilehash: 8279a0ea362cd6b85045f3ffe3d7ce0caf1ab013
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: ff0e5bffdc0704894029a223c5d3c47d18d8ac80
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53214852"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56289479"
 ---
 # <a name="importing-html-into-a-report-report-builder-and-ssrs"></a>Importazione di codice HTML a un report (Generatore report e SSRS)
   È possibile utilizzare una casella di testo per inserire in un report del testo in formato HTML recuperato da un campo nel set di dati. Il testo può provenire da qualsiasi espressione semplice o complessa che restituisce testo HTML correttamente formattato. Il testo formattato può essere visualizzato in tutti i formati di output supportati, incluso il formato PDF.  
