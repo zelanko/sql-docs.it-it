@@ -33,12 +33,12 @@ ms.assetid: e5186f02-dd91-47d0-8fa4-de3f41c76903
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 31e280cd389bdfd7985bfa995aecbf8ed020417d
-ms.sourcegitcommit: 480961f14405dc0b096aa8009855dc5a2964f177
+ms.openlocfilehash: f00d147c5b9a3e6a2ec6137d72940cae9e67158d
+ms.sourcegitcommit: 01e17c5f1710e7058bad8227c8011985a9888d36
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/22/2019
-ms.locfileid: "54420226"
+ms.lasthandoff: 02/14/2019
+ms.locfileid: "56265398"
 ---
 # <a name="editions-and-supported-features-of-sql-server-2016"></a>Edizioni e funzionalità supportate di SQL Server 2016
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -178,7 +178,7 @@ L'edizione Developer continua a supportare un solo client per la [riesecuzione d
 |Resource Governor|Sì|no|no|no|no|  
 |Parallelismo della tabella partizionata|Sì|no|no|no|no|
 |Più contenitori Filestream|Sì|Sì <sup>2</sup>|Sì <sup>2</sup>|Sì <sup>2</sup>|Sì <sup>2</sup>|
-|Allocazione di una matrice di buffer e di memoria in pagine grandi con supporto NUMA|Sì|no|no|no|no|
+|Allocazione di una matrice di buffer e di memoria in pagine grandi con supporto NUMA|Sì|No <sup>4</sup>|no|no|no|
 |Estensione pool di buffer|Sì|Sì|no|no|no|
 |Governance delle risorse di I/O|Sì|no|no|no|no|  
 |Durabilità posticipata|Sì|Sì|Sì|Sì|Sì|
@@ -188,6 +188,8 @@ L'edizione Developer continua a supportare un solo client per la [riesecuzione d
 <sup>2</sup> Si applica a [!INCLUDE[ssSQL15](../includes/sssql15-md.md)] SP1. 
 
 <sup>3</sup> Questa funzionalità non è inclusa nell'opzione di installazione LocalDB.
+
+<sup>4</sup>Le licenze per Standard Edition e SQL Server + CAL possono limitare il numero di processori utilizzabili da SQL Server Standard, ma SQL Server Standard supporta NUMA. 
 ##  <a name="RDBMSS"></a> RDBMS Security  
   
 |Funzionalità|Enterprise|Standard|Web|Express|Express with Advanced Services|  
