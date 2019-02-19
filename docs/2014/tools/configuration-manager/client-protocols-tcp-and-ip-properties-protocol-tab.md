@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- configmgr-client
+ms.technology: configuration
 ms.topic: conceptual
 helpviewer_keywords:
 - TCP/IP [SQL Server], client protocols
@@ -14,12 +13,12 @@ ms.assetid: d04f1bce-069c-4a02-b561-c87c3282be36
 author: craigg-msft
 ms.author: craigg
 manager: craigg
-ms.openlocfilehash: d7686844144b43467c152907dfdff10a033005b7
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: ec3c433c1ce16e35f064910083e7ab9959e4c3bb
+ms.sourcegitcommit: ca9b5cb6bccfdba4cdbe1697adf5c673b4713d6c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48165211"
+ms.lasthandoff: 02/18/2019
+ms.locfileid: "56407571"
 ---
 # <a name="client-protocols---tcp-and-ip-properties-protocol-tab"></a>Protocolli client e Proprietà TCP IP (scheda Protocollo)
   In Gestione configurazione [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , usare la scheda **Protocollo** della finestra di dialogo **Proprietà TCP/IP** per visualizzare o specificare le opzioni illustrate di seguito. Per eseguire la connessione a una porta diversa, digitare il numero della porta nella casella **Porta predefinita** . Per altre informazioni sulle stringhe di connessione, vedere [Creazione di una stringa di connessione valida tramite TCP/IP](../../../2014/tools/configuration-manager/creating-a-valid-connection-string-using-tcp-ip.md).  
@@ -44,6 +43,6 @@ ms.locfileid: "48165211"
 ## <a name="see-also"></a>Vedere anche  
  [Scelta di un protocollo di rete](../../../2014/tools/configuration-manager/choosing-a-network-protocol.md)   
  [Nuovo alias &#40;scheda Alias&#41;](../../../2014/tools/configuration-manager/new-alias-alias-tab.md)   
- [&#60;Alias&#62; proprietà &#40;della scheda di Alias&#41;](../../../2014/tools/configuration-manager/alias-properties-alias-tab.md)  
+ [Proprietà &#60;Alias&#62; &#40;scheda Alias&#41;](../../../2014/tools/configuration-manager/alias-properties-alias-tab.md)  
   
   

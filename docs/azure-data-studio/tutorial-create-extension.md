@@ -11,12 +11,12 @@ ms.topic: tutorial
 author: kevcunnane
 ms.author: kcunnane
 manager: craigg
-ms.openlocfilehash: 0a4e877a91cad978bb62747bd50e40adaa69ef1c
-ms.sourcegitcommit: 189a28785075cd7018c98e9625c69225a7ae0777
+ms.openlocfilehash: 8389cbad7e5124c1c20c2e076df34fc97306d8ef
+ms.sourcegitcommit: ca9b5cb6bccfdba4cdbe1697adf5c673b4713d6c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53030605"
+ms.lasthandoff: 02/18/2019
+ms.locfileid: "56407581"
 ---
 # <a name="tutorial-create-an-azure-data-studio-extension"></a>Esercitazione: Creare un'estensione di Studio dei dati di Azure
 
@@ -37,16 +37,15 @@ Azure Data Studio viene compilato nello stesso framework come Visual Studio Code
 
 - [Node. js](https://nodejs.org) installato e disponibile nel `$PATH`. Include Node. js [npm](https://www.npmjs.com/), Node. js Package Manager, che consente di installare il generatore di estensione.
 - [Visual Studio Code](https://code.visualstudio.com) per eseguire il debug dell'estensione.
-- Azure Data Studio [estensione di Debug](https://marketplace.visualstudio.com/items?itemName=ms-mssql.sqlops-debug).
-- Assicurarsi che `sqlops` sia presente nel percorso. Per Windows, assicurarsi di scegliere il `Add to Path` opzione setup.exe. Per Mac o Linux, eseguire la *installare il comando 'sqlops' nel percorso* opzione.
-- Estensione eseguire il Debug di SQL Operations Studio (facoltativo). Ciò consente di testare l'estensione senza la necessità di creare un pacchetto e installarlo in Azure Data Studio.
+- Azure Data Studio [estensione di Debug](https://marketplace.visualstudio.com/items?itemName=ms-mssql.sqlops-debug) (facoltativo). Ciò consente di testare l'estensione senza la necessità di creare un pacchetto e installarlo in Azure Data Studio.
+- Assicurarsi che `azuredatastudio` sia presente nel percorso. Per Windows, assicurarsi di scegliere il `Add to Path` opzione setup.exe. Per Mac o Linux, eseguire la *installare il comando 'azuredatastudio' nel percorso* opzione.
 
 
 ## <a name="install-the-extension-generator"></a>Installare il generatore di estensione
 
 Per semplificare il processo di creazione di estensioni, abbiamo creato un [generatore di estensione](https://code.visualstudio.com/docs/extensions/yocode) usando Yeoman. Per installarlo, eseguire il comando seguente dal prompt dei comandi:
 
-`npm install -g yo generator-sqlops`
+`npm install -g yo generator-azuredatastudio`
 
 ## <a name="create-your-extension"></a>Creare l'estensione
 
@@ -54,13 +53,13 @@ Per creare un'estensione:
 
 1. Avviare il generatore di estensione con il comando seguente:
 
-   `yo sqlops`
+   `yo azuredatastudio`
 
 2. Scegli **nuova mappatura** dall'elenco dei tipi di estensione:
 
    ![Generatore di estensione](./media/tutorial-create-extension/extension-generator.png)
 
-3. Seguire i passaggi necessari per inserire il nome di estensione (per questa esercitazione, usare **ssmskeymap**) e aggiungere una descrizione.
+3. Seguire i passaggi necessari per inserire il nome di estensione (per questa esercitazione, usare **ssmskeymap2**) e aggiungere una descrizione.
 
 Completare i passaggi precedenti, viene creata una nuova cartella. Aprire la cartella in Visual Studio Code e si è pronti per creare tasti di scelta rapida estensioni personalizzate!
 

@@ -11,12 +11,12 @@ ms.topic: conceptual
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 7a13a171024aecbe39bc7c83f77f109914bc4250
-ms.sourcegitcommit: 189a28785075cd7018c98e9625c69225a7ae0777
+ms.openlocfilehash: 0a8177492de46c92577eb98e79ece42e77ba947b
+ms.sourcegitcommit: ca9b5cb6bccfdba4cdbe1697adf5c673b4713d6c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53029755"
+ms.lasthandoff: 02/18/2019
+ms.locfileid: "56407611"
 ---
 # <a name="azure-data-studio-extensibility-apis"></a>API di estendibilità Data Studio Azure
 
@@ -69,7 +69,7 @@ credentials: {
 
 - `getActiveConnectionNodes(): Thenable<sqlops.objectexplorer.ObjectExplorerNode>` Ottenere tutti i nodi di connessione di Esplora oggetti attivi.
 
-- `findNodes(connectionId: string, type: string, schema: string, name: string, database: string, parentObjectNames: string[]): Thenable<sqlops.objectexplorer.ObjectExplorerNode[]>` Trovare tutti i nodi di Esplora oggetti che corrispondono ai metadati specificato. Il `schema`, `database`, e `parentObjectNames` gli argomenti devono essere `undefined` quando non sono applicabili. `parentObjectNames` è un elenco di oggetti padre non di database, dal prezzo massimo al livello più basso in Esplora oggetti, in cui l'oggetto desiderato. Ad esempio, durante la ricerca di una colonna "column1" che appartiene a una tabella "schema1.table1" e il database "database1" con ID di connessione `connectionId`, chiamare `findNodes(connectionId, 'Column', undefined, 'column1', 'database1', ['schema1.table1'])`. Vedere anche il [elenco di tipi che per impostazione predefinita di SQL Operations Studio supporta](https://github.com/Microsoft/azuredatastudio/wiki/Object-Explorer-types-supported-by-FindNodes-API) per questa chiamata API.
+- `findNodes(connectionId: string, type: string, schema: string, name: string, database: string, parentObjectNames: string[]): Thenable<sqlops.objectexplorer.ObjectExplorerNode[]>` Trovare tutti i nodi di Esplora oggetti che corrispondono ai metadati specificato. Il `schema`, `database`, e `parentObjectNames` gli argomenti devono essere `undefined` quando non sono applicabili. `parentObjectNames` è un elenco di oggetti padre non di database, dal prezzo massimo al livello più basso in Esplora oggetti, in cui l'oggetto desiderato. Ad esempio, durante la ricerca di una colonna "column1" che appartiene a una tabella "schema1.table1" e il database "database1" con ID di connessione `connectionId`, chiamare `findNodes(connectionId, 'Column', undefined, 'column1', 'database1', ['schema1.table1'])`. Vedere anche il [elenco di tipi che per impostazione predefinita Azure Data Studio supporta](https://github.com/Microsoft/azuredatastudio/wiki/Object-Explorer-types-supported-by-FindNodes-API) per questa chiamata API.
 
 ### <a name="objectexplorernode"></a>ObjectExplorerNode
 - `connectionId: string` L'id della connessione che il nodo è presente in

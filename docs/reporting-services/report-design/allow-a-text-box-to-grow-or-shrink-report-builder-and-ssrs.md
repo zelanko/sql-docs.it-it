@@ -6,14 +6,14 @@ ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: report-design
 ms.topic: conceptual
 ms.assetid: dbc01e78-5993-47e5-af04-34f9e3bbcee1
-author: maggiesMSFT
-ms.author: maggies
-ms.openlocfilehash: dce0f20910913da4c8d1d5dae818a051e0aadd40
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: f193020ccb75997c5a2ac494906a74c1f27f8b32
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47759466"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56291939"
 ---
 # <a name="allow-a-text-box-to-grow-or-shrink-report-builder-and-ssrs"></a>Espansione o riduzione di una casella di testo (Generatore report e SSRS)
   In un report impaginato di [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] , le caselle di testo non sono solo le caselle autonome nell'area di progettazione del report. In tutte le celle di una tabella o di una matrice (area dati Tablix) è contenuta una casella di testo che può essere formattata esattamente come le caselle di testo autonome. Per impostazione predefinita, le caselle di testo presentano dimensioni fisse. È possibile impostare opzioni che consentono di espandere o ridurre la casella di testo in base al contenuto. Queste opzioni corrispondono alle proprietà **CanGrow** o **CanShrink** del riquadro Proprietà.  

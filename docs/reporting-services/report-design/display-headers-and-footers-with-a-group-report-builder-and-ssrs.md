@@ -6,19 +6,19 @@ ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: report-design
 ms.topic: conceptual
 ms.assetid: 8eb7d648-4df2-491a-96cb-99e55629d617
-author: maggiesMSFT
-ms.author: maggies
-ms.openlocfilehash: 4236e660b04617aa91469052af09ae5e943e0f47
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: b96f5e57f35f6cb150ea4837bb5bedd81d8dfad1
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47681739"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56291035"
 ---
 # <a name="display-headers-and-footers-with-a-group-report-builder-and-ssrs"></a>Visualizzare intestazioni e piè di pagina con un gruppo (Generatore report e SSRS)
   È possibile stabilire se di una riga statica, ad esempio l'intestazione o il piè di pagina di un gruppo, viene eseguito il rendering con righe dinamiche associate a un gruppo in un'area dati Tablix.  
   
- Per ripetere tutte le intestazioni di colonna o di riga su più pagine, è possibile impostare proprietà per l'area dati Tablix. Per altre informazioni, vedere [Visualizzare le intestazioni di riga e colonna in più pagine (Generatore report e SSRS)](display-row-and-column-headers-on-multiple-pages-report-builder-and-ssrs.md).  
+ Per ripetere tutte le intestazioni di colonna o di riga su più pagine, è possibile impostare proprietà per l'area dati Tablix. Per altre informazioni, vedere [Visualizzazione delle intestazioni di riga e colonna in più pagine Generatore report e SSRS](display-row-and-column-headers-on-multiple-pages-report-builder-and-ssrs.md).  
   
  Per controllare il comportamento di rendering per righe e colonne dinamiche associate a gruppi nidificati oppure per righe e colonne statiche associate a etichette o subtotali, è necessario impostare proprietà per il membro Tablix. Un membro Tablix rappresenta una riga o una colonna statica o dinamica. Un membro statico si ripete una sola volta. Ad esempio, la riga di un totale complessivo è una riga statica. Un membro dinamico si ripete una sola volta per ogni istanza di un gruppo. Ad esempio, una riga associata a un gruppo che include l'espressione di raggruppamento [Territory] si ripete una sola volta per ogni valore univoco relativo al territorio. Per altre informazioni sui membri Tablix, vedere [Celle, righe e colonne dell'area dati Tablix &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/tablix-data-region-cells-rows-and-columns-report-builder-and-ssrs.md).  
   
