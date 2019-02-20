@@ -8,12 +8,12 @@ ms.topic: tutorial
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 9101471c53ea1e253f7a6eb13e0c2cb2bc137ed3
-ms.sourcegitcommit: baca29731a1be4f8fa47567888278394966e2af7
+ms.openlocfilehash: f5dab603a7295009bee5275b721e987d5de76710
+ms.sourcegitcommit: ad3b2133585bc14fc6ef8be91f8b74ee2f498b64
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/04/2019
-ms.locfileid: "54046461"
+ms.lasthandoff: 02/20/2019
+ms.locfileid: "56425786"
 ---
 # <a name="sql-server-2017-python-tutorials"></a>Esercitazioni di SQL Server 2017 Python
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -31,7 +31,7 @@ Questo articolo descrive le esercitazioni su Python nel database analitica [Mach
 
 | Collegamento | Descrizione |
 |------|-------------|
-| [Guida introduttiva: Script di Python "Hello world" in SQL Server](quickstart-r-run-using-tsql.md) | Informazioni di base di come chiamare Python in T-SQL. |
+| [Guida introduttiva: Script di Python "Hello world" in SQL Server](quickstart-python-run-using-t-sql.md) | Informazioni di base di come chiamare Python in T-SQL. |
 | [Guida introduttiva: Creare, eseguire il training e usare un modello Python con le stored procedure in SQL Server](quickstart-python-train-score-in-tsql.md) | Illustra la meccanica dell'incorporamento di codice Python in una stored procedure, fornire gli input e l'esecuzione di stored procedure. |
 | [Esercitazione: Creare un modello usando revoscalepy](use-python-revoscalepy-to-create-model.md) | Viene illustrato come eseguire il codice da un terminale Python remoto, usando il contesto di calcolo di SQL Server. Verrà visualizzata una certa familiarità con gli ambienti e gli strumenti Python. Codice di esempio viene specificato che crea un modello utilizzando **rxLinMod**, dalla nuova **revoscalepy** libreria. |
 | [Esercitazione: Informazioni su analitica di Python nel Database per sviluppatori SQL](sqldev-in-database-python-for-sql-developers.md) | Questa procedura dettagliata end-to-end viene illustrato il processo di compilazione di una soluzione completa di Python tramite le procedure di T-SQL archiviate. Tutto il codice Python è incluso.|

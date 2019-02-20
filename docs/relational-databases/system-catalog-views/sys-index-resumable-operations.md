@@ -1,7 +1,7 @@
 ---
-title: index_resumable_operations (Transact-SQL) | Microsoft Docs
+title: sys.index_resumable_operations (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 07/10/2017
+ms.date: 01/14/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -20,19 +20,20 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: df53ab01ecd535de0f742129cae56c44cd2d6221
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 780cffa17f6ee1af70d942545632c98c9d6dc1e7
+ms.sourcegitcommit: ad3b2133585bc14fc6ef8be91f8b74ee2f498b64
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47821776"
+ms.lasthandoff: 02/20/2019
+ms.locfileid: "56425776"
 ---
 # <a name="indexresumableoperations-transact-sql"></a>index_resumable_operations (Transact-SQL)
+
 [!INCLUDE[tsql-appliesto-ss2017-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-xxxx-xxx-md.md)]
 **index_resumable_operations** è una vista di sistema che monitora e controlla lo stato di esecuzione corrente per la ricompilazione dell'indice ripristinabile.  
-**Si applica a**: SQL Server 2017 e Azure SQL Database 
+**Si applica a**: SQL Server 2017 e Azure SQL Database
   
-|Nome colonna|Tipo di dati|Description|  
+|Nome colonna|Tipo di dati|Descrizione|  
 |-----------------|---------------|-----------------|  
 |**object_id**|**int**|ID dell'oggetto a cui appartiene (non ammette valori null) dell'indice.|  
 |**index_id**|**int**|ID dell'indice (non ammette valori null). **index_id** è univoco solo all'interno dell'oggetto.|
@@ -43,28 +44,34 @@ ms.locfileid: "47821776"
 |**state**|**tinyint**|Stato operativo per operazioni su indici ripristinabili:<br /><br />0 = in esecuzione<br /><br />1=Pause|
 |**state_desc**|**nvarchar(60)**|Descrizione dello stato operativo per l'indice ripristinabile (in esecuzione o sospesa)|  
 |**start_time**|**datetime**|Ora di inizio operazione indice (non ammette valori null)|
-|**last_pause_time**|**DataTime**| Operazione sull'indice ora ultima pausa (ammette valori null). NULL se l'operazione è in esecuzione e mai in pausa.|
+|**last_pause_time**|**datatime**| Operazione sull'indice ora ultima pausa (ammette valori null). NULL se l'operazione è in esecuzione e mai in pausa.|
 |**total_execution_time**|**int**|Tempo totale di esecuzione dall'ora di inizio in pochi minuti (non ammette valori null)|
 |**percent_complete**|**real**|Indice operazione lo stato di avanzamento completamento in % (non ammette valori null).|
-|**page_count**|**bigint**|Numero totale di pagine di indice allocate per l'operazione di compilazione per il nuovo indice e gli indici di mapping (non ammette valori null). 
+|**page_count**|**bigint**|Numero totale di pagine di indice allocate per l'operazione di compilazione per il nuovo indice e gli indici di mapping (non ammette valori null).
 
-## <a name="permissions"></a>Permissions  
- [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] Per altre informazioni, vedere [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
-   
-## <a name="example"></a>Esempio  
- Elenca tutte le operazioni di ricompilazione dell'indice ripristinabile che sono nello stato di sospensione. 
-  
-```  
+## <a name="permissions"></a>Permissions
+
+[!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] Per altre informazioni, vedere [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
+
+## <a name="example"></a>Esempio
+
+ Elenca tutte le operazioni di ricompilazione dell'indice ripristinabile che sono nello stato di sospensione.
+
+```sql
 SELECT * FROM  sys.index_resumable_operations WHERE STATE = 1;  
-```  
-  
-## <a name="see-also"></a>Vedere anche 
- [ALTER INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/alter-index-transact-sql.md)    
- [Viste del catalogo &#40;Transact-SQL&#41; ](catalog-views-transact-sql.md) [viste del catalogo dell'oggetto &#40;Transact-SQL&#41; ](object-catalog-views-transact-sql.md) [Sys. Indexes &#40;Transact-SQL&#41; ](sys-xml-indexes-transact-sql.md) [Sys. index_columns &#40;Transact-SQL&#41;](sys-index-columns-transact-sql.md)   
- [sys.xml_indexes &#40;Transact-SQL&#41;](sys-xml-indexes-transact-sql.md)   
- [sys.objects &#40;Transact-SQL&#41;](sys-index-columns-transact-sql.md)   
- [sys.key_constraints &#40;Transact-SQL&#41;](sys-key-constraints-transact-sql.md)   
- [sys.filegroups &#40;Transact-SQL&#41;](sys-filegroups-transact-sql.md)   
- [sys.partition_schemes &#40;Transact-SQL&#41;](sys-partition-schemes-transact-sql.md)   
- [Domande frequenti sull'esecuzione di query nel catalogo di sistema di SQL Server](querying-the-sql-server-system-catalog-faq.md)   
-  
+```
+
+## <a name="see-also"></a>Vedere anche
+
+- [ALTER INDEX](../../t-sql/statements/alter-index-transact-sql.md)
+- [CREATE INDEX](../../t-sql/statements/create-index-transact-sql.md)
+- [Viste del catalogo](catalog-views-transact-sql.md)
+- [Viste del catalogo dell'oggetto](object-catalog-views-transact-sql.md)
+- [sys.indexes](sys-xml-indexes-transact-sql.md)
+- [sys.index_columns](sys-index-columns-transact-sql.md)
+- [sys.xml_indexes](sys-xml-indexes-transact-sql.md)
+- [sys.objects](sys-index-columns-transact-sql.md)
+- [sys.key_constraints](sys-key-constraints-transact-sql.md)
+- [sys.filegroups](sys-filegroups-transact-sql.md)
+- [sys.partition_schemes](sys-partition-schemes-transact-sql.md)
+- [Domande frequenti sull'esecuzione di query nel catalogo di sistema di SQL Server](querying-the-sql-server-system-catalog-faq.md)
