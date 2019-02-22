@@ -1,8 +1,0 @@
-- name: Panoramica
-  href: security-overview-integration-services.md
-- name: Controllo dell'accesso per dati sensibili nei pacchetti
-  href: access-control-for-sensitive-data-in-packages.md
-- name: Identificazione dell'origine dei pacchetti con firme digitali
-  href: identify-the-source-of-packages-with-digital-signatures.md
-- name: Ruoli Integration Services (servizio SSIS)
-  href: integration-services-roles-ssis-service.md

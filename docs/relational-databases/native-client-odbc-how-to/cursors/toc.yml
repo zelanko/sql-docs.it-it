@@ -1,8 +1,0 @@
-- name: Procedure di utilizzo dei cursori (ODBC)
-  href: using-cursors-how-to-topics-odbc.md
-- name: Recuperare e aggiornare set di righe (ODBC)
-  href: fetch-and-update-rowsets-odbc.md
-- name: Utilizzare cursori (ODBC)
-  href: use-cursors-odbc.md
-- name: Utilizzare l'associazione di set di righe (ODBC)
-  href: use-rowset-binding-odbc.md

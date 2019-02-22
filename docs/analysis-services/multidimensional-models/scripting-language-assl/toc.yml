@@ -1,8 +1,0 @@
-- name: Oggetti ASSL e relative caratteristiche
-  href: assl-objects-and-object-characteristics.md
-- name: Linguaggio di scripting XMLA per ASSL
-  href: ../../../analysis-services/multidimensional-models-scripting-language-assl-xmla/backing-up-restoring-and-synchronizing-databases-xmla.md
-- name: Convenzioni XML di ASSL
-  href: assl-xml-conventions.md
-- name: Sviluppo con Analysis Services Scripting Language (ASSL)
-  href: developing-with-analysis-services-scripting-language-assl.md

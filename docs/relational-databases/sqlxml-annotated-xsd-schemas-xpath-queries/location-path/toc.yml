@@ -1,8 +1,0 @@
-- name: Definizione di un percorso (SQLXML 4.0)
-  href: specifying-a-location-path-sqlxml-4-0.md
-- name: Specifica di un test di nodo nel percorso (SQLXML 4.0)
-  href: specifying-a-node-test-in-the-location-path-sqlxml-4-0.md
-- name: Specifica di un asse (SQLXML 4.0)
-  href: specifying-an-axis-sqlxml-4-0.md
-- name: Definizione di predicati di selezione nel percorso (SQLXML 4.0)
-  href: specifying-selection-predicates-in-the-location-path-sqlxml-4-0.md

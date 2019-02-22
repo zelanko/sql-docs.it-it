@@ -1,8 +1,0 @@
-- name: Gestione di colonne di tipo text e image
-  href: managing-text-and-image-columns.md
-- name: Colonne di tipo text e image associate e non associate
-  href: bound-vs-unbound-text-and-image-columns.md
-- name: 'Colonne data-at-execution di tipo text, ntext o image'
-  href: data-at-execution-and-text-ntext-or-image-columns.md
-- name: Modifiche registrate e non registrate
-  href: logged-vs-unlogged-modifications.md

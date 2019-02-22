@@ -1,8 +1,0 @@
-- name: 'Memorizzazione nella cache di modelli, file XSL e schemi (SQLXML 4.0)'
-  href: caching-templates-xsl-and-schemas-sqlxml-4-0.md
-- name: Memorizzazione nella cache degli schemi (SQLXML 4.0)
-  href: schema-caching-sqlxml-4-0.md
-- name: Memorizzazione nella cache dei modelli (SQLXML 4.0)
-  href: template-caching-sqlxml-4-0.md
-- name: Memorizzazione nella cache file XSL (SQLXML 4.0)
-  href: xsl-caching-sqlxml-4-0.md

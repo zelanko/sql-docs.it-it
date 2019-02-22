@@ -1,8 +1,0 @@
-- name: Sviluppo di un provider di log personalizzato
-  href: developing-a-custom-log-provider.md
-- name: Creazione di un provider di log personalizzato
-  href: creating-a-custom-log-provider.md
-- name: Scrittura del codice di un provider di log personalizzato
-  href: coding-a-custom-log-provider.md
-- name: Sviluppo di un'interfaccia utente per un provider di log personalizzato
-  href: developing-a-user-interface-for-a-custom-log-provider.md

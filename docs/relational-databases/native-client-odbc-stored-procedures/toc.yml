@@ -1,8 +1,0 @@
-- name: Esecuzione delle stored procedure
-  href: running-stored-procedures.md
-- name: Invio in batch di chiamate a stored procedure
-  href: batching-stored-procedure-calls.md
-- name: Chiamata di una stored procedure
-  href: calling-a-stored-procedure.md
-- name: Risultati dell'elaborazione delle stored procedure
-  href: processing-stored-procedure-results.md

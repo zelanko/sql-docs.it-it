@@ -1,8 +1,0 @@
-- name: Utilizzo di intestazioni SOAP di Reporting Services
-  href: using-reporting-services-soap-headers.md
-- name: Metodi di invio in batch
-  href: batching-methods.md
-- name: Identificazione dello stato di esecuzione
-  href: identifying-execution-state.md
-- name: Impostazione dello spazio dei nomi degli elementi per il metodo GetProperties
-  href: setting-the-item-namespace-for-the-getproperties-method.md
