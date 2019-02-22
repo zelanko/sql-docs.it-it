@@ -2,7 +2,7 @@
 title: Valutare un'azienda e di consolidare i report di valutazione (SQL Server) | Microsoft Docs
 description: Informazioni su come utilizzare DMA per valutare un'azienda e consolidare i report di valutazione prima di aggiornare SQL Server o la migrazione al Database SQL di Azure.
 ms.custom: ''
-ms.date: 02/20/20198
+ms.date: 02/21/2019
 ms.prod: sql
 ms.prod_service: dma
 ms.reviewer: ''
@@ -15,12 +15,12 @@ ms.assetid: ''
 author: pochiraju
 ms.author: rajpo
 manager: craigg
-ms.openlocfilehash: cd3951aaddc19a7b96cc7645084166f19d41422b
-ms.sourcegitcommit: 4cf0fafe565b31262e4148b572efd72c2a632241
+ms.openlocfilehash: 400876a2738c2ca791d3aee12da20c9af1db5b9f
+ms.sourcegitcommit: 71913f80be0cb6f8d3af00c644ee53e3aafdcc44
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 02/21/2019
-ms.locfileid: "56464777"
+ms.locfileid: "56590346"
 ---
 # <a name="assess-an-enterprise-and-consolidate-assessment-reports-with-dma"></a>Valutare un'azienda e di consolidare i report di valutazione con DMA
 
@@ -186,7 +186,7 @@ In questo modo il pannello seguente:
 - Valutazioni di cloud di istanza Gestita di SQL Azure
 - Valutazioni in locale
 
-  ![Segnalibri di visualizzazioni dei rapporti DMA](../dma/media//dma-consolidatereports/dma-report-bookmarks1.png)
+![Segnalibri di visualizzazioni dei rapporti DMA](../dma/media//dma-consolidatereports/dma-report-bookmarks1.png)
 
 Per nascondere il pannello di filtri, CTRL + clic sul pulsante indietro:
 
