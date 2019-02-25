@@ -23,18 +23,15 @@ ms.assetid: d2bade70-07cf-4d94-b5d2-88aecb538ed1
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: f8b1560ef694885ae0debbf06f2d61d23c5d0f66
-ms.sourcegitcommit: 96032813f6bf1cba680b5e46d82ae1f0f2da3d11
+ms.openlocfilehash: 9d262e2d2a4c79a44f0b5a5245991f32b3676487
+ms.sourcegitcommit: a13256f484eee2f52c812646cc989eb0ce6cf6aa
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/15/2019
-ms.locfileid: "54299398"
+ms.lasthandoff: 02/25/2019
+ms.locfileid: "56800975"
 ---
 # <a name="tutorials-for-sql-server-management-studio-ssms"></a>Esercitazioni per SQL Server Management Studio (SSMS)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-
-> [!div class="nextstepaction"]
-> [Condividi il feedback sul sommario della documentazione SQL](https://aka.ms/sqldocsurvey)
 
 L'esercitazione su SQL Server Management Studio (SSMS) illustra l'ambiente integrato per gestire l'infrastruttura di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] presenta un'interfaccia grafica per la configurazione, il monitoraggio e l'amministrazione di istanze di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Consente anche di distribuire, monitorare e aggiornare i componenti livello dati usati dalle applicazioni, ad esempio i database. [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] offre anche [!INCLUDE[tsql](../../includes/tsql-md.md)]e gli editor di linguaggio MDX, DMX e XML per la modifica e il debug di script.  
   
