@@ -10,12 +10,12 @@ ms.prod: sql
 ms.custom: sql-linux
 ms.technology: linux
 monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
-ms.openlocfilehash: b11b3154162fafdfc717e9785fb65e59dc45799c
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: ba2ed69239313a7933840d7a99ccbf3ce0864bfd
+ms.sourcegitcommit: 8664c2452a650e1ce572651afeece2a4ab7ca4ca
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52510821"
+ms.lasthandoff: 02/26/2019
+ms.locfileid: "56828421"
 ---
 # <a name="how-to-configure-persistent-memory-pmem-for-sql-server-on-linux"></a>Come configurare la memoria persistente (PMEM) per SQL Server in Linux
 
@@ -80,7 +80,7 @@ ndctl list
 
   Una volta che il dispositivo è stato configurato con ndctl, formattato e montato, è possibile inserire i file di database in esso. È anche possibile creare un nuovo database 
 
-1. Abilitare illuminazione di file di database SQL Server usando il flag di traccia 3979. Questo flag di traccia è un flag di traccia di avvio e di conseguenza deve essere abilitato tramite l'utilità mssql-conf.
+1. Poiché i dispositivi PMEM sono O_DIRECT sicura, abilitare il flag di traccia 3979 per disabilitare il meccanismo di scaricamento forzato. Questo flag di traccia è un flag di traccia di avvio e di conseguenza deve essere abilitato tramite l'utilità mssql-conf. Si noti che si tratta di una modifica della configurazione a livello di server e non si deve utilizzare questo flag di traccia se si dispone di eventuali dispositivi non conformi O_DIRECT che richiedono il meccanismo di scaricamento forzato per garantire l'integrità dei dati. Per ulteriori informazioni, vedere https://support.microsoft.com/en-us/help/4131496/enable-forced-flush-mechanism-in-sql-server-2017-on-linux.
 
 1. Riavviare SQL Server.
 
