@@ -29,18 +29,15 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: b5198ed4dda2efc350d3ef956a1dda0e3766ca15
-ms.sourcegitcommit: cb9c54054449c586360c9cb634e33f505939a1c9
+ms.openlocfilehash: 6d96aabb002cafa5ea8d6b3043b39d89a0a86a15
+ms.sourcegitcommit: a13256f484eee2f52c812646cc989eb0ce6cf6aa
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/15/2019
-ms.locfileid: "54317831"
+ms.lasthandoff: 02/25/2019
+ms.locfileid: "56801545"
 ---
 # <a name="bcp-utility"></a>Utilità bcp
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-
-  > [!div class="nextstepaction"]
-  > [Condividi il feedback sul sommario della documentazione SQL](https://aka.ms/sqldocsurvey)
 
 > Per l'uso di bcp in Linux, vedere [installare sqlcmd e bcp in Linux](../linux/sql-server-linux-setup-tools.md).
 > 
@@ -63,7 +60,7 @@ Gli strumenti da riga di comando sono General Availability (GA), ma essi vengono
 **Informazioni sulla versione**
 
 Numero di versione: 15.0 <br>
-Numero build: 15.0.1000.34<br>
+Numero di build: 15.0.1000.34<br>
 Data di rilascio: 18 ottobre 2018
 
 La nuova versione di SQLCMD supporta l'autenticazione di Azure AD, incluso il supporto multi-Factor Authentication (MFA) per le funzionalità di Database SQL, SQL Data Warehouse e Always Encrypted.
@@ -255,7 +252,7 @@ bcp [<a href="#db_name">database_name.</a>] <a href="#schema">schema</a>.{<a hre
 
    Per abilitare l'autenticazione interattiva, specificare l'opzione -G con nome utente (-U), solo senza una password.   
 
-   Nell'esempio seguente esporta i dati utilizzando la modalità interattiva di Azure AD che indica il nome utente in cui utente rappresenta un account AAD. Questo è lo stesso esempio usato nella sezione precedente: *Nome utente e password di Azure Active Directory:*  
+   Nell'esempio seguente esporta i dati utilizzando la modalità interattiva di Azure AD che indica il nome utente in cui utente rappresenta un account AAD. Questo è lo stesso esempio usato nella precedente sezione: *Azure Active Directory utente e Password*.  
 
    Modalità interattiva richiede una password per essere immessi manualmente, o per gli account di multi-factor Authentication abilitata, di completare il metodo di autenticazione MFA configurato. 
 
@@ -273,7 +270,7 @@ bcp [<a href="#db_name">database_name.</a>] <a href="#schema">schema</a>.{<a hre
   
 **-h** _**"load hints**_[ ,... *n*]**"**<a name="h"></a> Specifica l'hint o gli hint da usare durante un'importazione in blocco di dati in una tabella o una vista.  
   
-* **ORDER**(**_column_[ASC | DESC] [**,**..._n_]**)**  
+* **ORDER**(**_column_[ASC | DESC] [**,**..._n_])**  
 Tipo di ordinamento dei dati nel file di dati. Le prestazioni dell'importazione bulk sono migliori se i dati da importare vengono ordinati in base all'indice cluster della tabella, se disponibile. Se il file di dati viene ordinato in modo diverso rispetto all'ordine di una chiave di indice cluster o se la tabella non include un indice cluster, la clausola ORDER viene ignorata. I nomi di colonna specificati devono corrispondere a nomi di colonna validi nella tabella di destinazione. Per impostazione predefinita, **bcp** presuppone che il file di dati non sia ordinato. Per garantire l'ottimizzazione dell'importazione bulk, in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] viene inoltre verificato che i dati importati siano ordinati.  
   
 * **ROWS_PER_BATCH** **=** _**bb**_  
@@ -316,7 +313,7 @@ Se *input_file* inizia con un segno meno (-) o una barra (/), non includere uno 
 Specifica che durante l'operazione il valore delle colonne vuote deve essere Null, ovvero che non verranno inseriti valori predefiniti in tali colonne. Per altre informazioni, vedere [Mantenere i valori Null o usare i valori predefiniti durante l'importazione in blocco &#40;SQL Server&#41;](../relational-databases/import-export/keep-nulls-or-use-default-values-during-bulk-import-sql-server.md).  
   
 **-K** _**application\_intent**_<a name="K"></a>   
-Dichiara il tipo di carico di lavoro dell'applicazione in caso di connessione a un server. L'unico valore consentito è **ReadOnly**. Se l'opzione **-K** non è specificata, l'utilità bcp non supporterà la connettività a una replica secondaria in un gruppo di disponibilità Always On. Per altre informazioni, vedere [Repliche secondarie attive: Repliche secondarie leggibili &#40;Gruppi di disponibilità Always On&#41;](../database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md).  
+Dichiara il tipo di carico di lavoro dell'applicazione in caso di connessione a un server. L'unico valore consentito è **ReadOnly**. Se l'opzione **-K** non è specificata, l'utilità bcp non supporterà la connettività a una replica secondaria in un gruppo di disponibilità Always On. Per altre informazioni, vedere [Repliche secondarie attive: Repliche secondarie leggibili &#40;Gruppi di disponibilità AlwaysOn&#41;](../database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md).  
   
 **-L** _**last\_row**_<a name="L"></a>  
 Specifica il numero dell'ultima riga da esportare da una tabella o da importare da un file di dati. Per questo parametro è necessario specificare un valore maggiore di (>) 0, ma minore (<) o uguale (=) al numero dell'ultima riga. Se il parametro viene omesso, l'impostazione predefinita è l'ultima riga del file.  
@@ -610,7 +607,7 @@ L'esempio seguente illustra l'uso dell'opzione **out** nella tabella `WideWorldI
   
  Si presuppone che l'utente usi l'autenticazione in modalità mista, quindi l'opzione **-U** è necessaria per specificare l'ID di accesso. A meno che non venga eseguita la connessione all'istanza predefinita di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] sul computer locale, usare l'opzione **-S** per specificare il nome di sistema e, facoltativamente, il nome di un'istanza.  
 
-Al prompt dei comandi immettere il comando seguente: \(Verrà richiesto di inserire la password.\)
+Al prompt dei comandi, immettere il comando seguente: \(il sistema chiederà di specificare la password.\)
 ```  
 bcp WideWorldImporters.Warehouse.StockItemTransactions out D:\BCP\StockItemTransactions_character.bcp -c -U<login_id> -S<server_name\instance_name>
 ```  

@@ -1,7 +1,7 @@
 ---
 title: Note sulla versione dei driver Microsoft per PHP per SQL Server | Microsoft Docs
 ms.custom: ''
-ms.date: 07/20/2018
+ms.date: 02/11/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -13,17 +13,34 @@ ms.assetid: 91cca3d2-ba99-4a6d-b0de-beb9699cb3f8
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: a22e88aef13c86179dc4cea71ed1003eadfd8661
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 0c2e7377b1072c30e5c5ef038b93a88f0c222260
+ms.sourcegitcommit: 958cffe9288cfe281280544b763c542ca4025684
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47624059"
+ms.lasthandoff: 02/23/2019
+ms.locfileid: "56744351"
 ---
 # <a name="release-notes-for-the-microsoft-drivers-for-php-for-sql-server"></a>Note sulla versione dei driver Microsoft per PHP per SQL Server
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
 Questo argomento vengono illustrate le funzionalità aggiunte in ogni versione del [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)].  
+
+## <a name="whats-new-in-version-56"></a>Novità della versione 5.6
+
+- Supporto per PHP 7.3
+- Supporto per Microsoft ODBC Driver 17.3 su tutte le piattaforme
+- Supporto per macOS Mojave (richiede la versione 17.3 Driver ODBC o versioni successive)
+- Supporto per 18.10 Ubuntu e Suse Linux 15 (entrambi richiedono di ODBC Driver 17.3 o successiva)
+- Eliminato il supporto per PHP 7.0
+- Eliminazione del supporto per Linux Ubuntu 17.10 e macOS El Capitan
+- Supporto per il Token di accesso di Azure AD (in Linux e macOS, richiede unixODBC 2.3.6+ e Driver ODBC 17.2 +)
+- Supporto per l'autenticazione con Azure AD con un'identità gestita per le risorse di Azure (richiede il Driver ODBC versione 17.3 +)
+- Nuove funzionalità di recupero:
+  - Nuovo contrassegno PDO::SQLSRV_ATTR_FETCHES_DATETIME_TYPE per pdo_sqlsrv restituire datetime come oggetti
+  - Aggiunta opzione ReturnDatesAsStrings a livello di istruzione per sqlsrv
+  - Nuove opzioni a livello di connessione e istruzione per entrambi i driver per la formattazione di valori decimali nei risultati recuperati
+- Supporto per la compilazione statica di driver, se gli utenti scelgono per compilarle dal codice sorgente
+- Miglioramento delle prestazioni tramite la memorizzazione nella cache dei metadati in recuperi e velocizzare le conversioni di stringhe Unicode
 
 ## <a name="whats-new-in-version-53"></a>Novità della versione 5.3
 
@@ -65,7 +82,7 @@ Questo argomento vengono illustrate le funzionalità aggiunte in ogni versione d
 
 - Supporto per PHP 7.0  
 - Supporto a 64 bit
-- Supporto per Ubuntu 16.04, Ubuntu 15.04 e RedHat 7
+- Support for Ubuntu 15.04, Ubuntu 16.04, and RedHat 7
 
 ## <a name="whats-new-in-version-32"></a>Novità della versione 3.2
 
