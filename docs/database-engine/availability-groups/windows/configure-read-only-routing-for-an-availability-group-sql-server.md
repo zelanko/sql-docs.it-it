@@ -2,7 +2,7 @@
 title: Configurare il routing di sola lettura per un gruppo di disponibilità
 description: Indirizzare automaticamente tutto il traffico di sola lettura a una replica secondaria usando il routing di sola lettura per il gruppo di disponibilità Always On, con Transact-SQL (T-SQL) o PowerShell.
 ms.custom: seodec18
-ms.date: 08/14/2017
+ms.date: 02/25/2019
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: high-availability
@@ -18,12 +18,12 @@ ms.assetid: 7bd89ddd-0403-4930-a5eb-3c78718533d4
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: ed04fab7d5496f71bc4c9accbcb4fd2e5579df5c
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: 937fb97a9ed59793b532a8dcae0903fab5580678
+ms.sourcegitcommit: 8664c2452a650e1ce572651afeece2a4ab7ca4ca
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54126141"
+ms.lasthandoff: 02/26/2019
+ms.locfileid: "56828001"
 ---
 # <a name="configure-read-only-routing-for-an-always-on-availability-group"></a>Configurare il routing di sola lettura per un gruppo di disponibilità Always On
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -71,7 +71,7 @@ Il routing di sola lettura è disponibile in [!INCLUDE[sssql15](../../../include
   
 -   Per ogni replica secondaria leggibile che deve supportare il routing di sola lettura, è necessario specificare un *URL di routing di sola lettura*. L'URL viene usato solo quando la replica locale viene eseguita nel ruolo secondario. L'URL di routing di sola lettura deve essere specificato per ogni singola replica in base alle esigenze. Ogni URL di routing di sola lettura viene usato per il routing delle richieste di connessione con finalità di lettura a una replica secondaria leggibile specifica. In genere, a ogni replica secondaria leggibile viene assegnato un URL di routing di sola lettura.  
   
-     Per informazioni sul calcolo dell'URL di routing di sola lettura per una replica di disponibilità, vedere [Calcolo di read_only_routing_url per Always On](https://blogs.msdn.microsoft.com/mattn/2012/04/25/calculating-read_only_routing_url-for-alwayson/)
+     Per informazioni sul calcolo dell'URL di routing di sola lettura per una replica di disponibilità, vedere [Calcolo di read_only_routing_url per Always On](https://web.archive.org/web/20170512023255/ https://blogs.msdn.microsoft.com/mattn/2012/04/25/calculating-read_only_routing_url-for-alwayson/)
   
 -   Per ogni replica di disponibilità che deve supportare il routing di sola lettura quando viene eseguita come replica primaria, è necessario specificare un *elenco di routing di sola lettura*. L'elenco di routing di sola lettura viene usato solo quando la replica locale viene eseguita nel ruolo primario. L'elenco deve essere specificato per ogni singola replica in base alle esigenze. In genere, ciascun elenco di routing di sola lettura deve contenere tutti gli URL di routing di sola lettura, con l'URL della replica locale alla fine dell'elenco.  
   
