@@ -27,12 +27,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-current||=azuresqldb-mi-current||=azure-sqldw-latest||>=aps-pdw-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: b8d274e0d43f476d2e00b64dc4ea2188c79ae082
-ms.sourcegitcommit: db552ff344e021c154acb3d0a728475ec4420899
+ms.openlocfilehash: a9a1d940d7229910c899104a19e3a710eb7eae92
+ms.sourcegitcommit: 71913f80be0cb6f8d3af00c644ee53e3aafdcc44
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55832143"
+ms.lasthandoff: 02/21/2019
+ms.locfileid: "56590496"
 ---
 # <a name="alter-database-transact-sql"></a>ALTER DATABASE (Transact-SQL)
 
@@ -48,16 +48,14 @@ Nella riga seguente fare clic su qualsiasi nome di prodotto. Viene visualizzato 
 
 ::: moniker range=">=sql-server-2016||>=sql-server-linux-2017||=sqlallproducts-allversions"
 
-> [!div class="mx-tdCol2BreakAll"]  
-> ||||||  
-> |---|---|---|---|---|  
-> |**_\* SQL Server \*_** &nbsp;|[Database singolo/pool elastico<br />database SQL](alter-database-transact-sql.md?view=azuresqldb-current)|[Istanza gestita<br />database SQL](alter-database-transact-sql.md?view=azuresqldb-mi-current)|[SQL Data<br />Warehouse](alter-database-transact-sql.md?view=azure-sqldw-latest)|[Parallel<br />Data Warehouse](alter-database-transact-sql.md?view=aps-pdw-2016)|  
+||||||  
+|---|---|---|---|---|  
+|**_\* SQL Server \*_** &nbsp;|[Database singolo/pool elastico<br />database SQL](alter-database-transact-sql.md?view=azuresqldb-current)|[Istanza gestita<br />database SQL](alter-database-transact-sql.md?view=azuresqldb-mi-current)|[SQL Data<br />Warehouse](alter-database-transact-sql.md?view=azure-sqldw-latest)|[Parallel<br />Data Warehouse](alter-database-transact-sql.md?view=aps-pdw-2016-au7)|  
+||||||
 
 &nbsp;
 
-## <a name="sql-server"></a>SQL Server
-
-## <a name="overview"></a>Panoramica
+## <a name="overview-sql-server"></a>Panoramica SQL Server
 
 In SQL Server, questa istruzione consente di modificare un database oppure i file e i filegroup associati al database. Consente di aggiungere o rimuovere file e filegroup in un database, modificare gli attributi di un database oppure dei relativi file e filegroup, modificare le regole di confronto e impostare le opzioni del database. Non è possibile modificare snapshot di database. Per la modifica delle opzioni di database associate alla replica, usare [sp_replicationdboption](../../relational-databases/system-stored-procedures/sp-replicationdboption-transact-sql.md).  
 
@@ -285,16 +283,14 @@ GO
 ::: moniker-end
 ::: moniker range="=azuresqldb-current||=sqlallproducts-allversions"
 
-> [!div class="mx-tdCol2BreakAll"]  
-> ||||||  
-> |---|---|---|---|---|  
-> |[SQL Server](alter-database-transact-sql.md?view=sql-server-2016)|**_\*Database singolo/pool elastico<br />database SQL\*_** &nbsp;|[Istanza gestita<br />database SQL](alter-database-transact-sql.md?view=azuresqldb-mi-current)|[SQL Data<br />Warehouse](alter-database-transact-sql.md?view=azure-sqldw-latest)|[Parallel<br />Data Warehouse](alter-database-transact-sql.md?view=aps-pdw-2016)|  
+||||||  
+|---|---|---|---|---|  
+|[SQL Server](alter-database-transact-sql.md?view=sql-server-2017)|**_\*Database singolo/pool elastico<br />database SQL\*_** &nbsp;|[Istanza gestita<br />database SQL](alter-database-transact-sql.md?view=azuresqldb-mi-current)|[SQL Data<br />Warehouse](alter-database-transact-sql.md?view=azure-sqldw-latest)|[Parallel<br />Data Warehouse](alter-database-transact-sql.md?view=aps-pdw-2016-au7)|  
+||||||
 
 &nbsp;
 
-## <a name="azure-sql-database-single-databaseelastic-pool"></a>Database singolo/pool elastico di database SQL di Azure
-
-## <a name="overview"></a>Panoramica
+## <a name="overview-azure-sql-database-single-databaseelastic-pool"></a>Panoramica Database singolo/pool elastico di database SQL di Azure
 
 Nel database SQL di Azure usare questa istruzione per modificare un database in un database singolo/pool elastico. Usare questa istruzione per modificare il nome di un database, modificare l'obiettivo di servizio e l'edizione del database, creare un join con o rimuovere il database da un pool elastico, impostare le opzioni di database, aggiungere o rimuovere il database come database secondario in una relazione di replica geografica e impostare il livello di compatibilità del database.
 
@@ -693,16 +689,14 @@ ALTER DATABASE [db1] MODIFY (EDITION = 'Standard', MAXSIZE = 250 GB, SERVICE_OBJ
 ::: moniker-end
 ::: moniker range="=azuresqldb-mi-current||=sqlallproducts-allversions"
 
-> [!div class="mx-tdCol2BreakAll"]  
-> ||||||  
-> |---|---|---|---|---|  
-> |[SQL Server](alter-database-transact-sql.md?view=sql-server-2016)|[Database singolo/pool elastico<br />database SQL](alter-database-transact-sql.md?view=azuresqldb-current)|**_\* Istanza gestita<br />database SQL\*_** &nbsp;|[SQL Data<br />Warehouse](alter-database-transact-sql.md?view=azure-sqldw-latest)|[Parallel<br />Data Warehouse](alter-database-transact-sql.md?view=aps-pdw-2016)|  
+||||||  
+|---|---|---|---|---|  
+|[SQL Server](alter-database-transact-sql.md?view=sql-server-2017)|[Database singolo/pool elastico<br />database SQL](alter-database-transact-sql.md?view=azuresqldb-current)|**_\* Istanza gestita<br />database SQL\*_** &nbsp;|[SQL Data<br />Warehouse](alter-database-transact-sql.md?view=azure-sqldw-latest)|[Parallel<br />Data Warehouse](alter-database-transact-sql.md?view=aps-pdw-2016-au7)|  
+||||||
 
 &nbsp;
 
-## <a name="azure-sql-database-managed-instance"></a>Istanza gestita di database SQL di Azure
-
-## <a name="overview"></a>Panoramica
+## <a name="overview-azure-sql-database-managed-instance"></a>Panoramica Istanza gestita di database SQL di Azure
 
 Nell'istanza gestita di database SQL di Azure usare questa istruzione per impostare le opzioni di database.
 
@@ -722,8 +716,10 @@ L'articolo corrente fornisce la sintassi e informazioni correlate per impostare 
 ```  
 -- Azure SQL Database Syntax  
 ALTER DATABASE { database_name | CURRENT }  
-{  
-    <file_and_filegroup_options>  
+{
+    MODIFY NAME = new_database_name   
+  | COLLATE collation_name    
+  | <file_and_filegroup_options>  
   | SET <option_spec> [ ,...n ]  
   | SET COMPATIBILITY_LEVEL = { 140 | 130 | 120 | 110 | 100 }   
 }  
@@ -816,16 +812,14 @@ ALTER DATABASE WideWorldImporters
 ::: moniker-end
 ::: moniker range="=azure-sqldw-latest||=sqlallproducts-allversions"
 
-> [!div class="mx-tdCol2BreakAll"]  
-> ||||||  
-> |---|---|---|---|---|  
-> |[SQL Server](alter-database-transact-sql.md?view=sql-server-2016)|[Database singolo/pool elastico<br />database SQL](alter-database-transact-sql.md?view=azuresqldb-current)|[Istanza gestita<br />database SQL](alter-database-transact-sql.md?view=azuresqldb-mi-current)|**_\* SQL Data<br />Warehouse \*_** &nbsp;|[Parallel<br />Data Warehouse](alter-database-transact-sql.md?view=aps-pdw-2016)|  
+||||||  
+|---|---|---|---|---|  
+|[SQL Server](alter-database-transact-sql.md?view=sql-server-2017)|[Database singolo/pool elastico<br />database SQL](alter-database-transact-sql.md?view=azuresqldb-current)|[Istanza gestita<br />database SQL](alter-database-transact-sql.md?view=azuresqldb-mi-current)|**_\* SQL Data<br />Warehouse \*_** &nbsp;|[Parallel<br />Data Warehouse](alter-database-transact-sql.md?view=aps-pdw-2016-au7)|  
+||||||
 
 &nbsp;
 
-## <a name="azure-sql-data-warehouse"></a>Azure SQL Data Warehouse
-
-## <a name="overview"></a>Panoramica
+## <a name="overview-azure-sql-data-warehouse"></a>Panoramica Azure SQL Data Warehouse
 
 Modifica il nome, la dimensione massima o l'obiettivo di servizio per un database.
 
@@ -938,16 +932,14 @@ ALTER DATABASE dw1 MODIFY ( MAXSIZE=10240 GB, SERVICE_OBJECTIVE= 'DW1200' );
 ::: moniker-end
 ::: moniker range=">=aps-pdw-2016||=sqlallproducts-allversions"
 
-> [!div class="mx-tdCol2BreakAll"]  
-> ||||||  
-> |---|---|---|---|---|  
-> |[SQL Server](alter-database-transact-sql.md?view=sql-server-2016)|[Database singolo/pool elastico<br />database SQL](alter-database-transact-sql.md?view=azuresqldb-current)|[Istanza gestita<br />database SQL](alter-database-transact-sql.md?view=azuresqldb-mi-current)|[SQL Data<br />Warehouse](alter-database-transact-sql.md?view=azure-sqldw-latest)|**_\* Parallel<br />Data Warehouse \*_** &nbsp;|  
+||||||  
+|---|---|---|---|---|  
+|[SQL Server](alter-database-transact-sql.md?view=sql-server-2017)|[Database singolo/pool elastico<br />database SQL](alter-database-transact-sql.md?view=azuresqldb-current)|[Istanza gestita<br />database SQL](alter-database-transact-sql.md?view=azuresqldb-mi-current)|[SQL Data<br />Warehouse](alter-database-transact-sql.md?view=azure-sqldw-latest)|**_\* Parallel<br />Data Warehouse \*_** &nbsp;|  
+||||||
 
 &nbsp;
 
-## <a name="parallel-data-warehouse"></a>Parallel Data Warehouse
-
-## <a name="overview"></a>Panoramica
+## <a name="overview-parallel-data-warehouse"></a>Panoramica Parallel Data Warehouse
 
 Modifica le opzioni relative alle dimensioni massime del database per le tabelle replicate, le tabelle distribuite e il log delle transazioni in Parallel Data Warehouse. Usare questa istruzione per gestire le allocazioni dello spazio su disco per un database man mano che le sue dimensioni aumentano o diminuiscono. L'articolo descrive anche la sintassi correlata all'impostazione di opzioni di database in Parallel Data Warehouse.
 

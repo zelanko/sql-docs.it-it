@@ -21,18 +21,15 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 15c28ceccbdaf6d4c4b69e9e15c356cffc0c085c
-ms.sourcegitcommit: 96032813f6bf1cba680b5e46d82ae1f0f2da3d11
+ms.openlocfilehash: 3d6e241d73040a30fcca5de3114110089259ab8b
+ms.sourcegitcommit: a13256f484eee2f52c812646cc989eb0ce6cf6aa
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/15/2019
-ms.locfileid: "54298448"
+ms.lasthandoff: 02/25/2019
+ms.locfileid: "56801725"
 ---
 # <a name="else-ifelse-transact-sql"></a>ELSE (IF...ELSE) (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
-
-  > [!div class="nextstepaction"]
-  > [Condividi il feedback sul sommario della documentazione SQL](https://aka.ms/sqldocsurvey)
 
   Impone le condizioni per l'esecuzione di un'istruzione [!INCLUDE[tsql](../../includes/tsql-md.md)]. L'istruzione [!INCLUDE[tsql](../../includes/tsql-md.md)] (*sql_statement*) che segue *Boolean_expression* viene eseguita se *Boolean_expression* restituisce TRUE. La parola chiave facoltativa ELSE rappresenta un'istruzione [!INCLUDE[tsql](../../includes/tsql-md.md)] alternativa che viene eseguita quando l'argomento *Boolean_expression* restituisce FALSE o NULL.  
   

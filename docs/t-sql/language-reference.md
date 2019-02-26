@@ -16,18 +16,15 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: cb85ebe35b50d143f4887cba91eda08a930666a0
-ms.sourcegitcommit: 96032813f6bf1cba680b5e46d82ae1f0f2da3d11
+ms.openlocfilehash: b5e9346b2ea7a6e3f881d960462fbb56b4cd7000
+ms.sourcegitcommit: a13256f484eee2f52c812646cc989eb0ce6cf6aa
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/15/2019
-ms.locfileid: "54299008"
+ms.lasthandoff: 02/25/2019
+ms.locfileid: "56802685"
 ---
 # <a name="transact-sql-reference-database-engine"></a>Guida di riferimento a Transact-SQL (Motore di database)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../includes/tsql-appliesto-ss2008-all-md.md)]
-
-> [!div class="nextstepaction"]
-> [Condividi il feedback sul sommario della documentazione SQL](https://aka.ms/sqldocsurvey)
 
 Questo argomento offre le informazioni di base sulla ricerca e l'uso degli argomenti della Guida di riferimento a Microsoft Transact-SQL (T-SQL). T-SQL è fondamentale per l'uso dei prodotti e dei servizi Microsoft SQL. Tutti gli strumenti e le applicazioni che comunicano con un database SQL inviano comandi T-SQL.  
 

@@ -22,18 +22,15 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 1b5068b47f1622171ec4d39087cb16fa3d37838f
-ms.sourcegitcommit: 96032813f6bf1cba680b5e46d82ae1f0f2da3d11
+ms.openlocfilehash: 1209760f3594a0820da651ea4b9cdc21b536b6fd
+ms.sourcegitcommit: a13256f484eee2f52c812646cc989eb0ce6cf6aa
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/15/2019
-ms.locfileid: "54299031"
+ms.lasthandoff: 02/25/2019
+ms.locfileid: "56801035"
 ---
 # <a name="ifelse-transact-sql"></a>IF...ELSE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
-
-> [!div class="nextstepaction"]
-> [Condividi il feedback sul sommario della documentazione SQL](https://aka.ms/sqldocsurvey)
 
 Impone le condizioni per l'esecuzione di un'istruzione [!INCLUDE[tsql](../../includes/tsql-md.md)]. L'istruzione [!INCLUDE[tsql](../../includes/tsql-md.md)] che segue una parola chiave IF e le relative condizioni viene eseguita se le condizioni vengono soddisfatte, ovvero quando l'espressione booleana restituisce TRUE. La parola chiave facoltativa ELSE introduce un'altra istruzione [!INCLUDE[tsql](../../includes/tsql-md.md)] eseguita quando non viene soddisfatta la condizione IF, ovvero quando l'espressione booleana restituisce FALSE.  
   

@@ -1,7 +1,7 @@
 ---
 title: 'Avvio rapido 1: Tecnologie OLTP in memoria per migliorare le prestazioni di Transact-SQL | Microsoft Docs'
 ms.custom: ''
-ms.date: 09/05/2017"
+ms.date: 09/05/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -12,18 +12,15 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 21d42cb015227b06021878e37b4c1b94bd96a446
-ms.sourcegitcommit: 96032813f6bf1cba680b5e46d82ae1f0f2da3d11
+ms.openlocfilehash: c0988c2cf4d133305676241763aa90f1db68b86c
+ms.sourcegitcommit: a13256f484eee2f52c812646cc989eb0ce6cf6aa
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/15/2019
-ms.locfileid: "54300398"
+ms.lasthandoff: 02/25/2019
+ms.locfileid: "56802955"
 ---
 # <a name="survey-of-initial-areas-in-in-memory-oltp"></a>Indagine sulle aree iniziali di OLTP in memoria
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-
-  > [!div class="nextstepaction"]
-  > [Condividi il feedback sul sommario della documentazione SQL](https://aka.ms/sqldocsurvey)
 
   
 Questo articolo è per gli sviluppatori che hanno premura di imparare in poco tempo le basi delle caratteristiche di prestazione di OLTP in memoria di Microsoft SQL Server e Database SQL di Azure.  

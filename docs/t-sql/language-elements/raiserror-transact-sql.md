@@ -30,18 +30,15 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 0875e5013e2a5f12468d99414ff94252ac66453a
-ms.sourcegitcommit: 96032813f6bf1cba680b5e46d82ae1f0f2da3d11
+ms.openlocfilehash: 23294229be50c987be4b2f59568889910b605596
+ms.sourcegitcommit: a13256f484eee2f52c812646cc989eb0ce6cf6aa
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/15/2019
-ms.locfileid: "54300298"
+ms.lasthandoff: 02/25/2019
+ms.locfileid: "56802427"
 ---
 # <a name="raiserror-transact-sql"></a>RAISERROR (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
-
-  > [!div class="nextstepaction"]
-  > [Condividi il feedback sul sommario della documentazione SQL](https://aka.ms/sqldocsurvey)
 
   Consente di generare un messaggio di errore e di inizializzare l'elaborazione dell'errore per la sessione. RAISERROR può fare riferimento a un messaggio definito dall'utente archiviato nella vista del catalogo sys.messages oppure compilare un messaggio in modo dinamico. Il messaggio viene restituito come messaggio di errore del server all'applicazione chiamante o a un blocco CATCH associato di un costrutto TRY...CATCH. Per le nuove applicazioni è invece necessario usare [THROW](../../t-sql/language-elements/throw-transact-sql.md).  
   

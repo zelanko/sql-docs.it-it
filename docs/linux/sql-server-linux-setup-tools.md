@@ -10,12 +10,12 @@ ms.prod: sql
 ms.custom: sql-linux
 ms.technology: linux
 ms.assetid: eff8e226-185f-46d4-a3e3-e18b7a439e63
-ms.openlocfilehash: 80bff9787e750e39a0747be831b1fc902d6923a8
-ms.sourcegitcommit: a2be75158491535c9a59583c51890e3457dc75d6
+ms.openlocfilehash: 20b383929910bf24ef9dc89950f15815afdef3bd
+ms.sourcegitcommit: a13256f484eee2f52c812646cc989eb0ce6cf6aa
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/07/2018
-ms.locfileid: "51270174"
+ms.lasthandoff: 02/25/2019
+ms.locfileid: "56801755"
 ---
 # <a name="install-sqlcmd-and-bcp-the-sql-server-command-line-tools-on-linux"></a>Installare sqlcmd e bcp strumenti da riga di comando di SQL Server in Linux
 
@@ -23,8 +23,8 @@ ms.locfileid: "51270174"
 
 La procedura seguente installa gli strumenti da riga di comando, i driver ODBC di Microsoft e le relative dipendenze. Il **mssql-tools** pacchetto contiene:
 
-- **SQLCMD**: utilità della riga di comando di query.
-- **bcp**: utilità di importazione / esportazione in blocco.
+- **sqlcmd**: Utilità della riga di comando di query.
+- **bcp**: Utilità di importazione / esportazione in blocco.
 
 Installare gli strumenti per la piattaforma in uso:
 
@@ -77,7 +77,7 @@ Usare la procedura seguente per installare il **mssql-tools** in Red Hat Enterpr
    >   sudo yum update mssql-tools
    >   ```
 
-1. **Facoltativo**: aggiungere `/opt/mssql-tools/bin/` per il **percorso** variabile di ambiente in una shell bash.
+1. **Facoltativo**: Aggiungere `/opt/mssql-tools/bin/` per il **percorso** variabile di ambiente in una shell bash.
 
    Per rendere **sqlcmd/bcp** accessibile da shell di bash per sessioni di accesso, modificare le **PATH** nel **~/.bash_profile** file con il comando seguente:
 
@@ -122,7 +122,7 @@ Usare la procedura seguente per installare il **mssql-tools** in Ubuntu.
    >   sudo apt-get install mssql-tools 
    >   ```
 
-1. **Facoltativo**: aggiungere `/opt/mssql-tools/bin/` per il **percorso** variabile di ambiente in una shell bash.
+1. **Facoltativo**: Aggiungere `/opt/mssql-tools/bin/` per il **percorso** variabile di ambiente in una shell bash.
 
    Per rendere **sqlcmd/bcp** accessibile da shell di bash per sessioni di accesso, modificare le **PATH** nel **~/.bash_profile** file con il comando seguente:
 
@@ -161,7 +161,7 @@ Usare la procedura seguente per installare il **mssql-tools** su SUSE Linux Ente
    >   sudo zypper update mssql-tools
    >   ```
 
-1. **Facoltativo**: aggiungere `/opt/mssql-tools/bin/` per il **percorso** variabile di ambiente in una shell bash.
+1. **Facoltativo**: Aggiungere `/opt/mssql-tools/bin/` per il **percorso** variabile di ambiente in una shell bash.
 
    Per rendere **sqlcmd/bcp** accessibile da shell di bash per sessioni di accesso, modificare le **PATH** nel **~/.bash_profile** file con il comando seguente:
 
@@ -190,9 +190,9 @@ Per installare gli strumenti per Mac El Capitan e Sierra, usare i comandi seguen
 # brew untap microsoft/mssql-preview if you installed the preview version 
 brew tap microsoft/mssql-release https://github.com/Microsoft/homebrew-mssql-release
 brew update
-brew install --no-sandbox mssql-tools
+brew install mssql-tools
 #for silent install: 
-#ACCEPT_EULA=y brew install --no-sandbox mssql-tools
+#HOMEBREW_NO_ENV_FILTERING=1 ACCEPT_EULA=y brew install mssql-tools
 ```
 
 ## <a id="docker"></a> Docker
@@ -218,14 +218,14 @@ Questi pacchetti dipendono **msodbcsql**, che deve essere installato per primo. 
 |-----|-----|-----|
 | Pacchetto di Red Hat RPM msodbcsql | 13.1.6.0-1 | [pacchetto RPM msodbcsql](https://packages.microsoft.com/rhel/7.3/prod/msodbcsql-13.1.6.0-1.x86_64.rpm) | 
 | Pacchetto msodbcsql RPM SLES | 13.1.6.0-1 | [pacchetto RPM msodbcsql](https://packages.microsoft.com/sles/12/prod/msodbcsql-13.1.6.0-1.x86_64.rpm) | 
-| Pacchetto Debian msodbcsql Ubuntu 16.04 | 13.1.6.0-1 | [pacchetto Debian msodbcsql](https://packages.microsoft.com/ubuntu/16.04/prod/pool/main/m/msodbcsql/msodbcsql_13.1.6.0-1_amd64.deb) |
-| Pacchetto Debian msodbcsql Ubuntu 16.10 | 13.1.6.0-1 | [pacchetto Debian msodbcsql](https://packages.microsoft.com/ubuntu/16.10/prod/pool/main/m/msodbcsql/msodbcsql_13.1.6.0-1_amd64.deb) |
+| Ubuntu 16.04 Debian msodbcsql package | 13.1.6.0-1 | [pacchetto Debian msodbcsql](https://packages.microsoft.com/ubuntu/16.04/prod/pool/main/m/msodbcsql/msodbcsql_13.1.6.0-1_amd64.deb) |
+| Ubuntu 16.10 Debian msodbcsql package | 13.1.6.0-1 | [pacchetto Debian msodbcsql](https://packages.microsoft.com/ubuntu/16.10/prod/pool/main/m/msodbcsql/msodbcsql_13.1.6.0-1_amd64.deb) |
 
 Per installare manualmente questi pacchetti, procedere come segue:
 
 1. **Spostare i pacchetti scaricati nel computer Linux**. Se si usa un altro computer per scaricare i pacchetti, è un modo per spostare i pacchetti nel computer Linux con il **scp** comando.
 
-1. **Installare i pacchetti e**: installare il **mssql-tools** e **msodbc** pacchetti. Se si verificano eventuali errori di dipendenza, è possibile ignorarli fino al passaggio successivo.
+1. **Installare i pacchetti e**: Installare il **mssql-tools** e **msodbc** pacchetti. Se si verificano eventuali errori di dipendenza, è possibile ignorarli fino al passaggio successivo.
 
     | Piattaforma | Comandi di installazione pacchetto |
     |-----|-----|
@@ -233,7 +233,7 @@ Per installare manualmente questi pacchetti, procedere come segue:
     | SLES | `sudo zypper install msodbcsql-13.1.6.0-1.x86_64.rpm`<br/>`sudo zypper install mssql-tools-14.0.5.0-1.x86_64.rpm` |
     | Ubuntu | `sudo dpkg -i msodbcsql_13.1.6.0-1_amd64.deb`<br/>`sudo dpkg -i mssql-tools_14.0.5.0-1_amd64.deb` |
 
-1. **Risolvere le dipendenze mancante**: è possibile avere dipendenze mancanti a questo punto. In caso contrario, è possibile ignorare questo passaggio. In alcuni casi, è necessario individuare manualmente e installare queste dipendenze.
+1. **Risolvere le dipendenze mancante**: Potrebbe essere mancante a questo punto le dipendenze. In caso contrario, è possibile ignorare questo passaggio. In alcuni casi, è necessario individuare manualmente e installare queste dipendenze.
 
     Per i pacchetti RPM, è possibile controllare le dipendenze necessarie con i comandi seguenti:
 

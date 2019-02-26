@@ -30,18 +30,16 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 1487803dbbcb2ef09dd182dea2eaffa6a967badf
-ms.sourcegitcommit: 96032813f6bf1cba680b5e46d82ae1f0f2da3d11
+ms.openlocfilehash: 17a73ac1df6510adb9d43f7f638d39527e84b05b
+ms.sourcegitcommit: a13256f484eee2f52c812646cc989eb0ce6cf6aa
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/15/2019
-ms.locfileid: "54298928"
+ms.lasthandoff: 02/25/2019
+ms.locfileid: "56801495"
 ---
 # <a name="trycatch-transact-sql"></a>TRY...CATCH (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-  > [!div class="nextstepaction"]
-  > [Condividi il feedback sul sommario della documentazione SQL](https://aka.ms/sqldocsurvey)
 
   Implementa la gestione degli errori per [!INCLUDE[tsql](../../includes/tsql-md.md)], simile alla gestione delle eccezioni nei linguaggi [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual C# e [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual C++. Un gruppo di istruzioni [!INCLUDE[tsql](../../includes/tsql-md.md)] può essere racchiuso in un blocco TRY. Se si verifica un errore nel blocco TRY, il controllo viene passato a un altro gruppo di istruzioni racchiuso in un blocco CATCH.  
   

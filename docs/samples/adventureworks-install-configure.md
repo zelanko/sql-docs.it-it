@@ -10,18 +10,15 @@ ms.topic: conceptual
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: a5eb1b2d0aa49b882afd9aa8b239a6bb64375563
-ms.sourcegitcommit: 96032813f6bf1cba680b5e46d82ae1f0f2da3d11
+ms.openlocfilehash: 474cc691a8adc0e022e10e52c766368e9f655d8a
+ms.sourcegitcommit: a13256f484eee2f52c812646cc989eb0ce6cf6aa
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/15/2019
-ms.locfileid: "54299661"
+ms.lasthandoff: 02/25/2019
+ms.locfileid: "56801785"
 ---
 # <a name="adventureworks-installation-and-configuration"></a>Configurazione e installazione di AdventureWorks
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-
-  > [!div class="nextstepaction"]
-  > [Condividi i tuoi commenti su SQL Docs sommario.](https://aka.ms/sqldocsurvey)
 
 AdventureWorks scaricare collegamenti e le istruzioni di installazione. 
 

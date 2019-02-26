@@ -41,18 +41,15 @@ ms.assetid: 864b393f-225f-4895-8c8d-4db59ea60032
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: cf2f90329896524a96425f69f9dc3afd46d7ac3c
-ms.sourcegitcommit: 96032813f6bf1cba680b5e46d82ae1f0f2da3d11
+ms.openlocfilehash: 9957e69ae2cc285ecad5709a9169bd3ee01be464
+ms.sourcegitcommit: a13256f484eee2f52c812646cc989eb0ce6cf6aa
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/15/2019
-ms.locfileid: "54299928"
+ms.lasthandoff: 02/25/2019
+ms.locfileid: "56801595"
 ---
 # <a name="create-function-transact-sql"></a>CREATE FUNCTION (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
-
-> [!div class="nextstepaction"]
-> [Condividi il feedback sul sommario della documentazione SQL](https://aka.ms/sqldocsurvey)
 
 Crea una funzione definita dall'utente in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e nel [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]. Una funzione definita dall'utente è una routine [!INCLUDE[tsql](../../includes/tsql-md.md)] o Common Language Runtime (CLR) tramite cui vengono accettati parametri, viene effettuata un'azione, ad esempio un calcolo complesso, e viene restituito il risultato di tale azione sotto forma di valore. Il valore restituito può essere un valore scalare (singolo) o una tabella. Utilizzare questa istruzione per creare una routine riutilizzabile che può essere utilizzata in queste modalità:  
   

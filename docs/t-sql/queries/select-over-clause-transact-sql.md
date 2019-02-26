@@ -26,18 +26,15 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 53de562bb59b279f511e73a66ad308eff029b26e
-ms.sourcegitcommit: 96032813f6bf1cba680b5e46d82ae1f0f2da3d11
+ms.openlocfilehash: f04a60e28b96c97890ab34157df50bd1dfc39891
+ms.sourcegitcommit: a13256f484eee2f52c812646cc989eb0ce6cf6aa
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/15/2019
-ms.locfileid: "54299428"
+ms.lasthandoff: 02/25/2019
+ms.locfileid: "56803326"
 ---
 # <a name="select---over-clause-transact-sql"></a>Clausola SELECT - OVER (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
-
-  > [!div class="nextstepaction"]
-  > [Condividi il feedback sul sommario della documentazione SQL](https://aka.ms/sqldocsurvey)
 
   Determina il partizionamento e l'ordinamento di un set di righe prima dell'applicazione della funzione finestra associata. In altre parole, la clausola OVER definisce una finestra o un set di righe specificato dall'utente all'interno di un set di risultati della query. Una funzione finestra calcola quindi un valore per ogni riga della finestra. È possibile utilizzare la clausola OVER con le funzioni per calcolare i valori aggregati, ad esempio medie mobili, aggregazioni cumulative, totali parziali o i primi N risultati per gruppo.  
   
