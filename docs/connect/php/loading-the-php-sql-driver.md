@@ -1,7 +1,7 @@
 ---
 title: Caricamento dei driver Microsoft per PHP per SQL Server | Microsoft Docs
 ms.custom: ''
-ms.date: 03/26/2018
+ms.date: 02/11/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -13,12 +13,12 @@ ms.assetid: e5c114c5-8204-49c2-94eb-62ca63f5d3ec
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 3dd99ffa39de48dbf8839cbe06a8bb236fffbdf3
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.openlocfilehash: e62fc14eff52fa64e9e9f9dc041cc3c8601230e5
+ms.sourcegitcommit: 958cffe9288cfe281280544b763c542ca4025684
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51606201"
+ms.lasthandoff: 02/23/2019
+ms.locfileid: "56744611"
 ---
 # <a name="loading-the-microsoft-drivers-for-php-for-sql-server"></a>Caricamento dei Driver Microsoft per PHP per SQL Server
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -28,6 +28,8 @@ In questa pagina vengono specificate le istruzioni per il caricamento dei [!INCL
 È possibile scaricare i driver predefiniti per la piattaforma nella [Microsoft Drivers per PHP per SQL Server](https://github.com/Microsoft/msphpsql/releases) pagina del progetto Github. Ogni pacchetto di installazione contiene file di driver SQLSRV e PDO_SQLSRV le varianti con thread e non a thread singolo. In Windows, sono anche disponibili le varianti a 32 e 64 bit. Visualizzare [requisiti di sistema per Microsoft Drivers per PHP per SQL Server](../../connect/php/system-requirements-for-the-php-sql-driver.md) per un elenco dei file di driver che sono contenuti in ogni pacchetto. Il file del driver deve corrispondere la versione PHP, architettura e threadedness dell'ambiente di PHP.
 
 In Linux e macOS, i driver possono in alternativa essere installati usando PECL, come individuata nel [esercitazione sull'installazione](../../connect/php/installation-tutorial-linux-mac.md).
+
+È anche possibile compilare i driver dall'origine o durante la compilazione di PHP o tramite `phpize`. Se si sceglie di creare i driver dall'origine, è possibile scegliere di crearle in modo statico in PHP invece di compilare le estensioni come condivise aggiungendo `--enable-sqlsrv=static --with-pdo_sqlsrv=static` (in Linux e macOS) o `--enable-sqlsrv=static --with-pdo-sqlsrv=static` (on Windows) per il `./configure` comando prima di compilazione di PHP. Per altre informazioni su PHP sistema di compilazione e `phpize`, vedere la [documentazione di PHP](http://php.net/manual/install.php).
   
 ## <a name="moving-the-driver-file-into-your-extension-directory"></a>Spostamento del file del driver nella directory dell'estensione  
 Il file del driver debba trovarsi in una directory in cui possibile trovare il runtime PHP. È più semplice inserire il file di driver nella directory dell'estensione PHP predefinito, per trovare la directory predefinita, eseguire `php -i | sls extension_dir` in Windows o `php -i | grep extension_dir` su Linux/macOS. Se non si usa la directory di estensione predefinite, specificare una directory nel file di configurazione PHP (PHP. ini), usando il **extension_dir** opzione. Ad esempio, in Windows, se è stato inserito il file del driver `c:\php\ext` directory, aggiungere la riga seguente al file PHP. ini:

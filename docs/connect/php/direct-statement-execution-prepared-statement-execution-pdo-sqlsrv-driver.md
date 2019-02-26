@@ -11,12 +11,12 @@ ms.assetid: 05544ca6-1e07-486c-bf03-e8c2c25b3024
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 8dba0e72f3575c0958ad142b6d27b7be410d6cec
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 005a2c4b34c9aae2cfdfe4663cbfcbe06a68b81a
+ms.sourcegitcommit: c1105ce638078d2c941cd656b34f78486e6b2d89
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47658749"
+ms.lasthandoff: 02/22/2019
+ms.locfileid: "56676109"
 ---
 # <a name="direct-statement-execution-and-prepared-statement-execution-in-the-pdosqlsrv-driver"></a>Esecuzione di istruzioni diretta e preparata nel driver PDO_SQLSRV
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -34,8 +34,11 @@ Dopo aver chiamato [PDO:: Prepare](../../connect/php/pdo-prepare.md), non è pos
   
 Se una query richiede il contesto che è stato impostato in una query precedente, eseguire le query con PDO:: sqlsrv_attr_direct_query impostato su True. Ad esempio, se si usano le tabelle temporanee nelle query, PDO:: sqlsrv_attr_direct_query deve essere impostato su True.  
   
-L'esempio seguente illustra che quando è necessario contesto da un'istruzione precedente, è necessario impostare PDO:: sqlsrv_attr_direct_query su True.  Questo esempio Usa le tabelle temporanee, sono disponibili solo per le istruzioni successive nel programma quando le query vengono eseguite direttamente.  
+L'esempio seguente illustra che quando è necessario contesto da un'istruzione precedente, è necessario impostare PDO:: sqlsrv_attr_direct_query su True. Questo esempio Usa le tabelle temporanee, sono disponibili solo per le istruzioni successive nel programma quando le query vengono eseguite direttamente.  
   
+> [!NOTE]
+> Se la query consiste nel richiamare una stored procedure e tabelle temporanee vengono usate in questa stored procedure, utilizzare [PDO:: Exec](../../connect/php/pdo-exec.md) invece.
+
 ```  
 <?php  
    $conn = new PDO('sqlsrv:Server=(local)', '', '');  

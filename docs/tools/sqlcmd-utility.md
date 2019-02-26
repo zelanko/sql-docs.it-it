@@ -28,18 +28,15 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: fbbf5a3ad4c3d6a667ae2622e5bf09ea5f39c911
-ms.sourcegitcommit: 96032813f6bf1cba680b5e46d82ae1f0f2da3d11
+ms.openlocfilehash: bdea0473176e08c51931f1bb192462c5c45ee514
+ms.sourcegitcommit: a13256f484eee2f52c812646cc989eb0ce6cf6aa
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/15/2019
-ms.locfileid: "54300104"
+ms.lasthandoff: 02/25/2019
+ms.locfileid: "56802377"
 ---
 # <a name="sqlcmd-utility"></a>sqlcmd
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-
-  > [!div class="nextstepaction"]
-  > [Condividi i tuoi commenti su SQL Docs sommario.](https://aka.ms/sqldocsurvey)
 
 > Per SQL Server 2014 e inferiori, vedere [utilità sqlcmd](https://docs.microsoft.com/sql/tools/sqlcmd-utility?view=sql-server-2014
 > ).
@@ -65,8 +62,8 @@ Gli strumenti da riga di comando sono General Availability (GA), ma essi vengono
 **Informazioni sulla versione**
 
 Numero di versione: 15.0 <br>
-Numero build: 15.0.1000.34<br>
-Data di rilascio 18 ottobre 2018
+Numero di build: 15.0.1000.34<br>
+Data di rilascio: 18 ottobre 2018
 
 La nuova versione di SQLCMD supporta l'autenticazione di Azure AD, incluso il supporto multi-Factor Authentication (MFA) per le funzionalità di Database SQL, SQL Data Warehouse e Always Encrypted.
 Il nuovo BCP supporta l'autenticazione di Azure AD, incluso il supporto multi-Factor Authentication (MFA) per Database SQL e SQL Data Warehouse.
@@ -80,7 +77,7 @@ Per controllare la versione SQLCMD eseguire `sqlcmd -?` di comandi e verificare 
 > [!NOTE]
 > È necessaria versione 13.1 o successiva per supportare Always Encrypted (`-g`) e l'autenticazione di Azure Active Directory (`-G`). Nel computer potrebbero essere installate diverse versioni di sqlcmd.exe. Assicurarsi di usare la versione corretta. Per determinare la versione, eseguire `sqlcmd -?`.
 
-Pre-installata per impostazione predefinita, è possibile provare l'utilità sqlcmd da Azure Cloud Shell: [![Avviare Cloud Shell](https://shell.azure.com/images/launchcloudshell.png "avviare Cloud Shell")](https://shell.azure.com)
+È possibile provare l'utilità sqlcmd da Azure Cloud Shell pre-installata per impostazione predefinita: [ ![avvia Cloud Shell](https://shell.azure.com/images/launchcloudshell.png "avvia Cloud Shell")](https://shell.azure.com)
 
   Per eseguire istruzioni sqlcmd in SSMS, selezionare la modalità SQLCMD dal menu a discesa Query nella parte superiore della struttura di navigazione.  
   
@@ -215,7 +212,7 @@ Imposta la crittografia delle colonne su `Enabled`. Per altre informazioni, vede
 
    Per abilitare l'autenticazione interattiva, specificare l'opzione -G con nome utente (-U), solo senza una password.
 
-   Nell'esempio seguente esporta i dati utilizzando la modalità interattiva di Azure AD che indica il nome utente in cui utente rappresenta un account AAD. Questo è lo stesso esempio usato nella sezione precedente: *Nome utente e password di Azure Active Directory:*  
+   Nell'esempio seguente esporta i dati utilizzando la modalità interattiva di Azure AD che indica il nome utente in cui utente rappresenta un account AAD. Questo è lo stesso esempio usato nella precedente sezione: *Azure Active Directory utente e Password*.  
 
    Modalità interattiva richiede una password per essere immessi manualmente, o per gli account di multi-factor Authentication abilitata, di completare il metodo di autenticazione MFA configurato.
 
@@ -248,7 +245,7 @@ Imposta la crittografia delle colonne su `Enabled`. Per altre informazioni, vede
 **-j** Visualizza sullo schermo messaggi di errore non elaborati.
   
  **-K** _application_intent_  
- Dichiara il tipo di carico di lavoro dell'applicazione in caso di connessione a un server. L'unico valore attualmente supportato è **ReadOnly**. Se l'opzione **-K** non è specificata, l'utilità sqlcmd non supporta la connettività a una replica secondaria in un gruppo di disponibilità AlwaysOn. Per altre informazioni, vedere [Repliche secondarie attive: Repliche secondarie leggibili (Gruppi di disponibilità AlwaysOn)](../database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md)  
+ Dichiara il tipo di carico di lavoro dell'applicazione in caso di connessione a un server. L'unico valore attualmente supportato è **ReadOnly**. Se l'opzione **-K** non è specificata, l'utilità sqlcmd non supporta la connettività a una replica secondaria in un gruppo di disponibilità AlwaysOn. Per altre informazioni, vedere [Repliche secondarie attive: Repliche secondarie leggibili (gruppi di disponibilità Always On)](../database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md)  
   
 **-M** _multisubnet_failover_  
  Specificare sempre **-M** in caso di connessione al listener di un gruppo di disponibilità di SQL Server o a un'istanza del cluster di failover di SQL Server. Tramite **-M** viene fornito un rilevamento più veloce di una connessione al server attualmente attivo. Se non si specifica **-M**, significa che l'opzione **-M** è disattivata. Per altre informazioni, vedere [Listener, connettività client e failover dell'applicazione](../database-engine/availability-groups/windows/listeners-client-connectivity-application-failover.md), [Creazione e configurazione di gruppi di disponibilità &#40;SQL Server&#41;](../database-engine/availability-groups/windows/creation-and-configuration-of-availability-groups-sql-server.md), [Clustering di failover e gruppi di disponibilità AlwaysOn (SQL Server)](https://msdn.microsoft.com/library/ff929171.aspx) e [Repliche secondarie attive: Repliche secondarie leggibili (Gruppi di disponibilità AlwaysOn)](https://msdn.microsoft.com/library/ff878253.aspx). 
@@ -840,7 +837,7 @@ Al prompt digitare sqlcmd:
 
 `GO`
 
-Quando si preme INVIO, viene stampato il messaggio informativo seguente: Il contesto di database è stato sostituito con 'AdventureWorks2012'.  
+Se si preme INVIO, verrà stampato il messaggio informativo seguente: "Il contesto di database è stato sostituito con 'AdventureWorks2012'".  
   
 ### <a name="output-format-from-transact-sql-queries"></a>Formato di output delle query Transact-SQL  
  **sqlcmd** stampa prima di tutto un'intestazione di colonna contenente i nomi delle colonne specificati nell'elenco di selezione. I nomi di colonna sono delimitati tramite il carattere specificato da SQLCMDCOLSEP. Per impostazione predefinita, viene utilizzato uno spazio. Se la lunghezza del nome di colonna è minore della larghezza della colonna, nell'output vengono inseriti caratteri di riempimento fino alla colonna successiva.  

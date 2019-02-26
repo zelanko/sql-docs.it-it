@@ -14,19 +14,16 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||=azuresqldb-mi-current'
-ms.openlocfilehash: d296a30e017172e1e753d6dbaaa065b0644792bb
-ms.sourcegitcommit: 31c8f9eab00914e056e9219093dbed1b0b4542a6
+ms.openlocfilehash: e3c078bcccd52d6beea2deba3b3abee59775001d
+ms.sourcegitcommit: a13256f484eee2f52c812646cc989eb0ce6cf6aa
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/31/2019
-ms.locfileid: "55513963"
+ms.lasthandoff: 02/25/2019
+ms.locfileid: "56825434"
 ---
 # <a name="download-and-install-sql-server-data-tools-ssdt-for-visual-studio"></a>Scaricare e installare SQL Server Data Tools (SSDT) per Visual Studio
-
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md.md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
-> [!div class="nextstepaction"]
-> [Condividi il feedback sul sommario della documentazione SQL](https://aka.ms/sqldocsurvey)
 
 **SQL Server Data Tools** è uno strumento di sviluppo moderno che consente di compilare database relazionali SQL Server, database SQL di Azure, modelli di dati di Analysis Services (AS), pacchetti di Integration Services (IS) e report di Reporting Services (RS). Con SSDT è possibile progettare e distribuire qualsiasi tipo di contenuto SQL Server con la stessa facilità con la quale si sviluppa un'applicazione in Visual Studio.
 
