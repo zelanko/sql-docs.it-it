@@ -9,16 +9,16 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 1135074768a630e6d46844017b9c9aecbbccbf26
-ms.sourcegitcommit: 60739bcb48ccce17bca4e11a85df443e93ca23e3
+ms.openlocfilehash: 09fc0a9d9814a399d679b1391678fb5e11ad8a3f
+ms.sourcegitcommit: c3b190f8f87a4c80bc9126bb244896197a6dc453
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52439503"
+ms.lasthandoff: 02/26/2019
+ms.locfileid: "56852926"
 ---
 # <a name="high-availability-and-scalability-in-analysis-services"></a>Disponibilità elevata e scalabilità in Analysis Services
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-  Questo articolo descrive le tecniche usate più di frequente per garantire ai database di Analysis Services disponibilità elevata e scalabilità. Ognuno di questi obiettivi potrebbe essere affrontato separatamente ma, in realtà, questi sono spesso correlati: una distribuzione scalabile per carichi di lavoro di elaborazione o di query di grandi dimensioni in genere prevede una disponibilità elevata.  
+  Questo articolo descrive le tecniche usate più di frequente per garantire ai database di Analysis Services disponibilità elevata e scalabile. Ognuno di questi obiettivi potrebbe essere affrontato separatamente ma, in realtà, questi sono spesso correlati: una distribuzione scalabile per carichi di lavoro di elaborazione o di query di grandi dimensioni in genere prevede una disponibilità elevata.  
   
  Non è sempre vero il contrario, tuttavia. La disponibilità elevata, senza scalabilità, può essere l'unico obiettivo nel caso di contratti di servizio rigidi per carichi di lavoro di query di importanza critica, ma con volumi moderati.  
   

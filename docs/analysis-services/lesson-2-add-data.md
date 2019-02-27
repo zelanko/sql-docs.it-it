@@ -9,19 +9,19 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 22ee688f6ef1036c63cd3bf878ccf2fce869115f
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: b135362a9f64ac8e1bd0f696f88b8aa92d8af283
+ms.sourcegitcommit: c3b190f8f87a4c80bc9126bb244896197a6dc453
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52401636"
+ms.lasthandoff: 02/26/2019
+ms.locfileid: "56852936"
 ---
 # <a name="lesson-2-add-data"></a>Lezione 2: Aggiungere dati
 [!INCLUDE[ssas-appliesto-sql2016-later-aas](../includes/ssas-appliesto-sql2016-later-aas.md)]
 
 In questa lezione si userà l'importazione guidata tabella in SSDT per connettersi al database SQL AdventureWorksDW di esempio, selezionare i dati, visualizzare in anteprima e filtrare i dati e quindi importare i dati nell'area di lavoro modello.  
   
-Mediante l'Importazione guidata tabella è possibile importare dati da un'ampia gamma di origini relazionali: Access, SQL, Oracle, Sybase, Informix, DB2, Teradata e altre ancora. I passaggi per l'importazione dei dati da ognuna di queste origini relazionali sono molto simili a quanto descritto di seguito. I dati possono essere selezionati anche utilizzando una stored procedure. Per altre informazioni sull'importazione di dati e i diversi tipi di origini dati che è possibile importare, vedere [Zdroje dat](../analysis-services/tabular-models/data-sources-ssas-tabular.md).  
+Mediante l'Importazione guidata tabella è possibile importare dati da un'ampia gamma di origini relazionali: Access, SQL, Oracle, Sybase, Informix, DB2, Teradata e altre ancora. I passaggi per l'importazione dei dati da ognuna di queste origini relazionali sono molto simili a quanto descritto di seguito. I dati possono essere selezionati anche utilizzando una stored procedure. Per altre informazioni sull'importazione di dati e i diversi tipi di origini dati che è possibile importare, vedere [Zdroje dat](../analysis-services/tabular-models/data-sources-supported-ssas-tabular.md).  
   
 Tempo stimato per il completamento della lezione: **20 minuti**  
   
@@ -36,7 +36,7 @@ Questo argomento fa parte di un'esercitazione relativa alla modellazione tabular
   
     Verrà avviata l'importazione guidata tabella, che ti assisterà l'impostazione di una connessione a un'origine dati. Se non viene visualizzato Esplora modelli tabulari, fare doppio clic su **Model. bim** nelle **Esplora soluzioni** per aprire il modello nella finestra di progettazione. 
     
-    ![come-tabulare-della lezione 2-Esplora modelli tabulari comporta](../analysis-services/media/as-tabular-lesson2-tme.png) 
+    ![as-tabular-lesson2-tme](../analysis-services/media/as-tabular-lesson2-tme.png) 
 
     Nota: Se si crea il modello a livello di compatibilità 1400, scoprirai la nuova esperienza recupera dati anziché l'importazione guidata tabella. Le finestre di dialogo verrà visualizzato un po' diverse dalla procedura, ma sarà comunque in grado di seguire la procedura. 
   
@@ -48,7 +48,7 @@ Questo argomento fa parte di un'esercitazione relativa alla modellazione tabular
   
 5.  Nel **nome del Database** campi, selezionare **AdventureWorksDW**, quindi fare clic su **Avanti**.  
   
-    ![come-tabulare-della lezione 2-tiw-name](../analysis-services/media/as-tabular-lesson2-tiw-name.png)
+    ![as-tabular-lesson2-tiw-name](../analysis-services/media/as-tabular-lesson2-tiw-name.png)
   
 6.  Nella pagina **Impostazioni di rappresentazione** specificare le credenziali usate da Analysis Services per la connessione all'origine dati quando vengono importati ed elaborati i dati. Verificare che l'opzione **Nome utente e password specifici di Windows** sia selezionata, immettere le credenziali di accesso a Windows in **Nome utente** e **Password**e fare clic su **Avanti**.  
   
@@ -70,7 +70,7 @@ La tabella dimcustomer importata dal database di esempio si sta importando conti
   
 2.  Deselezionare la casella di controllo nella parte superiore delle colonne seguenti. **SpanishEducation**, **FrenchEducation**, **SpanishOccupation**, **FrenchOccupation**. 
 
-    ![come-tabulare-della lezione 2-tiw-clear](../analysis-services/media/as-tabular-lesson2-tiw-clear.png)
+    ![as-tabular-lesson2-tiw-clear](../analysis-services/media/as-tabular-lesson2-tiw-clear.png)
   
     Poiché i valori per queste colonne non sono attinenti all'analisi delle vendite Internet, non è necessario importare queste colonne. Eliminazione delle colonne superflue renderà il modello più piccoli e più efficiente.  
   
@@ -78,7 +78,7 @@ La tabella dimcustomer importata dal database di esempio si sta importando conti
   
     Si noti che le parole **filtri applicati** sono ora visualizzate nel **dettagli filtro** colonna il **DimCustomer** riga; se si fa clic su tale collegamento, viene visualizzata una descrizione di testo il filtri che appena applicati.  
     
-    ![come-tabulare-della lezione 2:-filtri applicati](../analysis-services/media/as-tabular-lesson2-applied-filters.png)
+    ![as-tabular-lesson2-applied-filters](../analysis-services/media/as-tabular-lesson2-applied-filters.png)
     
   
 4.  Filtrare le tabelle restanti deselezionando le caselle di controllo per le colonne seguenti in ogni tabella:  
@@ -147,7 +147,7 @@ Dopo aver visualizzato in anteprima e filtrati i dati non necessari, è possibil
   
     Durante l'importazione dei dati la procedura guidata visualizza il numero di righe recuperate. Una volta importati tutti i dati, verrà visualizzato un messaggio in cui viene indicato il completamento dell'operazione.  
     
-    ![come-tabulare-della lezione 2-operazione riuscita](../analysis-services/media/as-tabular-lesson2-success.png) 
+    ![as-tabular-lesson2-success](../analysis-services/media/as-tabular-lesson2-success.png) 
   
     > [!TIP]  
     > Per vedere le relazioni create automaticamente tra le tabelle importate, fare clic su **Dettagli** nella riga **Preparazione dati**. 
