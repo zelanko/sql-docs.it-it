@@ -31,7 +31,7 @@ Driver ODBC possono essere classificati come indicato di seguito:
   
     -   Consente di esportare solo l'API ODBC 2*x* funzioni.  
   
-    -   Mostra ODBC 2. *x* comportamento per modifiche del comportamento.  
+    -   Mostra ODBC 2.*x* comportamento per modifiche del comportamento.  
   
 -   **ISO e aprire i Driver compatibili con gruppo** driver A 32 bit che:  
   
