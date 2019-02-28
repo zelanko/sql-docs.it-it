@@ -2,7 +2,7 @@
 title: Quali sono le novità di SSMA per Oracle (OracleToSQL) | Microsoft Docs
 ms.prod: sql
 ms.custom: ''
-ms.date: 09/22/2018
+ms.date: 02/27/2019
 ms.reviewer: ''
 ms.technology: ssma
 ms.topic: conceptual
@@ -10,17 +10,46 @@ ms.assetid: f305ebb6-7393-4a43-abb3-6332b739d690
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: bc54f3046ec3163e3d480dd6feae906368fa4c12
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 6523c3d3b7f6a1a0e75ca8641e3bf96520f889af
+ms.sourcegitcommit: 2ab79765e51913f1df6410f0cd56bf2a13221f37
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52405998"
+ms.lasthandoff: 02/27/2019
+ms.locfileid: "56955962"
 ---
 # <a name="whats-new-in-ssma-for-oracle-oracletosql"></a>Quali sono le novità di SSMA per Oracle (OracleToSQL)
-Questo articolo elenca SSMA per la modifica di Oracle in ogni versione.  
+Questo articolo elenca SQL Server Migration Assistant (SSMA) per le modifiche di Oracle in ogni versione.
 
-## <a name="ssma-v710"></a>V7.10 SSMA
+## <a name="ssma-v80"></a>SSMA v8.0
+La versione 8.0 di SSMA per Oracle è stata migliorata per fornire correzioni mirate progettate per migliorare la qualità e la conversione delle metriche. Questa versione offre anche le nuove funzionalità seguenti:
+
+* Supporto per **istanza gestita di Azure SQL Database** come destinazione. È ora possibile creare nuovi progetti destinati a istanza gestita di Azure SQL Database:
+
+  ![Progetto di database SQL istanza Gestita](../media/ssma-newproject-sqldbmi.png)
+
+    > [!NOTE]
+    > SSMA per Oracle Extension Pack è stato inoltre aggiornato per consentire le installazioni remote nell'istanza gestita di Azure SQL Database:
+    >
+    > ![SSMA per Oracle Extension Pack](../media/ssma-oracle-ext-pack.png)
+
+    Alcune funzionalità, tra cui la migrazione dei dati lato Server e i Tester, non sono supportati quando la destinazione di istanza gestita di Azure SQL Database. Altre informazioni, vedere [qui](https://blogs.msdn.microsoft.com/datamigration/2019/02/17/migrate-your-oracle-database-to-azure-sql-database-managed-instance-using-ssma-8-0/).
+
+*   Post-conversione **correzione advisor**. Come descritto in dettaglio [qui](https://blogs.msdn.microsoft.com/datamigration/2019/02/17/%20accelerate-your-oracle-migrations-with-new-machine-learning-capabilities-in-ssma/).
+
+* Selezione database preliminare o nello schema.
+
+    Quando ci si connette all'origine, l'utente può a questo punto selezionare i database/schemi di interesse. Selezionando solo gli schemi che si intende eseguire la migrazione verrà risparmiare tempo durante la connessione iniziale e migliorare le prestazioni complessive SSMA.
+
+    ![Oggetti filtro SSMA](../media/ssma-filter-objects.png)
+
+* La possibilità di usare il driver NET ufficiale, gestito per connettersi a Oracle. Il driver OCI non è più un prerequisito per l'uso di SQL Server Migration Assistant per Oracle.
+
+* La possibilità di eseguire il mapping ROWID e UROWID in VARCHAR per impostazione predefinita. Modificato da 'uniqueidentifier' per supportare la migrazione dei dati per le colonne ROWID esplicitare.
+
+> [!IMPORTANT]
+> Con v7.4 SSMA e versioni successive, .net 4.5.2 è un prerequisito di installazione.
+
+## <a name="ssma-v710"></a>SSMA v7.10
 La versione v7.10 di SSMA per Oracle include le seguenti modifiche:
 - Correzioni mirate progettate per offrire maggiore sicurezza e protezione della privacy per soddisfare le modifiche nei requisiti globali.
 - Un miglioramento di conversione relative alle query gerarchiche.
@@ -28,7 +57,7 @@ La versione v7.10 di SSMA per Oracle include le seguenti modifiche:
 > [!IMPORTANT]
 > Con v7.4 SSMA e versioni successive, .net 4.5.2 è un prerequisito di installazione.
 
-## <a name="ssma-v79"></a>V7.9 SSMA
+## <a name="ssma-v79"></a>SSMA v7.9
 La versione v7.9 di SSMA per Oracle include le seguenti modifiche:
 - Correzioni mirate che consentono di migliorare le metriche di qualità e la conversione.
 - Supporto per le istruzioni "Continua" migrazione da Oracle a SQL Server.
@@ -39,7 +68,7 @@ La versione v7.9 di SSMA per Oracle include le seguenti modifiche:
 > [!IMPORTANT]
 > Con v7.4 SSMA e versioni successive, .net 4.5.2 è un prerequisito di installazione.
 
-## <a name="ssma-v78"></a>V 7.8 SSMA
+## <a name="ssma-v78"></a>SSMA v7.8
 La versione v 7.8 di SSMA per Oracle include le seguenti modifiche:
 -   Aggiunta del supporto per:
     - Espressione di riga per la clausola IN.
@@ -51,7 +80,7 @@ La versione v 7.8 di SSMA per Oracle include le seguenti modifiche:
 > [!IMPORTANT]
 > Con v7.4 SSMA e versioni successive, .net 4.5.2 è un prerequisito di installazione.
 
-## <a name="ssma-v77"></a>V7.7 SSMA
+## <a name="ssma-v77"></a>SSMA v7.7
 La versione v7.7 di SSMA per Oracle include le seguenti modifiche:
 - SSMA per Oracle è stato migliorato con correzioni mirate che consentono di migliorare le metriche di qualità e la conversione.
 - Basato su richiesta comune, la versione a 32 bit di SSMA per Oracle è nuovamente. Rispetto all'implementazione precedente (antecedente a v7.4), sono disponibili due pacchetti di installazione, ma non possono essere installati side-by-side. Di conseguenza, è necessario scegliere la versione più appropriata in base ai componenti di connettività che si dispone. È sempre preferibile usare la versione a 64 bit, se possibile.
@@ -61,7 +90,7 @@ La versione v7.7 di SSMA per Oracle include le seguenti modifiche:
 > [!IMPORTANT]
 > Con v7.4 SSMA e versioni successive, .net 4.5.2 è un prerequisito di installazione.
 
-## <a name="ssma-v76"></a>V7.6 SSMA
+## <a name="ssma-v76"></a>SSMA v7.6
 La versione v7.6 di SSMA per Oracle è stata migliorata con correzioni mirate che consentono di migliorare le metriche di qualità e la conversione e con il supporto per SQL Server 2017 (anteprima pubblica). Supporto per SQL Server 2017 in Windows e Linux è disponibile in anteprima pubblica e non deve essere usato per le migrazioni di produzione.
 
 > [!IMPORTANT]
@@ -75,7 +104,7 @@ La versione v7.5 di SSMA per Oracle include le seguenti modifiche:
 > [!IMPORTANT]
 > .NET 4.5.2 è un prerequisito per l'installazione di SSMA v7.5. Inoltre, a partire da v7.4, la versione a 32 bit di SSMA verrà terminato a breve.
 
-## <a name="ssma-v74"></a>V7.4 SSMA
+## <a name="ssma-v74"></a>SSMA v7.4
 La versione v7.4 di SSMA per Oracle include le seguenti modifiche:
 
 - SSMA per Oracle supporta ora Azure SQL Data Warehouse come piattaforma di destinazione per la migrazione.
@@ -97,7 +126,7 @@ La versione v7.4 di SSMA per Oracle include le seguenti modifiche:
 > [!IMPORTANT]
 > .NET 4.5.2 è un prerequisito per l'installazione di SSMA v7.4. Inoltre, a partire da v7.4, la versione a 32 bit di SSMA verrà terminato a breve.
 
-## <a name="ssma-v73"></a>V7.3 SSMA
+## <a name="ssma-v73"></a>SSMA v7.3
 La versione v7.3 di SSMA per Oracle include le seguenti modifiche:
 - Metrica qualità e conversione migliorata con correzioni mirate ai suggerimenti dei clienti.
 - Framework di estendibilità SSMA esposta tramite gli elementi seguenti:
@@ -110,12 +139,12 @@ La versione v7.3 di SSMA per Oracle include le seguenti modifiche:
       - Scaricare un progetto di esempio per la conversione da questo [post di blog](https://blogs.msdn.microsoft.com/datamigration/ssmafororacleconversionsample/).
 
 
-## <a name="ssma-v72"></a>Versione 7.2 SSMA
+## <a name="ssma-v72"></a>SSMA v7.2
 Il rilascio della versione 7.2 di SSMA per Oracle contiene le seguenti modifiche:
 - Metrica qualità e conversione migliorata con correzioni mirate ai suggerimenti dei clienti.
 - Miglioramenti della telemetria per fornire una migliore punti dati per risolvere i problemi dei clienti e migliorare il tasso di conversione di SSMA.
 
-## <a name="ssma-v71"></a>Versione 7.1 SSMA
+## <a name="ssma-v71"></a>SSMA v7.1
 La versione 7.1 di SSMA per Oracle contiene le seguenti modifiche:
 - A questo punto, SQL Server 2017 in Windows e Linux CTP1 è una piattaforma di destinazione supportate per la migrazione. Questa funzionalità è della versione technical preview e consente lo spostamento dei dati e lo schema per i server SQL di destinazione.
 - SSMA supporta ora gli aggiornamenti automatici per scaricare la versione più recente di SSMA, non appena è disponibile.
