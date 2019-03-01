@@ -6,14 +6,14 @@ ms.prod_service: reporting-services-native
 ms.technology: mobile-reports
 ms.topic: conceptual
 ms.assetid: 30d0a3fd-5588-417e-b25d-cc5b7624cdb1
-author: maggiesMSFT
-ms.author: maggies
-ms.openlocfilehash: 4b702c79ad5c80254595ef5c4ff440919a8482e1
-ms.sourcegitcommit: 0d6e4cafbb5d746e7d00fdacf8f3ce16f3023306
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 9bf66cdaad2f0ad85ff0213bb0711723e6ed3d05
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/11/2018
-ms.locfileid: "49085417"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56291953"
 ---
 # <a name="add-drillthrough-from-a-mobile-report-to-other-mobile-reports-or-urls"></a>Aggiungere il drill-through da un report per dispositivi mobili ad altri report per dispositivi mobili o URL
 È possibile aggiungere il drill-through da qualsiasi misuratore, grafico o griglia dati di un report per dispositivi mobili di [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] a un altro report o URL personalizzato. 
@@ -26,7 +26,7 @@ Gli elementi di report con drill-through, verso un URL o un altro report per dis
 
 ![mobile-report-gauge-drill-through](../../reporting-services/mobile-reports/media/mobile-report-gauge-drill-through.png) 
 
->**Suggerimento**: creare prima il report di destinazione e salvarlo in un portale Web di [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] . Se si prevede di passare i parametri dal report di origine, aggiungere quindi i parametri anche al report di destinazione. A questo punto è possibile impostare il drill-through dal report di origine al report di destinazione. [Aggiungere parametri a un report per dispositivi mobili](../../reporting-services/mobile-reports/add-parameters-to-a-mobile-report-reporting-services.md).
+>**Suggerimento**: creare prima il report di destinazione e salvarlo in un portale Web di [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)]. Se si prevede di passare i parametri dal report di origine, aggiungere quindi i parametri anche al report di destinazione. A questo punto è possibile impostare il drill-through dal report di origine al report di destinazione. [Aggiungere parametri a un report per dispositivi mobili](../../reporting-services/mobile-reports/add-parameters-to-a-mobile-report-reporting-services.md).
  
 ## <a name="set-up-drillthrough-to-a-mobile-report"></a>Impostare il drill-through in un report per dispositivi mobili  
 
@@ -37,7 +37,7 @@ Gli elementi di report con drill-through, verso un URL o un altro report per dis
 2. Nel riquadro **Proprietà visive** selezionare **Destinazione del drill-through** > **Report per dispositivi mobili**.  
 3. Selezionare il server e il report per dispositivi mobili di destinazione.  
 
-   >Note: se il report per dispositivi mobili di destinazione non si trova nello stesso server del report per dispositivi mobili di origine, connettersi ad esso con un URL personalizzato, come illustrato nella sezione seguente.  
+   >Nota: se il report per dispositivi mobili di destinazione non si trova nello stesso server del report per dispositivi mobili di origine, connettersi ad esso con un URL personalizzato, come illustrato nella sezione seguente.  
  
 4. Dopo aver selezionato un report per dispositivi mobili di destinazione, verranno visualizzati i parametri di input disponibili, incluse le proprietà che possono essere associate ai controlli di selezione e i parametri configurati nei set di dati del report per dispositivi mobili di destinazione.  
 

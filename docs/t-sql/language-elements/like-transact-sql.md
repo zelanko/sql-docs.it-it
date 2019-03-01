@@ -32,12 +32,12 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: e7d8bfaf8e2b07bd34843893a67a823e6841b6d6
-ms.sourcegitcommit: 96032813f6bf1cba680b5e46d82ae1f0f2da3d11
+ms.openlocfilehash: 796b54f85cb7f2bbcaade9d6c8948857b2be2ce7
+ms.sourcegitcommit: 019b6f355a69aa409e6601de8977a8c307f793cb
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/15/2019
-ms.locfileid: "54299988"
+ms.lasthandoff: 02/16/2019
+ms.locfileid: "56331551"
 ---
 # <a name="like-transact-sql"></a>LIKE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -45,9 +45,9 @@ ms.locfileid: "54299988"
   > [!div class="nextstepaction"]
   > [Condividi il feedback sul sommario della documentazione SQL](https://aka.ms/sqldocsurvey)
 
-  Determina se una stringa di caratteri specifica corrisponde a un modello specificato. Il modello può contenere caratteri specifici e caratteri jolly. In una ricerca in base a un modello i normali caratteri devono corrispondere esattamente ai caratteri specificati nella stringa di caratteri del modello. I caratteri jolly tuttavia possono venire abbinati a frammenti arbitrari della stringa. L'utilizzo di caratteri jolly rende l'operatore LIKE più flessibile rispetto all'utilizzo degli operatori di confronto tra stringhe = e !=. Se il tipo di dati degli argomenti non corrisponde a quello della stringa di caratteri, il [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] converte automaticamente gli argomenti nel tipo di dati della stringa, se possibile.  
+  Determina se una stringa di caratteri specifica corrisponde a un modello specificato. Il modello può contenere caratteri specifici e caratteri jolly. In una ricerca in base a un modello i normali caratteri devono corrispondere esattamente ai caratteri specificati nella stringa di caratteri del modello. I caratteri jolly tuttavia possono venire abbinati a frammenti arbitrari della stringa. L'utilizzo di caratteri jolly rende l'operatore LIKE più flessibile rispetto all'utilizzo degli operatori di confronto tra stringhe = e !=. Se il tipo di dati degli argomenti non è stringa di caratteri, il [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] lo converte automaticamente nel tipo stringa di caratteri, se possibile.  
   
- ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icona di collegamento a un articolo](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un articolo")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -78,7 +78,7 @@ match_expression [ NOT ] LIKE pattern
 |[^]|Carattere singolo non compreso nell'intervallo ([^a-f]) o nel set ([^abcdef]) specificato.|WHERE au_lname LIKE 'de[^l]%' consente di individuare tutti gli autori il cui cognome inizia con "de" e la lettera successiva è diversa da "l".|  
   
  *escape_character*  
- Carattere posto davanti a un carattere jolly a indicare che il carattere jolly deve essere interpretato come carattere normale e non come carattere jolly. *escape_character* è un'espressione di caratteri che non ha un valore predefinito e che deve restituire solo un carattere.  
+ Carattere posto davanti a un carattere jolly a indicare che il carattere jolly va interpretato come carattere normale e non come carattere jolly. *escape_character* è un'espressione di caratteri che non ha un valore predefinito e che deve restituire solo un carattere.  
   
 ## <a name="result-types"></a>Tipi restituiti  
  **Boolean**  
@@ -87,9 +87,9 @@ match_expression [ NOT ] LIKE pattern
  LIKE restituisce TRUE se *match_expression* corrisponde all'argomento *pattern* specificato.  
   
 ## <a name="remarks"></a>Remarks  
- Se si esegue un confronto di stringe utilizzando LIKE, tutti i caratteri nella stringa modello sono significativi, compresi gli spazi iniziali e finali. Se un confronto in una query deve restituire tutte le righe contenenti la stringa LIKE 'abc ' (abc seguito da uno spazio), una riga il cui valore per la colonna è abc (abc non seguito da alcuno spazio) non viene restituita. Gli spazi vuoti finali vengono tuttavia ignorati nell'espressione corrispondente al modello. Se un confronto in una query deve restituire tutte le righe contenenti la stringa LIKE 'abc' (abc non seguito da alcuno spazio), vengono restituite tutte le righe che iniziano con abc seguito da zero o più spazi vuoti finali.  
+ Se si esegue un confronto di stringhe usando LIKE, tutti i caratteri nella stringa modello sono significativi, compresi gli spazi iniziali e finali. Se un confronto in una query deve restituire tutte le righe contenenti la stringa LIKE 'abc ' (abc seguito da uno spazio), una riga il cui valore per la colonna è abc (abc non seguito da alcuno spazio) non viene restituita. Gli spazi vuoti finali vengono tuttavia ignorati nell'espressione corrispondente al modello. Se un confronto in una query deve restituire tutte le righe contenenti la stringa LIKE 'abc' (abc non seguito da alcuno spazio), vengono restituite tutte le righe che iniziano con abc seguito da zero o più spazi vuoti finali.  
   
- Un confronto tra stringhe con l'operatore LIKE basato su un modello contenente dati di tipo **char** e **varchar** potrebbe avere esito negativo a causa della modalità di archiviazione dei dati. È importante capire la modalità di archiviazione di ogni tipo di dati e i casi in cui i confronti LIKE potrebbero avere esito negativo. Nell'esempio seguente una variabile **char** locale viene passata a una stored procedure e vengono quindi usati criteri di ricerca per individuare tutti i dipendenti il cui cognome inizia con un set di caratteri specificato.  
+ Un confronto tra stringhe con l'operatore LIKE basato su un modello che contiene dati di tipo **char** e **varchar** potrebbe avere esito negativo a causa della modalità di archiviazione dei dati per ogni tipo di dati. Nell'esempio seguente una variabile **char** locale viene passata a una stored procedure e quindi vengono usati criteri di ricerca per trovare tutti i dipendenti il cui cognome inizia con un set di caratteri specificato.  
   
 ```sql
 -- Uses AdventureWorks  
@@ -133,7 +133,7 @@ EXEC FindEmployee @EmpLName = 'Barb';
  ``` 
  
 ## Pattern Matching by Using LIKE  
- LIKE supports ASCII pattern matching and Unicode pattern matching. When all arguments (*match_expression*, *pattern*, and *escape_character*, if present) are ASCII character data types, ASCII pattern matching is performed. If any one of the arguments are of Unicode data type, all arguments are converted to Unicode and Unicode pattern matching is performed. When you use Unicode data (**nchar** or **nvarchar** data types) with LIKE, trailing blanks are significant; however, for non-Unicode data, trailing blanks are not significant. Unicode LIKE is compatible with the ISO standard. ASCII LIKE is compatible with earlier versions of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+ LIKE supports ASCII pattern matching and Unicode pattern matching. When all arguments (*match_expression*, *pattern*, and *escape_character*, if present) are ASCII character data types, ASCII pattern matching is performed. If any one of the arguments are of Unicode data type, all arguments are converted to Unicode and Unicode pattern matching is performed. When you use Unicode data (**nchar** or **nvarchar** data types) with LIKE, trailing blanks are significant; however, for non-Unicode data, trailing blanks aren't significant. Unicode LIKE is compatible with the ISO standard. ASCII LIKE is compatible with earlier versions of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
  The following is a series of examples that show the differences in rows returned between ASCII and Unicode LIKE pattern matching.  
   
@@ -177,9 +177,9 @@ WHERE Name LIKE 'dm%';
 GO  
 ```  
   
- Per visualizzare tutti gli oggetti che non sono viste a gestione dinamica, utilizzare `NOT LIKE 'dm%'`. Se sono disponibili 32 oggetti e tramite l'operatore LIKE vengono trovati 13 nomi corrispondenti al modello specificato, NOT LIKE troverà i 19 oggetti che non corrispondono al modello LIKE.  
+ Per visualizzare tutti gli oggetti che non sono DMV, usare `NOT LIKE 'dm%'`. Se si ha un totale di 32 oggetti e l'operatore LIKE trova 13 nomi corrispondenti al modello specificato, NOT LIKE troverà i 19 oggetti che non corrispondono al modello LIKE.  
   
- Non sempre è possibile trovare gli stessi nomi utilizzando un modello quale, ad esempio, `LIKE '[^d][^m]%'`. Anziché 19 nomi, è possibile trovarne solo 14, ovvero tutti i nomi che iniziano con `d` o hanno la lettera `m` in seconda posizione vengono eliminati dai risultati, nonché i nomi delle viste a gestione dinamica. Ciò si verifica perché le stringhe individuate tramite caratteri jolly negativi vengono valutate in fasi successive, un carattere jolly alla volta. La voce viene eliminata se la corrispondenza ha esito negativo durante una qualunque fase della valutazione.  
+ Non sempre è possibile trovare gli stessi nomi utilizzando un modello quale, ad esempio, `LIKE '[^d][^m]%'`. Anziché 19 nomi, è possibile trovarne solo 14, ovvero tutti i nomi che iniziano con `d` o hanno la lettera `m` in seconda posizione vengono eliminati dai risultati, nonché i nomi delle viste a gestione dinamica. Questo avviene perché le stringhe individuate tramite caratteri jolly negativi vengono valutate in fasi successive, un carattere jolly alla volta. La voce viene eliminata se la corrispondenza ha esito negativo durante una qualunque fase della valutazione.  
   
 ## <a name="using-wildcard-characters-as-literals"></a>Utilizzo di caratteri jolly come valori letterali  
  Nelle ricerche è possibile utilizzare i caratteri jolly come caratteri letterali racchiudendo il carattere jolly tra virgolette. Nella tabella seguente vengono descritti vari esempi di utilizzo della parola chiave LIKE e dei caratteri jolly [ ].  
@@ -198,7 +198,7 @@ GO
 ## <a name="pattern-matching-with-the-escape-clause"></a>Ricerche con la clausola ESCAPE  
  È possibile eseguire ricerche di stringhe di caratteri che includono uno o più caratteri speciali. Ad esempio, nella tabella discounts di un database customers è possibile archiviare i valori relativi allo sconto che includono il segno di percentuale (%). Per cercare il segno di percentuale come carattere e non come carattere jolly, è necessario specificare la parola chiave ESCAPE e il carattere di escape. Ad esempio, un database di esempio include una colonna denominata comment contenente il testo 30%. Per cercare le righe contenenti la stringa 30% all'interno della colonna dei commenti, specificare una clausola WHERE, ad esempio `WHERE comment LIKE '%30!%%' ESCAPE '!'`. Se ESCAPE e il carattere di escape non vengono specificati, [!INCLUDE[ssDE](../../includes/ssde-md.md)] restituisce tutte le righe contenenti la stringa 30.  
   
- Se dopo un carattere di escape non è presente alcun carattere nel modello LIKE, il modello non è valido e l'operatore LIKE restituisce FALSE. Se il carattere successivo al carattere di escape non è un carattere jolly, il carattere di escape viene eliminato e il carattere successivo viene considerato come un carattere normale nel modello. Ciò è valido per il segno di percentuale (%), il carattere di sottolineatura (_) e la parentesi quadra aperta ([) quando questi caratteri jolly sono racchiusi tra doppie parentesi quadre ([ ]). I caratteri di escape possono inoltre essere utilizzati all'interno di doppie parentesi quadre ([ ]), mentre è possibile far precedere da una carattere di escape anche l'accento circonflesso (^), il trattino (-) e la parentesi quadra chiusa (]).  
+ Se dopo un carattere di escape non è presente alcun carattere nel modello LIKE, il modello non è valido e l'operatore LIKE restituisce FALSE. Se il carattere successivo al carattere di escape non è un carattere jolly, il carattere di escape viene eliminato e il carattere successivo viene considerato come un carattere normale nel modello. Questo è valido per il segno di percentuale (%), il carattere di sottolineatura (_) e la parentesi quadra aperta ([) quando questi caratteri jolly sono racchiusi tra doppie parentesi quadre ([ ]). I caratteri di escape possono essere usati all'interno di doppie parentesi quadre ([ ]), anche per eseguire l'escape di un accento circonflesso (^), un trattino (-) o una parentesi quadra chiusa (]).  
   
  0x0000 (**char(0)**) è un carattere non definito nelle regole di confronto di Windows e non può essere incluso in LIKE.  
   
@@ -345,7 +345,7 @@ ORDER by LastName;
 ```  
   
 ### <a name="g-using-like-with-the--wildcard-character"></a>G. Uso dell'operatore LIKE con il carattere jolly _  
- Nell'esempio seguente viene eseguita una ricerca di tutti i numeri telefonici con un prefisso che inizia con `6` e termina con `2` nella tabella `DimEmployee`. Si noti che alla fine del criterio di ricerca è incluso anche il carattere jolly % poiché il prefisso è la prima parte del numero telefonico e dopo di esso sono presenti altri caratteri nel valore della colonna.  
+ Nell'esempio seguente viene eseguita una ricerca di tutti i numeri telefonici con un prefisso che inizia con `6` e termina con `2` nella tabella `DimEmployee`. Alla fine del criterio di ricerca è incluso il carattere jolly % per trovare una corrispondenza con tutti i caratteri successivi nel valore della colonna del telefono.  
   
 ```sql  
 -- Uses AdventureWorks  
@@ -362,4 +362,3 @@ ORDER by LastName;
  [Funzioni predefinite &#40;Transact-SQL&#41;](~/t-sql/functions/functions.md)   
  [SELECT &#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md)   
  [WHERE &#40;Transact-SQL&#41;](../../t-sql/queries/where-transact-sql.md)  
- 

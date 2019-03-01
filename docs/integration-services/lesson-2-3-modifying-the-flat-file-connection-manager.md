@@ -11,12 +11,12 @@ ms.assetid: 459e3995-2116-4f15-aaa2-32f26113869c
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 1de57ab14dc4dcfc07f838494ca48f8b12da6660
-ms.sourcegitcommit: dd794633466b1da8ead9889f5e633bdf4b3389cd
+ms.openlocfilehash: 058f392079c466d34505fac57653d34d37401cc3
+ms.sourcegitcommit: 01e17c5f1710e7058bad8227c8011985a9888d36
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54143561"
+ms.lasthandoff: 02/14/2019
+ms.locfileid: "56265298"
 ---
 # <a name="lesson-2-3-modify-the-flat-file-connection-manager"></a>Lezione 2-3: Modificare la gestione connessione file flat
 
@@ -27,20 +27,22 @@ Modificando la gestione connessione in modo che usi il valore della variabile de
 ## <a name="configure-the-flat-file-connection-manager-to-use-a-variable"></a>Configurare la gestione connessione file flat in modo che usi una variabile  
   
 1.  Nel riquadro **Gestioni connessioni** fare clic con il pulsante destro del mouse su **Sample Flat File Source Data**e scegliere **Proprietà**.  
+
+2.  Nella finestra **Proprietà** assicurarsi che **PackagePath** inizi con **\Package.Connections**. In caso contrario, nel riquadro **Gestioni connessioni** fare clic con il pulsante destro del mouse su **Sample Flat File Source Data** e scegliere **Converti in connessione pacchetto**
   
-2.  Nella finestra **Proprietà** fare clic sulla cella vuota relativa a **Espressioni** e fare clic sul pulsante con i puntini di sospensione **(...)**.  
+3.  Nella finestra **Proprietà** fare clic sulla cella vuota relativa a **Espressioni** e fare clic sul pulsante con i puntini di sospensione **(...)**.  
   
-3.  Nella colonna **Proprietà** della finestra di dialogo **Editor espressioni di proprietà** selezionare **ConnectionString**.  
+4.  Nella colonna **Proprietà** della finestra di dialogo **Editor espressioni di proprietà** selezionare **ConnectionString**.  
   
-4.  Nella colonna **Espressione** selezionare il pulsante con i puntini di sospensione **(...)** per aprire la finestra di dialogo **Generatore di espressioni**.  
+5.  Nella colonna **Espressione** selezionare il pulsante con i puntini di sospensione **(...)** per aprire la finestra di dialogo **Generatore di espressioni**.  
   
-5.  Nella finestra di dialogo **Generatore di espressioni** espandere il nodo **Variabili**.  
+6.  Nella finestra di dialogo **Generatore di espressioni** espandere il nodo **Variabili**.  
   
-6.  Trascinare la variabile **User::varFileName** nella casella **Espressione**.  
+7.  Trascinare la variabile **User::varFileName** nella casella **Espressione**.  
   
-7.  Selezionare **OK** per chiudere la finestra di dialogo **Generatore di espressioni**.  
+8.  Selezionare **OK** per chiudere la finestra di dialogo **Generatore di espressioni**.  
   
-8.  Selezionare nuovamente **OK** per chiudere la finestra di dialogo **Editor espressioni di proprietà**.  
+9.  Selezionare nuovamente **OK** per chiudere la finestra di dialogo **Editor espressioni di proprietà**.  
   
 ## <a name="go-to-next-task"></a>Esecuzione del passaggio successivo  
 [Passaggio 4: Testare il pacchetto creato nella lezione 2 dell'esercitazione](../integration-services/lesson-2-4-testing-the-lesson-2-tutorial-package.md)  

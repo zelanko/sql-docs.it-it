@@ -12,12 +12,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 907cd0278119351c9bfabf2c2c64e514a7840c7a
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 3d1d5699a32b62de823846e64757a1842a9337ad
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52531541"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56294449"
 ---
 # <a name="get-started-with-columnstore-for-real-time-operational-analytics"></a>Introduzione a columnstore per l'analisi operativa in tempo reale
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -203,7 +203,7 @@ CREATE NONCLUSTERED COLUMNSTORE index t_colstor_cci on t_colstor (accountkey, ac
 -   **Carico di lavoro costituito da inserimento/query**: se il carico di lavoro è costituito principalmente dall'inserimento di dati e dall'esecuzione di query su tali dati, il valore COMPRESSION_DELAY predefinito di 0 è l'opzione consigliata. Le nuove righe inserite verranno compresse dopo l'inserimento di 1 milione di righe in un singolo rowgroup delta.  
     Alcuni esempi di tale carico di lavoro sono (a) carico di lavoro di data warehouse tradizionale (b) analisi del flusso di clic quando è necessario analizzare lo schema dei clic in un'applicazione Web.  
   
--   **Carico di lavoro OLTP** : se il carico di lavoro comporta un numero elevato di istruzioni DML (combinazione di numerose istruzioni Update, Delete e Insert), è possibile osservare la frammentazione dell'indice columnstore esaminando DMV sys. dm_db_column_store_row_group_physical_stats. Se si nota che una percentuale inferiore al 10% delle righe è contrassegnata come eliminata in rowgroup compressi di recente, è possibile usare l'opzione COMPRESSION_DELAY per aggiungere un ritardo quando le righe diventano idonee per la compressione. Se, ad esempio, il carico di lavoro appena inserito rimane attivo (vale a dire viene aggiornato più volte) per 60 minuti, è consigliabile scegliere 60 come COMPRESSION_DELAY.  
+-   **Carico di lavoro OLTP:** se il carico di lavoro comporta un numero elevato di istruzioni DML (combinazione di numerose istruzioni Update, Delete e Insert), è possibile osservare la frammentazione dell'indice columnstore esaminando DMV sys. dm_db_column_store_row_group_physical_stats. Se si nota che una percentuale inferiore al 10% delle righe è contrassegnata come eliminata in rowgroup compressi di recente, è possibile usare l'opzione COMPRESSION_DELAY per aggiungere un ritardo quando le righe diventano idonee per la compressione. Se, ad esempio, il carico di lavoro appena inserito rimane attivo (vale a dire viene aggiornato più volte) per 60 minuti, è consigliabile scegliere 60 come COMPRESSION_DELAY.  
   
  È probabile che nella maggior parte dei casi i clienti non debbano effettuare alcuna azione. Il valore predefinito dell'opzione COMPRESSION_DELAY dovrebbe essere sufficiente.  
 Agli utenti avanzati si consiglia di eseguire la query seguente e di raccogliere la percentuale delle righe eliminate negli ultimi 7 giorni.  

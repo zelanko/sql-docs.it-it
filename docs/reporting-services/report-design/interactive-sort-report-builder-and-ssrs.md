@@ -6,14 +6,14 @@ ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: report-design
 ms.topic: conceptual
 ms.assetid: 00cafed5-1a3c-4ce0-a1fb-ff1e2613f495
-author: maggiesMSFT
-ms.author: maggies
-ms.openlocfilehash: e469cd06123f0efc939760fd00d5377e9ac737a6
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 4124b909cf35ea071aef5f57672ff8a3701a44ca
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47738689"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56286369"
 ---
 # <a name="interactive-sort-report-builder-and-ssrs"></a>Ordinamento interattivo (Generatore report e SSRS)
   È possibile aggiungere pulsanti di ordinamento interattivo per consentire a un utente di passare dall'ordine crescente a quello decrescente e viceversa per le righe di una tabella o per le righe e le colonne di una matrice. In genere l'ordinamento interattivo viene utilizzato per aggiungere un pulsante di ordinamento a ogni intestazione di colonna. L'utente può quindi scegliere la colonna in base alla quale eseguire l'ordinamento.  

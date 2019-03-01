@@ -1,21 +1,21 @@
 ---
-title: 'Lesson 6: Adding Grouping and Totals (Reporting Services) (Lezione 6: Aggiunta di gruppi e totali (Reporting Services)) | Microsoft Docs'
+title: 'Lezione 6: Aggiunta di gruppi e totali (Reporting Services) | Microsoft Docs'
 ms.date: 05/23/2016
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: reporting-services
 ms.topic: conceptual
 ms.assetid: e3d61228-2aa4-42cc-955e-602dbf3406a7
-author: maggiesMSFT
-ms.author: maggies
-ms.openlocfilehash: d391061ce82c0516bbfc30e9d05cce7bdedd65ed
-ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 24d21ae735b44a7068ca929515b66e8a33aade8d
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51813674"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56290079"
 ---
-# <a name="lesson-6-adding-grouping-and-totals-reporting-services"></a>Lesson 6: Adding Grouping and Totals (Reporting Services)
+# <a name="lesson-6-adding-grouping-and-totals-reporting-services"></a>Lezione 6: Aggiunta di gruppi e totali (Reporting Services)
 In questa lezione dell'esercitazione verranno aggiunti raggruppamenti e totali al report di [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] per organizzare e riepilogare i dati.  
   
   
@@ -70,7 +70,7 @@ In questa lezione dell'esercitazione verranno aggiunti raggruppamenti e totali a
   
 6.  Nel menu **Formato** selezionare **Colore di sfondo**, fare clic su **Grigio chiaro**e scegliere **OK**.  
   
-    ![Visualizzazione progettazione: tabella di base con totale degli ordini](../reporting-services/media/rs-basictablesumlinetotaldesign.gif "Visualizzazione progettazione: tabella semplice con totale degli ordini")  
+    ![Visualizzazione Progettazione: tabella di base con totale degli ordini](../reporting-services/media/rs-basictablesumlinetotaldesign.gif "Visualizzazione Progettazione: tabella di base con totale degli ordini")  
   
 ## <a name="bkmk_adddailytotal"></a>Per aggiungere un totale giornaliero a un report  
   
@@ -98,13 +98,13 @@ In questa lezione dell'esercitazione verranno aggiunti raggruppamenti e totali a
   
 4.  Nel menu **Formato** selezionare **Colore di sfondo**, fare clic su **Azzurro**e scegliere **OK**.  
   
-    ![Visualizzazione progettazione: totale complessivo nella tabella semplice](../reporting-services/media/rs-basictablesumgrandtotaldesign.gif "visualizzazione progettazione: totale complessivo nella tabella semplice")  
+    ![Visualizzazione Progettazione: totale complessivo in una tabella di base](../reporting-services/media/rs-basictablesumgrandtotaldesign.gif "Visualizzazione Progettazione: totale complessivo in una tabella di base")  
   
 5.  Fare clic su **Anteprima**.  
   
     L'ultima pagina dovrebbe essere simile all'immagine seguente. Nella barra degli strumenti fare clic su Ultima pagina ![ssrs_ssdt_viewertoolbar_lastpage](../reporting-services/media/ssrs-ssdt-viewertoolbar-lastpage.png).   
   
-    ![Anteprima: tabella semplice con totale complessivo](../reporting-services/media/rs-basictablesumgrandtotalpreview.gif "Anteprima: tabella semplice con totale complessivo")  
+    ![Anteprima: tabella di base con totale complessivo](../reporting-services/media/rs-basictablesumgrandtotalpreview.gif "Anteprima: tabella di base con totale complessivo")  
   
 ## <a name="bkmk_publishreport"></a>Per pubblicare il report nel server di report (facoltativo)  
   
@@ -125,15 +125,15 @@ In questa lezione dell'esercitazione verranno aggiunti raggruppamenti e totali a
   
     Se viene visualizzato un messaggio simile al seguente nella finestra di output, la distribuzione è stata completata correttamente.  
   
-    > ------ Compilazione avviata: Progetto: tutorial, Configurazione: Debug ------  
+    > ------ Compilazione avviata - Progetto: tutorial, Configurazione: Debug ------  
     > 'Sales Orders.rdl' verrà ignorato. L'elemento è aggiornato.  
     > Compilazione completata -- 0 errori, 0 avvisi  
-    > ------ Distribuzione avviata: Progetto: tutorial, Configurazione: Debug ------  
+    > ------ Stato distribuzione: Progetto: tutorial, Configurazione: Debug ------  
     > Distribuzione in https://[nome server]/reportserver  
     > Distribuzione report '/tutorial/Sales Orders'.  
     > Distribuzione completata -- 0 errori, 0 avvisi  
     > ========== Compilazione: 1 completate o aggiornate, 0 non riuscite, 0 ignorate ==========  
-    > ========== Distribuzione: 1 completate, 0 non riuscite, 0 ignorate ==========  
+    > ========== Distribuzione: 1 completata, 0 non riuscite, 0 ignorate ==========  
   
     Se viene visualizzato un messaggio di errore simile al seguente, verificare di disporre delle autorizzazione per il server di report e di aver avviato [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)] con privilegi di amministratore.  
   

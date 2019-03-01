@@ -6,16 +6,16 @@ ms.prod_service: reporting-services-native
 ms.technology: reporting-services
 ms.topic: conceptual
 ms.assetid: 67d8513e-8a70-464b-b87f-e91d010cfd82
-author: maggiesMSFT
-ms.author: maggies
-ms.openlocfilehash: 68297156870ac3eefc5b532b7e15f253064e4608
-ms.sourcegitcommit: c7febcaff4a51a899bc775a86e764ac60aab22eb
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: ddc7aefa65f87e5647186358e0f7ae0019964ff0
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "52711660"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56289641"
 ---
-# <a name="tutorial-format-text-report-builder"></a>Esercitazione: Formattazione di testo (Generatore report)
+# <a name="tutorial-format-text-report-builder"></a>Esercitazione: Formattazione del testo (Generatore report)
 
 In questa esercitazione verranno illustrati i vari modi in cui è possibile formattare il testo in un report impaginato di [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] . È possibile provare formati diversi. 
 
@@ -25,7 +25,7 @@ Dopo avere impostato il report vuoto con l'origine dati e il set di dati, è pos
   
 In un passaggio si introdurrà intenzionalmente un errore, in modo da comprenderne gli effetti. Si correggerà quindi l'errore per ottenere il risultato desiderato.  
     
-Il tempo stimato per il completare l'esercitazione è di 20 minuti.  
+Tempo previsto per il completamento di questa esercitazione: 20 minuti.  
   
 ## <a name="requirements"></a>Requisiti  
 Per informazioni sui requisiti, vedere [Prerequisiti per le esercitazioni &#40;Generatore report&#41;](../reporting-services/prerequisites-for-tutorials-report-builder.md).  
@@ -67,7 +67,7 @@ Per informazioni sui requisiti, vedere [Prerequisiti per le esercitazioni &#40;G
   
 2.  Verificare che l'origine dati sia **TextDataSource**.  
   
-3.  Nella casella **Nome** digitare: **TextDataset**.  
+3.  Nella casella **Nome** digitare: **TextDataset.**  
   
 4.  Verificare che il tipo di query **Testo** sia selezionato, quindi fare clic su **Progettazione query**.  
   
@@ -355,7 +355,7 @@ Il report verrà salvato sul server di report. Il nome del server di report al q
 
 ## <a name="next-steps"></a>Next Steps
 
-Ci sono vari modi per formattare il testo in Generatore report. L'[Esercitazione: Creazione di un report in formato libero](../reporting-services/tutorial-creating-a-free-form-report-report-builder.md) include più esempi.  
+Ci sono vari modi per formattare il testo in Generatore report. [Esercitazione: Creazione di un report in formato libero](../reporting-services/tutorial-creating-a-free-form-report-report-builder.md) include più esempi.  
 
 [Esercitazioni di Generatore report](../reporting-services/report-builder-tutorials.md) 
 [Formattazione degli elementi del report](../reporting-services/report-design/formatting-report-items-report-builder-and-ssrs.md)  

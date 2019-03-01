@@ -11,12 +11,12 @@ helpviewer_keywords:
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 022c63e58d212c5b45f18fcfc60b169dae9be81d
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: e25498f1d9d3b1ec3c24b7c2f34031fab9e4341f
+ms.sourcegitcommit: c61c7b598aa61faa34cd802697adf3a224aa7dc4
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51675900"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56154886"
 ---
 # <a name="troubleshooter-find-errors-with-sql-server-transactional-replication"></a>Risoluzione dei problemi: Trovare gli errori con la replica transazionale di SQL Server 
 La risoluzione degli errori di replica può risultare frustrante senza una conoscenza di base del funzionamento della replica transazionale. Il primo passaggio per la creazione di una pubblicazione prevede che l'agente di snapshot crei lo snapshot e lo salvi nella cartella degli snapshot. Successivamente, l'agente di distribuzione applica lo snapshot al sottoscrittore. 
@@ -45,7 +45,7 @@ Gli errori possono verificarsi in qualsiasi passaggio del processo. Trovare ques
 1. Usare Monitoraggio replica per identificare il punto in cui la replica riscontra l'errore (quale agente?):
    - Se gli errori si verificano nella sezione **Dal server di pubblicazione al database di distribuzione**, il problema riguarda l'agente di lettura log. 
    - Se gli errori si verificano nella sezione **Dal database di distribuzione al Sottoscrittore**, il problema riguarda l'agente di distribuzione.  
-2. Esaminare la cronologia dei processi dell'agente in Monitoraggio attività processi per identificare i dettagli dell'errore. Se la cronologia processo non mostra dettagli sufficienti, è possibile [abilitare la registrazione dettagliata](#enable-verbose-logging) per tale agente specifico.
+2. Esaminare la cronologia dei processi dell'agente in Monitoraggio attività processi per identificare i dettagli dell'errore. Se la cronologia processo non mostra dettagli sufficienti, è possibile [abilitare la registrazione dettagliata](#enable-verbose-logging-on-any-agent) per tale agente specifico.
 3. Provare a determinare una soluzione per l'errore.
 
 

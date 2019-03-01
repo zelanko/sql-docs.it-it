@@ -22,12 +22,12 @@ ms.assetid: 1f717ad6-f67b-4980-9397-577ecb0e5789
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 70907736aab1cdcf628f763209b39e88f1a2bf6f
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 89b8317b9782685d7486eb375045ca6988af28d0
+ms.sourcegitcommit: 009bee6f66142c48477849ee03d5177bcc3b6380
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52511617"
+ms.lasthandoff: 02/13/2019
+ms.locfileid: "56230948"
 ---
 # <a name="some--any-transact-sql"></a>SOME | ANY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -63,7 +63,7 @@ scalar_expression { = | < > | ! = | > | > = | ! > | < | < = | ! < }
 ## <a name="result-value"></a>Valore restituito  
  SOME o ANY restituisce **TRUE** se il confronto specificato è TRUE per qualsiasi coppia (_scalar_expression_**,**_x_) dove *x* è un valore del set di valori a colonna singola. In caso contrario restituisce **FALSE**.  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Remarks  
  SOME specifica che l'argomento *scalar_expression* deve essere confrontato in modo univoco con almeno un valore restituito dalla sottoquery. Per le istruzioni che specificano che l'argomento *scalar_expression* deve essere confrontato in modo univoco con ogni valore restituito dalla sottoquery, vedere [ALL &#40;Transact-SQL&#41;](../../t-sql/language-elements/all-transact-sql.md). Se ad esempio la sottoquery restituisce i valori 2 e 3, *scalar_expression* = SOME (subquery) restituisce TRUE se il valore di *scalar_expression* è 2. Se la sottoquery restituisce i valori 2 e 3, *scalar_expression* = ALL (subquery) restituisce FALSE, in quanto alcuni valori della sottoquery (il valore 3) non soddisfano i criteri dell'espressione.  
   
 ## <a name="examples"></a>Esempi  
@@ -90,7 +90,7 @@ ELSE
 PRINT 'FALSE' ;  
 ```  
   
- Nella query seguente viene restituito `FALSE` perché `3` non è inferiore a tutti i valori della tabella.  
+ La query seguente restituisce `FALSE` perché `3` non è inferiore a tutti i valori nella tabella.  
   
 ```  
 IF 3 < ALL (SELECT ID FROM T1)  
@@ -99,7 +99,7 @@ ELSE
 PRINT 'FALSE' ;  
 ```  
   
-### <a name="b-running-a-practical-example"></a>B. Esecuzione di un esempio pratico  
+### <a name="b-running-a-practical-example"></a>b. Esecuzione di un esempio pratico  
  Nell'esempio seguente viene creata una stored procedure che determina se tutti i componenti di una colonna `SalesOrderID` specificata nel database `AdventureWorks2012` possono essere prodotti nel numero di giorni indicato. Nell'esempio viene utilizzata una sottoquery per creare un elenco contenente i numeri corrispondenti ai valori di `DaysToManufacture` per tutti i componenti della colonna `SalesOrderID` specifica e viene quindi verificato se alcuni dei valori restituiti dalla sottoquery sono maggiori del numero di giorni specificato. Se ogni valore di `DaysToManufacture` restituito è minore del numero specificato, la condizione è TRUE e viene stampato il primo messaggio.  
   
 ```  
@@ -116,13 +116,13 @@ IF
     ON Sales.SalesOrderDetail.ProductID = Production.Product.ProductID   
     WHERE SalesOrderID = @OrderID  
    )  
-PRINT 'At least one item for this order cannot be manufactured in specified number of days.'  
+PRINT 'At least one item for this order can't be manufactured in specified number of days.'  
 ELSE   
 PRINT 'All items for this order can be manufactured in the specified number of days or less.' ;  
   
 ```  
   
- Per testare la procedura, eseguirla usando il valore `SalesOrderID``49080`, a cui sono associati un componente che richiede `2` giorni e due componenti che richiedono 0 giorni. La prima istruzione soddisfa i criteri, mentre la seconda no.  
+ Per testare la procedura, eseguirla usando il valore `SalesOrderID``49080`, a cui sono associati un componente che richiede `2` giorni e due componenti che richiedono 0 giorni. La prima istruzione soddisfa i criteri. La seconda query no.  
   
 ```  
 EXECUTE ManyDaysToComplete 49080, 2 ;  
@@ -138,7 +138,7 @@ EXECUTE ManyDaysToComplete 49080, 1 ;
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
- `At least one item for this order cannot be manufactured in specified number of days.`  
+ `At least one item for this order can't be manufactured in specified number of days.`  
   
 ## <a name="see-also"></a>Vedere anche  
  [ALL &#40;Transact-SQL&#41;](../../t-sql/language-elements/all-transact-sql.md)   
@@ -148,5 +148,4 @@ EXECUTE ManyDaysToComplete 49080, 1 ;
  [SELECT &#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md)   
  [WHERE &#40;Transact-SQL&#41;](../../t-sql/queries/where-transact-sql.md)   
  [IN &#40;Transact-SQL&#41;](../../t-sql/language-elements/in-transact-sql.md)  
-  
   

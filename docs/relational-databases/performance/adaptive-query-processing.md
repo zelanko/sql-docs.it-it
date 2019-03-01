@@ -2,7 +2,7 @@
 title: Elaborazione di query adattive nei database Microsoft SQL | Microsoft Docs
 description: Funzionalità per l'elaborazione di query adattive e il miglioramento delle prestazioni delle query in SQL Server (2017 e versioni successive) e nel database SQL di Azure.
 ms.custom: ''
-ms.date: 11/15/2018
+ms.date: 02/15/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -14,18 +14,19 @@ author: joesackmsft
 ms.author: josack
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 4097e4c4a56e34f95282a400fb07ac454a3660dd
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: aba4aa388cb9ffac518b09077d535b618206ab71
+ms.sourcegitcommit: 769b71f01052ec9b4fc5eb02d9da9a1a58118029
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53207312"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56319262"
 ---
 # <a name="adaptive-query-processing-in-sql-databases"></a>Elaborazione di query adattive nei database SQL
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
 Questo articolo presenta funzionalità per l'elaborazione di query adattive che consentono di migliorare le prestazioni delle query in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (a partire da [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]) e [!INCLUDE[ssSDS](../../includes/sssds-md.md)]:
 - Feedback delle concessioni di memoria in modalità batch
+- Feedback delle concessioni di memoria in modalità riga (anteprima pubblica con livello di compatibilità del database 150)
 - Join adattivo in modalità batch
 - Esecuzione interleaved
 
@@ -36,8 +37,6 @@ A livello generale [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ese
 Per altre informazioni sulle modalità di elaborazione ed esecuzione delle query in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], vedere la [Guida sull'architettura di elaborazione delle query](../../relational-databases/query-processing-architecture-guide.md).
 
 In alcuni casi il piano scelto da Query Optimizer non è ottimale per diversi motivi. Ad esempio è possibile che il numero stimato di righe del flusso del piano di query non sia corretto. I costi stimati aiutano a determinare il piano che viene selezionato per l'uso nell'esecuzione. Se le stime di cardinalità non sono corrette viene comunque usato il piano originale anche se le ipotesi di partenza non erano adeguate.
-
-![Funzionalità dell'elaborazione di query adattive](./media/1_AQPFeatures.png)
 
 ### <a name="how-to-enable-adaptive-query-processing"></a>Come abilitare l'elaborazione di query adattive
 È possibile impostare automaticamente i carichi di lavoro come idonei all'elaborazione di query adattive abilitando il livello di compatibilità 140 per il database.  Questa opzione è impostabile con Transact-SQL. Ad esempio  
@@ -368,6 +367,7 @@ OPTION (USE HINT('DISABLE_INTERLEAVED_EXECUTION_TVF'));
 L'hint per la query USE HINT ha la precedenza rispetto una configurazione con ambito database o un'impostazione del flag di traccia.
 
 ## <a name="see-also"></a>Vedere anche
+[Elaborazione di query intelligenti nei database SQL](../../relational-databases/performance/intelligent-query-processing.md)   
 [Centro prestazioni per il motore di database di SQL Server e il database SQL di Azure](../../relational-databases/performance/performance-center-for-sql-server-database-engine-and-azure-sql-database.md)     
 [Guida sull'architettura di elaborazione delle query](../../relational-databases/query-processing-architecture-guide.md)    
 [Guida di riferimento a operatori Showplan logici e fisici](../../relational-databases/showplan-logical-and-physical-operators-reference.md)    

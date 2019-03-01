@@ -6,14 +6,14 @@ ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: report-design
 ms.topic: conceptual
 ms.assetid: 94fdf921-270c-4c12-87b3-46b1cc98fae5
-author: maggiesMSFT
-ms.author: maggies
-ms.openlocfilehash: b7f3fa31092f6406ffd3d49b227a2fa3deba8e82
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 0132cfbd9a94ea8510c957c79f23b41e9c4f025b
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50030670"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56284590"
 ---
 # <a name="data-types-in-expressions-report-builder-and-ssrs"></a>Tipi di dati nelle espressioni (Generatore report e SSRS)
   I tipi di dati rappresentano tipologie di dati diversi che possono essere archiviati ed elaborati in modo efficiente. I tipi di dati standard includono testo, noto anche come stringhe, numeri con e senza posizioni decimali, date e ore e immagini. I valori in un report devono essere costituiti da un tipo di dati RDL (Report Definition Language). È possibile formattare un valore in base alle proprie preferenze quando si lo visualizza in un report. Un campo che rappresenta la valuta, ad esempio, viene archiviato nella definizione del report come numero a virgola mobile, ma può essere visualizzato in diversi formati a seconda della proprietà di formattazione scelta.  
@@ -28,12 +28,12 @@ ms.locfileid: "50030670"
   
 |Tipo RDL|Tipi CLR|  
 |--------------|---------------|  
-|String|Valore predefinito: String<br /><br /> Chart, GUID, Timespan|  
-|Boolean|Valore predefinito: Boolean|  
-|Valore intero|Valore predefinito: Int64<br /><br /> Int16, Int32, Uint16, Uint64, Byte, Sbyte|  
-|DateTime|Valore predefinito: DateTime<br /><br /> DateTimeOffset|  
-|Float|Valore predefinito: Double<br /><br /> Single, Decimal|  
-|Binario|Valore predefinito: Byte []|  
+|String|Impostazione predefinita: String<br /><br /> Chart, GUID, Timespan|  
+|Boolean|Impostazione predefinita: Boolean|  
+|Integer|Impostazione predefinita: Int64<br /><br /> Int16, Int32, Uint16, Uint64, Byte, Sbyte|  
+|DateTime|Impostazione predefinita: DateTime<br /><br /> DateTimeOffset|  
+|float|Impostazione predefinita: Double<br /><br /> Single, Decimal|  
+|Binario|Impostazione predefinita: Byte[]|  
 |Variant|Uno qualsiasi tra quelli riportati in precedenza eccetto Byte []|  
 |VariantArray|Matrice di Variant|  
 |Serializable|Variant oppure tipi contrassegnati con Serializable o che consentono di implementare ISerializable.|  

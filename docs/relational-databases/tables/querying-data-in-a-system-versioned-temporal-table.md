@@ -12,12 +12,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: f9e1e9c58b88e7edd48fe3a1390f56e313572adf
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 3de7c69169198302535eb7ff5dc855faa4f44974
+ms.sourcegitcommit: 769b71f01052ec9b4fc5eb02d9da9a1a58118029
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52418812"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56319112"
 ---
 # <a name="querying-data-in-a-system-versioned-temporal-table"></a>Query sui dati in una tabella temporale con controllo delle versioni di sistema
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -100,7 +100,7 @@ FOR SYSTEM_TIME AS OF '2015-09-01 T10:00:00.7230011' ;
 Le prime due sottoclausole restituiscono le versioni di riga che si sovrappongono a un periodo specificato (ad esempio quelle con inizio prima del periodo specificato e fine dopo tale periodo), mentre CONTAINED IN restituisce solo le righe esistenti entro i limiti del periodo specificato.  
   
 > [!IMPORTANT]  
->  Se è necessario cercare solo le versioni di riga non aggiornate, è consigliabile usare **CONTAINED IN** , perché opera solo sulla tabella di cronologia e offre le migliori prestazioni di query. Usare **ALL** quando occorre eseguire query sui dati correnti e cronologici senza restrizioni.  
+>  Se è necessario cercare solo versioni di riga non aggiornate, è consigliabile eseguire la query direttamente sulla tabella di cronologia, poiché offre le migliori prestazioni di query. Usare **ALL** quando occorre eseguire query sui dati correnti e cronologici senza restrizioni.  
   
 ```  
 /* Query using BETWEEN...AND sub-clause*/  

@@ -25,25 +25,22 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: b8781f155f96fa9e80270eaf6f75f2438eae4549
-ms.sourcegitcommit: 96032813f6bf1cba680b5e46d82ae1f0f2da3d11
+ms.openlocfilehash: 0455bd8f5655a25aa55978dcfaa2dc3c3c14fabd
+ms.sourcegitcommit: a13256f484eee2f52c812646cc989eb0ce6cf6aa
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/15/2019
-ms.locfileid: "54299478"
+ms.lasthandoff: 02/25/2019
+ms.locfileid: "56802076"
 ---
 # <a name="from---using-pivot-and-unpivot"></a>FROM - Uso di PIVOT e UNPIVOT
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-  > [!div class="nextstepaction"]
-  > [Condividi il feedback sul sommario della documentazione SQL](https://aka.ms/sqldocsurvey)
-
-  È possibile usare gli operatori relazionali `PIVOT` e `UNPIVOT` per modificare un'espressione con valori di tabella in un'altra tabella. `PIVOT` ruota un'espressione con valori di tabella convertendo i valori univoci di una colonna nell'espressione in più colonne nell'output ed esegue le aggregazioni necessarie sui valori di colonna restanti da includere nell'output finale. `UNPIVOT` esegue l'operazione opposta rispetto a PIVOT ruotando le colonne di un'espressione con valori di tabella in valori di colonna.  
+È possibile usare gli operatori relazionali `PIVOT` e `UNPIVOT` per modificare un'espressione con valori di tabella in un'altra tabella. `PIVOT` ruota un'espressione con valori di tabella convertendo i valori univoci di una colonna nell'espressione in più colonne nell'output ed esegue le aggregazioni necessarie sui valori di colonna restanti da includere nell'output finale. `UNPIVOT` esegue l'operazione opposta rispetto a PIVOT, ruotando le colonne di un'espressione con valori di tabella in valori di colonna.  
   
- La sintassi di `PIVOT` è più semplice e leggibile di quella che sarebbe altrimenti possibile specificare in una serie complessa di istruzioni `SELECT...CASE`. Per una descrizione completa della sintassi per `PIVOT`, vedere [FROM (Transact-SQL)](../../t-sql/queries/from-transact-sql.md).  
+La sintassi di `PIVOT` è più semplice e leggibile di quella che sarebbe altrimenti possibile specificare in una serie complessa di istruzioni `SELECT...CASE`. Per una descrizione completa della sintassi per `PIVOT`, vedere [FROM (Transact-SQL)](../../t-sql/queries/from-transact-sql.md).  
   
 ## <a name="syntax"></a>Sintassi  
- La sintassi seguente offre un riepilogo dell'uso dell'operatore `PIVOT`.  
+La sintassi seguente offre un riepilogo dell'uso dell'operatore `PIVOT`.  
   
 ```  
 SELECT <non-pivoted column>,  
@@ -70,7 +67,7 @@ Gli identificatori di colonna nella clausola `UNPIVOT` seguono le regole di conf
 
   
 ## <a name="basic-pivot-example"></a>Esempio di PIVOT di base  
- Nell'esempio di codice seguente viene generata una tabella a due colonne che include quattro righe.  
+Nell'esempio di codice seguente viene generata una tabella a due colonne che include quattro righe.  
   
 ```sql
 USE AdventureWorks2014 ;  
@@ -81,20 +78,20 @@ GROUP BY DaysToManufacture;
   
 ```  
   
- [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
+[!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
- ```
- DaysToManufacture AverageCost
- ----------------- -----------
- 0                 5.0885
- 1                 223.88
- 2                 359.1082
- 4                 949.4105
- ```
+```
+DaysToManufacture AverageCost
+----------------- -----------
+0                 5.0885
+1                 223.88
+2                 359.1082
+4                 949.4105
+```
   
- Nessun prodotto viene definito con tre `DaysToManufacture`.  
+Nessun prodotto viene definito con tre `DaysToManufacture`.  
   
- Il codice seguente consente di visualizzare lo stesso risultato, trasformato tramite Pivot in modo che i valori di `DaysToManufacture` diventino le intestazioni di colonna. Una colonna è disponibile per tre `[3]` giorni, anche se i risultati sono `NULL`.  
+Il codice seguente consente di visualizzare lo stesso risultato, trasformato tramite Pivot in modo che i valori di `DaysToManufacture` diventino le intestazioni di colonna. Una colonna è disponibile per tre `[3]` giorni, anche se i risultati sono `NULL`.  
   
 ```sql
 -- Pivot table with one row and five columns  
@@ -111,7 +108,7 @@ FOR DaysToManufacture IN ([0], [1], [2], [3], [4])
   
 ```  
   
- [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
+[!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
 ```
 Cost_Sorted_By_Production_Days 0           1           2           3           4         
@@ -120,7 +117,7 @@ AverageCost                    5.0885      223.88      359.1082    NULL        9
 ```
   
 ## <a name="complex-pivot-example"></a>Esempio di PIVOT complesso  
- Uno scenario comune in cui `PIVOT` può essere utile è il caso in cui si desidera generare report a tabulazione incrociata per creare un riepilogo dei dati. Si supponga, ad esempio, di voler eseguire una query sulla tabella `PurchaseOrderHeader` nel database di esempio `AdventureWorks2014` per determinare il numero di ordini di acquisto effettuati da dipendenti specifici. La query seguente fornisce questo report, ordinato per fornitore.  
+Uno scenario comune in cui `PIVOT` può essere utile è il caso in cui si vuole generare report a tabulazione incrociata per fornire un riepilogo dei dati. Si supponga, ad esempio, di voler eseguire una query sulla tabella `PurchaseOrderHeader` nel database di esempio `AdventureWorks2014` per determinare il numero di ordini di acquisto effettuati da dipendenti specifici. La query seguente fornisce questo report, ordinato per fornitore.  
   
 ```sql
 USE AdventureWorks2014;  
@@ -138,7 +135,7 @@ FOR EmployeeID IN
 ORDER BY pvt.VendorID;  
 ```  
   
- Set di risultati parziale:  
+Set di risultati parziale:  
   
 ```
 VendorID    Emp1        Emp2        Emp3        Emp4        Emp5  
@@ -150,19 +147,19 @@ VendorID    Emp1        Emp2        Emp3        Emp4        Emp5
 1500        3           4           4           5           4
 ```
   
- I risultati restituiti dall'istruzione di selezione secondaria vengono trasformati tramite Pivot nella colonna `EmployeeID`.  
+I risultati restituiti dall'istruzione di selezione secondaria vengono trasformati tramite Pivot nella colonna `EmployeeID`.  
   
 ```sql
 SELECT PurchaseOrderID, EmployeeID, VendorID  
 FROM PurchaseOrderHeader;  
 ```  
   
- In questo modo, i valori univoci restituiti dalla colonna `EmployeeID` diventano campi nel set di risultati finale. Pertanto è presente una colonna per ogni numero `EmployeeID` specificato nella clausola Pivot. In questo caso i dipendenti `164`, `198`, `223`, `231` e `233`. La colonna `PurchaseOrderID` funge da colonna dei valori, rispetto alla quale vengono raggruppate le colonne restituite nell'output finale, dette colonne di raggruppamento. In questo caso, le colonne di raggruppamento vengono aggregate dalla funzione `COUNT`. Si noti che viene visualizzato un messaggio di avviso che indica che eventuali valori Null visualizzati nella colonna `PurchaseOrderID` non sono considerati nel calcolo del `COUNT` per ogni dipendente.  
+I valori univoci restituiti dalla colonna `EmployeeID` diventano campi nel set di risultati finale. Pertanto è presente una colonna per ogni numero `EmployeeID` specificato nella clausola Pivot. In questo caso i dipendenti `164`, `198`, `223`, `231` e `233`. La colonna `PurchaseOrderID` funge da colonna dei valori, rispetto alla quale vengono raggruppate le colonne restituite nell'output finale, dette colonne di raggruppamento. In questo caso, le colonne di raggruppamento vengono aggregate dalla funzione `COUNT`. Si noti che viene visualizzato un messaggio di avviso che indica che eventuali valori Null visualizzati nella colonna `PurchaseOrderID` non sono stati considerati nel calcolo di `COUNT` per ogni dipendente.  
   
 > [!IMPORTANT]  
 >  Quando le funzioni di aggregazione sono usate con `PIVOT`, gli eventuali valori Null presenti nella colonna dei valori non vengono considerati nel calcolo di un'aggregazione.  
   
- `UNPIVOT` esegue l'operazione quasi opposta rispetto a `PIVOT`, ruotando le colonne in righe. Si supponga che la tabella generata nell'esempio precedente venga archiviata nel database come `pvt` e che si desideri ruotare gli identificatori di colonna `Emp1`, `Emp2`, `Emp3`, `Emp4` e `Emp5` in valori di riga corrispondenti a un particolare fornitore. Ciò significa che è necessario identificare altre due colonne. La colonna che includerà i valori di colonna da ruotare (`Emp1`, `Emp2`,...) sarà denominata `Employee` e la colonna che includerà i valori che attualmente si trovano nelle colonne da ruotare sarà denominata `Orders`. Queste colonne corrispondono rispettivamente a *pivot_column* e *value_column* nella definizione [!INCLUDE[tsql](../../includes/tsql-md.md)]. La query è la seguente.  
+`UNPIVOT` esegue l'operazione quasi opposta rispetto a `PIVOT`, ruotando le colonne in righe. Si supponga che la tabella generata nell'esempio precedente venga archiviata nel database come `pvt` e che si desideri ruotare gli identificatori di colonna `Emp1`, `Emp2`, `Emp3`, `Emp4` e `Emp5` in valori di riga corrispondenti a un particolare fornitore. È quindi necessario identificare altre due colonne. La colonna che conterrà i valori di colonna da ruotare (`Emp1`, `Emp2` e così via) sarà denominata `Employee` e la colonna che conterrà i valori che attualmente si trovano nelle colonne ruotate sarà denominata `Orders`. Queste colonne corrispondono rispettivamente a *pivot_column* e *value_column* nella definizione [!INCLUDE[tsql](../../includes/tsql-md.md)]. La query è la seguente.  
   
 ```sql
 -- Create the table and insert values as portrayed in the previous example.  
@@ -187,7 +184,7 @@ UNPIVOT
 GO  
 ```  
   
- Set di risultati parziale:  
+Set di risultati parziale:  
   
 ```
 VendorID    Employee    Orders
@@ -205,12 +202,11 @@ VendorID    Employee    Orders
 ...
 ```
   
- Si noti che `UNPIVOT` non è l'esatto opposto di `PIVOT`. `PIVOT` esegue un'aggregazione e, pertanto, unisce le righe che è possibile unire in una singola riga nell'output. `UNPIVOT` non riproduce il risultato dell'espressione con valori di tabella originale perché le righe sono state unite. Inoltre, i valori Null nell'input di `UNPIVOT` vengono esclusi dall'output, mentre è possibile che fossero presenti valori Null originali nell'input prima dell'operazione `PIVOT`.  
+Si noti che `UNPIVOT` non è l'esatto opposto di `PIVOT`. `PIVOT` esegue un'aggregazione e unisce più righe in una singola riga nell'output. `UNPIVOT` non riproduce il risultato dell'espressione con valori di tabella originale perché le righe sono state unite. Inoltre, i valori Null nell'input di `UNPIVOT` non sono più presenti nell'output. Quando i valori non sono più presenti, ciò indica che è possibile che fossero presenti valori Null nell'input prima dell'operazione `PIVOT`.  
   
- Nella vista `Sales.vSalesPersonSalesByFiscalYears` nel database di esempio [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] viene usato `PIVOT` per restituire le vendite totali per ogni venditore, per ogni anno fiscale. Per creare uno script per la vista in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], in **Esplora oggetti** individuare la vista nella cartella **Viste** per il database [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)]. Fare clic con il pulsante destro del mouse sul nome della vista e quindi selezionare **Crea script per vista**.  
+Nella vista `Sales.vSalesPersonSalesByFiscalYears` nel database di esempio [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] viene usato `PIVOT` per restituire le vendite totali per ogni venditore, per ogni anno fiscale. Per creare uno script per la vista in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], in **Esplora oggetti** individuare la vista nella cartella **Viste** per il database [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)]. Fare clic con il pulsante destro del mouse sul nome della vista e quindi selezionare **Crea script per vista**.  
   
 ## <a name="see-also"></a>Vedere anche  
- [FROM (Transact-SQL)](../../t-sql/queries/from-transact-sql.md)   
- [CASE (Transact-SQL)](../../t-sql/language-elements/case-transact-sql.md)  
-  
+[FROM (Transact-SQL)](../../t-sql/queries/from-transact-sql.md)   
+[CASE (Transact-SQL)](../../t-sql/language-elements/case-transact-sql.md)  
   

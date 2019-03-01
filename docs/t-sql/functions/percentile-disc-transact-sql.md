@@ -20,19 +20,19 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 1624ff7f1ea5f480b5e28741bccc50d8746a5f9a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 1ae6754923dcb22a64251b351f013069b3a681fb
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47747860"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56291819"
 ---
 # <a name="percentiledisc-transact-sql"></a>PERCENTILE_DISC (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-all-md](../../includes/tsql-appliesto-ss2012-all-md.md)]
 
-  Calcola un percentile specifico per i valori ordinati in un intero set di righe o all'interno di partizioni distinte di un set di righe in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Per un valore *P* di percentile specificato, PERCENTILE_DISC ordina i valori dell'espressione nella clausola ORDER BY e restituisce il valore con il più piccolo valore di CUME_DIST (in relazione alla stessa specifica di ordinamento) maggiore o uguale a *P*. PERCENTILE_DISC (0.5) calcolerà ad esempio il cinquantesimo percentile, ovvero la mediana, di un'espressione. PERCENTILE_DISC calcola il percentile in base a una distribuzione discreta dei valori della colonna e restituisce un risultato uguale a un valore specifico nella colonna.  
+  Calcola un percentile specifico per i valori ordinati in un intero set di righe o all'interno di partizioni distinte di un set di righe in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Per un valore percentile specificato *P*, PERCENTILE_DISC ordina i valori dell'espressione nella clausola ORDER BY. Restituisce poi il valore con il più piccolo valore di CUME_DIST (in relazione alla stessa specifica di ordinamento) maggiore o uguale a *P*. PERCENTILE_DISC (0.5) calcolerà ad esempio il cinquantesimo percentile, ovvero la mediana, di un'espressione. PERCENTILE_DISC calcola il percentile in base a una distribuzione discreta dei valori della colonna. Restituisce un risultato uguale a un valore specifico nella colonna.  
   
- ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento") [Convenzioni della sintassi Transact-SQL &#40;Transact-SQL&#41;](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icona di collegamento a un articolo](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento") [Convenzioni della sintassi Transact-SQL &#40;Transact-SQL&#41;](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -45,11 +45,11 @@ PERCENTILE_DISC ( numeric_literal ) WITHIN GROUP ( ORDER BY order_by_expression 
  *literal*  
  Percentile da calcolare. Il valore deve essere compreso tra 0 e 1.  
   
- WITHIN GROUP **(** ORDER BY *order_by_expression* [ **ASC** | DESC ]**)**  
+ WITHIN GROUP **(** ORDER BY *order_by_expression* [ **ASC** | DESC)**  
  Specifica un elenco di valori in base a cui ordinare e calcolare il percentile. È consentito un solo *order_by_expression*. Per impostazione predefinita, l'ordinamento è crescente. L'elenco dei valori può essere di uno qualsiasi dei tipi di dati validi per l'operazione di ordinamento.  
   
- OVER **(** \<partition_by_clause> **)**  
- Suddivide il set di risultati generato dalla clausola FROM in partizioni alle quali viene applicata la funzione di percentile. Per altre informazioni, vedere [Clausola OVER - &#40;Transact-SQL&#41;](../../t-sql/queries/select-over-clause-transact-sql.md). Le clausole \<ORDER BY> e \<ROWS o RANGE> non possono essere specificate in una funzione PERCENTILE_DISC.  
+ OVER **(** \<partition_by_clause>)**  
+ Suddivide il set di risultati della clausola FROM in partizioni. A queste partizioni viene applicata la funzione di percentile. Per altre informazioni, vedere [Clausola OVER - &#40;Transact-SQL&#41;](../../t-sql/queries/select-over-clause-transact-sql.md). Le clausole \<ORDER BY> e \<ROWS o RANGE> non possono essere specificate in una funzione PERCENTILE_DISC.  
   
 ## <a name="return-types"></a>Tipi restituiti  
  Il tipo restituito viene determinato dal tipo di *order_by_expression*.  
@@ -64,8 +64,11 @@ PERCENTILE_DISC ( numeric_literal ) WITHIN GROUP ( ORDER BY order_by_expression 
   
 ## <a name="examples"></a>Esempi  
   
-### <a name="a-basic-syntax-example"></a>A. Esempio della sintassi di base  
- Nell'esempio seguente vengono utilizzate le funzioni PERCENTILE_CONT e PERCENTILE_DISC per trovare lo stipendio medio del dipendente in ogni reparto. Si noti che queste funzioni possono restituire valori diversi. Questa situazione si verifica perché PERCENTILE_CONT esegue l'interpolazione del valore appropriato, sia che esista o meno nel set di dati, mentre PERCENTILE_DISC restituisce sempre un valore effettivo dal set.  
+### <a name="basic-syntax-example"></a>Esempio della sintassi di base  
+
+ Nell'esempio seguente vengono usate le funzioni PERCENTILE_CONT e PERCENTILE_DISC per trovare lo stipendio medio dei dipendenti in ogni reparto. È possibile che non restituiscano lo stesso valore:
+* PERCENTILE_CONT restituisce il valore corretto, anche se non esiste nel set di dati.
+* PERCENTILE_DISC restituisce un valore effettivo dal set.  
   
 ```  
 USE AdventureWorks2012;  
@@ -96,8 +99,11 @@ Human Resources        17.427850    16.5865
   
 ## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Esempi: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] e [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
-### <a name="b-basic-syntax-example"></a>B. Esempio della sintassi di base  
- Nell'esempio seguente vengono utilizzate le funzioni PERCENTILE_CONT e PERCENTILE_DISC per trovare lo stipendio medio del dipendente in ogni reparto. Si noti che queste funzioni possono restituire valori diversi. Questa situazione si verifica perché PERCENTILE_CONT esegue l'interpolazione del valore appropriato, sia che esista o meno nel set di dati, mentre PERCENTILE_DISC restituisce sempre un valore effettivo dal set.  
+### <a name="basic-syntax-example"></a>Esempio della sintassi di base  
+
+ Nell'esempio seguente vengono usate le funzioni PERCENTILE_CONT e PERCENTILE_DISC per trovare lo stipendio medio dei dipendenti in ogni reparto. È possibile che non restituiscano lo stesso valore:
+* PERCENTILE_CONT restituisce il valore corretto, anche se non esiste nel set di dati. 
+* PERCENTILE_DISC restituisce un valore effettivo dal set.  
   
 ```  
 -- Uses AdventureWorks  

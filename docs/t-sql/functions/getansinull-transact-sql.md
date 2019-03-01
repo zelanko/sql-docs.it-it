@@ -21,19 +21,19 @@ ms.assetid: 189399e4-428d-4902-b3a8-94f07fdefc6a
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: d95e76ebfc1bca5aa310d8c4e377592ec1670721
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 081425bf857be0a637159304facdcfb1aa625642
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47753389"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56287829"
 ---
 # <a name="getansinull-transact-sql"></a>GETANSINULL (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   Restituisce l'impostazione predefinita relativa all'ammissione dei valori Null del database per la sessione corrente.  
   
- ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icona di collegamento a un articolo](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -44,13 +44,13 @@ GETANSINULL ( [ 'database' ] )
   
 ## <a name="arguments"></a>Argomenti  
  '*database*'  
- Nome del database per cui restituire le informazioni sul supporto dei valori Null. *database* è **char** o **nchar**. Se **char**, *database* viene convertito in modo implicito in **nchar**.  
+ Nome del database per cui restituire le informazioni sul supporto dei valori Null. *database è **char** o **nchar**. Se **char**, *database* viene convertito in modo implicito in **nchar**.  
   
 ## <a name="return-types"></a>Tipi restituiti  
  **int**  
   
 ## <a name="remarks"></a>Remarks  
- Quando il database specificato ammette valori Null e il supporto dei valori Null per colonne o tipi di dati non è definito in modo esplicito, il valore restituito da GETANSINULL è 1. Questa è l'impostazione predefinita di ANSI NULL.  
+GETANSINULL restituisce 1 se il database specificato ammette valori Null. Per la restituzione di questo valore è anche necessario che il supporto dei valori Null per colonne o tipi di dati non sia definito in modo esplicito. L'impostazione predefinita di ANSI NULL è 1. 
   
  Per abilitare la funzionalità predefinita di supporto ANSI NULL, è necessario che sia impostata una delle condizioni seguenti:  
   

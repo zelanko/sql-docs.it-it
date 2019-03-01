@@ -11,14 +11,14 @@ helpviewer_keywords:
 - overview of Report Builder
 - getting started
 ms.assetid: 55bf4f9c-d037-412f-ae57-3fc39ce32fa5
-author: maggiesMSFT
-ms.author: maggies
-ms.openlocfilehash: 381f0070a8e045aeec707c1f8dc9a6df9cd157d9
-ms.sourcegitcommit: c7febcaff4a51a899bc775a86e764ac60aab22eb
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: f37319c07856f0e31abcb2afb047bdea2904063a
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "52711419"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56290299"
 ---
 # <a name="report-builder-in-sql-server"></a>Generatore report in SQL Server
   [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] è uno strumento per la creazione di report impaginati, per gli utenti aziendali che preferiscono lavorare in un ambiente autonomo anziché usare Progettazione report in Visual Studio.  Quando si progetta un report impaginato, si crea una definizione del report che specifica dove ottenere i dati, quali dati ottenere e come visualizzarli. Quando si esegue il report, l'elaboratore di report usa la definizione del report specificata, recupera i dati e li combina con il layout per generare il report. È possibile visualizzare il report in anteprima in [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)]. Pubblicare quindi il report in un server di report [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] in modalità nativa o in modalità integrata SharePoint (2016 e versioni precedenti). È anche possibile pubblicare un report impaginato nel servizio Power BI. Sono disponibili altre informazioni sui [report impaginati in Power BI Premium](https://docs.microsoft.com/power-bi/paginated-reports-report-builder-power-bi) (anteprima).

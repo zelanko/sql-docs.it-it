@@ -19,14 +19,14 @@ f1_keywords:
 - sql13.rtp.rptdesigner.mapgroupproperties.variables.f1
 - "10507"
 ms.assetid: fdd9b994-d138-4990-a291-279b0249eb72
-author: maggiesMSFT
-ms.author: maggies
-ms.openlocfilehash: 8afb64d468c895e0cfa52e8c7380ab54501180ac
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 8e8d4b084b8c8f015cdc04c3d4f2ff208cd2388a
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52538728"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56297607"
 ---
 # <a name="customize-the-data-and-display-of-a-map-or-map-layer-report-builder-and-ssrs"></a>Personalizzare i dati e la visualizzazione di una mappa o di un livello mappa (Generatore report e SSRS)
   Dopo aver aggiunto una mappa o un livello mappa a un [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] report impaginato usando una procedura guidata, è possibile modificare l'aspetto della mappa nel report. È possibile apportare dei miglioramenti tenendo in considerazione i concetti seguenti:  

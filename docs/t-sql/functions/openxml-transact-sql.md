@@ -20,19 +20,19 @@ ms.assetid: 8088b114-7d01-435a-8e0d-b81abacc86d6
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 8c9e4de5e7255c43460c9566f089f416a1e36782
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: ac5e76c2d6e93bb8eb2fe334f38a22325e74d37f
+ms.sourcegitcommit: 019b6f355a69aa409e6601de8977a8c307f793cb
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56011790"
+ms.lasthandoff: 02/16/2019
+ms.locfileid: "56331591"
 ---
 # <a name="openxml-transact-sql"></a>OPENXML (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   OpenXML fornisce una vista di un documento XML basata su un set di righe. In quanto provider di set di righe, è possibile utilizzare OPENXML nelle istruzioni [!INCLUDE[tsql](../../includes/tsql-md.md)] che supportano provider di set di righe quali una tabella, una vista o la funzione OPENROWSET.  
   
- ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icona di collegamento a un articolo](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un articolo")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -47,16 +47,16 @@ OPENXML( idoc int [ in] , rowpattern nvarchar [ in ] , [ flags byte [ in ] ] )
  Handle di documento della rappresentazione interna di un documento XML. Tale rappresentazione viene creata tramite **sp_xml_preparedocument**.  
   
  *rowpattern*  
- Modello XPath usato per identificare i nodi da elaborare come righe nel documento XML di cui viene passato l'handle nel parametro *idoc*.  
+ Modello XPath usato per identificare i nodi da elaborare come righe. I nodi provengono dal documento XML di cui viene passato l'handle nel parametro *idoc*.
   
  *flags*  
- Indica il mapping da utilizzare tra i dati XML e il set di righe relazionale e la modalità di riempimento della colonna spill-over. *flags* è un parametro di input facoltativo. I possibili valori sono i seguenti.  
+ Indica il mapping da usare tra i dati XML e il set di righe relazionale e la modalità di riempimento della colonna di overflow. *flags* è un parametro di input facoltativo. I possibili valori sono i seguenti.  
   
 |Valore byte|Descrizione|  
 |----------------|-----------------|  
 |**0**|Per impostazione predefinita viene impostato il mapping **incentrato sugli attributi**.|  
-|**1**|Viene usato il mapping **incentrato sugli attributi**. Può essere utilizzato in combinazione con XML_ELEMENTS. In questo caso, il mapping **incentrato sugli attributi** verrà applicato per primo; il mapping **incentrato sugli elementi** verrà applicato successivamente a tutte le colonne non ancora elaborate.|  
-|**2**|Viene usato il mapping **incentrato sugli elementi**. Può essere utilizzato in combinazione con XML_ATTRIBUTES. In questo caso, il mapping **incentrato sugli attributi** verrà applicato per primo; il mapping **incentrato sugli elementi** verrà applicato successivamente a tutte le colonne non ancora elaborate.|  
+|**1**|Viene usato il mapping **incentrato sugli attributi**. Può essere utilizzato in combinazione con XML_ELEMENTS. In questo caso, il mapping **incentrato sugli attributi** viene applicato per primo. Successivamente il mapping **incentrato sugli elementi** viene applicato a tutte le colonne non ancora elaborate.|  
+|**2**|Viene usato il mapping **incentrato sugli elementi**. Può essere utilizzato in combinazione con XML_ATTRIBUTES. In questo caso, il mapping **incentrato sugli attributi** viene applicato per primo. Successivamente il mapping **incentrato sugli elementi** viene applicato a tutte le colonne non ancora elaborate.|  
 |**8**|Può essere utilizzato in combinazione (OR logico) con XML_ATTRIBUTES o XML_ELEMENTS. Nel contesto di operazioni di recupero, questo flag indica che i dati consumati non devono essere copiati nella proprietà di overflow **\@mp:xmltext**.|  
   
  _SchemaDeclaration_  
@@ -71,12 +71,12 @@ OPENXML( idoc int [ in] , rowpattern nvarchar [ in ] , [ flags byte [ in ] ] )
  *ColPattern*  
  Modello generale XPath facoltativo che indica il criterio di mapping dei nodi XML alle colonne. Se *ColPattern* viene omesso, viene applicato il mapping predefinito, ovvero il mapping **incentrato sugli attributi** o **sugli elementi**, a seconda del valore dei *flag*.  
   
- Nel caso di mapping *incentrato sugli attributi* o **sugli elementi**, il modello XPath specificato come **ColPattern** consente di specificare la natura specifica del mapping che sovrascrive o migliora il mapping predefinito indicato in *flag*.  
+ Per il mapping *incentrato sugli attributi* o **sugli elementi**, il modello XPath specificato come **ColPattern** consente di specificare la natura speciale del mapping che sovrascrive o migliora il mapping predefinito indicato in *flag*.  
   
  Il modello XPath generale specificato come *ColPattern* supporta inoltre le metaproprietà.  
   
  *Metaproprietà*  
- Una delle metaproprietà definite da OPENXML. Se si specifica *MetaProperty*, la colonna contiene le informazioni definite dalla metaproprietà. Le metaproprietà consentono di estrarre informazioni, ad esempio sulla posizione relativa e sullo spazio dei nomi, relative ai nodi XML. In questo modo viene restituita una quantità di informazioni maggiore rispetto alle informazioni visibili nella rappresentazione testuale.  
+ Una delle metaproprietà definite da OPENXML. Se si specifica *MetaProperty*, la colonna contiene le informazioni definite dalla metaproprietà. Le metaproprietà consentono di estrarre informazioni, ad esempio sulla posizione relativa e sullo spazio dei nomi, relative ai nodi XML. Queste metaproprietà restituiscono una quantità di informazioni maggiore rispetto al quelle visibili nella rappresentazione testuale.  
   
  *TableName*  
  Nome di tabella che è possibile assegnare in sostituzione di *SchemaDeclaration* se una tabella avente lo schema desiderato esiste già e non sono necessari modelli di colonna specifici.  
@@ -91,7 +91,7 @@ OPENXML( idoc int [ in] , rowpattern nvarchar [ in ] , [ flags byte [ in ] ] )
 |**id**|**bigint**|ID univoco del nodo del documento.<br /><br /> Il valore dell'ID dell'elemento radice è 0. I valori di ID negativi sono riservati.|  
 |**parentid**|**bigint**|Identifica il padre del nodo. Il padre identificato da questo ID non corrisponde necessariamente all'elemento padre. Dipende infatti dal valore NodeType del nodo il cui padre è identificato da questo ID. Se ad esempio il nodo è di tipo testo, il relativo elemento padre potrebbe essere un nodo attributo.<br /><br /> Se il nodo si trova al livello principale nel documento XML, il relativo valore **ParentID** è NULL.|  
 |**nodetype**|**int**|Identifica il tipo di nodo. Valore intero corrispondente alla numerazione del tipo di nodo XML DOM.<br /><br /> I possibili tipi di nodo sono i seguenti:<br /><br /> 1 = Nodo elemento<br /><br /> 2 = Nodo attributo<br /><br /> 3 = Nodo testo|  
-|**localname**|**nvarchar**|Nome locale dell'elemento o attributo. È NULL se l'oggetto DOM non è associato a un nome.|  
+|**localname**|**nvarchar**|Nome locale dell'elemento o attributo. È NULL se l'oggetto DOM non ha un nome.|  
 |**prefix**|**nvarchar**|Prefisso dello spazio dei nomi del nome del nodo.|  
 |**namespaceuri**|**nvarchar**|URI dello spazio dei nomi del nodo. Se il valore è NULL, non sono presenti spazi dei nomi.|  
 |**datatype**|**nvarchar**|Tipo di dati effettivo della riga dell'elemento o attributo. In caso contrario, restituisce NULL. Il tipo di dati viene ricavato dalla DTD o dallo schema inline.|  
@@ -144,7 +144,7 @@ VINET      Paul Henriot
 LILAS      Carlos Gonzlez  
 ```  
   
- Se si esegue la stessa istruzione `SELECT` con i *flag* impostati su `2`, a indicare il mapping **incentrato sugli elementi**, per i valori di `CustomerID` e `ContactName` di entrambi i clienti nel documento XML viene restituito NULL, in quanto non è disponibile alcun elemento denominato `CustomerID` o `ContactName` nel documento XML.  
+ Se si esegue la stessa istruzione `SELECT` con i *flag* impostati su `2`, a indicare il mapping **incentrato sugli elementi**, per i valori di `CustomerID` e `ContactName` di entrambi i clienti nel documento XML viene restituito NULL, perché non è disponibile alcun elemento denominato `CustomerID` o `ContactName` nel documento XML.  
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
@@ -156,9 +156,9 @@ NULL       NULL
 ```  
   
 ### <a name="b-specifying-colpattern-for-mapping-between-columns-and-the-xml-attributes"></a>b. Utilizzo di ColPattern per l'impostazione del mapping tra colonne e attributi XML  
- La query seguente restituisce gli attributi ID cliente, data dell'ordine, ID e quantità dal documento XML. Il *rowpattern* identifica gli elementi `<OrderDetails>`. `ProductID` e `Quantity` sono attributi dell'elemento `<OrderDetails>`. Tuttavia, `OrderID`, `CustomerID` e `OrderDate` sono gli attributi dell'elemento padre (`<Orders>`).  
+ La query seguente restituisce gli attributi ID cliente, data dell'ordine, ID prodotto e quantità dal documento XML. Il *rowpattern* identifica gli elementi `<OrderDetails>`. `ProductID` e `Quantity` sono attributi dell'elemento `<OrderDetails>`. Tuttavia, `OrderID`, `CustomerID` e `OrderDate` sono gli attributi dell'elemento padre (`<Orders>`).  
   
- Viene specificato il parametro facoltativo *ColPattern*, a indicare quanto segue:  
+ Il parametro facoltativo *ColPattern* viene specificato per i mapping seguenti:  
   
 -   Sulle colonne `OrderID`, `CustomerID` e `OrderDate` del set di righe viene eseguito il mapping agli attributi del padre dei nodi identificati da *rowpattern* nel documento XML.  
   
@@ -212,7 +212,7 @@ OrderID CustomerID           OrderDate                 ProdID    Qty
 ### <a name="c-obtaining-results-in-an-edge-table-format"></a>C. Restituzione di risultati in formato di tabella edge  
  Il documento XML utilizzato nell'esempio seguente è composto dagli elementi `<Customers>`, `<Orders>` e `<Order_0020_Details>`. Viene innanzitutto richiamata la stored procedure **sp_xml_preparedocument** per ottenere un handle di documento, quindi l'handle di documento viene passato a `OPENXML`.  
   
- Nell'istruzione `OPENXML` *rowpattern* (`/ROOT/Customers`) identifica i nodi `<Customers>` da elaborare. Poiché la clausola WITH non viene specificata, `OPENXML` restituisce il set di righe nel formato di tabella **edge**.  
+ Nell'istruzione `OPENXML` *rowpattern* (`/ROOT/Customers`) identifica i nodi `<Customers>` da elaborare. Poiché la clausola WITH non è specificata, `OPENXML` restituisce il set di righe nel formato di tabella **edge**.  
   
  L'istruzione `SELECT` recupera infine tutte le colonne della tabella **edge**.  
   
@@ -247,5 +247,4 @@ EXEC sp_xml_removedocument @idoc;
   
 ## <a name="see-also"></a>Vedere anche  
  [Esempi: uso di OPENXML](../../relational-databases/xml/examples-using-openxml.md)  
-  
   

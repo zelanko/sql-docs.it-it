@@ -16,14 +16,14 @@ f1_keywords:
 - "10172"
 - sql13.rtp.rptdesigner.chartareaproperties.3doptions.f1
 ms.assetid: d56d0521-362f-4361-843a-acf2c897a87c
-author: maggiesMSFT
-ms.author: maggies
-ms.openlocfilehash: 2197d120799041cb679453b6b6a1c3dc2070e7d3
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: ef017892d128fc1287c13fbfe893ba7973dab729
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52507608"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56287699"
 ---
 # <a name="charts-report-builder-and-ssrs"></a>Grafici (Generatore report e SSRS)
 Informazioni sull'uso delle aree dati dei grafici per consentire agli utenti dei report impaginati [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] di interpretare a colpo d'occhio grandi volumi di dati aggregati.  

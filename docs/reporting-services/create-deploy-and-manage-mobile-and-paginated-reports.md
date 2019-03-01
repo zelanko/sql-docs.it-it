@@ -13,14 +13,14 @@ helpviewer_keywords:
 - Reporting Services
 - SQL Server Reporting Services
 ms.assetid: b8d18d3d-9db0-43e7-8286-7b46cc3a37ed
-author: maggiesMSFT
-ms.author: maggies
-ms.openlocfilehash: 2d69df56647cb378bee2627344a8db09df2bfa57
-ms.sourcegitcommit: c7febcaff4a51a899bc775a86e764ac60aab22eb
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 08a71374d72a70e9bba6863eb9f6b5ac548d28f7
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "52712552"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56297399"
 ---
 # <a name="what-is-sql-server-reporting-services-ssrs"></a>Che cos'è SQL Server Reporting Services (SSRS)?
 
@@ -63,7 +63,7 @@ Questo carico di lavoro BI di base esiste tuttora e pertanto è stato modernizza
 * Tutti gli stili e le tavolozze dei colori predefiniti sono stati aggiornati in modo da poter creare report con un nuovo stile moderno minimalista.
 * Il riquadro dei parametri è stato aggiornato ed è ora possibile disporre i parametri nell'ordine desiderato.
 * I report possono essere esportati in nuovi formati, ad esempio PowerPoint. Le visualizzazioni di Reporting Services in PowerPoint sono attive e modificabili, non sono semplici screenshot.
-* È possibile creare un'esperienza ibrida di Power BI/Reporting Services. Anziché ricreare i report di Reporting Services locali in Power BI, è possibile aggiungere elementi visivi da tali report ai dashboard di Power BI, in modo da monitorare tutto da un'unica posizione nel proprio dashboard di Power BI.
+* È possibile creare un'esperienza ibrida di Power BI/Reporting Services.  Anziché ricreare i report di Reporting Services locali in Power BI, è possibile aggiungere elementi visivi dai report ai dashboard di Power BI. in modo da monitorare tutto da un'unica posizione nel proprio dashboard di Power BI.
 
 ## <a name="mobile-reports"></a>Report per dispositivi mobili
 
@@ -83,9 +83,9 @@ Per gli utenti finali di Reporting Services in modalità nativa, la porta d'ingr
 
 Nel portale Web è possibile applicare una grafica personalizzata e anche creare indicatori KPI, in modo da visualizzare le principali metriche aziendali immediatamente nel browser, senza dover aprire un report. 
 
-Il nuovo portale Web è una riscrittura completa di Report Manager. È ora diventato un'app HTML5 a pagina singola, basata su standard, per cui sono ottimizzati i browser moderni: Microsoft Edge, Internet Explorer 10 e 11, Chrome, Firefox, Safari e tutti i browser più diffusi.
+Il nuovo portale Web è una riscrittura completa di Report Manager. È ora diventato un'app HTML5 a pagina singola, basata su standard, per cui sono ottimizzati i browser moderni: Edge, Internet Explorer 10 e 11, Chrome, Firefox, Safari e tutti i browser più diffusi.
 
-Il contenuto del portale Web è organizzato in base al tipo: report impaginati e per dispositivi mobili e indicatori KPI di Reporting Services, cartelle di lavoro di Excel, set di dati condivisi e origini dati condivise da usare come blocchi predefiniti per i report. È possibile archiviare e gestire questi elementi in modo sicuro nel portale con la gerarchia di cartelle classica. È possibile contrassegnare i preferiti e gestire il contenuto, se si dispone del ruolo appropriato.
+Il contenuto del portale Web è organizzato in base al tipo: report impaginati e per dispositivi mobili e indicatori di prestazioni chiave di Reporting Services, cartelle di lavoro di Excel, set di dati condivisi e origini dati condivise da usare come blocchi predefiniti per i report. È possibile archiviare e gestire questi elementi in modo sicuro nel portale con la gerarchia di cartelle classica. È possibile contrassegnare i preferiti e gestire il contenuto, se si dispone del ruolo appropriato.
 
 Nel nuovo portale Web è ancora possibile pianificare l'elaborazione dei report, accedere ai report su richiesta e sottoscrivere report pubblicati.
 

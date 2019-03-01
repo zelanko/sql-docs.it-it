@@ -1,7 +1,7 @@
 ---
 title: Descrizione di indici cluster e non cluster | Microsoft Docs
 ms.custom: ''
-ms.date: 11/28/2017
+ms.date: 02/11/2019
 ms.prod: sql
 ms.prod_service: table-view-index, sql-database
 ms.reviewer: ''
@@ -15,12 +15,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 2e8daf01c2676c72630beb80d7511e2fa84afe9c
-ms.sourcegitcommit: 96032813f6bf1cba680b5e46d82ae1f0f2da3d11
+ms.openlocfilehash: 0e05b2efa7be0bcd362de0ab4ed8f78b5033b149
+ms.sourcegitcommit: 01e17c5f1710e7058bad8227c8011985a9888d36
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/15/2019
-ms.locfileid: "54299268"
+ms.lasthandoff: 02/14/2019
+ms.locfileid: "56265218"
 ---
 # <a name="clustered-and-nonclustered-indexes-described"></a>Descrizione di indici cluster e non cluster.
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -53,7 +53,10 @@ ms.locfileid: "54299268"
  Vedere [Indici](../../relational-databases/indexes/indexes.md) per altri tipi di indici usati per scopi speciali.  
   
 ## <a name="indexes-and-constraints"></a>Indici e vincoli  
- Gli indici vengono creati automaticamente quando si definiscono vincoli PRIMARY KEY e UNIQUE sulle colonne della tabella. Quando, ad esempio, si crea una tabella e si identifica una colonna specifica da utilizzare come chiave primaria, nel [!INCLUDE[ssDE](../../includes/ssde-md.md)] verrà automaticamente creato un vincolo PRIMARY KEY e un indice su quella colonna. Per altre informazioni, vedere [Creare chiavi primarie](../../relational-databases/tables/create-primary-keys.md) e [Creare vincoli univoci](../../relational-databases/tables/create-unique-constraints.md).  
+
+Gli indici vengono creati automaticamente quando si definiscono vincoli PRIMARY KEY e UNIQUE sulle colonne della tabella. Quando si crea una tabella con un vincolo UNIQUE, ad esempio, [!INCLUDE[ssDE](../../includes/ssde-md.md)]crea automaticamente un indice non cluster. Se invece si configura un vincolo PRIMARY KEY, [!INCLUDE[ssDE](../../includes/ssde-md.md)] crea automaticamente un indice cluster, a meno che non esista già. Se si tenta di imporre un vincolo PRIMARY KEY in una tabella esistente e nella tabella esiste già un indice cluster, SQL Server impone il vincolo PRIMARY KEY usando un indice non cluster.
+
+Per altre informazioni, vedere [Creare chiavi primarie](../../relational-databases/tables/create-primary-keys.md) e [Creare vincoli univoci](../../relational-databases/tables/create-unique-constraints.md).  
   
 ## <a name="how-indexes-are-used-by-the-query-optimizer"></a>Uso degli indici in Query Optimizer  
  Se correttamente progettati, gli indici contribuiscono a ridurre le operazioni di I/O su disco e l'utilizzo di risorse di sistema, migliorando pertanto le prestazioni delle query. Gli indici possono inoltre risultare utili in una vasta gamma di query che contengono le istruzioni SELECT, UPDATE, DELETE o MERGE. Si consideri la query `SELECT Title, HireDate FROM HumanResources.Employee WHERE EmployeeID = 250` nel database [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] . Quando viene eseguita questa query, Query Optimizer valuta i singoli metodi disponibili per il recupero dei dati e seleziona quello più efficace. Il metodo può prevedere un'analisi di tabella oppure di uno o più indici eventualmente esistenti.  

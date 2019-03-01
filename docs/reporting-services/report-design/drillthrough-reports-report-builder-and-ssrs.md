@@ -6,14 +6,14 @@ ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: report-design
 ms.topic: conceptual
 ms.assetid: 938a6450-67c1-4eef-80b4-8fdaefeed584
-author: maggiesMSFT
-ms.author: maggies
-ms.openlocfilehash: 05335f661a522cf91bef1b6d18dadccbb34b722d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: c44196f8a61208e378936ad9cb40bf75ad28e36f
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47640809"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56290279"
 ---
 # <a name="drillthrough-reports-report-builder-and-ssrs"></a>Report drill-through (Generatore report e SSRS)
   Un report drill-through è un report aperto da un utente facendo clic su un collegamento in un altro report. Nei report drill-through sono solitamente disponibili dettagli relativi a un elemento contenuto in un report di riepilogo originale. In questa illustrazione, ad esempio, il report di riepilogo delle vendite include gli ordini di vendita e i totali. Quando un utente fa clic su un numero di ordine nell'elenco di riepilogo, viene aperto un altro report contenente i dettagli relativi a tale ordine.  
@@ -25,7 +25,7 @@ ms.locfileid: "47640809"
 > [!NOTE]  
 >  Quando si utilizza Generatore report, per visualizzare il report drill-through che viene aperto quando si fa clic sul collegamento drill-through nel report principale, è necessario essere connessi a un server di report.  
   
- Per iniziare rapidamente a usare report drill-through, vedere [Esercitazione: Creazione di report drill-through e report principali &#40;Generatore report&#41;](../../reporting-services/tutorial-creating-drillthrough-and-main-reports-report-builder.md). 
+ Per una rapida introduzione ai report drill-through, vedere [Esercitazione: Creazione di report drill-through e report principali &#40;Generatore report&#41;](../../reporting-services/tutorial-creating-drillthrough-and-main-reports-report-builder.md). 
    
 ## <a name="parameters-in-drillthrough-reports"></a>Parametri nei report drill-through  
  In un report drill-through sono contenuti in genere i parametri passati a tale report dal report di riepilogo. Nel report di riepilogo di esempio relativo alle vendite è contenuto il campo [OrderNumber] in una casella di testo di una cella della tabella. Nel report drill-through è contenuto un parametro che accetta il numero di ordine come valore. Quando si imposta il collegamento al report drill-through nella casella di testo per [OrderNumber], è necessario impostare il parametro per il report di destinazione su [OrderNumber]. Quando l'utente fa clic sul numero di ordine nel report di riepilogo, verrà aperto un report dettagliato di destinazione in cui vengono visualizzate le informazioni relative al numero di ordine. Per visualizzare istruzioni sulla personalizzazione di report drill-through basati sui valori dei parametri, vedere [Parametri report &#40;Generatore report e Progettazione report&#41;](../../reporting-services/report-design/report-parameters-report-builder-and-report-designer.md) e [Funzione InScope &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/report-builder-functions-inscope-function.md).  

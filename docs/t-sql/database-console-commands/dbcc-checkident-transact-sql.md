@@ -29,12 +29,12 @@ ms.assetid: 2c00ee51-2062-4e47-8b19-d90f524c6427
 author: uc-msft
 ms.author: umajay
 manager: craigg
-ms.openlocfilehash: de18602606fb380bc8b87eb7dcb18b84febf658e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 6225fee2ece7ce1af163804c50def198c00a43d8
+ms.sourcegitcommit: c61c7b598aa61faa34cd802697adf3a224aa7dc4
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47636279"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56154864"
 ---
 # <a name="dbcc-checkident-transact-sql"></a>DBCC CHECKIDENT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-asdw-xxx-md.md)]
@@ -79,7 +79,7 @@ DBCC CHECKIDENT
 |-----------------------------|---------------------------------------------|  
 |DBCC CHECKIDENT ( *table_name*, NORESEED )|Il valore Identity corrente non viene reimpostato. DBCC CHECKIDENT restituisce il valore Identity corrente e il valore massimo corrente della colonna Identity. Se i due valori non corrispondono, è consigliabile reimpostare il valore Identity per evitare potenziali errori o gap nella sequenza dei valori.|  
 |DBCC CHECKIDENT ( *table_name* )<br /><br /> o Gestione configurazione<br /><br /> DBCC CHECKIDENT ( *table_name*, RESEED )|Se il valore Identity corrente di una tabella è inferiore al valore Identity massimo archiviato nella colonna Identity, questo viene reimpostato in base al valore massimo della colonna Identity. Vedere la sezione "Eccezioni" riportata di seguito.|  
-|DBCC CHECKIDENT ( *table_name*, RESEED, *new_reseed_value* )|Il valore Identity corrente è impostato su *new_reseed_value*. Se dopo la creazione della tabella non è stata inserita alcuna riga o se tutte le righe sono state rimosse mediante l'istruzione TRUNCATE TABLE, la prima riga inserita dopo l'esecuzione di DBCC CHECKIDENT usa *new_reseed_value* come valore Identity.<br /><br /> Se sono presenti righe nella tabella, la riga successiva viene inserita con il valore *new_reseed_value*. Nella versione [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] e nelle versioni precedenti, la riga successiva inserita usa *new_reseed_value* e il valore di [incremento corrente](../../t-sql/functions/ident-incr-transact-sql.md).<br /><br /> Se la tabella non è vuota, l'impostazione del valore Identity su un numero inferiore al valore massimo della colonna Identity può determinare una delle condizioni seguenti:<br /><br /> - Se esiste un vincolo PRIMARY KEY o UNIQUE nella colonna Identity, verrà generato il messaggio di errore 2627 per le successive operazioni di inserimento nella tabella poiché il valore Identity generato è in conflitto con i valori esistenti.<br /><br /> - Se non esiste un vincolo PRIMARY KEY o UNIQUE, le successive operazioni di inserimento causeranno valori Identity duplicati.|  
+|DBCC CHECKIDENT ( *table_name*, RESEED, *new_reseed_value* )|Il valore Identity corrente è impostato su *new_reseed_value*. Se dopo la creazione della tabella non è stata inserita alcuna riga o se tutte le righe sono state rimosse mediante l'istruzione TRUNCATE TABLE, la prima riga inserita dopo l'esecuzione di DBCC CHECKIDENT usa *new_reseed_value* come valore Identity.<br /><br /> Se sono presenti righe nella tabella, la riga successiva viene inserita con il valore *new_reseed_value* e il valore di [incremento corrente](../../t-sql/functions/ident-incr-transact-sql.md). Nella versione [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] e nelle versioni precedenti, la riga successiva inserita usa *new_reseed_value* e il valore di [incremento corrente](../../t-sql/functions/ident-incr-transact-sql.md).<br /><br /> Se la tabella non è vuota, l'impostazione del valore Identity su un numero inferiore al valore massimo della colonna Identity può determinare una delle condizioni seguenti:<br /><br /> - Se esiste un vincolo PRIMARY KEY o UNIQUE nella colonna Identity, verrà generato il messaggio di errore 2627 per le successive operazioni di inserimento nella tabella poiché il valore Identity generato è in conflitto con i valori esistenti.<br /><br /> - Se non esiste un vincolo PRIMARY KEY o UNIQUE, le successive operazioni di inserimento causeranno valori Identity duplicati.|  
   
 ## <a name="exceptions"></a>Eccezioni  
  Nella tabella seguente vengono elencate le condizioni in cui DBCC CHECKIDENT non reimposta automaticamente il valore Identity corrente e vengono specificati i metodi per la reimpostazione del valore.  
@@ -124,7 +124,7 @@ DBCC CHECKIDENT ('Person.AddressType');
 GO  
 ```  
   
-### <a name="b-reporting-the-current-identity-value"></a>B. Visualizzazione del valore Identity corrente  
+### <a name="b-reporting-the-current-identity-value"></a>b. Visualizzazione del valore Identity corrente  
  Nell'esempio seguente viene visualizzato il valore Identity corrente della tabella specificata nel database [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] e, se è errato, non viene corretto.  
   
 ```  

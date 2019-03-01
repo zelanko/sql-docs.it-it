@@ -6,14 +6,14 @@ ms.prod_service: reporting-services-native
 ms.technology: reporting-services
 ms.topic: conceptual
 ms.assetid: 2d05ef4c-5f91-48b2-8795-f0a201a0b3cc
-author: maggiesMSFT
-ms.author: maggies
-ms.openlocfilehash: 7a26065cc1d65e5c187123ead990888aa4de0e60
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: a1dff1baf3d6a7cba7d1fc17f8febf6feeb68c3a
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52410708"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56292219"
 ---
 # <a name="tutorial-introducing-expressions"></a>Esercitazione: Introduzione alle espressioni
 In questa esercitazione di [!INCLUDE[ssRBnoversion_md](../includes/ssrbnoversion.md)] vengono usate espressioni e operatori comuni per creare report impaginati di [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] potenti e flessibili. 
@@ -89,7 +89,7 @@ In questa sezione vengono creati un report tabella, un'origine dati e un set di 
     ```  
 
   
-10. Nella barra degli strumenti Progettazione query fare clic su **Esegui** (**!**). Nel set di risultati vengono visualizzate 23 righe di dati nelle colonne seguenti: Nome, Cognome, Paese/Regione, ID Paese/Regione, Sesso, Acquisti da inizio anno e Ultimo acquisto.  
+10. Nella barra degli strumenti Progettazione query fare clic su **Esegui** (**!**). Nel set di risultati vengono visualizzate 23 righe di dati con le colonne seguenti: FirstName, LastName, StateProvince, CountryRegionID, Gender, YTDPurchase e LastPurchase.  
 
     ![Generatore-report-espressione-esercitazione-query-come-testo](../reporting-services/media/report-builder-expression-tutorial-query-as-text.png)
   
@@ -357,7 +357,7 @@ In questa sezione viene creato un set di dati PaeseRegione e viene usata la funz
   
 ### <a name="to-look-up-values-in-the-countryregion-dataset"></a>Per cercare valori nel set di dati CountryRegion  
   
-1.  Fare clic sull'intestazione della colonna **ID Paese/Regione** ed eliminare il testo : **ID**in modo che si legga **Paese/Regione**.  
+1.  Fare clic sul titolo di colonna **Country Region ID** ed eliminare il testo: **ID**, in modo che si legga **Country Region**.  
   
 2.  Fare clic con il pulsante destro del mouse sulla cella di dati per la colonna **Country Region** e scegliere **Espressione**.  
   

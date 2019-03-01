@@ -18,19 +18,19 @@ ms.assetid: e2a1a4f1-211b-4e82-abed-03fc7140a83c
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 0f14609b70d5984be8166e17a5388297fead4db0
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: cda6f09124127d04c8ded1773feab4e9ffbf2ba9
+ms.sourcegitcommit: 01e17c5f1710e7058bad8227c8011985a9888d36
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47800084"
+ms.lasthandoff: 02/14/2019
+ms.locfileid: "56265228"
 ---
 # <a name="reorientobject-geography-data-type"></a>ReorientObject (tipo di dati geography)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
 
-  Restituisce un'istanza **geography** con aree esterne e interne scambiate.  
+Restituisce un'istanza **geography** con aree esterne e interne scambiate.  
   
- Questo metodo con tipo di dati **geography** supporta le istanze **FullGlobe** o le istanze spaziali con dimensioni maggiori di un emisfero.  
+Questo metodo con tipo di dati **geography** supporta le istanze **FullGlobe** o le istanze spaziali con dimensioni maggiori di un emisfero.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -40,18 +40,18 @@ ms.locfileid: "47800084"
 ```  
   
 ## <a name="arguments"></a>Argomenti  
- *geography*  
- Altra istanza **geography** su cui viene richiamato `ReorientObject()`.  
+_geography_  
+Altra istanza **geography** su cui viene richiamato `ReorientObject()`.  
   
 ## <a name="return-value"></a>Valore restituito  
- Tipo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] restituito: **geography**  
+Tipo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] restituito: **geography**  
   
- Tipo CLR restituito: **SqlGeography**  
+Tipo CLR restituito: **SqlGeography**  
   
 ## <a name="remarks"></a>Remarks  
- Questo metodo modifica l'orientamento dell'anello di tutti gli oggetti **Polygon** in una **GeometryCollection** ma non rimuove né modifica alcun **Point** o **Linestring** nella raccolta specificata.  
+Questo metodo modifica l'orientamento dell'anello di tutti gli oggetti **Polygon** in un oggetto **GeometryCollection**, ma non rimuove né modifica alcun oggetto **Point** o **LineString** nella raccolta specificata.  
   
- Se una **GeometryCollection** viene passata a questo metodo, ogni istanza della raccolta viene riorientata, ma non viene riorientata la raccolta nel suo complesso.  
+Se si passa un oggetto **GeometryCollection** a questo metodo, viene modificato l'orientamento di ogni istanza nella raccolta, ma tale operazione non si applica alla raccolta stessa.  
   
 ## <a name="examples"></a>Esempi  
   
@@ -62,6 +62,5 @@ SELECT @R.ReorientObject().STAsText();
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Metodi estesi sulle istanze geografiche](../../t-sql/spatial-geography/extended-methods-on-geography-instances.md)  
-  
+[Metodi estesi sulle istanze geografiche](../../t-sql/spatial-geography/extended-methods-on-geography-instances.md)  
   

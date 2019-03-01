@@ -23,12 +23,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: bc046c9e6f033dc77c85401b2007321c94e803e8
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 076c4927ee5f3811b9c3415c1db30cc7cfa2a6a2
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56018153"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56287181"
 ---
 # <a name="date-transact-sql"></a>date (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -42,8 +42,8 @@ Definisce una data in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].
 |Sintassi|**data**|  
 |Utilizzo|DECLARE \@MyDate **date**<br /><br /> CREATE TABLE Table1 ( Column1 **date** )|  
 |Formato predefinito dei valori letterali stringa<br /><br /> (utilizzato per client legacy)|YYYY-MM-DD<br /><br /> Per ulteriori informazioni, vedere la sezione seguente relativa alla compatibilità con le versioni precedenti per i client legacy.|  
-|Intervallo|da 0001-01-01 a 9999-12-31 (da 1582-10-15 a 9999-12-31 per Informatica)<br /><br /> da 1 gennaio 1 a 31 dicembre 9999 (da 15 ottobre 1582 a 31 dicembre 9999 per Informatica)|  
-|Intervalli di elementi|AAAA rappresenta un numero di quattro cifre compreso tra 0001 e 9999 indicante l'anno. Per Informatica, AAAA è limitato all'intervallo compreso tra 1582 e 9999.<br /><br /> MM rappresenta un numero di due cifre compreso tra 01 e 12 indicante un mese dell'anno specificato.<br /><br /> GG rappresenta un numero di due cifre compreso tra 01 e 31, a seconda del mese, indicante il giorno del mese specificato.|  
+|Intervallo|da 0001-01-01 a 9999-12-31 (da 1582-10-15 a 9999-12-31 per Informatica)<br /><br /> Da 1 gennaio 1 d.C. a 31 dicembre 9999 d.C. (da 15 ottobre 1582 d.C. a 31 dicembre 9999 d.C. per Informatica)|  
+|Intervalli di elementi|AAAA rappresenta un numero di quattro cifre compreso tra 0001 e 9999 indicante l'anno. Per Informatica, AAAA è limitato all'intervallo compreso tra 1582 e 9999.<br /><br /> MM rappresenta un numero di due cifre compreso tra 01 e 12 indicante un mese dell'anno specificato.<br /><br /> GG rappresenta un numero di due cifre compreso tra 01 e 31, a seconda del mese, indicante un giorno del mese specificato.|  
 |Lunghezza in caratteri|10 posizioni|  
 |Precisione, scala|10, 0|  
 |Dimensioni dello spazio di archiviazione|3 byte, fissa|  
@@ -60,11 +60,11 @@ Nelle tabelle seguenti sono illustrati i formati di valore letterale stringa sup
   
 |Numeric|Descrizione|  
 |-------------|-----------------|  
-|mdy<br /><br /> [m]m/dd/[yy]yy<br /><br /> [m]m-dd-[yy]yy<br /><br /> [m]m.dd.[yy]yy<br /><br /> myd<br /><br /> mm/[yy]yy/dd<br /><br /> mm-[yy]yy/dd<br /><br /> [m]m.[yy]yy.dd<br /><br /> dmy<br /><br /> dd/[m]m/[yy]yy<br /><br /> dd-[m]m-[yy]yy<br /><br /> dd.[m]m.[yy]yy<br /><br /> dym<br /><br /> dd/[yy]yy/[m]m<br /><br /> dd-[yy]yy-[m]m<br /><br /> dd.[yy]yy.[m]m<br /><br /> ymd<br /><br /> [yy]yy/[m]m/dd<br /><br /> [yy]yy-[m]m-dd<br /><br /> [yy]yy-[m]m-dd|[m]m, gg e [aa]aa rappresentano il mese, il giorno e l'anno all'interno di una stringa in cui sono utilizzati come separatori la barra (/), il segno meno (-) o il punto (.).<br /><br /> Sono supportati solo anni a due cifre o a quattro cifre. Utilizzare sempre anni a quattro cifre quando possibile. Per specificare un valore intero compreso tra 0001 e 9999 che rappresenta l'anno di cambio data per l'interpretazione degli anni a due cifre come anni a quattro cifre, vedere [Configurare l'opzione di configurazione del server Cambio data per anno a due cifre](../../database-engine/configure-windows/configure-the-two-digit-year-cutoff-server-configuration-option.md).<br /><br /> **Nota.** Per Informatica, AAAA è limitato all'intervallo compreso tra 1582 e 9999.<br /><br /> Un anno a due cifre con valore minore o uguale alle ultime due cifre dell'anno di cambio data si trova nello stesso secolo dell'anno di cambio data. Un anno a due cifre con valore maggiore delle ultime due cifre dell'anno di cambio data si trova nel secolo precedente a quello dell'anno di cambio data. Ad esempio, se il valore dell'anno di cambio data è 2049 (impostazione predefinita), l'anno a due cifre 49 è interpretato come 2049 mentre l'anno a due cifre 50 è interpretato come 1950.<br /><br /> Il formato predefinito della data è determinato dall'impostazione della lingua corrente. È possibile modificare il formato di data usando le istruzioni [SET LANGUAGE](../../t-sql/statements/set-language-transact-sql.md) e [SET DATEFORMAT](../../t-sql/statements/set-dateformat-transact-sql.md).<br /><br /> Il formato **ydm** non è supportato per **date**.|  
+|mdy<br /><br /> [m]m/dd/[yy]yy<br /><br /> [m]m-dd-[yy]yy<br /><br /> [m]m.dd.[yy]yy<br /><br /> myd<br /><br /> mm/[yy]yy/dd<br /><br /> mm-[yy]yy/dd<br /><br /> [m]m.[yy]yy.dd<br /><br /> dmy<br /><br /> dd/[m]m/[yy]yy<br /><br /> dd-[m]m-[yy]yy<br /><br /> dd.[m]m.[yy]yy<br /><br /> dym<br /><br /> dd/[yy]yy/[m]m<br /><br /> dd-[yy]yy-[m]m<br /><br /> dd.[yy]yy.[m]m<br /><br /> ymd<br /><br /> [yy]yy/[m]m/dd<br /><br /> [yy]yy-[m]m-dd<br /><br /> [yy]yy-[m]m-dd|[m]m, gg e [aa]aa rappresentano il mese, il giorno e l'anno all'interno di una stringa in cui sono usati come separatori la barra (/), il segno meno (-) o il punto (.).<br /><br /> Sono supportati solo anni a due cifre o a quattro cifre. Utilizzare sempre anni a quattro cifre quando possibile. Per specificare un valore intero compreso tra 0001 e 9999 che rappresenta l'anno di cambio data per l'interpretazione degli anni a due cifre come anni a quattro cifre, vedere [Configurare l'opzione di configurazione del server Cambio data per anno a due cifre](../../database-engine/configure-windows/configure-the-two-digit-year-cutoff-server-configuration-option.md).<br /><br /> **Nota.** Per Informatica, AAAA è limitato all'intervallo compreso tra 1582 e 9999.<br /><br /> Un anno a due cifre con valore minore o uguale alle ultime due cifre dell'anno di cambio data si trova nello stesso secolo dell'anno di cambio data. Un anno a due cifre con valore maggiore delle ultime due cifre dell'anno di cambio data si trova nel secolo precedente a quello dell'anno di cambio data. Ad esempio, se il valore dell'anno di cambio data è 2049 (impostazione predefinita), l'anno a due cifre 49 è interpretato come 2049 mentre l'anno a due cifre 50 è interpretato come 1950.<br /><br /> Il formato predefinito della data è determinato dall'impostazione della lingua corrente. È possibile modificare il formato di data usando le istruzioni [SET LANGUAGE](../../t-sql/statements/set-language-transact-sql.md) e [SET DATEFORMAT](../../t-sql/statements/set-dateformat-transact-sql.md).<br /><br /> Il formato **ydm** non è supportato per **date**.|  
   
 |Espressione alfabetica|Descrizione|  
 |------------------|-----------------|  
-|mon [dd][,] yyyy<br /><br /> mon dd[,] [yy]yy<br /><br /> mon yyyy [dd]<br /><br /> [dd] mon[,] yyyy<br /><br /> dd mon[,][yy]yy<br /><br /> dd [yy]yy mon<br /><br /> [dd] yyyy mon<br /><br /> yyyy mon [dd]<br /><br /> yyyy [dd] mon|**mon** (mese) rappresenta il nome completo o l'abbreviazione del mese nella lingua corrente. Le virgole sono facoltative e l'uso delle maiuscole è ignorato.<br /><br /> Per evitare ambiguità, esprimere gli anni nel formato a quattro cifre.<br /><br /> Se manca il giorno, viene inserito il primo giorno del mese.|  
+|mon [dd][,] yyyy<br /><br /> mon dd[,] [yy<br /><br /> mon yyyy [dd]<br /><br /> [dd] mon[,] yyyy<br /><br /> dd mon[,][yy]yy<br /><br /> dd [yy]yy mon<br /><br /> [dd] yyyy mon<br /><br /> yyyy mon [dd]<br /><br /> yyyy [dd] mon|**mon** (mese) rappresenta il nome completo o l'abbreviazione del mese nella lingua corrente. Le virgole sono facoltative e l'uso delle maiuscole è ignorato.<br /><br /> Per evitare ambiguità, esprimere gli anni nel formato a quattro cifre.<br /><br /> Se manca il giorno, viene inserito il primo giorno del mese.|  
   
 |ISO 8601|Descrizione|  
 |--------------|----------------|  
@@ -80,12 +80,12 @@ Nelle tabelle seguenti sono illustrati i formati di valore letterale stringa sup
   
 |Formato W3C XML|Descrizione|  
 |--------------------|-----------------|  
-|yyyy-mm-ddTZD|Specificamente supportato per l'utilizzo di XML/SOAP.<br /><br /> TZD è l'identificatore del fuso orario (Z, + hh:mm o - hh:mm):<br /><br /> -   hh:mm rappresenta la differenza di fuso orario. hh è un numero di due cifre, compreso tra 0 e 14, che rappresenta il numero di ore della differenza di fuso orario.<br />-   MM è un numero di due cifre, compreso tra 0 e 59, che rappresenta il numero di minuti aggiuntivi della differenza di fuso orario.<br />-   + (più) o - (meno) è il segno obbligatorio della differenza di fuso orario. Indica che la differenza di fuso orario viene aggiunta o sottratta dall'ora UTC (Coordinated Universal Times) per ottenere l'ora locale. L'intervallo valido della differenza di fuso orario è da -14:00 a +14:00.|  
+|yyyy-mm-ddTZD|Supportato per l'utilizzo di XML/SOAP.<br /><br /> TZD è l'identificatore del fuso orario (Z, + hh:mm o - hh:mm):<br /><br /> -   hh:mm rappresenta la differenza di fuso orario. hh è un numero di due cifre, compreso tra 0 e 14, che rappresenta il numero di ore della differenza di fuso orario.<br />-   MM è un numero di due cifre, compreso tra 0 e 59, che rappresenta il numero di minuti aggiuntivi della differenza di fuso orario.<br />-   + (più) o - (meno) è il segno obbligatorio della differenza di fuso orario. Questo simbolo indica che, per ottenere l'ora locale, la differenza di fuso orario viene aggiunta o sottratta dall'ora UTC (Coordinated Universal Time). L'intervallo valido della differenza di fuso orario è da -14:00 a +14:00.|  
   
 ## <a name="ansi-and-iso-8601-compliance"></a>Conformità agli standard ANSI e ISO 8601  
 **date** è conforme alla definizione dello standard ANSI SQL per il calendario gregoriano: "NOTE 85 - Datetime data types will allow dates in the Gregorian format to be stored in the date range 0001-01-01 CE through 9999-12-31 CE."
   
-Il formato predefinito dei valori letterali stringa utilizzato per i client legacy è conforme al formato standard SQL, definito come AAAA-MM-GG. Questo formato è lo stesso della definizione ISO 8601 per DATE.
+Il formato predefinito dei valori letterali stringa usato per i client legacy è conforme al formato standard SQL, definito come AAAA-MM-GG. Questo formato è lo stesso della definizione ISO 8601 per DATE.
   
 > [!NOTE]  
 >  Per Informatica, l'intervallo è tra 1582-10-15 (15 ottobre 1582) e 9999-12-31 (31 dicembre 9999).  
@@ -101,10 +101,11 @@ Alcune versioni precedenti dei client non supportano i tipi di dati **time**, **
 |**datetimeoffset**|YYYY-MM-DD hh:mm:ss[.nnnnnnn] [+&#124;-]hh:mm|SQL_WVARCHAR o SQL_VARCHAR|DBTYPE_WSTR o DBTYPE_STR|Java.sql.String|Stringa o SqString|  
   
 ## <a name="converting-date-and-time-data"></a>Conversione dei dati relativi a data e ora
-Nella conversione di tipi di dati relativi alla data e all'ora, in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] vengono rifiutati tutti i valori non riconosciuti come date o orari. Per informazioni sull'uso delle funzioni CAST e CONVERT con i dati relativi a data e ora, vedere [CAST e CONVERT &#40;Transact-SQL&#41;](../../t-sql/functions/cast-and-convert-transact-sql.md).  
+Nella conversione di tipi di dati relativi alla data e all'ora, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] rifiuta tutti i valori non riconosciuti come date o orari. Per informazioni sull'uso delle funzioni CAST e CONVERT con i dati relativi a data e ora, vedere [CAST e CONVERT &#40;Transact-SQL&#41;](../../t-sql/functions/cast-and-convert-transact-sql.md).  
   
 ### <a name="converting-date-to-other-date-and-time-types"></a>Conversione del tipo di dati date in altri tipi di dati relativi a data e ora
-Nella sezione seguente viene descritto il risultato della conversione di un tipo di dati **date** in altri tipi di dati relativi a data e ora.
+
+Questa sezione descrive il risultato della conversione di un tipo di dati **date** in altri tipi di dati relativi a data e ora.
   
 Quando la conversione viene eseguita in **time(n)**, ha esito negativo e viene generato il messaggio di errore 206: "Conflitto del tipo di operando: date è incompatibile con time".
   
@@ -124,7 +125,7 @@ SELECT @date AS '@date', @datetime AS '@datetime';
 --(1 row(s) affected)  
 ```  
   
-Quando viene eseguita la conversione in **smalldatetime**, se il valore di **date** è compreso nell'intervallo [smalldatetime](../../t-sql/data-types/smalldatetime-transact-sql.md), il componente relativo alla data viene copiato mentre quello relativo all'ora viene impostato su 00:00:00.000. Quando il valore **date** non è compreso nell'intervallo di un valore **smalldatetime**, viene generato il messaggio di errore 242: "La conversione di un tipo di dati date in un tipo di dati smalldatetime ha generato un valore non compreso nell'intervallo dei valori consentiti" e il valore **smalldatetime** viene impostato su NULL. Nel codice seguente vengono illustrati i risultati della conversione di un valore `date` in un valore `smalldatetime`.
+Quando viene eseguita la conversione in **smalldatetime**, se il valore di **date** è compreso nell'intervallo [smalldatetime](../../t-sql/data-types/smalldatetime-transact-sql.md), il componente relativo alla data viene copiato mentre quello relativo all'ora viene impostato su 00:00:00.000. Quando il valore **date** non è compreso nell'intervallo di un valore **smalldatetime**, viene generato il messaggio di errore 242: "La conversione di un tipo di dati date in smalldatetime ha generato un valore non compreso nell'intervallo dei valori consentiti" e il valore **smalldatetime** viene impostato su NULL. Nel codice seguente vengono illustrati i risultati della conversione di un valore `date` in un valore `smalldatetime`.
   
 ```sql
 DECLARE @date date= '1912-10-25';  
@@ -177,7 +178,7 @@ Le conversioni da valori letterali stringa a tipi di data e ora sono consentite 
   
 |Valore letterale stringa di input|**data**|  
 |---|---|
-|ODBC DATE|Viene eseguito il mapping dei valori letterali stringa ODBC al tipo di dati **datetime**. Tutte le operazioni di assegnazione dai valori letterali di ODBC DATETIME in tipi di dati **date** determineranno una conversione implicita tra **datetime** e questo tipo in base a quanto definito dalle regole di conversione.|  
+|ODBC DATE|Viene eseguito il mapping dei valori letterali stringa ODBC al tipo di dati **datetime**. Tutte le operazioni di assegnazione dai valori letterali di ODBC DATETIME in tipi di dati **date** determinano una conversione implicita tra **datetime** e il tipo definito dalle regole di conversione.|  
 |ODBC TIME|Vedere la regola relativa a ODBC DATE.|  
 |ODBC DATETIME|Vedere la regola relativa a ODBC DATE.|  
 |Solo DATE|Semplice|  

@@ -1,7 +1,7 @@
 ---
 title: Aggiornamento di database mediante l'Assistente ottimizzazione query | Microsoft Docs
 ms.custom: ''
-ms.date: 11/21/2018
+ms.date: 02/13/2019
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: performance
@@ -18,12 +18,12 @@ ms.assetid: 07f8f594-75b4-4591-8c29-d63811e7753e
 author: pmasl
 ms.author: pelopes
 manager: amitban
-ms.openlocfilehash: f2df34057c02171701aefb878cfb79c56f97a699
-ms.sourcegitcommit: cb9c54054449c586360c9cb634e33f505939a1c9
+ms.openlocfilehash: ba3e358e897b35aadf68ce198c0a43ec8f24adef
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/15/2019
-ms.locfileid: "54317801"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56295669"
 ---
 # <a name="upgrading-databases-by-using-the-query-tuning-assistant"></a>Aggiornamento di database mediante l'Assistente ottimizzazione query
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -38,7 +38,7 @@ Questa funzionalità di collegamento offerta dal livello di compatibilità del d
 
 Questo controllo sugli aggiornamenti è stato migliorato ulteriormente in [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] con l'introduzione di [Ottimizzazione automatica](../../relational-databases/automatic-tuning/automatic-tuning.md) e consente di automatizzare l'ultimo passaggio del flusso di lavoro consigliato visualizzato sopra.
 
-A partire da [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] v18 la nuova funzionalità **Assistente ottimizzazione query (QTA, Query Tuning Assistant)** assiste gli utenti nel flusso di lavoro consigliato per garantire la stabilità delle prestazioni durante l'aggiornamento alle versioni più recenti di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], come documentato nella sezione *Mantenere la stabilità delle prestazioni durante l'aggiornamento alla nuova versione di SQL Server* di [Scenari di utilizzo di Query Store](../../relational-databases/performance/query-store-usage-scenarios.md#CEUpgrade). 
+A partire da [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] v18 la nuova funzionalità **Assistente ottimizzazione query (QTA, Query Tuning Assistant)** assiste gli utenti nel flusso di lavoro consigliato per garantire la stabilità delle prestazioni durante l'aggiornamento alle versioni più recenti di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], come documentato nella sezione *Mantenere la stabilità delle prestazioni durante l'aggiornamento alla nuova versione di SQL Server* di [Scenari di utilizzo di Query Store](../../relational-databases/performance/query-store-usage-scenarios.md#CEUpgrade). L'Assistente ottimizzazione query, tuttavia, non esegue il rollback a un piano valido noto in precedenza, come illustrato nell'ultimo passaggio del flusso di lavoro consigliato. L'Assistente ottimizzazione query terrà invece traccia di eventuali regressioni trovate nella vista [**Query regredite** di Query Store](../../relational-databases/performance/monitoring-performance-by-using-the-query-store.md#Regressed) ed eseguirà l'iterazione delle possibili permutazioni delle varianti del modello di ottimizzazione applicabili in modo che possa essere generato un piano nuovo e migliore.
 
 > [!IMPORTANT]
 > L'Assistente ottimizzazione query non genera carichi di lavoro utente. Se si esegue l'Assistente ottimizzazione query in un ambiente non usato dalle applicazioni, verificare che sia comunque possibile eseguire un carico di lavoro di test rappresentativo nella destinazione [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] con altri mezzi. 
@@ -92,7 +92,7 @@ L'Assistente ottimizzazione Query è una funzionalità basata sulla sessione che
        ![Finestra di configurazione nuova sessione di aggiornamento del database](../../relational-databases/performance/media/qta-new-session-setup.png "Finestra di configurazione nuova sessione di aggiornamento del database")  
   
     2.  Nella finestra **Impostazioni** due colonne indicano lo stato **Corrente** di Query Store nel database di destinazione, nonché le impostazioni **Consigliate**. 
-        -  Le impostazioni consigliate sono selezionate per impostazione predefinita, ma se si fa clic sul pulsante di opzione sopra la colonna Corrente si accettano le impostazioni correnti ed è anche possibile ottimizzare la configurazione corrente di Query Store. 
+        -  Le impostazioni consigliate sono selezionate per impostazione predefinita, ma, se si fa clic sul pulsante di opzione sopra la colonna Corrente, si accettano le impostazioni correnti ed è anche possibile ottimizzare la configurazione corrente di Query Store. 
         -  L'impostazione *Soglia per query non aggiornate* è pari al doppio della durata in giorni prevista per il carico di lavoro. Questo dipende dal fatto che Query Store dovrà conservare informazioni sul carico di lavoro baseline e sul carico di lavoro successivo all'aggiornamento del database.
         Al termine, fare clic su **Avanti**.
 

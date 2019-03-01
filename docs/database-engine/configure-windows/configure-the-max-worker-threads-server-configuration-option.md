@@ -14,12 +14,12 @@ ms.assetid: abeadfa4-a14d-469a-bacf-75812e48fac1
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 2522a2efa2edfb899d2693e6f4746edd85f2d7fe
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: c35aab2ebd2b31fbbe7067bc8049930f791543c3
+ms.sourcegitcommit: 009bee6f66142c48477849ee03d5177bcc3b6380
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52420402"
+ms.lasthandoff: 02/13/2019
+ms.locfileid: "56230978"
 ---
 # <a name="configure-the-max-worker-threads-server-configuration-option"></a>Configurare l'opzione di configurazione del server max worker threads
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -34,7 +34,7 @@ ms.locfileid: "52420402"
   
      [Indicazioni](#Recommendations)  
   
-     [Security](#Security)  
+     [Sicurezza](#Security)  
   
 -   **Per configurare l'opzione max worker threads utilizzando:**  
   
@@ -70,10 +70,11 @@ ms.locfileid: "52420402"
     
     Usando la formula seguente:
     
-    |Numero di CPU|Computer a 32 bit|Computer a 64 bit|  
+    |Numero di CPU|computer a 32 bit|Computer a 64 bit|  
     |------------|------------|------------| 
     |\<= 4 processori|256|512|
-    |\> 4 processori|256 + ((CPU logica - 4) * 8)|512 + ((CPU logica - 4) * 16)| 
+    |\> 4 processori e \< 64 processori|256 + ((CPU logica - 4) * 8)|512 + ((CPU logica - 4) * 16)|
+    |\> 64 processori|256 + ((CPU logica - 4) * 32)|512 + ((CPU logica - 4) * 32)|
   
     > [!NOTE]  
     > [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] non può più essere installato in un sistema operativo a 32 bit. I valori per i computer a 32 bit vengono indicati per offrire assistenza ai clienti che eseguono [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] e versioni precedenti.   Si consiglia 1024 come numero massimo di thread di lavoro per un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in esecuzione in un computer a 32 bit.  
@@ -119,7 +120,7 @@ ms.locfileid: "52420402"
 > L'opzione **max worker threads** consente di configurare il numero di thread di lavoro disponibili per i processi di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . L'impostazione predefinita di **max worker threads** è ottimale per la maggior parte dei sistemi. A seconda della configurazione del sistema, tuttavia, l'impostazione di **max worker thread** su un valore inferiore determina talvolta un miglioramento delle prestazioni.
 > Per altre informazioni, vedere [Indicazioni](#Recommendations), in precedenza in questo argomento.
   
-##  <a name="TsqlProcedure"></a> Uso di Transact-SQL  
+##  <a name="TsqlProcedure"></a> Utilizzo di Transact-SQL  
   
 #### <a name="to-configure-the-max-worker-threads-option"></a>Per configurare l'opzione max worker threads  
   
@@ -142,7 +143,7 @@ RECONFIGURE;
 GO  
 ```  
   
-##  <a name="FollowUp"></a> Completamento: Dopo la configurazione dell'opzione max worker threads  
+##  <a name="FollowUp"></a> Completamento: fasi successive alla configurazione dell'opzione max worker threads  
  La modifica sarà applicata immediatamente dopo l'esecuzione di [RECONFIGURE](../../t-sql/language-elements/reconfigure-transact-sql.md) senza richiedere il riavvio del [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
 ## <a name="see-also"></a>Vedere anche  

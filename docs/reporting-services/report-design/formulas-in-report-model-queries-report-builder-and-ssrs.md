@@ -8,14 +8,14 @@ ms.topic: conceptual
 f1_keywords:
 - "10151"
 ms.assetid: fbf68c59-7afc-4afe-bfcd-40ce84629af0
-author: maggiesMSFT
-ms.author: maggies
-ms.openlocfilehash: 911cbda433727f48fa564364cc672f43ca4b6f4e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 0e078205cf705c9ea96a8cccc3811e8162a643f6
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47607693"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56298549"
 ---
 # <a name="formulas-in-report-model-queries-report-builder-and-ssrs"></a>Formule nelle query del modello di report (Generatore report e SSRS)
   Le formule sono calcoli eseguiti su valori in un report che utilizzano un modello di report come origine dati. Le formule vengono definite nella finestra di dialogo **Definisci formula** in Progettazione query modelli di report quando si definisce una query per un'origine dati dei modelli di report. Una formula può includere funzioni, operatori, costanti e riferimenti a campi oppure entità. Le formule consentono di combinare, aggregare, filtrare e restituire dati sia numerici sia di testo. È possibile creare formule e salvarle come nuovi campi oppure modificare quelle esistenti.  
@@ -48,7 +48,7 @@ ms.locfileid: "47607693"
  **Operatore di concatenazione del testo.** Utilizzare la e commerciale (&) per unire, o concatenare, una o più stringhe di testo al fine di restituire un'unica stringa.  
   
 ##  <a name="Constants"></a> Costanti  
- Si tratta di valori che non vengono calcolati e che pertanto non cambiano. In Generatore report vengono usate le costanti seguenti: **True**, **False**ed **Empty**. Tali costanti vengono utilizzate per valutare i campi booleani. Ad esempio, si supponga di disporre di un campo denominato IsDiscontinued. Gli unici valori validi per questo campo sono True, False o Empty (" ").  
+ Si tratta di valori che non vengono calcolati e che pertanto non cambiano. Generatore report usa le costanti seguenti: **True**, **False** ed **Empty**. Tali costanti vengono utilizzate per valutare i campi booleani. Ad esempio, si supponga di disporre di un campo denominato IsDiscontinued. Gli unici valori validi per questo campo sono True, False o Empty (" ").  
   
 ##  <a name="Functions"></a> Funzioni  
  Si tratta di formule predefinite che consentono di eseguire calcoli usando valori specifici, denominati *argomenti*, in un ordine stabilito. Gli argomenti possono essere valori letterali o campi oppure combinazioni dei due. Quando si utilizzano i campi nelle formule, il nome rappresenta ogni istanza del campo. Se l'argomento è un valore letterale, potrebbe essere necessario indicare i caratteri che vengono utilizzati.  

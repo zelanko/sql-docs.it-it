@@ -6,14 +6,14 @@ ms.prod_service: reporting-services-native
 ms.technology: mobile-reports
 ms.topic: conceptual
 ms.assetid: 50658295-a71c-441e-8eba-e1ef066629c0
-author: maggiesMSFT
-ms.author: maggies
-ms.openlocfilehash: 5b09c8aec100d877256f0d8d9b4b97530ecdf5c6
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: c1fbb2ad5c2c652f5be04982ffaedb7eadea97be
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47810990"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56294779"
 ---
 # <a name="maps-in-reporting-services-mobile-reports"></a>Esegue il mapping nei report di Reporting Services per dispositivi mobili
 Le mappe sono un ottimo modo per visualizzare dati geografici. [!INCLUDE[SS_MobileReptPub_Long](../../includes/ss-mobilereptpub-long.md)] include tre diversi tipi di viste mappa e mappe predefinite per i continenti e per alcuni paesi singoli. È anche possibile [caricare e usare mappe personalizzate](../../reporting-services/mobile-reports/custom-maps-in-reporting-services-mobile-reports.md).   
@@ -65,7 +65,7 @@ Per visualizzare i dati reali nella mappa, è necessario impostare i valori per 
   
 4. Nella vista **Dati** > pannello **Proprietà dati** > in **Chiavi**, nella casella a sinistra selezionare la tabella che contiene i dati della mappa e quindi nella casella a destra selezionare il campo chiave corrispondente alle aree geografiche nella mappa.  
   
-5. In **Valori** la stessa tabella è già indicata nella casella di sinistra. Selezionare il campo numerico di cui visualizzare i valori sulla mappa.   
+5. In **Valori**la stessa tabella è già indicata nella casella di sinistra. Selezionare il campo numerico di cui visualizzare i valori sulla mappa.   
   
 6. Nel caso di una mappa termica con interruzioni di intervallo, la stessa tabella è indicata nella casella a sinistra in **Destinazioni** . Nella casella a destra selezionare il campo numerico i cui valori devono essere usati come destinazione.   
   

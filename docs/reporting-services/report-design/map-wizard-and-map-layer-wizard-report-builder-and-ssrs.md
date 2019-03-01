@@ -10,14 +10,14 @@ f1_keywords:
 - "10542"
 - MICROSOFT.REPORTDESIGNER.MAPLAYER.NAME
 ms.assetid: 48cbe18b-1290-4107-8a1c-ec6acd71f73b
-author: maggiesMSFT
-ms.author: maggies
-ms.openlocfilehash: 1353356a4fb0116e4eed34ef79a8d7a0997db0bb
-ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 6c624ba5df22bdd519b464677c154c1718beab3c
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51813774"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56294940"
 ---
 # <a name="map-wizard-and-map-layer-wizard-report-builder-and-ssrs"></a>Creazione guidata mappa e Creazione guidata livello mappa (Generatore report e SSRS)
  Nei report impaginati di [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] , la Creazione guidata mappa e la Creazione guidata livello mappa consentono di automatizzare l'attività di creazione di una mappa, di aggiunta di un livello mappa o di modifica delle opzioni di livello mappa in un livello esistente.  
@@ -70,13 +70,13 @@ ms.locfileid: "51813774"
   
     -   [Differenze tra una mappa di base, una mappa a bolle e una mappa analitica](#MapType)  
   
-    -   Scegliere la vista mappa: poligoni  
+    -   Scegliere la vista mappa: Poligoni  
   
-    -   Scegliere la vista mappa: linee  
+    -   Scegliere la vista mappa: Linee  
   
-    -   Scegliere la vista mappa: punti  
+    -   Scegliere la vista mappa: Punti  
   
-4.  Scegliere una connessione a un'origine dati Scegli vista mappa: punti. Scegliere una connessione a un'origine dei dati o crearne una a un'origine dati esterna contenente dati analitici da visualizzare sulla mappa.  
+4.  Scegliere una connessione a un'origine dati Scegli vista mappa: Punti. Scegliere una connessione a un'origine dei dati o crearne una a un'origine dati esterna contenente dati analitici da visualizzare sulla mappa.  
   
 5.  Progettare una query. Compilare una query che specifica i dati analitici.  
   
@@ -185,7 +185,7 @@ ms.locfileid: "51813774"
   
  Per altre informazioni sulle sezioni, vedere [Bing Maps Tiles System](https://go.microsoft.com/fwlink/?LinkId=147315). Per altre informazioni sull'utilizzo delle tessere mappa di Bing nel report, vedere [Ulteriori condizioni di utilizzo](https://go.microsoft.com/fwlink/?LinkId=151371).  
   
- Per vedere uno sfondo a sezioni in visualizzazione della struttura, è necessario poter accedere a Internet. Per vedere in anteprima lo sfondo a sezioni di un report in un server di report, quest'ultimo deve essere configurato in modo da supportare le tessere mappa di Bing. Per altre informazioni, vedere [Risoluzione dei problemi relativi alle parti del report: report mappa &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/troubleshoot-reports-map-reports-report-builder-and-ssrs.md) e [Pianificare un report mappa](../../reporting-services/report-design/plan-a-map-report-report-builder-and-ssrs.md).  
+ Per vedere uno sfondo a sezioni in visualizzazione della struttura, è necessario poter accedere a Internet. Per vedere in anteprima lo sfondo a sezioni di un report in un server di report, quest'ultimo deve essere configurato in modo da supportare le tessere mappa di Bing. Per altre informazioni, vedere [Risoluzione dei problemi dei report: Report mappa &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/troubleshoot-reports-map-reports-report-builder-and-ssrs.md) e [Pianificare un report mappa](../../reporting-services/report-design/plan-a-map-report-report-builder-and-ssrs.md).  
   
  Per altre informazioni su come personalizzare un livello sezione, vedere [Aggiungere, modificare o eliminare una mappa o livello mappa &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/add-change-or-delete-a-map-or-map-layer-report-builder-and-ssrs.md).  
   
@@ -248,7 +248,7 @@ ms.locfileid: "51813774"
  L'elaboratore di report applica le regole impostate e determina in modo automatico l'elenco di elementi da visualizzare in una legenda. Per impostazione predefinita, i risultati di tutte le regole dei livelli vengono visualizzati nella prima legenda. È possibile apportare delle modifiche dopo aver completato la procedura guidata. Per altre informazioni, vedere [Variare la visualizzazione di poligoni, linee e punti in base a regole e dati analitici &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/vary-polygon-line-and-point-display-by-rules-and-analytical-data.md).  
   
 ## <a name="see-also"></a>Vedere anche  
- [Risoluzione dei problemi relativi alle parti del report: report mappa &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/troubleshoot-reports-map-reports-report-builder-and-ssrs.md)   
+ [Risolvere problemi relativi ai report: Report mappa &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/troubleshoot-reports-map-reports-report-builder-and-ssrs.md)   
  [Pianificare un report mappa &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/plan-a-map-report-report-builder-and-ssrs.md)   
  [Mappe &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/maps-report-builder-and-ssrs.md)  
   
