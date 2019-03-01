@@ -9,16 +9,16 @@ ms.topic: conceptual
 ms.date: 10/29/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: 24e93c91c916272f71f137dd10bf402d693bbcd8
-ms.sourcegitcommit: c19696d3d67161ce78aaa5340964da3256bf602d
+ms.openlocfilehash: 5b6ea2144fe333f87123abdf92e16aa7122e98b4
+ms.sourcegitcommit: 0f452eca5cf0be621ded80fb105ba7e8df7ac528
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/29/2018
-ms.locfileid: "52615981"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "57007554"
 ---
 # <a name="configure-tls-12-in-aps"></a>Configurare TLS 1.2 in APS
 
-Per proteggere i punti di accesso per usare solo TLS 1.2, si dovrà disabilitare in modo esplicito altri protocolli su tutti gli host fisici e virtuali. Disabilitare i protocolli richiedono modifiche alle impostazioni del Registro di sistema.
+Per proteggere i punti di accesso per usare solo TLS 1.2, si dovrà disabilitare in modo esplicito altri protocolli su tutti gli host fisici e virtuali. Disabilitare i protocolli richiedono modifiche alle impostazioni del Registro di sistema. Le modifiche del Registro di sistema richiedono un riavvio degli host fisici e virtuali.
 
 > [!WARNING]
 > In questa sezione, nei passaggi del metodo o dell'attività viene illustrata la modalità di modifica del Registro di sistema. Tuttavia, può causare gravi problemi se si modifica il Registro di sistema in modo non corretto che può causare la perdita di dati e richiedere la reinstallazione del sistema operativo. È consigliabile eseguire il backup del Registro di sistema prima di modificarlo. Successivamente, sarà possibile ripristinarlo in caso di problemi. Per altre informazioni su come eseguire il backup e ripristino del Registro di sistema, fare clic sul seguente numero di articolo per visualizzare l'articolo della Microsoft Knowledge Base:<br>

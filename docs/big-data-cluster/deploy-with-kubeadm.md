@@ -5,17 +5,17 @@ description: Informazioni su come configurare su Kubernetes in più Ubuntu 16.04
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 12/07/2018
+ms.date: 02/28/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: 78d2024f09e78645d8fa1c35279b296e3cda53d7
-ms.sourcegitcommit: 202ef5b24ed6765c7aaada9c2f4443372064bd60
+ms.openlocfilehash: 56eb95042199298be2728c475d26cb52bea993e2
+ms.sourcegitcommit: 2533383a7baa03b62430018a006a339c0bd69af2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/12/2019
-ms.locfileid: "54241592"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57017987"
 ---
 # <a name="configure-kubernetes-on-multiple-machines-for-sql-server-2019-big-data-cluster-preview-deployments"></a>Configurare Kubernetes su più computer per le distribuzioni di cluster (anteprima) di SQL Server 2019 dei big Data
 
@@ -26,9 +26,11 @@ Questo articolo viene fornito un esempio d'uso **kubeadm** configurare Kubernete
 
 ## <a name="prerequisites"></a>Prerequisiti
 
-- Più Linux computer fisici o macchine virtuali da usare per il cluster
-- Configurazione consigliata: 8 CPU, 32 GB di memoria e almeno 100 GB di spazio di archiviazione per ogni computer
-- Minimo di tre macchine nel cluster
+- Valore minimo di 3 Linux computer fisici o macchine virtuali
+- Configurazione consigliata per ogni computer:
+   - 8 CPU
+   - 32 GB di memoria
+   - 100 GB di spazio di archiviazione
 
 ## <a name="prepare-the-machines"></a>Preparare i computer
 
@@ -146,4 +148,4 @@ kubectl get nodes
 
 I passaggi descritti in questo articolo è configurato un cluster Kubernetes in più computer Ubuntu. Il passaggio successivo consiste nel distribuire il cluster di big data di SQL Server 2019. Per istruzioni, vedere l'articolo seguente:
 
-[Distribuire SQL Server 2019 CTP 2.2 su Kubernetes](deployment-guidance.md#deploy)
+[Distribuire SQL Server in Kubernetes](deployment-guidance.md#deploy)

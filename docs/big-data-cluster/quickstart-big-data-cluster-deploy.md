@@ -5,19 +5,19 @@ description: Procedura dettagliata di una distribuzione di cluster di big data 2
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 12/17/2018
+ms.date: 02/28/2019
 ms.topic: quickstart
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: 6873ee04323ffbc813553237d79e523023a48618
-ms.sourcegitcommit: 009bee6f66142c48477849ee03d5177bcc3b6380
+ms.openlocfilehash: 28048a7d29089511eb0037bac47c3efdd543a6f2
+ms.sourcegitcommit: 2533383a7baa03b62430018a006a339c0bd69af2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/13/2019
-ms.locfileid: "56231068"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57017877"
 ---
-# <a name="quickstart-deploy-sql-server-big-data-cluster-on-azure-kubernetes-service-aks"></a>Guida introduttiva: Distribuire il cluster di big data di SQL Server in Azure Kubernetes Service (AKS)
+# <a name="quickstart-deploy-sql-server-big-data-cluster-on-azure-kubernetes-service-aks"></a>Avvio rapido: Distribuire il cluster di big data di SQL Server in Azure Kubernetes Service (AKS)
 
 In questa Guida introduttiva si usa uno script di distribuzione di esempio per distribuire cluster di big data 2019 Server SQL (anteprima) per Azure Kubernetes Service (AKS). 
 
@@ -108,7 +108,7 @@ Dopo 10 a 20 minuti, si dovrebbe ricevere una notifica che il pod controller sia
 
 ```output
 2018-11-15 15:50:50.0300 UTC | INFO | Controller pod is running.
-2018-11-15 15:50:50.0585 UTC | INFO | Controller Endpoint: https://111.222.222.222:30080
+2018-11-15 15:50:50.0585 UTC | INFO | Controller Endpoint: https://111.111.111.111:30080
 ```
 
 > [!IMPORTANT]
@@ -151,16 +151,16 @@ Aprire una nuova finestra di comando da utilizzare **kubectl** durante il proces
 
 ### <a name="use-the-cluster-administration-portal"></a>Usare il portale di amministrazione del Cluster
 
-Il pod Controller è in esecuzione, è possibile utilizzare anche nel portale di amministrazione Cluster per monitorare la distribuzione. È possibile accedere al portale con l'esterno indirizzo IP e porta numero per il `service-proxy-lb` (ad esempio: **https://\<ip-address\>: 30777/portale**). Le credenziali usate per accedere al portale corrispondano ai valori per **utente Controller** e **Password** specificato nello script di distribuzione.
+Il pod Controller è in esecuzione, è possibile utilizzare anche nel portale di amministrazione Cluster per monitorare la distribuzione. È possibile accedere al portale con l'esterno indirizzo IP e porta numero per il `endpoint-service-proxy` (ad esempio: **https://\<ip-address\>: 30777/portale**). Le credenziali usate per accedere al portale corrispondano ai valori per **utente Controller** e **Password** specificato nello script di distribuzione.
 
-È possibile ottenere l'indirizzo IP del **service-proxy-lb** servizio eseguendo questo comando in una finestra bash o cmd:
+È possibile ottenere l'indirizzo IP del **endpoint-servizio-proxy** servizio eseguendo questo comando in una finestra bash o cmd:
 
 ```bash
-kubectl get svc service-proxy-lb -n <your-cluster-name>
+kubectl get svc endpoint-service-proxy -n <your-cluster-name>
 ```
 
 > [!NOTE]
-> Nella versione CTP 2.2, si verrà visualizzato un avviso di sicurezza all'accesso alla pagina web, perché i cluster di big data è attualmente in uso certificati SSL generati automaticamente. Inoltre, in CTP 2.2, non è visibile lo stato dell'istanza master di SQL Server.
+> Nella versione CTP 2.3, si verrà visualizzato un avviso di sicurezza all'accesso alla pagina web, perché i cluster di big data è attualmente in uso certificati SSL generati automaticamente. Inoltre, nella versione CTP 2.3, non è visibile lo stato dell'istanza master di SQL Server.
 
 ## <a name="connect-to-the-cluster"></a>Connettersi al cluster
 

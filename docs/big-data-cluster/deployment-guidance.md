@@ -5,17 +5,17 @@ description: Informazioni su come distribuire i cluster di big data di SQL Serve
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 12/07/2018
+ms.date: 02/28/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: 422c09654f214d067b7d1ad7fd8bcca1dfe8f7e8
-ms.sourcegitcommit: b51edbe07a0a2fdb5f74b5874771042400baf919
+ms.openlocfilehash: e92ae469c03f6b2b5547acb1f31baac334926edf
+ms.sourcegitcommit: 2533383a7baa03b62430018a006a339c0bd69af2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/28/2019
-ms.locfileid: "55087860"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57018007"
 ---
 # <a name="how-to-deploy-sql-server-big-data-clusters-on-kubernetes"></a>Come distribuire i cluster di big data di SQL Server in Kubernetes
 
@@ -84,10 +84,10 @@ La configurazione del cluster può essere personalizzata usando un set di variab
 
 | Variabile di ambiente | Obbligatorio | Valore predefinito | Descrizione |
 |---|---|---|---|
-| **ACCEPT_EULA** | Yes | N/D | Accettare il contratto di licenza di SQL Server (ad esempio, "Y").  |
+| **ACCEPT_EULA** | Yes | N/D | Accettare il contratto di licenza di SQL Server (ad esempio, 'Yes').  |
 | **CLUSTER_NAME** | Yes | N/D | Il nome dello spazio dei nomi Kubernetes per distribuire cluster di big data in SQL Server. |
 | **CLUSTER_PLATFORM** | Yes | N/D | La piattaforma che è distribuito il cluster Kubernetes. Può essere `aks`, `minikube`, `kubernetes`|
-| **CLUSTER_COMPUTE_POOL_REPLICAS** | No | 1 | Il numero di repliche di pool di calcolo da compilare. Nella versione CTP 2.2 solo con valori consentito è 1. |
+| **CLUSTER_COMPUTE_POOL_REPLICAS** | No | 1 | Il numero di repliche di pool di calcolo da compilare. Nella versione CTP 2.3 solo con valori consentito è 1. |
 | **CLUSTER_DATA_POOL_REPLICAS** | No | 2 | Il numero di dati del pool di repliche da compilare. |
 | **CLUSTER_STORAGE_POOL_REPLICAS** | No | 2 | Il numero di repliche di pool di archiviazione da compilare. |
 | **DOCKER_REGISTRY** | Yes | TBD | Il Registro di sistema privato in cui sono archiviate le immagini usate per distribuire il cluster. |
@@ -189,7 +189,7 @@ Se si distribuisce con kubeadm sul proprio computer fisici o macchine virtuali, 
 L'API di creazione del cluster viene usato per inizializzare lo spazio dei nomi Kubernetes e distribuire tutti i POD delle applicazioni nello spazio dei nomi. Per distribuire cluster di big data di SQL Server nel cluster Kubernetes, eseguire il comando seguente:
 
 ```bash
-mssqlctl create cluster <your-cluster-name>
+mssqlctl cluster create --name <your-cluster-name>
 ```
 
 Durante il bootstrap del cluster, la finestra di comando client restituirà lo stato della distribuzione. Durante il processo di distribuzione, verrà visualizzato una serie di messaggi in cui è in attesa il pod controller:
@@ -202,7 +202,7 @@ Dopo 10 a 20 minuti, si dovrebbe ricevere una notifica che il pod controller sia
 
 ```output
 2018-11-15 15:50:50.0300 UTC | INFO | Controller pod is running.
-2018-11-15 15:50:50.0585 UTC | INFO | Controller Endpoint: https://111.222.222.222:30080
+2018-11-15 15:50:50.0585 UTC | INFO | Controller Endpoint: https://111.111.111.111:30080
 ```
 
 > [!IMPORTANT]
@@ -215,21 +215,23 @@ Al termine della distribuzione, l'output invia una notifica di esito positivo:
 2018-11-15 16:10:25.0583 UTC | INFO | Cluster deployed successfully.
 ```
 
-## <a id="masterip"></a> Ottenere l'istanza di SQL Server Master e gli indirizzi IP del cluster di SQL Server i big Data
+## <a id="masterip"></a> Ottenere gli endpoint del cluster di big data
 
-Una volta completato lo script di distribuzione, è possibile ottenere l'indirizzo IP dell'istanza master di SQL Server mediante i passaggi descritti di seguito. Si userà questo indirizzo IP e porta numero 31433 per connettersi all'istanza master di SQL Server (ad esempio:  **\<ip-address\>, 31433**). Analogamente, per l'indirizzo IP del cluster di SQL Server i big Data. Tutti gli endpoint del cluster sono illustrati nella scheda endpoint del servizio nel portale di amministrazione Cluster. È possibile usare il portale di amministrazione Cluster per monitorare la distribuzione. È possibile accedere al portale con l'esterno indirizzo IP e porta numero per il `service-proxy-lb` (ad esempio: **https://\<ip-address\>: 30777/portale**). Le credenziali per accedere al portale di amministrazione sono i valori delle `CONTROLLER_USERNAME` e `CONTROLLER_PASSWORD` variabili di ambiente fornite sopra.
+Una volta completato lo script di distribuzione, è possibile ottenere l'indirizzo IP dell'istanza master di SQL Server mediante i passaggi descritti di seguito. Si userà questo indirizzo IP e porta numero 31433 per connettersi all'istanza master di SQL Server (ad esempio:  **\<ip-address-of-endpoint-master-pool\>, 31433**). Allo stesso modo, è possibile connettersi a SQL Server associati IP del cluster (Gateway HDFS/Spark) dei big data con il **protezione di endpoint** servizio.
 
-### <a name="aks"></a>AKS
-
-Se si usa servizio contenitore di AZURE, Azure fornisce il servizio di bilanciamento del carico di Azure. Eseguire il comando seguente:
+I seguenti comandi di kubectl recuperano gli endpoint comuni per il cluster di big data:
 
 ```bash
 kubectl get svc endpoint-master-pool -n <your-cluster-name>
-kubectl get svc service-security-lb -n <your-cluster-name>
-kubectl get svc service-proxy-lb -n <your-cluster-name>
+kubectl get svc endpoint-security -n <your-cluster-name>
+kubectl get svc endpoint-service-proxy -n <your-cluster-name>
 ```
 
-Cercare il **External-IP** valore assegnato al servizio. Quindi, connettersi all'istanza master di SQL Server usando l'indirizzo IP alla porta 31433 (es:  **\<ip-address\>, 31433**) e di endpoint del cluster SQL Server i big data usando l'indirizzo IP esterno per `service-security-lb` servizio. 
+Cercare il **External-IP** valore assegnato a ogni servizio.
+
+Tutti gli endpoint del cluster vengono illustrati anche nella **gli endpoint di servizio** scheda nel portale di amministrazione Cluster. È possibile accedere al portale con l'esterno indirizzo IP e porta numero per il `endpoint-service-proxy` (ad esempio: **https://\<ip-address-of-endpoint-service-proxy\>: 30777/portale**). Le credenziali per accedere al portale di amministrazione sono i valori delle `CONTROLLER_USERNAME` e `CONTROLLER_PASSWORD` variabili di ambiente fornite sopra. È possibile utilizzare il portale di amministrazione Cluster anche per monitorare la distribuzione.
+
+Per altre informazioni sulla connessione, vedere [Connetti a SQL Server del cluster di big data con Azure Data Studio](connect-to-big-data-cluster.md).
 
 ### <a name="minikube"></a>Minikube
 
@@ -253,8 +255,11 @@ Attualmente, l'unico modo per aggiornare un cluster di big data a una nuova vers
 1. Eliminare il vecchio cluster con il `mssqlctl delete cluster` comando.
 
    ```bash
-    mssqlctl delete cluster <old-cluster-name>
+    mssqlctl cluster delete --name <old-cluster-name>
    ```
+
+   > [!Important]
+   > Usare la versione di **mssqlctl** che corrisponde al cluster. Non eliminare un cluster con la versione più recente di meno recente **mssqlctl**.
 
 1. Disinstallare eventuali versioni precedenti del **mssqlctl**.
 
@@ -270,13 +275,13 @@ Attualmente, l'unico modo per aggiornare un cluster di big data a una nuova vers
    **Windows:**
 
    ```powershell
-   pip3 install --extra-index-url https://private-repo.microsoft.com/python/ctp-2.2 mssqlctl
+   pip3 install -r  https://private-repo.microsoft.com/python/ctp-2.3/mssqlctl/requirements.txt --trusted-host https://private-repo.microsoft.com
    ```
 
    **Linux:**
    
    ```bash
-   pip3 install --extra-index-url https://private-repo.microsoft.com/python/ctp-2.2 mssqlctl --user
+   pip3 install -r  https://private-repo.microsoft.com/python/ctp-2.3/mssqlctl/requirements.txt --trusted-host https://private-repo.microsoft.com --user
    ```
 
    > [!IMPORTANT]
@@ -328,14 +333,11 @@ Per monitorare o risolvere i problemi di una distribuzione, usare **kubectl** pe
    | Servizio | Descrizione |
    |---|---|
    | **endpoint-master-pool** | Fornisce l'accesso all'istanza master.<br/>(**EXTERNAL-IP, 31433** e il **SA** utente) |
-   | **service-mssql-controller-lb**<br/>**service-mssql-controller-nodeport** | Supporta gli strumenti e i client che gestiscono il cluster. |
-   | **service-proxy-lb**<br/>**service-proxy-nodeport** | Fornisce l'accesso per il [portale di amministrazione Cluster](cluster-admin-portal.md).<br/>(https://**EXTERNAL-IP**:30777/portal)|
-   | **service-security-lb**<br/>**service-security-nodeport** | Fornisce l'accesso al gateway HDFS/Spark.<br/>(**EXTERNAL-IP** e il **radice** utente) |
+   | **endpoint-controller** | Supporta gli strumenti e i client che gestiscono il cluster. |
+   | **endpoint-service-proxy** | Fornisce l'accesso per il [portale di amministrazione Cluster](cluster-admin-portal.md).<br/>(https://**EXTERNAL-IP**:30777/portal)|
+   | **endpoint-security** | Fornisce l'accesso al gateway HDFS/Spark.<br/>(**EXTERNAL-IP** e il **radice** utente) |
 
-   > [!NOTE]
-   > I nomi di servizio possono variare a seconda dell'ambiente di Kubernetes. Quando si distribuisce in Azure Kubernetes Service (AKS), i nomi del servizio deve terminare con **-lb**. Per le distribuzioni di minikube e kubeadm, terminano con i nomi di servizio **- nodeport**.
-
-1. Usare la [portale di amministrazione del Cluster](cluster-admin-portal.md) per monitorare la distribuzione nel **distribuzione** scheda. È necessario attendere per il **service-proxy-lb** avvio prima di accedere a questo portale, pertanto non sarà disponibile all'inizio di una distribuzione del servizio.
+1. Usare la [portale di amministrazione del Cluster](cluster-admin-portal.md) per monitorare la distribuzione nel **distribuzione** scheda. È necessario attendere per il **endpoint-servizio-proxy** avvio prima di accedere a questo portale, pertanto non sarà disponibile all'inizio di una distribuzione del servizio.
 
 > [!TIP]
 > Per altre informazioni sulla risoluzione dei problemi del cluster, vedere [comandi Kubectl per il monitoraggio e risoluzione dei problemi dei cluster di SQL Server i big data](cluster-troubleshooting-commands.md).

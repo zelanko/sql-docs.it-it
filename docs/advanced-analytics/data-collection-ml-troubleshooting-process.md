@@ -2,17 +2,17 @@
 title: 'Risolvere i problemi di raccolta dati per machine learning: SQL Server Machine Learning Services'
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 04/15/2018
+ms.date: 02/28/2019
 ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 2723131e66cc149209e77884a3a9c160d4c27a0e
-ms.sourcegitcommit: ee76332b6119ef89549ee9d641d002b9cabf20d2
+ms.openlocfilehash: edfacb2e4d519d4f709d352f52645526cb341fad
+ms.sourcegitcommit: 2533383a7baa03b62430018a006a339c0bd69af2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/20/2018
-ms.locfileid: "53644990"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57017937"
 ---
 # <a name="troubleshoot-data-collection-for-machine-learning"></a>Risolvere i problemi di raccolta dati per machine learning
 
@@ -90,7 +90,7 @@ Per ottenere la versione di R e le versioni di RevoScaleR, aprire un prompt dei 
   
   `C:\Program Files\Microsoft SQL Server\MSSQL14.<instance_name>\R_SERVICES\bin\x64\RGui.exe`
 
-La console di R Visualizza le informazioni sulla versione all'avvio. Ad esempio, la versione seguente rappresenta la configurazione predefinita per SQL Server 2017 CTP 2.0:
+La console di R Visualizza le informazioni sulla versione all'avvio. Ad esempio, la versione seguente rappresenta la configurazione predefinita per SQL Server 2017:
 
     *Microsoft R Open 3.3.3*
 

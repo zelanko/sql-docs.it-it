@@ -2,17 +2,17 @@
 title: Problemi noti per l'integrazione di Python - servizi di SQL Server Machine Learning e linguaggio R
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 12/13/2018
+ms.date: 02/28/2019
 ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 6dc02c56bda3cdf904e0c53115d4fbbfcfafe9fc
-ms.sourcegitcommit: ee76332b6119ef89549ee9d641d002b9cabf20d2
+ms.openlocfilehash: fd6f67e3095af0f1a53ed533ea9b763d52547e39
+ms.sourcegitcommit: 2533383a7baa03b62430018a006a339c0bd69af2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/20/2018
-ms.locfileid: "53645526"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57018067"
 ---
 # <a name="known-issues-in-machine-learning-services"></a>Problemi noti di Machine Learning Services
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -123,7 +123,7 @@ Se si installa una versione non definitiva di SQL Server 2017 in un computer sen
 
 Questo problema viene risolto nella versione di rilascio. Inoltre, questa limitazione non si applica ai componenti di R.
 
-**Si applica a:** SQL Server 2017 con Python
+**Si applica a:** SQL Server 2017 with Python
 
 ### <a name="bkmk_sqlbindr"></a> Avviso di versione non compatibile quando ci si connette a una versione precedente di SQL Server R Services da un client usando [!INCLUDE[ssSQLv14_md](../includes/sssqlv14-md.md)]
 
@@ -214,7 +214,7 @@ Per altri problemi noti che potrebbero influire sulle soluzioni R, vedere la [Ma
 
 ### <a name="1-access-denied-warning-when-executing-r-scripts-on-sql-server-in-a-non-default-location"></a>1. Accesso negato avviso durante l'esecuzione di script R in SQL Server in un percorso non predefinito
 
-Se l'istanza di SQL Server è stato installato in un percorso non predefinito, ad esempio all'esterno di `Program Files` cartella, l'avviso ACCESS_DENIED viene generato quando si prova a eseguire gli script che installa un pacchetto. Ad esempio:
+Se l'istanza di SQL Server è stato installato in un percorso non predefinito, ad esempio all'esterno di `Program Files` cartella, l'avviso ACCESS_DENIED viene generato quando si prova a eseguire gli script che installa un pacchetto. Esempio:
 
 > *In `normalizePath(path.expand(path), winslash, mustWork)` : percorso [2] = "~ExternalLibraries/R/8/1": Accesso negato*
 
@@ -252,7 +252,7 @@ Nella compilazione di rilascio iniziale di SQL Server 2016, è possibile imposta
 
 Questo problema è stato risolto in SQL Server 2016 Service Pack 1. È consigliabile eseguire l'aggiornamento alla versione più recente del servizio.
 
-**Si applica a:** Versione RTM di SQL Server 2016 R Services
+**Si applica a:** SQL Server 2016 R Services RTM version
 
 ### <a name="5-changes-to-column-types-cannot-be-performed-when-reading-data-in-a-sql-server-compute-context"></a>5. Non è possibile apportare modifiche ai tipi di colonna durante la lettura di dati in un contesto di calcolo di SQL Server
 

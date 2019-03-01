@@ -5,17 +5,17 @@ description: Questo articolo forniscono i comandi di kubectl utile per il monito
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 12/06/2018
+ms.date: 02/28/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: f6556d271426157424bbc5f5dcbf1abbb4ffdc01
-ms.sourcegitcommit: 202ef5b24ed6765c7aaada9c2f4443372064bd60
+ms.openlocfilehash: 624c4ad4f53c0ad78cf5b972c976aadc57fd35d3
+ms.sourcegitcommit: 2533383a7baa03b62430018a006a339c0bd69af2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/12/2019
-ms.locfileid: "54242003"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57017907"
 ---
 # <a name="kubectl-commands-for-monitoring-and-troubleshooting-sql-server-big-data-clusters"></a>Comandi di Kubectl per il monitoraggio e risoluzione dei problemi dei cluster di SQL Server i big Data
 
@@ -39,7 +39,7 @@ kubectl get pods --all-namespaces
 
 ### <a name="show-status-of-all-pods-in-the-sql-server-big-data-cluster"></a>Mostra lo stato di tutti i POD nel cluster di big data di SQL Server
 
-Usare il `-n` parametro per specificare uno spazio dei nomi specifico. Si noti che SQL Server in un nuovo spazio dei nomi creato in fase di bootstrap del cluster vengono creati i POD del cluster di big data basata sul nome del cluster specificato nella `mssqlctl create cluster <cluster_name>` comando.
+Usare il `-n` parametro per specificare uno spazio dei nomi specifico. Si noti che SQL Server in un nuovo spazio dei nomi creato in fase di bootstrap del cluster vengono creati i POD del cluster di big data basata sul nome del cluster specificato nella `mssqlctl cluster create --name <cluster_name>` comando.
 
 ```bash
 kubectl get pods -n <namespace_name>
@@ -67,7 +67,7 @@ kubectl describe pod  mssql-data-pool-master-0 -n big_data_cluster
 
 ## <a name="get-status-of-services"></a>Ottenere lo stato dei servizi
 
-Eseguire il comando seguente per ottenere i dettagli per i servizi cluster di big data. Questi dettagli includono il tipo e gli indirizzi IP associati con le porte e i rispettivi servizi. Si noti che i servizi cluster di SQL Server i big data vengono creati in un nuovo spazio dei nomi creato in fase di bootstrap del cluster in base al nome del cluster specificato nella `mssqlctl create cluster <cluster_name>` comando.
+Eseguire il comando seguente per ottenere i dettagli per i servizi cluster di big data. Questi dettagli includono il tipo e gli indirizzi IP associati con le porte e i rispettivi servizi. Si noti che i servizi cluster di SQL Server i big data vengono creati in un nuovo spazio dei nomi creato in fase di bootstrap del cluster in base al nome del cluster specificato nella `mssqlctl cluster create --name <cluster_name>` comando.
 
 ```bash
 kubectl get svc -n <namespace_name>

@@ -5,17 +5,17 @@ description: Questo articolo descrive il controller di un cluster di big data di
 author: mihaelablendea
 ms.author: mihaelab
 manager: craigg
-ms.date: 12/07/2018
+ms.date: 02/28/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: 84162981b68a309f4a21efc0c0610837be308ddb
-ms.sourcegitcommit: 202ef5b24ed6765c7aaada9c2f4443372064bd60
+ms.openlocfilehash: e9fc73e9e95e2a69871d55e6ce00d14b8f29f0e6
+ms.sourcegitcommit: 2533383a7baa03b62430018a006a339c0bd69af2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/12/2019
-ms.locfileid: "54241282"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57017867"
 ---
 # <a name="what-is-the-controller-on-a-sql-server-2019-big-data-cluster"></a>Che cos'è il controller in un cluster di SQL Server 2019 dei big Data?
 
@@ -29,15 +29,15 @@ Il servizio controller fornisce le funzionalità di base seguenti:
 - Esporre gli strumenti di monitoraggio per osservare lo stato del cluster
 - Esporre gli strumenti di risoluzione dei problemi per rilevare e correggere problemi imprevisti
 - Gestire la sicurezza del cluster: verificare che gli endpoint cluster protetto, gestire utenti e ruoli, configurare le credenziali per la comunicazione all'interno del cluster
-- Gestire il flusso di lavoro degli aggiornamenti in modo che vengono implementate in modo sicuro (non disponibile nella versione CTP 2.2)
-- Gestire la disponibilità elevata e ripristino di emergenza per i servizi con stato nel cluster (non disponibile nella versione CTP 2.2)
+- Gestire il flusso di lavoro degli aggiornamenti in modo che vengono implementate in modo sicuro (non disponibile nella versione CTP 2.3)
+- Gestire la disponibilità elevata e ripristino di emergenza per i servizi con stato nel cluster (non disponibile nella versione CTP 2.3)
 
 ## <a name="deploying-the-controller-service"></a>Distribuzione del servizio controller
 
 Il controller è distribuito e ospitato nello spazio dei nomi Kubernetes stesso in cui il cliente vuole compilare un cluster di big data. Questo servizio viene installato da un amministratore di Kubernetes durante il bootstrap del cluster, tramite l'utilità della riga di comando mssqlctl:
 
 ```bash
-mssqlctl create cluster <name of your cluster>
+mssqlctl cluster create --name <name of your cluster>
 ```
 
 Il flusso di lavoro di costruzione verrà layout su Kubernetes un cluster di big data completamente funzionale di SQL Server che include tutti i componenti descritti nel [Panoramica](big-data-cluster-overview.md) articolo. Il flusso di lavoro bootstrap crea innanzitutto il servizio controller, e ciò è sufficiente distribuire il servizio controller si coordina l'installazione e configurazione del resto della parte i servizi del pool di archiviazione, calcolo, dati e master.

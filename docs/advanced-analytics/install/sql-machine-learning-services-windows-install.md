@@ -3,17 +3,17 @@ title: Installare SQL Server Machine Learning Services (In-Database) in Windows 
 description: R in SQL Server o Python sui passaggi di installazione di SQL Server per SQL Server 2017 Machine Learning Services in Windows.
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 01/17/2019
+ms.date: 02/28/2019
 ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 6fd14582fdae0d76463b8d8739d214882b78f999
-ms.sourcegitcommit: 32a55df1275ad169bb1457243dc8caa8b48b206f
+ms.openlocfilehash: 00cc9989730825136ac1ce98f1250063c37144fb
+ms.sourcegitcommit: 2533383a7baa03b62430018a006a339c0bd69af2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/28/2019
-ms.locfileid: "55147009"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57017977"
 ---
 # <a name="install-sql-server-machine-learning-services-on-windows"></a>Installare SQL Server Machine Learning Services in Windows
 
@@ -251,6 +251,7 @@ A livello di istanza, potrebbe includere un'ulteriore configurazione:
 * [Configurazione del firewall per SQL Server Machine Learning Services](../../advanced-analytics/security/firewall-configuration.md)
 * [Abilitare i protocolli di rete aggiuntivi](../../database-engine/configure-windows/enable-or-disable-a-server-network-protocol.md)
 * [Abilitare le connessioni remote](../../database-engine/configure-windows/configure-the-remote-access-server-configuration-option.md)
+* [Creare un account di accesso per SQLRUserGroup](../../advanced-analytics/security/create-a-login-for-sqlrusergroup.md)
 
 <a name="bkmk_configureAccounts"></a> 
 <a name="permissions-external-script"></a> 
@@ -258,7 +259,6 @@ A livello di istanza, potrebbe includere un'ulteriore configurazione:
 Il database, potrebbe essere necessario gli aggiornamenti di configurazione seguenti:
 
 * [Consentire agli utenti di SQL Server Machine Learning Services](../../advanced-analytics/security/user-permission.md)
-* [Aggiungere SQLRUserGroup come utente del database](../../advanced-analytics/security/add-sqlrusergroup-to-database.md)
 
 > [!NOTE]
 > Se è necessaria una configurazione aggiuntiva dipende dallo schema di sicurezza, in cui è installato SQL Server e come si prevede che gli utenti per connettersi al database ed eseguire gli script esterni.

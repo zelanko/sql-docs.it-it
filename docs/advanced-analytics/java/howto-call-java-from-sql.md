@@ -3,18 +3,18 @@ title: Come chiamare Java da SQL - SQL Server Machine Learning Services
 description: Informazioni su come chiamare classi Java da stored procedure SQL Server usando l'estensione del linguaggio in SQL Server 2019 di programmazione Java.
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 12/07/2018
+ms.date: 02/28/2019
 ms.topic: conceptual
-author: HeidiSteen
-ms.author: heidist
+author: dphansen
+ms.author: davidph
 manager: cgronlun
 monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 438c1096a933932e08c5cbf21722ba75874bb1dc
-ms.sourcegitcommit: ee76332b6119ef89549ee9d641d002b9cabf20d2
+ms.openlocfilehash: 801ffe50ca83fbeda69a3172b5914d39373d643f
+ms.sourcegitcommit: 2533383a7baa03b62430018a006a339c0bd69af2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/20/2018
-ms.locfileid: "53644760"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57017757"
 ---
 # <a name="how-to-call-java-from-sql-server-2019-preview"></a>Come chiamare Java dalla versione di anteprima di SQL Server 2019
 
@@ -22,7 +22,20 @@ Quando si usa la [estensione del linguaggio Java](extension-java.md), il [sp_exe
 
 Questo articolo illustra i dettagli di implementazione per le classi Java e metodi per l'esecuzione in SQL Server. Una volta acquisita familiarità con questi dettagli, esaminare i [esempio Java](java-first-sample.md) come passaggio successivo.
 
-## <a name="basic-principles"></a>Principi di base
+Esistono due metodi per la chiamata di classi Java in SQL Server:
+
+1. Inserire i file di estensione class o con estensione jar nel [classpath Java](#classpath). È disponibile per Windows e Linux.
+
+2. Caricamento classi compilate in un file con estensione jar e altre dipendenze nel database utilizzando la [libreria esterna](#external-library) DDL. Questa opzione è disponibile per Windows solo nella versione CTP 2.3. Verrà aggiunto il supporto Linux in una versione CTP successiva.
+
+> [!NOTE]
+> Una raccomandazione generale, usare i file con estensione jar e Class non i singoli file. Questo è pratica comune in Java e semplificano l'esperienza complessiva. Vedere anche: [Come creare un file con estensione jar dal file di classe](extension-java.md#create-jar).
+
+<a name="classpath"></a>
+
+## <a name="classpath"></a>Classpath
+
+### <a name="basic-principles"></a>Principi di base
 
 * Le classi Java personalizzate compilate devono esistere nel file Class o file con estensione jar in classpath di Java. Il [parametro CLASSPATH](#set-classpath) fornisce il percorso dei file Java compilati. 
 
@@ -35,11 +48,11 @@ Questo articolo illustra i dettagli di implementazione per le classi Java e meto
 > [!Note]
 > In questa nota Riformula supportate e non supportate operazioni specifiche del linguaggio nella versione CTP 2.x.
 > * La stored procedure, sono supportati i parametri di input. Non sono elencati i parametri di output.
-> * Lo streaming tramite il parametro sp_execute_external_script **@r_rowsPerRead** non è supportato.
-> * Tramite il partizionamento **@input_data_1_partition_by_columns** non è supportato.
-> * Parallel processing usando  **@parallel= 1** è supportata.
+> * Lo streaming tramite il parametro sp_execute_external_script @r_rowsPerRead non è supportato.
+> * Tramite il partizionamento @input_data_1_partition_by_columns non è supportato.
+> * Parallel processing usando @parallel= 1 è supportato.
 
-## <a name="call-spexecuteexternalscript"></a>Chiamata di sp_execute_external_script
+### <a name="call-class"></a>Classe Call
 
 Applicabile sia Windows che Linux, il [sp_execute_external_script](https://docs.microsoft.com/sql/relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql) sistema stored procedure è l'interfaccia utilizzata per chiamare il runtime di Java. L'esempio seguente illustra un sp_execute_external_script usando l'estensione di Java e i parametri per la specifica di percorso, script e il codice personalizzato.
 
@@ -53,7 +66,7 @@ SET @param1 = 3
 EXEC sp_execute_external_script
   @language = N'Java'
 , @script = N'<packageName>.<ClassName>.<methodName>'
-, @input_data_1 = N'<Input Query>
+, @input_data_1 = N'<Input Query>'
 , @params = N'@CLASSPATH nvarchar(30), @param1 INT'
 , @CLASSPATH = @myClassPath
 , @param1 = @param1
@@ -61,7 +74,7 @@ EXEC sp_execute_external_script
 
 <a name="set-classpath"></a>
 
-## <a name="set-classpath"></a>Impostare CLASSPATH
+### <a name="set-classpath"></a>Impostare CLASSPATH
 
 Dopo aver compilato la classe Java o le classi e inseriti i file con estensione class o il file con estensione jar in classpath di Java, sono disponibili due opzioni per specificare il classpath per l'estensione di SQL Server Java:
 
@@ -76,6 +89,35 @@ Uno degli approcci che consentono di specificare un percorso di codice compilato
 
 Esattamente come una variabile di sistema per i file eseguibili JDK è stato creato, è possibile creare una variabile di sistema per i percorsi del codice. A tale scopo, creati una variabile di ambiente system denominata "CLASSPATH"
 
+<a name="external-library"></a>
+
+## <a name="external-library"></a>Libreria esterna
+
+Nella versione CTP 2.3 di SQL Server 2019, è possibile usare librerie esterne per il linguaggio Java su Windows. La stessa funzionalità sarà disponibile in Linux in una versione CTP successiva. È possibile compilare le classi in un file con estensione jar e caricare il file con estensione jar e altre dipendenze nel database utilizzando la [CREATE EXTERNAL LIBRARY](https://docs.microsoft.com/sql/t-sql/statements/create-external-library-transact-sql) DDL.
+
+Esempio di come caricare un file con estensione jar con la libreria esterna:
+
+```sql 
+CREATE EXTERNAL LIBRARY myJar
+FROM (CONTENT = '<local path to .jar file>') 
+WITH (LANGUAGE = 'Java'); 
+GO
+```
+
+Tramite la creazione di una libreria esterna, non è necessario fornire un [classpath](#classpath) nella chiamata di sp_execute_external_script. SQL Server hanno automaticamente accesso alle classi Java e non è necessario impostare autorizzazioni speciali al classpath.
+
+Esempio di chiamata a un metodo in una classe da un pacchetto caricato come una libreria esterna:
+
+```sql
+EXEC sp_execute_external_script
+  @language = N'Java'
+, @script = N'MyPackage.MyCLass.myMethod'
+, @input_data_1 = N'SELECT * FROM MYTABLE'
+with result sets ((column1 int))
+```
+
+Per altre informazioni, vedere [CREATE EXTERNAL LIBRARY](https://docs.microsoft.com/sql/t-sql/statements/create-external-library-transact-sql).
+
 ## <a name="class-requirements"></a>Requisiti della classe
 
 Perché SQL Server comunicare con il runtime di Java, è necessario implementare le variabili statiche specifiche nella classe. SQL Server possono quindi eseguire un metodo nei dati di classe e lo scambio di Java usando l'estensione del linguaggio Java.
@@ -84,7 +126,7 @@ Perché SQL Server comunicare con il runtime di Java, è necessario implementare
 > Prevedere i dettagli di implementazione per modificare nelle prossime versioni CTP come Microsoft si impegna per migliorare l'esperienza per gli sviluppatori.
 
 ## <a name="method-requirements"></a>Requisiti del metodo
-Per passare argomenti, usare il **@param** parametro in sp_execute_external_script. Il metodo di stesso non può avere argomenti. Il tipo restituito deve essere void.  
+Per passare argomenti, usare il @param parametro in sp_execute_external_script. Il metodo di stesso non può avere argomenti. Il tipo restituito deve essere void.  
 
 ```java
 public static void test()  {}
@@ -120,7 +162,7 @@ L'utente deve solo inizializzare la variabile e la dimensione della matrice deve
 public static boolean[][] inputNullMap = new boolean[1][1];
 ```
 
-## <a name="data-outputs"></a>Output di dati 
+## <a name="data-outputs"></a>Output di dati
 
 Questa sezione vengono descritte **OutputDataSet**, i set di dati di output restituito da Java, che è possibile inviare a e salvare in modo permanente in SQL Server.
 
@@ -152,8 +194,6 @@ Questo NullMap deve essere popolato con il numero previsto di colonne e righe ch
 ```java
 public static boolean[][] outputNullMap
 ```
-<a name="create-external-library"></a>
-
 
 ## <a name="next-steps"></a>Passaggi successivi
 

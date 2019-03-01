@@ -5,17 +5,17 @@ description: Questa esercitazione illustra come inserire dati nel pool di dati d
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 12/07/2018
+ms.date: 02/28/2019
 ms.topic: tutorial
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: 1e6f75f21a02b30a6f75d79a9da5be0320485c5b
-ms.sourcegitcommit: 202ef5b24ed6765c7aaada9c2f4443372064bd60
+ms.openlocfilehash: 28a151f00683455b582bb29a5d141a76f237caf1
+ms.sourcegitcommit: 2533383a7baa03b62430018a006a339c0bd69af2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/12/2019
-ms.locfileid: "54241682"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57017737"
 ---
 # <a name="tutorial-ingest-data-into-a-sql-server-data-pool-with-spark-jobs"></a>Esercitazione: Inserire dati in un pool di dati di SQL Server con i processi Spark
 
@@ -34,7 +34,7 @@ In questa esercitazione, apprenderà come:
 ## <a id="prereqs"></a> Prerequisiti
 
 - [Strumenti dei big Data](deploy-big-data-tools.md)
-   - **Kubectl**
+   - **kubectl**
    - **Azure Data Studio**
    - **Estensione di SQL Server 2019**
 - [Caricare i dati di esempio in cluster i big Data](tutorial-load-sample-data.md)
@@ -64,7 +64,7 @@ La procedura seguente crea una tabella esterna nel pool di dati denominato **web
       );
    ```
   
-1. In CTP 2.2, la creazione di pool di dati è asincrona, ma non è possibile determinare quando viene completato ancora. Attendere due minuti per assicurarsi che il pool di dati viene creato prima di continuare.
+1. Nella versione CTP 2.3, la creazione di pool di dati è asincrona, ma non è possibile determinare quando viene completato ancora. Attendere due minuti per assicurarsi che il pool di dati viene creato prima di continuare.
 
 ## <a name="start-a-spark-streaming-job"></a>Avviare un processo di streaming Spark
 

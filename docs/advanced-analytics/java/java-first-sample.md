@@ -3,18 +3,18 @@ title: Esempio di Java e un'esercitazione per SQL Server 2019 - servizi di SQL S
 description: Eseguire il codice di esempio Java in SQL Server 2019 per informazioni sui passaggi per usare l'estensione del linguaggio Java con dati di SQL Server.
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 09/24/2018
+ms.date: 02/28/2019
 ms.topic: conceptual
-author: HeidiSteen
-ms.author: heidist
+author: dphansen
+ms.author: davidph
 manager: cgronlun
 monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 32c0792882020612c40a0c41b1c54aaeb51da91c
-ms.sourcegitcommit: 15b780aa5abe3f42cd70b6edf7d5a645e990b618
+ms.openlocfilehash: 86a379191033f49ab6a5d06ceda2d1ed7a747c12
+ms.sourcegitcommit: 2533383a7baa03b62430018a006a339c0bd69af2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/07/2019
-ms.locfileid: "54069058"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57018037"
 ---
 # <a name="sql-server-java-sample-walkthrough"></a>Procedura dettagliata di esempio Java di SQL Server
 
@@ -26,7 +26,7 @@ In questo esempio illustra una classe Java che riceve due colonne (ID e il testo
 
 + SQL Server Management Studio o un altro strumento per l'esecuzione di T-SQL.
 
-+ Java SE Development Kit (JDK) 1.10 su Windows, o un pacchetto JDK 1.8 in Linux.
++ Java SE Development Kit (JDK) 8 in Windows o Linux.
 
 Compilazione dalla riga di comando usando **javac** è sufficiente per questa esercitazione. 
 
@@ -232,7 +232,7 @@ Assicurarsi che entrambe le identità di sicurezza dispone delle autorizzazioni 
 
 <a name="call-method"></a>
 
-## <a name="7---call-getngrams"></a>7 - chiamata *getNgrams()*
+## <a name="7---call-getngrams"></a>7 - Call *getNgrams()*
 
 Per chiamare il codice da SQL Server, specificare il metodo di Java **getNgrams()** nel parametro "script" di sp_execute_external_script. Questo metodo appartiene a un pacchetto denominato "pkg" e un file di classe denominato **Ngram.java**.
 
@@ -240,7 +240,7 @@ In questo esempio passa il parametro del percorso di classe per fornire il perco
 
 + In Linux, eseguire il codice seguente in SQL Server Management Studio o un altro strumento utilizzato per l'esecuzione di Transact-SQL. 
 
-+ In Windows, modificare **@myClassPath** a N'C:\myJavaCode\' (presupponendo che è la cartella padre di \pkg) prima di eseguire la query in SQL Server Management Studio o un altro strumento.
++ In Windows, modificare @myClassPath a N'C:\myJavaCode\' (presupponendo che è la cartella padre di \pkg) prima di eseguire la query in SQL Server Management Studio o un altro strumento.
 
 ```sql
 DECLARE @myClassPath nvarchar(50)

@@ -5,17 +5,17 @@ description: Questo articolo descrive il pool di calcolo in un cluster di big da
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 12/07/2018
+ms.date: 02/28/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: d1e028781735b257b82f839571da5400c36c1e10
-ms.sourcegitcommit: 202ef5b24ed6765c7aaada9c2f4443372064bd60
+ms.openlocfilehash: 7d5a81479e798d3d97547eb67b17e62444cd2941
+ms.sourcegitcommit: 2533383a7baa03b62430018a006a339c0bd69af2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/12/2019
-ms.locfileid: "54241952"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57017577"
 ---
 # <a name="what-are-compute-pools-in-a-sql-server-2019-big-data-cluster"></a>Quali sono i pool di calcolo in un cluster di SQL Server 2019 big data?
 
@@ -26,7 +26,7 @@ Questo articolo descrive il ruolo del *pool di calcolo di SQL Server* in un clus
 Un pool di calcolo è costituito da uno o più POD in esecuzione in Kubernetes di calcolo. La creazione automatica e la gestione di questi POD è coordinata dal [istanza master di SQL Server](concept-master-instance.md). Ogni pod contiene un set di servizi di base e un'istanza del motore di database di SQL Server.
 
 > [!NOTE]
-> CTP 2.2 supporta solo un pool di calcolo singolo per ogni cluster.
+> Versioni da CTP 2.3 supporta solo un pool di calcolo singolo per ogni cluster.
 
 ## <a name="scale-out-groups"></a>Gruppi con scalabilità orizzontale
 
