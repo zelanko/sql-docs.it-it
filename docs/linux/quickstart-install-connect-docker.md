@@ -14,14 +14,14 @@ ms.prod_service: linux
 ms.assetid: 82737f18-f5d6-4dce-a255-688889fdde69
 moniker: '>= sql-server-linux-2017 || >= sql-server-2017 || =sqlallproducts-allversions'
 zone_pivot_groups: cs1-command-shell
-ms.openlocfilehash: 5cbd3fe2058b120a77772f2ac597f993ab3f508e
-ms.sourcegitcommit: 009bee6f66142c48477849ee03d5177bcc3b6380
+ms.openlocfilehash: dc65bc84d7730ee37371dc92806af4cd6a1650aa
+ms.sourcegitcommit: 56fb7b648adae2c7b81bd969de067af1a2b54180
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/13/2019
-ms.locfileid: "56231018"
+ms.lasthandoff: 03/02/2019
+ms.locfileid: "57227163"
 ---
-# <a name="quickstart-run-sql-server-container-images-with-docker"></a>Guida introduttiva: Eseguire le immagini del contenitore SQL Server con Docker
+# <a name="quickstart-run-sql-server-container-images-with-docker"></a>Avvio rapido: Eseguire le immagini del contenitore SQL Server con Docker
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
@@ -157,13 +157,13 @@ L'impostazione di `-h` e `--name` sullo stesso valore è un buon modo per identi
 
    ::: zone pivot="cs1-bash"
    ```bash
-   sudo docker pull mcr.microsoft.com/mssql/server:2019-CTP2.2-ubuntu
+   sudo docker pull mcr.microsoft.com/mssql/server:2019-CTP2.3-ubuntu
    ```
    ::: zone-end
 
    ::: zone pivot="cs1-powershell"
    ```PowerShell
-   docker pull mcr.microsoft.com/mssql/server:2019-CTP2.2-ubuntu
+   docker pull mcr.microsoft.com/mssql/server:2019-CTP2.3-ubuntu
    ```
    ::: zone-end
 
@@ -180,7 +180,7 @@ L'impostazione di `-h` e `--name` sullo stesso valore è un buon modo per identi
    ```bash
    sudo docker run -e 'ACCEPT_EULA=Y' -e 'SA_PASSWORD=<YourStrong!Passw0rd>' \
       -p 1433:1433 --name sql1 \
-      -d mcr.microsoft.com/mssql/server:2019-CTP2.2-ubuntu
+      -d mcr.microsoft.com/mssql/server:2019-CTP2.3-ubuntu
    ```
    ::: zone-end
 
@@ -188,7 +188,7 @@ L'impostazione di `-h` e `--name` sullo stesso valore è un buon modo per identi
    ```PowerShell
    docker run -e "ACCEPT_EULA=Y" -e "SA_PASSWORD=<YourStrong!Passw0rd>" `
       -p 1433:1433 --name sql1 `
-      -d mcr.microsoft.com/mssql/server:2019-CTP2.2-ubuntu
+      -d mcr.microsoft.com/mssql/server:2019-CTP2.3-ubuntu
    ```
    ::: zone-end
 
@@ -206,7 +206,7 @@ L'impostazione di `-h` e `--name` sullo stesso valore è un buon modo per identi
    | **-e 'SA_PASSWORD=\<YourStrong!Passw0rd\>'** | Specificare la password complessa composta da almeno 8 caratteri e conforme ai [requisiti per le password di SQL Server](../relational-databases/security/password-policy.md). Impostazione obbligatoria per l'immagine di SQL Server. |
    | **-p 1433:1433** | Eseguire il mapping di una porta TCP nell'ambiente host (primo valore) con una porta TCP nel contenitore (secondo valore). In questo esempio, SQL Server è in ascolto sulla porta TCP 1433 nel contenitore e questa funzionalità è esposta alla porta 1433, nell'host. |
    | **--name sql1** | Specificare un nome personalizzato per il contenitore, invece di un nome generato in modo casuale. Se si eseguono più contenitori, non è possibile riutilizzare questo stesso nome. |
-   | **mcr.microsoft.com/mssql/server:2019-CTP2.2-ubuntu** | L'immagine del contenitore SQL Server 2019 CTP 2.2 su Linux. |
+   | **mcr.microsoft.com/mssql/server:2019-CTP2.3-ubuntu** | L'immagine del contenitore SQL Server 2019 CTP 2.3 su Linux. |
 
 3. Per visualizzare i contenitori di Docker, usare il comando `docker ps`.
 

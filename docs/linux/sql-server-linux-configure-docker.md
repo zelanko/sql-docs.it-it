@@ -11,12 +11,12 @@ ms.technology: linux
 ms.assetid: 82737f18-f5d6-4dce-a255-688889fdde69
 ms.custom: sql-linux
 moniker: '>= sql-server-linux-2017 || >= sql-server-2017 || =sqlallproducts-allversions'
-ms.openlocfilehash: e143ba46fd4c288367b3eb75c15b073ebfb9cf34
-ms.sourcegitcommit: 428b0d2951a785bc72f8dac9ac7cea7cda4dc059
+ms.openlocfilehash: 328c73efd2230a09ad838ab375335bdb01f046aa
+ms.sourcegitcommit: 56fb7b648adae2c7b81bd969de067af1a2b54180
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/09/2019
-ms.locfileid: "55972204"
+ms.lasthandoff: 03/02/2019
+ms.locfileid: "57227373"
 ---
 # <a name="configure-sql-server-container-images-on-docker"></a>Configurare immagini del contenitore SQL Server in Docker
 
@@ -41,16 +41,16 @@ Questo articolo configurazione fornisce scenari di utilizzo aggiuntivi nelle sez
 
 ## <a id="rhel"></a> Eseguire le immagini contenitore basate su RHEL
 
-Tutta la documentazione sulle immagini di contenitore Linux di SQL Server del punto per contenitori basati su Ubuntu. A partire da SQL Server 2019 anteprima, è possibile usare contenitori basati su Red Hat Enterprise Linux (RHEL). Nel repository del contenitore da modificare **mcr.microsoft.com/mssql/server:vNext-CTP2.0-ubuntu** al **mcr.microsoft.com/mssql/rhel/server:vNext-CTP2.0** in tutti i comandi di docker.
+Tutta la documentazione sulle immagini di contenitore Linux di SQL Server del punto per contenitori basati su Ubuntu. A partire da SQL Server 2019 anteprima, è possibile usare contenitori basati su Red Hat Enterprise Linux (RHEL). Nel repository del contenitore da modificare **mcr.microsoft.com/mssql/server:2019-CTP2.3-ubuntu** al **mcr.microsoft.com/mssql/rhel/server:2019-CTP2.3** in tutti i comandi di docker.
 
 Ad esempio, il comando seguente esegue il pull il contenitore di anteprima più recente di SQL Server 2019 che utilizza RHEL:
 
 ```bash
-sudo docker pull mcr.microsoft.com/mssql/rhel/server:2019-CTP2.2
+sudo docker pull mcr.microsoft.com/mssql/rhel/server:2019-CTP2.3
 ```
 
 ```PowerShell
-docker pull mcr.microsoft.com/mssql/rhel/server:2019-CTP2.2
+docker pull mcr.microsoft.com/mssql/rhel/server:2019-CTP2.3
 ```
 
 ::: moniker-end
@@ -67,7 +67,7 @@ La Guida introduttiva nella sezione precedente viene eseguita l'edizione Develop
 
 - L'immagine del contenitore per gli sviluppatori può essere configurato per l'esecuzione anche le edizioni di produzione. Usare la procedura seguente per eseguire edizioni di produzione:
 
-Esaminare i requisiti ed eseguire le procedure nel [Guida introduttiva](quickstart-install-connect-docker.md). You must specify your production edition with the **MSSQL_PID** environment variable. Nell'esempio seguente viene illustrato come eseguire l'immagine del contenitore SQL Server 2017 più recente per la versione Enterprise Edition:
+Esaminare i requisiti ed eseguire le procedure nel [Guida introduttiva](quickstart-install-connect-docker.md). È necessario specificare l'edizione di produzione con il **MSSQL_PID** variabile di ambiente. Nell'esempio seguente viene illustrato come eseguire l'immagine del contenitore SQL Server 2017 più recente per la versione Enterprise Edition:
 
       ```bash
       docker run --name sqlenterprise \
@@ -172,13 +172,13 @@ docker run -e "ACCEPT_EULA=Y" -e "MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>" -p 14
 Nell'esempio seguente crea due contenitori di anteprima di SQL Server 2019 e ne esegue il mapping alle porte **1401** e **1402** nel computer host.
 
 ```bash
-docker run -e 'ACCEPT_EULA=Y' -e 'MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>' -p 1401:1433 -d mcr.microsoft.com/mssql/server:vNext-CTP2.0-ubuntu
-docker run -e 'ACCEPT_EULA=Y' -e 'MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>' -p 1402:1433 -d mcr.microsoft.com/mssql/server:vNext-CTP2.0-ubuntu
+docker run -e 'ACCEPT_EULA=Y' -e 'MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>' -p 1401:1433 -d mcr.microsoft.com/mssql/server:2019-CTP2.3-ubuntu
+docker run -e 'ACCEPT_EULA=Y' -e 'MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>' -p 1402:1433 -d mcr.microsoft.com/mssql/server:2019-CTP2.3-ubuntu
 ```
 
 ```PowerShell
-docker run -e "ACCEPT_EULA=Y" -e "MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>" -p 1401:1433 -d mcr.microsoft.com/mssql/server:vNext-CTP2.0-ubuntu
-docker run -e "ACCEPT_EULA=Y" -e "MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>" -p 1402:1433 -d mcr.microsoft.com/mssql/server:vNext-CTP2.0-ubuntu
+docker run -e "ACCEPT_EULA=Y" -e "MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>" -p 1401:1433 -d mcr.microsoft.com/mssql/server:2019-CTP2.3-ubuntu
+docker run -e "ACCEPT_EULA=Y" -e "MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>" -p 1402:1433 -d mcr.microsoft.com/mssql/server:2019-CTP2.3-ubuntu
 ```
 
 ::: moniker-end
@@ -232,11 +232,11 @@ docker run -e "ACCEPT_EULA=Y" -e "MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>" -p 14
 ::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 || =sqlallproducts-allversions"
 
 ```bash
-docker run -e 'ACCEPT_EULA=Y' -e 'MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>' -p 1433:1433 -v <host directory>:/var/opt/mssql -d mcr.microsoft.com/mssql/server:vNext-CTP2.0-ubuntu
+docker run -e 'ACCEPT_EULA=Y' -e 'MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>' -p 1433:1433 -v <host directory>:/var/opt/mssql -d mcr.microsoft.com/mssql/server:2019-CTP2.3-ubuntu
 ```
 
 ```PowerShell
-docker run -e "ACCEPT_EULA=Y" -e "MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>" -p 1433:1433 -v <host directory>:/var/opt/mssql -d mcr.microsoft.com/mssql/server:vNext-CTP2.0-ubuntu
+docker run -e "ACCEPT_EULA=Y" -e "MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>" -p 1433:1433 -v <host directory>:/var/opt/mssql -d mcr.microsoft.com/mssql/server:2019-CTP2.3-ubuntu
 ```
 
 ::: moniker-end
@@ -266,11 +266,11 @@ docker run -e "ACCEPT_EULA=Y" -e "MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>" -p 14
 ::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 || =sqlallproducts-allversions"
 
 ```bash
-docker run -e 'ACCEPT_EULA=Y' -e 'MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>' -p 1433:1433 -v sqlvolume:/var/opt/mssql -d mcr.microsoft.com/mssql/server:vNext-CTP2.0-ubuntu
+docker run -e 'ACCEPT_EULA=Y' -e 'MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>' -p 1433:1433 -v sqlvolume:/var/opt/mssql -d mcr.microsoft.com/mssql/server:2019-CTP2.3-ubuntu
 ```
 
 ```PowerShell
-docker run -e "ACCEPT_EULA=Y" -e "MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>" -p 1433:1433 -v sqlvolume:/var/opt/mssql -d mcr.microsoft.com/mssql/server:vNext-CTP2.0-ubuntu
+docker run -e "ACCEPT_EULA=Y" -e "MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>" -p 1433:1433 -v sqlvolume:/var/opt/mssql -d mcr.microsoft.com/mssql/server:2019-CTP2.3-ubuntu
 ```
 ::: moniker-end
 
@@ -396,14 +396,14 @@ sudo docker run -e 'ACCEPT_EULA=Y' -e "MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>" 
 sudo docker run -e 'ACCEPT_EULA=Y' -e 'MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>' \
    -p 1433:1433 --name sql1 \
    -e 'TZ=America/Los_Angeles'\
-   -d mcr.microsoft.com/mssql/server:vNext-CTP2.0-ubuntu
+   -d mcr.microsoft.com/mssql/server:2019-CTP2.3-ubuntu
 ```
 
 ```PowerShell
 sudo docker run -e 'ACCEPT_EULA=Y' -e "MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>" `
    -p 1433:1433 --name sql1 `
    -e "TZ=America/Los_Angeles" `
-   -d mcr.microsoft.com/mssql/server:vNext-CTP2.0-ubuntu
+   -d mcr.microsoft.com/mssql/server:2019-CTP2.3-ubuntu
 ```
 ::: moniker-end
 
@@ -537,7 +537,7 @@ In Windows, verificare che si avvia PowerShell o prompt dei comandi come amminis
 
 Se il contenitore di SQL Server non viene eseguito correttamente, provare a eseguire i test seguenti:
 
-- Se si verifica un errore, ad esempio **' non è stato possibile creare endpoint CONTAINER_NAME nel bridge di rete. Errore durante l'avvio proxy: bind 0.0.0.0:1433 di ascolto tcp: indirizzo già in uso.'** , quindi si sta provando a eseguire il mapping a una porta che è già in uso la porta del contenitore 1433. Questa situazione può verificarsi se si esegue SQL Server in locale nel computer host. Può inoltre verificarsi se si avvia due contenitori di SQL Server e provare a eseguire il mapping di entrambi per la stessa porta host. In questo caso, usare il `-p` parametro per eseguire il mapping a una porta dell'host diversa la porta del contenitore 1433. Ad esempio: 
+- Se si verifica un errore, ad esempio **' non è stato possibile creare endpoint CONTAINER_NAME nel bridge di rete. Errore durante l'avvio proxy: bind 0.0.0.0:1433 di ascolto tcp: indirizzo già in uso.'** , quindi si sta provando a eseguire il mapping a una porta che è già in uso la porta del contenitore 1433. Questa situazione può verificarsi se si esegue SQL Server in locale nel computer host. Può inoltre verificarsi se si avvia due contenitori di SQL Server e provare a eseguire il mapping di entrambi per la stessa porta host. In questo caso, usare il `-p` parametro per eseguire il mapping a una porta dell'host diversa la porta del contenitore 1433. Esempio: 
 
 <!--SQL Server 2017 on Linux -->
 ::: moniker range="= sql-server-linux-2017 || = sql-server-2017"
@@ -555,11 +555,11 @@ Se il contenitore di SQL Server non viene eseguito correttamente, provare a eseg
 ::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 || =sqlallproducts-allversions"
 
     ```bash
-    docker run -e 'ACCEPT_EULA=Y' -e 'MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>' -p 1400:1433 -d mcr.microsoft.com/mssql/server:vNext-CTP2.0-ubuntu`.
+    docker run -e 'ACCEPT_EULA=Y' -e 'MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>' -p 1400:1433 -d mcr.microsoft.com/mssql/server:2019-CTP2.3-ubuntu`.
     ```
 
     ```PowerShell
-    docker run -e "ACCEPT_EULA=Y" -e "MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>" -p 1400:1433 -d mcr.microsoft.com/mssql/server:vNext-CTP2.0-ubuntu`.
+    docker run -e "ACCEPT_EULA=Y" -e "MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>" -p 1400:1433 -d mcr.microsoft.com/mssql/server:2019-CTP2.3-ubuntu`.
     ```
 
 ::: moniker-end
@@ -592,7 +592,7 @@ docker run -e "ACCEPT_EULA=Y" -e "MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>" -e "M
 ::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 || =sqlallproducts-allversions"
 
 ```bash
-docker run -e "ACCEPT_EULA=Y" -e "MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>" -e "MSSQL_PID=Developer" --cap-add SYS_PTRACE -p 1401:1433 -d mcr.microsoft.com/mssql/server:vNext-CTP2.0-ubuntu
+docker run -e "ACCEPT_EULA=Y" -e "MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>" -e "MSSQL_PID=Developer" --cap-add SYS_PTRACE -p 1401:1433 -d mcr.microsoft.com/mssql/server:2019-CTP2.3-ubuntu
 ```
 
 ::: moniker-end

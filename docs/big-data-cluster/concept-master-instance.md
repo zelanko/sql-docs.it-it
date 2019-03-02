@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: 67109dc6af3c03960435116c79e9f92ae79f595c
-ms.sourcegitcommit: 2533383a7baa03b62430018a006a339c0bd69af2
+ms.openlocfilehash: 24b5799b71f9102785bdcb6103324d8bf8b1ad96
+ms.sourcegitcommit: 56fb7b648adae2c7b81bd969de067af1a2b54180
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57017797"
+ms.lasthandoff: 03/02/2019
+ms.locfileid: "57227303"
 ---
 # <a name="what-is-the-master-instance-in-a-sql-server-2019-big-data-cluster"></a>Che cos'è l'istanza master in un cluster di SQL Server 2019 big data?
 
@@ -29,7 +29,7 @@ L'istanza master di SQL Server fornisce un endpoint TDS accessibile dall'esterno
 
 ## <a name="scale-out-query-management"></a>Gestione delle query di tipo scale-out
 
-L'istanza master di SQL Server contiene il motore di query di tipo scale-out che consente di distribuire le query tra istanze di SQL Server in nodi di [pool di calcolo](concept-compute-pool.md). Il motore di query di scalabilità orizzontale fornisce inoltre l'accesso tramite Transact-SQL per tutte le tabelle Hive nel cluster senza alcuna configurazione aggiuntiva. (Supporto per le tabelle hive non è nella versione CTP 2.3)
+L'istanza master di SQL Server contiene il motore di query di tipo scale-out che consente di distribuire le query tra istanze di SQL Server in nodi di [pool di calcolo](concept-compute-pool.md). Il motore di query di scalabilità orizzontale fornisce inoltre l'accesso tramite Transact-SQL per tutte le tabelle Hive nel cluster senza alcuna configurazione aggiuntiva.
 
 ## <a name="metadata-and-user-databases"></a>I metadati e dei database utente
 

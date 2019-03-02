@@ -10,12 +10,12 @@ ms.prod: sql
 ms.custom: sql-linux
 ms.technology: linux
 ms.assetid: ''
-ms.openlocfilehash: 87e4d1ed1bdb1ce78e2f45fcb49019175fcdfefd
-ms.sourcegitcommit: a2be75158491535c9a59583c51890e3457dc75d6
+ms.openlocfilehash: 25e762b48edb777d701a1482315150623c8c0484
+ms.sourcegitcommit: 56fb7b648adae2c7b81bd969de067af1a2b54180
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/07/2018
-ms.locfileid: "51269694"
+ms.lasthandoff: 03/02/2019
+ms.locfileid: "57227343"
 ---
 # <a name="configure-sql-server-settings-with-environment-variables-on-linux"></a>Configurare le impostazioni di SQL Server con le variabili di ambiente in Linux
 
@@ -45,7 +45,7 @@ ms.locfileid: "51269694"
 <!--SQL Server 2017 on Linux-->
 ::: moniker range="= sql-server-linux-2017 || = sql-server-2017"
 
-| Variabile di ambiente | Description |
+| Variabile di ambiente | Descrizione |
 |-----|-----|
 | **ACCEPT_EULA** | Accettare il contratto di licenza di SQL Server quando è impostato su qualsiasi valore (ad esempio, "Y"). |
 | **MSSQL_SA_PASSWORD** | Configurare la password dell'utente dell'amministratore di sistema. |
@@ -69,7 +69,7 @@ ms.locfileid: "51269694"
 <!--SQL Server 2019 on Linux-->
 ::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 || =sqlallproducts-allversions"
 
-| Variabile di ambiente | Description |
+| Variabile di ambiente | Descrizione |
 |-----|-----|
 | **ACCEPT_EULA** | Accettare il contratto di licenza di SQL Server quando è impostato su qualsiasi valore (ad esempio, "Y"). |
 | **MSSQL_SA_PASSWORD** | Configurare la password dell'utente dell'amministratore di sistema. |
@@ -138,13 +138,13 @@ docker run -e ACCEPT_EULA=Y -e MSSQL_PID="Developer" -e MSSQL_SA_PASSWORD="<Your
 Se si esegue Docker su Linux/macOS, usare la sintassi seguente con le virgolette singole:
 
 ```bash
-docker run -e ACCEPT_EULA=Y -e MSSQL_PID='Developer' -e MSSQL_SA_PASSWORD='<YourStrong!Passw0rd>' -e MSSQL_TCP_PORT=1234 -p 1234:1234 -d mcr.microsoft.com/mssql/server:vNext-CTP2.0-ubuntu
+docker run -e ACCEPT_EULA=Y -e MSSQL_PID='Developer' -e MSSQL_SA_PASSWORD='<YourStrong!Passw0rd>' -e MSSQL_TCP_PORT=1234 -p 1234:1234 -d mcr.microsoft.com/mssql/server:2019-CTP2.3-ubuntu
 ```
 
 Se si esegue Docker in Windows, usare la sintassi seguente con le virgolette doppie:
 
 ```bash
-docker run -e ACCEPT_EULA=Y -e MSSQL_PID="Developer" -e MSSQL_SA_PASSWORD="<YourStrong!Passw0rd>" -e MSSQL_TCP_PORT=1234 -p 1234:1234 -d mcr.microsoft.com/mssql/server:vNext-CTP2.0-ubuntu
+docker run -e ACCEPT_EULA=Y -e MSSQL_PID="Developer" -e MSSQL_SA_PASSWORD="<YourStrong!Passw0rd>" -e MSSQL_TCP_PORT=1234 -p 1234:1234 -d mcr.microsoft.com/mssql/server:2019-CTP2.3-ubuntu
 ```
 
 ::: moniker-end

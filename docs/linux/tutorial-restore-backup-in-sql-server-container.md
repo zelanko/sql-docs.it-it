@@ -10,12 +10,12 @@ ms.prod: sql
 ms.custom: sql-linux
 ms.technology: linux
 moniker: '>= sql-server-linux-2017 || >= sql-server-2017 || =sqlallproducts-allversions'
-ms.openlocfilehash: f6616b966faa48dfc56d8333a9f760c254cfae3e
-ms.sourcegitcommit: a2be75158491535c9a59583c51890e3457dc75d6
+ms.openlocfilehash: 38dc7256e4a0e7ba2a459a9691e682cebbaa05ee
+ms.sourcegitcommit: 56fb7b648adae2c7b81bd969de067af1a2b54180
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/07/2018
-ms.locfileid: "51269914"
+ms.lasthandoff: 03/02/2019
+ms.locfileid: "57227173"
 ---
 # <a name="restore-a-sql-server-database-in-a-linux-docker-container"></a>Ripristinare un database di SQL Server in un contenitore Docker di Linux
 
@@ -117,11 +117,11 @@ Questa esercitazione illustra come spostare e il ripristino di un file di backup
 1. Eseguire il pull dell'anteprima di SQL Server 2019 immagine del contenitore Linux dall'Hub Docker.
 
    ```bash
-   sudo docker pull mcr.microsoft.com/mssql/server:vNext-CTP2.0-ubuntu
+   sudo docker pull mcr.microsoft.com/mssql/server:2019-CTP2.3-ubuntu
    ```
 
    ```PowerShell
-   docker pull mcr.microsoft.com/mssql/server:vNext-CTP2.0-ubuntu
+   docker pull mcr.microsoft.com/mssql/server:2019-CTP2.3-ubuntu
    ```
 
    > [!TIP]
@@ -133,14 +133,14 @@ Questa esercitazione illustra come spostare e il ripristino di un file di backup
    sudo docker run -e 'ACCEPT_EULA=Y' -e 'MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>' \
       --name 'sql1' -p 1401:1433 \
       -v sql1data:/var/opt/mssql \
-      -d mcr.microsoft.com/mssql/server:vNext-CTP2.0-ubuntu
+      -d mcr.microsoft.com/mssql/server:2019-CTP2.3-ubuntu
    ```
 
    ```PowerShell
    docker run -e "ACCEPT_EULA=Y" -e "MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>" `
       --name "sql1" -p 1401:1433 `
       -v sql1data:/var/opt/mssql `
-      -d mcr.microsoft.com/mssql/server:vNext-CTP2.0-ubuntu
+      -d mcr.microsoft.com/mssql/server:2019-CTP2.3-ubuntu
    ```
 
    Questo comando crea un contenitore di anteprima di SQL Server 2019 con l'edizione Developer (impostazione predefinita). Porta di SQL Server **1433** viene esposto nell'host come porta **1401**. L'opzione facoltativa `-v sql1data:/var/opt/mssql` parametro crea un contenitore di volumi di dati denominato **sql1ddata**. Ciò consente di rendere persistenti i dati creati da SQL Server.
@@ -494,13 +494,13 @@ Oltre al backup del database per la protezione dei dati, è anche possibile usar
     ```bash
     sudo docker run -e 'ACCEPT_EULA=Y' -e 'MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>' \
        --name 'sql2' -e 'MSSQL_PID=Developer' -p 1401:1433 \
-       -v sql1data:/var/opt/mssql -d mcr.microsoft.com/mssql/server:vNext-CTP2.0-ubuntu
+       -v sql1data:/var/opt/mssql -d mcr.microsoft.com/mssql/server:2019-CTP2.3-ubuntu
     ```
 
     ```PowerShell
     docker run -e "ACCEPT_EULA=Y" -e "MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>" `
        --name "sql2" -e "MSSQL_PID=Developer" -p 1401:1433 `
-       -v sql1data:/var/opt/mssql -d mcr.microsoft.com/mssql/server:vNext-CTP2.0-ubuntu
+       -v sql1data:/var/opt/mssql -d mcr.microsoft.com/mssql/server:2019-CTP2.3-ubuntu
     ```
 
 1. Il database Wide World Importers è ora nel nuovo contenitore. Eseguire una query per verificare le modifiche precedenti apportate.

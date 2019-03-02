@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: a6f40d4f113942fe774665358d8f1202ba8c4632
-ms.sourcegitcommit: 2533383a7baa03b62430018a006a339c0bd69af2
+ms.openlocfilehash: e7de0c9dafe7c5c8f8a4b2a2dc709105218fb2fc
+ms.sourcegitcommit: 56fb7b648adae2c7b81bd969de067af1a2b54180
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57017947"
+ms.lasthandoff: 03/02/2019
+ms.locfileid: "57227213"
 ---
 # <a name="release-notes-for-sql-server-2019-big-data-clusters"></a>Note sulla versione per i cluster di SQL Server 2019 dei big Data
 
@@ -41,6 +41,7 @@ Le sezioni seguenti descrivono le nuove funzionalità e problemi noti per i clus
 - [Estensione di Visual Studio Code per distribuire applicazioni in cluster di SQL Server i big data](app-deployment-extension.md).
 - Nuovo parametro di ordinamento per il **mssqlctl** dello strumento.
 - [Usare Sparklyr nel cluster di SQL Server 2019 Big data](sparklyr-from-RStudio.md).
+- Montare archiviazione esterna compatibile con HDFS nel cluster di big data con [suddivisione in livelli HDFS](hdfs-tiering.md).
 - Nuova esperienza di connessione unificato per la [istanza master di SQL Server e il Gateway HDFS/Spark](connect-to-big-data-cluster.md).
 - Eliminazione di un cluster con **mssqlctl cluster delete** ora Elimina solo gli oggetti nello spazio dei nomi che fanno parte di un cluster di big data ma lascia lo spazio dei nomi. Questo comando eliminato in precedenza, l'intero spazio dei nomi.
 - I nomi degli endpoint sono stati modificati e consolidati in questa versione:
@@ -74,14 +75,6 @@ Le sezioni seguenti riportano i problemi noti per i cluster di big data di SQL S
 
 - In caso di una distribuzione cluster con i big data, non viene rimosso lo spazio dei nomi associato. Ciò può comportare uno spazio dei nomi orfano sul cluster. Soluzione alternativa consiste nell'eliminare manualmente lo spazio dei nomi prima di distribuire un cluster con lo stesso nome.
 
-#### <a name="cluster-administration-portal"></a>Portale di amministrazione cluster
-
-Nel portale di amministrazione cluster non viene visualizzata l'endpoint per l'istanza master di SQL Server. Per trovare l'indirizzo IP e la porta per l'istanza master, usare il comando seguente **kubectl** comando:
-
-```
-kubectl get svc endpoint-master-pool -n <your-cluster-name>
-```
-
 #### <a name="external-tables"></a>Tabelle esterne
 
 - È possibile creare una tabella esterna di pool di dati per una tabella che contiene i tipi di colonna non supportati. Se si esegue una query della tabella esterna, viene visualizzato un messaggio simile al seguente:
@@ -91,6 +84,8 @@ kubectl get svc endpoint-master-pool -n <your-cluster-name>
 - Se si esegue una query una tabella esterna del pool di archiviazione, è possibile ottenere un errore se vengono copiato i file sottostante in HDFS nello stesso momento.
 
    `Msg 7320, Level 16, State 110, Line 157 Cannot execute the query "Remote Query" against OLE DB provider "SQLNCLI11" for linked server "(null)". 110806;A distributed query failed: One or more errors occurred.`
+
+- Se si sta creando una tabella esterna a Oracle che usano tipi di dati carattere, la procedura guidata la virtualizzazione di Studio di Azure Data interpreta queste colonne come VARCHAR nella definizione della tabella esterna. Ciò causerà un errore nel DDL della tabella esterna. Modificare lo schema Oracle per utilizzare il tipo NVARCHAR2, oppure creare manualmente le istruzioni di tabella esterna e specificare NVARCHAR invece di usare la procedura guidata.
 
 #### <a name="spark-and-notebooks"></a>Spark e notebook
 
