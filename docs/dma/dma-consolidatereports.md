@@ -15,12 +15,12 @@ ms.assetid: ''
 author: pochiraju
 ms.author: rajpo
 manager: craigg
-ms.openlocfilehash: adfb1663d9ec1b86abf38c46c0056622105b80d5
-ms.sourcegitcommit: 2ab79765e51913f1df6410f0cd56bf2a13221f37
+ms.openlocfilehash: 252e162b78f93b156adcea045bc869e618176331
+ms.sourcegitcommit: 2663063e29f2868ee6b6d596df4b2af2d22ade6f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/27/2019
-ms.locfileid: "56956032"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57305359"
 ---
 # <a name="assess-an-enterprise-and-consolidate-assessment-reports-with-dma"></a>Valutare un'azienda e di consolidare i report di valutazione con DMA
 
@@ -71,6 +71,9 @@ L'inventario può trovarsi in uno dei due formati:
 - Tabella di SQL Server
 
 ### <a name="if-using-a-csv-file"></a>Se si usa un file CSV
+> [!IMPORTANT]
+> Verificare che il file di inventario viene salvato come file delimitato da virgole (CSV).
+
 Quando si usa un file csv per importare i dati, assicurarsi che esistono solo due colonne di dati - **nome istanza** e **Nome Database**, e che le colonne non includono le righe di intestazione.
  
  ![contenuto del file CSV](../dma/media//dma-consolidatereports/dma-csv-file-contents.png)
@@ -153,10 +156,7 @@ Sebbene non sia obbligatorio, per ottenere il massimo valore dai report, è cons
 
 1. Aprire il modello DMA i report Power BI in Power BI Desktop.
 2. Immettere i dettagli del server che puntano alle **DMAWarehouse** del database e quindi selezionare **carico**.
-
-    > [!IMPORTANT]
-    > Non premere INVIO per accettare i valori.
-
+   
       ![Caricare il modello DMA i report Power BI](../dma/media//dma-consolidatereports/dma-reports-powerbi-template-loaded.png)
 
    Dopo che il report ha aggiornato i dati di **DMAWarehouse** database, viene visualizzato un report simile al seguente.

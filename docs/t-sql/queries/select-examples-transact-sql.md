@@ -28,15 +28,15 @@ helpviewer_keywords:
 - computed sums
 - WHERE clause, SELECT statement
 ms.assetid: 9b9caa3d-e7d0-42e1-b60b-a5572142186c
-author: douglaslMS
-ms.author: douglasl
+author: VanMSFT
+ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 558092ec5c5cfe587b9a7644561cc94a6a5c1610
-ms.sourcegitcommit: 110e5e09ab3f301c530c3f6363013239febf0ce5
+ms.openlocfilehash: 212a13b10fcc43eb8113da3b418bdf57c53ae19a
+ms.sourcegitcommit: 670082cb47f7d3d82e987b549b6f8e3a8968b5db
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/10/2018
-ms.locfileid: "48906091"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57334428"
 ---
 # <a name="select-examples-transact-sql"></a>Esempi di istruzioni SELECT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -56,7 +56,7 @@ ms.locfileid: "48906091"
   
  [!code-sql[Select#SelectExamples3](../../t-sql/queries/codesnippet/tsql/select-examples-transact_3.sql)]  
   
-## <a name="b-using-select-with-column-headings-and-calculations"></a>B. Utilizzo dell'istruzione SELECT con intestazioni e calcoli di colonna  
+## <a name="b-using-select-with-column-headings-and-calculations"></a>b. Utilizzo dell'istruzione SELECT con intestazioni e calcoli di colonna  
  Nell'esempio seguente vengono restituite tutte le righe della tabella `Product`. Nel primo esempio vengono restituite le vendite totali e gli sconti per ogni prodotto. Nel secondo esempio vengono calcolati i ricavi totali per ogni prodotto.  
   
  [!code-sql[Select#SelectExamples4](../../t-sql/queries/codesnippet/tsql/select-examples-transact_4.sql)]  

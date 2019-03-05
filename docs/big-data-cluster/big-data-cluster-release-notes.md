@@ -5,17 +5,17 @@ description: Questo articolo descrive gli ultimi aggiornamenti e problemi noti p
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 02/28/2019
+ms.date: 03/04/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: e7de0c9dafe7c5c8f8a4b2a2dc709105218fb2fc
-ms.sourcegitcommit: 56fb7b648adae2c7b81bd969de067af1a2b54180
+ms.openlocfilehash: dced44806927f7b41957c2eb8374688e8be88f1f
+ms.sourcegitcommit: 670082cb47f7d3d82e987b549b6f8e3a8968b5db
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/02/2019
-ms.locfileid: "57227213"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57334748"
 ---
 # <a name="release-notes-for-sql-server-2019-big-data-clusters"></a>Note sulla versione per i cluster di SQL Server 2019 dei big Data
 
@@ -39,7 +39,7 @@ Le sezioni seguenti descrivono le nuove funzionalità e problemi noti per i clus
 - [Inviare processi Spark nei cluster Big Data SQL Server in IntelliJ](spark-submit-job-intellij-tool-plugin.md).
 - [Comune della riga di comando per la gestione di cluster e la distribuzione di applicazioni](big-data-cluster-create-apps.md).
 - [Estensione di Visual Studio Code per distribuire applicazioni in cluster di SQL Server i big data](app-deployment-extension.md).
-- Nuovo parametro di ordinamento per il **mssqlctl** dello strumento.
+- [Modifiche per il **mssqlctl** dello strumento di uso del comando](#mssqlctlctp23).
 - [Usare Sparklyr nel cluster di SQL Server 2019 Big data](sparklyr-from-RStudio.md).
 - Montare archiviazione esterna compatibile con HDFS nel cluster di big data con [suddivisione in livelli HDFS](hdfs-tiering.md).
 - Nuova esperienza di connessione unificato per la [istanza master di SQL Server e il Gateway HDFS/Spark](connect-to-big-data-cluster.md).
@@ -74,6 +74,18 @@ Le sezioni seguenti riportano i problemi noti per i cluster di big data di SQL S
    `Warning  Unhealthy: Readiness probe failed: cat: /tmp/provisioner.done: No such file or directory`
 
 - In caso di una distribuzione cluster con i big data, non viene rimosso lo spazio dei nomi associato. Ciò può comportare uno spazio dei nomi orfano sul cluster. Soluzione alternativa consiste nell'eliminare manualmente lo spazio dei nomi prima di distribuire un cluster con lo stesso nome.
+
+#### <a id="mssqlctlctp23"></a> mssqlctl
+
+- Il **mssqlctl** strumento modificato da un comando di verbo-sostantivo ordinamento a un ordine di verbo-sostantivo. Ad esempio, `mssqlctl create cluster` è ora `mssqlctl cluster create`.
+
+- Il `--name` parametro è ora necessaria per la creazione di un cluster con `mssqlctl cluster create`.
+
+   ```bash
+   mssqlctl cluster create --name <cluster_name>
+   ```
+
+- Per informazioni importanti sull'aggiornamento all'ultima versione dei cluster di big data e **mssqlctl**, vedere [esegue l'aggiornamento a una nuova versione](deployment-guidance.md#upgrade).
 
 #### <a name="external-tables"></a>Tabelle esterne
 

@@ -1,7 +1,7 @@
 ---
 title: Connessione di diagnostica per gli amministratori di database | Microsoft Docs
 ms.custom: ''
-ms.date: 10/16/2015
+ms.date: 02/27/2019
 ms.prod: sql
 ms.prod_service: high-availability
 ms.reviewer: ''
@@ -21,15 +21,15 @@ ms.assetid: 993e0820-17f2-4c43-880c-d38290bf7abc
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: c51655426d892c4d6e233bc72b7388d200bbce8a
-ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
+ms.openlocfilehash: 7cdcffb40c1c0e15a1be56a4484edade6b5f1463
+ms.sourcegitcommit: 2ab79765e51913f1df6410f0cd56bf2a13221f37
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/18/2018
-ms.locfileid: "53589396"
+ms.lasthandoff: 02/27/2019
+ms.locfileid: "56955982"
 ---
 # <a name="diagnostic-connection-for-database-administrators"></a>Connessione di diagnostica per gli amministratori di database
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md.md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] offre una speciale connessione di diagnostica a cui possono ricorrere gli amministratori quando non è possibile usare connessioni standard al server. Questa connessione di diagnostica consente a un amministratore di accedere a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] per eseguire query di diagnostica e risolvere problemi anche quando [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] non risponde alle richieste di connessione standard.  
   
  Questa connessione amministrativa dedicata (DAC, Dedicated Administrator Connection) supporta la crittografia e altre caratteristiche di sicurezza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. La connessione DAC consente solo il cambiamento del contesto utente in un altro utente con privilegi amministrativi.  
