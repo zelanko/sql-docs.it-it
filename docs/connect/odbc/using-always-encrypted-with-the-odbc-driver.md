@@ -9,12 +9,12 @@ ms.assetid: 02e306b8-9dde-4846-8d64-c528e2ffe479
 ms.author: v-chojas
 manager: craigg
 author: MightyPen
-ms.openlocfilehash: 1ba94395acad1aec8717c570cc4b6e30ed7a12a4
-ms.sourcegitcommit: b3d84abfa4e2922951430772c9f86dce450e4ed1
-ms.translationtype: HT
+ms.openlocfilehash: dd6037cbc40c9cf422c38827d5c96115db33db73
+ms.sourcegitcommit: 2ab79765e51913f1df6410f0cd56bf2a13221f37
+ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/22/2019
-ms.locfileid: "56662855"
+ms.lasthandoff: 02/27/2019
+ms.locfileid: "56956062"
 ---
 # <a name="using-always-encrypted-with-the-odbc-driver-for-sql-server"></a>Uso di Always Encrypted con ODBC Driver for SQL Server
 [!INCLUDE[Driver_ODBC_Download](../../includes/driver_odbc_download.md)]
@@ -538,7 +538,7 @@ Mentre il driver ODBC consentirà l'utilizzo di [operazioni asincrone](../../rel
 Prima di ODBC Driver 17 for SQL Server non era possibile recuperare i caratteri crittografati e le colonne di dati binari in parti con SQLGetData. Ora è possibile eseguire una sola chiamata a SQLGetData, con un buffer di lunghezza sufficiente per contenere i dati dell'intera colonna.
 
 ### <a name="send-data-in-parts-with-sqlputdata"></a>Inviare i dati in parti con SQLPutData
-Con SQLPutData non è possibile inviare i dati a scopo di inserimento o confronto. È possibile eseguire una sola chiamata a SQLPutData, con un buffer che contiene tutti i dati. Per l'inserimento di dati Long in colonne crittografate, usare l'API della copia bulk, descritta nella sezione successiva, con un file di dati di input.
+Impossibile inviare dati di inserimento o di confronto prima 17.3 Driver ODBC per SQL Server, in parti con SQLPutData. È possibile eseguire una sola chiamata a SQLPutData, con un buffer che contiene tutti i dati. Per l'inserimento di dati Long in colonne crittografate, usare l'API della copia bulk, descritta nella sezione successiva, con un file di dati di input.
 
 ### <a name="encrypted-money-and-smallmoney"></a>Smallmoney e money crittografati
 I parametri non possono destinare le colonne crittografate **money** o **smallmoney**, in quanto non esiste un tipo di dati ODBC specifico che esegue il mapping a questi tipi. Si generano così errori di conflitto del tipo di operando.

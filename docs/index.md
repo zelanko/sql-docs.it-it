@@ -213,7 +213,7 @@ ms.date: 12/15/2018
                                                       </div>
                                                       <div class="cardText">
                                                           <h3>Gestire, monitorare e ottimizzare</h3>
-                                                          <p><b>Piani di manutenzione, SQL Profiler, ottimizzazione automatica, OLTP in memoria, partizioni, statistiche, indici, stima della cardinalità</b>  </p>
+                                                          <p><b>Piani di manutenzione, SQL Profiler, ottimizzazione automatica, OLTP in memoria, partizioni, statistiche, indici, stima della cardinalità </b>  </p>
                                                       </div>
                                                   </div>
                                               </div>
