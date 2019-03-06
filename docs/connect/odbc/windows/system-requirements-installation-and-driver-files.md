@@ -21,7 +21,7 @@ ms.locfileid: "56464767"
 # <a name="system-requirements-installation-and-driver-files"></a>Requisiti di sistema, installazione e file del driver
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
 
-ODBC Driver 11 for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] supporta connessioni a SQL Server 2014, SQL Server 2012 R2, [!INCLUDE[ssKilimanjaro](../../../includes/sskilimanjaro-md.md)], [!INCLUDE[ssKatmai](../../../includes/sskatmai_md.md)] e [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)].  
+ODBC Driver 11 for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] supporta connessioni a SQL Server 2014, SQL Server 2012, [!INCLUDE[ssKilimanjaro](../../../includes/sskilimanjaro-md.md)], [!INCLUDE[ssKatmai](../../../includes/sskatmai_md.md)] e [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)].  
   
 In Windows è possibile installare ODBC Driver 11 for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] in un computer che dispone anche di una o più versioni di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client.  
   
@@ -97,12 +97,12 @@ Ad esempio, quando si compila un'applicazione ODBC con `msodbcsql11.lib` e `msod
  
 |Componente|Descrizione|  
 |---------------|-----------------|  
-|msodbcsql17.dll or <br> msodbcsql13.dll o <br> msodbcsql11.dll|File della DLL (Dynamic-Link Library, libreria di collegamento dinamico) che contiene tutte le funzionalità del driver. Questo file viene installato in % SYSTEMROOT%\System32.|  
+|msodbcsql17.dll o <br> msodbcsql13.dll o <br> msodbcsql11.dll|File della DLL (Dynamic-Link Library, libreria di collegamento dinamico) che contiene tutte le funzionalità del driver. Questo file viene installato in % SYSTEMROOT%\System32.|  
 |msodbcdiag17.dll o <br> msodbcdiag13.dll o <br> msodbcdiag11.dll|Il file di libreria di collegamento dinamico (DLL) che contiene l'interfaccia di diagnostica (traccia) del driver. Questo file viene installato in % SYSTEMROOT%\System32.|
-|msodbcsqlr17.rll or <br> msodbcsqlr13.rll o <br> msodbcsqlr11.rll|File di risorse associato per la libreria del driver. Questo file viene installato in % SYSTEMROOT%\System32\1033.| 
+|msodbcsqlr17.rll o <br> msodbcsqlr13.rll o <br> msodbcsqlr11.rll|File di risorse associato per la libreria del driver. Questo file viene installato in % SYSTEMROOT%\System32\1033.| 
 |s13ch_msodbcsql.chm o <br> s11ch_msodbcsql.chm |File della Guida della Creazione guidata origine dati che illustra come creare un'origine dati per il driver. Questo file viene installato in %SYSTEMROOT%\System32\1033 <br /> <br /> **Nota:** è presente alcun file chm per ODBC Driver 17. |  
 |msodbcsql.h|File di intestazione che contiene tutte le nuove definizioni necessarie per usare il driver.<br /><br /> **Nota:**  non è possibile fare riferimento a msodbcsql.h e odbcss.h nello stesso programma.<br /><br /> msodbcsql.h per ODBC Driver 17 o 13 viene installato in %PROGRAMFILES%\Microsoft SQL Server\Client SDK\ODBC\130\SDK. <br /> msodbcsql.h per ODBC Driver 11 viene installato in %PROGRAMFILES%\Microsoft SQL Server\Client SDK\ODBC\110\SDK.| 
-|msodbcsql17.lib or <br> msodbcsql13.lib o <br> msodbcsql11.lib|File di libreria necessario per chiamare le funzioni dell'utilità **bcp** che fanno parte del driver.<br /><br /> **Nota:** se si fa riferimento a questo file di libreria nel programma, assicurarsi che questo sia presente nel percorso di sistema e in quello degli utenti che usano l'applicazione.<br /><br /> msodbcsql17.lib o msodbcsql13.lib viene installato in %PROGRAMFILES%\Microsoft SQL Server\Client SDK\ODBC\130\SDK.<br /> msodbcsql11.lib viene installato in %PROGRAMFILES%\Microsoft SQL Server\Client SDK\ODBC\110\SDK.|
+|msodbcsql17.lib o <br> msodbcsql13.lib o <br> msodbcsql11.lib|File di libreria necessario per chiamare le funzioni dell'utilità **bcp** che fanno parte del driver.<br /><br /> **Nota:** se si fa riferimento a questo file di libreria nel programma, assicurarsi che questo sia presente nel percorso di sistema e in quello degli utenti che usano l'applicazione.<br /><br /> msodbcsql17.lib o msodbcsql13.lib viene installato in %PROGRAMFILES%\Microsoft SQL Server\Client SDK\ODBC\130\SDK.<br /> msodbcsql11.lib viene installato in %PROGRAMFILES%\Microsoft SQL Server\Client SDK\ODBC\110\SDK.|
 
   
 ## <a name="see-also"></a>Vedere anche  

@@ -63,18 +63,18 @@ sqlsrv_prepare(resource $conn, string $tsql [, array $params [, array $options]]
     |-----------|---------------|  
     |*&$value*|Valore letterale o riferimento a una variabile PHP.|  
     |*$direction*[facoltativo]|Una delle costanti **SQLSRV_PARAM_\*** seguenti usate per indicare la direzione del parametro: **SQLSRV_PARAM_IN**, **SQLSRV_PARAM_OUT**, **SQLSRV_PARAM_INOUT**. Il valore predefinito è **SQLSRV_PARAM_IN**.<br /><br />Per altre informazioni sulle costanti PHP, vedere [Costanti &#40;driver Microsoft per PHP per SQL Server&#41;](../../connect/php/constants-microsoft-drivers-for-php-for-sql-server.md).|  
-    |*$phpType*[OPTIONAL]|Costante **SQLSRV_PHPTYPE_\*** che specifica il tipo di dati PHP del valore restituito.|  
+    |*$phpType*[facoltativo]|Costante **SQLSRV_PHPTYPE_\*** che specifica il tipo di dati PHP del valore restituito.|  
     |*$sqlType*[facoltativo]|Costante **SQLSRV_SQLTYPE_\*** che specifica il tipo di dati SQL Server del valore di input.|  
   
 *$options* [facoltativo]: matrice associativa che imposta le proprietà delle query. Nella tabella seguente sono elencate le chiavi supportate e i valori corrispondenti:  
   
 |Key|Valori supportati|Descrizione|  
 |-------|--------------------|---------------|  
-|ClientBufferMaxKBSize|numero intero positivo|Consente di configurare le dimensioni del buffer che contiene il set di risultati per un cursore sul lato client.<br /><br />Il valore predefinito è 10240 MB. Per altre informazioni, leggere [che specifica un tipo di cursore e selezione di righe](../../connect/php/specifying-a-cursor-type-and-selecting-rows.md).|
+|ClientBufferMaxKBSize|Numero intero positivo|Consente di configurare le dimensioni del buffer che contiene il set di risultati per un cursore sul lato client.<br /><br />Il valore predefinito è 10240 KB. Per altre informazioni, leggere [che specifica un tipo di cursore e selezione di righe](../../connect/php/specifying-a-cursor-type-and-selecting-rows.md).|
 |DecimalPlaces|Un numero intero compreso tra 0 e 4 (inclusivo)|Specifica i numeri decimali quando si formatta recuperate valori di valuta.<br /><br />Qualsiasi numero intero negativo o valore maggiore di 4 verrà ignorato.<br /><br />Questa opzione funziona solo quando è FormatDecimals **true**.|
 |FormatDecimals|**true** o **false**<br /><br />Il valore predefinito è **false**.|Specifica se aggiungere leader zeri per le stringhe decimali quando appropriato e abilita il `DecimalPlaces` opzione per la formattazione di tipi di denaro.<br /><br />Per altre informazioni, vedere [formattazione le stringhe decimali e valori di tipo Money (Driver SQLSRV)](../../connect/php/formatting-decimals-sqlsrv-driver.md).|
-|QueryTimeout|numero intero positivo|Imposta il timeout in secondi della query. Per impostazione predefinita il driver attende i risultati per un periodo illimitato.|  
-|ReturnDatesAsStrings|**true** o **false**<br /><br />Il valore predefinito è **false**.|Configura l'istruzione per recuperare i tipi di data e ora come stringhe (**true**). Per altre informazioni, vedere [Procedura: Recuperare il tipo data e ora come stringhe usando il driver SQLSRV](../../connect/php/how-to-retrieve-date-and-time-type-as-strings-using-the-sqlsrv-driver.md).
+|QueryTimeout|Numero intero positivo|Imposta il timeout in secondi della query. Per impostazione predefinita il driver attende i risultati per un periodo illimitato.|  
+|ReturnDatesAsStrings|**true** o **false**<br /><br />Il valore predefinito è **false**.|Configura l'istruzione per recuperare i tipi di data e ora come stringhe (**true**). Per altre informazioni, vedere [Procedura: Recuperare i tipi di data e ora come stringhe usando il driver SQLSRV](../../connect/php/how-to-retrieve-date-and-time-type-as-strings-using-the-sqlsrv-driver.md).
 |Scorrimento|SQLSRV_CURSOR_FORWARD<br /><br />SQLSRV_CURSOR_STATIC<br /><br />SQLSRV_CURSOR_DYNAMIC<br /><br />SQLSRV_CURSOR_KEYSET<br /><br />SQLSRV_CURSOR_CLIENT_BUFFERED|Per altre informazioni su questi valori, vedere [Specifica di un tipo di cursore e selezione di righe](../../connect/php/specifying-a-cursor-type-and-selecting-rows.md).|  
 |SendStreamParamsAtExec|**true** o **false**<br /><br />Il valore predefinito è **true**.|Configura il driver per l'invio di tutti i flussi di dati in fase di esecuzione (**true**) o in blocchi (**false**). Per impostazione predefinita, il valore è impostato su **true**. Per altre informazioni, vedere [sqlsrv_send_stream_data](../../connect/php/sqlsrv-send-stream-data.md).|  
   

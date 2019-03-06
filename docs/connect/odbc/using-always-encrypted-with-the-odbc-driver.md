@@ -9,12 +9,12 @@ ms.assetid: 02e306b8-9dde-4846-8d64-c528e2ffe479
 ms.author: v-chojas
 manager: craigg
 author: MightyPen
-ms.openlocfilehash: 72ff999a4b88bff5d8b78f8e8b936da18b8a4e16
-ms.sourcegitcommit: 1e28f923cda9436a4395a405ebda5149202f8204
-ms.translationtype: MTE75
+ms.openlocfilehash: 1ba94395acad1aec8717c570cc4b6e30ed7a12a4
+ms.sourcegitcommit: b3d84abfa4e2922951430772c9f86dce450e4ed1
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/25/2019
-ms.locfileid: "55044948"
+ms.lasthandoff: 02/22/2019
+ms.locfileid: "56662855"
 ---
 # <a name="using-always-encrypted-with-the-odbc-driver-for-sql-server"></a>Uso di Always Encrypted con ODBC Driver for SQL Server
 [!INCLUDE[Driver_ODBC_Download](../../includes/driver_odbc_download.md)]
@@ -96,7 +96,7 @@ Questo esempio illustra come inserire una riga nella tabella Patients. Si noti q
 
 - I valori inseriti nelle colonne di database, incluse quelle crittografate, vengono passati come parametri associati (vedere [Funzione SQLBindParameter](https://msdn.microsoft.com/library/ms710963(v=vs.85).aspx)). Quando si inviano valori a colonne non crittografate, l'uso dei parametri è facoltativo, nonostante sia consigliabile per prevenire attacchi SQL injection. È invece necessario usare i parametri in presenza di valori destinati a colonne crittografate. Se i valori inseriti nelle colonne SSN o BirthDate sono stati passati come valori letterali incorporati nell'istruzione della query, la query avrà esito negativo perché il driver non prova a crittografare o in caso contrario elaborare valori letterali nelle query. Di conseguenza, il server li rifiuterà come incompatibili con le colonne crittografate.
 
-- Il tipo SQL del parametro inserito nella colonna SSN è impostato su SQL_CHAR, che esegue il mapping per il **char** tipo di dati di SQL Server (`rc = SQLBindParameter(hstmt, 1, SQL_PARAM_INPUT, SQL_C_CHAR, SQL_CHAR, 11, 0, (SQLPOINTER)SSN, 0, &cbSSN);`). Se il tipo del parametro è stato impostato su SQL_WCHAR, che esegue il mapping a **nchar**, la query avrà esito negativo, come Always Encrypted non supporta le conversioni sul lato server da valori nchar crittografati a valori char crittografato. Vedere [riferimento per programmatori ODBC: Appendice d: Tipi di dati](https://msdn.microsoft.com/library/ms713607.aspx) per informazioni sui mapping dei tipi di dati.
+- Il tipo SQL del parametro inserito nella colonna SSN è impostato su SQL_CHAR, che esegue il mapping per il **char** tipo di dati di SQL Server (`rc = SQLBindParameter(hstmt, 1, SQL_PARAM_INPUT, SQL_C_CHAR, SQL_CHAR, 11, 0, (SQLPOINTER)SSN, 0, &cbSSN);`). Se il tipo del parametro è stato impostato su SQL_WCHAR, che esegue il mapping a **nchar**, la query avrà esito negativo, come Always Encrypted non supporta le conversioni sul lato server da valori nchar crittografati a valori char crittografato. Visualizzare [riferimento per programmatori ODBC: Appendice d: i tipi di dati](https://msdn.microsoft.com/library/ms713607.aspx) per informazioni sui mapping dei tipi di dati.
 
 ```
     SQL_DATE_STRUCT date;
@@ -286,7 +286,7 @@ Questa sezione descrive le ottimizzazioni delle prestazioni predefinite in ODBC 
 
 ### <a name="controlling-round-trips-to-retrieve-metadata-for-query-parameters"></a>Controllo dei round trip per recuperare i metadati per i parametri di query
 
-Se la funzionalità Always Encrypted è abilitata per una connessione, per impostazione predefinita il driver chiamerà [sys.sp_describe_parameter_encryption](../../relational-databases/system-stored-procedures/sp-describe-parameter-encryption-transact-sql.md) per ogni query con parametri, passando l'istruzione di query (senza i valori dei parametri) a SQL Server. Questa stored procedure analizza l'istruzione di query per scoprire se i parametri devono essere crittografati e, in caso affermativo, restituisce le informazioni relative alla crittografia per ogni parametro consentire al driver di crittografarli. Il comportamento descritto garantisce all'applicazione client un elevato livello di trasparenza: non è necessario che l'applicazione (e lo sviluppatore dell'applicazione) sappiano quali query accedono alle colonne crittografate, a condizione che i valori destinati alle colonne crittografate vengano passati al driver nei parametri.
+Se la funzionalità Always Encrypted è abilitata per una connessione, per impostazione predefinita il driver chiamerà [sys.sp_describe_parameter_encryption](../../relational-databases/system-stored-procedures/sp-describe-parameter-encryption-transact-sql.md) per ogni query con parametri, passando l'istruzione di query (senza i valori dei parametri) a SQL Server. Questa stored procedure analizza l'istruzione di query per scoprire se i parametri devono essere crittografati e, in caso affermativo, restituisce le informazioni relative alla crittografia per ogni parametro consentire al driver di crittografarli. Il comportamento descritto garantisce un elevato livello di trasparenza per l'applicazione client: l'applicazione (e lo sviluppatore dell'applicazione) non è necessario essere a conoscenza di quali query accedono alle colonne crittografate, purché i valori destinati alle colonne crittografate vengano passati a il driver nei parametri.
 
 ### <a name="per-statement-always-encrypted-behavior"></a>Per ogni istruzione Always Encrypted comportamento
 
@@ -369,6 +369,8 @@ Il driver supporta l'autenticazione ad Azure Key Vault usando i seguenti tipi di
 
 - Client - ID/segreto con questo metodo, le credenziali sono un ID client applicazione e un segreto dell'applicazione.
 
+- -Identità del servizio gestito con questo metodo, le credenziali sono identità assegnata dal sistema o l'identità assegnata dall'utente. Per l'identità assegnata dall'utente, UID è impostato per l'ID oggetto dell'identità dell'utente.
+
 Per consentire al driver di utilizzare CMK archiviati in Azure Key Vault per la crittografia di colonna, usare la parola chiave solo nella stringa di connessione seguente:
 
 |Tipo di credenziali| `KeyStoreAuthentication` |`KeyStorePrincipalId`| `KeyStoreSecret` |
@@ -386,7 +388,7 @@ Le stringhe di connessione seguenti illustrano come eseguire l'autenticazione ad
 DRIVER=ODBC Driver 13 for SQL Server;SERVER=myServer;Trusted_Connection=Yes;DATABASE=myDB;ColumnEncryption=Enabled;KeyStoreAuthentication=KeyVaultClientSecret;KeyStorePrincipalId=<clientId>;KeyStoreSecret=<secret>
 ```
 
-**Nome utente/Password**
+**Nome utente/password**:
 
 ```
 DRIVER=ODBC Driver 13 for SQL Server;SERVER=myServer;Trusted_Connection=Yes;DATABASE=myDB;ColumnEncryption=Enabled;KeyStoreAuthentication=KeyVaultPassword;KeyStorePrincipalId=<username>;KeyStoreSecret=<password>
@@ -551,7 +553,7 @@ A partire da ODBC Driver 17 for SQL Server, è possibile usare le [funzioni di c
 
 - Per inserire testo crittografato nel formato varbinary (max) (ad esempio il testo recuperato descritto in precedenza), impostare l'opzione `BCPMODIFYENCRYPTED` su TRUE ed eseguire l'operazione BCP IN. Affinché i dati risultanti possano essere decrittografati, verificare che il valore CEK della colonna di destinazione sia lo stesso dal quale è stato originariamente ottenuto il testo crittografato.
 
-Quando si usa la **bcp** utilità: Per controllare il `ColumnEncryption` impostazione, utilizzare l'opzione -D e specificare un DSN che contiene il valore desiderato. Per inserire testo crittografato, verificare che il `ALLOW_ENCRYPTED_VALUE_MODIFICATIONS` dell'utente è attivata.
+Quando si usa la **bcp** utilità: per controllare il `ColumnEncryption` impostazione, utilizzare l'opzione -D e specificare un DSN che contiene il valore desiderato. Per inserire testo crittografato, verificare che il `ALLOW_ENCRYPTED_VALUE_MODIFICATIONS` dell'utente è attivata.
 
 Nella tabella seguente fornisce un riepilogo delle azioni quando si opera su una colonna crittografata:
 
@@ -577,7 +579,8 @@ Per altre informazioni, vedere [Migrare dati sensibili protetti da Always Encryp
 |`ColumnEncryption`|Valori accettati sono `Enabled` / `Disabled`.<br>`Enabled`: abilita o disabilita la funzionalità Always Encrypted per la connessione.<br>`Disabled`: disabilita la funzionalità Always Encrypted per la connessione. <br><br>Il valore predefinito è `Disabled`.|  
 |`KeyStoreAuthentication` | Valori validi: `KeyVaultPassword`, `KeyVaultClientSecret` |
 |`KeyStorePrincipalId` | Quando `KeyStoreAuthentication`  =  `KeyVaultPassword`, impostare questo valore su un nome di entità utente di Active Directory valido di Azure. <br>Quando `KeyStoreAuthetication`  =  `KeyVaultClientSecret` impostare questo valore su una Azure Active Directory Application ID Client valido |
-|`KeyStoreSecret` | Quando `KeyStoreAuthentication`  =  `KeyVaultPassword` impostare questo valore per la password per il nome utente corrispondente. <br>Quando `KeyStoreAuthentication`  =  `KeyVaultClientSecret` impostare questo valore per il segreto dell'applicazione associata a una Azure Active Directory Application ID Client valido|
+|`KeyStoreSecret` | Quando `KeyStoreAuthentication`  =  `KeyVaultPassword` impostare questo valore per la password per il nome utente corrispondente. <br>Quando `KeyStoreAuthentication`  =  `KeyVaultClientSecret` impostare questo valore per il segreto dell'applicazione associata a una Azure Active Directory Application ID Client valido |
+
 
 ### <a name="connection-attributes"></a>Attributi di connessione
 

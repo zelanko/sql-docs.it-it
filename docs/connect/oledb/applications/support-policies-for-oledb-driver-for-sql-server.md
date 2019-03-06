@@ -1,7 +1,7 @@
 ---
-title: Criteri di supporto per driver OLE DB per SQL Server | Microsoft Docs
+title: Criteri di supporto per OLE DB Driver for SQL Server | Microsoft Docs
 description: Criteri di supporto per driver OLE DB per SQL Server
-ms.date: 06/12/2018
+ms.date: 02/12/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -11,12 +11,12 @@ ms.topic: reference
 author: pmasl
 ms.author: pelopes
 manager: craigg
-ms.openlocfilehash: 782745fa9957cd611aa875bec2f9b740b489f210
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: 790f19d136470458620e0c00de00885e079256bf
+ms.sourcegitcommit: 958cffe9288cfe281280544b763c542ca4025684
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53202010"
+ms.lasthandoff: 02/23/2019
+ms.locfileid: "56744601"
 ---
 # <a name="support-policies-for-ole-db-driver-for-sql-server"></a>Criteri di supporto per driver OLE DB per SQL Server
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -33,15 +33,15 @@ ms.locfileid: "53202010"
 
 |Sistemi operativi supportati|  
 |--------------------------------------|---------------------------------|   
-|Microsoft Windows 8.1<br /><br />Microsoft Windows 10<br /><br /> Microsoft Windows Server 2012<br /><br />Microsoft Windows Server 2012 R2<br /><br />Microsoft Windows Server 2016|  
+|Microsoft Windows 8.1 + [aggiornamento di aprile 2014](https://go.microsoft.com/fwlink/?linkid=2073785) + [KB2999226](https://go.microsoft.com/fwlink/?linkid=2074061)<br /><br />Microsoft Windows 10<br /><br /> Microsoft Windows Server 2012 + [KB2999226](https://go.microsoft.com/fwlink/?linkid=2074061)<br /><br />Microsoft Windows Server 2012 R2 + [aggiornamento di aprile 2014](https://go.microsoft.com/fwlink/?linkid=2073785) + [KB2999226](https://go.microsoft.com/fwlink/?linkid=2074061)<br /><br />Microsoft Windows Server 2016|  
 
 ## <a name="ado-support-policies"></a>Criteri di supporto ADO  
- Le applicazioni ADO possono utilizzare il provider OLE DB SQLOLEDB incluso in Windows se non richiedono alcuna funzionalità di [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] o versione successiva.  
+ Le applicazioni ADO possono usare il provider OLE DB SQLOLEDB incluso in Windows se non richiedono alcuna funzionalità di [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] o versione successiva.  
 
  Le applicazioni ADO possono utilizzare il Driver OLE DB per SQL Server, ma se lo fanno si devono specificare `DataTypeCompatibility=80` nelle stringhe di connessione. Se nelle stringhe di connessione è presente `DataTypeCompatibility=80`, sono disponibili solo le funzionalità di [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)].  
 
 ## <a name="ole-db-support-policies"></a>Criteri di supporto OLE DB  
-Le applicazioni possono usare il provider OLE DB (SQLOLEDB) incluso con il sistema operativo Windows. Tuttavia, che è in modalità di manutenzione e non verrà più aggiornata. È consigliabile utilizzare il Driver OLE DB per SQL Server (MSOLEDBSQL).
+Le applicazioni possono usare il provider OLE DB (SQLOLEDB) incluso con il sistema operativo Windows. Tuttavia, che è in modalità di manutenzione e non verrà più aggiornata. Utilizzare il Driver OLE DB per SQL Server (MSOLEDBSQL).
 
 ## <a name="see-also"></a>Vedere anche  
- [Compilazione di applicazioni con il driver OLE DB per SQL Server](../../oledb/applications/building-applications-with-oledb-driver-for-sql-server.md)   
+ [Compilazione di applicazioni con OLE DB Driver for SQL Server](../../oledb/applications/building-applications-with-oledb-driver-for-sql-server.md)   

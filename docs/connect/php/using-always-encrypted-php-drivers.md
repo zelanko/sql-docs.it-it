@@ -155,7 +155,7 @@ $stmt->execute();
 Gli esempi seguenti illustrano il filtraggio dei dati basata su valori crittografati e il recupero di dati crittografato dalle colonne crittografate usando il driver PDO_SQLSRV e SQLSRV. Tenere presente quanto segue:
  -   Il valore usato nella clausola WHERE per filtrare la colonna SSN deve essere passato usando il parametro bind, in modo che il driver possa crittografarlo in modo trasparente prima dell'invio al server.
  -   Quando si esegue una query con parametri associati, il driver PHP determina automaticamente il tipo SQL per l'utente, a meno che l'utente specifica in modo esplicito il tipo SQL quando si usa il driver SQLSRV.
- -   Tutti i valori stampati dal programma saranno in testo non crittografato, perché il driver decrittografa in modo trasparente i dati recuperati dalle colonne SSN e BirthDate.
+ -   Tutti i valori stampati dal programma sono in testo non crittografato, perché il driver decrittografa in modo trasparente i dati recuperati dalle colonne SSN e BirthDate.
  
 Nota: Le query possono eseguire confronti di uguaglianza nelle colonne crittografate solo se la crittografia è deterministica. Per altre informazioni, vedere [Selezione della crittografia deterministica o casuale](../../relational-databases/security/encryption/always-encrypted-database-engine.md#selecting--deterministic-or-randomized-encryption).
 
@@ -269,7 +269,7 @@ Per il Driver Microsoft 5.3.0 per PHP per SQL Server, sono supportati solo i Pro
 
 Il Driver ODBC per SQL Server in Windows include un provider di archivio chiavi master di colonna predefiniti per Store il certificato di Windows, denominato `MSSQL_CERTIFICATE_STORE`. (Questo provider non disponibile in macOS o Linux). A questo provider, la chiave CMK è archiviata localmente nel computer client e alcuna configurazione aggiuntiva per l'applicazione non è necessario usarlo con il driver. Tuttavia, l'applicazione deve avere accesso al certificato e la relativa chiave privata nell'archivio. Per altre informazioni, vedere [Creare e archiviare chiavi master della colonna (Always Encrypted)](../../relational-databases/security/encryption/create-and-store-column-master-keys-always-encrypted.md).
 
-### <a name="using-azure-key-vault"></a>Uso di EKM con Azure Key Vault
+### <a name="using-azure-key-vault"></a>Uso di Azure Key Vault
 
 Azure Key Vault offre un modo per archiviare le chiavi di crittografia, le password e altri segreti tramite Azure e può essere utilizzato per archiviare le chiavi per Always Encrypted. Il Driver ODBC per SQL Server (versione 17 e versioni successive) include un provider dell'archivio chiavi master predefinito per Azure Key Vault. Configurazione di Azure Key Vault di gestire le opzioni di connessione seguente: `KeyStoreAuthentication`, `KeyStorePrincipalId`, e `KeyStoreSecret`. 
  -   `KeyStoreAuthentication` può assumere uno dei due valori stringa possibili: `KeyVaultPassword` e `KeyVaultClientSecret`. Questi valori consentono di controllare il tipo di credenziali di autenticazione con le altre due parole chiave.

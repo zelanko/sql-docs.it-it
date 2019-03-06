@@ -11,12 +11,12 @@ ms.assetid: 3414992c-61c0-4e7d-b509-72517e52c1bb
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: f6ac8e52e46108e88693a96d587e3af2b79e4ff4
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: cbc6d4e971a810d581b8ace2de8fd7882171c460
+ms.sourcegitcommit: c1105ce638078d2c941cd656b34f78486e6b2d89
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47833109"
+ms.lasthandoff: 02/22/2019
+ms.locfileid: "56676059"
 ---
 # <a name="retrieving-data"></a>Recupero di dati
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -74,8 +74,11 @@ Per verificare il numero di righe incluse in un set di risultati, specificare un
 |---------|---------------|  
 |[Recupero di dati come flusso](../../connect/php/retrieving-data-as-a-stream-using-the-sqlsrv-driver.md)|Fornisce una panoramica sull'uso dei flussi di dati e i collegamenti a specifici casi d'uso.|  
 |[Uso dei parametri direzionali](../../connect/php/using-directional-parameters.md)|Descrive l'uso dei parametri direzionali in una chiamata a una stored procedure.|  
-|[Specifica di un tipo di cursore e selezione di righe](../../connect/php/specifying-a-cursor-type-and-selecting-rows.md)|Descrive come creare un set di risultati con righe cui è possibile accedere in qualsiasi ordine quando si usa il driver SQLSRV.|  
-|[Procedura: Recuperare il tipo data e ora come stringhe usando il driver SQLSRV](../../connect/php/how-to-retrieve-date-and-time-type-as-strings-using-the-sqlsrv-driver.md)|Descrive come recuperare i tipi data e ora come stringhe.|  
+|[Specifica di un tipo di cursore e selezione di righe](../../connect/php/specifying-a-cursor-type-and-selecting-rows.md)|Viene illustrato come creare un set di risultati con righe cui è possibile accedere in qualsiasi ordine.|  
+|[Procedura: Recuperare i tipi di data e ora come stringhe usando il driver SQLSRV](../../connect/php/how-to-retrieve-date-and-time-type-as-strings-using-the-sqlsrv-driver.md)|Descrive come recuperare i tipi di data e ora come stringhe usando il driver SQLSRV.|  
+|[Procedura: Recuperare i tipi di data e ora come oggetti Datetime PHP usando il driver PDO_SQLSRV](../../connect/php/how-to-retrieve-datetime-objects-using-pdo-sqlsrv-driver.md)|Viene descritto come recuperare i tipi di data e ora come oggetti usando il driver PDO_SQLSRV.|  
+|[Formattazione delle stringhe decimale con il Driver SQLSRV](../../connect/php/formatting-decimals-sqlsrv-driver.md)|Di seguito viene illustrato come formattare i valori decimali o denaro usando il driver SQLSRV.|  
+|[Formattazione delle stringhe decimale con il Driver PDO_SQLSRV](../../connect/php/formatting-decimals-pdo-sqlsrv-driver.md)|Di seguito viene illustrato come formattare i valori decimali o denaro usando il driver PDO_SQLSRV.|  
   
 ## <a name="related-sections"></a>Sezioni correlate  
 [Procedura: Specificare i tipi di dati PHP](../../connect/php/how-to-specify-php-data-types.md)  

@@ -12,7 +12,7 @@ ms.author: v-jizho2
 manager: kenvh
 ms.openlocfilehash: 12f45cd1014a312eec7854685d8c7fe2e64b9714
 ms.sourcegitcommit: b3d84abfa4e2922951430772c9f86dce450e4ed1
-ms.translationtype: MTE75
+ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 02/22/2019
 ms.locfileid: "56662755"
@@ -28,7 +28,7 @@ ms.locfileid: "56662755"
 
 - Azure Active Directory identità del servizio gestito (sistema e assegnata dall'utente) in modalità di autenticazione
 - Parametro di input di Always Encrypted di streaming
-- XA DTC
+- Controllo DTC XA
 
 ## <a name="whats-new-in-the-includemsconameincludesmsconamemdmd-odbc-driver-172-for-includessnoversionincludesssnoversion-mdmd-on-linux-and-macos"></a>Novità di [!INCLUDE[msCoName](../../../includes/msconame_md.md)] ODBC Driver 17.2 for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] in Linux e macOS
 

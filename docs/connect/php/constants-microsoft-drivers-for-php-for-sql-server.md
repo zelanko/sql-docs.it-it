@@ -1,7 +1,7 @@
 ---
 title: Costanti (driver Microsoft per PHP per SQL Server) | Microsoft Docs
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 02/11/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -13,17 +13,17 @@ ms.assetid: 9727c944-b645-48d6-9012-18dbde35ee3c
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 94be5540c0fedcf3449b8ac41398ab3f08abbd32
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 172b96b63f65b5ee8b576ba6ee9c18aad18e3531
+ms.sourcegitcommit: 958cffe9288cfe281280544b763c542ca4025684
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52409528"
+ms.lasthandoff: 02/23/2019
+ms.locfileid: "56744451"
 ---
 # <a name="constants-microsoft-drivers-for-php-for-sql-server"></a>Costanti (driver Microsoft per PHP per SQL Server)
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
-In questo argomento sono descritte le costanti definite dai [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)].  
+In questo argomento sono descritte le costanti definite per dai [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)].  
   
 ## <a name="pdosqlsrv-driver-constants"></a>Costanti del driver PDO_SQLSRV  
 Le costanti elencate nel [sito Web PDO](https://php.net/manual/book.pdo.php) sono valide nei [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)].  
@@ -68,6 +68,11 @@ L'attributo PDO::SQLSRV_ATTR_QUERY_TIMEOUT è un intero non negativo che rappres
 ### <a name="handling-numeric-fetches"></a>Gestione delle operazioni di recupero numerico
 L'attributo PDO::SQLSRV_ATTR_FETCHES_NUMERIC_TYPE utilizzabile per gestire operazioni di recupero numerici dalle colonne con tipi numerici SQL (bit, integer, smallint, tinyint, float e real). Quando PDO::SQLSRV_ATTR_FETCHES_NUMERIC_TYPE è impostata su true, i risultati di una colonna integer sono rappresentati come valori int, mentre si muove SQL reals sono rappresentati come valori a virgola mobile. Questo attributo può essere impostato con [pdostatement:: SetAttribute](../../connect/php/pdostatement-setattribute.md). 
 
+È possibile modificare il comportamento di formattazione decimale predefinito con gli attributi PDO::SQLSRV_ATTR_FORMAT_DECIMALS e PDO::SQLSRV_ATTR_DECIMAL_PLACES. Il comportamento di questi attributi è identico per le opzioni corrispondenti sul lato SQLSRV (**FormatDecimals** e **DecimalPlaces**), ad eccezione del fatto che i parametri di output non sono supportati per la formattazione. Questi attributi possono essere impostati a livello di connessione o di istruzione con [PDO:: SetAttribute](../../connect/php/pdo-setattribute.md) oppure [pdostatement:: SetAttribute](../../connect/php/pdostatement-setattribute.md), ma verrà esegue l'override di qualsiasi attributo di istruzione corrispondente attributo di connessione. Per altre informazioni, vedere [formattazione le stringhe decimali e valori di tipo Money (Driver PDO_SQLSRV)](../../connect/php/formatting-decimals-pdo-sqlsrv-driver.md).
+
+### <a name="handling-date-and-time-fetches"></a>Gestione di recuperi di data e ora
+
+Il PDO::SQLSRV_ATTR_FETCHES_DATETIME_TYPE specifica se recuperare i tipi di data e ora come [DateTime PHP](http://php.net/manual/en/class.datetime.php) oggetti. Se false, il comportamento predefinito consiste nel restituire li come stringhe. Questo attributo può essere impostato a livello di connessione o di istruzione con [PDO:: SetAttribute](../../connect/php/pdo-setattribute.md) oppure [pdostatement:: SetAttribute](../../connect/php/pdostatement-setattribute.md), ma eseguirà l'override dell'attributo di istruzione corrispondente attributo di connessione. Per altre informazioni, vedere [procedura: recuperare data e ora i tipi come oggetti di data/ora PHP mediante il Driver PDO_SQLSRV](../../connect/php/how-to-retrieve-datetime-objects-using-pdo-sqlsrv-driver.md).
 
 ## <a name="sqlsrv-driver-constants"></a>SQLSRV  
 Nelle sezioni seguenti sono elencate le costanti usate dal driver SQLSRV.  
@@ -136,11 +141,11 @@ Nella tabella seguente sono elencate le costanti che vengono usate per descriver
   
 |Costante SQLSRV|Tipo di dati PHP|  
 |-------------------|-----------------|  
-|SQLSRV_PHPTYPE_INT|Valore intero|  
+|SQLSRV_PHPTYPE_INT|Integer|  
 |SQLSRV_PHPTYPE_DATETIME|DATETIME|  
 |SQLSRV_PHPTYPE_FLOAT|float|  
-|SQLSRV_PHPTYPE_STREAM ($codifica<sup>1</sup>)|STREAM|  
-|SQLSRV_PHPTYPE_STRING ($codifica<sup>1</sup>)|String|  
+|SQLSRV_PHPTYPE_STREAM($encoding<sup>1</sup>)|STREAM|  
+|SQLSRV_PHPTYPE_STRING($encoding<sup>1</sup>)|String|  
   
 1. **SQLSRV_PHPTYPE_STREAM** e **SQLSRV_PHPTYPE_STRING** accettano un parametro che specifica la codifica del flusso. Nella tabella seguente sono elencate le costanti SQLSRV che sono parametri accettabili e viene fornita una descrizione della codifica corrispondente.  
   
@@ -163,13 +168,13 @@ Nella tabella seguente sono elencate le costanti che vengono usate per descriver
 |SQLSRV_SQLTYPE_BIGINT|BIGINT|  
 |SQLSRV_SQLTYPE_BINARY|BINARY|  
 |SQLSRV_SQLTYPE_BIT|bit|  
-|SQLSRV_SQLTYPE_CHAR|Char<sup>5</sup>|  
+|SQLSRV_SQLTYPE_CHAR|char<sup>5</sup>|  
 |SQLSRV_SQLTYPE_CHAR($charCount)|char|  
 |SQLSRV_SQLTYPE_DATE|date<sup>4</sup>|  
 |SQLSRV_SQLTYPE_DATETIME|DATETIME|  
 |SQLSRV_SQLTYPE_DATETIME2|datetime2<sup>4</sup>|  
 |SQLSRV_SQLTYPE_DATETIMEOFFSET|datetimeoffset<sup>4</sup>|  
-|SQLSRV_SQLTYPE_DECIMAL|decimale<sup>5</sup>|
+|SQLSRV_SQLTYPE_DECIMAL|decimal<sup>5</sup>|
 |SQLSRV_SQLTYPE_DECIMAL($precision, $scale)|Decimal|  
 |SQLSRV_SQLTYPE_FLOAT|FLOAT|  
 |SQLSRV_SQLTYPE_IMAGE|image<sup>1</sup>|  
@@ -177,7 +182,7 @@ Nella tabella seguente sono elencate le costanti che vengono usate per descriver
 |SQLSRV_SQLTYPE_MONEY|money| 
 |SQLSRV_SQLTYPE_NCHAR|nchar<sup>5</sup>|   
 |SQLSRV_SQLTYPE_NCHAR($charCount)|NCHAR|  
-|SQLSRV_SQLTYPE_NUMERIC|numerico<sup>5</sup>|
+|SQLSRV_SQLTYPE_NUMERIC|numeric<sup>5</sup>|
 |SQLSRV_SQLTYPE_NUMERIC($precision, $scale)|NUMERIC|  
 |SQLSRV_SQLTYPE_NVARCHAR|nvarchar<sup>5</sup>|  
 |SQLSRV_SQLTYPE_NVARCHAR($charCount)|NVARCHAR|  

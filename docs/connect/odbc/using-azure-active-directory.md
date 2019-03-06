@@ -106,7 +106,7 @@ Queste opzioni corrispondono alle stesse cinque disponibile nella configurazione
 ![WindowsAzureAuth.png](windows/WindowsAzureAuth.png)
 
 8. Usa AAD Managed Service Identity Authentication assegnato dal sistema o l'identità assegnata dall'utente per l'autenticazione configurare connessione. Per l'identità assegnata dall'utente, UID è impostato per l'ID oggetto dell'identità dell'utente.<br>
-Usa identità assegnata dal sistema<br>
+Per l'identità assegnata dal sistema,<br>
 `server=Server;database=Database;Authentication=ActiveDirectoryMsi;`<br>
 Per l'identità assegnata dall'utente con ID oggetto è uguale a myObjectId,<br>
 `server=Server;database=Database;UID=myObjectId;Authentication=ActiveDirectoryMsi;`

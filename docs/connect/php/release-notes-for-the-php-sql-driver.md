@@ -82,7 +82,7 @@ Questo argomento vengono illustrate le funzionalità aggiunte in ogni versione d
 
 - Supporto per PHP 7.0  
 - Supporto a 64 bit
-- Support for Ubuntu 15.04, Ubuntu 16.04, and RedHat 7
+- Supporto per Ubuntu 15.04, Ubuntu 16.04 e RedHat 7
 
 ## <a name="whats-new-in-version-32"></a>Novità della versione 3.2
 

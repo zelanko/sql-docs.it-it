@@ -1,5 +1,5 @@
 ---
-title: Microsoft ODBC Driver for SQL Server | Microsoft Docs
+title: Uso di XA con Microsoft ODBC Driver for SQL Server | Microsoft Docs
 ms.custom: ''
 ms.date: 02/04/2019
 ms.prod: sql

@@ -1,5 +1,5 @@
 ---
-title: Note sulla versione (driver OLE DB per SQL Server) | Microsoft Docs
+title: Note sulla versione (OLE DB Driver for SQL Server) | Microsoft Docs
 ms.date: 02/12/2019
 ms.prod: sql
 ms.technology: connectivity
@@ -25,7 +25,7 @@ Questo argomento vengono illustrate le funzionalità aggiunte in ogni versione d
 **Funzionalità aggiunte:**
 
 * Supporto per la codifica UTF-8 server. Per altre informazioni, vedere: [supporto per UTF-8 nel Driver OLE DB per SQL Server](features/utf-8-support-in-oledb-driver-for-sql-server.md).
-* Autenticazione di Azure Active Directory Per altre informazioni vedere [Informazioni su Azure Active Directory](features/using-azure-active-directory.md)
+* Supporto dell'autenticazione di Azure Active Directory. Per altre informazioni vedere [Uso di Azure Active Directory](features/using-azure-active-directory.md).
 
 ## <a name="whats-new-in-version-1810"></a>Novità della versione 18.1.0
 

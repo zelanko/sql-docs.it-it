@@ -1,8 +1,8 @@
 ---
-title: Compilazione di applicazioni con il driver OLE DB per SQL Server | Microsoft Docs
+title: Compilazione di applicazioni con OLE DB Driver for SQL Server | Microsoft Docs
 description: Compilazione di applicazioni con il driver OLE DB per SQL Server
 ms.custom: ''
-ms.date: 06/12/2018
+ms.date: 02/12/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -16,12 +16,12 @@ helpviewer_keywords:
 author: pmasl
 ms.author: pelopes
 manager: craigg
-ms.openlocfilehash: 8be648639f3b345f6d6eb16c6f51c58064d9270a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a2e9b88c12a4abb25fed87c8f273a9949b85c4ee
+ms.sourcegitcommit: 958cffe9288cfe281280544b763c542ca4025684
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47691786"
+ms.lasthandoff: 02/23/2019
+ms.locfileid: "56744411"
 ---
 # <a name="building-applications-with-ole-db-driver-for-sql-server"></a>Compilazione di applicazioni con il driver OLE DB per SQL Server
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -37,13 +37,13 @@ ms.locfileid: "47691786"
  [Componenti del driver OLE DB per SQL Server](../../oledb/applications/components-of-oledb-driver-for-sql-server.md)  
  Vengono illustrati i componenti che costituiscono il Driver OLE DB per SQL Server, inclusi i file di libreria, la risorsa, Guida e dell'intestazione.  
 
- [Utilizzo delle parole chiave delle stringhe di connessione con driver OLE DB per SQL Server](../../oledb/applications/using-connection-string-keywords-with-oledb-driver-for-sql-server.md)  
+ [Uso delle parole chiave delle stringhe di connessione con OLE DB Driver for SQL Server](../../oledb/applications/using-connection-string-keywords-with-oledb-driver-for-sql-server.md)  
  Vengono illustrati i vari tipi di stringhe di connessione che è possibile usare durante la connessione a un database tramite il driver OLE DB per SQL Server.  
 
- [Utilizzo del driver OLE DB per intestazione SQL Server e file di libreria](../../oledb/applications/using-the-oledb-driver-for-sql-server-header-and-library-files.md)  
+ [Uso dei file di libreria e di intestazione di OLE DB Driver for SQL Server](../../oledb/applications/using-the-oledb-driver-for-sql-server-header-and-library-files.md)  
  Viene illustrato come utilizzare il Driver OLE DB per intestazione SQL Server e file di libreria all'interno di un'applicazione.  
 
- [Aggiornamento di un'applicazione al driver OLE DB per SQL Server da MDAC](../../oledb/applications/updating-an-application-to-oledb-driver-for-sql-server-from-mdac.md)  
+ [Aggiornamento di un'applicazione a OLE DB Driver for SQL Server da MDAC](../../oledb/applications/updating-an-application-to-oledb-driver-for-sql-server-from-mdac.md)  
  Vengono illustrate le differenze tra il Driver OLE DB per SQL Server e MDAC e problemi da considerare durante l'aggiornamento da MDAC a Driver OLE DB per SQL Server.  
 
  [Aggiornamento di un'applicazione da SQL Server 2005 Native Client](../../oledb/applications/updating-an-application-from-sql-server-2005-native-client.md)  
@@ -52,7 +52,7 @@ ms.locfileid: "47691786"
  [Utilizzo di ADO con il driver OLE DB per SQL Server](../../oledb/applications/using-ado-with-oledb-driver-for-sql-server.md)  
  Illustra come ADO possa usare il Driver OLE DB per SQL Server per accedere e usare [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] funzionalità.  
 
- [Criteri di supporto per driver OLE DB per SQL Server](../../oledb/applications/support-policies-for-oledb-driver-for-sql-server.md)  
+ [Criteri di supporto per OLE DB Driver for SQL Server](../../oledb/applications/support-policies-for-oledb-driver-for-sql-server.md)  
  Vengono illustrate varie modalità componenti di accesso ai dati possono essere utilizzati con versioni diverse del Driver OLE DB per SQL Server.  
 
 ## <a name="see-also"></a>Vedere anche  
