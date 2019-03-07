@@ -2,7 +2,7 @@
 title: Quali sono le novità in SSMA per Access(AccessToSQL) | Microsoft Docs
 ms.prod: sql
 ms.custom: ''
-ms.date: 02/27/2019
+ms.date: 03/06/2019
 ms.reviewer: ''
 ms.technology: ssma
 ms.topic: conceptual
@@ -10,18 +10,27 @@ ms.assetid: a24d3fc0-6911-4bfa-828a-197abf222e02
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 40d5daaaef68d4355a95fb6cef2c55628cdf4008
-ms.sourcegitcommit: 2ab79765e51913f1df6410f0cd56bf2a13221f37
+ms.openlocfilehash: 7557a34698f90054806aeafe9b7285970af092c3
+ms.sourcegitcommit: d7ed341b2c635dcdd6b0f5f4751bb919a75a6dfe
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/27/2019
-ms.locfileid: "56955922"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57527044"
 ---
 # <a name="whats-new-in-ssma-for-access-accesstosql"></a>Novità in SSMA per Access (AccessToSQL)
 Questo articolo elenca SQL Server Migration Assistant (SSMA) per le modifiche all'accesso in ogni versione.  
 
+## <a name="ssma-v81"></a>SSMA v8.1
+La versione v8.1 di SSMA for Access è stata migliorata con correzioni mirate che sono progettate per migliorare le metriche di qualità e la conversione.
+
+> [!NOTE]
+> Un problema noto con l'aggiornamento automatico potrebbe essere il guasto di un aggiornamento dalla versione 8.0 SSMA per v8.1. Se si verifica questo errore,. scaricare la nuova versione e installarlo manualmente.
+
+> [!IMPORTANT]
+> Con v7.4 SSMA e versioni successive, .net 4.5.2 è un prerequisito di installazione.
+
 ## <a name="ssma-v80"></a>SSMA v8.0
-La versione 8.0 di SSMA per l'accesso è stata migliorata per fornire correzioni mirate progettate per migliorare la qualità e la conversione delle metriche. Questa versione offre anche le nuove funzionalità seguenti:
+La versione 8.0 di SSMA for Access è stata migliorata con correzioni mirate progettate per migliorare la qualità e la conversione delle metriche. Questa versione offre anche le nuove funzionalità seguenti:
 
 * Supporto per **istanza gestita di Azure SQL Database** come destinazione. È ora possibile creare nuovi progetti destinati a istanza gestita di Azure SQL Database:
 
@@ -35,15 +44,8 @@ La versione 8.0 di SSMA per l'accesso è stata migliorata per fornire correzioni
 
     ![Oggetti filtro SSMA](../media/ssma-filter-objects.png)
 
-> [!IMPORTANT]
-> Con v7.4 SSMA e versioni successive, .net 4.5.2 è un prerequisito di installazione.
-
-
 ## <a name="ssma-v710"></a>SSMA v7.10
 La versione v7.10 di SSMA for Access è stata migliorata con correzioni mirate progettate per offrire maggiore sicurezza e protezione della privacy per soddisfare le modifiche nei requisiti globali.
-
-> [!IMPORTANT]
-> Con v7.4 SSMA e versioni successive, .net 4.5.2 è un prerequisito di installazione.
 
 ## <a name="ssma-v79"></a>SSMA v7.9
 La versione v7.9 di SSMA per Access contiene le seguenti modifiche:
@@ -51,46 +53,32 @@ La versione v7.9 di SSMA per Access contiene le seguenti modifiche:
 - Supporto nella riga di comando SSMA per modificare il mapping dei tipi di dati e le preferenze del progetto.
 - Finestra di dialogo di connessione Database SQL di Azure in SSMA è stato modificato anche per specificare il nome completo del server. Nelle versioni precedenti di SSMA, il prefisso di Database SQL di Azure doveva essere indicato in modo esplicito all'interno delle impostazioni di progetti.
 
-> [!IMPORTANT]
-> Con v7.4 SSMA e versioni successive, .net 4.5.2 è un prerequisito di installazione.
-
 ## <a name="ssma-v78"></a>SSMA v7.8
 La versione v 7.8 di SSMA per Access contiene le seguenti modifiche:
-- Mapping dei tipi di modifica evidenziata nelle impostazioni del progetto.
-- È stato possibile agli utenti di disabilitare la telemetria.
-
-> [!IMPORTANT]
-> Con v7.4 SSMA e versioni successive, .net 4.5.2 è un prerequisito di installazione.
+- Modificare il mapping dei tipi evidenziate nelle impostazioni del progetto.
+- La possibilità per gli utenti disabilitare la telemetria.
 
 ## <a name="ssma-v77"></a>SSMA v7.7
 La versione v7.7 di SSMA per Access contiene le seguenti modifiche:
-- SSMA per Access è stata migliorata con correzioni mirate che consentono di migliorare le metriche di qualità e la conversione.
-- Basato su richiesta comune, la versione a 32 bit di SSMA per l'accesso è nuovamente. Rispetto all'implementazione precedente (antecedente a v7.4), sono disponibili due pacchetti di installazione, ma non possono essere installati side-by-side. Di conseguenza, è necessario scegliere la versione più appropriata in base ai componenti di connettività che si dispone. È sempre preferibile usare la versione a 64 bit, se possibile.
-
-> [!IMPORTANT]
-> Con v7.4 SSMA e versioni successive, .net 4.5.2 è un prerequisito di installazione.
+- Correzioni mirate che consentono di migliorare le metriche di qualità e la conversione.
+- Basato su richiesta comune, la versione a 32 bit di SSMA per l'accesso è nuovamente. Se confrontato con l'implementazione precedente (prima v7.4), sono disponibili due pacchetti di installazione, ma non possono essere installati side-by-side. Di conseguenza, è necessario scegliere la versione più appropriata in base ai componenti di connettività che si dispone. È sempre preferibile usare la versione a 64 bit, se possibile.
 
 ## <a name="ssma-v76"></a>SSMA v7.6
-La versione v7.6 di SSMA for Access è stata migliorata con correzioni mirate che consentono di migliorare le metriche di qualità e la conversione e con il supporto per SQL Server 2017 (anteprima pubblica). Supporto per SQL Server 2017 in Windows e Linux è disponibile in anteprima pubblica e non deve essere utilizzato per le migrazioni di produzione.
-
-> [!IMPORTANT]
-> Con v7.4 SSMA e versioni successive, .net 4.5.2 è un prerequisito di installazione e la versione a 32 bit dello strumento è stata interrotta.
+La versione v7.6 di SSMA per l'accesso è stata migliorata con correzioni mirate che consentono di migliorare le metriche di qualità e la conversione e con il supporto per SQL Server 2017 (anteprima pubblica). Supporto per SQL Server 2017 in Windows e Linux è disponibile in anteprima pubblica e non deve essere usato per le migrazioni di produzione.
 
 ## <a name="ssma-v75"></a>SSMA v7.5
 La versione v7.5 di SSMA for Access è stata migliorata con numerosi miglioramenti per assicurare maggiore accessibilità per persone affette da disabilità.
 
-> [!IMPORTANT]
-> .NET 4.5.2 è un prerequisito per l'installazione di SSMA v7.5. Inoltre, a partire da v7.4, la versione a 32 bit di SSMA verrà terminato a breve.
-
 ## <a name="ssma-v74"></a>SSMA v7.4
 La versione v7.4 di SSMA per Access contiene le seguenti modifiche:
 - Il **timeout Query** opzione ora è disponibile durante l'individuazione di oggetti dello schema all'origine e destinazione.
-![query timeout-opzione](../media/query-timeout_red.png)
+ 
+    ![query timeout-opzione](../media/query-timeout_red.png)
 
 - La metrica della qualità e la conversione è stata migliorata con correzioni mirate, ai suggerimenti dei clienti.
 
 > [!IMPORTANT]
-> .NET 4.5.2 è un prerequisito per l'installazione di SSMA v7.4. Inoltre, a partire da v7.4, la versione a 32 bit di SSMA verrà terminato a breve.
+> .NET 4.5.2 è un prerequisito per l'installazione di SSMA v7.4. Inoltre, a partire da v7.4, la versione a 32 bit di SSMA è stata interrotta.
 
 ## <a name="ssma-v73"></a>SSMA v7.3
 La versione v7.3 di SSMA per Access contiene le seguenti modifiche:
@@ -98,8 +86,8 @@ La versione v7.3 di SSMA per Access contiene le seguenti modifiche:
 - Framework di estendibilità SSMA esposta tramite gli elementi seguenti:
   - La funzionalità di esportazione in un progetto di SQL Server Data Tools (SSDT).
     -   È ora possibile esportare gli script dello schema da SSMA per un progetto di SSDT. È possibile utilizzare gli script dello schema per apportare ulteriori modifiche dello schema e distribuire il database.
-![Salva come comando di progetto SSDT](../media/export-schema-scripts_red.png)
 
+        ![Salva come comando di progetto SSDT](../media/export-schema-scripts_red.png)
   - Librerie che possono essere usate da SSMA per l'esecuzione di conversioni personalizzate.
     - È ora possibile creare codice in grado di gestire le conversioni di sintassi personalizzata e che non sono stati precedentemente gestiti da SSMA.
       - Le istruzioni su come costruire un convertitore personalizzato sono disponibili in questo post di blog [funzionalità di conversione di estensione di SQL Server Migration Assistant](https://blogs.msdn.microsoft.com/datamigration/2017/02/21/2185/).
@@ -132,9 +120,7 @@ La versione di maggio 2016 di SSMA per Access contiene le seguenti modifiche:
 -  Correzione del bug nelle impostazioni globali. 
    
 ## <a name="march-2016"></a>Marzo 2016  
-La versione di anteprima di marzo 2016 di SSMA per Access contiene le seguenti modifiche:  
-  
--  Aggiunta del supporto per la migrazione a SQL Server 2016.  
+La versione di anteprima di marzo 2016 di SSMA per Access aggiunge il supporto per la migrazione a SQL Server 2016.  
    
 ## <a name="january-2016"></a>Gennaio 2016  
 La versione di manutenzione di gennaio 2016 di SSMA per Access contiene le seguenti modifiche:  
@@ -172,9 +158,7 @@ La versione di gennaio 2012 di SSMA per Access contiene le seguenti modifiche:
 -   Condizione messaggi appropriati che indicano le operazioni di propagazione per i riferimenti circolari sono stati impostati su No Action.  
   
 ## <a name="july-2011"></a>Mese di luglio 2011  
-La versione di luglio 2011 di SSMA per Access contiene le seguenti modifiche:  
-  
--   Migliore segnalazione errori durante la migrazione dei dati.  
+La versione di luglio 2011 di SSMA per Access aggiunge migliorato di segnalazione errori durante la migrazione dei dati.  
   
 ## <a name="april-2011"></a>Ad aprile 2011  
 La versione aprile 2011 di SSMA per Access contiene le seguenti modifiche:  
@@ -194,9 +178,7 @@ La versione di luglio 2010 di SSMA per Access contiene le seguenti modifiche:
 -   Aggiunta del supporto per il tipo di dati DateTime2 di SQL Server.
   
 ## <a name="june-2008"></a>Giugno 2008  
-La versione di giugno 2008 di SSMA per Access contiene le seguenti modifiche:  
-  
--   Aggiunta del supporto per i database di Access 2007.  
+La versione di giugno 2008 di SSMA per Access aggiunge il supporto per i database di Access 2007.  
   
 ## <a name="may-2007"></a>Maggio 2007  
 La versione di maggio 2007 di SSMA per Access contiene le seguenti modifiche:  

@@ -2,7 +2,7 @@
 title: Quali sono le novità di SSMA per Oracle (OracleToSQL) | Microsoft Docs
 ms.prod: sql
 ms.custom: ''
-ms.date: 02/27/2019
+ms.date: 03/06/2019
 ms.reviewer: ''
 ms.technology: ssma
 ms.topic: conceptual
@@ -10,18 +10,27 @@ ms.assetid: f305ebb6-7393-4a43-abb3-6332b739d690
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 6523c3d3b7f6a1a0e75ca8641e3bf96520f889af
-ms.sourcegitcommit: 2ab79765e51913f1df6410f0cd56bf2a13221f37
+ms.openlocfilehash: 1d28ddc0ca3338c9f3a5f8e9e912efa90f6cbcfa
+ms.sourcegitcommit: d7ed341b2c635dcdd6b0f5f4751bb919a75a6dfe
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/27/2019
-ms.locfileid: "56955962"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57527104"
 ---
 # <a name="whats-new-in-ssma-for-oracle-oracletosql"></a>Quali sono le novità di SSMA per Oracle (OracleToSQL)
 Questo articolo elenca SQL Server Migration Assistant (SSMA) per le modifiche di Oracle in ogni versione.
 
+## <a name="ssma-v81"></a>SSMA v8.1
+La versione v8.1 di SSMA per Oracle è stata migliorata con correzioni mirate che sono progettate per migliorare le metriche di qualità e la conversione.
+
+> [!NOTE]
+> Un problema noto con l'aggiornamento automatico potrebbe essere il guasto di un aggiornamento dalla versione 8.0 SSMA per v8.1. Se si verifica questo errore,. scaricare la nuova versione e installarlo manualmente.
+
+> [!IMPORTANT]
+> Con v7.4 SSMA e versioni successive, .net 4.5.2 è un prerequisito di installazione.
+
 ## <a name="ssma-v80"></a>SSMA v8.0
-La versione 8.0 di SSMA per Oracle è stata migliorata per fornire correzioni mirate progettate per migliorare la qualità e la conversione delle metriche. Questa versione offre anche le nuove funzionalità seguenti:
+La versione 8.0 di SSMA per Oracle è stata migliorata con correzioni mirate progettate per migliorare la qualità e la conversione delle metriche. Questa versione offre anche le nuove funzionalità seguenti:
 
 * Supporto per **istanza gestita di Azure SQL Database** come destinazione. È ora possibile creare nuovi progetti destinati a istanza gestita di Azure SQL Database:
 
@@ -46,16 +55,10 @@ La versione 8.0 di SSMA per Oracle è stata migliorata per fornire correzioni mi
 
 * La possibilità di eseguire il mapping ROWID e UROWID in VARCHAR per impostazione predefinita. Modificato da 'uniqueidentifier' per supportare la migrazione dei dati per le colonne ROWID esplicitare.
 
-> [!IMPORTANT]
-> Con v7.4 SSMA e versioni successive, .net 4.5.2 è un prerequisito di installazione.
-
 ## <a name="ssma-v710"></a>SSMA v7.10
 La versione v7.10 di SSMA per Oracle include le seguenti modifiche:
 - Correzioni mirate progettate per offrire maggiore sicurezza e protezione della privacy per soddisfare le modifiche nei requisiti globali.
 - Un miglioramento di conversione relative alle query gerarchiche.
-
-> [!IMPORTANT]
-> Con v7.4 SSMA e versioni successive, .net 4.5.2 è un prerequisito di installazione.
 
 ## <a name="ssma-v79"></a>SSMA v7.9
 La versione v7.9 di SSMA per Oracle include le seguenti modifiche:
@@ -65,44 +68,29 @@ La versione v7.9 di SSMA per Oracle include le seguenti modifiche:
 - Supporto per la migrazione dei dati usando SQL Server Integration Services (SSIS). Dopo la conversione dello schema, è possibile creare un pacchetto SSIS usando un'opzione di menu di scelta rapida.
 - Finestra di dialogo di connessione Database SQL di Azure in SSMA è stato modificato anche per specificare il nome completo del server. Nelle versioni precedenti di SSMA, il prefisso di Database SQL di Azure doveva essere indicato in modo esplicito all'interno delle impostazioni di progetti.
 
-> [!IMPORTANT]
-> Con v7.4 SSMA e versioni successive, .net 4.5.2 è un prerequisito di installazione.
-
 ## <a name="ssma-v78"></a>SSMA v7.8
 La versione v 7.8 di SSMA per Oracle include le seguenti modifiche:
--   Aggiunta del supporto per:
+-   Supporto per:
     - Espressione di riga per la clausola IN.
     - Cast di tipo implicito.
     - Conversione di UID per Database SQL di Azure.
-- Mapping dei tipi di modifica evidenziata nelle impostazioni del progetto.
-- È stato possibile agli utenti di disabilitare la telemetria.
-
-> [!IMPORTANT]
-> Con v7.4 SSMA e versioni successive, .net 4.5.2 è un prerequisito di installazione.
+- Modificare il mapping dei tipi evidenziate nelle impostazioni del progetto.
+- La possibilità per gli utenti disabilitare la telemetria.
 
 ## <a name="ssma-v77"></a>SSMA v7.7
 La versione v7.7 di SSMA per Oracle include le seguenti modifiche:
 - SSMA per Oracle è stato migliorato con correzioni mirate che consentono di migliorare le metriche di qualità e la conversione.
-- Basato su richiesta comune, la versione a 32 bit di SSMA per Oracle è nuovamente. Rispetto all'implementazione precedente (antecedente a v7.4), sono disponibili due pacchetti di installazione, ma non possono essere installati side-by-side. Di conseguenza, è necessario scegliere la versione più appropriata in base ai componenti di connettività che si dispone. È sempre preferibile usare la versione a 64 bit, se possibile.
+- Basato su richiesta comune, la versione a 32 bit di SSMA per Oracle è nuovamente. Rispetto all'implementazione precedente (prima v7.4), sono disponibili due pacchetti di installazione, ma non possono essere installati side-by-side. Di conseguenza, è necessario scegliere la versione più appropriata in base ai componenti di connettività che si dispone. È sempre preferibile usare la versione a 64 bit, se possibile.
 - SQL Server 2017 è ora il supporto ufficiale con il pacchetto di estensione di Oracle supportata anche in Linux (nuova opzione di installazione remota). Si noti che la funzionalità di pacchetto di estensioni è limitata durante l'installazione in Linux, come i tester e le funzionalità di migrazione dei dati lato server non sono supportate.
 - SSMA per Oracle consente di eseguire la migrazione di viste materializzate sotto forma di tabelle regolari (può essere configurata tramite le impostazioni al **impostazioni del progetto** -> **sincronizzazione**  ->  **Individuare le tabelle sottostanti per le viste materializzate**).
 
-> [!IMPORTANT]
-> Con v7.4 SSMA e versioni successive, .net 4.5.2 è un prerequisito di installazione.
-
 ## <a name="ssma-v76"></a>SSMA v7.6
 La versione v7.6 di SSMA per Oracle è stata migliorata con correzioni mirate che consentono di migliorare le metriche di qualità e la conversione e con il supporto per SQL Server 2017 (anteprima pubblica). Supporto per SQL Server 2017 in Windows e Linux è disponibile in anteprima pubblica e non deve essere usato per le migrazioni di produzione.
-
-> [!IMPORTANT]
-> Con v7.4 SSMA e versioni successive, .net 4.5.2 è un prerequisito di installazione e la versione a 32 bit dello strumento è stata interrotta.
 
 ## <a name="ssma-v75"></a>SSMA v7.5
 La versione v7.5 di SSMA per Oracle include le seguenti modifiche:
 - Migliorato con numerosi miglioramenti per assicurare maggiore accessibilità per persone affette da disabilità.
 - Aggiornato per migliorare la metrica di qualità e la conversione con correzioni mirate, ad esempio Gestione migliorata di tipi di dati date e float durante la migrazione dei dati, in base ai suggerimenti dei clienti.
-
-> [!IMPORTANT]
-> .NET 4.5.2 è un prerequisito per l'installazione di SSMA v7.5. Inoltre, a partire da v7.4, la versione a 32 bit di SSMA verrà terminato a breve.
 
 ## <a name="ssma-v74"></a>SSMA v7.4
 La versione v7.4 di SSMA per Oracle include le seguenti modifiche:
@@ -132,7 +120,8 @@ La versione v7.3 di SSMA per Oracle include le seguenti modifiche:
 - Framework di estendibilità SSMA esposta tramite gli elementi seguenti:
   - La funzionalità di esportazione in un progetto di SQL Server Data Tools (SSDT).
     -   È ora possibile esportare gli script dello schema da SSMA per un progetto di SSDT. È possibile utilizzare gli script dello schema per apportare ulteriori modifiche dello schema e distribuire il database.
-![Salva come comando di progetto SSDT](../media/export-schema-scripts_red.png)
+
+        ![Salva come comando di progetto SSDT](../media/export-schema-scripts_red.png)
   - Librerie che possono essere usate da SSMA per l'esecuzione di conversioni personalizzate.
     - È ora possibile creare codice in grado di gestire le conversioni di sintassi personalizzata e che non sono stati precedentemente gestiti da SSMA.
       - Le istruzioni su come costruire un convertitore personalizzato sono disponibili in questo post di blog [funzionalità di conversione di estensione di SQL Server Migration Assistant](https://blogs.msdn.microsoft.com/datamigration/2017/02/21/2185/).
@@ -222,9 +211,7 @@ La versione di aprile 2014 di SSMA per Oracle contiene le seguenti modifiche:
 -   Bug risolti relative alle pagine del report invisibile in Internet Explorer 10.  
   
 ## <a name="january-2012"></a>Gennaio 2012  
-La versione di gennaio 2012 di SSMA per Oracle contiene le seguenti modifiche:  
-  
--   Aggiunta del supporto per i parametri di input di tipo di riga e RecordType automaticamente impostati su NULL.  
+Aggiunge il supporto per tipo di riga per la versione di gennaio 2012 di SSMA per Oracle e i parametri di input RecordType automaticamente impostati su NULL.  
   
 ## <a name="july-2011"></a>Mese di luglio 2011  
 La versione di luglio 2011 di SSMA per Oracle contiene le seguenti modifiche:  
