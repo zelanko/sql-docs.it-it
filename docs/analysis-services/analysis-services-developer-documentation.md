@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: b0932c9ebcd2d516a5bfb0e6ea5608501e4f514a
-ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
+ms.openlocfilehash: 8822a85e39efde36a04b92e8a926adca6839cf58
+ms.sourcegitcommit: 8bc5d85bd157f9cfd52245d23062d150b76066ef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50146097"
+ms.lasthandoff: 03/07/2019
+ms.locfileid: "57578101"
 ---
 # <a name="analysis-services-developer-documentation"></a>Guida per gli sviluppatori (Analysis Services)
 [!INCLUDE[ssas-appliesto-sqlas-aas](../includes/ssas-appliesto-sqlas-aas.md)]
@@ -72,5 +72,5 @@ Analysis Services offre molti modi per personalizzare una soluzione tramite codi
 [Analysis Services PowerShell Reference](../analysis-services/powershell/analysis-services-powershell-reference.md) documenta i cmdlet utilizzati per le funzioni amministrative e di uso generico **Invoke-ASCmd** cmdlet che accetta qualsiasi script o una query come input.
 
 ## <a name="see-also"></a>Vedere anche
-[Riferimento tecnico ](../analysis-services/powershell/technical-reference-ssas.md) 
- [riferimenti al linguaggio di espressioni e Query &#40;Analysis Services&#41;](http://msdn.microsoft.com/library/gg492188.aspx)
+[Riferimento tecnico](../analysis-services/powershell/technical-reference-ssas.md)
+[riferimenti al linguaggio di espressioni e Query &#40;Analysis Services&#41;](http://msdn.microsoft.com/library/gg492188.aspx)

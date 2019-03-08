@@ -16,12 +16,12 @@ ms.assetid: aa427606-8422-4656-b205-c9e665ddc8c1
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: f1e86eec76a94a3858ede48fc0fb1b0703de4508
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: bedea60c8bc356ff18b687123799977d83f308c5
+ms.sourcegitcommit: 8bc5d85bd157f9cfd52245d23062d150b76066ef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53356248"
+ms.lasthandoff: 03/07/2019
+ms.locfileid: "57578751"
 ---
 # <a name="always-on-availability-groups-sql-server"></a>Gruppi di disponibilità Always On (SQL Server)
   La funzionalità [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] è una soluzione di disponibilità elevata e recupero di emergenza che offre un'alternativa di livello enterprise al mirroring del database. Introdotta in [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)], [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] aumenta la disponibilità di un set di database utente per un'azienda. Un *gruppo di disponibilità* supporta un ambiente di failover per un set discreto di database utente, noti come *database di disponibilità*, su cui si verifica il failover. Un gruppo di disponibilità supporta un set di database primari di lettura e scrittura e da uno a otto set di database secondari corrispondenti. Facoltativamente, i database secondari possono essere resi disponibili per l'accesso di sola lettura e/o alcune operazioni di backup.  
@@ -43,15 +43,15 @@ ms.locfileid: "53356248"
   
     -   *Modalità commit sincrono*. La modalità di disponibilità privilegia la disponibilità elevata e la protezione dei dati rispetto alle prestazioni, aumentando tuttavia la latenza delle transazioni. Un determinato gruppo di disponibilità è in grado di supportare fino a tre repliche di disponibilità con commit sincrono, inclusa la replica primaria corrente.  
   
-     Per altre informazioni, vedere [ modalità di disponibilità; Gruppi di disponibilità; Always On ](availability-modes-always-on-availability-groups.md).  
+     Per altre informazioni, vedere [modalità di disponibilità; Gruppi di disponibilità; Always On ](availability-modes-always-on-availability-groups.md).  
   
 -   Supporta molti formati di failover del gruppo di disponibilità: failover automatico, failover manuale pianificato (in genere definito semplicemente "failover manuale") e failover manuale forzato (in genere definito semplicemente "failover forzato"). Per altre informazioni, vedere [Failover e modalità di Failover; Gruppi di disponibilità; Always On ](failover-and-failover-modes-always-on-availability-groups.md).  
   
 -   Permette di configurare una determinata replica di disponibilità per supportare una o entrambe le seguenti funzionalità delle repliche secondarie attive:  
   
-    -   Accesso alla connessione in sola lettura che permette connessioni in sola lettura alla replica per accedere e leggere i relativi database quando viene eseguita come replica secondaria. Per altre informazioni, vedere [repliche secondarie attive: Repliche secondarie leggibili. Gruppi di disponibilità Always On](https://msdn.microsoft.com/library/ff878253.aspx)).  
+    -   Accesso alla connessione in sola lettura che permette connessioni in sola lettura alla replica per accedere e leggere i relativi database quando viene eseguita come replica secondaria. Per altre informazioni, vedere [Repliche secondarie attive: Repliche secondarie leggibili. Gruppi di disponibilità Always On](https://msdn.microsoft.com/library/ff878253.aspx)).  
   
-    -   Esecuzione di operazioni di backup sui relativi database quando viene eseguita come replica secondaria. Per altre informazioni, vedere [repliche secondarie attive: Backup su repliche secondarie](https://msdn.microsoft.com/library/ff878253.aspx)).  
+    -   Esecuzione di operazioni di backup sui relativi database quando viene eseguita come replica secondaria. Per altre informazioni, vedere [Repliche secondarie attive: Backup su repliche secondarie](https://msdn.microsoft.com/library/ff878253.aspx)).  
   
      L'uso delle funzionalità secondarie attive migliora l'efficienza IT e riduce i costi tramite un migliore uso delle risorse dell'hardware secondario. Inoltre, la ripartizione delle applicazioni con finalità di lettura e dei processi di backup alle repliche secondarie permette di migliorare le prestazioni sulla replica primaria.  
   
@@ -141,7 +141,7 @@ ms.locfileid: "53356248"
 -   [Reporting Services](reporting-services-with-always-on-availability-groups-sql-server.md)  
   
 > [!WARNING]  
->  Per informazioni sulle restrizioni e limitazioni per l'uso con altre funzionalità [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)], vedere [gruppi di disponibilità AlwaysOn: Interoperabilità; SQL Server. ](always-on-availability-groups-interoperability-sql-server.md).  
+>  Per informazioni sulle restrizioni e le limitazioni per l'uso di altre funzionalità con [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)], vedere [Gruppi di disponibilità Always On: Interoperabilità; SQL Server. ](always-on-availability-groups-interoperability-sql-server.md).  
   
 ##  <a name="RelatedTasks"></a> Attività correlate  
   
@@ -151,15 +151,15 @@ ms.locfileid: "53356248"
   
 -   **Blog:**  
   
-     [SQL Server Always On Team blog: Il Team Blog ufficiale di SQL Server AlwaysOn](https://blogs.msdn.com/b/sqlalwayson/)  
+     [SQL Server Always On Team Blogs (Blog di SQL Server Always On): Il Team Blog ufficiale di SQL Server AlwaysOn](https://blogs.msdn.com/b/sqlalwayson/)  
   
      [Pagina relativa ai blog del Servizio Supporto Tecnico Clienti per gli ingegneri di SQL Server](https://blogs.msdn.com/b/psssql/)  
   
 -   **Video:**  
   
-     [Microsoft SQL Server nome in codice "Denali" Always On Series, Part 1: Introduzione della soluzione di disponibilità elevata di prossima generazione](http://channel9.msdn.com/Events/TechEd/NorthAmerica/2011/DBI302)  
+     [Microsoft SQL Server Code-Named "Denali" Always On Series,Part 1: Introducing the Next Generation High Availability Solution](http://channel9.msdn.com/Events/TechEd/NorthAmerica/2011/DBI302) (Serie Always On in Microsoft SQL Server nome in codice "Denali", parte 1: Introduzione alla soluzione a disponibilità elevata di nuova generazione)  
   
-     [Microsoft SQL Server nome in codice "Denali" Always On Series, Part 2: Creazione di una soluzione di disponibilità elevata critica tramite Alwasyon](http://channel9.msdn.com/Events/TechEd/NorthAmerica/2011/DBI404)  
+     [Microsoft SQL Server Code-Named "Denali" Always On Series,Part 2: Creazione di una soluzione di disponibilità elevata critica tramite Alwasyon](http://channel9.msdn.com/Events/TechEd/NorthAmerica/2011/DBI404)  
   
 -   **White paper:**  
   

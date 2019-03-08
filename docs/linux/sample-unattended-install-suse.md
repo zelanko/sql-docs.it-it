@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.custom: sql-linux, seodec18
 ms.technology: linux
-ms.openlocfilehash: 91ff8bfa90fd691d4314e56e751d3ebde1079180
-ms.sourcegitcommit: 5ef24b3229b4659ede891b0af2125ef22bd94b96
+ms.openlocfilehash: 0e61b42cb7a0d0f0262a4ac4a38c413bf4c4b512
+ms.sourcegitcommit: 8bc5d85bd157f9cfd52245d23062d150b76066ef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/06/2019
-ms.locfileid: "55759954"
+ms.lasthandoff: 03/07/2019
+ms.locfileid: "57579705"
 ---
 # <a name="sample-unattended-sql-server-installation-script-for-suse-linux-enterprise-server"></a>Esempio: Script di installazione di SQL Server automatico per SUSE Linux Enterprise Server
 
@@ -178,7 +178,7 @@ Per eseguire lo script
    ```
 
 ### <a name="understanding-the-script"></a>Informazioni sullo script di
-La prima operazione che esegue lo script Bash è impostare alcune variabili. Può trattarsi di variabili di scripting, come nell'esempio, o le variabili di ambiente. La variabile ``` MSSQL_SA_PASSWORD ``` viene **obbligatorio** dall'installazione di SQL Server, gli altri sono variabili personalizzate create per lo script. Lo script di esempio esegue i passaggi seguenti:
+La prima operazione che esegue lo script Bash è impostare alcune variabili. Può trattarsi di variabili di scripting, come nell'esempio, o le variabili di ambiente. La variabile `MSSQL_SA_PASSWORD` viene **obbligatorio** dall'installazione di SQL Server, gli altri sono variabili personalizzate create per lo script. Lo script di esempio esegue i passaggi seguenti:
 
 1. Importare le chiavi pubbliche GPG Microsoft.
 

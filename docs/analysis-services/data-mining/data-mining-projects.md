@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 75e71b4a17aa74ecb33f0a0d8c195b2e60b0e5a1
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 3f2fd0817aeae714ca1e217b9dc2011df92c4b28
+ms.sourcegitcommit: 8bc5d85bd157f9cfd52245d23062d150b76066ef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52506927"
+ms.lasthandoff: 03/07/2019
+ms.locfileid: "57579381"
 ---
 # <a name="data-mining-projects"></a>Progetti di data mining
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -213,7 +213,7 @@ ms.locfileid: "52506927"
 |Vengono forniti collegamenti alle informazioni su ciascuno dei visualizzatori dei modelli di data mining|[Visualizzatori modello di data mining](../../analysis-services/data-mining/data-mining-model-viewers.md)|  
 |Vengono fornite informazioni sulla creazione di un grafico di accuratezza, un grafico dei profitti o una matrice di classificazione o sul test di una struttura di data mining|[Test e convalida &#40;Data mining&#41;](../../analysis-services/data-mining/testing-and-validation-data-mining.md)|  
 |Vengono fornite informazioni sulle opzioni di elaborazione e sulle autorizzazioni|[Elaborazione di oggetti di data mining](../../analysis-services/data-mining/processing-data-mining-objects.md)|  
-|Vengono fornite ulteriori informazioni su Analysis Services|[Database modello multidimensionale ](../../analysis-services/multidimensional-models/multidimensional-model-databases-ssas.md)|  
+|Vengono fornite ulteriori informazioni su Analysis Services|[Database modello multidimensionale](../../analysis-services/multidimensional-models/multidimensional-model-databases-ssas.md)|  
   
 ## <a name="see-also"></a>Vedere anche  
  [Data Mining Designer](../../analysis-services/data-mining/data-mining-designer.md)   

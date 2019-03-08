@@ -14,12 +14,12 @@ ms.assetid: cd613898-82d9-482f-a255-0230a6c7d6fe
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 28198abe0fe417ea29d5a10409e141a7a2ee2f1a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 9583ae760a53e3d3ab68f69b21317b370df726b7
+ms.sourcegitcommit: 8bc5d85bd157f9cfd52245d23062d150b76066ef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48150571"
+ms.lasthandoff: 03/07/2019
+ms.locfileid: "57579311"
 ---
 # <a name="possible-failures-during-sessions-between-availability-replicas-sql-server"></a>Possibili errori durante le sessioni tra repliche di disponibilità (SQL Server)
   Gli errori in una sessione tra due repliche di disponibilità possono essere causati da problemi di tipo fisico, del sistema operativo o di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Una replica di disponibilità non controlla regolarmente i componenti sui quali Sqlservr.exe si basa per verificare se stiano funzionando correttamente o abbiano generato un errore. In alcuni casi, tuttavia, il componente interessato invia una segnalazione di errore a Sqlservr.exe. Un errore segnalato da un altro componente è denominato *errore hardware*. Per rilevare altri errori che altrimenti non verrebbero rilevati, [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] implementa un proprio meccanismo di timeout della sessione. Specifica il periodo di timeout della sessione in secondi. Il periodo di timeout indica l'intervallo di attesa massimo rispettato dall'istanza del server per la ricezione di un messaggio PING da un'altra istanza, prima che l'altra istanza venga considerata disconnessa. Quando si verifica un timeout della sessione tra due repliche di disponibilità, le repliche di disponibilità presuppongono che si sia verificato un errore e viene dichiarato un *errore software*.  
@@ -82,14 +82,14 @@ ms.locfileid: "48150571"
 -   Risorse di elaborazione insufficienti, ad esempio overload della CPU o del disco, esaurimento dello spazio del log delle transazioni o esaurimento della memoria o dei thread di sistema. In questi casi è necessario aumentare il periodo di timeout, ridurre il carico di lavoro o cambiare l'hardware per gestire il carico di lavoro.  
   
 ### <a name="the-session-timeout-mechanism"></a>Meccanismo di timeout della sessione  
- Poiché gli errori software non sono direttamente rilevabili da un'istanza del server, un errore software potrebbe potenzialmente causare che una replica di disponibilità attenda indefinitamente la risposta dell'altra replica di disponibilità in una sessione. Per evitare questo problema, [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] implementa un meccanismo di timeout della sessione in base alle repliche di disponibilità connesse che inviano un ping a ogni connessione aperta a intervalli fissi. La ricezione di un ping durante il periodo di timeout indica che la connessione è ancora aperta e che le istanze del server comunicano attraverso tale connessione. Quando riceve un ping, una replica reimposta il contatore del timeout su tale connessione. Per informazioni sulla relazione di timeout sessione e la modalità di disponibilità, vedere [ modalità di disponibilità (gruppi di disponibilità AlwaysOn)](availability-modes-always-on-availability-groups.md).  
+ Poiché gli errori software non sono direttamente rilevabili da un'istanza del server, un errore software potrebbe potenzialmente causare che una replica di disponibilità attenda indefinitamente la risposta dell'altra replica di disponibilità in una sessione. Per evitare questo problema, [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] implementa un meccanismo di timeout della sessione in base alle repliche di disponibilità connesse che inviano un ping a ogni connessione aperta a intervalli fissi. La ricezione di un ping durante il periodo di timeout indica che la connessione è ancora aperta e che le istanze del server comunicano attraverso tale connessione. Quando riceve un ping, una replica reimposta il contatore del timeout su tale connessione. Per informazioni sulla relazione di timeout sessione e la modalità di disponibilità, vedere [modalità di disponibilità (gruppi di disponibilità AlwaysOn)](availability-modes-always-on-availability-groups.md).  
   
  Le repliche primarie e secondarie effettuano vicendevolmente il ping per segnalare che sono ancora attive e un limite di timeout della sessione impedisce che la replica attenda indefinitamente la ricezione di un ping dall'altra replica. Il limite di timeout della sessione è una proprietà della replica configurabile dall'utente con un valore predefinito di 10 secondi. La ricezione di un ping durante il periodo di timeout indica che la connessione è ancora aperta e che le istanze del server comunicano attraverso tale connessione. Alla ricezione di un ping, la replica di disponibilità reimposta il contatore del timeout per quella connessione.  
   
  Se non viene ricevuto alcun ping dall'altra replica entro il periodo di timeout della sessione, si verifica il timeout della connessione. La connessione viene chiusa e per la replica scaduta viene impostato lo stato DISCONNECTED. Anche se la replica disconnessa è configurata per la modalità con commit sincrono, le transazioni non attenderanno che quella replica venga riconnessa e risincronizzata.  
   
 ## <a name="responding-to-an-error"></a>Risposta a un errore  
- Indipendentemente dal tipo di errore, un'istanza del server che rileva un errore esegue l'azione appropriata in base al proprio ruolo, alla modalità di disponibilità della sessione e allo stato delle altre connessioni della sessione. Per informazioni sulle conseguenze della perdita di un partner, vedere [ modalità di disponibilità (gruppi di disponibilità AlwaysOn)](availability-modes-always-on-availability-groups.md).  
+ Indipendentemente dal tipo di errore, un'istanza del server che rileva un errore esegue l'azione appropriata in base al proprio ruolo, alla modalità di disponibilità della sessione e allo stato delle altre connessioni della sessione. Per informazioni sulle conseguenze della perdita di un partner, vedere [modalità di disponibilità (gruppi di disponibilità AlwaysOn)](availability-modes-always-on-availability-groups.md).  
   
 ## <a name="related-tasks"></a>Attività correlate  
  **Per modificare il valore di timeout (solo modalità di disponibilità con commit sincrono)**  

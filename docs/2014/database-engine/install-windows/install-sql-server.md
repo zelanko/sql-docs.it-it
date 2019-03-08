@@ -13,15 +13,15 @@ ms.assetid: 0300e777-d56b-4d10-9c33-c9ebd2489ee5
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 7f631209a655b11062ffd17fa9f83f3e355011cf
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 7b9fb6be3970ea12ce3252e70f7773f1687dbe83
+ms.sourcegitcommit: 8bc5d85bd157f9cfd52245d23062d150b76066ef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53356689"
+ms.lasthandoff: 03/07/2019
+ms.locfileid: "57578354"
 ---
 # <a name="install-sql-server-2014"></a>Installare SQL Server 2014
-## <a name="-download-sql-server-2014-express-httpwwwhanselmancomblogdownloadsqlserverexpressaspx"></a>[ Download di SQL Server 2014 Express ](http://www.hanselman.com/blog/DownloadSQLServerExpress.aspx)
+## <a name="download-sql-server-2014-expresshttpwwwhanselmancomblogdownloadsqlserverexpressaspx"></a>[Download di SQL Server 2014 Express](http://www.hanselman.com/blog/DownloadSQLServerExpress.aspx)
   **Grazie per aver preso parte alla [Scott Hanselman](http://www.hanselman.com/) per la raccolta di tutti i collegamenti di pacchetto del programma di installazione in un'unica posizione.**
   
  In questo argomento è contenuta una panoramica delle diverse opzioni disponibili per l'installazione di [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Per altre informazioni sui vari [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] componenti che possono essere installati e il processo di installazione, vedere [installazione per SQL Server 2014](installation-for-sql-server.md).  

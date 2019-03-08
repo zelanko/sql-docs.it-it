@@ -17,12 +17,12 @@ ms.assetid: 6a428023-e3cc-4626-a88a-4c13ccbd7db0
 author: craigg-msft
 ms.author: craigg
 manager: craigg
-ms.openlocfilehash: 57acb73332f90f4084243184f480edf0a1395a7b
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: 26d0c84194f6f2aafb8bc499ff5404a1438ee577
+ms.sourcegitcommit: 8bc5d85bd157f9cfd52245d23062d150b76066ef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54124821"
+ms.lasthandoff: 03/07/2019
+ms.locfileid: "57578841"
 ---
 # <a name="what39s-new-in-sql-server-2014"></a>Cosa&#39;s New in SQL Server 2014
   In questo argomento riepiloga i collegamenti dettagliati alle nuove funzionalità di [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] e riepiloga i pacchetti di servizi per [!INCLUDE[ssSQL14](../includes/sssql14-md.md)]  
@@ -43,13 +43,13 @@ ms.locfileid: "54124821"
   
 ## <a name="includesssql14includessssql14-mdmd-service-pack-1-sp1"></a>[!INCLUDE[ssSQL14](../includes/sssql14-md.md)] Service Pack 1 (SP1)
 [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] (SP1) non sono stati introdotti nuove funzionalità significative.
--  [Informazioni sulla versione di SQL Server 2014 Service Pack 1 ](https://support.microsoft.com/en-us/kb/3058865).
--  [![Scarica Service Pack 1 per Microsoft? SQL Server? 2014](./media/what-s-new-in-sql-server-2016/download.png)](https://www.microsoft.com/en-us/download/details.aspx?id=46694) [Scarica Service Pack 1 per Microsoft? SQL Server? 2014](https://www.microsoft.com/en-us/download/details.aspx?id=46694).
+-  [Informazioni sulla versione di SQL Server 2014 Service Pack 1](https://support.microsoft.com/en-us/kb/3058865).
+-  [![Scarica Service Pack 1 per Microsoft? SQL Server?? 2014](./media/what-s-new-in-sql-server-2016/download.png)](https://www.microsoft.com/en-us/download/details.aspx?id=46694) [Scarica Service Pack 1 per Microsoft? SQL Server?? 2014](https://www.microsoft.com/en-us/download/details.aspx?id=46694).
 
 
 ## <a name="includesssql14includessssql14-mdmd-service-pack-2-sp2"></a>[!INCLUDE[ssSQL14](../includes/sssql14-md.md)] Service Pack 2 (SP2)
 - [Informazioni sulla versione di SQL Server 2014 Service Pack 2](https://support.microsoft.com/en-us/kb/3171021).
--  [![Scaricare il Service Pack 2 per Microsoft? SQL Server? 2014](./media/what-s-new-in-sql-server-2016/download.png)](https://go.microsoft.com/fwlink/?LinkID=821558) [download del Service Pack 2 per Microsoft? SQL Server? 2014](https://go.microsoft.com/fwlink/?LinkID=821558).
+-  [![Scaricare il Service Pack 2 per Microsoft? SQL Server?? 2014](./media/what-s-new-in-sql-server-2016/download.png)](https://go.microsoft.com/fwlink/?LinkID=821558) [download del Service Pack 2 per Microsoft? SQL Server?? 2014](https://go.microsoft.com/fwlink/?LinkID=821558).
 -  [![Scaricare SQL Server 2014 SP2 Feature Pack](./media/what-s-new-in-sql-server-2016/download.png)](https://www.microsoft.com/en-us/download/details.aspx?id=53164) [scaricare il Feature Pack SQL Server 2014 SP2](https://www.microsoft.com/en-us/download/details.aspx?id=53164).
 
 [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] (SP2) Include i miglioramenti seguenti:

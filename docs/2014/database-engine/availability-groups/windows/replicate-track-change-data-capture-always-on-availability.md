@@ -15,12 +15,12 @@ ms.assetid: e17a9ca9-dd96-4f84-a85d-60f590da96ad
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 1b3bf1b9c7b43a2196f2bc2c09422feb43cbc7c4
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: c52283ce9d512da6dc2e5ad05a4c8356524bef01
+ms.sourcegitcommit: 8bc5d85bd157f9cfd52245d23062d150b76066ef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54134091"
+ms.lasthandoff: 03/07/2019
+ms.locfileid: "57579321"
 ---
 # <a name="replication-change-tracking-change-data-capture-and-alwayson-availability-groups-sql-server"></a>Replica, Rilevamento modifiche, Change Data Capture e Gruppi di disponibilità AlwaysOn (SQL Server)
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Le funzionalità di replica, di rilevamento delle modifiche (CT, Change Tracking) e Change Data Capture (CDC) sono supportate in [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]. [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] vengono fornite disponibilità elevata e funzionalità aggiuntive di recupero database.  
@@ -218,7 +218,7 @@ ms.locfileid: "54134091"
   
 ### <a name="considerations"></a>Considerazioni  
   
--   Non è supportato l'utilizzo del database di distribuzione con [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] o il mirroring del database. La configurazione della replica è associata all'istanza di SQL Server in cui è configurato il database di distribuzione; pertanto non è possibile eseguire il mirroring o la replica del database di distribuzione. Per fornire la disponibilità elevata per il database di distribuzione, usare un cluster di failover di SQL Server. Per altre informazioni, vedere [ istanze del Cluster di Failover AlwaysOn (SQL Server)](../../../sql-server/failover-clusters/windows/always-on-failover-cluster-instances-sql-server.md).  
+-   Non è supportato l'utilizzo del database di distribuzione con [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] o il mirroring del database. La configurazione della replica è associata all'istanza di SQL Server in cui è configurato il database di distribuzione; pertanto non è possibile eseguire il mirroring o la replica del database di distribuzione. Per fornire la disponibilità elevata per il database di distribuzione, usare un cluster di failover di SQL Server. Per altre informazioni, vedere [Istanze del cluster di failover Always On (SQL Server)](../../../sql-server/failover-clusters/windows/always-on-failover-cluster-instances-sql-server.md).  
   
 -   Il failover del Sottoscrittore su un database secondario, se supportato, è una procedura manuale relativamente complessa. La procedura è essenzialmente identica al metodo usato per il failover a un database sottoscrittore con mirroring. È necessario che nei Sottoscrittori sia in esecuzione [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] o versione successiva perché possano fare parte di un gruppo di disponibilità.  
   
@@ -253,7 +253,7 @@ ms.locfileid: "54134091"
  [Sottoscrittori della replica e gruppi di disponibilità AlwaysOn &#40;SQL Server&#41;](replication-subscribers-and-always-on-availability-groups-sql-server.md)   
  [Prerequisiti, restrizioni e consigli per gruppi di disponibilità AlwaysOn &#40;SQL Server&#41;](prereqs-restrictions-recommendations-always-on-availability.md)   
  [Panoramica di gruppi di disponibilità AlwaysOn &#40;SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md)   
- [Gruppi di disponibilità AlwaysOn: Interoperabilità (SQL Server)](always-on-availability-groups-interoperability-sql-server.md) [ le istanze del Cluster di Failover AlwaysOn (SQL Server)](../../../sql-server/failover-clusters/windows/always-on-failover-cluster-instances-sql-server.md)   
+ [Gruppi di disponibilità AlwaysOn: Interoperabilità (SQL Server)](always-on-availability-groups-interoperability-sql-server.md) [le istanze del Cluster di Failover AlwaysOn (SQL Server)](../../../sql-server/failover-clusters/windows/always-on-failover-cluster-instances-sql-server.md)   
  [Informazioni su Change Data Capture &#40;SQL Server&#41;](../../../relational-databases/track-changes/about-change-data-capture-sql-server.md)   
  [Informazioni sul rilevamento delle modifiche &#40;SQL Server&#41;](../../../relational-databases/track-changes/about-change-tracking-sql-server.md)   
  [Replica di SQL Server](../../../relational-databases/replication/sql-server-replication.md)   

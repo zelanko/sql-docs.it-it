@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.custom: sql-linux, seodec18
 ms.technology: linux
-ms.openlocfilehash: c6327ae25e9e0b22310e810cd33f7176ecc1349d
-ms.sourcegitcommit: 5ef24b3229b4659ede891b0af2125ef22bd94b96
+ms.openlocfilehash: 878eda9c8816e400c873154f1c1cf3d613f8fea3
+ms.sourcegitcommit: 8bc5d85bd157f9cfd52245d23062d150b76066ef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/06/2019
-ms.locfileid: "55760054"
+ms.lasthandoff: 03/07/2019
+ms.locfileid: "57579051"
 ---
 # <a name="sample-unattended-sql-server-installation-script-for-ubuntu"></a>Esempio: Script di installazione di SQL Server automatico per Ubuntu
 
@@ -176,7 +176,7 @@ Per eseguire lo script
    ```
 
 ### <a name="understanding-the-script"></a>Informazioni sullo script di
-La prima operazione che esegue lo script Bash è impostare alcune variabili. Può trattarsi di variabili di scripting, come nell'esempio, o le variabili di ambiente. La variabile ``` MSSQL_SA_PASSWORD ``` viene **obbligatorio** dall'installazione di SQL Server, gli altri sono variabili personalizzate create per lo script. Lo script di esempio esegue i passaggi seguenti:
+La prima operazione che esegue lo script Bash è impostare alcune variabili. Può trattarsi di variabili di scripting, come nell'esempio, o le variabili di ambiente. La variabile `MSSQL_SA_PASSWORD` viene **obbligatorio** dall'installazione di SQL Server, gli altri sono variabili personalizzate create per lo script. Lo script di esempio esegue i passaggi seguenti:
 
 1. Importare le chiavi pubbliche GPG Microsoft.
 

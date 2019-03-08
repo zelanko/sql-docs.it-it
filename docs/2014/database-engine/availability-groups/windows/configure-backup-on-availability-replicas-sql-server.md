@@ -18,18 +18,18 @@ ms.assetid: 74bc40bb-9f57-44e4-8988-1d69c0585eb6
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 29868763c34944b0a33953e7a56c3d365afcd4d5
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 223bc3aa5e404f2723996073628e64906a60aa64
+ms.sourcegitcommit: 8bc5d85bd157f9cfd52245d23062d150b76066ef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53363923"
+ms.lasthandoff: 03/07/2019
+ms.locfileid: "57579591"
 ---
 # <a name="configure-backup-on-availability-replicas-sql-server"></a>Configurare il backup su repliche di disponibilità (SQL Server)
   In questo argomento viene descritto come configurare il backup delle repliche secondarie per un gruppo di disponibilità AlwaysOn utilizzando [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../../includes/tsql-md.md)]o PowerShell in [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)].  
   
 > [!NOTE]  
->  Per un'introduzione al backup su repliche secondarie, vedere [ repliche secondarie attive: Backup su repliche secondarie (gruppi di disponibilità AlwaysOn)](active-secondaries-backup-on-secondary-replicas-always-on-availability-groups.md).  
+>  Per un'introduzione al backup di repliche secondarie, vedere [Repliche secondarie attive: Backup su repliche secondarie (gruppi di disponibilità AlwaysOn)](active-secondaries-backup-on-secondary-replicas-always-on-availability-groups.md).  
   
  
   
@@ -78,7 +78,7 @@ ms.locfileid: "53363923"
      Specifica che si preferisce che i processi di backup ignorino il ruolo delle repliche di disponibilità nella scelta della replica per l'esecuzione dei backup. Si noti che i processi di backup potrebbero valutare altri fattori, ad esempio la priorità di backup di ogni replica di disponibilità in combinazione con lo stato operativo e lo stato connesso.  
   
     > [!IMPORTANT]  
-    >  Non è prevista l'applicazione dell'impostazione relativa alle preferenze di backup automatico. L'interpretazione di questa preferenza dipende dall'eventuale logica su cui si basano gli script dei processi di backup per i database in un determinato gruppo di disponibilità. L'impostazione relativa alle preferenze di backup automatico non incide sui backup ad hoc. Per altre informazioni, vedere [completamento: Dopo aver configurato il Backup su repliche secondarie](#FollowUp) più avanti in questo argomento.  
+    >  Non è prevista l'applicazione dell'impostazione relativa alle preferenze di backup automatico. L'interpretazione di questa preferenza dipende dall'eventuale logica su cui si basano gli script dei processi di backup per i database in un determinato gruppo di disponibilità. L'impostazione relativa alle preferenze di backup automatico non incide sui backup ad hoc. Per altre informazioni, vedere [Completamento: Dopo aver configurato il backup su repliche secondarie](#FollowUp) più avanti in questo argomento.  
   
 6.  Utilizzare la griglia **Priorità di backup replica** per modificare la priorità di backup delle repliche di disponibilità. In questa griglia è indicata la priorità di backup corrente di ogni istanza del server che ospita una replica per il gruppo di disponibilità. Le colonne della griglia sono le seguenti:  
   
@@ -146,7 +146,7 @@ ms.locfileid: "53363923"
      Specifica che si preferisce che i processi di backup ignorino il ruolo delle repliche di disponibilità nella scelta della replica per l'esecuzione dei backup. Si noti che i processi di backup potrebbero valutare altri fattori, ad esempio la priorità di backup di ogni replica di disponibilità in combinazione con lo stato operativo e lo stato connesso.  
   
     > [!IMPORTANT]  
-    >  Non è prevista l'applicazione di `AutomatedBackupPreference`. L'interpretazione di questa preferenza dipende dall'eventuale logica su cui si basano gli script dei processi di backup per i database in un determinato gruppo di disponibilità. L'impostazione relativa alle preferenze di backup automatico non incide sui backup ad hoc. Per altre informazioni, vedere [completamento: Dopo aver configurato il Backup su repliche secondarie](#FollowUp) più avanti in questo argomento.  
+    >  Non è prevista l'applicazione di `AutomatedBackupPreference`. L'interpretazione di questa preferenza dipende dall'eventuale logica su cui si basano gli script dei processi di backup per i database in un determinato gruppo di disponibilità. L'impostazione relativa alle preferenze di backup automatico non incide sui backup ad hoc. Per altre informazioni, vedere [Completamento: Dopo aver configurato il backup su repliche secondarie](#FollowUp) più avanti in questo argomento.  
   
      Ad esempio, nel comando seguente viene impostata la proprietà `AutomatedBackupPreference` del gruppo di disponibilità `MyAg` su `SecondaryOnly`. I backup automatici dei database in questo gruppo di disponibilità non verranno mai eseguiti nella replica primaria, ma verranno reindirizzati alla replica secondaria con l'impostazione della priorità di backup più elevata.  
   
@@ -165,7 +165,7 @@ ms.locfileid: "53363923"
   
 -   [Visualizzare la Guida di SQL Server PowerShell](../../../powershell/sql-server-powershell.md)  
   
-##  <a name="FollowUp"></a> Completamento: Dopo aver configurato il Backup su repliche secondarie  
+##  <a name="FollowUp"></a> Completamento: Dopo aver configurato il backup su repliche secondarie  
  Per prendere in considerazione le preferenze di backup automatico per un gruppo di disponibilità specifico, in ogni istanza del server in cui è ospitata una replica di disponibilità la cui priorità di backup è maggiore di zero (>0) è necessario generare script dei processi di backup per i database nel gruppo di disponibilità. Per determinare se la replica corrente è la replica di backup preferita, usare la funzione [sys.fn_hadr_backup_is_preferred_replica](/sql/relational-databases/system-functions/sys-fn-hadr-backup-is-preferred-replica-transact-sql) nello script di backup. Se la replica di disponibilità ospitata dall'istanza del server corrente è la replica preferita per i backup, questa funzione restituisce 1. In caso contrario, la funzione restituisce 0. Eseguendo uno script semplice in ogni replica di disponibilità tramite cui viene eseguita una query su questa funzione, è possibile determinare in quale replica deve essere eseguito un processo di backup specificato. Di seguito è riportato un esempio di un tipico frammento di script per un processo di backup:  
   
 ```  
@@ -201,6 +201,6 @@ BACKUP DATABASE @DBNAME TO DISK=<disk>
   
 ## <a name="see-also"></a>Vedere anche  
  [Panoramica di gruppi di disponibilità AlwaysOn &#40;SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md)   
- [ Repliche secondarie attive: Backup su repliche secondarie (gruppi di disponibilità AlwaysOn)](active-secondaries-backup-on-secondary-replicas-always-on-availability-groups.md)  
+ [Repliche secondarie attive: Backup su repliche secondarie (gruppi di disponibilità AlwaysOn)](active-secondaries-backup-on-secondary-replicas-always-on-availability-groups.md)  
   
   

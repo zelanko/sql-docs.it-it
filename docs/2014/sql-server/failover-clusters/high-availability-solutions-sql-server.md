@@ -16,12 +16,12 @@ ms.assetid: b2eda634-0f8e-4703-801b-7ba895544ff5
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 15e75dd27ca447eaab326ff50cc67614d442e096
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 43727e0c7795fbd1f2f0c6a56693c2f06fdf4536
+ms.sourcegitcommit: 8bc5d85bd157f9cfd52245d23062d150b76066ef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52543587"
+ms.lasthandoff: 03/07/2019
+ms.locfileid: "57579041"
 ---
 # <a name="high-availability-solutions-sql-server"></a>Soluzioni a disponibilità elevata (SQL Server)
   In questo argomento vengono presentate alcune soluzioni a disponibilità elevata di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] che consentono di migliorare la disponibilità di server o database. Una soluzione a disponibilità elevata maschera gli effetti di un malfunzionamento hardware o software e mantiene la disponibilità delle applicazioni in modo che il tempo di inattività percepito dagli utenti sia ridotto al minimo.  
@@ -36,10 +36,10 @@ ms.locfileid: "52543587"
  Istanze del cluster di failover AlwaysOn  
  Come parte del [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] AlwaysOn, che offre le istanze del Cluster di Failover AlwaysOn usano la funzionalità di Windows Server Failover Clustering (WSFC) per fornire disponibilità elevata locale tramite ridondanza nell'istanza del server a livello di un oggetto  *istanza del cluster di failover* (FCI). Un'istanza del cluster di failover è una sola istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] installata nei nodi del clustering di failover di Windows Server (WSFC) e, possibilmente, in più subnet. In rete, un'istanza del cluster di failover appare come un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in esecuzione in un singolo computer, le cui funzionalità forniscono il failover da un nodo WSFC a un altro, quando il nodo corrente non è più disponibile.  
   
- Per altre informazioni, vedere [ istanze del Cluster di Failover AlwaysOn (SQL Server)](windows/always-on-failover-cluster-instances-sql-server.md).  
+ Per altre informazioni, vedere [Istanze del cluster di failover Always On (SQL Server)](windows/always-on-failover-cluster-instances-sql-server.md).  
   
  [!INCLUDE[ssHADR](../../includes/sshadr-md.md)]  
- [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] è una soluzione di ripristino di emergenza a disponibilità elevata a livello aziendale introdotta in [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] per ottimizzare la disponibilità per uno o più database. [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] richiede che le istanze di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] risiedano sui nodi WSFC (Windows Server Failover Clustering). Per altre informazioni, vedere [ gruppi di disponibilità AlwaysOn (SQL Server)](../../database-engine/availability-groups/windows/always-on-availability-groups-sql-server.md).  
+ [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] è una soluzione di ripristino di emergenza a disponibilità elevata a livello aziendale introdotta in [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] per ottimizzare la disponibilità per uno o più database. [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] richiede che le istanze di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] risiedano sui nodi WSFC (Windows Server Failover Clustering). Per altre informazioni, vedere [gruppi di disponibilità AlwaysOn (SQL Server)](../../database-engine/availability-groups/windows/always-on-availability-groups-sql-server.md).  
   
 > [!NOTE]  
 >  Un'istanza del cluster di failover può sfruttare [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] per fornire il ripristino di emergenza remoto a livello di database. Per altre informazioni, vedere [Clustering di failover e gruppi di disponibilità AlwaysOn &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/failover-clustering-and-always-on-availability-groups-sql-server.md).  
@@ -65,7 +65,7 @@ ms.locfileid: "52543587"
   
 ## <a name="see-also"></a>Vedere anche  
  [Windows Server Failover Clustering &#40;WSFC&#41; con SQL Server](windows/windows-server-failover-clustering-wsfc-with-sql-server.md)   
- [Il mirroring del database: Interoperabilità e coesistenza &#40;SQL Server&#41;](../../database-engine/database-mirroring/database-mirroring-interoperability-and-coexistence-sql-server.md)   
+ [Il mirroring del database: interoperabilità e coesistenza &#40;SQL Server&#41;](../../database-engine/database-mirroring/database-mirroring-interoperability-and-coexistence-sql-server.md)   
  [Funzionalità del Motore di database deprecate in SQL Server 2014](../../database-engine/deprecated-database-engine-features-in-sql-server-2016.md)  
   
   

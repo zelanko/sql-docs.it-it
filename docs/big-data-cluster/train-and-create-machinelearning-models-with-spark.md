@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: c9bcc5ba99736a6bb65bde4aff20e220d70303d4
-ms.sourcegitcommit: 202ef5b24ed6765c7aaada9c2f4443372064bd60
+ms.openlocfilehash: 1ef8f66d220561407c0bcafedde8a402f871924a
+ms.sourcegitcommit: 8bc5d85bd157f9cfd52245d23062d150b76066ef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/12/2019
-ms.locfileid: "54242022"
+ms.lasthandoff: 03/07/2019
+ms.locfileid: "57578111"
 ---
 # <a name="train-and-create-machine-learning-models-with-spark"></a>Eseguire il training e creare modelli di machine learning con Spark
 
@@ -88,7 +88,7 @@ data = data_all.select(select_cols)
 
 ## <a name="step-4---split-as-training-and-test-set"></a>Passaggio 4: suddividere come set di training e test
 
-Usare il 75% delle righe per addestrare il modello e il resto del 25% per valutare il modello. Inoltre, rendere persistente il training e set di dati in un archivio HDFS di test. Il passaggio non è necessaria, ma visualizzati per illustrare il salvataggio e il caricamento con formato ORC. Altri formati, ad esempio, `Parquet `può anche essere usato.
+Usare il 75% delle righe per addestrare il modello e il resto del 25% per valutare il modello. Inoltre, rendere persistente il training e set di dati in un archivio HDFS di test. Il passaggio non è necessaria, ma visualizzati per illustrare il salvataggio e il caricamento con formato ORC. Altri formati, ad esempio, `Parquet` può anche essere usato.
 
 Registrare questo passaggio che dovrebbe essere creata con il nome AdultCensusIncomeTrain e AdultCensusIncomeTest due directory
 

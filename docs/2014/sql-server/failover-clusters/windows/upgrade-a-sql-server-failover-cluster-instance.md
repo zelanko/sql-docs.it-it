@@ -14,12 +14,12 @@ ms.assetid: daac41fe-7d0b-4f14-84c2-62952ad8cbfa
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 421aac2c58755b192eff51a85d668b03a2fc8a8e
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: a7a8d5f04808582bd56c106adce0df2c1f66aa77
+ms.sourcegitcommit: 8bc5d85bd157f9cfd52245d23062d150b76066ef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52823875"
+ms.lasthandoff: 03/07/2019
+ms.locfileid: "57579301"
 ---
 # <a name="upgrade-a-sql-server-failover-cluster"></a>Aggiornare un cluster di failover di SQL Server
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] supporta l'aggiornamento separato del [!INCLUDE[ssDE](../../../includes/ssde-md.md)] e di [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] dai cluster di failover di [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)], [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)], [!INCLUDE[ssKilimanjaro](../../../includes/sskilimanjaro-md.md)] e [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] in tutti i nodi del cluster di failover.  
@@ -40,7 +40,7 @@ ms.locfileid: "52823875"
   
     -   Non è possibile effettuare il downgrade di un nodo del cluster di failover a un'istanza autonoma.  
   
--   Per altre informazioni, vedere [ istanze del Cluster di Failover AlwaysOn (SQL Server)](always-on-failover-cluster-instances-sql-server.md).  
+-   Per altre informazioni, vedere [Istanze del cluster di failover Always On (SQL Server)](always-on-failover-cluster-instances-sql-server.md).  
   
 ## <a name="upgrading-a-includessnoversionincludesssnoversion-mdmd-multi-subnet-failover-cluster"></a>Aggiornamento di un cluster di failover su più subnet di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]  
  È possibile aggiornare direttamente una non-multi-subnet [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] cluster di failover a un [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] cluster di failover su più subnet. Per altre informazioni, vedere [Eseguire l'aggiornamento di un'istanza del cluster di failover di SQL Server &#40;installazione&#41;](upgrade-a-sql-server-failover-cluster-instance-setup.md).  

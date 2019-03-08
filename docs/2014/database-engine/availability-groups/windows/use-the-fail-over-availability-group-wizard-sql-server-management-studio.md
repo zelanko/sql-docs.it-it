@@ -20,12 +20,12 @@ ms.assetid: 4a602584-63e4-4322-aafc-5d715b82b834
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 38a5c58f7376fa44438dff5d6ef9e94f0c2809c0
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: d440aace866527797252b67e3b397cc76d7dbdc7
+ms.sourcegitcommit: 8bc5d85bd157f9cfd52245d23062d150b76066ef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52519297"
+ms.lasthandoff: 03/07/2019
+ms.locfileid: "57579651"
 ---
 # <a name="use-the-fail-over-availability-group-wizard-sql-server-management-studio"></a>Utilizzare la Procedura guidata Failover del gruppo di disponibilità (SQL Server Management Studio)
   In questo argomento viene illustrato come eseguire un failover manuale pianificato o un failover manuale forzato (failover forzato) su un gruppo di disponibilità AlwaysOn tramite [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../../includes/tsql-md.md)]o PowerShell in [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]. Per un gruppo di disponibilità il failover si verifica al livello di una replica di disponibilità. Se si esegue il failover su a una replica secondaria con stato SYNCHRONIZED, tramite la procedura guidata viene eseguito un failover manuale pianificato (senza perdita di dati). Se si esegue il failover su una replica secondaria con stato UNSYNCHRONIZED o NOT SYNCHRONIZING, la procedura guidata esegue un failover manuale forzato, noto anche come *failover forzato* (con possibile perdita di dati). In entrambe le forme di failover manuale la replica secondaria a cui si è connessi assume il ruolo primario. Con un failover manuale pianificato attualmente comporta il passaggio della replica primaria precedente al ruolo secondario. Dopo un failover forzato, quando la replica primaria precedente torna online assume il ruolo secondario.  
@@ -50,7 +50,7 @@ ms.locfileid: "52519297"
 ##  <a name="BeforeYouBegin"></a> Prima di iniziare  
  Prima del primo failover manuale pianificato, vedere la sezione "Prima di iniziare" in [Eseguire un failover manuale pianificato di un gruppo di disponibilità &#40;SQL Server&#41;](perform-a-planned-manual-failover-of-an-availability-group-sql-server.md).  
   
- Prima del primo failover forzato, vedere la "prima di iniziare" e "completamento: Attività essenziali dopo un Failover forzato"sezioni nel [eseguire un Failover manuale forzato di un gruppo di disponibilità &#40;SQL Server&#41;](perform-a-forced-manual-failover-of-an-availability-group-sql-server.md).  
+ Prima del primo failover forzato, vedere le sezioni "Prima di iniziare" e "Completamento: Attività essenziali dopo un failover forzato" in [Eseguire un failover manuale forzato di un gruppo di disponibilità &#40;SQL Server&#41;](perform-a-forced-manual-failover-of-an-availability-group-sql-server.md).  
   
 ###  <a name="Restrictions"></a> Limitazioni e restrizioni  
   
@@ -99,7 +99,7 @@ ms.locfileid: "52519297"
   
      Per altre informazioni, vedere [Pagina Risultati &#40;procedure guidate gruppi di disponibilità AlwaysOn&#41;](results-page-always-on-availability-group-wizards.md).  
   
-11. Dopo un failover forzato, vedere il "completamento: Sezione dopo un Failover forzato"nel [eseguire un Failover manuale forzato di un gruppo di disponibilità &#40;SQL Server&#41;](perform-a-forced-manual-failover-of-an-availability-group-sql-server.md).  
+11. Dopo un failover forzato, vedere la sezione "Completamento: dopo un failover forzato" in [Eseguire un failover manuale forzato di un gruppo di disponibilità &#40;SQL Server&#41;](perform-a-forced-manual-failover-of-an-availability-group-sql-server.md).  
   
 ## <a name="help-for-pages-that-are-exclusive-to-this-wizard"></a>Guida relativa alle pagine specifiche di questa procedura guidata  
  In questa sezione vengono descritte le pagine univoche della [!INCLUDE[ssAoFoAgWiz](../../../includes/ssaofoagwiz-md.md)].  
@@ -144,7 +144,7 @@ ms.locfileid: "52519297"
 |**Commit sincrono**|Nella modalità commit sincrono, prima di eseguire il commit delle transazioni, una replica primaria con commit sincrono attende l'acknowledgement della finalizzazione del log da parte della replica secondaria con commit sincrono. Nella modalità commit sincrono si può essere sicuri che al termine della sincronizzazione di un determinato database secondario con il database primario, le transazioni di cui è stato eseguito il commit sono completamente protette.|  
 |**Commit asincrono**|Nella modalità commit asincrono, la replica primaria esegue il commit delle transazioni senza attendere l'acknowledgement della finalizzazione del log da parte di una replica con commit asincrono. La modalità commit asincrono riduce la latenza delle transazioni sui database secondari, ma consente un certo ritardo rispetto ai database primari, rendendo possibile la perdita di dati.|  
   
- Per altre informazioni, vedere [ modalità di disponibilità (gruppi di disponibilità AlwaysOn)](availability-modes-always-on-availability-groups.md).  
+ Per altre informazioni, vedere [modalità di disponibilità (gruppi di disponibilità AlwaysOn)](availability-modes-always-on-availability-groups.md).  
   
  **Modalità di failover**  
  Visualizza la modalità di failover dell'istanza del server, tra le seguenti:  
@@ -201,7 +201,7 @@ ms.locfileid: "52519297"
   
 ## <a name="see-also"></a>Vedere anche  
  [Panoramica di gruppi di disponibilità AlwaysOn &#40;SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md)   
- [ Modalità di disponibilità (gruppi di disponibilità AlwaysOn)](availability-modes-always-on-availability-groups.md)   
+ [Modalità di disponibilità (gruppi di disponibilità AlwaysOn)](availability-modes-always-on-availability-groups.md)   
  [Failover e modalità di Failover &#40;gruppi di disponibilità AlwaysOn&#41;](failover-and-failover-modes-always-on-availability-groups.md)   
  [Eseguire un failover manuale pianificato di un gruppo di disponibilità &#40;SQL Server&#41;](perform-a-planned-manual-failover-of-an-availability-group-sql-server.md)   
  [Eseguire un failover manuale forzato di un gruppo di disponibilità &#40;SQL Server&#41;](perform-a-forced-manual-failover-of-an-availability-group-sql-server.md)   

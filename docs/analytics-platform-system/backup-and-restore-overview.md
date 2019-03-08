@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.date: 01/19/2019
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: 4bb0ee8ad06d217cd6441527a1505311dac8e926
-ms.sourcegitcommit: 1e28f923cda9436a4395a405ebda5149202f8204
+ms.openlocfilehash: 0b95d18eb38bbe0012235304747ca80b3dc19a79
+ms.sourcegitcommit: 8bc5d85bd157f9cfd52245d23062d150b76066ef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/25/2019
-ms.locfileid: "55044398"
+ms.lasthandoff: 03/07/2019
+ms.locfileid: "57579181"
 ---
 # <a name="backup-and-restore"></a>Backup e ripristino
 
@@ -132,7 +132,7 @@ Dopo la ridistribuzione, ogni nodo di calcolo contiene meno dati effettivi e pi√
   
 |Backup e attivit√† di ripristino|Descrizione|  
 |---------------------------|---------------|  
-|Preparare un server come server di backup.|[Acquisire e configurare un server di backup ](acquire-and-configure-backup-server.md)|  
+|Preparare un server come server di backup.|[Acquisire e configurare un server di backup](acquire-and-configure-backup-server.md)|  
 |Backup di un database.|[BACKUP DEL DATABASE](../t-sql/statements/backup-database-parallel-data-warehouse.md)|  
 |Ripristinare un database.|[RESTORE DATABASE](../t-sql/statements/restore-database-parallel-data-warehouse.md)|    
 

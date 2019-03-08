@@ -10,12 +10,12 @@ ms.topic: conceptual
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: d98e87d18d76162e5bf9dcb4779a8bc7fec74385
-ms.sourcegitcommit: c19696d3d67161ce78aaa5340964da3256bf602d
+ms.openlocfilehash: e26299f221facfc6828369e1c75225f206937eb4
+ms.sourcegitcommit: 8bc5d85bd157f9cfd52245d23062d150b76066ef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/29/2018
-ms.locfileid: "52617626"
+ms.lasthandoff: 03/07/2019
+ms.locfileid: "57579581"
 ---
 # <a name="wideworldimporters-database-catalog"></a>Catalogo del database WideWorldImporters
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -44,7 +44,7 @@ Questi schemi vengono utilizzati per le applicazioni esterne che non sono consen
 |-----------------------------|---------------------|
 |Sito Web|Tutti gli accessi al database dal sito Web della società sono tramite questo schema.|
 |Report|Tutti gli accessi al database da report di Reporting Services sono tramite questo schema.|
-|Power BI|Tutti gli accessi al database dal dashboard di Power BI tramite il Gateway aziendale sono tramite questo schema.|
+|PowerBI|Tutti gli accessi al database dal dashboard di Power BI tramite il Gateway aziendale sono tramite questo schema.|
 
 Si noti che i report e Power BI gli schemi non vengono utilizzati nella versione iniziale del database di esempio. Tuttavia, gli esempi di tutti i Reporting Services e Power BI basati su questo database sono invitati a usare questi schemi.
 
@@ -202,7 +202,7 @@ Queste procedure vengono utilizzate per configurare l'esempio. Vengono utilizzat
 |Configuration_ApplyAuditing|Aggiunge il controllo. Il controllo server viene applicato per i database standard edition; il controllo del database aggiuntivo viene aggiunta per enterprise edition.|
 |Configuration_ApplyColumnstoreIndexing|Si applica a indici columnstore `Sales.OrderLines` e `Sales.InvoiceLines` e reindexes in modo appropriato.|
 |Configuration_ApplyFullTextIndexing|Si applica a indici full-text per `Application.People`, `Sales.Customers`, `Purchasing.Suppliers`, e `Warehouse.StockItems`. Sostituisce `Website.SearchForPeople`, `Website.SearchForSuppliers`, `Website.SearchForCustomers`, `Website.SearchForStockItems`, `Website.SearchForStockItemsByTags` con le procedure di sostituzione che usano l'indicizzazione full-text.|
-|Configuration_ApplyPartitioning|Si applica il partizionamento delle tabelle a `Sales.CustomerTransactions and `'Purchasing.SupplierTransactions e ridispone gli indici in base alle proprie.|
+|Configuration_ApplyPartitioning|Si applica al partizionamento delle tabelle `Sales.CustomerTransactions` e `Purchasing.SupplierTransactions`e consente di riorganizzare gli indici in base alle proprie.|
 |Configuration_ApplyRowLevelSecurity|Applica la sicurezza a livello di riga per filtrare i clienti per sales territory relativi ruoli.|
 |Configuration_ConfigureForEnterpriseEdition|Si applica l'indicizzazione columnstore, full-text, in memoria, polybase e partizionamento.|
 |Configuration_EnableInMemory|Aggiunge un filegroup ottimizzato per la memoria (quando non funziona in Azure), sostituisce `Warehouse.ColdRoomTemperatures`, `Warehouse.VehicleTemperatures` con gli equivalenti in memoria e viene eseguita la migrazione dei dati, verrà ricreata la `Website.OrderIDList`, `Website.OrderList`, `Website.OrderLineList`, `Website.SensorDataList` tipi con le tabelle equivalenti ottimizzate per la memoria, Elimina e crea nuovamente le procedure descritte `Website.InvoiceCustomerOrders`, `Website.InsertCustomerOrders`, e `Website.RecordColdRoomTemperatures` che usa questi tipi di tabella.|

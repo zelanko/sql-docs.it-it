@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: ea15a8fc5eaf066b5a64cf73192f64dd0078434e
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: e9067416365e56dccf9c09f2e826c01fb3ecfa3c
+ms.sourcegitcommit: 8bc5d85bd157f9cfd52245d23062d150b76066ef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52534085"
+ms.lasthandoff: 03/07/2019
+ms.locfileid: "57578491"
 ---
 # <a name="transparent-data-encryption"></a>Transparent Data Encryption
 Per proteggere il database è possibile adottare alcune accortezze, tra cui la progettazione di un sistema sicuro, la crittografia dei dati riservati e la compilazione di un firewall attorno ai server di database. Tuttavia, per uno scenario in cui si appropria i supporti fisici (ad esempio le unità o nastri di backup), un utente malintenzionato può semplicemente ripristinare o collegare il database ed esplorare i dati. Una soluzione per ovviare al problema consiste nel crittografare i dati sensibili nel database e proteggere con un certificato le chiavi usate per la crittografia. In questo modo si impedisce a chi è sprovvisto delle chiavi di usare i dati; tuttavia, questo tipo di protezione deve essere pianificato in anticipo.  
@@ -238,15 +238,15 @@ Se è presente una DMK nell'appliance in cui è stata eseguita l'aggiornamento o
   
 Esempio di azione di aggiornamento. Sostituire `**********` con la password DMK.  
   
-`setup.exe /Action=ProvisionUpgrade ... DMKPassword='**********'  `  
+`setup.exe /Action=ProvisionUpgrade ... DMKPassword='**********'`  
   
 Esempio di azione per sostituire una macchina virtuale.  
   
-`setup.exe /Action=ReplaceVM ... DMKPassword='**********'  `  
+`setup.exe /Action=ReplaceVM ... DMKPassword='**********'`  
   
 Durante l'aggiornamento, se un database utente è crittografato e la password DMK non viene specificata, l'azione di aggiornamento avrà esito negativo. Durante la sostituzione, se la password corretta non è disponibile quando è presente una DMK, l'operazione ignorerà il passaggio di recupero DMK. Tutti gli altri passaggi verranno completati al termine dell'azione di sostituzione della macchina virtuale, ma l'azione segnala un errore alla fine per indicare che sono necessari passaggi aggiuntivi. Nei log del programma di installazione (che si trova **\ProgramData\Microsoft\Microsoft SQL Server Parallel Data Warehouse\100\Logs\Setup\\\Detail-Setup < timestamp >**), verrà visualizzato l'avviso seguente verso la fine.  
   
-`*** WARNING \*\*\* DMK is detected in master database, but could not be recovered automatically! The DMK password was either not provided or is incorrect!  `
+`*** WARNING \*\*\* DMK is detected in master database, but could not be recovered automatically! The DMK password was either not provided or is incorrect!`
   
 Eseguire manualmente queste istruzione in PDW e riavviare l'appliance in seguito per eseguire il ripristino DMK:  
   

@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 6b0c376c6ab8625d2f31e6ad6ea132842315b1e1
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 988a091fa7d536386cadd2ed3412213a2e608564
+ms.sourcegitcommit: 8bc5d85bd157f9cfd52245d23062d150b76066ef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52410777"
+ms.lasthandoff: 03/07/2019
+ms.locfileid: "57579431"
 ---
 # <a name="lesson-1-create-a-new-tabular-model-project"></a>Lezione 1: Creare un nuovo modello di progetto tabulare
 [!INCLUDE[ssas-appliesto-sql2016-later-aas](../includes/ssas-appliesto-sql2016-later-aas.md)]
@@ -83,7 +83,7 @@ Esplorare alcune delle finestre di dialogo e posizioni per diverse funzionalità
 
 
 ## <a name="additional-resources"></a>Risorse aggiuntive
-Per altre informazioni sui diversi tipi di progetti di modelli tabulari, vedere [progetti di modello tabulare](../analysis-services/tabular-models/tabular-model-projects-ssas-tabular.md). Per altre informazioni sull'ambiente di creazione di modelli tabulari, vedere [progettazione di modelli tabulari ](../analysis-services/tabular-models/tabular-model-designer-ssas.md).  
+Per altre informazioni sui diversi tipi di progetti di modelli tabulari, vedere [progetti di modello tabulare](../analysis-services/tabular-models/tabular-model-projects-ssas-tabular.md). Per altre informazioni sull'ambiente di creazione di modelli tabulari, vedere [progettazione di modelli tabulari](../analysis-services/tabular-models/tabular-model-designer-ssas.md).  
   
 
 ## <a name="whats-next"></a>Quali sono le operazioni successive?

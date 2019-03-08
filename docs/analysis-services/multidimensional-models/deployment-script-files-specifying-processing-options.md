@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 37ca9200dc142f1a1bb2f673b3b772644385d8ba
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 54be969446b9c1b234860ce2a68c1208634246ce
+ms.sourcegitcommit: d6ef87a01836738b5f7941a68ca80f98c61a49d4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52537357"
+ms.lasthandoff: 03/07/2019
+ms.locfileid: "57572774"
 ---
 # <a name="deployment-script-files---specifying-processing-options"></a>File di Script di distribuzione - specificare le opzioni di elaborazione
 [!INCLUDE[ssas-appliesto-sqlas-all-aas](../../includes/ssas-appliesto-sqlas-all-aas.md)]
@@ -26,12 +26,13 @@ ms.locfileid: "52537357"
   
 -   **Metodo di elaborazione** Questa impostazione determina se gli oggetti distribuiti vengono elaborati dopo la distribuzione e il tipo di elaborazione a cui verranno sottoposti. Sono previste tre opzioni di elaborazione:  
   
-    -   Elaborazione predefinita (impostazione predefinita)  
+    -   Elaborazione predefinita (impostazione predefinita) rileva lo stato di elaborazione di oggetti di database ed esegue l'elaborazione necessaria per restituire oggetti non elaborati o elaborati parzialmente in uno stato completamente elaborato.
   
-    -   Elaborazione completa  
+    -   L'elaborazione completa elabora un oggetto e tutti gli oggetti in esso contenuti. Quando viene eseguita l'elaborazione completa su un oggetto che è già stato elaborato, questa operazione viene completata solo dopo che sono stati eliminati tutti i dati contenuti nell'oggetto. 
   
-    -   None  
-  
+    -   None indica che non viene eseguita alcuna elaborazione.
+
+
 -   **Opzioni tabella writeback** Se il writeback è attivato nel progetto [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , questa impostazione stabilisce come verrà gestito. Sono previste tre opzioni per la tabella writeback:  
   
     -   Per impostazione predefinita, se esiste una tabella writeback essa verrà utilizzata. Se non esiste alcuna tabella writeback, ne verrà creata una nuova.  

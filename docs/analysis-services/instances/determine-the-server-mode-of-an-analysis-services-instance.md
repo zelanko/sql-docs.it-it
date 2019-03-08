@@ -9,18 +9,18 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 434996f53cefc3c30cc649411db7699ed2bd3f7e
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: b292e20880dcb77c4f448f7e141355edff67417f
+ms.sourcegitcommit: 8bc5d85bd157f9cfd52245d23062d150b76066ef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52401024"
+ms.lasthandoff: 03/07/2019
+ms.locfileid: "57579001"
 ---
 # <a name="determine-the-server-mode-of-an-analysis-services-instance"></a>Determinare la modalità server di un'istanza di Analysis Services
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
   È possibile installare Analysis Services in una di tre modalità server: Multidimensionale e Data Mining (impostazione predefinita), [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] per SharePoint e tabulare. La modalità server di un'istanza di Analysis Services è determinata durante l'installazione quando si scelgono le opzioni per l'installazione del server.  
   
- La modalità server determina il tipo di soluzione creata e distribuita. Se non è stato installato il software server e si desidera sapere in quale modalità è stato installato il server, è possibile usare le informazioni di questo argomento per determinare tale modalità. Per altre informazioni sulle funzionalità disponibili in una modalità specifica, vedere [confronto tra tabulari e multidimensionali ](../../analysis-services/comparing-tabular-and-multidimensional-solutions-ssas.md).  
+ La modalità server determina il tipo di soluzione creata e distribuita. Se non è stato installato il software server e si desidera sapere in quale modalità è stato installato il server, è possibile usare le informazioni di questo argomento per determinare tale modalità. Per altre informazioni sulle funzionalità disponibili in una modalità specifica, vedere [confronto tra tabulari e multidimensionali](../../analysis-services/comparing-tabular-and-multidimensional-solutions-ssas.md).  
   
  Se non si desidera usare la modalità server installata, è necessario disinstallare e reinstallare il software, scegliendo la modalità preferita. In alternativa, è possibile installare un'istanza aggiuntiva di Analysis Services nello stesso computer per disporre di più istanze eseguite in modalità diverse.  
   
@@ -54,7 +54,7 @@ ms.locfileid: "52401024"
  [Installazione di Power Pivot per SharePoint 2010](http://msdn.microsoft.com/8d47dde7-c941-4280-a934-e2fe3f9a938f)   
  [Connetti ad Analysis Services](../../analysis-services/instances/connect-to-analysis-services.md)   
  [Soluzioni di modelli tabulari](../../analysis-services/tabular-models/tabular-models-ssas.md)   
- [Soluzioni di modelli multidimensionali ](../../analysis-services/multidimensional-models/multidimensional-model-solutions-ssas.md)   
+ [Soluzioni di modelli multidimensionali](../../analysis-services/multidimensional-models/multidimensional-model-solutions-ssas.md)   
  [Modelli di data mining &#40;Analysis Services - Data mining&#41;](../../analysis-services/data-mining/mining-models-analysis-services-data-mining.md)  
   
   

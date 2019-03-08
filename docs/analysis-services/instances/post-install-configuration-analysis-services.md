@@ -1,5 +1,5 @@
 ---
-title: Post-configurazione installazione (Analysis Services) | Documenti Microsoft
+title: Configurazione (Analysis Services) successiva all'installazione | Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,18 +9,18 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 00c6986fdb3cba910df98165d64afdb154ded68d
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: aadcdb901c39af148b22640413b921aae288f016
+ms.sourcegitcommit: 8bc5d85bd157f9cfd52245d23062d150b76066ef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34016608"
+ms.lasthandoff: 03/07/2019
+ms.locfileid: "57579481"
 ---
 # <a name="post-install-configuration-analysis-services"></a>Configurazione successiva all'installazione (Analysis Services)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
   Dopo aver installato Analysis Services, è necessario eseguire ulteriori attività di configurazione per rendere il server completamente operativo e disponibile per l'utilizzo generale. In questa sezione vengono illustrate le attività aggiuntive per completare l'installazione. A seconda dei requisiti di connessione, potrebbe essere inoltre necessario configurare l'autenticazione (vedere [Connessione a un database di Analysis Services](../../analysis-services/instances/connect-to-analysis-services.md)).  
   
- In seguito saranno necessarie altre operazioni dopo aver preparato i database per la distribuzione. In particolare, sarà necessario configurare le appartenenze ai ruoli nel database per concedere l'accesso utente ai dati, progettare una strategia di backup e ripristino di un database e stabilire se è necessario un carico di lavoro di elaborazione pianificato per aggiornare i dati a intervalli regolari. Ulteriori informazioni sulla distribuzione del database e l'amministrazione sono reperibile in questi collegamenti: [database modello multidimensionale ](../../analysis-services/multidimensional-models/multidimensional-model-databases-ssas.md) e [database modello tabulare](../../analysis-services/tabular-models/tabular-model-databases-ssas-tabular.md).  
+ In seguito saranno necessarie altre operazioni dopo aver preparato i database per la distribuzione. In particolare, sarà necessario configurare le appartenenze ai ruoli nel database per concedere l'accesso utente ai dati, progettare una strategia di backup e ripristino di un database e stabilire se è necessario un carico di lavoro di elaborazione pianificato per aggiornare i dati a intervalli regolari. Altre informazioni sulla distribuzione e l'amministrazione del database sono disponibili ai collegamenti seguenti: [I database modello multidimensionale](../../analysis-services/multidimensional-models/multidimensional-model-databases-ssas.md) e [i database modello tabulare](../../analysis-services/tabular-models/tabular-model-databases-ssas-tabular.md).  
   
 ## <a name="instance-configuration"></a>Configurazione dell'istanza  
  Analysis Services è un servizio replicabile, ovvero è possibile installare più istanze del servizio in un unico server. Ogni istanza aggiuntiva viene installata separatamente come istanza denominata, tramite il programma di installazione di SQL Server, e configurata in modo indipendente per supportare lo scopo desiderato. Ad esempio, un server di sviluppo può eseguire l'utilità Traccia eventi o utilizzare valori predefiniti per l'archiviazione dei dati che è possibile modificare altrimenti nei server che supportano i carichi di lavoro di produzione. Un altro esempio in cui è necessario modificare la configurazione di sistema è rappresentato dall'installazione dell'istanza di Analysis Services su hardware condiviso da altri servizi. Durante l'hosting di più applicazioni caratterizzate da un utilizzo elevato di dati nello stesso hardware, è possibile configurare le proprietà del server tramite cui vengono abbassate le soglie di memoria per ottimizzare le risorse disponibili in tutte le applicazioni.  

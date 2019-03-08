@@ -8,14 +8,14 @@ ms.topic: quickstart
 author: dphansen
 ms.author: davidph
 manager: cgronlun
-ms.openlocfilehash: b0ef5d33757d9f8c4e3aed53d3867bfd5b1297b2
-ms.sourcegitcommit: 032273bfbc240fe22ac6c1f6601a14a6d99573f7
+ms.openlocfilehash: 25bf5a7e7d18810c782d1ce2f4986fc433421395
+ms.sourcegitcommit: 8bc5d85bd157f9cfd52245d23062d150b76066ef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/01/2019
-ms.locfileid: "55513761"
+ms.lasthandoff: 03/07/2019
+ms.locfileid: "57577931"
 ---
-# <a name="quickstart-verify-python-exists-in-sql-server"></a>Guida introduttiva: Verificare la presenza di Python in SQL Server 
+# <a name="quickstart-verify-python-exists-in-sql-server"></a>Avvio rapido: Verificare la presenza di Python in SQL Server 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 SQL Server include il supporto Python per analitica di analisi scientifica dei dati residenti in dati di SQL Server. L'esecuzione dello script è tramite le stored procedure, usando uno degli approcci seguenti:
@@ -146,4 +146,4 @@ Microsoft fornisce una serie di pacchetti Python pre-installati con i servizi di
 Ora che hai confermato che l'istanza è pronta per funzionare con Python, esaminiamo più da vicino un'interazione di Python di base.
 
 > [!div class="nextstepaction"]
-> [Guida introduttiva: Script di Python "Hello world" in SQL Server ](quickstart-python-run-using-t-sql.md)
+> [Guida introduttiva: Script di Python "Hello world" in SQL Server](quickstart-python-run-using-t-sql.md)

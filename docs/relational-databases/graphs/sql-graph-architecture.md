@@ -15,12 +15,12 @@ author: shkale-msft
 ms.author: shkale
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: e4c7c5bae386f142dff45be8a1b1371f104cfab3
-ms.sourcegitcommit: 1e28f923cda9436a4395a405ebda5149202f8204
+ms.openlocfilehash: ed234a487d5c382400b3a839820a4509c8b880f2
+ms.sourcegitcommit: 8bc5d85bd157f9cfd52245d23062d150b76066ef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/25/2019
-ms.locfileid: "55044547"
+ms.lasthandoff: 03/07/2019
+ms.locfileid: "57579351"
 ---
 # <a name="sql-graph-architecture"></a>Architettura di grafi SQL  
 [!INCLUDE[tsql-appliesto-ss2017-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-xxxx-xxx-md.md)]
@@ -138,7 +138,7 @@ Scopri il [!INCLUDE[tsql-md](../../includes/tsql-md.md)] estensioni introdotte i
 
 |Attività   |Articolo correlato  |Note
 |---  |---  |---  |
-|CREATE TABLE |[CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-sql-graph.md)|`CREATE TABLE ` viene ora estesa per supportare la creazione di una tabella AS nodi o bordi di AS. Si noti che una tabella edge può o non abbiano gli attributi definiti dall'utente.  |
+|CREATE TABLE |[CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-sql-graph.md)|`CREATE TABLE` viene ora estesa per supportare la creazione di una tabella AS nodi o bordi di AS. Si noti che una tabella edge può o non abbiano gli attributi definiti dall'utente.  |
 |ALTER TABLE    |[ALTER TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md)|È possibile modificare nodi e le tabelle bordi esattamente una tabella relazionale, utilizza il `ALTER TABLE`. Gli utenti possono aggiungere o modificare le colonne definite dall'utente, indici o vincoli. Tuttavia, modificare le colonne grafico interne, ad esempio `$node_id` o `$edge_id`, verrà generato un errore.  |
 |CREATE INDEX   |[CREATE INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-index-transact-sql.md)  |Gli utenti possono creare indici su pseudo- colonne e le colonne definite dall'utente nel nodo e le tabelle bordi. Sono supportati tutti i tipi di indice, inclusi gli indici columnstore cluster e non cluster.  |
 |CREARE I VINCOLI DI ARCO    |[EDGE CONSTRAINTS &#40;Transact-SQL&#41;](../../relational-databases/tables/graph-edge-constraints.md)  |Gli utenti possono ora creare vincoli di arco sulle tabelle edge per applicare la semantica specifica e anche mantenere l'integrità dei dati  |

@@ -16,15 +16,15 @@ ms.assetid: edd75f68-dc62-4479-a596-57ce8ad632e5
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 48bfd8ddc0a7e68bc2747543f5e079f24041c20a
-ms.sourcegitcommit: 87f29b23d5ab174248dab5d558830eeca2a6a0a4
+ms.openlocfilehash: e5a7e72b429789477a9ae1245be30b18965560ee
+ms.sourcegitcommit: 8bc5d85bd157f9cfd52245d23062d150b76066ef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "51018166"
+ms.lasthandoff: 03/07/2019
+ms.locfileid: "57578538"
 ---
 # <a name="installation-for-sql-server-2014"></a>Installazione per SQL Server 2014
- ## <a name="-download-sql-server-2014-express-httpwwwhanselmancomblogdownloadsqlserverexpressaspx"></a>[ Download di SQL Server 2014 Express ](http://www.hanselman.com/blog/DownloadSQLServerExpress.aspx)
+ ## <a name="download-sql-server-2014-expresshttpwwwhanselmancomblogdownloadsqlserverexpressaspx"></a>[Download di SQL Server 2014 Express](http://www.hanselman.com/blog/DownloadSQLServerExpress.aspx)
   **Grazie per aver preso parte alla [Scott Hanselman](http://www.hanselman.com/) per la raccolta di tutti i collegamenti di pacchetto del programma di installazione in un'unica posizione.**
   
   L'Installazione guidata di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fornisce un singolo albero delle funzionalità per installare tutti i componenti di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] :  
@@ -49,9 +49,9 @@ ms.locfileid: "51018166"
  
  **Per provarlo:**  
   
--   Se si ha un account di Azure,  Quindi andare **[qui](https://ms.portal.azure.com/?flight=1#create/Microsoft.SQLServer2016RTMEnterpriseWindowsServer2012R2)** creare rapidamente una macchina virtuale con SQL Server 2014 Service Pack 1 (SP1) già installato. Per altre informazioni su SQL Server 2014 (SP1), vedere [informazioni sulla versione di SQL Server 2014 Service Pack 1 ](https://support.microsoft.com/en-us/kb/3058865).  
+-   Se si ha un account di Azure,  Quindi andare **[qui](https://ms.portal.azure.com/?flight=1#create/Microsoft.SQLServer2016RTMEnterpriseWindowsServer2012R2)** creare rapidamente una macchina virtuale con SQL Server 2014 Service Pack 1 (SP1) già installato. Per altre informazioni su SQL Server 2014 (SP1), vedere [informazioni sulla versione di SQL Server 2014 Service Pack 1](https://support.microsoft.com/en-us/kb/3058865).  
   
-## <a name="in-this-section"></a>Argomenti della sezione  
+## <a name="in-this-section"></a>In questa sezione  
  Sia che si utilizzi l'Installazione guidata di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o il prompt dei comandi per installare [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], il processo di installazione prevede i passaggi seguenti.  
   
  [Pianificazione di un'installazione di SQL Server](../../sql-server/install/planning-a-sql-server-installation.md)  

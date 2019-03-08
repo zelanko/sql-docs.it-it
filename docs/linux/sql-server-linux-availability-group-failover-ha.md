@@ -10,12 +10,12 @@ ms.prod: sql
 ms.custom: sql-linux
 ms.technology: linux
 ms.assetid: ''
-ms.openlocfilehash: 891f86328042091bb1e7a67f725f13ee160dccf3
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 79b55906477d091f4e61883a2f24d991f655054b
+ms.sourcegitcommit: 8bc5d85bd157f9cfd52245d23062d150b76066ef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51665830"
+ms.lasthandoff: 03/07/2019
+ms.locfileid: "57579461"
 ---
 # <a name="always-on-availability-group-failover-on-linux"></a>Failover gruppo di disponibilità AlwaysOn in Linux
 
@@ -38,7 +38,7 @@ Per eseguire il failover, la replica secondaria che diventerà la replica primar
 
 Eseguire il failover manuale in due passaggi.
 
-   Prima di tutto[ effettuare manualmente il failover lo spostamento di risorse del gruppo di disponibilità](#manualMove) dal nodo del cluster che è proprietario delle risorse in un nuovo nodo.
+   Prima di tutto [effettuare manualmente il failover lo spostamento di risorse del gruppo di disponibilità](#manualMove) dal nodo del cluster che è proprietario delle risorse in un nuovo nodo.
 
    Il cluster di failover della risorsa del gruppo di disponibilità e aggiunge un vincolo di posizione. Questo vincolo consente di configurare la risorsa per l'esecuzione nel nuovo nodo. Per eseguire il failover in futuro, rimuovere il vincolo.
 
@@ -118,13 +118,13 @@ Questo processo per il failover forzato è specifico di SQL Server in Linux.
 
 1. Verificare che la risorsa del gruppo di disponibilità non è gestita dal cluster più. 
 
-      - Impostare la risorsa in modalità non gestita nel nodo del cluster di destinazione. Questo comando segnala l'agente delle risorse alla gestione e monitoraggio delle risorse significative. Esempio: 
+      - Impostare la risorsa in modalità non gestita nel nodo del cluster di destinazione. Questo comando segnala l'agente delle risorse alla gestione e monitoraggio delle risorse significative. Ad esempio: 
       
       ```bash
       sudo pcs resource unmanage <resourceName>
       ```
 
-      - Se il tentativo di impostare la modalità di risorse per la modalità non gestita non riesce, eliminare la risorsa. Esempio:
+      - Se il tentativo di impostare la modalità di risorse per la modalità non gestita non riesce, eliminare la risorsa. Ad esempio:
 
       ```bash
       sudo pcs resource delete <resourceName>

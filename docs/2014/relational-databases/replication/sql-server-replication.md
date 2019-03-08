@@ -13,12 +13,12 @@ ms.assetid: 3a5f4592-3c61-4b4d-9ceb-39716aeeba41
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 9c2e9c5b1a0bf136e6b21f5b3ad6f12107d1f9b9
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: be03754ea8eeb61d838357667da6e37e1be6bc31
+ms.sourcegitcommit: 8bc5d85bd157f9cfd52245d23062d150b76066ef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54126071"
+ms.lasthandoff: 03/07/2019
+ms.locfileid: "57578321"
 ---
 # <a name="sql-server-replication"></a>Replica di SQL Server
   La replica è costituita da un set di tecnologie per la copia e la distribuzione di dati e oggetti di database da un database a un altro e la successiva sincronizzazione dei database in modo che risultino consistenti. Grazie alla replica è possibile distribuire dati a diverse posizioni e a utenti remoti o mobili tramite reti locali e WAN, connessioni remote, connessioni wireless e Internet.  
@@ -29,10 +29,10 @@ ms.locfileid: "54126071"
   
 
 ## <a name="whats-new"></a>Novità 
-- SQL Server 2017 non sono state introdotte funzionalità significative nuove per la replica di SQL Server. 
-- SQL Server 2016 non sono state introdotte funzionalità significative nuove per la replica di SQL Server. 
+- In SQL Server 2017 non sono state introdotte funzionalità significative nuove per la replica di SQL Server. 
+- In SQL Server 2016 non sono state introdotte funzionalità significative nuove per la replica di SQL Server. 
 
-Per compatibilità con le informazioni, vedere [compatibilità con le versioni precedenti della replica](replication-backward-compatibility.md) 
+Per informazioni sulla compatibilità con le versioni precedenti, vedere [Compatibilità con le versioni precedenti della replica](replication-backward-compatibility.md) 
 
 
  ## <a name="replication-security"></a>Sicurezza della replica
@@ -46,7 +46,7 @@ Per compatibilità con le informazioni, vedere [compatibilità con le versioni p
 -   [Visualizzare e modificare le proprietà della pubblicazione](publish/view-and-modify-publication-properties.md)   
 -   [Disabilitare la pubblicazione e la distribuzione](disable-publishing-and-distribution.md)  
   
-## <a name="publications-and-articles"></a>Le pubblicazioni e articoli 
+## <a name="publications-and-articles"></a>Pubblicazioni e articoli 
   
 -   [Create a Publication](publish/create-a-publication.md)    
 -   [Define an Article](publish/define-an-article.md)   
@@ -63,7 +63,7 @@ Per compatibilità con le informazioni, vedere [compatibilità con le versioni p
   
 ### <a name="snapshot-options"></a>Opzioni per gli snapshot  
   
--   [Configurare le proprietà dello Snapshot](publish/configure-snapshot-properties-replication-transact-sql-programming.md)    
+-   [Configurare le proprietà dello snapshot](publish/configure-snapshot-properties-replication-transact-sql-programming.md)    
 -   [Recapitare uno snapshot tramite FTP](publish/deliver-a-snapshot-through-ftp.md) 
   
 ### <a name="filter-data"></a>Filtrare i dati  
@@ -82,7 +82,7 @@ Per compatibilità con le informazioni, vedere [compatibilità con le versioni p
 ### <a name="merge-replication-options"></a>Opzioni per la replica di tipo merge  
   
 -   [Definire una relazione tra record logici degli articoli di tabelle di merge](publish/define-a-logical-record-relationship-between-merge-table-articles.md)    
--   [Specificare le proprietà della replica di Merge](publish/specify-merge-replication-properties.md)    
+-   [Specificare le proprietà della replica di tipo merge](publish/specify-merge-replication-properties.md)    
 -   [Specificare un sistema di risoluzione dei conflitti dell'articolo di merge](publish/specify-a-merge-article-resolver.md)    
 
   
@@ -126,13 +126,13 @@ Per compatibilità con le informazioni, vedere [compatibilità con le versioni p
 -   [Amministrare una topologia Peer-to-Peer](administration/administer-a-peer-to-peer-topology-replication-transact-sql-programming.md)    
 -   [Mettere una topologia di replica](administration/quiesce-a-replication-topology-replication-transact-sql-programming.md)    
 -   [Configurare il processo del Set di transazioni per un server di pubblicazione Oracle](administration/configure-the-transaction-set-job-for-an-oracle-publisher.md)   
--   [Aggiornare gli script di replica ](administration/upgrade-replication-scripts-replication-transact-sql-programming.md)  
+-   [Aggiornare gli script di replica](administration/upgrade-replication-scripts-replication-transact-sql-programming.md)  
   
 ## <a name="monitor"></a>Monitoraggio
   
 -   [Consentire a utenti non amministratori di usare Monitoraggio replica](monitor/allow-non-administrators-to-use-replication-monitor.md)    
 -   [Monitorare la replica a livello di programmazione](monitor/programmatically-monitor-replication.md)    
--   [Visualizzare comandi replicati e altre informazioni nel Database di distribuzione ](monitor/view-replicated-commands-and-information-in-distribution-database.md)    
--   [Visualizza le informazioni sui conflitti per le pubblicazioni di tipo Merge ](view-conflict-information-for-merge-publications.md) 
+-   [Visualizzare comandi replicati e altre informazioni nel Database di distribuzione](monitor/view-replicated-commands-and-information-in-distribution-database.md)    
+-   [Visualizza le informazioni sui conflitti per le pubblicazioni di tipo Merge](view-conflict-information-for-merge-publications.md) 
 -   [Misurazione della latenza e convalida delle connessioni per la replica transazionale](monitor/measure-latency-and-validate-connections-for-transactional-replication.md)  
   

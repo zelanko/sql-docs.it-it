@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: ba6b9184dba10ecdd9f466304dd114247ee4ac27
-ms.sourcegitcommit: 8a64c59c5d84150659a015e54f8937673cab87a0
+ms.openlocfilehash: 9635dfd55e9ad78e70d849f46c7dafe880a1870d
+ms.sourcegitcommit: 8bc5d85bd157f9cfd52245d23062d150b76066ef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/08/2018
-ms.locfileid: "53072544"
+ms.lasthandoff: 03/07/2019
+ms.locfileid: "57579611"
 ---
 # <a name="power-view---configure-table-behavior-properties-for-reports"></a>Power View: configurare le proprietà comportamento tabella per i report
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
@@ -61,7 +61,7 @@ ms.locfileid: "53072544"
   
 -   Rimozione dei subtotali non desiderati da un report matrice. Il raggruppamento predefinito a livello di campo comporta la creazione di un subtotale per ciascun campo. Se si desidera disporre di un solo subtotale calcolato a livello di riga, l'impostazione dell'identificatore di riga produce questo risultato.  
   
- Non è possibile impostare un identificatore di riga per le tabelle contrassegnate come tabelle data. Per le tabelle data, l'identificatore di riga viene specificato quando si contrassegna la tabella. Per altre informazioni, vedere [Segna come finestra di dialogo tabella data ](http://msdn.microsoft.com/library/698b5ef1-b79b-4d76-9847-39669b4f5bb9).  
+ Non è possibile impostare un identificatore di riga per le tabelle contrassegnate come tabelle data. Per le tabelle data, l'identificatore di riga viene specificato quando si contrassegna la tabella. Per altre informazioni, vedere [Segna come finestra di dialogo tabella data](http://msdn.microsoft.com/library/698b5ef1-b79b-4d76-9847-39669b4f5bb9).  
   
 ## <a name="setting-the-keep-unique-rows-property"></a>Impostazione della proprietà Mantieni righe univoche  
  Questa proprietà consente di specificare quali colonne contengono informazioni di identificazione, ad esempio un nome di dipendente o un codice prodotto, in modo da fare distinzione tra le righe. Nei casi in cui le righe sembrano identiche, ad esempio due clienti con lo stesso nome, le colonne specificate per questa proprietà vengono ripetute nella tabella del report.  

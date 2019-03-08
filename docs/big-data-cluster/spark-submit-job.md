@@ -9,12 +9,12 @@ ms.date: 12/06/2018
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: c7d37843aff49f27ec05cdcf7b89febd86c72fbf
-ms.sourcegitcommit: 202ef5b24ed6765c7aaada9c2f4443372064bd60
+ms.openlocfilehash: c1d439c13b06b305c814813eeca7cb9bf8aa53c5
+ms.sourcegitcommit: 8bc5d85bd157f9cfd52245d23062d150b76066ef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/12/2019
-ms.locfileid: "54241587"
+ms.lasthandoff: 03/07/2019
+ms.locfileid: "57578241"
 ---
 # <a name="submit-spark-jobs-on-sql-server-big-data-clusters-in-azure-data-studio"></a>Inviare processi Spark nei cluster di SQL Server i big data in Azure Data Studio
 
@@ -25,7 +25,7 @@ Uno degli scenari chiave per i cluster di big data è la possibilità di inviare
 - [Strumenti di big data di SQL Server 2019](deploy-big-data-tools.md):
    - **Azure Data Studio**
    - **Estensione di SQL Server 2019**
-   - **Kubectl**
+   - **kubectl**
 
 - [Connessione di Studio di Azure Data al gateway HDFS/Spark del cluster di big data](connect-to-big-data-cluster.md).
 
@@ -34,7 +34,7 @@ Esistono diversi modi per aprire la finestra di invio dei processi di Spark. I m
 
 + Fare clic su **nuovo processo Spark** nel dashboard per aprire la finestra di dialogo Spark submission processo.
 
-    ![Menu Invia selezionando il dashboard ](./media/submit-spark-job/new-spark-job.png)
+    ![Menu Invia selezionando il dashboard](./media/submit-spark-job/new-spark-job.png)
  
 + Fare doppio clic sul cluster in Esplora oggetti e selezionare **Submit Spark Job** dal menu di scelta rapida. Verrà aperto dialogo di invio dei processi Spark.  
  

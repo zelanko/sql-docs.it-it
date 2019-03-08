@@ -21,12 +21,12 @@ ms.assetid: 895b1ad7-ffb9-4a5c-bda6-e1dfbd56d9bf
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 71bd15f01cc69371765c4af17fb184ce28481f65
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: ebe4126d0fb64cceea5bc0c9dbfd5be83f9fc165
+ms.sourcegitcommit: 8bc5d85bd157f9cfd52245d23062d150b76066ef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54129281"
+ms.lasthandoff: 03/07/2019
+ms.locfileid: "57579371"
 ---
 # <a name="enhance-general-replication-performance"></a>Miglioramento delle prestazioni generali della replica
   È possibile migliorare le prestazioni generali di tutti i tipi di replica nell'applicazione e nella rete attenendosi alle istruzioni riportate in questo argomento.  
@@ -76,7 +76,7 @@ ms.locfileid: "54129281"
   
     -   Per la replica di tipo merge, può essere più conveniente utilizzare i gestori delle logiche di business. Per altre informazioni, vedere [Eseguire logiche di business durante la sincronizzazione di tipo merge](../merge/execute-business-logic-during-merge-synchronization.md).  
   
-     Se si utilizzano trigger per mantenere l'integrità referenziale in tabelle pubblicate per la replica di tipo merge, specificare l'ordine di elaborazione delle tabelle in modo da ridurre il numero di tentativi necessari per l'agente di merge. Per altre informazioni, vedere [delle proprietà di replica di tipo Merge specificare](../publish/specify-merge-replication-properties.md).  
+     Se si utilizzano trigger per mantenere l'integrità referenziale in tabelle pubblicate per la replica di tipo merge, specificare l'ordine di elaborazione delle tabelle in modo da ridurre il numero di tentativi necessari per l'agente di merge. Per altre informazioni, vedere [Specificare le proprietà della replica di tipo merge](../publish/specify-merge-replication-properties.md).  
   
 -   Limitare l'utilizzo dei tipi di dati LOB (Large Object).  
   
@@ -116,7 +116,7 @@ ms.locfileid: "54129281"
   
      Se è necessario inviare ai Sottoscrittori quantità di modifiche elevate, può essere più conveniente reinizializzarle tutte con un nuovo snapshot anziché utilizzare la replica per spostare le singole modifiche. Per altre informazioni, vedere [Reinizializzare le sottoscrizioni](../reinitialize-subscriptions.md).  
   
-     Per la replica transazionale, nella scheda **Comandi non distribuiti** di Monitoraggio replica vengono visualizzate informazioni relative al numero di transazioni presenti nel database di distribuzione e non ancora distribuite in un Sottoscrittore e al tempo stimato per la relativa distribuzione. Per altre informazioni, vedere [ visualizzare le informazioni ed eseguire attività con Monitoraggio replica](../monitor/view-information-and-perform-tasks-replication-monitor.md).  
+     Per la replica transazionale, nella scheda **Comandi non distribuiti** di Monitoraggio replica vengono visualizzate informazioni relative al numero di transazioni presenti nel database di distribuzione e non ancora distribuite in un Sottoscrittore e al tempo stimato per la relativa distribuzione. Per altre informazioni, vedere [Visualizzare le informazioni ed eseguire attività usando Monitoraggio replica](../monitor/view-information-and-perform-tasks-replication-monitor.md).  
   
 ## <a name="snapshot-considerations"></a>Considerazioni sugli snapshot  
   
