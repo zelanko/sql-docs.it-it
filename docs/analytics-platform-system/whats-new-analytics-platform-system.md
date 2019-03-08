@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.date: 06/27/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: 3731f60047e22da7209b6c131ab93b28a20a99c2
-ms.sourcegitcommit: c4870cb5bebf9556cdb4d8b35ffcca265fb07862
+ms.openlocfilehash: cc64fdd430e64f7ad1b152234c2a203f453745c8
+ms.sourcegitcommit: 8bc5d85bd157f9cfd52245d23062d150b76066ef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/02/2019
-ms.locfileid: "55652590"
+ms.lasthandoff: 03/07/2019
+ms.locfileid: "57579413"
 ---
 # <a name="whats-new-in-analytics-platform-system-a-scale-out-mpp-data-warehouse"></a>Quali sono le novità nel sistema di piattaforma Analitica, di un data warehouse di tipo scale-out MPP
 Vedere Novità gli ultimi aggiornamenti di Appliance per Microsoft Analitica piattaforma di strumenti analitici. I punti di accesso è un'appliance di scalabilità orizzontale in locale che ospita MPP SQL Server Parallel Data Warehouse. 
@@ -120,7 +120,7 @@ APS AU7 crea e aggiorna le statistiche automaticamente, per impostazione predefi
 ### <a name="t-sql"></a>T-SQL
 Selezionare @var è ora supportato. Per altre informazioni, vedere [selezionare una variabile locale](/sql/t-sql/language-elements/select-local-variable-transact-sql) 
 
-Hint per la query HASH e gruppo sono ora supportati. Per altre informazioni, vedere [Hints(Transact-SQL) - Query ](/sql/t-sql/queries/hints-transact-sql-query)
+Hint per la query HASH e gruppo sono ora supportati. Per altre informazioni, vedere [Hints(Transact-SQL) - Query](/sql/t-sql/queries/hints-transact-sql-query)
 
 ### <a name="feature-switch"></a>Opzione della funzionalità
 APS AU7 introduce funzionalità commutatore in [Configuration Manager](launch-the-configuration-manager.md). AutoStatsEnabled e DmsProcessStopMessageTimeoutInSeconds sono ora opzioni configurabili che possono essere modificate dagli amministratori.

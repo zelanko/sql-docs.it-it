@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: 0421361cf1718d6ee280269f9da125c148aa3afd
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 9e52e3962fa1928d7f7680a750d6c1efe5201c6f
+ms.sourcegitcommit: 8bc5d85bd157f9cfd52245d23062d150b76066ef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52518267"
+ms.lasthandoff: 03/07/2019
+ms.locfileid: "57579401"
 ---
 # <a name="configure-infiniband-network-adapters-for-analytics-platform-system"></a>Configurare le schede di rete InfiniBand per il sistema di piattaforma Analitica
 Viene descritto come configurare le schede di rete InfiniBand in un server non appliance client per connettersi al nodo di controllo in Parallel Data Warehouse (PDW). Usare queste istruzioni per la connettività di base e per la disponibilità elevata, in modo che il caricamento, i processi di backup e altri si connettono automaticamente alla rete InfiniBand attiva.  
@@ -128,7 +128,7 @@ Per soddisfare i requisiti aziendali specifici, è anche possibile aggiungere il
   
     4.  Impostare il server DNS alternativo per l'indirizzo IP del TeamIB1 che si è preso nota in precedenza da appliance_domain *-AD02 nodo.  
   
-        ![Proprietà dell'Adapter 1 rete InfiniBand](media/network-ib1-properties.png "SQL_Server_PDW_Network_IB1_properties")  
+        ![InfiniBand 1 Network Adapter Properties](media/network-ib1-properties.png "SQL_Server_PDW_Network_IB1_properties")  
   
     5.  Fare clic su OK per applicare le modifiche.  
   
@@ -182,5 +182,5 @@ Per soddisfare i requisiti aziendali specifici, è anche possibile aggiungere il
     -   MyPDW-SQLCTL01  
   
 ## <a name="see-also"></a>Vedere anche  
-[Acquisire e configurare un Server di caricamento ](acquire-and-configure-loading-server.md)  
+[Acquisire e configurare un Server di caricamento](acquire-and-configure-loading-server.md)  
   
