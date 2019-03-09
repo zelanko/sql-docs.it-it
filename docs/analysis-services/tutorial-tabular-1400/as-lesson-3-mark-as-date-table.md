@@ -1,6 +1,6 @@
 ---
-title: 'Analysis Services tutorial-lezione 3: contrassegna come tabella data | Microsoft Docs'
-ms.date: 08/27/2018
+title: 'Analysis Services tutorial-lezione 3: Contrassegna come tabella data | Microsoft Docs'
+ms.date: 03/08/2019
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: tabular-models
@@ -9,18 +9,19 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 282103baa0283e46e31b9ffe6b837e90e4bfac3c
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+monikerRange: '>= sql-server-2017 || = sqlallproducts-allversions'
+ms.openlocfilehash: 2008f066d537b1f88b9bf674c4a864217eae9890
+ms.sourcegitcommit: 0a7beb2f51e48889b4a85f7c896fb650b208eb36
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43069398"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57685568"
 ---
 # <a name="mark-as-date-table"></a>Contrassegna come tabella data
 
 [!INCLUDE[ssas-appliesto-sql2017-later-aas](../../includes/ssas-appliesto-sql2017-later-aas.md)]
 
-Nella lezione 2: Ottenere i dati, è importata una tabella delle dimensioni denominata **DimDate**. Mentre nel modello questa tabella è denominata DimDate, può anche essere nota come un *tabella data*, perché contiene dati di data e ora.  
+Nella lezione 2: Ottenere i dati, è stato importato una tabella delle dimensioni denominata **DimDate**. Mentre nel modello questa tabella è denominata DimDate, può anche essere nota come un *tabella data*, perché contiene dati di data e ora.  
   
 Quando si usano funzioni di business intelligence DAX, ad esempio quando si crea le misure in un secondo momento, è necessario specificare le proprietà che includono un *tabella data* e un identificatore univoco *colonna Data* in tale tabella.
   
@@ -28,11 +29,11 @@ In questa lezione, si contrassegna il **DimDate** tabella come i *tabella data* 
 
 Prima di contrassegnare la tabella relativa alla data e la colonna di date, è il momento giusto per eseguire alcune attività di manutenzione per rendere più facile da comprendere il modello. Si noti che nella tabella DimDate una colonna denominata **FullDateAlternateKey**. Questa colonna contiene una riga per ogni giorno dell'anno di calendario incluso nella tabella. Questo articolo è usare molto nelle formule per le misure e nei report. Tuttavia, FullDateAlternateKey non è davvero un buon identificatore per questa colonna. Rinominarlo **data**, rendendo più semplice identificare e includere nelle formule. Quando possibile, è consigliabile rinominare gli oggetti, ad esempio tabelle e colonne per renderle più facilmente identificabili in SSDT e reporting delle applicazioni client. 
   
-Tempo stimato per il completamento della lezione: **tre minuti**  
+Tempo stimato per il completamento della lezione: **3 minuti**  
   
 ## <a name="prerequisites"></a>Prerequisiti  
 
-Questo articolo fa parte di un'esercitazione di modellazione tabulare, che deve essere completata nell'ordine. Prima di eseguire le attività in questa lezione, è necessario avere completato la lezione precedente: [lezione 2: ottenere i dati](../tutorial-tabular-1400/as-lesson-2-get-data.md). 
+Questo articolo fa parte di un'esercitazione di modellazione tabulare, che deve essere completata nell'ordine. Prima di eseguire le attività in questa lezione, è necessario avere completato la lezione precedente: [Lezione 2: Ottenere dati](../tutorial-tabular-1400/as-lesson-2-get-data.md). 
 
 ### <a name="to-rename-the-fulldatealternatekey-column"></a>Per rinominare la colonna FullDateAlternateKey
 

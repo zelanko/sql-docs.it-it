@@ -1,6 +1,6 @@
 ---
 title: Compatibilità con le versioni precedenti di SQL Server 2017 Analysis Services | Microsoft Docs
-ms.date: 01/09/2019
+ms.date: 03/08/2019
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: ''
@@ -9,12 +9,13 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 411fa78bada76c79d4a869d68c94abf752b8466a
-ms.sourcegitcommit: 1c01af5b02fe185fd60718cc289829426dc86eaa
+monikerRange: '>= sql-server-2017 || = sqlallproducts-allversions'
+ms.openlocfilehash: e7903de787a1b63627bca8da23369fbee9014c6e
+ms.sourcegitcommit: 0a7beb2f51e48889b4a85f7c896fb650b208eb36
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/10/2019
-ms.locfileid: "54185077"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57685738"
 ---
 # <a name="analysis-services-backward-compatibility-sql-2017"></a>Compatibilità con le versioni precedenti di Analysis Services (SQL 2017)
 [!INCLUDE[ssas-appliesto-sql2017](../includes/ssas-appliesto-sql2017.md)]
@@ -32,7 +33,7 @@ Le funzionalità seguenti sono deprecate in questa versione:
 |Multidimensionale|Data Mining|
 |Multidimensionale|Gruppi di misure collegati remoti|
 |Tabella|Modelli a livello di compatibilità 1100 e 1103|
-|Tabella|Proprietà modello a oggetti tabulare: Column.IsDefaultImage Column.TableDetailPosition, Column.IsDefaultLabel,|
+|Tabella|Proprietà modello a oggetti tabulare: Column.TableDetailPosition, Column.IsDefaultLabel, Column.IsDefaultImage|
 |Strumenti|SQL Server Profiler per l'acquisizione della traccia<br /><br /> La sostituzione prevede l'uso del profiler di eventi estesi incorporato in SQL Server Management Studio.  <br /> Vedere [Monitorare Analysis Services con eventi estesi di SQL Server](../analysis-services/instances/monitor-analysis-services-with-sql-server-extended-events.md).|  
 |Strumenti|Server Profiler per la riproduzione della traccia <br />Sostituzione. Non è prevista alcuna sostituzione.|  
 |Trace Management Objects e API di traccia|Oggetti Microsoft.AnalysisServices.Trace (contiene le API per gli oggetti Analysis Services Trace e Replay). La sostituzione è multiparte:<br /><br /> -Configurazione della traccia: Microsoft.SqlServer.Management.XEvent<br />-Lettura della traccia: Microsoft.SqlServer.XEvent.Linq<br />-Riproduzione della traccia: None|  

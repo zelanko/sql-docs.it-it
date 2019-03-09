@@ -1,6 +1,6 @@
 ---
 title: 'Analysis Services tutorial-lezione 10: Creare partizioni | Microsoft Docs'
-ms.date: 08/27/2018
+ms.date: 03/08/2019
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: tabular-models
@@ -9,12 +9,13 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile"
-ms.openlocfilehash: f7b6e5bfd4c533028758f553e5d8c9b2ca21e6f2
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+monikerRange: '>= sql-server-2017 || = sqlallproducts-allversions'
+ms.openlocfilehash: 705705410a69c4fa0eff507c97747f55b72b1250
+ms.sourcegitcommit: 0a7beb2f51e48889b4a85f7c896fb650b208eb36
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52401144"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57685698"
 ---
 # <a name="create-partitions"></a>Creare partizioni
 
@@ -46,7 +47,7 @@ Questo articolo fa parte di un'esercitazione di modellazione tabulare, che deve 
 
 6.  Nella finestra di dialogo Filtra righe in **Mostra righe in cui: OrderDate**, lasciare **è dopo o uguale a**, quindi nel campo della data, immettere **1/1/2010**. Lasciare il **e** operatore selezionato, quindi selezionare **prima**, immettere nel campo della data **1/1/2011**, quindi fare clic su **OK**.
 
-    ![come-lesson10-filtro-righe](../tutorial-tabular-1400/media/as-lesson10-filter-rows.png)
+    ![as-lesson10-filter-rows](../tutorial-tabular-1400/media/as-lesson10-filter-rows.png)
     
     Si noti che nell'Editor di Query, in passaggi applicati, viene visualizzato un altro passaggio denominato filtrate righe. Questo filtro consiste nel selezionare solo le date degli ordini dal 2010.
 
@@ -54,7 +55,7 @@ Questo articolo fa parte di un'esercitazione di modellazione tabulare, che deve 
 
     In Gestione partizioni si noti che l'espressione di query a questo punto ha una clausola filtrate righe aggiuntiva.
 
-    ![come-lesson10-query](../tutorial-tabular-1400/media/as-lesson10-query.png)
+    ![as-lesson10-query](../tutorial-tabular-1400/media/as-lesson10-query.png)
   
     Questa istruzione specifica che la partizione deve includere solo i dati delle righe in cui OrderDate rientra nell'anno di calendario 2010 come specificato nella clausola filtrate righe.  
   
@@ -107,7 +108,7 @@ Si noti che in Gestione partizioni, il **ultima elaborazione** colonna per ogni 
   
 4.  Selezionare la casella di controllo **Elabora** per ognuna delle cinque partizioni create, quindi fare clic su **OK**.  
 
-    ![come-lesson10-processo-partizioni](../tutorial-tabular-1400/media/as-lesson10-process-partitions.png)
+    ![as-lesson10-process-partitions](../tutorial-tabular-1400/media/as-lesson10-process-partitions.png)
   
     Se viene chiesto di immettere le credenziali di rappresentazione, immettere il nome utente di Windows e la password specificati nella lezione 2.  
   

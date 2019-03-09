@@ -1,6 +1,6 @@
 ---
-title: 'Analysis Services tutorial-lezione 13: distribuire | Microsoft Docs'
-ms.date: 08/27/2018
+title: 'Analysis Services tutorial-lezione 13: Distribuire | Microsoft Docs'
+ms.date: 03/08/2019
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: tabular-models
@@ -9,12 +9,13 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: bad6f58800e6a023fe5014462fbe6bbaf76bfe8e
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+monikerRange: '>= sql-server-2017 || = sqlallproducts-allversions'
+ms.openlocfilehash: ab561b096c4436349580201eec3b3ea10a8aaa75
+ms.sourcegitcommit: 0a7beb2f51e48889b4a85f7c896fb650b208eb36
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43090433"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57685308"
 ---
 # <a name="deploy"></a>Distribuzione
 
@@ -26,7 +27,7 @@ Tempo stimato per il completamento della lezione: **5 minuti**
   
 ## <a name="prerequisites"></a>Prerequisiti  
 
-Questo articolo fa parte di un'esercitazione di modellazione tabulare, che deve essere completata nell'ordine. Prima di eseguire le attività in questa lezione, è necessario avere completato la lezione precedente: [lezione 12: analizzare in Excel](../tutorial-tabular-1400/as-lesson-12-analyze-in-excel.md).  
+Questo articolo fa parte di un'esercitazione di modellazione tabulare, che deve essere completata nell'ordine. Prima di eseguire le attività in questa lezione, è necessario avere completato la lezione precedente: [Lezione 12: Analizza in Excel](../tutorial-tabular-1400/as-lesson-12-analyze-in-excel.md).  
 
 > [!IMPORTANT]  
 > Se la distribuzione in Azure Analysis Services, è necessario disporre [le autorizzazioni di amministratore](https://docs.microsoft.com/azure/analysis-services/analysis-services-server-admins) sul serever.  
@@ -68,8 +69,8 @@ Questo articolo fa parte di un'esercitazione di modellazione tabulare, che deve 
 
 In questa lezione descrive il metodo più semplice e più comune per distribuire un modello tabulare da SSDT. Le opzioni di distribuzione avanzata, ad esempio la procedura guidata distribuzione o l'automazione con XMLA e AMO offrono maggiore flessibilità, coerenza e le distribuzioni pianificate. Per altre informazioni, vedere [distribuzione di soluzioni di modelli tabulari](../tabular-models/tabular-model-solution-deployment-ssas-tabular.md).
 
-## <a name="conclusion"></a>Conclusioni  
-Congratulazioni! Si è finito di creazione e distribuzione del primo modello tabulare di Analysis Services. Tramite questa esercitazione sono state completate le attività più comuni di creazione di un modello tabulare. Ora che il modello Adventure Works Internet Sales è stato distribuito, è possibile utilizzare SQL Server Management Studio per gestire il modello, nonché creare script di processo e un piano di backup. Gli utenti possono anche connettersi al modello usando un'applicazione client di creazione di report, ad esempio Microsoft Excel o Power BI.  
+## <a name="conclusion"></a>Conclusione  
+La procedura è stata completata. Si è finito di creazione e distribuzione del primo modello tabulare di Analysis Services. Tramite questa esercitazione sono state completate le attività più comuni di creazione di un modello tabulare. Ora che il modello Adventure Works Internet Sales è stato distribuito, è possibile utilizzare SQL Server Management Studio per gestire il modello, nonché creare script di processo e un piano di backup. Gli utenti possono anche connettersi al modello usando un'applicazione client di creazione di report, ad esempio Microsoft Excel o Power BI.  
 
 ![come lesson13-ssms](../tutorial-tabular-1400/media/as-lesson13-ssms.png)
   

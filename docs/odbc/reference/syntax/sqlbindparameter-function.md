@@ -11,6 +11,7 @@ apiname:
 - SQLBindParameter
 apilocation:
 - sqlsrv32.dll
+- odbc32.dll
 apitype: dllExport
 f1_keywords:
 - SQLBindParameter
@@ -20,12 +21,12 @@ ms.assetid: 38349d4b-be03-46f9-9d6a-e50dd144e225
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 79f340d95cf1cd15b176069458347b2bea97055c
-ms.sourcegitcommit: 480961f14405dc0b096aa8009855dc5a2964f177
+ms.openlocfilehash: dc566c7cfd86e76df5389e56b7465dcd04b76f51
+ms.sourcegitcommit: 3c4bb35163286da70c2d669a3f84fb6a8145022c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/22/2019
-ms.locfileid: "54420216"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57683641"
 ---
 # <a name="sqlbindparameter-function"></a>Pagina relativa alla funzione SQLBindParameter
 
@@ -217,7 +218,7 @@ SQLRETURN SQLBindParameter(
 
  Il *ParameterValuePtr* argomento punta a un buffer che, quando **SQLExecute** oppure **SQLExecDirect** viene chiamato, contiene i dati effettivi per il parametro. I dati devono essere nel formato specificato per il *ValueType* argomento. Questo argomento consente di impostare il campo SQL_DESC_DATA_PTR di APD. Un'applicazione può impostare il *ParameterValuePtr* argomento a un puntatore null, purché  *\*StrLen_or_IndPtr* è SQL_NULL_DATA o SQL_DATA_AT_EXEC. (Si applica solo a parametri input o di input/output).  
   
- Se \* *StrLen_or_IndPtr* è il risultato di SQL_LEN_DATA_AT_EXEC (*lunghezza*) (macro) o SQL_DATA_AT_EXEC, quindi *ParameterValuePtr* è un valore di puntatore definiti dall'applicazione che è associato il parametro. Viene restituito all'applicazione tramite **SQLParamData**. Ad esempio, *ParameterValuePtr* potrebbe essere un token diverso da zero, ad esempio un numero di parametro, un puntatore ai dati o un puntatore a una struttura che l'applicazione utilizzata per associare i parametri di input. Tuttavia, si noti che se il parametro è un parametro di input/output *ParameterValuePtr* deve essere un puntatore a un buffer in cui verrà archiviato il valore di output. Se il valore dell'attributo di istruzione SQL_ATTR_PARAMSET_SIZE è maggiore di 1, l'applicazione può usare il valore a cui punta l'attributo di istruzione SQL_ATTR_PARAMS_PROCESSED_PTR in combinazione con il *ParameterValuePtr* argomento. Ad esempio, *ParameterValuePtr* potrebbe puntare a una matrice di valori e l'applicazione può usare il valore a cui punta SQL_ATTR_PARAMS_PROCESSED_PTR per recuperare il valore corretto dalla matrice. Per altre informazioni, vedere "passaggio di valori dei parametri" più avanti in questa sezione.  
+ Se \* *StrLen_or_IndPtr* è il risultato di SQL_LEN_DATA_AT_EXEC (*lunghezza*) (macro) o SQL_DATA_AT_EXEC, quindi *ParameterValuePtr* è un valore di puntatore definiti dall'applicazione che è associato il parametro. Viene restituito all'applicazione tramite **SQLParamData**. Ad esempio, *ParameterValuePtr* potrebbe essere un token diverso da zero, ad esempio un numero di parametro, un puntatore ai dati o un puntatore a una struttura che l'applicazione utilizzata per associare i parametri di input. Tuttavia, si noti che se il parametro è un parametro di input/output *ParameterValuePtr* deve essere un puntatore a un buffer in cui verrà archiviato il valore di output. Se il valore dell'attributo di istruzione SQL_ATTR_PARAMSET_SIZE è maggiore di 1, l'applicazione può usare il valore a cui punta l'attributo di istruzione SQL_ATTR_PARAMS_PROCESSED_PTR in combinazione con il *ParameterValuePtr* discussione. Ad esempio, *ParameterValuePtr* potrebbe puntare a una matrice di valori e l'applicazione può usare il valore a cui punta SQL_ATTR_PARAMS_PROCESSED_PTR per recuperare il valore corretto dalla matrice. Per altre informazioni, vedere "passaggio di valori dei parametri" più avanti in questa sezione.  
   
  Se il *InputOutputType* l'argomento è, SQL_PARAM_OUTPUT o SQL_PARAM_INPUT_OUTPUT *ParameterValuePtr* punta a un buffer in cui il driver restituisce il valore di output. Se la procedura restituisce uno o più set di risultati, il \* *ParameterValuePtr* buffer non è garantito a essere impostata fino a quando non sono stati elaborati tutti i conteggi di riga/set di risultati. Se il buffer non è impostato fino a quando non sarà stata completata, i parametri di output e valori restituiti non sono disponibili finché **SQLMoreResults** restituisce SQL_NO_DATA. La chiamata **SQLCloseCursor** oppure **SQLFreeStmt** con un'opzione di SQL_CLOSE causerà questi valori verranno ignorati.  
   

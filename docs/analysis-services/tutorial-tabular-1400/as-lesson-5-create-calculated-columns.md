@@ -1,6 +1,6 @@
 ---
-title: 'Analysis Services tutorial-lezione 5: creare colonne calcolate | Microsoft Docs'
-ms.date: 08/27/2018
+title: 'Analysis Services tutorial-lezione 5: Creare colonne calcolate | Microsoft Docs'
+ms.date: 03/08/2019
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: tabular-models
@@ -9,12 +9,13 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 58a7f38dbbe7a68668418db4d1bef16e08784a08
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+monikerRange: '>= sql-server-2017 || = sqlallproducts-allversions'
+ms.openlocfilehash: d1e2c4df54313ecc66e5e49904bdc40393c410f7
+ms.sourcegitcommit: 0a7beb2f51e48889b4a85f7c896fb650b208eb36
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43063860"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57685558"
 ---
 # <a name="create-calculated-columns"></a>Creare colonne calcolate
 
@@ -30,7 +31,7 @@ Tempo stimato per il completamento della lezione: **15 minuti**
   
 ## <a name="prerequisites"></a>Prerequisiti  
 
-Questo articolo fa parte di un'esercitazione di modellazione tabulare, che deve essere completata nell'ordine. Prima di eseguire le attività in questa lezione, è necessario avere completato la lezione precedente: [lezione 4: creare relazioni](../tutorial-tabular-1400/as-lesson-4-create-relationships.md). 
+Questo articolo fa parte di un'esercitazione di modellazione tabulare, che deve essere completata nell'ordine. Prima di eseguire le attività in questa lezione, è necessario avere completato la lezione precedente: [Lezione 4: Creare relazioni](../tutorial-tabular-1400/as-lesson-4-create-relationships.md). 
   
 ## <a name="create-calculated-columns"></a>Creare colonne calcolate  
   
@@ -46,7 +47,7 @@ Questo articolo fa parte di un'esercitazione di modellazione tabulare, che deve 
   
     Una nuova colonna denominata **CalculatedColumn1** verrà inserita a sinistra della colonna **Calendar Quarter** .  
   
-4.  Nella barra della formula sopra la tabella digitare la seguente formula DAX: completamento automatico consente di digitare i nomi completi di colonne e tabelle ed elenca le funzioni disponibili.  
+4.  Nella barra della formula sopra la tabella digitare la formula DAX seguente: La funzionalità Completamento automatico consente di digitare i nomi completi di colonne e tabelle ed elencare le funzioni disponibili.  
   
     ```  
     =RIGHT(" " & FORMAT([MonthNumberOfYear],"#0"), 2) & " - " & [EnglishMonthName]  

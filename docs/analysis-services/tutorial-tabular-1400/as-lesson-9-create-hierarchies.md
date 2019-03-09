@@ -1,6 +1,6 @@
 ---
-title: 'Analysis Services tutorial-lezione 9: creare gerarchie | Microsoft Docs'
-ms.date: 08/27/2018
+title: 'Analysis Services tutorial-lezione 9: Creare gerarchie | Microsoft Docs'
+ms.date: 03/08/2019
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: tabular-models
@@ -9,12 +9,13 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfiles"
-ms.openlocfilehash: 0261da590a30e077db8332aca35ed32dcc5656c6
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+monikerRange: '>= sql-server-2017 || = sqlallproducts-allversions'
+ms.openlocfilehash: cdb9f571e7bc1630ce12c0d0a4b7f57df8961907
+ms.sourcegitcommit: 0a7beb2f51e48889b4a85f7c896fb650b208eb36
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43071814"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57685418"
 ---
 # <a name="create-hierarchies"></a>Creare gerarchie
 
@@ -28,7 +29,7 @@ Tempo stimato per il completamento della lezione: **20 minuti**
   
 ## <a name="prerequisites"></a>Prerequisiti  
 
-Questo articolo fa parte di un'esercitazione di modellazione tabulare, che deve essere completata nell'ordine. Prima di eseguire le attività in questa lezione, è necessario avere completato la lezione precedente: [lezione 8: creare prospettive](../tutorial-tabular-1400/as-lesson-8-create-perspectives.md).  
+Questo articolo fa parte di un'esercitazione di modellazione tabulare, che deve essere completata nell'ordine. Prima di eseguire le attività in questa lezione, è necessario avere completato la lezione precedente: [Lezione 8: Creare prospettive](../tutorial-tabular-1400/as-lesson-8-create-perspectives.md).  
   
 ## <a name="create-hierarchies"></a>Creare gerarchie  
   

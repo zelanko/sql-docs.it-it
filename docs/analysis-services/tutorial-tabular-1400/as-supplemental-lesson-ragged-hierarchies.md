@@ -1,6 +1,6 @@
 ---
-title: "Lezione supplementare dell'esercitazione di Analysis Services: gerarchie incomplete | Microsoft Docs"
-ms.date: 08/27/2018
+title: "Analysis Services lezione supplementare dell'esercitazione: Gerarchie incomplete | Microsoft Docs"
+ms.date: 03/08/2019
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: tabular-models
@@ -9,12 +9,13 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 1aa9b8b0e456bb4f4aeff0a2a8e03d4938a46399
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+monikerRange: '>= sql-server-2017 || = sqlallproducts-allversions'
+ms.openlocfilehash: 39f8bcc63b7e5344f70a6d4a3b6c44ae3e69e108
+ms.sourcegitcommit: 0a7beb2f51e48889b4a85f7c896fb650b208eb36
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43074831"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57685398"
 ---
 # <a name="supplemental-lesson---ragged-hierarchies"></a>Lezione supplementare - Gerarchie incomplete
 
@@ -47,11 +48,11 @@ Se è stato creato il progetto AW Internet Sales come parte dell'esercitazione, 
 
     | Tabella 1           | colonna       | Direzione del filtro   | tabella 2     | colonna      | Attiva |
     |-------------------|--------------|--------------------|-------------|-------------|--------|
-    | FactResellerSales | OrderDateKey | Default            | DimDate     | date        | Sì    |
-    | FactResellerSales | DueDate      | Default            | DimDate     | date        | no     |
-    | FactResellerSales | ShipDateKey  | Default            | DimDate     | date        | no     |
-    | FactResellerSales | ProductKey   | Default            | DimProduct  | ProductKey  | Sì    |
-    | FactResellerSales | EmployeeKey  | Per entrambe le tabelle | DimEmployee | EmployeeKey | Sì    |
+    | FactResellerSales | OrderDateKey | Impostazione predefinita            | DimDate     | date        | Yes    |
+    | FactResellerSales | DueDate      | Impostazione predefinita            | DimDate     | date        | No     |
+    | FactResellerSales | ShipDateKey  | Impostazione predefinita            | DimDate     | date        | No     |
+    | FactResellerSales | ProductKey   | Impostazione predefinita            | DimProduct  | ProductKey  | Yes    |
+    | FactResellerSales | EmployeeKey  | Per entrambe le tabelle | DimEmployee | EmployeeKey | Yes    |
 
 5. Nel **DimEmployee** tabella, creare la seguente [le colonne calcolate](../tutorial-tabular-1400/as-lesson-5-create-calculated-columns.md): 
 
@@ -60,7 +61,7 @@ Se è stato creato il progetto AW Internet Sales come parte dell'esercitazione, 
     =PATH([EmployeeKey],[ParentEmployeeKey])
     ```
 
-    **nome completo** 
+    **FullName** 
     ```
     =[FirstName] & " " & [MiddleName] & " " & [LastName]
     ```
@@ -112,7 +113,7 @@ Se è stato creato il progetto AW Internet Sales come parte dell'esercitazione, 
 
 2.  Nelle **delle proprietà** > **Nascondi membri**, selezionare **Nascondi membri vuoti**. 
 
-    ![As-Lesson-Detail-ragged-hierarchies-hidemembers](../tutorial-tabular-1400/media/as-lesson-detail-ragged-hierarchies-hidemembers.png)
+    ![as-lesson-detail-ragged-hierarchies-hidemembers](../tutorial-tabular-1400/media/as-lesson-detail-ragged-hierarchies-hidemembers.png)
 
 3.  Aggiorna la tabella pivot in Excel. 
 

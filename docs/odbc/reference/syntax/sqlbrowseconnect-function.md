@@ -11,6 +11,7 @@ apiname:
 - SQLBrowseConnect
 apilocation:
 - sqlsrv32.dll
+- odbc32.dll
 apitype: dllExport
 f1_keywords:
 - SQLBrowseConnect
@@ -20,12 +21,12 @@ ms.assetid: b7f1be66-e6c7-4790-88ec-62b7662103c0
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: fe1b9c7d3d93604e2f19de754ff25517ef23cb07
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: 96d46f8aaf2ab051255c1f75bcd2c4547c922cdc
+ms.sourcegitcommit: 3c4bb35163286da70c2d669a3f84fb6a8145022c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53211711"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57683611"
 ---
 # <a name="sqlbrowseconnect-function"></a>Funzione SQLBrowseConnect
 **Conformità**  
@@ -112,11 +113,11 @@ SQLRETURN SQLBrowseConnect(
 ## <a name="inconnectionstring-argument"></a>Argomento InConnectionString  
  Una stringa di connessione richiesta Sfoglia presenta la sintassi seguente:  
   
- *stringa di connessione* :: = *attributo*[`;`] &#124; *attributo* `;` *della stringa di connessione*;<br>
- *attributo* :: = *parola chiave di attributo*`=`*attributo-valore* &#124; `DRIVER=`[`{`]*attributo-valore*[`}`]<br>
- *attributi-keyword* :: = `DSN` &#124; `UID` &#124; `PWD` &#124; *-definito dall'attributo-parola chiave driver*<br>
- *valore dell'attributo* :: = *stringhe di caratteri*<br>
- *definito dall'attributo-parola chiave driver* :: = *identificatore*<br>
+ *connection-string* ::= *attribute*[`;`] &#124; *attribute* `;` *connection-string*;<br>
+ *attribute* ::= *attribute-keyword*`=`*attribute-value* &#124; `DRIVER=`[`{`]*attribute-value*[`}`]<br>
+ *attribute-keyword* ::= `DSN` &#124; `UID` &#124; `PWD` &#124; *driver-defined-attribute-keyword*<br>
+ *attribute-value* ::= *character-string*<br>
+ *driver-defined-attribute-keyword* ::= *identifier*<br>
   
  in cui *stringhe di caratteri* contiene zero o più caratteri; *identificatore* ha uno o più caratteri; *parola chiave di attributo* non distinzione maiuscole/minuscole; *-valore dell'attributo* potrebbe essere distinzione maiuscole/minuscole; e il valore della **DSN** parola chiave composto unicamente da spazi vuoti. A causa di connessione valori stringa e l'inizializzazione file grammatica, parole chiave e attributi che contengono i caratteri **[]{}(),? \*=! @** deve essere evitata. A causa di grammatica nelle informazioni di sistema, i nomi delle origini dati e le parole chiave non può contenere la barra rovesciata (\\) caratteri. Per un database ODBC 2. *x* driver, è necessario racchiudere il valore dell'attributo per la parola chiave DRIVER tra parentesi graffe.  
   
@@ -127,11 +128,11 @@ SQLRETURN SQLBrowseConnect(
 ## <a name="outconnectionstring-argument"></a>Argomento OutConnectionString  
  La stringa di connessione Sfoglia risultato è un elenco di attributi di connessione. Un attributo di connessione è costituita da una parola chiave di attributo e un valore di attributo corrispondente. La stringa di connessione del risultato esplorazione presenta la sintassi seguente:  
   
- *stringa di connessione* :: = *attributo*[`;`] &#124; *attributo* `;` *della stringa di connessione*<br>
- *attributo* :: = [`*`]*parola chiave di attributo*`=`*attributo-valore*<br>
- *attributi-keyword* :: = *parola chiave ODBC-attributo* &#124; *-definito dall'attributo-parola chiave driver*<br>
+ *connection-string* ::= *attribute*[`;`] &#124; *attribute* `;` *connection-string*<br>
+ *attribute* ::= [`*`]*attribute-keyword*`=`*attribute-value*<br>
+ *attribute-keyword* ::= *ODBC-attribute-keyword* &#124; *driver-defined-attribute-keyword*<br>
  *Parola chiave di attributo ODBC* = {`UID` &#124; `PWD`} [`:`*localizzato dall'identificatore*] *-definito dall'attributo-parola chiave driver* :: = *identifier*[`:`*localizzato dall'identificatore*] *attributo-valore* :: = `{` *attributo-valore dall'elenco* `}` &#124; `?` (Le parentesi graffe sono valori letterali, vengono restituiti dal driver).<br>
- *elenco di valori di attributo* :: = *stringhe di caratteri* [`:`*stringa di caratteri localizzati*] &#124; *stringhe di caratteri* [`:` *stringa di caratteri localizzati*] `,` *attributo-valore dall'elenco*<br>
+ *attribute-value-list* ::= *character-string* [`:`*localized-character string*] &#124; *character-string* [`:`*localized-character string*] `,` *attribute-value-list*<br>
   
  in cui *stringhe di caratteri* e *stringa di caratteri localizzati* avere zero o più caratteri; *identifier* e *localizzato dall'identificatore* hanno uno o più caratteri; *parola chiave di attributo* non distinzione maiuscole/minuscole; e *attributo-valore* potrebbe essere distinzione maiuscole/minuscole. A causa di connessione stringa di inizializzazione file grammatica, parole chiave, identificatori localizzati e i valori che contengono i caratteri dell'attributo **[]{}(),? \*=! @** deve essere evitata. A causa di grammatica nelle informazioni di sistema, i nomi delle origini dati e le parole chiave non può contenere la barra rovesciata (\\) caratteri.  
   

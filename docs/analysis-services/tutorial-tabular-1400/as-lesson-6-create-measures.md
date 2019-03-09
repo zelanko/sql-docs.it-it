@@ -1,6 +1,6 @@
 ---
-title: 'Analysis Services tutorial-lezione 6: creare misure | Microsoft Docs'
-ms.date: 08/27/2018
+title: 'Analysis Services tutorial-lezione 6: Creare misure | Microsoft Docs'
+ms.date: 03/08/2019
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: tabular-models
@@ -9,12 +9,13 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: f9b466a703dd04a53c6ebf7c6fac624476abcc52
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+monikerRange: '>= sql-server-2017 || = sqlallproducts-allversions'
+ms.openlocfilehash: f3592f1494661fa603e6dc252d3cd2e10093c24e
+ms.sourcegitcommit: 0a7beb2f51e48889b4a85f7c896fb650b208eb36
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43093964"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57685648"
 ---
 # <a name="create-measures"></a>Creare misure
 
@@ -32,7 +33,7 @@ Tempo stimato per il completamento della lezione: **30 minuti**
   
 ## <a name="prerequisites"></a>Prerequisiti  
 
-Questo articolo fa parte di un'esercitazione di modellazione tabulare, che deve essere completata nell'ordine. Prima di eseguire le attività in questa lezione, è necessario avere completato la lezione precedente: [lezione 5: creare colonne calcolate](../tutorial-tabular-1400/as-lesson-5-create-calculated-columns.md).  
+Questo articolo fa parte di un'esercitazione di modellazione tabulare, che deve essere completata nell'ordine. Prima di eseguire le attività in questa lezione, è necessario avere completato la lezione precedente: [Lezione 5: Creare colonne calcolate](../tutorial-tabular-1400/as-lesson-5-create-calculated-columns.md).  
   
 ## <a name="create-measures"></a>Creare misure  
   
@@ -88,14 +89,14 @@ Questo articolo fa parte di un'esercitazione di modellazione tabulare, che deve 
 
     |colonna|Nome misura|Somma automatica (∑)|Formula|  
     |----------------|----------|-----------------|-----------|  
-    |SalesOrderLineNumber|InternetOrderLinesCount|Count|=COUNTA([SalesOrderLineNumber])|  
-    |OrderQuantity|InternetTotalUnits|SUM|=SUM([OrderQuantity])|  
-    |DiscountAmount|InternetTotalDiscountAmount|SUM|=SUM([DiscountAmount])|  
-    |TotalProductCost|InternetTotalProductCost|SUM|=SUM([TotalProductCost])|  
-    |SalesAmount|InternetTotalSales|SUM|=SUM([SalesAmount])|  
-    |Margin|InternetTotalMargin|SUM|=SUM([Margin])|  
-    |TaxAmt|InternetTotalTaxAmt|SUM|=SUM([TaxAmt])|  
-    |Freight|InternetTotalFreight|SUM|=SUM([Freight])|  
+    |SalesOrderLineNumber|InternetOrderLinesCount|Conteggio|=COUNTA([SalesOrderLineNumber])|  
+    |OrderQuantity|InternetTotalUnits|Sum|=SUM([OrderQuantity])|  
+    |DiscountAmount|InternetTotalDiscountAmount|Sum|=SUM([DiscountAmount])|  
+    |TotalProductCost|InternetTotalProductCost|Sum|=SUM([TotalProductCost])|  
+    |SalesAmount|InternetTotalSales|Sum|=SUM([SalesAmount])|  
+    |Margin|InternetTotalMargin|Sum|=SUM([Margin])|  
+    |TaxAmt|InternetTotalTaxAmt|Sum|=SUM([TaxAmt])|  
+    |Freight|InternetTotalFreight|Sum|=SUM([Freight])|  
   
 2.  Facendo clic su una cella vuota nella griglia delle misure e usando la barra della formula, creare, le misure personalizzate seguenti nell'ordine:  
   

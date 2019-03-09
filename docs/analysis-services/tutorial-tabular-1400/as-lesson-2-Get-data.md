@@ -1,6 +1,6 @@
 ---
-title: 'Analysis Services tutorial-lezione 2: ottenere i dati | Microsoft Docs'
-ms.date: 08/27/2018
+title: 'Analysis Services tutorial-lezione 2: Ottenere i dati | Microsoft Docs'
+ms.date: 03/08/2019
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: tabular-models
@@ -9,12 +9,13 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: ad1f5bc8fb59be05f10d476ccb3a66ea1c1747b9
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+monikerRange: '>= sql-server-2017 || = sqlallproducts-allversions'
+ms.openlocfilehash: 01bf31c3d4f89b77ebdceae2e69d4054a578b03f
+ms.sourcegitcommit: 0a7beb2f51e48889b4a85f7c896fb650b208eb36
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43062212"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57685318"
 ---
 # <a name="get-data"></a>Recuperare i dati
 
@@ -31,7 +32,7 @@ Tempo stimato per il completamento della lezione: **10 minuti**
   
 ## <a name="prerequisites"></a>Prerequisiti  
 
-Questo articolo fa parte di un'esercitazione di modellazione tabulare, che deve essere completata nell'ordine. Prima di eseguire le attività in questa lezione, è necessario avere completato la lezione precedente: [lezione 1: creare un nuovo progetto di modello tabulare](../tutorial-tabular-1400/as-lesson-1-create-a-new-tabular-model-project.md).  
+Questo articolo fa parte di un'esercitazione di modellazione tabulare, che deve essere completata nell'ordine. Prima di eseguire le attività in questa lezione, è necessario avere completato la lezione precedente: [Lezione 1: Creare un nuovo progetto di modello tabulare](../tutorial-tabular-1400/as-lesson-1-create-a-new-tabular-model-project.md).  
   
 ## <a name="create-a-connection"></a>Creare una connessione  
   
@@ -56,9 +57,9 @@ Questo articolo fa parte di un'esercitazione di modellazione tabulare, che deve 
   
 5.  Nel Pannello di navigazione selezionare la **AdventureWorksDW** del database e quindi fare clic su **OK**. In questo modo viene creata la connessione al database. 
   
-6.  Nel Pannello di navigazione selezionare la casella di controllo per le tabelle seguenti: **DimCustomer**, **DimDate**, **DimGeography**, **DimProduct**,  **DimProductCategory**, **DimProductSubcategory**, e **FactInternetSales**.  
+6.  Nello strumento di navigazione selezionare la casella di controllo per le tabelle seguenti: **DimCustomer**, **DimDate**, **DimGeography**, **DimProduct**, **DimProductCategory**,  **DimProductSubcategory**, e **FactInternetSales**.  
 
-    ![come-della lezione 2-selezionare-tables](../tutorial-tabular-1400/media/as-lesson2-select-tables.png)
+    ![as-lesson2-select-tables](../tutorial-tabular-1400/media/as-lesson2-select-tables.png)
   
 Dopo aver selezionato OK, viene aperto l'Editor di Query. Nella sezione successiva, si seleziona solo i dati da importare.
 
@@ -73,14 +74,14 @@ Le tabelle nel database di esempio AdventureWorksDW hanno dati che non sono nece
   
 2.  Selezione multipla (Ctrl + clic) **SpanishEducation**, **FrenchEducation**, **SpanishOccupation**, **FrenchOccupation**, quindi pulsante destro del mouse e quindi fare clic su **Rimuovi colonne**. 
 
-    ![come flusso della lezione 2-remove-colonne](../tutorial-tabular-1400/media/as-lesson2-remove-columns.png)
+    ![as-lesson2-remove-columns](../tutorial-tabular-1400/media/as-lesson2-remove-columns.png)
   
     Poiché i valori per queste colonne non sono attinenti all'analisi delle vendite Internet, non è necessario importare queste colonne. Eliminazione di colonne non necessarie rende il modello più piccoli e più efficiente.  
 
     > [!TIP]
     > Se si commette un errore, è possibile eseguire il backup, eliminando un passaggio **passaggi applicati**.   
     
-    ![come flusso della lezione 2-remove-colonne](../tutorial-tabular-1400/media/as-lesson2-remove-step.png)
+    ![as-lesson2-remove-columns](../tutorial-tabular-1400/media/as-lesson2-remove-step.png)
 
   
 4.  Filtrare le tabelle restanti rimuovendo le colonne seguenti in ogni tabella:  
