@@ -26,16 +26,16 @@ helpviewer_keywords:
 - clauses [SQL Server], INTO
 - row additions [SQL Server], INTO clause
 ms.assetid: b48d69e8-5a00-48bf-b2f3-19278a72dd88
-author: douglaslMS
-ms.author: douglasl
+author: VanMSFT
+ms.author: vanto
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 8f8d40fed1b2183bc82b85b5d82ac1895ca118f2
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 4246ac153e28393db2bfaefd443f85235e8cf6db
+ms.sourcegitcommit: 670082cb47f7d3d82e987b549b6f8e3a8968b5db
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52509008"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57334538"
 ---
 # <a name="select---into-clause-transact-sql"></a>Clausola SELECT - INTO (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -64,7 +64,7 @@ SELECT...INTO crea una nuova tabella nel filegroup predefinito e vi inserisce le
  *filegroup*    
  Specifica il nome del filegroup in cui verrà creata la nuova tabella. Il filegroup specificato deve esistere nel database anche se il motore di SQL Server genera un errore.   
  
- **Si applica a**: da [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].
+ **Si applica a:** [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] da SP2 fino a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].
   
 ## <a name="data-types"></a>Tipi di dati  
  L'attributo FILESTREAM non viene trasferito nella nuova tabella. Gli oggetti binari di grandi dimensioni FILESTREAM vengono copiati e archiviati nella nuova tabella come oggetti binari di grandi dimensioni di tipo **varbinary(max)**. Senza l'attributo FILESTREAM, il tipo di dati **varbinary(max)** è soggetto al limite di 2 GB. Se un oggetto BLOB FILESTREAM supera questo valore, viene generato l'errore 7119 e l'istruzione viene arrestata.  
@@ -82,6 +82,9 @@ SELECT...INTO crea una nuova tabella nel filegroup predefinito e vi inserisce le
 -   La colonna Identity proviene da un'origine dei dati remota.  
   
 Se una di queste condizioni risulta vera, la colonna viene creata come colonna NOT NULL, anziché ereditare la proprietà IDENTITY. Se una colonna Identity è richiesta nella nuova tabella ma tale colonna non è disponibile o si desidera un valore di inizializzazione o di incremento diverso della colonna Identity di origine, definire la colonna nell'elenco di selezione utilizzando la funzione IDENTITY. Vedere "Creazione di una colonna Identity tramite la funzione IDENTITY" nella sezione Esempi più avanti.  
+
+## <a name="remarks"></a>Remarks  
+Il funzionamento dell'istruzione `SELECT...INTO` è costituito da due parti: viene creata la nuova tabella e poi vengono inserite le righe.  Ciò significa che verrà eseguito il rollback degli inserimenti non riusciti, ma la nuova tabella (vuota) rimarrà.  Se è necessario che l'intera operazione abbia o esito positivo o esito negativo, usare una [transazione esplicita](../language-elements/begin-transaction-transact-sql.md).
   
 ## <a name="limitations-and-restrictions"></a>Limitazioni e restrizioni  
  Non è possibile specificare una variabile di tabella o un parametro con valori di tabella come nuova tabella.  
@@ -123,7 +126,7 @@ FROM Person.Person AS c
 GO  
 ```  
   
-### <a name="b-inserting-rows-using-minimal-logging"></a>B. Inserimento di righe utilizzando la registrazione minima  
+### <a name="b-inserting-rows-using-minimal-logging"></a>b. Inserimento di righe utilizzando la registrazione minima  
  Nell'esempio seguente viene creata la tabella `dbo.NewProducts`, in cui vengono inserite righe della tabella `Production.Product`. L'esempio presuppone che il modello di recupero del database [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] sia impostato su FULL. Per assicurare l'utilizzo della registrazione minima, il modello di recupero del database [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] viene impostato su BULK_LOGGED prima che le righe vengano inserite e reimpostato su FULL dopo l'istruzione SELECT...INTO. In tal modo, si assicura l'utilizzo da parte dell'istruzione SELECT...INTO di uno spazio minimo nel log delle transazioni con risultati efficienti.  
   
 ```sql  
@@ -229,7 +232,7 @@ ORDER BY YearlyIncome;
 ### <a name="f-creating-a-new-table-as-a-copy-of-another-table-and-loading-it-a-specified-filegroup"></a>F. Creare una nuova tabella come copia di un'altra tabella e caricarla in un filegroup specificato
 Nell'esempio seguente viene illustrato come creare una nuova tabella come copia di un'altra tabella e come caricarla in un filegroup specificato diverso dal filegroup predefinito dell'utente.
 
- **Si applica a**: da [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].
+ **Si applica a:** [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] da SP2 fino a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].
 
 ```sql
 ALTER DATABASE [AdventureWorksDW2016] ADD FILEGROUP FG2;

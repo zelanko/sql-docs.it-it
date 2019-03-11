@@ -18,17 +18,17 @@ ms.assetid: fdea1248-29a4-4bab-a60d-a1b359b5e109
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 3f517a0a991d36fb0371a7f2eee5e3fb4a0dacc2
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d093331425443a0879d5f59f5a2d03fdebcb2abd
+ms.sourcegitcommit: ad3b2133585bc14fc6ef8be91f8b74ee2f498b64
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47715952"
+ms.lasthandoff: 02/20/2019
+ms.locfileid: "56425756"
 ---
 # <a name="instanceof-geometry-data-type"></a>InstanceOf (tipo di dati geometry)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-Metodo che verifica se l'istanza **geometry** corrisponde al tipo specificato. Restituisce 1 se il tipo di un'istanza **geometry** corrisponde al tipo specificato o se il tipo specificato è un predecessore del tipo dell'istanza. In caso contrario, restituisce 0.
+Metodo che verifica se l'istanza **geometry** corrisponde al tipo specificato. Restituisce 1 se l'istanza **geometry** corrisponde al tipo specificato. Questo metodo restituisce 1 anche se il tipo specificato è un predecessore del tipo di istanza. In caso contrario restituisce 0.
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -38,8 +38,8 @@ Metodo che verifica se l'istanza **geometry** corrisponde al tipo specificato. R
 ```  
   
 ## <a name="arguments"></a>Argomenti  
- *geometry_type*  
- Stringa **nvarchar(4000)** che specifica uno dei 15 tipi esposti nella gerarchia del tipo **geometry**.  
+*geometry_type*  
+Stringa **nvarchar(4000)** che specifica uno dei 15 tipi esposti nella gerarchia del tipo **geometry**.  
   
 ## <a name="return-types"></a>Tipi restituiti  
  Tipo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] restituito: **bit**  
@@ -47,7 +47,7 @@ Metodo che verifica se l'istanza **geometry** corrisponde al tipo specificato. R
  Tipo CLR restituito: **SqlBoolean**  
   
 ## <a name="remarks"></a>Remarks  
- L'input per il metodo deve essere uno dei seguenti: **Geometry**, **Point**, **Curve**, **LineString**, **CircularString**, **CompoundCurve**, **Surface**, **Polygon**, **CurvePolygon**, **GeometryCollection**, **MultiSurface**, **MultiPolygon**, **MultiCurve**, **MultiLineString** o **MultiPoint**. Questo metodo genera un'eccezione **ArgumentException** se per l'input viene usata qualsiasi altra stringa.  
+ L'input per il metodo deve essere uno dei tipi seguenti: **Geometry**, **Point**, **Curve**, **LineString**, **CircularString**, **CompoundCurve**, **Surface**, **Polygon**, **CurvePolygon**, **GeometryCollection**, **MultiSurface**, **MultiPolygon**, **MultiCurve**, **MultiLineString** e **MultiPoint**. Questo metodo genera un'eccezione **ArgumentException** se per l'input viene usata qualsiasi altra stringa.  
   
 ## <a name="examples"></a>Esempi  
  Nell'esempio seguente viene creata un'istanza `MultiPoint` e viene utilizzato `InstanceOf()` per verificare se l'istanza è di tipo `GeometryCollection`.  

@@ -1,5 +1,5 @@
 ---
-title: Combinare clustering di failover e gruppi di disponibilità
+title: Combinare un'istanza del cluster di failover con gruppi di disponibilità
 description: Informazioni su come migliorare la disponibilità elevata e il ripristino di emergenza combinando le funzionalità di un'istanza di cluster di failover di SQL Server e di un gruppo di disponibilità Always On.
 ms.custom: seodec18
 ms.date: 07/02/2017
@@ -19,12 +19,12 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 0db7b259158d9d7404230405c3e72bf78e93b822
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: 8257490dfae7e46cdca2a5ad4c0339da857a2e34
+ms.sourcegitcommit: 2ab79765e51913f1df6410f0cd56bf2a13221f37
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53213040"
+ms.lasthandoff: 02/27/2019
+ms.locfileid: "56956082"
 ---
 # <a name="failover-clustering-and-always-on-availability-groups-sql-server"></a>Clustering di failover e gruppi di disponibilità Always On (SQL Server)
 
@@ -37,9 +37,9 @@ ms.locfileid: "53213040"
   
   
 ##  <a name="WSFC"></a> Clustering di failover di Windows Server e gruppi di disponibilità  
- La distribuzione dei [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] richiede un cluster WSCF (Windows Server Failover Clustering). Per essere abilitata per [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)], un'istanza di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] deve trovarsi in un nodo WSFC e il nodo e il cluster WSFC devono essere online. Inoltre, ogni replica di disponibilità di un gruppo di disponibilità deve risiedere in un nodo diverso dello stesso cluster WSFC. L'unica eccezione è che quando viene eseguita la migrazione a un altro cluster WSFC, un gruppo di disponibilità può risiedere temporaneamente in due cluster.  
+ La distribuzione di [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] richiede un cluster WSCF (Windows Server Failover Clustering). Per essere abilitata per [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)], un'istanza di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] deve trovarsi in un nodo WSFC e il nodo e il cluster WSFC devono essere online. Inoltre, ogni replica di disponibilità di un gruppo di disponibilità deve risiedere in un nodo diverso da quello del cluster WSFC. L'unica eccezione è che quando viene eseguita la migrazione a un altro cluster WSFC, un gruppo di disponibilità può risiedere temporaneamente in due cluster.  
   
- [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] si basa sul cluster WSFC (Windows Server Failover Clustering) per monitorare e gestire i ruoli correnti delle repliche di disponibilità che appartengono a un determinato gruppo di disponibilità e per determinare in che modo un evento di failover influisca sulle repliche di disponibilità. Il gruppo di risorse WSFC viene creato per ogni gruppo di disponibilità che viene creato. Con il cluster WSFC è possibile eseguire il monitoraggio del gruppo di risorse per valutare lo stato di integrità della replica primaria.  
+ [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] si basa sul cluster WSFC (Windows Server Failover Clustering) per monitorare e gestire i ruoli correnti delle repliche di disponibilità che appartengono a un determinato gruppo di disponibilità e per determinare in che modo un evento di failover influisce sulle repliche di disponibilità. Il gruppo di risorse WSFC viene creato per ogni gruppo di disponibilità che viene creato. Il cluster WSFC esegue il monitoraggio del gruppo di risorse per valutare lo stato di integrità della replica primaria.  
   
  Il quorum di [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] si basa su tutti i nodi del cluster WSFC, indipendentemente dal fatto che un nodo del cluster ospiti una replica di disponibilità. A differenza del mirroring del database, non esiste alcun ruolo del server di controllo in [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)].  
   
@@ -48,10 +48,10 @@ ms.locfileid: "53213040"
 > [!IMPORTANT]  
 >  [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] sono sottochiavi del cluster WSFC. Se si elimina e si ricrea un cluster WSFC, è necessario disabilitare e riabilitare la funzionalità [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] in ogni istanza di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] in cui è ospitata una replica di disponibilità nel cluster WSFC originale.  
   
- Per informazioni sull'esecuzione di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] nei nodi WSFC (Windows Server Failover Clustering) e sul quorum WSFC, vedere [WSFC &#40;Windows Server Failover Clustering&#41; con SQL Server](../../../sql-server/failover-clusters/windows/windows-server-failover-clustering-wsfc-with-sql-server.md).  
+ Per informazioni sull'esecuzione di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] nei nodi WSFC e sul quorum WSFC, vedere [WSFC &#40;Windows Server Failover Clustering&#41; con SQL Server](../../../sql-server/failover-clusters/windows/windows-server-failover-clustering-wsfc-with-sql-server.md).  
   
 ##  <a name="SQLServerFC"></a> [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] - Istanze del cluster di failover e gruppi di disponibilità  
- È possibile configurare un secondo livello di failover a livello di istanza del server implementando il clustering di failover di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] insieme al cluster WSFC. Una replica di disponibilità può essere ospitata da un'istanza autonoma di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] o da un'istanza FCI. Solo un partner di un'istanza del cluster di failover può ospitare una replica per un gruppo di disponibilità. Quando una replica di disponibilità viene eseguita in un'istanza del cluster di failover, l'elenco dei possibili proprietari per il gruppo di disponibilità conterrà solo il nodo FCI attivo.  
+ È possibile configurare un secondo livello di failover a livello di istanza del server implementando un'istanza FCI di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] insieme al cluster WSFC. Una replica di disponibilità può essere ospitata da un'istanza autonoma di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] o da un'istanza FCI. Solo un partner di un'istanza del cluster di failover può ospitare una replica per un gruppo di disponibilità. Quando una replica di disponibilità viene eseguita in un'istanza del cluster di failover, l'elenco dei possibili proprietari per il gruppo di disponibilità conterrà solo il nodo FCI attivo.  
   
  [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] non dipende da alcun mezzo di archiviazione condivisa. Tuttavia, se si utilizza un'istanza del cluster di failover (FCI) di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] per ospitare una o più repliche di disponibilità, per ognuna di queste FCI sarà richiesta l'archiviazione condivisa in base all'installazione dell'istanza del cluster di failover di SQL Server standard.  
   
@@ -62,7 +62,7 @@ ms.locfileid: "53213040"
   
 ||Nodi all'interno di un'istanza FCI|Repliche all'interno di un gruppo di disponibilità|  
 |-|-------------------------|-------------------------------------------|  
-|**Utilizzo di cluster WSFC**|Sì|Sì|  
+|**Usa cluster WSFC**|Sì|Sì|  
 |**Livello di protezione**|Istanza|Database|  
 |**Tipo di archiviazione**|Condivisa|Non condivisi<br /><br /> Mentre le repliche di un gruppo di disponibilità non condividono le risorse di archiviazione, una replica ospitata da un'istanza del cluster di failover usa una soluzione di archiviazione condivisa come richiesto da tale istanza. La soluzione di archiviazione è condivisa solo dai nodi all'interno dell'istanza FCI e non tra le repliche del gruppo di disponibilità.|  
 |**Soluzioni di archiviazione**|Collegamento diretto, rete SAN, punti di montaggio, SMB|Dipende dal tipo di nodo|  
@@ -75,7 +75,7 @@ ms.locfileid: "53213040"
  ** Le impostazioni dei criteri di failover per il gruppo di disponibilità si applicano a tutte le repliche, indipendentemente dal fatto che siano ospitate in un'istanza autonoma o in un'istanza del cluster di failover.  
   
 > [!NOTE]  
->  Per altre informazioni sul **numero di nodi** all'interno del clustering di failover e sui **Gruppi di disponibilità Always On** per edizioni diverse di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], vedere [Funzionalità supportate dalle edizioni di SQL Server 2012](https://go.microsoft.com/fwlink/?linkid=232473) (https://go.microsoft.com/fwlink/?linkid=232473).  
+>  Per altre informazioni sul **numero di nodi** all'interno delle istanze FCI e sui **Gruppi di disponibilità Always On** per edizioni diverse di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], vedere [Funzionalità supportate dalle edizioni di SQL Server 2012](https://go.microsoft.com/fwlink/?linkid=232473) (https://go.microsoft.com/fwlink/?linkid=232473).  
   
 ### <a name="considerations-for-hosting-an-availability-replica-on-an-fci"></a>Considerazioni sull'hosting di una replica di disponibilità in un'istanza FCI  
   
@@ -84,7 +84,7 @@ ms.locfileid: "53213040"
   
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ha istanze del cluster di failover che non supportano il failover automatico da gruppi di disponibilità, quindi le repliche di disponibilità ospitate da un'istanza del cluster di failover possono essere configurate solo per il failover manuale.  
   
- Potrebbe essere necessario configurare un cluster WSCF (Windows Server Failover Clustering) per includere i dischi condivisi che non sono disponibili in tutti i nodi. Ad esempio, si consideri un cluster WSFC in due data center con tre nodi. A due dei nodi è consentito ospitare un'istanza del clustering di failover di SQL Server (FCI) nel data center principale, nonché accedere agli stessi dischi condivisi. Al terzo nodo è permesso ospitare un'istanza autonoma di SQL Server in un data center diverso, ma non è consentito accedere ai dischi condivisi dal data center principale. Questa configurazione del cluster WSFC supporta la distribuzione di un gruppo di disponibilità se nell'istanza FCI è ospitata la replica primaria e in quella autonoma la replica secondaria.  
+ Può essere necessario configurare un cluster WSCF per includere i dischi condivisi che non sono disponibili in tutti i nodi. Ad esempio, si consideri un cluster WSFC in due data center con tre nodi. Due dei nodi ospitano un'istanza FCI di SQL nel data center principale e hanno accesso agli stessi dischi condivisi. Al terzo nodo è permesso ospitare un'istanza autonoma di SQL Server in un data center diverso, ma non è consentito accedere ai dischi condivisi dal data center principale. Questa configurazione WSFC supporta la distribuzione di un gruppo di disponibilità se nell'istanza FCI è ospitata la replica primaria e in quella autonoma la replica secondaria.  
   
  Se si decide che in un'istanza FCI venga ospitata una replica di disponibilità per un determinato gruppo di disponibilità, assicurarsi che un failover dell'istanza FCI non possa comportare il tentativo da parte di un unico nodo WSFC di ospitare due repliche di disponibilità per lo stesso gruppo di disponibilità.  
   
@@ -93,10 +93,10 @@ ms.locfileid: "53213040"
  Marcel configura un cluster WSFC con due nodi, `NODE01` e `NODE02`. Installa un'istanza del cluster di failover di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , `fciInstance1`, sia in `NODE01` sia in `NODE02` dove `NODE01` è il proprietario corrente di `fciInstance1`.  
  In `NODE02`Marcel installa un'altra istanza di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], `Instance3`, che è un'istanza autonoma.  
  In `NODE01`Marcel abilita fciInstance1 per [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]. In `NODE02`abilita `Instance3` per [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]. Successivamente configura un gruppo di disponibilità per il quale in `fciInstance1` è ospitata la replica primaria e in `Instance3` quella secondaria.  
- A un certo punto `fciInstance1` non è più disponibile in `NODE01`e il cluster WSFC comporta il failover di `fciInstance1` in `NODE02`. Dopo il failover, `fciInstance1` è un'istanza abilitata per [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]in esecuzione nel ruolo primario di `NODE02`. Tuttavia, `Instance3` si trova ora nello stesso nodo WSFC di `fciInstance1`. Viene pertanto violato il vincolo [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] .  
- Per risolvere il problema presentato in questo scenario, l'istanza autonoma, `Instance3`, deve trovarsi in un altro nodo dello stesso cluster WSFC come per `NODE01` e `NODE02`.  
+ A un certo punto `fciInstance1` non è più disponibile in `NODE01` e il cluster WSFC causa il failover di `fciInstance1` in `NODE02`. Dopo il failover, `fciInstance1` è un'istanza abilitata per [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]in esecuzione nel ruolo primario di `NODE02`. Tuttavia, `Instance3` si trova ora nello stesso nodo WSFC di `fciInstance1`. Viene pertanto violato il vincolo [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] .  
+ Per risolvere il problema presentato in questo scenario, l'istanza autonoma, `Instance3`, deve trovarsi in un altro nodo dello stesso cluster WSFC come `NODE01` e `NODE02`.  
   
- Per altre informazioni sul [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , vedere [Istanze del cluster di failover Always On &#40;SQL Server&#41;](../../../sql-server/failover-clusters/windows/always-on-failover-cluster-instances-sql-server.md).  
+ Per altre informazioni sulle istanze FCI di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], vedere [Istanze del cluster di failover Always On &#40;SQL Server&#41;](../../../sql-server/failover-clusters/windows/always-on-failover-cluster-instances-sql-server.md).  
   
 ##  <a name="FCMrestrictions"></a> Le restrizioni sull'utilizzo di Gestione cluster di failover WSFC con i gruppi di disponibilità  
  Non utilizzare Gestione cluster di failover per modificare i gruppi di disponibilità, ad esempio:  

@@ -13,12 +13,12 @@ ms.assetid: a3447987-5507-4630-ac35-58821b72354d
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 49e6357f4f108b05b0f28442d0e526445a5a5ad7
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: ce814d567aa695be417fa4fa92d988938dfec6bf
+ms.sourcegitcommit: 0f452eca5cf0be621ded80fb105ba7e8df7ac528
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51659370"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "57007594"
 ---
 # <a name="database-properties-options-page"></a>Proprietà database (pagina Opzioni)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -30,7 +30,7 @@ ms.locfileid: "51659370"
  È possibile specificare le regole di confronto del database selezionandole nell'elenco. Per altre informazioni, vedere [Set or Change the Database Collation](../../relational-databases/collations/set-or-change-the-database-collation.md).  
   
  **Modello di recupero**  
- È possibile specificare uno dei modelli di recupero del database seguenti: **Con registrazione completa**, **Con registrazione minima delle operazioni bulk**o **Con registrazione minima**. Per altre informazioni sui modelli di recupero, vedere [Modelli di recupero &#40;SQL Server&#41;](../../relational-databases/backup-restore/recovery-models-sql-server.md).  
+ È possibile specificare uno dei modelli di recupero del database seguenti: **Con registrazione completa**, **Con registrazione minima delle operazioni bulk** o **Con registrazione minima**. Per altre informazioni sui modelli di recupero, vedere [Modelli di recupero &#40;SQL Server&#41;](../../relational-databases/backup-restore/recovery-models-sql-server.md).  
   
  **Livello di compatibilità**  
  È possibile specificare la versione più recente di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] supportata dal database. Per i valori possibili, vedere [Livello di compatibilità di ALTER DATABASE (Transact-SQL)](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md). Quando un database SQL Server viene aggiornato, il livello di compatibilità per il database viene mantenuto, se possibile. Oppure viene portato al livello minimo supportato per il nuovo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. 
@@ -44,7 +44,7 @@ ms.locfileid: "51659370"
 ## <a name="automatic"></a>Automatico  
  **Chiusura automatica**  
  Specifica se il database viene chiuso correttamente e se le risorse corrispondenti vengono liberate dopo la disconnessione dell'ultimo utente. I valori possibili sono **True** e **False**. Quando il valore è **True**, il database viene chiuso correttamente e le relative risorse vengono liberate dopo la disconnessione dell'ultimo utente.  
-  
+
  **Creazione automatica di statistiche incrementali**  
  Specificare se utilizzare l'opzione incrementale nella creazione di statistiche per partizione. Per informazioni sulle statistiche incrementali, vedere [CREATE STATISTICS &#40;Transact-SQL&#41;](../../t-sql/statements/create-statistics-transact-sql.md).  
   
@@ -63,6 +63,15 @@ ms.locfileid: "51659370"
  Quando il valore è **False**, le query che avviano un aggiornamento automatico delle statistiche non aggiornate attenderanno che le statistiche aggiornate diventino disponibili per l'uso nel piano di ottimizzazione query.  
   
  L'impostazione di questa opzione su **True** non produce effetti a meno che anche l'opzione **Aggiornamento automatico statistiche** non sia impostata su **True**.  
+
+## <a name="azure"></a>Azure
+Quando si è connessi al database SQL di Azure, questa sezione include impostazioni per controllare l'obiettivo del livello di servizio. L'obiettivo del livello di servizio predefinito per un nuovo database è Standard S2.
+
+  **Obiettivo di livello di servizio corrente**: l'obiettivo del livello di servizio specifico da usare. I valori validi sono vincolati dall'edizione selezionata. Se il valore dell'obiettivo di livello di servizio che si vuole selezionare non è presente nell'elenco, è possibile digitarlo.
+
+  **Edizione**: l'edizione del database SQL di Azure da usare, ad esempio Basic o Premium. Se il valore dell'edizione che si vuole selezionare non è presente nell'elenco, è possibile digitarlo ma deve corrispondere al valore usato nell'API REST di Azure.
+  
+  **Dimensioni massime**: le dimensioni massime del database. Se il valore delle dimensioni massime che si vuole selezionare non è presente nell'elenco, è possibile digitarlo. Lasciare vuoto il campo per le dimensioni predefinite dell'edizione e dell'obiettivo del livello di servizio specificati.
   
 ## <a name="containment"></a>Containment  
  In un database indipendente alcune impostazioni che in genere sono configurate a livello di server possono essere configurate a livello di database.  
@@ -123,7 +132,7 @@ ms.locfileid: "51659370"
  Specifica il nome di directory per i dati FILESTREAM associati al database selezionato.  
   
  **Accesso FILESTREAM non in transazioni**  
- È possibile specificare una delle opzioni seguenti per l'accesso non transazionale tramite il file system a dati FILESTREAM archiviati in tabelle FileTable: **OFF**, **READ_ONLY**o **FULL**. Se FILESTREAM non è abilitato nel server, questo valore viene impostato su OFF ed è disabilitato. Per altre informazioni, vedere [FileTables &#40;SQL Server&#41;](../../relational-databases/blob/filetables-sql-server.md).  
+ È possibile specificare una delle opzioni seguenti per l'accesso non transazionale tramite il file system a dati FILESTREAM archiviati in tabelle FileTable: **OFF**, **READ_ONLY** o **FULL**. Se FILESTREAM non è abilitato nel server, questo valore viene impostato su OFF ed è disabilitato. Per altre informazioni, vedere [FileTables &#40;SQL Server&#41;](../../relational-databases/blob/filetables-sql-server.md).  
   
 ## <a name="miscellaneous"></a>Varie  
 **Consenti isolamento snapshot**  

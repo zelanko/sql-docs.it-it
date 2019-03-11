@@ -18,24 +18,24 @@ ms.assetid: 300a67c4-d226-4653-9e9f-7ae4d53fcf33
 author: VanMSFT
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 233a560903676736350935729d8002021f802d65
-ms.sourcegitcommit: c6e71ed14198da67afd7ba722823b1af9b4f4e6f
+ms.openlocfilehash: 37b88f07571029e39080f38c1406ab89ec73b0a3
+ms.sourcegitcommit: c3b190f8f87a4c80bc9126bb244896197a6dc453
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/16/2019
-ms.locfileid: "54327742"
+ms.lasthandoff: 02/26/2019
+ms.locfileid: "56852876"
 ---
 # <a name="deny-schema-permissions-transact-sql"></a>DENY (autorizzazioni per schemi) (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  Nega autorizzazioni per uno schema.  
+Nega autorizzazioni per uno schema.  
   
 
- ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+![Icona di collegamento a un articolo](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un articolo")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintassi  
   
-```  
+```sql
 DENY permission  [ ,...n ] } ON SCHEMA :: schema_name  
     TO database_principal [ ,...n ]   
     [ CASCADE ]  
@@ -43,14 +43,14 @@ DENY permission  [ ,...n ] } ON SCHEMA :: schema_name
 ```  
   
 ## <a name="arguments"></a>Argomenti  
- *permission*  
- Specifica un'autorizzazione che può essere negata per uno schema. Per un elenco di queste autorizzazioni, vedere la sezione Osservazioni di seguito in questo argomento.  
+*permission*  
+Specifica un'autorizzazione che può essere negata per uno schema. Per un elenco di queste autorizzazioni, vedere la sezione Osservazioni di seguito in questo articolo.  
   
- ON SCHEMA **::** schema *_name*  
- Specifica lo schema per cui viene negata l'autorizzazione. Il qualificatore di ambito **::** è obbligatorio.  
+ON SCHEMA **::** schema *_name*  
+Specifica lo schema per cui viene negata l'autorizzazione. Il qualificatore di ambito **::** è obbligatorio.  
   
- *database_principal*  
- Specifica l'entità a cui viene negata l'autorizzazione. *database_principal* può essere una delle entità seguenti:  
+*database_principal*  
+Specifica l'entità a cui viene negata l'autorizzazione. *database_principal* può essere una delle seguenti entità di sicurezza:  
   
 -   Utente del database  
 -   Ruolo del database  
@@ -62,10 +62,10 @@ DENY permission  [ ,...n ] } ON SCHEMA :: schema_name
 -   Utente del database sul quale non viene eseguito il mapping ad alcuna entità server  
   
 CASCADE  
- Indica che l'autorizzazione negata viene negata anche ad altre entità alle quali è stata concessa da questa entità.  
+Nega l'autorizzazione a eventuali altre entità per cui l'oggetto specificato *database_principal* ha concesso l'autorizzazione.
   
 *denying_principal*  
- Specifica un'entità dalla quale l'entità che esegue la query ottiene il diritto di negare l'autorizzazione. *denying_principal* può essere una delle entità seguenti:  
+Specifica un'entità dalla quale l'entità che esegue la query ottiene il diritto di negare l'autorizzazione. *denying_principal* può essere una delle seguenti entità di sicurezza:  
   
 -   Utente del database  
 -   Ruolo del database  
@@ -77,7 +77,7 @@ CASCADE
 -   Utente del database sul quale non viene eseguito il mapping ad alcuna entità server  
   
 ## <a name="remarks"></a>Remarks  
- Uno schema è un'entità a sicurezza diretta a livello di database contenuta nel database padre nella gerarchia di autorizzazioni. Nella tabella seguente sono elencate le autorizzazioni più specifiche e limitate che è possibile negare per uno schema, insieme alle autorizzazioni più generali che le includono in modo implicito.  
+Uno schema è un'entità a protezione diretta a livello di database, contenuta nel database padre nella gerarchia di autorizzazioni. Nella tabella seguente sono elencate le autorizzazioni più specifiche e limitate che è possibile negare per uno schema. La tabella contiene le autorizzazioni più generali che le includono in modo implicito.  
   
 |Autorizzazione dello schema|Autorizzazione dello schema in cui è inclusa|Autorizzazione del database in cui è inclusa|  
 |-----------------------|----------------------------------|------------------------------------|  
@@ -95,15 +95,15 @@ CASCADE
 |VIEW DEFINITION|CONTROL|VIEW DEFINITION|  
   
 ## <a name="permissions"></a>Permissions  
- È richiesta l'autorizzazione CONTROL per lo schema. Se si utilizza l'opzione AS, l'entità specificata deve essere proprietaria dello schema.  
+È richiesta l'autorizzazione CONTROL per lo schema. Se si usa l'opzione AS, l'entità specificata deve essere proprietaria dello schema.  
   
 ## <a name="see-also"></a>Vedere anche  
- [CREATE SCHEMA &#40;Transact-SQL&#41;](../../t-sql/statements/create-schema-transact-sql.md)   
- [DENY &#40;Transact-SQL&#41;](../../t-sql/statements/deny-transact-sql.md)   
- [Autorizzazioni &#40;motore di database&#41;](../../relational-databases/security/permissions-database-engine.md)   
- [Entità &#40;motore di database&#41;](../../relational-databases/security/authentication-access/principals-database-engine.md)   
- [sys.fn_builtin_permissions &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-builtin-permissions-transact-sql.md)   
- [sys.fn_my_permissions &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-my-permissions-transact-sql.md)   
- [HAS_PERMS_BY_NAME &#40;Transact-SQL&#41;](../../t-sql/functions/has-perms-by-name-transact-sql.md)  
+[CREATE SCHEMA &#40;Transact-SQL&#41;](../../t-sql/statements/create-schema-transact-sql.md)   
+[DENY &#40;Transact-SQL&#41;](../../t-sql/statements/deny-transact-sql.md)   
+[Autorizzazioni &#40;motore di database&#41;](../../relational-databases/security/permissions-database-engine.md)   
+[Entità &#40;motore di database&#41;](../../relational-databases/security/authentication-access/principals-database-engine.md)   
+[sys.fn_builtin_permissions &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-builtin-permissions-transact-sql.md)   
+[sys.fn_my_permissions &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-my-permissions-transact-sql.md)   
+[HAS_PERMS_BY_NAME &#40;Transact-SQL&#41;](../../t-sql/functions/has-perms-by-name-transact-sql.md)  
   
   

@@ -22,22 +22,19 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 111d7cb0790bd0cbdb9c9bb17a6ebcb78ac3b04a
-ms.sourcegitcommit: 96032813f6bf1cba680b5e46d82ae1f0f2da3d11
+ms.openlocfilehash: ab19d51f1032ad251cb1867cbe2326652d174f29
+ms.sourcegitcommit: a13256f484eee2f52c812646cc989eb0ce6cf6aa
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/15/2019
-ms.locfileid: "54298608"
+ms.lasthandoff: 02/25/2019
+ms.locfileid: "56802198"
 ---
 # <a name="coalesce-transact-sql"></a>COALESCE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-  > [!div class="nextstepaction"]
-  > [Condividi il feedback sul sommario della documentazione SQL](https://aka.ms/sqldocsurvey)
-
-Valuta gli argomenti seguendo l'ordine e restituisce il valore corrente della prima espressione che inizialmente non restituisce `NULL`. Ad esempio, `SELECT COALESCE(NULL, NULL, 'third_value', 'fourth_value');` restituisce il terzo valore perché il terzo valore è il primo valore non Null. 
+Valuta gli argomenti seguendo l'ordine e restituisce il valore corrente della prima espressione che inizialmente non restituisce `NULL`. Ad esempio, `SELECT COALESCE(NULL, NULL, 'third_value', 'fourth_value');` restituisce il terzo valore perché il terzo valore è il primo non Null. 
   
- ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -46,30 +43,30 @@ COALESCE ( expression [ ,...n ] )
 ```  
   
 ## <a name="arguments"></a>Argomenti  
- *expression*  
- [Espressione](../../t-sql/language-elements/expressions-transact-sql.md) di qualsiasi tipo.  
+_expression_  
+[Espressione](../../t-sql/language-elements/expressions-transact-sql.md) di qualsiasi tipo.  
   
 ## <a name="return-types"></a>Tipi restituiti  
- Restituisce il tipo di dati dell'*espressione* con la precedenza del tipo di dati più alta. Se tutte le espressioni non ammettono valori Null, il risultato non ammetterà valori Null.  
+Restituisce il tipo di dati dell'_espressione_ con la precedenza del tipo di dati più alta. Se tutte le espressioni non ammettono valori Null, il risultato non ammetterà valori Null.  
   
 ## <a name="remarks"></a>Remarks  
- Quando tutti gli argomenti sono `NULL`, `COALESCE`restituisce `NULL`. Almeno uno dei valori Null deve essere un valore `NULL` tipizzato.  
+Quando tutti gli argomenti sono `NULL`, `COALESCE`restituisce `NULL`. Almeno uno dei valori Null deve essere un valore `NULL` tipizzato.  
   
 ## <a name="comparing-coalesce-and-case"></a>Confronto tra COALESCE e CASE  
- L'espressione `COALESCE` è una scorciatoia sintattica dell'espressione `CASE`.  Il codice `COALESCE`(*expression1*,*...n*) viene quindi riscritto da Query Optimizer come la seguente espressione `CASE`:  
+L'espressione `COALESCE` è una scorciatoia sintattica dell'espressione `CASE`.  Il codice `COALESCE`(_expression1_,_...n_) viene quindi riscritto da Query Optimizer come la seguente espressione `CASE`:  
   
- ```sql  
- CASE  
- WHEN (expression1 IS NOT NULL) THEN expression1  
- WHEN (expression2 IS NOT NULL) THEN expression2  
- ...  
- ELSE expressionN  
- END  
- ```  
+```sql  
+CASE  
+WHEN (expression1 IS NOT NULL) THEN expression1  
+WHEN (expression2 IS NOT NULL) THEN expression2  
+...  
+ELSE expressionN  
+END  
+```  
   
- ciò significa che i valori di input (*expression1*, *expression2*, *expressionN*e così via) vengono valutati più volte. Inoltre, in conformità con lo standard SQL, un'espressione di valori che contiene una sottoquery è considerata non deterministica e la sottoquery viene valutata due volte. In entrambi i casi, è possibile che tra la prima valutazione e quelle successive i risultati siano diversi.  
+In questo modo, i valori di input (_expression1_, _expression2_, _expressionN_ e così via) vengono valutati più volte. Un'espressione valore contenente una sottoquery viene considerata non deterministica e la sottoquery viene valutata due volte. Questo risultato è conforme allo standard SQL. In entrambi i casi, tra la prima valutazione e le successive possono essere restituiti risultati diversi.  
   
- Ad esempio, quando viene eseguito il codice `COALESCE((subquery), 1)`, la sottoquery viene valutata due volte. Di conseguenza, è possibile che si ottengano risultati differenti a seconda del livello di isolamento della query. Ad esempio, il codice può restituire `NULL` con il livello di isolamento `READ COMMITTED` in un ambiente multiutente. Per assicurare risultati costanti, utilizzare il livello di isolamento `SNAPSHOT ISOLATION` oppure sostituire `COALESCE` con la funzione `ISNULL`. In alternativa, è possibile riscrivere la query per eseguire il push della sottoquery in una selezione secondaria, come illustrato nell'esempio seguente:  
+Ad esempio, quando viene eseguito il codice `COALESCE((subquery), 1)`, la sottoquery viene valutata due volte. Di conseguenza, è possibile che si ottengano risultati differenti a seconda del livello di isolamento della query. Ad esempio, il codice può restituire `NULL` con il livello di isolamento `READ COMMITTED` in un ambiente multiutente. Per assicurare risultati costanti, utilizzare il livello di isolamento `SNAPSHOT ISOLATION` oppure sostituire `COALESCE` con la funzione `ISNULL`. In alternativa, è possibile riscrivere la query in modo da inserire la sottoquery in una sub-SELECT, come illustrato nell'esempio seguente:  
   
 ```sql  
 SELECT CASE WHEN x IS NOT NULL THEN x ELSE 1 END  
@@ -81,13 +78,13 @@ SELECT (SELECT Nullable FROM Demo WHERE SomeCol = 1) AS x
 ```  
   
 ## <a name="comparing-coalesce-and-isnull"></a>Confronto tra COALESCE e ISNULL  
- Le finalità della funzione `ISNULL` e dell'espressione `COALESCE` sono simili, ma i comportamenti differiscono.  
+Le finalità della funzione `ISNULL` e dell'espressione `COALESCE` sono simili, ma i comportamenti differiscono.  
   
-1.  Poiché `ISNULL` è una funzione, viene valutata una sola volta.  Come descritto in precedenza, i valori di input per l'espressione `COALESCE` possono essere valutati più volte.  
+1.  Dato che `ISNULL` è una funzione, la valutazione viene eseguita una sola volta.  Come descritto in precedenza, i valori di input per l'espressione `COALESCE` possono essere valutati più volte.  
   
 2.  La determinazione dei tipi di dati dell'espressione risultante è differente. `ISNULL` utilizza il tipo di dati del primo parametro, `COALESCE` segue le regole dell'espressione `CASE` e restituisce il tipo di dati del valore con la precedenza più alta.  
   
-3.  Il supporto dei valori NULL dell'espressione risultante è differente per `ISNULL` e `COALESCE`. Il valore restituito da `ISNULL` non ammette mai i valori NULL (supponendo che il valore restituito sia un valore che non ammette valori NULL), mentre `COALESCE` con parametri non NULL è considerata `NULL`. Le espressioni `ISNULL(NULL, 1)` e `COALESCE(NULL, 1)`, quindi, sebbene equivalenti, hanno valori di supporto dei valori NULL differenti. Questa differenza è importante quando si utilizzano queste espressioni nelle colonne calcolate, creando vincoli di chiave o rendendo deterministico il valore restituito di una funzione scalare definita dall'utente in modo che possa essere indicizzato come mostrato nell'esempio che segue:  
+3.  Il supporto dei valori NULL dell'espressione risultante è differente per `ISNULL` e `COALESCE`. Il valore restituito da `ISNULL` viene sempre considerato come non nullable, supponendo che il valore restituito non ammetta valori Null. Al contrario, l'espressione `COALESCE` con parametri non Null viene considerata `NULL`. Nonostante siano uguali, le espressioni `ISNULL(NULL, 1)` e `COALESCE(NULL, 1)` hanno quindi valori diversi in termini di supporto dei valori Null. Questi valori fanno la differenza se si usano queste espressioni in colonne calcolate, creando vincoli di chiave o rendendo deterministico il valore restituito di una funzione definita dall'utente scalare in modo che possa essere indicizzato, come illustrato nell'esempio seguente:  
   
     ```sql  
     USE tempdb;  
@@ -113,14 +110,14 @@ SELECT (SELECT Nullable FROM Demo WHERE SomeCol = 1) AS x
     );  
     ```  
   
-4.  Anche le convalide per `ISNULL` e `COALESCE` sono diverse. Ad esempio, un valore `NULL` per `ISNULL` viene convertito in **int**, mentre per `COALESCE` è necessario fornire un tipo di dati.  
+4.  Anche le convalide per `ISNULL` e `COALESCE` sono diverse. Ad esempio, un valore `NULL` per `ISNULL` viene convertito in **int**, mentre per `COALESCE` è necessario specificare un tipo di dati.  
   
-5.  `ISNULL` accetta solo due parametri, mentre `COALESCE` accetta un numero variabile di parametri.  
+5.  `ISNULL` accetta solo due parametri. `COALESCE` accetta invece un numero variabile di parametri.  
   
 ## <a name="examples"></a>Esempi  
   
 ### <a name="a-running-a-simple-example"></a>A. Esecuzione di un esempio semplice  
- Nell'esempio seguente viene illustrato il modo in cui `COALESCE` seleziona i dati dalla prima colonna in cui è presente un valore non Null. In questo esempio viene utilizzato il database [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)].  
+Nell'esempio seguente viene illustrato il modo in cui `COALESCE` seleziona i dati dalla prima colonna in cui è presente un valore non Null. In questo esempio viene utilizzato il database [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)].  
   
 ```sql  
 SELECT Name, Class, Color, ProductNumber,  
@@ -129,7 +126,7 @@ FROM Production.Product;
 ```  
   
 ### <a name="b-running-a-complex-example"></a>b. Esecuzione di un esempio complesso  
- Nell'esempio seguente viene illustrata una tabella `wages` che include tre colonne con informazioni sulla retribuzione annua dei dipendenti, ovvero retribuzione oraria, stipendio e commissione. Un dipendente tuttavia riceve un solo tipo di paga. Per determinare l'importo totale pagato a tutti i dipendenti, utilizzare la funzione `COALESCE` per ottenere solo i valori non Null delle colonne `hourly_wage`, `salary` e `commission`.  
+Nell'esempio seguente viene illustrata una tabella `wages` che include tre colonne con informazioni sulla retribuzione annua dei dipendenti, ovvero retribuzione oraria, stipendio e commissione. Un dipendente tuttavia riceve un solo tipo di paga. Per determinare l'importo totale pagato a tutti i dipendenti, utilizzare la funzione `COALESCE` per ottenere solo i valori non Null delle colonne `hourly_wage`, `salary` e `commission`.  
   
 ```sql  
 SET NOCOUNT ON;  
@@ -172,59 +169,59 @@ ORDER BY 'Total Salary';
 GO  
 ```  
   
- [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
+[!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
- ```   
- Total Salary  
- ------------  
- 10000.00  
- 20000.00  
- 20800.00  
- 30000.00  
- 40000.00  
- 41600.00  
- 45000.00  
- 50000.00  
- 56000.00  
- 62400.00  
- 83200.00  
- 120000.00  
+```   
+Total Salary  
+------------  
+10000.00  
+20000.00  
+20800.00  
+30000.00  
+40000.00  
+41600.00  
+45000.00  
+50000.00  
+56000.00  
+62400.00  
+83200.00  
+120000.00  
   
- (12 row(s) affected)
- ```  
+(12 row(s) affected)
+```  
   
 ### <a name="c-simple-example"></a>C: Esempio semplice  
- Nell'esempio seguente viene illustrato come `COALESCE` seleziona i dati dalla prima colonna in cui è presente un valore non Null. Si supponga per questo esempio che la tabella `Products` contenga i dati seguenti:  
+Nell'esempio seguente viene illustrato come `COALESCE` seleziona i dati dalla prima colonna in cui è presente un valore non Null. Si supponga per questo esempio che la tabella `Products` contenga i dati seguenti:  
   
- ```  
- Name         Color      ProductNumber  
- ------------ ---------- -------------  
- Socks, Mens  NULL       PN1278  
- Socks, Mens  Blue       PN1965  
- NULL         White      PN9876
- ```  
-  
- è quindi possibile eseguire la seguente query COALESCE:  
+```  
+Name         Color      ProductNumber  
+------------ ---------- -------------  
+Socks, Mens  NULL       PN1278  
+Socks, Mens  Blue       PN1965  
+NULL         White      PN9876
+```  
+ 
+è quindi possibile eseguire la seguente query COALESCE:  
   
 ```sql  
 SELECT Name, Color, ProductNumber, COALESCE(Color, ProductNumber) AS FirstNotNull   
 FROM Products ;  
 ```  
   
- [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
+[!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
- ```  
- Name         Color      ProductNumber  FirstNotNull  
- ------------ ---------- -------------  ------------  
- Socks, Mens  NULL       PN1278         PN1278  
- Socks, Mens  Blue       PN1965         Blue  
- NULL         White      PN9876         White
- ```  
+```  
+Name         Color      ProductNumber  FirstNotNull  
+------------ ---------- -------------  ------------  
+Socks, Mens  NULL       PN1278         PN1278  
+Socks, Mens  Blue       PN1965         Blue  
+NULL         White      PN9876         White
+```  
   
- Si noti che nella prima riga, il valore `FirstNotNull` è `PN1278`, non `Socks, Mens`. Ciò è dovuto al fatto che la colonna `Name`non è stata specificata come parametro per `COALESCE` nell'esempio.  
+Si noti che nella prima riga, il valore `FirstNotNull` è `PN1278`, non `Socks, Mens`. Questo valore è determinato dal fatto che la colonna `Name`non è stata specificata come parametro per `COALESCE` nell'esempio.  
   
 ### <a name="d-complex-example"></a>D: Esempio complesso  
- L'esempio seguente usa `COALESCE` per confrontare i valori in tre colonne e restituire solo il valore non Null trovato nelle colonne.  
+L'esempio seguente usa `COALESCE` per confrontare i valori in tre colonne e restituire solo il valore non Null trovato nelle colonne.  
   
 ```sql  
 CREATE TABLE dbo.wages  
@@ -278,27 +275,27 @@ FROM dbo.wages
 ORDER BY TotalSalary;  
 ```  
   
- [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
+[!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
- ```
- Total Salary  
- ------------  
- 10000.00  
- 20000.00  
- 20800.00  
- 30000.00  
- 40000.00  
- 41600.00  
- 45000.00  
- 50000.00  
- 56000.00  
- 62400.00  
- 83200.00  
- 120000.00
- ```  
+```
+Total Salary  
+------------  
+10000.00  
+20000.00  
+20800.00  
+30000.00  
+40000.00  
+41600.00  
+45000.00  
+50000.00  
+56000.00  
+62400.00  
+83200.00  
+120000.00
+```  
   
 ## <a name="see-also"></a>Vedere anche  
- [ISNULL &#40;Transact-SQL&#41;](../../t-sql/functions/isnull-transact-sql.md)   
- [CASE &#40;Transact-SQL&#41;](../../t-sql/language-elements/case-transact-sql.md)  
+[ISNULL &#40;Transact-SQL&#41;](../../t-sql/functions/isnull-transact-sql.md)   
+[CASE &#40;Transact-SQL&#41;](../../t-sql/language-elements/case-transact-sql.md)  
   
   

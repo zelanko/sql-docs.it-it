@@ -28,15 +28,15 @@ helpviewer_keywords:
 - displaying deleted rows
 - UPDATE statement [SQL Server], OUTPUT clause
 ms.assetid: 41b9962c-0c71-4227-80a0-08fdc19f5fe4
-author: douglaslMS
-ms.author: douglasl
+author: VanMSFT
+ms.author: vanto
 manager: craigg
-ms.openlocfilehash: b4bef219ec0e9bd4526b8f7c015a1800d9753656
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: b9058fcb7ffff72620c6560fbe81df6f33fa327d
+ms.sourcegitcommit: 670082cb47f7d3d82e987b549b6f8e3a8968b5db
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52529875"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57334738"
 ---
 # <a name="output-clause-transact-sql"></a>Clausola OUTPUT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -137,9 +137,9 @@ DELETE Sales.ShoppingCartItem
  Riferimento di colonna esplicito. Qualsiasi riferimento alla tabella che viene modificata deve essere qualificato correttamente tramite il prefisso INSERTED o DELETED in base alle esigenze, ad esempio: INSERTED **.**_column\_name_.  
   
  $action  
- È disponibile solo per l'istruzione MERGE. Specifica una colonna di tipo **nvarchar(10)** nella clausola OUTPUT in un'istruzione MERGE che restituisce uno dei tre valori per ogni riga: 'INSERT', 'UPDATE' o 'DELETE', secondo l'azione eseguita sulla riga.  
+ È disponibile solo per l'istruzione MERGE. Specifica una colonna di tipo **nvarchar(10)** nella clausola OUTPUT in un'istruzione MERGE che restituisce uno dei tre valori per ogni riga: 'INSERT', 'UPDATE' o 'DELETE', secondo l'azione eseguita su quella riga.  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Remarks  
  La clausola OUTPUT \<dml_select_list> e la clausola OUTPUT \<dml_select_list> INTO { **\@**_table\_variable_ | _output\_table_ } possono essere definite in un'unica istruzione INSERT, UPDATE, DELETE o MERGE.  
   
 > [!NOTE]  
@@ -307,7 +307,7 @@ DROP TABLE dbo.table1;
 > [!NOTE]  
 >  Utilizzare l'hint di tabella READPAST nelle istruzioni UPDATE e DELETE se lo scenario consente a più applicazioni di eseguire una operazione di lettura distruttiva da una tabella. Ciò evita i problemi relativi ai blocchi che possono verificarsi se un'altra applicazione sta già leggendo il primo record qualificato nella tabella.  
   
-## <a name="permissions"></a>Autorizzazioni  
+## <a name="permissions"></a>Permissions  
  Le autorizzazioni SELECT sono necessarie in ogni colonna recuperata tramite \<dml_select_list> o usata in \<scalar_expression>.  
   
  Le autorizzazioni INSERT sono necessarie in ogni tabella specificata in \<output_table>.  
@@ -337,7 +337,7 @@ GO
   
 ```  
   
-### <a name="b-using-output-with-a-delete-statement"></a>B. Utilizzo di OUTPUT con un'istruzione DELETE  
+### <a name="b-using-output-with-a-delete-statement"></a>b. Utilizzo di OUTPUT con un'istruzione DELETE  
  Nell'esempio seguente vengono eliminate tutte le righe nella tabella `ShoppingCartItem`. La clausola `OUTPUT deleted.*` specifica che i risultati dell'istruzione `DELETE`, ovvero tutte le colonne nelle righe eliminate, devono essere restituiti all'applicazione chiamante. L'istruzione `SELECT` che segue verifica i risultati dell'operazione di eliminazione nella tabella `ShoppingCartItem`.  
   
 ```  

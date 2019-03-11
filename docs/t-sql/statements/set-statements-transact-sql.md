@@ -25,19 +25,19 @@ ms.assetid: f7e107f8-0fcf-408b-b30f-da2323eeb714
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 281b2f8baeabb5d56ef953ba595103caadf23efb
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: caa103139a47214615ec4bb4f78a7268acf45dda
+ms.sourcegitcommit: 71913f80be0cb6f8d3af00c644ee53e3aafdcc44
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47780050"
+ms.lasthandoff: 02/21/2019
+ms.locfileid: "56590286"
 ---
 # <a name="set-statements-transact-sql"></a>Istruzioni SET (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Il linguaggio di programmazione [!INCLUDE[tsql](../../includes/tsql-md.md)] offre varie istruzioni SET per la modifica della gestione delle informazioni specifiche della sessione corrente. Le istruzioni SET sono raggruppate in categorie, descritte nella tabella seguente.  
+Il linguaggio di programmazione [!INCLUDE[tsql](../../includes/tsql-md.md)] offre varie istruzioni SET per la modifica della gestione delle informazioni specifiche della sessione corrente. Le istruzioni SET sono raggruppate in categorie, descritte nella tabella seguente.  
   
- Per informazioni sull'impostazione delle variabili locali mediante l'istruzione SET, vedere [SET @local_variable &#40;Transact-SQL&#41;](../../t-sql/language-elements/set-local-variable-transact-sql.md).  
+Per informazioni sull'impostazione delle variabili locali mediante l'istruzione SET, vedere [SET @local_variable &#40;Transact-SQL&#41;](../../t-sql/language-elements/set-local-variable-transact-sql.md).  
   
 |Category|Istruzioni|  
 |--------------|----------------|  
@@ -51,39 +51,44 @@ ms.locfileid: "47780050"
   
 ## <a name="considerations-when-you-use-the-set-statements"></a>Considerazioni sull'utilizzo delle istruzioni SET  
   
--   Tutte le istruzioni SET vengono implementate in fase di esecuzione, ad eccezione di SET FIPS_FLAGGER, SET OFFSETS, SET PARSEONLY e SET QUOTED_IDENTIFIER, che vengono implementate in fase di analisi.  
+- Tutte le istruzioni SET vengono eseguite in fase di esecuzione, tranne queste che vengono eseguite in fase di analisi: 
+
+  - SET FIPS_FLAGGER
+  - SET OFFSETS
+  - SET PARSEONLY
+  - SET QUOTED_IDENTIFIER  
   
--   Se un'istruzione SET viene eseguita in una stored procedure o in un trigger, il valore dell'opzione SET viene ripristinato al termine della stored procedure o del trigger. Se poi un'istruzione SET viene specificata in una stringa SQL dinamica che viene eseguita mediante **sp_executesql** o EXECUTE, il valore dell'opzione SET viene ripristinato al termine del batch specificato nella stringa SQL dinamica.  
+- Se un'istruzione SET viene eseguita in una stored procedure o in un trigger, il valore dell'opzione SET viene ripristinato quando la stored procedure o il trigger restituisce il controllo. Se si specifica un'istruzione SET in una stringa SQL dinamica eseguita con **sp_executesql** o EXECUTE, inoltre, il valore dell'opzione SET viene ripristinato quando il batch indicato nella stringa SQL dinamica restituisce il controllo.  
   
--   Le stored procedure vengono eseguite con le impostazioni SET specificate in fase di esecuzione, ad eccezione di SET ANSI_NULLS e SET QUOTED_IDENTIFIER. Le stored procedure che specificano SET ANSI_NULLS o SET QUOTED_IDENTIFIER utilizzano l'impostazione specificata in fase di creazione della stored procedure. Se utilizzate all'interno di una stored procedure, le impostazioni SET vengono ignorate.  
+- Le stored procedure vengono eseguite con le impostazioni SET specificate in fase di esecuzione, ad eccezione di SET ANSI_NULLS e SET QUOTED_IDENTIFIER. Le stored procedure che specificano SET ANSI_NULLS o SET QUOTED_IDENTIFIER utilizzano l'impostazione specificata in fase di creazione della stored procedure. Se utilizzate all'interno di una stored procedure, le impostazioni SET vengono ignorate.  
   
--   L'impostazione **user options** di **sp_configure** consente di specificare opzioni a livello di server e ha effetto su più database. Questa impostazione si comporta, inoltre, come un'istruzione SET esplicita, con la sola differenza che viene applicata al momento dell'accesso.  
+- L'impostazione **user options** di **sp_configure** consente di specificare opzioni a livello di server e ha effetto su più database. Questa impostazione si comporta, inoltre, come un'istruzione SET esplicita, con la sola differenza che viene applicata al momento dell'accesso.  
   
--   Le impostazioni di database impostate tramite ALTER DATABASE sono valide solo a livello di database e hanno effetto solo se impostate in modo esplicito. Le impostazioni di database prevalgono sulle impostazioni delle opzioni dell'istanza impostate tramite **sp_configure**.  
+- Le impostazioni di database impostate tramite ALTER DATABASE sono valide solo a livello di database e hanno effetto solo se impostate in modo esplicito. Le impostazioni di database prevalgono sulle impostazioni delle opzioni dell'istanza impostate tramite **sp_configure**.  
   
--   Per qualsiasi istruzione SET con le impostazioni ON e OFF è possibile specificare un'impostazione ON o OFF per più opzioni SET.  
+- Se un'istruzione SET usa ON e OFF, è possibile specificare una delle due impostazioni per più opzioni SET.
   
     > [!NOTE]  
-    >  Ciò non vale per le opzioni SET correlate alle statistiche.  
+    >  Questo non si applica alle opzioni SET correlate a statistiche.  
   
      Ad esempio `SET QUOTED_IDENTIFIER, ANSI_NULLS ON` imposta sia QUOTED_IDENTIFIER che ANSI_NULLS su ON.  
   
--   Le impostazioni delle istruzioni SET prevalgono sulle equivalenti impostazioni delle opzioni di database che vengono impostate utilizzando ALTER DATABASE. Il valore specificato in un'istruzione SET ANSI_NULLS, ad esempio, prevarrà sull'impostazione di database per ANSI_NULLS. Alcune connessioni, inoltre, vengono impostate automaticamente su ON quando un utente si connette a un database in base ai valori attivati dall'impostazione **sp_configure user options** precedente o ai valori validi per tutte le connessioni ODBC e OLE/DB.  
+- Le impostazioni delle istruzioni SET eseguono l'override delle identiche impostazioni delle opzioni di database configurate con ALTER DATABASE. Il valore specificato in un'istruzione SET ANSI_NULLS, ad esempio, prevarrà sull'impostazione di database per ANSI_NULLS. Alcune impostazioni di connessione, inoltre, vengono impostate automaticamente su ON quando un utente si connette a un database in base ai valori applicati con il precedente uso dell'impostazione **user options di sp_configure** o ai valori applicati a tutte le connessioni ODBC e OLE/DB.  
   
--   Le istruzioni ALTER, CREATE e DROP DATABASE non rispettano l'impostazione di SET LOCK_TIMEOUT.  
+- Le istruzioni ALTER, CREATE e DROP DATABASE non rispettano l'impostazione di SET LOCK_TIMEOUT.  
   
--   Quando un'istruzione SET globale o abbreviata, ad esempio SET ANSI_DEFAULTS, include più impostazioni, l'esecuzione dell'istruzione SET abbreviata ripristina le impostazioni precedenti per tutte le opzioni su cui ha effetto tale istruzione SET. Se una singola opzione SET su cui ha effetto un'istruzione SET abbreviata viene impostata in modo esplicito dopo l'esecuzione dell'istruzione SET abbreviata, la singola istruzione SET prevale sulle corrispondenti impostazioni dell'istruzione abbreviata.  
+- Quando un'istruzione SET globale o di scelta rapida include diverse impostazioni, eseguendola vengono ripristinate le impostazioni precedenti per tutte le opzioni interessate. Se un'opzione SET interessata da un'istruzione SET di scelta rapida viene impostata dopo l'esecuzione di tale istruzione, la singola istruzione SET eseguirà l'override delle impostazioni corrispondenti dell'istruzione di scelta rapida. Un esempio di istruzione SET di scelta rapida è SET ANSI_DEFAULTS.  
   
--   Quando si utilizzano batch, il contesto del database è determinato dal batch definito con l'istruzione USE. Le query ad hoc e tutte le altre istruzioni che vengono eseguite all'esterno della stored procedure e che sono incluse in batch ereditano le impostazioni delle opzioni del database e della connessione definiti con l'istruzione USE.  
+- Quando si usano batch, il contesto di database è determinato dal batch stabilito con l'istruzione USE. Le query non pianificate e tutte le altre istruzioni all'esterno della stored procedure e incluse in batch ereditano le impostazioni delle opzioni del database e della connessione stabilite con l'istruzione USE.  
   
--   Le richieste MARS (Multiple Active Result Set) condividono uno stato globale che contiene le impostazioni delle opzioni SET della sessione più recente. Quando viene eseguita, ogni richiesta può modificare le opzioni SET. Le modifiche sono specifiche del contesto della richiesta in cui sono impostato e non hanno alcun effetto sulle altre richieste MARS contemporanee. Al termine dell'esecuzione della richiesta, tuttavia, le nuove opzioni SET vengono copiate nello stato della sessione globale. Le nuove richieste che vengono eseguite nella stessa sessione dopo questa modifica utilizzeranno queste nuove impostazioni delle opzioni SET.  
+- Le richieste MARS (Multiple Active Result Set) condividono uno stato globale che contiene le impostazioni delle opzioni SET della sessione più recente. Quando viene eseguita, ogni richiesta può modificare le opzioni SET. Le modifiche sono specifiche del contesto della richiesta in cui vengono impostate e non influiscono sulle altre richieste MARS simultanee. Al termine dell'esecuzione della richiesta, tuttavia, le nuove opzioni SET vengono copiate nello stato della sessione globale. Le nuove richieste che vengono eseguite nella stessa sessione dopo questa modifica utilizzeranno queste nuove impostazioni delle opzioni SET.  
   
--   Una stored procedure eseguita da un batch o da un'altra stored procedure viene eseguita in base ai valori delle opzione impostate nel database che contiene la stored procedure. Se, ad esempio, la stored procedure **db1.dbo.sp1** chiama la stored procedure **db2.dbo.sp2**, la stored procedure **sp1** viene eseguita con l'impostazione corrente del livello di compatibilità del database **db1** e la stored procedure **sp2** viene eseguita con l'impostazione corrente del livello di compatibilità del database **db2**.  
+- Una stored procedure eseguita da un batch o da un'altra stored procedure viene eseguita in base ai valori delle opzioni configurati nel database contenente la stored procedure. Se la stored procedure **db1.dbo.sp1** chiama la stored procedure **db2.dbo.sp2**, ad esempio, la stored procedure **sp1** viene eseguita con l'impostazione corrente del livello di compatibilità del database **db1** e la stored procedure **sp2** viene eseguita con l'impostazione corrente del livello di compatibilità del database **db2**.  
   
--   Quando un'istruzione [!INCLUDE[tsql](../../includes/tsql-md.md)] fa riferimento a oggetti che si trovano in più database, a tale istruzione si applicano il contesto del database corrente e il contesto della connessione corrente. In questo caso, se l'istruzione [!INCLUDE[tsql](../../includes/tsql-md.md)] si trova in un batch, il contesto della connessione corrente è il database definito dall'istruzione USE. Se l'istruzione [!INCLUDE[tsql](../../includes/tsql-md.md)] si trova in una stored procedure, il contesto della connessione è il database che contiene la stored procedure.  
+- Quando un'istruzione [!INCLUDE[tsql](../../includes/tsql-md.md)] riguarda oggetti che si trovano in più database, a tale istruzione si applicano il contesto di database e il contesto di connessione correnti. In questo caso, se l'istruzione [!INCLUDE[tsql](../../includes/tsql-md.md)] si trova in un batch, il contesto della connessione corrente è il database definito dall'istruzione USE. Se l'istruzione [!INCLUDE[tsql](../../includes/tsql-md.md)] si trova in una stored procedure, il contesto della connessione è il database che contiene la stored procedure.  
   
--   Quando si creano e modificano indici in colonne calcolate o viste indicizzate, le opzioni SET ARITHABORT, CONCAT_NULL_YIELDS_NULL, QUOTED_IDENTIFIER, ANSI_NULLS, ANSI_PADDING e ANSI_WARNINGS devono essere impostate su ON. L'opzione NUMERIC_ROUNDABORT deve essere impostata su OFF.  
+- Quando si creano e si modificano indici su colonne calcolate o viste indicizzate, è necessario impostare le opzioni SET seguenti su ON: ARITHABORT, CONCAT_NULL_YIELDS_NULL, QUOTED_IDENTIFIER, ANSI_NULLS, ANSI_PADDING e ANSI_WARNINGS. Impostare l'opzione NUMERIC_ROUNDABORT su OFF.  
   
-     Se per una di queste opzioni non vengono impostati i valori richiesti, non sarà possibile eseguire in modo corretto le azioni INSERT, UPDATE, DELETE, DBCC CHECKDB e DBCC CHECKTABLE nelle viste indicizzate o nelle tabelle con indici nelle colonne calcolate. In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] verrà generato un avviso contenente tutte le opzioni impostate in modo errato. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] elaborerà, inoltre, le istruzioni SELECT in tali tabelle o viste indicizzate come se gli indici nelle colonne calcolate o nelle viste non esistessero.  
+  Se una di queste opzioni non viene impostata sui valori obbligatori, le azioni INSERT, UPDATE, DELETE, DBCC CHECKDB e DBCC CHECKTABLE sulle viste indicizzate o sulle tabelle con indici su colonne calcolate avranno esito negativo. In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] verrà generato un avviso contenente tutte le opzioni impostate in modo errato. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] elaborerà inoltre le istruzioni SELECT su tali tabelle o viste indicizzate come se gli indici sulle colonne calcolate o sulle viste non esistessero.  
   
   

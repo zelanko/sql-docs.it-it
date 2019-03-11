@@ -31,16 +31,16 @@ helpviewer_keywords:
 - UPDATE statement [SQL Server], FROM clause
 - derived tables
 ms.assetid: 36b19e68-94f6-4539-aeb1-79f5312e4263
-author: douglaslMS
-ms.author: douglasl
+author: VanMSFT
+ms.author: vanto
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 8c36325e68fbf9692c9f8f057e5aa215de2ad49b
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 85e55be31f3f32316e8d9f841a34a7fcff3a3e97
+ms.sourcegitcommit: 670082cb47f7d3d82e987b549b6f8e3a8968b5db
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52408808"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57334788"
 ---
 # <a name="from-transact-sql"></a>FROM (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -230,7 +230,7 @@ FROM { <table_source> [ ,...n ] }
  Specifica che venga restituita una determinata versione dei dati della tabella temporale indicata e della relativa tabella di cronologia con controllo delle versioni di sistema collegata  
   
 ### <a name="tablesample-clause"></a>Clausola TABLESAMPLE
-**Si applica a:**  SQL Server, database SQL 
+**Si applica a:** SQL Server, database SQL 
  
  Specifica che vengono restituiti dati di esempio dalla tabella. I dati di esempio possono essere approssimativi. Questa clausola può essere usata in ogni tabella primaria o unita in join in un'istruzione SELECT o UPDATE. Non è possibile specificare TABLESAMPLE con le viste.  
   
@@ -397,7 +397,7 @@ ON (p.ProductID = v.ProductID);
  ALL  
  Restituisce una tabella con i valori di tutte le righe della tabella corrente e della tabella di cronologia.  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Remarks  
  La clausola FROM supporta la sintassi SQL-92 per le tabelle unite in join e per le tabelle derivate. Nella sintassi SQL-92 sono disponibili gli operatori di join INNER, LEFT OUTER, RIGHT OUTER, FULL OUTER e CROSS.  
   
  In una clausola FROM le istruzioni UNION e JOIN sono supportate sia nelle viste, sia nelle tabelle derivate e nelle sottoquery.  
@@ -441,7 +441,7 @@ L'operatore APPLY funziona nel modo seguente per restituire l'origine di tabella
   
  Per altre informazioni su PIVOT e UNPIVOT ed esempi, vedere [Uso di PIVOT e UNPIVOT](../../t-sql/queries/from-using-pivot-and-unpivot.md).  
   
-## <a name="permissions"></a>Autorizzazioni  
+## <a name="permissions"></a>Permissions  
  Sono richieste le autorizzazioni per l'istruzione DELETE, SELECT o UPDATE.  
   
 ## <a name="examples"></a>Esempi  
@@ -473,7 +473,7 @@ TerritoryID Name
 (10 row(s) affected)  
 ```  
   
-### <a name="b-using-the-tablock-and-holdlock-optimizer-hints"></a>B. Utilizzo degli hint di ottimizzazione TABLOCK e HOLDLOCK  
+### <a name="b-using-the-tablock-and-holdlock-optimizer-hints"></a>b. Utilizzo degli hint di ottimizzazione TABLOCK e HOLDLOCK  
  Nella transazione parziale seguente viene illustrato come impostare un blocco di tabella condiviso esplicito in `Employee` e come leggere l'indice. Il blocco viene mantenuto attivo fino al termine della transazione.  
   
 ```sql    

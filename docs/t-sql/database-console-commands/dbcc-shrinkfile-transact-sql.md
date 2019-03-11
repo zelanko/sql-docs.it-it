@@ -30,17 +30,17 @@ ms.assetid: e02b2318-bee9-4d84-a61f-2fddcf268c9f
 author: uc-msft
 ms.author: umajay
 manager: craigg
-ms.openlocfilehash: c63b735a5067f8ca1cd6b65f4f986c94e3614e21
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: ebb817cc2d9359a04e2661a17ab4ce99a55165ba
+ms.sourcegitcommit: 2ab79765e51913f1df6410f0cd56bf2a13221f37
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56286479"
+ms.lasthandoff: 02/27/2019
+ms.locfileid: "56955912"
 ---
 # <a name="dbcc-shrinkfile-transact-sql"></a>DBCC SHRINKFILE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-Compatta le dimensioni dei file di dati e di log specificati nel database corrente. Può essere usato per spostare dati da un file ad altri file nello stesso filegroup, svuotando il file e consentendo la rimozione del relativo database. È possibile compattare un file fino a dimensioni inferiori rispetto a quelle specificate al momento della creazione, reimpostando così le dimensioni minime sul nuovo valore.
+Compatta le dimensioni dei file di dati e di log specificati nel database corrente. Questa operazione può essere usata per spostare dati da un file ad altri file nello stesso filegroup, svuotando il file e consentendo la rimozione del relativo database. È possibile compattare un file fino a dimensioni inferiori rispetto a quelle specificate al momento della creazione, reimpostando così le dimensioni minime sul nuovo valore.
   
 ![Icona di collegamento a un articolo](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   

@@ -18,40 +18,39 @@ ms.assetid: c310f6df-7adf-493b-b56b-8e3143b13ae7
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: ee8240f506c11bec768eb6a9510871b3ff1deaa8
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 4958921d446e4678ce09eeb4c16f8faf5809dd2a
+ms.sourcegitcommit: 71913f80be0cb6f8d3af00c644ee53e3aafdcc44
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56035292"
+ms.lasthandoff: 02/21/2019
+ms.locfileid: "56590236"
 ---
 # <a name="replace-value-of-xml-dml"></a>replace value of (XML DML)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  Aggiorna il valore di un nodo nel documento.  
+Aggiorna il valore di un nodo nel documento.  
   
 ## <a name="syntax"></a>Sintassi  
   
-```  
-  
+```sql
 replace value of Expression1   
 with Expression2  
 ```  
   
 ## <a name="arguments"></a>Argomenti  
- *Expression1*  
- Identifica un nodo di cui è necessario aggiornare il valore. Deve identificare solo un singolo nodo, ovvero *Expression1* deve essere un singleton statico. Se l'istanza XML è tipizzata, il nodo deve essere di tipo semplice. Nel caso in cui vengano selezionati più nodi, viene restituito un errore. Se *Expression1* restituisce una sequenza vuota, non viene eseguita alcuna sostituzione di valori e non vengono restituiti errori. *Expression1* deve restituire un singolo elemento con contenuto a tipizzazione semplice (tipo elenco o atomico), un nodo di testo o un nodo di attributo. *Expression1* non può essere un tipo unione, un tipo complesso, un'istruzione di elaborazione, un nodo di documento o un nodo di commento. In caso contrario, viene restituito un errore.  
+*Expression1*  
+Identifica un nodo di cui è necessario aggiornare il valore. Deve identificare solo un singolo nodo, ovvero *Expression1* deve essere un singleton statico. Se l'istanza XML è tipizzata, il nodo deve essere di tipo semplice. Quando vengono selezionati più nodi, viene generato un errore. Se *Expression1* restituisce una sequenza vuota, non viene eseguita alcuna sostituzione di valori e non vengono restituiti errori. *Expression1* deve restituire un singolo elemento con contenuto di tipo semplice (tipo elenco o atomico), un nodo di testo o un nodo di attributo. *Expression1* non può essere un tipo unione, un tipo complesso, un'istruzione di elaborazione, un nodo di documento o un nodo di commento. In caso contrario verrà restituito un errore.  
   
- *Expression2*  
- Identifica il nuovo valore del nodo. Può trattarsi di un'espressione che restituisce un nodo con tipizzazione semplice, in quanto **data()** verrà usato in modo implicito. Se il valore è un elenco di valori, l'istruzione **update** sostituisce il valore precedente con l'elenco. In caso di modifica di un'istanza XML tipizzata, *Expression2* deve essere dello stesso tipo o sottotipo di *Expression*1. In caso contrario, viene restituito un errore. In caso di modifica di un'istanza XML non tipizzata, *Expression2* deve essere un'espressione che è possibile atomizzare. In caso contrario, viene restituito un errore.  
+*Expression2*  
+Identifica il nuovo valore del nodo. Può essere un'espressione che restituisce un nodo di tipo semplice, perché **data()** verrà usato in modo implicito. Se il valore è un elenco di valori, l'istruzione **update** sostituisce il valore precedente con l'elenco. In caso di modifica di un'istanza XML tipizzata, *Expression2* deve essere dello stesso tipo o sottotipo di *Expression*1. In caso contrario, viene restituito un errore. In caso di modifica di un'istanza XML non tipizzata, *Expression2* deve essere un'espressione che è possibile atomizzare. In caso contrario, viene restituito un errore.  
   
 ## <a name="examples"></a>Esempi  
- Negli esempi seguenti di istruzione XML DML **replace value of** viene illustrata la modalità di aggiornamento dei nodi in un documento XML.  
+Negli esempi seguenti di istruzione XML DML **replace value of** viene illustrata la modalità di aggiornamento dei nodi in un documento XML.  
   
 ### <a name="a-replacing-values-in-an-xml-instance"></a>A. Sostituzione di valori in un'istanza XML  
- Nell'esempio seguente, viene assegnata prima un'istanza di documento a una variabile di tipo **xml**. Successivamente, le istruzioni XML DML **replace value of** aggiornano i valori nel documento.  
+Nell'esempio seguente, viene assegnata prima un'istanza di documento a una variabile di tipo **xml**. Successivamente, le istruzioni XML DML **replace value of** aggiornano i valori nel documento.  
   
-```  
+```sql
 DECLARE @myDoc xml;  
 SET @myDoc = '<Root>  
 <Location LocationID="10"   
@@ -77,12 +76,12 @@ SET @myDoc.modify('
 SELECT @myDoc;  
 ```  
   
- Si noti che la destinazione da aggiornare deve essere al massimo un singolo nodo specificato in modo esplicito nell'espressione di percorso aggiungendo "[1]" alla fine dell'espressione.  
+La destinazione da aggiornare deve essere al massimo un singolo nodo specificato in modo esplicito nell'espressione di percorso aggiungendo "[1]" alla fine dell'espressione.  
   
 ### <a name="b-using-the-if-expression-to-determine-replacement-value"></a>b. Utilizzo dell'espressione if per determinare il valore di sostituzione  
- È possibile specificare l'espressione **if** in Expression2 all'interno dell'istruzione XML DML **replace value of**, come illustrato nell'esempio seguente. Expression1 indica che l'attributo LaborHours del primo centro di lavorazione deve essere aggiornato. Expression2 usa un'espressione **if** per determinare il nuovo valore dell'attributo LaborHours.  
+È possibile specificare l'espressione **if** in Expression2 all'interno dell'istruzione XML DML **replace value of**, come illustrato nell'esempio seguente. Expression1 indica che l'attributo LaborHours del primo centro di lavoro deve essere aggiornato. Expression2 usa un'espressione **if** per determinare il nuovo valore dell'attributo LaborHours.  
   
-```  
+```sql
 DECLARE @myDoc xml  
 SET @myDoc = '<Root>  
 <Location LocationID="10"   
@@ -107,9 +106,9 @@ SELECT @myDoc
 ```  
   
 ### <a name="c-updating-xml-stored-in-an-untyped-xml-column"></a>C. Aggiornamento di un'istanza XML archiviata in una colonna XML non tipizzata  
- Nell'esempio seguente viene aggiornata un'istanza XML archiviata in una colonna:  
+Nell'esempio seguente viene aggiornata un'istanza XML archiviata in una colonna:  
   
-```  
+```sql
 drop table T  
 go  
 CREATE TABLE T (i int, x xml)  
@@ -137,11 +136,11 @@ FROM T
 ```  
   
 ### <a name="d-updating-xml-stored-in-a-typed-xml-column"></a>D. Aggiornamento di un'istanza XML archiviata in una colonna XML tipizzata  
- In questo esempio, vengono sostituiti i valori di un documento di istruzioni di produzione archiviato in una colonna XML tipizzata.  
+In questo esempio, vengono sostituiti i valori di un documento di istruzioni di produzione archiviato in una colonna XML tipizzata.  
   
- Innanzitutto, viene creata una tabella (T) con una colonna XML tipizzata nel database AdventureWorks. Un'istanza del codice XML delle istruzioni di produzione viene quindi copiata dalla colonna Instructions della tabella ProductModel nella tabella T. Gli inserimenti vengono quindi applicati al codice XML nella tabella T.  
+Innanzitutto, viene creata una tabella (T) con una colonna XML tipizzata nel database AdventureWorks. Un'istanza del codice XML delle istruzioni di produzione viene quindi copiata dalla colonna Instructions della tabella ProductModel nella tabella T. Gli inserimenti vengono quindi applicati al codice XML nella tabella T.  
   
-```  
+```sql
 use AdventureWorks  
 go  
 drop table T  
@@ -190,12 +189,12 @@ select Instructions
 from T  
 ```  
   
- Si noti l'uso di **cast** per la sostituzione del valore LotSize, necessario quando il valore deve essere di un tipo specifico. In questo esempio, se il valore è 500, non è necessario eseguire il cast esplicito.  
+Si noti l'uso di **cast** per la sostituzione del valore LotSize, necessario quando il valore deve essere di un tipo specifico. In questo esempio, se il valore è 500, non è necessario eseguire il cast esplicito.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Confronto dati XML tipizzati con dati XML non tipizzati](../../relational-databases/xml/compare-typed-xml-to-untyped-xml.md)   
- [Creare istanze di dati XML](../../relational-databases/xml/create-instances-of-xml-data.md)   
- [metodi con tipo di dati XML](../../t-sql/xml/xml-data-type-methods.md)   
- [Linguaggio XML di manipolazione dei dati &#40;XML DML&#41;](../../t-sql/xml/xml-data-modification-language-xml-dml.md)  
+[Confronto dati XML tipizzati con dati XML non tipizzati](../../relational-databases/xml/compare-typed-xml-to-untyped-xml.md)   
+[Creare istanze di dati XML](../../relational-databases/xml/create-instances-of-xml-data.md)   
+[metodi con tipo di dati XML](../../t-sql/xml/xml-data-type-methods.md)   
+[Linguaggio XML di manipolazione dei dati &#40;XML DML&#41;](../../t-sql/xml/xml-data-modification-language-xml-dml.md)  
   
   

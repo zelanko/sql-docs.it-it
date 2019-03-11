@@ -28,12 +28,12 @@ ms.assetid: fc976afd-1edb-4341-bf41-c4a42a69772b
 author: uc-msft
 ms.author: umajay
 manager: craigg
-ms.openlocfilehash: 9e2c6d0dff9606ec3e199d168ed70cd9f4a050ca
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 8ebabe4403d65447bcf7ab4d88f36b9fd9715843
+ms.sourcegitcommit: 2ab79765e51913f1df6410f0cd56bf2a13221f37
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47670189"
+ms.lasthandoff: 02/27/2019
+ms.locfileid: "56956022"
 ---
 # <a name="dbcc-shrinkdatabase-transact-sql"></a>DBCC SHRINKDATABASE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -54,26 +54,26 @@ DBCC SHRINKDATABASE
 ```  
   
 ## <a name="arguments"></a>Argomenti  
- *database_name* | *database_id* | 0  
- Nome o ID del database che si desidera compattare. Se si specifica 0, viene utilizzato il database corrente.  
+_database\_name_ | _database\_id_ | 0  
+Nome o ID del database da compattare. Il valore 0 specifica che si sta usando il database corrente.  
   
- *target_percent*  
- Percentuale di spazio che si desidera rendere disponibile nel file del database dopo la compattazione.  
+_target\_percent_  
+Percentuale di spazio che si desidera rendere disponibile nel file del database dopo la compattazione.  
   
- NOTRUNCATE  
- Compatta i dati nei file di dati spostando le pagine allocate dalla fine di un file a pagine non allocate all'inizio del file. *target_percent* è facoltativo. Questa opzione non è supportata con Azure SQL Data Warehouse. 
+NOTRUNCATE  
+Sposta le pagine assegnate dalla fine del file alle pagine non assegnate all'inizio del file. Questa azione compatta i dati all'interno del file. _target\_percent_ è facoltativo. Azure SQL Data Warehouse non supporta questa opzione. 
   
- Lo spazio disponibile alla fine del file non viene restituito al sistema operativo e le dimensioni fisiche del file rimangono invariate. Pertanto, quando si specifica NOTRUNCATE, sembra che il database non venga compattato.  
+Lo spazio disponibile alla fine del file non viene restituito al sistema operativo e le dimensioni fisiche del file rimangono invariate. Di conseguenza, quando si specifica NOTRUNCATE il database viene visualizzato come non compattato.  
   
- NOTRUNCATE è applicabile solo ai file di dati. Il file di log non è interessato.  
+NOTRUNCATE è applicabile solo ai file di dati. NONTRUNCATE non ha effetti sul file di log.  
   
- TRUNCATEONLY  
- Rilascia tutto lo spazio disponibile alla fine del file al sistema operativo senza eseguire alcuno spostamento di pagine all'interno del file. Il file di dati viene compattato solo fino all'ultimo extent allocato. *target_percent* viene ignorato se specificato con TRUNCATEONLY. Questa opzione non è supportata con Azure SQL Data Warehouse.
+TRUNCATEONLY  
+Restituisce al sistema operativo tutto lo spazio disponibile alla fine del file. Non sposta le pagine all'interno del file. Il file di dati viene compattato solo fino all'ultimo extent assegnato. _target\_percent_ viene ignorato se specificato con TRUNCATEONLY. Azure SQL Data Warehouse non supporta questa opzione.
   
- TRUNCATEONLY interessa il file di log. Per troncare solo il file di dati, utilizzare DBCC SHRINKFILE.  
+TRUNCATEONLY interessa il file di log. Per troncare solo il file di dati, utilizzare DBCC SHRINKFILE.  
   
- WITH NO_INFOMSGS  
- Evita la visualizzazione di tutti i messaggi informativi con livello di gravità compreso tra 0 e 10.  
+WITH NO_INFOMSGS  
+Evita la visualizzazione di tutti i messaggi informativi con livello di gravità compreso tra 0 e 10.  
   
 ## <a name="result-sets"></a>Set di risultati  
 Nella tabella seguente vengono descritte le colonne del set di risultati.
@@ -83,7 +83,7 @@ Nella tabella seguente vengono descritte le colonne del set di risultati.
 |**DbId**|Numero di identificazione del database del file che [!INCLUDE[ssDE](../../includes/ssde-md.md)] tenta di compattare.|  
 |**FileId**|Numero di identificazione del file che [!INCLUDE[ssDE](../../includes/ssde-md.md)] tenta di compattare.|  
 |**CurrentSize**|Numero di pagine da 8 KB attualmente occupate dal file.|  
-|**MinimumSize**|Numero minimo di pagine da 8 KB che il file può occupare. Corrisponde alle dimensioni minime o alle dimensioni originali di un file.|  
+|**MinimumSize**|Numero minimo di pagine da 8 KB che il file può occupare. Il valore corrisponde alle dimensioni minime o alle dimensioni originali di un file.|  
 |**UsedPages**|Numero di pagine da 8 KB utilizzate dal file.|  
 |**EstimatedPages**|Numero di pagine da 8 KB calcolato da [!INCLUDE[ssDE](../../includes/ssde-md.md)]. Corrisponde alle possibili dimensioni finali del file compattato.|  
   
@@ -101,38 +101,42 @@ Per visualizzare la quantità corrente di spazio disponibile, ovvero non allocat
   
 È possibile arrestare le istruzioni DBCC SHRINKDATABASE in qualsiasi momento, senza perdere il lavoro completato.
   
-Non è possibile ridurre il database a dimensioni inferiori a quelle minime. Le dimensioni minime corrispondono a quelle specificate al momento della creazione del database o alle ultime dimensioni impostate in modo esplicito tramite un'operazione di modifica delle dimensioni dei file, ad esempio DBCC SHRINKFILE o ALTER DATABASE. Ad esempio, se è stato creato un database con dimensioni pari a 10 MB e le dimensioni sono aumentate fino a 100 MB, è possibile compattare il database fino a un minimo di 10 MB, anche se tutti i dati nel database sono stati eliminati.
+Non è possibile ridurre il database a dimensioni inferiori a quelle minime configurate. Le dimensioni minime vengono specificate al momento della creazione del database. In alternativa, le dimensioni minime possono essere le ultime dimensioni impostate esplicitamente tramite un'operazione di modifica delle dimensioni del file. Operazioni come DBCC SHRINKFILE o ALTER DATABASE sono esempi di operazioni di modifica delle dimensioni del file. 
+
+Si supponga che un database venga creato con dimensioni pari a 10 MB. In seguito, tali dimensioni aumentano fino a 100 MB. Le dimensioni minime a cui è possibile compattare il database sono pari a 10 MB, anche se tutti i dati nel database sono stati eliminati.
   
-Eseguire DBCC SHRINKDATABASE senza specificare l'opzione NOTRUNCATE o TRUNCATEONLY equivale a eseguire un'operazione DBCC SHRINKDATABASE con NOTRUNCATE seguita da un'operazione DBCC SHRINKDATABASE con TRUNCATEONLY.
+Quando si esegue DBCC SHRINKDATABASE, specificare l'opzione NOTRUNCATE o l'opzione TRUNCATEONLY. In caso contrario, il risultato è lo stesso di quando si esegue un'operazione DBCC SHRINKDATABASE con NOTRUNCATE seguita da un'operazione DBCC SHRINKDATABASE con TRUNCATEONLY.
   
-Il database in fase di compattazione non deve essere necessariamente in modalità utente singolo. Altri utenti possono infatti utilizzare il database durante il processo di compattazione. Questo vale anche per i database di sistema.
+Non è necessario che il database compattato sia in modalità utente singolo. I database possono essere usati anche da altri utenti quando sono compattati e questo vale anche per i database di sistema.
   
 Non è possibile compattare un database mentre ne viene eseguito il backup e non è possibile eseguire il backup di un database mentre è in corso un'operazione di compattazione.
   
 ## <a name="how-dbcc-shrinkdatabase-works"></a>Funzionamento di DBCC SHRINKDATABASE  
 DBCC SHRINKDATABASE compatta i file di dati uno alla volta mentre i file di log vengono compattati come se fossero inclusi in un pool di log contigui. I file vengono compattati sempre a partire dalla fine.
   
-Si consideri un database denominato **mydb** con un file di dati e due file di log. I file di dati e di log hanno una dimensione di 10 MB ciascuno e il file di dati contiene 6 MB di dati.
+Si supponga di avere un paio di file di log, un file di dati e un database denominato **mydb**. I file di dati e di log hanno una dimensione di 10 MB ciascuno e il file di dati contiene 6 MB di dati. Per ogni file, il [!INCLUDE[ssDE](../../includes/ssde-md.md)] calcola le dimensioni di destinazione in base alle quali il file deve essere compattato. Quando DBCC SHRINKDATABASE è specificato con _target\_percent_, il [!INCLUDE[ssDE](../../includes/ssde-md.md)] calcola le dimensioni di destinazione come _target\_percent_ dello spazio disponibile nel file dopo la compattazione. 
+
+Ad esempio, se si specifica un valore _target\_percent_ di 25 per la compattazione di **mydb**, il [!INCLUDE[ssDE](../../includes/ssde-md.md)] calcola le dimensioni di destinazione del file di dati come 8 MB, ovvero 6 MB di dati e 2 MB di spazio disponibile. Di conseguenza, il [!INCLUDE[ssDE](../../includes/ssde-md.md)] sposta i dati degli ultimi 2 MB del file di dati nello spazio disponibile nei primi 8 MB del file di dati e quindi compatta il file.
   
-Per ogni file, [!INCLUDE[ssDE](../../includes/ssde-md.md)] calcola le dimensioni di destinazione in base alle quali il file deve essere compattato. Quando DBCC SHRINKDATABASE è specificato con *target_percent*, [!INCLUDE[ssDE](../../includes/ssde-md.md)] calcola la dimensione di destinazione come *target_percent* dello spazio disponibile nel file dopo la compattazione. Ad esempio, se si specifica un valore *target_percent* di 25 per la compattazione di **mydb**, [!INCLUDE[ssDE](../../includes/ssde-md.md)] calcola la dimensione di destinazione del file di dati come 8 MB, ovvero 6 MB di dati e 2 MB di spazio disponibile. Di conseguenza, [!INCLUDE[ssDE](../../includes/ssde-md.md)] sposta i dati degli ultimi 2 MB del file di dati nello spazio disponibile nei primi 8 MB del file di dati e quindi compatta il file.
+Si supponga che il file di dati di **mydb** contenga 7 MB di dati. Specificando un valore _target\_percent_ pari a 30, il file di dati può essere compattato alla percentuale disponibile di 30. Tuttavia, specificando un valore _target\_percent_ di 40, il file di dati non viene compattato perché il [!INCLUDE[ssDE](../../includes/ssde-md.md)] non compatta un file a dimensioni minori di quelle occupate attualmente dai dati. 
+
+È possibile anche considerare il problema in un altro modo: il 40% di spazio disponibile desiderato + il 70% del file di dati completo (7 dei 10 MB) è maggiore del 100%. Con valori _target\_size_ superiori a 30 il file di dati non viene compattato. Non viene compattato perché la percentuale disponibile desiderata più la percentuale corrente occupata dal file di dati è superiore al 100%.
   
-Si supponga che il file di dati di **mydb** contenga 7 MB di dati. Specificando un valore *target_percent* di 30, il file di dati può essere compattato alla percentuale disponibile di 30. Tuttavia, specificando un valore *target_percent* di 40, il file di dati non viene compattato perché [!INCLUDE[ssDE](../../includes/ssde-md.md)] non compatta un file a una dimensione minore di quella occupata attualmente dai dati. Questo concetto può essere descritto anche in modo diverso: il 40% di spazio disponibile desiderato + il 70% del file di dati completo (7 dei 10 MB) è maggiore del 100%. Poiché la percentuale disponibile desiderata più la percentuale corrente occupata dal file di dati supera il 100% (del 10%), qualsiasi valore *target_size* maggiore di 30 non compatterà il file di dati.
+Per i file di log, il [!INCLUDE[ssDE](../../includes/ssde-md.md)] usa _target\_percent_ per calcolare le dimensioni di destinazione dell'intero log. Per questa ragione _target\_percent_ è la quantità di spazio disponibile nel log dopo l'operazione di compattazione. Le dimensioni di destinazione per l'intero log vengono quindi convertite nelle dimensioni di destinazione per ogni file di log.
   
-Per i file di log, [!INCLUDE[ssDE](../../includes/ssde-md.md)] usa *target_percent* per calcolare la dimensione di destinazione dell'intero log; di conseguenza, *target_percent* è la quantità di spazio disponibile nel log dopo l'operazione di compattazione. Le dimensioni di destinazione per l'intero log vengono quindi convertite nelle dimensioni di destinazione per ogni file di log.
+DBCC SHRINKDATABASE tenta di compattare immediatamente ogni file di log fisico fino alle dimensioni di destinazione specificate. Se i log virtuali non includano parti con dimensioni superiori alle dimensioni di destinazione del file di log, il file viene troncato e l'operazione DBCC SHRINKDATABASE termina senza messaggi. Se invece i log virtuali includono parti del log logico oltre le dimensioni di destinazione, il [!INCLUDE[ssDE](../../includes/ssde-md.md)] libera la maggior quantità di spazio possibile e viene visualizzato un messaggio informativo in cui sono descritte le operazioni necessarie per estrarre le parti del log logico dai log virtuali alla fine del file. Dopo l'esecuzione di queste operazioni, è possibile usare DBCC SHRINKDATABASE per liberare lo spazio rimanente.
   
-DBCC SHRINKDATABASE tenta di compattare immediatamente ogni file di log fisico fino alle dimensioni di destinazione specificate. Se i log virtuali non includono alcuna parte del log logico oltre le dimensioni di destinazione del file di log, il file viene troncato correttamente e DBCC SHRINKDATABASE viene completata senza visualizzare alcun messaggio. Se invece i log virtuali includono parti del log logico oltre le dimensioni di destinazione, [!INCLUDE[ssDE](../../includes/ssde-md.md)] libera la maggior quantità di spazio possibile e viene visualizzato un messaggio informativo in cui sono descritte le operazioni necessarie per estrarre le parti del log logico dai log virtuali alla fine del file. Dopo l'esecuzione di queste operazioni, è possibile utilizzare DBCC SHRINKDATABASE per liberare lo spazio rimanente.
-  
-Poiché è possibile compattare un file di log solo fino al limite del file di log virtuale, potrebbe essere impossibile compattare un file di log fino a ottenere dimensioni inferiori rispetto a quelle del file di log virtuale, anche se non viene utilizzato. Le dimensioni del file di log virtuale vengono scelte in modo dinamico da [!INCLUDE[ssDE](../../includes/ssde-md.md)] durante la creazione o l'estensione dei file di log.
+È possibile compattare un file di log solo entro il limite di un file di log virtuale. Ecco perché la compattazione di un file di log a dimensioni inferiori a quelle di un file di log virtuale può non essere possibile. Può non essere possibile anche se il file non viene usato. Le dimensioni del file di log virtuale vengono scelte in modo dinamico da [!INCLUDE[ssDE](../../includes/ssde-md.md)] durante la creazione o l'estensione dei file di log.
   
 ## <a name="best-practices"></a>Procedure consigliate  
 Quando si pianifica la compattazione di un database, considerare le informazioni seguenti:
--   Un'operazione di compattazione è più efficace dopo l'esecuzione di un'operazione che crea una quantità elevata di spazio inutilizzato, ad esempio il troncamento o l'eliminazione di una tabella.  
--   La maggior parte dei database richiede spazio disponibile per lo svolgimento delle normali attività quotidiane. Se si compatta ripetutamente un database ma le sue dimensioni aumentano di nuovo significa che lo spazio compattato è necessario per le normali operazioni. In questi casi è inutile compattare ripetutamente il database.  
--   L'operazione di compattazione generalmente aumenta la frammentazione degli indici del database. Questo è un ulteriore motivo per evitare di compattare ripetutamente un database.  
+-   La compattazione è più efficace dopo un'operazione. Un'operazione di troncamento o eliminazione di tabella, ad esempio, crea spazio inutilizzato.  
+-   La maggior parte dei database richiede spazio disponibile per lo svolgimento delle normali attività quotidiane. È possibile che, nonostante le ripetute operazioni di compattazione di un database, questo continui ad aumentare di dimensioni. Questo aumento indica che lo spazio compattato è necessario per le normali operazioni. In questi casi è inutile compattare ripetutamente il database.  
+-   L'operazione di compattazione generalmente aumenta la frammentazione degli indici del database. Questo è un altro motivo per evitare di compattare ripetutamente un database.  
 -   Se non è necessario soddisfare esigenze specifiche, non impostare l'opzione di database AUTO_SHRINK su ON.  
   
 ## <a name="troubleshooting"></a>Risoluzione dei problemi  
- È possibile che le operazioni di compattazione vengano bloccate da una transazione che eseguita in un [livello di isolamento basato sul controllo della versione delle righe](../../t-sql/statements/set-transaction-isolation-level-transact-sql.md). Ad esempio, se viene eseguita un'operazione DBCC SHRINK DATABASE mentre è in corso un'operazione di eliminazione di grandi dimensioni che utilizza un livello di isolamento basato sul controllo delle versioni delle righe, l'operazione di compattazione dei file viene rimandata fino al completamento dell'operazione di eliminazione. In questo caso viene registrato un messaggio informativo nel log degli errori di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (il messaggio 5202 per SHRINKDATABASE e il messaggio 5203 per SHRINKFILE) ogni cinque minuti nella prima ora e quindi ogni ora. Ad esempio, il log degli errori può contenere il messaggio di errore seguente:  
+È possibile che le operazioni di compattazione vengano bloccate da una transazione eseguita in un [livello di isolamento basato sul controllo della versione delle righe](../../t-sql/statements/set-transaction-isolation-level-transact-sql.md). Ad esempio, si tenta di eseguire un'operazione DBCC SHRINK DATABASE mentre è in corso un'operazione di eliminazione di grandi dimensioni che usa un livello di isolamento basato sul controllo delle versioni delle righe. Quando si verifica questa situazione, l'operazione di compattazione attende fino al completamento dell'operazione di eliminazione prima di compattare i file. Mentre l'operazione di compattazione è in attesa, le operazioni DBCC SHRINKFILE e DBCC SHRINKDATABASE generano un messaggio informativo (5202 per SHRINKDATABASE e 5203 per SHRINKFILE). Questo messaggio viene generato nel log degli errori di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ogni cinque minuti nella prima ora e in seguito una volta all'ora. Ad esempio, il log degli errori può contenere il messaggio di errore seguente:  
   
 ```sql
 DBCC SHRINKDATABASE for database ID 9 is waiting for the snapshot   
@@ -140,7 +144,7 @@ transaction with timestamp 15 and other snapshot transactions linked to
 timestamp 15 or with timestamps older than 109 to finish.  
 ```  
   
-Questo significa che l'operazione di compattazione è bloccata da transazioni snapshot con timestamp precedenti a 109, ovvero all'ultima transazione completata dall'operazione di compattazione. Il messaggio indica anche che la colonna **transaction_sequence_num** o **first_snapshot_sequence_num** nella DMV [sys.dm_tran_active_snapshot_database_transactions &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-tran-active-snapshot-database-transactions-transact-sql.md) contiene un valore 15. Se la colonna **transaction_sequence_num** o **first_snapshot_sequence_num** nella visualizzazione contiene un numero minore rispetto all'ultima transazione completata da un'operazione di compattazione (109), l'operazione di compattazione attenderà il completamento delle transazioni.
+Questo errore indica che le transazioni snapshot con timestamp precedenti a 109 bloccano l'operazione di compattazione. La transazione indicata è l'ultima transazione completata dall'operazione di compattazione. Il messaggio indica anche che la colonna **transaction_sequence_num** o **first_snapshot_sequence_num** nella DMV [sys.dm_tran_active_snapshot_database_transactions &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-tran-active-snapshot-database-transactions-transact-sql.md) contiene un valore 15. La colonna **transaction_sequence_num** o **first_snapshot_sequence_num** nella vista può contenere un numero minore rispetto all'ultima transazione completata da un'operazione di compattazione (109). In questo caso, l'operazione di compattazione attenderà il completamento delle transazioni.
   
 Per risolvere il problema, è possibile eseguire una delle attività seguenti:
 -   Terminare la transazione che blocca l'operazione di compattazione.  
@@ -148,20 +152,20 @@ Per risolvere il problema, è possibile eseguire una delle attività seguenti:
 -   Non eseguire alcuna operazione per consentire che l'operazione di compattazione venga rimandata fino al completamento della transazione di blocco.  
   
 ## <a name="permissions"></a>Permissions  
- È richiesta l'appartenenza al ruolo predefinito del server **sysadmin** o al ruolo predefinito del database **db_owner** .  
+È richiesta l'appartenenza al ruolo predefinito del server **sysadmin** o al ruolo predefinito del database **db_owner** .  
   
 ## <a name="examples"></a>Esempi  
   
 ### <a name="a-shrinking-a-database-and-specifying-a-percentage-of-free-space"></a>A. Compattazione di un database e impostazione di una percentuale di spazio disponibile  
- Nell'esempio seguente vengono ridotte le dimensioni dei file di dati e di log nel database utente `UserDB` per ottenere il 10% di spazio disponibile nel database.  
+Nell'esempio seguente vengono ridotte le dimensioni dei file di dati e di log nel database utente `UserDB` per ottenere il 10% di spazio disponibile nel database.  
   
 ```sql  
 DBCC SHRINKDATABASE (UserDB, 10);  
 GO  
 ```  
   
-### <a name="b-truncating-a-database"></a>B. Troncamento di un database  
- Nell'esempio seguente i file di dati e di log nel database di esempio `AdventureWorks` vengono compattati fino all'ultimo extent allocato.  
+### <a name="b-truncating-a-database"></a>b. Troncamento di un database  
+Nell'esempio seguente i file di dati e di log nel database di esempio `AdventureWorks` vengono compattati fino all'ultimo extent assegnato.  
   
 ```sql  
 DBCC SHRINKDATABASE (AdventureWorks2012, TRUNCATEONLY);  

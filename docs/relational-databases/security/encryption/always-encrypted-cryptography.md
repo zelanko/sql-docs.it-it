@@ -13,12 +13,12 @@ author: aliceku
 ms.author: aliceku
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 3f7e80b878583932976c85f7fa390ed546a67587
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 1cd361a27a07c7b7750046d9664d77fd6d3fdc04
+ms.sourcegitcommit: 0f452eca5cf0be621ded80fb105ba7e8df7ac528
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52401124"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "57007584"
 ---
 # <a name="always-encrypted-cryptography"></a>Crittografia sempre attiva
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -26,7 +26,7 @@ ms.locfileid: "52401124"
   Il documento descrive gli algoritmi e i meccanismi di crittografia necessari per derivare il materiale crittografico usato dalla funzionalità [Always Encrypted](../../../relational-databases/security/encryption/always-encrypted-database-engine.md) in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] e [!INCLUDE[ssSDSFull](../../../includes/sssdsfull-md.md)].  
   
 ## <a name="keys-key-stores-and-key-encryption-algorithms"></a>Chiavi, archivi di chiavi e algoritmi di crittografia delle chiavi  
- La funzionalità Crittografia sempre attiva usa chiavi di due tipi: chiavi master della colonna e chiavi di crittografia della colonna.  
+ Always Encrypted usa due tipi di chiavi: chiavi master di colonna e chiavi di crittografia di colonna.  
   
  La chiave CMK (Column Master Key, chiave master della colonna) è una chiave usata per crittografare altre chiavi che resta sempre sotto il controllo del client ed è memorizzata in un archivio di chiavi esterno. Il driver client abilitato per Always Encrypted interagisce con l'archivio delle chiavi tramite un provider di archiviazione CMK, che può far parte sia della libreria dei driver (provider [!INCLUDE[msCoName](../../../includes/msconame-md.md)]/di sistema) che dell'applicazione client (provider personalizzato). Al momento, le librerie di driver client includono provider di archiviazione chiavi [!INCLUDE[msCoName](../../../includes/msconame-md.md)] per l'[archivio certificati Windows](/windows/desktop/SecCrypto/using-certificate-stores) e moduli di protezione hardware.  Per l'elenco aggiornato dei provider, vedere [CREATE COLUMN MASTER KEY &#40;Transact-SQL&#41;](../../../t-sql/statements/create-column-master-key-transact-sql.md). Uno sviluppatore di applicazioni può realizzare un provider personalizzato per un archivio arbitrario.  
   
@@ -37,26 +37,26 @@ ms.locfileid: "52401124"
 ## <a name="data-encryption-algorithm"></a>Algoritmo di crittografia dei dati  
  La funzionalità Always Encrypted usa l'algoritmo **AEAD_AES_256_CBC_HMAC_SHA_256** per crittografare i dati nel database.  
   
- **AEAD_AES_256_CBC_HMAC_SHA_256** deriva dalla bozza della specifica illustrata qui [https://tools.ietf.org/html/draft-mcgrew-aead-aes-cbc-hmac-sha2-05](https://tools.ietf.org/html/draft-mcgrew-aead-aes-cbc-hmac-sha2-05). L'algoritmo usa uno schema di crittografia autenticata con dati associati che adotta l'approccio Encrypt-then-MAC. Tale approccio prevede prima la crittografia del testo non crittografato e quindi la generazione del MAC in base al testo crittografato risultante.  
+ **AEAD_AES_256_CBC_HMAC_SHA_256** deriva dalla bozza della specifica illustrata qui [https://tools.ietf.org/html/draft-mcgrew-aead-aes-cbc-hmac-sha2-05](https://tools.ietf.org/html/draft-mcgrew-aead-aes-cbc-hmac-sha2-05). L’algoritmo usa uno schema di crittografia autenticata con dati associati che adotta l’approccio Encrypt-then-MAC. Tale approccio prevede prima la crittografia del testo non crittografato e quindi la generazione del MAC in base al testo crittografato risultante.  
   
  Per nascondere i modelli, l'algoritmo **AEAD_AES_256_CBC_HMAC_SHA_256** usa la modalità operativa CBC (Cipher Block Chaining), che prevede l'immissione nel sistema di un valore iniziale denominato IV (vettore di inizializzazione). La descrizione completa della modalità CBC è reperibile nella pagina [https://csrc.nist.gov/publications/nistpubs/800-38a/sp800-38a.pdf](https://csrc.nist.gov/publications/nistpubs/800-38a/sp800-38a.pdf).  
   
  L'algoritmo**AEAD_AES_256_CBC_HMAC_SHA_256** calcola il valore del testo crittografato per un determinato valore del testo non crittografato con la procedura seguente.  
   
-### <a name="step-1-generating-the-initialization-vector-iv"></a>Passaggio 1: Generare il vettore di inizializzazione (IV)  
+### <a name="step-1-generating-the-initialization-vector-iv"></a>Passaggio 1: Generazione del vettore di inizializzazione (IV)  
  La funzionalità Always Encrypted supporta due varianti di **AEAD_AES_256_CBC_HMAC_SHA_256**:  
   
 -   Casuale  
   
 -   Deterministico  
   
- Nella crittografia casuale l'IV viene generato in modo casuale. Di conseguenza, quando viene crittografato lo stesso testo non crittografato, viene generato un testo crittografato diverso, impedendo così l'intercettazione delle informazioni.  
+ Nella crittografia casuale l’IV viene generato in modo casuale. Di conseguenza, quando viene crittografato lo stesso testo non crittografato, viene generato un testo crittografato diverso, impedendo così l'intercettazione delle informazioni.  
   
 ```  
 When using randomized encryption: IV = Generate cryptographicaly random 128bits  
 ```  
   
- Nella crittografia deterministica l'IV non è generato casualmente ma derivato dal valore del testo non crittografato usando l'algoritmo seguente:  
+ Nella crittografia deterministica l’IV non è generato casualmente ma derivato dal valore del testo non crittografato usando l'algoritmo seguente:  
   
 ```  
 When using deterministic encryption: IV = HMAC-SHA-256( iv_key, cell_data ) truncated to 128 bits.  
@@ -69,9 +69,9 @@ iv_key = HMAC-SHA-256(CEK, "Microsoft SQL Server cell IV key" + algorithm + CEK_
 ```  
   
  Il troncamento del valore HMAC viene eseguito per riempire 1 blocco di dati come necessario per IV.    
-Di conseguenza, la crittografia deterministica genera sempre lo stesso testo crittografato per i valori di un determinato testo non crittografato, consentendo l'inferenza se due valori di testo non crittografato sono uguali rispetto ai relativi valori del testo crittografato. Questa limitata intercettazione delle informazioni consente al sistema di database di supportare il confronto delle uguaglianze per i valori delle colonne crittografate.  
+Di conseguenza, la crittografia deterministica genera sempre lo stesso testo crittografato per un determinato testo non crittografato, consentendo di dedurre se due valori di testo non crittografato sono uguali confrontando i relativi valori del testo crittografato. Questa limitata intercettazione delle informazioni consente al sistema di database di supportare il confronto delle uguaglianze per i valori delle colonne crittografate.  
   
- La crittografia deterministica è più efficace nel nascondere i modelli rispetto ad alternative quali, ad esempio, l'uso di un valore IV predefinito.  
+ La crittografia deterministica è più efficace nel nascondere i modelli rispetto ad alternative quali, ad esempio, l’uso di un valore IV predefinito.  
   
 ### <a name="step-2-computing-aes256cbc-ciphertext"></a>Passaggio 2: Calcolo del testo crittografato AES_256_CBC  
  Dopo avere calcolato l'IV viene generato il testo crittografato **AES_256_CBC** :  
@@ -100,8 +100,8 @@ versionbyte = 0x01 and versionbyte_length = 1
 mac_key = HMAC-SHA-256(CEK, "Microsoft SQL Server cell MAC key" + algorithm + CEK_length)  
 ```  
   
-### <a name="step-4-concatenation"></a>Passaggio 4: Concatenazione  
- Infine, il valore crittografato è generato concatenando il byte della versione dell'algoritmo, il MAC, l'IV e il testo crittografato AES_256_CBC:  
+### <a name="step-4-concatenation"></a>Passaggio 4: Concatenation  
+ Infine, il valore crittografato è generato concatenando il byte della versione dell’algoritmo, il MAC, l’IV e il testo crittografato AES_256_CBC:  
   
 ```  
 aead_aes_256_cbc_hmac_sha_256 = versionbyte + MAC + IV + aes_256_cbc_ciphertext  

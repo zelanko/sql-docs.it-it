@@ -20,17 +20,17 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: d2da642b1b380e45ffdde2ac48bd37764a12b2dd
-ms.sourcegitcommit: 467b2c708651a3a2be2c45e36d0006a5bbe87b79
+ms.openlocfilehash: a1bb91e4b5429e6b101d6cdb0ffa73c9953ab198
+ms.sourcegitcommit: 2ab79765e51913f1df6410f0cd56bf2a13221f37
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53980427"
+ms.lasthandoff: 02/27/2019
+ms.locfileid: "56955742"
 ---
 # <a name="cumedist-transact-sql"></a>CUME_DIST (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-asdw-xxx-md.md)]
 
-Per [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], questa funzione calcola la distribuzione cumulativa di un valore in un gruppo di valori, ovvero `CUME_DIST` calcola la posizione relativa di un valore specificato in un gruppo di valori. Presumendo un ordine crescente, la funzione `CUME_DIST` di un valore nella riga *r* viene definito come il numero di righe con valori inferiori o uguali a tale valore nella riga *r*, diviso per il numero di righe valutato nella partizione o nel set di risultati della query. `CUME_DIST` è simile alla funzione `PERCENT_RANK`.
+Per [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], questa funzione calcola la distribuzione cumulativa di un valore in un gruppo di valori, ovvero `CUME_DIST` calcola la posizione relativa di un valore specificato in un gruppo di valori. Presumendo un ordine crescente, la funzione `CUME_DIST` di un valore nella riga _r_ viene definito come il numero di righe con valori inferiori o uguali a tale valore nella riga _r_, diviso per il numero di righe valutato nella partizione o nel set di risultati della query. `CUME_DIST` è simile alla funzione `PERCENT_RANK`.
   
 ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
@@ -43,9 +43,9 @@ CUME_DIST( )
 ```  
   
 ## <a name="arguments"></a>Argomenti  
-OVER **(** [ *partition_by_clause* ] *order_by_clause*)  
+OVER **(** [ _partition\_by\_clause_ ] _order\_by\_clause_)  
 
-*partition_by_clause* divide il set di risultati della clausola FROM in partizioni, alle quali viene applicata la funzione. Se l'argomento *partition_by_clause* non viene specificato, `CUME_DIST` considera tutte le righe del set di risultati della query come un unico gruppo. *order_by_clause* determina l'ordine logico in cui viene eseguita l'operazione. *order_by_clause* è obbligatorio per `CUME_DIST`. `CUME_DIST` non accetterà la \<clausola rows o range> della sintassi OVER. Per altre informazioni, vedere [Clausola OVER &#40;Transact-SQL&#41;](../../t-sql/queries/select-over-clause-transact-sql.md).
+_partition\_by\_clause_ divide il set di risultati della clausola FROM in partizioni, alle quali viene applicata la funzione. Se l'argomento _partition\_by\_clause_ non viene specificato, `CUME_DIST` considera tutte le righe del set di risultati della query come un unico gruppo. _order\_by\_clause_ determina l'ordine logico in cui viene eseguita l'operazione. `CUME_DIST` richiede _order\_by\_clause_. `CUME_DIST` non accetterà la \<clausola rows o range> della sintassi OVER. Per altre informazioni, vedere [Clausola OVER - &#40;Transact-SQL&#41;](../../t-sql/queries/select-over-clause-transact-sql.md).
   
 ## <a name="return-types"></a>Tipi restituiti
 **float(53)**
@@ -56,7 +56,7 @@ OVER **(** [ *partition_by_clause* ] *order_by_clause*)
 `CUME_DIST` è non deterministico. Per altre informazioni, vedere [Funzioni deterministiche e non deterministiche](../../relational-databases/user-defined-functions/deterministic-and-nondeterministic-functions.md).
   
 ## <a name="examples"></a>Esempi  
-Questo esempio usa la funzione `CUME_DIST` per calcolare il percentile del salario per ogni dipendente all'interno di un reparto specificato. `CUME_DIST` restituisce un valore che rappresenta la percentuale di dipendenti con un salario minore o uguale al dipendente corrente nello stesso reparto. La funzione `PERCENT_RANK` calcola il rango percentile dello stipendio del dipendente in un reparto. Per partizionare le righe del set di risultati in base al reparto, l'esempio specifica il valore *partition_by_clause*. La clausola ORDER BY della clausola OVER ordina le righe in ogni partizione in modo logico. La clausola ORDER BY dell'istruzione SELECT determina l'ordine di visualizzazione del set di risultati.
+Questo esempio usa la funzione `CUME_DIST` per calcolare il percentile del salario per ogni dipendente all'interno di un reparto specificato. `CUME_DIST` restituisce un valore che rappresenta la percentuale di dipendenti con un salario minore o uguale al dipendente corrente nello stesso reparto. La funzione `PERCENT_RANK` calcola il rango percentile dello stipendio del dipendente in un reparto. Per partizionare le righe del set di risultati in base al reparto, l'esempio specifica il valore _partition\_by\_clause_. La clausola ORDER BY della clausola OVER ordina le righe in ogni partizione in modo logico. La clausola ORDER BY dell'istruzione SELECT determina l'ordine di visualizzazione del set di risultati.
   
 ```sql
 USE AdventureWorks2012;  

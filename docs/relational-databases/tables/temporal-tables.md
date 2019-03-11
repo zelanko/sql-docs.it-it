@@ -12,17 +12,17 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 967605ee7a4857347b4f1f7ca8ffc62ea0451d91
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: c7967740fc56efab93129aa6846d70f7eb55c7de
+ms.sourcegitcommit: 2533383a7baa03b62430018a006a339c0bd69af2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52403646"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57017917"
 ---
 # <a name="temporal-tables"></a>Tabelle temporali
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
-  In SQL Server 2016 è stato introdotto il supporto per le tabelle temporali con controllo delle versioni del sistema come una funzionalità di database, che offre un supporto predefinito per la gestione delle informazioni sui dati archiviati nella tabella in qualsiasi momento anziché solo sui dati che risultano corretti nel momento attuale. Questa funzionalità di database è stata introdotta in SQL ANSI 2011.  
+  In SQL Server 2016 è stato introdotto il supporto per le tabelle temporali (note anche come tabelle temporali con controllo delle versioni del sistema) come una funzionalità di database, che offre un supporto predefinito per la gestione delle informazioni sui dati archiviati nella tabella in qualsiasi momento anziché solo sui dati che risultano corretti nel momento attuale. Questa funzionalità di database è stata introdotta in SQL ANSI 2011.  
   
  **Avvio rapido**  
   
@@ -46,7 +46,7 @@ ms.locfileid: "52403646"
   
     -   [Query sui dati in una tabella temporale con controllo delle versioni di sistema](../../relational-databases/tables/querying-data-in-a-system-versioned-temporal-table.md)  
   
-    -   **Download del database di esempio Adventure Works:** per iniziare a usare le tabelle temporali, scaricare il [database AdventureWorks per SQL Server 2016 CTP3](https://www.microsoft.com/download/details.aspx?id=49502), che contiene esempi di script, e seguire le istruzioni nella cartella 'Temporal'  
+    -   **Download del database di esempio Adventure Works:** Per iniziare a usare le tabelle temporali, scaricare il [database AdventureWorks per SQL Server 2016 CTP3](https://www.microsoft.com/download/details.aspx?id=49502), che contiene esempi di script, e seguire le istruzioni nella cartella Temporal  
   
 -   **Sintassi:**  
   
@@ -56,7 +56,7 @@ ms.locfileid: "52403646"
   
     -   [FROM &#40;Transact-SQL&#41;](../../t-sql/queries/from-transact-sql.md)  
   
--   **Video:** per una discussione di 20 minuti sulle tabelle temporali, vedere [Tabelle temporali in SQL Server 2016](https://channel9.msdn.com/Shows/Data-Exposed/Temporal-in-SQL-Server-2016).  
+-   **Video:** Per una discussione di 20 minuti sulle tabelle temporali, vedere [Tabelle temporali in SQL Server 2016](https://channel9.msdn.com/Shows/Data-Exposed/Temporal-in-SQL-Server-2016).  
   
 ## <a name="what-is-a-system-versioned-temporal-table"></a>Che cos'è una tabella temporale con controllo delle versioni di sistema?  
  Una tabella temporale con controllo delle versioni di sistema è un tipo di tabella utente progettato per mantenere una cronologia completa delle modifiche dei dati e semplificare l'analisi temporizzata. Questo tipo di tabella temporale è definito tabella temporale con controllo delle versioni di sistema perché il periodo di validità per ogni riga viene gestito dal sistema, ad esempio, il motore di database.  
@@ -81,9 +81,9 @@ ms.locfileid: "52403646"
 ## <a name="how-does-temporal-work"></a>Come funziona una tabella temporale?  
  Il controllo delle versioni di sistema per una tabella viene implementato come una coppia di tabelle, una tabella corrente e una tabella di cronologia. All'interno di ogni tabella vengono usate due colonne **datetime2** aggiuntive per definire il periodo di validità per ogni riga:  
   
--   Colonna di inizio periodo: il sistema registra l'ora di inizio per la riga in questa colonna, in genere indicata come colonna **SysStartTime** .  
+-   Colonna di inizio periodo: Il sistema registra l'ora di inizio per la riga in questa colonna, in genere indicata come colonna **SysStartTime**.  
   
--   Colonna di fine periodo: il sistema registra l'ora di fine per la riga in questa colonna, in genere indicata come colonna **SysEndTime** .  
+-   Colonna di fine periodo: Il sistema registra l'ora di fine per la riga in questa colonna, in genere indicata come colonna **SysEndTime**.  
   
  La tabella corrente contiene il valore corrente per ogni riga. La tabella di cronologia contiene ogni valore precedente per ogni riga, se presente, e l'ora di inizio e di fine del relativo periodo di validità.  
   
@@ -107,13 +107,13 @@ CREATE TABLE dbo.Employee
  WITH (SYSTEM_VERSIONING = ON (HISTORY_TABLE = dbo.EmployeeHistory));  
 ```  
   
- **INSERIMENTI:** su **INSERT**il sistema imposta il valore per la colonna **SysStartTime** sull'ora di inizio della transazione corrente (fuso orario UTC) in base al clock di sistema e assegna come valore per la colonna **SysEndTime** il valore massimo di 31-12-9999. In questo modo la riga viene contrassegnata come aperta.  
+ **INSERT:** In un elemento **INSERT** il sistema imposta il valore per la colonna **SysStartTime** sull'ora di inizio della transazione corrente (fuso orario UTC) in base al clock di sistema e assegna come valore per la colonna **SysEndTime** il valore massimo di 31-12-9999. In questo modo la riga viene contrassegnata come aperta.  
   
- **AGGIORNAMENTI:** su **UPDATE**il sistema archivia il valore precedente della riga nella tabella di cronologia e imposta il valore per la colonna **SysEndTime** sull'ora di inizio della transazione corrente (fuso orario UTC) in base al clock di sistema. In questo modo la riga viene contrassegnata come chiusa, con un periodo registrato in cui risultava valida. Nella tabella corrente la riga viene aggiornata con il nuovo valore e il sistema imposta il valore per la colonna **SysStartTime** sull'ora di inizio della transazione (fuso orario UTC) in base al clock di sistema. Il valore per la riga aggiornata nella tabella corrente per la colonna **SysEndTime** rimane il valore massimo di 31-12-9999.  
+ **UPDATE:** In un elemento **UPDATE** il sistema archivia il valore precedente della riga nella tabella di cronologia e imposta il valore per la colonna **SysEndTime** sull'ora di inizio della transazione corrente (fuso orario UTC) in base al clock di sistema. In questo modo la riga viene contrassegnata come chiusa, con un periodo registrato in cui risultava valida. Nella tabella corrente la riga viene aggiornata con il nuovo valore e il sistema imposta il valore per la colonna **SysStartTime** sull'ora di inizio della transazione (fuso orario UTC) in base al clock di sistema. Il valore per la riga aggiornata nella tabella corrente per la colonna **SysEndTime** rimane il valore massimo di 31-12-9999.  
   
- **ELIMINAZIONI:** su **DELETE**il sistema archivia il valore precedente della riga nella tabella di cronologia e imposta il valore per la colonna **SysEndTime** sull'ora di inizio della transazione corrente (fuso orario UTC) in base al clock di sistema. In questo modo la riga viene contrassegnata come chiusa, con un periodo registrato in cui la riga precedente risultava valida. Nella tabella corrente la riga viene rimossa. Le query della tabella corrente non restituiscono questa riga. Solo le query che gestiscono i dati di cronologia restituiscono dati per i quali viene chiusa una riga.  
+ **DELETE:** In un elemento **DELETE** il sistema archivia il valore precedente della riga nella tabella di cronologia e imposta il valore per la colonna **SysEndTime** sull'ora di inizio della transazione corrente (fuso orario UTC) in base al clock di sistema. In questo modo la riga viene contrassegnata come chiusa, con un periodo registrato in cui la riga precedente risultava valida. Nella tabella corrente la riga viene rimossa. Le query della tabella corrente non restituiscono questa riga. Solo le query che gestiscono i dati di cronologia restituiscono dati per i quali viene chiusa una riga.  
   
- **UNIONE:** su **MERGE**l'operazione si comporta esattamente come se fossero eseguite fino a tre istruzioni ( **INSERT**, **UPDATE**e/o **DELETE**), in base alle azioni specificate nell'istruzione **MERGE** .  
+ **MERGE:** In un elemento **MERGE** l'operazione si comporta esattamente come se venissero eseguite fino a tre istruzioni (**INSERT**, **UPDATE** e/o **DELETE**), in base alle azioni specificate nell'istruzione **MERGE**.  
   
 > [!IMPORTANT]  
 >  I tempi registrati nelle colonne datetime2 del sistema sono basati sull'ora di inizio della transazione stessa. Ad esempio, tutte le righe inserite all'interno di una singola transazione avranno la stessa ora UTC registrata nella colonna corrispondente all'inizio del periodo **SYSTEM_TIME** .  

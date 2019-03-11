@@ -2,7 +2,7 @@
 title: Inlining di funzioni definite dall'utente scalari nei database SQL di Microsoft | Microsoft Docs
 description: Funzionalità di inlining di funzioni definite dall'utente scalari, per migliorare le prestazioni delle query che chiamano funzioni definite dall'utente scalari in SQL Server (2018 e versioni successive) e nel database SQL di Azure.
 ms.custom: ''
-ms.date: 11/06/2018
+ms.date: 02/28/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -16,12 +16,12 @@ author: s-r-k
 ms.author: karam
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-ver15 || = sqlallproducts-allversions
-ms.openlocfilehash: 709f4a25ec4536c9ff1ba10cdaddd2ef8c104db2
-ms.sourcegitcommit: cb73d60db8df15bf929ca17c1576cf1c4dca1780
+ms.openlocfilehash: 0c2ed03ea43643aa8aaecd3e1600ee3e258929ed
+ms.sourcegitcommit: 2533383a7baa03b62430018a006a339c0bd69af2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/07/2018
-ms.locfileid: "51222111"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57017927"
 ---
 # <a name="scalar-udf-inlining"></a>Inlining di funzioni definite dall'utente scalari
 
@@ -37,9 +37,9 @@ Le funzioni definite dall'utente implementate in Transact-SQL che restituiscono 
 
 Le funzioni definite dall'utente scalari, in genere, offrono prestazioni scarse per i motivi seguenti.
 
-- **Chiamata iterativa:** le funzioni definite dall'utente vengono chiamate in modo iterativo, una volta per ogni tupla idonea. Ciò comporta costi aggiuntivi a causa del cambio di contesto ripetuto dovuto alla chiamata di funzione. Questo aspetto interessa in modo particolarmente grave le funzioni definite dall'utente che eseguono query SQL all'interno della propria definizione.
-- **Mancanza di determinazione costi:** durante l'ottimizzazione, vengono definiti i costi dei soli operatori relazionali, non degli operatori scalari. Prima dell'introduzione delle funzioni definite dall'utente scalari, i costi degli altri operatori scalari erano in genere bassi e non richiedevano una determinazione costi. Per un'operazione scalare era sufficiente aggiungere un costo ridotto per la CPU. In alcuni scenari, il costo effettivo è significativo ma rimane comunque sottorappresentato.
-- **Esecuzione interpretata:** le funzioni definite dall'utente vengono valutate come batch di istruzioni e vengono eseguite istruzione per istruzione. Ogni istruzione viene compilata e il piano compilato viene memorizzato nella cache. Questa strategia di memorizzazione nella cache consente di risparmiare tempo perché consente di evitare le ricompilazioni, ma ogni istruzione viene eseguita in modo isolato. Non vengono eseguite ottimizzazioni tra istruzioni diverse.
+- **Chiamata iterativa:** Le funzioni definite dall'utente vengono chiamate in modo iterativo, una volta per ogni tupla idonea. Ciò comporta costi aggiuntivi a causa del cambio di contesto ripetuto dovuto alla chiamata di funzione. Questo aspetto interessa in modo particolarmente grave le funzioni definite dall'utente che eseguono query SQL all'interno della propria definizione.
+- **Mancanza di determinazione costi:** Durante l'ottimizzazione vengono definiti i costi dei soli operatori relazionali, non degli operatori scalari. Prima dell'introduzione delle funzioni definite dall'utente scalari, i costi degli altri operatori scalari erano in genere bassi e non richiedevano una determinazione costi. Per un'operazione scalare era sufficiente aggiungere un costo ridotto per la CPU. In alcuni scenari, il costo effettivo è significativo ma rimane comunque sottorappresentato.
+- **Esecuzione interpretata:** Le funzioni definite dall'utente vengono valutate come batch di istruzioni e vengono eseguite istruzione per istruzione. Ogni istruzione viene compilata e il piano compilato viene memorizzato nella cache. Questa strategia di memorizzazione nella cache consente di risparmiare tempo perché consente di evitare le ricompilazioni, ma ogni istruzione viene eseguita in modo isolato. Non vengono eseguite ottimizzazioni tra istruzioni diverse.
 - **Esecuzione seriale:** SQL Server non consente il parallelismo interno per le query che chiamano funzioni definite dall'utente. 
 
 ## <a name="automatic-inlining-of-scalar-udfs"></a>Inlining automatico di funzioni definite dall'utente scalari
@@ -141,16 +141,17 @@ A seconda della complessità della logica della funzione definita dall'utente, i
 È possibile eseguire l'inlining di una funzione definita dall'utente scalare Transact-SQL se si verificano tutte le condizioni seguenti:
 
 - La funzione definita dall'utente è scritta con i costrutti seguenti:
-    - `DECLARE`, `SET`: dichiarazione e assegnazione di variabili.
-    - `SELECT`: query SQL con assegnazioni di variabili singole/multiple<sup>1</sup>.
-    - `IF`/`ELSE`: diramazione con livelli di annidamento arbitrari.
-    - `RETURN`: istruzione return singola o istruzioni return multiple.
-    - `UDF`: chiamate di funzioni ricorsive/annidate<sup>2</sup>.
-    - Altro: operazioni relazionali, ad esempio `EXISTS`, `ISNULL`.
+    - `DECLARE`, `SET`: Dichiarazione e assegnazione di variabili.
+    - `SELECT`: Query SQL con assegnazioni di variabili singole/multiple<sup>1</sup>.
+    - `IF`/`ELSE`: Diramazione con livelli di annidamento arbitrari.
+    - `RETURN`: Istruzione return singola o istruzioni return multiple.
+    - `UDF`: Chiamate di funzioni ricorsive/annidate<sup>2</sup>.
+    - Altri: Operazioni relazionali, ad esempio `EXISTS`, `ISNULL`.
 - La funzione definita dall'utente non chiama alcuna funzione intrinseca dipendente dal tempo (ad esempio `GETDATE()`) o con effetti collaterali<sup>3</sup> (ad esempio `NEWSEQUENTIALID()`).
 - La funzione definita dall'utente usa la clausola `EXECUTE AS CALLER` (comportamento predefinito se la clausola `EXECUTE AS` non viene specificata).
 - La funzione definita dall'utente non fa riferimento a variabili di tabella o a parametri con valori di tabella.
 - La query che chiama una funzione definita dall'utente scalare non fa riferimento a una chiamata di funzione definita dall'utente scalare nella relativa clausola `GROUP BY`.
+- La query che chiama una funzione definita dall'utente scalare nel relativo elenco di selezione con clausola `DISTINCT` non fa riferimento a una chiamata di funzione definita dall'utente scalare nella relativa clausola `ORDER BY`.
 - La funzione definita dall'utente non è compilata in modo nativo (interoperabilità supportata).
 - La funzione definita dall'utente non viene usata in una colonna calcolata o in una definizione di vincolo di controllo.
 - La funzione definita dall'utente non fa riferimento a tipi definiti dall'utente.

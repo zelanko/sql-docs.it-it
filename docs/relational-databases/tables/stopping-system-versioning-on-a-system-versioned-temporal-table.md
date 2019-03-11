@@ -12,12 +12,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 37fe6d7b3dfe92e2cdf53e7a7b26ab363a567510
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 9ebd016ba06c24d742c099f346076111bd98751b
+ms.sourcegitcommit: 670082cb47f7d3d82e987b549b6f8e3a8968b5db
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52409165"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57334518"
 ---
 # <a name="stopping-system-versioning-on-a-system-versioned-temporal-table"></a>Arresto del controllo delle versioni di sistema in una tabella temporale con controllo delle versioni di sistema
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -33,8 +33,8 @@ ms.locfileid: "52409165"
 -   Tabella cronologica sotto forma di tabella normale  
   
 ### <a name="important-remarks"></a>Note importanti  
-  
--   Non si verifica alcuna perdita di dati quando si imposta  **SYSTEM_VERSIONING = OFF** o si elimina il periodo **SYSTEM_TIME** .  
+-   La tabella di cronologia **arresterà** l'acquisizione di aggiornamenti per la durata di **SYSTEM_VERSIONING = OFF**.
+-   Non si verifica alcuna perdita di dati nella **tabella temporale** quando si imposta  **SYSTEM_VERSIONING = OFF** o si elimina il periodo **SYSTEM_TIME**.
   
 -   Quando si imposta **SYSTEM_VERSIONING = OFF** e non si rimuove il periodo **SYSTEM_TIME** , il sistema continua ad aggiornare le colonne del periodo per ogni operazione di inserimento e di aggiornamento. L'eliminazione di elementi nella tabella corrente è definitiva.  
   
@@ -64,7 +64,10 @@ DROP PERIOD FOR SYSTEM_TIME;
   
 -   **SWITCH IN** della partizione nella tabella di cronologia  
   
- Questo esempio arresta temporaneamente SYSTEM_VERSIONING per consentire di eseguire operazioni di manutenzione specifiche. Se si arresta temporaneamente il controllo delle versioni come prerequisito per la manutenzione della tabella, si consiglia di eseguire questa operazione all'interno di una transazione per mantenere la coerenza dei dati.  
+ Questo esempio arresta temporaneamente SYSTEM_VERSIONING per consentire di eseguire operazioni di manutenzione specifiche. Se si arresta temporaneamente il controllo delle versioni come prerequisito per la manutenzione della tabella, si consiglia di eseguire questa operazione all'interno di una transazione per mantenere la coerenza dei dati.
+ 
+> [!NOTE]  
+>  Quando si riattiva il controllo delle versioni di sistema, non dimenticare di specificare l'argomento HISTORY_TABLE.  Se non si esegue questa operazione, verrà creata una nuova tabella di cronologia che verrà associata alla tabella corrente.  La tabella di cronologia originale continuerà a esistere come una normale tabella, ma non verrà associata alla tabella corrente.  
   
 ```  
 BEGIN TRAN   

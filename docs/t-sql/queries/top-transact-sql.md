@@ -18,38 +18,38 @@ helpviewer_keywords:
 - TOP clause, about TOP clause
 - queries [SQL Server], results
 ms.assetid: da983c0a-06c5-4cf8-a6a4-7f9d66f34f2c
-author: douglaslMS
-ms.author: douglasl
+author: VanMSFT
+ms.author: vanto
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 39c9a070150b3353270463e362d89f4fe70db705
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 70102127d7d48160c5320e02a97113cdd903fb0b
+ms.sourcegitcommit: 670082cb47f7d3d82e987b549b6f8e3a8968b5db
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47601190"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57334648"
 ---
 # <a name="top-transact-sql"></a>TOP (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-  Limita le righe restituite nel set di risultati di una query a un numero specificato o a una percentuale di righe in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Se la clausola TOP viene usata insieme alla clausola ORDER BY, il set di risultati è limitato al primo numero *N* di righe ordinate. In caso contrario, viene restituito il primo numero *N* di righe in ordine non definito. Usare questa clausola per specificare il numero di righe restituite da un'istruzione SELECT o interessate da un'istruzione INSERT, UPDATE, MERGE o DELETE.  
+Limita le righe restituite nel set di risultati di una query a un numero specificato o a una percentuale di righe in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Quando si usa TOP con la clausola ORDER BY, il set di risultati è limitato alle prime *N* righe ordinate. In caso contrario, TOP restituisce le prime *N* righe in un ordine non definito. Usare questa clausola per specificare il numero di righe restituito da un'istruzione SELECT. In alternativa, usare TOP per specificare le righe interessate da un'istruzione INSERT, UPDATE, MERGE o DELETE.  
   
- ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintassi  
-  
-```  
--- Syntax for SQL Server and Azure SQL Database  
-  
+ 
+ Di seguito è riportata la sintassi per SQL Server e il database SQL di Azure:
+
+```sql  
 [   
     TOP (expression) [PERCENT]  
     [ WITH TIES ]  
 ]  
 ```  
-  
-```  
--- Syntax for Azure SQL Data Warehouse and Parallel Data Warehouse  
-  
+
+Di seguito è riportata la sintassi per Azure SQL Data Warehouse e Parallel Data Warehouse:
+
+```sql  
 [   
     TOP ( expression )   
     [ WITH TIES ]  
@@ -57,37 +57,37 @@ ms.locfileid: "47601190"
 ```  
   
 ## <a name="arguments"></a>Argomenti  
- *expression*  
- Espressione numerica che consente di specificare il numero di righe da restituire. *expression* viene implicitamente convertito in valore di tipo **float**, se è specificato PERCENT. In caso contrario, viene convertito in **bigint**.  
+*expression*  
+Espressione numerica che specifica il numero di righe da restituire. Se si specifica PERCENT, viene eseguita la conversione implicita di *expression* in un valore **float**. In caso contrario, l'argomento *expression* viene convertito in **bigint**.  
   
- PERCENT  
- Indica che la query restituisce solo la prima percentuale *expression* di righe dal set di risultati. I valori frazionari vengono arrotondati al valore intero più vicino.  
+PERCENT  
+Indica che la query restituisce solo la prima percentuale *expression* di righe dal set di risultati. I valori frazionari vengono arrotondati al valore intero più vicino.  
   
- WITH TIES  
- Utilizzato quando si desidera restituire due o più righe che hanno un valore equivalente per l'ultima posizione nel set di risultati limitato. Deve essere usato con la clausola **ORDER BY**. **WITH TIES** può causare la restituzione di un numero maggiore di righe rispetto al valore specificato in *expression*. Ad esempio, se *expression* è impostato su 5, ma 2 righe aggiuntive corrispondono ai valori delle colonne **ORDER BY** nella riga 5, il set di risultati conterrà 7 righe.  
+WITH TIES  
+Restituisce due o più righe con valori equivalenti per l'ultima posizione del set di risultati limitato. È necessario usare questo argomento con la clausola **ORDER BY**. **WITH TIES** potrebbe causare la restituzione di un numero di righe maggiore rispetto al valore specificato in *expression*. Se l'argomento *expression* è impostato su 5 ma ai valori delle colonne **ORDER BY** nella riga 5 corrispondono due righe in più, ad esempio, il set di risultati conterrà sette righe.  
   
- È possibile specificare TOP...WITH TIES solo nelle istruzioni SELECT e solo se viene specificata una clausola ORDER BY. L'ordine restituito per l'associazione dei record è arbitrario. ORDER BY non riguarda questa regola.  
+È possibile specificare la clausola TOP con l'argomento WITH TIES solo nelle istruzioni SELECT e solo se viene usata anche la clausola ORDER BY. L'ordine restituito per l'associazione dei record è arbitrario. ORDER BY non influisce su questa regola.  
   
 ## <a name="best-practices"></a>Procedure consigliate  
- In un'istruzione SELECT utilizzare sempre una clausola ORDER BY con la clausola TOP. È l'unico modo per indicare prevedibilmente quali righe sono interessate dalla clausola TOP.  
+In un'istruzione SELECT utilizzare sempre una clausola ORDER BY con la clausola TOP. È infatti l'unico modo per indicare in modo prevedibile le righe interessate dalla clausola TOP.  
   
- Utilizzare OFFSET e FETCH nella clausola ORDER BY anziché la clausola TOP per implementare una soluzione di paging delle query. Una soluzione di paging, ovvero l'invio di blocchi o "pagine" di dati al client, è di più facile implementazione con le clausole OFFSET e FETCH. Per altre informazioni, vedere [Clausola ORDER BY &#40;Transact-SQL&#41;](../../t-sql/queries/select-order-by-clause-transact-sql.md).  
+Utilizzare OFFSET e FETCH nella clausola ORDER BY anziché la clausola TOP per implementare una soluzione di paging delle query. Una soluzione di paging, ovvero l'invio di blocchi o "pagine" di dati al client, è di più facile implementazione con le clausole OFFSET e FETCH. Per altre informazioni, vedere [Clausola ORDER BY &#40;Transact-SQL&#41;](../../t-sql/queries/select-order-by-clause-transact-sql.md).  
   
- Utilizzare TOP (o OFFSET e FETCH) anziché SET ROWCOUNT per limitare il numero di righe restituite. Questi metodi vengono preferiti all'utilizzo di SET ROWCOUNT per i motivi seguenti:  
+Utilizzare TOP (o OFFSET e FETCH) anziché SET ROWCOUNT per limitare il numero di righe restituite. Questi metodi vengono preferiti all'utilizzo di SET ROWCOUNT per i motivi seguenti:  
   
--   Come parte di un'istruzione SELECT, in Query Optimizer il valore di *expression* nella clausola TOP o FETCH può essere preso in considerazione durante l'ottimizzazione della query. Poiché SET ROWCOUNT viene utilizzato al di fuori di un'istruzione che esegue una query, il relativo valore non può essere utilizzato in un piano di query.  
+-   Come parte di un'istruzione SELECT, in Query Optimizer il valore di *expression* nella clausola TOP o FETCH può essere preso in considerazione durante l'ottimizzazione della query. Dato che si usa SET ROWCOUNT al di fuori di un'istruzione che esegue una query, il relativo valore non può essere considerato in un piano di query.  
   
 ## <a name="compatibility-support"></a>Informazioni sulla compatibilità  
- Per garantire la compatibilità con le versioni precedenti, le parentesi sono facoltative nelle istruzioni SELECT. È consigliabile utilizzare sempre le parentesi per le clausole TOP nelle istruzioni SELECT per coerenza con le istruzioni INSERT, UPDATE, MERGE e DELETE in cui le parentesi sono obbligatorie.  
+Per garantire la compatibilità con le versioni precedenti, le parentesi sono facoltative nelle istruzioni SELECT. È consigliabile usare sempre le parentesi per TOP nelle istruzioni SELECT, in modo da mantenere la coerenza con l'uso obbligatorio nelle istruzioni INSERT, UPDATE, MERGE e DELETE. 
   
 ## <a name="interoperability"></a>Interoperabilità  
- L'espressione TOP non influisce sulle istruzioni eventualmente eseguite a causa dell'attivazione di un trigger. Le tabelle **inserted** e **deleted** nei trigger restituiranno solo le righe effettivamente interessate dalle istruzioni INSERT, UPDATE, MERGE o DELETE. Se ad esempio INSERT TRIGGER viene attivato come risultato di un'istruzione INSERT che ha utilizzato una clausola TOP,  
+L'espressione di TOP non influisce sulle istruzioni eventualmente eseguite a causa di un trigger. Le tabelle **inserted** e **deleted** nei trigger restituiscono solo le righe effettivamente interessate dalle istruzioni INSERT, UPDATE, MERGE o DELETE. Questo si verifica ad esempio se un trigger INSERT viene attivato come risultato di un'istruzione INSERT in cui è stata usata una clausola TOP.  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] consente l'aggiornamento delle righe attraverso le viste. Poiché la clausola TOP può essere inclusa nella definizione della vista, è possibile che alcune righe scompaiano dalla vista in seguito a un aggiornamento se le righe non soddisfano più i requisiti dell'espressione TOP.  
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] consente l'aggiornamento delle righe attraverso le viste. Dato che è possibile includere la clausola TOP nella definizione della vista, alcune righe potrebbero non essere più presenti nella vista se a causa di un aggiornamento non soddisfano più i requisiti dell'espressione di TOP.  
   
- Se specificata nell'istruzione MERGE, la clausola TOP viene applicata *dopo* l'unione in join dell'intera tabella di origine e dell'intera tabella di destinazione e dopo la rimozione delle righe unite in join non qualificate per un'azione di inserimento, aggiornamento o eliminazione. La clausola TOP riduce ulteriormente il numero di righe unite in join in base al valore specificato e l'azione di inserimento, aggiornamento o eliminazione viene applicata alle righe unite in join rimanenti in modo non ordinato. Ciò significa che le righe vengono distribuite tra le azioni definite nelle clausole WHEN senza alcun ordine. Si supponga ad esempio che l'utilizzo della clausola TOP (10) interessi 10 righe. Di queste righe, 7 possono essere aggiornate e 3 inserite oppure 1 riga può essere eliminata, 5 aggiornate e 4 inserite e così via. Poiché l'istruzione MERGE esegue un'analisi completa di entrambe le tabelle di origine e di destinazione, l'utilizzo della clausola TOP per modificare una tabella di grandi dimensioni creando più batch può influire sulle prestazioni di I/O. In questo scenario è importante assicurare che tutti i batch successivi vengano destinati a nuove righe.  
+Quando viene specificata nell'istruzione MERGE, la clausola TOP si applica *dopo* l'unione in join dell'intera tabella di origine e dell'intera tabella di destinazione. Le righe unite in join non qualificate per un'azione di inserimento, aggiornamento o eliminazione, inoltre, vengono rimosse. La clausola TOP riduce ulteriormente il numero di righe unite in join in base al valore specificato e l'azione di inserimento, aggiornamento o eliminazione si applica alle restanti righe unite in join in modo non ordinato. Ciò significa che le righe vengono distribuite tra le azioni definite nelle clausole WHEN senza alcun ordine. Se specificando TOP (10) le righe interessate sono 10, ad esempio, sette di queste righe potrebbero essere aggiornate e tre inserite oppure una potrebbe essere eliminata, cinque aggiornate e quattro inserite e così via. Dato che l'istruzione MERGE esegue una scansione di tabella completa sulle tabelle sia di origine che di destinazione, l'uso della clausola TOP per modificare una tabella di grandi dimensioni creando più batch può influire sulle prestazioni di I/O. In questo scenario è importante assicurarsi che tutti i batch successivi abbiano come destinazione nuove righe.  
   
- Prestare attenzione quando si specifica la clausola TOP in una query che contiene un operatore UNION, UNION ALL, EXCEPT o INTERSECT. È possibile scrivere una query che restituisce risultati imprevisti perché l'ordine in cui le clausole TOP e ORDER BY vengono elaborate logicamente non è sempre intuitivo quando questi operatori vengono utilizzati in un'operazione di selezione. Ad esempio, considerati i dati e la tabella seguenti, si supponga di voler ottenere come risultato la macchina rossa meno costosa e la macchina blu più costosa, ovvero la berlina rossa e il furgone blu.  
+Prestare attenzione quando si specifica la clausola TOP in una query contenente un operatore UNION, UNION ALL, EXCEPT o INTERSECT. È possibile scrivere una query che restituisce risultati imprevisti perché l'ordine in cui le clausole TOP e ORDER BY vengono elaborate logicamente non è sempre intuitivo quando questi operatori vengono usati in un'operazione di selezione. Ad esempio, considerati i dati e la tabella seguenti, si supponga di voler ottenere come risultato la macchina rossa meno costosa e la macchina blu più costosa, ovvero la berlina rossa e il furgone blu.  
   
 ```sql  
 CREATE TABLE dbo.Cars(Model varchar(15), Price money, Color varchar(10));  
@@ -96,7 +96,7 @@ INSERT dbo.Cars VALUES
     ('coupe', 20000, 'red'), ('van', 8000, 'blue');  
 ```  
   
- Per ottenere questi risultati, è possibile scrivere la query seguente.  
+Per ottenere questi risultati, è possibile scrivere la query seguente.  
   
 ```sql  
 SELECT TOP(1) Model, Color, Price  
@@ -110,7 +110,7 @@ ORDER BY Price ASC;
 GO    
 ```  
   
- Set di risultati:  
+Di seguito è riportato il set di risultati.  
   
  ```
  Model         Color      Price  
@@ -119,7 +119,7 @@ GO
  convertible   blue       15000.00
  ```  
   
- I risultati imprevisti vengono restituiti perché la clausola TOP viene eseguita logicamente prima della clausola ORDER BY che consente di ordinare i risultati dell'operatore (UNION ALL in questo caso). La query precedente restituisce pertanto qualsiasi macchina rossa e qualsiasi macchina blu, quindi ordina il risultato di quell'unione in base al prezzo. Nell'esempio seguente viene illustrato il metodo corretto per scrivere questa query per ottenere il risultato desiderato.  
+Vengono restituiti risultati imprevisti perché la clausola TOP viene eseguita logicamente prima della clausola ORDER BY che ordina i risultati dell'operatore (in questo caso UNION ALL). La query precedente restituisce pertanto qualsiasi macchina rossa e qualsiasi macchina blu e quindi ordina il risultato dell'unione in base al prezzo. Nell'esempio seguente viene illustrato il metodo corretto per scrivere questa query per ottenere il risultato desiderato.  
   
 ```sql  
 SELECT Model, Color, Price  
@@ -136,7 +136,7 @@ FROM (SELECT TOP(1) Model, Color, Price
 GO    
 ```  
   
- Tramite le clausole TOP e ORDER BY in un'operazione sub-SELECT, ci si assicura che i risultati della clausola ORDER BY vengano utilizzati applicati alla clausola TOP e non all'ordinamento del risultato dell'operazione UNION.  
+L'uso di TOP e ORDER BY in un'operazione sub-SELECT assicura che i risultati della clausola ORDER BY vengano applicati alla clausola TOP e non all'ordinamento del risultato dell'operazione UNION.  
   
  Set di risultati:  
   
@@ -148,11 +148,11 @@ GO
  ```  
   
 ## <a name="limitations-and-restrictions"></a>Limitazioni e restrizioni  
- Se la clausola TOP viene utilizzata con INSERT, MERGE o DELETE, le righe a cui viene fatto riferimento non vengono disposte in alcun ordine e la clausola ORDER BY non può essere specificata direttamente in tali istruzioni. Se è necessario utilizzare TOP per inserire, eliminare o modificare righe in un ordine cronologico significativo, è necessario utilizzare TOP con una clausola ORDER BY specificata in un'istruzione sub-SELECT. Vedere la sezione Esempi più avanti in questo argomento.  
+Quando si usa TOP con INSERT, UPDATE, MERGE o DELETE, le righe a cui viene fatto riferimento non vengono disposte in alcun ordine e non è possibile specificare direttamente la clausola ORDER BY in queste istruzioni. Se è necessario usare TOP per inserire, eliminare o modificare righe in un ordine cronologico significativo, usare TOP specificando una clausola ORDER BY in un'istruzione sub-SELECT. Vedere la successiva sezione Esempi di questo articolo.  
   
- Non è possibile utilizzare TOP nelle istruzioni UPDATE e DELETE in viste partizionate.  
+Non è possibile usare TOP in istruzioni UPDATE e DELETE su viste partizionate.  
   
- Non è possibile combinare TOP con OFFSET e FETCH nella stessa espressione di query (nello stesso ambito della query). Per altre informazioni, vedere [Clausola ORDER BY &#40;Transact-SQL&#41;](../../t-sql/queries/select-order-by-clause-transact-sql.md).  
+Non è possibile combinare TOP con OFFSET e FETCH nella stessa espressione di query (nello stesso ambito query). Per altre informazioni, vedere [Clausola ORDER BY &#40;Transact-SQL&#41;](../../t-sql/queries/select-order-by-clause-transact-sql.md).  
   
 ## <a name="examples"></a>Esempi  
   
@@ -163,10 +163,10 @@ GO
 |[Limitazione delle righe interessate da DELETE, INSERT o UPDATE](#DML)|DELETE • INSERT • UPDATE|  
   
 ###  <a name="BasicSyntax"></a> Sintassi di base  
- Negli esempi contenuti in questa sezione vengono illustrate le funzionalità di base della clausola ORDER BY utilizzando la sintassi minima necessaria.  
+Negli esempi contenuti in questa sezione vengono illustrate le funzionalità di base della clausola ORDER BY utilizzando la sintassi minima necessaria.  
   
 #### <a name="a-using-top-with-a-constant-value"></a>A. Utilizzo di TOP con un valore costante  
- Negli esempi seguenti viene utilizzato un valore costante per specificare il numero di dipendenti restituiti nel set di risultati della query. Nel primo esempio le prime 10 righe non definite vengono restituite perché non viene utilizzata una clausola ORDER BY. Nel secondo esempio viene utilizzata una clausola ORDER BY per restituire i primi 10 dipendenti assunti di recente.  
+Negli esempi seguenti viene utilizzato un valore costante per specificare il numero di dipendenti restituiti nel set di risultati della query. Nel primo esempio vengono restituite le prime 10 righe non definite perché non viene usata una clausola ORDER BY. Nel secondo esempio viene utilizzata una clausola ORDER BY per restituire i primi 10 dipendenti assunti di recente.  
   
 ```sql  
 USE AdventureWorks2012;  
@@ -182,8 +182,8 @@ ORDER BY HireDate DESC;
 GO  
 ```  
   
-#### <a name="b-using-top-with-a-variable"></a>B. Utilizzo di TOP con una variabile  
- Nell'esempio seguente viene utilizzata una variabile per specificare il numero di dipendenti restituiti nel set di risultati della query.  
+#### <a name="b-using-top-with-a-variable"></a>b. Utilizzo di TOP con una variabile  
+Nell'esempio seguente viene utilizzata una variabile per specificare il numero di dipendenti restituiti nel set di risultati della query.  
   
 ```sql  
 USE AdventureWorks2012;  
@@ -196,7 +196,7 @@ GO
 ```  
   
 #### <a name="c-specifying-a-percentage"></a>C. Specifica di una percentuale  
- Nell'esempio seguente viene utilizzato PERCENT per specificare il numero di dipendenti restituiti nel set di risultati della query. Nella tabella `HumanResources.Employee` sono presenti 290 dipendenti. Poiché il 5 percento di 290 è un valore frazionario, il valore viene arrotondato al numero intero più vicino.  
+Nell'esempio seguente viene utilizzato PERCENT per specificare il numero di dipendenti restituiti nel set di risultati della query. Nella tabella `HumanResources.Employee` sono presenti 290 dipendenti. Dato che il 5% di 290 è un valore frazionario, il valore viene arrotondato al numero intero successivo.  
   
 ```sql  
 USE AdventureWorks2012;  
@@ -210,7 +210,7 @@ GO
 ###  <a name="tie"></a> Inclusione di valori equivalenti  
   
 #### <a name="a-using-with-ties-to-include-rows-that-match-the-values-in-the-last-row"></a>A. Utilizzo di WITH TIES per includere righe corrispondenti ai valori nell'ultima riga  
- Nell'esempio seguente viene restituita la percentuale `10` di tutti i dipendenti che percepiscono lo stipendio più alto in ordine decrescente in base al salario. `WITH TIES` garantisce che nel set di risultati vengano inclusi anche tutti i dipendenti con uno stipendio pari allo stipendio più basso restituito (ultima riga), anche se in questo modo viene superata la percentuale di dipendenti `10`.  
+L'esempio seguente recupera il primo `10`% di tutti i dipendenti con lo stipendio più alto e restituisce i dipendenti in ordine decrescente in base allo stipendio. Specificando `WITH TIES`, nel set di risultati vengono inclusi anche i dipendenti con stipendio pari allo stipendio più basso restituito (ultima riga), anche se in questo modo il set di risultati supera il `10`% dei dipendenti.  
   
 ```sql  
 USE AdventureWorks2012;  
@@ -229,7 +229,7 @@ GO
 ###  <a name="DML"></a> Limitazione delle righe interessate da DELETE, INSERT o UPDATE  
   
 #### <a name="a-using-top-to-limit-the-number-of-rows-deleted"></a>A. Utilizzo di TOP per limitare il numero di righe eliminate  
- Quando si usa una clausola TOP (*n*) con DELETE, l'operazione di eliminazione viene eseguita su una selezione non definita di un numero *n* di righe. In altre parole, l'istruzione DELETE sceglie un numero (*n*) di righe che soddisfano i criteri definiti nella clausola WHERE. Nell'esempio seguente vengono eliminate `20` righe dalla tabella `PurchaseOrderDetail` con scadenze precedenti al 1 luglio 2002.  
+Quando si usa una clausola TOP (*n*) con DELETE, l'operazione di eliminazione viene eseguita su una selezione non definita di *n* righe. In altre parole, l'istruzione DELETE sceglie un numero (*n*) di righe che soddisfano i criteri definiti nella clausola WHERE. L'esempio seguente elimina `20` righe con scadenze precedenti al 1° luglio 2002 dalla tabella `PurchaseOrderDetail`.  
   
 ```sql  
 USE AdventureWorks2012;  
@@ -240,7 +240,7 @@ WHERE DueDate < '20020701';
 GO  
 ```  
   
- Se è necessario utilizzare TOP per eliminare le righe in un ordine cronologico significativo, è necessario utilizzare TOP insieme a ORDER BY in un'istruzione subselect. Tramite la query seguente vengono eliminate le 10 righe della tabella `PurchaseOrderDetail` contenenti le date di scadenza più imminenti. Per assicurarsi che vengano eliminate solo 10 righe, la colonna specificata nell'istruzione di selezione secondaria (`PurchaseOrderID`) è la chiave primaria della tabella. L'utilizzo di una colonna non chiave nell'istruzione sub-SELECT può avere come conseguenza l'eliminazione di più di 10 righe se la colonna specificata contiene valori duplicati.  
+Se si vuole usare TOP per eliminare le righe in un ordine cronologico significativo, usare TOP con ORDER BY in un'istruzione sub-SELECT. Tramite la query seguente vengono eliminate le 10 righe della tabella `PurchaseOrderDetail` contenenti le date di scadenza più imminenti. Per assicurarsi che vengano eliminate solo 10 righe, la colonna specificata nell'istruzione di selezione secondaria (`PurchaseOrderID`) è la chiave primaria della tabella. L'utilizzo di una colonna non chiave nell'istruzione sub-SELECT può avere come conseguenza l'eliminazione di più di 10 righe se la colonna specificata contiene valori duplicati.  
   
 ```sql  
 USE AdventureWorks2012;  
@@ -253,8 +253,8 @@ WHERE PurchaseOrderDetailID IN
 GO  
 ```  
   
-#### <a name="b-using-top-to-limit-the-number-of-rows-inserted"></a>B. Utilizzo di TOP per limitare il numero di righe inserite  
- Nell'esempio seguente viene creata la tabella `EmployeeSales` in cui vengono inseriti il nome e i dati di vendita da inizio anno per i primi 5 dipendenti dalla tabella `HumanResources.Employee`. L'istruzione INSERT sceglie 5 righe qualsiasi restituite dall'istruzione `SELECT` che soddisfano i criteri definiti nella clausola WHERE.  La clausola OUTPUT consente di visualizzare le righe inserite nella tabella `EmployeeSales`. Si noti che la clausola ORDER BY nell'istruzione SELECT non viene utilizzata per determinare i primi 5 dipendenti.  
+#### <a name="b-using-top-to-limit-the-number-of-rows-inserted"></a>b. Utilizzo di TOP per limitare il numero di righe inserite  
+L'esempio seguente crea la tabella `EmployeeSales` e inserisce il nome e i dati sulle vendite da inizio anno per i primi cinque dipendenti della tabella `HumanResources.Employee`. L'istruzione INSERT sceglie cinque righe qualsiasi restituite dall'istruzione `SELECT` che soddisfano i criteri definiti nella clausola WHERE. La clausola OUTPUT consente di visualizzare le righe inserite nella tabella `EmployeeSales`. Si noti che la clausola ORDER BY nell'istruzione SELECT non viene usate per determinare i primi cinque dipendenti.  
   
 ```sql  
 USE AdventureWorks2012 ;  
@@ -280,7 +280,7 @@ INSERT TOP(5)INTO dbo.EmployeeSales
 GO    
 ```  
   
- Se è necessario utilizzare TOP per inserire righe in un ordine cronologico significativo, è necessario utilizzare questa clausola insieme a ORDER BY in un'istruzione sub-SELECT, come illustrato nell'esempio seguente. La clausola OUTPUT consente di visualizzare le righe inserite nella tabella `EmployeeSales`. I primi 5 dipendenti vengono ora inseriti in base ai risultati della clausola ORDER BY anziché alle righe non definite.  
+Se si vuole usare TOP per inserire le righe in un ordine cronologico significativo, usare TOP con ORDER BY in un'istruzione sub-SELECT. L'esempio seguente illustra come effettuare questa operazione. La clausola OUTPUT consente di visualizzare le righe inserite nella tabella `EmployeeSales`. Si noti che vengono ora inseriti i primi cinque dipendenti in base ai risultati della clausola ORDER BY, anziché righe non definite.  
   
 ```sql  
 INSERT INTO dbo.EmployeeSales  
@@ -295,7 +295,7 @@ GO
 ```  
   
 #### <a name="c-using-top-to-limit-the-number-of-rows-updated"></a>C. Utilizzo di TOP per limitare il numero di righe aggiornate  
- Nell'esempio seguente viene utilizzata la clausola TOP per aggiornare righe in una tabella. Quando si usa una clausola TOP (*n*) con UPDATE, l'operazione di aggiornamento viene eseguita su un numero non definito di righe. In altre parole, l'istruzione UPDATE sceglie un numero (*n*) di righe che soddisfano i criteri definiti nella clausola WHERE. Nell'esempio seguente vengono assegnati 10 clienti da un venditore a un altro.  
+Nell'esempio seguente viene utilizzata la clausola TOP per aggiornare righe in una tabella. Quando si usa una clausola TOP (*n*) con UPDATE, l'operazione di aggiornamento viene eseguita su un numero non definito di righe. In altre parole, l'istruzione UPDATE sceglie un numero (*n*) di righe che soddisfano i criteri definiti nella clausola WHERE. Nell'esempio seguente vengono assegnati 10 clienti da un venditore a un altro.  
   
 ```sql  
 USE AdventureWorks2012;  
@@ -305,7 +305,7 @@ WHERE SalesPersonID = 275;
 GO  
 ```  
   
- Se è necessario utilizzare TOP per applicare gli aggiornamenti in un ordine cronologico significativo, è necessario utilizzare questa clausola insieme a ORDER BY in un'istruzione sub-SELECT. Nell'esempio seguente le ore di ferie dei 10 dipendenti vengono aggiornate con le prime date di assunzione.  
+Se è necessario utilizzare TOP per applicare gli aggiornamenti in un ordine cronologico significativo, è necessario utilizzare questa clausola insieme a ORDER BY in un'istruzione sub-SELECT. Nell'esempio seguente le ore di ferie dei 10 dipendenti vengono aggiornate con le prime date di assunzione.  
   
 ```sql  
 UPDATE HumanResources.Employee  
@@ -317,25 +317,25 @@ GO
 ```  
   
 ## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Esempi: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] e [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
- L'esempio seguente restituisce le prime 31 righe corrispondenti ai criteri di query. La clausola **ORDER BY** viene usata per garantire che le 31 righe restituite sono le prime 31 righe in base a un ordinamento alfabetico della colonna `LastName`.  
+L'esempio seguente restituisce le prime 31 righe corrispondenti ai criteri di query. La clausola **ORDER BY** garantisce che le 31 righe restituite siano le prime 31 righe in base all'ordinamento alfabetico della colonna `LastName`.  
   
- Uso di **TOP** senza specificare i valori equivalenti.  
+Uso di **TOP** senza specificare i valori equivalenti.  
   
 ```sql  
 SELECT TOP (31) FirstName, LastName   
 FROM DimEmployee ORDER BY LastName;  
 ```  
   
- Risultato: vengono restituite 31 righe.  
+Risultato: vengono restituite 31 righe.  
   
- Uso di TOP specificando WITH TIES.  
+Uso di TOP specificando WITH TIES.  
   
 ```sql  
 SELECT TOP (31) WITH TIES FirstName, LastName   
 FROM DimEmployee ORDER BY LastName;  
 ```  
   
- Risultato: vengono restituite 33 righe poiché 3 dipendenti di nome Brown hanno un valore equivalente per la 31esima riga.  
+Risultato: vengono restituite 33 righe perché tre dipendenti di nome Brown hanno un valore equivalente per la 31esima riga.  
   
 ## <a name="see-also"></a>Vedere anche  
  [SELECT &#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md)   
