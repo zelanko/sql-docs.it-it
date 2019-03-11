@@ -19,12 +19,12 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: d79d404e72f13ade55f6bd64f261741d86b78347
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 8637754097be0837f51ef3fda06375abcb084cae
+ms.sourcegitcommit: 71913f80be0cb6f8d3af00c644ee53e3aafdcc44
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52532544"
+ms.lasthandoff: 02/21/2019
+ms.locfileid: "56590436"
 ---
 # <a name="improve-the-performance-of-full-text-indexes"></a>Miglioramento delle prestazioni di indici full-text
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -83,8 +83,8 @@ Il file del log di tipo ricerca per indicizzazione segue lo schema di denominazi
 `SQLFT<DatabaseID\><FullTextCatalogID\>.LOG[<n\>]`
   
 Di seguito sono riportate le parti variabili del nome del file del log di ricerca per indicizzazione.
--   <**IDDatabase**>: ID di un database. <**dbid**> è un numero a cinque cifre con zeri iniziali.  
--   <**IDCatalogoFullText**>: ID del catalogo full-text. <**catid**> è un numero a cinque cifre con zeri iniziali.  
+-   \<**IDDatabase**>: ID di un database. <**dbid**> è un numero a cinque cifre con zeri iniziali.  
+-   <**IDCatalogoFullText**>: ID del catalogo full-text. \<**catid**> è un numero a cinque cifre con zeri iniziali.  
 -   <**n**>: numero intero che indica l'esistenza di uno o più log di ricerca per indicizzazione per lo stesso catalogo full-text.  
   
  Ad esempio, `SQLFT0000500008.2` è il file del log di ricerca per indicizzazione per un database con ID database = 5 e ID catalogo full-text = 8. Il 2 alla fine del nome file indica che sono disponibili due file del log di tipo ricerca per indicizzazione per questa coppia di database/catalogo.  
@@ -142,7 +142,7 @@ Per informazioni essenziali sulle formule seguenti, vedere le note dopo la tabel
 2.  500 MB è una stima della memoria necessaria per gli altri processi del sistema. Se nel sistema sono in corso processi aggiuntivi, aumentare questo valore di conseguenza.  
 3.  .*ism_size* sia 8 MB per le piattaforme x64.  
   
- #### <a name="example-estimate-the-memory-requirements-of-fdhostexe"></a>Esempio: Stima dei requisiti di memoria di fdhost.exe  
+ #### <a name="example-estimate-the-memory-requirements-of-fdhostexe"></a>Esempio: stima dei requisiti di memoria di fdhost.exe  
   
  Questo esempio è relativo a un computer a 64 bit con 8 GB di RAM e 4 processori dual core. Il primo calcolo consente di stimare i requisiti di memoria di fdhost.exe, ovvero*F*. Il numero di intervalli di ricerca per indicizzazione è `8`.  
   
@@ -152,7 +152,7 @@ Per informazioni essenziali sulle formule seguenti, vedere le note dopo la tabel
   
  `M = 8192-640-500=7052`  
   
- #### <a name="example-setting-max-server-memory"></a>Esempio: Impostazione del valore max server memory  
+ #### <a name="example-setting-max-server-memory"></a>Esempio: impostazione della memoria massima del server  
   
  Questo esempio usa le istruzioni [sp_configure](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md) e [RECONFIGURE](../../t-sql/language-elements/reconfigure-transact-sql.md) [!INCLUDE[tsql](../../includes/tsql-md.md)] per impostare **max server memory** sul valore calcolato per *M* nell'esempio precedente, `7052`:  
   

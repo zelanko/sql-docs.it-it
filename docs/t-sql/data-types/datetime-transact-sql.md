@@ -23,18 +23,15 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 0297c6aa82ff318d7e00ee022a5f9b25ad309358
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: b4b6b8e386ee8391ab40bf6152d3c8c3cf6e315f
+ms.sourcegitcommit: a13256f484eee2f52c812646cc989eb0ce6cf6aa
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56012122"
+ms.lasthandoff: 02/25/2019
+ms.locfileid: "56801575"
 ---
 # <a name="datetime-transact-sql"></a>datetime (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
-
-> [!div class="nextstepaction"]
-> [Condividi il feedback sul sommario della documentazione SQL](https://aka.ms/sqldocsurvey)
 
 Definisce una data costituita dalla combinazione di un'ora del giorno e di secondi frazionari ed espressa nel formato 24 ore.
   
@@ -56,7 +53,7 @@ Definisce una data costituita dalla combinazione di un'ora del giorno e di secon
 |Dimensioni dello spazio di archiviazione|8 byte|  
 |Accuratezza|Arrotondato a incrementi di 0,000, 0,003 o 0,007 secondi|  
 |Valore predefinito|1900-01-01 00:00:00|  
-|Calendario|Gregoriano. Non è incluso l'intervallo completo di anni.|  
+|Calendario|Gregoriano (non include l'intervallo completo di anni)|  
 |Precisione in secondi frazionari definita dall'utente|no|  
 |Considerazione e conservazione delle differenze di fuso orario|no|  
 |Considerazione dell'ora legale|no|  
@@ -66,15 +63,15 @@ Nelle tabelle seguenti sono elencati i formati di valore letterale stringa suppo
   
 |Numeric|Descrizione|  
 |---|---|
-|Formati di data:<br /><br /> [0]4/15/[19]96 -- (mga)<br /><br /> [0]4-15-[19]96 -- (mga)<br /><br /> [0]4.15.[19]96 -- (mga)<br /><br /> [0]4/[19]96/15 -- (mag)<br /><br /> 15/[0]4/[19]96 -- (gma)<br /><br /> 15/[19]96/[0]4 -- (gam)<br /><br /> [19]96/15/[0]4 -- (agm)<br /><br /> [19]96/[0]4/15 -- (amg)<br /><br /> Formati di ora:<br /><br /> 14:30<br /><br /> 14:30[:20:999]<br /><br /> 14:30[:20.9]<br /><br /> 4am<br /><br /> 4 PM|È possibile specificare i dati relativi alla data specificando il mese in formato numerico. Ad esempio, 5/20/97 rappresenta il ventesimo giorno di maggio 1997. Quando si utilizza il formato di data numerico, specificare il mese, il giorno e l'anno all'interno della stessa stringa utilizzando come separatori la barra (/), il segno meno (-) o il punto (.). Il formato corretto è il seguente:<br /><br /> *numero separatore numero separatore numero[ora] [ora]*<br /><br /> <br /><br /> Quando l'impostazione della lingua è **us_english**, l'ordine predefinito di visualizzazione della data è mga. È possibile modificare il formato di data mediante l'istruzione [SET DATEFORMAT](../../t-sql/statements/set-dateformat-transact-sql.md).<br /><br /> L'impostazione dell'istruzione SET DATEFORMAT determina la modalità di interpretazione dei valori di data. Se l'ordine non corrisponde all'impostazione, i valori non vengono interpretati come date perché non compresi nell'intervallo valido oppure non vengono interpretati correttamente. La data 12/10/08 può ad esempio essere interpretata in sei modi diversi a seconda dell'impostazione di DATEFORMAT. Un anno in quattro parti è interpretato come anno.|  
+|Formati di data:<br /><br /> [0]4/15/[19]96 -- (mga)<br /><br /> [0]4-15-[19]96 -- (mga)<br /><br /> [0]4.15.[19]96 -- (mga)<br /><br /> [0]4/[19]96/15 -- (mag)<br /><br /> 15/[0]4/[19]96 -- (gma)<br /><br /> 15/[19]96/[0]4 -- (gam)<br /><br /> [19]96/15/[0]4 -- (agm)<br /><br /> [19]96/[0]4/15 -- (amg)<br /><br /> Formati di ora:<br /><br /> 14:30<br /><br /> 14:30[:20:999]<br /><br /> 14:30[:20.9]<br /><br /> 4am<br /><br /> 4 PM|È possibile specificare i dati relativi alla data specificando il mese in formato numerico. Ad esempio, 5/20/97 rappresenta il ventesimo giorno di maggio 1997. Quando si utilizza il formato di data numerico, specificare il mese, il giorno e l'anno all'interno della stessa stringa utilizzando come separatori la barra (/), il segno meno (-) o il punto (.). Il formato corretto è il seguente:<br /><br /> *numero separatore numero separatore numero[ora] [ora]*<br /><br /> <br /><br /> Quando l'impostazione della lingua è **us_english**, l'ordine predefinito di visualizzazione della data è mga. È possibile modificare il formato di data mediante l'istruzione [SET DATEFORMAT](../../t-sql/statements/set-dateformat-transact-sql.md).<br /><br /> L'impostazione dell'istruzione SET DATEFORMAT determina la modalità di interpretazione dei valori di data. Se l'ordine non corrisponde all'impostazione, i valori non vengono interpretati come date. Le date non in ordine potrebbero essere erroneamente interpretate come fuori intervallo o con valori errati. La data 12/10/08 può ad esempio essere interpretata in sei modi diversi a seconda dell'impostazione di DATEFORMAT. Un anno in quattro parti è interpretato come anno.|  
   
 |Espressione alfabetica|Descrizione|  
 |---|---|
-|Apr[ile] [15][,] 1996<br /><br /> Apr[ile] 15[,] [19]96<br /><br /> Apr[ile] 1996 [15]<br /><br /> [15] Apr[ile][,] 1996<br /><br /> 15 Apr[ile][,][19]96<br /><br /> 15 [19]96 apr[ile]<br /><br /> [15] 1996 apr[ile]<br /><br /> 1996 APR[ILE] [15]<br /><br /> 1996 [15] APR[ILE]|È possibile specificare dati relativi alla data con il mese specificato con il nome completo. Ad esempio, aprile o l'abbreviazione del mese di aprile specificata nel linguaggio corrente. Le virgole sono facoltative e l'uso delle maiuscole è ignorato.<br /><br /> Di seguito vengono riportate alcune linee guida per l'utilizzo dei formati di data alfabetici:<br /><br /> 1) Racchiudere data e ora tra virgolette singole ('). Per le lingue diverse dall'inglese, utilizzare N'<br /><br /> 2) I caratteri inclusi tra parentesi sono facoltativi.<br /><br /> 3) Se si specificano solo le ultime due cifre dell'anno, i valori minori delle ultime due cifre del valore impostato nell'opzione di configurazione [Cambio data per anno a due cifre](../../database-engine/configure-windows/configure-the-two-digit-year-cutoff-server-configuration-option.md) vengono interpretati come appartenenti allo stesso secolo dell'anno di cambio data. I valori maggiori o uguali al valore di questa opzione vengono interpretati come appartenenti al secolo che precede l'anno di cambio data. Se ad esempio il valore di **Cambio data per anno a due cifre** è 2050 (impostazione predefinita), 25 viene interpretato come 2025 mentre 50 viene interpretato come 1950. Per evitare ambiguità, esprimere gli anni nel formato a quattro cifre.<br /><br /> 4) Se manca il giorno, viene inserito il primo giorno del mese.<br /><br /> <br /><br /> Quando si specifica il mese in formato alfabetico, l'impostazione SET DATEFORMAT della sessione non viene applicata.|  
+|Apr[ile] [15][,] 1996<br /><br /> Apr[ile] 15[,] [19]96<br /><br /> Apr[ile] 1996 [15]<br /><br /> [15] Apr[ile][,] 1996<br /><br /> 15 Apr[ile][,][19]96<br /><br /> 15 [19]96 apr[ile]<br /><br /> [15] 1996 apr[ile]<br /><br /> 1996 APR[ILE] [15]<br /><br /> 1996 [15] APR[ILE]|È possibile specificare dati relativi alla data con il mese specificato con il nome completo. Ad esempio, aprile o l'abbreviazione del mese di aprile specificata nel linguaggio corrente. Le virgole sono facoltative e l'uso delle maiuscole è ignorato.<br /><br /> Di seguito vengono riportate alcune linee guida per l'utilizzo dei formati di data alfabetici:<br /><br /> 1) Racchiudere data e ora tra virgolette singole ('). Per le lingue diverse dall'inglese, utilizzare N'<br /><br /> 2) I caratteri inclusi tra parentesi sono facoltativi.<br /><br /> 3) Se si specificano solo le ultime due cifre dell'anno, i valori minori delle ultime due cifre del valore impostato nell'opzione di configurazione [Cambio data per anno a due cifre](../../database-engine/configure-windows/configure-the-two-digit-year-cutoff-server-configuration-option.md) vengono interpretati come appartenenti allo stesso secolo dell'anno di cambio data. I valori maggiori o uguali al valore di questa opzione vengono interpretati come appartenenti al secolo che precede l'anno di cambio data. Se ad esempio il valore di **Cambio data per anno a due cifre** è 2050 (impostazione predefinita), 25 viene interpretato come 2025 mentre 50 viene interpretato come 1950. Per evitare ambiguità, esprimere gli anni nel formato a quattro cifre.<br /><br /> 4) Se manca il giorno, viene inserito il primo giorno del mese.<br /><br /> <br /><br /> Quando si specifica il mese in formato alfabetico, l'impostazione di SET DATEFORMAT della sessione non viene applicata.|  
   
 |ISO 8601|Descrizione|  
 |---|---|
-|AAAA-MM-GGThh:mm:ss [.mmm]<br /><br /> AAAAMMGG[ hh:mm:ss[.mmm]]|Esempi:<br /><br /> 1) 2004-05-23T14:25:10<br /><br /> 2) 2004-05-23T14:25:10.487<br /><br /> <br /><br /> Per utilizzare il formato ISO 8601, è necessario specificare ogni elemento in tale formato, inclusi il carattere **T**, i due punti (:) e il punto (.) presenti nel formato.<br /><br /> Le parentesi indicano che la frazione del componente dei secondi è facoltativa. Il componente dell'ora viene specificato nel formato 24 ore.<br /><br /> Il carattere T indica l'inizio della parte dell'ora del valore **datetime**.<br /><br /> Il vantaggio dell'utilizzo del formato ISO 8601 consiste nel fatto che è uno standard internazionale con specifiche chiare. Le impostazioni di SET DATEFORMAT o [SET LANGUAGE](../../t-sql/statements/set-language-transact-sql.md) non influiscono sul formato.|  
+|AAAA-MM-GGThh:mm:ss [.mmm]<br /><br /> AAAAMMGG[ hh:mm:ss[.mmm]]|Esempi:<br /><br /> 1) 2004-05-23T14:25:10<br /><br /> 2) 2004-05-23T14:25:10.487<br /><br /> <br /><br /> Per usare il formato ISO 8601 è necessario specificare ogni elemento in tale formato, includendo il carattere **T**, i due punti (:) e il punto (.) in esso presenti.<br /><br /> Le parentesi indicano che la frazione del componente dei secondi è facoltativa. Il componente dell'ora viene specificato nel formato 24 ore.<br /><br /> Il carattere T indica l'inizio della parte dell'ora del valore **datetime**.<br /><br /> Il vantaggio dell'utilizzo del formato ISO 8601 consiste nel fatto che è uno standard internazionale con specifiche chiare. L'impostazione di SET DATEFORMAT o [SET LANGUAGE](../../t-sql/statements/set-language-transact-sql.md) non influisce su questo formato.|  
   
 |Senza separatori|Descrizione|  
 |---|---|
@@ -95,15 +92,15 @@ I valori **datetime** vengono arrotondati con incrementi di 0,000, 0,003 o 0,007
 |01/01/98 23:59:59.990<br /><br /> 01/01/98 23:59:59.991|1998-01-01 23:59:59.990|  
   
 ## <a name="ansi-and-iso-8601-compliance"></a>Conformità agli standard ANSI e ISO 8601  
-**datetime** non è conforme agli standard ANSI o ISO 8601.
+**datetime** non è conforme agli standard ANSI e ISO 8601.
   
 ##  <a name="_datetime"></a>Conversione dei dati relativi alla data e all'ora  
-Nella conversione di tipi di dati relativi alla data e all'ora, in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] vengono rifiutati tutti i valori non riconosciuti come date o orari. Per informazioni sull'uso delle funzioni CAST e CONVERT con i dati relativi a data e ora, vedere [CAST e CONVERT &#40;Transact-SQL&#41;](../../t-sql/functions/cast-and-convert-transact-sql.md).
+Quando si esegue la conversione in tipi di dati di data e ora, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] rifiuta tutti i valori che non può riconoscere come date o ore. Per informazioni sull'uso delle funzioni CAST e CONVERT con i dati relativi a data e ora, vedere [CAST e CONVERT &#40;Transact-SQL&#41;](../../t-sql/functions/cast-and-convert-transact-sql.md).
   
 ### <a name="converting-other-date-and-time-types-to-the-datetime-data-type"></a>Conversione di altri tipi di data e ora nel tipo di dati datetime 
 Nella sezione seguente viene descritto il risultato della conversione di altri tipi di dati di data e ora nel tipo di dati **datetime**.  
   
-Quando la conversione è da **date** vengono copiati l'anno, il mese e il giorno. Il componente relativo all'ora viene impostato su 00:00:00.000. Nel codice seguente vengono illustrati i risultati della conversione di un valore `date` in un valore `datetime`.  
+Quando viene eseguita la conversione da **date**, vengono copiati anno, mese e giorno. Il componente relativo all'ora viene impostato su 00:00:00.000. Nel codice seguente vengono illustrati i risultati della conversione di un valore `date` in un valore `datetime`.  
   
 ```sql
 DECLARE @date date = '12-21-16';  

@@ -13,15 +13,15 @@ helpviewer_keywords:
 ms.assetid: d1b8dbf0-4462-402e-92dd-0e4835002b6e
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: a5dd1e17cbef4dd716959c38d852b2a8def8853a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 35178456afe22fe89bd849b61a3e4e67166367be
+ms.sourcegitcommit: c0e1db7cd1081e94a3a526136a5e166df646c9ba
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47849469"
+ms.lasthandoff: 02/20/2019
+ms.locfileid: "56444226"
 ---
 # <a name="role-definitions"></a>Definizioni di ruolo
-  In [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] per *definizione**del ruolo* si intende una raccolta denominata di attività che definiscono le operazioni disponibili in un server di report. Le definizioni di ruolo rendono disponibili le regole utilizzate dal server di report per implementare la sicurezza. Quando un utente tenta di eseguire un'attività, ad esempio la pubblicazione di un report, nel server di report viene innanzitutto valutata l'assegnazione di ruolo dell'utente per stabilire se questa attività è inclusa nella relativa definizione di ruolo. Se l'attività è inclusa nella definizione di ruolo, la richiesta viene inoltrata.  
+  In [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] per *definizione del ruolo* si intende una raccolta denominata di attività che definisce le operazioni disponibili in un server di report. Le definizioni di ruolo rendono disponibili le regole utilizzate dal server di report per implementare la sicurezza. Quando un utente tenta di eseguire un'attività, ad esempio la pubblicazione di un report, nel server di report viene innanzitutto valutata l'assegnazione di ruolo dell'utente per stabilire se questa attività è inclusa nella relativa definizione di ruolo. Se l'attività è inclusa nella definizione di ruolo, la richiesta viene inoltrata.  
   
 ## <a name="using-roles-to-authorize-access-to-a-report-server"></a>Utilizzo dei ruoli per autorizzare l'accesso al server di report  
  Un ruolo diventa operativo solo quando viene utilizzato in un'assegnazione di ruolo. Per altre informazioni sulla sicurezza tramite i ruoli, vedere [Assegnazioni di ruolo](../../reporting-services/security/role-assignments.md).  
@@ -39,7 +39,7 @@ ms.locfileid: "47849469"
  Per altre informazioni, vedere [Ruoli predefiniti](../../reporting-services/security/role-definitions-predefined-roles.md).  
   
 ## <a name="creating-a-role-definition"></a>Creazione di una definizione di ruolo  
- Per creare un ruolo, utilizzare Management Studio per specificare un nome e le attività che contiene. È necessario creare una definizione di ruolo distinta per le attività a livello di elemento e di sistema. Nei ruoli è possibile includere attività a livello di sistema o di elemento, ma non entrambe. Per creare una definizione di ruolo è necessario specificare un nome e scegliere un set di attività per questa definizione. Per creare una definizione di ruolo, è necessario disporre delle autorizzazioni appropriate. Queste autorizzazioni vengono concesse tramite l'attività "Impostazione della sicurezza per singoli elementi". Per impostazione predefinita, questa attività può essere eseguita dagli amministratori e dagli utenti con ruolo predefinito **Gestione contenuto** .  
+ Per creare un ruolo, utilizzare Management Studio per specificare un nome e le attività che contiene. È necessario creare definizioni di ruolo separate per le attività a livello di elemento e di sistema. Nei ruoli è possibile includere attività a livello di sistema o di elemento, ma non entrambe. Per creare una definizione di ruolo è necessario specificare un nome e scegliere un set di attività per questa definizione. Per creare una definizione di ruolo, è necessario disporre delle autorizzazioni appropriate. Queste autorizzazioni vengono concesse tramite l'attività "Impostazione della sicurezza per singoli elementi". Per impostazione predefinita, questa attività può essere eseguita dagli amministratori e dagli utenti con ruolo predefinito **Gestione contenuto** .  
   
  Un ruolo deve avere un nome univoco. Per essere valida, la definizione deve contenere almeno un'attività. Per altre informazioni, vedere [Attività e autorizzazioni](../../reporting-services/security/tasks-and-permissions.md).  
   

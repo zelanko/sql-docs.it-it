@@ -23,12 +23,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: b2d89750c6ddac45af82824b2449c9e415561814
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: d44e6621e4d5f9535752cf8b6f74c4dbcd404d8a
+ms.sourcegitcommit: a13256f484eee2f52c812646cc989eb0ce6cf6aa
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56031002"
+ms.lasthandoff: 02/25/2019
+ms.locfileid: "56802258"
 ---
 # <a name="smalldatetime-transact-sql"></a>smalldatetime (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -47,26 +47,26 @@ Definisce una data combinata con un'ora del giorno. L'ora si basa su un formato 
 |Formati predefiniti dei valori letterali stringa<br /><br /> (utilizzato per client legacy)|Non applicabile|  
 |Intervallo di date|da 01-01-1900 a 06-06-2079<br /><br /> Da 1 gennaio 1900 a 6 giugno 2079|  
 |Intervallo di ore|Da 00:00:00 a 23:59:59<br /><br /> 2007-05-09 23:59:59 verrà arrotondato a<br /><br /> 2007-05-10 00:00:00|  
-|Intervalli di elementi|AAAA rappresenta un numero di quattro cifre, compreso tra 1900 e 2079, indicante l'anno.<br /><br /> MM rappresenta un numero di due cifre compreso tra 01 e 12 indicante un mese dell'anno specificato.<br /><br /> GG rappresenta un numero di due cifre compreso tra 01 e 31, a seconda del mese, indicante il giorno del mese specificato.<br /><br /> hh rappresenta un numero di due cifre compreso tra 00 e 23 indicante l'ora.<br /><br /> mm rappresenta un numero di due cifre compreso tra 00 e 59 indicante i minuti.<br /><br /> ss rappresenta un numero di due cifre compreso tra 00 e 59 indicante i secondi. I valori minori o uguali a 29,998 secondi vengono arrotondati al minuto per difetto. I valori maggiori o uguali a 29,999 secondi vengono arrotondati al minuto per eccesso.|  
+|Intervalli di elementi|AAAA rappresenta un numero di quattro cifre, compreso tra 1900 e 2079, indicante l'anno.<br /><br /> MM rappresenta un numero di due cifre compreso tra 01 e 12 indicante un mese dell'anno specificato.<br /><br /> GG rappresenta un numero di due cifre compreso tra 01 e 31, a seconda del mese, indicante il giorno del mese specificato.<br /><br /> hh rappresenta un numero di due cifre compreso tra 00 e 23 indicante l'ora.<br /><br /> mm rappresenta un numero di due cifre compreso tra 00 e 59 indicante i minuti.<br /><br /> ss rappresenta un numero di due cifre compreso tra 00 e 59 indicante i secondi. I valori minori o uguali a 29,998 secondi vengono arrotondati per difetto al minuto più vicino. I valori maggiori o uguali a 29,999 secondi vengono arrotondati per eccesso al minuto più vicino.|  
 |Lunghezza in caratteri|Massimo 19 posizioni|  
 |Dimensioni dello spazio di archiviazione|4 byte, fissa.|  
 |Accuratezza|Un minuto|  
 |Valore predefinito|1900-01-01 00:00:00|  
-|Calendario|Gregoriano<br /><br /> Non è incluso l'intervallo completo di anni.|  
+|Calendario|Gregoriano<br /><br /> (non include l'intervallo completo di anni)|  
 |Precisione in secondi frazionari definita dall'utente|no|  
 |Considerazione e conservazione delle differenze di fuso orario|no|  
 |Considerazione dell'ora legale|no|  
   
 ## <a name="ansi-and-iso-8601-compliance"></a>Conformità agli standard ANSI e ISO 8601  
-**smalldatetime** non è conforme agli standard ANSI o ISO 8601.
+**smalldatetime** non è conforme agli standard ANSI e ISO 8601.
   
 ## <a name="converting-date-and-time-data"></a>Conversione dei dati relativi a data e ora
-Nella conversione di tipi di dati relativi alla data e all'ora, in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] vengono rifiutati tutti i valori non riconosciuti come date o orari. Per informazioni sull'uso delle funzioni CAST e CONVERT con i dati relativi a data e ora, vedere [CAST e CONVERT &#40;Transact-SQL&#41;](../../t-sql/functions/cast-and-convert-transact-sql.md).
+Quando si esegue la conversione in tipi di dati di data e ora, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] rifiuta tutti i valori che non può riconoscere come date o ore. Per informazioni sull'uso delle funzioni CAST e CONVERT con i dati relativi a data e ora, vedere [CAST e CONVERT &#40;Transact-SQL&#41;](../../t-sql/functions/cast-and-convert-transact-sql.md).
   
 ### <a name="converting-smalldatetime-to-other-date-and-time-types"></a>Conversione del tipo di dati smalldatetime in altri tipi di dati relativi a data e ora
 Nella sezione seguente viene descritto il risultato della conversione di un tipo di dati **smalldatetime** in altri tipi di dati relativi a data e ora.
   
-Nel caso della conversione a **date** vengono copiati l'anno, il mese e il giorno. Nel codice seguente vengono illustrati i risultati della conversione di un valore `smalldatetime` in un valore `date`.
+In caso di conversione in **date**, vengono copiati anno, mese e giorno. Nel codice seguente vengono illustrati i risultati della conversione di un valore `smalldatetime` in un valore `date`.
   
 ```sql
 DECLARE @smalldatetime smalldatetime = '1955-12-13 12:43:10';  
@@ -114,7 +114,7 @@ SELECT @smalldatetime AS '@smalldatetime', @datetime AS 'datetime';
 --(1 row(s) affected)  
 ```  
   
-Nel caso della conversione a **datetimeoffset(n)** il valore **smalldatetime** viene copiato nel valore **datetimeoffset(n)**. I secondi frazionari vengono impostati su 0, mentre la differenza di fuso orario viene impostata su +00:0. Nel codice seguente vengono illustrati i risultati della conversione di un valore `smalldatetime` in un valore `datetimeoffset(4)`.
+In caso di conversione in **datetimeoffset(n)**, il valore **smalldatetime** viene copiato nel valore **datetimeoffset(n)**. I secondi frazionari vengono impostati su 0, mentre la differenza di fuso orario viene impostata su +00:0. Nel codice seguente vengono illustrati i risultati della conversione di un valore `smalldatetime` in un valore `datetimeoffset(4)`.
   
 ```sql
 DECLARE @smalldatetime smalldatetime = '1955-12-13 12:43:10';  
@@ -191,5 +191,4 @@ SELECT
   
 ## <a name="see-also"></a>Vedere anche
 [CAST e CONVERT &#40;Transact-SQL&#41;](../../t-sql/functions/cast-and-convert-transact-sql.md)
-  
   

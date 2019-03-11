@@ -1,7 +1,7 @@
 ---
 title: Stima della cardinalità (SQL Server) | Microsoft Docs
 ms.custom: ''
-ms.date: 09/06/2017
+ms.date: 02/24/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -16,17 +16,37 @@ author: julieMSFT
 ms.author: jrasnick
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 4f827b1de0a9cba06a17fc2b84724277e9daab22
-ms.sourcegitcommit: 40c3b86793d91531a919f598dd312f7e572171ec
+ms.openlocfilehash: ca1168e0e101f8d8d8c5ae75636f2923faf7e2a1
+ms.sourcegitcommit: 8664c2452a650e1ce572651afeece2a4ab7ca4ca
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53328851"
+ms.lasthandoff: 02/26/2019
+ms.locfileid: "56828021"
 ---
 # <a name="cardinality-estimation-sql-server"></a>Stima della cardinalità (SQL Server)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
-Questo articolo illustra come valutare e scegliere la migliore configurazione di stima della cardinalità per il sistema SQL. Per la maggior parte dei sistemi è disponibile la stima della cardinalità più recente perché è la più accurata. La stima della cardinalità prevede il numero di righe che verranno probabilmente restituite dalla query. La stima della cardinalità è usata da Query Optimizer per generare il piano di query ottimale. Con stime più accurate, Query Optimizer è in genere in grado di produrre un piano di query migliore.  
+Query Optimizer di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] è un'utilità di ottimizzazione basata sui costi. Questo significa che vengono selezionati i piani di query con il minor costo di elaborazione stimato per l'esecuzione. Query Optimizer determina il costo di esecuzione di un piano di query in base a due fattori principali:
+
+- Numero totale di righe elaborate a ogni livello del piano di query, detto cardinalità del piano.
+- Modello di costo dell'algoritmo determinato dagli operatori utilizzati nella query.
+
+Il primo fattore, ovvero la cardinalità, viene utilizzato come parametro di input del secondo fattore, ovvero il modello di costo. Una migliore cardinalità comporta pertanto costi stimati migliori e, di conseguenza, piani di esecuzione più rapidi.
+
+In SQL Server [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] la stima di cardinalità deriva principalmente da istogrammi creati al momento della creazione di indici o statistiche, in modo manuale o automatico. In alcuni casi, per determinare la cardinalità in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] vengono inoltre utilizzate le informazioni sui vincoli e le riscritture logiche delle query.
+
+Nei casi seguenti, in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] non è possibile eseguire un controllo accurato delle cardinalità. Questo comporta calcoli dei costi non accurati che potrebbero portare a piani di query non ottimali. Evitando questi costrutti nelle query, è possibile migliorare le prestazioni. In alcuni casi, è possibile ricorrere a formulazioni di query alternative o ad altre misure, indicate di seguito:
+
+- Query con predicati che utilizzano operatori di confronto tra colonne della stessa tabella.
+- Query con predicati che utilizzano operatori e una delle seguenti condizioni è vera:
+  - Non vi sono statistiche nelle colonne coinvolte a destra o a sinistra degli operatori.
+  - La distribuzione dei valori nelle statistiche non è uniforme, ma la query cerca un set di valori estremamente selettivo. Questa situazione si verifica in particolare se l'operatore è diverso dall'operatore di uguaglianza (=).
+  - Il predicato usa l'operatore di confronto diverso da (!=) o l'operatore logico `NOT`.
+- Query che usano qualsiasi funzione predefinita di SQL Server o una funzione definita dall'utente a valori scalari il cui argomento non è un valore costante.
+- Query che implicano il join di colonne attraverso operatori aritmetici o di concatenazione delle stringhe.
+- Query che confrontano variabili i cui valori non sono noti al momento della compilazione e dell'ottimizzazione della query.
+
+Questo articolo illustra come valutare e scegliere la migliore configurazione di stima della cardinalità per il sistema. Per la maggior parte dei sistemi è disponibile la stima della cardinalità più recente perché è la più accurata. La stima della cardinalità prevede il numero di righe che verranno probabilmente restituite dalla query. La stima della cardinalità è usata da Query Optimizer per generare il piano di query ottimale. Con stime più accurate, Query Optimizer è in genere in grado di produrre un piano di query migliore.  
   
 Il sistema di applicazioni può includere una query importante il cui piano viene configurato su un piano più lento a causa della nuova stima di cardinalità. Una query di questo tipo potrebbe essere simile quanto segue:  
   

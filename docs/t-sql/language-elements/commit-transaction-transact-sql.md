@@ -30,19 +30,19 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 3b4a2ef2ec0367bdae858578f07cc062fd5cf50d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 7f35a455b23d9fed53d40810a4aac87353458f11
+ms.sourcegitcommit: a13256f484eee2f52c812646cc989eb0ce6cf6aa
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47799409"
+ms.lasthandoff: 02/25/2019
+ms.locfileid: "56801455"
 ---
 # <a name="commit-transaction-transact-sql"></a>COMMIT TRANSACTION (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-  Contrassegna la fine di una transazione esplicita o implicita completata correttamente. Se il valore di @@TRANCOUNT è 1, COMMIT TRANSACTION rende permanenti nel database tutte le modifiche dei dati apportate dall'inizio della transazione, libera le risorse usate dalla transazione e decrementa il valore di @@TRANCOUNT a 0. Se il valore di @@TRANCOUNT è maggiore di 1, COMMIT TRANSACTION decrementa il valore di @@TRANCOUNT di una sola unità e la transazione rimane attiva.  
+  Contrassegna la fine di una transazione esplicita o implicita completata correttamente. Se il valore di @@TRANCOUNT è 1, COMMIT TRANSACTION rende permanenti nel database tutte le modifiche apportate ai dati dall'inizio della transazione, libera le risorse della transazione e decrementa il valore di @@TRANCOUNT a 0. Se il valore di @@TRANCOUNT è superiore a 1, COMMIT TRANSACTION decrementa @@TRANCOUNT solo di 1 e la transazione rimane attiva.  
   
- ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icona di collegamento a un articolo](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un articolo")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -65,7 +65,7 @@ COMMIT [ TRAN | TRANSACTION ]
  *transaction_name*  
  **SI APPLICA A:** SQL Server e database SQL di Azure
  
- Ignorato dal [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]. *transaction_name* consente di specificare il nome di una transazione assegnato da un'istruzione BEGIN TRANSACTION precedente. *transaction_name* deve essere conforme alle regole relative agli identificatori ma non può superare i 32 caratteri. *transaction_name* può essere usato per facilitare la lettura del codice da parte dei programmatori, indicando quale istruzione BEGIN TRANSACTION annidata è associata a COMMIT TRANSACTION.  
+ Ignorato dal [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]. *transaction_name* consente di specificare il nome di una transazione assegnato da un'istruzione BEGIN TRANSACTION precedente. *transaction_name* deve essere conforme alle regole relative agli identificatori, ma non può superare i 32 caratteri. *transaction_name* indica ai programmatori quale istruzione BEGIN TRANSACTION annidata è associata a COMMIT TRANSACTION.  
   
  *@tran_name_variable*  
  **SI APPLICA A:** SQL Server e database SQL di Azure  
@@ -75,18 +75,18 @@ Nome di una variabile definita dall'utente contenente un nome di transazione val
  DELAYED_DURABILITY  
  **SI APPLICA A:** SQL Server e database SQL di Azure   
 
- Opzione che richiede il commit della transazione con durabilità posticipata. La richiesta viene ignorata se il database è stato modificato con `DELAYED_DURABILITY = DISABLED` o `DELAYED_DURABILITY = FORCED`. Per altre informazioni, vedere l'argomento [Controllare la durabilità delle transazioni](../../relational-databases/logs/control-transaction-durability.md).  
+ Opzione che richiede il commit della transazione con durabilità ritardata. La richiesta viene ignorata se il database è stato modificato con `DELAYED_DURABILITY = DISABLED` o `DELAYED_DURABILITY = FORCED`. Per altre informazioni, vedere [Controllo della durabilità delle transazioni](../../relational-databases/logs/control-transaction-durability.md).  
   
 ## <a name="remarks"></a>Remarks  
- È compito del programmatore di [!INCLUDE[tsql](../../includes/tsql-md.md)] eseguire l'istruzione COMMIT TRANSACTION solo quando tutti i dati a cui la transazione fa riferimento sono logicamente corretti.  
+ È compito del programmatore [!INCLUDE[tsql](../../includes/tsql-md.md)] eseguire COMMIT TRANSACTION solo quando tutti i dati a cui la transazione fa riferimento sono logicamente corretti.  
   
- Se la transazione di cui è stato eseguito il commit è una transazione distribuita di [!INCLUDE[tsql](../../includes/tsql-md.md)], l'istruzione COMMIT TRANSACTION attiva l'utilizzo di un protocollo di commit in due fasi in MS DTC per il commit di tutti i server coinvolti nella transazione. Se una transazione locale si estende su due o più database nella stessa istanza di [!INCLUDE[ssDE](../../includes/ssde-md.md)], per eseguire il commit di tutti i database coinvolti nella transazione viene utilizzato un commit a due fasi interno.  
+ Se la transazione di cui è stato eseguito il commit è una transazione distribuita di [!INCLUDE[tsql](../../includes/tsql-md.md)], l'istruzione COMMIT TRANSACTION attiva l'utilizzo di un protocollo di commit in due fasi in MS DTC per il commit di tutti i server coinvolti nella transazione. Quando una transazione locale include due o più database nella stessa istanza del [!INCLUDE[ssDE](../../includes/ssde-md.md)], l'istanza esegue il commit di tutti i database coinvolti nella transazione usando un commit in due fasi interno.  
   
- Quando viene eseguito in transazioni nidificate, il commit delle transazioni interne non libera risorse o non rende permanenti le modifiche. Queste operazioni vengono eseguite solo durante il commit delle transazioni esterne. Ogni COMMIT TRANSACTION eseguita quando il valore di @@TRANCOUNT è maggiore di 1 decrementa il valore di @@TRANCOUNT di una unità. Quando il valore di @@TRANCOUNT risulta uguale a 0, viene eseguito il commit dell'intera transazione esterna. Poiché *transaction_name* viene ignorato dal [!INCLUDE[ssDE](../../includes/ssde-md.md)], l'esecuzione di COMMIT TRANSACTION con riferimento al nome di una transazione esterna quando esistono transazioni interne in attesa comporta la riduzione del valore di @@TRANCOUNT di una unità.  
+ Se usati in transazioni annidate, i commit delle transazioni interne non liberano le risorse o non rendono permanenti le modifiche. Queste operazioni vengono eseguite solo durante il commit delle transazioni esterne. Ogni istruzione COMMIT TRANSACTION eseguita quando il valore di @@TRANCOUNT è superiore a uno decrementa semplicemente @@TRANCOUNT di 1. Quando il valore di @@TRANCOUNT risulta uguale a 0, viene eseguito il commit dell'intera transazione esterna. Poiché *transaction_name* viene ignorato dal [!INCLUDE[ssDE](../../includes/ssde-md.md)], l'esecuzione di COMMIT TRANSACTION con riferimento al nome di una transazione esterna quando esistono transazioni interne in attesa comporta la riduzione del valore di @@TRANCOUNT di una unità.  
   
- L'esecuzione di COMMIT TRANSACTION quando @@TRANCOUNT è uguale a 0 genera un errore. Non esiste infatti alcuna istruzione BEGIN TRANSACTION corrispondente.  
+ L'esecuzione di COMMIT TRANSACTION quando @@TRANCOUNT è zero genera un errore. Non esiste infatti alcuna istruzione BEGIN TRANSACTION corrispondente.  
   
- Non è possibile eseguire il rollback di una transazione dopo l'esecuzione di un'istruzione COMMIT TRANSACTION. Le modifiche dei dati del database sono diventate permanenti.  
+ Non è possibile eseguire il rollback di una transazione dopo l'esecuzione di un'istruzione COMMIT TRANSACTION, perché le modifiche dei dati sono diventate permanenti nel database.  
   
  [!INCLUDE[ssDE](../../includes/ssde-md.md)] incrementa il conteggio delle transazioni all'interno di un'istruzione solo quando il numero di transazioni all'inizio dell'istruzione è uguale a 0.  
   
@@ -107,10 +107,10 @@ DELETE FROM HumanResources.JobCandidate
 COMMIT TRANSACTION;   
 ```  
   
-### <a name="b-committing-a-nested-transaction"></a>B. Esecuzione del commit di una transazione nidificata  
+### <a name="b-committing-a-nested-transaction"></a>b. Esecuzione del commit di una transazione nidificata  
 **SI APPLICA A:** SQL Server e database SQL di Azure    
 
-Nell'esempio seguente viene creata una tabella, viene generata una transazione nidificata su tre livelli e viene quindi eseguito il commit della transazione nidificata. Sebbene ogni istruzione `COMMIT TRANSACTION` includa un parametro *transaction_name*, non esiste alcuna relazione tra le istruzioni `COMMIT TRANSACTION` e `BEGIN TRANSACTION`. I parametri *transaction_name* migliorano semplicemente il grado di leggibilità del codice per consentire al programmatore di verificare che venga codificato il numero adeguato di commit per il decremento del valore di `@@TRANCOUNT` a 0 e che venga quindi eseguito il commit della transazione esterna. 
+Nell'esempio seguente viene creata una tabella, viene generata una transazione nidificata su tre livelli e viene quindi eseguito il commit della transazione nidificata. Nonostante ogni istruzione `COMMIT TRANSACTION` includa un parametro *transaction_name*, non esiste alcuna relazione tra le istruzioni `COMMIT TRANSACTION` e `BEGIN TRANSACTION`. I parametri *transaction_name* consentono al programmatore di verificare che venga codificato il numero corretto di commit per il decremento di `@@TRANCOUNT` a 0 e il conseguenze commit della transazione esterna. 
   
 ```   
 IF OBJECT_ID(N'TestTran',N'U') IS NOT NULL  
@@ -172,5 +172,4 @@ PRINT N'Transaction count after COMMIT OuterTran = '
  [ROLLBACK WORK &#40;Transact-SQL&#41;](../../t-sql/language-elements/rollback-work-transact-sql.md)   
  [SAVE TRANSACTION &#40;Transact-SQL&#41;](../../t-sql/language-elements/save-transaction-transact-sql.md)   
  [@@TRANCOUNT &#40;Transact-SQL&#41;](../../t-sql/functions/trancount-transact-sql.md)  
-  
   

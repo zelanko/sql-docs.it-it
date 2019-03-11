@@ -5,18 +5,18 @@ keywords: SQL Server, SSMS, SQL Server Management Studio
 author: MashaMSFT
 ms.author: mathoma
 ms.date: 03/16/2018
-ms.topic: Tutorial
+ms.topic: tutorial
 ms.prod: sql
 ms.technology: ssms
 ms.prod_service: sql-tools
 ms.reviewer: sstein
 manager: craigg
-ms.openlocfilehash: f37ea9b96748e660894aed98a4bc37c7fd710aac
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 173123f180047c35ce93a64928770f55525f651b
+ms.sourcegitcommit: b3d84abfa4e2922951430772c9f86dce450e4ed1
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47661329"
+ms.lasthandoff: 02/22/2019
+ms.locfileid: "56662685"
 ---
 # <a name="tutorial-sql-server-management-studio-components-and-configuration"></a>Esercitazione: Componenti e configurazione di SQL Server Management Studio
 In questa esercitazione vengono descritti i vari componenti finestra in SQL Server Management Studio (SSMS) e alcune opzioni di configurazione di base per l'area di lavoro. In questo articolo vengono illustrate le operazioni seguenti: 
@@ -42,10 +42,10 @@ In questa sezione vengono descritti i vari componenti finestra disponibili nell'
 
     ![Menu Visualizza](media/ssms-configuration/viewmenu.png)
 
-- **Esplora oggetti** (F8): Esplora oggetti è una visualizzazione struttura ad albero di tutti gli oggetti di database nel server. Questa visualizzazione include i database del motore di database di SQL Server, SQL Server Analysis Services, SQL Server Reporting Services e SQL Server Integration Services. Esplora oggetti contiene informazioni su tutti i server a esso connessi. 
+- **Esplora oggetti** (F8): In Esplora oggetti è visualizzato l'albero di tutti gli oggetti di database presenti in un server. Questa visualizzazione include i database del motore di database di SQL Server, SQL Server Analysis Services, SQL Server Reporting Services e SQL Server Integration Services. Esplora oggetti contiene informazioni su tutti i server a esso connessi. 
     
     ![Esplora oggetti](media/ssms-configuration/objectexplorer.png)
-- **Finestra Query** (CTRL+N): dopo aver selezionato **Nuova query**, immettere le query Transact-SQL (T-SQL) in questa finestra. Qui vengono visualizzati anche i risultati delle query.
+- **Finestra query** (Ctrl + N): dopo aver selezionato **Nuova query**, immettere le query Transact-SQL (T-SQL) in questa finestra. Qui vengono visualizzati anche i risultati delle query.
     
     ![Finestra Nuova query](media/ssms-configuration/newquery.png)
 
@@ -53,7 +53,7 @@ In questa sezione vengono descritti i vari componenti finestra disponibili nell'
 
     ![Proprietà](media/ssms-configuration/properties.png)
 
-- **Visualizzatore modelli** (CTRL+ALT+T): il visualizzatore modelli include vari modelli T-SQL predefiniti. È possibile usare questi modelli per eseguire varie funzioni quali la creazione o il backup di database. 
+- **Visualizzatore modelli** (Ctrl + Alt + T): il visualizzatore modelli include vari modelli T-SQL predefiniti. È possibile usare questi modelli per eseguire varie funzioni quali la creazione o il backup di database. 
 
     ![Visualizzatore modelli](media/ssms-configuration/templates.png)
 

@@ -22,12 +22,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 22ea90a5876c6c824f7e80683503f1f8bf863675
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 374a32ab01e201a093702469a4e03445045203d9
+ms.sourcegitcommit: b3d84abfa4e2922951430772c9f86dce450e4ed1
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56017072"
+ms.lasthandoff: 02/22/2019
+ms.locfileid: "56662775"
 ---
 # <a name="binary-and-varbinary-transact-sql"></a>binary e varbinary (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -35,12 +35,12 @@ ms.locfileid: "56017072"
 Tipi di dati binary a lunghezza fissa o variabile.
   
 ## <a name="arguments"></a>Argomenti  
-**binary** [ ( *n* ) ] Dati binari a lunghezza fissa con lunghezza di *n* byte, dove *n* rappresenta un valore compreso tra 1 e 8.000. Le dimensioni di archiviazione corrispondono a *n* byte.
+**binary** [ ( _n_ ) ] Dati binari a lunghezza fissa con lunghezza di _n_ byte, dove _n_ rappresenta un valore compreso tra 1 e 8.000. Le dimensioni di archiviazione corrispondono a _n_ byte.
   
-**varbinary** [ ( *n* | **max**) ] Dati binari a lunghezza variabile. *n* può essere un valore compreso tra 1 e 8.000. **max** indica che la capacità di memorizzazione massima è di 2^31-1 byte. Le dimensioni dello spazio di archiviazione corrispondono alla lunghezza effettiva dei dati immessi + 2 byte. È possibile che la lunghezza dei dati immessi sia pari a 0 byte. L'equivalente di ANSI SQL per **varbinary** è **binary varying**.
+**varbinary** [ ( _n_ | **max**) ] Dati binari a lunghezza variabile. _n_ può essere un valore compreso tra 1 e 8.000. **max** indica che la capacità di memorizzazione massima è di 2^31-1 byte. Le dimensioni dello spazio di archiviazione corrispondono alla lunghezza effettiva dei dati immessi + 2 byte. È possibile che la lunghezza dei dati immessi sia pari a 0 byte. L'equivalente di ANSI SQL per **varbinary** è **binary varying**.
   
 ## <a name="remarks"></a>Remarks  
-Se *n* viene omesso in un'istruzione di definizione dei dati o di dichiarazione di variabili, la lunghezza predefinita è 1. Se *n* viene omesso in una funzione CAST, la lunghezza predefinita è 30.
+Se non si specifica _n_ in un'istruzione di definizione dei dati o di dichiarazione di variabili, la lunghezza predefinita è 1. Se non si specifica _n_ con la funzione CAST, la lunghezza predefinita è 30.
 
 | Tipo di dati | Usare se... |
 | --- | --- |
@@ -50,11 +50,23 @@ Se *n* viene omesso in un'istruzione di definizione dei dati o di dichiarazione 
 
 
 ## <a name="converting-binary-and-varbinary-data"></a>Conversione dei dati di tipo binary e varbinary
-Nella conversione da un tipo di dati string (**char**, **varchar**, **nchar**, **nvarchar**, **binary**, **varbinary**, **text**, **ntext** o **image**) a un tipo di dati **binary** o **varbinary** di lunghezza variabile, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] esegue il riempimento o il troncamento dei dati a destra. Nella conversione di altri tipi di dati nel tipo **binary** o **varbinary**, viene eseguito il riempimento o il troncamento dei dati a sinistra. Il riempimento viene eseguito utilizzando zero esadecimali.
+In caso di conversione da un tipo di dati stringa a un tipo di dati **binary** o **varbinary** di lunghezza diversa, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] esegue il riempimento o il troncamento dei dati a destra. Tali tipi di dati stringa sono:
+
+* **char** 
+* **varchar**
+* **nchar**
+* **nvarchar**
+* **binary**
+* **varbinary**
+* **text**
+* **ntext**
+* **image**
+
+Nella conversione di altri tipi di dati nel tipo **binary** o **varbinary**, viene eseguito il riempimento o il troncamento dei dati a sinistra. Il riempimento viene eseguito utilizzando zero esadecimali.
   
-La conversione nei tipi di dati **binary** e **varbinary** è utile quando i dati **binary** risultano i dati più semplici da spostare. Quando un valore di qualsiasi tipo viene convertito in un valore binario di dimensioni sufficienti e successivamente riconvertito nel tipo di dati iniziale, si ottiene sempre lo stesso valore se entrambe le conversioni vengono eseguite nella stessa versione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. La rappresentazione binaria di un valore può variare da una versione all'altra di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].
+La conversione nei tipi di dati **binary** e **varbinary** è utile quando i dati **binary** risultano i dati più semplici da spostare. A un certo punto si potrebbe convertire un tipo valore in un valore binario di dimensioni sufficienti e quindi riconvertirlo. Questa conversione genera sempre lo stesso valore se entrambe le conversioni vengono eseguite nella stessa versione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. La rappresentazione binaria di un valore può variare da una versione all'altra di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].
   
-La conversione del tipo di dati **int**, **smallint** e **tinyint** nel tipo di dati **binary** o **varbinary** è supportata. Se è stato eseguito il troncamento e il valore **binary** viene riconvertito in un valore integer, il valore ottenuto sarà diverso dal valore integer originale. L'istruzione SELECT seguente, ad esempio, mostra che il valore intero `123456` viene in genere archiviato come un dato di tipo binary `0x0001e240`:
+È possibile convertire **int**, **smallint** e **tinyint** in **binary** o **varbinary**. Se si riconverte il valore **binary** in un valore intero ed è stato eseguito il troncamento, il valore ottenuto sarà diverso dal valore intero originale. L'istruzione SELECT seguente, ad esempio, mostra che il valore intero `123456` viene in genere archiviato come `0x0001e240` binario:
   
 ```sql
 SELECT CAST( 123456 AS BINARY(4) );  

@@ -14,12 +14,12 @@ ms.assetid: 7d8c4684-9eb1-4791-8c3b-0f0bb15d9634
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: d8c51d95fe74171fe9b90c439c34ea37700419b2
-ms.sourcegitcommit: a11e733bd417905150567dfebc46a137df85a2fa
+ms.openlocfilehash: 02f99b295f653719231ff19d4dae0df0e82218b8
+ms.sourcegitcommit: 71913f80be0cb6f8d3af00c644ee53e3aafdcc44
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/03/2019
-ms.locfileid: "53991874"
+ms.lasthandoff: 02/21/2019
+ms.locfileid: "56590486"
 ---
 # <a name="about-change-data-capture-sql-server"></a>Informazioni su Change Data Capture (SQL Server)
 [!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
@@ -37,7 +37,7 @@ ms.locfileid: "53991874"
 ## <a name="understanding-change-data-capture-and-the-capture-instance"></a>Informazioni su Change Data Capture e l'istanza di acquisizione  
  Affinché sia possibile rilevare le modifiche apportate a qualsiasi tabella singola di un database, è necessario che Change Data Capture venga abilitato in modo esplicito per il database. Per eseguire questa operazione, usare la stored procedure [sys.sp_cdc_enable_db](../../relational-databases/system-stored-procedures/sys-sp-cdc-enable-db-transact-sql.md). Quando il database è abilitato, le tabelle di origine possono essere identificate come tabelle con rilevamento usando la stored procedure [sys.sp_cdc_enable_table](../../relational-databases/system-stored-procedures/sys-sp-cdc-enable-table-transact-sql.md). Quando la funzionalità Change Data Capture viene abilitata per una tabella, per supportare la distribuzione dei dati delle modifiche nella tabella di origine viene creata un'istanza di acquisizione associata costituita da una tabella delle modifiche e da una o due funzioni della query. I metadati che descrivono i dettagli di configurazione dell'istanza di acquisizione vengono mantenuti nelle tabelle di metadati di Change Data Capture **cdc.change_tables**, **cdc.index_columns**e **cdc.captured_columns**. È possibile recuperare queste informazioni usando la stored procedure [sys.sp_cdc_help_change_data_capture](../../relational-databases/system-stored-procedures/sys-sp-cdc-help-change-data-capture-transact-sql.md).  
   
- Tutti gli oggetti associati a un'istanza di acquisizione vengono creati nello schema relativo a Change Data Capture del database abilitato. Il nome dell'istanza di acquisizione deve essere un nome di oggetto valido e univoco in tutte le istanze di acquisizione del database. Per impostazione predefinita, il nome è \<*nome schema*_*nome tabella*> della tabella di origine. Il nome assegnato alla tabella delle modifiche associata viene creato aggiungendo **_CT** al nome dell'istanza di acquisizione. Il nome assegnato alla funzione usata per eseguire una query relativa a tutte le modifiche viene creato anteponendo **fn_cdc_get_all_changes_** al nome dell'istanza di acquisizione. Se l'istanza di acquisizione è configurata per supportare **net changes**, viene creata anche la funzione della query **net_changes**, cui viene assegnato un nome creato anteponendo **fn_cdc_get_net_changes\_** al nome dell'istanza di acquisizione.  
+ Tutti gli oggetti associati a un'istanza di acquisizione vengono creati nello schema relativo a Change Data Capture del database abilitato. Il nome dell'istanza di acquisizione deve essere un nome di oggetto valido e univoco in tutte le istanze di acquisizione del database. Per impostazione predefinita, il nome è \<*nome schema*\_*nome tabella*> della tabella di origine. Il nome assegnato alla tabella delle modifiche associata viene creato aggiungendo **_CT** al nome dell'istanza di acquisizione. Il nome assegnato alla funzione usata per eseguire una query relativa a tutte le modifiche viene creato anteponendo **fn_cdc_get_all_changes_** al nome dell'istanza di acquisizione. Se l'istanza di acquisizione è configurata per supportare **net changes**, viene creata anche la funzione della query **net_changes**, cui viene assegnato un nome creato anteponendo **fn_cdc_get_net_changes\_** al nome dell'istanza di acquisizione.  
   
 ## <a name="change-table"></a>Tabella delle modifiche  
  Le prime cinque colonne di una tabella delle modifiche di Change Data Capture sono costituite da metadati che forniscono informazioni aggiuntive attinenti alla modifica registrata. Le colonne rimanenti rispecchiano le colonne acquisite identificate dalla tabella di origine nel nome e, generalmente, nel tipo. Tali colonne contengono i dati delle colonne acquisite raccolti dalla tabella di origine.  

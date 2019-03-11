@@ -1,7 +1,7 @@
 ---
 title: Guida sull'architettura di elaborazione delle query | Microsoft Docs
 ms.custom: ''
-ms.date: 11/15/2018
+ms.date: 02/24/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -16,12 +16,12 @@ ms.assetid: 44fadbee-b5fe-40c0-af8a-11a1eecf6cb5
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 743c12fe1ec749c597655f249c1ba6fbfe1b0b4e
-ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
+ms.openlocfilehash: ee8109bc7d6499352b2d1caf47381faa3df9cf3a
+ms.sourcegitcommit: a13256f484eee2f52c812646cc989eb0ce6cf6aa
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/18/2018
-ms.locfileid: "53591885"
+ms.lasthandoff: 02/25/2019
+ms.locfileid: "56802407"
 ---
 # <a name="query-processing-architecture-guide"></a>Guida sull'architettura di elaborazione delle query
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -54,7 +54,6 @@ Per altre informazioni sugli indici columnstore, vedere [Architettura degli indi
 L'elaborazione di una singola istruzione [!INCLUDE[tsql](../includes/tsql-md.md)] rappresenta la modalità più semplice di esecuzione delle istruzioni SQL in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Per illustrare il processo di base, viene usata la procedura di elaborazione di una singola istruzione `SELECT` che fa riferimento esclusivamente a tabelle di base locali, non a viste o tabelle remote.
 
 ### <a name="logical-operator-precedence"></a>Ordine di precedenza degli operatori logici
-
 Se in un'istruzione vengono usati più operatori logici, viene valutato prima `NOT`, quindi `AND` e infine `OR`. Gli operatori aritmetici (e bit per bit) vengono valutati prima degli operatori logici. Per altre informazioni, vedere [Precedenza degli operatori](../t-sql/language-elements/operator-precedence-transact-sql.md).
 
 Nell'esempio seguente la condizione per il colore riguarda il modello di prodotto 21 e non il modello di prodotto 20, perché `AND` ha la priorità rispetto a `OR`.
@@ -88,7 +87,6 @@ GO
 ```
 
 ### <a name="optimizing-select-statements"></a>Ottimizzazione delle istruzioni SELECT
-
 Un'istruzione `SELECT` non definisce esattamente la procedura che il server di database deve eseguire per recuperare i dati richiesti. Il server di database deve pertanto analizzare l'istruzione per determinare il metodo più efficace per l'estrazione dei dati. Tale procedura, denominata ottimizzazione dell'istruzione `SELECT` , viene eseguita dal componente Query Optimizer. I dati di input per Query Optimizer sono costituiti dalla query, dallo schema del database (definizioni di tabella e indice) e dalle statistiche del database. L'output di Query Optimizer è un piano di esecuzione della query, talvolta definito piano di query o semplicemente piano. La descrizione dettagliata del contenuto di un piano di query è riportata più avanti in questo argomento.
 
 I dati di input e di output di Query Optimizer durante l'ottimizzazione di una singola istruzione `SELECT` sono illustrati nel diagramma seguente:
@@ -126,7 +124,6 @@ Per la stima dei costi in termini di risorse relativi ai diversi metodi di estra
 Query Optimizer di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] è un componente importante perché consente al server di database di adattarsi in modo dinamico alle condizioni variabili del database senza fare ricorso all'intervento di un programmatore o di un amministratore di database. In questo modo i programmatori possono concentrarsi sulla descrizione del risultato finale della query. A ogni esecuzione dell'istruzione, Query Optimizer di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] compila un piano di esecuzione efficace per lo stato corrente del database.
 
 ### <a name="processing-a-select-statement"></a>Elaborazione di un'istruzione SELECT
-
 Di seguito viene illustrata la procedura di base necessaria per elaborare una singola istruzione SELECT in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]: 
 
 1. Il parser esegue l'analisi dell'istruzione `SELECT` e la suddivide in unità logiche, quali parole chiave, espressioni, operatori e identificatori.
@@ -135,18 +132,97 @@ Di seguito viene illustrata la procedura di base necessaria per elaborare una si
 4. Il motore relazionale avvia l'esecuzione del piano di esecuzione. Man mano che vengono elaborati i passaggi che richiedono i dati delle tabelle di base, il motore relazionale richiede al motore di archiviazione di passare i dati dei set di righe richiesti dal motore relazionale stesso.
 5. Il motore relazionale elabora i dati restituiti dal motore di archiviazione nel formato definito per il set di risultati e restituisce il set di risultati al client.
 
-### <a name="processing-other-statements"></a>Elaborazione di altre istruzioni
+### <a name="ConstantFolding"></a> Valutazione delle espressioni ed elaborazione delle costanti 
+In [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] alcune espressioni costanti vengono valutate in una fase preliminare per migliorare le prestazioni delle query. Questo comportamento viene denominato elaborazione delle costanti in fase di compilazione. Una costante è un valore letterale di [!INCLUDE[tsql](../includes/tsql-md.md)], ad esempio 3, ABC, 2005-12-31, 1.0e3 o 0x12345678.
 
-La procedura di base descritta per l'elaborazione di un'istruzione `SELECT` è valida anche per altre istruzioni SQL, ad esempio `INSERT`, `UPDATE`e `DELETE`. Entrambe le istruzioni`UPDATE` e `DELETE` devono definire il set di righe da modificare o eliminare. usando un processo di identificazione delle righe corrispondente a quello che consente di identificare le righe di origine che formano il set di risultati di un'istruzione `SELECT` . Le istruzioni `UPDATE` e `INSERT` possono includere istruzioni SELECT incorporate che forniscono i valori dei dati da aggiornare o da inserire.
+#### <a name="foldable-expressions"></a>Espressioni per cui è possibile eseguire l'elaborazione delle costanti in fase di compilazione
+In [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] viene utilizzata l'elaborazione delle costanti in fase di compilazione per i tipi di espressioni seguenti:
+- Espressioni aritmetiche che contengono solo costanti, ad esempio 1+1 o 5/3*2.
+- Espressioni logiche che contengono solo costanti, ad esempio 1=1 e 1>2 AND 3>4.
+- Funzioni predefinite che [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] considera idonee per l'elaborazione delle costanti, come `CAST` e `CONVERT`. In genere, per una funzione è possibile eseguire l'elaborazione delle costanti in fase di compilazione se si tratta di una funzione solo dei relativi input e non di altre informazioni contestuali, ad esempio opzioni SET, impostazioni della lingua, opzioni di database e chiavi di crittografia. Per le funzioni non deterministiche non è possibile eseguire l'elaborazione delle costanti in fase di compilazione. Per le funzioni predefinite deterministiche, tranne alcune eccezioni, è possibile eseguire l'elaborazione delle costanti in fase di compilazione.
+
+> [!NOTE] 
+> Si applica un'eccezione ai tipi LOB. Se il tipo di output del processo di elaborazione delle costanti è un tipo LOB, ossia text, image, nvarchar(max), varchar(max) o varbinary(max), [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] non esegue l'elaborazione delle costanti per l'espressione.
+
+#### <a name="nonfoldable-expressions"></a>Espressioni per cui non è possibile eseguire l'elaborazione delle costanti in fase di compilazione
+Per tutti gli altri tipi di espressione non è possibile eseguire l'elaborazione delle costanti in fase di compilazione. In particolare, non è possibile eseguire l'elaborazione delle costanti in fase di compilazione per i tipi di espressioni seguenti:
+- Espressioni non costanti, ad esempio un'espressione il cui risultato dipende dal valore di una colonna.
+- Espressioni il cui risultato dipende da una variabile o un parametro locale, ad esempio @x.
+- Funzioni non deterministiche.
+- Funzioni definite dall'utente ([!INCLUDE[tsql](../includes/tsql-md.md)] e CLR).
+- Espressioni il cui risultato dipende dalle impostazioni della lingua.
+- Espressioni il cui risultato dipende dalle opzioni SET.
+- Espressioni il cui risultato dipende dalle opzioni di configurazione del server.
+
+#### <a name="examples-of-foldable-and-nonfoldable-constant-expressions"></a>Esempi di espressioni per le quali è possibile eseguire l'elaborazione delle costanti in fase di compilazione e di espressioni per le quali tale elaborazione non è possibile
+Si consideri la query seguente:
+
+```sql
+SELECT *
+FROM Sales.SalesOrderHeader AS s 
+INNER JOIN Sales.SalesOrderDetail AS d 
+ON s.SalesOrderID = d.SalesOrderID
+WHERE TotalDue > 117.00 + 1000.00;
+```
+
+Se l'opzione di database `PARAMETERIZATION` non è impostata su `FORCED` per la query, l'espressione `117.00 + 1000.00` viene valutata e sostituita dal risultato, `1117.00`, prima della compilazione della query. Tra i vantaggi dell'elaborazione delle costanti in fase di compilazione sono inclusi i seguenti:
+- L'espressione non deve essere valutata più volte in fase di esecuzione.
+- Il valore dell'espressione in seguito alla valutazione viene usato da Query Optimizer per stimare le dimensioni del set di risultati della parte `TotalDue > 117.00 + 1000.00` della query.
+
+Se `dbo.f` è invece una funzione scalare definita dall'utente, per l'espressione `dbo.f(100)` non viene eseguita l'elaborazione delle costanti in fase di compilazione, in quanto in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] questa operazione non è possibile per le espressioni che implicano funzioni definite dall'utente, anche se deterministiche. Per altre informazioni sulla parametrizzazione, vedere [Parametrizzazione forzata](#ForcedParam) più avanti in questo articolo.
+
+#### <a name="ExpressionEval"></a>Valutazione delle espressioni 
+Alcune espressioni per cui non viene eseguita l'elaborazione delle costanti ma i cui argomenti sono noti in fase di compilazione, sia che si tratti di parametri o di costanti, vengono valutate tramite lo strumento per la stima delle dimensioni del set di risultati (cardinalità) incluso in Query Optimizer durante l'ottimizzazione.
+
+In particolare, se tutti gli input sono noti, in fase di compilazione vengono valutati gli operatori speciali e le funzioni predefinite seguenti: `UPPER`, `LOWER`, `RTRIM`,`DATEPART( YY only )`, `GETDATE`, `CAST` e `CONVERT`. Anche gli operatori seguenti vengono valutati in fase di compilazione se tutti i relativi input sono noti:
+- Operatori aritmetici +, -, \*, /, - unario
+- Operatori logici `AND`, `OR` e `NOT`
+- Operatori di confronto <, >, <=, >=, <>, `LIKE`, `IS NULL` e `IS NOT NULL`
+
+Gli altri operatori o funzioni non vengono valutati da Query Optimizer durante la stima della cardinalità.
+
+#### <a name="examples-of-compile-time-expression-evaluation"></a>Esempi di valutazione delle espressioni in fase di compilazione
+Si consideri la stored procedure seguente:
+
+```sql
+USE AdventureWorks2014;
+GO
+CREATE PROCEDURE MyProc( @d datetime )
+AS
+SELECT COUNT(*)
+FROM Sales.SalesOrderHeader
+WHERE OrderDate > @d+1;
+```
+
+Durante l'ottimizzazione dell'istruzione `SELECT` nella procedura, Query Optimizer prova a valutare la cardinalità prevista del set di risultati per la condizione `OrderDate > @d+1`. Per l'espressione `@d+1` non viene eseguita l'elaborazione delle costanti in fase di compilazione, in quanto `@d` è un parametro. Durante l'ottimizzazione, tuttavia, il valore del parametro è noto. Query Optimizer può così stimare in modo accurato le dimensioni del set di risultati e ciò consentirà di selezionare un piano di query appropriato.
+
+Si consideri quindi un esempio simile al precedente, ad eccezione del fatto che una variabile locale `@d2` sostituisce `@d+1` nella query e che l'espressione viene valutata in un'istruzione SET anziché nella query.
+
+```sql 
+USE AdventureWorks2014;
+GO
+CREATE PROCEDURE MyProc2( @d datetime )
+AS
+BEGIN
+DECLARE @d2 datetime
+SET @d2 = @d+1
+SELECT COUNT(*)
+FROM Sales.SalesOrderHeader
+WHERE OrderDate > @d2
+END;
+```
+
+Quando l'istruzione `SELECT` in *MyProc2* viene ottimizzata in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], il valore di `@d2` non è noto. Di conseguenza, Query Optimizer usa una stima predefinita per la selettività di `OrderDate > @d2`, corrispondente in questo caso al 30%.
+
+### <a name="processing-other-statements"></a>Elaborazione di altre istruzioni
+La procedura di base descritta per l'elaborazione di un'istruzione `SELECT` è valida anche per altre istruzioni SQL, ad esempio `INSERT`, `UPDATE`e `DELETE`. Entrambe le istruzioni`UPDATE` e `DELETE` devono definire il set di righe da modificare o eliminare. usando un processo di identificazione delle righe corrispondente a quello che consente di identificare le righe di origine che formano il set di risultati di un'istruzione `SELECT` . Le istruzioni `UPDATE` e `INSERT` possono entrambe contenere istruzioni `SELECT` incorporate che forniscono i valori di dati da aggiornare o inserire.
 
 Anche le istruzioni DDL (Data Definition Language), ad esempio `CREATE PROCEDURE` o `ALTER TABLE`, vengono risolte in una serie di operazioni relazionali eseguite nelle tabelle del catalogo di sistema e in alcuni casi, ad esempio con `ALTER TABLE ADD COLUMN`, nelle tabelle di dati.
 
 ### <a name="worktables"></a>Tabelle di lavoro
-
 È possibile che il motore relazionale debba compilare una tabella di lavoro per eseguire un'operazione logica specificata in un'istruzione SQL. Le tabelle di lavoro sono tabelle interne utilizzate per inserirvi i risultati intermedi. Le tabelle di lavoro vengono generate per alcune query `GROUP BY`, `ORDER BY`o `UNION` . Se, ad esempio, una clausola `ORDER BY` fa riferimento a colonne non coperte da indici, può essere necessario generare una tabella di lavoro per disporre il set di risultati nell'ordine richiesto. Le tabelle di lavoro vengono a volte utilizzate anche come spool per conservare temporaneamente il risultato dell'esecuzione di un piano della query. Le tabelle di lavoro vengono compilate in tempdb e vengono eliminate automaticamente quando non sono più necessarie.
 
 ### <a name="view-resolution"></a>Risoluzione delle viste
-
 In Query Processor di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] le viste indicizzate e non indicizzate vengono gestite in modi diversi: 
 
 * Le righe di una vista indicizzata vengono archiviate nel database con lo stesso formato di una tabella. Se Query Optimizer decide di utilizzare una vista indicizzata in un piano di query, la vista indicizzata verrà gestita come una tabella di base.
@@ -192,7 +268,6 @@ WHERE OrderDate > '20020531';
 La funzionalità Showplan di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Management Studio indica che il motore relazionale compila lo stesso piano di esecuzione per entrambe le istruzioni `SELECT`.
 
 ### <a name="using-hints-with-views"></a>Utilizzo di hint con le viste
-
 Gli hint inseriti nelle viste di una query possono entrare in conflitto con altri hint individuati quando la vista viene espansa in modo da accedere alle relative tabelle di base. In questo caso, la query restituisce un errore. Si consideri, ad esempio, la vista seguente nella cui definizione è contenuto un hint di tabella:
 
 ```sql
@@ -455,7 +530,7 @@ L'unica differenza tra i piani di esecuzione delle due query è rappresentata da
 
 La separazione delle costanti dall'istruzione SQL tramite i parametri consente al motore relazionale di riconoscere i piani duplicati. È possibile utilizzare i parametri come indicato di seguito: 
 
-* In Transact-SQL, usare `sp_executesql`: 
+* In [!INCLUDE[tsql](../includes/tsql-md.md)] usare `sp_executesql`: 
 
    ```sql
    DECLARE @MyIntParm INT
@@ -468,7 +543,7 @@ La separazione delle costanti dall'istruzione SQL tramite i parametri consente a
      @MyIntParm
    ```
 
-   Questo metodo è particolarmente adatto per gli script Transact-SQL, le stored procedure o i trigger che generano istruzioni SQL in modo dinamico. 
+   È consigliabile usare questo metodo per script, stored procedure o trigger [!INCLUDE[tsql](../includes/tsql-md.md)] che generano istruzioni SQL in modo dinamico. 
 
 * ADO, OLE DB e ODBC utilizzano i marcatori di parametro. I marcatori di parametro sono punti interrogativi (?) che sostituiscono una costante in un'istruzione SQL e sono associati a una variabile di programma. In un'applicazione ODBC, ad esempio, verrebbero eseguite le operazioni seguenti: 
 

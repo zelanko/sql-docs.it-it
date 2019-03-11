@@ -11,20 +11,20 @@ ms.assetid: 669be403-cb17-4b12-bbbf-e7a74003c4b6
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 05dcf3c0c5850b95aa9d657ee228138b0ca0e57d
-ms.sourcegitcommit: bfa10c54e871700de285d7f819095d51ef70d997
+ms.openlocfilehash: 4d7f668c35cf65caa48fda0e58c7d8b73a682385
+ms.sourcegitcommit: 5861b7b0cd9bf6d43cefad5d0356f5821bd17d4a
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/14/2019
-ms.locfileid: "54256846"
+ms.lasthandoff: 02/19/2019
+ms.locfileid: "56411930"
 ---
 # <a name="data-type-mapping-in-the-sql-server-import-and-export-wizard"></a>Mapping tra i tipi di dati nell'Importazione/Esportazione guidata SQL Server
  Nell'Importazione/Esportazione guidata [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] è possibile impostare il nome, il tipo di dati e le proprietà del tipo di dati delle colonne nei nuovi file e tabelle di destinazione, ma non è possibile specificare conversioni personalizzate per i valori di colonna. Il mapping dei tipi di dati dall'origine alla destinazione risulta quindi di primaria importanza.  
   
 ##  <a name="wizardMapping"></a> Come viene eseguito il mapping dei tipi di dati tra origine e destinazione durante la procedura guidata?
 La procedura guidata usa file di mapping installati da [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] per eseguire il mapping dei tipi di dati da un tipo o una versione di database a un altro. Ad esempio, può eseguire il mapping da tipi di dati [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a tipi di dati Oracle. Per impostazione predefinita, i file di mapping in formato XML sono installati nelle cartelle seguenti.
--   **C:\Programmi\Microsoft SQL Server\130\DTS\MappingFiles\** (per 64 bit)
--   **C:\Programmi (x86)\Microsoft SQL Server\130\DTS\MappingFiles\** (per 32 bit)  
+-   **C:\Programmi\Microsoft SQL Server\130\DTSMappingFiles\\** (per 64 bit)
+-   **C:\Programmi (x86)\Microsoft SQL Server\130\DTSMappingFiles\\** (per 32 bit)  
   
  Se si modifica un file di mapping esistente o si aggiunge un nuovo file di mapping alla cartella, è necessario chiudere e riaprire l'Importazione/Esportazione guidata [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] per caricare il file di mapping nuovo o modificato.  
  

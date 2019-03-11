@@ -16,12 +16,12 @@ ms.assetid: af457ecd-523e-4809-9652-bdf2e81bd876
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 4225bb49eb60c61ba01575a2269120dff4a427d3
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: b8b28e23bd9f795b9c8530b0c267589bd2525fe5
+ms.sourcegitcommit: 71913f80be0cb6f8d3af00c644ee53e3aafdcc44
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54125611"
+ms.lasthandoff: 02/21/2019
+ms.locfileid: "56590416"
 ---
 # <a name="rebuild-system-databases"></a>Ricompilare database di sistema
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -107,7 +107,7 @@ ms.locfileid: "54125611"
     |/ACTION=REBUILDDATABASE|Specifica che il programma di installazione dovrà ricreare i database di sistema.|  
     |/INSTANCENAME=*InstanceName*|Nome dell'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Per l'istanza predefinita, immettere MSSQLSERVER.|  
     |/SQLSYSADMINACCOUNTS=*accounts*|Specifica i gruppi o i singoli account di Windows da aggiungere al ruolo predefinito del server **sysadmin** . Se si specificano più account, separarli con uno spazio. Ad esempio, immettere **BUILTIN\Administrators MyDomain\MyUser**. Quando si specifica un account che contiene uno spazio vuoto all'interno del nome dell'account, racchiudere l'account tra doppie virgolette. Ad esempio, immettere **NT AUTHORITY\SYSTEM**.|  
-    |[ /SAPWD=*StrongPassword* ]|Specifica la password per l'account [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **di** . Questo parametro è necessario se l'istanza usa la modalità autenticazione mista (autenticazione di[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e di Windows).<br /><br /> **&#42;&#42; Nota sulla sicurezza &#42;&#42;** L'account **sa** è un account noto di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] che viene spesso preso di mira da utenti malintenzionati. È estremamente importante utilizzare una password complessa per l'accesso all'account **sa** .<br /><br /> Non specificare questo parametro per la modalità di autenticazione di Windows.|  
+    |[ /SAPWD=*StrongPassword* ]|Specifica la password per l'account [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **di** . Questo parametro è necessario se l'istanza usa la modalità autenticazione mista (autenticazione di[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e di Windows).<br /><br /> **&#42;&#42; Nota sulla sicurezza &#42;&#42;** L'account **sa** è un account noto di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e viene spesso preso di mira da utenti malintenzionati. È estremamente importante utilizzare una password complessa per l'accesso all'account **sa** .<br /><br /> Non specificare questo parametro per la modalità di autenticazione di Windows.|  
     |[ /SQLCOLLATION=*CollationName* ]|Vengono specificate nuove regole di confronto a livello di server. Questo parametro è facoltativo. Se non viene specificato, verranno utilizzate le regole di confronto correnti del server.<br /><br /> **\*\* Importante \*\*** La modifica delle regole di confronto a livello di server non comporta la modifica delle regole di confronto dei database utente esistenti. Tutti i nuovi database utente creati utilizzeranno le nuove regole di confronto per impostazione predefinita.<br /><br /> Per altre informazioni, vedere [Impostare o modificare le regole di confronto del server](../../relational-databases/collations/set-or-change-the-server-collation.md).|  
     |[ /SQLTEMPDBFILECOUNT=NumberOfFiles ]|Specifica il numero di file di dati di tempdb. Questo valore può essere aumentato fino al valore più elevato tra 8 e il numero di core.<br /><br /> Valore predefinito: 8 o il numero di core, a seconda di quale dei due valori risulta inferiore.|  
     |[ /SQLTEMPDBFILESIZE=FileSizeInMB ]|Vengono specificate le dimensioni iniziali di ogni file di dati tempdb in MB. Il programma di installazione consente dimensioni fino a 1024 MB.<br /><br /> Valore predefinito: 8|  

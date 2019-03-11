@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.date: 09/24/2018
 ms.prod: sql
 ms.prod_service: polybase, sql-data-warehouse, pdw
-ms.openlocfilehash: eaa93142b7a00f581d90dcb0a7be4a94a4ae6477
-ms.sourcegitcommit: ee76381cfb1c16e0a063315c9c7005f10e98cfe6
+ms.openlocfilehash: 26b11ac46da7239f2fef98ef838e2e7c6f775aef
+ms.sourcegitcommit: a13256f484eee2f52c812646cc989eb0ce6cf6aa
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/26/2019
-ms.locfileid: "55072856"
+ms.lasthandoff: 02/25/2019
+ms.locfileid: "56803156"
 ---
 # <a name="troubleshoot-polybase-kerberos-connectivity"></a>Risolvere i problemi di connettività di PolyBase Kerberos
 
@@ -68,7 +68,7 @@ Questi file si trovano in:
 
 Ad esempio, il valore predefinito per SQL Server 2016 è `C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\MSSQL\Binn\PolyBase\Hadoop\conf`.
 
-Aggiornare  **core-site.xml** aggiungendo le tre proprietà indicate di seguito. Impostare i valori in base all'ambiente:
+Aggiornare **core-site.xml** aggiungendo le tre proprietà riportate di seguito. Impostare i valori in base all'ambiente:
 
 ```xml
 <property>
@@ -212,7 +212,7 @@ Se è stato eseguito lo strumento e le proprietà del file del percorso di desti
 
 ### <a name="mit-kdc"></a>KDC MIT  
 
-Tutti i nomi dell'entità servizio registrati nel Centro distribuzione chiavi, inclusi gli amministratori, possono essere visualizzati eseguendo **kadmin.local** > (account di accesso dell'amministratore) > **listprincs** nell'host del Centro distribuzione chiavi o in qualsiasi client del Centro distribuzione chiavi configurato. Se Kerberos è stato correttamente configurato nel cluster Hadoop, deve essere presente un SPN per ognuno dei servizi disponibili nel cluster, ad esempio `nn`, `dn`, `rm`, `yarn`, `spnego` e così via. I file keytab corrispondenti (sostitutivi della password) sono disponibili in **/etc/security/keytabs**, per impostazione predefinita. Vengono crittografati usando la chiave privata del KDC.  
+Tutti i nomi dell'entità servizio registrati nel Centro distribuzione chiavi, inclusi gli amministratori, possono essere visualizzati eseguendo **kadmin.local** > (account di accesso dell'amministratore) > **listprincs** nell'host del Centro distribuzione chiavi o in qualsiasi client del Centro distribuzione chiavi configurato. Se Kerberos è stato correttamente configurato nel cluster Hadoop, deve essere presente un SPN per ognuno dei servizi disponibili nel cluster, ad esempio `nn`, `dn`, `rm`, `yarn`, `spnego` e così via. I file keytab corrispondenti (sostitutivi della password) si trovano per impostazione predefinita in  **/etc/security/keytabs**. Vengono crittografati usando la chiave privata del KDC.  
 
 Può anche essere opportuno usare [`kinit`](https://web.mit.edu/kerberos/krb5-1.12/doc/user/user_commands/kinit.html)per verificare le credenziali di amministratore nel KDC a livello locale. Un esempio di utilizzo è:  `kinit identity@MYREALM.COM`. La richiesta di una password indica che l'identità esiste.  Per impostazione predefinita, i log del Centro distribuzione chiavi sono disponibili in **/var/log/krb5kdc.log**. Il file contiene tutte le richieste di ticket, incluso l'indirizzo IP del client che ha effettuato la richiesta. Devono essere presenti due richieste provenienti dall'indirizzo IP del computer SQL Server in cui è stato eseguito lo strumento: la prima per il ticket TGT dal server di autenticazione specificata come **AS\_REQ** e la seconda, **TGS\_REQ** , per il ticket di servizio dal server di concessione dei ticket.
 

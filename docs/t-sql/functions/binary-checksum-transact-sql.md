@@ -20,19 +20,19 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: ef3f36df1c96d2909e401b83441ddeb7f3cc9d31
-ms.sourcegitcommit: 032273bfbc240fe22ac6c1f6601a14a6d99573f7
+ms.openlocfilehash: 492bd95f917d6973e4ff2797c170be58d16d0c40
+ms.sourcegitcommit: c1105ce638078d2c941cd656b34f78486e6b2d89
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/01/2019
-ms.locfileid: "55513877"
+ms.lasthandoff: 02/22/2019
+ms.locfileid: "56676089"
 ---
 # <a name="binarychecksum--transact-sql"></a>BINARY_CHECKSUM (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-asdw-xxx-md.md)]
 
 Restituisce il valore di checksum binario calcolato su una riga di una tabella o su un elenco di espressioni.
   
-![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
+![Icona di collegamento a un articolo](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un articolo")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -58,7 +58,7 @@ e i tipi non confrontabili CLR (Common Language Runtime) definiti dall'utente.
  **int**
   
 ## <a name="remarks"></a>Remarks  
-L'esecuzione di `BINARY_CHECKSUM(*)` su qualsiasi riga di una tabella restituisce sempre lo stesso valore, a meno che la riga non venga successivamente modificata. `BINARY_CHECKSUM` soddisfa le proprietà di una funzione hash: quando viene applicata su due qualsiasi elenchi di espressioni restituisce lo stesso valore se gli elementi corrispondenti dei due elenchi sono dello stesso tipo di dati e risultano uguali quando vengono confrontati tramite l'operatore di uguaglianza (=). In questo contesto, si dice che i valori Null di un tipo specificato vengono considerati uguali ai fini del confronto. Se almeno uno dei valori nell'elenco di espressioni cambia, anche il valore di checksum dell'espressione può cambiare. Questo comportamento non è tuttavia garantito. Per rilevare se i valori sono stati modificati, è pertanto consigliabile usare `BINARY_CHECKSUM` solo se l'applicazione può tollerare una modifica mancata occasionale. In caso contrario, prendere in considerazione l'uso di `HASHBYTES`. In presenza di un algoritmo hash MD5 specificato, le probabilità che `HASHBYTES` restituisca lo stesso risultato per due diversi input sono notevolmente inferiori rispetto a `BINARY_CHECKSUM`.
+Il calcolo di `BINARY_CHECKSUM(*)` su qualsiasi riga di una tabella restituisce sempre lo stesso valore, a meno che la riga non venga modificata in un secondo momento. `BINARY_CHECKSUM` soddisfa le proprietà di una funzione hash: quando viene applicata su due qualsiasi elenchi di espressioni restituisce lo stesso valore se gli elementi corrispondenti dei due elenchi sono dello stesso tipo di dati e risultano uguali quando vengono confrontati tramite l'operatore di uguaglianza (=). In questo contesto, si dice che i valori Null di un tipo specificato vengono considerati uguali ai fini del confronto. Se almeno uno dei valori nell'elenco di espressioni cambia, anche il valore di checksum dell'espressione può cambiare. Tale cambiamento non è tuttavia garantito. Per rilevare se i valori sono stati modificati, è quindi consigliabile usare `BINARY_CHECKSUM` solo se l'applicazione può tollerare l'occasionale mancanza di una modifica. In caso contrario, prendere in considerazione l'uso di `HASHBYTES`. Con un algoritmo hash MD5 specificato, le probabilità che `HASHBYTES` restituisca lo stesso risultato per due input diversi sono notevolmente inferiori rispetto a `BINARY_CHECKSUM`.
   
 `BINARY_CHECKSUM` può essere eseguito su un elenco di espressioni e restituisce lo stesso valore per un elenco specificato. Se si applica `BINARY_CHECKSUM` a due elenchi di espressioni, viene restituito lo stesso valore se agli elementi corrispondenti dei due elenchi sono associati lo stesso tipo di dati e la stessa rappresentazione di byte. Per questa definizione, si presume che ai valori Null di un determinato tipo sia associata la stessa rappresentazione di byte.
   

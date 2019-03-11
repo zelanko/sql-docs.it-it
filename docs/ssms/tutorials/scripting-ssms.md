@@ -5,7 +5,7 @@ keywords: SQL Server, SSMS, SQL Server Management Studio, Script, Scripting
 author: MashaMSFT
 ms.author: mathoma
 ms.date: 03/13/2018
-ms.topic: Tutorial
+ms.topic: tutorial
 ms.prod: sql
 ms.technology: ssms
 ms.prod_service: sql-tools
@@ -20,12 +20,12 @@ helpviewer_keywords:
 - solutions [SQL Server Management Studio], tutorials
 - SQL Server Management Studio [SQL Server], tutorials
 - scripts [SQL Server], SQL Server Management Studio
-ms.openlocfilehash: d2ebf81dcab52be193d1472f5f1dc4f4495aba50
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ce0ffdaa26e0ca48eef710f8368b8cb2b0c92191
+ms.sourcegitcommit: b3d84abfa4e2922951430772c9f86dce450e4ed1
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47711229"
+ms.lasthandoff: 02/22/2019
+ms.locfileid: "56662825"
 ---
 # <a name="tutorial-script-objects-in-sql-server-management-studio"></a>Esercitazione: Creare script per oggetti in SQL Server Management Studio
 In questa esercitazione viene illustrato come generare script Transact-SQL (T-SQL) per vari oggetti presenti in SQL Server Management Studio (SSMS). In questa esercitazione è possibile trovare esempi di come creare script per gli oggetti seguenti:

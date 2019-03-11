@@ -16,12 +16,12 @@ ms.assetid: a57b629c-e9ed-48fd-9a48-ed3787d80c8f
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 93461858c1318b65d3fd75160e06785847c265a6
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 178d926dbcbfc6e599a57207369bf61e603468a9
+ms.sourcegitcommit: 8664c2452a650e1ce572651afeece2a4ab7ca4ca
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47598289"
+ms.lasthandoff: 02/26/2019
+ms.locfileid: "56828451"
 ---
 # <a name="filetables-sql-server"></a>FileTable (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -83,6 +83,8 @@ ms.locfileid: "47598289"
 -   Le operazioni delle API Windows sono di natura non transazionale e non sono associate alle transazioni utente. L'accesso transazionale ai dati FILESTREAM archiviati in una tabella FileTable, tuttavia, è completamente supportato, come nel caso di qualsiasi colonna FILESTREAM in una normale tabella.  
   
 -   È inoltre possibile eseguire query su tabelle FileTable e aggiornarle tramite normale accesso [!INCLUDE[tsql](../../includes/tsql-md.md)] . Le tabelle FileTable sono inoltre integrate con gli strumenti di gestione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e con caratteristiche quali il backup.  
+
+-   Non è possibile inviare una richiesta tramite posta elettronica con dbmail e allegare un file che si trova in una directory FileStream e di conseguenza FileTable. Il driver di filtro del file system RsFx0420 esamina le richieste di I/O in ingresso da e verso la cartella FileStream. Le richieste non provenienti dal file eseguibile di SQL Server e dal codice FileStream vengono esplicitamente rifiutate.
   
 ##  <a name="additional"></a> Ulteriori considerazioni sull'utilizzo di tabelle FileTable  
   

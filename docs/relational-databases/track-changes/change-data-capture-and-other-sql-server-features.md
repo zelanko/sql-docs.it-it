@@ -12,12 +12,12 @@ ms.assetid: 7dfcb362-1904-4578-8274-da16681a960e
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: a293914cad908b8c4d7fc295bf1e0846446dc2ec
-ms.sourcegitcommit: a11e733bd417905150567dfebc46a137df85a2fa
+ms.openlocfilehash: eddf09ca0ff3f07f058b439c49a69eea366add85
+ms.sourcegitcommit: 71913f80be0cb6f8d3af00c644ee53e3aafdcc44
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/03/2019
-ms.locfileid: "53991824"
+ms.lasthandoff: 02/21/2019
+ms.locfileid: "56590406"
 ---
 # <a name="change-data-capture-and-other-sql-server-features"></a>Change Data Capture e altre funzionalità di SQL Server
 [!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
@@ -43,9 +43,9 @@ ms.locfileid: "53991824"
   
 2.  Creare i processi di acquisizione e di pulizia nel nuovo database principale (il database mirror precedente). Per creare i processi, usare la stored procedure [sp_cdc_add_job](../../relational-databases/system-stored-procedures/sys-sp-cdc-add-job-transact-sql.md) .  
   
- Per visualizzare la configurazione corrente di un processo di pulizia o di acquisizione, usare la stored procedure [sys.sp_cdc_help_jobs](../../relational-databases/system-stored-procedures/sys-sp-cdc-help-jobs-transact-sql.md) nella nuova istanza del server principale. Per un database specificato, il processo di acquisizione viene denominato cdc.*database_name*_capture e il processo di pulizia viene denominato cdc.*database_name*_cleanup, dove *database_name* è il nome del database.  
+ Per visualizzare la configurazione corrente di un processo di pulizia o di acquisizione, usare la stored procedure [sys.sp_cdc_help_jobs](../../relational-databases/system-stored-procedures/sys-sp-cdc-help-jobs-transact-sql.md) nella nuova istanza del server principale. Per un database specificato, il processo di acquisizione è denominato cdc.*database\_name*\_capture e il processo di pulizia è denominato cdc.*database\_name*\_cleanup, dove *database_name* è il nome del database.  
   
- Per modificare la configurazione di un processo, usare la stored procedure [sys.sp_cdc_change_job](../../relational-databases/system-stored-procedures/sys-sp-cdc-change-job-transact-sql.md).  
+ Per modificare la configurazione di un processo, usare la stored procedure [sys.sp_cdc_change_job](../../relational-databases/system-stored-procedures/sys-sp-cdc-change-job-transact-sql.md) .  
   
  Per informazioni sul mirroring del database, vedere [Mirroring del database &#40;SQL Server&#41;](../../database-engine/database-mirroring/database-mirroring-sql-server.md).  
   

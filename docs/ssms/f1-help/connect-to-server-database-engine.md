@@ -18,12 +18,12 @@ ms.assetid: ee9017b4-8a19-4360-9003-9e6484082d41
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: b408b3f4d71f80bb2317a58ddd0ff0f578807946
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: 3737c5dabc8b88970a24cbadcc9617457cf862eb
+ms.sourcegitcommit: 8664c2452a650e1ce572651afeece2a4ab7ca4ca
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53202810"
+ms.lasthandoff: 02/26/2019
+ms.locfileid: "56828131"
 ---
 # <a name="connect-to-server-database-engine"></a>Connetti al server (Motore di database)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -43,7 +43,9 @@ Consente di selezionare l'istanza del server a cui connettersi. Per impostazione
   
 > [!NOTE]  
 > Per connettersi a un'istanza utente attiva di [!INCLUDE[ssExpress](../../includes/ssexpress_md.md)], eseguire la connessione tramite il protocollo Named Pipes specificando il nome della pipe, ad esempio `np:\\.\pipe\3C3DF6B1-2262-47\tsql\query`. Per altre informazioni, vedere la documentazione di [!INCLUDE[ssExpress](../../includes/ssexpress_md.md)].  
-  
+> [!NOTE]  
+> Le connessioni sono in genere persistenti nella cronologia degli elementi usati più di recente. Per rimuovere voci da questa cronologia, fare clic sulla casella combinata **Nome server**, selezionare il nome del server da rimuovere e quindi premere **CANC**.  
+   
 **Autenticazione**  
 La versione corrente di SSMS offre cinque modalità di autenticazione quando si esegue la connessione a un'istanza di [!INCLUDE[ssDE](../../includes/ssde_md.md)]. Se la finestra di dialogo Autenticazione non corrisponde all'elenco seguente, scaricare la versione più recente di SSMS da [Scaricare SQL Server Management Studio (SSMS)](../download-sql-server-management-studio-ssms.md).  
 

@@ -25,18 +25,15 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d2f36af646ee1fb41279b8401c5e2bdf18ed6896
-ms.sourcegitcommit: 96032813f6bf1cba680b5e46d82ae1f0f2da3d11
+ms.openlocfilehash: 60bec45b4feacff0390bfb359010767dc3bcd2af
+ms.sourcegitcommit: a13256f484eee2f52c812646cc989eb0ce6cf6aa
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/15/2019
-ms.locfileid: "54299388"
+ms.lasthandoff: 02/25/2019
+ms.locfileid: "56801405"
 ---
 # <a name="char-and-varchar-transact-sql"></a>char and varchar (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
-
-> [!div class="nextstepaction"]
-> [Condividi il feedback sul sommario della documentazione SQL](https://aka.ms/sqldocsurvey)
 
 Tipi di dati carattere a lunghezza fissa, **char**, o a lunghezza variabile, **varchar**. A partire da [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)], quando si usano regole di confronto che supportano UTF-8, questi tipi di dati archiviano l'intera gamma dei dati di tipo carattere [Unicode](../../relational-databases/collations/collation-and-unicode-support.md#Unicode_Defn) e usano la codifica dei caratteri [UTF-8 ](https://www.wikipedia.org/wiki/UTF-8). Se si specificano regole di confronto non UTF-8, questi tipi di dati archiviano solo un subset dei caratteri supportati dalla tabella codici corrispondente di tali regole di confronto.
   
@@ -46,7 +43,7 @@ Tipi di dati carattere a lunghezza fissa, **char**, o a lunghezza variabile, **v
 **varchar** [ ( *n* | **max** ) ] Dati stringa a lunghezza variabile. *n* definisce la lunghezza della stringa in byte e può essere un valore compreso tra 1 e 8.000. **max** indica che le dimensioni massime della risorsa di archiviazione sono di 2^31-1 byte (2 GB). Per i set di caratteri con codifica a byte singolo, ad esempio *Latin*, le dimensioni di archiviazione sono pari a *n* byte + 2 byte e anche il numero di caratteri che possono essere archiviati è *n*. Per i set di caratteri con codifica multibyte, le dimensioni di archiviazione sono di nuovo *n* byte + 2 byte, ma il numero di caratteri che possono essere archiviati può essere inferiore a *n*. I sinonimi ISO per **varchar** sono **charvarying** o **charactervarying**. Per altre informazioni sui set di caratteri, vedere [Set di caratteri a byte singolo e multibyte](/cpp/c-runtime-library/single-byte-and-multibyte-character-sets).
 
 ## <a name="remarks"></a>Remarks  
-Se *n* viene omesso in un'istruzione di definizione dei dati o di dichiarazione di variabili, la lunghezza predefinita è 1. Se *n* viene omesso nell'uso delle funzioni CAST e CONVERT, la lunghezza predefinita è 30.
+Se non si specifica *n* in un'istruzione di definizione dei dati o di dichiarazione di variabili, la lunghezza predefinita è 1. Se non si specifica *n* quando si usano le funzioni CAST e CONVERT, la lunghezza predefinita è 30.
   
 Agli oggetti che usano **char** o **varchar** vengono assegnate le regole di confronto predefinite del database, a meno che non vengano assegnate regole di confronto specifiche tramite la clausola COLLATE. Le regole di confronto controllano la tabella codici utilizzata per l'archiviazione dei dati di tipo carattere.
 
@@ -67,19 +64,19 @@ Se l'opzione SET ANSI_PADDING è impostata su OFF quando si esegue l'istruzione 
   
 > [!WARNING]
 > Ogni colonna non Null varchar(max) o nvarchar(max) richiede 24 byte di allocazione fissa aggiuntiva che concorre al raggiungimento del limite delle righe di 8.060 byte durante un'operazione di ordinamento. Ciò può creare un limite implicito per il numero di colonne non Null varchar(max) o nvarchar(max) che è possibile creare in una tabella.  
-Non vengono segnalati errori particolari (oltre il normale avviso che indica che le dimensioni massime per le righe superano il valore massimo consentito di 8.060 byte) durante la creazione della tabella o l'inserimento dei dati. Queste dimensioni delle righe eccessive possono causare errori (ad esempio, l'errore 512) durante le normali operazioni, ad esempio un aggiornamento della chiave dell'indice cluster o l'ordinamento del set di colonne completo, che gli utenti non possono prevedere finché non eseguono un'operazione.
+Non vengono segnalati errori particolari (oltre il normale avviso che indica che le dimensioni massime per le righe superano il valore massimo consentito di 8.060 byte) durante la creazione della tabella o l'inserimento dei dati. Queste dimensioni elevate delle righe possono causare errori (ad esempio, l'errore 512) durante alcune operazioni normali come un aggiornamento della chiave dell'indice cluster o durante operazioni di ordinamento dell'intero set di colonne e gli utenti possono prevederli prima dell'esecuzione di un'operazione.
   
 ##  <a name="_character"></a> Conversione dei dati di tipo carattere  
-Se un'espressione di caratteri viene convertita in un tipo di dati carattere di dimensioni diverse, i valori troppo lunghi per il nuovo tipo di dati vengono troncati. Per la conversione da un'espressione di caratteri, il tipo **uniqueidentifier** è considerato un tipo di dati carattere ed è pertanto soggetto alle regole di troncamento per la conversione in un tipo di dati carattere. Vedere la sezione Esempi riportata di seguito.
+Se un'espressione di caratteri viene convertita in un tipo di dati carattere di dimensioni diverse, i valori troppo lunghi per il nuovo tipo di dati vengono troncati. Ai fini della conversione da un'espressione di caratteri, il tipo **uniqueidentifier** viene considerato un tipo carattere ed è quindi soggetto alle regole di troncamento per la conversione in tipo carattere. Vedere la sezione Esempi riportata di seguito.
   
 Se un'espressione di caratteri viene convertita in un'espressione di caratteri con tipo di dati o dimensioni diverse, ad esempio da**char(5)** a **varchar(5)**, o da **char(20)** a **char(15)**, al valore convertito vengono assegnate le regole di confronto del valore di input. Se un'espressione non di caratteri viene convertita in dati di tipo carattere, al valore convertito vengono assegnate le regole di confronto predefinite del database corrente. In entrambi i casi è possibile assegnare regole di confronto specifiche mediante la clausola [COLLATE](../../t-sql/statements/collations.md).
   
 > [!NOTE]  
-> Le conversioni tra tabelle codici sono supportate per i tipi di dati **char** e **varchar**, ma non per il tipo di dati **text**. Come nel caso delle versioni precedenti di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], la perdita di dati durante le conversioni di tabella codici non viene segnalata.  
+> Le conversioni tra tabelle codici sono supportate per i tipi di dati **char** e **varchar**, ma non per il tipo di dati **text**. Come nelle versioni precedenti di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], la perdita di dati durante le conversioni tra tabelle codici non viene segnalata.  
   
-Le espressioni di caratteri che vengono convertite in un tipo di dati **numeric** approssimato possono includere una notazione esponenziale facoltativa: una e minuscola o maiuscola seguita da un segno più (+) o meno (-) facoltativo e quindi da un numero.
+Le espressioni di caratteri convertite in un tipo di dati **numeric** approssimato possono includere una notazione esponenziale facoltativa. La notazione è costituita da una e minuscola o una E maiuscola seguita da un segno più (+) o meno (-) facoltativo e quindi un numero.
   
-Le espressioni di caratteri che vengono convertite in un tipo di dati **numeric** esatto devono includere cifre, il separatore decimale e un segno più (+) o meno (-) facoltativo. Gli spazi vuoti iniziali vengono ignorati. L'utilizzo della virgola come separatore, ad esempio come separatore decimale nel numero 123.456,00 non è consentito.
+Le espressioni di caratteri che vengono convertite in un tipo di dati **numeric** esatto devono includere cifre, il separatore decimale e un segno più (+) o meno (-) facoltativo. Gli spazi vuoti iniziali vengono ignorati. Nella stringa non è consentito l'uso della virgola come separatore, ad esempio come separatore decimale nel numero 123.456,00.
   
 Le espressioni di caratteri che vengono convertite nel tipo di dati **money** o **smallmoney** possono includere anche un separatore decimale e il simbolo di dollaro ($) facoltativi. L'utilizzo della virgola come separatore decimale, ad esempio $ 123.456,00, è consentito.
   
@@ -109,7 +106,7 @@ SELECT DATALENGTH(CONVERT(char, @myVariable)) AS 'VarcharDefaultLength';
 ```  
   
 ### <a name="c-converting-data-for-display-purposes"></a>C. Conversione di dati per la visualizzazione  
-Nell'esempio seguente vengono convertite due colonne in dati di tipo carattere e viene utilizzato uno stile che applica un formato specifico ai dati visualizzati. Un tipo di dati **money** viene convertito in dati di tipo carattere e viene applicato lo stile 1. Tale stile consente di visualizzare i valori con le virgole ogni tre cifre a sinistra del separatore decimale e due cifre a destra del separatore decimale. Il tipo **datetime** viene convertito nei dati di tipo carattere e viene applicato lo stile 3, che consente di visualizzare i dati nel formato gg/mm/aa. Nella clausola WHERE il cast del tipo **money** viene eseguito a un tipo carattere per eseguire un'operazione di confronto tra stringhe.
+Nell'esempio seguente vengono convertite due colonne in dati di tipo carattere e viene utilizzato uno stile che applica un formato specifico ai dati visualizzati. Un tipo di dati **money** viene convertito in dati di tipo carattere e viene applicato lo stile 1. Tale stile consente di visualizzare i valori con le virgole ogni tre cifre a sinistra del separatore decimale e due cifre a destra del separatore decimale. Un tipo **datetime** viene convertito in dati di tipo carattere e viene applicato lo stile 3, che visualizza i dati nel formato gg/mm/aa. Nella clausola WHERE il cast del tipo **money** viene eseguito a un tipo carattere per eseguire un'operazione di confronto tra stringhe.
   
 ```sql
 USE AdventureWorks2012;  
