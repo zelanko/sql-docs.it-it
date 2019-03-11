@@ -1,7 +1,7 @@
 ---
 title: Novità di SQL Server 2019 | Microsoft Docs
-ms.date: 02/28/2019
-ms.prod: sql-server-2018
+ms.date: 03/01/2019
+ms.prod: sql-server-2019
 ms.reviewer: ''
 ms.technology: release-landing
 ms.topic: article
@@ -9,12 +9,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 8fdc1191b5f0ef7d475e23bbcb56081821d6882b
-ms.sourcegitcommit: 670082cb47f7d3d82e987b549b6f8e3a8968b5db
+ms.openlocfilehash: 8f7302384bbf264061c73b79a919855aa762994f
+ms.sourcegitcommit: 8bc5d85bd157f9cfd52245d23062d150b76066ef
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57334818"
+ms.lasthandoff: 03/07/2019
+ms.locfileid: "57579771"
 ---
 # <a name="whats-new-in-includesql-server-2019includessssqlv15-mdmd"></a>Novità di [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)]
 
@@ -189,7 +189,7 @@ Il mascheramento dei dati statico opera a livello di colonna. Selezionare le col
 
 #### <a name="static-data-masking-vs-dynamic-data-masking"></a>Mascheramento dei dati statico e mascheramento dei dati dinamico
 
-Il mascheramento dei dati è il processo di applicazione di una maschera a un database per nascondere le informazioni sensibili del database e sostituirle con nuovi dati o dati ripuliti. Microsoft offre due opzioni di mascheramento, ovvero il mascheramento dei dati statico e il mascheramento dei dati dinamico. Il mascheramento dei dati dinamico è stato introdotto in [!INCLUDE[ssSQL17](../includes/sssql17-md.md)]. Nella tabella seguente vengono messe a confronto questi due soluzioni:
+Il mascheramento dei dati è il processo di applicazione di una maschera a un database per nascondere le informazioni sensibili del database e sostituirle con nuovi dati o dati ripuliti. Microsoft offre due opzioni di mascheramento, ovvero il mascheramento dei dati statico e il mascheramento dei dati dinamico. Il mascheramento dei dati dinamico è stato introdotto in [!INCLUDE[ssSQL16](../includes/sssql16-md.md)]. Nella tabella seguente vengono messe a confronto questi due soluzioni:
 
 |Mascheramento dei dati statico |Mascheramento dati dinamici|
 |:----|:----|
@@ -463,7 +463,7 @@ FROM sys.dm_exec_requests AS d
   - Supporta gli scenari che usano il cluster Big Data di SQL Server. (CTP 2.0)
   
   > [!TIP]
-  > Per i miglioramenti più recenti ad Azure Data Studio, vedere le [Note sulla versione per Azure Data Studio](../azure-data-studio/release-notes.md).
+  > Per i miglioramenti più recenti ad Azure Data Studio, vedere le [Note sulla versione per Azure Data Studio](../azure-data-studio/release-notes-azure-data-studio.md).
 
 - [**SQL Server Management Studio (SSMS) 18.0 (anteprima)**](../ssms/sql-server-management-studio-ssms.md): Supporta [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)].
 
