@@ -23,12 +23,12 @@ ms.assetid: 2e6e4eeb-b70b-4f45-a253-28ac4e595d75
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 9bbc09590943948d27ebd989b38b6ea9f2c94559
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: aa99cc5549d463b48b8eff8989df312abf5d4f0f
+ms.sourcegitcommit: 0510e1eb5bcb994125cbc8b60f8a38ff0d2e2781
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47844949"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57736804"
 ---
 # <a name="reconfigure-transact-sql"></a>RECONFIGURE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -64,10 +64,10 @@ RECONFIGURE [ WITH OVERRIDE ]
  Le autorizzazioni per RECONFIGURE vengono assegnate per impostazione predefinita agli utenti che dispongono dell'autorizzazione per ALTER SETTINGS. I ruoli predefiniti del server **sysadmin** e **serveradmin** dispongono di questa autorizzazione in modo implicito.    
     
 ## <a name="examples"></a>Esempi    
- Nell'esempio seguente viene impostato il limite massimo per l'opzione di configurazione `recovery interval` su `75` minuti e si utilizza `RECONFIGURE WITH OVERRIDE` per la relativa installazione. Gli intervalli di recupero superiori a 60 minuti non sono consigliati e per impostazione predefinita non sono consentiti. Poiché è specificata l'opzione `WITH OVERRIDE`, tuttavia, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] non controlla se il valore specificato (`90`) è un valore valido per l'opzione di configurazione `recovery interval`.    
+ Nell'esempio seguente viene impostato il limite massimo per l'opzione di configurazione `recovery interval` su `75` minuti e si utilizza `RECONFIGURE WITH OVERRIDE` per la relativa installazione. Gli intervalli di recupero superiori a 60 minuti non sono consigliati e per impostazione predefinita non sono consentiti. Poiché è specificata l'opzione `WITH OVERRIDE`, tuttavia, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] non controlla se il valore specificato (`75`) è un valore valido per l'opzione di configurazione `recovery interval`.    
     
 ```    
-EXEC sp_configure 'recovery interval', 75'    
+EXEC sp_configure 'recovery interval', 75    
 RECONFIGURE WITH OVERRIDE;    
 GO    
 ```    

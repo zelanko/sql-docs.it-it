@@ -10,18 +10,18 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: 6d0f5fba93b74aa5751635c9a10f320c85036bbb
-ms.sourcegitcommit: 2533383a7baa03b62430018a006a339c0bd69af2
+ms.openlocfilehash: 8d784b82c56ca99027491bf257c90dddf4eb9b6b
+ms.sourcegitcommit: c0b3b3d969af668d19b1bba04fa0c153cc8970fd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57017827"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57756636"
 ---
 # <a name="how-to-deploy-an-app-on-sql-server-2019-big-data-cluster-preview"></a>Come distribuire un'app nel cluster di big data 2019 Server SQL (anteprima)
 
 Questo articolo descrive come distribuire e gestire lo script R e Python come un'applicazione all'interno di un cluster di big data di SQL Server 2019 (anteprima).
- 
-## <a name="whats-new-and-improved"></a>Che cos'è nuovo e migliorato 
+
+## <a name="whats-new-and-improved"></a>Che cos'è nuovo e migliorato
 
 - Un'unica utilità della riga di comando per la gestione di cluster e l'app.
 - Distribuzione dell'app semplificata, fornendo un controllo granulare tramite file di specifiche.
@@ -80,13 +80,12 @@ Se si usa servizio contenitore di AZURE, è necessario eseguire il comando segue
 kubectl get svc endpoint-service-proxy -n <name of your cluster>
 ```
 
-
 ## <a name="kubeadm-or-minikube"></a>Kubeadm oppure Minikube
 
 Se si usa Kubeadm oppure Minikube eseguire il comando seguente per ottenere l'indirizzo IP per l'accesso al cluster
 
 ```bash
-kubectl get node --selector='node-role.kubernetes.io/master' 
+kubectl get node --selector='node-role.kubernetes.io/master'
 ```
 
 ## <a name="create-an-app"></a>Creare un'app
@@ -101,16 +100,17 @@ mssqlctl app create -n <app_name> -v <version_number> --spec <directory containi
 
 Il comando seguente illustra un esempio di ciò che potrebbe essere simile questo comando:
 
-Ciò presuppone che si dispone di file denominato `spec.yaml` all'interno di `addpy` cartella. Il `addpy` cartella contiene il `add.py` e `spec.yaml` il `spec.yaml` è un file di specifica per il `add.py` app.
+Ciò presuppone che si dispone di file denominato `spec.yaml` all'interno di `addpy` cartella.
+Il `addpy` cartella contiene il `add.py` e `spec.yaml` il `spec.yaml` è un file di specifica per il `add.py` app.
 
 
-`add.py` Crea l'app python seguente: 
+`add.py` Crea l'app python seguente:
 
 ```py
 #add.py
 def add(x,y):
         result = x+y
-        return result;
+        return result
 result=add(x,y)
 ```
 
@@ -119,9 +119,9 @@ Lo script seguente è riportato un esempio del contenuto per `spec.yaml`:
 ```yaml
 #spec.yaml
 name: add-app #name of your python script
-version: v1  #version of the app 
-runtime: Python #the languge this app uses (R or Python)
-src: ./add.py #full path to the loction of the app
+version: v1  #version of the app
+runtime: Python #the language this app uses (R or Python)
+src: ./add.py #full path to the location of the app
 entrypoint: add #the function that will be called upon execution
 replicas: 1  #number of replicas needed
 poolsize: 1  #the pool size that you need your app to scale
@@ -144,13 +144,13 @@ mssqlctl app create --spec ./addpy
 mssqlctl app list
 ```
 
-Se la distribuzione non è stata completata dovrebbe essere il `state` mostrare `WaitingforCreate` come illustrato nell'esempio seguente: 
+Se la distribuzione non è stata completata dovrebbe essere il `state` mostrare `WaitingforCreate` come illustrato nell'esempio seguente:
 
-```
+```json
 [
   {
     "name": "add-app",
-    `state`: "WaitingforCreate",
+    "state": "WaitingforCreate",
     "version": "v1"
   }
 ]
@@ -158,11 +158,11 @@ Se la distribuzione non è stata completata dovrebbe essere il `state` mostrare 
 
 Dopo la distribuzione ha esito positivo, viene visualizzato il `state` passare alla `Ready` stato:
 
-```
+```json
 [
   {
     "name": "add-app",
-    `state`: `Ready`,
+    "state": "Ready",
     "version": "v1"
   }
 ]
@@ -192,11 +192,11 @@ mssqlctl app list --name add-app --version v1
 
 Si dovrebbe visualizzato un output simile all'esempio seguente:
 
-```
+```json
 [
   {
     "name": "add-app",
-    `state`: `Ready`,
+    "state": "Ready",
     "version": "v1"
   }
 ]
@@ -218,7 +218,7 @@ mssqlctl app run --name add-app --version v1 --inputs x=1,y=2
 
 Se l'esecuzione ha avuto esito positivo, si verrà visualizzato l'output come specificato durante la creazione dell'app. Di seguito è riportato un esempio.
 
-```
+```json
 {
   "changedFiles": [],
   "consoleOutput": "",
@@ -233,13 +233,13 @@ Se l'esecuzione ha avuto esito positivo, si verrà visualizzato l'output come sp
 
 ## <a name="create-an-app-skeleton"></a>Creare una struttura dell'app
 
-Il comando init fornisce lo scaffolding con l'articoli rilevanti che sono necessario per la distribuzione di un'app. L'esempio seguente crea hello è possibile farlo eseguendo il comando seguente.
+Il comando init fornisce uno scaffold con gli elementi pertinenti che è necessario per la distribuzione di un'app. L'esempio seguente crea hello è possibile farlo eseguendo il comando seguente.
 
-```
+```bash
 mssqlctl app init --name hello --version v1 --template python
 ```
 
-Si creerà una cartella denominata hello.  È possibile passare le directory ed esaminare i file generati nella cartella. Spec.yaml definisce l'app, ad esempio nome, versione e il codice sorgente. È possibile modificare la specifica per modificare nome, versione, input e output.
+Si creerà una cartella denominata hello.  È possibile `cd` nella directory ed esaminare i file generati nella cartella. Spec.yaml definisce l'app, ad esempio nome, versione e il codice sorgente. È possibile modificare la specifica per modificare nome, versione, input e output.
 
 Di seguito è riportato l'output del comando init che verrà visualizzato nella cartella
 
@@ -255,7 +255,7 @@ spec.yaml
 
 Il comando descrizione fornisce informazioni dettagliate sull'app tra cui il punto finale nel cluster. Ciò in genere viene usato da uno sviluppatore di app per compilare un'app usando il client di swagger e usando il servizio Web per interagire con l'app in modalità RESTful.
 
-```
+```json
 {
   "input_param_defs": [
     {
@@ -278,10 +278,9 @@ Il comando descrizione fornisce informazioni dettagliate sull'app tra cui il pun
       "type": "int"
     }
   ],
-  `state`: `Ready`,
+  "state": "Ready",
   "version": "v1"
 }
-
 ```
 
 ## <a name="delete-an-app"></a>Eliminare un'app

@@ -15,12 +15,12 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: df69488ebf433257ba4b1af7c13ec1c299afa831
-ms.sourcegitcommit: bfa10c54e871700de285d7f819095d51ef70d997
+ms.openlocfilehash: 04681d455fe4589135cd0b112c310e2dd0a027b3
+ms.sourcegitcommit: 8bc5d85bd157f9cfd52245d23062d150b76066ef
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/14/2019
-ms.locfileid: "54256376"
+ms.lasthandoff: 03/07/2019
+ms.locfileid: "57579101"
 ---
 # <a name="use-a-format-file-to-map-table-columns-to-data-file-fields-sql-server"></a>Utilizzo di un file di formato per eseguire il mapping tra le colonne della tabella e i campi del file di dati (SQL Server)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -102,10 +102,10 @@ Confrontare le modifiche:
 
 ```
 Il file di formato modificato riflette ora:
-* Il primo campo dati in `myRemap.bcp` è mappato alla prima colonna, ` myRemap.. PersonID`
+* Il primo campo dati in `myRemap.bcp` è mappato alla prima colonna, `myRemap.. PersonID`
 * Il secondo campo dati in `myRemap.bcp` è mappato alla terza colonna, `myRemap.. LastName`
 * Il terzo campo dati in `myRemap.bcp` è mappato alla seconda colonna, `myRemap.. FirstName`
-* Il quarto campo dati in `myRemap.bcp` è mappato alla quarta colonna, ` myRemap.. Gender`
+* Il quarto campo dati in `myRemap.bcp` è mappato alla quarta colonna, `myRemap.. Gender`
 
 ### Creazione di un file di formato XML <a name="xml_format_file"></a>  
 Per informazioni dettagliate, vedere [File in formato XML (SQL Server)](../../relational-databases/import-export/xml-format-files-sql-server.md) .  Il comando seguente userà l' [utilità bcp](../../tools/bcp-utility.md) per creare un file di formato XML, `myRemap.xml`, sulla base dello schema di `myRemap`.  Inoltre, il qualificatore `c` viene usato per specificare dati di tipo carattere, `t,` viene usato per specificare la virgola come carattere di terminazione del campo e `T` viene usato per specificare una connessione trusted che usa la sicurezza integrata.  È necessario usare il qualificatore `x` per generare un file di formato basato su XML.  Al prompt dei comandi immettere il comando seguente:

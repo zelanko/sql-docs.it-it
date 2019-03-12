@@ -22,12 +22,12 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: fe9d543b9772bfef11fa31cfce0ce35c58b68b4e
-ms.sourcegitcommit: a13256f484eee2f52c812646cc989eb0ce6cf6aa
+ms.openlocfilehash: aa7bd2ea2812df56e1f4b2f642c3abca3102a8d9
+ms.sourcegitcommit: c0b3b3d969af668d19b1bba04fa0c153cc8970fd
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/25/2019
-ms.locfileid: "56802845"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57756756"
 ---
 # <a name="rank-transact-sql"></a>RANK (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -43,7 +43,7 @@ ROW_NUMBER e RANK sono simili. ROW_NUMBER numera tutte le righe in sequenza (ad 
   
 ## <a name="syntax"></a>Sintassi  
   
-```  
+```sql  
 RANK ( ) OVER ( [ partition_by_clause ] order_by_clause )  
 ```  
   
@@ -66,7 +66,7 @@ RANK ( ) OVER ( [ partition_by_clause ] order_by_clause )
 ### <a name="a-ranking-rows-within-a-partition"></a>A. Classificazione di righe all'interno di una partizione  
  Nell'esempio seguente vengono assegnati i ranghi per i prodotti nelle ubicazioni di inventario specificate in base alle quantità. Il set di risultati viene partizionato da `LocationID` e ordinato logicamente in base al valore di `Quantity`. Si noti che la quantità dei prodotti 494 e 495 è la stessa. Poiché tali prodotti sono collegati, vengono entrambi classificati con uno.  
   
-```  
+```sql  
 USE AdventureWorks2012;  
 GO  
 SELECT i.ProductID, p.Name, i.LocationID, i.Quantity  
@@ -82,7 +82,7 @@ GO
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
-```  
+```sql  
   
 ProductID   Name                   LocationID   Quantity Rank  
 ----------- ---------------------- ------------ -------- ----  
@@ -102,7 +102,7 @@ ProductID   Name                   LocationID   Quantity Rank
 ### <a name="b-ranking-all-rows-in-a-result-set"></a>b. Classificazione di tutte le righe in un set di risultati  
  Nell'esempio seguente vengono restituiti i primi dieci dipendenti classificati in base allo stipendio. Poiché non è specificata alcuna clausola PARTITION BY, la funzione RANK è stata applicata a tutte le righe nel set di risultati.  
   
-```  
+```sql  
 USE AdventureWorks2012  
 SELECT TOP(10) BusinessEntityID, Rate,   
        RANK() OVER (ORDER BY Rate DESC) AS RankBySalary  
@@ -115,7 +115,7 @@ ORDER BY BusinessEntityID;
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
-```  
+```sql  
 BusinessEntityID Rate                  RankBySalary  
 ---------------- --------------------- --------------------  
 1                125.50                1  
@@ -135,7 +135,7 @@ BusinessEntityID Rate                  RankBySalary
 ### <a name="c-ranking-rows-within-a-partition"></a>C: Classificazione di righe all'interno di una partizione  
  Nell'esempio seguente gli addetti alle vendite in ogni territorio di vendita vengono classificati in base al totale delle vendite. Il set di righe viene partizionato in base a `SalesTerritoryGroup` e ordinato in base a `SalesAmountQuota`.  
   
-```  
+```sql  
 -- Uses AdventureWorks  
   
 SELECT LastName, SUM(SalesAmountQuota) AS TotalSales, SalesTerritoryRegion,  
@@ -149,7 +149,7 @@ GROUP BY LastName, SalesTerritoryRegion;
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
-```
+```sql
 LastName          TotalSales     SalesTerritoryGroup  RankResult
 ----------------  -------------  -------------------  --------
 Tsoflias          1687000.0000   Australia            1

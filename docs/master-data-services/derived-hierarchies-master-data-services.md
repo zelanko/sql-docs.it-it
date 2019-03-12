@@ -15,12 +15,12 @@ ms.assetid: a0fbd519-a10e-4cbd-92e6-5de9b8d3e3f0
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 2158ebe21779866fbdc3c356164eb3a17d1eed04
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
-ms.translationtype: HT
+ms.openlocfilehash: 126ebfadfea6b67c0627984bac34b8925d766771
+ms.sourcegitcommit: 0510e1eb5bcb994125cbc8b60f8a38ff0d2e2781
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52767813"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57736792"
 ---
 # <a name="derived-hierarchies-master-data-services"></a>Gerarchie derivate (Master Data Services)
 
@@ -68,7 +68,7 @@ ms.locfileid: "52767813"
  Questo tipo di gerarchia non consente lo spostamento di un membro in un livello non valido. È ad esempio possibile spostare la bicicletta Road-650 da una sottocategoria, Road Bikes, in un'altra, Mountain Bikes. Non è possibile spostare Road-650 direttamente in una categoria, ad esempio 1 {Bikes}. Ogni volta che si sposta un membro nell'albero gerarchico, il valore dell'attributo basato su dominio del membro viene modificato in modo da riflettere lo spostamento.  
   
 ## <a name="notes"></a>Note  
- Tutti i membri di un albero gerarchico derivato vengono ordinati in base al codice. Non è possibile modificare l'ordinamento.  
+ Tutti i membri in un albero gerarchico derivato vengono ordinati per ID. Non è possibile modificare l'ordinamento.  
   
  Se un attributo basato su dominio di un membro è vuoto e l'attributo viene utilizzato per una gerarchia derivata, il membro non verrà visualizzato nella gerarchia. Creare regole business per richiedere il popolamento degli attributi. Per altre informazioni, vedere [Richiedere valori di attributo &#40;Master Data Services&#41;](../master-data-services/require-attribute-values-master-data-services.md).  
   

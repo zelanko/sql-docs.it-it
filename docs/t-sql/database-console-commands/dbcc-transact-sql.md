@@ -34,15 +34,15 @@ helpviewer_keywords:
 - progress reporting [DBCC statements]
 - informational statements [SQL Server]
 ms.assetid: c6da8c04-5b6b-459a-9f76-110c92ca8b29
-author: uc-msft
+author: pmasl
 ms.author: umajay
 manager: craigg
-ms.openlocfilehash: 30b407b4cbfd10f6a5844978bbabbb9bf26e2784
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e746569eb629eb41c96cc7738e9529949307532e
+ms.sourcegitcommit: 0a7beb2f51e48889b4a85f7c896fb650b208eb36
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47731349"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57685718"
 ---
 # <a name="dbcc-transact-sql"></a>DBCC (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -101,12 +101,12 @@ L'unità di riferimento dello stato dipende dalla fase di esecuzione corrente de
 |---------------------|-----------------|------------------------------------|  
 |DBCC TABLE CHECK|Durante questa fase viene controllata la consistenza logica e fisica degli oggetti del database.|Lo stato viene segnalato a livello di pagina del database.<br /><br /> Il valore del report di stato viene aggiornato ogni 1000 pagine del database controllate. |  
 |DBCC TABLE REPAIR|Se viene specificata l'opzione REPAIR_FAST, REPAIR_REBUILD o REPAIR_ALLOW_DATA_LOSS ed è necessario correggere alcuni errori relativi agli oggetti, durante questa fase vengono implementate correzioni nel database.|Lo stato viene segnalato a livello di singola correzione.<br /><br /> Il contatore viene aggiornato ogni volta che viene completata una correzione.|  
-|DBCC ALLOC CHECK|Durante questa fase vengono controllate le strutture di allocazione del database.<br /><br /> Nota: il comando DBCC CHECKALLOC esegue gli stessi controlli.|Lo stato non viene segnalato.|  
+|DBCC ALLOC CHECK|Durante questa fase vengono controllate le strutture di allocazione del database.<br /><br /> Nota: Il comando DBCC CHECKALLOC esegue gli stessi controlli.|Lo stato non viene segnalato.|  
 |DBCC ALLOC REPAIR|Se viene specificata l'opzione REPAIR_FAST, REPAIR_REBUILD o REPAIR_ALLOW_DATA_LOSS ed è necessario correggere alcuni errori di allocazione, durante questa fase vengono implementate correzioni nel database.|Lo stato non viene segnalato.|  
 |DBCC SYS CHECK|Durante questa fase vengono controllate le tabelle di sistema del database.|Lo stato viene segnalato a livello di pagina del database.<br /><br /> Il valore del report di stato viene aggiornato ogni 1000 pagine del database controllate.|  
 |DBCC SYS REPAIR|Se viene specificata l'opzione REPAIR_FAST, REPAIR_REBUILD o REPAIR_ALLOW_DATA_LOSS ed è necessario correggere alcuni errori relativi alle tabelle di sistema, durante questa fase vengono implementate correzioni nel database.|Lo stato viene segnalato a livello di singola correzione.<br /><br /> Il contatore viene aggiornato ogni volta che viene completata una correzione.|  
-|DBCC SSB CHECK|Durante questa fase vengono controllati gli oggetti di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Service Broker.<br /><br /> Nota: questa fase non viene completata quando viene eseguito il comando DBCC CHECKTABLE.|Lo stato non viene segnalato.|  
-|DBCC CHECKCATALOG|Durante questa fase viene controllata la consistenza dei cataloghi del database.<br /><br /> Nota: questa fase non viene completata quando viene eseguito il comando DBCC CHECKTABLE.|Lo stato non viene segnalato.|  
+|DBCC SSB CHECK|Durante questa fase vengono controllati gli oggetti di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Service Broker.<br /><br /> Nota: Questa fase non viene completata quando viene eseguito il comando DBCC CHECKTABLE.|Lo stato non viene segnalato.|  
+|DBCC CHECKCATALOG|Durante questa fase viene controllata la consistenza dei cataloghi del database.<br /><br /> Nota: Questa fase non viene completata quando viene eseguito il comando DBCC CHECKTABLE.|Lo stato non viene segnalato.|  
 |DBCC IVIEW CHECK|Durante questa fase viene controllata la consistenza logica di tutte le viste indicizzate presenti nel database.|Lo stato viene segnalato a livello di singola vista del database controllata.|  
   
 ## <a name="informational-statements"></a>Istruzioni informative  
@@ -144,6 +144,6 @@ L'unità di riferimento dello stato dipende dalla fase di esecuzione corrente de
 |[DBCC dllname (FREE)](../../t-sql/database-console-commands/dbcc-dllname-free-transact-sql.md)|[DBCC HELP](../../t-sql/database-console-commands/dbcc-help-transact-sql.md)|  
 |[DBCC FLUSHAUTHCACHE](../../t-sql/database-console-commands/dbcc-flushauthcache-transact-sql.md)|[DBCC TRACEOFF](../../t-sql/database-console-commands/dbcc-traceoff-transact-sql.md)|  
 |[DBCC FREESESSIONCACHE](../../t-sql/database-console-commands/dbcc-freesessioncache-transact-sql.md)|[DBCC TRACEON](../../t-sql/database-console-commands/dbcc-traceon-transact-sql.md)|  
-|[DBCC FREESYSTEMCACHE](../../t-sql/database-console-commands/dbcc-freesystemcache-transact-sql.md)|[DBCC CLONEDATABASE](../../t-sql/database-console-commands/dbcc-clonedatabase-transact-sql.md) <br /><br /> **Si applica a**: da [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] SP2 a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].|  
+|[DBCC FREESYSTEMCACHE](../../t-sql/database-console-commands/dbcc-freesystemcache-transact-sql.md)|[DBCC CLONEDATABASE](../../t-sql/database-console-commands/dbcc-clonedatabase-transact-sql.md) <br /><br /> **Si applica a**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] da SP2 fino a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].|  
   
   

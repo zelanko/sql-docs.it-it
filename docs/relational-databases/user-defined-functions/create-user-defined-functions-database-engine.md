@@ -20,12 +20,12 @@ author: rothja
 ms.author: jroth
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 6b2ff8188f2733fd0467ac39266bc9f0510de621
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: b8c69ac0361f29c81341831b25e3591716484902
+ms.sourcegitcommit: 8bc5d85bd157f9cfd52245d23062d150b76066ef
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52515476"
+ms.lasthandoff: 03/07/2019
+ms.locfileid: "57579718"
 ---
 # <a name="create-user-defined-functions-database-engine"></a>Creazione di funzioni definite dall'utente (Motore di database)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -200,7 +200,7 @@ La creazione di un join di una funzione con valori di tabella con istruzioni mul
 > [!IMPORTANT]
 > Le funzioni con valori di tabella con istruzioni multiple hanno una stima di cardinalità predefinita pari a 100 a partire da [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] e pari a 1 nelle versioni di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] precedenti.    
 > A partire da [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)], è possibile ottimizzazione un piano di esecuzione che usa le funzioni con valori di tabella con istruzioni multiple per sfruttare l'esecuzione interleaved. In questo modo si usa la cardinalità effettiva anziché i valori euristici specificati in precedenza.     
-> Per altre informazioni, vedere [Esecuzione interleaved per funzioni con valori di tabella a più istruzioni](../../relational-databases/performance/adaptive-query-processing.md#interleaved-execution-for-multi-statement-table-valued-functions).
+> Per altre informazioni, vedere [Esecuzione interleaved per funzioni con valori di tabella a più istruzioni](../../relational-databases/performance/intelligent-query-processing.md#interleaved-execution-for-mstvfs).
 
 > [!NOTE]  
 > ANSI_WARNINGS non viene applicata quando vengono passati parametri a una stored procedure, una funzione definita dall'utente oppure in caso di dichiarazione e impostazione delle variabili in un'istruzione batch. Se, ad esempio, la variabile viene definita come **char(3)** e quindi impostata su un valore maggiore di tre caratteri, i dati verranno troncati alle dimensioni definite e l'istruzione `INSERT` o `UPDATE` avrà esito positivo.

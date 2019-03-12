@@ -21,15 +21,15 @@ helpviewer_keywords:
 - constraints [SQL Server], consistency checks
 - integrity [SQL Server], constraints
 ms.assetid: da6c9cee-6687-46e8-b504-738551f9068b
-author: uc-msft
+author: pmasl
 ms.author: umajay
 manager: craigg
-ms.openlocfilehash: 1e93d0f71ab7c59a7bd0c43ea6badbc95bd8ee80
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 911cb0643318e98b46746c7cd11ef2ebbfcaca2b
+ms.sourcegitcommit: 0a7beb2f51e48889b4a85f7c896fb650b208eb36
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52525337"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57685668"
 ---
 # <a name="dbcc-checkconstraints-transact-sql"></a>DBCC CHECKCONSTRAINTS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -58,7 +58,7 @@ DBCC CHECKCONSTRAINTS
  Tabella o vincolo da controllare. Se si specifica *table_name* o *table_id* vengono controllati tutti i vincoli abilitati nella tabella. Se si specifica *constraint_name* o *constraint_id* viene controllato solo il vincolo specificato. Se non si specifica un identificatore di tabella o un identificatore di vincolo, vengono controllati tutti i vincoli abilitati in tutte le tabelle del database corrente.  
  Un nome di vincolo identifica in modo univoco la tabella a cui appartiene. Per altre informazioni, vedere [Identificatori del database](../../relational-databases/databases/database-identifiers.md).  
   
- WITH  
+ con  
  Consente di specificare opzioni.  
   
  ALL_CONSTRAINTS  
@@ -70,7 +70,7 @@ DBCC CHECKCONSTRAINTS
  NO_INFOMSGS  
  Disattiva tutti i messaggi informativi.  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Remarks  
 DBCC CHECKCONSTRAINTS consente di creare ed eseguire una query per ottenere tutti i vincoli FOREIGN KEY e CHECK di una tabella.
   
 Una query di chiave esterna, ad esempio, presenta il seguente formato:
@@ -93,7 +93,7 @@ L'istruzione DBCC CHECKCONSTRAINTS controlla l'integrità dei vincoli FOREIGN KE
   
 Se si specifica *table_name* o *table_id* e la tabella è abilitata per il controllo delle versioni di sistema, DBCC CHECKCONSTRAINTS esegue anche le verifiche di coerenza dei dati temporali sulla tabella specificata. Se non è stato specificato *NO_INFOMSGS*, questo comando restituirà ogni violazione della coerenza nell'output in una riga separata. Il formato dell'output sarà ([pkcol1], [pkcol2]..) = (\<pkcol1_value>, \<pkcol2_value>...) AND \<le anomalie riscontrate nel record di tabella temporale>.
   
-|Verifica|Informazioni aggiuntive nell'output in caso di verifica non riuscita|  
+|Controlla|Informazioni aggiuntive nell'output in caso di verifica non riuscita|  
 |-----------|-----------------------------------------------|  
 |PeriodEndColumn ≥ PeriodStartColumn (current)|[sys_end] = '{0}' AND MAX(DATETIME2) = '9999-12-31 23:59:59.99999'|  
 |PeriodEndColumn ≥ PeriodStartColumn (current, history)|[sys_start] = '{0}' AND [sys_end] = '{1}'|  
@@ -112,7 +112,7 @@ DBCC CHECKCONSTRAINTS restituisce un set di righe con le colonne seguenti.
 |Constraint Name|**varchar**|Nome del vincolo violato.|  
 |Where|**varchar**|Assegnazioni di valori di colonna che identificano una o più righe che violano il vincolo.<br /><br /> È possibile utilizzare il valore di questa colonna in una clausola WHERE di un'istruzione SELECT che esegue una query per individuare le righe che violano il vincolo.|  
   
-## <a name="permissions"></a>Autorizzazioni  
+## <a name="permissions"></a>Permissions  
 È richiesta l'appartenenza al ruolo predefinito del server **sysadmin** o al ruolo predefinito del database **db_owner** .
   
 ## <a name="examples"></a>Esempi  
@@ -133,7 +133,7 @@ DBCC CHECKCONSTRAINTS(Table1);
 GO  
 ```  
   
-### <a name="b-checking-a-specific-constraint"></a>B. Controllo di un vincolo specifico  
+### <a name="b-checking-a-specific-constraint"></a>b. Controllo di un vincolo specifico  
 Nell'esempio seguente viene controllata l'integrità del vincolo `CK_ProductCostHistory_EndDate`.
   
 ```sql  

@@ -11,12 +11,12 @@ ms.topic: conceptual
 author: haoqian
 ms.author: haoqian
 manager: craigg
-ms.openlocfilehash: 4e3429a52d24b9bb9fbb0de18c1687cfdaa76d30
-ms.sourcegitcommit: edf7372cb674179f03a330de5e674824a8b4118f
+ms.openlocfilehash: 43bfe4364543adee0e63e1d123680a82bb3bae39
+ms.sourcegitcommit: 8bc5d85bd157f9cfd52245d23062d150b76066ef
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53246740"
+ms.lasthandoff: 03/07/2019
+ms.locfileid: "57578331"
 ---
 # <a name="scale-out-support-for-high-availability"></a>Supporto della disponibilità elevata in Scale Out
 
@@ -77,7 +77,7 @@ La registrazione nel database SSISDB viene eseguita dall'account di accesso **##
 ### <a name="63-update-the-connection-string-used-for-logging"></a>6.3 Aggiornare la stringa di connessione usata per la registrazione.
 Chiamare la stored procedure `[catalog].[update_logdb_info]` usando i valori di parametro seguenti:
 
--   `@server_name = '[Availability Group Listener DNS name],[Port]' `
+-   `@server_name = '[Availability Group Listener DNS name],[Port]'`
 
 -   `@connection_string = 'Data Source=[Availability Group Listener DNS name],[Port];Initial Catalog=SSISDB;User Id=##MS_SSISLogDBWorkerAgentLogin##;Password=[Password]];'`
 

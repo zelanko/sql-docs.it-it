@@ -21,12 +21,12 @@ ms.assetid: 765fde44-1f95-4015-80a4-45388f18a42c
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 02cc6ae014dc52df01e08c13b9610be5ffa50c6b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: c1a252e56d7e625632fdb2d8cb929056daa14815
+ms.sourcegitcommit: 0510e1eb5bcb994125cbc8b60f8a38ff0d2e2781
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47720319"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57736766"
 ---
 # <a name="columnsupdated-transact-sql"></a>COLUMNS_UPDATED (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -49,7 +49,7 @@ COLUMNS_UPDATED ( )
   
 `COLUMNS_UPDATED` restituisce uno o più byte ordinati da sinistra a destra. Il bit più a destra di ogni byte è il bit meno significativo. Il bit più a destra del byte più a sinistra rappresenta la prima colonna della tabella, il bit successivo a sinistra rappresenta la seconda colonna e così via. `COLUMNS_UPDATED` restituisce più byte se la tabella in cui viene creato il trigger include più di otto colonne. Il byte più a sinistra è il meno significativo. `COLUMNS_UPDATED` restituisce TRUE per tutte le colonne nelle azioni INSERT in quanto nelle colonne vengono inseriti valori espliciti o impliciti (NULL).
   
-Per controllare l'esecuzione di operazioni di aggiornamento o inserimento in colonne specifiche, aggiungere alla sintassi un operatore bit per bit e una maschera di bit di valori interi delle colonne sottoposte a controllo. Nella tabella **t1**, ad esempio, sono incluse le colonne **C1**, **C2**, **C3**, **C4** e **C5**. Per controllare se le colonne **C2**, **C3** e **C4** sono state aggiornate (la tabella **t1** include un trigger UPDATE), aggiungere alla sintassi **& 14**. Per controllare se solo la colonna **C2** è stata aggiornata, specificare **& 2**. Vedere l'[esempio A](https://github.com/MicrosoftDocs/sql-docs/blob/live/docs/t-sql/functions/columns-updated-transact-sql.md#a-using-columns_updated-to-test-the-first-eight-columns-of-a-table) e l'[esempio B](https://github.com/MicrosoftDocs/sql-docs/blob/live/docs/t-sql/functions/columns-updated-transact-sql.md#b-using-columns_updated-to-test-more-than-eight-columns) per esempi effettivi.
+Per controllare l'esecuzione di operazioni di aggiornamento o inserimento in colonne specifiche, aggiungere alla sintassi un operatore bit per bit e una maschera di bit di valori interi delle colonne sottoposte a controllo. Nella tabella **t1**, ad esempio, sono incluse le colonne **C1**, **C2**, **C3**, **C4** e **C5**. Per controllare se le colonne **C2**, **C3** e **C4** sono state aggiornate (la tabella **t1** include un trigger UPDATE), aggiungere alla sintassi **& 14**. Per controllare se solo la colonna **C2** è stata aggiornata, specificare **& 2**. Vedere l'[esempio A](#a-using-columns_updated-to-test-the-first-eight-columns-of-a-table) e l'[esempio B](#b-using-columns_updated-to-test-more-than-eight-columns) per esempi effettivi.
   
 Usare `COLUMNS_UPDATED` in qualsiasi punto all'interno di un trigger [!INCLUDE[tsql](../../includes/tsql-md.md)] INSERT o UPDATE.
   
@@ -181,7 +181,7 @@ SELECT * FROM dbo.auditEmployeeData;
 GO  
 ```  
   
-### <a name="b-using-columnsupdated-to-test-more-than-eight-columns"></a>B. Utilizzo di COLUMNS_UPDATED per controllare più di 8 colonne  
+### <a name="b-using-columnsupdated-to-test-more-than-eight-columns"></a>b. Utilizzo di COLUMNS_UPDATED per controllare più di 8 colonne  
 Per controllare gli aggiornamenti eseguiti su colonne diverse dalle prime otto colonne di una tabella, usare la funzione `SUBSTRING` per controllare il bit corretto restituito da `COLUMNS_UPDATED`. Nell'esempio seguente vengono controllati gli aggiornamenti relativi alle colonne `3`, `5` e `9` della tabella `AdventureWorks2012.Person.Person`.
   
 ```sql

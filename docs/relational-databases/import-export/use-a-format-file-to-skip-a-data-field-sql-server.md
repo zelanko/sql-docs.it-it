@@ -15,12 +15,12 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 82df9a4dc4a7abce935e87e515cf63f71af0e4b7
-ms.sourcegitcommit: bfa10c54e871700de285d7f819095d51ef70d997
+ms.openlocfilehash: d3f9c16399b47af10a882e61c9f04278479748cb
+ms.sourcegitcommit: 8bc5d85bd157f9cfd52245d23062d150b76066ef
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/14/2019
-ms.locfileid: "54256786"
+ms.lasthandoff: 03/07/2019
+ms.locfileid: "57579011"
 ---
 # <a name="use-a-format-file-to-skip-a-data-field-sql-server"></a>Utilizzo di un file di formato per escludere un campo di dati (SQL Server)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -105,7 +105,7 @@ Confrontare le modifiche apportate:
 
 Il file di formato modificato riflette ora:
 * 4 campi dati
-* Il primo campo dati in `myTestSkipField.bcp` è mappato alla prima colonna, ` myTestSkipField.. PersonID`
+* Il primo campo dati in `myTestSkipField.bcp` è mappato alla prima colonna, `myTestSkipField.. PersonID`
 * Il secondo campo dati `myTestSkipField.bcp` non è mappato ad alcuna colonna.
 * Il terzo campo dati in `myTestSkipField.bcp` è mappato alla seconda colonna, `myTestSkipField.. FirstName`
 * Il quarto campo dati in `myTestSkipField.bcp` è mappato alla terza colonna, `myTestSkipField.. LastName`
