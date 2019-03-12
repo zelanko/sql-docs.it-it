@@ -25,12 +25,12 @@ ms.assetid: 4b5c460b-e4ad-404a-b4ca-d65aba38ebbb
 author: uc-msft
 ms.author: umajay
 manager: craigg
-ms.openlocfilehash: ce6ac47c2348f1acd082cb86e1d4756df6012a91
-ms.sourcegitcommit: b3d84abfa4e2922951430772c9f86dce450e4ed1
+ms.openlocfilehash: a00de2fba9416b4ec64dd218fe830ad7cb4212c5
+ms.sourcegitcommit: 2ab79765e51913f1df6410f0cd56bf2a13221f37
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/22/2019
-ms.locfileid: "56662805"
+ms.lasthandoff: 02/27/2019
+ms.locfileid: "56955842"
 ---
 # <a name="dbcc-freesystemcache-transact-sql"></a>DBCC FREESYSTEMCACHE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -51,10 +51,10 @@ DBCC FREESYSTEMCACHE
 ## <a name="arguments"></a>Argomenti  
 ( 'ALL' [,_pool\_name_ ] )  
 ALL specifica tutte le cache supportate.  
-_pool\_name_ specifica una cache di pool di Resource Governor. Verranno liberate solo le voci associate a questo pool.  
+_pool\_name_ specifica una cache di pool di Resource Governor. Vengono liberate solo le voci associate a questo pool.  
   
 MARK_IN_USE_FOR_REMOVAL  
-Libera in modalità asincrona le voci utilizzate dalle relative cache non appena tali voci risultano inutilizzate. Non influisce sulle nuove voci create nella cache dopo l'esecuzione di DBCC FREESYSTEMCACHE WITH MARK_IN_USE_FOR_REMOVAL.  
+Libera in modalità asincrona le voci in uso dalle rispettive cache quando non vengono più usate. Dopo l'esecuzione di DBCC FREESYSTEMCACHE WITH MARK_IN_USE_FOR_REMOVAL le nuove voci create nella cache non vengono coinvolte.  
   
 NO_INFOMSGS  
 Disattiva tutti i messaggi informativi.  
