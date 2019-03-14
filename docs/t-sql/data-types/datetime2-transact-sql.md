@@ -23,12 +23,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 26d7b15318ccf171b8812449948ef0a04d17cfbd
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: a0b6a519ba8c1fe48538af0f5d29c4c2f015a8aa
+ms.sourcegitcommit: 5285fe5402d4ecb5788a1a89e200cc31b9006c31
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56039042"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57401813"
 ---
 # <a name="datetime2-transact-sql"></a>datetime2 (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -48,14 +48,16 @@ Definisce una data costituita dalla combinazione di un'ora del giorno espressa n
 |Intervalli di elementi|AAAA rappresenta un numero di quattro cifre compreso tra 0001 e 9999, indicante l'anno.<br /><br /> MM rappresenta un numero di due cifre compreso tra 01 e 12, indicante un mese dell'anno specificato.<br /><br /> GG rappresenta un numero di due cifre compreso tra 01 e 31, a seconda del mese, indicante il giorno del mese specificato.<br /><br /> hh rappresenta un numero di due cifre compreso tra 00 e 23, indicante l'ora.<br /><br /> mm rappresenta un numero di due cifre compreso tra 00 e 59, indicante i minuti.<br /><br /> ss rappresenta un numero di due cifre compreso tra 00 e 59, indicante i secondi.<br /><br /> n* rappresenta un numero composto da 0 a 7 cifre e compreso tra 0 e 9999999, indicante i secondi frazionari. In Informatica i secondi frazionari verranno troncati quando n > 3.|  
 |Lunghezza in caratteri|Da un minimo di 19 posizioni (AAAA-MM-GG hh:mm:ss ) a un massimo di 27 posizioni (AAAA-MM-GG hh:mm:ss.0000000)|  
 |Precisione, scala|Da 0 a 7 cifre, con un'accuratezza di 100 nanosecondi. La precisione predefinita è 7 cifre.|  
-|Dimensioni dello spazio di archiviazione|6 byte per le precisioni minori di 3; 7 byte per le precisioni 3 e 4. Tutte le altre precisioni richiedono 8 byte.|  
+|Dimensioni dello spazio di archiviazione|6 byte per una precisione inferiore a 3.<br/>7 byte per una precisione compresa tra 3 e 4.<br/>Tutte le altre precisioni richiedono 8 byte.<sup>1</sup>|  
 |Accuratezza|100 nanosecondi|  
 |Valore predefinito|1900-01-01 00:00:00|  
 |Calendario|Gregoriano|  
 |Precisione in secondi frazionari definita dall'utente|Sì|  
 |Considerazione e conservazione delle differenze di fuso orario|no|  
 |Considerazione dell'ora legale|no|  
-  
+
+<sup>1</sup> Il primo byte di un valore **datetime2** consente di archiviare la precisione del valore pertanto, l'effettivo spazio di archiviazione necessario per un valore **datetime2** corrisponde alla dimensione di archiviazione indicata nella tabella precedente più 1 byte aggiuntivo per archiviare la precisione.  Ne risulta che le dimensioni massime di un valore **datetime2** sono di 9 byte: 1 byte per l'archiviazione della precisione più 8 byte per l'archiviazione dei dati con precisione massima.
+
 Per i metadati del tipo di dati, vedere [sys.systypes &#40;Transact-SQL&#41;](../../relational-databases/system-compatibility-views/sys-systypes-transact-sql.md) o [TYPEPROPERTY &#40;Transact-SQL&#41;](../../t-sql/functions/typeproperty-transact-sql.md). Precisione e scala sono variabili per alcuni tipi di dati di data e ora. Per ottenere precisione e scala per una colonna, vedere [COLUMNPROPERTY &#40;Transact-SQL&#41;](../../t-sql/functions/columnproperty-transact-sql.md), [COL_LENGTH &#40;Transact-SQL&#41;](../../t-sql/functions/col-length-transact-sql.md) o [sys.columns &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-columns-transact-sql.md).
   
 ## <a name="supported-string-literal-formats-for-datetime2"></a>Formati di valore letterale stringa supportati per datetime2

@@ -1,7 +1,7 @@
 ---
 title: Inizializzazione immediata dei file di database | Microsoft Docs
 ms.custom: ''
-ms.date: 01/09/2018
+ms.date: 03/07/2019
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
@@ -18,12 +18,12 @@ ms.assetid: 1ad468f5-4f75-480b-aac6-0b01b048bd67
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: e365ef2eed7dcd3f20dd5a9ad9a94627191c4df9
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: 9b75512b0b0e4f4975074bd35f797f526d25ffc2
+ms.sourcegitcommit: 3c4bb35163286da70c2d669a3f84fb6a8145022c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53204920"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57683601"
 ---
 # <a name="database-file-initialization"></a>Inizializzazione di file di database
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -52,15 +52,17 @@ L'inizializzazione immediata dei file è disponibile solo se all'account di avvi
   
 Per concedere l'autorizzazione `Perform volume maintenance tasks` a un account:  
   
-1.  Nel computer in cui verrà creato il file di backup, aprire l'applicazione **Criteri di sicurezza locali** (`secpol.msc`).  
+1.  Nel computer in cui verrà creato il file di dati aprire l'applicazione **Criteri di sicurezza locali** (`secpol.msc`).  
   
 2.  Nel riquadro sinistro espandere **Criteri locali**, quindi fare clic su **Assegnazione diritti utente**.  
   
 3.  Nel riquadro destro fare doppio clic su **Esecuzione attività di manutenzione volume**.  
   
-4.  Fare clic su **Aggiungi utente o gruppo** e aggiungere tutti gli account utente usati per i backup.  
+4.  Fare clic su **Aggiungi utente o gruppo** e aggiungere l'account che esegue il servizio SQL Server.  
   
 5.  Fare clic su **Applica**, quindi chiudere tutte le finestre di dialogo di **Criteri di sicurezza locali** .  
+
+1. Riavviare il servizio SQL Server.
 
 > [!NOTE]
 > A partire da [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], è possibile concedere questa autorizzazione all'account del servizio al momento dell'installazione, durante la configurazione. Se si utilizza il [prompt dei comandi installare](../../database-engine/install-windows/install-sql-server-from-the-command-prompt.md), aggiungere l'argomento /SQLSVCINSTANTFILEINIT o selezionare la casella *Grant Perform Volume Maintenance Task privilege to SQL Server Database Engine Service* (Concedi il privilegio di esecuzione attività di manutenzione volume al servizio motore di database di SQL Server) nell'[installazione guidata](../../database-engine/install-windows/install-sql-server-from-the-installation-wizard-setup.md).
@@ -71,15 +73,11 @@ Per concedere l'autorizzazione `Perform volume maintenance tasks` a un account:
 ## <a name="remarks"></a>Remarks
 Se all'[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]account di avvio del servizio viene concesso  *SE_MANAGE_VOLUME_NAME*, viene registrato un messaggio informativo simile al seguente nel [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] registro errori all'avvio: 
 
-```
-Database Instant File Initialization: enabled. For security and performance considerations see the topic 'Database Instant File Initialization' in SQL Server Books Online. This is an informational message only. No user action is required.
-```
+`Database Instant File Initialization: enabled. For security and performance considerations see the topic 'Database Instant File Initialization' in SQL Server Books Online. This is an informational message only. No user action is required.`
 
 Se all'[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]account di avvio del servizio **non** viene concesso *SE_MANAGE_VOLUME_NAME*, viene registrato un messaggio informativo simile al seguente nel [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] registro errori all'avvio: 
 
-```
-Database Instant File Initialization: disabled. For security and performance considerations see the topic 'Database Instant File Initialization' in SQL Server Books Online. This is an informational message only. No user action is required.
-```
+`Database Instant File Initialization: disabled. For security and performance considerations see the topic 'Database Instant File Initialization' in SQL Server Books Online. This is an informational message only. No user action is required.`
 
 **Si applica a:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (a partire da [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] SP4, [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] SP2 e [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] fino a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)])
 

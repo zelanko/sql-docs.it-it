@@ -1,7 +1,7 @@
 ---
 title: Nome delle regole di confronto di Windows (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 02/21/2019
+ms.date: 03/06/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -19,12 +19,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 1b871541215597d82d1ccda81cebe1b9cbe3a433
-ms.sourcegitcommit: 8664c2452a650e1ce572651afeece2a4ab7ca4ca
+ms.openlocfilehash: 49f84b9e41116dd235f219a0487b48770ef4f81f
+ms.sourcegitcommit: d6ef87a01836738b5f7941a68ca80f98c61a49d4
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/26/2019
-ms.locfileid: "56827991"
+ms.lasthandoff: 03/07/2019
+ms.locfileid: "57572844"
 ---
 # <a name="windows-collation-name-transact-sql"></a>Windows_collation_name (Transact-SQL)
 
@@ -42,7 +42,7 @@ Specifica il nome delle regole di confronto Windows nella clausola COLLATE in [!
 CollationDesignator_<ComparisonStyle>
 
 <ComparisonStyle> :: =
-{ CaseSensitivity_AccentSensitivity [ _KanatypeSensitive ] [ _WidthSensitive ]
+{ CaseSensitivity_AccentSensitivity [ _KanatypeSensitive ] [ _WidthSensitive ] [ _VariationSelectorSensitive ]
 }
 | { _BIN | _BIN2 }
 ```
@@ -51,41 +51,53 @@ CollationDesignator_<ComparisonStyle>
 
 *CollationDesignator* specifica le regole di base usate nelle regole di confronto di Windows, ovvero:
 
-- Regole di ordinamento applicate quando si specifica l'ordinamento del dizionario. Le regole di ordinamento si basano sull'alfabeto o sulla lingua.
-- La tabella codici usata per archiviare dati di tipo carattere non Unicode.
+- Le regole di ordinamento e confronto applicate quando si specifica l'ordinamento del dizionario. Le regole di ordinamento si basano sull'alfabeto o sulla lingua.
+- La tabella codici utilizzata per memorizzare i dati **varchar**.
 
 Ad esempio:
 
-- Latin1_General o francese: per entrambe le lingue viene utilizzata la tabella codici 1252.
+- Latin1\_General o francese: per entrambe viene utilizzata la tabella codici 1252.
 - Turco: viene utilizzata la tabella codici 1254.
 
-*CaseSensitivity*
-**CI** specifica che non viene applicata la distinzione tra maiuscole e minuscole, mentre **CS** indica che viene applicata.
+*CaseSensitivity*  
+**CI** specifica che la distinzione tra maiuscole e minuscole non è rilevante, mentre **CS** indica che la differenza tra maiuscole e minuscole è rilevante.
 
-*AccentSensitivity*
-**AI** specifica che non viene applicata la distinzione tra caratteri accentati e non accentati, mentre **AS** indica che viene applicata.
+*AccentSensitivity*  
+**AI** specifica che la distinzione tra caratteri accentati e non accentati non è rilevante, mentre **AS** indica che la distinzione tra caratteri accentati e non accentati è rilevante.
 
-*KanatypeSensitive*
-Se **omesso**, non viene applicata la distinzione Kana. **KS** specifica che viene applicata.
+*KanatypeSensitive*  
+**Omesso** specifica che la distinzione Kana non è rilevante, **KS** specifica che la distinzione Kana è rilevante.
 
-*WidthSensitivity*
-Se **omesso**, non viene applicata la distinzione di larghezza. **WS** specifica che viene applicata.
+*WidthSensitivity*  
+**Omesso** specifica che la distinzione di larghezza non è rilevante, **WS** specifica che la distinzione di larghezza è rilevante.
 
-**BIN** specifica che deve essere usato l'ordinamento binario compatibile con le versioni precedenti.
+*VariationSelectorSensitivity*  
+**Si applica a**: [!INCLUDE[ssSQL15](../../includes/sssqlv14-md.md)] 
 
-**BIN2** specifica l'ordinamento binario che usa la semantica del confronto dei punti di codice.
+**Omesso** specifica che il selettore di variazione non è rilevante, **VSS** specifica che il selettore di variazione è rilevante.
+
+**BIN**  
+Specifica che deve essere usato il tipo di ordinamento binario compatibile con le versioni precedenti.
+
+**BIN2**  
+Specifica l'ordinamento binario che utilizza la semantica del confronto dei punti di codice.
 
 ## <a name="remarks"></a>Remarks
 
- A seconda della versione delle regole di confronto è possibile che alcuni punti di codice non siano definiti. Confrontare ad esempio quanto segue:
+A seconda della versione delle regole di confronto, per alcuni punti di codice potrebbero non essere stati definiti pesi di ordinamento e/o il mapping tra caratteri maiuscoli e minuscoli. Ad esempio, confrontare l'output della funzione `LOWER` quando viene assegnato lo stesso carattere, ma con versioni diverse delle stesse regole di confronto:
 
 ```sql
-SELECT LOWER(nchar(504) COLLATE Latin1_General_CI_AS);
-SELECT LOWER (nchar(504) COLLATE Latin1_General_100_CI_AS);
-GO
+SELECT NCHAR(504) COLLATE Latin1_General_CI_AS AS [Uppercase],
+       NCHAR(505) COLLATE Latin1_General_CI_AS AS [Lowercase];
+-- Ǹ    ǹ
+
+
+SELECT LOWER(NCHAR(504) COLLATE Latin1_General_CI_AS) AS [Version80Collation],
+       LOWER(NCHAR(504) COLLATE Latin1_General_100_CI_AS) AS [Version100Collation];
+-- Ǹ    ǹ
 ```
 
-La prima riga restituisce un carattere maiuscolo quando la regola di confronto è Latin1_General_CI_AS, poiché questo punto di codice non è definito nella regola di confronto.
+La prima istruzione mostra sia la forma maiuscola che minuscola di questo carattere nelle regole di confronto precedenti perché le regole di confronto non influenzano la disponibilità dei caratteri quando usano dati Unicode. La seconda istruzione, invece, mostra che viene restituito un carattere maiuscolo quando le regole di confronto sono Latin1\_General\_CI\_AS perché questo punto di codice non presenta un mapping dei caratteri minuscoli definito nelle regole di confronto.
 
 Con alcune lingue può essere fondamentale evitare le regole di confronto precedenti. Ad esempio, questo vale per il telugu.
 
@@ -95,24 +107,24 @@ In alcuni casi, le regole di confronto di Windows e le regole di confronto di [!
 
 Di seguito sono riportati alcuni esempi di nomi delle regole di confronto di Windows:
 
-- **Latin1_General_100_**
+- **Latin1\_General\_100\_CI\_AS**
 
-  Le regole di confronto utilizzano le regole di ordinamento del dizionario Latin1 General, tabella codici 1252. La distinzione tra maiuscole e minuscole non è rilevante, mentre è rilevante la distinzione tra caratteri accentati e non accentati. Le regole di confronto utilizzano le regole di ordinamento del dizionario Latin1 General ed eseguono il mapping alla tabella codici 1252. Viene visualizzato il numero di versione delle regole di confronto se sono regole di Windows: _90 o _100. La distinzione tra maiuscole e minuscole (CI) non è rilevante, mentre è rilevante la distinzione tra caratteri accentati e non accentati (AS).
+  Le regole di confronto utilizzano le regole di ordinamento del dizionario Latin1 General ed eseguono il mapping alla tabella codici 1252. Sono regole di confronto con versione \_100 per cui la distinzione tra maiuscole e minuscole non è rilevante mentre è rilevante la distinzione tra caratteri accentati e non accentati.
 
-- **Estonian_CS_AS**
+- **Estonian\_CS\_AS**
 
-  Le regole di confronto utilizzano le regole di ordinamento del dizionario estone, tabella codici 1257. La distinzione tra maiuscole e minuscole e tra caratteri accentati e non accentati è rilevante.
+  Le regole di confronto utilizzano le regole di ordinamento del dizionario estone ed eseguono il mapping alla tabella codici 1257. Sono regole di confronto con versione \_80 (indicata implicitamente dalla mancanza del numero di versione nel nome) per cui la distinzione tra maiuscole e minuscole è rilevante la distinzione tra caratteri accentati e non accentati è rilevante.
 
-- **Latin1_General_BIN**
+- **Japanese\_Bushu\_Kakusu\_140\_BIN2**
 
-  Nelle regole di confronto vengono usate la tabella codici 1252 e le regole di ordinamento binario. Le regole di ordinamento del dizionario Latin1 General vengono ignorate.
+  Le regole di confronto utilizzano le regole di ordinamento del punto di codice binario ed eseguono il mapping alla tabella codici 932. Sono regole di confronto con versione \_140 e le regole di ordinamento del dizionario Bushu Kakusu giapponese vengono ignorate.
 
 ## <a name="windows-collations"></a>Regole di confronto di Windows
 
 Per elencare le regole di confronto di Windows supportate dall'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], eseguire la query seguente.
 
 ```sql
-SELECT * FROM sys.fn_helpcollations() WHERE name NOT LIKE 'SQL%';
+SELECT * FROM sys.fn_helpcollations() WHERE [name] NOT LIKE N'SQL%';
 ```
 
 Nella tabella seguente vengono elencate tutte le regole di confronto di Windows supportate in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].

@@ -12,12 +12,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 71e394c613f40b56fee354101410aa422d918e86
-ms.sourcegitcommit: 4cf0fafe565b31262e4148b572efd72c2a632241
+ms.openlocfilehash: 52628b3742574bc4e3079750526a5424d65012fe
+ms.sourcegitcommit: 8bc5d85bd157f9cfd52245d23062d150b76066ef
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/21/2019
-ms.locfileid: "56464787"
+ms.lasthandoff: 03/07/2019
+ms.locfileid: "57579668"
 ---
 # <a name="create-table-azure-sql-data-warehouse"></a>CREATE TABLE (Azure SQL Data Warehouse)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
@@ -162,7 +162,7 @@ Crea una o più partizioni di tabella. Queste partizioni sono porzioni orizzonta
  Vedere [Creare una tabella partizionata](#PartitionedTable) nella sezione Esempi.
 
 ### <a name="DataTypes"></a> Tipi di dati
-[!INCLUDE[ssSDW](../../includes/sssdw-md.md)] supporta i tipi di dati di uso più comune. Di seguito è riportato un elenco dei tipi di dati supportati con i relativi dettagli e byte per l'archiviazione. Per comprendere meglio i tipi di dati e le relative modalità di utilizzo, vedere le linee guida per i [tipi di dati per le tabelle in SQL Data Warehouse](https://azure.microsoft.com/documentation/articles/sql-data-warehouse-tables-data-types).
+[!INCLUDE[ssSDW](../../includes/sssdw-md.md)] supporta i tipi di dati di uso più comune. Di seguito è riportato un elenco dei tipi di dati supportati con i relativi dettagli e byte per l'archiviazione. Per comprendere meglio i tipi di dati e le relative modalità di utilizzo, vedere [Tipi di dati di tabella in Azure SQL Data Warehouse](https://azure.microsoft.com/documentation/articles/sql-data-warehouse-tables-data-types).
 
 Per una tabella delle conversioni di tipi di dati, vedere la sezione relativa alle conversioni implicite in [CAST e CONVERT (Transact-SQL)](https://msdn.microsoft.com/library/ms187928/).
 

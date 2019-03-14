@@ -11,14 +11,14 @@ ms.assetid: d31367db-b7db-44c4-8df2-f1240474cf78
 author: VanMSFT
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 678f9da12655cc733dcdf95aca5f61e5aa1cd45e
-ms.sourcegitcommit: ca038f1ef180e4e1b27910bbc5d87822cd1ed176
+ms.openlocfilehash: 88f5919c1bd36b912c2205da2032413ec39150f1
+ms.sourcegitcommit: 8bc5d85bd157f9cfd52245d23062d150b76066ef
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52158623"
+ms.lasthandoff: 03/07/2019
+ms.locfileid: "57579532"
 ---
-# <a name="lesson-1-create-and-apply-an-off-by-default-policy"></a>Lezione 1: Creazione e applicazione di criteri Disattivata per impostazione predefinita
+# <a name="lesson-1-create-and-apply-an-off-by-default-policy"></a>Lezione 1: Creare e applicare criteri Disattivata per impostazione predefinita
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 Tramite i criteri della gestione basata su criteri è possibile amministrare una o più istanze di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], uno o più oggetti dell'istanza, una o più istanze del server, uno o più database o uno o più oggetti di database. Gli amministratori del database desiderano impedire che in determinati server sia abilitato Posta elettronica database. In questa lezione verranno creati una condizione e i criteri per l'impostazione dell'opzione server in questione. Il server verrà quindi testato per verificarne la conformità ai criteri. Si utilizzeranno infine i criteri per riconfigurare il server per renderlo conforme.  
 
@@ -79,7 +79,7 @@ Per completare questa esercitazione, sono necessari SQL Server Management Studio
   
 6.  Se si verifica un errore, nell'area **Dettagli di destinazione** verranno visualizzate informazioni aggiuntive nella colonna **Messaggio** . Nella colonna **Messaggio** fare clic su **Visualizza** per visualizzare un report contenente i risultati della verifica per ogni proprietà facet controllata. 
 
-    ![Visualizzare i risultati della valutazione dei criteri ](Media/lesson-1-create-and-apply-an-off-by-default-policy/view-results-of-policy-evaluation.png)
+    ![Visualizzare i risultati della valutazione dei criteri](Media/lesson-1-create-and-apply-an-off-by-default-policy/view-results-of-policy-evaluation.png)
   
 7.  La descrizione dei criteri viene visualizzata nella parte inferiore della pagina. Nella sezione **Guida aggiuntiva** è incluso il collegamento ipertestuale configurato per i criteri. Fare clic sul collegamento ipertestuale del messaggio per aprire la pagina Web specificata quando sono stati creat i criteri.   
 
@@ -91,7 +91,7 @@ Per completare questa esercitazione, sono necessari SQL Server Management Studio
 
    
 ## <a name="next-lesson"></a>Lezione successiva  
-[Lezione 2: Creazione e applicazione di criteri per gli standard di denominazione](../../relational-databases/policy-based-management/lesson-2-create-and-apply-a-naming-standards-policy.md)  
+[Lezione 2: Creare e applicare criteri per gli standard di denominazione](../../relational-databases/policy-based-management/lesson-2-create-and-apply-a-naming-standards-policy.md)  
   
   
   

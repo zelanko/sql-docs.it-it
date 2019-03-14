@@ -11,12 +11,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: '>= sql-server-2017 || = sqlallproducts-allversions'
-ms.openlocfilehash: cfe10c3f5c3db33a5e9e0e417477cf2e36a2f035
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 6a8e2aabc262eae4f25bf1cc5056955b58b874d0
+ms.sourcegitcommit: 8bc5d85bd157f9cfd52245d23062d150b76066ef
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52406448"
+ms.lasthandoff: 03/07/2019
+ms.locfileid: "57579361"
 ---
 # <a name="whats-new-in-sql-server-2017"></a>Novità di SQL Server 2017
 [!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]
@@ -33,7 +33,7 @@ SQL Server 2017 include numerose nuove funzionalità del motore di database, mig
 - Gli **assembly CLR** possono ora essere aggiunti a un elenco elementi consentiti come soluzione alternativa per la funzionalità `clr strict security` descritta in CTP 2.0. [sp_add_trusted_assembly](../relational-databases/system-stored-procedures/sys-sp-add-trusted-assembly-transact-sql.md), [sp_drop_trusted_assembly](../relational-databases/system-stored-procedures/sys-sp-drop-trusted-assembly-transact-sql.md) e [sys.trusted_asssemblies](../relational-databases/system-catalog-views/sys-trusted-assemblies-transact-sql.md) sono stati aggiunti per supportare l'elenco elementi consentiti di assembly attendibili (RC1).  
 - La **ricompilazione dell'indice online ripristinabile** consente di ripristinare un'operazione di ricompilazione dell'indice online dal punto in cui è stata arrestata a causa di un errore, ad esempio un failover in una replica o lo spazio su disco insufficiente, o di sospendere e successivamente ripristinare l'operazione. Vedere [ALTER INDEX](../t-sql/statements/alter-index-transact-sql.md) e [Linee guida per le operazioni sugli indici online](../relational-databases/indexes/guidelines-for-online-index-operations.md). (CTP 2.0)
 - L'opzione **IDENTITY_CACHE** per ALTER DATABASE SCOPED CONFIGURATION consente di evitare gap nei valori delle colonne Identity nel caso in cui un server viene riavviato in modo imprevisto o esegue un failover in un server secondario. Vedere [ALTER DATABASE SCOPED CONFIGURATION](../t-sql/statements/alter-database-scoped-configuration-transact-sql.md). (CTP 2.0)
-- Una nuova generazione di miglioramenti di elaborazione delle query che adatterà le strategie di ottimizzazione alle condizioni di runtime del carico di lavoro dell'applicazione. Per questa prima versione della famiglia di funzionalità di **elaborazione di query adattive**, sono disponibili tre nuovi miglioramenti: **join adattivi in modalità batch**, **feedback delle concessioni di memoria in modalità batch** ed **esecuzione interleaved** per le funzioni con valori di tabella a istruzioni multiple.  Vedere [Elaborazione di query adattive nei database SQL](../relational-databases/performance/adaptive-query-processing.md).
+- Una nuova generazione di miglioramenti di elaborazione delle query che adatterà le strategie di ottimizzazione alle condizioni di runtime del carico di lavoro dell'applicazione. Per questa prima versione della famiglia di funzionalità di **elaborazione di query adattive**, sono disponibili tre nuovi miglioramenti: **join adattivi in modalità batch**, **feedback delle concessioni di memoria in modalità batch** ed **esecuzione interleaved** per le funzioni con valori di tabella a istruzioni multiple.  Vedere [Elaborazione di query intelligenti nei database SQL](../relational-databases/performance/intelligent-query-processing.md).
 - L'**ottimizzazione di database automatica** offre informazioni su potenziali problemi di prestazioni delle query, suggerisce soluzioni e consente di correggere automaticamente i problemi rilevati. Vedere [Automatic tuning](../relational-databases/automatic-tuning/automatic-tuning.md) (Ottimizzazione automatica). (CTP 2.0)
 - Le nuove **funzionalità dei database dei grafici** per la modellazione delle relazioni molti-a-molti includono la nuova sintassi [CREATE TABLE](../t-sql/statements/create-table-sql-graph.md) per la creazione di tabelle dei nodi e tabelle edge e la parola chiave [MATCH](../t-sql/queries/match-sql-graph.md) per le query. Vedere [Graph Processing with SQL Server 2017](../relational-databases/graphs/sql-graph-overview.md) (Elaborazione di grafici con SQL Server 2017). (CTP 2.0)
 - Un'opzione sp_configure denominata `clr strict security` è abilitata per impostazione predefinita per migliorare la sicurezza degli assembly CLR. Vedere [CLR strict security](../database-engine/configure-windows/clr-strict-security.md). (CTP 2.0)

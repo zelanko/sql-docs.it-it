@@ -20,12 +20,12 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: fa6df6038d13ffae258a2b71baaaa9b3415ebbc1
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 335e923b802e98545ab6cb100d292dfe695202b0
+ms.sourcegitcommit: d6ef87a01836738b5f7941a68ca80f98c61a49d4
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47695809"
+ms.lasthandoff: 03/07/2019
+ms.locfileid: "57572834"
 ---
 # <a name="lead-transact-sql"></a>LEAD (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-all-md](../../includes/tsql-appliesto-ss2012-all-md.md)]
@@ -49,7 +49,7 @@ LEAD ( scalar_expression [ ,offset ] , [ default ] )
  Numero di righe in avanti rispetto alla riga corrente dalla quale ottenere un valore. Se non specificato, il valore predefinito è 1. *offset* può essere una colonna, una sottoquery o un'altra espressione che restituisce un valore intero positivo o che può essere convertita in modo implicito in un tipo di dati **bigint**. *offset* non può essere un valore negativo o una funzione analitica.  
   
  *default*  
- Valore da restituire quando *scalar_expression* in *offset* è NULL. Se non viene specificato un valore predefinito, viene restituito NULL. *default* può essere una colonna, una sottoquery o un'altra espressione, ma non può essere una funzione analitica. *default* deve essere compatibile a livello di tipo con *scalar_expression*.  
+ Il valore da restituire quando *offset* non rientra nell'ambito della partizione. Se non viene specificato un valore predefinito, viene restituito NULL. *default* può essere una colonna, una sottoquery o un'altra espressione, ma non può essere una funzione analitica. *default* deve essere compatibile a livello di tipo con *scalar_expression*.
   
  OVER **(** [ _partition\_by\_clause_ ] _order\_by\_clause_**)**  
  *partition_by_clause* suddivide il set di risultati generato dalla clausola FROM in partizioni alle quali viene applicata la funzione. Se non specificato, la funzione tratta tutte le righe del set di risultati della query come un unico gruppo. *order_by_clause* determina l'ordine dei dati prima che venga applicata la funzione. Quando viene specificato, *partition_by_clause* determina l'ordine dei dati in ogni partizione. *order_by_clause* è obbligatorio. Per altre informazioni, vedere [Clausola OVER - &#40;Transact-SQL&#41;](../../t-sql/queries/select-over-clause-transact-sql.md).  
@@ -86,7 +86,7 @@ BusinessEntityID SalesYear   CurrentQuota          NextQuota
 275              2006        1324000.00            0.00  
 ```  
   
-### <a name="b-compare-values-within-partitions"></a>B. Confronto di valori all'interno di partizioni  
+### <a name="b-compare-values-within-partitions"></a>b. Confronto di valori all'interno di partizioni  
  Nell'esempio seguente viene utilizzata la funzione LEAD per confrontare le vendite dei dipendenti a partire dall'inizio dell'anno. La clausola PARTITION BY è specificata per suddividere le righe nel set di risultati in base al territorio di vendita. La funzione LEAD viene applicata a ogni singola partizione e il calcolo viene riavviato per ogni partizione. La clausola ORDER BY specificata nella clausola OVER ordina le righe in ogni partizione prima dell'applicazione della funzione. La clausola ORDER BY nell'istruzione SELECT ordina le righe nell'intero set di risultati. Si noti che poiché non è presente alcun valore principale disponibile per l'ultima riga di ogni partizione, viene restituita l'impostazione predefinita zero (0).  
   
 ```sql  
@@ -140,7 +140,7 @@ b           c           i
   
 ## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Esempi: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] e [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
-### <a name="d-compare-values-between-quarters"></a>D. Confronto di valori fra trimestri  
+### <a name="d-compare-values-between-quarters"></a>D: Confronto di valori fra trimestri  
  Nell'esempio seguente viene illustrato l'uso della funzione LEAD. La query ottiene la differenza nei valori di quota di vendite per un dipendente specifico in trimestri di calendario successivi. Si noti che poiché non è presente alcun valore principale disponibile dopo l'ultima riga, viene usata l'impostazione predefinita zero (0).  
   
 ```sql  

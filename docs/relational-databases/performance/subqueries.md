@@ -17,12 +17,12 @@ author: julieMSFT
 ms.author: jrasnick
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a2ac6f2a1692d72eecbcd97dbc3536dcebd6f2ec
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: c9c0d51046b7ac30cbf1f2a608c51c34974b75d9
+ms.sourcegitcommit: 8bc5d85bd157f9cfd52245d23062d150b76066ef
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53356019"
+ms.lasthandoff: 03/07/2019
+ms.locfileid: "57579391"
 ---
 # <a name="subqueries-sql-server"></a>Sottoquery (SQL Server)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -490,7 +490,7 @@ GO
 Non è possibile convertire questa istruzione in un join. Il join di disuguaglianza analogo ha un significato diverso: trova i nomi dei prodotti inclusi in una sottocategoria che non corrisponde a una bicicletta finita.      
 
 ### <a name="upsert"></a> Sottoquery in istruzioni UPDATE, DELETE e INSERT
-Le sottoquery possono essere nidificate nelle istruzioni DML `UPDATE`, `DELETE`, `INSERT` e `SELECT `.    
+Le sottoquery possono essere nidificate nelle istruzioni DML `UPDATE`, `DELETE`, `INSERT` e `SELECT`.    
 
 L'esempio seguente raddoppia il valore della colonna *ListPrice* della tabella *Production.Product*. La sottoquery nella clausola `WHERE` fa riferimento alla tabella *Purchasing.ProductVendor* per limitare le righe aggiornate nella tabella *Product* a quelle fornite da *BusinessEntity* 1540.
 

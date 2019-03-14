@@ -11,12 +11,12 @@ ms.assetid: 3dc76cc1-3b4c-4719-8296-f69ec1b476f9
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 8d953127249bb6f82626dfff647b15dc40aba859
-ms.sourcegitcommit: 670082cb47f7d3d82e987b549b6f8e3a8968b5db
+ms.openlocfilehash: 048e3b88ff45147e30121c3b754527b71d30ea7b
+ms.sourcegitcommit: 5285fe5402d4ecb5788a1a89e200cc31b9006c31
 ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 03/05/2019
-ms.locfileid: "57334838"
+ms.locfileid: "57401933"
 ---
 # <a name="sql-server-management-studio---changelog-ssms"></a>SQL Server Management Studio - Changelog (SSMS)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -115,7 +115,7 @@ Se manca l'etichetta *Anteprima 5*, *Anteprima 6* o *Anteprima 7*, significa che
   - File di download di dimensioni più piccole
     - Le dimensioni correnti del bundle sono inferiori alla metà di quelle di SSMS 17.x (circa 400 MB). Le dimensioni aumenteranno un po' quando verranno aggiunti i componenti Integration Services a SSMS, ma non raggiungeranno quelle delle versioni precedenti.
   - SSMS si basa sulla nuova versione di VS 2017 Isolated Shell
-    - Si tratta di una shell moderna (è stata scelta la versione VS 2107 15.6.4). La nuova shell sblocca tutte le correzioni di accessibilità integrate sia in SSMS che in Visual Studio.
+    - Si tratta di una shell moderna (è stata scelta la versione VS 2017 15.6.4). La nuova shell sblocca tutte le correzioni di accessibilità integrate sia in SSMS che in Visual Studio.
   - Miglioramenti di accessibilità di SSMS
     - È stata dedicata un'attenzione particolare ai problemi di accessibilità in tutti gli strumenti (SSMS, DTA e Profiler)
   - SSMS può essere installato in una cartella personalizzata

@@ -11,12 +11,12 @@ ms.assetid: e04a5321-63d5-4ec5-85b9-cb4eaf6c87f6
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: c9ed2d231414ca36bef186a8d2e70d491a469fb4
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 51ca1188b8954564fc929dd0cdc34715466aee8b
+ms.sourcegitcommit: c0b3b3d969af668d19b1bba04fa0c153cc8970fd
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47605689"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57756676"
 ---
 # <a name="lesson-1-4---adding-package-configurations"></a>Lezione 1-4 - Aggiunta delle configurazioni dei pacchetti
 In questa attività si procederà all'aggiunta di una configurazione a ogni pacchetto. Le configurazioni consentono di aggiornare i valori delle proprietà dei pacchetti e gli oggetti dei pacchetti in fase di esecuzione.  
@@ -32,6 +32,8 @@ Si creeranno due file di configurazione, DataTransferConfig.dtsConfig e LoadXMLD
 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] riconosce DataTransferConfig.dtsConfig e LoadXMLData.dtsConfig come dipendenze dei pacchetti DataTransfer e LoadXMLData e include automaticamente i file di configurazione nel pacchetto di distribuzione che verrà creato nella lezione successiva.  
   
 ### <a name="to-create-indirect-configuration-for-the-datatransfer-package"></a>Per creare la configurazione indiretta per il pacchetto DataTransfer  
+
+Verificare il modello di distribuzione corrente del progetto e impostarlo su **Modello di distribuzione del pacchetto** se necessario. Scegliere **Converti nel modello di distribuzione del pacchetto** dal menu **Progetto**
   
 1.  In Esplora soluzioni fare doppio clic su DataTransfer.dtsx.  
   

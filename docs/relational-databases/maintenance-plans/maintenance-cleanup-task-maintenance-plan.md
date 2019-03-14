@@ -15,12 +15,12 @@ ms.assetid: 022b679c-6799-4c13-9185-814224a20412
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 5e54371d1877bbebfe566692aa02f7237593b43b
-ms.sourcegitcommit: c61c7b598aa61faa34cd802697adf3a224aa7dc4
+ms.openlocfilehash: 46249b24fcc46980023a8a7b65890af1374ca4b4
+ms.sourcegitcommit: 0510e1eb5bcb994125cbc8b60f8a38ff0d2e2781
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56154746"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57736756"
 ---
 # <a name="maintenance-cleanup-task-maintenance-plan"></a>Attività Pulizia file manutenzione (Piano di manutenzione)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -55,7 +55,7 @@ ms.locfileid: "56154746"
  Percorso e nome della cartella contenente i file da eliminare.  
   
  **Estensione file**  
- Indica l'estensione del file da eliminare. Non includere altri caratteri prima o dopo l'estensione (ad esempio, non includere BAK o TRN). 
+ Indica l'estensione del file da eliminare. Non includere altri caratteri prima o dopo l'estensione (ad esempio, BAK o TRN). 
   
  **Includi sottocartelle di primo livello**  
  Consente di eliminare i file con l'estensione specificata in **Estensione file** dalle sottocartelle di primo livello in **Cartella**.  

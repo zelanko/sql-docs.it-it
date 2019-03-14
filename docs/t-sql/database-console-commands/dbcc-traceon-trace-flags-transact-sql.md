@@ -1,7 +1,7 @@
 ---
 title: Flag di traccia (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 01/15/2019
+ms.date: 03/10/2019
 ms.prod: sql
 ms.prod_service: sql-database
 ms.reviewer: ''
@@ -21,12 +21,12 @@ ms.assetid: b971b540-1ac2-435b-b191-24399eb88265
 author: pmasl
 ms.author: pelopes
 manager: craigg
-ms.openlocfilehash: d4d3d7488e60c95766c64d2b9d0ec3646b978c63
-ms.sourcegitcommit: c4870cb5bebf9556cdb4d8b35ffcca265fb07862
+ms.openlocfilehash: e75de200f8a55b57ba417e2f08bf875eda88a88e
+ms.sourcegitcommit: 0510e1eb5bcb994125cbc8b60f8a38ff0d2e2781
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/02/2019
-ms.locfileid: "55652600"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57736839"
 ---
 # <a name="dbcc-traceon---trace-flags-transact-sql"></a>DBCC TRACEON - Flag di traccia (Transact-SQL)
 
@@ -136,7 +136,7 @@ Nella tabella seguente vengono elencati e descritti i flag di traccia disponibil
 |**9347**|Disabilita la modalità batch per l'operatore Sort. [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] ha introdotto un nuovo operatore Sort in modalità batch che migliora le prestazioni per molte query analitiche. Per altre informazioni, vedere questo [articolo del supporto tecnico Microsoft](https://support.microsoft.com/kb/3172787).<br /><br />**Ambito**: globale, sessione o query|
 |**9349**|Disabilita la modalità batch per l'operatore Top N Sort. [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] ha introdotto un nuovo operatore Top Sort in modalità batch che migliora le prestazioni per molte query analitiche.<br /><br />**Ambito**: globale, sessione o query|
 |**9389**|Abilita la concessione di memoria dinamica aggiuntiva per gli operatori in modalità batch. Se non ottiene tutta la memoria necessaria, la query distribuisce i dati in tempdb causando I/O aggiuntivi con effetti potenziali sulle prestazioni delle query. Se il flag di traccia di concessione di memoria dinamica è abilitato, un operatore in modalità batch potrebbe richiedere memoria aggiuntiva ed evitare la distribuzione in tempdb se è disponibile ulteriore memoria. Per altre informazioni, vedere la sezione *Effetti dell'opzione min memory per query* della [Guida sull'architettura di gestione della memoria](../../relational-databases/memory-management-architecture-guide.md#effects-of-min-memory-per-query).<br /><br />**Ambito**: globale o sessione| 
-|**9398**|Disabilita l'operatore [Join adattivo](../../relational-databases/performance/adaptive-query-processing.md#batch-mode-adaptive-joins) che consente di rimandare la scelta di un metodo [hash join o join a cicli annidati](../../relational-databases/performance/joins.md) a dopo che è stata eseguita la scansione del primo input, comportamento introdotto in [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]. Per altre informazioni, vedere questo [articolo del supporto tecnico Microsoft](https://support.microsoft.com/kb/4099126).<br /><br />**Nota:** verificare di testare questa opzione prima di distribuirla in un ambiente di produzione.<br /><br />**Ambito**: globale, sessione e query|
+|**9398**|Disabilita l'operatore [Join adattivo](../../relational-databases/performance/intelligent-query-processing.md#batch-mode-adaptive-joins) che consente di rimandare la scelta di un metodo [hash join o join a cicli annidati](../../relational-databases/performance/joins.md) a dopo che è stata eseguita la scansione del primo input, comportamento introdotto in [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]. Per altre informazioni, vedere questo [articolo del supporto tecnico Microsoft](https://support.microsoft.com/kb/4099126).<br /><br />**Nota:** verificare di testare questa opzione prima di distribuirla in un ambiente di produzione.<br /><br />**Ambito**: globale, sessione e query|
 |**9453**|Disabilita l'esecuzione in modalità batch. Per altre informazioni, vedere questo [articolo del supporto tecnico Microsoft](https://support.microsoft.com/help/4016902).<br /><br />**Nota:** verificare di testare questa opzione prima di distribuirla in un ambiente di produzione.<br /><br />**Ambito**: globale, sessione e query|
 |**9471**|Fa in modo che [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] generi un piano che usa la selettività minima per i filtri a tabella singola, nel modello di stima della cardinalità di Query Optimizer delle versioni da [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br />A partire da [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1, per eseguire questa operazione a livello di query, aggiungere l'[hint per la query](../../t-sql/queries/hints-transact-sql-query.md) USE HINT USE HINT 'ASSUME_MIN_SELECTIVITY_FOR_FILTER_ESTIMATES' anziché usare questo flag di traccia.<br /><br />**Nota:** verificare di testare questa opzione prima di distribuirla in un ambiente di produzione.<br /><br />**Nota:** questo flag di traccia non si applica a CE versione 70. In alternativa, usare il flag di traccia 4137.<br /><br />**Ambito**: globale, sessione o query| 
 |**9476**|Fa in modo che [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] generi un piano che usa l'assunzione di indipendenza semplice anziché l'assunzione predefinita di indipendenza di base, nel modello di stima della cardinalità di Query Optimizer delle versioni da [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Per altre informazioni, vedere questo [articolo del supporto tecnico Microsoft](https://support.microsoft.com/kb/3189675).<br /><br />A partire da [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1, per eseguire questa operazione a livello di query, aggiungere l'[hint per la query](../../t-sql/queries/hints-transact-sql-query.md) USE HINT 'ASSUME_JOIN_PREDICATE_DEPENDS_ON_FILTERS' anziché usare questo flag di traccia.<br /><br />**Nota:** verificare di testare questa opzione prima di distribuirla in un ambiente di produzione.<br /><br />**Ambito**: globale, sessione o query| 
@@ -167,7 +167,7 @@ I flag di traccia possono essere attivati o disattivati in uno dei modi seguenti
      Ad esempio, per abilitare il flag di traccia 2528 a livello globale, usare [DBCC TRACEON](../../t-sql/database-console-commands/dbcc-traceon-transact-sql.md) con l'argomento -1: `DBCC TRACEON (2528, -1)`. L'effetto dell'attivazione di un flag di traccia globale con DBCC TRACEON viene perso al riavvio del server. Per disabilitare un flag di traccia globale, usare [DBCC TRACEOFF](../../t-sql/database-console-commands/dbcc-traceoff-transact-sql.md) con l'argomento -1.  
 -   Tramite l'opzione di avvio **-T** se si vuole che il flag di traccia venga impostato durante l'avvio.  
      L'opzione di avvio **-T** attiva un flag di traccia a livello globale. Non è possibile abilitare un flag di traccia a livello di sessione tramite un'opzione di avvio. In questo modo il flag di traccia rimane attivo dopo il riavvio del server. Per altre informazioni sulle opzioni di avvio, vedere [Opzioni di avvio del servizio del motore di database](../../database-engine/configure-windows/database-engine-service-startup-options.md).
--   A livello di query, usando l'[hint per la query](https://support.microsoft.com/kb/2801413) QUERYTRACEON.
+-   A livello di query, usando l'[hint per la query](https://support.microsoft.com/kb/2801413) QUERYTRACEON. L'opzione QUERYTRACEON è supportata solo per i flag di traccia di Query Optimizer descritti nella tabella precedente.
   
 Per verificare i flag di traccia attivi, usare il comando `DBCC TRACESTATUS`.
   
