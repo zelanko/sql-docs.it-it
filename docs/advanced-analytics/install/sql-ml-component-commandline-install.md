@@ -3,17 +3,17 @@ title: Prompt dei comandi di installazione dei componenti di R e Python, SQL Ser
 description: Eseguire l'installazione della riga di comando di SQL Server per aggiungere linguaggio R e Python integrazione a un'istanza di motore di database di SQL Server.
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 08/21/2018
+ms.date: 03/13/2019
 ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 8e3c101eae8e02446a9e47b17255e2ca2b501774
-ms.sourcegitcommit: ee76332b6119ef89549ee9d641d002b9cabf20d2
+ms.openlocfilehash: 3f78447054d96f1552ae09c62f3b8a2f18bc58bf
+ms.sourcegitcommit: e9fcd10c7eb87a4f09ac2d8f7647018e83a5f5c5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/20/2018
-ms.locfileid: "53645525"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57976351"
 ---
 # <a name="install-sql-server-machine-learning-r-and-python-components-from-the-command-line"></a>Installare i componenti di R e Python dalla riga di comando di apprendimento automatico SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -57,7 +57,7 @@ In caso di installazione dal prompt dei comandi, in [!INCLUDE[ssNoVersion](../..
 | /IACCEPTPYTHONLICENSETERMS | Indica che si hanno accettato le condizioni di licenza per l'uso di componenti Python. |
 | /IACCEPTSQLSERVERLICENSETERMS | Indica che si hanno accettato le condizioni di licenza per l'uso di SQL Server.|
 | /MRCACHEDIRECTORY | Per l'installazione offline, imposta la cartella che contiene i file CAB dei componenti R. |
-| / MPYCACHEDIRECTORY | Per l'installazione offline, imposta la cartella che contiene i file CAB dei componenti Python. |
+| /MPYCACHEDIRECTORY | Riservato per utilizzi futuri. Utilizzare % TEMP % per archiviare i file CAB dei componenti Python per l'installazione nei computer che non dispongono di una connessione a internet. |
 
 
 ## <a name="indb"></a> Le installazioni di istanze nel database
@@ -132,13 +132,13 @@ Setup.exe /qs /ACTION=Install /FEATURES=SQL_INST_MR /INSTANCENAME=MSSQLSERVER
 
 ## <a name="silent"></a> Installazione invisibile all'utente
 
-Un'installazione invisibile all'utente elimina il controllo per i percorsi di file con estensione cab. Per questo motivo, è necessario specificare il percorso in cui devono essere decompressi file con estensione cab. È possibile nella directory temporanea per l'oggetto.
+Un'installazione invisibile all'utente elimina il controllo per i percorsi di file con estensione cab. Per questo motivo, è necessario specificare il percorso in cui devono essere decompressi file con estensione cab. Per Python, file CAB devono trovarsi nella cartella % TEMP *. Per R, è possibile impostare la cartella percorso usando è possibile nella directory temporanea per l'oggetto.
  
 ```cmd  
 Setup.exe /q /ACTION=Install /FEATURES=SQLEngine,ADVANCEDANALYTICS,SQL_INST_MR,SQL_INST_MPY 
 /INSTANCENAME=MSSQLSERVER /SQLSYSADMINACCOUNTS="<username>" 
 /IACCEPTSQLSERVERLICENSETERMS /IACCEPTROPENLICENSETERMS /IACCEPTPYTHONLICENSETERMS 
-/MRCACHEDIRECTORY=%temp% /MPYCACHEDIRECTORY=%temp%
+/MRCACHEDIRECTORY=%temp% 
 ```
 
 ## <a name="shared-feature"></a> Installazioni di server autonomi

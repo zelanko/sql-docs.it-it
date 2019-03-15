@@ -11,12 +11,12 @@ ms.topic: conceptual
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: f148c4cee111febc5d1e0203cc5eb484ec556d4f
-ms.sourcegitcommit: a13256f484eee2f52c812646cc989eb0ce6cf6aa
+ms.openlocfilehash: 16f3ffbbd1435e9006bcbc26c86fb53dfca9bf65
+ms.sourcegitcommit: e9fcd10c7eb87a4f09ac2d8f7647018e83a5f5c5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/25/2019
-ms.locfileid: "56801346"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57973131"
 ---
 # <a name="download-and-install-azure-data-studio"></a>Scaricare e installare Data Studio di Azure
 
@@ -30,7 +30,7 @@ Scaricare e installare la versione più recente, il *febbraio Release*:
 
 |Piattaforma|Scarica|Data di rilascio| Versione |
 |:---|:---|:---|:---|
-|WINDOWS|[Programma di installazione di utente (scelta consigliata)](https://go.microsoft.com/fwlink/?linkid=2072725)<br>[Programma di installazione sistema](https://go.microsoft.com/fwlink/?linkid=2072728)<br>[.zip](https://go.microsoft.com/fwlink/?linkid=2072354)|13 febbraio 2019 |1.4.5|
+|Windows|[Programma di installazione di utente (scelta consigliata)](https://go.microsoft.com/fwlink/?linkid=2072725)<br>[Programma di installazione sistema](https://go.microsoft.com/fwlink/?linkid=2072728)<br>[.zip](https://go.microsoft.com/fwlink/?linkid=2072354)|13 febbraio 2019 |1.4.5|
 |macOS|[.zip](https://go.microsoft.com/fwlink/?linkid=2072737)|13 febbraio 2019 |1.4.5|
 |Linux|[.deb](https://go.microsoft.com/fwlink/?linkid=2072744)<br>[.rpm](https://go.microsoft.com/fwlink/?linkid=2072741)<br>[.tar.gz](https://go.microsoft.com/fwlink/?linkid=2072360)|13 febbraio 2019 |1.4.5|
 
@@ -38,11 +38,12 @@ Per informazioni dettagliate sulla versione più recente, vedere le [note sulla 
 
 ## <a name="get-azure-data-studio-for-windows"></a>Ottenere dati di Azure Studio per Windows
 
-Questa versione di [!INCLUDE[name-sos](../includes/name-sos-short.md)] include un'installazione di Windows standard e un file ZIP:
+Questa versione di [!INCLUDE[name-sos](../includes/name-sos-short.md)] include un'esperienza di installazione di Windows standard e un file con estensione zip.
+
+Il *programma di installazione utente* è consigliato perché non richiede privilegi di amministratore, che semplifica le installazioni e aggiornamenti. Il programma di installazione di utente non richiede privilegi di amministratore la posizione si trova nella cartella AppData locale (LOCALAPPDATA) utente. Il programma di installazione utente fornisce inoltre un'esperienza più uniforme di aggiornamento in background. Per altre informazioni, vedere [configurazione utente per Windows](https://code.visualstudio.com/updates/v1_26#_user-setup-for-windows).
+
 
 **Programma di installazione utente** (scelta consigliata)
-
-Il programma di installazione di utente è consigliato perché non richiede privilegi di amministratore, che semplifica le installazioni e aggiornamenti.
 
 1. Scaricare ed eseguire la [ [!INCLUDE[name-sos](../includes/name-sos-short.md)] *utente* programma di installazione per Windows](https://go.microsoft.com/fwlink/?linkid=2072725).
 2. Avviare l'app [!INCLUDE[name-sos-short](../includes/name-sos-short.md)].

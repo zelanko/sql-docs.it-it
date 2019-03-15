@@ -2,7 +2,7 @@
 title: Eseguire la migrazione di un'istanza locale SQL Server o SQL Server in macchine virtuali di Azure al Database SQL di Azure usando Data Migration Assistant | Microsoft Docs
 description: Informazioni su come usare Data Migration Assistant per eseguire la migrazione di un Server SQL locale per Database SQL di Azure
 ms.custom: ''
-ms.date: 10/20/2018
+ms.date: 03/12/2019
 ms.prod: sql
 ms.prod_service: dma
 ms.reviewer: ''
@@ -12,21 +12,21 @@ keywords: ''
 helpviewer_keywords:
 - Data Migration Assistant, on-premises SQL Server
 ms.assetid: ''
-author: pochiraju
+author: HJToland3
 ms.author: rajpo
 manager: craigg
-ms.openlocfilehash: db4b48d736b46c0381749943916272e763a077c7
-ms.sourcegitcommit: 38f35b2f7a226ded447edc6a36665eaa0376e06e
+ms.openlocfilehash: d807396f7c8bd334de38cdc1744f6bee90d619e0
+ms.sourcegitcommit: e9fcd10c7eb87a4f09ac2d8f7647018e83a5f5c5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49643849"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57974061"
 ---
 # <a name="migrate-on-premises-sql-server-or-sql-server-on-azure-vms-to-azure-sql-database-using-the-data-migration-assistant"></a>Eseguire la migrazione di un'istanza locale SQL Server o SQL Server in macchine virtuali di Azure al Database SQL di Azure con Data Migration Assistant
 
 Data Migration Assistant offre valutazioni senza problemi di SQL Server in locale e gli aggiornamenti alle versioni successive di SQL Server o la migrazione a SQL Server in macchine virtuali di Azure o Database SQL di Azure.
 
-Questo articolo vengono fornite istruzioni dettagliate per la migrazione dei Server SQL locale per Database SQL di Azure usando Data Migration Assistant.   
+Questo articolo vengono fornite istruzioni dettagliate per la migrazione dei Server SQL locale per Database SQL di Azure usando Data Migration Assistant.   
 
 ## <a name="create-a-new-migration-project"></a>Creare un nuovo progetto di migrazione
 
@@ -34,7 +34,7 @@ Questo articolo vengono fornite istruzioni dettagliate per la migrazione dei Ser
 
 2. Impostare il tipo di origine su **SQL Server** e il server di destinazione digitare per **Database SQL di Azure**.
 
-3. Selezionare **Crea**.
+3. Selezionare **Create**.
 
    ![Crea progetto di migrazione](../dma/media/NewCreate1.png)
 
@@ -58,7 +58,7 @@ Questo articolo vengono fornite istruzioni dettagliate per la migrazione dei Ser
 
     ![Selezionare il database di origine](../dma/media/select-source-database.png)
 
-5. Fare clic su **Avanti**.
+5. Selezionare **Avanti**.
 
 ## <a name="specify-the-target-server-and-database"></a>Specificare il server di destinazione e il database
 
@@ -80,7 +80,7 @@ Questo articolo vengono fornite istruzioni dettagliate per la migrazione dei Ser
 
     ![Seleziona database di destinazione](../dma/media/select-target-database.png)
 
-5. Fare clic su **Avanti**.
+5. Selezionare **Avanti**.
 
 ## <a name="select-schema-objects"></a>Selezionare gli oggetti dello schema
 
@@ -122,5 +122,5 @@ Schermata finale Mostra lo stato complessivo.
 ## <a name="see-also"></a>Vedere anche
 
 - [Data Migration Assistant (DMA)](../dma/dma-overview.md)
-- [Data Migration Assistant: Le impostazioni di configurazione](../dma/dma-configurationsettings.md)
-- [Data Migration Assistant: Procedure consigliate](../dma/dma-bestpractices.md)
+- [Data Migration Assistant: Impostazioni di configurazione](../dma/dma-configurationsettings.md)
+- [Data Migration Assistant: Le procedure consigliate](../dma/dma-bestpractices.md)

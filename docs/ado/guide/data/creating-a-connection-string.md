@@ -4,7 +4,7 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 01/20/2017
 ms.reviewer: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -14,17 +14,17 @@ ms.assetid: 14eae122-2d1e-40c8-b88e-b7cb8dfbc93b
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 41732b25c7b2c02f5b6b8a319e057d204a3a3384
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 455fe1c3f5a19b498730909f1c56bf98b03ae51b
+ms.sourcegitcommit: e9fcd10c7eb87a4f09ac2d8f7647018e83a5f5c5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47611387"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57972770"
 ---
 # <a name="creating-a-connection-string"></a>Creazione di una stringa di connessione
 Una stringa di connessione è costituita da un elenco di coppie valore/argomento (vale a dire, parametri), separato da punti e virgola. Esempio:  
   
-```  
+```syntax
 "arg1=val1; arg2=val2; ... argN=valN;"  
 ```  
   
@@ -32,7 +32,7 @@ Una stringa di connessione è costituita da un elenco di coppie valore/argomento
   
  ADO riconosce i seguenti cinque argomenti in una stringa di connessione.  
   
-|Argomento|Description|  
+|Argomento|Descrizione|  
 |--------------|-----------------|  
 |*Provider*|Specifica il nome di un provider da utilizzare per la connessione.|  
 |*Nome file*|Specifica il nome di un file specifico del provider (ad esempio, un oggetto origine dati persistenti) che contiene informazioni di connessione predefinite.|  
@@ -42,9 +42,9 @@ Una stringa di connessione è costituita da un elenco di coppie valore/argomento
   
  Altri argomenti vengono passati al provider denominato nel *Provider* argomento, senza alcuna elaborazione da parte di ADO.  
   
- L'applicazione di HelloData nelle [HelloData: una semplice applicazione ADO](../../../ado/guide/data/hellodata-a-simple-ado-application.md) usata la stringa di connessione seguente:  
+ L'applicazione di HelloData in [HelloData: Un'applicazione semplice ADO](../../../ado/guide/data/hellodata-a-simple-ado-application.md) usata la stringa di connessione seguente:  
   
-```  
+```vb
 m_sConnStr = "Provider=SQLOLEDB;Data Source=MySqlServer;" & _  
              "Initial Catalog=Northwind;Integrated Security='SSPI';"  
 ```  
@@ -53,7 +53,7 @@ m_sConnStr = "Provider=SQLOLEDB;Data Source=MySqlServer;" & _
   
  Secondo il Provider OLE DB per la documentazione di SQL Server, è possibile sostituire "Server" per il *Zdroj dat* parametro e "Database" per il *Initial Catalog* parametro. Di conseguenza, la stringa di connessione seguente produrrà risultati identici a quello riportato sopra:  
   
-```  
+```vb
 m_sConnStr = "Provider=SQLOLEDB;Server=MySqlServer;" & _  
              "Database=Northwind;Integrated Security='SSPI';"  
 ```

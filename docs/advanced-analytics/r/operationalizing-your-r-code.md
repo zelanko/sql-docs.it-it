@@ -3,55 +3,45 @@ title: Rendere operativo il codice R tramite stored procedure - servizi di SQL S
 description: Incorporare il codice del linguaggio R in una stored procedure SQL Server per renderlo disponibile per qualsiasi applicazione client che possono accedere a un database di SQL Server.
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 04/15/2018
+ms.date: 03/15/2019
 ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 3fc96e57fffb3e000a7e1a19887ed27651df9009
-ms.sourcegitcommit: 85bfaa5bac737253a6740f1f402be87788d691ef
+ms.openlocfilehash: 2b8e6a655ef96da042575a3b48809dbad1215242
+ms.sourcegitcommit: e9fcd10c7eb87a4f09ac2d8f7647018e83a5f5c5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/15/2018
-ms.locfileid: "53432184"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57976271"
 ---
-# <a name="operationalize-r-code-machine-learning-services"></a>Rendere operativo il codice R (servizi di Machine Learning)
+# <a name="operationalize-r-code-using-stored-procedures-in-sql-server-machine-learning-services"></a>Rendere operativo il codice R tramite stored procedure in SQL Server Machine Learning Services
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-Gli sviluppatori di database si occupano di integrare più tecnologie e raggruppare i risultati in modo che possano essere condivisi in tutta l'organizzazione. Lo sviluppatore del database funziona con gli sviluppatori di applicazioni, SQL, data Scientist e sviluppatori di progettare e distribuire le soluzioni.
+Quando si usa la funzionalità R e Python in SQL Server Machine Learning Services, incorporamento di codice nelle stored procedure è l'approccio più comune per lo spostamento di soluzioni in un ambiente di produzione. Questo articolo riepiloga i punti chiave per gli sviluppatori SQL che assicuri messa in funzione il codice R con SQL Server.
 
-Questo articolo riepiloga i punti chiave per lo sviluppatore del database da considerare quando si messa in funzione il codice R con SQL Server.
+## <a name="deploy-production-ready-script-using-t-sql-and-stored-procedures"></a>Distribuire lo script di produzione usando T-SQL e stored procedure
 
-## <a name="get-started-with-r-code-in-sql-server"></a>Iniziare con codice R in SQL Server
+In genere, l'integrazione delle soluzioni di analisi scientifica dei dati ha lo scopo ricodifica esteso per supportare le prestazioni e l'integrazione. Servizi di SQL Server Machine Learning semplifica questa attività perché il codice R e Python può essere eseguito in SQL Server e richiamato tramite le stored procedure. Per altre informazioni sui meccanismi di incorporamento di codice nelle stored procedure, vedere:
 
-In genere, l'integrazione di soluzioni di machine learning è sinonimo ricodifica esteso per supportare le prestazioni e l'integrazione. Tuttavia, lo spostamento di codice R e Python in un ambiente di produzione è molto più facile in servizi di SQL Server Machine Learning, in quanto il codice può essere eseguito in SQL Server e richiamato tramite le stored procedure. È possibile continuare a usare strumenti familiari e non è necessario installare un ambiente di sviluppo R. 
-
-Per altre informazioni sulla sintassi di base, vedere:
-
++ [Guida introduttiva: Script R di "Hello world" in SQL Server](../../advanced-analytics/tutorials//quickstart-r-run-using-tsql.md)
 + [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md)
-+ [Usare il codice R in SQL](../../advanced-analytics/tutorials/rtsql-using-r-code-in-transact-sql-quickstart.md).
 
-Per un esempio di come è possibile distribuire codice R nell'ambiente di produzione usando le stored procedure, vedere:
+Un esempio più dettagliato di distribuzione del codice R nell'ambiente di produzione usando le stored procedure è reperibile in [esercitazione: Analitica di dati R per sviluppatori SQL](../../advanced-analytics/tutorials/sqldev-in-database-r-for-sql-developers.md)
 
-+ [Analitica nel Database per sviluppatori SQL](../../advanced-analytics/tutorials/sqldev-in-database-r-for-sql-developers.md).
+## <a name="guidelines-for-optimizing-r-code-for-sql"></a>Linee guida per l'ottimizzazione di codice R per SQl
 
-## <a name="optimize-your-r-code"></a>Ottimizzare il codice R
-
-Conversione del codice R in SQL è certamente più semplice se alcune ottimizzazioni vengono eseguite in anticipo nel codice R o Python. Sono inclusi come evitare i tipi di dati che causano problemi, evitando le conversioni di dati non necessari e la riscrittura del codice R come una singola chiamata di funzione che può essere facilmente aggiunti parametri. Per altre informazioni, vedere:
+Conversione del codice R in SQL è più semplice se alcune ottimizzazioni vengono eseguite in anticipo nel codice R o Python. Sono inclusi come evitare i tipi di dati che causano problemi, evitando le conversioni di dati non necessari e la riscrittura del codice R come una singola chiamata di funzione che può essere facilmente aggiunti parametri. Per altre informazioni, vedere:
 
 + [Librerie e tipi di dati R](r-libraries-and-data-types.md)
-
 + [Conversione di codice R per l'uso in R Services](converting-r-code-for-use-in-sql-server.md)
-
 + [Usare funzioni di supporto sqlrutils](ref-r-sqlrutils.md)
 
 ## <a name="integrate-r-and-python-with-applications"></a>Integrazione di R e Python con applicazioni
 
-Poiché è possibile avviare i servizi di Machine Learning da una stored procedure, è possibile eseguire script R o Python da qualsiasi applicazione che può inviare un'istruzione T-SQL e gestire i risultati.
+Poiché è possibile eseguire R o Python da una stored procedure, è possibile eseguire gli script da qualsiasi applicazione che può inviare un'istruzione T-SQL e gestire i risultati. Ad esempio, si potrebbe ripetere il training di un modello in base a una pianificazione utilizzando il [attività T-SQL Execute](https://docs.microsoft.com/sql/integration-services/control-flow/execute-t-sql-statement-task) in Integration Services o con un'altra utilità di pianificazione processi che è possibile eseguire una stored procedure.
 
-Ad esempio, si potrebbe ripetere il training di un modello in base a una pianificazione utilizzando l'attività Esegui T-SQL in Integration Services, oppure usando un'altra utilità di pianificazione processi che è possibile eseguire una stored procedure.
-
-Assegnazione dei punteggi è un'importante attività che può facilmente essere automatizzate o avviata da applicazioni esterne. Il training del modello in anticipo, tramite R o Python o una stored procedure e salvare il modello in formato binario in una tabella. Quindi, è possibile caricare il modello in una variabile come parte della chiamata di stored procedure, tramite una di queste opzioni per il punteggio di T-SQL:
+Assegnazione dei punteggi è un'importante attività che può facilmente essere automatizzate o avviata da applicazioni esterne. Il training del modello in anticipo, tramite R o Python o una stored procedure, e [salvataggio del modello in formato binario](../tutorials/walkthrough-build-and-save-the-model.md) a una tabella. Quindi, è possibile caricare il modello in una variabile come parte della chiamata di stored procedure, tramite una di queste opzioni per il punteggio di T-SQL:
 
 + [In tempo reale](../real-time-scoring.md) assegnazione dei punteggi, ottimizzato per i batch piccoli
 + Assegnazione dei punteggi, in cui viene chiamato da un'applicazione a singola riga
@@ -69,7 +59,7 @@ Visualizzare questi modelli di soluzione per esempi su come integrare l'assegnaz
 
 ## <a name="boost-performance-and-scale"></a>Aumentare le prestazioni e scalabilità
 
-Nonostante sia noto che il linguaggio R open source presenta alcune limitazioni, il pacchetto RevoScaleR API possono operare su grandi set di dati e trarre vantaggio da calcoli nel database multithread, multicore, multiprocesso.
+Nonostante il linguaggio R open source è noto che le limitazioni per quanto riguarda grandi set di dati, il [API del pacchetto RevoScaleR](ref-r-revoscaler.md) incluso con il servizio SQL Server Machine Learning possono operare su grandi set di dati e trarre vantaggio da multi-thread , multicore, multiprocesso calcoli nel database.
 
 Se la soluzione R Usa aggregazioni complesse o comporta grandi set di dati, è possibile sfruttare le aggregazioni in memoria altamente efficienti e gli indici columnstore di SQL Server e lasciare che il codice R gestisca i calcoli statistici e di assegnazione dei punteggi.
 
@@ -80,15 +70,11 @@ Per altre informazioni su come migliorare le prestazioni in SQL Server Machine L
 
 ## <a name="adapt-r-code-for-other-platforms-or-compute-contexts"></a>Contesti di calcolo o adattare il codice R per altre piattaforme
 
-Lo stesso codice R che viene eseguito sui [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dati può essere usati da altre origini dati, ad esempio Hadoop e in altri contesti di calcolo.
+Lo stesso codice R che viene eseguito sui [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dati possono essere usati su altre origini dati, ad esempio Spark su HDFS, quando si usa la [opzione di server autonomi](../install/sql-machine-learning-standalone-windows-install.md) nel programma di installazione di SQL Server o quando si installa il prodotto con marchio di non-SQL, Microsoft Machine Learning Server (precedentemente noto come **Microsoft R Server**):
 
-Per altre informazioni sulle piattaforme supportate da Microsoft R, vedere:
++ [Documentazione di Machine Learning Server](https://docs.microsoft.com/r-server/)
 
-+ [Introduzione a Microsoft R](https://docs.microsoft.com/r-server/)
-
-+ [Esplorare RevoScaleR](https://docs.microsoft.com/r-server/r/tutorial-r-to-revoscaler)
-
-Per altre informazioni su come è possibile ottimizzare le soluzioni R Microsoft eseguita su dati di grandi dimensioni o più piattaforme, vedere:
++ [Esplorare R a RevoScaleR](https://docs.microsoft.com/r-server/r/tutorial-r-to-revoscaler)
 
 + [Scrivere algoritmi la suddivisione in blocchi](https://docs.microsoft.com/r-server/r/how-to-developer-write-chunking-algorithms)
 

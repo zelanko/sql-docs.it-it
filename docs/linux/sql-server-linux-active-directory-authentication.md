@@ -12,12 +12,12 @@ ms.custom: sql-linux, seodec18
 ms.technology: linux
 helpviewer_keywords:
 - Linux, AAD authentication
-ms.openlocfilehash: 237924a1bc4309b4e4d686076d1e0862ea3afe92
-ms.sourcegitcommit: de8ef246a74c935c5098713f14e9dd06c4733713
+ms.openlocfilehash: d3b3aaf9688d3517127495fe4b963f5b6de56f0f
+ms.sourcegitcommit: e9fcd10c7eb87a4f09ac2d8f7647018e83a5f5c5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53160602"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57973590"
 ---
 # <a name="tutorial-use-active-directory-authentication-with-sql-server-on-linux"></a>Esercitazione: Usare l'autenticazione di Active Directory con SQL Server in Linux
 
@@ -166,8 +166,22 @@ Usare la procedura seguente per aggiungere un [!INCLUDE[ssNoVersion](../includes
    >
    > Consultare quanto segue per configurare [SSSD manualmente](https://access.redhat.com/articles/3023951), e [configurare NSS per lavorare con SSSD](https://access.redhat.com/documentation/red_hat_enterprise_linux/7/html/system-level_authentication_guide/configuring_services#Configuration_Options-NSS_Configuration_Options)
 
+5. Verificare che il dominio è configurato in `/etc/krb5.conf`
+    ```/etc/krb5.conf
+    [libdefaults]
+    default_realm = CONTOSO.COM
+
+    [realms]
+    CONTOSO.COM = {
+    }
+
+    [domain_realm]
+    contoso.com = CONTOSO.COM
+    .contoso.com = CONTOSO.COM
+    ```
+
   
-5. Verificare che ora è possibile raccogliere informazioni relative a un utente dal dominio e che è possibile acquisire un ticket Kerberos come tale utente.
+6. Verificare che ora è possibile raccogliere informazioni relative a un utente dal dominio e che è possibile acquisire un ticket Kerberos come tale utente.
 
    L'esempio seguente usa **id**,  **[kinit](https://web.mit.edu/kerberos/krb5-1.12/doc/user/user_commands/kinit.html)**, e **[klist](https://web.mit.edu/kerberos/krb5-1.12/doc/user/user_commands/klist.html)** comandi per questo oggetto.
 

@@ -7,19 +7,19 @@ ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: c6c0e07f48dee271fee61bc59b47f49683ff8832
-ms.sourcegitcommit: 85bfaa5bac737253a6740f1f402be87788d691ef
+ms.openlocfilehash: 2e045d061df813ae004dcb13668c31e68c3b5b5a
+ms.sourcegitcommit: e9fcd10c7eb87a4f09ac2d8f7647018e83a5f5c5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/15/2018
-ms.locfileid: "53432344"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57976415"
 ---
 # <a name="data-exploration-and-predictive-modeling-with-r-in-sql-server"></a>Esplorazione dei dati e modellazione predittiva con R in SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 Questo articolo descrive i miglioramenti al processo di analisi scientifica dei dati che sono possibili grazie all'integrazione con SQL Server.
 
-Si applica a: SQL Server 2016 R Services, servizi SQL Server 2017 macchine al meglio
+Si applica a: SQL Server 2016 R Services, SQL Server 2017 Machine Learnign Services
 
 ## <a name="the-data-science-process"></a>Il processo di analisi scientifica dei dati
 
@@ -36,7 +36,7 @@ Pacchetti nuova, scalabili e le funzioni R incluse con [!INCLUDE[rsql_productnam
 
 ## <a name="whats-different-about-revoscaler"></a>Che cos'è diverso su RevoScaleR?
 
-Il pacchetto **RevoScaleR** contiene le implementazioni di alcune delle funzioni R più diffuse, riprogettate per garantire parallelismo e scalabilità. Per altre informazioni, vedere [Distributed Computing con RevoScaleR](https://msdn.microsoft.com/microsoft-r/scaler-distributed-computing).
+Il pacchetto **RevoScaleR** contiene le implementazioni di alcune delle funzioni R più diffuse, riprogettate per garantire parallelismo e scalabilità. Per altre informazioni, vedere [Distributed Computing con RevoScaleR](https://docs.microsoft.com/machine-learning-server/r/how-to-revoscaler-distributed-computing).
 
 Il pacchetto RevoScaleR fornisce anche supporto per la modifica del *contesto di esecuzione*. Ciò significa che, per un'intera soluzione o per una sola funzione, è possibile indicare che è necessario eseguire calcoli usando le risorse del computer che ospita l’istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , invece della workstation locale. Questa procedura offre numerosi vantaggi: evitare lo spostamento dei dati non necessari e usare risorse di calcolo più grandi nel computer del server.
 
@@ -60,7 +60,7 @@ Oltre alle librerie R proprietari incluse con Microsoft Machine Learning, è pos
   
      Il pacchetto **RevoPemaR** consente di sviluppare algoritmi paralleli di memoria esterna in R.  
   
-     Per altre informazioni su questi pacchetti e come usarli, vedere [What ' s RevoScaleR](https://msdn.microsoft.com/microsoft-r/scaler-user-guide-introduction) e [Introduzione a RevoPemaR](https://msdn.microsoft.com/microsoft-r/pemar-getting-started). 
+     Per altre informazioni su questi pacchetti e come usarli, vedere [What ' s RevoScaleR](https://docs.microsoft.com/machine-learning-server/r/concept-what-is-revoscaler) e [Introduzione a RevoPemaR](https://docs.microsoft.com/machine-learning-server/r/how-to-developer-pemar). 
 
 + **MicrosoftML** contiene una raccolta di algoritmi di apprendimento altamente ottimizzata e trasformazioni dei dati dal team di analisi scientifica dei dati di Microsoft. Molti degli algoritmi utilizzati anche in Azure Machine Learning. Per altre informazioni, vedere [MicrosoftML in SQL Server](ref-r-microsoftml.md).
 
@@ -82,14 +82,14 @@ Quando si usa il pacchetto RevoScaleR per connettersi a [!INCLUDE[ssNoVersion](.
   
      Usare questa funzione nel codice R per definire l’ *origine dei dati*. L'oggetto di origine dei dati specifica il server e le tabelle in cui i dati si trovano e gestisce le attività di lettura dei dati e scrittura di dati su [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].
   
--   Il pacchetto **RxInSqlServer** può essere usata per specificare il *contesto di calcolo*.  In altre parole, è possibile indicare la posizione in cui deve essere eseguito il codice R: nella workstation locale o nel computer che ospita l’istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  Per altre informazioni, vedere [funzioni RevoScaleR](https://msdn.microsoft.com/microsoft-r/scaler/scaler).
+-   Il pacchetto **RxInSqlServer** può essere usata per specificare il *contesto di calcolo*.  In altre parole, è possibile indicare la posizione in cui deve essere eseguito il codice R: nella workstation locale o nel computer che ospita l’istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  Per altre informazioni, vedere [funzioni RevoScaleR](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler).
   
      Quando si imposta il contesto di calcolo, questo interessa solo i calcoli che supportano il contesto di esecuzione remota, ovvero le operazioni R fornite dal pacchetto RevoScaleR e le funzioni correlate. Le soluzioni R basate su pacchetti CRAN standard in genere non possono essere eseguite in un contesto di calcolo remoto, anche se possono essere eseguite nel computer [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] se avviate da T-SQL. È tuttavia possibile usare la funzione `rxExec` per chiamare singole funzioni R ed eseguirle in remoto in [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)].
 
 Per esempi di come creare e usare origini dati e contesti di esecuzione, vedere queste esercitazioni:
 
 + [Procedura approfondita per l'analisi scientifica dei dati](../../advanced-analytics/tutorials/deepdive-data-science-deep-dive-using-the-revoscaler-packages.md)  
-+  [Analisi dei dati usando Microsoft R](https://msdn.microsoft.com/microsoft-r/data-analysis-in-microsoft-r)
++  [Analisi dei dati usando Microsoft R](https://docs.microsoft.com/machine-learning-server/r/how-to-introduction)
 
 ## <a name="deploy-r-code-to-production"></a>Distribuire il codice R nell'ambiente di produzione
 
@@ -101,6 +101,6 @@ Il processo di distribuzione inizia in genere con pulizia dello script in uso al
 
 ## <a name="see-also"></a>Vedere anche
 
-[Confronto tra funzioni R di base e ScaleR](https://msdn.microsoft.com/microsoft-r/scaler/compare-base-r-scaler-functions)
+[Confronto di Base R e funzioni RevoScaleR](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler-compared-to-base-r)
 
 [Libreria RevoScaleR in SQL Server](ref-r-revoscaler.md)

@@ -2,7 +2,7 @@
 title: Procedure consigliate per Data Migration Assistant (SQL Server) | Microsoft Docs
 description: Informazioni sulle procedure consigliate per la migrazione dei database di SQL Server con Data Migration Assistant
 ms.custom: ''
-ms.date: 10/20/2018
+ms.date: 03/12/2019
 ms.prod: sql
 ms.prod_service: dma
 ms.reviewer: ''
@@ -12,15 +12,15 @@ keywords: ''
 helpviewer_keywords:
 - Data Migration Assistant, Best Practices
 ms.assetid: ''
-author: pochiraju
+author: HJToland3
 ms.author: rajpo
 manager: craigg
-ms.openlocfilehash: 79eade425e87da3784221686b7ccdc99e85b96bc
-ms.sourcegitcommit: 38f35b2f7a226ded447edc6a36665eaa0376e06e
+ms.openlocfilehash: cb355cbe1e32c97e59d61eb55ca70023b03acd6b
+ms.sourcegitcommit: e9fcd10c7eb87a4f09ac2d8f7647018e83a5f5c5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49643829"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57973670"
 ---
 # <a name="best-practices-for-running-data-migration-assistant"></a>Le procedure consigliate per l'esecuzione di Data Migration Assistant
 Questo articolo fornisce alcune procedure consigliate per l'installazione, valutazione e migrazione.
@@ -41,4 +41,4 @@ Non è possibile installare ed eseguire Data Migration Assistant direttamente ne
 
 - Abilita Crittografa connessione durante la connessione al server di origine e destinazione. Crittografia mediante SSL aumenta la sicurezza dei dati trasmessi tra le reti tra l'istanza di SQL Server, è utile soprattutto quando la migrazione di account di accesso SQL e Data Migration Assistant. Se non viene utilizzata la crittografia SSL e la rete è compromessa da un utente malintenzionato, l'account di accesso SQL migrato a è stato possibile ottenere intercettati e/o modificate in immediatamente dall'autore dell'attacco.
 
-    Tuttavia, se tutti accedono attraverso una configurazione di Intranet sicura, la crittografia potrebbe non essere necessaria. Abilitazione della crittografia del rallentamento delle prestazioni perché il sovraccarico aggiuntivo che è necessario per crittografare e decrittografare i pacchetti. Per altre informazioni, consultare [crittografia delle connessioni a SQL Server](https://go.microsoft.com/fwlink/?linkid=832513).
+    Tuttavia, se tutti accedono attraverso una configurazione di Intranet sicura, la crittografia potrebbe non essere necessaria. Abilitazione della crittografia del rallentamento delle prestazioni perché il sovraccarico aggiuntivo che è necessario per crittografare e decrittografare i pacchetti. Per altre informazioni, consultare [crittografia delle connessioni a SQL Server](https://go.microsoft.com/fwlink/?linkid=832513).
