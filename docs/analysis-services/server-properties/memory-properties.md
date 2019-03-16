@@ -1,6 +1,6 @@
 ---
 title: Proprietà della memoria di Analysis Services | Microsoft Docs
-ms.date: 01/15/2018
+ms.date: 03/15/2019
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: ''
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 055b46ab1464f360cfb89f9bf4d42c0b8997f841
-ms.sourcegitcommit: c6e71ed14198da67afd7ba722823b1af9b4f4e6f
+ms.openlocfilehash: b33bf47f77d65679bc079b526d480841af71c0c4
+ms.sourcegitcommit: 671370ec2d49ed0159a418b9c9ac56acf43249ad
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/16/2019
-ms.locfileid: "54327864"
+ms.lasthandoff: 03/15/2019
+ms.locfileid: "58072295"
 ---
 # <a name="memory-properties"></a>Proprietà della memoria
 [!INCLUDE[ssas-appliesto-sqlas-all-aas](../../includes/ssas-appliesto-sqlas-all-aas.md)]
@@ -58,14 +58,12 @@ Le proprietà seguenti si applicano sia alla modalità tabulare sia alla modalit
  Specifica una soglia di memoria superata la quale le sessioni utente attive verranno immediatamente terminate dall'istanza per ridurre l'utilizzo della memoria. Tutte le sessioni terminate verranno visualizzato un errore relativo annullamento dal numero di richieste di memoria. Con il valore predefinito, ovvero zero (0), il limite **HardMemoryLimit** sarà impostato su un valore mediano tra **TotalMemoryLimit** e la memoria fisica totale del sistema. Se quest'ultima è maggiore dello spazio di indirizzo virtuale del processo, per calcolare il limite **HardMemoryLimit**sarà invece usato lo spazio di indirizzo virtuale.  
 
 **QueryMemoryLimit**   
-Solo per Azure Analysis Services. Una proprietà avanzata per controllare la quantità di memoria possono essere usati per i risultati temporanei durante una query. Si applica solo alle query e le misure DAX. Non viene tenuto conto per allocazioni di memoria generali utilizzate dalla query. Specificato, espresso in percentuale, il valore predefinito è determinato dal piano di. 
+Solo per Azure Analysis Services. Una proprietà avanzata per controllare la quantità di memoria possono essere usati per i risultati temporanei durante una query. Si applica solo alle query e le misure DAX. Non viene tenuto conto per allocazioni di memoria generali utilizzate dalla query. Specificato, espresso in percentuale fino a 100. Tuttavia, è espressa in byte. Viene specificata l'impostazione di un valore pari a 0 indica nessun limite. Per l'analisi di Azure, il valore predefinito è determinato dal piano di. 
 
 |Piano  |Impostazione predefinita  |
 |---------|---------|
 |D1     |   80      |
-|Tutti gli altri piani     |    20     |
-
-Questa proprietà può essere modificata. Viene specificata l'impostazione di un valore pari a 0 indica nessun limite.
+|Tutti gli altri piani     |    20     | 
 
  **VirtualMemoryLimit**  
   Proprietà avanzata che deve essere modificata solo sotto la supervisione del servizio di supporto tecnico [!INCLUDE[msCoName](../../includes/msconame-md.md)] .  

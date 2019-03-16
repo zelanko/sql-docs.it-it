@@ -21,17 +21,17 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: e8df3c13b42df1b842d784fedd1720d2e9bfc258
-ms.sourcegitcommit: c51f7f2f5d622a1e7c6a8e2270bd25faba0165e7
+ms.openlocfilehash: 04d221372a0d91ed45ba339c1077ea1be68542df
+ms.sourcegitcommit: 671370ec2d49ed0159a418b9c9ac56acf43249ad
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53626390"
+ms.lasthandoff: 03/15/2019
+ms.locfileid: "58072355"
 ---
 # <a name="sysdmexecquerystats-transact-sql"></a>sys.dm_exec_query_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  Restituisce dati statistici aggregati sulle prestazioni dei piani di query memorizzati nella cache in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. La vista contiene una riga per ogni istruzione di query nel piano memorizzato nella cache e la durata delle righe è legata al piano stesso. Quando un piano viene rimosso dalla cache, le righe corrispondenti vengono eliminate da questa vista.  
+Restituisce dati statistici aggregati sulle prestazioni dei piani di query memorizzati nella cache in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. La vista contiene una riga per ogni istruzione di query nel piano memorizzato nella cache e la durata delle righe è legata al piano stesso. Quando un piano viene rimosso dalla cache, le righe corrispondenti vengono eliminate da questa vista.  
   
 > [!NOTE]
 > Una query iniziale di **DM exec_query_stats** potrebbe produrre risultati non accurati se è presente un carico di lavoro attualmente in esecuzione nel server. La riesecuzione della query può garantire risultati più accurati.  
@@ -41,11 +41,11 @@ ms.locfileid: "53626390"
   
 |Nome colonna|Tipo di dati|Descrizione|  
 |-----------------|---------------|-----------------|  
-|**sql_handle**|**varbinary(64)**  |Token che fa riferimento al batch o alla stored procedure di cui fa parte la query.<br /><br /> **valore di sql_handle**, in combinazione con **statement_start_offset** e **statement_end_offset**, può essere utilizzato per recuperare il testo SQL della query chiamando il **sys.dm_exec_sql_ testo** funzione a gestione dinamica.|  
+|**sql_handle**|**varbinary(64)**  |È un token che identifica in modo univoco il batch o una stored procedure che fa parte della query.<br /><br /> **valore di sql_handle**, in combinazione con **statement_start_offset** e **statement_end_offset**, può essere utilizzato per recuperare il testo SQL della query chiamando il **sys.dm_exec_sql_ testo** funzione a gestione dinamica.|  
 |**statement_start_offset**|**int**|Indica, in byte e a partire da 0, la posizione iniziale della query descritta dalla riga all'interno del testo del batch o dell'oggetto persistente.|  
 |**statement_end_offset**|**int**|Indica, in byte e a partire da 0, la posizione finale della query descritta dalla riga all'interno del testo del batch o dell'oggetto persistente. Per le versioni precedenti [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)], il valore -1 indica la fine del batch. I commenti finali non sono più inclusi.|  
 |**plan_generation_num**|**bigint**|Numero di sequenza utilizzabile per distinguere le istanze dei piani dopo una ricompilazione.|  
-|**plan_handle**|**varbinary(64)**|Token che fa riferimento al piano compilato di cui fa parte la query. Questo valore può essere passato per il [DM exec_query_plan](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-plan-transact-sql.md) funzione a gestione dinamica per ottenere il piano di query.<br /><br /> È sempre 0x000 quando una stored procedure compilata in modo nativo esegue una query su una tabella ottimizzata per la memoria.|  
+|**plan_handle**|**varbinary(64)**|È un token che identifica in modo univoco un piano di esecuzione di query per un batch che ha eseguito e il piano risiede nella cache dei piani o attualmente in esecuzione. Questo valore può essere passato per il [DM exec_query_plan](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-plan-transact-sql.md) funzione a gestione dinamica per ottenere il piano di query.<br /><br /> È sempre 0x000 quando una stored procedure compilata in modo nativo esegue una query su una tabella ottimizzata per la memoria.|  
 |**creation_time**|**datetime**|Ora di compilazione del piano.|  
 |**last_execution_time**|**datetime**|Ora dell'ultimo avvio dell'esecuzione del piano.|  
 |**execution_count**|**bigint**|Numero di esecuzioni del piano a partire dall'ultima compilazione.|  
@@ -73,7 +73,7 @@ ms.locfileid: "53626390"
 |**last_elapsed_time**|**bigint**|Tempo trascorso, espresso in microsecondi (con precisione al millisecondo), per le ultime esecuzioni completate di questo piano.|  
 |**min_elapsed_time**|**bigint**|Tempo minimo trascorso, espresso in microsecondi (con precisione al millisecondo), per un'esecuzione completata di questo piano.|  
 |**max_elapsed_time**|**bigint**|Tempo massimo trascorso, espresso in microsecondi (con precisione al millisecondo), per un'esecuzione completata di questo piano.|  
-|**query_hash**|**binari (8)**|Valore hash binario calcolato sulla query che consente di identificare query con logica analoga. È possibile utilizzare il valore hash della query per determinare l'utilizzo delle risorse aggregate per query che differiscono solo per valori letterali.|  
+|**query_hash**|**Binary(8)**|Valore hash binario calcolato sulla query che consente di identificare query con logica analoga. È possibile utilizzare il valore hash della query per determinare l'utilizzo delle risorse aggregate per query che differiscono solo per valori letterali.|  
 |**query_plan_hash**|**binary(8)**|Valore hash binario calcolato sul piano di esecuzione di query che consente di identificare piani di esecuzioni analoghi. È possibile utilizzare il valore hash del piano di query per individuare il costo cumulativo di query con piani di esecuzione analoghi.<br /><br /> È sempre 0x000 quando una stored procedure compilata in modo nativo esegue una query su una tabella ottimizzata per la memoria.|  
 |**total_rows**|**bigint**|Numero totale di righe restituite dalla query. Non può essere null.<br /><br /> È sempre 0 quando una stored procedure compilata in modo nativo esegue una query su una tabella ottimizzata per la memoria.|  
 |**last_rows**|**bigint**|Numero di righe restituite durante l'ultima esecuzione della query. Non può essere null.<br /><br /> È sempre 0 quando una stored procedure compilata in modo nativo esegue una query su una tabella ottimizzata per la memoria.|  

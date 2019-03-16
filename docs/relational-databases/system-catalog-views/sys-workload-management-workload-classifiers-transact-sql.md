@@ -1,7 +1,7 @@
 ---
 title: Sys.workload_management_workload_classifiers (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 02/08/2019
+ms.date: 03/13/2019
 ms.prod: ''
 ms.prod_service: sql-data-warehouse
 ms.reviewer: jrasnick
@@ -12,12 +12,12 @@ author: ronortloff
 ms.author: rortloff
 manager: craigg
 monikerRange: =azure-sqldw-latest||=sqlallproducts-allversions
-ms.openlocfilehash: d93876db1bb31edab2ad128a0ab8af4d4a5230cd
-ms.sourcegitcommit: aa8bec762be29a29aed651d98ed4d868da85ba67
+ms.openlocfilehash: 7f655c94d0c77747a4e64c93bf7ad880419aacb4
+ms.sourcegitcommit: 05bb10710489bef16bb2c53b3803e9b8eea1429a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57975379"
+ms.lasthandoff: 03/15/2019
+ms.locfileid: "57988752"
 ---
 # <a name="sysworkloadmanagementworkloadclassifiers-transact-sql-preview"></a>Sys.workload_management_workload_classifiers (Transact-SQL) (anteprima)
 
@@ -42,4 +42,4 @@ is_enabled|**bit**|Indica se la funzione di classificazione è abilitato o meno.
 
 ## <a name="next-steps"></a>Passaggi successivi
 
- Per un elenco di tutte le viste del catalogo per SQL Data Warehouse e Parallel Data Warehouse, vedere [viste del catalogo di Parallel Data Warehouse e SQL Data Warehouse](../../relational-databases/system-catalog-views/sql-data-warehouse-and-parallel-data-warehouse-catalog-views.md). Per creare un classificatore di carico di lavoro, vedere [CLASSIFICATORE del carico di lavoro creare](../../t-sql/statements/create-workload-classifier-transact-sql.md). Per altre informazioni sulla classificazione del carico di lavoro vedere [classificazione del carico di lavoro di SQL DATA Warehouse](/azure/sql-data-warehouse/sql-data-warehouse-workload-classification)
+ Per un elenco di tutte le viste del catalogo per SQL Data Warehouse e Parallel Data Warehouse, vedere [viste del catalogo di Parallel Data Warehouse e SQL Data Warehouse](../../relational-databases/system-catalog-views/sql-data-warehouse-and-parallel-data-warehouse-catalog-views.md). Per creare un classificatore di carico di lavoro, vedere [CLASSIFICATORE del carico di lavoro creare](../../t-sql/statements/create-workload-classifier-transact-sql.md). Per altre informazioni sulla classificazione del carico di lavoro, vedere [classificazione del carico di lavoro di SQL DATA Warehouse](/azure/sql-data-warehouse/sql-data-warehouse-workload-classification)

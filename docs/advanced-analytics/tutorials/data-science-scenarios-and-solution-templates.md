@@ -7,12 +7,12 @@ ms.topic: tutorial
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 936bc010838b3869c567117a9e87cdc2c4ce6d52
-ms.sourcegitcommit: 33712a0587c1cdc90de6dada88d727f8623efd11
+ms.openlocfilehash: 1c98f6110aa6cc0bbb86f04a685211d7dc58447a
+ms.sourcegitcommit: 671370ec2d49ed0159a418b9c9ac56acf43249ad
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53596125"
+ms.lasthandoff: 03/15/2019
+ms.locfileid: "58072155"
 ---
 # <a name="data-science-scenarios-and-solution-templates"></a>Scenari di data science e modelli di soluzioni
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -56,7 +56,7 @@ Ogni soluzione include i dati di esempio, codice R o Python code e le stored pro
 
 ## <a name="customer-churn"></a>Varianza dei clienti
 
-[Modello di stima della varianza del cliente (SQL Server R Services)](https://github.com/Microsoft/SQL-Server-R-Services-Samples/blob/master/Churn/Introduction.md)
+[Modello di stima della varianza del cliente (SQL Server R Services)](https://github.com/Microsoft/SQL-Server-R-Services-Samples/blob/master/Churn/README.md)
 
 **Cosa:** L'analisi e stima abbandono dei clienti è importante per ogni settore in cui deve essere gestita e ha impedita la perdita di clienti di superare la concorrenza: banking, le telecomunicazioni e delle vendite al dettaglio, per citarne alcuni. L'obiettivo dell'analisi dell'abbandono dei clienti è l'identificazione dei clienti con alta probabilità di abbandono e l'adozione di misure appropriate per mantenere tali clienti e la loro attività.
 
@@ -64,7 +64,7 @@ Ogni soluzione include i dati di esempio, codice R o Python code e le stored pro
   
 ## <a name="predictive-maintenance"></a>Manutenzione predittiva
 
-[Modello di manutenzione predittiva (SQL Server 2016)](https://github.com/Microsoft/SQL-Server-R-Services-Samples/blob/master/PredictiveMaintenance/Introduction.md)
+[Modello di manutenzione predittiva (SQL Server 2016)](https://github.com/Microsoft/SQL-Server-R-Services-Samples/blob/master/PredictiveMaintenance/README.md)
 
 **Cosa:** Manutenzione predittiva è possibile aumentare l'efficienza delle attività di manutenzione attraverso l'acquisizione dopo gli errori e utilizzo di tali informazioni per prevedere quando o dove un dispositivo potrebbe non riuscire. La possibilità di prevedere l'obsolescenza dei dispositivi è particolarmente utile per le applicazioni basate su dati distribuiti o sensori. è anche possibile applicare questo metodo per monitorare o stimare errori nei dispositivi IoT (Internet of Things).
 

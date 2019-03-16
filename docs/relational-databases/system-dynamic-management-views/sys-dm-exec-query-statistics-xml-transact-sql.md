@@ -17,12 +17,12 @@ ms.assetid: fdc7659e-df41-488e-b2b5-0d79734dfecb
 author: pmasl
 ms.author: pelopes
 manager: craigg
-ms.openlocfilehash: 8bb66c5bb9b4f69b32efd7761ae08677ee243fee
-ms.sourcegitcommit: 1e28f923cda9436a4395a405ebda5149202f8204
+ms.openlocfilehash: 63e1d22670929448110083c31e9900e462d576bc
+ms.sourcegitcommit: 671370ec2d49ed0159a418b9c9ac56acf43249ad
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/25/2019
-ms.locfileid: "55044627"
+ms.lasthandoff: 03/15/2019
+ms.locfileid: "58072305"
 ---
 # <a name="sysdmexecquerystatisticsxml-transact-sql"></a>sys.dm_exec_query_statistics_xml (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -58,23 +58,7 @@ sys.dm_exec_query_statistics_xml(session_id)
 ## <a name="remarks"></a>Note
 Questa funzione di sistema è disponibile a partire [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1. Vedere KB [3190871](https://support.microsoft.com/en-us/help/3190871)
 
-Questa funzione di sistema funziona in entrambe **standard** e **leggero** infrastruttura di analisi delle statistiche di esecuzione di query.  
-  
-**Standard** profilatura infrastruttura delle statistiche possono essere abilitate utilizzando:
-  -  [SET STATISTICS XML SU](../../t-sql/statements/set-statistics-xml-transact-sql.md)
-  -  [SET STATISTICS PROFILE IN](../../t-sql/statements/set-statistics-profile-transact-sql.md)
-  -  il `query_post_execution_showplan` degli eventi esteso.  
-  
-**Lightweight** profilatura infrastruttura delle statistiche sono disponibile in [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 e possono essere abilitati:
-  -  Con trace flag a livello globale 7412.
-  -  Usando il [ *query_thread_profile* ](https://support.microsoft.com/kb/3170113) degli eventi esteso.
-  
-> [!NOTE]
-> Dopo aver abilitato dal flag di traccia 7412, verrà abilitata a qualsiasi utente dell'infrastruttura anziché standard per la profilatura, ad esempio la vista DMV di analisi le statistiche di esecuzione query profilatura lightweight [DM exec_query_profiles](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-profiles-transact-sql.md).
-> Tuttavia, la profilatura standard viene ancora usato per SET STATISTICS XML, *Includi piano effettivo* azione nel [!INCLUDE[ssManStudio](../../includes/ssManStudio-md.md)], e `query_post_execution_showplan` xEvent.
-
-> [!IMPORTANT]
-> Nel benchmark TPC-C, ad esempio i test di carico di lavoro, l'abilitazione dell'infrastruttura di profilatura leggera delle statistiche aggiunge un sovraccarico di 1,5 o 2 percento. Al contrario, l'infrastruttura di profilatura delle statistiche standard è possibile aggiungere fino al 90% di sovraccarico per lo stesso scenario di carico di lavoro.
+Questa funzione di sistema funziona in entrambe **standard** e **leggero** infrastruttura di analisi delle statistiche di esecuzione di query. Per altre informazioni, vedere [Infrastruttura di profilatura query](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-statistics-xml-transact-sql.md).  
 
 ## <a name="permissions"></a>Permissions  
  È richiesta l'autorizzazione `VIEW SERVER STATE` per il server.  

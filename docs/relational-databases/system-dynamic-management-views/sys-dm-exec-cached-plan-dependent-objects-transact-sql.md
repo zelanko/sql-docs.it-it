@@ -21,12 +21,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 1efc815873a3018f8f8350e2bf24440ca0204fa9
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 1312312718a082aaf5b7f6a1e798d29db83a8bb8
+ms.sourcegitcommit: 671370ec2d49ed0159a418b9c9ac56acf43249ad
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47733784"
+ms.lasthandoff: 03/15/2019
+ms.locfileid: "58072185"
 ---
 # <a name="sysdmexeccachedplandependentobjects-transact-sql"></a>sys.dm_exec_cached_plan_dependent_objects (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -36,23 +36,28 @@ ms.locfileid: "47733784"
 ## <a name="syntax"></a>Sintassi  
   
 ```  
-  
-dm_exec_cached_plan_dependent_objects(plan_handle)  
+sys.dm_exec_cached_plan_dependent_objects(plan_handle)  
 ```  
   
 ## <a name="arguments"></a>Argomenti  
- *plan_handle*  
- Identifica in modo univoco un piano di esecuzione di query per un batch eseguito il cui piano risiede nella cache dei piani. *plan_handle* viene **varbinary(64)**. Il *plan_handle* può essere ottenuto dagli oggetti a gestione dinamica seguenti:  
+*plan_handle*  
+Identifica in modo univoco un piano di esecuzione di query per un batch eseguito il cui piano risiede nella cache dei piani. *plan_handle* viene **varbinary(64)**.   
+
+Il *plan_handle* può essere ottenuto dagli oggetti a gestione dinamica seguenti:  
   
 -   [sys.dm_exec_cached_plans &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-cached-plans-transact-sql.md)  
   
 -   [sys.dm_exec_query_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-stats-transact-sql.md)  
   
 -   [sys.dm_exec_requests &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md)  
+
+-   [sys.dm_exec_procedure_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-procedure-stats-transact-sql.md)  
+
+-   [sys.dm_exec_trigger_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-trigger-stats-transact-sql.md)  
   
 ## <a name="table-returned"></a>Tabella restituita  
   
-|Nome colonna|Tipo di dati|Description|  
+|Nome colonna|Tipo di dati|Descrizione|  
 |-----------------|---------------|-----------------|  
 |**usecounts**|**int**|Numero di volte in cui è stato utilizzato il contesto di esecuzione o il cursore.<br /><br /> La colonna non ammette i valori Null.|  
 |**memory_object_address**|**varbinary(8)**|Indirizzo di memoria del contesto di esecuzione o del cursore.<br /><br /> La colonna non ammette i valori Null.|  
@@ -66,7 +71,7 @@ dm_exec_cached_plan_dependent_objects(plan_handle)
   
 ## <a name="relationship-cardinalities"></a>Cardinalità delle relazioni  
   
-|From|Per|Il|Relazione|  
+|From|Per|On|Relazione|  
 |----------|--------|--------|------------------|  
 |**dm_exec_cached_plan_dependent_objects**|**dm_os_memory_objects**|**memory_object_address**|Uno-a-uno|  
   
