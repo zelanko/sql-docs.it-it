@@ -34,12 +34,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: '>= sql-server-2017 || = sqlallproducts-allversions'
-ms.openlocfilehash: 79280cd1e9499cf9a76f50c6aad255dbd3db81ef
-ms.sourcegitcommit: 134a91ed1a59b9d57cb1e98eb1eae24f118da51e
+ms.openlocfilehash: db8b22746702fa0df86478dadee700938cd63c40
+ms.sourcegitcommit: d92ad400799d8b74d5c601170167b86221f68afb
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/07/2019
-ms.locfileid: "57556173"
+ms.lasthandoff: 03/18/2019
+ms.locfileid: "57974500"
 ---
 # <a name="editions-and-supported-features-of-sql-server-2017"></a>Edizioni e funzionalità supportate di SQL Server 2017
 [!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]
@@ -195,6 +195,8 @@ L'edizione Developer continua a supportare un solo client per la [riesecuzione d
 |Allocazione di una matrice di buffer e di memoria in pagine grandi con supporto NUMA|Sì|no|no|no|no|
 |Estensione pool di buffer|Sì|Sì|no|no|no|
 |Governance delle risorse di I/O|Sì|no|no|no|no|  
+|Read-Ahead|Sì|no|no|no|no|
+|Analisi avanzata|Sì|no|no|no|no|
 |Durabilità posticipata|Sì|Sì|Sì|Sì|Sì|
 |Ottimizzazione automatica|Sì|no|no|no|no|
 |Join adattivi in modalità batch|Sì|no|no|no|no|
@@ -407,7 +409,3 @@ Per informazioni sulle funzionalità del client di Business Intelligence support
 [!INCLUDE[get-help-options](../includes/paragraph-content/get-help-options.md)]
 
 [!INCLUDE[contribute-to-content](../includes/paragraph-content/contribute-to-content.md)]
-
-
-
-questo è un test
