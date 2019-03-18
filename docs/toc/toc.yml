@@ -50,7 +50,7 @@ items:
       href: ../big-data-cluster/big-data-cluster-overview.md
     - name: Note sulla versione
       href: ../big-data-cluster/big-data-cluster-release-notes.md
-  - name: Install
+  - name: Installazione
     items:
     - name: Installare gli strumenti
       items:
@@ -933,7 +933,7 @@ items:
         items:
         - name: Istanze del cluster di failover
           href: ../database-engine/database-mirroring/database-mirroring-and-sql-server-failover-cluster-instances.md
-        - name: Log Shipping
+        - name: Log shipping
           href: ../database-engine/database-mirroring/database-mirroring-and-log-shipping-sql-server.md
         - name: Cataloghi full-text
           href: ../database-engine/database-mirroring/database-mirroring-and-full-text-catalogs-sql-server.md
@@ -1037,7 +1037,7 @@ items:
   items:
   - name: Dati gerarchici
     href: ../relational-databases/hierarchical-data-sql-server.md
-  - name: Confronto
+  - name: Regole di confronto
     href: ../relational-databases/collations/collation-and-unicode-support.md
     items:
     - name: Regole di confronto del server
@@ -1059,7 +1059,7 @@ items:
       href: ../relational-databases/databases/databases.md
     - name: Guide pratiche
       items:
-      - name: Gestire
+      - name: Gestione
         items:
         - name: Creare un database
           href: ../relational-databases/databases/create-a-database.md
@@ -1219,7 +1219,7 @@ items:
     items:
     - name: Panoramica
       items:
-      - name: Filestream
+      - name: FileStream
         href: ../relational-databases/blob/filestream-sql-server.md
       - name: FileTable
         href: ../relational-databases/blob/filetables-sql-server.md
@@ -1227,7 +1227,7 @@ items:
         href: ../relational-databases/blob/compare-options-for-storing-blobs-sql-server.md
       - name: Archivio BLOB remoto (RBS)
         href: ../relational-databases/blob/remote-blob-store-rbs-sql-server.md
-    - name: Filestream
+    - name: FileStream
       items:
       - name: Abilitare e configurare
         href: ../relational-databases/blob/enable-and-configure-filestream.md
@@ -1269,7 +1269,7 @@ items:
         href: ../relational-databases/blob/access-filetables-with-transact-sql.md
       - name: Accedere con API di input/output dei file
         href: ../relational-databases/blob/access-filetables-with-file-input-output-apis.md
-      - name: Gestire
+      - name: Gestione
         href: ../relational-databases/blob/manage-filetables.md
       - name: schema
         href: ../relational-databases/blob/filetable-schema.md
@@ -1453,7 +1453,7 @@ items:
   - name: Tabelle
     href: ../relational-databases/tables/tables.md
     items:
-    - name: Gestire
+    - name: Gestione
       items:
       - name: Crea
         href: ../relational-databases/tables/create-tables-database-engine.md
@@ -1547,7 +1547,7 @@ items:
     - name: Tabelle temporali
       href: ../relational-databases/tables/temporal-tables.md
       items:
-      - name: Gestire
+      - name: Gestione
         items:
         - name: Introduzione
           href: ../relational-databases/tables/getting-started-with-system-versioned-temporal-tables.md
@@ -1617,7 +1617,7 @@ items:
       items:
       - name: Abilitare e disabilitare
         href: ../relational-databases/track-changes/enable-and-disable-change-tracking-sql-server.md
-      - name: Gestire
+      - name: Gestione
         href: ../relational-databases/track-changes/manage-change-tracking-sql-server.md
       - name: Utilizzare
         href: ../relational-databases/track-changes/work-with-change-tracking-sql-server.md
@@ -1704,7 +1704,7 @@ items:
       href: ../relational-databases/views/rename-views.md
     - name: DELETE
       href: ../relational-databases/views/delete-views.md
-  - name: dati XML
+  - name: Dati XML
     href: ../relational-databases/xml/xml-data-sql-server.md
     items:
     - name: Colonne e tipo di dati XML
@@ -2054,7 +2054,7 @@ items:
     - name: Gestione degli assembly dell'integrazione
       href: ../relational-databases/clr-integration/assemblies-database-engine.md
       items:
-      - name: Gestire
+      - name: Gestione
         href: ../relational-databases/clr-integration/assemblies/managing-clr-integration-assemblies.md
       - name: Alter
         href: ../relational-databases/clr-integration/assemblies/altering-an-assembly.md
@@ -2303,7 +2303,7 @@ items:
   - name: JSON
     href: ../relational-databases/json/json-data-sql-server.md
     items:
-    - name: Gestire
+    - name: Gestione
       items:
       - name: Archiviare documenti
         href: ../relational-databases/json/store-json-documents-in-sql-tables.md
@@ -2419,7 +2419,7 @@ items:
         href: ../relational-databases/native-client/applications/connecting-to-a-windows-azure-sql-database-using-sql-server-native-client.md
       - name: Funzione ConnectionValidSharedMemory nella memoria condivisa dbmslpcn.dll
         href: ../relational-databases/native-client/applications/connectionvalidsharedmemory-function-in-dbmslpcn-dll-shared-memory.md
-      - name: Install
+      - name: Installazione
         href: ../relational-databases/native-client/applications/installing-sql-server-native-client.md
       - name: Criteri di supporto
         href: ../relational-databases/native-client/applications/support-policies-for-sql-server-native-client.md
@@ -3271,7 +3271,7 @@ items:
         href: ../relational-databases/server-management-objects-smo/tasks/creating-altering-and-removing-user-defined-functions.md
       - name: Viste
         href: ../relational-databases/server-management-objects-smo/tasks/creating-altering-and-removing-views.md
-      - name: Permissions
+      - name: Autorizzazioni
         href: ../relational-databases/server-management-objects-smo/tasks/granting-revoking-and-denying-permissions.md
       - name: Endpoint
         href: ../relational-databases/server-management-objects-smo/tasks/implementing-endpoints.md
@@ -3287,7 +3287,7 @@ items:
         href: ../relational-databases/server-management-objects-smo/tasks/programming-specific-tasks.md
       - name: Pianificazione delle attività amministrative automatiche in SQL Server Agent
         href: ../relational-databases/server-management-objects-smo/tasks/scheduling-automatic-administrative-tasks-in-sql-server-agent.md
-      - name: Generazione di script
+      - name: Scripting
         href: ../relational-databases/server-management-objects-smo/tasks/scripting.md
       - name: Traccia e riproduzione di eventi
         href: ../relational-databases/server-management-objects-smo/tasks/tracing-and-replaying-events.md
@@ -3940,6 +3940,11 @@ items:
     href: ../relational-databases/sql-server-index-design-guide.md
   - name: Architettura di pagine ed extent
     href: ../relational-databases/pages-and-extents-architecture-guide.md
+    items:
+    - name: Lettura di pagine
+      href: ../relational-databases/reading-pages.md
+    - name: Scrittura di pagine
+      href: ../relational-databases/writing-pages.md
   - name: Ottimizzazione e convalida post-migrazione
     href: ../relational-databases/post-migration-validation-and-optimization-guide.md
   - name: Architettura di elaborazione delle query
@@ -3952,11 +3957,6 @@ items:
     href: ../relational-databases/sql-server-transaction-locking-and-row-versioning-guide.md
   - name: Architettura di gestione della memoria
     href: ../relational-databases/memory-management-architecture-guide.md
-    items:
-    - name: Lettura di pagine
-      href: ../relational-databases/reading-pages.md
-    - name: Scrittura di pagine
-      href: ../relational-databases/writing-pages.md
 - name: Installazione
   href: redirectfrom-installation-10.md
   items:
@@ -4397,6 +4397,7 @@ items:
       - name: Pagina Avanzate
         href: ../database-engine/configure-windows/server-properties-advanced-page.md
 - name: Caricare dati ed eseguirne la migrazione
+  href: ../toc/sectionfor-migrate-load-data-overall-sql-server.md
   items:
   - name: SQL Server Integration Services (SSIS) ++
     href: ../integration-services/index.md
@@ -4698,7 +4699,7 @@ items:
               href: ../relational-databases/replication/create-a-snapshot-for-a-merge-publication-with-parameterized-filters.md
             - name: Reinizializzare le sottoscrizioni
               href: ../relational-databases/replication/reinitialize-subscriptions.md
-      - name: Administer
+      - name: Amministrazione
         items:
         - name: Script di informazioni dist e pub
           href: ../relational-databases/replication/administration/distributor-and-publisher-information-script.md
@@ -5542,7 +5543,7 @@ items:
           href: ../sql-server/stretch-database/enable-stretch-database-for-a-table.md
         - name: Selezionare le righe di cui eseguire la migrazione
           href: ../sql-server/stretch-database/select-rows-to-migrate-by-using-a-filter-function-stretch-database.md
-      - name: Gestire
+      - name: Gestione
         items:
         - name: Monitorare la migrazione
           href: ../sql-server/stretch-database/monitor-and-troubleshoot-data-migration-stretch-database.md
@@ -6263,7 +6264,7 @@ items:
           href: ../ssma/sybase/global-settings-tester-sybasetosql.md
 - name: Gestire, monitorare e ottimizzare
   items:
-  - name: Gestire
+  - name: Gestione
     items:
     - name: Server di gestione centrale
       href: ../relational-databases/administer-multiple-servers-using-central-management-servers.md
@@ -6362,7 +6363,7 @@ items:
     - name: Gestione basata su criteri
       href: ../relational-databases/policy-based-management/administer-servers-by-using-policy-based-management.md
       items:
-      - name: Gestire
+      - name: Gestione
         items:
         - name: Creare criteri
           href: ../relational-databases/policy-based-management/create-a-policy-based-management-policy.md
@@ -6527,7 +6528,7 @@ items:
             href: ../relational-databases/policy-based-management/facet-properties-dialog-box-dependent-policies-page.md
           - name: Pagina Condizioni dipendenti
             href: ../relational-databases/policy-based-management/facet-properties-dialog-box-dependent-conditions-page.md
-    - name: Gestione de log delle transazioni
+    - name: Gestione del log delle transazioni
       items:
       - name: Visualizzatore file di log
         href: ../relational-databases/logs/log-file-viewer.md
@@ -6614,7 +6615,7 @@ items:
         href: ../relational-databases/data-collection/management-data-warehouse.md
       - name: Sicurezza agente di raccolta dati
         href: ../relational-databases/data-collection/data-collector-security.md
-      - name: Gestire
+      - name: Gestione
         href: ../relational-databases/data-collection/manage-data-collection.md
         items:
         - name: Avviare o arrestare
@@ -6871,7 +6872,7 @@ items:
             href: ../relational-databases/performance-monitor/sql-server-wait-statistics-object.md
           - name: Workload Group Stats
             href: ../relational-databases/performance-monitor/sql-server-workload-group-stats-object.md
-  - name: Ottimizzare
+  - name: Ottimizzazione
     items:
     - name: Ottimizzazione automatica
       href: ../relational-databases/automatic-tuning/automatic-tuning.md
@@ -7182,9 +7183,9 @@ items:
     href: ../relational-databases/cursors.md
   - name: Join
     href: ../relational-databases/performance/joins.md
-  - name: Generazione di script
+  - name: Scripting
     href: ../relational-databases/scripting/database-engine-scripting.md
-  - name: 'Sottoquery:'
+  - name: Sottoquery
     href: ../relational-databases/performance/subqueries.md
   - name: Virtualizzazione dei dati (Polybase)
     href: ../toc/redirectfrom-polybase.md
@@ -7203,7 +7204,7 @@ items:
         href: ../relational-databases/polybase/polybase-scale-out-groups.md
     - name: Guide pratiche
       items:
-      - name: Install
+      - name: Installazione
         items:
         - name: Installare in Windows
           href: ../relational-databases/polybase/polybase-installation.md
@@ -7950,7 +7951,7 @@ items:
         href: ../relational-databases/security/choose-an-authentication-mode.md
       - name: Visibilità dei metadati
         href: ../relational-databases/security/metadata-visibility-configuration.md
-      - name: Permissions
+      - name: Autorizzazioni
         href: ../relational-databases/security/permissions-database-engine.md
       - name: Gerarchia delle autorizzazioni
         href: ../relational-databases/security/permissions-hierarchy-database-engine.md
@@ -7966,7 +7967,7 @@ items:
         items:
         - name: Bring Your Own Key +
           href: /azure/sql-database/transparent-data-encryption-byok-azure-sql
-      - name: Crittografia sempre attiva
+      - name: Always Encrypted
         href: ../relational-databases/security/encryption/always-encrypted-database-engine.md
         items:
         - name: Always Encrypted con enclave sicuri
@@ -8009,7 +8010,7 @@ items:
   - name: Azure Data Studio
     href: ../azure-data-studio/what-is.md
     items:
-    - name: Install
+    - name: Installazione
       href: ../azure-data-studio/download.md
     - name: Note sulla versione
       href: ../azure-data-studio/release-notes-azure-data-studio.md
@@ -8211,12 +8212,12 @@ items:
   - name: Distributed Replay
     href: ../tools/distributed-replay/sql-server-distributed-replay.md
     items:
-    - name: Install
+    - name: Installazione
       href: ../tools/distributed-replay/install-distributed-replay-overview.md
       items:
       - name: Requisiti
         href: ../tools/distributed-replay/distributed-replay-requirements.md
-      - name: Install
+      - name: Installazione
         href: ../tools/distributed-replay/install-distributed-replay.md
       - name: Completare i passaggi successivi all'installazione
         href: ../tools/distributed-replay/complete-the-post-installation-steps.md
@@ -8247,7 +8248,7 @@ items:
   - name: Gestione configurazione SQL Server
     href: ../tools/configuration-manager/sql-server-services.md
     items:
-    - name: '?'
+    - name: Guida
       href: ../tools/configuration-manager/sql-server-configuration-manager-help.md
     - name: SQL Server Browser Service
       href: ../tools/configuration-manager/sql-server-browser-service.md
@@ -8420,22 +8421,14 @@ items:
     items:
     - name: Scaricare SSDT
       href: ../ssdt/download-sql-server-data-tools-ssdt.md
-    - name: Panoramica
-      items:
-      - name: Log delle modifiche per SSDT
-        href: ../ssdt/changelog-for-sql-server-data-tools-ssdt.md
-      - name: Data-Tier Application Framework - Condizioni di licenza
-        href: ../ssdt/data-tier-application-framework-license-terms.md
-      - name: Versioni precedenti di SSDT e SSDT-BI
-        href: ../ssdt/previous-releases-of-sql-server-data-tools-ssdt-and-ssdt-bi.md
-      - name: Supporto di Azure Active Directory
-        href: ../ssdt/azure-active-directory.md
-      - name: Strumenti di SQL Server
-        href: ../ssdt/sql-server-tools.md
-      - name: Condizioni di licenza - SSDT
-        href: ../ssdt/sql-server-data-tools-license-terms.md
-      - name: Condizioni di licenza - SSDT (VS 2017)
-        href: ../ssdt/sql-server-data-tools-license-terms-vs2017.md
+    - name: Log delle modifiche per SSDT
+      href: ../ssdt/changelog-for-sql-server-data-tools-ssdt.md
+    - name: Versioni precedenti di SSDT e SSDT-BI
+      href: ../ssdt/previous-releases-of-sql-server-data-tools-ssdt-and-ssdt-bi.md
+    - name: Supporto di Azure Active Directory
+      href: ../ssdt/azure-active-directory.md
+    - name: Strumenti di SQL Server
+      href: ../ssdt/sql-server-tools.md
     - name: Sviluppo di database offline orientato ai progetti
       href: ../ssdt/project-oriented-offline-database-development.md
       items:
@@ -9050,7 +9043,7 @@ items:
         href: ../ssms/register-servers/execute-statements-against-multiple-servers-simultaneously.md
       - name: Guida sensibile al contesto di Server registrati
         href: ../ssms/register-servers/registered-servers-f1-help.md
-    - name: Generazione di script
+    - name: Scripting
       href: ../ssms/scripting/database-engine-scripting.md
       items:
       - name: Editor di query e di testo
@@ -9775,8 +9768,6 @@ items:
           href: ../ssms/visual-db-tools/print-query-results-visual-database-tools.md
     - name: Risorse
       items:
-      - name: Condizioni di licenza
-        href: ../ssms/sql-server-management-studio-license-terms.md
       - name: Documentazione per gli utenti in SSMS
         href: ../ssms/user-assistance-in-sql-server-management-studio.md
       - name: Dati di utilizzo anonimi
@@ -9797,7 +9788,7 @@ items:
     - name: Modelli di traccia
       href: ../tools/sql-server-profiler/sql-server-profiler-templates.md
       items:
-      - name: Permissions
+      - name: Autorizzazioni
         href: ../tools/sql-server-profiler/sql-server-profiler-templates-and-permissions.md
       - name: Crea
         href: ../tools/sql-server-profiler/create-a-trace-template-sql-server-profiler.md
@@ -10009,7 +10000,7 @@ items:
       href: ../linux/sql-server-linux-replication-tutorial-tsql.md
   - name: Concetti
     items:
-    - name: Install
+    - name: Installazione
       items:
       - name: Installare SQL Server
         href: ../linux/sql-server-linux-setup.md
@@ -10052,7 +10043,7 @@ items:
         href: ../linux/sql-server-linux-develop-use-vscode.md
       - name: Usare SSDT
         href: ../linux/sql-server-linux-develop-use-ssdt.md
-    - name: Gestire
+    - name: Gestione
       href: ../linux/sql-server-linux-management-overview.md
       items:
       - name: Usare SSMS per la gestione
@@ -10138,9 +10129,9 @@ items:
           items:
           - name: Distribuzione
             href: ../linux/sql-server-linux-kubernetes-deploy.md
-          - name: Gestire
+          - name: Gestione
             href: ../linux/sql-server-linux-kubernetes-manage.md
-          - name: Connect
+          - name: Connessione
             href: ../linux/sql-server-linux-kubernetes-connect.md
           - name: Creare script di distribuzione
             href: ../linux/sql-server-linux-kubernetes-create-deployment.md
@@ -11322,10 +11313,6 @@ items:
         href: ../powershell/encode-and-decode-sql-server-identifiers.md
       - name: Identificatori di escape di SQL Server
         href: ../powershell/escape-sql-server-identifiers.md
-    - name: Risorse
-      items:
-      - name: Condizioni di licenza di SQL Server PowerShell
-        href: ../powershell/sql-server-powershell-license-terms.md
     - name: Informazioni di riferimento sui cmdlet
       items:
       - name: Cmdlet SqlServer
@@ -11961,6 +11948,10 @@ items:
         href: ../relational-databases/system-catalog-views/sys-pdw-table-distribution-properties-transact-sql.md
       - name: sys.pdw_table_mappings
         href: ../relational-databases/system-catalog-views/sys-pdw-table-mappings-transact-sql.md
+      - name: sys.workload-management-workload-classifier-details
+        href: ../relational-databases/system-catalog-views/sys-workload-management-workload-classifier-details-transact-sql.md
+      - name: sys.workload-management-workload-classifiers
+        href: ../relational-databases/system-catalog-views/sys-workload-management-workload-classifiers-transact-sql.md
     - name: Stretch Database
       items:
       - name: sys.remote_data_archive_databases
@@ -13406,7 +13397,7 @@ items:
         href: ../relational-databases/system-stored-procedures/xp-sqlmaint-transact-sql.md
       - name: xp_sscanf
         href: ../relational-databases/system-stored-procedures/xp-sscanf-transact-sql.md
-    - name: Log Shipping
+    - name: Log shipping
       href: ../relational-databases/system-stored-procedures/log-shipping-stored-procedures-transact-sql.md
       items:
       - name: sp_add_log_shipping_primary_database
@@ -15407,7 +15398,7 @@ items:
           href: ../t-sql/functions/percentile-disc-transact-sql.md
         - name: PERCENT_RANK
           href: ../t-sql/functions/percent-rank-transact-sql.md
-      - name: Confronto
+      - name: Regole di confronto
         items:
         - name: Confronto - COLLATIONPROPERTY
           href: ../t-sql/functions/collation-functions-collationproperty-transact-sql.md
@@ -16639,6 +16630,8 @@ items:
           href: ../t-sql/statements/create-user-transact-sql.md
         - name: VIEW
           href: ../t-sql/statements/create-view-transact-sql.md
+        - name: WORKLOAD CLASSIFIER
+          href: ../t-sql/statements/create-workload-classifier-transact-sql.md
         - name: WORKLOAD GROUP
           href: ../t-sql/statements/create-workload-group-transact-sql.md
         - name: XML INDEX
@@ -16781,11 +16774,13 @@ items:
           href: ../t-sql/statements/drop-user-transact-sql.md
         - name: VIEW
           href: ../t-sql/statements/drop-view-transact-sql.md
+        - name: WORKLOAD CLASSIFIER
+          href: ../t-sql/statements/drop-workload-classifier-transact-sql.md
         - name: WORKLOAD GROUP
           href: ../t-sql/statements/drop-workload-group-transact-sql.md
         - name: XML SCHEMA COLLECTION
           href: ../t-sql/statements/drop-xml-schema-collection-transact-sql.md
-      - name: Permissions
+      - name: Autorizzazioni
         items:
         - name: ADD SIGNATURE
           href: ../t-sql/statements/add-signature-transact-sql.md
@@ -17183,9 +17178,9 @@ items:
         href: ../xquery/string-search-in-xquery.md
       - name: Gestione degli spazi dei nomi in XQuery
         href: ../xquery/handling-namespaces-in-xquery.md
-ms.openlocfilehash: c1bcf717605ff5c3cd1cf5722154fe518721c9e6
-ms.sourcegitcommit: 8bc5d85bd157f9cfd52245d23062d150b76066ef
+ms.openlocfilehash: d658d240d44697d6d3632142b1d4034468ffc91f
+ms.sourcegitcommit: e9fcd10c7eb87a4f09ac2d8f7647018e83a5f5c5
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/07/2019
-ms.locfileid: "57579791"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57974570"
