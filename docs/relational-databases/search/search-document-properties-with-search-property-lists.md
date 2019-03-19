@@ -1,10 +1,8 @@
 ---
 title: Eseguire ricerche nelle proprietà dei documenti con elenchi delle proprietà di ricerca | Microsoft Docs
-ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
 ms.prod_service: search, sql-database
-ms.reviewer: ''
 ms.technology: search
 ms.topic: conceptual
 helpviewer_keywords:
@@ -16,16 +14,17 @@ helpviewer_keywords:
 - search property lists [SQL Server], about
 - property searching [SQL Server]
 ms.assetid: ffae5914-b1b2-4267-b927-37e8382e0a9e
-author: douglaslMS
-ms.author: douglasl
+author: pmasl
+ms.author: pelopes
+ms.reviewer: mikeray
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 1f6bb16f3e6b7c2cd7c2e2a01a40132f7df6e585
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 5858171e3322cfbd694059cef813527dccb1168d
+ms.sourcegitcommit: 03870f0577abde3113e0e9916cd82590f78a377c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52503050"
+ms.lasthandoff: 03/18/2019
+ms.locfileid: "57974200"
 ---
 # <a name="search-document-properties-with-search-property-lists"></a>Eseguire ricerche nelle proprietà dei documenti con elenchi delle proprietà di ricerca
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -196,7 +195,7 @@ GO
   
 5.  Fare clic con il pulsante destro del mouse sull'elenco di proprietà, quindi scegliere **Proprietà**.  
   
-6.  Nella finestra di dialogo dell'**editor dell'elenco delle proprietà di ricerca** usare la griglia Proprietà per aggiungere o rimuovere proprietà di ricerca:  
+6.  Nella finestra di dialogo dell' **editor dell'elenco delle proprietà di ricerca** usare la griglia Proprietà per aggiungere o rimuovere proprietà di ricerca:  
   
     1.  Per rimuovere una proprietà del documento, fare clic sull'intestazione di riga a sinistra della proprietà e preme CANC.  
   

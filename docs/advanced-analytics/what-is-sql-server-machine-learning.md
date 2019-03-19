@@ -8,12 +8,12 @@ ms.topic: overview
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 283f39efa34721aea7613ac1a9cba115dc3311a8
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: fb98f2dad8f16ac7f9e06920d56bd225962dca7b
+ms.sourcegitcommit: 11ab8a241a6d884b113b3cf475b2b9ed61ff00e3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56032952"
+ms.lasthandoff: 03/18/2019
+ms.locfileid: "58161848"
 ---
 # <a name="machine-learning-services-r-python-in-sql-server-2017"></a>Machine Learning Services (R, Python) in SQL Server 2017
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -24,7 +24,16 @@ Se è stato usato in precedenza [SQL Server 2016 R Services](r/sql-server-r-serv
 
 Nel Database SQL di Azure [Machine Learning Services (con R)](https://docs.microsoft.com/azure/sql-database/sql-database-machine-learning-services-overview) è attualmente in anteprima pubblica.
 
-La proposta di valore della chiave di servizi di Machine Learning è la potenza dei pacchetti Python e R enterprise per offrire l'analitica avanzata a livello di scalabilità e la possibilità di trasferire i calcoli e l'elaborazione di dove risiedono i dati, eliminando la necessità di estrarre i dati tra la rete.
+## <a name="bring-compute-power-to-the-data"></a>Potenza di calcolo ai dati
+
+La proposta di valore della chiave di servizi di Machine Learning è la potenza dei pacchetti Python e R enterprise per offrire l'analitica avanzata a livello di scalabilità e la possibilità di trasferire i calcoli e l'elaborazione di dove risiedono i dati, eliminando la necessità di estrarre i dati tra la rete. Ciò offre diversi vantaggi:
+
++ Sicurezza dei dati. Integrazione di R e Python esecuzione più vicino all'origine dei dati consente di evitare lo spostamento dei dati inutili e non sicuri.
++ Velocità. I database sono ottimizzati per le operazioni basate su set. Le innovazioni recenti per i database, ad esempio le tabelle in memoria rendono i riepiloghi e aggregazioni fulmine e sono la soluzione ideale per l'analisi scientifica dei dati.
++ Facilità di integrazione e distribuzione. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] è il punto centrale di operazioni per molte altre attività di gestione dati e applicazioni. Utilizzando i dati che si trovano nel database o warehouse per reporting, assicurarsi che i dati usati da soluzioni di machine learning siano coerenti e aggiornati. 
++ Efficienza tra cloud e locali. Invece di elaborare i dati nelle sessioni di R o Python, è possibile basarsi su pipeline di dati aziendali tra cui [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] e Azure Data Factory. La creazione di report con i risultati o l'analisi è semplice con Power BI o [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)].
+
+Con la giusta combinazione di SQL e R per le diverse attività di elaborazione e analisi di dati, sia i data scientist che gli sviluppatori possono essere più produttivi.
 
 <a name="components"></a>
 

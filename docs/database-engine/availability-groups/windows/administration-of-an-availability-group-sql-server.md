@@ -13,12 +13,12 @@ ms.assetid: 0b7542fa-235e-413d-81bf-3eff9ee07480
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 2eb19a9d8524a88436e0c3080f852f770aca6986
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: 3190fba7fd3e09e19236340659e4a43bf252f4ab
+ms.sourcegitcommit: 03870f0577abde3113e0e9916cd82590f78a377c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53214802"
+ms.lasthandoff: 03/18/2019
+ms.locfileid: "57973060"
 ---
 # <a name="administration-of-an-availability-group"></a>Amministrazione di un gruppo di disponibilità
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -117,7 +117,7 @@ ms.locfileid: "53214802"
 -   **White paper:**  
   
      [White paper Microsoft per SQL Server 2012](https://msdn.microsoft.com/library/hh403491.aspx)    
-     [Pagina relativa ai white paper del team di consulenza clienti di SQL Server](https://sqlcat.com/)  
+     [Pagina relativa ai white paper del team di consulenza clienti di SQL Server](https://techcommunity.microsoft.com/t5/DataCAT/bg-p/DataCAT/)  
   
 ## <a name="see-also"></a>Vedere anche  
  [Gruppi di disponibilità Always On &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/always-on-availability-groups-sql-server.md)   

@@ -8,12 +8,12 @@ ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: def60a6de7d5a6f3641a6de88410543e9e592ba4
-ms.sourcegitcommit: ee76332b6119ef89549ee9d641d002b9cabf20d2
+ms.openlocfilehash: ed1fbe8be63cd184fd49b1e76f94583bd50cf380
+ms.sourcegitcommit: 11ab8a241a6d884b113b3cf475b2b9ed61ff00e3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/20/2018
-ms.locfileid: "53645160"
+ms.lasthandoff: 03/18/2019
+ms.locfileid: "58161518"
 ---
 # <a name="real-time-scoring-with-sprxpredict-in-sql-server-machine-learning"></a>In tempo reale di assegnazione dei punteggi con sp_rxPredict in SQL Server machine Learning Services
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -22,7 +22,7 @@ In tempo reale di assegnazione dei punteggi viene utilizzata la [sp_rxPredict](h
 
 ## <a name="how-real-time-scoring-works"></a>Funzionamento di assegnazione dei punteggi in tempo reale come
 
-Assegnazione dei punteggi in tempo reale è supportata in SQL Server 2017 e SQL Server 2016, in [tipi di modello supportati](#bkmk_py_supported_algos) per lineare e logistica modellazione di albero delle decisioni e la regressione. Usa le librerie C++ native per generare punteggi, in base all'input fornito a un modello di machine learning archiviato in un particolare formato binario.
+Assegnazione dei punteggi in tempo reale è supportato in SQL Server 2017 e SQL Server 2016, sui tipi di modello specifico basati, ad esempio le funzioni RevoScaleR o MicrosoftML [(RevoScaleR) rxLinMod](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxlinmod)[rxNeuralNet (MicrosoftML)](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/rxneuralnet). Usa le librerie C++ native per generare punteggi, in base all'input fornito a un modello di machine learning archiviato in un particolare formato binario.
 
 Poiché un modello con training può essere usato per la valutazione senza dover chiamare un runtime di linguaggio esterno, viene ridotto l'overhead di più processi. Ciò supporta ottenere migliori prestazioni di stima per gli scenari di assegnazione dei punteggi di produzione. Poiché i dati non oltrepassino mai SQL Server, i risultati possono essere generati e inseriti in una nuova tabella senza conversione dei dati tra R e SQL.
 
@@ -124,7 +124,7 @@ Assegnazione dei punteggi in tempo reale non utilizza un interprete; Pertanto, q
   + I modelli usando una funzione di trasformazione o una formula che contiene una trasformazione, ad esempio <code>A ~ log(B)</code> non sono supportati nell'assegnazione dei punteggi in tempo reale. Per usare un modello di questo tipo, è consigliabile eseguire la trasformazione sui dati di input prima di passarli all'assegnazione dei punteggi in tempo reale.
 
 
-## <a name="example-sprxpredict"></a>Esempio: sp_rxPredict
+## <a name="example-sprxpredict"></a>Example: sp_rxPredict
 
 In questa sezione vengono descritti i passaggi necessari per configurare **in tempo reale** stima e viene fornito un esempio in R di come chiamare la funzione di T-SQL.
 
@@ -171,7 +171,7 @@ Il formato binario richiesto da sp\_rxPredict corrisponde al formato richiesto p
 model <- rxSerializeModel(model.name, realtimeScoringOnly = TRUE)
 ```
 
-### <a name="step-3-call-sprxpredict"></a>Passaggio 3. Chiamare sp_rxPredict
+### <a name="step-3-call-sprxpredict"></a>Passaggio 3. Call sp_rxPredict
 
 Si chiama sp\_rxPredict come si procederebbe per un stored procedure. Nella versione corrente, la stored procedure accetta solo due parametri:  _\@model_ per il modello in formato binario, e  _\@inputData_ per i dati da utilizzare nell'assegnazione dei punteggi, definito come una query SQL valida.
 

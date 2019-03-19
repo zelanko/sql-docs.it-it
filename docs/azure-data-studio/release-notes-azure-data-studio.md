@@ -11,16 +11,47 @@ ms.topic: conceptual
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: b481151636db4f54212c96b0ea21f989afb917d3
-ms.sourcegitcommit: 8bc5d85bd157f9cfd52245d23062d150b76066ef
+ms.openlocfilehash: 746f3d97ed0157f6b97128dbfdf1b88a5276062c
+ms.sourcegitcommit: 11ab8a241a6d884b113b3cf475b2b9ed61ff00e3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/07/2019
-ms.locfileid: "57581672"
+ms.lasthandoff: 03/18/2019
+ms.locfileid: "58161628"
 ---
 # <a name="release-notes-for-azure-data-studio"></a>Note sulla versione per Azure Data Studio
 
 **[Scaricare e installare la versione più recente.](download.md)**
+
+## <a name="march-2019"></a>Marzo 2019
+
+18 marzo 2019 &nbsp;  /  &nbsp; versione: 1.5.1
+
+&nbsp;
+
+| Cambia | Dettagli |
+| :----- | :------ |
+| Aggiunto [estensioni di PostgreSQL per Data Studio di Azure](postgres-extension.md) | Funzionalità supportate: <br/>&bull; &nbsp; Finestra di dialogo connessione <br/>&bull; &nbsp; Esplora oggetti <br/>&bull; &nbsp; Editor di query <br/>&bull; &nbsp; Creazione di grafici <br/>&bull; &nbsp; Dashboard <br/>&bull; &nbsp; Frammenti di codice <br/>&bull; &nbsp; Modificare i dati <br/>&bull; &nbsp; Notebook |
+| Notebook SQL aggiunto | Aggiunta del supporto SQL Kernel al Visualizzatore di Notebook predefinito: <br/>&bull; &nbsp; Supporta T-SQL <br/>&bull; &nbsp; Supporto PGSQL |
+| Estensione PowerShell aggiunta  | Porta il [estensione PowerShell](https://marketplace.visualstudio.com/items?itemName=ms-vscode.PowerShell) esperienza da Visual Studio Code.  |
+| Estensione di file dacpac di SQL Server aggiunta  | Rimuove la creazione guidata applicazione livello dati dall'estensione di SQL Server Import in una nuova estensione.  |
+| Estensione della Community aggiunta QueryPlan.show | Aggiunge il supporto di integrazione per visualizzare i piani di query  |
+| Estensione di anteprima di SQL Server 2019 aggiornato | &bull; &nbsp; Supporto per Notebook di Jupyter, in particolare le kernel Spark e Python3, sono stati spostati nello strumento Azure Data Studio core. <br/>&bull; &nbsp; Correzioni di bug per creazione guidata dati esterni  |
+| Bug risolti e problemi. | Visualizzare [bug e problemi, in GitHub](https://github.com/Microsoft/azuredatastudio/milestone/25?closed=1). |
+| &nbsp; | &nbsp; |
+
+### <a name="known-issues"></a>Problemi noti
+- [#4427](https://github.com/Microsoft/azuredatastudio/issues/4427): Facendo clic su Esegui nella cella prima del Kernel è pronto per i risultati di Spark in errore irreversibile **soluzione alternativa:** Attendere finché l'esecuzione di tutte le celle vengono caricati i kernel
+- [#4493](https://github.com/Microsoft/azuredatastudio/issues/4493): ANNUNCI avviati da SSMS con autenticazione SQL - richieste di immissione di password **soluzione alternativa:** Usare l'autenticazione di Windows per il momento. 
+- [#4494](https://github.com/Microsoft/azuredatastudio/issues/4494): Non è possibile installare la funzionalità di notebook SQL <br/>
+**Soluzione alternativa:** Attenersi alle procedure alternative [qui](https://github.com/Microsoft/azuredatastudio/issues/4494#issuecomment-473043832). 
+- [#4503](https://github.com/Microsoft/azuredatastudio/issues/4503): Azure Data Studio non può essere aperto direttamente dalla cartella di download (Mac) <br />
+**Soluzione alternativa:** Riavviare i computer dopo la decompressione dell'app. Verranno esaminati. 
+- [#4539](https://github.com/Microsoft/azuredatastudio/issues/4539):  Salva con nome notebook perde il contesto di connessione <br />
+**Soluzione alternativa:** Verrà risolto nella prossima versione. 
+- [#4458](https://github.com/Microsoft/azuredatastudio/issues/4458): Estrarre dacpac arresti anomali SqlToolsService se viene utilizzata la versione non valida <br/>
+**Soluzione alternativa:** Riavviare Data Studio di Azure e garantire che venga usata la versione corretta.
+- Nuove icone di Notebook e aprire Notebook vengono perse <br/> 
+**Soluzione alternativa:** Il tipo di connessione legacy è deprecato. È consigliabile connettersi all'endpoint di SQL Server e si riceverà tutte le azioni (nuovo Notebook, processo Spark) come previsto. 
 
 ## <a name="february-2019"></a>Febbraio 2019
 

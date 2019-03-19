@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: 4aba7c8bbe7af361dc118111c8502546c83dd61c
-ms.sourcegitcommit: 56fb7b648adae2c7b81bd969de067af1a2b54180
+ms.openlocfilehash: 817ffcc1ea17a8526304b4bc9064c1becfff90f9
+ms.sourcegitcommit: 11ab8a241a6d884b113b3cf475b2b9ed61ff00e3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/02/2019
-ms.locfileid: "57227203"
+ms.lasthandoff: 03/18/2019
+ms.locfileid: "58161643"
 ---
 # <a name="how-to-deploy-sql-server-big-data-clusters-on-kubernetes"></a>Come distribuire i cluster di big data di SQL Server in Kubernetes
 
@@ -94,6 +94,7 @@ La configurazione del cluster può essere personalizzata usando un set di variab
 | **DOCKER_REPOSITORY** | Yes | TBD | Il repository privato all'interno del Registro di sistema precedente in cui sono archiviate le immagini.  È necessario per la durata dell'anteprima pubblica gestita. |
 | **DOCKER_USERNAME** | Yes | N/D | Il nome utente per accedere alle immagini di contenitore nel caso in cui sono archiviati in un repository privato. È necessario per la durata dell'anteprima pubblica gestita. |
 | **DOCKER_PASSWORD** | Yes | N/D | La password per accedere al repository privato precedente. È necessario per la durata dell'anteprima pubblica gestita.|
+| **DOCKER_EMAIL** | Yes | N/D | L'indirizzo di posta elettronica. |
 | **DOCKER_IMAGE_TAG** | No | più recente | L'etichetta utilizzata per contrassegnare le immagini. |
 | **DOCKER_IMAGE_POLICY** | No | Always | Imporre sempre un'operazione pull delle immagini.  |
 | **DOCKER_PRIVATE_REGISTRY** | Yes | N/D | Per l'intervallo di tempo dell'anteprima pubblica gestita, è necessario impostare questo valore su "1". |
@@ -122,7 +123,7 @@ Impostare le variabili di ambiente necessarie per la distribuzione di un cluster
 
 Inizializzare le variabili di ambiente seguente, sono necessari per distribuire il cluster:
 
-### <a name="windows"></a>WINDOWS
+### <a name="windows"></a>Windows
 
 Usa una finestra CMD (non PowerShell), configurare le seguenti variabili di ambiente. Non utilizzare le virgolette per racchiudere i valori.
 
@@ -139,7 +140,8 @@ SET DOCKER_REGISTRY=private-repo.microsoft.com
 SET DOCKER_REPOSITORY=mssql-private-preview
 SET DOCKER_USERNAME=<your username, credentials provided by Microsoft>
 SET DOCKER_PASSWORD=<your password, credentials provided by Microsoft>
-SET DOCKER_PRIVATE_REGISTRY="1"
+SET DOCKER_EMAIL=<your email address>
+SET DOCKER_PRIVATE_REGISTRY=1
 ```
 
 ### <a name="linux"></a>Linux
@@ -147,8 +149,8 @@ SET DOCKER_PRIVATE_REGISTRY="1"
 Inizializzare le variabili di ambiente seguenti. In bash, è possibile usare le virgolette per racchiudere ogni valore.
 
 ```bash
-export ACCEPT_EULA=yes
-export CLUSTER_PLATFORM=<minikube or aks or kubernetes>
+export ACCEPT_EULA="yes"
+export CLUSTER_PLATFORM="<minikube or aks or kubernetes>"
 
 export CONTROLLER_USERNAME="<controller_admin_name - can be anything>"
 export CONTROLLER_PASSWORD="<controller_admin_password - can be anything, password complexity compliant>"
@@ -159,6 +161,7 @@ export DOCKER_REGISTRY="private-repo.microsoft.com"
 export DOCKER_REPOSITORY="mssql-private-preview"
 export DOCKER_USERNAME="<your username, credentials provided by Microsoft>"
 export DOCKER_PASSWORD="<your password, credentials provided by Microsoft>"
+export DOCKER_EMAIL="<your email address>"
 export DOCKER_PRIVATE_REGISTRY="1"
 ```
 

@@ -1,20 +1,21 @@
 ---
-title: Cosa&#39;nuovo - s SQL Server Machine Learning Services
+title: Novità - servizi di SQL Server Machine Learning | Microsoft Docs
 description: Nuovo gli annunci di funzionalità per ogni versione di SQL Server 2016 R Services, R Server, servizi Machine Learning di SQL Server 2017.
-ms.prod: sql
-ms.technology: machine-learning
 ms.date: 02/28/2019
 ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
+ms.custom: sqlseattle
+ms.prod: sql
+ms.technology: machine-learning
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 43f1f5fb9ace80da357ecca9e4abd715bd4a6048
-ms.sourcegitcommit: 2533383a7baa03b62430018a006a339c0bd69af2
+ms.openlocfilehash: 64e98073dabd490965fb5d582102a6eb962c5a13
+ms.sourcegitcommit: 11ab8a241a6d884b113b3cf475b2b9ed61ff00e3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57018047"
+ms.lasthandoff: 03/18/2019
+ms.locfileid: "58161829"
 ---
 # <a name="whats-new-in-sql-server-machine-learning-services"></a>Novità in servizi di SQL Server Machine Learning
 
