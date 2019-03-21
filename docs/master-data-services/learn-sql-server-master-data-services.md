@@ -13,12 +13,12 @@ ms.assetid: 87516551-a3b6-4b29-928b-ddd25672a98c
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: c38c1ee94399023fd3ac529a1f7d9cf914f5130f
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
-ms.translationtype: HT
+ms.openlocfilehash: 6c32d4cf8fe16ec52d8af3ade01cea82badd40cd
+ms.sourcegitcommit: 7d4a3fc0f2622cbc6930d792be4a9b3fcac4c4b6
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52809443"
+ms.lasthandoff: 03/21/2019
+ms.locfileid: "58305839"
 ---
 # <a name="learn-sql-server-master-data-services"></a>Informazioni su SQL Server Master Data Services
 
@@ -27,8 +27,8 @@ ms.locfileid: "52809443"
   
   
 ## <a name="training"></a>Training  
-* Per esplorare le nuove caratteristiche e funzionalità introdotte in [!INCLUDE[ssCurrent_md](../includes/sscurrent-md.md)] [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)], provare questo [**lab virtuale di TechNet**](https://vlabs.holsystems.com/vlabs/technet?eng=VLabs&auth=none&src=vlabs&altadd=true&labid=23113&lod=true) (l'accesso con account Microsoft è obbligatorio).  
-* Per sviluppare una soluzione [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] per archiviare e gestire elenchi principali di dati geografici, usando il componente aggiuntivo per Excel e [!INCLUDE[ssMDSmdm_md](../includes/ssmdsmdm-md.md)], provare questo [**lab virtuale di TechNet**](https://vlabs.holsystems.com/vlabs/technet?eng=VLabs&auth=none&src=vlabs&altadd=true&labid=23112&lod=true). Verranno create entità e gerarchie e si userà [!INCLUDE[ssIS_md](../includes/ssis-md.md)] per popolare una tabella delle dimensioni.  
+* Per esplorare le nuove funzionalità e le funzionalità introdotte [!INCLUDE[ssCurrent_md](../includes/sscurrent-md.md)] [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)], provare una [Self-Paced Lab](https://www.microsoft.com/handsonlabs/selfpacedlabs) (Accedi con l'account Microsoft sono obbligatorio).  
+* Per sviluppare un [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] soluzione per archiviare e gestire elenchi principali di dati geografici, usando il componente aggiuntivo per Excel e il [!INCLUDE[ssMDSmdm_md](../includes/ssmdsmdm-md.md)], provare una [Lab Self-Paced](https://www.microsoft.com/handsonlabs/selfpacedlabs). Verranno create entità e gerarchie e si userà [!INCLUDE[ssIS_md](../includes/ssis-md.md)] per popolare una tabella delle dimensioni.  
   
 ## <a name="videos"></a>Video  
 * Per scoprire le nuove funzionalità nella versione [!INCLUDE[ssCurrent_md](../includes/sscurrent-md.md)] di [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)], [**guardare questo video**](https://www.youtube.com/watch?v=cKA72FpOVxI).  

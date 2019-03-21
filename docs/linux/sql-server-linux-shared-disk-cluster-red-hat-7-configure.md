@@ -10,12 +10,12 @@ ms.prod: sql
 ms.custom: sql-linux
 ms.technology: linux
 ms.assetid: dcc0a8d3-9d25-4208-8507-a5e65d2a9a15
-ms.openlocfilehash: b5ffda90f0d4b2b85ed29af65da5ea12592e4423
-ms.sourcegitcommit: 467b2c708651a3a2be2c45e36d0006a5bbe87b79
+ms.openlocfilehash: 1801551b179cf7040f1eb5cbaa05d8eb3bebc564
+ms.sourcegitcommit: 7d4a3fc0f2622cbc6930d792be4a9b3fcac4c4b6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53979917"
+ms.lasthandoff: 03/21/2019
+ms.locfileid: "58306039"
 ---
 # <a name="configure-red-hat-enterprise-linux-shared-disk-cluster-for-sql-server"></a>Configurare il cluster di dischi condivisi di Red Hat Enterprise Linux per SQL Server
 
@@ -139,7 +139,7 @@ Il Server NFS eseguire le operazioni seguenti:
    sudo systemctl enable nfs-server && sudo systemctl start nfs-server
    ```
  
-1.  Modifica `/etc/exports` per esportare la directory in cui si vuole condividere. È necessario 1 riga per ogni condivisione desiderata. Ad esempio: 
+1.  Modifica `/etc/exports` per esportare la directory in cui si vuole condividere. È necessario 1 riga per ogni condivisione desiderata. Esempio: 
 
    ```bash
    /mnt/nfs  10.8.8.0/24(rw,sync,no_subtree_check,no_root_squash)
@@ -203,7 +203,7 @@ Per altre informazioni sull'uso di NFS, vedere le risorse seguenti:
 
 * [NFS Server e firewalld | Stack Exchange](https://unix.stackexchange.com/questions/243756/nfs-servers-and-firewalld)
 * [Montare un Volume NFS | Manuale dell'amministratore di rete Linux](https://www.tldp.org/LDP/nag2/x-087-2-nfs.mountd.html)
-* [Configurazione del server NFS](https://access.redhat.com/documentation/en-US/Red_Hat_Enterprise_Linux/3/html/Reference_Guide/s1-nfs-server-export.html)
+* [Configurazione del server NFS | Red Hat Customer Portal](https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/7/html/storage_administration_guide/nfs-serverconfig)
 
 ### <a name="mount-database-files-directory-to-point-to-the-shared-storage"></a>Montare directory dei file di database in modo che punti all'archiviazione condivisa
 
@@ -334,9 +334,9 @@ A questo punto, entrambe le istanze di SQL Server configurate per eseguire con i
    - **Nome della risorsa IP mobile**: Un nome per la risorsa indirizzo IP virtuale.
    - **Indirizzo IP**: L'indirizzo IP che i client useranno per connettersi all'istanza del cluster di SQL Server. 
    - **Il nome di risorsa sistema**: Un nome per la risorsa File System.
-   - **dispositivo**: Percorso di condivisione NFS
-   - **dispositivo**: Il percorso locale che viene montata la condivisione
-   - **fsType**: Tipo di condivisione file (ad esempio nfs)
+   - **device**: Percorso di condivisione NFS
+   - **device**: Il percorso locale che viene montata la condivisione
+   - **fstype**: Tipo di condivisione file (ad esempio nfs)
 
    Aggiornare i valori dallo script seguente per l'ambiente. Eseguire in un nodo per configurare e avviare il servizio cluster.  
 

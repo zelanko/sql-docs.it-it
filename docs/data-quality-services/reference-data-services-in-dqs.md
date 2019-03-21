@@ -11,12 +11,12 @@ ms.assetid: ef217717-6d05-443e-af26-44dc745a349d
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 92112b0211536bcb964d71e538a92311b2579117
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
-ms.translationtype: HT
+ms.openlocfilehash: 98801ffe8ea0066bc425622a0f62e7306a217ff2
+ms.sourcegitcommit: 7d4a3fc0f2622cbc6930d792be4a9b3fcac4c4b6
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56027132"
+ms.lasthandoff: 03/21/2019
+ms.locfileid: "58305939"
 ---
 # <a name="reference-data-services-in-dqs"></a>Servizi dati di riferimento in DQS
 
@@ -59,7 +59,7 @@ ms.locfileid: "56027132"
   
 1.  **Configurazione dei dettagli del provider di dati di riferimento in DQS**: prima di poter usare dati di riferimento in DQS, è necessario configurare i dettagli del servizio dati di riferimento in DQS.  
   
-    1.  Se si utilizza Marketplace, fornire una chiave account Marketplace valida, passare alla categoria dati [Data Quality Services](https://go.microsoft.com/fwlink/?LinkId=227587) in Marketplace, quindi effettuare la sottoscrizione ai provider desiderati.  
+    1.  Se si utilizza Marketplace, fornire una chiave account Marketplace valida, passare al [Data Services](https://azuremarketplace.microsoft.com/marketplace/apps/category/azure-active-directory-apps?page=1&subcategories=data-services) categoria di dati in Marketplace e la sottoscrizione ai provider desiderati.  
   
     2.  Se si utilizza un provider di dati di riferimento online diretto, è necessario aggiungere i dettagli diretti del provider di dati di riferimento in DQS prima che sia possibile utilizzarlo.  
   
