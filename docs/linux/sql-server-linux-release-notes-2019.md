@@ -10,12 +10,12 @@ ms.prod: sql
 ms.custom: sql-linux
 ms.technology: linux
 monikerRange: '>= sql-server-linux-ver15  || >= sql-server-ver15 || = sqlallproducts-allversions'
-ms.openlocfilehash: 3f3c66aa7ac4931c29d02525980dd3827c6d0322
-ms.sourcegitcommit: 56fb7b648adae2c7b81bd969de067af1a2b54180
+ms.openlocfilehash: c0a14531fb2ad82e4dcab31022f55d5726064c4a
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/02/2019
-ms.locfileid: "57227183"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58271842"
 ---
 # <a name="release-notes-for-sql-server-2019-preview-on-linux"></a>Note sulla versione di anteprima di SQL Server 2019 in Linux
 
@@ -30,7 +30,7 @@ Le note sulla versione seguenti si applicano all'anteprima di SQL Server 2019 in
 
 | Piattaforma | File system | Guida all'installazione |
 |-----|-----|-----|
-| Desktop, Server e Workstation di Red Hat Enterprise Linux 7.3 o 7.4 | XFS o EXT4 | [Guida all'installazione](quickstart-install-connect-red-hat.md) | 
+| Red Hat Enterprise Linux 7.3, 7.4, 7.5 o 7.6 Server | XFS o EXT4 | [Guida all'installazione](quickstart-install-connect-red-hat.md) | 
 | SUSE Enterprise Linux Server v12 SP2 | XFS o EXT4 | [Guida all'installazione](quickstart-install-connect-suse.md) |
 | Ubuntu 16.04LTS | XFS o EXT4 | [Guida all'installazione](quickstart-install-connect-ubuntu.md) | 
 | Motore docker 1.8 + per Windows, Mac o Linux | N/D | [Guida all'installazione](quickstart-install-connect-docker.md) | 

@@ -11,12 +11,12 @@ ms.prod: sql
 ms.technology: linux
 ms.custom: sql-linux, seodec18
 ms.assetid: 92503f59-96dc-4f6a-b1b0-d135c43e935e
-ms.openlocfilehash: 03e3b5d578c8fee68098674e9b82501a290bafda
-ms.sourcegitcommit: 8bc5d85bd157f9cfd52245d23062d150b76066ef
+ms.openlocfilehash: dce4418dee10ff356d5c922350cd2fda29b44795
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/07/2019
-ms.locfileid: "57579242"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58277309"
 ---
 # <a name="quickstart-install-sql-server-and-create-a-database-on-red-hat"></a>Avvio rapido: Installare SQL Server e creare un database in Red Hat
 
@@ -25,7 +25,7 @@ ms.locfileid: "57579242"
 <!--SQL Server 2017 on Linux-->
 ::: moniker range="= sql-server-linux-2017 || = sql-server-2017"
 
-In questa Guida introduttiva, si installa SQL Server 2017 o SQL Server 2019 su Red Hat Enterprise Linux (RHEL) 7.3 +. Quindi Connettiti **sqlcmd** per creare il primo database ed eseguire query.
+In questa Guida introduttiva, si installa SQL Server 2017 o SQL Server 2019 su Red Hat Enterprise Linux (RHEL). Quindi Connettiti **sqlcmd** per creare il primo database ed eseguire query.
 
 ::: moniker-end
 <!--SQL Server 2019 on Linux-->
@@ -40,7 +40,7 @@ In questa Guida introduttiva, si installa SQL Server 2019 anteprima su Red Hat E
 
 ## <a name="prerequisites"></a>Prerequisiti
 
-È necessario disporre una RHEL 7.3 o 7.4 macchina con **almeno 2 GB** di memoria.
+È necessario disporre di un computer con RHEL 7.3, 7.4, 7.5 o 7.6 **almeno 2 GB** di memoria.
 
 Per installare Red Hat Enterprise Linux nel proprio computer, visitare [ https://access.redhat.com/products/red-hat-enterprise-linux/evaluation ](https://access.redhat.com/products/red-hat-enterprise-linux/evaluation). È anche possibile creare macchine virtuali RHEL in Azure. Visualizzare [creare e gestire VM Linux con Azure CLI](https://docs.microsoft.com/azure/virtual-machines/linux/tutorial-manage-vm)e usare `--image RHEL` nella chiamata a `az vm create`.
 

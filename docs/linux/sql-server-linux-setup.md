@@ -10,12 +10,12 @@ ms.prod: sql
 ms.custom: sql-linux
 ms.technology: linux
 ms.assetid: 565156c3-7256-4e63-aaf0-884522ef2a52
-ms.openlocfilehash: 4e4de2fbb87fb7716ccde8de52924cd2402424fc
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: e400d73137750bda913003aed1717793634cfd41
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51675460"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58280625"
 ---
 # <a name="installation-guidance-for-sql-server-on-linux"></a>Guida all'installazione per SQL Server in Linux
 
@@ -38,9 +38,9 @@ SQL Server 2017 è supportata in Ubuntu, SUSE Linux Enterprise Server (SLES) e R
 
 | Piattaforma | Versioni supportate | Recupero
 |-----|-----|-----
-| **Red Hat Enterprise Linux** | 7.3 o 7.4 | [Ottenere RHEL 7.4](https://access.redhat.com/products/red-hat-enterprise-linux/evaluation)
-| **SUSE Linux Enterprise Server** | v12 SP2 | [Ottenere SLES 12 SP2](https://www.suse.com/products/server)
-| **Ubuntu** | 16.04 | [Ottenere Ubuntu 16.04](https://www.ubuntu.com/download/server)
+| **Red Hat Enterprise Linux** | 7.3, 7.4, 7.5, 7.6 | [Ottenere RHEL 7.6](https://access.redhat.com/products/red-hat-enterprise-linux/evaluation)
+| **SUSE Linux Enterprise Server** | v12 SP2 | [Get SLES v12 SP2](https://www.suse.com/products/server)
+| **Ubuntu** | 16.04 | [Get Ubuntu 16.04](https://www.ubuntu.com/download/server)
 | **Motore docker** | 1.8+ | [Ottieni Docker](https://www.docker.com/products/overview)
 
 Microsoft supporta anche la distribuzione e la gestione dei contenitori di SQL Server usando OpenShift e Kubernetes.
@@ -57,7 +57,7 @@ SQL Server 2017 include i seguenti requisiti di sistema per Linux:
 | **Memoria** | 2 GB |
 | **File System** | **XFS** oppure **EXT4** (altro file System, ad esempio **BTRFS**, non sono supportati) |
 | **Spazio su disco** | 6 GB |
-| **Velocità processore** | Almeno 2 GHz |
+| **Velocità processore** | 2 GHz |
 | **Memorie centrali del processore** | 2 core |
 | **Tipo di processore** | compatibile con x64 solo |
 
@@ -193,7 +193,7 @@ Se la macchina Linux non ha accesso al repository online usati nel [introduttive
     > [!NOTE]
     > È anche possibile installare i pacchetti RPM (RHEL e SLES) con il `rpm -ivh` comando, ma i comandi nella tabella precedente installano automaticamente le dipendenze se approvato disponibile dal repository.
 
-1. **Risolvere le dipendenze mancante**: è possibile avere dipendenze mancanti a questo punto. In caso contrario, è possibile ignorare questo passaggio. In Ubuntu, se si ha accesso ai repository approvati che contiene tali dipendenze, la soluzione più semplice consiste nell'utilizzare il `apt-get -f install` comando. Questo comando consente inoltre di completare l'installazione di SQL Server. Per controllare manualmente le dipendenze, usare i comandi seguenti:
+1. **Risolvere le dipendenze mancante**: Potrebbe essere mancante a questo punto le dipendenze. In caso contrario, è possibile ignorare questo passaggio. In Ubuntu, se si ha accesso ai repository approvati che contiene tali dipendenze, la soluzione più semplice consiste nell'utilizzare il `apt-get -f install` comando. Questo comando consente inoltre di completare l'installazione di SQL Server. Per controllare manualmente le dipendenze, usare i comandi seguenti:
 
    | Piattaforma | Comando Elenca le dipendenze |
    |-----|-----|
