@@ -21,12 +21,12 @@ ms.assetid: 13e95046-0e76-4604-b561-d1a74dd824d7
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 6cb5b9ecbcc187a059747e9d3121ac50611a0418
-ms.sourcegitcommit: 769b71f01052ec9b4fc5eb02d9da9a1a58118029
+ms.openlocfilehash: b92410945bd9d123b103272943a663b87b8adec8
+ms.sourcegitcommit: d92ad400799d8b74d5c601170167b86221f68afb
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56319402"
+ms.lasthandoff: 03/18/2019
+ms.locfileid: "57973810"
 ---
 # <a name="maximum-capacity-specifications-for-sql-server"></a>Specifiche di capacità massima per SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -53,7 +53,7 @@ ms.locfileid: "56319402"
 |Byte per ogni chiave di indice per tabelle ottimizzate per la memoria||2500 byte per un indice non cluster. Nessun limite per un indice hash purché tutte le chiavi di indice rientrino nella riga.|In una tabella ottimizzata per la memoria, un indice non cluster non può contenere colonne chiave le cui dimensioni massime dichiarate superano i 2500 byte. È irrilevante se i dati effettivi nelle colonne chiave sono minori delle dimensioni massime dichiarate.<br /><br /> Per una chiave di indice hash non esiste alcun limite fisico alle dimensioni.<br /><br /> Per gli indici delle tabelle ottimizzate per la memoria, non è disponibile alcun concetto di colonne incluse poiché tutti gli indici coprono implicitamente tutte le colonne.<br /><br /> Per una tabella ottimizzata per la memoria, anche se le dimensioni delle righe sono di 8060 byte, alcune colonne a lunghezza variabile possono essere fisicamente archiviate all'esterno di tali 8060 byte. Tuttavia, le dimensioni massime dichiarate di tutte le colonne chiave per tutti gli indici in una tabella, oltre a eventuali colonne a lunghezza fissa aggiuntive nella tabella, non devono superare 8060 byte.|  
 |Byte per ogni chiave esterna||900||  
 |Byte per ogni chiave primaria||900||  
-|Byte per ogni riga||8.060|[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] supporta l'archiviazione dei dati di overflow della riga che consente di spostare le colonne di lunghezza variabile all'esterno delle righe. Solo una radice di 24 byte viene archiviata nel record principale per le colonne di lunghezza variabile spostate all'esterno di righe. Di conseguenza, il limite delle righe effettivo è maggiore di quello delle versioni precedenti di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Per ulteriori informazioni, vedere l'argomento "Dati di overflow della riga che superano 8 KB" nella documentazione online di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] .|  
+|Byte per ogni riga||8.060|[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] supporta l'archiviazione dei dati di overflow della riga che consente di spostare le colonne di lunghezza variabile all'esterno delle righe. Solo una radice di 24 byte viene archiviata nel record principale per le colonne di lunghezza variabile spostate all'esterno di righe. Di conseguenza, il limite delle righe effettivo è maggiore di quello delle versioni precedenti di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Per altre informazioni, vedere [Supporto per righe di grandi dimensioni](../relational-databases/pages-and-extents-architecture-guide.md#large-row-support).|  
 |Byte per ogni riga nelle tabelle ottimizzate per la memoria||8.060|A partire da [!INCLUDE[ssSQL15](../includes/sssql15-md.md)] le tabelle ottimizzate per la memoria supportano l'archiviazione all'esterno delle righe. Le colonne a lunghezza variabile vengono spostare all'esterno delle righe se le dimensioni massime di tutte le colonne nella tabella superano 8060 byte. La decisione avviene in fase di compilazione. Per le colonne archiviate all'esterno delle righe viene archiviato un solo riferimento a 8 byte. Per altre informazioni, vedere [Dimensioni di tabelle e righe per le tabelle con ottimizzazione per la memoria](../relational-databases/in-memory-oltp/table-and-row-size-in-memory-optimized-tables.md).|  
 |Byte nel testo di origine di una stored procedure||Minore delle dimensioni batch o 250 MB||  
 |Byte per ogni colonna **varchar(max)**, **varbinary(max)**, **xml**, **text**o **image**||2^31-1||  

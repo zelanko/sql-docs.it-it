@@ -19,12 +19,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 49f84b9e41116dd235f219a0487b48770ef4f81f
-ms.sourcegitcommit: d6ef87a01836738b5f7941a68ca80f98c61a49d4
+ms.openlocfilehash: 1816363425276ec532e5cc04433630e8e6b9bcac
+ms.sourcegitcommit: 03870f0577abde3113e0e9916cd82590f78a377c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/07/2019
-ms.locfileid: "57572844"
+ms.lasthandoff: 03/18/2019
+ms.locfileid: "57974350"
 ---
 # <a name="windows-collation-name-transact-sql"></a>Windows_collation_name (Transact-SQL)
 
@@ -42,8 +42,9 @@ Specifica il nome delle regole di confronto Windows nella clausola COLLATE in [!
 CollationDesignator_<ComparisonStyle>
 
 <ComparisonStyle> :: =
-{ CaseSensitivity_AccentSensitivity [ _KanatypeSensitive ] [ _WidthSensitive ] [ _VariationSelectorSensitive ]
+{ CaseSensitivity_AccentSensitivity [ _KanatypeSensitive ] [ _WidthSensitive ] [ _VariationSelectorSensitive ] 
 }
+| { _UTF8 }
 | { _BIN | _BIN2 }
 ```
 
@@ -72,9 +73,14 @@ Ad esempio:
 **Omesso** specifica che la distinzione di larghezza non è rilevante, **WS** specifica che la distinzione di larghezza è rilevante.
 
 *VariationSelectorSensitivity*  
-**Si applica a**: [!INCLUDE[ssSQL15](../../includes/sssqlv14-md.md)] 
+**Si applica a**: A partire da [!INCLUDE[ssSQL15](../../includes/sssqlv14-md.md)] 
 
 **Omesso** specifica che il selettore di variazione non è rilevante, **VSS** specifica che il selettore di variazione è rilevante.
+
+**UTF8**  
+**Si applica a**: A partire da [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]   
+
+Specifica la codifica UTF-8 da usare per i tipi di dati idonei. Per altre informazioni, vedere [Collation and Unicode Support](../../relational-databases/collations/collation-and-unicode-support.md).
 
 **BIN**  
 Specifica che deve essere usato il tipo di ordinamento binario compatibile con le versioni precedenti.
@@ -83,7 +89,6 @@ Specifica che deve essere usato il tipo di ordinamento binario compatibile con l
 Specifica l'ordinamento binario che utilizza la semantica del confronto dei punti di codice.
 
 ## <a name="remarks"></a>Remarks
-
 A seconda della versione delle regole di confronto, per alcuni punti di codice potrebbero non essere stati definiti pesi di ordinamento e/o il mapping tra caratteri maiuscoli e minuscoli. Ad esempio, confrontare l'output della funzione `LOWER` quando viene assegnato lo stesso carattere, ma con versioni diverse delle stesse regole di confronto:
 
 ```sql

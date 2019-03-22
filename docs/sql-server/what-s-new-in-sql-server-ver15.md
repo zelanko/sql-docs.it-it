@@ -9,12 +9,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 8f7302384bbf264061c73b79a919855aa762994f
-ms.sourcegitcommit: 8bc5d85bd157f9cfd52245d23062d150b76066ef
+ms.openlocfilehash: a69835d1952a860bebe36aaf6793c548e09a5743
+ms.sourcegitcommit: d92ad400799d8b74d5c601170167b86221f68afb
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/07/2019
-ms.locfileid: "57579771"
+ms.lasthandoff: 03/18/2019
+ms.locfileid: "57974450"
 ---
 # <a name="whats-new-in-includesql-server-2019includessssqlv15-mdmd"></a>Novità di [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)]
 
@@ -209,13 +209,15 @@ Supporto completo per la codifica dei caratteri di grande diffusione UTF-8 come 
 
 Ad esempio da `LATIN1_GENERAL_100_CI_AS_SC` a `LATIN1_GENERAL_100_CI_AS_SC_UTF8`. UTF-8 è disponibile solo per le regole di confronto di Windows che supportano i caratteri supplementari. Questa funzionalità è stata introdotta in [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]. `NCHAR` e `NVARCHAR` consentono solo la codifica UTF-16 e rimangono invariati.
 
-A seconda del set di caratteri in uso, questa funzionalità può offrire importanti risparmi di risorse di archiviazione. Se ad esempio si cambia il tipo di dati di una colonna esistente e contenente stringhe Latin da `NCHAR(10)` a `CHAR(10)` usando una regola di confronto con supporto di UTF-8, i requisiti di risorse di archiviazione vengono ridotti del 50%. Questa riduzione deriva dal fatto che `NCHAR(10)` richiede 20 byte per l'archiviazione, mentre `CHAR(10)` richiede solo 10 byte per la stessa stringa Unicode.
+A seconda del set di caratteri in uso, questa funzionalità può offrire importanti risparmi di risorse di archiviazione. Se ad esempio si cambia il tipo di dati di una colonna esistente con stringhe ASCII (Latin) da `NCHAR(10)` in `CHAR(10)` usando una regola di confronto con supporto UTF-8, i requisiti di archiviazione vengono ridotti del 50%. Questa riduzione deriva dal fatto che `NCHAR(10)` richiede 20 byte per l'archiviazione, mentre `CHAR(10)` richiede solo 10 byte per la stessa stringa Unicode.
 
 Per altre informazioni, vedere [Collation and Unicode Support](../relational-databases/collations/collation-and-unicode-support.md).
 
-CTP 2.1 aggiunge il supporto per la selezione delle regole di confronto UTF-8 come impostazione predefinita durante il programma di installazione di [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)].
+**CTP 2.1** Aggiunge il supporto per la selezione delle regole di confronto UTF-8 come impostazione predefinita durante l'installazione di [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)].
 
-CTP 2.2 aggiunge il supporto per l'uso della codifica dei caratteri UTF-8 con la replica di Microsoft SQL Server.
+**CTP 2.2** Aggiunge il supporto per l'uso della codifica dei caratteri UTF-8 con la replica di SQL Server.
+
+**CTP 2.3** Aggiunge il supporto per l'uso della codifica dei caratteri UTF-8 con le regole di confronto BIN2 (UTF8_BIN2).
 
 ### <a name="resumable-online-index-create-ctp-20"></a>Creazione di indici online ripristinabili (CTP 2.0)
 
@@ -383,6 +385,8 @@ Per informazioni dettagliate, vedere [What's new in SQL Server Machine Learning 
 L'infrastruttura leggera di profilatura query (LWP) restituisce dati sulle prestazioni delle query in modo più efficiente rispetto ai meccanismi di profilatura standard. Ora la profilatura leggera è abilitata per impostazione predefinita. È stata introdotta in [!INCLUDE[ssSQL15](../includes/sssql15-md.md)] SP1. La profilatura leggera offre un meccanismo per la raccolta di statistiche sull'esecuzione query con un sovraccarico previsto pari al 2% della capacità della CPU, rispetto a un sovraccarico che può raggiungere il 75% della capacità della CPU per il meccanismo di profilatura query standard. Nelle versioni precedenti, questa funzionalità era OFF per impostazione predefinita. Gli amministratori di database potevano abilitarla con il [flag di traccia 7412](../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md). 
 
 Per altre informazioni sulla profilatura leggera, vedere [Infrastruttura di profilatura query](../relational-databases/performance/query-profiling-infrastructure.md).
+
+**CTP 2.3** Viene introdotta una nuova configurazione con ambito database `LIGHTWEIGHT_QUERY_PROFILING` per abilitare o disabilitare l'infrastruttura di profilatura delle query leggera.
 
 ### <a id="polybase"></a>Nuovi connettori PolyBase
 

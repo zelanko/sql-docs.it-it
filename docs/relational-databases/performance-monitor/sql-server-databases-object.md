@@ -16,12 +16,12 @@ ms.assetid: a7f9e7d4-fff4-4c72-8b3e-3f18dffc8919
 author: julieMSFT
 ms.author: jrasnick
 manager: craigg
-ms.openlocfilehash: 668fe6a825be365aa605febaaea7aafdd71ddf7d
-ms.sourcegitcommit: fa2f85b6deeceadc0f32aa7f5f4e2b6e4d99541c
+ms.openlocfilehash: ac844c8155202270dc9661c256259dd67d5f60ab
+ms.sourcegitcommit: 03870f0577abde3113e0e9916cd82590f78a377c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/03/2019
-ms.locfileid: "53997573"
+ms.lasthandoff: 03/18/2019
+ms.locfileid: "57973430"
 ---
 # <a name="sql-server-databases-object"></a>SQL Server, oggetto di database
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -70,7 +70,7 @@ ms.locfileid: "53997573"
 |**Dimensioni totali log attivo del pool di log**|Dimensioni totali log attivo corrente archiviato in Gestione buffer di cache condiviso in byte.|
 |**Dimensioni totali pool condiviso del pool di log**|Utilizzo di memoria totale corrente di Gestione buffer di cache condiviso in byte.|
 |**Compattazioni log**|Numero totale di compattazioni del log del database corrente.|  
-|**Troncamenti log**|Numero di volte in cui il log delle transazioni è stato compattato.|  
+|**Troncamenti log**|Numero di volte in cui il log delle transazioni è stato troncato (nel modello di recupero con registrazione minima).|  
 |**Percentuale log utilizzata**|Percentuale di spazio del log utilizzata.|  
 |**Transazioni replica in sospeso**|Numero di transazioni nel log delle transazioni del database di pubblicazione contrassegnate per la replica, ma non ancora recapitate al database di distribuzione.|  
 |**Velocità transazioni replica**|Numero di transazioni al secondo lette dal log delle transazioni del database di pubblicazione e recapitate al database di distribuzione.|  

@@ -1,7 +1,7 @@
 ---
 title: Guida sull'architettura di pagina ed extent | Microsoft Docs
 ms.custom: ''
-ms.date: 09/23/2018
+ms.date: 03/12/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -15,12 +15,12 @@ author: rothja
 ms.author: jroth
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 5f5dcb8899b64a7dc21367b5deda5aa6bd473a65
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 95748a37b656c1ab203ed0cff354c5a641a9c7ed
+ms.sourcegitcommit: 03870f0577abde3113e0e9916cd82590f78a377c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52748483"
+ms.lasthandoff: 03/18/2019
+ms.locfileid: "57974370"
 ---
 # <a name="pages-and-extents-architecture-guide"></a>Guida sull'architettura di pagina ed extent
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -64,6 +64,18 @@ Le righe non possono estendersi su più pagine. È tuttavia possibile che parti 
 Questa restrizione è assoluta per tabelle contenenti colonne di tipo varchar, nvarchar, varbinary o sql_variant. Quando la dimensione totale delle righe di tutte le colonne a lunghezza fissa e variabile di una tabella supera il limite di 8.060 byte, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] sposta dinamicamente una o più colonne a lunghezza variabile all'interno di pagine nell'unità di allocazione ROW_OVERFLOW_DATA, iniziando dalla colonna con la larghezza maggiore. 
 
 Questa operazione viene eseguita ogni volta che un aggiornamento o un inserimento aumenta la dimensione totale della riga fino a superare il limite di 8.060 byte. Quando una colonna viene spostata in una pagina nell'unità di allocazione ROW_OVERFLOW_DATA, viene mantenuto un puntatore di 24 byte sulla pagina originale nell'unità di allocazione IN_ROW_DATA. Se un'operazione successiva riduce la dimensione della riga, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] sposta nuovamente le colonne nella pagina di dati originale in maniera dinamica. 
+
+##### <a name="row-overflow-considerations"></a>Considerazioni sull'overflow della riga 
+
+Quando si combinano colonne di tipo varchar, nvarchar, varbinary, sql_variant o CLR definito dall'utente che superano gli 8.060 byte per riga, tenere presente quanto segue: 
+-  Lo spostamento di record di grandi dimensioni in un'altra pagina avviene dinamicamente in quanto la lunghezza dei record dipende dalle operazioni di aggiornamento. In seguito a operazioni di aggiornamento che comportano una diminuzione della lunghezza dei record, i record possono venire spostati di nuovo nella pagina originale nell'unità di allocazione IN_ROW_DATA. L'esecuzione di query e di altre operazioni di selezione, ad esempio ordinamenti o join in record di grandi dimensioni contenenti dati di overflow della riga, rallenta i tempi di esecuzione perché questi record vengono elaborati in modo sincrono anziché asincrono.   
+   Quando si progetta una tabella con più colonne di tipo varchar, nvarchar, varbinary, sql_variant o CLR definito dall'utente valutare quindi la percentuale di righe in cui probabilmente si verificherà un overflow e la frequenza con cui potrebbero venire eseguite query su questi dati di overflow. Se è probabile che verranno eseguite di frequente query su molte righe di dati di overflow della riga, valutare la possibilità di normalizzare la tabella in modo che alcune colonne vengano spostate in un'altra tabella. Sarà quindi possibile eseguire query in un'operazione JOIN asincrona. 
+-  La lunghezza delle singole colonne deve comunque rientrare nel limite di 8.000 byte per le colonne di tipo varchar, nvarchar, varbinary, sql_variant e CLR definito dall'utente. Solo le lunghezze combinate possono superare il limite di 8.060 byte per riga.
+-  La somma delle colonne con altri tipi di dati, inclusi i dati char e nchar, deve rientrare nel limite di 8.060 byte per riga. Questo limite non vale inoltre per i dati di oggetti di grandi dimensioni. 
+-  La chiave di indice di un indice cluster non può contenere colonne di tipo varchar con dati esistenti nell'unità di allocazione ROW_OVERFLOW_DATA. Se viene creato un indice cluster in una colonna varchar e i dati esistenti si trovano nell'unità di allocazione IN_ROW_DATA, le azioni di inserimento o aggiornamento successive eseguite nella colonna che comporterebbero lo spostamento dei dati all'esterno delle righe avranno esito negativo. Per altre informazioni sulle unità di allocazione, vedere Organizzazione di tabelle e indici.
+-  È possibile includere colonne contenenti dati di overflow della riga come colonne chiave o non chiave di un indice non cluster.
+-  Il limite per le dimensioni dei record per le tabelle che utilizzano colonne di tipo sparse è 8.018 byte. Quando i dati convertiti più i dati dei record esistenti superano gli 8.018 byte, viene restituito l'[ERRORE 576 MSSQLSERVER](../relational-databases/errors-events/database-engine-events-and-errors.md). Quando le colonne vengono convertite dal tipo sparse al tipo nonsparse e viceversa, il motore di database mantiene una copia dei dati dei record correnti. In questo modo, lo spazio di archiviazione richiesto per il record viene temporaneamente raddoppiato.
+-  Per ottenere informazioni su tabelle o indici che potrebbero contenere dati di overflow della riga, usare la funzione a gestione dinamica [sys.dm_db_index_physical_stats](../relational-databases/system-dynamic-management-views/sys-dm-db-index-physical-stats-transact-sql.md).
 
 ### <a name="extents"></a>Extents 
 
@@ -177,4 +189,6 @@ L'intervallo tra le pagine DCM e BCM corrisponde all'intervallo tra le pagine GA
 
 ## <a name="see-also"></a>Vedere anche
 [sys.allocation_units &#40;Transact-SQL&#41;](../relational-databases/system-catalog-views/sys-allocation-units-transact-sql.md)     
-[Heap &#40;tabelle senza indici cluster&#41;](../relational-databases/indexes/heaps-tables-without-clustered-indexes.md#heap-structures)    
+[Heap &#40;tabelle senza indici cluster&#41;](../relational-databases/indexes/heaps-tables-without-clustered-indexes.md#heap-structures)       
+[Lettura di pagine](../relational-databases/reading-pages.md)   
+[Scrittura di pagine](../relational-databases/writing-pages.md)   

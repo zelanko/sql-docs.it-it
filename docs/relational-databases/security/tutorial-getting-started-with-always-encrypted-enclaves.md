@@ -13,18 +13,18 @@ author: jaszymas
 ms.author: jaszymas
 manager: craigg
 monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
-ms.openlocfilehash: a4d833d132a0b4928d021beaa4cd9fcdd695d6c6
-ms.sourcegitcommit: baca29731a1be4f8fa47567888278394966e2af7
+ms.openlocfilehash: 14b086c18dab363ca1c9afe7816d802d5a5262f3
+ms.sourcegitcommit: 03870f0577abde3113e0e9916cd82590f78a377c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/04/2019
-ms.locfileid: "54046581"
+ms.lasthandoff: 03/18/2019
+ms.locfileid: "58072315"
 ---
 # <a name="tutorial-getting-started-with-always-encrypted-with-secure-enclaves-using-ssms"></a>Esercitazione: Introduzione ad Always Encrypted con enclave sicuri tramite SSMS
 [!INCLUDE [tsql-appliesto-ssver15-xxxx-xxxx-xxx](../../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
 Questa esercitazione illustra come iniziare a usare [Always Encrypted con enclave sicuri](encryption/always-encrypted-enclaves.md). L'esercitazione spiega:
-- Come creare un ambiente semplice per i test e la valutazione di Always Encrypted con enclave sicuri.
+- Come creare un ambiente di base per i test e la valutazione di Always Encrypted con enclave sicuri.
 - Come crittografare i dati in locale ed eseguire query avanzate su colonne crittografate usando SQL Server Management Studio (SSMS).
 
 ## <a name="prerequisites"></a>Prerequisites
@@ -139,11 +139,11 @@ In caso di qualsiasi altro errore, eseguire Clear-HgsClientHostKey e ripetere i 
 In questo passaggio si abilita la funzionalità Always Encrypted con enclave sicuri nell'istanza di SQL Server.
 
 1. Aprire SSMS, connettersi all'istanza di SQL Server come amministratore di sistema e aprire una nuova finestra query.
-2. Configurare il tipo di enclave sicuro come VBS.
+2. Impostare il tipo di enclave sicuro sulla sicurezza basata sulla virtualizzazione (VBS).
 
    ```sql
-   EXEC sys.sp_configure 'column encryption enclave type', 1
-   RECONFIGURE
+   EXEC sys.sp_configure 'column encryption enclave type', 1;
+   RECONFIGURE;
    ```
 
 3. Riavviare l'istanza di SQL Server per rendere effettive le modifiche. Per riavviare l'istanza in SQL Server Management Studio, fare clic con il pulsante destro del mouse su di essa in Esplora oggetti e scegliere Riavvia. Dopo il riavvio dell'istanza, riconnettersi.
@@ -152,10 +152,10 @@ In questo passaggio si abilita la funzionalità Always Encrypted con enclave sic
 
    ```sql
    SELECT [name], [value], [value_in_use] FROM sys.configurations
-   WHERE [name] = 'column encryption enclave type'
+   WHERE [name] = 'column encryption enclave type';
    ```
 
-    La query dovrebbe restituire una riga simile alla seguente:  
+    La query deve restituire il risultato seguente:  
 
     | NAME                           | Valore | value_in_use |
     | ------------------------------ | ----- | -------------- |
@@ -164,7 +164,7 @@ In questo passaggio si abilita la funzionalità Always Encrypted con enclave sic
 5. Per abilitare i calcoli avanzati sulle colonne crittografate, eseguire la query seguente:
 
    ```sql
-   DBCC traceon(127,-1)
+   DBCC traceon(127,-1);
    ```
 
     > [!NOTE]
@@ -177,7 +177,7 @@ In questo passaggio si crea un database con alcuni dati di esempio e quindi si p
 2. Creare un nuovo database con il nome ContosoHR.
 
     ```sql
-    CREATE DATABASE [ContosoHR] COLLATE Latin1_General_BIN2
+    CREATE DATABASE [ContosoHR];
     ```
 
 3. Accertarsi di essere connessi al database appena creato. Creare una nuova tabella con nome Employees.
@@ -190,8 +190,7 @@ In questo passaggio si crea un database con alcuni dati di esempio e quindi si p
         [FirstName] [nvarchar](50) NOT NULL,
         [LastName] [nvarchar](50) NOT NULL,
         [Salary] [money] NOT NULL
-    ) ON [PRIMARY]
-    GO
+    ) ON [PRIMARY];
     ```
 
 4. Aggiungere alcuni record dei dipendenti alla tabella Employees.
@@ -206,9 +205,8 @@ In questo passaggio si crea un database con alcuni dati di esempio e quindi si p
             ('795-73-9838'
             , N'Catherine'
             , N'Abel'
-            , $31692)
-    GO
-
+            , $31692);
+ 
     INSERT INTO [dbo].[Employees]
             ([SSN]
             ,[FirstName]
@@ -218,8 +216,7 @@ In questo passaggio si crea un database con alcuni dati di esempio e quindi si p
             ('990-00-6818'
             , N'Kim'
             , N'Abercrombie'
-            , $55415)
-    GO
+            , $55415);
     ```
 
 ## <a name="step-5-provision-enclave-enabled-keys"></a>Passaggio 5: Effettuare il provisioning delle chiavi abilitate per l'enclave
@@ -238,7 +235,7 @@ In questo passaggio si crea una chiave master della colonna e una chiave di crit
     7. Fare clic su **OK**.
 
         ![Consenti calcoli enclave](encryption/media/always-encrypted-enclaves/allow-enclave-computations.png)
-
+    
 4. Creare una nuova chiave di crittografia di colonna abilitata per l'enclave:
 
     1. Fare clic con il pulsante destro del mouse su **Chiavi Always Encrypted** e scegliere **Nuova chiave di crittografia della colonna**.
@@ -254,40 +251,40 @@ In questo passaggio si esegue la crittografia dei dati archiviati nelle colonne 
     1. In SSMS aprire una nuova finestra di query.
     2. Fare clic con il pulsante destro del mouse in un punto qualsiasi all'interno della nuova finestra di query.
     3. Selezionare Connessione \> Cambia connessione.
-    4. Selezionare **Opzioni**. Passare alla scheda **Always Encrypted**, selezionare **Abilita Always Encrypted** e specificare l'URL di attestazione dell'enclave.
+    4. Selezionare **Opzioni**. Passare alla scheda **Always Encrypted**, selezionare **Abilita Always Encrypted** e specificare l'URL di attestazione dell'enclave, ad esempio ht<span>tp://</span>hgs.bastion.local/Attestation.
     5. Selezionare **Connetti**.
-2. In SSMS configurare un'altra finestra di query con Always Encrypted disabilitata per la connessione al database.
+    6. Impostare il contesto di database sul database ContosoHR.
+1. In SSMS configurare un'altra finestra di query con Always Encrypted disabilitata per la connessione al database.
     1. In SSMS aprire una nuova finestra di query.
     2. Fare clic con il pulsante destro del mouse in un punto qualsiasi all'interno della nuova finestra di query.
     3. Selezionare Connessione \> Cambia connessione.
     4. Selezionare **Opzioni**. Passare alla scheda **Always Encrypted** e verificare che **Abilita Always Encrypted** non sia selezionata.
     5. Selezionare **Connetti**.
-3. Crittografare le colonne SSN e Salary. Nella finestra della query con Always Encrypted abilitata, incollare ed eseguire le istruzioni seguenti:
+    6. Impostare il contesto di database sul database ContosoHR.
+1. Crittografare le colonne SSN e Salary. Nella finestra di query con Always Encrypted abilitato incollare ed eseguire lo script seguente:
 
     ```sql
     ALTER TABLE [dbo].[Employees]
-    ALTER COLUMN [SSN] [char] (11)
+    ALTER COLUMN [SSN] [char] (11) COLLATE Latin1_General_BIN2
     ENCRYPTED WITH (COLUMN_ENCRYPTION_KEY = [CEK1], ENCRYPTION_TYPE = Randomized, ALGORITHM = 'AEAD_AES_256_CBC_HMAC_SHA_256') NOT NULL
     WITH
-    (ONLINE = ON)
-    GO
-    DBCC FREEPROCCACHE
-    GO
-
+    (ONLINE = ON);
+     
     ALTER TABLE [dbo].[Employees]
     ALTER COLUMN [Salary] [money]
     ENCRYPTED WITH (COLUMN_ENCRYPTION_KEY = [CEK1], ENCRYPTION_TYPE = Randomized, ALGORITHM = 'AEAD_AES_256_CBC_HMAC_SHA_256') NOT NULL
     WITH
-    (ONLINE = ON)
-    GO
-    DBCC FREEPROCCACHE
-    GO
+    (ONLINE = ON);
+ 
+    ALTER DATABASE SCOPED CONFIGURATION CLEAR PROCEDURE_CACHE;
     ```
+    > [!NOTE]
+    > Si noti l'istruzione ALTER DATABASE SCOPED CONFIGURATION CLEAR PROCEDURE_CACHE per cancellare la cache del piano di query per il database nello script precedente. Dopo aver modificato la tabella è necessario cancellare i piani per tutti i batch e le stored procedure che accedono alla tabella per aggiornare le informazioni di crittografia dei parametri. 
 
 4. Per verificare che le colonne SSN e Salary ora sono crittografate, incollare ed eseguire l'istruzione seguente nella finestra di query con Always Encrypted disabilitata. La finestra di query restituirà valori crittografati nelle colonne SSN e Salary. Nella finestra di query con Always Encrypted abilitata, provare a eseguire la stessa query per visualizzare i dati decrittografati.
 
     ```sql
-    SELECT * FROM [dbo].[Employees]
+    SELECT * FROM [dbo].[Employees];
     ```
 
 ## <a name="step-7-run-rich-queries-against-encrypted-columns"></a>Passaggio 7: Eseguire query avanzate su colonne crittografate
@@ -298,13 +295,13 @@ Ora è possibile eseguire query avanzate sulle colonne crittografate. Vengono es
     1. Selezionare **Query** dal menu principale di SQL Server Management Studio.
     2. Selezionare **Opzioni query**.
     3. Passare a **Esecuzione** > **Avanzata**.
-    4. Selezionare o deselezionare Abilita parametrizzazione per Always Encrypted.
-    5. Selezionare OK.
+    4. Selezionare **Abilita parametrizzazione per Always Encrypted**.
+    5. Fare clic su **OK**.
 2. Nella finestra della query con Always Encrypted abilitata, incollare ed eseguire la query seguente. La query restituisce valori di testo non crittografato e righe che soddisfano i criteri di ricerca specificati.
 
     ```sql
-    DECLARE @SSNPattern [char](11) = '%6818'
-    DECLARE @MinSalary [money] = $1000
+    DECLARE @SSNPattern [char](11) = '%6818';
+    DECLARE @MinSalary [money] = $1000;
     SELECT * FROM [dbo].[Employees]
     WHERE SSN LIKE @SSNPattern AND [Salary] >= @MinSalary;
     ```

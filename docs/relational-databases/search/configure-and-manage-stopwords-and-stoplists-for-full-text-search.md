@@ -1,10 +1,8 @@
 ---
 title: Configurare e gestire parole non significative ed elenchi di parole non significative per la ricerca full-text | Microsoft Docs
-ms.custom: ''
 ms.date: 02/02/2017
 ms.prod: sql
 ms.prod_service: search, sql-database
-ms.reviewer: ''
 ms.technology: search
 ms.topic: conceptual
 helpviewer_keywords:
@@ -15,16 +13,17 @@ helpviewer_keywords:
 - full-text search [SQL Server], stopwords
 - stopwords [full-text search]
 ms.assetid: 43b5ce7b-9f09-4443-8a5b-c3da6eb28bcc
-author: douglaslMS
-ms.author: douglasl
+author: pmasl
+ms.author: pelopes
+ms.reviewer: mikeray
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 328f313630286f3ef2a67fc7c27455e411d3d294
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 717eee6067ae024465b68fd2e4a0d8a174e77d10
+ms.sourcegitcommit: 03870f0577abde3113e0e9916cd82590f78a377c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51658910"
+ms.lasthandoff: 03/18/2019
+ms.locfileid: "57973701"
 ---
 # <a name="configure-and-manage-stopwords-and-stoplists-for-full-text-search"></a>Configurare e gestire parole non significative ed elenchi di parole non significative per la ricerca full-text
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -98,7 +97,7 @@ Usare [ALTER FULLTEXT STOPLIST &#40;Transact-SQL&#41;](../../t-sql/statements/al
   
 5.  Nella finestra di dialogo [Proprietà elenco di parole non significative full-text](https://msdn.microsoft.com/library/2e907f5b-0cf9-484a-afcf-a4e7f1e2f87f) :  
   
-    1.  Nella casella di riepilogo **Azione** selezionare una delle azioni seguenti: **Aggiungi parola non significativa**, **Elimina parola non significativa**, **Elimina tutte le parole non significative**o **Cancella elenco di parole non significative**.  
+    1.  Nella casella di riepilogo **Azione** selezionare una delle azioni seguenti: **Add stopword** (Aggiungi parola non significativa), **Delete stopword** (Elimina parola non significativa), **Delete all stopwords** (Elimina tutte le parole non significative) o **Cancella elenco di parole non significative**.  
   
     2.  Se la casella di testo **Parola non significativa** è abilitata per l'azione selezionata, immettere una singola parola non significativa. Questa parola deve essere univoca, ovvero non ancora inclusa nell'elenco di parole non significative per la lingua selezionata.  
   

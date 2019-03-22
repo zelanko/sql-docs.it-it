@@ -1,10 +1,8 @@
 ---
 title: Aggiornare la ricerca full-text | Microsoft Docs
-ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: search, sql-database
-ms.reviewer: ''
 ms.technology: search
 ms.topic: conceptual
 helpviewer_keywords:
@@ -14,16 +12,17 @@ helpviewer_keywords:
 - installing Full-Text Search
 - full-text search [SQL Server], upgrading
 ms.assetid: 2fee4691-f2b5-472f-8ccc-fa625b654520
-author: douglaslMS
-ms.author: douglasl
+author: pmasl
+ms.author: pelopes
+ms.reviewer: mikeray
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 4c73ac14c951e1db5c7e7c96fc88f6d9cb1818fe
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: d83049bccf49fda6b4ca8d0ea6f0578415374eb1
+ms.sourcegitcommit: 03870f0577abde3113e0e9916cd82590f78a377c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51665530"
+ms.lasthandoff: 03/18/2019
+ms.locfileid: "57974300"
 ---
 # <a name="upgrade-full-text-search"></a>Aggiornamento della ricerca full-text
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -123,9 +122,9 @@ Quando un database viene aggiornato a [!INCLUDE[ssCurrent](../../includes/sscurr
   
  **Per modificare il comportamento dell'aggiornamento full-text in un'istanza del server**  
   
--   [!INCLUDE[tsql](../../includes/tsql-md.md)]: usare  **l'azione \_Opzione** di aggiornamento di full-text di [sp\_fulltext\_service](../../relational-databases/system-stored-procedures/sp-fulltext-service-transact-sql.md)  
+-   [!INCLUDE[tsql](../../includes/tsql-md.md)]: usare l'azione **upgrade\_option** di [sp\_fulltext\_service](../../relational-databases/system-stored-procedures/sp-fulltext-service-transact-sql.md)  
   
--   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] **:** Usare l'opzione di **aggiornamento full-text** della finestra di dialogo **Proprietà server** . Per altre informazioni, vedere [Gestione e monitoraggio della ricerca full-text per un'istanza del server](../../relational-databases/search/manage-and-monitor-full-text-search-for-a-server-instance.md).  
+-   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] **:** usare **Opzione di aggiornamento full-text** nella finestra di dialogo **Proprietà server**. Per altre informazioni, vedere [Gestione e monitoraggio della ricerca full-text per un'istanza del server](../../relational-databases/search/manage-and-monitor-full-text-search-for-a-server-instance.md).  
   
 ##  <a name="Considerations_for_Restore"></a> Considerazioni per il ripristino di un catalogo full-text di [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]  
  Un metodo di aggiornamento dei dati full-text da un database di [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] consiste nel ripristinare il backup completo di un database in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  

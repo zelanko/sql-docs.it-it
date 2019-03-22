@@ -38,12 +38,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-current||=azuresqldb-mi-current||=azure-sqldw-latest||>=aps-pdw-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 81464ed0bdb3246b805a0c44f17baa9fdeaf59e5
-ms.sourcegitcommit: 3c4bb35163286da70c2d669a3f84fb6a8145022c
+ms.openlocfilehash: 6283f95a8d3dc34964d13a21b75097ab5f51a56d
+ms.sourcegitcommit: 03870f0577abde3113e0e9916cd82590f78a377c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57683691"
+ms.lasthandoff: 03/18/2019
+ms.locfileid: "57974550"
 ---
 # <a name="create-database"></a>CREATE DATABASE
 
@@ -177,17 +177,21 @@ CONTAINMENT = { NONE | PARTIAL }
 
 Viene specificato lo stato di indipendenza del database. NONE = Database non indipendente. PARTIAL = database parzialmente indipendente.
 
-ON specifica che i file su disco usati per archiviare le sezioni di dati del database (file di dati) vengono definiti in modo esplicito. ON è obbligatorio quando è seguito da un elenco di valori delimitato da virgole di elementi \<filespec> che definiscono i file di dati per il filegroup primario. L'elenco di file del filegroup primario può essere seguito da un elenco di valori delimitati da virgole facoltativo di elementi \<filegroup> che definiscono i filegroup utente e i relativi file.
+ON     
+Specifica che i file su disco utilizzati per archiviare le sezioni di dati del database (file di dati) vengono definiti in modo esplicito. ON è obbligatorio quando è seguito da un elenco di valori delimitato da virgole di elementi \<filespec> che definiscono i file di dati per il filegroup primario. L'elenco di file del filegroup primario può essere seguito da un elenco di valori delimitati da virgole facoltativo di elementi \<filegroup> che definiscono i filegroup utente e i relativi file.
 
-PRIMARY specifica che l'elenco \<filespec> associato definisce il file primario. Il primo file specificato nella voce \<filespec> nel filegroup primario diventa il file primario. Un database può includere un solo file primario. Per altre informazioni, vedere [Database Files and Filegroups](../../relational-databases/databases/database-files-and-filegroups.md).
+PRIMARY     
+Specifica che l'elenco \<filespec> associato definisce il file primario. Il primo file specificato nella voce \<filespec> nel filegroup primario diventa il file primario. Un database può includere un solo file primario. Per altre informazioni, vedere [Database Files and Filegroups](../../relational-databases/databases/database-files-and-filegroups.md).
 
 Se la parola chiave PRIMARY viene omessa, il primo file elencato nell'istruzione CREATE DATABASE diventa il file primario.
 
-LOG ON specifica che i file su disco usati per archiviare il log del database (file di log) vengono definiti in modo esplicito. LOG ON è seguito da un elenco di valori delimitati da virgole di elementi \<filespec> che definiscono i file di log. Se la parola chiave LOG ON viene omessa, viene creato automaticamente un singolo file di log con dimensioni pari al 25% della somma delle dimensioni di tutti i file di dati del database o pari a 512 KB, a seconda del valore maggiore. Questo file viene posizionato nel percorso predefinito del file di log. Per informazioni su questa posizione, vedere [Visualizzare o modificare i percorsi predefiniti per i file di dati e di log - SSMS](../../database-engine/configure-windows/view-or-change-the-default-locations-for-data-and-log-files.md).
+LOG ON     
+Specifica che i file su disco utilizzati per archiviare il log del database (file di log) vengono definiti in modo esplicito. LOG ON è seguito da un elenco di valori delimitati da virgole di elementi \<filespec> che definiscono i file di log. Se la parola chiave LOG ON viene omessa, viene creato automaticamente un singolo file di log con dimensioni pari al 25% della somma delle dimensioni di tutti i file di dati del database o pari a 512 KB, a seconda del valore maggiore. Questo file viene posizionato nel percorso predefinito del file di log. Per informazioni su questa posizione, vedere [Visualizzare o modificare i percorsi predefiniti per i file di dati e di log - SSMS](../../database-engine/configure-windows/view-or-change-the-default-locations-for-data-and-log-files.md).
 
 Non è possibile specificare LOG ON in uno snapshot del database.
 
-COLLATE *collation_name* specifica le regole di confronto predefinite per il database. È possibile usare nomi di regole di confronto di Windows o SQL. Se collation_name viene omesso, al database vengono assegnate le regole di confronto predefinite dell'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Non è possibile specificare un nome di regole di confronto in uno snapshot del database.
+COLLATE *collation_name*     
+Specifica le regole di confronto predefinite per il database. È possibile usare nomi di regole di confronto di Windows o SQL. Se collation_name viene omesso, al database vengono assegnate le regole di confronto predefinite dell'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Non è possibile specificare un nome di regole di confronto in uno snapshot del database.
 
 Non è possibile specificare un nome di regole di confronto con le clausole FOR ATTACH o FOR ATTACH_REBUILD_LOG. Per informazioni sulla modifica delle regole di confronto di un database collegato, visitare il [sito Web Microsoft](https://go.microsoft.com/fwlink/?linkid=16419&kbid=325335).
 
@@ -196,80 +200,81 @@ Per altre informazioni sui nomi di regole di confronto Windows e SQL, vedere [CO
 > [!NOTE]
 > Le regole di confronto per i database indipendenti sono diverse rispetto a quelle dei database non indipendenti. Per altre informazioni, vedere [Regole di confronto dei database indipendenti](../../relational-databases/databases/contained-database-collations.md).
 
-WITH \<option> **\<filestream_options>**
+WITH \<option>      
+**\<filestream_options>**
 
-    NON_TRANSACTED_ACCESS = { **OFF** | READ_ONLY | FULL }
-**Si applica a**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] tramite [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].
+NON_TRANSACTED_ACCESS = { **OFF** | READ_ONLY | FULL } **Si applica a**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] fino a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].
 
-    Specifies the level of non-transactional FILESTREAM access to the database.
+Specifica il livello di accesso FILESTREAM non transazionale al database.
 
-    |valore|Descrizione|
-    |-----------|-----------------|
-    |OFF|L'accesso non transazionale è disabilitato.|
-    |READONLY|I dati FILESTREAM di questo database possono essere letti da processi non transazionali.|
-    |FULL|L'accesso non transazionale completo a tabelle FileTable FILESTREAM è abilitato.|
+|valore|Descrizione|
+|-----------|-----------------|
+|OFF|L'accesso non transazionale è disabilitato.|
+|READONLY|I dati FILESTREAM di questo database possono essere letti da processi non transazionali.|
+|FULL|L'accesso non transazionale completo a tabelle FileTable FILESTREAM è abilitato.|
 
-     DIRECTORY_NAME = \<directory_name>
+DIRECTORY_NAME = \<directory_name>     
 **Si applica a**: da [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
 
-    A windows-compatible directory name. This name should be unique among all the Database_Directory names in the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance. Uniqueness comparison is case-insensitive, regardless of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] collation settings. This option should be set before creating a FileTable in this database.
+Nome di directory compatibile con Windows. Il nome deve essere univoco in tutti i nomi di Database_Directory nell'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Il confronto di univocità non supporta la distinzione tra maiuscole e minuscole, indipendentemente dalle impostazioni delle regole di confronto di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. È necessario impostare questa opzione prima di creare una tabella FileTable in questo database.
 
 Le opzioni seguenti sono consentite solo quando CONTAINMENT è stato impostato su PARTIAL. Se l'opzione CONTAINMENT è impostata su NONE, si verificheranno errori.
 
 - **DEFAULT_FULLTEXT_LANGUAGE = \<lcid> | \<language name> | \<language alias>**
 
-**Si applica a**: da [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
+  **Si applica a**: da [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
 
-    See [Configure the default full-text language Server Configuration Option](../../database-engine/configure-windows/configure-the-default-full-text-language-server-configuration-option.md) for a full description of this option.
+  Per una descrizione completa di questa opzione, vedere [Configurare l'opzione di configurazione del server Lingua predefinita full-text](../../database-engine/configure-windows/configure-the-default-full-text-language-server-configuration-option.md).
 
 - **DEFAULT_LANGUAGE = \<lcid> | \<language name> | \<language alias>**
 
-**Si applica a**: da [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
+  **Si applica a**: da [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
 
-    See [Configure the default language Server Configuration Option](../../database-engine/configure-windows/configure-the-default-language-server-configuration-option.md) for a full description of this option.
+  Per una descrizione completa di questa opzione, vedere [Configurare l'opzione di configurazione del server Lingua predefinita](../../database-engine/configure-windows/configure-the-default-language-server-configuration-option.md).
 
 - **NESTED_TRIGGERS = { OFF | ON}**
 
-**Si applica a**: da [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
+  **Si applica a**: da [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
 
-    See [Configure the nested triggers Server Configuration Option](../../database-engine/configure-windows/configure-the-nested-triggers-server-configuration-option.md) for a full description of this option.
+  Per una descrizione completa di questa opzione, vedere [Configurare l'opzione di configurazione del server Trigger annidati](../../database-engine/configure-windows/configure-the-nested-triggers-server-configuration-option.md).
 
 - **TRANSFORM_NOISE_WORDS = { OFF | ON}**
 
-**Si applica a**: da [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
+  **Si applica a**: da [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
 
-    See [transform noise words Server Configuration Option](../../database-engine/configure-windows/transform-noise-words-server-configuration-option.md)for a full description of this option.
+  Per una descrizione completa di questa opzione, vedere [Configurare l'opzione di configurazione del server Transform Noise Words](../../database-engine/configure-windows/transform-noise-words-server-configuration-option.md).
 
 - **TWO_DIGIT_YEAR_CUTOFF = { 2049 | \<qualsiasi anno compreso tra il 1753 e il 9999> }**
 
-    Quattro cifre che rappresentano un anno. Il valore predefinito è 2049. Per una descrizione completa di questa opzione, vedere [Configurare l'opzione di configurazione del server two-digit year cutoff](../../database-engine/configure-windows/configure-the-two-digit-year-cutoff-server-configuration-option.md).
+  Quattro cifre che rappresentano un anno. Il valore predefinito è 2049. Per una descrizione completa di questa opzione, vedere [Configurare l'opzione di configurazione del server two-digit year cutoff](../../database-engine/configure-windows/configure-the-two-digit-year-cutoff-server-configuration-option.md).
 
 - **DB_CHAINING { OFF | ON }**
 
-    Se l'opzione è impostata su ON, il database può essere l'origine o la destinazione di una catena di proprietà tra database.
+  Se l'opzione è impostata su ON, il database può essere l'origine o la destinazione di una catena di proprietà tra database.
 
-    Se l'opzione è impostata su OFF, il database non può partecipare alla catena di proprietà tra database. Il valore predefinito è OFF.
+  Se l'opzione è impostata su OFF, il database non può partecipare alla catena di proprietà tra database. Il valore predefinito è OFF.
 
-    > [!IMPORTANT]
-    > Questa impostazione viene riconosciuta dall'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] quando l'opzione del server cross db ownership chaining è impostata su 0 (OFF). Quando cross db ownership chaining è 1 (ON), tutti i database utente possono partecipare ai concatenamenti della proprietà tra database, a prescindere dal valore di questa opzione. Questa opzione viene impostata tramite [sp_configure](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md).
+  > [!IMPORTANT]
+  > Questa impostazione viene riconosciuta dall'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] quando l'opzione del server cross db ownership chaining è impostata su 0 (OFF). Quando cross db ownership chaining è 1 (ON), tutti i database utente possono partecipare ai concatenamenti della proprietà tra database, a prescindere dal valore di questa opzione. Questa opzione viene impostata tramite [sp_configure](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md).
 
-    Per impostare questa opzione è richiesta l'appartenenza al ruolo predefinito del server sysadmin. L'opzione DB_CHAINING non può essere impostata in questi database di sistema: master, model, tempdb.
+  Per impostare questa opzione è richiesta l'appartenenza al ruolo predefinito del server sysadmin. L'opzione DB_CHAINING non può essere impostata in questi database di sistema: master, model, tempdb.
 
 - **TRUSTWORTHY { OFF | ON }**
 
-    Se l'opzione è impostata su ON, i moduli del database (ad esempio le viste, le funzioni definite dall'utente o le stored procedure) che utilizzano un contesto di rappresentazione possono accedere alle risorse esterne al database.
+  Se l'opzione è impostata su ON, i moduli del database (ad esempio le viste, le funzioni definite dall'utente o le stored procedure) che utilizzano un contesto di rappresentazione possono accedere alle risorse esterne al database.
 
-    Se l'opzione è impostata su OFF, i moduli del database in un conteso di rappresentazione non possono accedere alle risorse esterne al database. Il valore predefinito è OFF.
+  Se l'opzione è impostata su OFF, i moduli del database in un conteso di rappresentazione non possono accedere alle risorse esterne al database. Il valore predefinito è OFF.
 
-    L'opzione TRUSTWORTHY viene impostata su OFF ogni volta che il database viene collegato.
+  L'opzione TRUSTWORTHY viene impostata su OFF ogni volta che il database viene collegato.
 
-    Per impostazione predefinita, in tutti i database di sistema, a eccezione del database msdb, TRUSTWORTHY è impostata su OFF. Per i database model e tempdb questo valore non può essere modificato. È consigliabile evitare di impostare l'opzione TRUSTWORTHY su ON per il database master.
+  Per impostazione predefinita, in tutti i database di sistema, a eccezione del database msdb, TRUSTWORTHY è impostata su OFF. Per i database model e tempdb questo valore non può essere modificato. È consigliabile evitare di impostare l'opzione TRUSTWORTHY su ON per il database master.
 
 - **PERSISTENT_LOG_BUFFER=ON ( DIRECTORY_NAME='' )**
 
-    Quando si specifica questa opzione, il buffer del log delle transazioni viene creato in un volume che si trova in un dispositivo disco con Storage Class Memory (memoria non volatile NVDIMM-N), noto anche come buffer del log persistente. Per altre informazioni, vedere [Transaction Commit latency acceleration using Storage Class Memory](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2016/12/02/transaction-commit-latency-acceleration-using-storage-class-memory-in-windows-server-2016sql-server-2016-sp1/) (Accelerazione della latenza di commit delle transazioni con Storage Class Memory). **Si applica a** : [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] e versioni successive.
+  Quando si specifica questa opzione, il buffer del log delle transazioni viene creato in un volume che si trova in un dispositivo disco con Storage Class Memory (memoria non volatile NVDIMM-N), noto anche come buffer del log persistente. Per altre informazioni, vedere [Transaction Commit latency acceleration using Storage Class Memory](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2016/12/02/transaction-commit-latency-acceleration-using-storage-class-memory-in-windows-server-2016sql-server-2016-sp1/) (Accelerazione della latenza di commit delle transazioni con Storage Class Memory). **Si applica a** : [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] e versioni successive.
 
-FOR ATTACH [ WITH \< attach_database_option > ] Specifica che il database viene creato [collegando](../../relational-databases/databases/database-detach-and-attach-sql-server.md) un set di file esistente del sistema operativo. È necessario che una voce dell'elenco \<filespec> specifichi il file primario. Le altre voci \<filespec> obbligatorie sono quelle relative ai file con percorso diverso rispetto al percorso usato in fase di creazione del database o al momento dell'ultimo collegamento del database stesso. Per questi file è necessario specificare una voce \<filespec>.
+FOR ATTACH [ WITH \< attach_database_option > ]     
+Specifica che il database viene creato [collegando](../../relational-databases/databases/database-detach-and-attach-sql-server.md) un set esistente di file del sistema operativo. È necessario che una voce dell'elenco \<filespec> specifichi il file primario. Le altre voci \<filespec> obbligatorie sono quelle relative ai file con percorso diverso rispetto al percorso usato in fase di creazione del database o al momento dell'ultimo collegamento del database stesso. Per questi file è necessario specificare una voce \<filespec>.
 
 FOR ATTACH richiede le seguenti condizioni:
 
@@ -291,13 +296,17 @@ FOR ATTACH può specificare l'opzione RESTRICTED_USER. RESTRICTED_USER consente 
 
 Se il database usa [!INCLUDE[ssSB](../../includes/sssb-md.md)], usare WITH \<service_broker_option> nella clausola FOR ATTACH:
 
-\<service_broker_option> Controlla il recapito dei messaggi di [!INCLUDE[ssSB](../../includes/sssb-md.md)] e l'identificatore di [!INCLUDE[ssSB](../../includes/sssb-md.md)] per il database. È possibile specificare le opzioni di [!INCLUDE[ssSB](../../includes/sssb-md.md)] solo quando viene utilizzata la clausola FOR ATTACH.
+\<service_broker_option>     
+Controlla il recapito dei messaggi di [!INCLUDE[ssSB](../../includes/sssb-md.md)] e l'identificatore di [!INCLUDE[ssSB](../../includes/sssb-md.md)] per il database. È possibile specificare le opzioni di [!INCLUDE[ssSB](../../includes/sssb-md.md)] solo quando viene utilizzata la clausola FOR ATTACH.
 
-ENABLE_BROKER specifica che [!INCLUDE[ssSB](../../includes/sssb-md.md)] è abilitato per il database specificato. In altre parole, viene avviato il recapito dei messaggi e is_broker_enabled viene impostato su true nella vista del catalogo sys.databases. Il database mantiene l'identificatore di [!INCLUDE[ssSB](../../includes/sssb-md.md)] esistente.
+ENABLE_BROKER    
+Indica che [!INCLUDE[ssSB](../../includes/sssb-md.md)] è abilitato per il database specificato. In altre parole, viene avviato il recapito dei messaggi e is_broker_enabled viene impostato su true nella vista del catalogo sys.databases. Il database mantiene l'identificatore di [!INCLUDE[ssSB](../../includes/sssb-md.md)] esistente.
 
-NEW_BROKER crea un nuovo valore di service_broker_guid sia in sys.databases che nel database ripristinato e termina tutti gli endpoint di conversazione con la pulizia. Service Broker è abilitato, ma agli endpoint di conversazione remoti non viene inviato alcun messaggio. Tutte le route che fanno riferimento all'identificatore di [!INCLUDE[ssSB](../../includes/sssb-md.md)] precedente devono essere ricreate con il nuovo identificatore.
+NEW_BROKER     
+Crea un nuovo valore di service_broker_guid sia in sys.databases che nel database ripristinato e termina tutti gli endpoint di conversazione con l'eliminazione. Service Broker è abilitato, ma agli endpoint di conversazione remoti non viene inviato alcun messaggio. Tutte le route che fanno riferimento all'identificatore di [!INCLUDE[ssSB](../../includes/sssb-md.md)] precedente devono essere ricreate con il nuovo identificatore.
 
-ERROR_BROKER_CONVERSATIONS termina tutte le conversazioni e restituisce un errore che indica che il database è collegato o ripristinato. Service Broker viene disabilitato fino al termine dell'operazione e quindi viene riabilitato. Il database mantiene l'identificatore di [!INCLUDE[ssSB](../../includes/sssb-md.md)] esistente.
+ERROR_BROKER_CONVERSATIONS      
+Termina tutte le conversazioni e restituisce un errore che indica che il database è collegato o ripristinato. Service Broker viene disabilitato fino al termine dell'operazione e quindi viene riabilitato. Il database mantiene l'identificatore di [!INCLUDE[ssSB](../../includes/sssb-md.md)] esistente.
 
 Quando si collega un database replicato copiato anziché scollegato, è necessario considerare quanto segue:
 
@@ -312,10 +321,12 @@ Quando un database viene collegato per la prima volta a una nuova istanza di [!I
 
 > [!IMPORTANT]
 > È consigliabile non collegare database da origini sconosciute o non attendibili. Tali database possono contenere codice dannoso che potrebbe eseguire codice [!INCLUDE[tsql](../../includes/tsql-md.md)] indesiderato o causare errori modificando lo schema o la struttura fisica di database. Prima di usare un database da un'origine sconosciuta o non attendibile, eseguire [DBCC CHECKDB](../../t-sql/database-console-commands/dbcc-checkdb-transact-sql.md) sul database in un server non di produzione ed esaminare il codice contenuto nel database, ad esempio le stored procedure o altro codice definito dall'utente.
+
 > [!NOTE]
 > Le opzioni **TRUSTWORTHY** e **DB_CHAINING** non hanno effetto quando si collega un database.
 
-FOR ATTACH_REBUILD_LOG specifica che il database viene creato collegando un set di file del sistema operativo già esistente. Questa opzione è limitata ai database in lettura/scrittura. È necessaria una voce *\<filespec>* che specifichi il file primario. Se uno o più file di log delle transazioni sono mancanti, il file di log viene ricostruito. Il log ATTACH_REBUILD_LOG crea automaticamente un nuovo file di log da 1 MB. Questo file viene posizionato nel percorso predefinito del file di log. Per informazioni su questa posizione, vedere [Visualizzare o modificare i percorsi predefiniti per i file di dati e di log - SSMS](../../database-engine/configure-windows/view-or-change-the-default-locations-for-data-and-log-files.md).
+FOR ATTACH_REBUILD_LOG     
+Specifica che il database viene creato collegando un set di file del sistema operativo già esistente. Questa opzione è limitata ai database in lettura/scrittura. È necessaria una voce *\<filespec>* che specifichi il file primario. Se uno o più file di log delle transazioni sono mancanti, il file di log viene ricostruito. Il log ATTACH_REBUILD_LOG crea automaticamente un nuovo file di log da 1 MB. Questo file viene posizionato nel percorso predefinito del file di log. Per informazioni su questa posizione, vedere [Visualizzare o modificare i percorsi predefiniti per i file di dati e di log - SSMS](../../database-engine/configure-windows/view-or-change-the-default-locations-for-data-and-log-files.md).
 
 > [!NOTE]
 > Se i file di log sono disponibili, [!INCLUDE[ssDE](../../includes/ssde-md.md)] utilizza questi file invece di ricompilare i file di log.
@@ -334,15 +345,20 @@ Non è possibile specificare FOR ATTACH_REBUILD_LOG in uno snapshot del database
 
 Per altre informazioni sul collegamento e lo scollegamento di database, vedere [Collegamento e scollegamento di un database](../../relational-databases/databases/database-detach-and-attach-sql-server.md).
 
-\<filespec> controlla le proprietà del file.
+\<filespec>     
+Controlla le proprietà del file.
 
-NAME *logical_file_name* specifica il nome logico del file. Il parametro NAME è necessario quando FILENAME è specificato, eccetto quando viene specificata una delle clausole FOR ATTACH. Non è possibile assegnare il nome PRIMARY a un filegroup FILESTREAM.
+NAME *logical_file_name*     
+Specifica il nome logico per il file. Il parametro NAME è necessario quando FILENAME è specificato, eccetto quando viene specificata una delle clausole FOR ATTACH. Non è possibile assegnare il nome PRIMARY a un filegroup FILESTREAM.
 
-*logical_file_name* è il nome logico usato in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] per fare riferimento al file. *Logical_file_name* deve essere univoco all'interno del database e conforme alle regole per gli [identificatori](../../relational-databases/databases/database-identifiers.md). Il nome può essere un carattere o una costante Unicode oppure un identificatore normale o delimitato.
+*logical_file_name*     
+Nome logico utilizzato in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] per fare riferimento al file. *Logical_file_name* deve essere univoco all'interno del database e conforme alle regole per gli [identificatori](../../relational-databases/databases/database-identifiers.md). Il nome può essere un carattere o una costante Unicode oppure un identificatore normale o delimitato.
 
-FILENAME{ **'**_os\_file\_name_**'** | **'**_filestream\_path_**'** } specifica il nome file (fisico) del sistema operativo.
+FILENAME { **'**_os\_file\_name_**'** | **'**_filestream\_path_**'** }      
+Specifica il nome del file (fisico) del sistema operativo.
 
-**'** *os_file_name* **'** indica il percorso e il nome file usati dal sistema operativo quando si crea il file. Il file deve risiedere in uno dei dispositivi seguenti: il server locale in cui è installato [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], una rete di archiviazione (SAN) o una rete basata su iSCSI. Il percorso specificato deve essere esistente prima dell'esecuzione dell'istruzione CREATE DATABASE. Per altre informazioni, vedere "Filegroup e file di database" nella sezione Osservazioni.
+**'** *os_file_name* **'**     
+Percorso e nome di file utilizzato dal sistema operativo quando si crea il file. Il file deve risiedere in uno dei dispositivi seguenti: il server locale in cui è installato [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], una rete di archiviazione (SAN) o una rete basata su iSCSI. Il percorso specificato deve essere esistente prima dell'esecuzione dell'istruzione CREATE DATABASE. Per altre informazioni, vedere "Filegroup e file di database" nella sezione Osservazioni.
 
 È possibile impostare i parametri SIZE, MAXSIZE e FILEGROWTH se è specificato un percorso UNC per il file.
 
@@ -350,34 +366,42 @@ Se il file si trova in una partizione non formattata, nell'argomento *os_file_na
 
 I file di dati non devono essere archiviati in file system compressi a meno che non si tratti di file secondari in sola lettura o il database non sia in sola lettura. I file di log non devono mai essere archiviati in file system compressi.
 
-**'** *filestream_path* **'**: per un filegroup FILESTREAM, FILENAME fa riferimento a un percorso in cui verranno archiviati i dati di FILESTREAM. È necessario che il percorso fino all'ultima cartella esista già, mentre l'ultima cartella non deve essere presente. Se, ad esempio, si specifica il percorso C:\MyFiles\MyFilestreamData, C:\MyFiles deve esistere già prima di eseguire ALTER DATABASE, mentre la cartella MyFilestreamData non deve essere presente.
+**'** *filestream_path* **'**      
+Per un filegroup FILESTREAM, FILENAME si riferisce a un percorso in cui verrà archiviato FILESTREAM. È necessario che il percorso fino all'ultima cartella esista già, mentre l'ultima cartella non deve essere presente. Se, ad esempio, si specifica il percorso C:\MyFiles\MyFilestreamData, C:\MyFiles deve esistere già prima di eseguire ALTER DATABASE, mentre la cartella MyFilestreamData non deve essere presente.
 
 Il filegroup e il file (`<filespec>`) devono essere creati nella stessa istruzione.
 
 Le proprietà SIZE e FILEGROWTH non si applicano a un filegroup FILESTREAM.
 
-SIZE *size* specifica le dimensioni del file.
+SIZE *size*     
+Specifica le dimensioni del file.
 
 Non è possibile specificare SIZE quando *os_file_name* è specificato come percorso UNC. SIZE non si applica a un filegroup FILESTREAM.
 
-*size* corrisponde alle dimensioni iniziali del file.
+*size*     
+Dimensioni iniziali del file.
 
 Se non si specifica *size* per il file primario, il [!INCLUDE[ssDE](../../includes/ssde-md.md)] usa le dimensioni del file primario del database modello. Le dimensioni predefinite del modello corrispondono a 8 MB (a partire da [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]) o a 1 MB (per le versioni precedenti). Se si specifica un file di dati o un file di log secondario senza specificare *size* per il file, il [!INCLUDE[ssDE](../../includes/ssde-md.md)] crea un file di 8 MB (a partire da [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]) o di 1 MB (per le versioni precedenti). Le dimensioni specificate per il file di dati primario devono essere uguali almeno alle dimensioni del file primario del database model.
 
 È possibile usare i suffissi per kilobyte (KB), megabyte (MB), gigabyte (GB) e terabyte (TB). Il valore predefinito è MB. Specificare un numero intero, ovvero non includere decimali. *Size* è un valore intero. Per i valori superiori a 2.147.483.647, usare le unità maggiori.
 
-MAXSIZE *max_size* specifica le dimensioni massime consentite per il file. Non è possibile specificare MAXSIZE quando *os_file_name* è specificato come percorso UNC.
+MAXSIZE *max_size*     
+Valore massimo fino a cui possono aumentare le dimensioni del file. Non è possibile specificare MAXSIZE quando *os_file_name* è specificato come percorso UNC.
 
-*max_size* corrisponde alle dimensioni massime del file. È possibile usare i suffissi KB, MB, GB e TB. Il valore predefinito è MB. Specificare un numero intero, ovvero non includere decimali. Se *max_size* viene omesso, le dimensioni del file aumentano fino all'esaurimento dello spazio su disco. *Max_size* è un valore intero. Per i valori superiori a 2.147.483.647, usare le unità maggiori.
+*max_size*     
+Dimensioni massime del file. È possibile usare i suffissi KB, MB, GB e TB. Il valore predefinito è MB. Specificare un numero intero, ovvero non includere decimali. Se *max_size* viene omesso, le dimensioni del file aumentano fino all'esaurimento dello spazio su disco. *Max_size* è un valore intero. Per i valori superiori a 2.147.483.647, usare le unità maggiori.
 
-UNLIMITED specifica che le dimensioni del file aumentano fino a quando il disco risulta pieno. In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], un file di log specificato con aumento delle dimensioni illimitato può raggiungere una dimensione massima di 2 TB, mentre un file di dati può raggiungere una dimensione massima di 16 TB.
+UNLIMITED    
+Specifica che le dimensioni del file aumentano fino a quando il disco risulta pieno. In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], un file di log specificato con aumento delle dimensioni illimitato può raggiungere una dimensione massima di 2 TB, mentre un file di dati può raggiungere una dimensione massima di 16 TB.
 
 > [!NOTE]
 > Non vi sono dimensioni massime se questa opzione viene specificata per un contenitore FILESTREAM, il quale continua a crescere finché il disco non è pieno.
 
-FILEGROWTH *growth_increment* specifica l'incremento automatico per l'aumento delle dimensioni del file. Il valore impostato per il parametro FILEGROWTH di un file non può essere superiore al valore del parametro MAXSIZE. Non è possibile specificare FILEGROWTH quando *os_file_name* è specificato come percorso UNC. FILEGROWTH non si applica a un filegroup FILESTREAM.
+FILEGROWTH *growth_increment*    
+Specifica l'incremento automatico per l'aumento delle dimensioni del file. Il valore impostato per il parametro FILEGROWTH di un file non può essere superiore al valore del parametro MAXSIZE. Non è possibile specificare FILEGROWTH quando *os_file_name* è specificato come percorso UNC. FILEGROWTH non si applica a un filegroup FILESTREAM.
 
-*growth_increment* è la quantità di spazio aggiunta al file ogni volta che è necessario altro spazio.
+*growth_increment*    
+Quantità di spazio aggiunta al file ogni volta che è necessario spazio aggiuntivo.
 
 È possibile specificare il valore in megabyte (MB), kilobyte (KB), gigabyte (GB) o terabyte (TB) oppure in forma di percentuale (%). Se si specifica un valore senza il suffisso MB, KB o %, il suffisso predefinito è MB. Se si utilizza il suffisso %, l'incremento corrisponde alla percentuale delle dimensioni del file specificata quando si verifica l'incremento. Le dimensioni specificate vengono arrotondate al blocco di 64 KB più prossimo e il valore minimo è 64 KB.
 
@@ -391,26 +415,32 @@ Se FILEGROWTH viene omesso, i valori predefiniti sono i seguenti:
 |Inizio [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]|Dati 1 MB. File di log 10%.|
 |Prima di [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]|Dati 10%. File di log 10%.|
 
-\<filegroup> controlla le proprietà del filegroup. Non è possibile specificare il filegroup in uno snapshot del database.
+\<filegroup>     
+Controlla le proprietà del filegroup. Non è possibile specificare il filegroup in uno snapshot del database.
 
-FILEGROUP *filegroup_name* è il nome logico del filegroup.
+FILEGROUP *filegroup_name*     
+Nome logico del filegroup.
 
-*filegroup_name*
+*filegroup_name*     
 *filegroup_name* deve essere univoco nel database e deve essere diverso dai nomi PRIMARY e PRIMARY_LOG forniti dal sistema. Il nome può essere un carattere o una costante Unicode oppure un identificatore normale o delimitato. Il nome deve essere conforme alle regole per gli [identificatori](../../relational-databases/databases/database-identifiers.md).
 
-CONTAINS FILESTREAM specifica che il filegroup archivia BLOB FILESTREAM nel file system.
+CONTAINS FILESTREAM     
+Specifica che tramite il filegroup vengono archiviati oggetti binari di grandi dimensioni (BLOB) nel file system.
 
-CONTAINS MEMORY_OPTIMIZED_DATA
+CONTAINS MEMORY_OPTIMIZED_DATA     
 
 **Si applica a**: da [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
 
 Specifica che il filegroup archivia i dati memory_optimized nel file system. Per altre informazioni, vedere [OLTP in memoria - Ottimizzazione per la memoria](../../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md). È ammesso un solo filegroup MEMORY_OPTIMIZED_DATA per database. Per esempi di codice che creano un filegroup per l'archiviazione di dati ottimizzati per la memoria, vedere [Creazione di una tabella ottimizzata per la memoria e di una stored procedure compilata in modo nativo](../../relational-databases/in-memory-oltp/creating-a-memory-optimized-table-and-a-natively-compiled-stored-procedure.md).
 
-DEFAULT indica che il filegroup specificato è il filegroup predefinito nel database.
+DEFAULT     
+Indica che il filegroup specificato è il filegroup predefinito nel database.
 
-*database_snapshot_name* è il nome del nuovo snapshot del database. I nomi dei database devono essere univoci all'interno di un'istanza d [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e devono essere conformi alle regole per gli identificatori. *database_snapshot_name* può essere composto da un massimo di 128 caratteri.
+*database_snapshot_name*    
+Nome del nuovo snapshot del database. I nomi dei database devono essere univoci all'interno di un'istanza d [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e devono essere conformi alle regole per gli identificatori. *database_snapshot_name* può essere composto da un massimo di 128 caratteri.
 
-ON **(** NAME **=**_logical\_file\_name_**,** FILENAME **='**_os\_file\_name_**')** [ **,**... *n* ] per la creazione di uno snapshot del database, specifica un elenco di file nel database di origine. Per il funzionamento dello snapshot, è necessario specificare tutti i file di dati singolarmente. I file di log non sono tuttavia consentiti per gli snapshot del database. I filegroup FILESTREAM non sono supportati dagli snapshot del database. Se un file di dati FILESTREAM è incluso in una clausola CREATE DATABASE ON, l'istruzione non verrà eseguita e sarà generato un errore.
+ON **(** NAME **=**_logical\_file\_name_**,** FILENAME **='**_os\_file\_name_**')** [ **,**... *n* ]    
+Per la creazione di uno snapshot del database, specifica un elenco di file nel database di origine. Per il funzionamento dello snapshot, è necessario specificare tutti i file di dati singolarmente. I file di log non sono tuttavia consentiti per gli snapshot del database. I filegroup FILESTREAM non sono supportati dagli snapshot del database. Se un file di dati FILESTREAM è incluso in una clausola CREATE DATABASE ON, l'istruzione non verrà eseguita e sarà generato un errore.
 
 Per le descrizioni di NAME e FILENAME e i rispettivi valori, vedere le descrizioni dei valori \<filespec> equivalenti.
 
@@ -419,15 +449,15 @@ Per le descrizioni di NAME e FILENAME e i rispettivi valori, vedere le descrizio
 
 AS SNAPSHOT OF *source_database_name* specifica che il database in fase di creazione è uno snapshot del database di origine specificato da *source_database_name*. Lo snapshot e il database di origine devono essere archiviati nella stessa istanza.
 
-Per altre informazioni, vedere "Snapshot di database" nella sezione Osservazioni.
+Per altre informazioni, vedere [Snapshot di database](#database-snapshots) nella sezione Remarks.
 
 ## <a name="remarks"></a>Remarks
 
 Il backup del [database master](../../relational-databases/databases/master-database.md) deve essere eseguito ogni volta che si crea, si modifica o si rilascia un database utente.
 
-L'istruzione CREATE DATABASE deve essere eseguita in modalità autocommit, la modalità predefinita per la gestione delle transazioni, e non è consentita in una transazione esplicita o implicita.
+L'istruzione `CREATE DATABASE` deve essere eseguita in modalità autocommit, che è la modalità predefinita di gestione delle transazioni, e non è consentita in una transazione esplicita o implicita.
 
-È possibile usare un'istruzione CREATE DATABASE per creare un database e i file che lo archiviano. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] implementa l'istruzione CREATE DATABASE tramite i passaggi seguenti:
+È possibile usare un'istruzione `CREATE DATABASE` per creare un database e i file che lo archiviano. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] implementa l'istruzione CREATE DATABASE tramite i passaggi seguenti:
 
 1. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usa una copia del [database modello](../../relational-databases/databases/model-database.md) per inizializzare il database e i relativi metadati.
 2. Un GUID di Service Broker viene assegnato al database.
@@ -446,7 +476,6 @@ Alcune funzionalità del database dipendono dalle caratteristiche o dalle funzio
 - Filegroup di dati ottimizzati per la memoria
 
 ## <a name="database-files-and-filegroups"></a>Filegroup e file di database
-
 Ogni database ha almeno due file, un *file primario* e un *file registro transazioni*, e almeno un filegroup. Per ogni database è possibile specificare un massimo di 32.767 file e 32.767 filegroup.
 
 Durante la creazione di un database, creare file di dati di dimensioni corrispondenti alla quantità massima di dati che si prevede di includere nel database.
@@ -454,37 +483,32 @@ Durante la creazione di un database, creare file di dati di dimensioni corrispon
 Per l'archiviazione dei file di database di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] è consigliabile usare una rete di archiviazione (SAN), una rete basata su iSCSI o un disco collegato localmente, poiché questa configurazione ottimizza le prestazioni e l'affidabilità di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].
 
 ## <a name="database-snapshots"></a>Snapshot di database
-
-È possibile usare l'istruzione CREATE DATABASE per creare una visualizzazione statica, di sola lettura, uno *snapshot* del *database di origine*. Uno snapshot del database è consistente dal punto di vista transazionale con il database di origine al momento della creazione dello snapshot. Un database di origine può avere più snapshot.
+È possibile usare l'istruzione `CREATE DATABASE` per creare una visualizzazione statica, di sola lettura, uno *snapshot* del *database di origine*. Uno snapshot del database è consistente dal punto di vista transazionale con il database di origine al momento della creazione dello snapshot. Un database di origine può avere più snapshot.
 
 > [!NOTE]
-> Quando si crea uno snapshot di database, l'istruzione CREATE DATABASE non può far riferimento a file di log, file offline, file di ripristino e file inattivi.
+> Quando si crea uno snapshot di database, l'istruzione `CREATE DATABASE` non può far riferimento a file di log, file offline, file di ripristino e file inattivi.
 
 Se la creazione di uno snapshot di database ha esito negativo, lo snapshot diventa sospetto e deve essere eliminato. Per altre informazioni, vedere [DROP DATABASE](../../t-sql/statements/drop-database-transact-sql.md).
 
-Ogni snapshot viene mantenuto fino a quando non viene eliminato tramite DROP DATABASE.
+Ogni snapshot viene mantenuto fino a quando non viene eliminato tramite `DROP DATABASE`.
 
 Per altre informazioni, vedere [Snapshot del database](../../relational-databases/databases/database-snapshots-sql-server.md).
 
 ## <a name="database-options"></a>Opzioni di database
-
 Quando si crea un database, vengono impostate automaticamente diverse opzioni. Per un elenco di queste opzioni, vedere [Opzioni ALTER DATABASE SET](../../t-sql/statements/alter-database-transact-sql-set-options.md).
 
 ## <a name="the-model-database-and-creating-new-databases"></a>Database modello e creazione di nuovi database
-
 Tutti gli oggetti definiti dall'utente inclusi nel [database modello](../../relational-databases/databases/model-database.md) vengono copiati in tutti i nuovi database. È possibile aggiungere al database model qualsiasi oggetto che si desidera includere in tutti i database appena creati, ad esempio tabelle, viste, stored procedure, tipi di dati e così via.
 
-Quando si specifica un'istruzione CREATE DATABASE *database_name* senza parametri di dimensione aggiuntivi, per il file di dati primario vengono usate le dimensioni del file primario nel database modello.
+Quando si specifica un'istruzione `CREATE DATABASE <database_name>` senza parametri delle dimensioni aggiuntivi, per il file di dati primario vengono usate le dimensioni del file primario nel database modello.
 
-A meno che non si specifichi FOR ATTACH, ogni nuovo database eredita le impostazioni delle opzioni di database dal database model. Ad esempio, l'opzione di database auto shrink viene impostata su **true** nel database modello e in tutti i nuovi database creati. Se si modificano le opzioni nel database model, queste nuove impostazioni vengono utilizzate in tutti i nuovi database creati. La modifica delle operazioni nel database model non ha effetto sui database esistenti. Se viene specificata l'opzione FOR ATTACH nell'istruzione CREATE DATABASE, i nuovi database ereditano le impostazioni delle opzioni di database dal database originale.
+A meno che non si specifichi `FOR ATTACH`, ogni nuovo database eredita le impostazioni delle opzioni di database dal database modello. Ad esempio, l'opzione di database auto shrink viene impostata su **true** nel database modello e in tutti i nuovi database creati. Se si modificano le opzioni nel database model, queste nuove impostazioni vengono utilizzate in tutti i nuovi database creati. La modifica delle operazioni nel database model non ha effetto sui database esistenti. Se viene specificata l'opzione FOR ATTACH nell'istruzione CREATE DATABASE, i nuovi database ereditano le impostazioni delle opzioni di database dal database originale.
 
 ## <a name="viewing-database-information"></a>Visualizzazione delle informazioni sui database
-
 Per restituire informazioni su database, file e filegroup, è possibile usare viste del catalogo, funzioni di sistema e stored procedure di sistema. Per altre informazioni, vedere [Viste di sistema](https://msdn.microsoft.com/library/35a6161d-7f43-4e00-bcd3-3091f2015e90).
 
-## <a name="permissions"></a>Permissions
-
-È richiesta l'autorizzazione CREATE DATABASE, CREATE ANY DATABASE o ALTER ANY DATABASE.
+## <a name="permissions"></a>Autorizzazioni
+È necessaria l'autorizzazione `CREATE DATABASE`, `CREATE ANY DATABASE` o `ALTER ANY DATABASE`.
 
 Per mantenere il controllo sull'utilizzo del disco per un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], l'autorizzazione per la creazione dei database è in genere limitata a pochi account di accesso.
 
@@ -498,7 +522,6 @@ GO
 ```
 
 ### <a name="permissions-on-data-and-log-files"></a>Autorizzazioni per i file di dati e di log
-
 In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] vengono impostate autorizzazioni specifiche per i file di dati e di log in ogni database. Le autorizzazioni seguenti vengono impostate quando le operazioni elencate di seguito vengono eseguite in un database.
 
 |||
@@ -513,9 +536,7 @@ Con le autorizzazioni è possibile evitare che vengano accidentalmente alterati 
 > In [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssExpressEd2005](../../includes/ssexpressed2005-md.md)] non vengono impostate autorizzazioni per i file di dati e di log.
 
 ## <a name="examples"></a>Esempi
-
 ### <a name="a-creating-a-database-without-specifying-files"></a>A. Creazione di un database senza specificare i file
-
 Nell'esempio seguente viene creato il database `mytest` insieme al file di log delle transazioni e al file primario corrispondenti. Poiché l'istruzione non specifica elementi \<filespec>, le dimensioni del file di database primario corrispondono a quelle del file primario del database modello. Il file di log delle transazioni viene impostato sul valore più grande tra 512 KB e il 25% delle dimensioni del file di dati primario. Poiché MAXSIZE non è specificato, le dimensioni dei file possono aumentare fino a riempire lo spazio disponibile su disco. In questo esempio viene inoltre illustrato come eliminare l'eventuale database denominato `mytest` prima di creare il database `mytest`.
 
 ```sql
@@ -534,7 +555,6 @@ GO
 ```
 
 ### <a name="b-creating-a-database-that-specifies-the-data-and-transaction-log-files"></a>b. Creazione di un database che specifica i file di dati e i file di log delle transazioni
-
 Nell'esempio seguente viene creato il database `Sales`. Dal momento che la parola chiave PRIMARY non è specificata, il primo file, cioè `Sales_dat`, corrisponde al file primario. Poiché nel parametro SIZE non viene specificato il suffisso MB o KB per le dimensioni del file `Sales_dat` , viene utilizzato MB e le dimensioni del file vengono allocate in megabyte. Il backup del database `Sales_log` vengono allocate in megabyte perché nel parametro `MB` è stato specificato in modo esplicito il suffisso `SIZE` .
 
 ```sql
@@ -557,7 +577,6 @@ GO
 ```
 
 ### <a name="c-creating-a-database-by-specifying-multiple-data-and-transaction-log-files"></a>C. Creazione di un database specificando più file di dati e più file di log delle transazioni
-
 Nell'esempio seguente viene creato il database `Archive` che include tre file di dati da `100-MB` e due file del log delle transazioni da `100-MB`. Il file primario è il primo file dell'elenco e viene specificato in modo esplicito con la parola chiave `PRIMARY`. I file di log delle transazioni vengono specificati dopo le parole chiave `LOG ON`. Si notino le estensioni utilizzate per i file nell'opzione `FILENAME`: `.mdf` per i file di dati primari, `.ndf` per i file di dati secondari e `.ldf` per i file di log delle transazioni. In questo esempio il database viene collocato nell'unità `D:` anziché con il database `master`.
 
 ```sql
@@ -596,7 +615,6 @@ GO
 ```
 
 ### <a name="d-creating-a-database-that-has-filegroups"></a>D. Creazione di un database con filegroup
-
 Nell'esempio seguente viene creato il database `Sales` che include i filegroup seguenti:
 
 - Il filegroup primario con i file `Spri1_dat` e `Spri2_dat`. Gli incrementi specificati nel parametro FILEGROWTH per tali file corrispondono al `15%`.
@@ -652,7 +670,6 @@ GO
 ```
 
 ### <a name="e-attaching-a-database"></a>E. Collegamento di un database
-
 Nell'esempio seguente viene scollegato il database `Archive` creato nell'esempio D, quindi viene collegato tramite la clausola `FOR ATTACH`. `Archive` è stato definito in modo da avere più dati e file di log. Tuttavia, poiché il percorso dei file non è stato modificato dopo la creazione, deve essere specificato solo il file primario nella clausola `FOR ATTACH`. A partire da [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)], tutti i file full-text inclusi nel database in fase di collegamento verranno collegati assieme al database.
 
 ```sql
@@ -667,7 +684,6 @@ GO
 ```
 
 ### <a name="f-creating-a-database-snapshot"></a>F. Creazione di uno snapshot del database
-
 L'esempio seguente crea lo snapshot di database `sales_snapshot0600`. Poiché uno snapshot di database è in sola lettura, non è possibile specificare un file di log. In conformità con la sintassi, viene specificato ogni file nel database di origine, mentre i filegroup non vengono specificati.
 
 Il database di origine per questo esempio è il database `Sales` creato nell'esempio D.
@@ -687,7 +703,6 @@ GO
 ```
 
 ### <a name="g-creating-a-database-and-specifying-a-collation-name-and-options"></a>G. Creazione di un database e specifica di un nome delle regole di confronto e delle opzioni
-
 Nell'esempio seguente viene creato il database `MyOptionsTest`. Viene specificato un nome delle regole di confronto e le opzioni `TRUSTYWORTHY` e `DB_CHAINING` vengono impostate su `ON`.
 
 ```sql
@@ -708,7 +723,6 @@ GO
 ```
 
 ### <a name="h-attaching-a-full-text-catalog-that-has-been-moved"></a>H. Collegamento di un catalogo full-text che è stato spostato
-
 Nell'esempio seguente viene collegato il catalogo full-text `AdvWksFtCat` insieme ai file di log e di dati di `AdventureWorks2012`. In questo esempio, il catalogo full-text viene spostato dalla posizione predefinita in una nuova posizione `c:\myFTCatalogs`. I file di dati e di log rimangono nelle posizioni predefinite.
 
 ```sql
@@ -728,7 +742,6 @@ GO
 ```
 
 ### <a name="i-creating-a-database-that-specifies-a-row-filegroup-and-two-filestream-filegroups"></a>I. Creazione di un database che specifica un filegroup di righe e due filegroup FILESTREAM
-
 Nell'esempio seguente viene creato il database `FileStreamDB`. Il database viene creato con un filegroup di righe e due filegroup FILESTREAM. Ogni filegroup contiene un file:
 
 - `FileStreamDB_data` contiene dati delle righe. Contiene un file, `FileStreamDB_data.mdf`, con il percorso predefinito.
@@ -785,7 +798,6 @@ GO
 ```
 
 ### <a name="j-creating-a-database-that-has-a-filestream-filegroup-with-multiple-files"></a>J. Creazione di un database contenente un filegroup FILESTREAM con più file
-
 Nell'esempio seguente viene creato il database `BlobStore1`. Il database viene creato con un filegroup di righe e un filegroup FILESTREAM, `FS`. Nel filegroup FILESTREAM sono contenuti due file, vale a dire `FS1` e `FS2`. Successivamente il database viene modificato con l'aggiunta di un terzo file, `FS3`, al filegroup FILESTREAM.
 
 ```sql
@@ -861,12 +873,11 @@ GO
 
 ## <a name="overview"></a>Panoramica
 
-Nel database singolo/pool elastico del database SQL di Azure, questa istruzione può essere usata con un server SQL di Azure per creare un database singolo o un database in un pool elastico. Con questa istruzione si specificano il nome del database, le regole di confronto, le dimensioni massime, l'edizione, obiettivo di servizio e, se applicabile, il pool elastico per il nuovo database. Può anche essere usata per creare il database in un pool elastico. Inoltre, può essere usata per creare una copia del database in un altro server di database SQL.
+Nel database singolo/pool elastico del [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], questa istruzione può essere usata con un server SQL di Azure per creare un database singolo o un database in un pool elastico. Con questa istruzione si specificano il nome del database, le regole di confronto, le dimensioni massime, l'edizione, obiettivo di servizio e, se applicabile, il pool elastico per il nuovo database. Può anche essere usata per creare il database in un pool elastico. Inoltre, può essere usata per creare una copia del database in un altro server di database SQL.
 
 ## <a name="syntax"></a>Sintassi
 
 ### <a name="create-a-database"></a>Creazione di un database
-
 ```
 CREATE DATABASE database_name [ COLLATE collation_name ]
 {
@@ -898,7 +909,6 @@ CREATE DATABASE database_name [ COLLATE collation_name ]
 ```
 
 ### <a name="copy-a-database"></a>Copiare un database
-
 ```
 CREATE DATABASE database_name
     AS COPY OF [source_server_name.] source_database_name
@@ -922,32 +932,27 @@ CREATE DATABASE database_name
 
 ## <a name="arguments"></a>Argomenti
 
-*database_name*
+*database_name*     
+Nome del nuovo database. Il nome deve essere univoco nel [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ed essere conforme alle regole di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] per gli identificatori. Per altre informazioni, vedere [Identificatori](https://go.microsoft.com/fwlink/p/?LinkId=180386).
 
-Nome del nuovo database. Il nome deve essere univoco in SQL Server ed essere conforme alle regole di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] per gli identificatori. Per altre informazioni, vedere [Identificatori](https://go.microsoft.com/fwlink/p/?LinkId=180386).
-
-*Collation_name*
-
+*Collation_name*     
 Specifica le regole di confronto predefinite per il database. È possibile usare nomi di regole di confronto di Windows o SQL. Se non vengono specificate, al database vengono assegnate le regole di confronto predefinite, ovvero SQL_Latin1_General_CP1_CI_AS.
 
-Per altre informazioni sui nomi delle regole di confronto Windows e SQL, vedere [COLLATE (Transact-SQL)](https://msdn.microsoft.com/library/ms184391.aspx).
+Per altre informazioni sui nomi delle regole di confronto Windows e SQL, vedere [COLLATE (Transact-SQL)](../../t-sql/statements/collations.md).
 
-CATALOG_COLLATION
-
+CATALOG_COLLATION      
 Specifica le regole di confronto predefinite per il catalogo di metadati. *DATABASE_DEFAULT* specifica che il catalogo di metadati usato per le visualizzazioni e le tabelle di sistema viene sottoposto a confronto per la corrispondenza con le regole di confronto predefinite per il database. Questo è il comportamento disponibile in SQL Server.
 
 *SQL_Latin1_General_CP1_CI_AS* specifica che il catalogo di metadati usato per le visualizzazioni e le tabelle di sistema viene sottoposto a confronto con regole di confronto fisse SQL_Latin1_General_CP1_CI_AS. Questa è l'impostazione predefinita del database SQL di Azure se non è specificata un'altra opzione.
 
-EDITION
-
+EDITION     
 Specifica il livello del servizio del database.
 
 Database singoli e in pool in un database singolo/pool elastico. I valori disponibili sono: 'basic', 'standard', 'premium', 'GeneralPurpose', 'BusinessCritical' e 'Hyperscale'.
 
 Quando si specifica EDITION ma non MAXSIZE, MAXSIZE viene impostato sulle dimensioni minime supportate dall'edizione.
 
-MAXSIZE
-
+MAXSIZE     
 Specifica le dimensioni massime del database. MAXSIZE deve essere valido per il livello del servizio specificato in EDITION. Nella tabella seguente sono elencati i valori MAXSIZE supportati e i valori predefiniti (P) per i livelli del servizio.
 
 > [!NOTE]
@@ -1040,8 +1045,7 @@ Le seguenti regole vengono applicate agli argomenti MAXSIZE ed EDITION:
 - Se il valore di EDITION è specificato e il valore di MAXSIZE viene omesso, viene utilizzato il valore predefinito dell'edizione. Ad esempio, se EDITION è impostato su Standard e MAXSIZE non è specificato, il valore di MAXSIZE viene automaticamente impostato su 500 MB.
 - Se né MAXSIZE né EDITION sono specificati, EDITION viene impostato su Standard (S0) e MAXSIZE viene impostato su 250 GB.
 
-SERVICE_OBJECTIVE
-
+SERVICE_OBJECTIVE     
 - **Per database singoli e in pool**
 
   - Specifica il livello di prestazioni. I valori disponibili per l'obiettivo di servizio sono: `S0`, `S1`, `S2`, `S3`, `S4`, `S6`, `S7`, `S9`, `S12`, `P1`, `P2`, `P4`, `P6`, `P11`, `P15`, `GP_GEN4_1`, `GP_GEN4_2`, `GP_GEN4_3`, `GP_GEN4_4`, `GP_GEN4_5`, `GP_GEN4_6`, `GP_GEN4_7`, `GP_GEN4_8`, `GP_GEN4_7`, `GP_GEN4_8`, `GP_GEN4_9`, `GP_GEN4_10`, `GP_GEN4_16`, `GP_GEN4_24`, `BC_GEN4_1`, `BC_GEN4_2`, `BC_GEN4_3`, `BC_GEN4_4`, `BC_GEN4_5`, `BC_GEN4_6`, `BC_GEN4_7`, `BC_GEN4_8`, `BC_GEN4_9`, `BC_GEN4_10`, `BC_GEN4_16`, `BC_GEN4_24`, `GP_Gen5_2`, `GP_Gen5_4`, `GP_Gen5_6`, `GP_Gen5_8`, `GP_Gen5_10`, `GP_Gen5_12`, `GP_Gen5_14`, `GP_Gen5_16`, `GP_Gen5_18`, `GP_Gen5_20`, `GP_Gen5_24`, `GP_Gen5_32`, `GP_Gen5_40`, `GP_Gen5_80`, `BC_Gen5_2`, `BC_Gen5_4`, `BC_Gen5_6`, `BC_Gen5_8`, `BC_Gen5_10`, `BC_Gen5_12`, `BC_Gen5_14`, `BC_Gen5_16`, `BC_Gen5_18`, `BC_Gen5_20`, `BC_Gen5_24`, `BC_Gen5_32`,`BC_Gen5_40`, `BC_Gen5_80`.
@@ -1052,20 +1056,15 @@ SERVICE_OBJECTIVE
 
 Per le descrizioni degli obiettivi di servizio e altre informazioni su dimensioni, edizioni e combinazioni di obiettivi di servizio, vedere [Azure SQL Database Service Tiers](https://docs.microsoft.com/azure/sql-database/sql-database-service-tiers) (Livelli di servizio del database SQL di Azure). Se SERVICE_OBJECTIVE non è supportato da EDITION, viene visualizzato un errore. Per cambiare il valore di SERVICE_OBJECTIVE da un livello a un altro (ad esempio da S1 a P1), è necessario modificare anche il valore EDITION. Per le descrizioni degli obiettivi di servizio e altre informazioni su dimensioni, edizioni e combinazioni di obiettivi di servizio, vedere [Azure SQL Database Service Tiers and Performance Levels](https://azure.microsoft.com/documentation/articles/sql-database-service-tiers/) (Livelli di servizio e livelli di prestazioni del database SQL di Azure), [DTU-based resource limits](https://docs.microsoft.com/azure/sql-database/sql-database-dtu-resource-limits) (Limiti delle risorse basate su DTU) e [vCore-based resource limits](https://docs.microsoft.com/azure/sql-database/sql-database-dtu-resource-limits) (Limiti delle risorse basate su vCore). Il supporto per gli obiettivi di servizio PRS è stato rimosso. In caso di domande, usare l'alias di posta elettronica seguente: premium-rs@microsoft.com.
 
-ELASTIC_POOL (name = \<elastic_pool_name>)
-
+ELASTIC_POOL (name = \<elastic_pool_name>)      
 **Si applica a:** solo database singoli e in pool. Non è applicabile ai database nel livello di servizio Hyperscale.
-
 Per creare un nuovo database in un pool di database elastico, impostare SERVICE_OBJECTIVE del database su ELASTIC_POOL e specificare il nome del pool. Per altre informazioni, vedere [Creare e gestire un pool elastico in un database SQL](https://azure.microsoft.com/documentation/articles/sql-database-elastic-pool-portal/).
 
-AS COPY OF [source_server_name.]source_database_name
-
+AS COPY OF [source_server_name.]source_database_name      
 **Si applica a:** solo database singoli e in pool.
-
 Per la copia di un database nello stesso server del [!INCLUDE[ssSDS](../../includes/sssds-md.md)] o in un server diverso.
 
-*nome_server_di_origine*
-
+*source_server_name*      
 Nome del server del [!INCLUDE[ssSDS](../../includes/sssds-md.md)] in cui si trova il database di origine. Questo parametro è facoltativo se il database di origine e il database di destinazione devono trovarsi nello stesso server del [!INCLUDE[ssSDS](../../includes/sssds-md.md)].
 
 > [!NOTE]
@@ -1076,14 +1075,13 @@ Nome del server del [!INCLUDE[ssSDS](../../includes/sssds-md.md)] in cui si trov
 Nome del database di cui eseguire la copia.
 
 ## <a name="remarks"></a>Remarks
-
 I database nel [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] presentano varie impostazioni predefinite impostate alla creazione del database. Per altre informazioni su queste impostazioni predefinite, vedere l'elenco di valori in [DATABASEPROPERTYEX](../../t-sql/functions/databasepropertyex-transact-sql.md).
 
-MAXSIZE consente di limitare le dimensioni del database. Se le dimensioni del database raggiungono MAXSIZE, viene visualizzato il codice di errore 40544. In questo caso, non è possibile inserire o aggiornare dati, né creare nuovi oggetti quali tabelle, stored procedure, viste e funzioni. È tuttavia ancora possibile leggere ed eliminare dati, troncare tabelle, eliminare tabelle e indici e ricompilare indici. È quindi possibile aggiornare MAXSIZE a un valore maggiore delle dimensioni correnti del database o eliminare alcuni dati per liberare spazio di archiviazione. Potrebbe verificarsi un ritardo di quindici minuti prima di poter inserire nuovi dati.
+`MAXSIZE` consente di limitare le dimensioni del database. Se le dimensioni del database raggiungono il valore di `MAXSIZE`, viene visualizzato il codice di errore 40544. In questo caso, non è possibile inserire o aggiornare dati, né creare nuovi oggetti quali tabelle, stored procedure, viste e funzioni. È tuttavia ancora possibile leggere ed eliminare dati, troncare tabelle, eliminare tabelle e indici e ricompilare indici. È quindi possibile aggiornare `MAXSIZE` a un valore maggiore delle dimensioni correnti del database o eliminare alcuni dati per liberare spazio di archiviazione. Potrebbe verificarsi un ritardo di quindici minuti prima di poter inserire nuovi dati.
 
 Per cambiare le dimensioni o i valori degli obiettivi di servizio in un secondo momento, usare [ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql.md?view=azuresqldb-currentls).
 
-L'argomento CATALOG_COLLATION è disponibile solo durante la creazione del database.
+L'argomento `CATALOG_COLLATION` è disponibile solo durante la creazione del database.
 
 ## <a name="database-copies"></a>Copie di database
 
@@ -1105,8 +1103,7 @@ La sintassi e le regole semantiche seguenti si applicano all'utilizzo dell'argom
 
 Per altre informazioni, vedere [Create a copy of an Azure SQL database using Transact-SQL](https://azure.microsoft.com/documentation/articles/sql-database-copy-transact-sql/) (Creare una copia di un database SQL di Azure mediante Transact-SQL).
 
-## <a name="permissions"></a>Permissions
-
+## <a name="permissions"></a>Autorizzazioni
 Per creare un database, l'account di accesso deve essere uno dei seguenti:
 
 - Account di accesso principale di livello server
@@ -1118,7 +1115,6 @@ Per creare un database, l'account di accesso deve essere uno dei seguenti:
 ## <a name="examples"></a>Esempi
 
 ### <a name="simple-example"></a>Esempio semplice
-
 Esempio semplice per la creazione di un database.
 
 ```sql
@@ -1126,7 +1122,6 @@ CREATE DATABASE TestDB1;
 ```
 
 ### <a name="simple-example-with-edition"></a>Esempio semplice con Edition
-
 Esempio semplice per la creazione di un database standard.
 
 ```sql
@@ -1135,7 +1130,6 @@ CREATE DATABASE TestDB2
 ```
 
 ### <a name="example-with-additional-options"></a>Esempio con opzioni aggiuntive
-
 Esempio che usa varie opzioni.
 
 ```sql
@@ -1145,7 +1139,6 @@ COLLATE Japanese_Bushu_Kakusu_100_CS_AS_KS_WS
 ```
 
 ### <a name="creating-a-copy"></a>Creazione di una copia
-
 Esempio di creazione di una copia di un database.
 
 **Si applica a:** solo database singoli e in pool.
@@ -1156,7 +1149,6 @@ AS COPY OF school;
 ```
 
 ### <a name="creating-a-database-in-an-elastic-pool"></a>Creazione di un database in un pool elastico
-
 Crea un nuovo database nel pool denominato S3M100:
 
 **Si applica a:** solo database singoli e in pool.
@@ -1166,7 +1158,6 @@ CREATE DATABASE db1 ( SERVICE_OBJECTIVE = ELASTIC_POOL ( name = S3M100 ) ) ;
 ```
 
 ### <a name="creating-a-copy-of-a-database-on-another-server"></a>Creazione di una copia di un database in un altro server
-
 L'esempio seguente crea una copia del database db_original denominata db_copy nel livello di prestazioni P2 per un singolo database. Questo vale indipendentemente dal fatto che db_original si trovi in un pool elastico o in un livello di prestazioni per un singolo database.
 
 **Si applica a:** solo database singoli e in pool.
@@ -1187,7 +1178,6 @@ CREATE DATABASE db_copy
 ```
 
 ### <a name="create-database-with-specified-catalog-collation-value"></a>Creare un database con il valore di regole di confronto del catalogo specificato
-
 L'esempio seguente imposta le regole di confronto del catalogo su DATABASE_DEFAULT durante la creazione del database. In questo modo le regole di confronto del catalogo vengono impostate in modo da corrispondere alle regole di confronto del database.
 
 ```sql
@@ -1196,7 +1186,6 @@ CREATE DATABASE TestDB3 COLLATE Japanese_XJIS_140 (MAXSIZE = 100 MB, EDITION = '
 ```
 
 ## <a name="see-also"></a>Vedere anche
-
 - [sys.dm_database_copies - Database SQL di Azure](../../relational-databases/system-dynamic-management-views/sys-dm-database-copies-azure-sql-database.md)
 - [ALTER DATABASE - Database SQL di Azure](alter-database-transact-sql.md?view=azuresqldb-currentls)
 
@@ -1212,11 +1201,9 @@ CREATE DATABASE TestDB3 COLLATE Japanese_XJIS_140 (MAXSIZE = 100 MB, EDITION = '
 ## <a name="azure-sql-database-managed-instance"></a>Istanza gestita di database SQL di Azure
 
 ## <a name="overview"></a>Panoramica
-
-Nell'istanza gestita di database SQL di Azure, questa istruzione viene usata per creare un database. Quando si crea un database in un'istanza gestita, si specificano il nome del database e le regole di confronto.
+Nell'Istanza gestita di database SQL di Azure, questa istruzione consente di creare un database. Quando si crea un database in un'istanza gestita, si specificano il nome del database e le regole di confronto.
 
 ## <a name="syntax"></a>Sintassi
-
 ```
 CREATE DATABASE database_name [ COLLATE collation_name ]
 [;]
@@ -1227,18 +1214,15 @@ CREATE DATABASE database_name [ COLLATE collation_name ]
 
 ## <a name="arguments"></a>Argomenti
 
-*database_name*
-
+*database_name*       
 Nome del nuovo database. Il nome deve essere univoco in SQL Server ed essere conforme alle regole di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] per gli identificatori. Per altre informazioni, vedere [Identificatori](https://go.microsoft.com/fwlink/p/?LinkId=180386).
 
-*Collation_name*
-
+*Collation_name*      
 Specifica le regole di confronto predefinite per il database. È possibile usare nomi di regole di confronto di Windows o SQL. Se non vengono specificate, al database vengono assegnate le regole di confronto predefinite, ovvero SQL_Latin1_General_CP1_CI_AS.
 
-Per altre informazioni sui nomi delle regole di confronto Windows e SQL, vedere [COLLATE (Transact-SQL)](https://msdn.microsoft.com/library/ms184391.aspx).
+Per altre informazioni sui nomi delle regole di confronto Windows e SQL, vedere [COLLATE (Transact-SQL)](../../t-sql/statements/collations.md).
 
 ## <a name="remarks"></a>Remarks
-
 I database nel [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] presentano varie impostazioni predefinite impostate alla creazione del database. Per altre informazioni su queste impostazioni predefinite, vedere l'elenco di valori in [DATABASEPROPERTYEX](../../t-sql/functions/databasepropertyex-transact-sql.md).
 
 > [!IMPORTANT]
@@ -1252,8 +1236,7 @@ I database nel [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] presentano 
   > [!TIP]
   > Come soluzione alternativa, usare [ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql.md?view=azuresqldb-mi-current) dopo `CREATE DATABASE` per impostare le opzioni di database e aggiungere i file.
 
-## <a name="permissions"></a>Permissions
-
+## <a name="permissions"></a>Autorizzazioni
 Per creare un database, l'account di accesso deve essere uno dei seguenti:
 
 - Account di accesso principale di livello server
@@ -1263,8 +1246,7 @@ Per creare un database, l'account di accesso deve essere uno dei seguenti:
 ## <a name="examples"></a>Esempi
 
 ### <a name="simple-example"></a>Esempio semplice
-
- Esempio semplice per la creazione di un database.
+Esempio semplice per la creazione di un database.
 
 ```sql
 CREATE DATABASE TestDB1;
@@ -1286,11 +1268,9 @@ Vedere [ALTER DATABASE](alter-database-transact-sql.md?view=azuresqldb-mi-curren
 ## <a name="azure-sql-data-warehouse"></a>Azure SQL Data Warehouse
 
 ## <a name="overview"></a>Panoramica
-
 In Azure SQL Data Warehouse, questa istruzione può essere usata con un server di database SQL di Azure per creare un database di SQL Data Warehouse. Con questa istruzione è possibile specificare il nome del database, le regole di confronto, le dimensioni massime, l'edizione e l'obiettivo di servizio.
 
 ## <a name="syntax"></a>Sintassi
-
 ```
 CREATE DATABASE database_name [ COLLATE collation_name ]
 (
@@ -1314,15 +1294,19 @@ CREATE DATABASE database_name [ COLLATE collation_name ]
 
 ## <a name="arguments"></a>Argomenti
 
-*database_name* è il nome del nuovo database. Questo nome deve essere univoco in SQL Server, che può ospitare sia database [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] sia database [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]. Deve anche rispettare le regole [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] per gli identificatori. Per altre informazioni, vedere [Identificatori](https://go.microsoft.com/fwlink/p/?LinkId=180386).
+*database_name*       
+Nome del nuovo database. Questo nome deve essere univoco in SQL Server, che può ospitare sia database [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] sia database [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]. Deve anche rispettare le regole [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] per gli identificatori. Per altre informazioni, vedere [Identificatori](https://go.microsoft.com/fwlink/p/?LinkId=180386).
 
-*collation_name* specifica le regole di confronto predefinite per il database. È possibile usare nomi di regole di confronto di Windows o SQL. Se non vengono specificate, al database vengono assegnate le regole di confronto predefinite, ovvero SQL_Latin1_General_CP1_CI_AS.
+*collation_name*       
+Specifica le regole di confronto predefinite per il database. È possibile usare nomi di regole di confronto di Windows o SQL. Se non vengono specificate, al database vengono assegnate le regole di confronto predefinite, ovvero SQL_Latin1_General_CP1_CI_AS.
 
 Per altre informazioni sui nomi delle regole di confronto Windows e SQL, vedere [COLLATE (Transact-SQL)](https://msdn.microsoft.com/library/ms184391.aspx).
 
-*EDITION* specifica il livello del servizio del database. Per [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] usare 'datawarehouse'.
+*EDITION*     
+Specifica il livello del servizio del database. Per [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] usare 'datawarehouse'.
 
-*MAXSIZE*: il valore predefinito è 245.760 GB (240 TB).
+*MAXSIZE*      
+Il valore predefinito è 245.760 GB (240 TB).
 
 **Si applica a:** ottimizzato per il calcolo di prima generazione
 
@@ -1332,18 +1316,17 @@ Dimensioni massime consentite per il database. Le dimensioni del database non po
 
 Dimensioni massime consentite per i dati rowstore nel database. Le dimensioni dei dati archiviati nelle tabelle rowstore, nel deltastore di un indice columnstore o in un indice non cluster in un indice columnstore cluster non possono superare MAXSIZE. I dati compressi in formato columnstore non hanno un limite di dimensioni e non sono vincolati dal valore MAXSIZE.
 
-SERVICE_OBJECTIVE specifica il livello di prestazioni. Per altre informazioni sugli obiettivi di servizio per [!INCLUDE[ssSDW](../../includes/sssdw-md.md)], vedere [Livelli di prestazioni](https://azure.microsoft.com/documentation/articles/performance-tiers/).
+SERVICE_OBJECTIVE     
+Specifica il livello di prestazioni. Per altre informazioni sugli obiettivi di servizio per [!INCLUDE[ssSDW](../../includes/sssdw-md.md)], vedere [Livelli di prestazioni](https://azure.microsoft.com/documentation/articles/performance-tiers/).
 
 ## <a name="general-remarks"></a>Osservazioni generali
-
 Usare [DATABASEPROPERTYEX](../../t-sql/functions/databasepropertyex-transact-sql.md) per visualizzare le proprietà del database.
 
 Usare [ALTER DATABASE - Azure SQL Data Warehouse](../../t-sql/statements/alter-database-transact-sql.md?view=aps-pdw-2016-au7) per cambiare le dimensioni massime o i valori degli obiettivi di servizio in un secondo momento.
 
 SQL Data Warehouse è impostato su COMPATIBILITY_LEVEL 130 e non può essere modificato. Per altri dettagli, vedere [Improved Query Performance with Compatibility Level 130 in Azure SQL Database](https://azure.microsoft.com/documentation/articles/sql-database-compatibility-level-query-performance-130/) (Prestazioni di query migliorate con Compatibility Level 130 nel database SQL di Azure).
 
-## <a name="permissions"></a>Permissions
-
+## <a name="permissions"></a>Autorizzazioni
 Autorizzazioni necessarie:
 
 - Accesso principale di livello server (creato dal processo di provisioning) oppure
@@ -1364,7 +1347,6 @@ Non è possibile modificare le regole di confronto del database dopo la creazion
 ## <a name="examples-includesssdwfullincludessssdwfull-mdmd"></a>Esempi: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]
 
 ### <a name="a-simple-example"></a>A. Esempio semplice
-
 Esempio semplice per la creazione di un database del data warehouse. Crea il database con le dimensioni massime più ridotte, ovvero 10240 GB, le regole di confronto predefinite, ovvero SQL_Latin1_General_CP1_CI_AS e la potenza di elaborazione più ridotta, pari a DW100.
 
 ```sql
@@ -1373,7 +1355,6 @@ CREATE DATABASE TestDW
 ```
 
 ### <a name="b-create-a-data-warehouse-database-with-all-the-options"></a>b. Creare un database del data warehouse con tutte le opzioni
-
 Esempio di creazione di un data warehouse di 10 TB usando tutte le opzioni.
 
 ```sql
@@ -1399,7 +1380,6 @@ CREATE DATABASE TestDW COLLATE Latin1_General_100_CI_AS_KS_WS
 ## <a name="analytics-platform-system"></a>Sistema della piattaforma di analisi
 
 ## <a name="overview"></a>Panoramica
-
 Nella piattaforma di strumenti analitici questa istruzione si usa per creare un nuovo database in un'appliance della piattaforma stessa. Usare questa istruzione per creare tutti i file associati a un database di appliance e per impostare le opzioni relative alle dimensioni massime e all'aumento automatico per le tabelle e i log delle transazioni del database stesso.
 
 ## <a name="syntax"></a>Sintassi
@@ -1416,9 +1396,11 @@ WITH (
 
 ## <a name="arguments"></a>Argomenti
 
-*database_name* è il nome del nuovo database. Per altre informazioni sui nomi di database consentiti, vedere le sezioni relative alle regole di denominazione degli oggetti e ai nomi di database riservati nella [!INCLUDE[pdw-product-documentation](../../includes/pdw-product-documentation-md.md)].
+*database_name*     
+Nome del nuovo database. Per altre informazioni sui nomi di database consentiti, vedere le sezioni relative alle regole di denominazione degli oggetti e ai nomi di database riservati nella [!INCLUDE[pdw-product-documentation](../../includes/pdw-product-documentation-md.md)].
 
-AUTOGROW = ON | **OFF** specifica se i parametri *replicated_size*, *distributed_size* e *log_size* per il database aumenteranno automaticamente in base alle esigenze oltre le dimensioni specificate. Il valore predefinito è **OFF**.
+AUTOGROW = ON | **OFF**     
+Specifica se i parametri *replicated_size*, *distributed_size* e *log_size* per il database possono aumentare automaticamente in base alle esigenze oltre le dimensioni specificate. Il valore predefinito è **OFF**.
 
 Se AUTOGROW corrisponde a ON, *replicated_size*, *distributed_size* e *log_size* aumenteranno secondo necessità (non in blocchi delle dimensioni specificate inizialmente) a ogni inserimento o aggiornamento di dati o quando vengono eseguite altre azioni che richiedono più spazio di archiviazione di quanto ne sia già stato allocato.
 
@@ -1426,19 +1408,22 @@ Se AUTOGROW corrisponde a OFF, le dimensioni non aumenteranno automaticamente. [
 
 L'impostazione di AUTOGROW (ON o OFF) si applica a tutte le dimensioni. Non è ad esempio possibile impostare AUTOGROW su ON per *log_size* ma non per *replicated_size*.
 
-*replicated_size* [ GB ] è un numero positivo. Imposta le dimensioni (in GB, con un valore intero o decimale) per lo spazio totale allocato per le tabelle replicate e per i dati corrispondenti *in ogni nodo di calcolo*. Per i requisiti minimo e massimo di *replicated_size*, vedere la sezione corrispondente nella [!INCLUDE[pdw-product-documentation](../../includes/pdw-product-documentation-md.md)].
+*replicated_size* [ GB ]      
+Numero positivo. Imposta le dimensioni (in GB, con un valore intero o decimale) per lo spazio totale allocato per le tabelle replicate e per i dati corrispondenti *in ogni nodo di calcolo*. Per i requisiti minimo e massimo di *replicated_size*, vedere la sezione corrispondente nella [!INCLUDE[pdw-product-documentation](../../includes/pdw-product-documentation-md.md)].
 
 Se AUTOGROW corrisponde a ON, è consentito l'aumento delle tabelle replicate oltre il limite impostato.
 
 Se AUTOGROW corrisponde a OFF, verrà restituito un errore se un utente tenta di creare una nuova tabella replicata, di inserire dati in una tabella replicata esistente o di aggiornare quest'ultima in modo tale da aumentarne le dimensioni oltre il valore di *replicated_size*.
 
-*distributed_size* [ GB ] è un numero positivo. Dimensioni (in GB, con un valore intero o decimale) per lo spazio totale allocato per le tabelle distribuite e per i dati corrispondenti *nell'intera appliance*. Per i requisiti minimo e massimo di *distributed_size*, vedere la sezione corrispondente nella [!INCLUDE[pdw-product-documentation](../../includes/pdw-product-documentation-md.md)].
+*distributed_size* [ GB ]      
+Numero positivo. Dimensioni (in GB, con un valore intero o decimale) per lo spazio totale allocato per le tabelle distribuite e per i dati corrispondenti *nell'intera appliance*. Per i requisiti minimo e massimo di *distributed_size*, vedere la sezione corrispondente nella [!INCLUDE[pdw-product-documentation](../../includes/pdw-product-documentation-md.md)].
 
 Se AUTOGROW corrisponde a ON, è consentito l'aumento delle tabelle distribuite oltre il limite impostato.
 
 Se AUTOGROW corrisponde a OFF, verrà restituito un errore se un utente tenta di creare una nuova tabella distribuita, di inserire dati in una tabella distribuita esistente o di aggiornare quest'ultima in modo tale da aumentarne le dimensioni oltre il valore di *distributed_size*.
 
-*log_size* [ GB ] è un numero positivo. Dimensioni (in GB, con un valore intero o decimale) per il log delle transazioni *nell'intera appliance*.
+*log_size* [ GB ]      
+Numero positivo. Dimensioni (in GB, con un valore intero o decimale) per il log delle transazioni *nell'intera appliance*.
 
 Per i requisiti minimo e massimo di *log_size*, vedere la sezione corrispondente nella [!INCLUDE[pdw-product-documentation](../../includes/pdw-product-documentation-md.md)].
 
@@ -1446,9 +1431,8 @@ Se AUTOGROW corrisponde a ON, è consentito l'aumento del file di log oltre il l
 
 Se AUTOGROW corrisponde a OFF, verrà restituito un errore per qualsiasi azione che aumenti le dimensioni del log in un singolo nodo di calcolo oltre il valore di *log_size*.
 
-## <a name="permissions"></a>Permissions
-
-È richiesta l'autorizzazione **CREATE ANY DATABASE** nel database master o l'appartenenza al ruolo predefinito del server **sysadmin**.
+## <a name="permissions"></a>Autorizzazioni
+È richiesta l'autorizzazione `CREATE ANY DATABASE` nel database master o l'appartenenza al ruolo predefinito del server **sysadmin**.
 
 Nell'esempio seguente viene fornita l'autorizzazione per creare un database per l'utente del database Fay.
 
@@ -1460,11 +1444,9 @@ GO
 ```
 
 ## <a name="general-remarks"></a>Osservazioni generali
-
 I database vengono creati con livello di compatibilità 120, corrispondente al livello di compatibilità per [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]. In questo modo il database sarà in grado di usare tutte le funzionalità [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] che usano PDW.
 
 ## <a name="limitations-and-restrictions"></a>Limitazioni e restrizioni
-
 L'istruzione CREATE DATABASE non è consentita in una transazione esplicita. Per altre informazioni, vedere [Istruzioni](../../t-sql/statements/statements.md).
 
 Per informazioni sui vincoli minimi e massimi nei database, vedere la sezione relativa ai valori minimi e massimi nella [!INCLUDE[pdw-product-documentation](../../includes/pdw-product-documentation-md.md)].
@@ -1476,17 +1458,14 @@ Al momento della creazione di un database, deve essere disponibile spazio suffic
 - Log di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] delle dimensioni corrispondenti a (*log_size*/numero di nodi di calcolo).
 
 ## <a name="locking"></a>Utilizzo di blocchi
-
 Consente di acquisire un blocco condiviso per l'oggetto DATABASE.
 
 ## <a name="metadata"></a>Metadati
-
 Al termine di questa operazione, nelle viste di metadati [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) e [sys.objects](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md) viene visualizzata una voce per questo database.
 
 ## <a name="examples-includesspdwincludessspdw-mdmd"></a>Esempi: [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]
 
 ### <a name="a-basic-database-creation-examples"></a>A. Esempi di creazione di database di base
-
 L'esempio seguente crea il database `mytest` con un'allocazione dello spazio di archiviazione pari a 100 GB per ogni nodo di calcolo per le tabelle replicate, 500 GB per appliance per le tabelle distribuite e 100 GB per appliance per il log delle transazioni. In questo esempio, AUTOGROW è OFF per impostazione predefinita.
 
 ```sql
@@ -1509,7 +1488,6 @@ CREATE DATABASE mytest
 ```
 
 ### <a name="b-creating-a-database-with-partial-gigabyte-sizes"></a>b. Creazione di un database con dimensioni in GB parziali
-
 L'esempio seguente crea il database `mytest` con AUTOGROW OFF, un'allocazione dello spazio di archiviazione pari a 1,5 GB per ogni nodo di calcolo per le tabelle replicate, 5,25 GB per appliance per le tabelle distribuite e 10 GB per appliance per il log delle transazioni.
 
 ```sql

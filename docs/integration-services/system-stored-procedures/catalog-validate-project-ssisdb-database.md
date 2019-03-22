@@ -11,12 +11,12 @@ ms.assetid: 5270689a-46d4-4847-b41f-3bed1899e955
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 1f2b44f49f7fb439472028a220392723529f68b7
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e937a9fa9d3eba7c766192c83d69a514054f762a
+ms.sourcegitcommit: 03870f0577abde3113e0e9916cd82590f78a377c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47819789"
+ms.lasthandoff: 03/18/2019
+ms.locfileid: "57973020"
 ---
 # <a name="catalogvalidateproject-ssisdb-database"></a>catalog.validate_project (database SSISDB)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -31,7 +31,7 @@ catalog.validate_project [ @folder_name = ] folder_name
     , [ @validate_type = ] validate_type  
     , [ @validation_id = ] validation_id OUTPUT  
  [  , [ @use32bitruntime = ] use32bitruntime ]  
- [  , [ @target_environment = ] target_environment ]  
+ [  , [ @environment_scope = ] environment_scope ]  
  [  , [ @reference_id = ] reference_id ]  
 ```  
   
@@ -43,7 +43,7 @@ catalog.validate_project [ @folder_name = ] folder_name
  Nome del progetto. *project_name* è di tipo **nvarchar(128)**.  
   
  [ @validate_type = ] *validate_type*  
- Viene indicato il tipo di convalida da eseguire. Utilizzare il carattere `F` per eseguire una convalida completa. *validate_type* è di tipo **char(1)**.  
+ Viene indicato il tipo di convalida da eseguire. Utilizzare il carattere `F` per eseguire una convalida completa. Questo parametro è facoltativo. Per impostazione predefinita, verrà utilizzato il carattere `F`. *validate_type* è di tipo **char(1)**.  
   
  [ @validation_id = ] *validation_id*  
  Viene restituito l'identificatore (ID) univoco della convalida. *validation_id* è di tipo **bigint**.  
@@ -52,7 +52,7 @@ catalog.validate_project [ @folder_name = ] folder_name
  Viene indicato se il runtime a 32 bit deve essere utilizzato per eseguire il pacchetto in un sistema operativo a 64 bit. Usare il valore `1` per eseguire il pacchetto con il runtime a 32 bit quando in esecuzione in un sistema operativo a 64 bit. Utilizzare il valore pari a `0` per eseguire il pacchetto con il runtime a 64 bit quando in esecuzione in un sistema operativo a 64 bit. Questo parametro è facoltativo. *use32bitruntime* è di tipo **bit**.  
   
  [ @environment_scope = ] *environment_scope*  
- Vengono indicati i riferimenti all'ambiente considerati dalla convalida. Quando il valore è `A`, tutti i riferimenti all'ambiente associati al progetto sono inclusi nella convalida. Quando il valore è `S`, è incluso solo un singolo riferimento all'ambiente. Quando il valore è `D`, non è incluso alcun riferimento all'ambiente e ogni parametro deve disporre di un valore predefinito letterale per passare la convalida. Questo parametro è facoltativo. Per impostazione predefinita, verrà utilizzato il carattere `D`. *environment_scope* è di tipo **Char(1)**.  
+ Vengono indicati i riferimenti all'ambiente considerati dalla convalida. Quando il valore è `A`, tutti i riferimenti all'ambiente associati al progetto sono inclusi nella convalida. Quando il valore è `S`, è incluso solo un singolo riferimento all'ambiente. Quando il valore è `D`, non è incluso alcun riferimento all'ambiente e ogni parametro deve disporre di un valore predefinito letterale per passare la convalida. Questo parametro è facoltativo. Per impostazione predefinita, verrà utilizzato il carattere `D`. *environment_scope* è di tipo **char(1)**.  
   
  [ @reference_id = ] *reference_id*  
  ID univoco del riferimento all'ambiente. Questo parametro è richiesto solo quando un singolo riferimento all'ambiente è incluso nella convalida, quando *environment_scope* è di tipo `S`. *reference_id* è di tipo **bigint**.  
@@ -63,7 +63,7 @@ catalog.validate_project [ @folder_name = ] folder_name
 ## <a name="result-sets"></a>Set di risultati  
  L'output dei passaggi di convalida viene restituito sotto forma di sezioni diverse del set di risultati.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorizzazioni  
  Per questa stored procedure è necessaria una delle autorizzazioni seguenti:  
   
 -   Autorizzazioni READ sul progetto e, se applicabile, autorizzazioni READ su ambienti a cui si fa riferimento  

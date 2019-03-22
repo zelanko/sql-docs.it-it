@@ -14,12 +14,12 @@ ms.assetid: 0dc03df1-b793-408f-af4c-c11188729abf
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 06fa7266cf88cacae049df1c9bf98a2979e3fa0a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: befdec64de1b12370eea84a64cb8502172a4d3b3
+ms.sourcegitcommit: 03870f0577abde3113e0e9916cd82590f78a377c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47766489"
+ms.lasthandoff: 03/18/2019
+ms.locfileid: "57974080"
 ---
 # <a name="catalogvalidatepackage-ssisdb-database"></a>catalog.validate_package (database SSISDB)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -34,7 +34,7 @@ catalog.validate_package [ @folder_name = ] folder_name
     , [ @package_name = ] package_name  
     , [ @validation_id = ] validation_id OUTPUT  
  [  , [ @use32bitruntime = ] use32bitruntime ]  
- [  , [ @target_environment = ] target_environment ]  
+ [  , [ @environment_scope = ] environment_scope ]  
  [  , [ @reference_id = ] reference_id ]  
 ```  
   
@@ -55,7 +55,7 @@ catalog.validate_package [ @folder_name = ] folder_name
  Viene indicato se il runtime a 32 bit deve essere utilizzato per eseguire il pacchetto in un sistema operativo a 64 bit. Usare il valore `1` per eseguire il pacchetto con il runtime a 32 bit quando in esecuzione in un sistema operativo a 64 bit. Utilizzare il valore pari a `0` per eseguire il pacchetto con il runtime a 64 bit quando in esecuzione in un sistema operativo a 64 bit. Questo parametro è facoltativo. *use32bitruntime* è di tipo **bit**.  
   
  [ @environment_scope = ] *environment_scope*  
- Vengono indicati i riferimenti all'ambiente considerati dalla convalida. Quando il valore è `A`, tutti i riferimenti all'ambiente associati al progetto sono inclusi nella convalida. Quando il valore è `S`, è incluso solo un singolo riferimento all'ambiente. Quando il valore è `D`, non è incluso alcun riferimento all'ambiente e ogni parametro deve disporre di un valore predefinito letterale per passare la convalida. Questo parametro è facoltativo. Per impostazione predefinita, viene usato il carattere `D`. *environment_scope* è di tipo **Char(1)**.  
+ Vengono indicati i riferimenti all'ambiente considerati dalla convalida. Quando il valore è `A`, tutti i riferimenti all'ambiente associati al progetto sono inclusi nella convalida. Quando il valore è `S`, è incluso solo un singolo riferimento all'ambiente. Quando il valore è `D`, non è incluso alcun riferimento all'ambiente e ogni parametro deve disporre di un valore predefinito letterale per passare la convalida. Questo parametro è facoltativo. Per impostazione predefinita, viene usato il carattere `D`. *environment_scope* è di tipo **char(1)**.  
   
  [ @reference_id = ] *reference_id*  
  ID univoco del riferimento all'ambiente. Questo parametro è richiesto solo quando un singolo riferimento all'ambiente è incluso nella convalida, quando *environment_scope* è di tipo `S`. *reference_id* è di tipo **bigint**.  
@@ -66,7 +66,7 @@ catalog.validate_package [ @folder_name = ] folder_name
 ## <a name="result-sets"></a>Set di risultati  
  None  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorizzazioni  
  Per questa stored procedure è necessaria una delle autorizzazioni seguenti:  
   
 -   Autorizzazioni READ sul progetto e, se applicabile, autorizzazioni READ su ambienti a cui si fa riferimento  
