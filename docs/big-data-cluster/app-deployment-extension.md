@@ -9,12 +9,12 @@ ms.date: 02/28/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 8f45817510cb63937544fa4f0f7af5bb42a0c883
-ms.sourcegitcommit: 2533383a7baa03b62430018a006a339c0bd69af2
+ms.openlocfilehash: 761818cd83df5db38b3877184b03b7e5d634aa63
+ms.sourcegitcommit: 1c1ed8d6aa2fb9fceb6a00c39597578442f7f4e9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57018467"
+ms.lasthandoff: 03/21/2019
+ms.locfileid: "58222025"
 ---
 # <a name="how-to-use-vs-code-to-deploy-applications-to-sql-server-big-data-clusters"></a>Come usare Visual Studio Code per distribuire applicazioni in cluster di SQL Server i big Data
 
@@ -40,7 +40,7 @@ Questa estensione supporta le attività seguenti in Visual Studio Code:
 
 Le sezioni seguenti seguire il processo di installazione e viene fornita una panoramica del funzionamento dell'estensione. 
 
-### <a name="install"></a>Install
+### <a name="install"></a>Installazione
 
 Prima di tutto installare l'estensione di distribuzione dell'App in Visual Studio Code:
 
@@ -105,7 +105,7 @@ Si potrebbe distribuire immediatamente l'App tramite la sezione di codice `Deplo
 
 ![Distribuire App pulsante](media/vs-extension/deploy_app_lightning.png)
 
-![Distribuire App Codelens](media/vs-extension/deploy_app_codelens.png)
+![Distribuire App CodeLens](media/vs-extension/deploy_app_codelens.png)
 
 Si riceverà una notifica quando l'app è pronta per lo stato dell'app nella barra laterale in base al consumo:
 
@@ -127,9 +127,11 @@ Dal riquadro sul lato, sarà in grado di vedere gli argomenti seguenti disponibi
   - swagger
   - dettagli
 
-Se si sceglie `Links`, si noterà che è possibile accedere la `swagger.json` dell'app distribuita, così che scrivono il proprio client che chiama l'app:
+Se si sceglie `Links`, si noterà che è possibile accedere la `swagger.json` dell'app distribuita, in modo che sia possibile scrivere il proprio client che chiama l'app:
 
-![Swagger](media/vs-extension/swagger.png)
+![swagger](media/vs-extension/swagger.png)
+
+Visualizzare [utilizzo di applicazioni nei cluster di big data](big-data-cluster-consume-apps.md) per altre informazioni.
 
 ### <a name="app-run"></a>Esecuzione dell'App
 
@@ -173,7 +175,7 @@ Per eliminare un'app, fare semplicemente clic nel Cestino possibile pulsante acc
 
 ## <a name="next-steps"></a>Passaggi successivi
 
-È anche possibile fare riferimento agli esempi aggiuntivi nella [esempi di distribuire App](https://aka.ms/sql-app-deploy) provare con l'estensione.
+Scopri come integrare le app distribuite nel cluster di big data nelle proprie applicazioni in SQL Server [utilizzo di applicazioni nei cluster di big data](big-data-cluster-consume-apps.md) per altre informazioni. È anche possibile fare riferimento agli esempi aggiuntivi nella [esempi di distribuire App](https://aka.ms/sql-app-deploy) provare con l'estensione.
 
 Per altre informazioni sui cluster dei big data a SQL Server, vedere [quali sono i cluster di SQL Server 2019 dei big data?](big-data-cluster-overview.md).
 
