@@ -14,15 +14,15 @@ helpviewer_keywords:
 - SSIS packages, properties
 - SQL Server Integration Services packages, properties
 ms.assetid: 0d20346e-475c-412f-b3ff-7bce25242b7a
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 9aa4740db5d0dcc0668ec59efd99ec20f5724a53
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 0937c9edb1ebf2acf61119f5a34f81b1c1251b28
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48111763"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58374549"
 ---
 # <a name="set-the-properties-of-a-package"></a>Impostazione delle proprietà di un pacchetto
   In questa procedura viene descritto come configurare le proprietà di un pacchetto usando la finestra **Proprietà**.  
@@ -47,7 +47,7 @@ ms.locfileid: "48111763"
 5.  Scegliere **Salva elementi selezionati** dal menu **File** per salvare il pacchetto aggiornato.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Integration Services &#40;SSIS&#41; i pacchetti](../../2014/integration-services/integration-services-ssis-packages.md)   
+ [Pacchetti di Integration Services &#40;SSIS&#41;](../../2014/integration-services/integration-services-ssis-packages.md)   
  [Impostare le proprietà di un pacchetto](set-package-properties.md)  
   
   

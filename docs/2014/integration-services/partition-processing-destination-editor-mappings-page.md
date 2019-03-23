@@ -12,15 +12,15 @@ f1_keywords:
 helpviewer_keywords:
 - Partition Processing Destination Editor
 ms.assetid: e75b766c-85ba-453e-9576-4a1a34f91ecc
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: b17a415b2ba28237453ac94f12f8706f6b4d7d20
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: edcb36cc38ea1ca89ded11dd0ef4dadd3116c6a2
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48212598"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58379026"
 ---
 # <a name="partition-processing-destination-editor-mappings-page"></a>Editor destinazione elaborazione partizione (pagina Mapping)
   Utilizzare la pagina **Mapping** della finestra di dialogo **Editor destinazione elaborazione partizione** per eseguire il mapping tra le colonne di input e le colonne di partizione.  
@@ -44,8 +44,8 @@ ms.locfileid: "48212598"
  Consente di visualizzare tutte le colonne di destinazione disponibili, indipendentemente dal fatto che siano mappate o meno.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Riferimento ai messaggi e agli errori di Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
+ [Guida di riferimento ai messaggi e agli errori di Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [Editor destinazione elaborazione partizione &#40;pagina Gestione connessione&#41;](../../2014/integration-services/partition-processing-destination-editor-connection-manager-page.md)   
- [Editor destinazione elaborazione partizione &#40;pagina avanzate&#41;](../../2014/integration-services/partition-processing-destination-editor-advanced-page.md)  
+ [Editor destinazione elaborazione partizione &#40;pagina Avanzate&#41;](../../2014/integration-services/partition-processing-destination-editor-advanced-page.md)  
   
   

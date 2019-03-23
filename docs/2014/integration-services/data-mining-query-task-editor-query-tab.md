@@ -12,15 +12,15 @@ f1_keywords:
 helpviewer_keywords:
 - Data Mining Query Task Editor
 ms.assetid: 72b1755d-d226-46c5-b862-0c9333196a10
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: ac3a7fd31f13ec513c1590d265b1984969ae8e12
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 361c1c06afb8c599e983751ea7d7deef656631e6
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48193061"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58377229"
 ---
 # <a name="data-mining-query-task-editor-query-tab"></a>Editor attività Query di data mining (scheda Query)
   Usare la scheda **Query** della finestra di dialogo **Attività Query di data mining** per creare query di stima basate su un modello di data mining. In questa finestra di dialogo è inoltre possibile associare parametri e set di risultati a variabili.  
@@ -28,7 +28,7 @@ ms.locfileid: "48193061"
  Per informazioni sull'implementazione di data mining nei pacchetti, vedere [Attività Query di data mining](control-flow/data-mining-query-task.md) e [Soluzioni di data mining](../analysis-services/data-mining/data-mining-solutions.md).  
   
 ## <a name="general-options"></a>Opzioni generali  
- **Nome**  
+ **Name**  
  Consente di specificare un nome univoco per l'attività Query di data mining. Tale nome viene utilizzato come etichetta nell'icona dell'attività.  
   
 > [!NOTE]  
@@ -46,7 +46,7 @@ ms.locfileid: "48193061"
  **Compila nuova query**  
  Consente di creare una query di data mining utilizzando uno strumento grafico.  
   
- **Argomenti correlati:** [Data Mining Query](control-flow/data-mining-query.md)  
+ **Argomenti correlati:** [Query di Data Mining](control-flow/data-mining-query.md)  
   
 ## <a name="parameter-mapping-tab-options"></a>Opzioni della scheda Mapping parametri  
  **Nome parametro**  
@@ -80,9 +80,9 @@ ms.locfileid: "48193061"
  Selezionare un risultato e quindi fare clic su **Rimuovi**.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Riferimento ai messaggi e agli errori di Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [Editor attività Query di Data Mining &#40;scheda modello di Data Mining&#41;](../../2014/integration-services/data-mining-query-task-editor-mining-model-tab.md)   
- [Editor attività Query di Data Mining &#40;scheda di Output&#41;](../../2014/integration-services/data-mining-query-task-editor-output-tab.md)   
+ [Guida di riferimento ai messaggi e agli errori di Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
+ [Editor attività Query di data mining &#40;scheda Modello di data mining&#41;](../../2014/integration-services/data-mining-query-task-editor-mining-model-tab.md)   
+ [Editor attività Query di data mining &#40;scheda Output&#41;](../../2014/integration-services/data-mining-query-task-editor-output-tab.md)   
  [Progettazione modelli di data mining](../analysis-services/data-mining/data-mining-designer.md)  
   
   

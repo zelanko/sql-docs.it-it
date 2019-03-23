@@ -11,15 +11,15 @@ helpviewer_keywords:
 - data profiling
 - profiling data
 ms.assetid: 756840e3-aa09-45cd-9951-1a17af4b5925
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: f656d900051a70998ba00ed54e3e5a2fb545716a
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 1c411a3eec25fb0a5d25d2be67b08f4a77376c31
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53367093"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58379232"
 ---
 # <a name="data-profiling-task-and-viewer"></a>Attività Profiling dati e visualizzatore
   L'attività Profiling dati offre funzionalità di profiling dei dati all'interno del processo di estrazione, trasformazione e caricamento dei dati. L'attività Profiling dati offre i vantaggi seguenti:  

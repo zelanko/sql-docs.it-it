@@ -13,20 +13,20 @@ helpviewer_keywords:
 - precedence constraints [Integration Services], multiple
 - constrained executables [Integration Services]
 ms.assetid: 71c53ead-3d19-4bc1-aafd-e5b32595b420
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 368d8faf917094ce1dd306cc4ffd385eb3254363
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 5f06a05ff275151e2488b1f3ec89c8d9cb7afb12
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48084861"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58375589"
 ---
 # <a name="multiple-precedence-constraints"></a>Più vincoli di precedenza
   Un vincolo di precedenza consente di connettere due eseguibili, ad esempio due attività, due contenitori o un'attività e un contenitore. Gli elementi connessi sono noti come eseguibile con precedenza ed eseguibile soggetto al vincolo. A un eseguibile soggetto a vincolo possono essere applicati più vincoli di precedenza. Per altre informazioni, vedere [Vincoli di precedenza](control-flow/precedence-constraints.md).  
   
- Raggruppando più vincoli è possibile definire scenari complessi, che consentono di implementare flussi di controllo complessi nei pacchetti. Ad esempio, nella figura seguente, attività D è collegata all'attività A da un `Success` vincolo, l'attività D è collegata all'attività B da un `Failure` vincolo e l'attività D è collegata all'attività C da un `Success` vincolo. I vincoli di precedenza tra le attività D e A, tra le attività D e B e tra le attività D e C sono legati da una relazione logica *e* . L'attività D viene quindi eseguita solo se l'attività A viene completata, l'attività B non viene eseguita e l'attività C deve essere eseguita correttamente.  
+ Raggruppando più vincoli è possibile definire scenari complessi, che consentono di implementare flussi di controllo complessi nei pacchetti. Nella figura seguente, ad esempio, l'attività D è collegata all'attività A da un vincolo `Success`, l'attività D è collegata all'attività B da un vincolo `Failure` e l'attività D è collegata all'attività C da un vincolo `Success`. I vincoli di precedenza tra le attività D e A, tra le attività D e B e tra le attività D e C sono legati da una relazione logica *e* . L'attività D viene quindi eseguita solo se l'attività A viene completata, l'attività B non viene eseguita e l'attività C deve essere eseguita correttamente.  
   
  ![Attività collegate in base ai vincoli di precedenza](media/precedenceconstraints.gif "Attività collegate in base ai vincoli di precedenza")  
   

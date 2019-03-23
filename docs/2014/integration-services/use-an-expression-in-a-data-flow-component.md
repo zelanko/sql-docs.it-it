@@ -11,15 +11,15 @@ helpviewer_keywords:
 - components [Integration Services], data flow
 - expressions [Integration Services], data flow components
 ms.assetid: 9181b998-d24a-41fb-bb3c-14eee34f910d
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 8a6510294daf15eac25c335ee84a73f136a57f5e
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: f7ece364cb1d0bbe2cc36b07de58873fc95acaed
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48083462"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58378070"
 ---
 # <a name="use-an-expression-in-a-data-flow-component"></a>Utilizzo di un'espressione in un componente flusso di dati
   In questo argomento viene descritta la procedura per l'aggiunta di un'espressione nella trasformazione Suddivisione condizionale o Colonna derivata. La trasformazione Suddivisione condizionale utilizza espressioni per definire le condizioni che dirigono le righe di dati all'output della trasformazione, mentre la trasformazione Colonna derivata utilizza espressioni per definire i valori assegnati alle colonne.  
@@ -29,7 +29,7 @@ ms.locfileid: "48083462"
 -   [Aggiungere o eliminare un'attività o un contenitore in un flusso di controllo](control-flow/add-or-delete-a-task-or-a-container-in-a-control-flow.md)  
     
   
--   [Aggiungere o eliminare un componente in un flusso di dati](data-flow/add-or-delete-a-component-in-a-data-flow.md)  
+-   [Aggiunta o eliminazione di un componente in un flusso di dati](data-flow/add-or-delete-a-component-in-a-data-flow.md)  
   
 -   [Connettere componenti in un flusso di dati](data-flow/connect-components-in-a-data-flow.md)  
   
@@ -67,8 +67,8 @@ ms.locfileid: "48083462"
   
 ## <a name="see-also"></a>Vedere anche  
  [Espressioni di Integration Services &#40;SSIS&#41;](expressions/integration-services-ssis-expressions.md)   
- [Trasformazione Suddivisione condizionale](data-flow/transformations/conditional-split-transformation.md)   
- [Trasformazione colonna derivata](data-flow/transformations/derived-column-transformation.md)   
+ [Conditional Split Transformation](data-flow/transformations/conditional-split-transformation.md)   
+ [Derived Column Transformation](data-flow/transformations/derived-column-transformation.md)   
  [Attività Flusso di dati](control-flow/data-flow-task.md)   
  [Flusso di dati](data-flow/data-flow.md)  
   

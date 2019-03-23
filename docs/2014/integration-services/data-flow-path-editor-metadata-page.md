@@ -12,15 +12,15 @@ f1_keywords:
 helpviewer_keywords:
 - Data Flow Path Editor dialog box
 ms.assetid: b30bb9d7-ebc0-4b1a-8d0f-ee006b32e841
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 0cc38012789fd2edfe88f2ffcc00f43abea095f7
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 9c58b3bffe2873cd412be0639ae9006252a4443e
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48110151"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58378139"
 ---
 # <a name="data-flow-path-editor-metadata-page"></a>Editor percorso flusso di dati (pagina Metadati)
   Utilizzare la pagina **Metadati** della finestra di dialogo **Editor percorso flusso di dati** per visualizzare i metadati delle colonne percorso.  
@@ -29,7 +29,7 @@ ms.locfileid: "48110151"
  **Metadati percorso**  
  Elenca i metadati delle colonne. Fare clic sulle intestazioni di colonna per ordinarne i dati.  
   
- **Nome**  
+ **Name**  
  Indica il nome delle colonne.  
   
  **Tipo di dati**  
@@ -41,7 +41,7 @@ ms.locfileid: "48110151"
  **Scala**  
  Indica il numero di cifre a destra del separatore decimale in un valore numerico.  
   
- **Length**  
+ **Lunghezza**  
  Indica la lunghezza corrente della colonna.  
   
  **Tabella codici**  

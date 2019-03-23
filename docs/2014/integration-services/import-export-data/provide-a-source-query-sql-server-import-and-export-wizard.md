@@ -9,15 +9,15 @@ ms.topic: conceptual
 f1_keywords:
 - sql12.dts.impexpwizard.providesourcequery.f1
 ms.assetid: c8cbd07e-b9c3-422f-94b8-d6fc8cf31cf5
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 7f5c39e5d49c3252cd8aab49299d66d2a2467d95
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 7a028c880d87e21e1fcc63ffc605e7d375619dbf
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52769963"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58378630"
 ---
 # <a name="provide-a-source-query-sql-server-import-and-export-wizard"></a>Impostazione query di origine (Importazione/Esportazione guidata SQL Server)
   Usare la **impostazione Query di origine** pagina digitare l'istruzione SQL che genera i dati da copiare dall'origine dati nella destinazione.  

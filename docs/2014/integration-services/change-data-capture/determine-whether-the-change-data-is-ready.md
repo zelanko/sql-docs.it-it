@@ -9,15 +9,15 @@ ms.topic: conceptual
 helpviewer_keywords:
 - incremental load [Integration Services],determining readiness
 ms.assetid: 04935f35-96cc-4d70-a250-0fd326f8daff
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 00910fdb6800921a2c6eeae79340eb5d2a79db20
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 0b4aa1420edc1cb627940aca6c6c2aed9d18a390
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52756363"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58379429"
 ---
 # <a name="determine-whether-the-change-data-is-ready"></a>Come determinare se i dati delle modifiche sono pronti
   Nel flusso di controllo di un pacchetto di [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] che esegue un caricamento incrementale dei dati delle modifiche, la seconda attività consiste nel verificare che i dati delle modifiche per l'intervallo selezionato siano pronti. Questo passaggio è necessario in quanto il processo di acquisizione asincrono potrebbe non avere ancora elaborato tutte le modifiche fino all'endpoint selezionato.  

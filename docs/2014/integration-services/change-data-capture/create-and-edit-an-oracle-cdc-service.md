@@ -9,15 +9,15 @@ ms.topic: conceptual
 f1_keywords:
 - createSrv
 ms.assetid: 10cd612e-d8f1-4af2-97d3-a0c22e1e2326
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: e362438b12c103dd6210766da888086da79df126
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 1b59ebbf4bb56d23009351f4a8fb7f193a59fa66
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52785463"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58379376"
 ---
 # <a name="create-and-edit-an-oracle-cdc-service"></a>Creare e modificare un servizio Oracle CDC
   Da CDC Service Configuration Console viene creato e modificato un nuovo servizio Windows di Oracle CDC.  
@@ -61,7 +61,7 @@ ms.locfileid: "52785463"
  **Autenticazione**  
  Selezionare una delle opzioni seguenti:  
   
--   **L'autenticazione di Windows**: Se si seleziona questa opzione, il servizio Oracle CDC si connette alla destinazione [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] istanza usando l'identità dell'account del servizio. Se l'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] è in esecuzione in un computer diverso, è necessario utilizzare l'autenticazione di Windows con gli account di dominio.  
+-   **Windows Authentication**: Se si seleziona questa opzione, il servizio Oracle CDC si connette alla destinazione [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] istanza usando l'identità dell'account del servizio. Se l'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] è in esecuzione in un computer diverso, è necessario utilizzare l'autenticazione di Windows con gli account di dominio.  
   
 -   **Autenticazione di SQL Server**: Se si seleziona questa opzione, è necessario digitare il **nome utente** e **Password** per il [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] account di accesso da usare. Il servizio Oracle CDC utilizza queste credenziali per la connessione all'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] di destinazione.  
   

@@ -21,15 +21,15 @@ helpviewer_keywords:
 - .NET Framework [Integration Services]
 - referencing Web services
 ms.assetid: 9b655bcd-19f6-43d8-9f89-1b4d299c6380
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 4cb99bd25a6eb46d9060f9feba2f2f7d75b3b83a
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: a6f942e1afe40467e331519f276b360f87f9a6da
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53354289"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58377729"
 ---
 # <a name="referencing-other-assemblies-in-scripting-solutions"></a>Riferimenti ad altri assembly nelle soluzioni di scripting
   La libreria di classi [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] fornisce allo sviluppatore di script un potente set di strumenti per l'implementazione di funzionalità personalizzate nei pacchetti di [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]. L'attività Script e il componente script possono anche utilizzare assembly gestiti personalizzati.  

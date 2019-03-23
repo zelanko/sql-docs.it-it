@@ -9,15 +9,15 @@ ms.topic: reference
 helpviewer_keywords:
 - connection managers [Integration Services], programming
 ms.assetid: 2686fe84-1ecc-48b8-9160-e7122274bd84
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: fd8b5934b8d38d867b7faa5715a4f87394b74ccc
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 973cb7dcfe7eb95e003428adf0c8a0beb7e68e87
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53362183"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58374569"
 ---
 # <a name="working-with-connection-managers-programmatically"></a>Utilizzo di gestioni connessioni a livello di programmazione
   In [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] il metodo AcquireConnection della classe della gestione connessione associata è quello che viene chiamato più spesso quando si usano gestioni connessioni in codice gestito. Quando si scrive codice gestito, è necessario chiamare il metodo AcquireConnection per usare la funzionalità di una gestione connessione. È necessario chiamare questo metodo sia che il codice gestito venga scritto in un'attività Script, in un componente script, in un oggetto personalizzato o in un'applicazione personalizzata.  

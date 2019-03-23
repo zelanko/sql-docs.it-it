@@ -14,15 +14,15 @@ helpviewer_keywords:
 - importing data, SSIS packages
 - inserting data
 ms.assetid: ac3b74c1-ef54-4297-8062-1734324fffcc
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 96996f6aa7d3b16a696f0147570fed91a9323e69
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 13deb9b423ce20fd77e0853cba9d0f205905ca44
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52755023"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58379049"
 ---
 # <a name="import-column-transformation"></a>Trasformazione Importa colonna
   La trasformazione Importa colonna legge i dati dai file e li aggiunge alle colonne in un flusso di dati. Tramite questa trasformazione un pacchetto può aggiungere a un flusso di dati immagini e testo archiviati in file distinti. Un flusso di dati che carica dati in una tabella in cui sono archiviate informazioni sui prodotti può ad esempio includere la trasformazione Importa colonna per importare dai rispettivi file i commenti dei clienti su ogni prodotto e aggiungerli al flusso di dati.  
