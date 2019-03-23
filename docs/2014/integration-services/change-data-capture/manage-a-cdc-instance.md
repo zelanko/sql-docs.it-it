@@ -9,15 +9,15 @@ ms.topic: conceptual
 f1_keywords:
 - manIns
 ms.assetid: cfed22c8-c666-40ca-9e73-24d93e85ba92
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: e4a563a47500a329a79513afb83aff4f93ebda7e
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 3215f28615511f3c35fcc6cc3ea80209c7c44d41
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52748263"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58378819"
 ---
 # <a name="manage-a-cdc-instance"></a>Gestire un'istanza di CDC
   È possibile utilizzare CDC Designer Console per visualizzare le informazioni relative alle istanze create e per gestire l'operazione delle istanze.  
@@ -65,12 +65,12 @@ ms.locfileid: "52748263"
  **Stato**  
  In questa scheda vengono fornite informazioni e statistiche sullo stato corrente dell'istanza di CDC. Sono contenute le informazioni seguenti.  
   
--   **stato**: Un'icona che indica lo stato corrente dell'istanza di CDC. Di seguito vengono descritti gli stati.  
+-   **Stato**: Un'icona che indica lo stato corrente dell'istanza di CDC. Di seguito vengono descritti gli stati.  
   
     |||  
     |-|-|  
     |![Error](../media/error.gif "Error")|**Error**. L'istanza di Oracle CDC non è in esecuzione perché si è verificato un errore irreversibile. Sono disponibili gli stati secondari seguenti:<br /><br /> **Configurazione errata**: Si è verificato un errore di configurazione che richiede l'intervento manuale.<br /><br /> **Password obbligatoria**: È stata impostata alcuna password per l'istanza di Oracle CDC o la password non è valida.<br /><br /> **Unexpected**. Tutti gli altri errori non reversibili.|  
-    |![OK](../media/okay.gif "OK")|**Esecuzione**: L'istanza di CDC è in esecuzione e sta elaborando i record di modifiche. Sono disponibili gli stati secondari seguenti.<br /><br /> **Inattività**: Tutti i record delle modifiche sono stati elaborati e archiviati nelle tabelle delle modifiche di destinazione. Non sono presenti transazioni attive.<br /><br /> **L'elaborazione**: Sono presenti record delle modifiche in fase di processo che non sono ancora stati scritti nelle tabelle delle modifiche.|  
+    |![OK](../media/okay.gif "OK")|**In esecuzione**: L'istanza di CDC è in esecuzione e sta elaborando i record di modifiche. Sono disponibili gli stati secondari seguenti.<br /><br /> **Inattività**: Tutti i record delle modifiche sono stati elaborati e archiviati nelle tabelle delle modifiche di destinazione. Non sono presenti transazioni attive.<br /><br /> **L'elaborazione**: Sono presenti record delle modifiche in fase di processo che non sono ancora stati scritti nelle tabelle delle modifiche.|  
     |![Arresta](../media/stop.gif "Arresta")|**Arrestato**: L'istanza di CDC non è in esecuzione. Lo stato stopped indica che l'istanza di CDC è stata interrotta in modo normale.|  
     |![Paused](../media/paused.gif "Paused")|**In pausa**: L'istanza di CDC è in esecuzione ma l'elaborazione è sospesa a causa di un errore non irreversibile. Sono disponibili gli stati secondari seguenti:<br /><br /> **Disconnesso**: Impossibile stabilire la connessione al database Oracle di origine. L'elaborazione verrà ripresa dopo il ripristino della connessione.<br /><br /> **Archiviazione**: Lo spazio di archiviazione è pieno. L'elaborazione verrà ripresa non appena sarà nuovamente disponibile dello spazio di archiviazione.<br /><br /> **Logger**: Il logger è connesso a Oracle ma non è possibile leggere i log delle transazioni Oracle a causa di un problema temporaneo, ad esempio, un log delle transazioni necessario non è disponibile.|  
   
