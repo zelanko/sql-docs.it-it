@@ -12,15 +12,15 @@ f1_keywords:
 helpviewer_keywords:
 - Flat File Source Editor
 ms.assetid: b5af5f65-c087-44fd-b5ae-d0441245fef2
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: f65e6e5dd0561960c36eea953b39b71906981fa9
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 2a698bf1a8078f969875ce9deba28c3673f1c292
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48118731"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58394379"
 ---
 # <a name="flat-file-source-editor-columns-page"></a>Editor origine file flat (pagina Colonne)
   Usare il nodo **Colonne** della finestra di dialogo **Editor origine file flat** per eseguire il mapping tra una colonna di output e ogni colonna esterna (di origine).  
@@ -41,9 +41,9 @@ ms.locfileid: "48118731"
  Consente di specificare un nome univoco per ogni colonna di output. Per impostazione predefinita viene suggerito il nome della colonna esterna (di origine) selezionata. È comunque possibile scegliere qualsiasi nome descrittivo univoco. Il nome specificato verrà visualizzato in Progettazione [!INCLUDE[ssIS](../includes/ssis-md.md)] .  
   
 ## <a name="see-also"></a>Vedere anche  
- [Riferimento ai messaggi e agli errori di Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [Editor origine File flat &#40;pagina Gestione connessione&#41;](../../2014/integration-services/flat-file-source-editor-connection-manager-page.md)   
- [Editor origine File flat &#40;pagina dell'Output degli errori&#41;](../../2014/integration-services/flat-file-source-editor-error-output-page.md)   
+ [Guida di riferimento ai messaggi e agli errori di Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
+ [Editor origine file flat &#40;pagina Gestione connessione&#41;](../../2014/integration-services/flat-file-source-editor-connection-manager-page.md)   
+ [Editor origine file flat &#40;pagina Output degli errori&#41;](../../2014/integration-services/flat-file-source-editor-error-output-page.md)   
  [Gestione connessione file flat](connection-manager/file-connection-manager.md)  
   
   

@@ -12,14 +12,14 @@ f1_keywords:
 - SQL11.DTS.DESIGNER.AFPDWUPTASK.F1
 ms.assetid: 112cf764-f85a-4c1a-b732-d299d717c0d4
 author: yualan
-ms.author: douglasl
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 651ad07d91d3cf8a351ca6faa9f912c6bd01c07c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 1e5e39f8049a5f2832e7a37381c4d22ef2483b62
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48063701"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58388859"
 ---
 # <a name="azure-sql-dw-upload-task"></a>Attività di caricamento di Azure SQL DW
 L' **attività di caricamento di Azure SQL DW** consente a un pacchetto SSIS di caricare i dati locali in una tabella in Azure SQL Data Warehouse (DW). Il formato di file dei dati di origine attualmente supportato è testo delimitato in codifica UTF8. Il processo di caricamento segue l'efficiente approccio della tecnologia PolyBase. In particolare, i dati vengono prima caricati in Archiviazione BLOB di Azure e poi in Azure SQL DW. Per usare questa attività, è quindi necessario un account di Archiviazione BLOB di Azure.
@@ -28,7 +28,7 @@ Per aggiungere un' **attività di caricamento di Azure SQL DW**, trascinare l'at
 
 Nella pagina **Generale** configurare le proprietà seguenti.
 
-Campo|Description
+Campo|Descrizione
 -----|-----------
 LocalDirectory|Specifica la directory locale che contiene i file di dati da caricare.
 Recursively (Ricorsivo)|Specifica se eseguire una ricerca ricorsiva delle sottodirectory.

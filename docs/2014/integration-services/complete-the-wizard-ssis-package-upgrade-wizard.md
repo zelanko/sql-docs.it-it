@@ -10,15 +10,15 @@ ms.topic: conceptual
 f1_keywords:
 - sql12.is.upgradewizard.completewizard.f1
 ms.assetid: e07bd68e-4dc8-41f0-acfe-059e77688cfa
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 61491ae6ea2563d51001e6c0cd76bc300aca7797
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 5d05632fd4546b18e0268307fc6a85a8719eadd5
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48068021"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58393931"
 ---
 # <a name="complete-the-wizard-ssis-package-upgrade-wizard"></a>Completamento procedura guidata (Aggiornamento guidato pacchetti SSIS)
   Utilizzare la pagina **Completamento procedura guidata** per verificare e confermare le opzioni di aggiornamento del pacchetto selezionate. Si tratta dell'ultima pagina della procedura guidata. È possibile tornare alle pagine precedenti per modificare le opzioni per questa sessione della procedura guidata.  

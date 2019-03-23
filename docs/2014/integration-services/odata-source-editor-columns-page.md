@@ -10,15 +10,15 @@ ms.topic: conceptual
 f1_keywords:
 - Sql12.dts.designer.odatasource.columns.f1
 ms.assetid: d640e9e4-86c3-4cb7-a6c2-e82624303696
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: a00e3658d64723b0d1e120d95f76ccec4d5a5f52
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 4c3b66b5b2a9595deffce79ed0e23e03a65fdeaf
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48149571"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58391539"
 ---
 # <a name="odata-source-editor-columns-page"></a>Editor origine OData (pagina Colonne)
   Usare la pagina **Colonne** della finestra di dialogo **Editor origine OData** per selezionare le colonne esterne (di origine) da includere nell'output ed eseguirne il mapping alle colonne di output.  
@@ -34,8 +34,8 @@ ms.locfileid: "48149571"
  Consente di specificare un nome univoco per ogni colonna di output. Per impostazione predefinita viene suggerito il nome della colonna esterna (di origine) selezionata. È comunque possibile scegliere qualsiasi nome descrittivo univoco.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Editor origine OData &#40;pagina di connessione&#41;](../../2014/integration-services/odata-source-editor-connection-page.md)   
- [Editor origine OData &#40;pagina dell'Output degli errori&#41;](../../2014/integration-services/odata-source-editor-error-output-page.md)   
+ [Editor origine OData &#40;pagina Connessione &#41;](../../2014/integration-services/odata-source-editor-connection-page.md)   
+ [Editor origine OData &#40;pagina Output degli errori&#41;](../../2014/integration-services/odata-source-editor-error-output-page.md)   
  [Origine OData](data-flow/odata-source.md)   
  [Gestione connessione OData](connection-manager/odata-connection-manager.md)  
   

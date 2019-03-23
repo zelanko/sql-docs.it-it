@@ -12,15 +12,15 @@ f1_keywords:
 helpviewer_keywords:
 - OLE DB Source Editor
 ms.assetid: bfbb0ae1-7759-4d45-8865-31df36ae5b34
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 915479d218e8ecee950609a5431bdb0331242fcf
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 9c68996ab5c4aa204a8aa1139253dd946e558bba
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48125499"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58390829"
 ---
 # <a name="ole-db-source-editor-columns-page"></a>Editor origine OLE DB (pagina Colonne)
   Usare la pagina **Colonne** della finestra di dialogo **Editor origine OLE DB** per eseguire il mapping tra una colonna di output e ogni colonna esterna (di origine).  
@@ -38,10 +38,10 @@ ms.locfileid: "48125499"
  Consente di specificare un nome univoco per ogni colonna di output. Per impostazione predefinita viene suggerito il nome della colonna esterna (di origine) selezionata. È comunque possibile scegliere qualsiasi nome descrittivo univoco. Il nome specificato verrà visualizzato in Progettazione SSIS.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Riferimento ai messaggi e agli errori di Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
+ [Guida di riferimento ai messaggi e agli errori di Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [Editor origine OLE DB &#40;pagina Gestione connessione&#41;](../../2014/integration-services/ole-db-source-editor-connection-manager-page.md)   
- [Editor origine OLE DB &#40;pagina dell'Output degli errori&#41;](../../2014/integration-services/ole-db-source-editor-error-output-page.md)   
- [Estrarre dati tramite l'origine OLE DB](data-flow/extract-data-by-using-the-ole-db-source.md)   
+ [Editor origine OLE DB &#40;pagina Output degli errori&#41;](../../2014/integration-services/ole-db-source-editor-error-output-page.md)   
+ [Estrazione dei dati tramite l'origine OLE DB](data-flow/extract-data-by-using-the-ole-db-source.md)   
  [Gestione connessione OLE DB](connection-manager/ole-db-connection-manager.md)  
   
   

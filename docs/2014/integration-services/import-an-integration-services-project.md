@@ -8,15 +8,15 @@ ms.technology:
 - integration-services
 ms.topic: conceptual
 ms.assetid: 3301c328-b0f5-4517-915c-93713413e453
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 8f81996093aa6ac42eaab9c6057c9c8bb706055b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 8fb6b68cbb30e9bbf19f854cf1dd1e7e0dd19d25
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48203801"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58394439"
 ---
 # <a name="import-an-integration-services-project"></a>Importare un progetto di Integration Services
   Utilizzare l'**Importazione guidata progetto** di [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] per creare un progetto da un file di distribuzione esistente (ispac) o da un progetto distribuito nel catalogo di Integration Services. Questa caratteristica è utile soprattutto quando non si dispone della copia originale del progetto, ma si desidera crearne uno da un file ispac o dal catalogo di SSISDB.  

@@ -20,15 +20,15 @@ helpviewer_keywords:
 - SQL Server Integration Services packages, connections
 - SSIS Script task, connections
 ms.assetid: 9c008380-715b-455b-9da7-22572d67c388
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 6e29bbf01c4d35bbc2896faab279d8b221fd32b0
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 4464b0ca035bc19695b37aea01385f737549fec1
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53364223"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58393059"
 ---
 # <a name="connecting-to-data-sources-in-the-script-task"></a>Connessione a origini dati nell'attività Script
   Le gestioni connessioni forniscono accesso a origini dati configurate nel pacchetto. Per altre informazioni, vedere [Connessioni in Integration Services &#40;SSIS&#41;](../../connection-manager/integration-services-ssis-connections.md).  

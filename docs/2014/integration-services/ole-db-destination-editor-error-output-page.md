@@ -12,15 +12,15 @@ f1_keywords:
 helpviewer_keywords:
 - OLE DB Destination Editor
 ms.assetid: 3c01f480-16c9-49eb-b40c-13cbc90b019d
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 35627cefd3bbdf4bec280baaa9dcdb1b43391e05
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: a24a8b6eb8c0f6cde72a6760270873c05c5de44a
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48176841"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58390079"
 ---
 # <a name="ole-db-destination-editor-error-output-page"></a>Editor destinazione OLE DB (pagina Output degli errori)
   Usare la pagina **Output degli errori** della finestra di dialogo **Editor destinazione OLE DB** per specificare le opzioni di gestione degli errori.  
@@ -52,9 +52,9 @@ ms.locfileid: "48176841"
  Consente di applicare l'opzione di gestione degli errori alle celle selezionate.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Riferimento ai messaggi e agli errori di Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
+ [Guida di riferimento ai messaggi e agli errori di Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [Editor destinazione OLE DB &#40;pagina Gestione connessione&#41;](../../2014/integration-services/ole-db-destination-editor-connection-manager-page.md)   
- [Editor destinazione OLE DB &#40;pagina mapping&#41;](../../2014/integration-services/ole-db-destination-editor-mappings-page.md)   
+ [Editor destinazione OLE DB &#40;pagina Mapping&#41;](../../2014/integration-services/ole-db-destination-editor-mappings-page.md)   
  [Caricare dati tramite la destinazione OLE DB](data-flow/load-data-by-using-the-ole-db-destination.md)  
   
   

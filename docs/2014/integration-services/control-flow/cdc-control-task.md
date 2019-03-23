@@ -9,15 +9,15 @@ ms.topic: conceptual
 f1_keywords:
 - sql12.ssis.designer.cdccontroltask.f1
 ms.assetid: 6404dc7f-550c-47cc-b901-c072742f430a
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: fbac13f1d65a984a90ffbeb3ee0b1ae4e0cec719
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: e1ddc919b4658395c6a4268f03131bc92291f1b0
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53376083"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58392809"
 ---
 # <a name="cdc-control-task"></a>Attività di controllo CDC
   L'attività di controllo CDC viene utilizzata per controllare il ciclo di vita di pacchetti Change Data Capture (CDC). Questa attività consente di gestire la sincronizzazione del pacchetto CDC con il pacchetto di caricamento iniziale e la gestione di intervalli di numeri di sequenza del file di log (LSN) elaborati in un'esecuzione di un pacchetto CDC. L'attività di controllo CDC, inoltre, consente di gestire gli scenari di errore e il recupero da errori.  

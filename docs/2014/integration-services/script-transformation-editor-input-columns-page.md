@@ -12,15 +12,15 @@ f1_keywords:
 helpviewer_keywords:
 - Script Transformation Editor
 ms.assetid: d6e4ce84-3335-48e6-82d3-1c359ed87f63
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: d467606c562b0fd9b5f1176ecbe14322aa634a24
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: b71f12c9f36f74799c47538b30a058b529fdfa6d
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48164891"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58391709"
 ---
 # <a name="script-transformation-editor-input-columns-page"></a>Editor trasformazione Script (pagina Colonne di input)
   Usare la pagina **Colonne di input** della finestra di dialogo **Editor trasformazione Script** per impostare le proprietà delle colonne di input.  
@@ -47,11 +47,11 @@ ms.locfileid: "48164891"
  Consente di specificare se la trasformazione script deve considerare ogni colonna come `ReadOnly` o `ReadWrite`.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Riferimento ai messaggi e agli errori di Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [Seleziona tipo componente Script](../../2014/integration-services/select-script-component-type.md)   
- [Editor trasformazione script &#40;di input e output di pagina&#41;](../../2014/integration-services/script-transformation-editor-inputs-and-outputs-page.md)   
- [Editor trasformazione script &#40;pagina Script&#41;](../../2014/integration-services/script-transformation-editor-script-page.md)   
- [Editor trasformazione script &#40;pagina gestioni connessioni&#41;](../../2014/integration-services/script-transformation-editor-connection-managers-page.md)   
+ [Guida di riferimento ai messaggi e agli errori di Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
+ [Seleziona tipo componente script](../../2014/integration-services/select-script-component-type.md)   
+ [Editor trasformazione Script &#40;pagina Input e output&#41;](../../2014/integration-services/script-transformation-editor-inputs-and-outputs-page.md)   
+ [Editor trasformazione Script &#40;pagina Script&#41;](../../2014/integration-services/script-transformation-editor-script-page.md)   
+ [Editor trasformazione Script &#40;pagina Gestioni connessioni&#41;](../../2014/integration-services/script-transformation-editor-connection-managers-page.md)   
  [Ulteriori esempi di componente script](extending-packages-scripting-data-flow-script-component-examples/additional-script-component-examples.md)  
   
   

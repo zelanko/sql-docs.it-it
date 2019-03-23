@@ -12,15 +12,15 @@ f1_keywords:
 helpviewer_keywords:
 - Excel Source Editor
 ms.assetid: 428e04e0-ad98-45d0-8345-12ec1b67b2eb
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: a247233157dbf83fe29089eff9c67442e00b8809
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 1f2389946ac8780fb15fb5708138883ac0219369
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48157731"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58388065"
 ---
 # <a name="excel-source-editor-connection-manager-page"></a>Editor origine Excel (pagina Gestione connessione)
   Usare il nodo **Gestione connessione** della finestra di dialogo **Editor origine Excel** per selezionare la cartella di lavoro di [!INCLUDE[ofprexcel](../includes/ofprexcel-md.md)] da usare come origine. L'origine Excel legge i dati da un foglio di lavoro o da un intervallo denominato in una cartella di lavoro esistente.  
@@ -40,10 +40,10 @@ ms.locfileid: "48157731"
  **Modalità di accesso ai dati**  
  Consente di specificare il metodo per la selezione dei dati dall'origine.  
   
-|valore|Description|  
+|Value|Descrizione|  
 |-----------|-----------------|  
 |Tabella o vista|Consente di recuperare dati da un foglio di lavoro o da un intervallo denominato nel file di Excel.|  
-|Variabile nome vista o nome tabella|Consente di specificare il foglio di lavoro o il nome dell'intervallo in una variabile.<br /><br /> **Informazioni correlate:** [Utilizzo di variabili nei pacchetti](../../2014/integration-services/use-variables-in-packages.md)|  
+|Variabile nome vista o nome tabella|Consente di specificare il foglio di lavoro o il nome dell'intervallo in una variabile.<br /><br /> **Informazioni correlate:** [Uso di variabili nei pacchetti](../../2014/integration-services/use-variables-in-packages.md)|  
 |Comando SQL|Consente di recuperare dati dal file di Excel utilizzando una query SQL. Per informazioni sulla sintassi di query, vedere [Origine Excel](data-flow/excel-source.md).|  
 |Comando SQL da variabile|Consente di specificare il testo della query SQL in una variabile.|  
   
@@ -81,9 +81,9 @@ ms.locfileid: "48157731"
  Consente di selezionare la variabile contenente il testo della query SQL.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Riferimento ai messaggi e agli errori di Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [Editor origine Excel &#40;(pagina colonne)&#41;](../../2014/integration-services/excel-source-editor-columns-page.md)   
- [Editor origine Excel &#40;pagina dell'Output degli errori&#41;](../../2014/integration-services/excel-source-editor-error-output-page.md)   
+ [Guida di riferimento ai messaggi e agli errori di Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
+ [Editor origine Excel &#40;pagina Colonne&#41;](../../2014/integration-services/excel-source-editor-columns-page.md)   
+ [Editor origine Excel &#40;pagina Output degli errori&#41;](../../2014/integration-services/excel-source-editor-error-output-page.md)   
  [Gestione connessione Excel](connection-manager/excel-connection-manager.md)   
  [Esecuzione di un ciclo su file e tabelle di Excel usando un contenitore Ciclo Foreach](control-flow/foreach-loop-container.md)  
   

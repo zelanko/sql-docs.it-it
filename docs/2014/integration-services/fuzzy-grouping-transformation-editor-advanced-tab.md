@@ -12,15 +12,15 @@ f1_keywords:
 helpviewer_keywords:
 - Fuzzy Grouping Transformation Editor
 ms.assetid: dd820d75-b8a7-4515-aea4-3553ba5b442e
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 79b71caf3fa8772bd55627b5c1527eea61ac4ab5
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 074a3d460a04180a5cfce1406b546fb6a3a3986a
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48150829"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58389024"
 ---
 # <a name="fuzzy-grouping-transformation-editor-advanced-tab"></a>Editor trasformazione Raggruppamento fuzzy (scheda Avanzate)
   La scheda **Avanzate** della finestra di dialogo **Editor trasformazione Raggruppamento fuzzy** consente di specificare le colonne di input e output, impostare le soglie di somiglianza e definire i delimitatori.  
@@ -32,7 +32,7 @@ ms.locfileid: "48150829"
   
 ## <a name="options"></a>Opzioni  
  **Nome colonna chiave di input**  
- Consente di specificare il nome di una colonna di output contenente l'identificatore univoco per ogni riga di input. Il `_key_in` colonna ha un valore che identifica in modo univoco ogni riga.  
+ Consente di specificare il nome di una colonna di output contenente l'identificatore univoco per ogni riga di input. La colonna `_key_in` contiene un valore che identifica in modo univoco ogni riga.  
   
  **Nome colonna chiave di output**  
  Consente di specificare il nome di una colonna di output contenente l'identificatore univoco per la riga canonica di un gruppo di righe duplicate. La colonna `_key_out` corrisponde al valore `_key_in` della riga di dati canonica.  
@@ -47,7 +47,7 @@ ms.locfileid: "48150829"
  La trasformazione genera un set predefinito di delimitatori per la suddivisione in token dei dati. È tuttavia possibile aggiungere o rimuovere i delimitatori in base alle esigenze modificando l'elenco.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Riferimento ai messaggi e agli errori di Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [Identificare righe di dati simili tramite la trasformazione Raggruppamento fuzzy](data-flow/transformations/identify-similar-data-rows-by-using-the-fuzzy-grouping-transformation.md)  
+ [Guida di riferimento ai messaggi e agli errori di Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
+ [Identificazione di righe di dati simili tramite la trasformazione Raggruppamento fuzzy](data-flow/transformations/identify-similar-data-rows-by-using-the-fuzzy-grouping-transformation.md)  
   
   

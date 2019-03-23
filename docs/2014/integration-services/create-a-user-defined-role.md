@@ -8,15 +8,15 @@ ms.technology:
 - integration-services
 ms.topic: conceptual
 ms.assetid: c4128993-2333-48c7-84b1-e51cdcea393d
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: ac839255a5c065d312852de582607de4ae0c2949
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 255d805d9fa7a36203f6791da3b01d93174d4268
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48199187"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58392160"
 ---
 # <a name="create-a-user-defined-role"></a>Creazione di un ruolo definito dall'utente
     
@@ -28,7 +28,7 @@ ms.locfileid: "48199187"
   
 3.  Nella barra degli strumenti di Esplora oggetti fare clic su **Connetti**e quindi su **Motore di database**.  
   
-4.  Nella finestra di dialogo **Connetti al server** specificare un nome di server e selezionare una modalità di autenticazione. È possibile usare un punto (.), (locale), o `localhost` per indicare il server locale.  
+4.  Nella finestra di dialogo **Connetti al server** specificare un nome di server e selezionare una modalità di autenticazione. Per specificare il server locale, è possibile digitare un punto (.), (locale) o `localhost`.  
   
 5.  Fare clic su **Connetti**.  
   

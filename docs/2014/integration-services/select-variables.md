@@ -12,15 +12,15 @@ f1_keywords:
 helpviewer_keywords:
 - Select Variables dialog box
 ms.assetid: 7069a82b-905b-47a5-aee4-6fba24204979
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: b25d629c510e6220ee361643502a2e178a7ae172
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: afae34484d4513c9ef6a33435fb023dbb8190fd4
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48176141"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58390809"
 ---
 # <a name="select-variables"></a>Seleziona variabili
   Usare la finestra di dialogo **Seleziona variabili** per specificare le variabili da applicare in un'operazione di invio di messaggi nell'attività Message Queue. Nell'elenco **Variabili disponibili** sono incluse le variabili di sistema e definite dall'utente che si trovano nell'ambito dell'attività Message Queue o nel rispettivo contenitore padre. L'attività usa le variabili incluse dell'elenco **Variabili selezionate** .  

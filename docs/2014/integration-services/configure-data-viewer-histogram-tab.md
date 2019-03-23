@@ -12,15 +12,15 @@ f1_keywords:
 helpviewer_keywords:
 - Configure Data Viewer dialog box
 ms.assetid: 43bda909-e48f-4243-9614-49f4eea84872
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: a7db265d2f7c3e2de1c13646323f2698b7b3299a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 2db75092ee2504fbd8f36a4bdf8f8e399f4841d8
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48087131"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58392991"
 ---
 # <a name="configure-data-viewer-histogram-tab"></a>Configura visualizzatore dati (scheda Istogramma)
   Utilizzare la scheda **Istogramma** della finestra di dialogo **Configura visualizzatore dati** per indicare le colonne da visualizzare. In un istogramma i valori dei dati di una colonna numerica vengono visualizzati come distribuzione dei valori. Il grafico riflette il contenuto di un solo buffer.  

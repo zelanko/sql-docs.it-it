@@ -12,15 +12,15 @@ f1_keywords:
 helpviewer_keywords:
 - Configure Data Viewer dialog box
 ms.assetid: 960c351a-ccb9-4e52-acd4-442246a3a328
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 5369cadb43cd49bc8dfa045282e5716d0dd04744
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 208280aa29edc8671f960ad689cdcaffa8175260
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48189021"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58393109"
 ---
 # <a name="configure-data-viewer-scatter-plot-tab"></a>Configura visualizzatore dati (scheda Grafico a dispersione)
   Usare la scheda **Grafico a dispersione (x,y)** della finestra di dialogo **Configura visualizzatore dati** per impostare due colonne da visualizzare nel grafico a dispersione. In un grafico a dispersione vengono visualizzati i valori dei dati di due colonne numeriche in relazione tra loro. Ogni record di dati corrisponde a un punto nel tracciato. Il grafico riflette il contenuto di un solo buffer.  

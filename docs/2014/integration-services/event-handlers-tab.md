@@ -10,15 +10,15 @@ ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.eventhandlerwindow.f1
 ms.assetid: 94fc8916-8032-490c-b9d5-ded8b6217e49
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: a258c768f46e2310095c6aadc0c57c65cea2bac6
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 2f13aa09f7b424da63348c5363bc6d5077ed9f2c
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48131141"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58380739"
 ---
 # <a name="event-handlers-tab"></a>Scheda Gestori eventi
   Utilizzare la scheda **Gestori eventi** dello strumento Progettazione [!INCLUDE[ssIS](../includes/ssis-md.md)] per compilare un flusso di controllo in un pacchetto [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] . Un gestore di evento viene eseguito in risposta a un evento generato dal pacchetto oppure da un'attività o da un contenitore incluso nel pacchetto.  
@@ -43,7 +43,7 @@ ms.locfileid: "48131141"
 ## <a name="see-also"></a>Vedere anche  
  [Gestori eventi di Integration Services &#40;SSIS&#41;](integration-services-ssis-event-handlers.md)   
  [Flusso di controllo](control-flow/control-flow.md)   
- [Progettazione SSIS](ssis-designer.md)   
- [Integration Services &#40;SSIS&#41; gestori eventi](integration-services-ssis-event-handlers.md)  
+ [SSIS Designer](ssis-designer.md)   
+ [Gestori eventi di Integration Services &#40;SSIS&#41;](integration-services-ssis-event-handlers.md)  
   
   

@@ -9,15 +9,15 @@ ms.topic: conceptual
 helpviewer_keywords:
 - Slowly Changing Dimension Wizard
 ms.assetid: e4d62b73-77c5-4b26-9b6d-d5f245768fc8
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: e70590fb67c1fba5c3781fb224211aaab721f5bd
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 5ccb8df947d31376707f81c0ce7cd7c28cc62d6c
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52773013"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58388820"
 ---
 # <a name="slowly-changing-dimension-wizard-f1-help"></a>Guida sensibile al contesto della Configurazione guidata dimensioni a modifica lenta
   Utilizzare la **Configurazione guidata dimensioni a modifica lenta** per configurare il caricamento dei dati in diversi tipi di dimensioni a modifica lenta. In questa sezione viene fornita la Guida sensibile al contesto della **Configurazione guidata dimensioni a modificata lenta**. Gli argomenti disponibili in questa sezione sono descritti nella tabella seguente.  

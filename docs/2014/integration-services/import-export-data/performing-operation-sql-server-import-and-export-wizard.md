@@ -9,15 +9,15 @@ ms.topic: conceptual
 f1_keywords:
 - sql12.dts.impexpwizard.performingoperation.f1
 ms.assetid: 83259509-71d6-4a64-a7f2-4e9603b30bd4
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 8a4e1bfd6fffcb9360f92b6b270718edc03da8bb
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: ffb9c242b30c3b0ddfc1cadae20ea261c616475b
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52801713"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58394449"
 ---
 # <a name="performing-operation-sql-server-import-and-export-wizard"></a>Esecuzione delle operazioni (Importazione/Esportazione guidata SQL Server)
   Utilizzare la finestra di dialogo **Esecuzione delle operazioni** per visualizzare lo stato e i risultati dell'operazione di importazione/esportazione ed eventualmente interrompere l'operazione.  

@@ -10,15 +10,15 @@ ms.topic: conceptual
 f1_keywords:
 - sql12.ssis.designer.cdcsource.connection.f1
 ms.assetid: 304e6717-e160-4a7b-a06f-32182449fef8
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 8ff990559adb693ac9e3db1ceb18843978fcfe0b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: d0e421d6ba1aaf69c04a450d8d93ff1ddf385935
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48190481"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58391489"
 ---
 # <a name="cdc-source-editor-connection-manager-page"></a>Editor origine CDC (pagina Gestione connessione)
   Usare la pagina **Gestione connessione** della finestra di dialogo **Editor origine CDC** per selezionare la gestione connessione ADO.NET per il database di [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] da cui l'origine CDC legge le righe delle modifiche (database CDC). Dopo aver selezionato il database CDC è necessario selezionare una tabella acquisita nel database.  
@@ -52,15 +52,15 @@ ms.locfileid: "48190481"
  **CDC Processing Mode**  
  Selezionare la modalità di elaborazione più adatta per le esigenze di elaborazione correnti. Di seguito sono elencate le opzioni possibili:  
   
--   **All**: restituisce le modifiche nell'intervallo CDC corrente senza i valori **Before Update** .  
+-   **tutti i**: Restituisce le modifiche nell'intervallo CDC corrente senza il **Before Update** valori.  
   
--   **All with old values**: restituisce le modifiche nell'intervallo di elaborazione CDC corrente inclusi i valori precedenti (**Before Update**). Ogni operazione di aggiornamento prevede due righe: una con i valori prima dell'aggiornamento e una con i valori dopo l'aggiornamento.  
+-   **Tutto con i valori precedenti**: Restituisce le modifiche nell'intervallo di elaborazione CDC corrente inclusi i valori precedenti (**Before Update**). Ogni operazione di aggiornamento prevede due righe: una con i valori prima dell'aggiornamento e una con i valori dopo l'aggiornamento.  
   
--   **Net**: restituisce una sola riga delle modifiche per ogni riga di origine modificata nell'intervallo di elaborazione CDC corrente. Se una riga di origine è stata aggiornata più volte, viene restituita la modifica combinata (ad esempio, inserimento+aggiornamento viene prodotto come un singolo aggiornamento e aggiornamento+eliminazione viene prodotto come una singola eliminazione). Quando si utilizza la modalità di elaborazione delle modifiche Net, è possibile suddividere le modifiche negli output Delete, Insert e Update e gestirli in parallelo, perché la singola riga di origine viene visualizzata in più output.  
+-   **NET**: Restituisce una sola modifica riga per ogni riga di origine modificata nell'intervallo di elaborazione CDC corrente. Se una riga di origine è stata aggiornata più volte, viene restituita la modifica combinata (ad esempio, inserimento+aggiornamento viene prodotto come un singolo aggiornamento e aggiornamento+eliminazione viene prodotto come una singola eliminazione). Quando si utilizza la modalità di elaborazione delle modifiche Net, è possibile suddividere le modifiche negli output Delete, Insert e Update e gestirli in parallelo, perché la singola riga di origine viene visualizzata in più output.  
   
--   **Net with update mask**: questa modalità è simile alla modalità Net standard, ma aggiunge anche colonne booleane con il modello di nome **__$\<<nome-colonna>\___Changed**, che indica la presenza di colonne modificate nella riga delle modifiche corrente.  
+-   **NET con maschera di aggiornamento**: Questa modalità è simile alla modalità Net standard, ma aggiunge anche colonne booleane con il modello di nome **_ $\<nome-colonna >\_Changed** che indica colonne modificate nell'attuale modifiche di riga.  
   
--   **Net with merge**: questa modalità è simile alla modalità Net standard, ma con le operazioni Insert e Update unite in una singola operazione Merge (UPSERT).  
+-   **NET con merge**: Questa modalità è simile al normale modalità di rete, ma con le operazioni Insert e Update unite in una singola operazione di Merge (UPSERT).  
   
 > [!NOTE]  
 >  Per tutte le opzioni di modifica Net, è necessario che la tabella di origine disponga di una chiave primaria o di un indice univoco. Per tabelle senza una chiave primaria o indici univoci, usare l'opzione **All** .  
@@ -76,7 +76,7 @@ ms.locfileid: "48190481"
  Per altre informazioni, vedere [Proprietà personalizzate dell'origine CDC](data-flow/cdc-source-custom-properties.md).  
   
 ## <a name="see-also"></a>Vedere anche  
- [Editor origine CDC &#40;(pagina colonne)&#41;](../../2014/integration-services/cdc-source-editor-columns-page.md)   
- [Editor origine CDC &#40;pagina dell'Output degli errori&#41;](../../2014/integration-services/cdc-source-editor-error-output-page.md)  
+ [Editor origine CDC &#40;pagina Colonne&#41;](../../2014/integration-services/cdc-source-editor-columns-page.md)   
+ [Editor origine CDC &#40;pagina Output degli errori&#41;](../../2014/integration-services/cdc-source-editor-error-output-page.md)  
   
   

@@ -13,27 +13,27 @@ helpviewer_keywords:
 - packages [Integration Services], running
 - running package [Integration Services], managing
 ms.assetid: 11bf44e6-f6b0-475f-b816-40e914dbac80
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 993f5cc3cba13e9a7d2c6380f719d5e7b24ca0a1
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: ac4874c47f4aae25b87a72b1a6a62ddeb3f7962c
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48140561"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58387819"
 ---
 # <a name="viewing-and-stopping-packages-running-on-the-integration-services-server"></a>Visualizzazione e arresto dell'esecuzione dei pacchetti nel server Integration Services
-  Il `SSISDB` database archivia la cronologia di esecuzione in tabelle interne che non sono visibili agli utenti. Tuttavia, nel database vengono esposte le informazioni necessarie tramite viste pubbliche su cui è possibile eseguire una query. Inoltre, sono disponibili stored procedure che è possibile chiamare per eseguire attività comuni correlate ai pacchetti.  
+  Nel database di `SSISDB` la cronologia di esecuzione viene archiviata in tabelle interne che non sono visibili agli utenti. Tuttavia, nel database vengono esposte le informazioni necessarie tramite viste pubbliche su cui è possibile eseguire una query. Inoltre, sono disponibili stored procedure che è possibile chiamare per eseguire attività comuni correlate ai pacchetti.  
   
- In genere, gli oggetti di [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] vengono gestiti nel server in [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]. Tuttavia, è anche possibile eseguire query sulle viste del database e chiamare direttamente le stored procedure oppure scrivere codice personalizzato con cui chiamare l'API gestita. [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] e l'API gestita eseguono query le viste e chiamano le stored procedure per eseguire molte delle relative attività. È ad esempio possibile visualizzare l'elenco di pacchetti di [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] attualmente in esecuzione nel server e, se necessario richiederne l'arresto.  
+ In genere, gli oggetti di [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] vengono gestiti nel server in [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]. Tuttavia, è anche possibile eseguire query sulle viste del database e chiamare direttamente le stored procedure oppure scrivere codice personalizzato con cui chiamare l'API gestita. [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] e l'API gestita eseguono query sulle viste e chiamano le stored procedure per eseguire molte delle relative attività. È ad esempio possibile visualizzare l'elenco di pacchetti di [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] attualmente in esecuzione nel server e, se necessario richiederne l'arresto.  
   
 ## <a name="viewing-the-list-of-running-packages"></a>Visualizzazione dell'elenco di pacchetti in esecuzione  
  È possibile visualizzare l'elenco di pacchetti attualmente in esecuzione nel server nella finestra di dialogo **Operazioni attive** . Per altre informazioni, vedere [Active Operations Dialog Box](../../2014/integration-services/active-operations-dialog-box.md).  
   
  Per informazioni su altri metodi utilizzabili per visualizzare l'elenco di pacchetti in esecuzione, vedere gli argomenti seguenti.  
   
- Accesso [!INCLUDE[tsql](../includes/tsql-md.md)]  
+ [!INCLUDE[tsql](../includes/tsql-md.md)] accesso  
  Per visualizzare l'elenco di pacchetti in esecuzione nel server, eseguire una query sulla vista [catalog.executions &#40;SSISDB Database&#41;](/sql/integration-services/system-views/catalog-executions-ssisdb-database) per i pacchetti con stato 2.  
   
  Accesso a livello di codice tramite l'API gestita  
@@ -44,7 +44,7 @@ ms.locfileid: "48140561"
   
  Per informazioni su altri metodi utilizzabili per arrestare un pacchetto in esecuzione, vedere gli argomenti seguenti.  
   
- Accesso [!INCLUDE[tsql](../includes/tsql-md.md)]  
+ [!INCLUDE[tsql](../includes/tsql-md.md)] accesso  
  Per arrestare un pacchetto in esecuzione nel server, chiamare la stored procedure [catalog.stop_operation &#40;SSISDB Database&#41;](/sql/integration-services/system-stored-procedures/catalog-stop-operation-ssisdb-database).  
   
  Accesso a livello di codice tramite l'API gestita  
@@ -55,7 +55,7 @@ ms.locfileid: "48140561"
   
  Per informazioni su altri metodi utilizzabili per visualizzare la cronologia di pacchetti in esecuzione, vedere gli argomenti seguenti.  
   
- Accesso [!INCLUDE[tsql](../includes/tsql-md.md)]  
+ [!INCLUDE[tsql](../includes/tsql-md.md)] accesso  
  Per visualizzare le informazioni sui pacchetti eseguiti, eseguire una query sulla vista [catalog.executions &#40;SSISDB Database&#41;](/sql/integration-services/system-views/catalog-executions-ssisdb-database).  
   
  Accesso a livello di codice tramite l'API gestita  
@@ -63,6 +63,6 @@ ms.locfileid: "48140561"
   
 ## <a name="see-also"></a>Vedere anche  
  [Esecuzione di progetti e pacchetti](packages/run-integration-services-ssis-packages.md)   
- [Report per la risoluzione dei problemi relativi all'esecuzione dei pacchetti](troubleshooting/troubleshooting-reports-for-package-execution.md)  
+ [Risoluzione dei problemi relativi ai report per l'esecuzione del pacchetto](troubleshooting/troubleshooting-reports-for-package-execution.md)  
   
   

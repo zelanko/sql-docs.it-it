@@ -10,18 +10,18 @@ ms.topic: conceptual
 f1_keywords:
 - SQL12.SWB.SUMMARY.RENDER.CUSTOM.REPORT.F1
 ms.assetid: e976e7c0-a805-4370-bf73-356c8e3becfb
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 224345a2dc32f12e925a6f97299c91a5e2f7e9b4
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 6be914812be9d58fb59316b1b4793eb5d9e07043
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48096171"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58394089"
 ---
 # <a name="reports-for-the-integration-services-server"></a>Report per il server Integration Services
-  Nella versione corrente di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)], sono disponibili report standard [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] che consentono di monitorare [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] progetti che sono stati distribuiti per il [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] server. I report consentono di visualizzare lo stato e la cronologia dei pacchetti e, se necessario, identificare la causa di eventuali errori.  
+  Nella versione corrente di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)][!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]sono disponibili report standard in [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] per monitorare i progetti di [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] distribuiti nel server [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] . I report consentono di visualizzare lo stato e la cronologia dei pacchetti e, se necessario, identificare la causa di eventuali errori.  
   
  All'inizio di ogni pagina dei report sono disponibili l'icona che consente di tornare alla pagina precedentemente visualizzata, l'icona tramite cui viene eseguito l'aggiornamento delle informazioni visualizzate nella pagina e l'icona che consente all'utente di stampare la pagina corrente.  
   
@@ -32,7 +32,7 @@ ms.locfileid: "48096171"
   
  Nel report sono mostrate le sezioni di informazioni seguenti.  
   
-|Sezione|Description|  
+|Sezione|Descrizione|  
 |-------------|-----------------|  
 |**Informazioni sulle esecuzioni**|Viene mostrato il numero di esecuzioni che si trovano in stati diversi (operazione non riuscita, in esecuzione, operazione riuscita e altri) nelle ultime 24 ore.|  
 |**Informazioni sui pacchetti**|Viene mostrato il numero totale di pacchetti eseguiti nelle ultime 24 ore.|  
@@ -46,9 +46,9 @@ ms.locfileid: "48096171"
   
  Nel report sono mostrate le sezioni di informazioni seguenti.  
   
-|Sezione|Description|  
+|Sezione|Descrizione|  
 |-------------|-----------------|  
-|Filtra|Mostra il filtro corrente applicato al report, ad esempio l'intervallo Ora inizio.|  
+|Filtro|Mostra il filtro corrente applicato al report, ad esempio l'intervallo Ora inizio.|  
 |Informazioni sulle esecuzioni|Indica l'ora di inizio, l'ora di fine e la durata di ogni esecuzione del pacchetto. È possibile visualizzare un elenco di valori dei parametri utilizzati con l'esecuzione di un pacchetto, ad esempio i valori passati a un pacchetto figlio utilizzando l'attività Esegui pacchetto. Per visualizzare l'elenco dei parametri, fare clic su Panoramica.|  
   
  Per altre informazioni sull'utilizzo dell'attività Esegui pacchetto per rendere disponibili valori a un pacchetto figlio, vedere [Attività Esegui pacchetto](control-flow/execute-package-task.md).  
@@ -60,7 +60,7 @@ ms.locfileid: "48096171"
   
  Nel report sono mostrate le sezioni di informazioni seguenti.  
   
-|Sezione|Description|  
+|Sezione|Descrizione|  
 |-------------|-----------------|  
 |Filtro|Mostra il filtro corrente applicato al report, ad esempio le connessioni con una stringa specificata e il valore di **Intervallo di ore ultimo errore** .<br /><br /> Impostare un valore per **Intervallo di ore ultimo errore** per visualizzare solo gli errori di connessione che si sono verificati durante un intervallo di date. L'intervallo può estendersi per più giorni, mesi o anni.|  
 |Dettagli|Mostra la stringa di connessione, il numero di esecuzioni durante le quali una connessione non è riuscita e la data in cui l'ultima connessione non è riuscita.|  

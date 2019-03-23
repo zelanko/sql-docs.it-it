@@ -10,15 +10,15 @@ ms.topic: conceptual
 f1_keywords:
 - sql12.ssis.designer.odbcdest.connection.f1
 ms.assetid: f6d9c6c2-e4c4-468b-9e0d-af7b9609614d
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 0c778d51d5fb8f8c0598fb8aefb747e41271c815
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: bc651d10df7433bdb0217414f251d16ed6abdf70
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48060711"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58390869"
 ---
 # <a name="odbc-destination-editor-connection-manager-page"></a>Editor destinazione ODBC (pagina Gestione connessione)
   Utilizzare la pagina **Gestione connessione** della finestra di dialogo **ODBC Destination Editor** per selezionare la gestione connessione ODBC per la destinazione. Tramite questa pagina è inoltre possibile selezionare una tabella o una vista del database  
@@ -46,12 +46,12 @@ ms.locfileid: "48060711"
 ### <a name="data-access-mode"></a>Modalità di accesso ai dati  
  Consente di selezionare il metodo di caricamento dei dati nella destinazione. Le opzioni disponibili vengono visualizzate nella tabella seguente.  
   
-|Opzione|Description|  
+|Opzione|Descrizione|  
 |------------|-----------------|  
 |Nome tabella - Batch|Selezionare questa opzione per configurare la destinazione ODBC per l'utilizzo della modalità batch. Se si seleziona questa opzione, sono disponibili le opzioni seguenti.|  
-||**Nome tabella o vista**: selezionare una tabella o vista disponibile nell'elenco.<br /><br /> Questo elenco contiene solo le prime 1000 tabelle. Se il database contiene più di 1000 tabelle, è possibile digitare l'inizio di un nome di tabella o usare il carattere jolly (\*) per immettere qualsiasi parte del nome e visualizzare la tabella o le tabelle che si vuole usare.<br /><br /> **Dimensioni batch**: digitare la dimensione del batch per il caricamento bulk. Si tratta del numero di righe caricato come un batch|  
+||**Nome della tabella o vista**: Selezionare una tabella o vista disponibile dall'elenco.<br /><br /> Questo elenco contiene solo le prime 1000 tabelle. Se il database contiene più di 1000 tabelle, è possibile digitare l'inizio di un nome di tabella o usare il carattere jolly (\*) per immettere qualsiasi parte del nome e visualizzare la tabella o le tabelle che si vuole usare.<br /><br /> **Dimensioni batch**: Digitare la dimensione del batch per il caricamento bulk. Si tratta del numero di righe caricato come un batch|  
 |Nome tabella - Riga per riga|Selezionare questa opzione per configurare la destinazione ODBC per l'inserimento di una riga per volta nella tabella di destinazione. Se si seleziona questa opzione, è disponibile l'opzione seguente.|  
-||**Nome tabella o vista**: selezionare una tabella o vista disponibile del database dall'elenco.<br /><br /> Questo elenco contiene solo le prime 1000 tabelle. Se il database contiene più di 1000 tabelle, è possibile digitare l'inizio di un nome di tabella o utilizzare il carattere jolly (*) per immettere qualsiasi parte del nome e visualizzare la tabella o le tabelle che si desidera utilizzare.|  
+||**Nome della tabella o vista**: Selezionare una tabella o vista disponibile del database dall'elenco.<br /><br /> Questo elenco contiene solo le prime 1000 tabelle. Se il database contiene più di 1000 tabelle, è possibile digitare l'inizio di un nome di tabella o utilizzare il carattere jolly (*) per immettere qualsiasi parte del nome e visualizzare la tabella o le tabelle che si desidera utilizzare.|  
   
 ### <a name="preview"></a>Anteprima  
  Fare clic su **Anteprima** per visualizzare fino a 200 dati per la tabella selezionata.  
@@ -59,6 +59,6 @@ ms.locfileid: "48060711"
 ## <a name="see-also"></a>Vedere anche  
  [Proprietà personalizzate della destinazione ODBC](data-flow/odbc-destination-custom-properties.md)   
  [Editor destinazione ODBC &#40;pagina Mapping&#41;](../../2014/integration-services/odbc-destination-editor-mappings-page.md)   
- [Editor destinazione ODBC &#40;pagina dell'Output degli errori&#41;](../../2014/integration-services/odbc-destination-editor-error-output-page.md)  
+ [Editor destinazione ODBC &#40;pagina Output degli errori&#41;](../../2014/integration-services/odbc-destination-editor-error-output-page.md)  
   
   

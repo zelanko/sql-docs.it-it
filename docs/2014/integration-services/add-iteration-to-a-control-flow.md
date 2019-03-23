@@ -15,15 +15,15 @@ helpviewer_keywords:
 - iterations [Integration Services]
 - For Loop containers
 ms.assetid: eb3a7494-88ae-4165-9d0f-58715eb1734a
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 4093d5ce5feb9a5498fbc6213e5c63cc8bf83536
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 26c555b22ae219eeec9e0b1670f407c2504ac7f7
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48047842"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58389249"
 ---
 # <a name="add-iteration-to-a-control-flow"></a>Aggiunta di un'iterazione a un flusso di controllo
   [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] include il contenitore Ciclo For, un elemento del flusso di controllo che semplifica l'implementazione di un ciclo che consente la ripetizione condizionale di un flusso di controllo in un pacchetto. Per altre informazioni, vedere [Contenitore Ciclo For](control-flow/for-loop-container.md).  
@@ -58,7 +58,7 @@ ms.locfileid: "48047842"
 4.  Configurare il contenitore Ciclo For. Per altre informazioni, vedere [Configurazione di un contenitore Ciclo For](../../2014/integration-services/configure-a-for-loop-container.md).  
   
 ## <a name="see-also"></a>Vedere anche  
- [Aggiungere o eliminare un'attività o un contenitore in un flusso di controllo](control-flow/add-or-delete-a-task-or-a-container-in-a-control-flow.md)   
+ [Aggiunta o eliminazione di un'attività o un contenitore in un flusso di controllo](control-flow/add-or-delete-a-task-or-a-container-in-a-control-flow.md)   
  [Raggruppare o separare componenti](group-or-ungroup-components.md)   
  [Connessione di attività e contenitori tramite un vincolo di precedenza predefinito](../../2014/integration-services/connect-tasks-and-containers-by-using-a-default-precedence-constraint.md)   
  [Aggiungere l'enumerazione a un flusso di controllo](../../2014/integration-services/add-enumeration-to-a-control-flow.md)   

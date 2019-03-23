@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 84d0b877-603f-4f8e-bb6b-671558ade5c2
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 8ff1883c8940e791d35dfe97c33acc1fe4f4a0e8
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 77812ef81d77be668a449af6c79e833ffc4d81aa
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53359370"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58390149"
 ---
 # <a name="lesson-1-creating-the-project-and-basic-package"></a>Lezione 1: Creazione del progetto e del pacchetto di base
   In questa lezione verrà creato un pacchetto ETL semplice tramite cui vengono estratti i dati da un'unica origine file flat, trasformati i dati usando due componenti di trasformazione Ricerca e scritti i dati in questione nella tabella dei fatti **FactCurrency** di **AdventureWorksDW2012**. In questa lezione si imparerà a creare nuovi pacchetti, aggiungere e configurare connessioni origine e destinazione dati e usare nuovi componenti flusso di controllo e flusso di dati.  
@@ -82,13 +82,13 @@ ms.locfileid: "53359370"
   
 -   [Passaggio 1: Creazione di un nuovo progetto di Integration Services](lesson-1-1-creating-a-new-integration-services-project.md)  
   
--   [Passaggio 2: Aggiunta e configurazione di una gestione connessione File Flat](lesson-1-2-adding-and-configuring-a-flat-file-connection-manager.md)  
+-   [Passaggio 2: Aggiunta e configurazione della gestione connessione file flat](lesson-1-2-adding-and-configuring-a-flat-file-connection-manager.md)  
   
 -   [Passaggio 3: Aggiunta e configurazione di una gestione connessione OLE DB](lesson-1-3-adding-and-configuring-an-ole-db-connection-manager.md)  
   
 -   [Passaggio 4: Aggiunta di un'attività flusso di dati al pacchetto](lesson-1-4-adding-a-data-flow-task-to-the-package.md)  
   
--   [Passaggio 5: Aggiunta e configurazione dell'origine File Flat](lesson-1-5-adding-and-configuring-the-flat-file-source.md)  
+-   [Passaggio 5: Aggiunta e configurazione dell'origine file flat](lesson-1-5-adding-and-configuring-the-flat-file-source.md)  
   
 -   [Passaggio 6: Aggiunta e configurazione delle trasformazioni ricerca](lesson-1-6-adding-and-configuring-the-lookup-transformations.md)  
   

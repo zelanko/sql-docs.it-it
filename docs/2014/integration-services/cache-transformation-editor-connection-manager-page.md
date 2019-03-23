@@ -10,15 +10,15 @@ ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.cachetranscon.f1
 ms.assetid: cec4f3d8-a767-41cb-af67-166d5cdde783
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 91c6b0b4e81f9535ad3aa8313dd9202da388b172
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 7e023624402d965aed6629d42ef97204413432e5
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48183243"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58392749"
 ---
 # <a name="cache-transformation-editor-connection-manager-page"></a>Editor trasformazione cache (pagina Gestione connessioni)
   Utilizzare la scheda **Gestione connessione** della finestra di dialogo **Editor trasformazione cache** per selezionare una gestione connessione esistente o crearne una nuova.  
@@ -38,6 +38,6 @@ ms.locfileid: "48183243"
  Consente di modificare una connessione esistente.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Editor trasformazione cache &#40;pagina mapping&#41;](../../2014/integration-services/cache-transformation-editor-mappings-page.md)  
+ [Editor trasformazione cache &#40;pagina Mapping&#41;](../../2014/integration-services/cache-transformation-editor-mappings-page.md)  
   
   

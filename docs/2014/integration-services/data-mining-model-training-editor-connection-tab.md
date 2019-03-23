@@ -12,15 +12,15 @@ f1_keywords:
 helpviewer_keywords:
 - Data Mining Model Training Editor
 ms.assetid: 098fbb1a-2a26-4288-9f68-d6233cb388ad
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 635e98ed9ad3f365f30f96653ad77a906ca0d81a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 6b88616b096557f0c27255669d4f5fab1f646f5f
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48201292"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58390199"
 ---
 # <a name="data-mining-model-training-editor-connection-tab"></a>Editor training modelli di data mining (scheda Connessione)
   Utilizzare la pagina **Connessione** della finestra di dialogo **Editor training modelli di data mining** per selezionare un modello di mining per cui eseguire il training.  
@@ -44,7 +44,7 @@ ms.locfileid: "48201292"
  Consente di visualizzare l'elenco dei modelli di data mining associati alla struttura di data mining selezionata.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Riferimento ai messaggi e agli errori di Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [Editor Training modelli di Data Mining &#40;scheda colonne&#41;](../../2014/integration-services/data-mining-model-training-editor-columns-tab.md)  
+ [Guida di riferimento ai messaggi e agli errori di Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
+ [Editor training modelli di data mining &#40;scheda Colonne&#41;](../../2014/integration-services/data-mining-model-training-editor-columns-tab.md)  
   
   

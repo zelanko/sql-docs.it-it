@@ -12,15 +12,15 @@ f1_keywords:
 helpviewer_keywords:
 - File Transfer Protocol Task Editor
 ms.assetid: 28b46fdd-b04a-4f97-a99f-883f5735a6d9
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 1309a746aa60ee1a7c49a0d6569b51d0a57b3a39
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 1b64b1f8511c9d079118881a9862eee11fdb636d
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48054201"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58388739"
 ---
 # <a name="ftp-task-editor-general-page"></a>Editor attività FTP (pagina Generale)
   Utilizzare la pagina **Generale** della finestra di dialogo **Editor attività FTP** per specificare la gestione connessione FTP tramite cui viene stabilita la connessione al server FTP con cui comunica l'attività. È inoltre possibile specificare un nome e una descrizione per l'attività FTP.  
@@ -34,12 +34,12 @@ ms.locfileid: "48054201"
 > [!IMPORTANT]  
 >  La gestione connessione FTP supporta solo l'autenticazione anonima e l'autenticazione di base. Non supporta l'autenticazione di Windows.  
   
- **Argomenti correlati**: [FTP Connection Manager](connection-manager/ftp-connection-manager.md), [FTP Connection Manager Editor](../../2014/integration-services/ftp-connection-manager-editor.md)  
+ **Argomenti correlati**: [Gestione connessione FTP](connection-manager/ftp-connection-manager.md), [Editor gestione connessione FTP](../../2014/integration-services/ftp-connection-manager-editor.md)  
   
  **StopOnFailure**  
  Consente di specificare il termine dell'attività FTP in caso di esito negativo di un'operazione FTP.  
   
- **Nome**  
+ **Name**  
  Consente di specificare un nome univoco per l'attività FTP. Tale nome viene utilizzato come etichetta nell'icona dell'attività.  
   
 > [!NOTE]  
@@ -49,8 +49,8 @@ ms.locfileid: "48054201"
  Consente di digitare una descrizione dell'attività FTP.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Riferimento ai messaggi e agli errori di Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [Editor attività FTP &#40;pagina trasferimento File&#41;](../../2014/integration-services/ftp-task-editor-file-transfer-page.md)   
+ [Guida di riferimento ai messaggi e agli errori di Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
+ [Editor attività FTP &#40;pagina Trasferimento file&#41;](../../2014/integration-services/ftp-task-editor-file-transfer-page.md)   
  [Pagina Espressioni](expressions/expressions-page.md)  
   
   

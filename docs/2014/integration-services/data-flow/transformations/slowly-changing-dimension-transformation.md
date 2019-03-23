@@ -14,15 +14,15 @@ helpviewer_keywords:
 - SCD transformation
 - updating slowly changing dimensions
 ms.assetid: f8849151-c171-4725-bd25-f2c33a40f4fe
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 2fae586ee68a75127d5085b57f5f200498967d1d
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 18c269bfa245135e95a101d725ed4a592889e7a4
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53352131"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58388244"
 ---
 # <a name="slowly-changing-dimension-transformation"></a>Dimensione a modifica lenta - trasformazione
   La trasformazione Dimensione a modifica lenta consente di coordinare l'aggiornamento e l'inserimento dei record nelle tabelle delle dimensioni dei data warehouse. È ad esempio possibile usare questa trasformazione per configurare gli output che inseriscono e aggiornano i record nella tabella DimProduct del database [!INCLUDE[ssSampleDBDWobject](../../../includes/sssampledbdwobject-md.md)] con i dati della tabella Production.Products del database OLTP AdventureWorks.  

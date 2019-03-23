@@ -10,15 +10,15 @@ ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.parameterwindow.f1
 ms.assetid: cd5d675b-dd5d-49cc-8b1f-dc717a973f99
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 75c36c5e061a10ec6fc5b2af17334d134a7bd9d2
-ms.sourcegitcommit: 1f10e9df1c523571a8ccaf3e3cb36a26ea59a232
+ms.openlocfilehash: 3e1cc5bfb5388cd71ca3217bd060e3dde0428f36
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2018
-ms.locfileid: "51858636"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58392139"
 ---
 # <a name="create-parameters"></a>Create Parameters
   Usare [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] per creare parametri di progetto e parametri di pacchetto. Le procedure riportate di seguito contengono istruzioni dettagliate per la creazione di parametri di pacchetto/progetto.  

@@ -9,15 +9,15 @@ ms.topic: conceptual
 helpviewer_keywords:
 - Data Profiling task [Integration Services], configuring
 ms.assetid: fe050ca4-fe45-43d7-afa9-99478041f9a8
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: c6bc7964ee9ffaca02a81d52a50104089736e2ae
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 1d2378426a3cd55b6df183cac7782d63578e2ed0
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53376553"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58389129"
 ---
 # <a name="setup-of-the-data-profiling-task"></a>Impostazione dell'attività Profiling dati
   Prima di poter esaminare un profilo dei dati di origine, configurare ed eseguire l'attività Profiling dati. È necessario creare questa attività all'interno di un pacchetto di [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . Per configurare l'attività Profiling dati, utilizzare lo strumento Editor attività Profiling dati. Questo editor consente di selezionare la destinazione dell'output dei profili e i profili da calcolare. Dopo avere configurato l'attività, è necessario eseguire il pacchetto per calcolare i profili dati.  

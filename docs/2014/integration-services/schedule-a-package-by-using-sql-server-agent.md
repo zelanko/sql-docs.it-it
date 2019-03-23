@@ -8,15 +8,15 @@ ms.technology:
 - integration-services
 ms.topic: conceptual
 ms.assetid: 3d389cce-05af-4e1d-b684-7bbff413c806
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: cb49a9bcda16472f06611f320436b9bd918d126b
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: f2e9e395ec0c8703edaf7c398e22b352251302c4
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53374023"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58388099"
 ---
 # <a name="schedule-a-package-by-using-sql-server-agent"></a>Pianificare un pacchetto tramite SQL Server Agent
   Nella procedura riportata di seguito vengono illustrati i passaggi per automatizzare l'esecuzione di un pacchetto tramite un passaggio di processo di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Agent per eseguire il pacchetto.  

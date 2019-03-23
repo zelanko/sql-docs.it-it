@@ -12,15 +12,15 @@ f1_keywords:
 helpviewer_keywords:
 - Execute SQL Task Editor
 ms.assetid: 8ebe020a-7921-46b2-8823-398748f379b2
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 867ecaedcdcbafb972ccd289b5257fc73b353a5a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 50153d56b7818e0855710a651a51ce70d7e7bd06
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48092371"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58391209"
 ---
 # <a name="execute-sql-task-editor-parameter-mapping-page"></a>Editor attività Esegui SQL (pagina Mapping parametri)
   Usare la pagina **Mapping parametri** della finestra di dialogo **Editor attività Esegui SQL** per eseguire il mapping tra variabili e parametri nell'istruzione SQL.  
@@ -58,7 +58,7 @@ ms.locfileid: "48092371"
  Selezionare un mapping dei parametri nell'elenco e quindi fare clic su **Rimuovi**.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Riferimento ai messaggi e agli errori di Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
+ [Guida di riferimento ai messaggi e agli errori di Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [Editor attività Esegui SQL &#40;pagina Generale&#41;](general-page-of-integration-services-designers-options.md)   
  [Editor attività Esegui SQL &#40;pagina Set dei risultati&#41;](../../2014/integration-services/execute-sql-task-editor-result-set-page.md)   
  [Guida di riferimento a Transact-SQL &#40;Motore di database&#41;](/sql/t-sql/language-reference)  

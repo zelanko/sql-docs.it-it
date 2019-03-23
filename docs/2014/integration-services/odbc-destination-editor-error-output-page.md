@@ -10,15 +10,15 @@ ms.topic: conceptual
 f1_keywords:
 - sql12.ssis.designer.odbcdest.errorhandling.f1
 ms.assetid: 0a743f8d-2a51-4296-9976-8104f5ca22d3
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: fba1021e4152d5d810b54d29417864936f067800
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: cf651979dcf1cf651fecb6c9f385396a7dcb801d
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48183371"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58389009"
 ---
 # <a name="odbc-destination-editor-error-output-page"></a>Editor destinazione ODBC (pagina Output errori)
   Utilizzare la pagina **Output degli errori** della finestra di dialogo **ODBC Destination Editor** per selezionare le opzioni di gestione degli errori.  
@@ -40,7 +40,7 @@ ms.locfileid: "48183371"
 ### <a name="inputoutput"></a>Input/Output  
  Consente di visualizzare il nome dell'origine dei dati.  
   
-### <a name="column"></a>Colonna  
+### <a name="column"></a>colonna  
  Non usato.  
   
 ### <a name="error"></a>Errore  
@@ -49,7 +49,7 @@ ms.locfileid: "48183371"
 ### <a name="truncation"></a>Troncamento  
  Consente di selezionare il modo in cui la destinazione ODBC deve gestire il troncamento in un flusso: ignorare l'errore, reindirizzare la riga o interrompere il componente.  
   
-### <a name="description"></a>Description  
+### <a name="description"></a>Descrizione  
  Consente di visualizzare una descrizione dell'errore.  
   
 ### <a name="set-this-value-to-selected-cells"></a>Imposta questo valore nelle celle selezionate  
@@ -72,6 +72,6 @@ ms.locfileid: "48183371"
   
 ## <a name="see-also"></a>Vedere anche  
  [Editor destinazione ODBC &#40;pagina Gestione connessione&#41;](../../2014/integration-services/odbc-destination-editor-connection-manager-page.md)   
- [Editor destinazione ODBC &#40;pagina mapping&#41;](../../2014/integration-services/odbc-destination-editor-mappings-page.md)  
+ [Editor destinazione ODBC &#40;pagina Mapping&#41;](../../2014/integration-services/odbc-destination-editor-mappings-page.md)  
   
   

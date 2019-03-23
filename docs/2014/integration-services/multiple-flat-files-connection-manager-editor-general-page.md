@@ -12,15 +12,15 @@ f1_keywords:
 helpviewer_keywords:
 - Multiple Flat Files Connection Manager Editor
 ms.assetid: 00129d43-2772-413b-bdf8-ac5de81cf4a5
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 3c7af9641ffc033c2c7173eaf74884700de7a3ed
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 8d1932d314e8d2c1eb48526d87246da2051bc3b5
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48176441"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58391639"
 ---
 # <a name="multiple-flat-files-connection-manager-editor-general-page"></a>Editor gestione connessione per più file flat (pagina Generale)
   Utilizzare la pagina **Generale** della finestra di dialogo **Editor gestione connessione per più file flat** per selezionare un gruppo di file con lo stesso formato di dati e per specificare il loro formato dei dati. Una connessione per più file flat consente la connessione di un pacchetto a un gruppo di file di testo aventi lo stesso formato.  
@@ -52,7 +52,7 @@ ms.locfileid: "48176441"
  **Formato**  
  Consente di indicare se utilizzare la formattazione non allineata a destra, a larghezza fissa o delimitata. Tutti i file devono avere lo stesso formato data.  
   
-|valore|Description|  
+|Value|Descrizione|  
 |-----------|-----------------|  
 |Delimitato|Le colonne sono separate dai delimitatori specificati nella pagina **Colonne** .|  
 |A larghezza fissa|Le colonne hanno una larghezza fissa, specificata trascinando le linee dei marcatori nella pagina **Colonne** .|  
@@ -64,7 +64,7 @@ ms.locfileid: "48176441"
  **Delimitatore riga di intestazione**  
  Consente di selezionare il delimitatore per la riga di intestazione nell'elenco dei delimitatori disponibili oppure di immettere il testo per il delimitatore.  
   
-|valore|Description|  
+|Value|Descrizione|  
 |-----------|-----------------|  
 |**{CR}{LF}**|La riga di intestazione è delimitata dalla combinazione di caratteri ritorno a capo/avanzamento riga.|  
 |**{CR}**|La riga di intestazione è delimitata da un carattere di ritorno a capo.|  
@@ -82,9 +82,9 @@ ms.locfileid: "48176441"
  Consente di indicare se prevedere o fornire nomi di colonne nella prima riga di dati.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Riferimento ai messaggi e agli errori di Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [Editor gestione connessione file Flat più &#40;(pagina colonne)&#41;](../../2014/integration-services/multiple-flat-files-connection-manager-editor-columns-page.md)   
- [Editor gestione connessione file Flat più &#40;pagina avanzate&#41;](../../2014/integration-services/multiple-flat-files-connection-manager-editor-advanced-page.md)   
- [Editor gestione connessione file Flat più &#40;pagina di anteprima&#41;](../../2014/integration-services/multiple-flat-files-connection-manager-editor-preview-page.md)  
+ [Guida di riferimento ai messaggi e agli errori di Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
+ [Editor gestione connessione per più file flat &#40;pagina Colonne&#41;](../../2014/integration-services/multiple-flat-files-connection-manager-editor-columns-page.md)   
+ [Editor gestione connessione per più file flat &#40;pagina Avanzate&#41;](../../2014/integration-services/multiple-flat-files-connection-manager-editor-advanced-page.md)   
+ [Editor gestione connessione per più file flat &#40;pagina Anteprima&#41;](../../2014/integration-services/multiple-flat-files-connection-manager-editor-preview-page.md)  
   
   

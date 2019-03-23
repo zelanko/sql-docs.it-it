@@ -10,15 +10,15 @@ ms.topic: conceptual
 helpviewer_keywords:
 - event handlers [Integration Services], creating
 ms.assetid: 5e56885d-8658-480a-bed9-3f2f8003fd78
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: ca66bfd954ff9c6da23aeecd3997454539f48adc
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: c64d535e7e712dde5dd98e8b4c14b3319d5947db
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48123451"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58391007"
 ---
 # <a name="add-an-event-handler-to-a-package"></a>Aggiunta di un gestore eventi a un pacchetto
   In fase di esecuzione contenitori e attività generano eventi. È possibile creare gestori di eventi personalizzati che rispondono a tali eventi eseguendo un flusso di lavoro alla generazione dell'evento. Ad esempio, è possibile creare un gestore di evento che invia un messaggio di posta elettronica quando un'attività non viene completata correttamente.  

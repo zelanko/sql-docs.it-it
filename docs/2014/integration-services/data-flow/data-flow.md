@@ -14,15 +14,15 @@ helpviewer_keywords:
 - data flow [Integration Services]
 - errors [Integration Services], data flow outputs
 ms.assetid: 7a50de3c-4ca0-4922-8028-fdddeb47e5b0
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 038fdb6f07604d3fac1fcbd8e9ee632e3af2fbdc
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 3883fdccb7f118ebd8954da670b968b745f36e27
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53360243"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58394399"
 ---
 # <a name="data-flow"></a>Flusso di dati
   In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] sono disponibili tre diversi tipi di componenti flusso di dati: origini, trasformazioni e destinazioni. Le origini estraggono dati da archivi dati quali tabelle e viste di database relazionali, file e database di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . Tramite le trasformazioni è possibile modificare, riepilogare e pulire i dati. Le destinazioni consentono di caricare dati in archivi dati o di creare set di dati in memoria.  
@@ -108,7 +108,7 @@ ms.locfileid: "53360243"
 ## <a name="transformations"></a>Trasformazioni  
  Le trasformazioni possono avere funzionalità molto diverse. Possono eseguire attività quali aggiornamento, riepilogo, pulitura, unione e distribuzione dei dati. Consentono di modificare valori nelle colonne, cercare valori nelle tabelle, eliminare dati e aggregare valori nelle colonne.  
   
- Gli input e gli output di una trasformazione definiscono le colonne dei dati in entrata e in uscita. Alcune trasformazioni includono un singolo input e più output, mentre altre includono più input e un singolo output, a seconda delle operazioni eseguite sui dati. Le trasformazioni possono includere anche output degli errori, che offrono informazioni sull'errore che si è verificata, insieme ai dati che non è riuscita: Dati stringa, ad esempio, che non è stato possibile convertire un tipo di dati integer. Il modello a oggetti di [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] non prevede alcun limite al numero degli input, degli output regolari e degli output degli errori di una trasformazione. È possibile creare trasformazioni personalizzate che implementano qualsiasi combinazione di più input, output regolari e output degli errori.  
+ Gli input e gli output di una trasformazione definiscono le colonne dei dati in entrata e in uscita. Alcune trasformazioni includono un singolo input e più output, mentre altre includono più input e un singolo output, a seconda delle operazioni eseguite sui dati. Le trasformazioni possono includere anche gli output degli errori, che specificano informazioni sugli errori e sui dati che li hanno provocati, ad esempio dati stringa che non è stato possibile convertire al tipo di dati Integer. Il modello a oggetti di [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] non prevede alcun limite al numero degli input, degli output regolari e degli output degli errori di una trasformazione. È possibile creare trasformazioni personalizzate che implementano qualsiasi combinazione di più input, output regolari e output degli errori.  
   
  L'input di una trasformazione è definito come una o più colonne di input. Alcune trasformazioni di [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] possono inoltre fare riferimento a colonne esterne come input. L'input della trasformazione Comando OLE DB, ad esempio, include colonne esterne. Una colonna di output è una colonna che la trasformazione aggiunge al flusso di dati. Sia gli output regolari che gli output degli errori possono contenere colonne di output. Le colonne di output diventano le colonne di input per il successivo componente flusso di dati, che può essere costituito da un'altra trasformazione o da una destinazione.  
   
@@ -178,18 +178,18 @@ ms.locfileid: "53360243"
  Le origini includono output, le destinazioni includono input e le trasformazioni includono sia input che output. Molti componenti flusso di dati possono essere inoltre configurati per l'utilizzo di un output degli errori.  
   
 ### <a name="inputs"></a>Input  
- Le destinazioni e le trasformazioni includono input. Un input contiene una o più colonne di input, che possono fare riferimento a colonne esterne se il componente flusso di dati è stato configurato per utilizzarne. Gli input possono essere configurati per monitorare e controllare il flusso di dati: Ad esempio, è possibile specificare se il componente deve avere esito negativo in risposta a un errore, ignorare gli errori o reindirizzare le righe di errore all'output degli errori. È inoltre possibile assegnare una descrizione all'input o aggiornarne il nome. Per configurare gli input in Progettazione [!INCLUDE[ssIS](../../../includes/ssis-md.md)] , è possibile usare la finestra di dialogo **Editor avanzato** . Per altre informazioni su **Editor avanzato** , vedere [Interfaccia utente di Integration Services](../integration-services-user-interface.md).  
+ Le destinazioni e le trasformazioni includono input. Un input contiene una o più colonne di input, che possono fare riferimento a colonne esterne se il componente flusso di dati è stato configurato per utilizzarne. È possibile configurare gli input per monitorare e controllare il flusso di dati: ad esempio è possibile specificare se il componente non deve essere completato correttamente in risposta a un errore, se gli errori devono essere ignorati o se le righe con errori devono essere reindirizzate all'output degli errori. È inoltre possibile assegnare una descrizione all'input o aggiornarne il nome. Per configurare gli input in Progettazione [!INCLUDE[ssIS](../../../includes/ssis-md.md)] , è possibile usare la finestra di dialogo **Editor avanzato** . Per altre informazioni su **Editor avanzato** , vedere [Interfaccia utente di Integration Services](../integration-services-user-interface.md).  
   
 ### <a name="outputs"></a>Output  
  Origini e trasformazioni includono sempre output. Un output contiene una o più colonne di output, che possono fare riferimento a colonne esterne se il componente flusso di dati è stato configurato per utilizzarne. Gli output possono essere configurati in modo da fornire informazioni utili per le operazioni di elaborazione dei dati a valle. È ad esempio possibile indicare se l'output è ordinato. È inoltre possibile specificare una descrizione per l'output o aggiornarne il nome. Per configurare gli output in Progettazione [!INCLUDE[ssIS](../../../includes/ssis-md.md)] , è possibile usare la finestra di dialogo **Editor avanzato** .  
   
 ### <a name="error-outputs"></a>Output degli errori  
- Origini, destinazioni e trasformazioni possono includere output degli errori. Usando la finestra di dialogo **Configura output errori** è possibile specificare come il componente flusso di dati risponde agli errori in ogni input o colonna. Se in fase di esecuzione si verifica un errore o un troncamento di dati e il componente flusso di dati è configurato per il reindirizzamento delle righe, le righe di dati con l'errore verranno inviate all'output degli errori. L'output degli errori può essere connesso a trasformazioni che applicano ulteriori trasformazioni o indirizzano i dati verso un'altra destinazione. Per impostazione predefinita, un output degli errori contiene le colonne di output e due colonne di errore: **ErrorCode** e **ErrorColumn**. Le colonne di output contengono i dati della riga che ha generato l'errore, **ErrorCode** contiene il codice di errore ed **ErrorColumn** identifica la colonna che provoca l'errore.  
+ Origini, destinazioni e trasformazioni possono includere output degli errori. Usando la finestra di dialogo **Configura output errori** è possibile specificare come il componente flusso di dati risponde agli errori in ogni input o colonna. Se in fase di esecuzione si verifica un errore o un troncamento di dati e il componente flusso di dati è configurato per il reindirizzamento delle righe, le righe di dati con l'errore verranno inviate all'output degli errori. L'output degli errori può essere connesso a trasformazioni che applicano ulteriori trasformazioni o indirizzano i dati verso un'altra destinazione. Per impostazione predefinita, un output degli errori contiene le colonne di output e due colonne di informazioni sugli errori: **ErrorCode** e **ErrorColumn**. Le colonne di output contengono i dati della riga che ha generato l'errore, **ErrorCode** contiene il codice di errore ed **ErrorColumn** identifica la colonna che provoca l'errore.  
   
  Per altre informazioni, vedere [Gestione degli errori nei dati](error-handling-in-data.md).  
   
 ### <a name="columns"></a>Colonne  
- Input, output e output degli errori sono raccolte di colonne. Ogni colonna è configurabile e, a seconda la colonna tipo di input, output o esterna - [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] offre proprietà diverse per la colonna. [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] offre tre modi diversi per impostare le proprietà della colonna: a livello di codice, tramite finestre di dialogo specifiche del componente o tramite la finestra di dialogo **Editor avanzato**.  
+ Input, output e output degli errori sono raccolte di colonne. Ogni colonna è configurabile e a seconda del tipo di colonna (input, output o esterna), [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] offre proprietà diverse per la colonna. [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] offre tre modi diversi per impostare le proprietà della colonna: a livello di codice, tramite finestre di dialogo specifiche del componente o tramite la finestra di dialogo **Editor avanzato**.  
   
 ## <a name="paths"></a>Percorsi  
  I percorsi connettono i componenti flusso di dati. In Progettazione [!INCLUDE[ssIS](../../../includes/ssis-md.md)] è possibile visualizzare e modificare le proprietà di un percorso, visualizzare i metadati di output per il punto iniziale di un percorso e collegare i visualizzatori dati a un percorso.  

@@ -12,15 +12,15 @@ helpviewer_keywords:
 - connection managers [Integration Services], OLE DB
 - connections [Integration Services], OLE DB
 ms.assetid: 91e3622e-4b1a-439a-80c7-a00b90d66979
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 149feca03a64839caffe0565cc46b683f265b77b
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 601e3b906a8c10d6f073eb05b3f62857f8c79bac
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53370133"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58390467"
 ---
 # <a name="ole-db-connection-manager"></a>gestione connessione OLE DB
   Una gestione connessione OLE DB consente la connessione di un pacchetto a un'origine dati tramite un provider OLE DB. In una gestione connessione OLE DB tramite che si connette a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , ad esempio, è possibile usare il provider [!INCLUDE[msCoName](../../includes/msconame-md.md)] OLE DB per [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  

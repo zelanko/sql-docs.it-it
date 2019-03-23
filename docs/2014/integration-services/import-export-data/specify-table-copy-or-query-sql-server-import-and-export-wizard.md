@@ -9,15 +9,15 @@ ms.topic: conceptual
 f1_keywords:
 - sql12.dts.impexpwizard.specifytablecopyorquery.f1
 ms.assetid: 08aa7158-40e6-4ef3-84d3-1265a8ba194c
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 53d97adb5252594bb38f85989e87742a557331ec
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 524e878933652699bef6e31da42d3a784b54df7c
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52750403"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58394419"
 ---
 # <a name="specify-table-copy-or-query-sql-server-import-and-export-wizard"></a>Impostazione copia tabella o query (Importazione/Esportazione guidata SQL Server)
   Usare la **impostazione copia tabella o Query** pagina per specificare la modalità copiare i dati. È possibile selezionare gli oggetti di database esistenti che si desidera copiare mediante l'interfaccia grafica oppure utilizzare Transact-SQL per creare una query più complessa.  

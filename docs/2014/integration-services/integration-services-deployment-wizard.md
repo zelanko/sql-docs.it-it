@@ -10,15 +10,15 @@ ms.topic: conceptual
 f1_keywords:
 - sql12.ssis.deploymentwizard.f1
 ms.assetid: f3d93e13-2d85-47ff-a913-cda4046491c4
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 8f90613d3c8e0204e2861008a5f7be0846eca64a
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: b091518f61944b3eb62f8abdc02f0270e086538a
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52535900"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58389139"
 ---
 # <a name="integration-services-deployment-wizard"></a>Distribuzione guidata Integration Services
   Con la Distribuzione guidata [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] è possibile distribuire progetti nel catalogo SSISDB in un'istanza di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] utilizzando il modello di distribuzione del progetto.  

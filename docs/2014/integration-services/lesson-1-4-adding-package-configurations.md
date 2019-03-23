@@ -1,5 +1,5 @@
 ---
-title: 'Passaggio 4: Aggiunta delle configurazioni di pacchetto | Microsoft Docs'
+title: 'Passaggio 4: Aggiunta delle configurazioni dei pacchetti | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: e04a5321-63d5-4ec5-85b9-cb4eaf6c87f6
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: d8284f25e54cadbedd4cb14e07970af249fe4521
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: c1d98187fbe76e726dadfe163d75a27c51fd60e9
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53364013"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58388335"
 ---
 # <a name="step-4-adding-package-configurations"></a>Passaggio 4: Aggiunta di configurazioni pacchetto
   In questa attività si procederà all'aggiunta di una configurazione a ogni pacchetto. Le configurazioni consentono di aggiornare i valori delle proprietà dei pacchetti e gli oggetti dei pacchetti in fase di esecuzione.  

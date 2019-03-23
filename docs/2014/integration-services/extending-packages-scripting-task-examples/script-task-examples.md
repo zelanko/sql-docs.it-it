@@ -13,15 +13,15 @@ helpviewer_keywords:
 - examples [Integration Services]
 - SSIS Script task, examples
 ms.assetid: b0dd77ee-ee11-4cd9-87aa-61dd67f2fe1c
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 1cb5174933c946b8ec790d0fa30fb090049a4a48
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: d47fa22b8207facc5b4bc22a4077b8bd81837ec2
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53362513"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58390129"
 ---
 # <a name="script-task-examples"></a>Esempi di attività Script
   L'attività Script è uno strumento multifunzione che è possibile utilizzare in un pacchetto per rispondere ai requisiti non soddisfatti dalle attività incluse in [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]. In questo argomento sono riportati esempi di codice dell'attività Script che dimostrano alcune delle funzionalità disponibili.  

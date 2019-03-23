@@ -8,15 +8,15 @@ ms.technology:
 - integration-services
 ms.topic: conceptual
 ms.assetid: 8930c63c-bc6f-46c2-b428-b3c29ee89a7d
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: c6d1d614ee66731a24355a918678226dcc54ae35
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 99321c27fa28d16260ee3b27972d83a8b61cae59
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48201651"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58393259"
 ---
 # <a name="enable-logging-for-package-execution-on-the-ssis-server"></a>Abilitare la registrazione per l'esecuzione di pacchetti nel server SSIS
   In questa procedura viene descritto come impostare o modificare il livello di registrazione per un pacchetto quando si esegue un pacchetto che è stato distribuito al server [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]. Il livello di registrazione impostato quando si esegue il pacchetto sovrascrive la registrazione del pacchetto configurata mediante [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]. Vedere [Abilitare la registrazione di pacchetti in SQL Server Data Tools](../../2014/integration-services/enable-package-logging-in-sql-server-data-tools.md) per altre informazioni.  
@@ -43,15 +43,15 @@ ms.locfileid: "48201651"
   
  Sono disponibili i livelli di registrazione seguenti.  
   
-|Livello di registrazione|Description|  
+|Livello di registrazione|Descrizione|  
 |-------------------|-----------------|  
 |None|La registrazione è disabilitata. Solo lo stato dell'esecuzione del pacchetto viene registrato.|  
-|Standard|Tutti gli eventi sono registrati, ad eccezione di eventi personalizzati e di diagnostica. Si tratta del valore predefinito.|  
-|restazioni|Vengono registrati solo le statistiche sulle prestazioni e gli eventi OnError e OnWarning.<br /><br /> Nel report **Prestazioni di esecuzione** vengono visualizzati il tempo di attività e il tempo totale per i componenti flusso di dati del pacchetto. Queste informazioni sono disponibili se il livello di registrazione dell'ultima esecuzione del pacchetto è stato impostato su **Prestazioni** o **Dettagliato**. Per altre informazioni, vedere [report per il server Integration Services](../../2014/integration-services/reports-for-the-integration-services-server.md).<br /><br /> La vista [catalog.execution_component_phases](/sql/integration-services/system-views/catalog-execution-component-phases) visualizza le ore di inizio e di fine per i componenti flusso di dati, per ogni fase di esecuzione. In questa vista vengono visualizzate le informazioni per i componenti solo quando il livello di registrazione dell'esecuzione del pacchetto è impostato su **Prestazioni** o **Dettagliato**.|  
-|Dettagliato|Tutti gli eventi vengono registrati, inclusi gli eventi personalizzati e di diagnostica.<br /><br /> L'evento DiagnosticEx rappresenta un esempio di un evento di diagnostica. Ogni volta che un'attività Esegui pacchetto esegue un pacchetto figlio, l'evento viene registrato. Il messaggio di evento include i valori dei parametri passati ai pacchetti figlio<br /><br /> Il valore della colonna di messaggio per DiagnosticEx è Testo XML. . Per visualizzare il testo del messaggio per l'esecuzione del pacchetto, eseguire una query nella vista [catalog.operation_messages &#40;database SSISDB&#41;](/sql/integration-services/system-views/catalog-operation-messages-ssisdb-database).<br /><br /> Nota: Gli eventi personalizzati includono gli eventi registrati da [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] attività. Per altre informazioni, vedere [Custom Messages for Logging](../../2014/integration-services/custom-messages-for-logging.md).<br /><br /> Nella vista [catalog.execution_data_statistics](../relational-databases/statistics/statistics.md) viene visualizzata una riga ogni volta che un componente flusso di dati invia dati a un componente downstream, per l'esecuzione di un pacchetto. Il livello di registrazione deve essere impostato su **Dettagliato** per acquisire queste informazioni nella vista.|  
+|Basic|Tutti gli eventi sono registrati, ad eccezione di eventi personalizzati e di diagnostica. Rappresenta il valore predefinito.|  
+|Prestazioni|Vengono registrati solo le statistiche sulle prestazioni e gli eventi OnError e OnWarning.<br /><br /> Nel report **Prestazioni di esecuzione** vengono visualizzati il tempo di attività e il tempo totale per i componenti flusso di dati del pacchetto. Queste informazioni sono disponibili se il livello di registrazione dell'ultima esecuzione del pacchetto è stato impostato su **Prestazioni** o **Dettagliato**. Per altre informazioni, vedere [Report per il server Integration Services](../../2014/integration-services/reports-for-the-integration-services-server.md).<br /><br /> La vista [catalog.execution_component_phases](/sql/integration-services/system-views/catalog-execution-component-phases) visualizza le ore di inizio e di fine per i componenti flusso di dati, per ogni fase di esecuzione. In questa vista vengono visualizzate le informazioni per i componenti solo quando il livello di registrazione dell'esecuzione del pacchetto è impostato su **Prestazioni** o **Dettagliato**.|  
+|Dettagliato|Tutti gli eventi vengono registrati, inclusi gli eventi personalizzati e di diagnostica.<br /><br /> L'evento DiagnosticEx rappresenta un esempio di un evento di diagnostica. Ogni volta che un'attività Esegui pacchetto esegue un pacchetto figlio, l'evento viene registrato. Il messaggio di evento include i valori dei parametri passati ai pacchetti figlio<br /><br /> Il valore della colonna di messaggio per DiagnosticEx è Testo XML. . Per visualizzare il testo del messaggio per l'esecuzione del pacchetto, eseguire una query nella vista [catalog.operation_messages &#40;database SSISDB&#41;](/sql/integration-services/system-views/catalog-operation-messages-ssisdb-database).<br /><br /> Nota: Gli eventi personalizzati includono quelli registrati dalle attività di [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] . Per altre informazioni, vedere [Custom Messages for Logging](../../2014/integration-services/custom-messages-for-logging.md).<br /><br /> Nella vista [catalog.execution_data_statistics](../relational-databases/statistics/statistics.md) viene visualizzata una riga ogni volta che un componente flusso di dati invia dati a un componente downstream, per l'esecuzione di un pacchetto. Il livello di registrazione deve essere impostato su **Dettagliato** per acquisire queste informazioni nella vista.|  
   
 ## <a name="see-also"></a>Vedere anche  
- [Integration Services &#40;SSIS&#41; la registrazione](performance/integration-services-ssis-logging.md)   
+ [Registrazione di Integration Services &#40;SSIS&#41;](performance/integration-services-ssis-logging.md)   
  [Abilitare la registrazione di pacchetti in SQL Server Data Tools](../../2014/integration-services/enable-package-logging-in-sql-server-data-tools.md)  
   
   

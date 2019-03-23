@@ -10,15 +10,15 @@ ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.adonetsource.erroroutput.f1
 ms.assetid: 4dd9d129-a95c-4d3a-bbbf-e84a39089950
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 9440400dde3605bbd60049290bc6546eb47ea3e2
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: d033401c87b2cd4e9fe7047ab7a19f474a3ae156
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48191261"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58388699"
 ---
 # <a name="ado-net-source-editor-error-output-page"></a>Editor origine ADO NET (pagina Output errori)
   Usare la pagina **Output errori** della finestra di dialogo **Editor origine ADO NET** per selezionare le opzioni di gestione degli errori e impostare le proprietà delle colonne di output degli errori.  
@@ -59,7 +59,7 @@ ms.locfileid: "48191261"
   
 ## <a name="see-also"></a>Vedere anche  
  [Editor origine ADO NET &#40;pagina Gestione connessione&#41;](../../2014/integration-services/ado-net-source-editor-connection-manager-page.md)   
- [Editor origine ADO NET &#40;(pagina colonne)&#41;](../../2014/integration-services/ado-net-source-editor-columns-page.md)   
+ [Editor origine ADO NET &#40;pagina Colonne&#41;](../../2014/integration-services/ado-net-source-editor-columns-page.md)   
  [Gestione connessione ADO.NET](connection-manager/ado-net-connection-manager.md)  
   
   

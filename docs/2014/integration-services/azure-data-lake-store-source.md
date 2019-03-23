@@ -12,17 +12,17 @@ f1_keywords:
 - SQL11.DTS.DESIGNER.AFPADLSSRC.F1
 ms.assetid: 7d9e8457-62aa-4aea-98ee-7d1121dfae4f
 author: yualan
-ms.author: douglasl
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 2037890618a4977135d6366d8d84bb84a9c67744
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: c1a8f60cbdf2653a3d582544a487e71e62168929
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48129436"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58388549"
 ---
 # <a name="azure-data-lake-store-source"></a>Origine di Azure Data Lake Store
-  Il componente **Origine di Azure Data Lake Store** consente a un pacchetto SSIS di leggere dati da Azure Data Lake Store. I formati di file supportati sono: testo e AVRO.
+  Il componente **Origine di Azure Data Lake Store** consente a un pacchetto SSIS di leggere dati da Azure Data Lake Store. I formati di file supportati sono: Testo e Avro.
   
 ## <a name="configure-the-azure-data-lake-store-source"></a>Configurare Origine di Azure Data Lake Store 
   

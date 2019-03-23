@@ -12,25 +12,25 @@ helpviewer_keywords:
 - variables [Integration Services], use scenarios
 - system variables [Integration Services]
 ms.assetid: 7742e92d-46c5-4cc4-b9a3-45b688ddb787
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: e309a50dcc47ff4e05335222f9bac6532658ffdd
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 910d1699c8cd88f9f29d22b7f08a80337a25473d
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48145601"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58388379"
 ---
 # <a name="use-variables-in-packages"></a>Utilizzo di variabili nei pacchetti
   Le variabili rappresentano un elemento aggiuntivo utile e flessibile dei pacchetti di [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]. Consentono infatti la comunicazione tra i vari oggetti di un pacchetto e tra pacchetti padre e figlio. Le variabili possono essere utilizzate anche in espressioni e script.  
   
 ## <a name="user-defined-variables-and-system-variables"></a>Variabili definite dall'utente e variabili di sistema  
- [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] fornisce le variabili di sistema e supporta le variabili definite dall'utente. Quando si crea un nuovo pacchetto, si aggiunge un contenitore o un'attività a un pacchetto oppure si crea un gestore dell'evento, [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] include un set di variabili di sistema per il contenitore. Le variabili di sistema contengono informazioni utili su pacchetto, contenitore, attività o gestore dell'evento. Ad esempio, in fase di esecuzione la variabile di sistema **MachineName** include il nome del computer su cui è in esecuzione il pacchetto mentre la variabile **StartTime** include l'ora di inizio dell'esecuzione del pacchetto. Le variabili di sistema sono di sola lettura. Per altre informazioni, vedere [Variabili di sistema](system-variables.md).  
+ [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] supporta variabili di sistema e variabili definite dall'utente. Quando si crea un nuovo pacchetto, si aggiunge un contenitore o un'attività a un pacchetto oppure si crea un gestore dell'evento, [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] include un set di variabili di sistema per il contenitore. Le variabili di sistema contengono informazioni utili su pacchetto, contenitore, attività o gestore dell'evento. Ad esempio, in fase di esecuzione la variabile di sistema **MachineName** include il nome del computer su cui è in esecuzione il pacchetto mentre la variabile **StartTime** include l'ora di inizio dell'esecuzione del pacchetto. Le variabili di sistema sono di sola lettura. Per altre informazioni, vedere [Variabili di sistema](system-variables.md).  
   
  È possibile creare variabili definite dall'utente e utilizzarle quindi nei pacchetti. In [!INCLUDE[ssIS](../includes/ssis-md.md)]queste variabili possono essere incluse negli script, nelle espressioni usate da vincoli di precedenza, nel contenitore Ciclo For, nelle trasformazioni Colonna derivata e Suddivisione condizionale, nonché nelle espressioni di proprietà per l'aggiornamento dei valori delle proprietà.  
   
- È possibile, ad esempio, includere una variabile definita dall'utente nella condizione di valutazione per il contenitore Ciclo For. È inoltre possibile eseguire il mapping tra il valore della raccolta di enumeratori di un contenitore Ciclo Foreach e una variabile e, se un'attività Esegui SQL utilizza un'istruzione SQL con parametri, è possibile eseguire il mapping tra parametri dell'istruzione e variabili. Per altre informazioni, vedere [Integration Services &#40;SSIS&#41; Variables](integration-services-ssis-variables.md).  
+ È possibile, ad esempio, includere una variabile definita dall'utente nella condizione di valutazione per il contenitore Ciclo For. È inoltre possibile eseguire il mapping tra il valore della raccolta di enumeratori di un contenitore Ciclo Foreach e una variabile e, se un'attività Esegui SQL utilizza un'istruzione SQL con parametri, è possibile eseguire il mapping tra parametri dell'istruzione e variabili. Per altre informazioni, vedere [Variabili di Integration Services &#40;SSIS&#41;](integration-services-ssis-variables.md).  
   
 ## <a name="variables-usage-scenarios"></a>Scenari di utilizzo delle variabili  
  Nei pacchetti [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] le variabili vengono utilizzate in diversi modi. Durante lo sviluppo di un pacchetto vengono in genere aggiunte variabili definite dall'utente allo scopo di implementare la flessibilità e la gestibilità richieste dalla soluzione. A seconda dello scenario, vengono comunemente utilizzate anche variabili di sistema.  

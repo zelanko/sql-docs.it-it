@@ -12,15 +12,15 @@ f1_keywords:
 helpviewer_keywords:
 - Merge Join Transformation Editor
 ms.assetid: ac06f419-30b3-42aa-8b34-42000bec4285
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 6f6f584d49bfa238a5eda76b18f0dccb59db303f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: b0eff54a87d3b38f1cf027d272d75c36d2e15316
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48186831"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58380889"
 ---
 # <a name="merge-join-transformation-editor"></a>Editor trasformazione Merge join
   Utilizzare la finestra di dialogo **Editor trasformazione Merge join** per specificare il tipo di join, le colonne di join e le colonne di output per l'unione di due input combinati tramite un join.  
@@ -49,10 +49,10 @@ ms.locfileid: "48186831"
  Consente di digitare un alias per ogni colonna di output. Per impostazione predefinita viene suggerito il nome della colonna di input. È comunque possibile scegliere qualsiasi nome descrittivo univoco.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Riferimento ai messaggi e agli errori di Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [Ordinamento dei dati per le trasformazioni unione e Merge Join](data-flow/transformations/sort-data-for-the-merge-and-merge-join-transformations.md)   
- [Estendere un set di dati tramite la trasformazione Merge Join](data-flow/transformations/extend-a-dataset-by-using-the-merge-join-transformation.md)   
- [Unione-trasformazione](data-flow/transformations/merge-transformation.md)   
+ [Guida di riferimento ai messaggi e agli errori di Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
+ [Ordinamento dei dati per le trasformazioni Unione e Merge Join](data-flow/transformations/sort-data-for-the-merge-and-merge-join-transformations.md)   
+ [Estensione di un set di dati tramite la trasformazione Merge join](data-flow/transformations/extend-a-dataset-by-using-the-merge-join-transformation.md)   
+ [Trasformazione Unione](data-flow/transformations/merge-transformation.md)   
  [Trasformazione Unione input multipli](data-flow/transformations/union-all-transformation.md)  
   
   

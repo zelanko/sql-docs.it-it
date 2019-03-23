@@ -12,15 +12,15 @@ f1_keywords:
 helpviewer_keywords:
 - Excel Source Editor
 ms.assetid: 50024686-a18d-4824-b20e-c84123f89d0b
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 4400fda395854a71d8023648b08c99d27a0c7b58
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 5a46cdfd73b7339f40cf92555e45c07d8d5dc482
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48211861"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58390299"
 ---
 # <a name="excel-source-editor-columns-page"></a>Editor origine Excel (pagina Colonne)
   Usare la pagina **Colonne** della finestra di dialogo **Editor origine Excel** per eseguire il mapping tra una colonna di output e ogni colonna (di origine) esterna.  
@@ -38,9 +38,9 @@ ms.locfileid: "48211861"
  Consente di specificare un nome univoco per ogni colonna di output. Per impostazione predefinita viene suggerito il nome della colonna esterna (di origine) selezionata. È comunque possibile scegliere qualsiasi nome descrittivo univoco. Il nome specificato verrà visualizzato in Progettazione [!INCLUDE[ssIS](../includes/ssis-md.md)] .  
   
 ## <a name="see-also"></a>Vedere anche  
- [Riferimento ai messaggi e agli errori di Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
+ [Guida di riferimento ai messaggi e agli errori di Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [Editor origine Excel &#40;pagina Gestione connessione&#41;](../../2014/integration-services/excel-source-editor-connection-manager-page.md)   
- [Editor origine Excel &#40;pagina dell'Output degli errori&#41;](../../2014/integration-services/excel-source-editor-error-output-page.md)   
+ [Editor origine Excel &#40;pagina Output degli errori&#41;](../../2014/integration-services/excel-source-editor-error-output-page.md)   
  [Gestione connessione Excel](connection-manager/excel-connection-manager.md)   
  [Esecuzione di un ciclo su file e tabelle di Excel usando un contenitore Ciclo Foreach](control-flow/foreach-loop-container.md)  
   

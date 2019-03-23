@@ -13,15 +13,15 @@ helpviewer_keywords:
 - converting string data
 - string comparisons
 ms.assetid: 93aeb5bd-e208-46b7-8979-dea2dcd37d4c
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 14a9cd4f9d37798aaabaf65ea2f2afe79c207e6e
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 7fe9955ba4f20c4a20e24d99924adce7ff0d992a
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53359543"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58394129"
 ---
 # <a name="comparing-string-data"></a>confronto di dati stringa
   Il confronto tra stringhe costituisce una parte importante di molte delle trasformazioni eseguite da [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]e viene utilizzato anche nella valutazione di espressioni in variabili ed espressioni di proprietà. La trasformazione Ordinamento, ad esempio, confronta i valori in un set di dati per disporre i dati in ordine crescente o decrescente.  

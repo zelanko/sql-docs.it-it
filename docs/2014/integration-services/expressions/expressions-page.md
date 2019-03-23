@@ -11,15 +11,15 @@ f1_keywords:
 helpviewer_keywords:
 - Expressions Page dialog box
 ms.assetid: c9016ec6-11c1-4ebd-b2a7-0fa6631fd9e4
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 01cabd46c51ed09af8d5de3a173e218dedbd5ac1
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 4cb37061fd90f8662ee6670bb558e99035c792e7
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52773243"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58390209"
 ---
 # <a name="expressions-page"></a>Pagina Espressioni
   Usare la pagina **Espressioni** per modificare le espressioni di proprietà e accedere alle finestre di dialogo **Editor espressioni di proprietà** e **Property Expression Builder** (Generatore di espressioni di proprietà).  

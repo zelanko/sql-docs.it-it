@@ -10,15 +10,15 @@ helpviewer_keywords:
 - exponential functions
 - EXP function
 ms.assetid: 4cd96d3c-58c9-4a67-a6f6-b72758232912
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 00aea33b9ee240229cc399650f4c227e86f19507
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 366a938b2e90ce448cbcba2775f0eb7f327aab61
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52752104"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58393795"
 ---
 # <a name="exp-ssis-expression"></a>EXP (espressione SSIS)
   Viene restituito l'esponente in base e di un'espressione numerica. EXP è la funzione inversa della funzione LN ed è talvolta chiamata antilogaritmo.  

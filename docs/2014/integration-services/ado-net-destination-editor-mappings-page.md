@@ -10,15 +10,15 @@ ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.adonetdest.mappings.f1
 ms.assetid: 842d075f-8b7a-457c-a1a1-a7acbe10e9b7
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 8df784ef4601cac9d6fbb574deda90cc6828c122
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: d538d3417e464df770415fb487ca7b2261a02317
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48102925"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58392168"
 ---
 # <a name="ado-net-destination-editor-mappings-page"></a>Editor destinazione ADO NET (pagina Mapping)
   Utilizzare la pagina **Mapping** della finestra di dialogo **Editor destinazione ADO NET** per eseguire il mapping tra colonne di input e colonne di destinazione.  
@@ -48,6 +48,6 @@ ms.locfileid: "48102925"
   
 ## <a name="see-also"></a>Vedere anche  
  [Editor destinazione ADO NET &#40;pagina Gestione connessione&#41;](../../2014/integration-services/ado-net-destination-editor-connection-manager-page.md)   
- [Editor destinazione ADO NET &#40;pagina dell'Output degli errori&#41;](../../2014/integration-services/ado-net-destination-editor-error-output-page.md)  
+ [Editor destinazione ADO NET &#40;pagina Output errori&#41;](../../2014/integration-services/ado-net-destination-editor-error-output-page.md)  
   
   

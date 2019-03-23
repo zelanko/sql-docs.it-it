@@ -12,15 +12,15 @@ f1_keywords:
 helpviewer_keywords:
 - Conditional Split Transformation Editor
 ms.assetid: c30e1633-537a-4837-9991-6203c6f2a21e
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 9098fcc54fde98a8fa04579fe49154e41fa78943
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: a9307dd8c31d1f84f989e15dc36086066f6969ba
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48097455"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58392963"
 ---
 # <a name="conditional-split-transformation-editor"></a>Editor trasformazione Suddivisione condizionale
   Utilizzare la finestra di dialogo **Editor trasformazione Suddivisione condizionale** per creare espressioni e impostare l'ordine in cui vengono valutate, nonché per assegnare un nome agli output di una suddivisione condizionale. In questa finestra di dialogo sono inclusi funzioni e operatori matematici, di data/ora e per i valori stringa che possono essere utilizzati per la compilazione di espressioni. La prima condizione che restituisce true determina l'output a cui è indirizzata una riga.  
@@ -42,7 +42,7 @@ ms.locfileid: "48097455"
   
  È possibile specificare il valore di questa proprietà tramite un'espressione di proprietà.  
   
- **Argomenti correlati:**  [Espressioni di Integration Services &#40;SSIS&#41;](expressions/integration-services-ssis-expressions.md), [Operatori &#40;espressione SSIS&#41;](expressions/operators-ssis-expression.md) e [Funzioni &#40;espressione SSIS&#41;](expressions/functions-ssis-expression.md)  
+ **Argomenti correlati:**  [Integration Services &#40;SSIS&#41; espressioni](expressions/integration-services-ssis-expressions.md), [operatori &#40;espressione SSIS&#41;](expressions/operators-ssis-expression.md), e [funzioni &#40;espressione SSIS&#41;](expressions/functions-ssis-expression.md)  
   
  **Nome output predefinito**  
  Consente di immettere un nome per la trasformazione. In alternativa, utilizzare quello predefinito.  
@@ -51,7 +51,7 @@ ms.locfileid: "48097455"
  Consente di indicare come gestire gli errori tramite la finestra di dialogo [Configura output errori](../../2014/integration-services/configure-error-output.md) .  
   
 ## <a name="see-also"></a>Vedere anche  
- [Riferimento ai messaggi e agli errori di Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [Dividere un set di dati tramite la trasformazione Suddivisione condizionale](data-flow/transformations/split-a-dataset-by-using-the-conditional-split-transformation.md)  
+ [Guida di riferimento ai messaggi e agli errori di Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
+ [Divisione di un set di dati tramite la trasformazione Suddivisione condizionale](data-flow/transformations/split-a-dataset-by-using-the-conditional-split-transformation.md)  
   
   

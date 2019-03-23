@@ -13,25 +13,25 @@ helpviewer_keywords:
 - security [Integration Services],protection levels
 - protection level for packages [Integration Services]
 ms.assetid: 904a5580-82ba-4a26-b0c5-d1c989975f61
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 766a0c03bc47527d27fec6e50f2525284a6bdd0a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: e700eed316e9dce3e5d87f6014913505376f535f
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48204151"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58388109"
 ---
 # <a name="set-or-change-the-protection-level-of-packages"></a>Impostazione o modifica del livello di protezione dei pacchetti
   Per controllare l'accesso al contenuto dei pacchetti e ai valori sensibili contenuti, ad esempio password, impostare il valore della proprietà `ProtectionLevel`. Per poter compilare il progetto, ai pacchetti contenuti in un progetto deve essere assegnato lo stesso livello di protezione del progetto. Se si modifica l'impostazione della proprietà `ProtectionLevel` nel progetto, è necessario aggiornare manualmente l'impostazione delle proprietà per i pacchetti.  
   
  Per informazioni su come determinare il `ProtectionLevel` le impostazioni appropriate per i pacchetti nelle diverse fasi nel ciclo di vita del pacchetto, vedere [controllo di accesso per dati sensibili nei pacchetti](security/access-control-for-sensitive-data-in-packages.md). Per informazioni generali sulle funzionalità di sicurezza in [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)], vedere [Panoramica della sicurezza &#40;Integration Services&#41;](security/security-overview-integration-services.md).  
   
- Le procedure descritte in questo argomento viene descritto come usare una [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] o l'utilità della riga di comando dtutil per modificare il `ProtectionLevel` proprietà.  
+ Le procedure presenti in questo argomento descrivono come utilizzare [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] o l'utilità della riga di comando dtutil per modificare la proprietà `ProtectionLevel`.  
   
 > [!NOTE]  
->  Oltre alle procedure in questo argomento, in genere è possibile impostare o modificare il `ProtectionLevel` proprietà di un pacchetto quando si importa o Esporta il pacchetto. È inoltre possibile modificare la proprietà [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] di un pacchetto quando si utilizza l'importazione e l'esportazione guidata di `ProtectionLevel` per salvare un pacchetto.  
+>  Oltre alle procedure di questo argomento, è in genere possibile impostare o modificare la proprietà `ProtectionLevel` di un pacchetto quando si importa o esporta il pacchetto. È inoltre possibile modificare la proprietà [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] di un pacchetto quando si utilizza l'importazione e l'esportazione guidata di `ProtectionLevel` per salvare un pacchetto.  
   
 ### <a name="to-set-or-change-the-protection-level-of-a-package-in-sql-server-data-tools"></a>Per impostare o modificare il livello di protezione di un pacchetto in SQL Server Data Tools  
   
@@ -57,13 +57,13 @@ ms.locfileid: "48204151"
   
 3.  Aprire la finestra del prompt dei comandi.  
   
-4.  Al prompt dei comandi, passare alla cartella che contiene i pacchetti per il quale si desidera impostare il `ProtectionLevel` proprietà.  
+4.  Al prompt dei comandi, passare alla cartella contenente il pacchetto o i pacchetti per cui si desidera impostare la proprietà `ProtectionLevel`.  
   
      Negli esempi di sintassi illustrati nel passaggio seguente si presuppone che questa cartella sia la cartella corrente.  
   
 5.  Impostare o modificare il livello di protezione del pacchetto o dei pacchetti utilizzando un comando simile a quello degli esempi seguenti:  
   
-    -   Il comando seguente imposta il `ProtectionLevel` proprietà di un pacchetto singolo nel file system sul livello 2, "Crittografa sensibili con una password", con la password "strongpassword":  
+    -   Il comando seguente imposta la proprietà `ProtectionLevel` di un pacchetto singolo nel file system sul livello 2, "Crittografa tutti i dati sensibili con una password", con la password "strongpassword":  
   
          `dtutil.exe /file "C:\Package.dtsx" /encrypt file;"C:\Package.dtsx";2;strongpassword`  
   

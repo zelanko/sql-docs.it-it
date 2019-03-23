@@ -15,15 +15,15 @@ helpviewer_keywords:
 - data flow [Integration Services], Data Flow task
 - Integration Services, performance
 ms.assetid: c27555c4-208c-43c8-b511-a4de2a8a3344
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 2afaa918e25c9473513dfdac82cde3223e83df38
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: eab0ef5519aea7f563104d61146ed5f441d15981
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53366863"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58392105"
 ---
 # <a name="data-flow-task"></a>Attività Flusso di dati
   L'attività Flusso di dati incapsula il motore flusso di dati che consente di spostare i dati dalle origini alle destinazioni e offre la possibilità di trasformare, pulire e modificare i dati durante lo spostamento. L'aggiunta di un'attività Flusso di dati al flusso di controllo di un pacchetto consente al pacchetto di estrarre, trasformare e caricare dati.  
@@ -86,7 +86,7 @@ ms.locfileid: "53366863"
   
  Per molti eventi vengono scritte più voci nel log e i messaggi relativi a numerose voci di log contengono dati complessi. Per semplificare la comprensione e la comunicazione del contenuto dei messaggi complessi, è possibile analizzare il testo dei messaggi. In base alla posizione dei log, è possibile utilizzare istruzioni Transact-SQL o un componente script per separare il testo complesso in colonne o altri formati che si ritengono più utili.  
   
- Nella tabella seguente viene ad esempio illustrato il messaggio "Sono state passate righe come input per un componente del flusso di dati. :  : 1185: Output origine OLE DB: 1180: Ordinamento: 1181: Input ordinamento: 76", scomposto in colonne. Il messaggio è stato scritto dall'evento `OnPipelineRowsSent` quando le righe sono state inviate dall'origine OLE DB alla trasformazione Ordinamento.  
+ Nella tabella seguente viene ad esempio illustrato il messaggio "Sono state passate righe come input per un componente del flusso di dati. :  : 1185 : Output origine OLE DB: 1180 : Ordinamento: 1181 : Input ordinamento: 76", scomposto in colonne. Il messaggio è stato scritto dall'evento `OnPipelineRowsSent` quando le righe sono state inviate dall'origine OLE DB alla trasformazione Ordinamento.  
   
 |colonna|Descrizione|Value|  
 |------------|-----------------|-----------|  
