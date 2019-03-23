@@ -11,15 +11,15 @@ f1_keywords:
 helpviewer_keywords:
 - Expression Builder dialog box
 ms.assetid: 4717ce33-bd4e-44bc-81e0-002de075b4d1
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 9c3daace92f033cb96428226b51294f5a372b7c2
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: c2aa59b0806cc0ede01fa728636ab9d90479f14b
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52764073"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58381962"
 ---
 # <a name="expression-builder"></a>Generatore di espressioni
   Usare la finestra di dialogo **Generatore di espressioni** per creare e modificare un'espressione di proprietà o scrivere l'espressione che imposta il valore di una variabile tramite un'interfaccia utente grafica in cui sono elencate variabili ed è specificato un riferimento predefinito alle funzioni, i cast di tipo e gli operatori inclusi nel linguaggio delle espressioni di [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] .  

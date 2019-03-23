@@ -17,15 +17,15 @@ helpviewer_keywords:
 - fast load data access mode [Integration Services]
 - inserting data
 ms.assetid: 873a2fa0-2a02-41fc-a80a-ec9767f36a8a
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 0aedda782c65cbe8d28f066b7e5e97d3e7fc87cd
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 7d9b75cc79f1f127858ce8547aa222524614ac09
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52790773"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58380932"
 ---
 # <a name="ole-db-destination"></a>Destinazione OLE DB
   La destinazione OLE DB consente di caricare dati in un'ampia gamma di database conformi con OLE DB, tramite una tabella o vista di database oppure un comando SQL. L'origine OLE DB, ad esempio, può caricare dati nelle tabelle dei database di [!INCLUDE[msCoName](../../includes/msconame-md.md)] Office Access e [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  

@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: b6e23b0c-949a-46d1-8424-4dc3d9035e79
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: bc7f5fb5abe290a24268d6cb813a3b6e365a57da
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 8eb25ae1083e05ccb85dda6d07d391ca58d7951a
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52791053"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58380289"
 ---
 # <a name="sap-bw-source-editor-error-output-page"></a>Editor origine SAP BW (pagina Output degli errori)
   Utilizzare la pagina **Output degli errori** della finestra di dialogo **Editor origine SAP BW** per selezionare le opzioni di gestione degli errori e impostare le proprietà delle colonne di output degli errori.  

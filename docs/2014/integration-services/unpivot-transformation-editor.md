@@ -12,15 +12,15 @@ f1_keywords:
 helpviewer_keywords:
 - Unpivot Transformation Editor
 ms.assetid: 72a36ef0-4070-4f6c-9c74-0720109617dd
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 5b2476969d41acbff7496c14b43e0aa7089eb78e
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 8bb4a435d88ea867c2152d71afb87cdd731f452e
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48119326"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58383870"
 ---
 # <a name="unpivot-transformation-editor"></a>Editor trasformazione UnPivot
   Utilizzare la finestra di dialogo **Editor trasformazione UnPivot** per selezionare le colonne da trasformare in righe tramite Pivot e specificare la colonna di dati e la nuova colonna di output per il valore pivot.  
@@ -34,7 +34,7 @@ ms.locfileid: "48119326"
  **Colonne di input disponibili**  
  Consente di specificare le colonne da trasformare in righe tramite Pivot utilizzando le caselle di controllo.  
   
- **Nome**  
+ **Name**  
  Consente di visualizzare il nome della colonna di input disponibile.  
   
  **Pass-through**  
@@ -63,7 +63,7 @@ ms.locfileid: "48119326"
  Nello scenario UnPivot descritto in [Unpivot Transformation](data-flow/transformations/unpivot-transformation.md), il Nome colonna valore chiave pivot è **Product** e designa la nuova colonna **Product** come la colonna in cui viene applicata la trasformazione tramite UnPivot alle colonne **Ham**, **Soda**, **Milk**, **Beer**e **Chips** .  
   
 ## <a name="see-also"></a>Vedere anche  
- [Riferimento ai messaggi e agli errori di Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [Trasformazione Pivot](data-flow/transformations/pivot-transformation.md)  
+ [Guida di riferimento ai messaggi e agli errori di Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
+ [Trasformazione pivot](data-flow/transformations/pivot-transformation.md)  
   
   

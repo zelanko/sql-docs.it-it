@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: a543d811-0bd2-4890-a0d3-f5fdcd4524b8
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 68154507fe6985a831c54c4c497d1d4c8300851d
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 196d7f2bb3a227bd29ccc6fd5d427a59070d525a
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52764053"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58383280"
 ---
 # <a name="sap-bw-destination-editor-error-output-page"></a>Editor destinazione SAP BW (pagina Output degli errori)
   Usare la pagina **Output degli errori** dell'**Editor destinazione SAP BW** per specificare le opzioni di gestione degli errori.  

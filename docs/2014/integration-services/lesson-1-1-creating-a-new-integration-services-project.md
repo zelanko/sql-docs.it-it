@@ -1,5 +1,5 @@
 ---
-title: 'Passaggio 1: Progetto di servizi di creazione di una nuova integrazione | Microsoft Docs'
+title: 'Passaggio 1: Creazione di un nuovo progetto di Integration Services | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: f14521b5-941e-443b-8f5e-385f98e37fbf
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: eff00a91c6fff1caee5e5fc41dd6d59f8635f78f
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 2513a698fc073c751613e8e387d41ddb3e0fe9e4
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53377409"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58386135"
 ---
 # <a name="step-1-creating-a-new-integration-services-project"></a>Passaggio 1: Creazione di un nuovo progetto di Integration Services
   Il primo passaggio nella creazione di un pacchetto in [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] consiste nel creare un progetto di [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] . Questo progetto include i modelli per gli oggetti, ovvero origini dati, viste origini dati e pacchetti usati in una soluzione di trasformazione dei dati.  
@@ -46,6 +46,6 @@ ms.locfileid: "53377409"
 7.  Nella barra degli strumenti **Esplora soluzioni** fare clic con il pulsante destro del mouse su **Package.dtsx**, fare clic su **Rinomina**e rinominare il pacchetto predefinito in **Lesson 1.dtsx**.  
   
 ## <a name="next-task-in-lesson"></a>Attività successiva della lezione  
- [Passaggio 2: Aggiunta e configurazione di una gestione connessione File Flat](lesson-1-2-adding-and-configuring-a-flat-file-connection-manager.md)  
+ [Passaggio 2: Aggiunta e configurazione della gestione connessione file flat](lesson-1-2-adding-and-configuring-a-flat-file-connection-manager.md)  
   
   

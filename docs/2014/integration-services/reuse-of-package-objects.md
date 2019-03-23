@@ -13,15 +13,15 @@ helpviewer_keywords:
 - copying packages
 - regenerating package GUID
 ms.assetid: 08f723bf-15b5-44bd-9a46-04e8781bfbfb
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: a43cb8fcadf514885397530792f54c1d3643e695
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: ab572e7c0793f9d3a673698bf54a0109ad42551c
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52798903"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58379989"
 ---
 # <a name="reuse-of-package-objects"></a>Riutilizzo di oggetti di pacchetto
   Viene compressa frequentemente la funzionalità che si desidera riutilizzare. Se, ad esempio, è stato creato un set di attività, potrebbe essere necessario riutilizzare questi elementi insieme, come gruppo, oppure riutilizzare singoli elementi quali una gestione connessione creata in un altro progetto di [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] .  

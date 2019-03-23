@@ -9,15 +9,15 @@ ms.topic: conceptual
 f1_keywords:
 - selTabCol
 ms.assetid: bf73f80e-a954-4c5f-874e-17fdd4082715
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: af7f97d7d1671aada299b685981e81d62010df24
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: fe951cb7811bb8cc92414564fda466657d2fae8c
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52788344"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58384759"
 ---
 # <a name="select-oracle-tables-and-columns"></a>Selezionare tabelle e colonne Oracle
   Utilizzare la pagina Seleziona tabelle e colonne Oracle per selezionare le tabelle dal database di origine Oracle in cui vengono acquisite le modifiche. Nella pagina sono presenti gli elementi seguenti:  

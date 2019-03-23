@@ -12,15 +12,15 @@ f1_keywords:
 helpviewer_keywords:
 - Analysis Services Processing Task Editor
 ms.assetid: 5612be78-57cf-4e4e-92cf-6bfa9f971040
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: ead79b77838d90beddbd5317608331c3b925bbea
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 386854ec9a20931571ececf4bca943f95fc0dbf7
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48187631"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58380899"
 ---
 # <a name="analysis-services-processing-task-editor-analysis-services-page"></a>Editor attività Elaborazione Analysis Services (pagina Analysis Services)
   Usare la pagina **Analysis Services** della finestra di dialogo **Editor attività Elaborazione Analysis Services** per specificare una gestione connessione Analysis Services, selezionare gli oggetti analitici da elaborare e impostare le opzioni di elaborazione e di gestione degli errori.  
@@ -44,14 +44,14 @@ ms.locfileid: "48187631"
  **Nuova**  
  Consente di creare una nuova gestione connessione Analysis Services.  
   
- **Argomenti correlati:** [Analysis Services Connection Manager](connection-manager/analysis-services-connection-manager.md), [Riferimento all'interfaccia utente della finestra di dialogo Aggiungi gestione connessione Analysis Services](connection-manager/add-analysis-services-connection-manager-dialog-box-ui-reference.md)  
+ **Argomenti correlati:** [Gestione connessione Analysis Services](connection-manager/analysis-services-connection-manager.md), [Aggiungi riferimento all'interfaccia utente di finestra di dialogo Gestione connessione di Analysis Services](connection-manager/add-analysis-services-connection-manager-dialog-box-ui-reference.md)  
   
  **Elenco oggetti**  
- |Proprietà|Description|  
+ |Proprietà|Descrizione|  
 |--------------|-----------------|  
 |**Nome oggetto**|Consente di visualizzare i nomi degli oggetti specificati.|  
 |**Tipo**|Consente di visualizzare i tipi degli oggetti specificati.|  
-|**Opzioni elaborazione**|Consente di selezionare un'opzione di elaborazione nell'elenco.<br /><br /> **Argomenti correlati**: [elaborazione degli oggetti modello multidimensionale](../analysis-services/multidimensional-models/processing-a-multidimensional-model-analysis-services.md)|  
+|**Opzioni elaborazione**|Consente di selezionare un'opzione di elaborazione nell'elenco.<br /><br /> **Argomenti correlati**: [Elaborazione degli oggetti modello multidimensionale](../analysis-services/multidimensional-models/processing-a-multidimensional-model-analysis-services.md)|  
 |**Impostazioni**|Consente di visualizzare le impostazioni di elaborazione per gli oggetti specificati.|  
   
  **Aggiungi**  
@@ -63,10 +63,10 @@ ms.locfileid: "48187631"
  **Analisi di impatto**  
  Consente di eseguire un'analisi di impatto sull'oggetto selezionato.  
   
- **Argomenti correlati:** [Finestra di dialogo Analisi di impatto &#40;Analysis Services - Dati multidimensionali&#41;](../../2014/analysis-services/impact-analysis-dialog-box-analysis-services-multidimensional-data.md)  
+ **Argomenti correlati:** [Finestra di dialogo analisi di impatto &#40;Analysis Services - dati multidimensionali&#41;](../../2014/analysis-services/impact-analysis-dialog-box-analysis-services-multidimensional-data.md)  
   
  **Riepilogo impostazioni batch**  
- |Proprietà|Description|  
+ |Proprietà|Descrizione|  
 |--------------|-----------------|  
 |**Ordine di elaborazione**|Consente di specificare se gli oggetti devono essere elaborati sequenzialmente o in un batch. Se si utilizza l'elaborazione parallela, consente di specificare il numero di oggetti da elaborare simultaneamente.|  
 |**Modalità transazione**|Consente di specificare la modalità di transazione per l'elaborazione sequenziale.|  
@@ -77,11 +77,11 @@ ms.locfileid: "48187631"
  **Cambia impostazioni**  
  Consente di modificare le opzioni di elaborazione e la gestione degli errori nelle chiavi della dimensione.  
   
- **Argomenti correlati:** [Finestra di dialogo Cambia impostazioni &#40;Analysis Services - Dati multidimensionali&#41;](../../2014/analysis-services/change-settings-dialog-box-analysis-services-multidimensional-data.md)  
+ **Argomenti correlati:** [Modificare le impostazioni di dialogo &#40;Analysis Services - dati multidimensionali&#41;](../../2014/analysis-services/change-settings-dialog-box-analysis-services-multidimensional-data.md)  
   
 ## <a name="see-also"></a>Vedere anche  
- [Riferimento ai messaggi e agli errori di Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [Editor attività elaborazione di Analysis Services &#40;pagina Generale&#41;](general-page-of-integration-services-designers-options.md)   
+ [Guida di riferimento ai messaggi e agli errori di Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
+ [Editor attività Elaborazione Analysis Services &#40;pagina Generale&#41;](general-page-of-integration-services-designers-options.md)   
  [Attività Esegui DDL Analysis Services](control-flow/analysis-services-execute-ddl-task.md)  
   
   

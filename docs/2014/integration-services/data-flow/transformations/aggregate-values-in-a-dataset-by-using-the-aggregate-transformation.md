@@ -11,15 +11,15 @@ helpviewer_keywords:
 - aggregate values [Integration Services]
 - datasets [Integration Services], aggregate values
 ms.assetid: 01b81c0f-d5e0-483b-81b2-73800a6945ac
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 3004bf8173756b291db1eb4ef99cfdcd7c8afdcc
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 10b14aa8a1f68b32c00ecb321c1af36fb15b868e
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52818117"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58386009"
 ---
 # <a name="aggregate-values-in-a-dataset-by-using-the-aggregate-transformation"></a>Aggregazione di valori in un set di dati utilizzando la trasformazione Aggregazione
   È possibile aggiungere e configurare una trasformazione Aggregazione solo se il pacchetto include almeno un'attività Flusso di dati e un'origine.  

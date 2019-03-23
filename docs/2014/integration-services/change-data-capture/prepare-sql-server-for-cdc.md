@@ -9,15 +9,15 @@ ms.topic: conceptual
 f1_keywords:
 - prepSqlSrv
 ms.assetid: 20b51dbf-a545-4234-87ae-4228268a0fb2
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: e52f15a66c858aa1a04826f69342ba6a9dcd687e
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 5f348a7f76f65c19801525967f3ded5c8b0d2d26
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52804848"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58381559"
 ---
 # <a name="prepare-sql-server-for-cdc"></a>Preparare SQL Server per CDC
   Il servizio Oracle CDC richiede che tutte le istanze di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] di destinazione contengano il database MSXDBCDC. Per creare questo database utilizzare l'azione Prepare SQL Server in CDC Service Configuration Console. Verrà creato uno script speciale eseguito per creare le tabelle, le stored procedure e altri artefatti obbligatori per il database. Questa attività viene eseguita una volta sola per ogni istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] di destinazione.  

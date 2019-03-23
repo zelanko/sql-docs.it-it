@@ -14,15 +14,15 @@ helpviewer_keywords:
 - literals [Integration Services]
 - mapping literals [Integration Services]
 ms.assetid: a980cd52-54ef-4b9c-b00c-e6807cf8e01f
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 8555d2789c7466f65fd17d90282b164a068674c7
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: f931b6c9edd917a12d3a84cc9cd65af862f0697e
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53363903"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58384749"
 ---
 # <a name="literals-ssis"></a>Valori letterali (SSIS)
   Le espressioni possono includere valori letterali numerici, stringa e booleani. L'analizzatore di espressioni supporta un'ampia gamma di valori letterali numerici, quali costanti intere, decimali e a virgola mobile. Supporta inoltre i suffissi per valori di tipo long e float, che specificano come gestire tali valori, e la notazione scientifica nei valori letterali numerici.  

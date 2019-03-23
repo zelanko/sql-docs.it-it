@@ -12,15 +12,15 @@ f1_keywords:
 helpviewer_keywords:
 - Dimension Processing Destination Editor
 ms.assetid: 44aab631-d62d-4895-8fc7-7f1f3b1b68ce
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 1687baf77bcecedb61a3d1ecee3a9e3c9e155431
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: e48018f3bbc3f266a4e537f067b3fa9466dea275
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48133731"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58381960"
 ---
 # <a name="dimension-processing-destination-editor-connection-manager-page"></a>Editor destinazione elaborazione dimensione (pagina Gestione connessione)
   Utilizzare la pagina **Gestione connessione** della finestra di dialogo **Editor destinazione elaborazione dimensione** per specificare una connessione a un progetto di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] o a un'istanza di [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)].  
@@ -40,15 +40,15 @@ ms.locfileid: "48133731"
  **Metodo di elaborazione**  
  Consente di selezionare la modalità di elaborazione da applicare alla dimensione selezionata nell'elenco. Il valore predefinito di questa opzione è **Completo**.  
   
-|valore|Description|  
+|Value|Descrizione|  
 |-----------|-----------------|  
 |**Aggiunta (incrementale)**|Consente di eseguire un'elaborazione incrementale della dimensione.|  
 |**Completo**|Consente di eseguire un'elaborazione completa della dimensione.|  
 |**Update**|Consente di eseguire un'elaborazione di aggiornamento della dimensione.|  
   
 ## <a name="see-also"></a>Vedere anche  
- [Riferimento ai messaggi e agli errori di Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [Editor destinazione elaborazione dimensione &#40;pagina mapping&#41;](../../2014/integration-services/dimension-processing-destination-editor-mappings-page.md)   
- [Editor destinazione elaborazione dimensione &#40;pagina avanzate&#41;](../../2014/integration-services/dimension-processing-destination-editor-advanced-page.md)  
+ [Guida di riferimento ai messaggi e agli errori di Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
+ [Editor destinazione elaborazione dimensione &#40;pagina Mapping&#41;](../../2014/integration-services/dimension-processing-destination-editor-mappings-page.md)   
+ [Editor destinazione elaborazione dimensione &#40;pagina Avanzate&#41;](../../2014/integration-services/dimension-processing-destination-editor-advanced-page.md)  
   
   

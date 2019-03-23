@@ -8,15 +8,15 @@ ms.reviewer: ''
 ms.custom: ''
 ms.technology: integration-services
 ms.topic: conceptual
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 90accbf1e7d5cc683b862707e0688c5b32d86242
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: e2092ef7f755b9980ee29ee3d7080774d78a0094
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52778313"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58381389"
 ---
 # <a name="import-data-from-excel-or-export-data-to-excel-with-sql-server-integration-services-ssis"></a>Importare i dati da Excel o esportarli in Excel con SQL Server Integration Services (SSIS)
 
@@ -49,11 +49,11 @@ Assicurarsi di eseguire il download di Access Database Engine 2016 *Redistributa
 
 Se nel computer è già installata una versione a 32 bit di Office, è necessario installare la versione a 32 bit dei componenti. Verificare inoltre che il pacchetto SSIS venga eseguito in modalità a 32 bit oppure eseguire la versione a 32 bit dell'Importazione/Esportazione guidata.
 
-Se si ha una sottoscrizione di Office 365, è possibile che appaia un messaggio di errore quando si esegue il programma di installazione. L'errore indica che non è possibile installare il download affiancato ai componenti di Office A portata di clic. Per ignorare questo messaggio di errore, eseguire l'installazione in modalità non interattiva aprendo una finestra del prompt dei comandi ed eseguendo il file con estensione EXE scaricato con l'opzione `/quiet`. Ad esempio:
+Se si ha una sottoscrizione di Office 365, è possibile che appaia un messaggio di errore quando si esegue il programma di installazione. L'errore indica che non è possibile installare il download affiancato ai componenti di Office A portata di clic. Per ignorare questo messaggio di errore, eseguire l'installazione in modalità non interattiva aprendo una finestra del prompt dei comandi ed eseguendo il file con estensione EXE scaricato con l'opzione `/quiet`. Esempio:
 
 `C:\Users\<user name>\Downloads\AccessDatabaseEngine.exe /quiet`
 
-Se hai problemi durante l'installazione della versione 2016 redistributable, installare la versione 2010 redistributable da qui: [Microsoft Access Database Engine 2010 Redistributable](https://www.microsoft.com/download/details.aspx?id=13255). Non esiste un componente ridistribuibile per Excel 2013.
+In caso di problemi durante l'installazione della versione 2016 Redistributable, installare la versione 2010 Redistributable da qui: [Microsoft Access Database Engine 2010 Redistributable](https://www.microsoft.com/download/details.aspx?id=13255). Non esiste un componente ridistribuibile per Excel 2013.
 
 ## <a name="specify-excel"></a> Specificare Excel
 

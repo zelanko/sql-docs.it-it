@@ -10,15 +10,15 @@ ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.foreachloopcontainer.collection.f1
 ms.assetid: 95a19dde-61ca-4d9b-aa3d-131fa4264296
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: cb93cd75ea407576b8b466defa48171e4d94a1ac
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: c855cdfbcf622465390e433312d75343242aee50
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53361390"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58380269"
 ---
 # <a name="foreach-loop-editor-collection-page"></a>Editor ciclo Foreach (pagina Raccolta)
   Usare la pagina **Raccolta** della finestra di dialogo **Editor ciclo Foreach** per specificare il tipo di enumeratore e configurarlo.  
@@ -180,7 +180,7 @@ ms.locfileid: "53361390"
   
  Se la proprietà **DocumentSourceType** è impostata su **Connessione file**, selezionare una gestione connessione file oppure fare clic su \<**Nuova connessione**> per creare una nuova gestione connessione.  
   
- **Argomenti correlati:** [Gestione connessione file](connection-manager/file-connection-manager.md), [Editor gestione connessione File](../../2014/integration-services/file-connection-manager-editor.md)  
+ **Argomenti correlati:** [File Connection Manager](connection-manager/file-connection-manager.md), [File Connection Manager Editor](../../2014/integration-services/file-connection-manager-editor.md)  
   
  Se la proprietà **DocumentSourceType** è impostata su **Variabile**, selezionare una variabile esistente oppure fare clic su \<**Nuova variabile**> per creare una nuova variabile.  
   
@@ -210,7 +210,7 @@ ms.locfileid: "53361390"
   
  Se la proprietà **OuterXPathStringSourceType** è impostata su **Connessione file**, selezionare una gestione connessione file oppure fare clic su \<**Nuova connessione**> per creare una nuova gestione connessione.  
   
- **Argomenti correlati:** [Gestione connessione file](connection-manager/file-connection-manager.md), [Editor gestione connessione File](../../2014/integration-services/file-connection-manager-editor.md)  
+ **Argomenti correlati:** [File Connection Manager](connection-manager/file-connection-manager.md), [File Connection Manager Editor](../../2014/integration-services/file-connection-manager-editor.md)  
   
  Se la proprietà **OuterXPathStringSourceType** è impostata su **Variabile**, selezionare una variabile esistente oppure fare clic su \<**Nuova variabile**> per creare una nuova variabile.  
   
@@ -233,7 +233,7 @@ ms.locfileid: "53361390"
   
  Se la proprietà **InnerXPathStringSourceType** è impostata su **Connessione file**, selezionare una gestione connessione file oppure fare clic su \<**Nuova connessione**> per creare una nuova gestione connessione.  
   
- **Argomenti correlati:** [Gestione connessione file](connection-manager/file-connection-manager.md), [Editor gestione connessione File](../../2014/integration-services/file-connection-manager-editor.md)  
+ **Argomenti correlati:** [File Connection Manager](connection-manager/file-connection-manager.md), [File Connection Manager Editor](../../2014/integration-services/file-connection-manager-editor.md)  
   
  Se la proprietà **InnerXPathStringSourceType** è impostata su **Variabile**, selezionare una variabile esistente oppure fare clic su \<**Nuova variabile**> per creare una nuova variabile.  
   

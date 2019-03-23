@@ -13,15 +13,15 @@ f1_keywords:
 helpviewer_keywords:
 - Package Protection Level dialog box
 ms.assetid: 023af8d3-aea0-45a9-ac32-554634bf4b9a
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 7a43cbed2f9cef449bee1b0a971f5edd7f1044f0
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: effe6c8e07ea9303bb77842934afebb7c2e6bec1
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48084901"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58386771"
 ---
 # <a name="package-and-project-protection-level-dialog-box"></a>Finestra di dialogo Livello di protezione pacchetto e Livello di protezione del progetto
   Utilizzare la finestra di dialogo **Livello di protezione pacchetto** per aggiornare il livello di protezione di un pacchetto. Il livello di protezione determina il metodo di protezione, la password o chiave utente e l'ambito di protezione del pacchetto. La protezione può includere tutti i dati o solo i dati sensibili.  

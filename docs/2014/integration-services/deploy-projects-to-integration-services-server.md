@@ -8,15 +8,15 @@ ms.technology:
 - integration-services
 ms.topic: conceptual
 ms.assetid: 6e9402f4-4d50-49ff-820d-65a77829c4a5
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 2f3f982eeee9abc016575b8acd068b8ef2e7450f
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 76c3c915224af50fce1265f733082054e0eeaa98
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52408178"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58386629"
 ---
 # <a name="deploy-projects-to-integration-services-server"></a>Distribuire progetti nel server Integration Services
   Nella versione corrente di [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]è possibile distribuire i progetti nel server [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] . Con il server [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] è possibile gestire ed eseguire pacchetti, nonché configurare i valori di runtime per i pacchetti tramite ambienti.  
@@ -30,7 +30,7 @@ ms.locfileid: "52408178"
   
 1.  Creare un catalogo SSISDB, se non è stato ancora creato. Per altre informazioni, vedere [Creare il catalogo SSIS](catalog/ssis-catalog.md).  
   
-2.  Convertire il progetto nel modello di distribuzione del progetto eseguendo la **Conversione guidata progetto di Integration Services** . Per altre informazioni, vedere le istruzioni riportate di seguito: [Per convertire un progetto nel modello di distribuzione progetto](#convert)  
+2.  Convertire il progetto nel modello di distribuzione del progetto eseguendo la **Conversione guidata progetto di Integration Services** . Per ulteriori informazioni, vedere le istruzioni riportate di seguito: [Per convertire un progetto nel modello di distribuzione del progetto](#convert)  
   
     -   Se il progetto è stato creato in [!INCLUDE[ssISCurrent](../includes/ssiscurrent-md.md)], per impostazione predefinito il progetto utilizza il modello di distribuzione del progetto.  
   
@@ -51,7 +51,7 @@ ms.locfileid: "52408178"
   
      Per altre informazioni sull'aggiornamento di pacchetti, vedere [Aggiornare pacchetti di Integration Services](install-windows/upgrade-integration-services-packages.md) e [Aggiornare i pacchetti di Integration Services mediante l'Aggiornamento guidato pacchetti SSIS](install-windows/upgrade-integration-services-packages-using-the-ssis-package-upgrade-wizard.md).  
   
-3.  Distribuire il progetto nel server [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] . Per altre informazioni, vedere le istruzioni riportate di seguito: [Per distribuire un progetto per il Server Integration Services](#deploy).  
+3.  Distribuire il progetto nel server [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] . Per ulteriori informazioni, vedere le istruzioni riportate di seguito: [Per distribuire un progetto nel server Integration Services](#deploy).  
   
 4.  (Facoltativo) Creare un ambiente per il progetto distribuito. Per altre informazioni, vedere [Creare ed eseguire il mapping di un ambiente server](../../2014/integration-services/create-and-map-a-server-environment.md).  
   

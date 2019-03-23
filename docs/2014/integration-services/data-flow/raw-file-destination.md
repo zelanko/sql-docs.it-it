@@ -15,15 +15,15 @@ helpviewer_keywords:
 - writing raw data
 - Raw File destination
 ms.assetid: d311b458-aefc-4b4d-b1a1-4c0ebbb34214
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 9ebcc0ff9c9c2baae93ac31258ff994b463fc3b0
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: b7996ed3cc3ea209361790f23f6955f09be035e4
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52753673"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58385559"
 ---
 # <a name="raw-file-destination"></a>file non elaborato - destinazione
   La destinazione file non elaborato scrive dati non elaborati in un file. Poiché il formato dei dati è nativo della destinazione, non è necessaria alcuna conversione e quasi nessuna analisi dei dati. Questo significa che la destinazione file non elaborato è in grado di scrivere i dati più rapidamente rispetto ad altre destinazioni, quali le destinazioni file flat e OLE DB.  

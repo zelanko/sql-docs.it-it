@@ -12,15 +12,15 @@ f1_keywords:
 helpviewer_keywords:
 - Audit Transformation Editor
 ms.assetid: 32786a34-5870-4fde-83c7-ec74d62404b8
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: a230d6118d68c588c7671d3b9f410ecd9b5071da
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 29d9d3f4cd9e6c4d1e652e52ea464df58eac279d
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48135261"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58385989"
 ---
 # <a name="audit-transformation-editor"></a>Editor trasformazione Controllo
   La trasformazione Controllo consente di includere nel flusso di dati di un pacchetto informazioni sull'ambiente in cui viene eseguito il pacchetto. Ad esempio, il nome del pacchetto, del computer e dell'operatore può essere aggiunto al flusso di dati. [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] include variabili di sistema che forniscono queste informazioni.  
@@ -34,7 +34,7 @@ ms.locfileid: "48135261"
  **Tipo di controllo**  
  Consente di selezionare una variabile di sistema disponibile per visualizzare le informazioni di controllo.  
   
-|valore|Description|  
+|Value|Descrizione|  
 |-----------|-----------------|  
 |**GUID istanza esecuzione**|Consente di specificare il GUID che identifica in modo univoco l'istanza di esecuzione del pacchetto.|  
 |**ID pacchetto**|Consente di specificare il GUID che identifica in modo univoco il pacchetto.|  

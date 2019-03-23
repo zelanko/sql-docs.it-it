@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: a7e6ec9c-d31d-4613-9525-8947a7b358f7
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 83902f57b758089235abafc9f8289b6f9fdb8653
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 7db3e293c95b358d78e445e6b7534f90ea7b9310
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53361603"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58384229"
 ---
 # <a name="step-3-adding-packages-and-other-files"></a>Passaggio 3: Aggiunta di pacchetti e altri file
   In questa attività verranno aggiunti i pacchetti esistenti, i file ausiliari di supporto a singoli pacchetti e un file Leggimi relativo al progetto Deployment Tutorial creato nell'attività precedente. Verrò aggiunto ad esempio un file di dati XML contenente i dati relativi a un pacchetto e un file di testo che include informazioni su tutti i pacchetti del progetto.  

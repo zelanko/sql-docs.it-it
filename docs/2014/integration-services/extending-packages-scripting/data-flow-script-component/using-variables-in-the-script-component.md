@@ -9,15 +9,15 @@ ms.topic: reference
 helpviewer_keywords:
 - Script component [Integration Services], using variables
 ms.assetid: 92d1881a-1ef1-43ae-b1ca-48d0536bdbc2
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: d3ab6ce2bca61c7bdc78c66e157c2b00a9c5d664
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 922454c7bc04a211d6f54754d48331fdfdffeb07
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53354717"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58384439"
 ---
 # <a name="using-variables-in-the-script-component"></a>Utilizzo di variabili nel componente script
   Nelle variabili vengono archiviati valori che possono essere utilizzati in fase di esecuzione da un pacchetto e dai relativi contenitori, attività e gestori eventi. Per altre informazioni, vedere [Variabili di Integration Services &#40;SSIS&#41;](../../integration-services-ssis-variables.md).  

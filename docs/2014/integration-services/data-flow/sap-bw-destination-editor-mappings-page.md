@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: dfa1f1d6-6b64-4331-bdc5-eaa8b7aa41a1
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 9b1175d43e0c4afcfb1b8d166f6ab7854d8c7c10
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 0af079eaa96fd7925ef361b398cd628641c55a3c
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52773101"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58381959"
 ---
 # <a name="sap-bw-destination-editor-mappings-page"></a>Editor destinazione SAP BW (pagina Mapping)
   Usare la pagina **Mapping** dell' **Editor destinazione SAP BW** per eseguire il mapping delle colonne di input alle colonne di destinazione.  

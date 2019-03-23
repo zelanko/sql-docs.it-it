@@ -10,20 +10,20 @@ ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.addNewSource.f1
 ms.assetid: 619e437b-e00f-49a9-a94c-8feafc4af713
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 237c54a385cca8e6ea6ba22e7a196588a97aae46
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: b084f04d403d139c25b44ef0d3c543af933f118d
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48109381"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58386259"
 ---
 # <a name="add-new-source-dialog-box"></a>Finestra di dialogo Aggiungi nuova origine
   Nella tabella seguente sono elencate le opzioni disponibili nella Finestra di dialogo Aggiungi nuova origine.  
   
-|Opzione|Description|  
+|Opzione|Descrizione|  
 |------------|-----------------|  
 |Tipi|Selezionare il tipo di origine a cui si desidera connettersi.|  
 |Gestioni connessioni|Selezionare una gestione connessione esistente oppure fare clic su **\<Nuova>** per creare una nuova gestione connessione.|  

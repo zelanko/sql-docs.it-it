@@ -12,15 +12,15 @@ f1_keywords:
 helpviewer_keywords:
 - Data Mining Query Transformation Editor
 ms.assetid: 432bba6f-b218-403e-b92c-59ef9f39e4d5
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 9c8ad2853a33ca804ebe414bf2e7a6ff837f4d2b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 313c56f6f5a9b5bfd2ecf5662b5862ee7b1265c1
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48195341"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58381089"
 ---
 # <a name="data-mining-query-transformation-editor-mining-model-tab"></a>Editor trasformazione Query di data mining (scheda Modello di data mining)
   Utilizzare la scheda **Modello di data mining** della finestra di dialogo **Editor trasformazione Query di data mining** per selezionare la struttura di data mining e i relativi modelli.  
@@ -41,7 +41,7 @@ ms.locfileid: "48195341"
  Consente di visualizzare l'elenco dei modelli di data mining associati alla struttura di data mining selezionata.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Riferimento ai messaggi e agli errori di Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [Editor trasformazione Query di Data Mining &#40;scheda Query&#41;](../../2014/integration-services/data-mining-query-transformation-editor-query-tab.md)  
+ [Guida di riferimento ai messaggi e agli errori di Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
+ [Editor trasformazione Query di data mining &#40;scheda Query&#41;](../../2014/integration-services/data-mining-query-transformation-editor-query-tab.md)  
   
   

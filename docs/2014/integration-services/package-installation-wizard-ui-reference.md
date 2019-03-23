@@ -19,20 +19,20 @@ f1_keywords:
 helpviewer_keywords:
 - Package Installer Wizard
 ms.assetid: 6fca44d9-5001-4644-bcf3-c2d10a674b97
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 000207f277cd0c54428cdc81b16027b7efa3aa3c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 68f464d49680e3563f44768e9d8ad29d947a8b24
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48129631"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58380189"
 ---
 # <a name="package-installation-wizard-ui-reference"></a>Riferimento all'interfaccia utente dell'Installazione guidata pacchetti
   Usare l'**Installazione guidata pacchetti** per distribuire un progetto di [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)], inclusi i pacchetti, i file contenuti ed eventuali dipendenze dei pacchetti.  
   
- Prima di distribuire i pacchetti, è possibile creare configurazioni e distribuirle con i pacchetti. In [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] le configurazioni vengono utilizzate per aggiornare in modo dinamico le proprietà di pacchetti e oggetti relativi in fase di esecuzione. La stringa di connessione di una connessione OLE DB può essere ad esempio impostata dinamicamente in fase di esecuzione, specificando una configurazione che esegue il mapping di un valore alla proprietà contenente la stringa di connessione.  
+ Prima di distribuire i pacchetti, è possibile creare configurazioni e distribuirle con i pacchetti. [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] usa le configurazioni per aggiornare in modo dinamico le proprietà di pacchetti e oggetti relativi in fase di esecuzione. La stringa di connessione di una connessione OLE DB può essere ad esempio impostata dinamicamente in fase di esecuzione, specificando una configurazione che esegue il mapping di un valore alla proprietà contenente la stringa di connessione.  
   
  Non è possibile eseguire l'Installazione guidata pacchetti finché non si compila un progetto di [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] e non si crea un'utilità di distribuzione. Per altre informazioni, vedere [Distribuzione dei pacchetti utilizzando l'utilità di distribuzione](../../2014/integration-services/deploy-packages-by-using-the-deployment-utility.md).  
   
@@ -57,7 +57,7 @@ ms.locfileid: "48129631"
  **File di configurazione**  
  Consente di modificare il contenuto di un file di configurazione selezionando il file dall'elenco.  
   
- **Argomenti correlati:** [Creazione delle configurazioni dei pacchetti](../../2014/integration-services/create-package-configurations.md)  
+ **Argomenti correlati:** [Creazione di configurazioni dei pacchetti](../../2014/integration-services/create-package-configurations.md)  
   
  **Percorso**  
  Indica il percorso della proprietà da configurare.  

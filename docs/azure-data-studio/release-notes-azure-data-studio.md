@@ -3,7 +3,7 @@ title: Note sulla versione
 titleSuffix: Azure Data Studio
 description: Note sulla versione di Azure Data Studio
 ms.custom: seodec18
-ms.date: 03/06/2019
+ms.date: 03/22/2019
 ms.prod: sql
 ms.technology: azure-data-studio
 ms.reviewer: alayu; sstein
@@ -11,16 +11,27 @@ ms.topic: conceptual
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 746f3d97ed0157f6b97128dbfdf1b88a5276062c
-ms.sourcegitcommit: 11ab8a241a6d884b113b3cf475b2b9ed61ff00e3
+ms.openlocfilehash: 359723a1e2d75b7cbbd3a88c9a0ba7ee89fdf420
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/18/2019
-ms.locfileid: "58161628"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58381589"
 ---
 # <a name="release-notes-for-azure-data-studio"></a>Note sulla versione per Azure Data Studio
 
 **[Scaricare e installare la versione più recente.](download.md)**
+
+## <a name="march-2019-hotfix"></a>Marzo 2019 (Hotfix)
+
+22 marzo 2019 &nbsp;  /  &nbsp; versione: 1.5.2 &nbsp;  /  &nbsp; versione dell'Hotfix
+
+&nbsp;
+
+| Cambia | Dettagli |
+| :----- | :------ |
+| Risolti alcuni problemi riscontrati in 1.5.1. | Visualizzare [marzo versione dell'Hotfix, su GitHub](https://github.com/Microsoft/azuredatastudio/milestone/28).<br/> <br/>&bull; &nbsp; Risolto un problema in cui utente Impossibile chiudere il notebook aperto dall'attività "Apri blocco appunti" nel Dashboard <br/>&bull; &nbsp; Problema risolto dove Notebook JSON ha molto} dopo il salvataggio <br/>&bull; &nbsp; Risolto un problema in cui le griglie notebook non sono stati risponde alle modifiche al tema <br/>&bull; &nbsp; Risolto un problema in cui è stato illustrato percorso del notebook completa nell'intestazione della scheda. A questo punto viene visualizzato solo il nome del file. |
+| &nbsp; | &nbsp; |
 
 ## <a name="march-2019"></a>Marzo 2019
 

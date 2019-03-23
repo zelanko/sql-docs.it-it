@@ -15,15 +15,15 @@ helpviewer_keywords:
 - Integration Services, data types
 - SQL Server Integration Services, data types
 ms.assetid: 896fc3e8-3aa6-4396-ba82-5d7741cffa56
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 5fc0a802cc3d266cc96d8deaaeeda39056508062
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: fbd39569da4623eda3bb3906fd81bd5da69ab831
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53377841"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58382065"
 ---
 # <a name="integration-services-data-types"></a>Tipi di dati di Integration Services
   Quando i dati entrano in un flusso di dati di un pacchetto, l'origine che estrae i dati li converte in un tipo di dati di [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . Ai dati numerici viene assegnato un tipo di dati numeric, ai dati stringa viene assegnato un tipo di dati character e alle date viene assegnato un tipo di dati date. Agli altri dati, ad esempio GUID e BLOB (Binary Large Object), vengono assegnati i tipi dai dati di [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] appropriati. Se i dati sono di un tipo non convertibile in un tipo di dati di [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] , verrà generato un errore.  

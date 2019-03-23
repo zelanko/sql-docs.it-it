@@ -10,17 +10,17 @@ helpviewer_keywords:
 - conditional operator (?:)
 - '?: (conditional operator)'
 ms.assetid: d38e6890-7338-4ce0-a837-2dbb41823a37
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: f644dc95d5c137c8ee1cdb5ecf8b0e2659e28e40
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: baf066638eb8c42dbf4ba7f488c9b0c1ca9acdb2
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52811193"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58387399"
 ---
-# <a name="--conditional-ssis-expression"></a>? : (Condizionale) (Espressione SSIS)
+# <a name="--conditional-ssis-expression"></a>? : (condizionale) (espressione SSIS)
   Viene restituita una di due espressioni in base alla valutazione di un'espressione booleana. Se l'espressione booleana restituisce TRUE, verrà valutata la prima espressione e il risultato sarà il risultato di tale espressione. Se l'espressione booleana restituisce FALSE, verrà valutata la seconda espressione e il risultato sarà il risultato di tale espressione.  
   
 ## <a name="syntax"></a>Sintassi  
@@ -59,7 +59,7 @@ boolean_expression?expression1:expression2
   
 -   **Stringa** entrambe *expression1* e *expression2* deve essere di tipo stringa: DT_STR o DT_WSTR. Le due espressioni possono restituire tipi di dati string diversi. Il risultato ha tipo di dati DT_WSTR e lunghezza pari a quella dell'argomento più lungo.  
   
--   **Data, ora o data/ora** entrambe *expression1* e *expression2* deve restituire uno dei tipi di dati seguenti: DT_DBDATE, DT_DATE, DT_DBTIME, DT_DBTIME2, DT_DBTIMESTAMP, DT_DBTIMESTAMP2, DT_DBTIMESTAPMOFFSET o DT_FILETIME.  
+-   **Data, ora o data/ora** entrambe *expression1* e *expression2* deve restituire uno dei tipi di dati seguenti: DT_DBDATE, DT_DATE, DT_DBTIME, DT_DBTIME2, DT_DBTIMESTAMP, DT_DBTIMESTAMP2, DT_DBTIMESTAPMOFFSET, or DT_FILETIME.  
   
     > [!NOTE]  
     >  Il sistema non supporta i confronti tra un'espressione che restituisce un tipo di dati di ora e un'espressione che restituisce una data o un tipo di dati di data/ora. Viene generato un errore.  

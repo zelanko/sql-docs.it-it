@@ -10,15 +10,15 @@ f1_keywords:
 - sql12.dts.designer.afpblobsrc.f1
 - sql11.dts.designer.afpblobsrc.f1
 ms.assetid: 80645c5c-88c8-4fb0-8607-de1bb7bffcbb
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 72dcbdf32db39f056870602dcc7ec365e061397a
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 9feb14f98bec3a1a48526d2c3c72641ad61c48e9
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52756593"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58380279"
 ---
 # <a name="azure-blob-source"></a>Origine BLOB di Azure
  Il componente **Origine Blob di Azure** consente a un pacchetto SSIS di leggere dati da un BLOB di Azure. I formati di file supportati sono: CSV e AVRO. Per visualizzare l'editor per l'origine BLOB di Azure, trascinare la selezione **Origine BLOB di Azure** nell'area di progettazione del flusso di dati e fare doppio clic per aprire l'editor.  

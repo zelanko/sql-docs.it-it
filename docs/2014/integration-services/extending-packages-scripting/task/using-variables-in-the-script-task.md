@@ -17,15 +17,15 @@ helpviewer_keywords:
 - SSIS Script task, variables
 - variables [Integration Services], Script task
 ms.assetid: 593b5961-4bfa-4ce1-9531-a251c34e89d3
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: cf7aadd37fe4493d47638bb1c99b8c382f0ffbcd
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: a15edc663d5f855a5aa217400e1c38376e292f4c
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53377323"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58386196"
 ---
 # <a name="using-variables-in-the-script-task"></a>Utilizzo di variabili nell'attività Script
   Le variabili rendono possibile lo scambio di dati tra l'attività Script e altri oggetti del pacchetto. Per altre informazioni, vedere [Variabili di Integration Services &#40;SSIS&#41;](../../integration-services-ssis-variables.md).  

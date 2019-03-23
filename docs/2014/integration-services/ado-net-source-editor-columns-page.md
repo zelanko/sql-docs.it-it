@@ -10,15 +10,15 @@ ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.adonetsource.columns.f1
 ms.assetid: fbc205b9-2001-4737-a76b-1ba777344bd9
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 7489a23fdf7b9501b4b7bc0a41967b0407558a22
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 8a5fbff347c6b06d500f3baebe3dd980000f0bd2
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48106441"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58383218"
 ---
 # <a name="ado-net-source-editor-columns-page"></a>Editor origine ADO NET (pagina Colonne)
   Usare la pagina **Colonne** della finestra di dialogo **Editor origine ADO NET** per eseguire il mapping tra una colonna di output e ogni colonna esterna (di origine).  
@@ -45,7 +45,7 @@ ms.locfileid: "48106441"
   
 ## <a name="see-also"></a>Vedere anche  
  [Editor origine ADO NET &#40;pagina Gestione connessione&#41;](../../2014/integration-services/ado-net-source-editor-connection-manager-page.md)   
- [Editor origine ADO NET &#40;pagina dell'Output degli errori&#41;](../../2014/integration-services/ado-net-source-editor-error-output-page.md)   
+ [Editor origine ADO NET &#40;pagina Output errori&#41;](../../2014/integration-services/ado-net-source-editor-error-output-page.md)   
  [Gestione connessione ADO.NET](connection-manager/ado-net-connection-manager.md)  
   
   

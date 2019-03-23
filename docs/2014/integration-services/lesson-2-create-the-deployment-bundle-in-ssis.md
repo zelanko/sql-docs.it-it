@@ -7,18 +7,18 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: ab17289d-c3d4-4a5e-b7f5-4fea8ae21707
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 0824811762ff693a55fa67750be5a654f27ea5e7
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 8ec7519a4ea203693e6520eee569639a3259215f
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53375553"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58385403"
 ---
 # <a name="lesson-2-creating-the-deployment-bundle"></a>Lezione 2: Creazione del pacchetto di distribuzione
-  In [lezione 1: Preparazione alla creazione del pacchetto di distribuzione](../integration-services/lesson-1-preparing-to-create-the-deployment-bundle.md), viene creato il [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] progetto denominato Deployment Tutorial, aggiunto al progetto i pacchetti e i file di supporto e implementate le configurazioni nei pacchetti.  
+  Nella [Lezione 1: Preparazione alla creazione del pacchetto di distribuzione](../integration-services/lesson-1-preparing-to-create-the-deployment-bundle.md), viene creato il [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] progetto denominato Deployment Tutorial, aggiunto al progetto i pacchetti e i file di supporto e implementate le configurazioni nei pacchetti.  
   
  In questa lezione si procederà alla creazione del pacchetto di distribuzione, ovvero una cartella contenente gli elementi necessari per installare i pacchetti in un altro computer. Nel pacchetto di distribuzione verranno inclusi un manifesto di distribuzione, copie dei pacchetti e copie dei file di supporto del progetto Deployment Tutorial. Nel manifesto di distribuzione vengono elencati i pacchetti, i file esterni e le configurazioni incluse nel pacchetto di distribuzione.  
   

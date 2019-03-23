@@ -11,15 +11,15 @@ f1_keywords:
 helpviewer_keywords:
 - File System task [Integration Services]
 ms.assetid: 7dd79a6a-e066-4028-a385-1d40f31056f8
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: cd924464331b144040f33797d0333b1ddb5a4032
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: c9a2244c5e6cddbc53ccd3aaec7faaaa3836a923
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52790943"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58380909"
 ---
 # <a name="file-system-task"></a>Attività File system
   L'attività File system consente di eseguire operazioni su file e directory nel file system. Tramite l'attività File system un pacchetto può ad esempio creare, spostare o eliminare file e directory. È inoltre possibile utilizzare l'attività File system per impostare attributi su file e directory, ad esempio per impostare file come nascosti o in sola lettura.  

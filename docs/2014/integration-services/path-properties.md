@@ -13,15 +13,15 @@ dev_langs:
 helpviewer_keywords:
 - paths [Integration Services], properties
 ms.assetid: 89b1e347-9579-4f6b-af74-c6519ea08eea
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: a1b69e60cc4adc85d6af9a909f3278a179ea06df
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: b0ddc29ca163d17a812c14251c60b512828a5b3e
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48171000"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58386656"
 ---
 # <a name="path-properties"></a>Proprietà del percorso
   Gli oggetti del flusso di dati nel modello a oggetti [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] hanno proprietà comuni e proprietà personalizzate a livello di componente, input e output, colonne di input e colonne di output. Molte proprietà hanno valori di sola lettura assegnati in fase di esecuzione dal motore del flusso di dati.  
@@ -33,9 +33,9 @@ ms.locfileid: "48171000"
   
  Nella tabella seguente vengono descritte le proprietà configurabili dei percorsi in un flusso di dati. Inoltre, il motore del flusso di dati assegna valori a proprietà di sola lettura aggiuntive che non sono elencate qui.  
   
-|Nome proprietà|Tipo di dati|Description|  
+|Nome proprietà|Tipo di dati|Descrizione|  
 |-------------------|---------------|-----------------|  
-|PathAnnotation|Integer (enumerazione)|Un valore che indica se un'annotazione deve essere visualizzata con il percorso sulla superficie dell'area di progettazione. I valori possibili sono `AsNeeded`, `SourceName`, `PathName`, e `Never`. Il valore predefinito è `AsNeeded`.|  
+|PathAnnotation|Integer (enumerazione)|Un valore che indica se un'annotazione deve essere visualizzata con il percorso sulla superficie dell'area di progettazione. I valori possibili sono `AsNeeded`, `SourceName`, `PathName` e `Never`. Il valore predefinito è `AsNeeded`.|  
 |DestinationName|<xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSInput100>|L'input associato al percorso.|  
 |SourceName|<xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSOutput100>|L'output associato al percorso.|  
   

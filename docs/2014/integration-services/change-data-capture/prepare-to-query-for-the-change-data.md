@@ -9,15 +9,15 @@ ms.topic: conceptual
 helpviewer_keywords:
 - incremental load [Integration Services],preparing query
 ms.assetid: 9ea2db7a-3dca-4bbf-9903-cccd2d494b5f
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 831e44cb232dea7f0730c73d360cd787f3895878
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 559af9cdd7e7014e114b431dddf25b09dd18dc81
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52756993"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58387439"
 ---
 # <a name="prepare-to-query-for-the-change-data"></a>Preparazione dell'esecuzione di una query per i dati delle modifiche
   Nel flusso di controllo di un pacchetto di [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] per l'esecuzione di un caricamento incrementale dei dati delle modifiche, la terza e ultima attività consiste nel preparare l'esecuzione di una query per i dati delle modifiche e nell'aggiungere un'attività Flusso di dati.  

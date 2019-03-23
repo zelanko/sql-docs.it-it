@@ -22,15 +22,15 @@ helpviewer_keywords:
 - removing packages
 - relocating packages
 ms.assetid: 6c7975ff-acec-4e6e-82e5-a641e3a98afe
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: cb9f243d05b741fcc803f29f5703c1e02a6244d3
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 1d0660fba12f2c83cd7e97b80ac863d8d05eda18
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53353706"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58380179"
 ---
 # <a name="dtutil-utility"></a>utilità dtutil
   L'utilità del prompt dei comandi **dtutil** viene usata per gestire i pacchetti di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] . Utilizzare questa utility per copiare, spostare, eliminare un pacchetto oppure per verificarne l'esistenza. È possibile eseguire queste azioni in qualsiasi pacchetto di [!INCLUDE[ssIS](../includes/ssis-md.md)] archiviato in un database [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] , nell'archivio pacchetti [!INCLUDE[ssIS](../includes/ssis-md.md)] e nel file system. Se l'utilità accede a un pacchetto archiviato in **msdb**, al prompt dei comandi può essere necessario specificare nome utente e password. Se l'istanza di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] utilizza l'autenticazione di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], al prompt dei comandi sarà necessario specificare nome utente e password. Se non viene specificato il nome utente, **dtutil[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] tenta di accedere a**  usando l'autenticazione di Windows. Il tipo di archiviazione del pacchetto è definito dalle opzioni `/SQL`, `/FILE` e `/DTS`.  

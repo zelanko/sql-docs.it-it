@@ -17,15 +17,15 @@ helpviewer_keywords:
 - data flow engine [Integration Services]
 - languages [Integration Services]
 ms.assetid: 262babc6-eea5-4609-bc65-07d64cbcfee9
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 5a861a1688748fa20f9a160f69fd06d5903e4fb5
-ms.sourcegitcommit: 480961f14405dc0b096aa8009855dc5a2964f177
+ms.openlocfilehash: e9bb972afddfe5275f5995870b18038b683236ff
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/22/2019
-ms.locfileid: "54420146"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58384118"
 ---
 # <a name="integration-services-programming-overview"></a>Panoramica della programmazione di Integration Services
   L'architettura di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] separa lo spostamento e la trasformazione dei dati dal flusso di controllo e dalla gestione dei pacchetti. Due motori distinti definiscono questa architettura, che possono essere automatizzati ed estesi quando si programma [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]. Il motore di runtime implementa l'infrastruttura del flusso di controllo e di gestione dei pacchetti che consente agli sviluppatori di controllare il flusso di esecuzione e impostare le opzioni per la registrazione, la gestione degli eventi e le variabili. Il motore flusso di dati è un motore speciale, a elevate prestazioni, dedicato esclusivamente all'estrazione, alla trasformazione e al caricamento di dati. Quando si programma [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)], si utilizzeranno questi due motori.  

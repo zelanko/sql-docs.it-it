@@ -12,15 +12,15 @@ f1_keywords:
 helpviewer_keywords:
 - Term Extraction Transformation Editor
 ms.assetid: 4c305b7d-a231-4d03-a09f-8e2d6564fa76
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 4d7fe7077d77bfaad6333405c82a0ce353160840
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 07fa6e1b9523026af31138efc6f0e71ee0895936
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48195821"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58386798"
 ---
 # <a name="term-extraction-transformation-editor-term-extraction-tab"></a>Editor trasformazione Estrazione termini (scheda Estrazione termini)
   Utilizzare la scheda **Estrazione termini** della finestra di dialogo **Editor trasformazione Estrazione termini** per specificare una colonna di testo contenente il testo da estrarre.  
@@ -41,9 +41,9 @@ ms.locfileid: "48195821"
  Usare la finestra di dialogo [Configura output errori](../../2014/integration-services/configure-error-output.md) per specificare la gestione degli errori per le righe che causano errori.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Riferimento ai messaggi e agli errori di Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [Editor trasformazione estrazione termini &#40;scheda di esclusione&#41;](../../2014/integration-services/term-extraction-transformation-editor-exclusion-tab.md)   
- [Editor trasformazione estrazione termini &#40;scheda Avanzate&#41;](../../2014/integration-services/term-extraction-transformation-editor-advanced-tab.md)   
+ [Guida di riferimento ai messaggi e agli errori di Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
+ [Editor trasformazione Estrazione termini &#40;scheda Esclusione&#41;](../../2014/integration-services/term-extraction-transformation-editor-exclusion-tab.md)   
+ [Editor trasformazione Estrazione termini &#40;scheda Avanzate&#41;](../../2014/integration-services/term-extraction-transformation-editor-advanced-tab.md)   
  [Trasformazione Ricerca termini](data-flow/transformations/lookup-transformation.md)  
   
   

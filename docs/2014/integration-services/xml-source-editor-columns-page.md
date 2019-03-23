@@ -12,15 +12,15 @@ f1_keywords:
 helpviewer_keywords:
 - XML Source Editor
 ms.assetid: 5162c400-b2fc-4711-af0f-609132fbaaad
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: b22b2c8690e7c680c0087c3a44766cde16f96878
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: c0d986d9093b85b701660bf1fd262c412a28cb3e
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48063691"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58382029"
 ---
 # <a name="xml-source-editor-columns-page"></a>Editor origine XML (pagina Colonne)
   Usare il nodo **Colonne** della finestra di dialogo **Editor origine XML** per eseguire il mapping tra una colonna di output e una colonna (di origine) esterna.  
@@ -38,9 +38,9 @@ ms.locfileid: "48063691"
  Consente di specificare un nome univoco per ogni colonna di output. Per impostazione predefinita viene suggerito il nome della colonna esterna (di origine) selezionata. È comunque possibile scegliere qualsiasi nome descrittivo univoco. Il nome specificato verrà visualizzato in Progettazione [!INCLUDE[ssIS](../includes/ssis-md.md)] .  
   
 ## <a name="see-also"></a>Vedere anche  
- [Riferimento ai messaggi e agli errori di Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
+ [Guida di riferimento ai messaggi e agli errori di Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [Editor origine XML &#40;pagina Gestione connessione&#41;](../../2014/integration-services/xml-source-editor-connection-manager-page.md)   
- [Editor origine XML &#40;pagina dell'Output degli errori&#41;](../../2014/integration-services/xml-source-editor-error-output-page.md)   
- [Estrarre i dati tramite l'origine XML](data-flow/extract-data-by-using-the-xml-source.md)  
+ [Editor origine XML &#40;pagina Output degli errori&#41;](../../2014/integration-services/xml-source-editor-error-output-page.md)   
+ [Estrazione dei dati tramite l'origine XML](data-flow/extract-data-by-using-the-xml-source.md)  
   
   

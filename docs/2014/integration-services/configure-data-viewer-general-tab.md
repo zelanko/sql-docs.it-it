@@ -12,15 +12,15 @@ f1_keywords:
 helpviewer_keywords:
 - Configure Data Viewer dialog box
 ms.assetid: 7f60ff18-9ad6-4169-af62-edcb04525b0e
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 98194dfc8ac2bfcfecc1d60e14f8bacd17c45113
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: fc1fc6573b977a0f959aef51c960182904f660d0
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48144471"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58385900"
 ---
 # <a name="configure-data-viewer-general-tab"></a>Configura visualizzatore dati (scheda Generale)
   In un visualizzatore dati vengono visualizzati i dati mentre vengono spostati nel percorso tra due componenti del flusso di dati durante l'esecuzione di un pacchetto.  
@@ -28,7 +28,7 @@ ms.locfileid: "48144471"
  Utilizzare la scheda **Generale** della finestra di dialogo **Configura visualizzatore dati** per assegnare un nome al visualizzatore dati e impostare il tipo di grafico in cui visualizzare i dati.  
   
 ## <a name="options"></a>Opzioni  
- **Nome**  
+ **Name**  
  Consente di digitare un nome univoco per il visualizzatore dati.  
   
  **Tipo**  

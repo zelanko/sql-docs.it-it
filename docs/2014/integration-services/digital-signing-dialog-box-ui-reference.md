@@ -12,15 +12,15 @@ f1_keywords:
 helpviewer_keywords:
 - Digital Signing dialog box
 ms.assetid: d6137275-65d3-4fc9-bf31-d61dcd1228d4
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: f0125281c3438f12e8dd7b27ec3d9bff89790d85
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: ccb874a18fcc7c9ded489b758852ad24ea35c45f
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48218041"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58387389"
 ---
 # <a name="digital-signing-dialog-box-ui-reference"></a>Riferimento all'interfaccia utente della finestra di dialogo Firma digitale
   Utilizzare la finestra di dialogo **Firma digitale** per apporre una firma digitale a un pacchetto o rimuovere quella esistente. Per accedere alla finestra di dialogo **Firma digitale** , scegliere l'opzione **Firma digitale** dal menu **SSIS** in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)].  
@@ -35,6 +35,6 @@ ms.locfileid: "48218041"
  Fare clic su questo pulsante per rimuovere la firma digitale.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Panoramica della sicurezza &#40;Integration Services&#41;](security/security-overview-integration-services.md)  
+ [Panoramica sulla sicurezza &#40;Integration Services&#41;](security/security-overview-integration-services.md)  
   
   

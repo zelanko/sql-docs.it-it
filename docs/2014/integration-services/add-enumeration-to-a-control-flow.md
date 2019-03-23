@@ -14,15 +14,15 @@ helpviewer_keywords:
 - repeating workflows
 - enumerations [Integration Services]
 ms.assetid: f212b5fb-3cc4-422e-9b7c-89eb769a812a
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 39dea3ee955dea9a2d464d30a261993d7f72c827
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 7e203b75918cad416d97ab7a226f360c1203d69d
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48089571"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58383959"
 ---
 # <a name="add-enumeration-to-a-control-flow"></a>Aggiunta di un'enumerazione a un flusso di controllo
   [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] include il contenitore Ciclo Foreach, un elemento del flusso di controllo che semplifica l'integrazione di un costrutto di ciclo per l'enumerazione di file e oggetti nel flusso di controllo di un pacchetto. Per altre informazioni, vedere [Contenitore Ciclo Foreach](control-flow/foreach-loop-container.md).  
@@ -44,7 +44,7 @@ ms.locfileid: "48089571"
 4.  Configurare il contenitore Ciclo Foreach. Per altre informazioni, vedere [Configurazione di un contenitore Ciclo Foreach](../../2014/integration-services/configure-a-foreach-loop-container.md).  
   
 ## <a name="see-also"></a>Vedere anche  
- [Aggiungere o eliminare un'attività o un contenitore in un flusso di controllo](control-flow/add-or-delete-a-task-or-a-container-in-a-control-flow.md)   
+ [Aggiunta o eliminazione di un'attività o un contenitore in un flusso di controllo](control-flow/add-or-delete-a-task-or-a-container-in-a-control-flow.md)   
  [Raggruppare o separare componenti](group-or-ungroup-components.md)   
  [Vincoli di precedenza](control-flow/precedence-constraints.md)   
  [Aggiungere un'iterazione a un flusso di controllo](add-iteration-to-a-control-flow.md)   

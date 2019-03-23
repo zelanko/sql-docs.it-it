@@ -11,15 +11,15 @@ helpviewer_keywords:
 - splitting dataset
 - datasets [Integration Services], splitting
 ms.assetid: 23b3e84f-9296-4dc9-81c0-c7f06ae3f1ff
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: fcce6d78b8a5193f944cd4287d612002c59196da
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 6585733a4b864e14815990189fd6924e217de546
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52785063"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58382466"
 ---
 # <a name="split-a-dataset-by-using-the-conditional-split-transformation"></a>Divisione di un set di dati tramite la trasformazione Suddivisione condizionale
   È possibile aggiungere e configurare una trasformazione Suddivisione condizionale solo se il pacchetto include già almeno un'attività Flusso di dati e un'origine.  

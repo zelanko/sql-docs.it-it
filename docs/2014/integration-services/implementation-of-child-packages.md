@@ -10,15 +10,15 @@ ms.topic: conceptual
 helpviewer_keywords:
 - child packages
 ms.assetid: ab0c09d7-ce2e-487d-a1ed-a4b5adb6cc01
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: ec58691ab78fdf7c57871805bb095ca48f221da7
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: ea69aa9c04ce323b43e28d5426acd383d574a538
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53373403"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58386770"
 ---
 # <a name="implementation-of-child-packages"></a>Implementazione di pacchetti figlio
   Quando si implementa il bilanciamento del carico tramite [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)], i pacchetti figlio vengono installati su altri server per sfruttare il tempo di CPU o di server disponibile. Per creare ed eseguire i pacchetti figlio è necessario attenersi alla procedura seguente:  

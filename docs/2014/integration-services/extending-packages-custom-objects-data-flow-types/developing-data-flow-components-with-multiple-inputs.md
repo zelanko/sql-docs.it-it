@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: reference
 ms.assetid: 3c7b50e8-2aa6-4f6a-8db4-e8293bc21027
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 334d197e9b251225b3ebe7df4445e47f42131075
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 74bcf1549cdd97752c805f1c6a9cc774ef1a9e52
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52771253"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58384339"
 ---
 # <a name="developing-data-flow-components-with-multiple-inputs"></a>Sviluppo di componenti flusso di dati con più input
   Un componente flusso di dati con più input può usare una quantità di memoria eccessiva se i relativi input generano dati a frequenze irregolari. Quando si sviluppa un componente flusso di dati personalizzato in grado di supportare due o più input, è possibile gestire l'utilizzo elevato di memoria tramite i membri dello spazio dei nomi Microsoft.SqlServer.Dts.Pipeline seguenti:  

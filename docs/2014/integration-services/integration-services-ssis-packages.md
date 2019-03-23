@@ -17,15 +17,15 @@ helpviewer_keywords:
 - Integration Services packages, about packages
 - Integration Services packages
 ms.assetid: 9266bc64-7e1a-4e78-913b-a8deaa9843bf
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: ee169caab78d3b83d647a1a9cd20a2e88507fde2
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 324ed64290b85c03401d3add09e773b69c841bdd
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53377623"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58381379"
 ---
 # <a name="integration-services-ssis-packages"></a>Pacchetti di Integration Services (SSIS)
   Un pacchetto è una raccolta organizzata di connessioni, elementi di flusso di controllo, elementi di flusso di dati, gestori eventi, variabili, parametri e configurazioni che possono essere assemblati usando gli strumenti di progettazione grafica disponibili in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)], oppure compilati a livello di codice.  Salvare il pacchetto completo in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], nell'archivio pacchetti di [!INCLUDE[ssIS](../includes/ssis-md.md)] o nel file system oppure distribuire il progetto ssISnoversion nel server [!INCLUDE[ssIS](../includes/ssis-md.md)] . Il pacchetto è l'unità di lavoro che viene recuperata, eseguita e salvata.  
@@ -117,6 +117,6 @@ ms.locfileid: "53377623"
   
 -   [Implementazione di SQL Server Integration Services con Microsoft Dynamics Mobile](https://msdn.microsoft.com/library/cc563950)  
   
--   [Come si fa: Configurare il pacchetto SQL Server Integration Services per Microsoft Dynamics AX](https://msdn.microsoft.com/library/bb986852)  
+-   [Procedura: Configurare il pacchetto SQL Server Integration Services per Microsoft Dynamics AX](https://msdn.microsoft.com/library/bb986852)  
   
   

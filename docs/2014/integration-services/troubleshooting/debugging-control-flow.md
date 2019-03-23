@@ -14,15 +14,15 @@ helpviewer_keywords:
 - color-coded progress reporting [Integration Services]
 - Set Breakpoints dialog box
 ms.assetid: 54a458cc-9f4f-4b48-8cf2-db2e0fa7756c
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 791c5955cae2b1e7fec4575f43400ced245dcef5
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: 1d338cc5c194b29b438af7593b80aaf580c64bca
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54124121"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58382347"
 ---
 # <a name="debugging-control-flow"></a>Debug del flusso di controllo
   [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)] e [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] includono funzionalità e strumenti che è possibile usare per la risoluzione dei problemi del flusso di controllo in un pacchetto di [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] .  
@@ -50,7 +50,7 @@ ms.locfileid: "54124121"
 |Quando l'evento `OnTaskFailed` viene ricevuto dall'attività o dal contenitore.|Viene chiamata dall'host delle attività in caso di errore.|  
 |Quando l'evento `OnProgress` viene ricevuto dall'attività o dal contenitore.|Viene chiamata per aggiornare le informazioni sullo stato di esecuzione dell'attività.|  
 |Quando l'evento `OnQueryCancel` viene ricevuto dall'attività o dal contenitore.|Viene chiamata in qualsiasi momento dell'elaborazione dell'attività in cui è possibile annullare l'esecuzione.|  
-|Quando l'evento `OnVariableValueChanged` viene ricevuto dall'attività o dal contenitore.|Viene chiamata dal runtime di [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] quando il valore di una variabile viene modificato. RaiseChangeEvent della variabile deve essere impostata su `true` per generare questo evento.<br /><br /> **&#42;&#42;Avviso &#42; &#42;**  la variabile associata a questo punto di interruzione deve essere definita nel **contenitore** ambito. Se la variabile viene definita nell'ambito del pacchetto, il punto di interruzione non viene raggiunto.|  
+|Quando l'evento `OnVariableValueChanged` viene ricevuto dall'attività o dal contenitore.|Viene chiamata dal runtime di [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] quando il valore di una variabile viene modificato. RaiseChangeEvent della variabile deve essere impostata su `true` per generare questo evento.<br /><br /> **&#42;&#42; Avviso &#42;&#42;** La variabile associata a questo punto di interruzione deve essere definita nell'ambito del **contenitore**. Se la variabile viene definita nell'ambito del pacchetto, il punto di interruzione non viene raggiunto.|  
 |Quando l'evento `OnCustomEvent` viene ricevuto dall'attività o dal contenitore.|Chiamato dalle attività per generare eventi personalizzati definiti per le singole attività.|  
   
  Oltre a quelle disponibili per tutte le attività e i contenitori, alcuni contenitori e attività includono speciali condizioni di interruzione per l'impostazione dei punti di interruzione. Per il contenitore Ciclo For è ad esempio possibile abilitare un punto di interruzione che sospende l'esecuzione all'inizio di ogni iterazione del ciclo.  

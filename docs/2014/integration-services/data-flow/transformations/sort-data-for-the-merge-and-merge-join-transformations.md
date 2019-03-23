@@ -10,15 +10,15 @@ helpviewer_keywords:
 - sort attributes [Integration Services]
 - output columns [Integration Services]
 ms.assetid: 22ce3f5d-8a88-4423-92c2-60a8f82cd4fd
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 6f20391528b56bedca42e62ff9ae1f54111f3604
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 530cca00459ed1ae170272dfd20a54928f039b38
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52751533"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58384871"
 ---
 # <a name="sort-data-for-the-merge-and-merge-join-transformations"></a>Ordinamento dei dati per le trasformazioni Unione e Merge Join
   In [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)]le trasformazioni Unione e Merge Join richiedono dati di input ordinati. I dati di input devono essere ordinati fisicamente ed è necessario impostare le opzioni di ordinamento sugli output e sulle colonne di output nell'origine o nella trasformazione a monte. Se le opzioni di ordinamento indicano che i dati sono ordinati, mentre in realtà non lo sono, l'operazione di Unione o Merge join restituisce risultati imprevisti.  

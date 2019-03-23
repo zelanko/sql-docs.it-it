@@ -12,15 +12,15 @@ f1_keywords:
 helpviewer_keywords:
 - Query Builder dialog box
 ms.assetid: 780752c9-6e3c-4f44-aaff-4f4d5e5a45c5
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 0cd620197e78c70f4d351d3dcb69dc5cf4459296
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: e09e41535ad878a3f20ae74df07ace7bda6fa7e4
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48116981"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58384111"
 ---
 # <a name="query-builder"></a>Generatore di query
   Utilizzare la finestra di dialogo **Generatore query** per creare una query da utilizzare nell'attività Esegui SQL, nell'origine e nella destinazione OLE DB, nonché nella trasformazione Ricerca.  
@@ -47,7 +47,7 @@ ms.locfileid: "48116981"
  **Barra degli strumenti**  
  Utilizzare la barra degli strumenti per gestire set di dati, selezionare i riquadri da visualizzare e controllare le funzioni di query.  
   
-|valore|Description|  
+|Value|Descrizione|  
 |-----------|-----------------|  
 |**Mostra/Nascondi riquadro diagramma**|Consente di visualizzare o nascondere il riquadro **diagramma**.|  
 |**Mostra/Nascondi riquadro griglia**|Consente di visualizzare o nascondere il riquadro **griglia**.|  
@@ -64,7 +64,7 @@ ms.locfileid: "48116981"
  **Definizione query**  
  Questa opzione mette a disposizione una barra degli strumenti e riquadri in cui è possibile definire e testare la query.  
   
-|Riquadro|Description|  
+|Riquadro|Descrizione|  
 |----------|-----------------|  
 |**Riquadro diagramma**|Visualizza la query in un diagramma. Nel diagramma vengono visualizzate le tabelle incluse nella query e indicate le relative modalità di unione in join. Selezionare o deselezionare la casella di controllo accanto a una colonna nella tabella per aggiungere o rimuovere la colonna dall'output della query.<br /><br /> Quando si aggiungono tabelle alla query, in Generatore query vengono creati join tra le tabelle basati sulle tabelle, in base alle chiavi della tabella. Per aggiungere un join, trascinare un campo da una tabella in un campo di un'altra tabella. Per gestire un join, fare clic su di esso con il pulsante destro del mouse e quindi scegliere un'opzione dal menu.<br /><br /> Fare clic con il pulsante destro del mouse sul riquadro **Diagramma** per aggiungere o rimuovere tabelle, selezionare tutte le tabelle e visualizzare o nascondere i riquadri.|  
 |**Riquadro griglia**|Visualizza la query in una griglia. È possibile utilizzare questo riquadro per aggiungere o rimuovere colonne da un query e modificare le impostazioni per ogni colonna.|  
@@ -75,7 +75,7 @@ ms.locfileid: "48116981"
  [Attività Esegui SQL](control-flow/execute-sql-task.md)   
  [Origine OLE DB](data-flow/ole-db-source.md)   
  [Destinazione OLE DB](data-flow/ole-db-destination.md)   
- [Trasformazione ricerca](data-flow/transformations/lookup-transformation.md)   
+ [Trasformazione Ricerca](data-flow/transformations/lookup-transformation.md)   
  [Integration Services &#40;SSIS&#41; le query](integration-services-ssis-queries.md)   
  [MERGE nei pacchetti di Integration Services](control-flow/merge-in-integration-services-packages.md)  
   

@@ -12,15 +12,15 @@ helpviewer_keywords:
 - history tables [SQL Server]
 - History Cleanup task [Integration Services]
 ms.assetid: 5defc5b9-dfd3-4859-a7fe-ac8c2b5480f8
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 4e46fb5ca9f73073951309d6b78ef4498b9ffae1
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 1a7664fb91c6e60789cd59aeef1d25c33409477a
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52790823"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58381939"
 ---
 # <a name="history-cleanup-task"></a>Attività Pulizia contenuto cronologia
   L'attività Pulizia contenuto cronologia elimina le voci contenute nelle tabelle di cronologia seguenti del database msdb di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  

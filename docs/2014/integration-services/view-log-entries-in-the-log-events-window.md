@@ -12,15 +12,15 @@ helpviewer_keywords:
 - Integration Services packages, logs
 - packages [Integration Services], logs
 ms.assetid: c02123c3-67fc-4370-ad14-91ed259f1873
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 51c08b271229e207f72b594d87e3c9f95b6770f6
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 3e3f5e41c6e20abbdcf78759c078632543217617
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48172731"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58385319"
 ---
 # <a name="view-log-entries-in-the-log-events-window"></a>Visualizzare le voci di log nella finestra Registra eventi
   In questo argomento viene descritta la procedura per eseguire un pacchetto e visualizzare le voci di log scritte da tale pacchetto. È possibile visualizzare le voci di log in tempo reale. Le voci di log scritte nella finestra **Registra eventi** possono inoltre essere copiate e salvate per analisi ulteriori.  
@@ -29,7 +29,7 @@ ms.locfileid: "48172731"
   
 ### <a name="to-view-log-entries"></a>Per visualizzare voci di log  
   
-1.  In [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)] aprire il progetto di [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] che contiene il pacchetto desiderato.  
+1.  In [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]aprire il progetto di [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] che contiene il pacchetto desiderato.  
   
 2.  Scegliere **Registra eventi** dal menu **SSIS**. Facoltativamente, è possibile visualizzare la finestra **Registra eventi** eseguendo il mapping tra il comando View.LogEvents e una combinazione di tasti scelta dall'utente nella pagina **Tastiera** della finestra di dialogo **Opzioni** .  
   

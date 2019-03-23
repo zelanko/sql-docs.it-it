@@ -12,15 +12,15 @@ f1_keywords:
 helpviewer_keywords:
 - Transfer SQL Server Objects Task Editor
 ms.assetid: 8cc09118-70ac-4013-8308-d87f8411ca0c
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 6c8cfc6a1f16e03025a1560b09918518c9b2575b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 5a5105e162441375ab011510acb2b7fc6d25bbb4
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48053231"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58383378"
 ---
 # <a name="transfer-sql-server-objects-task-editor-objects-page"></a>Editor attività Trasferisci oggetti di SQL Server (pagina Oggetti)
   Utilizzare la pagina **Oggetti** della finestra di dialogo **Editor attività Trasferisci oggetti di SQL Server** per impostare le proprietà relative alla copia di uno o più oggetti di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] da un'istanza di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] a un'altra. Tabelle, viste, stored procedure e funzioni definite dall'utente rappresentano solo alcuni esempi di oggetti di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] che è possibile copiare. Per ulteriori informazioni su questa attività, vedere [Transfer SQL Server Objects Task](control-flow/transfer-sql-server-objects-task.md).  
@@ -53,7 +53,7 @@ ms.locfileid: "48053231"
  **ExistingData**  
  Consente di specificare la modalità di copia dei dati nel server di destinazione. Per questa proprietà sono disponibili le opzioni elencate nella tabella seguente:  
   
-|valore|Description|  
+|Value|Descrizione|  
 |-----------|-----------------|  
 |**Sostituisci**|I dati nel server di destinazione verranno sovrascritti.|  
 |**Accoda**|I dati copiati dal server di origine verranno accodati a quelli esistenti nel server di destinazione.|  
@@ -210,10 +210,10 @@ ms.locfileid: "48053231"
  Fare clic per aprire la finestra di dialogo **Selezionare le raccolte XML Schema** .  
   
 ## <a name="see-also"></a>Vedere anche  
- [Riferimento ai messaggi e agli errori di Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
+ [Guida di riferimento ai messaggi e agli errori di Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [Attività di Integration Services](control-flow/integration-services-tasks.md)   
  [Editor attività Trasferisci oggetti di SQL Server &#40;pagina Generale&#41;](general-page-of-integration-services-designers-options.md)   
- [Pagina espressioni](expressions/expressions-page.md)   
+ [Pagina Espressioni](expressions/expressions-page.md)   
  [Formati di dati per l'importazione o l'esportazione in blocco &#40;SQL Server&#41;](../relational-databases/import-export/data-formats-for-bulk-import-or-bulk-export-sql-server.md)   
  [Considerazioni sulla sicurezza per un'installazione di SQL Server](../../2014/sql-server/install/security-considerations-for-a-sql-server-installation.md)  
   

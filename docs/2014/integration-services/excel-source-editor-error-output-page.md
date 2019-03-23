@@ -12,15 +12,15 @@ f1_keywords:
 helpviewer_keywords:
 - Excel Source Editor
 ms.assetid: 8d14019e-cb60-4bc1-b71e-7f2326de8317
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 43218f87bb8a19fc35b3191603e9324e94145a64
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 2a8dd63e2e3d75c1d56c7c930fe5dfc53cf67228
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48106411"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58386239"
 ---
 # <a name="excel-source-editor-error-output-page"></a>Editor origine Excel (pagina Output degli errori)
   Usare la pagina **Output degli errori** della finestra di dialogo **Editor origine Excel** per selezionare le opzioni di gestione degli errori e impostare le proprietà delle colonne di output degli errori.  
@@ -52,9 +52,9 @@ ms.locfileid: "48106411"
  Consente di applicare l'opzione di gestione degli errori alle celle selezionate.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Riferimento ai messaggi e agli errori di Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
+ [Guida di riferimento ai messaggi e agli errori di Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [Editor origine Excel &#40;pagina Gestione connessione&#41;](../../2014/integration-services/excel-source-editor-connection-manager-page.md)   
- [Editor origine Excel &#40;(pagina colonne)&#41;](../../2014/integration-services/excel-source-editor-columns-page.md)   
+ [Editor origine Excel &#40;pagina Colonne&#41;](../../2014/integration-services/excel-source-editor-columns-page.md)   
  [Gestione connessione Excel](connection-manager/excel-connection-manager.md)   
  [Esecuzione di un ciclo su file e tabelle di Excel usando un contenitore Ciclo Foreach](control-flow/foreach-loop-container.md)  
   

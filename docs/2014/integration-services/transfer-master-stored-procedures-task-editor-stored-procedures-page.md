@@ -12,15 +12,15 @@ f1_keywords:
 helpviewer_keywords:
 - Transfer Stored Procedures Task Editor
 ms.assetid: 5fcf171e-cc0b-4c24-8eb5-3a4b4775e64a
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 5dbc012d6f6e14847f38d7fe4a8de2f47eb907d2
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: d1168d12153233a3b904a36e601d9163f34e76b7
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48218885"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58385427"
 ---
 # <a name="transfer-master-stored-procedures-task-editor-stored-procedures-page"></a>Editor attività Trasferisci stored procedure master (pagina Stored procedure)
   Usare la pagina **Stored procedure** della finestra di dialogo **Editor attività Trasferisci stored procedure master** per specificare le proprietà per la copia di una o più stored procedure definite dall'utente dal database **master** di un'istanza di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] a un database **master** di un'altra istanza di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Per altre informazioni su questa attività, vedere [Attività Trasferisci stored procedure master](control-flow/transfer-master-stored-procedures-task.md).  
@@ -40,7 +40,7 @@ ms.locfileid: "48218885"
   
  Per questa proprietà sono disponibili le opzioni elencate nella tabella seguente:  
   
-|valore|Description|  
+|Value|Descrizione|  
 |-----------|-----------------|  
 |**FailTask**|L'attività viene interrotta se nel database **master** del server di destinazione esistono già stored procedure con lo stesso nome.|  
 |**Overwrite**|L'attività sovrascrive le stored procedure con lo stesso nome presenti nel database **master** del server di destinazione.|  
@@ -49,7 +49,7 @@ ms.locfileid: "48218885"
  **TransferAllStoredProcedures**  
  Selezionare un valore per indicare se nel server di destinazione debbano essere copiate tutte le stored procedure definite dall'utente nel database **master** del server di origine.  
   
-|valore|Description|  
+|Value|Descrizione|  
 |-----------|-----------------|  
 |**True**|Copia tutte le stored procedure definite dall'utente nel database **master** .|  
 |**False**|Copia solo le stored procedure specificate.|  
@@ -58,10 +58,10 @@ ms.locfileid: "48218885"
  Selezionare le stored procedure definite dall'utente nel database **master** del server di origine da copiare nel database **master** del server di destinazione. Questa opzione è disponibile solo quando la proprietà **TransferAllStoredProcedures** è impostata su **False**.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Riferimento ai messaggi e agli errori di Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
+ [Guida di riferimento ai messaggi e agli errori di Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [Attività di Integration Services](control-flow/integration-services-tasks.md)   
- [Le Stored procedure Editor attività Trasferisci Master &#40;pagina Generale&#41;](general-page-of-integration-services-designers-options.md)   
- [Pagina espressioni](expressions/expressions-page.md)   
+ [Editor attività Trasferisci stored procedure master &#40;pagina Generale&#41;](general-page-of-integration-services-designers-options.md)   
+ [Pagina Espressioni](expressions/expressions-page.md)   
  [Gestione connessione SMO](connection-manager/smo-connection-manager.md)  
   
   

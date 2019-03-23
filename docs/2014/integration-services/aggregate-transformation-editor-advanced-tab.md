@@ -12,15 +12,15 @@ f1_keywords:
 helpviewer_keywords:
 - Aggregate Transformation Editor
 ms.assetid: 186a9736-2554-40a0-9cb2-877a8db5fde8
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 2b0acde35830734d5b5cf344b36357dc766958dc
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 605a92e00b21d64679076fabcb41068b94921779
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48112251"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58386149"
 ---
 # <a name="aggregate-transformation-editor-advanced-tab"></a>Editor trasformazione Aggregazione (scheda Avanzate)
   Usare la scheda **Avanzate** della finestra di dialogo **Editor trasformazione Aggregazione** per impostare le proprietà dei componenti, specificare le aggregazioni, nonché impostare le proprietà delle colonne di input e output.  
@@ -36,7 +36,7 @@ ms.locfileid: "48112251"
  **Scala chiavi**  
  Consente di specificare facoltativamente il numero approssimativo di chiavi previste dall'aggregazione. La trasformazione utilizza tale informazione per ottimizzare la dimensione iniziale della cache. Per impostazione predefinita, il valore di questa opzione è **Non specificata**. Se vengono specificate sia **Scala chiavi** sia **Numero di chiavi**, **Numero di chiavi** ha priorità.  
   
-|valore|Description|  
+|Value|Descrizione|  
 |-----------|-----------------|  
 |Non specificata|La proprietà **Scala chiavi** non viene usata.|  
 |Bassa|L'aggregazione può scrivere circa 500.000 chiavi.|  
@@ -49,7 +49,7 @@ ms.locfileid: "48112251"
  **Scala conteggio valori distinct**  
  È possibile specificare il numero approssimativo di valori distinct che l'aggregazione può scrivere. Per impostazione predefinita, il valore di questa opzione è **Non specificata**. Se vengono specificate sia **Scala conteggio valori distinct** sia **Chiavi conteggio valori distinct**, **Numero di chiavi** ha priorità.  
   
-|valore|Description|  
+|Value|Descrizione|  
 |-----------|-----------------|  
 |Non specificata|La proprietà CountDistinctScale non viene utilizzata.|  
 |Bassa|L'aggregazione può scrivere circa 500.000 valori distinct.|  
@@ -63,8 +63,8 @@ ms.locfileid: "48112251"
  Consente di utilizzare un valore compreso tra 1 e 100 per specificare la percentuale di estensione possibile della memoria durante l'aggregazione. Il valore predefinito di questa opzione è **25%**.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Riferimento ai messaggi e agli errori di Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [Editor trasformazione aggregazione &#40;scheda aggregazioni&#41;](../../2014/integration-services/aggregate-transformation-editor-aggregations-tab.md)   
- [Aggregare valori in un set di dati tramite la trasformazione Aggregazione](data-flow/transformations/aggregate-values-in-a-dataset-by-using-the-aggregate-transformation.md)  
+ [Guida di riferimento ai messaggi e agli errori di Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
+ [Editor trasformazione Aggregazione &#40;scheda Aggregazioni&#41;](../../2014/integration-services/aggregate-transformation-editor-aggregations-tab.md)   
+ [Aggregazione di valori in un set di dati utilizzando la trasformazione Aggregazione](data-flow/transformations/aggregate-values-in-a-dataset-by-using-the-aggregate-transformation.md)  
   
   

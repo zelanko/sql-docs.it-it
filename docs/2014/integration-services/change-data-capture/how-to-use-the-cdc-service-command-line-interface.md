@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: ab87b7da-c3b9-4bc8-a853-798716cbf74b
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 9817753b0db333011530a2814b9ee9bbd255a057
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 68c45be7cc124b0cadcd8f769e2471799d5b502a
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52804693"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58384769"
 ---
 # <a name="how-to-use-the-cdc-service-command-line-interface"></a>Procedura di utilizzo dell'interfaccia della riga di comando del servizio CDC
   Il programma del servizio Oracle CDC, xdbcdcsvc.exe, esegue in genere il servizio Windows Oracle CDC ma può essere richiamato direttamente dalla riga di comando per creare o eliminare un servizio Windows Oracle CDC.  

@@ -10,15 +10,15 @@ ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.adonetsource.connection.f1
 ms.assetid: 7de3f438-bdd6-49b5-937a-47369e754943
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 77e31f4857d056da79fb65b6f6261a1d92f016e6
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 553603a6f8164dd2388a551d085413cd3c253b4c
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48052451"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58380149"
 ---
 # <a name="ado-net-source-editor-connection-manager-page"></a>Editor origine ADO NET (pagina Gestione connessione)
   Usare la pagina **Gestione connessione** della finestra di dialogo **Editor origine ADO.NET** per selezionare la gestione connessione [!INCLUDE[vstecado](../includes/vstecado-md.md)] per l'origine. Tramite questa pagina è inoltre possibile selezionare una tabella o una vista del database.  
@@ -43,7 +43,7 @@ ms.locfileid: "48052451"
  **Modalità di accesso ai dati**  
  Consente di specificare il metodo per la selezione dei dati dall'origine.  
   
-|Opzione|Description|  
+|Opzione|Descrizione|  
 |------------|-----------------|  
 |Tabella o vista|Consente di recuperare dati da una tabella o da una vista nell'origine dei dati [!INCLUDE[vstecado](../includes/vstecado-md.md)] .|  
 |Comando SQL|Consente di recuperare dati dall'origine dei dati [!INCLUDE[vstecado](../includes/vstecado-md.md)] usando una query SQL.|  
@@ -52,7 +52,7 @@ ms.locfileid: "48052451"
  Consente di visualizzare in anteprima i risultati nella finestra di dialogo **Vista dati** . L'**anteprima** supporta la visualizzazione di un massimo di 200 righe.  
   
 > [!NOTE]  
->  Quando vengono visualizzati i dati in anteprima, le colonne con tipo definito dall'utente CLR (UDT) non contengono dati. Vengono invece visualizzati i valori \<dimensione valore eccessiva per la visualizzazione> o System.Byte[]. Il primo viene visualizzato se si accede all'origine dei dati mediante il [!INCLUDE[vstecado](../includes/vstecado-md.md)], il secondo se si utilizza il provider [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Native Client.  
+>  Quando vengono visualizzati i dati in anteprima, le colonne con tipo definito dall'utente CLR (UDT) non contengono dati. Vengono invece visualizzati i valori \<dimensione valore eccessiva per la visualizzazione> o System.Byte[]. Il primo viene visualizzato se si accede all'origine dei dati mediante il [!INCLUDE[vstecado](../includes/vstecado-md.md)] , il secondo se si utilizza il provider [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Native Client.  
   
 ## <a name="data-access-mode-dynamic-options"></a>Opzioni dinamiche relative alla modalità di accesso ai dati  
   
@@ -71,8 +71,8 @@ ms.locfileid: "48052451"
  Usare la finestra di dialogo **Apri** per individuare il file contenente il testo della query SQL.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Editor origine ADO NET &#40;(pagina colonne)&#41;](../../2014/integration-services/ado-net-source-editor-columns-page.md)   
- [Editor origine ADO NET &#40;pagina dell'Output degli errori&#41;](../../2014/integration-services/ado-net-source-editor-error-output-page.md)   
+ [Editor origine ADO NET &#40;pagina Colonne&#41;](../../2014/integration-services/ado-net-source-editor-columns-page.md)   
+ [Editor origine ADO NET &#40;pagina Output errori&#41;](../../2014/integration-services/ado-net-source-editor-error-output-page.md)   
  [Gestione connessione ADO.NET](connection-manager/ado-net-connection-manager.md)  
   
   

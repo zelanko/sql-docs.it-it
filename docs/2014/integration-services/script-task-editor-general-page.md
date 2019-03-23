@@ -12,20 +12,20 @@ f1_keywords:
 helpviewer_keywords:
 - Script Task Editor
 ms.assetid: 0d153dce-6661-4c99-b1db-2bd3b5038b4f
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: dc55de3d17111ed8085a90c57e2876b142be5701
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 5d6853a1384aca7c799ca22639ce3f9a90f22a86
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48204001"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58384219"
 ---
 # <a name="script-task-editor-general-page"></a>Editor attività Script (pagina Generale)
   Utilizzare la pagina **Generale** della finestra di dialogo **Editor attività Script** per assegnare un nome e una descrizione all'attività Script.  
   
- Per ulteriori informazioni sull'attività Script, vedere [Script Task](control-flow/script-task.md) e [Configurazione dell'attività Script nell'editor attività Script](extending-packages-scripting/task/configuring-the-script-task-in-the-script-task-editor.md). Per informazioni sulla programmazione dell'attività Script, vedere [Extending the Package with the Script Task](extending-packages-scripting/task/extending-the-package-with-the-script-task.md).  
+ Per ulteriori informazioni sull'attività Script, vedere [Script Task](control-flow/script-task.md) e [Configurazione dell'attività Script nell'editor attività Script](extending-packages-scripting/task/configuring-the-script-task-in-the-script-task-editor.md). Per informazioni sulla programmazione dell'attività Script, vedere [Estensione del pacchetto con l'attività Script](extending-packages-scripting/task/extending-the-package-with-the-script-task.md).  
   
 ## <a name="options"></a>Opzioni  
  **Nome**  
@@ -38,9 +38,9 @@ ms.locfileid: "48204001"
  Consente di digitare una descrizione dell'attività Script.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Riferimento ai messaggi e agli errori di Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [Editor attività script &#40;pagina Script&#41;](../../2014/integration-services/script-task-editor-script-page.md)   
- [Pagina espressioni](expressions/expressions-page.md)   
+ [Guida di riferimento ai messaggi e agli errori di Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
+ [Editor attività Script &#40;pagina Script&#41;](../../2014/integration-services/script-task-editor-script-page.md)   
+ [Pagina Espressioni](expressions/expressions-page.md)   
  [Esempi di attività Script](extending-packages-scripting-task-examples/script-task-examples.md)  
   
   

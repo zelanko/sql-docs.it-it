@@ -18,15 +18,15 @@ helpviewer_keywords:
 - row transformations [Integration Services]
 - rowset transformations [Integration Services]
 ms.assetid: c70c4f6e-82dd-4948-b923-fd5193f67f7e
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 76157486751a08d17cf46de312f63e6e41dc3cb1
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: b283f179a6d9ad79e90e4abdfc2e5af0c199d4dd
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52785233"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58382664"
 ---
 # <a name="integration-services-transformations"></a>Trasformazioni di Integration Services
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] Le trasformazioni sono i componenti nel flusso di dati di un pacchetto che aggregano, uniscono, distribuiscono e modificano i dati. Le trasformazioni possono inoltre eseguire operazioni di ricerca e generare set di dati campione. In questa sezione vengono descritte le trasformazioni incluse in [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] , illustrandone il funzionamento.  

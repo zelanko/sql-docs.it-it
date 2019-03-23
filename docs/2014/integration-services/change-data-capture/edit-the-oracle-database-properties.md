@@ -9,15 +9,15 @@ ms.topic: conceptual
 f1_keywords:
 - oraProp
 ms.assetid: 58dc99f1-ee6b-4508-bb66-2bc589611ff7
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: cfc119c031f0eeb84317cd1bcd8250f8ab803b6b
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: c9ebad419585de0136708ea85e522f890dceac38
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52770863"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58381609"
 ---
 # <a name="edit-the-oracle-database-properties"></a>Modificare le proprietà del database Oracle
   Utilizzare la scheda Oracle nell'editor delle proprietà per modificare la descrizione fornita nella pagina Create CDC database della New Instance Wizard e le informazioni di connessione al database di log mining Oracle.  
@@ -36,9 +36,9 @@ ms.locfileid: "52770863"
  **Oracle Log Mining Authentication**  
  Per immettere le credenziali di autenticazione per il database Oracle che contiene il log miner, selezionare una delle opzioni disponibili in **Authentication**:  
   
--   **L'autenticazione di Windows**: Selezionare questa opzione per utilizzare le credenziali di dominio Windows correnti. È possibile utilizzare questa opzione solo se il database Oracle è configurato per l'utilizzo dell'autenticazione di Windows.  
+-   **Windows Authentication**: selezionare questa opzione per utilizzare le credenziali del dominio Windows correnti. È possibile utilizzare questa opzione solo se il database Oracle è configurato per l'utilizzo dell'autenticazione di Windows.  
   
--   **Oracle Authentication**: Se si seleziona questa opzione, è necessario digitare il **nome utente** e **Password** per l'utente nel database Oracle a cui ci si connette a.  
+-   **Oracle Authentication**: se si seleziona questa opzione, è necessario digitare il **nome utente** e la **password** dell'utente nel database Oracle a cui si effettua la connessione.  
   
  È possibile visualizzare le proprietà del database Oracle nel visualizzatore. Quando si utilizza il visualizzatore le informazioni sono in sola lettura. Nel visualizzatore è inoltre incluso un elenco delle colonne acquisite nella tabella. Per informazioni su come accedere al visualizzatore, vedere [How to Manage a CDC Instance](manage-a-cdc-instance.md).  
   

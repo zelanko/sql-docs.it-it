@@ -10,15 +10,15 @@ ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.transferdatabasetask.sourcedbfiles.f1
 ms.assetid: 7dc6bfeb-37c1-45e8-a705-a87564922265
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 42ac066ede8be2af8f08106ed358e63821a92c54
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: fb0f2659323960e58bb70ff2bb36f8367088dd7a
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52533944"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58387759"
 ---
 # <a name="source-database-files"></a>File di database di origine
   Utilizzare la finestra di dialogo **File di database di origine** per visualizzare i nomi e i percorsi dei file di database nel server di origine oppure per specificare il percorso di condivisione dei file in rete per l'attività Trasferisci database. Per altre informazioni su questa attività, vedere [Attività Trasferisci database](control-flow/transfer-database-task.md).  

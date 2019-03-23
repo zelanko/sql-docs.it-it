@@ -12,17 +12,17 @@ f1_keywords:
 - SQL11.DTS.DESIGNER.AFPADLSDEST.F1
 ms.assetid: d0e86032-2a6b-48b2-898f-e94328474fde
 author: yualan
-ms.author: douglasl
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 980e9c4c1b903518d49ea7f3945646e1af2d8c8e
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 2f10f78f59a6ec1dd5d5119a89624295935d6ff9
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48125421"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58382494"
 ---
 # <a name="azure-data-lake-store-destination"></a>Destinazione di Azure Data Lake Store
-  Il componente **Destinazione di Azure Data Lake Store** consente a un pacchetto SSIS di scrivere dati in Azure Data Lake Store. I formati di file supportati sono testo, Avro e ORC. 
+  Il componente **Destinazione di Azure Data Lake Store** consente a un pacchetto SSIS di scrivere dati in Azure Data Lake Store. I formati di file supportati sono: Testo, Avro e ORC. 
   
 ## <a name="configure-the-azure-data-lake-store-destination"></a>Configurare Destinazione di Azure Data Lake Store 
 

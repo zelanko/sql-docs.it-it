@@ -12,15 +12,15 @@ f1_keywords:
 helpviewer_keywords:
 - Execute SQL Task Editor
 ms.assetid: beb39086-28ce-46af-b6d8-f7b4fb8d9069
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: dcf15af9fb5e351dd4c965d0eb6ef520b62b65b2
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 559f13c3c777931270f4bc289f890f2360361030
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52531366"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58382276"
 ---
 # <a name="execute-sql-task-editor-general-page"></a>Editor attività Esegui XML (pagina Generale)
   Usare la pagina **Generale** della finestra di dialogo **Editor attività Esegui SQL** per configurare l'attività Esegui SQL e specificare l'istruzione SQL eseguita dall'attività.  
@@ -104,7 +104,7 @@ ms.locfileid: "52531366"
  **FileConnection**  
  Selezionare una gestione connessione file esistente o fare clic su \<**Nuova connessione...**> per creare una nuova gestione connessione.  
   
- **Argomenti correlati:** [Gestione connessione file](connection-manager/file-connection-manager.md), [Editor gestione connessione File](../../2014/integration-services/file-connection-manager-editor.md)  
+ **Argomenti correlati:** [File Connection Manager](connection-manager/file-connection-manager.md), [File Connection Manager Editor](../../2014/integration-services/file-connection-manager-editor.md)  
   
 ### <a name="sqlsourcetype--variable"></a>SQLSourceType = Variabile  
  **SourceVariable**  
