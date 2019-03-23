@@ -14,15 +14,15 @@ f1_keywords:
 helpviewer_keywords:
 - Configure SSIS Logs dialog box
 ms.assetid: 4b980275-cd9a-4943-8c36-727d51f9a484
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 4730b52983c778fd71f778412552913d2ee6cbef
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: dbba1b7712bcbdccc821e419b3101065c3164913
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48120568"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58375214"
 ---
 # <a name="configure-ssis-logs-dialog-box"></a>Configura log SSIS - finestra di dialogo
   Utilizzare la finestra di dialogo **Configura log SSIS** per definire le opzioni di registrazione per un pacchetto.  
@@ -67,7 +67,7 @@ ms.locfileid: "48120568"
  **Aggiungi**  
  Consente di aggiungere un log del tipo specificato alla raccolta di logger del pacchetto.  
   
- **Nome**  
+ **Name**  
  Consente di abilitare o disabilitare log per contenitori o attività selezionati nel riquadro **Contenitori** della finestra di dialogo **Configura log SSIS** usando le caselle di controllo. Il campo del nome è modificabile. Utilizzare il nome predefinito per il provider oppure digitare un nome descrittivo univoco.  
   
  **Descrizione**  
@@ -76,7 +76,7 @@ ms.locfileid: "48120568"
  **Configurazione**  
  Selezionare una gestione connessione esistente nell'elenco oppure fare clic su \<**Nuova connessione**> per creare una nuova gestione connessione. A seconda del tipo di logger, è possibile configurare una gestione connessione OLE DB o una gestione connessione file. Il logger per il registro eventi di [!INCLUDE[msCoName](../includes/msconame-md.md)] non necessita di connessioni.  
   
- Argomenti correlati: [OLE DB Connection Manager](connection-manager/ole-db-connection-manager.md) e [File Connection Manager](connection-manager/file-connection-manager.md)  
+ Argomenti correlati: [Gestione connessione OLE DB](connection-manager/ole-db-connection-manager.md) manager [gestione connessione File](connection-manager/file-connection-manager.md)  
   
  **Elimina**  
  Selezionare un provider di log e fare clic su **Elimina**.  
@@ -94,7 +94,7 @@ ms.locfileid: "48120568"
  **Avanzate**  
  Consente di selezionare o deselezionare gli eventi da registrare, nonché le informazioni da registrare per ogni evento. Fare clic su **Standard** per nascondere tutti i dettagli di registrazione, ad eccezione dell'elenco di eventi. Per la registrazione sono disponibili le informazioni seguenti:  
   
-|valore|Description|  
+|Value|Descrizione|  
 |-----------|-----------------|  
 |**Computer**|Nome del computer in cui si è verificato l'evento registrato.|  
 |**Operatore**|Nome utente dell'utente che ha avviato il pacchetto.|  
