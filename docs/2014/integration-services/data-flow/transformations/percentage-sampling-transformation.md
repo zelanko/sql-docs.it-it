@@ -17,15 +17,15 @@ helpviewer_keywords:
 - datasets [Integration Services], sample
 - training mining models
 ms.assetid: 59767e52-f732-4b3f-8602-be50d0a64ef2
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 0b7f433313392c826babcbeb7eeaf9033b046b64
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 27d3ff9ef1c6296a6bec2040f9caefd477568bfa
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52805513"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58375009"
 ---
 # <a name="percentage-sampling-transformation"></a>Campionamento percentuale - trasformazione
   La trasformazione Campionamento percentuale consente di creare un set di dati campione selezionando una percentuale delle righe di input della trasformazione. Il set di dati campione viene ottenuto selezionando casualmente dall'input della trasformazione un numero di righe sufficiente per ottenere un campione rappresentativo dell'input.  
