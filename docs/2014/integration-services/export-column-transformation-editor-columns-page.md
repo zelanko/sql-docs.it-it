@@ -12,15 +12,15 @@ f1_keywords:
 helpviewer_keywords:
 - Export Column Transformation Editor
 ms.assetid: b659a5c2-5509-4b5b-9c82-136c971d5c7f
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: e12fa5ca9d9295ffe1311062215217044ada2135
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: d7682e3c22885b50e1516a8f30cce468852ae2c7
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48048391"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58378060"
 ---
 # <a name="export-column-transformation-editor-columns-page"></a>Editor trasformazione Esportazione colonna (pagina Colonne)
   Utilizzare la pagina **Colonne** della finestra di dialogo **Editor trasformazione Esportazione colonna** per specificare le colonne nel flusso di dati da estrarre in file. È possibile indicare se la trasformazione Esporta colonna deve accodare i dati a un file oppure sovrascrivere un file esistente.  
@@ -41,10 +41,10 @@ ms.locfileid: "48048391"
  Consente di indicare se la trasformazione eliminerà il contenuto di file esistenti prima di scrivere i dati. Il valore predefinito è `false`.  
   
  **Scrivi indicatore ordine byte**  
- Consente di specificare se scrivere un indicatore ordine byte (BOM) nel file. Un carattere BOM viene scritto solo se i dati hanno il `DT_NTEXT` o tipo di dati DT_WSTR e non viene aggiunta a un file di dati esistente.  
+ Consente di specificare se scrivere un indicatore ordine byte (BOM) nel file. L'indicatore dell'ordine byte viene scritto solo se i dati hanno tipo di dati `DT_NTEXT` o DT_WSTR e non sono accodati a un file di dati esistente.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Riferimento ai messaggi e agli errori di Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [Editor trasformazione Esportazione colonna &#40;pagina dell'Output degli errori&#41;](../../2014/integration-services/export-column-transformation-editor-error-output-page.md)  
+ [Guida di riferimento ai messaggi e agli errori di Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
+ [Editor trasformazione Esportazione colonna &#40;pagina Output degli errori&#41;](../../2014/integration-services/export-column-transformation-editor-error-output-page.md)  
   
   

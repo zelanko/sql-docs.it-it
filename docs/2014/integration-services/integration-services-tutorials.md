@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: e74217c8-234a-4095-b3c0-5870707e5a87
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 8e4a6b2136e18012129b227f5bb7e41cc5f15735
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 81985b3a16d5ac271a22f0ae62d73b3a518bae94
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52767193"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58377055"
 ---
 # <a name="integration-services-tutorials"></a>Esercitazioni su Integration Services
   In questa sezione sono disponibili le esercitazioni per [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)].  

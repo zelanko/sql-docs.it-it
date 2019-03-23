@@ -12,15 +12,15 @@ f1_keywords:
 helpviewer_keywords:
 - Package Configurations Organizer dialog box
 ms.assetid: f20ae6cb-9e6a-4d24-88ff-d7a903a4e8d3
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 34789e64c2e8bc1892827b414a89975377c75cfc
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: aa795467e603ff8758e76fff6a3cc7fea48e4c87
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48085971"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58378638"
 ---
 # <a name="package-configurations-organizer"></a>Libreria configurazioni pacchetto
   Usare la finestra di dialogo **Libreria configurazioni pacchetto** per abilitare le configurazioni dei pacchetti, visualizzarne un elenco per il pacchetto corrente e specificare l'ordine desiderato in base a cui devono essere caricate.  
@@ -33,7 +33,7 @@ ms.locfileid: "48085971"
 > [!NOTE]  
 >  Il caricamento delle configurazioni di pacchetto nell'ordine preferito avviene a partire dall'inizio dell'elenco visualizzato nella finestra di dialogo **Libreria configurazioni pacchetto** fino alla fine dell'elenco. In fase di esecuzione, tuttavia, tali configurazioni potrebbero non essere caricate nell'ordine preferito. In particolare, le configurazioni di pacchetto padre vengono caricate dopo quelle di altri tipi.  
   
- Le configurazioni di pacchetto aggiornano i valori delle proprietà degli oggetti pacchetto in fase di esecuzione. Quando viene caricato un pacchetto, i valori delle configurazioni sostituiscono quelli impostati durante lo sviluppo del pacchetto. In [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] sono supportati diversi tipi di configurazione. È possibile, ad esempio, utilizzare un file XML che contiene più configurazioni o una variabile di ambiente che ne contiene una sola. Per altre informazioni, vedere [Configurazioni di pacchetto](../../2014/integration-services/package-configurations.md).  
+ Le configurazioni di pacchetto aggiornano i valori delle proprietà degli oggetti pacchetto in fase di esecuzione. Quando viene caricato un pacchetto, i valori delle configurazioni sostituiscono quelli impostati durante lo sviluppo del pacchetto. [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] supporta diversi tipi di configurazione. È possibile, ad esempio, utilizzare un file XML che contiene più configurazioni o una variabile di ambiente che ne contiene una sola. Per altre informazioni, vedere [Configurazioni di pacchetto](../../2014/integration-services/package-configurations.md).  
   
 ## <a name="options"></a>Opzioni  
  **Abilita configurazioni pacchetto**  
@@ -46,7 +46,7 @@ ms.locfileid: "48085971"
  Consente di visualizzare il tipo di percorso in cui sono archiviate le configurazioni.  
   
  **Stringa di configurazione**  
- Consente di visualizzare il percorso in cui sono archiviati i valori della configurazione, che può essere il percorso di un file, il nome di una variabile di ambiente, il nome di una variabile del pacchetto padre, una chiave del Registro di sistema o il nome di una tabella di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
+ Consente di visualizzare il percorso in cui sono archiviati i valori della configurazione, che può essere il percorso di un file, il nome di una variabile di ambiente, il nome di una variabile del pacchetto padre, una chiave del Registro di sistema o il nome di una tabella di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] .  
   
  **Oggetto di destinazione**  
  Consente di visualizzare il nome dell'oggetto aggiornato dalla configurazione. Se la configurazione è un file di configurazione XML o una tabella di SQL Server, la colonna sarà vuota perché questo tipo di configurazione può includere più oggetti.  

@@ -10,15 +10,15 @@ helpviewer_keywords:
 - breakpoints [Integration Services]
 - scripts [Integration Services], breakpoints
 ms.assetid: 6c03464f-3f7d-4882-b7f8-8e396f8e2944
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 6d3104a749db2099434bb5e3c2c0d8cde374f620
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 97c41b4ca75336f70b049239112132c89b05fba5
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52789413"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58374692"
 ---
 # <a name="debug-a-script-by-setting-breakpoints-in-a-script-task-and-script-component"></a>Eseguire il debug di uno script impostando punti di interruzione in un'attività e in un componente Script
   In questa procedura viene descritto come impostare i punti di interruzione negli script utilizzati nell'attività e nel componente Script.  

@@ -16,15 +16,15 @@ helpviewer_keywords:
 - connection managers [Integration Services], creating
 - SQL Server Integration Services packages, connections
 ms.assetid: 6ca317b8-0061-4d9d-b830-ee8c21268345
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 807241aec9544c8a6366b8d12c0aaddb4b0d228a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: ef2ea7fa43556f0c4f12ee41101aedf396a23382
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48074463"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58374089"
 ---
 # <a name="create-connection-managers"></a>Creazione di gestioni connessioni
   In [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] è disponibile un'ampia gamma di gestioni connessioni che consentono di soddisfare le esigenze di attività che si connettono a diversi tipi di server e origini dati. Le gestioni connessioni vengono utilizzate dai componenti del flusso di dati che estraggono e caricano dati in diversi tipi di archivi dati e dai provider di log che scrivono log in un server, in una tabella di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] o in un file. Un pacchetto che include un'attività Invia messaggi, ad esempio, utilizza un tipo di gestione connessione SMTP (Simple Mail Transfer Protocol) per connettersi a un server SMTP. Un pacchetto che include un'attività Esegui SQL può usare una gestione connessione OLE DB per connettersi a un database di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Per altre informazioni, vedere [Connessioni in Integration Services &#40;SSIS&#41;](connection-manager/integration-services-ssis-connections.md).  
@@ -58,6 +58,6 @@ ms.locfileid: "48074463"
 ## <a name="see-also"></a>Vedere anche  
  [Flusso di controllo](control-flow/control-flow.md)   
  [Flusso di dati](data-flow/data-flow.md)   
- [Integration Services &#40;SSIS&#41; gestori eventi](integration-services-ssis-event-handlers.md)  
+ [Gestori eventi di Integration Services &#40;SSIS&#41;](integration-services-ssis-event-handlers.md)  
   
   

@@ -17,15 +17,15 @@ helpviewer_keywords:
 - files [Integration Services], security
 - SQL Server Integration Services packages, security
 ms.assetid: 2e3ddea9-5289-4289-a70e-11c018f34977
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 6b6e78e04a64f9bddeeb4f24ba2f90919b9d228c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: eed6f09197585e7eb8575c43146ed730497af8a0
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48214991"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58378489"
 ---
 # <a name="access-to-files-used-by-packages"></a>Accesso ai file utilizzati dai pacchetti
   Il livello di protezione del pacchetto non protegge i file archiviati al di fuori del pacchetto. ovvero i file seguenti:  
@@ -39,7 +39,7 @@ ms.locfileid: "48214991"
  Questi file devono essere protetti separatamente, soprattutto se includono informazioni riservate.  
   
 ## <a name="configuration-files"></a>File di configurazione  
- Se un file di configurazione contiene dati riservati, come informazioni su account di accesso e password, è consigliabile salvare tale configurazione in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]oppure usare un elenco di controllo di accesso (ACL) per limitare l'accesso al percorso o alla cartella in cui sono archiviati i file e consentire l'accesso solo a determinati account. L'accesso viene in genere concesso agli account autorizzati all'esecuzione dei pacchetti e agli account utilizzati per la gestione e la risoluzione dei problemi dei pacchetti, che possono comportare la revisione dei contenuti dei file di configurazione, del checkpoint e di log. In [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] è disponibile l'archiviazione più sicura perché la protezione viene garantita ai livelli del server e del database. Per salvare le configurazioni in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], è necessario usare il tipo di configurazione di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] , mentre per salvarle nel file system è necessario utilizzare il tipo di configurazione XML.  
+ Se un file di configurazione contiene dati riservati, come informazioni su account di accesso e password, è consigliabile salvare tale configurazione in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]oppure usare un elenco di controllo di accesso (ACL) per limitare l'accesso al percorso o alla cartella in cui sono archiviati i file e consentire l'accesso solo a determinati account. L'accesso viene in genere concesso agli account autorizzati all'esecuzione dei pacchetti e agli account utilizzati per la gestione e la risoluzione dei problemi dei pacchetti, che possono comportare la revisione dei contenuti dei file di configurazione, del checkpoint e di log. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] dispone di un'archiviazione più sicura perché la protezione viene garantita ai livelli del server e del database. Per salvare le configurazioni in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], è necessario usare il tipo di configurazione di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] , mentre per salvarle nel file system è necessario utilizzare il tipo di configurazione XML.  
   
  Per altre informazioni, vedere [Configurazioni di pacchetto](../../2014/integration-services/package-configurations.md), [Creazione di configurazioni dei pacchetti](../../2014/integration-services/create-package-configurations.md)e [Considerazioni sulla sicurezza per un'installazione SQL Server](../../2014/sql-server/install/security-considerations-for-a-sql-server-installation.md).  
   

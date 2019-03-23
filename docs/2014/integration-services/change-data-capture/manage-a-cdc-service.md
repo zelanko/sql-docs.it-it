@@ -9,15 +9,15 @@ ms.topic: conceptual
 f1_keywords:
 - manSer
 ms.assetid: 645ae53f-f352-4d6a-9eb0-264e53a93a18
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 1b4990635d9246489c3b74fa966312db4a884e5b
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 0c254e5c9cefa8a7e65b18fa25cc597ab3afc642
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52764163"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58373830"
 ---
 # <a name="manage-a-cdc-service"></a>Gestire un servizio CDC
   È possibile utilizzare CDC Designer Console per visualizzare i servizi creati con CDC Service Configuration Console e gestire tutte le istanze nel servizio Oracle CDC.  

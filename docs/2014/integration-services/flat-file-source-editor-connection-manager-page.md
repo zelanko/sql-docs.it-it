@@ -12,15 +12,15 @@ f1_keywords:
 helpviewer_keywords:
 - Flat File Source Editor
 ms.assetid: 2efd6baa-ed75-4f3f-b667-514024cebdb8
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 5ff623b3a360cf1a77962135fe288e03b3b83d2d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: e486f089ca261cbe5ea09cf7c9d38bc8fcdedbc9
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48147181"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58379734"
 ---
 # <a name="flat-file-source-editor-connection-manager-page"></a>Editor origine file flat (pagina Gestione connessione)
   Utilizzare la pagina **Gestione connessione** della finestra di dialogo **Editor origine file flat** per selezionare la gestione connessione file flat per l'origine da utilizzare. L'origine file flat legge i dati da un file di testo. I dati possono essere in formato delimitato, a larghezza fissa o misto.  
@@ -47,9 +47,9 @@ ms.locfileid: "48147181"
  Consente di visualizzare in anteprima i risultati nella finestra di dialogo **Vista dati** . L'anteprima supporta la visualizzazione di un massimo di 200 righe.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Riferimento ai messaggi e agli errori di Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [Editor origine File flat &#40;(pagina colonne)&#41;](../../2014/integration-services/flat-file-source-editor-columns-page.md)   
- [Editor origine File flat &#40;pagina dell'Output degli errori&#41;](../../2014/integration-services/flat-file-source-editor-error-output-page.md)   
+ [Guida di riferimento ai messaggi e agli errori di Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
+ [Editor origine file flat &#40;pagina Colonne&#41;](../../2014/integration-services/flat-file-source-editor-columns-page.md)   
+ [Editor origine file flat &#40;pagina Output degli errori&#41;](../../2014/integration-services/flat-file-source-editor-error-output-page.md)   
  [Gestione connessione file flat](connection-manager/file-connection-manager.md)  
   
   

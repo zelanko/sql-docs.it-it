@@ -12,15 +12,15 @@ f1_keywords:
 helpviewer_keywords:
 - Flat File Connection Manager Editor
 ms.assetid: de47ea98-135e-4730-900e-dac629848798
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: c0368fefac4c927ee1f1483ba433feb13b3c1dc5
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 5069000307f1cc677437cd1313e493015a774664
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48125181"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58377149"
 ---
 # <a name="flat-file-connection-manager-editor-preview-page"></a>Editor gestione connessione file flat (pagina Anteprima)
   Utilizzare il nodo **Anteprima** della finestra di dialogo **Editor gestione connessione file flat** per visualizzare il contenuto del file di origine in formato tabella.  
@@ -44,9 +44,9 @@ ms.locfileid: "48125181"
  Consente di visualizzare i dati di esempio del file flat suddivisi in colonne e righe, a seconda delle opzioni selezionate.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Riferimento ai messaggi e agli errori di Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [Editor gestione connessione File flat &#40;pagina Generale&#41;](general-page-of-integration-services-designers-options.md)   
- [Editor gestione connessione File flat &#40;(pagina colonne)&#41;](../../2014/integration-services/flat-file-connection-manager-editor-columns-page.md)   
+ [Guida di riferimento ai messaggi e agli errori di Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
+ [Editor gestione connessione file flat &#40;pagina Generale&#41;](general-page-of-integration-services-designers-options.md)   
+ [Editor gestione connessione file flat &#40;pagina Colonne&#41;](../../2014/integration-services/flat-file-connection-manager-editor-columns-page.md)   
  [Editor gestione connessione file flat &#40;pagina Avanzate&#41;](../../2014/integration-services/flat-file-connection-manager-editor-advanced-page.md)  
   
   

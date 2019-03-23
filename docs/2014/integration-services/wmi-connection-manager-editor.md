@@ -12,15 +12,15 @@ f1_keywords:
 helpviewer_keywords:
 - WMI Connection Manager Editor
 ms.assetid: 0ef2c913-0779-4a07-989e-3361cd83170b
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 3714264bceaf4ac334df96a054e933d6814904cd
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 4851e8b989a161cef6cbb673a9c76a32f8afdeb8
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48121771"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58378609"
 ---
 # <a name="wmi-connection-manager-editor"></a>Editor gestione connessione WMI
   Usare la finestra di dialogo **Editor gestione connessioni WMI** per specificare una connessione del servizio Strumentazione gestione Windows (WMI) a un server.  
@@ -28,7 +28,7 @@ ms.locfileid: "48121771"
  Per ulteriori informazioni sulla gestione connessioni WMI, vedere [WMI Connection Manager](connection-manager/wmi-connection-manager.md).  
   
 ## <a name="options"></a>Opzioni  
- **Nome**  
+ **Name**  
  Consente di specificare un nome univoco per la gestione connessione.  
   
  **Descrizione**  
@@ -53,8 +53,8 @@ ms.locfileid: "48121771"
  Consente di verificare le impostazioni della gestione connessioni.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Riferimento ai messaggi e agli errori di Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [Provider WMI per i concetti di Gestione configurazione](../relational-databases/wmi-provider-configuration/wmi-provider-for-configuration-management.md)   
+ [Guida di riferimento ai messaggi e agli errori di Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
+ [Concetti relativi al provider WMI per Gestione configurazione](../relational-databases/wmi-provider-configuration/wmi-provider-for-configuration-management.md)   
  [Concetti relativi al provider WMI per eventi del server](../relational-databases/wmi-provider-server-events/wmi-provider-for-server-events-concepts.md)  
   
   

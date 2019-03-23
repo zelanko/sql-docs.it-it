@@ -17,22 +17,22 @@ helpviewer_keywords:
 - SSIS packages, property expressions
 - property expressions [Integration Services]
 ms.assetid: cd0e171a-08be-45d6-81dc-ed94f37698b8
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: d561840bfe2c10d7b269bb952b934d22dd957d32
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 2fd6b938d13e880f7ec8d48d3e4ca9665ee9cd65
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48135201"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58378599"
 ---
 # <a name="data-flow-properties-that-can-be-set-by-using-expressions"></a>Proprietà del flusso di dati che è possibile impostare tramite espressioni
   I valori di determinate proprietà di oggetti del flusso di dati possono essere specificati utilizzando espressioni di proprietà disponibili nel contenitore dell'attività Flusso di dati.  
   
  Per informazioni sull'utilizzo delle espressioni di proprietà, vedere [utilizzo delle espressioni di proprietà nei pacchetti](expressions/use-property-expressions-in-packages.md).  
   
- È possibile utilizzare espressioni di proprietà per personalizzare la configurazione di ogni istanza di pacchetto distribuita. È anche possibile usare espressioni di proprietà per specificare i vincoli in fase di esecuzione per un pacchetto tramite l'opzione **/set** con l'utilità del prompt dei comandi **dtexec** . Ad esempio, è possibile vincolare il `MaximumThreads` utilizzata dalla trasformazione dell'ordinamento o il `MaxMemoryUsage` delle trasformazioni raggruppamento Fuzzy e ricerca Fuzzy. Se non vincolate, queste trasformazioni possono memorizzare nella cache grandi quantità di dati.  
+ È possibile utilizzare espressioni di proprietà per personalizzare la configurazione di ogni istanza di pacchetto distribuita. È anche possibile usare espressioni di proprietà per specificare i vincoli in fase di esecuzione per un pacchetto tramite l'opzione **/set** con l'utilità del prompt dei comandi **dtexec** . Ad esempio, è possibile vincolare `MaximumThreads` utilizzato dalla trasformazione dell'ordinamento o `MaxMemoryUsage` delle trasformazioni del raggruppamento fuzzy e della ricerca fuzzy. Se non vincolate, queste trasformazioni possono memorizzare nella cache grandi quantità di dati.  
   
  Per specificare un'espressione di proprietà per una delle proprietà degli oggetti del flusso di dati elencate in questo argomento, visualizzare la finestra **Proprietà** per l'attività flusso di dati selezionando l'attività flusso di dati nell'area di progettazione **Flusso di controllo** o selezionando la scheda **Flusso di dati** della finestra di progettazione senza selezionare componenti o percorsi singoli. Selezionare la proprietà **Espressioni** e fare clic sui puntini di sospensione per visualizzare la finestra di dialogo **Editor espressioni di proprietà** . Visualizzare l'elenco a discesa **Proprietà** per selezionare una proprietà, quindi digitare un'espressione nella casella di testo **Espressione** o fare clic sui puntini di sospensione per visualizzare la finestra di dialogo **Generatore di espressioni** .  
   

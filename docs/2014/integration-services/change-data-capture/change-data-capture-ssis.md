@@ -10,15 +10,15 @@ helpviewer_keywords:
 - incremental loads [SQL Server change data capture]
 - change data capture [SQL Server], Integration Services and
 ms.assetid: c4aaba1b-73e5-4187-a97b-61c10069cc5a
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 6a65ec13f342dc890511e7b99258a41456cd989b
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 391bf9204beeb6222a6e736125e5630bd5b1565e
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53362393"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58375880"
 ---
 # <a name="change-data-capture-ssis"></a>Change Data Capture (SSIS)
   Change Data Capture in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] offre una soluzione efficace alla sfida posta dall'esecuzione di caricamenti incrementali da tabelle di origine in data mart e data warehouse.  
@@ -61,7 +61,7 @@ ms.locfileid: "53362393"
   
      **Per ulteriori informazioni:**  [Preparare l'esecuzione di una query per i dati delle modifiche](prepare-to-query-for-the-change-data.md)  
   
- **Passaggio 2: Configurazione della Query per i dati delle modifiche**  
+ **Passaggio 2: Configurazione della query per i dati delle modifiche**  
  Creare la funzione con valori di tabella che eseguirà una query per i dati.  
   
  Usare [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] per sviluppare e salvare la query.  

@@ -13,15 +13,15 @@ helpviewer_keywords:
 - packages [Integration Services], configurations
 - variables [Integration Services], adding
 ms.assetid: 9b939edb-4e17-48e5-8428-855beb10049c
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 99194829b63bfbc41caa4ef1e400eb37cf6de64d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: c1e942df4681595be19f31aa6a9d7c6fd3a6dd12
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48055636"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58374961"
 ---
 # <a name="use-the-values-of-variables-and-parameters-in-a-child-package"></a>Utilizzare i valori di variabili e parametri in un pacchetto figlio
   In questa procedura viene descritto come creare una configurazione di pacchetto in cui viene utilizzato il tipo di configurazione variabile padre. Questo tipo di configurazione consente a un pacchetto figlio eseguito da un pacchetto padre di accedere a una variabile del pacchetto padre.  
@@ -105,9 +105,9 @@ ms.locfileid: "48055636"
 13. Scegliere **Chiudi**.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Configurazioni di pacchetto](../../2014/integration-services/package-configurations.md)   
- [Creare le configurazioni di pacchetto](../../2014/integration-services/create-package-configurations.md)   
- [Integration Services &#40;SSIS&#41; le variabili](integration-services-ssis-variables.md)   
- [Uso di variabili nei pacchetti](../../2014/integration-services/use-variables-in-packages.md)  
+ [SSIS](../../2014/integration-services/package-configurations.md)   
+ [Creazione di configurazioni dei pacchetti](../../2014/integration-services/create-package-configurations.md)   
+ [Variabili di Integration Services &#40;SSIS&#41;](integration-services-ssis-variables.md)   
+ [Utilizzo di variabili nei pacchetti](../../2014/integration-services/use-variables-in-packages.md)  
   
   

@@ -12,15 +12,15 @@ f1_keywords:
 helpviewer_keywords:
 - Aggregate Transformation Editor
 ms.assetid: a01cb124-ec79-4673-b1a1-bf4d60ee1b45
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 4aaf14095eab05110845178f4115fc87ea19947a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: db633e9afa480d03b31cf02a84db2813b1e30516
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48224461"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58378036"
 ---
 # <a name="aggregate-transformation-editor-aggregations-tab"></a>Editor trasformazione Aggregazione (scheda Aggregazioni)
   Usare la scheda **Aggregazioni** della finestra di dialogo **Editor trasformazione Aggregazione** per specificare le colonne per l'aggregazione e le proprietà di aggregazione. È possibile applicare più aggregazioni. Questa trasformazione non genera output degli errori.  
@@ -45,7 +45,7 @@ ms.locfileid: "48224461"
  **Scala chiavi**  
  Nella sezione delle opzioni avanzate è inoltre possibile specificare il numero approssimativo di chiavi che possono essere scritte dall'aggregazione. Per impostazione predefinita, il valore di questa opzione è **Non specificata**. Se le proprietà **Scala chiavi** e **Chiavi** sono entrambe impostate, il valore della proprietà **Chiavi** ha la precedenza.  
   
-|valore|Description|  
+|Value|Descrizione|  
 |-----------|-----------------|  
 |Non specificata|La proprietà Scala chiavi non viene utilizzata.|  
 |Bassa|L'aggregazione può scrivere circa 500.000 chiavi.|  
@@ -67,7 +67,7 @@ ms.locfileid: "48224461"
  **Operazione**  
  Selezionare un'operazione nell'elenco delle operazioni disponibili utilizzando la tabella seguente come guida.  
   
-|Operazione|Description|  
+|Operazione|Descrizione|  
 |---------------|-----------------|  
 |**GroupBy**|Consente di dividere i set di dati in gruppi. Per il raggruppamento è possibile utilizzare colonne con qualsiasi tipo di dati. Per ulteriori informazioni, vedere GROUP BY.|  
 |**Sum**|Consente di sommare i valori di una colonna. È possibile sommare solo le colonne con tipi di dati numerici. Per ulteriori informazioni, vedere SUM.|  
@@ -83,10 +83,10 @@ ms.locfileid: "48224461"
  **Count Distinct Scale**  
  È possibile specificare il numero approssimativo di valori distinct che l'aggregazione può scrivere. Per impostazione predefinita, il valore di questa opzione è **Non specificata**. Se entrambe `CountDistinctScale` e **CountDistinctKeys** vengono specificati **CountDistinctKeys** ha la precedenza.  
   
-|valore|Description|  
+|Value|Descrizione|  
 |-----------|-----------------|  
-|Non specificata|Il `CountDistinctScale` proprietà non viene utilizzata.|  
-|Basso|L'aggregazione può scrivere circa 500.000 valori distinct.|  
+|Non specificata|La proprietà `CountDistinctScale` non viene utilizzata.|  
+|Bassa|L'aggregazione può scrivere circa 500.000 valori distinct.|  
 |Media|L'aggregazione può scrivere circa 5.000.000 di valori distinct.|  
 |Alto|L'aggregazione può scrivere oltre 25.000.000 di valori distinct.|  
   
@@ -94,8 +94,8 @@ ms.locfileid: "48224461"
  È possibile specificare il numero esatto di valori distinct che l'aggregazione può scrivere. Se entrambe `CountDistinctScale` e **CountDistinctKeys** vengono specificati **CountDistinctKeys** ha la precedenza.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Riferimento ai messaggi e agli errori di Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [Editor trasformazione aggregazione &#40;scheda Avanzate&#41;](../../2014/integration-services/aggregate-transformation-editor-advanced-tab.md)   
+ [Guida di riferimento ai messaggi e agli errori di Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
+ [Editor trasformazione Aggregazione &#40;scheda Avanzate&#41;](../../2014/integration-services/aggregate-transformation-editor-advanced-tab.md)   
  [Aggregare valori in un set di dati tramite la trasformazione Aggregazione](data-flow/transformations/aggregate-values-in-a-dataset-by-using-the-aggregate-transformation.md)  
   
   

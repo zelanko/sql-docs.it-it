@@ -11,15 +11,15 @@ f1_keywords:
 helpviewer_keywords:
 - Web Service task [Integration Services]
 ms.assetid: 5c7206f1-7d6a-4923-8dff-3c4912da4157
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: ee28bbfa3cea482f934b3491f51e0caf601f5465
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 86b86039f3e308953d41f5a463b0716a76d5c361
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53363163"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58377309"
 ---
 # <a name="web-service-task"></a>Attività Servizio Web
   L'attività Servizio Web esegue un metodo di servizio Web. È possibile utilizzare l'attività Servizio Web per gli scopi seguenti:  
@@ -82,7 +82,7 @@ ms.locfileid: "53363163"
 -   <xref:Microsoft.SqlServer.Dts.Tasks.WebServiceTask.WebServiceTask>  
   
 ## <a name="related-content"></a>Contenuto correlato  
- Video, [come: Chiamare un servizio Web usando l'attività servizio Web (Video di SQL Server)](https://go.microsoft.com/fwlink/?LinkId=259642), sul sito Web technet.microsoft.com.  
+ Video [Procedura: Chiamare un servizio Web usando l'attività servizio Web (Video di SQL Server)](https://go.microsoft.com/fwlink/?LinkId=259642), sul sito Web technet.microsoft.com.  
   
  Risposta curata relativa all' [uso dei servizi Web in SSIS tramite script](https://go.microsoft.com/fwlink/?LinkId=321996)su curatedviews.cloudapp.net.  
   

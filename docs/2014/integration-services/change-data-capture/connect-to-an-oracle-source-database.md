@@ -9,15 +9,15 @@ ms.topic: conceptual
 f1_keywords:
 - oraDb
 ms.assetid: 220cf555-0db2-443c-8f87-8e413f3ca731
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: f22b5d71aa2d6d4ac63fe597e9da6b9dfb0a15c0
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: f32462ef33af50a08cd933ed5c1a04c4efaa17de
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53202190"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58377319"
 ---
 # <a name="connect-to-an-oracle-source-database"></a>Connettersi a un database di origine Oracle
   Utilizzare la pagina Oracle Source per fornire le informazioni necessarie per la connessione al database di origine Oracle. Tramite l'istanza di CDC verranno letti i log di rollforward del database Oracle a cui si è effettuata la connessione.  
@@ -34,9 +34,9 @@ ms.locfileid: "53202190"
  **Oracle Log Mining Authentication**  
  Per immettere le credenziali per l'utente del database Oracle autorizzato per il log mining, selezionare una delle opzioni seguenti:  
   
--   **L'autenticazione di Windows**: Selezionare questa opzione per utilizzare le credenziali di dominio Windows correnti. È possibile utilizzare questa opzione solo se il database Oracle è configurato per l'utilizzo dell'autenticazione di Windows.  
+-   **Windows Authentication**: selezionare questa opzione per utilizzare le credenziali del dominio Windows correnti. È possibile utilizzare questa opzione solo se il database Oracle è configurato per l'utilizzo dell'autenticazione di Windows.  
   
--   **Oracle Authentication**: Se si seleziona questa opzione, è necessario digitare il **nome utente** e **Password** per l'utente nel database Oracle a cui ci si connette a.  
+-   **Oracle Authentication**: se si seleziona questa opzione, è necessario digitare il **nome utente** e la **password** dell'utente nel database Oracle a cui si effettua la connessione.  
   
 > [!NOTE]
 >  Per poter essere un utente del log mining un utente deve disporre dei privilegi seguenti per il database Oracle.  

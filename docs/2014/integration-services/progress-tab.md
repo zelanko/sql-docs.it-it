@@ -10,15 +10,15 @@ ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.progress.f1
 ms.assetid: a59cc952-fb73-4bd3-b5d2-f8397701e5d2
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 43169d4868faecc05925f2d1fd827f426b61de3b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: cfab3258ab8908c795e1c7d7e7719f1d0d4138bf
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48083401"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58376479"
 ---
 # <a name="progress-tab"></a>Scheda Stato
   Utilizzare la scheda **Stato** dello strumento Progettazione [!INCLUDE[ssIS](../includes/ssis-md.md)] per visualizzare lo stato dell'esecuzione di un pacchetto [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]. Nella scheda **Stato** vengono visualizzate informazioni quali l'ora di inizio, l'ora di fine e il tempo trascorso relative alla convalida e all'esecuzione del pacchetto e dei rispettivi file eseguibili, nonché informazioni o avvisi relativi al pacchetto, notifiche sullo stato, l'esito (positivo o negativo) del pacchetto e tutti i messaggi di errore generati durante l'esecuzione del pacchetto.  

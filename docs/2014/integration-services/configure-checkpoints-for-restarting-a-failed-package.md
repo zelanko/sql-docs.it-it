@@ -12,15 +12,15 @@ helpviewer_keywords:
 - restarting packages
 - starting packages
 ms.assetid: 9afffa5a-d803-4653-8afc-386453fc163f
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 9204220c7ea32c59f75785ad0b50fa050a47840f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 220440313f0a06efb4ad55156a41fee18c61ab62
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48123401"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58376679"
 ---
 # <a name="configure-checkpoints-for-restarting-a-failed-package"></a>Configurazione dei checkpoint per il riavvio di un pacchetto non riuscito
   Impostando le proprietà relative ai checkpoint, è possibile configurare i pacchetti di [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] in modo che vengano riavviati dal momento dell'errore, anziché essere eseguiti nuovamente dall'inizio.  
@@ -55,6 +55,6 @@ ms.locfileid: "48123401"
     -   Impostare la proprietà FailPackageOnFailure su `True` per ogni attività e contenitore selezionati.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Riavviare i pacchetti tramite checkpoint](packages/restart-packages-by-using-checkpoints.md)  
+ [Riavvio dei pacchetti tramite checkpoint](packages/restart-packages-by-using-checkpoints.md)  
   
   

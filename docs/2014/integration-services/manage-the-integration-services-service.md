@@ -11,15 +11,15 @@ helpviewer_keywords:
 - Integration Services service, configuring
 - services [Integration Services], configuring
 ms.assetid: 45554117-a0df-4830-b41c-5ebb33b764a5
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: d6b8ea946def4811332e6783e881e968c5a91f4a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 6f6251ac85fe76d775fd84b6463d20532615d28c
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48193401"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58375129"
 ---
 # <a name="manage-the-integration-services-service"></a>Gestione del servizio Integration Services
     
@@ -29,13 +29,13 @@ ms.locfileid: "48193401"
  Quando viene installato il componente [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], viene installato anche il servizio [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]. Per impostazione predefinita, il servizio [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] viene avviato e impostato per l'avvio automatico. È tuttavia necessario installare [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] per utilizzare il servizio per la gestione di pacchetti [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] archiviati e in esecuzione.  
   
 > [!NOTE]  
->  Non è possibile connettersi a un'istanza del [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] servizio le [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)] versione di [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)]. Vale a dire, nella **Connetti al Server** nella finestra di dialogo è possibile specificare il nome di un server in cui solo il [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)] versione del [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] servizio è in esecuzione. Tuttavia, è possibile modificare il file di configurazione per il servizio e gestire i pacchetti vengono archiviati in un'istanza di [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)] dal [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)] versione di [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)]. Per altre informazioni, vedere [Configurazione del servizio Integration Services &#40;SSIS&#41;](service/integration-services-service-ssis-service.md).  
+>  Non è possibile connettersi a un'istanza del [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] servizio le [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)] versione di [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)]. Vale a dire, nella **Connetti al Server** nella finestra di dialogo è possibile specificare il nome di un server in cui solo il [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)] versione del [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] servizio è in esecuzione. È tuttavia possibile modificare il file di configurazione per il servizio e gestire i pacchetti archiviati in un'istanza di [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)] dalla versione [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)] di [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)]. Per altre informazioni, vedere [Configurazione del servizio Integration Services &#40;servizio SSIS&#41;](service/integration-services-service-ssis-service.md).  
   
  È possibile installare solo una singola istanza del servizio [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] in un computer. Il servizio non è specifico di una particolare istanza del [!INCLUDE[ssDE](../includes/ssde-md.md)]. Connettersi al servizio utilizzando il nome del computer sul quale è in esecuzione il servizio.  
   
  Per la gestione del servizio [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] è possibile usare uno dei seguenti snap-in di Microsoft Management Console (MMC): Gestione configurazione SQL Server o Servizi di SQL Server. Per gestire pacchetti in [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)], è prima di tutti necessario assicurarsi che il servizio sia avviato.  
   
- Per impostazione predefinita, il servizio [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] è configurato per gestire i pacchetti archiviati nel database msdb dell'istanza del [!INCLUDE[ssDE](../includes/ssde-md.md)] installata in contemporanea con [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]. Se contemporaneamente non viene installata alcuna istanza del [!INCLUDE[ssDE](../includes/ssde-md.md)], il servizio [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] è configurato per gestire i pacchetti contenuti nel database msdb dell'istanza predefinita locale del [!INCLUDE[ssDE](../includes/ssde-md.md)]. Per gestire pacchetti archiviati in un'istanza denominata o un'istanza remota del [!INCLUDE[ssDE](../includes/ssde-md.md)] o in più istanze del [!INCLUDE[ssDE](../includes/ssde-md.md)], è necessario modificare il file di configurazione per il servizio. Per altre informazioni, vedere [Configurazione del servizio Integration Services &#40;SSIS&#41;](service/integration-services-service-ssis-service.md).  
+ Per impostazione predefinita, il servizio [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] è configurato per gestire i pacchetti archiviati nel database msdb dell'istanza del [!INCLUDE[ssDE](../includes/ssde-md.md)] installata in contemporanea con [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]. Se contemporaneamente non viene installata alcuna istanza del [!INCLUDE[ssDE](../includes/ssde-md.md)], il servizio [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] è configurato per gestire i pacchetti contenuti nel database msdb dell'istanza predefinita locale del [!INCLUDE[ssDE](../includes/ssde-md.md)]. Per gestire pacchetti archiviati in un'istanza denominata o un'istanza remota del [!INCLUDE[ssDE](../includes/ssde-md.md)] o in più istanze del [!INCLUDE[ssDE](../includes/ssde-md.md)], è necessario modificare il file di configurazione per il servizio. Per altre informazioni, vedere [Configurazione del servizio Integration Services &#40;servizio SSIS&#41;](service/integration-services-service-ssis-service.md).  
   
  Per impostazione predefinita, il servizio [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] è configurato in modo che i pacchetti in esecuzione vengano arrestati all'arresto del servizio. Il servizio [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)], tuttavia, non attende che i pacchetti vengano arrestati e l'esecuzione di alcuni pacchetti potrebbe continuare dopo l'arresto del servizio [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)].  
   
@@ -55,8 +55,8 @@ ms.locfileid: "48193401"
   
 ## <a name="see-also"></a>Vedere anche  
  [Servizio Integration Services &#40;servizio SSIS&#41;](service/integration-services-service-ssis-service.md)   
- [Configurazione dell'integrazione dei servizi del servizio &#40;servizio SSIS&#41;](configuring-the-integration-services-service-ssis-service.md)   
- [SQL Server importazione / esportazione guidata](import-export-data/import-and-export-data-with-the-sql-server-import-and-export-wizard.md)   
+ [Configurazione del servizio Integration Services &#40;servizio SSIS&#41;](configuring-the-integration-services-service-ssis-service.md)   
+ [Importazione/Esportazione guidata SQL Server](import-export-data/import-and-export-data-with-the-sql-server-import-and-export-wizard.md)   
  [Utilità dtexec](packages/dtexec-utility.md)   
  [Esecuzione di progetti e pacchetti](packages/run-integration-services-ssis-packages.md)  
   

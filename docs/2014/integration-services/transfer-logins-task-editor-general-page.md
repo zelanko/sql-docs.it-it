@@ -12,21 +12,21 @@ f1_keywords:
 helpviewer_keywords:
 - Transfer Logins Task Edito
 ms.assetid: 738989b6-7ec0-432c-9cc1-714486124d20
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 54a2f38cee150a545562ca976ff83a2806b0b60a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 559347a0e092797732a4f3bffe424aac7dfe360f
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48084471"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58377070"
 ---
 # <a name="transfer-logins-task-editor-general-page"></a>Editor attività Trasferisci account di accesso (pagina Generale)
   Utilizzare la pagina **Generale** della finestra di dialogo **Editor attività Trasferisci account di accesso** per assegnare un nome e una descrizione all'attività Trasferisci account di accesso. Per altre informazioni su questa attività, vedere [Attività Trasferisci account di accesso](control-flow/transfer-logins-task.md).  
   
 ## <a name="options"></a>Opzioni  
- **Nome**  
+ **Name**  
  Consente di digitare un nome univoco per l'attività Trasferisci account di accesso. Tale nome viene utilizzato come etichetta nell'icona dell'attività.  
   
 > [!NOTE]  
@@ -36,7 +36,7 @@ ms.locfileid: "48084471"
  Consente di digitare una descrizione dell'attività Trasferisci account di accesso.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Riferimento ai messaggi e agli errori di Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
+ [Guida di riferimento ai messaggi e agli errori di Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [Attività di Integration Services](control-flow/integration-services-tasks.md)   
  [Editor attività Trasferisci account di accesso &#40;pagina Account di accesso&#41;](../../2014/integration-services/transfer-logins-task-editor-logins-page.md)   
  [Pagina Espressioni](expressions/expressions-page.md)  

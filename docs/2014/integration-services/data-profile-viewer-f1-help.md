@@ -13,15 +13,15 @@ helpviewer_keywords:
 - Data Profile Viewer [Integration Services]
 - Data Profiling task [Integration Services], viewer
 ms.assetid: 3469c60a-8f4f-46ba-999a-cb9070197fea
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 8b91e91d726123a057ba6aa8850633d4d3656354
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 4806d8117e2c28a18fe1ba3252334fd5fa495849
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48065141"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58377519"
 ---
 # <a name="data-profile-viewer-f1-help"></a>Guida sensibile al contesto del Visualizzatore profilo dati
   Utilizzare il Visualizzatore profilo dati per visualizzare l'output dell'attività Profiling dati.  
@@ -55,10 +55,10 @@ ms.locfileid: "48065141"
  Visualizza la lunghezza massima dei valori nella colonna.  
   
  **Ignora spazi iniziali**  
- Indica se questo profilo è stato calcolato con un `IgnoreLeadingSpaces` valore True o False. Questa proprietà è stata impostata nella pagina **Richieste profilo** in Editor attività Profiling dati.  
+ Indica se il profilo è stato calcolato con un valore `IgnoreLeadingSpaces` impostato su True o False. Questa proprietà è stata impostata nella pagina **Richieste profilo** in Editor attività Profiling dati.  
   
  **Ignora spazi finali**  
- Indica se questo profilo è stato calcolato con un `IgnoreTrailingSpaces` valore True o False. Questa proprietà è stata impostata nella pagina **Richieste profilo** in Editor attività Profiling dati.  
+ Indica se il profilo è stato calcolato con un valore `IgnoreTrailingSpaces` impostato su True o False. Questa proprietà è stata impostata nella pagina **Richieste profilo** in Editor attività Profiling dati.  
   
  **Conteggio righe**  
  Visualizza il numero di righe della tabella o della vista.  

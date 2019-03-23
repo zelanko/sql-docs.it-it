@@ -13,15 +13,15 @@ helpviewer_keywords:
 - Script task [Integration Services], about Script task
 - Script task [Integration Services]
 ms.assetid: f6cce7df-4bd6-4b75-9f89-6c37b4bb5558
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: fc99090255eb0667c09f180be0b52d570b6cb682
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 7c710065bf0a87b5ec3850010344f2ef5114022e
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53371323"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58376309"
 ---
 # <a name="script-task"></a>Attività Script
   L'attività Script fornisce il codice necessario per eseguire le funzioni non disponibili nelle trasformazioni e nelle attività predefinite di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . Tale attività consente inoltre di combinare più funzioni in un unico script, anziché utilizzare più attività e trasformazioni. L'attività Script può essere utilizzata per operazioni che devono essere eseguite una sola volta in un pacchetto o una sola volta per oggetto enumerato, anziché una volta per ogni riga di dati.  

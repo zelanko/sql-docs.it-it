@@ -11,15 +11,15 @@ helpviewer_keywords:
 - containers [Integration Services], logs
 - logs [Integration Services], containers
 ms.assetid: e5fdbbcb-94ca-4912-aa7c-0d89cebbd308
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: f3c22ca7f44844b434dc74e881830363a79475ee
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 605e9f2635ceef0546f4c8e37f74a04a2d27ece0
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48146391"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58374369"
 ---
 # <a name="configure-logging-by-using-a-saved-configuration-file"></a>Configurazione della registrazione tramite un file di configurazione salvato
   In questo argomento viene descritta la procedura per configurare la registrazione per nuovi contenitori di un pacchetto semplicemente caricando un file di configurazione della registrazione.  
@@ -28,7 +28,7 @@ ms.locfileid: "48146391"
   
 ### <a name="to-configure-logging-for-a-container"></a>Per configurare la registrazione per un contenitore  
   
-1.  In [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)] aprire il progetto di [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] che contiene il pacchetto desiderato.  
+1.  In [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]aprire il progetto di [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] che contiene il pacchetto desiderato.  
   
 2.  Scegliere **Registrazione** dal menu **SSIS**.  
   

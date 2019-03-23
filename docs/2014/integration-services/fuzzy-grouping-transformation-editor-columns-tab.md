@@ -12,15 +12,15 @@ f1_keywords:
 helpviewer_keywords:
 - Fuzzy Grouping Transformation Editor
 ms.assetid: 24f4539f-2a9f-4acd-acc7-06228a07f7df
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 420be3d4dc236804343aa6281107e1a9c579b097
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: dc69475a26bde2045c06429462b5de306c4f932f
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48095211"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58376179"
 ---
 # <a name="fuzzy-grouping-transformation-editor-columns-tab"></a>Editor trasformazione Raggruppamento fuzzy (scheda Colonne)
   Utilizzare la scheda **Colonne** della finestra di dialogo **Editor trasformazione Raggruppamento fuzzy** per specificare le colonne utilizzate per raggruppare le righe contenenti valori duplicati  
@@ -31,7 +31,7 @@ ms.locfileid: "48095211"
  **Colonne di input disponibili**  
  Consente di selezionare le colonne di input utilizzate per raggruppare le righe contenenti valori duplicati.  
   
- **Nome**  
+ **Name**  
  Consente di visualizzare i nomi delle colonne di input disponibili.  
   
  **Pass-through**  
@@ -58,7 +58,7 @@ ms.locfileid: "48095211"
  **Numerali**  
  Consente di specificare l'importanza dei numerali iniziali e finali nel confronto dei dati della colonna. Ad esempio, se i numerali iniziali sono significativi, "2005 Vendite" non verrà raggruppato con "2004 Vendite".  
   
-|valore|Description|  
+|Value|Descrizione|  
 |-----------|-----------------|  
 |**Nessuno**|I numerali iniziali e finali non sono significativi.|  
 |**Iniziali**|Sono significativi solo i numerali iniziali.|  
@@ -69,7 +69,7 @@ ms.locfileid: "48095211"
  Per altre informazioni sulle opzioni per il confronto di stringhe, vedere [Confronto di dati stringa](data-flow/comparing-string-data.md).  
   
 ## <a name="see-also"></a>Vedere anche  
- [Riferimento ai messaggi e agli errori di Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [Identificare righe di dati simili tramite la trasformazione Raggruppamento fuzzy](data-flow/transformations/identify-similar-data-rows-by-using-the-fuzzy-grouping-transformation.md)  
+ [Guida di riferimento ai messaggi e agli errori di Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
+ [Identificazione di righe di dati simili tramite la trasformazione Raggruppamento fuzzy](data-flow/transformations/identify-similar-data-rows-by-using-the-fuzzy-grouping-transformation.md)  
   
   

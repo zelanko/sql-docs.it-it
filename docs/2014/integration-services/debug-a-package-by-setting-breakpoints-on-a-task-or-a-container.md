@@ -12,15 +12,15 @@ helpviewer_keywords:
 - breakpoints [Integration Services]
 - tasks [Integration Services], breakpoints
 ms.assetid: e7fa106a-2221-403a-bb74-efc9f12bb450
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: ff0f1ef3f7baff1c39b3d338f47eb5eddde286e7
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 3c78fb92078c604d881f18ea3472e23619771b49
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48098181"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58374619"
 ---
 # <a name="debug-a-package-by-setting-breakpoints-on-a-task-or-a-container"></a>Debug di un pacchetto impostando punti di interruzione in un'attività o in un contenitore
   In questa procedura viene descritto come impostare punti di interruzione in un pacchetto, in un'attività o in un contenitore Ciclo For, Ciclo Foreach o Sequenza.  
@@ -46,9 +46,9 @@ ms.locfileid: "48098181"
 6.  Per salvare il pacchetto, scegliere **Salva elementi selezionati** dal menu **File** .  
   
 ## <a name="see-also"></a>Vedere anche  
- [Risoluzione dei problemi degli strumenti per lo sviluppo di pacchetti](troubleshooting/troubleshooting-tools-for-package-development.md)   
- [Eseguire il debug di uno Script impostando punti di interruzione in un'attività Script e componente Script](data-flow/transformations/script-component.md)   
- [Codifica e debug dell'attività Script](control-flow/script-task.md)   
+ [Risoluzione dei problemi relativi agli strumenti per lo sviluppo dei pacchetti](troubleshooting/troubleshooting-tools-for-package-development.md)   
+ [Eseguire il debug di uno script impostando punti di interruzione in un'attività e in un componente Script](data-flow/transformations/script-component.md)   
+ [Scrittura di codice e debug dell'attività Script](control-flow/script-task.md)   
  [Codifica e debug del componente script](extending-packages-scripting/data-flow-script-component/coding-and-debugging-the-script-component.md)  
   
   

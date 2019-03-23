@@ -8,15 +8,15 @@ ms.technology:
 - integration-services
 ms.topic: conceptual
 ms.assetid: c9dcca4d-f1a0-45ec-b078-f4d372589baf
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 5cb12795b0aba94da115916b2b09dc0c2675e8ba
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: f5e7248868a368ee0ea956b46b63c9c8d024393b
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48151806"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58379929"
 ---
 # <a name="set-parameter-values-after-the-project-is-deployed"></a>Impostazione dei valori di parametri dopo la distribuzione del progetto
   La Distribuzione guidata consente di impostare i valori dei parametri predefiniti quando si distribuisce il progetto nel catalogo. Quando il progetto si trova nel catalogo, è possibile utilizzare Transact-SQL o Esplora oggetti di SQL Server Management Studio (SSMS) per impostare i valori predefiniti del server.  
@@ -29,7 +29,7 @@ ms.locfileid: "48151806"
   
 3.  Aprire la pagina dei parametri facendo clic su **Parametri** in **Selezione pagina**.  
   
-4.  Selezionare il parametro desiderato nell'elenco **Parametri** . Nota: la colonna **Contenitore** consente di distinguere tra i parametri del progetto e i parametri del pacchetto.  
+4.  Selezionare il parametro desiderato nell'elenco **Parametri** . Nota: Il **contenitore** colonna consente di distinguere i parametri del progetto da parametri di pacchetto.  
   
 5.  Nella colonna **Valore** specificare il valore del parametro predefinito del server desiderato.  
   

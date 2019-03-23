@@ -12,15 +12,15 @@ f1_keywords:
 helpviewer_keywords:
 - Character Map Transformation Editor
 ms.assetid: 3f1dbcf9-9cca-4606-bdcc-7ea6ad48cdf3
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 7e9eefba2b29d9c1127226081debee5b5ecc87a6
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 847b05d76559cec2632b519a3b1cd3e0fbdb23ff
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48111361"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58379373"
 ---
 # <a name="character-map-transformation-editor"></a>Editor trasformazione Mappa caratteri
   Usare la finestra di dialogo **Editor trasformazione Mappa caratteri** per selezionare le funzioni per i valori stringa da applicare ai dati di colonna e per specificare se il mapping è una modifica sul posto o viene aggiunto come nuova colonna.  
@@ -37,7 +37,7 @@ ms.locfileid: "48111361"
  **Destinazione**  
  Consente di specificare se salvare i risultati delle operazioni di stringa sul posto, utilizzando la colonna esistente, o se salvare i dati modificati come nuova colonna.  
   
-|valore|Description|  
+|Value|Descrizione|  
 |-----------|-----------------|  
 |Nuova colonna|Consente di salvare i dati in una nuova colonna. Assegnare il nome alla colonna in **Alias di output**.|  
 |Modifica sul posto|Consente di salvare i dati modificati nella colonna esistente.|  
@@ -45,7 +45,7 @@ ms.locfileid: "48111361"
  **Operazione**  
  Consente di selezionare nell'elenco le funzioni per i valori stringa da applicare ai dati della colonna.  
   
-|valore|Description|  
+|Value|Descrizione|  
 |-----------|-----------------|  
 |Minuscolo|Consente di convertire la stringa in caratteri minuscoli.|  
 |Maiuscolo|Consente di convertire la stringa in caratteri maiuscoli.|  

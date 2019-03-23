@@ -10,15 +10,15 @@ ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.dataflowwindow.f1
 ms.assetid: ffd7ab42-d7ae-4e7c-86a1-a4364a37c91e
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 5d66833004bd5752ca3543f455df57cd6a90c9cd
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: fed53298272e4fddb33175c06a8b4b40452e3365
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48160513"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58377839"
 ---
 # <a name="data-flow-tab"></a>Scheda Flusso di dati
   Utilizzare la scheda **Flusso di dati** di Progettazione [!INCLUDE[ssIS](../includes/ssis-md.md)] per creare flussi di dati in un pacchetto di [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]  
@@ -38,7 +38,7 @@ ms.locfileid: "48160513"
 ## <a name="see-also"></a>Vedere anche  
  [Percorsi in Integration Services](data-flow/integration-services-paths.md)   
  [Attività Flusso di dati](control-flow/data-flow-task.md)   
- [Progettazione SSIS](ssis-designer.md)   
+ [SSIS Designer](ssis-designer.md)   
  [Flusso di dati](data-flow/data-flow.md)  
   
   

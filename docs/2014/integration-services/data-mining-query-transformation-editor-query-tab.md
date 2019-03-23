@@ -12,15 +12,15 @@ f1_keywords:
 helpviewer_keywords:
 - Data Mining Query Transformation Editor
 ms.assetid: f6d8958c-0a70-41ab-b6d9-b42cf3194d37
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 64d3acba185d1def5009f3dfa62b47a89d5a3ffe
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 5d752fbd5ec1cd82ce7d573bb68ddb8acd162adc
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48146881"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58376739"
 ---
 # <a name="data-mining-query-transformation-editor-query-tab"></a>Editor trasformazione Query di data mining (scheda Query)
   La scheda **Query** della finestra di dialogo **Editor trasformazione Query di data mining** consente di creare una query di stima.  
@@ -35,7 +35,7 @@ ms.locfileid: "48146881"
  Fare clic su **Compila nuova query** per creare una query DMX tramite il generatore di query grafico.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Riferimento ai messaggi e agli errori di Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [Editor trasformazione Query di Data Mining &#40;scheda modello di Data Mining&#41;](../../2014/integration-services/data-mining-query-transformation-editor-mining-model-tab.md)  
+ [Guida di riferimento ai messaggi e agli errori di Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
+ [Editor trasformazione Query di data mining &#40;scheda Modello di data mining&#41;](../../2014/integration-services/data-mining-query-transformation-editor-mining-model-tab.md)  
   
   

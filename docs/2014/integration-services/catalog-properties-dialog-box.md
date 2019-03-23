@@ -11,15 +11,15 @@ f1_keywords:
 - sql12.ssis.ssms.iscatalogprop.general.f1
 - sql12.ssis.ssms.iscreatecatalog.f1
 ms.assetid: 3e2fcf11-e010-41c6-bc26-e4b281c0bfbc
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: ca73310cbbb45097eeb5a130364ee1f2580e8059
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 849346f33a3118029a46241644d7f1cce6dc7481
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48156941"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58374469"
 ---
 # <a name="catalog-properties-dialog-box"></a>Finestra di dialogo Proprietà catalogo
   Utilizzare la finestra di dialogo Proprietà catalogo per configurare il catalogo di SSISDB. Le proprietà del catalogo consentono di definire come vengono crittografati i dati sensibili, come vengono mantenuti i dati del controllo delle versioni dei progetti e quando si verifica il timeout delle operazioni di convalida. Il catalogo di SSISDB rappresenta un punto centrale di archiviazione e amministrazione di progetti, pacchetti, parametri e ambienti di [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] .  
@@ -36,7 +36,7 @@ ms.locfileid: "48156941"
   
 ##  <a name="open_dialog"></a> Aprire la finestra di dialogo Proprietà catalogo  
   
-1.  Aprire [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)].  
+1.  Aprire [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)][!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)].  
   
 2.  Connettersi al motore di database di Microsoft SQL Server.  
   
@@ -47,7 +47,7 @@ ms.locfileid: "48156941"
 ### <a name="options"></a>Opzioni  
  Nella tabella seguente sono descritte determinate proprietà nella finestra di dialogo e le proprietà corrispondenti nella vista catalog.catalog_property.  
   
-|Nome proprietà (finestra di dialogo Proprietà catalogo)|Nome proprietà (vista catalog.catalog_property)|Description|  
+|Nome proprietà (finestra di dialogo Proprietà catalogo)|Nome proprietà (vista catalog.catalog_property)|Descrizione|  
 |-----------------------------------------------------|------------------------------------------------------|-----------------|  
 |Nome algoritmo di crittografia|ENCRYPTION_CLEANUP_ENABLED|Consente di specificare il tipo di crittografia utilizzato per crittografare i valori di parametro sensibili nel catalogo. Di seguito sono indicati i valori possibili:<br /><br /> **DES**<br /><br /> **TRIPLE_DES**<br /><br /> **TRIPLE_DES_3KEY**<br /><br /> **DESPX**<br /><br /> **AES_128**<br /><br /> **AES_192**<br /><br /> **AES_256** (impostazione predefinita)|  
 |Timeout di convalida (secondi)|VALIDATION_TIMEOUT|Specificare il numero massimo di secondi durante i quali è possibile eseguire la convalida di un progetto o di un pacchetto prima dell'arresto. Il valore predefinito è 300 secondi.<br /><br /> L'esecuzione della convalida è un'operazione asincrona. Più grande è il progetto o il pacchetto, più tempo richiederà la convalida.<br /><br /> Per informazioni sulla convalida di progetti e pacchetti, vedere [Tipi di dati nelle espressioni di Integration Services](expressions/integration-services-data-types-in-expressions.md).|  

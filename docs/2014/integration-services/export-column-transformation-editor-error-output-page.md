@@ -12,15 +12,15 @@ f1_keywords:
 helpviewer_keywords:
 - Export Column Transformation Editor
 ms.assetid: 260be463-01a9-460c-9c98-e5265cb2b1e9
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 3e02452c5d0b5692040fd6c076c50704b348c769
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 292d872d294f81c6dac19e64af9d6a08710230b2
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48119354"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58374779"
 ---
 # <a name="export-column-transformation-editor-error-output-page"></a>Editor trasformazione Esportazione colonna (pagina Output degli errori)
   Utilizzare la pagina **Output degli errori** della finestra di dialogo **Editor trasformazione Esportazione colonna** per specificare le opzioni di gestione degli errori.  
@@ -50,7 +50,7 @@ ms.locfileid: "48119354"
  Consente di applicare l'opzione di gestione degli errori alle celle selezionate.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Riferimento ai messaggi e agli errori di Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [Editor trasformazione Esportazione colonna &#40;(pagina colonne)&#41;](../../2014/integration-services/export-column-transformation-editor-columns-page.md)  
+ [Guida di riferimento ai messaggi e agli errori di Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
+ [Editor trasformazione Esportazione colonna &#40;pagina Colonne&#41;](../../2014/integration-services/export-column-transformation-editor-columns-page.md)  
   
   
