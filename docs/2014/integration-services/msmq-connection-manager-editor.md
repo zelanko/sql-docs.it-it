@@ -12,15 +12,15 @@ f1_keywords:
 helpviewer_keywords:
 - MSMQ Connection Manager Editor
 ms.assetid: ef842cb4-82da-4550-85fe-9bedbc1e77c7
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 42fe0f316914a83ab87deed68ff7095b66b80402
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: d532433c36f3b4c18b39d16dcbbe81a3d969acfc
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48226551"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58393069"
 ---
 # <a name="msmq-connection-manager-editor"></a>Editor gestione connessione MSMQ
   Usare la finestra di dialogo **Gestione connessione MSMQ** per specificare il percorso di una coda di messaggi di Microsoft Message Queuing (noto anche come MSMQ).  
@@ -31,7 +31,7 @@ ms.locfileid: "48226551"
 >  Gestione connessione MSMQ supporta le code pubbliche e private locali, nonché le code pubbliche remote. Non supporta le code private remote. Per una soluzione alternativa che utilizza l'attività Script, vedere [l'invio a una coda di messaggi privata remota tramite l'attività Script](control-flow/script-task.md).  
   
 ## <a name="options"></a>Opzioni  
- **Nome**  
+ **Name**  
  Consente di specificare un nome univoco per la gestione della connessione MSMQ nel flusso di lavoro. Il nome specificato verrà visualizzato in Progettazione [!INCLUDE[ssIS](../includes/ssis-md.md)] .  
   
  **Descrizione**  

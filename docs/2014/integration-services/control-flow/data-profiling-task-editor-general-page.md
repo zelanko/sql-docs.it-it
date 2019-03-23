@@ -11,15 +11,15 @@ f1_keywords:
 helpviewer_keywords:
 - Data Profiling Task Editor
 ms.assetid: eec15906-d757-4079-b2f6-aca4e52b3b4c
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 7bef22daeb42b0c08e7668dec533e663057f1a8b
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 8462f85dc6c804020f12b9bc989d683c5a4ad0ba
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52805033"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58385353"
 ---
 # <a name="data-profiling-task-editor-general-page"></a>Editor attività Profiling dati (pagina Generale)
   Usare la pagina **Generale** di **Editor attività Profiling dati** per configurare le opzioni seguenti:  

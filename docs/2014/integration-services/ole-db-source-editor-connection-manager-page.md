@@ -12,15 +12,15 @@ f1_keywords:
 helpviewer_keywords:
 - OLE DB Source Editor
 ms.assetid: 53699902-8699-4547-b56b-a5b2079e98b6
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: c25e36d44b4b088bb2874039d4c292d76759da73
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 65d762ffb798d6ec3826a41ff06c73c2011543ab
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48172981"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58384488"
 ---
 # <a name="ole-db-source-editor-connection-manager-page"></a>Editor origine OLE DB (pagina Gestione connessione)
   Usare la pagina **Gestione connessione** della finestra di dialogo **Editor origine OLE DB** per selezionare la gestione connessione OLE DB per l'origine. Tramite questa pagina è inoltre possibile selezionare una tabella o una vista del database.  
@@ -53,10 +53,10 @@ ms.locfileid: "48172981"
  **Modalità di accesso ai dati**  
  Consente di specificare il metodo per la selezione dei dati dall'origine.  
   
-|Opzione|Description|  
+|Opzione|Descrizione|  
 |------------|-----------------|  
 |Tabella o vista|Consente di recuperare dati da una tabella o da una vista nell'origine dei dati OLE DB.|  
-|Variabile nome vista o nome tabella|Consente di specificare il nome della vista o della tabella in una variabile.<br /><br /> **Informazioni correlate:** [Utilizzo di variabili nei pacchetti](../../2014/integration-services/use-variables-in-packages.md)|  
+|Variabile nome vista o nome tabella|Consente di specificare il nome della vista o della tabella in una variabile.<br /><br /> **Informazioni correlate:** [Uso di variabili nei pacchetti](../../2014/integration-services/use-variables-in-packages.md)|  
 |Comando SQL|Consente di recuperare dati dall'origine dei dati OLE DB utilizzando una query SQL.|  
 |Comando SQL da variabile|Consente di specificare il testo della query SQL in una variabile.|  
   
@@ -97,10 +97,10 @@ ms.locfileid: "48172981"
  Consente di selezionare la variabile contenente il testo della query SQL.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Riferimento ai messaggi e agli errori di Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [Editor origine OLE DB &#40;(pagina colonne)&#41;](../../2014/integration-services/ole-db-source-editor-columns-page.md)   
- [Editor origine OLE DB &#40;pagina dell'Output degli errori&#41;](../../2014/integration-services/ole-db-source-editor-error-output-page.md)   
- [Estrarre dati tramite l'origine OLE DB](data-flow/extract-data-by-using-the-ole-db-source.md)   
+ [Guida di riferimento ai messaggi e agli errori di Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
+ [Editor origine OLE DB &#40;pagina Colonne&#41;](../../2014/integration-services/ole-db-source-editor-columns-page.md)   
+ [Editor origine OLE DB &#40;pagina Output degli errori&#41;](../../2014/integration-services/ole-db-source-editor-error-output-page.md)   
+ [Estrazione dei dati tramite l'origine OLE DB](data-flow/extract-data-by-using-the-ole-db-source.md)   
  [Gestione connessione OLE DB](connection-manager/ole-db-connection-manager.md)  
   
   

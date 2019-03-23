@@ -15,15 +15,15 @@ helpviewer_keywords:
 - validation [Integration Services], design-time tasks
 - SSIS custom tasks, validating
 ms.assetid: dc224f4f-b339-4eb6-a008-1b4fe0ea4fd2
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 968e7eb3f614fa284222a67715e6415220f002e5
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: ee6c3325364e6b695b288e1a5b43e7d2470f6e34
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53350357"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58386669"
 ---
 # <a name="coding-a-custom-task"></a>Scrittura del codice di un'attività personalizzata
   Dopo avere creato una classe che eredita dalla classe di base <xref:Microsoft.SqlServer.Dts.Runtime.Task> e avere applicato l'attributo <xref:Microsoft.SqlServer.Dts.Runtime.DtsTaskAttribute> alla classe, è necessario eseguire l'override dell'implementazione delle proprietà e dei metodi della classe di base per fornire la funzionalità personalizzata.  

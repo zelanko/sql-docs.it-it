@@ -12,15 +12,15 @@ f1_keywords:
 helpviewer_keywords:
 - Configure Data Viewer dialog box
 ms.assetid: ec4261d1-2799-4af8-9706-06b8c62d2fdf
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 850b24bf5b6be3fcac43549cd9f85f71a685f733
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 293624979236d8507d53d86668554041eed76c37
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48207957"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58380249"
 ---
 # <a name="configure-data-viewer-grid-tab"></a>Configura visualizzatore dati (scheda Griglia)
   Utilizzare la scheda **Griglia** della finestra di dialogo **Configura visualizzatore dati** per indicare le colonne da visualizzare. In un grafico griglia vengono visualizzati record di dati sotto forma di righe in una griglia. Il grafico riflette il contenuto di un solo buffer.  

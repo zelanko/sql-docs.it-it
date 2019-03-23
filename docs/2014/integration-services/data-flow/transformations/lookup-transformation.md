@@ -16,15 +16,15 @@ helpviewer_keywords:
 - lookups [Integration Services]
 - exact matches [Integration Services]
 ms.assetid: de1cc8de-e7af-4727-b5a5-a1f0a739aa09
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 66c285e24c2a981464c93001c1df41f164e60b1e
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 47b04c547700eda94d4c4f19b4a1211f8cdbf694
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53353800"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58386549"
 ---
 # <a name="lookup-transformation"></a>Trasformazione Ricerca
   La trasformazione Ricerca consente di eseguire ricerche unendo in join i dati contenuti nelle colonne di input con le colonne in un set di dati di riferimento. È possibile utilizzare la ricerca per accedere a informazioni aggiuntive in una tabella correlata basata sui valori presenti nelle colonne comuni.  
@@ -129,7 +129,7 @@ ms.locfileid: "53353800"
   
 ## <a name="related-content"></a>Contenuto correlato  
   
--   Video, [come: Implementare una trasformazione ricerca in modalità Full Cache](https://go.microsoft.com/fwlink/?LinkId=131031), sul sito msdn.microsoft.com  
+-   Video [Procedura: Implementare una trasformazione ricerca in modalità Full Cache](https://go.microsoft.com/fwlink/?LinkId=131031), sul sito msdn.microsoft.com  
   
 -   Intervento nel blog relativo alle [procedure consigliate per l'utilizzo della trasformazione Ricerca nelle modalità cache](https://go.microsoft.com/fwlink/?LinkId=146623)sul sito Web all'indirizzo blogs.msdn.com  
   

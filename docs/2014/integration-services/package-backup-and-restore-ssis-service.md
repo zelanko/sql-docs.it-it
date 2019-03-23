@@ -15,22 +15,22 @@ helpviewer_keywords:
 - restoring packages [Integration Services]
 - Integration Services packages, backup and restore
 ms.assetid: c67d3b83-a6c8-40de-920f-9236de4ac87f
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 586ab104ed802c0d78465d600fccd5f65e213b39
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: ad08680bad76fdf35c728974c4d3688a588a9338
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48139904"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58386768"
 ---
 # <a name="package-backup-and-restore-ssis-service"></a>Backup e ripristino di pacchetti (servizio SSIS)
     
 > [!IMPORTANT]  
 >  In questo argomento viene illustrato il servizio [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] , un servizio Windows per la gestione dei pacchetti di [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] . [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] supporta il servizio per la compatibilità con le versioni precedenti di [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]. A partire da [!INCLUDE[ssSQL11](../includes/sssql11-md.md)], è possibile gestire oggetti come i pacchetti del server Integration Services.  
   
- [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] i pacchetti possono essere salvati nel file system o msdb, un [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] database di sistema. È possibile eseguire il backup e il ripristino dei pacchetti salvati in msdb usando le funzionalità di backup e ripristino di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] .  
+ [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] I pacchetti possono essere salvati nel file system o in msdb, un database di sistema di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] . È possibile eseguire il backup e il ripristino dei pacchetti salvati in msdb usando le funzionalità di backup e ripristino di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] .  
   
  Per altre informazioni sul backup e sul ripristino del database msdb, fare clic su uno degli argomenti seguenti:  
   
@@ -38,7 +38,7 @@ ms.locfileid: "48139904"
   
 -   [Backup e ripristino di database di sistema &#40;SQL Server&#41;](../relational-databases/backup-restore/back-up-and-restore-of-system-databases-sql-server.md)  
   
- [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] include il **dtutil** utilità (DTUtil), che è possibile usare per gestire i pacchetti della riga di comando. Per altre informazioni, vedere [dtutil Utility](dtutil-utility.md).  
+ [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] include l'utilità del prompt dei comandi **dtutil** (dtutil.exec), che può essere usata per gestire i pacchetti. Per altre informazioni, vedere [dtutil Utility](dtutil-utility.md).  
   
 ## <a name="configuration-files"></a>File di configurazione  
  I file di configurazione dei pacchetti vengono archiviati nel file system. Questi file non vengono tuttavia inclusi nel backup del database msdb. Di conseguenza, è necessario assicurarsi che il backup di questi file venga eseguito regolarmente nell'ambito del piano per la sicurezza dei pacchetti salvati in msdb. Per includere configurazioni nel backup del database msdb, è consigliabile usare il tipo di configurazione di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] invece delle configurazioni basate su file.  

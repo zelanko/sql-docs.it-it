@@ -8,15 +8,15 @@ ms.technology:
 - integration-services
 ms.topic: conceptual
 ms.assetid: bf806aef-8556-48ab-aed5-e95de9a2204e
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 2c2873a6864e3ac5d55f180bfc2555d8cb471620
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: c5c4226b9ee4f45d7e732044379962489ecacd0f
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53354487"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58393629"
 ---
 # <a name="backup-restore-and-move-the-ssis-catalog"></a>Backup, ripristino e spostamento del catalogo SSISDB
   [!INCLUDE[ssISCurrent](../includes/ssiscurrent-md.md)] è incluso il database SSISDB. È possibile eseguire una query sulle viste nel database SSISDB per verificare oggetti, impostazioni e dati operativi archiviati nel catalogo **SSISDB** . In questo argomento vengono fornite istruzioni per l'esecuzione del backup e del ripristino del database.  
@@ -39,7 +39,7 @@ ms.locfileid: "53354487"
   
     ```  
   
-3.  Eseguire il backup del database SSISDB tramite la finestra di dialogo **Backup database** in [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]. Per altre informazioni, vedere [come: Eseguire il backup di un Database (SQL Server Management Studio)](https://go.microsoft.com/fwlink/?LinkId=231812).  
+3.  Eseguire il backup del database SSISDB tramite la finestra di dialogo **Backup database** in [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]. Per altre informazioni, vedere [Procedura: Eseguire il backup del database (SQL Server Management Studio)](https://go.microsoft.com/fwlink/?LinkId=231812).  
   
 4.  Generare lo script CREATE LOGIN per ##MS_SSISServerCleanupJobLogin##, effettuando le operazioni riportate di seguito. Per altre informazioni, vedere [CREATE LOGIN &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-login-transact-sql).  
   

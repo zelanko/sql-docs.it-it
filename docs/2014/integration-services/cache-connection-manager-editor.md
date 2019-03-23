@@ -10,15 +10,15 @@ ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.cacheconnection.f1
 ms.assetid: 0d8f9324-0c35-4eea-b06d-da3cc2426d2c
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 0b9ede014f68d06f84132664ee3f4e1413f715e0
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: af7696c1d5194af721b6ff803736193db0285b8b
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48130831"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58385049"
 ---
 # <a name="cache-connection-manager-editor"></a>Editor gestione connessione cache
   La Gestione connessione cache consente di leggere un set di dati di riferimento dalla trasformazione cache o da un file di cache (.caw) e può salvare i dati in un file di cache. I dati vengono sempre archiviati in memoria.  

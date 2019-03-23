@@ -12,15 +12,15 @@ f1_keywords:
 helpviewer_keywords:
 - Excel Connection Manager Editor
 ms.assetid: 7ff097e4-cafb-4885-a898-05b2a46628c1
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 403fe52b67756a32a4229df83fdf9fa56a0bb8a3
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 22ea5f2f087949718e5dbfc8702756e008ee721e
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48069491"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58392919"
 ---
 # <a name="excel-connection-manager-editor"></a>Editor gestione connessione Excel
   Usare la finestra di dialogo **Editor gestione connessione Excel[!INCLUDE[ofprexcel](../includes/ofprexcel-md.md)]per aggiungere una connessione a un file di cartella di lavoro di**  nuovo o esistente.  
@@ -43,10 +43,10 @@ ms.locfileid: "48069491"
  **Versione di Excel**  
  Consente di specificare la versione di Microsoft Excel utilizzata per creare il file.  
   
-|Opzione|Description|  
+|Opzione|Descrizione|  
 |------------|-----------------|  
 |Microsoft Excel 97-2005|Il file è stato creato utilizzando Microsoft Excel 97 o versione successiva.|  
-|3.0 di Excel|File è stato creato tramite Excel 3.0.|  
+|Excel 3.0|File è stato creato tramite Excel 3.0.|  
 |Excel 4.0|Il file è stato creato utilizzando Microsoft Excel 4.0.|  
 |Excel 5.0|Il file è stato creato utilizzando Microsoft Excel 95 (versione 7.0).|  
   
@@ -54,7 +54,7 @@ ms.locfileid: "48069491"
  Consente di specificare se la prima riga di dati del foglio di lavoro selezionato contiene nomi di colonna. Il valore predefinito di questa opzione è **True**.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Riferimento ai messaggi e agli errori di Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
+ [Guida di riferimento ai messaggi e agli errori di Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [Esecuzione di un ciclo su file e tabelle di Excel usando un contenitore Ciclo Foreach](control-flow/foreach-loop-container.md)  
   
   

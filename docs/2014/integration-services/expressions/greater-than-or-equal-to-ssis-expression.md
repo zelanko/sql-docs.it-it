@@ -10,15 +10,15 @@ helpviewer_keywords:
 - <= (less than or equal to operator)
 - greater than or equal to (>=)
 ms.assetid: 52ad504d-2f54-44de-b5e2-620577c0e289
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 0f4638de533ed395b55af25e2647a5bbaec92966
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: e4db32776e59c6100594933fd8706129e8652790
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52823655"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58386429"
 ---
 # <a name="gt-greater-than-or-equal-to-ssis-expression"></a>&gt;= (maggiore o uguale a) (espressione SSIS)
   Viene eseguito un confronto per determinare se la prima espressione è maggiore o uguale alla seconda. L'analizzatore di espressioni converte automaticamente numerosi tipi di dati prima di eseguire il confronto.  
@@ -58,7 +58,7 @@ expression1 >= expression2
     > [!NOTE]  
     >  Per i confronti di stringa viene applicata la distinzione tra maiuscole e minuscole, tra caratteri accentati e non accentati, la distinzione Kana e di larghezza.  
   
--   **Data, ora o data/ora** entrambe *expression1* e *expression2* deve restituire uno dei tipi di dati seguenti: DT_DBDATE, DT_DATE, DT_DBTIME, DT_DBTIME2, DT_DBTIMESTAMP, DT_DBTIMESTAMP2, DT_DBTIMESTAPMOFFSET o DT_FILETIME.  
+-   **Data, ora o data/ora** entrambe *expression1* e *expression2* deve restituire uno dei tipi di dati seguenti: DT_DBDATE, DT_DATE, DT_DBTIME, DT_DBTIME2, DT_DBTIMESTAMP, DT_DBTIMESTAMP2, DT_DBTIMESTAPMOFFSET, or DT_FILETIME.  
   
     > [!NOTE]  
     >  Il sistema non supporta i confronti tra un'espressione che restituisce un tipo di dati di ora e un'espressione che restituisce una data o un tipo di dati di data/ora. Viene generato un errore.  

@@ -11,22 +11,22 @@ helpviewer_keywords:
 - modifying variables
 - variables [Integration Services], properties
 ms.assetid: f98ddbec-f668-4dba-a768-44ac3ae0536f
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 9cd85ac29d34f40e9473f28444c8b727543d6ecf
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 4aaac5f66e8c01364419d8d2d9d5e853bf929ef7
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48075595"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58385529"
 ---
 # <a name="set-the-properties-of-a-user-defined-variable"></a>Impostazione delle proprietà di una variabile definita dall'utente
   Per impostare le proprietà di una variabile definita dall'utente in [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] è possibile utilizzare una delle funzionalità seguenti:  
   
 -   Finestra Variabili.  
   
--   Finestra Proprietà. La finestra **Proprietà** elenca le proprietà per la configurazione delle variabili non disponibili nella finestra **Variabili** : Description, EvaluateAsExpression, Expression, ReadOnly, ValueType e IncludeInDebugDump.  
+-   Finestra Proprietà. Il **delle proprietà** finestra sono elencate le proprietà per la configurazione delle variabili che non sono disponibili nel **variabili** finestra: Description, EvaluateAsExpression, Expression, ReadOnly, ValueType e IncludeInDebugDump.  
   
 > [!NOTE]  
 >  [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] include anche un set di variabili di sistema le cui proprietà non possono essere aggiornate, ad eccezione della proprietà RaiseChangedEvent.  
@@ -53,13 +53,13 @@ ms.locfileid: "48075595"
   
  **Impostazione delle proprietà di Name e Namespace**  
   
- I valori del `Name` e `Namespace` proprietà devono iniziare con una lettera di carattere alfabetico come definito dallo Standard Unicode 2.0, o un carattere di sottolineatura (_). I caratteri successivi possono includere lettere o numeri, come definito dallo standard Unicode 2.0, o il carattere di sottolineatura (\_).  
+ I valori delle proprietà `Name` e `Namespace` devono iniziare con una delle lettere dell'alfabeto definite dallo standard Unicode 2.0 oppure con un carattere di sottolineatura (_). I caratteri successivi possono includere lettere o numeri, come definito dallo standard Unicode 2.0, o il carattere di sottolineatura (\_).  
   
 ## <a name="using-the-variables-window-to-set-properties"></a>Utilizzo della finestra Variabili per impostare le proprietà  
   
 #### <a name="to-set-the-properties-of-a-variable-by-using-the-variables-window"></a>Per impostare le proprietà di una variabile utilizzando la finestra Variabili  
   
-1.  In [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]aprire il progetto di [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] che contiene il pacchetto desiderato.  
+1.  In [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]aprire il progetto di [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] contenente il pacchetto desiderato.  
   
 2.  In Esplora soluzioni fare clic con il pulsante destro del mouse sul pacchetto in modo da aprirlo.  
   
@@ -93,12 +93,12 @@ ms.locfileid: "48075595"
   
 7.  Nella finestra **Proprietà** aggiornare le proprietà delle variabili in lettura/scrittura. Alcune proprietà sono di sola lettura per le variabili definite dall'utente.  
   
-     Per altre informazioni sulle proprietà, vedere [Variabili di Integration Services &#40;SSIS&#41;](integration-services-ssis-variables.md).  
+     Per altre informazioni sulle proprietà, vedere [Integration Services &#40;SSIS&#41; Variables](integration-services-ssis-variables.md).  
   
 8.  Per salvare il pacchetto aggiornato, dal menu **File** scegliere **Salva elementi selezionati**.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Integration Services &#40;SSIS&#41; le variabili](integration-services-ssis-variables.md)   
+ [Variabili di Integration Services &#40;SSIS&#41;](integration-services-ssis-variables.md)   
  [Utilizzo di variabili nei pacchetti](../../2014/integration-services/use-variables-in-packages.md)   
  [Aggiungere, eliminare o modificare l'ambito di una variabile definita dall'utente in un pacchetto](../../2014/integration-services/add-delete-change-scope-of-user-defined-variable-in-a-package.md)  
   

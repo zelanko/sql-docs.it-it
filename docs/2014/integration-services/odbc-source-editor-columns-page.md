@@ -10,15 +10,15 @@ ms.topic: conceptual
 f1_keywords:
 - sql12.ssis.designer.odbcsource.columns.f1
 ms.assetid: 565984eb-8318-4be7-bebc-262209cf5065
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 51897dbc1b7cde8707e28678d8de7f3cd7913e81
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 2e7a9fb71dca2e99bebe3f23486ff6331bd843de
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48144663"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58387709"
 ---
 # <a name="odbc-source-editor-columns-page"></a>Editor origine ODBC (pagina Colonne)
   Usare la pagina **Colonne** della finestra di dialogo **Editor origine ODBC** per eseguire il mapping tra una colonna di output e ogni colonna esterna (di origine).  
@@ -49,6 +49,6 @@ ms.locfileid: "48144663"
   
 ## <a name="see-also"></a>Vedere anche  
  [Editor origine ODBC &#40;pagina Gestione connessione&#41;](../../2014/integration-services/odbc-source-editor-connection-manager-page.md)   
- [Editor origine ODBC &#40;pagina dell'Output degli errori&#41;](../../2014/integration-services/odbc-source-editor-error-output-page.md)  
+ [Editor origine ODBC &#40;pagina Output degli errori&#41;](../../2014/integration-services/odbc-source-editor-error-output-page.md)  
   
   

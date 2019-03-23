@@ -10,15 +10,15 @@ ms.topic: conceptual
 helpviewer_keywords:
 - logs [Integration Services], enabling
 ms.assetid: b69a8593-5bb0-4f04-87d2-f8e7bd7eb4fc
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 2a93245b97bf7c6c382f533c6d6e317b399f9e54
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 6f878b194389f81980c924896ae4c2b97da81761
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48172501"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58387019"
 ---
 # <a name="enable-package-logging-in-sql-server-data-tools"></a>Abilitare la registrazione di pacchetti in SQL Server Data Tools
   In questo argomento viene descritta la procedura per aggiungere log in un pacchetto, configurare la registrazione a livello di pacchetto e salvare la configurazione di registrazione in un file XML. È possibile aggiungere log solo a livello di pacchetto. Il pacchetto, tuttavia, non deve eseguire necessariamente la registrazione per consentire la registrazione nei contenitori del pacchetto.  
@@ -30,7 +30,7 @@ ms.locfileid: "48172501"
   
 ### <a name="to-enable-logging-in-a-package"></a>Per abilitare la registrazione in un pacchetto  
   
-1.  In [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)] aprire il progetto di [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] che contiene il pacchetto desiderato.  
+1.  In [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]aprire il progetto di [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] che contiene il pacchetto desiderato.  
   
 2.  Scegliere **Registrazione** dal menu **SSIS**.  
   
@@ -44,7 +44,7 @@ ms.locfileid: "48172501"
   
     -   Per [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]utilizzare una gestione connessione OLE DB. Per altre informazioni, vedere [Gestione connessione OLE DB](connection-manager/ole-db-connection-manager.md).  
   
-    -   Per il Registro eventi di Windows, non eseguire alcuna operazione. [!INCLUDE[ssIS](../includes/ssis-md.md)] Crea automaticamente il registro.  
+    -   Per il Registro eventi di Windows, non eseguire alcuna operazione. [!INCLUDE[ssIS](../includes/ssis-md.md)] crea automaticamente il registro.  
   
     -   Per file XML utilizzare una gestione connessione file.  
   
@@ -69,7 +69,7 @@ ms.locfileid: "48172501"
 11. Per salvare il pacchetto aggiornato, scegliere **Salva elementi selezionati** dal menu **File** .  
   
 ## <a name="see-also"></a>Vedere anche  
- [Integration Services &#40;SSIS&#41; la registrazione](performance/integration-services-ssis-logging.md)   
+ [Registrazione di Integration Services &#40;SSIS&#41;](performance/integration-services-ssis-logging.md)   
  [Registrazione di Integration Services &#40;SSIS&#41;](performance/integration-services-ssis-logging.md)  
   
   

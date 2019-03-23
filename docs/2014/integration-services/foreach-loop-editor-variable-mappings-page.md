@@ -10,15 +10,15 @@ ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.foreachloopcontainer.mapping.f1
 ms.assetid: aa847b87-f391-48a5-9849-eeda2d6b00b9
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 3fc54d5b287cd71ba303d34693e815c07b9cc3b4
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: f2d95909e76c6b5c3665926783fb42ff247d1ba9
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48068077"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58386699"
 ---
 # <a name="foreach-loop-editor-variable-mappings-page"></a>Editor ciclo Foreach (pagina Mapping variabili)
   Utilizzare la pagina **Mapping variabili** della finestra di dialogo **Editor ciclo Foreach** per eseguire il mapping delle variabili al valore della raccolta. Il valore della variabile viene aggiornato con i valori della raccolta in ogni iterazione del ciclo.  
@@ -34,7 +34,7 @@ ms.locfileid: "48068077"
 > [!NOTE]  
 >  Dopo il mapping di una variabile, viene aggiunta automaticamente una nuova riga all'elenco **Variabile**.  
   
- **Argomenti correlati**: [Variabili di Integration Services &#40;SSIS&#41;](integration-services-ssis-variables.md), [Aggiungi variabile](../../2014/integration-services/add-variable.md)  
+ **Argomenti correlati**: [Integration Services &#40;SSIS&#41; le variabili](integration-services-ssis-variables.md), [Aggiungi variabile](../../2014/integration-services/add-variable.md)  
   
  **Index**  
  Se si utilizza l'enumeratore Foreach Item, specificare l'indice della colonna nel valore della raccolta di cui eseguire il mapping alla variabile. Per altri tipi di enumeratore, l'indice è di sola lettura.  
@@ -42,16 +42,16 @@ ms.locfileid: "48068077"
 > [!NOTE]  
 >  L'indice è in base 0.  
   
- **Argomenti correlati**: [ciclo in tabelle con un contenitore ciclo Foreach e i file di Excel](control-flow/loop-through-excel-files-and-tables-by-using-a-foreach-loop-container.md)  
+ **Argomenti correlati**: [Esecuzione di un ciclo su file e tabelle di Excel usando un contenitore Ciclo Foreach](control-flow/loop-through-excel-files-and-tables-by-using-a-foreach-loop-container.md)  
   
  **Elimina**  
  Selezionare una variabile e quindi fare clic su **Elimina**.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Riferimento ai messaggi e agli errori di Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
+ [Guida di riferimento ai messaggi e agli errori di Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [Editor ciclo foreach &#40;pagina Generale&#41;](general-page-of-integration-services-designers-options.md)   
  [Editor ciclo foreach &#40;pagina della raccolta&#41;](../../2014/integration-services/foreach-loop-editor-collection-page.md)   
- [Pagina espressioni](expressions/expressions-page.md)   
+ [Pagina Espressioni](expressions/expressions-page.md)   
  [Contenitore Ciclo For](control-flow/for-loop-container.md)  
   
   

@@ -12,15 +12,15 @@ f1_keywords:
 helpviewer_keywords:
 - Excel Destination Editor
 ms.assetid: 72ae01cc-1774-4a36-9674-a0f2b2bf8c42
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 7807d702a09fabce5c1aba6c6782e7379d540b8c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 32b587a81fbafd583e82a8f4af98f4b58077807d
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48125031"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58387369"
 ---
 # <a name="excel-destination-editor-error-output-page"></a>Editor destinazione Excel (pagina Output degli errori)
   Usare la pagina **Avanzate** della finestra di dialogo **Editor destinazione Excel** per specificare le opzioni per la gestione degli errori.  
@@ -52,9 +52,9 @@ ms.locfileid: "48125031"
  Consente di applicare l'opzione di gestione degli errori alle celle selezionate.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Riferimento ai messaggi e agli errori di Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
+ [Guida di riferimento ai messaggi e agli errori di Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [Editor destinazione Excel &#40;pagina Gestione connessione&#41;](../../2014/integration-services/excel-destination-editor-connection-manager-page.md)   
- [Editor destinazione Excel &#40;pagina mapping&#41;](../../2014/integration-services/excel-destination-editor-mappings-page.md)   
- [Esecuzione di un ciclo su file e tabelle di Excel usando un contenitore Ciclo Foreach](control-flow/foreach-loop-container.md)  
+ [Editor destinazione Excel &#40;pagina Mapping&#41;](../../2014/integration-services/excel-destination-editor-mappings-page.md)   
+ [Esecuzione di un ciclo su file e tabelle di Excel utilizzando un contenitore Ciclo Foreach](control-flow/foreach-loop-container.md)  
   
   
