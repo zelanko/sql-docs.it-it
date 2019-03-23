@@ -13,15 +13,15 @@ helpviewer_keywords:
 - Integration Services service, remote instance
 - service [Integration Services], connecting
 ms.assetid: 9487aff1-44d8-42c1-8176-bb9891d4632d
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: eff4eb190c8225cf1d45f184515ccc5244a3a7ff
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 2d2e64744ea39296d16fbe88ad20993e8909988d
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48222771"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58375279"
 ---
 # <a name="connect-to-a-remote-integration-services-server-ssis-service"></a>Eseguire una connessione a un server Integration Services remoto (servizio SSIS)
     
@@ -31,7 +31,7 @@ ms.locfileid: "48222771"
  Per la connessione a un'istanza di [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] in un server remoto da [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] o da un'altra applicazione di gestione, è necessario un set specifico di diritti nel server per gli utenti dell'applicazione.  
   
 > [!IMPORTANT] 
-> Per gestire i pacchetti archiviati in un server remoto, non è necessario connettersi all'istanza del servizio [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] sul server remoto in questione. Modificare, invece, il file di configurazione per il servizio [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] in modo che in [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] vengano visualizzati i pacchetti archiviati nel server remoto. Per altre informazioni, vedere [Configurazione del servizio Integration Services &#40;SSIS&#41;](service/integration-services-service-ssis-service.md).  
+> Per gestire i pacchetti archiviati in un server remoto, non è necessario connettersi all'istanza del servizio [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] sul server remoto in questione. Modificare, invece, il file di configurazione per il servizio [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] in modo che in [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] vengano visualizzati i pacchetti archiviati nel server remoto. Per altre informazioni, vedere [Configurazione del servizio Integration Services &#40;servizio SSIS&#41;](service/integration-services-service-ssis-service.md).  
   
 ## <a name="connecting-to-integration-services-on-a-remote-server"></a>Connessione a Integration Services in un server remoto  
   

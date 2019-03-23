@@ -12,15 +12,15 @@ f1_keywords:
 helpviewer_keywords:
 - Data Conversion Transformation Editor
 ms.assetid: 7b4e4873-e8fe-4549-a965-65bebdb270bc
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 73360a385cfe4c9f44dd2be5296c7d2144b3439d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: ad50b2ecf95daa7abb4c9aaef420b4dbfd14c8e7
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48129801"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58376140"
 ---
 # <a name="data-conversion-transformation-editor"></a>Editor trasformazione Conversione dati
   Usare la finestra di dialogo **Editor trasformazione Conversione dati** per selezionare le colonne da convertire e i tipi di dati in cui convertire la colonna e impostare gli attributi di conversione.  
@@ -38,12 +38,12 @@ ms.locfileid: "48129801"
  Consente di selezionare le colonne da convertire nell'elenco delle colonne di input disponibili. Le selezioni effettuate vengono riflesse nelle selezioni delle caselle di controllo descritte in precedenza.  
   
  **Alias di output**  
- Consente di digitare un alias per ogni nuova colonna. Il valore predefinito è `Copy of` seguito dal nome della colonna di input; tuttavia, è possibile scegliere qualsiasi nome descrittivo univoco.  
+ Consente di digitare un alias per ogni nuova colonna. L'impostazione predefinita è `Copy of` seguita dal nome della colonna di input. È comunque possibile scegliere qualsiasi nome descrittivo univoco.  
   
  **Tipo di dati**  
  Consente di selezionare un tipo di dati disponibile nell'elenco. Per altre informazioni, vedere [Tipi di dati di Integration Services](data-flow/integration-services-data-types.md).  
   
- **Length**  
+ **Lunghezza**  
  Consente di selezionare la lunghezza della colonna per dati di tipo stringa.  
   
  **Precisione**  
@@ -59,7 +59,7 @@ ms.locfileid: "48129801"
  Consente di indicare come gestire gli errori tramite la finestra di dialogo [Configura output errori](../../2014/integration-services/configure-error-output.md) .  
   
 ## <a name="see-also"></a>Vedere anche  
- [Riferimento ai messaggi e agli errori di Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [Convertire i dati in un tipo di dati diverso tramite la trasformazione Conversione dati](data-flow/transformations/convert-data-type-by-using-data-conversion-transformation.md)  
+ [Guida di riferimento ai messaggi e agli errori di Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
+ [Conversione di dati in un tipo di dati diverso utilizzando la trasformazione Conversione dati](data-flow/transformations/convert-data-type-by-using-data-conversion-transformation.md)  
   
   

@@ -12,22 +12,22 @@ helpviewer_keywords:
 - components [Integration Services], connections
 - connections [Integration Services], data flow components
 ms.assetid: 05633e4c-1370-4b05-802b-f36b07dd71c8
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 43b975d5eeb7177e417f385c3b4de89f75030704
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 776e3d8c8b8731fb56d51213ffe085c857066cd7
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48069951"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58374358"
 ---
 # <a name="connect-components-with-paths"></a>Connessione di componenti con i percorsi
   Per costruire il flusso di dati in un pacchetto, è possibile usare l'area di progettazione della scheda **Flusso di dati** di Progettazione [!INCLUDE[ssIS](../includes/ssis-md.md)]. Se un flusso di dati contiene due componenti, sarà possibile connetterli connettendo l'output di un'origine o trasformazione all'input di una trasformazione o destinazione. Il connettore tra due componenti del flusso di dati è detto percorso.  
   
  Nella figura seguente viene illustrato un semplice flusso di dati con un componente di origine, due trasformazioni, un componente di destinazione e i percorsi che li connettono.  
   
- ![Flusso di dati](media/mw-dts-08.gif "flusso di dati")  
+ ![Data flow](media/mw-dts-08.gif "Data flow")  
   
  Dopo aver connesso i due componenti è possibile visualizzare i metadati dei dati che si spostano lungo il percorso e le proprietà del percorso nella finestra **Editor percorso flusso di dati**. Per altre informazioni, vedere [Percorsi in Integration Services](data-flow/integration-services-paths.md).  
   
