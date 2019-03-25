@@ -11,15 +11,15 @@ f1_keywords:
 - sql12.dts.designer.toolbox.F1
 - sql12.dts.designer.toolboxfavorites.F1
 ms.assetid: 552ff592-eeef-46e8-b4a2-9b2384c869aa
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: dec02ad946483f74b25a3b1ae514a20e1abc4523
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: ed3b13619fa8206e9b4fa2054294c520f05ed890
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53372013"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58381849"
 ---
 # <a name="ssis-toolbox"></a>Casella degli strumenti SSIS
   Tutti i componenti installati nel computer locale, inclusi i componenti di terze parti compilati per SQL Server 2008 e 2008 R2 vengono visualizzati automaticamente nella nuova **Casella degli strumenti SSIS**. Quando si installano componenti aggiuntivi, fare clic con il pulsante destro del mouse all'interno della casella degli strumenti, quindi fare clic su **Aggiorna casella degli strumenti** per aggiungere i componenti.  
@@ -31,7 +31,7 @@ ms.locfileid: "53372013"
   
  Nella **Casella degli strumenti SSIS**, i componenti del flusso di controllo e del flusso di dati sono organizzati in categorie.  È possibile espandere e comprimere le categorie per la visualizzazione e modificare l'organizzazione dei componenti in base alle proprie esigenze.  È possibile ripristinare l'organizzazione predefinita facendo clic con il pulsante destro del mouse all'interno della casella degli strumenti, quindi facendo clic su **Ripristina impostazioni predefinite casella degli strumenti**.  
   
- Le categorie **Preferiti** e **Comune** vengono visualizzate nella casella degli strumenti quando si selezionano le schede **Flusso di controllo**, **Flusso di dati**e **Gestori eventi** . La categoria **Altre attività** viene visualizzata nella casella degli strumenti quando si seleziona la scheda **Flusso di controllo** o la scheda **Gestori eventi** . Le categorie Altre trasformazioni, **Altre origini**e **Altre destinazioni** vengono visualizzate nella casella degli strumenti quando si seleziona la scheda **Flusso di dati** .  
+ Le categorie **Preferiti** e **Comune** vengono visualizzate nella casella degli strumenti quando si selezionano le schede **Flusso di controllo**, **Flusso di dati**e **Gestori eventi** . La categoria **Altre attività** viene visualizzata nella casella degli strumenti quando si seleziona la scheda **Flusso di controllo** o la scheda **Gestori eventi** . Le categorie **Altre trasformazioni**, **Altre origini**e **Altre destinazioni** vengono visualizzate nella casella degli strumenti quando si seleziona la scheda **Flusso di dati** .  
   
  Quando si crea un nuovo progetto SSIS o si apre un progetto esistente, la **Casella degli strumenti SSIS** viene visualizzata automaticamente. La casella degli strumenti può essere aperta anche facendo clic sul relativo pulsante posto nell'angolo superiore destro dell'area di progettazione del pacchetto.  
   

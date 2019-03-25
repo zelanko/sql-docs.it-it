@@ -11,15 +11,15 @@ helpviewer_keywords:
 - Precedence Constraint Editor dialog box
 - precedence constraints [Integration Services], properties
 ms.assetid: d990f600-5c09-4cd5-8528-0a58d79dc9f2
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 82d10d177de353736336d8cebd0a9a171ae4e9c7
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 8b0c8d2eec40078e58b80170b37c4885b72ad2b8
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48140653"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58388119"
 ---
 # <a name="set-the-properties-of-a-precedence-constraint"></a>Impostazione delle proprietà di un vincolo di precedenza
   Per impostare le proprietà dei vincoli di precedenza, è possibile utilizzare uno dei seguenti strumenti:  
@@ -69,13 +69,13 @@ ms.locfileid: "48140653"
   
     |Proprietà di lettura/scrittura|Azione di configurazione|  
     |--------------------------|--------------------------|  
-    |Description|Specificare una descrizione.|  
+    |Descrizione|Specificare una descrizione.|  
     |EvalOp|Selezionare un'operazione di valutazione. Se il `Expression`, **ExpressionAndConstant**, o **ExpressionOrConstant** operazione è selezionata, è possibile specificare un'espressione.|  
     |Espressione|Se l'operazione di valutazione include un'espressione, specificare l'espressione. L'espressione deve restituire un valore booleano. Per altre informazioni sul linguaggio delle espressioni, vedere [Espressioni di Integration Services &#40;SSIS&#41;](expressions/integration-services-ssis-expressions.md).|  
     |LogicalAnd|Impostare `LogicalAnd` per specificare se il vincolo di precedenza viene valutato insieme ad altri vincoli di precedenza, quando più eseguibili precedono e sono collegati all'eseguibile soggetto al|  
     |nome|Aggiornare il nome del vincolo di precedenza.|  
     |ShowAnnotation|Specificare il tipo di annotazione da utilizzare. Selezionare **Never** per disabilitare le annotazioni, **AsNeeded** per attivare le annotazioni su richiesta, **ConstraintName** per aggiungere automaticamente annotazioni usando il valore della proprietà Name, **ConstraintDescription** per aggiungere automaticamente annotazioni usando il valore della proprietà Description e **ConstraintOptions** per aggiungere automaticamente annotazioni usando i valori delle proprietà Value ed Expression.|  
-    |valore|Se l'operazione di valutazione specificata nella proprietà EvalOP include un vincolo, selezionare il risultato dell'esecuzione dell'eseguibile vincolante.|  
+    |Value|Se l'operazione di valutazione specificata nella proprietà EvalOP include un vincolo, selezionare il risultato dell'esecuzione dell'eseguibile vincolante.|  
   
 5.  Chiudere la finestra Proprietà.  
   
