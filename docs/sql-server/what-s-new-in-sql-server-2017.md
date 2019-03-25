@@ -11,12 +11,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: '>= sql-server-2017 || = sqlallproducts-allversions'
-ms.openlocfilehash: 6a8e2aabc262eae4f25bf1cc5056955b58b874d0
-ms.sourcegitcommit: 8bc5d85bd157f9cfd52245d23062d150b76066ef
+ms.openlocfilehash: 3d2881dfbb1e8b764c28e0ee9e5cd35ab6ba2087
+ms.sourcegitcommit: 7d4a3fc0f2622cbc6930d792be4a9b3fcac4c4b6
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/07/2019
-ms.locfileid: "57579361"
+ms.lasthandoff: 03/21/2019
+ms.locfileid: "58306049"
 ---
 # <a name="whats-new-in-sql-server-2017"></a>Novità di SQL Server 2017
 [!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]
@@ -86,7 +86,7 @@ SQL Server Analysis Services 2017 include numerosi miglioramenti per i modelli t
 - Editor DAX per SSDT. (CTP 2.0)
 - Suggerimenti di codifica, una funzione avanzata per l'ottimizzazione dell'aggiornamento dei dati di modelli tabulari in memoria di grandi dimensioni. (CTP 1.3)
 - Supporto del **livello di compatibilità 1400** per i modelli tabulari. Per creare nuovi progetti di modelli tabulari o aggiornare quelli esistenti con il livello di compatibilità 1400, scaricare e installare [SQL Server Data Tools (SSDT) 17.0 RC2](https://go.microsoft.com/fwlink?LinkId=837939). (CTP 1.1)
-- Una nuova funzione **Recupera dati** per modelli tabulari al livello di compatibilità 1400. Vedere il [blog del team di Analysis Services](https://blogs.msdn.microsoft.com/analysisservices/2016/12/16/introducing-a-modern-get-data-experience-for-sql-server-2017-on-windows-ctp-1-1-for-analysis-services/). (CTP 1.1)
+- Una nuova funzione **Recupera dati** per modelli tabulari al livello di compatibilità 1400. Vedere il [blog del team di Analysis Services](https://blogs.msdn.microsoft.com/analysisservices/2016/12/16/introducing-a-modern-get-data-experience-for-sql-server-vnext-on-windows-ctp-1-1-for-analysis-services/). (CTP 1.1)
 - Proprietà **Nascondi membri** per nascondere i membri vuoti nelle gerarchie incomplete. (CTP 1.1)
 - Nuova azione dell'utente finale **Righe di dettaglio** in **Mostra dettagli** per informazioni aggregate. Funzioni [SELECTCOLUMNS](https://msdn.microsoft.com/library/mt761759.aspx) e **DETAILROWS** per la creazione di espressioni Righe di dettaglio. (CTP 1.1)
 - Operatore **IN** DAX per la specifica di più valori. (CTP 1.1)
