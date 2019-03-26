@@ -1,7 +1,7 @@
 ---
 title: Backup di SQL Server nell'URL | Microsoft Docs
 ms.custom: ''
-ms.date: 11/17/2017
+ms.date: 03/25/2019
 ms.prod: sql
 ms.prod_service: backup-restore
 ms.reviewer: ''
@@ -11,15 +11,15 @@ ms.assetid: 11be89e9-ff2a-4a94-ab5d-27d8edf9167d
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 8c609178c8bcb31bfba669b989ef12f2b21d6efb
-ms.sourcegitcommit: c6e71ed14198da67afd7ba722823b1af9b4f4e6f
+ms.openlocfilehash: ef47b518c5c2d1595458d652b1fcde7065400b79
+ms.sourcegitcommit: d765563ccd03f299544bac233bc35f9b1df3fd47
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/16/2019
-ms.locfileid: "54327797"
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58434512"
 ---
 # <a name="sql-server-backup-to-url"></a>Backup di SQL Server nell'URL
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
   Questo argomento illustra i concetti, i requisiti e i componenti necessari per usare il servizio di archiviazione BLOB di Microsoft Azure come destinazione backup. La funzionalità di backup e ripristino è uguale o simile a quella delle opzioni DISK e TAPE, con alcune differenze. Nell'argomento sono descritte le differenze e sono inclusi alcuni esempi di codice.  
   

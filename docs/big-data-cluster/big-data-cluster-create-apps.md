@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: 8f661acacf17a8977f437abdcefcd3763305229b
-ms.sourcegitcommit: 1c1ed8d6aa2fb9fceb6a00c39597578442f7f4e9
+ms.openlocfilehash: 83dc07ed6336c637aaf17fdcfc1075854fe542b7
+ms.sourcegitcommit: d765563ccd03f299544bac233bc35f9b1df3fd47
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/21/2019
-ms.locfileid: "58222060"
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58434432"
 ---
 # <a name="how-to-deploy-an-app-on-sql-server-2019-big-data-cluster-preview"></a>Come distribuire un'app nel cluster di big data 2019 Server SQL (anteprima)
 
@@ -137,6 +137,9 @@ A questo scopo, copiare le righe di codice precedente in due file nella director
 ```bash
 mssqlctl app create --spec ./addpy
 ```
+
+> [!NOTE]
+> Il `spec.yaml` file specifica sia una `poolsize` e un numero di `replicas`. Il numero di `replicas` specifica il numero di copie del servizio desidera essere distribuite. Il `poolsize` specifica il numero di pool che si desidera creare per ogni replica. Queste impostazioni hanno un impatto sulla quantità di richieste che può gestire la distribuzione in parallelo. Il numero massimo di richieste in un determinato momento è uguale a `replicas` volte `poolsize`, ovvero Se sono presenti 5 repliche e 2 pool per ogni replica la distribuzione può gestire 10 richieste in parallelo. Vedere l'immagine seguente per una rappresentazione grafica dei `replicas` e `poolsize`: ![DimensionePool e repliche](media/big-data-cluster-create-apps/poolsize-vs-replicas.png)
 
 È possibile controllare se l'app viene distribuita usando il comando di elenco:
 

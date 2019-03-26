@@ -13,12 +13,12 @@ ms.assetid: 9499ffdf-e0ee-4d3c-8bca-605371eb52d9
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 24fce778851f514d680a2701cc9c4dcc9ccb277c
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 2ffaf0e89e1fdbd0a1722ad038ad9e360decf237
+ms.sourcegitcommit: 7d4a3fc0f2622cbc6930d792be4a9b3fcac4c4b6
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52419072"
+ms.lasthandoff: 03/21/2019
+ms.locfileid: "58305889"
 ---
 # <a name="using-integrated-authentication"></a>Uso dell'autenticazione integrata
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
@@ -67,7 +67,7 @@ L'accesso a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] usa l'a
   
 Per controllare le attività in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] per conto di utenti diversi dagli account di sistema, è necessario che l'applicazione usi [!INCLUDE[tsql](../../../includes/tsql-md.md)] **EXECUTE AS**.  
   
-Per migliorare le prestazioni, l'applicazione può usare pool di connessioni con autenticazione integrata e controllo. Tuttavia, la combinazione di pool di connessioni, autenticazione integrata e controllo crea un rischio per la sicurezza perché il programma di gestione dei driver unixODBC consente a utenti diversi di riutilizzare le connessioni in pool. Per altre informazioni, vedere la pagina relativa ai [pool di connessioni ODBC](https://www.unixodbc.org/doc/conn_pool.html).  
+Per migliorare le prestazioni, l'applicazione può usare pool di connessioni con autenticazione integrata e controllo. Tuttavia, la combinazione di pool di connessioni, autenticazione integrata e controllo crea un rischio per la sicurezza perché il programma di gestione dei driver unixODBC consente a utenti diversi di riutilizzare le connessioni in pool. Per altre informazioni, vedere la pagina relativa ai [pool di connessioni ODBC](http://www.unixodbc.org/doc/conn_pool.html).  
 
 Prima del riutilizzo, è necessario che l'applicazione reimposti le connessioni in pool eseguendo `sp_reset_connection`.  
 
