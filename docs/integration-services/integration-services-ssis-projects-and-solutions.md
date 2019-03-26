@@ -16,15 +16,15 @@ helpviewer_keywords:
 - folders [Integration Services]
 - projects [Integration Services], about projects
 ms.assetid: 28ea8120-0a79-4029-93f0-07d521b32bee
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 9f74f80b4d20f3314184d8fba891632f2aaa1d82
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 607c095af9539fb40d33e27350ab1f287183062c
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47703249"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58272864"
 ---
 # <a name="integration-services-ssis-projects-and-solutions"></a>Progetti e soluzioni di Integration Services (SSIS)
   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] fornisce [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] per lo sviluppo di pacchetti [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] .  
@@ -107,7 +107,7 @@ I pacchetti di [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] risied
   
 7.  Se il software per il controllo del codice sorgente è [!INCLUDE[msCoName](../includes/msconame-md.md)] Visual SourceSafe, verrà visualizzata la finestra di dialogo **Accesso a Visual SourceSafe**. In **Accesso a Visual SourceSafe** specificare un nome utente, una password e il nome del database di [!INCLUDE[msCoName](../includes/msconame-md.md)] Visual SourceSafe. Fare clic su **Sfoglia** per individuare il database.  
   
-    > **NOTA:** per visualizzare e modificare il plug-in del controllo del codice sorgente selezionato e configurare l'ambiente di controllo del codice sorgente, scegliere **Opzioni** dal menu **Strumenti** e quindi espandere il nodo **Controllo del codice sorgente**.  
+    > **NOTA:** Per visualizzare e modificare il plug-in per il controllo del codice sorgente selezionato e configurare l'ambiente di controllo del codice sorgente, scegliere **Opzioni** dal menu **Strumenti** e quindi espandere il nodo **Controllo del codice sorgente**.  
   
 8.  Fare clic su **OK** per aggiungere la soluzione a **Esplora soluzioni** e aggiungere il progetto alla soluzione.  
   
