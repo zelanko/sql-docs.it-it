@@ -8,15 +8,15 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 9553cef4-36aa-4088-a9db-eee45a4502df
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 6d38d2f377f93ad1b9bd73176279eb4b6dfd3852
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: 84ca91116f07065fc1583ca7ab94d75f43412015
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51640095"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58281995"
 ---
 # <a name="integration-services-ssis-catalog-transact-sql-reference"></a>Riferimento Transact-SQL catalogo di Integration Services (SSIS)
 [Viste &#40;catalogo di Integration Services&#41;](../../integration-services/system-views/views-integration-services-catalog.md)  

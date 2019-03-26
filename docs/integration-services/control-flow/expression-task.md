@@ -10,15 +10,15 @@ ms.topic: conceptual
 f1_keywords:
 - sql13.DTS.DESIGNER.EXPRESSIONTASK.F1
 ms.assetid: 1d7f042d-508d-4e1a-b83a-86a18e23b85f
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: f026b827c510713ac45d11fbfad552b39171163d
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: b542d886c20ef0560e92565106d72d8e1303e2b8
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51640278"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58290527"
 ---
 # <a name="expression-task"></a>Attività Espressione
   L'Attività Espressione consente di creare e valutare espressioni per l'impostazione di valori di variabili in fase di esecuzione tramite Generatore di espressioni. Quando si modifica l'attività, viene avviato [Expression Builder](../../integration-services/expressions/expression-builder.md) .  

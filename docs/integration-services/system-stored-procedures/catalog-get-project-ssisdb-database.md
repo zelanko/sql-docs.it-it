@@ -8,15 +8,15 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: language-reference
 ms.assetid: f263c9e4-a7db-4888-a458-70ae99b1f729
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 281e3d3a5c85e2c89991487c5c4988d0e1077ba6
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 28fe8cd113404d2a5672daa249c80f3b3d91620c
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47635099"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58275024"
 ---
 # <a name="cataloggetproject-ssisdb-database"></a>catalog.get_project (database SSISDB)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -42,7 +42,7 @@ catalog.get_project [ @folder_name = ] folder_name , [ @project_name = ] project
 ## <a name="result-sets"></a>Set di risultati  
  Il flusso binario del progetto viene restituito come **varbinary(MAX)**. Non viene restituito alcun risultato se la cartella o il progetto non viene trovato.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorizzazioni  
  Per questa stored procedure è necessaria una delle autorizzazioni seguenti:  
   
 -   Autorizzazioni READ sul progetto  

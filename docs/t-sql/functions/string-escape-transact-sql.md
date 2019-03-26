@@ -18,15 +18,16 @@ ms.assetid: 2163bc7a-3816-4304-9c40-8954804f5465
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 8328c6bc65d7b0f05e9ce38f908b4f3d64b25b82
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+monikerRange: = azuresqldb-current||>= sql-server-2016||=azure-sqldw-latest||>= sql-server-linux-2017||= sqlallproducts-allversions
+ms.openlocfilehash: 8c283fd85aedec31f8774145155fe3b1d7ac9c10
+ms.sourcegitcommit: 1a182443e4f70f4632617cfef4efa56d898e64e9
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47755209"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58342941"
 ---
 # <a name="stringescape-transact-sql"></a>STRING_ESCAPE (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2016-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-asdw-xxx-md.md)]
 
   Aggiunge un carattere di escape prima di caratteri speciali nei testi e restituisce testo con caratteri preceduti da un carattere di escape. **STRING_ESCAPE** è una funzione deterministica.  
   
@@ -39,7 +40,7 @@ STRING_ESCAPE( text , type )
 ```  
   
 ## <a name="arguments"></a>Argomenti  
- *varchar(max)*  
+ *text*  
  Espressione **nvarchar**[expression](../../t-sql/language-elements/expressions-transact-sql.md) che rappresenta l'oggetto al quale far precedere un carattere di escape.  
   
  *type*  
@@ -86,7 +87,7 @@ escapedText
 \\\t\/\n\\\\\t\"\t
 ```  
   
-### <a name="b-format-json-object"></a>B. Formattare un oggetto JSON  
+### <a name="b-format-json-object"></a>b. Formattare un oggetto JSON  
  La query seguente crea testo JSON da variabili di stringa e numero e aggiunge un carattere di escape prima di qualsiasi carattere speciale JSON nelle variabili.  
   
 ```  

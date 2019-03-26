@@ -8,15 +8,15 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: be0ec384-e03b-4483-96ca-02b289804d6a
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 506987635969a1f9a6b6484e7deeda02712f9eb6
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 1d4e6174317c2588a0c12b4ef6f1f2d0b1d09e44
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52398004"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58290847"
 ---
 # <a name="user-roles"></a>Ruoli utente
   In questa sezione sono descritti i ruoli utente per il servizio Change Data Capture per Oracle di Attunity. I ruoli descritti sono ruoli del database [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , ruoli di Windows o ruoli del database Oracle.  
@@ -53,7 +53,7 @@ ms.locfileid: "52398004"
   
 -   Funzione di amministratore del computer autorizzato come amministratore nel computer in cui è installato il servizio CDC per Oracle. Questa persona installa il servizio CDC per Oracle e utilizza la console di configurazione del servizio CDC per configurare un servizio CDC per Oracle in un computer locale.  
   
-### <a name="service-account-oracle-cdc-service"></a>Account del servizio: servizio Oracle CDC  
+### <a name="service-account-oracle-cdc-service"></a>Account servizio: servizio Oracle CDC  
  Si tratta dell'account del servizio di Windows del servizio CDC, un account di Windows utilizzato per l'esecuzione del servizio Oracle CDC (account del servizio).  
   
  L'unico privilegio obbligatorio necessario per l'account del servizio è la possibilità di utilizzare il client Oracle e il provider ODBC del client nativo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Questo account non necessita dell'accesso ai file a meno che non sia richiesto da provider specifici, ad esempio se la stringa di connessione del client Oracle fa riferimento alle istanze del database Oracle in un file **tnsnames.ora** , nel qual caso il file deve essere accessibile in lettura all'account del servizio.  
@@ -100,7 +100,7 @@ ms.locfileid: "52398004"
 ### <a name="oracle-cdc-service-user"></a>Utente del servizio Oracle CDC  
  L'utente del servizio Oracle CDC di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] è un account di accesso di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utilizzato dal servizio Oracle CDC per eseguire il lavoro in MSXDBCDC e in tutte le istanze di Oracle CDC (database CDC) gestite da questo servizio.  
   
- L'utente del servizio Oracle CDC di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]:  
+ L'utente del servizio Oracle CDC di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] :  
   
 -   Deve essere membro dei ruoli predefiniti del database **db_dlladmin**, **db_datareader**e **db_datawriter** per tutti i database CDC gestiti dal server.  
   

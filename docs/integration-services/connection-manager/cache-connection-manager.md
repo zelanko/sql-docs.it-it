@@ -12,15 +12,15 @@ f1_keywords:
 helpviewer_keywords:
 - Cache connection manager
 ms.assetid: bdc92038-3720-4795-8a5c-79b963f2c952
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 81c0f330803b5e073425ff4540f20bdd08caf8c4
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f68d68c9302bccd55ef01b104a592a0462fbe669
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47837779"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58289937"
 ---
 # <a name="cache-connection-manager"></a>gestione connessione della cache
   La gestione connessione della cache consente di leggere i dati dalla trasformazione cache o da un file di cache (con estensione caw) e di salvarli in un file di cache. Se si configura la gestione connessione della cache in modo da utilizzare un file di cache, i dati sono archiviati sempre in memoria.  
@@ -31,7 +31,7 @@ ms.locfileid: "47837779"
 >  I tipi di dati BLOB (oggetto binario di grandi dimensioni), ovvero DT_TEXT, DT_NTEXT e DT_IMAGE, non sono supportati nella Gestione connessione cache. Se il set di dati di riferimento contiene un tipo di dati BLOB, il componente avrà esito negativo quando viene eseguito il pacchetto. È possibile utilizzare **Editor gestione connessione cache** per modificare i tipi di dati di colonna. Per altre informazioni, vedere [Editor gestione connessione cache](cache-connection-manager-editor.md).  
   
 > [!NOTE]  
->  Il livello di protezione del pacchetto non si applica al file di cache. Se il file di cache contiene informazioni riservate, utilizzare un elenco di controllo di accesso (ACL) per limitare l'accesso al percorso o alla cartella nella quale verrà archiviato il file. È consigliabile consentire l'accesso solo a determinati account. Per altre informazioni, vedere [Accedere ai file usati dai pacchetti](../../integration-services/security/security-overview-integration-services.md#files).  
+>  Il livello di protezione del pacchetto non si applica al file di cache. Se il file di cache contiene informazioni riservate, utilizzare un elenco di controllo di accesso (ACL) per limitare l'accesso al percorso o alla cartella nella quale verrà archiviato il file. È consigliabile consentire l'accesso solo a determinati account. Per altre informazioni, vedere [Accesso ai file utilizzati dai pacchetti](../../integration-services/security/security-overview-integration-services.md#files).  
   
 ## <a name="configuration-of-the-cache-connection-manager"></a>Configurazione della gestione connessione cache  
  Per configurare la gestione connessione cache, procedere nel modo seguente:  
@@ -78,7 +78,7 @@ ms.locfileid: "47837779"
  Indicare se utilizzare un file di cache.  
   
 > [!NOTE]  
->  Il livello di protezione del pacchetto non si applica al file di cache. Se il file di cache contiene informazioni riservate, utilizzare un elenco di controllo di accesso (ACL) per limitare l'accesso al percorso o alla cartella nella quale verrà archiviato il file. È consigliabile consentire l'accesso solo a determinati account. Per altre informazioni, vedere [Accedere ai file usati dai pacchetti](../../integration-services/security/security-overview-integration-services.md#files).  
+>  Il livello di protezione del pacchetto non si applica al file di cache. Se il file di cache contiene informazioni riservate, utilizzare un elenco di controllo di accesso (ACL) per limitare l'accesso al percorso o alla cartella nella quale verrà archiviato il file. È consigliabile consentire l'accesso solo a determinati account. Per altre informazioni, vedere [Accesso ai file utilizzati dai pacchetti](../../integration-services/security/security-overview-integration-services.md#files).  
   
  Se la gestione connessione della cache viene configurata in modo da utilizzare un file di cache, la gestione connessione eseguirà una delle seguenti azioni:  
   
@@ -115,7 +115,7 @@ ms.locfileid: "47837779"
  **Tipo**  
  Consente di specificare il tipo di dati della colonna.  
   
- **Length**  
+ **Lunghezza**  
  Specifica il tipo di dati della colonna. Se applicabile al tipo di dati, è possibile aggiornare **Length**.  
   
  **Precisione**  
@@ -128,6 +128,6 @@ ms.locfileid: "47837779"
  Specifica la tabella codici per il tipo di colonna. Se applicabile al tipo di dati, è possibile aggiornare **Code Page**.  
   
 ## <a name="related-tasks"></a>Attività correlate  
- [Implementare una trasformazione Ricerca in modalità Full Cache tramite la gestione connessione della cache](lookup-transformation-full-cache-mode-cache-connection-manager.md)  
+ [Implementazione di una trasformazione Ricerca in modalità Full Cache utilizzando la gestione connessione della cache](lookup-transformation-full-cache-mode-cache-connection-manager.md)  
   
   

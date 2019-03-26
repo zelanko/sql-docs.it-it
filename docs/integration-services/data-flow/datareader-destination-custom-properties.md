@@ -8,15 +8,15 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: f151c3e8-3811-457d-a3d3-6158ca65a646
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: c54d0c7c254f07d06c34ffc3860d03d8ccfba124
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: 701fbe45a5f6e7f1d0056aa4d549b1ba32246459
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51638229"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58279285"
 ---
 # <a name="datareader-destination-custom-properties"></a>Proprietà personalizzate della destinazione DataReader
   La destinazione DataReader include sia proprietà personalizzate che le proprietà comuni a tutti i componenti del flusso di dati.  
@@ -27,7 +27,7 @@ ms.locfileid: "51638229"
 |-------------------|---------------|-----------------|  
 |DataReader|String|Nome di classe della destinazione DataReader.|  
 |FailOnTimeout|Boolean|Indica se generare un errore quando si verifica un **ReadTimeout** . Il valore predefinito di questa proprietà è **False**.|  
-|ReadTimeout|Valore intero|Numero di millisecondi prima di un timeout. Il valore predefinito di questa proprietà è 30000 (30 secondi).|  
+|ReadTimeout|Integer|Numero di millisecondi prima di un timeout. Il valore predefinito di questa proprietà è 30000 (30 secondi).|  
   
  L'input e le colonne di input della destinazione DataReader non includono proprietà personalizzate.  
   
