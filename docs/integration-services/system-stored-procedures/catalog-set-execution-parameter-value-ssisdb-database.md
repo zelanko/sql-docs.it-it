@@ -8,15 +8,15 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: language-reference
 ms.assetid: 055d86c9-befd-4e63-acb1-6dfe833549d2
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: c89486bb4d33ba52d1e0516d51eede715ddd9987
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 58bd2e2dfa541dd4d4200f3b7518b1f6c2d4ad0b
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52405649"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58277650"
 ---
 # <a name="catalogsetexecutionparametervalue-ssisdb-database"></a>catalog.set_execution_parameter_value (database SSISDB)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -78,7 +78,7 @@ catalog.set_execution_parameter_value [ @execution_id = execution_id
 |-----------|-----------------|  
 |0|None<br /><br /> La registrazione è disabilitata. Solo lo stato dell'esecuzione del pacchetto viene registrato.|  
 |1|Standard<br /><br /> Tutti gli eventi sono registrati, ad eccezione di eventi personalizzati e di diagnostica. Si tratta del valore predefinito.|  
-|2|restazioni<br /><br /> Vengono registrati solo le statistiche sulle prestazioni e gli eventi OnError e OnWarning.|  
+|2|Prestazioni<br /><br /> Vengono registrati solo le statistiche sulle prestazioni e gli eventi OnError e OnWarning.|  
 |3|Dettagliato<br /><br /> Tutti gli eventi vengono registrati, inclusi gli eventi personalizzati e di diagnostica. <br />Gli eventi personalizzati includono gli eventi registrati dalle attività di Integration Services. Per altre informazioni, vedere [Messaggi personalizzati per la registrazione](../../integration-services/performance/integration-services-ssis-logging.md#custom_messages).|  
 |4|Derivazione di runtime<br /><br /> Raccoglie i dati necessari a tenere traccia della derivazione nel flusso di dati.|  
 |100|Livello di registrazione personalizzato<br /><br /> Specificare le impostazioni nel parametro CUSTOMIZED_LOGGING_LEVEL. Per altre informazioni sui valori che è possibile specificare, vedere [catalog.create_customized_logging_level](../../integration-services/system-stored-procedures/catalog-create-customized-logging-level.md).<br /><br /> Per altre informazioni sui livelli di registrazione personalizzati, vedere [Abilitare la registrazione per l'esecuzione di pacchetti nel server SSIS](../../integration-services/performance/integration-services-ssis-logging.md#server_logging).|  
@@ -136,7 +136,7 @@ exec catalog.set_execution_parameter_value  @execution_id, 50, 'DUMP_EVENT_CODE'
 ## <a name="result-sets"></a>Set di risultati  
  None  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorizzazioni  
  Per questa stored procedure è necessaria una delle autorizzazioni seguenti:  
   
 -   Autorizzazioni READ e MODIFY per l'istanza di esecuzione  

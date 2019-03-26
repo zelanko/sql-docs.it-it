@@ -8,15 +8,15 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: faa1eedd-db14-41e5-8e58-8f0f6f561e42
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 16fa246472221eec453d5ab6f98e007173b5ffd0
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 21a01d4280b48dcb78466927d1872191e3d3fb67
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47607730"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58276860"
 ---
 # <a name="dqs-cleansing-connection-manager"></a>Gestione connessione DQS Cleansing
   Una gestione connessione DQS Cleansing consente a un pacchetto di connettersi a un server [!INCLUDE[ssDQSnoversion](../../includes/ssdqsnoversion-md.md)]. La trasformazione DQS Cleansing utilizza la gestione connessione DQS Cleansing.  

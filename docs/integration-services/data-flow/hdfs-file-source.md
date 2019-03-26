@@ -10,15 +10,15 @@ ms.topic: conceptual
 f1_keywords:
 - sql13.ssis.designer.hdfsfilesrc.f1
 ms.assetid: f8cda200-c389-4a2e-8ee9-5d59b326aac1
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 9cb4cf4a297a362ada965c3135f7e03fc8304ac2
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 400f3158e6196ff42c702ce675b28125167bd861
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47720519"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58276850"
 ---
 # <a name="hdfs-file-source"></a>Origine file HDFS
   Il componente Origine file HDFS consente a un pacchetto SSIS di leggere dati da un file HDFS. I formati di file supportati sono Testo e AVRO. Le origini ORC non sono supportate.  

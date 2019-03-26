@@ -3,20 +3,19 @@ title: Connettersi a un'origine dati Excel (Importazione/Esportazione guidata SQ
 ms.custom: ''
 ms.date: 04/02/2018
 ms.prod: sql
-ms.prod_service: integration-services
 ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 43fbaca0-36d8-4583-9056-af7010209b87
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 6227189db5edc1cd350c48f7e3a505a3a3c491c4
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e91a32da57488153e9d916cb70232d64c9b38a1b
+ms.sourcegitcommit: 5683044d87f16200888eda2c2c4dee38ff87793f
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47671339"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58221815"
 ---
 # <a name="connect-to-an-excel-data-source-sql-server-import-and-export-wizard"></a>Connettersi a un'origine dati Excel (Importazione/Esportazione guidata SQL Server)
 Questo articolo illustra come connettersi a un'origine dati **Microsoft Excel** dalla pagina **Scelta origine dati** o **Scelta destinazione** dell'Importazione/Esportazione guidata di SQL Server.

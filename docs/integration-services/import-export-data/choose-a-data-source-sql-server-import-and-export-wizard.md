@@ -3,22 +3,21 @@ title: Scelta origine dati (Importazione/Esportazione guidata SQL Server) | Micr
 ms.custom: ''
 ms.date: 01/28/2019
 ms.prod: sql
-ms.prod_service: integration-services
 ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql13.dts.impexpwizard.chooseadatasource.f1
 ms.assetid: ebf28a62-dfc1-4b39-9db5-df1919e5fccb
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: a93eb928b8d9a756380879ad8cc30475ffd223e9
-ms.sourcegitcommit: 92c524119d7df5daf69ec144d532ddcb2e46abc0
+ms.openlocfilehash: 08baea2a92d21d9dca3a53dc17d6499f77e193d3
+ms.sourcegitcommit: 5683044d87f16200888eda2c2c4dee38ff87793f
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55290421"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58222075"
 ---
 # <a name="choose-a-data-source-sql-server-import-and-export-wizard"></a>Scelta origine dati (Importazione/Esportazione guidata SQL Server)
   Dopo la pagina di benvenuto, l'Importazione/Esportazione guidata [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] visualizza **Scelta origine dati**. In questa pagina è necessario fornire informazioni sull'origine dati e su come connettersi a tale origine.

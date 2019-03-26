@@ -8,15 +8,15 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: b66e93fe-ce62-401b-a31f-619c7b8b1f3e
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: f7a901a99b8b8bcb485f4db25c98fc67abc8fee6
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: 82c4ae27d88ddafd24d0db0a87e2ca73ff60e9cd
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51639268"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58270360"
 ---
 # <a name="sql-server-compact-edition-destination-custom-properties"></a>Proprietà personalizzate della destinazione SQL Server Compact Edition
   La destinazione [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Compact include sia proprietà personalizzate sia le proprietà comuni a tutti i componenti del flusso di dati.  

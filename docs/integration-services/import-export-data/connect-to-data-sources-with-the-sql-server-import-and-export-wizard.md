@@ -3,20 +3,19 @@ title: Connettersi a origini dati con l'Importazione/Esportazione guidata SQL Se
 ms.custom: ''
 ms.date: 02/15/2017
 ms.prod: sql
-ms.prod_service: integration-services
 ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: fd726506-54b7-433b-bf70-3642235b7b31
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 28fc6d66c9f64be96220154f011a62fe3af97676
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d17b7115fb0a748c16fc7093100d67f377610268
+ms.sourcegitcommit: 5683044d87f16200888eda2c2c4dee38ff87793f
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47669529"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58221892"
 ---
 # <a name="connect-to-data-sources-with-the-sql-server-import-and-export-wizard"></a>Connettersi a origini dati con l'Importazione/Esportazione guidata SQL Server
 Gli argomenti di questa sezione descrivono come connettersi a molte origini dati di uso comune quando si esegue Importazione/Esportazione guidata SQL Server. È necessario specificare le informazioni di connessione per le origini dati nelle pagine **Scelta origine dati** e **Scelta destinazione** della procedura guidata.

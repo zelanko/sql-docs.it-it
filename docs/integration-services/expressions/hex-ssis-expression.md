@@ -11,15 +11,15 @@ helpviewer_keywords:
 - hexadecimal data
 - HEX function
 ms.assetid: f5d471ee-aeef-421c-b6e1-55b9676c3842
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 7b17dbcb21362a60ed9076134256ec99f3c264a8
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: fbaa082b67c3093911f000a42e639c5eac9a81a0
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52517994"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58280585"
 ---
 # <a name="hex-ssis-expression"></a>HEX (espressione SSIS)
   Viene restituita una stringa che rappresenta il valore esadecimale di un valore integer.  
@@ -38,7 +38,7 @@ HEX(integer_expression)
 ## <a name="result-types"></a>Tipi restituiti  
  DT_WSTR  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Remarks  
  HEX restituisce Null se *integer_expression* è Null.  
   
  L'argomento *integer_expression* argomento deve valutare un numero intero. Per altre informazioni, vedere [Tipi di dati di Integration Services](../../integration-services/data-flow/integration-services-data-types.md).  

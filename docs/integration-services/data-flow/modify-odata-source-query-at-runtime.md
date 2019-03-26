@@ -8,15 +8,15 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: bcbba7f4-6e5d-46e6-a73a-3f17d3ff376a
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: bbfb753b0c2674e3345286b5a2ee2f038228c5d2
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 4835193453b1f58f7aa6dec5c81cd3c349bc6a04
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52517836"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58275430"
 ---
 # <a name="provide-an-odata-source-query-at-runtime"></a>Fornire una query di origine OData in fase di esecuzione
  È possibile modificare la query di origine OData in fase di esecuzione aggiungendo un'*espressione* alla proprietà **[Origine OData].[Query]** dell'attività Flusso di dati.  
@@ -40,7 +40,7 @@ ms.locfileid: "52517836"
   
     2.  Specificare il **valore** predefinito per il parametro.  
   
-    3.  Specificare l'**ambito** (**pacchetto** o **progetto**) per il parametro.  
+    3.  Specificare l' **ambito** (**pacchetto** o **progetto**) per il parametro.  
   
     4.  Specificare se il parametro è **obbligatorio** o meno.  
   
@@ -49,7 +49,7 @@ ms.locfileid: "52517836"
 ## <a name="provide-the-query-with-an-expression"></a>Specificare la query con un'espressione
  Questo metodo è utile quando si vuole creare dinamicamente la stringa di query in fase di esecuzione.
   
-1.  Selezionare l'**attività Flusso di dati** che contiene l'**Origine OData**.  
+1.  Selezionare l' **attività Flusso di dati** che contiene l' **Origine OData**.  
   
 2.  Nella finestra **Proprietà** selezionare la proprietà **Espressioni** .  
   
@@ -59,7 +59,7 @@ ms.locfileid: "52517836"
   
 5.  Fare clic sul pulsante con i puntini di sospensione (...) per **Espressione**.  
   
-6.  Immettere l'**espressione**.  
+6.  Immettere l' **espressione**.  
   
 7.  Fare clic su **OK**.  
   

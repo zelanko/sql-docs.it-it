@@ -14,15 +14,15 @@ helpviewer_keywords:
 - data types [Integration Services], expressions
 - data types [Integration Services], converting
 ms.assetid: d4e915cc-1c7b-4b2e-93b0-13a8b0cb9242
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 9ba1021832b0018f499dde65c09a46b5817bf073
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 15e1ef5983228eb9da820897e7f4a78358c12513
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47742369"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58270683"
 ---
 # <a name="cast-ssis-expression"></a>Cast (espressione SSIS)
   Viene convertita esplicitamente un'espressione da un tipo di dati a un altro. L'operatore cast può essere utilizzato anche come operatore di troncamento.  
@@ -147,6 +147,6 @@ ms.locfileid: "47742369"
  [Precedenza e associatività degli operatori](../../integration-services/expressions/operator-precedence-and-associativity.md)   
  [Operatori &#40;espressione SSIS&#41;](../../integration-services/expressions/operators-ssis-expression.md)   
  [Espressioni di Integration Services &#40;SSIS&#41;](../../integration-services/expressions/integration-services-ssis-expressions.md)   
- [Tipi di dati di Integration Services nelle espressioni](../../integration-services/expressions/integration-services-data-types-in-expressions.md)  
+ [Tipi di dati nelle espressioni di Integration Services](../../integration-services/expressions/integration-services-data-types-in-expressions.md)  
   
   
