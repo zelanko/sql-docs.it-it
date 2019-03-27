@@ -16,12 +16,12 @@ ms.assetid: 4c118cb1-2008-44e2-a797-34b7dc34d6b1
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 31ada2bfb184e24011ee91dde82fc9abfb319320
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 6f2843456f4f95d1019b51f82082d59977ce14d5
+ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52777913"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58493696"
 ---
 # <a name="spaddmergefilter-transact-sql"></a>sp_addmergefilter (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -46,43 +46,34 @@ sp_addmergefilter [ @publication = ] 'publication'
 ```  
   
 ## <a name="arguments"></a>Argomenti  
- [  **@publication=** ] **'**_pubblicazione_**'**  
- Nome della pubblicazione nella quale viene aggiunto il filtro di merge. *pubblicazione* viene **sysname**, non prevede alcun valore predefinito.  
+`[ @publication = ] 'publication'` È il nome della pubblicazione in cui viene aggiunto il filtro di merge. *pubblicazione* viene **sysname**, non prevede alcun valore predefinito.  
   
- [  **@article=** ] **'**_articolo_**'**  
- Nome dell'articolo nel quale viene aggiunto il filtro di merge. *articolo* viene **sysname**, non prevede alcun valore predefinito.  
+`[ @article = ] 'article'` È il nome dell'articolo nel quale viene aggiunto il filtro di merge. *articolo* viene **sysname**, non prevede alcun valore predefinito.  
   
- [  **@filtername=** ] **'**_filtername_**'**  
- Nome del filtro. *FilterName* è un parametro obbligatorio. *FilterName*viene **sysname**, non prevede alcun valore predefinito.  
+`[ @filtername = ] 'filtername'` È il nome del filtro. *FilterName* è un parametro obbligatorio. *FilterName*viene **sysname**, non prevede alcun valore predefinito.  
   
- [  **@join_articlename=** ] **'**_join_articlename_**'**  
- Articolo padre al quale l'articolo figlio specificato da *articolo*, deve essere unito tramite la clausola join specificata da *join_filterclause*per determinare le righe dell'articolo figlio che soddisfano il criterio di filtro di filtro di merge. *join_articlename* viene **sysname**, non prevede alcun valore predefinito. L'articolo deve essere incluso nella pubblicazione specificata da *publication*.  
+`[ @join_articlename = ] 'join_articlename'` Articolo padre al quale l'articolo figlio specificato da *articolo*, deve essere unito tramite la clausola join specificata da *join_filterclause*per determinare le righe dell'articolo figlio che soddisfano il criterio di filtro di filtro di merge. *join_articlename* viene **sysname**, non prevede alcun valore predefinito. L'articolo deve essere incluso nella pubblicazione specificata da *publication*.  
   
- [  **@join_filterclause=** ] *join_filterclause*  
- Clausola join che deve essere utilizzata per unire l'articolo figlio specificato da *articolo*e l'articolo padre specificato da *join_article*per determinare le righe che soddisfano il filtro di merge. *join_filterclause* viene **nvarchar(1000)**.  
+`[ @join_filterclause = ] join_filterclause` Clausola join che deve essere utilizzata per unire l'articolo figlio specificato da *articolo*e l'articolo padre specificato da *join_article*per determinare le righe che soddisfano il filtro di merge. *join_filterclause* viene **nvarchar(1000)**.  
   
- [  **@join_unique_key=** ] *join_unique_key*  
- Specifica se il join tra l'articolo figlio *articolo*e l'articolo padre *join_article*è uno-a-molti, uno a uno, molti-a-uno oppure molti-a-molti. *join_unique_key* viene **int**, con un valore predefinito è 0. **0** indica un join molti-a-uno o molti-a-molti. **1** indica un join uno a uno o uno-a-molti. Questo valore è **1** quando le colonne di join formano una chiave univoca *join_article*, o se *join_filterclause* tra una chiave esterna in *articolo* e una chiave primaria *join_article*.  
+`[ @join_unique_key = ] join_unique_key` Specifica se il join tra l'articolo figlio *articolo*e l'articolo padre *join_article*è uno-a-molti, uno a uno, molti-a-uno oppure molti-a-molti. *join_unique_key* viene **int**, con un valore predefinito è 0. **0** indica un join molti-a-uno o molti-a-molti. **1** indica un join uno a uno o uno-a-molti. Questo valore è **1** quando le colonne di join formano una chiave univoca *join_article*, o se *join_filterclause* tra una chiave esterna in *articolo* e una chiave primaria *join_article*.  
   
 > [!CAUTION]  
 >  Impostare questo parametro solo **1** se si dispone di un vincolo nella colonna unita tramite join nella tabella sottostante per l'articolo padre che garantisce l'univocità. Se *join_unique_key* è impostata su **1** in modo errato, si verifichi la non convergenza dei dati.  
   
- [  **@force_invalidate_snapshot=** ] *force_invalidate_snapshot*  
- Segnala che l'azione eseguita da questa stored procedure potrebbe invalidare uno snapshot esistente. *force_invalidate_snapshot* è un **bit**, con un valore predefinito **0**.  
+`[ @force_invalidate_snapshot = ] force_invalidate_snapshot` Segnala che l'azione eseguita da questa stored procedure potrebbe invalidare uno snapshot esistente. *force_invalidate_snapshot* è un **bit**, con un valore predefinito **0**.  
   
  **0** specifica che le modifiche apportate all'articolo di merge verranno non invalidano lo snapshot non è valido. Se la stored procedure rileva che la modifica richiede un nuovo snapshot, viene generato un errore e non viene apportata alcuna modifica.  
   
  **1** specifica che le modifiche apportate all'articolo di merge potrebbero invalidare lo snapshot non è valida e, se sono disponibili sottoscrizioni che richiedono un nuovo snapshot, consente l'autorizzazione per lo snapshot esistente deve essere contrassegnato come obsoleto e un nuovo snapshot generato.  
   
- [  **@force_reinit_subscription=** ] *force_reinit_subscription*  
- Segnala che l'azione eseguita dalla stored procedure potrebbe richiedere la reinizializzazione delle sottoscrizioni esistenti. *force_reinit_subscription* è un **bit**, con un valore predefinito è 0.  
+`[ @force_reinit_subscription = ] force_reinit_subscription` Segnala che l'azione eseguita da questa stored procedure potrebbe richiedere la reinizializzazione delle sottoscrizioni esistenti. *force_reinit_subscription* è un **bit**, con un valore predefinito è 0.  
   
  **0** indica che le modifiche apportate all'articolo di merge non comportano la reinizializzazione della sottoscrizione. Se la stored procedure rileva che la modifica richiede la reinizializzazione delle sottoscrizioni, viene generato un errore e non viene apportata alcuna modifica.  
   
  **1** indica che le modifiche apportate all'articolo di merge comportano la reinizializzazione delle sottoscrizioni esistenti e autorizza la reinizializzazione della sottoscrizione.  
   
- [  **@filter_type=** ] *filter_type*  
- Specifica il tipo di filtro da aggiungere. *filter_type* viene **tinyint**, e può essere uno dei valori seguenti.  
+`[ @filter_type = ] filter_type` Specifica il tipo di filtro da aggiungere. *filter_type* viene **tinyint**, e può essere uno dei valori seguenti.  
   
 |Value|Descrizione|  
 |-----------|-----------------|  

@@ -16,12 +16,12 @@ ms.assetid: 81fe1994-7678-4852-980b-e02fedf1e796
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 9eb6d52d72dec4efab7e744fd4eafd2d9a5eb612
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 6ca4142ca78d0842b535036e99464b9a1b7dc2c9
+ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52788483"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58493266"
 ---
 # <a name="spchangemergepublication-transact-sql"></a>sp_changemergepublication (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -42,14 +42,11 @@ sp_changemergepublication [ @publication= ] 'publication'
 ```  
   
 ## <a name="arguments"></a>Argomenti  
- [  **@publication=**] **'***pubblicazione***'**  
- Nome della pubblicazione. *pubblicazione* viene **sysname**, non prevede alcun valore predefinito.  
+`[ @publication = ] 'publication'` Il nome della pubblicazione. *pubblicazione* viene **sysname**, non prevede alcun valore predefinito.  
   
- [  **@property=**] **'***proprietà***'**  
- Proprietà da modificare per la pubblicazione specificata. *proprietà* viene **sysname**, e può essere uno dei valori elencato nella tabella seguente.  
+`[ @property = ] 'property'` La proprietà da modificare per la pubblicazione specificata. *proprietà* viene **sysname**, e può essere uno dei valori elencato nella tabella seguente.  
   
- [  **@value=**] **'***valore***'**  
- Nuovo valore della proprietà specificata. *valore* viene **nvarchar(255**, e può essere uno dei valori elencato nella tabella seguente.  
+`[ @value = ] 'value'` Il nuovo valore per la proprietà specificata. *valore* viene **nvarchar(255**, e può essere uno dei valori elencato nella tabella seguente.  
   
  Nella tabella seguente vengono descritte le proprietà della pubblicazione che è possibile modificare e le limitazioni previste per i valori di tali proprietà.  
   
@@ -105,7 +102,7 @@ sp_changemergepublication [ @publication= ] 'publication'
 ||**false**|Rimuove le informazioni sulla pubblicazione da Active Directory.|  
 |**replicate_ddl**|**1**|Le istruzioni DDL (Data Definition Language) eseguite nel server di pubblicazione vengono replicate.|  
 ||**0**|Non viene eseguita la replica delle istruzioni DDL.|  
-|**conservazione**||Si tratta di un' **int** che rappresenta il numero della *retention_period_unit* unità per cui si desidera salvare le modifiche per la pubblicazione specificata. Se la sottoscrizione non viene sincronizzata entro il periodo di memorizzazione specificato e se le modifiche che tale sottoscrizione avrebbe dovuto ricevere sono state rimosse tramite un'operazione di rimozione nel server di distribuzione, la sottoscrizione scade e pertanto dovrà essere reinizializzata. Il periodo di memorizzazione massimo consentito è il periodo compreso tra la data corrente e 31 dicembre 9999.<br /><br /> Nota: Il periodo di memorizzazione per le pubblicazioni di tipo merge è caratterizzato da un periodo di tolleranza di 24 ore per consentire l'adeguamento dei Sottoscrittori appartenenti a fusi orari diversi.|  
+|**retention**||Si tratta di un' **int** che rappresenta il numero della *retention_period_unit* unità per cui si desidera salvare le modifiche per la pubblicazione specificata. Se la sottoscrizione non viene sincronizzata entro il periodo di memorizzazione specificato e se le modifiche che tale sottoscrizione avrebbe dovuto ricevere sono state rimosse tramite un'operazione di rimozione nel server di distribuzione, la sottoscrizione scade e pertanto dovrà essere reinizializzata. Il periodo di memorizzazione massimo consentito è il periodo compreso tra la data corrente e 31 dicembre 9999.<br /><br /> Nota: Il periodo di memorizzazione per le pubblicazioni di tipo merge è caratterizzato da un periodo di tolleranza di 24 ore per consentire l'adeguamento dei Sottoscrittori appartenenti a fusi orari diversi.|  
 |**retention_period_unit**|**day**|Il periodo di memorizzazione è specificato in giorni.|  
 ||**week**|Il periodo di memorizzazione è specificato in settimane.|  
 ||**month**|Il periodo di memorizzazione è specificato in mesi.|  
@@ -114,8 +111,8 @@ sp_changemergepublication [ @publication= ] 'publication'
 ||**false**|I file di snapshot sono archiviati nel percorso alternativo specificato da *alt_snapshot_folder*. Tale combinazione indica che i file di snapshot vengono archiviati sia nella posizione predefinita che in posizioni alternative.|  
 |**snapshot_ready**|**true**|Lo snapshot della pubblicazione è disponibile.|  
 ||**false**|Lo snapshot della pubblicazione non è disponibile.|  
-|**status**|**Attiva**|La pubblicazione è in uno stato attivo.|  
-||**inattivo**|La pubblicazione è in uno stato inattivo.|  
+|**status**|**active**|La pubblicazione è in uno stato attivo.|  
+||**inactive**|La pubblicazione è in uno stato inattivo.|  
 |**sync_mode**|**nativo** o<br /><br /> **bcp nativo**|L'output del programma di copia bulk in modalità nativa di tutte le tabelle viene utilizzato per lo snapshot iniziale.|  
 ||**character**<br /><br /> o **carattere bcp**|L'output del programma di copia bulk in modalità carattere di tutte le tabelle viene utilizzato per lo snapshot iniziale, che è obbligatorio per tutti i Sottoscrittori non [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |**use_partition_groups**<br /><br /> Nota: Dopo avere utilizzato partition_groups, se si desidera tornare a utilizzare **setupbelongs**e impostare **use_partition_groups = false** nel **changemergearticle**, questo potrebbe non essere correttamente applicate dopo che viene eseguito uno snapshot. I trigger generati dallo snapshot sono conformi ai gruppi di partizioni.<br /><br /> La soluzione alternativa per questo scenario consiste nell'impostare lo stato su inattivo, modificare il **use_partition_groups**, quindi impostare lo stato su attivo.|**true**|La pubblicazione utilizza partizioni pre-calcolate.|  
@@ -124,8 +121,7 @@ sp_changemergepublication [ @publication= ] 'publication'
 |**web_synchronization_url**||Valore predefinito dell'URL Internet utilizzato per la sincronizzazione tramite il Web.|  
 |NULL (predefinito)||Restituisce l'elenco di valori supportati per *proprietà*.|  
   
- [  **@force_invalidate_snapshot =** ] *force_invalidate_snapshot*  
- Segnala che l'azione eseguita da questa stored procedure potrebbe invalidare uno snapshot esistente. *force_invalidate_snapshot* è un **bit**, il valore predefinito è **0**.  
+`[ @force_invalidate_snapshot = ] force_invalidate_snapshot` Segnala che l'azione eseguita da questa stored procedure potrebbe invalidare uno snapshot esistente. *force_invalidate_snapshot* è un **bit**, il valore predefinito è **0**.  
   
  **0** specifica che la modifica della pubblicazione non invalida lo snapshot. Se la stored procedure rileva che la modifica richiede un nuovo snapshot, viene generato un errore e non viene apportata alcuna modifica.  
   
@@ -133,8 +129,7 @@ sp_changemergepublication [ @publication= ] 'publication'
   
  Per informazioni sulle proprietà che richiedono la generazione di un nuovo snapshot quando vengono modificate, vedere la sezione Osservazioni.  
   
- [  **@force_reinit_subscription =** ] *force_reinit_subscription*  
- Segnala che l'azione eseguita dalla stored procedure potrebbe richiedere la reinizializzazione delle sottoscrizioni esistenti. *force_reinit_subscription* è un **bit** con valore predefinito è **0**.  
+`[ @force_reinit_subscription = ] force_reinit_subscription` Segnala che l'azione eseguita da questa stored procedure potrebbe richiedere la reinizializzazione delle sottoscrizioni esistenti. *force_reinit_subscription* è un **bit** con valore predefinito è **0**.  
   
  **0** specifica che la modifica della pubblicazione non richiede reinizializzazione delle sottoscrizioni. Se la stored procedure rileva che la modifica richiede la reinizializzazione delle sottoscrizioni esistenti, viene generato un errore e non viene apportata alcuna modifica.  
   

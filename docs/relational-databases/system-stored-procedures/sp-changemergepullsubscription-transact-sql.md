@@ -16,12 +16,12 @@ ms.assetid: 5e0d04f2-6175-44a2-ad96-a8e2986ce4c9
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 9b7c8e0bd544815b7a26afaccd308d6898e3bc95
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: cf650c095e27fe3a270ad9610e959bd6f5f1a6a3
+ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54136131"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58493113"
 ---
 # <a name="spchangemergepullsubscription-transact-sql"></a>sp_changemergepullsubscription (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -42,26 +42,21 @@ sp_changemergepullsubscription [ [ @publication= ] 'publication' ]
 ```  
   
 ## <a name="arguments"></a>Argomenti  
- [  **@publication=**] **'**_pubblicazione_**'**  
- Nome della pubblicazione. *pubblicazione* viene **sysname**, con un valore predefinito è %.  
+`[ @publication = ] 'publication'` È il nome della pubblicazione. *pubblicazione* viene **sysname**, con un valore predefinito è %.  
   
- [  **@publisher=**] **'**_editore_**'**  
- Nome del server di pubblicazione. *server di pubblicazione*viene **sysname**, con un valore predefinito è %.  
+`[ @publisher = ] 'publisher'` È il nome del server di pubblicazione. *server di pubblicazione*viene **sysname**, con un valore predefinito è %.  
   
- [  **@publisher_db=**] **'**_publisher_db_**'**  
- Nome del database del server di pubblicazione. *publisher_db*viene **sysname**, con un valore predefinito è %.  
+`[ @publisher_db = ] 'publisher_db'` È il nome del server di pubblicazione. *publisher_db*viene **sysname**, con un valore predefinito è %.  
   
- [  **@property=**] **'**_proprietà_**'**  
- Nome della proprietà da modificare. *proprietà* viene **sysname**, e può essere uno dei valori nella tabella.  
+`[ @property = ] 'property'` È il nome della proprietà da modificare. *proprietà* viene **sysname**, e può essere uno dei valori nella tabella.  
   
- [  **@value=**] **'**_valore_**'**  
- Nuovo valore della proprietà specificata. *valore*viene **nvarchar(255**, e può essere uno dei valori nella tabella.  
+`[ @value = ] 'value'` È il nuovo valore per la proprietà specificata. *valore*viene **nvarchar(255**, e può essere uno dei valori nella tabella.  
   
 |Proprietà|Value|Descrizione|  
 |--------------|-----------|-----------------|  
 |**alt_snapshot_folder**||Percorso di archiviazione della cartella snapshot, se diverso da quello predefinito o se si tratta di una cartella aggiuntiva.|  
 |**description**||Descrizione della sottoscrizione pull di tipo merge.|  
-|**server di distribuzione**||Nome del server di distribuzione.|  
+|**distributor**||Nome del server di distribuzione.|  
 |**distributor_login**||ID di accesso utilizzato nel server di distribuzione per l'autenticazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |**distributor_password**||Password (crittografata) utilizzata nel server di distribuzione per l'autenticazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |**distributor_security_mode**|**1**|Consente di utilizzare l'autenticazione di Windows per la connessione al server di distribuzione.|  
@@ -71,7 +66,7 @@ sp_changemergepullsubscription [ [ @publication= ] 'publication' ]
 |**ftp_login**||Disponibile per compatibilità con le versioni precedenti. Nome utente utilizzato per la connessione al servizio FTP.|  
 |**ftp_password**||Disponibile per compatibilità con le versioni precedenti. Password utente utilizzata per la connessione al servizio FTP.|  
 |**ftp_port**||Disponibile per compatibilità con le versioni precedenti. Numero di porta del servizio FTP per il database di distribuzione.|  
-|**Nome host**||Specifica un valore per HOST_NAME() se questa funzione viene utilizzata nella clausola WHERE di un filtro join o di una relazione tra record logici.|  
+|**hostname**||Specifica un valore per HOST_NAME() se questa funzione viene utilizzata nella clausola WHERE di un filtro join o di una relazione tra record logici.|  
 |**internet_login**||Account di accesso utilizzato dall'agente di merge per la connessione al server Web che ospita la sincronizzazione Web tramite l'autenticazione di base.|  
 |**internet_password**||Password di accesso utilizzata dall'agente di merge per la connessione al server Web in cui viene eseguita la sincronizzazione Web tramite l'autenticazione di base.|  
 |**internet_security_mode**|**1**|Utilizza l'autenticazione di Windows per la connessione al server Web in cui viene eseguita la sincronizzazione Web.|  
@@ -86,7 +81,7 @@ sp_changemergepullsubscription [ [ @publication= ] 'publication' ]
 |**publisher_security_mode**|**0**|Esegue la connessione al server di pubblicazione utilizzando l'autenticazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 ||**1**|Esegue la connessione al server di pubblicazione utilizzando l'autenticazione di Windows.|  
 ||**2**|Trigger di sincronizzazione utilizzano un valore statico **sysservers** voce per eseguire la chiamata di procedura remota (RPC) e il server di pubblicazione deve essere definito nel **sysservers** tabella come un server remoto o un server collegato.|  
-|**sync_type**|**Automatico**|Lo schema e i dati iniziali per le tabelle pubblicate vengono trasferiti per primi nel Sottoscrittore.|  
+|**sync_type**|**automatic**|Lo schema e i dati iniziali per le tabelle pubblicate vengono trasferiti per primi nel Sottoscrittore.|  
 ||**Nessuno**|Il Sottoscrittore dispone già dello schema e dei dati iniziali per le tabelle pubblicate. Le tabelle di sistema e i dati vengono sempre trasferiti.|  
 |**use_ftp**|**true**|Utilizza il protocollo FTP anziché il protocollo normale per il recupero degli snapshot.|  
 ||**false**|Utilizza il protocollo normale per il recupero degli snapshot.|  

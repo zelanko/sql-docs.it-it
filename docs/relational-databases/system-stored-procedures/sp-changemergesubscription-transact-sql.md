@@ -16,12 +16,12 @@ ms.assetid: fd820f35-c189-4e2d-884d-b60c1c469f58
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 9ac79494bfb0d08503be6e138bce748596eb8165
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 3b37e09147652e856ac0c4c8160c1d7d3caf6f6d
+ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52819068"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58493953"
 ---
 # <a name="spchangemergesubscription-transact-sql"></a>sp_changemergesubscription (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -43,20 +43,15 @@ sp_changemergesubscription [ [ @publication= ] 'publication' ]
 ```  
   
 ## <a name="arguments"></a>Argomenti  
- [  **@publication=**] **'**_pubblicazione_**'**  
- Nome della pubblicazione da modificare. *pubblicazione* viene **sysname**, con un valore predefinito è NULL. La pubblicazione deve essere già esistente e conforme alle regole per gli identificatori.  
+`[ @publication = ] 'publication'` È il nome della pubblicazione da modificare. *pubblicazione* viene **sysname**, con un valore predefinito è NULL. La pubblicazione deve essere già esistente e conforme alle regole per gli identificatori.  
   
- [  **@subscriber=**] **'**_sottoscrittore_**'**  
- Nome del Sottoscrittore. *Sottoscrittore* viene **sysname**, con un valore predefinito è NULL.  
+`[ @subscriber = ] 'subscriber'` È il nome del sottoscrittore. *Sottoscrittore* viene **sysname**, con un valore predefinito è NULL.  
   
- [  **@subscriber_db=**] **'**_subscriber_db_**'**  
- Nome del database di sottoscrizione. *subscriber_db*viene **sysname**, con un valore predefinito è NULL.  
+`[ @subscriber_db = ] 'subscriber_db'` È il nome del database di sottoscrizione. *subscriber_db*viene **sysname**, con un valore predefinito è NULL.  
   
- [  **@property=**] **'**_proprietà_**'**  
- Proprietà da modificare per la pubblicazione specificata. *proprietà* viene **sysname**, e può essere uno dei valori nella tabella.  
+`[ @property = ] 'property'` È la proprietà da modificare per la pubblicazione specificata. *proprietà* viene **sysname**, e può essere uno dei valori nella tabella.  
   
- [  **@value=**] **'**_valore_**'**  
- Nuovo valore per l'oggetto specificato *proprietà*. *valore* viene **nvarchar(255**, e può essere uno dei valori nella tabella.  
+`[ @value = ] 'value'` Nuovo valore per l'oggetto specificato *proprietà*. *valore* viene **nvarchar(255**, e può essere uno dei valori nella tabella.  
   
 |Proprietà|Value|Descrizione|  
 |--------------|-----------|-----------------|  
@@ -72,7 +67,7 @@ sp_changemergesubscription [ [ @publication= ] 'publication' ]
 ||**0**|Esegue la connessione al Sottoscrittore utilizzando l'autenticazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |**subscriber_login**||Nome dell'account di accesso nel Sottoscrittore.|  
 |**subscriber_password**||Password complessa per l'account di accesso fornito per il Sottoscrittore.|  
-|**sync_type**|**Automatico**|Lo schema e i dati iniziali per le tabelle pubblicate vengono trasferiti per primi nel Sottoscrittore.|  
+|**sync_type**|**automatic**|Lo schema e i dati iniziali per le tabelle pubblicate vengono trasferiti per primi nel Sottoscrittore.|  
 ||**Nessuno**|Il Sottoscrittore dispone già dello schema e dei dati iniziali per le tabelle pubblicate. Le tabelle di sistema e i dati vengono sempre trasferiti.|  
 |**use_interactive_resolver**|**true**|Consente la risoluzione interattiva dei conflitti per tutti gli articoli che la prevedono.|  
 ||**false**|I conflitti vengono risolti automaticamente utilizzando un sistema di risoluzione predefinito o personalizzato.|  

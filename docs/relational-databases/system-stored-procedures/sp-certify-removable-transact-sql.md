@@ -18,19 +18,19 @@ ms.assetid: ca12767f-0ae5-4652-b523-c23473f100a1
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 1d2586f1ad5f7be9b5916caea7699ca9c90f22db
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 97964286b3281eee4e5b6850065c85034628bfdc
+ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47691409"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58493255"
 ---
 # <a name="spcertifyremovable-transact-sql"></a>sp_certify_removable (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Verifica che un database sia configurato correttamente per la distribuzione su supporti rimovibili e segnala eventuali problemi.  
   
-> **IMPORTANTE** [! INCLUDERE[ssNoteDepFutureAvoid](../../t-sql/statements/create-database-sql-server-transact-sql.md) invece.  
+> **IMPORTANTE** [!INCLUDE[ssNoteDepFutureAvoid](../../t-sql/statements/create-database-sql-server-transact-sql.md) instead.  
   
   
  ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
@@ -44,11 +44,9 @@ sp_certify_removable [ @dbname= ] 'dbname'
 ```  
   
 ## <a name="arguments"></a>Argomenti  
- [  **@dbname=**] **'***dbname***'**  
- Viene specificato il database da verificare. *dbname* viene **sysname**.  
+`[ @dbname = ] 'dbname'` Specifica il database da verificare. *dbname* viene **sysname**.  
   
- [  **@autofix=**] **'auto'**  
- Viene assegnata la proprietà del database e di tutti i relativi oggetti all'amministratore di sistema e vengono eliminati tutti gli utenti del database creati dall'utente e tutte le autorizzazioni non predefinite. *Auto* viene **nvarchar(4)**, con un valore predefinito è NULL.  
+`[ @autofix = ] 'auto'` Assegna la proprietà del database e tutti gli oggetti di database per l'amministratore di sistema e vengono eliminati tutti gli utenti del database creato dall'utente e le autorizzazioni non predefinite. *Auto* viene **nvarchar(4)**, con un valore predefinito è NULL.  
   
 ## <a name="return-code-values"></a>Valori restituiti  
  0 (esito positivo) o 1 (esito negativo)  

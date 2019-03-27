@@ -16,12 +16,12 @@ ms.assetid: 04f503a1-307c-4de0-bac6-e6e97d5b6940
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 12ba78e62b0441a76cea2b10ebaf13caec767443
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: 0c637755741332800a1c3eca2b80c9c001b550d3
+ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54133901"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58492683"
 ---
 # <a name="spchangedistributorproperty-transact-sql"></a>sp_changedistributor_property (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -39,16 +39,14 @@ sp_changedistributor_property [ [ @property= ] 'property' ]
 ```  
   
 ## <a name="arguments"></a>Argomenti  
- [  **@property=**] **'**_proprietà_**'**  
- Proprietà di un determinato server di distribuzione. *proprietà* viene **sysname**, i possibili valori sono i seguenti.  
+`[ @property = ] 'property'` È la proprietà per un determinato server di distribuzione. *proprietà* viene **sysname**, i possibili valori sono i seguenti.  
   
 |Value|Descrizione|  
 |-----------|-----------------|  
 |**heartbeat_interval**|Periodo massimo in minuti durante il quale un agente può essere eseguito senza registrare alcun messaggio di stato.|  
 |NULL (predefinito)|Tutti disponibili *proprietà* vengono stampati i valori.|  
   
- [  **@value=**] **'**_valore_**'**  
- Valore per la proprietà specificata del server di distribuzione. *valore* viene **nvarchar (255)**, con un valore predefinito è NULL.  
+`[ @value = ] 'value'` È il valore per la proprietà server di distribuzione specificata. *valore* viene **nvarchar (255)**, con un valore predefinito è NULL.  
   
 ## <a name="return-code-values"></a>Valori restituiti  
  **0** (esito positivo) o **1** (errore)  

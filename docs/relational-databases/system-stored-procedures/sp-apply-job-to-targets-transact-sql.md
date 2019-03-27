@@ -18,12 +18,12 @@ ms.assetid: 4a3e9173-7e3c-4100-a9ac-2f5d2c60a8b0
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 1583f6de4938451b03eabfb7c9425120fa37f2fc
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: f293e906d647d318bca5d730d0164b75cc88fc6f
+ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52537828"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58494093"
 ---
 # <a name="spapplyjobtotargets-transact-sql"></a>sp_apply_job_to_targets (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -43,23 +43,18 @@ sp_apply_job_to_targets { [ @job_id = ] job_id | [ @job_name = ] 'job_name' }
 ```  
   
 ## <a name="arguments"></a>Argomenti  
- [ **@job_id =**] *job_id*  
- Numero di identificazione del processo da applicare ai server o ai gruppi di server di destinazione specificati. *job_id* viene **uniqueidentifier**, con un valore predefinito è NULL.  
+`[ @job_id = ] job_id` Il numero di identificazione del processo da applicare ai server di destinazione specificato o gruppi di server di destinazione. *job_id* viene **uniqueidentifier**, con un valore predefinito è NULL.  
   
- [  **@job_name =**] **'**_job_name_**'**  
- Nome del processo da applicare ai server o ai gruppi di server di destinazione specificati. *nome_processo* viene **sysname**, con un valore predefinito è NULL.  
+`[ @job_name = ] 'job_name'` Il nome del processo da applicare all'oggetto specificato il server o i gruppi di server di destinazione. *nome_processo* viene **sysname**, con un valore predefinito è NULL.  
   
 > [!NOTE]  
 >  Entrambi *job_id* oppure *job_name* devono essere specificati, ma non è possibile specificarli entrambi.  
   
- [  **@target_server_groups =**] **'**_target_server_groups_**'**  
- Elenco delimitato da virgole dei gruppi di server di destinazione ai quali si desidera applicare il processo specificato. *target_server_groups* viene **nvarchar(2048)**, con un valore predefinito è NULL.  
+`[ @target_server_groups = ] 'target_server_groups'` Elenco delimitato da virgole dei gruppi di server di destinazione a cui il processo specificato è da applicare. *target_server_groups* viene **nvarchar(2048)**, con un valore predefinito è NULL.  
   
- [  **@target_servers=** ] **'**_target_servers_**'**  
- Elenco delimitato da virgole dei server di destinazione ai quali si desidera applicare il processo specificato. *target_servers*viene **nvarchar(2048)**, con un valore predefinito è NULL.  
+`[ @target_servers = ] 'target_servers'` Elenco delimitato da virgole dei server di destinazione a cui il processo specificato è da applicare. *target_servers*viene **nvarchar(2048)**, con un valore predefinito è NULL.  
   
- [  **@operation=** ] **'**_operazione_**'**  
- Indica se il processo specificato deve essere applicato o rimosso dai server o dai gruppi di server di destinazione specificati. *operazione*viene **varchar(7)**, con un valore predefinito è APPLY. Operazioni valide sono **APPLY** e **rimuovere**.  
+`[ @operation = ] 'operation'` È fatto che il processo specificato deve essere applicato a o rimosso dal server di destinazione specificato o gruppi di server di destinazione. *operazione*viene **varchar(7)**, con un valore predefinito è APPLY. Operazioni valide sono **APPLY** e **rimuovere**.  
   
 ## <a name="return-code-values"></a>Valori restituiti  
  **0** (esito positivo) o **1** (errore)  

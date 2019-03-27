@@ -18,12 +18,12 @@ ms.assetid: d9b41853-e22d-4813-a79f-57efb4511f09
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 4193e073f4ad4c52d6b2c7f6b82c6246107e85a1
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: 750d299b951b403ed6fe51baa43b047505860c3f
+ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54127071"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58493803"
 ---
 # <a name="spaddalert-transact-sql"></a>sp_add_alert (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -54,23 +54,18 @@ sp_add_alert [ @name = ] 'name'
 ```  
   
 ## <a name="arguments"></a>Argomenti  
- [  **@name =** ] **'**_nome_**'**  
- Nome dell'avviso. Tale nome viene visualizzato nel messaggio di posta elettronica o di cercapersone inviato in risposta all'avviso. Deve essere univoco e può contenere la percentuale (**%**) caratteri. *nome* viene **sysname**, non prevede alcun valore predefinito.  
+`[ @name = ] 'name'` Il nome dell'avviso. Tale nome viene visualizzato nel messaggio di posta elettronica o di cercapersone inviato in risposta all'avviso. Deve essere univoco e può contenere la percentuale (**%**) caratteri. *nome* viene **sysname**, non prevede alcun valore predefinito.  
   
- [ **@message_id =** ] *message_id*  
- Numero dell'errore del messaggio che definisce l'avviso (Corrisponde in genere a un numero di errore il **sysmessages** tabella.) *message_id* viene **int**, il valore predefinito è **0**. Se *severity* viene usato per l'avviso, definire *message_id* deve essere **0** o NULL.  
+`[ @message_id = ] message_id` Il numero di errore di messaggio che definisce l'avviso. (Corrisponde in genere a un numero di errore il **sysmessages** tabella.) *message_id* viene **int**, il valore predefinito è **0**. Se *severity* viene usato per l'avviso, definire *message_id* deve essere **0** o NULL.  
   
 > [!NOTE]  
 >  Solo **sysmessages** errori scritti nel registro applicazioni di Microsoft Windows possono causare un avviso da inviare.  
   
- [  **@severity =** ] *gravità*  
- Il livello di gravità (da **1** attraverso **25**) che definisce l'avviso. Eventuali [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] messaggio archiviato nel **sysmessages** inviata alla tabella il [!INCLUDE[msCoName](../../includes/msconame-md.md)] registro applicazioni di Windows con indicazione della gravità provoca l'avviso da inviare. *livello di gravità* viene **int**, con un valore predefinito è 0. Se *message_id* viene usato per l'avviso, definire *gravità* deve essere **0**.  
+`[ @severity = ] severity` Il livello di gravità (da **1** attraverso **25**) che definisce l'avviso. Eventuali [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] messaggio archiviato nel **sysmessages** inviata alla tabella il [!INCLUDE[msCoName](../../includes/msconame-md.md)] registro applicazioni di Windows con indicazione della gravità provoca l'avviso da inviare. *livello di gravità* viene **int**, con un valore predefinito è 0. Se *message_id* viene usato per l'avviso, definire *gravità* deve essere **0**.  
   
- [  **@enabled =** ] *abilitata*  
- Indica lo stato corrente dell'avviso. *abilitata* viene **tinyint**, con un valore predefinito è 1 (abilitato). Se **0**, l'avviso non è abilitato e non venga attivato.  
+`[ @enabled = ] enabled` Indica lo stato corrente dell'avviso. *abilitata* viene **tinyint**, con un valore predefinito è 1 (abilitato). Se **0**, l'avviso non è abilitato e non venga attivato.  
   
- [  **@delay_between_responses =** ] *delay_between_responses*  
- Periodo di attesa, in secondi, tra le risposte all'avviso. *delay_between_responses*viene **int**, il valore predefinito è **0**, non ovvero non esiste alcun intervallo di attesa tra le risposte (ogni occorrenza dell'avviso genera una risposta). La risposta può assumere una delle due forme seguenti:  
+`[ @delay_between_responses = ] delay_between_responses` Periodo di attesa, espresso in secondi, tra le risposte all'avviso. *delay_between_responses*viene **int**, il valore predefinito è **0**, non ovvero non esiste alcun intervallo di attesa tra le risposte (ogni occorrenza dell'avviso genera una risposta). La risposta può assumere una delle due forme seguenti:  
   
 -   Una o più notifiche inviate tramite posta elettronica o cercapersone.  
   
@@ -78,11 +73,9 @@ sp_add_alert [ @name = ] 'name'
   
  L'impostazione di tale valore impedisce, ad esempio, l'invio di più messaggi di posta elettronica quando un avviso viene generato ripetutamente in un breve periodo di tempo.  
   
- [  **@notification_message =** ] **'**_notification_message_**'**  
- Messaggio aggiuntivo facoltativo inviato all'operatore come parte del messaggio di posta elettronica, **net send**, o notifica tramite cercapersone. *notification_message* viene **nvarchar(512)**, con un valore predefinito è NULL. Che specifica *notification_message* è utile per aggiungere note speciali, ad esempio procedure correttive.  
+`[ @notification_message = ] 'notification_message'` Messaggio aggiuntivo facoltativo inviato all'operatore come parte del messaggio di posta elettronica, **net send**, o notifica tramite cercapersone. *notification_message* viene **nvarchar(512)**, con un valore predefinito è NULL. Che specifica *notification_message* è utile per aggiungere note speciali, ad esempio procedure correttive.  
   
- [ **@include_event_description_in =** ] *include_event_description_in*  
- Indica se la descrizione dell'errore di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] deve essere inclusa nel messaggio di notifica. *include_event_description_in*viene **tinyint**, il valore predefinito è **5** (messaggio di posta elettronica e **net send**) e può avere uno o più dei valori seguenti combinati con un **o** operatore logico.  
+`[ @include_event_description_in = ] include_event_description_in` È se la descrizione del [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] errore debba essere inclusi come parte del messaggio di notifica. *include_event_description_in*viene **tinyint**, il valore predefinito è **5** (messaggio di posta elettronica e **net send**) e può avere uno o più dei valori seguenti combinati con un **o** operatore logico.  
   
 > [!IMPORTANT]
 >  Le opzioni Cercapersone e **net send** verranno rimosse da [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent in una versione futura di [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Evitare pertanto di utilizzarle in un nuovo progetto di sviluppo e prevedere interventi di modifica nelle applicazioni in cui sono state implementate.  
@@ -94,26 +87,20 @@ sp_add_alert [ @name = ] 'name'
 |**2**|Cercapersone|  
 |**4**|**net send**|  
   
- [  **@database_name =** ] **'**_database_**'**  
- Database in cui deve verificarsi l'errore affinché l'avviso venga generato. Se *database*viene omesso, l'avviso viene attivato indipendentemente dalla posizione dell'errore. *database* viene **sysname**. I nomi racchiusi tra parentesi quadre ([ ]) non sono ammessi. Il valore predefinito è NULL.  
+`[ @database_name = ] 'database'` Il database in cui deve verificarsi l'errore affinché l'avviso venga generato. Se *database*viene omesso, l'avviso viene attivato indipendentemente dalla posizione dell'errore. *database* viene **sysname**. I nomi racchiusi tra parentesi quadre ([ ]) non sono ammessi. Il valore predefinito è NULL.  
   
- [  **@event_description_keyword =** ] **'**_event_description_keyword_pattern_**'**  
- Sequenza di caratteri della descrizione dell'errore di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. È possibile utilizzare i caratteri dei criteri di ricerca dell'espressione LIKE [!INCLUDE[tsql](../../includes/tsql-md.md)]. *event_description_keyword_pattern* viene **nvarchar(100)**, con un valore predefinito è NULL. Questo parametro è utile per filtrare i nomi degli oggetti (ad esempio, **% customer_table %**).  
+`[ @event_description_keyword = ] 'event_description_keyword_pattern'` La sequenza di caratteri che la descrizione del [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] errore deve essere uguali. È possibile utilizzare i caratteri dei criteri di ricerca dell'espressione LIKE [!INCLUDE[tsql](../../includes/tsql-md.md)]. *event_description_keyword_pattern* viene **nvarchar(100)**, con un valore predefinito è NULL. Questo parametro è utile per filtrare i nomi degli oggetti (ad esempio, **% customer_table %**).  
   
- [ **@job_id =** ] *job_id*  
- Numero di identificazione del processo da eseguire in risposta all'avviso. *job_id* viene **uniqueidentifier**, con un valore predefinito è NULL.  
+`[ @job_id = ] job_id` Il numero di identificazione del processo da eseguire in risposta all'avviso. *job_id* viene **uniqueidentifier**, con un valore predefinito è NULL.  
   
- [  **@job_name =** ] **'**_job_name_**'**  
- Nome del processo da eseguire in risposta all'avviso. *nome_processo*viene **sysname**, con un valore predefinito è NULL.  
+`[ @job_name = ] 'job_name'` Il nome del processo da eseguire in risposta all'avviso. *nome_processo*viene **sysname**, con un valore predefinito è NULL.  
   
 > [!NOTE]  
 >  Entrambi *job_id* oppure *job_name* devono essere specificati, ma non è possibile specificarli entrambi.  
   
- [ **@raise_snmp_trap =** ] *raise_snmp_trap*  
- Non implementato in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] versione 7.0. *raise_snmp_trap* viene **tinyint**, con un valore predefinito è 0.  
+`[ @raise_snmp_trap = ] raise_snmp_trap` Non è implementata in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] versione 7.0. *raise_snmp_trap* viene **tinyint**, con un valore predefinito è 0.  
   
- [  **@performance_condition =** ] **'**_performance_condition_**'**  
- È un valore espresso nel formato '*itemcomparatorvalue*'. *performance_condition* viene **nvarchar(512)** con un valore predefinito è NULL ed è costituito da questi elementi.  
+`[ @performance_condition = ] 'performance_condition'` È un valore espresso nel formato '*itemcomparatorvalue*'. *performance_condition* viene **nvarchar(512)** con un valore predefinito è NULL ed è costituito da questi elementi.  
   
 |Componente del formato|Descrizione|  
 |--------------------|-----------------|  
@@ -121,14 +108,11 @@ sp_add_alert [ @name = ] 'name'
 |*Criterio di confronto*|Uno degli operatori seguenti: >, < o =|  
 |*Valore*|Valore numerico del contatore|  
   
- [  **@category_name =** ] **'**_categoria_**'**  
- Nome della categoria di avvisi. *categoria* viene **sysname**, con un valore predefinito è NULL.  
+`[ @category_name = ] 'category'` Il nome della categoria di avvisi. *categoria* viene **sysname**, con un valore predefinito è NULL.  
   
- [ **@wmi_namespace**=] **'**_wmi_namespace_**'**  
- Spazio dei nomi WMI in cui eseguire query per gli eventi. *wmi_namespace* viene **sysname**, con un valore predefinito è NULL. Sono supportati solo gli spazi di nomi nel server locale.  
+`[ @wmi_namespace = ] 'wmi_namespace'` Lo spazio dei nomi WMI per eseguire query per gli eventi. *wmi_namespace* viene **sysname**, con un valore predefinito è NULL. Sono supportati solo gli spazi di nomi nel server locale.  
   
- [ **@wmi_query**=] **'**_wmi_query_**'**  
- Query che consente di specificare l'evento WMI per l'avviso. *Wmi_query* viene **nvarchar(512)**, con un valore predefinito è NULL.  
+`[ @wmi_query = ] 'wmi_query'` La query che specifica l'evento WMI per l'avviso. *Wmi_query* viene **nvarchar(512)**, con un valore predefinito è NULL.  
   
 ## <a name="return-code-values"></a>Valori restituiti  
  **0** (esito positivo) o **1** (errore)  

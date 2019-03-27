@@ -18,12 +18,12 @@ ms.assetid: 0525e0a2-ed0b-4e69-8a4c-a9e3e3622fbd
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: bb19049185ab79178213b1dc042a1c23f8978374
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a7c6e4531597faf9cacb883cf3ea3432b6e8ff9f
+ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47704599"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58492521"
 ---
 # <a name="spaddnotification-transact-sql"></a>sp_add_notification (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -41,16 +41,13 @@ sp_add_notification [ @alert_name = ] 'alert' ,
 ```  
   
 ## <a name="arguments"></a>Argomenti  
- [  **@alert_name=** ] **'***avviso***'**  
- Avviso da notificare. *avviso* viene **sysname**, non prevede alcun valore predefinito.  
+`[ @alert_name = ] 'alert'` L'avviso per questa notifica. *avviso* viene **sysname**, non prevede alcun valore predefinito.  
   
- [  **@operator_name=** ] **'***operatore***'**  
- Operatore a cui inviare una notifica quando viene generato l'avviso. *operatore* viene **sysname**, non prevede alcun valore predefinito.  
+`[ @operator_name = ] 'operator'` L'operatore da notificare quando viene generato l'avviso. *operatore* viene **sysname**, non prevede alcun valore predefinito.  
   
- [  **@notification_method=** ] *notification_method*  
- Metodo adottato per l'invio della notifica all'operatore. *notification_method* viene **tinyint**, non prevede alcun valore predefinito. *notification_method* può essere uno o più dei valori seguenti combinati con un' **OR** operatore logico.  
+`[ @notification_method = ] notification_method` Il metodo mediante il quale l'operatore riceve una notifica. *notification_method* viene **tinyint**, non prevede alcun valore predefinito. *notification_method* può essere uno o più dei valori seguenti combinati con un' **OR** operatore logico.  
   
-|valore|Description|  
+|Value|Descrizione|  
 |-----------|-----------------|  
 |**1**|Posta elettronica|  
 |**2**|Cercapersone|  
@@ -77,7 +74,7 @@ sp_add_notification [ @alert_name = ] 'alert' ,
 ## <a name="examples"></a>Esempi  
  Nell'esempio seguente viene aggiunta una notifica di posta elettronica per l'avviso specificato (`Test Alert`).  
   
-> **Nota:** in questo esempio si presuppone che `Test Alert` esiste già e che `François Ajenstat` è un nome di operatore valido.  
+> **NOTA:** Nell'esempio si presume che l'avviso `Test Alert` sia già esistente e che `François Ajenstat` sia un nome di operatore valido.  
   
 ```  
 USE msdb ;  

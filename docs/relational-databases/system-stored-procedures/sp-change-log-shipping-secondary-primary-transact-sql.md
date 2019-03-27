@@ -18,12 +18,12 @@ ms.assetid: 5bcb4df7-6df3-4f2b-9207-b97b5addf2a6
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: df800e141a922250cea37eee1aeee5af6f373f7f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a84ed0105558772752f4d9871ad28a5bffde6bec
+ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47650229"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58493073"
 ---
 # <a name="spchangelogshippingsecondaryprimary-transact-sql"></a>sp_change_log_shipping_secondary_primary (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -48,39 +48,31 @@ sp_change_log_shipping_secondary_primary
 ```  
   
 ## <a name="arguments"></a>Argomenti  
- [ **@primary_server** = ] '*primary_server*'  
- Il nome dell'istanza primaria del [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] nella configurazione di log shipping. *primary_server* viene **sysname** e non può essere NULL.  
+`[ @primary_server = ] 'primary_server'` Il nome dell'istanza primaria del [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] nella configurazione di log shipping. *primary_server* viene **sysname** e non può essere NULL.  
   
- [ **@primary_database** =] '*primary_database*'  
- Nome del database sul server primario. *primary_database* viene **sysname**, non prevede alcun valore predefinito.  
+`[ @primary_database = ] 'primary_database'` È il nome del database nel server primario. *primary_database* viene **sysname**, non prevede alcun valore predefinito.  
   
- [ **@backup_source_directory** =] '*backup_source_directory*'  
- Directory in cui vengono archiviati i file di backup del log delle transazioni dal server primario. *backup_source_directory* viene **nvarchar(500)** e non può essere NULL.  
+`[ @backup_source_directory = ] 'backup_source_directory'` La directory in cui sono archiviati i file di backup del log delle transazioni dal server primario. *backup_source_directory* viene **nvarchar(500)** e non può essere NULL.  
   
- [ **@backup_destination_directory** =] '*backup_destination_directory*'  
- Directory nel server secondario in cui vengono copiati i file di backup. *backup_destination_directory* viene **nvarchar(500)** e non può essere NULL.  
+`[ @backup_destination_directory = ] 'backup_destination_directory'` La directory nel server secondario in cui vengono copiati i file di backup. *backup_destination_directory* viene **nvarchar(500)** e non può essere NULL.  
   
- [ **@file_retention_period** =] '*file_retention_period*'  
- Periodo di memorizzazione della cronologia espresso in minuti. *history_retention_period* viene **int**, con un valore predefinito è NULL. Se non si specifica un valore, verrà utilizzato il valore 14420.  
+`[ @file_retention_period = ] 'file_retention_period'` È il periodo di tempo in minuti in cui verrà mantenuta la cronologia. *history_retention_period* viene **int**, con un valore predefinito è NULL. Se non si specifica un valore, verrà utilizzato il valore 14420.  
   
- [ **@monitor_server_security_mode** =] '*monitor_server_security_mode*'  
- Modalità di sicurezza utilizzata per connettersi al server di monitoraggio.  
+`[ @monitor_server_security_mode = ] 'monitor_server_security_mode'` La modalità di sicurezza utilizzata per la connessione al server di monitoraggio.  
   
  1 = Autenticazione di Windows  
   
  0 = [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] l'autenticazione. *monitor_server_security_mode* viene **bit** e non può essere NULL.  
   
- [ **@monitor_server_login** =] '*monitor_server_login*'  
- Nome utente dell'account utilizzato per accedere al server di monitoraggio.  
+`[ @monitor_server_login = ] 'monitor_server_login'` È il nome utente dell'account usato per accedere al server di monitoraggio.  
   
- [ **@monitor_server_password** =] '*monitor_server_password*'  
- Password dell'account utilizzato per accedere al server di monitoraggio.  
+`[ @monitor_server_password = ] 'monitor_server_password'` È la password dell'account usato per accedere al server di monitoraggio.  
   
 ## <a name="return-code-values"></a>Valori restituiti  
  0 (esito positivo) o 1 (esito negativo)  
   
 ## <a name="result-sets"></a>Set di risultati  
- Nessuno  
+ None  
   
 ## <a name="remarks"></a>Note  
  **sp_change_log_shipping_secondary_primary** deve essere eseguita la **master** database nel server secondario. Questa stored procedure esegue le operazioni seguenti:  

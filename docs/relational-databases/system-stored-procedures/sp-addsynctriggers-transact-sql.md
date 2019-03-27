@@ -16,12 +16,12 @@ ms.assetid: e37d0c3b-19bf-4719-9535-96ba361372b3
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 89a6a997fd272985bd60d0b5d574fea07463f54d
-ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
+ms.openlocfilehash: 3ae733d560c227ccf282dfe4caed3935d9ffaebe
+ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/18/2018
-ms.locfileid: "53588286"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58493643"
 ---
 # <a name="spaddsynctriggers-transact-sql"></a>sp_addsynctriggers (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -58,59 +58,41 @@ sp_addsynctriggers [ @sub_table = ] 'sub_table'
 ```  
   
 ## <a name="arguments"></a>Argomenti  
- [  **@sub_table=**] **'**_sub_table_**'**  
- Nome della tabella del Sottoscrittore. *sub_table* viene **sysname**, non prevede alcun valore predefinito.  
+`[ @sub_table = ] 'sub_table'` È il nome della tabella del sottoscrittore. *sub_table* viene **sysname**, non prevede alcun valore predefinito.  
   
- [  **@sub_table_owner=**] **'**_sub_table_owner_**'**  
- Nome del proprietario della tabella del Sottoscrittore. *sub_table_owner* viene **sysname**, non prevede alcun valore predefinito.  
+`[ @sub_table_owner = ] 'sub_table_owner'` È il nome del proprietario della tabella del sottoscrittore. *sub_table_owner* viene **sysname**, non prevede alcun valore predefinito.  
   
- [  **@publisher=**] **'**_editore_**'**  
- Nome del server di pubblicazione. *server di pubblicazione* viene **sysname**, non prevede alcun valore predefinito.  
+`[ @publisher = ] 'publisher'` È il nome del server di pubblicazione. *server di pubblicazione* viene **sysname**, non prevede alcun valore predefinito.  
   
- [  **@publisher_db=**] **'**_publisher_db_**'**  
- Nome del database del server di pubblicazione. *publisher_db* viene **sysname**, non prevede alcun valore predefinito. Se è NULL, viene utilizzato il database corrente.  
+`[ @publisher_db = ] 'publisher_db'` È il nome del server di pubblicazione. *publisher_db* viene **sysname**, non prevede alcun valore predefinito. Se è NULL, viene utilizzato il database corrente.  
   
- [  **@publication=**] **'**_pubblicazione_**'**  
- Nome della pubblicazione. *pubblicazione* viene **sysname**, non prevede alcun valore predefinito.  
+`[ @publication = ] 'publication'` È il nome della pubblicazione. *pubblicazione* viene **sysname**, non prevede alcun valore predefinito.  
   
- [  **@ins_proc=**] **'**_ins_proc_**'**  
- Nome della stored procedure che supporta gli inserimenti tramite la sincronizzazione delle transazioni nel server di pubblicazione. *ins_proc* viene **sysname**, non prevede alcun valore predefinito.  
+`[ @ins_proc = ] 'ins_proc'` È il nome della stored procedure che supporta gli inserimenti di sincronizzazione delle transazioni nel server di pubblicazione. *ins_proc* viene **sysname**, non prevede alcun valore predefinito.  
   
- [  **@upd_proc=**] **'**_upd_proc_**'**  
- Nome della stored procedure che supporta gli aggiornamenti tramite la sincronizzazione delle transazioni nel server di pubblicazione. *ins_proc* viene **sysname**, non prevede alcun valore predefinito.  
+`[ @upd_proc = ] 'upd_proc'` È il nome della stored procedure che supporta gli aggiornamenti sincroni delle transazioni nel server di pubblicazione. *ins_proc* viene **sysname**, non prevede alcun valore predefinito.  
   
- [  **@del_proc=**] **'**_del_proc_**'**  
- Nome della stored procedure che supporta le eliminazioni tramite la sincronizzazione delle transazioni nel server di pubblicazione. *ins_proc* viene **sysname**, non prevede alcun valore predefinito.  
+`[ @del_proc = ] 'del_proc'` È il nome della stored procedure che supporta le eliminazioni di sincronizzazione delle transazioni nel server di pubblicazione. *ins_proc* viene **sysname**, non prevede alcun valore predefinito.  
   
- [  **@cftproc =** ] **'**_cftproc_**'**  
- Nome della procedura a generazione automatica utilizzata dalle pubblicazioni che consentono l'aggiornamento in coda. *cftproc* viene **sysname**, non prevede alcun valore predefinito. Nel caso di pubblicazioni che consentono l'aggiornamento immediato, questo valore è NULL. Questo parametro viene applicato alle pubblicazioni che consentono l'aggiornamento in coda (aggiornamento in coda e aggiornamento immediato sostituito dall'aggiornamento in coda in caso di errore).  
+`[ @cftproc = ] 'cftproc'` È il nome della procedura generata automaticamente utilizzata dalle pubblicazioni che consentono l'aggiornamento in coda. *cftproc* viene **sysname**, non prevede alcun valore predefinito. Nel caso di pubblicazioni che consentono l'aggiornamento immediato, questo valore è NULL. Questo parametro viene applicato alle pubblicazioni che consentono l'aggiornamento in coda (aggiornamento in coda e aggiornamento immediato sostituito dall'aggiornamento in coda in caso di errore).  
   
- [  **@proc_owner =** ] **'**_proc_owner_**'**  
- Specifica l'account utente utilizzato nel server di pubblicazione per la creazione di tutte le stored procedure a generazione automatica per l'aggiornamento della pubblicazione (aggiornamento in coda e/o immediato). *proc_owner* viene **sysname** non prevede alcun valore predefinito.  
+`[ @proc_owner = ] 'proc_owner'` Specifica l'account utente create nel server di pubblicazione di tutte le generate automaticamente stored procedure per l'aggiornamento della pubblicazione (in coda e/o immediato). *proc_owner* viene **sysname** non prevede alcun valore predefinito.  
   
- [  **@identity_col=**] **'**_identity_col_**'**  
- Nome della colonna Identity nel server di pubblicazione. *identity_col* viene **sysname**, con un valore predefinito è NULL.  
+`[ @identity_col = ] 'identity_col'` È il nome della colonna identity nel server di pubblicazione. *identity_col* viene **sysname**, con un valore predefinito è NULL.  
   
- [  **@ts_col=**] **'**_timestamp_col_**'**  
- È il nome del **timestamp** colonna nel server di pubblicazione. *timestamp_col* viene **sysname**, con un valore predefinito è NULL.  
+`[ @ts_col = ] 'timestamp_col'` È il nome del **timestamp** colonna nel server di pubblicazione. *timestamp_col* viene **sysname**, con un valore predefinito è NULL.  
   
- [  **@filter_clause=**] **'**_filter_clause_**'**  
- Clausola di restrizione (WHERE) che definisce un filtro orizzontale. Quando si specifica la clausola di restrizione, omettere la parola chiave WHERE. *filter_clause*viene **nvarchar (4000)**, con un valore predefinito è NULL.  
+`[ @filter_clause = ] 'filter_clause'` È una restrizione clausola (WHERE) che definisce un filtro orizzontale. Quando si specifica la clausola di restrizione, omettere la parola chiave WHERE. *filter_clause*viene **nvarchar (4000)**, con un valore predefinito è NULL.  
   
- [  **@primary_key_bitmap =**] **'**_primary_key_bitmap_**'**  
- Mappa di bit delle colonne chiave primaria nella tabella. *primary_key_bitmap* viene **varbinary(4000**, non prevede alcun valore predefinito.  
+`[ @primary_key_bitmap = ] 'primary_key_bitmap'` È una mappa di bit delle colonne chiave primaria nella tabella. *primary_key_bitmap* viene **varbinary(4000**, non prevede alcun valore predefinito.  
   
- [  **@identity_support =** ] *identity_support*  
- Abilita e disabilita la gestione automatica degli intervalli di valori Identity quando viene utilizzato l'aggiornamento in coda. *identity_support* è un **bit**, il valore predefinito è **0**. **0** indica che non siano presenti identità intervalli di valori, il supporto **1** consente degli intervalli di valori identity automatico.  
+`[ @identity_support = ] identity_support` Abilita e disabilita degli intervalli di valori identity automatico quando si utilizza l'aggiornamento in coda. *identity_support* è un **bit**, il valore predefinito è **0**. **0** indica che non siano presenti identità intervalli di valori, il supporto **1** consente degli intervalli di valori identity automatico.  
   
- [  **@independent_agent =** ] *independent_agent*  
- Specifica se è disponibile un solo agente di distribuzione (agente indipendente) per la pubblicazione oppure un agente di distribuzione per ogni coppia database di pubblicazione/database di sottoscrizione (agente condiviso). Questo valore è determinato dal valore della proprietà independent_agent della pubblicazione definito nel server di pubblicazione. *independent_agent* è di tipo bit e il valore predefinito **0**. Se **0**, l'agente è un agente condiviso. Se **1**, l'agente è un agente indipendente.  
+`[ @independent_agent = ] independent_agent` Indica se sono presenti un singolo agente di distribuzione (agente indipendente) per questa pubblicazione o un agente di distribuzione per ogni pubblicazione database di sottoscrizione coppia database del server (agente condiviso). Questo valore è determinato dal valore della proprietà independent_agent della pubblicazione definito nel server di pubblicazione. *independent_agent* è di tipo bit e il valore predefinito **0**. Se **0**, l'agente è un agente condiviso. Se **1**, l'agente è un agente indipendente.  
   
- [  **@distributor =** ] **'**_distributore_**'**  
- Nome del server di distribuzione. *server di distribuzione* viene **sysname**, non prevede alcun valore predefinito.  
+`[ @distributor = ] 'distributor'` È il nome del server di distribuzione. *server di distribuzione* viene **sysname**, non prevede alcun valore predefinito.  
   
- [ **@pubversion**=] *pubversion*  
- Indica la versione del server di pubblicazione. *pubversion* viene **int**, con un valore predefinito è 1. **1** significa che è la versione di server di pubblicazione [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] Service Pack 2 o precedente. **2** significa che il server di pubblicazione [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] Service Pack 3 (SP3) o versione successiva. *pubversion* deve essere impostata esplicitamente su **2** quando la versione del server di pubblicazione è [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] SP3 o versione successiva.  
+`[ @pubversion = ] pubversion` Indica la versione del server di pubblicazione. *pubversion* viene **int**, con un valore predefinito è 1. **1** significa che è la versione di server di pubblicazione [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] Service Pack 2 o precedente. **2** significa che il server di pubblicazione [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] Service Pack 3 (SP3) o versione successiva. *pubversion* deve essere impostata esplicitamente su **2** quando la versione del server di pubblicazione è [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] SP3 o versione successiva.  
   
 ## <a name="return-code-values"></a>Valori restituiti  
  **0** (esito positivo) o **1** (errore)  

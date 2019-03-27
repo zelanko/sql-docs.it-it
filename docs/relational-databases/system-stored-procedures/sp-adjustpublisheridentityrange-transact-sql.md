@@ -16,12 +16,12 @@ ms.assetid: 64f111fd-fb7d-4459-93f7-65f0f8dd7efe
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 508eaa25657393dba0d84e0bda6eb0582b3f90fb
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 399fe5322cb8cb5c3d20a486aac3baa810439ce7
+ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52822075"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58492354"
 ---
 # <a name="spadjustpublisheridentityrange-transact-sql"></a>sp_adjustpublisheridentityrange (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -40,14 +40,11 @@ sp_adjustpublisheridentityrange [ [ @publication = ] 'publication' ]
 ```  
   
 ## <a name="arguments"></a>Argomenti  
- [  **@publication=**] **'***pubblicazione***'**  
- Nome della pubblicazione in cui vengono riallocati i nuovi intervalli di valori Identity. *pubblicazione* viene **sysname**, con un valore predefinito è NULL.  
+`[ @publication = ] 'publication'` È il nome della pubblicazione in cui vengono riallocati i nuovi intervalli di valori identity. *pubblicazione* viene **sysname**, con un valore predefinito è NULL.  
   
- [  **@table_name=**] **'***table_name***'**  
- Nome della tabella in cui vengono riallocati i nuovi intervalli di valori Identity. *TABLE_NAME* viene **sysname**, con un valore predefinito è NULL.  
+`[ @table_name = ] 'table_name'` È il nome della tabella in cui vengono riallocati i nuovi intervalli di valori identity. *TABLE_NAME* viene **sysname**, con un valore predefinito è NULL.  
   
- [ **@table_owner=**] **'***table_owner***'**  
- Proprietario della tabella nel server di pubblicazione. *TABLE_OWNER* viene **sysname**, con un valore predefinito è NULL. Se *table_owner* viene omesso, viene usato il nome dell'utente corrente.  
+`[ @table_owner = ] 'table_owner'` È il proprietario della tabella nel server di pubblicazione. *TABLE_OWNER* viene **sysname**, con un valore predefinito è NULL. Se *table_owner* viene omesso, viene usato il nome dell'utente corrente.  
   
 ## <a name="return-code-values"></a>Valori restituiti  
  **0** (esito positivo) o **1** (errore)  

@@ -16,12 +16,12 @@ ms.assetid: 2ea27001-74f4-463e-bf1b-b6b5a86b9219
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 7ad6e8fe499e3ffe57a745cfb924bdc792938dd9
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 991ee7139ae4a323a1d426d1882e4f6b3a4df871
+ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52810943"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58493513"
 ---
 # <a name="spaddtabletocontents-transact-sql"></a>sp_addtabletocontents (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -40,14 +40,11 @@ sp_addtabletocontents [ @table_name = ] 'table_name'
 ```  
   
 ## <a name="arguments"></a>Argomenti  
- [  **@table_name=**] **'**_table_name_**'**  
- Nome della tabella. *TABLE_NAME* viene **sysname**, non prevede alcun valore predefinito.  
+`[ @table_name = ] 'table_name'` È il nome della tabella. *TABLE_NAME* viene **sysname**, non prevede alcun valore predefinito.  
   
- [  **@owner_name=**] **'**_owner_name_**'**  
- Nome del proprietario della tabella. *owner_name* viene **sysname**, con un valore predefinito è NULL.  
+`[ @owner_name = ] 'owner_name'` È il nome del proprietario della tabella. *owner_name* viene **sysname**, con un valore predefinito è NULL.  
   
- [  **@filter_clause=** ] **'**_filter_clause_**'**  
- Specifica una clausola di filtro che controlla quali righe dei dati appena caricati devono essere aggiunte alle tabelle di rilevamento per le operazioni di merge. *filter_clause* viene **nvarchar (4000)**, con un valore predefinito NULL. Se *filter_clause* viene **null**, tutte le operazioni bulk vengono aggiunte le righe caricate.  
+`[ @filter_clause = ] 'filter_clause'` Specifica una clausola di filtro che controlla quali righe di dati appena caricati devono essere aggiunte per l'unione di tabelle di rilevamento. *filter_clause* viene **nvarchar (4000)**, con un valore predefinito NULL. Se *filter_clause* viene **null**, tutte le operazioni bulk vengono aggiunte le righe caricate.  
   
 ## <a name="return-code-values"></a>Valori restituiti  
  **0** (esito positivo) o **1** (errore)  

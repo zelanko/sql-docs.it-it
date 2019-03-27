@@ -16,12 +16,12 @@ ms.assetid: 30abcb41-1d18-4f43-a692-4c80914c0450
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 5356ebc173e435595315badf9a3c2abe224d186b
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 7918e257428fd85ddb54867ee5144f45a3bf89f1
+ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52802383"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58493843"
 ---
 # <a name="spbrowsereplcmds-transact-sql"></a>sp_browsereplcmds (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -45,29 +45,21 @@ sp_browsereplcmds [ [ @xact_seqno_start = ] 'xact_seqno_start' ]
 ```  
   
 ## <a name="arguments"></a>Argomenti  
- [  **@xact_seqno_start =**] **'**_xact_seqno_start_**'**  
- Indica il numero minimo di sequenza esatto da restituire. *xact_seqno_start* viene **nchar(22)**, con un valore predefinito è 0x00000000000000000000.  
+`[ @xact_seqno_start = ] 'xact_seqno_start'` Specifica il numero minimo di sequenza esatto da restituire. *xact_seqno_start* viene **nchar(22)**, con un valore predefinito è 0x00000000000000000000.  
   
- [  **@xact_seqno_end =**] **'**_xact_seqno_end_**'**  
- Indica il numero massimo di sequenza esatto da restituire. *xact_seqno_end* viene **nchar(22)**, con un valore predefinito è 0xFFFFFFFFFFFFFFFFFFFF.  
+`[ @xact_seqno_end = ] 'xact_seqno_end'` Specifica il numero massimo di sequenza esatto da restituire. *xact_seqno_end* viene **nchar(22)**, con un valore predefinito è 0xFFFFFFFFFFFFFFFFFFFF.  
   
- [  **@originator_id =**] **'**_originator_id_**'**  
- Specifica se i comandi con l'oggetto specificato *originator_id* vengono restituiti. *originator_id* viene **int**, con un valore predefinito è NULL.  
+`[ @originator_id = ] 'originator_id'` Specifica se i comandi con l'oggetto specificato *originator_id* vengono restituiti. *originator_id* viene **int**, con un valore predefinito è NULL.  
   
- [  **@publisher_database_id =**] **'**_publisher_database_id_**'**  
- Specifica se i comandi con l'oggetto specificato *publisher_database_id* vengono restituiti. *publisher_database_id* viene **int**, con un valore predefinito è NULL.  
+`[ @publisher_database_id = ] 'publisher_database_id'` Specifica se i comandi con l'oggetto specificato *publisher_database_id* vengono restituiti. *publisher_database_id* viene **int**, con un valore predefinito è NULL.  
   
- [  **@article_id =**] **'**_article_id_**'**  
- Specifica se i comandi con l'oggetto specificato *article_id* vengono restituiti. *article_id* viene **int**, con un valore predefinito è NULL.  
+`[ @article_id = ] 'article_id'` Specifica se i comandi con l'oggetto specificato *article_id* vengono restituiti. *article_id* viene **int**, con un valore predefinito è NULL.  
   
- [  **@command_id =**] *command_id*  
- È il percorso del comando nel [MSrepl_commands &#40;Transact-SQL&#41; ](../../relational-databases/system-tables/msrepl-commands-transact-sql.md) da decodificare. *command_id* viene **int**, con un valore predefinito è NULL. Se specificato, tutti gli altri parametri devono essere specificati anche, e *xact_seqno_start*deve essere identico al *xact_seqno_end*.  
+`[ @command_id = ] command_id` È il percorso del comando nel [MSrepl_commands &#40;Transact-SQL&#41; ](../../relational-databases/system-tables/msrepl-commands-transact-sql.md) da decodificare. *command_id* viene **int**, con un valore predefinito è NULL. Se specificato, tutti gli altri parametri devono essere specificati anche, e *xact_seqno_start*deve essere identico al *xact_seqno_end*.  
   
- [  **@agent_id =**] *agent_id*  
- Indica che vengono restituiti solo i comandi per un agente di replica specifico. *agent_id* viene **int**, con un valore predefinito NULL.  
+`[ @agent_id = ] agent_id` Specifica che vengono restituiti solo i comandi per un agente di replica specifico. *agent_id* viene **int**, con un valore predefinito NULL.  
   
- [  **@compatibility_level =**] *compatibility_level*  
- È la versione di [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in cui le *compatibility_level* viene **int**, con valore predefinito è 9000000.  
+`[ @compatibility_level = ] compatibility_level` È la versione di [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in cui le *compatibility_level* viene **int**, con valore predefinito è 9000000.  
   
 ## <a name="return-code-values"></a>Valori restituiti  
  **0** (esito positivo) o **1** (errore)  
@@ -81,8 +73,8 @@ sp_browsereplcmds [ [ @xact_seqno_start = ] 'xact_seqno_start' ]
 |**originator_db**|**sysname**|Database in cui ha origine la transazione.|  
 |**article_id**|**int**|ID dell'articolo.|  
 |**type**|**int**|Tipo di comando.|  
-|**che**|**bit**|Indica se si tratta di un comando parziale.|  
-|**hashKey**|**int**|Solo per uso interno.|  
+|**partial_command**|**bit**|Indica se si tratta di un comando parziale.|  
+|**hashkey**|**int**|Solo per uso interno.|  
 |**originator_publication_id**|**int**|ID della pubblicazione in cui ha origine la transazione.|  
 |**originator_db_version**|**int**|Versione del database in cui ha origine la transazione.|  
 |**originator_lsn**|**varbinary(16)**|Identifica il numero di sequenza del file di log (LSN) per il comando nella pubblicazione di origine. Utilizzato nella replica transazionale peer-to-peer.|  

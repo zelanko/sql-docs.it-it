@@ -16,12 +16,12 @@ ms.assetid: 4a496e60-414a-4026-ba7a-3e89391d39b7
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 8bea1a781959cb345ceae785e97766ba659cb94c
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: 38ef611dd7dd181b164bd0eec459d68c49c6b5df
+ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54133041"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58493304"
 ---
 # <a name="spchangedistributorpassword-transact-sql"></a>sp_changedistributor_password (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -38,8 +38,7 @@ sp_changedistributor_password [ @password= ] 'password'
 ```  
   
 ## <a name="arguments"></a>Argomenti  
- [  **@password=**] **'**_password_**'**  
- Nuova password. *la password* viene **sysname**, non prevede alcun valore predefinito. Se il server di distribuzione è locale, la password del **distributor_admin** viene modificato l'account di accesso di sistema.  
+`[ @password = ] 'password'` È la nuova password. *la password* viene **sysname**, non prevede alcun valore predefinito. Se il server di distribuzione è locale, la password del **distributor_admin** viene modificato l'account di accesso di sistema.  
   
 ## <a name="return-code-values"></a>Valori restituiti  
  **0** (esito positivo) o **1** (errore)  

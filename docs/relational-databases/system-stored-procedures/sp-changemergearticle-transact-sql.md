@@ -16,12 +16,12 @@ ms.assetid: 0dc3da5c-4af6-45be-b5f0-074da182def2
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: af1d0e22b4dab79ac7ac9b8d91c198c349280655
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: e9d2baf65dedf1116a85f7271b1929e0ead4ca23
+ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54134321"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58493707"
 ---
 # <a name="spchangemergearticle-transact-sql"></a>sp_changemergearticle (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -43,17 +43,13 @@ sp_changemergearticle [ @publication = ] 'publication'
 ```  
   
 ## <a name="arguments"></a>Argomenti  
- [  **@publication=**] **'***pubblicazione***'**  
- Nome della pubblicazione che include l'articolo. *pubblicazione* viene **sysname**, non prevede alcun valore predefinito.  
+`[ @publication = ] 'publication'` È il nome della pubblicazione in cui l'articolo esista. *pubblicazione* viene **sysname**, non prevede alcun valore predefinito.  
   
- [  **@article=**] **'***articolo***'**  
- Nome dell'articolo da modificare. *articolo* viene **sysname**, non prevede alcun valore predefinito.  
+`[ @article = ] 'article'` È il nome dell'articolo da modificare. *articolo* viene **sysname**, non prevede alcun valore predefinito.  
   
- [  **@property=**] **'***proprietà***'**  
- Proprietà da modificare per la pubblicazione e l'articolo specificati. *proprietà* viene **nvarchar(30)**, e può essere uno dei valori elencato nella tabella.  
+`[ @property = ] 'property'` È la proprietà da modificare per l'articolo specificato e la pubblicazione. *proprietà* viene **nvarchar(30)**, e può essere uno dei valori elencato nella tabella.  
   
- [  **@value=**] **'***valore***'**  
- Nuovo valore della proprietà specificata. *valore* viene **nvarchar(1000)**, e può essere uno dei valori elencato nella tabella.  
+`[ @value = ] 'value'` È il nuovo valore per la proprietà specificata. *valore* viene **nvarchar(1000)**, e può essere uno dei valori elencato nella tabella.  
   
  Nella tabella seguente vengono descritte le proprietà degli articoli e i valori corrispondenti.  
   
@@ -76,7 +72,7 @@ sp_changemergearticle [ @publication = ] 'publication'
 |**description**||Voce descrittiva per l'articolo.|  
 |**destination_owner**||Nome del proprietario dell'oggetto nel database di sottoscrizione, altrimenti **dbo**.|  
 |**identity_range**||**bigint** che specifica le dimensioni dell'intervallo da utilizzare per l'assegnazione di nuovi valori identity se l'articolo contiene **identityrangemanagementoption** impostata su **automatica** o **auto_identity_ intervallo** impostata su **true**. Proprietà valida solo per gli articoli di tabelle. Per altre informazioni, vedere la sezione "Replica di tipo Merge" del [replicare colonne Identity](../../relational-databases/replication/publish/replicate-identity-columns.md).|  
-|**identityrangemanagementoption**|**Manuale**|Disabilita la gestione automatica degli intervalli di valori Identity. Contrassegna le colonne Identity con NOT FOR REPLICATION per consentire la gestione manuale degli intervalli di valori Identity. Per altre informazioni, vedere [Replicare colonne Identity](../../relational-databases/replication/publish/replicate-identity-columns.md).|  
+|**identityrangemanagementoption**|**manual**|Disabilita la gestione automatica degli intervalli di valori Identity. Contrassegna le colonne Identity con NOT FOR REPLICATION per consentire la gestione manuale degli intervalli di valori Identity. Per altre informazioni, vedere [Replicare colonne Identity](../../relational-databases/replication/publish/replicate-identity-columns.md).|  
 ||**Nessuno**|Disabilita tutti i tipi di gestione degli intervalli di valori Identity.|  
 |**logical_record_level_conflict_detection**|**true**|Viene rilevato un conflitto in presenza di modifiche apportate in qualsiasi posizione del record logico. È necessario che **logical_record_level_conflict_resolution** essere impostata su **true**.|  
 ||**false**|Viene utilizzato il rilevamento dei conflitti predefinito come specificato da **column_tracking**.|  
@@ -110,7 +106,7 @@ sp_changemergearticle [ @publication = ] 'publication'
 ||**0x2000**|Replica le proprietà estese associate all'oggetto di origine dell'articolo pubblicato.|  
 ||**0x4000**|Replica le eventuali chiavi univoche definite in un articolo di tabella.|  
 ||**0x8000**|Genera istruzioni ALTER TABLE per la creazione di script dei vincoli.|  
-||**0x10000.**|Replica i vincoli CHECK come NOT FOR REPLICATION in modo che i vincoli non vengono imposti durante la sincronizzazione.|  
+||**0x10000**|Replica i vincoli CHECK come NOT FOR REPLICATION in modo che i vincoli non vengono imposti durante la sincronizzazione.|  
 ||**0x20000**|Replica i vincoli FOREIGN KEY come NOT FOR REPLICATION in modo che i vincoli non vengono imposti durante la sincronizzazione.|  
 ||**0x40000**|Replica i filegroup associati a una tabella o un indice partizionato.|  
 ||**0x80000**|Replica lo schema di partizione per una tabella partizionata.|  
@@ -136,7 +132,7 @@ sp_changemergearticle [ @publication = ] 'publication'
 ||**0x8000000000**|Converte il **geografia** e **geometry** tipi di dati di **varbinary (max)** in modo che le colonne di questi tipi possono essere replicate nei Sottoscrittori che eseguono [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)].|  
 ||**0x10000000000**|Replica gli indici su colonne di tipo **geografia** e **geometry**.|  
 ||NULL|Il sistema genera automaticamente un'opzione di schema valida per l'articolo.|  
-|**status**|**Attiva**|Viene eseguito lo script di elaborazione iniziale per la pubblicazione della tabella.|  
+|**status**|**active**|Viene eseguito lo script di elaborazione iniziale per la pubblicazione della tabella.|  
 ||**unsynced**|Lo script di elaborazione iniziale per la pubblicazione della tabella viene eseguito in occasione della successiva esecuzione dell'agente snapshot.|  
 |**stream_blob_columns**|**true**|Viene utilizzata l'ottimizzazione del flusso di dati per la replica di colonne BLOB. Tuttavia, alcune funzionalità della replica di tipo merge, come i record logici, potrebbero impedire l'utilizzo dell'ottimizzazione del flusso. *stream_blob_columns* è impostato su true se FILESTREAM è abilitato. In questo modo, la replica dei dati FILESTREAM può essere eseguita in maniera ottimale e si riduce l'utilizzo della memoria. Per forzare gli articoli di tabella FILESTREAM non utilizzino flussi blob, impostare *stream_blob_columns* su false.<br /><br /> **\*\* Importanti \* \***  abilitazione di questa ottimizzazione della memoria può ridurre le prestazioni dell'agente di Merge durante la sincronizzazione. È consigliabile utilizzare questa opzione solo se vengono replicate colonne contenenti più megabyte di dati.|  
 ||**false**|Non viene utilizzata l'ottimizzazione per la replica di colonne BLOB.|  
@@ -144,13 +140,12 @@ sp_changemergearticle [ @publication = ] 'publication'
 ||**1**|Sono consentite modifiche in un Sottoscrittore con una sottoscrizione client, ma tali modifiche non vengono caricate nel server di pubblicazione.|  
 ||**2**|Non sono consentite modifiche in un Sottoscrittore con una sottoscrizione client.|  
 |**subset_filterclause**||Clausola WHERE che specifica il filtro orizzontale. Proprietà valida solo per gli articoli di tabelle.<br /><br /> **\*\* Importanti \* \***  per motivi di prestazioni, è consigliabile evitare di applicare funzioni ai nomi di colonna nelle clausole di filtro di riga con parametri, ad esempio `LEFT([MyColumn]) = SUSER_SNAME()`. Se si usa [HOST_NAME](../../t-sql/functions/host-name-transact-sql.md) in una clausola di filtro e si sostituisce il valore di HOST_NAME, potrebbe essere necessario convertire i tipi di dati tramite [CONVERTIRE](../../t-sql/functions/cast-and-convert-transact-sql.md). Per altre informazioni sulle procedure consigliate per questo caso, vedere la sezione "Eseguire l'override del valore di HOST_NAME ()" nella [Parameterized Row Filters](../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md).|  
-|**soglia**||Valore percentuale utilizzato per i sottoscrittori che eseguono [!INCLUDE[ssEW](../../includes/ssew-md.md)] o versioni precedenti di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. **soglia** determina quando l'agente di Merge deve assegnare un nuovo intervallo di valori identity. Quando viene utilizzata la percentuale di valori specificata in threshold, l'agente di merge crea un nuovo intervallo di valori Identity. Quando **identityrangemanagementoption** è impostata su **automatico** oppure **auto_identity_range** è impostata su **true**. Proprietà valida solo per gli articoli di tabelle. Per altre informazioni, vedere la sezione "Replica di tipo Merge" del [replicare colonne Identity](../../relational-databases/replication/publish/replicate-identity-columns.md).|  
+|**threshold**||Valore percentuale utilizzato per i sottoscrittori che eseguono [!INCLUDE[ssEW](../../includes/ssew-md.md)] o versioni precedenti di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. **soglia** determina quando l'agente di Merge deve assegnare un nuovo intervallo di valori identity. Quando viene utilizzata la percentuale di valori specificata in threshold, l'agente di merge crea un nuovo intervallo di valori Identity. Quando **identityrangemanagementoption** è impostata su **automatico** oppure **auto_identity_range** è impostata su **true**. Proprietà valida solo per gli articoli di tabelle. Per altre informazioni, vedere la sezione "Replica di tipo Merge" del [replicare colonne Identity](../../relational-databases/replication/publish/replicate-identity-columns.md).|  
 |**verify_resolver_signature**|**1**|La firma digitale di un sistema di risoluzione personalizzato viene verificata per stabilire se l'origine è attendibile.|  
 ||**0**|La firma digitale di un sistema di risoluzione personalizzato non viene verificata per stabilire se l'origine è attendibile.|  
 |NULL (predefinito)||Restituisce l'elenco di valori supportati per *proprietà*.|  
   
- [  **@force_invalidate_snapshot =** ] *force_invalidate_snapshot*  
- Segnala che l'azione eseguita da questa stored procedure potrebbe invalidare uno snapshot esistente. *force_invalidate_snapshot* è un **bit**, il valore predefinito è **0**.  
+`[ @force_invalidate_snapshot = ] force_invalidate_snapshot` Segnala che l'azione eseguita da questa stored procedure potrebbe invalidare uno snapshot esistente. *force_invalidate_snapshot* è un **bit**, il valore predefinito è **0**.  
   
  **0** specifica che le modifiche apportate all'articolo di merge non invalidano lo snapshot non è valido. Se la stored procedure rileva che la modifica richiede un nuovo snapshot, viene generato un errore e non viene apportata alcuna modifica.  
   
@@ -158,8 +153,7 @@ sp_changemergearticle [ @publication = ] 'publication'
   
  Per informazioni sulle proprietà che richiedono la generazione di un nuovo snapshot quando vengono modificate, vedere la sezione Osservazioni.  
   
- [  **@force_reinit_subscription =** ] *force_reinit_subscription*  
- Segnala che l'azione eseguita dalla stored procedure potrebbe richiedere la reinizializzazione delle sottoscrizioni esistenti. *force_reinit_subscription* è un **bit**, il valore predefinito è **0**.  
+`[ @force_reinit_subscription = ] force_reinit_subscription` Segnala che l'azione eseguita da questa stored procedure potrebbe richiedere la reinizializzazione delle sottoscrizioni esistenti. *force_reinit_subscription* è un **bit**, il valore predefinito è **0**.  
   
  **0** specifica che le modifiche apportate all'articolo di merge non causano la reinizializzazione della sottoscrizione. Se la stored procedure rileva che la modifica richiede la reinizializzazione delle sottoscrizioni esistenti, viene generato un errore e non viene apportata alcuna modifica.  
   

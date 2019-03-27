@@ -4,18 +4,18 @@ description: Informazioni su come modellare, eseguire il training e utilizzare d
 ms.custom: sqlseattle
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 02/28/2019
+ms.date: 03/27/2018
 ms.topic: tutorial
 ms.author: heidist
 author: HeidiSteen
 manager: cgronlun
 monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 550e31e0b064051cb75f0e8922c346c4e8a5e3e2
-ms.sourcegitcommit: 2533383a7baa03b62430018a006a339c0bd69af2
+ms.openlocfilehash: abe7dbe193cc4e5f90095e7764f35aa1dc0cd9bf
+ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57017897"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58493333"
 ---
 # <a name="tutorial-create-partition-based-models-in-r-on-sql-server"></a>Esercitazione: Creare modelli basati su partizioni in R in SQL Server
 [!INCLUDE[appliesto-ssvnex-xxxx-xxxx-xxx-md-winonly](../../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
@@ -46,7 +46,7 @@ Per completare questa esercitazione, è necessario quanto segue:
 
 + SQL Server 2019 anteprima istanza motore di database, con l'integrazione di servizi di Machine Learning e R.
 
-Controllo versione eseguendo **`SELECT @@Version`** come una query T-SQL in uno strumento di query. Output deve essere "Microsoft SQL Server (CTP 2.3) - 2019 15.0.x".
+Controllo versione eseguendo **`SELECT @@Version`** come una query T-SQL in uno strumento di query. Output deve essere "Microsoft SQL Server (CTP 2.4) - 2019 15.0.x".
 
 Controllo della disponibilità dei pacchetti di R, restituendo un elenco formattato in modo corretto di tutti i pacchetti R attualmente installato con l'istanza del motore di database:
 

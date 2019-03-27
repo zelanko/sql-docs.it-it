@@ -16,12 +16,12 @@ ms.assetid: 0483a157-e403-4fdb-b943-23c1b487bef0
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 65044543163df928df4041f87112a54319477d67
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: 6f24f7ca51f4836c8b1e446283eabb858eb8d387
+ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54126461"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58493893"
 ---
 # <a name="spaddarticle-transact-sql"></a>sp_addarticle (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -69,29 +69,23 @@ sp_addarticle [ @publication = ] 'publication'
 ```  
   
 ## <a name="arguments"></a>Argomenti  
- [  **@publication =** ] **'**_pubblicazione_**'**  
- Nome della pubblicazione in cui è contenuto l'articolo. Deve essere un nome univoco all'interno del database. *pubblicazione* viene **sysname**, non prevede alcun valore predefinito.  
+`[ @publication = ] 'publication'` È il nome della pubblicazione che contiene l'articolo. Deve essere un nome univoco all'interno del database. *pubblicazione* viene **sysname**, non prevede alcun valore predefinito.  
   
- [  **@article =** ] **'**_articolo_**'**  
- Nome dell'articolo. Deve essere un nome univoco all'interno della pubblicazione. *articolo* viene **sysname**, non prevede alcun valore predefinito.  
+`[ @article = ] 'article'` È il nome dell'articolo. Deve essere un nome univoco all'interno della pubblicazione. *articolo* viene **sysname**, non prevede alcun valore predefinito.  
   
- [  **@source_table =** ] **'**_source_table_**'**  
- Questo parametro è deprecato. usare *source_object* invece.  
+`[ @source_table = ] 'source_table'` Questo parametro è deprecato. usare *source_object* invece.  
   
  *Questo parametro non è supportato per server di pubblicazione Oracle.*  
   
- [  **@destination_table =** ] **'**_destination_table_**'**  
- È il nome della tabella di destinazione (sottoscrizione), se diverse dalle *source_table*o la stored procedure. *destination_table* viene **sysname**, con un valore predefinito è NULL, vale a dire che *source_table* è uguale a *destination_table * *.*  
+`[ @destination_table = ] 'destination_table'` È il nome della tabella di destinazione (sottoscrizione), se diverse dalle *source_table*o la stored procedure. *destination_table* viene **sysname**, con un valore predefinito è NULL, vale a dire che *source_table* è uguale a *destination_table * *.*  
   
- [  **@vertical_partition =** ] **'**_vertical_partition_**'**  
- Abilita e disabilita l'applicazione di filtri alle colonne in un articolo di tabella. *vertical_partition* viene **nchar(5)**, con un valore predefinito è FALSE.  
+`[ @vertical_partition = ] 'vertical_partition'` Abilita e disabilita il filtraggio in un articolo di tabella di colonna. *vertical_partition* viene **nchar(5)**, con un valore predefinito è FALSE.  
   
  **false** indica non è applicato alcun filtro verticale e pertanto pubblicate tutte le colonne.  
   
  **true** Cancella tutte le colonne ad eccezione della chiave primaria dichiarata, le colonne nullable non prevede alcun valore predefinito e colonne di chiave univoca. Le colonne vengono aggiunte utilizzando [sp_articlecolumn](../../relational-databases/system-stored-procedures/sp-articlecolumn-transact-sql.md).  
   
- [  **@type =** ] **'**_tipo_**'**  
- Tipo di articolo. *tipo di* viene **sysname**, e può essere uno dei valori seguenti.  
+`[ @type = ] 'type'` È il tipo di articolo. *tipo di* viene **sysname**, e può essere uno dei valori seguenti.  
   
 |Value|Descrizione|  
 |-----------|-----------------|  
@@ -111,14 +105,11 @@ sp_addarticle [ @publication = ] 'publication'
 |**serializable proc exec**|Replica l'esecuzione della stored procedure solo se viene eseguita nel contesto di una transazione serializzabile. Questa proprietà non è supportata per server di pubblicazione Oracle.<br /><br /> La procedura deve essere eseguita all'interno di una transazione esplicita per l'esecuzione della procedura da replicare.|  
 |**solo schema della vista**|Vista con solo schema. Questa proprietà non è supportata per server di pubblicazione Oracle. Se si usa questa opzione, è necessario pubblicare anche la tabella di base.|  
   
- [  **@filter =** ] **'**_filtro_**'**  
- Stored procedure creata con l'opzione FOR REPLICATION usata per filtrare la tabella in orizzontale. *filtro* viene **nvarchar(386)**, con un valore predefinito è NULL. [sp_articleview](../../relational-databases/system-stored-procedures/sp-articleview-transact-sql.md) e [sp_articlefilter](../../relational-databases/system-stored-procedures/sp-articlefilter-transact-sql.md) devono essere eseguite manualmente per creare la visualizzazione e stored procedure di filtro. Se diverso da NULL, la procedura di filtro non viene creata, in quanto si presume che venga creata manualmente.  
+`[ @filter = ] 'filter'` La stored procedure (creata con FOR REPLICATION) consente di filtrare la tabella in senso orizzontale. *filtro* viene **nvarchar(386)**, con un valore predefinito è NULL. [sp_articleview](../../relational-databases/system-stored-procedures/sp-articleview-transact-sql.md) e [sp_articlefilter](../../relational-databases/system-stored-procedures/sp-articlefilter-transact-sql.md) devono essere eseguite manualmente per creare la visualizzazione e stored procedure di filtro. Se diverso da NULL, la procedura di filtro non viene creata, in quanto si presume che venga creata manualmente.  
   
- [  **@sync_object =** ] **'**_sync_object_**'**  
- Nome della tabella o vista usata per la creazione del file di dati che rappresenta lo snapshot per l'articolo. *sync_object* viene **nvarchar(386)**, con un valore predefinito è NULL. Se NULL, [sp_articleview](../../relational-databases/system-stored-procedures/sp-articleview-transact-sql.md) viene chiamato per creare automaticamente la vista utilizzata per generare il file di output. Ciò si verifica dopo aver aggiunto tutte le colonne con [sp_articlecolumn](../../relational-databases/system-stored-procedures/sp-articlecolumn-transact-sql.md). Se il valore è diverso da NULL, non viene creata alcuna vista, in quanto si presume che venga creata manualmente.  
+`[ @sync_object = ] 'sync_object'` È il nome della tabella o vista utilizzata per generare il file di dati utilizzato per rappresentare lo snapshot per questo articolo. *sync_object* viene **nvarchar(386)**, con un valore predefinito è NULL. Se NULL, [sp_articleview](../../relational-databases/system-stored-procedures/sp-articleview-transact-sql.md) viene chiamato per creare automaticamente la vista utilizzata per generare il file di output. Ciò si verifica dopo aver aggiunto tutte le colonne con [sp_articlecolumn](../../relational-databases/system-stored-procedures/sp-articlecolumn-transact-sql.md). Se il valore è diverso da NULL, non viene creata alcuna vista, in quanto si presume che venga creata manualmente.  
   
- [  **@ins_cmd =** ] **'**_ins_cmd_**'**  
- Tipo di comando di replica usato per replicare le operazioni di inserimento per l'articolo. *ins_cmd* viene **nvarchar(255**, e può essere uno dei valori seguenti.  
+`[ @ins_cmd = ] 'ins_cmd'` Il tipo di comando di replica viene utilizzato quando la replica vengono inseriti per questo articolo. *ins_cmd* viene **nvarchar(255**, e può essere uno dei valori seguenti.  
   
 |Value|Descrizione|  
 |-----------|-----------------|  
@@ -128,8 +119,7 @@ sp_addarticle [ @publication = ] 'publication'
   
  Per altre informazioni, vedere [Specificare la modalità di propagazione delle modifiche per gli articoli transazionali](../../relational-databases/replication/transactional/transactional-articles-specify-how-changes-are-propagated.md).  
   
- [  **@del_cmd =**] **'**_del_cmd_**'**  
- Tipo di comando di replica usato per replicare le operazioni di eliminazione per l'articolo. *del_cmd* viene **nvarchar(255**, e può essere uno dei valori seguenti.  
+`[ @del_cmd = ] 'del_cmd'` Il tipo di comando di replica viene utilizzato quando la replica di eliminazione per l'articolo. *del_cmd* viene **nvarchar(255**, e può essere uno dei valori seguenti.  
   
 |Value|Descrizione|  
 |-----------|-----------------|  
@@ -140,8 +130,7 @@ sp_addarticle [ @publication = ] 'publication'
   
  Per altre informazioni, vedere [Specificare la modalità di propagazione delle modifiche per gli articoli transazionali](../../relational-databases/replication/transactional/transactional-articles-specify-how-changes-are-propagated.md).  
   
- [  **@upd_cmd =**] **'**_upd_cmd_**'**  
- Tipo di comando di replica usato per replicare le operazioni di aggiornamento per l'articolo. *upd_cmd* viene **nvarchar(255**, e può essere uno dei valori seguenti.  
+`[ @upd_cmd = ] 'upd_cmd'` Il tipo di comando di replica viene usato per replicare gli aggiornamenti per questo articolo. *upd_cmd* viene **nvarchar(255**, e può essere uno dei valori seguenti.  
   
 |Value|Descrizione|  
 |-----------|-----------------|  
@@ -155,14 +144,11 @@ sp_addarticle [ @publication = ] 'publication'
 > [!NOTE]  
 >  Nel Sottoscrittore vengono propagate quantità di dati diverse a seconda che si utilizzi la sintassi CALL, MCALL o XCALL. Tramite la sintassi CALL vengono passati tutti i valori di tutte le colonne inserite ed eliminate, tramite la sintassi di SCALL vengono passati solo i valori delle colonne modificate, mentre tramite la sintassi XCALL vengono passati i valori di tutte le colonne, modificate o meno, insieme al valore precedente della colonna. Per altre informazioni, vedere [Specificare la modalità di propagazione delle modifiche per gli articoli transazionali](../../relational-databases/replication/transactional/transactional-articles-specify-how-changes-are-propagated.md).  
   
- [  **@creation_script =**] **'**_creation_script_**'**  
- Percorso e nome di uno script facoltativo dello schema dell'articolo usato per creare l'articolo nel database di sottoscrizione. *creation_script* viene **nvarchar(255**, con un valore predefinito è NULL.  
+`[ @creation_script = ] 'creation_script'` È il percorso e il nome di uno script di schema articolo facoltativo utilizzato per creare l'articolo nel database di sottoscrizione. *creation_script* viene **nvarchar(255**, con un valore predefinito è NULL.  
   
- [  **@description =**] **'**_descrizione_**'**  
- Voce descrittiva per l'articolo. *Descrizione* viene **nvarchar(255**, con un valore predefinito è NULL.  
+`[ @description = ] 'description'` È una voce descrittiva per l'articolo. *Descrizione* viene **nvarchar(255**, con un valore predefinito è NULL.  
   
- [  **@pre_creation_cmd =**] **'**_pre_creation_cmd_**'**  
- Specifica l'azione eseguita dal sistema se nel Sottoscrittore viene rilevato un oggetto esistente con lo stesso nome durante l'applicazione dello snapshot per l'articolo. *pre_creation_cmd* viene **nvarchar(10)**, e può essere uno dei valori seguenti.  
+`[ @pre_creation_cmd = ] 'pre_creation_cmd'` Specifica che il sistema deve essere eseguita se viene rilevato un oggetto esistente con lo stesso nome del sottoscrittore durante l'applicazione dello snapshot per questo articolo. *pre_creation_cmd* viene **nvarchar(10)**, e può essere uno dei valori seguenti.  
   
 |Value|Descrizione|  
 |-----------|-----------------|  
@@ -171,11 +157,9 @@ sp_addarticle [ @publication = ] 'publication'
 |**DROP** (impostazione predefinita)|Rimuove la tabella di destinazione.|  
 |**truncate**|Tronca la tabella di destinazione. Questo valore non è valido per i Sottoscrittori ODBC o OLE DB.|  
   
- [  **@filter_clause=**] **'**_filter_clause_**'**  
- Clausola di restrizione (WHERE) che definisce un filtro orizzontale. Quando si specifica la clausola di restrizione, omettere la parola chiave WHERE. *filter_clause* viene **ntext**, con un valore predefinito è NULL. Per altre informazioni, vedere [Filtrare i dati pubblicati](../../relational-databases/replication/publish/filter-published-data.md).  
+`[ @filter_clause = ] 'filter_clause'` È una restrizione clausola (WHERE) che definisce un filtro orizzontale. Quando si specifica la clausola di restrizione, omettere la parola chiave WHERE. *filter_clause* viene **ntext**, con un valore predefinito è NULL. Per altre informazioni, vedere [Filtrare i dati pubblicati](../../relational-databases/replication/publish/filter-published-data.md).  
   
- [  **@schema_option =**] *schema_option*  
- Maschera di bit dell'opzione di generazione dello schema per l'articolo specificato. *schema_option* viene **binari (8)** e può essere il [| (OR bit per bit) ](../../t-sql/language-elements/bitwise-or-transact-sql.md) prodotto di uno o più dei valori seguenti:  
+`[ @schema_option = ] schema_option` È una maschera di bit dell'opzione di generazione dello schema per l'articolo specificato. *schema_option* viene **binari (8)** e può essere il [| (OR bit per bit) ](../../t-sql/language-elements/bitwise-or-transact-sql.md) prodotto di uno o più dei valori seguenti:  
   
 > [!NOTE]  
 >  Se è NULL, il sistema genera automaticamente un'opzione di schema valida per l'articolo in base alle proprietà dell'articolo. Il **opzioni predefinite dello Schema** tabella corrispondente nella sezione Osservazioni vengono indicati i valori verranno scelti in base alla combinazione del tipo di articolo e il tipo di replica.  
@@ -199,7 +183,7 @@ sp_addarticle [ @publication = ] 'publication'
 |**0x2000**|Replica le proprietà estese associate all'oggetto di origine dell'articolo pubblicato. *Non supportato per il server di pubblicazione Oracle*.|  
 |**0x4000**|Replica i vincoli UNIQUE. Vengono inoltre replicati tutti gli indici correlati al vincolo, anche se le opzioni **0x10** e **0x40** non sono abilitati.|  
 |**0x8000**|Questa opzione non è valida per i server di pubblicazione [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)].|  
-|**0x10000.**|Replica i vincoli CHECK come NOT FOR REPLICATION in modo che i vincoli non vengono imposti durante la sincronizzazione.|  
+|**0x10000**|Replica i vincoli CHECK come NOT FOR REPLICATION in modo che i vincoli non vengono imposti durante la sincronizzazione.|  
 |**0x20000**|Replica i vincoli FOREIGN KEY come NOT FOR REPLICATION in modo che i vincoli non vengono imposti durante la sincronizzazione.|  
 |**0x40000**|Replica i filegroup associati a una tabella o un indice partizionato.|  
 |**0x80000**|Replica lo schema di partizione per una tabella partizionata.|  
@@ -233,8 +217,7 @@ sp_addarticle [ @publication = ] 'publication'
   
  Non tutti i *schema_option* valori sono validi per tutti i tipi di replica e il tipo di articolo. Il **opzioni di Schema valide** tabella nella sezione Osservazioni vengono illustrate le opzioni di schema valide che possono essere scelti in base alla combinazione del tipo di articolo e il tipo di replica.  
   
- [  **@destination_owner =**] **'**_destination_owner_**'**  
- Nome del proprietario dell'oggetto di destinazione. *destination_owner* viene **sysname**, con un valore predefinito è NULL. Quando *destination_owner* non viene specificato, il proprietario viene specificato automaticamente in base alle regole seguenti:  
+`[ @destination_owner = ] 'destination_owner'` È il nome del proprietario dell'oggetto di destinazione. *destination_owner* viene **sysname**, con un valore predefinito è NULL. Quando *destination_owner* non viene specificato, il proprietario viene specificato automaticamente in base alle regole seguenti:  
   
 |Condizione|Proprietario oggetto di destinazione|  
 |---------------|------------------------------|  
@@ -244,8 +227,7 @@ sp_addarticle [ @publication = ] 'publication'
   
  Per il supporto non - [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] i sottoscrittori *destination_owner* deve essere NULL.  
   
- [  **@status=**] *stato*  
- Specifica se l'articolo è attivo e offre ulteriori opzioni per la propagazione delle modifiche. *lo stato* viene **tinyint**e può essere il [| (OR bit per bit) ](../../t-sql/language-elements/bitwise-or-transact-sql.md) prodotto di uno o più dei valori seguenti.  
+`[ @status = ] status` Specifica se l'articolo è attive e offre ulteriori opzioni per la propagazione delle modifiche. *lo stato* viene **tinyint**e può essere il [| (OR bit per bit) ](../../t-sql/language-elements/bitwise-or-transact-sql.md) prodotto di uno o più dei valori seguenti.  
   
 |Value|Descrizione|  
 |-----------|-----------------|  
@@ -257,23 +239,17 @@ sp_addarticle [ @publication = ] 'publication'
   
  Ad esempio, un articolo attivo che utilizza istruzioni con parametri includerà il valore 17 in questa colonna. Un valore pari **0** significa che l'articolo è inattivo e proprietà aggiuntive non definite.  
   
- [  **@source_owner =**] **'**_source_owner_**'**  
- Proprietario dell'oggetto di origine. *source_owner* viene **sysname**, con un valore predefinito è NULL. *source_owner* deve essere specificato per i server di pubblicazione Oracle.  
+`[ @source_owner = ] 'source_owner'` È il proprietario dell'oggetto di origine. *source_owner* viene **sysname**, con un valore predefinito è NULL. *source_owner* deve essere specificato per i server di pubblicazione Oracle.  
   
- [  **@sync_object_owner =**] **'**_sync_object_owner_**'**  
- Proprietario della vista che definisce l'articolo pubblicato. *sync_object_owner* viene **sysname**, con un valore predefinito è NULL.  
+`[ @sync_object_owner = ] 'sync_object_owner'` È il proprietario della vista che definisce l'articolo pubblicato. *sync_object_owner* viene **sysname**, con un valore predefinito è NULL.  
   
- [  **@filter_owner =**] **'**_filter_owner_**'**  
- Proprietario del filtro. *filter_owner* viene **sysname**, con un valore predefinito è NULL.  
+`[ @filter_owner = ] 'filter_owner'` È il proprietario del filtro. *filter_owner* viene **sysname**, con un valore predefinito è NULL.  
   
- [  **@source_object =**] **'**_source_object_**'**  
- Oggetto di database da pubblicare. *source_object* viene **sysname**, con un valore predefinito è NULL. Se *source_table* sia impostato su NULL *source_object* non può essere NULL. *source_object* deve essere usato al posto della *source_table*. Per altre informazioni sui tipi di oggetti che possono essere pubblicati utilizzando la replica transazionale o snapshot, vedere [pubblicare dati e oggetti di Database](../../relational-databases/replication/publish/publish-data-and-database-objects.md).  
+`[ @source_object = ] 'source_object'` È l'oggetto di database da pubblicare. *source_object* viene **sysname**, con un valore predefinito è NULL. Se *source_table* sia impostato su NULL *source_object* non può essere NULL. *source_object* deve essere usato al posto della *source_table*. Per altre informazioni sui tipi di oggetti che possono essere pubblicati utilizzando la replica transazionale o snapshot, vedere [pubblicare dati e oggetti di Database](../../relational-databases/replication/publish/publish-data-and-database-objects.md).  
   
- [  **@artid =** ] _article_ID_ **OUTPUT**  
- ID del nuovo articolo. *article_id* viene **int** con valore predefinito NULL che è un parametro di OUTPUT.  
+`[ @artid = ] _article_ID_ OUTPUT` È l'ID dell'articolo del nuovo articolo. *article_id* viene **int** con valore predefinito NULL che è un parametro di OUTPUT.  
   
- [  **@auto_identity_range =** ] **'**_auto_identity_range_**'**  
- Abilita e disabilita la gestione automatica degli intervalli di valori Identity in una pubblicazione al momento della creazione. *auto_identity_range* viene **nvarchar(5**, e può essere uno dei valori seguenti:  
+`[ @auto_identity_range = ] 'auto_identity_range'` Abilita e disabilita l'intervallo di valori identity automatico la gestione su una pubblicazione al momento che della creazione. *auto_identity_range* viene **nvarchar(5**, e può essere uno dei valori seguenti:  
   
 |Value|Descrizione|  
 |-----------|-----------------|  
@@ -284,24 +260,19 @@ sp_addarticle [ @publication = ] 'publication'
 > [!NOTE]  
 >  *auto_identity_range* è stata deprecata e viene fornito per compatibilità con le versioni. È consigliabile usare *identityrangemanagementoption* per specificare opzioni di gestione di intervalli di valori identity. Per altre informazioni, vedere [Replicare colonne Identity](../../relational-databases/replication/publish/replicate-identity-columns.md).  
   
- [  **@pub_identity_range =** ] *pub_identity_range*  
- Controlla le dimensioni dell'intervallo nel server di pubblicazione se l'articolo include *identityrangemanagementoption* impostata su **automatico** oppure *auto_identity_range* impostato su **true** . *pub_identity_range* viene **bigint**, con un valore predefinito è NULL. *Non supportato per il server di pubblicazione Oracle*.  
+`[ @pub_identity_range = ] pub_identity_range` Controlla le dimensioni dell'intervallo nel server di pubblicazione se l'articolo include *identityrangemanagementoption* impostata su **automatico** oppure *auto_identity_range* impostato su **true** . *pub_identity_range* viene **bigint**, con un valore predefinito è NULL. *Non supportato per il server di pubblicazione Oracle*.  
   
- [  **@identity_range =** ] *identity_range*  
- Controlla le dimensioni dell'intervallo nel Sottoscrittore se l'articolo include *identityrangemanagementoption* impostata su **automatico** oppure *auto_identity_range* impostato su **true** . *identity_range* viene **bigint**, con un valore predefinito è NULL. Quando *auto_identity_range* è impostata su **true**. *Non supportato per il server di pubblicazione Oracle*.  
+`[ @identity_range = ] identity_range` Controlla le dimensioni dell'intervallo nel Sottoscrittore se l'articolo include *identityrangemanagementoption* impostata su **automatico** oppure *auto_identity_range* impostato su **true** . *identity_range* viene **bigint**, con un valore predefinito è NULL. Quando *auto_identity_range* è impostata su **true**. *Non supportato per il server di pubblicazione Oracle*.  
   
- [  **@threshold =** ] *soglia*  
- Valore percentuale che determina quando l'agente di distribuzione assegna un nuovo intervallo di valori Identity. Quando la percentuale di valori specificato in *soglia* viene usato, l'agente di distribuzione crea un nuovo intervallo di valori identity. *soglia* viene **bigint**, con un valore predefinito è NULL. Quando *identityrangemanagementoption* è impostata su **automatico** oppure *auto_identity_range* è impostata su **true**. *Non supportato per il server di pubblicazione Oracle*.  
+`[ @threshold = ] threshold` È il valore percentuale che determina quando l'agente di distribuzione assegna un nuovo intervallo di valori identity. Quando la percentuale di valori specificato in *soglia* viene usato, l'agente di distribuzione crea un nuovo intervallo di valori identity. *soglia* viene **bigint**, con un valore predefinito è NULL. Quando *identityrangemanagementoption* è impostata su **automatico** oppure *auto_identity_range* è impostata su **true**. *Non supportato per il server di pubblicazione Oracle*.  
   
- [  **@force_invalidate_snapshot =** ] *force_invalidate_snapshot*  
- Segnala che l'azione eseguita da questa stored procedure potrebbe invalidare uno snapshot esistente. *force_invalidate_snapshot* è un **bit**, con un valore predefinito è 0.  
+`[ @force_invalidate_snapshot = ] force_invalidate_snapshot` Segnala che l'azione eseguita da questa stored procedure potrebbe invalidare uno snapshot esistente. *force_invalidate_snapshot* è un **bit**, con un valore predefinito è 0.  
   
  **0** specifica che l'aggiunta di un articolo non invalidano lo snapshot non è valido. Se la stored procedure rileva che la modifica richiede un nuovo snapshot, viene generato un errore e non viene apportata alcuna modifica.  
   
  **1** specifica che l'aggiunta di un articolo può invalidare lo snapshot non è valido e se esistono sottoscrizioni che richiedono un nuovo snapshot, fornisce l'autorizzazione per lo snapshot esistente deve essere contrassegnato come obsoleto e un nuovo snapshot da generare.  
   
- [  **@use_default_datatypes =** ] *use_default_datatypes*  
- Indica se vengono usati i mapping predefiniti dei tipi di dati delle colonne quando si pubblica un articolo da un server di pubblicazione Oracle. *use_default_datatypes* è di tipo bit e il valore predefinito è 1.  
+`[ @use_default_datatypes = ] use_default_datatypes` È se vengono utilizzati i mapping dei tipi di dati colonna predefiniti quando si pubblica un articolo da un server di pubblicazione Oracle. *use_default_datatypes* è di tipo bit e il valore predefinito è 1.  
   
  **1** = la colonna di articolo predefiniti vengono usati i mapping. Il mapping dei tipi di dati predefiniti possono essere visualizzati eseguendo [sp_getdefaultdatatypemapping](../../relational-databases/system-stored-procedures/sp-getdefaultdatatypemapping-transact-sql.md).  
   
@@ -312,28 +283,25 @@ sp_addarticle [ @publication = ] 'publication'
 > [!NOTE]  
 >  Questo parametro deve essere usato solo per i server di pubblicazione Oracle. L'impostazione *use_default_datatypes* al **0** per un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Publisher genera un errore.  
   
- [  **@identityrangemanagementoption =** ] *identityrangemanagementoption*  
- Specifica la modalità di gestione degli intervalli di valori Identity per l'articolo. *identityrangemanagementoption* viene **nvarchar(10)**, e può essere uno dei valori seguenti.  
+`[ @identityrangemanagementoption = ] identityrangemanagementoption` Specifica la modalità Gestione intervalli di valori identity per l'articolo. *identityrangemanagementoption* viene **nvarchar(10)**, e può essere uno dei valori seguenti.  
   
 |Value|Descrizione|  
 |-----------|-----------------|  
 |**Nessuno**|La replica non esegue la gestione degli intervalli dei valori Identity espliciti. Questa opzione è consigliabile solo per compatibilità con versioni precedenti di SQL Server. Non consentito per la replica peer-to-peer.|  
-|**Manuale**|Contrassegna la colonna Identity con NOT FOR REPLICATION per consentire la gestione manuale degli intervalli di valori Identity.|  
-|**Automatico**|Imposta la gestione automatica degli intervalli di valori Identity.|  
+|**manual**|Contrassegna la colonna Identity con NOT FOR REPLICATION per consentire la gestione manuale degli intervalli di valori Identity.|  
+|**auto**|Imposta la gestione automatica degli intervalli di valori Identity.|  
 |NULL(default)|Per impostazione predefinita **none** quando il valore di *auto_identity_range* non **true**. Per impostazione predefinita **manuali** in un valore predefinito della topologia peer-to-peer (*auto_identity_range* viene ignorato).|  
   
  Per garantire la compatibilità con le versioni precedenti, quando il valore di *identityrangemanagementoption* è NULL, il valore di *auto_identity_range* sia selezionata. Tuttavia, quando il valore di *identityrangemanagementoption* non è NULL, il valore di *auto_identity_range* viene ignorato.  
   
  Per altre informazioni, vedere [Replicare colonne Identity](../../relational-databases/replication/publish/replicate-identity-columns.md).  
   
- [  **@publisher =** ] **'**_editore_**'**  
- Specifica un non - [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] server di pubblicazione. *server di pubblicazione* viene **sysname**, con un valore predefinito è NULL.  
+`[ @publisher = ] 'publisher'` Specifica un non - [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] server di pubblicazione. *server di pubblicazione* viene **sysname**, con un valore predefinito è NULL.  
   
 > [!NOTE]  
 >  *server di pubblicazione* non deve essere utilizzata quando si aggiunge un articolo a una [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] server di pubblicazione.  
   
- [  **@fire_triggers_on_snapshot =** ] **'**_fire_triggers_on_snapshot_**'**  
- Indica se i trigger utente replicati vengono eseguiti quando viene applicato lo snapshot iniziale. *fire_triggers_on_snapshot* viene **nvarchar(5**, con un valore predefinito è FALSE. **true** indica che i trigger utente su una tabella replicata vengono eseguiti quando viene applicato lo snapshot. Affinché i trigger devono essere replicate, il valore di maschera di bit del *schema_option* deve includere il valore **0x100**.  
+`[ @fire_triggers_on_snapshot = ] 'fire_triggers_on_snapshot'` È se replicato i trigger utente vengono eseguiti quando viene applicato lo snapshot iniziale. *fire_triggers_on_snapshot* viene **nvarchar(5**, con un valore predefinito è FALSE. **true** indica che i trigger utente su una tabella replicata vengono eseguiti quando viene applicato lo snapshot. Affinché i trigger devono essere replicate, il valore di maschera di bit del *schema_option* deve includere il valore **0x100**.  
   
 ## <a name="return-code-values"></a>Valori restituiti  
  **0** (esito positivo) o **1** (errore)  

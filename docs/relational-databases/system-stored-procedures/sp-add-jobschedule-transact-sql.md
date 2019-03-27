@@ -18,12 +18,12 @@ ms.assetid: ffce19d9-d1d6-45b4-89fd-ad0f60822ba0
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 4411cb68c86bbea92429a983449e77985d3d236d
-ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
+ms.openlocfilehash: e20d30b63a1cc387c6b997c8a8a11bab835e21f8
+ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/18/2018
-ms.locfileid: "53591585"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58493363"
 ---
 # <a name="spaddjobschedule-transact-sql"></a>sp_add_jobschedule (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -52,23 +52,18 @@ sp_add_jobschedule [ @job_id = ] job_id, | [ @job_name = ] 'job_name', [ @name =
 ```  
   
 ## <a name="arguments"></a>Argomenti  
- [ **@job_id=** ] *job_id*  
- Numero di identificazione del processo a cui viene aggiunta la pianificazione. *job_id* viene **uniqueidentifier**, non prevede alcun valore predefinito.  
+`[ @job_id = ] job_id` Numero di identificazione del processo a cui viene aggiunta la pianificazione. *job_id* viene **uniqueidentifier**, non prevede alcun valore predefinito.  
   
- [  **@job_name=** ] **'**_job_name_**'**  
- Nome del processo a cui viene aggiunta la pianificazione. *nome_processo* viene **nvarchar (128)**, non prevede alcun valore predefinito.  
+`[ @job_name = ] 'job_name'` Nome del processo a cui viene aggiunta la pianificazione. *nome_processo* viene **nvarchar (128)**, non prevede alcun valore predefinito.  
   
 > [!NOTE]  
 >  Entrambi *job_id* oppure *job_name* devono essere specificati, ma non è possibile specificarli entrambi.  
   
- [  **@name=** ] **'**_nome_**'**  
- Nome della pianificazione. *nome* viene **nvarchar (128)**, non prevede alcun valore predefinito.  
+`[ @name = ] 'name'` Nome della pianificazione. *nome* viene **nvarchar (128)**, non prevede alcun valore predefinito.  
   
- [ **@enabled=** ] *enabled_flag*  
- Indica lo stato corrente della pianificazione. *enabled_flag* viene **tinyint**, il valore predefinito è **1** (abilitato). Se **0**, la pianificazione non è abilitata. Quando la pianificazione è disabilitata, il processo non viene eseguito.  
+`[ @enabled = ] enabled_flag` Indica lo stato corrente della pianificazione. *enabled_flag* viene **tinyint**, il valore predefinito è **1** (abilitato). Se **0**, la pianificazione non è abilitata. Quando la pianificazione è disabilitata, il processo non viene eseguito.  
   
- [ **@freq_type=** ] *frequency_type*  
- Valore che indica la frequenza di esecuzione del processo. *frequency_type* viene **int**, il valore predefinito è **0**, e può essere uno dei valori seguenti:  
+`[ @freq_type = ] frequency_type` Valore che indica quando il processo deve essere eseguito. *frequency_type* viene **int**, il valore predefinito è **0**, e può essere uno dei valori seguenti:  
   
 |Value|Descrizione|  
 |-----------|-----------------|  
@@ -80,12 +75,11 @@ sp_add_jobschedule [ @job_id = ] job_id, | [ @job_name = ] 'job_name', [ @name =
 |**64**|All'avvio del servizio [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent|  
 |**128**|Quando il computer è inattivo|  
   
- [  **@freq_interval=** ] *frequency_interval*  
- Giorno di esecuzione del processo. *frequency_interval* viene **int**, con un valore predefinito è 0 e dipende dal valore di *frequency_type* come indicato nella tabella seguente:  
+`[ @freq_interval = ] frequency_interval` Giorno in cui viene eseguito il processo. *frequency_interval* viene **int**, con un valore predefinito è 0 e dipende dal valore di *frequency_type* come indicato nella tabella seguente:  
   
 |Value|Effetto|  
 |-----------|------------|  
-|**1** (una volta)|*frequency_interval* risulta inutilizzato.|  
+|**1** (once)|*frequency_interval* risulta inutilizzato.|  
 |**4** (giornaliera)|Ogni *frequency_interval* giorni.|  
 |**8** (settimanale)|*frequency_interval* corrisponde a uno o più dei valori seguenti (in combinazione con un operatore logico OR):<br /><br /> 1 = domenica<br /><br /> 2 = lunedì<br /><br /> 4 = martedì<br /><br /> 8 = mercoledì<br /><br /> 16 = giovedì<br /><br /> 32 = venerdì<br /><br /> 64 = sabato|  
 |**16** (mensile)|Nel *frequency_interval* giorno del mese.|  
@@ -93,8 +87,7 @@ sp_add_jobschedule [ @job_id = ] job_id, | [ @job_name = ] 'job_name', [ @name =
 |**64** (quando il [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] nuovo avvio del servizio dell'agente)|*frequency_interval* risulta inutilizzato.|  
 |**128**|*frequency_interval* risulta inutilizzato.|  
   
- [ **@freq_subday_type=** ] *frequency_subday_type*  
- Specifica l'unità di misura *frequency_subday_interval*. *frequency_subday_type* viene **int**e non prevede alcun valore predefinito e può essere uno dei valori seguenti:  
+`[ @freq_subday_type = ] frequency_subday_type` Specifica l'unità di misura *frequency_subday_interval*. *frequency_subday_type* viene **int**e non prevede alcun valore predefinito e può essere uno dei valori seguenti:  
   
 |Value|Descrizione (unità)|  
 |-----------|--------------------------|  
@@ -102,11 +95,9 @@ sp_add_jobschedule [ @job_id = ] job_id, | [ @job_name = ] 'job_name', [ @name =
 |**0x4**|Minutes|  
 |**0x8**|Ore|  
   
- [ **@freq_subday_interval=** ] *frequency_subday_interval*  
- Numerosi *frequency_subday_type* periodi intercorrere tra ogni esecuzione del processo. *frequency_subday_interval* viene **int**, con un valore predefinito è 0.  
+`[ @freq_subday_interval = ] frequency_subday_interval` Numerosi *frequency_subday_type* periodi intercorrere tra ogni esecuzione del processo. *frequency_subday_interval* viene **int**, con un valore predefinito è 0.  
   
- [  **@freq_relative_interval=** ] *frequency_relative_interval*  
- Definisce ulteriormente la *frequency_interval* quando *frequency_type* è impostata su **32** (frequenza mensile relativa).  
+`[ @freq_relative_interval = ] frequency_relative_interval` Definisce ulteriormente la *frequency_interval* quando *frequency_type* è impostata su **32** (frequenza mensile relativa).  
   
  *frequency_relative_interval* viene **int**e non prevede alcun valore predefinito e può essere uno dei valori seguenti:  
   
@@ -120,28 +111,21 @@ sp_add_jobschedule [ @job_id = ] job_id, | [ @job_name = ] 'job_name', [ @name =
   
  *frequency_relative_interval* indica l'occorrenza dell'intervallo. Ad esempio, se *frequency_relative_interval* è impostata su **2**, *frequency_type* è impostata su **32**, e *frequency_ intervallo* è impostata su **3**, il processo pianificato verrà eseguito il secondo martedì di ogni mese.  
   
- [  **@freq_recurrence_factor=** ] *frequency_recurrence_factor*  
- Numero di settimane o mesi tra le esecuzioni pianificate del processo. *frequency_recurrence_factor* viene usato solo se *frequency_type* è impostata su **8**, **16**, o **32**. *frequency_recurrence_factor* viene **int**, con un valore predefinito è 0.  
+`[ @freq_recurrence_factor = ] frequency_recurrence_factor` Numero di settimane o mesi tra le esecuzioni pianificate del processo. *frequency_recurrence_factor* viene usato solo se *frequency_type* è impostata su **8**, **16**, o **32**. *frequency_recurrence_factor* viene **int**, con un valore predefinito è 0.  
   
- [ **@active_start_date=** ] *active_start_date*  
- Data in cui l'esecuzione del processo può avere inizio. *active_start_date* viene **int**, non prevede alcun valore predefinito. La data è nel formato AAAAMMGG. Se *active_start_date* è impostato, la data deve essere maggiore o uguale a 19900101.  
+`[ @active_start_date = ] active_start_date` Data nel processo di cui è possibile avviare l'esecuzione. *active_start_date* viene **int**, non prevede alcun valore predefinito. La data è nel formato AAAAMMGG. Se *active_start_date* è impostato, la data deve essere maggiore o uguale a 19900101.  
   
  Al termine della creazione della pianificazione, esaminare la data di inizio per verificare che corrisponda alla data corretta. Per altre informazioni, vedere la sezione "Pianificazione Start Date" nella [creare e collegare pianificazioni ai processi](../../ssms/agent/create-and-attach-schedules-to-jobs.md).  
   
- [ **@active_end_date=** ] *active_end_date*  
- Data in cui l'esecuzione del processo può essere arrestata. *active_end_date* viene **int**, non prevede alcun valore predefinito. La data è nel formato AAAAMMGG.  
+`[ @active_end_date = ] active_end_date` Data nel processo di cui è possibile arrestare l'esecuzione. *active_end_date* viene **int**, non prevede alcun valore predefinito. La data è nel formato AAAAMMGG.  
   
- [  **@active_start_time=** ] *active_start_time*  
- Data compresa tra *active_start_date* e *active_end_date* per avviare l'esecuzione del processo. *active_start_time* viene **int**, non prevede alcun valore predefinito. L'ora è in formato HHMMSS a 24 ore.  
+`[ @active_start_time = ] active_start_time` Data compresa tra *active_start_date* e *active_end_date* per avviare l'esecuzione del processo. *active_start_time* viene **int**, non prevede alcun valore predefinito. L'ora è in formato HHMMSS a 24 ore.  
   
- [  **@active_end_time=**_active_end_time_  
- Data compresa tra *active_start_date* e *active_end_date* per l'esecuzione del processo finale. *active_end_time* viene **int**, non prevede alcun valore predefinito. L'ora è in formato HHMMSS a 24 ore.  
+`[ @active_end_time = active_end_time_` Data compresa tra *active_start_date* e *active_end_date* per l'esecuzione del processo finale. *active_end_time* viene **int**, non prevede alcun valore predefinito. L'ora è in formato HHMMSS a 24 ore.  
   
- [  **@schedule_id=**_schedule_id_**OUTPUT**  
- Numero di identificazione assegnato alla pianificazione dopo che è stata creata correttamente. *schedule_id* è una variabile di output di tipo **int**, non prevede alcun valore predefinito.  
+`[ @schedule_id = schedule_idOUTPUT` Pianificare il numero di identificazione assegnato alla pianificazione che viene creata correttamente. *schedule_id* è una variabile di output di tipo **int**, non prevede alcun valore predefinito.  
   
- [ **@schedule_uid**=] _valore schedule_uid_**OUTPUT**  
- Identificatore univoco della pianificazione. *valore schedule_uid* è una variabile di tipo **uniqueidentifier**.  
+`[ @schedule_uid = ] _schedule_uidOUTPUT` Identificatore univoco per la pianificazione. *valore schedule_uid* è una variabile di tipo **uniqueidentifier**.  
   
 ## <a name="return-code-values"></a>Valori restituiti  
  0 (esito positivo) o 1 (esito negativo)  

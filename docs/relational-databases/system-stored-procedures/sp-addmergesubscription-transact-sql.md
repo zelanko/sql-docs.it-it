@@ -16,12 +16,12 @@ ms.assetid: a191d817-0132-49ff-93ca-76f13e609b38
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 6c3341c37998f61cba743c8da8a4cd772c2c73d9
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: 639c090f1c133183dc4b864a3e0215e4c64b6773
+ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54133761"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58493013"
 ---
 # <a name="spaddmergesubscription-transact-sql"></a>sp_addmergesubscription (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -62,42 +62,34 @@ sp_addmergesubscription [ @publication= ] 'publication'
 ```  
   
 ## <a name="arguments"></a>Argomenti  
- [  **@publication=**] **'**_pubblicazione_**'**  
- Nome della pubblicazione. *pubblicazione* viene **sysname**, non prevede alcun valore predefinito. È necessario che la pubblicazione esista già.  
+`[ @publication = ] 'publication'` È il nome della pubblicazione. *pubblicazione* viene **sysname**, non prevede alcun valore predefinito. È necessario che la pubblicazione esista già.  
   
- [  **@subscriber =**] **'**_sottoscrittore_**'**  
- Nome del Sottoscrittore. *Sottoscrittore* viene **sysname**, con un valore predefinito è NULL.  
+`[ @subscriber = ] 'subscriber'` È il nome del sottoscrittore. *Sottoscrittore* viene **sysname**, con un valore predefinito è NULL.  
   
- [  **@subscriber_db=**] **'**_subscriber_db_**'**  
- Nome del database di sottoscrizione. *subscriber_db*viene **sysname**, con un valore predefinito è NULL.  
+`[ @subscriber_db = ] 'subscriber_db'` È il nome del database di sottoscrizione. *subscriber_db*viene **sysname**, con un valore predefinito è NULL.  
   
- [  **@subscription_type=**] **'**_subscription_type_**'**  
- Tipo di sottoscrizione. *subscription_type*viene **nvarchar(15)**, con un valore predefinito è PUSH. Se **push**, viene aggiunta una sottoscrizione push e l'agente di Merge viene aggiunto nel server di distribuzione. Se **pull**, viene aggiunta una sottoscrizione pull senza aggiungere un agente di Merge nel server di distribuzione.  
+`[ @subscription_type = ] 'subscription_type'` È il tipo di sottoscrizione. *subscription_type*viene **nvarchar(15)**, con un valore predefinito è PUSH. Se **push**, viene aggiunta una sottoscrizione push e l'agente di Merge viene aggiunto nel server di distribuzione. Se **pull**, viene aggiunta una sottoscrizione pull senza aggiungere un agente di Merge nel server di distribuzione.  
   
 > [!NOTE]  
 >  Con le sottoscrizioni anonime non è necessario utilizzare questa stored procedure.  
   
- [  **@subscriber_type=**] **'**_subscriber_type_**'**  
- Tipo di Sottoscrittore. *subscriber_type*viene **nvarchar(15)**, e può essere uno dei valori seguenti.  
+`[ @subscriber_type = ] 'subscriber_type'` È il tipo di sottoscrittore. *subscriber_type*viene **nvarchar(15)**, e può essere uno dei valori seguenti.  
   
 |Value|Descrizione|  
 |-----------|-----------------|  
-|**locale** (impostazione predefinita)|Sottoscrittore noto solo al server di pubblicazione.|  
-|**Globale**|Sottoscrittore noto a tutti i server.|  
+|**local** (default)|Sottoscrittore noto solo al server di pubblicazione.|  
+|**global**|Sottoscrittore noto a tutti i server.|  
   
  In [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] e versioni successive le sottoscrizioni locali vengono dette sottoscrizioni client e le sottoscrizioni globali vengono dette sottoscrizioni server.  
   
- [  **@subscription_priority=**] *subscription_priority*  
- Numero che indica il livello di priorità della sottoscrizione. *subscription_priority*viene **reale**, con un valore predefinito è NULL. Per le sottoscrizioni locali e anonime, il livello di priorità è 0.0. Per le sottoscrizioni globali, la priorità deve essere inferiore a 100.0.  
+`[ @subscription_priority = ] subscription_priority` È un numero che indica la priorità per la sottoscrizione. *subscription_priority*viene **reale**, con un valore predefinito è NULL. Per le sottoscrizioni locali e anonime, il livello di priorità è 0.0. Per le sottoscrizioni globali, la priorità deve essere inferiore a 100.0.  
   
- [  **@sync_type=**] **'**_sync_type_**'**  
- Tipo di sincronizzazione per la sottoscrizione. *sync_type*viene **nvarchar(15)**, il valore predefinito è **automatica**. Può essere **automatici** oppure **none**. Se **automatica**, lo schema e i dati iniziali per le tabelle pubblicate vengono trasferiti nel Sottoscrittore prima di tutto. Se **none**, si presuppone il sottoscrittore dispone già dello schema e i dati iniziali per le tabelle pubblicate. Le tabelle e i dati di sistema vengono sempre trasferiti.  
+`[ @sync_type = ] 'sync_type'` È il tipo di sincronizzazione della sottoscrizione. *sync_type*viene **nvarchar(15)**, il valore predefinito è **automatica**. Può essere **automatici** oppure **none**. Se **automatica**, lo schema e i dati iniziali per le tabelle pubblicate vengono trasferiti nel Sottoscrittore prima di tutto. Se **none**, si presuppone il sottoscrittore dispone già dello schema e i dati iniziali per le tabelle pubblicate. Le tabelle e i dati di sistema vengono sempre trasferiti.  
   
 > [!NOTE]  
 >  È consigliabile non specificare un valore pari **none**.  
   
- [  **@frequency_type=**] *frequency_type*  
- Valore che indica la frequenza con cui viene eseguito l'agente di merge. *frequency_type* viene **int**, e può essere uno dei valori seguenti.  
+`[ @frequency_type = ] frequency_type` È un valore che indica quando verrà eseguito l'agente di Merge. *frequency_type* viene **int**, e può essere uno dei valori seguenti.  
   
 |Value|Descrizione|  
 |-----------|-----------------|  
@@ -109,8 +101,7 @@ sp_addmergesubscription [ @publication= ] 'publication'
 |**40**|All'avvio di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent|  
 |NULL (predefinito)||  
   
- [  **@frequency_interval=**] *frequency_interval*  
- Giorno o giorni in cui viene eseguito l'agente di merge. *frequency_interval* viene **int**, e può essere uno dei valori seguenti.  
+`[ @frequency_interval = ] frequency_interval` Il giorno o giorni in cui viene eseguito l'agente di Merge. *frequency_interval* viene **int**, e può essere uno dei valori seguenti.  
   
 |Value|Descrizione|  
 |-----------|-----------------|  
@@ -126,8 +117,7 @@ sp_addmergesubscription [ @publication= ] 'publication'
 |**10**|Giorni festivi|  
 |NULL (predefinito)||  
   
- [  **@frequency_relative_interval=**] *frequency_relative_interval*  
- Occorrenza di merge pianificata dell'intervallo di frequenza per ogni mese. *frequency_relative_interval* viene **int**, i possibili valori sono i seguenti.  
+`[ @frequency_relative_interval = ] frequency_relative_interval` Indica l'occorrenza di merge pianificata dell'intervallo di frequenza per ogni mese. *frequency_relative_interval* viene **int**, i possibili valori sono i seguenti.  
   
 |Value|Descrizione|  
 |-----------|-----------------|  
@@ -138,11 +128,9 @@ sp_addmergesubscription [ @publication= ] 'publication'
 |**16**|Ultimo|  
 |NULL (predefinito)||  
   
- [  **@frequency_recurrence_factor=**] *frequency_recurrence_factor*  
- Fattore di occorrenza utilizzato da *frequency_type*. *frequency_recurrence_factor*viene **int**, con un valore predefinito è NULL.  
+`[ @frequency_recurrence_factor = ] frequency_recurrence_factor` Fattore di occorrenza utilizzato da *frequency_type*. *frequency_recurrence_factor*viene **int**, con un valore predefinito è NULL.  
   
- [  **@frequency_subday=**] *frequency_subday*  
- È l'unità per *frequency_subday_interval*. *frequency_subday* viene **int**, e può essere uno dei valori seguenti.  
+`[ @frequency_subday = ] frequency_subday` È l'unità per *frequency_subday_interval*. *frequency_subday* viene **int**, e può essere uno dei valori seguenti.  
   
 |Value|Descrizione|  
 |-----------|-----------------|  
@@ -152,47 +140,34 @@ sp_addmergesubscription [ @publication= ] 'publication'
 |**8**|Ora|  
 |NULL (predefinito)||  
   
- [  **@frequency_subday_interval=**] *frequency_subday_interval*  
- Frequenza di *frequency_subday* intercorrere tra ogni operazione di unione. *frequency_subday_interval* viene **int**, con un valore predefinito è NULL.  
+`[ @frequency_subday_interval = ] frequency_subday_interval` Frequenza di *frequency_subday* intercorrere tra ogni operazione di unione. *frequency_subday_interval* viene **int**, con un valore predefinito è NULL.  
   
- [  **@active_start_time_of_day=**] *active_start_time_of_day*  
- Ora del giorno della prima esecuzione pianificata dell'agente di merge, nel formato HHMMSS. *active_start_time_of_day* viene **int**, con un valore predefinito è NULL.  
+`[ @active_start_time_of_day = ] active_start_time_of_day` È l'ora del giorno quando l'agente di Merge è primo pianificata, nel formato HHMMSS. *active_start_time_of_day* viene **int**, con un valore predefinito è NULL.  
   
- [  **@active_end_time_of_day=**] *active_end_time_of_day*  
- Ora del giorno dell'ultima esecuzione pianificata dell'agente di merge, nel formato HHMMSS. *active_end_time_of_day* viene **int**, con un valore predefinito è NULL.  
+`[ @active_end_time_of_day = ] active_end_time_of_day` L'ora del giorno quando si arresta l'agente di Merge viene pianificata, nel formato HHMMSS. *active_end_time_of_day* viene **int**, con un valore predefinito è NULL.  
   
- [  **@active_start_date=**] *active_start_date*  
- Data della prima esecuzione pianificata dell'agente di merge, nel formato AAAAMMGG. *active_start_date* viene **int**, con un valore predefinito è NULL.  
+`[ @active_start_date = ] active_start_date` È la data della prima l'agente di Merge pianificata, nel formato YYYYMMDD. *active_start_date* viene **int**, con un valore predefinito è NULL.  
   
- [  **@active_end_date=**] *active_end_date*  
- Data dell'ultima esecuzione pianificata dell'agente di merge, nel formato AAAAMMGG. *active_end_date* viene **int**, con un valore predefinito è NULL.  
+`[ @active_end_date = ] active_end_date` La data di arresto dell'agente di Merge viene pianificata, nel formato aaaammgg. *active_end_date* viene **int**, con un valore predefinito è NULL.  
   
- [  **@optional_command_line=**] **'**_optional_command_line_**'**  
- Prompt dei comandi facoltativo da eseguire. *optional_command_line*viene **nvarchar (4000)**, con un valore predefinito è NULL. Questo parametro viene utilizzato per aggiungere un comando per l'acquisizione e il salvataggio dell'output in un file o per specificare un file o un attributo di configurazione.  
+`[ @optional_command_line = ] 'optional_command_line'` È il prompt dei comandi facoltativo da eseguire. *optional_command_line*viene **nvarchar (4000)**, con un valore predefinito è NULL. Questo parametro viene utilizzato per aggiungere un comando per l'acquisizione e il salvataggio dell'output in un file o per specificare un file o un attributo di configurazione.  
   
- [  **@description=**] **'**_descrizione_**'**  
- Breve descrizione della sottoscrizione di tipo merge. *Descrizione*viene **nvarchar(255**, con un valore predefinito è NULL. Questo valore viene visualizzato da Monitoraggio replica nella **soprannome** colonna, che può essere usato per ordinare le sottoscrizioni per una pubblicazione monitorata.  
+`[ @description = ] 'description'` È una breve descrizione della sottoscrizione di tipo merge. *Descrizione*viene **nvarchar(255**, con un valore predefinito è NULL. Questo valore viene visualizzato da Monitoraggio replica nella **soprannome** colonna, che può essere usato per ordinare le sottoscrizioni per una pubblicazione monitorata.  
   
- [  **@enabled_for_syncmgr=**] **'**_enabled_for_syncmgr_**'**  
- Specifica se la sottoscrizione può essere sincronizzata tramite Gestione sincronizzazione [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows. *enabled_for_syncmgr* viene **nvarchar(5**, con un valore predefinito è FALSE. Se **false**, la sottoscrizione non è registrata con Gestione sincronizzazione Microsoft. Se **true**, la sottoscrizione viene registrata con Gestione sincronizzazione e può essere sincronizzata senza avviare [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
+`[ @enabled_for_syncmgr = ] 'enabled_for_syncmgr'` Specifica se la sottoscrizione può essere sincronizzata tramite [!INCLUDE[msCoName](../../includes/msconame-md.md)] Gestione sincronizzazione Microsoft Windows. *enabled_for_syncmgr* viene **nvarchar(5**, con un valore predefinito è FALSE. Se **false**, la sottoscrizione non è registrata con Gestione sincronizzazione Microsoft. Se **true**, la sottoscrizione viene registrata con Gestione sincronizzazione e può essere sincronizzata senza avviare [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
   
- [  **@offloadagent=** ] *remote_agent_activation*  
- Specifica se è possibile o meno attivare l'agente in remoto. *remote_agent_activation* viene **bit** con valore predefinito è **0**.  
+`[ @offloadagent = ] remote_agent_activation` Specifica che l'agente può essere attivato in remoto. *remote_agent_activation* viene **bit** con valore predefinito è **0**.  
   
 > [!NOTE]  
 >  Questo parametro è deprecato ed è ancora disponibile per compatibilità con gli script di versioni precedenti.  
   
- [  **@offloadserver=** ] **'**_remote_agent_server_name_**'**  
- Nome di rete del server da utilizzare per l'attivazione remota dell'agente. *remote_agent_server_name*viene **sysname**, con un valore predefinito è NULL.  
+`[ @offloadserver = ] 'remote_agent_server_name'` Specifica il nome di rete del server da utilizzare per l'attivazione remota degli agenti. *remote_agent_server_name*viene **sysname**, con un valore predefinito è NULL.  
   
- [  **@use_interactive_resolver=** ] **'**_use_interactive_resolver_**'**  
- Consente la risoluzione interattiva dei conflitti per tutti gli articoli che la prevedono. *use_interactive_resolver* viene **nvarchar(5**, con un valore predefinito è FALSE.  
+`[ @use_interactive_resolver = ] 'use_interactive_resolver'` Consente i conflitti da risolvere in modo interattivo per tutti gli articoli che supportano la risoluzione interattiva. *use_interactive_resolver* viene **nvarchar(5**, con un valore predefinito è FALSE.  
   
- [  **@merge_job_name=** ] **'**_merge_job_name_**'**  
- Il *@merge_job_name* parametro è deprecato e non può essere impostata. *merge_job_name* viene **sysname**, con un valore predefinito è NULL.  
+`[ @merge_job_name = ] 'merge_job_name'` Il *@merge_job_name* parametro è deprecato e non può essere impostata. *merge_job_name* viene **sysname**, con un valore predefinito è NULL.  
   
- [ **@hostname**=] **'**_hostname_**'**  
- Sostituisce il valore restituito da [HOST_NAME](../../t-sql/functions/host-name-transact-sql.md) quando questa funzione viene utilizzata nella clausola WHERE di un filtro con parametri. *nome host* viene **sysname**, con un valore predefinito è NULL.  
+`[ @hostname = ] 'hostname'` Sostituisce il valore restituito da [HOST_NAME](../../t-sql/functions/host-name-transact-sql.md) quando questa funzione viene utilizzata nella clausola WHERE di un filtro con parametri. *nome host* viene **sysname**, con un valore predefinito è NULL.  
   
 > [!IMPORTANT]  
 >  Per motivi relativi alle prestazioni è consigliabile evitare di applicare funzioni ai nomi di colonna nelle clausole per filtri di riga con parametri, come `LEFT([MyColumn]) = SUSER_SNAME()`. Se si usa [HOST_NAME](../../t-sql/functions/host-name-transact-sql.md) in una clausola di filtro e si sostituisce il valore di HOST_NAME, potrebbe essere necessario effettuare la conversione di tipi di dati tramite [CONVERTIRE](../../t-sql/functions/cast-and-convert-transact-sql.md). Per altre informazioni sulle procedure consigliate in questo caso, vedere la sezione relativa alla sostituzione del valore HOST_NAME() nell'argomento [Parameterized Row Filters](../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md).  
@@ -213,9 +188,9 @@ sp_addmergesubscription [ @publication= ] 'publication'
   
 ## <a name="see-also"></a>Vedere anche  
  [Create a Push Subscription](../../relational-databases/replication/create-a-push-subscription.md)   
- [Create a Pull Subscription](../../relational-databases/replication/create-a-pull-subscription.md)   
+ [Creazione di una sottoscrizione pull](../../relational-databases/replication/create-a-pull-subscription.md)   
  [Risoluzione interattiva dei conflitti](../../relational-databases/replication/merge/advanced-merge-replication-conflict-interactive-resolution.md)   
- [Subscribe to Publications](../../relational-databases/replication/subscribe-to-publications.md)   
+ [Sottoscrivere le pubblicazioni](../../relational-databases/replication/subscribe-to-publications.md)   
  [sp_changemergesubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changemergesubscription-transact-sql.md)   
  [sp_dropmergesubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropmergesubscription-transact-sql.md)   
  [sp_helpmergesubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpmergesubscription-transact-sql.md)  

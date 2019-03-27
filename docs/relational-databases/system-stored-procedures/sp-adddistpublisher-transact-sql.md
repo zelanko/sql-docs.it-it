@@ -16,12 +16,12 @@ ms.assetid: 04e15011-a902-4074-b38c-3ec2fc73b838
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 079e2591323b60ea86f93c3cbaedc423cc85d420
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: c01d00362dc55deb1fa9da8df49beebdaf82b170
+ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54135042"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58492773"
 ---
 # <a name="spadddistpublisher-transact-sql"></a>sp_adddistpublisher (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
@@ -48,55 +48,44 @@ sp_adddistpublisher [ @publisher= ] 'publisher'
 ```  
   
 ## <a name="arguments"></a>Argomenti  
- [  **@publisher=**] **'**_editore_**'**  
- Nome del server di pubblicazione. *server di pubblicazione* viene **sysname**, non prevede alcun valore predefinito.  
+`[ @publisher = ] 'publisher'` È il nome dell'editore. *server di pubblicazione* viene **sysname**, non prevede alcun valore predefinito.  
   
- [  **@distribution_db=**] **'**_distribution_db_**'**  
- Nome del database di distribuzione. *distributor_db* viene **sysname**, non prevede alcun valore predefinito. Questo parametro viene utilizzato dagli agenti di replica per la connessione al server di pubblicazione.  
+`[ @distribution_db = ] 'distribution_db'` È il nome del database di distribuzione. *distributor_db* viene **sysname**, non prevede alcun valore predefinito. Questo parametro viene utilizzato dagli agenti di replica per la connessione al server di pubblicazione.  
   
- [  **@security_mode=**] *security_mode*  
- Modalità di sicurezza implementata. Questo parametro viene utilizzato solo dagli agenti di replica per la connessione al server di pubblicazione per sottoscrizioni ad aggiornamento in coda o a non - [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] server di pubblicazione. *security_mode* viene **int**, i possibili valori sono i seguenti.  
+`[ @security_mode = ] security_mode` È la modalità di sicurezza implementata. Questo parametro viene utilizzato solo dagli agenti di replica per la connessione al server di pubblicazione per sottoscrizioni ad aggiornamento in coda o a non - [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] server di pubblicazione. *security_mode* viene **int**, i possibili valori sono i seguenti.  
   
 |Value|Descrizione|  
 |-----------|-----------------|  
 |**0**|Gli agenti di replica nel server di distribuzione si connettono al server di pubblicazione tramite l'autenticazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |**1** (impostazione predefinita)|Gli agenti di replica nel server di distribuzione si connettono al server di pubblicazione tramite l'autenticazione di Windows.|  
   
- [  **@login=**] **'**_account di accesso_**'**  
- Account di accesso. Questo parametro è obbligatorio se *security_mode* viene **0**. *login* è di tipo **sysname** e il valore predefinito è NULL. Questo parametro viene utilizzato dagli agenti di replica per la connessione al server di pubblicazione.  
+`[ @login = ] 'login'` È l'account di accesso. Questo parametro è obbligatorio se *security_mode* viene **0**. *login* è di tipo **sysname** e il valore predefinito è NULL. Questo parametro viene utilizzato dagli agenti di replica per la connessione al server di pubblicazione.  
   
- [  **@password=**] **'**_password_**'**]  
- Password. *la password* viene **sysname**, con un valore predefinito è NULL. Questo parametro viene utilizzato dagli agenti di replica per la connessione al server di pubblicazione.  
+`[ @password = ] 'password']` È la password. *la password* viene **sysname**, con un valore predefinito è NULL. Questo parametro viene utilizzato dagli agenti di replica per la connessione al server di pubblicazione.  
   
 > [!IMPORTANT]  
 >  Non usare una password vuota. Usare una password complessa.  
   
- [  **@working_directory=**] **'**_working_directory_**'**  
- Nome della directory di lavoro utilizzata per archiviare i file dei dati e di schema per la pubblicazione *working_directory* viene **nvarchar(255**e il valore predefinito è la cartella ReplData per questa istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], ad esempio `C:\Program Files\Microsoft SQL Server\MSSQL\MSSQ.1\ReplData`. Il nome deve essere specificato in formato UNC.  
+`[ @working_directory = ] 'working_directory'` È il nome della directory di lavoro utilizzata per archiviare i file di dati e dello schema per la pubblicazione. *working_directory* viene **nvarchar(255**e il valore predefinito è la cartella ReplData per questa istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], ad esempio `C:\Program Files\Microsoft SQL Server\MSSQL\MSSQ.1\ReplData`. Il nome deve essere specificato in formato UNC.  
 
  Per il Database SQL di Azure, usare `\\<storage_account>.file.core.windows.net\<share>`.
 
- [  **@storage_connection_string =**] **'**_storage_connection_string_**'**  
- È necessario per il Database SQL. Usare la chiave di accesso dal portale di Azure in archiviazione > Impostazioni.
+`[ @storage_connection_string = ] 'storage_connection_string'` È necessario per il Database SQL. Usare la chiave di accesso dal portale di Azure in archiviazione > Impostazioni.
 
  > [!INCLUDE[Azure SQL Database link](../../includes/azure-sql-db-repl-for-more-information.md)]
 
- [  **@trusted=**] **'**_attendibile_**'**  
- Questo parametro è deprecato ed è disponibile solo per compatibilità con le versioni precedenti. *attendibile* viene **nvarchar(5**e impostandola su qualsiasi valore diverso **false** comporterà un errore.  
+`[ @trusted = ] 'trusted'` Questo parametro è stato deprecato e viene fornito per compatibilità con le versioni. *attendibile* viene **nvarchar(5**e impostandola su qualsiasi valore diverso **false** comporterà un errore.  
   
- [  **@encrypted_password=**] *encrypted_password*  
- L'impostazione *encrypted_password* non è più supportata. Tentativo di impostare questo **bit** parametro per **1** comporterà un errore.  
+`[ @encrypted_password = ] encrypted_password` L'impostazione *encrypted_password* non è più supportata. Tentativo di impostare questo **bit** parametro per **1** comporterà un errore.  
   
- [  **@thirdparty_flag =**] *thirdparty_flag*  
- Indica se il server di pubblicazione è un database di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. *thirdparty_flag* viene **bit**, e può essere uno dei valori seguenti.  
+`[ @thirdparty_flag = ] thirdparty_flag` Quando il server di pubblicazione [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. *thirdparty_flag* viene **bit**, e può essere uno dei valori seguenti.  
   
 |Value|Descrizione|  
 |-----------|-----------------|  
 |**0** (predefinito)|Database di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |**1**|Database non di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
   
- [ **@publisher_type**=] **'**_publisher_type_**'**  
- Specifica il tipo di server di pubblicazione quando è diverso da [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. *publisher_type* è di tipo sysname e può essere uno dei valori seguenti.  
+`[ @publisher_type = ] 'publisher_type'` Specifica il tipo di server di pubblicazione quando il server di pubblicazione non è [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. *publisher_type* è di tipo sysname e può essere uno dei valori seguenti.  
   
 |Value|Descrizione|  
 |-----------|-----------------|  

@@ -16,12 +16,12 @@ ms.assetid: 66f73185-ea9e-43f9-86ed-9dd933cee2f6
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 031fc14eba8cdea8cdbff41d18d6e6ab6bc42a68
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: 2966a784f647d402b849d5899b76b0614122b932
+ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54133851"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58492493"
 ---
 # <a name="spchangedistributiondb-transact-sql"></a>sp_changedistributiondb (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -40,11 +40,9 @@ sp_changedistributiondb [ @database= ] 'database'
 ```  
   
 ## <a name="arguments"></a>Argomenti  
- [  **@database=**] **'**_database_**'**  
- Nome del database di distribuzione. *database* viene **sysname**, non prevede alcun valore predefinito.  
+`[ @database = ] 'database'` È il nome del database di distribuzione. *database* viene **sysname**, non prevede alcun valore predefinito.  
   
- [  **@property=**] **'**_proprietà_**'**  
- Proprietà da modificare per il database specificato. *proprietà* viene **sysname**, i possibili valori sono i seguenti.  
+`[ @property = ] 'property'` È la proprietà da modificare per il database specificato. *proprietà* viene **sysname**, i possibili valori sono i seguenti.  
   
 |Value|Descrizione|  
 |-----------|-----------------|  
@@ -53,8 +51,7 @@ sp_changedistributiondb [ @database= ] 'database'
 |**min_distretention**|Periodo di memorizzazione minimo per la distribuzione.|  
 |NULL (predefinito)|Tutti disponibili *proprietà* vengono stampati i valori.|  
   
- [  **@value=**] **'**_valore_**'**  
- Nuovo valore della proprietà specificata. *valore* viene **nvarchar(255**, con un valore predefinito è NULL.  
+`[ @value = ] 'value'` È il nuovo valore per la proprietà specificata. *valore* viene **nvarchar(255**, con un valore predefinito è NULL.  
   
 ## <a name="return-code-values"></a>Valori restituiti  
  **0** (esito positivo) o **1** (errore)  

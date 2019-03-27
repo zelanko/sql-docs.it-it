@@ -18,12 +18,12 @@ ms.assetid: 6cca32cd-d941-4378-aed6-a7c90cb7520a
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 295f29b86e53a8d58622e4c79c1b36734acdbe3e
-ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
+ms.openlocfilehash: ac78863fd2bad39675bfe3f486a8a88a8d026e37
+ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/18/2018
-ms.locfileid: "53591015"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58492983"
 ---
 # <a name="spaddcategory-transact-sql"></a>sp_add_category (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -43,8 +43,7 @@ sp_add_category
 ```  
   
 ## <a name="arguments"></a>Argomenti  
- [  **@class =** ] **'**_classe_**'**  
- Classe della categoria da aggiungere. *classe* viene **varchar (8)** con un valore predefinito di processo, i possibili valori sono i seguenti.  
+`[ @class = ] 'class'` La classe della categoria da aggiungere. *classe* viene **varchar (8)** con un valore predefinito di processo, i possibili valori sono i seguenti.  
   
 |Value|Descrizione|  
 |-----------|-----------------|  
@@ -52,8 +51,7 @@ sp_add_category
 |ALERT|Aggiunge una categoria di avvisi.|  
 |OPERATOR|Aggiunge una categoria di operatori.|  
   
- [  **@type =** ] **'**_tipo_**'**  
- Tipo della categoria da aggiungere. *tipo di* viene **varchar(12)**, con valore predefinito è **locale**, i possibili valori sono i seguenti.  
+`[ @type = ] 'type'` Tipo di categoria da aggiungere. *tipo di* viene **varchar(12)**, con valore predefinito è **locale**, i possibili valori sono i seguenti.  
   
 |Value|Descrizione|  
 |-----------|-----------------|  
@@ -61,8 +59,7 @@ sp_add_category
 |MULTI-SERVER|Categoria di processi multiserver.|  
 |Nessuno|Una categoria per una classe diversa da JOB **.**|  
   
- [  **@name =** ] **'**_nome_**'**  
- Nome della categoria da aggiungere. Il nome deve essere univoco all'interno della classe specificata. *nome* viene **sysname**, non prevede alcun valore predefinito.  
+`[ @name = ] 'name'` Il nome della categoria da aggiungere. Il nome deve essere univoco all'interno della classe specificata. *nome* viene **sysname**, non prevede alcun valore predefinito.  
   
 ## <a name="return-code-values"></a>Valori restituiti  
  **0** (esito positivo) o **1** (errore)  

@@ -6,16 +6,16 @@ author: lgongmsft
 ms.author: shivprashant
 ms.reviewer: jroth
 manager: craigg
-ms.date: 03/14/2019
+ms.date: 03/27/2018
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 9f766c343152fa601cc22e59e3385c454ec23879
-ms.sourcegitcommit: 03870f0577abde3113e0e9916cd82590f78a377c
+ms.openlocfilehash: f89568860fa656efbb93eb9b72eb647f88ce6089
+ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/18/2019
-ms.locfileid: "58162041"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58494113"
 ---
 # <a name="deploy-a-big-data-cluster-with-gpu-support-and-run-tensorflow"></a>Distribuire un cluster di big data con supporto GPU ed eseguire TensorFlow
 
@@ -196,7 +196,7 @@ Il notebook due esempi seguenti illustra due immagini classificazione modelli di
 Inserire il file di notebook appropriato nel computer locale e quindi aprire ed eseguirlo in Studio dati di Azure usando il kernel di PySpark3. A meno che non si dispone di un'esigenza specifica per una versione precedente di CUDA o TensorFlow, scegliere CUDA 9/CUDNN 7/TensorFlow 1.12.0. Per altre informazioni su come usare i notebook con cluster di big data, vedere [come usare i notebook in fase di anteprima di SQL Server 2019](notebooks-guidance.md).
 
 > [!NOTE]
-> Si noti che i notebook di installare il software nei percorsi di sistema. Ciò è possibile poiché i notebook vengono attualmente eseguono con i privilegi root in CTP 2.3.
+> Si noti che i notebook di installare il software nei percorsi di sistema. Ciò è possibile poiché i notebook vengono attualmente eseguono con i privilegi root in CTP 2.4.
 
 Dopo aver installato le librerie di GPU NVIDIA e TensorFlow per GPU, i notebook elenco dispositivi GPU disponibili. È quindi adatta e valutare un modello TensorFlow in modo che riconosca utilizzando il set di dati MNIST di cifre scritte a mano. Dopo aver verificato lo spazio su disco disponibile, scaricare ed eseguire l'esempio di classificazione immagini CIFAR 10 dal [ https://github.com/tensorflow/models.git ](https://github.com/tensorflow/models.git). Eseguendo l'esempio di 10 CIFAR in cluster con GPU diverse, è possibile osservare l'incremento della velocità offerta da ogni generazione di GPU disponibili in Azure.
 

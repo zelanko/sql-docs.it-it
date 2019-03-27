@@ -16,12 +16,12 @@ ms.assetid: ea0dacd2-a5fd-42f4-88dd-7d289b0ae017
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: f699a4f7dcf333301889211a0db45248935acdce
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: 8ab11ccb8853c00439583162f33e76d0e14622a1
+ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54130201"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58493143"
 ---
 # <a name="spchangedynamicsnapshotjob-transact-sql"></a>sp_changedynamicsnapshot_job (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -52,17 +52,13 @@ sp_changedynamicsnapshot_job [ @publication = ] 'publication'
 ```  
   
 ## <a name="arguments"></a>Argomenti  
- [  **@publication =** ] **'***pubblicazione***'**  
- Nome della pubblicazione. *pubblicazione* viene **sysname**, non prevede alcun valore predefinito.  
+`[ @publication = ] 'publication'` È il nome della pubblicazione. *pubblicazione* viene **sysname**, non prevede alcun valore predefinito.  
   
- [  **@dynamic_snapshot_jobname =** ] **'***dynamic_snapshot_jobname***'**  
- Nome del processo di snapshot da modificare. *dynamic_snapshot_jobname*viene **sysname**, con il valore predefinito di N '% s'. Se *dynamic_snapshot_jobid* è specificato, è necessario usare il valore predefinito per *dynamic_snapshot_jobname*.  
+`[ @dynamic_snapshot_jobname = ] 'dynamic_snapshot_jobname'` Il nome del processo di snapshot viene modificato. *dynamic_snapshot_jobname*viene **sysname**, con il valore predefinito di N '% s'. Se *dynamic_snapshot_jobid* è specificato, è necessario usare il valore predefinito per *dynamic_snapshot_jobname*.  
   
- [  **@dynamic_snapshot_jobid =** ] **'***dynamic_snapshot_jobid***'**  
- ID del processo di snapshot da modificare. *dynamic_snapshot_jobid* viene **uniqueidentifier**, con valore predefinito è NULL. Se *dynamic_snapshot_jobname*è specificato, è necessario usare il valore predefinito per *dynamic_snapshot_jobid*.  
+`[ @dynamic_snapshot_jobid = ] 'dynamic_snapshot_jobid'` L'ID del processo di snapshot viene modificato. *dynamic_snapshot_jobid* viene **uniqueidentifier**, con valore predefinito è NULL. Se *dynamic_snapshot_jobname*è specificato, è necessario usare il valore predefinito per *dynamic_snapshot_jobid*.  
   
- [  **@frequency_type =** ] *frequency_type*  
- Frequenza per l'esecuzione pianificata dell'agente. *frequency_type* viene **int**, e può essere uno dei valori seguenti.  
+`[ @frequency_type = ] frequency_type` È la frequenza di pianificazione dell'agente. *frequency_type* viene **int**, e può essere uno dei valori seguenti.  
   
 |Value|Descrizione|  
 |-----------|-----------------|  
@@ -76,8 +72,7 @@ sp_changedynamicsnapshot_job [ @publication = ] 'publication'
 |**128**|Periodica|  
 |NULL (predefinito)||  
   
- [  **@frequency_interval =** ] *frequency_interval*  
- Giorni in cui viene eseguito l'agente. *frequency_interval* viene **int**, e può essere uno dei valori seguenti.  
+`[ @frequency_interval = ] frequency_interval` Giorni in cui viene eseguito l'agente. *frequency_interval* viene **int**, e può essere uno dei valori seguenti.  
   
 |Value|Descrizione|  
 |-----------|-----------------|  
@@ -93,8 +88,7 @@ sp_changedynamicsnapshot_job [ @publication = ] 'publication'
 |**10**|Giorni festivi|  
 |NULL (predefinito)||  
   
- [  **@frequency_subday =** ] *frequency_subday*  
- Frequenza di ripianificazione durante il periodo definito. *frequency_subday* viene **int**, e può essere uno dei valori seguenti.  
+`[ @frequency_subday = ] frequency_subday` È la frequenza di ripianificazione durante il periodo definito. *frequency_subday* viene **int**, e può essere uno dei valori seguenti.  
   
 |Value|Descrizione|  
 |-----------|-----------------|  
@@ -104,11 +98,9 @@ sp_changedynamicsnapshot_job [ @publication = ] 'publication'
 |**8**|Ora|  
 |NULL (predefinito)||  
   
- [  **@frequency_subday_interval =** ] *frequency_subday_interval*  
- È l'intervallo *frequency_subday*. *frequency_subday_interval* viene **int**, con un valore predefinito è NULL.  
+`[ @frequency_subday_interval = ] frequency_subday_interval` È l'intervallo *frequency_subday*. *frequency_subday_interval* viene **int**, con un valore predefinito è NULL.  
   
- [  **@frequency_relative_interval =** ] *frequency_relative_interval*  
- Data di esecuzione dell'agente di merge. Questo parametro viene utilizzato quando *frequency_type* è impostata su **32** (frequenza mensile relativa). *frequency_relative_interval* viene **int**, e può essere uno dei valori seguenti.  
+`[ @frequency_relative_interval = ] frequency_relative_interval` È la data in cui viene eseguito l'agente di Merge. Questo parametro viene utilizzato quando *frequency_type* è impostata su **32** (frequenza mensile relativa). *frequency_relative_interval* viene **int**, e può essere uno dei valori seguenti.  
   
 |Value|Descrizione|  
 |-----------|-----------------|  
@@ -119,26 +111,19 @@ sp_changedynamicsnapshot_job [ @publication = ] 'publication'
 |**16**|Ultimo|  
 |NULL (predefinito)||  
   
- [  **@frequency_recurrence_factor =** ] *frequency_recurrence_factor*  
- Fattore di occorrenza utilizzato da *frequency_type*. *frequency_recurrence_factor* viene **int**, con un valore predefinito è NULL.  
+`[ @frequency_recurrence_factor = ] frequency_recurrence_factor` Fattore di occorrenza utilizzato da *frequency_type*. *frequency_recurrence_factor* viene **int**, con un valore predefinito è NULL.  
   
- [ **@active_start_date =** ] *active_start_date*  
- Data della prima esecuzione pianificata dell'agente di merge, nel formato AAAAMMGG. *active_start_date* viene **int**, con un valore predefinito è NULL.  
+`[ @active_start_date = ] active_start_date` È la data della prima l'agente di Merge pianificata, nel formato YYYYMMDD. *active_start_date* viene **int**, con un valore predefinito è NULL.  
   
- [ **@active_end_date =** ] *active_end_date*  
- Data dell'ultima esecuzione pianificata dell'agente di merge, nel formato AAAAMMGG. *active_end_date* viene **int**, con un valore predefinito è NULL.  
+`[ @active_end_date = ] active_end_date` La data di arresto dell'agente di Merge viene pianificata, nel formato aaaammgg. *active_end_date* viene **int**, con un valore predefinito è NULL.  
   
- [  **@active_start_time_of_day =** ] *active_start_time_of_day*  
- Ora del giorno della prima esecuzione pianificata dell'agente di merge, nel formato HHMMSS. *active_start_time_of_day* viene **int**, con un valore predefinito è NULL.  
+`[ @active_start_time_of_day = ] active_start_time_of_day` È l'ora del giorno quando l'agente di Merge è primo pianificata, nel formato HHMMSS. *active_start_time_of_day* viene **int**, con un valore predefinito è NULL.  
   
- [  **@active_end_time_of_day =** ] *active_end_time_of_day*  
- Ora del giorno dell'ultima esecuzione pianificata dell'agente di merge, nel formato HHMMSS. *active_end_time_of_day* viene **int**, con un valore predefinito è NULL.  
+`[ @active_end_time_of_day = ] active_end_time_of_day` L'ora del giorno quando si arresta l'agente di Merge viene pianificata, nel formato HHMMSS. *active_end_time_of_day* viene **int**, con un valore predefinito è NULL.  
   
- [  **@job_login=** ] **'***job_login***'**  
- Account di [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows utilizzato per l'esecuzione dell'agente snapshot durante la generazione dello snapshot per una sottoscrizione con un filtro di riga con parametri. *job_login* viene **nvarchar(257)**, con un valore predefinito NULL.  
+`[ @job_login = ] 'job_login'` È il [!INCLUDE[msCoName](../../includes/msconame-md.md)] Account Windows con cui viene eseguito l'agente Snapshot durante la generazione dello snapshot per una sottoscrizione usando un filtro di riga con parametri. *job_login* viene **nvarchar(257)**, con un valore predefinito NULL.  
   
- [  **@job_password=** ] **'***job_password***'**  
- Password dell'account di Windows utilizzato per l'esecuzione dell'agente snapshot durante la generazione dello snapshot per una sottoscrizione con un filtro di riga con parametri. *job_password* viene **nvarchar(257)**, con un valore predefinito NULL.  
+`[ @job_password = ] 'job_password'` Password per l'Account di Windows con cui viene eseguito l'agente Snapshot durante la generazione dello snapshot per una sottoscrizione tramite un filtro di riga con parametri. *job_password* viene **nvarchar(257)**, con un valore predefinito NULL.  
   
 > [!IMPORTANT]  
 >  Se possibile, richiedere agli utenti di immettere le credenziali di sicurezza in fase di esecuzione. Se è necessario archiviare le credenziali in un file script, è fondamentale proteggere il file per evitare accessi non autorizzati.  

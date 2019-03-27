@@ -16,12 +16,12 @@ ms.assetid: e08fdfdd-d242-4e85-817b-9f7a224fe567
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: c199af62d7cd5cb95c382b412182bb24c957bf89
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: 32facb58645e0fbb3750ca02da0d3a22b320fc67
+ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54127081"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58493083"
 ---
 # <a name="spchangemergefilter-transact-sql"></a>sp_changemergefilter (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -44,20 +44,15 @@ sp_changemergefilter [ @publication= ] 'publication'
 ```  
   
 ## <a name="arguments"></a>Argomenti  
- [  **@publication=** ] **'**_pubblicazione_**'**  
- Nome della pubblicazione. *pubblicazione* viene **sysname**, non prevede alcun valore predefinito.  
+`[ @publication = ] 'publication'` È il nome della pubblicazione. *pubblicazione* viene **sysname**, non prevede alcun valore predefinito.  
   
- [  **@article=** ] **'**_articolo_**'**  
- Nome dell'articolo. *articolo* viene **sysname**, non prevede alcun valore predefinito.  
+`[ @article = ] 'article'` È il nome dell'articolo. *articolo* viene **sysname**, non prevede alcun valore predefinito.  
   
- [  **@filtername=** ] **'**_filtername_**'**  
- Nome corrente del filtro. *FilterName* viene **sysname**, non prevede alcun valore predefinito.  
+`[ @filtername = ] 'filtername'` È il nome corrente del filtro. *FilterName* viene **sysname**, non prevede alcun valore predefinito.  
   
- [  **@property=** ] **'**_proprietà_**'**  
- Nome della proprietà da modificare. *proprietà* viene **sysname**, non prevede alcun valore predefinito.  
+`[ @property = ] 'property'` È il nome della proprietà da modificare. *proprietà* viene **sysname**, non prevede alcun valore predefinito.  
   
- [  **@value=**] **'**_valore_**'**  
- Nuovo valore della proprietà specificata. *valore*viene **nvarchar(1000)**, non prevede alcun valore predefinito.  
+`[ @value = ] 'value'` È il nuovo valore per la proprietà specificata. *valore*viene **nvarchar(1000)**, non prevede alcun valore predefinito.  
   
  Nella tabella seguente vengono descritte le proprietà degli articoli e i valori corrispondenti.  
   
@@ -66,21 +61,19 @@ sp_changemergefilter [ @publication= ] 'publication'
 |**filter_type**|**1**|Filtro join.<br /><br /> Questa opzione è necessaria per supportare i Sottoscrittori [!INCLUDE[ssEW](../../includes/ssew-md.md)].|  
 ||**2**|Relazione tra record logici.|  
 ||**3**|Il filtro join è anche una relazione tra record logici.|  
-|**FilterName**||Nome del filtro.|  
+|**filtername**||Nome del filtro.|  
 |**join_articlename**||Nome dell'articolo di join.|  
 |**join_filterclause**||Clausola di filtro.|  
 |**join_unique_key**|**true**|Il join è basato su una chiave univoca.|  
 ||**false**|Il join non è basato su una chiave univoca.|  
   
- [  **@force_invalidate_snapshot =** ] *force_invalidate_snapshot*  
- Segnala che l'azione eseguita da questa stored procedure potrebbe invalidare uno snapshot esistente. *force_invalidate_snapshot* è un **bit**, con un valore predefinito **0**.  
+`[ @force_invalidate_snapshot = ] force_invalidate_snapshot` Segnala che l'azione eseguita da questa stored procedure potrebbe invalidare uno snapshot esistente. *force_invalidate_snapshot* è un **bit**, con un valore predefinito **0**.  
   
  **0** specifica che le modifiche apportate all'articolo di merge non invalidano lo snapshot non è valido. Se la stored procedure rileva che la modifica richiede un nuovo snapshot, viene generato un errore e non viene apportata alcuna modifica.  
   
  **1** significa che le modifiche apportate all'articolo di merge potrebbero invalidare lo snapshot non è valido e se sono presenti sottoscrizioni esistenti richiedono un nuovo snapshot, offre l'autorizzazione per lo snapshot esistente deve essere contrassegnato come obsoleto e di generarne uno nuovo.  
   
- [  **@force_reinit_subscription =** ] *force_reinit_subscription*  
- Segnala che l'azione eseguita dalla stored procedure potrebbe richiedere la reinizializzazione delle sottoscrizioni esistenti. *force_reinit_subscription* è un **bit** con valore predefinito è **0**.  
+`[ @force_reinit_subscription = ] force_reinit_subscription` Segnala che l'azione eseguita da questa stored procedure potrebbe richiedere la reinizializzazione delle sottoscrizioni esistenti. *force_reinit_subscription* è un **bit** con valore predefinito è **0**.  
   
  **0** specifica che le modifiche apportate all'articolo di merge non causano la reinizializzazione della sottoscrizione. Se la stored procedure rileva che la modifica richiede la reinizializzazione delle sottoscrizioni esistenti, viene generato un errore e non viene apportata alcuna modifica.  
   

@@ -18,12 +18,12 @@ ms.assetid: 6ca8fe2c-7b1c-4b59-b4c7-e3b7485df274
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: c6ac15a78e8689e76fc9687a6cd8784eb1fc4dd2
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: eb371603230c0c3b6fbee0012c89ce402711fb6e
+ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52537874"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58493233"
 ---
 # <a name="spaddjob-transact-sql"></a>sp_add_job (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -55,29 +55,21 @@ sp_add_job [ @job_name = ] 'job_name'
 ```  
   
 ## <a name="arguments"></a>Argomenti  
- [  **@job_name =** ] **'**_job_name_**'**  
- Nome del processo. Il nome deve essere univoco e non può contenere la percentuale (**%**) caratteri. *nome_processo*viene **nvarchar (128)**, non prevede alcun valore predefinito.  
+`[ @job_name = ] 'job_name'` Il nome del processo. Il nome deve essere univoco e non può contenere la percentuale (**%**) caratteri. *nome_processo*viene **nvarchar (128)**, non prevede alcun valore predefinito.  
   
- [  **@enabled =** ] *abilitata*  
- Indica lo stato del processo aggiunto. *abilitata*viene **tinyint**, con un valore predefinito è 1 (abilitato). Se **0**, il processo non è abilitato e non viene eseguito in base alla relativa pianificazione; tuttavia, può essere eseguito manualmente.  
+`[ @enabled = ] enabled` Indica lo stato del processo aggiunto. *abilitata*viene **tinyint**, con un valore predefinito è 1 (abilitato). Se **0**, il processo non è abilitato e non viene eseguito in base alla relativa pianificazione; tuttavia, può essere eseguito manualmente.  
   
- [  **@description =** ] **'**_descrizione_**'**  
- Descrizione del processo. *Descrizione* viene **nvarchar(512)**, con un valore predefinito è NULL. Se *descrizione* viene non omesso, viene utilizzata "Nessuna descrizione disponibile".  
+`[ @description = ] 'description'` La descrizione del processo. *Descrizione* viene **nvarchar(512)**, con un valore predefinito è NULL. Se *descrizione* viene non omesso, viene utilizzata "Nessuna descrizione disponibile".  
   
- [ **@start_step_id =** ] *step_id*  
- Numero di identificazione del primo passaggio da eseguire per il processo. *step_id*viene **int**, con un valore predefinito è 1.  
+`[ @start_step_id = ] step_id` Il numero di identificazione del primo passaggio da eseguire per il processo. *step_id*viene **int**, con un valore predefinito è 1.  
   
- [  **@category_name =** ] **'**_categoria_**'**  
- Categoria per il processo. *categoria*viene **sysname**, con un valore predefinito è NULL.  
+`[ @category_name = ] 'category'` La categoria per il processo. *categoria*viene **sysname**, con un valore predefinito è NULL.  
   
- [ **@category_id =** ] *category_id*  
- Meccanismo indipendente dal linguaggio per specificare una categoria di processi. *category_id*viene **int**, con un valore predefinito è NULL.  
+`[ @category_id = ] category_id` Un meccanismo indipendente dal linguaggio per specificare una categoria di processi. *category_id*viene **int**, con un valore predefinito è NULL.  
   
- [  **@owner_login_name =** ] **'**_account di accesso_**'**  
- Nome dell'account di accesso proprietario del processo. *account di accesso*viene **sysname**, con un valore predefinito è NULL, che viene interpretato come nome account di accesso corrente. Solo i membri del **sysadmin** ruolo predefinito del server può impostare o modificare il valore per **@owner_login_name**. Se gli utenti che non sono membri del **sysadmin** ruolo impostare o modificare il valore di **@owner_login_name**, esecuzione di questa stored procedure ha esito negativo e viene restituito un errore.  
+`[ @owner_login_name = ] 'login'` Il nome dell'account di accesso proprietario del processo. *account di accesso*viene **sysname**, con un valore predefinito è NULL, che viene interpretato come nome account di accesso corrente. Solo i membri del **sysadmin** ruolo predefinito del server può impostare o modificare il valore per **@owner_login_name**. Se gli utenti che non sono membri del **sysadmin** ruolo impostare o modificare il valore di **@owner_login_name**, esecuzione di questa stored procedure ha esito negativo e viene restituito un errore.  
   
- [  **@notify_level_eventlog =** ] *eventlog_level*  
- Valore che indica quando inserire una voce per il processo nel registro applicazioni di Microsoft Windows. *eventlog_level*viene **int**, i possibili valori sono i seguenti.  
+`[ @notify_level_eventlog = ] eventlog_level` Un valore che indica quando inserire una voce nel registro applicazioni di Microsoft Windows per questo processo. *eventlog_level*viene **int**, i possibili valori sono i seguenti.  
   
 |Value|Descrizione|  
 |-----------|-----------------|  
@@ -86,32 +78,24 @@ sp_add_job [ @job_name = ] 'job_name'
 |**2** (impostazione predefinita)|In caso di esito negativo|  
 |**3**|Always|  
   
- [  **@notify_level_email =** ] *email_level*  
- Valore che indica quando inviare un messaggio di posta elettronica al termine del processo. *email_level*viene **int**, il valore predefinito è **0**, non ovvero mai. *email_level*Usa gli stessi valori *eventlog_level*.  
+`[ @notify_level_email = ] email_level` Un valore che indica quando inviare un messaggio di posta elettronica al termine del processo. *email_level*viene **int**, il valore predefinito è **0**, non ovvero mai. *email_level*Usa gli stessi valori *eventlog_level*.  
   
- [ **@notify_level_netsend =** ] *netsend_level*  
- Valore che indica quando inviare un messaggio di rete al termine del processo. *netsend_level*viene **int**, il valore predefinito è **0**, non ovvero mai. *netsend_level* Usa gli stessi valori *eventlog_level*.  
+`[ @notify_level_netsend = ] netsend_level` Un valore che indica quando inviare un messaggio di rete al termine del processo. *netsend_level*viene **int**, il valore predefinito è **0**, non ovvero mai. *netsend_level* Usa gli stessi valori *eventlog_level*.  
   
- [  **@notify_level_page =** ] *page_level*  
- Valore che indica quando inviare una pagina al termine del processo. *page_level*viene **int**, il valore predefinito è **0**, non ovvero mai. *page_level*Usa gli stessi valori *eventlog_level*.  
+`[ @notify_level_page = ] page_level` Un valore che indica quando inviare una pagina al termine del processo. *page_level*viene **int**, il valore predefinito è **0**, non ovvero mai. *page_level*Usa gli stessi valori *eventlog_level*.  
   
- [  **@notify_email_operator_name =** ] **'**_nome_posta_elettronica_**'**  
- Il nome di posta elettronica della persona a cui inviare il messaggio di posta elettronica quando *email_level* viene raggiunto. *nome_posta_elettronica* viene **sysname**, con un valore predefinito è NULL.  
+`[ @notify_email_operator_name = ] 'email_name'` Il nome di posta elettronica della persona a cui inviare il messaggio di posta elettronica quando *email_level* viene raggiunto. *nome_posta_elettronica* viene **sysname**, con un valore predefinito è NULL.  
   
- [  **@notify_netsend_operator_name =** ] **'**_netsend_name_**'**  
- Nome dell'operatore a cui viene inviato il messaggio di rete al termine del processo. *netsend_name*viene **sysname**, con un valore predefinito è NULL.  
+`[ @notify_netsend_operator_name = ] 'netsend_name'` Il nome dell'operatore a cui viene inviato il messaggio di rete dopo il completamento del processo. *netsend_name*viene **sysname**, con un valore predefinito è NULL.  
   
- [  **@notify_page_operator_name =** ] **'**_page_name_**'**  
- Nome dell'operatore a cui inviare il messaggio sul cercapersone al termine del processo. *page_name*viene **sysname**, con un valore predefinito è NULL.  
+`[ @notify_page_operator_name = ] 'page_name'` Il nome della persona a cercapersone al termine del processo. *page_name*viene **sysname**, con un valore predefinito è NULL.  
   
- [  **@delete_level =** ] *i possibili*  
- Valore che indica quando eliminare il processo. *delete_value*viene **int**, valore predefinito è 0, non ovvero mai. *i possibili*Usa gli stessi valori *eventlog_level*.  
+`[ @delete_level = ] delete_level` Un valore che indica quando eliminare il processo. *delete_value*viene **int**, valore predefinito è 0, non ovvero mai. *i possibili*Usa gli stessi valori *eventlog_level*.  
   
 > [!NOTE]  
 >  Quando *i possibili* viene **3**, il processo viene eseguito una sola volta, indipendentemente dalle pianificazioni definite per il processo. Inoltre, se un processo si autoelimina, viene eliminato anche il contenuto della cronologia corrispondente.  
   
- [  **@job_id =** ] _job_id_**OUTPUT**  
- Numero di identificazione del processo assegnato al processo se creato correttamente. *job_id*è una variabile di output di tipo **uniqueidentifier**, con un valore predefinito è NULL.  
+`[ @job_id = ] _job_idOUTPUT` Numero di identificazione assegnato al processo se creato correttamente. *job_id*è una variabile di output di tipo **uniqueidentifier**, con un valore predefinito è NULL.  
   
 ## <a name="return-code-values"></a>Valori restituiti  
  **0** (esito positivo) o **1** (errore)  

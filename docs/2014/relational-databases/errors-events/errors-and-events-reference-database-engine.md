@@ -14,21 +14,19 @@ ms.assetid: ea928535-6fd1-4738-a8ed-ffb602f3825e
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 638570c8a2be779b11b0ec852d17ea4815960054
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 537ea93edb56b84be0cbeff5633b943252a98ff8
+ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53356414"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58493503"
 ---
 # <a name="errors-and-events-reference-database-engine"></a>Guida di riferimento a errori ed eventi (Motore di database)
-  Il [Centro eventi ed errori messaggi](https://go.microsoft.com/fwlink/?LinkId=47660) su TechNet è la fonte principale di informazioni sui messaggi di errore per [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Tale strumento semplifica la ricerca di informazioni sui messaggi di errore di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e di altri prodotti Microsoft consentendo di eseguire ricerche full-text e di filtrare i risultati in base al prodotto, alla versione, all'origine e a un identificatore numerico o simbolico. Inoltre, è disponibile una nuova interfaccia che fornisce supporto in più lingue. Il Centro verrà continuamente aggiornato con nuove informazioni sulla risoluzione dei problemi relativi agli errori più comuni.  
-  
- Grazie ai miglioramenti che verranno apportati al Centro eventi e messaggi di errore, le informazioni relative alla risoluzione dei problemi saranno disponibili per il download in modo da renderle accessibili anche per computer non connessi a Internet.  
+
+In questa sezione sono selezionati i messaggi di errore del motore di Database che necessitano di ulteriore spiegazione.
   
 ## <a name="in-this-section"></a>In questa sezione  
- [Errori ed eventi di motore di database] (database-engine-eventi-e-errors.md0  
- Descrive il formato dei messaggi di errore di [!INCLUDE[ssDE](../../includes/ssde-md.md)] e illustra la procedura per visualizzare i messaggi di errore e restituirli alle applicazioni.  
+ [Errori ed eventi del motore di database](database-engine-events-and-errors.md) descrive il formato di [!INCLUDE[ssDE](../../includes/ssde-md.md)] messaggi di errore e viene illustrato come visualizzare i messaggi di errore e restituiscono i messaggi di errore per le applicazioni.  
   
  Contiene le spiegazioni dei messaggi di errori di [!INCLUDE[ssDE](../../includes/ssde-md.md)] , le possibili cause e le azioni che è possibile eseguire per risolvere il problema.  
   

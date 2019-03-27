@@ -18,12 +18,12 @@ ms.assetid: 9c143b6c-27ac-4ab7-98d1-3b7b265f3963
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: dd0273e27ec20f23d683347f9501b72355f560d6
-ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
+ms.openlocfilehash: d21de1f416344202911f80e48afc025cd423b1e2
+ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/18/2018
-ms.locfileid: "53588603"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58491985"
 ---
 # <a name="spcantlogbeapplied-transact-sql"></a>sp_can_tlog_be_applied (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -42,14 +42,11 @@ sp_can_tlog_be_applied [ @backup_file_name = ] 'backup_file_name'
 ```  
   
 ## <a name="arguments"></a>Argomenti  
- [  **@backup_file_name=** ] **'**_backup_file_name_**'**  
- Nome di un file di backup. *backup_file_name* viene **nvarchar (128)**.  
+`[ @backup_file_name = ] 'backup_file_name'` È il nome di un file di backup. *backup_file_name* is **nvarchar(128)**.  
   
- [  **@database_name=** ] **'**_database_name_**'**  
- Nome del database. *database_name* è di tipo **sysname**.  
+`[ @database_name = ] 'database_name'` È il nome del database. *database_name* è di tipo **sysname**.  
   
- [  **@result=** ] _risultato_ **OUTPUT**  
- Indica se il log delle transazioni è applicabile al database. *risultato* viene **bit**.  
+`[ @result = ] _result_ OUTPUT` Indica se il log delle transazioni è applicabile al database. *risultato* viene **bit**.  
   
  1 = Il log può essere applicato  
   

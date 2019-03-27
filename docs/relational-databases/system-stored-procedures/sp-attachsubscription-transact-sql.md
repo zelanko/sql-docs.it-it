@@ -16,12 +16,12 @@ ms.assetid: b9bbda36-a46a-4327-a01e-9cd632e4791b
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 9cd00d75a8afd2fae06868fd4b44320865f239f2
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: 47e1eec1aaa8162565f481b2d82982781e1a3c8c
+ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54126371"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58493594"
 ---
 # <a name="spattachsubscription-transact-sql"></a>sp_attachsubscription (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -54,65 +54,51 @@ sp_attachsubscription [ @dbname = ] 'dbname'
 ```  
   
 ## <a name="arguments"></a>Argomenti  
- [  **@dbname=** ] **'***dbname***'**  
- Stringa che specifica il database di sottoscrizione di destinazione tramite il nome. *dbname* viene **sysname**, non prevede alcun valore predefinito.  
+`[ @dbname = ] 'dbname'` È la stringa che specifica il database di sottoscrizione di destinazione in base al nome. *dbname* viene **sysname**, non prevede alcun valore predefinito.  
   
- [  **@filename=** ] **'***filename***'**  
- È il nome e percorso fisico del file MDF primario (**master** file di dati). *nome file* viene **nvarchar(260)**, non prevede alcun valore predefinito.  
+`[ @filename = ] 'filename'` È il nome e percorso fisico del file MDF primario (**master** file di dati). *nome file* viene **nvarchar(260)**, non prevede alcun valore predefinito.  
   
- [  **@subscriber_security_mode=** ] **'***subscriber_security_mode***'**  
- Modalità di sicurezza da utilizzare quando si effettua la connessione a un Sottoscrittore per la sincronizzazione. *subscriber_security_mode* viene **int**, con un valore predefinito è NULL.  
+`[ @subscriber_security_mode = ] 'subscriber_security_mode'` È la modalità di sicurezza del sottoscrittore da utilizzare quando ci si connette a un sottoscrittore durante la sincronizzazione. *subscriber_security_mode* viene **int**, con un valore predefinito è NULL.  
   
 > [!NOTE]  
 >  È necessario utilizzare l'autenticazione di Windows. Se *subscriber_security_mode* non è **1** (autenticazione di Windows), viene restituito un errore.  
   
- [  **@subscriber_login=** ] **'***subscriber_login***'**  
- Nome dell'account di accesso da utilizzare per la connessione a un Sottoscrittore in fase di sincronizzazione. *subscriber_login* viene **sysname**, con un valore predefinito è NULL.  
+`[ @subscriber_login = ] 'subscriber_login'` È il nome di accesso del sottoscrittore da utilizzare quando ci si connette a un sottoscrittore durante la sincronizzazione. *subscriber_login* viene **sysname**, con un valore predefinito è NULL.  
   
 > [!NOTE]  
 >  Questo parametro è deprecato ed è ancora disponibile per compatibilità con gli script di versioni precedenti. Se *subscriber_security_mode* non è **1** e *subscriber_login* è specificato, viene restituito un errore.  
   
- [  **@subscriber_password=** ] **'***subscriber_password***'**  
- Password del Sottoscrittore. *subscriber_password* viene **sysname**, con un valore predefinito è NULL.  
+`[ @subscriber_password = ] 'subscriber_password'` È la password del sottoscrittore. *subscriber_password* viene **sysname**, con un valore predefinito è NULL.  
   
 > [!NOTE]  
 >  Questo parametro è deprecato ed è ancora disponibile per compatibilità con gli script di versioni precedenti. Se *subscriber_security_mode* non è **1** e *subscriber_password* è specificato, viene restituito un errore.  
   
- [  **@distributor_security_mode=** ] *distributor_security_mode*  
- Modalità di sicurezza da utilizzare quando si effettua la connessione a un server di distribuzione per la sincronizzazione. *distributor_security_mode* viene **int**, il valore predefinito è **0**. **0** specifica [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] l'autenticazione. **1** specifica l'autenticazione di Windows. [!INCLUDE[ssNoteWinAuthentication](../../includes/ssnotewinauthentication-md.md)]  
+`[ @distributor_security_mode = ] distributor_security_mode` È la modalità di sicurezza da utilizzare quando ci si connette a un server di distribuzione durante la sincronizzazione. *distributor_security_mode* viene **int**, il valore predefinito è **0**. **0** specifica [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] l'autenticazione. **1** specifica l'autenticazione di Windows. [!INCLUDE[ssNoteWinAuthentication](../../includes/ssnotewinauthentication-md.md)]  
   
- [  **@distributor_login=** ] **'***distributor_login***'**  
- Account di accesso da utilizzare quando ci si connette a un server di distribuzione per la sincronizzazione. *distributor_login* è obbligatorio se *distributor_security_mode* è impostata su **0**. *distributor_login* viene **sysname**, con un valore predefinito è NULL.  
+`[ @distributor_login = ] 'distributor_login'` È l'account di accesso da utilizzare quando ci si connette a un server di distribuzione durante la sincronizzazione. *distributor_login* è obbligatorio se *distributor_security_mode* è impostata su **0**. *distributor_login* viene **sysname**, con un valore predefinito è NULL.  
   
- [  **@distributor_password=** ] **'***distributor_password***'**  
- Password del database di distribuzione. *distributor_password* è obbligatorio se *distributor_security_mode* è impostata su **0**. *distributor_password* viene **sysname**, con un valore predefinito è NULL. Il valore di *distributor_password* deve essere inferiore a 120 caratteri Unicode.  
+`[ @distributor_password = ] 'distributor_password'` È la password del server di distribuzione. *distributor_password* è obbligatorio se *distributor_security_mode* è impostata su **0**. *distributor_password* viene **sysname**, con un valore predefinito è NULL. Il valore di *distributor_password* deve essere inferiore a 120 caratteri Unicode.  
   
 > [!IMPORTANT]  
 >  Non usare una password vuota. Usare una password complessa. Se possibile, richiedere agli utenti di immettere le credenziali di sicurezza in fase di esecuzione. Se è necessario archiviare le credenziali in un file script, è fondamentale proteggere il file per evitare accessi non autorizzati.  
   
- [  **@publisher_security_mode=** ] *publisher_security_mode*  
- Modalità di sicurezza da utilizzare quando si effettua la connessione a un server di pubblicazione per la sincronizzazione. *publisher_security_mode* viene **int**, il valore predefinito è **1**. Se **0**, specifica [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] l'autenticazione. Se **1**, specifica l'autenticazione di Windows. [!INCLUDE[ssNoteWinAuthentication](../../includes/ssnotewinauthentication-md.md)]  
+`[ @publisher_security_mode = ] publisher_security_mode` È la modalità di sicurezza da utilizzare quando ci si connette a un server di pubblicazione durante la sincronizzazione. *publisher_security_mode* viene **int**, il valore predefinito è **1**. Se **0**, specifica [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] l'autenticazione. Se **1**, specifica l'autenticazione di Windows. [!INCLUDE[ssNoteWinAuthentication](../../includes/ssnotewinauthentication-md.md)]  
   
- [  **@publisher_login=** ] **'***publisher_login***'**  
- Account di accesso da utilizzare per la connessione a un server di pubblicazione in fase di sincronizzazione. *publisher_login* viene **sysname**, con un valore predefinito è NULL.  
+`[ @publisher_login = ] 'publisher_login'` È l'account di accesso da utilizzare quando ci si connette a un server di pubblicazione durante la sincronizzazione. *publisher_login* viene **sysname**, con un valore predefinito è NULL.  
   
- [  **@publisher_password=** ] **'***publisher_password***'**  
- Password utilizzata per la connessione al server di pubblicazione. *publisher_password* viene **sysname**, con un valore predefinito è NULL. Il valore di *publisher_password* deve essere inferiore a 120 caratteri Unicode.  
+`[ @publisher_password = ] 'publisher_password'` Password utilizzata durante la connessione al server di pubblicazione. *publisher_password* viene **sysname**, con un valore predefinito è NULL. Il valore di *publisher_password* deve essere inferiore a 120 caratteri Unicode.  
   
 > [!IMPORTANT]  
 >  Non usare una password vuota. Usare una password complessa. Se possibile, richiedere agli utenti di immettere le credenziali di sicurezza in fase di esecuzione. Se è necessario archiviare le credenziali in un file script, è fondamentale proteggere il file per evitare accessi non autorizzati.  
   
- [  **@job_login=** ] **'***job_login***'**  
- Account di accesso per l'account di Windows utilizzato per l'esecuzione dell'agente. *job_login* viene **nvarchar(257)**, non prevede alcun valore predefinito. Questo account di Windows viene sempre utilizzato per le connessioni dell'agente al server di distribuzione.  
+`[ @job_login = ] 'job_login'` È l'account di accesso per l'account di Windows con cui viene eseguito l'agente. *job_login* viene **nvarchar(257)**, non prevede alcun valore predefinito. Questo account di Windows viene sempre utilizzato per le connessioni dell'agente al server di distribuzione.  
   
- [  **@job_password=** ] **'***job_password***'**  
- Password dell'account di Windows utilizzato per l'esecuzione dell'agente. *job_password* viene **sysname**, non prevede alcun valore predefinito. Il valore di *job_password* deve essere inferiore a 120 caratteri Unicode.  
+`[ @job_password = ] 'job_password'` È la password per l'account di Windows con cui viene eseguito l'agente. *job_password* viene **sysname**, non prevede alcun valore predefinito. Il valore di *job_password* deve essere inferiore a 120 caratteri Unicode.  
   
 > [!IMPORTANT]  
 >  Se possibile, richiedere agli utenti di immettere le credenziali di sicurezza in fase di esecuzione. Se è necessario archiviare le credenziali in un file script, è fondamentale proteggere il file per evitare accessi non autorizzati.  
   
- [  **@db_master_key_password=** ] **'***db_master_key_password***'**  
- Password di una chiave master di database definita dall'utente. *db_master_key_password* viene **nvarchar(524**, con un valore predefinito NULL. Se *db_master_key_password* non viene specificato, verrà eliminata e ricreata una chiave Master del Database esistente.  
+`[ @db_master_key_password = ] 'db_master_key_password'` È la password di una chiave definita dall'utente del Database Master. *db_master_key_password* viene **nvarchar(524**, con un valore predefinito NULL. Se *db_master_key_password* non viene specificato, verrà eliminata e ricreata una chiave Master del Database esistente.  
   
 > [!IMPORTANT]  
 >  Se possibile, richiedere agli utenti di immettere le credenziali di sicurezza in fase di esecuzione. Se è necessario archiviare le credenziali in un file script, è fondamentale proteggere il file per evitare accessi non autorizzati.  

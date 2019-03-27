@@ -18,12 +18,12 @@ ms.assetid: 80c80eaf-cf23-4ed8-b8dd-65fe59830dd1
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: f04aefa642e21901a3070d71164f50f01cbc2ec7
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 4102c272fe9d880e6213917091b6078a413aebf8
+ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47732841"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58494303"
 ---
 # <a name="spattachschedule-transact-sql"></a>sp_attach_schedule (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -43,20 +43,16 @@ sp_attach_schedule
 ```  
   
 ## <a name="arguments"></a>Argomenti  
- [ **@job_id=** ] *job_id*  
- Numero di identificazione del processo a cui viene aggiunta la pianificazione. *job_id*viene **uniqueidentifier**, con un valore predefinito è NULL.  
+`[ @job_id = ] job_id` Numero di identificazione del processo a cui viene aggiunta la pianificazione. *job_id*viene **uniqueidentifier**, con un valore predefinito è NULL.  
   
- [ **@job_name =** ] **'***job_name***'**  
- Nome del processo a cui viene aggiunta la pianificazione. *nome_processo*viene **sysname**, con un valore predefinito è NULL.  
+`[ @job_name = ] 'job_name'` Il nome del processo a cui viene aggiunta la pianificazione. *nome_processo*viene **sysname**, con un valore predefinito è NULL.  
   
 > [!NOTE]  
 >  Entrambi *job_id* oppure *job_name* devono essere specificati, ma non è possibile specificarli entrambi.  
   
- [  **@schedule_id =** ] *schedule_id*  
- Numero di identificazione della pianificazione da impostare per il processo. *schedule_id*viene **int**, con un valore predefinito è NULL.  
+`[ @schedule_id = ] schedule_id` Il numero di identificazione della pianificazione della pianificazione da impostare per il processo. *schedule_id*viene **int**, con un valore predefinito è NULL.  
   
- [  **@schedule_name =** ] **'***schedule_name***'**  
- Nome della pianificazione da impostare per il processo. *schedule_name*viene **sysname**, con un valore predefinito è NULL.  
+`[ @schedule_name = ] 'schedule_name'` Il nome della pianificazione da impostare per il processo. *schedule_name*viene **sysname**, con un valore predefinito è NULL.  
   
 > [!NOTE]  
 >  Entrambi *schedule_id* oppure *schedule_name* devono essere specificati, ma non è possibile specificarli entrambi.  

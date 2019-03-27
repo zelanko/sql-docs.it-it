@@ -16,12 +16,12 @@ ms.assetid: ef50ccf6-e360-4e4b-91b9-6706b8fabefa
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 26026329ec092c769d545b4dbe99bd317b095bbe
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: 0fc4df3d84e2652c8ee328d0dbe79a71c068994a
+ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54134061"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58493353"
 ---
 # <a name="spadddynamicsnapshotjob-transact-sql"></a>sp_adddynamicsnapshot_job (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -57,17 +57,13 @@ sp_adddynamicsnapshot_job [ @publication = ] 'publication'
 ```  
   
 ## <a name="arguments"></a>Argomenti  
- [  **@publication=**] **'***pubblicazione***'**  
- Nome della pubblicazione a cui si desidera aggiungere il processo di snapshot dei dati filtrati. *pubblicazione* viene **sysname**, non prevede alcun valore predefinito.  
+`[ @publication = ] 'publication'` È il nome della pubblicazione a cui si desidera aggiungere il processo di snapshot dei dati filtrati. *pubblicazione* viene **sysname**, non prevede alcun valore predefinito.  
   
- [ **@suser_sname**=] **'***suser_sname***'**  
- È il valore utilizzato per la creazione di uno snapshot dei dati filtrati per una sottoscrizione filtrata in base al valore della [SUSER_SNAME](../../t-sql/functions/suser-sname-transact-sql.md) funzione nel Sottoscrittore. *SUSER_SNAME* viene **sysname**, non prevede alcun valore predefinito. *SUSER_SNAME* deve essere NULL se questa funzione non viene utilizzata per filtrare in modo dinamico la pubblicazione.  
+`[ @suser_sname = ] 'suser_sname'` È il valore utilizzato per la creazione di uno snapshot dei dati filtrati per una sottoscrizione filtrata in base al valore della [SUSER_SNAME](../../t-sql/functions/suser-sname-transact-sql.md) funzione nel Sottoscrittore. *SUSER_SNAME* viene **sysname**, non prevede alcun valore predefinito. *SUSER_SNAME* deve essere NULL se questa funzione non viene utilizzata per filtrare in modo dinamico la pubblicazione.  
   
- [ **@host_name**=] **'***host_name***'**  
- È il valore utilizzato per la creazione di uno snapshot dei dati filtrati per una sottoscrizione filtrata in base al valore della [HOST_NAME](../../t-sql/functions/host-name-transact-sql.md) funzione nel Sottoscrittore. *HOST_NAME* viene **sysname**, non prevede alcun valore predefinito. *HOST_NAME* deve essere NULL se questa funzione non viene utilizzata per filtrare in modo dinamico la pubblicazione.  
+`[ @host_name = ] 'host_name'` È il valore utilizzato per la creazione di uno snapshot dei dati filtrati per una sottoscrizione filtrata in base al valore della [HOST_NAME](../../t-sql/functions/host-name-transact-sql.md) funzione nel Sottoscrittore. *HOST_NAME* viene **sysname**, non prevede alcun valore predefinito. *HOST_NAME* deve essere NULL se questa funzione non viene utilizzata per filtrare in modo dinamico la pubblicazione.  
   
- [ **@dynamic_snapshot_jobname**=] **'***dynamic_snapshot_jobname***'**  
- Nome del processo di snapshot dei dati filtrati creato. *dynamic_snapshot_jobname* viene **sysname**, con valore predefinito è NULL ed è un parametro OUTPUT facoltativo. Se specificato, *dynamic_snapshot_jobname* deve essere risolto in un processo univoco nel server di distribuzione. Se non viene specificato, verrà generato automaticamente e restituito nel set di risultati un nome di processo con il formato seguente:  
+`[ @dynamic_snapshot_jobname = ] 'dynamic_snapshot_jobname'` È il nome del processo di snapshot dei dati filtrati creato. *dynamic_snapshot_jobname* viene **sysname**, con valore predefinito è NULL ed è un parametro OUTPUT facoltativo. Se specificato, *dynamic_snapshot_jobname* deve essere risolto in un processo univoco nel server di distribuzione. Se non viene specificato, verrà generato automaticamente e restituito nel set di risultati un nome di processo con il formato seguente:  
   
 ```  
 'dyn_' + <name of the standard snapshot job> + <GUID>  
@@ -76,11 +72,9 @@ sp_adddynamicsnapshot_job [ @publication = ] 'publication'
 > [!NOTE]  
 >  Quando viene generato il nome del processo di snapshot dinamico, è possibile troncare il nome del processo di snapshot standard.  
   
- [ **@dynamic_snapshot_jobid**=] **'***dynamic_snapshot_jobid***'**  
- Identificatore del processo di snapshot dei dati filtrati creato. *dynamic_snapshot_jobid* viene **uniqueidentifier**, con valore predefinito è NULL ed è un parametro OUTPUT facoltativo.  
+`[ @dynamic_snapshot_jobid = ] 'dynamic_snapshot_jobid'` È un identificatore per il processo di snapshot dei dati filtrati creato. *dynamic_snapshot_jobid* viene **uniqueidentifier**, con valore predefinito è NULL ed è un parametro OUTPUT facoltativo.  
   
- [  **@frequency_type=**] *frequency_type*  
- Frequenza per l'esecuzione pianificata del processo di snapshot dei dati filtrati. *frequency_type* viene **int**, i possibili valori sono i seguenti.  
+`[ @frequency_type = ] frequency_type` È la frequenza con cui pianificare il processo di snapshot dei dati filtrati. *frequency_type* viene **int**, i possibili valori sono i seguenti.  
   
 |Value|Descrizione|  
 |-----------|-----------------|  
@@ -93,8 +87,7 @@ sp_adddynamicsnapshot_job [ @publication = ] 'publication'
 |**64**|Avvio automatico|  
 |**128**|Periodica|  
   
- [  **@frequency_interval =** ] *frequency_interval*  
- Periodo, espresso in giorni, durante il quale viene eseguito il processo di snapshot dei dati filtrati. *frequency_interval* viene **int**, con un valore predefinito pari a 1 e dipende dal valore di *frequency_type*.  
+`[ @frequency_interval = ] frequency_interval` È il periodo, espresso in giorni, durante cui viene eseguito il processo di snapshot dei dati filtrati. *frequency_interval* viene **int**, con un valore predefinito pari a 1 e dipende dal valore di *frequency_type*.  
   
 |Valore di *frequency_type*|Effetto su *frequency_interval*|  
 |--------------------------------|-------------------------------------|  
@@ -106,8 +99,7 @@ sp_adddynamicsnapshot_job [ @publication = ] 'publication'
 |**64**|*frequency_interval* risulta inutilizzato.|  
 |**128**|*frequency_interval* risulta inutilizzato.|  
   
- [  **@frequency_subday=**] *frequency_subday*  
- Specifica l'unità di misura *frequency_subday_interval*. *frequency_subday* viene **int**, i possibili valori sono i seguenti.  
+`[ @frequency_subday = ] frequency_subday` Specifica l'unità di misura *frequency_subday_interval*. *frequency_subday* viene **int**, i possibili valori sono i seguenti.  
   
 |Value|Descrizione|  
 |-----------|-----------------|  
@@ -116,11 +108,9 @@ sp_adddynamicsnapshot_job [ @publication = ] 'publication'
 |**4** (impostazione predefinita)|Minuto|  
 |**8**|Ora|  
   
- [  **@frequency_subday_interval=**] *frequency_subday_interval*  
- È il numero di *frequency_subday* periodi che si verificano tra ogni esecuzione del processo. *frequency_subday_interval* viene **int**, con un valore predefinito è 5.  
+`[ @frequency_subday_interval = ] frequency_subday_interval` È il numero di *frequency_subday* periodi che si verificano tra ogni esecuzione del processo. *frequency_subday_interval* viene **int**, con un valore predefinito è 5.  
   
- [  **@frequency_relative_interval=**] *frequency_relative_interval*  
- Occorrenza del processo di snapshot dei dati filtrati in ogni mese. Questo parametro viene utilizzato quando *frequency_type* è impostata su **32** (frequenza mensile relativa). *frequency_relative_interval* viene **int**, i possibili valori sono i seguenti.  
+`[ @frequency_relative_interval = ] frequency_relative_interval` Indica l'occorrenza del processo di snapshot dei dati filtrati per ogni mese. Questo parametro viene utilizzato quando *frequency_type* è impostata su **32** (frequenza mensile relativa). *frequency_relative_interval* viene **int**, i possibili valori sono i seguenti.  
   
 |Value|Descrizione|  
 |-----------|-----------------|  
@@ -130,20 +120,15 @@ sp_adddynamicsnapshot_job [ @publication = ] 'publication'
 |**8**|Quarto|  
 |**16**|Ultimo|  
   
- [  **@frequency_recurrence_factor=**] *frequency_recurrence_factor*  
- Fattore di occorrenza utilizzato da *frequency_type*. *frequency_recurrence_factor* viene **int**, con un valore predefinito è 0.  
+`[ @frequency_recurrence_factor = ] frequency_recurrence_factor` Fattore di occorrenza utilizzato da *frequency_type*. *frequency_recurrence_factor* viene **int**, con un valore predefinito è 0.  
   
- [  **@active_start_date=**] *active_start_date*  
- Data della prima esecuzione pianificata del processo di snapshot dei dati filtrati, nel formato YYYYMMDD. *active_start_date* viene **int**, con un valore predefinito è NULL.  
+`[ @active_start_date = ] active_start_date` È la data della primo il processo di snapshot dei dati filtrati pianificata, nel formato YYYYMMDD. *active_start_date* viene **int**, con un valore predefinito è NULL.  
   
- [  **@active_end_date=**] *active_end_date*  
- Data dell'ultima esecuzione pianificata del processo di snapshot dei dati filtrati, nel formato YYYYMMDD. *active_end_date* viene **int**, con un valore predefinito è NULL.  
+`[ @active_end_date = ] active_end_date` È la data quando i dati filtrati processo di snapshot pianificata, nel formato YYYYMMDD. *active_end_date* viene **int**, con un valore predefinito è NULL.  
   
- [  **@active_start_time_of_day=**] *active_start_time_of_day*  
- Ora del giorno della prima esecuzione pianificata del processo di snapshot dei dati filtrati, nel formato HHMMSS. *active_start_time_of_day* viene **int**, con un valore predefinito è NULL.  
+`[ @active_start_time_of_day = ] active_start_time_of_day` È prima di tutto è pianificato l'ora del giorno quando processo di snapshot dei dati filtrati, nel formato HHMMSS. *active_start_time_of_day* viene **int**, con un valore predefinito è NULL.  
   
- [  **@active_end_time_of_day=**] *active_end_time_of_day*  
- Ora del giorno dell'ultima esecuzione pianificata del processo di snapshot dei dati filtrati, nel formato HHMMSS. *active_end_time_of_day* viene **int**, con un valore predefinito è NULL.  
+`[ @active_end_time_of_day = ] active_end_time_of_day` È l'ora del giorno quando i dati filtrati processo di snapshot pianificata, nel formato HHMMSS. *active_end_time_of_day* viene **int**, con un valore predefinito è NULL.  
   
 ## <a name="result-set"></a>Set di risultati  
   

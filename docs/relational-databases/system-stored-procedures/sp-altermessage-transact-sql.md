@@ -18,12 +18,12 @@ ms.assetid: 1b28f280-8ef9-48e9-bd99-ec14d79abaca
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 7f41f7b31f928a60342deefcc85a8f71bc707dba
-ms.sourcegitcommit: fc6a6eedcea2d98c93e33d39c1cecd99fbc9a155
+ms.openlocfilehash: df2bab593e0e945e854e310a394abbc93f75efa4
+ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49168861"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58493123"
 ---
 # <a name="spaltermessage-transact-sql"></a>sp_altermessage (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -45,14 +45,12 @@ sp_altermessage [ @message_id = ] message_number   ,[ @parameter = ]'write_to_lo
  [ **@message_id =** ] *message_number*  
  È il numero di errore del messaggio da modificare dal **Sys. Messages**. *message_number* viene **int** non prevede alcun valore predefinito.  
   
- [  **@parameter =** ] **'**_scrivere\_a\_log_'  
- Viene usato con **@parameter_value** a indicare che il messaggio deve essere scritto il [!INCLUDE[msCoName](../../includes/msconame-md.md)] registro applicazioni di Windows. *write_to_log* viene **sysname** non prevede alcun valore predefinito. *write_to_log* deve essere impostato su WITH_LOG o NULL. Se *write_to_log* è impostato su WITH_LOG o NULL e il valore per **@parameter_value** viene **true**, il messaggio viene scritto nel registro applicazioni di Windows. Se *write_to_log* è impostato su WITH_LOG o NULL e il valore di **@parameter_value** viene **false**, il messaggio viene scritto nel registro applicazioni di Windows, ma potrebbe essere scritta in base al modo in cui è stato generato l'errore. Se *write_to_log* è specificato, il valore per **@parameter_value** deve anche essere specificato.  
+`[ @parameter = ] 'write\_to\_log_'` Viene usato con **@parameter_value** a indicare che il messaggio deve essere scritto il [!INCLUDE[msCoName](../../includes/msconame-md.md)] registro applicazioni di Windows. *write_to_log* viene **sysname** non prevede alcun valore predefinito. *write_to_log* deve essere impostato su WITH_LOG o NULL. Se *write_to_log* è impostato su WITH_LOG o NULL e il valore per **@parameter_value** viene **true**, il messaggio viene scritto nel registro applicazioni di Windows. Se *write_to_log* è impostato su WITH_LOG o NULL e il valore di **@parameter_value** viene **false**, il messaggio viene scritto nel registro applicazioni di Windows, ma potrebbe essere scritta in base al modo in cui è stato generato l'errore. Se *write_to_log* è specificato, il valore per **@parameter_value** deve anche essere specificato.  
   
 > [!NOTE]  
 >  Se un messaggio viene scritto nel registro applicazioni di Windows, viene registrato inoltre nel file di log degli errori di [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
- [  **@parameter_value =** ]**'**_valore_'  
- Viene usato con **@parameter** per indicare che l'errore è necessario scrivere il [!INCLUDE[msCoName](../../includes/msconame-md.md)] registro applicazioni di Windows. *valore* viene **varchar (5)**, non prevede alcun valore predefinito. Se **true**, l'errore viene sempre scritto nel registro applicazioni di Windows. Se **false**, l'errore viene scritto nel registro applicazioni di Windows, ma può essere scritta in base al modo in cui è stato generato l'errore. Se *valore* omette *write_to_log* per **@parameter** deve anche essere specificato.  
+`[ @parameter_value = ]'value_'` Viene usato con **@parameter** per indicare che l'errore è necessario scrivere il [!INCLUDE[msCoName](../../includes/msconame-md.md)] registro applicazioni di Windows. *valore* viene **varchar (5)**, non prevede alcun valore predefinito. Se **true**, l'errore viene sempre scritto nel registro applicazioni di Windows. Se **false**, l'errore viene scritto nel registro applicazioni di Windows, ma può essere scritta in base al modo in cui è stato generato l'errore. Se *valore* omette *write_to_log* per **@parameter** deve anche essere specificato.  
   
 ## <a name="return-code-values"></a>Valori restituiti  
  0 (esito positivo) o 1 (esito negativo)  

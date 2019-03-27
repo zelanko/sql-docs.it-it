@@ -16,12 +16,12 @@ ms.assetid: 0f4bbedc-0c1c-414a-b82a-6fd47f0a6a7f
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 26ced1d422c1f47ebd88404b7cf3996df8b9c649
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: dbdd156c20378eda748cef17ec58f6ecf7129cb9
+ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54126056"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58494383"
 ---
 # <a name="spaddpullsubscription-transact-sql"></a>sp_addpullsubscription (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -45,37 +45,29 @@ sp_addpullsubscription [ @publisher= ] 'publisher'
 ```  
   
 ## <a name="arguments"></a>Argomenti  
- [  **@publisher=**] **'***publisher***'**  
- Nome del server di pubblicazione. *server di pubblicazione* viene **sysname**, non prevede alcun valore predefinito.  
+`[ @publisher = ] 'publisher'` È il nome del server di pubblicazione. *server di pubblicazione* viene **sysname**, non prevede alcun valore predefinito.  
   
- [ **@publisher_db=**] **'***publisher_db***'**  
- Nome del database del server di pubblicazione. *publisher_db* viene **sysname**, con un valore predefinito è NULL. *publisher_db* viene ignorata dal server di pubblicazione Oracle.  
+`[ @publisher_db = ] 'publisher_db'` È il nome del server di pubblicazione. *publisher_db* viene **sysname**, con un valore predefinito è NULL. *publisher_db* viene ignorata dal server di pubblicazione Oracle.  
   
- [  **@publication=**] **'***pubblicazione***'**  
- Nome della pubblicazione. *pubblicazione* viene **sysname**, non prevede alcun valore predefinito.  
+`[ @publication = ] 'publication'` È il nome della pubblicazione. *pubblicazione* viene **sysname**, non prevede alcun valore predefinito.  
   
- [  **@independent_agent=**] **'***independent_agent***'**  
- Specifica se per la pubblicazione è disponibile un agente di distribuzione autonomo. *independent_agent* viene **nvarchar(5**, con un valore predefinito è TRUE. Se **true**, è disponibile un agente di distribuzione autonomo per la pubblicazione. Se **false**, è associato un agente di distribuzione per ogni coppia database del server di pubblicazione/database sottoscrittore. *independent_agent* è una proprietà della pubblicazione e deve avere lo stesso valore qui perché contiene server di pubblicazione.  
+`[ @independent_agent = ] 'independent_agent'` Specifica se è disponibile un agente di distribuzione autonomo per questa pubblicazione. *independent_agent* viene **nvarchar(5**, con un valore predefinito è TRUE. Se **true**, è disponibile un agente di distribuzione autonomo per la pubblicazione. Se **false**, è associato un agente di distribuzione per ogni coppia database del server di pubblicazione/database sottoscrittore. *independent_agent* è una proprietà della pubblicazione e deve avere lo stesso valore qui perché contiene server di pubblicazione.  
   
- [  **@subscription_type=**] **'***subscription_type***'**  
- Tipo di sottoscrizione. *subscription_type* viene **nvarchar(9)**, il valore predefinito è **anonimo**. È necessario specificare un valore pari **pull** per *subscription_type*, a meno che non si desidera creare una sottoscrizione senza registrarla nel server di pubblicazione. In questo caso, è necessario specificare un valore pari **anonimo**. Ciò è necessario in casi in cui non è possibile stabilire una connessione [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] al server di pubblicazione durante la configurazione della sottoscrizione.  
+`[ @subscription_type = ] 'subscription_type'` È il tipo di sottoscrizione. *subscription_type* viene **nvarchar(9)**, il valore predefinito è **anonimo**. È necessario specificare un valore pari **pull** per *subscription_type*, a meno che non si desidera creare una sottoscrizione senza registrarla nel server di pubblicazione. In questo caso, è necessario specificare un valore pari **anonimo**. Ciò è necessario in casi in cui non è possibile stabilire una connessione [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] al server di pubblicazione durante la configurazione della sottoscrizione.  
   
- [  **@description=**] **'***descrizione***'**  
- Descrizione della pubblicazione. *Descrizione* viene **nvarchar(100)**, con un valore predefinito è NULL.  
+`[ @description = ] 'description'` Rappresenta la descrizione della pubblicazione. *Descrizione* viene **nvarchar(100)**, con un valore predefinito è NULL.  
   
- [  **@update_mode=**] **'***update_mode***'**  
- Tipo di aggiornamento. *update_mode* viene **nvarchar(30)**, e può essere uno dei valori seguenti.  
+`[ @update_mode = ] 'update_mode'` È il tipo di aggiornamento. *update_mode* viene **nvarchar(30)**, e può essere uno dei valori seguenti.  
   
 |Value|Descrizione|  
 |-----------|-----------------|  
 |**di sola lettura** (impostazione predefinita)|La sottoscrizione è di sola lettura. Le modifiche apportate nel Sottoscrittore non vengono ritrasmesse al server di pubblicazione. È consigliabile utilizzare questo valore quando non sono previsti aggiornamenti nel Sottoscrittore.|  
-|**Synctran**|Abilita il supporto per sottoscrizioni ad aggiornamento immediato.|  
+|**synctran**|Abilita il supporto per sottoscrizioni ad aggiornamento immediato.|  
 |**in coda tran**|Abilita la sottoscrizione per l'aggiornamento in coda. Le modifiche dei dati possono essere apportate nel Sottoscrittore, archiviate in una coda e quindi distribuite al server di pubblicazione.|  
 |**failover**|Abilita la sottoscrizione per l'aggiornamento immediato sostituito dall'aggiornamento in coda in caso di failover. Le modifiche dei dati possono essere apportate nel Sottoscrittore e distribuite immediatamente al server di pubblicazione. Se il server di pubblicazione e il Sottoscrittore non sono connessi, le modifiche apportate ai dati nel Sottoscrittore possono essere archiviate in una coda fino al ripristino della connessione tra il Sottoscrittore e il server di pubblicazione.|  
 |**failover in coda**|Abilita la sottoscrizione come sottoscrizione con aggiornamento in coda con la possibilità di passare alla modalità di aggiornamento immediato. Le modifiche ai dati possono essere apportate nel Sottoscrittore e archiviate in una coda fino alla riconnessione del Sottoscrittore e del server di pubblicazione. Quando viene ristabilita una connessione continua, la modalità di aggiornamento può essere modificata nella modalità di aggiornamento immediato. *Non supportato per il server di pubblicazione Oracle*.|  
   
- [  **@immediate_sync =**] *immediate_sync*  
- Indica se i file di sincronizzazione vengono creati o ricreati a ogni esecuzione dell'agente snapshot. *immediate_sync* viene **bit** con valore predefinito è 1 e deve essere impostato sullo stesso valore come *immediate_sync* nella **sp_addpublication**. *immediate_sync* è una proprietà della pubblicazione e deve avere lo stesso valore qui perché contiene server di pubblicazione.  
+`[ @immediate_sync = ] immediate_sync` È se i file di sincronizzazione vengono creati o ricreati ogni volta che viene eseguito l'agente Snapshot. *immediate_sync* viene **bit** con valore predefinito è 1 e deve essere impostato sullo stesso valore come *immediate_sync* nella **sp_addpublication**. *immediate_sync* è una proprietà della pubblicazione e deve avere lo stesso valore qui perché contiene server di pubblicazione.  
   
 ## <a name="return-code-values"></a>Valori restituiti  
  **0** (esito positivo) o **1** (errore)  
@@ -95,7 +87,7 @@ sp_addpullsubscription [ @publisher= ] 'publisher'
  Solo i membri del **sysadmin** ruolo predefinito del server oppure **db_owner** ruolo predefinito del database possono eseguire **sp_addpullsubscription**.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Create a Pull Subscription](../../relational-databases/replication/create-a-pull-subscription.md)   
+ [Creazione di una sottoscrizione pull](../../relational-databases/replication/create-a-pull-subscription.md)   
  [Create an Updatable Subscription to a Transactional Publication](../../relational-databases/replication/publish/create-an-updatable-subscription-to-a-transactional-publication.md) [sottoscrivere le pubblicazioni](../../relational-databases/replication/subscribe-to-publications.md)   
  [sp_addpullsubscription_agent &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addpullsubscription-agent-transact-sql.md)   
  [sp_change_subscription_properties &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-change-subscription-properties-transact-sql.md)   

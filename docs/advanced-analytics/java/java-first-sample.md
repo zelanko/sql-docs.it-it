@@ -3,18 +3,18 @@ title: Esempio di Java e un'esercitazione per SQL Server 2019 - servizi di SQL S
 description: Eseguire il codice di esempio Java in SQL Server 2019 per informazioni sui passaggi per usare l'estensione del linguaggio Java con dati di SQL Server.
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 02/28/2019
+ms.date: 03/27/2018
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
 manager: cgronlun
 monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 86a379191033f49ab6a5d06ceda2d1ed7a747c12
-ms.sourcegitcommit: 2533383a7baa03b62430018a006a339c0bd69af2
+ms.openlocfilehash: a2fd078d0b9c61678a83cc1b3b5da70adbd69779
+ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57018037"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58493426"
 ---
 # <a name="sql-server-java-sample-walkthrough"></a>Procedura dettagliata di esempio Java di SQL Server
 
@@ -205,9 +205,22 @@ Per altre informazioni sul classpath, vedere [CLASSPATH impostare](howto-call-ja
 
 Se si prevede di classi e le dipendenze in file con estensione jar del pacchetto, specificare il percorso completo del file con estensione jar nel parametro CLASSPATH sp_execute_external_script. Ad esempio, se il file jar viene chiamato 'ngram.jar', il CLASSPATH sarà ' / home/myclasspath/ngram.jar' in Linux.
 
-## <a name="6---set-permissions"></a>6: impostare le autorizzazioni
+## <a name="6---create-external-library"></a>6 - creare una libreria esterna
 
-L'esecuzione di script ha esito positivo solo se l'identità del processo ha accesso al codice. 
+La creazione di una libreria esterna di SQL Server hanno automaticamente accesso a file jar e non è necessario impostare autorizzazioni speciali al classpath.
+
+```sql 
+CREATE EXTERNAL LIBRARY ngram
+FROM (CONTENT = '<path>/ngram.jar') 
+WITH (LANGUAGE = 'Java'); 
+GO
+```
+
+## <a name="7---set-permissions-skip-if-you-performed-step-6"></a>7 - impostare le autorizzazioni (Ignora se è stato eseguito il passaggio 6)
+
+Questo passaggio non è necessario se si utilizzano librerie esterne. Il modo consigliato di consiste nel creare una libreria esterna da è con estensione jar. 
+
+Se non si desidera utilizzare librerie esterne, è necessario impostare le autorizzazioni necessarie. L'esecuzione di script ha esito positivo solo se l'identità del processo ha accesso al codice. 
 
 ### <a name="on-linux"></a>In Linux
 
@@ -232,7 +245,7 @@ Assicurarsi che entrambe le identità di sicurezza dispone delle autorizzazioni 
 
 <a name="call-method"></a>
 
-## <a name="7---call-getngrams"></a>7 - Call *getNgrams()*
+## <a name="8---call-getngrams"></a>8 - Call *getNgrams()*
 
 Per chiamare il codice da SQL Server, specificare il metodo di Java **getNgrams()** nel parametro "script" di sp_execute_external_script. Questo metodo appartiene a un pacchetto denominato "pkg" e un file di classe denominato **Ngram.java**.
 
@@ -246,8 +259,6 @@ In questo esempio passa il parametro del percorso di classe per fornire il perco
 DECLARE @myClassPath nvarchar(50)
 DECLARE @n int 
 --This is where you store your classes or jars.
---Update this to your own classpath
-SET @myClassPath = N'/home/myclasspath/'
 --This is the size of the ngram
 SET @n = 3
 EXEC sp_execute_external_script
@@ -255,8 +266,7 @@ EXEC sp_execute_external_script
 , @script = N'pkg.Ngram.getNGrams'
 , @input_data_1 = N'SELECT id, text FROM reviews'
 , @parallel = 0
-, @params = N'@CLASSPATH nvarchar(30), @param1 INT'
-, @CLASSPATH = @myClassPath
+, @params = N'@param1 INT'
 , @param1 = @n
 with result sets ((ID int, ngram varchar(20)))
 GO
@@ -270,11 +280,7 @@ Dopo avere eseguito la chiamata, si dovrebbe ottenere un set di risultati indica
 
 ### <a name="if-you-get-an-error"></a>Se si verifica un errore
 
-Escludere eventuali problemi correlati al classpath. 
-
-+ Classpath deve includere la cartella padre e tutte le relative sottocartelle, ma non nella sottocartella "pkg". Mentre la sottocartella pkg devono essere presenti, lo ha non deve per essere nel classpath valore specificato nella stored procedure.
-
-+ Nella sottocartella "pkg" deve contenere il codice compilato per tutte le tre classi.
++ Quando si compilano le classi, nella sottocartella "pkg" deve contenere il codice compilato per tutte le tre classi.
 
 + La lunghezza del percorso di classe non può superare il valore dichiarato (`DECLARE @myClassPath nvarchar(50)`). In questo caso, il percorso risulta troncato per i primi 50 caratteri e non verrà caricato il codice compilato. È possibile eseguire un `SELECT @myClassPath` per controllare il valore. Aumentare la lunghezza, se non è sufficiente 50 caratteri. 
 

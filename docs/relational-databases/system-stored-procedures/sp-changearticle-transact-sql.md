@@ -16,12 +16,12 @@ ms.assetid: 24c33ca5-f03a-4417-a267-131ca5ba6bb5
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 6b15212edcb043ed86e3d2cd18c5f33624660692
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: cbfbb923a831901bd42724759372f8b1f7ccbc0c
+ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54130681"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58493453"
 ---
 # <a name="spchangearticle-transact-sql"></a>sp_changearticle (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -44,17 +44,13 @@ sp_changearticle [ [@publication= ] 'publication' ]
 ```  
   
 ## <a name="arguments"></a>Argomenti  
- [  **@publication=**] **'**_pubblicazione_**'**  
- Nome della pubblicazione in cui è contenuto l'articolo. *pubblicazione* viene **sysname**, con un valore predefinito è NULL.  
+`[ @publication = ] 'publication'` È il nome della pubblicazione che contiene l'articolo. *pubblicazione* viene **sysname**, con un valore predefinito è NULL.  
   
- [  **@article=**] **'**_articolo_**'**  
- Nome dell'articolo di cui modificare la proprietà. *articolo* viene **sysname**, con un valore predefinito è NULL.  
+`[ @article = ] 'article'` È il nome dell'articolo con la proprietà deve essere modificata. *articolo* viene **sysname**, con un valore predefinito è NULL.  
   
- [  **@property=**] **'**_proprietà_**'**  
- Proprietà dell'articolo da modificare. *proprietà* viene **nvarchar(100)**.  
+`[ @property = ] 'property'` È una proprietà dell'articolo da modificare. *proprietà* viene **nvarchar(100)**.  
   
- [  **@value=**] **'**_valore_**'**  
- Nuovo valore della proprietà dell'articolo. *valore* viene **nvarchar(255**.  
+`[ @value = ] 'value'` È il nuovo valore della proprietà dell'articolo. *valore* viene **nvarchar(255**.  
   
  Nella tabella seguente vengono descritte le proprietà degli articoli e i valori corrispondenti.  
   
@@ -95,7 +91,7 @@ sp_changearticle [ [@publication= ] 'publication' ]
 ||**0x2000**|Replica le proprietà estese associate all'oggetto di origine dell'articolo pubblicato.|  
 ||**0x4000**|Replica le eventuali chiavi univoche definite in un articolo di tabella.|  
 ||**0x8000**|Replica come vincoli la chiave primaria e le chiavi univoche di un articolo di tabella tramite istruzioni ALTER TABLE.<br /><br /> Nota: Questa opzione è deprecata. Uso **0x80** e **0x4000** invece.|  
-||**0x10000.**|Replica i vincoli CHECK come NOT FOR REPLICATION in modo che i vincoli non vengono imposti durante la sincronizzazione.|  
+||**0x10000**|Replica i vincoli CHECK come NOT FOR REPLICATION in modo che i vincoli non vengono imposti durante la sincronizzazione.|  
 ||**0x20000**|Replica i vincoli FOREIGN KEY come NOT FOR REPLICATION in modo che i vincoli non vengono imposti durante la sincronizzazione.|  
 ||**0x40000**|Replica i filegroup associati a una tabella o un indice partizionato.|  
 ||**0x80000**|Replica lo schema di partizione per una tabella partizionata.|  
@@ -132,8 +128,8 @@ sp_changearticle [ [@publication= ] 'publication' ]
 ||**parameters**|Le modifiche vengono propagate al Sottoscrittore tramite i comandi con parametri. Questa è l'impostazione predefinita per un nuovo articolo.|  
 ||**Valori letterali stringa**|Le modifiche vengono propagate al Sottoscrittore tramite i valori letterali stringa.|  
 |**sync_object**||Nome della tabella o vista utilizzata per generare un file di output di sincronizzazione. Il valore predefinito è NULL. Questa proprietà non è supportata per server di pubblicazione Oracle.|  
-|**spazio di tabella**||Identifica lo spazio tabella utilizzato dalla tabella di registrazione per un articolo pubblicato da un database Oracle. Per altre informazioni, vedere [Gestire spazi di tabella Oracle](../../relational-databases/replication/non-sql/manage-oracle-tablespaces.md).|  
-|**soglia**||Valore percentuale che controlla quando l'agente di distribuzione assegna un nuovo intervallo di valori Identity. Non supportato per la replica peer-to-peer.|  
+|**tablespace**||Identifica lo spazio tabella utilizzato dalla tabella di registrazione per un articolo pubblicato da un database Oracle. Per altre informazioni, vedere [Gestire spazi di tabella Oracle](../../relational-databases/replication/non-sql/manage-oracle-tablespaces.md).|  
+|**threshold**||Valore percentuale che controlla quando l'agente di distribuzione assegna un nuovo intervallo di valori Identity. Non supportato per la replica peer-to-peer.|  
 |**type**||Questa proprietà non è supportata per server di pubblicazione Oracle.|  
 ||**logbased**|Articolo basato su un log.|  
 ||**logbased manualboth**|Articolo basato su log con filtro manuale e vista manuale. Questa opzione richiede che il *sync_object* e *filtro* possibile anche impostare le proprietà. Questa proprietà non è supportata per server di pubblicazione Oracle.|  
@@ -146,8 +142,7 @@ sp_changearticle [ [@publication= ] 'publication' ]
 |**upd_cmd**||Istruzione UPDATE da eseguire. In alternativa, viene creata dal log.|  
 |NULL|NULL|Restituisce un elenco di proprietà dell'articolo che è possibile modificare.|  
   
- [  **@force_invalidate_snapshot =** ] *force_invalidate_snapshot*  
- Segnala che l'azione eseguita da questa stored procedure potrebbe invalidare uno snapshot esistente. *force_invalidate_snapshot* è un **bit**, il valore predefinito è **0**.  
+`[ @force_invalidate_snapshot = ] force_invalidate_snapshot` Segnala che l'azione eseguita da questa stored procedure potrebbe invalidare uno snapshot esistente. *force_invalidate_snapshot* è un **bit**, il valore predefinito è **0**.  
   
  **0** specifica che le modifiche apportate all'articolo non invalidano lo snapshot non è valido. Se la stored procedure rileva che la modifica richiede un nuovo snapshot, viene generato un errore e non viene apportata alcuna modifica.  
   
@@ -155,8 +150,7 @@ sp_changearticle [ [@publication= ] 'publication' ]
   
  Per informazioni sulle proprietà che richiedono la generazione di un nuovo snapshot quando vengono modificate, vedere la sezione Osservazioni.  
   
- [  **@force_reinit_subscription=]**_force_reinit_subscription_  
- Segnala che l'azione eseguita dalla stored procedure potrebbe richiedere la reinizializzazione delle sottoscrizioni esistenti. *force_reinit_subscription* è un **bit** con valore predefinito è **0**.  
+`[ @force_reinit_subscription = ]force_reinit_subscription_` Segnala che l'azione eseguita da questa stored procedure potrebbe richiedere la reinizializzazione delle sottoscrizioni esistenti. *force_reinit_subscription* è un **bit** con valore predefinito è **0**.  
   
  **0** specifica che le modifiche apportate all'articolo non causano la reinizializzazione della sottoscrizione. Se la stored procedure rileva che la modifica richiede la reinizializzazione delle sottoscrizioni esistenti, viene generato un errore e non viene apportata alcuna modifica.  
   
@@ -164,8 +158,7 @@ sp_changearticle [ [@publication= ] 'publication' ]
   
  Per ulteriori informazioni sulle proprietà che richiedono la reinizializzazione di tutte le sottoscrizioni esistenti in caso di modifica, vedere la sezione Osservazioni.  
   
- [ **@publisher**=] **'**_editore_**'**  
- Specifica un non - [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] server di pubblicazione. *server di pubblicazione* viene **sysname**, con un valore predefinito è NULL.  
+`[ @publisher = ] 'publisher'` Specifica un non - [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] server di pubblicazione. *server di pubblicazione* viene **sysname**, con un valore predefinito è NULL.  
   
 > [!NOTE]  
 >  *server di pubblicazione* non deve essere utilizzata quando si modificano le proprietà degli articoli in una [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] server di pubblicazione.  

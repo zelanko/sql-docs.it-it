@@ -16,12 +16,12 @@ ms.assetid: 8abaa8c1-d99e-4788-970f-c4752246c577
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 636a0a23c70170ce625b9e462e2715c1c884bda7
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: e10d4e46e01f4da5a36d7bdf59d7566f2a989e75
+ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53210120"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58493153"
 ---
 # <a name="sparticlecolumn-transact-sql"></a>sp_articlecolumn (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -48,29 +48,21 @@ sp_articlecolumn [ @publication = ] 'publication'
 ```  
   
 ## <a name="arguments"></a>Argomenti  
- [  **@publication=**] **'**_pubblicazione_**'**  
- Nome della pubblicazione in cui è contenuto l'articolo. *pubblicazione* viene **sysname**, non prevede alcun valore predefinito.  
+`[ @publication = ] 'publication'` È il nome della pubblicazione che contiene questo articolo. *pubblicazione* viene **sysname**, non prevede alcun valore predefinito.  
   
- [  **@article=**] **'**_articolo_**'**  
- Nome dell'articolo. *articolo* viene **sysname**, non prevede alcun valore predefinito.  
+`[ @article = ] 'article'` È il nome dell'articolo. *articolo* viene **sysname**, non prevede alcun valore predefinito.  
   
- [  **@column=**] **'**_colonna_**'**  
- Nome della colonna da aggiungere o eliminare. *colonna* viene **sysname**, con un valore predefinito è NULL. Se il valore è NULL, vengono pubblicate tutte le colonne.  
+`[ @column = ] 'column'` È il nome della colonna da aggiungere o eliminare. *colonna* viene **sysname**, con un valore predefinito è NULL. Se il valore è NULL, vengono pubblicate tutte le colonne.  
   
- [  **@operation=**] **'**_operazione_**'**  
- Specifica se aggiungere o eliminare colonne in un articolo. *operazione* viene **nvarchar(5**, con un valore predefinito di aggiunta. **aggiungere** contrassegna la colonna per la replica. **DROP** viene esclusa dalla replica della colonna.  
+`[ @operation = ] 'operation'` Specifica se aggiungere o eliminare colonne in un articolo. *operazione* viene **nvarchar(5**, con un valore predefinito di aggiunta. **aggiungere** contrassegna la colonna per la replica. **DROP** viene esclusa dalla replica della colonna.  
   
- [  **@refresh_synctran_procs=**] *refresh_synctran_procs*  
- Specifica se le stored procedure che supportano le sottoscrizioni ad aggiornamento immediato vengono rigenerate in modo da includere il numero di colonne replicato. *refresh_synctran_procs* viene **bit**, il valore predefinito è **1**. Se **1**, le stored procedure vengono rigenerate.  
+`[ @refresh_synctran_procs = ] refresh_synctran_procs` Specifica se la stored procedure che supportano sottoscrizioni ad aggiornamento immediato vengono rigenerate in modo che corrisponda al numero di colonne replicato. *refresh_synctran_procs* viene **bit**, il valore predefinito è **1**. Se **1**, le stored procedure vengono rigenerate.  
   
- [  **@ignore_distributor =**] *ignore_distributor*  
- Indica se la stored procedure viene eseguita senza stabilire la connessione al server di distribuzione. *ignore_distributor* viene **bit**, il valore predefinito è **0**. Se **0**, il database deve essere abilitato per la pubblicazione e la cache dell'articolo deve essere aggiornata in modo da riflettere le nuove colonne replicate dall'articolo. Se **1**, consente a colonne di articolo da eliminare per gli articoli che si trovano in un database non pubblicato; devono essere usati solo in situazioni di ripristino.  
+`[ @ignore_distributor = ] ignore_distributor` Indica se questa stored procedure viene eseguita senza stabilire la connessione al server di distribuzione. *ignore_distributor* viene **bit**, il valore predefinito è **0**. Se **0**, il database deve essere abilitato per la pubblicazione e la cache dell'articolo deve essere aggiornata in modo da riflettere le nuove colonne replicate dall'articolo. Se **1**, consente a colonne di articolo da eliminare per gli articoli che si trovano in un database non pubblicato; devono essere usati solo in situazioni di ripristino.  
   
- [  **@change_active =** ] *change_active*  
- Consente di modificare le colonne delle pubblicazioni a cui sono associate sottoscrizioni. *change_active* è un **int** con valore predefinito è **0**. Se **0**, le colonne non vengono modificate. Se **1**, le colonne possono essere aggiunte o eliminate dagli articoli attivi a cui sono associate sottoscrizioni.  
+`[ @change_active = ] change_active` Consente di modificare le colonne delle pubblicazioni che dispongono di sottoscrizioni. *change_active* è un **int** con valore predefinito è **0**. Se **0**, le colonne non vengono modificate. Se **1**, le colonne possono essere aggiunte o eliminate dagli articoli attivi a cui sono associate sottoscrizioni.  
   
- [  **@force_invalidate_snapshot =** ] *force_invalidate_snapshot*  
- Segnala che l'azione eseguita da questa stored procedure potrebbe invalidare uno snapshot esistente. *force_invalidate_snapshot* è un **bit**, il valore predefinito è **0**.  
+`[ @force_invalidate_snapshot = ] force_invalidate_snapshot` Segnala che l'azione eseguita da questa stored procedure potrebbe invalidare uno snapshot esistente. *force_invalidate_snapshot* è un **bit**, il valore predefinito è **0**.  
   
  **0** specifica che le modifiche apportate all'articolo non invalidano lo snapshot non è valido. Se la stored procedure rileva che la modifica richiede un nuovo snapshot, viene generato un errore e non viene apportata alcuna modifica.  
   
@@ -81,14 +73,12 @@ sp_articlecolumn [ @publication = ] 'publication'
   
  **0** specifica che le modifiche apportate all'articolo non causano la reinizializzazione della sottoscrizione. Se la stored procedure rileva che la modifica richiede la reinizializzazione delle sottoscrizioni, viene generato un errore e non viene apportata alcuna modifica. **1** specifica che le modifiche apportate all'articolo comportano la reinizializzazione delle sottoscrizioni esistenti e autorizza la reinizializzazione della sottoscrizione.  
   
- [  **@publisher=** ] **'**_editore_**'**  
- Specifica un non - [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] server di pubblicazione. *server di pubblicazione* viene **sysname**, con un valore predefinito è NULL.  
+`[ @publisher = ] 'publisher'` Specifica un non - [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] server di pubblicazione. *server di pubblicazione* viene **sysname**, con un valore predefinito è NULL.  
   
 > [!NOTE]  
 >  *server di pubblicazione* non devono essere usati con un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] server di pubblicazione.  
   
- [  **@internal=** ] **'**_interno_**'**  
- Solo per uso interno.  
+`[ @internal = ] 'internal'` Solo uso interno.  
   
 ## <a name="return-code-values"></a>Valori restituiti  
  **0** (esito positivo) o **1** (errore)  

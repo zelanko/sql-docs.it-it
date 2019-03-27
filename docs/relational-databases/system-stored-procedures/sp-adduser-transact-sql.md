@@ -18,12 +18,12 @@ ms.assetid: 61a40eb4-573f-460c-9164-bd1bbfaf8b25
 author: VanMSFT
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 73859064fc8a56a53fd5ea6cb1295d81ed0e4150
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 46b1548f1eb587aa62c0d0427661d97d97bf3cc7
+ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47766529"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58492939"
 ---
 # <a name="spadduser-transact-sql"></a>sp_adduser (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -45,14 +45,11 @@ sp_adduser [ @loginame = ] 'login'
 ```  
   
 ## <a name="arguments"></a>Argomenti  
- [ **@loginame =** ] **'***login***'**  
- Nome dell'account di accesso di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o dell'account di accesso di Windows. *account di accesso* è un **sysname**, non prevede alcun valore predefinito. *account di accesso* deve essere un oggetto esistente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] account di accesso o Windows.  
+`[ @loginame = ] 'login'` È il nome del [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] account di accesso o Windows. *account di accesso* è un **sysname**, non prevede alcun valore predefinito. *account di accesso* deve essere un oggetto esistente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] account di accesso o Windows.  
   
- [  **@name_in_db =** ] **'***utente***'**  
- Nome del nuovo utente del database. *utente* è un **sysname**, con un valore predefinito è NULL. Se *utente* non viene specificato, per impostazione predefinita il nome del nuovo utente del database di *login* nome. Che specifica *utente* assegna a un nome al nuovo utente del database diverso dal nome dell'account di accesso a livello di server.  
+`[ @name_in_db = ] 'user'` È il nome per il nuovo utente del database. *utente* è un **sysname**, con un valore predefinito è NULL. Se *utente* non viene specificato, per impostazione predefinita il nome del nuovo utente del database di *login* nome. Che specifica *utente* assegna a un nome al nuovo utente del database diverso dal nome dell'account di accesso a livello di server.  
   
- [  **@grpname =** ] **'***ruolo***'**  
- Ruolo del database di cui è membro il nuovo utente. *ruolo* viene **sysname**, con un valore predefinito è NULL. *ruolo* deve essere un ruolo di database valido nel database corrente.  
+`[ @grpname = ] 'role'` È il ruolo del database di cui il nuovo utente diventa membro. *ruolo* viene **sysname**, con un valore predefinito è NULL. *ruolo* deve essere un ruolo di database valido nel database corrente.  
   
 ## <a name="return-code-values"></a>Valori restituiti  
  0 (esito positivo) o 1 (esito negativo)  
@@ -89,7 +86,7 @@ GO
 EXEC sp_adduser 'Vidur', 'Vidur', 'Recruiting';  
 ```  
   
-### <a name="b-adding-a-database-user-with-the-same-login-id"></a>B. Aggiunta di un utente del database con lo stesso ID di accesso  
+### <a name="b-adding-a-database-user-with-the-same-login-id"></a>b. Aggiunta di un utente del database con lo stesso ID di accesso  
  Nell'esempio seguente l'utente `Arvind` viene aggiunto al database corrente per l'account di accesso di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] `Arvind`. L'utente a cui appartiene il valore predefinito **pubblica** ruolo.  
   
 ```  
