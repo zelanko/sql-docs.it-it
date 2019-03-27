@@ -11,16 +11,16 @@ ms.assetid: aebe3dc6-3ee4-4d11-8e43-5d32b3f91490
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 3f38de8f15e6e14d3822254812f98364104ea603
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 80ef78038cad742dbe2105b6999d021ec41e8a3a
+ms.sourcegitcommit: 1a182443e4f70f4632617cfef4efa56d898e64e9
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47603969"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58342889"
 ---
 # <a name="step-3-proof-of-concept-connecting-to-sql-using-adonet"></a>Passaggio 3: Modello di verifica per la connessione a SQL con ADO.NET
 
-- Articolo precedente:&nbsp;&nbsp;&nbsp;[passaggio 2: creare un database SQL per lo sviluppo di ADO.NET](step-2-create-a-sql-database-for-ado-net-development.md)  
+- Articolo precedente:&nbsp;&nbsp;&nbsp;[Passaggio 2: Creare un database SQL per lo sviluppo ADO.NET](step-2-create-a-sql-database-for-ado-net-development.md)  
 - Articolo successivo:&nbsp;&nbsp;&nbsp;[Passaggio 4: Connettersi in modo resiliente a SQL con ADO.NET](step-4-connect-resiliently-to-sql-with-ado-net.md)  
 
   
@@ -31,7 +31,7 @@ Questo esempio di codice c# deve essere considerato un modello di verifica solo.
 Il metodo **SqlConnection** utilizzato per la connessione al database SQL.  
 
 
-```CSharp  
+```csharp
     // C# , ADO.NET  
     using System;
     using QC = System.Data.SqlClient;  // System.Data.dll  
@@ -74,7 +74,7 @@ Il metodo SqlCommand. ExecuteReader:
   
   
   
-```CSharp  
+```csharp
     using System;  // C# , ADO.NET  
     using DT = System.Data;            // System.Data.dll  
     using QC = System.Data.SqlClient;  // System.Data.dll  
@@ -162,7 +162,7 @@ Questo esempio illustra come:
   
   
   
-```CSharp  
+```csharp
     using System;  // C# , ADO.NET  
     using DT = System.Data;            // System.Data.dll  
     using QC = System.Data.SqlClient;  // System.Data.dll  

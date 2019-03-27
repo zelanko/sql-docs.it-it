@@ -25,12 +25,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: 2a6762f20c05a66c597474d33bd98e9bb8f2c5f4
-ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
+ms.openlocfilehash: 88e309d5a7d2f0b1464298ebd1ded5ae31139e78
+ms.sourcegitcommit: 20de089b6e23107c88fb38b9af9d22ab0c800038
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/18/2018
-ms.locfileid: "53589995"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58356464"
 ---
 # <a name="osql-utility"></a>Utilità osql
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -262,7 +262,7 @@ osql -E -i titles.qry -o titles.res
 >  Quando si usa **osql**, in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] la presenza del separatore di batch GO in un file script SQL viene considerata un errore di sintassi.  
   
 ## <a name="inserting-comments"></a>Inserimento di commenti  
- L'utilità [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] osql **consente di inserire commenti in un'istruzione Transact-SQL inviata a**. Sono supportati due tipi di indicatori di commento: -- and /*...\*/.  
+ L'utilità [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] osql **consente di inserire commenti in un'istruzione Transact-SQL inviata a**. Sono supportati due tipi di indicatori di commento: `--` e `/*...*/`.  
   
 ## <a name="using-exit-to-return-results-in-osql"></a>Utilizzo di EXIT per la restituzione dei risultati in osql  
  Il risultato di un'istruzione SELECT può essere usato come valore restituito da **osql**. Se numerica, l'ultima colonna dell'ultima riga di risultati viene convertita in un valore integer di 4 byte (long). MS-DOS passa il byte di ordine inferiore al processo padre o al livello di errore del sistema operativo. Windows passa l'intero valore intero di 4 byte. La sintassi è:  
