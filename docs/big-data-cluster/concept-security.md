@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: 8ad12de9456fef0d4803ae83479e615bffa0edcc
-ms.sourcegitcommit: 202ef5b24ed6765c7aaada9c2f4443372064bd60
+ms.openlocfilehash: 5e440a3502e5062013ac5e3b716036f107a13c6a
+ms.sourcegitcommit: 715683b5fc7a8e28a86be8949a194226b72ac915
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/12/2019
-ms.locfileid: "54241422"
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58477986"
 ---
 # <a name="security-concepts-for-sql-server-big-data-clusters"></a>Concetti relativi alla sicurezza per i cluster di SQL Server i big Data
 
@@ -59,10 +59,10 @@ Password del controller:
  + CONTROLLER_PASSWORD = < controller_password >
 
 Password dell'account SA di SQL Master: 
- + MSSQL_SA_PASSWORD = < controller_sa_password >
+ + MSSQL_SA_PASSWORD=<controller_sa_password>
 
 Password per l'accesso all'endpoint HDFS/Spark:
- + KNOX_PASSWORD = < knox_password >
+ + KNOX_PASSWORD=<knox_password>
 
 ### <a name="intra-cluster-authentication"></a>Autenticazione all'interno del cluster
 
@@ -81,7 +81,7 @@ Comunicazioni con i servizi non-SQL all'interno del cluster di big data, ad esem
 
 ## <a name="next-steps"></a>Passaggi successivi
 
-Per altre informazioni sui cluster di big data di SQL Server, vedere gli articoli seguenti:
+Per altre informazioni sui cluster di big data di SQL Server, vedere le risorse seguenti:
 
 - [Quali sono i cluster di SQL Server 2019 dei big Data?](big-data-cluster-overview.md)
-- [Guida introduttiva: Distribuire cluster di big data di SQL Server in Kubernetes](quickstart-big-data-cluster-deploy.md)
+- [Workshop: Cluster di big data Microsoft SQL Server architettura](https://github.com/Microsoft/sqlworkshops/tree/master/sqlserver2019bigdataclusters)

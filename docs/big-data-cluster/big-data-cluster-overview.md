@@ -10,12 +10,12 @@ ms.topic: overview
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: 996913979669aa85088d6d640436b5610293eb35
-ms.sourcegitcommit: 671370ec2d49ed0159a418b9c9ac56acf43249ad
+ms.openlocfilehash: 20ee32b445a7509967b18c51a8e661527585f291
+ms.sourcegitcommit: 715683b5fc7a8e28a86be8949a194226b72ac915
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/15/2019
-ms.locfileid: "58072126"
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58477646"
 ---
 # <a name="what-are-sql-server-2019-big-data-clusters"></a>Quali sono i cluster di SQL Server 2019 dei big Data?
 
@@ -100,6 +100,9 @@ Il piano di calcolo offre le risorse di calcolo al cluster. Contiene i nodi in e
 ### <a id="dataplane"></a> Piano dati
 
 Il piano dati viene usato per la persistenza dei dati e la memorizzazione nella cache. Contiene il pool di dati SQL e pool di archiviazione.  Il pool di dati SQL è costituito da uno o più POD che eseguono SQL Server in Linux. Viene utilizzato per inserire i dati dalla query SQL o i processi Spark. Dati di SQL Server big data mart vengono rese persistenti nel pool di dati del cluster. Il pool di archiviazione è costituito da POD di pool di archiviazione costituito da SQL Server in Linux, Spark e HDFS. Tutti i nodi di archiviazione in un cluster di big data di SQL Server sono membri di un cluster HDFS.
+
+> [!TIP]
+> Per un'analisi approfondita nell'architettura di cluster di big data e l'installazione, vedere [Workshop: I dati di big data Microsoft SQL Server architettura di cluster](https://github.com/Microsoft/sqlworkshops/tree/master/sqlserver2019bigdataclusters).
 
 ## <a name="next-steps"></a>Passaggi successivi
 

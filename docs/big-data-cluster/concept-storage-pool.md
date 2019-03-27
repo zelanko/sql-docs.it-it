@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: c89ddc5d155af4542b5101e9a6e394effc5d9fd3
-ms.sourcegitcommit: 202ef5b24ed6765c7aaada9c2f4443372064bd60
+ms.openlocfilehash: 7dfb89103bb83fc77c590e5c5b5984cbd96b197d
+ms.sourcegitcommit: 715683b5fc7a8e28a86be8949a194226b72ac915
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/12/2019
-ms.locfileid: "54241522"
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58477926"
 ---
 # <a name="what-is-the-storage-pool-sql-server-2019-big-data-clusters"></a>Che cos'è il pool di archiviazione (cluster di SQL Server 2019 dei big Data)?
 
@@ -37,6 +37,7 @@ I nodi di archiviazione sono responsabili per:
 
 ## <a name="next-steps"></a>Passaggi successivi
 
-Per altre informazioni sui cluster di big data di SQL Server, vedere Panoramica riportata di seguito:
+Per altre informazioni sui cluster di big data di SQL Server, vedere le risorse seguenti:
 
 - [Quali sono i cluster di SQL Server 2019 dei big Data?](big-data-cluster-overview.md)
+- [Workshop: Cluster di big data Microsoft SQL Server architettura](https://github.com/Microsoft/sqlworkshops/tree/master/sqlserver2019bigdataclusters)
