@@ -14,20 +14,20 @@ ms.assetid: 232dbf4d-392a-406f-af3a-579518cd8e46
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 16b9c9fde041339e10c554541dc03e2ddc315bcc
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 78b78021f32faed097a4faf29ea139dd85f429e1
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48211164"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58532633"
 ---
 # <a name="delete-a-stored-procedure"></a>Eliminare una stored procedure
     
 ##  <a name="Top"></a> In questo argomento viene descritto come eliminare una stored procedure in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] utilizzando [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)].  
   
--   **Before you begin:**  [Limitations and Restrictions](#Restrictions), [Security](#Security)  
+-   **Prima di iniziare:**  [Limitazioni e restrizioni](#Restrictions), [Sicurezza](#Security)  
   
--   **Eliminare una stored procedure con**  [SQL Server Management Studio](#SSMSProcedure), [Transact-SQL](#TsqlProcedure)  
+-   **Per eliminare una stored procedure usando:**  [SQL Server Management Studio](#SSMSProcedure), [Transact-SQL](#TsqlProcedure)  
   
 ##  <a name="BeforeYouBegin"></a> Prima di iniziare  
   
@@ -36,7 +36,7 @@ ms.locfileid: "48211164"
   
 ###  <a name="Security"></a> Sicurezza  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> Autorizzazioni  
  È richiesta l'autorizzazione ALTER per lo schema a cui appartiene la stored procedure oppure l'autorizzazione CONTROL per la stored procedure.  
   
 ##  <a name="Procedures"></a> Modalità di eliminazione di una stored procedure  
@@ -49,7 +49,7 @@ ms.locfileid: "48211164"
 ###  <a name="SSMSProcedure"></a> Utilizzo di SQL Server Management Studio  
  **Per eliminare una stored procedure in Esplora oggetti**  
   
-1.  In Esplora oggetti connettersi a un'istanza del [!INCLUDE[ssDE](../../includes/ssde-md.md)] e quindi espanderla.  
+1.  In Esplora oggetti connettersi a un'istanza del [!INCLUDE[ssDE](../../includes/ssde-md.md)] , quindi espanderla.  
   
 2.  Espandere **Database**, espandere il database a cui appartiene la stored procedure, quindi espandere **Programmabilità**.  
   
@@ -61,7 +61,7 @@ ms.locfileid: "48211164"
   
 6.  Rimuovere i riferimenti alla stored procedure da tutti gli oggetti e script dipendenti.  
   
-###  <a name="TsqlProcedure"></a> Uso di Transact-SQL  
+###  <a name="TsqlProcedure"></a> Utilizzo di Transact-SQL  
  **Per eliminare una stored procedure nell'editor di query**  
   
 1.  In **Esplora oggetti**connettersi a un'istanza del [!INCLUDE[ssDE](../../includes/ssde-md.md)] , quindi espanderla.  
@@ -72,7 +72,7 @@ ms.locfileid: "48211164"
   
 4.  Ottenere il nome della stored procedure da rimuovere nel database corrente. Da Esplora oggetti espandere **Programmabilità** , quindi espandere **Stored procedure**. In alternativa, nell'editor di query eseguire l'istruzione riportata di seguito.  
   
-    ```tsql  
+    ```sql  
     SELECT name AS procedure_name   
         ,SCHEMA_NAME(schema_id) AS schema_name  
         ,type_desc  
@@ -83,7 +83,7 @@ ms.locfileid: "48211164"
   
 5.  Copiare e incollare l'esempio seguente nell'editor di query e inserire il nome di una stored procedure da eliminare dal database corrente.  
   
-    ```tsql  
+    ```sql  
     DROP PROCEDURE <stored procedure name>;  
     GO  
     ```  

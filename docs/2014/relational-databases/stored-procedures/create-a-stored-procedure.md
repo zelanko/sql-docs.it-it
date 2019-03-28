@@ -14,12 +14,12 @@ ms.assetid: 76e8a6ba-1381-4620-b356-4311e1331ca7
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 116fd45b97011060aab0dd79519648542ec5255c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 463b077fe6ac972f87dcf90773c07575e839bb14
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48084121"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58530053"
 ---
 # <a name="create-a-stored-procedure"></a>Creazione di una stored procedure
   In questo argomento viene descritta la procedura per la creazione di una stored procedure [!INCLUDE[tsql](../../includes/tsql-md.md)] utilizzando [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] e l'istruzione [!INCLUDE[tsql](../../includes/tsql-md.md)] CREATE PROCEDURE.  
@@ -27,9 +27,9 @@ ms.locfileid: "48084121"
 ##  <a name="Top"></a>   
 -   **Prima di iniziare:**  [Autorizzazioni](#Permissions)  
   
--   **Per creare una stored procedure:**  [SQL Server Management Studio](#SSMSProcedure), [Transact-SQL](#TsqlProcedure)  
+-   **Per creare una stored procedure, usare:**  [SQL Server Management Studio](#SSMSProcedure), [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="Permissions"></a> Permissions  
+##  <a name="Permissions"></a> Autorizzazioni  
  È necessario disporre dell'autorizzazione CREATE PROCEDURE per il database e dell'autorizzazione ALTER per lo schema in cui la stored procedure viene creata.  
   
 ##  <a name="Procedures"></a> Procedura: creazione di una stored procedure  
@@ -52,11 +52,11 @@ ms.locfileid: "48084121"
   
 5.  Nella finestra di dialogo **Imposta valori per parametri modello** immettere i seguenti valori per i parametri indicati.  
   
-    |Parametro|valore|  
+    |Parametro|Value|  
     |---------------|-----------|  
     |Autore|*Nome dell'utente*|  
     |Data di creazione|*Data corrente*|  
-    |Description|Restituisce i dati dei dipendenti.|  
+    |Descrizione|Restituisce i dati dei dipendenti.|  
     |Procedure_name|HumanResources.uspGetEmployeesTest|  
     |@Param1|@LastName|  
     |@Datatype_For_Param1|`nvarchar`(50)|  
@@ -69,7 +69,7 @@ ms.locfileid: "48084121"
   
 7.  Nell' **editor di query**sostituire l'istruzione SELECT con l'istruzione seguente:  
   
-    ```tsql  
+    ```sql  
     SELECT FirstName, LastName, Department  
     FROM HumanResources.vEmployeeDepartmentHistory  
     WHERE FirstName = @FirstName AND LastName = @LastName  
@@ -89,14 +89,14 @@ ms.locfileid: "48084121"
 > [!WARNING]  
 >  Convalidare sempre input di tutti gli utenti. Non concatenare l'input dell'utente prima di averlo convalidato. Non eseguire mai un comando creato dall'input dell'utente non convalidato.  
   
-###  <a name="TsqlProcedure"></a> Uso di Transact-SQL  
+###  <a name="TsqlProcedure"></a> Utilizzo di Transact-SQL  
  **Per creare una stored procedure nell'editor di query**  
   
 1.  In **Esplora oggetti**connettersi a un'istanza del [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
 2.  Nel menu **File** , fare clic su **Nuova query**.  
   
-3.  Copiare e incollare l'esempio seguente nella finestra delle query e fare clic su **Esegui**. In questo esempio viene creata la stessa stored procedure precedente utilizzando un nome diverso.  
+3.  Copiare e incollare l'esempio seguente nella finestra Query, quindi fare clic su **Esegui**. In questo esempio viene creata la stessa stored procedure precedente utilizzando un nome diverso.  
   
     ```  
     USE AdventureWorks2012;  

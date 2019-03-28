@@ -10,20 +10,20 @@ helpviewer_keywords:
 - XML [SQL Server]
 - XML [SQL Server], about XML
 ms.assetid: 6a1793c9-9856-485c-aac5-88fda62f61a8
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
-ms.openlocfilehash: a9c07abd9f7c9ce9ed03bb571a4dc25a77b3c497
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: da462979ee21e09a55015f9c9d30d72edd1ce67d
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48226406"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58530233"
 ---
 # <a name="xml-data-sql-server"></a>Dati XML (SQL Server)
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] offre una potente piattaforma per lo sviluppo di applicazioni complete per la gestione di dati semistrutturati. Il supporto per XML è integrato in tutti i componenti di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e include i seguenti elementi:  
   
--   Il `xml` tipo di dati. I valori XML possono essere archiviati in modo nativo in una colonna con tipo di dati `xml` che può essere tipizzata in base a una raccolta di XML Schema oppure lasciata non tipizzata. La colonna XML può essere indicizzata.  
+-   Tipo di dati `xml`. I valori XML possono essere archiviati in modo nativo in una colonna con tipo di dati `xml` che può essere tipizzata in base a una raccolta di XML Schema oppure lasciata non tipizzata. La colonna XML può essere indicizzata.  
   
 -   Possibilità di specificare una query XQuery sui dati XML archiviati in colonne e variabili di tipo `xml`.  
   
@@ -33,7 +33,7 @@ ms.locfileid: "48226406"
   
 -   Funzione OPENXML per recuperare i dati XML in formato relazionale.  
   
-## <a name="in-this-section"></a>Argomenti della sezione  
+## <a name="in-this-section"></a>In questa sezione  
  [Colonne e tipo di dati XML &#40;SQL Server&#41;](xml-data-type-and-columns-sql-server.md)  
  [Indici XML &#40;SQL Server&#41;](xml-indexes-sql-server.md)  
  [Raccolte di XML Schema &#40;SQL Server&#41;](xml-schema-collections-sql-server.md)  

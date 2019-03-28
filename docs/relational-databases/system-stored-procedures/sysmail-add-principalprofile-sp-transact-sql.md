@@ -18,12 +18,12 @@ ms.assetid: b2a0b313-abb9-4c23-8511-db77ca8172b3
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 794a7c9013fff188500c26232a597a7dd4c6283d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: cf12b97028d3d98f7d5cc5ab034db95411d913dc
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47756272"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58528503"
 ---
 # <a name="sysmailaddprincipalprofilesp-transact-sql"></a>sysmail_add_principalprofile_sp (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -42,20 +42,15 @@ sysmail_add_principalprofile_sp  { [ @principal_id = ] principal_id | [ @princip
 ```  
   
 ## <a name="arguments"></a>Argomenti  
- [ **@principal_id** =] *principal_id*  
- L'ID dell'utente del database o del ruolo nel **msdb** database per l'associazione. *principal_id* viene **int**, con un valore predefinito è NULL. Entrambi *principal_id* oppure *principal_name* deve essere specificato. Oggetto *principal_id* dei **0** rende questo profilo un profilo pubblico e concedere l'accesso a tutte le entità nel database.  
+`[ @principal_id = ] principal_id` L'ID dell'utente del database o del ruolo nel **msdb** database per l'associazione. *principal_id* viene **int**, con un valore predefinito è NULL. Entrambi *principal_id* oppure *principal_name* deve essere specificato. Oggetto *principal_id* dei **0** rende questo profilo un profilo pubblico e concedere l'accesso a tutte le entità nel database.  
   
- [ **@principal_name** =] **'***principal_name***'**  
- Il nome dell'utente del database o del ruolo nel **msdb** database per l'associazione. *principal_name* viene **sysname**, con un valore predefinito è NULL. Entrambi *principal_id* oppure *principal_name* deve essere specificato. Oggetto *principal_name* dei **'public'** rende questo profilo un profilo pubblico e concedere l'accesso a tutte le entità nel database.  
+`[ @principal_name = ] 'principal_name'` Il nome dell'utente del database o del ruolo nel **msdb** database per l'associazione. *principal_name* viene **sysname**, con un valore predefinito è NULL. Entrambi *principal_id* oppure *principal_name* deve essere specificato. Oggetto *principal_name* dei **'public'** rende questo profilo un profilo pubblico e concedere l'accesso a tutte le entità nel database.  
   
- [ **@profile_id** = ] *profile_id*  
- ID del profilo per l'associazione. *profile_id* viene **int**, con un valore predefinito è NULL. Entrambi *profile_id* oppure *profile_name* deve essere specificato.  
+`[ @profile_id = ] profile_id` L'id del profilo per l'associazione. *profile_id* viene **int**, con un valore predefinito è NULL. Entrambi *profile_id* oppure *profile_name* deve essere specificato.  
   
- [ **@profile_name** =] **'***profile_name***'**  
- Nome del profilo per l'associazione. *profile_name* viene **sysname**, non prevede alcun valore predefinito. Entrambi *profile_id* oppure *profile_name* deve essere specificato.  
+`[ @profile_name = ] 'profile_name'` Il nome del profilo per l'associazione. *profile_name* viene **sysname**, non prevede alcun valore predefinito. Entrambi *profile_id* oppure *profile_name* deve essere specificato.  
   
- [ **@is_default** =] *is_default*  
- Indica se il profilo è il profilo predefinito per l'entità. A un'entità può essere associato un solo profilo predefinito. *is_default* viene **bit**, non prevede alcun valore predefinito.  
+`[ @is_default = ] is_default` Specifica se questo profilo è il profilo predefinito per l'entità. A un'entità può essere associato un solo profilo predefinito. *is_default* viene **bit**, non prevede alcun valore predefinito.  
   
 ## <a name="return-code-values"></a>Valori restituiti  
  **0** (esito positivo) o **1** (errore)  

@@ -19,12 +19,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: dfb494c7b25d3a580059e4d1ad3250abbe91ee54
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d59f7e05180ce2f0528159d64b0199ae8975464a
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47828979"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58528593"
 ---
 # <a name="sphelptrigger-transact-sql"></a>sp_helptrigger (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -42,13 +42,11 @@ sp_helptrigger [ @tabname = ] 'table'
 ```  
   
 ## <a name="arguments"></a>Argomenti  
- [  **@tabname=** ] **'***tabella***'**  
- Nome della tabella del database corrente per cui si desidera ottenere informazioni sui trigger. *Nella tabella* viene **nvarchar(776)**, non prevede alcun valore predefinito.  
+`[ @tabname = ] 'table'` È il nome della tabella nel database corrente per cui restituire informazioni sui trigger. *Nella tabella* viene **nvarchar(776)**, non prevede alcun valore predefinito.  
   
- [  **@triggertype=** ] **'***tipo***'**  
- Tipo di trigger DML per cui restituire informazioni. *tipo di* viene **char(6)**, con un valore predefinito è NULL, i possibili valori sono i seguenti.  
+`[ @triggertype = ] 'type'` È il tipo di trigger DML per ottenere informazioni. *tipo di* viene **char(6)**, con un valore predefinito è NULL, i possibili valori sono i seguenti.  
   
-|valore|Description|  
+|Value|Descrizione|  
 |-----------|-----------------|  
 |**DELETE**|Restituisce informazioni sui trigger DELETE.|  
 |**INSERT**|Restituisce informazioni sui trigger INSERT.|  
@@ -60,7 +58,7 @@ sp_helptrigger [ @tabname = ] 'table'
 ## <a name="result-sets"></a>Set di risultati  
  Nella tabella seguente vengono descritte le informazioni contenute nel set di risultati.  
   
-|Nome colonna|Tipo di dati|Description|  
+|Nome colonna|Tipo di dati|Descrizione|  
 |-----------------|---------------|-----------------|  
 |**trigger_name**|**sysname**|Nome del trigger.|  
 |**trigger_owner**|**sysname**|Nome del proprietario della tabella in cui il trigger è definito.|  

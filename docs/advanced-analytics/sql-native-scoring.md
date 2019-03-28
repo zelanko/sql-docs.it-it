@@ -5,15 +5,15 @@ ms.prod: sql
 ms.technology: machine-learning
 ms.date: 08/15/2018
 ms.topic: conceptual
-author: HeidiSteen
-ms.author: heidist
+author: dphansen
+ms.author: davidph
 manager: cgronlun
-ms.openlocfilehash: a14a4b188aa27acdef0bc836e939a7df0021e522
-ms.sourcegitcommit: ee76332b6119ef89549ee9d641d002b9cabf20d2
+ms.openlocfilehash: bd0a79a3991c34ddbcf874aca80160299074919a
+ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/20/2018
-ms.locfileid: "53645130"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58513218"
 ---
 # <a name="native-scoring-using-the-predict-t-sql-function"></a>Punteggio nativo usando la funzione di stima T-SQL
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -70,7 +70,7 @@ Tipi di modelli non supportati includono i tipi seguenti:
 + Modelli di linguaggio PMML
 + Modelli creati con altre librerie open source o di terze parti
 
-## <a name="example-predict-t-sql"></a>Esempio: STIMA (T-SQL)
+## <a name="example-predict-t-sql"></a>Esempio: PREDICT (T-SQL)
 
 In questo esempio, si crea un modello e quindi chiama la funzione di stima in tempo reale da T-SQL.
 

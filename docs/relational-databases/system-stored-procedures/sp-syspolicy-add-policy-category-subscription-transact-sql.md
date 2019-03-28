@@ -18,12 +18,12 @@ ms.assetid: 4284f550-9a3f-4726-8181-15e407fbf08f
 author: VanMSFT
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 8299578d8becf6ef0f1572596795454ff9d98fc9
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 3dca1196f986da94ed17b1efb6f4284362e68b84
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47595339"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58530253"
 ---
 # <a name="spsyspolicyaddpolicycategorysubscription-transact-sql"></a>sp_syspolicy_add_policy_category_subscription (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -43,19 +43,15 @@ sp_syspolicy_add_policy_category_subscription [ @target_type = ] 'target_type'
 ```  
   
 ## <a name="arguments"></a>Argomenti  
- [  **@target_type=** ] **'***target_type***'**  
- Tipo di destinazione della sottoscrizione di categoria. *target_type* viene **sysname**è obbligatorio e deve essere impostata su 'DATABASE'.  
+`[ @target_type = ] 'target_type'` È il tipo di destinazione della sottoscrizione di categoria. *target_type* viene **sysname**è obbligatorio e deve essere impostata su 'DATABASE'.  
   
- [  **@target_object=** ] **'***target_object***'**  
- È il nome del database in cui viene eseguita la sottoscrizione alla categoria. *target_object* viene **sysname**ed è obbligatorio.  
+`[ @target_object = ] 'target_object'` È il nome del database in cui viene eseguita la sottoscrizione alla categoria. *target_object* viene **sysname**ed è obbligatorio.  
   
- [  **@policy_category=** ] **'***policy_category***'**  
- È il nome della categoria di criteri da sottoscrivere. *policy_category* viene **sysname**ed è obbligatorio.  
+`[ @policy_category = ] 'policy_category'` È il nome della categoria di criteri da sottoscrivere. *policy_category* viene **sysname**ed è obbligatorio.  
   
  Per ottenere valori per *policy_category*, eseguire query sulla vista di sistema syspolicy_policy_categories.  
   
- [  **@policy_category_subscription_id=** ] *policy_category_subscription_id*  
- Identificatore della sottoscrizione di categoria. *policy_category_subscription_id* viene **int**e viene restituito come OUTPUT.  
+`[ @policy_category_subscription_id = ] policy_category_subscription_id` È l'identificatore per la sottoscrizione di categoria. *policy_category_subscription_id* viene **int**e viene restituito come OUTPUT.  
   
 ## <a name="return-code-values"></a>Valori restituiti  
  **0** (esito positivo) o **1** (errore)  

@@ -19,12 +19,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 71b5b57625a8feb5d268898ff4865c2039bd358c
-ms.sourcegitcommit: 78e32562f9c1fbf2e50d3be645941d4aa457e31f
+ms.openlocfilehash: 1155937c8634fe9859b13b84f2e42be6ceb825d0
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/08/2019
-ms.locfileid: "54100506"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58530423"
 ---
 # <a name="spcolumns-transact-sql"></a>sp_columns (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -46,22 +46,17 @@ sp_columns [ @table_name = ] object
 ```  
   
 ## <a name="arguments"></a>Argomenti  
- [  **\@table_name =**] *oggetto*  
- Nome dell'oggetto utilizzato per restituire informazioni sul catalogo. *oggetto* può essere una tabella, vista oppure altro oggetto che dispone di colonne, ad esempio le funzioni con valori di tabella. *oggetto* viene **nvarchar (384)**, non prevede alcun valore predefinito. La ricerca con caratteri jolly è supportata.  
+`[ \@table_name = ] object` È il nome dell'oggetto che viene utilizzata per restituire informazioni del catalogo. *oggetto* può essere una tabella, vista oppure altro oggetto che dispone di colonne, ad esempio le funzioni con valori di tabella. *oggetto* viene **nvarchar (384)**, non prevede alcun valore predefinito. La ricerca con caratteri jolly è supportata.  
   
- [  **\@table_owner =**] *proprietario*  
- Proprietario dell'oggetto utilizzato per restituire informazioni sul catalogo. *proprietario* viene **nvarchar (384)**, con un valore predefinito è NULL. La ricerca con caratteri jolly è supportata. Se *proprietario* non viene specificato, si applicano le regole di visibilità di oggetto predefinito del sistema DBMS sottostante.  
+`[ \@table_owner = ] owner` È il proprietario dell'oggetto dell'oggetto che viene utilizzata per restituire informazioni del catalogo. *proprietario* viene **nvarchar (384)**, con un valore predefinito è NULL. La ricerca con caratteri jolly è supportata. Se *proprietario* non viene specificato, si applicano le regole di visibilità di oggetto predefinito del sistema DBMS sottostante.  
   
  Se l'utente corrente è il proprietario di un oggetto con il nome specificato, vengono restituite le colonne di tale oggetto. Se *owner* non viene specificato e l'utente corrente non dispone di un oggetto con l'oggetto specificato *oggetto*, **sp_columns** Cerca un oggetto con l'oggetto specificato  *oggetto* appartengono al proprietario del database. Se viene individuato, vengono restituite le colonne di tale oggetto.  
   
- [  **\@table_qualifier =**] *qualificatore*  
- Nome del qualificatore dell'oggetto. *qualificatore* viene **sysname**, con un valore predefinito è NULL. Vari prodotti DBMS supportano tre parti di denominazione per oggetti (_qualificatore_**.** _owner_**.** _nome_). In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] questa colonna rappresenta il nome del database. In alcuni prodotti rappresenta il nome del server dell'ambiente di database dell'oggetto.  
+`[ \@table_qualifier = ] qualifier` È il nome del qualificatore dell'oggetto. *qualificatore* viene **sysname**, con un valore predefinito è NULL. Vari prodotti DBMS supportano tre parti di denominazione per oggetti (_qualificatore_**.** _owner_**.** _nome_). In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] questa colonna rappresenta il nome del database. In alcuni prodotti rappresenta il nome del server dell'ambiente di database dell'oggetto.  
   
- [  **\@column_name =**] *colonna*  
- Colonna singola utilizzata quando si desidera recuperare una sola colonna di informazioni di catalogo. *colonna* viene **nvarchar (384)**, con un valore predefinito è NULL. Se *colonna* viene omesso, vengono restituite tutte le colonne. Nelle [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], *colonna* rappresenta il nome di colonna elencato nella **syscolumns** tabella. La ricerca con caratteri jolly è supportata. Per ottenere la massima interoperabilità, è consigliabile che nel client di gateway siano utilizzati solo i caratteri jolly standard di SQL-92, ovvero i caratteri % e _.  
+`[ \@column_name = ] column` È una singola colonna e viene usato quando è necessaria una sola colonna di informazioni del catalogo. *colonna* viene **nvarchar (384)**, con un valore predefinito è NULL. Se *colonna* viene omesso, vengono restituite tutte le colonne. Nelle [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], *colonna* rappresenta il nome di colonna elencato nella **syscolumns** tabella. La ricerca con caratteri jolly è supportata. Per ottenere la massima interoperabilità, è consigliabile che nel client di gateway siano utilizzati solo i caratteri jolly standard di SQL-92, ovvero i caratteri % e _.  
   
- [  **\@ODBCVer =**] *ODBCVer*  
- Versione di ODBC utilizzata. *ODBCVer* viene **int**, con un valore predefinito è 2. che indica ODBC versione 2. I valori validi sono 2 e 3. Per le differenze di comportamento tra le versioni 2 e 3, vedere ODBC **SQLColumns** specifica.  
+`[ \@ODBCVer = ] ODBCVer` È la versione di ODBC utilizzata. *ODBCVer* viene **int**, con un valore predefinito è 2. che indica ODBC versione 2. I valori validi sono 2 e 3. Per le differenze di comportamento tra le versioni 2 e 3, vedere ODBC **SQLColumns** specifica.  
   
 ## <a name="return-code-values"></a>Valori restituiti  
  None  
@@ -82,7 +77,7 @@ sp_columns [ @table_name = ] object
 |**SCALABILITÀ**|**smallint**|Numero di cifre a destra del separatore decimale.|  
 |**RADIX**|**smallint**|Base per i tipi di dati numerici.|  
 |**AMMETTE VALORI NULL**|**smallint**|Specifica se i valori Null sono supportati.<br /><br /> 1 = I valori Null sono supportati.<br /><br /> 0 = I valori Null non sono supportati (NOT NULL).|  
-|**SEZIONE OSSERVAZIONI**|**varchar(254)**|In questo campo viene sempre restituito NULL.|  
+|**REMARKS**|**varchar(254)**|In questo campo viene sempre restituito NULL.|  
 |**COLUMN_DEF**|**nvarchar(4000)**|Valore predefinito della colonna.|  
 |**SQL_DATA_TYPE**|**smallint**|Valore del tipo di dati SQL visualizzato nel campo TYPE del descrittore. Questa colonna corrisponde al **DATA_TYPE** colonna, tranne che per il **datetime** e SQL-92 **intervallo** i tipi di dati. In questa colonna viene sempre restituito un valore.|  
 |**SQL_DATETIME_SUB**|**smallint**|Codice di sottotipo per **data/ora** e SQL-92 **intervallo** i tipi di dati. Per gli altri tipi di dati in questa colonna viene restituito NULL.|  

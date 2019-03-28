@@ -21,12 +21,12 @@ ms.assetid: d1e8afb5-12ee-492b-a770-ba708ed7c8a4
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 81631efabd541ace5dd7296b54d806ec3750d327
-ms.sourcegitcommit: fc6a6eedcea2d98c93e33d39c1cecd99fbc9a155
+ms.openlocfilehash: 8a260e68064b0a9218da07a8a65cf6b584382b4b
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49169062"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58528643"
 ---
 # <a name="spdeletemaintenanceplandb-transact-sql"></a>sp_delete_maintenance_plan_db (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -49,11 +49,9 @@ sp_delete_maintenance_plan_db [ @plan_id = ] 'plan_id' ,
 ```  
   
 ## <a name="arguments"></a>Argomenti  
- [  **@plan_id =**] **'**_piano\_id_**'**  
- Viene specificato l'ID del piano di manutenzione. *plan_id* viene **uniqueidentifier**.  
+`[ @plan_id = ] 'plan\_id'` Specifica l'ID del piano di manutenzione. *plan_id* viene **uniqueidentifier**.  
   
- [  **@db_name =**] **'**_database\_nome_**'**  
- Viene specificato il nome del database da eliminare dal piano di manutenzione. *database_name* è di tipo **sysname**.  
+`[ @db_name = ] 'database\_name'` Specifica il nome del database da eliminare dal piano di manutenzione. *database_name* è di tipo **sysname**.  
   
 ## <a name="return-code-values"></a>Valori restituiti  
  0 (esito positivo) o 1 (esito negativo)  

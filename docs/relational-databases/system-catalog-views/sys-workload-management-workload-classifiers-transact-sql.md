@@ -12,12 +12,12 @@ author: ronortloff
 ms.author: rortloff
 manager: craigg
 monikerRange: =azure-sqldw-latest||=sqlallproducts-allversions
-ms.openlocfilehash: 7f655c94d0c77747a4e64c93bf7ad880419aacb4
-ms.sourcegitcommit: 05bb10710489bef16bb2c53b3803e9b8eea1429a
+ms.openlocfilehash: f3ce2327034a9c7197e754dac01dfb9e6f9dc3e5
+ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/15/2019
-ms.locfileid: "57988752"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58509588"
 ---
 # <a name="sysworkloadmanagementworkloadclassifiers-transact-sql-preview"></a>Sys.workload_management_workload_classifiers (Transact-SQL) (anteprima)
 
@@ -28,7 +28,7 @@ ms.locfileid: "57988752"
 |Nome colonna|Tipo di dati|Descrizione|Intervallo|  
 |-----------------|---------------|-----------------|-----------|
 |classifier_id|**int**|ID univoco del classificatore. Non ammette i valori Null||
-group_name|**sysname**|Nome del gruppo di carico di lavoro, la funzione di classificazione viene assegnato a. Non ammette i valori Null. |Classi di risorse statiche</br>staticrc10</br>staticrc20</br>staticrc30</br>staticrc40</br>staticrc50</br>staticrc60</br>staticrc70</br>staticrc80 </br>Classi di risorse dinamiche</br>smallrc</br>mediumrc</br>Largerc</br>xlargerc|
+group_name|**sysname**|Nome del gruppo di carico di lavoro, la funzione di classificazione viene assegnato a. Non ammette i valori Null. |Classi di risorse statiche</br>staticrc10</br>staticrc20</br>staticrc30</br>staticrc40</br>staticrc50</br>staticrc60</br>staticrc70</br>staticrc80 </br> </br>Classi di risorse dinamiche</br>smallrc</br>mediumrc</br>largerc</br>xlargerc|
 NAME|**sysname**|Nome del classificatore. Deve essere univoco per l'istanza. Non ammette i valori Null.||
 |importance|**sysname**|È l'importanza relativa di una richiesta in questo gruppo di carico di lavoro e nei gruppi del carico di lavoro per le risorse condivise.  Importanza specificata nella funzione di classificazione sostituisce l'impostazione di priorità di gruppo del carico di lavoro.|bassa, below_normal, normale, above_normal, elevato |
 |create_time|**datetime**|Ora che è stato creato il classificatore. Non ammette i valori Null.||

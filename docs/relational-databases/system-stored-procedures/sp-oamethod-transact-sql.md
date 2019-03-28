@@ -18,12 +18,12 @@ ms.assetid: 1dfaebe2-c7cf-4041-a586-5d04faf2e25e
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 525a66fa00981c4360295ee9c704102cd1224220
-ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
+ms.openlocfilehash: 703b6464d035d06583193aedaa330257fc38fe34
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/18/2018
-ms.locfileid: "53591465"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58530373"
 ---
 # <a name="spoamethod-transact-sql"></a>sp_OAMethod (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -42,13 +42,13 @@ sp_OAMethod objecttoken , methodname
 ```  
   
 ## <a name="arguments"></a>Argomenti  
- *vengono restituite le*  
+ *objecttoken*  
  È il token di oggetto di un oggetto OLE creato in precedenza tramite **sp_OACreate**.  
   
- *MethodName*  
+ *methodname*  
  Nome del metodo dell'oggetto OLE da chiamare.  
   
- _ReturnValue_**OUTPUT**  
+ _returnvalue_  **OUTPUT**  
  Valore restituito del metodo dell'oggetto OLE. Se specificato, deve essere una variabile locale del tipo di dati appropriato.  
   
  Se il metodo restituisce un valore singolo, specificare una variabile locale per *returnvalue*, che restituisce il metodo restituisce un valore nella variabile locale o non si specifica *returnvalue*, che restituisce il metodo restituito al client come set di risultati a colonna singola, singola riga.  
@@ -65,8 +65,7 @@ sp_OAMethod objecttoken , methodname
   
 -   Il metodo restituisce una matrice come parametro di output.  
   
- [ _@parametername_ **=** ] *parametro*[ **OUTPUT** ]  
- Parametro del metodo. Se specificato, *parametro* deve essere un valore del tipo di dati appropriato.  
+`[ _@parametername = ] parameter[ OUTPUT ]` È un parametro del metodo. Se specificato, *parametro* deve essere un valore del tipo di dati appropriato.  
   
  Per ottenere il valore restituito di un parametro di output *parametri* deve essere una variabile locale del tipo di dati appropriato, e **OUTPUT** deve essere specificato. Se viene specificato un parametro costante oppure se **OUTPUT** non viene specificato, qualsiasi restituito da un parametro di output valore viene ignorato.  
   
@@ -124,7 +123,7 @@ BEGIN
 END;  
 ```  
   
-### <a name="b-getting-a-property"></a>b. Recupero di una proprietà  
+### <a name="b-getting-a-property"></a>B. Recupero di una proprietà  
  L'esempio seguente ottiene i `HostName` proprietà (dell'oggetto creato in precedenza **SQLServer** oggetto) e lo archivia in una variabile locale.  
   
 ```  

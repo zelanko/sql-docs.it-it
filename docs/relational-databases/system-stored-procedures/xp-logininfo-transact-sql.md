@@ -18,12 +18,12 @@ ms.assetid: ee7162b5-e11f-4a0e-a09c-1878814dbbbd
 author: VanMSFT
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: c9ed0ee742d1562d8b573b71e5d62b7d10bc7d02
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 5c214c8b061e2530c4dcf4b178b6028cbdca01fa
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47843829"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58530023"
 ---
 # <a name="xplogininfo-transact-sql"></a>xp_logininfo (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -42,14 +42,12 @@ xp_logininfo [ [ @acctname = ] 'account_name' ]
 ```  
   
 ## <a name="arguments"></a>Argomenti  
- [  **@acctname =** ] **'***account_name***'**  
- Nome di un utente o di un gruppo di Windows a cui è stato concesso l'accesso a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. *account_name* viene **sysname**, con un valore predefinito è NULL. Se *account_name* non viene specificato, tutti i gruppi di Windows e gli utenti di Windows che sono stati esplicitamente concesso l'autorizzazione di accesso vengono segnalati. *account_name* deve essere completo. ad esempio ADVWKS4\macraes o BUILTIN\Administrators.  
+`[ @acctname = ] 'account_name'` È il nome di un utente di Windows o un gruppo consentito l'accesso a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. *account_name* viene **sysname**, con un valore predefinito è NULL. Se *account_name* non viene specificato, tutti i gruppi di Windows e gli utenti di Windows che sono stati esplicitamente concesso l'autorizzazione di accesso vengono segnalati. *account_name* deve essere completo. ad esempio ADVWKS4\macraes o BUILTIN\Administrators.  
   
  **'tutte'** | **'members'**  
  Specifica se devono essere restituite informazioni su tutti i percorsi di autorizzazione per l'account oppure sui membri del gruppo di Windows. **@option** viene **varchar (10)**, con un valore predefinito è NULL. A meno che **tutti** viene specificato, viene visualizzato solo il primo percorso di autorizzazione.  
   
- [  **@privilege =** ] *variable_name*  
- Parametro di output tramite cui viene restituito il livello di privilegio dell'account di Windows specificato. *variable_name* viene **varchar (10)**, valore predefinito 'Not wanted'. Il livello di privilegio restituito è **utente**, **admin**, o **null**.  
+`[ @privilege = ] variable_name` È un parametro di output che restituisce il livello di privilegio dell'account Windows specificato. *variable_name* viene **varchar (10)**, valore predefinito 'Not wanted'. Il livello di privilegio restituito è **utente**, **admin**, o **null**.  
   
  OUTPUT  
  Quando specificato, lo inserisce *variable_name* nel parametro di output.  
@@ -59,11 +57,11 @@ xp_logininfo [ [ @acctname = ] 'account_name' ]
   
 ## <a name="result-sets"></a>Set di risultati  
   
-|Nome colonna|Tipo di dati|Description|  
+|Nome colonna|Tipo di dati|Descrizione|  
 |-----------------|---------------|-----------------|  
 |**nome dell'account**|**sysname**|Nome completo dell'account di Windows.|  
-|**type**|**Char(8)**|Tipo di account di Windows. I valori validi sono **utente** oppure **gruppo**.|  
-|**con privilegi**|**char(9)**|Privilegio di accesso per [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. I valori validi sono **admin**, **utente**, o **null**.|  
+|**type**|**char(8)**|Tipo di account di Windows. I valori validi sono **utente** oppure **gruppo**.|  
+|**privilege**|**char(9)**|Privilegio di accesso per [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. I valori validi sono **admin**, **utente**, o **null**.|  
 |**nome account di accesso con mapping**|**sysname**|Per gli account utente che dispongono dei privilegi di utente, **mappati il nome di accesso** mostra che il nome di accesso con mapping [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tenta di usare quando si accede con questo account utilizzando le regole mappate con il nome di dominio aggiunto prima di esso.|  
 |**percorso di autorizzazione**|**sysname**|Appartenenza al gruppo che ha permesso all'account di ottenere l'accesso.|  
   

@@ -10,12 +10,12 @@ ms.assetid: a0305f5b-91bd-4d18-a2fc-ec235b062fd3
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 0ccf8ea4fc15be567d0e95a66b2e5320fae7dbbc
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: d8739a95f0676adfdbc890512aeb5246565bacdb
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48205161"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58528523"
 ---
 # <a name="cross-database-queries"></a>Query tra database
   In [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] le tabelle ottimizzate per la memoria non supportano le transazioni tra database. Non è possibile accedere a un altro database dalla stessa transazione o dalla stessa query che accede anche a una tabella ottimizzata per la memoria. Non è possibile copiare facilmente i dati da una tabella in un database a una tabella ottimizzata per la memoria in un altro database.  
@@ -24,7 +24,7 @@ ms.locfileid: "48205161"
   
  Ad esempio, per copiare la riga dalla tabella t1 nel database db1 alla tabella t2 in db2, tramite variabile @v1 di tipo dbo.tt1, è possibile utilizzare qualcosa di simile:  
   
-```tsql  
+```sql  
 USE db2   
 GO   
 DECLARE @v1 dbo.tt1   

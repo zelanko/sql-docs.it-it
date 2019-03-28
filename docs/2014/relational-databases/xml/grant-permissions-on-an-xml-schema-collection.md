@@ -10,15 +10,15 @@ helpviewer_keywords:
 - granting permissions [SQL Server], XML schema collections
 - ALTER permission
 ms.assetid: ffbb829c-3b8f-4e5d-97d9-ab4059aab0db
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 365a47a47abd0e74c1716971998f145501a3cae4
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: e009f0fe22156f9a652dd19fceddf02bbc48c247
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48150959"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58530183"
 ---
 # <a name="grant-permissions-on-an-xml-schema-collection"></a>Concedere autorizzazioni per una raccolta di XML Schema
   È possibile concedere autorizzazioni per la creazione di una raccolta di XML Schema, nonché per un oggetto di una raccolta di XML Schema.  
@@ -57,11 +57,11 @@ ms.locfileid: "48150959"
   
 -   L'autorizzazione TAKE OWNERSHIP è necessaria per trasferire la proprietà della raccolta di XML Schema da un'entità a un'altra.  
   
--   L'autorizzazione REFERENCES consente all'entità di utilizzare la raccolta di XML schema per tipizzare o vincolare `xml` colonne di tipo in tabelle, viste e parametri. L'autorizzazione REFERENCES è necessaria inoltre quando una raccolta di XML Schema fa riferimento a un'altra.  
+-   L'autorizzazione REFERENCES consente all'entità di utilizzare la raccolta di XML Schema per tipizzare o vincolare colonne di tipo `xml` in tabelle, viste e parametri. L'autorizzazione REFERENCES è necessaria inoltre quando una raccolta di XML Schema fa riferimento a un'altra.  
   
 -   L'autorizzazione VIEW DEFINITION consente all'entità di eseguire query sul contenuto di una raccolta di XML Schema tramite XML_SCHEMA_NAMESPACE o mediante le viste del catalogo, a condizione che l'entità disponga inoltre di una delle autorizzazioni ALTER, REFERENCES o CONTROL per la raccolta.  
   
--   L'autorizzazione EXECUTE è necessaria per convalidare i valori inseriti o aggiornati dall'entità in base la raccolta di XML schema per tipizzare o vincolare le `xml` colonne, variabili e parametri. Questa autorizzazione è necessaria inoltre quando si eseguono query sui dati XML archiviati in tali colonne e variabili.  
+-   L'autorizzazione EXECUTE è necessaria per convalidare i valori inseriti o aggiornati dall'entità in base alla raccolta di XML Schema utilizzato per tipizzare o vincolare le colonne di tipo `xml`, le variabili e i parametri. Questa autorizzazione è necessaria inoltre quando si eseguono query sui dati XML archiviati in tali colonne e variabili.  
   
 ## <a name="examples"></a>Esempi  
  Gli scenari degli esempi seguenti illustrano il funzionamento delle autorizzazioni per XML Schema. In ogni esempio vengono creati il database di prova, gli schemi relazionali e gli account di accesso necessari. A tali account di accesso vengono concesse le autorizzazioni necessarie per la raccolta di XML Schema. Alla fine di ogni esempio viene eseguito il processo di eliminazione necessario.  

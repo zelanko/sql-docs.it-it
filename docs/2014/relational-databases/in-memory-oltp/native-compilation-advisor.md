@@ -13,12 +13,12 @@ ms.assetid: d3898a47-2985-4a08-bc70-fd8331a01b7b
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 8b72f500a425b7a55cab285a881c3ff915b9fb82
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 5174b5c859fa76ceeccdb99b7a46f510fd62d923
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53358703"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58530433"
 ---
 # <a name="native-compilation-advisor"></a>Assistente compilazione nativa
   Lo strumento dei report sulle prestazioni delle transazioni (vedere [Determinare se una tabella o una stored procedure deve essere trasferita a OLTP in memoria](determining-if-a-table-or-stored-procedure-should-be-ported-to-in-memory-oltp.md)) indica quali stored procedure interpretate nel database trarranno vantaggio se trasferite per utilizzare la compilazione nativa. Una volta identificata la stored procedure da trasferire per l'utilizzo nella compilazione nativa, è possibile utilizzare l'Assistente compilazione nativa per facilitare la migrazione della stored procedure interpretata alla compilazione nativa. Per altre informazioni sulle stored procedure compilate in modo nativo, vedere [Natively Compiled Stored Procedures](natively-compiled-stored-procedures.md).  
@@ -39,7 +39,7 @@ ms.locfileid: "53358703"
 ## <a name="code-sample"></a>Codice di esempio  
  Nell'esempio seguente viene mostrata una stored procedure interpretata e la stored procedure equivalente per la compilazione nativa. Nell'esempio viene supposto l'utilizzo di una directory denominata c:\data.  
   
-```tsql  
+```sql  
 CREATE DATABASE Demo  
 ON  
 PRIMARY(NAME = [Demo_data],  

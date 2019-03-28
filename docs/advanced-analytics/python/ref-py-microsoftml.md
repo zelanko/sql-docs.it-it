@@ -5,15 +5,15 @@ ms.prod: sql
 ms.technology: machine-learning
 ms.date: 12/04/2018
 ms.topic: conceptual
-author: HeidiSteen
-ms.author: heidist
+author: dphansen
+ms.author: davidph
 manager: cgronlun
-ms.openlocfilehash: b892af192be2cea441004adca8e9297f1947b313
-ms.sourcegitcommit: ee76332b6119ef89549ee9d641d002b9cabf20d2
+ms.openlocfilehash: 618c4b127c42aae6a5b8d7570f1962f8c8e38e9a
+ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/20/2018
-ms.locfileid: "53645097"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58511718"
 ---
 # <a name="microsoftml-python-module-in-sql-server"></a>microsoftml (modulo di Python in SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -70,14 +70,14 @@ In questa sezione elenca le funzioni in base alla categoria per farsi un'idea de
 
 | Funzione | Descrizione |
 |----------|-------------|
-|[microsoftml.CATEGORICAL](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/categorical) | Converte una colonna di testo in categorie. |
+|[microsoftml.categorical](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/categorical) | Converte una colonna di testo in categorie. |
 |[microsoftml.categorical_hash](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/categorical-hash) | Genera un hash e consente di convertire una colonna di testo in categorie. |
 
 ### <a name="schema-manipulation"></a>Modificare lo schema
 
 | Funzione | Descrizione |
 |----------|-------------|
-|[microsoftml.Concat](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/concat) | Concatena più colonne in un singolo vettore. |
+|[microsoftml.concat](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/concat) | Concatena più colonne in un singolo vettore. |
 |[microsoftml.drop_columns](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/drop-columns) | Elimina le colonne da un set di dati. |
 |[microsoftml.select_columns](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/select-columns) | Consente di mantenere le colonne di un set di dati. |
 

@@ -16,12 +16,12 @@ ms.assetid: 131395a5-cb18-4795-a7ae-fa09d8ff347f
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: af247734b941a0d9fd7010d4699f9ddb296c890e
-ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
+ms.openlocfilehash: 1de46c12b0e05b592489e557a80138996ad9767f
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/18/2018
-ms.locfileid: "53589165"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58528793"
 ---
 # <a name="sphelpmergeconflictrows-transact-sql"></a>sp_helpmergeconflictrows (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -42,20 +42,15 @@ sp_helpmergeconflictrows [ [ @publication = ] 'publication' ]
 ```  
   
 ## <a name="arguments"></a>Argomenti  
- [  **@publication=**] **'**_pubblicazione_**'**  
- Nome della pubblicazione. *pubblicazione* viene **sysname**, il valore predefinito è **%**. Se la pubblicazione viene specificata, vengono restituiti tutti i conflitti risultanti corrispondenti. Ad esempio, se il **MSmerge_conflict_Customers** tabella include le righe con conflitti per il **WA** e il **autorità di certificazione** pubblicazioni, passando un nome della pubblicazione **autorità di certificazione**  recupera i conflitti che riguardano il **autorità di certificazione** pubblicazione.  
+`[ @publication = ] 'publication'` È il nome della pubblicazione. *pubblicazione* viene **sysname**, il valore predefinito è **%**. Se la pubblicazione viene specificata, vengono restituiti tutti i conflitti risultanti corrispondenti. Ad esempio, se il **MSmerge_conflict_Customers** tabella include le righe con conflitti per il **WA** e il **autorità di certificazione** pubblicazioni, passando un nome della pubblicazione **autorità di certificazione**  recupera i conflitti che riguardano il **autorità di certificazione** pubblicazione.  
   
- [  **@conflict_table=**] **'**_conflict_table_**'**  
- Nome della tabella dei conflitti. *conflict_table* viene **sysname**, non prevede alcun valore predefinito. Nelle [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] e versioni successive, le tabelle dei conflitti vengono denominate usando i nomi di formato con **MSmerge_conflict\__pubblicazione\_articolo_**, con una tabella per ogni articolo pubblicato.  
+`[ @conflict_table = ] 'conflict_table'` È il nome della tabella dei conflitti. *conflict_table* viene **sysname**, non prevede alcun valore predefinito. Nelle [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] e versioni successive, le tabelle dei conflitti vengono denominate usando i nomi di formato con **MSmerge_conflict\__pubblicazione\_articolo_**, con una tabella per ogni articolo pubblicato.  
   
- [  **@publisher=**] **'**_editore_**'**  
- Nome del server di pubblicazione. *server di pubblicazione* viene **sysname**, con un valore predefinito è NULL.  
+`[ @publisher = ] 'publisher'` È il nome del server di pubblicazione. *server di pubblicazione* viene **sysname**, con un valore predefinito è NULL.  
   
- [  **@publisher_db=**] **'**_publisher_db_**'**  
- È il nome del server di pubblicazione. *publisher_db* viene **sysname**, con un valore predefinito è NULL.  
+`[ @publisher_db = ] 'publisher_db'` È il nome del server di pubblicazione. *publisher_db* viene **sysname**, con un valore predefinito è NULL.  
   
- [  **@logical_record_conflicts=** ] *logical_record_conflicts*  
- Indica se il set di risultati contiene informazioni sui conflitti a livello di record logici. *logical_record_conflicts* viene **int**, valore predefinito pari a 0. **1** indica che vengono restituite le informazioni sui conflitti di record logico.  
+`[ @logical_record_conflicts = ] logical_record_conflicts` Indica se il set di risultati contiene informazioni sui conflitti di record logico. *logical_record_conflicts* viene **int**, valore predefinito pari a 0. **1** indica che vengono restituite le informazioni sui conflitti di record logico.  
   
 ## <a name="result-sets"></a>Set di risultati  
  **sp_helpmergeconflictrows** , verrà restituito un set costituito la struttura della tabella di base e le colonne aggiuntive.  

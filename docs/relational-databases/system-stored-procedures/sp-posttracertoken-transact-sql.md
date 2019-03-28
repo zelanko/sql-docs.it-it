@@ -18,12 +18,12 @@ ms.assetid: 24da5cd2-1c45-475e-93db-5bdf660f1c2c
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 41053bee3449ae44f843c24069c11a288131950b
-ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
+ms.openlocfilehash: 8b082958e5bdf7fd12d19a26f8ba2e56bf6cb936
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/18/2018
-ms.locfileid: "53589350"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58526063"
 ---
 # <a name="spposttracertoken-transact-sql"></a>sp_posttracertoken (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -42,14 +42,11 @@ sp_posttracertoken [ @publication = ] 'publication'
 ```  
   
 ## <a name="arguments"></a>Argomenti  
- [ **@publication**=] **'**_pubblicazione_**'**  
- Nome della pubblicazione di cui viene misurata la latenza. *pubblicazione* viene **sysname**, non prevede alcun valore predefinito.  
+`[ @publication = ] 'publication'` È il nome della pubblicazione per cui viene misurata la latenza. *pubblicazione* viene **sysname**, non prevede alcun valore predefinito.  
   
- [  **@tracer_token_id=** ] _tracer_token_id_**OUTPUT**  
- ID del token di traccia inserito. *tracer_token_id* viene **int** con valore predefinito NULL che è un parametro di OUTPUT. Questo valore può essere utilizzato per eseguire [sp_helptracertokenhistory &#40;Transact-SQL&#41; ](../../relational-databases/system-stored-procedures/sp-helptracertokenhistory-transact-sql.md) oppure [sp_deletetracertokenhistory &#40;Transact-SQL&#41; ](../../relational-databases/system-stored-procedures/sp-deletetracertokenhistory-transact-sql.md) senza prima eseguire [sp_helptracertokens &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helptracertokens-transact-sql.md).  
+`[ @tracer_token_id = ] _tracer_token_idOUTPUT` È l'ID del token di traccia inserito. *tracer_token_id* viene **int** con valore predefinito NULL che è un parametro di OUTPUT. Questo valore può essere utilizzato per eseguire [sp_helptracertokenhistory &#40;Transact-SQL&#41; ](../../relational-databases/system-stored-procedures/sp-helptracertokenhistory-transact-sql.md) oppure [sp_deletetracertokenhistory &#40;Transact-SQL&#41; ](../../relational-databases/system-stored-procedures/sp-deletetracertokenhistory-transact-sql.md) senza prima eseguire [sp_helptracertokens &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helptracertokens-transact-sql.md).  
   
- [  **@publisher=** ] **'**_editore_**'**  
- Specifica un non - [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] server di pubblicazione. *server di pubblicazione* viene **sysname**, con un valore predefinito è NULL e non deve essere specificato per un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] server di pubblicazione.  
+`[ @publisher = ] 'publisher'` Specifica un non - [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] server di pubblicazione. *server di pubblicazione* viene **sysname**, con un valore predefinito è NULL e non deve essere specificato per un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] server di pubblicazione.  
   
 ## <a name="return-code-values"></a>Valori restituiti  
  **0** (esito positivo) o **1** (errore)  

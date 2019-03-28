@@ -18,12 +18,12 @@ ms.assetid: 42797510-aa5d-4564-85ac-27418419af9c
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: a821d6b114b1975dd9700b5f59d1cf66ebadb76a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 547ac1bce010e1f25eb2fce178844ff2b3f77bd1
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47745269"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58526943"
 ---
 # <a name="sphelprolemember-transact-sql"></a>sp_helprolemember (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -40,18 +40,17 @@ sp_helprolemember [ [ @rolename = ] 'role' ]
 ```  
   
 ## <a name="arguments"></a>Argomenti  
- [  **@rolename =** ] **'** *ruolo* **'**  
- Nome di un ruolo del database corrente. *ruolo* viene **sysname**, con un valore predefinito è NULL. *ruolo* deve esistere nel database corrente. Se *ruolo* viene omesso, vengono restituiti tutti i ruoli che contengono almeno un membro dal database corrente.  
+`[ @rolename = ] ' role '` È il nome di un ruolo nel database corrente. *ruolo* viene **sysname**, con un valore predefinito è NULL. *ruolo* deve esistere nel database corrente. Se *ruolo* viene omesso, vengono restituiti tutti i ruoli che contengono almeno un membro dal database corrente.  
   
 ## <a name="return-code-values"></a>Valori restituiti  
  0 (esito positivo) o 1 (esito negativo)  
   
 ## <a name="result-sets"></a>Set di risultati  
   
-|Nome colonna|Tipo di dati|Description|  
+|Nome colonna|Tipo di dati|Descrizione|  
 |-----------------|---------------|-----------------|  
 |**DbRole**|**sysname**|Nome del ruolo nel database corrente.|  
-|**Nome membro**|**sysname**|Nome di un membro di **DbRole.**|  
+|**MemberName**|**sysname**|Nome di un membro di **DbRole.**|  
 |**MemberSID**|**varbinary(85)**|Identificatore di sicurezza di **MemberName.**|  
   
 ## <a name="remarks"></a>Note  

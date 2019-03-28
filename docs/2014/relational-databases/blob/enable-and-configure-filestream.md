@@ -12,12 +12,12 @@ ms.assetid: 78737e19-c65b-48d9-8fa9-aa6f1e1bce73
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 8980d8957a711913b938018097bdcdc174456703
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: cc50fea28b1dbc3407b86e3af5573f64202e8f26
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48132187"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58526793"
 ---
 # <a name="enable-and-configure-filestream"></a>Abilitare e configurare FILESTREAM
   Prima di iniziare a utilizzare FILESTREAM, è necessario abilitarlo nell'istanza del [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]. In questo argomento viene descritto come abilitare FILESTREAM utilizzando Gestione configurazione SQL Server.  
@@ -51,7 +51,7 @@ ms.locfileid: "48132187"
   
 11. Nell'editor di query immettere il codice [!INCLUDE[tsql](../../includes/tsql-md.md)] seguente:  
   
-    ```tsql  
+    ```sql  
     EXEC sp_configure filestream_access_level, 2  
     RECONFIGURE  
     ```  

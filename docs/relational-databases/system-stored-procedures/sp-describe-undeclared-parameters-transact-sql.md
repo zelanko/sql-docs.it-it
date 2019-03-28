@@ -19,12 +19,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 8194c74acb14a78482cc1e1de8fae38682699d3d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 5a35880dd299cc9eff81643dd5d955101c5eec68
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47679635"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58532483"
 ---
 # <a name="spdescribeundeclaredparameters-transact-sql"></a>sp_describe_undeclared_parameters (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
@@ -43,11 +43,9 @@ sp_describe_undeclared_parameters
 ```  
   
 ## <a name="arguments"></a>Argomenti  
- [  **\@tsql =** ] **'**_Transact-SQL\_batch_**'**  
- Una o più istruzioni [!INCLUDE[tsql](../../includes/tsql-md.md)]. *SQL_batch Transact* può essere **nvarchar (**_n_**)** oppure **nvarchar (max)**.  
+`[ \@tsql = ] 'Transact-SQL\_batch'` Uno o più [!INCLUDE[tsql](../../includes/tsql-md.md)] istruzioni. *SQL_batch Transact* può essere **nvarchar (**_n_**)** oppure **nvarchar (max)**.  
   
- [  **\@params =** ] **N'**_parametri_**'**  
- \@params fornisce una stringa di dichiarazione per i parametri per il [!INCLUDE[tsql](../../includes/tsql-md.md)] batch, in modo simile a sp_executesql modo funziona. *I parametri* può essere **nvarchar (**_n_**)** oppure **nvarchar (max)**.  
+`[ \@params = ] N'parameters'` \@params fornisce una stringa di dichiarazione per i parametri per il [!INCLUDE[tsql](../../includes/tsql-md.md)] batch, in modo simile a sp_executesql modo funziona. *I parametri* può essere **nvarchar (**_n_**)** oppure **nvarchar (max)**.  
   
  Stringa che contiene le definizioni di tutti i parametri che sono stati incorporati negli *Transact-SQL_batch*. La stringa deve essere una costante o una variabile Unicode. Ogni definizione di parametro è costituita da un nome del parametro e da un tipo di dati. n è un segnaposto che indica definizioni di parametro aggiuntive. Se l'istruzione Transact-SQL o il batch nell'istruzione non contiene parametri, \@params non è obbligatorio. Il valore predefinito per questo parametro è NULL.  
   
@@ -60,7 +58,7 @@ sp_describe_undeclared_parameters
 ## <a name="result-sets"></a>Set di risultati  
  **sp_describe_undeclared_parameters** restituisce il set di risultati seguente.  
   
-|Nome colonna|Tipo di dati|Description|  
+|Nome colonna|Tipo di dati|Descrizione|  
 |-----------------|---------------|-----------------|  
 |**parameter_ordinal**|**int non NULL**|Contiene la posizione ordinale del parametro nel set di risultati. La posizione del primo parametro viene specificata come 1.|  
 |**name**|**sysname non NULL**|Contiene il nome del parametro.|  

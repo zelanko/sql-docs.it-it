@@ -16,12 +16,12 @@ ms.assetid: a7dee4e2-2a60-41da-9d1d-6f991d7e2c5e
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 722a8092a799695be0ab5e4f6925cd7416b7c1b9
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: 368f16597a8060b5c1b9f2eb7fca5759bf8226b3
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54134721"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58532453"
 ---
 # <a name="spdropmergealternatepublisher-transact-sql"></a>sp_dropmergealternatepublisher (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -38,23 +38,17 @@ sp_dropmergealaternatepublisher [ @publisher = ] 'publisher'    , [ @publisher_d
 ```  
   
 ## <a name="arguments"></a>Argomenti  
- [  **@publisher=**] **'**_editore_**'**  
- Nome del server di pubblicazione corrente. *server di pubblicazione*viene **sysname**, non prevede alcun valore predefinito.  
+`[ @publisher = ] 'publisher'` È il nome del server di pubblicazione corrente. *server di pubblicazione*viene **sysname**, non prevede alcun valore predefinito.  
   
- [  **@publisher_db=**] **'**_publisher_db_**'**  
- Nome del database di pubblicazione corrente. *publisher_db*viene **sysname**, non prevede alcun valore predefinito.  
+`[ @publisher_db = ] 'publisher_db'` È il nome del database di pubblicazione corrente. *publisher_db*viene **sysname**, non prevede alcun valore predefinito.  
   
- [  **@publication =**] **'**_pubblicazione_**'**  
- Nome della pubblicazione corrente. *pubblicazione* viene **sysname**, non prevede alcun valore predefinito.  
+`[ @publication = ] 'publication'` È il nome della pubblicazione corrente. *pubblicazione* viene **sysname**, non prevede alcun valore predefinito.  
   
- [  **@alternate_publisher=**] **'**_alternate_publisher_**'**  
- Nome del server di pubblicazione alternativo da eliminare come partner alternativo per la sincronizzazione. *alternate_publisher*viene **sysname**, non prevede alcun valore predefinito.  
+`[ @alternate_publisher = ] 'alternate_publisher'` È il nome del server di pubblicazione alternativo da eliminare come partner di sincronizzazione alternativo. *alternate_publisher*viene **sysname**, non prevede alcun valore predefinito.  
   
- [  **@alternate_publisher_db=**] **'**_alternate_publisher_db_**'**  
- Nome del database di pubblicazione da eliminare come database del partner alternativo per la sincronizzazione. *alternate_publisher_db*viene **sysname**, non prevede alcun valore predefinito.  
+`[ @alternate_publisher_db = ] 'alternate_publisher_db'` È il nome del database di pubblicazione da eliminare come database di pubblicazione del partner alternativo per la sincronizzazione. *alternate_publisher_db*viene **sysname**, non prevede alcun valore predefinito.  
   
- [  **@alternate_publication=**] **'**_alternate_publication_**'**  
- Nome della pubblicazione da eliminare come pubblicazione del partner alternativo per la sincronizzazione. *alternate_publication*viene **sysname**, non prevede alcun valore predefinito.  
+`[ @alternate_publication = ] 'alternate_publication'` È il nome della pubblicazione da eliminare come pubblicazione partner alternativo per la sincronizzazione. *alternate_publication*viene **sysname**, non prevede alcun valore predefinito.  
   
 ## <a name="return-code-values"></a>Valori restituiti  
  **0** (esito positivo) o **1** (errore)  

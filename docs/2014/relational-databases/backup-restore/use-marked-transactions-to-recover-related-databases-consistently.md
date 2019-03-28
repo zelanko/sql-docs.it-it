@@ -20,12 +20,12 @@ ms.assetid: 50a73574-1a69-448e-83dd-9abcc7cb7e1a
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 345584f406830689c4f0bec2a563314d798595a5
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 37b4a53461b2ebd485941ecad89e3672e7c31b62
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48073131"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58532583"
 ---
 # <a name="use-marked-transactions-to-recover-related-databases-consistently-full-recovery-model"></a>Utilizzare Transazioni contrassegnate per recuperare coerentemente i database correlati (Modello di recupero con registrazione completa)
   Le informazioni contenute in questo argomento sono rilevanti solo per i database di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] che utilizzano i modelli di recupero con registrazione completa o con registrazione minima delle operazioni bulk.  
@@ -89,7 +89,7 @@ ms.locfileid: "48073131"
 ### <a name="examples"></a>Esempi  
  Nell'esempio seguente viene ripristinato il log delle transazioni fino al contrassegno nella transazione contrassegnata denominata `ListPriceUpdate`.  
   
-```tsql  
+```sql  
 USE AdventureWorks  
 GO  
 BEGIN TRANSACTION ListPriceUpdate  
@@ -127,7 +127,7 @@ RESTORE LOG AdventureWorks
   
  Ad esempio, considerare un database partizionato esistente in più istanze di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. In ogni istanza è presente un database denominato `coyote`. Creare innanzitutto una stored procedure in ogni database, ad esempio `sp_SetMark`.  
   
-```tsql  
+```sql  
 CREATE PROCEDURE sp_SetMark  
 @name nvarchar (128)  
 AS  
@@ -139,7 +139,7 @@ GO
   
  Creare quindi una stored procedure `sp_MarkAll` contenente una transazione che inserisce un contrassegno in ogni database. `sp_MarkAll` può essere eseguita da qualsiasi istanza.  
   
-```tsql  
+```sql  
 CREATE PROCEDURE sp_MarkAll  
 @name nvarchar (128)  
 AS  
@@ -177,7 +177,7 @@ GO
  [BEGIN DISTRIBUTED TRANSACTION &#40;Transact-SQL&#41;](/sql/t-sql/language-elements/begin-distributed-transaction-transact-sql)   
  [Backup e ripristino di database di sistema &#40;SQL Server&#41;](back-up-and-restore-of-system-databases-sql-server.md)   
  [BEGIN TRANSACTION &#40;Transact-SQL&#41;](/sql/t-sql/language-elements/begin-transaction-transact-sql)   
- [Applicare backup del log delle transazioni &#40;SQL Server&#41;](transaction-log-backups-sql-server.md)   
+ [Applicare backup di log delle transazioni &#40;SQL Server&#41;](transaction-log-backups-sql-server.md)   
  [Backup completo del database &#40;SQL Server&#41;](full-database-backups-sql-server.md)   
  [RESTORE &#40;Transact-SQL&#41;](/sql/t-sql/statements/restore-statements-transact-sql)   
  [Recupero di database correlati che contengono transazioni contrassegnate](recovery-of-related-databases-that-contain-marked-transaction.md)  

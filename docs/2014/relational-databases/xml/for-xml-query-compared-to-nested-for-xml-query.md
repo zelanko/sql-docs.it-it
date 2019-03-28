@@ -10,15 +10,15 @@ helpviewer_keywords:
 - FOR XML query
 - queries [XML in SQL Server], comparing query types
 ms.assetid: 19225b4a-ee3f-47cf-8bcc-52699eeda32c
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 491c0a0084e334cabe7b0eb7648b50aed46a3abc
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 3cccb676574fe4b767d567fbe48cdb887baddf8c
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52545566"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58530578"
 ---
 # <a name="for-xml-query-compared-to-nested-for-xml-query"></a>Query FOR XML e query nidificata FOR XML a confronto
   In questo argomento viene messa a confronto una query FOR XML con un solo livello con una query FOR XML nidificata. Uno dei vantaggi dell'utilizzo di query FOR XML consiste nella possibilità di specificare una combinazione di XML incentrati sia sugli attributi che sugli elementi per i risultati della query. Tutto ciò è dimostrato nell'esempio riportato di seguito.  

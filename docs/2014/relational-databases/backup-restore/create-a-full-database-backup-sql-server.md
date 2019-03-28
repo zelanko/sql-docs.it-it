@@ -15,12 +15,12 @@ ms.assetid: 586561fc-dfbb-4842-84f8-204a9100a534
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 5f432950cadf2b30b84dc00fd900737bfe21f81b
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: c43fbe12b8449fb231ee9a2f479ff17ac0281493
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54124891"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58530753"
 ---
 # <a name="create-a-full-database-backup-sql-server"></a>Creazione di un backup completo del database (SQL Server)
   In questo argomento viene descritto come creare un backup completo del database in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] utilizzando [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../includes/tsql-md.md)]o PowerShell.  
@@ -71,7 +71,7 @@ ms.locfileid: "54124891"
   
  A partire da [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], le opzioni `PASSWORD` e `MEDIAPASSWORD` non sono più disponibili per la creazione di backup. È possibile ripristinare backup creati con password.  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> Autorizzazioni  
  Le autorizzazioni BACKUP DATABASE e BACKUP LOG vengono assegnate per impostazione predefinita ai membri del ruolo predefinito del server **sysadmin** e dei ruoli predefiniti del database **db_owner** e **db_backupoperator** .  
   
  Eventuali problemi correlati alla proprietà e alle autorizzazioni sul file fisico del dispositivo di backup possono interferire con l'operazione di backup. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sia possibile leggere e scrivere sul dispositivo e che l'account utilizzato per eseguire il servizio [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] disponga delle autorizzazioni di scrittura. Le autorizzazioni di accesso ai file, tuttavia, non vengono controllate dalla stored procedure [sp_addumpdevice](/sql/relational-databases/system-stored-procedures/sp-addumpdevice-transact-sql)che aggiunge una voce per un dispositivo di backup nelle tabelle di sistema. Di conseguenza, i problemi relativi all'accesso e alla proprietà del file fisico del dispositivo di backup potrebbero emergere solo in fase di accesso alla risorsa fisica durante un tentativo di backup o ripristino.  
@@ -204,7 +204,7 @@ ms.locfileid: "54124891"
          ENCRYPTION (ALGORITHM,  SERVER CERTIFICATE |ASYMMETRIC KEY)  
          Solo in SQL Server 2014 o versioni successive specificare l'algoritmo di crittografia da utilizzare e il certificato o la chiave asimmetrica da utilizzare per proteggere la crittografia.  
   
-         Descrizione **=** { **'*`text`*'** | **@**_text_ variabile_ }  
+         DESCRIPTION **=** { **'*`text`*'** | **@**_text_variable_ }  
          Specifica il testo in formato libero che descrive il set di backup. La stringa può essere composta da un massimo di 255 caratteri.  
   
          NAME **=** { *nome_set_backup* | **@**_variabile_nome_set_backup_ }  
@@ -227,7 +227,7 @@ ms.locfileid: "54124891"
 #### <a name="a-backing-up-to-a-disk-device"></a>A. Esecuzione del backup su un dispositivo disco  
  Nell'esempio riportato di seguito viene eseguito il backup su disco del database [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] completo, utilizzando `FORMAT` per creare un nuovo set di supporti.  
   
-```tsql  
+```sql  
 USE AdventureWorks2012;  
 GO  
 BACKUP DATABASE AdventureWorks2012  
@@ -238,10 +238,10 @@ TO DISK = 'Z:\SQLServerBackups\AdventureWorks2012.Bak'
 GO  
 ```  
   
-#### <a name="b-backing-up-to-a-tape-device"></a>b. Esecuzione del backup su un dispositivo nastro  
+#### <a name="b-backing-up-to-a-tape-device"></a>B. Esecuzione del backup su un dispositivo nastro  
  Nell'esempio seguente viene eseguito il backup completo su nastro del database [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)], accodandolo ai backup precedenti.  
   
-```tsql  
+```sql  
 USE AdventureWorks2012;  
 GO  
 BACKUP DATABASE AdventureWorks2012  
@@ -254,7 +254,7 @@ GO
 #### <a name="c-backing-up-to-a-logical-tape-device"></a>C. Esecuzione del backup su un dispositivo nastro logico  
  Nell'esempio seguente viene creato in un dispositivo di backup logico per un'unità nastro. Nell'esempio viene quindi eseguito il backup completo del database [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] su quel dispositivo.  
   
-```tsql  
+```sql  
 -- Create a logical backup device,   
 -- AdventureWorks2012_Bak_Tape, for tape device \\.\tape0.  
 USE master;  

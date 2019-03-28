@@ -18,12 +18,12 @@ ms.assetid: 4a13b804-45f2-4f82-987f-42d9a57dd6db
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: bc4acac420f31735a446f3cdff3e687fa5f3efef
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b7ddacb0951b25469404b96d41ec81d2eaaba9cc
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47740529"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58530579"
 ---
 # <a name="sphelpjobstep-transact-sql"></a>sp_help_jobstep (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -43,30 +43,25 @@ sp_help_jobstep { [ @job_id = ] 'job_id' | [ @job_name = ] 'job_name' }
 ```  
   
 ## <a name="arguments"></a>Argomenti  
- [ **@job_id =**] **'***job_id***'**  
- ID del processo per il quale si desidera ottenere le informazioni. *job_id* viene **uniqueidentifier**, con un valore predefinito è NULL.  
+`[ @job_id = ] 'job_id'` ID del processo per cui restituire informazioni sul processo. *job_id* viene **uniqueidentifier**, con un valore predefinito è NULL.  
   
- [ **@job_name =**] **'***job_name***'**  
- Nome del processo. *nome_processo* viene **sysname**, predefinito è NULL.  
+`[ @job_name = ] 'job_name'` Il nome del processo. *nome_processo* viene **sysname**, predefinito è NULL.  
   
 > [!NOTE]  
 >  Entrambi *job_id* oppure *job_name* devono essere specificati, ma non è possibile specificarli entrambi.  
   
- [ **@step_id =**] *step_id*  
- Numero di identificazione del passaggio del processo. Se viene omesso, vengono inclusi tutti i passaggi del processo. *step_id* viene **int**, con un valore predefinito è NULL.  
+`[ @step_id = ] step_id` Il numero di identificazione del passaggio del processo. Se viene omesso, vengono inclusi tutti i passaggi del processo. *step_id* viene **int**, con un valore predefinito è NULL.  
   
- [  **@step_name =**] **'***step_name***'**  
- Nome del passaggio del processo. *step_name* viene **sysname**, con un valore predefinito è NULL.  
+`[ @step_name = ] 'step_name'` Il nome del passaggio del processo. *step_name* viene **sysname**, con un valore predefinito è NULL.  
   
- [ **@suffix =**] *suffix*  
- Un flag che indica se aggiungere una descrizione di testo per il **flag** colonna nell'output. *suffisso*viene **bit**, il valore predefinito **0**. Se *suffisso* viene **1**, aggiungere una descrizione.  
+`[ @suffix = ] suffix` Un flag che indica se aggiungere una descrizione di testo per il **flag** colonna nell'output. *suffisso*viene **bit**, il valore predefinito **0**. Se *suffisso* viene **1**, aggiungere una descrizione.  
   
 ## <a name="return-code-values"></a>Valori restituiti  
  **0** (esito positivo) o **1** (errore)  
   
 ## <a name="result-sets"></a>Set di risultati  
   
-|Nome colonna|Tipo di dati|Description|  
+|Nome colonna|Tipo di dati|Descrizione|  
 |-----------------|---------------|-----------------|  
 |**step_id**|**int**|Identificatore univoco del passaggio.|  
 |**step_name**|**sysname**|Nome del passaggio del processo.|  
@@ -85,7 +80,7 @@ sp_help_jobstep { [ @job_id = ] 'job_id' | [ @job_name = ] 'job_name' }
 |**retry_interval**|**int**|Intervallo in minuti che intercorre tra un tentativo e il successivo.|  
 |**os_run_priority**|**int**|Riservato.|  
 |**output_file_name**|**nvarchar(200)**|In quale comando deve essere scritto l'output di file ([!INCLUDE[tsql](../../includes/tsql-md.md)], **CmdExec**, e **PowerShell** solo per i passaggi).|  
-|**last_run_outcome**|**int**|Risultato dell'ultima esecuzione del passaggio:<br /><br /> **0** = non è riuscita<br /><br /> **1** = ha avuto esito positivo<br /><br /> **2** = nuovo tentativo<br /><br /> **3** = annullato<br /><br /> **5** = sconosciuto|  
+|**last_run_outcome**|**int**|Risultato dell'ultima esecuzione del passaggio:<br /><br /> **0** = non è riuscita<br /><br /> **1** = Succeeded<br /><br /> **2** = Retry<br /><br /> **3** = annullato<br /><br /> **5** = sconosciuto|  
 |**last_run_duration**|**int**|Durata in secondi dell'ultima esecuzione del passaggio.|  
 |**last_run_retries**|**int**|Numero di tentativi di esecuzione del comando durante l'ultima esecuzione del passaggio.|  
 |**last_run_date**|**int**|Data di inizio dell'ultima esecuzione del passaggio.|  

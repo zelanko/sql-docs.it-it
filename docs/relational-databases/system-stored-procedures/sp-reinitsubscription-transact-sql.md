@@ -16,12 +16,12 @@ ms.assetid: d56ae218-6128-4ff9-b06c-749914505c7b
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: da8e0d9ab1959251bf5e41e35e4b3d647e072d8a
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: b9d03099ae48bf463df82d1392e97d4729ec518a
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53207332"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58528783"
 ---
 # <a name="spreinitsubscription-transact-sql"></a>sp_reinitsubscription (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -45,32 +45,24 @@ sp_reinitsubscription [ [ @publication = ] 'publication' ]
 ```  
   
 ## <a name="arguments"></a>Argomenti  
- [  **@publication=**] **'***pubblicazione***'**  
- Nome della pubblicazione. *pubblicazione* viene **sysname**, con un valore predefinito è all.  
+`[ @publication = ] 'publication'` È il nome della pubblicazione. *pubblicazione* viene **sysname**, con un valore predefinito è all.  
   
- [  **@article=**] **'***articolo***'**  
- Nome dell'articolo. *articolo* viene **sysname**, con un valore predefinito è all. Per le pubblicazioni ad aggiornamento immediato, *articolo* deve essere **tutte**; in caso contrario, la stored procedure ignora la pubblicazione e segnala un errore.  
+`[ @article = ] 'article'` È il nome dell'articolo. *articolo* viene **sysname**, con un valore predefinito è all. Per le pubblicazioni ad aggiornamento immediato, *articolo* deve essere **tutte**; in caso contrario, la stored procedure ignora la pubblicazione e segnala un errore.  
   
- [  **@subscriber=**] **'***sottoscrittore***'**  
- Nome del Sottoscrittore. *Sottoscrittore* viene **sysname**, non prevede alcun valore predefinito.  
+`[ @subscriber = ] 'subscriber'` È il nome del sottoscrittore. *Sottoscrittore* viene **sysname**, non prevede alcun valore predefinito.  
   
- [  **@destination_db=**] **'***destination_db***'**  
- Nome del database di destinazione. *destination_db* viene **sysname**, con un valore predefinito è all.  
+`[ @destination_db = ] 'destination_db'` È il nome del database di destinazione. *destination_db* viene **sysname**, con un valore predefinito è all.  
   
- [  **@for_schema_change=**] **'***for_schema_change***'**  
- Specifica se viene eseguita la reinizializzazione in seguito a modifiche dello schema apportate nel database di pubblicazione. *for_schema_change* viene **bit**, con un valore predefinito è 0. Se **0**, le sottoscrizioni attive per le pubblicazioni che consentono l'aggiornamento immediato vengono riattivate, purché l'intera pubblicazione e non solo di alcuni articoli, vengono reinizializzate. Le reinizializzazione viene pertanto avviata in seguito a modifiche dello schema. Se **1**, le sottoscrizioni attive vengono riattivate fino a quando non viene eseguito l'agente Snapshot.  
+`[ @for_schema_change = ] 'for_schema_change'` Indica se viene eseguita la reinizializzazione in seguito a una modifica dello schema nel database di pubblicazione. *for_schema_change* viene **bit**, con un valore predefinito è 0. Se **0**, le sottoscrizioni attive per le pubblicazioni che consentono l'aggiornamento immediato vengono riattivate, purché l'intera pubblicazione e non solo di alcuni articoli, vengono reinizializzate. Le reinizializzazione viene pertanto avviata in seguito a modifiche dello schema. Se **1**, le sottoscrizioni attive vengono riattivate fino a quando non viene eseguito l'agente Snapshot.  
   
- [  **@publisher=** ] **'***publisher***'**  
- Specifica un non - [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] server di pubblicazione. *server di pubblicazione* viene **sysname**, con un valore predefinito è NULL.  
+`[ @publisher = ] 'publisher'` Specifica un non - [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] server di pubblicazione. *server di pubblicazione* viene **sysname**, con un valore predefinito è NULL.  
   
 > [!NOTE]  
 >  *server di pubblicazione* non deve essere utilizzata per [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] i server di pubblicazione.  
   
- [  **@ignore_distributor_failure=** ] *ignore_distributor_failure*  
- Consente la reinizializzazione anche se il server di distribuzione non esiste o è offline. *ignore_distributor_failure* viene **bit**, con un valore predefinito è 0. Se **0**, la reinizializzazione ha esito negativo se il server di distribuzione non esiste o è offline.  
+`[ @ignore_distributor_failure = ] ignore_distributor_failure` Consente la reinizializzazione anche se il server di distribuzione non esiste o è offline. *ignore_distributor_failure* viene **bit**, con un valore predefinito è 0. Se **0**, la reinizializzazione ha esito negativo se il server di distribuzione non esiste o è offline.  
   
- [  **@invalidate_snapshot=** ] *invalidate_snapshot*  
- Consente di invalidare lo snapshot della pubblicazione esistente. *invalidate_snapshot* viene **bit**, con un valore predefinito è 0. Se **1**, viene generato un nuovo snapshot per la pubblicazione.  
+`[ @invalidate_snapshot = ] invalidate_snapshot` Invalida lo snapshot di pubblicazione esistente. *invalidate_snapshot* viene **bit**, con un valore predefinito è 0. Se **1**, viene generato un nuovo snapshot per la pubblicazione.  
   
 ## <a name="return-code-values"></a>Valori restituiti  
  **0** (esito positivo) o **1** (errore)  

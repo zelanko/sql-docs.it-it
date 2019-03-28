@@ -18,15 +18,15 @@ helpviewer_keywords:
 - xml data type [SQL Server], WITH XMLNAMESPACES clause
 - WITH XMLNAMESPACES clause
 ms.assetid: 2189cb5e-4460-46c5-a254-20c833ebbfec
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 04b4696f52566d0217e0d0a26c8a0b0f30308b7f
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 3fbb7cbdda657ef59491cfbb2c1651b969d04428
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53359513"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58526928"
 ---
 # <a name="add-namespaces-to-queries-with-with-xmlnamespaces"></a>Aggiungere spazi dei nomi alle query con WITH XMLNAMESPACES
   La clausola[WITH XMLNAMESPACES (Transact-SQL)](/sql/t-sql/xml/with-xmlnamespaces) offre il supporto dell'URI dello spazio dei nomi nel modo seguente:  
@@ -218,7 +218,7 @@ WHERE CatalogDescription.exist('
     ) = 1  
 ```  
   
- Nella query precedente, entrambi i metodi **query()** e **exist()** dichiarano lo stesso spazio dei nomi nel rispettivo prologo. Ad esempio:  
+ Nella query precedente, entrambi i metodi **query()** e **exist()** dichiarano lo stesso spazio dei nomi nel rispettivo prologo. Esempio:  
   
 ```  
 declare namespace pd="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription";  

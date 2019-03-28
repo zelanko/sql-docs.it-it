@@ -15,12 +15,12 @@ ms.assetid: ee26082b-c0ed-40ff-b5ad-f5f6b00f0475
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: ccd9e2be26c8d514e17a4aa03af422cd648fe426
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 31afdbb14229fa7c0eaf13f1b3a215e31356945f
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51666600"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58528813"
 ---
 # <a name="spatial-index-stored-procedures---arguments-and-properties"></a>Stored procedure - argomenti e le proprietà di indice spaziale
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -41,16 +41,13 @@ ms.locfileid: "51666600"
 -   [sp_help_spatial_geography_index_xml &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-spatial-geography-index-xml-transact-sql.md)  
   
 ## <a name="arguments"></a>Argomenti  
- [  **@tabname =**] **'***tabname***'**  
- Nome qualificato o non qualificato della tabella per cui è stato specificato l'indice spaziale.  
+`[ @tabname = ] 'tabname'` È il nome completo o non qualificato della tabella per cui è stato specificato l'indice spaziale.  
   
  Le virgolette sono necessarie solo se viene specificata una tabella qualificata. Nel caso di un nome completo, ovvero contenente un nome di database, il nome del database deve corrispondere a quello del database corrente. *TabName* viene **nvarchar**(776) e non prevede alcun valore predefinito.  
   
- [  **@indexname =** ] **'***indexname***'**  
- Nome dell'indice spaziale specificato. *IndexName* viene **sysname** non prevede alcun valore predefinito.  
+`[ @indexname = ] 'indexname'` È il nome dell'indice spaziale specificato. *IndexName* viene **sysname** non prevede alcun valore predefinito.  
   
- [  **@verboseoutput =** ] **'***verboseoutput***'**  
- Intervallo di nomi e valori delle proprietà da restituire.  
+`[ @verboseoutput = ] 'verboseoutput'` È l'intervallo di nomi di proprietà e valori da restituire.  
   
  0 = proprietà principali  
   
@@ -58,11 +55,9 @@ ms.locfileid: "51666600"
   
  *verboseoutput* viene **tinyint** non prevede alcun valore predefinito.  
   
- [  **@query_sample =** ] **'***query_sample***'**  
- Campione rappresentativo di query che può essere utilizzato per valutare l'utilità dell'indice. Tale campione può essere un oggetto rappresentativo o una finestra Query. *query_sample* viene **geometry** non prevede alcun valore predefinito.  
+`[ @query_sample = ] 'query_sample'` È un esempio rappresentativo di query che può essere usato per verificare l'utilità dell'indice. Tale campione può essere un oggetto rappresentativo o una finestra Query. *query_sample* viene **geometry** non prevede alcun valore predefinito.  
   
- [  **@xml_output =** ] **'***xml_output***'**  
- Parametro di output tramite cui viene restituito il set di risultati in un frammento XML. *xml_output* viene **xml** non prevede alcun valore predefinito.  
+`[ @xml_output = ] 'xml_output'` È un parametro di output che restituisce il risultato impostato in un frammento XML. *xml_output* viene **xml** non prevede alcun valore predefinito.  
   
 ## <a name="properties"></a>Proprietà  
  Impostare **@verboseoutput** = 0 per restituire le proprietà principali come illustrato nella tabella sottostante. **@verboseoutput** > 0 per restituire tutte le proprietà dell'indice spaziale.  
@@ -70,7 +65,7 @@ ms.locfileid: "51666600"
  **Base_Table_Rows**  
  Numero di righe nella tabella di base. Valore è **bigint**.  
   
- **Colonne Bounding_Box_xmin**  
+ **Bounding_Box_xmin**  
  Delimitazione proprietà casella di indice spaziale per X-minimo **geometria** tipo. Valore di questa proprietà è NULL per **geografia**tipo. Valore è **float**.  
   
  **Bounding_Box_ymin**  
@@ -326,7 +321,7 @@ ms.locfileid: "51666600"
  [Indice spaziale Stored procedure &#40;Transact-SQL&#41;](https://msdn.microsoft.com/library/1be0f34e-3d5a-4a1f-9299-bd482362ec7a)   
  [sp_help_spatial_geometry_index &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-spatial-geometry-index-transact-sql.md)   
  [Panoramica degli indici spaziali](../../relational-databases/spatial/spatial-indexes-overview.md)   
- [Nozioni fondamentali su XQuery](../../xquery/xquery-basics.md)   
+ [XQuery Basics](../../xquery/xquery-basics.md)   
  [Riferimento al linguaggio XQuery &#40;SQL Server&#41;](../../xquery/xquery-language-reference-sql-server.md)  
   
   

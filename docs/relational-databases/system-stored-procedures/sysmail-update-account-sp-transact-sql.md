@@ -18,12 +18,12 @@ ms.assetid: ba2fdccc-5ed4-40ef-a479-79497b4d61aa
 author: VanMSFT
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 86de9f970713d84fec0722a4cc3c29b0b307098f
-ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
+ms.openlocfilehash: 09af9a0190b8ba3b01c72cfa29e0647ad6d6b74d
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/18/2018
-ms.locfileid: "53589948"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58528433"
 ---
 # <a name="sysmailupdateaccountsp-transact-sql"></a>sysmail_update_account_sp (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -53,47 +53,33 @@ sysmail_update_account_sp [ [ @account_id = ] account_id ] [ , ] [ [ @account_na
 ```  
   
 ## <a name="arguments"></a>Argomenti  
- [ **@account_id** = ] *account_id*  
- ID dell'account da aggiornare. *account_id* viene **int**, con un valore predefinito è NULL. Almeno uno dei *account_id* oppure *account_name* deve essere specificato. Se si specificano entrambi, la stored procedure modifica il nome dell'account.  
+`[ @account_id = ] account_id` ID dell'account da aggiornare. *account_id* viene **int**, con un valore predefinito è NULL. Almeno uno dei *account_id* oppure *account_name* deve essere specificato. Se si specificano entrambi, la stored procedure modifica il nome dell'account.  
   
- [ **@account_name** =] **'**_account_name_**'**  
- Nome dell'account da aggiornare. *account_name* viene **sysname**, con un valore predefinito è NULL. Almeno uno dei *account_id* oppure *account_name* deve essere specificato. Se si specificano entrambi, la stored procedure modifica il nome dell'account.  
+`[ @account_name = ] 'account_name'` Il nome dell'account da aggiornare. *account_name* viene **sysname**, con un valore predefinito è NULL. Almeno uno dei *account_id* oppure *account_name* deve essere specificato. Se si specificano entrambi, la stored procedure modifica il nome dell'account.  
   
- [ **@email_address** =] **'**_email_address_**'**  
- Nuovo indirizzo di posta elettronica da cui inviare il messaggio. Deve essere un indirizzo di posta elettronica Internet. Il nome del server nell'indirizzo è il server utilizzato da Posta elettronica database per l'invio di posta da questo account. *email_address* viene **nvarchar (128)**, con un valore predefinito è NULL.  
+`[ @email_address = ] 'email_address'` Il nuovo indirizzo di posta elettronica da cui inviare il messaggio. Deve essere un indirizzo di posta elettronica Internet. Il nome del server nell'indirizzo è il server utilizzato da Posta elettronica database per l'invio di posta da questo account. *email_address* viene **nvarchar (128)**, con un valore predefinito è NULL.  
   
- [ **@display_name** =] **'**_display_name_**'**  
- Nuovo nome visualizzato da utilizzare nei messaggi di posta elettronica provenienti da questo account. *DISPLAY_NAME* viene **nvarchar (128)**, non prevede alcun valore predefinito.  
+`[ @display_name = ] 'display_name'` Il nuovo nome visualizzato da utilizzare nei messaggi di posta elettronica da questo account. *DISPLAY_NAME* viene **nvarchar (128)**, non prevede alcun valore predefinito.  
   
- [ **@replyto_address** =] **'**_replyto_address_**'**  
- Nuovo indirizzo da utilizzare nel campo Risposta dei messaggi di posta elettronica inviati da questo account. *replyto_address* viene **nvarchar (128)**, non prevede alcun valore predefinito.  
+`[ @replyto_address = ] 'replyto_address'` Il nuovo indirizzo da utilizzare nell'intestazione di risposta dei messaggi di posta elettronica da questo account. *replyto_address* viene **nvarchar (128)**, non prevede alcun valore predefinito.  
   
- [ **@description** =] **'**_descrizione_**'**  
- Nuova descrizione dell'account. *Descrizione* viene **nvarchar(256)**, con un valore predefinito è NULL.  
+`[ @description = ] 'description'` Nuova descrizione per l'account. *Descrizione* viene **nvarchar(256)**, con un valore predefinito è NULL.  
   
- [ **@mailserver_name** =] **'**_nome_server_**'**  
- Nome del nuovo server di posta elettronica SMTP da utilizzare per l'account. Il computer che esegue [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] deve essere in grado di risolvere le *server_name* a un indirizzo IP. *nome_server* viene **sysname**, non prevede alcun valore predefinito.  
+`[ @mailserver_name = ] 'server_name'` Il nuovo nome del server di posta elettronica SMTP da utilizzare per questo account. Il computer che esegue [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] deve essere in grado di risolvere le *server_name* a un indirizzo IP. *nome_server* viene **sysname**, non prevede alcun valore predefinito.  
   
- [ **@mailserver_type** =] **'**_server_type_**'**  
- Nuovo tipo del server di posta elettronica. *server_type* viene **sysname**, non prevede alcun valore predefinito. Solo un valore di **'SMTP'** è supportata.  
+`[ @mailserver_type = ] 'server_type'` Il nuovo tipo di server di posta elettronica. *server_type* viene **sysname**, non prevede alcun valore predefinito. Solo un valore di **'SMTP'** è supportata.  
   
- [ **@port** =] *port_number*  
- Nuovo numero di porta del server di posta elettronica. *port_number* viene **int**, non prevede alcun valore predefinito.  
+`[ @port = ] port_number` Il nuovo numero di porta del server di posta elettronica. *port_number* viene **int**, non prevede alcun valore predefinito.  
   
- [ **@timeout** =] **'**_timeout_**'**  
- Parametro di timeout per SmtpClient.Send di un singolo messaggio di posta elettronica. *Timeout* viene **int** espresso in secondi, non prevede alcun valore predefinito.  
+`[ @timeout = ] 'timeout'` Parametro di timeout per SmtpClient di un messaggio di posta elettronica. *Timeout* viene **int** espresso in secondi, non prevede alcun valore predefinito.  
   
- [ **@username** =] **'**_username_**'**  
- Nuovo nome utente da utilizzare per l'accesso al server di posta elettronica. *Nome utente* viene **sysname**, non prevede alcun valore predefinito.  
+`[ @username = ] 'username'` Nuovo nome utente da utilizzare per accedere al server di posta elettronica. *Nome utente* viene **sysname**, non prevede alcun valore predefinito.  
   
- [ **@password** =] **'**_password_**'**  
- Nuova password da utilizzare per l'accesso al server di posta elettronica. *la password* viene **sysname**, non prevede alcun valore predefinito.  
+`[ @password = ] 'password'` La nuova password da usare per accedere al server di posta elettronica. *la password* viene **sysname**, non prevede alcun valore predefinito.  
   
- [ **@use_default_credentials** =] use_default_credentials  
- Specifica se inviare la posta elettronica al server SMTP utilizzando le credenziali del servizio [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]. **use_default_credentials** è di tipo bit e non prevede alcun valore predefinito. Se questo parametro è 1, Posta elettronica database utilizza le credenziali di [!INCLUDE[ssDE](../../includes/ssde-md.md)]. Quando questo parametro è 0, posta elettronica Database utilizza il **@username** e **@password** per l'autenticazione nel server SMTP. Se **@username** e **@password** sono NULL, quindi utilizzata l'autenticazione anonima. Prima di specificare questo parametro consultare l'amministratore del server SMTP.  
+`[ @use_default_credentials = ] use_default_credentials` Specifica se inviare la posta elettronica al server SMTP utilizzando le credenziali del [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] servizio. **use_default_credentials** è di tipo bit e non prevede alcun valore predefinito. Se questo parametro è 1, Posta elettronica database utilizza le credenziali di [!INCLUDE[ssDE](../../includes/ssde-md.md)]. Quando questo parametro è 0, posta elettronica Database utilizza il **@username** e **@password** per l'autenticazione nel server SMTP. Se **@username** e **@password** sono NULL, quindi utilizzata l'autenticazione anonima. Prima di specificare questo parametro consultare l'amministratore del server SMTP.  
   
- [ **@enable_ssl** =] enable_ssl  
- Specifica l'utilizzo della crittografia mediante SSL (Secure Sockets Layer) da parte di Posta elettronica database. Utilizzare questa opzione se SSL è obbligatorio per il server SMTP. **enable_ssl** è di tipo bit e non prevede alcun valore predefinito.  
+`[ @enable_ssl = ] enable_ssl` Specifica se posta elettronica Database consente di crittografare le comunicazioni tramite Secure Sockets Layer (SSL). Utilizzare questa opzione se SSL è obbligatorio per il server SMTP. **enable_ssl** è di tipo bit e non prevede alcun valore predefinito.  
   
 ## <a name="return-code-values"></a>Valori restituiti  
  **0** (esito positivo) o **1** (errore)  
@@ -128,7 +114,7 @@ EXECUTE msdb.dbo.sysmail_update_account_sp
     ,@enable_ssl = 0;  
 ```  
   
-### <a name="b-changing-the-name-of-an-account-and-the-information-for-an-account"></a>b. Modifica del nome e delle informazioni di un account  
+### <a name="b-changing-the-name-of-an-account-and-the-information-for-an-account"></a>B. Modifica del nome e delle informazioni di un account  
  Nell'esempio seguente vengono modificati il nome e le informazioni dell'account con ID `125`. Il nuovo nome dell'account è `Backup Mail Server`.  
   
 ```  

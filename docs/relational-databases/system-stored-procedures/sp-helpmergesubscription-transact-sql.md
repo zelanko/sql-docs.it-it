@@ -16,12 +16,12 @@ ms.assetid: da564112-f769-4e67-9251-5699823e8c86
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: ad32cd5b8e6936bc646fa664052a307a9e0d7ed0
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 4643cfc08db68e5369cfca25d2de76d314ffb347
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52779373"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58530673"
 ---
 # <a name="sphelpmergesubscription-transact-sql"></a>sp_helpmergesubscription (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -44,46 +44,39 @@ sp_helpmergesubscription [ [ @publication=] 'publication']
 ```  
   
 ## <a name="arguments"></a>Argomenti  
- [  **@publication=**] **'***pubblicazione***'**  
- Nome della pubblicazione. *pubblicazione* viene **sysname**, il valore predefinito è **%**. È necessario che la pubblicazione esista già e che sia conforme alle regole per gli identificatori. Se è NULL oppure **%**, vengono restituite informazioni su tutte le pubblicazioni di tipo merge e le sottoscrizioni nel database corrente.  
+`[ @publication = ] 'publication'` È il nome della pubblicazione. *pubblicazione* viene **sysname**, il valore predefinito è **%**. È necessario che la pubblicazione esista già e che sia conforme alle regole per gli identificatori. Se è NULL oppure **%**, vengono restituite informazioni su tutte le pubblicazioni di tipo merge e le sottoscrizioni nel database corrente.  
   
- [  **@subscriber=**] **'***sottoscrittore***'**  
- Nome del Sottoscrittore. *Sottoscrittore* viene **sysname**, il valore predefinito è **%**. Se è NULL o %, vengono restituite informazioni su tutte le sottoscrizioni della pubblicazione specificata.  
+`[ @subscriber = ] 'subscriber'` È il nome del sottoscrittore. *Sottoscrittore* viene **sysname**, il valore predefinito è **%**. Se è NULL o %, vengono restituite informazioni su tutte le sottoscrizioni della pubblicazione specificata.  
   
- [  **@subscriber_db=**] **'***subscriber_db***'**  
- Nome del database di sottoscrizione. *subscriber_db*viene **sysname**, il valore predefinito è **%**, che restituisce informazioni su tutti i database di sottoscrizione.  
+`[ @subscriber_db = ] 'subscriber_db'` È il nome del database di sottoscrizione. *subscriber_db*viene **sysname**, il valore predefinito è **%**, che restituisce informazioni su tutti i database di sottoscrizione.  
   
- [  **@publisher=**] **'***publisher***'**  
- Nome del server di pubblicazione. Il server di pubblicazione deve essere un server valido. *server di pubblicazione*viene **sysname**, il valore predefinito è **%**, che restituisce informazioni su tutti i server di pubblicazione.  
+`[ @publisher = ] 'publisher'` È il nome del server di pubblicazione. Il server di pubblicazione deve essere un server valido. *server di pubblicazione*viene **sysname**, il valore predefinito è **%**, che restituisce informazioni su tutti i server di pubblicazione.  
   
- [ **@publisher_db=**] **'***publisher_db***'**  
- Nome del database del server di pubblicazione. *publisher_db*viene **sysname**, il valore predefinito è **%**, che restituisce informazioni su tutti i database di pubblicazione.  
+`[ @publisher_db = ] 'publisher_db'` È il nome del server di pubblicazione. *publisher_db*viene **sysname**, il valore predefinito è **%**, che restituisce informazioni su tutti i database di pubblicazione.  
   
- [  **@subscription_type=**] **'***subscription_type***'**  
- Tipo di sottoscrizione. *subscription_type*viene **nvarchar(15)**, i possibili valori sono i seguenti.  
+`[ @subscription_type = ] 'subscription_type'` È il tipo di sottoscrizione. *subscription_type*viene **nvarchar(15)**, i possibili valori sono i seguenti.  
   
 |Value|Descrizione|  
 |-----------|-----------------|  
 |**push** (impostazione predefinita)|Sottoscrizione push|  
-|**Eseguire il pull**|Sottoscrizione pull|  
+|**pull**|Sottoscrizione pull|  
 |**both**|Sottoscrizione sia push che pull|  
   
- [  **@found=**] **'***trovato***' OUTPUT**  
- Flag che indica le righe che restituiscono valori. *trovato*viene **int** e un parametro di OUTPUT con valore predefinito è NULL. **1** indica la pubblicazione è stata trovata. **0** indica la pubblicazione non è stata trovata.  
+`[ @found = ] 'found'OUTPUT` È un flag per indicare che restituisce righe. *trovato*viene **int** e un parametro di OUTPUT con valore predefinito è NULL. **1** indica la pubblicazione è stata trovata. **0** indica la pubblicazione non è stata trovata.  
   
 ## <a name="result-sets"></a>Set di risultati  
   
 |Nome colonna|Tipo di dati|Descrizione|  
 |-----------------|---------------|-----------------|  
 |**subscription_name**|**sysname**|Nome della sottoscrizione.|  
-|**pubblicazione**|**sysname**|Nome della pubblicazione.|  
+|**publication**|**sysname**|Nome della pubblicazione.|  
 |**publisher**|**sysname**|Nome del server di pubblicazione.|  
 |**publisher_db**|**sysname**|Nome del database del server di pubblicazione.|  
 |**subscriber**|**sysname**|Nome del Sottoscrittore.|  
 |**subscriber_db**|**sysname**|Nome del database di sottoscrizione.|  
 |**status**|**int**|Stato della sottoscrizione:<br /><br /> **0** = tutti i processi sono in attesa dell'avvio<br /><br /> **1** = uno o più processi di avvio<br /><br /> **2** = tutti i processi sono stati eseguiti correttamente<br /><br /> **3** = almeno un processo è in esecuzione<br /><br /> **4** = tutti i processi sono pianificati e inattivi<br /><br /> **5** = almeno un processo sta tentando di eseguire dopo un precedente errore<br /><br /> **6** = almeno un processo non è stato eseguito correttamente|  
 |**subscriber_type**|**int**|Tipo di Sottoscrittore.|  
-|**subscription_type**|**int**|Tipo di sottoscrizione:<br /><br /> **0** = push<br /><br /> **1** = pull<br /><br /> **2** = entrambi|  
+|**subscription_type**|**int**|Tipo di sottoscrizione:<br /><br /> **0** = Push<br /><br /> **1** = Pull<br /><br /> **2** = Both|  
 |**priority**|**float(8)**|Numero che indica il livello di priorità della sottoscrizione.|  
 |**sync_type**|**tinyint**|Tipo di sincronizzazione della sottoscrizione.|  
 |**description**|**nvarchar(255)**|Breve descrizione della sottoscrizione di tipo merge.|  
@@ -92,7 +85,7 @@ sp_helpmergesubscription [ [ @publication=] 'publication']
 |**offload_enabled**|**bit**|Specifica se per un agente di replica è impostata l'esecuzione con ripartizione del carico di lavoro nel Sottoscrittore. Se è NULL, l'agente viene eseguito nel server di pubblicazione.|  
 |**offload_server**|**sysname**|Nome del server in cui è in esecuzione l'agente.|  
 |**use_interactive_resolver**|**int**|Specifica se durante la fase di riconciliazione viene utilizzato il sistema di risoluzione dei conflitti interattivo. Se **0**, il sistema di risoluzione interattivo non viene utilizzato.|  
-|**Nome host**|**sysname**|Valore fornito durante una sottoscrizione filtrata in base al valore della [HOST_NAME](../../t-sql/functions/host-name-transact-sql.md) (funzione).|  
+|**hostname**|**sysname**|Valore fornito durante una sottoscrizione filtrata in base al valore della [HOST_NAME](../../t-sql/functions/host-name-transact-sql.md) (funzione).|  
 |**subscriber_security_mode**|**smallint**|Modalità di sicurezza del sottoscrittore, dove **1** indica l'autenticazione di Windows, e **0** significa [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] l'autenticazione.|  
 |**subscriber_login**|**sysname**|Nome dell'account di accesso nel Sottoscrittore.|  
 |**subscriber_password**|**sysname**|La password effettiva per il Sottoscrittore non viene mai restituita. Il risultato viene mascherato da una "**\*\*\*\*\*\***" stringa.|  

@@ -18,12 +18,12 @@ ms.assetid: 6b6413c2-7a3b-4eff-91d9-5db2011869d6
 author: VanMSFT
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 815e19a5a36f23173af9f674fd26cbfafb8f9287
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 3dfe649892c30a26024f3053c7a8a0f6c596d7c7
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47835749"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58530613"
 ---
 # <a name="spsyspolicyupdatepolicycategory-transact-sql"></a>sp_syspolicy_update_policy_category (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -41,14 +41,11 @@ sp_syspolicy_update_policy_category { [ @name = ] 'name' | [ @policy_category_id
 ```  
   
 ## <a name="arguments"></a>Argomenti  
- [ **@name=** ] **'***name***'**  
- Nome della categoria di criteri. *nome* viene **sysname**e deve essere specificato se *policy_category_id* è NULL.  
+`[ @name = ] 'name'` È il nome della categoria di criteri. *nome* viene **sysname**e deve essere specificato se *policy_category_id* è NULL.  
   
- [ **@policy_category_id=** ] *policy_category_id*  
- Identificatore della categoria di criteri. *policy_category_id* viene **int**e deve essere specificato se *nome* è NULL.  
+`[ @policy_category_id = ] policy_category_id` È l'identificatore per la categoria di criteri. *policy_category_id* viene **int**e deve essere specificato se *nome* è NULL.  
   
- [  **@mandate_database_subscriptions=** ] *mandate_database_subscriptions*  
- Determina se la sottoscrizione di database per la categoria di criteri è obbligatoria. *mandate_database_subscriptions* è un **bit** , valore predefinito è null. È possibile utilizzare uno dei valori seguenti:  
+`[ @mandate_database_subscriptions = ] mandate_database_subscriptions` Determina se la sottoscrizione del database è obbligatoria per la categoria di criteri. *mandate_database_subscriptions* è un **bit** , valore predefinito è null. È possibile utilizzare uno dei valori seguenti:  
   
 -   0 = Non obbligatoria  
   
@@ -66,7 +63,7 @@ sp_syspolicy_update_policy_category { [ @name = ] 'name' | [ @policy_category_id
  È necessaria l'appartenenza al ruolo predefinito del database PolicyAdministratorRole.  
   
 > [!IMPORTANT]  
->  Possibile elevazione di credenziali: gli utenti nel ruolo PolicyAdministratorRole possono creare trigger server e pianificare le esecuzioni di criteri che influiscono sul funzionamento dell'istanza del [!INCLUDE[ssDE](../../includes/ssde-md.md)]. Gli utenti con il ruolo PolicyAdministratorRole possono ad esempio creare criteri che impediscono la creazione della maggior parte degli oggetti nel [!INCLUDE[ssDE](../../includes/ssde-md.md)]. A causa di questa possibile elevazione di credenziali, il ruolo PolicyAdministratorRole deve essere concesso solo a utenti ritenuti attendibili per il controllo della configurazione del [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
+>  Possibile elevazione di credenziali: Gli utenti nel ruolo PolicyAdministratorRole possono creare trigger server e pianificare le esecuzioni di criteri che possono influenzare l'operazione dell'istanza del [!INCLUDE[ssDE](../../includes/ssde-md.md)]. Gli utenti con il ruolo PolicyAdministratorRole possono ad esempio creare criteri che impediscono la creazione della maggior parte degli oggetti nel [!INCLUDE[ssDE](../../includes/ssde-md.md)]. A causa di questa possibile elevazione di credenziali, il ruolo PolicyAdministratorRole deve essere concesso solo a utenti ritenuti attendibili per il controllo della configurazione del [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
 ## <a name="examples"></a>Esempi  
  Nell'esempio seguente viene eseguito l'aggiornamento della categoria "Finance" a Imponi sottoscrizioni di database.  

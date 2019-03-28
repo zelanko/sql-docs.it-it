@@ -18,12 +18,12 @@ ms.assetid: b682fac4-23c6-4662-8d05-c38f3b45507e
 author: VanMSFT
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: ff44121317827976f65db8ebb49bc2eda37d42bb
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b223f8429d010382e444dd2e57a6fa7735200151
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47779889"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58526093"
 ---
 # <a name="spsyspolicyaddpolicycategory-transact-sql"></a>sp_syspolicy_add_policy_category (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -42,14 +42,11 @@ sp_syspolicy_add_policy_category [ @name = ] 'name'
 ```  
   
 ## <a name="arguments"></a>Argomenti  
- [ **@name=** ] **'***name***'**  
- Nome della categoria di criteri. *nome* viene **sysname**ed è obbligatorio. *nome* non può essere NULL o una stringa vuota.  
+`[ @name = ] 'name'` È il nome della categoria di criteri. *nome* viene **sysname**ed è obbligatorio. *nome* non può essere NULL o una stringa vuota.  
   
- [  **@mandate_database_subscriptions =** ] *mandate_database_subscriptions*  
- Determina se la sottoscrizione di database per la categoria di criteri è obbligatoria. *mandate_database_subscriptions* è un **bit** , valore predefinito è 1 (abilitato).  
+`[ @mandate_database_subscriptions = ] mandate_database_subscriptions` Determina se la sottoscrizione del database è obbligatoria per la categoria di criteri. *mandate_database_subscriptions* è un **bit** , valore predefinito è 1 (abilitato).  
   
- [ **@policy_category_id=** ] *policy_category_id*  
- Identificatore della categoria di criteri. *policy_category_id* viene **int**e viene restituito come OUTPUT.  
+`[ @policy_category_id = ] policy_category_id` È l'identificatore per la categoria di criteri. *policy_category_id* viene **int**e viene restituito come OUTPUT.  
   
 ## <a name="return-code-values"></a>Valori restituiti  
  **0** (esito positivo) o **1** (errore)  
@@ -61,7 +58,7 @@ sp_syspolicy_add_policy_category [ @name = ] 'name'
  È necessaria l'appartenenza al ruolo predefinito del database PolicyAdministratorRole.  
   
 > [!IMPORTANT]  
->  Possibile elevazione di credenziali: gli utenti nel ruolo PolicyAdministratorRole possono creare trigger server e pianificare le esecuzioni di criteri che influiscono sul funzionamento dell'istanza del [!INCLUDE[ssDE](../../includes/ssde-md.md)]. Gli utenti con il ruolo PolicyAdministratorRole possono ad esempio creare criteri che impediscono la creazione della maggior parte degli oggetti nel [!INCLUDE[ssDE](../../includes/ssde-md.md)]. A causa di questa possibile elevazione di credenziali, il ruolo PolicyAdministratorRole deve essere concesso solo a utenti ritenuti attendibili per il controllo della configurazione del [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
+>  Possibile elevazione di credenziali: Gli utenti nel ruolo PolicyAdministratorRole possono creare trigger server e pianificare le esecuzioni di criteri che possono influenzare l'operazione dell'istanza del [!INCLUDE[ssDE](../../includes/ssde-md.md)]. Gli utenti con il ruolo PolicyAdministratorRole possono ad esempio creare criteri che impediscono la creazione della maggior parte degli oggetti nel [!INCLUDE[ssDE](../../includes/ssde-md.md)]. A causa di questa possibile elevazione di credenziali, il ruolo PolicyAdministratorRole deve essere concesso solo a utenti ritenuti attendibili per il controllo della configurazione del [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
 ## <a name="examples"></a>Esempi  
  Nell'esempio seguente viene creata una categoria di criteri per la quale la sottoscrizione non è obbligatoria. È pertanto possibile configurare l'inclusione o l'esclusione di criteri nella categoria in singoli database.  

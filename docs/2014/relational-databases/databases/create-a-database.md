@@ -14,12 +14,12 @@ ms.assetid: 4c4beea2-6cbc-4352-9db6-49ea8130bb64
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 7f527d9767a6e821d0d4d5527fcad70e37f16e3c
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: d93e6cfa3ce6e958b31c1156cd4fc5fa046ad5ee
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52799113"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58530463"
 ---
 # <a name="create-a-database"></a>Creare un database
   In questo argomento si illustra come creare un database in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] utilizzando [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)].  
@@ -60,7 +60,7 @@ ms.locfileid: "52799113"
   
 ###  <a name="Security"></a> Sicurezza  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> Autorizzazioni  
  È richiesta l'autorizzazione CREATE DATABASE per il database master oppure l'autorizzazione CREATE ANY DATABASE o ALTER ANY DATABASE.  
   
  Per mantenere il controllo sull'utilizzo del disco per un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], l'autorizzazione per la creazione dei database è in genere limitata a pochi account di accesso.  
@@ -108,9 +108,9 @@ ms.locfileid: "52799113"
   
 2.  Dalla barra Standard fare clic su **Nuova query**.  
   
-3.  Copiare e incollare l'esempio seguente nella finestra delle query e fare clic su **Esegui**. In questo esempio si crea il database `Sales`. Dal momento che la parola chiave PRIMARY non è specificata, il primo file, cioè`Sales`_`dat`, corrisponde al file primario. Poiché nel parametro SIZE non viene specificato il suffisso MB o KB per le dimensioni del file `Sales`\_`dat` , viene utilizzato MB e le dimensioni del file vengono allocate in megabyte. Il backup del database `Sales`\_`log` vengono allocate in megabyte perché nel parametro `MB` è stato specificato in modo esplicito il suffisso `SIZE` .  
+3.  Copiare e incollare l'esempio seguente nella finestra Query, quindi fare clic su **Esegui**. In questo esempio si crea il database `Sales`. Dal momento che la parola chiave PRIMARY non è specificata, il primo file, cioè`Sales`_`dat`, corrisponde al file primario. Poiché nel parametro SIZE non viene specificato il suffisso MB o KB per le dimensioni del file `Sales`\_`dat` , viene utilizzato MB e le dimensioni del file vengono allocate in megabyte. Il backup del database `Sales`\_`log` vengono allocate in megabyte perché nel parametro `MB` è stato specificato in modo esplicito il suffisso `SIZE` .  
   
-```tsql  
+```sql  
 USE master ;  
 GO  
 CREATE DATABASE Sales  

@@ -16,12 +16,12 @@ ms.assetid: 45001fc9-2dbd-463c-af1d-aa8982d8c813
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: cdbfcad1bb03e88d335c8acddc1ff7eb8c75b2eb
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: a6786b8f26cd9040492bb03fff8ed18cd14be5ff
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52791583"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58528423"
 ---
 # <a name="spvalidatereplicahostsaspublishers-transact-sql"></a>sp_validate_replica_hosts_as_publishers (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -41,14 +41,11 @@ sp_validate_replica_hosts_as_publishers
 ```  
   
 ## <a name="arguments"></a>Argomenti  
- [ **@original_publisher** =] **'***original_publisher***'**  
- Il nome dell'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] che ha pubblicato in origine il database. *original_publisher* viene **sysname**, non prevede alcun valore predefinito.  
+`[ @original_publisher = ] 'original_publisher'` Il nome dell'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] che ha pubblicato il database. *original_publisher* viene **sysname**, non prevede alcun valore predefinito.  
   
- [ **@publisher_db** = ] **'***publisher_db***'**  
- Il nome del database da pubblicare. *publisher_db* viene **sysname**, non prevede alcun valore predefinito.  
+`[ @publisher_db = ] 'publisher_db'` Il nome del database da pubblicare. *publisher_db* viene **sysname**, non prevede alcun valore predefinito.  
   
- [ **@redirected_publisher** =] **'***redirected_publisher***'**  
- La destinazione di reindirizzamento quando **sp_redirect_publisher** è stato chiamato per l'originale server di pubblicazione/database pubblicato coppia. *redirected_publisher* viene **sysname**, non prevede alcun valore predefinito.  
+`[ @redirected_publisher = ] 'redirected_publisher'` La destinazione di reindirizzamento quando **sp_redirect_publisher** è stato chiamato per l'originale server di pubblicazione/database pubblicato coppia. *redirected_publisher* viene **sysname**, non prevede alcun valore predefinito.  
   
 ## <a name="return-code-values"></a>Valori restituiti  
  **0** (esito positivo) o **1** (errore)  
@@ -68,7 +65,7 @@ sp_validate_replica_hosts_as_publishers
 >   
 >  Msg 21899, Livello 11, Stato 1, Procedura **sp_hadr_verify_subscribers_at_publisher**, Riga 109  
 >   
->  Eseguire la query sul server di pubblicazione reindirizzato 'MyReplicaHostName' per determinare se sono state voci sysserver per i sottoscrittori del server di pubblicazione originale 'MyOriginalPublisher' non è riuscita con errore '976', messaggio di errore ' errore 976, livello 14, stato 1, messaggio: Database di destinazione, 'MyPublishedDB', fa parte di un gruppo di disponibilità e non è attualmente accessibile per le query. Lo spostamento dei dati è sospeso o la replica di disponibilità non è abilitata per l'accesso in lettura. Per consentire l'accesso in sola lettura a questo e ad altri database nel gruppo di disponibilità, abilitare l'accesso in lettura a una o più repliche di disponibilità secondarie nel gruppo.  Per altre informazioni, vedere l'istruzione **ALTER AVAILABILITY GROUP** nella documentazione online di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
+>  Impossibile eseguire la query sul server di pubblicazione reindirizzato "MyReplicaHostName" per determinare la presenza di voci sysserver per i sottoscrittori del server di pubblicazione originale "MyOriginalPublisher", errore "976", messaggio di errore "Errore 976, Livello 14, Stato 1". Messaggio: Il database di destinazione, "MyPublishedDB", fa parte di un gruppo di disponibilità e non è attualmente accessibile per le query. Lo spostamento dei dati è sospeso o la replica di disponibilità non è abilitata per l'accesso in lettura. Per consentire l'accesso in sola lettura a questo e ad altri database nel gruppo di disponibilità, abilitare l'accesso in lettura a una o più repliche di disponibilità secondarie nel gruppo.  Per altre informazioni, vedere l'istruzione **ALTER AVAILABILITY GROUP** nella documentazione online di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
 >   
 >  Sono stati rilevati uno o più errori di convalida del server di pubblicazione per l'host della replica 'MyReplicaHostName'.  
   

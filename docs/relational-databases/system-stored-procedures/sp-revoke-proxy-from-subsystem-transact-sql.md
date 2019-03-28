@@ -18,12 +18,12 @@ ms.assetid: b87bc8ba-3ea8-4aed-b54b-32c3d82d9d2a
 author: VanMSFT
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: a8b2444785cf5b640614ee57192832151e3bc9e8
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 4079a6afda1f303369a2d8b9defc8bbeb3c4608d
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47812425"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58527233"
 ---
 # <a name="sprevokeproxyfromsubsystem-transact-sql"></a>sp_revoke_proxy_from_subsystem (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -44,16 +44,13 @@ sp_revoke_proxy_from_subsystem
 ```  
   
 ## <a name="arguments"></a>Argomenti  
- [ **@proxy_id** =] *id*  
- Numero di identificazione del proxy da cui revocare l'accesso. Il *proxy_id* viene **int**, con un valore predefinito è NULL. Entrambi *proxy_id* oppure *proxy_name* devono essere specificati, ma non è possibile specificarli entrambi.  
+`[ @proxy_id = ] id` Il numero di identificazione di proxy del proxy per revocare l'accesso a. Il *proxy_id* viene **int**, con un valore predefinito è NULL. Entrambi *proxy_id* oppure *proxy_name* devono essere specificati, ma non è possibile specificarli entrambi.  
   
- [ **@proxy_name** =] **'***proxy_name***'**  
- Nome del proxy da cui revocare l'accesso. Il *nome_proxy* viene **sysname**, con un valore predefinito è NULL. Entrambi *proxy_id* oppure *proxy_name* devono essere specificati, ma non è possibile specificarli entrambi.  
+`[ @proxy_name = ] 'proxy_name'` Il nome del proxy per revocare l'accesso a. Il *nome_proxy* viene **sysname**, con un valore predefinito è NULL. Entrambi *proxy_id* oppure *proxy_name* devono essere specificati, ma non è possibile specificarli entrambi.  
   
- [ **@subsystem_id** =] *id*  
- Numero di identificazione del sottosistema al quale revocare l'accesso. Il *subsystem_id* viene **int**, con un valore predefinito è NULL. Entrambi *subsystem_id* oppure *subsystem_name* devono essere specificati, ma non è possibile specificarli entrambi. Nella tabella seguente vengono elencati i valori disponibili per ogni sottosistema.  
+`[ @subsystem_id = ] id` Il numero di id del sottosistema a cui revocare l'accesso a. Il *subsystem_id* viene **int**, con un valore predefinito è NULL. Entrambi *subsystem_id* oppure *subsystem_name* devono essere specificati, ma non è possibile specificarli entrambi. Nella tabella seguente vengono elencati i valori disponibili per ogni sottosistema.  
   
-|valore|Description|  
+|Value|Descrizione|  
 |-----------|-----------------|  
 |**2**|Script ActiveX<br /><br /> **\*\* Importanti \* \***  verrà rimosso dal sottosistema di Scripting ActiveX The [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent in una versione futura di [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Evitare di usare questa funzionalità in un nuovo progetto di sviluppo e prevedere interventi di modifica nelle applicazioni in cui è attualmente implementata.|  
 |**3**|Sistema operativo (CmdExec)|  
@@ -67,10 +64,9 @@ sp_revoke_proxy_from_subsystem
 |**11**|[!INCLUDE[ssIS](../../includes/ssis-md.md)] esecuzione del pacchetto|  
 |**12**|Script di PowerShell|  
   
- [ **@subsystem_name**=] **'***subsystem_name***'**  
- Nome del sottosistema a cui revocare l'accesso. Il *subsystem_name* viene **sysname**, con un valore predefinito è NULL. Entrambi *subsystem_id* oppure *subsystem_name* devono essere specificati, ma non è possibile specificarli entrambi. Nella tabella seguente vengono elencati i valori disponibili per ogni sottosistema.  
+`[ @subsystem_name = ] 'subsystem_name'` Il nome del sottosistema a cui revocare l'accesso a. Il *subsystem_name* viene **sysname**, con un valore predefinito è NULL. Entrambi *subsystem_id* oppure *subsystem_name* devono essere specificati, ma non è possibile specificarli entrambi. Nella tabella seguente vengono elencati i valori disponibili per ogni sottosistema.  
   
-|valore|Description|  
+|Value|Descrizione|  
 |-----------|-----------------|  
 |ActiveScripting|Script ActiveX|  
 |CmdExec|Sistema operativo (CmdExec)|  

@@ -15,12 +15,12 @@ ms.assetid: 55f3ac04-5626-4ad2-96bd-a1f1b079659d
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 83fc6db21fd2892ebbc42b329515a94b371cb1ce
-ms.sourcegitcommit: 04dd0620202287869b23cc2fde998a18d3200c66
+ms.openlocfilehash: 2597a2e8f1f97635ed52bf639d57f8de3c26fcd4
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "52641542"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58528673"
 ---
 # <a name="view-or-change-server-properties-sql-server"></a>Visualizzare o modificare le proprietà del server (SQL Server)
   In questo argomento viene illustrato come visualizzare o modificare le proprietà di un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tramite [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../includes/tsql-md.md)]o Gestione configurazione SQL Server.  
@@ -41,7 +41,7 @@ ms.locfileid: "52641542"
   
      [Gestione configurazione SQL Server](#PowerShellProcedure)  
   
--   **Completamento:**  [Dopo aver modificato le proprietà del server](#FollowUp)  
+-   **Completamento:**  [Dopo la modifica delle proprietà del server](#FollowUp)  
   
 ##  <a name="BeforeYouBegin"></a> Prima di iniziare  
   
@@ -56,7 +56,7 @@ ms.locfileid: "52641542"
   
 ###  <a name="Security"></a> Sicurezza  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> Autorizzazioni  
  Per altre informazioni, vedere [Ruoli a livello di server](../../relational-databases/security/authentication-access/server-level-roles.md).  
   
  Autorizzazioni di esecuzione su `sp_configure` senza parametri o con solo il primo parametro vengono assegnate a tutti gli utenti per impostazione predefinita. Per eseguire `sp_configure` con entrambi i parametri per modificare un'opzione di configurazione o per eseguire l'istruzione RECONFIGURE, un utente deve essere concessa l'autorizzazione a livello di server ALTER SETTINGS. L'autorizzazione ALTER SETTINGS è assegnata implicitamente ai ruoli predefiniti del server **sysadmin** e **serveradmin** .  
@@ -77,9 +77,9 @@ ms.locfileid: "52641542"
   
 2.  Dalla barra Standard fare clic su **Nuova query**.  
   
-3.  Copiare e incollare l'esempio seguente nella finestra delle query e fare clic su **Esegui**. In questo esempio viene usata la funzione predefinita [SERVERPROPERTY](/sql/t-sql/functions/serverproperty-transact-sql) in un'istruzione `SELECT` per restituire informazioni sul server corrente. Ciò risulta utile quando in un server basato su Windows sono installate più istanze di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e il client deve aprire un'altra connessione alla stessa istanza utilizzata dalla connessione corrente.  
+3.  Copiare e incollare l'esempio seguente nella finestra Query, quindi fare clic su **Esegui**. In questo esempio viene usata la funzione predefinita [SERVERPROPERTY](/sql/t-sql/functions/serverproperty-transact-sql) in un'istruzione `SELECT` per restituire informazioni sul server corrente. Ciò risulta utile quando in un server basato su Windows sono installate più istanze di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e il client deve aprire un'altra connessione alla stessa istanza utilizzata dalla connessione corrente.  
   
-    ```tsql  
+    ```sql  
     SELECT CONVERT( sysname, SERVERPROPERTY('servername'));  
     GO  
     ```  
@@ -90,9 +90,9 @@ ms.locfileid: "52641542"
   
 2.  Dalla barra Standard fare clic su **Nuova query**.  
   
-3.  Copiare e incollare l'esempio seguente nella finestra delle query e fare clic su **Esegui**. In questo esempio viene eseguita una query nella vista del catalogo [sys.servers](/sql/relational-databases/system-catalog-views/sys-servers-transact-sql) per restituire il nome (`name`) e l'ID (`server_id`) del server corrente e il nome del provider OLE DB (`provider`) per la connessione a un server collegato.  
+3.  Copiare e incollare l'esempio seguente nella finestra Query, quindi fare clic su **Esegui**. In questo esempio viene eseguita una query nella vista del catalogo [sys.servers](/sql/relational-databases/system-catalog-views/sys-servers-transact-sql) per restituire il nome (`name`) e l'ID (`server_id`) del server corrente e il nome del provider OLE DB (`provider`) per la connessione a un server collegato.  
   
-    ```tsql  
+    ```sql  
     USE AdventureWorks2012;   
     GO  
     SELECT name, server_id, provider  
@@ -107,7 +107,7 @@ ms.locfileid: "52641542"
   
 2.  Dalla barra Standard fare clic su **Nuova query**.  
   
-3.  Copiare e incollare l'esempio seguente nella finestra delle query e fare clic su **Esegui**. In questo esempio viene eseguita una query nella vista del catalogo [sys.configurations](/sql/relational-databases/system-catalog-views/sys-configurations-transact-sql) per restituire informazioni su ogni opzione di configurazione del server nel server corrente. Nell'esempio vengono restituiti il nome (`name`) e la descrizione (`description`) dell'opzione e viene indicato se l'opzione è avanzata (`is_advanced`).  
+3.  Copiare e incollare l'esempio seguente nella finestra Query, quindi fare clic su **Esegui**. In questo esempio viene eseguita una query nella vista del catalogo [sys.configurations](/sql/relational-databases/system-catalog-views/sys-configurations-transact-sql) per restituire informazioni su ogni opzione di configurazione del server nel server corrente. Nell'esempio vengono restituiti il nome (`name`) e la descrizione (`description`) dell'opzione e viene indicato se l'opzione è avanzata (`is_advanced`).  
   
     ```wmimof  
     USE AdventureWorks2012;   
@@ -124,9 +124,9 @@ ms.locfileid: "52641542"
   
 2.  Dalla barra Standard fare clic su **Nuova query**.  
   
-3.  Copiare e incollare l'esempio seguente nella finestra delle query e fare clic su **Esegui**. In questo esempio viene illustrato come usare [sp_configure](/sql/relational-databases/system-stored-procedures/sp-configure-transact-sql) per modificare una proprietà del server. Nell'esempio il valore dell'opzione `fill factor` viene modificato in `100`. Per rendere effettiva la modifica, è necessario riavviare il server.  
+3.  Copiare e incollare l'esempio seguente nella finestra Query, quindi fare clic su **Esegui**. In questo esempio viene illustrato come usare [sp_configure](/sql/relational-databases/system-stored-procedures/sp-configure-transact-sql) per modificare una proprietà del server. Nell'esempio il valore dell'opzione `fill factor` viene modificato in `100`. Per rendere effettiva la modifica, è necessario riavviare il server.  
   
-```tsql  
+```sql  
 Use AdventureWorks2012;  
 GO  
 sp_configure 'show advanced options', 1;  
@@ -154,7 +154,7 @@ GO
   
 4.  Nella finestra di dialogo **SQL Server (\<***nomeistanza***>) Proprietà** modificare le proprietà del server nella scheda **Servizio** o **Avanzate** e fare clic su **OK**.  
   
-##  <a name="FollowUp"></a> Completamento: Dopo aver modificato le proprietà del server  
+##  <a name="FollowUp"></a> Completamento: Dopo la modifica delle proprietà del server  
  Per alcune proprietà, potrebbe essere necessario riavviare il server per rendere effettiva la modifica.  
   
 ## <a name="see-also"></a>Vedere anche  

@@ -12,12 +12,12 @@ ms.assetid: b6a21c3c-fdb8-4187-8229-1c488454fdfb
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 65ee65f4185f9045a4ac75e4c058030d2d02fed6
-ms.sourcegitcommit: 87f29b23d5ab174248dab5d558830eeca2a6a0a4
+ms.openlocfilehash: 6ef33d1331621b248295327a6e6fd266b8dd6242
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "51018886"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58526883"
 ---
 # <a name="polygon"></a>Polygon
   Un `Polygon` è una superficie bidimensionale archiviata come una sequenza di punti che definiscono un anello di delimitazione esterno e nessuno o più anelli interni.  
@@ -64,7 +64,7 @@ DECLARE @g4 geometry = 'POLYGON((-5 -5, -5 5, 5 5, 5 -5, -5 -5),(3 0, 6 0, 6 3, 
 DECLARE @g5 geometry = 'POLYGON((1 1, 1 1, 1 1, 1 1))';  
 ```  
   
- Come illustrato in `@g4` e `@g5`, è possibile che un'istanza di `Polygon` accettata non sia un'istanza di `Polygon` valida. In `@g5` viene inoltre illustrato che per essere accettata un'istanza Polygon deve contenere solo un anello con quattro punti qualsiasi.  
+ Come illustrato in `@g4` e `@g5`, è possibile che un'istanza di `Polygon` accettata non sia un'istanza di `Polygon` valida. `@g5` mostra anche che un'istanza Polygon, per essere accettata, deve contenere solo un anello con quattro punti qualsiasi.  
   
  Negli esempi seguenti viene generata un'eccezione `System.FormatException`, poiché le istanze `Polygon` non vengono accettate.  
   
@@ -91,7 +91,7 @@ DECLARE @g3 geometry = 'POLYGON((-20 -20, -20 20, 20 20, 20 -20, -20 -20), (10 0
 SELECT @g1.STIsValid(), @g2.STIsValid(), @g3.STIsValid();  
 ```  
   
- `@g3` è valido perché i due anelli interni si toccano in un solo punto e non si incrociano. Nell'esempio seguente vengono illustrate le istanze `Polygon` non valide.  
+ `@g3` è valida perché i due anelli interni si toccano in un solo punto e non si incrociano. Nell'esempio seguente vengono illustrate le istanze `Polygon` non valide.  
   
 ```  
 DECLARE @g1 geometry = 'POLYGON((-20 -20, -20 20, 20 20, 20 -20, -20 -20), (20 0, 0 10, 0 -20, 20 0))';  
@@ -135,7 +135,7 @@ MULTIPOLYGON (((2 0, 3 1, 2 2, 1.5 1.5, 2 1, 1.5 0.5, 2 0)), ((1 0, 1.5 0.5, 1 1
   
  Di seguito è riportato un altro esempio della conversione di un'istanza non valida in un'istanza geometry valida. Nell'esempio seguente l'istanza `Polygon` è stata creata utilizzando tre punti esattamente uguali:  
   
-```tsql  
+```sql  
 DECLARE @g geometry  
 SET @g = geometry::Parse('POLYGON((1 3, 1 3, 1 3, 1 3))');  
 SET @g = @g.MakeValid();  

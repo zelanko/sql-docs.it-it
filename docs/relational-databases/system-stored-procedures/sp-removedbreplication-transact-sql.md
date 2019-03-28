@@ -16,12 +16,12 @@ ms.assetid: cb98d571-d1eb-467b-91f7-a6e091009672
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 0965c656c5c6b0cef690bb3fbaa7bbc2a7965104
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 4b9f9c6c8c39355ec2c381c7fa4efa340da3addf
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52747693"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58528663"
 ---
 # <a name="spremovedbreplication-transact-sql"></a>sp_removedbreplication (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -42,15 +42,13 @@ sp_removedbreplication [ [ @dbname = ] 'dbname' ]
 ```  
   
 ## <a name="arguments"></a>Argomenti  
- [  **@dbname=**] **'***dbname***'**  
- Nome del database. *dbname* è di tipo **sysname**e il valore predefinito è NULL. Quando è NULL, viene utilizzato il database corrente.  
+`[ @dbname = ] 'dbname'` È il nome del database. *dbname* è di tipo **sysname**e il valore predefinito è NULL. Quando è NULL, viene utilizzato il database corrente.  
   
- [ **@type** =] *tipo*  
- Tipo di replica per cui gli oggetti del database vengono rimossi. *tipo di* viene **nvarchar(5** e può essere uno dei valori seguenti.  
+`[ @type = ] type` È il tipo di replica di database a cui gli oggetti vengono rimossi. *tipo di* viene **nvarchar(5** e può essere uno dei valori seguenti.  
   
 |||  
 |-|-|  
-|**TRAN**|Rimuove gli oggetti di pubblicazione correlati alla replica transazionale.|  
+|**tran**|Rimuove gli oggetti di pubblicazione correlati alla replica transazionale.|  
 |**merge**|Rimuove gli oggetti di pubblicazione correlati alla replica di tipo merge.|  
 |**entrambi** (impostazione predefinita)|Rimuove tutti gli oggetti di pubblicazione correlati alla replica.|  
   

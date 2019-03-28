@@ -18,12 +18,12 @@ ms.assetid: 832ec15a-6e92-4eb5-8c4a-af4dba79fbaa
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: dc6538cbc62be98414b180d44725d987e660ff99
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e0cd3573c108cdd5a57bbb2cf6d542415710f24c
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47742439"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58530263"
 ---
 # <a name="spmanagejobsbylogin-transact-sql"></a>sp_manage_jobs_by_login (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -43,14 +43,11 @@ sp_manage_jobs_by_login
 ```  
   
 ## <a name="arguments"></a>Argomenti  
- [  **@action=** ] **'***azione***'**  
- Azione da eseguire per l'account specificato. *azione* viene **varchar (10)**, non prevede alcun valore predefinito. Quando *azione*viene **eliminare**, **sp_manage_jobs_by_login** Elimina tutti i processi di proprietà *current_owner_login_name*. Quando *azione* viene **RIASSEGNA**, tutti i processi vengono assegnati al *new_owner_login_name*.  
+`[ @action = ] 'action'` L'azione da intraprendere per l'account di accesso specificato. *azione* viene **varchar (10)**, non prevede alcun valore predefinito. Quando *azione*viene **eliminare**, **sp_manage_jobs_by_login** Elimina tutti i processi di proprietà *current_owner_login_name*. Quando *azione* viene **RIASSEGNA**, tutti i processi vengono assegnati al *new_owner_login_name*.  
   
- [  **@current_owner_login_name=** ] **'***current_owner_login_name***'**  
- Nome dell'account di accesso del proprietario del processo corrente. *current_owner_login_name* viene **sysname**, non prevede alcun valore predefinito.  
+`[ @current_owner_login_name = ] 'current_owner_login_name'` Il nome di account di accesso del proprietario del processo corrente. *current_owner_login_name* viene **sysname**, non prevede alcun valore predefinito.  
   
- [  **@new_owner_login_name=** ] **'***new_owner_login_name***'**  
- Nome dell'account di accesso del nuovo proprietario del processo. Usare questo parametro solo se *azione* viene **RIASSEGNA**. *new_owner_login_name* viene **sysname**, con un valore predefinito è NULL.  
+`[ @new_owner_login_name = ] 'new_owner_login_name'` Il nome di account di accesso del proprietario del nuovo processo. Usare questo parametro solo se *azione* viene **RIASSEGNA**. *new_owner_login_name* viene **sysname**, con un valore predefinito è NULL.  
   
 ## <a name="return-code-values"></a>Valori restituiti  
  **0** (esito positivo) o **1** (errore)  

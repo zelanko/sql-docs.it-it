@@ -13,35 +13,17 @@ ms.assetid: ed6e5e94-4b8d-422a-a17e-61b05a4df903
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: b9cea2592b0e1c65fd23ccbad6b8235077ed1f2f
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: e8134b7a69df7254ce3609ddce24a15293c47efd
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53376220"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58528513"
 ---
 # <a name="configure-sql-server-on-a-server-core-installation"></a>Configurare SQL Server in un'installazione Server Core
-  In questo argomento vengono descritti i dettagli sulla configurazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in un'installazione Server Core di [!INCLUDE[winserver2008r2](../../includes/winserver2008r2-md.md)] SP1. Fare riferimento alle sezioni seguenti:  
+  In questo argomento vengono descritti i dettagli sulla configurazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in un'installazione Server Core di [!INCLUDE[winserver2008r2](../../includes/winserver2008r2-md.md)] SP1. 
   
--   [Configurare e gestire Server Core in Windows Server](configure-sql-server-on-a-server-core-installation.md#bkmk_configurewindows)  
-  
--   [Installare gli aggiornamenti di SQL Server](configure-sql-server-on-a-server-core-installation.md#bkmk_installsqlupdates)  
-  
--   [Avviare/arrestare il servizio SQL Server](configure-sql-server-on-a-server-core-installation.md#bkmk_startstopservices)  
-  
--   [Abilitare Gruppi di disponibilità AlwaysOn](configure-sql-server-on-a-server-core-installation.md#bkmk_enablealwayson)  
-  
--   [Configurazione dell'accesso remoto dell'istanza di SQL Server in esecuzione in Server Core](configure-sql-server-on-a-server-core-installation.md#bkmk_configureremoteaccess)  
-  
--   [SQL Server Profiler](configure-sql-server-on-a-server-core-installation.md#bkmk_profiler)  
-  
--   [Controllo di SQL Server](configure-sql-server-on-a-server-core-installation.md#bkmk_auditing)  
-  
--   [Utilità del prompt dei comandi](configure-sql-server-on-a-server-core-installation.md#bkmk_cmd)  
-  
--   [Utilizzare gli strumenti di risoluzione dei problemi](configure-sql-server-on-a-server-core-installation.md#bkmk_troubleshoot)  
-  
-##  <a name="BKMK_ConfigureWindows"></a> Configurare e gestire Server Core in Windows Server  
+##  <a name="configure-and-manage-server-core-on-windows-server"></a>Configurare e gestire Server Core in Windows Server  
  Nella sezione vengono forniti i riferimenti agli argomenti in cui sono illustrate la configurazione e la gestione di un'installazione Server Core.  
   
  Non tutte le funzionalità di [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] sono supportate nella modalità Server Core.  Alcune di queste possono essere installate in un computer client o in un altro server in cui non viene eseguito Server Core e possono essere connesse ai servizi del motore di database installati in Server Core.  
@@ -58,20 +40,20 @@ ms.locfileid: "53376220"
   
 -   [Installazione delle funzionalità di Windows in un server che esegue un'installazione Server Core di Windows Server 2008 R2: Panoramica](https://go.microsoft.com/fwlink/?LinkId=245961) (https://go.microsoft.com/fwlink/?LinkId=245961)  
   
--   [La gestione di un'installazione Server Core: Panoramica](https://go.microsoft.com/fwlink/?LinkId=245962) (https://go.microsoft.com/fwlink/?LinkId=245962)  
+-   [Gestione di un'installazione Server Core: Panoramica](https://go.microsoft.com/fwlink/?LinkId=245962) (https://go.microsoft.com/fwlink/?LinkId=245962)  
   
 -   [Amministrazione di un'installazione Server Core](https://go.microsoft.com/fwlink/?LinkId=245963) (https://go.microsoft.com/fwlink/?LinkId=245963)  
   
-##  <a name="BKMK_InstallSQLUpdates"></a> Installare gli aggiornamenti di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
+##  <a name="install-updates"></a>Installare gli aggiornamenti  
  In questa sezione vengono fornite informazioni sull'installazione di aggiornamenti per [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] in un computer con Windows Server Core. Si consiglia agli clienti di valutare e installare tempestivamente gli ultimi aggiornamenti di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] per assicurarsi che i sistemi dispongano degli aggiornamenti di sicurezza più recenti. Per altre informazioni sull'installazione [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] in un computer con Windows Server Core, vedere [installare SQL Server 2014 in Server Core](install-sql-server-on-server-core.md).  
   
  Di seguito sono disponibili due scenari per l'installazione di aggiornamenti del prodotto:  
   
--   [Installazione degli aggiornamenti per SQL Server 2014 durante una nuova installazione](configure-sql-server-on-a-server-core-installation.md#bkmk_newinstall)  
+-   [Installazione degli aggiornamenti per SQL Server 2014 durante una nuova installazione](#installing-updates-during-a-new-installation) 
   
--   [Installazione degli aggiornamenti per SQL Server 2014 dopo che è stato installato](configure-sql-server-on-a-server-core-installation.md#bkmk_alreadyinstall)  
+-   [Installazione degli aggiornamenti per SQL Server 2014 dopo che è stato installato](#installing-updates-after-installation) 
   
-###  <a name="bkmk_NewInstall"></a> Installazione di aggiornamenti per [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] durante una nuova installazione  
+### <a name="installing-updates-during-a-new-installation"></a>Installazione degli aggiornamenti durante una nuova installazione  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Il programma di installazione supporta solo installazioni dal prompt dei comandi in un sistema operativo Server Core. Per altre informazioni, vedere [Installare SQL Server 2014 dal prompt dei comandi](install-sql-server-from-the-command-prompt.md).  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Il programma di installazione integra gli aggiornamenti più recenti del pacchetto con l'installazione del prodotto principale in modo che quest'ultimo e i relativi aggiornamenti applicabili vengano installati contemporaneamente.  
@@ -80,11 +62,11 @@ ms.locfileid: "53376220"
   
  Specificare i parametri UpdateSource e UpdateEnabled per includere gli aggiornamenti più recenti del prodotto con l'installazione del prodotto principale. Fare riferimento all'esempio seguente per abilitare gli aggiornamenti del prodotto durante l'installazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] :  
   
-```tsql  
+```sql  
 Setup.exe /qs /ACTION=Install /FEATURES=SQLEngine,Replication /INSTANCENAME=MSSQLSERVER /SQLSVCACCOUNT="<DomainName\UserName>" /SQLSVCPASSWORD="<StrongPassword>" /SQLSYSADMINACCOUNTS="<DomainName\UserName>" /AGTSVCACCOUNT="NT AUTHORITY\Network Service" /UpdateEnabled=True /UpdateSource="<SourcePath>" /IACCEPTSQLSERVERLICENSETERMS  
 ```  
   
-###  <a name="bkmk_alreadyInstall"></a> Installazione di aggiornamenti per [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] dopo che è stato installato  
+### <a name="installing-updates-after-installation"></a>Installazione degli aggiornamenti dopo l'installazione 
  In un'istanza installata di [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]si consiglia di applicare gli aggiornamenti della sicurezza e gli aggiornamenti critici più recenti, inclusi General Distribution Release (GDR) e Service Pack (SP). I singoli aggiornamenti cumulativi e aggiornamenti della sicurezza devono essere adottati secondo le esigenze e caso per caso. Valutare l'aggiornamento; se è necessario, applicarlo.  
   
  Applicare un aggiornamento dal prompt dei comandi sostituendo <package_name> con il nome del pacchetto di aggiornamento:  
@@ -107,15 +89,15 @@ Setup.exe /qs /ACTION=Install /FEATURES=SQLEngine,Replication /INSTANCENAME=MSSQ
     <package_name>.exe /qs /IAcceptSQLServerLicenseTerms /Action=Patch /AllInstances  
     ```  
   
-##  <a name="BKMK_StartStopServices"></a> Avviare/arrestare il servizio [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
+##  <a name="startstop-sql-server-service"></a>Servizio di avvio/arresto di SQL Server  
  L'applicazione [sqlservr](../../tools/sqlservr-application.md) avvia, arresta, sospende e riprende un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dal prompt dei comandi.  
   
- È inoltre possibile utilizzare i servizi .NET per avviare e arrestare i servizi [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
+ È inoltre possibile utilizzare i servizi .NET per avviare e arrestare i servizi [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
-##  <a name="BKMK_EnableAlwaysON"></a> Abilitare Gruppi di disponibilità AlwaysOn  
+## <a name="enable-alwayson-availability-groups"></a>Abilitare Gruppi di disponibilità AlwaysOn  
  L'abilitazione per Gruppi di disponibilità AlwaysOn rappresenta un prerequisito per consentire a un'istanza del server di utilizzare i gruppi di disponibilità come soluzione a disponibilità elevata e di ripristino di emergenza. Per altre informazioni sulla gestione di Gruppi di disponibilità AlwaysOn, vedere [Abilitare e disabilitare la funzionalità Gruppi di disponibilità AlwaysOn &#40;SQL Server&#41;](../availability-groups/windows/enable-and-disable-always-on-availability-groups-sql-server.md).  
   
-### <a name="using-includessnoversionincludesssnoversion-mdmd-configuration-manager-remotely"></a>Utilizzo di Gestione configurazione [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in remoto  
+### <a name="using-sql-server-configuration-manager-remotely"></a>Usando Gestione configurazione SQL Server in modalità remota  
  Questi passaggi devono essere effettuati in un PC che esegue l'edizione client di [!INCLUDE[win7](../../includes/win7-md.md)] o versioni successive o in un altro server con la Shell grafica server installata (ovvero un'installazione completa di [!INCLUDE[winserver2008r2](../../includes/winserver2008r2-md.md)] o un'installazione di Windows Server 8 con la funzionalità Shell grafica server abilitata).  
   
 1.  Aprire Gestione computer. Per aprire Gestione computer, effettuare una delle operazioni seguenti:  
@@ -179,10 +161,10 @@ Enable-SqlAlwaysOn [-ServerInstance <string>] [-Credential <PSCredential>] [-For
 Enable-SqlAlwaysOn -Path SQLSERVER:\SQL\Machine\Instance  
 ```  
   
-##  <a name="BKMK_ConfigureRemoteAccess"></a> Configurazione dell'accesso remoto di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in esecuzione in Server Core  
+## <a name="configuring-remote-access-of-sql-server-running-on-server-core"></a>Configurazione dell'accesso remoto di SQL Server in esecuzione in Server Core  
  Eseguire le azioni descritte di seguito per configurare l'accesso remoto di un'istanza di [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] in esecuzione in [!INCLUDE[winserver2008r2](../../includes/winserver2008r2-md.md)] Server Core SP1.  
   
-### <a name="enable-remote-connections-on-the-instance-of-includessnoversionincludesssnoversion-mdmd"></a>Abilitare connessioni remote nell'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
+### <a name="enable-remote-connections-on-an-instance-of-sql-server"></a>Abilitare le connessioni remote in un'istanza di SQL Server 
  Per abilitare connessioni remote, utilizzare in locale SQLCMD.exe ed eseguire le istruzioni seguenti nell'istanza Server Core:  
   
 -   `EXEC sys.sp_configure N'remote access', N'1'`  
@@ -193,7 +175,7 @@ Enable-SqlAlwaysOn -Path SQLSERVER:\SQL\Machine\Instance
   
      `GO`  
   
-### <a name="enable-and-start-the-includessnoversionincludesssnoversion-mdmd-browser-service"></a>Abilitare e avviare il servizio [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser  
+### <a name="enable-and-start-the-sql-server-browser-service"></a>Abilitazione e avvio del servizio SQL Server Browser  
  Per impostazione predefinita, il servizio Browser è disabilitato.  Se risulta disabilitato in un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in esecuzione in Server Core, eseguire il comando riportato di seguito dal prompt dei comandi per abilitarlo:  
   
  `sc config SQLBROWSER start= auto`  
@@ -205,7 +187,7 @@ Enable-SqlAlwaysOn -Path SQLSERVER:\SQL\Machine\Instance
 ### <a name="create-exceptions-in-windows-firewall"></a>Creazione di eccezioni in Windows Firewall  
  Per creare eccezioni per l'accesso di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in Windows Firewall, seguire i passaggi specificati in [Configurare Windows Firewall per consentire l'accesso a SQL Server](../../sql-server/install/configure-the-windows-firewall-to-allow-sql-server-access.md).  
   
-### <a name="enable-tcpip-on-the-instance-of-includessnoversionincludesssnoversion-mdmd"></a>Abilitare TCP/IP nell'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
+### <a name="enable-tcpip-on-an-instance-of-sql-server"></a>Abilitare TCP/IP in un'istanza di SQL Server
  Il protocollo TCP/IP può essere abilitato tramite Windows PowerShell per un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in Server Core. Eseguire la procedura seguente:  
   
 1.  Avviare Gestione attività nel computer in cui è in esecuzione Windows Server 2008 R2 Server Core SP1.  
@@ -227,17 +209,17 @@ $Tcp.Alter()
 $Tcp  
 ```  
   
-##  <a name="BKMK_Profiler"></a> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Profiler  
+##  <a name="sql-server-profiler"></a>SQL Server Profiler  
  In un computer remoto avviare [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] e selezionare Nuova traccia dal menu File. Tramite l'applicazione viene visualizzata la finestra di dialogo Connetti al server in cui è possibile specificare l'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , che risiede nel computer con Server Core, a cui si desidera effettuare la connessione. Per altre informazioni, vedere [Avviare SQL Server Profiler](../../tools/sql-server-profiler/start-sql-server-profiler.md).  
   
  Per altre informazioni sulle autorizzazioni richieste per eseguire [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)], vedere [Autorizzazioni necessarie per l'esecuzione di SQL Server Profiler](../../tools/sql-server-profiler/permissions-required-to-run-sql-server-profiler.md).  
   
  Per altri dettagli su [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)], vedere [SQL Server Profiler](../../tools/sql-server-profiler/sql-server-profiler.md).  
   
-##  <a name="BKMK_Auditing"></a> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Controllo  
+##  <a name="sql-server-auditing"></a>Controllo di SQL Server  
  Per definire un controllo, è possibile utilizzare [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)] in remoto. In seguito alla creazione e all'abilitazione del controllo, la destinazione riceverà le voci. Per altre informazioni sulla creazione e sulla gestione dei controlli di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], vedere [SQL Server Audit &#40;Database Engine&#41;](../../relational-databases/security/auditing/sql-server-audit-database-engine.md).  
   
-##  <a name="BKMK_CMD"></a> Utilità del prompt dei comandi  
+##  <a name="sql-servevr-command-prompt-utilities"></a>Utilità della riga di comando Servevr SQL  
  È possibile utilizzare le utilità del prompt dei comandi seguenti tramite cui si possono generare script di operazioni di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in un computer con Server Core. Nella tabella seguente è riportato un elenco delle utilità del prompt dei comandi fornite con [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] per Server Core:  
   
 |**Utilità**|**Descrizione**|**Posizione di installazione**|  
@@ -253,10 +235,10 @@ $Tcp
 |[Utilità sqlps](../../tools/sqlps-utility.md)|Consente di eseguire comandi e script di PowerShell, nonché di caricare e registrare il provider e i cmdlet di PowerShell per [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .|[!INCLUDE[ssInstallPathVar](../../includes/ssinstallpathvar-md.md)]Tools\Binn|  
 |[sqlservr](../../tools/sqlservr-application.md)|Consente di avviare e arrestare un'istanza di [!INCLUDE[ssDE](../../includes/ssde-md.md)] dal prompt dei comandi per la risoluzione dei problemi.|\<unità >: il file \Programmi\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\MSSQL12. MSSQLSERVER\MSSQL\Binn|  
   
-##  <a name="BKMK_troubleshoot"></a> Utilizzare gli strumenti di risoluzione dei problemi  
+##  <a name="use-troubleshooting-tools"></a>Utilizzare gli strumenti di risoluzione dei problemi  
  È possibile usare [SQLdiag Utility](../../tools/sqldiag-utility.md) per raccogliere i log e i file di dati da [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e altri tipi di server, nonché per monitorare i server in un intervallo di tempo oppure risolvere problemi specifici dei server. SQLdiag è stata creata per velocizzare e semplificare la raccolta delle informazioni di diagnostica necessarie per il Servizio Supporto Tecnico Clienti Microsoft.  
   
- È possibile avviare l'utilità nel prompt dei comandi dell'amministratore in Server Core, usando la sintassi specificata nell'argomento: [Sqldiag-utilità](../../tools/sqldiag-utility.md).  
+ È possibile avviare l'utilità nel prompt dei comandi dell'amministratore in Server Core, usando la sintassi specificata nell'argomento: [Utilità di SQLdiag](../../tools/sqldiag-utility.md).  
   
 ## <a name="see-also"></a>Vedere anche  
  [Installare SQL Server 2014 in Server Core](install-sql-server-on-server-core.md)   

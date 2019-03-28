@@ -18,12 +18,12 @@ ms.assetid: e58684d1-c394-48de-906e-da6ee91100c3
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 05adcc690b1fdb869f8de4d306e989e74d831cf8
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: adaa563fa7142375d357e50d86ad0e33a8ea62e7
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47659739"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58527253"
 ---
 # <a name="spdroplogin-transact-sql"></a>sp_droplogin (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -43,8 +43,7 @@ sp_droplogin [ @loginame = ] 'login'
 ```  
   
 ## <a name="arguments"></a>Argomenti  
- [ **@loginame =** ] **'***login***'**  
- Account di accesso da rimuovere. *account di accesso* viene **sysname**, non prevede alcun valore predefinito. *account di accesso* deve esistere nel [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+`[ @loginame = ] 'login'` È l'account di accesso da rimuovere. *account di accesso* viene **sysname**, non prevede alcun valore predefinito. *account di accesso* deve esistere nel [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 ## <a name="return-code-values"></a>Valori restituiti  
  0 (esito positivo) o 1 (esito negativo)  

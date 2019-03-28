@@ -10,12 +10,12 @@ ms.assetid: b0a248a4-4488-4cc8-89fc-46906a8c24a1
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 7d89fefdf575cdb7961df0ceae811184ca31fc51
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: b4d8fc3b59d3296a2996d37a190dc5c8e075744a
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52822535"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58530343"
 ---
 # <a name="table-and-row-size-in-memory-optimized-tables"></a>Dimensioni di tabelle e righe per le tabelle con ottimizzazione per la memoria
   Una tabella ottimizzata per la memoria è costituita da una raccolta di righe e di indici contenenti i puntatori alle righe. In una tabella ottimizzata per la memoria, le righe non possono essere più lunghe di 8.060 byte. Comprendere le dimensioni di una tabella ottimizzata per la memoria è importante per capire se il computer dispone di una quantità di memoria sufficiente.  
@@ -117,14 +117,14 @@ Tabella con ottimizzazione per la memoria, costituita da indici e righe.
   
  Per un'ora maggiore di 200, la tabella contiene le righe seguenti:  
   
-|nome|Città|  
+|Nome|Città|  
 |----------|----------|  
 |John|Pechino|  
 |Jane|Praga|  
   
  Tuttavia, le eventuali transazioni attive con un'ora di inizio 100 rileveranno la seguente versione della tabella:  
   
-|nome|Città|  
+|Nome|Città|  
 |----------|----------|  
 |John|Parigi|  
 |Jane|Praga|  
@@ -135,7 +135,7 @@ Tabella con ottimizzazione per la memoria, costituita da indici e righe.
   
  Si consideri una tabella Orders con la definizione seguente:  
   
-```tsql  
+```sql  
 CREATE TABLE dbo.Orders (  
      OrderID int NOT NULL   
            PRIMARY KEY NONCLUSTERED,  
@@ -217,7 +217,7 @@ GO
   
  L'effettiva memoria allocata e utilizzata dalla tabella e dai relativi indici può essere ottenuta tramite la query seguente:  
   
-```tsql  
+```sql  
 select * from sys.dm_db_xtp_table_memory_stats  
 where object_id = object_id('dbo.Orders')  
 ```  

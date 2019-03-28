@@ -18,12 +18,12 @@ ms.assetid: d0769566-8f5c-4c8a-84d3-ee17ea6e0cb4
 author: VanMSFT
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 496515aaf8abc1e9f5eec313655199e97b5a5bcb
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 3a5e3db87aedd9a13ac7af90284362bb82ab3a13
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47658959"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58526703"
 ---
 # <a name="spsyspolicyupdatepolicycategorysubscription-transact-sql"></a>sp_syspolicy_update_policy_category_subscription (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -43,19 +43,15 @@ sp_syspolicy_update_policy_category_subscription [ @policy_category_subscription
 ```  
   
 ## <a name="arguments"></a>Argomenti  
- [  **@policy_category_subscription_id=** ] *policy_category_subscription_id*  
- Identificatore della sottoscrizione di categoria di criteri da aggiornare. *policy_category_subscription_id* viene **int**ed è obbligatorio.  
+`[ @policy_category_subscription_id = ] policy_category_subscription_id` È l'identificatore per la sottoscrizione di categoria di criteri che si desidera aggiornare. *policy_category_subscription_id* viene **int**ed è obbligatorio.  
   
- [  **@target_type=** ] **'** target_type **'**  
- Tipo di destinazione della sottoscrizione di categoria. *target_type* viene **sysname**, con un valore predefinito è NULL.  
+`[ @target_type = ] 'target_type'` È il tipo di destinazione della sottoscrizione di categoria. *target_type* viene **sysname**, con un valore predefinito è NULL.  
   
  Se si specifica *target_type*, il valore deve essere impostato su 'DATABASE'.  
   
- [  **@target_object=** ] **'** target_object **'**  
- È il nome del database in cui viene eseguita la sottoscrizione alla categoria di criteri. *target_object* viene **sysname**, con un valore predefinito è NULL.  
+`[ @target_object = ] 'target_object'` È il nome del database in cui viene eseguita la sottoscrizione alla categoria di criteri. *target_object* viene **sysname**, con un valore predefinito è NULL.  
   
- [  **@policy_category=** ] **'** policy_category **'**  
- Nome della categoria di criteri a cui si esegue la sottoscrizione per il database. *policy_category* viene **sysname**, con un valore predefinito è NULL.  
+`[ @policy_category = ] 'policy_category'` È il nome della categoria di criteri che si desidera che il database da sottoscrivere. *policy_category* viene **sysname**, con un valore predefinito è NULL.  
   
 ## <a name="return-code-values"></a>Valori restituiti  
  **0** (esito positivo) o **1** (errore)  
@@ -77,7 +73,7 @@ ON a.policy_category_id = b.policy_category_id;
  È necessaria l'appartenenza al ruolo predefinito del database PolicyAdministratorRole.  
   
 > [!IMPORTANT]  
->  Possibile elevazione di credenziali: gli utenti nel ruolo PolicyAdministratorRole possono creare trigger server e pianificare le esecuzioni di criteri che influiscono sul funzionamento dell'istanza del [!INCLUDE[ssDE](../../includes/ssde-md.md)]. Gli utenti con il ruolo PolicyAdministratorRole possono ad esempio creare criteri che impediscono la creazione della maggior parte degli oggetti nel [!INCLUDE[ssDE](../../includes/ssde-md.md)]. A causa di questa possibile elevazione di credenziali, il ruolo PolicyAdministratorRole deve essere concesso solo a utenti ritenuti attendibili per il controllo della configurazione del [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
+>  Possibile elevazione di credenziali: Gli utenti nel ruolo PolicyAdministratorRole possono creare trigger server e pianificare le esecuzioni di criteri che possono influenzare l'operazione dell'istanza del [!INCLUDE[ssDE](../../includes/ssde-md.md)]. Gli utenti con il ruolo PolicyAdministratorRole possono ad esempio creare criteri che impediscono la creazione della maggior parte degli oggetti nel [!INCLUDE[ssDE](../../includes/ssde-md.md)]. A causa di questa possibile elevazione di credenziali, il ruolo PolicyAdministratorRole deve essere concesso solo a utenti ritenuti attendibili per il controllo della configurazione del [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
 ## <a name="examples"></a>Esempi  
  Nell'esempio seguente viene aggiornata una sottoscrizione di categoria di criteri esistente, al fine di effettuare la sottoscrizione della categoria di criteri 'Finance' per il database AdventureWorks2012.  

@@ -16,12 +16,12 @@ ms.assetid: a0d3a567-7d8b-4cfe-a505-d197b9a51f70
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 7a30880a6fd4acc62f13954c18f0ca8883f90754
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: f3d98314bf142340d97d218b93670a14c9f56e3a
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52537375"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58530763"
 ---
 # <a name="back-up-files-and-filegroups-sql-server"></a>Backup di file e filegroup (SQL Server)
   In questo argomento viene descritto come eseguire il backup di file e filegroup in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] utilizzando [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../includes/tsql-md.md)]o PowerShell. Quando a causa delle dimensioni del database e dei requisiti relativi alle prestazioni non è consigliabile eseguire un backup completo del database, è possibile creare invece un backup del file. Un *backup del file* contiene tutti i dati inclusi in uno o più file o filegroup. Per altre informazioni sul backup dei file, vedere [Backup completi del file &#40;SQL Server&#41;](full-file-backups-sql-server.md) e [Backup differenziali &#40;SQL Server&#41;](differential-backups-sql-server.md).  
@@ -60,7 +60,7 @@ ms.locfileid: "52537375"
   
 ###  <a name="Security"></a> Sicurezza  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> Autorizzazioni  
  Le autorizzazioni BACKUP DATABASE e BACKUP LOG vengono assegnate per impostazione predefinita ai membri del ruolo predefinito del server **sysadmin** e dei ruoli predefiniti del database **db_owner** e **db_backupoperator** .  
   
  Eventuali problemi correlati alla proprietà e alle autorizzazioni sul file fisico del dispositivo di backup possono interferire con l'operazione di backup. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sia possibile leggere e scrivere sul dispositivo e che l'account utilizzato per eseguire il servizio [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] disponga delle autorizzazioni di scrittura. Le autorizzazioni di accesso ai file, tuttavia, non vengono controllate dalla stored procedure [sp_addumpdevice](/sql/relational-databases/system-stored-procedures/sp-addumpdevice-transact-sql)che aggiunge una voce per un dispositivo di backup nelle tabelle di sistema. Di conseguenza, i problemi relativi all'accesso e alla proprietà del file fisico del dispositivo di backup potrebbero emergere solo in fase di accesso alla risorsa fisica durante un tentativo di backup o ripristino.  
@@ -178,7 +178,7 @@ ms.locfileid: "52537375"
 #### <a name="a-creating-a-file-backup-of-two-files"></a>A. Creazione di un backup del file per due file  
  Nell'esempio seguente viene creato un backup differenziale del file solo per il file `SGrp1Fi2` del filegroup `SalesGroup1` e per il file `SGrp2Fi2` del filegroup `SalesGroup2` .  
   
-```tsql  
+```sql  
 --Backup the files in the SalesGroup1 secondary filegroup.  
 BACKUP DATABASE Sales  
    FILE = 'SGrp1Fi2',   
@@ -187,10 +187,10 @@ BACKUP DATABASE Sales
 GO  
 ```  
   
-#### <a name="b-creating-a-full-file-backup-of-the-secondary-filegroups"></a>b. Creazione di un backup completo dei filegroup secondari  
+#### <a name="b-creating-a-full-file-backup-of-the-secondary-filegroups"></a>B. Creazione di un backup completo dei filegroup secondari  
  Nell'esempio seguente viene creato un backup completo di ogni file presente in entrambi i filegroup secondari.  
   
-```tsql  
+```sql  
 --Back up the files in SalesGroup1.  
 BACKUP DATABASE Sales  
    FILEGROUP = 'SalesGroup1',  
@@ -202,7 +202,7 @@ GO
 #### <a name="c-creating-a-differential-file-backup-of-the-secondary-filegroups"></a>C. Creazione di un backup differenziale dei filegroup secondari  
  Nell'esempio seguente viene creato un backup differenziale di ogni file presente in entrambi i filegroup secondari.  
   
-```tsql  
+```sql  
 --Back up the files in SalesGroup1.  
 BACKUP DATABASE Sales  
    FILEGROUP = 'SalesGroup1',  

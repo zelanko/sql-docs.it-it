@@ -16,12 +16,12 @@ ms.assetid: 606c40aa-2593-43af-9762-0f260bbb51f2
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: df214182e992bf9616ddcb77a4f305ea4f47a4c4
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: df023ebc9e464026f3cf1ef7dbedced45ba78eca
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52818833"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58530563"
 ---
 # <a name="spgetsubscriptiondtspackagename-transact-sql"></a>sp_getsubscriptiondtspackagename (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -39,11 +39,9 @@ sp_getsubscriptiondtspackagename [ @publication = ] 'publication'
 ```  
   
 ## <a name="arguments"></a>Argomenti  
- [ **@publication**=] **'***pubblicazione***'**  
- Nome della pubblicazione. **«***publication***'** viene **sysname**, non prevede alcun valore predefinito.  
+`[ @publication = ] 'publication'` È il nome della pubblicazione. **«***publication***'** viene **sysname**, non prevede alcun valore predefinito.  
   
- [  **@subscriber=**] **'***sottoscrittore***'**  
- Nome del Sottoscrittore. *Sottoscrittore* is sysname con valore predefinito è NULL.  
+`[ @subscriber = ] 'subscriber'` È il nome del sottoscrittore. *Sottoscrittore* is sysname con valore predefinito è NULL.  
   
 ## <a name="return-code-values"></a>Valori restituiti  
  **0** (esito positivo) o **1** (errore)  

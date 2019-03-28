@@ -15,12 +15,12 @@ ms.assetid: 94a8d361-e897-4d6d-9a8f-1bb652e7a850
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: be3f9c61d3c035959def4a46f91eff605e475569
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: c9d0deb3567daa64afb46c96a4e93c9da9c0972a
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52808803"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58528253"
 ---
 # <a name="manage-change-tracking-sql-server"></a>Gestire il rilevamento delle modifiche (SQL Server)
   In questo argomento viene descritto come gestire il rilevamento delle modifiche. Nell'argomento viene descritto inoltre come configurare la sicurezza e determinare gli effetti sull'archiviazione e sulle prestazioni quando si utilizza il rilevamento delle modifiche.  
@@ -96,7 +96,7 @@ ms.locfileid: "52808803"
   
  Come per le altre tabelle interne, è possibile determinare lo spazio usato per le tabelle di rilevamento delle modifiche usando la stored procedure [sp_spaceused](/sql/relational-databases/system-stored-procedures/sp-spaceused-transact-sql) . I nomi delle tabelle interne possono essere ottenuti usando la vista del catalogo [sys.internal_tables](/sql/relational-databases/system-catalog-views/sys-internal-tables-transact-sql) , come illustrato nell'esempio seguente.  
   
-```tsql  
+```sql  
 sp_spaceused 'sys.change_tracking_309576141'  
 sp_spaceused 'sys.syscommittab'  
 ```  

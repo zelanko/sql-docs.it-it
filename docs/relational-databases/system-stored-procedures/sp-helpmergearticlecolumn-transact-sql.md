@@ -16,12 +16,12 @@ ms.assetid: 651c017b-9e9a-48f2-a0bd-6fc896eab334
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: f4829928bbf1f8e13483de69a749e748bd9dd095
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 2221762934011c2268a40d0162bde7e62dbcf256
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52779063"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58528223"
 ---
 # <a name="sphelpmergearticlecolumn-transact-sql"></a>sp_helpmergearticlecolumn (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -39,11 +39,9 @@ sp_helpmergearticlecolumn [ @publication = ] 'publication' ]
 ```  
   
 ## <a name="arguments"></a>Argomenti  
- [  **@publication=**] **'***pubblicazione***'**  
- È il nome della pubblicazione. *publication* viene **sysname**, non prevede alcun valore predefinito.  
+`[ @publication = ] 'publication'` È il nome della pubblicazione. *publication* viene **sysname**, non prevede alcun valore predefinito.  
   
- [  **@article=**] **'***articolo***'**  
- È il nome di una tabella o vista che rappresenta l'articolo per recuperare le informazioni su. *articolo* viene **sysname**, non prevede alcun valore predefinito.  
+`[ @article = ] 'article'` È il nome di una tabella o vista che rappresenta l'articolo per recuperare le informazioni su. *articolo* viene **sysname**, non prevede alcun valore predefinito.  
   
 ## <a name="result-sets"></a>Set di risultati  
   
@@ -51,7 +49,7 @@ sp_helpmergearticlecolumn [ @publication = ] 'publication' ]
 |-----------------|---------------|-----------------|  
 |**column_id**|**sysname**|Identificatore della colonna.|  
 |**column_name**|**sysname**|Nome della colonna di una tabella o vista.|  
-|**Pubblicato**|**bit**|Specifica se pubblicare il nome della colonna.<br /><br /> **1** specifica che la colonna viene pubblicata.<br /><br /> **0** specifica che non è pubblicata.|  
+|**published**|**bit**|Specifica se pubblicare il nome della colonna.<br /><br /> **1** specifica che la colonna viene pubblicata.<br /><br /> **0** specifica che non è pubblicata.|  
   
 ## <a name="return-code-values"></a>Valori restituiti  
  **0** (esito positivo) o **1** (errore)  

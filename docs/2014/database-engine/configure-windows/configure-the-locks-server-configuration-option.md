@@ -12,12 +12,12 @@ ms.assetid: b0cf0f86-7652-4574-a9fb-908e10d03973
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 7ede6cfa244f703143ae0ad265982c014cf5d7a8
-ms.sourcegitcommit: 04dd0620202287869b23cc2fde998a18d3200c66
+ms.openlocfilehash: 22f47a80a73efc8d462ef8f26f2e6b0fb5b3f3c7
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "52639982"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58530548"
 ---
 # <a name="configure-the-locks-server-configuration-option"></a>Configurare l'opzione di configurazione del server locks
   In questo argomento si illustra come configurare l'opzione di configurazione del server **locks** in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] utilizzando [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)]. Con l'opzione **locks** è possibile impostare il numero massimo di blocchi disponibili e pertanto limitare la quantità di memoria utilizzata per i blocchi stessi dal [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] . L'impostazione predefinita è 0, che consente al [!INCLUDE[ssDE](../../includes/ssde-md.md)] di allocare e deallocare le strutture di blocco in modo dinamico, in base alle variazioni dei requisiti di sistema.  
@@ -80,9 +80,9 @@ ms.locfileid: "52639982"
   
 2.  Dalla barra Standard fare clic su **Nuova query**.  
   
-3.  Copiare e incollare l'esempio seguente nella finestra delle query e fare clic su **Esegui**. Questo esempio mostra come usare [sp_configure](/sql/relational-databases/system-stored-procedures/sp-configure-transact-sql) per impostare il valore dell'opzione `locks` su `20000`per poter stabilire il numero di blocchi disponibili a tutti gli utenti.  
+3.  Copiare e incollare l'esempio seguente nella finestra Query, quindi fare clic su **Esegui**. Questo esempio mostra come usare [sp_configure](/sql/relational-databases/system-stored-procedures/sp-configure-transact-sql) per impostare il valore dell'opzione `locks` su `20000`per poter stabilire il numero di blocchi disponibili a tutti gli utenti.  
   
-```tsql  
+```sql  
 Use AdventureWorks2012 ;  
 GO  
 sp_configure 'show advanced options', 1;  

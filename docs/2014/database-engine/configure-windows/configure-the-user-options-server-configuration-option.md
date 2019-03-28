@@ -14,12 +14,12 @@ ms.assetid: cfed8f86-6bcf-4b90-88eb-9656e22d5dc5
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 88cc979d7888a5844731c63ec96898572d31acc8
-ms.sourcegitcommit: 04dd0620202287869b23cc2fde998a18d3200c66
+ms.openlocfilehash: b0588bbc8c21c9946ac72a2db92c593e48973dfa
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "52641479"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58528363"
 ---
 # <a name="configure-the-user-options-server-configuration-option"></a>Configurare l'opzione di configurazione del server user options
   In questo argomento si illustra come configurare l'opzione di configurazione del server **user options** in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] utilizzando [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)]. L'opzione **user options** consente di specificare impostazioni globali predefinite per tutti gli utenti. Viene creato un elenco di opzioni predefinite per l'elaborazione delle query, che rimane valido per tutta la durata della sessione di lavoro dell'utente. L'opzione **user options** consente di modificare i valori predefiniti delle opzioni SET, se le impostazioni predefinite del server non risultano appropriate.  
@@ -93,9 +93,9 @@ ms.locfileid: "52641479"
   
 2.  Dalla barra Standard fare clic su **Nuova query**.  
   
-3.  Copiare e incollare l'esempio seguente nella finestra delle query e fare clic su **Esegui**. In questo esempio viene illustrato come utilizzare [sp_configure](/sql/relational-databases/system-stored-procedures/sp-configure-transact-sql) per configurare `user options` in modo da modificare l'impostazione server ANSI_WARNINGS.  
+3.  Copiare e incollare l'esempio seguente nella finestra Query, quindi fare clic su **Esegui**. In questo esempio viene illustrato come utilizzare [sp_configure](/sql/relational-databases/system-stored-procedures/sp-configure-transact-sql) per configurare `user options` in modo da modificare l'impostazione server ANSI_WARNINGS.  
   
-```tsql  
+```sql  
 USE AdventureWorks2012 ;  
 GO  
 EXEC sp_configure 'user options', 8 ;  

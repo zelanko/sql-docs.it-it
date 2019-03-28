@@ -16,12 +16,12 @@ ms.assetid: 6a9dbc1a-e1e1-40c4-97cb-8164a2288f76
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 51b5b2aa6c6f815f1b2f5f37c9093698955ffd3b
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: 0d009b05fea2a2c587f97dc4b2416588932ad0bc
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54136111"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58530363"
 ---
 # <a name="spshowrowreplicainfo-transact-sql"></a>sp_showrowreplicainfo (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -41,17 +41,13 @@ sp_showrowreplicainfo [ [ @ownername = ] 'ownername' ]
 ```  
   
 ## <a name="arguments"></a>Argomenti  
- [ **@ownername**=] **'***ownername***'**  
- Nome del proprietario della tabella. *ownername* viene **sysname**, con un valore predefinito è NULL. Questo parametro risulta utile per differenziare le tabelle quando un database contiene più tabelle aventi lo stesso nome ma appartenenti a proprietari diversi.  
+`[ @ownername = ] 'ownername'` È il nome del proprietario della tabella. *ownername* viene **sysname**, con un valore predefinito è NULL. Questo parametro risulta utile per differenziare le tabelle quando un database contiene più tabelle aventi lo stesso nome ma appartenenti a proprietari diversi.  
   
- [  **@tablename =**] **'***tablename***'**  
- Nome della tabella che include la riga di cui vengono restituite informazioni. *TableName* viene **sysname**, con un valore predefinito è NULL.  
+`[ @tablename = ] 'tablename'` È il nome della tabella che contiene la riga per il quale vengono restituite le informazioni. *TableName* viene **sysname**, con un valore predefinito è NULL.  
   
- [  **@rowguid =**] *rowguid*  
- Identificatore univoco della riga. *ROWGUID* viene **uniqueidentifier**, non prevede alcun valore predefinito.  
+`[ @rowguid = ] rowguid` È l'identificatore univoco della riga. *ROWGUID* viene **uniqueidentifier**, non prevede alcun valore predefinito.  
   
- [ **@show**=] **'***Mostra***'**  
- Determina la quantità di informazioni da restituire nel set di risultati. *mostrare* viene **nvarchar(20)** con valore predefinito è BOTH. Se **riga**, viene restituiti solo le informazioni sulla versione di riga. Se **colonne**, viene restituiti solo le informazioni sulla versione di colonna. Se **entrambi**, di righe e vengono restituite informazioni di colonna.  
+`[ @show = ] 'show'` Determina la quantità di informazioni da restituire nel set di risultati. *mostrare* viene **nvarchar(20)** con valore predefinito è BOTH. Se **riga**, viene restituiti solo le informazioni sulla versione di riga. Se **colonne**, viene restituiti solo le informazioni sulla versione di colonna. Se **entrambi**, di righe e vengono restituite informazioni di colonna.  
   
 ## <a name="result-sets-for-row-information"></a>Set di risultati per informazioni sulla riga  
   
@@ -63,7 +59,7 @@ sp_showrowreplicainfo [ [ @ownername = ] 'ownername' ]
 |**version**|**int**|Versione della voce.|  
 |**current_state**|**nvarchar(9)**|Restituisce informazioni sullo stato corrente della riga.<br /><br /> **y** -i dati di riga rappresentano lo stato corrente della riga.<br /><br /> **n** -dati di riga non rappresentano lo stato corrente della riga.<br /><br /> **\<n/a >** : non applicabile.<br /><br /> **\<sconosciuto >** -non è possibile determinare lo stato corrente.|  
 |**rowversion_table**|**nchar(17)**|Indica se le versioni delle righe vengono archiviate nel [MSmerge_contents](../../relational-databases/system-tables/msmerge-contents-transact-sql.md) tabella o nella [MSmerge_tombstone](../../relational-databases/system-tables/msmerge-tombstone-transact-sql.md) tabella.|  
-|**Commento**|**nvarchar(255)**|Informazioni aggiuntive relative alla voce sulla versione di riga. Questo campo è in genere vuoto.|  
+|**comment**|**nvarchar(255)**|Informazioni aggiuntive relative alla voce sulla versione di riga. Questo campo è in genere vuoto.|  
   
 ## <a name="result-sets-for-column-information"></a>Set di risultati per informazioni sulla colonna  
   
@@ -74,7 +70,7 @@ sp_showrowreplicainfo [ [ @ownername = ] 'ownername' ]
 |**db_nickname**|**binary(6)**|Nome alternativo del database in cui è stata immessa la voce.|  
 |**version**|**int**|Versione della voce.|  
 |**colname**|**sysname**|Nome della colonna di articolo rappresentata dalla voce sulla versione di colonna.|  
-|**Commento**|**nvarchar(255)**|Informazioni aggiuntive relative alla voce sulla versione di colonna. Questo campo è in genere vuoto.|  
+|**comment**|**nvarchar(255)**|Informazioni aggiuntive relative alla voce sulla versione di colonna. Questo campo è in genere vuoto.|  
   
 ## <a name="result-set-for-both"></a>Set di risultati per informazioni su riga e colonna  
  Se il valore **entrambe** scelto per *mostrano*, viene restituita sia la riga e colonna set di risultati.  

@@ -12,12 +12,12 @@ ms.assetid: 3056cf64-621d-4996-9162-3913f6bc6d5b
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 6958283a8988fd005a491a80f626c1a3d1ef77ba
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: e55268f499069fb6714aa07944997e1e92e7fc23
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54124348"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58528283"
 ---
 # <a name="configure-the-max-text-repl-size-server-configuration-option"></a>Configurare l'opzione di configurazione del server max text repl size
   In questo argomento si illustra come configurare l'opzione di configurazione del server **max text repl size** in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] utilizzando [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)]. Il **testo repl dimensione massima** opzione specifica la dimensione massima (in byte) della `text`, `ntext`, `varchar(max)`, `nvarchar(max)`, `varbinary(max)`, `xml`, e `image` dati che possono essere aggiunto a una colonna replicata o una colonna acquisita in un'unica istruzione INSERT, UPDATE, WRITETEXT o UPDATETEXT. Il valore predefinito è 65536 byte. Il valore -1 indica che non esiste alcun limite di dimensioni, tranne il limite imposto dal tipo di dati.  
@@ -36,7 +36,7 @@ ms.locfileid: "54124348"
   
      [Transact-SQL](#TsqlProcedure)  
   
--   **Completamento:**  [Dopo aver configurato l'opzione max text repl size](#FollowUp)  
+-   **Completamento:**  [Dopo la configurazione dell'opzione max text repl size](#FollowUp)  
   
 ##  <a name="BeforeYouBegin"></a> Prima di iniziare  
   
@@ -67,9 +67,9 @@ ms.locfileid: "54124348"
   
 2.  Dalla barra Standard fare clic su **Nuova query**.  
   
-3.  Copiare e incollare l'esempio seguente nella finestra delle query e fare clic su **Esegui**. In questo esempio si illustra come utilizzare [sp_configure](/sql/relational-databases/system-stored-procedures/sp-configure-transact-sql) per configurare l'opzione `max text repl size` su `-1`.  
+3.  Copiare e incollare l'esempio seguente nella finestra Query, quindi fare clic su **Esegui**. In questo esempio si illustra come utilizzare [sp_configure](/sql/relational-databases/system-stored-procedures/sp-configure-transact-sql) per configurare l'opzione `max text repl size` su `-1`.  
   
-```tsql  
+```sql  
 USE AdventureWorks2012 ;  
 GO  
 EXEC sp_configure 'show advanced options', 1 ;   
@@ -84,7 +84,7 @@ GO
   
  Per altre informazioni, vedere [Opzioni di configurazione del server &#40;SQL Server&#41;](server-configuration-options-sql-server.md)sia installato il servizio WMI.  
   
-##  <a name="FollowUp"></a> Completamento: Dopo aver configurato l'opzione max text repl size  
+##  <a name="FollowUp"></a> Completamento: Dopo la configurazione dell'opzione max text repl size  
  L'impostazione diventa effettiva immediatamente senza dover riavviare il server.  
   
 ## <a name="see-also"></a>Vedere anche  
