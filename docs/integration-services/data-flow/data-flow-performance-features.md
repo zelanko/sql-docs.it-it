@@ -21,15 +21,15 @@ helpviewer_keywords:
 - sorting data [Integration Services]
 - aggregations [Integration Services]
 ms.assetid: c4bbefa6-172b-4547-99a1-a0b38e3e2b05
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 8b172eb0635c54bf6b9e0289ac220676eb08fd9c
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: b20f9d2d48452d95ff0c219f7c291a2a5b1cd887
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52411988"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58275495"
 ---
 # <a name="data-flow-performance-features"></a>Funzionalità delle prestazioni del flusso di dati
   In questo argomento sono inclusi alcuni suggerimenti sulla progettazione di pacchetti di [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] per evitare problemi di prestazioni comuni. Sono inoltre fornite informazioni sugli strumenti e sulle funzionalità che è possibile usare per risolvere i problemi relativi alle prestazioni dei pacchetti.  
@@ -77,7 +77,7 @@ ms.locfileid: "52411988"
  Evitare di aumentare le dimensioni del buffer fino al punto in cui inizia a verificarsi il paging su disco. Il paging su disco influisce negativamente sulle prestazioni più di quanto non faccia la mancata ottimizzazione delle dimensioni del buffer. Per determinare il verificarsi o meno del paging, monitorare il contatore delle prestazioni "Buffer con spooling" nello snap-in Prestazioni di [!INCLUDE[msCoName](../../includes/msconame-md.md)] Management Console (MMC).  
   
 ### <a name="configure-the-package-for-parallel-execution"></a>Configurare il pacchetto per l'esecuzione parallela  
- L'esecuzione parallela migliora le prestazioni nei computer dotati di più processori fisici o logici. Per supportare l'esecuzione parallela di diverse attività nel pacchetto, [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] usa due proprietà: **MaxConcurrentExecutables** e **EngineThreads**.  
+ L'esecuzione parallela migliora le prestazioni nei computer dotati di più processori fisici o logici. Per supportare l'esecuzione parallela di attività diverse nel pacchetto, [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] usa due proprietà: **MaxConcurrentExecutables** e **EngineThreads**.  
   
 #### <a name="the-maxconcurrentexcecutables-property"></a>Proprietà MaxConcurrentExcecutables  
  La proprietà **MaxConcurrentExecutables** è una proprietà del pacchetto stesso. Questa proprietà definisce il numero massimo di attività che è possibile eseguire simultaneamente. Il valore predefinito è -1, a indicare il numero di processori fisici o logici più 2.  
@@ -148,7 +148,7 @@ ms.locfileid: "52411988"
   
  I componenti più lenti nella trasformazione Dimensione a modifica lenta sono in genere le trasformazioni Comando OLE DB che eseguono istruzioni UPDATE su una singola riga per volta. Il modo più efficace per migliorare le prestazioni della trasformazione Dimensione a modifica lenta consiste pertanto nel sostituire le trasformazioni Comando OLE DB. È possibile sostituire tali trasformazioni con componenti di destinazione che salvano tutte le righe da aggiornare in una tabella di staging. È quindi possibile aggiungere un'attività Esegui SQL per l'esecuzione di un singola istruzione UPDATE di Transact-SQL basata su set su tutte le righe contemporaneamente.  
   
- Gli utenti avanzati possono progettare un flusso di dati personalizzato per l'elaborazione delle dimensioni a modifica lenta ottimizzata per dimensioni estese. Per una descrizione e un esempio di questo approccio, vedere la sezione relativa allo scenario con dimensione univoca nel white paper [Project REAL: Business Intelligence ETL Design Practices](https://go.microsoft.com/fwlink/?LinkId=96602).  
+ Gli utenti avanzati possono progettare un flusso di dati personalizzato per l'elaborazione delle dimensioni a modifica lenta ottimizzata per dimensioni estese. Per una descrizione e un esempio di questo approccio, vedere la sezione relativa allo scenario con dimensione univoca nel white paper [Project REAL: Business Intelligence ETL Design Practices](https://go.microsoft.com/fwlink/?LinkId=96602) (Project REAL: Indicazioni di progettazione ETL per Business Intelligence).  
   
 ### <a name="destinations"></a>Destinazioni  
  Per ottenere prestazioni migliori con le destinazioni, valutare l'opportunità di usare una destinazione [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e di testarne le prestazioni.  
@@ -171,11 +171,11 @@ ms.locfileid: "52411988"
 ## <a name="related-content"></a>Contenuto correlato  
  **Articoli e post di Blog**  
   
--   Articolo tecnico [SQL Server 2005 Integration Services: una strategia per ottimizzare le prestazioni](https://go.microsoft.com/fwlink/?LinkId=98899), su technet.microsoft.com  
+-   Articolo tecnico [SQL Server 2005 Integration Services: A Strategy for Performance](https://go.microsoft.com/fwlink/?LinkId=98899) (SQL Server 2005 Integration Services: una strategia per le prestazioni) in technet.microsoft.com  
   
--   Articolo tecnico relativo alle [tecniche di ottimizzazione delle prestazione in Integration Services](https://go.microsoft.com/fwlink/?LinkId=98900), disponibile su technet.microsoft.com  
+-   Articolo tecnico su [Integration Services: Performance Tuning Techniques](https://go.microsoft.com/fwlink/?LinkId=98900) (Integration Services: tecniche per l'ottimizzazione delle prestazioni) in technet.microsoft.com  
   
--   Articolo tecnico sull'[aumento della velocità effettiva delle pipeline suddividendo le trasformazioni sincrone in più attività](https://sqlcat.com/technicalnotes/archive/2010/08/18/increasing-throughput-of-pipelines-by-splitting-synchronous-transformations-into-multiple-tasks.aspx) su sqlcat.com  
+-   Articolo tecnico sull' [aumento della velocità effettiva delle pipeline suddividendo le trasformazioni sincrone in più attività](https://sqlcat.com/technicalnotes/archive/2010/08/18/increasing-throughput-of-pipelines-by-splitting-synchronous-transformations-into-multiple-tasks.aspx)su sqlcat.com  
   
 -   Articolo tecnico relativo alla [guida alle prestazioni del caricamento dati](https://go.microsoft.com/fwlink/?LinkId=220816)sul sito msdn.microsoft.com  
   
@@ -191,13 +191,13 @@ ms.locfileid: "52411988"
   
 -   Serie di video sulla [progettazione e il perfezionamento delle prestazioni dei pacchetti SSIS nell'organizzazione (Serie di video su SQL)](https://go.microsoft.com/fwlink/?LinkId=400878)  
   
--   Video sull'[ottimizzazione del flusso di dati del pacchetto SSIS nell'organizzazione (video di SQL Server)](https://technet.microsoft.com/sqlserver/ff686901.aspx) su technet.microsoft.com  
+-   Video sull' [ottimizzazione del flusso di dati del pacchetto SSIS nell'organizzazione (video di SQL Server)](https://technet.microsoft.com/sqlserver/ff686901.aspx), su technet.microsoft.com  
   
 -   Video sulle [informazioni sui buffer del flusso di dati SSIS (video di SQL Server)](https://technet.microsoft.com/sqlserver/ff686905.aspx), su technet.microsoft.com  
   
 -   Video, [Modelli di progettazione per prestazioni del servizio di integrazione di Microsoft SQL Server](https://go.microsoft.com/fwlink/?LinkID=233698&clcid=0x409)su channel9.msdn.com.  
   
--   Presentazione relativa all'[utilizzo dei miglioramenti al motore del flusso di dati di SQL Server 2008 SSIS da parte di Microsoft IT](https://go.microsoft.com/fwlink/?LinkId=217660) su sqlcat.com.  
+-   Presentazione relativa all' [utilizzo dei miglioramenti al motore del flusso di dati di SQL Server 2008 SSIS da parte di Microsoft IT](https://go.microsoft.com/fwlink/?LinkId=217660), su sqlcat.com.  
   
 -   Video relativo al [server di distribuzione di dati bilanciati](https://go.microsoft.com/fwlink/?LinkID=226278&clcid=0x409)sul sito technet.microsoft.com.  
   

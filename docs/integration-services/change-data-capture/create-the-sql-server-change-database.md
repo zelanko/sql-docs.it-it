@@ -10,15 +10,15 @@ ms.topic: conceptual
 f1_keywords:
 - oraIns
 ms.assetid: 4f79c24a-e99a-4a06-8637-51eeec406259
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 32a56380f94cb03c4c871855edc56629f6334d42
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b0281dfb4471fd28eb08c0900f2a087b731139d2
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47651599"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58280700"
 ---
 # <a name="create-the-sql-server-change-database"></a>Creare il database delle modifiche di SQL Server
   Quando si avvia la New Instance Wizard, viene visualizzata la pagina Create CDC Database. Utilizzare la pagina Create CDC Database per fornire informazioni sulla nuova istanza di CDC e creare un nuovo database delle modifiche.  
@@ -36,16 +36,16 @@ ms.locfileid: "47651599"
  **Oracle CDC Instance**  
  Specificare le informazioni seguenti sull'istanza di CDC che si desidera creare.  
   
--   **Name**: digitare un nome per il nuovo servizio. Sarà anche il nome del nuovo database delle modifiche.  
+-   **Nome**: digitare un nome per il nuovo servizio. Sarà anche il nome del nuovo database delle modifiche.  
   
--   **Description**: digitare una descrizione per la nuova istanza che consenta di identificarla. Operazione facoltativa.  
+-   **Descrizione**: digitare una descrizione per la nuova istanza che consenta di identificarla. Operazione facoltativa.  
   
  **SQL Server Change Database**  
  Questa sezione viene utilizzata per creare il database.  
   
-1.  **Change Database**: nome del nuovo database delle modifiche. Il nome del database equivale al nome specificato per l'istanza. In questo campo di sola lettura viene visualizzato il percorso completo del database.  
+1.  **Modifica database**: nome del nuovo database. Il nome del database equivale al nome specificato per l'istanza. In questo campo di sola lettura viene visualizzato il percorso completo del database.  
   
-2.  **Create Database**: fare clic su **Create Database** per creare il database.  
+2.  **Crea database**: fare clic su **Crea database** per creare il database.  
   
      Per creare il database, l'account di accesso deve disporre del ruolo del server `sysasmin` . Per ulteriori informazioni, vedere la nota sulla sicurezza.  
   

@@ -11,15 +11,15 @@ helpviewer_keywords:
 - <= (less than or equal to operator)
 - less than or equal to operator (<=)
 ms.assetid: 946c5630-dccf-4dae-9cfd-6ea823641ab2
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 514d9e976fc74d99aea555cc681f1dfc1fab4016
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 54e4796f4a4c97dad255dd2e047f184fb8b0b879
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47847839"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58279295"
 ---
 # <a name="lt-less-than-or-equal-to-ssis-expression"></a>&lt;= (minore o uguale a) (espressione SSIS)
   Viene eseguito un confronto per determinare se la prima espressione è minore o uguale alla seconda. L'analizzatore di espressioni converte automaticamente numerosi tipi di dati prima di eseguire il confronto.  

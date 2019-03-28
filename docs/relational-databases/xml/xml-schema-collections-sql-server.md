@@ -1,7 +1,7 @@
 ---
 title: Raccolte di XML Schema (SQL Server) | Microsoft Docs
 ms.custom: ''
-ms.date: 03/14/2017
+ms.date: 03/15/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
@@ -22,12 +22,12 @@ ms.assetid: 659d41aa-ccec-4554-804a-722a96ef25c2
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: c8a69b903fefb85b30ee6cd0a0019466c279fd0e
-ms.sourcegitcommit: bfa10c54e871700de285d7f819095d51ef70d997
+ms.openlocfilehash: d1b1110877d4735dee8606805f78a891c4a4b950
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/14/2019
-ms.locfileid: "54255716"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58375289"
 ---
 # <a name="xml-schema-collections-sql-server"></a>Raccolte di XML Schema (SQL Server)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -69,7 +69,7 @@ ms.locfileid: "54255716"
   
  Si consideri ad esempio lo schema seguente:  
   
-```  
+```xml
 <?xml version="1.0"?>  
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"  
             targetNamespace="uri:Cust_Orders2"  
@@ -130,6 +130,7 @@ ms.locfileid: "54255716"
 |**blockDefault**|Attributo **block** applicato a tutte le dichiarazioni di elemento e definizioni di tipo nelle quali non è già presente e dove il valore viene impostato sul valore dell'attributo **blockDefault** .|  
 |**finalDefault**|Attributo **final** applicato a tutte le dichiarazioni di elemento e definizioni di tipo nelle quali non è già presente e dove il valore viene impostato sul valore dell'attributo **finalDefault** .|  
 |**targetNamespace**|Le informazioni sui componenti appartenenti allo spazio dei nomi di destinazione vengono archiviate nei metadati.|  
+| &nbsp; | &nbsp; |
   
 ##  <a name="perms"></a> Autorizzazioni per una raccolta di XML Schema  
  È necessario disporre delle autorizzazioni necessarie per eseguire le operazioni seguenti:  
@@ -163,7 +164,7 @@ ms.locfileid: "54255716"
 ##  <a name="info"></a> Acquisizione di Informazioni su XML Schema e Raccolte di schemi  
  Le raccolte di XML Schema sono enumerate nella vista del catalogo sys.xml_schema_collections. La raccolta di XML Schema "sys" è definita dal sistema e contiene gli spazi dei nomi predefiniti che è possibile utilizzare in tutte le raccolte di XML Schema definite dall'utente senza doverli caricare in modo esplicito. Tale elenco contiene gli spazi dei nomi per xml, xs, xsi, fn e xdt. Sono disponibili altre due viste del catalogo: sys.xml_schema_namespaces, che enumera tutti gli spazi dei nomi in ogni raccolta di XML Schema, e sys.xml_components, che enumera tutti i componenti degli elementi XML Schema presenti in ognuno.  
   
- La funzione predefinita **XML_SCHEMA_NAMESPACE**, *schemaName, XmlSchemacollectionName, namespace-uri*restituisce un'istanza del tipo di dati **xml** . Tale istanza contiene frammenti di XML Schema per gli schemi inclusi in una raccolta di XML Schema, ad eccezione degli elementi XML Schema predefiniti.  
+ La funzione predefinita **XML_SCHEMA_NAMESPACE**, *schemaName, XmlSchemacollectionName, namespace-uri* restituisce un'istanza del tipo di dati **xml**. Tale istanza contiene frammenti di XML Schema per gli schemi inclusi in una raccolta di XML Schema, ad eccezione degli elementi XML Schema predefiniti.  
   
  Per enumerare il contenuto di una raccolta di XML Schema è possibile:  
   
@@ -176,7 +177,7 @@ ms.locfileid: "54255716"
 ### <a name="example-enumerate-the-xml-namespaces-in-an-xml-schema-collection"></a>Esempio: Enumerazione degli spazi dei nomi XML in una raccolta di XML Schema  
  Per la raccolta di XML Schema "myCollection" utilizzare la query seguente:  
   
-```  
+```sql
 SELECT XSN.name  
 FROM    sys.xml_schema_collections XSC JOIN sys.xml_schema_namespaces XSN  
     ON (XSC.xml_collection_id = XSN.xml_collection_id)  
@@ -186,18 +187,18 @@ WHERE    XSC.name = 'myCollection'
 ### <a name="example-enumerate-the-contents-of-an-xml-schema-collection"></a>Esempio: Enumerazione del contenuto di una raccolta di XML Schema  
  L'istruzione seguente enumera il contenuto della raccolta di XML Schema "myCollection" nell'ambito dello schema relazionale dbo.  
   
-```  
+```sql
 SELECT XML_SCHEMA_NAMESPACE (N'dbo', N'myCollection')  
 ```  
   
  I singoli elementi XML Schema inclusi nella raccolta possono essere ottenuti come istanze del tipo di dati **xml** , specificando lo spazio dei nomi di destinazione come terzo argomento della funzione **XML_SCHEMA_NAMESPACE()**, come illustrato nell'esempio seguente.  
   
 ### <a name="example-output-a-specified-schema-from-an-xml-schema-collection"></a>Esempio: Restituzione di uno schema specifico da una raccolta di XML Schema  
- L'istruzione seguente restituisce l'elemento XML Schema con spazio dei nomi di destinazione "<https://www.microsoft.com/books>" dalla raccolta di XML Schema "myCollection" nell'ambito dello schema relazionale dbo.  
+ L'istruzione seguente restituisce l'elemento XML Schema con spazio dei nomi di destinazione _pretend_ https/\/www.microsoft.com/was-books dalla raccolta di XML Schema "myCollection" all'interno dello schema relazionale dbo.  
   
-```  
+```sql
 SELECT XML_SCHEMA_NAMESPACE (N'dbo', N'myCollection',   
-N'https://www.microsoft.com/books')  
+N'https://www.microsoft.com/was-books')  
 ```  
   
 ### <a name="querying-xml-schemas"></a>Esecuzione di query su elementi XML Schema  

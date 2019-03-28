@@ -18,15 +18,15 @@ helpviewer_keywords:
 - batches [Integration Services]
 - Execute SQL task [Integration Services]
 ms.assetid: bebb2e8c-0410-43b2-ac2f-6fc80c8f2e9e
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 674dd31df5acbe93fd48ad9b0b3ab504cebbc98a
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: ff217e16fb9d153872d00074ff2f5d672be056d0
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52504069"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58273909"
 ---
 # <a name="execute-sql-task"></a>Attività Esegui SQL
   L'attività Esegui SQL consente di eseguire istruzioni SQL o stored procedure da un pacchetto. L'attività può includere una o più istruzioni SQL che vengono eseguite in ordine sequenziale. È possibile utilizzare l'attività Esegui SQL per gli scopi seguenti:  
@@ -183,19 +183,19 @@ Per sapere di più sul linguaggio di query Transact-SQL, vedere [Guida di riferi
  **SQLStatement**  
  Digitare l'istruzione SQL da eseguire nella casella di opzione oppure fare clic sul pulsante (...) per digitare l'istruzione SQL nella finestra di dialogo **Immetti query SQL** o fare clic su **Compila query** per comporre l'istruzione con la finestra di dialogo **Generatore di query**.  
   
- **Argomenti correlati:** [Generatore query](https://msdn.microsoft.com/library/780752c9-6e3c-4f44-aaff-4f4d5e5a45c5)  
+ **Argomenti correlati:** [Generatore di query](https://msdn.microsoft.com/library/780752c9-6e3c-4f44-aaff-4f4d5e5a45c5)  
   
 #### <a name="sqlsourcetype--file-connection"></a>SQLSourceType = Connessione file  
  **FileConnection**  
  Selezionare una gestione connessione file esistente o fare clic su \<**Nuova connessione...**> per creare una nuova gestione connessione.  
   
- **Argomenti correlati:** [File Connection Manager](../../integration-services/connection-manager/file-connection-manager.md), [File Connection Manager Editor](../../integration-services/connection-manager/file-connection-manager-editor.md)  
+ **Argomenti correlati:** [Gestione connessione file](../../integration-services/connection-manager/file-connection-manager.md), [Editor gestione connessione file](../../integration-services/connection-manager/file-connection-manager-editor.md)  
   
 #### <a name="sqlsourcetype--variable"></a>SQLSourceType = Variabile  
  **SourceVariable**  
  Selezionare una variabile esistente oppure fare clic su \<**Nuova variabile**> per creare una nuova variabile.  
   
- **Argomenti correlati:** [Variabili di Integration Services &#40;SSIS&#41;](../../integration-services/integration-services-ssis-variables.md), [Aggiungi variabile](https://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5)  
+ **Argomenti correlati:** [Variabili di Integration Services &#40;SSIS&#41;](../../integration-services/integration-services-ssis-variables.md), [Aggiungere una variabile](https://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5)  
  
 ## <a name="parameter-mapping-page---execute-sql-task-editor"></a>Pagina Mapping parametri - Editor attività Esegui SQL
 Usare la pagina **Mapping parametri** della finestra di dialogo **Editor attività Esegui SQL** per eseguire il mapping tra variabili e parametri nell'istruzione SQL.  
@@ -286,7 +286,7 @@ Le istruzioni SQL e le stored procedure usano spesso parametri di **input** , pa
 #### <a name="use-parameters-with-adonet-and-ado-connection-managers"></a>Usare parametri con le gestioni connessioni ADO.NET e ADO  
  [!INCLUDE[vstecado](../../includes/vstecado-md.md)] e le gestioni connessioni ADO hanno requisiti specifici per i comandi SQL che usano parametri:  
   
--   Le gestioni connessioni [!INCLUDE[vstecado](../../includes/vstecado-md.md)] richiedono che il comando SQL utilizzi nomi di parametro come marcatori di parametro. È pertanto possibile eseguire il mapping direttamente delle variabili ai parametri. Se ad esempio sulla variabile `@varName` viene eseguito il mapping a un parametro di nome `@parName` , fornirà il valore per il parametro `@parName`.  
+-   Le gestioni connessioni [!INCLUDE[vstecado](../../includes/vstecado-md.md)] richiedono che il comando SQL usi nomi di parametro come indicatori di parametro. È pertanto possibile eseguire il mapping direttamente delle variabili ai parametri. Se ad esempio sulla variabile `@varName` viene eseguito il mapping a un parametro di nome `@parName` , fornirà il valore per il parametro `@parName`.  
   
 -   Per le gestioni connessioni ADO, è necessario che il comando SQL utilizzi punti interrogativi (?) come marcatori di parametro. Tuttavia, come nomi di parametro è possibile utilizzare qualsiasi nome definito dall'utente, ad eccezione dei valori interi.  
   

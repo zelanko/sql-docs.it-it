@@ -20,15 +20,15 @@ helpviewer_keywords:
 - connection managers [Integration Services], Multiple Flat Files
 - multiple flat file connections
 ms.assetid: 31fc3f7a-d323-44f5-a907-1fa3de66631a
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: f49a603d7b5307c2ddac938b32361e67716f705f
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 0e81e43aa0eafb76b107c30b2bdd07a0a70b60fd
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52534369"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58275727"
 ---
 # <a name="multiple-flat-files-connection-manager"></a>gestione connessione per più file flat
   Una gestione connessione per più file flat consente a un pacchetto di accedere a dati contenuti in più file flat. Ad esempio, un'origine file flat può utilizzare una gestione connessione per più file quando l'attività Flusso di dati si trova in un contenitore Ciclo, ad esempio il contenitore Ciclo For. In ogni ciclo del contenitore, l'origine file flat carica dati dal nome file successivo fornito dalla gestione connessione per più file.  
@@ -234,9 +234,9 @@ ms.locfileid: "52534369"
 |Proprietà|Descrizione|  
 |--------------|-----------------|  
 |**ColumnType**|Indica se la colonna è delimitata, a larghezza fissa o non allineata a destra. Questa proprietà è di sola lettura. I file non allineati a destra sono file in cui ogni colonna ha una larghezza fissa ad eccezione dell'ultima, per la quale viene utilizzato il delimitatore di riga.|  
-|**OutputColumnWidth**|Consente di specificare il valore da archiviare come conteggio di byte. Nel caso dei file Unicode tale valore verrà visualizzato come conteggio di caratteri. Nell'attività Flusso di dati questo valore viene utilizzato per impostare la larghezza della colonna di output per l'origine file flat.<br /><br /> Nota: nel modello a oggetti il nome di questa proprietà è MaximumWidth.|  
+|**OutputColumnWidth**|Consente di specificare il valore da archiviare come conteggio di byte. Nel caso dei file Unicode tale valore verrà visualizzato come conteggio di caratteri. Nell'attività Flusso di dati questo valore viene utilizzato per impostare la larghezza della colonna di output per l'origine file flat.<br /><br /> Nota: Nel modello a oggetti il nome di questa proprietà è MaximumWidth.|  
 |**DataType**|Consente di selezionare i tipi di dati disponibili nell'apposito elenco. Per altre informazioni, vedere [Tipi di dati di Integration Services](../../integration-services/data-flow/integration-services-data-types.md).|  
-|**TextQualified**|Consente di specificare se i dati di testo sono qualificati usando un carattere qualificatore di testo:<br /><br /> **True**: i dati di tipo testo nel file flat sono qualificati.<br /><br /> **False**: i dati di tipo testo nel file flat non sono qualificati.|  
+|**TextQualified**|Consente di specificare se i dati di testo sono qualificati usando un carattere qualificatore di testo:<br /><br /> **True**: I dati di tipo testo nel file flat sono qualificati.<br /><br /> **False**: I dati di tipo testo nel file flat non sono qualificati.|  
 |**Nome**|Consente di specificare un nome per la colonna. Per impostazione predefinita, si tratta di un elenco numerato di colonne. È comunque possibile scegliere qualsiasi nome descrittivo univoco.|  
 |**DataScale**|Consente di specificare la scala dei dati numerici. Per scala si intende il numero di posizioni decimali. Per altre informazioni, vedere [Tipi di dati di Integration Services](../../integration-services/data-flow/integration-services-data-types.md).|  
 |**ColumnDelimiter**|Consente di selezionare i delimitatori di colonna disponibili nell'apposito elenco. Scegliere come delimitatori caratteri che non siano già presenti nel testo. Questo valore viene ignorato per le colonne a larghezza fissa.<br /><br /> **{CR}{LF}**: le colonne sono delimitate dalla combinazione di caratteri ritorno a capo/avanzamento riga<br /><br /> **{CR}**: le colonne sono delimitate da un ritorno a capo<br /><br /> **{LF}**: le colonne sono delimitate da un avanzamento riga<br /><br /> **Punto e virgola {;}**: le colonne sono delimitate da un punto e virgola<br /><br /> **Due punti {:}**: le colonne sono delimitate da due punti<br /><br /> **Virgola {,}{,}**: le colonne sono delimitate da una virgola<br /><br /> **Tabulazione {t}**: le colonne sono delimitate da una tabulazione<br /><br /> **Barra verticale {&#124;}**: le colonne sono delimitate da una barra verticale|  

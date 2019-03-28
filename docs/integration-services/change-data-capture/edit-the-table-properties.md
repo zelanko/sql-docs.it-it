@@ -10,15 +10,15 @@ ms.topic: conceptual
 f1_keywords:
 - editTabProps
 ms.assetid: 95ea72ba-8e40-4177-a963-0fb4d10c56e3
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 4499ba0bc52e7c0d5cd052a8999737bf53337a50
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 9899756eb86e3f56ca90b6dc567146408a6588ee
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47686969"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58278080"
 ---
 # <a name="edit-the-table-properties"></a>Modificare le proprietà delle tabelle
   Utilizzare questa finestra di dialogo per modificare colonne specifiche della tabella selezionata in cui vengono acquisite le modifiche. È anche possibile modificare le informazioni **Security Role** e **Capture Instance** .  
@@ -41,13 +41,13 @@ ms.locfileid: "47686969"
   
 2.  Salvare l'istanza di acquisizione come:  
   
-    -   **New Capture Instance**: viene salvata una nuova istanza di acquisizione e l'istanza di acquisizione precedente non viene eliminata.  
+    -   **New Capture Instance** (Nuova istanza di acquisizione): in questo caso viene salvata una nuova istanza di acquisizione e l'istanza di acquisizione precedente non viene eliminata.  
   
          **Nota**: non possono esistere più di due istanze di acquisizione per tabella. Se sono già presenti due istanze di acquisizione, l'opzione non è disponibile.  
   
-    -   **Replace Existing**: l'istanza di acquisizione corrente viene eliminata e sostituita dall'istanza di acquisizione creata. Se per la tabella sono state definite due istanze di acquisizione, è necessario selezionarne una da sostituire.  
+    -   **Replace Existing** (Sostituisci esistente): l'istanza di acquisizione corrente viene eliminata e sostituita dall'istanza di acquisizione creata. Se per la tabella sono state definite due istanze di acquisizione, è necessario selezionarne una da sostituire.  
   
- **Nota**: è possibile rimuovere un'istanza di acquisizione dall'elenco di tabelle nella scheda **Table** .  
+ **Nota**: è possibile rimuovere un'istanza di acquisizione dall'elenco di tabelle nella scheda **Table** (Tabella).  
   
  Dopo avere immesso le informazioni in questa finestra di dialogo, scegliere **OK** per accettare le modifiche.  
   

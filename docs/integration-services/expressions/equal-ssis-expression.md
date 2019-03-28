@@ -11,15 +11,15 @@ helpviewer_keywords:
 - equal operator (==)
 - == (equal operator)
 ms.assetid: 36fd2354-7b93-4c95-9cf3-51ee24568950
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 39cf6a1e211fb4fb0872ec77ffb85bf502fb4707
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 782d0289c90255743774de65f18848b7e9891271
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47782185"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58270606"
 ---
 # <a name="-equal-ssis-expression"></a>== (uguale) (espressione SSIS)
   Viene eseguito un confronto per determinare se due espressioni sono uguali. L'analizzatore di espressioni converte automaticamente numerosi tipi di dati prima di eseguire il confronto. Per altre informazioni, vedere [Tipi di dati nelle espressioni di Integration Services](../../integration-services/expressions/integration-services-data-types-in-expressions.md).  
@@ -82,7 +82,7 @@ expression1 == expression2
   
 -   **Binary** Sia *expression1* che *expression2* devono restituire il tipo di dati DT_BYTES.  
   
--   **BLOB** Sia *expression1* che *expression2* devono restituire lo stesso tipo di dati BLOB (Binary Large Object Block), cioè DT_TEXT, DT_NTEXT o DT_IMAGE.  
+-   **BLOB** Sia *expression1* che *expression2* devono restituire lo stesso tipo di dati BLOB (Binary Large Object Block): DT_TEXT, DT_NTEXT o DT_IMAGE.  
   
  Per altre informazioni sui tipi di dati, vedere [Tipi di dati di Integration Services](../../integration-services/data-flow/integration-services-data-types.md).  
   

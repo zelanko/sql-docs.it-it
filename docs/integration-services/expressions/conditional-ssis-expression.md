@@ -11,15 +11,15 @@ helpviewer_keywords:
 - conditional operator (?:)
 - '?: (conditional operator)'
 ms.assetid: d38e6890-7338-4ce0-a837-2dbb41823a37
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: cd01f26f7c57ebe5b2c17b342b77ffc5add7e150
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 43ba631d4b93e3f748afa0c64ff95d42609bd545
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47626019"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58272104"
 ---
 # <a name="--conditional-ssis-expression"></a>? : (condizionale) (espressione SSIS)
   Viene restituita una di due espressioni in base alla valutazione di un'espressione booleana. Se l'espressione booleana restituisce TRUE, verrà valutata la prima espressione e il risultato sarà il risultato di tale espressione. Se l'espressione booleana restituisce FALSE, verrà valutata la seconda espressione e il risultato sarà il risultato di tale espressione.  
@@ -58,7 +58,7 @@ boolean_expression?expression1:expression2
   
 -   **Numeric** Sia *expression1* che *expression2* devono essere un tipo di dati numerici. L'intersezione dei tipi di dati deve essere un tipo di dati numeric come specificato dalle regole relative alle conversioni numeriche implicite eseguite dall'analizzatore di espressioni. L'intersezione dei due tipi di dati numeric non può essere Null. Per altre informazioni, vedere [Tipi di dati nelle espressioni di Integration Services](../../integration-services/expressions/integration-services-data-types-in-expressions.md).  
   
--   **String** Sia *expression1* che *expression2* devono avere un tipo di dati string, ovvero DT_STR o DT_WSTR. Le due espressioni possono restituire tipi di dati string diversi. Il risultato ha tipo di dati DT_WSTR e lunghezza pari a quella dell'argomento più lungo.  
+-   **String** Sia *expression1* che *expression2* devono avere un tipo di dati string: DT_STR o DT_WSTR. Le due espressioni possono restituire tipi di dati string diversi. Il risultato ha tipo di dati DT_WSTR e lunghezza pari a quella dell'argomento più lungo.  
   
 -   **Date, Time o Date/Time** Sia *expression1* che *expression2* devono restituire uno dei tipi di dati seguenti: DT_DBDATE, DT_DATE, DT_DBTIME, DT_DBTIME2, DT_DBTIMESTAMP, DT_DBTIMESTAMP2, DT_DBTIMESTAPMOFFSET o DT_FILETIME.  
   

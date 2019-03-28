@@ -11,15 +11,15 @@ f1_keywords:
 - sql13.ssis.designer.cdccontroltask.f1
 - sql13.ssis.designer.cdccontroltask.config.f1
 ms.assetid: 6404dc7f-550c-47cc-b901-c072742f430a
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: b187fb1d2e5595ef1ec75ed99c9a6e3f85029f3e
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: 87815205efb5598dd2901b46d4220092f76cde4a
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51640698"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58283035"
 ---
 # <a name="cdc-control-task"></a>Attività di controllo CDC
   L'attività di controllo CDC viene utilizzata per controllare il ciclo di vita di pacchetti Change Data Capture (CDC). Questa attività consente di gestire la sincronizzazione del pacchetto CDC con il pacchetto di caricamento iniziale e la gestione di intervalli di numeri di sequenza del file di log (LSN) elaborati in un'esecuzione di un pacchetto CDC. L'attività di controllo CDC, inoltre, consente di gestire gli scenari di errore e il recupero da errori.  
@@ -42,7 +42,7 @@ ms.locfileid: "51640698"
 |Operazione|Descrizione|  
 |---------------|-----------------|  
 |GetProcessingRange|Questa operazione viene utilizzata prima di richiamare il flusso di dati che utilizza il flusso di dati dell'origine CDC. L'operazione consente di stabilire un intervallo di LSN letti dal flusso di dati dell'origine CDC quando il flusso di dati viene richiamato. L'intervallo viene archiviato in una variabile del pacchetto SSIS utilizzata dall'origine CDC durante l'elaborazione del flusso di dati.<br /><br /> Per altre informazioni sugli stati che vengono archiviati, vedere [Definire una variabile di stato](../../integration-services/data-flow/define-a-state-variable.md).|  
-|MarkProcessedRange|Questa operazione avviene dopo ogni esecuzione CDC (una volta completato il flusso di dati CDC) per registrare l'ultimo LSN elaborato completamente nell'esecuzione CDC. Alla successiva esecuzione di GetProcessingRange, questa posizione corrisponde all'inizio dell'intervallo di elaborazione.|  
+|MarkProcessedRange|: Questa operazione avviene dopo ogni esecuzione CDC (una volta completato il flusso di dati CDC) per registrare l'ultimo LSN elaborato completamente nell'esecuzione CDC. Alla successiva esecuzione di GetProcessingRange, questa posizione corrisponde all'inizio dell'intervallo di elaborazione.|  
   
 ## <a name="handling-cdc-state-persistency"></a>Gestione della persistenza dello stato CDC  
  L'attività di controllo CDC consente di gestire uno stato persistente tra attivazioni. Le informazioni archiviate nello stato CDC vengono utilizzate per determinare e gestire l'intervallo di elaborazione per il pacchetto CDC e per il rilevamento di eventuali condizioni di errore. Lo stato persistente viene archiviato come stringa. Per altre informazioni, vedere [Definire una variabile di stato](../../integration-services/data-flow/define-a-state-variable.md).  
@@ -51,7 +51,7 @@ ms.locfileid: "51640698"
   
 -   Persistenza dello stato manuale: in questo caso, l'attività di controllo CDC gestisce lo stato archiviato in una variabile del pacchetto, ma lo sviluppatore del pacchetto deve leggere la variabile da un archivio persistente prima di chiamare il controllo CDC e quindi riscriverla nell'archivio persistente dopo l'ultima chiamata del controllo CDC e il completamento dell'esecuzione CDC.  
   
--   Persistenza dello stato automatica: lo stato CDC viene archiviato in una tabella di un database. Lo stato viene archiviato con un nome specificato nella proprietà **StateName** in una tabella denominata nella proprietà **Table to Use for Storing State** , inclusa in una gestione connessione selezionata per l'archiviazione dello stato. Il valore predefinito è la gestione connessione di origine, ma secondo la pratica comune è consigliabile impostare il valore sulla gestione connessione di destinazione. Tramite l'attività di controllo CDC viene aggiornato il valore di stato nella tabella di stato e viene eseguito il commit di tale valore come parte della transazione di ambiente.  
+-   Persistenza dello stato automatica: lo stato CDC viene archiviato in una tabella in un database. Lo stato viene archiviato con un nome specificato nella proprietà **StateName** in una tabella denominata nella proprietà **Table to Use for Storing State** , inclusa in una gestione connessione selezionata per l'archiviazione dello stato. Il valore predefinito è la gestione connessione di origine, ma secondo la pratica comune è consigliabile impostare il valore sulla gestione connessione di destinazione. Tramite l'attività di controllo CDC viene aggiornato il valore di stato nella tabella di stato e viene eseguito il commit di tale valore come parte della transazione di ambiente.  
   
 ## <a name="error-handling"></a>Gestione degli errori  
  È possibile che l'attività di controllo CDC restituisca un errore nei casi seguenti:  
@@ -102,27 +102,27 @@ ms.locfileid: "51640698"
  **Operazione di controllo CDC**  
  Selezionare l'operazione da eseguire per questa attività. Per tutte le operazioni viene utilizzata la variabile di stato archiviata in una variabile del pacchetto SSIS utilizzata per archiviare lo stato e passarlo tra i diversi componenti nel pacchetto.  
   
--   **Contrassegna avvio caricamento iniziale**: questa operazione viene utilizzata durante l'esecuzione di un caricamento iniziale da un database attivo senza uno snapshot. Viene richiamata all'inizio di un pacchetto di caricamento iniziale per registrare il valore LSN corrente nel database di origine prima che venga avviata la lettura delle tabelle di origine. Questa operazione richiede una connessione al database di origine.  
+-   **Mark initial load start** (Contrassegna avvio caricamento iniziale): questa operazione viene usata durante l'esecuzione di un caricamento iniziale da un database attivo senza uno snapshot. Viene richiamata all'inizio di un pacchetto di caricamento iniziale per registrare il valore LSN corrente nel database di origine prima che venga avviata la lettura delle tabelle di origine. Questa operazione richiede una connessione al database di origine.  
   
      Se si seleziona **Contrassegna avvio caricamento iniziale** quando si usa CDC di [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] (ovvero, non Oracle), l'utente specificato nella gestione connessione deve essere  **db_owner** o **sysadmin**.  
   
--   **Contrassegna fine caricamento iniziale**: questa operazione viene utilizzata durante l'esecuzione di un caricamento iniziale da un database attivo senza uno snapshot. Viene richiamata alla fine di un pacchetto di caricamento iniziale per registrare l'LSN corrente nel database di origine al termine della lettura delle tabelle di origine. Questo LSN viene determinato registrando l'ora corrente in cui l'operazione si è verificata ed eseguendo quindi una query sulla tabella `cdc.lsn_time_`mapping nel database CDC per ricercare una modifica successiva a tale ora  
+-   **Mark initial load end** (Contrassegna fine caricamento iniziale): questa operazione viene usata durante l'esecuzione di un caricamento iniziale da un database attivo senza uno snapshot. Viene richiamata alla fine di un pacchetto di caricamento iniziale per registrare l'LSN corrente nel database di origine al termine della lettura delle tabelle di origine. Questo LSN viene determinato registrando l'ora corrente in cui l'operazione si è verificata ed eseguendo quindi una query sulla tabella `cdc.lsn_time_`mapping nel database CDC per ricercare una modifica successiva a tale ora  
   
      Se si seleziona **Contrassegna fine caricamento iniziale** quando si usa CDC di [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] (ovvero, non Oracle), l'utente specificato nella gestione connessione deve essere  **db_owner** o **sysadmin**.  
   
--   **Contrassegna avvio CDC**: questa operazione viene usata quando il caricamento iniziale è costituito da un database snapshot o da un database disattivato. Viene richiamata in qualsiasi punto all'interno del pacchetto di caricamento iniziale. L'operazione accetta un parametro che può essere un LSN snapshot, un nome di un database snapshot (da cui l'LSN snapshot viene automaticamente derivato) o può essere lasciato vuoto, nel qual caso l'LSN del database corrente viene utilizzato come LSN iniziale per il pacchetto di elaborazione delle modifiche.  
+-   **Mark CDC start** (Contrassegna avvio CDC): questa operazione viene usata quando il caricamento iniziale viene eseguito da un database snapshot o da un database disattivato. Viene richiamata in qualsiasi punto all'interno del pacchetto di caricamento iniziale. L'operazione accetta un parametro che può essere un LSN snapshot, un nome di un database snapshot (da cui l'LSN snapshot viene automaticamente derivato) o può essere lasciato vuoto, nel qual caso l'LSN del database corrente viene utilizzato come LSN iniziale per il pacchetto di elaborazione delle modifiche.  
   
      Questa operazione viene utilizzata al posto delle operazioni Contrassegna avvio caricamento iniziale/Contrassegna fine caricamento iniziale.  
   
      Se si seleziona **Contrassegna avvio CDC** quando si usa CDC di [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] (ovvero, non Oracle), l'utente specificato nella gestione connessione deve essere  **db_owner** o **sysadmin**.  
   
--   **Ottieni intervallo di elaborazione**: questa operazione viene utilizzata in un pacchetto di elaborazione delle modifiche prima di richiamare il flusso di dati che utilizza il flusso di dati dell'origine CDC. L'operazione consente di stabilire un intervallo di LSN letti dal flusso di dati dell'origine CDC quando il flusso di dati viene richiamato. L'intervallo viene archiviato in una variabile del pacchetto SSIS utilizzata dall'origine CDC durante l'elaborazione del flusso di dati.  
+-   **Get processing range** (Ottieni intervallo di elaborazione): questa operazione viene usata in un pacchetto di elaborazione delle modifiche prima di richiamare il flusso di dati che usa il flusso di dati dell'origine CDC. L'operazione consente di stabilire un intervallo di LSN letti dal flusso di dati dell'origine CDC quando il flusso di dati viene richiamato. L'intervallo viene archiviato in una variabile del pacchetto SSIS utilizzata dall'origine CDC durante l'elaborazione del flusso di dati.  
   
      Per altre informazioni sui possibili stati CDC che vengono archiviati, vedere [Definire una variabile di stato](../../integration-services/data-flow/define-a-state-variable.md).  
   
--   **Contrassegna intervallo elaborato**: questa operazione viene usata in un pacchetto di elaborazione delle modifiche alla fine di un'esecuzione CDC (dopo il corretto completamento del flusso di dati CDC) per registrare l'ultimo LSN elaborato completamente nell'esecuzione CDC. Alla prossima esecuzione di `GetProcessingRange` , questa posizione determina l'inizio dell'intervallo di elaborazione successivo.  
+-   **Mark processed range** (Contrassegna intervallo elaborato): questa operazione viene usata in un pacchetto di elaborazione delle modifiche alla fine di un'esecuzione CDC (dopo il corretto completamento del flusso di dati CDC) per registrare l'ultimo LSN elaborato completamente nell'esecuzione CDC. Alla prossima esecuzione di `GetProcessingRange` , questa posizione determina l'inizio dell'intervallo di elaborazione successivo.  
   
--   **Reimposta stato CDC**: questa operazione viene utilizzata per reimpostare lo stato CDC persistente associato al contesto CDC corrente. Dopo l'esecuzione di questa operazione, l'LSN massimo corrente della tabella LSN-timestamp `sys.fn_cdc_get_max_lsn` diventa l'inizio dell'intervallo di elaborazione successivo. Per questa operazione è necessaria una connessione al database di origine.  
+-   **Reset CDC state** (Reimposta stato CDC): Questa operazione viene utilizzata per reimpostare lo stato CDC persistente associato al contesto CDC corrente. Dopo l'esecuzione di questa operazione, l'LSN massimo corrente della tabella LSN-timestamp `sys.fn_cdc_get_max_lsn` diventa l'inizio dell'intervallo di elaborazione successivo. Per questa operazione è necessaria una connessione al database di origine.  
   
      Questa operazione viene ad esempio utilizzata quando si desidera elaborare solo i record di modifica appena creati e ignorare tutti i record di modifica obsoleti.  
   

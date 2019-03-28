@@ -14,15 +14,15 @@ helpviewer_keywords:
 - inserting data
 - bulk load [Integration Services]
 ms.assetid: 8f982f85-a82e-4e2d-9cd8-cd2f85402d8e
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: d7e6535428eefaf4e0f2a84d1de40c5d8c7f4989
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 68902b0249fc40e8aa48a0bd6fc6f6eef47d4caa
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47669499"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58274361"
 ---
 # <a name="bulk-load-data-by-using-the-sql-server-destination"></a>Caricamento bulk dei dati tramite la destinazione SQL Server
   È possibile aggiungere e configurare una destinazione [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] solo se il pacchetto include già almeno un'attività Flusso di dati e un'origine dati.  
@@ -39,7 +39,7 @@ ms.locfileid: "47669499"
   
 5.  Fare doppio clic sulla destinazione.  
   
-6.  Nella pagina **Gestione connessione**della finestra di dialogo **Editor destinazione SQL Server** selezionare una gestione connessione OLE DB esistente oppure fare clic su **Nuova** per creare una nuova gestione connessione. Per altre informazioni, vedere [OLE DB Connection Manager](../../integration-services/connection-manager/ole-db-connection-manager.md).  
+6.  Nella pagina **Gestione connessione**della finestra di dialogo **Editor destinazione SQL Server** selezionare una gestione connessione OLE DB esistente oppure fare clic su **Nuova** per creare una nuova gestione connessione. Per altre informazioni, vedere [Gestione connessione OLE DB](../../integration-services/connection-manager/ole-db-connection-manager.md).  
   
 7.  Per specificare la tabella o vista in cui caricare i dati, eseguire una delle operazioni seguenti:  
   
@@ -55,7 +55,7 @@ ms.locfileid: "47669499"
     > [!NOTE]  
     >  La destinazione esegue automaticamente il mapping delle colonne con lo stesso nome.  
   
-9. Fare clic su **Avanzate** e impostare le opzioni relative al caricamento bulk: **Mantieni valori Identity**, **Mantieni valori Null**, **Blocco di tabella**, **Verifica vincoli**e **Attiva trigger**.  
+9. Fare clic su **Avanzate** e impostare le opzioni di caricamento bulk: **Mantieni valori Identity**, **Mantieni valori Null**, **Blocco di tabella**, **Verifica vincoli**e **Attiva trigger**.  
   
      Facoltativamente, specificare la prima e l'ultima riga di input da inserire, il numero massimo di errori che possono verificarsi prima che l'operazione di inserimento venga arrestata e le colonne in base alle quali viene ordinato l'inserimento.  
   

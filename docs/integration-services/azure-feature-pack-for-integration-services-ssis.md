@@ -11,15 +11,15 @@ f1_keywords:
 - SQL13.SSIS.AZURE.F1
 - SQL14.SSIS.AZURE.F1
 ms.assetid: 31de555f-ae62-4f2f-a6a6-77fea1fa8189
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: f4e5bf1999ef81b20d5ae318523891c9ef92326f
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: 458df1921c4d5327f06528d356790ed6795ac613
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51642158"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58280835"
 ---
 # <a name="azure-feature-pack-for-integration-services-ssis"></a>Feature Pack di Integration Services (SSIS) per Azure
 Il Feature Pack di SQL Server Integration Services (SSIS) per Azure è un'estensione che fornisce i componenti elencati in questa pagina per consentire a SSIS di connettersi ai servizi Azure, trasferire i dati tra Azure e le origini dati locali ed elaborare i dati archiviati in Azure.
@@ -80,7 +80,7 @@ Le pagine di download includono anche informazioni sui prerequisiti. Assicurarsi
 
 -   Enumeratore file di Azure Data Lake Store e BLOB di Azure. Vedere [Contenitore Ciclo Foreach](https://msdn.microsoft.com/library/95a19dde-61ca-4d9b-aa3d-131fa4264296).
 
-## <a name="scenario-processing-big-data"></a>Scenario: Elaborazione di Big data
+## <a name="scenario-processing-big-data"></a>Scenario: Elaborazione di Big Data
  Usare il connettore di Azure per completare l'elaborazione di Big Data:
 
 1.  Usare l'attività di caricamento BLOB di Azure per caricare i dati di input nell'archivio BLOB di Azure.

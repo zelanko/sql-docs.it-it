@@ -14,15 +14,15 @@ helpviewer_keywords:
 - Script task [Integration Services], examples
 - Excel [Integration Services]
 ms.assetid: b8fa110a-2c9c-4f5a-8fe1-305555640e44
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 69771260dbffe33583e300942548a69fd21a5258
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: e39c96672016f19ecc6506d48266da70e0edf1b5
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52529591"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58274877"
 ---
 # <a name="working-with-excel-files-with-the-script-task"></a>Uso di file di Excel con l'attività Script
   In [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] sono disponibili la gestione connessione, l'origine e la destinazione Excel per l'utilizzo di dati archiviati in fogli di calcolo nel formato di file di [!INCLUDE[msCoName](../../includes/msconame-md.md)] Excel. Per le tecniche descritte in questo argomento si utilizza l'attività Script per ottenere informazioni sui database (file di cartelle di lavoro) e sulle tabelle (fogli di lavoro e intervalli denominati) di Excel disponibili.
@@ -66,7 +66,7 @@ ms.locfileid: "52529591"
   
 5.  Impostare il linguaggio di scripting predefinito per il componente Script usando l'opzione **Linguaggio di scripting** nella pagina **Generale** della finestra di dialogo **Opzioni**. Per ulteriori informazioni, vedere [General Page](../general-page-of-integration-services-designers-options.md).  
   
-##  <a name="example1"></a> Descrizione dell'esempio 1: verificare l'esistenza di un file di Excel  
+##  <a name="example1"></a> Descrizione dell'esempio 1: Verificare l'esistenza di un file di Excel  
  In questo esempio viene determinato se il file della cartella di lavoro di Excel specificato nella variabile `ExcelFile` esiste, quindi il valore booleano della variabile `ExcelFileExists` viene impostato sul risultato. È possibile utilizzare questo valore booleano per la diramazione nel flusso di lavoro del pacchetto.  
   
 ### <a name="to-configure-this-script-task-example"></a>Per configurare l'esempio di attività Script  
@@ -136,7 +136,7 @@ public class ScriptMain
 }  
 ```  
   
-##  <a name="example2"></a> Descrizione dell'esempio 2: verificare l'esistenza di una tabella di Excel  
+##  <a name="example2"></a> Descrizione dell'esempio 2: Verificare l'esistenza di una tabella di Excel  
  In questo esempio viene determinato se il foglio di lavoro o l'intervallo denominato di Excel specificato nella variabile `ExcelTable` esiste nel file della cartella di lavoro di Excel specificato nella variabile `ExcelFile`, quindi il valore booleano della variabile `ExcelTableExists` viene impostato sul risultato. È possibile utilizzare questo valore booleano per la diramazione nel flusso di lavoro del pacchetto.  
   
 ### <a name="to-configure-this-script-task-example"></a>Per configurare l'esempio di attività Script  
@@ -243,7 +243,7 @@ public class ScriptMain
 }  
 ```  
   
-##  <a name="example3"></a> Descrizione dell'esempio 3: ottenere un elenco dei file di Excel in una cartella  
+##  <a name="example3"></a> Descrizione dell'esempio 3: Ottenere un elenco dei file di Excel in una cartella  
  In questo esempio l'elenco dei file di Excel trovati nella cartella specificata nel valore della variabile `ExcelFolder` viene inserito in una matrice, che viene quindi copiata nella variabile `ExcelFiles`. È possibile utilizzare l'enumeratore Foreach From Variable per scorrere i file nella matrice.  
   
 ### <a name="to-configure-this-script-task-example"></a>Per configurare l'esempio di attività Script  
@@ -315,7 +315,7 @@ public class ScriptMain
 ### <a name="alternate-solution"></a>Soluzione alternativa  
  Anziché utilizzare un'attività Script per raccogliere un elenco di file di Excel in una matrice, è anche possibile utilizzare l'enumeratore ForEach File per scorrere tutti i file di Excel presenti in una cartella. Per altre informazioni, vedere [Esecuzione di un ciclo su file e tabelle di Excel usando un contenitore Ciclo Foreach](../../integration-services/control-flow/loop-through-excel-files-and-tables-by-using-a-foreach-loop-container.md).  
   
-##  <a name="example4"></a> Descrizione dell'esempio 4: ottenere un elenco di tabelle in un file di Excel  
+##  <a name="example4"></a> Descrizione dell'esempio 4: Ottenere un elenco di tabelle in un file di Excel  
  In questo esempio l'elenco dei fogli di lavoro e degli intervalli denominati trovati nel file della cartella di lavoro di Excel specificata dal valore della variabile `ExcelFile` viene inserito in una matrice, che viene quindi copiata nella variabile `ExcelTables`. È possibile utilizzare l'enumeratore Foreach From Variable per scorrere le tabelle nella matrice.  
   
 > [!NOTE]  

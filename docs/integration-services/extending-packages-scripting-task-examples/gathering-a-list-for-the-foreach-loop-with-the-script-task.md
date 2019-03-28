@@ -13,15 +13,15 @@ helpviewer_keywords:
 - Script task [Integration Services], examples
 - SSIS Script task, Foreach loops
 ms.assetid: 694f0462-d0c5-4191-b64e-821b1bdef055
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: be748729eeb9a50a5e206a5778e20420f4137177
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: 82856b272e4799fc06929fe4f2d153320f879f0e
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51640048"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58270784"
 ---
 # <a name="gathering-a-list-for-the-foreach-loop-with-the-script-task"></a>Raccolta di un elenco per il ciclo ForEach con l'attività Script
   L'enumeratore Foreach da variabile enumera gli elementi in un elenco passato in una variabile ed esegue le stesse attività su ogni elemento. È possibile utilizzare codice personalizzato in un'attività Script per popolare un elenco a questo scopo. Per altre informazioni sull'enumeratore, vedere [Contenitore ciclo Foreach](../../integration-services/control-flow/foreach-loop-container.md).  
@@ -33,7 +33,7 @@ ms.locfileid: "51640048"
  Nell'esempio seguente vengono usati i metodi dello spazio dei nomi **System.IO** per raccogliere un elenco di cartelle di lavoro di Excel sul computer, più o meno recenti di un numero di giorni specificati dall'utente in una variabile. Nelle directory dell'unità C viene eseguita una ricerca ricorsiva dei file con estensione xls e viene esaminata la data dell'ultima modifica di ogni file per determinare se il file fa parte dell'elenco. I file risultanti vengono aggiunti a un oggetto **ArrayList** che viene quindi salvato in una variabile per uso successivo in un contenitore Ciclo Foreach. Il contenitore Ciclo Foreach è configurato per utilizzare l'enumeratore Foreach da variabile.  
   
 > [!NOTE]  
->  La variabile che si usa con l'enumeratore Foreach da variabile deve essere di tipo **Oggetto**. L'oggetto inserito nella variabile deve implementare una delle interfacce seguenti: **System.Collections.IEnumerable**, **System.Runtime.InteropServices.ComTypes.IEnumVARIANT**, **System.ComponentModel IListSource**, o **Microsoft.SqlServer.Dts.Runtime.Wrapper.ForEachEnumeratorHost**. Viene usato comunemente un oggetto **Array** o **ArrayList**. **ArrayList** richiede un riferimento e un'istruzione **Imports** per lo spazio dei nomi **System.Collections**.  
+>  La variabile che si usa con l'enumeratore Foreach da variabile deve essere di tipo **Oggetto**. L'oggetto inserito nella variabile deve implementare una delle interfacce seguenti: **System.Collections.IEnumerable**, **System.Runtime.InteropServices.ComTypes.IEnumVARIANT**, **System.ComponentModel IListSource** o **Microsoft.SqlServer.Dts.Runtime.Wrapper.ForEachEnumeratorHost**. Viene usato comunemente un oggetto **Array** o **ArrayList**. **ArrayList** richiede un riferimento e un'istruzione **Imports** per lo spazio dei nomi **System.Collections**.  
   
  È possibile provare a utilizzare questa attività utilizzando valori diversi positivi e negativi per la variabile del pacchetto `FileAge`. È possibile, ad esempio, immettere 5 per cercare i file creati negli ultimi cinque giorni oppure immettere -3 per cercare i file creati più di tre giorni fa. L'esecuzione di questa attività può richiedere alcuni minuti su un'unità con numerose cartelle in cui eseguire la ricerca.  
   

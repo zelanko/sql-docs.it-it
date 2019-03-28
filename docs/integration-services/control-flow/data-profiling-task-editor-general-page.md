@@ -12,15 +12,15 @@ f1_keywords:
 helpviewer_keywords:
 - Data Profiling Task Editor
 ms.assetid: eec15906-d757-4079-b2f6-aca4e52b3b4c
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: ae626cfb67bbc2041a150940f2a03bb73dfb9b51
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 5e8f03d8978056ecd0faefd247163d2806dc7988
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47764461"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58290487"
 ---
 # <a name="data-profiling-task-editor-general-page"></a>Editor attività Profiling dati (pagina Generale)
   Usare la pagina **Generale** di **Editor attività Profiling dati** per configurare le opzioni seguenti:  
@@ -53,10 +53,10 @@ ms.locfileid: "47764461"
   
 |valore|Descrizione|  
 |-----------|-----------------|  
-|**FileConnection**|Consente di salvare l'output del profilo in un file nel percorso specificato in una gestione connessione file.<br /><br /> Nota: è possibile specificare la gestione connessione file da usare tramite l'opzione **Destination** .|  
-|**Variabile**|Consente di salvare l'output del profilo in una variabile del pacchetto.<br /><br /> Nota: è possibile specificare la variabile del pacchetto da usare tramite l'opzione **Destination** .|  
+|**FileConnection**|Consente di salvare l'output del profilo in un file nel percorso specificato in una gestione connessione file.<br /><br /> Nota: specificare la gestione connessione file da usare nell'opzione **Destination**.|  
+|**Variabile**|Consente di salvare l'output del profilo in una variabile del pacchetto.<br /><br /> Nota: specificare la variabile del pacchetto da usare nell'opzione **Destination**.|  
   
- **Destination**  
+ **Destinazione**  
  Consente di specificare la gestione connessione file o la variabile del pacchetto contenente l'output del profilo dei dati:  
   
 -   Se l'opzione **DestinationType** è impostata su **FileConnection**, l'opzione **Destination** visualizza le gestioni connessione file disponibili. Selezionare una delle gestioni connessione oppure fare clic su \<Nuova connessione file> per creare una nuova gestione connessione file.  

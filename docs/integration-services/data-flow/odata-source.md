@@ -13,15 +13,15 @@ f1_keywords:
 - sql13.dts.designer.odatasource.columns.f1
 - sql13.dts.designer.odatasource.erroroutput.f1
 ms.assetid: cc9003c9-638e-432b-867e-e949d50cec90
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 820541da1699e2e74a9ec0b9a5f00f094a14f38c
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: f5ba8afdf4acadd114363280501f29e1616349ae
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51638659"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58290617"
 ---
 # <a name="odata-source"></a>Origine OData
 Usare il componente di origine OData in un pacchetto SSIS per utilizzare i dati da un servizio Protocollo OData (Open Data).
@@ -59,7 +59,7 @@ Per individuare i tipi di dati delle colonne nell'origine dati, vedere la pagina
   
 ## <a name="related-topics-in-this-section"></a>Argomenti correlati in questa sezione  
   
--   [Esercitazione: uso dell'origine OData](../../integration-services/data-flow/tutorial-using-the-odata-source.md)  
+-   [Esercitazione: Uso dell'origine OData](../../integration-services/data-flow/tutorial-using-the-odata-source.md)  
   
 -   [Modificare la query di origine OData in fase di esecuzione](../../integration-services/data-flow/modify-odata-source-query-at-runtime.md)  
   
@@ -102,7 +102,7 @@ Per individuare i tipi di dati delle colonne nell'origine dati, vedere la pagina
   
 #### <a name="use-collection-or-resource-path--resource-path"></a>Usa percorso risorsa o raccolta = Percorso risorsa  
  **Resource path**  
- Digitare un percorso della risorsa. Ad esempio: Dipendenti  
+ Digitare un percorso della risorsa. Ad esempio Employees  
   
 ## <a name="odata-source-editor-columns-page"></a>Editor origine OData (pagina Colonne)
   Usare la pagina **Colonne** della finestra di dialogo **Editor origine OData** per selezionare le colonne esterne (di origine) da includere nell'output ed eseguirne il mapping alle colonne di output.  

@@ -10,15 +10,15 @@ ms.topic: conceptual
 helpviewer_keywords:
 - incremental load [Integration Services],creating function
 ms.assetid: 55dd0946-bd67-4490-9971-12dfb5b9de94
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: fc5fb2da6ab1d276ac4a5397b8ea9832878b1c5a
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 49c4e75641056db17faabcc937ee1ec76fd470d5
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52418032"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58280335"
 ---
 # <a name="create-the-function-to-retrieve-the-change-data"></a>Creazione della funzione per il recupero dei dati delle modifiche
   Dopo avere completato il flusso di controllo per un pacchetto di [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] che esegue un caricamento incrementale dei dati delle modifiche, l'attività successiva consiste nella creazione di una funzione con valori di tabella per il recupero di tali dati. Questa funzione deve essere creata solo una volta, prima del primo caricamento incrementale.  
@@ -133,7 +133,7 @@ deallocate #hfunctions
   
 -   Tutte le colonne di dati di modifica richieste.  
   
--   Una colonna denominata __CDC_OPERATION che utilizza un campo di uno o due caratteri per identificare l'operazione associata alla riga. I valori validi per questo campo sono: 'I' per inserimento, 'D' per eliminazione, 'UO' per aggiornamento di valori vecchi e 'UN' per aggiornamento di valori nuovi.  
+-   Una colonna denominata __CDC_OPERATION che utilizza un campo di uno o due caratteri per identificare l'operazione associata alla riga. I valori validi per questo campo sono i seguenti: 'I' per inserimento, 'D' per eliminazione, 'UO' per aggiornamento di valori vecchi e 'UN' per aggiornamento di valori nuovi.  
   
 -   Flag di aggiornamento, quando necessari, visualizzati come colonne bit dopo il codice dell'operazione e nell'ordine specificato nel parametro *@update_flag_list* . Per creare il nome di queste colonne, si aggiunge '_uflag' al nome della colonna associato.  
   
@@ -220,6 +220,6 @@ go
 ## <a name="next-step"></a>Passaggio successivo  
  Dopo avere creato la funzione con valori di tabella per l'esecuzione di query per i dati delle modifiche, il passaggio successivo consiste nell'iniziare a progettare il flusso di dati nel pacchetto.  
   
- **Argomento successivo:** [Recuperare e comprendere i dati delle modifiche](../../integration-services/change-data-capture/retrieve-and-understand-the-change-data.md)  
+ **Argomento successivo:** [Recuperare e interpretare i dati delle modifiche](../../integration-services/change-data-capture/retrieve-and-understand-the-change-data.md)  
   
   

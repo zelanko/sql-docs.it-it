@@ -8,18 +8,18 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: tutorial
 ms.assetid: ab17289d-c3d4-4a5e-b7f5-4fea8ae21707
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: a7513169dbff655d185c130b320075f0e2f2d855
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a5058fb2f654ad7aa0325e53e045179688885abc
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47715139"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58279235"
 ---
 # <a name="lesson-2-create-the-deployment-bundle-in-ssis"></a>Lezione 2: Creare il pacchetto di distribuzione in SSIS
-Nella lezione 1, [Preparazione alla creazione del pacchetto di distribuzione](../integration-services/lesson-1-preparing-to-create-the-deployment-bundle.md), è stato creato il progetto [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] denominato Deployment Tutorial, sono stati aggiunti i pacchetti e i file di supporto al progetto e sono state implementate le configurazioni nei pacchetti.  
+Nella [Lezione 1: Preparazione alla creazione del pacchetto di distribuzione](../integration-services/lesson-1-preparing-to-create-the-deployment-bundle.md), è stato creato il progetto [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] denominato Deployment Tutorial, sono stati aggiunti i pacchetti e i file di supporto al progetto e sono state implementate le configurazioni nei pacchetti.  
   
 In questa lezione si procederà alla creazione del pacchetto di distribuzione, ovvero una cartella contenente gli elementi necessari per installare i pacchetti in un altro computer. Nel pacchetto di distribuzione verranno inclusi un manifesto di distribuzione, copie dei pacchetti e copie dei file di supporto del progetto Deployment Tutorial. Nel manifesto di distribuzione vengono elencati i pacchetti, i file esterni e le configurazioni incluse nel pacchetto di distribuzione.  
   

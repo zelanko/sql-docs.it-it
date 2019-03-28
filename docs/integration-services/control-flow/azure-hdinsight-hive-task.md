@@ -11,15 +11,15 @@ f1_keywords:
 - sql13.dts.designer.afphivetask.f1
 - sql14.dts.designer.afphivetask.f1
 ms.assetid: e1896c73-128a-4128-9814-3e01f7dfe19b
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 1956ba0bf3c676ff1ab549cc7b9d0dbce9c59dce
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f5401195dd0f4bbc32eee4d7a813c4293bfa5553
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47856189"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58279785"
 ---
 # <a name="azure-hdinsight-hive-task"></a>Attività Hive di Azure HDInsight
 Usare l'**attività Hive di Azure HDInsight** per eseguire uno script Hive in un cluster di Azure HDInsight.

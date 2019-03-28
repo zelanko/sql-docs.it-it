@@ -8,15 +8,15 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: tutorial
 ms.assetid: a7e6ec9c-d31d-4613-9525-8947a7b358f7
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: b9cca20997ed2bfe8b32d09376186691253d6e90
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 2eb654217e05004dab02c97941171e0725af5715
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52528597"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58288777"
 ---
 # <a name="lesson-1-3---adding-packages-and-other-files"></a>Lezione 1-3 - Aggiunta di pacchetti e altri file
 In questa attività verranno aggiunti i pacchetti esistenti, i file ausiliari di supporto a singoli pacchetti e un file Leggimi relativo al progetto Deployment Tutorial creato nell'attività precedente. Verrò aggiunto ad esempio un file di dati XML contenente i dati relativi a un pacchetto e un file di testo che include informazioni su tutti i pacchetti del progetto.  
@@ -69,7 +69,7 @@ Nell'attività successiva si procederà all'aggiunta delle configurazioni per i 
 4.  Scegliere **Salva tutto**dal menu File.  
   
 ## <a name="next-task-in-lesson"></a>Attività successiva della lezione  
-[Passaggio 4: Aggiunta delle configurazioni dei pacchetti](../integration-services/lesson-1-4-adding-package-configurations.md)  
+[Passaggio 4: Aggiunta di configurazioni pacchetto](../integration-services/lesson-1-4-adding-package-configurations.md)  
   
   
   

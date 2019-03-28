@@ -2,7 +2,7 @@
 title: CREATE DATABASE (Transact-SQL) | Microsoft Docs
 description: Sintassi di creazione database per SQL Server, database SQL di Azure, Azure SQL Data Warehouse e piattaforma di strumenti analitici
 ms.custom: ''
-ms.date: 03/08/2019
+ms.date: 03/18/2019
 ms.prod: sql
 ms.prod_service: sql-database
 ms.reviewer: ''
@@ -38,12 +38,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-current||=azuresqldb-mi-current||=azure-sqldw-latest||>=aps-pdw-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 6283f95a8d3dc34964d13a21b75097ab5f51a56d
-ms.sourcegitcommit: 03870f0577abde3113e0e9916cd82590f78a377c
+ms.openlocfilehash: d63faad8a29853354e6187d963dc23ccd78b0252
+ms.sourcegitcommit: 5683044d87f16200888eda2c2c4dee38ff87793f
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/18/2019
-ms.locfileid: "57974550"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58222145"
 ---
 # <a name="create-database"></a>CREATE DATABASE
 
@@ -1317,7 +1317,7 @@ Dimensioni massime consentite per il database. Le dimensioni del database non po
 Dimensioni massime consentite per i dati rowstore nel database. Le dimensioni dei dati archiviati nelle tabelle rowstore, nel deltastore di un indice columnstore o in un indice non cluster in un indice columnstore cluster non possono superare MAXSIZE. I dati compressi in formato columnstore non hanno un limite di dimensioni e non sono vincolati dal valore MAXSIZE.
 
 SERVICE_OBJECTIVE     
-Specifica il livello di prestazioni. Per altre informazioni sugli obiettivi di servizio per [!INCLUDE[ssSDW](../../includes/sssdw-md.md)], vedere [Livelli di prestazioni](https://azure.microsoft.com/documentation/articles/performance-tiers/).
+Specifica il livello di prestazioni. Per altre informazioni sugli obiettivi di servizio per SQL Data Warehouse, vedere [Unità Data Warehouse (DWU)](https://docs.microsoft.com/azure/sql-data-warehouse/what-is-a-data-warehouse-unit-dwu-cdwu).
 
 ## <a name="general-remarks"></a>Osservazioni generali
 Usare [DATABASEPROPERTYEX](../../t-sql/functions/databasepropertyex-transact-sql.md) per visualizzare le proprietà del database.

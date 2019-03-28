@@ -1,27 +1,26 @@
 ---
 title: Modificare il word breaker usato per le lingue Inglese (Stati Uniti) e Inglese (Regno Unito) | Microsoft Docs
-ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: search, sql-database
-ms.reviewer: ''
 ms.technology: search
 ms.topic: conceptual
 ms.assetid: 6b5d2177-db98-47f5-b32e-4b80a2f74ffe
-author: douglaslMS
-ms.author: douglasl
+author: pmasl
+ms.author: pelopes
+ms.reviewer: mikeray
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 9e6d1ec3aff285b91e1099187f53b904cad7368c
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 9f26af2d630270428aec6affa0d633eeac86194b
+ms.sourcegitcommit: 7d4a3fc0f2622cbc6930d792be4a9b3fcac4c4b6
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51670871"
+ms.lasthandoff: 03/21/2019
+ms.locfileid: "58305459"
 ---
 # <a name="change-the-word-breaker-used-for-us-english-and-uk-english"></a>Modifica del word breaker utilizzato per le lingue Inglese (Stati Uniti) e Inglese (Regno Unito)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] installa una nuova versione (versione 14.0.4999.1038) del word breaker e dello stemmer per la lingua inglese che sostituisce la versione precedente (versione 12.0.6828.0). Per informazioni sul comportamento modificato dei nuovi componenti, vedere [Differenze di comportamento nella ricerca full-text](https://msdn.microsoft.com/library/573444e8-51bc-4f3d-9813-0037d2e13b8f). In questo argomento viene descritto come passare dalla nuova versione di questi componenti alla versione precedente o come tornare alla nuova versione dalla versione precedente. Per le installazioni di cluster, queste modifiche devono essere apportate in tutti i nodi primari e passivi.  
+  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] installa una nuova versione (versione 14.0.4999.1038) del word breaker e dello stemmer per la lingua inglese che sostituisce la versione precedente (versione 12.0.6828.0). Per informazioni sul comportamento modificato dei nuovi componenti, vedere [Differenze di comportamento nella ricerca full-text](/sql/database-engine/behavior-changes-to-full-text-search). In questo argomento viene descritto come passare dalla nuova versione di questi componenti alla versione precedente o come tornare alla nuova versione dalla versione precedente. Per le installazioni di cluster, queste modifiche devono essere apportate in tutti i nodi primari e passivi.  
   
  Le versioni precedenti di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utilizzano word breaker diversi rappresentati da CLSID diversi per la lingua inglese Stati Uniti (LCID 1033) e per la lingua inglese Regno Unito (LCID 2057). In questa versione entrambi gli LCID utilizzano gli stessi componenti con gli stessi CLSID, come illustrato nella tabella seguente:  
   
@@ -38,7 +37,7 @@ ms.locfileid: "51670871"
   
 #### <a name="to-switch-from-the-current-version-of-the-us-english-word-breaker-to-the-previous-version"></a>Per passare dalla versione corrente del word breaker per la lingua inglese Stati Uniti alla versione precedente  
   
-1.  Nel Registro di sistema spostarsi sul nodo seguente: **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\\<RadiceIstanza\>\MSSearch\CLSID**.  
+1.  Nel Registro di sistema passare al nodo seguente: **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\\<RadiceIstanza\>\MSSearch\CLSID**.  
   
 2.  Utilizzare i passaggi seguenti per aggiungere nuove chiavi per i ClassID COM per le interfacce del word breaker e dello stemmer per la lingua inglese Stati Uniti precedenti per l'LCID 1033:  
   
@@ -50,7 +49,7 @@ ms.locfileid: "51670871"
   
     4.  Aggiornare i dati (predefiniti) del valore della chiave a **infosoft.dll**.  
   
-3.  Nel Registro di sistema spostarsi sul nodo seguente: **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\\<RadiceIstanza\>\MSSearch\Language\enu**.  
+3.  Nel Registro di sistema passare al nodo seguente: **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\\<RadiceIstanza\>\MSSearch\Language\enu**.  
   
 4.  Aggiornare il valore della chiave **WBreakerClass** a **{188D6CC5-CB03-4C01-912E-47D21295D77E}**.  
   
@@ -60,7 +59,7 @@ ms.locfileid: "51670871"
   
 #### <a name="to-switch-from-the-current-version-of-the-uk-english-word-breaker-to-the-previous-version"></a>Per passare dalla versione corrente del word breaker per la lingua inglese Regno Unito alla versione precedente  
   
-1.  Nel Registro di sistema spostarsi sul nodo seguente: **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\\<RadiceIstanza\>\MSSearch\CLSID**.  
+1.  Nel Registro di sistema passare al nodo seguente: **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\\<RadiceIstanza\>\MSSearch\CLSID**.  
   
 2.  Utilizzare i passaggi seguenti per aggiungere una nuova chiave per i ClassID COM per le interfacce del word breaker e dello stemmer per la lingua inglese Regno Unito precedenti per l'LCID 2057:  
   
@@ -84,7 +83,7 @@ ms.locfileid: "51670871"
   
 #### <a name="to-switch-back-from-the-previous-version-of-the-us-english-word-breaker-to-the-current-version"></a>Per tornare alla versione corrente del word breaker per la lingua inglese Stati Uniti dalla versione precedente  
   
-1.  Nel Registro di sistema spostarsi sul nodo seguente: **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\\<RadiceIstanza\>\MSSearch\CLSID**.  
+1.  Nel Registro di sistema passare al nodo seguente: **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\\<RadiceIstanza\>\MSSearch\CLSID**.  
   
 2.  Se le chiavi seguenti non sono presenti, utilizzare la procedura indicata di seguito per aggiungere una nuova chiave per i ClassID COM per le interfacce del word breaker e dello stemmer per la lingua inglese Stati Uniti correnti per l'LCID 1033:  
   
@@ -106,7 +105,7 @@ ms.locfileid: "51670871"
   
 #### <a name="to-switch-back-from-the-previous-version-of-the-uk-english-word-breaker-to-the-current-version"></a>Per tornare alla versione corrente del word breaker per la lingua inglese Regno Unito dalla versione precedente  
   
-1.  Nel Registro di sistema spostarsi sul nodo seguente: **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\\<RadiceIstanza\>\MSSearch\CLSID**.  
+1.  Nel Registro di sistema passare al nodo seguente: **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\\<RadiceIstanza\>\MSSearch\CLSID**.  
   
 2.  Se le chiavi seguenti non sono presenti, utilizzare la procedura indicata di seguito per aggiungere una nuova chiave per i ClassID COM per le interfacce del word breaker e dello stemmer per la lingua inglese Regno Unito correnti per l'LCID 2057:  
   
@@ -128,6 +127,6 @@ ms.locfileid: "51670871"
   
 ## <a name="see-also"></a>Vedere anche  
  [Ripristinare i word breaker utilizzati dalla ricerca alla versione precedente](../../relational-databases/search/revert-the-word-breakers-used-by-search-to-the-previous-version.md)   
- [Differenze di comportamento nella ricerca full-text](https://msdn.microsoft.com/library/573444e8-51bc-4f3d-9813-0037d2e13b8f)  
+ [Differenze di comportamento nella ricerca full-text](/sql/database-engine/behavior-changes-to-full-text-search)  
   
   

@@ -14,15 +14,15 @@ helpviewer_keywords:
 - errors [Integration Services], troubleshooting
 - packages [Integration Services], troubleshooting
 ms.assetid: f18d6ff6-e881-444c-a399-730b52130e7c
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 4aca92b322d3eb0a3b987300d88a877d29cf3cda
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: e0ee84933cf0644ac4759639c5ce6e2b3f183f04
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51639028"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58290127"
 ---
 # <a name="troubleshooting-tools-for-package-execution"></a>Risoluzione dei problemi relativi agli strumenti per l'esecuzione del pacchetto
   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] include funzionalità e strumenti per la risoluzione dei problemi che possono verificarsi quando si eseguono i pacchetti dopo averli completati e distribuiti.  
@@ -82,7 +82,7 @@ ms.locfileid: "51639028"
   
     3.  **Valutare l'opportunità di acquisire i dati sul conteggio delle righe**. Prendere in considerazione la creazione di una tabella separata per le informazioni sul conteggio delle righe, in cui ogni istanza di esecuzione di un pacchetto è identificata tramite il relativo ExecutionID. Utilizzare la trasformazione Conteggio righe per salvare il conteggio delle righe in una serie di variabili in punti critici del flusso di dati. Al termine del flusso di dati, utilizzare un'attività Esegui SQL per inserire le serie di valori in una riga della tabella, per operazioni successive di analisi e creazione di report.  
   
-     Per altre informazioni su questo approccio, vedere la sezione relativa a registrazione e controllo ETL nel white paper [!INCLUDE[msCoName](../../includes/msconame-md.md)] [Progetto REAL: progettazione ETL di Business Intelligence](https://go.microsoft.com/fwlink/?LinkId=96602).  
+     Per altre informazioni su questo approccio, vedere la sezione relativa a registrazione e controllo ETL nel white paper [!INCLUDE[msCoName](../../includes/msconame-md.md)] [Project REAL: Business Intelligence ETL Design Practices](https://go.microsoft.com/fwlink/?LinkId=96602) (Project REAL: Indicazioni di progettazione ETL per Business Intelligence).  
   
 ## <a name="troubleshoot-package-execution-by-using-debug-dump-files"></a>Risoluzione dei problemi relativi all'esecuzione di pacchetti tramite i file di dump del debug  
  In [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]è possibile creare file di dump del debug contenenti informazioni sull'esecuzione di un pacchetto. Per altre informazioni, vedere [Generazione di file di dump per l'esecuzione del pacchetto](../../integration-services/troubleshooting/generating-dump-files-for-package-execution.md).  

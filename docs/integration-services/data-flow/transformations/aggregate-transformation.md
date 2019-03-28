@@ -17,15 +17,15 @@ helpviewer_keywords:
 - Aggregate transformation [Integration Services]
 - large data, SSIS transformations
 ms.assetid: 2871cf2a-fbd3-41ba-807d-26ffff960e81
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 42ed9609e1c2b9337e0c7f98b27c533144f8213d
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: 9a45b20ac413c04ca641674020e8d98ed39a01e8
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51638928"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58290557"
 ---
 # <a name="aggregate-transformation"></a>Trasformazione Aggregazione
   La trasformazione Aggregazione applica funzioni di aggregazione, ad esempio Media, ai valori delle colonne e copia i risultati nell'output della trasformazione. Oltre alle funzioni di aggregazione, per questa trasformazione è disponibile la clausola GROUP BY, che consente di specificare i gruppi su cui eseguire l'aggregazione.  
@@ -103,7 +103,7 @@ ms.locfileid: "51638928"
   
  La trasformazione Aggregazione è asincrona, pertanto non legge e pubblica i dati riga per riga, ma legge l'intero set di righe, ne esegue i raggruppamenti e le aggregazioni e quindi pubblica i risultati.  
   
- Questa trasformazione non passa alcuna colonna, ma crea nuove colonne nel flusso di dati per i dati pubblicati. Solo le colonne di input a cui vengono applicate le funzioni di aggregazione e le colonne di input utilizzate dalla trasformazione per il raggruppamento vengono copiate nell'output della trasformazione. L'input di una trasformazione Aggregazione può includere ad esempio tre colonne: **CountryRegion**, **City**e **Population**. La trasformazione esegue un raggruppamento in base alla colonna **CountryRegion** e applica la funzione alla colonna **Population** . L'output non include pertanto la colonna **City** .  
+ Questa trasformazione non passa alcuna colonna, ma crea nuove colonne nel flusso di dati per i dati pubblicati. Solo le colonne di input a cui vengono applicate le funzioni di aggregazione e le colonne di input utilizzate dalla trasformazione per il raggruppamento vengono copiate nell'output della trasformazione. L'input di una trasformazione Aggregazione può includere ad esempio tre colonne: **CountryRegion**, **City** e **Population**. La trasformazione esegue un raggruppamento in base alla colonna **CountryRegion** e applica la funzione alla colonna **Population** . L'output non include pertanto la colonna **City** .  
   
  È inoltre possibile aggiungere più output alla trasformazione Aggregazione e indirizzare ogni aggregazione a un output diverso. Se ad esempio la trasformazione Aggregazione applica le funzioni Somma e Media, ogni aggregazione potrà essere indirizzata a un output diverso.  
   

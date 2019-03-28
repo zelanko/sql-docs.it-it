@@ -15,15 +15,15 @@ f1_keywords:
 helpviewer_keywords:
 - Web Service task [Integration Services]
 ms.assetid: 5c7206f1-7d6a-4923-8dff-3c4912da4157
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: f6dde11eba11acc7e0136c34025e74fead99f9e1
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: c59a55f8ccb713024394ecf611299f71a5cf733c
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52502612"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58271972"
 ---
 # <a name="web-service-task"></a>Attività Servizio Web
   L'attività Servizio Web esegue un metodo di servizio Web. È possibile utilizzare l'attività Servizio Web per gli scopi seguenti:  
@@ -89,7 +89,7 @@ ms.locfileid: "52502612"
 > [!IMPORTANT]  
 >  La gestione connessione HTTP supporta solo l'autenticazione anonima e l'autenticazione di base. Non supporta l'autenticazione di Windows.  
   
- **Argomenti correlati**: [Gestione connessione HTTP](../../integration-services/connection-manager/http-connection-manager.md), [Editor gestione connessione HTTP &#40;pagina Server&#41;](../../integration-services/connection-manager/http-connection-manager-editor-server-page.md)  
+ **Argomenti correlati:**  [Gestione connessione HTTP](../../integration-services/connection-manager/http-connection-manager.md), [Editor gestione connessione HTTP &#40;pagina Server&#41;](../../integration-services/connection-manager/http-connection-manager-editor-server-page.md)  
   
  **WSDLFile**  
  Digitare il percorso completo di un file WSDL presente in locale nel computer oppure fare clic sul pulsante sfoglia **(...)** e individuare il file.  
@@ -172,13 +172,13 @@ ms.locfileid: "52502612"
  **File**  
  Selezionare una gestione connessione file nell'elenco oppure crearne una nuova facendo clic su \<**Nuova connessione**>.  
   
- **Argomenti correlati:** [File Connection Manager](../../integration-services/connection-manager/file-connection-manager.md), [File Connection Manager Editor](../../integration-services/connection-manager/file-connection-manager-editor.md)  
+ **Argomenti correlati:** [Gestione connessione file](../../integration-services/connection-manager/file-connection-manager.md), [Editor gestione connessione file](../../integration-services/connection-manager/file-connection-manager-editor.md)  
   
 #### <a name="outputtype--variable"></a>OutputType = Variabile  
  **Variabile**  
  Selezionare una variabile nell'elenco oppure crearne una nuova facendo clic su \<**Nuova variabile**>.  
   
- **Argomenti correlati**  [Variabili di Integration Services &#40;SSIS&#41;](../../integration-services/integration-services-ssis-variables.md), [Aggiungere una variabile](https://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5)  
+ **Argomenti correlati:**  [Variabili di Integration Services &#40;SSIS&#41;](../../integration-services/integration-services-ssis-variables.md), [Aggiungere una variabile](https://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5)  
   
 ## <a name="related-content"></a>Contenuto correlato  
- Video sulla [Procedura: Chiamata a un servizio Web tramite l'attività Servizio Web (video di SQL Server)](https://go.microsoft.com/fwlink/?LinkId=259642)sul sito technet.microsoft.com.  
+ Video [Procedura: Chiamata a un servizio Web tramite l'attività Servizio Web (video di SQL Server)](https://go.microsoft.com/fwlink/?LinkId=259642) nel sito technet.microsoft.com.  

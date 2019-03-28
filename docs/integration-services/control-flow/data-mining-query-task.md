@@ -16,15 +16,15 @@ helpviewer_keywords:
 - prediction queries [Integration Services]
 - Data Mining Query task [Integration Services]
 ms.assetid: f489348c-2008-4f66-8c2c-c07c3029439a
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 184f3337f706d2a19210a8304d6b351b352ea309
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: 3e2e77caa45d704c1ecaccb1bb85b6bf6845dd47
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51639898"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58281965"
 ---
 # <a name="data-mining-query-task"></a>Attività Query di data mining
   L'attività Query di data mining consente di eseguire query di stima basate sui modelli di data mining compilati in [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Una query di stima genera una stima per nuovi dati utilizzando modelli di data mining. È ad esempio possibile utilizzare una query di stima per stimare il numero di barche a vela che si prevede di vendere durante i mesi estivi o per generare un elenco dei potenziali clienti che probabilmente acquisteranno una barca a vela.  
@@ -121,7 +121,7 @@ ms.locfileid: "51639898"
  **Compila nuova query**  
  Consente di creare una query di data mining utilizzando uno strumento grafico.  
   
- **Argomenti correlati:** [Data Mining Query](../../integration-services/control-flow/data-mining-query.md)  
+ **Argomenti correlati:** [Query di data mining](../../integration-services/control-flow/data-mining-query.md)  
   
 ### <a name="parameter-mapping-tab-options"></a>Opzioni della scheda Mapping parametri  
  **Nome parametro**  

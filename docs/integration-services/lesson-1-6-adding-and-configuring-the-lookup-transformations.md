@@ -1,22 +1,21 @@
 ---
 title: 'Passaggio 6: Aggiungere e configurare le trasformazioni Ricerca | Microsoft Docs'
 ms.custom: ''
-ms.date: 01/03/2019
+ms.date: 03/19/2019
 ms.prod: sql
-ms.prod_service: integration-services
-ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: tutorial
 ms.assetid: 5c59f723-9707-4407-80ae-f05f483cf65f
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 82db40d3b3fd61129823b3e745d097b47bd6973b
-ms.sourcegitcommit: dd794633466b1da8ead9889f5e633bdf4b3389cd
+ms.reviewer: ''
+ms.openlocfilehash: b64cddbe6c786e488c1ba9b9d289e9e48f786cf3
+ms.sourcegitcommit: 5683044d87f16200888eda2c2c4dee38ff87793f
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54143377"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58221961"
 ---
 # <a name="lesson-1-6-add-and-configure-the-lookup-transformations"></a>Lezione 1-6: Aggiungere e configurare le trasformazioni Ricerca
 
@@ -98,7 +97,7 @@ In entrambi i casi la trasformazione Ricerca usa la gestione connessione OLE DB 
   
 8.  Nella pagina **Colonne** effettuare le selezioni seguenti:  
   
-    1.  Nel pannello **Colonne di input disponibili** trascinare **CurrencyDate** sul pannello **Colonne di ricerca disponibili** e rilasciarlo su **FullDateAlternateKey**.  
+    1.  Nel pannello **Colonne di input disponibili** trascinare **CurrencyDate** sul pannello **Colonne di ricerca disponibili** e rilasciarlo su **FullDateAlternateKey**.  Se viene visualizzato un messaggio che indica una mancata corrispondenza del tipo di dati, modificare il tipo di dati di CurrencyDate in [DT_DBDATE].
   
     2.  Nell'elenco **Colonne di ricerca disponibili** selezionare la casella di controllo a sinistra di **DateKey**.  
   
@@ -115,6 +114,3 @@ In entrambi i casi la trasformazione Ricerca usa la gestione connessione OLE DB 
   
 ## <a name="see-also"></a>Vedere anche  
 [Trasformazione Ricerca](../integration-services/data-flow/transformations/lookup-transformation.md)  
-  
-  
-  

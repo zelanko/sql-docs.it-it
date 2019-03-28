@@ -10,15 +10,15 @@ ms.topic: conceptual
 f1_keywords:
 - sql13.ssis.packagepublishwizard.f1
 ms.assetid: d32d9761-93fb-4020-bf82-231439c6f3ac
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 968ae6356d2f9d9b84b8cf2d5bf6b012b000b7b2
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 0096e6ff64267e6568abd22729f250a4c76adc03
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52521235"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58281865"
 ---
 # <a name="walkthrough-publish-an-ssis-package-as-a-sql-view"></a>Procedura dettagliata: Pubblicare un pacchetto SSIS come vista SQL
   Questa procedura dettagliata fornisce le informazioni necessarie per pubblicare un pacchetto SSIS come vista SQL in un database di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
@@ -55,7 +55,7 @@ ms.locfileid: "52521235"
   
 5.  Trascinare un **componente di origine** dalla casella degli strumenti alla **finestra di progettazione del flusso di dati** e configurarlo per estrarre dati da un'origine dati.  
   
-    1.  Ai fini della procedura dettagliata, creare un database di prova **TestDB** con una tabella **Dipendente**. Creare la tabella con tre colonne, **ID**, **Nome** e **Cognome**.  
+    1.  Ai fini della procedura dettagliata, creare un database di test **TestDB** con una tabella **Employee**. Creare la tabella con tre colonne, **ID**, **Nome** e **Cognome**.  
   
     2.  Impostare **ID** come chiave primaria.  
   
@@ -82,7 +82,7 @@ ms.locfileid: "52521235"
   
     2.  Seguire le istruzioni della procedura guidata per distribuire il progetto nel catalogo SSIS nel server di database locale. L'esempio seguente usa **Power BI** come nome della cartella e **SSISPackagePublishing** come nome del progetto nel catalogo SSIS.  
   
-## <a name="step-2-use-the-ssis-data-feed-publishing-wizard-to-publish-ssis-package-as-a-sql-view"></a>Passaggio 2: Usare la Pubblicazione guidata di feed di dati di SSIS per pubblicare il pacchetto SSIS come vista SQL.  
+## <a name="step-2-use-the-ssis-data-feed-publishing-wizard-to-publish-ssis-package-as-a-sql-view"></a>Passaggio 2: Usare la Pubblicazione guidata di feed di dati di SSIS per pubblicare il pacchetto SSIS come vista SQL  
  In questo passaggio verrà usata la Pubblicazione guidata di feed di dati di SQL Server Integration Services (SSIS) per pubblicare il pacchetto SSIS come vista in un database di SQL Server. I dati di output del pacchetto possono essere utilizzati eseguendo query in questa vista.  
   
  La Pubblicazione guidata di feed di dati di SSIS crea un server collegato usando il provider OLE DB per SSIS (SSISOLEDB) e quindi crea una vista SQL costituita da una query di tale server. La query include il nome della cartella, il nome del progetto e il nome del pacchetto nel catalogo SSIS.  

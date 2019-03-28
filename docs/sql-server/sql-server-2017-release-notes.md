@@ -1,28 +1,28 @@
 ---
 title: Note sulla versione di SQL Server 2017 | Microsoft Docs
 ms.custom: ''
-ms.date: 10/31/2017
+ms.date: 11/01/2017
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: install
 ms.topic: conceptual
 ms.assetid: 13942af8-5a40-4cef-80f5-918386767a47
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 monikerRange: = sql-server-2017 || = sqlallproducts-allversions
-ms.openlocfilehash: d414f256e0eb06bfe3925b0e8e1a61b4799c3c7c
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: b5e86d63ebfc5f842f2df8c090243fb5f311915b
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51703769"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58290257"
 ---
 # <a name="sql-server-2017-release-notes"></a>Note sulla versione di SQL Server 2017
 [!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]
 Questo articolo descrive le limitazioni e i problemi relativi a SQL Server 2017. Per informazioni correlate, vedere:
 - [Novità di SQL Server 2017](../sql-server/what-s-new-in-sql-server-2017.md)
-- [Note sulla versione di SQL Server in Linux](https://docs.microsoft.com/sql/linux/sql-server-linux-release-notes)
+- [Note sulla versione di SQL Server in Linux](../linux/sql-server-linux-release-notes.md)
 - [Aggiornamenti cumulativi di SQL Server 2017](https://aka.ms/sql2017cu) per informazioni sulla versione di aggiornamento cumulativo più recente
 
 **Prova SQL Server 2016;**
@@ -35,7 +35,7 @@ Questo articolo descrive le limitazioni e i problemi relativi a SQL Server 2017.
 ## <a name="sql-server-2017---general-availability-release-october-2017"></a>SQL Server 2017 - versione di disponibilità generale (ottobre 2017)
 ### <a name="database-engine"></a>Motore di database
 
-- **Problema e impatto sul cliente:** dopo l'aggiornamento è possibile che la condivisione di rete FILESTREAM esistente non sia più disponibile.
+- **Problema e impatto per i clienti:** dopo l'aggiornamento è possibile che la condivisione di rete FILESTREAM esistente non sia più disponibile.
 
 - **Soluzione alternativa:** riavviare il computer e verificare se la condivisione di rete FILESTREAM è disponibile. Se la condivisione non è ancora disponibile, eseguire la procedura seguente:
 
@@ -44,7 +44,7 @@ Questo articolo descrive le limitazioni e i problemi relativi a SQL Server 2017.
     3. Selezionare di nuovo **Abilita FILESTREAM per l'accesso tramite il flusso di I/O dei file** con il nome di condivisione originale e fare clic su **Applica**.
 
 ### <a name="master-data-services-mds"></a>Master Data Services (MDS)
-- **Problema e impatto sul cliente:**  nella pagina delle autorizzazioni utente, quando si concede l'autorizzazione a livello radice nella visualizzazione albero entità, viene visualizzato l'errore seguente: `"The model permission cannot be saved. The object guid is not valid"`
+- **Problema e impatto per i clienti:**  nella pagina delle autorizzazioni utente, quando si concede l'autorizzazione a livello radice nella visualizzazione albero entità, viene visualizzato l'errore seguente: `"The model permission cannot be saved. The object guid is not valid"`
 
 - **Soluzioni alternative:** 
   - Concedere l'autorizzazione per i nodi figlio nella visualizzazione albero anziché a livello radice.
@@ -52,31 +52,31 @@ Questo articolo descrive le limitazioni e i problemi relativi a SQL Server 2017.
   - Eseguire lo script descritto in questo blog del team MDS relativo all'[errore durante l'applicazione di autorizzazioni a livello di entità](https://sqlblog.com/blogs/mds_team/archive/2017/09/05/sql-server-2016-sp1-cu4-regression-error-while-applying-permission-on-entity-level-quick-workaround.aspx)
 
 ### <a name="analysis-services"></a>Analysis Services
-- **Problema e impatto per i clienti:** i connettori dati per le origini seguenti non sono ancora disponibili per i modelli tabulari a livello di compatibilità 1400.
+- **Problema e impatto per i clienti:** i connettori dati per le origini seguenti non sono ancora disponibili per i modelli tabulari al livello di compatibilità 1400.
   - Amazon Redshift
   - IBM Netezza
   - Impala
-- **Soluzione alternativa:** nessuna.   
+- **Soluzione alternativa:** Nessuna.   
 
-- **Problema e impatto sul cliente:** i modelli di query diretta al livello di compatibilità 1400 con prospettive possono avere esito negativo nell'esecuzione di query o nell'individuazione dei metadati.
+- **Problema e impatto per i clienti:** i modelli di query diretta al livello di compatibilità 1400 con prospettive possono avere esito negativo nell'esecuzione di query o nell'individuazione dei metadati.
 - **Soluzione alternativa:** rimuovere le prospettive ed eseguire di nuovo la distribuzione.
 
 ### <a name="tools"></a>Strumenti
-- **Problema e impatto sul cliente:** l'esecuzione di *DReplay* ha esito negativo con il messaggio seguente: "Errore DReplay Errore imprevisto".
-- **Soluzione alternativa:** nessuna.
+- **Problema e impatto per i clienti:** l'esecuzione *DReplay* ha esito negativo con il messaggio seguente: "Errore DReplay Si è verificato un errore imprevisto".
+- **Soluzione alternativa:** Nessuna.
 
 ![horizontal_bar](../sql-server/media/horizontal-bar.png)
 ## <a name="sql-server-2017-release-candidate-rc2---august-2017"></a>SQL Server 2017 Release Candidate (RC2, agosto 2017)
-Non sono disponibili note sulla versione di SQL Server in Windows per questa versione. Vedere [Note sulla versione di SQL Server in Linux](https://docs.microsoft.com/sql/linux/sql-server-linux-release-notes).
+Non sono disponibili note sulla versione di SQL Server in Windows per questa versione. Vedere [Note sulla versione di SQL Server in Linux](../linux/sql-server-linux-release-notes.md).
 
 
 ![horizontal_bar](../sql-server/media/horizontal-bar.png)
 ## <a name="sql-server-2017-release-candidate-rc1---july-2017"></a>Versione finale candidata di SQL Server 2017 (RC1 - luglio 2017)
 ### <a name="sql-server-integration-services-ssis-rc1---july-2017"></a>SQL Server Integration Services (SSIS) (RC1 - luglio 2017)
-- **Problema e impatto sul cliente:** il parametro *runincluster* della stored procedure **[catalog].[create_execution]** è stato rinominato in *runinscaleout* per coerenza e leggibilità.
-- **Soluzione alternativa:** se esistono script per eseguire i pacchetti in Scale Out, perché gli script funzionino nella versione RC1 è necessario modificare il nome del parametro da *runincluster* a *runinscaleout*.
+- **Problema e impatto per i clienti:** Il parametro *runincluster* della stored procedure **[catalog].[create_execution]** è stato rinominato in *runinscaleout* per coerenza e leggibilità.
+- **Soluzione alternativa:** Se esistono script che eseguono pacchetti in Scale Out, è necessario modificare il nome del parametro da *runincluster* a *runinscaleout* affinché gli script possano essere usati nella versione RC1.
 
-- **Problema e impatto sul cliente:** in SQL Server Management Studio (SSMS) 17.1 e nelle versioni precedenti non è possibile eseguire i pacchetti in Scale Out nella versione RC1. Messaggio di errore: "*@runincluster* non è un parametro per la procedura **create_execution**." Questo problema viene risolto nella versione 17.2 di SSMS. La versione 17.2 e le versioni successive di SSMS supportano il nuovo nome di parametro ed eseguono i pacchetti in Scale Out. 
+- **Problema e impatto per i clienti:** In SQL Server Management Studio (SSMS) 17.1 e nelle versioni precedenti non è possibile eseguire i pacchetti in Scale Out nella versione RC1. Messaggio di errore: "*@runincluster* non è un parametro per la procedura **create_execution**." Questo problema viene risolto nella versione 17.2 di SSMS. La versione 17.2 e le versioni successive di SSMS supportano il nuovo nome di parametro ed eseguono i pacchetti in Scale Out. 
 - **Soluzione alternativa:** fino a quando non sarà disponibile SSMS versione 17.2:
   1. Usare la versione esistente di SSMS per generare lo script di esecuzione del pacchetto.
   2. Modificare il nome del parametro *runincluster* in *runinscaleout* nello script.
@@ -85,26 +85,26 @@ Non sono disponibili note sulla versione di SQL Server in Windows per questa ver
 ![horizontal_bar](../sql-server/media/horizontal-bar.png)
 ## <a name="sql-server-2017-ctp-21-may--2017"></a>SQL Server 2017 CTP 2.1 (maggio 2017)
 ### <a name="documentation-ctp-21"></a>Documentazione (CTP 2.1)
-- **Problema e impatto sul cliente:** la documentazione di [!INCLUDE[ssSQLv14_md](../includes/sssqlv14-md.md)] è limitata e il contenuto è incluso nel set di documentazione di [!INCLUDE[ssSQL15_md](../includes/sssql15-md.md)] .  Il contenuto di articoli specifici di [!INCLUDE[ssSQLv14_md](../includes/sssqlv14-md.md)] è indicato con **Si applica a**. 
-- **Problema e impatto sul cliente:** per [!INCLUDE[ssSQLv14_md](../includes/sssqlv14-md.md)]non è disponibile contenuto offline.
+- **Problema e impatto per i clienti:** la documentazione per [!INCLUDE[ssSQLv14_md](../includes/sssqlv14-md.md)] è limitata e il contenuto è incluso nel set di documentazione di [!INCLUDE[ssSQL15_md](../includes/sssql15-md.md)].  Il contenuto di articoli specifici di [!INCLUDE[ssSQLv14_md](../includes/sssqlv14-md.md)] è indicato con **Si applica a**. 
+- **Problema e impatto per i clienti:** non è disponibile contenuto offline per [!INCLUDE[ssSQLv14_md](../includes/sssqlv14-md.md)].
 
 ### <a name="sql-server-reporting-services-ctp-21"></a>SQL Server Reporting Services (CTP 2.1)
 
-- **Problema e impatto per i clienti:** se SQL Server Reporting Services e il server di report di Power BI sono presenti nello stesso computer e si disinstalla uno dei due, non è possibile connettersi al server di report rimanente con Configuration Manager del server di report.
+- **Problema e impatto per i clienti:** se SQL Server Reporting Services e il server di report di Power BI sono presenti nello stesso computer e si disinstalla uno dei due, non è possibile connettersi al server di report rimanente con Gestione configurazione del server di report.
 - **Soluzione alternativa:** per risolvere questo problema, seguire questa procedura dopo aver disinstallato uno dei server.
 
     1. Avviare un prompt dei comandi in modalità amministratore.
     2. Passare alla directory in cui è installato il server di report rimanente.
 
-        *Percorso predefinito per il Server di report di Power BI: c:\Programmi\Microsoft Power BI Report Server*
+        *Percorso predefinito per il Server di report di Power BI: C:\Programmi\Microsoft Power BI Report Server*
 
-        *Percorso predefinito per il Server di report di Power BI: c:\Programmi\Microsoft SQL Server Reporting Services*
+        *Percorso predefinito per SQL Server Reporting Services: C:\Programmi\Microsoft SQL Server Reporting Services*
 
     3. Passare quindi alla cartella successiva, vale a dire *SSRS* o *PBIRS* a seconda del server di report rimanente.
     4. Passare alla cartella WMI.
     5. Eseguire il comando seguente:
 
-        ```
+        ```console
         regsvr32 /i ReportingServicesWMIProvider.dll
         ```
 
@@ -116,9 +116,9 @@ Non sono disponibili note sulla versione di SQL Server in Windows per questa ver
 
 ### <a name="tsqllanguageservicemsi-ctp-21"></a>TSqlLanguageService.msi (CTP 2.1)
 
-- **Problema e impatto sul cliente:** dopo l'installazione in un computer in cui è installata una versione del 2016 di *TSqlLanguageService.msi* (mediante il programma di installazione di SQL Server o come ridistribuibile autonomo), vengono rimosse le versioni 13.* (SQL 2016) di *Microsoft.SqlServer.Management.SqlParser.dll* e *Microsoft.SqlServer.Management.SystemMetadataProvider.dll*. Tutte le applicazioni che presentano una dipendenza dalle versioni 2016 di tali assembly smetteranno di funzionare e genereranno un errore simile a: *errore: Impossibile caricare il file o l'assembly 'Microsoft.SqlServer.Management.SqlParser, Version=13.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91' o una delle relative dipendenze. Impossibile trovare il file specificato.*
+- **Problema e impatto per i clienti:** dopo l'installazione in un computer in cui è installata una versione del 2016 di *TSqlLanguageService.msi* (mediante il programma di installazione di SQL Server o come ridistribuibile autonomo), vengono rimosse le versioni 13.* (SQL 2016) di *Microsoft.SqlServer.Management.SqlParser.dll* e *Microsoft.SqlServer.Management.SystemMetadataProvider.dll*. Qualsiasi applicazione con una dipendenza dalle versioni 2016 di questi assembly smette di funzionare e genera un errore simile a: *Errore: Impossibile caricare il file o l'assembly 'Microsoft.SqlServer.Management.SqlParser, Version=13.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91' o una delle relative dipendenze. Impossibile trovare il file specificato.*
 
-   I tentativi di reinstallare una versione del 2016 di TSqlLanguageService.msi hanno esito negativo con il messaggio: *Installazione di Servizio linguaggio T-SQL di Microsoft SQL Server 2016 non riuscita. Nel computer è già presente una versione successiva*.
+   Inoltre, eventuali tentativi di reinstallare una versione 2016 di TSqlLanguageService.msi avranno esito negativo con il messaggio: *Installazione di Servizio del linguaggio T-SQL di Microsoft SQL Server 2016 non riuscita. Nel computer è già presente una versione successiva*.
 
 - **Soluzione alternativa** Per risolvere questo problema e correggere un'applicazione che dipende dalla versione v13 degli assembly, seguire questi passaggi:
 
@@ -131,25 +131,27 @@ Non sono disponibili note sulla versione di SQL Server in Windows per questa ver
 ![horizontal_bar](../sql-server/media/horizontal-bar.png)
 ## <a name="sql-server-2017-ctp-20-april--2017"></a>SQL Server 2017 CTP 2.0 (aprile 2017)
 ### <a name="documentation-ctp-20"></a>Documentazione (CTP 2.0)
-- **Problema e impatto sul cliente:** la documentazione di [!INCLUDE[ssSQLv14_md](../includes/sssqlv14-md.md)] è limitata e il contenuto è incluso nel set di documentazione di [!INCLUDE[ssSQL15_md](../includes/sssql15-md.md)] .  Il contenuto di articoli specifici di [!INCLUDE[ssSQLv14_md](../includes/sssqlv14-md.md)] è indicato con **Si applica a**. 
-- **Problema e impatto sul cliente:** per [!INCLUDE[ssSQLv14_md](../includes/sssqlv14-md.md)]non è disponibile contenuto offline.
+- **Problema e impatto per i clienti:** la documentazione per [!INCLUDE[ssSQLv14_md](../includes/sssqlv14-md.md)] è limitata e il contenuto è incluso nel set di documentazione di [!INCLUDE[ssSQL15_md](../includes/sssql15-md.md)].  Il contenuto di articoli specifici di [!INCLUDE[ssSQLv14_md](../includes/sssqlv14-md.md)] è indicato con **Si applica a**. 
+- **Problema e impatto per i clienti:** non è disponibile contenuto offline per [!INCLUDE[ssSQLv14_md](../includes/sssqlv14-md.md)].
 
 ### <a name="always-on-availability-groups"></a>Gruppi di disponibilità Always On
 
-- **Problema e impatto sul cliente:** un'istanza di SQL Server che ospita una replica secondaria del gruppo di disponibilità si blocca se la versione principale di SQL Server è di livello inferiore rispetto all'istanza che ospita la replica primaria. Ciò influisce sugli aggiornamenti di tutte le versioni supportate di SQL Server che ospitano i gruppi di disponibilità per SQL Server [!INCLUDE[ssSQLv14_md](../includes/sssqlv14-md.md)] CTP 2.0. Il problema si verifica nelle condizioni seguenti. 
+- **Problema e impatto per i clienti:** si verifica un arresto anomalo di un'istanza di SQL Server che ospita una replica secondaria del gruppo di disponibilità se la versione principale di SQL Server è di livello inferiore rispetto all'istanza che ospita la replica primaria. Ciò influisce sugli aggiornamenti di tutte le versioni supportate di SQL Server che ospitano i gruppi di disponibilità per SQL Server [!INCLUDE[ssSQLv14_md](../includes/sssqlv14-md.md)] CTP 2.0. Il problema si verifica nelle condizioni seguenti. 
 
 > 1. L'utente effettua l'aggiornamento dell'istanza di SQL Server che ospita la replica secondaria, in conformità con le [procedure consigliate](../database-engine/availability-groups/windows/upgrading-always-on-availability-group-replica-instances.md).
 > 2. Dopo l'aggiornamento, si verifica un failover e la replica secondaria appena aggiornata diventa primaria prima che venga completato l'aggiornamento di tutte le repliche secondarie nel gruppo di disponibilità. La vecchia replica primaria è ora una replica secondaria, ovvero una versione inferiore rispetto a quella primaria.
 > 3. Il gruppo di disponibilità è in una configurazione non supportata e tutte le repliche secondarie rimanenti potrebbero essere esposte a un arresto anomalo del sistema. 
 
-- **Soluzione alternativa** Connettere all'istanza di SQL Server che ospita la nuova replica primaria e rimuovere la replica secondaria errata dalla configurazione.
+- **Soluzione alternativa** Connettersi all'istanza di SQL Server che ospita la nuova replica primaria e rimuovere la replica secondaria errata dalla configurazione.
 
-   `ALTER AVAILABILITY GROUP agName REMOVE REPLICA ON NODE instanceName`
+   ```sql
+   ALTER AVAILABILITY GROUP agName REMOVE REPLICA ON NODE instanceName;
+   ```
 
    Viene recuperata l'istanza di SQL Server che ospitava la replica secondaria.
 
 ## <a name="more-information"></a>Ulteriori informazioni
-- [note sulla versione di SQL Server Reporting Services](../reporting-services/reporting-services-release-notes.md).
+- [note sulla versione di SQL Server Reporting Services](../reporting-services/release-notes-reporting-services.md).
 - [Problemi noti di Machine Learning Services](../advanced-analytics/known-issues-for-sql-server-machine-learning-services.md)
 - [SQL Server Update Center (Centro aggiornamenti di SQL Server): collegamenti e informazioni per tutte le versioni supportate](https://msdn.microsoft.com/library/ff803383.aspx)
 

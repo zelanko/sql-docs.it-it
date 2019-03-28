@@ -13,15 +13,15 @@ f1_keywords:
 - sql13.ssis.designer.odbcsource.columns.f1
 - sql13.ssis.designer.odbcsource.errorhandling.f1
 ms.assetid: abcf34eb-9140-4100-82e6-b85bccd22abe
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: e291d13b6fb9d7f83bef22783baebccf6b713ee4
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b0518701a8f776fbe625fa77d35bfcc4f961973b
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47694510"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58289837"
 ---
 # <a name="odbc-source"></a>Origine ODBC
   Tramite l'origine ODBC vengono estratti dati da un database supportato da ODBC mediante una tabella di database, una vista o un'istruzione SQL.  
@@ -41,9 +41,9 @@ ms.locfileid: "47694510"
 ## <a name="error-handling"></a>Gestione degli errori  
  L'origine ODBC include un output degli errori. L'output degli errori del componente include le colonne di output seguenti:  
   
--   **Error Code**: numero che corrisponde all'errore corrente. Per un elenco degli errori, vedere la documentazione per il database supportato da ODBC in uso. Per un elenco dei codici di errore SSIS, vedere la Guida di riferimento ai messaggi e ai codici di errore SSIS.  
+-   **Error Code** (Codice errore): numero che corrisponde all'errore corrente. Per un elenco degli errori, vedere la documentazione per il database supportato da ODBC in uso. Per un elenco dei codici di errore SSIS, vedere la Guida di riferimento ai messaggi e ai codici di errore SSIS.  
   
--   **Error Column**: colonna di origine che provoca l'errore (per gli errori di conversione).  
+-   **Error Column**(Colonna errore): colonna di origine che causa l'errore (per gli errori di conversione).  
   
 -   Colonne dei dati di output standard.  
   
@@ -55,9 +55,9 @@ ms.locfileid: "47694510"
 ## <a name="extract-options"></a>Opzioni di estrazione  
  L'origine ODBC usa la modalità **Batch** o **Row-by-Row** . La modalità utilizzata è determinata dalla proprietà **FetchMethod** . Nell'elenco seguente vengono descritte le diverse modalità.  
   
--   **Batch**: il componente tenta di usare il metodo di recupero più efficiente in base alle funzionalità del provider ODBC rilevate. Per la maggior parte degli attuali provider ODBC, tale metodo è SQLFetchScroll con associazione di matrici (in cui le dimensioni delle matrici sono determinate dalla proprietà **BatchSize** ). Se si seleziona **Batch** e il provider non supporta questo metodo, la destinazione ODBC passa automaticamente alla modalità **Row-by-row** .  
+-   **Batch**: il componente tenta di usare il metodo di recupero più efficiente in base alle funzionalità del provider ODBC rilevate. Per la maggior parte degli attuali provider ODBC, tale metodo è SQLFetchScroll con associazione di matrici (in cui le dimensioni delle matrici sono determinate dalla proprietà **BatchSize** ). Se si seleziona **Batch** e il provider non supporta questo metodo, la destinazione ODBC passa automaticamente alla modalità **Riga per riga** .  
   
--   **Row-by Row**: il componente usa SQLFetch per recuperare le righe una per volta.  
+-   **Row-by Row** (Riga per riga): il componente usa SQLFetch per recuperare le righe una per volta.  
   
  Per altre informazioni sulla proprietà **FetchMethod** , vedere [Proprietà personalizzate dell'origine ODBC](../../integration-services/data-flow/odbc-source-custom-properties.md).  
   

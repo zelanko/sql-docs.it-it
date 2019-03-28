@@ -15,15 +15,15 @@ helpviewer_keywords:
 - literals [Integration Services]
 - mapping literals [Integration Services]
 ms.assetid: a980cd52-54ef-4b9c-b00c-e6807cf8e01f
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: d8ece192518501869f9d4d8d11934fc4dbaaaf78
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d4b6dec2cd9698d347ca247e26f4b931cb6ab56d
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47728169"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58279165"
 ---
 # <a name="numeric-string-and-boolean-literals"></a>Valori letterali numerici, stringa e booleani
  Le espressioni possono includere valori letterali numerici, stringa e booleani. L'analizzatore di espressioni supporta un'ampia gamma di valori letterali numerici, quali costanti intere, decimali e a virgola mobile. Supporta inoltre i suffissi per valori di tipo long e float, che specificano come gestire tali valori, e la notazione scientifica nei valori letterali numerici.  
@@ -57,10 +57,10 @@ ms.locfileid: "47728169"
 |------------------------|-----------------|  
 |{D}+{IS}|Valore letterale numerico integrale con almeno una cifra (D) e, facoltativamente, suffisso per valori di tipo long e/o per valori senza segno (IS).  Esempi: 457, 785u, 986L e 7945ul.|  
 |{D}+{E}{FS}|Valore letterale numerico non integrale con almeno una cifra (D), notazione scientifica e suffisso per valori di tipo long o float.  Esempi: 4E8l, 13e-2f e 5E+L.|  
-|{D}*"."{D}+{E}?{FS}|Valore letterale numerico non integrale con una cifra decimale, frazione decimale con almeno una cifra (D), esponente facoltativo (E) e identificatore di tipo float o long (FS). Questo valore letterale numerico ha tipo di dati DT_R4 o DT_R8.  Esempi: 6,45E3f, ,89E-2l e 1,05E+7F.|  
+|{D}*"."{D}+{E}?{FS}|Valore letterale numerico non integrale con una cifra decimale, frazione decimale con almeno una cifra (D), esponente facoltativo (E) e identificatore di tipo float o long (FS). Questo valore letterale numerico ha tipo di dati DT_R4 o DT_R8.  Esempi: 6,45E3f, 0,89E-2l e 1,05E+7F.|  
 |{D}+"."{D}*{E}?{FS}|Valore letterale numerico non integrale con almeno una cifra significativa (D), una cifra decimale, esponente (E) e un identificatore di tipo float o long (FS). Questo valore letterale numerico ha tipo di dati DT_R4 o DT_R8.  Esempi: 1,E-4f, 4,6E6L e 8,365E+2f.|  
 |{D}*.{D}+|Valore letterale numerico non integrale con precisione e scala. Include una cifra decimale e una frazione decimale con almeno una cifra (D). Questo valore letterale numerico ha tipo di dati DT_NUMERIC.  Esempi: ,9, 5,8 e 0,346.|  
-|{D}+.{D}*|Valore letterale numerico non integrale con precisione e scala. Include almeno una cifra significativa (D) e una cifra decimale. Questo valore letterale numerico ha tipo di dati DT_NUMERIC.  Esempi: 6,, 0,2 e 8,0.|  
+|{D}+.{D}*|Valore letterale numerico non integrale con precisione e scala. Include almeno una cifra significativa (D) e una cifra decimale. Questo valore letterale numerico ha tipo di dati DT_NUMERIC.  Esempi: 6., 0,2 e 8,.0.|  
 |#{D}+|Identificatore di derivazione. È costituito dal simbolo di cancelletto (#) e da almeno una cifra (D). Esempi: #123.|  
 |0[xX]{H}+{uU}|Valore letterale stringa in formato esadecimale. Include uno zero, una x maiuscola o minuscola, almeno una H maiuscola e, facoltativamente, il suffisso per valori senza segno. Esempi: 0xFF0A e 0X000010000U.|  
   
@@ -111,8 +111,8 @@ ms.locfileid: "47728169"
 |\xhhhh|Carattere Unicode in notazione esadecimale|  
   
 ## <a name="boolean-literals"></a>Valori letterali booleani  
- L'analizzatore di espressioni supporta i consueti valori letterali booleani: **True** e **False**. L'analizzatore di espressioni non fa distinzione tra maiuscole e minuscole ed è pertanto possibile utilizzare qualsiasi combinazione di maiuscole e minuscole. Ad esempio, è possibile utilizzare indifferentemente TRUE o True.  
+ L'analizzatore di espressioni supporta i valori letterali booleani soliti: **True** e **False**. L'analizzatore di espressioni non fa distinzione tra maiuscole e minuscole ed è pertanto possibile utilizzare qualsiasi combinazione di maiuscole e minuscole. Ad esempio, è possibile utilizzare indifferentemente TRUE o True.  
   
-> **NOTA** : nelle espressioni i valori letterali booleani devono essere delimitati da spazi.  
+> **NOTA:** Nelle espressioni i valori letterali booleani devono essere delimitati da spazi.  
   
   

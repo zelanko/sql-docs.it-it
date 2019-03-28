@@ -10,15 +10,15 @@ ms.topic: conceptual
 helpviewer_keywords:
 - incremental load [Integration Services],determining readiness
 ms.assetid: 04935f35-96cc-4d70-a250-0fd326f8daff
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 16801a8865260a1175fe4786869272774ed8b2c6
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 8c0ea69dd7aca4d8fea8499b59577dc3d507ad4a
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47596199"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58272135"
 ---
 # <a name="determine-whether-the-change-data-is-ready"></a>Come determinare se i dati delle modifiche sono pronti
   Nel flusso di controllo di un pacchetto di [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] che esegue un caricamento incrementale dei dati delle modifiche, la seconda attività consiste nel verificare che i dati delle modifiche per l'intervallo selezionato siano pronti. Questo passaggio è necessario in quanto il processo di acquisizione asincrono potrebbe non avere ancora elaborato tutte le modifiche fino all'endpoint selezionato.  
@@ -335,6 +335,6 @@ ms.locfileid: "47596199"
 ## <a name="next-step"></a>Passaggio successivo  
  Dopo avere determinato che i dati delle modifiche sono pronti, il passaggio successivo consiste nel prepararsi a eseguire una query per tali dati delle modifiche.  
   
- **Argomento successivo:** [Preparazione dell'esecuzione di una query per i dati delle modifiche](../../integration-services/change-data-capture/prepare-to-query-for-the-change-data.md)  
+ **Argomento successivo:** [Preparare l'esecuzione di una query per i dati delle modifiche](../../integration-services/change-data-capture/prepare-to-query-for-the-change-data.md)  
   
   

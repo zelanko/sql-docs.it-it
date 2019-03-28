@@ -8,15 +8,15 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 10f25703-49a2-4d45-abab-6b4da2a57ba5
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 864e98d7f137a4d642f11e741bfac6d27c5ed55e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: bd4f4adc566a3bef283c1c8e5757279df64966a3
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47795989"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58274548"
 ---
 # <a name="extract-data-by-using-the-odbc-source"></a>Estrarre dati tramite l'origine ODBC
   In questa procedura viene descritto come estrarre dati utilizzando un'origine ODBC. Per aggiungere e configurare un'origine ODBC, è necessario che il pacchetto includa già almeno un'attività Flusso di dati.  

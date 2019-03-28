@@ -18,15 +18,15 @@ helpviewer_keywords:
 - deployment utility [Integration Services]
 - deploying packages [Integration Services], configurations
 ms.assetid: de18468c-cff3-48f4-99ec-6863610e5886
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 2c92d803dd38015950123501743d6a0e0cdfa8fd
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e6238c07e4da7aa9b19a5264282a1c7c2733ecad
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47739609"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58277280"
 ---
 # <a name="deploy-packages-with-ssis"></a>Esercitazione SSIS: Distribuzione di pacchetti
 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] include strumenti che consentono di distribuire in modo semplice i pacchetti in un altro computer. Gli strumenti di distribuzione consentono inoltre di gestire eventuali dipendenze, ad esempio configurazioni e file necessari per il pacchetto. In questa esercitazione verrà illustrato come utilizzare tali strumenti per installare pacchetti e relative dipendenze in un computer di destinazione.    
@@ -49,7 +49,7 @@ L'obiettivo di questa esercitazione è simulare la complessità delle problemati
 Il modo più efficace per acquisire familiarità con i nuovi strumenti e controlli e con le caratteristiche disponibili in [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] consiste nell'usarli. Questa esercitazione consente di eseguire in modo semplificato i passaggi necessari per creare un progetto di [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] e quindi aggiungervi i pacchetti e gli altri file necessari. Dopo aver completato il progetto, si procederà alla creazione di un pacchetto di distribuzione, alla copia del pacchetto nel computer di destinazione e quindi all'installazione in quest'ultimo dei pacchetti.    
     
 ## <a name="prerequisites"></a>Prerequisites    
-Questa esercitazione è destinata agli utenti già esperti nelle operazioni di base sul file system, ma con una limitata conoscenza delle nuove caratteristiche disponibili in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]. Ai fini dell'apprendimento dei concetti di base di [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] che verranno usati in questa esercitazione, potrebbe risultare utile completare prima la seguente esercitazione di [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] : [Esercitazione SSIS: Creazione di un pacchetto ETL semplice](../integration-services/ssis-how-to-create-an-etl-package.md).    
+Questa esercitazione è destinata agli utenti già esperti nelle operazioni di base sul file system, ma con una limitata conoscenza delle nuove caratteristiche disponibili in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]. Ai fini dell'apprendimento dei concetti di base di [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] che verranno messi in pratica in questa esercitazione, potrebbe risultare utile completare prima l'esercitazione di [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] seguente: [SSIS: Creazione di un pacchetto ETL semplice](../integration-services/ssis-how-to-create-an-etl-package.md).    
     
 ### <a name="on-the-source-computer"></a>Nel computer di origine
 

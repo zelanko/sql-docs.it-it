@@ -12,15 +12,15 @@ helpviewer_keywords:
 - packages [Integration Services], running
 - remote packages [Integration Services]
 ms.assetid: 9f6ef376-3408-46bf-b5fa-fc7b18c689c9
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 0b1954044626059e8a637aa41292839062269250
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: 922a9abd267bec8b0400bc7d2c43d945d011d938
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51640020"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58274670"
 ---
 # <a name="loading-and-running-a-remote-package-programmatically"></a>Caricamento ed esecuzione di un pacchetto remoto a livello di programmazione
   Per eseguire pacchetti remoti da un computer locale in cui non è installato [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], avviare i pacchetti in modo che vengano eseguiti nel computer remoto in cui è installato [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]. A tale scopo, configurare il computer locale per l'utilizzo di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent, un servizio Web o un componente remoto per avviare i pacchetti nel computer remoto. Se si tenta di avviare i pacchetti remoti direttamente dal computer locale, i pacchetti verranno caricati e ne verrà effettuato il tentativo di esecuzione dal computer locale. Se nel computer locale non è installato [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], i pacchetti non verranno eseguiti.  
@@ -417,7 +417,7 @@ namespace LaunchSSISPackageSvcTestCS
   
 ## <a name="external-resources"></a>Risorse esterne  
   
--   Video relativo alla [procedura sull'automazione dell'esecuzione di un pacchetto SSIS usando SQL Server Agent (video di SQL Server)](https://technet.microsoft.com/sqlserver/ff686764.aspx) nel sito technet.microsoft.com  
+-   Video [Procedura: Automazione dell'esecuzione di un pacchetto usando SQL Server Agent (video di SQL Server)](https://technet.microsoft.com/sqlserver/ff686764.aspx) nel sito technet.microsoft.com  
   
 ## <a name="see-also"></a>Vedere anche  
  [Differenze tra l'esecuzione locale e remota](../../integration-services/run-manage-packages-programmatically/understanding-the-differences-between-local-and-remote-execution.md)   

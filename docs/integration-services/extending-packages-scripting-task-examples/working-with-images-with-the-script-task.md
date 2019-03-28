@@ -21,27 +21,27 @@ helpviewer_keywords:
 - JPEG format [Integration Services]
 - .jpeg files
 ms.assetid: 74aeb7ab-51b2-4b9f-84ee-0b46a7908ab9
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: de5aa91ae884b8aef977c47a2fa288f179a086fd
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: dee6d377d6b099a89dcbc2b12e93dc4aa7d86874
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47595710"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58270590"
 ---
 # <a name="working-with-images-with-the-script-task"></a>Utilizzo di immagini con l'attività Script
   Un database di prodotti o utenti include di frequente immagini oltre a testo e dati numerici. Lo spazio dei nomi **System.Drawing** in Microsoft .NET Framework fornisce le classi per la modifica delle immagini.  
   
- [Esempio 1: convertire immagini in formato JPEG](#example1)  
+ [Esempio 1: Convertire immagini in formato JPEG](#example1)  
   
- [Esempio 2: creare e salvare le immagini di anteprima](#example2)  
+ [Esempio 2: Creare e salvare le immagini di anteprima](#example2)  
   
 > [!NOTE]  
 >  Se si desidera creare un'attività da riutilizzare più facilmente con più pacchetti, è possibile utilizzare il codice di questo esempio di attività Script come punto iniziale per un'attività personalizzata. Per altre informazioni, vedere [Sviluppo di un'attività personalizzata](../../integration-services/extending-packages-custom-objects/task/developing-a-custom-task.md).  
   
-##  <a name="example1"></a> Descrizione dell'esempio 1: convertire immagini in formato JPEG  
+##  <a name="example1"></a> Descrizione dell'esempio 1: Convertire immagini in formato JPEG  
  Nell'esempio seguente viene aperto un file di immagine specificato da una variabile e lo salva come file JPEG compresso tramite un codificatore. Il codice per recuperare le informazioni sul codificatore viene incapsulato in una funzione privata.  
   
 #### <a name="to-configure-this-script-task-example-for-use-with-a-single-image-file"></a>Per configurare questa attività Script di esempio per l'utilizzo con un solo file di immagine  
@@ -150,7 +150,7 @@ End Function
   
 ```  
   
-##  <a name="example2"></a> Descrizione dell'esempio 2: creare e salvare le immagini di anteprima  
+##  <a name="example2"></a> Descrizione dell'esempio 2: Creare e salvare le immagini di anteprima  
  Nell'esempio seguente viene aperto un file di immagine specificato da una variabile, viene creata un'anteprima dell'immagine pur mantenendo una proporzione costante e viene salvata l'anteprima con un nome file modificato. Il codice che calcola l'altezza e larghezza dell'anteprima mantenendo una proporzione costante viene incapsulato in una subroutine privata.  
   
 #### <a name="to-configure-this-script-task-example-for-use-with-a-single-image-file"></a>Per configurare questa attività Script di esempio per l'utilizzo con un solo file di immagine  

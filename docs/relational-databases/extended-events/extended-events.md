@@ -1,7 +1,7 @@
 ---
-title: Eventi estesi - SQL Server | Microsoft Docs
+title: Panoramica di XEvent - SQL Server | Microsoft Docs
 ms.custom: ''
-ms.date: 12/16/2018
+ms.date: 12/17/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -15,14 +15,15 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 441d0535e75663150d12e5ff6c05a7b1067f3e6d
-ms.sourcegitcommit: 85fd3e1751de97a16399575397ab72ebd977c8e9
+ms.openlocfilehash: 3f98df357ab7e7dabf48a6f0e5975e8513de99f1
+ms.sourcegitcommit: 2111068372455b5ec147b19ca6dbf339980b267d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/17/2018
-ms.locfileid: "53531047"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58417203"
 ---
-# <a name="extended-events"></a>Eventi estesi
+# <a name="extended-events-overview"></a>Panoramica degli eventi estesi
+
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
 Gli eventi estesi di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sono dotati di un'architettura estremamente scalabile e configurabile che consente agli utenti di raccogliere le informazioni necessarie per diagnosticare o identificare un problema legato alle prestazioni.  

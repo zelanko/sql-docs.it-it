@@ -13,15 +13,15 @@ f1_keywords:
 - sql13.ssis.designer.odbcdest.columns.f1
 - sql13.ssis.designer.odbcdest.errorhandling.f1
 ms.assetid: bffa63e0-c737-4b54-b4ea-495a400ffcf8
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: faa30c32aea774d51a901402ff57975f14207e68
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d9594567f4412ddf72943a397c7fa3d425f8fb27
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47808289"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58273426"
 ---
 # <a name="odbc-destination"></a>Destinazione ODBC
   Tramite la destinazione ODBC viene eseguito il caricamento bulk di dati in tabelle di database supportate da ODBC. La destinazione ODBC utilizza una gestione connessione ODBC per la connessione all'origine dati.  
@@ -33,16 +33,16 @@ ms.locfileid: "47808289"
 ##  <a name="BKMK_odbcdestination_loadoptions"></a> Opzioni di caricamento  
  La destinazione ODBC può utilizzare uno tra due moduli di caricamento di accesso. Impostare la modalità in [Editor origine ODBC &#40;pagina Gestione connessione #41;](../../integration-services/data-flow/odbc-source-editor-connection-manager-page.md). Le due modalità sono:  
   
--   **Batch**: in questa modalità il componente tenta di usare il metodo di inserimento più efficiente in base alle funzionalità del provider ODBC rilevate. Per la maggior parte degli attuali provider ODBC, ciò significa preparare un'istruzione INSERT con parametri e quindi usare un'associazione di parametri di matrice a livello di riga, in cui le dimensioni della matrice sono determinate dalla proprietà **BatchSize** . Se si seleziona **Batch** e il provider non supporta questo metodo, la destinazione ODBC passa automaticamente alla modalità **Riga per riga** .  
+-   **Batch**: in questa modalità la destinazione ODBC tenta di usare il metodo di inserimento più efficiente in base alle funzionalità del provider ODBC rilevate. Per la maggior parte degli attuali provider ODBC, ciò significa preparare un'istruzione INSERT con parametri e quindi usare un'associazione di parametri di matrice a livello di riga, in cui le dimensioni della matrice sono determinate dalla proprietà **BatchSize** . Se si seleziona **Batch** e il provider non supporta questo metodo, la destinazione ODBC passa automaticamente alla modalità **Riga per riga** .  
   
--   **Riga per riga**: in questa modalità, tramite la destinazione ODBC viene preparata un'istruzione INSERT con parametri e viene usato **SQL Execute** per inserire le righe una per volta.  
+-   **Riga per riga**: in questa modalità, la destinazione ODBC prepara un'istruzione INSERT con parametri e usa **SQL Execute** per inserire le righe una per volta.  
   
 ## <a name="error-handling"></a>Gestione degli errori  
  La destinazione ODBC include un output degli errori. L'output degli errori del componente include le colonne di output seguenti:  
   
--   **Error Code**: numero che corrisponde all'errore corrente. Per un elenco degli errori, vedere la documentazione per il database di origine. Per un elenco dei codici di errore SSIS, vedere la Guida di riferimento ai messaggi e ai codici di errore SSIS.  
+-   **Error Code** (Codice errore): numero che corrisponde all'errore corrente. Per un elenco degli errori, vedere la documentazione per il database di origine. Per un elenco dei codici di errore SSIS, vedere la Guida di riferimento ai messaggi e ai codici di errore SSIS.  
   
--   **Error Column**: colonna di origine che provoca l'errore (per gli errori di conversione).  
+-   **Error Column**(Colonna errore): colonna di origine che causa l'errore (per gli errori di conversione).  
   
 -   Colonne dei dati di output standard.  
   
@@ -110,9 +110,9 @@ ms.locfileid: "47808289"
 |Opzione|Descrizione|  
 |------------|-----------------|  
 |Nome tabella - Batch|Selezionare questa opzione per configurare la destinazione ODBC per l'utilizzo della modalità batch. Se si seleziona questa opzione, sono disponibili le opzioni seguenti.|  
-||**Nome tabella o vista**: selezionare una tabella o vista disponibile nell'elenco.<br /><br /> Questo elenco contiene solo le prime 1000 tabelle. Se il database contiene più di 1000 tabelle, è possibile digitare l'inizio di un nome di tabella o usare il carattere jolly (\*) per immettere qualsiasi parte del nome e visualizzare la tabella o le tabelle che si vuole usare.<br /><br /> **Dimensioni batch**: digitare la dimensione del batch per il caricamento bulk. Si tratta del numero di righe caricato come un batch|  
+||**Nome tabella o vista**: selezionare una tabella o vista disponibile nell'elenco.<br /><br /> Questo elenco contiene solo le prime 1000 tabelle. Se il database contiene più di 1000 tabelle, è possibile digitare l'inizio di un nome di tabella o usare il carattere jolly (\*) per immettere qualsiasi parte del nome e visualizzare la tabella o le tabelle che si vuole usare.<br /><br /> **Dimensioni batch**: tipo di dimensioni del batch per il caricamento bulk. Si tratta del numero di righe caricato come un batch|  
 |Nome tabella - Riga per riga|Selezionare questa opzione per configurare la destinazione ODBC per l'inserimento di una riga per volta nella tabella di destinazione. Se si seleziona questa opzione, è disponibile l'opzione seguente.|  
-||**Nome tabella o vista**: selezionare una tabella o vista disponibile del database dall'elenco.<br /><br /> Questo elenco contiene solo le prime 1000 tabelle. Se il database contiene più di 1000 tabelle, è possibile digitare l'inizio di un nome di tabella o utilizzare il carattere jolly (*) per immettere qualsiasi parte del nome e visualizzare la tabella o le tabelle che si desidera utilizzare.|  
+||**Nome tabella o vista**: selezionare una tabella o vista disponibile dal database nell'elenco.<br /><br /> Questo elenco contiene solo le prime 1000 tabelle. Se il database contiene più di 1000 tabelle, è possibile digitare l'inizio di un nome di tabella o utilizzare il carattere jolly (*) per immettere qualsiasi parte del nome e visualizzare la tabella o le tabelle che si desidera utilizzare.|  
   
 #### <a name="preview"></a>Anteprima  
  Fare clic su **Anteprima** per visualizzare fino a 200 dati per la tabella selezionata.  

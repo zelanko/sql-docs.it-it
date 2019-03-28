@@ -16,20 +16,20 @@ helpviewer_keywords:
 - data flow task [Integration Services], adding
 - MainPipe object
 ms.assetid: 0ca03712-a82e-4aa7-949b-f869a8936ddf
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 4336edfce81af47477df6eb89f45fe3bfc006215
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 3651452faec19cfcddd74cba4736c7c9db10c5eb
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52542003"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58277044"
 ---
 # <a name="adding-the-data-flow-task-programmatically"></a>Aggiunta dell'attività Flusso di dati a livello di programmazione
   In [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] è inclusa l'attività Flusso di dati, rappresentata dallo spazio dei nomi <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper> del modello a oggetti. Flusso di dati è un'attività speciale, a elevate prestazioni, dedicata alla trasformazione e allo spostamento dei dati durante l'esecuzione del pacchetto. Analogamente ad altre attività, Flusso di dati è inclusa nell'oggetto <xref:Microsoft.SqlServer.Dts.Runtime.TaskHost> e dal punto di vista del motore di run-time è solo un'altra attività del pacchetto. Tuttavia, il flusso di dati contiene oggetti aggiuntivi denominati componenti del flusso di dati. Si tratta dei componenti che consentono lo spostamento dei dati da un'origine a una destinazione, a volte tramite una trasformazione. Tali componenti definiscono sia la direzione dello spostamento che la modalità di trasformazione dei dati. La configurazione dell'attività Flusso di dati implica l'aggiunta di componenti e quindi la relativa connessione per stabilire il flusso dei dati e ottenere la trasformazione desiderata.  
   
- Un'attività Flusso di dati include tre tipi di componenti: **Origini flusso di dati**, **Trasformazioni flusso di dati** e **Destinazioni flusso di dati**, visualizzati in questo ordine nella casella degli strumenti di Progettazione [!INCLUDE[ssIS](../../includes/ssis-md.md)]. Questi tipi vengono anche definiti più semplicemente come origini, trasformazioni o destinazioni. Come implicano i nomi, i dati vengono spostati da un'origine a una trasformazione e quindi a una destinazione. Si tratta di una descrizione semplicistica del flusso di dati per illustrare il concetto, ma l'attività Flusso di dati è sufficientemente flessibile e potente da gestire più origini e da connettere molte trasformazioni che inviano l'output a molte destinazioni.  
+ Esistono tre tipi di componenti all'interno di un'attività Flusso di dati: **Origini flusso di dati**, **Trasformazioni flusso di dati** e **Destinazioni flusso di dati**, visualizzati in questo ordine nella casella degli strumenti di Progettazione [!INCLUDE[ssIS](../../includes/ssis-md.md)]. Questi tipi vengono anche definiti più semplicemente come origini, trasformazioni o destinazioni. Come implicano i nomi, i dati vengono spostati da un'origine a una trasformazione e quindi a una destinazione. Si tratta di una descrizione semplicistica del flusso di dati per illustrare il concetto, ma l'attività Flusso di dati è sufficientemente flessibile e potente da gestire più origini e da connettere molte trasformazioni che inviano l'output a molte destinazioni.  
   
  L'attività Flusso di dati viene aggiunta in un pacchetto allo stesso modo delle altre attività. Una volta aggiunta, l'attività viene configurata con l'aggiunta, la configurazione e la connessione dei relativi componenti.  
   

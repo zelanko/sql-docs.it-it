@@ -11,15 +11,15 @@ f1_keywords:
 - sql13.ssis.designer.parameter.f1
 - sql13.dts.designer.parameterwindow.f1
 ms.assetid: 9ed9ca8e-8b1e-48d9-907d-285516d6562b
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 27af358d3d6fb5feb1bd5d10fb194beb52df011e
-ms.sourcegitcommit: 1f10e9df1c523571a8ccaf3e3cb36a26ea59a232
+ms.openlocfilehash: 529bc6a4568ad9979da984607602c2a014b02743
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2018
-ms.locfileid: "51858701"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58281315"
 ---
 # <a name="integration-services-ssis-package-and-project-parameters"></a>Parametri del pacchetto e del progetto di Integration Services (SSIS)
   I parametri (SSIS) di[!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] consentono di assegnare valori alle proprietà incluse nei pacchetti durante la fase di esecuzione. È possibile creare *parametri di progetto* al livello del progetto e *parametri di pacchetto* al livello del pacchetto. I parametri del progetto vengono utilizzati per fornire input esterno ricevuto dal progetto a uno o più pacchetti nel progetto. I parametri del pacchetto consentono di modificare l'esecuzione del pacchetto senza doverlo modificare e ridistribuire.  
@@ -126,13 +126,13 @@ Usare [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] per cre
     |Obbligatorio|Richiede che un valore diverso dal valore predefinito di progettazione venga specificato prima dell'esecuzione del pacchetto.|  
     |Descrizione|Per manutenzione, la descrizione del parametro. In [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)], impostare la descrizione del parametro nella finestra Proprietà di Visual Studio quando il parametro viene selezionato nella finestra dei parametri applicabile.|  
   
-    > **NOTA:** quando si distribuisce un progetto nel catalogo, molte più proprietà vengono associate al progetto. Per visualizzare tutte le proprietà di tutti i parametri nel catalogo, usare la vista [catalog.object_parameters &#40;database SSISDB&#41;](../integration-services/system-views/catalog-object-parameters-ssisdb-database.md).  
+    > **NOTA:** Quando si distribuisce un progetto nel catalogo, molte più proprietà vengono associate al progetto. Per visualizzare tutte le proprietà di tutti i parametri nel catalogo, usare la vista [catalog.object_parameters &#40;database SSISDB&#41;](../integration-services/system-views/catalog-object-parameters-ssisdb-database.md).  
   
 4.  Salvare il progetto per salvare le modifiche ai parametri. I valori dei parametri vengono archiviati nel file di progetto.  
   
     > **AVVISO** È possibile modificare direttamente l'elenco oppure usare la finestra **Proprietà** per modificare i valori delle proprietà dei parametri. È possibile eliminare un parametro tramite il pulsante **Elimina (X)**. Utilizzando l'ultimo pulsante della barra degli strumenti, è possibile specificare un valore per un parametro utilizzato solo quando si esegue il pacchetto in [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)].  
   
-    > **NOTA:** se si riapre il file di pacchetto senza aprire il progetto in [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)], la scheda **Parametri** sarà vuota e disabilitata.  
+    > **NOTA:** Se si riapre il file di pacchetto senza aprire il progetto in [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)], la scheda **Parametri** sarà vuota e disabilitata.  
   
 ### <a name="create-project-parameters"></a>Creare parametri del progetto  
   
@@ -214,6 +214,6 @@ La Distribuzione guidata consente di impostare i valori dei parametri predefinit
  Per impostare valori predefiniti del server con Transact-SQL, usare la stored procedure [catalog.set_object_parameter_value &#40;database SSISDB&#41;](../integration-services/system-stored-procedures/catalog-set-object-parameter-value-ssisdb-database.md). Per visualizzare i valori predefiniti del server corrente, eseguire una query nella vista [catalog.object_parameters &#40;database SSISDB&#41;](../integration-services/system-views/catalog-object-parameters-ssisdb-database.md). Per cancellare un valore predefinito del server, usare la stored procedure [catalog.clear_object_parameter_value &#40;database SSISDB&#41;](../integration-services/system-stored-procedures/catalog-clear-object-parameter-value-ssisdb-database.md).  
   
 ## <a name="related-content"></a>Contenuto correlato  
- Intervento nel blog riguardante un [suggerimento rapido relativo ai parametri obbligatori in SQL Server Integration Services](https://go.microsoft.com/fwlink/?LinkId=239781)sul sito Web mattmasson.com.  
+ Post di blog [SSIS Quick Tip: Required Parameters](https://go.microsoft.com/fwlink/?LinkId=239781) (Suggerimenti rapido per SSIS: parametri necessari) nel sito Web mattmasson.com.  
   
   

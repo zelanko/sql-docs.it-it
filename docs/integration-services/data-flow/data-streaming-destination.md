@@ -10,15 +10,15 @@ ms.topic: conceptual
 f1_keywords:
 - SQL11.DTS.DESIGNER.DATASTREAMINGDEST.F1
 ms.assetid: 640e6a19-49ae-4ee8-ac07-008370158f0e
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 10ad201fd848ba195c5c448dfc1f27c2b6ff058d
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: a58fe80fe0d71cfb7d645df29d2fb06624ad66a8
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51638608"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58278969"
 ---
 # <a name="data-streaming-destination"></a>Destinazione flusso di dati
   **Destinazione flusso di dati** è un componente di destinazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] (SSIS) che consente al **provider OLE DB per SSIS** di usare l'output di un pacchetto SSIS come set di risultati tabulare. È possibile creare un server collegato che usa il provider OLE DB per SSIS e quindi eseguire una query SQL su tale server per visualizzare i dati restituiti dal pacchetto SSIS.  
@@ -31,7 +31,7 @@ SELECT * FROM OPENQUERY([Default Linked Server for Integration Services], N'Fold
 ```  
   
 ## <a name="data-feed-publishing-components"></a>Componenti di pubblicazione del feed di dati  
- I componenti di pubblicazione del feed di dati includono il provider OLE DB per SSIS, Destinazione flusso di dati e Pubblicazione guidata di pacchetti SSIS. La procedura guidata consente di pubblicare un pacchetto SSIS come vista SQL in un'istanza del database di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . La procedura agevola la creazione di un server collegato che usa il provider OLE DB per SSIS e di una vista SQL che rappresenta la query sul server collegato. La vista consente di visualizzare i risultati della query dal pacchetto SSIS come set di dati tabulari.  
+ I componenti di pubblicazione del feed di dati includono i seguenti: provider OLE DB per SSIS, Destinazione flusso di dati e procedura guidata di pubblicazione di pacchetti SSIS. La procedura guidata consente di pubblicare un pacchetto SSIS come vista SQL in un'istanza del database di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . La procedura agevola la creazione di un server collegato che usa il provider OLE DB per SSIS e di una vista SQL che rappresenta la query sul server collegato. La vista consente di visualizzare i risultati della query dal pacchetto SSIS come set di dati tabulari.  
   
  Per verificare l'installazione del provider SSISOLEDB, in SQL Server Management Studio espandere **Oggetti server**, **Server collegati**, **Provider**e quindi accertarsi che il provider **SSISOLEDB** sia visibile. Fare doppio clic su **SSISOLEDB**, abilitare l'opzione **Consenti in-process** se non è abilitata e quindi fare clic su **OK**.  
   

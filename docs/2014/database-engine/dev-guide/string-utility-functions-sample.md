@@ -12,12 +12,12 @@ ms.assetid: 9623013f-15f1-4614-8dac-1155e57c880c
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: fe1a3a45ce60ae4678b1b146ff41714db33bf69d
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 83a9816afeae77036616bec4e850c09f613f0f74
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53368873"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58531313"
 ---
 # <a name="string-utility-functions-sample"></a>Esempio String Utility Functions
   L'esempio String Utilities include una funzione di flusso con valori di tabella, scritta in Visual C# e Visual Basic, che consente di dividere una stringa delimitata da virgole in una tabella con una colonna, nonché una funzione di aggregazione che consente di convertire una colonna stringa in una stringa delimitata da virgole.  Vengono inoltre implementate una funzione scalare e una funzione con valori di tabella che garantiscono funzionalità di ricerca e sostituzione di espressioni regolari.  
@@ -27,7 +27,7 @@ ms.locfileid: "53368873"
 ## <a name="prerequisites"></a>Prerequisiti  
  Per creare ed eseguire questo progetto, è necessario installare il software seguente:  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express.  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express è disponibile gratuitamente nel [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sito Web [di documentazione ed esempi di](https://go.microsoft.com/fwlink/?LinkId=31046)Express  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express è disponibile gratuitamente nel [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sito Web [di documentazione ed esempi di](https://go.microsoft.com/fwlink/?LinkId=31046)Express  
   
 -   Database AdventureWorks, disponibile nel [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sito Web [per sviluppatori di](https://go.microsoft.com/fwlink/?linkid=62796)  
   
@@ -885,7 +885,7 @@ GO
   
  Di seguito è illustrato lo script `test.sql`che consente di testare l'esempio eseguendo le funzioni.  
   
-```tsql  
+```sql  
 USE AdventureWorks  
 GO  
   

@@ -12,15 +12,15 @@ f1_keywords:
 helpviewer_keywords:
 - Data Profiling Task Editor
 ms.assetid: c72acb3d-380e-436e-8041-ed364eddfabd
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 1f056b10aea5144c3d8bda96d7fe049377bc6532
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e3f98e88428c25c3ecf2af415c942c30a18e9cf1
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47641732"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58273376"
 ---
 # <a name="data-profiling-task-editor-profile-requests-page"></a>Data Profiling Task Editor (Profile Requests Page)
   Utilizzare la pagina **Richieste profilo** di **Editor attività Profiling dati** per selezionare e configurare i profili che si desidera calcolare. In una singola attività Profiling dati è possibile calcolare più profili per più colonne o combinazioni di colonne in più tabelle o viste.  
@@ -49,15 +49,15 @@ ms.locfileid: "47641732"
 ### <a name="requests-pane-columns"></a>Colonne del riquadro delle richieste  
  Le colonne visualizzate nel riquadro delle richieste dipendono dall'opzione **Visualizza** selezionata:  
   
--   Se si seleziona **Tutte le richieste**, nel riquadro delle richieste verranno visualizzate due colonne: **Tipo profilo** e **ID richiesta**.  
+-   Se si seleziona **Tutte le richieste**, nel riquadro delle richieste verranno visualizzate due colonne: **Tipo di profilo** e **ID richiesta**.  
   
--   Se si sceglie di visualizzare uno dei cinque profili di colonna, nel riquadro delle richieste verranno visualizzate quattro colonne: **Tipo profilo**, **Tabella o vista**, **Colonna**e **ID richiesta**.  
+-   Se si sceglie di visualizzare uno dei cinque profili di colonna, nel riquadro delle richieste verranno visualizzate quattro colonne: **Tipo profilo**, **Tabella o vista**, **Colonna** e **ID richiesta**.  
   
--   Se si sceglie di visualizzare un profilo Chiave candidata, nel riquadro delle richieste verranno visualizzate quattro colonne: **Tipo profilo**, **Tabella o vista**, **Colonne chiave**e **ID richiesta**.  
+-   Se si sceglie di visualizzare un profilo Chiave candidata, nel riquadro delle richieste verranno visualizzate quattro colonne: **Tipo profilo**, **Tabella o vista**, **KeyColumns** e **ID richiesta**.  
   
--   Se si sceglie di visualizzare un profilo Dipendenza funzionale, nel riquadro delle richieste verranno visualizzate cinque colonne: **Tipo profilo**, **Tabella o vista**, **Colonne determinanti**, **Colonna dipendente**e **ID richiesta**.  
+-   Se si sceglie di visualizzare un profilo Dipendenza funzionale, nel riquadro delle richieste verranno visualizzate cinque colonne: **Tipo di profilo**, **Tabella o vista**, **Colonne determinanti**, **Colonna dipendente** e **ID richiesta**.  
   
--   Se si sceglie di visualizzare un profilo Inclusione valore, nel riquadro delle richieste verranno visualizzate sei colonne: **Tipo profilo**, **Tabella o vista lato subset**, **Tabella o vista lato superset**, **Colonne lato subset**, **Colonne lato superset**e **ID richiesta**.  
+-   Se si sceglie di visualizzare un profilo Inclusione valore, nel riquadro delle richieste verranno visualizzate sei colonne: **Tipo profilo**, **Tabella o vista lato subset**, **Tabella o vista lato superset**, **Colonne lato subset**, **Colonne lato superset** e **ID richiesta**.  
   
  Nelle sezioni seguenti vengono descritte tutte le colonne indicate in precedenza.  
   

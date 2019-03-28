@@ -17,15 +17,15 @@ helpviewer_keywords:
 - expressions [Integration Services], property expressions
 - property expressions [Integration Services]
 ms.assetid: a4bfc925-3ef6-431e-b1dd-7e0023d3a92d
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: b55b675cf28bd0e61dd74b011aad9c50cd8325fa
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 273199612b1cf358ff82192c126b33c3fd2a94fd
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52531607"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58277660"
 ---
 # <a name="use-property-expressions-in-packages"></a>utilizzo delle espressioni di proprietà nei pacchetti
   Un'espressione di proprietà è un'espressione assegnata a una proprietà per consentire l'aggiornamento dinamico della proprietà in fase di esecuzione. Un'espressione di proprietà, ad esempio, consente di aggiornare la riga A utilizzata dall'attività Invia messaggi inserendo un indirizzo di posta elettronica archiviato in una variabile.  
@@ -137,11 +137,11 @@ ms.locfileid: "52531607"
   
  Rows Processed:  
   
- NASDAQ: 7058  
+ NASDAQ: 7058 7058  
   
- NYSE: 3528  
+ NYSE: 3528 3528  
   
- AMEX: 1102  
+ AMEX: 1102 1102  
   
 ### <a name="property-expression-for-the-executable-property-of-an-execute-process-task"></a>Espressione di proprietà per la proprietà Executable dell'attività Esegui processo  
  L'espressione di proprietà seguente consente di impostare la proprietà Executable dell'attività Esegui processo. Nell'espressione viene utilizzata una combinazione di valori letterali stringa, operatori e funzioni, e precisamente le funzioni DATEPART e GETDATE e l'operatore condizionale.  

@@ -26,15 +26,15 @@ helpviewer_keywords:
 - term extractions [Integration Services]
 - stemming words [Integration Services]
 ms.assetid: d0821526-1603-4ea6-8322-2d901568fbeb
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 85a35b34610982ac4418e0e8ab05d3e1b188b968
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 3ea9c1c590b9f09f1bd31b491d9b0170f59f8406
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52507467"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58282575"
 ---
 # <a name="term-extraction-transformation"></a>Estrazione termini - trasformazione
   La trasformazione Estrazione termini consente di estrarre termini da un testo in una colonna di input di una trasformazione e quindi scrivere tali termini in una colonna di output della trasformazione. La trasformazione è applicabile solo a testo in lingua inglese, utilizza un dizionario inglese interno e le proprie informazioni sulla lingua inglese.  
@@ -238,7 +238,7 @@ ms.locfileid: "52507467"
  Consente di specificare che il punteggio è rappresentato dalla frequenza del termine.  
   
  **TFIDF**  
- Consente di specificare che il punteggio è rappresentato dal valore TFIDF del termine. Il punteggio TFIDF è il prodotto della frequenza dei termini e della frequenza inversa dei documenti, definito come: TFIDF di un termine T = (frequenza di T) * log( (numero di righe nell'input) / (numero di righe contenenti T) )  
+ Consente di specificare che il punteggio è rappresentato dal valore TFIDF del termine. Il punteggio TFIDF è il prodotto tra la frequenza del termine (TF) e l'inverso della frequenza nei documenti (IDF) espresso dalla ponderazione seguente: TFIDF di un termine T = (frequenza di T) * log( (numero di righe nell'input) / (numero di righe contenenti T) )  
   
  **Soglia di frequenza**  
  Consente di specificare il numero di volte in cui una parola o una frase deve ricorrere prima che venga estratta. Il valore predefinito è 2.  

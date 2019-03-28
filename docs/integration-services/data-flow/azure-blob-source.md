@@ -11,18 +11,18 @@ f1_keywords:
 - sql13.dts.designer.afpblobsrc.f1
 - sql14.dts.designer.afpblobsrc.f1
 ms.assetid: 80645c5c-88c8-4fb0-8607-de1bb7bffcbb
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 61c4f6794e5d491fa1b7d935e54d470734a99d10
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 62d4cc21bbe5469886e4087c9ec310abc9185ed8
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47698769"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58282073"
 ---
 # <a name="azure-blob-source"></a>Origine BLOB di Azure
-  Il componente **Origine Blob di Azure** consente a un pacchetto SSIS di leggere dati da un BLOB di Azure. I formati di file supportati sono CSV e AVRO.
+  Il componente **Origine Blob di Azure** consente a un pacchetto SSIS di leggere dati da un BLOB di Azure. I formati di file supportati sono: CSV e AVRO.
   
   Per visualizzare l'editor per l'origine BLOB di Azure, trascinare la selezione **Origine BLOB di Azure** nell'area di progettazione del flusso di dati e fare doppio clic per aprire l'editor.  
   
@@ -42,7 +42,7 @@ ms.locfileid: "47698769"
 
 6.  Se il file è compresso, selezionare **Decomprimi file**.
 
-7.  Se il file è compresso, selezionare il **Tipo di compressione**: **GZIP**, **DEFLATE** oppure **BZIP2**. Si noti che il formato di file ZIP non è supportato.
+7.  Se il file è compresso, selezionare il **Tipo di compressione**: **GZIP**, **DEFLATE** o **BZIP2**. Si noti che il formato di file ZIP non è supportato.
   
 8.  Dopo aver specificato le informazioni di connessione, passare alla pagina **Colonne** per eseguire il mapping delle colonne di origine alle colonne di destinazione per il flusso di dati SSIS.  
   

@@ -13,15 +13,15 @@ f1_keywords:
 - sql13.ssis.designer.cdcsource.columns.f1
 - sql13.ssis.designer.cdcsource.errorhandling.f1
 ms.assetid: 99775608-e177-44ed-bb44-aaccb0f4f327
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: d99085d1f743177a24c7902daebf584455f38a79
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: c487852af232224304e0d746f0ab32bf0fe90dbe
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51642238"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58290537"
 ---
 # <a name="cdc-source"></a>Origine CDC
   Tramite l'origine CDC viene letto un intervallo di dati delle modifiche da tabelle delle modifiche di [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] ; queste vengono poi recapitate a valle ad altri componenti SSIS.  
@@ -49,11 +49,11 @@ ms.locfileid: "51642238"
 ## <a name="error-handling"></a>Gestione degli errori  
  L'origine CDC include un output degli errori. L'output degli errori del componente include le colonne di output seguenti:  
   
--   **Error Code**: il valore è sempre -1.  
+-   **Error Code** (Codice errore): il valore è sempre -1.  
   
--   **Error Column**(Colonna errore): colonna di origine che provoca l'errore (per gli errori di conversione).  
+-   **Error Column**(Colonna errore): colonna di origine che causa l'errore (per gli errori di conversione).  
   
--   **Error Row Columns**: dati del record che provocano l'errore.  
+-   **Error Row Columns** (Colonne riga errore): dati del record che causano l'errore.  
   
  A seconda dell'impostazione del comportamento in seguito all'errore, l'origine CDC supporta la restituzione degli errori (conversione dei dati, troncamento) che si verificano durante il processo di estrazione nell'output degli errori.  
   
@@ -153,15 +153,15 @@ use <cdc-enabled-database-name>
  **CDC Processing Mode**  
  Selezionare la modalità di elaborazione più adatta per le esigenze di elaborazione correnti. Di seguito sono elencate le opzioni possibili:  
   
--   **All**: restituisce le modifiche nell'intervallo CDC corrente senza i valori **Before Update** .  
+-   **All** (Tutto): restituisce le modifiche nell'intervallo CDC corrente senza i valori **Before Update**.  
   
--   **All with old values**: restituisce le modifiche nell'intervallo di elaborazione CDC corrente inclusi i valori precedenti (**Before Update**). Ogni operazione di aggiornamento prevede due righe: una con i valori prima dell'aggiornamento e una con i valori dopo l'aggiornamento.  
+-   **All with old values** (Tutto con i valori precedenti): restituisce le modifiche nell'intervallo di elaborazione CDC corrente inclusi i valori precedenti (**Before Update**). Ogni operazione di aggiornamento prevede due righe: una con i valori prima dell'aggiornamento e una con i valori dopo l'aggiornamento.  
   
 -   **Net**: restituisce una sola riga delle modifiche per ogni riga di origine modificata nell'intervallo di elaborazione CDC corrente. Se una riga di origine è stata aggiornata più volte, viene restituita la modifica combinata (ad esempio, inserimento+aggiornamento viene prodotto come un singolo aggiornamento e aggiornamento+eliminazione viene prodotto come una singola eliminazione). Quando si utilizza la modalità di elaborazione delle modifiche Net, è possibile suddividere le modifiche negli output Delete, Insert e Update e gestirli in parallelo, perché la singola riga di origine viene visualizzata in più output.  
   
--   **Net with update mask**: questa modalità è simile alla modalità Net standard, ma aggiunge anche colonne booleane con il modello di nome **__$\<<nome-colonna>\___Changed**, che indica la presenza di colonne modificate nella riga delle modifiche corrente.  
+-   **Net with update mask** (Net con maschera di aggiornamento): questa modalità è simile alla modalità Net standard, ma aggiunge anche colonne booleane con il modello di nome **__$\<<nome-colonna>\___Changed**, che indica la presenza di colonne modificate nella riga delle modifiche corrente.  
   
--   **Net with merge**: questa modalità è simile alla modalità Net standard, ma con le operazioni Insert e Update unite in una singola operazione Merge (UPSERT).  
+-   **Net with merge** (Net con unione): questa modalità è simile alla modalità Net standard, ma con le operazioni Insert e Update unite in una singola operazione Merge (UPSERT).  
   
 > [!NOTE]  
 >  Per tutte le opzioni di modifica Net, è necessario che la tabella di origine disponga di una chiave primaria o di un indice univoco. Per tabelle senza una chiave primaria o indici univoci, usare l'opzione **All** .  

@@ -15,15 +15,15 @@ helpviewer_keywords:
 - Analysis Services Processing task
 - processing objects [Integration Services]
 ms.assetid: e5748836-b4ce-4e17-ab6b-617a336f02f4
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: babc48270415cdd4485dd75b43b052904824ebe5
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: 2f1c260b97c60fd6b60a9a8c0ecf6e8fbd696fee
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51641778"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58271055"
 ---
 # <a name="analysis-services-processing-task"></a>Elaborazione Analysis Services - attività
   Con l'attività Elaborazione [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] è possibile elaborare gli oggetti di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] quali modelli tabulari, cubi, dimensioni e modelli di data mining.  
@@ -113,7 +113,7 @@ ms.locfileid: "51641778"
  **Nuova**  
  Consente di creare una nuova gestione connessione Analysis Services.  
   
- **Argomenti correlati:** [Analysis Services Connection Manager](../../integration-services/connection-manager/analysis-services-connection-manager.md), [Riferimento all'interfaccia utente della finestra di dialogo Aggiungi gestione connessione Analysis Services](../../integration-services/connection-manager/add-analysis-services-connection-manager-dialog-box-ui-reference.md)  
+ **Argomenti correlati:** [Gestione connessione Analysis Services](../../integration-services/connection-manager/analysis-services-connection-manager.md), [Riferimento all'interfaccia utente della finestra di dialogo Aggiungi gestione connessione Analysis Services](../../integration-services/connection-manager/add-analysis-services-connection-manager-dialog-box-ui-reference.md)  
   
  **Elenco oggetti**  
  |Proprietà|Descrizione|  

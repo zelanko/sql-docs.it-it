@@ -28,15 +28,15 @@ helpviewer_keywords:
 - foreach enumerators [Integration Services]
 - containers [Integration Services], Foreach Loop
 ms.assetid: dd6cc2ba-631f-4adf-89dc-29ef449c6933
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 12f91e676983cea041d966a0306fb1faf636019b
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 981d659d05517b1e1b54244cbea22d52ccf964f2
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52505933"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58271319"
 ---
 # <a name="foreach-loop-container"></a>Contenitore Ciclo Foreach
   Il contenitore Ciclo Foreach definisce un flusso di controllo ripetuto all'interno di un pacchetto. L'implementazione del ciclo è simile alla struttura del ciclo **Foreach** nei linguaggi di programmazione. In un pacchetto per l'esecuzione del ciclo viene utilizzato un enumeratore Foreach.  Il contenitore Ciclo Foreach ripete il flusso di controllo per ogni membro di un enumeratore specificato.  
@@ -215,7 +215,7 @@ Utilizzare la pagina **Generale** della finestra di dialogo **Editor ciclo Forea
  **Espressioni**  
  Fare clic su **Espressioni** o espandere questa voce per visualizzare l'elenco delle espressioni di proprietà esistenti. Fare clic sul pulsante con i puntini di sospensione **(...)** per aggiungere un'espressione di proprietà per una proprietà dell'enumeratore oppure per modificare e valutare un'espressione di proprietà esistente.  
   
- **Argomenti correlati**: [Espressioni di Integration Services &#40;SSIS&#41;](../../integration-services/expressions/integration-services-ssis-expressions.md), [Editor espressioni di proprietà](../../integration-services/expressions/property-expressions-editor.md), [Generatore di espressioni](../../integration-services/expressions/expression-builder.md)  
+ **Argomenti correlati:**  [Espressioni di Integration Services &#40;SSIS&#41;](../../integration-services/expressions/integration-services-ssis-expressions.md), [Editor espressioni di proprietà](../../integration-services/expressions/property-expressions-editor.md), [Generatore di espressioni](../../integration-services/expressions/expression-builder.md)  
   
 ### <a name="enumerator-dynamic-options"></a>Opzioni dinamiche relative all'enumeratore  
   
@@ -281,7 +281,7 @@ Utilizzare la pagina **Generale** della finestra di dialogo **Editor ciclo Forea
  **Colonne**  
  Fare clic su questo pulsante per configurare il tipo di dati delle colonne nell'elemento.  
   
- **Argomenti correlati** [Riferimento all'interfaccia utente della finestra di dialogo Colonne For Each Item](https://msdn.microsoft.com/library/ea76aae0-8798-4677-8ab8-4a579de4957c)  
+ **Argomenti correlati:** [Riferimento all'interfaccia utente della finestra di dialogo Colonne For Each Item](https://msdn.microsoft.com/library/ea76aae0-8798-4677-8ab8-4a579de4957c)  
   
 #### <a name="enumerator--foreach-ado-enumerator"></a>Enumeratore = Foreach ADO Enumerator  
  Foreach ADO Enumerator consente di enumerare le righe o le tabelle in un oggetto ADO o ADO.NET archiviato in una variabile. Se il Ciclo Foreach include ad esempio un'attività Script che scrive un set di dati in una variabile, è possibile utilizzare Foreach ADO Enumerator per enumerare le righe nel set di dati. Se la variabile contiene un set di dati ADO.NET, è possibile configurare l'enumeratore in modo da enumerare le righe in più tabelle o in modo da enumerare le tabelle.  
@@ -292,7 +292,7 @@ Utilizzare la pagina **Generale** della finestra di dialogo **Editor ciclo Forea
 > [!NOTE]  
 >  Il tipo di dati della variabile deve essere Oggetto. In caso contrario si verificherà un errore.  
   
- **Argomenti correlati:** [Variabili di Integration Services &#40;SSIS&#41;](../../integration-services/integration-services-ssis-variables.md), [Aggiungi variabile](https://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5)  
+ **Argomenti correlati:** [Variabili di Integration Services &#40;SSIS&#41;](../../integration-services/integration-services-ssis-variables.md), [Aggiungere una variabile](https://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5)  
   
  **Rows in first table** (Righe nella prima tabella)  
  Selezionare questa opzione per enumerare solo le righe nella prima tabella.  
@@ -312,7 +312,7 @@ Utilizzare la pagina **Generale** della finestra di dialogo **Editor ciclo Forea
 > [!IMPORTANT]  
 >  La gestione connessione ADO.NET deve utilizzare necessariamente un provider .NET per OLE DB. In caso di connessione a SQL Server, il provider consigliato è [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client, incluso nell'elenco della sezione **Provider .Net per OleDb** nella finestra di dialogo **Gestione connessione** .  
   
- **Argomenti correlati** [ADO Connection Manager](../../integration-services/connection-manager/ado-connection-manager.md), [Configure ADO.NET Connection Manager](../../integration-services/connection-manager/configure-ado-net-connection-manager.md)  
+ **Argomenti correlati:** [Gestione connessione ADO.NET](../../integration-services/connection-manager/ado-connection-manager.md), [Configurazione della gestione connessione ADO.NET](../../integration-services/connection-manager/configure-ado-net-connection-manager.md)  
   
  **Schema**  
  Consente di selezionare lo schema da enumerare.  
@@ -320,7 +320,7 @@ Utilizzare la pagina **Generale** della finestra di dialogo **Editor ciclo Forea
  **Imposta restrizioni**  
  Consente di impostare le restrizioni da applicare allo schema specificato.  
   
- **Argomenti correlati** [Finestra di dialogo Restrizioni schema](https://msdn.microsoft.com/library/92e5fd32-4944-4f7c-a448-b458df93d0d5)  
+ **Argomenti correlati:** [Finestra di dialogo Restrizioni schema](https://msdn.microsoft.com/library/92e5fd32-4944-4f7c-a448-b458df93d0d5)  
   
 #### <a name="enumerator--foreach-from-variable-enumerator"></a>Enumeratore = Foreach From Variable Enumerator  
  Foreach From Variable Enumerator consente di enumerare gli oggetti enumerabili nella variabile specificata. Se il Ciclo Foreach include ad esempio un'attività Esegui SQL che esegue una query e archivia il risultato in una variabile, è possibile utilizzare Foreach From Variable Enumerator per enumerare i risultati della query.  
@@ -328,7 +328,7 @@ Utilizzare la pagina **Generale** della finestra di dialogo **Editor ciclo Forea
  **Variabile**  
  Selezionare una variabile nell'elenco oppure fare clic su \<**Nuova variabile**> per crearne una nuova.  
   
- **Argomenti correlati:** [Variabili di Integration Services &#40;SSIS&#41;](../../integration-services/integration-services-ssis-variables.md), [Aggiungi variabile](https://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5)  
+ **Argomenti correlati:** [Variabili di Integration Services &#40;SSIS&#41;](../../integration-services/integration-services-ssis-variables.md), [Aggiungere una variabile](https://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5)  
   
 #### <a name="enumerator--foreach-nodelist-enumerator"></a>Enumeratore = Foreach NodeList Enumerator  
  Foreach Nodelist Enumerator consente di enumerare il set di nodi XML ottenuto dall'applicazione di un'espressione XPath a un file XML. Se il Ciclo Foreach include ad esempio un'attività Script, è possibile utilizzare Foreach NodeList Enumerator per passare un valore che risponda ai criteri dell'espressione XPath dal file XML all'attività Script.  
@@ -351,11 +351,11 @@ Utilizzare la pagina **Generale** della finestra di dialogo **Editor ciclo Forea
   
  Se la proprietà **DocumentSourceType** è impostata su **Connessione file**, selezionare una gestione connessione file oppure fare clic su \<**Nuova connessione**> per creare una nuova gestione connessione.  
   
- **Argomenti correlati:** [File Connection Manager](../../integration-services/connection-manager/file-connection-manager.md), [File Connection Manager Editor](../../integration-services/connection-manager/file-connection-manager-editor.md)  
+ **Argomenti correlati:** [Gestione connessione file](../../integration-services/connection-manager/file-connection-manager.md), [Editor gestione connessione file](../../integration-services/connection-manager/file-connection-manager-editor.md)  
   
  Se la proprietà **DocumentSourceType** è impostata su **Variabile**, selezionare una variabile esistente oppure fare clic su \<**Nuova variabile**> per creare una nuova variabile.  
   
- **Argomenti correlati:** [Variabili di Integration Services &#40;SSIS&#41;](../../integration-services/integration-services-ssis-variables.md), [Aggiungi variabile](https://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5).  
+ **Argomenti correlati:** [Variabili di Integration Services &#40;SSIS&#41;](../../integration-services/integration-services-ssis-variables.md), [Aggiungere una variabile](https://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5).  
   
  **EnumerationType**  
  Consente di selezionare un tipo di enumeratore nell'elenco. Per questa proprietà sono disponibili le opzioni elencate nella tabella seguente:  
@@ -381,11 +381,11 @@ Utilizzare la pagina **Generale** della finestra di dialogo **Editor ciclo Forea
   
  Se la proprietà **OuterXPathStringSourceType** è impostata su **Connessione file**, selezionare una gestione connessione file oppure fare clic su \<**Nuova connessione**> per creare una nuova gestione connessione.  
   
- **Argomenti correlati:** [File Connection Manager](../../integration-services/connection-manager/file-connection-manager.md), [File Connection Manager Editor](../../integration-services/connection-manager/file-connection-manager-editor.md)  
+ **Argomenti correlati:** [Gestione connessione file](../../integration-services/connection-manager/file-connection-manager.md), [Editor gestione connessione file](../../integration-services/connection-manager/file-connection-manager-editor.md)  
   
  Se la proprietà **OuterXPathStringSourceType** è impostata su **Variabile**, selezionare una variabile esistente oppure fare clic su \<**Nuova variabile**> per creare una nuova variabile.  
   
- **Argomenti correlati:** [Variabili di Integration Services &#40;SSIS&#41;](../../integration-services/integration-services-ssis-variables.md), [Aggiungi variabile](https://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5).  
+ **Argomenti correlati:** [Variabili di Integration Services &#40;SSIS&#41;](../../integration-services/integration-services-ssis-variables.md), [Aggiungere una variabile](https://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5).  
   
  **InnerElementType**  
  Se la proprietà **EnumerationType** è impostata su **ElementCollection**, selezionare il tipo di elemento interno nell'elenco.  
@@ -404,11 +404,11 @@ Utilizzare la pagina **Generale** della finestra di dialogo **Editor ciclo Forea
   
  Se la proprietà **InnerXPathStringSourceType** è impostata su **Connessione file**, selezionare una gestione connessione file oppure fare clic su \<**Nuova connessione**> per creare una nuova gestione connessione.  
   
- **Argomenti correlati:** [File Connection Manager](../../integration-services/connection-manager/file-connection-manager.md), [File Connection Manager Editor](../../integration-services/connection-manager/file-connection-manager-editor.md)  
+ **Argomenti correlati:** [Gestione connessione file](../../integration-services/connection-manager/file-connection-manager.md), [Editor gestione connessione file](../../integration-services/connection-manager/file-connection-manager-editor.md)  
   
  Se la proprietà **InnerXPathStringSourceType** è impostata su **Variabile**, selezionare una variabile esistente oppure fare clic su \<**Nuova variabile**> per creare una nuova variabile.  
   
- **Argomenti correlati:** [Variabili di Integration Services &#40;SSIS&#41;](../../integration-services/integration-services-ssis-variables.md), [Aggiungi variabile](https://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5).  
+ **Argomenti correlati:** [Variabili di Integration Services &#40;SSIS&#41;](../../integration-services/integration-services-ssis-variables.md), [Aggiungere una variabile](https://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5).  
   
 #### <a name="enumerator--foreach-smo-enumerator"></a>Enumeratore = Foreach SMO Enumerator  
  Foreach SMO Enumerator consente di enumerare gli oggetti SQL Server Management Objects (SMO). Se il Ciclo Foreach include ad esempio un'attività Esegui SQL, è possibile usare l'enumeratore Foreach SMO per enumerare le tabelle nel database **AdventureWorks** ed eseguire query che contino il numero di righe in ogni tabella.  
@@ -416,7 +416,7 @@ Utilizzare la pagina **Generale** della finestra di dialogo **Editor ciclo Forea
  **Connessione**  
  Selezionare una gestione connessione ADO.NET nell'elenco oppure fare clic su \<**Nuova connessione**> per creare una nuova gestione connessione.  
   
- Argomenti correlati: [ADO.NET Connection Manager](../../integration-services/connection-manager/ado-net-connection-manager.md), [Configure ADO.NET Connection Manager](../../integration-services/connection-manager/configure-ado-net-connection-manager.md)  
+ Argomenti correlati: [Gestione connessione ADO.NET](../../integration-services/connection-manager/ado-net-connection-manager.md), [Configurazione della gestione connessione ADO.NET](../../integration-services/connection-manager/configure-ado-net-connection-manager.md)  
   
  **Enumerazione**  
  Consente di specificare l'oggetto SMO da enumerare.  
@@ -458,7 +458,7 @@ Utilizzare la pagina **Generale** della finestra di dialogo **Editor ciclo Forea
  **Azure storage connection manager** (Gestione connessione di Archiviazione di Azure)  
  Selezionare una gestione connessione di archiviazione di Azure esistente o crearne una nuova che si riferisca a un Account di archiviazione Azure.  
   
- Argomenti correlati: [Azure Storage Connection Manager](../../integration-services/connection-manager/azure-storage-connection-manager.md).  
+ Argomenti correlati: [Gestione connessione dell'archiviazione di Azure](../../integration-services/connection-manager/azure-storage-connection-manager.md).  
   
  **Nome del contenitore BLOB**  
  Specificare il nome del contenitore BLOB che contiene i file BLOB da enumerare.
@@ -501,7 +501,7 @@ Specifica se eseguire la ricerca in modo ricorsivo all'interno della directory s
 > [!NOTE]  
 >  Dopo il mapping di una variabile, viene aggiunta automaticamente una nuova riga all'elenco **Variabile**.  
   
- **Argomenti correlati**: [Variabili di Integration Services &#40;SSIS&#41;](../../integration-services/integration-services-ssis-variables.md), [Aggiungi variabile](https://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5)  
+ **Argomenti correlati**: [Variabili di Integration Services &#40;SSIS&#41;](../../integration-services/integration-services-ssis-variables.md), [Aggiungere una variabile](https://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5)  
   
  **Index**  
  Se si utilizza l'enumeratore Foreach Item, specificare l'indice della colonna nel valore della raccolta di cui eseguire il mapping alla variabile. Per altri tipi di enumeratore, l'indice è di sola lettura.  
@@ -522,7 +522,7 @@ Usare la finestra di dialogo **Restrizioni schema** per impostare le restrizioni
  **Variabile**  
  Consente di utilizzare una variabile per definire le restrizioni. Selezionare una variabile nell'elenco oppure fare clic su **Nuova variabile** per crearne una nuova.  
   
- **Argomenti correlati:** [Variabili di Integration Services &#40;SSIS&#41;](../../integration-services/integration-services-ssis-variables.md), [Aggiungi variabile](https://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5)  
+ **Argomenti correlati:** [Variabili di Integration Services &#40;SSIS&#41;](../../integration-services/integration-services-ssis-variables.md), [Aggiungere una variabile](https://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5)  
   
  **Text**  
  Consente di digitare il testo per definire le restrizioni.  

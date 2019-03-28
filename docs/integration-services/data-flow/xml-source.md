@@ -17,15 +17,15 @@ helpviewer_keywords:
 - XML source [Integration Services]
 - XML Source Editor
 ms.assetid: 68c27ea5-e93d-4e26-bfb2-d967ca0a5282
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 88c92298743eb9eec610b472f498186938d6b651
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: 50775777118d9f276e744f2c8fd8aff06bf0f0fe
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51640458"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58290627"
 ---
 # <a name="xml-source"></a>Origine XML
   L'origine XML legge un file di dati XML e popola con tali dati le colonne nell'output dell'origine.  
@@ -97,7 +97,7 @@ ms.locfileid: "51640458"
 |valore|Descrizione|  
 |-----------|-----------------|  
 |Percorso file XML|Consente di recuperare i dati da un file XML.|  
-|File XML da variabile|Consente di specificare il nome del file XML in una variabile.<br /><br /> **Informazioni correlate**: [Utilizzo di variabili nei pacchetti](https://msdn.microsoft.com/library/7742e92d-46c5-4cc4-b9a3-45b688ddb787)|  
+|File XML da variabile|Consente di specificare il nome del file XML in una variabile.<br /><br /> **Informazioni correlate**: [Uso di variabili nei pacchetti](https://msdn.microsoft.com/library/7742e92d-46c5-4cc4-b9a3-45b688ddb787)|  
 |Dati XML da variabile|Consente di recuperare i dati XML da una variabile.|  
   
  **Usa schema inline**  

@@ -13,27 +13,27 @@ helpviewer_keywords:
 - transformations [Integration Services], components
 - Script component [Integration Services], examples
 ms.assetid: 1fda034d-09e4-4647-9a9f-e8d508c2cc8f
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 46b020f7ad63e38d283de993606109dadd3f6a5f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 3b97d6051c46ab7c898e953c78704c99b6370d57
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47645849"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58277810"
 ---
 # <a name="parsing-non-standard-text-file-formats-with-the-script-component"></a>Analisi di formati di file di testo non standard con il componente script
   Quando i dati di origine sono disposti in un formato non standard, può risultare utile consolidare tutta la logica di analisi in un singolo script anziché concatenare più trasformazioni di [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] per ottenere lo stesso risultato.  
   
- [Esempio 1: analisi di record delimitati da righe](#example1)  
+ [Esempio 1: Analisi di record delimitati da righe](#example1)  
   
- [Esempio 2: divisione di record padre e figlio](#example2)  
+ [Esempio 2: Divisione di record padre e figlio](#example2)  
   
 > [!NOTE]  
 >  Se si desidera creare un componente da riutilizzare più facilmente con più attività Flusso di dati e più pacchetti, è possibile utilizzare il codice di questo esempio di componente script come punto iniziale per un componente del flusso di dati personalizzato. Per altre informazioni, vedere [Sviluppo di un componente del flusso di dati personalizzato](../../integration-services/extending-packages-custom-objects/data-flow/developing-a-custom-data-flow-component.md).  
   
-##  <a name="example1"></a>Esempio 1: analisi di record delimitati da righe  
+##  <a name="example1"></a> Esempio 1: Analisi di record delimitati da righe  
  In questo esempio viene illustrato come utilizzare il componente script per analizzare in una tabella di destinazione un file di testo in cui ogni colonna di dati appare in una riga distinta.  
   
  Per altre informazioni su come configurare il componente script per usarlo come trasformazione nel flusso di dati, vedere [Creazione di una trasformazione sincrona con il componente script](../../integration-services/extending-packages-scripting-data-flow-script-component-types/creating-a-synchronous-transformation-with-the-script-component.md) e [Creazione di una trasformazione asincrona con il componente script](../../integration-services/extending-packages-scripting-data-flow-script-component-types/creating-an-asynchronous-transformation-with-the-script-component.md).  
@@ -188,7 +188,7 @@ public override void Input0_ProcessInputRow(Input0Buffer Row)
     }  
 ```  
   
-##  <a name="example2"></a> Esempio 2: divisione di record padre e figlio  
+##  <a name="example2"></a> Esempio 2: Divisione di record padre e figlio  
  In questo esempio viene illustrato come utilizzare il componente script per analizzare in tabelle di destinazione padre e figlio correttamente normalizzate un file di testo in cui una riga del separatore precede una riga di record padre seguita da un numero indefinito di righe di record figlio. Questo semplice esempio può essere facilmente adottato per file di origine che utilizzano più di una riga o colonna per ogni record padre e figlio, purché esista la possibilità di identificare l'inizio e la fine di ogni record.  
   
 > [!CAUTION]  

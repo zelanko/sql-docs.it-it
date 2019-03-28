@@ -17,15 +17,15 @@ helpviewer_keywords:
 - sequence execution options [Integration Services]
 - containers [Integration Services], precedence constraints
 ms.assetid: c5ce5435-fd89-4156-a11f-68470a69aa9f
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 23753d15f1113b5a11a00e768c836f8860db96ba
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: c6df83cd3a7609097a6e27bd92c59daf24458548
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47733659"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58283061"
 ---
 # <a name="precedence-constraints"></a>Vincoli di precedenza
   I vincoli di precedenza collegano eseguibili, contenitori e attività di pacchetti in modo da formare un flusso di controllo e specificano le condizioni che determinano se tali eseguibili devono essere eseguiti. Un eseguibile può essere costituito da un gestore di evento o da un contenitore Ciclo For, Ciclo Foreach o Sequenza. Anche nei gestori di eventi vengono utilizzati vincoli di precedenza per collegare gli eseguibili in modo da formare un flusso di controllo.  
@@ -111,10 +111,10 @@ Utilizzare la finestra di dialogo **Editor vincoli di precedenza** per configura
   
 ### <a name="options"></a>Opzioni  
  **Operazione di valutazione**  
- Consente di specificare l'operazione di valutazione utilizzata dal vincolo di precedenza. Le operazioni sono **Vincolo**, **Espressione**, **Espressione e vincolo**e **Espressione o vincolo**.  
+ Consente di specificare l'operazione di valutazione utilizzata dal vincolo di precedenza. Le operazioni sono: **Vincolo**, **Espressione**, **Espressione e vincolo** e **Espressione o vincolo**.  
   
  **Value**  
- Consente di specificare il valore di vincolo, ovvero **Operazione completata**, **Errore**oppure **Completamento**.  
+ Specificare il valore del vincolo: **Esito positivo**, **Esito negativo** o **Completamento**.  
   
 > [!NOTE]  
 >  La riga del vincolo di precedenza è di colore verde in caso di **Esito positivo**, evidenziata per **Esito negativo**e blu per **Completamento**.  
@@ -186,7 +186,7 @@ Utilizzare la finestra di dialogo **Editor vincoli di precedenza** per configura
   
  ![Espressioni nei vincoli di precedenza](../../integration-services/control-flow/media/mw-dts-04.gif "Espressioni nei vincoli di precedenza")  
   
- Per aggiungere o modificare un'espressione, è possibile usare **Editor vincoli di precedenza** in Progettazione [!INCLUDE[ssIS](../../includes/ssis-md.md)] e la finestra Proprietà disponibile in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]. La finestra Proprietà non è tuttavia in grado di verificare la sintassi delle espressioni.  
+ Per aggiungere o modificare un'espressione, è possibile usare **Editor vincoli di precedenza** in Progettazione [!INCLUDE[ssIS](../../includes/ssis-md.md)] e la finestra Proprietà disponibile in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] . La finestra Proprietà non è tuttavia in grado di verificare la sintassi delle espressioni.  
   
  Se un vincolo di precedenza include un'espressione, sull'area di progettazione delle scheda **Flusso di controllo** verrà visualizzata un'icona accanto al vincolo di precedenza e l'espressione verrà visualizzata nella descrizione comando di tale icona.  
 
@@ -237,7 +237,7 @@ Un vincolo di precedenza consente di connettere due eseguibili, ad esempio due a
 ### <a name="logicaland-property"></a>Proprietà LogicalAnd  
  Se a un'attività o a un contenitore sono applicati più vincoli, la proprietà **LogicalAnd** specificherà se il corrispondente vincolo di precedenza viene valutato singolarmente o insieme ad altri vincoli.  
   
- Per impostare la proprietà **LogicalAnd** è possibile usare **Editor vincoli di precedenza** in Progettazione [!INCLUDE[ssIS](../../includes/ssis-md.md)] oppure la finestra Proprietà disponibile su [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)].  
+ Per impostare la proprietà **LogicalAnd** è possibile usare **Editor vincoli di precedenza** in Progettazione [!INCLUDE[ssIS](../../includes/ssis-md.md)] oppure la finestra Proprietà disponibile su [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] .  
 
 ## <a name="set-the-default-value-for-precedence-constraints"></a>Impostare il valore predefinito per i vincoli di precedenza  
 La prima volta che si usa Progettazione [!INCLUDE[ssIS](../../includes/ssis-md.md)] , il valore predefinito di un vincolo di precedenza è **Success**. Eseguire la procedura seguente per configurare Progettazione [!INCLUDE[ssIS](../../includes/ssis-md.md)] per l'utilizzo di un valore predefinito diverso per i vincoli di precedenza.
