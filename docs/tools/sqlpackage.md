@@ -2,19 +2,19 @@
 title: SqlPackage.exe | Microsoft Docs
 ms.prod: sql
 ms.technology: ssdt
-ms.date: 06/27/2018
+ms.date: 06/28/2018
 ms.reviewer: alayu; sstein
 ms.topic: conceptual
 ms.assetid: 198198e2-7cf4-4a21-bda4-51b36cb4284b
 author: pensivebrian
 ms.author: broneill
 manager: craigg
-ms.openlocfilehash: d9a3dc9088c833b3448927c1455052c40f185ec7
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 1204b3a4aabf4a170901154c656b5f84d05fda82
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56033604"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58527593"
 ---
 # <a name="sqlpackageexe"></a>SqlPackage.exe
 
@@ -36,7 +36,7 @@ ms.locfileid: "56033604"
   
 La riga di comando di **SqlPackage.exe** consente di specificare queste azioni insieme alle proprietà e ai parametri specifici di ogni azione.  
 
-**[Scaricare la versione più recente](sqlpackage-download.md)**. Per informazioni dettagliate relative alla versione più recente, vedere la [note sulla versione](sqlpackage-release-notes.md).
+**[Scaricare la versione più recente](sqlpackage-download.md)**. Per informazioni dettagliate relative alla versione più recente, vedere la [note sulla versione](release-notes-sqlpackage.md).
   
 ## <a name="command-line-syntax"></a>Sintassi della riga di comando
 

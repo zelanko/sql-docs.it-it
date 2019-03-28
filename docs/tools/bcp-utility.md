@@ -29,12 +29,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: 5b1c1112e886c7874471c82b442e7583a8232dc8
-ms.sourcegitcommit: 2ab79765e51913f1df6410f0cd56bf2a13221f37
+ms.openlocfilehash: 90a5d458bcb7b1e90993a51ccfb4ebe217622f34
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/27/2019
-ms.locfileid: "56955992"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58538653"
 ---
 # <a name="bcp-utility"></a>Utilità bcp
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -492,7 +492,7 @@ L'utilità bcp può anche essere scaricata separatamente dal [Microsoft SQL Serv
 |SQLNCHAR o SQLNVARCHAR|I dati vengono inviati in formato Unicode. L'effetto equivale a quello ottenuto specificando l'opzione **-w** senza definire un file di formato.|  
 |SQLBINARY o SQLVARYBIN|I dati vengono inviati senza conversione.|  
 
-## <a name="permissions"></a>Permissions
+## <a name="permissions"></a>Autorizzazioni
 
  Un'operazione **bcp out** richiede l'autorizzazione SELECT per la tabella di origine.  
   
@@ -529,7 +529,7 @@ L'utilità bcp può anche essere scaricata separatamente dal [Microsoft SQL Serv
  
 -   A. Identificare la versione dell'utilità **bcp**
   
--   b. Copia delle righe di tabella in un file di dati (con connessione trusted)  
+-   B. Copia delle righe di tabella in un file di dati (con connessione trusted)  
   
 -   [C.](#c-copying-table-rows-into-a-data-file-with-mixed-mode-authentication) Copia delle righe di tabella in un file di dati (con autenticazione in modalità mista)  
   
@@ -552,7 +552,7 @@ Gli esempi seguenti usano il database di esempio `WideWorldImporters` per SQL Se
 
 Lo script seguente crea una copia vuota della tabella `WideWorldImporters.Warehouse.StockItemTransactions` e quindi aggiunge un vincolo di chiave primaria.  Eseguire lo script T-SQL seguente in SQL Server Management Studio (SSMS)
 
-```tsql  
+```sql  
 USE WideWorldImporters;  
 GO  
 
@@ -581,7 +581,7 @@ Al prompt dei comandi immettere il comando seguente:
 bcp -v
 ```
   
-### <a name="b-copying-table-rows-into-a-data-file-with-a-trusted-connection"></a>b. Copia delle righe di tabella in un file di dati (con connessione trusted)  
+### <a name="b-copying-table-rows-into-a-data-file-with-a-trusted-connection"></a>B. Copia delle righe di tabella in un file di dati (con connessione trusted)  
 Gli esempi seguenti illustrano l'uso dell'opzione **out** nella tabella `WideWorldImporters.Warehouse.StockItemTransactions` .
 
 - **Base**  
