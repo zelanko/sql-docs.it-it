@@ -16,12 +16,12 @@ ms.assetid: 6cb9b1ce-1ce7-43ab-9451-201f79ed1ffa
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 9b7f489bf0ee637463fa9c7b2552563c09f3faad
-ms.sourcegitcommit: 7d4a3fc0f2622cbc6930d792be4a9b3fcac4c4b6
+ms.openlocfilehash: c220f33a4192ca0757101fe7e862f31413648d8c
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/21/2019
-ms.locfileid: "58306259"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58537003"
 ---
 # <a name="sprefreshsubscriptions-transact-sql"></a>sp_refreshsubscriptions (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -38,8 +38,7 @@ sp_refreshsubscriptions [ @publication = ] 'publication'
 ```  
   
 ## <a name="arguments"></a>Argomenti  
- [ **@publication** = ] **'***publication***'**  
- Pubblicazione per la quale aggiornare le sottoscrizioni. *pubblicazione* viene **sysname**, non prevede alcun valore predefinito.  
+`[ @publication = ] 'publication'` È la pubblicazione per cui si desidera aggiornare le sottoscrizioni. *pubblicazione* viene **sysname**, non prevede alcun valore predefinito.  
   
 ## <a name="return-code-values"></a>Valori restituiti  
  **0** (esito positivo) o **1** (errore)  

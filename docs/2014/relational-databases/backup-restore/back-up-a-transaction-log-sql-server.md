@@ -14,12 +14,12 @@ ms.assetid: 3426b5eb-6327-4c7f-88aa-37030be69fbf
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 12500b5e327be1de7f201af4c3040b1368c63c5a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 0479b16e7cc767b8e036a9632c0e9c80177c7837
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48154281"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58535303"
 ---
 # <a name="back-up-a-transaction-log-sql-server"></a>Backup di un log delle transazioni (SQL Server)
   In questo argomento viene descritto come eseguire il backup di un log delle transazioni in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] tramite [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../includes/tsql-md.md)]o PowerShell.  
@@ -32,7 +32,7 @@ ms.locfileid: "48154281"
   
      [Indicazioni](#Recommendations)  
   
-     [Security](#Security)  
+     [Sicurezza](#Security)  
   
 -   **Per eseguire il backup di un log delle transazioni, usando:**  
   
@@ -61,10 +61,10 @@ ms.locfileid: "48154281"
   
 ###  <a name="Security"></a> Sicurezza  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> Autorizzazioni  
  Le autorizzazioni BACKUP DATABASE e BACKUP LOG vengono assegnate per impostazione predefinita ai membri del ruolo predefinito del server **sysadmin** e dei ruoli predefiniti del database **db_owner** e **db_backupoperator** .  
   
- Eventuali problemi correlati alla proprietà e alle autorizzazioni sul file fisico del dispositivo di backup possono interferire con l'operazione di backup. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sia possibile leggere e scrivere sul dispositivo e che l'account utilizzato per eseguire il servizio [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] disponga delle autorizzazioni di scrittura. Le autorizzazioni di accesso ai file, tuttavia, non vengono controllate dalla stored procedure [sp_addumpdevice](/sql/relational-databases/system-stored-procedures/sp-addumpdevice-transact-sql), che aggiunge una voce per un dispositivo di backup nelle tabelle di sistema. Di conseguenza, i problemi relativi all'accesso e alla proprietà del file fisico del dispositivo di backup potrebbero emergere solo in fase di accesso alla risorsa fisica durante un tentativo di backup o ripristino.  
+ Eventuali problemi correlati alla proprietà e alle autorizzazioni sul file fisico del dispositivo di backup possono interferire con l'operazione di backup. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sia possibile leggere e scrivere sul dispositivo e che l'account utilizzato per eseguire il servizio [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] disponga delle autorizzazioni di scrittura. Le autorizzazioni di accesso ai file, tuttavia, non vengono controllate dalla stored procedure [sp_addumpdevice](/sql/relational-databases/system-stored-procedures/sp-addumpdevice-transact-sql)che aggiunge una voce per un dispositivo di backup nelle tabelle di sistema. Di conseguenza, i problemi relativi all'accesso e alla proprietà del file fisico del dispositivo di backup potrebbero emergere solo in fase di accesso alla risorsa fisica durante un tentativo di backup o ripristino.  
   
 ##  <a name="SSMSProcedure"></a> Utilizzo di SQL Server Management Studio  
   
@@ -155,7 +155,7 @@ ms.locfileid: "48154281"
   
 -   Triple DES  
   
-##  <a name="TsqlProcedure"></a> Uso di Transact-SQL  
+##  <a name="TsqlProcedure"></a> Utilizzo di Transact-SQL  
   
 #### <a name="to-back-up-a-transaction-log"></a>Per eseguire il backup di un log delle transazioni  
   
@@ -172,7 +172,7 @@ ms.locfileid: "48154281"
   
  In questo esempio viene creato un backup del log delle transazioni per il database [!INCLUDE[ssSampleDBobject](../../../includes/sssampledbobject-md.md)] nel dispositivo di backup denominato creato in precedenza, `MyAdvWorks_FullRM_log1`.  
   
-```tsql  
+```sql  
 BACKUP LOG AdventureWorks2012  
    TO MyAdvWorks_FullRM_log1;  
 GO  

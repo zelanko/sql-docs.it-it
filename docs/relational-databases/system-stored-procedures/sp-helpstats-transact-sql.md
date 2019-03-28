@@ -19,12 +19,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: ae3b5a2d826fbafc5bc9f5bfc265794e7898a0d7
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 6a78ec7a666c40c1c1bd742545139aa2e9ea0aec
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47640783"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58534893"
 ---
 # <a name="sphelpstats-transact-sql"></a>sp_helpstats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -45,11 +45,9 @@ sp_helpstats[ @objname = ] 'object_name'
 ```  
   
 ## <a name="arguments"></a>Argomenti  
- [  **@objname=**] **'***object_name***'**  
- Specifica la tabella per cui recuperare le informazioni statistiche. *object_name* viene **nvarchar(520)** e non può essere null. È possibile specificare un nome composto da una o due parti.  
+`[ @objname = ] 'object_name'` Specifica la tabella in cui si desidera ottenere informazioni statistiche. *object_name* viene **nvarchar(520)** e non può essere null. È possibile specificare un nome composto da una o due parti.  
   
- [  **@results=**] **'***valore***'**  
- Specifica la quantità di informazioni da restituire. Possibili valori sono **tutte** e **STATS**. **Tutti i** Elenca le statistiche per tutti gli indici e anche le colonne con statistiche create su di essi. **STATS** Elenca solo le statistiche non associate a un indice. *valore* viene **nvarchar(5** con valore predefinito è STATS.  
+`[ @results = ] 'value'` Specifica la quantità di informazioni da fornire. Possibili valori sono **tutte** e **STATS**. **Tutti i** Elenca le statistiche per tutti gli indici e anche le colonne con statistiche create su di essi. **STATS** Elenca solo le statistiche non associate a un indice. *valore* viene **nvarchar(5** con valore predefinito è STATS.  
   
 ## <a name="return-code-values"></a>Valori restituiti  
  0 (esito positivo) o 1 (esito negativo)  
@@ -57,7 +55,7 @@ sp_helpstats[ @objname = ] 'object_name'
 ## <a name="result-sets"></a>Set di risultati  
  Nella tabella seguente vengono descritte le colonne del set di risultati.  
   
-|Nome colonna|Description|  
+|Nome colonna|Descrizione|  
 |-----------------|-----------------|  
 |**statistics_name**|Nome delle statistiche. Restituisce **sysname** e non può essere null.|  
 |**statistics_keys**|Chiavi su cui sono basate le statistiche. Restituisce **nvarchar(2078)** e non può essere null.|  

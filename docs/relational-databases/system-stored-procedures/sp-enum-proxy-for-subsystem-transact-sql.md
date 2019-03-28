@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 580cc3be-1068-4a96-8d15-78ca3a5bb719
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: cc983f79dfa1eafd0f0175448467c3a8d9a69aa0
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 5beab3dc255e5679191dd6ea5d05bfdd98bef6ba
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47736865"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58534923"
 ---
 # <a name="spenumproxyforsubsystem-transact-sql"></a>sp_enum_proxy_for_subsystem (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -43,24 +43,20 @@ sp_enum_proxy_for_subsystem
 ```  
   
 ## <a name="arguments"></a>Argomenti  
- [ **@proxy_id** = ] *proxy_id*  
- Numero di identificazione del proxy per cui visualizzare un elenco di informazioni. Il *proxy_id* viene **int**, con un valore predefinito è NULL. Entrambi i *id* o nella *proxy_name* può essere specificato.  
+`[ @proxy_id = ] proxy_id` Il numero di identificazione del proxy da elenco di informazioni. Il *proxy_id* viene **int**, con un valore predefinito è NULL. Entrambi i *id* o nella *proxy_name* può essere specificato.  
   
- [ **@proxy_name** =] **'***proxy_name***'**  
- Nome del proxy per cui visualizzare un elenco di informazioni. Il *nome_proxy* viene **sysname**, con un valore predefinito è NULL. Entrambi i *id* o nella *proxy_name* può essere specificato.  
+`[ @proxy_name = ] 'proxy_name'` Il nome del proxy da elenco di informazioni. Il *nome_proxy* viene **sysname**, con un valore predefinito è NULL. Entrambi i *id* o nella *proxy_name* può essere specificato.  
   
- [ **@subsystem_id** = ] *subsystem_id*  
- Numero di identificazione del sottosistema per cui visualizzare un elenco di informazioni. Il *subsystem_id* viene **int**, con un valore predefinito è NULL. Entrambi i *subsystem_id* o nella *subsystem_name* può essere specificato.  
+`[ @subsystem_id = ] subsystem_id` Il numero di identificazione del sottosistema per elenco di informazioni. Il *subsystem_id* viene **int**, con un valore predefinito è NULL. Entrambi i *subsystem_id* o nella *subsystem_name* può essere specificato.  
   
- [ **@subsystem_name** =] **'***subsystem_name***'**  
- Nome del sottosistema per cui visualizzare un elenco di informazioni. Il *subsystem_name* viene **sysname**, con un valore predefinito è NULL. Entrambi i *subsystem_id* o nella *subsystem_name* può essere specificato.  
+`[ @subsystem_name = ] 'subsystem_name'` Il nome del sottosistema per elenco di informazioni. Il *subsystem_name* viene **sysname**, con un valore predefinito è NULL. Entrambi i *subsystem_id* o nella *subsystem_name* può essere specificato.  
   
 ## <a name="return-code-values"></a>Valori restituiti  
  **0** (esito positivo) o **1** (errore)  
   
 ## <a name="result-sets"></a>Set di risultati  
   
-|Nome colonna|Tipo di dati|Description|  
+|Nome colonna|Tipo di dati|Descrizione|  
 |-----------------|---------------|-----------------|  
 |**subsystem_id**|**int**|Numero di identificazione del sottosistema.|  
 |**subsystem_name**|**sysname**|Nome del sottosistema.|  

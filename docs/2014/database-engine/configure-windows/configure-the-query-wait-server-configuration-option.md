@@ -14,12 +14,12 @@ ms.assetid: 0fc4aa01-65a3-4a33-9ef4-caca41add238
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: a2e2d2f89b12274694bde8c4f9743416fa2ba253
-ms.sourcegitcommit: 04dd0620202287869b23cc2fde998a18d3200c66
+ms.openlocfilehash: 7f5aa6fd5a6ebc10cc91f749ee4745e3676c4a3c
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "52641092"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58526173"
 ---
 # <a name="configure-the-query-wait-server-configuration-option"></a>Configurare l'opzione di configurazione del server query wait
   In questo argomento viene descritto come configurare l'opzione di configurazione del server **query wait** in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] utilizzando [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)]. Le query che impegnano una notevole quantità di memoria, ad esempio quelle che eseguono operazioni di ordinamento e di hashing, vengono inserite in una coda se la memoria disponibile è insufficiente per la loro esecuzione. L'opzione **query wait** consente di specificare il tempo in secondi (da 0 a 2147483647) per l'attesa di risorse da parte della query, trascorso il quale si verifica il timeout della query. Il valore predefinito dell'opzione è -1. Vuole dire che il timeout viene calcolato come 25 volte il costo stimato della query.  
@@ -72,9 +72,9 @@ ms.locfileid: "52641092"
   
 2.  Dalla barra Standard fare clic su **Nuova query**.  
   
-3.  Copiare e incollare l'esempio seguente nella finestra delle query e fare clic su **Esegui**. In questo esempio si illustra come utilizzare [sp_configure](/sql/relational-databases/system-stored-procedures/sp-configure-transact-sql) per impostare il valore dell'opzione `query wait` su `7500` secondi.  
+3.  Copiare e incollare l'esempio seguente nella finestra Query, quindi fare clic su **Esegui**. In questo esempio si illustra come utilizzare [sp_configure](/sql/relational-databases/system-stored-procedures/sp-configure-transact-sql) per impostare il valore dell'opzione `query wait` su `7500` secondi.  
   
-```tsql  
+```sql  
 USE AdventureWorks2012 ;  
 GO  
 EXEC sp_configure 'show advanced options', 1;  

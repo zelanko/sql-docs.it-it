@@ -18,12 +18,12 @@ ms.assetid: b2fc4ce1-0a8e-44d2-b206-7dc7b258d8c9
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 62a8246c6d694ae002a615e803c520127ab595c8
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: fff543b074936f8bf1d69d841a1e81e402e9b0ae
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47630181"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58535433"
 ---
 # <a name="sphelpschedule-transact-sql"></a>sp_help_schedule (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -44,17 +44,13 @@ sp_help_schedule
 ```  
   
 ## <a name="arguments"></a>Argomenti  
- [ **@schedule_id =** ] *id*  
- Identificatore della pianificazione per cui restituire un elenco di informazioni. *schedule_name* viene **int**, non prevede alcun valore predefinito. Entrambi *schedule_id* oppure *schedule_name* può essere specificato.  
+`[ @schedule_id = ] id` L'identificatore della pianificazione all'elenco. *schedule_name* viene **int**, non prevede alcun valore predefinito. Entrambi *schedule_id* oppure *schedule_name* può essere specificato.  
   
- [  **@schedule_name =** ] **'***schedule_name***'**  
- Nome della pianificazione per cui restituire un elenco di informazioni. *schedule_name* viene **sysname**, non prevede alcun valore predefinito. Entrambi *schedule_id* oppure *schedule_name* può essere specificato.  
+`[ @schedule_name = ] 'schedule_name'` Il nome della pianificazione all'elenco. *schedule_name* viene **sysname**, non prevede alcun valore predefinito. Entrambi *schedule_id* oppure *schedule_name* può essere specificato.  
   
- [ **@attached_schedules_only** =] *attached_schedules_only* ]  
- Specifica se visualizzare solo le pianificazioni a cui è associato un processo. *attached_schedules_only* viene **bit**, il valore predefinito è **0**. Quando *attached_schedules_only* viene **0**, vengono visualizzate tutte le pianificazioni. Quando *attached_schedules_only* viene **1**, il set di risultati contiene solo le pianificazioni associate a un processo.  
+`[ @attached_schedules_only = ] attached_schedules_only ]` Specifica se visualizzare solo le pianificazioni di cui è associato un processo. *attached_schedules_only* viene **bit**, il valore predefinito è **0**. Quando *attached_schedules_only* viene **0**, vengono visualizzate tutte le pianificazioni. Quando *attached_schedules_only* viene **1**, il set di risultati contiene solo le pianificazioni associate a un processo.  
   
- [ **@include_description** =] *include_description*  
- Specifica se includere le descrizioni nel set dei risultati. *include_description* viene **bit**, il valore predefinito è **0**. Quando *include_description* viene **0**, il *schedule_description* colonna del set di risultati contiene un segnaposto. Quando *include_description* viene **1**, la descrizione della pianificazione è incluso nel set di risultati.  
+`[ @include_description = ] include_description` Specifica se includere le descrizioni nel set di risultati. *include_description* viene **bit**, il valore predefinito è **0**. Quando *include_description* viene **0**, il *schedule_description* colonna del set di risultati contiene un segnaposto. Quando *include_description* viene **1**, la descrizione della pianificazione è incluso nel set di risultati.  
   
 ## <a name="return-code-values"></a>Valori restituiti  
  **0** (esito positivo) o **1** (errore)  
@@ -62,13 +58,13 @@ sp_help_schedule
 ## <a name="result-sets"></a>Set di risultati  
  Questa procedura restituisce il set di risultati seguente:  
   
-|Nome colonna|Tipo di dati|Description|  
+|Nome colonna|Tipo di dati|Descrizione|  
 |-----------------|---------------|-----------------|  
 |**schedule_id**|**int**|Numero di identificazione della pianificazione.|  
 |**schedule_uid**|**uniqueidentifier**|Identificatore della pianificazione.|  
 |**schedule_name**|**sysname**|Nome della pianificazione.|  
 |**enabled**|**int**|Se la pianificazione è abilitato (**1**) o non abilitato (**0**).|  
-|**freq_type**|**int**|Valore che indica la frequenza di esecuzione del processo:<br /><br /> **1** = una sola volta<br /><br /> **4** = giornaliera<br /><br /> **8** = settimanale<br /><br /> **16** = mensile<br /><br /> **32** = mensile relativa al **freq_interval**<br /><br /> **64** = esecuzione all'avvio del servizio SQLServerAgent.|  
+|**freq_type**|**int**|Valore che indica la frequenza di esecuzione del processo:<br /><br /> **1** = Once<br /><br /> **4** = giornaliera<br /><br /> **8** = settimanale<br /><br /> **16** = mensile<br /><br /> **32** = mensile relativa al **freq_interval**<br /><br /> **64** = esecuzione all'avvio del servizio SQLServerAgent.|  
 |**freq_interval**|**int**|Giorni in cui viene eseguito il processo. Il valore dipende dal valore della **freq_type**. Per altre informazioni, vedere [sp_add_schedule &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-schedule-transact-sql.md).|  
 |**freq_subday_type**|**int**|Unità di misura per **freq_subday_interval**. Per altre informazioni, vedere [sp_add_schedule &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-schedule-transact-sql.md).|  
 |**freq_subday_interval**|**int**|Numerosi **freq_subday_type** periodi intercorrere tra ogni esecuzione del processo. Per altre informazioni, vedere [sp_add_schedule &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-schedule-transact-sql.md).|  

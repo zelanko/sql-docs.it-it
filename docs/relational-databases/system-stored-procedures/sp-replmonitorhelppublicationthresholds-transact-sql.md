@@ -16,12 +16,12 @@ ms.assetid: d6b1aa4b-3369-4255-a892-c0e5cc9cb693
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 99b577b27b8edd2f37f1af3a13162f1b1aaa8c42
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: b69d1ae90224b94d5db5f9658942e1beed0b61d1
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52747653"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58526929"
 ---
 # <a name="spreplmonitorhelppublicationthresholds-transact-sql"></a>sp_replmonitorhelppublicationthresholds (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -42,17 +42,13 @@ sp_replmonitorhelppublicationthresholds [ @publisher = ] 'publisher'
 ```  
   
 ## <a name="arguments"></a>Argomenti  
- [ **@publisher**=] **'***publisher***'**  
- Nome del server di pubblicazione. *server di pubblicazione* viene **sysname**, non prevede alcun valore predefinito.  
+`[ @publisher = ] 'publisher'` È il nome del server di pubblicazione. *server di pubblicazione* viene **sysname**, non prevede alcun valore predefinito.  
   
- [ **@publisher_db**=] **'***publisher_db***'**  
- Nome del database pubblicato. *publisher_db* viene **sysname**, non prevede alcun valore predefinito.  
+`[ @publisher_db = ] 'publisher_db'` È il nome del database pubblicato. *publisher_db* viene **sysname**, non prevede alcun valore predefinito.  
   
- [ **@publication**=] **'***pubblicazione***'**  
- Nome della pubblicazione. *pubblicazione* viene **sysname**, non prevede alcun valore predefinito.  
+`[ @publication = ] 'publication'` È il nome della pubblicazione. *pubblicazione* viene **sysname**, non prevede alcun valore predefinito.  
   
- [ **@publication_type**=] *publication_type*  
- Tipo di pubblicazione. *publication_type* viene **int**, i possibili valori sono i seguenti.  
+`[ @publication_type = ] publication_type` Se il tipo di pubblicazione. *publication_type* viene **int**, i possibili valori sono i seguenti.  
   
 |Value|Descrizione|  
 |-----------|-----------------|  
@@ -69,7 +65,7 @@ sp_replmonitorhelppublicationthresholds [ @publisher = ] 'publisher'
 |**title**|**sysname**|Nome della misurazione delle prestazioni di replica.|  
 |**Valore**|**int**|Valore soglia della misurazione delle prestazioni.|  
 |**shouldalert**|**bit**|È se deve essere generato un avviso quando la metrica supera la soglia definita per la pubblicazione. un valore pari **1** indica che deve essere generato un avviso.|  
-|**IsEnabled**|**bit**|È se il monitoraggio è abilitato per la metrica di prestazioni della replica per la pubblicazione. un valore pari **1** indica che il monitoraggio è attivato.|  
+|**isenabled**|**bit**|È se il monitoraggio è abilitato per la metrica di prestazioni della replica per la pubblicazione. un valore pari **1** indica che il monitoraggio è attivato.|  
   
 ## <a name="return-code-values"></a>Valori restituiti  
  **0** (esito positivo) o **1** (errore)  

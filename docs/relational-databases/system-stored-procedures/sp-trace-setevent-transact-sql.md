@@ -18,12 +18,12 @@ ms.assetid: 7662d1d9-6d0f-443a-b011-c901a8b77a44
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: cae733bf78928ccd83550adc8a4b525f6a996189
-ms.sourcegitcommit: 1e7ec3b11f25d469163bdc9096a475411eacf79a
+ms.openlocfilehash: 54f36b46f75bf943ecf08aafd93a6b861c2da90a
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53266102"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58538583"
 ---
 # <a name="sptracesetevent-transact-sql"></a>sp_trace_setevent (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -46,11 +46,9 @@ sp_trace_setevent [ @traceid = ] trace_id
 ```  
   
 ## <a name="arguments"></a>Argomenti  
- [ **@traceid=** ] *trace_id*  
- ID della traccia da modificare. *trace_id* viene **int**, non prevede alcun valore predefinito. L'utente può *trace_id* valore da identificare, modificare e controllare la traccia.  
+`[ @traceid = ] trace_id` È l'ID della traccia da modificare. *trace_id* viene **int**, non prevede alcun valore predefinito. L'utente può *trace_id* valore da identificare, modificare e controllare la traccia.  
   
- [  **@eventid=** ] *event_id*  
- ID dell'evento da abilitare. *event_id* viene **int**, non prevede alcun valore predefinito.  
+`[ @eventid = ] event_id` È l'ID dell'evento da attivare. *event_id* viene **int**, non prevede alcun valore predefinito.  
   
  Nella tabella seguente vengono descritti gli eventi che è possibile aggiungere o rimuovere in una traccia.  
   
@@ -216,8 +214,8 @@ sp_trace_setevent [ @traceid = ] trace_id
 |186|TM: Eseguire il commit Tran completata|Viene generato al completamento di una richiesta COMMIT TRANSACTION.|  
 |187|TM: Eseguire il rollback Tran starting|Viene generato all'avvio di una richiesta ROLLBACK TRANSACTION.|  
 |188|TM: Rollback Tran completata|Viene generato al completamento di una richiesta ROLLBACK TRANSACTION.|  
-|189|Lock:Timeout (timeout > 0)|Viene generato quando si verifica il timeout di una richiesta di blocco su una risorsa, ad esempio una pagina.|  
-|190|Progress Report: Operazione sull'indice online|Indica lo stato di un'operazione di compilazione di un indice online durante l'esecuzione del processo di compilazione.|  
+|189|Lock: Timeout (timeout > 0)|Viene generato quando si verifica il timeout di una richiesta di blocco su una risorsa, ad esempio una pagina.|  
+|190|Report di stato: Operazione sull'indice online|Indica lo stato di un'operazione di compilazione di un indice online durante l'esecuzione del processo di compilazione.|  
 |191|TM: Salvare Tran starting|Viene generato all'avvio di una richiesta SAVE TRANSACTION.|  
 |192|TM: Save Tran completata|Viene generato al completamento di una richiesta SAVE TRANSACTION.|  
 |193|Background Job Error|Viene generato quando un processo in background termina in modo anomalo.|  
@@ -239,8 +237,7 @@ sp_trace_setevent [ @traceid = ] trace_id
 |218|Plan Guide Unsuccessful|Indica che in SQL Server non è stato possibile creare un piano di esecuzione per una query o un batch contenente una guida di piano. SQL Server ha tentato di generare un piano di esecuzione per questa query o batch senza applicare la guida di piano. Una guida di piano non valida potrebbe essere la causa di questo problema. È possibile convalidare la guida di piano utilizzando la funzione di sistema sys.fn_validate_plan_guide.|  
 |235|Audit Fulltext||  
   
- [ **@columnid=** ] *column_id*  
- ID della colonna da aggiungere per l'evento. *column_id* viene **int**, non prevede alcun valore predefinito.  
+`[ @columnid = ] column_id` È l'ID della colonna da aggiungere per l'evento. *column_id* viene **int**, non prevede alcun valore predefinito.  
   
  Nella tabella seguente sono incluse le colonne che è possibile aggiungere per un evento.  
   
@@ -305,13 +302,13 @@ sp_trace_setevent [ @traceid = ] trace_id
 |57|**Tipo**|Valore intero che dipende dalla classe di evento acquisita nella traccia.|  
 |58|**OwnerID**|Tipo di oggetto proprietario del blocco. Solo per gli eventi di blocco.|  
 |59|**ParentName**|Nome dello schema in cui è incluso l'oggetto.|  
-|60|**IsSystem**|Indica se l'evento è stato generato per un processo di sistema o un processo utente.<br /><br /> **1** = sistema<br /><br /> **0** = utente.|  
+|60|**IsSystem**|Indica se l'evento è stato generato per un processo di sistema o un processo utente.<br /><br /> **1** = sistema<br /><br /> **0** = user.|  
 |61|**Offset**|Offset iniziale dell'istruzione nella stored procedure o nel batch.|  
 |62|**SourceDatabaseID**|ID del database in cui esiste l'origine dell'oggetto.|  
 |63|**SqlHandle**|Hash a 64 bit basato sul testo di una query ad hoc oppure ID del database e dell'oggetto di un oggetto SQL. È possibile passare questo valore a **sys.dm_exec_sql_text()** per recuperare il testo SQL associato.|  
 |64|**SessionLoginName**|Nome dell'account di accesso dell'utente che ha avviato la sessione. Se, ad esempio, si esegue la connessione a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] con l'account di accesso **Login1** e si esegue un'istruzione con l'account di accesso **Login2**, **SessionLoginName** indica **Login1**, mentre **LoginName** indica **Login2**. In questa colonna vengono visualizzati sia gli account di accesso di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] che quelli di Windows.|  
   
- **[ @on=]** *su*  
+ **[ @on=]** *on*  
  Specifica se impostare l'evento su ON (1) oppure OFF (0). *sul* viene **bit**, non prevede alcun valore predefinito.  
   
  Se *sul* è impostata su **1**, e *column_id* è NULL, quindi l'evento è impostata su ON e tutte le colonne vengono cancellate. Se *column_id* non è null, la colonna è impostata su ON per l'evento.  

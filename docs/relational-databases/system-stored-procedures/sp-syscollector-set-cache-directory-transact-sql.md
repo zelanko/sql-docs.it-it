@@ -19,12 +19,12 @@ ms.assetid: df56d5a5-8961-494f-a745-d752ca63805a
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 825291445c0d31df8230793c3a5d6a1b7f272082
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 300a59bb09fa28a626b117f51cfa6509b5ca883e
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47726769"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58538643"
 ---
 # <a name="spsyscollectorsetcachedirectory-transact-sql"></a>sp_syscollector_set_cache_directory (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -41,8 +41,7 @@ sp_syscollector_set_cache_directory [ @cache_directory = ] 'cache_directory'
 ```  
   
 ## <a name="arguments"></a>Argomenti  
- [  **@cache_directory =** ] **'***cache_directory***'**  
- Directory nel file system in cui i dati raccolti vengono archiviati temporaneamente. *cache_directory* viene **nvarchar(255**, con un valore predefinito NULL. Se non viene specificato alcun valore, viene utilizzata la directory temporanea predefinita di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+`[ @cache_directory = ] 'cache_directory'` La directory del file System in cui i dati raccolti vengono archiviati temporaneamente. *cache_directory* viene **nvarchar(255**, con un valore predefinito NULL. Se non viene specificato alcun valore, viene utilizzata la directory temporanea predefinita di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 ## <a name="return-code-values"></a>Valori restituiti  
  **0** (esito positivo) o **1** (errore)  

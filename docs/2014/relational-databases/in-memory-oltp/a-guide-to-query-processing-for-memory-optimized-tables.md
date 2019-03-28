@@ -10,12 +10,12 @@ ms.assetid: 065296fe-6711-4837-965e-252ef6c13a0f
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 2393792341fdbc28bbc0f74657aa2f3cf54ee4d1
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 3a610c41fd9e3126bb0f5833dcacfe27ce969a72
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53374823"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58535273"
 ---
 # <a name="a-guide-to-query-processing-for-memory-optimized-tables"></a>Guida all'elaborazione delle query per le tabelle con ottimizzazione per la memoria
   Con OLTP in memoria sono state introdotte le tabelle ottimizzate per la memoria e le stored procedure compilate in modo nativo in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. In questo articolo viene fornita una panoramica sull'elaborazione delle query per le tabelle ottimizzate per la memoria e le stored procedure compilate in modo nativo.  
@@ -41,7 +41,7 @@ ms.locfileid: "53374823"
   
  Vengono considerate due tabelle, Customer e Order. Il seguente script di [!INCLUDE[tsql](../../../includes/tsql-md.md)] contiene le definizioni di queste due tabelle e gli indici associati, nel formato basato su disco (tradizionale):  
   
-```tsql  
+```sql  
 CREATE TABLE dbo.[Customer] (  
   CustomerID nchar (5) NOT NULL PRIMARY KEY,  
   ContactName nvarchar (30) NOT NULL   
@@ -64,7 +64,7 @@ GO
   
  Si consideri la query seguente, che crea un join tra le tabelle Customer e Order e restituisce l'ID dell'ordine e le informazioni sul cliente associato:  
   
-```tsql  
+```sql  
 SELECT o.OrderID, c.* FROM dbo.[Customer] c INNER JOIN dbo.[Order] o ON c.CustomerID = o.CustomerID  
 ```  
   
@@ -83,7 +83,7 @@ Piano di query per il join di tabelle basate su disco.
   
  Si consideri una leggera variazione in questa query, con la restituzione di tutte le righe della tabella Order e non solo di OrderID, come illustrato di seguito:  
   
-```tsql  
+```sql  
 SELECT o.*, c.* FROM dbo.[Customer] c INNER JOIN dbo.[Order] o ON c.CustomerID = o.CustomerID  
 ```  
   
@@ -136,7 +136,7 @@ Pipeline di elaborazione delle query per l'accesso del codice Transact-SQL inter
   
  Lo script [!INCLUDE[tsql](../../../includes/tsql-md.md)] riportato di seguito contiene versioni ottimizzate per la memoria delle tabelle Order e Customer, con indici hash:  
   
-```tsql  
+```sql  
 CREATE TABLE dbo.[Customer] (  
   CustomerID nchar (5) NOT NULL PRIMARY KEY NONCLUSTERED,  
   ContactName nvarchar (30) NOT NULL   
@@ -153,7 +153,7 @@ GO
   
  Si consideri la stessa query eseguita su tabelle ottimizzate per la memoria:  
   
-```tsql  
+```sql  
 SELECT o.OrderID, c.* FROM dbo.[Customer] c INNER JOIN dbo.[Order] o ON c.CustomerID = o.CustomerID  
 ```  
   
@@ -175,7 +175,7 @@ Piano di query per il join di tabelle ottimizzate per la memoria.
 ## <a name="natively-compiled-stored-procedures"></a>stored procedure compilate in modo nativo  
  Le stored procedure compilate in modo nativo sono stored procedure [!INCLUDE[tsql](../../../includes/tsql-md.md)] compilate nel codice macchina, piuttosto che interpretate dal motore di esecuzione delle query. Lo script seguente crea una stored procedure compilata in modo nativo che esegue la query di esempio (della sezione Query di esempio).  
   
-```tsql  
+```sql  
 CREATE PROCEDURE usp_SampleJoin  
 WITH NATIVE_COMPILATION, SCHEMABINDING, EXECUTE AS OWNER  
 AS BEGIN ATOMIC WITH   
@@ -241,7 +241,7 @@ Esecuzione di stored procedure compilate in modo nativo.
 ### <a name="retrieving-a-query-execution-plan-for-natively-compiled-stored-procedures"></a>Recupero di un piano di esecuzione di query per le stored procedure compilate in modo nativo  
  Il piano di esecuzione di query per una stored procedure compilata in modo nativo può essere recuperato usando **Piano di esecuzione stimato** in [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]o tramite l'opzione SHOWPLAN_XML in [!INCLUDE[tsql](../../../includes/tsql-md.md)]. Ad esempio:  
   
-```tsql  
+```sql  
 SET SHOWPLAN_XML ON  
 GO  
 EXEC dbo.usp_myproc  
@@ -269,7 +269,7 @@ GO
 |Stream Aggregate|Si noti che l'operatore Hash Match non è supportato per l'aggregazione. Pertanto, in tutte le aggregazioni nelle stored procedure compilate in modo nativo viene utilizzato l'operatore Stream Aggregate, anche se il piano per la stessa query nel codice [!INCLUDE[tsql](../../../includes/tsql-md.md)] interpretato utilizza l'operatore Hash Match.<br /><br /> `SELECT count(CustomerID) FROM dbo.Customer`|  
   
 ## <a name="column-statistics-and-joins"></a>Statistiche di colonna e join  
- [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] mantiene statistiche sui valori nelle colonne chiave di indice per facilitare la stima del costo di determinate operazioni, quali l'analisi e le ricerche sugli indici. ( [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] crea anche le statistiche sulle colonne chiave non indice se si crea in modo esplicito o l'utilità di ottimizzazione query create in risposta a una query con un predicato.) La principale metrica nella stima dei costi è il numero di righe elaborate da un singolo operatore. Si noti che, per le tabelle basate su disco, il numero di pagine a cui accede un operatore specifico è significativo nella stima dei costi. Tuttavia, poiché il conteggio delle pagine non è importante per le tabelle ottimizzate per la memoria (è sempre zero), questa descrizione è incentrata sul conteggio delle righe. La stima inizia con gli operatori Index Seek e Index Scan nel piano e viene quindi estesa agli altri operatori, quale l'operatore di join. Il numero stimato di righe da elaborare da parte di un operatore di join è basato sulla stima per gli operatori Index Seek e Index Scan sottostanti. Per l'accesso del codice [!INCLUDE[tsql](../../../includes/tsql-md.md)] interpretato alle tabelle ottimizzate per la memoria, è possibile osservare il piano di esecuzione effettivo per vedere la differenza tra il numero di righe stimato ed effettivo per gli operatori nel piano.  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] mantiene statistiche sui valori nelle colonne chiave di indice per facilitare la stima del costo di determinate operazioni, quali l'analisi e le ricerche sugli indici. Con [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] è anche possibile creare statistiche sulle colonne chiave non di indice, se create in modo esplicito dall'utente o create da Query Optimizer in risposta a una query con un predicato. La principale metrica nella stima dei costi è il numero di righe elaborate da un singolo operatore. Si noti che, per le tabelle basate su disco, il numero di pagine a cui accede un operatore specifico è significativo nella stima dei costi. Tuttavia, poiché il conteggio delle pagine non è importante per le tabelle ottimizzate per la memoria (è sempre zero), questa descrizione è incentrata sul conteggio delle righe. La stima inizia con gli operatori Index Seek e Index Scan nel piano e viene quindi estesa agli altri operatori, quale l'operatore di join. Il numero stimato di righe da elaborare da parte di un operatore di join è basato sulla stima per gli operatori Index Seek e Index Scan sottostanti. Per l'accesso del codice [!INCLUDE[tsql](../../../includes/tsql-md.md)] interpretato alle tabelle ottimizzate per la memoria, è possibile osservare il piano di esecuzione effettivo per vedere la differenza tra il numero di righe stimato ed effettivo per gli operatori nel piano.  
   
  Per l'esempio nella figura 1:  
   

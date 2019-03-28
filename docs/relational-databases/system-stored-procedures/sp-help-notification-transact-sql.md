@@ -18,12 +18,12 @@ ms.assetid: 0273457f-9d2a-4a6f-9a16-6a6bf281cba0
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 3ccc926844f6d3c054a69cb51f3156dc8e186a98
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d003b1f15500b1f6d0b8490d9e712a6a34b100a3
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47833579"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58538633"
 ---
 # <a name="sphelpnotification-transact-sql"></a>sp_help_notification (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -45,33 +45,28 @@ sp_help_notification
 ```  
   
 ## <a name="arguments"></a>Argomenti  
- [  **@object_type =**] **'***object_type***'**  
- Tipo di informazioni che si desidera ottenere. *object_type*viene **char(9)**, non prevede alcun valore predefinito. *object_type* sono ALERTS, con cui sono elencati gli avvisi assegnati al nome dell'operatore specificato *,* operatori, in cui sono elencati gli operatori responsabili del nome dell'avviso specificato o *.*  
+`[ @object_type = ] 'object_type'` Il tipo di informazioni da restituire. *object_type*viene **char(9)**, non prevede alcun valore predefinito. *object_type* sono ALERTS, con cui sono elencati gli avvisi assegnati al nome dell'operatore specificato *,* operatori, in cui sono elencati gli operatori responsabili del nome dell'avviso specificato o *.*  
   
- [  **@name =**] **'***nome***'**  
- Nome di un operatore (se *object_type* è OPERATORS) o nome di un avviso (se *object_type* è ALERTS). *nome* viene **sysname**, non prevede alcun valore predefinito.  
+`[ @name = ] 'name'` Nome di un operatore (se *object_type* è OPERATORS) o nome di un avviso (se *object_type* è ALERTS). *nome* viene **sysname**, non prevede alcun valore predefinito.  
   
- [  **@enum_type =**] **'***enum_type***'**  
- Il *object_type*informazioni restituite. *enum_type* è ACTUAL nella maggior parte dei casi. *enum_type*viene **char (10)** e non prevede alcun valore predefinito, i possibili valori sono i seguenti.  
+`[ @enum_type = ] 'enum_type'` Il *object_type*informazioni restituite. *enum_type* è ACTUAL nella maggior parte dei casi. *enum_type*viene **char (10)** e non prevede alcun valore predefinito, i possibili valori sono i seguenti.  
   
-|valore|Description|  
+|Value|Descrizione|  
 |-----------|-----------------|  
 |ACTUAL|Elenca solo le *oggetti object_type* associati *nome*.|  
 |ALL|Elenca tutti i*oggetti object_type* inclusi quelli che non sono associati *nome*.|  
 |TARGET|Elenca solo le *oggetti object_type* corrispondenza fornito *target_name*, indipendentemente dall'associazione con*nome*.|  
   
- [  **@notification_method =**] *notification_method*  
- Un valore numerico che determina le colonne del metodo di notifica da restituire. *notification_method* viene **tinyint**, e può essere uno dei valori seguenti.  
+`[ @notification_method = ] notification_method` Valore numerico che determina le colonne di metodo di notifica da restituire. *notification_method* viene **tinyint**, e può essere uno dei valori seguenti.  
   
-|valore|Description|  
+|Value|Descrizione|  
 |-----------|-----------------|  
 |**1**|Messaggio di posta elettronica: restituisce solo le **use_email** colonna.|  
 |**2**|Cercapersone: restituisce solo le **use_pager** colonna.|  
 |**4**|NetSend: restituisce solo le **use_netsend** colonna.|  
 |**7**|Tutto: restituisce tutte le colonne.|  
   
- [  **@target_name =**] **'***target_name***'**  
- Il nome di un avviso da cercare (se *object_type* è ALERTS) o il nome di un operatore da cercare (se *object_type* è OPERATORS). *target_name* è necessario solo se *enum_type* è TARGET. *target_name* viene **sysname**, con un valore predefinito è NULL.  
+`[ @target_name = ] 'target_name'` Il nome di un avviso da cercare (se *object_type* è ALERTS) o il nome di un operatore da cercare (se *object_type* è OPERATORS). *target_name* è necessario solo se *enum_type* è TARGET. *target_name* viene **sysname**, con un valore predefinito è NULL.  
   
 ## <a name="return-code-valves"></a>Valori restituiti  
  0 (esito positivo) o 1 (esito negativo)  
@@ -79,7 +74,7 @@ sp_help_notification
 ## <a name="result-sets"></a>Set di risultati  
  Se *object_type* viene **avvisi**, il set di risultati sono elencati tutti gli avvisi per un dato operatore.  
   
-|Nome colonna|Tipo di dati|Description|  
+|Nome colonna|Tipo di dati|Descrizione|  
 |-----------------|---------------|-----------------|  
 |**alert_id**|**int**|Numero di identificazione dell'avviso.|  
 |**alert_name**|**sysname**|Nome dell'avviso.|  
@@ -92,7 +87,7 @@ sp_help_notification
   
  Se **object_type** viene **operatori**, il set di risultati vengono elencati tutti gli operatori per un determinato avviso.  
   
-|Nome colonna|Tipo di dati|Description|  
+|Nome colonna|Tipo di dati|Descrizione|  
 |-----------------|---------------|-----------------|  
 |**operator_id**|**int**|Numero di identificazione dell'operatore.|  
 |**operator_name**|**sysname**|Nome dell'operatore.|  

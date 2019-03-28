@@ -18,12 +18,12 @@ ms.assetid: a2b1eba0-bf71-47e7-a4c7-9f55feec82a3
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 4242494c94518817dd7ba161ddc16e1c47b51952
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 32d7d0098c5548666b1d2fc77e11f82c2c3fd5fe
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47659099"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58536853"
 ---
 # <a name="sphelplinkedsrvlogin-transact-sql"></a>sp_helplinkedsrvlogin (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -41,18 +41,16 @@ sp_helplinkedsrvlogin [ [ @rmtsrvname = ] 'rmtsrvname' ]
 ```  
   
 ## <a name="arguments"></a>Argomenti  
- [  **@rmtsrvname=**] **'***rmtsrvname***'**  
- Nome del server collegato a cui viene applicato il mapping dell'account di accesso. *rmtsrvname* viene **sysname**, con un valore predefinito è NULL. NULL indica che vengono restituiti i mapping degli account di accesso definiti per tutti i server collegati nel computer locale in cui [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] è in esecuzione.  
+`[ @rmtsrvname = ] 'rmtsrvname'` È il nome del server collegato che viene applicato il mapping dell'account di accesso. *rmtsrvname* viene **sysname**, con un valore predefinito è NULL. NULL indica che vengono restituiti i mapping degli account di accesso definiti per tutti i server collegati nel computer locale in cui [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] è in esecuzione.  
   
- [  **@locallogin=**] **'***locallogin***'**  
- È il [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] account di accesso nel server locale che dispone di un mapping per il server collegato *rmtsrvname*. *locallogin* viene **sysname**, con un valore predefinito è NULL. NULL indica che tutti i mapping definiti nella *rmtsrvname* vengono restituiti. Se non è NULL, un mapping per *locallogin* al *rmtsrvname* deve esistere già. *locallogin* può essere un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] account di accesso o un utente di Windows. È necessario che l'utente di Windows disponga dell'accesso a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ottenuto tramite concessione diretta o in base all'appartenenza a un gruppo di Windows che dispone dell'accesso.  
+`[ @locallogin = ] 'locallogin'` È il [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] account di accesso nel server locale che dispone di un mapping per il server collegato *rmtsrvname*. *locallogin* viene **sysname**, con un valore predefinito è NULL. NULL indica che tutti i mapping definiti nella *rmtsrvname* vengono restituiti. Se non è NULL, un mapping per *locallogin* al *rmtsrvname* deve esistere già. *locallogin* può essere un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] account di accesso o un utente di Windows. È necessario che l'utente di Windows disponga dell'accesso a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ottenuto tramite concessione diretta o in base all'appartenenza a un gruppo di Windows che dispone dell'accesso.  
   
 ## <a name="return-code-values"></a>Valori restituiti  
  0 (esito positivo) o 1 (esito negativo)  
   
 ## <a name="result-sets"></a>Set di risultati  
   
-|Nome colonna|Tipo di dati|Description|  
+|Nome colonna|Tipo di dati|Descrizione|  
 |-----------------|---------------|-----------------|  
 |**Server collegato**|**sysname**|Nome del server collegato.|  
 |**Account di accesso locale**|**sysname**|Account di accesso locale a cui fa riferimento il mapping.|  

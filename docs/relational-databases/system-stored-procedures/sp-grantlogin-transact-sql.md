@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 0c873d99-c3bf-4eb1-948b-a46cb235ccd4
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 0e620d178ae22a9572497b32f19348b5d027e30f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: def5041286ade754020a5c84e8d2ac91fc79afa3
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47703399"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58535403"
 ---
 # <a name="spgrantlogin-transact-sql"></a>sp_grantlogin (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -42,8 +42,7 @@ sp_grantlogin [@loginame=] 'login'
 ```  
   
 ## <a name="arguments"></a>Argomenti  
- [ **@loginame =** ] **'***login***'**  
- Nome di un utente o un gruppo di Windows. L'utente di Windows o il gruppo deve essere qualificato con un nome di dominio Windows nel formato *Domain*\\*utente*, ad esempio **London\Joeb**. *account di accesso* viene **sysname**, non prevede alcun valore predefinito.  
+`[ @loginame = ] 'login'` È il nome di un utente di Windows o un gruppo. L'utente di Windows o il gruppo deve essere qualificato con un nome di dominio Windows nel formato *Domain*\\*utente*, ad esempio **London\Joeb**. *account di accesso* viene **sysname**, non prevede alcun valore predefinito.  
   
 ## <a name="return-code-values"></a>Valori restituiti  
  0 (esito positivo) o 1 (esito negativo)  

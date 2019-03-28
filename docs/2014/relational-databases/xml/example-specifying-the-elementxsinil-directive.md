@@ -9,15 +9,15 @@ ms.topic: conceptual
 helpviewer_keywords:
 - ELEMENTXSINIL directive
 ms.assetid: bbcb6f9e-a51b-4775-9795-947c9d6d758f
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 597efb8e1385bf869e4109bd6961b64e477f2fb3
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 1a23baa7791aea37c4c90077c21391001ddc538a
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48221251"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58534813"
 ---
 # <a name="example-specifying-the-elementxsinil-directive"></a>Esempio: specifica della direttiva ELEMENTXSINIL
   Quando si specifica la direttiva ELEMENT per il recupero di codice XML incentrato sugli elementi, se la colonna contiene un valore NULL, l'elemento corrispondente non viene generato nella modalità EXPLICIT. È possibile specificare facoltativamente la direttiva ELEMENTXSINIL per richiedere la creazione dell'elemento per i valori NULL. In questo caso l'attributo `xsi:nil` viene impostato sul valore TRUE.  

@@ -12,12 +12,12 @@ ms.assetid: b920ec34-ba8b-4bb8-af53-a3ffd06bafa6
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 1f9398a700af30876d438b110392215b40337c91
-ms.sourcegitcommit: 04dd0620202287869b23cc2fde998a18d3200c66
+ms.openlocfilehash: 558218b4cff8e9d4ce100a92135f0fee4e0e09c8
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "52641312"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58527123"
 ---
 # <a name="configure-the-fill-factor-server-configuration-option"></a>Configurare l'opzione di configurazione del server fill factor
   In questo argomento si illustra come configurare l'opzione di configurazione del server **fill factor** in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] utilizzando [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)]. Il fattore di riempimento viene fornito per ottimizzare l'archiviazione dati e le prestazioni degli indici. Quando si crea o si ricompila un indice, il valore del fattore di riempimento consente di determinare la percentuale di spazio in ogni pagina al livello foglia da riempire di dati, riservando il resto come spazio libero per la crescita futura. Per altre informazioni, vedere [Specificare un fattore di riempimento per un indice](../../relational-databases/indexes/specify-fill-factor-for-an-index.md).  
@@ -67,9 +67,9 @@ ms.locfileid: "52641312"
   
 2.  Dalla barra Standard fare clic su **Nuova query**.  
   
-3.  Copiare e incollare l'esempio seguente nella finestra delle query e fare clic su **Esegui**. Questo esempio illustra come usare [sp_configure](/sql/relational-databases/system-stored-procedures/sp-configure-transact-sql) per impostare il valore dell'opzione `fill factor` su `100`.  
+3.  Copiare e incollare l'esempio seguente nella finestra Query, quindi fare clic su **Esegui**. Questo esempio illustra come usare [sp_configure](/sql/relational-databases/system-stored-procedures/sp-configure-transact-sql) per impostare il valore dell'opzione `fill factor` su `100`.  
   
-```tsql  
+```sql  
 Use AdventureWorks2012;  
 GO  
 sp_configure 'show advanced options', 1;  

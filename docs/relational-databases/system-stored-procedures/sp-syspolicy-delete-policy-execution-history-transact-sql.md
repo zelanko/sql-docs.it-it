@@ -18,12 +18,12 @@ ms.assetid: fe651af9-267e-45ec-b4e7-4b0698fb1be3
 author: VanMSFT
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: f5ffa31a27809412e2882b410e6745ba475fcb69
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 6660eba76675fbe261af33f647d60456ced839d2
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47658849"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58536963"
 ---
 # <a name="spsyspolicydeletepolicyexecutionhistory-transact-sql"></a>sp_syspolicy_delete_policy_execution_history (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -41,11 +41,9 @@ sp_syspolicy_delete_policy_execution_history [ @policy_id = ] policy_id ]
 ```  
   
 ## <a name="arguments"></a>Argomenti  
- [ **@policy_id=** ] *policy_id*  
- Identificatore dei criteri per cui si desidera eliminare la cronologia di esecuzione. *policy_id* viene **int**ed è obbligatorio. Può essere NULL.  
+`[ @policy_id = ] policy_id` È l'identificatore dei criteri per il quale si desidera eliminare la cronologia di esecuzione. *policy_id* viene **int**ed è obbligatorio. Può essere NULL.  
   
- [  **@oldest_date=** ] **'***oldest_date***'**  
- Data meno recente per la quale si desidera mantenere la cronologia di esecuzione dei criteri. Qualsiasi cronologia di esecuzione precedente a questa data viene eliminata. *oldest_date* viene **datetime**ed è obbligatorio. Può essere NULL.  
+`[ @oldest_date = ] 'oldest_date'` È la data meno recente per il quale si desidera mantenere la cronologia di esecuzione dei criteri. Qualsiasi cronologia di esecuzione precedente a questa data viene eliminata. *oldest_date* viene **datetime**ed è obbligatorio. Può essere NULL.  
   
 ## <a name="return-code-values"></a>Valori restituiti  
  **0** (esito positivo) o **1** (errore)  
@@ -76,7 +74,7 @@ ON a.policy_id = b.policy_id
  È necessaria l'appartenenza al ruolo predefinito del database PolicyAdministratorRole.  
   
 > [!IMPORTANT]  
->  Possibile elevazione di credenziali: gli utenti nel ruolo PolicyAdministratorRole possono creare trigger server e pianificare le esecuzioni di criteri che influiscono sul funzionamento dell'istanza del [!INCLUDE[ssDE](../../includes/ssde-md.md)]. Gli utenti con il ruolo PolicyAdministratorRole possono ad esempio creare criteri che impediscono la creazione della maggior parte degli oggetti nel [!INCLUDE[ssDE](../../includes/ssde-md.md)]. A causa di questa possibile elevazione di credenziali, il ruolo PolicyAdministratorRole deve essere concesso solo a utenti ritenuti attendibili per il controllo della configurazione del [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
+>  Possibile elevazione di credenziali: Gli utenti nel ruolo PolicyAdministratorRole possono creare trigger server e pianificare le esecuzioni di criteri che possono influenzare l'operazione dell'istanza del [!INCLUDE[ssDE](../../includes/ssde-md.md)]. Gli utenti con il ruolo PolicyAdministratorRole possono ad esempio creare criteri che impediscono la creazione della maggior parte degli oggetti nel [!INCLUDE[ssDE](../../includes/ssde-md.md)]. A causa di questa possibile elevazione di credenziali, il ruolo PolicyAdministratorRole deve essere concesso solo a utenti ritenuti attendibili per il controllo della configurazione del [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
 ## <a name="examples"></a>Esempi  
  Nell'esempio seguente viene eliminata la cronologia di esecuzione dei criteri precedente a una data specifica, per criteri con ID 7.  

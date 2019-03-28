@@ -18,12 +18,12 @@ ms.assetid: 75f836be-d322-4a53-a45d-25bee6b42a52
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: d6df698f13298bf290ad1a0cb9e94ccac0bfce3f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 15e30a28a816b8105762e9f4cbfc4a0892cae1be
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47596419"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58538573"
 ---
 # <a name="spindexoption-transact-sql"></a>sp_indexoption (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -47,21 +47,18 @@ sp_indexoption [ @IndexNamePattern = ] 'table_or_index_name'
 ```  
   
 ## <a name="arguments"></a>Argomenti  
- [  **@IndexNamePattern=**] **'***table_or_index_name***'**  
- Nome completo o non qualificato di una tabella o un indice definito dall'utente. *table_or_index_name* viene **nvarchar(1035)**, non prevede alcun valore predefinito. Se si specifica un nome qualificato di indice o tabella, le virgolette sono obbligatorie. Nel caso di un nome qualificato di tabella, ovvero contenente un nome di database, il nome del database deve corrispondere a quello del database corrente. Se un nome di tabella viene specificato senza alcun indice, il valore dell'opzione specificata viene impostato per tutti gli indici in tale tabella e nella tabella stessa se non esistono indici cluster.  
+`[ @IndexNamePattern = ] 'table_or_index_name'` È il nome completo o non qualificato di una tabella definita dall'utente o un indice. *table_or_index_name* viene **nvarchar(1035)**, non prevede alcun valore predefinito. Se si specifica un nome qualificato di indice o tabella, le virgolette sono obbligatorie. Nel caso di un nome qualificato di tabella, ovvero contenente un nome di database, il nome del database deve corrispondere a quello del database corrente. Se un nome di tabella viene specificato senza alcun indice, il valore dell'opzione specificata viene impostato per tutti gli indici in tale tabella e nella tabella stessa se non esistono indici cluster.  
   
- [  **@OptionName =**] **'***option_name***'**  
- Nome di opzione di indice. *option_name* viene **varchar(35**, non prevede alcun valore predefinito. *option_name* può avere uno dei valori seguenti.  
+`[ @OptionName = ] 'option_name'` È un nome di opzione di indice. *option_name* viene **varchar(35**, non prevede alcun valore predefinito. *option_name* può avere uno dei valori seguenti.  
   
-|valore|Description|  
+|Value|Descrizione|  
 |-----------|-----------------|  
-|**AllowRowLocks**|Se è TRUE, i blocchi a livello di riga sono consentiti durante l'accesso all'indice. Il [!INCLUDE[ssDE](../../includes/ssde-md.md)] determina quando utilizzare blocchi di riga. Se è FALSE, i blocchi a livello di riga non vengono utilizzati. Il valore predefinito è TRUE.|  
+|**AllowRowLocks**|Se è TRUE, i blocchi a livello di riga sono consentiti durante l'accesso all'indice. Il [!INCLUDE[ssDE](../../includes/ssde-md.md)] determina quando usare blocchi di riga. Se è FALSE, i blocchi a livello di riga non vengono utilizzati. Il valore predefinito è TRUE.|  
 |**AllowPageLocks**|Se è TRUE, i blocchi a livello di pagina sono consentiti durante l'accesso all'indice. Il [!INCLUDE[ssDE](../../includes/ssde-md.md)] determina quando utilizzare blocchi a livello di pagina. Se è FALSE, i blocchi a livello di pagina non vengono utilizzati. Il valore predefinito è TRUE.|  
-|**DisAllowRowLocks**|Se è TRUE, i blocchi a livello di riga non vengono utilizzati. Se è FALSE, i blocchi a livello di riga sono consentiti durante l'accesso all'indice. Il [!INCLUDE[ssDE](../../includes/ssde-md.md)] determina quando utilizzare blocchi di riga.|  
+|**DisAllowRowLocks**|Se è TRUE, i blocchi a livello di riga non vengono utilizzati. Se è FALSE, i blocchi a livello di riga sono consentiti durante l'accesso all'indice. Il [!INCLUDE[ssDE](../../includes/ssde-md.md)] determina quando usare blocchi di riga.|  
 |**DisAllowPageLocks**|Se è TRUE, i blocchi a livello di pagina non vengono utilizzati. Se è FALSE, i blocchi a livello di pagina sono consentiti durante l'accesso all'indice. Il [!INCLUDE[ssDE](../../includes/ssde-md.md)] determina quando utilizzare blocchi a livello di pagina.|  
   
- [  **@OptionValue =**] **'***valore***'**  
- Specifica se il *option_name* impostazione è abilitata (TRUE, ON, yes o 1) o disabilitata (FALSE, OFF, no o 0). *valore* viene **varchar(12)**, non prevede alcun valore predefinito.  
+`[ @OptionValue = ] 'value'` Specifica se il *option_name* impostazione è abilitata (TRUE, ON, yes o 1) o disabilitata (FALSE, OFF, no o 0). *valore* viene **varchar(12)**, non prevede alcun valore predefinito.  
   
 ## <a name="return-code-values"></a>Valori restituiti  
  0 (esito positivo) o maggiore di 0 (esito negativo)  

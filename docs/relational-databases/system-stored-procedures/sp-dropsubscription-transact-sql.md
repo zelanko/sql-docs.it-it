@@ -16,12 +16,12 @@ ms.assetid: 7551f345-5510-4684-ab53-f9057249d13a
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 08e25ee6f2de589c3d7367c140bd0ea63d4cec1e
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 30640cac3b2d8d39ec06d5a05f49c38665b39683
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52812969"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58537143"
 ---
 # <a name="spdropsubscription-transact-sql"></a>sp_dropsubscription (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -43,23 +43,17 @@ sp_dropsubscription [ [ @publication= ] 'publication' ]
 ```  
   
 ## <a name="arguments"></a>Argomenti  
- [  **@publication=** ] **'**_pubblicazione_**'**  
- Nome della pubblicazione associata. *pubblicazione* viene **sysname**, con un valore predefinito è NULL. Se **tutti**, vengono annullate tutte le sottoscrizioni per tutte le pubblicazioni del Sottoscrittore specificato. *pubblicazione* è un parametro obbligatorio.  
+`[ @publication = ] 'publication'` È il nome della pubblicazione associata. *pubblicazione* viene **sysname**, con un valore predefinito è NULL. Se **tutti**, vengono annullate tutte le sottoscrizioni per tutte le pubblicazioni del Sottoscrittore specificato. *pubblicazione* è un parametro obbligatorio.  
   
- [  **@article=** ] **'**_articolo_**'**  
- Nome dell'articolo. *articolo* viene **sysname**, con un valore predefinito NULL. Se **tutti**, specificato di sottoscrizioni a tutti gli articoli per ogni pubblicazione e nel Sottoscrittore vengono eliminate. Uso **tutti** per le pubblicazioni che consentono immediatamente l'aggiornamento.  
+`[ @article = ] 'article'` È il nome dell'articolo. *articolo* viene **sysname**, con un valore predefinito NULL. Se **tutti**, specificato di sottoscrizioni a tutti gli articoli per ogni pubblicazione e nel Sottoscrittore vengono eliminate. Uso **tutti** per le pubblicazioni che consentono immediatamente l'aggiornamento.  
   
- [  **@subscriber=** ] **'**_subscribe_r **'**  
- Nome del Sottoscrittore da cui si desidera eliminare le sottoscrizioni. *Sottoscrittore* viene **sysname**, non prevede alcun valore predefinito. Se **tutti**, vengono eliminate tutte le sottoscrizioni per tutti i sottoscrittori.  
+`[ @subscriber = ] 'subscribe_r'` È il nome del sottoscrittore da cui si desidera eliminare le sottoscrizioni. *Sottoscrittore* viene **sysname**, non prevede alcun valore predefinito. Se **tutti**, vengono eliminate tutte le sottoscrizioni per tutti i sottoscrittori.  
   
- [  **@destination_db=** ] **'**_destination_db_**'**  
- Nome del database di destinazione. *destination_db* viene **sysname**, con un valore predefinito è NULL. con cui vengono eliminate tutte le sottoscrizioni dal Sottoscrittore specificato.  
+`[ @destination_db = ] 'destination_db'` È il nome del database di destinazione. *destination_db* viene **sysname**, con un valore predefinito è NULL. con cui vengono eliminate tutte le sottoscrizioni dal Sottoscrittore specificato.  
   
- [  **@ignore_distributor =** ] *ignore_distributor*  
- [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
+`[ @ignore_distributor = ] ignore_distributor` [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
   
- [  **@reserved=** ] **'**_riservato_**'**  
- [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
+`[ @reserved = ] 'reserved'` [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
   
 ## <a name="return-code-values"></a>Valori restituiti  
  **0** (esito positivo) o **1** (errore)  

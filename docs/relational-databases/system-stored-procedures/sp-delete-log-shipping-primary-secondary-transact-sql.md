@@ -18,12 +18,12 @@ ms.assetid: d6f71a12-f7b1-4a1c-9639-a533b8287b0c
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: d917920317485189b6eff1735e63c28fc7a09a05
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e0b65901467f7c343fb7492a02898df37decbd89
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47830549"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58531033"
 ---
 # <a name="spdeletelogshippingprimarysecondary-transact-sql"></a>sp_delete_log_shipping_primary_secondary (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -43,14 +43,11 @@ sp_delete_log_shipping_primary_secondary
 ```  
   
 ## <a name="arguments"></a>Argomenti  
- [  **@primary_database =** ] **'***primary_database***'**  
- Nome del database sul server primario. *primary_database* viene **sysname**, non prevede alcun valore predefinito.  
+`[ @primary_database = ] 'primary_database'` È il nome del database nel server primario. *primary_database* viene **sysname**, non prevede alcun valore predefinito.  
   
- [  **@secondary_server =** ] **'***secondary_server***'**  
- Nome del server secondario. *secondary_server* viene **sysname**, non prevede alcun valore predefinito.  
+`[ @secondary_server = ] 'secondary_server'` È il nome del server secondario. *secondary_server* viene **sysname**, non prevede alcun valore predefinito.  
   
- [  **@secondary_database =** ] **'***secondary_database***'**  
- Nome del database secondario. *secondary_database* viene **sysname**, non prevede alcun valore predefinito.  
+`[ @secondary_database = ] 'secondary_database'` È il nome del database secondario. *secondary_database* viene **sysname**, non prevede alcun valore predefinito.  
   
 ## <a name="return-code-values"></a>Valori restituiti  
  0 (esito positivo) o 1 (esito negativo)  

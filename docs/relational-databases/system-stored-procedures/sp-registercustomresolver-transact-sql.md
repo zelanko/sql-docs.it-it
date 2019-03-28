@@ -16,12 +16,12 @@ ms.assetid: 6d2b0472-0e1f-4005-833c-735d1940fe93
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: caf82567ffa375d73263eba64232cfd6629d3f97
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 0187853dcf0fc16fe88feb7e2731414a69fdd183
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52747493"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58536983"
 ---
 # <a name="spregistercustomresolver-transact-sql"></a>sp_registercustomresolver (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -42,20 +42,15 @@ sp_registercustomresolver [ @article_resolver = ] 'article_resolver'
 ```  
   
 ## <a name="arguments"></a>Argomenti  
- [  **@article_resolver =** ] **'***article_resolver***'**  
- Specifica un nome descrittivo per la logica di business personalizzata in fase di registrazione. *article_resolver* viene **nvarchar(255**, non prevede alcun valore predefinito.  
+`[ @article_resolver = ] 'article_resolver'` Specifica il nome descrittivo per la logica di business personalizzata. *article_resolver* viene **nvarchar(255**, non prevede alcun valore predefinito.  
   
- [  **@resolver_clsid=** ] **'***resolver_clsid***'**  
- Specifica il valore CLSID dell'oggetto COM in fase di registrazione. Logica di business personalizzata *resolver_clsid* viene **nvarchar (50)**, con un valore predefinito è NULL. È necessario impostare questo parametro su un valore CLSID valido oppure su NULL in caso di registrazione di un assembly di un gestore della logica di business.  
+`[ @resolver_clsid = ] 'resolver_clsid'` Specifica il valore CLSID dell'oggetto COM in fase di registrazione. Logica di business personalizzata *resolver_clsid* viene **nvarchar (50)**, con un valore predefinito è NULL. È necessario impostare questo parametro su un valore CLSID valido oppure su NULL in caso di registrazione di un assembly di un gestore della logica di business.  
   
- [  **@is_dotnet_assembly=** ] **'***is_dotnet_assembly***'**  
- Specifica il tipo di logica di business personalizzata di cui è in corso la registrazione. *is_dotnet_assembly* viene **nvarchar (50)**, con un valore predefinito è FALSE. **true** indica che la logica di business personalizzata è un gestore della logica di business stesso Assembly. **false** indica che è un componente COM.  
+`[ @is_dotnet_assembly = ] 'is_dotnet_assembly'` Specifica il tipo di logica di business personalizzata in fase di registrazione. *is_dotnet_assembly* viene **nvarchar (50)**, con un valore predefinito è FALSE. **true** indica che la logica di business personalizzata è un gestore della logica di business stesso Assembly. **false** indica che è un componente COM.  
   
- [  **@dotnet_assembly_name=** ] **'***dotnet_assembly_name***'**  
- Nome dell'assembly che implementa il gestore della logica di business. *dotnet_assembly_name* viene **nvarchar(255**, con un valore predefinito NULL. È necessario specificare il percorso completo dell'assembly se non viene distribuito nella stessa directory dell'eseguibile dell'agente di merge, nella stessa directory dell'applicazione che avvia l'agente di merge in modalità sincrona oppure nella Global Assembly Cache (GAC).  
+`[ @dotnet_assembly_name = ] 'dotnet_assembly_name'` È il nome dell'assembly che implementa il gestore della logica di business. *dotnet_assembly_name* viene **nvarchar(255**, con un valore predefinito NULL. È necessario specificare il percorso completo dell'assembly se non viene distribuito nella stessa directory dell'eseguibile dell'agente di merge, nella stessa directory dell'applicazione che avvia l'agente di merge in modalità sincrona oppure nella Global Assembly Cache (GAC).  
   
- [  **@dotnet_class_name=** ] **'***dotnet_class_name***'**  
- Nome della classe che sostituisce <xref:Microsoft.SqlServer.Replication.BusinessLogicSupport.BusinessLogicModule> per implementare il gestore della logica di business. Il nome deve essere specificato nel formato **ClassName**. *dotnet_class_name* viene **nvarchar(255**, con un valore predefinito NULL.  
+`[ @dotnet_class_name = ] 'dotnet_class_name'` È il nome della classe che esegue l'override <xref:Microsoft.SqlServer.Replication.BusinessLogicSupport.BusinessLogicModule> per implementare il gestore della logica di business. Il nome deve essere specificato nel formato **ClassName**. *dotnet_class_name* viene **nvarchar(255**, con un valore predefinito NULL.  
   
 ## <a name="return-code-values"></a>Valori restituiti  
  **0** (esito positivo) o **1** (errore)  

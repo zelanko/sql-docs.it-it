@@ -22,12 +22,12 @@ ms.assetid: 0fe45983-f9f2-4c7f-938a-0fd96e1cbe8d
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 0d7f088d85a5a56a6440266bd9851cbd90c9c0f9
-ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
+ms.openlocfilehash: 8ae16af1017d37afba6325d335ef24fd3b99a603
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/18/2018
-ms.locfileid: "53590455"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58537153"
 ---
 # <a name="spestimatedrowsizereductionforvardecimal-transact-sql"></a>sp_estimated_rowsize_reduction_for_vardecimal (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -47,8 +47,7 @@ sp_estimated_rowsize_reduction_for_vardecimal [ [ @table_name = ] 'table'] [;]
 ```  
   
 ## <a name="arguments"></a>Argomenti  
- [  **@table=** ] **'**_tabella_**'**  
- Nome in tre parti della tabella per cui deve essere modificato il formato di archiviazione. *Nella tabella* viene **nvarchar(776)**.  
+`[ @table = ] 'table'` È il nome in tre parti della tabella per cui è necessario modificare il formato di archiviazione. *Nella tabella* viene **nvarchar(776)**.  
   
 ## <a name="return-code-values"></a>Valori restituiti  
  0 (esito positivo) o 1 (esito negativo)  

@@ -16,12 +16,12 @@ ms.assetid: ff837209-e2b3-481a-a48f-8530bfe53d97
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 811a6c78400e0030d89067d2998ed8cc0ad32be2
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: e6a3c403fde55213e093b70ced1cb6a59d15fd28
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52789681"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58537193"
 ---
 # <a name="sphelplogreaderagent-transact-sql"></a>sp_helplogreader_agent (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -38,18 +38,17 @@ sp_helplogreader_agent [ [ @publisher = ] 'publisher' ]
 ```  
   
 ## <a name="arguments"></a>Argomenti  
- [ **@publisher**=] **'***publisher***'**  
- Nome del server di pubblicazione. *server di pubblicazione* viene **sysname**, con un valore predefinito è NULL.  
+`[ @publisher = ] 'publisher'` È il nome del server di pubblicazione. *server di pubblicazione* viene **sysname**, con un valore predefinito è NULL.  
   
 ## <a name="result-sets"></a>Set di risultati  
   
 |Nome colonna|Tipo di dati|Descrizione|  
 |-----------------|---------------|-----------------|  
 |**id**|**int**|ID dell'agente.|  
-|**name**|**Nvarchar(100)**|Nome dell'agente.|  
+|**name**|**nvarchar(100)**|Nome dell'agente.|  
 |**publisher_security_mode**|**smallint**|Modalità di sicurezza utilizzata dall'agente durante la connessione al server di pubblicazione. Le possibili modalità sono le seguenti:<br /><br /> **0**  =  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] autenticazione<br /><br /> **1** = autenticazione di Windows.|  
 |**publisher_login**|**sysname**|Account di accesso utilizzato per la connessione al server di pubblicazione.|  
-|**publisher_password**|**nvarchar(524**|Per motivi di sicurezza, un valore pari **\* \* \* \* \* \* \* \* \* \*** è sempre restituito.|  
+|**publisher_password**|**nvarchar(524)**|Per motivi di sicurezza, un valore pari **\* \* \* \* \* \* \* \* \* \*** è sempre restituito.|  
 |**job_id**|**uniqueidentifier**|ID univoco del processo dell'agente.|  
 |**job_login**|**nvarchar(512)**|L'account di Windows con cui viene eseguito l'agente di lettura Log, viene restituito nel formato *domain*\\*username*.|  
 |**job_password**|**sysname**|Per motivi di sicurezza, un valore pari **\* \* \* \* \* \* \* \* \* \*** è sempre restituito.|  

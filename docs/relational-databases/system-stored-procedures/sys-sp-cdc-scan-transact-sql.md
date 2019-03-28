@@ -1,5 +1,5 @@
 ---
-title: Sys. sp_cdc_scan (Transact-SQL) | Microsoft Docs
+title: sys.sp_cdc_scan (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -20,12 +20,12 @@ ms.assetid: 46e4294c-97b8-47d6-9ed9-b436a9929353
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 7eaa167c46937d48bd760d29bd17828a2d555538
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 1e7651c6df4a277d72a71c0cdb8a5910ae19ba76
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47763077"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58536783"
 ---
 # <a name="sysspcdcscan-transact-sql"></a>sys.sp_cdc_scan (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -45,17 +45,13 @@ sys.sp_cdc_scan [ [ @maxtrans = ] max_trans ]
 ```  
   
 ## <a name="arguments"></a>Argomenti  
- [  **@maxtrans=** ] *max_trans*  
- Numero massimo di transazioni da elaborare in ogni ciclo di analisi. *max_trans* viene **int** con valore predefinito è 500.  
+`[ @maxtrans = ] max_trans` Numero massimo di transazioni da elaborare in ogni ciclo di analisi. *max_trans* viene **int** con valore predefinito è 500.  
   
- [  **@maxscans=** ] *max_scans*  
- Numero massimo di cicli di analisi da eseguire per estrarre tutte le righe dal log. *max_scans* viene **int** con valore predefinito è 10.  
+`[ @maxscans = ] max_scans` Numero massimo di cicli di analisi da eseguire per estrarre tutte le righe dal log. *max_scans* viene **int** con valore predefinito è 10.  
   
- [  **@continuous=** ] *continua*  
- Indica se la stored procedure deve terminare dopo l'esecuzione di un singolo ciclo di analisi (0) o eseguita in modo continuo, sospendendo l'esecuzione per il periodo di tempo specificato da *polling_interval* prima di rieseguire il ciclo di analisi (1). *Continuous* viene **tinyint** con valore predefinito è 0.  
+`[ @continuous = ] continuous` Indica se la stored procedure deve terminare dopo l'esecuzione di un singolo ciclo di analisi (0) o eseguita in modo continuo, sospendendo l'esecuzione per il periodo di tempo specificato da *polling_interval* prima di rieseguire il ciclo di analisi (1). *Continuous* viene **tinyint** con valore predefinito è 0.  
   
- [  **@pollinginterval=** ] *polling_interval*  
- Numero di secondi tra cicli di analisi del log. *polling_interval* viene **bigint** con valore predefinito è 0.  
+`[ @pollinginterval = ] polling_interval` Numero di secondi tra cicli di analisi di log. *polling_interval* viene **bigint** con valore predefinito è 0.  
   
 ## <a name="return-code-values"></a>Valori restituiti  
  **0** (esito positivo) o **1** (errore)  
@@ -70,6 +66,6 @@ sys.sp_cdc_scan [ [ @maxtrans = ] max_trans ]
  Richiede l'appartenenza al ruolo predefinito del database db_owner.  
   
 ## <a name="see-also"></a>Vedere anche  
- [dbo. cdc_jobs &#40;Transact-SQL&#41;](../../relational-databases/system-tables/dbo-cdc-jobs-transact-sql.md)  
+ [dbo.cdc_jobs &#40;Transact-SQL&#41;](../../relational-databases/system-tables/dbo-cdc-jobs-transact-sql.md)  
   
   

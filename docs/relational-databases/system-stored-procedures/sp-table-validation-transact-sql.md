@@ -16,12 +16,12 @@ ms.assetid: 31b25f9b-9b62-496e-a97e-441d5fd6e767
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 41e5f03dbe8619ca2e00d70b2c569d90f75d2d2f
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: 9e8695c847e6c5efce1869d55ec68e17bdee5800
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53211281"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58537213"
 ---
 # <a name="sptablevalidation-transact-sql"></a>sp_table_validation (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2014-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-xxxx-xxxx-xxx-md.md)]
@@ -46,17 +46,13 @@ sp_table_validation [ @table = ] 'table'
 ```  
   
 ## <a name="arguments"></a>Argomenti  
- [  **@table=**] **'***tabella***'**  
- Nome della tabella. *Nella tabella* viene **sysname**, non prevede alcun valore predefinito.  
+`[ @table = ] 'table'` È il nome della tabella. *Nella tabella* viene **sysname**, non prevede alcun valore predefinito.  
   
- [  **@expected_rowcount=**] *expected_rowcount*OUTPUT  
- Indica se restituire il numero di righe previsto nella tabella. *expected_rowcount* viene **int**, con un valore predefinito è NULL. con il quale viene restituito il conteggio delle righe effettivo come parametro di output. Se viene specificato un altro valore, questo viene confrontato con il conteggio delle righe effettivo per rilevare eventuali differenze.  
+`[ @expected_rowcount = ] expected_rowcountOUTPUT` Specifica se restituire il numero previsto di righe nella tabella. *expected_rowcount* viene **int**, con un valore predefinito è NULL. con il quale viene restituito il conteggio delle righe effettivo come parametro di output. Se viene specificato un altro valore, questo viene confrontato con il conteggio delle righe effettivo per rilevare eventuali differenze.  
   
- [  **@expected_checksum=**] *expected_checksum*OUTPUT  
- Indica se restituire il valore di checksum previsto per la tabella. *expected_checksum* viene **numerici**, con un valore predefinito è NULL. con cui viene restituito il valore di checksum effettivo come parametro di output. Se viene specificato un altro valore, questo viene confrontato con il valore di checksum effettivo per rilevare eventuali differenze.  
+`[ @expected_checksum = ] expected_checksumOUTPUT` Specifica se restituire il valore di checksum previsto per la tabella. *expected_checksum* viene **numerici**, con un valore predefinito è NULL. con cui viene restituito il valore di checksum effettivo come parametro di output. Se viene specificato un altro valore, questo viene confrontato con il valore di checksum effettivo per rilevare eventuali differenze.  
   
- [  **@rowcount_only=**] *type_of_check_requested*  
- Specifica il tipo di checksum o conteggio delle righe da eseguire. *type_of_check_requested* viene **smallint**, il valore predefinito è **1**.  
+`[ @rowcount_only = ] type_of_check_requested` Specifica il tipo di checksum o conteggio delle righe da eseguire. *type_of_check_requested* viene **smallint**, il valore predefinito è **1**.  
   
  Se **0**, eseguire un conteggio delle righe e una [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] checksum compatibile con 7.0.  
   
@@ -64,11 +60,9 @@ sp_table_validation [ @table = ] 'table'
   
  Se **2**, eseguire un conteggio delle righe e checksum binario.  
   
- [  **@owner=**] **'***proprietario***'**  
- Nome del proprietario della tabella. *proprietario* viene **sysname**, con un valore predefinito è NULL.  
+`[ @owner = ] 'owner'` È il nome del proprietario della tabella. *proprietario* viene **sysname**, con un valore predefinito è NULL.  
   
- [  **@full_or_fast=**] *full_or_fast*  
- Metodo utilizzato per il conteggio delle righe. *full_or_fast* viene **tinyint**, il valore predefinito è **2**, i possibili valori sono i seguenti.  
+`[ @full_or_fast = ] full_or_fast` Il metodo consente di calcolare il conteggio delle righe. *full_or_fast* viene **tinyint**, il valore predefinito è **2**, i possibili valori sono i seguenti.  
   
 |Value|Descrizione|  
 |-----------|-----------------|  
@@ -76,14 +70,11 @@ sp_table_validation [ @table = ] 'table'
 |**1**|Un conteggio rapido in **sysindexes**. Conteggio delle righe **sysindexes** è molto più veloce rispetto al conteggio delle righe nella tabella effettiva. Tuttavia, poiché **sysindexes** in modalità differita è aggiornato, il conteggio delle righe potrebbe non essere accurata.|  
 |**2** (impostazione predefinita)|Esegue un conteggio rapido condizionale eseguendo innanzitutto un tentativo con il metodo rapido. Se il metodo rapido evidenzia delle differenze, viene applicato il metodo completo. Se *expected_rowcount* è NULL e la stored procedure viene utilizzata per ottenere il valore, viene utilizzato sempre un Count (\*) completo.|  
   
- [  **@shutdown_agent=**] *shutdown_agent*  
- Se l'agente di distribuzione è in esecuzione **sp_table_validation**, indica se l'agente di distribuzione viene interrotta immediatamente dopo il completamento della convalida. *shutdown_agent* viene **bit**, il valore predefinito è **0**. Se **0**, l'agente di replica non viene arrestato. Se **1**, viene generato l'errore 20578 e l'agente di replica viene segnalato l'arresto. Questo parametro viene ignorato quando **sp_table_validation** viene eseguito direttamente dall'utente.  
+`[ @shutdown_agent = ] shutdown_agent` Se l'agente di distribuzione è in esecuzione **sp_table_validation**, indica se l'agente di distribuzione viene interrotta immediatamente dopo il completamento della convalida. *shutdown_agent* viene **bit**, il valore predefinito è **0**. Se **0**, l'agente di replica non viene arrestato. Se **1**, viene generato l'errore 20578 e l'agente di replica viene segnalato l'arresto. Questo parametro viene ignorato quando **sp_table_validation** viene eseguito direttamente dall'utente.  
   
- [  **@table_name =**] *table_name*  
- Nome di tabella della vista utilizzata per i messaggi di output. *TABLE_NAME* viene **sysname**, il valore predefinito è **@table**.  
+`[ @table_name = ] table_name` È il nome della tabella della vista utilizzata per i messaggi di output. *TABLE_NAME* viene **sysname**, il valore predefinito è **@table**.  
   
- [ **@column_list**=] **'***column_list***'**  
- Elenco delle colonne da utilizzare nella funzione checksum. *column_list* viene **nvarchar (4000)**, con un valore predefinito è NULL. Abilita la convalida degli articoli di tipo merge per specificare un elenco di colonne che non include le colonne calcolate e timestamp.  
+`[ @column_list = ] 'column_list'` È l'elenco di colonne da utilizzare nella funzione checksum. *column_list* viene **nvarchar (4000)**, con un valore predefinito è NULL. Abilita la convalida degli articoli di tipo merge per specificare un elenco di colonne che non include le colonne calcolate e timestamp.  
   
 ## <a name="return-code-values"></a>Valori restituiti  
  Se si esegue una convalida mediante checksum e checksum previsto è uguale a quello della tabella **sp_table_validation** restituisce un messaggio che la tabella ha superato la convalida mediante checksum. In caso contrario, restituisce un messaggio per indicare che la tabella potrebbe non essere sincronizzata e specifica la differenza tra il numero di righe previsto e quello effettivo.  

@@ -18,12 +18,12 @@ ms.assetid: c96a6c5e-f3ca-4c1e-b64b-0d8ef6986af8
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 076e38b453320db831d2d7536d587921920c3924
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d34b13931151e5b4490cd64292d66ae38756c125
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47758749"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58534943"
 ---
 # <a name="spunbindefault-transact-sql"></a>sp_unbindefault (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -44,16 +44,14 @@ sp_unbindefault [ @objname = ] 'object_name'
 ```  
   
 ## <a name="arguments"></a>Argomenti  
- [  **@objname=** ] **'***object_name***'**  
- Nome della tabella e della colonna o tipo di dati alias da cui si desidera disassociare il valore predefinito. *object_name* viene **nvarchar(776)**, non prevede alcun valore predefinito. Tramite [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] si tenta innanzitutto di risolvere gli identificatori costituiti da due parti in nomi di colonne e quindi in tipi di dati alias.  
+`[ @objname = ] 'object_name'` È il nome della tabella e colonna o tipo di dati alias da cui si desidera disassociare il valore predefinito. *object_name* viene **nvarchar(776)**, non prevede alcun valore predefinito. Tramite [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] si tenta innanzitutto di risolvere gli identificatori costituiti da due parti in nomi di colonne e quindi in tipi di dati alias.  
   
  Quando si disassocia un valore predefinito da un tipo di dati alias, vengono disassociate anche le colonne di tale tipo di dati con lo stesso valore predefinito. Le colonne di tale tipo di dati a cui il valore predefinito è associato in modo diretto non vengono modificate.  
   
 > [!NOTE]  
 >  *object_name* può contenere parentesi quadre **[]** come caratteri delimitatori degli identificatori. Per altre informazioni, vedere [Identificatori del database](../../relational-databases/databases/database-identifiers.md).  
   
- [  **@futureonly=** ] **'***futureonly_flag***'**  
- Utilizzato solo per disassociare un valore predefinito da un tipo di dati alias. *futureonly_flag* viene **varchar(15)**, con un valore predefinito è NULL. Quando *futureonly_flag* viene **futureonly**, le colonne esistenti del tipo di dati non viene disassociato il valore predefinito specificato.  
+`[ @futureonly = ] 'futureonly_flag'` Viene utilizzato solo per disassociare un valore predefinito da un tipo di dati alias. *futureonly_flag* viene **varchar(15)**, con un valore predefinito è NULL. Quando *futureonly_flag* viene **futureonly**, le colonne esistenti del tipo di dati non viene disassociato il valore predefinito specificato.  
   
 ## <a name="return-code-values"></a>Valori restituiti  
  0 (esito positivo) o 1 (esito negativo)  

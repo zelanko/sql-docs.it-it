@@ -16,15 +16,15 @@ helpviewer_keywords:
 - XML [SQL Server], generating instances
 - white space [XML in SQL Server]
 ms.assetid: dbd6c06f-db6e-44a7-855a-6a55bf374907
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 8dea24689dc1dad9836c6ef2a53cf5e40f078c47
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: ae842748d2d510c5c00f329f5e28cd49a0c86ef3
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48077131"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58538623"
 ---
 # <a name="create-instances-of-xml-data"></a>Creare istanze di dati XML
   In questo argomento viene descritto come generare istanze XML.  
@@ -71,7 +71,7 @@ from OpenRowset(BULK 'filename.xml', SINGLE_BLOB) R(x)
   
 -   Viene assegnato il valore predefinito all'attributo `xml:space` attivo per un elemento o i relativi predecessori.  
   
- Esempio:  
+ Ad esempio:  
   
 ```  
 declare @x xml  
@@ -79,7 +79,7 @@ set @x = '<root>      <child/>     </root>'
 select @x   
 ```  
   
- Risultato:  
+ Questo è il risultato:  
   
 ```  
 <root><child/></root>  
@@ -93,7 +93,7 @@ SELECT CONVERT(xml, N'<root>      <child/>     </root>', 1)
   
  Se il parametro *style* non viene utilizzato o è impostato sul valore 0, gli spazi vuoti non significativi non vengono mantenuti per la conversione dell'istanza XML DT. Per altre informazioni sull'uso dell'operatore CONVERT e del parametro *style* durante la conversione di dati di tipo stringa in istanze XML DT, vedere [CAST e CONVERT &#40;Transact-SQL&#41;](/sql/t-sql/functions/cast-and-convert-transact-sql).  
   
-### <a name="example-cast-a-string-value-to-typed-xml-and-assign-it-to-a-column"></a>Esempio: cast di un valore stringa al tipo XML tipizzato e assegnazione a una colonna  
+### <a name="example-cast-a-string-value-to-typed-xml-and-assign-it-to-a-column"></a>Esempio: Eseguire il cast di un valore stringa a xml tipizzato e assegnarla a una colonna  
  Nell'esempio seguente esegue il cast di una variabile stringa che contiene un frammento XML per il `xml` tipo di dati e quindi lo archivia nella `xml` colonna di tipo:  
   
 ```  
@@ -121,7 +121,7 @@ INSERT INTO T VALUES (3, cast (@s as xml))
 INSERT INTO T VALUES (3, convert (xml, @s))   
 ```  
   
-### <a name="example-convert-a-string-to-typed-xml-and-assign-it-to-a-variable"></a>Esempio: conversione di una stringa nel tipo XML tipizzato e assegnazione a una variabile  
+### <a name="example-convert-a-string-to-typed-xml-and-assign-it-to-a-variable"></a>Esempio: Convertire una stringa in xml tipizzato e assegnarla a una variabile  
  Nell'esempio seguente, una stringa viene convertita in `xml` digitare e assegnato a una variabile del `xml` tipo di dati:  
   
 ```  
@@ -133,7 +133,7 @@ select @x
 ```  
   
 ## <a name="using-the-select-statement-with-a-for-xml-clause"></a>Utilizzo dell'istruzione SELECT con la clausola FOR XML  
- È possibile utilizzare la clausola FOR XML in un'istruzione SELECT per restituire i risultati in formato XML. Esempio:  
+ È possibile utilizzare la clausola FOR XML in un'istruzione SELECT per restituire i risultati in formato XML. Ad esempio:  
   
 ```  
 DECLARE @xmlDoc xml  
@@ -157,7 +157,7 @@ SET @xmlDoc = (SELECT ProductModelID, Name
 SELECT @xmlDoc  
 ```  
   
- Risultato:  
+ Questo è il risultato:  
   
 ```  
 <Production.ProductModel ProductModelID="19" Name="Mountain-100" />...  
@@ -180,7 +180,7 @@ go
  Per altre informazioni su FOR XML, vedere [FOR XML &#40;SQL Server&#41;](for-xml-sql-server.md).  
   
 > [!NOTE]  
->  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] consente di restituire al client istanze con tipo di dati `xml` come risultato di diversi costrutti server, quali query FOR XML che utilizzano la direttiva TYPE, o nel caso in cui il tipo di dati `xml` venga utilizzato per restituire il codice XML da colonne SQL, variabili o parametri di output. Nel codice dell'applicazione client, il provider ADO.NET richiede che questo `xml` le informazioni sul tipo di dati inviato dal server di una codifica binaria. Se tuttavia si utilizza FOR XML senza la direttiva TYPE, i dati XML vengono restituiti come tipo string. In tutti i casi, il provider client sarà sempre in grado di gestire entrambe i formati di XML.  
+>  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] consente di restituire al client istanze con tipo di dati `xml` come risultato di diversi costrutti server, quali query FOR XML che utilizzano la direttiva TYPE, o nel caso in cui il tipo di dati `xml` venga utilizzato per restituire il codice XML da colonne SQL, variabili o parametri di output. Nel codice dell'applicazione client il provider ADO.NET richiede che queste informazioni con tipo di dati `xml` siano inviate dal server utilizzando una codifica binaria. Se tuttavia si utilizza FOR XML senza la direttiva TYPE, i dati XML vengono restituiti come tipo string. In tutti i casi, il provider client sarà sempre in grado di gestire entrambe i formati di XML.  
   
 ## <a name="using-constant-assignments"></a>Utilizzo di assegnazioni di costanti  
  Costante stringa utilizzabile in un'istanza di cui il `xml` è previsto il tipo di dati. Tale operazione è equivalente a un CAST implicito della stringa al formato XML. Esempio:  
@@ -207,9 +207,9 @@ INSERT INTO T VALUES (3, '<Cust><Fname>Andrew</Fname><Lname>Fuller</Lname></Cust
 ## <a name="using-bulk-load"></a>Utilizzo del caricamento bulk  
  La funzionalità avanzata [OPENROWSET (Transact-SQL)](/sql/t-sql/functions/openrowset-transact-sql) consente di eseguire il caricamento bulk dei documenti XML nel database. È possibile blocco carico istanze XML dai file nel `xml` colonne di tipo nel database. Per esempi funzionanti, vedere [Esempi di importazione ed esportazione bulk di documenti XML &#40;SQL Server&#41;](../import-export/examples-of-bulk-import-and-export-of-xml-documents-sql-server.md). Per altre informazioni sul caricamento dei documenti XML, vedere [Caricare dati XML](load-xml-data.md).  
   
-## <a name="in-this-section"></a>Argomenti della sezione  
+## <a name="in-this-section"></a>In questa sezione  
   
-|Argomento|Description|  
+|Argomento|Descrizione|  
 |-----------|-----------------|  
 |[Recuperare ed eseguire query su dati XML](retrieve-and-query-xml-data.md)|Descrizione delle parti di istanze XML che non sono mantenute quando vengono archiviate nei database.|  
   

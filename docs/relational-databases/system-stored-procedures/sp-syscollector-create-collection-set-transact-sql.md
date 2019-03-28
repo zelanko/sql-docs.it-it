@@ -19,12 +19,12 @@ ms.assetid: 69e9ff0f-c409-43fc-89f6-40c3974e972c
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 3fc1e3d8db223173fcd5d9ac55f608ddeffa3aa3
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: be818ed92a3c5a7f9522a6142f5acc815077bd10
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47688249"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58536913"
 ---
 # <a name="spsyscollectorcreatecollectionset-transact-sql"></a>sp_syscollector_create_collection_set (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -56,16 +56,13 @@ sp_syscollector_create_collection_set
 ```  
   
 ## <a name="arguments"></a>Argomenti  
- [  **@name =** ] '*nome*'  
- Nome del set di raccolta. *nome* viene **sysname** e non può essere una stringa vuota o NULL.  
+`[ @name = ] 'name'` È il nome del set di raccolta. *nome* viene **sysname** e non può essere una stringa vuota o NULL.  
   
  *nome* devono essere univoci. Per un elenco dei nomi dei set di raccolta correnti, eseguire una query sulla vista di sistema syscollector_collection_sets.  
   
- [  **@target =** ] '*destinazione*'  
- Riservato per utilizzi futuri. *nome* viene **nvarchar (128)** con un valore predefinito NULL.  
+`[ @target = ] 'target'` Riservato per utilizzi futuri. *nome* viene **nvarchar (128)** con un valore predefinito NULL.  
   
- [  **@collection_mode =** ] *collection_mode*  
- Specifica il modo in cui i dati vengono raccolti e archiviati. *collection_mode* viene **smallint** e può avere uno dei valori seguenti:  
+`[ @collection_mode = ] collection_mode` Specifica il modo in cui i dati vengono raccolti e archiviati. *collection_mode* viene **smallint** e può avere uno dei valori seguenti:  
   
  0 - Modalità cache. La raccolta e il caricamento dei dati seguono una pianificazione differente. Specificare la modalità cache per la raccolta continua.  
   
@@ -73,25 +70,19 @@ sp_syscollector_create_collection_set
   
  Il valore predefinito per *collection_mode* è 0. Quando *collection_mode* è 0, *valore schedule_uid* oppure *schedule_name* deve essere specificato.  
   
- [  **@days_until_expiration =** ] *days_until_expiration*  
- Numero di giorni per cui i dati raccolti vengono salvati nel data warehouse di gestione. *days_until_expiration* viene **smallint** con valore predefinito è 730 (due anni). *days_until_expiration* deve essere 0 o un numero intero positivo.  
+`[ @days_until_expiration = ] days_until_expiration` È il numero di giorni per cui i dati raccolti vengono salvati nel data warehouse di gestione. *days_until_expiration* viene **smallint** con valore predefinito è 730 (due anni). *days_until_expiration* deve essere 0 o un numero intero positivo.  
   
- [ **@proxy_id =** ] *proxy_id*  
- Identificatore univoco per un account proxy di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent. *proxy_id* viene **int** con un valore predefinito NULL. Se specificato, *proxy_name* deve essere NULL. Per ottenere *proxy_id*, eseguire query sulla tabella di sistema sysproxies. Per accedere al proxy, il ruolo predefinito del database dc_admin deve disporre dell'autorizzazione appropriata. Per altre informazioni, vedere [creare un Proxy di SQL Server Agent](../../ssms/agent/create-a-sql-server-agent-proxy.md).  
+`[ @proxy_id = ] proxy_id` È l'identificatore univoco per un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] account proxy dell'agente. *proxy_id* viene **int** con un valore predefinito NULL. Se specificato, *proxy_name* deve essere NULL. Per ottenere *proxy_id*, eseguire query sulla tabella di sistema sysproxies. Per accedere al proxy, il ruolo predefinito del database dc_admin deve disporre dell'autorizzazione appropriata. Per altre informazioni, vedere [creare un Proxy di SQL Server Agent](../../ssms/agent/create-a-sql-server-agent-proxy.md).  
   
- [  **@proxy_name =** ] '*proxy_name*'  
- Nome dell'account proxy. *proxy_name* viene **sysname** con un valore predefinito NULL. Se specificato, *proxy_id* deve essere NULL. Per ottenere *proxy_name*, eseguire query sulla tabella di sistema sysproxies.  
+`[ @proxy_name = ] 'proxy_name'` È il nome dell'account proxy. *proxy_name* viene **sysname** con un valore predefinito NULL. Se specificato, *proxy_id* deve essere NULL. Per ottenere *proxy_name*, eseguire query sulla tabella di sistema sysproxies.  
   
- [  **@schedule_uid =** ] '*valore schedule_uid*'  
- GUID che punta a una pianificazione. *valore schedule_uid* viene **uniqueidentifier** con un valore predefinito NULL. Se specificato, *schedule_name* deve essere NULL. Per ottenere *valore schedule_uid*, eseguire query sulla tabella di sistema sysschedules.  
+`[ @schedule_uid = ] 'schedule_uid'` È il GUID che punta a una pianificazione. *valore schedule_uid* viene **uniqueidentifier** con un valore predefinito NULL. Se specificato, *schedule_name* deve essere NULL. Per ottenere *valore schedule_uid*, eseguire query sulla tabella di sistema sysschedules.  
   
  Quando *collection_mode* è impostata su 0, *valore schedule_uid* oppure *schedule_name* deve essere specificato. Quando *collection_mode* è impostato su 1, *valore schedule_uid* oppure *schedule_name* viene ignorato se specificato.  
   
- [  **@schedule_name =** ] '*schedule_name*'  
- Nome della pianificazione. *schedule_name* viene **sysname** con un valore predefinito NULL. Se specificato, *valore schedule_uid* deve essere NULL. Per ottenere *schedule_name*, eseguire query sulla tabella di sistema sysschedules.  
+`[ @schedule_name = ] 'schedule_name'` È il nome della pianificazione. *schedule_name* viene **sysname** con un valore predefinito NULL. Se specificato, *valore schedule_uid* deve essere NULL. Per ottenere *schedule_name*, eseguire query sulla tabella di sistema sysschedules.  
   
- [  **@logging_level =** ] *logging_level*  
- Livello di registrazione. *logging_level* viene **smallint** con uno dei valori seguenti:  
+`[ @logging_level = ] logging_level` È il livello di registrazione. *logging_level* viene **smallint** con uno dei valori seguenti:  
   
  0 - Informazioni di esecuzione del log ed eventi [!INCLUDE[ssIS](../../includes/ssis-md.md)] che tengono traccia degli elementi seguenti:  
   
@@ -113,14 +104,11 @@ sp_syscollector_create_collection_set
   
  Il valore predefinito per *logging_level* è 1.  
   
- [  **@description =** ] '*descrizione*'  
- Descrizione del set di raccolta. *Descrizione* viene **nvarchar (4000)** con un valore predefinito NULL.  
+`[ @description = ] 'description'` Rappresenta la descrizione del set di raccolta. *Descrizione* viene **nvarchar (4000)** con un valore predefinito NULL.  
   
- [ **@collection_set_id =** ] *collection_set_id*  
- Identificatore univoco locale del set di raccolta. *collection_set_id* viene **int** con OUTPUT ed è obbligatorio.  
+`[ @collection_set_id = ] collection_set_id` È l'identificatore univoco locale del set di raccolta. *collection_set_id* viene **int** con OUTPUT ed è obbligatorio.  
   
- [  **@collection_set_uid =** ] '*collection_set_uid*'  
- GUID per il set di raccolta. *collection_set_uid* viene **uniqueidentifier** con OUTPUT e il valore predefinito NULL.  
+`[ @collection_set_uid = ] 'collection_set_uid'` È il GUID del set di raccolta. *collection_set_uid* viene **uniqueidentifier** con OUTPUT e il valore predefinito NULL.  
   
 ## <a name="return-code-values"></a>Valori restituiti  
  **0** (esito positivo) o **1** (errore)  

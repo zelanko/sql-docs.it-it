@@ -16,12 +16,12 @@ ms.assetid: ca98a4c3-bea4-4130-88d7-79e0fd1e85f6
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: a480dbccb955875d9e4835ac0d6acadd26e6e06c
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: ae89e606633fc3555745dd56fc7703ef50685468
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52773953"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58535223"
 ---
 # <a name="spsetreplfailovermode-transact-sql"></a>sp_setreplfailovermode (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -42,14 +42,11 @@ sp_setreplfailovermode [ @publisher= ] 'publisher'
 ```  
   
 ## <a name="arguments"></a>Argomenti  
- [  **@publisher=**] **'***publisher***'**  
- Nome della pubblicazione. *pubblicazione* viene **sysname**, non prevede alcun valore predefinito. È necessario che la pubblicazione esista già.  
+`[ @publisher = ] 'publisher'` È il nome della pubblicazione. *pubblicazione* viene **sysname**, non prevede alcun valore predefinito. È necessario che la pubblicazione esista già.  
   
- [  **@publisher_db =**] **'***publisher_db***'**  
- Nome del database di pubblicazione. *publisher_db* viene **sysname**, non prevede alcun valore predefinito.  
+`[ @publisher_db = ] 'publisher_db'` È il nome del database di pubblicazione. *publisher_db* viene **sysname**, non prevede alcun valore predefinito.  
   
- [  **@publication=**] **'***pubblicazione***'**  
- Nome della pubblicazione. *pubblicazione*viene **sysname**, non prevede alcun valore predefinito.  
+`[ @publication = ] 'publication'` È il nome della pubblicazione. *pubblicazione*viene **sysname**, non prevede alcun valore predefinito.  
   
  [**@failover_mode=**] **'***failover_mode***'**  
  Modalità di failover per la sottoscrizione. *failover_mode* viene **nvarchar(10)** i possibili valori sono i seguenti.  
@@ -57,13 +54,12 @@ sp_setreplfailovermode [ @publisher= ] 'publisher'
 |Value|Descrizione|  
 |-----------|-----------------|  
 |**controllo immediato** o **sincronizzazione**|Per le modifiche apportate ai dati nel Sottoscrittore viene eseguita la copia bulk nel server di pubblicazione a mano a mano che vengono implementate.|  
-|**In coda**|Le modifiche dei dati vengono archiviate in un [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] coda.|  
+|**queued**|Le modifiche dei dati vengono archiviate in un [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] coda.|  
   
 > [!NOTE]  
 >  L'utilizzo di MSMQ ([!INCLUDE[msCoName](../../includes/msconame-md.md)] Message Queuing) è deprecato e non è più supportato.  
   
- [ **@override**=] *eseguire l'override*  
- Solo per uso interno.  
+`[ @override = ] override` Solo uso interno.  
   
 ## <a name="return-code-values"></a>Valori restituiti  
  **0** (esito positivo) o **1** (errore)  

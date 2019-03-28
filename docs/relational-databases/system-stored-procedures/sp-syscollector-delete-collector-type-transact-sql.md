@@ -19,12 +19,12 @@ ms.assetid: 3f32905e-0005-42cb-aef1-7bd04c51fbac
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 909f85ee78348ac81822b5ebbd09a98b121bb76d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e7f36eb20b4a5f72ce980f8e35cb39580f4f5142
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47738319"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58537183"
 ---
 # <a name="spsyscollectordeletecollectortype-transact-sql"></a>sp_syscollector_delete_collector_type (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -42,11 +42,9 @@ sp_syscollector_delete_collector_type [[ @collector_type_uid = ] 'collector_type
 ```  
   
 ## <a name="arguments"></a>Argomenti  
- [  **@collector_type_uid =** ] **'***collector_type_uid***'**  
- GUID del tipo di agente di raccolta. *collector_type_uid* viene **uniqueidentifier** e deve avere un valore se *nome* è NULL.  
+`[ @collector_type_uid = ] 'collector_type_uid'` È il GUID per il tipo di agente di raccolta. *collector_type_uid* viene **uniqueidentifier** e deve avere un valore se *nome* è NULL.  
   
- [  **@name =** ] **'***nome***'**  
- Nome del tipo di agente di raccolta. *nome* viene **sysname** e deve avere un valore se *collector_type_uid* è NULL.  
+`[ @name = ] 'name'` È il nome del tipo di agente di raccolta. *nome* viene **sysname** e deve avere un valore se *collector_type_uid* è NULL.  
   
 ## <a name="return-code-values"></a>Valori restituiti  
  **0** (esito positivo) o **1** (errore)  

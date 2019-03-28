@@ -16,12 +16,12 @@ ms.assetid: 64450e4d-844d-4176-874e-f3845536f7d2
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: ec9d53433d0b06cfc017fde9d312e943a6a3c6d7
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 3056c5c298fc1987e7c6f25e4a28220d3e033115
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52816154"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58535203"
 ---
 # <a name="spgetmergedeletetype-transact-sql"></a>sp_getmergedeletetype (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -38,14 +38,11 @@ sp_getmergedeletetype [ @source_object = ] 'source_object', [ @rowguid =] 'rowgu
 ```  
   
 ## <a name="arguments"></a>Argomenti  
- [  **@source_object =**] **'***source_object***'**  
- Nome dell'oggetto di origine. *source_object* viene **nvarchar(386)**, non prevede alcun valore predefinito.  
+`[ @source_object = ] 'source_object'` È il nome dell'oggetto di origine. *source_object* viene **nvarchar(386)**, non prevede alcun valore predefinito.  
   
- [  **@rowguid=**] **'***rowguid***'**  
- Identificatore di riga per il tipo di eliminazione. *ROWGUID* viene **uniqueidentifier**, non prevede alcun valore predefinito.  
+`[ @rowguid = ] 'rowguid'` È l'identificatore di riga per il tipo di eliminazione. *ROWGUID* viene **uniqueidentifier**, non prevede alcun valore predefinito.  
   
- [  **@delete_type=**] *delete_type* **OUTPUT**  
- Codice che indica il tipo di eliminazione. *delete_type* viene **int**, non prevede alcun valore predefinito. *delete_type* è anche un parametro di OUTPUT e può essere uno dei valori seguenti.  
+`[ @delete_type = ] delete_type OUTPUT` È il codice che indica il tipo di eliminazione. *delete_type* viene **int**, non prevede alcun valore predefinito. *delete_type* è anche un parametro di OUTPUT e può essere uno dei valori seguenti.  
   
 |Value|Descrizione|  
 |-----------|-----------------|  

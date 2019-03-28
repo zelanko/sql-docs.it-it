@@ -16,12 +16,12 @@ ms.assetid: 139e834f-1988-4b4d-ac81-db1f89ea90e8
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 30e0828c7d116c2c48c398ecdee78899ad8913db
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: fa6ce6b4e0d1c3fbefe7256f3ca96c84d59e664d
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52818883"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58535413"
 ---
 # <a name="spgetqueuedrows-transact-sql"></a>sp_getqueuedrows (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -40,14 +40,11 @@ sp_getqueuedrows [ @tablename = ] 'tablename'
 ```  
   
 ## <a name="arguments"></a>Argomenti  
- [  **@tablename =**] **'***tablename***'**  
- Nome della tabella. *TableName* viene **sysname**, non prevede alcun valore predefinito. La tabella deve essere inclusa in una sottoscrizione in coda.  
+`[ @tablename = ] 'tablename'` È il nome della tabella. *TableName* viene **sysname**, non prevede alcun valore predefinito. La tabella deve essere inclusa in una sottoscrizione in coda.  
   
- [  **@owner =**] **'***proprietario***'**  
- Proprietario della sottoscrizione. *proprietario* viene **sysname**, con un valore predefinito è NULL.  
+`[ @owner = ] 'owner'` È il proprietario della sottoscrizione. *proprietario* viene **sysname**, con un valore predefinito è NULL.  
   
- [  **@tranid =** ] **'***transaction_id***'**  
- Consente il filtraggio dell'output in base all'ID della transazione. *transaction_id* viene **nvarchar(70)**, con un valore predefinito è NULL. Se specificato, viene visualizzato l'ID della transazione associato al comando in coda. Se è NULL, vengono visualizzati tutti i comandi nella coda.  
+`[ @tranid = ] 'transaction_id'` Consente l'output di venire filtrato in base all'ID di transazione. *transaction_id* viene **nvarchar(70)**, con un valore predefinito è NULL. Se specificato, viene visualizzato l'ID della transazione associato al comando in coda. Se è NULL, vengono visualizzati tutti i comandi nella coda.  
   
 ## <a name="return-code-values"></a>Valori restituiti  
  **0** (esito positivo) o **1** (errore)  
@@ -58,9 +55,9 @@ sp_getqueuedrows [ @tablename = ] 'tablename'
 |Nome colonna|Tipo di dati|Descrizione|  
 |-----------------|---------------|-----------------|  
 |**Azione**|**nvarchar(10)**|Tipo di azione da eseguire in corrispondenza della sincronizzazione.<br /><br /> INS= inserimento<br /><br /> DEL = eliminazione<br /><br /> UPD = aggiornamento|  
-|**tranid**|**nvarchar(70)**|ID della transazione in cui è stato eseguito il comando.|  
+|**Tranid**|**nvarchar(70)**|ID della transazione in cui è stato eseguito il comando.|  
 |**tabella column1... n**||Il valore per ogni colonna della tabella specificata *tablename*.|  
-|**MSrepl_tran_version**|**uniqueidentifier**|Questa colonna viene utilizzata per tenere traccia delle modifiche ai dati replicati e per eseguire il rilevamento dei conflitti nel server di pubblicazione. La colonna viene aggiunta alla tabella automaticamente.|  
+|**msrepl_tran_version**|**uniqueidentifier**|Questa colonna viene utilizzata per tenere traccia delle modifiche ai dati replicati e per eseguire il rilevamento dei conflitti nel server di pubblicazione. La colonna viene aggiunta alla tabella automaticamente.|  
   
 ## <a name="remarks"></a>Note  
  **sp_getqueuedrows** usata nei Sottoscrittori che partecipano all'aggiornamento in coda.  

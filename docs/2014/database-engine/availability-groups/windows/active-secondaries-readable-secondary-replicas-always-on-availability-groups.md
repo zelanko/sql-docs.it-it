@@ -17,12 +17,12 @@ ms.assetid: 78f3f81a-066a-4fff-b023-7725ff874fdf
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 2ac104808f5d4e0b2b612c8f3ebbd17f34fc6493
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 86340f1bdb9b178c23295c61378d781e2d4a83cc
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53358583"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58533243"
 ---
 # <a name="active-secondaries-readable-secondary-replicas-always-on-availability-groups"></a>Repliche secondarie attive: Repliche secondarie leggibili (gruppi di disponibilità) Always On
   Le funzionalità secondarie attive di [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] includono il supporto per l'accesso in sola lettura a una o più repliche secondarie (*repliche secondarie leggibili*). Una replica secondaria leggibile consente l'accesso in sola lettura a tutti i relativi database secondari. Tuttavia, i database secondari leggibili non sono impostati per la sola lettura. Sono dinamici. Un database secondario viene modificato in base ai cambiamenti apportati al database primario corrispondente. Per una replica secondaria tipica, i dati presenti nel database secondario, comprese le tabelle durevoli con ottimizzazione per la memoria, sono quasi in tempo reale. Inoltre, gli indici full-text sono sincronizzati con i database secondari. In molte circostanze, la latenza dei dati tra un database primario e il database secondario corrispondente è in genere solo di pochi secondi.  
@@ -210,7 +210,7 @@ GO
   
 -   Per le query in esecuzione solo nelle tabelle ottimizzate per la memoria, gli unici livelli di isolamento supportati sono snapshot, repeatable read e serializable. Tutte le query con livello di isolamento read uncommitted o read committed restituiscono un errore a meno che non sia abilitata l'opzione MEMORY_OPTIMIZED_ELEVATE_TO_SNAPSHOT a livello di database.  
   
-    ```tsql  
+    ```sql  
     SET TRANSACTION ISOLATION LEVEL READ_COMMITTED  
     -- This is not allowed  
     BEGIN TRAN  
@@ -228,7 +228,7 @@ GO
   
 -   Nelle tabelle ottimizzate per la memoria non sono supportati hint di blocco. Ad esempio, tutte le query seguenti generano un errore. Solo l'hint NOLOCK è consentito ed è un NOOP quando viene usato con le tabelle ottimizzate per la memoria.  
   
-    ```tsql  
+    ```sql  
     SELECT * FROM t_hk WITH (PAGLOCK)  
     SELECT * FROM t_hk WITH (READPAST)  
     SELECT * FROM t_hk WITH (ROWLOCK)  
@@ -240,7 +240,7 @@ GO
   
 -   Per le transazioni tra contenitori, le transazioni con livello di isolamento della sessione "snapshot" che le tabelle ottimizzate per la memoria non è supportato l'accesso. Ad esempio,  
   
-    ```tsql  
+    ```sql  
     SET TRANSACTION ISOLATION LEVEL SNAPSHOT  
     -- This is not allowed  
     BEGIN TRAN  

@@ -18,12 +18,12 @@ ms.assetid: 29e7a7d7-b9c1-414a-968a-fc247769750d
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 2a350cf6b7f37aca830f4c74c23ce214f86376f6
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b71e79f28abb5932fc9a7a644bf466f848c1e6e7
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47702389"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58534803"
 ---
 # <a name="sptracesetstatus-transact-sql"></a>sp_trace_setstatus (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -43,15 +43,13 @@ sp_trace_setstatus [ @traceid = ] trace_id , [ @status = ] status
 ```  
   
 ## <a name="arguments"></a>Argomenti  
- [ **@traceid=** ] *trace_id*  
- ID della traccia da modificare. *trace_id* viene **int**, non prevede alcun valore predefinito. L'utente può *trace_id* valore da identificare, modificare e controllare la traccia. Per informazioni sul recupero il *trace_id*, vedere [sys.fn_trace_getinfo &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-trace-getinfo-transact-sql.md).  
+`[ @traceid = ] trace_id` È l'ID della traccia da modificare. *trace_id* viene **int**, non prevede alcun valore predefinito. L'utente può *trace_id* valore da identificare, modificare e controllare la traccia. Per informazioni sul recupero il *trace_id*, vedere [sys.fn_trace_getinfo &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-trace-getinfo-transact-sql.md).  
   
- [  **@status=** ] *stato*  
- Specifica l'azione da implementare nella traccia. *lo stato* viene **int**, non prevede alcun valore predefinito.  
+`[ @status = ] status` Specifica l'azione da implementare nella traccia. *lo stato* viene **int**, non prevede alcun valore predefinito.  
   
  Nella tabella seguente sono inclusi i possibili valori di stato.  
   
-|Stato|Description|  
+|Stato|Descrizione|  
 |------------|-----------------|  
 |**0**|Arresta la traccia specificata.|  
 |**1**|Avvia la traccia specificata.|  
@@ -63,7 +61,7 @@ sp_trace_setstatus [ @traceid = ] trace_id , [ @status = ] status
 ## <a name="return-code-values"></a>Valori restituiti  
  Nella tabella seguente vengono descritti i possibili valori di codice visualizzati al completamento della stored procedure.  
   
-|Codice restituito|Description|  
+|Codice restituito|Descrizione|  
 |-----------------|-----------------|  
 |**0**|Nessun errore.|  
 |**1**|Errore sconosciuto.|  

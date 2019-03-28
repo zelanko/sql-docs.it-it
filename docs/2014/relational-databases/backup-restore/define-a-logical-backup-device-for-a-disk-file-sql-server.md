@@ -16,12 +16,12 @@ ms.assetid: 86331d43-c738-4523-ae3d-7d6700348ed1
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 5e64f320b5540eb5ff7a4b3ebeb75d42abb3d61b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 0ae32391bd2f10525b89015272d11bcdb6468298
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48197371"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58537100"
 ---
 # <a name="define-a-logical-backup-device-for-a-disk-file-sql-server"></a>Definizione di un dispositivo di backup logico per un file su disco (SQL Server)
   In questo argomento viene descritto come definire un dispositivo di backup logico per un file su disco in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] utilizzando [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)]. Un dispositivo logico è un nome definito dall'utente tramite cui viene fatto riferimento a un dispositivo di backup fisico specifico, ovvero un file su disco o un'unità nastro.  L'inizializzazione del dispositivo fisico viene eseguita successivamente, quando viene scritto un backup nel dispositivo di backup.  
@@ -34,7 +34,7 @@ ms.locfileid: "48197371"
   
      [Indicazioni](#Recommendations)  
   
-     [Security](#Security)  
+     [Sicurezza](#Security)  
   
 -   **Per definire un dispositivo di backup logico per un file su disco utilizzando:**  
   
@@ -54,7 +54,7 @@ ms.locfileid: "48197371"
   
 ###  <a name="Security"></a> Sicurezza  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> Autorizzazioni  
  È richiesta l'appartenenza al ruolo predefinito del server **diskadmin** .  
   
  Richiede l'autorizzazione di scrittura sul disco.  
@@ -77,7 +77,7 @@ ms.locfileid: "48197371"
   
  Per eseguire il backup in questo nuovo dispositivo, aggiungerlo al campo **Backup su** nella finestra di dialogo **Backup database** (**Generale**). Per altre informazioni, vedere [Creare un backup completo del database &#40;SQL Server&#41;](create-a-full-database-backup-sql-server.md).  
   
-##  <a name="TsqlProcedure"></a> Uso di Transact-SQL  
+##  <a name="TsqlProcedure"></a> Utilizzo di Transact-SQL  
   
 #### <a name="to-define-a-logical-backup-for-a-disk-file"></a>Per definire un backup logico per un file su disco  
   
@@ -85,9 +85,9 @@ ms.locfileid: "48197371"
   
 2.  Dalla barra Standard fare clic su **Nuova query**.  
   
-3.  Copiare e incollare l'esempio seguente nella finestra delle query e fare clic su **Esegui**. Questo esempio mostra come usare [sp_addumpdevice](/sql/relational-databases/system-stored-procedures/sp-addumpdevice-transact-sql) per definire un dispositivo di backup logico per un file su disco. L'esempio aggiunge il dispositivo di backup del disco denominato `mydiskdump`, con il nome fisico `c:\dump\dump1.bak`.  
+3.  Copiare e incollare l'esempio seguente nella finestra Query, quindi fare clic su **Esegui**. Questo esempio mostra come usare [sp_addumpdevice](/sql/relational-databases/system-stored-procedures/sp-addumpdevice-transact-sql) per definire un dispositivo di backup logico per un file su disco. L'esempio aggiunge il dispositivo di backup del disco denominato `mydiskdump`, con il nome fisico `c:\dump\dump1.bak`.  
   
-```tsql  
+```sql  
 USE AdventureWorks2012 ;  
 GO  
 EXEC sp_addumpdevice 'disk', 'mydiskdump', 'c:\dump\dump1.bak' ;  
@@ -101,6 +101,6 @@ GO
  [sp_addumpdevice &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addumpdevice-transact-sql)   
  [sp_dropdevice &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-dropdevice-transact-sql)   
  [Definizione di un dispositivo di backup logico per un'unità nastro &#40;SQL Server&#41;](define-a-logical-backup-device-for-a-tape-drive-sql-server.md)   
- [Visualizzazione delle proprietà e del contenuto di un dispositivo di backup logico &#40;SQL Server&#41;](view-the-properties-and-contents-of-a-logical-backup-device-sql-server.md)  
+ [Visualizzare le proprietà e il contenuto di un dispositivo di backup logico &#40;SQL Server&#41;](view-the-properties-and-contents-of-a-logical-backup-device-sql-server.md)  
   
   

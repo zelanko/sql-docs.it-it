@@ -16,12 +16,12 @@ ms.assetid: 06be2363-00c0-4936-97c1-7347f294a936
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 8612b3713113435461ca59845710b9f7284f1a78
-ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
+ms.openlocfilehash: 124d5d14f810a32e32ce92cbb96afe4569804c67
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/18/2018
-ms.locfileid: "53591405"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58537173"
 ---
 # <a name="sppublicationvalidation-transact-sql"></a>sp_publication_validation (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -42,7 +42,7 @@ sp_publication_validation [ @publication = ] 'publication'
 ```  
   
 ## <a name="arguments"></a>Argomenti  
- [**@publication=**] **'**_pubblicazione '_  
+ [**@publication=**] **'**_publication'_  
  Nome della pubblicazione. *pubblicazione* viene **sysname**, non prevede alcun valore predefinito.  
   
  [**@rowcount_only=**] *rowcount_only*  
@@ -63,11 +63,9 @@ sp_publication_validation [ @publication = ] 'publication'
 |**1**|Un conteggio rapido in **sysindexes**. Conteggio delle righe [sysindexes](../../relational-databases/system-compatibility-views/sys-sysindexes-transact-sql.md) è molto più veloce rispetto al conteggio delle righe nella tabella effettiva. Tuttavia, poiché [sysindexes](../../relational-databases/system-compatibility-views/sys-sysindexes-transact-sql.md) in modalità differita è aggiornato, il conteggio delle righe potrebbe non essere accurata.|  
 |**2** (impostazione predefinita)|Esegue un conteggio rapido condizionale eseguendo innanzitutto un tentativo con il metodo rapido. Se il metodo rapido evidenzia delle differenze, viene applicato il metodo completo. Se *expected_rowcount* è NULL e la stored procedure viene utilizzata per ottenere il valore, viene utilizzato sempre un Count (\*) completo.|  
   
- [  **@shutdown_agent=**] *shutdown_agent*  
- Indica se l'agente di distribuzione deve essere chiuso immediatamente dopo il completamento della convalida. *shutdown_agent* viene **bit**, il valore predefinito è **0**. Se **0**, l'agente di replica non viene arrestato. Se **1**, l'agente di replica viene chiuso al termine della convalida dell'ultimo articolo.  
+`[ @shutdown_agent = ] shutdown_agent` È se l'agente di distribuzione deve essere chiuso immediatamente dopo il completamento della convalida. *shutdown_agent* viene **bit**, il valore predefinito è **0**. Se **0**, l'agente di replica non viene arrestato. Se **1**, l'agente di replica viene chiuso al termine della convalida dell'ultimo articolo.  
   
- [ **@publisher** =] **'**_editore_**'**  
- Specifica un non - [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] server di pubblicazione. *server di pubblicazione* viene **sysname**, con un valore predefinito è NULL.  
+`[ @publisher = ] 'publisher'` Specifica un non - [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] server di pubblicazione. *server di pubblicazione* viene **sysname**, con un valore predefinito è NULL.  
   
 > [!NOTE]  
 >  *server di pubblicazione* non deve essere utilizzata quando si richiede la convalida in un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] server di pubblicazione.  

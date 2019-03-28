@@ -18,12 +18,12 @@ ms.assetid: e158802c-c347-4a5d-bf75-c03e5ae56e6b
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 102e9122b93938b8e16d2e8714eed8d1372d21ad
-ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
+ms.openlocfilehash: f1ab6c1408b9f9c2de2e4070ab35e34ea8a458df
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/18/2018
-ms.locfileid: "53591525"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58526763"
 ---
 # <a name="spupdatejobstep-transact-sql"></a>sp_update_jobstep (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -62,32 +62,23 @@ sp_update_jobstep
 ```  
   
 ## <a name="arguments"></a>Argomenti  
- [ **@job_id =**] *job_id*  
- Numero di identificazione del processo a cui appartiene il passaggio. *job_id*viene **uniqueidentifier**, con un valore predefinito è NULL. Entrambi *job_id* oppure *job_name* deve essere specificato ma non è possibile specificarli entrambi.  
+`[ @job_id = ] job_id` Il numero di identificazione del processo a cui appartiene il passaggio. *job_id*viene **uniqueidentifier**, con un valore predefinito è NULL. Entrambi *job_id* oppure *job_name* deve essere specificato ma non è possibile specificarli entrambi.  
   
- [  **@job_name =**] **'**_job_name_**'**  
- Nome del processo a cui appartiene il passaggio. *nome_processo*viene **sysname**, con un valore predefinito è NULL. Entrambi *job_id* oppure *job_name* deve essere specificato ma non è possibile specificarli entrambi.  
+`[ @job_name = ] 'job_name'` Il nome del processo a cui appartiene il passaggio. *nome_processo*viene **sysname**, con un valore predefinito è NULL. Entrambi *job_id* oppure *job_name* deve essere specificato ma non è possibile specificarli entrambi.  
   
- [ **@step_id =**] *step_id*  
- Numero di identificazione del passaggio del processo da modificare. Questo numero non è modificabile. *step_id*viene **int**, non prevede alcun valore predefinito.  
+`[ @step_id = ] step_id` Il numero di identificazione per il passaggio del processo da modificare. Questo numero non è modificabile. *step_id*viene **int**, non prevede alcun valore predefinito.  
   
- [  **@step_name =**] **'**_step_name_**'**  
- Nuovo nome del processo. *step_name*viene **sysname**, con un valore predefinito è NULL.  
+`[ @step_name = ] 'step_name'` È un nuovo nome per il passaggio. *step_name*viene **sysname**, con un valore predefinito è NULL.  
   
- [  **@subsystem =**] **'**_sottosistema_**'**  
- Il sottosistema utilizzato da Microsoft SQL Server Agent per eseguire *comando*. *sottosistema* viene **nvarchar (40)**, con un valore predefinito è NULL.  
+`[ @subsystem = ] 'subsystem'` Il sottosistema utilizzato da Microsoft SQL Server Agent per eseguire *comando*. *sottosistema* viene **nvarchar (40)**, con un valore predefinito è NULL.  
   
- [  **@command =**] **'**_comando_**'**  
- I comandi da eseguire tramite *sottosistema*. *comando* viene **nvarchar (max)**, con un valore predefinito è NULL.  
+`[ @command = ] 'command'` I comandi da eseguire tramite *sottosistema*. *comando* viene **nvarchar (max)**, con un valore predefinito è NULL.  
   
- [  **@additional_parameters =**] **'**_parametri_**'**  
- [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
+`[ @additional_parameters = ] 'parameters'` [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
   
- [ **@cmdexec_success_code =**] *success_code*  
- Il valore restituito da una **CmdExec** comando del sottosistema per indicare che *comando* eseguito correttamente. *success_code* viene **int**, con un valore predefinito è NULL.  
+`[ @cmdexec_success_code = ] success_code` Il valore restituito da una **CmdExec** comando del sottosistema per indicare che *comando* eseguito correttamente. *success_code* viene **int**, con un valore predefinito è NULL.  
   
- [ **@on_success_action =**] *success_action*  
- L'azione da eseguire se il passaggio ha esito positivo. *success_action* viene **tinyint**, con un valore predefinito è NULL, i possibili valori sono i seguenti.  
+`[ @on_success_action = ] success_action` L'azione da eseguire se il passaggio ha esito positivo. *success_action* viene **tinyint**, con un valore predefinito è NULL, i possibili valori sono i seguenti.  
   
 |Value|Descrizione (azione)|  
 |-----------|----------------------------|  
@@ -96,11 +87,9 @@ sp_update_jobstep
 |**3**|Esecuzione del passaggio successivo|  
 |**4**|Andare al passaggio *success_step_id.*|  
   
- [ **@on_success_step_id =**] *success_step_id*  
- Il numero di identificazione del passaggio del processo da eseguire se il passaggio ha esito positivo e *success_action* viene **4**. *success_step_id* viene **int**, con un valore predefinito è NULL.  
+`[ @on_success_step_id = ] success_step_id` Il numero di identificazione del passaggio del processo da eseguire se il passaggio ha esito positivo e *success_action* viene **4**. *success_step_id* viene **int**, con un valore predefinito è NULL.  
   
- [  **@on_fail_action =**] *fail_action*  
- Azione da eseguire se il passaggio non viene completato correttamente. *fail_action* viene **tinyint**, con un valore predefinito è NULL e può avere uno dei valori seguenti.  
+`[ @on_fail_action = ] fail_action` L'azione da eseguire se il passaggio ha esito negativo. *fail_action* viene **tinyint**, con un valore predefinito è NULL e può avere uno dei valori seguenti.  
   
 |Value|Descrizione (azione)|  
 |-----------|----------------------------|  
@@ -109,36 +98,27 @@ sp_update_jobstep
 |**3**|Esecuzione del passaggio successivo|  
 |**4**|Andare al passaggio *fail_step_id * *.*|  
   
- [ **@on_fail_step_id =**] *fail_step_id*  
- Il numero di identificazione del passaggio del processo da eseguire se il passaggio ha esito negativo e *fail_action* viene **4**. *fail_step_id* viene **int**, con un valore predefinito è NULL.  
+`[ @on_fail_step_id = ] fail_step_id` Il numero di identificazione del passaggio del processo da eseguire se il passaggio ha esito negativo e *fail_action* viene **4**. *fail_step_id* viene **int**, con un valore predefinito è NULL.  
   
- [  **@server =**] **'**_server_**'**  
- [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)] *server* viene **nvarchar (128)**, con un valore predefinito è NULL.  
+`[ @server = ] 'server'` [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)] *server* viene **nvarchar (128)**, con un valore predefinito è NULL.  
   
- [  **@database_name =**] **'**_database_**'**  
- Nome del database in cui eseguire un passaggio [!INCLUDE[tsql](../../includes/tsql-md.md)]. *database*viene **sysname**. I nomi racchiusi tra parentesi quadre ([ ]) non sono ammessi. Il valore predefinito è NULL.  
+`[ @database_name = ] 'database'` Il nome del database in cui eseguire un [!INCLUDE[tsql](../../includes/tsql-md.md)] passaggio. *database*viene **sysname**. I nomi racchiusi tra parentesi quadre ([ ]) non sono ammessi. Il valore predefinito è NULL.  
   
- [  **@database_user_name =**] **'**_utente_**'**  
- Nome dell'account utente da utilizzare quando viene eseguito un passaggio [!INCLUDE[tsql](../../includes/tsql-md.md)]. *utente*viene **sysname**, con un valore predefinito è NULL.  
+`[ @database_user_name = ] 'user'` Il nome dell'account utente da utilizzare quando viene eseguito un [!INCLUDE[tsql](../../includes/tsql-md.md)] passaggio. *utente*viene **sysname**, con un valore predefinito è NULL.  
   
- [  **@retry_attempts =**] *retry_attempts*  
- Numero di tentativi da eseguire in caso di esecuzione errata del passaggio. *retry_attempts*viene **int**, con un valore predefinito è NULL.  
+`[ @retry_attempts = ] retry_attempts` Il numero di tentativi da utilizzare se questo passaggio ha esito negativo. *retry_attempts*viene **int**, con un valore predefinito è NULL.  
   
- [ **@retry_interval =**] *retry_interval*  
- Numero di minuti che devono trascorrere tra i tentativi. *retry_interval* viene **int**, con un valore predefinito è NULL.  
+`[ @retry_interval = ] retry_interval` La quantità di tempo in minuti tra i tentativi di ripetizione dei tentativi. *retry_interval* viene **int**, con un valore predefinito è NULL.  
   
- [ **@os_run_priority =**] *run_priority*  
- [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
+`[ @os_run_priority = ] run_priority` [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
   
- [  **@output_file_name =**] **'**_file_name_**'**  
- Nome del file in cui salvare l'output del passaggio. *file_name* viene **nvarchar (200)**, con un valore predefinito è NULL. Questo parametro è valido solo con comandi eseguiti nei sottosistemi [!INCLUDE[tsql](../../includes/tsql-md.md)] o CmdExec.  
+`[ @output_file_name = ] 'file_name'` Il nome del file in cui viene salvato l'output di questo passaggio. *file_name* viene **nvarchar (200)**, con un valore predefinito è NULL. Questo parametro è valido solo con comandi eseguiti nei sottosistemi [!INCLUDE[tsql](../../includes/tsql-md.md)] o CmdExec.  
   
  Per impostare nuovamente output_file_name nuovamente su NULL, è necessario impostare *nuovamente output_file_name* su una stringa vuota (' ') o in una stringa di caratteri vuoti, ma è possibile utilizzare il **CHAR(32)** (funzione). Ad esempio, impostare questo argomento su una stringa vuota nel modo descritto di seguito:  
   
  **@output_file_name = ' '**  
   
- [  **@flags =**] *flag*  
- Opzione che consente di controllare il comportamento. *i flag* viene **int**, i possibili valori sono i seguenti.  
+`[ @flags = ] flags` Un'opzione che controlla il comportamento. *i flag* viene **int**, i possibili valori sono i seguenti.  
   
 |Value|Descrizione|  
 |-----------|-----------------|  
@@ -148,11 +128,9 @@ sp_update_jobstep
 |**8**|Il log viene scritto nella tabella. La cronologia esistente viene sovrascritta|  
 |**16**|Il log viene scritto nella tabella in aggiunta alla cronologia esistente|  
   
- [ **@proxy_id**= ] *proxy_id*  
- ID del proxy in base al quale viene eseguito il passaggio del processo. *proxy_id* è di tipo **int**, con un valore predefinito è NULL. Se nessun *proxy_id* è specificato, nessun *proxy_name* viene specificato e non *user_name* viene specificato, il passaggio del processo viene eseguito come account del servizio per [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] agente.  
+`[ @proxy_id = ] proxy_id` Il numero di ID del proxy che viene eseguito il passaggio del processo. *proxy_id* è di tipo **int**, con un valore predefinito è NULL. Se nessun *proxy_id* è specificato, nessun *proxy_name* viene specificato e non *user_name* viene specificato, il passaggio del processo viene eseguito come account del servizio per [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] agente.  
   
- [ **@proxy_name**=] **'**_proxy_name_**'**  
- Nome del proxy in base al quale viene eseguito il passaggio del processo. *proxy_name* è di tipo **sysname**, con un valore predefinito è NULL. Se nessun *proxy_id* è specificato, nessun *proxy_name* viene specificato e non *user_name* viene specificato, il passaggio del processo viene eseguito come account del servizio per [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] agente.  
+`[ @proxy_name = ] 'proxy_name'` Il nome del proxy che viene eseguito il passaggio del processo. *proxy_name* è di tipo **sysname**, con un valore predefinito è NULL. Se nessun *proxy_id* è specificato, nessun *proxy_name* viene specificato e non *user_name* viene specificato, il passaggio del processo viene eseguito come account del servizio per [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] agente.  
   
 ## <a name="return-code-values"></a>Valori restituiti  
  **0** (esito positivo) o **1** (errore)  

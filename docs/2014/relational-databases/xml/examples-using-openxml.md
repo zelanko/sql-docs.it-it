@@ -1,5 +1,5 @@
 ---
-title: Esempi d'uso di OPENXML | Microsoft Docs
+title: 'Esempi: Utilizzo di OPENXML | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -23,17 +23,17 @@ helpviewer_keywords:
 - element-centric mapping [SQL Server]
 - edge tables
 ms.assetid: 689297f3-adb0-4d8d-bf62-cfda26210164
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
-ms.openlocfilehash: f08cf0902bb58164957fde69ad49aec8f1d4155c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 9887a9af6735b54a78dd72ed3a90aeff70c7990f
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48106891"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58536903"
 ---
-# <a name="examples-using-openxml"></a>Esempi: utilizzo di OPENXML
+# <a name="examples-using-openxml"></a>Esempi: Utilizzo di OPENXML
   Negli esempi presentati in questo argomento viene illustrato come utilizzare l'istruzione OPENXML per visualizzare un documento XML come set di righe. Per informazioni sulla sintassi di OPENXML, vedere [OPENXML &#40;Transact-SQL&#41;](/sql/t-sql/functions/openxml-transact-sql). Negli esempi vengono illustrati tutti gli aspetti dell'istruzione OPENXML, ma non ne vengono specificate le metaproprietà. Per altre informazioni su come specificare le metaproprietà in OPENXML, vedere [Specificare metaproprietà in OPENXML](specify-metaproperties-in-openxml.md).  
   
 ## <a name="examples"></a>Esempi  
@@ -84,7 +84,7 @@ FROM OPENXML (@DocHandle, '/ROOT/Customer',1)
 EXEC sp_xml_removedocument @DocHandle  
 ```  
   
- Risultato:  
+ Questo è il risultato:  
   
 ```  
 CustomerID ContactName            
@@ -129,7 +129,7 @@ FROM      OPENXML (@XmlDocumentHandle, '/ROOT/Customer',2)
 EXEC sp_xml_removedocument @XmlDocumentHandle  
 ```  
   
- Risultato:  
+ Questo è il risultato:  
   
 ```  
 CustomerID ContactName            
@@ -192,7 +192,7 @@ WITH (OrderID     int         '../@OrderID',
 EXEC sp_xml_removedocument @XmlDocumentHandle  
 ```  
   
- Risultato:  
+ Questo è il risultato:  
   
 ```  
 OrderID CustomerID        OrderDate          ProdID    Qty  
@@ -329,7 +329,7 @@ FROM OPENXML (@docHandle, '/root/Customer/Order', 1)
 EXEC sp_xml_removedocument @docHandle  
 ```  
   
- Risultato:  
+ Questo è il risultato:  
   
 ```  
 oid   amount        comment  
@@ -389,7 +389,7 @@ FROM OPENXML (@docHandle, '/root/Customer/Order', 1)
 EXEC sp_xml_removedocument @docHandle  
 ```  
   
- Risultato:  
+ Questo è il risultato:  
   
 ```  
 oid   date                        amount  
@@ -442,7 +442,7 @@ FROM OPENXML (@docHandle, '/ROOT/Customer')
 EXEC sp_xml_removedocument @docHandle  
 ```  
   
- Il risultato viene restituito sotto forma di tabella edge. È possibile creare query da eseguire sulla tabella edge per recuperare informazioni specifiche. Esempio:  
+ Il risultato viene restituito sotto forma di tabella edge. È possibile creare query da eseguire sulla tabella edge per recuperare informazioni specifiche. Ad esempio:  
   
 -   La query seguente restituisce il numero di nodi **Customer** presenti nel documento. Poiché non è stata specificata la clausola WITH, l'istruzione OPENXML restituisce una tabella edge. L'istruzione SELECT esegue la query sulla tabella edge.  
   
@@ -512,7 +512,7 @@ FROM OPENXML (@docHandle, '/ROOT/Customer/Order/OrderDetail/@ProductID')
 EXEC sp_xml_removedocument @docHandle  
 ```  
   
- Risultato:  
+ Questo è il risultato:  
   
 ```  
 ProdID      Qty         OID  
@@ -578,7 +578,7 @@ EXEC sp_xml_removedocument @h
   
  In particolare, viene passata una variabile di tipo **xml**, \@x, alla funzione **sp_xml_preparedocument()**.  
   
- Risultato:  
+ Questo è il risultato:  
   
 ```  
 id  lname   xmlname                   OverFlow  

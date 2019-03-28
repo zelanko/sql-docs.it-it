@@ -18,19 +18,19 @@ ms.assetid: 62658017-d089-459c-9492-c51e28f60efe
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: a15e965cef7109d42383d1a4dc4750c5dfef7374
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: fb0923c57006041c8d01fd0beecbc7cef08c1135
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53213770"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58535263"
 ---
 # <a name="spserverdiagnostics-transact-sql"></a>sp_server_diagnostics (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
 Acquisisce dati diagnostici e informazioni di integrità su [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] per rilevare potenziali errori. La procedura viene eseguita in modalità di ripetizione e i risultati vengono inviati periodicamente. Può essere richiamata da una connessione normale o di applicazione livello dati.  
   
-**Si applica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ( [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] tramite [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]).  
+**Si applica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (da [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]).  
   
 ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -41,8 +41,7 @@ sp_server_diagnostics [@repeat_interval =] 'repeat_interval_in_seconds'
 ```  
   
 ## <a name="arguments"></a>Argomenti  
- [ **@repeat_interval** =] **'***repeat_interval_in_seconds***'**  
- Indica l'intervallo di tempo in cui la stored procedure verrà eseguita ripetutamente per inviare informazioni di integrità.  
+`[ @repeat_interval = ] 'repeat_interval_in_seconds'` Indica l'intervallo di tempo in cui la stored procedure verrà eseguita ripetutamente per inviare informazioni sull'integrità.  
   
  *repeat_interval_in_seconds* viene **int** con il valore predefinito è 0. I valori di parametro validi sono 0 oppure qualsiasi valore uguale o maggiore di 5. È necessario eseguire la stored procedure per almeno 5 secondi per restituire i dati completi. Il valore minimo per l'esecuzione della stored procedure in modalità di ripetizione è 5 secondi.  
   
@@ -62,16 +61,16 @@ sp_server_diagnostics [@repeat_interval =] 'repeat_interval_in_seconds'
 |------------|---------------|-----------------|  
 |**creation_time**|**datetime**|Indica il timestamp della creazione della riga. Ogni riga di un singolo set di righe dispone dello stesso timestamp.|  
 |**component_type**|**sysname**|Indica se la riga contiene le informazioni per il [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] istanza livello di componente o per un gruppo di disponibilità Always On:<br /><br /> istanza<br /><br /> AlwaysOn: AvailabilityGroup|  
-|**nome_componente**|**sysname**|Indica il nome del componente o il nome del gruppo di disponibilità:<br /><br /> sistema<br /><br /> resource<br /><br /> query_processing<br /><br /> io_subsystem<br /><br /> eventi<br /><br /> *\<nome del gruppo di disponibilità >*|  
+|**component_name**|**sysname**|Indica il nome del componente o il nome del gruppo di disponibilità:<br /><br /> sistema<br /><br /> resource<br /><br /> query_processing<br /><br /> io_subsystem<br /><br /> eventi<br /><br /> *\<nome del gruppo di disponibilità >*|  
 |**state**|**int**|Indica lo stato di integrità del componente:<br /><br /> 0<br /><br /> 1<br /><br /> 2<br /><br /> 3|  
 |**state_desc**|**sysname**|Descrive la colonna contenente gli stati. Le descrizioni che corrispondono ai valori nella colonna contenente gli stati sono:<br /><br /> 0: Unknown<br /><br /> 1: pulita<br /><br /> 2: avviso<br /><br /> 3: errore|  
 |**data**|**varchar (max)**|Indica dati specifici del componente.|  
   
  Di seguito sono riportate le descrizioni dei cinque componenti:  
   
--   **sistema**: Raccoglie i dati da un punto di vista di sistema su spinlock, condizioni gravi di elaborazione, le attività non cede il controllo, gli errori di pagina e l'utilizzo della CPU. Queste informazioni producono un'indicazione dello stato di integrità complessiva.  
+-   **system**: Raccoglie i dati da un punto di vista di sistema su spinlock, condizioni gravi di elaborazione, le attività non cede il controllo, gli errori di pagina e l'utilizzo della CPU. Queste informazioni producono un'indicazione dello stato di integrità complessiva.  
   
--   **risorsa**:  Raccoglie i dati da una prospettiva della risorsa su memoria fisica e virtuale, i pool di buffer, pagine, cache e altri oggetti di memoria. Queste informazioni producono un'indicazione dello stato di integrità complessiva.  
+-   **resource**:  Raccoglie i dati da una prospettiva della risorsa su memoria fisica e virtuale, i pool di buffer, pagine, cache e altri oggetti di memoria. Queste informazioni producono un'indicazione dello stato di integrità complessiva.  
   
 -   **query_processing**: Raccoglie i dati da una prospettiva di elaborazione delle query in cui il thread di lavoro, attività, tipi di attesa, sessioni intensive della CPU e attività di blocco. Queste informazioni producono un'indicazione dello stato di integrità complessiva.  
   

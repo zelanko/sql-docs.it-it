@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 3eb09513-03f1-42f8-9917-3a1f3a579bec
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: b35e2baef80dbacf039b9c767f7798ddba0d90a9
-ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
+ms.openlocfilehash: cb77f5d8bda6b05794499faa6e6e04d1fafa53ea
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/18/2018
-ms.locfileid: "53591555"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58534883"
 ---
 # <a name="spgrantdbaccess-transact-sql"></a>sp_grantdbaccess (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -43,11 +43,9 @@ sp_grantdbaccess [ @loginame = ] 'login'
 ```  
   
 ## <a name="arguments"></a>Argomenti  
- [  **@loginame =** ] **'**_account di accesso_ **'**  
- Nome del gruppo di Windows, dell'account di accesso di Windows oppure dell'account di accesso di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sul quale eseguire il mapping al nuovo utente del database. I nomi dei gruppi di Windows e gli account di accesso di Windows devono essere qualificati con un nome di dominio Windows nel formato *Domain*\\*login*, ad esempio **LONDON\Joeb**. Sull'account di accesso non può essere già stato eseguito il mapping a un utente nel database. *account di accesso* è un **sysname**, non prevede alcun valore predefinito.  
+`[ @loginame = ] 'login_ '` È il nome del gruppo di Windows, account di accesso di Windows o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] account di accesso da associare al nuovo utente del database. I nomi dei gruppi di Windows e gli account di accesso di Windows devono essere qualificati con un nome di dominio Windows nel formato *Domain*\\*login*, ad esempio **LONDON\Joeb**. Sull'account di accesso non può essere già stato eseguito il mapping a un utente nel database. *account di accesso* è un **sysname**, non prevede alcun valore predefinito.  
   
- [  **@name_in_db=**] **'**_name_in_db_**'** [ **OUTPUT**]  
- Nome del nuovo utente del database. *name_in_db* è una variabile OUTPUT con un tipo di dati **sysname**e un valore predefinito è NULL. Se non specificato, *account di accesso* viene usato. Se specificato come variabile OUTPUT con un valore NULL, **@name_in_db** è impostata su *login*. *name_in_db* non deve esistere già nel database corrente.  
+``[ @name_in_db = ] 'name_in_db' [ OUTPUT]`` È il nome per il nuovo utente del database. *name_in_db* è una variabile OUTPUT con un tipo di dati **sysname**e un valore predefinito è NULL. Se non specificato, *account di accesso* viene usato. Se specificato come variabile OUTPUT con un valore NULL, **@name_in_db** è impostata su *login*. *name_in_db* non deve esistere già nel database corrente.  
   
 ## <a name="return-code-values"></a>Valori restituiti  
  0 (esito positivo) o 1 (esito negativo)  

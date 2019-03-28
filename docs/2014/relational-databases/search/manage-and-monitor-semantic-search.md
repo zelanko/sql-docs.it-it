@@ -13,23 +13,23 @@ ms.assetid: eb5c3b29-da70-42aa-aa97-7d35a3f1eb98
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: fa98ef3ab18aa3f5bff7045ae39d08b075c44148
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 1d68b9452a03c127fe39018c19abab1073dae7c5
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48107421"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58534983"
 ---
 # <a name="manage-and-monitor-semantic-search"></a>Gestire e monitorare la ricerca semantica
   Vengono illustrati il processo di indicizzazione semantica e le attività correlate alla gestione e al monitoraggio degli indici.  
   
-##  <a name="HowToMonitorStatus"></a> Procedura: Controllare lo stato dell'indicizzazione semantica  
+##  <a name="HowToMonitorStatus"></a> Come si fa: Verificare lo stato dell'indicizzazione semantica  
  **È stata completata la prima fase dell'indicizzazione semantica?**  
  Eseguire una query sulla DMV [sys.dm_fts_index_population &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-fts-index-population-transact-sql) e verificare lo **stato** e le colonne **status_description**.  
   
  La prima fase dell'indicizzazione include il popolamento dell'indice di parole chiave full-text e dell'indice di frasi chiave semantico, nonché l'estrazione dei dati di somiglianza dei documenti.  
   
-```tsql  
+```sql  
 USE database_name  
 GO  
   
@@ -50,13 +50,13 @@ SELECT * FROM sys.dm_fts_semantic_similarity_population WHERE table_id = OBJECT_
 GO  
 ```  
   
-##  <a name="HowToCheckSize"></a> Procedura: Controllare le dimensioni degli indici semantici  
+##  <a name="HowToCheckSize"></a> Come si fa: Verificare le dimensioni degli indici semantici  
  **Che cos'è la dimensione logica di un indice di frasi chiave semantico o di un indice di somiglianza dei documenti semantico?**  
  Eseguire una query sulla DMV [sys.dm_db_fts_index_physical_stats &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-db-fts-index-physical-stats-transact-sql).  
   
  La dimensione logica viene visualizzata in numero di pagine di indice.  
   
-```tsql  
+```sql  
 USE database_name  
 GO  
   
@@ -67,7 +67,7 @@ GO
  **Che cos'è la dimensione totale degli indici full-text e semantiche per un catalogo full-text?**  
  Eseguire una query sulla proprietà **IndexSize** della funzione per i metadati [FULLTEXTCATALOGPROPERTY &#40;Transact-SQL&#41;](/sql/t-sql/functions/fulltextcatalogproperty-transact-sql).  
   
-```tsql  
+```sql  
 SELECT FULLTEXTCATALOGPROPERTY('catalog_name', 'IndexSize')  
 GO  
 ```  
@@ -75,12 +75,12 @@ GO
  **Quanti elementi vengono indicizzati negli indici full-text e semantici per un catalogo full-text?**  
  Eseguire una query sulla proprietà **ItemCount** della funzione per i metadati [FULLTEXTCATALOGPROPERTY &#40;Transact-SQL&#41;](/sql/t-sql/functions/fulltextcatalogproperty-transact-sql).  
   
-```tsql  
+```sql  
 SELECT FULLTEXTCATALOGPROPERTY('catalog_name', 'ItemCount')  
 GO  
 ```  
   
-##  <a name="HowToForcePopulation"></a> Procedura: Forzare il popolamento degli indici semantici  
+##  <a name="HowToForcePopulation"></a> Come si fa: Forzare il popolamento degli indici semantici  
  È possibile forzare il popolamento degli indici full-text e semantici utilizzando la clausola START/STOP/PAUSE o RESUME POPULATION con la stessa sintassi e lo stesso comportamento descritti per gli indici full-text. Per altre informazioni, vedere [ALTER FULLTEXT INDEX &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-fulltext-index-transact-sql) e [Popolamento degli indici full-texts](../indexes/indexes.md).  
   
  Poiché l'indicizzazione semantica dipende dall'indicizzazione full-text, gli indici semantici vengono popolati solo al popolamento degli indici full-text associati.  
@@ -98,12 +98,12 @@ ALTER FULLTEXT INDEX ON Production.Document
 GO  
 ```  
   
-##  <a name="HowToDisableIndexing"></a> Procedura: Disabilitare o riabilitare l'indicizzazione semantica  
+##  <a name="HowToDisableIndexing"></a> Come si fa: Disabilitare o riabilitare l'indicizzazione semantica  
  È possibile abilitare o disabilitare l'indicizzazione full-text o semantica utilizzando la clausola ENABLE/DISABLE con la stessa sintassi e lo stesso comportamento descritti per gli indici full-text. Per altre informazioni, vedere [ALTER FULLTEXT INDEX &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-fulltext-index-transact-sql).  
   
  Quando l'indicizzazione semantica è disabilitata e sospesa, le query sui dati semantici continuano a funzionare correttamente e a restituire dati precedentemente indicizzati. Questo comportamento non è coerente con quello della ricerca full-text.  
   
-```tsql  
+```sql  
 -- To disable semantic indexing on a table  
 USE database_name  
 GO  
@@ -133,7 +133,7 @@ GO
 2.  **Fase 2**. Viene quindi popolato l'indice di somiglianza dei documenti semantico. Questo indice dipende da entrambi gli indici popolati nella fase precedente.  
   
 ##  <a name="BestPracticeUnderstand"></a>   
-##  <a name="ProblemNotPopulated"></a> Problema: Gli indici semantici non vengono popolati  
+##  <a name="ProblemNotPopulated"></a> Problema: gli indici semantici non vengono popolati  
  **Gli indici full-text associati vengono popolati?**  
  Poiché l'indicizzazione semantica dipende dall'indicizzazione full-text, gli indici semantici vengono popolati solo al popolamento degli indici full-text associati.  
   

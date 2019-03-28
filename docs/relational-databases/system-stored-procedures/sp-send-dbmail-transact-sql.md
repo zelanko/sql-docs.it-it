@@ -19,12 +19,12 @@ ms.assetid: f1d7a795-a3fd-4043-ac4b-c781e76dab47
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 11b5d9c48c073d3a8208b9c8be1e73c5aa68e88e
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: b0eed101b1b336997b7f90c17b3f1471d4ea526b
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48075778"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58528302"
 ---
 # <a name="spsenddbmail-transact-sql"></a>sp_send_dbmail (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -64,32 +64,23 @@ sp_send_dbmail [ [ @profile_name = ] 'profile_name' ]
 ```  
   
 ## <a name="arguments"></a>Argomenti  
- [  **@profile_name=** ] **'***profile_name***'**  
- Nome del profilo da cui inviare il messaggio. Il *profile_name* JE typu **sysname**, con un valore predefinito è NULL. Il *profile_name* deve essere il nome di un profilo di posta elettronica Database esistente. Se non si specifica *profile_name* omette **sp_send_dbmail** utilizza il profilo privato predefinito per l'utente corrente. Se l'utente non ha un profilo privato predefinito, **sp_send_dbmail** Usa il profilo pubblico predefinito per il **msdb** database. Se l'utente non dispone di un profilo privato predefinito e non vi è alcun profilo pubblico predefinito per il database di **@profile_name** deve essere specificato.  
+`[ @profile_name = ] 'profile_name'` È il nome del profilo da cui inviare il messaggio. Il *profile_name* JE typu **sysname**, con un valore predefinito è NULL. Il *profile_name* deve essere il nome di un profilo di posta elettronica Database esistente. Se non si specifica *profile_name* omette **sp_send_dbmail** utilizza il profilo privato predefinito per l'utente corrente. Se l'utente non ha un profilo privato predefinito, **sp_send_dbmail** Usa il profilo pubblico predefinito per il **msdb** database. Se l'utente non dispone di un profilo privato predefinito e non vi è alcun profilo pubblico predefinito per il database di **@profile_name** deve essere specificato.  
   
- [  **@recipients=** ] **'***destinatari***'**  
- Elenco delimitato da punti e virgola degli indirizzi di posta elettronica a cui inviare il messaggio. L'elenco dei destinatari JE typu **varchar (max)**. Anche se questo parametro è facoltativo, almeno uno dei **@recipients**, **@copy_recipients**, oppure **@blind_copy_recipients** devono essere specificati, o **sp _ send_dbmail** restituisce un errore.  
+`[ @recipients = ] 'recipients'` È un elenco delimitato da punto e virgola di indirizzi di posta elettronica a cui inviare il messaggio. L'elenco dei destinatari JE typu **varchar (max)**. Anche se questo parametro è facoltativo, almeno uno dei **@recipients**, **@copy_recipients**, oppure **@blind_copy_recipients** devono essere specificati, o **sp _ send_dbmail** restituisce un errore.  
   
- [  **@copy_recipients=** ] **'***copy_recipients***'**  
- Elenco delimitato da punti e virgola degli indirizzi di posta elettronica a cui inviare una copia per conoscenza del messaggio. L'elenco di destinatari della copia è di tipo **varchar (max)**. Anche se questo parametro è facoltativo, almeno uno dei **@recipients**, **@copy_recipients**, oppure **@blind_copy_recipients** devono essere specificati, o **sp _ send_dbmail** restituisce un errore.  
+`[ @copy_recipients = ] 'copy_recipients'` È che un elenco delimitato da punto e virgola di posta elettronica indirizzi in copia per conoscenza del messaggio. L'elenco di destinatari della copia è di tipo **varchar (max)**. Anche se questo parametro è facoltativo, almeno uno dei **@recipients**, **@copy_recipients**, oppure **@blind_copy_recipients** devono essere specificati, o **sp _ send_dbmail** restituisce un errore.  
   
- [  **@blind_copy_recipients=** ] **'***blind_copy_recipients***'**  
- Elenco delimitato da punti e virgola degli indirizzi di posta elettronica a cui inviare una copia per conoscenza nascosta del messaggio. L'elenco dei destinatari in copia nascosta JE typu **varchar (max)**. Anche se questo parametro è facoltativo, almeno uno dei **@recipients**, **@copy_recipients**, oppure **@blind_copy_recipients** devono essere specificati, o **sp _ send_dbmail** restituisce un errore.  
+`[ @blind_copy_recipients = ] 'blind_copy_recipients'` È che un elenco delimitato da punto e virgola di posta elettronica indirizzi alla copia per conoscenza nascosta del messaggio. L'elenco dei destinatari in copia nascosta JE typu **varchar (max)**. Anche se questo parametro è facoltativo, almeno uno dei **@recipients**, **@copy_recipients**, oppure **@blind_copy_recipients** devono essere specificati, o **sp _ send_dbmail** restituisce un errore.  
   
- [  **@from_address=** ] **'***from_address***'**  
- Valore dell'"indirizzo del mittente" del messaggio di posta elettronica. Si tratta di un parametro facoltativo utilizzato per eseguire l'override delle impostazioni nel profilo di posta elettronica. Questo parametro è di tipo **varchar (max)**. Le impostazioni di sicurezza SMTP determinano se questi override vengono accettati. Se non è specificato alcun parametro, il valore predefinito è NULL.  
+`[ @from_address = ] 'from_address'` È il valore del 'indirizzo del mittente"del messaggio di posta elettronica. Si tratta di un parametro facoltativo utilizzato per eseguire l'override delle impostazioni nel profilo di posta elettronica. Questo parametro è di tipo **varchar (max)**. Le impostazioni di sicurezza SMTP determinano se questi override vengono accettati. Se non è specificato alcun parametro, il valore predefinito è NULL.  
   
- [  **@reply_to=** ] **'***reply_to***'**  
- Valore dell'"indirizzo del destinatario" del messaggio di posta elettronica. Accetta un solo indirizzo di posta elettronica come valore valido. Si tratta di un parametro facoltativo utilizzato per eseguire l'override delle impostazioni nel profilo di posta elettronica. Questo parametro è di tipo **varchar (max)**. Le impostazioni di sicurezza SMTP determinano se questi override vengono accettati. Se non è specificato alcun parametro, il valore predefinito è NULL.  
+`[ @reply_to = ] 'reply_to'` È il valore di ' indirizzo per le risposte' del messaggio di posta elettronica. Accetta un solo indirizzo di posta elettronica come valore valido. Si tratta di un parametro facoltativo utilizzato per eseguire l'override delle impostazioni nel profilo di posta elettronica. Questo parametro è di tipo **varchar (max)**. Le impostazioni di sicurezza SMTP determinano se questi override vengono accettati. Se non è specificato alcun parametro, il valore predefinito è NULL.  
   
- [  **@subject=** ] **'***soggetto***'**  
- Oggetto del messaggio di posta elettronica. L'oggetto è di tipo **nvarchar(255**. Se l'oggetto viene omesso, il valore predefinito è "Messaggio SQL Server".  
+`[ @subject = ] 'subject'` È l'oggetto del messaggio di posta elettronica. L'oggetto è di tipo **nvarchar(255**. Se l'oggetto viene omesso, il valore predefinito è "Messaggio SQL Server".  
   
- [  **@body=** ] **'***body***'**  
- Corpo del messaggio di posta elettronica. Il corpo del messaggio è di tipo **nvarchar (max)**, con un valore predefinito è NULL.  
+`[ @body = ] 'body'` È il corpo del messaggio di posta elettronica. Il corpo del messaggio è di tipo **nvarchar (max)**, con un valore predefinito è NULL.  
   
- [  **@body_format=** ] **'***body_format***'**  
- Formato del corpo del messaggio. Il parametro è di tipo **varchar (20)**, con un valore predefinito è NULL. Se specificato, le intestazioni del messaggio in uscita vengono impostate in modo da indicare che per il corpo del messaggio è impostato il formato specificato. Il parametro può includere uno dei valori seguenti:  
+`[ @body_format = ] 'body_format'` È il formato del corpo del messaggio. Il parametro è di tipo **varchar (20)**, con un valore predefinito è NULL. Se specificato, le intestazioni del messaggio in uscita vengono impostate in modo da indicare che per il corpo del messaggio è impostato il formato specificato. Il parametro può includere uno dei valori seguenti:  
   
 -   TEXT  
   
@@ -97,8 +88,7 @@ sp_send_dbmail [ [ @profile_name = ] 'profile_name' ]
   
  Il valore predefinito è TEXT.  
   
- [  **@importance=** ] **'***importanza***'**  
- Priorità del messaggio. Il parametro è di tipo **varchar(6)**. Il parametro può includere uno dei valori seguenti:  
+`[ @importance = ] 'importance'` È l'importanza del messaggio. Il parametro è di tipo **varchar(6)**. Il parametro può includere uno dei valori seguenti:  
   
 -   Bassa  
   
@@ -108,8 +98,7 @@ sp_send_dbmail [ [ @profile_name = ] 'profile_name' ]
   
  Il valore predefinito è Normal.  
   
- [  **@sensitivity=** ] **'***sensibilità***'**  
- Riservatezza del messaggio. Il parametro è di tipo **varchar(12)**. Il parametro può includere uno dei valori seguenti:  
+`[ @sensitivity = ] 'sensitivity'` È la sensibilità del messaggio. Il parametro è di tipo **varchar(12)**. Il parametro può includere uno dei valori seguenti:  
   
 -   Normale  
   
@@ -121,61 +110,48 @@ sp_send_dbmail [ [ @profile_name = ] 'profile_name' ]
   
  Il valore predefinito è Normal.  
   
- [  **@file_attachments=** ] **'***file_attachments***'**  
- Elenco delimitato da punti e virgola dei nomi di file da allegare al messaggio di posta elettronica. I file nell'elenco devono essere specificati come percorsi assoluti. L'elenco di allegati è di tipo **nvarchar (max)**. Per impostazione predefinita, Posta elettronica database limita le dimensioni degli allegati a 1 MB per file.  
+`[ @file_attachments = ] 'file_attachments'` È un elenco delimitato da punto e virgola di nomi file da allegare al messaggio di posta elettronica. I file nell'elenco devono essere specificati come percorsi assoluti. L'elenco di allegati è di tipo **nvarchar (max)**. Per impostazione predefinita, Posta elettronica database limita le dimensioni degli allegati a 1 MB per file.  
   
- [  **@query=** ] **'***query***'**  
- Query da eseguire. I risultati della query possono essere allegati come file o inclusi nel corpo del messaggio di posta elettronica. La query è di tipo **nvarchar (max)** e può contenere qualsiasi [!INCLUDE[tsql](../../includes/tsql-md.md)] istruzioni. Si noti che la query viene eseguita in una sessione separata, pertanto le variabili locali nello script che chiama **sp_send_dbmail** non sono disponibili per la query.  
+`[ @query = ] 'query'` È una query da eseguire. I risultati della query possono essere allegati come file o inclusi nel corpo del messaggio di posta elettronica. La query è di tipo **nvarchar (max)** e può contenere qualsiasi [!INCLUDE[tsql](../../includes/tsql-md.md)] istruzioni. Si noti che la query viene eseguita in una sessione separata, pertanto le variabili locali nello script che chiama **sp_send_dbmail** non sono disponibili per la query.  
   
- [  **@execute_query_database=** ] **'***execute_query_database***'**  
- Contesto del database in cui la stored procedure esegue la query. Il parametro è di tipo **sysname**, con un valore predefinito del database corrente. Questo parametro è applicabile solo se **@query** è specificato.  
+`[ @execute_query_database = ] 'execute_query_database'` È il contesto del database all'interno del quale la stored procedure viene eseguita la query. Il parametro è di tipo **sysname**, con un valore predefinito del database corrente. Questo parametro è applicabile solo se **@query** è specificato.  
   
- [  **@attach_query_result_as_file=** ] *attach_query_result_as_file*  
- Specifica se il set di risultati della query viene restituito come file allegato. *attach_query_result_as_file* JE typu **bit**, con un valore predefinito è 0.  
+`[ @attach_query_result_as_file = ] attach_query_result_as_file` Specifica se il set di risultati della query viene restituito come file allegato. *attach_query_result_as_file* JE typu **bit**, con un valore predefinito è 0.  
   
  Quando il valore è 0, i risultati della query vengono inclusi nel corpo del messaggio di posta elettronica, dopo il contenuto del **@body** parametro. Con il valore 1, i risultati vengono restituiti come allegato. Questo parametro è applicabile solo se **@query** è specificato.  
   
- [  **@query_attachment_filename=** ] *query_attachment_filename*  
- Specifica il nome di file da utilizzare per il set di risultati dell'allegato query. *query_attachment_filename* JE typu **nvarchar(255**, con un valore predefinito è NULL. Questo parametro viene ignorato quando *attach_query_result* è 0. Quando *attach_query_result* è 1 e questo parametro è NULL, posta elettronica Database crea un nome file arbitrario.  
+`[ @query_attachment_filename = ] query_attachment_filename` Specifica il nome del file da utilizzare per il set di risultati dell'allegato query. *query_attachment_filename* JE typu **nvarchar(255**, con un valore predefinito è NULL. Questo parametro viene ignorato quando *attach_query_result* è 0. Quando *attach_query_result* è 1 e questo parametro è NULL, posta elettronica Database crea un nome file arbitrario.  
   
- [  **@query_result_header=** ] *query_result_header*  
- Specifica se includere le intestazioni di colonna nei risultati della query. Il valore di query_result_header è di tipo **bit**. Quando il valore è 1, i risultati della query contengono le intestazioni di colonna. Quando il valore è 0, i risultati della query non includono le intestazioni di colonna. Questo parametro viene impostato su **1**. Questo parametro è applicabile solo se **@query** è specificato.  
+`[ @query_result_header = ] query_result_header` Specifica se i risultati della query includono le intestazioni di colonna. Il valore di query_result_header è di tipo **bit**. Quando il valore è 1, i risultati della query contengono le intestazioni di colonna. Quando il valore è 0, i risultati della query non includono le intestazioni di colonna. Questo parametro viene impostato su **1**. Questo parametro è applicabile solo se **@query** è specificato.  
  
    >[!NOTE]
    > Potrebbe verificarsi l'errore seguente quando si impostano @query_result_header su 0 e impostazione @query_no_truncate su 1:
-   > <br> Msg 22050, livello 16, stato 1, riga 12: Non è stato possibile inizializzare la libreria sqlcmd con numero di errore -2147024809.
+   > <br> Messaggio 22050, livello 16, stato 1, riga 12: Non è stato possibile inizializzare la libreria sqlcmd con numero di errore -2147024809.
   
- [ **@query_result_width** =] *query_result_width*  
- Lunghezza della riga, in caratteri, per la formattazione dei risultati della query. Il *query_result_width* JE typu **int**, con un valore predefinito di 256 caratteri. Il valore fornito deve essere compreso tra 10 e 32767. Questo parametro è applicabile solo se **@query** è specificato.  
+`[ @query_result_width = ] query_result_width` È la larghezza di riga, in caratteri, da usare per la formattazione dei risultati della query. Il *query_result_width* JE typu **int**, con un valore predefinito di 256 caratteri. Il valore fornito deve essere compreso tra 10 e 32767. Questo parametro è applicabile solo se **@query** è specificato.  
   
- [  **@query_result_separator=** ] **'***query_result_separator***'**  
- Carattere utilizzato per separare le colonne nell'output della query. Il separatore è di tipo **char (1)**. Il valore predefinito è ' ' (spazio).  
+`[ @query_result_separator = ] 'query_result_separator'` È il carattere utilizzato per separare le colonne nell'output della query. Il separatore è di tipo **char (1)**. Il valore predefinito è ' ' (spazio).  
   
- [ **@exclude_query_output=** ] *exclude_query_output*  
- Specifica se restituire l'output dell'esecuzione della query nel messaggio di posta elettronica. **exclude_query_output** è di tipo bit e il valore predefinito è 0. Quando questo parametro è 0, l'esecuzione del **sp_send_dbmail** stored procedure stampa il messaggio restituito come risultato dell'esecuzione della query nella console. Quando questo parametro è 1, l'esecuzione del **sp_send_dbmail** stored procedure non viene stampato alcun dei messaggi di esecuzione di query nella console.  
+`[ @exclude_query_output = ] exclude_query_output` Specifica se restituire l'output dell'esecuzione della query nel messaggio di posta elettronica. **exclude_query_output** è di tipo bit e il valore predefinito è 0. Quando questo parametro è 0, l'esecuzione del **sp_send_dbmail** stored procedure stampa il messaggio restituito come risultato dell'esecuzione della query nella console. Quando questo parametro è 1, l'esecuzione del **sp_send_dbmail** stored procedure non viene stampato alcun dei messaggi di esecuzione di query nella console.  
   
- [  **@append_query_error=** ] *append_query_error*  
- Specifica se inviare il messaggio di posta elettronica quando un errore viene restituito dalla query specificata nel **@query** argomento. **append_query_error** viene **bit**, con un valore predefinito è 0. Quando questo parametro è 1, Posta elettronica database invia il messaggio di posta elettronica e include il messaggio di errore della query nel corpo del messaggio di posta elettronica. Quando questo parametro è 0, posta elettronica Database non invia il messaggio di posta elettronica, e **sp_send_dbmail** termina con il codice restituito 1, che indica un errore.  
+`[ @append_query_error = ] append_query_error` Specifica se inviare il messaggio di posta elettronica quando un errore viene restituito dalla query specificata nel **@query** argomento. **append_query_error** viene **bit**, con un valore predefinito è 0. Quando questo parametro è 1, Posta elettronica database invia il messaggio di posta elettronica e include il messaggio di errore della query nel corpo del messaggio di posta elettronica. Quando questo parametro è 0, posta elettronica Database non invia il messaggio di posta elettronica, e **sp_send_dbmail** termina con il codice restituito 1, che indica un errore.  
   
- [  **@query_no_truncate=** ] *query_no_truncate*  
- Specifica se eseguire la query con l'opzione che consente di evitare il troncamento dei tipi di dati di grandi dimensioni di lunghezza variabile (**varchar (max)**, **nvarchar (max)**, **varbinary (max)** **xml**, **testo**, **ntext**, **immagine**e i tipi di dati definito dall'utente). Quando il parametro è impostato, i risultati della query non includono le intestazioni di colonna. Il *query_no_truncate* valore JE typu **bit**. Quando il valore è 0 o viene omesso, la lunghezza delle colonne della query viene troncata a 256 caratteri. Quando il valore è 1, le colonne della query non vengono troncate. Il valore predefinito del parametro è 0.  
+`[ @query_no_truncate = ] query_no_truncate` Specifica se eseguire la query con l'opzione che consente di evitare il troncamento dei tipi di dati di grandi dimensioni di lunghezza variabile (**varchar (max)**, **nvarchar (max)**, **varbinary (max)** **xml**, **testo**, **ntext**, **immagine**e i tipi di dati definito dall'utente). Quando il parametro è impostato, i risultati della query non includono le intestazioni di colonna. Il *query_no_truncate* valore JE typu **bit**. Quando il valore è 0 o viene omesso, la lunghezza delle colonne della query viene troncata a 256 caratteri. Quando il valore è 1, le colonne della query non vengono troncate. Il valore predefinito del parametro è 0.  
   
 > [!NOTE]  
 >  Se usato con grandi quantità di dati, di @**query_no_truncate** opzione utilizza risorse aggiuntive e può rallentare le prestazioni del server.  
   
- [ **@query_result_no_padding** ] *@query_result_no_padding*  
- Il tipo è bit. Il valore predefinito è 0. Quando si imposta su 1, i risultati della query non sono applicato un riempimento, riducendo possibilmente le dimensioni del file. Se si imposta @query_result_no_padding su 1 e si imposta la @query_result_width parametro, il @query_result_no_padding parametro sovrascrive il @query_result_width parametro.  
+`[ @query_result_no_padding ] @query_result_no_padding` Il tipo è bit. Il valore predefinito è 0. Quando si imposta su 1, i risultati della query non sono applicato un riempimento, riducendo possibilmente le dimensioni del file. Se si imposta @query_result_no_padding su 1 e si imposta la @query_result_width parametro, il @query_result_no_padding parametro sovrascrive il @query_result_width parametro.  
   
  In questo caso, non si verifica alcun errore.  
  
   >[!NOTE]
   > Potrebbe verificarsi l'errore seguente durante l'impostazione @query_result_no_padding a 1 e fornendo un parametro per @query_no_truncate:
-  > <br> Msg 22050, livello 16, stato 1, riga 0: Non è riuscito a eseguire la query perché la @query_result_no_append e @query_no_truncate opzioni si escludono a vicenda. 
+  > <br> Messaggio 22050, livello 16, stato 1, riga 0: Non è riuscito a eseguire la query perché la @query_result_no_append e @query_no_truncate opzioni si escludono a vicenda. 
   
  Se si impostano i @query_result_no_padding su 1 e si imposta il @query_no_truncate parametro, un errore viene generato.  
   
- [  **@mailitem_id=** ] *mailitem_id* [OUTPUT]  
- Il parametro output facoltativo restituisce il *mailitem_id* del messaggio. Il *mailitem_id* JE typu **int**.  
+`[ @mailitem_id = ] mailitem_id [ OUTPUT ]` Il parametro output facoltativo restituisce il *mailitem_id* del messaggio. Il *mailitem_id* JE typu **int**.  
   
 ## <a name="return-code-values"></a>Valori restituiti  
  In caso di esito positivo viene restituito il codice 0. Qualsiasi altro valore indica esito negativo. Il codice di errore per l'istruzione non riuscita viene archiviato nel @@ERROR variabile.  

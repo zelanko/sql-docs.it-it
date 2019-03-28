@@ -20,15 +20,15 @@ helpviewer_keywords:
 - XML [SQL Server], OPENXML statement
 - element-centric mapping [SQL Server]
 ms.assetid: 060126fc-ed0f-478f-830a-08e418d410dc
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 707e525515104d417b287d33009aa025cc27bff8
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: eb674ea7bd9540f7ae74bf9ad8737bdb83c237f7
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48208526"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58538603"
 ---
 # <a name="openxml-sql-server"></a>OPENXML (SQL Server)
   La parola chiave [!INCLUDE[tsql](../../includes/tsql-md.md)] OPENXML restituisce un set di righe simile a una tabella o una vista da documenti XML in memoria. OPENXML consente di accedere ai dati XML come se si trattasse di un set di righe relazionali, visualizzando la rappresentazione interna di un documento XML come un set di righe. I record del set di righe possono essere archiviati in tabelle di database.  
@@ -137,7 +137,7 @@ EXEC sp_xml_removedocument @docHandle;
   
  Nella tabella seguente viene descritta la struttura della tabella edge.  
   
-|Nome colonna|Tipo di dati|Description|  
+|Nome colonna|Tipo di dati|Descrizione|  
 |-----------------|---------------|-----------------|  
 |**id**|**bigint**|ID univoco del nodo del documento.<br /><br /> Il valore dell'ID dell'elemento radice è 0. I valori di ID negativi sono riservati.|  
 |**parentid**|**bigint**|Identifica il padre del nodo. Il padre identificato da questo ID non è necessariamente l'elemento padre, ma dipende dalla proprietà NodeType del nodo il cui padre è identificato da questo ID. Se ad esempio il nodo è di tipo testo, il relativo elemento padre potrebbe essere un nodo attributo.<br /><br /> Se il nodo si trova al livello principale nel documento XML, il relativo valore **ParentID** è NULL.|  

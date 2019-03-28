@@ -18,12 +18,12 @@ ms.assetid: b58d06f2-d6c9-4c8e-95bd-027c50f4621a
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: de13b3b3ff39ac9aacdbcd7beb996a353593f609
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 4395114f266345cb7583c45285366c5bd2b7afff
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47677159"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58537133"
 ---
 # <a name="sysmaildeleteprofileaccountsp-transact-sql"></a>sysmail_delete_profileaccount_sp (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -41,17 +41,13 @@ sysmail_delete_profileaccount_sp  {   [ @profile_id = ] profile_id | [ @profile_
 ```  
   
 ## <a name="arguments"></a>Argomenti  
- [ **@profile_id** = ] *profile_id*  
- ID del profilo da eliminare. *profile_id* viene **int**, con un valore predefinito è NULL. Entrambi i *profile_id* o nella *profile_name* può essere specificato.  
+`[ @profile_id = ] profile_id` L'ID del profilo del profilo da eliminare. *profile_id* viene **int**, con un valore predefinito è NULL. Entrambi i *profile_id* o nella *profile_name* può essere specificato.  
   
- [ **@profile_name** =] **'***profile_name***'**  
- Nome del profilo da eliminare. *profile_name* viene **sysname**, con un valore predefinito è NULL. Entrambi i *profile_id* o nella *profile_name* può essere specificato.  
+`[ @profile_name = ] 'profile_name'` Il nome del profilo del profilo da eliminare. *profile_name* viene **sysname**, con un valore predefinito è NULL. Entrambi i *profile_id* o nella *profile_name* può essere specificato.  
   
- [ **@account_id** = ] *account_id*  
- ID dell'account da eliminare. *account_id* viene **int**, con un valore predefinito è NULL. Entrambi i *account_id* o nella *account_name* può essere specificato.  
+`[ @account_id = ] account_id` ID dell'account da eliminare. *account_id* viene **int**, con un valore predefinito è NULL. Entrambi i *account_id* o nella *account_name* può essere specificato.  
   
- [ **@account_name** =] **'***account_name***'**  
- Nome dell'account da eliminare. *account_name* viene **sysname**, con un valore predefinito è NULL. Entrambi i *account_id* o nella *account_name* può essere specificato.  
+`[ @account_name = ] 'account_name'` Il nome dell'account da eliminare. *account_name* viene **sysname**, con un valore predefinito è NULL. Entrambi i *account_id* o nella *account_name* può essere specificato.  
   
 ## <a name="return-code-values"></a>Valori restituiti  
  **0** (esito positivo) o **1** (errore)  

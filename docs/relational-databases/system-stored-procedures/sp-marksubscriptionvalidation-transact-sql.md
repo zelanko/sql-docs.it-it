@@ -16,12 +16,12 @@ ms.assetid: e68fe0b9-5993-4880-917a-b0f661f8459b
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: e49099c2bf0ecd7974531c9f1b840e77805cf218
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: aad2574457285208b47af26d0729c725a22c05b0
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54131351"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58536893"
 ---
 # <a name="spmarksubscriptionvalidation-transact-sql"></a>sp_marksubscriptionvalidation (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -41,17 +41,13 @@ sp_marksubscriptionvalidation [ @publication = ] 'publication'
 ```  
   
 ## <a name="arguments"></a>Argomenti  
- [ **@publication**=] **'***pubblicazione***'**  
- Nome della pubblicazione. *pubblicazione* viene **sysname**, non prevede alcun valore predefinito.  
+`[ @publication = ] 'publication'` È il nome della pubblicazione. *pubblicazione* viene **sysname**, non prevede alcun valore predefinito.  
   
- [ **@subscriber**=] **'***sottoscrittore***'**  
- Nome del Sottoscrittore. *Sottoscrittore* è di tipo sysname e non prevede alcun valore predefinito.  
+`[ @subscriber = ] 'subscriber'` È il nome del sottoscrittore. *Sottoscrittore* è di tipo sysname e non prevede alcun valore predefinito.  
   
- [  **@destination_db=**] **'***destination_db***'**  
- Nome del database di destinazione. *destination_db* viene **sysname**, non prevede alcun valore predefinito.  
+`[ @destination_db = ] 'destination_db'` È il nome del database di destinazione. *destination_db* viene **sysname**, non prevede alcun valore predefinito.  
   
- [  **@publisher=** ] **'***publisher***'**  
- Specifica un non - [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] server di pubblicazione. *server di pubblicazione* viene **sysname**, con un valore predefinito è NULL.  
+`[ @publisher = ] 'publisher'` Specifica un non - [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] server di pubblicazione. *server di pubblicazione* viene **sysname**, con un valore predefinito è NULL.  
   
 > [!NOTE]  
 >  *server di pubblicazione* non deve essere utilizzato per una pubblicazione a cui appartiene un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] server di pubblicazione.  

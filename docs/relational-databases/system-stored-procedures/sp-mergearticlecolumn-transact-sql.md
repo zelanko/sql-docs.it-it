@@ -16,12 +16,12 @@ ms.assetid: b4f2b888-e094-4759-a472-d893638995eb
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: d28c8da014a3922a9dbd1cba533b4cbf1d7a9215
-ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
+ms.openlocfilehash: d2cb929ffc3506d6dcb4a0745c53b47a45fdb469
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/18/2018
-ms.locfileid: "53590075"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58538613"
 ---
 # <a name="spmergearticlecolumn-transact-sql"></a>sp_mergearticlecolumn (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -44,33 +44,26 @@ sp_mergearticlecolumn [ @publication = ] 'publication'
 ```  
   
 ## <a name="arguments"></a>Argomenti  
- [  **@publication =**] **'**_pubblicazione_**'**  
- Nome della pubblicazione. *pubblicazione* viene **sysname**, non prevede alcun valore predefinito.  
+`[ @publication = ] 'publication'` È il nome della pubblicazione. *pubblicazione* viene **sysname**, non prevede alcun valore predefinito.  
   
- [  **@article =**] **'**_articolo_**'**  
- Nome dell'articolo della pubblicazione. *articolo* viene **sysname**, non prevede alcun valore predefinito.  
+`[ @article = ] 'article'` È il nome dell'articolo nella pubblicazione. *articolo* viene **sysname**, non prevede alcun valore predefinito.  
   
- [  **@column =**] **'**_colonna_**'**  
- Identifica le colonne su cui creare la partizione verticale. *colonna* viene **sysname**, con un valore predefinito è NULL. Se NULL e `@operation = N'add'`, per impostazione predefinita all'articolo vengono aggiunte tutte le colonne della tabella di origine. *colonna* non può essere NULL quando *operazione* è impostata su **drop**. Per escludere le colonne da un articolo, eseguire **sp_mergearticlecolumn** e specificare *colonna* e `@operation = N'drop'` per ogni colonna da rimuovere dall'oggetto specificato *articolo*.  
+`[ @column = ] 'column'` Identifica le colonne su cui creare la partizione verticale. *colonna* viene **sysname**, con un valore predefinito è NULL. Se NULL e `@operation = N'add'`, per impostazione predefinita all'articolo vengono aggiunte tutte le colonne della tabella di origine. *colonna* non può essere NULL quando *operazione* è impostata su **drop**. Per escludere le colonne da un articolo, eseguire **sp_mergearticlecolumn** e specificare *colonna* e `@operation = N'drop'` per ogni colonna da rimuovere dall'oggetto specificato *articolo*.  
   
- [  **@operation =**] **'**_operazione_**'**  
- Stato della replica. *operazione* viene **nvarchar(4)**, con un valore predefinito di aggiunta. **aggiungere** contrassegna la colonna per la replica. **DROP** Cancella la colonna.  
+`[ @operation = ] 'operation'` È lo stato di replica. *operazione* viene **nvarchar(4)**, con un valore predefinito di aggiunta. **aggiungere** contrassegna la colonna per la replica. **DROP** Cancella la colonna.  
   
- [  **@schema_replication=**] **'**_schema_replication_**'**  
- Specifica che le modifiche dello schema verranno propagate quando verrà eseguito l'agente di merge. *schema_replication* viene **nvarchar(5**, con un valore predefinito è FALSE.  
+`[ @schema_replication = ] 'schema_replication'` Specifica che una modifica dello schema verrà propagata quando viene eseguito l'agente di Merge. *schema_replication* viene **nvarchar(5**, con un valore predefinito è FALSE.  
   
 > [!NOTE]  
 >  Solo **FALSE** è supportata per *schema_replication*.  
   
- [  **@force_invalidate_snapshot =** ] *force_invalidate_snapshot*  
- Abilita o disabilita la funzionalità che consente di invalidare uno snapshot. *force_invalidate_snapshot* è un **bit**, il valore predefinito è **0**.  
+`[ @force_invalidate_snapshot = ] force_invalidate_snapshot` Abilita o disabilita la possibilità di invalidare uno snapshot. *force_invalidate_snapshot* è un **bit**, il valore predefinito è **0**.  
   
  **0** specifica che le modifiche apportate all'articolo di merge verranno non invalidano lo snapshot non è valido.  
   
  **1** specifica che le modifiche apportate all'articolo di merge potrebbero invalidare lo snapshot non è valido, e se è il caso, il valore **1** concede l'autorizzazione per il nuovo snapshot.  
   
- [  **@force_reinit_subscription =]**_force_reinit_subscription_  
- Abilita o disabilita la funzionalità che consente di reinizializzare la sottoscrizione. *force_reinit_subscription* è di tipo bit e il valore predefinito **0**.  
+`[ @force_reinit_subscription = ]force_reinit_subscription_` Abilita o disabilita la possibilità di reinizializzare la sottoscrizione. *force_reinit_subscription* è di tipo bit e il valore predefinito **0**.  
   
  **0** indica che le modifiche apportate all'articolo di merge non comportano la reinizializzazione della sottoscrizione.  
   
