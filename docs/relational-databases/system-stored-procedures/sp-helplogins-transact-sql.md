@@ -18,12 +18,12 @@ ms.assetid: f9ad3767-5b9f-420d-8922-b637811404f7
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: b043b71ca3f0349ce8ed7ac7accf136f4b7eff60
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 3461d6f80bb1ac693cca78954e5165fb7f012436
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47595229"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58529743"
 ---
 # <a name="sphelplogins-transact-sql"></a>sp_helplogins (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -40,8 +40,7 @@ sp_helplogins [ [ @LoginNamePattern = ] 'login' ]
 ```  
   
 ## <a name="arguments"></a>Argomenti  
- [ **@LoginNamePattern =** ] **'***login***'**  
- Nome dell'account di accesso. *login* è di tipo **sysname** e il valore predefinito è NULL. *account di accesso* deve esistere se specificato. Se *account di accesso* viene omesso, vengono restituite informazioni su tutti gli accessi.  
+`[ @LoginNamePattern = ] 'login'` È un nome di account di accesso. *login* è di tipo **sysname** e il valore predefinito è NULL. *account di accesso* deve esistere se specificato. Se *account di accesso* viene omesso, vengono restituite informazioni su tutti gli accessi.  
   
 ## <a name="return-code-values"></a>Valori restituiti  
  0 (esito positivo) o 1 (esito negativo)  
@@ -49,23 +48,23 @@ sp_helplogins [ [ @LoginNamePattern = ] 'login' ]
 ## <a name="result-sets"></a>Set di risultati  
  Il primo report contiene le informazioni su ogni account di accesso specificato, come illustrato nella tabella seguente.  
   
-|Nome colonna|Tipo di dati|Description|  
+|Nome colonna|Tipo di dati|Descrizione|  
 |-----------------|---------------|-----------------|  
 |**LoginName**|**sysname**|Nome dell'account di accesso.|  
 |**SID**|**varbinary(85)**|ID di sicurezza (SID) dell'account di accesso.|  
 |**DefDBName**|**sysname**|Database predefinito **LoginName** Usa quando ci si connette a un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |**DefLangName**|**sysname**|Lingua predefinita utilizzata da **LoginName**.|  
-|**Auser**|**Char(5)**|Yes = **LoginName** ha un nome utente associato in un database.<br /><br /> No = **LoginName** non dispone di un nome utente associato.|  
-|**Associata**|**Char(7)**|Yes = **LoginName** ha un account di accesso remoto associato.<br /><br /> No = **LoginName** non ha un account di accesso associato.|  
+|**Auser**|**char(5)**|Yes = **LoginName** ha un nome utente associato in un database.<br /><br /> No = **LoginName** non dispone di un nome utente associato.|  
+|**ARemote**|**char(7)**|Yes = **LoginName** ha un account di accesso remoto associato.<br /><br /> No = **LoginName** non ha un account di accesso associato.|  
   
  Il secondo report contiene informazioni sugli utenti sui quali viene eseguito il mapping a ogni account di accesso e le appartenenze al ruolo dell'account di acceso, come illustrato nella tabella seguente.  
   
-|Nome colonna|Tipo di dati|Description|  
+|Nome colonna|Tipo di dati|Descrizione|  
 |-----------------|---------------|-----------------|  
 |**LoginName**|**sysname**|Nome dell'account di accesso.|  
 |**DBName**|**sysname**|Database predefinito **LoginName** Usa quando ci si connette a un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |**UserName**|**sysname**|Account utente su cui **LoginName** viene eseguito il mapping nei **DBName**e i ruoli che **LoginName** è un membro nel **DBName**.|  
-|**UserOrAlias**|**Char(8)**|MemberOf = **UserName** è un ruolo.<br /><br /> Utente = **UserName** è un account utente.|  
+|**UserOrAlias**|**char(8)**|MemberOf = **UserName** è un ruolo.<br /><br /> Utente = **UserName** è un account utente.|  
   
 ## <a name="remarks"></a>Note  
  Prima di rimuovere un account di accesso, usare **sp_helplogins** per identificare gli account utente che vengono eseguito il mapping all'account di accesso.  

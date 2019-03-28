@@ -11,12 +11,12 @@ ms.assetid: 29e57ebd-828f-4dff-b473-c10ab0b1c597
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: bb40218b2547f14634c060f2c242318101d0ea7b
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 05afd5377ee1d64a28349b46fbc79a9f048c5577
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52524917"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58529863"
 ---
 # <a name="lesson-3-create-a-sql-server-credential"></a>Lezione 3: Creare le credenziali di SQL Server
   In questa lezione verranno create le credenziali per archiviare le informazioni di sicurezza utilizzate per accedere all'account di Archiviazione di Windows Azure.  
@@ -38,7 +38,7 @@ ms.locfileid: "52524917"
   
 4.  Copiare e incollare l'esempio seguente nella finestra Query e modificare se necessario. L'istruzione seguente crea una credenziale di SQL Server per archiviare il certificato di accesso condiviso del contenitore di archiviazione.  
   
-    ```tsql  
+    ```sql  
   
     USE master  
     CREATE CREDENTIAL credentialname - this name should match the container path and it must start with https.   
@@ -52,7 +52,7 @@ ms.locfileid: "52524917"
   
 5.  Per visualizzare tutte le credenziali disponibili, è possibile eseguire l'istruzione seguente nella finestra della query:  
   
-    ```tsql  
+    ```sql  
     SELECT * from sys.credentials  
     ```  
   

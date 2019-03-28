@@ -14,12 +14,12 @@ ms.assetid: 356d3e6b-8514-4bd2-a683-9de147949b2b
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 9e831941097d4614b92c3d6e9b57400f0eab8430
-ms.sourcegitcommit: 04dd0620202287869b23cc2fde998a18d3200c66
+ms.openlocfilehash: 5dfc0aa145f106fc57c25a6249b928ee27ab4b87
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "52641198"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58531473"
 ---
 # <a name="view-or-configure-remote-server-connection-options-sql-server"></a>Visualizzazione o configurare le opzioni di connessione al server remoto (SQL Server)
   In questo argomento viene descritto come visualizzare e configurare a livello di server le opzioni di connessione al server remoto in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] tramite [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)].  
@@ -36,13 +36,13 @@ ms.locfileid: "52641198"
   
      [Transact-SQL](#TsqlProcedure)  
   
--   **Completamento:**  [Dopo aver configurato le opzioni di connessione server remoto](#FollowUp)  
+-   **Completamento:**  [dopo la configurazione delle opzioni di connessione al server remoto](#FollowUp)  
   
 ##  <a name="BeforeYouBegin"></a> Prima di iniziare  
   
 ###  <a name="Security"></a> Sicurezza  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> Autorizzazioni  
  L'esecuzione di **sp_serveroption** richiede l'autorizzazione ALTER ANY LINKED SERVER nel server.  
   
 ##  <a name="SSMSProcedure"></a> Utilizzo di SQL Server Management Studio  
@@ -65,9 +65,9 @@ ms.locfileid: "52641198"
   
 2.  Dalla barra Standard fare clic su **Nuova query**.  
   
-3.  Copiare e incollare l'esempio seguente nella finestra delle query e fare clic su **Esegui**. In questo esempio viene usato [sp_helpserver](/sql/relational-databases/system-stored-procedures/sp-helpserver-transact-sql) per restituire le informazioni su tutti i server remoti.  
+3.  Copiare e incollare l'esempio seguente nella finestra Query, quindi fare clic su **Esegui**. In questo esempio viene usato [sp_helpserver](/sql/relational-databases/system-stored-procedures/sp-helpserver-transact-sql) per restituire le informazioni su tutti i server remoti.  
   
-```tsql  
+```sql  
 USE master;  
 GO  
 EXEC sp_helpserver ;  
@@ -79,14 +79,14 @@ EXEC sp_helpserver ;
   
 2.  Dalla barra Standard fare clic su **Nuova query**.  
   
-3.  Copiare e incollare l'esempio seguente nella finestra delle query e fare clic su **Esegui**. In questo esempio viene illustrato come usare [sp_serveroption](/sql/relational-databases/system-stored-procedures/sp-serveroption-transact-sql) per configurare un server remoto. Nell'esempio viene configurata la compatibilità delle regole di confronto tra un server remoto corrispondente a un'altra istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], `SEATTLE3`e l'istanza locale di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+3.  Copiare e incollare l'esempio seguente nella finestra Query, quindi fare clic su **Esegui**. In questo esempio viene illustrato come usare [sp_serveroption](/sql/relational-databases/system-stored-procedures/sp-serveroption-transact-sql) per configurare un server remoto. Nell'esempio viene configurata la compatibilità delle regole di confronto tra un server remoto corrispondente a un'altra istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], `SEATTLE3`e l'istanza locale di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
-```tsql  
+```sql  
 USE master;  
 EXEC sp_serveroption 'SEATTLE3', 'collation compatible', 'true';  
 ```  
   
-##  <a name="FollowUp"></a> Completamento: Dopo aver configurato le opzioni di connessione server remoto  
+##  <a name="FollowUp"></a> Completamento: dopo la configurazione delle opzioni di connessione al server remoto  
  Per poter rendere effettiva l'impostazione, è necessario arrestare e riavviare il server remoto.  
   
 ## <a name="see-also"></a>Vedere anche  

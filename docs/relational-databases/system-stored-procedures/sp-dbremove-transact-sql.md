@@ -18,12 +18,12 @@ ms.assetid: a8513f4a-c025-49c8-99c3-4c83cb7f51ed
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: ffd0874e60d6a9b8ab89ade6e11fc504ac166a2c
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: cfb2671083b62034d4227f232bc062ce46138a3a
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52530276"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58526283"
 ---
 # <a name="spdbremove-transact-sql"></a>sp_dbremove (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -43,11 +43,9 @@ sp_dbremove [ @dbname = ] 'database' [ , [ @dropdev = ] 'dropdev' ]
 ```  
   
 ## <a name="arguments"></a>Argomenti  
- [  **@dbname=** ] **'**_database_**'**  
- Nome del database da rimuovere. *database* viene **sysname**, con un valore predefinito NULL.  
+`[ @dbname = ] 'database'` È il nome del database da rimuovere. *database* viene **sysname**, con un valore predefinito NULL.  
   
- [  **@dropdev=** ] **'**_dropdev_**'**  
- Flag disponibile per compatibilità con le versioni precedenti e attualmente ignorato. *dropdev* ha il valore **dropdev**.  
+`[ @dropdev = ] 'dropdev'` Flag disponibile per compatibilità con le versioni e attualmente ignorato. *dropdev* ha il valore **dropdev**.  
   
 ## <a name="return-code-values"></a>Valori restituiti  
  0 (esito positivo) o 1 (esito negativo)  

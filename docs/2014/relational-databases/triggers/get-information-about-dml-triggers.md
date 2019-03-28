@@ -17,12 +17,12 @@ ms.assetid: 37574aac-181d-4aca-a2cc-8abff64237dc
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 780616b452865324c3a34abcaa6dd5935123151f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: dc207c4c1bc7ddc2c7c4f590622e04a0f7739375
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48203011"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58531863"
 ---
 # <a name="get-information-about-dml-triggers"></a>Ottieni informazioni sui trigger DML
   In questo argomento viene descritto come ottenere informazioni sui trigger DML in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] utilizzando [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)]. Queste informazioni possono includere i tipi di trigger in una tabella, nonché il nome, il proprietario e la data di creazione o modifica di un trigger. Se il trigger non è stato crittografato al momento della creazione, se ne ottiene la definizione. È possibile utilizzare la definizione per comprendere gli effetti del trigger sulla tabella su cui è stato definito. È inoltre possibile rilevare gli oggetti utilizzati da un trigger specifico. Con queste informazioni, è possibile identificare gli oggetti che influiscono sul trigger qualora vengano modificati o eliminati dal database.  
@@ -31,7 +31,7 @@ ms.locfileid: "48203011"
   
 -   **Prima di iniziare:**  
   
-     [Security](#Security)  
+     [Sicurezza](#Security)  
   
 -   **Per ottenere informazioni sui trigger DML utilizzando:**  
   
@@ -43,7 +43,7 @@ ms.locfileid: "48203011"
   
 ###  <a name="Security"></a> Sicurezza  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> Autorizzazioni  
  **sys.sql.modules**, **sys.object**, **sys.triggers**, **sys.events**, **sys.trigger_events**  
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] Per altre informazioni, vedere [Metadata Visibility Configuration](../security/metadata-visibility-configuration.md).  
   
@@ -79,7 +79,7 @@ ms.locfileid: "48203011"
   
 6.  Per chiudere la finestra **Dipendenze oggetto** fare clic su **OK**.  
   
-##  <a name="TsqlProcedure"></a> Uso di Transact-SQL  
+##  <a name="TsqlProcedure"></a> Utilizzo di Transact-SQL  
   
 #### <a name="to-view-the-definition-of-a-dml-trigger"></a>Per visualizzare la definizione di un trigger DML  
   
@@ -89,7 +89,7 @@ ms.locfileid: "48203011"
   
 3.  Copiare e incollare uno degli esempi seguenti nella finestra della query, quindi fare clic su **Esegui**. In ogni esempio viene illustrato come visualizzare la definizione del trigger `iuPerson` .  
   
-```tsql  
+```sql  
 USE AdventureWorks2012;  
 GO  
 SELECT definition   
@@ -98,7 +98,7 @@ WHERE object_id = OBJECT_ID(N'Person.iuPerson');
 GO  
 ```  
   
-```tsql  
+```sql  
 USE AdventureWorks2012;   
 GO  
 SELECT OBJECT_DEFINITION (OBJECT_ID(N'Person.iuPerson')) AS ObjectDefinition;   
@@ -106,7 +106,7 @@ GO
   
 ```  
   
-```tsql  
+```sql  
 USE AdventureWorks2012;   
 GO  
 EXEC sp_helptext 'Person.iuPerson'  
@@ -158,7 +158,7 @@ GO
   
 ```  
   
-```tsql  
+```sql  
 USE AdventureWorks2012;   
 GO  
 SELECT  name, object_id, schema_id, parent_object_id, type_desc, create_date, modify_date, is_published  
@@ -168,7 +168,7 @@ GO
   
 ```  
   
-```tsql  
+```sql  
 USE AdventureWorks2012;   
 GO  
 SELECT OBJECTPROPERTY(OBJECT_ID(N'Person.iuPerson'), 'ExecIsInsteadOfTrigger');   
@@ -184,7 +184,7 @@ GO
   
 3.  Copiare e incollare uno degli esempi seguenti nella finestra della query, quindi fare clic su **Esegui**. In ogni esempio viene illustrato come visualizzare gli eventi che attivano il trigger `iuPerson` .  
   
-```tsql  
+```sql  
 USE AdventureWorks2012;   
 GO  
 SELECT object_id, type, type_desc, is_trigger_event, event_group_type, event_group_type_desc   
@@ -193,7 +193,7 @@ WHERE object_id = OBJECT_ID('Person.iuPerson');
 GO  
 ```  
   
-```tsql  
+```sql  
 USE AdventureWorks2012;   
 GO   
 SELECT object_id, type,is_first, is_last  

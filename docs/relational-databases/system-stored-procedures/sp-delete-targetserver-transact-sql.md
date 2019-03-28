@@ -18,12 +18,12 @@ ms.assetid: cc438701-ad91-419d-9f23-ebc4c548c700
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 63b8fdb66b868d7fc0c1c7a83d574bafb92224b6
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 194395728e60f31c689293191be2cedca4d549f3
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47692245"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58528913"
 ---
 # <a name="spdeletetargetserver-transact-sql"></a>sp_delete_targetserver (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -42,14 +42,11 @@ sp_delete_targetserver [ @server_name = ] 'server'
 ```  
   
 ## <a name="arguments"></a>Argomenti  
- [ **@server_name=** ] **'***server***'**  
- Nome del server da rimuovere come server di destinazione disponibile. *server* viene **nvarchar(30)**, non prevede alcun valore predefinito.  
+`[ @server_name = ] 'server'` Il nome del server da rimuovere come server di destinazione disponibile. *server* viene **nvarchar(30)**, non prevede alcun valore predefinito.  
   
- [  **@clear_downloadlist=** ] *clear_downloadlist*  
- Specifica se cancellare l'elenco di download per il server di destinazione. *clear_downloadlist* è di tipo **bit**, il valore predefinito è **1**. Quando *clear_downloadlist* viene **1**, la procedura cancella l'elenco di download per il server prima di eliminare il server. Quando *clear_downloadlist* viene **0**, l'elenco di download non viene cancellata.  
+`[ @clear_downloadlist = ] clear_downloadlist` Specifica se cancellare l'elenco di download per il server di destinazione. *clear_downloadlist* è di tipo **bit**, il valore predefinito è **1**. Quando *clear_downloadlist* viene **1**, la procedura cancella l'elenco di download per il server prima di eliminare il server. Quando *clear_downloadlist* viene **0**, l'elenco di download non viene cancellata.  
   
- [  **@post_defection=** ] *post_defection*  
- Viene specificato se inviare un'istruzione di esclusione al server di destinazione. *post_defection* è di tipo **bit**, con un valore predefinito è 1. Quando *post_defection* viene **1**, la procedura invia un'istruzione di esclusione al server di destinazione prima di eliminare il server. Quando *post_defection* viene **0**, la procedura non invia un'istruzione di esclusione al server di destinazione.  
+`[ @post_defection = ] post_defection` Specifica se inviare un'istruzione di esclusione al server di destinazione. *post_defection* è di tipo **bit**, con un valore predefinito è 1. Quando *post_defection* viene **1**, la procedura invia un'istruzione di esclusione al server di destinazione prima di eliminare il server. Quando *post_defection* viene **0**, la procedura non invia un'istruzione di esclusione al server di destinazione.  
   
 ## <a name="return-code-values"></a>Valori restituiti  
  **0** (esito positivo) o **1** (errore)  

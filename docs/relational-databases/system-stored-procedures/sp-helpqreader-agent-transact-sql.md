@@ -16,12 +16,12 @@ ms.assetid: 8e74e1aa-e95b-4183-8017-bf123439b08d
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 772dc410690a4a29811e2a1bd84ec1ac6d12b3fa
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: f40856b20a76abdb7a3788f2564c02fe2e090619
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52779653"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58529343"
 ---
 # <a name="sphelpqreaderagent-transact-sql"></a>sp_helpqreader_agent (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -38,15 +38,14 @@ sp_helpqreader_agent [ [ @frompublisher = ] frompublisher ]
 ```  
   
 ## <a name="arguments"></a>Argomenti  
- [  **@frompublisher=** ] *frompublisher*  
- Specifica se la stored procedure viene chiamata nel server di pubblicazione o nel server di distribuzione. *frompublisher* è di tipo bit e il valore predefinito è pari a 0. **1** significa che la stored procedure viene chiamata dal server di pubblicazione, e **0** significa che la stored procedure viene chiamata dal server di distribuzione.  
+`[ @frompublisher = ] frompublisher` Specifica se la stored procedure viene chiamata nel server di pubblicazione o nel server di distribuzione. *frompublisher* è di tipo bit e il valore predefinito è pari a 0. **1** significa che la stored procedure viene chiamata dal server di pubblicazione, e **0** significa che la stored procedure viene chiamata dal server di distribuzione.  
   
 ## <a name="result-sets"></a>Set di risultati  
   
 |Nome colonna|Tipo di dati|Descrizione|  
 |-----------------|---------------|-----------------|  
 |**id**|**int**|ID dell'agente.|  
-|**name**|**Nvarchar(100)**|Nome dell'agente.|  
+|**name**|**nvarchar(100)**|Nome dell'agente.|  
 |**job_id**|**uniqueidentifier**|ID univoco del processo dell'agente.|  
 |**job_login**|**nvarchar(512)**|L'account di Windows con cui viene eseguito l'agente di distribuzione, viene restituito nel formato *DOMAIN*\\*username*.|  
 |**job_password**|**sysname**|Per motivi di sicurezza, un valore pari **\* \* \* \* \* \* \* \* \* \*** è sempre restituito.|  

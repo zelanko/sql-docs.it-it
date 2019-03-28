@@ -18,12 +18,12 @@ ms.assetid: 4c3e3302-6cf1-4b2b-8682-004049b578c3
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: c6d514adfed27693456338ece6fa58638e319475
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d47f8d8ebd0e37f106e7610937af8f6585820cce
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47629809"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58533433"
 ---
 # <a name="sphelpdb-transact-sql"></a>sp_helpdb (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -40,36 +40,35 @@ sp_helpdb [ [ @dbname= ] 'name' ]
 ```  
   
 ## <a name="arguments"></a>Argomenti  
- [ **@dbname=** ] **'***name***'**  
- Nome del database per il quale vengono restituite informazioni. *nome* viene **sysname**, non prevede alcun valore predefinito. Se *nome* non viene specificato, **sp_helpdb** segnala tutti i database di **Sys. Databases** vista del catalogo.  
+`[ @dbname = ] 'name'` È il nome del database per il quale vengono restituite informazioni. *nome* viene **sysname**, non prevede alcun valore predefinito. Se *nome* non viene specificato, **sp_helpdb** segnala tutti i database di **Sys. Databases** vista del catalogo.  
   
 ## <a name="return-code-values"></a>Valori restituiti  
  0 (esito positivo) o 1 (esito negativo)  
   
 ## <a name="result-sets"></a>Set di risultati  
   
-|Nome colonna|Tipo di dati|Description|  
+|Nome colonna|Tipo di dati|Descrizione|  
 |-----------------|---------------|-----------------|  
 |**name**|**sysname**|Nome del database.|  
 |**db_size**|**nvarchar(13)**|Dimensioni totali del database.|  
-|**Proprietario**|**sysname**|Proprietario del database, ad esempio **sa**.|  
+|**owner**|**sysname**|Proprietario del database, ad esempio **sa**.|  
 |**dbid**|**smallint**|ID del database.|  
 |**created**|**nvarchar(11)**|Data di creazione del database.|  
 |**status**|**nvarchar(600)**|Elenco separato da virgola dei valori delle opzioni impostate nel database.<br /><br /> Le opzioni con valori booleani vengono elencate solo se sono abilitate. Sono elencate le opzioni non booleane con i relativi valori nel formato *option_name*=*valore*.<br /><br /> Per altre informazioni, vedere [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md).|  
-|**compatibility_level**|**tinyint**|Livello di compatibilità del database (60, 65, 70, 80 o 90).|  
+|**compatibility_level**|**tinyint**|Livello di compatibilità del database: 60, 65, 70, 80 o 90.|  
   
  Se *nome* viene specificato, è un set di risultati aggiuntivo che mostra l'allocazione dei file per il database specificato.  
   
-|Nome colonna|Tipo di dati|Description|  
+|Nome colonna|Tipo di dati|Descrizione|  
 |-----------------|---------------|-----------------|  
 |**name**|**nchar(128)**|Nome logico del file.|  
 |**fileid**|**smallint**|ID di file.|  
-|**Nome del file**|**nchar(260)**|Nome del file del sistema operativo, ovvero nome fisico del file.|  
+|**filename**|**nchar(260)**|Nome del file del sistema operativo, ovvero nome fisico del file.|  
 |**filegroup**|**nvarchar(128)**|Filegroup a cui appartiene il file.<br /><br /> NULL = Il file è un file di log. Questo tipo di file non viene mai incluso in un filegroup.|  
 |**size**|**nvarchar(18)**|Dimensione del file espressa in megabyte.|  
 |**maxsize**|**nvarchar(18)**|Dimensioni massime consentite per il file. Se questo campo include il valore UNLIMITED, le dimensioni del file possono aumentare fino a riempire il disco.|  
-|**aumento delle dimensioni**|**nvarchar(18)**|Incremento per l'aumento delle dimensioni del file. Indica la quantità di spazio aggiunta al file ogni volta che è necessario spazio aggiuntivo.|  
-|**Utilizzo**|**varchar(9)**|Utilizzo del file. Per un file di dati, il valore è **'solo data'** e per il file di log è il valore **'di log solo'**.|  
+|**growth**|**nvarchar(18)**|Incremento per l'aumento delle dimensioni del file. Indica la quantità di spazio aggiunta al file ogni volta che è necessario spazio aggiuntivo.|  
+|**usage**|**varchar(9)**|Utilizzo del file. Per un file di dati, il valore è **'solo data'** e per il file di log è il valore **'di log solo'**.|  
   
 ## <a name="remarks"></a>Note  
  Il **stato** colonna nel risultato del set di report quali opzioni sono state impostate su ON nel database. Tutte le opzioni di database non vengono segnalate dal **stato** colonna. Per visualizzare un elenco completo delle impostazioni correnti del database, usare il **Sys. Databases** vista del catalogo.  

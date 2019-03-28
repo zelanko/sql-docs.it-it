@@ -18,12 +18,12 @@ ms.assetid: 70c10922-9345-4190-ba69-808a43f760da
 author: VanMSFT
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 4b27da09e0e57029b65c21110a93de46ed0d81a6
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b9ae7fdde89c9f927fbc56a9ca395138c264e931
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47783969"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58532113"
 ---
 # <a name="spsyspolicyconfigure-transact-sql"></a>sp_syspolicy_configure (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -41,8 +41,7 @@ sp_syspolicy_configure [ @name = ] 'name'
 ```  
   
 ## <a name="arguments"></a>Argomenti  
- [  **@name =** ] **'***nome***'**  
- Nome dell'impostazione che si desidera configurare. *nome* viene **sysname**, è necessario e non può essere NULL o una stringa vuota.  
+`[ @name = ] 'name'` È il nome dell'impostazione che si desidera configurare. *nome* viene **sysname**, è necessario e non può essere NULL o una stringa vuota.  
   
  *nome* può essere uno dei valori seguenti:  
   
@@ -52,8 +51,7 @@ sp_syspolicy_configure [ @name = ] 'name'
   
 -   'LogOnSuccess' - Specifica se vengono registrate le valutazioni di criteri riuscite nella gestione basata su criteri.  
   
- [  **@value =** ] *valore*  
- È il valore associato con il valore specificato per *nome*. *valore* viene **sql_variant**ed è obbligatorio.  
+`[ @value = ] value` È il valore associato con il valore specificato per *nome*. *valore* viene **sql_variant**ed è obbligatorio.  
   
 -   Se si specifica 'Enabled' per *nome*, è possibile utilizzare uno dei valori seguenti:  
   
@@ -81,7 +79,7 @@ sp_syspolicy_configure [ @name = ] 'name'
  È necessaria l'appartenenza al ruolo predefinito del database PolicyAdministratorRole.  
   
 > [!IMPORTANT]  
->  Possibile elevazione di credenziali: gli utenti nel ruolo PolicyAdministratorRole possono creare trigger server e pianificare le esecuzioni di criteri che influiscono sul funzionamento dell'istanza del [!INCLUDE[ssDE](../../includes/ssde-md.md)]. Gli utenti con il ruolo PolicyAdministratorRole possono ad esempio creare criteri che impediscono la creazione della maggior parte degli oggetti nel [!INCLUDE[ssDE](../../includes/ssde-md.md)]. A causa di questa possibile elevazione di credenziali, il ruolo PolicyAdministratorRole deve essere concesso solo a utenti ritenuti attendibili per il controllo della configurazione del [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
+>  Possibile elevazione di credenziali: Gli utenti nel ruolo PolicyAdministratorRole possono creare trigger server e pianificare le esecuzioni di criteri che possono influenzare l'operazione dell'istanza del [!INCLUDE[ssDE](../../includes/ssde-md.md)]. Gli utenti con il ruolo PolicyAdministratorRole possono ad esempio creare criteri che impediscono la creazione della maggior parte degli oggetti nel [!INCLUDE[ssDE](../../includes/ssde-md.md)]. A causa di questa possibile elevazione di credenziali, il ruolo PolicyAdministratorRole deve essere concesso solo a utenti ritenuti attendibili per il controllo della configurazione del [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
 ## <a name="examples"></a>Esempi  
  Nell'esempio seguente viene abilitata la gestione basata su criteri.  

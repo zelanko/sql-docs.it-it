@@ -16,12 +16,12 @@ ms.assetid: 518a4618-3592-4edc-8425-cbc33cdff891
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: f1f001752ee67253297917746ff50eeb61a3ff1d
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: 1a5b55d2ec6a8be0df305e2c1ce7121b638250c4
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53203630"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58532013"
 ---
 # <a name="spchangepublicationsnapshot-transact-sql"></a>sp_changepublication_snapshot (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -58,11 +58,9 @@ sp_changepublication_snapshot [ @publication= ] 'publication'
 ```  
   
 ## <a name="arguments"></a>Argomenti  
- [  **@publication =**] **'***pubblicazione***'**  
- Nome della pubblicazione. *pubblicazione* viene **sysname**, non prevede alcun valore predefinito.  
+`[ @publication = ] 'publication'` È il nome della pubblicazione. *pubblicazione* viene **sysname**, non prevede alcun valore predefinito.  
   
- [  **@frequency_type =**] *frequency_type*  
- Frequenza per l'esecuzione pianificata dell'agente. *frequency_type* viene **int**, e può essere uno dei valori seguenti.  
+`[ @frequency_type = ] frequency_type` È la frequenza di pianificazione dell'agente. *frequency_type* viene **int**, e può essere uno dei valori seguenti.  
   
 |Value|Descrizione|  
 |-----------|-----------------|  
@@ -76,8 +74,7 @@ sp_changepublication_snapshot [ @publication= ] 'publication'
 |**128**|Periodica|  
 |NULL (predefinito)||  
   
- [  **@frequency_interval =**] *frequency_interval*  
- Specifica i giorni in cui viene eseguito l'agente. *frequency_interval* viene **int**, e può essere uno dei valori seguenti.  
+`[ @frequency_interval = ] frequency_interval` Specifica i giorni in cui viene eseguito l'agente. *frequency_interval* viene **int**, e può essere uno dei valori seguenti.  
   
 |Value|Descrizione|  
 |-----------|-----------------|  
@@ -93,8 +90,7 @@ sp_changepublication_snapshot [ @publication= ] 'publication'
 |**10**|Giorni festivi|  
 |NULL (predefinito)||  
   
- [  **@frequency_subday =**] *frequency_subday*  
- È l'unità di misura *freq_subday_interval*. *frequency_subday* viene **int**, i possibili valori sono i seguenti.  
+`[ @frequency_subday = ] frequency_subday` È l'unità di misura *freq_subday_interval*. *frequency_subday* viene **int**, i possibili valori sono i seguenti.  
   
 |Value|Descrizione|  
 |-----------|-----------------|  
@@ -104,56 +100,42 @@ sp_changepublication_snapshot [ @publication= ] 'publication'
 |**8**|Ora|  
 |NULL (predefinito)||  
   
- [  **@frequency_subday_interval =**] *frequency_subday_interval*  
- È l'intervallo *frequency_subday*. *frequency_subday_interval* viene **int**, con un valore predefinito è NULL.  
+`[ @frequency_subday_interval = ] frequency_subday_interval` È l'intervallo *frequency_subday*. *frequency_subday_interval* viene **int**, con un valore predefinito è NULL.  
   
- [  **@frequency_relative_interval =**] *frequency_relative_interval*  
- Data di esecuzione dell'agente snapshot. *frequency_relative_interval* viene **int**, con un valore predefinito è NULL.  
+`[ @frequency_relative_interval = ] frequency_relative_interval` È la data che viene eseguito l'agente Snapshot. *frequency_relative_interval* viene **int**, con un valore predefinito è NULL.  
   
- [  **@frequency_recurrence_factor =**] *frequency_recurrence_factor*  
- Fattore di occorrenza utilizzato da *frequency_type*. *frequency_recurrence_factor* viene **int**, con un valore predefinito è NULL.  
+`[ @frequency_recurrence_factor = ] frequency_recurrence_factor` Fattore di occorrenza utilizzato da *frequency_type*. *frequency_recurrence_factor* viene **int**, con un valore predefinito è NULL.  
   
- [  **@active_start_date =**] *active_start_date*  
- Data della prima esecuzione pianificata dell'agente snapshot, nel formato YYYYMMDD. *active_start_date* viene **int**, con un valore predefinito è NULL.  
+`[ @active_start_date = ] active_start_date` È la data della prima l'agente Snapshot pianificata, nel formato YYYYMMDD. *active_start_date* viene **int**, con un valore predefinito è NULL.  
   
- [  **@active_end_date =**] *active_end_date*  
- Data dell'ultima esecuzione pianificata dell'agente snapshot, nel formato YYYYMMDD. *active_end_date* viene **int**, con un valore predefinito è NULL.  
+`[ @active_end_date = ] active_end_date` La data di arresto dell'agente Snapshot viene pianificata, nel formato aaaammgg. *active_end_date* viene **int**, con un valore predefinito è NULL.  
   
- [  **@active_start_time_of_day =**] *active_start_time_of_day*  
- Ora del giorno della prima esecuzione pianificata dell'agente snapshot, nel formato HHMMSS. *active_start_time_of_day* viene **int**, con un valore predefinito è NULL.  
+`[ @active_start_time_of_day = ] active_start_time_of_day` È l'ora del giorno quando l'agente Snapshot è primo pianificata, nel formato HHMMSS. *active_start_time_of_day* viene **int**, con un valore predefinito è NULL.  
   
- [  **@active_end_time_of_day =**] *active_end_time_of_day*  
- Ora del giorno dell'ultima esecuzione pianificata dell'agente snapshot, nel formato HHMMSS. *active_end_time_of_day* viene **int**, con un valore predefinito è NULL.  
+`[ @active_end_time_of_day = ] active_end_time_of_day` L'ora del giorno quando si arresta l'agente Snapshot viene pianificata, nel formato HHMMSS. *active_end_time_of_day* viene **int**, con un valore predefinito è NULL.  
   
- [  **@snapshot_job_name =** ] **'***snapshot_agent_name***'**  
- Nome di un processo dell'agente snapshot esistente se viene utilizzato un processo esistente. *snapshot_agent_name* viene **nvarchar(100)** con un valore predefinito NULL.  
+`[ @snapshot_job_name = ] 'snapshot_agent_name'` È il nome di un processo dell'agente Snapshot esistente se viene utilizzato un processo esistente. *snapshot_agent_name* viene **nvarchar(100)** con un valore predefinito NULL.  
   
- [  **@publisher_security_mode =** ] *publisher_security_mode*  
- Modalità di sicurezza utilizzata dall'agente per la connessione al server di pubblicazione. *publisher_security_mode* viene **smallint**, con un valore predefinito è NULL. **0** specifica [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] l'autenticazione, e **1** specifica l'autenticazione di Windows. Un valore pari **0** deve essere specificato per non - [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] i server di pubblicazione.  
+`[ @publisher_security_mode = ] publisher_security_mode` La modalità di sicurezza utilizzata dall'agente quando ci si connette al server di pubblicazione. *publisher_security_mode* viene **smallint**, con un valore predefinito è NULL. **0** specifica [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] l'autenticazione, e **1** specifica l'autenticazione di Windows. Un valore pari **0** deve essere specificato per non - [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] i server di pubblicazione.  
   
 > [!IMPORTANT]  
 >  [!INCLUDE[ssNoteWinAuthentication](../../includes/ssnotewinauthentication-md.md)]  
   
- [  **@publisher_login =** ] **'***publisher_login***'**  
- Account di accesso utilizzato per la connessione al server di pubblicazione. *publisher_login* viene **sysname**, con un valore predefinito è NULL. *publisher_login* deve essere specificato quando *publisher_security_mode* viene **0**. Se *publisher_login* è NULL e *publisher_security_mode* viene **1**, quindi l'account Windows specificato nella *job_login* viene usato quando la connessione al server di pubblicazione.  
+`[ @publisher_login = ] 'publisher_login'` L'account di accesso utilizzata per la connessione al server di pubblicazione. *publisher_login* viene **sysname**, con un valore predefinito è NULL. *publisher_login* deve essere specificato quando *publisher_security_mode* viene **0**. Se *publisher_login* è NULL e *publisher_security_mode* viene **1**, quindi l'account Windows specificato nella *job_login* viene usato quando la connessione al server di pubblicazione.  
   
- [  **@publisher_password =** ] **'***publisher_password***'**  
- Password utilizzata per la connessione al server di pubblicazione. *publisher_password* viene **sysname**, con un valore predefinito è NULL.  
+`[ @publisher_password = ] 'publisher_password'` Password utilizzata durante la connessione al server di pubblicazione. *publisher_password* viene **sysname**, con un valore predefinito è NULL.  
   
 > [!IMPORTANT]  
 >  Non usare una password vuota. Usare una password complessa. Se possibile, richiedere agli utenti di immettere le credenziali di sicurezza in fase di esecuzione. Se è necessario archiviare le credenziali in un file script, è fondamentale proteggere il file per evitare accessi non autorizzati.  
   
- [ **@job_login** =] **'***job_login***'**  
- Account di accesso per l'account di Windows utilizzato per l'esecuzione dell'agente. *job_login* viene **nvarchar(257)**, con un valore predefinito è NULL. Questo account di Windows viene sempre utilizzato per le connessioni dell'agente al server di distribuzione. È necessario specificare questo parametro per la creazione di un nuovo processo per l'agente snapshot. Non può essere modificato per non - [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] server di pubblicazione.  
+`[ @job_login = ] 'job_login'` È l'account di accesso per l'account di Windows con cui viene eseguito l'agente. *job_login* viene **nvarchar(257)**, con un valore predefinito è NULL. Questo account di Windows viene sempre utilizzato per le connessioni dell'agente al server di distribuzione. È necessario specificare questo parametro per la creazione di un nuovo processo per l'agente snapshot. Non può essere modificato per non - [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] server di pubblicazione.  
   
- [  **@job_password =** ] **'***job_password***'**  
- Password dell'account di Windows utilizzato per l'esecuzione dell'agente. *job_password* viene **sysname**, con un valore predefinito è NULL. È necessario specificare questo parametro per la creazione di un nuovo processo per l'agente snapshot.  
+`[ @job_password = ] 'job_password'` È la password per l'account di Windows con cui viene eseguito l'agente. *job_password* viene **sysname**, con un valore predefinito è NULL. È necessario specificare questo parametro per la creazione di un nuovo processo per l'agente snapshot.  
   
 > [!IMPORTANT]  
 >  Se possibile, richiedere agli utenti di immettere le credenziali di sicurezza in fase di esecuzione. Se è necessario archiviare le credenziali in un file script, è fondamentale proteggere il file per evitare accessi non autorizzati.  
   
- [  **@publisher =** ] **'***publisher***'**  
- Specifica un non - [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] server di pubblicazione. *server di pubblicazione* viene **sysname**, con un valore predefinito è NULL.  
+`[ @publisher = ] 'publisher'` Specifica un non - [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] server di pubblicazione. *server di pubblicazione* viene **sysname**, con un valore predefinito è NULL.  
   
 > [!NOTE]  
 >  *server di pubblicazione* non deve essere usata durante la creazione di un agente Snapshot in un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] server di pubblicazione.  

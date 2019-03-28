@@ -14,12 +14,12 @@ ms.assetid: c7317eec-c0e9-479e-a4a7-83b6b6c58d59
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 3eced987f2f19e5379ab14ebc88eca37b8e19d8a
-ms.sourcegitcommit: 0d6e4cafbb5d746e7d00fdacf8f3ce16f3023306
+ms.openlocfilehash: 824ea1587955884f10a53579865d2029cc63eefc
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/11/2018
-ms.locfileid: "49084970"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58530893"
 ---
 # <a name="modify-or-rename-dml-triggers"></a>Modifica o ridenominazione di trigger DML
   In questo argomento viene illustrato come modificare o rinominare un trigger DML in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] utilizzando [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)].  
@@ -32,7 +32,7 @@ ms.locfileid: "49084970"
   
      [Indicazioni](#Recommendations)  
   
-     [Security](#Security)  
+     [Sicurezza](#Security)  
   
 -   **Per modificare o rinominare un trigger DML utilizzando:**  
   
@@ -64,7 +64,7 @@ ms.locfileid: "49084970"
   
 ###  <a name="Security"></a> Sicurezza  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> Autorizzazioni  
  Per modificare un trigger DML è necessaria l'autorizzazione ALTER sulla tabella o vista in cui è definito il trigger.  
   
 ##  <a name="SSMSProcedure"></a> Utilizzo di SQL Server Management Studio  
@@ -85,7 +85,7 @@ ms.locfileid: "49084970"
   
 2.  [Ricreare il trigger](../triggers/create-dml-triggers.md), specificando il nuovo nome.  
   
-##  <a name="TsqlProcedure"></a> Uso di Transact-SQL  
+##  <a name="TsqlProcedure"></a> Utilizzo di Transact-SQL  
   
 #### <a name="to-modify-a-trigger-using-alter-trigger"></a>Per modificare un trigger utilizzando ALTER TRIGGER  
   
@@ -95,7 +95,7 @@ ms.locfileid: "49084970"
   
 3.  Copiare e incollare gli esempi seguenti nella query. Eseguire il primo esempio per creare un trigger DML per la stampa di un messaggio definito dall'utente nel client quando un utente tenta di aggiungere o modificare i dati delle modifiche nella tabella `SalesPersonQuotaHistory` . Eseguire l'istruzione [ALTER TRIGGER](/sql/t-sql/statements/alter-trigger-transact-sql) per modificare il trigger in modo che venga attivato solo con le attività `INSERT` . Questo trigger risulta molto utile, in quanto ricorda all'utente che aggiorna o inserisce righe nella tabella di inviare una notifica al reparto `Compensation` .  
   
-```tsql  
+```sql  
 USE AdventureWorks2012;  
 GO  
 IF OBJECT_ID(N'Sales.bonus_reminder', N'TR') IS NOT NULL  
@@ -110,7 +110,7 @@ GO
   
 ```  
   
-```tsql  
+```sql  
 USE AdventureWorks2012;  
 GO  
 ALTER TRIGGER Sales.bonus_reminder  
@@ -127,9 +127,9 @@ GO
   
 2.  Dalla barra Standard fare clic su **Nuova query**.  
   
-3.  Copiare e incollare l'esempio seguente nella finestra delle query e fare clic su **Esegui**. In questo esempio vengono utilizzate le istruzioni [DROP TRIGGER](/sql/t-sql/statements/drop-trigger-transact-sql) e [ALTER TRIGGER](/sql/t-sql/statements/alter-trigger-transact-sql) per rinominare il trigger `Sales.bonus_reminder` in `Sales.bonus_reminder_2`.  
+3.  Copiare e incollare l'esempio seguente nella finestra Query, quindi fare clic su **Esegui**. In questo esempio vengono utilizzate le istruzioni [DROP TRIGGER](/sql/t-sql/statements/drop-trigger-transact-sql) e [ALTER TRIGGER](/sql/t-sql/statements/alter-trigger-transact-sql) per rinominare il trigger `Sales.bonus_reminder` in `Sales.bonus_reminder_2`.  
   
-```tsql  
+```sql  
 USE AdventureWorks2012;  
 GO  
 IF OBJECT_ID(N'Sales.bonus_reminder', N'TR') IS NOT NULL  

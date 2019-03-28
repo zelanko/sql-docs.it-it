@@ -30,15 +30,15 @@ helpviewer_keywords:
 - PROPERTY index
 - XML indexes [SQL Server], creating
 ms.assetid: f5c9209d-b3f3-4543-b30b-01365a5e7333
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 09aaf68c28e9f647f2f682de09e3f681bc3d739f
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 7004f2cae60ab69c6c4bf94ceee47d270579570b
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53368123"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58533973"
 ---
 # <a name="xml-indexes-sql-server"></a>Indici XML (SQL Server)
   È possibile creare indici XML sulle colonne con tipo di dati `xml`. Tutti i tag, i valori e i percorsi delle istanze XML presenti nella colonna vengono indicizzati, migliorando le prestazioni delle query. Per le applicazioni in uso l'utilizzo di un indice XML può risultare vantaggioso nelle situazioni seguenti:  
@@ -93,7 +93,7 @@ WHERE CatalogDescription.exist ('/PD:ProductDescription/@ProductModelID[.="19"]'
   
 -   Chiave primaria della tabella di base. La chiave primaria della tabella di base viene duplicata nell'indice XML primario per eseguire un join all'indietro con la tabella di base e il numero massimo di colonne nella chiave primaria della tabella di base è limitato a 15.  
   
- Le informazioni sul nodo vengono utilizzate per valutare e costruire i risultati XML di una query specificata. A scopo di ottimizzazione, il nome di tag e le informazioni sul tipo di nodo vengono codificati come valori integer e per la colonna Path viene utilizzata la stessa codifica. Inoltre, i percorsi vengono archiviati in ordine inverso per consentirne la corrispondenza quando è noto solo il relativo suffisso. Ad esempio:  
+ Le informazioni sul nodo vengono utilizzate per valutare e costruire i risultati XML di una query specificata. A scopo di ottimizzazione, il nome di tag e le informazioni sul tipo di nodo vengono codificati come valori integer e per la colonna Path viene utilizzata la stessa codifica. Inoltre, i percorsi vengono archiviati in ordine inverso per consentirne la corrispondenza quando è noto solo il relativo suffisso. Esempio:  
   
 -   `//ContactRecord/PhoneNumber` in cui sono noti solo gli ultimi due passaggi  
   

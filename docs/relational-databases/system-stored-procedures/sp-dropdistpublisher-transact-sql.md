@@ -16,12 +16,12 @@ ms.assetid: c0bdd3de-3be0-455c-898a-98d4660e7ce3
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 93124cff94bdf9df97cc1cbb0cf55c40414f1819
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: 8acc73e057ff8b91987406e74a28563fecfc9278
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54127561"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58526453"
 ---
 # <a name="spdropdistpublisher-transact-sql"></a>sp_dropdistpublisher (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -40,18 +40,15 @@ sp_dropdistpublisher [ @publisher = ] 'publisher'
 ```  
   
 ## <a name="arguments"></a>Argomenti  
- [  **@publisher=** ] **'**_editore_**'**  
- Nome del server di pubblicazione da eliminare. *server di pubblicazione* viene **sysname**, non prevede alcun valore predefinito.  
+`[ @publisher = ] 'publisher'` È il server di pubblicazione da eliminare. *server di pubblicazione* viene **sysname**, non prevede alcun valore predefinito.  
   
- [  **@no_checks=** ] *no_checks*  
- Specifica se **sp_dropdistpublisher** verifica che il server di pubblicazione sia stato disinstallato il server come server di distribuzione. *no_checks* viene **bit**, il valore predefinito è **0**.  
+`[ @no_checks = ] no_checks` Specifica se **sp_dropdistpublisher** verifica che il server di pubblicazione sia stato disinstallato il server come server di distribuzione. *no_checks* viene **bit**, il valore predefinito è **0**.  
   
  Se **0**, replica viene verificato che il server di pubblicazione remoto sia stato disinstallato il server locale come server di distribuzione. Se il server di pubblicazione è locale, durante la replica viene verificato che nel server locale non siano più presenti oggetti di pubblicazione o di distribuzione.  
   
  Se **1**, tutti gli oggetti di replica associati alla distribuzione del server di pubblicazione vengono eliminati anche se non è possibile raggiungere un server di pubblicazione remoto. Dopo questa operazione, il server di pubblicazione remoto è necessario disinstallare la replica tramite [sp_dropdistributor](../../relational-databases/system-stored-procedures/sp-dropdistributor-transact-sql.md) con **@ignore_distributor**  =  **1**.  
   
- [  **@ignore_distributor=** ] *ignore_distributor*  
- Specifica se gli oggetti di distribuzione vengono mantenuti nel server di distribuzione quando il server di pubblicazione viene rimosso. *ignore_distributor* viene **bit** i possibili valori sono i seguenti:  
+`[ @ignore_distributor = ] ignore_distributor` Specifica se gli oggetti di distribuzione vengono mantenuti nel server di distribuzione quando viene rimosso il server di pubblicazione. *ignore_distributor* viene **bit** i possibili valori sono i seguenti:  
   
  **1** = gli oggetti di distribuzione che appartengono al *server di pubblicazione* rimangono nel server di distribuzione.  
   

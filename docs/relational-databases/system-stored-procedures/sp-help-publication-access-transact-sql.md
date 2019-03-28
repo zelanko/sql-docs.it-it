@@ -16,12 +16,12 @@ ms.assetid: 9408fa13-54a0-4cb1-8fb0-845e5536ef50
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: d9c6a12ae648ab11fbdf28f04e6c29733fad8ce0
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: fb281923e5b6d48a23cb6aa3f60bf36bbe9764da
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52786369"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58531873"
 ---
 # <a name="sphelppublicationaccess-transact-sql"></a>sp_help_publication_access (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -41,17 +41,13 @@ sp_help_publication_access [ @publication = ] 'publication'
 ```  
   
 ## <a name="arguments"></a>Argomenti  
- [  **@publication=**] **'***pubblicazione***'**  
- Nome della pubblicazione a cui si desidera accedere. *pubblicazione* viene **sysname**, non prevede alcun valore predefinito.  
+`[ @publication = ] 'publication'` È il nome della pubblicazione a cui accedere. *pubblicazione* viene **sysname**, non prevede alcun valore predefinito.  
   
- [  **@return_granted=**] **'***return_granted***'**  
- ID di accesso. *return_granted* viene **bit**, con un valore predefinito è 1. Se **0** è specificato e [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] viene utilizzata l'autenticazione, vengono restituiti gli account di accesso disponibili visualizzati nel server di pubblicazione, ma non nel server di distribuzione. Se **0** specificato e viene utilizzata l'autenticazione di Windows, gli account di accesso negato non specificamente accedere al server di pubblicazione o un server di distribuzione vengono restituiti.  
+`[ @return_granted = ] 'return_granted'` ID di accesso. *return_granted* viene **bit**, con un valore predefinito è 1. Se **0** è specificato e [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] viene utilizzata l'autenticazione, vengono restituiti gli account di accesso disponibili visualizzati nel server di pubblicazione, ma non nel server di distribuzione. Se **0** specificato e viene utilizzata l'autenticazione di Windows, gli account di accesso negato non specificamente accedere al server di pubblicazione o un server di distribuzione vengono restituiti.  
   
- [  **@login=**] **'***account di accesso***'**  
- ID dell'account di accesso di sicurezza standard. *account di accesso* viene **sysname**, il valore predefinito è **%**.  
+`[ @login = ] 'login'` ID di accesso standard di sicurezza. *account di accesso* viene **sysname**, il valore predefinito è **%**.  
   
- [  **@initial_list =**] *initial_list*  
- Specifica se devono essere restituiti tutti i membri con accesso alla pubblicazione oppure solo i membri che avevano accesso prima che venissero aggiunti nuovi membri all'elenco. *initial_list* è di tipo bit e il valore predefinito **0**.  
+`[ @initial_list = ] initial_list` Specifica se restituire tutti i membri con accesso alla pubblicazione oppure solo i membri che avevano accesso prima che venissero aggiunti nuovi membri all'elenco. *initial_list* è di tipo bit e il valore predefinito **0**.  
   
  **1** restituisce informazioni per tutti i membri del **sysadmin** ruolo predefinito del server con un account di accesso validi nel server di distribuzione esistenti dal momento della creazione della pubblicazione, nonché l'account di accesso corrente.  
   
@@ -63,7 +59,7 @@ sp_help_publication_access [ @publication = ] 'publication'
 |-----------------|---------------|-----------------|  
 |**LoginName**|**nvarchar(256)**|Nome effettivo dell'account di accesso.|  
 |**isntname**|**int**|**0** = account di accesso non è un utente di Windows.<br /><br /> **1** = account di accesso è un utente di Windows.|  
-|**isntgroup**|**int**|**0** = account di accesso non è un gruppo di Windows.<br /><br /> **1** = account di accesso è un gruppo di Windows.|  
+|**Isntgroup**|**int**|**0** = account di accesso non è un gruppo di Windows.<br /><br /> **1** = account di accesso è un gruppo di Windows.|  
   
 ## <a name="return-code-values"></a>Valori restituiti  
  **0** (esito positivo) o **1** (errore)  

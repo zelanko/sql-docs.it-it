@@ -18,12 +18,12 @@ ms.assetid: faaa3e40-1c95-43c2-9fdc-c61a1d3cc0c3
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 23b0ba70ee6141ab8453aa3e6949ceff2d537b2c
-ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
+ms.openlocfilehash: 8f98f62b10b38d726feec2bd427bc7d1fc6dcea9
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/18/2018
-ms.locfileid: "53591185"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58534503"
 ---
 # <a name="sphelprotect-transact-sql"></a>sp_helprotect (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -48,19 +48,15 @@ sp_helprotect [ [ @name = ] 'object_statement' ]
 ```  
   
 ## <a name="arguments"></a>Argomenti  
- [  **@name =** ] **'**_object_statement_**'**  
- Nome dell'oggetto nel database corrente, o di un'istruzione, a cui sono associate le autorizzazioni di cui si desidera ottenere informazioni. *object_statement* viene **nvarchar(776)**, valore predefinito è NULL, che restituisce tutte le autorizzazioni per oggetti e istruzione. Se il valore è un oggetto, quale una tabella, una vista, una stored procedure o una stored procedure estesa, deve essere un oggetto valido nel database corrente. Il nome dell'oggetto può includere un qualificatore del proprietario nel formato _owner_**.** _oggetto_.  
+`[ @name = ] 'object_statement'` È il nome dell'oggetto nel database corrente, o un'istruzione, che abbia le autorizzazioni per report. *object_statement* viene **nvarchar(776)**, valore predefinito è NULL, che restituisce tutte le autorizzazioni per oggetti e istruzione. Se il valore è un oggetto, quale una tabella, una vista, una stored procedure o una stored procedure estesa, deve essere un oggetto valido nel database corrente. Il nome dell'oggetto può includere un qualificatore del proprietario nel formato _owner_**.** _oggetto_.  
   
  Se *object_statement* è un'istruzione, può essere un'istruzione CREATE.  
   
- [  **@username =** ] **'**_account_protezione_**'**  
- Nome dell'entità per cui vengono restituite le autorizzazioni. *account_protezione* viene **sysname**, valore predefinito è NULL, che restituisce tutte le entità nel database corrente. *account_protezione* deve esistere nel database corrente.  
+`[ @username = ] 'security_account'` È il nome dell'entità per il quale vengono restituite autorizzazioni. *account_protezione* viene **sysname**, valore predefinito è NULL, che restituisce tutte le entità nel database corrente. *account_protezione* deve esistere nel database corrente.  
   
- [  **@grantorname =** ] **'**_grantor_**'**  
- Nome dell'entità mediante la quale vengono concesse le autorizzazioni. *utente che concede* viene **sysname**, valore predefinito è NULL, che restituisce tutte le informazioni relative alle autorizzazioni concesse da qualsiasi entità nel database.  
+`[ @grantorname = ] 'grantor'` È il nome dell'entità che ha le autorizzazioni concesse. *utente che concede* viene **sysname**, valore predefinito è NULL, che restituisce tutte le informazioni relative alle autorizzazioni concesse da qualsiasi entità nel database.  
   
- [  **@permissionarea =** ] **'**_tipo_**'**  
- È una stringa di caratteri che indica se visualizzare autorizzazioni per oggetti (stringa di caratteri **o**), le autorizzazioni di istruzione (stringa di caratteri **s**), o entrambi (**os**). *tipo di* viene **varchar (10)**, il valore predefinito è **os**. *tipo di* può essere qualsiasi combinazione dei **o** e **s**, con o senza virgole o spazi tra **o** e **s**.  
+`[ @permissionarea = ] 'type'` È una stringa di caratteri che indica se visualizzare autorizzazioni per oggetti (stringa di caratteri **o**), le autorizzazioni di istruzione (stringa di caratteri **s**), o entrambi (**os**). *tipo di* viene **varchar (10)**, il valore predefinito è **os**. *tipo di* può essere qualsiasi combinazione dei **o** e **s**, con o senza virgole o spazi tra **o** e **s**.  
   
 ## <a name="return-code-values"></a>Valori restituiti  
  0 (esito positivo) o 1 (esito negativo)  
@@ -108,7 +104,7 @@ EXEC sp_helprotect @grantorname = 'dbo';
 EXEC sp_helprotect 'titles';  
 ```  
   
-### <a name="b-listing-the-permissions-for-a-user"></a>b. Visualizzazione dell'elenco delle autorizzazioni per un utente  
+### <a name="b-listing-the-permissions-for-a-user"></a>B. Visualizzazione dell'elenco delle autorizzazioni per un utente  
  Nell'esempio seguente vengono elencate tutte le autorizzazioni disponibili per l'utente `Judy` nel database corrente.  
   
 ```  

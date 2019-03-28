@@ -19,12 +19,12 @@ ms.assetid: b2b52258-642b-462e-8e0f-18c09d2eccf4
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: b4f4e9c799e7c2554807bf43083dece0f1899896
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 3fa03aae36fd7de30f8efd88742b1e3a73907a0f
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48194301"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58530773"
 ---
 # <a name="create-dml-triggers"></a>Creare trigger DML.
   Questo argomento illustra come creare un trigger DML [!INCLUDE[tsql](../../includes/tsql-md.md)] usando [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] e l'istruzione [!INCLUDE[tsql](../../includes/tsql-md.md)] CREATE TRIGGER.  
@@ -34,7 +34,7 @@ ms.locfileid: "48194301"
 ### <a name="limitations-and-restrictions"></a>Limitazioni e restrizioni  
  Per un elenco di limitazioni e restrizioni associate alla creazione di trigger DML, vedere [CREATE TRIGGER &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-trigger-transact-sql).  
   
-###  <a name="Permissions"></a> Permissions  
+###  <a name="Permissions"></a> Autorizzazioni  
  È necessario disporre dell'autorizzazione ALTER per la tabella o la vista in cui si desidera creare il trigger.  
   
 ##  <a name="Procedures"></a> Procedura: Creazione di un trigger DML  
@@ -56,11 +56,11 @@ ms.locfileid: "48194301"
   
 5.  Nella finestra di dialogo **Imposta valori per parametri modello** immettere i seguenti valori per i parametri indicati.  
   
-    |Parametro|valore|  
+    |Parametro|Value|  
     |---------------|-----------|  
     |Autore|*Nome dell'utente*|  
     |Data di creazione|*Data corrente*|  
-    |Description|Prima di consentire un nuovo ordine di acquisto con il fornitore da inserire, viene controllata la posizione finanziaria del fornitore.|  
+    |Descrizione|Prima di consentire un nuovo ordine di acquisto con il fornitore da inserire, viene controllata la posizione finanziaria del fornitore.|  
     |Schema_Name|Purchasing|  
     |Trigger_Name|NewPODetail2|  
     |Table_Name|PurchaseOrderDetail|  
@@ -70,7 +70,7 @@ ms.locfileid: "48194301"
   
 7.  Nell' **Editor di query**sostituire il commento `-- Insert statements for trigger here` con l'istruzione seguente:  
   
-    ```tsql  
+    ```sql  
     IF @@ROWCOUNT = 1  
     BEGIN  
        UPDATE Purchasing.PurchaseOrderHeader  
@@ -100,13 +100,13 @@ ms.locfileid: "48194301"
   
  [Prima di iniziare](#Top)  
   
-###  <a name="TsqlProcedure"></a> Uso di Transact-SQL  
+###  <a name="TsqlProcedure"></a> Utilizzo di Transact-SQL  
   
 1.  In **Esplora oggetti**connettersi a un'istanza del [!INCLUDE[ssDE](../../../includes/ssde-md.md)] , quindi espanderla.  
   
 2.  Nel menu **File** , fare clic su **Nuova query**.  
   
-3.  Copiare e incollare l'esempio seguente nella finestra delle query e fare clic su **Esegui**. In questo esempio vengono creati gli stessi trigger DML archiviati indicati in precedenza.  
+3.  Copiare e incollare l'esempio seguente nella finestra Query, quindi fare clic su **Esegui**. In questo esempio vengono creati gli stessi trigger DML archiviati indicati in precedenza.  
   
     ```  
     -- Trigger valid for multirow and single row inserts  

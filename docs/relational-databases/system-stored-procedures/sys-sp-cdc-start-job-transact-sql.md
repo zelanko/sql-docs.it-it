@@ -1,5 +1,5 @@
 ---
-title: Sys. sp_cdc_start_job (Transact-SQL) | Microsoft Docs
+title: sys.sp_cdc_start_job (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -20,12 +20,12 @@ ms.assetid: cf443a67-7705-4799-9f39-0e3a6a8a0708
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 842f7a9f677312501a92a42301017eedaee0f5d4
-ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
+ms.openlocfilehash: cf77af877a0598481cdbda2ac9938b6787aa1ba2
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/18/2018
-ms.locfileid: "53589145"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58533464"
 ---
 # <a name="sysspcdcstartjob-transact-sql"></a>sys.sp_cdc_start_job (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -42,8 +42,7 @@ sys.sp_cdc_start_job [ [ @job_type = ] 'job_type' ]
 ```  
   
 ## <a name="arguments"></a>Argomenti  
- [[  **@job_type=** ] **'**_job_type_**'** ]  
- Tipo di processo da aggiungere. *job_type* viene **nvarchar(20)** con valore predefinito è **acquisire**. Gli input validi sono **Acquisisci** e **pulizia**.  
+`[ [ @job_type = ] 'job_type' ]` Tipo di processo da aggiungere. *job_type* viene **nvarchar(20)** con valore predefinito è **acquisire**. Gli input validi sono **Acquisisci** e **pulizia**.  
   
 ## <a name="return-code-values"></a>Valori restituiti  
  **0** (esito positivo) o **1** (errore)  
@@ -69,7 +68,7 @@ EXEC sys.sp_cdc_start_job;
 GO  
 ```  
   
-### <a name="b-starting-a-cleanup-job"></a>b. Avvio di un processo di pulizia  
+### <a name="b-starting-a-cleanup-job"></a>B. Avvio di un processo di pulizia  
  Nell'esempio seguente viene avviato un processo di pulizia per il database `AdventureWorks2012`.  
   
 ```  
@@ -79,7 +78,7 @@ EXEC sys.sp_cdc_start_job @job_type = N'cleanup';
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [dbo. cdc_jobs &#40;Transact-SQL&#41;](../../relational-databases/system-tables/dbo-cdc-jobs-transact-sql.md)   
- [sp_cdc_stop_job &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-stop-job-transact-sql.md)  
+ [dbo.cdc_jobs &#40;Transact-SQL&#41;](../../relational-databases/system-tables/dbo-cdc-jobs-transact-sql.md)   
+ [sys.sp_cdc_stop_job &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-stop-job-transact-sql.md)  
   
   

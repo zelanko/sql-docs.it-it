@@ -18,12 +18,12 @@ ms.assetid: b8c30191-f532-49cd-83f3-c271f63ce572
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 7e7305e73d1f2f35d5cb4666e68114c9ee8f58e7
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: 41c84c97027c8bfae82d3ac457c454f6a4d497e6
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54126211"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58533363"
 ---
 # <a name="spdbfixedrolepermission-transact-sql"></a>sp_dbfixedrolepermission (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -43,8 +43,7 @@ sp_dbfixedrolepermission [ [ @rolename = ] 'role' ]
 ```  
   
 ## <a name="arguments"></a>Argomenti  
- [  **@rolename =** ] **'**_ruolo_**'**  
- Nome di un ruolo predefinito del database di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] valido. *ruolo* viene **sysname**, con un valore predefinito è NULL. Se *ruolo* non viene specificato, vengono visualizzate le autorizzazioni per tutti i ruoli predefiniti del database.  
+`[ @rolename = ] 'role'` È il nome di un valore valido [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ruolo predefinito del database. *ruolo* viene **sysname**, con un valore predefinito è NULL. Se *ruolo* non viene specificato, vengono visualizzate le autorizzazioni per tutti i ruoli predefiniti del database.  
   
 ## <a name="return-code-values"></a>Valori restituiti  
  0 (esito positivo) o 1 (esito negativo)  

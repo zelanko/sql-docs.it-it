@@ -18,12 +18,12 @@ ms.assetid: cf0901c0-5f90-42d4-9d5b-8772c904062d
 author: VanMSFT
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 78cf616c0b09d1404f0c7e7fe5f3b382f08d59a8
-ms.sourcegitcommit: fc6a6eedcea2d98c93e33d39c1cecd99fbc9a155
+ms.openlocfilehash: c18aa6fefb23bb3d388069773aa1633c29859e90
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49168812"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58533533"
 ---
 # <a name="spsetapprole-transact-sql"></a>sp_setapprole (Transact-SQL)
 
@@ -46,11 +46,9 @@ sp_setapprole [ @rolename = ] 'role',
 
 ## <a name="arguments"></a>Argomenti
 
- [  **@rolename =** ] **'***ruolo***'**  
- Nome del ruolo applicazione definito nel database corrente. *ruolo* viene **sysname**, non prevede alcun valore predefinito. *ruolo* deve esistere nel database corrente.  
+`[ @rolename = ] 'role'` È il nome del ruolo applicazione definito nel database corrente. *ruolo* viene **sysname**, non prevede alcun valore predefinito. *ruolo* deve esistere nel database corrente.  
   
- [  **@password =** ] **{crittografare N'***password***'}**  
- Password richiesta per attivare il ruolo applicazione. *la password* viene **sysname**, non prevede alcun valore predefinito. *la password* è possibile offuscare usando ODBC **crittografare** (funzione). Quando si usa la **crittografare** funzione, la password deve essere convertita in una stringa Unicode inserendo **N** prima della virgoletta.  
+`[ @password = ] { encrypt N'password' }` È la password necessaria per attivare il ruolo applicazione. *la password* viene **sysname**, non prevede alcun valore predefinito. *la password* è possibile offuscare usando ODBC **crittografare** (funzione). Quando si usa la **crittografare** funzione, la password deve essere convertita in una stringa Unicode inserendo **N** prima della virgoletta.  
   
  L'opzione crittografia non è supportato per le connessioni che usano **SqlClient**.  
   
@@ -63,11 +61,9 @@ sp_setapprole [ @rolename = ] 'role',
  **@encrypt= 'odbc'**  
  Specifica che ODBC eseguirà l'offuscamento della password usando ODBC **crittografare** funzione prima di inviare la password per il [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]. È possibile specificare questa opzione solo se si utilizza un client ODBC o il provider OLE DB per SQL Server.  
   
- [  **@fCreateCookie =** ] **true** | **false**  
- Specifica se è necessario creare un cookie. **true** viene implicitamente convertito in 1. **false** viene implicitamente convertito in 0.  
+`[ @fCreateCookie = ] true | false` Specifica se un cookie deve essere creato. **true** viene implicitamente convertito in 1. **false** viene implicitamente convertito in 0.  
   
- [  **@cookie =** ]  **@cookie OUTPUT**  
- Specifica un parametro di output per il cookie. Il cookie viene generato solo se il valore di **@fCreateCookie** viene **true**. **varbinary(8000)**  
+`[ @cookie = ] @cookie OUTPUT` Specifica un parametro di output per il cookie. Il cookie viene generato solo se il valore di **@fCreateCookie** viene **true**. **varbinary(8000)**  
   
 > [!NOTE]  
 > Il parametro **OUTPUT** del cookie per **sp_setapprole** è attualmente documentato come **varbinary(8000)** che rappresenta la lunghezza massima corretta. Tuttavia, l'implementazione corrente restituisce **varbinary(50)**. Le applicazioni devono continuare a riservare **varbinary(8000** in modo che l'applicazione continua a funzionare correttamente se il cookie di restituisce le dimensioni aumentano in una versione futura.

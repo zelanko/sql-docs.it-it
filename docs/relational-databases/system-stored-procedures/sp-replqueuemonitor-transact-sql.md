@@ -16,12 +16,12 @@ ms.assetid: 6909a3f1-43a2-4df5-a6a5-9e6f347ac841
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: e8eb21085625c7f2f0071c18da80501774088fdc
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 3f174940b27adbaba75efd6660f09140c403bf8b
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52789373"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58529883"
 ---
 # <a name="spreplqueuemonitor-transact-sql"></a>sp_replqueuemonitor (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -42,17 +42,13 @@ sp_replqueuemonitor [ @publisher = ] 'publisher'
 ```  
   
 ## <a name="arguments"></a>Argomenti  
- [ **@publisher** =] **'***publisher***'**  
- Nome del server di pubblicazione. *server di pubblicazione* viene **sysname**, con un valore predefinito è NULL. Il server deve essere configurato per la pubblicazione. Il valore NULL indica tutti i server di pubblicazione.  
+`[ @publisher = ] 'publisher'` È il nome del server di pubblicazione. *server di pubblicazione* viene **sysname**, con un valore predefinito è NULL. Il server deve essere configurato per la pubblicazione. Il valore NULL indica tutti i server di pubblicazione.  
   
- [ **@publisherdb** =] **'***publisher_db***'** ]  
- Nome del database di pubblicazione. *publisher_db* viene **sysname**, con un valore predefinito è NULL. che indica tutti i database di pubblicazione.  
+`[ @publisherdb = ] 'publisher_db' ]` È il nome del database di pubblicazione. *publisher_db* viene **sysname**, con un valore predefinito è NULL. che indica tutti i database di pubblicazione.  
   
- [ **@publication** =] **'***pubblicazione***'** ]  
- Nome della pubblicazione. *pubblicazione*viene **sysname**, con un valore predefinito è NULL. che indica tutte le pubblicazioni.  
+`[ @publication = ] 'publication' ]` È il nome della pubblicazione. *pubblicazione*viene **sysname**, con un valore predefinito è NULL. che indica tutte le pubblicazioni.  
   
- [ **@tranid** =] **'***tranid***'** ]  
- ID transazione. *tranid*viene **sysname**, con un valore predefinito è NULL. che indica tutte le transazioni.  
+`[ @tranid = ] 'tranid' ]` ID della transazione. *tranid*viene **sysname**, con un valore predefinito è NULL. che indica tutte le transazioni.  
   
  [**@queuetype=** ] **'***queuetype***'** ]  
  Tipo di coda in cui vengono archiviate le transazioni. *queuetype* viene **tinyint** con valore predefinito è **0**, i possibili valori sono i seguenti.  

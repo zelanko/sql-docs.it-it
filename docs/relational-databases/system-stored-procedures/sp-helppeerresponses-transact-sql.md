@@ -16,12 +16,12 @@ ms.assetid: e55789d1-43fb-4a37-9e5e-60ccef122a5d
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: a3cce9577f609a0216b5d96e82eeacbdc295b26d
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 4e29ebcc2ecb1811a9465c63464219cb93f427a5
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52802203"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58534413"
 ---
 # <a name="sphelppeerresponses-transact-sql"></a>sp_helppeerresponses (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -38,8 +38,7 @@ sp_helppeerresponses [ @request_id = ] request_id
 ```  
   
 ## <a name="arguments"></a>Argomenti  
- [ **@request_id**=] *request_id*  
- ID di una richiesta di stato specifica. *request_id* viene **int**, non prevede alcun valore predefinito.  
+`[ @request_id = ] request_id` È l'ID di una richiesta di stato specifici. *request_id* viene **int**, non prevede alcun valore predefinito.  
   
 ## <a name="result-sets"></a>Set di risultati  
   

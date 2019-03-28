@@ -16,12 +16,12 @@ ms.assetid: 9333da96-3a1c-4adb-9a74-5dac9ce596df
 author: VanMSFT
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: bfe5d9f7bc5c95055af06b0582f2ddcf88ae7cdf
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: 6fa6606d7daf4a1b61ff986d1d7c5675b5ae5f1f
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54125711"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58531813"
 ---
 # <a name="spchangereplicationserverpasswords-transact-sql"></a>sp_changereplicationserverpasswords (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -41,28 +41,24 @@ sp_changereplicationserverpasswords [ @login_type = ] login_type
 ```  
   
 ## <a name="arguments"></a>Argomenti  
- [ **@login_type** =] *login_type*  
- Tipo di autenticazione per le credenziali specificate. *LOGIN_TYPE* viene **tinyint**, non prevede alcun valore predefinito.  
+`[ @login_type = ] login_type` È il tipo di autenticazione per le credenziali specificate. *LOGIN_TYPE* viene **tinyint**, non prevede alcun valore predefinito.  
   
  **1** = autenticazione integrata di Windows  
   
  **0**  =  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] autenticazione  
   
- [ **@login** =] **'**_account di accesso_**'**  
- Nome dell'account di Windows o dell'account di accesso di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] da modificare. *account di accesso* viene **nvarchar(257)**, non prevede alcun valore predefinito  
+`[ @login = ] 'login'` È il nome dell'account di Windows o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] account di accesso da modificare. *account di accesso* viene **nvarchar(257)**, non prevede alcun valore predefinito  
   
- [ **@password** =] **'**_password_**'**  
- Nuova password da archiviare per l'oggetto specificato *account di accesso*. *la password* viene **sysname**, non prevede alcun valore predefinito.  
+`[ @password = ] 'password'` Nuova password da archiviare per l'oggetto specificato *account di accesso*. *la password* viene **sysname**, non prevede alcun valore predefinito.  
   
 > [!NOTE]  
 >  Dopo aver modificato una password per la replica è necessario arrestare e riavviare ogni agente che utilizza la password prima che la modifica abbia effetto per tale agente.  
   
- [ **@server** =] **'**_server_**'**  
- Connessione server per cui viene modificata la password archiviata. *server* viene **sysname**, i possibili valori sono i seguenti:  
+`[ @server = ] 'server'` È la connessione al server per la quale viene modificata la password archiviata. *server* viene **sysname**, i possibili valori sono i seguenti:  
   
 |Value|Descrizione|  
 |-----------|-----------------|  
-|**server di distribuzione**|Tutte le connessioni di agenti al server di distribuzione.|  
+|**distributor**|Tutte le connessioni di agenti al server di distribuzione.|  
 |**publisher**|Tutte le connessioni di agenti al server di pubblicazione.|  
 |**subscriber**|Tutte le connessioni di agenti al Sottoscrittore.|  
 |**%** (impostazione predefinita)|Tutte le connessioni di agenti a tutti i server di una topologia di replica.|  

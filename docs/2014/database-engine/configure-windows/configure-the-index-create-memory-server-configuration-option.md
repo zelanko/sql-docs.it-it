@@ -12,12 +12,12 @@ ms.assetid: 3d722d9b-bada-4bf5-a9d7-bfc556bb4915
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 1274cf9a9e747412cc4fb212eee18a9d5d4a8f40
-ms.sourcegitcommit: 04dd0620202287869b23cc2fde998a18d3200c66
+ms.openlocfilehash: 280d4edef062429304d5c6e1d6c65ea63fac2eee
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "52639309"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58534083"
 ---
 # <a name="configure-the-index-create-memory-server-configuration-option"></a>Configurare l'opzione di configurazione del server index create memory
   In questo argomento si illustra come configurare l'opzione di configurazione del server **index create memory** in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] usando [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)]. Con l'opzione **index create memory** è possibile controllare la quantità massima di memoria allocata inizialmente per la creazione di indici. Il valore predefinito per questa opzione è 0 (configurazione automatica). Se in un secondo momento risulta necessaria una quantità maggiore di memoria per la creazione degli indici e la memoria è disponibile, verrà usata dal server, superando quindi le impostazioni relative a questa opzione. Se non è disponibile ulteriore memoria, la creazione degli indici continuerà, usando la memoria già allocata.  
@@ -81,9 +81,9 @@ ms.locfileid: "52639309"
   
 2.  Dalla barra Standard fare clic su **Nuova query**.  
   
-3.  Copiare e incollare l'esempio seguente nella finestra delle query e fare clic su **Esegui**. Questo esempio illustra come usare [sp_configure](/sql/relational-databases/system-stored-procedures/sp-configure-transact-sql) per impostare il valore dell'opzione `index create memory` su `4096`.  
+3.  Copiare e incollare l'esempio seguente nella finestra Query, quindi fare clic su **Esegui**. Questo esempio illustra come usare [sp_configure](/sql/relational-databases/system-stored-procedures/sp-configure-transact-sql) per impostare il valore dell'opzione `index create memory` su `4096`.  
   
-```tsql  
+```sql  
 USE AdventureWorks2012 ;  
 EXEC sp_configure 'show advanced options', 1;  
 GO  

@@ -1,5 +1,5 @@
 ---
-title: 'Esempio: specifica della direttiva CDATA | Microsoft Docs'
+title: 'Esempio: Specifica della direttiva CDATA | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -9,17 +9,17 @@ ms.topic: conceptual
 helpviewer_keywords:
 - CDATA directive
 ms.assetid: 949071e6-787f-480d-bb86-3ac16a027af1
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 050cf86e0f4a73aadb62b63ecccf46d69b78535f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: fa5cec5be4153547d60e1592c21f00470ab1a5fe
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48094881"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58531663"
 ---
-# <a name="example-specifying-the-cdata-directive"></a>Esempio: specifica della direttiva CDATA
+# <a name="example-specifying-the-cdata-directive"></a>Esempio: Specifica della direttiva CDATA
   Se si specifica la direttiva **CDATA**, i dati contenuti non vengono codificati come entità, ma vengono inseriti nella sezione CDATA. Gli attributi **CDATA** devono essere privi di nome.  
   
  La query seguente riporta la descrizione di riepilogo del modello di prodotto in una sezione CDATA.  
@@ -38,7 +38,7 @@ WHERE   ProductModelID=19
 FOR XML EXPLICIT  
 ```  
   
- Risultato:  
+ Questo è il risultato:  
   
 ```  
 <ProductModel ProdModelID="19" Name="Mountain-100">  

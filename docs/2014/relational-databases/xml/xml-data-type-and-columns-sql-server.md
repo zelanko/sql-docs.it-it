@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: xml
 ms.topic: conceptual
 ms.assetid: 00db8f21-7d4b-4347-ae43-3a7c314d2fa1
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
-ms.openlocfilehash: df5d06478e5e48de00efcbdb7b872a7a1907eec0
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 755685601bb97f7e0b8980024df07e27967f3cd3
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53370003"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58530823"
 ---
 # <a name="xml-data-type-and-columns-sql-server"></a>Colonne e tipo di dati XML (SQL Server)
   In questo argomento illustra i vantaggi e le limitazioni dei `xml` tipo di dati [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]e spiega come scegliere la modalità di archiviazione dei dati XML.  
@@ -113,12 +113,12 @@ ms.locfileid: "53370003"
   
  L'archiviazione XML nativa è utile quando si utilizzano documenti XML con strutture diverse oppure conformi a schemi diversi o complessi, di cui è difficile eseguire il mapping a strutture relazionali.  
   
-#### <a name="example-modeling-xml-data-using-the-xml-data-type"></a>Esempio: Modellazione dati XML tramite il tipo di dati xml  
+#### <a name="example-modeling-xml-data-using-the-xml-data-type"></a>Esempio: modellazione di dati XML tramite il tipo di dati XML  
  Si consideri un manuale di prodotto in formato XML, composto da un capitolo per ogni argomento e con più sezioni in ogni capitolo. Una sezione può contenere sottosezioni e, di conseguenza, l'elemento \<sezione> è ricorsivo. I manuali dei prodotti includono elevati volumi di contenuto eterogeneo, ad esempio diagrammi e materiale tecnico, e i dati sono semistrutturati. Gli utenti possono avere l'esigenza di ricercare gli argomenti di interesse in un contesto specifico, ad esempio la sezione dedicata agli indici cluster nel capitolo dedicato all'indicizzazione, e di eseguire query su quantità tecniche.  
   
  Una colonna con tipo di dati `xml` costituisce un modello di archiviazione particolarmente appropriato per i documenti XML, perché mantiene il contenuto InfoSet dei dati XML. È possibile indicizzare la colonna XML per migliorare le prestazioni delle query.  
   
-#### <a name="example-retaining-exact-copies-of-xml-data"></a>Esempio: Conservazione di copie esatte dei dati XML  
+#### <a name="example-retaining-exact-copies-of-xml-data"></a>Esempio: conservazione di copie esatte dei dati XML  
  Si supponga che, per legge, sia necessario conservare copie testuali esatte dei propri documenti XML, quali documenti firmati, documenti legali oppure ordini di transazioni azionarie. È possibile archiviare i documenti in una colonna con tipo di dati `[n]varchar(max)`.  
   
  Per le query, in fase di esecuzione è necessario convertire i dati nel tipo di dati `xml` ed eseguire query XQuery su di essi. La conversione in fase di esecuzione può essere tuttavia molto costosa, soprattutto se il documento è di grandi dimensioni. Se è necessario eseguire query di frequente, è possibile archiviare una seconda copia dei documenti in una colonna con tipo di dati `xml` e indicizzarla, mentre per restituire le copie esatte dei documenti si utilizza la colonna con tipo di dati `[n]varchar(max)`.  
@@ -142,7 +142,7 @@ ms.locfileid: "53370003"
   
  Questa tecnica viene utilizzata ad esempio per i dati relazionali esposti come XML per lo scambio di dati e i servizi Web e per i dati XML con schema fisso. Per ulteriori informazioni vedere [MSDN Online Library](https://go.microsoft.com/fwlink/?linkid=31174).  
   
-#### <a name="example-modeling-data-using-an-annotated-xml-schema-axsd"></a>Esempio: Modellazione dei dati usando un XML Schema con annotazioni (AXSD)  
+#### <a name="example-modeling-data-using-an-annotated-xml-schema-axsd"></a>Esempio: modellazione di dati tramite un elemento XML Schema con annotazioni (AXSD)  
  Si supponga ad esempio di avere a disposizione dati relazionali relativi a clienti, ordini e voci, che si desidera gestire come XML. Definire una visualizzazione XML applicando uno schema AXSD ai dati relazionali. La visualizzazione XML consente di eseguire il caricamento bulk dei dati XML nelle tabelle, nonché di aggiornare ed eseguire query sui dati relazionali. Questo modello è utile quando è necessario scambiare dati contenenti markup XML con altre applicazioni, senza interrompere le applicazioni SQL.  
   
 ### <a name="hybrid-model"></a>Modello ibrido  

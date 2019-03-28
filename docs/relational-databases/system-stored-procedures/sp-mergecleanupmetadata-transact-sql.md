@@ -16,12 +16,12 @@ ms.assetid: 892f8628-4cbe-4cc3-b959-ed45ffc24064
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: d3ae8edeff1792cf3a1c70d4e80dea638402e30d
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: 6924ef36c57036cf6cad6e25a6dc5cebfa5fa5f2
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53210960"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58529003"
 ---
 # <a name="spmergecleanupmetadata-transact-sql"></a>sp_mergecleanupmetadata (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -39,11 +39,9 @@ sp_mergecleanupmetadata [ [ @publication = ] 'publication' ]
 ```  
   
 ## <a name="arguments"></a>Argomenti  
- [  **@publication =** ] **'***pubblicazione***'**  
- Nome della pubblicazione. *pubblicazione* viene **sysname**, il valore predefinito è **%**, che rimuove i metadati per tutte le pubblicazioni. Se viene specificata in modo esplicito, la pubblicazione deve essere esistente.  
+`[ @publication = ] 'publication'` È il nome della pubblicazione. *pubblicazione* viene **sysname**, il valore predefinito è **%**, che rimuove i metadati per tutte le pubblicazioni. Se viene specificata in modo esplicito, la pubblicazione deve essere esistente.  
   
- [  **@reinitialize_subscriber =** ] **'***sottoscrittore***'**  
- Specifica se reinizializzare il Sottoscrittore. *Sottoscrittore* viene **nvarchar(5**, può essere **TRUE** oppure **FALSE**, il valore predefinito è **TRUE**. Se **TRUE**, le sottoscrizioni vengono contrassegnate per la reinizializzazione. Se **FALSE**, le sottoscrizioni non sono contrassegnate per la reinizializzazione.  
+`[ @reinitialize_subscriber = ] 'subscriber'` Specifica se reinizializzare il sottoscrittore. *Sottoscrittore* viene **nvarchar(5**, può essere **TRUE** oppure **FALSE**, il valore predefinito è **TRUE**. Se **TRUE**, le sottoscrizioni vengono contrassegnate per la reinizializzazione. Se **FALSE**, le sottoscrizioni non sono contrassegnate per la reinizializzazione.  
   
 ## <a name="return-code-values"></a>Valori restituiti  
  **0** (esito positivo) o **1** (errore)  

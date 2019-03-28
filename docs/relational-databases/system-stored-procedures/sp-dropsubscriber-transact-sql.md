@@ -16,12 +16,12 @@ ms.assetid: 8c6eb282-81b5-4ec4-b691-aa061d9267dc
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: dc236b4b022a80c7c1cbd4aa4239200b17840db6
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: c6b9190a22d89e98a683361ba9460d2fd68a9dde
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54126881"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58534403"
 ---
 # <a name="spdropsubscriber-transact-sql"></a>sp_dropsubscriber (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -43,14 +43,11 @@ sp_dropsubscriber [ @subscriber= ] 'subscriber'
 ```  
   
 ## <a name="arguments"></a>Argomenti  
- [  **@subscriber=** ] **'**_sottoscrittore_**'**  
- Nome del Sottoscrittore da eliminare. *Sottoscrittore* viene **sysname**, non prevede alcun valore predefinito.  
+`[ @subscriber = ] 'subscriber'` È il nome del sottoscrittore che si desidera eliminare. *Sottoscrittore* viene **sysname**, non prevede alcun valore predefinito.  
   
- [  **@reserved=** ] **'**_riservato_**'**  
- [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
+`[ @reserved = ] 'reserved'` [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
   
- [  **@ignore_distributor =** ] *ignore_distributor*  
- [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
+`[ @ignore_distributor = ] ignore_distributor` [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
   
 ## <a name="return-code-values"></a>Valori restituiti  
  **0** (esito positivo) o **1** (errore)  

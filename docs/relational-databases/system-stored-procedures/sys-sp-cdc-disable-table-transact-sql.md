@@ -1,5 +1,5 @@
 ---
-title: Sys. sp_cdc_disable_table (Transact-SQL) | Microsoft Docs
+title: sys.sp_cdc_disable_table (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -22,12 +22,12 @@ ms.assetid: da2156c0-504e-4d76-b9a0-4448becf9bda
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: b797301b5b778bea34ad1552152e7e3e147dde37
-ms.sourcegitcommit: fc6a6eedcea2d98c93e33d39c1cecd99fbc9a155
+ms.openlocfilehash: 0b1c2f30758987c902e5610ef3fa9f8b26809889
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49169171"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58533743"
 ---
 # <a name="sysspcdcdisabletable-transact-sql"></a>sys.sp_cdc_disable_table (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -47,18 +47,15 @@ sys.sp_cdc_disable_table
 ```  
   
 ## <a name="arguments"></a>Argomenti  
- [  **@source_schema=** ] **'**_origine\_schema_**'**  
- Nome dello schema in cui è contenuta la tabella di origine. *source_schema* viene **sysname**, non prevede alcun valore predefinito e non può essere NULL.  
+`[ @source_schema = ] 'source\_schema'` È il nome dello schema in cui è contenuta la tabella di origine. *source_schema* viene **sysname**, non prevede alcun valore predefinito e non può essere NULL.  
   
  *source_schema* deve esistere nel database corrente.  
   
- [  **@source_name=** ] **'**_origine\_nome_**'**  
- Nome della tabella di origine da disabilitare la funzionalità di Change Data Capture. *source_name* viene **sysname**, non prevede alcun valore predefinito e non può essere NULL.  
+`[ @source_name = ] 'source\_name'` È il nome della tabella di origine da cui la funzionalità change data capture è deve essere disabilitata. *source_name* viene **sysname**, non prevede alcun valore predefinito e non può essere NULL.  
   
  *source_name* deve esistere nel database corrente.  
   
- [  **@capture_instance=** ] **'**_acquisire\_istanza_**'** | **'** tutti i **'**  
- Nome dell'istanza di acquisizione da disabilitare per la tabella di origine specificata. *capture_instance* viene **sysname** e non può essere NULL.  
+`[ @capture_instance = ] 'capture\_instance' | 'all'` È il nome dell'istanza di acquisizione da disabilitare per la tabella di origine specificato. *capture_instance* viene **sysname** e non può essere NULL.  
   
  Quando si specifica "all", tutte le istanze di acquisizione definite per *source_name* sono disabilitati.  
   
@@ -87,6 +84,6 @@ EXECUTE sys.sp_cdc_disable_table
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Sys. sp_cdc_enable_table &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-enable-table-transact-sql.md)  
+ [sys.sp_cdc_enable_table &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-enable-table-transact-sql.md)  
   
   

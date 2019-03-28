@@ -18,12 +18,12 @@ ms.assetid: caedc43d-44b8-415a-897e-92923f6de3b8
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: bbecf5d57ae6e11f3a29aca64b7ce8c52a6f6b76
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 48d70126d071879754011fed7342d03dd72185a5
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47733831"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58534383"
 ---
 # <a name="sphelpoperator-transact-sql"></a>sp_help_operator (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -43,11 +43,9 @@ sp_help_operator
 ```  
   
 ## <a name="arguments"></a>Argomenti  
- [  **@operator_name=** ] **'***nome_operatore***'**  
- Nome dell'operatore. *nome_operatore* viene **sysname**. Se *nome_operatore* viene omesso, vengono restituite informazioni su tutti gli operatori.  
+`[ @operator_name = ] 'operator_name'` Il nome dell'operatore. *nome_operatore* viene **sysname**. Se *nome_operatore* viene omesso, vengono restituite informazioni su tutti gli operatori.  
   
- [  **@operator_id=** ] *operator_id*  
- Numero di identificazione dell'operatore su cui vengono richieste informazioni. *operator_id*viene **int**, con un valore predefinito è NULL.  
+`[ @operator_id = ] operator_id` Il numero di identificazione dell'operatore per il quale vengono richieste informazioni. *operator_id*viene **int**, con un valore predefinito è NULL.  
   
 > [!NOTE]  
 >  Entrambi *operator_id* oppure *nome_operatore* devono essere specificati, ma non è possibile specificarli entrambi.  
@@ -57,15 +55,15 @@ sp_help_operator
   
 ## <a name="result-sets"></a>Set di risultati  
   
-|Nome colonna|Tipo di dati|Description|  
+|Nome colonna|Tipo di dati|Descrizione|  
 |-----------------|---------------|-----------------|  
 |**id**|**int**|Numero di identificazione dell'operatore.|  
 |**name**|**sysname**|Nome dell'operatore.|  
 |**enabled**|**tinyint**|Specifica se l'operatore è disponibile per la ricezione di notifiche:<br /><br /> **1** = Sì<br /><br /> **0** = No|  
-|**email_address**|**Nvarchar(100)**|Indirizzo di posta elettronica dell'operatore.|  
+|**email_address**|**nvarchar(100)**|Indirizzo di posta elettronica dell'operatore.|  
 |**last_email_date**|**int**|Data dell'ultima notifica dell'operatore tramite posta elettronica.|  
 |**last_email_time**|**int**|Ora dell'ultima notifica dell'operatore tramite posta elettronica.|  
-|**pager_address**|**Nvarchar(100)**|Indirizzo cercapersone dell'operatore.|  
+|**pager_address**|**nvarchar(100)**|Indirizzo cercapersone dell'operatore.|  
 |**last_pager_date**|**int**|Data dell'ultima notifica dell'operatore tramite cercapersone.|  
 |**last_pager_time**|**int**|Ora dell'ultima notifica dell'operatore tramite cercapersone.|  
 |**weekday_pager_start_time**|**int**|Inizio del periodo di tempo durante il quale l'operatore è disponibile per ricevere notifiche tramite cercapersone in un giorno feriale.|  
@@ -75,7 +73,7 @@ sp_help_operator
 |**sunday_pager_start_time**|**int**|Inizio del periodo di tempo durante il quale l'operatore è disponibile per ricevere notifiche tramite cercapersone la domenica.|  
 |**sunday_pager_end_time**|**int**|Termine del periodo di tempo durante il quale l'operatore è disponibile per ricevere notifiche tramite cercapersone la domenica.|  
 |**pager_days**|**tinyint**|Maschera di bit (**1** = domenica **64** = sabato) dei giorni della-settimana che indica quando l'operatore è disponibile per ricevere le notifiche tramite cercapersone.|  
-|**netsend_address**|**Nvarchar(100)**|Indirizzo dell'operatore per le notifiche dei messaggi popup di rete.|  
+|**netsend_address**|**nvarchar(100)**|Indirizzo dell'operatore per le notifiche dei messaggi popup di rete.|  
 |**last_netsend_date**|**int**|Data dell'ultima notifica inviata all'operatore tramite un messaggio popup di rete.|  
 |**last_netsend_time**|**int**|Ora dell'ultima notifica inviata all'operatore tramite un messaggio popup di rete.|  
 |**category_name**|**sysname**|Nome della categoria a cui appartiene l'operatore.|  

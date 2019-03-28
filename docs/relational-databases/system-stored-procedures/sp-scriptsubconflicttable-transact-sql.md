@@ -16,12 +16,12 @@ ms.assetid: 13867145-3dad-47a4-8d50-a65175418479
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 33aa0ee68e649dbf1fd2d0fa7373cab64560fa5d
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 91b4cca35fa5de3b6f19190a476ea82a69b53d81
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52816203"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58526313"
 ---
 # <a name="spscriptsubconflicttable-transact-sql"></a>sp_scriptsubconflicttable (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -38,11 +38,9 @@ sp_scriptsubconflicttable [@publication =] 'publication'    , [@article =] 'arti
 ```  
   
 ## <a name="arguments"></a>Argomenti  
- [  **@publication=**] **'***pubblicazione***'**  
- Nome della pubblicazione in cui è contenuto l'articolo. Deve essere un nome univoco all'interno del database. *pubblicazione* viene **sysname**, non prevede alcun valore predefinito.  
+`[ @publication = ] 'publication'` È il nome della pubblicazione che contiene l'articolo. Deve essere un nome univoco all'interno del database. *pubblicazione* viene **sysname**, non prevede alcun valore predefinito.  
   
- [  **@article=**] **'***articolo***'**  
- Nome dell'articolo della sottoscrizione. *articolo* viene **sysname**, non prevede alcun valore predefinito.  
+`[ @article = ] 'article'` È il nome dell'articolo della sottoscrizione. *articolo* viene **sysname**, non prevede alcun valore predefinito.  
   
 ## <a name="return-code-values"></a>Valori restituiti  
  **0** (esito positivo) o **1** (errore)  

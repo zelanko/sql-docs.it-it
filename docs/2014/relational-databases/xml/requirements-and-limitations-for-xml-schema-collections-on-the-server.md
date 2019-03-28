@@ -21,18 +21,18 @@ helpviewer_keywords:
 - schema collections [SQL Server], guidelines
 - lexical representation
 ms.assetid: c2314fd5-4c6d-40cb-a128-07e532b40946
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 79bff5e280731a52681c36ec4935e8935d460071
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 245b844872070ee16104a90ecc0734462bdad3b5
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48073151"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58533482"
 ---
 # <a name="requirements-and-limitations-for-xml-schema-collections-on-the-server"></a>Requisiti e limitazioni per l'utilizzo di raccolte di XML Schema nel server
-  La convalida di XML schema definition language (XSD) presenta alcune limitazioni relative alle colonne SQL che usano il `xml` tipo di dati. La tabella seguente fornisce informazioni dettagliate su tali limitazioni, nonché alcune linee guida per modificare lo schema XSD in modo che sia supportato da [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Gli argomenti in questa sezione forniscono informazioni aggiuntive su limiti specifici e indicazioni per il loro utilizzo.  
+  Esistono alcune limitazioni relative alla convalida del linguaggio XML Schema Definition (XSD) per le colonne SQL che utilizzano il tipo di dati `xml`. La tabella seguente fornisce informazioni dettagliate su tali limitazioni, nonché alcune linee guida per modificare lo schema XSD in modo che sia supportato da [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Gli argomenti in questa sezione forniscono informazioni aggiuntive su limiti specifici e indicazioni per il loro utilizzo.  
   
 |Elemento|Limitazione|  
 |----------|----------------|  
@@ -41,7 +41,7 @@ ms.locfileid: "48073151"
 |**\<xsd:include>**|Attualmente, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] non supporta questo elemento. Gli elementi XML Schema che includono tale elemento vengono rifiutati dal server.<br /><br /> Per risolvere questo problema, è possibile eseguire la pre-elaborazione di XML Schema che includono la direttiva **\<xsd:include>** per copiare e unire il contenuto di tutti gli schemi inclusi in un singolo schema da caricare nel server. Per alte informazioni, vedere [Pre-elaborazione di uno schema per unire schemi inclusi](preprocess-a-schema-to-merge-included-schemas.md).|  
 |**\<xsd:key>**, **\<xsd:keyref>** e **\<xsd:unique>**|Attualmente, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] non supporta questi seguenti vincoli basati su XSD per imporre l'univocità o stabilire chiavi e relativi riferimenti. Non è possibile registrare XML Schema che contengono questi elementi.|  
 |**\<xsd:redefine>**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] non supporta questo elemento. Per informazioni su un'altra modalità di aggiornamento degli schemi, vedere [Elemento &#60;xsd:redefine&#62;](the-xsd-redefine-element.md).|  
-|Valori **\<xsd:simpleType>**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] supporta soltanto la precisione in millisecondi per i tipi semplici che hanno secondi diversi da componenti `xs:time` e `xs:dateTime`e una precisione di 100 nanosecondi per `xs:time` e `xs:dateTime`. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pone limiti a tutte le enumerazioni di tipo semplice XSD riconosciute.<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] non supporta l'uso del valore "NaN" nelle dichiarazioni **\<xsd:simpleType>**.<br /><br /> Per alte informazioni, vedere[Valori per dichiarazioni &#60;xsd:simpleType&#62;](values-for-xsd-simpletype-declarations.md).|  
+|Valori **\<xsd:simpleType>**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] supporta soltanto la precisione in millisecondi per i tipi semplici che hanno un secondo componente diverso rispetto a `xs:time` e `xs:dateTime` e una precisione da 100 nanosecondi per `xs:time` e `xs:dateTime`. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pone limiti a tutte le enumerazioni di tipo semplice XSD riconosciute.<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] non supporta l'uso del valore "NaN" nelle dichiarazioni **\<xsd:simpleType>**.<br /><br /> Per alte informazioni, vedere[Valori per dichiarazioni &#60;xsd:simpleType&#62;](values-for-xsd-simpletype-declarations.md).|  
 |**xsi:schemaLocation** e **xsi:noNamespaceSchemaLocation**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ignora questi attributi se sono presenti nei dati dell'istanza XML inseriti in una colonna o una variabile con tipo di dati `xml`.|  
 |**xs:QName**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] non supporta tipi derivati da **xs:QName** che usano un elemento di restrizione XML Schema.<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] non supporta tipi di unione con **xs:QName** come elemento membro.<br /><br /> Per altre informazioni, vedere [Xs:Tipo QName](the-xs-qname-type.md).|  
 |Aggiunta di membri a un gruppo di sostituzione esistente|Non è possibile aggiungere membri a un gruppo di sostituzione esistente in una raccolta di XML Schema. La restrizione relativa a un gruppo di sostituzione in un elemento XML Schema impone che l'elemento Head e tutti gli elementi membri corrispondenti vengano definiti nella stessa istruzione {CREATE &#124; ALTER} XML SCHEMA COLLECTION.|  
@@ -56,13 +56,13 @@ ms.locfileid: "48073151"
 |Condizioni di memoria insufficiente|Durante l'utilizzo di raccolte di XML Schema di grandi dimensioni, può verificarsi una condizione di memoria insufficiente. Per le soluzioni a questo problema. vedere [Raccolte di XML Schema di grandi dimensioni e condizioni di memoria insufficiente](large-xml-schema-collections-and-out-of-memory-conditions.md).|  
 |Valori ripetuti|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] rifiuta gli schemi in cui il blocco o l'attributo finale include valori ripetuti quali "restriction restriction" ed "extension extension".|  
 |Identificatori dei componenti di schema|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] limita gli identificatori dei componenti di schema a una lunghezza massima di 1000 caratteri Unicode. Non vengono inoltre supportate le coppie di caratteri surrogati all'interno degli identificatori.|  
-|Informazioni sul fuso orario|Nelle [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] e versioni successive le informazioni sul fuso orario sono completamente supportate per `xs:date`, `xs:time`, e `xs:dateTime` valori per la convalida di XML Schema. Con la modalità di compatibilità con le versioni precedenti di [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] , le informazioni sul fuso orario sono sempre normalizzate in Coordinated Universal Time (ora di Greenwich). Per gli elementi di tipo `dateTime`, il server convertirà l'ora fornita in GMT utilizzando il valore di offset ("-05:00") e restituendo l'ora GMT corrispondente.|  
+|Informazioni sul fuso orario|In [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] e versioni successive, le informazioni sul fuso orario sono completamente supportate per valori `xs:date`, `xs:time` e `xs:dateTime` per la convalida di XML Schema. Con la modalità di compatibilità con le versioni precedenti di [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] , le informazioni sul fuso orario sono sempre normalizzate in Coordinated Universal Time (ora di Greenwich). Per gli elementi di tipo `dateTime`, il server convertirà l'ora fornita in GMT utilizzando il valore di offset ("-05:00") e restituendo l'ora GMT corrispondente.|  
 |Tipi unione|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] non supporta restrizioni da tipi di unione.|  
 |Decimali di precisione delle variabili|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] non supporta decimali di precisione delle variabili. Il tipo **xs:decimal** rappresenta numeri decimali di precisione arbitraria. I processori XML conformi devono supporto numeri decimali con almeno `totalDigits=18`. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] supporta `totalDigits=38,` , ma con un limite per le cifre frazionarie pari a 10. Tutti i valori **xs:decimal** per i quali viene creata un'istanza vengono rappresentati internamente dal server con il tipo numeric SQL (38, 10).|  
   
-## <a name="in-this-section"></a>Argomenti della sezione  
+## <a name="in-this-section"></a>In questa sezione  
   
-|Argomento|Description|  
+|Argomento|Descrizione|  
 |-----------|-----------------|  
 |[Canonical Forms and Pattern Restrictions](canonical-forms-and-pattern-restrictions.md)|Spiegazione delle forme canoniche e delle restrizioni di pattern.|  
 |[Componenti jolly e convalida del contenuto](wildcard-components-and-content-validation.md)|Descrizione delle limitazioni dell'utilizzo di Elementi dei caratteri jolly, della convalida lax e dell'anyType con le raccolte di XML Schema.|  

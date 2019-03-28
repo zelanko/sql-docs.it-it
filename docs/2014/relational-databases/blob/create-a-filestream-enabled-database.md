@@ -12,12 +12,12 @@ ms.assetid: 0fc16356-76f7-44b8-a58b-f0b7c43694ec
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 4cd07bd559c1f21eb6ea055a6c132437a63a4b71
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 65de151b2ea2bb59330bae0fa94c9e15d67e4a47
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48184651"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58533543"
 ---
 # <a name="create-a-filestream-enabled-database"></a>Creazione di un database abilitato per FILESTREAM
   In questo argomento viene illustrato come creare un database che supporti FILESTREAM. Poiché in FILESTREAM viene utilizzato un tipo speciale di filegroup, quando si crea il database è necessario specificare la clausola CONTAINS FILESTREAM per almeno un filegroup.  
@@ -38,7 +38,7 @@ ms.locfileid: "48184651"
 ## <a name="example"></a>Esempio  
  Nel codice di esempio seguente viene creato un database denominato `Archive`. Il database contiene tre filegroup: `PRIMARY`, `Arch1`e `FileStreamGroup1`. `PRIMARY` e `Arch1` sono filegroup normali che non possono contenere dati FILESTREAM. `FileStreamGroup1` è il filegroup `FILESTREAM` .  
   
-```tsql  
+```sql  
 CREATE DATABASE Archive   
 ON  
 PRIMARY ( NAME = Arch1,  

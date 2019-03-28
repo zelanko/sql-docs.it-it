@@ -16,12 +16,12 @@ ms.assetid: 63a4ec6e-ce79-4bf1-9d37-5ac88f8d6beb
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 7f5bb18d06fd8ab9545825174cba0723f0d553ee
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: e3c4797478b114918ce2bd79abb9e4671a0dd022
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52791523"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58529933"
 ---
 # <a name="spdeletepeerrequesthistory-transact-sql"></a>sp_deletepeerrequesthistory (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -40,14 +40,11 @@ sp_deletepeerrequesthistory [ @publication = ] 'publication'
 ```  
   
 ## <a name="arguments"></a>Argomenti  
- [  **@publication=** ] **'***pubblicazione***'**  
- Nome della pubblicazione per la quale è stata effettuata la richiesta dello stato. *pubblicazione* viene **sysname**, non prevede alcun valore predefinito.  
+`[ @publication = ] 'publication'` Nome della pubblicazione per cui è stata effettuata la richiesta dello stato. *pubblicazione* viene **sysname**, non prevede alcun valore predefinito.  
   
- [  **@request_id=** ] *request_id*  
- Specifica una determinata richiesta dello stato in modo che tutte le risposte a tale richiesta vengano eliminate. *request_id* viene **int**, con un valore predefinito NULL.  
+`[ @request_id = ] request_id` Specifica una richiesta dello stato individuali, in modo che vengano eliminate tutte le risposte a questa richiesta. *request_id* viene **int**, con un valore predefinito NULL.  
   
- [  **@cutoff_date=** ] *cutoff_date*  
- Specifica una data limite prima della quale tutti i record relativi alle risposte verranno rimossi. *cutoff_date* viene **datetime**, con un valore predefinito NULL.  
+`[ @cutoff_date = ] cutoff_date` Specifica una data limite prima della quale vengono eliminati tutti i record relativi alle risposte. *cutoff_date* viene **datetime**, con un valore predefinito NULL.  
   
 ## <a name="return-code-values"></a>Valori restituiti  
  **0** (esito positivo) o **1** (errore)  

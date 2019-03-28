@@ -9,15 +9,15 @@ ms.topic: conceptual
 helpviewer_keywords:
 - business logic [XML]
 ms.assetid: 0877fb38-f1a2-43d8-86cf-4754be224dc1
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
-ms.openlocfilehash: d548353668aadbf67f2c0bc39c7e69eea756c041
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: ca0953b9ac191dfb765992f79988f3cc1502dfa4
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48078497"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58529123"
 ---
 # <a name="add-business-logic-to-xml-data"></a>Aggiunta di una logica di business ai dati XML
   Per aggiungere una logica di business ai dati XML è possibile procedere in vari modi:  
@@ -30,7 +30,7 @@ ms.locfileid: "48078497"
   
 -   È possibile creare funzioni e stored procedure Transact-SQL che avviano l'elaborazione della colonna XML in base alle esigenze aziendali.  
   
-## <a name="example-applying-xsl-transformation"></a>Esempio: applicazione della trasformazione XSL  
+## <a name="example-applying-xsl-transformation"></a>Esempio: Applicazione della trasformazione XSL  
  Prendere in considerazione una funzione CLR **TransformXML ()** che accetta un `xml` dati digitare l'istanza e una trasformazione XSL archiviata in un file, applica la trasformazione ai dati XML e quindi restituisce il valore XML trasformato come risultato. Di seguito è riportato lo scheletro della funzione scritta in C#:  
   
 ```  

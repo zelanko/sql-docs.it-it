@@ -12,19 +12,19 @@ ms.assetid: 9f527883-031b-442f-8e95-24bc0151ecbf
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: eb5e3618c2d4770a9c4604c772ba572b1b40b961
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 186294182e39845ce600c04b35804759b61eb0f6
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48170391"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58531023"
 ---
 # <a name="find-similar-and-related-documents-with-semantic-search"></a>Trovare documenti simili e correlati tramite la ricerca semantica
   Viene descritto come reperire documenti o valori di testo simili o correlati, nonché informazioni relative alla somiglianza o correlazione, in colonne configurate per l'indicizzazione semantica statistica.  
   
 ##  <a name="BasicsQuerySimilar"></a> Trovare documenti simili o correlati  
   
-###  <a name="HowToQuerySimilar"></a> Procedura: Trovare documenti simili o correlati con SEMANTICSIMILARITYTABLE  
+###  <a name="HowToQuerySimilar"></a> Come si fa: Trovare documenti simili o correlati con SEMANTICSIMILARITYTABLE  
  Per identificare documenti simili o correlati in una colonna specifica, eseguire una query sulla funzione [semanticsimilaritytable &#40;Transact-SQL&#41;](/sql/relational-databases/system-functions/semanticsimilaritytable-transact-sql).  
   
  **SEMANTICSIMILARITYTABLE** restituisce una tabella di zero, una o più righe per le colonne il cui contenuto nella colonna specificata è semanticamente simile a un documento specificato. A questa funzione del set di righe è possibile fare riferimento nella clausola FROM di un'istruzione SELECT come normale nome di tabella.  
@@ -53,7 +53,7 @@ GO
   
 ##  <a name="BasicsQuerySimilarity"></a> Ricerca di informazioni sul modo in cui sono documenti simili o correlati  
   
-###  <a name="HowToQuerySimilarity"></a> Procedura: Trovare le informazioni sulla documenti simili o correlati mediante SEMANTICSIMILARITYDETAILSTABLE  
+###  <a name="HowToQuerySimilarity"></a> Come si fa: Trovare informazioni sulla modalità documenti simili o correlati mediante SEMANTICSIMILARITYDETAILSTABLE  
  Per ottenere informazioni sulle frasi chiave che rendono simili o correlati alcuni documenti, è possibile eseguire una query sulla funzione [semanticsimilaritydetailstable &#40;Transact-SQL&#41;](/sql/relational-databases/system-functions/semanticsimilaritydetailstable-transact-sql).  
   
  **SEMANTICSIMILARITYDETAILSTABLE** restituisce una tabella di zero, una o più righe di frasi chiave comuni in due documenti, ovvero un documento di origine e un documento corrispondente, il cui contenuto è semanticamente simile. A questa funzione del set di righe è possibile fare riferimento nella clausola FROM di un'istruzione SELECT come normale nome di tabella.  
@@ -66,7 +66,7 @@ GO
 ###  <a name="HowToSimilarPhrases"></a> Esempio: Trovare le principali frasi chiave che sono simili tra documenti  
  Nell'esempio seguente vengono recuperate le 5 frasi chiave associate al punteggio di somiglianza più elevato tra i candidati specificati nella tabella **HumanResources.JobCandidate** del database di esempio AdventureWorks2012.  
   
-```tsql  
+```sql  
 SELECT TOP(5) KEY_TBL.keyphrase, KEY_TBL.score  
 FROM SEMANTICSIMILARITYDETAILSTABLE  
     (  

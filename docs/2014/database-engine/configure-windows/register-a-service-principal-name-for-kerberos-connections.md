@@ -16,12 +16,12 @@ ms.assetid: e38d5ce4-e538-4ab9-be67-7046e0d9504e
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 5def842b7b65523d207433680ebd017536b7f2aa
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: 5acd507be99d7ff36245e723d20aebc36f42a917
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54130951"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58529663"
 ---
 # <a name="register-a-service-principal-name-for-kerberos-connections"></a>Registrazione di un nome dell'entità servizio per le connessioni Kerberos
   Per utilizzare l'autenticazione Kerberos con [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] è necessario che si verifichino entrambe le seguenti condizioni:  
@@ -56,7 +56,7 @@ SELECT auth_scheme FROM sys.dm_exec_connections WHERE session_id = @@spid ;
   
  L'autenticazione di Windows è il metodo preferito per l'autenticazione in SQL Server da parte degli utenti. I client che utilizzano l'autenticazione di Windows vengono autenticati tramite NTLM o Kerberos. In un ambiente Active Directory l'autenticazione Kerberos viene sempre tentata per prima. L'autenticazione Kerberos non è disponibile per client [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] che utilizzano named pipe.  
   
-##  <a name="Permissions"></a> Permissions  
+##  <a name="Permissions"></a> Autorizzazioni  
  Quando il servizio [!INCLUDE[ssDE](../../includes/ssde-md.md)] viene avviato, tenta di registrare il nome dell'entità servizio (SPN). Se l'account che avvia SQL Server non ha l'autorizzazione necessaria per registrare un nome SPN in Servizi di dominio Active Directory, questa chiamata non riesce e viene registrato un messaggio di avviso nel registro eventi applicazioni nonché nel log degli errori di SQL Server. Per registrare il nome SPN, è necessario che il [!INCLUDE[ssDE](../../includes/ssde-md.md)] venga eseguito con un account predefinito, ad esempio Sistema locale (non consigliato) o NETWORK SERVICE, oppure con un account che dispone dell'autorizzazione necessaria per registrare un nome SPN, ad esempio un account di amministratore di dominio. Quando [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] viene eseguito nel sistema operativo  [!INCLUDE[win7](../../includes/win7-md.md)] o  [!INCLUDE[winserver2008r2](../../includes/winserver2008r2-md.md)] , è possibile eseguire [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utilizzando un account virtuale o un account dei servizi gestiti (MSA). Entrambi gli account virtuali e MSA possono registrare un SPN. Se [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] non viene eseguito con nessuno di questi account, il nome SPN non viene registrato all'avvio e l'amministratore di dominio lo dovrà registrare manualmente.  
   
 > [!NOTE]  
@@ -100,7 +100,7 @@ SELECT auth_scheme FROM sys.dm_exec_connections WHERE session_id = @@spid ;
 |-|-|  
 |MSSQLSvc/*fqdn:porta*|Nome SPN predefinito generato dal provider quando si utilizza il protocollo TCP. *port* è un numero di porta TCP.|  
 |MSSQLSvc/*fqdn*|Nome SPN predefinito generato dal provider per un'istanza predefinita quando si utilizza un protocollo diverso da TCP. *fqdn* è un nome di dominio completo.|  
-|MSSQLSvc /*fqdn:InstanceName*|Nome SPN predefinito generato dal provider per un'istanza denominata quando si usa un protocollo diverso da TCP. *NomeIstanza* è il nome di un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
+|MSSQLSvc/*fqdn:InstanceName*|Nome SPN predefinito generato dal provider per un'istanza denominata quando si usa un protocollo diverso da TCP. *NomeIstanza* è il nome di un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
   
 ##  <a name="Auto"></a> Registrazione automatica del nome SPN  
  Quando viene avviata un'istanza del [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] , [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tenta di registrare il nome SPN per il servizio [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Quando l'istanza viene arrestata, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tenta di annullare la registrazione del nome SPN. Per una connessione TCP/IP, il nome SPN viene registrato nel formato *MSSQLSvc/\<FQDN>*:*\<tcpport>*. Sia le istanze denominate che quella predefinita vengono registrate come *MSSQLSvc* e differenziate in base al valore *\<tcpport>*.  
@@ -147,7 +147,7 @@ setspn -A MSSQLSvc/myhost.redmond.microsoft.com:instancename accountname
   
  Per determinare il metodo di autenticazione di una connessione, eseguire la query seguente.  
   
-```tsql  
+```sql  
 SELECT net_transport, auth_scheme   
 FROM sys.dm_exec_connections   
 WHERE session_id = @@SPID;  

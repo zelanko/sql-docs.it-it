@@ -18,15 +18,15 @@ helpviewer_keywords:
 - XML schema collections [SQL Server]
 - schema collections [SQL Server], about XML schema collections
 ms.assetid: 659d41aa-ccec-4554-804a-722a96ef25c2
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 3a86a39aa3473495b5eed6bc2eff92376a5a68cc
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 45f3dfbf7a4caa2744ef57a352b0434e7eb1bf37
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53362783"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58533713"
 ---
 # <a name="xml-schema-collections-sql-server"></a>Raccolte di XML Schema (SQL Server)
   Come descritto nell'argomento [xml &#40;Transact-SQL&#41;](/sql/t-sql/xml/xml-transact-sql), SQL Server fornisce l'archiviazione nativa dei dati XML tramite la `xml` tipo di dati. È facoltativamente possibile associare schemi XSD a una variabile o una colonna di `xml` tipo tramite una raccolta XML schema. Una raccolta di XML Schema archivia gli elementi XML Schema importati e può essere quindi utilizzata per eseguire le operazioni seguenti:  
@@ -171,7 +171,7 @@ ms.locfileid: "53362783"
   
  Queste tecniche di enumerazione sono illustrate negli esempi seguenti.  
   
-### <a name="example-enumerate-the-xml-namespaces-in-an-xml-schema-collection"></a>Esempio: Enumerare gli spazi dei nomi XML in una raccolta XML Schema  
+### <a name="example-enumerate-the-xml-namespaces-in-an-xml-schema-collection"></a>Esempio: Enumerazione degli spazi dei nomi XML in una raccolta di XML Schema  
  Per la raccolta di XML Schema "myCollection" utilizzare la query seguente:  
   
 ```  
@@ -181,7 +181,7 @@ FROM    sys.xml_schema_collections XSC JOIN sys.xml_schema_namespaces XSN
 WHERE    XSC.name = 'myCollection'     
 ```  
   
-### <a name="example-enumerate-the-contents-of-an-xml-schema-collection"></a>Esempio: Enumerare il contenuto di una raccolta XML Schema  
+### <a name="example-enumerate-the-contents-of-an-xml-schema-collection"></a>Esempio: Enumerazione del contenuto di una raccolta di XML Schema  
  L'istruzione seguente enumera il contenuto della raccolta di XML Schema "myCollection" nell'ambito dello schema relazionale dbo.  
   
 ```  
@@ -190,7 +190,7 @@ SELECT XML_SCHEMA_NAMESPACE (N'dbo', N'myCollection')
   
  Singoli elementi di XML schema all'interno della raccolta possono essere ottenuti come `xml` istanze con tipo di dati specificando lo spazio dei nomi di destinazione come terzo argomento **xml_schema_namespace ()**. come illustrato nell'esempio seguente.  
   
-### <a name="example-output-a-specified-schema-from-an-xml-schema-collection"></a>Esempio: Uno Schema specifico da una raccolta XML Schema di output  
+### <a name="example-output-a-specified-schema-from-an-xml-schema-collection"></a>Esempio: Restituzione di uno schema specifico da una raccolta di XML Schema  
  L'istruzione seguente restituisce l'elemento XML Schema con spazio dei nomi di destinazione "<https://www.microsoft.com/books>" dalla raccolta di XML Schema "myCollection" nell'ambito dello schema relazionale dbo.  
   
 ```  

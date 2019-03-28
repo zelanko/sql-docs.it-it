@@ -19,12 +19,12 @@ ms.assetid: 47d04a2b-dbf0-4f15-bd9b-81a2efc48131
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 1d947f319c56c29c0d3dbe4ce88c38055c59dfc5
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: 2b2594ca16f3cd7378dbd8632af448471b8f1654
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54124111"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58529263"
 ---
 # <a name="spserveroption-transact-sql"></a>sp_serveroption (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -43,11 +43,9 @@ sp_serveroption [@server = ] 'server'
 ```  
   
 ## <a name="arguments"></a>Argomenti  
- [  **@server =** ] **'**_server_**'**  
- Nome del server per il quale impostare l'opzione. *server* è di tipo **sysname**e non prevede alcun valore predefinito.  
+`[ @server = ] 'server'` È il nome del server per cui impostare l'opzione. *server* è di tipo **sysname**e non prevede alcun valore predefinito.  
   
- [  **@optname =** ] **'**_option_name_**'**  
- Opzione da impostare per il server specificato. *option_name* viene **varchar (** 35 **)**, non prevede alcun valore predefinito. *option_name* può essere uno dei valori seguenti.  
+`[ @optname = ] 'option_name'` È possibile impostare per il server specificato. *option_name* viene **varchar (** 35 **)**, non prevede alcun valore predefinito. *option_name* può essere uno dei valori seguenti.  
   
 |Value|Descrizione|  
 |-----------|-----------------|  
@@ -60,14 +58,13 @@ sp_serveroption [@server = ] 'server'
 |**pub**|Server di pubblicazione.|  
 |**timeout query**|Timeout per le query eseguite nel server collegato.<br /><br /> Se **0**, utilizzare il **sp_configure** predefinito.|  
 |**rpc**|Abilita l'esecuzione di chiamate RPC dal server specificato.|  
-|**chiamate RPC in uscita**|Abilita l'esecuzione di chiamate RPC al server specificato.|  
+|**rpc out**|Abilita l'esecuzione di chiamate RPC al server specificato.|  
 |**sub**|Sottoscrittore.|  
 |**system**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**usare regole di confronto remote**|Determina se vengono utilizzate le regole di confronto di una colonna remota o di un server locale.<br /><br /> Se **true**, le regole di confronto delle colonne remote viene usato per [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] origini dati e le regole di confronto specificato nel **nome regole di confronto** viene usato per non -[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] origini dati.<br /><br /> Se **false**, le query distribuite userà sempre le regole di confronto predefinite del server locale, mentre **nome regole di confronto** e le regole di confronto delle colonne remote vengono ignorate. Il valore predefinito è **false**. (Il **false** valore è compatibile con la semantica delle regole di confronto utilizzata [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 7.0.)|  
 |**promozione delle transazioni procedure remote**|Questa opzione consente di proteggere le azioni di una procedura da server a server tramite una transazione MS DTC ( [!INCLUDE[msCoName](../../includes/msconame-md.md)] Distributed Transaction Coordinator). Quando questa opzione è TRUE (o ON) chiama una stored procedure remota viene avviata una transazione distribuita e integrazione della transazione in MS DTC. L'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in cui viene chiamata la stored procedure remota corrisponde all'origine della transazione e ne controlla il completamento. Quando per la connessione viene successivamente eseguita un'istruzione COMMIT TRANSACTION o ROLLBACK TRANSACTION, l'istanza di controllo richiede che il completamento della transazione distribuita nei computer interessati venga gestito da MS DTC.<br /><br /> Dopo l'avvio di una transazione distribuita [!INCLUDE[tsql](../../includes/tsql-md.md)], è possibile chiamare stored procedure remote in altre istanze di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] definite come server collegati. Tutti i server collegati sono integrati nella transazione distribuita [!INCLUDE[tsql](../../includes/tsql-md.md)]. MS DTC garantisce inoltre che la transazione venga completata in ogni server collegato.<br /><br /> Se questa opzione è impostata su FALSE (o OFF), una transazione locale non sarà promossa a transazione distribuita durante una chiamata di procedura remota in un server collegato.<br /><br /> Se prima di effettuare una chiamata di una procedura da server a server la transazione è già una transazione distribuita, questa opzione non ha alcun effetto. La chiamata di procedura nel server collegato verrà eseguita nella stessa transazione distribuita.<br /><br /> Se prima di effettuare una chiamata di una procedura da server a server non vi sono transazioni attive nella connessione, questa opzione non ha alcun effetto. La procedura viene quindi eseguita nel server collegato senza transazioni attive.<br /><br /> Il valore predefinito per questa opzione è TRUE (o ON).|  
   
- [  **@optvalue =**] **'**_option_value_**'**  
- Specifica o meno il *option_name* deve essere abilitata (**TRUE** o **sul**) o disabilitato (**FALSE** o **off**). *option_value* viene **varchar (** 10 **)**, non prevede alcun valore predefinito.  
+`[ @optvalue = ] 'option_value'` Specifica o meno il *option_name* deve essere abilitata (**TRUE** o **sul**) o disabilitato (**FALSE** o **off**). *option_value* viene **varchar (** 10 **)**, non prevede alcun valore predefinito.  
   
  *option_value* può essere un numero intero non negativo per il **timeout della connessione** e **timeout query** opzioni. Per il **nome delle regole di confronto** opzione *option_value* può essere un nome delle regole di confronto o NULL.  
   

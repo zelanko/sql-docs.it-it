@@ -16,12 +16,12 @@ ms.assetid: 7dac5e68-bf84-433a-a531-66921f35126f
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 5b7ebae98b83c743fa2ea111a2809b3d1a043005
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 93462a0f9529b20b3a74d37a3b844eb643e9f7b3
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52774133"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58526643"
 ---
 # <a name="spmschangedistributionagentproperties-transact-sql"></a>sp_MSchange_distribution_agent_properties (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -44,26 +44,19 @@ sp_MSchange_distribution_agent_properties [ @publisher = ] 'publisher'
 ```  
   
 ## <a name="arguments"></a>Argomenti  
- [ **@publisher** =] **'***publisher***'**  
- Nome del server di pubblicazione. *server di pubblicazione* viene **sysname**, non prevede alcun valore predefinito.  
+`[ @publisher = ] 'publisher'` È il nome del server di pubblicazione. *server di pubblicazione* viene **sysname**, non prevede alcun valore predefinito.  
   
- [  **@publisher_db=** ] **'***publisher_db***'**  
- Nome del database di pubblicazione. *publisher_db* viene **sysname**, non prevede alcun valore predefinito.  
+`[ @publisher_db = ] 'publisher_db'` È il nome del database di pubblicazione. *publisher_db* viene **sysname**, non prevede alcun valore predefinito.  
   
- [  **@publication =** ] **'***pubblicazione***'**  
- Nome della pubblicazione. *pubblicazione* viene **sysname**, non prevede alcun valore predefinito.  
+`[ @publication = ] 'publication'` È il nome della pubblicazione. *pubblicazione* viene **sysname**, non prevede alcun valore predefinito.  
   
- [  **@subscriber=** ] **'***sottoscrittore***'**  
- Nome del Sottoscrittore. *Sottoscrittore* viene **sysname**, non prevede alcun valore predefinito.  
+`[ @subscriber = ] 'subscriber'` È il nome del sottoscrittore. *Sottoscrittore* viene **sysname**, non prevede alcun valore predefinito.  
   
- [  **@subscriber_db=** ] **'***subscriber_db***'**  
- Nome del database di sottoscrizione. *subscriber_db* viene **sysname**, non prevede alcun valore predefinito.  
+`[ @subscriber_db = ] 'subscriber_db'` È il nome del database di sottoscrizione. *subscriber_db* viene **sysname**, non prevede alcun valore predefinito.  
   
- [  **@property =** ] **'***proprietà***'**  
- Proprietà della pubblicazione da modificare. *proprietà* viene **sysname**, non prevede alcun valore predefinito.  
+`[ @property = ] 'property'` È la proprietà della pubblicazione da modificare. *proprietà* viene **sysname**, non prevede alcun valore predefinito.  
   
- [  **@value =** ] **'***valore***'**  
- Nuovo valore della proprietà. *valore* viene **nvarchar(524**, con un valore predefinito è NULL.  
+`[ @value = ] 'value'` È il nuovo valore della proprietà. *valore* viene **nvarchar(524**, con un valore predefinito è NULL.  
   
  Nella tabella seguente vengono descritte le proprietà del processo dell'agente di distribuzione che è possibile modificare e le limitazioni previste per i valori delle proprietà.  
   

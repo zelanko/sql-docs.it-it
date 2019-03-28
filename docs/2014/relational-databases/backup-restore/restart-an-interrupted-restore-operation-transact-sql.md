@@ -17,12 +17,12 @@ ms.assetid: 6413a07d-fd90-448d-8f29-12c5a1972618
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 22f5b597f7482c5a417633322f13776578e595e2
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 3bce9a9d48dce2e795fee049bd9414a987314775
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48143471"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58529053"
 ---
 # <a name="restart-an-interrupted-restore-operation-transact-sql"></a>Riavvio di un'operazione di ripristino interrotta (Transact-SQL)
   In questo argomento viene descritta la procedura per il riavvio di un'operazione di ripristino interrotta.  
@@ -38,7 +38,7 @@ ms.locfileid: "48143471"
 ## <a name="example"></a>Esempio  
  In questo esempio viene riavviata un'operazione di ripristino interrotta.  
   
-```tsql  
+```sql  
 -- Restore a full database backup of the AdventureWorks database.  
 RESTORE DATABASE AdventureWorks  
    FROM DISK = 'C:\AdventureWorks.bck'  

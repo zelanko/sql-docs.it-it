@@ -4,15 +4,15 @@ ms.prod: sql
 ms.technology: machine-learning
 ms.date: 05/31/2018
 ms.topic: conceptual
-author: HeidiSteen
-ms.author: heidist
+author: dphansen
+ms.author: davidph
 manager: cgronlun
-ms.openlocfilehash: 64f930a72dbb7f8c6aff8338f22dd3e9b7cc7bbe
-ms.sourcegitcommit: ee76332b6119ef89549ee9d641d002b9cabf20d2
+ms.openlocfilehash: 7eed38e54b0c4e77af8f7b3ede0af2d98b9c58b2
+ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/20/2018
-ms.locfileid: "53645360"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58510788"
 ---
 # <a name="how-to-use-revoscaler-functions-to-find-or-install-r-packages-on-sql-server"></a>Come usare funzioni RevoScaleR per trovare o installare pacchetti R in SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -97,7 +97,7 @@ connString <- paste("Driver=SQL Server;Server=", instance_name, ";Database=", da
 sqlcc <- RxInSqlServer(connectionString = connString, wait = sqlWait, consoleOutput = sqlConsoleOutput, numTasks = 4);
 ```
 
-A seconda di dove si trova il server e il modello di sicurezza, è necessario fornire un dominio e una subnet specifica nella stringa di connessione oppure usare un account di accesso SQL. Ad esempio:
+A seconda di dove si trova il server e il modello di sicurezza, è necessario fornire un dominio e una subnet specifica nella stringa di connessione oppure usare un account di accesso SQL. Esempio:
 
 ```R
 connStr <- "Driver=SQL Server;Server=myserver.financeweb.contoso.com;Database=Finance;Uid=RUser1;Pwd=RUserPassword"
@@ -114,7 +114,7 @@ print(sqlPackagePaths)
 
 **Risultati**
 
-"C: / Program file/Microsoft SQL Server/MSSQL14. MSSQLSERVER/R_SERVICES/libreria/RevoScaleR"
+"C:/Program Files/Microsoft SQL Server/MSSQL14.MSSQLSERVER/R_SERVICES/library/RevoScaleR"
 
 > [!TIP]
 > Se è stata abilitata l'opzione visualizzare l'output della console SQL, è possibile ottenere i messaggi di stato dalla funzione che precede il `print` istruzione. Dopo aver completato il test del codice, impostare `consoleOutput` su FALSE nel costruttore di contesto di calcolo per eliminare i messaggi.

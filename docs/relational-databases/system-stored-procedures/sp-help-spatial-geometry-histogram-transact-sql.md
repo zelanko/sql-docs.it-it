@@ -18,12 +18,12 @@ ms.assetid: 036aaf61-df3e-40f7-aa4e-62983c5a37bd
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: c29562bbdaeff69084547c3505fc84def3a0c668
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 914c68d313d77d1cb363f44daee2935976161418
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51663235"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58534293"
 ---
 # <a name="sphelpspatialgeometryhistogram-transact-sql"></a>sp_help_spatial_geometry_histogram (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -45,39 +45,31 @@ sp_help_spatial_geometry_histogram [ @tabname =] 'tabname'
 ```  
   
 ## <a name="arguments"></a>Argomenti  
- [  **@tabname =**] **'***tabname***'**  
- Nome qualificato o non qualificato della tabella per cui è stato specificato l'indice spaziale.  
+`[ @tabname = ] 'tabname'` È il nome completo o non qualificato della tabella per cui è stato specificato l'indice spaziale.  
   
  Le virgolette sono necessarie solo se viene specificata una tabella qualificata. Nel caso di un nome completo, ovvero contenente un nome di database, il nome del database deve corrispondere a quello del database corrente. *TabName* viene **sysname**, non prevede alcun valore predefinito.  
   
- [  **@colname =** ] **'***colname***'**  
- Nome della colonna spaziale specificata. *colname* è un **sysname**, non prevede alcun valore predefinito.  
+`[ @colname = ] 'colname'` È il nome della colonna spaziale specificata. *colname* è un **sysname**, non prevede alcun valore predefinito.  
   
- [  **@resolution =** ] **'***risoluzione***'**  
- Risoluzione del rettangolo di selezione. I valori validi sono compresi tra 10 e 5000. *risoluzione* è un **tinyint**, non prevede alcun valore predefinito.  
+`[ @resolution = ] 'resolution'` È la risoluzione del rettangolo. I valori validi sono compresi tra 10 e 5000. *risoluzione* è un **tinyint**, non prevede alcun valore predefinito.  
   
- [  **@xmin =** ] **'***xmin***'**  
- Proprietà del valore minimo di X del rettangolo di selezione. *xmin* è un **float**, non prevede alcun valore predefinito.  
+`[ @xmin = ] 'xmin'` È il valore minimo di X proprietà rettangolo di selezione. *xmin* è un **float**, non prevede alcun valore predefinito.  
   
- [  **@ymin =** ] **'***ymin***'**  
- Proprietà del valore minimo di Y del rettangolo di selezione. *ymin* è un **float**, non prevede alcun valore predefinito.  
+`[ @ymin = ] 'ymin'` È il valore minimo di Y proprietà rettangolo di selezione. *ymin* è un **float**, non prevede alcun valore predefinito.  
   
- [  **@xmax =** ] **'***xmax***'**  
- Proprietà del valore massimo di X del rettangolo di selezione. *xmax* è un **float**, non prevede alcun valore predefinito.  
+`[ @xmax = ] 'xmax'` È il valore massimo di X proprietà rettangolo di selezione. *xmax* è un **float**, non prevede alcun valore predefinito.  
   
- [  **@ymax =** ] **'***ymax***'**  
- Proprietà del valore massimo di Y del rettangolo di selezione. *ymax* è un **float**, non prevede alcun valore predefinito.  
+`[ @ymax = ] 'ymax'` È il valore massimo di Y proprietà rettangolo di selezione. *ymax* è un **float**, non prevede alcun valore predefinito.  
   
- [  **@sample =** ] **'***esempio***'**  
- Percentuale della tabella utilizzata. I valori validi sono da 0 a 100. *campione* è un **float**. Il valore predefinito è 100.  
+`[ @sample = ] 'sample'` È la percentuale della tabella che viene usata. I valori validi sono da 0 a 100. *campione* è un **float**. Il valore predefinito è 100.  
   
 ## <a name="property-valuereturn-value"></a>Valore proprietà/Valore restituito  
  Viene restituito un valore di tabella. Nella griglia seguente viene descritto il contenuto delle colonne della tabella.  
   
-|Nome colonna|Tipo di dati|Description|  
+|Nome colonna|Tipo di dati|Descrizione|  
 |-----------------|---------------|-----------------|  
 |**cellid**|**int**|Rappresenta l'ID univoco di ciascuna cella. Il conteggio inizia da 1.|  
-|**cella**|**geometry**|Poligono rettangolare che rappresenta ciascuna cella. La forma della cella è identica alla forma della cella utilizzata per l'indicizzazione spaziale.|  
+|**cell**|**geometry**|Poligono rettangolare che rappresenta ciascuna cella. La forma della cella è identica alla forma della cella utilizzata per l'indicizzazione spaziale.|  
 |**row_count**|**bigint**|Indica il numero di oggetti spaziali che toccano o contengono la cella.|  
   
 ## <a name="permissions"></a>Permissions  

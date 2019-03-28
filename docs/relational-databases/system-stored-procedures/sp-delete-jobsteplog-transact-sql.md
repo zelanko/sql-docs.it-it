@@ -18,12 +18,12 @@ ms.assetid: e9ef4c99-abde-4038-b6a3-a25dcbaf0958
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 719038f8ce72bdb05ad9dbf3c3585c377abb3a75
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: f3a3140c154f5d4eb224259001333747ce410e67
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52526228"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58533872"
 ---
 # <a name="spdeletejobsteplog-transact-sql"></a>sp_delete_jobsteplog (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -44,27 +44,21 @@ sp_delete_jobsteplog { [ @job_id = ] 'job_id' | [ @job_name = ] 'job_name' }
 ```  
   
 ## <a name="arguments"></a>Argomenti  
- [  **@job_id =**] **'**_job_id_**'**  
- Numero di identificazione del processo in cui è contenuto il log dei passaggi di processo da rimuovere. *job_id* viene **int**, con un valore predefinito è NULL.  
+`[ @job_id = ] 'job_id'` ID del processo per il processo che contiene i log dei passaggi di processo da rimuovere. *job_id* viene **int**, con un valore predefinito è NULL.  
   
- [  **@job_name =**] **'**_job_name_**'**  
- Nome del processo. *nome_processo* viene **sysname**, con un valore predefinito è NULL.  
+`[ @job_name = ] 'job_name'` Il nome del processo. *nome_processo* viene **sysname**, con un valore predefinito è NULL.  
   
 > **NOTA:** Entrambi *job_id* oppure *job_name* devono essere specificati, ma non è possibile specificarli entrambi.  
   
- [ **@step_id =**] *step_id*  
- Numero di identificazione del passaggio del processo per cui si desidera eliminare il log dei passaggi di processo. Se omesso, vengono eliminati tutti i log dei passaggi di processo del processo, a meno che **@older_than** oppure **@larger_than** specificati. *step_id* viene **int**, con un valore predefinito è NULL.  
+`[ @step_id = ] step_id` Il numero di identificazione del passaggio del processo per cui è necessario eliminare i log dei passaggi di processo. Se omesso, vengono eliminati tutti i log dei passaggi di processo del processo, a meno che **@older_than** oppure **@larger_than** specificati. *step_id* viene **int**, con un valore predefinito è NULL.  
   
- [  **@step_name =**] **'**_step_name_**'**  
- Nome del passaggio del processo per cui è necessario eliminare il log dei passaggi di processo. *step_name* viene **sysname**, con un valore predefinito è NULL.  
+`[ @step_name = ] 'step_name'` Il nome del passaggio del processo per cui è necessario eliminare i log dei passaggi di processo. *step_name* viene **sysname**, con un valore predefinito è NULL.  
   
 > **NOTA:** Entrambi *step_id* oppure *step_name* può essere specificato, ma non è possibile specificarli entrambi.  
   
- [  **@older_than =**] **'**_date_**'**  
- Data e ora del log dei passaggi di processo meno recente che si desidera mantenere. Verranno rimossi tutti i log dei passaggi di processo antecedenti questa data e ora. *Data* viene **datetime**, con un valore predefinito è NULL. Entrambe **@older_than** e **@larger_than** può essere specificato.  
+`[ @older_than = ] 'date'` Data e ora del log dei passaggi processo meno recente da conservare. Verranno rimossi tutti i log dei passaggi di processo antecedenti questa data e ora. *Data* viene **datetime**, con un valore predefinito è NULL. Entrambe **@older_than** e **@larger_than** può essere specificato.  
   
- [  **@larger_than =**] **'**_size_in_bytes_**'**  
- Dimensione in byte del log dei passaggi di processo più grande che si desidera mantenere. Vengono rimossi tutti i log dei passaggi di processo la cui dimensione è maggiore rispetto a quella indicata. Entrambe **@larger_than** e **@older_than** può essere specificato.  
+`[ @larger_than = ] 'size_in_bytes'` La dimensione in byte del log dei passaggi processo più grande si desidera mantenere. Vengono rimossi tutti i log dei passaggi di processo la cui dimensione è maggiore rispetto a quella indicata. Entrambe **@larger_than** e **@older_than** può essere specificato.  
   
 ## <a name="return-code-values"></a>Valori restituiti  
  **0** (esito positivo) o **1** (errore)  
@@ -104,7 +98,7 @@ EXEC dbo.sp_delete_jobsteplog
 GO  
 ```  
   
-### <a name="b-removing-the-job-step-log-for-a-particular-job-step"></a>b. Rimozione del log dei passaggi di processo per un passaggio di processo specifico  
+### <a name="b-removing-the-job-step-log-for-a-particular-job-step"></a>B. Rimozione del log dei passaggi di processo per un passaggio di processo specifico  
  Nell'esempio seguente viene rimosso il log relativo al passaggio 2 del processo `Weekly Sales Data Backup`.  
   
 ```  

@@ -16,12 +16,12 @@ ms.assetid: 7928c50c-617f-41c5-9e0f-4e42e8be55dc
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 84fa72ff11ffb97d736dcd5ed194064367c3a5ba
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 812ddd803d2a41695429902d6d8fc470ccef9576
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52748334"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58529217"
 ---
 # <a name="spreplmonitorhelppublication-transact-sql"></a>sp_replmonitorhelppublication (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -42,17 +42,13 @@ sp_replmonitorhelppublication [ @publisher = ] 'publisher'
 ```  
   
 ## <a name="arguments"></a>Argomenti  
- [ **@publisher** =] **'***publisher***'**  
- Nome del server di pubblicazione di cui viene monitorato lo stato. *server di pubblicazione* viene **sysname**, con un valore predefinito NULL. Se **null**, verranno restituite informazioni per tutti i server di pubblicazione che utilizzano il server di distribuzione.  
+`[ @publisher = ] 'publisher'` È il nome del server di pubblicazione viene monitorato lo stato dei quali. *server di pubblicazione* viene **sysname**, con un valore predefinito NULL. Se **null**, verranno restituite informazioni per tutti i server di pubblicazione che utilizzano il server di distribuzione.  
   
- [ **@publisher_db** = ] **'***publisher_db***'**  
- Nome del database pubblicato. *publisher_db* viene **sysname**, con un valore predefinito NULL. Se NULL, vengono restituite informazioni su tutti i database pubblicati nel server di pubblicazione.  
+`[ @publisher_db = ] 'publisher_db'` È il nome del database pubblicato. *publisher_db* viene **sysname**, con un valore predefinito NULL. Se NULL, vengono restituite informazioni su tutti i database pubblicati nel server di pubblicazione.  
   
- [ **@publication** =] **'***pubblicazione***'**  
- Nome della pubblicazione da monitorare. *pubblicazione* viene **sysname**, con un valore predefinito NULL.  
+`[ @publication = ] 'publication'` Il nome della pubblicazione da monitorare. *pubblicazione* viene **sysname**, con un valore predefinito NULL.  
   
- [ **@publication_type** =] *publication_type*  
- Tipo di pubblicazione. *publication_type* viene **int**, i possibili valori sono i seguenti.  
+`[ @publication_type = ] publication_type` Se il tipo di pubblicazione. *publication_type* viene **int**, i possibili valori sono i seguenti.  
   
 |Value|Descrizione|  
 |-----------|-----------------|  
@@ -61,24 +57,23 @@ sp_replmonitorhelppublication [ @publisher = ] 'publisher'
 |**2**|Pubblicazione di tipo merge.|  
 |NULL (predefinito)|La replica cerca di determinare il tipo di pubblicazione.|  
   
- [  **@refreshpolicy=** ] *refreshpolicy*  
- Solo per uso interno.  
+`[ @refreshpolicy = ] refreshpolicy` Solo uso interno.  
   
 ## <a name="result-sets"></a>Set di risultati  
   
 |Nome colonna|Tipo di dati|Descrizione|  
 |-----------------|---------------|-----------------|  
 |**publisher_db**|**sysname**|Nome del server di pubblicazione.|  
-|**pubblicazione**|**sysname**|Nome di una pubblicazione.|  
+|**publication**|**sysname**|Nome di una pubblicazione.|  
 |**publication_type**|**int**|Tipo di pubblicazione. I possibili valori sono i seguenti.<br /><br /> **0** = pubblicazione transazionale<br /><br /> **1** = pubblicazione snapshot<br /><br /> **2** = pubblicazione di tipo merge|  
 |**status**|**int**|Stato massimo di tutti gli agenti di replica associati alla pubblicazione. I possibili valori sono i seguenti.<br /><br /> **1** = avviato<br /><br /> **2** = ha avuto esito positivo<br /><br /> **3** = in corso<br /><br /> **4** = inattivo<br /><br /> **5** = nuovo tentativo in corso<br /><br /> **6** = non è riuscita|  
-|**avviso**|**int**|Avviso correlato alla soglia massima generato da una sottoscrizione appartenente alla pubblicazione. Può essere il risultato OR logico di uno o più dei valori seguenti.<br /><br /> **1** = expiration - una sottoscrizione di una pubblicazione transazionale non sia stata sincronizzata entro la soglia di periodo di conservazione.<br /><br /> **2** = latency - il tempo necessario per replicare i dati da un server di pubblicazione transazionale al sottoscrittore supera la soglia, espresso in secondi.<br /><br /> **4** = mergeexpiration - una sottoscrizione a una pubblicazione di tipo merge non sia stata sincronizzata entro la soglia di periodo di conservazione.<br /><br /> **8** = mergefastrunduration - il tempo impiegato per completare la sincronizzazione di una sottoscrizione di tipo merge supera la soglia, espresso in secondi, tramite una connessione di rete veloce.<br /><br /> **16** = mergeslowrunduration - il tempo impiegato per completare la sincronizzazione di una sottoscrizione di tipo merge supera la soglia, espresso in secondi, tramite una connessione di rete lenta o remota.<br /><br /> **32** = mergefastrunspeed: la velocità di recapito delle righe durante la sincronizzazione di una sottoscrizione di tipo merge è minore della soglia, in righe al secondo, su una connessione di rete veloce.<br /><br /> **64** = mergeslowrunspeed: la velocità di recapito delle righe durante la sincronizzazione di una sottoscrizione di tipo merge è minore della soglia, in righe al secondo, su una connessione di rete lenta o remota.|  
+|**warning**|**int**|Avviso correlato alla soglia massima generato da una sottoscrizione appartenente alla pubblicazione. Può essere il risultato OR logico di uno o più dei valori seguenti.<br /><br /> **1** = expiration - una sottoscrizione di una pubblicazione transazionale non sia stata sincronizzata entro la soglia di periodo di conservazione.<br /><br /> **2** = latency - il tempo necessario per replicare i dati da un server di pubblicazione transazionale al sottoscrittore supera la soglia, espresso in secondi.<br /><br /> **4** = mergeexpiration - una sottoscrizione a una pubblicazione di tipo merge non sia stata sincronizzata entro la soglia di periodo di conservazione.<br /><br /> **8** = mergefastrunduration - il tempo impiegato per completare la sincronizzazione di una sottoscrizione di tipo merge supera la soglia, espresso in secondi, tramite una connessione di rete veloce.<br /><br /> **16** = mergeslowrunduration - il tempo impiegato per completare la sincronizzazione di una sottoscrizione di tipo merge supera la soglia, espresso in secondi, tramite una connessione di rete lenta o remota.<br /><br /> **32** = mergefastrunspeed: la velocità di recapito delle righe durante la sincronizzazione di una sottoscrizione di tipo merge è minore della soglia, in righe al secondo, su una connessione di rete veloce.<br /><br /> **64** = mergeslowrunspeed: la velocità di recapito delle righe durante la sincronizzazione di una sottoscrizione di tipo merge è minore della soglia, in righe al secondo, su una connessione di rete lenta o remota.|  
 |**worst_latency**|**int**|Latenza più alta, espressa in secondi, per le modifiche dei dati propagate dall'agente di lettura log o dagli agenti di distribuzione per una pubblicazione transazionale.|  
 |**best_latency**|**int**|Latenza più bassa, espressa in secondi, per le modifiche dei dati propagate dall'agente di lettura log o dagli agenti di distribuzione per una pubblicazione transazionale.|  
 |**average_latency**|**int**|Latenza media, espressa in secondi, per le modifiche dei dati propagate dall'agente di lettura log o dagli agenti di distribuzione per una pubblicazione transazionale.|  
 |**last_distsync**|**datetime**|Data e ora dell'ultima esecuzione dell'agente di distribuzione.|  
-|**conservazione**|**int**|Periodo di memorizzazione della pubblicazione.|  
-|**LatencyThreshold**|**int**|Soglia della latenza impostato per la pubblicazione transazionale.|  
+|**retention**|**int**|Periodo di memorizzazione della pubblicazione.|  
+|**latencythreshold**|**int**|Soglia della latenza impostato per la pubblicazione transazionale.|  
 |**expirationthreshold**|**int**|Soglia della scadenza impostato per la pubblicazione di tipo merge.|  
 |**agentnotrunningthreshold**|**int**|Soglia impostato per il periodo più lungo di mancata esecuzione di un agente.|  
 |**subscriptioncount**|**int**|Numero di sottoscrizioni a una pubblicazione.|  

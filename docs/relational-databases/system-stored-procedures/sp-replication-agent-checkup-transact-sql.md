@@ -16,12 +16,12 @@ ms.assetid: 50357c2e-71aa-4e13-9e2e-0977a3655cc9
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: c35b08bf98079af5f72c48c3912613cca6ec7db0
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 73335322d9e4c8602e299255ebcd3b3b183aaaec
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52789243"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58529873"
 ---
 # <a name="spreplicationagentcheckup-transact-sql"></a>sp_replication_agent_checkup (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -38,8 +38,7 @@ sp_replication_agent_checkup [ [ @heartbeat_interval = ] heartbeat_interval ]
 ```  
   
 ## <a name="arguments"></a>Argomenti  
- [ **@heartbeat_interval** =] **'***heartbeat_interval***'**  
- Periodo massimo in minuti durante il quale un agente può non registrare alcun messaggio sullo stato. *heartbeat_interval* viene **int**, con un valore predefinito è 10 minuti.  
+`[ @heartbeat_interval = ] 'heartbeat_interval'` È il numero massimo di minuti quale un agente può non registrare alcun messaggio di stato di avanzamento. *heartbeat_interval* viene **int**, con un valore predefinito è 10 minuti.  
   
 ## <a name="return-code-values"></a>Valori restituiti  
  **sp_replication_agent_checkup** genera l'errore 14151 per ogni agente rilevato come sospetto. Registra inoltre nella cronologia un messaggio di errore relativo agli agenti.  

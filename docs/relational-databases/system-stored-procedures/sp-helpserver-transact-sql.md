@@ -18,12 +18,12 @@ ms.assetid: e8f42de7-c738-41c3-8bf5-dbd559dc7184
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: a543aa923d892e12bc3baea0e3aa9d1f9c3e7504
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 31caafde6ea3cdd93355910f244ed5872b6990ff
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47827679"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58534393"
 ---
 # <a name="sphelpserver-transact-sql"></a>sp_helpserver (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -42,13 +42,11 @@ sp_helpserver [ [ @server = ] 'server' ]
 ```  
   
 ## <a name="arguments"></a>Argomenti  
- [ **@server =** ] **'***server***'**  
- Server su cui vengono restituite informazioni. Quando *server* non viene specificato, i report su tutti i server nella **Servers**. *server* viene **sysname**, con un valore predefinito è NULL.  
+`[ @server = ] 'server'` È il server su cui vengono restituite informazioni. Quando *server* non viene specificato, i report su tutti i server nella **Servers**. *server* viene **sysname**, con un valore predefinito è NULL.  
   
- [  **@optname =** ] **'***opzione***'**  
- Opzione che descrive il server. *opzione* viene **varchar (** 35 **)**, con un valore predefinito è NULL e deve essere uno dei valori seguenti.  
+`[ @optname = ] 'option'` L'opzione che descrive il server. *opzione* viene **varchar (** 35 **)**, con un valore predefinito è NULL e deve essere uno dei valori seguenti.  
   
-|valore|Description|  
+|Value|Descrizione|  
 |-----------|-----------------|  
 |**regole di confronto compatibili**|L'utilizzo di questa opzione influisce sull'esecuzione delle query distribuite in server collegati. Se questa opzione è impostata su true,|  
 |**accesso ai dati**|Consente di attivare e disabilitare un server collegato per l'accesso a query distribuite.|  
@@ -57,25 +55,24 @@ sp_helpserver [ [ @server = ] 'server' ]
 |**convalida differita dello schema**|Ignora il controllo dello schema delle tabelle remote all'inizio della query.|  
 |**pub**|Server di pubblicazione.|  
 |**rpc**|Attiva l'esecuzione di chiamate RPC dal server specificato.|  
-|**chiamate RPC in uscita**|Viene abilitata l'esecuzione di chiamate RPC al server specificato.|  
+|**rpc out**|Viene abilitata l'esecuzione di chiamate RPC al server specificato.|  
 |**sub**|Sottoscrittore.|  
 |**system**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**usare regole di confronto remote**|Consente di utilizzare le regole di confronto di una colonna remota anziché quelle del server locale.|  
   
- [  **@show_topology =** ] **'***show_topology***'**  
- Relazione tra il server specificato e gli altri server. *show_topology* viene **varchar (** 1 **)**, con un valore predefinito è NULL. Se *show_topology* non è uguale a **t** oppure è NULL, **sp_helpserver** restituisce le colonne elencate nella sezione set di risultati. Se *show_topology* è uguale a **t**, oltre alle colonne elencate nel set di risultati **sp_helpserver** restituisce inoltre **topx** e **topy** informazioni.  
+`[ @show_topology = ] 'show_topology'` È la relazione del server specificato ad altri server. *show_topology* viene **varchar (** 1 **)**, con un valore predefinito è NULL. Se *show_topology* non è uguale a **t** oppure è NULL, **sp_helpserver** restituisce le colonne elencate nella sezione set di risultati. Se *show_topology* è uguale a **t**, oltre alle colonne elencate nel set di risultati **sp_helpserver** restituisce inoltre **topx** e **topy** informazioni.  
   
 ## <a name="return-code-values"></a>Valori restituiti  
  0 (esito positivo) o 1 (esito negativo)  
   
 ## <a name="result-sets"></a>Set di risultati  
   
-|Nome colonna|Tipo di dati|Description|  
+|Nome colonna|Tipo di dati|Descrizione|  
 |-----------------|---------------|-----------------|  
 |**name**|**sysname**|Nome del server.|  
-|**nome_rete**|**sysname**|Nome di rete del server.|  
-|**status**|**varchar (** 70 **)**|Stato del server.|  
-|**id**|**Char (** 4 **)**|Numero di identificazione del server.|  
+|**network_name**|**sysname**|Nome di rete del server.|  
+|**status**|**varchar(** 70 **)**|Stato del server.|  
+|**id**|**char(** 4 **)**|Numero di identificazione del server.|  
 |**nome_regole_di_confronto**|**sysname**|Regole di confronto del server.|  
 |**connect_timeout**|**int**|Valore di timeout per la connessione al server collegato.|  
 |**query_timeout**|**int**|Valore di timeout per le query eseguite sul server collegato.|  

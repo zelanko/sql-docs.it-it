@@ -18,12 +18,12 @@ ms.assetid: c12ef6df-58c6-4391-bbbf-683ea874bd81
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: aaf644b6a8795e9c68e0053eaed0023c4b9299b6
-ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
+ms.openlocfilehash: 47a8665027ce251a391049aa71ba12b246c1c625
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/18/2018
-ms.locfileid: "53588405"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58528884"
 ---
 # <a name="spcolumnsex-transact-sql"></a>sp_columns_ex (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -45,23 +45,17 @@ sp_columns_ex [ @table_server = ] 'table_server'
 ```  
   
 ## <a name="arguments"></a>Argomenti  
- [  **@table_server =** ] **'**_table_server_**'**  
- Nome del server collegato per cui si desidera restituire le informazioni sulle colonne. *table_server* viene **sysname**, non prevede alcun valore predefinito.  
+`[ @table_server = ] 'table_server'` È il nome del server collegato per cui restituire informazioni sulle colonne. *table_server* viene **sysname**, non prevede alcun valore predefinito.  
   
- [  **@table_name =** ] **'**_table_name_**'**  
- Nome della tabella per cui si desidera restituire le informazioni sulle colonne. *TABLE_NAME* viene **sysname**, con un valore predefinito è NULL.  
+`[ @table_name = ] 'table_name'` È il nome della tabella per cui si desidera ottenere informazioni sulla colonna. *TABLE_NAME* viene **sysname**, con un valore predefinito è NULL.  
   
- [  **@table_schema =** ] **'**_table_schema_**'**  
- Nome dello schema per cui si desidera restituire le informazioni sulle colonne. *TABLE_SCHEMA* viene **sysname**, con un valore predefinito è NULL.  
+`[ @table_schema = ] 'table_schema'` È il nome dello schema della tabella per cui si desidera ottenere informazioni sulla colonna. *TABLE_SCHEMA* viene **sysname**, con un valore predefinito è NULL.  
   
- [  **@table_catalog =** ] **'**_table_catalog_**'**  
- Nome del catalogo per cui si desidera restituire le informazioni sulle colonne. *TABLE_CATALOG* viene **sysname**, con un valore predefinito è NULL.  
+`[ @table_catalog = ] 'table_catalog'` È il nome del catalogo della tabella per cui si desidera ottenere informazioni sulla colonna. *TABLE_CATALOG* viene **sysname**, con un valore predefinito è NULL.  
   
- [  **@column_name =** ] **'**_colonna_**'**  
- Nome della colonna del database per cui si desidera ottenere informazioni. *colonna* viene **sysname**, con un valore predefinito è NULL.  
+`[ @column_name = ] 'column'` È il nome della colonna di database per cui si desidera ottenere informazioni. *colonna* viene **sysname**, con un valore predefinito è NULL.  
   
- [  **@ODBCVer =** ] **'**_ODBCVer_**'**  
- Versione di ODBC utilizzata. *ODBCVer* viene **int**, con un valore predefinito è 2. che indica ODBC versione 2. I valori validi sono 2 e 3. Per informazioni sulle differenze di comportamento tra le versioni 2 e 3, vedere la specifica relativa a SQLColumns di ODBC.  
+`[ @ODBCVer = ] 'ODBCVer'` È la versione di ODBC utilizzata. *ODBCVer* viene **int**, con un valore predefinito è 2. che indica ODBC versione 2. I valori validi sono 2 e 3. Per informazioni sulle differenze di comportamento tra le versioni 2 e 3, vedere la specifica relativa a SQLColumns di ODBC.  
   
 ## <a name="return-code-values"></a>Valori restituiti  
  None  
@@ -75,19 +69,19 @@ sp_columns_ex [ @table_server = ] 'table_server'
 |**TABLE_NAME**|**sysname**|Nome della tabella o della vista. Questo campo restituisce sempre un valore.|  
 |**COLUMN_NAME**|**sysname**|Nome della colonna, per ogni colonna della **TABLE_NAME** restituito. Questo campo restituisce sempre un valore.|  
 |**DATA_TYPE**|**smallint**|Valore intero corrispondente agli indicatori del tipo di dati ODBC. Se si tratta di un tipo di dati di cui non è possibile eseguire il mapping a un tipo ODBC, il valore è NULL. Viene restituito il nome del tipo di dati nativi nel **TYPE_NAME** colonna.|  
-|**TYPE_NAME**|**varchar (** 13 **)**|Stringa che rappresenta un tipo di dati. Il DBMS sottostante utilizza questo nome del tipo di dati.|  
-|**VALORE DI COLUMN_SIZE**|**int**|Numero di cifre significative. Il valore restituito per il **precisione** colonna si trova in base 10.|  
+|**TYPE_NAME**|**varchar(** 13 **)**|Stringa che rappresenta un tipo di dati. Il DBMS sottostante utilizza questo nome del tipo di dati.|  
+|**COLUMN_SIZE**|**int**|Numero di cifre significative. Il valore restituito per il **precisione** colonna si trova in base 10.|  
 |**BUFFER_LENGTH**|**int**|Dimensioni di trasferimento dei dati.1|  
 |**DECIMAL_DIGITS**|**smallint**|Numero di cifre a destra del separatore decimale.|  
 |**NUM_PREC_RADIX**|**smallint**|Base per i tipi di dati numerici.|  
 |**AMMETTE VALORI NULL**|**smallint**|Specifica se i valori Null sono supportati.<br /><br /> 1 = I valori Null sono supportati.<br /><br /> 0 = I valori Null non sono supportati (NOT NULL).|  
-|**SEZIONE OSSERVAZIONI**|**varchar (** 254 **)**|In questo campo viene sempre restituito NULL.|  
-|**COLUMN_DEF**|**varchar (** 254 **)**|Valore predefinito della colonna.|  
+|**REMARKS**|**varchar(** 254 **)**|In questo campo viene sempre restituito NULL.|  
+|**COLUMN_DEF**|**varchar(** 254 **)**|Valore predefinito della colonna.|  
 |**SQL_DATA_TYPE**|**smallint**|Valore del tipo di dati SQL visualizzato nel campo TYPE del descrittore. Questa colonna corrisponde al **DATA_TYPE** colonna, tranne che per il **datetime** e SQL-92 **intervallo** i tipi di dati. In questa colonna viene sempre restituito un valore.|  
 |**SQL_DATETIME_SUB**|**smallint**|Codice di sottotipo per **data/ora** e SQL-92 **intervallo** i tipi di dati. Per gli altri tipi di dati in questa colonna viene restituito NULL.|  
 |**CHAR_OCTET_LENGTH**|**int**|Lunghezza massima, espressa in byte, di una colonna di tipo carattere o integer. Per tutti gli altri tipi di dati in questa colonna viene restituito NULL.|  
 |**ORDINAL_POSITION**|**int**|Posizione ordinale della colonna nella tabella. La prima colonna nella tabella è 1. In questa colonna viene sempre restituito un valore.|  
-|**IS_NULLABLE**|**varchar (** 254 **)**|Impostazione relativa al supporto di valori Null nella colonna della tabella. Per determinare il supporto di valori Null vengono seguite le regole ISO. In un sistema DBMS conforme a ISO SQL non vengono restituite stringhe vuote.<br /><br /> YES = La colonna ammette valori Null.<br /><br /> NO = La colonna non ammette valori Null.<br /><br /> Quando non è noto se i valori Null sono supportati, in questa colonna viene restituita una stringa di lunghezza zero.<br /><br /> Il valore restituito per questa colonna è diversa dal valore restituito per il **NULLABLE** colonna.|  
+|**IS_NULLABLE**|**varchar(** 254 **)**|Impostazione relativa al supporto di valori Null nella colonna della tabella. Per determinare il supporto di valori Null vengono seguite le regole ISO. In un sistema DBMS conforme a ISO SQL non vengono restituite stringhe vuote.<br /><br /> YES = La colonna ammette valori Null.<br /><br /> NO = La colonna non ammette valori Null.<br /><br /> Quando non è noto se i valori Null sono supportati, in questa colonna viene restituita una stringa di lunghezza zero.<br /><br /> Il valore restituito per questa colonna è diversa dal valore restituito per il **NULLABLE** colonna.|  
 |**SS_DATA_TYPE**|**tinyint**|Tipo di dati di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utilizzato in stored procedure estese.|  
   
  Per ulteriori informazioni, vedere la documentazione di Microsoft ODBC.  

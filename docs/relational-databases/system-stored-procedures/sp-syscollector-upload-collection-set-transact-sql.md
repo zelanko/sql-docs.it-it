@@ -19,12 +19,12 @@ ms.assetid: eed9232c-2b0a-4b6a-8ba0-76b7c99f48dc
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 9017209ef2e4b500ee6a90e14830b520ed2a588d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d246e2817c34449ab6d4dd5d3def62feba92b196
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47780900"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58526553"
 ---
 # <a name="spsyscollectoruploadcollectionset-transact-sql"></a>sp_syscollector_upload_collection_set (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -45,11 +45,9 @@ sp_syscollector_upload_collection_set [[ @collection_set_id = ] collection_set_i
 ```  
   
 ## <a name="arguments"></a>Argomenti  
- [ **@collection_set_id =** ] *collection_set_id*  
- Identificatore univoco locale del set di raccolta. *collection_set_id* viene **int** e deve avere un valore se *nome* è NULL.  
+`[ @collection_set_id = ] collection_set_id` È l'identificatore univoco locale del set di raccolta. *collection_set_id* viene **int** e deve avere un valore se *nome* è NULL.  
   
- [  **@name =** ] **'***nome***'**  
- Nome del set di raccolta. *nome* viene **sysname** e deve avere un valore se *collection_set_id* è NULL.  
+`[ @name = ] 'name'` È il nome del set di raccolta. *nome* viene **sysname** e deve avere un valore se *collection_set_id* è NULL.  
   
 ## <a name="return-code-values"></a>Valori restituiti  
  **0** (esito positivo) o **1** (errore)  

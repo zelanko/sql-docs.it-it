@@ -16,12 +16,12 @@ ms.assetid: b6e9e0d2-9144-434d-88af-4874f2582399
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: d28ff96d07aa1b7e65097fbf7946b40dfb56adea
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: e3d9af0e5eff8aff2715ff2be6caa1757702fb8b
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52808743"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58529563"
 ---
 # <a name="spunregistercustomscripting-transact-sql"></a>sp_unregister_custom_scripting (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -40,21 +40,18 @@ sp_unregister_custom_scripting [ @type  = ] 'type'
 ```  
   
 ## <a name="arguments"></a>Argomenti  
- [ **@type** =] **'***tipo***'**  
- Tipo della stored procedure o dello script personalizzato da rimuovere. *tipo di* viene **varchar(16)** e non prevede alcun valore predefinito e può essere uno dei valori seguenti.  
+`[ @type = ] 'type'` Si desidera rimuovere il tipo di stored procedure o script personalizzati. *tipo di* viene **varchar(16)** e non prevede alcun valore predefinito e può essere uno dei valori seguenti.  
   
 |Value|Descrizione|  
 |-----------|-----------------|  
 |**insert**|La stored procedure o lo script personalizzato registrato viene eseguito quando viene replicata un'istruzione INSERT.|  
-|**Aggiornamento**|La stored procedure o lo script personalizzato registrato viene eseguito quando viene replicata un'istruzione UPDATE.|  
+|**update**|La stored procedure o lo script personalizzato registrato viene eseguito quando viene replicata un'istruzione UPDATE.|  
 |**delete**|La stored procedure o lo script personalizzato registrato viene eseguito quando viene replicata un'istruzione DELETE.|  
 |**custom_script**|La stored procedure o lo script personalizzato registrato viene eseguito al termine del trigger DDL (Data Definition Language).|  
   
- [ **@publication** =] **'***pubblicazione***'**  
- Nome della pubblicazione per cui si desidera rimuovere la stored procedure o lo script personalizzato. *pubblicazione* viene **sysname**, con un valore predefinito è NULL.  
+`[ @publication = ] 'publication'` Nome della pubblicazione per il quale viene rimossa la stored procedure o script personalizzati. *pubblicazione* viene **sysname**, con un valore predefinito è NULL.  
   
- [ **@article** =] **'***articolo***'**  
- Nome dell'articolo per cui si desidera rimuovere la stored procedure o lo script personalizzato. *articolo* viene **sysname**, con un valore predefinito è NULL.  
+`[ @article = ] 'article'` Nome dell'articolo per il quale viene rimossa la stored procedure o script personalizzati. *articolo* viene **sysname**, con un valore predefinito è NULL.  
   
 ## <a name="return-code-values"></a>Valori restituiti  
  **0** (esito positivo) o **1** (errore)  

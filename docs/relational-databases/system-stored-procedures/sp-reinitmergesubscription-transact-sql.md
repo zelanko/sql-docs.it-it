@@ -16,12 +16,12 @@ ms.assetid: 249a4048-e885-48e0-a92a-6577f59de751
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 2fddf00f340fa4e8ea47402c4da9a67955b4ba68
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 1188bb26c8c63267f30110bf890589d1670fdf8b
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52808673"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58531443"
 ---
 # <a name="spreinitmergesubscription-transact-sql"></a>sp_reinitmergesubscription (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -41,17 +41,13 @@ sp_reinitmergesubscription [ [ @publication = ] 'publication'
 ```  
   
 ## <a name="arguments"></a>Argomenti  
- [  **@publication =** ] **'***pubblicazione***'**  
- Nome della pubblicazione. *pubblicazione* viene **sysname**, il valore predefinito è **tutti**.  
+`[ @publication = ] 'publication'` È il nome della pubblicazione. *pubblicazione* viene **sysname**, il valore predefinito è **tutti**.  
   
- [  **@subscriber =** ] **'***sottoscrittore***'**  
- Nome del Sottoscrittore. *Sottoscrittore* viene **sysname**, il valore predefinito è **tutti**.  
+`[ @subscriber = ] 'subscriber'` È il nome del sottoscrittore. *Sottoscrittore* viene **sysname**, il valore predefinito è **tutti**.  
   
- [  **@subscriber_db =** ] **'***subscriber_db***'**  
- Nome del database Sottoscrittore. *subscriber_db* viene **sysname**, il valore predefinito è **tutti**.  
+`[ @subscriber_db = ] 'subscriber_db'` È il nome del database sottoscrittore. *subscriber_db* viene **sysname**, il valore predefinito è **tutti**.  
   
- [  **@upload_first =** ] **'***upload_first***'**  
- Indica se le modifiche nel Sottoscrittore vengono caricate prima della reinizializzazione della sottoscrizione. *upload_first* viene **nvarchar(5**, con un valore predefinito è FALSE. Se **true**, le modifiche vengono caricate prima della reinizializzazione della sottoscrizione. Se **false**, le modifiche non vengono caricate.  
+`[ @upload_first = ] 'upload_first'` Indica se le modifiche del sottoscrittore vengono caricate prima della reinizializzazione della sottoscrizione. *upload_first* viene **nvarchar(5**, con un valore predefinito è FALSE. Se **true**, le modifiche vengono caricate prima della reinizializzazione della sottoscrizione. Se **false**, le modifiche non vengono caricate.  
   
 ## <a name="return-code-values"></a>Valori restituiti  
  **0** (esito positivo) o **1** (errore)  

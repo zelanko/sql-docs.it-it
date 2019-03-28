@@ -11,12 +11,12 @@ ms.assetid: 26aa534a-afe7-4a14-b99f-a9184fc699bd
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: d88e1fa7853c1207f1a8c95da2f96bb77dd7d49c
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 45004f8544efc0f0cc02292dbe28fdd75d6dc1de
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53355328"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58534073"
 ---
 # <a name="lesson-7-move-your-data-files-to-windows-azure-storage"></a>Lezione 7: spostare i file di dati in Archiviazione di Windows Azure
   In questa lezione, verrà illustrato come spostare i file di dati in Archiviazione di Windows Azure (non l'istanza di SQL Server). È possibile seguire questa lezione anche senza aver completato le lezioni 4, 5 e 6.  
@@ -37,7 +37,7 @@ ms.locfileid: "53355328"
   
 1.  Innanzitutto, creare un database di prova nel computer di origine e aggiungere alcuni dati.  
   
-    ```tsql  
+    ```sql  
   
     USE master;   
     CREATE DATABASE TestDB1Alter;   
@@ -53,7 +53,7 @@ ms.locfileid: "53355328"
   
 2.  Eseguire il codice seguente:  
   
-    ```tsql  
+    ```sql  
   
     -- In the following statement, modify the path specified in FILENAME to   
     -- the new location of the file in Windows Azure Storage container.   
@@ -68,7 +68,7 @@ ms.locfileid: "53355328"
   
 4.  Quindi, impostare il database come offline.  
   
-    ```tsql  
+    ```sql  
   
     ALTER DATABASE TestDB1Alter SET OFFLINE;   
     GO  
@@ -81,7 +81,7 @@ ms.locfileid: "53355328"
   
 6.  Quindi, impostare il database come online.  
   
-    ```tsql  
+    ```sql  
   
     ALTER DATABASE TestDB1Alter SET ONLINE;   
     GO  

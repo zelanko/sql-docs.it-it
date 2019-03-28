@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 17993952-def6-4a16-b1c1-323ec42967f8
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 64a1e4f2b1d7b31461cbcc23b21e996aea060b4a
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: c86bf467eb83e372b7c90375ae95d659c98532a4
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52791693"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58534007"
 ---
 # <a name="spgrantpublicationaccess-transact-sql"></a>sp_grant_publication_access (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -38,14 +38,11 @@ sp_grant_publication_access [ @publication = ] 'publication', [ @login = ] 'logi
 ```  
   
 ## <a name="arguments"></a>Argomenti  
- [ **@publication**=] **'***pubblicazione***'**  
- Nome della pubblicazione a cui si desidera accedere. **«***publication***'** viene **sysname**, non prevede alcun valore predefinito.  
+`[ @publication = ] 'publication'` È il nome della pubblicazione a cui accedere. **«***publication***'** viene **sysname**, non prevede alcun valore predefinito.  
   
- [ **@login**=] **'***account di accesso***'**  
- ID di accesso. **«***account di accesso***'** viene **sysname**, non prevede alcun valore predefinito.  
+`[ @login = ] 'login'` ID di accesso. **«***account di accesso***'** viene **sysname**, non prevede alcun valore predefinito.  
   
- [  **@reserved =**] **'***riservato***'**  
- [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
+`[ @reserved = ] 'reserved'` [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
   
 ## <a name="return-code-values"></a>Valori restituiti  
  **0** (esito positivo) o **1** (errore)  

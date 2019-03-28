@@ -1,5 +1,5 @@
 ---
-title: 'Esempio: specifica delle direttive ID e IDREF | Microsoft Docs'
+title: 'Esempio: Specifica delle direttive ID e IDREF | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -10,17 +10,17 @@ helpviewer_keywords:
 - IDREF directive
 - ID directive
 ms.assetid: 7ff1ea73-71ca-4786-bd42-564f1b5de2d9
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
-ms.openlocfilehash: cb7daf7eb63adf5b1c0978879225f161e2e00cba
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: f985745f450b402781685ded5c0a655e3f4e497c
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48211381"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58532023"
 ---
-# <a name="example-specifying-the-id-and-idref-directives"></a>Esempio: specifica delle direttive ID, IDREF
+# <a name="example-specifying-the-id-and-idref-directives"></a>Esempio: Specifica delle direttive ID e IDREF
   Questo esempio è pressoché lo stesso di [Specificare la direttiva ELEMENTXSINIL](example-specifying-the-elementxsinil-directive.md) . L'unica differenza è che la query specifica le direttive **ID** e **IDREF** . Queste direttive sovrascrivono i tipi dell'attributo **SalesPersonID** negli elementi <`OrderHeader`> e <`OrderDetail`>. creano collegamenti tra più documenti. Per visualizzare i tipi sovrascritti è necessario lo schema. La query specifica pertanto l'opzione **XMLDATA** nella clausola FOR XML per ottenere il recupero dello schema.  
   
 ```  

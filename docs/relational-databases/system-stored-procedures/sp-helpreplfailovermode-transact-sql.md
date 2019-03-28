@@ -16,12 +16,12 @@ ms.assetid: d1090e42-6840-4bf6-9aa9-327fd8987ec2
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 19fafb4b3ef3737018aaae21992f0b6a859c7ef3
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: f733740b062983f14379f71a48b77f73392aceae
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52796432"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58529533"
 ---
 # <a name="sphelpreplfailovermode-transact-sql"></a>sp_helpreplfailovermode (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -42,25 +42,21 @@ sp_helpreplfailovermode [ @publisher= ] 'publisher'
 ```  
   
 ## <a name="arguments"></a>Argomenti  
- [  **@publisher=**] **'***publisher***'**  
- Nome del server di pubblicazione che partecipa all'aggiornamento del Sottoscrittore. *server di pubblicazione* viene **sysname**, non prevede alcun valore predefinito. Il server di pubblicazione deve essere già configurato per la pubblicazione.  
+`[ @publisher = ] 'publisher'` È il nome del server di pubblicazione che partecipa l'aggiornamento del sottoscrittore. *server di pubblicazione* viene **sysname**, non prevede alcun valore predefinito. Il server di pubblicazione deve essere già configurato per la pubblicazione.  
   
- [  **@publisher_db =**] **'***publisher_db***'**  
- Nome del database di pubblicazione. *publisher_db* viene **sysname**, non prevede alcun valore predefinito.  
+`[ @publisher_db = ] 'publisher_db'` È il nome del database di pubblicazione. *publisher_db* viene **sysname**, non prevede alcun valore predefinito.  
   
- [  **@publication=**] **'***pubblicazione***'**  
- Nome della pubblicazione che partecipa all'aggiornamento del Sottoscrittore. *pubblicazione*viene **sysname**, non prevede alcun valore predefinito.  
+`[ @publication = ] 'publication'` È il nome della pubblicazione che fa parte di aggiornamento del sottoscrittore. *pubblicazione*viene **sysname**, non prevede alcun valore predefinito.  
   
- [  **@failover_mode_id=**] **'***failover_mode_id***' OUTPUT**  
- Restituisce il valore intero della modalità di failover ed è un' **OUTPUT** parametro. *failover_mode_id* è un **tinyint** con valore predefinito è **0**. Viene restituito **0** per l'aggiornamento immediato e **1** per l'aggiornamento in coda.  
+`[ @failover_mode_id = ] 'failover_mode_id' OUTPUT` Restituisce il valore intero della modalità di failover ed è un' **OUTPUT** parametro. *failover_mode_id* è un **tinyint** con valore predefinito è **0**. Viene restituito **0** per l'aggiornamento immediato e **1** per l'aggiornamento in coda.  
   
- [**@failover_mode=**] **'***failover_mode***' OUTPUT**  
+ [**@failover_mode=**] **'***failover_mode***'OUTPUT**  
  Restituisce la modalità di implementazione delle modifiche dei dati nel Sottoscrittore. *failover_mode* è un **nvarchar(10)** con valore predefinito è NULL. È un' **OUTPUT** parametro.  
   
 |Value|Descrizione|  
 |-----------|-----------------|  
-|**Controllo immediato**|Aggiornamento immediato: gli aggiornamenti implementati nel Sottoscrittore vengono propagati immediatamente al server di pubblicazione tramite il protocollo di commit in due fasi (2PC).|  
-|**In coda**|Aggiornamento in coda: gli aggiornamenti implementati nel Sottoscrittore vengono archiviati in una coda.|  
+|**immediate**|Aggiornamento immediato: gli aggiornamenti implementati nel Sottoscrittore vengono propagati immediatamente al server di pubblicazione tramite il protocollo di commit in due fasi (2PC).|  
+|**queued**|Aggiornamento in coda: gli aggiornamenti implementati nel Sottoscrittore vengono archiviati in una coda.|  
   
 ## <a name="return-code-values"></a>Valori restituiti  
  **0** (esito positivo) o **1** (errore)  

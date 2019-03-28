@@ -1,5 +1,5 @@
 ---
-title: 'Esempio: Specifica della direttiva HIDE | Microsoft Docs'
+title: 'Esempio: specifica della direttiva HIDE | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -9,17 +9,17 @@ ms.topic: conceptual
 helpviewer_keywords:
 - HIDE directive
 ms.assetid: 87504d87-1cbd-412a-9041-47884b6efcec
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 26c71a7012cb69a50bf7d3d7223b35aedcfcc570
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 901fa0d72798862f54ebc23131870b704538cb8a
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53357097"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58531803"
 ---
-# <a name="example-specifying-the-hide-directive"></a>Esempio: Specifica della direttiva HIDE
+# <a name="example-specifying-the-hide-directive"></a>Esempio: specifica della direttiva HIDE
   Nell'esempio seguente viene illustrato l'utilizzo della direttiva **HIDE** . Questa direttiva si rivela utile quando si desidera la restituzione di un attributo in base al quale ordinare le righe nella tabella universale restituita dalla query, ma non si desidera che tale attributo venga visualizzato nel documento XML finale.  
   
  La query genera il codice XML seguente:  

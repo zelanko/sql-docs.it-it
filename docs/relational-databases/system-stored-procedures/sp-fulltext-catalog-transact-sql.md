@@ -19,12 +19,12 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: ab482a70374c9a11256719811db02dd4eb1586e4
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f97a1f480b360270d803c502dd40a6e1653b3935
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47663239"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58526443"
 ---
 # <a name="spfulltextcatalog-transact-sql"></a>sp_fulltext_catalog (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -46,16 +46,14 @@ sp_fulltext_catalog [ @ftcat= ] 'fulltext_catalog_name' ,
 ```  
   
 ## <a name="arguments"></a>Argomenti  
- [  **@ftcat=**] **'***fulltext_catalog_name***'**  
- Nome del catalogo full-text. I nomi dei cataloghi devono essere univoci per ogni database. *fulltext_catalog_name* viene **sysname**.  
+`[ @ftcat = ] 'fulltext_catalog_name'` È il nome del catalogo full-text. I nomi dei cataloghi devono essere univoci per ogni database. *fulltext_catalog_name* viene **sysname**.  
   
- [  **@action=**] **'***azione***'**  
- Azione da eseguire. *azione* viene **varchar (20)**, i possibili valori sono i seguenti.  
+`[ @action = ] 'action'` È l'azione da eseguire. *azione* viene **varchar (20)**, i possibili valori sono i seguenti.  
   
 > [!NOTE]  
 >  I cataloghi full-text possono essere creati, eliminati e modificati in base alle necessità. Evitare tuttavia di modificare contemporaneamente più cataloghi a livello di schema. È possibile eseguire queste azioni usando il **sp_fulltext_table** stored procedure, che è il metodo consigliato.  
   
-|valore|Description|  
+|Value|Descrizione|  
 |-----------|-----------------|  
 |**Creare**|Crea un catalogo full-text vuoto, una novità nel file system e aggiunge una riga corrispondente in **sysfulltextcatalogs** con il *fulltext_catalog_name* e *root_directory*, Se presente, i valori. *fulltext_catalog_name* deve essere univoco all'interno del database.|  
 |**Drop**|Eliminazioni *fulltext_catalog_name* rimuoverlo dal file system ed eliminando la riga associata nella **sysfulltextcatalogs**. Questa azione non viene completata se nel catalogo sono inclusi indici per una o più tabelle. **sp_fulltext_table** »*table_name*', 'drop' deve essere eseguita per eliminare le tabelle dal catalogo.<br /><br /> Se il catalogo non esiste, viene visualizzato un errore.|  
@@ -64,8 +62,7 @@ sp_fulltext_catalog [ @ftcat= ] 'fulltext_catalog_name' ,
 |**Arresta**|Arresta un popolamento dell'indice per *fulltext_catalog_name*. Se il catalogo non esiste, viene visualizzato un errore. Se il popolamento è già stato arrestato, non viene visualizzato alcun avviso.|  
 |**Ricompilazione**|Consente di ricompilare *fulltext_catalog_name*. Quando viene ricompilato un catalogo, il catalogo esistente viene eliminato e al suo posto viene creato un nuovo catalogo. Tutte le tabelle con riferimenti di indicizzazione full-text vengono associate al nuovo catalogo. La ricompilazione reimposta i metadati full-text nelle tabelle di sistema del database.<br /><br /> Se il rilevamento delle modifiche è impostato su OFF, la ricompilazione non comporta il ripopolamento del catalogo full-text appena creato. In questo caso, per eseguire la ricompilazione, eseguire **sp_fulltext_catalog** con il **start_full** oppure **start_incremental** azione.|  
   
- [  **@path=**] **'***root_directory***'**  
- È la directory radice (non percorso fisico completo) per un **creare** azione. *root_directory* viene **nvarchar(100)** e ha un valore predefinito null, ovvero viene utilizzato il percorso predefinito specificato al momento dell'installazione. Si tratta della sottodirectory Ftdata della directory Mssql, ad esempio, C:\Program Files\Microsoft SQL Server\MSSQL13. MSSQLSERVER\MSSQL\FTData. La directory radice specificata deve trovarsi in un'unità dello stesso computer, non deve corrispondere alla sola lettera di unità e non può essere un percorso relativo. Le unità di rete, le unità rimovibili, i dischi floppy e i percorsi in formato UNC non sono supportati. È necessario creare i cataloghi full-text in un'unità disco rigido locale associata a un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+`[ @path = ] 'root_directory'` È la directory radice (non percorso fisico completo) per un **creare** azione. *root_directory* viene **nvarchar(100)** e ha un valore predefinito null, ovvero viene utilizzato il percorso predefinito specificato al momento dell'installazione. Si tratta della sottodirectory Ftdata della directory Mssql, ad esempio, C:\Program Files\Microsoft SQL Server\MSSQL13. MSSQLSERVER\MSSQL\FTData. La directory radice specificata deve trovarsi in un'unità dello stesso computer, non deve corrispondere alla sola lettera di unità e non può essere un percorso relativo. Le unità di rete, le unità rimovibili, i dischi floppy e i percorsi in formato UNC non sono supportati. È necessario creare i cataloghi full-text in un'unità disco rigido locale associata a un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
  **@path** è valido solo quando *azione* viene **creare**. Per le azioni diverse da **creare** (**arrestare**, **ricompilare**e così via), **@path** deve essere NULL o omesso.  
   

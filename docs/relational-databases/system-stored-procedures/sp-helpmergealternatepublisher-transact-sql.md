@@ -16,12 +16,12 @@ ms.assetid: a96e365f-5967-4580-9d79-5bacf2d12211
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: a0ff0acfc4e3eff25b4281637d1f707ce925a7df
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: c00e7c26a429836f0d350e60530d2dc1db8c2a61
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52802253"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58526413"
 ---
 # <a name="sphelpmergealternatepublisher-transact-sql"></a>sp_helpmergealternatepublisher (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -38,14 +38,11 @@ sp_helpmergealternatepublisher [ @publisher = ] 'publisher', [ @publisher_db = ]
 ```  
   
 ## <a name="arguments"></a>Argomenti  
- [  **@publisher=**] **'***publisher***'**  
- È il nome del server di pubblicazione alternativo. *server di pubblicazione* viene **sysname**, non prevede alcun valore predefinito.  
+`[ @publisher = ] 'publisher'` È il nome del server di pubblicazione alternativo. *server di pubblicazione* viene **sysname**, non prevede alcun valore predefinito.  
   
- [ **@publisher_db=**] **'***publisher_db***'**  
- È il nome del database di pubblicazione. *publisher_db* viene **sysname**, non prevede alcun valore predefinito.  
+`[ @publisher_db = ] 'publisher_db'` È il nome del database di pubblicazione. *publisher_db* viene **sysname**, non prevede alcun valore predefinito.  
   
- [  **@publication=**] **'***pubblicazione***'**  
- È il nome della pubblicazione. *publication* viene **sysname**, non prevede alcun valore predefinito.  
+`[ @publication = ] 'publication'` È il nome della pubblicazione. *publication* viene **sysname**, non prevede alcun valore predefinito.  
   
 ## <a name="result-sets"></a>Set di risultati  
   

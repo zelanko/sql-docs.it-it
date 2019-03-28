@@ -4,15 +4,15 @@ ms.prod: sql
 ms.technology: machine-learning
 ms.date: 02/28/2019
 ms.topic: conceptual
-author: HeidiSteen
-ms.author: heidist
+author: dphansen
+ms.author: davidph
 manager: cgronlun
-ms.openlocfilehash: fd6f67e3095af0f1a53ed533ea9b763d52547e39
-ms.sourcegitcommit: 2533383a7baa03b62430018a006a339c0bd69af2
+ms.openlocfilehash: 19427de01c39dc4b4578fc31db1d610af829d770
+ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57018067"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58510739"
 ---
 # <a name="known-issues-in-machine-learning-services"></a>Problemi noti di Machine Learning Services
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -358,7 +358,7 @@ Ad esempio, si supponga che due funzioni, è stata definita `f` e `g`, nell'ambi
 
 Se si verifica questo problema, è possibile risolverlo incorporando la definizione di `f` all'interno della definizione di `g`, in qualsiasi punto prima che `g` chiamerebbe normalmente `f`.
 
-Ad esempio:
+Esempio:
 
 ```R
 f <- function(x) { 2*x * 3 }

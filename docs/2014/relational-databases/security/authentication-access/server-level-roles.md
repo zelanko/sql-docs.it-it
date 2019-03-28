@@ -22,12 +22,12 @@ ms.assetid: 7adf2ad7-015d-4cbe-9e29-abaefd779008
 author: VanMSFT
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 714bfb68234a10a61b8ed41651da4f9f7037320e
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 95ffdd52ff4c71039a87f177e67d51cb81830c68
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53351740"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58531853"
 ---
 # <a name="server-level-roles"></a>Ruoli a livello di server
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] fornisce ruoli a livello di server per semplificare la gestione delle autorizzazioni in un server. Questi ruoli sono entità di sicurezza che raggruppano altre entità. L'ambito delle autorizzazioni dei ruoli a livello di server è l'intero server. I*ruoli* equivalgono ai *gruppi* nel sistema operativo Windows.  
@@ -62,7 +62,7 @@ ms.locfileid: "53351740"
 ## <a name="server-level-permissions"></a>Autorizzazioni a livello di server  
  Ai ruoli del server definiti dall'utente è possibile aggiungere solo autorizzazioni a livello di server. Per elencare le autorizzazioni a livello di server, eseguire la seguente istruzione. Di seguito sono elencate le autorizzazioni a livello di server:  
   
-```tsql  
+```sql  
 SELECT * FROM sys.fn_builtin_permissions('SERVER') ORDER BY permission_name;  
 ```  
   

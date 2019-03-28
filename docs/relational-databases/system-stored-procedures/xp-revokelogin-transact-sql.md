@@ -18,12 +18,12 @@ ms.assetid: b3fa7678-dba4-4537-be94-5ae63ca11f81
 author: VanMSFT
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: e7996e3f5d91c78a83266c6d5b23ce8b3d381064
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 0785e7b7d394177efee3ae12cb6d0e2f7d8cb5f2
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47767939"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58528964"
 ---
 # <a name="xprevokelogin-transact-sql"></a>xp_revokelogin (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -43,8 +43,7 @@ xp_revokelogin {[@loginame=] 'login'}
 ```  
   
 ## <a name="arguments"></a>Argomenti  
- [ **@loginame =** ] **'***login***'**  
- Nome dell'utente o gruppo di Windows a cui revocare l'accesso. *account di accesso* deve includere il nome di dominio, ad esempio **[ADVWKS\sylvester1]**. *account di accesso* viene **sysname**, non prevede alcun valore predefinito.  
+`[ @loginame = ] 'login'` È il nome dell'utente di Windows o del gruppo a cui revocare l'accesso. *account di accesso* deve includere il nome di dominio, ad esempio **[ADVWKS\sylvester1]**. *account di accesso* viene **sysname**, non prevede alcun valore predefinito.  
   
 ## <a name="return-code-values"></a>Valori restituiti  
  0 (esito positivo) o 1 (esito negativo)  

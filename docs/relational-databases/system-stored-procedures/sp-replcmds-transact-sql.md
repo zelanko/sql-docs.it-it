@@ -16,12 +16,12 @@ ms.assetid: 7e932f80-cc6e-4109-8db4-2b7c8828df73
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: c868fe69df1f3fd34fe0c1f550507e7db7b6c944
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 42d64a5a62fd1d1371604c7d8311ba42dabf7861
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52823425"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58529713"
 ---
 # <a name="spreplcmds-transact-sql"></a>sp_replcmds (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -41,15 +41,14 @@ sp_replcmds [ @maxtrans = ] maxtrans
 ```  
   
 ## <a name="arguments"></a>Argomenti  
- [  **@maxtrans=**] *maxtrans*  
- Numero di transazioni su cui si desidera ottenere informazioni. *maxtrans* viene **int**, il valore predefinito è **1**, che specifica la transazione successiva in attesa per la distribuzione.  
+`[ @maxtrans = ] maxtrans` È il numero di transazioni da ottenere informazioni. *maxtrans* viene **int**, il valore predefinito è **1**, che specifica la transazione successiva in attesa per la distribuzione.  
   
 ## <a name="result-sets"></a>Set di risultati  
   
 |Nome colonna|Tipo di dati|Descrizione|  
 |-----------------|---------------|-----------------|  
-|**id articolo**|**int**|ID dell'articolo.|  
-|**che**|**bit**|Indica se si tratta di un comando parziale.|  
+|**article id**|**int**|ID dell'articolo.|  
+|**partial_command**|**bit**|Indica se si tratta di un comando parziale.|  
 |**comando**|**varbinary(1024)**|Valore del comando.|  
 |**xactid**|**binary(10)**|ID della transazione.|  
 |**xact_seqno**|**varbinary(16)**|Numero di sequenza della transazione.|  

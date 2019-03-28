@@ -13,15 +13,15 @@ helpviewer_keywords:
 - XML schema collections [SQL Server], predefined
 - built-in XML schema collections [SQL Server]
 ms.assetid: 1e118303-5df0-4ee4-bd8d-14ced7544144
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 2b9c91e26c7c797bcde837d59c9447bc50d7d435
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 410dd8785ce58f87b35c6c18b5c5dc00ffcd9faa
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53376053"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58533833"
 ---
 # <a name="reference-the-built-in-xml-schema-collection-sys"></a>Riferimento alla raccolta di XML Schema predefinita (sys)
   Per ogni database creato è disponibile una raccolta di XML Schema **sys** predefinita nello schema relazionale **sys** . Tale raccolta riserva questi schemi predefiniti, ai quali è possibile accedere da qualsiasi altra raccolta XML Schema creata dall'utente. I prefissi utilizzati negli schemi predefiniti sono significativi in XQuery. L'unico prefisso riservato è **xml** .  

@@ -18,12 +18,12 @@ ms.assetid: 7e1f017e-c898-4225-b375-6a73ef9aac7b
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 43d9180ace10e61bbb9a9e65f48e718b8b426ea8
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 1fc6f82a6f39755b6810a3a1043833fcc13213a0
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47763879"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58529133"
 ---
 # <a name="sphelpextendedproc-transact-sql"></a>sp_helpextendedproc (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -43,18 +43,17 @@ sp_helpextendedproc [ [@funcname = ] 'procedure' ]
 ```  
   
 ## <a name="arguments"></a>Argomenti  
- [  **@funcname =**] **'***procedure***'**  
- Nome della stored procedure estesa su cui si desidera ottenere informazioni. *routine* viene **sysname**, con un valore predefinito è NULL.  
+`[ @funcname = ] 'procedure'` È il nome della stored procedure estesa per cui vengono restituite informazioni. *routine* viene **sysname**, con un valore predefinito è NULL.  
   
 ## <a name="return-code-values"></a>Valori restituiti  
  0 (esito positivo) o 1 (esito negativo)  
   
 ## <a name="result-sets"></a>Set di risultati  
   
-|Nome colonna|Tipo di dati|Description|  
+|Nome colonna|Tipo di dati|Descrizione|  
 |-----------------|---------------|-----------------|  
 |**name**|**sysname**|Nome della stored procedure estesa.|  
-|**DLL**|**nvarchar(255)**|Nome della DLL.|  
+|**dll**|**nvarchar(255)**|Nome della DLL.|  
   
 ## <a name="remarks"></a>Note  
  Quando *routine* omette **sp_helpextendedproc** restituisce informazioni sulla stored procedure estesa. Quando questo parametro viene omesso, **sp_helpextendedproc** restituisce tutti i nomi di stored procedure e i nomi delle DLL a cui ogni stored procedure estesa estesi appartiene.  

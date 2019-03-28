@@ -18,12 +18,12 @@ ms.assetid: 8cad1dcc-b43e-43bd-bea0-cb0055c84169
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 05e5ef298e9365b63b4e66b93c0f2aa637be8312
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 69f65ee2e299197504c4bd970a835a28c2f89b21
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47706999"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58534143"
 ---
 # <a name="sphelpcategory-transact-sql"></a>sp_help_category (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -43,29 +43,25 @@ sp_help_category [ [ @class = ] 'class' ]
 ```  
   
 ## <a name="arguments"></a>Argomenti  
- [  **@class=**] **'***classe***'**  
- Classe su cui si desidera ottenere informazioni. *classe* viene **varchar (8)**, con valore predefinito è **processo**. *classe* può essere uno dei valori seguenti.  
+`[ @class = ] 'class'` La classe su cui vengono richieste informazioni. *classe* viene **varchar (8)**, con valore predefinito è **processo**. *classe* può essere uno dei valori seguenti.  
   
-|valore|Description|  
+|Value|Descrizione|  
 |-----------|-----------------|  
 |**JOB**|Restituisce informazioni su una categoria di processi.|  
 |**AVVISO**|Restituisce informazioni su una categoria di avvisi.|  
-|**OPERATORE**|Restituisce informazioni su una categoria di operatori.|  
+|**OPERATOR**|Restituisce informazioni su una categoria di operatori.|  
   
- [  **@type=** ] **'***tipo***'**  
- Tipo di categoria su cui vengono richieste informazioni. *tipo di* viene **varchar(12)**, con un valore predefinito è NULL, i possibili valori sono i seguenti.  
+`[ @type = ] 'type'` Tipo di categoria per il quale vengono richieste informazioni. *tipo di* viene **varchar(12)**, con un valore predefinito è NULL, i possibili valori sono i seguenti.  
   
-|valore|Description|  
+|Value|Descrizione|  
 |-----------|-----------------|  
 |**LOCAL**|Categoria di processi locali.|  
-|**MULTI-SERVER**|Categoria di processi multiserver.|  
+|**MULTI -SERVER**|Categoria di processi multiserver.|  
 |**NONE**|Categoria per una classe diversa da **processo**.|  
   
- [ **@name=** ] **'***name***'**  
- Nome della categoria su cui vengono richieste informazioni. *nome* viene **sysname**, con un valore predefinito è NULL.  
+`[ @name = ] 'name'` Il nome della categoria per il quale vengono richieste informazioni. *nome* viene **sysname**, con un valore predefinito è NULL.  
   
- [ **@suffix=** ] *suffix*  
- Specifica se il **category_type** colonna nel set di risultati è un ID o un nome. *suffisso* viene **bit**, il valore predefinito è **0**. **1** Mostra il **category_type** come nome, e **0** lo visualizza come ID.  
+`[ @suffix = ] suffix` Specifica se il **category_type** colonna nel set di risultati è un ID o un nome. *suffisso* viene **bit**, il valore predefinito è **0**. **1** Mostra il **category_type** come nome, e **0** lo visualizza come ID.  
   
 ## <a name="return-code-values"></a>Valori restituiti  
  **0** (esito positivo) o **1** (errore)  
@@ -73,15 +69,15 @@ sp_help_category [ [ @class = ] 'class' ]
 ## <a name="result-sets"></a>Set di risultati  
  Quando **@suffix** viene **0**, **sp_help_category** restituisce il set di risultati seguente:  
   
-|Nome colonna|Tipo di dati|Description|  
+|Nome colonna|Tipo di dati|Descrizione|  
 |-----------------|---------------|-----------------|  
 |**category_id**|**int**|ID della categoria|  
-|**category_type**|**tinyint**|Tipo di categoria:<br /><br /> **1** = locale<br /><br /> **2** = multiserver<br /><br /> **3** = nessuno|  
+|**category_type**|**tinyint**|Tipo di categoria:<br /><br /> **1** = locale<br /><br /> **2** = Multiserver<br /><br /> **3** = None|  
 |**name**|**sysname**|Nome della categoria|  
   
  Quando **@suffix** viene **1**, **sp_help_category** restituisce il set di risultati seguente:  
   
-|Nome colonna|Tipo di dati|Description|  
+|Nome colonna|Tipo di dati|Descrizione|  
 |-----------------|---------------|-----------------|  
 |**category_id**|**int**|ID della categoria|  
 |**category_type**|**sysname**|Tipo di categoria: Uno dei **locale**, **MULTISERVER**, o **NONE**|  

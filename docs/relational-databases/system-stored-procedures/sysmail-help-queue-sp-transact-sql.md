@@ -18,12 +18,12 @@ ms.assetid: 94840482-112c-4654-b480-9b456c4c2bca
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 4ee5620aecfc4e263c16fb9c710b7a41e1564f6e
-ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
+ms.openlocfilehash: 73ca766827c1b6149bcb40cec8adefe86e944890
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/18/2018
-ms.locfileid: "53590595"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58531703"
 ---
 # <a name="sysmailhelpqueuesp-transact-sql"></a>sysmail_help_queue_sp (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -40,8 +40,7 @@ sysmail_help_queue_sp  [ @queue_type = ] 'queue_type'
 ```  
   
 ## <a name="arguments"></a>Argomenti  
- [ **@queue_type** =] **'**_queue_type_**'**  
- Argomento facoltativo che elimina messaggi di posta elettronica del tipo specificato come la *queue_type*. *queue_type* viene **nvarchar(6)** non prevede alcun valore predefinito. Possibili valori sono **mail** e **stato**.  
+`[ @queue_type = ] 'queue_type'` Argomento facoltativo che elimina messaggi di posta elettronica del tipo specificato come la *queue_type*. *queue_type* viene **nvarchar(6)** non prevede alcun valore predefinito. Possibili valori sono **mail** e **stato**.  
   
 ## <a name="return-code-values"></a>Valori restituiti  
  **0** (esito positivo) o **1** (errore)  
@@ -53,8 +52,8 @@ sysmail_help_queue_sp  [ @queue_type = ] 'queue_type'
 |**queue_type**|**nvarchar(6)**|Tipo di coda. I valori possibili sono **mail** e **stato**.|  
 |**length**|**int**|Numero di elementi di posta nella coda specificata.|  
 |**state**|**nvarchar(64)**|Stato del server di monitoraggio. I valori possibili sono **INACTIVE** (coda è inattiva), **NOTIFIED** (coda ha ricevuto una notifica al verificarsi), e **RECEIVES_OCCURRING** (coda riceve).|  
-|**last_empty_rowset_time**|**DATA/ORA**|Data e ora dell'ultimo svuotamento della coda, sia nel formato 24 ore sia nel fuso orario GMT.|  
-|**last_activated_time**|**DATA/ORA**|Data e ora dell'ultima attivazione della coda, sia nel formato 24 ore sia nel fuso orario GMT.|  
+|**last_empty_rowset_time**|**DATETIME**|Data e ora dell'ultimo svuotamento della coda, sia nel formato 24 ore sia nel fuso orario GMT.|  
+|**last_activated_time**|**DATETIME**|Data e ora dell'ultima attivazione della coda, sia nel formato 24 ore sia nel fuso orario GMT.|  
   
 ## <a name="remarks"></a>Note  
  La risoluzione dei problemi di posta elettronica Database, usare **sysmail_help_queue_sp** per visualizzare il numero di elementi nella coda, lo stato della coda e l'ultima attivazione.  

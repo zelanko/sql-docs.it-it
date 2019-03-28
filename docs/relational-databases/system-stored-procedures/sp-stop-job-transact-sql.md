@@ -18,12 +18,12 @@ ms.assetid: 64b4cc75-99a0-421e-b418-94e37595bbb0
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 8c5f625b2fa697a305cf6ea96b3ace59f9f5ee0b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: eda439b53c72e41154d4891495470fc271028aee
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47843916"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58529513"
 ---
 # <a name="spstopjob-transact-sql"></a>sp_stop_job (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -45,20 +45,16 @@ sp_stop_job
 ```  
   
 ## <a name="arguments"></a>Argomenti  
- [ **@job_name =**] **'***job_name***'**  
- Nome del processo da arrestare. *nome_processo* viene **sysname**, con un valore predefinito è NULL.  
+`[ @job_name = ] 'job_name'` Il nome del processo da arrestare. *nome_processo* viene **sysname**, con un valore predefinito è NULL.  
   
- [ **@job_id =**] *job_id*  
- Numero di identificazione del processo da arrestare. *job_id* viene **uniqueidentifier**, con un valore predefinito è NULL.  
+`[ @job_id = ] job_id` Il numero di identificazione del processo da arrestare. *job_id* viene **uniqueidentifier**, con un valore predefinito è NULL.  
   
- [ **@originating_server =**] **'***master_server***'**  
- Nome del server master. Se specificato, vengono arrestati tutti i processi multiserver. *master_server* viene **nvarchar (128)**, con un valore predefinito è NULL. Specificare questo parametro solo quando si chiama **sp_stop_job** in un server di destinazione.  
+`[ @originating_server = ] 'master_server'` Il nome del server master. Se specificato, vengono arrestati tutti i processi multiserver. *master_server* viene **nvarchar (128)**, con un valore predefinito è NULL. Specificare questo parametro solo quando si chiama **sp_stop_job** in un server di destinazione.  
   
 > [!NOTE]  
 >  È possibile specificare solo uno dei primi tre parametri.  
   
- [ **@server_name =**] **'***target_server***'**  
- Nome del server di destinazione specifico in cui arrestare un processo multiserver. *target_server* viene **nvarchar (128)**, con un valore predefinito è NULL. Specificare questo parametro solo quando si chiama **sp_stop_job** in un server master per un processo multiserver.  
+`[ @server_name = ] 'target_server'` Il nome del server di destinazione specifico in cui arrestare un processo multiserver. *target_server* viene **nvarchar (128)**, con un valore predefinito è NULL. Specificare questo parametro solo quando si chiama **sp_stop_job** in un server master per un processo multiserver.  
   
 ## <a name="return-code-values"></a>Valori restituiti  
  **0** (esito positivo) o **1** (errore)  

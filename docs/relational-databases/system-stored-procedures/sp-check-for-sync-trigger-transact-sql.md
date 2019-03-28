@@ -16,12 +16,12 @@ ms.assetid: 54a1e2fd-c40a-43d4-ac64-baed28ae4637
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 9ac0fe99f835dae638cb65b24e569857fb77b098
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: ef51624f3d14ef12be1c37b17727b70f5f31df10
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52759960"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58526423"
 ---
 # <a name="spcheckforsynctrigger-transact-sql"></a>sp_check_for_sync_trigger (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -53,8 +53,7 @@ sp_check_for_sync_trigger [ @tabid = ] 'tabid'
 |**CANC**|Trigger DELETE|  
 |NULL (predefinito)||  
   
- [  **@fonpublisher =** ] *fonpublisher*  
- Specifica la posizione in cui viene eseguita la stored procedure. *fonpublisher* viene **bit**, valore predefinito pari a 0. 0 indica che l'esecuzione avviene nel Sottoscrittore, mentre 1 indica che avviene nel server di pubblicazione.  
+`[ @fonpublisher = ] fonpublisher` Specifica la posizione in cui viene eseguita la stored procedure. *fonpublisher* viene **bit**, valore predefinito pari a 0. 0 indica che l'esecuzione avviene nel Sottoscrittore, mentre 1 indica che avviene nel server di pubblicazione.  
   
 ## <a name="return-code-values"></a>Valori restituiti  
  0 indica che la stored procedure non viene richiamata nel contesto di un trigger per l'aggiornamento immediato. 1 indica che viene richiamata nel contesto di un trigger per l'aggiornamento immediato ed è il tipo di trigger restituito in *@trigger_op*.  

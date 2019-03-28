@@ -18,12 +18,12 @@ ms.assetid: e711b01c-ef29-4eb6-a016-0e647e337818
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 85d45de0ec858766bea51e983e80087d93d94ec2
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 109e031e95b7535733bd9cb71baa4d20128ceb5e
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47826629"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58534493"
 ---
 # <a name="sphelplogshippingprimarydatabase-transact-sql"></a>sp_help_log_shipping_primary_database (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -42,25 +42,23 @@ sp_help_log_shipping_primary_database
 ```  
   
 ## <a name="arguments"></a>Argomenti  
- [  **@database =** ] '*database*'  
- Nome del database primario per il log shipping. *database* viene **sysname**, non prevede alcun valore predefinito e non può essere NULL.  
+`[ @database = ] 'database'` È il nome del database primario di log shipping. *database* viene **sysname**, non prevede alcun valore predefinito e non può essere NULL.  
   
- [  **@primary_id =** ] '*primary_id*'  
- ID del database primario nella configurazione per il log shipping. *primary_id* viene **uniqueidentifier** e non può essere NULL.  
+`[ @primary_id = ] 'primary_id'` L'ID del database primario per la configurazione di log shipping. *primary_id* viene **uniqueidentifier** e non può essere NULL.  
   
 ## <a name="return-code-values"></a>Valori restituiti  
  0 (esito positivo) o 1 (esito negativo)  
   
 ## <a name="result-sets"></a>Set di risultati  
   
-|Nome colonna|Description|  
+|Nome colonna|Descrizione|  
 |-----------------|-----------------|  
 |**primary_id**|ID del database primario nella configurazione per il log shipping.|  
 |**primary_database**|Nome del database primario nella configurazione di log shipping.|  
 |**backup_directory**|Directory in cui vengono archiviati i file di backup del log delle transazioni dal server primario.|  
 |**backup_share**|Percorso di rete o UNC della directory di backup.|  
 |**backup_retention_period**|Intervallo di tempo, espresso in minuti, di conservazione del file di backup dei log nella directory di backup trascorso il quale il file viene eliminato.|  
-|**backup_compression**|Indica se utilizza la configurazione di log shipping [compressione dei backup](../../relational-databases/backup-restore/backup-compression-sql-server.md).<br /><br /> **0** = disabilitata. I backup del log non vengono mai compressi.<br /><br /> **1** = abilitato. I backup del log vengono sempre compressi.<br /><br /> **2** = utilizzare l'impostazione delle [visualizzare o configurare l'opzione di configurazione del Server backup compression default](../../database-engine/configure-windows/view-or-configure-the-backup-compression-default-server-configuration-option.md). Si tratta del valore predefinito.<br /><br /> La compressione dei backup è supportata solo in [!INCLUDE[ssEnterpriseEd10](../../includes/ssenterpriseed10-md.md)] o versione successiva. Nelle altre edizioni il valore è sempre 2.|  
+|**backup_compression**|Indica se utilizza la configurazione di log shipping [compressione dei backup](../../relational-databases/backup-restore/backup-compression-sql-server.md).<br /><br /> **0** = disabilitata. I backup del log non vengono mai compressi.<br /><br /> **1** = abilitato. I backup del log vengono sempre compressi.<br /><br /> **2** = utilizzare l'impostazione delle [visualizzare o configurare l'opzione di configurazione del Server backup compression default](../../database-engine/configure-windows/view-or-configure-the-backup-compression-default-server-configuration-option.md). Rappresenta il valore predefinito.<br /><br /> La compressione dei backup è supportata solo in [!INCLUDE[ssEnterpriseEd10](../../includes/ssenterpriseed10-md.md)] o versione successiva. Nelle altre edizioni il valore è sempre 2.|  
 |**backup_job_id**|Il [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ID processo dell'agente associato con il processo di backup nel server primario.|  
 |**monitor_server**|Nome dell'istanza di [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] utilizzata come server di monitoraggio nella configurazione del log shipping.|  
 |**monitor_server_security_mode**|Modalità di sicurezza utilizzata per connettersi al server di monitoraggio.<br /><br /> 1 = Autenticazione di [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows.<br /><br /> 0 = [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] l'autenticazione.|  

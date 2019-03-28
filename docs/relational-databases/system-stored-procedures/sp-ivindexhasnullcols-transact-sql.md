@@ -16,12 +16,12 @@ ms.assetid: ed2cde63-37e1-43cf-b6ba-3b6114a0f797
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 5e9ab98dc5beb4f2e07ac7fa62386f9fd44703ab
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 77a0e3f1795545e553347ae699e719af2ad506b4
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52823330"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58531576"
 ---
 # <a name="spivindexhasnullcols-transact-sql"></a>sp_ivindexhasnullcols (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -39,11 +39,9 @@ sp_ivindexhasnullcols [ @viewname = ] 'view_name'
 ```  
   
 ## <a name="arguments"></a>Argomenti  
- [ **@viewname**=] **'***view_name***'**  
- Nome della vista da verificare. *view_name* viene **sysname**, non prevede alcun valore predefinito.  
+`[ @viewname = ] 'view_name'` È il nome della visualizzazione da verificare. *view_name* viene **sysname**, non prevede alcun valore predefinito.  
   
- [ **@fhasnullcols**=] *field_has_null_columns* OUTPUT  
- Flag che indica se l'indice della vista include colonne che ammettono valori Null. *view_name* viene **sysname**, non prevede alcun valore predefinito. Restituisce un valore pari **1** se l'indice della vista include colonne che ammettono valori NULL. Restituisce un valore pari **0** se la vista non contiene colonne che ammettono valori null.  
+`[ @fhasnullcols = ] field_has_null_columns OUTPUT` Il flag che indica se l'indice della vista include colonne che ammettono valori NULL. *view_name* viene **sysname**, non prevede alcun valore predefinito. Restituisce un valore pari **1** se l'indice della vista include colonne che ammettono valori NULL. Restituisce un valore pari **0** se la vista non contiene colonne che ammettono valori null.  
   
 > [!NOTE]  
 >  Se la stored procedure restituisce un codice restituito del **1**, vale a dire l'esecuzione di stored procedure ha esito negativo, questo valore è **0** e deve essere ignorato.  

@@ -18,12 +18,12 @@ ms.assetid: a944d44e-411b-4735-8ce4-73888d4262d7
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: c355fb36e5bc0562b4e20b48ab2a3f33e182c22c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 0b2ee476694098f4734c31439b48a7ec9efdc892
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47742199"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58534433"
 ---
 # <a name="sphelpjobhistory-transact-sql"></a>sp_help_jobhistory (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -54,40 +54,29 @@ sp_help_jobhistory [ [ @job_id = ] job_id ]
 ```  
   
 ## <a name="arguments"></a>Argomenti  
- [ **@job_id=** ] *job_id*  
- Numero di identificazione del processo. *job_id* viene **uniqueidentifier**, con un valore predefinito è NULL.  
+`[ @job_id = ] job_id` ID del processo. *job_id* viene **uniqueidentifier**, con un valore predefinito è NULL.  
   
- [ **@job_name=** ] **'***job_name***'**  
- Nome del processo. *nome_processo* viene **sysname**, con un valore predefinito è NULL.  
+`[ @job_name = ] 'job_name'` Il nome del processo. *nome_processo* viene **sysname**, con un valore predefinito è NULL.  
   
- [ **@step_id=** ] *step_id*  
- Numero di identificazione del passaggio. *step_id* viene **int**, con un valore predefinito è NULL.  
+`[ @step_id = ] step_id` Il numero di identificazione del passaggio. *step_id* viene **int**, con un valore predefinito è NULL.  
   
- [ **@sql_message_id=** ] *sql_message_id*  
- Numero di identificazione del messaggio di errore restituito da Microsoft SQL Server durante l'esecuzione del processo. *sql_message_id* viene **int**, con un valore predefinito è NULL.  
+`[ @sql_message_id = ] sql_message_id` Il numero di identificazione del messaggio di errore restituito da Microsoft SQL Server durante l'esecuzione del processo. *sql_message_id* viene **int**, con un valore predefinito è NULL.  
   
- [ **@sql_severity=** ] *sql_severity*  
- Livello di gravità del messaggio di errore restituito da SQL Server durante l'esecuzione del processo. *sql_severity* viene **int**, con un valore predefinito è NULL.  
+`[ @sql_severity = ] sql_severity` Il livello di gravità del messaggio di errore restituito da SQL Server durante l'esecuzione del processo. *sql_severity* viene **int**, con un valore predefinito è NULL.  
   
- [ **@start_run_date=** ] *start_run_date*  
- Data di avvio del processo. *start_run_date*viene **int**, con un valore predefinito è NULL. *start_run_date* deve essere immesso nel formato aaaammgg, dove YYYY è un anno di quattro caratteri, MM è un nome di un mese espressi con due cifre e GG è un nome di giorno di due caratteri.  
+`[ @start_run_date = ] start_run_date` Data che di avvio del processo. *start_run_date*viene **int**, con un valore predefinito è NULL. *start_run_date* deve essere immesso nel formato aaaammgg, dove YYYY è un anno di quattro caratteri, MM è un nome di un mese espressi con due cifre e GG è un nome di giorno di due caratteri.  
   
- [ **@end_run_date=** ] *end_run_date*  
- Data di completamento del processo. *espresso* viene **int**, con un valore predefinito è NULL. *espresso*deve essere immesso nel formato aaaammgg, dove YYYY è l'anno a quattro cifre, MM è un nome di un mese espressi con due cifre e GG è un nome di giorno di due caratteri.  
+`[ @end_run_date = ] end_run_date` Data che di completamento del processo. *espresso* viene **int**, con un valore predefinito è NULL. *espresso*deve essere immesso nel formato aaaammgg, dove YYYY è l'anno a quattro cifre, MM è un nome di un mese espressi con due cifre e GG è un nome di giorno di due caratteri.  
   
- [  **@start_run_time=** ] *start_run_time*  
- Ora di avvio del processo. *start_run_time* viene **int**, con un valore predefinito è NULL. *start_run_time*deve essere immesso nel formato HHMMSS, dove HH è l'ora, MM è un minuto espressi con due cifre del giorno e SS è il secondo espressi con due cifre del giorno.  
+`[ @start_run_time = ] start_run_time` Ora che di avvio del processo. *start_run_time* viene **int**, con un valore predefinito è NULL. *start_run_time*deve essere immesso nel formato HHMMSS, dove HH è l'ora, MM è un minuto espressi con due cifre del giorno e SS è il secondo espressi con due cifre del giorno.  
   
- [ **@end_run_time=** ] *end_run_time*  
- Ora di completamento del processo. *end_run_time* viene **int**, con un valore predefinito è NULL. *end_run_time*deve essere immesso nel formato HHMMSS, dove HH è l'ora, MM è un minuto espressi con due cifre del giorno e SS è il secondo espressi con due cifre del giorno.  
+`[ @end_run_time = ] end_run_time` Ora che il processo completato la sua esecuzione. *end_run_time* viene **int**, con un valore predefinito è NULL. *end_run_time*deve essere immesso nel formato HHMMSS, dove HH è l'ora, MM è un minuto espressi con due cifre del giorno e SS è il secondo espressi con due cifre del giorno.  
   
- [  **@minimum_run_duration=** ] *minimum_run_duration*  
- Durata minima per il completamento del processo. *minimum_run_duration* viene **int**, con un valore predefinito è NULL. *minimum_run_duration*deve essere immesso nel formato HHMMSS, dove HH è l'ora, MM è un minuto espressi con due cifre del giorno e SS è il secondo espressi con due cifre del giorno.  
+`[ @minimum_run_duration = ] minimum_run_duration` La lunghezza minima di tempo per il completamento del processo. *minimum_run_duration* viene **int**, con un valore predefinito è NULL. *minimum_run_duration*deve essere immesso nel formato HHMMSS, dove HH è l'ora, MM è un minuto espressi con due cifre del giorno e SS è il secondo espressi con due cifre del giorno.  
   
- [  **@run_status=** ] *run_status*  
- Stato di esecuzione del processo. *run_status* viene **int**, con un valore predefinito è NULL, i possibili valori sono i seguenti.  
+`[ @run_status = ] run_status` Lo stato di esecuzione del processo. *run_status* viene **int**, con un valore predefinito è NULL, i possibili valori sono i seguenti.  
   
-|valore|Description|  
+|Value|Descrizione|  
 |-----------|-----------------|  
 |**0**|Non riuscito|  
 |**1**|Operazione completata|  
@@ -96,17 +85,13 @@ sp_help_jobhistory [ [ @job_id = ] job_id ]
 |**4**|Messaggio di esecuzione in corso|  
 |**5**|Unknown|  
   
- [  **@minimum_retries=** ] *minimum_retries*  
- Numero minimo di tentativi per l'esecuzione di un processo. *minimum_retries* viene **int**, con un valore predefinito è NULL.  
+`[ @minimum_retries = ] minimum_retries` Il numero minimo di volte in cui un processo di tentativi per l'esecuzione. *minimum_retries* viene **int**, con un valore predefinito è NULL.  
   
- [  **@oldest_first=** ] *oldest_first*  
- Indica se i processi meno recenti devono essere visualizzati per primi nell'output. *oldest_first* viene **int**, il valore predefinito è **0**, che presenta i processi più recenti prima di tutto. **1** presenta prima di tutto i processi meno recenti.  
+`[ @oldest_first = ] oldest_first` Indica se per primi nell'output con i processi meno recenti. *oldest_first* viene **int**, il valore predefinito è **0**, che presenta i processi più recenti prima di tutto. **1** presenta prima di tutto i processi meno recenti.  
   
- [ **@server=** ] **'***server***'**  
- Nome del server in cui è stato eseguito il processo. *server* viene **nvarchar(30)**, con un valore predefinito è NULL.  
+`[ @server = ] 'server'` Il nome del server in cui è stato eseguito il processo. *server* viene **nvarchar(30)**, con un valore predefinito è NULL.  
   
- [  **@mode=** ] **'***modalità***'**  
- Indica se stampare tutte le colonne nel set di risultati (**completo**) o un riepilogo delle colonne. *modalità* viene **varchar(7)**, il valore predefinito è **riepilogo**.  
+`[ @mode = ] 'mode'` Indica se stampare tutte le colonne nel set di risultati (**completo**) o un riepilogo delle colonne. *modalità* viene **varchar(7)**, il valore predefinito è **riepilogo**.  
   
 ## <a name="return-code-values"></a>Valori restituiti  
  **0** (esito positivo) o **1** (errore)  
@@ -114,7 +99,7 @@ sp_help_jobhistory [ [ @job_id = ] job_id ]
 ## <a name="result-sets"></a>Set di risultati  
  L'elenco delle colonne dipende dal valore della *modalità*. Il set di colonne più completo è illustrato di seguito e viene restituito quando *modalità* è FULL.  
   
-|Nome colonna|Tipo di dati|Description|  
+|Nome colonna|Tipo di dati|Descrizione|  
 |-----------------|---------------|-----------------|  
 |**instance_id**|**int**|Numero di identificazione della voce di cronologia.|  
 |**job_id**|**uniqueidentifier**|Numero di identificazione del processo.|  

@@ -11,16 +11,16 @@ ms.prod: sql
 ms.custom: sql-linux, seodec18
 ms.technology: linux
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: d4c460b272650874fd3b8b4d390879abf5a8fcc3
-ms.sourcegitcommit: de8ef246a74c935c5098713f14e9dd06c4733713
+ms.openlocfilehash: 4b3d01538df675149a3cc7f555774c8d27bf4e14
+ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53160579"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58511068"
 ---
 # <a name="always-on-availability-groups-for-sql-server-containers"></a>Gruppi di disponibilità per i contenitori di SQL Server
 
-2019 di SQL Server supporta i gruppi di disponibilità in contenitori in Kubernetes. Per i gruppi di disponibilità, distribuire il Server SQL [Kubernetes operatore](https://coreos.com/blog/introducing-operators.html) al cluster Kubernetes. L'operatore consente di creare pacchetti, distribuire e gestire il gruppo di disponibilità in un cluster.
+SQL Server 2019 supporta gruppi di disponibilità in contenitori in un cluster Kubernetes. Per i gruppi di disponibilità, distribuire il Server SQL [Kubernetes operatore](https://coreos.com/blog/introducing-operators.html) al cluster Kubernetes. L'operatore consente di creare pacchetti, distribuire e gestire il gruppo di disponibilità in un cluster.
 
 ![Gruppo di disponibilità nel contenitore Kubernetes](media/tutorial-sql-server-ag-containers-kubernetes/KubernetesCluster.png)
 

@@ -21,18 +21,18 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions||=azuresqldb-mi-current'
-ms.openlocfilehash: 4421ac28e3ee8914cf016f5df23e5f163bacfd9b
-ms.sourcegitcommit: a251adad8474b477363df6a121431b837f22bf77
+ms.openlocfilehash: f11b09d93510fe1da89abc1a723e7698f1fdd915
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47864399"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58531043"
 ---
 # <a name="spexecuteexternalscript-transact-sql"></a>sp_execute_external_script (Transact-SQL)
 
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
-Esegue uno script fornito come argomento di input alla procedura. Lo script viene eseguito nel [framework di estendibilità](../../advanced-analytics/concepts/extensibility-framework.md). Script deve essere scritto in un linguaggio supportato e registrato, in presenza di almeno un'estensione di un motore di database: [ **R**](../../advanced-analytics/concepts/extension-r.md), [ **Python** ](../../advanced-analytics/concepts/extension-python.md) , oppure [ **Java** (in SQL Server 2019 solo anteprima)](../../advanced-analytics/java/extension-java.md). 
+Esegue uno script fornito come argomento di input alla procedura. Lo script viene eseguito nel [framework di estendibilità](../../advanced-analytics/concepts/extensibility-framework.md). Script deve essere scritto in un linguaggio supportato e registrato, in presenza di almeno un'estensione di un motore di database: [**R**](../../advanced-analytics/concepts/extension-r.md), [ **Python**](../../advanced-analytics/concepts/extension-python.md), oppure [ **Java** (in SQL Server 2019 solo anteprima)](../../advanced-analytics/java/extension-java.md). 
 
 Per eseguire **sp_execute_external_script**, è innanzitutto necessario abilitare gli script esterni utilizzando l'istruzione, `sp_configure 'external scripts enabled', 1;`.  
   
@@ -80,35 +80,27 @@ sp_execute_external_script
   
  **@script** = N'*script*' dello script del linguaggio esterno specificato come input un valore letterale o una variabile. *lo script* viene **nvarchar (max)**.  
 
-  [ **@input_data_1** = N'*input_data_1*']  
- Specifica i dati di input usati dallo script esterno sotto forma di un [!INCLUDE[tsql](../../includes/tsql-md.md)] query. Il tipo di dati *input_data_1* viene **nvarchar (max)**.
+`[ @input_data_1 =  N'input_data_1' ]` Specifica i dati di input usati dallo script esterno sotto forma di un [!INCLUDE[tsql](../../includes/tsql-md.md)] query. Il tipo di dati *input_data_1* viene **nvarchar (max)**.
 
- [ **@input_data_1_name** = N'*input_data_1_name*']  
- Specifica il nome della variabile utilizzata per rappresentare la query definita dal @input_data_1. Il tipo di dati della variabile nello script esterno dipende dalla lingua. In caso di R, la variabile di input è un frame di dati. Nel caso di Python, input deve essere in formato tabulare. *input_data_1_name* viene **sysname**.  Valore predefinito è *InputDataSet*.  
+`[ @input_data_1_name = N'input_data_1_name' ]` Specifica il nome della variabile utilizzata per rappresentare la query definita dal @input_data_1. Il tipo di dati della variabile nello script esterno dipende dalla lingua. In caso di R, la variabile di input è un frame di dati. Nel caso di Python, input deve essere in formato tabulare. *input_data_1_name* viene **sysname**.  Valore predefinito è *InputDataSet*.  
 
 ::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
-  [ **@input_data_1_order_by_columns** = N'*input_data_1_order_by_columns*']  
- Si applica solo a SQL Server 2019 e viene usato per creare modelli per ogni partizione. Specifica il nome della colonna usata per ordinare il set di risultati, ad esempio tramite il nome del prodotto. Il tipo di dati della variabile nello script esterno dipende dalla lingua. In caso di R, la variabile di input è un frame di dati. Nel caso di Python, input deve essere in formato tabulare.
+`[ @input_data_1_order_by_columns = N'input_data_1_order_by_columns' ]` Si applica solo a SQL Server 2019 e viene usato per creare modelli per ogni partizione. Specifica il nome della colonna usata per ordinare il set di risultati, ad esempio tramite il nome del prodotto. Il tipo di dati della variabile nello script esterno dipende dalla lingua. In caso di R, la variabile di input è un frame di dati. Nel caso di Python, input deve essere in formato tabulare.
 
-  [ **@input_data_1_partition_by_columns** = N'*input_data_1_partition_by_columns*']  
- Si applica solo a SQL Server 2019 e viene usato per creare modelli per ogni partizione. Specifica il nome della colonna usata per segmentare i dati, ad esempio area geografica o Data. Il tipo di dati della variabile nello script esterno dipende dalla lingua. In caso di R, la variabile di input è un frame di dati. Nel caso di Python, input deve essere in formato tabulare. 
+`[ @input_data_1_partition_by_columns = N'input_data_1_partition_by_columns' ]` Si applica solo a SQL Server 2019 e viene usato per creare modelli per ogni partizione. Specifica il nome della colonna usata per segmentare i dati, ad esempio area geografica o Data. Il tipo di dati della variabile nello script esterno dipende dalla lingua. In caso di R, la variabile di input è un frame di dati. Nel caso di Python, input deve essere in formato tabulare. 
 ::: moniker-end
 
- [ **@output_data_1_name** = N'*output_data_1_name*']  
- Specifica il nome della variabile nello script esterno che contiene i dati da restituire al [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dopo il completamento della chiamata alla stored procedure. Il tipo di dati della variabile nello script esterno dipende dalla lingua. Per R, l'output deve essere un frame di dati. Per Python, l'output deve essere un frame di dati pandas. *output_data_1_name* viene **sysname**.  Valore predefinito è *OutputDataSet*.  
+`[ @output_data_1_name =  N'output_data_1_name' ]` Specifica il nome della variabile nello script esterno che contiene i dati da restituire al [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dopo il completamento della chiamata alla stored procedure. Il tipo di dati della variabile nello script esterno dipende dalla lingua. Per R, l'output deve essere un frame di dati. Per Python, l'output deve essere un frame di dati pandas. *output_data_1_name* viene **sysname**.  Valore predefinito è *OutputDataSet*.  
 
- [ **@parallel** = 0 | 1]  
- Abilitare l'esecuzione parallela di script R, impostando il `@parallel` parametro 1. Il valore predefinito per questo parametro è 0 (nessun parallelism). Se `@parallel = 1` e l'output come flusso direttamente al computer client, il `WITH RESULT SETS` clausola è obbligatoria e deve essere specificato uno schema di output.  
+`[ @parallel = 0 | 1 ]` Abilitare l'esecuzione parallela di script R, impostando il `@parallel` parametro 1. Il valore predefinito per questo parametro è 0 (nessun parallelism). Se `@parallel = 1` e l'output come flusso direttamente al computer client, il `WITH RESULT SETS` clausola è obbligatoria e deve essere specificato uno schema di output.  
 
  + Per gli script R che non usano funzioni RevoScaleR, usando il `@parallel` parametro può essere utile per l'elaborazione di grandi set di dati, presupponendo che lo script può essere facilmente parallelizzato. Ad esempio, quando si usa R `predict` funzione con un modello per generare nuove stime, impostare `@parallel = 1` come hint per il motore di query. Se la query può essere parallelizzata, le righe vengono distribuite in base al **MAXDOP** impostazione.  
   
  + Per gli script R che usano funzioni RevoScaleR, l'elaborazione parallela viene gestita automaticamente e non è necessario specificare `@parallel = 1` per il **sp_execute_external_script** chiamare.  
   
-[ **@params** = N' *@parameter_name data_type* [OUT | OUTPUT] [,... n]']  
- Un elenco di dichiarazioni di parametro di input utilizzate nello script esterni.  
+`[ @params = N'@parameter_name data_type [ OUT | OUTPUT ] [ ,...n ]' ]` Un elenco di dichiarazioni di parametro di input utilizzate nello script esterni.  
   
-[ **@parameter1** = '*value1*' [OUT | OUTPUT] [,... n]]  
- Un elenco di valori per i parametri di input usati dallo script esterno.  
+`[ @parameter1 = 'value1' [ OUT | OUTPUT ] [ ,...n ] ]` Un elenco di valori per i parametri di input usati dallo script esterno.  
 
 ## <a name="remarks"></a>Note
 
@@ -132,7 +124,7 @@ L'esecuzione di script di monitoraggio mediante [DM external_script_requests](..
 
  In SQL Server 2019, attualmente in anteprima pubblica, è possibile impostare due parametri aggiuntivi che consentono la modellazione delle minacce su dati partizionati, in cui partizioni sono basate su uno o più colonne è fornire che naturalmente segmentare un set di dati in partizioni logiche creato e utilizzato solo durante l'esecuzione di script. Le colonne che contengono i valori ripetuti per età, sesso, area geografica, data o ora, sono riportati alcuni esempi che si prestano a set di dati partizionati.
  
- I due parametri sono **input_data_1_partition_by_columns** e **input_data_1_order_by_columns**, in cui il secondo parametro viene usato per ordinare il set di risultati. I parametri vengono passati come input per `sp_execute_external_script` con l'esterno script in esecuzione una sola volta per ogni partizione. Per altre informazioni ed esempi, vedere [esercitazione: creare modelli basati sulla partizione](https://docs.microsoft.com/sql/advanced-analytics/tutorials/r-tutorial-create-models-per-partition.md).
+ I due parametri sono **input_data_1_partition_by_columns** e **input_data_1_order_by_columns**, in cui il secondo parametro viene usato per ordinare il set di risultati. I parametri vengono passati come input per `sp_execute_external_script` con l'esterno script in esecuzione una sola volta per ogni partizione. Per altre informazioni ed esempi, vedere [esercitazione: Creare modelli basati sulla partizione](https://docs.microsoft.com/sql/advanced-analytics/tutorials/r-tutorial-create-models-per-partition.md).
 
  È possibile eseguire script in parallelo specificando `@parallel=1`. Se la query di input può essere eseguite in parallelo, è necessario impostare `@parallel=1` come parte degli argomenti su `sp_execute_external_script`. Per impostazione predefinita, query optimizer opera `@parallel=1` nelle tabelle che includono più di 256 righe, ma se si vuole gestirlo in modo esplicito, questo script include il parametro come dimostrazione.
 
@@ -162,11 +154,11 @@ In alternativa, **CAST** la colonna o un valore a un tipo supportato in [!INCLUD
   
 -   **timestamp**  
   
--   **datetime2**, **datetimeoffset**, **ora**  
+-   **datetime2**, **datetimeoffset**, **time**  
   
 -   **sql_variant**  
   
--   **testo**, **immagine**  
+-   **text**, **image**  
   
 -   **xml**  
   

@@ -10,12 +10,12 @@ ms.assetid: e644766d-1d1c-43d7-83ff-8ccfe4f3af9f
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: ee7c3d44f3575fd1bf25a6e304a379ca6ca6391b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 4e47a8c6f5b0da31aea9168bbbc56bd9b28afb96
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48136071"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58530833"
 ---
 # <a name="statistics-for-memory-optimized-tables"></a>Statistiche per tabelle con ottimizzazione per la memoria
   In Query Optimizer vengono utilizzate le statistiche sulle colonne per creare piani di query che consentono di migliorare le prestazioni di esecuzione delle query. Le statistiche vengono raccolte dalle tabelle del database e archiviate nei metadati del database.  
@@ -41,7 +41,7 @@ ms.locfileid: "48136071"
 ## <a name="guidelines-for-statistics-when-deploying-memory-optimized-tables"></a>Linee guida per le statistiche durante la distribuzione delle tabelle con ottimizzazione per la memoria  
  Per garantire che le statistiche in Query Optimizer risultino aggiornate durante la creazione dei piani di query, distribuire le tabelle ottimizzate per la memoria utilizzando i seguenti cinque passaggi:  
   
-1.  Creare tabelle e indici. Gli indici sono specificati inline nel `CREATE TABLE` istruzioni.  
+1.  Creare tabelle e indici. Gli indici sono specificati inline nelle istruzioni `CREATE TABLE`.  
   
 2.  Caricare i dati nelle tabelle.  
   
@@ -49,7 +49,7 @@ ms.locfileid: "48136071"
   
 4.  Creare stored procedure che accedono alle tabelle.  
   
-5.  Eseguire il carico di lavoro, che può contenere una combinazione di compilate in modo nativo e interpretate [!INCLUDE[tsql](../../../includes/tsql-md.md)] stored procedure, nonché i batch ad hoc.  
+5.  Eseguire il carico di lavoro che può contenere una combinazione di stored procedure [!INCLUDE[tsql](../../../includes/tsql-md.md)] compilate in modo nativo e interpretate nonché i batch ad hoc.  
   
  La creazione delle stored procedure compilate in modo nativo dopo il caricamento dei dati e l'aggiornamento delle statistiche garantisce la presenza delle statistiche disponibili per le tabelle ottimizzate per la memoria in Query Optimizer. In questo modo si ottengono piani di query efficienti quando la procedura viene compilata.  
   
@@ -76,7 +76,7 @@ UPDATE STATISTICS myschema.Mytable WITH FULLSCAN, NORECOMPUTE
   
  Per aggiornare le statistiche per tutte le tabelle ottimizzate per la memoria nel database corrente, eseguire lo script seguente:  
   
-```tsql  
+```sql  
 DECLARE @sql NVARCHAR(MAX) = N''  
   
 SELECT @sql += N'  
@@ -90,7 +90,7 @@ EXEC sp_executesql @sql
   
  Nell'esempio seguente viene indicato quando è stato effettuato l'ultimo aggiornamento delle statistiche sulle tabelle ottimizzate per la memoria. Queste informazioni sono utili per stabilire se è necessario aggiornare le statistiche.  
   
-```tsql  
+```sql  
 select t.object_id, t.name, sp.last_updated as 'stats_last_updated'  
 from sys.tables t join sys.stats s on t.object_id=s.object_id cross apply sys.dm_db_stats_properties(t.object_id, s.stats_id) sp  
 where t.is_memory_optimized=1  

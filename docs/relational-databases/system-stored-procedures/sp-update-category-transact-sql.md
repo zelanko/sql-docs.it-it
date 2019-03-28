@@ -18,12 +18,12 @@ ms.assetid: 098b926a-b078-4122-a5e1-3ef54b979dd4
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 22cb6ac1283c0ad8e7b423d73f6ec768c90af11c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 58cab4235a0b0199540179250fc5358ff6a525b6
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47670519"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58528855"
 ---
 # <a name="spupdatecategory-transact-sql"></a>sp_update_category (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -43,20 +43,17 @@ sp_update_category
 ```  
   
 ## <a name="arguments"></a>Argomenti  
- [  **@class =**] **'***classe***'**  
- Classe della categoria da aggiornare. *classe*viene **varchar (8)** e non prevede alcun valore predefinito, i possibili valori sono i seguenti.  
+`[ @class = ] 'class'` La classe della categoria da aggiornare. *classe*viene **varchar (8)** e non prevede alcun valore predefinito, i possibili valori sono i seguenti.  
   
-|valore|Description|  
+|Value|Descrizione|  
 |-----------|-----------------|  
 |**AVVISO**|Aggiorna una categoria di avvisi.|  
 |**JOB**|Aggiorna una categoria di processi.|  
-|**OPERATORE**|Aggiorna una categoria di operatori.|  
+|**OPERATOR**|Aggiorna una categoria di operatori.|  
   
- [  **@name =**] **'***vecchio_nome***'**  
- Nome corrente della categoria. *vecchio_nome*viene **sysname**, non prevede alcun valore predefinito.  
+`[ @name = ] 'old_name'` Il nome corrente della categoria. *vecchio_nome*viene **sysname**, non prevede alcun valore predefinito.  
   
- [ **@new_name =**] **'***new_name***'**  
- Nuovo nome della categoria. *new_name*viene **sysname**, non prevede alcun valore predefinito.  
+`[ @new_name = ] 'new_name'` Il nuovo nome per la categoria. *new_name*viene **sysname**, non prevede alcun valore predefinito.  
   
 ## <a name="return-code-values"></a>Valori restituiti  
  **0** (esito positivo) o **1** (errore)  

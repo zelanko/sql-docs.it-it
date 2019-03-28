@@ -16,12 +16,12 @@ ms.assetid: d453c451-e957-490f-b968-5e03aeddaf10
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 466b2c0316cb5de9b38200fd643d0302c5b1ae93
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: 1f31a00e0c42bc56dffac191ff9a934bb77b95df
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53203100"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58534533"
 ---
 # <a name="spchangesubscriber-transact-sql"></a>sp_changesubscriber (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -57,29 +57,21 @@ sp_changesubscriber [ @subscriber= ] 'subscriber'
 ```  
   
 ## <a name="arguments"></a>Argomenti  
- [  **@subscriber=**] **'***sottoscrittore***'**  
- Nome del Sottoscrittore in cui si desidera modificare le opzioni. *Sottoscrittore* viene **sysname**, non prevede alcun valore predefinito.  
+`[ @subscriber = ] 'subscriber'` È il nome del sottoscrittore in cui si desidera modificare le opzioni. *Sottoscrittore* viene **sysname**, non prevede alcun valore predefinito.  
   
- [  **@type=**] *tipo*  
- Tipo di Sottoscrittore. *tipo di* viene **tinyint**, con un valore predefinito è NULL. **0** indica una [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sottoscrittore. **1** specifica un non - [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o un altro server di origine dati ODBC sottoscrittore.  
+`[ @type = ] type` È il tipo di sottoscrittore. *tipo di* viene **tinyint**, con un valore predefinito è NULL. **0** indica una [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sottoscrittore. **1** specifica un non - [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o un altro server di origine dati ODBC sottoscrittore.  
   
- [  **@login=**] **'***account di accesso***'**  
- ID dell'account di accesso per l'autenticazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. *login* è di tipo **sysname** e il valore predefinito è NULL.  
+`[ @login = ] 'login'` È il [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ID di accesso di autenticazione. *login* è di tipo **sysname** e il valore predefinito è NULL.  
   
- [  **@password=**] **'***password***'**  
- Password utilizzata per l'autenticazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. *la password* viene **sysname**, il valore predefinito è **%**. **%** indica che nessuna modifica per la proprietà della password.  
+`[ @password = ] 'password'` È il [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] password per l'autenticazione. *la password* viene **sysname**, il valore predefinito è **%**. **%** indica che nessuna modifica per la proprietà della password.  
   
- [  **@commit_batch_size=**] *commit_batch_size*  
- Supportata unicamente per compatibilità con le versioni precedenti.  
+`[ @commit_batch_size = ] commit_batch_size` Supportato solo per la compatibilità.  
   
- [  **@status_batch_size=**] *status_batch_size*  
- Supportata unicamente per compatibilità con le versioni precedenti.  
+`[ @status_batch_size = ] status_batch_size` Supportato solo per la compatibilità.  
   
- [  **@flush_frequency=**] *flush_frequency*  
- Supportata unicamente per compatibilità con le versioni precedenti.  
+`[ @flush_frequency = ] flush_frequency` Supportato solo per la compatibilità.  
   
- [  **@frequency_type=**] *frequency_type*  
- Frequenza di pianificazione dell'attività di distribuzione. *frequency_type* viene **int**, i possibili valori sono i seguenti.  
+`[ @frequency_type = ] frequency_type` È la frequenza con cui pianificare l'attività di distribuzione. *frequency_type* viene **int**, i possibili valori sono i seguenti.  
   
 |Value|Descrizione|  
 |-----------|-----------------|  
@@ -92,11 +84,9 @@ sp_changesubscriber [ @subscriber= ] 'subscriber'
 |**64**|Avvio automatico|  
 |**128**|Periodica|  
   
- [  **@frequency_interval=**] *frequency_interval*  
- È l'intervallo *frequency_type*. *frequency_interval* viene **int**, con un valore predefinito è NULL.  
+`[ @frequency_interval = ] frequency_interval` È l'intervallo *frequency_type*. *frequency_interval* viene **int**, con un valore predefinito è NULL.  
   
- [  **@frequency_relative_interval=**] *frequency_relative_interval*  
- Data dell'attività di distribuzione. Questo parametro viene utilizzato quando *frequency_type* è impostata su **32** (frequenza mensile relativa). *frequency_relative_interval* viene **int**, i possibili valori sono i seguenti.  
+`[ @frequency_relative_interval = ] frequency_relative_interval` È la data dell'attività di distribuzione. Questo parametro viene utilizzato quando *frequency_type* è impostata su **32** (frequenza mensile relativa). *frequency_relative_interval* viene **int**, i possibili valori sono i seguenti.  
   
 |Value|Descrizione|  
 |-----------|-----------------|  
@@ -106,11 +96,9 @@ sp_changesubscriber [ @subscriber= ] 'subscriber'
 |**8**|Quarto|  
 |**16**|Ultimo|  
   
- [  **@frequency_recurrence_factor=**] *frequency_recurrence_factor*  
- È la frequenza dell'attività di distribuzione deve durante il periodo definito *frequency_type*. *frequency_recurrence_factor* viene **int**, con un valore predefinito è NULL.  
+`[ @frequency_recurrence_factor = ] frequency_recurrence_factor` È la frequenza dell'attività di distribuzione deve durante il periodo definito *frequency_type*. *frequency_recurrence_factor* viene **int**, con un valore predefinito è NULL.  
   
- [  **@frequency_subday=**] *frequency_subday*  
- Frequenza di ripianificazione durante il periodo definito. *frequency_subday* viene **int**, i possibili valori sono i seguenti.  
+`[ @frequency_subday = ] frequency_subday` È la frequenza di ripianificazione durante il periodo definito. *frequency_subday* viene **int**, i possibili valori sono i seguenti.  
   
 |Value|Descrizione|  
 |-----------|-----------------|  
@@ -119,34 +107,26 @@ sp_changesubscriber [ @subscriber= ] 'subscriber'
 |**4**|Minuto|  
 |**8**|Ora|  
   
- [  **@frequency_subday_interval=**] *frequency_subday_interval*  
- È l'intervallo *frequence_subday*. *frequency_subday_interval* viene **int**, con un valore predefinito è NULL.  
+`[ @frequency_subday_interval = ] frequency_subday_interval` È l'intervallo *frequence_subday*. *frequency_subday_interval* viene **int**, con un valore predefinito è NULL.  
   
- [  **@active_start_time_of_day=**] *active_start_time_of_day*  
- Ora del giorno della prima esecuzione pianificata dell'attività di distribuzione, nel formato HHMMSS. *active_start_time_of_day* viene **int**, con un valore predefinito è NULL.  
+`[ @active_start_time_of_day = ] active_start_time_of_day` È l'ora del giorno quando l'attività di distribuzione è primo pianificata, nel formato HHMMSS. *active_start_time_of_day* viene **int**, con un valore predefinito è NULL.  
   
- [  **@active_end_time_of_day=**] *active_end_time_of_day*  
- Ora del giorno dell'ultima esecuzione pianificata dell'attività di distribuzione, nel formato HHMMSS. *active_end_time_of_day*viene **int**, con un valore predefinito è NULL.  
+`[ @active_end_time_of_day = ] active_end_time_of_day` L'ora del giorno dell'ultima attività di distribuzione è pianificata, nel formato HHMMSS. *active_end_time_of_day*viene **int**, con un valore predefinito è NULL.  
   
- [  **@active_start_date=**] *active_start_date*  
- Data della prima esecuzione pianificata per l'attività di distribuzione, nel formato AAAAMMGG. *active_start_date* viene **int**, con un valore predefinito è NULL.  
+`[ @active_start_date = ] active_start_date` È la data della prima attività di distribuzione pianificata, nel formato YYYYMMDD. *active_start_date* viene **int**, con un valore predefinito è NULL.  
   
- [  **@active_end_date=**] *active_end_date*  
- Data dell'ultima esecuzione pianificata dell'attività di distribuzione, nel formato AAAAMMGG. *active_end_date*viene **int**, con un valore predefinito è NULL.  
+`[ @active_end_date = ] active_end_date` Data dell'ultima attività di distribuzione è pianificata, nel formato aaaammgg. *active_end_date*viene **int**, con un valore predefinito è NULL.  
   
- [  **@description=**] **'***descrizione***'**  
- Descrizione facoltativa in formato testo. *Descrizione* viene **nvarchar(255**, con un valore predefinito è NULL.  
+`[ @description = ] 'description'` È una descrizione facoltativa in formato testo. *Descrizione* viene **nvarchar(255**, con un valore predefinito è NULL.  
   
- [  **@security_mode=**] *security_mode*  
- Modalità di sicurezza implementata. *security_mode* viene **int**, i possibili valori sono i seguenti.  
+`[ @security_mode = ] security_mode` È la modalità di sicurezza implementata. *security_mode* viene **int**, i possibili valori sono i seguenti.  
   
 |Value|Descrizione|  
 |-----------|-----------------|  
 |**0**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Autenticazione|  
 |**1**|Autenticazione di Windows|  
   
- [ **@publisher**=] **'***publisher***'**  
- Specifica un non - [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] server di pubblicazione. *server di pubblicazione* viene **sysname**, con un valore predefinito è NULL.  
+`[ @publisher = ] 'publisher'` Specifica un non - [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] server di pubblicazione. *server di pubblicazione* viene **sysname**, con un valore predefinito è NULL.  
   
 > [!NOTE]  
 >  *server di pubblicazione* non deve essere utilizzata quando si modificano le proprietà degli articoli in una [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] server di pubblicazione.  

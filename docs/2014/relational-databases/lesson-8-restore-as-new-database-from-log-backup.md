@@ -11,12 +11,12 @@ ms.assetid: ebba12c7-3d13-4c9d-8540-ad410a08356d
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: b25bd1ad06b92aa3d9e1ba9cb4be4caa5d587d1a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 38d807fae60099022e847e4799196305ccfbadf8
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48207921"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58534443"
 ---
 # <a name="lesson-9-restore-a-database-from-windows-azure-storage"></a>Lezione 9: ripristinare un database da Archiviazione di Windows Azure
   In questa lezione verrà illustrato come ripristinare un file di backup del database da Archiviazione di Windows Azure in un database, localmente o in una macchina virtuale di Windows Azure. È possibile seguire questa lezione anche senza aver completato le lezioni 4, 5, 6, 7 e 8.  
@@ -43,9 +43,9 @@ ms.locfileid: "48207921"
   
 3.  Copiare e incollare il seguente script completo nella finestra Query. Modificare lo script in base alle esigenze.  
   
-     **Nota:** aver eseguito la `RESTORE` istruzione per ripristinare il backup del database (con estensione bak) in archiviazione di Azure a un'istanza di database in un altro computer.  
+     **Nota:** eseguire l'istruzione `RESTORE` per ripristinare il backup del database (con estensione bak) del Servizio di archiviazione di Microsoft Azure in un'istanza del database in un altro computer.  
   
-    ```tsql  
+    ```sql  
   
     USE master   
     GO   
@@ -96,6 +96,6 @@ ms.locfileid: "48207921"
   
     ```  
   
- **Fine dell'esercitazione: file di dati SQL Server nel servizio di archiviazione di Microsoft Azure**  
+ **Fine dell'esercitazione: File di dati di SQL Server nel servizio di archiviazione di Microsoft Azure**  
   
   

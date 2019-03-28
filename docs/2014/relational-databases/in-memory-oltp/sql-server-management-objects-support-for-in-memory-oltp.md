@@ -10,12 +10,12 @@ ms.assetid: 2b67292d-6d8e-4016-9063-a97461ffe57a
 author: CarlRabeler
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 5e57b808ff8ef1423c58525597b7af1bbccdac69
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 7591cff38ac08d9fd36d7b39f180613fbdd12961
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48207351"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58529523"
 ---
 # <a name="sql-server-management-objects-support-for-in-memory-oltp"></a>Supporto di SQL Server Management Objects per OLTP in memoria
   In questo argomento vengono descritte le modifiche in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Management Objects (SMO) per OLTP in memoria.  
@@ -77,7 +77,7 @@ ms.locfileid: "48207351"
   
 -   Microsoft.SqlServer.SqlEnum.dll  
   
-```tsql  
+```sql  
 using Microsoft.SqlServer.Management.Smo;  
 using System;  
   

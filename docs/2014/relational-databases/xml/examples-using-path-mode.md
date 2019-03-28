@@ -9,15 +9,15 @@ ms.topic: conceptual
 helpviewer_keywords:
 - PATH FOR XML mode, examples
 ms.assetid: 3564e13b-9b97-49ef-8cf9-6a78677b09a3
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 1384c2cd84505df59bc458274d0b33071e926f18
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: c5a566d9684341b7aa20342147aab950ebd4047c
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53365733"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58526664"
 ---
 # <a name="examples-using-path-mode"></a>Esempi: Utilizzo della modalità PATH
   Negli esempi seguenti viene illustrato l'utilizzo della modalità PATH nella creazione di codice XML da una query SELECT. Molte di queste query vengono specificate sui documenti XML di istruzioni per la produzione di biciclette archiviate nella colonna Instructions della tabella ProductModel.  
@@ -200,7 +200,7 @@ FOR XML PATH ('ProductModelData'), root ('Root');
 GO  
 ```  
   
- Di seguito è riportato il risultato parziale. Poiché la query specifica ManuInstr come nome di colonna, il wrapping del codice XML restituito dal metodo `query()` viene eseguito in un tag <`ManuInstr`> come illustrato di seguito:  
+ Di seguito è riportato il risultato parziale. Poiché la query specifica ManuInstr come nome di colonna, il codice XML restituito per il `query()` metodo viene eseguito il wrapping un <`ManuInstr`> tag come illustrato nell'esempio seguente:  
   
  `<Root>`  
   

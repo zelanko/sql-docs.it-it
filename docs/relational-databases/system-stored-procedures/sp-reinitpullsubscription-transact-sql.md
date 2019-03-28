@@ -16,12 +16,12 @@ ms.assetid: 7d9abe49-ce92-47f3-82c9-aea749518c91
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 6e5208446cc05755c6ab486356a664710c88f6dc
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: b4187dbe3ac00830919b07920a720b89818c25d8
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52752374"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58533703"
 ---
 # <a name="spreinitpullsubscription-transact-sql"></a>sp_reinitpullsubscription (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -40,14 +40,11 @@ sp_reinitpullsubscription [ @publisher = ] 'publisher'
 ```  
   
 ## <a name="arguments"></a>Argomenti  
- [  **@publisher=**] **'***publisher***'**  
- Nome del server di pubblicazione. *server di pubblicazione* viene **sysname**, non prevede alcun valore predefinito.  
+`[ @publisher = ] 'publisher'` È il nome del server di pubblicazione. *server di pubblicazione* viene **sysname**, non prevede alcun valore predefinito.  
   
- [ **@publisher_db=**] **'***publisher_db***'**  
- Nome del database del server di pubblicazione. *publisher_db* viene **sysname**, non prevede alcun valore predefinito.  
+`[ @publisher_db = ] 'publisher_db'` È il nome del server di pubblicazione. *publisher_db* viene **sysname**, non prevede alcun valore predefinito.  
   
- [  **@publication=**] **'***pubblicazione***'**  
- Nome della pubblicazione. *pubblicazione* viene **sysname**, con un valore predefinito è all, che indica che tutte le sottoscrizioni per la reinizializzazione.  
+`[ @publication = ] 'publication'` È il nome della pubblicazione. *pubblicazione* viene **sysname**, con un valore predefinito è all, che indica che tutte le sottoscrizioni per la reinizializzazione.  
   
 ## <a name="return-code-values"></a>Valori restituiti  
  **0** (esito positivo) o **1** (errore)  

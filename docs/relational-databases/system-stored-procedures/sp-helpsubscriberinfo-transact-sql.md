@@ -16,12 +16,12 @@ ms.assetid: fbabe1ec-57cf-425c-bae7-af7f5d3198fd
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 14ab67bb9d69272960bbce3e1a7cfa059c609e3f
-ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
+ms.openlocfilehash: 18a1de1e3b7dc1f312094a9023e0af9df014214b
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/18/2018
-ms.locfileid: "53589805"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58526373"
 ---
 # <a name="sphelpsubscriberinfo-transact-sql"></a>sp_helpsubscriberinfo (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -39,11 +39,9 @@ sp_helpsubscriberinfo [ [ @subscriber =] 'subscriber']
 ```  
   
 ## <a name="arguments"></a>Argomenti  
- [  **@subscriber =** ] **'**_sottoscrittore_**'**  
- Nome del Sottoscrittore. *Sottoscrittore* viene **sysname**, il valore predefinito è **%**, che restituisce tutte le informazioni.  
+`[ @subscriber = ] 'subscriber'` È il nome del sottoscrittore. *Sottoscrittore* viene **sysname**, il valore predefinito è **%**, che restituisce tutte le informazioni.  
   
- [  **@publisher =** ] **'**_editore_**'**  
- Nome del server di pubblicazione. *server di pubblicazione* viene **sysname**e il valore predefinito è il nome del server corrente.  
+`[ @publisher = ] 'publisher'` È il nome del server di pubblicazione. *server di pubblicazione* viene **sysname**e il valore predefinito è il nome del server corrente.  
   
 > [!NOTE]  
 >  *server di pubblicazione* non deve essere specificato, tranne nel caso un server di pubblicazione Oracle.  
@@ -60,25 +58,25 @@ sp_helpsubscriberinfo [ [ @subscriber =] 'subscriber']
 |**commit_batch_size**|**int**|Non supportato.|  
 |**status_batch_size**|**int**|Non supportato.|  
 |**flush_frequency**|**int**|Non supportato.|  
-|**frequency_type**|**int**|Frequenza di esecuzione dell'agente di distribuzione:<br /><br /> **1** = una sola volta<br /><br /> **2** = su richiesta<br /><br /> **4** = giornaliera<br /><br /> **8** = settimanale<br /><br /> **16** = mensile<br /><br /> **32** = mensile relativa<br /><br /> **64** = avvio automatico<br /><br /> **128** = periodica|  
+|**frequency_type**|**int**|Frequenza di esecuzione dell'agente di distribuzione:<br /><br /> **1** = una sola volta<br /><br /> **2** = su richiesta<br /><br /> **4** = giornaliera<br /><br /> **8** = settimanale<br /><br /> **16** = mensile<br /><br /> **32** = mensile relativa<br /><br /> **64** = avvio automatico<br /><br /> **128** = Recurring|  
 |**frequency_interval**|**int**|Valore applicato alla frequenza impostata da *frequency_type*.|  
-|**frequency_relative_interval**|**int**|Data dell'agente di distribuzione usata quando *frequency_type* è impostata su **32** (frequenza mensile relativa):<br /><br /> **1** = prima<br /><br /> **2** = secondi<br /><br /> **4** = terza<br /><br /> **8** = quarta<br /><br /> **16** = ultima|  
+|**frequency_relative_interval**|**int**|Data dell'agente di distribuzione usata quando *frequency_type* è impostata su **32** (frequenza mensile relativa):<br /><br /> **1** = prima<br /><br /> **2** = Second<br /><br /> **4** = terza<br /><br /> **8** = quarta<br /><br /> **16** = ultima|  
 |**frequency_recurrence_factor**|**int**|Fattore di occorrenza utilizzato da *frequency_type*.|  
-|**frequency_subday**|**int**|Frequenza di ripianificazione durante il periodo definito:<br /><br /> **1** = una sola volta<br /><br /> **2** = secondi<br /><br /> **4** = minuti<br /><br /> **8** = ore|  
+|**frequency_subday**|**int**|Frequenza di ripianificazione durante il periodo definito:<br /><br /> **1** = Once<br /><br /> **2** = Second<br /><br /> **4** = minuti<br /><br /> **8** = ore|  
 |**frequency_subday_interval**|**int**|Intervallo per la *frequency_subday*.|  
 |**active_start_time_of_day**|**int**|Ora del giorno della prima esecuzione pianificata dell'agente di distribuzione nel formato HHMMSS.|  
 |**active_end_time_of_day**|**int**|Ora del giorno in cui viene arrestata la pianificazione dell'agente di distribuzione nel formato HHMMSS.|  
 |**active_start_date**|**int**|Data della prima esecuzione pianificata dell'agente di distribuzione nel formato AAAAMMGG.|  
 |**active_end_date**|**int**|Data in cui viene arrestata la pianificazione dell'agente di distribuzione nel formato AAAAMMGG.|  
 |**retryattempt**|**int**|Non supportato.|  
-|**retryDelay**|**int**|Non supportato.|  
+|**retrydelay**|**int**|Non supportato.|  
 |**description**|**nvarchar(255)**|Descrizione in formato testo del Sottoscrittore.|  
 |**security_mode**|**int**|Modalità di sicurezza implementata:<br /><br /> **0**  =  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] autenticazione<br /><br /> **1**  =  [!INCLUDE[msCoName](../../includes/msconame-md.md)] l'autenticazione di Windows|  
-|**frequency_type2**|**int**|Frequenza di esecuzione dell'agente di merge:<br /><br /> **1** = una sola volta<br /><br /> **2** = su richiesta<br /><br /> **4** = giornaliera<br /><br /> **8** = settimanale<br /><br /> **16** = mensile<br /><br /> **32** = mensile relativa<br /><br /> **64** = avvio automatico<br /><br /> **128** = periodica|  
+|**frequency_type2**|**int**|Frequenza di esecuzione dell'agente di merge:<br /><br /> **1** = una sola volta<br /><br /> **2** = su richiesta<br /><br /> **4** = giornaliera<br /><br /> **8** = settimanale<br /><br /> **16** = mensile<br /><br /> **32** = mensile relativa<br /><br /> **64** = avvio automatico<br /><br /> **128** = Recurring|  
 |**frequency_interval2**|**int**|Valore applicato alla frequenza impostata da *frequency_type*.|  
-|**frequency_relative_interval2**|**int**|Data dell'agente di Merge utilizzato quando *frequency_type* è impostato su 32 (mensile relativa):<br /><br /> **1** = prima<br /><br /> **2** = secondi<br /><br /> **4** = terza<br /><br /> **8** = quarta<br /><br /> **16** = ultima|  
+|**frequency_relative_interval2**|**int**|Data dell'agente di Merge utilizzato quando *frequency_type* è impostato su 32 (mensile relativa):<br /><br /> **1** = prima<br /><br /> **2** = Second<br /><br /> **4** = terza<br /><br /> **8** = quarta<br /><br /> **16** = ultima|  
 |**frequency_recurrence_factor2**|**int**|Fattore di occorrenza utilizzato da *frequency_type * *.*|  
-|**frequency_subday2**|**int**|Frequenza di ripianificazione durante il periodo definito:<br /><br /> **1** = una sola volta<br /><br /> **2** = secondi<br /><br /> **4** = minuti<br /><br /> **8** = ore|  
+|**frequency_subday2**|**int**|Frequenza di ripianificazione durante il periodo definito:<br /><br /> **1** = Once<br /><br /> **2** = Second<br /><br /> **4** = minuti<br /><br /> **8** = ore|  
 |**frequency_subday_interval2**|**int**|Intervallo per la *frequency_subday*.|  
 |**active_start_time_of_day2**|**int**|Ora del giorno della prima esecuzione pianificata dell'agente di merge nel formato HHMMSS.|  
 |**active_end_time_of_day2**|**int**|Ora del giorno in cui viene arrestata la pianificazione dell'agente di merge nel formato HHMMSS|  

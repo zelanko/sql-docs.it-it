@@ -12,12 +12,12 @@ ms.assetid: 895d220c-6749-4954-9dd3-2ea4c6a321ff
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 5949bbc7d448c60c5ffbdc028f880a09181c986e
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 46d9b46698e4416f2ad9ab15b2fb8a223ab7b7c7
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52528394"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58529583"
 ---
 # <a name="enable-semantic-search-on-tables-and-columns"></a>Abilitare la ricerca semantica in tabelle e colonne
   Viene descritto come abilitare o disabilitare l'indicizzazione semantica statistica in colonne selezionate contenenti documenti o testo.  
@@ -42,7 +42,7 @@ ms.locfileid: "52528394"
   
 -   È possibile creare un indice semantico in colonne che includono qualsiasi tipo di dati supportato per l'indicizzazione full-text. Per altre informazioni, vedere [Creare e gestire indici full-text](create-and-manage-full-text-indexes.md).  
   
--   È possibile specificare qualsiasi tipo di documento supportato per l'indicizzazione full-text per colonne `varbinary(max)`. Per altre informazioni, vedere [How To: Determinare quale documento tipi può essere indicizzato](#doctypes) in questo argomento.  
+-   È possibile specificare qualsiasi tipo di documento supportato per l'indicizzazione full-text per colonne `varbinary(max)`. Per altre informazioni, vedere [Procedura: Determinare quali tipi di documenti è possibile indicizzare](#doctypes) in questo argomento.  
   
 -   L'indicizzazione semantica consente di creare due tipi di indici per le colonne selezionate, ovvero un indice di frasi chiave e un indice di somiglianza del documento. Non è possibile selezionare solo uno dei due tipi di indice quando si abilita l'indicizzazione semantica. È tuttavia possibile eseguire query indipendenti su questi due indici. Per altre informazioni, vedere [Trovare frasi chiave nei documenti mediante ricerca semantica](find-key-phrases-in-documents-with-semantic-search.md) e [Trovare documenti simili e correlati tramite la ricerca semantica](find-similar-and-related-documents-with-semantic-search.md).  
   
@@ -60,7 +60,7 @@ ms.locfileid: "52528394"
   
  L'esempio riportato di seguito crea il catalogo full-text predefinito **ft**. L'esempio crea quindi un indice univoco nella colonna **JobCandidateID** della tabella **HumanResources.JobCandidate** del database di esempio AdventureWorks2012. Questo indice univoco è necessario come colonna chiave di un indice full-text. L'esempio crea infine un indice full-text e un indice semantico nella colonna **Resume** .  
   
-```tsql  
+```sql  
 CREATE FULLTEXT CATALOG ft AS DEFAULT  
 GO  
   
@@ -84,7 +84,7 @@ GO
   
  Nell'esempio viene anche specificato che il rilevamento delle modifiche è disabilitato e che non viene eseguito il popolamento. In seguito, durante le ore di minore attività, l'esempio usa un'istruzione **ALTER FULLTEXT INDEX** per avviare un popolamento completo nel nuovo indice e abilitare il rilevamento automatico delle modifiche.  
   
-```tsql  
+```sql  
 CREATE FULLTEXT CATALOG documents_catalog  
 GO  
   
@@ -107,7 +107,7 @@ GO
   
  In un secondo momento, in un orario di minore attività, l'indice viene popolato:  
   
-```tsql  
+```sql  
 ALTER FULLTEXT INDEX ON Production.Document SET CHANGE_TRACKING AUTO  
 GO  
 ```  
@@ -129,11 +129,11 @@ GO
   
 -   Per aggiungere l'indicizzazione semantica a una colonna già abilitata per l'indicizzazione full-text, usare l'opzione **ADD STATISTICAL_SEMANTICS** . È possibile aggiungere l'indicizzazione semantica solo a una colonna in una singola istruzione **ALTER** .  
   
- **Esempio: Aggiungere indicizzazione semantica a una colonna già abilitata l'indicizzazione full-text**  
+ **Esempio: Aggiungere l'indicizzazione semantica a una colonna già abilitata per l'indicizzazione full-text**  
   
  Nell'esempio seguente viene modificato un indice full-text esistente nella tabella **Production.Document** del database di esempio AdventureWorks2012. Nell'esempio viene aggiunto un indice semantico nella colonna **Document** della tabella **Production.Document** , in cui è già presente un indice full-text. Nell'esempio viene specificato che l'indice non verrà ripopolato automaticamente.  
   
-```tsql  
+```sql  
 ALTER FULLTEXT INDEX ON Production.Document  
     ALTER COLUMN Document  
         ADD Statistical_Semantics  
@@ -158,7 +158,7 @@ GO
  **Eliminare un indice semantico tramite Transact-SQL**  
  -   Per eliminare l'indicizzazione semantica solo da una colonna o da più colonne, chiamare l'istruzione **ALTER FULLTEXT INDEX** con l'opzione **ALTER COLUMN***nome_colonna***DROP STATISTICAL_SEMANTICS**. È possibile eliminare l'indicizzazione da più colonne in una singola istruzione **ALTER** .  
   
-    ```tsql  
+    ```sql  
     USE database_name  
     GO  
   
@@ -170,7 +170,7 @@ GO
   
 -   Per eliminare sia l'indicizzazione full-text che quella semantica da una colonna, chiamare l'istruzione **ALTER FULLTEXT INDEX** con l'opzione **ALTER COLUMN***nome_colonna***DROP**.  
   
-    ```tsql  
+    ```sql  
     USE database_name  
     GO  
   
@@ -197,7 +197,7 @@ GO
   
  Se viene restituito il valore 1, la ricerca full-text e la ricerca semantica sono abilitate per il database. Se viene restituito il valore 0, le ricerche non sono abilitate.  
   
-```tsql  
+```sql  
 SELECT DATABASEPROPERTYEX('database_name', 'IsFullTextEnabled')  
 GO  
 ```  
@@ -219,7 +219,7 @@ GO
   
      Se viene restituito il valore 1, la ricerca semantica è abilitata per la colonna. Se viene restituito il valore 0, la ricerca non è abilitata.  
   
-    ```tsql  
+    ```sql  
     SELECT COLUMNPROPERTY(OBJECT_ID('table_name'), 'column_name', 'StatisticalSemantics')  
     GO  
     ```  
@@ -228,7 +228,7 @@ GO
   
      Il valore 1 nella colonna **statistical_semantics** indica che la colonna specificata è abilitata per l'indicizzazione semantica oltre che per l'indicizzazione full-text.  
   
-    ```tsql  
+    ```sql  
     SELECT * FROM sys.fulltext_index_columns WHERE object_id = OBJECT_ID('table_name')  
     GO  
     ```  
@@ -246,7 +246,7 @@ GO
   
  Eseguire una query sulla vista del catalogo [sys.fulltext_semantic_languages &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-fulltext-semantic-languages-transact-sql).  
   
-```tsql  
+```sql  
 SELECT * FROM sys.fulltext_semantic_languages  
 GO  
 ```  

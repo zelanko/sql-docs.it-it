@@ -19,12 +19,12 @@ ms.assetid: e4734b3b-8fbe-4b65-9c48-91b5a3dd18e1
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 07e9e5c6b96e33dc416f7e81e363b988a0f615e3
-ms.sourcegitcommit: 04dd0620202287869b23cc2fde998a18d3200c66
+ms.openlocfilehash: 89449cbc31e1ec36fa37a5bb36b1f505cdd2e14d
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "52641242"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58530913"
 ---
 # <a name="configure-the-recovery-interval-server-configuration-option"></a>Configurare l'opzione di configurazione del server recovery interval
   In questo argomento si illustra come configurare l'opzione di configurazione del server **recovery interval** in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] utilizzando [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)]. Con l'opzione **recovery interval** è possibile definire un limite superiore di tempo da impiegare per il recupero di un database. Il valore specificato per questa opzione viene utilizzato nel [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] per stabilire approssimativamente la frequenza di generazione dei checkpoint automatici in un database specificato tramite [checkpoint automatici](../../relational-databases/logs/database-checkpoints-sql-server.md) .  
@@ -85,9 +85,9 @@ ms.locfileid: "52641242"
   
 2.  Dalla barra Standard fare clic su **Nuova query**.  
   
-3.  Copiare e incollare l'esempio seguente nella finestra delle query e fare clic su **Esegui**. Questo esempio illustra come usare [sp_configure](/sql/relational-databases/system-stored-procedures/sp-configure-transact-sql) per impostare il valore dell'opzione `recovery interval` su `3` minuti.  
+3.  Copiare e incollare l'esempio seguente nella finestra Query, quindi fare clic su **Esegui**. Questo esempio illustra come usare [sp_configure](/sql/relational-databases/system-stored-procedures/sp-configure-transact-sql) per impostare il valore dell'opzione `recovery interval` su `3` minuti.  
   
-```tsql  
+```sql  
 USE AdventureWorks2012 ;  
 GO  
 EXEC sp_configure 'show advanced options', 1;  

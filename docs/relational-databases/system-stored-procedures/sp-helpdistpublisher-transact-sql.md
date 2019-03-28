@@ -16,12 +16,12 @@ ms.assetid: f207c22d-8fb2-4756-8a9d-6c51d6cd3470
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 85a6eaf76497b1fa763047a255cdb7784316541e
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 54222842aa51e6904944a8b97507a3368e144612
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52802743"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58526473"
 ---
 # <a name="sphelpdistpublisher-transact-sql"></a>sp_helpdistpublisher (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -39,11 +39,9 @@ sp_helpdistpublisher [ [ @publisher=] 'publisher']
 ```  
   
 ## <a name="arguments"></a>Argomenti  
- [  **@publisher=** ] **'***publisher***'**  
- Server di pubblicazione per il quale vengono restituite le proprietà. *server di pubblicazione* viene **sysname**, il valore predefinito è **%**.  
+`[ @publisher = ] 'publisher'` È il server di pubblicazione per cui vengono restituite le proprietà. *server di pubblicazione* viene **sysname**, il valore predefinito è **%**.  
   
- [  **@check_user=** ] *check_user*  
- [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
+`[ @check_user = ] check_user` [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
   
 ## <a name="result-sets"></a>Set di risultati  
   
@@ -53,10 +51,10 @@ sp_helpdistpublisher [ [ @publisher=] 'publisher']
 |**distribution_db**|**sysname**|Database di distribuzione per il server di pubblicazione specificato.|  
 |**security_mode**|**int**|Modalità di sicurezza utilizzata dagli agenti di replica per connettersi al server di pubblicazione per le sottoscrizioni ad aggiornamento in coda o a un server di pubblicazione non [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].<br /><br /> **0**  =  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] autenticazione<br /><br /> **1** = autenticazione di Windows|  
 |**login**|**sysname**|Nome account di accesso utilizzato dagli agenti di replica per connettersi al server di pubblicazione per le sottoscrizioni ad aggiornamento in coda o a un server di pubblicazione non [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
-|**password**|**nvarchar(524**|Password restituita in formato crittografato semplice. La password è diverso da NULL per gli utenti **sysadmin**.|  
-|**Attiva**|**bit**|Indica se un server di pubblicazione remoto utilizza il server locale come server di distribuzione:<br /><br /> **0** = No<br /><br /> **1** = Sì|  
+|**password**|**nvarchar(524)**|Password restituita in formato crittografato semplice. La password è diverso da NULL per gli utenti **sysadmin**.|  
+|**active**|**bit**|Indica se un server di pubblicazione remoto utilizza il server locale come server di distribuzione:<br /><br /> **0** = No<br /><br /> **1** = Sì|  
 |**working_directory**|**nvarchar(255)**|Nome della directory di lavoro.|  
-|**attendibile**|**bit**|Indica se la password è obbligatoria per la connessione del server di pubblicazione al server di distribuzione. Per la [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] e versioni successive, deve sempre restituire **0**, il che significa che la password è obbligatoria.|  
+|**trusted**|**bit**|Indica se la password è obbligatoria per la connessione del server di pubblicazione al server di distribuzione. Per la [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] e versioni successive, deve sempre restituire **0**, il che significa che la password è obbligatoria.|  
 |**thirdparty_flag**|**bit**|Indica se la pubblicazione è abilitata da [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o da un'applicazione di terze parti:<br /><br /> **0** = [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], oracle o server di pubblicazione Oracle Gateway.<br /><br /> **1** = server di pubblicazione è stato integrato con [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usando un'applicazione di terze parti.|  
 |**publisher_type**|**sysname**|Tipo di server di pubblicazione. Può essere uno dei tipi seguenti:<br /><br /> **MSSQLSERVER**<br /><br /> **ORACLE**<br /><br /> **ORACLE GATEWAY**|  
 |**publisher_data_source**|**nvarchar(4000)**|Nome dell'origine dati OLE DB nel server di pubblicazione.|  

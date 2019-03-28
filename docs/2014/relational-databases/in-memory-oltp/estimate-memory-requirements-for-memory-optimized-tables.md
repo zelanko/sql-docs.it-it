@@ -10,12 +10,12 @@ ms.assetid: 5c5cc1fc-1fdf-4562-9443-272ad9ab5ba8
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 37931bd25b0a2024e555a7881397fd558d2f260a
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 15b3b27f859b2ea2ed3008d33f19a682aeef833b
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52509232"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58533473"
 ---
 # <a name="estimate-memory-requirements-for-memory-optimized-tables"></a>Stimare i requisiti di memoria delle tabelle con ottimizzazione per la memoria
   Se si sta creando un nuovo [!INCLUDE[hek_2](../../includes/hek-2-md.md)] ottimizzata per la memoria o la migrazione di una tabella basata su disco esistente a una tabella con ottimizzazione per la memoria, è importante disporre di un numero ragionevole di requisiti di memoria di ogni tabella in modo che è possibile effettuare il provisioning di server con sufficiente memoria. In questa sezione viene descritto come stimare la quantità di memoria necessaria per contenere i dati di una tabella ottimizzata per la memoria.  
@@ -39,7 +39,7 @@ ms.locfileid: "52509232"
 ##  <a name="bkmk_ExampleTable"></a> Esempio di tabella ottimizzata per la memoria  
  Si consideri il seguente schema di tabella ottimizzata per la memoria:  
   
-```tsql  
+```sql  
   
 CREATE TABLE t_hk (  
 col1 int NOT NULL PRIMARY KEY NONCLUSTERED,  
@@ -86,7 +86,7 @@ GO
   
  Tramite gli indici hash è possibile ottenere ricerche di uguaglianza estremamente veloci, ad esempio:  
   
-```tsql  
+```sql  
   
 SELECT * FROM t_hk  
    WHERE Col2 = 3  
@@ -95,7 +95,7 @@ SELECT * FROM t_hk
   
  Gli indici non cluster sono più veloci per le ricerche in intervalli, ad esempio:  
   
-```tsql  
+```sql  
   
 SELECT * FROM t_hk  
    WHERE Col2 >= 3  
@@ -104,7 +104,7 @@ SELECT * FROM t_hk
   
  Se si esegue la migrazione di una tabella basata su disco, è possibile utilizzare quando riportato di seguito per determinare il numero di valori univoci per l'indice t1c2_index.  
   
-```tsql  
+```sql  
   
 SELECT COUNT(DISTINCT [Col2])  
   FROM t_hk  
@@ -144,7 +144,7 @@ SELECT COUNT(DISTINCT [Col2])
   
  Gli indici non cluster rappresentano la soluzione migliore in caso di ricerche in intervalli, come esemplificato dalla query seguente:  
   
-```tsql  
+```sql  
   
 SELECT * FROM t_hk  
    WHERE c2 > 5  

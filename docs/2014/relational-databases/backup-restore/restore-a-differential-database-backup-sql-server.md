@@ -16,12 +16,12 @@ ms.assetid: 0dd971a4-ee38-4dd3-9f30-ef77fc58dd11
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 52cab6d00ad25bdc16a4acf14109ff5c74a4bcca
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: a7aa0f0ba295d8e152877d11ceb39fb6eb4f3c87
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48134201"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58531303"
 ---
 # <a name="restore-a-differential-database-backup-sql-server"></a>Ripristino di un backup differenziale di database (SQL Server)
   In questo argomento viene descritto il ripristino di un backup differenziale del database in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] tramite [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)].  
@@ -34,7 +34,7 @@ ms.locfileid: "48134201"
   
      [Prerequisiti](#Prerequisites)  
   
-     [Security](#Security)  
+     [Sicurezza](#Security)  
   
 -   **Per ripristinare un backup differenziale di database utilizzando:**  
   
@@ -56,11 +56,11 @@ ms.locfileid: "48134201"
   
 ###  <a name="Prerequisites"></a> Prerequisiti  
   
--   Nel modello di recupero con registrazione completa o con registrazione minima delle operazioni bulk, prima di poter ripristinare un database, è necessario effettuare il backup del log delle transazioni attivo, noto come parte finale del log. Per altre informazioni, vedere [Eseguire il backup di un log delle transazioni &#40;SQL Server&#41;](back-up-a-transaction-log-sql-server.md).  
+-   Nel modello di recupero con registrazione completa o con registrazione minima delle operazioni bulk, prima di poter ripristinare un database, è necessario effettuare il backup del log delle transazioni attivo, noto come parte finale del log. Per altre informazioni, vedere [Backup di un log delle transazioni &#40;SQL Server&#41;](back-up-a-transaction-log-sql-server.md).  
   
 ###  <a name="Security"></a> Sicurezza  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> Autorizzazioni  
  Se il database da ripristinare non esiste, per eseguire un'operazione RESTORE l'utente deve disporre delle autorizzazioni CREATE DATABASE. Se il database esiste, le autorizzazioni per l'istruzione RESTORE vengono assegnate per impostazione predefinita ai membri dei ruoli predefiniti del server **sysadmin** e **dbcreator** e al proprietario (**dbo**) del database. Per l'opzione FROM DATABASE_SNAPSHOT, il database esiste sempre.  
   
  Le autorizzazioni per l'istruzione RESTORE vengono assegnate ai ruoli in cui le informazioni sull'appartenenza sono sempre disponibili per il server. Poiché è possibile controllare l'appartenenza ai ruoli predefiniti del database solo quando il database è accessibile e non è danneggiato, condizioni che non risultano sempre vere quando si esegue un'operazione RESTORE, i membri del ruolo predefinito del database **db_owner** non dispongono delle autorizzazioni per l'istruzione RESTORE.  
@@ -133,11 +133,11 @@ ms.locfileid: "48134201"
   
 12. [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
-##  <a name="TsqlProcedure"></a> Uso di Transact-SQL  
+##  <a name="TsqlProcedure"></a> Utilizzo di Transact-SQL  
   
 #### <a name="to-restore-a-differential-database-backup"></a>Per ripristinare un backup differenziale del database  
   
-1.  Eseguire l'istruzione RESTORE DATABASE, specificando la clausola NORECOVERY, per ripristinare il backup completo del database precedente al backup differenziale del database. Per ulteriori informazioni, vedere [Procedura: Ripristino di un backup completo](restore-a-database-backup-under-the-simple-recovery-model-transact-sql.md).  
+1.  Eseguire l'istruzione RESTORE DATABASE, specificando la clausola NORECOVERY, per ripristinare il backup completo del database precedente al backup differenziale del database. Per altre informazioni, vedere [Procedura: Ripristinare un Backup completo](restore-a-database-backup-under-the-simple-recovery-model-transact-sql.md).  
   
 2.  Eseguire l'istruzione RESTORE DATABASE per ripristinare il backup differenziale del database, specificando:  
   
@@ -154,7 +154,7 @@ ms.locfileid: "48134201"
 #### <a name="a-restoring-a-differential-database-backup"></a>A. Ripristino di un backup differenziale del database  
  Nell'esempio seguente vengono ripristinati un backup del database e un backup differenziale del database `MyAdvWorks` .  
   
-```tsql  
+```sql  
 -- Assume the database is lost, and restore full database,   
 -- specifying the original full database backup and NORECOVERY,   
 -- which allows subsequent restore operations to proceed.  
@@ -174,7 +174,7 @@ GO
 #### <a name="b-restoring-a-database-differential-database-and-transaction-log-backup"></a>B. Ripristino di un backup del database, di un backup differenziale del database e di un backup del log delle transazioni  
  In questo esempio vengono ripristinati un backup, un backup differenziale e un backup del log delle transazioni del database `MyAdvWorks` .  
   
-```tsql  
+```sql  
 -- Assume the database is lost at this point. Now restore the full   
 -- database. Specify the original full database backup and NORECOVERY.  
 -- NORECOVERY allows subsequent restore operations to proceed.  

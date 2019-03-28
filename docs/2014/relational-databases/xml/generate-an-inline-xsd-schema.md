@@ -15,15 +15,15 @@ helpviewer_keywords:
 - inline XSD schema generation [SQL Server]
 - XMLDATA option
 ms.assetid: 04b35145-1cca-45f4-9eb7-990abf2e647d
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
-ms.openlocfilehash: ad003060588215c0d5a218ade5103f5748e5ebfc
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 9b6c8233b95f3f95235bb4f618358d4680d3088f
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53369563"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58529333"
 ---
 # <a name="generate-an-inline-xsd-schema"></a>Generazione di uno schema XSD inline
   In una clausola FOR XML è possibile richiedere che la query restituisca uno schema inline oltre ai risultati della query. Per ottenere uno schema XDR, utilizzare la parola chiave XMLDATA nella clausola FOR XML. Per ottenere uno schema XSD, utilizzare invece la parola chiave XMLSCHEMA.  
@@ -36,7 +36,7 @@ ms.locfileid: "53369563"
   
  Se si specifica la parola chiave XMLSCHEMA in una query FOR XML, si otterrà sia uno schema che i dati XML, ovvero il risultato della query. Ogni elemento di livello principale dei dati fa riferimento allo schema precedente tramite una dichiarazione dello spazio dei nomi predefinito che, a sua volta, fa riferimento allo spazio dei nomi di destinazione dello schema inline.  
   
- Ad esempio:  
+ Esempio:  
   
 ```  
 <xsd:schema targetNamespace="urn:schemas-microsoft-com:sql:SqlRowSet1" xmlns:schema="urn:schemas-microsoft-com:sql:SqlRowSet1" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:sqltypes="https://schemas.microsoft.com/sqlserver/2004/sqltypes" elementFormDefault="qualified">  
@@ -221,7 +221,7 @@ FOR XML RAW, XMLSCHEMA, ELEMENTS
 ## <a name="element-name-clashes"></a>Conflitti dei nomi di elementi  
  Nelle query FOR XML è possibile utilizzare lo stesso nome per indicare due sottoelementi. Ad esempio, la query seguente recupera i valori ListPrice e DealerPrice dei prodotti, ma specifica lo stesso alias per le due colonne, ovvero Price. Nel set di righe risultante saranno pertanto presenti due colonne con lo stesso nome.  
   
-### <a name="case-1-both-subelements-are-nonkey-columns-of-the-same-type-and-can-be-null"></a>Caso 1: Entrambi i sottoelementi sono colonne non chiave dello stesso tipo e possono essere NULL  
+### <a name="case-1-both-subelements-are-nonkey-columns-of-the-same-type-and-can-be-null"></a>Caso 1: entrambi i sottoelementi sono colonne non chiave dello stesso tipo e possono essere NULL  
  Nella query seguente, entrambi i sottoelementi sono colonne non chiave dello stesso tipo e possono essere NULL.  
   
 ```  
@@ -313,7 +313,7 @@ for    XML RAW, ELEMENTS, XMLSCHEMA
   
  `</row>`  
   
-### <a name="case-2-one-key-and-one-nonkey-column-of-the-same-type"></a>Caso 2: Una chiave e una colonna non chiave dello stesso tipo  
+### <a name="case-2-one-key-and-one-nonkey-column-of-the-same-type"></a>Caso 2: una colonna chiave e una colonna non chiave dello stesso tipo  
  La query seguente illustra una colonna chiave e una colonna non chiave dello stesso tipo.  
   
 ```  
@@ -391,7 +391,7 @@ FOR XML RAW, ELEMENTS, XMLSCHEMA
   
  Si noti che per l'elemento <`Col`> dello schema XSD inline, minOccurs è impostato su 0.  
   
-### <a name="case-3-both-elements-of-different-types-and-corresponding-columns-can-be-null"></a>Caso 3: Entrambi gli elementi di tipo diverso e le colonne corrispondenti possono essere NULL  
+### <a name="case-3-both-elements-of-different-types-and-corresponding-columns-can-be-null"></a>Caso 3: entrambi gli elementi sono di tipo diverso e le colonne corrispondenti possono essere NULL  
  La query seguente viene eseguita sulla tabella di esempio illustrata nel caso 2:  
   
 ```  

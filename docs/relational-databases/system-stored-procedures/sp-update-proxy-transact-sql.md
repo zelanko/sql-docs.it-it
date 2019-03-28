@@ -19,12 +19,12 @@ ms.assetid: 864fd0e6-9d61-4f07-92ef-145318d2f881
 author: VanMSFT
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 06520164758a50d604b2effbdae23f73dde7128c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 29a95b506fbbfb5342410d8d393f0091dd98834b
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47763520"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58534463"
 ---
 # <a name="spupdateproxy-transact-sql"></a>sp_update_proxy (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -48,26 +48,19 @@ sp_update_proxy
 ```  
   
 ## <a name="arguments"></a>Argomenti  
- [ **@proxy_id**=] *id*  
- Numero di identificazione del proxy da modificare. Il *proxy_id* viene **int**, con un valore predefinito è NULL.  
+`[ @proxy_id = ] id` Il numero di identificazione del proxy da modificare. Il *proxy_id* viene **int**, con un valore predefinito è NULL.  
   
- [ **@proxy_name**=] **'***proxy_name***'**  
- Nome del proxy da modificare. Il *nome_proxy* viene **sysname**, con un valore predefinito è NULL.  
+`[ @proxy_name = ] 'proxy_name'` Il nome del proxy da modificare. Il *nome_proxy* viene **sysname**, con un valore predefinito è NULL.  
   
- [ **@credential_name** =] **'***credential_name***'**  
- Nome delle nuove credenziali per il proxy. Il *credential_name* viene **sysname**, con un valore predefinito è NULL. Entrambi *credential_name* oppure *credential_id* può essere specificato.  
+`[ @credential_name = ] 'credential_name'` Il nome delle nuove credenziali per il proxy. Il *credential_name* viene **sysname**, con un valore predefinito è NULL. Entrambi *credential_name* oppure *credential_id* può essere specificato.  
   
- [ **@credential_id** =] *credential_id*  
- Numero di identificazione delle nuove credenziali per il proxy. Il *credential_id* viene **int**, con un valore predefinito è NULL. Entrambi *credential_name* oppure *credential_id* può essere specificato.  
+`[ @credential_id = ] credential_id` Il numero di identificazione delle nuove credenziali per il proxy. Il *credential_id* viene **int**, con un valore predefinito è NULL. Entrambi *credential_name* oppure *credential_id* può essere specificato.  
   
- [ **@new_name**=] **'***new_name***'**  
- Nuove nome del proxy. Il *new_name* viene **sysname**, con un valore predefinito è NULL. Quando specificato, la procedura modifica il nome del proxy per il *new_name*. Quando questo argomento è NULL, il nome del proxy rimane invariato.  
+`[ @new_name = ] 'new_name'` Il nuovo nome del proxy. Il *new_name* viene **sysname**, con un valore predefinito è NULL. Quando specificato, la procedura modifica il nome del proxy per il *new_name*. Quando questo argomento è NULL, il nome del proxy rimane invariato.  
   
- [ **@enabled** =] *is_enabled*  
- Specifica se il proxy è abilitato. Il *is_enabled* flag è **tinyint**, con un valore predefinito è NULL. Quando *is_enabled* viene **0**, il proxy non è abilitato e non può essere utilizzato da un passaggio di processo. Quando questo argomento è NULL, lo stato del proxy rimane invariato.  
+`[ @enabled = ] is_enabled` È fatto che il proxy è abilitato. Il *is_enabled* flag è **tinyint**, con un valore predefinito è NULL. Quando *is_enabled* viene **0**, il proxy non è abilitato e non può essere utilizzato da un passaggio di processo. Quando questo argomento è NULL, lo stato del proxy rimane invariato.  
   
- [ **@description**=] **'***descrizione***'**  
- Nuova descrizione del proxy. Il *description* viene **nvarchar(512)**, con un valore predefinito è NULL. Quando questo argomento è NULL, la descrizione del proxy rimane invariata.  
+`[ @description = ] 'description'` Nuova descrizione del proxy. Il *description* viene **nvarchar(512)**, con un valore predefinito è NULL. Quando questo argomento è NULL, la descrizione del proxy rimane invariata.  
   
 ## <a name="return-code-values"></a>Valori restituiti  
  **0** (esito positivo) o **1** (errore)  

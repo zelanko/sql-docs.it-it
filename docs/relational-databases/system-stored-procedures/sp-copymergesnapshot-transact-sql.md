@@ -16,12 +16,12 @@ ms.assetid: eaecd6e0-8486-4e5d-ace7-8ae75768c0a8
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: f308f86de68c672a64f78da0a6b1bd54cde82a2b
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: d3abdc711d509f323dfd1600360b26c46b2e05ab
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54133801"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58526243"
 ---
 # <a name="spcopymergesnapshot-transact-sql"></a>sp_copymergesnapshot (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -38,11 +38,9 @@ sp_copymergesnapshot [ @publication = ] 'publication', [ @destination_folder = ]
 ```  
   
 ## <a name="arguments"></a>Argomenti  
- [  **@publication=**] **'**_pubblicazione_**'**  
- Nome della pubblicazione di cui si desidera copiare la cartella snapshot. *pubblicazione* viene **sysname**, non prevede alcun valore predefinito.  
+`[ @publication = ] 'publication'` È il nome della pubblicazione il cui contenuto snapshot devono essere copiati. *pubblicazione* viene **sysname**, non prevede alcun valore predefinito.  
   
- [  **@destination_folder=**] **'**_destination_folder_**'**  
- Nome della cartella in cui si desidera copiare il contenuto della cartella snapshot della pubblicazione. *destination_folder*viene **nvarchar(255**, non prevede alcun valore predefinito. Il *destination_folder* può essere un percorso alternativo, ad esempio in un altro server, in un'unità di rete o su supporti rimovibili (ad esempio CD-ROM o un disco rimovibile).  
+`[ @destination_folder = ] 'destination_folder'` È il nome della cartella in cui deve essere copiato il contenuto dello snapshot di pubblicazione. *destination_folder*viene **nvarchar(255**, non prevede alcun valore predefinito. Il *destination_folder* può essere un percorso alternativo, ad esempio in un altro server, in un'unità di rete o su supporti rimovibili (ad esempio CD-ROM o un disco rimovibile).  
   
 ## <a name="return-code-values"></a>Valori restituiti  
  **0** (esito positivo) o **1** (errore)  

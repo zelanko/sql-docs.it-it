@@ -16,12 +16,12 @@ ms.assetid: df169b21-d10a-41df-b3a1-654cfb58bc21
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 027e2f2f423024a374533decd6f35bb9bf7ccb3e
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 8a3f0fa918d0247f5fd6dbe11c4a91a2376c52dd
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52760223"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58530813"
 ---
 # <a name="spenumeratependingschemachanges-transact-sql"></a>sp_enumeratependingschemachanges (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -39,22 +39,20 @@ sp_enumeratependingschemachanges [ @publication = ] 'publication'
 ```  
   
 ## <a name="arguments"></a>Argomenti  
- [  **@publication=** ] **'***pubblicazione***'**  
- Nome della pubblicazione. *pubblicazione* viene **sysname**, non prevede alcun valore predefinito.  
+`[ @publication = ] 'publication'` È il nome della pubblicazione. *pubblicazione* viene **sysname**, non prevede alcun valore predefinito.  
   
- [  **@starting_schemaversion=** ] *starting_schemaversion*  
- Modifica dello schema con il numero più basso da includere nel set di risultati.  
+`[ @starting_schemaversion = ] starting_schemaversion` È la modifica dello schema del numero più bassa da includere nel set di risultati.  
   
 ## <a name="result-set"></a>Set di risultati  
   
 |Nome colonna|Tipo di dati|Descrizione|  
 |-----------------|---------------|-----------------|  
 |**article_name**|**sysname**|Nome dell'articolo a cui si applica la modifica dello schema, oppure **Publication-wide** per le modifiche dello schema che si applicano all'intera pubblicazione.|  
-|**SchemaVersion**|**int**|Numero della modifica dello schema in sospeso.|  
-|**SchemaType**|**sysname**|Valore di testo che rappresenta il tipo di modifica dello schema.|  
+|**schemaversion**|**int**|Numero della modifica dello schema in sospeso.|  
+|**schematype**|**sysname**|Valore di testo che rappresenta il tipo di modifica dello schema.|  
 |**schematext**|**nvarchar(max)**|[!INCLUDE[tsql](../../includes/tsql-md.md)] che descrive la modifica dello schema.|  
 |**schemastatus**|**nvarchar(10)**|Specifica se è in sospeso una modifica dello schema per l'articolo. I possibili valori sono i seguenti:<br /><br /> **Attiva** = modifica dello schema è in sospeso<br /><br /> **inattivo** = modifica dello schema non è attiva<br /><br /> **ignorare** = modifica dello schema non viene replicata|  
-|**SchemaGuid**|**uniqueidentifier**|Identifica la modifica dello schema.|  
+|**schemaguid**|**uniqueidentifier**|Identifica la modifica dello schema.|  
   
 ## <a name="return-code-values"></a>Valori restituiti  
  **0** (esito positivo) o **1** (errore)  

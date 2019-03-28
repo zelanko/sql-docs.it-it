@@ -11,22 +11,22 @@ helpviewer_keywords:
 - value method [XML in SQL Server]
 - nodes method [XML in SQL Server]
 ms.assetid: c73dbe55-d685-42eb-b0ee-9f3c5b9d97f3
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 15384e112b4d770d49095d0450341f5da89c2bd0
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 377f9ecfd0f3d94388929d78a048bc65e5020a3e
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48156061"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58526543"
 ---
 # <a name="use-the-value-and-nodes-methods-with-openxml"></a>Utilizzare i metodi value() e nodes() con OPENXML
   È possibile usare più **Value ()** metodi sul `xml` tipo di dati un **selezionare** clausola per generare un set di righe di valori estratti. Il metodo **nodes()** crea un riferimento interno per ogni nodo selezionato, che può essere usato per altre query. Se sono presenti numerose colonne e quando per la creazione del set di righe vengono usate espressioni di percorso complesse, si può usare una combinazione dei metodi **nodes()** e **value()** per generare il set di righe in modo più efficiente.  
   
  Il **Nodes ()** metodo produce istanze di uno speciale `xml` tipo di dati, ognuno dei quali ha contesto impostato su un nodo selezionato diverso. Questo tipo di istanza XML supporta i metodi **query()**, **value()**, **nodes()** e **exist()** e può essere usato nelle aggregazioni **count(\*)**. Tutti gli altri utilizzi generano un errore.  
   
-## <a name="example-using-nodes"></a>Esempio: utilizzo del metodo nodes()  
+## <a name="example-using-nodes"></a>Esempio: Usando Nodes)  
  Si supponga di voler estrarre il nome e il cognome degli autori il cui nome è diverso da "David". Si supponga inoltre di voler estrarre tali informazioni sotto forma di un set di righe contenente due colonne, FirstName e LastName. A questo scopo si possono usare i metodi **nodes()** e **value()** , come mostrato nell'esempio seguente:  
   
 ```  
@@ -40,7 +40,7 @@ WHERE  nref.exist('first-name[. != "David"]') = 1
   
  SQL Server 2000 consente di generare un set di righe da un'istanza XML usando **OpenXml()**. È possibile specificare lo schema relazionale del set di righe e il mapping tra i valori presenti nell'istanza XML e le colonne nel set di righe.  
   
-## <a name="example-using-openxml-on-the-xml-data-type"></a>Esempio: utilizzo di OpenXml() sul tipo di dati xml  
+## <a name="example-using-openxml-on-the-xml-data-type"></a>Esempio: Utilizzo di OPENXML () nel tipo di dati xml  
  È possibile riscrivere la query dell'esempio precedente usando **OpenXml()** come mostrato nell'esempio seguente. A tale scopo viene creato un cursore che legge ogni istanza XML in una variabile XML e quindi applica OpenXML alla variabile:  
   
 ```  

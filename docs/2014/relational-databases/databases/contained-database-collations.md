@@ -12,12 +12,12 @@ ms.assetid: 4b44f6b9-2359-452f-8bb1-5520f2528483
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 8bb735093eb7b2e41e1822facca6c03ace45a911
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: f1345051d06493a456172a183defce3a8bd555ca
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52789703"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58526513"
 ---
 # <a name="contained-database-collations"></a>Regole di confronto dei database indipendenti
   Varie proprietà incidono sull'ordinamento e sulla semantica di uguaglianza dei dati testuali, ad esempio distinzione maiuscole/minuscole, distinzione caratteri accentati/non accentati e linguaggio di base utilizzato. Queste qualità vengono espresse in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tramite la scelta di regole di confronto per i dati. Per informazioni dettagliate sulle regole di confronto, vedere [Regole di confronto e supporto Unicode](../collations/collation-and-unicode-support.md).  
@@ -32,13 +32,13 @@ ms.locfileid: "52789703"
 ### <a name="example-1"></a>Esempio 1  
  Se si lavora ad esempio a Pechino, è possibile che venga utilizzata una regola di confronto cinese:  
   
-```tsql  
+```sql  
 ALTER DATABASE MyDB COLLATE Chinese_Simplified_Pinyin_100_CI_AS;  
 ```  
   
  Se ora si crea una colonna, le relative regole di confronto predefinite saranno quelle cinesi, ma è possibile sceglierne altre, se lo si desidera:  
   
-```tsql  
+```sql  
 CREATE TABLE MyTable  
       (mycolumn1 nvarchar,  
       mycolumn2 nvarchar COLLATE Frisian_100_CS_AS);  
@@ -51,7 +51,7 @@ GO
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
-```tsql  
+```sql  
 name            collation_name  
 --------------- ----------------------------------  
 mycolumn1       Chinese_Simplified_Pinyin_100_CI_AS  
@@ -63,7 +63,7 @@ mycolumn2       Frisian_100_CS_AS
 ### <a name="example-2"></a>Esempio 2  
  Si consideri, ad esempio, il database precedente (cinese) usato in un'istanza con regole di confronto **Latin1_General** :  
   
-```tsql  
+```sql  
 CREATE TABLE T1 (T1_txt nvarchar(max)) ;  
 GO  
 CREATE TABLE #T2 (T2_txt nvarchar(max)) ;  
@@ -87,7 +87,7 @@ JOIN #T2
   
  Per correggere questo problema è necessario confrontare esplicitamente la tabella temporanea. In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] questa operazione è resa più semplice perché viene fornita la parola chiave `DATABASE_DEFAULT` per la clausola `COLLATE`.  
   
-```tsql  
+```sql  
 CREATE TABLE T1 (T1_txt nvarchar(max)) ;  
 GO  
 CREATE TABLE #T2 (T2_txt nvarchar(max) COLLATE DATABASE_DEFAULT);  
@@ -137,7 +137,7 @@ END;
   
  Se si utilizza una tabella temporanea nell'esempio precedentemente descritto, è possibile osservare che questo comportamento delle regole di confronto elimina l'esigenza di una clausola `COLLATE` esplicita nella maggior parte degli usi della tabelle temporanee. In un database indipendente questo codice ora viene eseguito senza errori, anche se le regole di confronto di database e istanza sono diverse:  
   
-```tsql  
+```sql  
 CREATE TABLE T1 (T1_txt nvarchar(max)) ;  
 GO  
 CREATE TABLE #T2 (T2_txt nvarchar(max));  

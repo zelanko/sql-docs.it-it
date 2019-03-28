@@ -18,12 +18,12 @@ ms.assetid: c2f19ab1-e742-4d56-ba8e-8ffd40cf4925
 ms.author: vanto
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a279a57e014675cc86f72f79ce602bec1bebb1f8
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d01ad425d42c45b1e265fe25345b2d34ca8b4d7f
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47756679"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58526113"
 ---
 # <a name="spdroprolemember-transact-sql"></a>sp_droprolemember (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -52,11 +52,9 @@ sp_droprolemember 'role' ,
 ```  
   
 ## <a name="arguments"></a>Argomenti  
- [  **@rolename =** ] **'***ruolo***'**  
- Nome del ruolo dal quale si desidera rimuovere il membro. *ruolo* viene **sysname**, non prevede alcun valore predefinito. *ruolo* deve esistere nel database corrente.  
+`[ @rolename = ] 'role'` È il nome del ruolo da cui si desidera rimuovere il membro. *ruolo* viene **sysname**, non prevede alcun valore predefinito. *ruolo* deve esistere nel database corrente.  
   
- [  **@membername =** ] **'***account_protezione***'**  
- Nome dell'account di sicurezza che si desidera rimuovere dal ruolo. *account_protezione* viene **sysname**, non prevede alcun valore predefinito. *account_protezione* può essere un utente del database, un altro ruolo del database, un account di accesso di Windows o un gruppo di Windows. *account_protezione* deve esistere nel database corrente.  
+`[ @membername = ] 'security_account'` Il nome dell'account di sicurezza verrà rimosso dal ruolo. *account_protezione* viene **sysname**, non prevede alcun valore predefinito. *account_protezione* può essere un utente del database, un altro ruolo del database, un account di accesso di Windows o un gruppo di Windows. *account_protezione* deve esistere nel database corrente.  
   
 ## <a name="return-code-values"></a>Valori restituiti  
  0 (esito positivo) o 1 (esito negativo)  

@@ -10,12 +10,12 @@ ms.assetid: e0a1a1e4-0062-4872-93c3-cd91b7a43c23
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 2c84ecb4076fc7aff20383b56a81b6df56d28ea3
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 2494ab96cc3b4964c26a1ce17593e9b5aece2e7e
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48049101"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58529293"
 ---
 # <a name="migrating-check-and-foreign-key-constraints"></a>Migrazione di vincoli CHECK e di chiave esterna
   Controllo e vincoli di chiave esterna non sono supportati [!INCLUDE[hek_2](../includes/hek-2-md.md)] in [!INCLUDE[ssSQL14](../includes/sssql14-md.md)]. Questi costrutti in genere utilizzati per applicare l'integrità dei dati logico nello schema e possono essere importanti per il mantenimento della correttezza funzionale delle applicazioni.  
@@ -40,7 +40,7 @@ ms.locfileid: "48049101"
 ## <a name="table-definition-for-the-workarounds"></a>Definizione della tabella per le soluzioni alternative  
  Prima della conversione in una tabella con ottimizzazione per la memoria, la definizione per [Sales]. [SalesOrderDetail] è il seguente:  
   
-```tsql  
+```sql  
 USE [AdventureWorks2012]  
 GO  
   
@@ -101,7 +101,7 @@ GO
   
  Si noti che rowguid non è più un ROWGUIDCOL poiché non è supportata [!INCLUDE[hek_2](../includes/hek-2-md.md)]. La colonna è stata rimossa. Inoltre, LineTotal è una colonna calcolata ed esulano dall'ambito di questo articolo, pertanto anche è stata rimossa.  
   
-```tsql  
+```sql  
 USE [AdventureWorks2012]  
 GO  
   
@@ -127,7 +127,7 @@ GO
   
 ## <a name="checking-constraints-after-an-insert-update-or-delete-operation"></a>Verifica dei vincoli dopo un'operazione di inserimento, Update o Delete  
   
-```tsql  
+```sql  
 USE AdventureWorks2012  
 GO  
   
@@ -185,7 +185,7 @@ END
   
 ## <a name="enforcing-constraints-before-an-insert-update-or-delete-operation"></a>L'applicazione di vincoli prima di un'istruzione Insert, Update o Delete operazione  
   
-```tsql  
+```sql  
 USE AdventureWorks2012  
 GO  
   

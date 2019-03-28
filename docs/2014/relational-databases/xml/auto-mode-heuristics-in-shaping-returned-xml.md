@@ -9,15 +9,15 @@ ms.topic: conceptual
 helpviewer_keywords:
 - AUTO FOR XML mode, heuristics in shaping returned XML
 ms.assetid: 6c5cb6c1-2921-4ba1-8100-0bf8074f9103
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 45da06ed01776c94cc1f453b198e85ce181db75d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 91fa97c61734f378163fdac9adf1918caefabc7a
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48162721"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58528934"
 ---
 # <a name="auto-mode-heuristics-in-shaping-returned-xml"></a>Approccio euristico della modalità AUTO per la determinazione della struttura dei valori XML restituiti
   La modalità AUTO determina la struttura del valore XML restituito in base alla query. Per determinare come devono essere nidificati gli elementi, la modalità AUTO, che utilizza un approccio euristico, confronta i valori delle colonne nelle righe adiacenti. Vengono confrontate colonne di tutti i tipi, ad eccezione di **ntext**, **text**, **image**e **xml**. Vengono confrontate le colonne di tipo **(n)varchar(max)** e **varbinary(max)** .  

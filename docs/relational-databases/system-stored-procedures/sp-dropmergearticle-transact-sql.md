@@ -16,12 +16,12 @@ ms.assetid: 5ef1fbf7-c03d-4488-9ab2-64aae296fa4f
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 78328463828b3c4a93b72ddc8790df13677dee81
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: 13f48722b940c26cda8b29258f16f641f74d15e9
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54125371"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58531893"
 ---
 # <a name="spdropmergearticle-transact-sql"></a>sp_dropmergearticle (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -44,34 +44,27 @@ sp_dropmergearticle [ @publication= ] 'publication'
 ```  
   
 ## <a name="arguments"></a>Argomenti  
- [  **@publication=**] **'**_pubblicazione_**'**  
- Nome della pubblicazione dalla quale eliminare un articolo. *pubblicazione*viene **sysname**, non prevede alcun valore predefinito.  
+`[ @publication = ] 'publication'` È il nome della pubblicazione dalla quale eliminare un articolo. *pubblicazione*viene **sysname**, non prevede alcun valore predefinito.  
   
- [  **@article=**] **'**_articolo_**'**  
- Nome dell'articolo da eliminare dalla pubblicazione specificata. *articolo*viene **sysname**, non prevede alcun valore predefinito. Se **tutti**, tutti gli articoli esistenti nella pubblicazione di tipo merge specificata vengono rimossi. Anche se *articolo* viene **tutte**, la pubblicazione ancora deve essere eliminata separatamente dall'articolo.  
+`[ @article = ] 'article'` È il nome dell'articolo da eliminare dalla pubblicazione specificata. *articolo*viene **sysname**, non prevede alcun valore predefinito. Se **tutti**, tutti gli articoli esistenti nella pubblicazione di tipo merge specificata vengono rimossi. Anche se *articolo* viene **tutte**, la pubblicazione ancora deve essere eliminata separatamente dall'articolo.  
   
- [  **@ignore_distributor=**] *ignore_distributor*  
- Indica se questa stored procedure viene eseguita senza stabilire la connessione al server di distribuzione. *ignore_distributor* viene **bit**, il valore predefinito è **0**.  
+`[ @ignore_distributor = ] ignore_distributor` Indica se questa stored procedure viene eseguita senza stabilire la connessione al server di distribuzione. *ignore_distributor* viene **bit**, il valore predefinito è **0**.  
   
- [  **@reserved=**] *riservato*  
- Riservato per utilizzi futuri. *riservato* viene **nvarchar(20)**, con un valore predefinito è NULL.  
+`[ @reserved = ] reserved` è riservato per utilizzi futuri. *riservato* viene **nvarchar(20)**, con un valore predefinito è NULL.  
   
- [  **@force_invalidate_snapshot=**] *force_invalidate_snapshot*  
- Abilita o disabilita la funzionalità che consente di invalidare uno snapshot. *force_invalidate_snapshot* è un **bit**, con un valore predefinito **0**.  
+`[ @force_invalidate_snapshot = ] force_invalidate_snapshot` Abilita o disabilita la possibilità di invalidare uno snapshot. *force_invalidate_snapshot* è un **bit**, con un valore predefinito **0**.  
   
  **0** specifica che le modifiche apportate all'articolo di merge non invalidano lo snapshot non è valido.  
   
  **1** significa che le modifiche apportate all'articolo di merge potrebbe invalidare lo snapshot non è valido, e se è il caso, il valore **1** concede l'autorizzazione per il nuovo snapshot.  
   
- [  **@force_reinit_subscription =** ] *force_reinit_subscription*  
- Riconosce che l'eliminazione dell'articolo potrebbe richiedere la reinizializzazione delle sottoscrizioni esistenti. *force_reinit_subscription* è un **bit**, il valore predefinito è **0**.  
+`[ @force_reinit_subscription = ] force_reinit_subscription` Conferma eliminazione dell'articolo che richiede la reinizializzazione delle sottoscrizioni esistenti. *force_reinit_subscription* è un **bit**, il valore predefinito è **0**.  
   
  **0** indica che se si elimina l'articolo non causano la reinizializzazione della sottoscrizione.  
   
  **1** significa che l'eliminazione dell'articolo comporta la reinizializzazione delle sottoscrizioni esistenti e consente la reinizializzazione della sottoscrizione.  
   
- [  **@ignore_merge_metadata=** ] *ignore_merge_metadata*  
- Solo per uso interno.  
+`[ @ignore_merge_metadata = ] ignore_merge_metadata` Solo uso interno.  
   
 ## <a name="return-code-values"></a>Valori restituiti  
  **0** (esito positivo) o **1** (errore)  

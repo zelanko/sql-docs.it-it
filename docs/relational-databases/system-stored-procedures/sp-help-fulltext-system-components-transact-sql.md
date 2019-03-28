@@ -19,12 +19,12 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: =azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 0228a3f0719bd6a56142e571323fdf809e534337
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 61301b0c6916ba11cb54cc0c8d8ab961cc3ae659
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47635690"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58534323"
 ---
 # <a name="sphelpfulltextsystemcomponents-transact-sql"></a>sp_help_fulltext_system_components (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-xxx-md.md)]
@@ -46,10 +46,9 @@ sp_help_fulltext_system_components
  'all'  
  Restituisce informazioni per tutti i componenti full-text.  
   
- [  **@component_type=** ] *component_type*  
- Specifica il tipo di componente. *component_type* può essere uno dei seguenti:  
+`[ @component_type = ] component_type` Specifica il tipo di componente. *component_type* può essere uno dei seguenti:  
   
--   **Word breaker**  
+-   **wordbreaker**  
   
 -   **filter**  
   
@@ -59,8 +58,7 @@ sp_help_fulltext_system_components
   
  Se viene specificato un percorso completo, *param* deve essere specificata anche con il percorso completo della DLL, del componente o un messaggio di errore viene restituito.  
   
- [  **@param=** ] *param*  
- In base al tipo di componente, i possibili valori sono i seguenti: identificatore delle impostazioni locali (LCID), estensione di file con prefisso ".", nome completo del componente del gestore di protocollo o percorso completo della DLL del componente.  
+`[ @param = ] param` A seconda del tipo di componente, questa è una delle operazioni seguenti: un identificatore delle impostazioni locali (LCID), l'estensione del file con "." prefisso, il nome completo del componente del gestore del protocollo o il percorso completo della DLL del componente.  
   
 ## <a name="return-code-values"></a>Valori restituiti  
  0 (esito positivo) o 1 (esito negativo)  
@@ -68,18 +66,18 @@ sp_help_fulltext_system_components
 ## <a name="result-sets"></a>Set di risultati  
  Il set di risultati seguente viene restituito per i componenti di sistema.  
   
-|Nome colonna|Tipo di dati|Description|  
+|Nome colonna|Tipo di dati|Descrizione|  
 |-----------------|---------------|-----------------|  
 |**componenttype**|**sysname**|Tipo di componente. I tipi validi sono:<br /><br /> filter<br /><br /> protocol handler<br /><br /> wordbreaker|  
 |**componentname**|**sysname**|Nome del componente.|  
 |**clsid**|**uniqueidentifier**|Identificatore della classe del componente.|  
 |**fullpath**|**nvarchar(256)**|Percorso della posizione del componente.<br /><br /> NULL = il chiamante non è membro del **serveradmin** ruolo predefinito del server.|  
 |**version**|**nvarchar(30)**|Versione del componente.|  
-|**Produttore**|**sysname**|Nome del produttore del componente.|  
+|**manufacturer**|**sysname**|Nome del produttore del componente.|  
   
  Il set di risultati seguente viene restituito solo se uno o più di un catalogo full-text esistente che usa *component_type*.  
   
-|Nome colonna|Tipo di dati|Description|  
+|Nome colonna|Tipo di dati|Descrizione|  
 |-----------------|---------------|-----------------|  
 |**dbid**|**int**|ID del database.|  
 |**ftcatid**|**int**|ID del catalogo full-text.|  

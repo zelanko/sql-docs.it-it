@@ -18,12 +18,12 @@ ms.assetid: d0714913-8d6b-4de3-b042-3ae9934f839d
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: aa5df082287f0ddf3e37bc246d53bd31fac2a510
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 618ec7d83ab8abce8cf201cb0b59033b808178c0
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47723769"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58533493"
 ---
 # <a name="sphelpsrvrolemember-transact-sql"></a>sp_helpsrvrolemember (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -40,12 +40,11 @@ sp_helpsrvrolemember [ [ @srvrolename = ] 'role' ]
 ```  
   
 ## <a name="arguments"></a>Argomenti  
- [  **@srvrolename =** ] **'***ruolo***'**  
- Nome del ruolo predefinito del server. *ruolo* viene **sysname**, con un valore predefinito è NULL. Se *ruolo*non è specificato, il set di risultati include informazioni su tutti i ruoli predefiniti del server.  
+`[ @srvrolename = ] 'role'` È il nome di un ruolo predefinito del server. *ruolo* viene **sysname**, con un valore predefinito è NULL. Se *ruolo*non è specificato, il set di risultati include informazioni su tutti i ruoli predefiniti del server.  
   
  *ruolo* può essere uno dei valori seguenti.  
   
-|Ruolo predefinito del server|Description|  
+|Ruolo predefinito del server|Descrizione|  
 |-----------------------|-----------------|  
 |sysadmin|Amministratori di sistema|  
 |securityadmin|Amministratori di sicurezza|  
@@ -61,7 +60,7 @@ sp_helpsrvrolemember [ [ @srvrolename = ] 'role' ]
   
 ## <a name="result-sets"></a>Set di risultati  
   
-|Nome colonna|Tipo di dati|Description|  
+|Nome colonna|Tipo di dati|Descrizione|  
 |-----------------|---------------|-----------------|  
 |ServerRole|**sysname**|Nome del ruolo del server|  
 |MemberName|**sysname**|Nome di un membro del ruolo server|  

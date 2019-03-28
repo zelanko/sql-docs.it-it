@@ -18,19 +18,19 @@ ms.assetid: 3ef05bfb-b467-4403-89cc-6e77ef9247dd
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: cce91def9566105550788a8a46ea6c2b6bb959aa
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 8a24bb05e8f10e2920bd206531723c228d6c1734
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47826549"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58529353"
 ---
 # <a name="sptracegenerateevent-transact-sql"></a>sp_trace_generateevent (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Crea un evento definito dall'utente in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
->**Nota:** questa stored procedure viene **non** deprecato. Tutte le altre stored procedure correlate alle tracce sono deprecate.  
+>**NOTA:**  Questa stored procedure viene **non** deprecato. Tutte le altre stored procedure correlate alle tracce sono deprecate.  
   
   
  ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
@@ -45,19 +45,16 @@ sp_trace_generateevent [ @eventid = ] event_id
 ```  
   
 ## <a name="arguments"></a>Argomenti  
- [  **@eventid=**] *event_id*  
- ID dell'evento da abilitare. *event_id* viene **int**, non prevede alcun valore predefinito. L'ID deve essere uno dei numeri di evento compreso tra 82 e 91, che rappresentano eventi definiti dall'utente come set con [sp_trace_setevent](../../relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql.md).  
+`[ @eventid = ] event_id` È l'ID dell'evento da attivare. *event_id* viene **int**, non prevede alcun valore predefinito. L'ID deve essere uno dei numeri di evento compreso tra 82 e 91, che rappresentano eventi definiti dall'utente come set con [sp_trace_setevent](../../relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql.md).  
   
- [ **@userinfo**= ] **'***user_info***'**  
- Stringa facoltativa definita dall'utente che identifica la causa dell'evento. *user_info* viene **nvarchar (128)**, con un valore predefinito è NULL.  
+`[ @userinfo = ] 'user_info'` Stringa facoltativa definita dall'utente consiste nell'identificare il motivo per l'evento. *user_info* viene **nvarchar (128)**, con un valore predefinito è NULL.  
   
- [ **@userdata**=] *user_data*  
- Dati facoltativi per l'evento specificati dall'utente. *user_data* viene **varbinary(8000**, con un valore predefinito è NULL.  
+`[ @userdata = ] user_data` Contiene i dati specificati dall'utente facoltativi per l'evento. *user_data* viene **varbinary(8000**, con un valore predefinito è NULL.  
   
 ## <a name="return-code-values"></a>Valori restituiti  
  Nella tabella seguente vengono descritti i possibili valori di codice visualizzati al completamento della stored procedure.  
   
-|Codice restituito|Description|  
+|Codice restituito|Descrizione|  
 |-----------------|-----------------|  
 |**0**|Nessun errore.|  
 |**1**|Errore sconosciuto.|  
