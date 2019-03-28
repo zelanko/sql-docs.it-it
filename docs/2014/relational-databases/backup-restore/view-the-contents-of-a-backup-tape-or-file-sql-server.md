@@ -17,12 +17,12 @@ ms.assetid: cd6674a2-ca55-4b5a-a971-878ba001821e
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: cbfe09a2d8110a98885686e078146cfccc305c51
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: dfee2d0f32ffaaf73527effdeea13d43b83a39fb
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48051527"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58537289"
 ---
 # <a name="view-the-contents-of-a-backup-tape-or-file-sql-server"></a>Visualizzare il contenuto di un nastro o di un file di backup (SQL Server)
   In questo argomento si illustra come visualizzare il contenuto di un nastro o file di backup in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] utilizzando [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)].  
@@ -34,7 +34,7 @@ ms.locfileid: "48051527"
   
 -   **Prima di iniziare:**  
   
-     [Security](#Security)  
+     [Sicurezza](#Security)  
   
 -   **Per visualizzare il contenuto di un nastro o di un file di backup utilizzando:**  
   
@@ -68,7 +68,7 @@ ms.locfileid: "48051527"
   
 6.  Il riquadro di destra visualizza informazioni sul set di supporti e i set di backup sul nastro o sul file selezionato.  
   
-##  <a name="TsqlProcedure"></a> Uso di Transact-SQL  
+##  <a name="TsqlProcedure"></a> Utilizzo di Transact-SQL  
   
 #### <a name="to-view-the-content-of-a-backup-tape-or-file"></a>Per visualizzare il contenuto di un nastro o di un file di backup  
   
@@ -78,7 +78,7 @@ ms.locfileid: "48051527"
   
 3.  Utilizzare l'istruzione [RESTORE HEADERONLY](/sql/t-sql/statements/restore-statements-headeronly-transact-sql) . In questo esempio vengono restituite informazioni sul fine denominato `AdventureWorks2012-FullBackup.bak`.  
   
-```tsql  
+```sql  
 USE AdventureWorks2012;  
 RESTORE HEADERONLY   
 FROM DISK = N'C:\AdventureWorks2012-FullBackup.bak' ;  
@@ -93,6 +93,6 @@ GO
  [backupmediafamily &#40;Transact-SQL&#41;](/sql/relational-databases/system-tables/backupmediafamily-transact-sql)   
  [Dispositivi di backup &#40;SQL Server&#41;](backup-devices-sql-server.md)   
  [Definizione di un dispositivo di backup logico per un file su disco &#40;SQL Server&#41;](define-a-logical-backup-device-for-a-disk-file-sql-server.md)   
- [Definizione di un dispositivo di backup logico per un'unità nastro &#40;SQL Server&#41;](define-a-logical-backup-device-for-a-tape-drive-sql-server.md)  
+ [Definire un dispositivo di backup logico per un'unità nastro &#40;SQL Server&#41;](define-a-logical-backup-device-for-a-tape-drive-sql-server.md)  
   
   

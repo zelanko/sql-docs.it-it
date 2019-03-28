@@ -10,17 +10,17 @@ ms.assetid: 5880fbd9-a23e-464a-8b44-09750eeb2dad
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: f5d3a9786f2971abebd96624c5214f7717c450a1
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 9e70ab55fedcc5053cf82a78c040c850a23824eb
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48154721"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58536673"
 ---
 # <a name="native-compilation-of-tables-and-stored-procedures"></a>Compilazione nativa di tabelle e stored procedure
   Con OLTP in memoria viene introdotto il concetto di compilazione nativa. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] può compilare in modo nativo stored procedure che accedono alle tabelle ottimizzate per la memoria. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] è anche in grado di compilare in modo nativo tabelle ottimizzate per la memoria. Con la compilazione nativa si accede ai dati più velocemente e si eseguono le query in modo più efficiente rispetto al tradizionale [!INCLUDE[tsql](../../includes/tsql-md.md)]interpretato. La compilazione nativa di tabelle e stored procedure produce DLL.  
   
- È anche supportata la compilazione nativa dei tipi di tabella con ottimizzazione per la memoria. Per altre informazioni, vedere [variabili di tabella ottimizzata per la memoria](../../database-engine/memory-optimized-table-variables.md).  
+ È anche supportata la compilazione nativa dei tipi di tabella con ottimizzazione per la memoria. Per altre informazioni, vedere [Memory-Optimized Table Variables](../../database-engine/memory-optimized-table-variables.md).  
   
  La compilazione nativa si riferisce al processo di conversione dei costrutti di programmazione in codice nativo, costituito da istruzioni del processore senza la necessità di ulteriore compilazione o interpretazione.  
   
@@ -32,7 +32,7 @@ ms.locfileid: "48154721"
 ## <a name="maintenance-of-in-memory-oltp-dlls"></a>Manutenzione delle DLL di OLTP in memoria  
  La query seguente indica che tutte le DLL di tabelle e stored procedure vengono attualmente caricate in memoria nel server:  
   
-```tsql  
+```sql  
 SELECT name, description FROM sys.dm_os_loaded_modules  
 where description = 'XTP Native DLL'  
 ```  
@@ -50,7 +50,7 @@ where description = 'XTP Native DLL'
   
  Considerare il seguente script di esempio che crea un database e una tabella ottimizzata per la memoria:  
   
-```tsql  
+```sql  
 use master  
 go  
 create database db1  
@@ -84,7 +84,7 @@ go
   
  Considerare la seguente stored procedure di esempio che inserisce righe nella tabella t1 dell'esempio precedente:  
   
-```tsql  
+```sql  
 create procedure dbo.native_sp  
 with native_compilation, schemabinding, execute as owner  
 as  
@@ -134,6 +134,6 @@ go
   
 ## <a name="see-also"></a>Vedere anche  
  [Tabelle con ottimizzazione per la memoria](memory-optimized-tables.md)   
- [Stored procedure compilate in modo nativo](natively-compiled-stored-procedures.md)  
+ [Natively Compiled Stored Procedures](natively-compiled-stored-procedures.md)  
   
   

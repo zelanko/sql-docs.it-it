@@ -16,12 +16,12 @@ ms.assetid: 1945ed24-f9f1-4af6-94ca-16d8e864706e
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: c713b4efcfd37c245f340769a4725b0792d7528b
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: 94d074985848bb510c15907f6b17dc492904f5c0
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53210054"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58537838"
 ---
 # <a name="splinkpublication-transact-sql"></a>sp_link_publication (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -50,17 +50,13 @@ sp_link_publication [ @publisher = ] 'publisher'
 ```  
   
 ## <a name="arguments"></a>Argomenti  
- [ **@publisher**=] **'***publisher***'**  
- Nome del server di pubblicazione a cui collegarsi. *server di pubblicazione* viene **sysname**, non prevede alcun valore predefinito.  
+`[ @publisher = ] 'publisher'` È il nome del server di pubblicazione a cui collegarsi. *server di pubblicazione* viene **sysname**, non prevede alcun valore predefinito.  
   
- [ **@publisher_db**=] **'***publisher_db***'**  
- Nome del database del server di pubblicazione a cui collegarsi. *publisher_db* viene **sysname**, non prevede alcun valore predefinito.  
+`[ @publisher_db = ] 'publisher_db'` È il nome del database di pubblicazione a cui collegarsi. *publisher_db* viene **sysname**, non prevede alcun valore predefinito.  
   
- [ **@publication**=] **'***pubblicazione***'**  
- Nome della pubblicazione a cui collegarsi. *pubblicazione* viene **sysname**, non prevede alcun valore predefinito.  
+`[ @publication = ] 'publication'` È il nome della pubblicazione a cui collegarsi. *pubblicazione* viene **sysname**, non prevede alcun valore predefinito.  
   
- [ **@security_mode**=] *security_mode*  
- Modalità di sicurezza utilizzata dal Sottoscrittore per la connessione a un server di pubblicazione remoto per l'aggiornamento immediato. *security_mode* viene **int**, i possibili valori sono i seguenti. [!INCLUDE[ssNoteWinAuthentication](../../includes/ssnotewinauthentication-md.md)]  
+`[ @security_mode = ] security_mode` La modalità di sicurezza utilizzata dal sottoscrittore per la connessione al server di pubblicazione remoto per l'aggiornamento immediato. *security_mode* viene **int**, i possibili valori sono i seguenti. [!INCLUDE[ssNoteWinAuthentication](../../includes/ssnotewinauthentication-md.md)]  
   
 |Value|Descrizione|  
 |-----------|-----------------|  
@@ -68,14 +64,11 @@ sp_link_publication [ @publisher = ] 'publisher'
 |**1**|Utilizza il contesto di sicurezza (autenticazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o autenticazione di Windows) dell'utente che esegue la modifica nel Sottoscrittore.<br /><br /> Nota: È inoltre necessario che tale account esista nel server di pubblicazione e disponga di privilegi sufficienti. Se si utilizza l'autenticazione di Windows è necessario che sia supportata la delega degli account di sicurezza.|  
 |**2**|Usa un accesso server collegato esistente definito dall'utente creato usando **sp_link_publication**.|  
   
- [ **@login**=] **'***account di accesso***'**  
- Account di accesso. *login* è di tipo **sysname** e il valore predefinito è NULL. Questo parametro deve essere specificato quando si specifica *security_mode* viene **0**.  
+`[ @login = ] 'login'` È l'account di accesso. *login* è di tipo **sysname** e il valore predefinito è NULL. Questo parametro deve essere specificato quando si specifica *security_mode* viene **0**.  
   
- [ **@password**=] **'***password***'**  
- Password. *la password* viene **sysname**, con un valore predefinito è NULL. Questo parametro deve essere specificato quando si specifica *security_mode* viene **0**.  
+`[ @password = ] 'password'` È la password. *la password* viene **sysname**, con un valore predefinito è NULL. Questo parametro deve essere specificato quando si specifica *security_mode* viene **0**.  
   
- [  **@distributor=** ] **'***distributore***'**  
- Nome del server di distribuzione. *server di distribuzione* viene **sysname**, con un valore predefinito è NULL.  
+`[ @distributor = ] 'distributor'` È il nome del server di distribuzione. *server di distribuzione* viene **sysname**, con un valore predefinito è NULL.  
   
 ## <a name="return-code-values"></a>Valori restituiti  
  **0** (esito positivo) o **1** (errore)  

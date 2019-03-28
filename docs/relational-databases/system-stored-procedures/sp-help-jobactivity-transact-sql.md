@@ -18,12 +18,12 @@ ms.assetid: d344864f-b4d3-46b1-8933-b81dec71f511
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 0cf6feb850bbc898d69b01c897d1be295c378566
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d223267bbc181b325343014609525cbb2777881b
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47763259"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58538515"
 ---
 # <a name="sphelpjobactivity-transact-sql"></a>sp_help_jobactivity (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -41,17 +41,14 @@ sp_help_jobactivity { [ @job_id = ] job_id | [ @job_name = ] 'job_name' }
 ```  
   
 ## <a name="arguments"></a>Argomenti  
- [ **@job_id =**] *job_id*  
- Numero di identificazione del processo. *job_id*viene **uniqueidentifier**, con un valore predefinito è NULL.  
+`[ @job_id = ] job_id` ID del processo. *job_id*viene **uniqueidentifier**, con un valore predefinito è NULL.  
   
- [ **@job_name =**] **'***job_name***'**  
- Nome del processo. *nome_processo*viene **sysname**, con un valore predefinito è NULL.  
+`[ @job_name = ] 'job_name'` Il nome del processo. *nome_processo*viene **sysname**, con un valore predefinito è NULL.  
   
 > [!NOTE]  
 >  Entrambi *job_id* oppure *job_name* devono essere specificati, ma non è possibile specificarli entrambi.  
   
- [ **@session_id** = ] *session_id*  
- ID della sessione su cui segnalare informazioni. *session_id* viene **int**, con un valore predefinito è NULL.  
+`[ @session_id = ] session_id` L'id di sessione per segnalare informazioni. *session_id* viene **int**, con un valore predefinito è NULL.  
   
 ## <a name="return-code-values"></a>Valori restituiti  
  **0** (esito positivo) o **1** (errore)  
@@ -59,7 +56,7 @@ sp_help_jobactivity { [ @job_id = ] job_id | [ @job_name = ] 'job_name' }
 ## <a name="result-sets"></a>Set di risultati  
  Restituisce il set di risultati seguente:  
   
-|Nome colonna|Tipo di dati|Description|  
+|Nome colonna|Tipo di dati|Descrizione|  
 |-----------------|---------------|-----------------|  
 |**session_id**|**int**|Numero di identificazione della sessione dell'agente.|  
 |**job_id**|**uniqueidentifier**|Identificatore del processo.|  
@@ -74,7 +71,7 @@ sp_help_jobactivity { [ @job_id = ] job_id | [ @job_name = ] 'job_name' }
 |**next_scheduled_run_date**|**datetime**|Data e ora pianificate per la successiva esecuzione del processo.|  
 |**job_history_id**|**int**|Identificatore della cronologia processo nella tabella delle cronologie processi.|  
 |**message**|**nvarchar(1024)**|Messaggio generato durante l'ultima esecuzione del processo.|  
-|**run_status**|**int**|Stato restituito dall'ultima esecuzione del processo:<br /><br /> **0** = operazione non riuscita<br /><br /> **1** = ha avuto esito positivo<br /><br /> **3** = annullato<br /><br /> **5** = stato sconosciuto|  
+|**run_status**|**int**|Stato restituito dall'ultima esecuzione del processo:<br /><br /> **0** = operazione non riuscita<br /><br /> **1** = Succeeded<br /><br /> **3** = annullato<br /><br /> **5** = stato sconosciuto|  
 |**operator_id_emailed**|**int**|ID dell'operatore comunicato tramite posta elettronica al completamento del processo.|  
 |**operator_id_netsent**|**int**|Numero ID dell'operatore comunicato tramite **net send** al completamento del processo.|  
 |**operator_id_paged**|**int**|ID dell'operatore comunicato tramite cercapersone al completamento del processo.|  

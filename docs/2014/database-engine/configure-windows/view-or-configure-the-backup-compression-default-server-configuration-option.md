@@ -13,12 +13,12 @@ ms.assetid: 23029395-3e93-4c29-b7d6-e5a47a3526ff
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 7907a8e1187169c8c7581e3ad5f81eef2dde15b2
-ms.sourcegitcommit: 04dd0620202287869b23cc2fde998a18d3200c66
+ms.openlocfilehash: ed7b46308c7ffc39117accbb68dfd68b9847f721
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "52640732"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58536603"
 ---
 # <a name="view-or-configure-the-backup-compression-default-server-configuration-option"></a>Visualizzare o configurare l'opzione di configurazione del server backup compression default
   Questo argomento illustra come visualizzare o configurare l'opzione di configurazione del server **Valore predefinito di compressione backup** in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] usando [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] oppure [!INCLUDE[tsql](../../includes/tsql-md.md)]. Con l'opzione **backup compression default** è possibile determinare se nell'istanza del server vengono creati backup compressi per impostazione predefinita. Quando è installato [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , l'opzione **Valore predefinito di compressione backup** è disattivata.  
@@ -39,7 +39,7 @@ ms.locfileid: "52640732"
   
      [Transact-SQL](#TsqlProcedure)  
   
--   **Completamento:**  [Dopo aver configurato l'opzione backup compression default](#FollowUp)  
+-   **Completamento:**  [Dopo la configurazione dell'opzione backup compression default](#FollowUp)  
   
 ##  <a name="BeforeYouBegin"></a> Prima di iniziare  
   
@@ -84,9 +84,9 @@ ms.locfileid: "52640732"
   
 2.  Dalla barra Standard fare clic su **Nuova query**.  
   
-3.  Copiare e incollare l'esempio seguente nella finestra delle query e fare clic su **Esegui**. In questo esempio vengono eseguite query sulla vista del catalogo [sys.configurations](/sql/relational-databases/system-catalog-views/sys-configurations-transact-sql) per determinare il valore per `backup compression default`. Il valore 0 indica che la compressione dei backup è disabilitata, mentre il valore 1 che è abilitata.  
+3.  Copiare e incollare l'esempio seguente nella finestra Query, quindi fare clic su **Esegui**. In questo esempio vengono eseguite query sulla vista del catalogo [sys.configurations](/sql/relational-databases/system-catalog-views/sys-configurations-transact-sql) per determinare il valore per `backup compression default`. Il valore 0 indica che la compressione dei backup è disabilitata, mentre il valore 1 che è abilitata.  
   
-```tsql  
+```sql  
 USE AdventureWorks2012 ;  
 GO  
 SELECT value   
@@ -102,9 +102,9 @@ GO
   
 2.  Dalla barra Standard fare clic su **Nuova query**.  
   
-3.  Copiare e incollare l'esempio seguente nella finestra delle query e fare clic su **Esegui**. In questo esempio viene illustrato come usare [sp_configure](/sql/relational-databases/system-stored-procedures/sp-configure-transact-sql) per configurare l'istanza del server per creare backup compressi per impostazione predefinita.  
+3.  Copiare e incollare l'esempio seguente nella finestra Query, quindi fare clic su **Esegui**. In questo esempio viene illustrato come usare [sp_configure](/sql/relational-databases/system-stored-procedures/sp-configure-transact-sql) per configurare l'istanza del server per creare backup compressi per impostazione predefinita.  
   
-```tsql  
+```sql  
 USE AdventureWorks2012;  
 GO  
 EXEC sp_configure 'backup compression default', 1 ;  
@@ -115,7 +115,7 @@ GO
   
  Per altre informazioni, vedere [Opzioni di configurazione del server &#40;SQL Server&#41;](server-configuration-options-sql-server.md)sia installato il servizio WMI.  
   
-##  <a name="FollowUp"></a> Completamento: Dopo aver configurato l'opzione backup compression default  
+##  <a name="FollowUp"></a> Completamento: Dopo la configurazione dell'opzione backup compression default  
  L'impostazione diventa effettiva immediatamente senza dover riavviare il server.  
   
 ## <a name="see-also"></a>Vedere anche  

@@ -19,12 +19,12 @@ ms.assetid: 07e40950-384e-4d84-9ac5-84da6dd27a91
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: d30c8adfc19daa58f4aa3782072c6a9b08f11d83
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: f45fe94756ffa30a458aabbb078f6b01c9821918
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48108731"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58536393"
 ---
 # <a name="restore-pages-sql-server"></a>Ripristino di pagine (SQL Server)
   In questo argomento viene descritto come ripristinare le pagine in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usando [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)]. L'obiettivo di un ripristino della pagina è ripristinare una o più pagine danneggiate senza ripristinare l'intero database. In genere, le pagine candidate al ripristino sono state contrassegnate come "sospette" a causa di un errore verificatosi all'accesso alla pagina. Le pagine sospette vengono identificate nella tabella [suspect_pages](/sql/relational-databases/system-tables/suspect-pages-transact-sql) del database **msdb** .  
@@ -39,7 +39,7 @@ ms.locfileid: "48108731"
   
      [Indicazioni](#Recommendations)  
   
-     [Security](#Security)  
+     [Sicurezza](#Security)  
   
 -   **Per ripristinare le pagine usando:**  
   
@@ -99,7 +99,7 @@ ms.locfileid: "48108731"
   
 ###  <a name="Security"></a> Sicurezza  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> Autorizzazioni  
  Se il database da ripristinare non esiste, per eseguire un'operazione RESTORE l'utente deve disporre delle autorizzazioni CREATE DATABASE. Se il database esiste, le autorizzazioni per l'istruzione RESTORE vengono assegnate per impostazione predefinita ai membri dei ruoli predefiniti del server **sysadmin** e **dbcreator** e al proprietario (**dbo**) del database. Per l'opzione FROM DATABASE_SNAPSHOT, il database esiste sempre.  
   
  Le autorizzazioni per l'istruzione RESTORE vengono assegnate ai ruoli in cui le informazioni sull'appartenenza sono sempre disponibili per il server. Poiché è possibile controllare l'appartenenza ai ruoli predefiniti del database solo quando il database è accessibile e non è danneggiato, condizioni che non risultano sempre vere quando si esegue un'operazione RESTORE, i membri del ruolo predefinito del database **db_owner** non dispongono delle autorizzazioni per l'istruzione RESTORE.  
@@ -132,9 +132,9 @@ ms.locfileid: "48108731"
   
     |Intestazione|Valori|  
     |------------|------------|  
-    |**Nome**|Nome del set di backup.|  
-    |**Componente**|Componente incluso nel backup, ovvero **Database**, **File** o **\<vuoto>** (nel caso dei log delle transazioni).|  
-    |**Tipo**|Tipo di backup eseguito: **Completo**, **Differenziale**o **Log delle transazioni**.|  
+    |**Name**|Nome del set di backup.|  
+    |**Componente**|Componente di cui è stato eseguito il backup: **Database**, **File** o **\<vuoto>** (per i log delle transazioni).|  
+    |**Tipo**|Tipo di operazione di backup eseguita: **Completo**, **Differenziale** o **Log delle transazioni**.|  
     |**Server**|Nome dell'istanza del [!INCLUDE[ssDE](../../includes/ssde-md.md)] che ha eseguito l'operazione di backup.|  
     |**Database**|Nome del database interessato dall'operazione di backup.|  
     |**Posizione**|Posizione del set di backup nel volume.|  
@@ -163,7 +163,7 @@ ms.locfileid: "48108731"
   
 7.  Per ripristinare le pagine elencate nella griglia, fare clic su **OK**.  
   
-##  <a name="TsqlProcedure"></a> Uso di Transact-SQL  
+##  <a name="TsqlProcedure"></a> Utilizzo di Transact-SQL  
  Per specificare una pagina in un'istruzione RESTORE DATABASE, sono necessari l'ID del file contenente la pagina e l'ID della pagina. La sintassi necessaria è la seguente:  
   
  `RESTORE DATABASE <database_name>`  
@@ -204,7 +204,7 @@ ms.locfileid: "48108731"
 ###  <a name="TsqlExample"></a> Esempio (Transact-SQL)  
  Nell'esempio seguente vengono ripristinate quattro pagine danneggiate del file `B` con `NORECOVERY`. Successivamente, vengono applicati due backup del log con `NORECOVERY`, seguiti dal backup della parte finale del log, ripristinato con `RECOVERY`. Nell'esempio seguente viene eseguito un ripristino in linea. Nell'esempio l'ID del file `B` è `1`e gli ID delle pagine danneggiate sono `57`, `202`, `916`e `1016`.  
   
-```tsql  
+```sql  
 RESTORE DATABASE <database> PAGE='1:57, 1:202, 1:916, 1:1016'  
    FROM <file_backup_of_file_B>   
    WITH NORECOVERY;  
@@ -219,7 +219,7 @@ GO
   
 ## <a name="see-also"></a>Vedere anche  
  [RESTORE &#40;Transact-SQL&#41;](/sql/t-sql/statements/restore-statements-transact-sql)   
- [Applicare backup del log delle transazioni &#40;SQL Server&#41;](transaction-log-backups-sql-server.md)   
+ [Applicazione dei backup di log delle transazioni &#40;SQL Server&#41;](transaction-log-backups-sql-server.md)   
  [Gestione della tabella suspect_pages &#40;SQL Server&#41;](manage-the-suspect-pages-table-sql-server.md)   
  [Backup e ripristino di database SQL Server](back-up-and-restore-of-sql-server-databases.md)  
   

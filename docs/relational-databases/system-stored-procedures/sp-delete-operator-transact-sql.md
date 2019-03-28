@@ -18,12 +18,12 @@ ms.assetid: ff6c2c4b-e9fe-4d0c-bbc2-a2ddcc1acb95
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 2b55d44a837cc721761ebe77352962d1dea88f55
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ca9780759c6d35d6006a0ba2a9af2540c6a4e208
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47704659"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58531194"
 ---
 # <a name="spdeleteoperator-transact-sql"></a>sp_delete_operator (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -41,11 +41,9 @@ sp_delete_operator [ @name = ] 'name'
 ```  
   
 ## <a name="arguments"></a>Argomenti  
- [ **@name=** ] **'***name***'**  
- Nome dell'operatore da eliminare. *nome* viene **sysname**, non prevede alcun valore predefinito.  
+`[ @name = ] 'name'` Il nome dell'operatore da eliminare. *nome* viene **sysname**, non prevede alcun valore predefinito.  
   
- [  **@reassign_to_operator=** ] **'***reassign_operator***'**  
- Nome di un operatore a cui è possibile riassegnare gli avvisi dell'operatore specificato. *reassign_operator* viene **sysname**, con un valore predefinito è NULL.  
+`[ @reassign_to_operator = ] 'reassign_operator'` Il nome di un operatore a cui è possano riassegnare gli avvisi dell'operatore specificato. *reassign_operator* viene **sysname**, con un valore predefinito è NULL.  
   
 ## <a name="return-code-values"></a>Valori restituiti  
  **0** (esito positivo) o **1** (errore)  

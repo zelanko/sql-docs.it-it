@@ -16,12 +16,12 @@ ms.assetid: bdc8aaa0-ff2d-40c2-84b2-4ba513ced279
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 74154300cd85e18d17c3f8c6499acb2f331bcdbf
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 5e59a60279f4efa74ef21863212f75761eee99b1
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52759783"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58537863"
 ---
 # <a name="spsubscriptioncleanup-transact-sql"></a>sp_subscription_cleanup (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -41,17 +41,13 @@ sp_subscription_cleanup [ @publisher = ] 'publisher'
 ```  
   
 ## <a name="arguments"></a>Argomenti  
- [  **@publisher=**] **'***publisher***'**  
- Nome del server di pubblicazione. *server di pubblicazione* viene **sysname**, non prevede alcun valore predefinito.  
+`[ @publisher = ] 'publisher'` È il nome del server di pubblicazione. *server di pubblicazione* viene **sysname**, non prevede alcun valore predefinito.  
   
- [ **@publisher_db=**] **'***publisher_db***'**  
- Nome del database del server di pubblicazione. *publisher_db* viene **sysname**, non prevede alcun valore predefinito.  
+`[ @publisher_db = ] 'publisher_db'` È il nome del server di pubblicazione. *publisher_db* viene **sysname**, non prevede alcun valore predefinito.  
   
- [  **@publication=**] **'***pubblicazione***'**  
- Nome della pubblicazione. *pubblicazione* viene **sysname**, con un valore predefinito è NULL. che indica che le sottoscrizioni che utilizzano una pubblicazione con agente condiviso nel database di pubblicazione vengono eliminate.  
+`[ @publication = ] 'publication'` È il nome della pubblicazione. *pubblicazione* viene **sysname**, con un valore predefinito è NULL. che indica che le sottoscrizioni che utilizzano una pubblicazione con agente condiviso nel database di pubblicazione vengono eliminate.  
   
- [  **@reserved=**] **'***riservato***'**  
- [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
+`[ @reserved = ] 'reserved'` [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
   
 ## <a name="return-code-values"></a>Valori restituiti  
  **0** (esito positivo) o **1** (errore)  

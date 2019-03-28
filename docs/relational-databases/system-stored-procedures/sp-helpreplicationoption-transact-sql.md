@@ -16,12 +16,12 @@ ms.assetid: ef988dbc-dd0b-4132-80ab-81eebec1cffe
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 14357c7700980a1e3cc241d2e6b300e830aa4319
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: b125eeaab0ea833a801123ea4540f076696894d0
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52818893"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58535893"
 ---
 # <a name="sphelpreplicationoption-transact-sql"></a>sp_helpreplicationoption (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -38,12 +38,11 @@ sp_helpreplicationoption [ [ @optname =] 'option_name' ]
 ```  
   
 ## <a name="arguments"></a>Argomenti  
- [  **@optname =**] **'***option_name***'**  
- Nome dell'opzione di replica per cui si desidera eseguire una query. *option_name* viene **sysname**, con un valore predefinito è NULL.  
+`[ @optname = ] 'option_name'` È il nome dell'opzione di replica per eseguire una query per. *option_name* viene **sysname**, con un valore predefinito è NULL.  
   
 |Value|Descrizione|  
 |-----------|-----------------|  
-|**Transazionale**|Viene restituito un set di risultati quando è attivata la replica transazionale.|  
+|**transactional**|Viene restituito un set di risultati quando è attivata la replica transazionale.|  
 |**merge**|Viene restituito un set di risultati quando è attivata la replica di tipo merge.|  
 |NULL (predefinito)|Non viene restituito un set di risultati.|  
   
@@ -51,11 +50,11 @@ sp_helpreplicationoption [ [ @optname =] 'option_name' ]
   
 |Nome colonna|Tipo di dati|Descrizione|  
 |-----------------|---------------|-----------------|  
-|**optname**|**sysname**|Nome dell'opzione di replica. I possibili valori sono i seguenti:<br /><br /> **Transazionale**<br /><br /> **merge**|  
+|**optname**|**sysname**|Nome dell'opzione di replica. I possibili valori sono i seguenti:<br /><br /> **transactional**<br /><br /> **merge**|  
 |**Valore**|**bit**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
-|**versione_principale**|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
-|**versione_secondaria**|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
-|**revisione**|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
+|**major_version**|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
+|**minor_version**|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
+|**revision**|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**install_failures**|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
   
 ## <a name="return-code-values"></a>Valori restituiti  

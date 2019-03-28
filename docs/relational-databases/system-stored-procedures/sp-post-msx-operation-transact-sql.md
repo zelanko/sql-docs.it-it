@@ -18,12 +18,12 @@ ms.assetid: 085deef8-2709-4da9-bb97-9ab32effdacf
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: aa0293daf2c7dacf65450d8d3b9323b2903e77ce
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f36ad40a2b16401218fe2a5927407464fe6ac11b
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47832699"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58536127"
 ---
 # <a name="sppostmsxoperation-transact-sql"></a>sp_post_msx_operation (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -46,29 +46,23 @@ sp_post_msx_operation
 ```  
   
 ## <a name="arguments"></a>Argomenti  
- [  **@operation =**] **'***operazione***'**  
- Tipo di operazione da richiedere. *operazione*viene **varchar(64)**, non prevede alcun valore predefinito. Operazioni valide dipendono *object_type*.  
+`[ @operation = ] 'operation'` Il tipo di operazione per l'operazione da richiedere. *operazione*viene **varchar(64)**, non prevede alcun valore predefinito. Operazioni valide dipendono *object_type*.  
   
 |Tipo oggetto|Operazione|  
 |-----------------|---------------|  
-|**JOB**|INSERT<br /><br /> UPDATE<br /><br /> Elimina<br /><br /> START<br /><br /> STOP|  
+|**JOB**|INSERT<br /><br /> UPDATE<br /><br /> DELETE<br /><br /> START<br /><br /> STOP|  
 |**SERVER**|RE-ENLIST<br /><br /> DEFECT<br /><br /> SYNC-TIME<br /><br /> SET-POLL|  
-|**PIANIFICAZIONE**|INSERT<br /><br /> UPDATE<br /><br /> Elimina|  
+|**PIANIFICAZIONE**|INSERT<br /><br /> UPDATE<br /><br /> DELETE|  
   
- [  **@object_type =**] **'***oggetto***'**  
- Tipo di oggetto per cui richiedere un'operazione. I tipi validi sono **processo**, **SERVER**, e **pianificazione**. *oggetto* viene **varchar(64)**, il valore predefinito è **processo**.  
+`[ @object_type = ] 'object'` Il tipo di oggetto per cui si desidera richiedere un'operazione. I tipi validi sono **processo**, **SERVER**, e **pianificazione**. *oggetto* viene **varchar(64)**, il valore predefinito è **processo**.  
   
- [ **@job_id =**] *job_id*  
- Il numero di identificazione del processo a cui viene applicata l'operazione. *job_id* viene **uniqueidentifier**, non prevede alcun valore predefinito. **0x00** indica tutti i processi. Se *oggetti* viene **SERVER**, quindi *job_id*non è obbligatorio.  
+`[ @job_id = ] job_id` Il numero di identificazione del processo a cui viene applicata l'operazione. *job_id* viene **uniqueidentifier**, non prevede alcun valore predefinito. **0x00** indica tutti i processi. Se *oggetti* viene **SERVER**, quindi *job_id*non è obbligatorio.  
   
- [ **@specific_target_server =**] **'***target_server***'**  
- Nome del server di destinazione in cui l'operazione specificata viene applicata. Se *job_id* è specificato, ma *target_server* viene omesso, le operazioni vengono richieste per tutti i server del processo del processo. *target_server* viene **nvarchar(30)**, con un valore predefinito è NULL.  
+`[ @specific_target_server = ] 'target_server'` Il nome del server di destinazione per il quale si applica l'operazione specificata. Se *job_id* è specificato, ma *target_server* viene omesso, le operazioni vengono richieste per tutti i server del processo del processo. *target_server* viene **nvarchar(30)**, con un valore predefinito è NULL.  
   
- [  **@value =**] *valore*  
- L'intervallo di polling in secondi. *value* è **int**e il valore predefinito è NULL. Specificare questo parametro solo se *operazione* viene **SET-POLL**.  
+`[ @value = ] value` L'intervallo di polling in secondi. *value* è **int**e il valore predefinito è NULL. Specificare questo parametro solo se *operazione* viene **SET-POLL**.  
   
- [  **@schedule_uid=** ] *valore schedule_uid*  
- Identificatore univoco per la pianificazione a cui si riferisce l'operazione. *valore schedule_uid* viene **uniqueidentifier**, non prevede alcun valore predefinito.  
+`[ @schedule_uid = ] schedule_uid` Identificatore univoco per la pianificazione a cui si applica l'operazione. *valore schedule_uid* viene **uniqueidentifier**, non prevede alcun valore predefinito.  
   
 ## <a name="return-code-values"></a>Valori restituiti  
  **0** (esito positivo) o **1** (errore)  

@@ -1,5 +1,5 @@
 ---
-title: sysmail_delete_profileaccount_sp (Transact-SQL) | Microsoft Docs
+title: sysmail_delete_profile_sp (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -18,12 +18,12 @@ ms.assetid: 71998653-4a02-446d-b6f7-50646a29e8a2
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: c1f358385205c15954fe033a2f6631964a86fabc
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 601be3bb276576aaaf4c13e42e09d0de41b3b0f7
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47793279"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58527983"
 ---
 # <a name="sysmaildeleteprofilesp-transact-sql"></a>sysmail_delete_profile_sp (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -40,11 +40,9 @@ sysmail_delete_profile_sp  { [ @profile_id = ] profile_id | [ @profile_name = ] 
 ```  
   
 ## <a name="arguments"></a>Argomenti  
- [ **@profile_id** = ] *profile_id*  
- ID del profilo da eliminare. *profile_id* viene **int**, con un valore predefinito è NULL. Entrambi *profile_id* oppure *profile_name* deve essere specificato.  
+`[ @profile_id = ] profile_id` È l'id del profilo del profilo da eliminare. *profile_id* viene **int**, con un valore predefinito è NULL. Entrambi *profile_id* oppure *profile_name* deve essere specificato.  
   
- [ **@profile_name** =] **'***profile_name***'**  
- Nome del profilo da eliminare. *profile_name* viene **sysname**, con un valore predefinito è NULL. Entrambi *profile_id* oppure *profile_name* deve essere specificato.  
+`[ @profile_name = ] 'profile_name'` È il nome del profilo da eliminare. *profile_name* viene **sysname**, con un valore predefinito è NULL. Entrambi *profile_id* oppure *profile_name* deve essere specificato.  
   
 ## <a name="return-code-values"></a>Valori restituiti  
  **0** (esito positivo) o **1** (errore)  

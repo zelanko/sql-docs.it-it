@@ -14,15 +14,15 @@ helpviewer_keywords:
 - UPA constraint rule
 - unique particle attribution constraint rule
 ms.assetid: 6bb879e9-a5ee-402e-94e4-fe8cec5966b0
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 4e38ceb561c2b0d66cbf274e09d61fc327d8543f
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 2f6361e3e6a295398bdd88d56a6c70a79e92b526
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53372603"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58538522"
 ---
 # <a name="unique-particle-attribution-constraint"></a>Vincolo di attribuzione di particelle univoche
   In XSD i modelli di contenuto complessi sono soggetti alla regola del vincolo di attribuzione di particelle univoche (UPA, Unique Particle Attribution). Tale regola prevede che ogni elemento in un documento dell'istanza corrisponda in modo non ambiguo a una particella `<xsd:element>` o `<xsd:any>` nel relativo modello di contenuto padre. Ogni schema che contiene un tipo con un modello di contenuto potenzialmente ambiguo viene rifiutato.  

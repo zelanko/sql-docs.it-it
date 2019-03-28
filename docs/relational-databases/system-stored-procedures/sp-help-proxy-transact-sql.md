@@ -18,12 +18,12 @@ ms.assetid: a2fce164-2b64-40c2-8f35-6eeb7844abf1
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: b678182b4580cfac23d6e777c492d22b8f458fba
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 5e0bbf6e8befa751ee680cd97c2a29ad9f0fe084
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47617999"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58527693"
 ---
 # <a name="sphelpproxy-transact-sql"></a>sp_help_proxy (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -44,18 +44,15 @@ sp_help_proxy
 ```  
   
 ## <a name="arguments"></a>Argomenti  
- [ **@proxy_id** =] *id*  
- Numero di identificazione del proxy per cui visualizzare un elenco di informazioni. Il *proxy_id* viene **int**, con un valore predefinito è NULL. Entrambi i *id* o nella *proxy_name* può essere specificato.  
+`[ @proxy_id = ] id` Il numero di identificazione per elencare le informazioni per il proxy. Il *proxy_id* viene **int**, con un valore predefinito è NULL. Entrambi i *id* o nella *proxy_name* può essere specificato.  
   
- [ **@proxy_name** =] **'***proxy_name***'**  
- Nome del proxy per cui visualizzare un elenco di informazioni. Il *nome_proxy* viene **sysname**, con un valore predefinito è NULL. Entrambi i *id* o nella *proxy_name* può essere specificato.  
+`[ @proxy_name = ] 'proxy_name'` Il nome del proxy da elenco di informazioni. Il *nome_proxy* viene **sysname**, con un valore predefinito è NULL. Entrambi i *id* o nella *proxy_name* può essere specificato.  
   
- [ **@subsystem_name** =] '*subsystem_name*'  
- Il nome del sottosistema per cui visualizzare un elenco dei proxy. Il *subsystem_name* viene **sysname**, con un valore predefinito è NULL. Quando *subsystem_name* omette *nome* deve essere specificato anche.  
+`[ @subsystem_name = ] 'subsystem_name'` Il nome del sottosistema per elenco di proxy. Il *subsystem_name* viene **sysname**, con un valore predefinito è NULL. Quando *subsystem_name* omette *nome* deve essere specificato anche.  
   
  Nella tabella seguente vengono elencati i valori disponibili per ogni sottosistema.  
   
-|valore|Description|  
+|Value|Descrizione|  
 |-----------|-----------------|  
 |ActiveScripting|Script ActiveX|  
 |CmdExec|Sistema operativo (CmdExec)|  
@@ -69,15 +66,14 @@ sp_help_proxy
 |Dts|Esecuzione pacchetti SSIS|  
 |PowerShell|Script di PowerShell|  
   
- [ **@name** =] '*nome*'  
- Il nome di un accesso [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] per cui visualizzare un elenco dei proxy. Il nome è **nvarchar(256)**, con un valore predefinito è NULL. Quando *nome* omette *subsystem_name* deve essere specificato anche.  
+`[ @name = ] 'name'` Il nome di un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] account di accesso per l'elenco dei proxy. Il nome è **nvarchar(256)**, con un valore predefinito è NULL. Quando *nome* omette *subsystem_name* deve essere specificato anche.  
   
 ## <a name="return-code-values"></a>Valori restituiti  
  **0** (esito positivo) o **1** (errore)  
   
 ## <a name="result-sets"></a>Set di risultati  
   
-|Nome colonna|Tipo di dati|Description|  
+|Nome colonna|Tipo di dati|Descrizione|  
 |-----------------|---------------|-----------------|  
 |**proxy_id**|**int**|Numero di identificazione del proxy.|  
 |**name**|**sysname**|Nome del proxy.|  

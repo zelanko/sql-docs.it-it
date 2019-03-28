@@ -10,12 +10,12 @@ ms.assetid: c626dcac-0474-432d-acc0-cfa643345372
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 4238e512975d2f333ac066e6b0183c60ead7d97d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 1969a3e30b31a21c380559a3e8898f87eb8848b1
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48118171"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58536533"
 ---
 # <a name="collations-and-code-pages"></a>Tabelle codici e regole di confronto
   In [!INCLUDE[hek_2](../includes/hek-2-md.md)] sono presenti restrizioni per le tabelle codici supportate per le colonne di tipo (var)char nelle tabelle ottimizzate per la memoria e nelle regole di confronto supportate utilizzate negli indici e nelle stored procedure compilate in modo nativo.  
@@ -31,7 +31,7 @@ ms.locfileid: "48118171"
 > [!IMPORTANT]  
 >  Non è possibile utilizzare un filtro per ordinare o raggruppare gli elementi nelle colonne stringa dell'indice in cui non vengono applicate le regole di confronto BIN2.  
   
-```tsql  
+```sql  
 CREATE DATABASE IMOLTP  
   
 ALTER DATABASE IMOLTP ADD FILEGROUP IMOLTP_mod CONTAINS MEMORY_OPTIMIZED_DATA  
@@ -60,7 +60,7 @@ GO
   
 -   Per le colonne di tipo (var)char in tabelle ottimizzate per la memoria è necessario utilizzare le regole di confronto della tabella codici 1252. Questa restrizione non si applica alle colonne n(var)char. Il codice seguente recupera tutte le regole di confronto 1252:  
   
-    ```tsql  
+    ```sql  
     -- all supported collations for (var)char columns in memory-optimized tables  
     select * from sys.fn_helpcollations()  
     where collationproperty(name, 'codepage') = 1252;  
@@ -70,7 +70,7 @@ GO
   
 -   Gli indici su colonne di tipo (n)(var)char possono essere specificati solo con le regole di confronto BIN2 (vedere il primo esempio). La query seguente recupera tutte le regole di confronto BIN2 supportate:  
   
-    ```tsql  
+    ```sql  
     -- all supported collations for indexes on memory-optimized tables and   
     -- comparison/sorting in natively compiled stored procedures  
     select * from sys.fn_helpcollations() where name like '%BIN2'  
@@ -84,7 +84,7 @@ GO
   
 -   Il troncamento dei dati UTF-16 non è supportato nelle stored procedure compilate in modo nativo. Ciò significa che char n (var) (*n*) i valori non possono essere convertito nel tipo n (var) char (*ho*), se *ho* < *n*, se la le regole di confronto includano SC property. Ad esempio, il codice seguente non è supportato:  
   
-    ```tsql  
+    ```sql  
     -- column definition using an _SC collation  
      c2 nvarchar(200) collate Latin1_General_100_CS_AS_SC not null   
     -- assignment to a smaller variable, requiring truncation  
@@ -98,7 +98,7 @@ GO
   
  Nell'esempio seguente vengono illustrate alcune implicazioni e soluzioni alternative per le limitazioni delle regole di confronto in OLTP in memoria. Nell'esempio viene utilizzata la tabella Employees specificata in precedenza. Questo esempio vengono elencati tutti i dipendenti. Si noti che per LastName, a causa delle regole di confronto binarie, i nomi in maiuscolo vengono ordinati prima di quelli in minuscolo. Di conseguenza "Thomas" precede "nolan" perché i caratteri maiuscoli presentano elementi di codice più bassi. Per FirstName vengono utilizzate regole di confronto senza distinzione tra maiuscole e minuscole. L'ordinamento viene quindi applicato per lettera dell'alfabeto, non in base all'elemento di codice dei caratteri.  
   
-```tsql  
+```sql  
 -- insert a number of values  
 INSERT Employees VALUES (1,'thomas', 'john')  
 INSERT Employees VALUES (2,'Thomas', 'rupert')  

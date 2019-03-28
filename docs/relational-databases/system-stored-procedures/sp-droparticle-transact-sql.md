@@ -16,12 +16,12 @@ ms.assetid: 09fec594-53f4-48a5-8edb-c50731c7adb2
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 06f12eef5e4c025797e22dca8bd5564544581634
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: cbfeeaa70544c5e2bb19251dfbbccc2e40c22af9
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53205230"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58535743"
 ---
 # <a name="spdroparticle-transact-sql"></a>sp_droparticle (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -43,30 +43,24 @@ sp_droparticle [ @publication= ] 'publication'
 ```  
   
 ## <a name="arguments"></a>Argomenti  
- [  **@publication=**] **'***pubblicazione***'**  
- Nome della pubblicazione che contiene l'articolo da eliminare. *pubblicazione* viene **sysname**, non prevede alcun valore predefinito.  
+`[ @publication = ] 'publication'` È il nome della pubblicazione che contiene l'articolo da eliminare. *pubblicazione* viene **sysname**, non prevede alcun valore predefinito.  
   
- [  **@article=**] **'***articolo***'**  
- Nome dell'articolo da eliminare. *articolo* viene **sysname**, non prevede alcun valore predefinito.  
+`[ @article = ] 'article'` È il nome dell'articolo da eliminare. *articolo* viene **sysname**, non prevede alcun valore predefinito.  
   
- [  **@ignore_distributor =**] *ignore_distributor*  
- [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
+`[ @ignore_distributor = ] ignore_distributor` [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
   
- [  **@force_invalidate_snapshot =** ] *force_invalidate_snapshot*  
- Segnala che l'azione eseguita da questa stored procedure potrebbe invalidare uno snapshot esistente. *force_invalidate_snapshot* è un **bit**, il valore predefinito è **0**.  
+`[ @force_invalidate_snapshot = ] force_invalidate_snapshot` Segnala che l'azione eseguita da questa stored procedure potrebbe invalidare uno snapshot esistente. *force_invalidate_snapshot* è un **bit**, il valore predefinito è **0**.  
   
  **0** specifica che le modifiche apportate all'articolo non invalidano lo snapshot non è valido. Se la stored procedure rileva che la modifica richiede un nuovo snapshot, viene generato un errore e non viene apportata alcuna modifica.  
   
  **1** specifica che le modifiche apportate all'articolo possono invalidare lo snapshot non è valido e se sono presenti sottoscrizioni esistenti richiedono un nuovo snapshot, consente lo snapshot esistente deve essere contrassegnato come obsoleto e di generarne uno nuovo.  
   
- [ **@publisher**=] **'***publisher***'**  
- Specifica un non - [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] server di pubblicazione. *server di pubblicazione* viene **sysname**, con un valore predefinito è NULL.  
+`[ @publisher = ] 'publisher'` Specifica un non - [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] server di pubblicazione. *server di pubblicazione* viene **sysname**, con un valore predefinito è NULL.  
   
 > [!NOTE]  
 >  *server di pubblicazione* non deve essere utilizzata quando si modificano le proprietà degli articoli in una [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] server di pubblicazione.  
   
- [ **@from_drop_publication**=] *from_drop_publication*  
- [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
+`[ @from_drop_publication = ] from_drop_publication` [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
   
 ## <a name="return-code-values"></a>Valori restituiti  
  **0** (esito positivo) o **1** (errore)  

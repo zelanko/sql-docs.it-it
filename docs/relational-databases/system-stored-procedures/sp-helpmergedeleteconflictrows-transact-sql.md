@@ -16,12 +16,12 @@ ms.assetid: 222be651-5690-4341-9dfb-f9ec1d80c970
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: e31a8827f940e0dd5a3debe2d03bf675f33df3cd
-ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
+ms.openlocfilehash: 6c60f56980aedc29c8262089748a77f113cc0449
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/18/2018
-ms.locfileid: "53591175"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58536483"
 ---
 # <a name="sphelpmergedeleteconflictrows-transact-sql"></a>sp_helpmergedeleteconflictrows (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -41,17 +41,13 @@ sp_helpmergedeleteconflictrows [ [ @publication = ] 'publication']
 ```  
   
 ## <a name="arguments"></a>Argomenti  
- [  **@publication=**] **'**_pubblicazione_**'**  
- Nome della pubblicazione. *pubblicazione* viene **sysname**, il valore predefinito è **%**. Se la pubblicazione viene specificata, vengono restituiti tutti i conflitti risultanti corrispondenti.  
+`[ @publication = ] 'publication'` È il nome della pubblicazione. *pubblicazione* viene **sysname**, il valore predefinito è **%**. Se la pubblicazione viene specificata, vengono restituiti tutti i conflitti risultanti corrispondenti.  
   
- [  **@source_object=**] **'**_source_object_**'**  
- Nome dell'oggetto di origine. *source_object* viene **nvarchar(386)**, con un valore predefinito è NULL.  
+`[ @source_object = ] 'source_object'` È il nome dell'oggetto di origine. *source_object* viene **nvarchar(386)**, con un valore predefinito è NULL.  
   
- [  **@publisher=**] **'**_editore_**'**  
- È il nome del server di pubblicazione. *server di pubblicazione* viene **sysname**, con un valore predefinito è NULL.  
+`[ @publisher = ] 'publisher'` È il nome del server di pubblicazione. *server di pubblicazione* viene **sysname**, con un valore predefinito è NULL.  
   
- [  **@publisher_db=**] **'**_publisher_db_**'**  
- È il nome del server di pubblicazione. *publisher_db* viene **sysname**, con un valore predefinito è NULL.  
+`[ @publisher_db = ] 'publisher_db'` È il nome del server di pubblicazione. *publisher_db* viene **sysname**, con un valore predefinito è NULL.  
   
 ## <a name="result-sets"></a>Set di risultati  
   

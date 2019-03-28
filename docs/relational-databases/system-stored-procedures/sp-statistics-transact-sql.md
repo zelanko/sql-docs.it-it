@@ -19,12 +19,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 4bed4614f3d38ca7700d40b73347430f27e9d82b
-ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
+ms.openlocfilehash: fdf0984f172657ad45ee6da0a09de5e0e457b003
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/18/2018
-ms.locfileid: "53591705"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58527683"
 ---
 # <a name="spstatistics-transact-sql"></a>sp_statistics (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -47,25 +47,19 @@ sp_statistics [ @table_name = ] 'table_name'
 ```  
   
 ## <a name="arguments"></a>Argomenti  
- [  **@table_name=** ] **'**_table_name_**'**  
- Specifica la tabella utilizzata per restituire le informazioni del catalogo. *TABLE_NAME* viene **sysname**, non prevede alcun valore predefinito. I criteri di ricerca con caratteri jolly non sono supportati.  
+`[ @table_name = ] 'table_name'` Specifica la tabella utilizzata per restituire informazioni del catalogo. *TABLE_NAME* viene **sysname**, non prevede alcun valore predefinito. I criteri di ricerca con caratteri jolly non sono supportati.  
   
- [  **@table_owner=** ] **'**_proprietario_**'**  
- Nome del proprietario della tabella utilizzata per restituire le informazioni del catalogo. *TABLE_OWNER* viene **sysname**, con un valore predefinito è NULL. I criteri di ricerca con caratteri jolly non sono supportati. Se *proprietario* non viene specificato, si applicano le regole di visibilità della tabella predefinite del sistema DBMS sottostante.  
+`[ @table_owner = ] 'owner'` È il nome del proprietario della tabella della tabella utilizzata per restituire informazioni del catalogo. *TABLE_OWNER* viene **sysname**, con un valore predefinito è NULL. I criteri di ricerca con caratteri jolly non sono supportati. Se *proprietario* non viene specificato, si applicano le regole di visibilità della tabella predefinite del sistema DBMS sottostante.  
   
  In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], se l'utente corrente è il proprietario di una tabella con il nome specificato, vengono restituiti gli indici di tale tabella. Se *proprietario* non viene specificato e l'utente corrente non dispone di una tabella con la proprietà specificata *nome*, viene eseguita la ricerca per una tabella con la proprietà specificata *nome* di proprietà di proprietario del database. Se tale tabella esiste, vengono restituiti gli indici corrispondenti.  
   
- [  **@table_qualifier=** ] **'**_qualificatore_**'**  
- Nome del qualificatore di tabella. *qualificatore* viene **sysname**, con un valore predefinito è NULL. Vari prodotti DBMS supportano nomi di tabelle in tre parti (_qualificatore_**.** _owner_**.** _nome_). In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] questo parametro rappresenta il nome del database. In altri prodotti rappresenta il nome del server dell'ambiente di database della tabella.  
+`[ @table_qualifier = ] 'qualifier'` È il nome del qualificatore della tabella. *qualificatore* viene **sysname**, con un valore predefinito è NULL. Vari prodotti DBMS supportano nomi di tabelle in tre parti (_qualificatore_**.** _owner_**.** _nome_). In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] questo parametro rappresenta il nome del database. In altri prodotti rappresenta il nome del server dell'ambiente di database della tabella.  
   
- [  **@index_name=** ] **'**_index_name_**'**  
- Nome dell'indice. *index_name* viene **sysname**, con un valore predefinito è %. La ricerca con caratteri jolly è supportata.  
+`[ @index_name = ] 'index_name'` È il nome dell'indice. *index_name* viene **sysname**, con un valore predefinito è %. La ricerca con caratteri jolly è supportata.  
   
- [  **@is_unique=** ] **'**_is_unique_**'**  
- È se solo indici univoci (se **Y**) devono essere restituiti. *is_unique* viene **char (1)**, il valore predefinito è **N**.  
+`[ @is_unique = ] 'is_unique'` È se solo indici univoci (se **Y**) devono essere restituiti. *is_unique* viene **char (1)**, il valore predefinito è **N**.  
   
- [  **@accuracy=** ] **'**_accuratezza_**'**  
- Livello di precisione della cardinalità e delle pagine per le statistiche. *accuratezza* viene **char (1)**, il valore predefinito è **Q**. Specificare **elettronica** per assicurarsi che le statistiche vengono aggiornate in modo che la cardinalità e le pagine siano accurate.  
+`[ @accuracy = ] 'accuracy'` È il livello di accuratezza della pagina per le statistiche e cardinalità. *accuratezza* viene **char (1)**, il valore predefinito è **Q**. Specificare **elettronica** per assicurarsi che le statistiche vengono aggiornate in modo che la cardinalità e le pagine siano accurate.  
   
  Il valore **elettronica** (SQL_ENSURE) chiede al driver di recuperare in modo incondizionato le statistiche.  
   
@@ -86,7 +80,7 @@ sp_statistics [ @table_name = ] 'table_name'
 |**COLUMN_NAME**|**sysname**|Nome della colonna per ogni colonna della **TABLE_NAME** restituito. In questa colonna viene sempre restituito un valore.|  
 |**COLLATION**|**char(1)**|Ordine utilizzato nelle regole di confronto. I possibili valori sono i seguenti:<br /><br /> A = Crescente<br /><br /> D = Decrescente<br /><br /> NULL = Non applicabile|  
 |**CARDINALITÀ**|**int**|Numero di righe nella tabella o di valori univoci nell'indice.|  
-|**PAGINE**|**int**|Numero di pagine in cui archiviare l'indice o la tabella.|  
+|**PAGES**|**int**|Numero di pagine in cui archiviare l'indice o la tabella.|  
 |**FILTER_CONDITION**|**varchar(128)**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] non restituisce un valore.|  
   
 ## <a name="return-code-values"></a>Valori restituiti  

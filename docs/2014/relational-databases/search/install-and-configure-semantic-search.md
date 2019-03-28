@@ -13,12 +13,12 @@ ms.assetid: 2cdd0568-7799-474b-82fb-65d79df3057c
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 17252769c0f9347f5f67dbf073a207d827963630
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 80a7b0dd13688dca542587fbebd20c5b1818972a
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53377543"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58537588"
 ---
 # <a name="install-and-configure-semantic-search"></a>Installazione e configurazione della ricerca semantica
   Vengono descritti i prerequisiti per la ricerca semantica statistica e viene indicato come installarli o verificarli.  
@@ -30,7 +30,7 @@ ms.locfileid: "53377543"
   
  Se viene restituito il valore 1, la ricerca full-text e la ricerca semantica sono installate. Se viene restituito il valore 0, le ricerche non sono installate.  
   
-```tsql  
+```sql  
 SELECT SERVERPROPERTY('IsFullTextInstalled');  
 GO  
 ```  
@@ -61,7 +61,7 @@ GO
   
     -   Individuare il pacchetto di Windows Installer denominato **SemanticLanguageDatabase.msi** sui supporti di installazione di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Individuare la versione a 32 bit o la versione a 64 bit del pacchetto di installazione a seconda del sistema di destinazione. Il nome della cartella che contiene il file ne identifica la versione a 32 bit o a 64 bit; il nome del file stesso è uguale per entrambe versioni.  
   
-    -   Scaricare il pacchetto di programma di installazione dal [Microsoft? SQL Server? 2014 semantic Language Statistics](https://go.microsoft.com/fwlink/?LinkID=296743) pagina il [!INCLUDE[msCoName](../../../includes/msconame-md.md)] area Download Microsoft.  
+    -   Scaricare il pacchetto di programma di installazione dal [Microsoft? SQL Server?? 2014 semantic Language Statistics](https://go.microsoft.com/fwlink/?LinkID=296743) pagina il [!INCLUDE[msCoName](../../../includes/msconame-md.md)] area Download Microsoft.  
   
 2.  Eseguire il pacchetto di Windows Installer **SemanticLanguageDatabase.msi** per estrarre il database e il file di log.  
   
@@ -79,7 +79,7 @@ GO
   
  Per impostazione predefinita, il nome del database è **semanticsdb**. Facoltativamente è possibile fornire un nome diverso per il database al momento del collegamento. Tale nome dovrà essere fornito al momento di registrare il database nel passaggio successivo.  
   
-```tsql  
+```sql  
 CREATE DATABASE semanticsdb  
             ON ( FILENAME = 'C:\Microsoft Semantic Language Database\semanticsdb.mdf' )  
             LOG ON ( FILENAME = 'C:\Microsoft Semantic Language Database\semanticsdb_log.ldf' )  
@@ -92,7 +92,7 @@ GO
  **3. Registrare il database di statistiche lingua semantica.**  
  Chiamare la stored procedure [sp_fulltext_semantic_register_language_statistics_db &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-fulltext-semantic-register-language-statistics-db-transact-sql) e specificare il nome assegnato al database al momento del collegamento.  
   
-```tsql  
+```sql  
 EXEC sp_fulltext_semantic_register_language_statistics_db @dbname = N'semanticsdb';  
 GO  
 ```  
@@ -101,7 +101,7 @@ GO
  **Annullare la registrazione del database di statistiche lingua semantica.**  
  Chiamare la stored procedure [sp_fulltext_semantic_unregister_language_statistics_db &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-fulltext-semantic-unregister-language-statistics-db-transact-sql). Poiché un'istanza può includere un solo database di statistiche lingua semantica, non è necessario fornire il nome del database.  
   
-```tsql  
+```sql  
 EXEC sp_fulltext_semantic_unregister_language_statistics_db;  
 GO  
 ```  
@@ -109,7 +109,7 @@ GO
  **Scollegare il database di statistiche lingua semantica.**  
  Chiamare la stored procedure [sp_detach_db &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-detach-db-transact-sql) e indicare il nome del database.  
   
-```tsql  
+```sql  
 USE master;  
 GO  
   

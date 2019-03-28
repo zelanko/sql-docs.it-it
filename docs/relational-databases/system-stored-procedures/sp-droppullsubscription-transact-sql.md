@@ -16,12 +16,12 @@ ms.assetid: 7352d94a-f8f2-42ea-aaf1-d08c3b5a0e76
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 0343855bbc3d82e58a0a0252109dee6255ee766f
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: 2afa58b9fe8844aa4bb74187ef77393f0bc5681f
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54134051"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58527534"
 ---
 # <a name="spdroppullsubscription-transact-sql"></a>sp_droppullsubscription (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -41,17 +41,13 @@ sp_droppullsubscription [ @publisher= ] 'publisher'
 ```  
   
 ## <a name="arguments"></a>Argomenti  
- [  **@publisher=** ] **'**_editore_**'**  
- Nome del server remoto. *server di pubblicazione* viene **sysname**, non prevede alcun valore predefinito. Se **tutti**, la sottoscrizione viene eliminata in tutti i server di pubblicazione.  
+`[ @publisher = ] 'publisher'` È il nome del server remoto. *server di pubblicazione* viene **sysname**, non prevede alcun valore predefinito. Se **tutti**, la sottoscrizione viene eliminata in tutti i server di pubblicazione.  
   
- [  **@publisher_db=** ] **'**_publisher_db_**'**  
- Nome del database del server di pubblicazione. *publisher_db* viene **sysname**, non prevede alcun valore predefinito. **tutti i** indica tutti i database del server di pubblicazione.  
+`[ @publisher_db = ] 'publisher_db'` È il nome del server di pubblicazione. *publisher_db* viene **sysname**, non prevede alcun valore predefinito. **tutti i** indica tutti i database del server di pubblicazione.  
   
- [  **@publication=** ] **'**_pubblicazione_**'**  
- Nome della pubblicazione. *pubblicazione* viene **sysname**, non prevede alcun valore predefinito. Se **tutti**, la sottoscrizione viene eliminata in tutte le pubblicazioni.  
+`[ @publication = ] 'publication'` È il nome della pubblicazione. *pubblicazione* viene **sysname**, non prevede alcun valore predefinito. Se **tutti**, la sottoscrizione viene eliminata in tutte le pubblicazioni.  
   
- [  **@reserved=** ] *riservato*  
- [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
+`[ @reserved = ] reserved` [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
   
 ## <a name="return-code-values"></a>Valori restituiti  
  **0** (esito positivo) o **1** (errore)  

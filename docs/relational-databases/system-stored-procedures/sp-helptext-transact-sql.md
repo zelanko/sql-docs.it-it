@@ -19,12 +19,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 95316400d336a13304f1da0850ecdcc9565fe5bd
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 5b518c7b79ca6a054b5d6435ea7cb2fe10e419b7
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47707329"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58536323"
 ---
 # <a name="sphelptext-transact-sql"></a>sp_helptext (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -41,20 +41,18 @@ sp_helptext [ @objname = ] 'name' [ , [ @columnname = ] computed_column_name ]
 ```  
   
 ## <a name="arguments"></a>Argomenti  
- [  **@objname =** ] **'***nome***'**  
- Nome completo o nome non qualificato di un oggetto con ambito schema definito dall'utente. Le virgolette sono necessarie solo se viene specificato un oggetto qualificato. Nel caso di un nome completo, ovvero contenente un nome di database, il nome del database deve corrispondere a quello del database corrente. L'oggetto deve essere presente nel database corrente. *nome* viene **nvarchar(776)**, non prevede alcun valore predefinito.  
+`[ @objname = ] 'name'` È il nome completo o non qualificato di un oggetto con ambito schema definito dall'utente. Le virgolette sono necessarie solo se viene specificato un oggetto qualificato. Nel caso di un nome completo, ovvero contenente un nome di database, il nome del database deve corrispondere a quello del database corrente. L'oggetto deve essere presente nel database corrente. *nome* viene **nvarchar(776)**, non prevede alcun valore predefinito.  
   
- [  **@columnname =** ] **'***computed_column_name***'**  
- Nome della colonna calcolata su cui si desidera ottenere informazioni di definizione. La tabella che contiene la colonna deve essere specificata come *nome*. *column_name* viene **sysname**, non prevede alcun valore predefinito.  
+`[ @columnname = ] 'computed_column_name'` È il nome della colonna calcolata per cui visualizzare le informazioni sulla definizione. La tabella che contiene la colonna deve essere specificata come *nome*. *column_name* viene **sysname**, non prevede alcun valore predefinito.  
   
 ## <a name="return-code-values"></a>Valori restituiti  
  0 (esito positivo) o 1 (esito negativo)  
   
 ## <a name="result-sets"></a>Set di risultati  
   
-|Nome colonna|Tipo di dati|Description|  
+|Nome colonna|Tipo di dati|Descrizione|  
 |-----------------|---------------|-----------------|  
-|**Text**|**nvarchar(255)**|Definizione dell'oggetto|  
+|**per**|**nvarchar(255)**|Definizione dell'oggetto|  
   
 ## <a name="remarks"></a>Note  
  sp_helptext visualizza la definizione utilizzata per creare un oggetto in più righe. Ogni riga include 255 caratteri della definizione [!INCLUDE[tsql](../../includes/tsql-md.md)]. La definizione si trova nel **definition** colonna il [Sys. sql_modules](../../relational-databases/system-catalog-views/sys-sql-modules-transact-sql.md) vista del catalogo.  

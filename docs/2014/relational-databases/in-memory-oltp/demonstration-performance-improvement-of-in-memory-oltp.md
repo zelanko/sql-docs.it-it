@@ -1,5 +1,5 @@
 ---
-title: 'Dimostrazione: Miglioramento delle prestazioni di OLTP in memoria | Microsoft Docs'
+title: 'Dimostrazione: Miglioramento delle prestazioni di OLTP In memoria | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -10,14 +10,14 @@ ms.assetid: c6def45d-d2d4-4d24-8068-fab4cd94d8cc
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 2ee9f530580d9c3aaff2d10a260be20a1970e8a0
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 8c9477a318d2cb4f9886d67da8a4f8b5967cc180
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48127991"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58537288"
 ---
-# <a name="demonstration-performance-improvement-of-in-memory-oltp"></a>Dimostrazione: Miglioramento delle prestazioni di OLTP in memoria
+# <a name="demonstration-performance-improvement-of-in-memory-oltp"></a>Dimostrazione: miglioramento delle prestazioni di OLTP in memoria
   Questo esempio mostra i miglioramenti delle prestazioni che si ottengono quando si utilizza OLTP in memoria, mettendo a confronto le differenze nei tempi di risposta per l'esecuzione di una query Transact-SQL identica su tabelle ottimizzate per la memoria e su tabelle basate su disco tradizionali. Viene anche creata una stored procedure compilata in modo nativo (basata sulla stessa query), che viene quindi eseguita per dimostrare che in genere si ottengono i tempi di risposta migliori eseguendo query su una tabella ottimizzata per la memoria con una stored procedure compilata in modo nativo. Questo esempio illustra solo un aspetto dei miglioramenti delle prestazioni in caso di accesso ai dati in tabelle ottimizzate per la memoria, ovvero l'efficienza dell'accesso ai dati durante l'esecuzione di inserimenti. Questo esempio è a thread singolo e non sfrutta i vantaggi della concorrenza di OLTP in memoria. Un carico di lavoro che utilizza la concorrenza avrà un miglioramento più significativo delle prestazioni.  
   
 > [!NOTE]  
@@ -33,7 +33,7 @@ ms.locfileid: "48127991"
   
  Per configurare il **imoltp** del database per questo esempio, creare innanzitutto una cartella vuota: **c:\imoltp_data**, e quindi eseguire il codice seguente:  
   
-```tsql  
+```sql  
 USE master  
 GO  
   
@@ -55,7 +55,7 @@ GO
   
  Eseguire successivamente il codice seguente per creare la tabella basata su disco, due (2) tabelle ottimizzate per la memoria e la stored procedure compilata in modo nativo da utilizzare per illustrare i diversi metodi di accesso ai dati:  
   
-```tsql  
+```sql  
 USE imoltp  
 GO  
   
@@ -120,7 +120,7 @@ GO
   
  Per completare l'esempio, eseguire più volte il codice seguente. Ignorare i risultati della prima esecuzione perché su di essa influisce negativamente l'allocazione di memoria iniziale.  
   
-```tsql  
+```sql  
 SET STATISTICS TIME OFF;  
 SET NOCOUNT ON;  
   

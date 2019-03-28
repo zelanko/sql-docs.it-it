@@ -13,12 +13,12 @@ ms.assetid: 1379605c-1242-4ac8-ab1b-e2a2b5b1f895
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: aa7359fc1436cfbb4222dcc63f9bb700720bf3cb
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 38c29f8d70b3cc72baf81e2ae23082fe270ba573
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52772563"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58537393"
 ---
 # <a name="set-or-change-the-database-collation"></a>Impostare o modificare le regole di confronto del database
   In questo argomento viene descritto come impostare e modificare le regole di confronto del database in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] utilizzando [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)]. Se non viene specificata alcuna regola di confronto, vengono utilizzate le regole di confronto del server.  
@@ -63,7 +63,7 @@ ms.locfileid: "52772563"
   
 ###  <a name="Security"></a> Sicurezza  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> Autorizzazioni  
  CREATE DATABASE  
  È richiesta l'autorizzazione CREATE DATABASE per il database **master** oppure l'autorizzazione CREATE ANY DATABASE o ALTER ANY DATABASE.  
   
@@ -90,9 +90,9 @@ ms.locfileid: "52772563"
   
 2.  Dalla barra Standard fare clic su **Nuova query**.  
   
-3.  Copiare e incollare l'esempio seguente nella finestra delle query e fare clic su **Esegui**. In questo esempio viene mostrato come utilizzare la clausola [COLLATE](/sql/t-sql/statements/collations) per specificare un nome delle regole di confronto. Nell'esempio viene creato l'elemento `MyOptionsTest` del database che utilizza le regole di confronto `Latin1_General_100_CS_AS_SC` . Dopo aver creato il database, eseguire l'istruzione `SELECT` per verificare l'impostazione.  
+3.  Copiare e incollare l'esempio seguente nella finestra Query, quindi fare clic su **Esegui**. In questo esempio viene mostrato come utilizzare la clausola [COLLATE](/sql/t-sql/statements/collations) per specificare un nome delle regole di confronto. Nell'esempio viene creato l'elemento `MyOptionsTest` del database che utilizza le regole di confronto `Latin1_General_100_CS_AS_SC` . Dopo aver creato il database, eseguire l'istruzione `SELECT` per verificare l'impostazione.  
   
-```tsql  
+```sql  
 USE master;  
 GO  
 IF DB_ID (N'MyOptionsTest') IS NOT NULL  
@@ -116,9 +116,9 @@ GO
   
 2.  Dalla barra Standard fare clic su **Nuova query**.  
   
-3.  Copiare e incollare l'esempio seguente nella finestra delle query e fare clic su **Esegui**. In questo esempio viene mostrato come utilizzare la clausola [COLLATE](/sql/t-sql/statements/collations) in un'istruzione [ALTER DATABASE](/sql/t-sql/statements/alter-database-transact-sql) per modificare il nome delle regole di confronto. Eseguire l'istruzione `SELECT` per verificare la modifica.  
+3.  Copiare e incollare l'esempio seguente nella finestra Query, quindi fare clic su **Esegui**. In questo esempio viene mostrato come utilizzare la clausola [COLLATE](/sql/t-sql/statements/collations) in un'istruzione [ALTER DATABASE](/sql/t-sql/statements/alter-database-transact-sql) per modificare il nome delle regole di confronto. Eseguire l'istruzione `SELECT` per verificare la modifica.  
   
-```tsql  
+```sql  
 USE master;  
 GO  
 ALTER DATABASE MyOptionsTest  

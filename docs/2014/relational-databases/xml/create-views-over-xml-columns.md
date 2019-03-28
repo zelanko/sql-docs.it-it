@@ -9,18 +9,18 @@ ms.topic: conceptual
 helpviewer_keywords:
 - views [XML in SQL Server]
 ms.assetid: eb5f0439-1f69-49c2-8759-e59bda1633b7
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 767844d7b195ece286b8f19cc34855bf50185a0c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 2d1e37f341c0606947b37eb10e8e3123ad410204
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48049831"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58538368"
 ---
 # <a name="create-views-over-xml-columns"></a>Creazione di viste
-  È possibile usare un `xml` colonna di tipo per creare visualizzazioni. L'esempio seguente crea una vista in cui il valore da un `xml` colonna di tipo viene recuperato utilizzando il `value()` metodo il `xml` tipo di dati.  
+  Le colonne di tipo `xml` possono essere utilizzate per la creazione di viste. Nell'esempio seguente viene creata una vista nella quale il valore di una colonna di tipo `xml` viene recuperato utilizzando il metodo `value()` del tipo di dati `xml`.  
   
 ```  
 -- Create the table.  
@@ -47,7 +47,7 @@ SELECT *
 FROM   MyView  
 ```  
   
- Risultato:  
+ Questo è il risultato:  
   
 ```  
 ProductID   PName        
@@ -55,11 +55,11 @@ ProductID   PName
 1           SomeName   
 ```  
   
- Tenere presente quanto segue sull'uso di `xml` tipo di dati per creare viste:  
+ Notare i punti seguenti circa l'utilizzo del tipo di dati `xml` per creare viste:  
   
 -   Il tipo di dati xml può essere creato in una vista materializzata. La vista materializzata non può essere basata su un metodo con tipo di dati XML, ma è possibile eseguirne il cast su una raccolta di XML Schema diversa dalla colonna di tipo xml nella tabella di base.  
   
--   Il `xml` tipo di dati non può essere utilizzato nelle viste partizionate distribuite.  
+-   Il tipo di dati `xml` non può essere utilizzato nelle viste partizionate distribuite.  
   
 -   I predicati SQL in esecuzione sulla vista non saranno inseriti in XQuery per la definizione della vista.  
   

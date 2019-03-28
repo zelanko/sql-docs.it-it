@@ -18,12 +18,12 @@ ms.assetid: e94b37a1-70ad-46a5-86c0-721892156f7c
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: fb2db3e60d416324a413bf9d6eb69f6125bc00b5
-ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
+ms.openlocfilehash: 6c6c183034b93f06f7c8bc62b73f97316a204005
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/18/2018
-ms.locfileid: "53588458"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58537724"
 ---
 # <a name="sysmaildeletelogsp-transact-sql"></a>sysmail_delete_log_sp (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -42,11 +42,9 @@ sysmail_delete_log_sp  [ [ @logged_before = ] 'logged_before' ]
 ```  
   
 ## <a name="arguments"></a>Argomenti  
- [ **@logged_before** =] **'**_logged_before_**'**  
- Elimina le voci anteriori alla data e ora specificate dal *logged_before* argomento. *logged_before* viene **datetime** con valore predefinito è NULL. che indica tutte le date.  
+`[ @logged_before = ] 'logged_before'` Elimina le voci anteriori alla data e ora specificate dal *logged_before* argomento. *logged_before* viene **datetime** con valore predefinito è NULL. che indica tutte le date.  
   
- [ **@event_type** =] **'**_event_type_**'**  
- Elimina le voci del tipo specificato come log di *event_type*. *event_type* viene **varchar(15)** non prevede alcun valore predefinito. Possibili valori sono **success**, **avviso**, **errore**, e **informativo**. NULL indica tutti i tipi di eventi.  
+`[ @event_type = ] 'event_type'` Elimina le voci del tipo specificato come log di *event_type*. *event_type* viene **varchar(15)** non prevede alcun valore predefinito. Possibili valori sono **success**, **avviso**, **errore**, e **informativo**. NULL indica tutti i tipi di eventi.  
   
 ## <a name="return-code-values"></a>Valori restituiti  
  **0** (esito positivo) o **1** (errore)  
@@ -69,7 +67,7 @@ EXECUTE msdb.dbo.sysmail_delete_log_sp ;
 GO  
 ```  
   
-### <a name="b-deleting-the-oldest-events"></a>b. Eliminazione degli eventi meno recenti  
+### <a name="b-deleting-the-oldest-events"></a>B. Eliminazione degli eventi meno recenti  
  Nell'esempio seguente vengono eliminati gli eventi nel log di Posta elettronica database con una data anteriore al 9 ottobre 2005.  
   
 ```  

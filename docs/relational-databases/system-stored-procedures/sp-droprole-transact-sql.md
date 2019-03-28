@@ -18,12 +18,12 @@ ms.assetid: 889ee074-00f8-40a9-bddb-d7d3ef0cbc19
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: a823427067ca1c6d06a6d26b6ab3553d17df9489
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: f07ccd19a419f3b6d332213e9846aec740b0c152
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52535768"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58538402"
 ---
 # <a name="spdroprole-transact-sql"></a>sp_droprole (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -43,8 +43,7 @@ sp_droprole [ @rolename= ] 'role'
 ```  
   
 ## <a name="arguments"></a>Argomenti  
- [  **@rolename =** ] **'**_ruolo_**'**  
- Nome del ruolo del database da rimuovere dal database corrente. *ruolo* è un **sysname**, non prevede alcun valore predefinito. *ruolo* deve già esistere nel database corrente.  
+`[ @rolename = ] 'role'` È il nome del ruolo del database da rimuovere dal database corrente. *ruolo* è un **sysname**, non prevede alcun valore predefinito. *ruolo* deve già esistere nel database corrente.  
   
 ## <a name="return-code-values"></a>Valori restituiti  
  0 (esito positivo) o 1 (esito negativo)  

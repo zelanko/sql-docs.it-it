@@ -19,12 +19,12 @@ ms.assetid: 3c414dfd-d9ca-4320-81aa-949465b967bf
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: ed8c11a7d5f333a086482d2882a6aef7a97370e3
-ms.sourcegitcommit: bfa10c54e871700de285d7f819095d51ef70d997
+ms.openlocfilehash: 9d3529d01966c7f9780183d663823d8f4033f47a
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/14/2019
-ms.locfileid: "54256976"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58535783"
 ---
 # <a name="spsyscollectorupdatecollectortype-transact-sql"></a>sp_syscollector_update_collector_type (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -45,20 +45,15 @@ sp_syscollector_update_collector_type [ @collector_type_uid = ] 'collector_type_
 ```  
   
 ## <a name="arguments"></a>Argomenti  
- [ **@collector_type_uid =** ] **'***collector_type_uid***'**  
- GUID del tipo di agente di raccolta. *collector_type_uid* viene **uniqueidentifier**, e se è NULL verrà creato automaticamente e restituito come OUTPUT.  
+`[ @collector_type_uid = ] 'collector_type_uid'` È il GUID per il tipo di agente di raccolta. *collector_type_uid* viene **uniqueidentifier**, e se è NULL verrà creato automaticamente e restituito come OUTPUT.  
   
- [  **@name =** ] **'***nome***'**  
- Nome del tipo di agente di raccolta. *nome* viene **sysname** e deve essere specificato.  
+`[ @name = ] 'name'` È il nome del tipo di agente di raccolta. *nome* viene **sysname** e deve essere specificato.  
   
- [  **@parameter_schema =** ] **'***parameter_schema***'**  
- XML Schema per questo tipo di agente di raccolta. *parameter_schema* viene **xml** e può essere richiesto da determinati tipi agente di raccolta. Se non è obbligatorio, questo argomento può essere NULL.  
+`[ @parameter_schema = ] 'parameter_schema'` È lo schema XML per questo tipo di agente di raccolta. *parameter_schema* viene **xml** e può essere richiesto da determinati tipi agente di raccolta. Se non è obbligatorio, questo argomento può essere NULL.  
   
- [  **@collection_package_id =** ] *collection_package_id*  
- È un identificatore univoco locale che punta al pacchetto di raccolta [!INCLUDE[ssIS](../../includes/ssis-md.md)] utilizzato dal set di raccolta. *collection_package_id* viene **uniqueidentifier** ed è obbligatorio. Per ottenere il valore per *collection_package_id*, eseguire query sulla vista di sistema syscollector_collector_types nel database msdb.  
+`[ @collection_package_id = ] collection_package_id` È un identificatore univoco locale che punta al [!INCLUDE[ssIS](../../includes/ssis-md.md)] pacchetto di raccolta utilizzato dal set di raccolta. *collection_package_id* viene **uniqueidentifier** ed è obbligatorio. Per ottenere il valore per *collection_package_id*, eseguire query sulla vista di sistema syscollector_collector_types nel database msdb.  
   
- [ **@upload_package_id =** ] *upload_package_id*  
- Identificatore univoco locale che punta al pacchetto di caricamento di [!INCLUDE[ssIS](../../includes/ssis-md.md)] utilizzato dal set di raccolta. *upload_package_id* viene **uniqueidentifier** ed è obbligatorio. Per ottenere il valore per *upload_package_id*, eseguire query sulla vista di sistema syscollector_collector_types nel database msdb.  
+`[ @upload_package_id = ] upload_package_id` È un identificatore univoco locale che punta al [!INCLUDE[ssIS](../../includes/ssis-md.md)] Carica pacchetto utilizzato dal set di raccolta. *upload_package_id* viene **uniqueidentifier** ed è obbligatorio. Per ottenere il valore per *upload_package_id*, eseguire query sulla vista di sistema syscollector_collector_types nel database msdb.  
   
 ## <a name="return-code-values"></a>Valori restituiti  
  **0** (esito positivo) o **1** (errore)  

@@ -16,12 +16,12 @@ ms.assetid: e801c3f0-dcbd-4b4a-b254-949a05f63518
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 7a0e823731ff80c714bc31a54210dbcd0e0fea18
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: d6f2760d225848503d93ea361a54a0069ce16c14
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53205210"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58532973"
 ---
 # <a name="sphelppublication-transact-sql"></a>sp_helppublication (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -40,14 +40,11 @@ sp_helppublication [ [ @publication = ] 'publication' ]
 ```  
   
 ## <a name="arguments"></a>Argomenti  
- [  **@publication =** ] **'***pubblicazione***'**  
- Nome della pubblicazione da visualizzare. *pubblicazione* is sysname con valore predefinito è **%**, che restituisce informazioni su tutte le pubblicazioni.  
+`[ @publication = ] 'publication'` È il nome della pubblicazione da visualizzare. *pubblicazione* is sysname con valore predefinito è **%**, che restituisce informazioni su tutte le pubblicazioni.  
   
- [  **@found =** ] **'***trovato***'** OUTPUT  
- Flag che indica le righe che restituiscono valori. *trovato*viene **int** e un parametro di OUTPUT con valore predefinito è **23456**. **1** indica la pubblicazione è stata trovata. **0** indica la pubblicazione non è stata trovata.  
+`[ @found = ] 'found' OUTPUT` È un flag per indicare che restituisce righe. *trovato*viene **int** e un parametro di OUTPUT con valore predefinito è **23456**. **1** indica la pubblicazione è stata trovata. **0** indica la pubblicazione non è stata trovata.  
   
- [ **@publisher** =] **'***publisher***'**  
- Specifica un non - [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] server di pubblicazione. *server di pubblicazione* is sysname con valore predefinito è NULL.  
+`[ @publisher = ] 'publisher'` Specifica un non - [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] server di pubblicazione. *server di pubblicazione* is sysname con valore predefinito è NULL.  
   
 > [!NOTE]  
 >  *server di pubblicazione* non deve essere specificato quando si richiedono informazioni sulla pubblicazione da un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] server di pubblicazione.  
@@ -61,7 +58,7 @@ sp_helppublication [ [ @publication = ] 'publication' ]
 |restricted|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |status|**tinyint**|Stato corrente della pubblicazione.<br /><br /> **0** = inattiva.<br /><br /> **1** = attivo.|  
 |attività||Disponibile per compatibilità con le versioni precedenti.|  
-|replication frequency|**tinyint**|Tipo di frequenza della replica:<br /><br /> **0** = transazionale<br /><br /> **1** = snapshot|  
+|replication frequency|**tinyint**|Tipo di frequenza della replica:<br /><br /> **0** = transazionale<br /><br /> **1** = Snapshot|  
 |synchronization method|**tinyint**|Modalità di sincronizzazione:<br /><br /> **0** = programma per la copia bulk in modalità nativa (**bcp** utilità)<br /><br /> **1** = copia bulk di carattere<br /><br /> **3** = simultanea, ovvero la copia bulk in modalità nativa (**bcp**utilità) viene usato ma durante lo snapshot le tabelle non vengono bloccate<br /><br /> **4** = Concurrent_c, che significa che viene utilizzata la copia bulk di carattere ma durante lo snapshot le tabelle non vengono bloccate|  
 |description|**nvarchar(255)**|Descrizione facoltativa della pubblicazione.|  
 |immediate_sync|**bit**|Indica se i file di sincronizzazione vengono creati o ricreati a ogni esecuzione dell'agente snapshot.|  

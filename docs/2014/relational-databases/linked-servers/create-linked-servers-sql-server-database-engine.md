@@ -17,12 +17,12 @@ ms.assetid: 3228065d-de8f-4ece-a9b1-e06d3dca9310
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: eebda510e90c499a0bae774d1288d3b886896d25
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: a288f5c9f42e282694b864e4493d02dcd6cfa3a3
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52766613"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58527845"
 ---
 # <a name="create-linked-servers-sql-server-database-engine"></a>Creazione di server collegati (Motore di database di SQL Server)
   In questo argomento viene illustrato come creare un server collegato e come accedere ai dati da un'altra istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tramite [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)]. La creazione di server collegati consente di utilizzare dati di più origini. Il server collegato non deve essere un'altra istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], tuttavia si tratta di uno scenario comune.  
@@ -199,7 +199,7 @@ ms.locfileid: "52766613"
   
 1.  Nell'Editor query immettere il comando [!INCLUDE[tsql](../../includes/tsql-md.md)] seguente per il collegamento a un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] denominata `SRVR002\ACCTG`:  
   
-    ```tsql  
+    ```sql  
     USE [master]  
     GO  
     EXEC master.dbo.sp_addlinkedserver   
@@ -211,7 +211,7 @@ ms.locfileid: "52766613"
   
 2.  Eseguire il codice riportato di seguito per configurare il server collegato in modo da utilizzare le credenziali di dominio dell'account di accesso utilizzate dal server collegato.  
   
-    ```tsql  
+    ```sql  
     EXEC master.dbo.sp_addlinkedsrvlogin   
         @rmtsrvname = N'SRVR002\ACCTG',   
         @locallogin = NULL ,   
@@ -226,7 +226,7 @@ ms.locfileid: "52766613"
   
 -   Eseguire il codice riportato di seguito per testare la connessione al server collegato. In questo esempio vengono restituiti i nomi dei database nel server collegato.  
   
-    ```tsql  
+    ```sql  
     SELECT name FROM [SRVR002\ACCTG].master.sys.databases ;  
     GO  
   
@@ -236,7 +236,7 @@ ms.locfileid: "52766613"
   
 -   Utilizzare nomi in quattro parti per fare riferimento a un oggetto in un server collegato. Eseguire il codice riportato di seguito per restituire un elenco di tutti gli account di accesso nel server locale e i relativi account di accesso corrispondenti nel server collegato.  
   
-    ```tsql  
+    ```sql  
     SELECT local.name AS LocalLogins, linked.name AS LinkedLogins  
     FROM master.sys.server_principals AS local  
     LEFT JOIN [SRVR002\ACCTG].master.sys.server_principals AS linked  

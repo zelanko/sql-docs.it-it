@@ -13,12 +13,12 @@ ms.assetid: 48a7b2fe-6bc3-4278-a7ec-1babc1290345
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: db4477f347e0eff1a7a8d75aaf21c1a34d8130dd
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 96f5a873e8d172254e1ea18abbd0c570b27a35ed
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52782493"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58528173"
 ---
 # <a name="start-or-stop-a-collection-set"></a>Avviare o arrestare un set di raccolta
   In questo argomento viene descritto come avviare o arrestare un set di raccolte in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] tramite [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)].  
@@ -59,7 +59,7 @@ ms.locfileid: "52782493"
   
 ###  <a name="Security"></a> Sicurezza  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> Autorizzazioni  
  È necessaria l'appartenenza al ruolo predefinito del database **dc_operator** . Se al set di raccolta non è associato un account proxy, è richiesta l'appartenenza al ruolo predefinito del server **sysadmin** . Esempi  
   
 ##  <a name="SSMSProcedure"></a> Utilizzo di SQL Server Management Studio  
@@ -88,9 +88,9 @@ ms.locfileid: "52782493"
   
 2.  Dalla barra Standard fare clic su **Nuova query**.  
   
-3.  Copiare e incollare l'esempio seguente nella finestra delle query e fare clic su **Esegui**. In questo esempio si usa [sp_syscollector_start_collection_set](/sql/relational-databases/system-stored-procedures/sp-syscollector-start-collection-set-transact-sql) per avviare il set di raccolta con l'ID `1`.  
+3.  Copiare e incollare l'esempio seguente nella finestra Query, quindi fare clic su **Esegui**. In questo esempio si usa [sp_syscollector_start_collection_set](/sql/relational-databases/system-stored-procedures/sp-syscollector-start-collection-set-transact-sql) per avviare il set di raccolta con l'ID `1`.  
   
-```tsql  
+```sql  
 USE msdb;  
 GO  
 EXEC sp_syscollector_start_collection_set @collection_set_id = 1;  
@@ -102,9 +102,9 @@ EXEC sp_syscollector_start_collection_set @collection_set_id = 1;
   
 2.  Dalla barra Standard fare clic su **Nuova query**.  
   
-3.  Copiare e incollare l'esempio seguente nella finestra delle query e fare clic su **Esegui**. In questo esempio si usa [sp_syscollector_stop_collection_set](/sql/relational-databases/system-stored-procedures/sp-syscollector-stop-collection-set-transact-sql) per arrestare il set di raccolta con l'ID `1`.  
+3.  Copiare e incollare l'esempio seguente nella finestra Query, quindi fare clic su **Esegui**. In questo esempio si usa [sp_syscollector_stop_collection_set](/sql/relational-databases/system-stored-procedures/sp-syscollector-stop-collection-set-transact-sql) per arrestare il set di raccolta con l'ID `1`.  
   
-```tsql  
+```sql  
 USE msdb;  
 GO  
 EXEC sp_syscollector_stop_collection_set @collection_set_id = 1;  

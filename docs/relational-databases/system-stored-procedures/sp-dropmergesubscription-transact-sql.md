@@ -16,12 +16,12 @@ ms.assetid: 34244ae6-bd98-4a6a-bbd3-85f50edfcdc0
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 34ba40387c246fe5f7f2de8dd74197b7cd43c0f5
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: 1b360eed1619317e7ca3092bc47da086c520bf04
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54130741"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58535553"
 ---
 # <a name="spdropmergesubscription-transact-sql"></a>sp_dropmergesubscription (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -43,31 +43,25 @@ sp_dropmergesubscription [ [ @publication= ] 'publication' ]
 ```  
   
 ## <a name="arguments"></a>Argomenti  
- [  **@publication=** ] **'**_pubblicazione_**'**  
- Nome della pubblicazione. *pubblicazione* viene **sysname**, con un valore predefinito è NULL. È necessario che la pubblicazione esista già e che sia conforme alle regole per gli identificatori.  
+`[ @publication = ] 'publication'` È il nome della pubblicazione. *pubblicazione* viene **sysname**, con un valore predefinito è NULL. È necessario che la pubblicazione esista già e che sia conforme alle regole per gli identificatori.  
   
- [  **@subscriber=**] **'**_sottoscrittore_**'**  
- Nome del Sottoscrittore. *Sottoscrittore* viene **sysname**, con un valore predefinito è NULL.  
+`[ @subscriber = ] 'subscriber'` È il nome del sottoscrittore. *Sottoscrittore* viene **sysname**, con un valore predefinito è NULL.  
   
- [  **@subscriber_db=** ] **'**_subscriber_db_**'**  
- Nome del database di sottoscrizione. *subscription_database*viene **sysname**, con un valore predefinito è NULL.  
+`[ @subscriber_db = ] 'subscriber_db'` È il nome del database di sottoscrizione. *subscription_database*viene **sysname**, con un valore predefinito è NULL.  
   
- [  **@subscription_type=** ] **'**_subscription_type_**'**  
- Tipo di sottoscrizione. *subscription_type*viene **nvarchar(15)**, i possibili valori sono i seguenti.  
+`[ @subscription_type = ] 'subscription_type'` È il tipo di sottoscrizione. *subscription_type*viene **nvarchar(15)**, i possibili valori sono i seguenti.  
   
 |Value|Descrizione|  
 |-----------|-----------------|  
-|**Tutti i**|Sottoscrizioni push, pull e anonime.|  
-|**Anonima**|Sottoscrizione anonima.|  
+|**all**|Sottoscrizioni push, pull e anonime.|  
+|**anonymous**|Sottoscrizione anonima.|  
 |**push**|Sottoscrizione push.|  
-|**Eseguire il pull**|Sottoscrizione pull.|  
+|**pull**|Sottoscrizione pull.|  
 |**entrambi** (impostazione predefinita)|Sottoscrizione sia push che pull.|  
   
- [  **@ignore_distributor =** ] *ignore_distributor*  
- Indica se questa stored procedure viene eseguita senza stabilire la connessione al server di distribuzione. *ignore_distributor* viene **bit**, il valore predefinito è **0**. È possibile utilizzare questo parametro per eliminare una sottoscrizione senza eseguire attività di pulizia dei dati nel server di distribuzione. Risulta inoltre utile se è stato necessario reinstallare il server di distribuzione.  
+`[ @ignore_distributor = ] ignore_distributor` Indica se questa stored procedure viene eseguita senza stabilire la connessione al server di distribuzione. *ignore_distributor* viene **bit**, il valore predefinito è **0**. È possibile utilizzare questo parametro per eliminare una sottoscrizione senza eseguire attività di pulizia dei dati nel server di distribuzione. Risulta inoltre utile se è stato necessario reinstallare il server di distribuzione.  
   
- [  **@reserved=** ] *riservato*  
- Riservato per utilizzi futuri. *riservato* viene **bit**, il valore predefinito è **0**.  
+`[ @reserved = ] reserved` è riservato per utilizzi futuri. *riservato* viene **bit**, il valore predefinito è **0**.  
   
 ## <a name="return-code-values"></a>Valori restituiti  
  **0** (esito positivo) o **1** (errore)  

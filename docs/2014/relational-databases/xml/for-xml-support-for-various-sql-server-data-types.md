@@ -10,22 +10,22 @@ helpviewer_keywords:
 - FOR XML clause, data type support
 - data types [SQL Server], FOR XML clause
 ms.assetid: b8aeb87f-9cce-40e2-a47c-2dc1460548af
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 9d75cacd22825d9d176fa08813ef64fe5f89b38c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 478c7e49fcdef335a65e0574eeaa80843f5b1c29
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48072151"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58527153"
 ---
 # <a name="for-xml-support-for-various-sql-server-data-types"></a>Supporto di FOR XML per vari tipi di dati di SQL Server
   Negli argomenti di questa sezione viene descritto il supporto FOR XML per i tipi di dati in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
-## <a name="in-this-section"></a>Argomenti della sezione  
+## <a name="in-this-section"></a>In questa sezione  
   
-|Argomento|Description|  
+|Argomento|Descrizione|  
 |-----------|-----------------|  
 |[Supporto del tipo di dati xml in FOR XML](for-xml-support-for-the-xml-data-type.md)|Descrive l'uso di FOR XML con il tipo di dati **xml** .|  
 |[Supporto di FOR XML per i tipi di dati stringa](for-xml-support-for-string-data-types.md)|Descrive l'uso di FOR XML con i tipi di dati stringa come **varchar** e **nvarchar**.|  

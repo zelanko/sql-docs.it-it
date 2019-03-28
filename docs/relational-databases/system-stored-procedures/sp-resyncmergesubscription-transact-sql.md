@@ -16,12 +16,12 @@ ms.assetid: e04d464a-60ab-4b39-a710-c066025708e6
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 087bb377be29db42f4e58ede6cfb0a823459501b
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 63a3ff2cdb075dc8ce48aaa6c6951458d12710b0
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52747553"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58538153"
 ---
 # <a name="spresyncmergesubscription-transact-sql"></a>sp_resyncmergesubscription (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -44,23 +44,17 @@ sp_resyncmergesubscription [ [ @publisher = ] 'publisher' ]
 ```  
   
 ## <a name="arguments"></a>Argomenti  
- [ **@publisher** =] **'***publisher***'**  
- Nome del server di pubblicazione. *server di pubblicazione* viene **sysname**, con un valore predefinito è NULL. Il valore NULL è valido se la stored procedure viene eseguita nel server di pubblicazione. Se la stored procedure viene eseguita nel Sottoscrittore, è necessario specificare un server di pubblicazione.  
+`[ @publisher = ] 'publisher'` È il nome del server di pubblicazione. *server di pubblicazione* viene **sysname**, con un valore predefinito è NULL. Il valore NULL è valido se la stored procedure viene eseguita nel server di pubblicazione. Se la stored procedure viene eseguita nel Sottoscrittore, è necessario specificare un server di pubblicazione.  
   
- [ **@publisher_db** = ] **'***publisher_db***'**  
- Nome del database di pubblicazione. *publisher_db* viene **sysname**, con un valore predefinito è NULL. Il valore NULL è valido se la stored procedure viene eseguita nel database di pubblicazione del server di pubblicazione. Se la stored procedure viene eseguita nel Sottoscrittore, è necessario specificare un server di pubblicazione.  
+`[ @publisher_db = ] 'publisher_db'` È il nome del database di pubblicazione. *publisher_db* viene **sysname**, con un valore predefinito è NULL. Il valore NULL è valido se la stored procedure viene eseguita nel database di pubblicazione del server di pubblicazione. Se la stored procedure viene eseguita nel Sottoscrittore, è necessario specificare un server di pubblicazione.  
   
- [ **@publication** =] **'***pubblicazione***'**  
- Nome della pubblicazione. *pubblicazione*viene **sysname**, non prevede alcun valore predefinito.  
+`[ @publication = ] 'publication'` È il nome della pubblicazione. *pubblicazione*viene **sysname**, non prevede alcun valore predefinito.  
   
- [ **@subscriber** =] **'***sottoscrittore***'**  
- Nome del Sottoscrittore. *Sottoscrittore* viene **sysname**, con un valore predefinito è NULL. Il valore NULL è valido se la stored procedure viene eseguita nel Sottoscrittore. Se la stored procedure viene eseguita nel server di pubblicazione, è necessario specificare un Sottoscrittore.  
+`[ @subscriber = ] 'subscriber'` È il nome del sottoscrittore. *Sottoscrittore* viene **sysname**, con un valore predefinito è NULL. Il valore NULL è valido se la stored procedure viene eseguita nel Sottoscrittore. Se la stored procedure viene eseguita nel server di pubblicazione, è necessario specificare un Sottoscrittore.  
   
- [ **@subscriber_db** = ] **'***subscriber_db***'**  
- Nome del database di sottoscrizione. *subscriber_db* viene **sysname**, con un valore predefinito è NULL. Il valore NULL è valido se la stored procedure viene eseguita nel database di sottoscrizione del Sottoscrittore. Se la stored procedure viene eseguita nel server di pubblicazione, è necessario specificare un Sottoscrittore.  
+`[ @subscriber_db = ] 'subscriber_db'` È il nome del database di sottoscrizione. *subscriber_db* viene **sysname**, con un valore predefinito è NULL. Il valore NULL è valido se la stored procedure viene eseguita nel database di sottoscrizione del Sottoscrittore. Se la stored procedure viene eseguita nel server di pubblicazione, è necessario specificare un Sottoscrittore.  
   
- [ **@resync_type** = ] *resync_type*  
- Definisce quando avviare il processo di risincronizzazione. *resync_type* viene **int**, e può essere uno dei valori seguenti.  
+`[ @resync_type = ] resync_type` Definisce quando avviare il processo di risincronizzazione. *resync_type* viene **int**, e può essere uno dei valori seguenti.  
   
 |Value|Descrizione|  
 |-----------|-----------------|  
@@ -68,8 +62,7 @@ sp_resyncmergesubscription [ [ @publisher = ] 'publisher' ]
 |**1**|La sincronizzazione ha inizio dopo l'ultima convalida riuscita. Tutte le generazioni nuove o incomplete eseguite dopo l'ultima convalida riuscita vengono riapplicate nel Sottoscrittore.|  
 |**2**|La sincronizzazione ha inizio dalla data specificata *resync_date_str*. Tutte le generazioni nuove o incomplete eseguite dopo tale data vengono riapplicate nel Sottoscrittore.|  
   
- [ **@resync_date_str=**] *resync_date_string*  
- Definisce la data di inizio del processo di risincronizzazione. *resync_date_string* viene **nvarchar(30)**, con un valore predefinito è NULL. Questo parametro viene utilizzato quando la *resync_type* è un valore di **2**. La data specificata viene convertita nell'equivalente **datetime** valore.  
+`[ @resync_date_str = ] resync_date_string` Definisce la data quando avviare il processo di risincronizzazione. *resync_date_string* viene **nvarchar(30)**, con un valore predefinito è NULL. Questo parametro viene utilizzato quando la *resync_type* è un valore di **2**. La data specificata viene convertita nell'equivalente **datetime** valore.  
   
 ## <a name="return-code-values"></a>Valori restituiti  
  **0** (esito positivo) o **1** (errore)  

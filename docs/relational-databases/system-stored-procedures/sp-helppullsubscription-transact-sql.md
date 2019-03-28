@@ -16,12 +16,12 @@ ms.assetid: a0d9c3f1-1fe9-497c-8e2f-5b74f47a7346
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 4b094d8bb3f9bd2cebfd9184976aeb57de77886e
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 10a8184fdad0c25c2377c5ed9df0a318aba736a2
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52801803"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58527773"
 ---
 # <a name="sphelppullsubscription-transact-sql"></a>sp_helppullsubscription (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -41,17 +41,13 @@ sp_helppullsubscription [ [ @publisher = ] 'publisher' ]
 ```  
   
 ## <a name="arguments"></a>Argomenti  
- [  **@publisher=**] **'***publisher***'**  
- Nome del server remoto. *server di pubblicazione* viene **sysname**, il valore predefinito è **%**, che restituisce informazioni per tutti i server di pubblicazione.  
+`[ @publisher = ] 'publisher'` È il nome del server remoto. *server di pubblicazione* viene **sysname**, il valore predefinito è **%**, che restituisce informazioni per tutti i server di pubblicazione.  
   
- [ **@publisher_db=**] **'***publisher_db***'**  
- Nome del database del server di pubblicazione. *publisher_db* viene **sysname**, il valore predefinito è **%**, che restituisce tutti i database di pubblicazione.  
+`[ @publisher_db = ] 'publisher_db'` È il nome del server di pubblicazione. *publisher_db* viene **sysname**, il valore predefinito è **%**, che restituisce tutti i database di pubblicazione.  
   
- [  **@publication=**] **'***pubblicazione***'**  
- Nome della pubblicazione. *pubblicazione* viene **sysname**, il valore predefinito è **%**, che restituisce tutte le pubblicazioni. Se questo parametro è uguale a tutti, solo le sottoscrizioni pull con independent_agent = **0** vengono restituiti.  
+`[ @publication = ] 'publication'` È il nome della pubblicazione. *pubblicazione* viene **sysname**, il valore predefinito è **%**, che restituisce tutte le pubblicazioni. Se questo parametro è uguale a tutti, solo le sottoscrizioni pull con independent_agent = **0** vengono restituiti.  
   
- [  **@show_push=**] **'***show_push***'**  
- Indica se devono essere restituite tutte le sottoscrizioni push. *show_push*viene **nvarchar(5**, con un valore predefinito è FALSE, che non restituisce le sottoscrizioni push.  
+`[ @show_push = ] 'show_push'` È se devono essere restituite tutte le sottoscrizioni push. *show_push*viene **nvarchar(5**, con un valore predefinito è FALSE, che non restituisce le sottoscrizioni push.  
   
 ## <a name="result-sets"></a>Set di risultati  
   
@@ -59,10 +55,10 @@ sp_helppullsubscription [ [ @publisher = ] 'publisher' ]
 |-----------------|---------------|-----------------|  
 |**publisher**|**sysname**|Nome del server di pubblicazione.|  
 |**server di pubblicazione**|**sysname**|Nome del database del server di pubblicazione.|  
-|**pubblicazione**|**sysname**|Nome della pubblicazione.|  
+|**publication**|**sysname**|Nome della pubblicazione.|  
 |**independent_agent**|**bit**|Indica se per questa pubblicazione è disponibile un agente di distribuzione autonomo.|  
 |**tipo di sottoscrizione**|**int**|Tipo di sottoscrizione della pubblicazione.|  
-|**agente di distribuzione**|**Nvarchar(100)**|Agente di distribuzione che gestisce la sottoscrizione.|  
+|**agente di distribuzione**|**nvarchar(100)**|Agente di distribuzione che gestisce la sottoscrizione.|  
 |**Descrizione della pubblicazione**|**nvarchar(255)**|Descrizione della pubblicazione.|  
 |**ora dell'ultimo aggiornamento**|**data**|Data e ora dell'aggiornamento delle informazioni della sottoscrizione. Si tratta di una stringa UNICODE con data ISO (114) + ora ODBC (121). Il formato è yyyymmdd hh:mi:sss.mmm dove 'yyyy' rappresenta l'anno, 'mm' il mese, 'dd' il giorno, 'hh' l'ora, 'mi' i minuti, 'sss' i secondi e 'mmm' i millisecondi.|  
 |**nome della sottoscrizione**|**varchar(386)**|Nome della sottoscrizione.|  
@@ -74,16 +70,16 @@ sp_helppullsubscription [ [ @publisher = ] 'publisher' ]
 |**subid**|**binary(16)**|Identificatore globale di una sottoscrizione anonima.|  
 |**immediate_sync**|**bit**|Indica se i file di sincronizzazione vengono creati o ricreati a ogni esecuzione dell'agente snapshot.|  
 |**account di accesso server di pubblicazione**|**sysname**|ID dell'account di accesso utilizzato nel server di pubblicazione per l'autenticazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
-|**password server di pubblicazione**|**nvarchar(524**|Password (crittografata) utilizzata dal server di pubblicazione per l'autenticazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
-|**security_mode server di pubblicazione**|**int**|Modalità di sicurezza implementata nel server di pubblicazione:<br /><br /> **0**  =  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] autenticazione<br /><br /> **1** = autenticazione di Windows<br /><br /> **2** = i trigger di sincronizzazione utilizzano un valore statico **sysservers** voce per eseguire la chiamata di procedura remota (RPC), e *server di pubblicazione* deve essere definito nel **sysservers**tabella come un server remoto o un server collegato.|  
-|**server di distribuzione**|**sysname**|Nome del server di distribuzione.|  
+|**password server di pubblicazione**|**nvarchar(524)**|Password (crittografata) utilizzata dal server di pubblicazione per l'autenticazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
+|**publisher security_mode**|**int**|Modalità di sicurezza implementata nel server di pubblicazione:<br /><br /> **0**  =  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] autenticazione<br /><br /> **1** = autenticazione di Windows<br /><br /> **2** = i trigger di sincronizzazione utilizzano un valore statico **sysservers** voce per eseguire la chiamata di procedura remota (RPC), e *server di pubblicazione* deve essere definito nel **sysservers**tabella come un server remoto o un server collegato.|  
+|**distributor**|**sysname**|Nome del server di distribuzione.|  
 |**distributor_login**|**sysname**|ID dell'account di accesso utilizzato nel server di distribuzione per l'autenticazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
-|**distributor_password**|**nvarchar(524**|Password (crittografata) utilizzata nel server di distribuzione per l'autenticazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
+|**distributor_password**|**nvarchar(524)**|Password (crittografata) utilizzata nel server di distribuzione per l'autenticazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |**distributor_security_mode**|**int**|Modalità di sicurezza implementata nel server di distribuzione:<br /><br /> **0**  =  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] autenticazione<br /><br /> **1** = autenticazione di Windows|  
 |**ftp_address**|**sysname**|Disponibile solo per compatibilità con le versioni precedenti.|  
 |**ftp_port**|**int**|Disponibile solo per compatibilità con le versioni precedenti.|  
 |**ftp_login**|**sysname**|Disponibile solo per compatibilità con le versioni precedenti.|  
-|**ftp_password**|**nvarchar(524**|Disponibile solo per compatibilità con le versioni precedenti.|  
+|**ftp_password**|**nvarchar(524)**|Disponibile solo per compatibilità con le versioni precedenti.|  
 |**alt_snapshot_folder**|**nvarchar(255)**|Percorso di archiviazione della cartella snapshot, se diverso o aggiuntivo rispetto a quello predefinito.|  
 |**working_directory**|**nvarchar(255)**|Percorso completo della directory in cui vengono trasferiti i file di snapshot tramite il servizio FTP, se l'opzione corrispondente è stata specificata.|  
 |**use_ftp**|**bit**|Indica che la sottoscrizione viene inserita nella pubblicazione tramite Internet e che le proprietà di indirizzamento FTP sono configurate. Se **0**, sottoscrizione non utilizza il servizio FTP. Se **1**, sottoscrizione utilizza il servizio FTP.|  

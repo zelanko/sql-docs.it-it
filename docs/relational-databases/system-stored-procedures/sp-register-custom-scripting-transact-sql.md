@@ -16,12 +16,12 @@ ms.assetid: a8159282-de3b-4b9e-bdc9-3d3fce485c7f
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 57866bdc46e88587d0d8b3db27a416c8153b6003
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 85f9104d9a9bb634dd10dfb588cf07e01d1c1fb1
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52773903"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58535920"
 ---
 # <a name="spregistercustomscripting-transact-sql"></a>sp_register_custom_scripting (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -41,29 +41,25 @@ sp_register_custom_scripting [ @type  = ] 'type'
 ```  
   
 ## <a name="arguments"></a>Argomenti  
- [ **@type** =] **'***tipo***'**  
- Tipo di stored procedure personalizzata o script da registrare. *tipo di* viene **varchar(16)** e non prevede alcun valore predefinito e può essere uno dei valori seguenti.  
+`[ @type = ] 'type'` Il tipo di stored procedure personalizzata o script viene registrato. *tipo di* viene **varchar(16)** e non prevede alcun valore predefinito e può essere uno dei valori seguenti.  
   
 |Value|Descrizione|  
 |-----------|-----------------|  
 |**insert**|La stored procedure personalizzata registrata viene eseguita quando viene replicata un'istruzione INSERT.|  
-|**Aggiornamento**|La stored procedure personalizzata registrata viene eseguita quando viene replicata un'istruzione UPDATE.|  
+|**update**|La stored procedure personalizzata registrata viene eseguita quando viene replicata un'istruzione UPDATE.|  
 |**delete**|La stored procedure personalizzata registrata viene eseguita quando viene replicata un'istruzione DELETE.|  
 |**custom_script**|Lo script viene eseguito alla fine del trigger DDL (Data Definition Language).|  
   
- [ **@value**=] **'***valore***'**  
- Nome di una stored procedure o nome e percorso completo del file script [!INCLUDE[tsql](../../includes/tsql-md.md)] da registrare. *valore* viene **nvarchar(1024)**, non prevede alcun valore predefinito.  
+`[ @value = ] 'value'` Nome di una stored procedure o nome e percorso completo per il [!INCLUDE[tsql](../../includes/tsql-md.md)] file script da registrare. *valore* viene **nvarchar(1024)**, non prevede alcun valore predefinito.  
   
 > [!NOTE]  
 >  Specificando NULL per *valore*parametro verrà annullata la registrazione di uno script registrato in precedenza, ovvero lo stesso che [sp_unregister_custom_scripting](../../relational-databases/system-stored-procedures/sp-unregister-custom-scripting-transact-sql.md).  
   
  Quando il valore di *tipo* viene **custom_script**, il nome e percorso completo di un [!INCLUDE[tsql](../../includes/tsql-md.md)] file script, è necessario. In caso contrario, *valore* deve essere il nome di una stored procedure registrata.  
   
- [ **@publication**=] **'***pubblicazione***'**  
- Nome della pubblicazione per cui viene registrato lo script o la stored procedure personalizzata. *pubblicazione* viene **sysname**, il valore predefinito è **NULL**.  
+`[ @publication = ] 'publication'` Nome della pubblicazione per cui viene registrato la stored procedure o script personalizzati. *pubblicazione* viene **sysname**, il valore predefinito è **NULL**.  
   
- [ **@article**=] **'***articolo***'**  
- Nome dell'articolo per cui viene registrato lo script o la stored procedure personalizzata. *articolo* viene **sysname**, il valore predefinito è **NULL**.  
+`[ @article = ] 'article'` Nome dell'articolo per cui viene registrato la stored procedure o script personalizzati. *articolo* viene **sysname**, il valore predefinito è **NULL**.  
   
 ## <a name="return-code-values"></a>Valori restituiti  
  **0** (esito positivo) o **1** (errore)  

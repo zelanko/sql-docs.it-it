@@ -15,15 +15,15 @@ ms.assetid: cd8faa9d-07db-420d-93f4-a2ea7c974b97
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 59e94ef56028c80da3fd04432a2b23997c91a8e5
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: ea08ef15d62f2897fdba5a966d43a639a3fc1efe
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48215651"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58538533"
 ---
 # <a name="semantic-search-sql-server"></a>Ricerca semantica (SQL Server)
-  La ricerca semantica statistica offre una visione approfondita dei documenti non strutturati archiviati in database di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tramite l'estrazione e l'indicizzazione di *frasi chiave*statisticamente pertinenti. Le frasi chiave vengono inoltre usate per identificare e indicizzare *documenti simili o correlati*.  
+  La ricerca semantica statistica offre una visione approfondita dei documenti non strutturati archiviati in database di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tramite l'estrazione e l'indicizzazione di *frasi chiave* statisticamente pertinenti. Le frasi chiave vengono inoltre usate per identificare e indicizzare *documenti simili o correlati*.  
   
  Per eseguire query sugli indici semantici si usano tre funzioni di set di righe Transact-SQL per recuperare i risultati come dati strutturati.  
   
@@ -35,7 +35,7 @@ ms.locfileid: "48215651"
 ###  <a name="find1"></a> Individuare le frasi chiave in un documento  
  Nella query seguente vengono ottenute le frasi chiave identificate nel documento di esempio. Presenta i risultati in ordine decrescente in base al punteggio di classificazione della rilevanza statistica di ogni frase chiave. Questa query chiama la funzione [semantickeyphrasetable &#40;Transact-SQL&#41;](/sql/relational-databases/system-functions/semantickeyphrasetable-transact-sql).  
   
-```tsql  
+```sql  
 SET @Title = 'Sample Document.docx'  
   
 SELECT @DocID = DocumentID  
@@ -73,7 +73,7 @@ SELECT @Title AS SourceTitle, DocumentTitle AS MatchedTitle,
 ###  <a name="find3"></a> Individuare le frasi chiave che rendono documenti simili o correlati  
  Nella query seguente vengono ottenute le frasi chiavi indicanti la somiglianza o la correlazione tra due documenti di esempio. Presenta i risultati in ordine decrescente in base al punteggio di classificazione del peso di ogni frase chiave. Questa query chiama la funzione [semanticsimilaritydetailstable &#40;Transact-SQL&#41;](/sql/relational-databases/system-functions/semanticsimilaritydetailstable-transact-sql).  
   
-```tsql  
+```sql  
 SET @SourceTitle = 'first.docx'  
 SET @MatchedTitle = 'second.docx'  
   

@@ -16,12 +16,12 @@ ms.assetid: a681b2db-c82d-4624-a10c-396afb0ac42f
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 9ac45c3b25e1a13366ae273b8d21d7e41e768251
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 92cd44dcc30a0843409c908cb3cc3a76276519aa
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52748308"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58528203"
 ---
 # <a name="spreplmonitorhelpsubscription-transact-sql"></a>sp_replmonitorhelpsubscription (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -45,17 +45,13 @@ sp_replmonitorhelpsubscription [ @publisher = ] 'publisher'
 ```  
   
 ## <a name="arguments"></a>Argomenti  
- [ **@publisher** =] **'***publisher***'**  
- Nome del server di pubblicazione di cui viene monitorato lo stato. *server di pubblicazione* viene **sysname**, con un valore predefinito NULL. Se **null**, vengono restituite informazioni per tutti i server di pubblicazione che utilizzano il server di distribuzione.  
+`[ @publisher = ] 'publisher'` È il nome del server di pubblicazione viene monitorato lo stato dei quali. *server di pubblicazione* viene **sysname**, con un valore predefinito NULL. Se **null**, vengono restituite informazioni per tutti i server di pubblicazione che utilizzano il server di distribuzione.  
   
- [ **@publisher_db** = ] **'***publisher_db***'**  
- Nome del database pubblicato. *publisher_db* viene **sysname**, con un valore predefinito NULL. Se NULL, vengono restituite informazioni su tutti i database pubblicati nel server di pubblicazione.  
+`[ @publisher_db = ] 'publisher_db'` È il nome del database pubblicato. *publisher_db* viene **sysname**, con un valore predefinito NULL. Se NULL, vengono restituite informazioni su tutti i database pubblicati nel server di pubblicazione.  
   
- [ **@publication** =] **'***pubblicazione***'**  
- Nome della pubblicazione da monitorare. *pubblicazione* viene **sysname**, con un valore predefinito NULL.  
+`[ @publication = ] 'publication'` Il nome della pubblicazione da monitorare. *pubblicazione* viene **sysname**, con un valore predefinito NULL.  
   
- [ **@publication_type** =] *publication_type*  
- Tipo di pubblicazione. *publication_type* viene **int**, i possibili valori sono i seguenti.  
+`[ @publication_type = ] publication_type` Se il tipo di pubblicazione. *publication_type* viene **int**, i possibili valori sono i seguenti.  
   
 |Value|Descrizione|  
 |-----------|-----------------|  
@@ -64,8 +60,7 @@ sp_replmonitorhelpsubscription [ @publisher = ] 'publisher'
 |**2**|Pubblicazione di tipo merge.|  
 |NULL (predefinito)|La replica tenta di determinare il tipo di pubblicazione.|  
   
- [ **@mode** =] *modalità*  
- Modalità di filtraggio da utilizzare per la restituzione delle informazioni di monitoraggio delle sottoscrizioni. *modalità* viene **int**, i possibili valori sono i seguenti.  
+`[ @mode = ] mode` Informazioni di monitoraggio è la modalità di filtraggio da utilizzare per la restituzione di sottoscrizione. *modalità* viene **int**, i possibili valori sono i seguenti.  
   
 |Value|Descrizione|  
 |-----------|-----------------|  
@@ -78,29 +73,26 @@ sp_replmonitorhelpsubscription [ @publisher = ] 'publisher'
 |**6**|Restituisce solo le sottoscrizioni in fase di sincronizzazione.|  
 |**7**|Restituisce solo le sottoscrizioni che non sono in fase di sincronizzazione.|  
   
- [ **@topnum** =] *topnum*  
- Limita il set di risultati al numero specificato di sottoscrizioni all'inizio dei dati restituiti. *topnum* viene **int**, non prevede alcun valore predefinito.  
+`[ @topnum = ] topnum` Limita il set di risultati al solo il numero specificato di sottoscrizioni all'inizio dei dati restituiti. *topnum* viene **int**, non prevede alcun valore predefinito.  
   
- [ **@exclude_anonymous** =] *exclude_anonymous*  
- Indica se le sottoscrizioni pull anonime vengono escluse dal set di risultati. *exclude_anonymous* viene **bit**, il valore predefinito è **0**; il valore **1** indica che le sottoscrizioni anonime vengono escluse e il valore **0**  indica che vengono incluse.  
+`[ @exclude_anonymous = ] exclude_anonymous` Indica se le sottoscrizioni pull anonime vengono escluse dal set di risultati. *exclude_anonymous* viene **bit**, il valore predefinito è **0**; il valore **1** indica che le sottoscrizioni anonime vengono escluse e il valore **0**  indica che vengono incluse.  
   
- [  **@refreshpolicy=** ] *refreshpolicy*  
- Solo per uso interno.  
+`[ @refreshpolicy = ] refreshpolicy` Solo uso interno.  
   
 ## <a name="result-sets"></a>Set di risultati  
   
 |Nome colonna|Tipo di dati|Descrizione|  
 |-----------------|---------------|-----------------|  
 |**status**|**int**|Analizza lo stato di tutti gli agenti di replica associati alla pubblicazione e restituisce lo stato più elevato trovato nell'ordine seguente:<br /><br /> **6** = non è riuscita<br /><br /> **5** = nuovo tentativo in corso<br /><br /> **2** = arrestato<br /><br /> **4** = inattivo<br /><br /> **3** = in corso<br /><br /> **1** = avviato|  
-|**avviso**|**int**|Avviso correlato alla soglia massima generato da una sottoscrizione appartenente alla pubblicazione. Può essere il risultato OR logico di uno o più dei valori seguenti.<br /><br /> **1** = expiration - una sottoscrizione di una pubblicazione transazionale non sia stata sincronizzata entro la soglia di periodo di conservazione.<br /><br /> **2** = latency - il tempo necessario per replicare i dati da un server di pubblicazione transazionale al sottoscrittore supera la soglia, espresso in secondi.<br /><br /> **4** = mergeexpiration - una sottoscrizione a una pubblicazione di tipo merge non sia stata sincronizzata entro la soglia di periodo di conservazione.<br /><br /> **8** = mergefastrunduration - il tempo impiegato per completare la sincronizzazione di una sottoscrizione di tipo merge supera la soglia, espresso in secondi, tramite una connessione di rete veloce.<br /><br /> **16** = mergeslowrunduration - il tempo impiegato per completare la sincronizzazione di una sottoscrizione di tipo merge supera la soglia, espresso in secondi, tramite una connessione di rete lenta o remota.<br /><br /> **32** = mergefastrunspeed: la velocità di recapito delle righe durante la sincronizzazione di una sottoscrizione di tipo merge è minore della soglia, in righe al secondo, su una connessione di rete veloce.<br /><br /> **64** = mergeslowrunspeed: la velocità di recapito delle righe durante la sincronizzazione di una sottoscrizione di tipo merge è minore della soglia, in righe al secondo, su una connessione di rete lenta o remota.|  
+|**warning**|**int**|Avviso correlato alla soglia massima generato da una sottoscrizione appartenente alla pubblicazione. Può essere il risultato OR logico di uno o più dei valori seguenti.<br /><br /> **1** = expiration - una sottoscrizione di una pubblicazione transazionale non sia stata sincronizzata entro la soglia di periodo di conservazione.<br /><br /> **2** = latency - il tempo necessario per replicare i dati da un server di pubblicazione transazionale al sottoscrittore supera la soglia, espresso in secondi.<br /><br /> **4** = mergeexpiration - una sottoscrizione a una pubblicazione di tipo merge non sia stata sincronizzata entro la soglia di periodo di conservazione.<br /><br /> **8** = mergefastrunduration - il tempo impiegato per completare la sincronizzazione di una sottoscrizione di tipo merge supera la soglia, espresso in secondi, tramite una connessione di rete veloce.<br /><br /> **16** = mergeslowrunduration - il tempo impiegato per completare la sincronizzazione di una sottoscrizione di tipo merge supera la soglia, espresso in secondi, tramite una connessione di rete lenta o remota.<br /><br /> **32** = mergefastrunspeed: la velocità di recapito delle righe durante la sincronizzazione di una sottoscrizione di tipo merge è minore della soglia, in righe al secondo, su una connessione di rete veloce.<br /><br /> **64** = mergeslowrunspeed: la velocità di recapito delle righe durante la sincronizzazione di una sottoscrizione di tipo merge è minore della soglia, in righe al secondo, su una connessione di rete lenta o remota.|  
 |**subscriber**|**sysname**|Nome del Sottoscrittore.|  
 |**subscriber_db**|**sysname**|Nome del database utilizzato per la sottoscrizione.|  
 |**publisher_db**|**sysname**|Nome del database di pubblicazione.|  
-|**pubblicazione**|**sysname**|Nome di una pubblicazione.|  
+|**publication**|**sysname**|Nome di una pubblicazione.|  
 |**publication_type**|**int**|Tipo di pubblicazione. I possibili valori sono i seguenti:<br /><br /> **0** = pubblicazione transazionale<br /><br /> **1** = pubblicazione snapshot<br /><br /> **2** = pubblicazione di tipo merge|  
-|**sottotipo**|**int**|Tipo di sottoscrizione. I possibili valori sono i seguenti:<br /><br /> **0** = push<br /><br /> **1** = pull<br /><br /> **2** = anonima|  
-|**latenza**|**int**|Latenza più alta, espressa in secondi, per le modifiche dei dati propagate dall'agente di lettura log o dagli agenti di distribuzione per una pubblicazione transazionale.|  
-|**LatencyThreshold**|**int**|Latenza massima per una pubblicazione transazionale, superata la quale viene generato un avviso.|  
+|**subtype**|**int**|Tipo di sottoscrizione. I possibili valori sono i seguenti:<br /><br /> **0** = Push<br /><br /> **1** = Pull<br /><br /> **2** = anonima|  
+|**latency**|**int**|Latenza più alta, espressa in secondi, per le modifiche dei dati propagate dall'agente di lettura log o dagli agenti di distribuzione per una pubblicazione transazionale.|  
+|**latencythreshold**|**int**|Latenza massima per una pubblicazione transazionale, superata la quale viene generato un avviso.|  
 |**agentnotrunning**|**int**|Indica da quante ore l'agente non viene eseguito.|  
 |**agentnotrunningthreshold**|**int**|Indica dopo quante ore di mancata esecuzione dell'agente viene generato un avviso.|  
 |**timetoexpiration**|**int**|Indica il numero di ore che mancano alla scadenza della sottoscrizione, se questa non viene sincronizzata.|  

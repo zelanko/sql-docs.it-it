@@ -22,18 +22,18 @@ helpviewer_keywords:
 - XML [SQL Server], untyped
 - xml data type [SQL Server], parameters
 ms.assetid: 4bc50af9-2f7d-49df-bb01-854d080c72c7
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
-ms.openlocfilehash: a318e2729c6d03770b5d7c8e41412cef182f641a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 98cbaa59ea78e0033e9a534915987576347db604
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48163061"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58538439"
 ---
 # <a name="compare-typed-xml-to-untyped-xml"></a>Confronto dati XML tipizzati con dati XML non tipizzati
-  È possibile creare variabili, parametri e colonne di tipo `xml`. È facoltativamente possibile associare una raccolta di XML schema con una variabile, parametro o della colonna della `xml` tipo. In questo caso, il `xml` istanza del tipo di dati viene chiamato *tipizzata*. In caso contrario, l'istanza XML è definita *non tipizzata*.  
+  È possibile creare variabili, parametri e colonne di tipo `xml`. Se si desidera, è inoltre possibile associare una raccolta XML Schema a una variabile, un parametro o una colonna di tipo `xml`. In questo caso, il `xml` istanza del tipo di dati viene chiamato *tipizzata*. In caso contrario, l'istanza XML è definita *non tipizzata*.  
   
 ## <a name="well-formed-xml-and-the-xml-data-type"></a>Tipi di dati XML corretti e xml  
  Il tipo di dati `xml` utilizza il tipo di dati standard ISO `xml`. Ciò consente pertanto l'archiviazione in una colonna XML non tipizzata di documenti di formato XML 1.0 corretto e frammenti di contenuto XML, con nodi di testo e un numero arbitrario di elementi di livello principale. Il sistema verifica che il formato dei dati sia corretto, non richiede che la colonna sia associata a XML Schema e rifiuta i dati con formato non corretto in senso esteso. Questo vale anche per le variabili e i parametri XML non tipizzati.  
@@ -46,7 +46,7 @@ ms.locfileid: "48163061"
 -   **Informazioni sui tipi di dati.** Gli schemi forniscono informazioni sui tipi di attributi e di elementi presenti nell'istanza del tipo di dati `xml`. Le informazioni sul tipo forniscono una semantica operativa più precisa ai valori contenuti nell'istanza rispetto a quanto sia possibile con `xml` non tipizzato. ad esempio è possibile eseguire le operazioni aritmetiche decimali su un valore decimale, ma non su un valore stringa. Per questo motivo, i tipi di dati XML archiviati possono essere estremamente più compatti rispetto ai dati XML non tipizzati.  
   
 ## <a name="choosing-typed-or-untyped-xml"></a>Scelta tra dati XML tipizzati o non tipizzati  
- Uso non tipizzato `xml` tipo di dati nelle situazioni seguenti:  
+ Utilizzare il tipo di dati `xml` non tipizzato nelle situazioni seguenti:  
   
 -   Non è disponibile uno schema per i dati XML.  
   
@@ -63,19 +63,19 @@ ms.locfileid: "48163061"
  Nelle colonne, nelle variabili e nei parametri XML tipizzati è possibile archiviare documenti o contenuto XML. Nella dichiarazione è tuttavia necessario specificare, tramite un flag, se si desidera archiviare un documento o del contenuto. È inoltre necessario fornire la raccolta XML Schema. Specificare DOCUMENT se ogni istanza XML include esattamente un elemento di livello principale, CONTENT in caso contrario. Nella verifica dei tipi eseguita durante la compilazione delle query il compilatore utilizza il flag DOCUMENT per derivare gli elementi singleton di livello principale.  
   
 ## <a name="creating-typed-xml"></a>Creazione di dati XML tipizzati  
- Prima di poter creare tipizzato `xml` variabili, parametri o colonne, è innanzitutto necessario registrare la raccolta di XML schema usando [CREATE XML SCHEMA COLLECTION &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-xml-schema-collection-transact-sql). È quindi possibile associare la raccolta di XML schema alle variabili, parametri o colonne di `xml` tipo di dati.  
+ Prima di poter creare tipizzato `xml` variabili, parametri o colonne, è innanzitutto necessario registrare la raccolta di XML schema usando [CREATE XML SCHEMA COLLECTION &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-xml-schema-collection-transact-sql). È quindi possibile associare la raccolta XML Schema alle variabili, ai parametri o alle colonne del tipo di dati `xml`.  
   
  Negli esempi seguenti, per specificare il nome della raccolta XML Schema viene utilizzata una convenzione di denominazione in due parti. La prima parte è il nome dello schema e la seconda parte è il nome della raccolta XML Schema.  
   
-### <a name="example-associating-a-schema-collection-with-an-xml-type-variable"></a>Esempio: associazione di una raccolta di schemi a una variabile di tipo xml  
+### <a name="example-associating-a-schema-collection-with-an-xml-type-variable"></a>Esempio: Associazione di una raccolta di schemi a una variabile di tipo xml  
  L'esempio seguente crea un`xml` variabile di tipo e associa una raccolta di schemi. La raccolta di schemi specificata è già stata importata nel database **AdventureWorks** .  
   
 ```  
 DECLARE @x xml (Production.ProductDescriptionSchemaCollection);   
 ```  
   
-### <a name="example-specifying-a-schema-for-an-xml-type-column"></a>Esempio: specifica di uno schema per una colonna di tipo xml  
- L'esempio seguente crea una tabella con un `xml` colonna con tipo e specifica uno schema per la colonna:  
+### <a name="example-specifying-a-schema-for-an-xml-type-column"></a>Esempio: Specifica di uno Schema per una colonna di tipo xml  
+ Nell'esempio seguente viene creata una tabella con una colonna di tipo `xml` e viene specificato uno schema per la colonna:  
   
 ```  
 CREATE TABLE T1(  
@@ -83,8 +83,8 @@ CREATE TABLE T1(
  Col2 xml (Production.ProductDescriptionSchemaCollection)) ;  
 ```  
   
-### <a name="example-passing-an-xml-type-parameter-to-a-stored-procedure"></a>Esempio: passaggio di un parametro di tipo xml a una stored procedure  
- L'esempio seguente passa un `xml` parametro a una stored procedure di tipo e specifica uno schema per la variabile:  
+### <a name="example-passing-an-xml-type-parameter-to-a-stored-procedure"></a>Esempio: Il passaggio di un parametro di tipo xml a una Stored Procedure  
+ Nell'esempio seguente viene passato un parametro di tipo `xml` a una stored procedure e viene specificato uno schema per la variabile:  
   
 ```  
 CREATE PROCEDURE SampleProc   
@@ -97,16 +97,16 @@ AS
   
 -   Una raccolta XML Schema è disponibile solo nel database in cui è stata registrata tramite [CREATE XML SCHEMA COLLECTION](/sql/t-sql/statements/create-xml-schema-collection-transact-sql).  
   
--   Se esegue il cast da una stringa a un oggetto tipizzato `xml` tipo di dati, anche durante l'analisi eseguite la convalida e la tipizzazione, in base gli spazi dei nomi XML schema nella raccolta specificata.  
+-   Se si esegue il cast da una stringa a un tipo di dati `xml` tipizzato, durante l'analisi vengono inoltre eseguite la convalida e la tipizzazione, in base agli spazi dei nomi XML Schema della raccolta specificata.  
   
 -   È possibile eseguire il cast da un tipo di dati `xml` tipizzato a un tipo di dati `xml` non tipizzato e viceversa.  
   
- Per altre informazioni sugli altri modi disponibili per generare codice XML in SQL Server, vedere [Creare istanze di dati XML](create-instances-of-xml-data.md). Dopo aver generato il codice XML, è possibile assegnarlo a un `xml` del tipo di dati variabili o archiviarlo in `xml` colonne per un'ulteriore elaborazione di tipo.  
+ Per altre informazioni sugli altri modi disponibili per generare codice XML in SQL Server, vedere [Creare istanze di dati XML](create-instances-of-xml-data.md). Dopo avere generato il codice XML, è possibile assegnarlo a una variabile con tipo di dati `xml` o archiviarlo in colonne di tipo `xml` per elaborazioni successive.  
   
- Nella gerarchia dei tipi di dati, il `xml` tipo di dati viene visualizzato sotto `sql_variant` e tipi definiti dall'utente, ma sopra ai tipi predefiniti.  
+ Nella gerarchia dei tipi di dati, il tipo di dati `xml` è visualizzato sotto al tipo `sql_variant` e ai tipi definiti dall'utente, ma sopra ai tipi predefiniti.  
   
-### <a name="example-specifying-facets-to-constrain-a-typed-xml-column"></a>Esempio: specifica di facet per vincolare una colonna xml tipizzata  
- Per tipizzati `xml` colonne, è possibile vincolare la colonna per consentire solo singole elementi principali per ogni istanza in essa archiviati. A tale scopo, è possibile specificare il facet facoltativo `DOCUMENT` durante la creazione di una tabella, come illustrato nell'esempio seguente:  
+### <a name="example-specifying-facets-to-constrain-a-typed-xml-column"></a>Esempio: Specifica di facet per vincolare una colonna xml tipizzata  
+ È possibile vincolare le colonne `xml` tipizzate in modo tale che in ogni istanza archiviata in tali colonne siano consentiti solo elementi principali singoli. A tale scopo, è possibile specificare il facet facoltativo `DOCUMENT` durante la creazione di una tabella, come illustrato nell'esempio seguente:  
   
 ```  
 CREATE TABLE T(Col1 xml   
@@ -116,7 +116,7 @@ DROP TABLE T;
 GO  
 ```  
   
- Per impostazione predefinita, le istanze archiviate nell'oggetto tipizzato `xml` colonna vengono archiviate come contenuto XML e non come documenti XML. Ciò consente quanto segue:  
+ Per impostazione predefinita, le istanze archiviate nella colonna `xml` tipizzata sono archiviate come contenuto XML e non come documenti XML. Ciò consente quanto segue:  
   
 -   Zero elementi principali oppure nessuno  
   
@@ -129,7 +129,7 @@ CREATE TABLE T(Col1 xml(CONTENT Production.ProductDescriptionSchemaCollection));
 GO -- Default  
 ```  
   
- Si noti che è possibile specificare i facet facoltativi DOCUMENT/CONTENT in qualsiasi posizione in cui viene definito il tipo `xml` (xml tipizzato). Ad esempio, quando si crea un oggetto tipizzato `xml` variabile, è possibile aggiungere il facet DOCUMENT/CONTENT, come illustrato nell'esempio seguente:  
+ Si noti che è possibile specificare i facet facoltativi DOCUMENT/CONTENT in qualsiasi posizione in cui viene definito il tipo `xml` (xml tipizzato). Ad esempio, quando si crea una variabile `xml` tipizzata, è possibile aggiungere il facet DOCUMENT/CONTENT, come illustrato nell'esempio seguente:  
   
 ```  
 declare @x xml (DOCUMENT Production.ProductDescriptionSchemaCollection);  
@@ -157,7 +157,7 @@ declare @x xml (DOCUMENT Production.ProductDescriptionSchemaCollection);
   
 ## <a name="see-also"></a>Vedere anche  
  [Creare istanze di dati XML](create-instances-of-xml-data.md)   
- [metodi con tipo di dati XML](/sql/t-sql/xml/xml-data-type-methods)   
+ [Metodi con tipo di dati XML](/sql/t-sql/xml/xml-data-type-methods)   
  [Linguaggio XML di manipolazione dei dati &#40;XML DML&#41;](/sql/t-sql/xml/xml-data-modification-language-xml-dml)   
  [Dati XML &#40;SQL Server&#41;](xml-data-sql-server.md)  
   

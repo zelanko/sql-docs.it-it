@@ -15,12 +15,12 @@ ms.assetid: b741894f-d267-4b10-adfe-cbc14aa6caeb
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 0e4756834e28ad07e42f57235a30e59fd924da22
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: f66cb56380f0e027d08e53154c05b7ad1e3be89f
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53202110"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58533013"
 ---
 # <a name="enable-and-disable-change-data-capture-sql-server"></a>Abilitare e disabilitare Change Data Capture (SQL Server)
   In questo argomento viene descritto come abilitare e disabilitare Change Data Capture per un database e una tabella.  
@@ -37,7 +37,7 @@ ms.locfileid: "53202110"
 > [!IMPORTANT]  
 >  Per individuare i modelli in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], scegliere **Esplora modelli**dal menu **Visualizza**, quindi selezionare **Modelli di SQL Server**. **Change Data Capture** è una sottocartella. che contiene tutti i modelli a cui si fa riferimento in questo argomento. È inoltre presente un'icona **Esplora modelli** sulla barra degli strumenti di [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] .  
   
-```tsql  
+```sql  
 -- ====  
 -- Enable Database for CDC template   
 -- ====  
@@ -57,7 +57,7 @@ GO
 > [!IMPORTANT]  
 >  Per individuare i modelli in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], scegliere **Esplora modelli**dal menu **Visualizza**, quindi fare clic su **Modelli di SQL Server**. **Change Data Capture** è una sottocartella contenente tutti i modelli a cui si fa riferimento in questo argomento. È inoltre presente un'icona **Esplora modelli** sulla barra degli strumenti di [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] .  
   
-```tsql  
+```sql  
 -- =======  
 -- Disable Database for Change Data Capture template   
 -- =======  
@@ -80,7 +80,7 @@ GO
   
  Per impostazione predefinita, la tabella delle modifiche si trova nel filegroup predefinito del database. I proprietari del database che vogliono controllare la posizione di singole tabelle delle modifiche possono usare il parametro *@filegroup_name* per specificare un determinato filegroup per la tabella delle modifiche associata all'istanza di acquisizione. È necessario che il filegroup specificato sia già presente. È in genere consigliabile inserire le tabelle delle modifiche in un filegroup distinto dalle tabelle di origine. Vedere le `Enable a Table Specifying Filegroup Option` modello per un esempio su come usare il *@filegroup_name* parametro.  
   
-```tsql  
+```sql  
 -- =========  
 -- Enable a Table Specifying Filegroup Option Template  
 -- =========  
@@ -102,7 +102,7 @@ GO
   
  Se non si vuole usare un ruolo di controllo, impostare in modo esplicito il parametro *@role_name* su Null. Per un esempio di abilitazione di una tabella senza un ruolo di controllo, vedere il modello `Enable a Table Without Using a Gating Role`.  
   
-```tsql  
+```sql  
 -- =========  
 -- Enable a Table Without Using a Gating Role template   
 -- =========  
@@ -127,7 +127,7 @@ GO
   
  Per un esempio di creazione di un'istanza di acquisizione con entrambe le funzioni di query, vedere il modello `Enable a Table for All and Net Changes Queries`.  
   
-```tsql  
+```sql  
 -- =============  
 -- Enable a Table for All and Net Changes Queries template   
 -- =============  
@@ -151,7 +151,7 @@ GO
   
  Per un esempio di disabilitazione di una tabella, vedere il modello Disable a Capture Instance for a Table.  
   
-```tsql  
+```sql  
 -- =====  
 -- Disable a Capture Instance for a Table template   
 -- =====  

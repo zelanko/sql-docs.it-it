@@ -10,15 +10,15 @@ helpviewer_keywords:
 - xml data type [SQL Server], variables
 - xml data type [SQL Server], columns
 ms.assetid: 8994ab6e-5519-4ba2-97a1-fac8af6f72db
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 27f4458299fd82a1afe74122edba3cbf886d9425
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 3fe1414131991a35b316a50da730f42e8b02d462
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48114101"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58527293"
 ---
 # <a name="create-xml-data-type-variables-and-columns"></a>Creazione di variabili e colonne con tipo di dati XML
   Il tipo di dati `xml` è un tipo di dati predefinito in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ed è simile ad altri tipi predefiniti quali `int` e `varchar`. Come con altri tipi predefiniti, è possibile usare la `xml` tipo di dati come tipo di colonna quando si crea una tabella come un tipo di variabile, tipo di parametro, un tipo restituito dalla funzione, o in [CAST e CONVERT](/sql/t-sql/functions/cast-and-convert-transact-sql).  
@@ -53,7 +53,7 @@ CREATE PROCEDURE SampleProc(@XmlDoc xml) AS ...
 ## <a name="assigning-defaults"></a>Assegnazione di valori predefiniti  
  All'interno di una tabella è possibile assegnare un'istanza XML predefinita a una colonna di tipo `xml`. È possibile fornire dati XML predefiniti in una delle due modalità: utilizzando una costante XML o utilizzando un cast esplicito al tipo `xml`.  
   
- Per fornire dati XML predefiniti come costante XML, utilizzare la sintassi come illustrato nell'esempio seguente. Si noti che la stringa viene eseguito il CAST implicito a `xml` tipo.  
+ Per fornire dati XML predefiniti come costante XML, utilizzare la sintassi come illustrato nell'esempio seguente. Considerare che la stringa è di tipo CAST implicito al tipo `xml`.  
   
 ```  
 CREATE TABLE T (XmlColumn xml default N'<element1/><element2/>')  
@@ -91,7 +91,7 @@ CREATE TABLE T (XmlColumn xml NOT NULL)
   
 -   RULE  
   
- Un'alternativa all'utilizzo di vincoli consiste nel creare un wrapper, una funzione definita dall'utente per eseguire il wrapping di `xml` metodo con tipo di dati e specificare funzione definita dall'utente nel vincolo check, come illustrato nell'esempio seguente.  
+ Un'alternativa all'utilizzo di vincoli è la creazione di un wrapper, una funzione definita dall'utente per eseguire il wrapping del metodo con tipo di dati `xml` e specificare la funzione definita dall'utente nel vincolo CHECK, come illustrato nell'esempio seguente.  
   
  Nell'esempio seguente, il vincolo in `Col2` specifica che tutte le istanze XML archiviate nella colonna devono avere un elemento `<ProductDescription>` contenente un attributo `ProductID` . Il vincolo viene imposto da questa funzione definita dall'utente:  
   
@@ -135,9 +135,9 @@ INSERT INTO T values(1,'<Product />')
   
 -   Si desidera compilare un indice XML sulla colonna con tipo di dati `xml` e la chiave primaria della tabella principale coincide con la chiave di clustering. Per altre informazioni, vedere [Indici XML &#40;SQL Server&#41;](xml-indexes-sql-server.md).  
   
- Creare il `xml` colonna tipo di dati in una tabella separata se vengono soddisfatte le condizioni seguenti:  
+ È consigliabile creare la colonna con tipo di dati `xml` in una tabella separata se si verificano le condizioni seguenti:  
   
--   Si desidera compilare un indice XML sul `xml` colonna tipo di dati, ma la chiave primaria della tabella principale è diversa dalla chiave di clustering, la tabella principale non dispone di una chiave primaria o la tabella principale è un heap (nessuna chiave di clustering). Questa situazione può verificarsi quando si utilizza una tabella principale esistente.  
+-   Si desidera compilare un indice XML sulla colonna con tipo di dati `xml`, ma la chiave primaria della tabella principale è diversa dalla chiave di clustering, la tabella principale non ha una chiave primaria, oppure la tabella principale è un heap, ovvero è priva di chiave di clustering. Questa situazione può verificarsi quando si utilizza una tabella principale esistente.  
   
 -   Si desidera evitare che l'analisi della tabella venga rallentata a causa della presenza della colonna XML, che utilizza spazio sia che venga archiviata all'interno delle righe che all'esterno delle righe.  
   

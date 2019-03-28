@@ -18,12 +18,12 @@ ms.assetid: 18b2c985-47b8-49c8-82d1-8a4af3d7d33a
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 6ec2fe4ba5ad90d044a9407be04acc850ae16b73
-ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
+ms.openlocfilehash: 257e91babf98fcbd7a2a54e8b9d14134a7446d6b
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/18/2018
-ms.locfileid: "53591495"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58537839"
 ---
 # <a name="spdeleteschedule-transact-sql"></a>sp_delete_schedule (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -41,18 +41,15 @@ sp_delete_schedule { [ @schedule_id = ] schedule_id | [ @schedule_name = ] 'sche
 ```  
   
 ## <a name="arguments"></a>Argomenti  
- [  **@schedule_id=** ] *schedule_id*  
- Numero di identificazione della pianificazione che si desidera eliminare. *schedule_id* viene **int**, con un valore predefinito è NULL.  
+`[ @schedule_id = ] schedule_id` Il numero di identificazione della pianificazione della pianificazione da eliminare. *schedule_id* viene **int**, con un valore predefinito è NULL.  
   
 > **NOTA:** Entrambi *schedule_id* oppure *schedule_name* devono essere specificati, ma non è possibile specificarli entrambi.  
   
- [  **@schedule_name=** ] **'**_schedule_name_**'**  
- Nome della pianificazione che si desidera eliminare. *schedule_name* viene **sysname**, con un valore predefinito è NULL.  
+`[ @schedule_name = ] 'schedule_name'` Il nome della pianificazione da eliminare. *schedule_name* viene **sysname**, con un valore predefinito è NULL.  
   
 > **NOTA:** Entrambi *schedule_id* oppure *schedule_name* devono essere specificati, ma non è possibile specificarli entrambi.  
   
- [ **@force_delete** =] *force_delete*  
- Specifica se la stored procedure avrà esito negativo se la pianificazione è associata a un processo. *Force_delete* è di tipo bit e il valore predefinito **0**. Quando *force_delete* viene **0**, la stored procedure ha esito negativo se la pianificazione è associata a un processo. Quando *force_delete* viene **1**, la pianificazione verrà eliminata indipendentemente dal fatto che la pianificazione è associata a un processo.  
+`[ @force_delete = ] force_delete` Specifica se la procedura avrà esito negativo se la pianificazione è associata a un processo. *Force_delete* è di tipo bit e il valore predefinito **0**. Quando *force_delete* viene **0**, la stored procedure ha esito negativo se la pianificazione è associata a un processo. Quando *force_delete* viene **1**, la pianificazione verrà eliminata indipendentemente dal fatto che la pianificazione è associata a un processo.  
   
 ## <a name="return-code-values"></a>Valori restituiti  
  **0** (esito positivo) o **1** (errore)  
@@ -92,7 +89,7 @@ EXEC dbo.sp_delete_schedule
 GO  
 ```  
   
-### <a name="b-deleting-a-schedule-attached-to-a-job"></a>b. Eliminazione di una pianificazione associata a un processo  
+### <a name="b-deleting-a-schedule-attached-to-a-job"></a>B. Eliminazione di una pianificazione associata a un processo  
  Nell'esempio seguente viene eliminata la pianificazione `RunOnce` anche se è associata a un processo.  
   
 ```  

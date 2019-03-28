@@ -1,5 +1,5 @@
 ---
-title: eseguire sp_grant_proxy_to_subsystem (Transact-SQL) | Microsoft Docs
+title: sp_grant_proxy_to_subsystem (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 866aaa27-a1e0-453a-9b1b-af39431ad9c2
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 883496e1a0f31e69b09c8e4f5eeebdb94e006e68
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 7eecd8743d24ab783e163ab10abc0441362b37a4
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47732739"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58528133"
 ---
 # <a name="spgrantproxytosubsystem-transact-sql"></a>sp_grant_proxy_to_subsystem (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -41,16 +41,13 @@ sp_grant_proxy_to_subsystem
 ```  
   
 ## <a name="arguments"></a>Argomenti  
- [ **@proxy_id =** ] *id*  
- Numero di identificazione del proxy per il quale concedere l'accesso. Il *proxy_id* viene **int**, con un valore predefinito è NULL. Entrambi *proxy_id* oppure *proxy_name* devono essere specificati, ma non è possibile specificarli entrambi.  
+`[ @proxy_id = ] id` Il numero di identificazione per concedere l'accesso per il proxy. Il *proxy_id* viene **int**, con un valore predefinito è NULL. Entrambi *proxy_id* oppure *proxy_name* devono essere specificati, ma non è possibile specificarli entrambi.  
   
- [  **@proxy_name =** ] **'***proxy_name***'**  
- Nome del proxy per il quale concedere l'accesso. Il *nome_proxy* viene **sysname**, con un valore predefinito è NULL. Entrambi *proxy_id* oppure *proxy_name* devono essere specificati, ma non è possibile specificarli entrambi.  
+`[ @proxy_name = ] 'proxy_name'` Il nome del proxy per concedere l'accesso. Il *nome_proxy* viene **sysname**, con un valore predefinito è NULL. Entrambi *proxy_id* oppure *proxy_name* devono essere specificati, ma non è possibile specificarli entrambi.  
   
- [ **@subsystem_id =** ] *id*  
- Numero di identificazione del sottosistema al quale concedere l'accesso. Il *subsystem_id* viene **int**, con un valore predefinito è NULL. Entrambi *subsystem_id* oppure *subsystem_name* devono essere specificati, ma non è possibile specificarli entrambi. Nella tabella seguente vengono elencati i valori disponibili per ogni sottosistema.  
+`[ @subsystem_id = ] id` Il numero di id del sottosistema a cui concedere l'accesso a. Il *subsystem_id* viene **int**, con un valore predefinito è NULL. Entrambi *subsystem_id* oppure *subsystem_name* devono essere specificati, ma non è possibile specificarli entrambi. Nella tabella seguente vengono elencati i valori disponibili per ogni sottosistema.  
   
-|valore|Description|  
+|Value|Descrizione|  
 |-----------|-----------------|  
 |**2**|Script [!INCLUDE[msCoName](../../includes/msconame-md.md)] ActiveX<br /><br /> **\*\* Importanti \* \***  verrà rimosso dal sottosistema di Scripting ActiveX The [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent in una versione futura di [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Evitare di usare questa funzionalità in un nuovo progetto di sviluppo e prevedere interventi di modifica nelle applicazioni in cui è attualmente implementata.|  
 |**3**|Sistema operativo (**CmdExec**)|  
@@ -64,10 +61,9 @@ sp_grant_proxy_to_subsystem
 |**11**|[!INCLUDE[ssIS](../../includes/ssis-md.md)] esecuzione del pacchetto|  
 |**12**|Script di PowerShell|  
   
- [  **@subsystem_name =** ] **'***subsystem_name***'**  
- Nome del sottosistema a cui concedere l'accesso. Il **subsystem_name** viene **sysname**, con un valore predefinito è NULL. Entrambi *subsystem_id* oppure *subsystem_name* devono essere specificati, ma non è possibile specificarli entrambi. Nella tabella seguente vengono elencati i valori disponibili per ogni sottosistema.  
+`[ @subsystem_name = ] 'subsystem_name'` Il nome del sottosistema a cui concedere l'accesso a. Il **subsystem_name** viene **sysname**, con un valore predefinito è NULL. Entrambi *subsystem_id* oppure *subsystem_name* devono essere specificati, ma non è possibile specificarli entrambi. Nella tabella seguente vengono elencati i valori disponibili per ogni sottosistema.  
   
-|valore|Description|  
+|Value|Descrizione|  
 |-----------|-----------------|  
 |**ActiveScripting**|Script ActiveX|  
 |**CmdExec**|Sistema operativo (**CmdExec**)|  

@@ -1,5 +1,5 @@
 ---
-title: Sys. sp_cdc_change_job (Transact-SQL) | Microsoft Docs
+title: sys.sp_cdc_change_job (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -20,12 +20,12 @@ ms.assetid: ea918888-0fc5-4cc1-b301-26b2a9fbb20d
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: cfbf93fc858f52cd35401bd80fe5ede7dee86a3d
-ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
+ms.openlocfilehash: 644873dd367705b02c3d14fcc7d95e0c9c81736e
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/18/2018
-ms.locfileid: "53591745"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58536103"
 ---
 # <a name="sysspcdcchangejob-transact-sql"></a>sys.sp_cdc_change_job (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -48,21 +48,17 @@ sys.sp_cdc_change_job [ [ @job_type = ] 'job_type' ]
 ```  
   
 ## <a name="arguments"></a>Argomenti  
- [  **@job_type=** ] **'**_job_type_**'**  
- Tipo di processo da modificare. *job_type* viene **nvarchar(20)** con valore predefinito è 'capture'. Gli input validi sono 'capture' e 'cleanup'.  
+`[ @job_type = ] 'job_type'` Tipo di processo da modificare. *job_type* viene **nvarchar(20)** con valore predefinito è 'capture'. Gli input validi sono 'capture' e 'cleanup'.  
   
- [ **@maxtrans** ] **=** _max_trans_  
- Numero massimo di transazioni da elaborare in ogni ciclo di analisi. *max_trans* viene **int** con un valore predefinito è NULL, che indica nessuna modifica per questo parametro. Se specificato, il valore deve essere un numero intero positivo.  
+`[ @maxtrans ] = max_trans_` Numero massimo di transazioni da elaborare in ogni ciclo di analisi. *max_trans* viene **int** con un valore predefinito è NULL, che indica nessuna modifica per questo parametro. Se specificato, il valore deve essere un numero intero positivo.  
   
  *max_trans* è valida solo per i processi di acquisizione.  
   
- [ **@maxscans** ] **=** _max_scans_  
- Numero massimo di cicli di analisi da eseguire per estrarre tutte le righe dal log. *max_scans* viene **int** con un valore predefinito è NULL, che indica nessuna modifica per questo parametro.  
+`[ @maxscans ] = max_scans_` Numero massimo di cicli di analisi da eseguire per estrarre tutte le righe dal log. *max_scans* viene **int** con un valore predefinito è NULL, che indica nessuna modifica per questo parametro.  
   
  *max_scan* è valida solo per i processi di acquisizione.  
   
- [ **@continuous** ] **=** _continua_  
- Viene indicato se il processo di acquisizione deve essere eseguito continuamente (1) o solo una volta (0). *Continuous* viene **bit** con un valore predefinito è NULL, che indica nessuna modifica per questo parametro.  
+`[ @continuous ] = continuous_` Indica se il processo di acquisizione deve essere eseguito continuamente (1), o eseguire una sola volta (0). *Continuous* viene **bit** con un valore predefinito è NULL, che indica nessuna modifica per questo parametro.  
   
  Quando *continui* = 1, il [sp_cdc_scan](../../relational-databases/system-stored-procedures/sys-sp-cdc-scan-transact-sql.md) processo analizza il log ed elabora fino a (*max_trans* \* *max_scans*) transazioni. Attende quindi il numero di secondi specificato nel *polling_interval* prima di iniziare l'analisi del log successivo.  
   
@@ -74,18 +70,15 @@ sys.sp_cdc_change_job [ [ @job_type = ] 'job_type' ]
   
  *Continua* è valida solo per i processi di acquisizione.  
   
- [ **@pollinginterval** ] **=** _polling_interval_  
- Numero di secondi tra cicli di analisi del log. *polling_interval* viene **bigint** con un valore predefinito è NULL, che indica nessuna modifica per questo parametro.  
+`[ @pollinginterval ] = polling_interval_` Numero di secondi tra cicli di analisi di log. *polling_interval* viene **bigint** con un valore predefinito è NULL, che indica nessuna modifica per questo parametro.  
   
  *polling_interval* è valido solo per l'acquisizione processi quando *continua* è impostato su 1.  
   
- [ **@retention** ] **=** _conservazione_  
- Numero di minuti in base al quale le righe delle modifiche devono essere conservate nelle tabelle delle modifiche. *conservazione* viene **bigint** con un valore predefinito è NULL, che indica nessuna modifica per questo parametro. Il valore massimo è 52494800 (100 anni). Se specificato, il valore deve essere un numero intero positivo.  
+`[ @retention ] = retention_` Numero di minuti che le righe delle modifiche devono essere conservate nelle tabelle delle modifiche. *conservazione* viene **bigint** con un valore predefinito è NULL, che indica nessuna modifica per questo parametro. Il valore massimo è 52494800 (100 anni). Se specificato, il valore deve essere un numero intero positivo.  
   
  *conservazione* è valida solo per i processi di pulizia.  
   
- [  **@threshold=** ] **'**_eliminare soglia_**'**  
- Numero massimo di voci che possono essere eliminate utilizzando un'unica istruzione nel processo di pulizia. *soglia di eliminazione* viene **bigint** con un valore predefinito è NULL, che indica nessuna modifica per questo parametro. *soglia di eliminazione* è valida solo per i processi di pulizia.  
+`[ @threshold = ] 'delete threshold'` Numero massimo di voci che possono essere eliminate utilizzando un'unica istruzione nel processo di pulizia. *soglia di eliminazione* viene **bigint** con un valore predefinito è NULL, che indica nessuna modifica per questo parametro. *soglia di eliminazione* è valida solo per i processi di pulizia.  
   
 ## <a name="return-code-values"></a>Valori restituiti  
  **0** (esito positivo) o **1** (errore)  
@@ -118,7 +111,7 @@ EXECUTE sys.sp_cdc_change_job
 GO  
 ```  
   
-### <a name="b-changing-a-cleanup-job"></a>b. Modifica di un processo di pulizia  
+### <a name="b-changing-a-cleanup-job"></a>B. Modifica di un processo di pulizia  
  Nell'esempio seguente viene aggiornato un processo di pulizia nel database `AdventureWorks2012`. Tutti i parametri validi per questo tipo di processo, tranne **@threshold**, vengono specificati. Il valore di **@threshold** non viene modificato.  
   
 ```  
@@ -131,7 +124,7 @@ GO
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [dbo. cdc_jobs &#40;Transact-SQL&#41;](../../relational-databases/system-tables/dbo-cdc-jobs-transact-sql.md)   
+ [dbo.cdc_jobs &#40;Transact-SQL&#41;](../../relational-databases/system-tables/dbo-cdc-jobs-transact-sql.md)   
  [sys.sp_cdc_enable_table &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-enable-table-transact-sql.md)   
  [sys.sp_cdc_add_job &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-add-job-transact-sql.md)  
   

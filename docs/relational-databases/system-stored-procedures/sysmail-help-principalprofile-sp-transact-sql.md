@@ -18,12 +18,12 @@ ms.assetid: 0cfd6464-09c7-4f03-9d25-58001c096a9e
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: d96a4c72996ab34b03706cc71f6b406344164685
-ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
+ms.openlocfilehash: f37fc61b294cc460fe1d1e41b301ac2c7b1c1077
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/18/2018
-ms.locfileid: "53591625"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58527463"
 ---
 # <a name="sysmailhelpprincipalprofilesp-transact-sql"></a>sysmail_help_principalprofile_sp (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -42,17 +42,13 @@ sysmail_help_principalprofile_sp [ {   [ @principal_id = ] principal_id | [ @pri
 ```  
   
 ## <a name="arguments"></a>Argomenti  
- [  **@principal_id=** ] *principal_id*  
- È l'ID dell'utente del database o del ruolo nel **msdb** database per l'associazione all'elenco. *principal_id* viene **int**, con un valore predefinito è NULL. Entrambi *principal_id* oppure *principal_name* può essere specificato.  
+`[ @principal_id = ] principal_id` È l'ID dell'utente del database o del ruolo nel **msdb** database per l'associazione all'elenco. *principal_id* viene **int**, con un valore predefinito è NULL. Entrambi *principal_id* oppure *principal_name* può essere specificato.  
   
- [  **@principal_name=** ] **'**_principal_name_**'**  
- È il nome dell'utente del database o del ruolo nel **msdb** database per l'associazione all'elenco. *principal_name* viene **sysname**, con un valore predefinito è NULL. Entrambi *principal_id* oppure *principal_name* può essere specificato.  
+`[ @principal_name = ] 'principal_name'` È il nome dell'utente del database o del ruolo nel **msdb** database per l'associazione all'elenco. *principal_name* viene **sysname**, con un valore predefinito è NULL. Entrambi *principal_id* oppure *principal_name* può essere specificato.  
   
- [ **@profile_id=** ] *profile_id*  
- ID del profilo per l'associazione da includere nell'elenco. *profile_id* viene **int**, con un valore predefinito è NULL. Entrambi *profile_id* oppure *profile_name* può essere specificato.  
+`[ @profile_id = ] profile_id` È l'ID del profilo per l'associazione all'elenco. *profile_id* viene **int**, con un valore predefinito è NULL. Entrambi *profile_id* oppure *profile_name* può essere specificato.  
   
- [  **@profile_name=** ] **'**_profile_name_**'**  
- Nome del profilo per l'associazione da includere nell'elenco. *profile_name* viene **sysname**, con un valore predefinito è NULL. Entrambi *profile_id* oppure *profile_name* può essere specificato.  
+`[ @profile_name = ] 'profile_name'` È il nome del profilo per l'associazione all'elenco. *profile_name* viene **sysname**, con un valore predefinito è NULL. Entrambi *profile_id* oppure *profile_name* può essere specificato.  
   
 ## <a name="return-code-values"></a>Valori restituiti  
  **0** (esito positivo) o **1** (errore)  
@@ -96,7 +92,7 @@ principal_id principal_name     profile_id  profile_name                   is_de
 5            danw               9           AdventureWorks Administrator   1  
 ```  
   
-### <a name="b-listing-information-for-all-associations"></a>b. Visualizzazione delle informazioni relative a tutte le associazioni  
+### <a name="b-listing-information-for-all-associations"></a>B. Visualizzazione delle informazioni relative a tutte le associazioni  
  Nell'esempio seguente viene illustrato come visualizzare le informazioni relative a tutte le associazioni nell'istanza.  
   
 ```  

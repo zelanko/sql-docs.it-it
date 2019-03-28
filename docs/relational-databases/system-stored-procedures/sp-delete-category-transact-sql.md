@@ -18,12 +18,12 @@ ms.assetid: 63ea7d0d-a567-456e-a778-bee99e21d16c
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 9e8ada6daf4fc7e545856b52b163a2ff8f9e40db
-ms.sourcegitcommit: fc6a6eedcea2d98c93e33d39c1cecd99fbc9a155
+ms.openlocfilehash: c2574cdb06b82c6ebc89c54b70ade59694f5811e
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49168661"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58526073"
 ---
 # <a name="spdeletecategory-transact-sql"></a>sp_delete_category (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -41,17 +41,15 @@ sp_delete_category [ @class = ] 'class' , [ @name = ] 'name'
 ```  
   
 ## <a name="arguments"></a>Argomenti  
- [  **@class =**] **'**_classe_**'**  
- Classe della categoria. *classe* viene **varchar (8)**, non prevede alcun valore predefinito deve avere uno dei valori seguenti.  
+`[ @class = ] 'class'` La classe della categoria. *classe* viene **varchar (8)**, non prevede alcun valore predefinito deve avere uno dei valori seguenti.  
   
-|valore|Description|  
+|Value|Descrizione|  
 |-----------|-----------------|  
 |**JOB**|Elimina una categoria di processi.|  
 |**AVVISO**|Elimina una categoria di avvisi.|  
-|**OPERATORE**|Elimina una categoria di operatori.|  
+|**OPERATOR**|Elimina una categoria di operatori.|  
   
- [  **@name =**] **'**_nome_**'**  
- Nome della categoria da rimuovere. *nome* viene **sysname**, non prevede alcun valore predefinito.  
+`[ @name = ] 'name'` Il nome della categoria da rimuovere. *nome* viene **sysname**, non prevede alcun valore predefinito.  
   
 ## <a name="return-code-values"></a>Valori restituiti  
  **0** (esito positivo) o **1** (errore)  

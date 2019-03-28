@@ -10,12 +10,12 @@ ms.assetid: 64a9eade-22c3-4a9d-ab50-956219e08df1
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 65d6680d7e03960c0c59e83413be58cb74e5f028
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 7f5355af9adb2ae2a06fab1041b22959165dfaf2
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48158111"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58537773"
 ---
 # <a name="migrating-computed-columns"></a>Migrazione di colonne calcolate
   Le colonne calcolate non sono supportate nelle tabelle ottimizzate per la memoria. Tuttavia, è possibile simulare una colonna calcolata.  
@@ -25,7 +25,7 @@ ms.locfileid: "48158111"
 ## <a name="non-persisted-computed-columns"></a>Colonne calcolate non persistenti  
  Per simulare gli effetti di una colonna calcolata non persistente, creare una vista nella tabella ottimizzata per la memoria. Nell'istruzione SELECT che definisce la vista, aggiungere la definizione della colonna calcolata nella vista. Ad eccezione di una stored procedure compilata in modo nativo, le query che utilizzano i valori della colonna calcolata devono essere letti dalla vista. All'interno delle stored procedure compilate in modo nativo, è consigliabile aggiornare tutte le istruzioni SELECT, UPDATE o DELETE in base alla definizione della colonna calcolata.  
   
-```tsql  
+```sql  
 -- Schema for the table dbo.OrderDetails:  
 -- OrderId int not null primary key,  
 -- ProductId int not null,  
@@ -47,7 +47,7 @@ CREATE VIEW dbo.v_order_details AS
 ## <a name="persisted-computed-columns"></a>Colonne calcolate persistenti  
  Per simulare gli effetti di una colonna calcolata persistente, creare una stored procedure per l'inserimento nella tabella e un'altra stored procedure per l'aggiornamento della tabella. Quando si inserisce o si aggiorna la tabella, chiamare le stored procedure per eseguire queste attività. All'interno delle stored procedure, calcolare il valore del campo calcolato in base agli input, analogamente al modo in cui viene definita la colonna calcolata nella tabella originale basata su disco. Quindi, inserire o aggiornare la tabella in base alle esigenze all'interno della stored procedure.  
   
-```tsql  
+```sql  
 -- Schema for the table dbo.OrderDetails:  
 -- OrderId int not null primary key,  
 -- ProductId int not null,  

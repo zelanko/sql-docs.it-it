@@ -18,12 +18,12 @@ ms.assetid: ad87e9a0-b901-4e37-9950-aa517d680fc3
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: f36cac8a1a21f5e742c9fe7925684a6002f4a2b1
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 1f3b4416ac9c297af84240e630730b0bad855780
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47777649"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58527963"
 ---
 # <a name="sphelpdbfixedrole-transact-sql"></a>sp_helpdbfixedrole (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -40,15 +40,14 @@ sp_helpdbfixedrole [ [ @rolename = ] 'role' ]
 ```  
   
 ## <a name="arguments"></a>Argomenti  
- [  **@rolename =** ] **'***ruolo***'**  
- Nome di un ruolo predefinito del database. *ruolo* viene **sysname**, con un valore predefinito è NULL. Se *ruolo* è specificato, vengono restituite solo informazioni relative a tale ruolo; in caso contrario, viene restituito un elenco e una descrizione di tutti i ruoli predefiniti del database.  
+`[ @rolename = ] 'role'` È il nome di un ruolo predefinito del database. *ruolo* viene **sysname**, con un valore predefinito è NULL. Se *ruolo* è specificato, vengono restituite solo informazioni relative a tale ruolo; in caso contrario, viene restituito un elenco e una descrizione di tutti i ruoli predefiniti del database.  
   
 ## <a name="return-code-values"></a>Valori restituiti  
  0 (esito positivo) o 1 (esito negativo)  
   
 ## <a name="result-sets"></a>Set di risultati  
   
-|Nome colonna|Tipo di dati|Description|  
+|Nome colonna|Tipo di dati|Descrizione|  
 |-----------------|---------------|-----------------|  
 |**DbFixedRole**|**sysname**|Nome del ruolo predefinito del database.|  
 |**Descrizione**|**nvarchar(70)**|Descrizione di **DbFixedRole.**|  
@@ -56,7 +55,7 @@ sp_helpdbfixedrole [ [ @rolename = ] 'role' ]
 ## <a name="remarks"></a>Note  
  I ruoli predefiniti del database vengono definiti a livello del database e dispongono delle autorizzazioni per l'esecuzione di specifiche attività amministrative a livello del database, come indicato nella tabella seguente. Non è possibile aggiungere o rimuovere i ruoli predefiniti del database e non è possibile modificare le autorizzazioni concesse a un ruolo predefinito del database.  
   
-|Ruolo predefinito del database|Description|  
+|Ruolo predefinito del database|Descrizione|  
 |-------------------------|-----------------|  
 |**db_owner**|Proprietari di database|  
 |**db_accessadmin**|Amministratori dell'accesso ai database|  

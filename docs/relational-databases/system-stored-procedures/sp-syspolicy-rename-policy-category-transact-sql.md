@@ -18,12 +18,12 @@ ms.assetid: 8a9c4a3a-91e8-435e-b721-e0293c92be3e
 author: VanMSFT
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 2705451273849e6eb3e7158c410590b6c9031c41
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a9993591bf1073ef5c72636571e9127496f3d3ee
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47733699"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58535533"
 ---
 # <a name="spsyspolicyrenamepolicycategory-transact-sql"></a>sp_syspolicy_rename_policy_category (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -41,14 +41,11 @@ sp_syspolicy_rename_policy_category { [ @name = ] 'name' | [ @policy_category_id
 ```  
   
 ## <a name="arguments"></a>Argomenti  
- [  **@name =** ] **'***nome***'**  
- Nome della categoria di criteri da rinominare. *nome* viene **sysname**e deve essere specificato se *policy_category_id* è NULL.  
+`[ @name = ] 'name'` È il nome della categoria di criteri che si desidera rinominare. *nome* viene **sysname**e deve essere specificato se *policy_category_id* è NULL.  
   
- [ **@policy_category_id=** ] *policy_category_id*  
- Identificatore della categoria di criteri da rinominare. *policy_category_id* viene **int**e deve essere specificato se *nome* è NULL.  
+`[ @policy_category_id = ] policy_category_id` È l'identificatore per la categoria di criteri che si desidera rinominare. *policy_category_id* viene **int**e deve essere specificato se *nome* è NULL.  
   
- [  **@new_name=** ] **'***new_name***'**  
- È il nuovo nome per la categoria di criteri. *new_name* viene **sysname**ed è obbligatorio. Non può essere NULL o una stringa vuota.  
+`[ @new_name = ] 'new_name'` È il nuovo nome per la categoria di criteri. *new_name* viene **sysname**ed è obbligatorio. Non può essere NULL o una stringa vuota.  
   
 ## <a name="return-code-values"></a>Valori restituiti  
  **0** (esito positivo) o **1** (errore)  
@@ -62,7 +59,7 @@ sp_syspolicy_rename_policy_category { [ @name = ] 'name' | [ @policy_category_id
  È necessaria l'appartenenza al ruolo predefinito del database PolicyAdministratorRole.  
   
 > [!IMPORTANT]  
->  Possibile elevazione di credenziali: gli utenti nel ruolo PolicyAdministratorRole possono creare trigger server e pianificare le esecuzioni di criteri che influiscono sul funzionamento dell'istanza del [!INCLUDE[ssDE](../../includes/ssde-md.md)]. Gli utenti con il ruolo PolicyAdministratorRole possono ad esempio creare criteri che impediscono la creazione della maggior parte degli oggetti nel [!INCLUDE[ssDE](../../includes/ssde-md.md)]. A causa di questa possibile elevazione di credenziali, il ruolo PolicyAdministratorRole deve essere concesso solo a utenti ritenuti attendibili per il controllo della configurazione del [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
+>  Possibile elevazione di credenziali: Gli utenti nel ruolo PolicyAdministratorRole possono creare trigger server e pianificare le esecuzioni di criteri che possono influenzare l'operazione dell'istanza del [!INCLUDE[ssDE](../../includes/ssde-md.md)]. Gli utenti con il ruolo PolicyAdministratorRole possono ad esempio creare criteri che impediscono la creazione della maggior parte degli oggetti nel [!INCLUDE[ssDE](../../includes/ssde-md.md)]. A causa di questa possibile elevazione di credenziali, il ruolo PolicyAdministratorRole deve essere concesso solo a utenti ritenuti attendibili per il controllo della configurazione del [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
 ## <a name="examples"></a>Esempi  
  Nell'esempio seguente la categoria di criteri 'Test Policy 1' viene rinominata in 'Test Policy 2'.  

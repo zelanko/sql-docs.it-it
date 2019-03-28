@@ -18,12 +18,12 @@ ms.assetid: 421ede8e-ad57-474a-9fb9-92f70a3e77e3
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 9408fe7939b5a34a18ecde2b1a98f68ac19e49a3
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 84b1e2840240d0d02a3193ecc592a13331719c7a
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47628540"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58527823"
 ---
 # <a name="spdeletejobstep-transact-sql"></a>sp_delete_jobstep (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -42,16 +42,13 @@ sp_delete_jobstep { [ @job_id = ] job_id | [ @job_name = ] 'job_name' } ,
 ```  
   
 ## <a name="arguments"></a>Argomenti  
- [ **@job_id=** ] *job_id*  
- Numero di identificazione del processo da cui si desidera rimuovere il passaggio. *job_id*viene **uniqueidentifier**, con un valore predefinito è NULL.  
+`[ @job_id = ] job_id` Il numero di identificazione del processo da cui si desidera rimuovere il passaggio. *job_id*viene **uniqueidentifier**, con un valore predefinito è NULL.  
   
- [ **@job_name=** ] **'***job_name***'**  
- Nome del processo da cui si desidera rimuovere il passaggio. *nome_processo*viene **sysname**, con un valore predefinito è NULL.  
+`[ @job_name = ] 'job_name'` Il nome del processo da cui si desidera rimuovere il passaggio. *nome_processo*viene **sysname**, con un valore predefinito è NULL.  
   
-> **Nota:** entrambe *job_id* oppure *job_name* deve essere specificato; non è possibile specificarli entrambi.  
+> **NOTA:** Entrambi *job_id* oppure *job_name* deve essere specificato; non è possibile specificarli entrambi.  
   
- [ **@step_id=** ] *step_id*  
- Numero di identificazione del passaggio da rimuovere. *step_id*viene **int**, non prevede alcun valore predefinito.  
+`[ @step_id = ] step_id` Il numero di identificazione del passaggio da rimuovere. *step_id*viene **int**, non prevede alcun valore predefinito.  
   
 ## <a name="return-code-values"></a>Valori restituiti  
  **0** (esito positivo) o **1** (errore)  
@@ -64,7 +61,7 @@ sp_delete_jobstep { [ @job_id = ] job_id | [ @job_name = ] 'job_name' } ,
   
  Per altre informazioni sui passaggi associati a un particolare processo, eseguire **sp_help_jobstep**.  
   
-> **Nota:** chiamata **sp_delete_jobstep** con un *step_id* valore pari a zero consente di eliminare tutti i passaggi di processo per il processo.  
+> **NOTA:** La chiamata **sp_delete_jobstep** con un *step_id* valore pari a zero consente di eliminare tutti i passaggi di processo per il processo.  
   
  Microsoft SQL Server Management Studio include uno strumento grafico di facile utilizzo per la gestione dei processi, ed è lo strumento consigliato per la creazione e la gestione dell'infrastruttura dei processi.  
   

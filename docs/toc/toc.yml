@@ -1223,7 +1223,7 @@ items:
     items:
     - name: Panoramica
       items:
-      - name: FileStream
+      - name: Filestream
         href: ../relational-databases/blob/filestream-sql-server.md
       - name: FileTable
         href: ../relational-databases/blob/filetables-sql-server.md
@@ -1231,7 +1231,7 @@ items:
         href: ../relational-databases/blob/compare-options-for-storing-blobs-sql-server.md
       - name: Archivio BLOB remoto (RBS)
         href: ../relational-databases/blob/remote-blob-store-rbs-sql-server.md
-    - name: FileStream
+    - name: Filestream
       items:
       - name: Abilitare e configurare
         href: ../relational-databases/blob/enable-and-configure-filestream.md
@@ -1708,7 +1708,7 @@ items:
       href: ../relational-databases/views/rename-views.md
     - name: DELETE
       href: ../relational-databases/views/delete-views.md
-  - name: Dati XML
+  - name: dati XML
     href: ../relational-databases/xml/xml-data-sql-server.md
     items:
     - name: Colonne e tipo di dati XML
@@ -6894,6 +6894,7 @@ items:
     - name: Considerazioni relative all'utilizzo di server di prova
       href: ../relational-databases/performance/considerations-for-using-test-servers.md
     - name: Elaborazione di query intelligenti
+      displayName: adaptive
       href: ../relational-databases/performance/intelligent-query-processing.md
     - name: Centro prestazioni
       href: ../relational-databases/performance/performance-center-for-sql-server-database-engine-and-azure-sql-database.md
@@ -7196,7 +7197,7 @@ items:
     href: ../relational-databases/performance/joins.md
   - name: Scripting
     href: ../relational-databases/scripting/database-engine-scripting.md
-  - name: Sottoquery
+  - name: 'Sottoquery:'
     href: ../relational-databases/performance/subqueries.md
   - name: Virtualizzazione dei dati (Polybase)
     href: ../toc/redirectfrom-polybase.md
@@ -9791,12 +9792,12 @@ items:
         href: ../ssms/user-assistance-in-sql-server-management-studio.md
       - name: Dati di utilizzo anonimi
         href: ../ssms/sql-server-management-studio-telemetry-ssms.md
-  - name: sqlpackage
+  - name: SqlPackage.exe
     items:
     - name: Installare sqlpackage
       href: ../tools/sqlpackage-download.md
     - name: Note sulla versione
-      href: ../tools/sqlpackage-release-notes.md
+      href: ../tools/release-notes-sqlpackage.md
     - name: Informazioni di riferimento su sqlpackage
       href: ../tools/sqlpackage.md
   - name: SQL Server Profiler
@@ -16186,15 +16187,15 @@ items:
             href: ../t-sql/language-elements/less-than-transact-sql.md
           - name: '>= (maggiore o uguale a)'
             href: ../t-sql/language-elements/greater-than-or-equal-to-transact-sql.md
-          - name: <= (Minore o uguale a)
+          - name: <= (non maggiore di)
             href: ../t-sql/language-elements/less-than-or-equal-to-transact-sql.md
-          - name: <> (Diverso da)
+          - name: <> (diverso da)
             href: ../t-sql/language-elements/not-equal-to-transact-sql-traditional.md
-          - name: '!< (Non minore di)'
+          - name: '!< (maggiore o uguale a)'
             href: ../t-sql/language-elements/not-less-than-transact-sql.md
           - name: '!= (Diverso da)'
             href: ../t-sql/language-elements/not-equal-to-transact-sql-exclamation.md
-          - name: '!> (Non maggiore di)'
+          - name: '!> (minore o uguale a)'
             href: ../t-sql/language-elements/not-greater-than-transact-sql.md
         - name: Composto
           href: ../t-sql/language-elements/compound-operators-transact-sql.md
@@ -17226,9 +17227,9 @@ items:
         href: ../xquery/string-search-in-xquery.md
       - name: Gestione degli spazi dei nomi in XQuery
         href: ../xquery/handling-namespaces-in-xquery.md
-ms.openlocfilehash: 8efef6d8d30133dff4c5ca71d37a753e0168a4e5
-ms.sourcegitcommit: 2111068372455b5ec147b19ca6dbf339980b267d
+ms.openlocfilehash: 31c97681d909e7179c9376e187cabea94afe20d3
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58417233"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58538683"

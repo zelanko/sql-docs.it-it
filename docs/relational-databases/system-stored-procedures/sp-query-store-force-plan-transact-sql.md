@@ -22,12 +22,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: a5bc2b11f8f724be2f53777db3d87be99bbdbf23
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 7d0130fb0c01f69b5bb7c7f6de73e7aad2054a67
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47652089"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58531693"
 ---
 # <a name="spquerystoreforceplan-transact-sql"></a>sp_query_store_force_plan (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -46,11 +46,9 @@ sp_query_store_force_plan [ @query_id = ] query_id , [ @plan_id = ] plan_id [;]
 ```  
   
 ## <a name="arguments"></a>Argomenti  
- [  **@query_id =** ] *query_id*  
- È l'id della query. *query_id* è un **bigint**, non prevede alcun valore predefinito.  
+`[ @query_id = ] query_id` È l'id della query. *query_id* è un **bigint**, non prevede alcun valore predefinito.  
   
- [  **@plan_id =** ] *plan_id*  
- È l'id del piano di query per essere forzato. *plan_id* è un **bigint**, non prevede alcun valore predefinito.  
+`[ @plan_id = ] plan_id` È l'id del piano di query per essere forzato. *plan_id* è un **bigint**, non prevede alcun valore predefinito.  
   
 ## <a name="return-code-values"></a>Valori restituiti  
  0 (esito positivo) o 1 (esito negativo)  

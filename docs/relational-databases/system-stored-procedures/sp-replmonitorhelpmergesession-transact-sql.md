@@ -16,12 +16,12 @@ ms.assetid: a0400ba8-9609-4901-917e-925e119103a1
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: e08a08bbd3343386ed4b07749bde5216ae23c8b4
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 224d304a44c3e66eb8f2c18f4c581bf271f926f9
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52789193"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58538503"
 ---
 # <a name="spreplmonitorhelpmergesession-transact-sql"></a>sp_replmonitorhelpmergesession (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -43,11 +43,9 @@ sp_replmonitorhelpmergesession [ [ @agent_name = ] 'agent_name' ]
 ```  
   
 ## <a name="arguments"></a>Argomenti  
- [ **@agent_name** =] **'***agent_name***'**  
- Nome dell'agente. *agent_name* viene **nvarchar(100)** non prevede alcun valore predefinito.  
+`[ @agent_name = ] 'agent_name'` È il nome dell'agente. *agent_name* viene **nvarchar(100)** non prevede alcun valore predefinito.  
   
- [ **@hours** =] *ore*  
- Intervallo di tempo, espresso in ore, per cui vengono restituite informazioni sulle sessioni passate dell'agente. *ore* viene **int**, che può essere uno degli intervalli seguenti.  
+`[ @hours = ] hours` È l'intervallo di tempo, espresso in ore, per il quale vengono restituite le informazioni sulla sessione passate dell'agente. *ore* viene **int**, che può essere uno degli intervalli seguenti.  
   
 |Value|Descrizione|  
 |-----------|-----------------|  
@@ -55,29 +53,25 @@ sp_replmonitorhelpmergesession [ [ @agent_name = ] 'agent_name' ]
 |**0** (predefinito)|Restituisce informazioni su tutte le esecuzioni passate dell'agente.|  
 |> **0**|Restituisce informazioni sull'agente di esecuzioni che si sono verificati nelle ultime *ore* numero di ore.|  
   
- [ **@session_type** =] *session_type*  
- Filtra il set di risultati in base al risultato finale della sessione. *session_type* viene **int**, i possibili valori sono i seguenti.  
+`[ @session_type = ] session_type` Filtra il set di risultati in base al risultato finale della sessione. *session_type* viene **int**, i possibili valori sono i seguenti.  
   
 |Value|Descrizione|  
 |-----------|-----------------|  
 |**1** (impostazione predefinita)|Sessioni dell'agente con esito positivo o da ritentare.|  
 |**0**|Sessioni dell'agente con esito negativo.|  
   
- [ **@publisher** =] **'***publisher***'**  
- Nome del server di pubblicazione. *server di pubblicazione* viene **sysname**, con un valore predefinito è NULL. Questo parametro viene usato quando si esegue **sp_replmonitorhelpmergesession** nel Sottoscrittore.  
+`[ @publisher = ] 'publisher'` È il nome del server di pubblicazione. *server di pubblicazione* viene **sysname**, con un valore predefinito è NULL. Questo parametro viene usato quando si esegue **sp_replmonitorhelpmergesession** nel Sottoscrittore.  
   
- [ **@publisher_db** = ] **'***publisher_db***'**  
- Nome del database di pubblicazione. *publisher_db* viene **sysname**, con un valore predefinito è NULL. Questo parametro viene usato quando si esegue **sp_replmonitorhelpmergesession** nel Sottoscrittore.  
+`[ @publisher_db = ] 'publisher_db'` È il nome del database di pubblicazione. *publisher_db* viene **sysname**, con un valore predefinito è NULL. Questo parametro viene usato quando si esegue **sp_replmonitorhelpmergesession** nel Sottoscrittore.  
   
- [  **@publication=** ] **'***pubblicazione***'**  
- Nome della pubblicazione. *pubblicazione* viene **sysname**, con un valore predefinito è NULL. Questo parametro viene usato quando si esegue **sp_replmonitorhelpmergesession** nel Sottoscrittore.  
+`[ @publication = ] 'publication'` È il nome della pubblicazione. *pubblicazione* viene **sysname**, con un valore predefinito è NULL. Questo parametro viene usato quando si esegue **sp_replmonitorhelpmergesession** nel Sottoscrittore.  
   
 ## <a name="result-sets"></a>Set di risultati  
   
 |Nome colonna|Tipo di dati|Descrizione|  
 |-----------------|---------------|-----------------|  
 |**Session_id**|**int**|ID della sessione del processo dell'agente.|  
-|**Stato**|**int**|Stato dell'esecuzione dell'agente:<br /><br /> **1** = avvio<br /><br /> **2** = esito positivo<br /><br /> **3** = in corso<br /><br /> **4** = inattivo<br /><br /> **5** = nuovo tentativo<br /><br /> **6** = esito negativo|  
+|**Stato**|**int**|Stato dell'esecuzione dell'agente:<br /><br /> **1** = Start<br /><br /> **2** = esito positivo<br /><br /> **3** = in corso<br /><br /> **4** = inattivo<br /><br /> **5** = nuovo tentativo<br /><br /> **6** = Fail|  
 |**StartTime**|**datetime**|Data e ora di inizio della sessione del processo dell'agente.|  
 |**EndTime**|**datetime**|Data e ora di completamento della sessione del processo dell'agente.|  
 |**Durata**|**int**|Durata cumulativa, espressa in secondi, della sessione del processo.|  

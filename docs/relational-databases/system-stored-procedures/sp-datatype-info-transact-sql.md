@@ -18,12 +18,12 @@ ms.assetid: 045f3b5d-6bb7-4748-8b4c-8deb4bc44147
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 3b8d56f7989d3f0c76c3eaa46309ab029fc3d42d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 3eadc5efc471f44998abddc596f1acc5c6e378ca
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47601129"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58527933"
 ---
 # <a name="spdatatypeinfo-transact-sql"></a>sp_datatype_info (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-xxx-md.md)]
@@ -41,25 +41,23 @@ sp_datatype_info [ [ @data_type = ] data_type ]
 ```  
   
 ## <a name="arguments"></a>Argomenti  
- [  **@data_type=** ] *data_type*  
- Numero di codice del tipo di dati specificato. Per ottenere un elenco di tutti i tipi di dati, omettere questo parametro. *data_type* viene **int**, con un valore predefinito è 0.  
+`[ @data_type = ] data_type` È il numero di codice per il tipo di dati specificato. Per ottenere un elenco di tutti i tipi di dati, omettere questo parametro. *data_type* viene **int**, con un valore predefinito è 0.  
   
- [  **@ODBCVer=** ] *odbc_version*  
- Versione di ODBC utilizzata. *odbc_version* viene **tinyint**, con un valore predefinito è 2.  
+`[ @ODBCVer = ] odbc_version` È la versione di ODBC utilizzata. *odbc_version* viene **tinyint**, con un valore predefinito è 2.  
   
 ## <a name="return-code-values"></a>Valori restituiti  
  None  
   
 ## <a name="result-sets"></a>Set di risultati  
   
-|Nome colonna|Tipo di dati|Description|  
+|Nome colonna|Tipo di dati|Descrizione|  
 |-----------------|---------------|-----------------|  
 |TYPE_NAME|**sysname**|Tipo di dati che dipende dal sistema di gestione di database (DBMS).|  
 |DATA_TYPE|**smallint**|Codice per il tipo di dati ODBC a cui viene eseguito il mapping di tutte le colonne di tale tipo.|  
 |PRECISION|**int**|Precisione massima del tipo di dati nell'origine dati. Per i tipi di dati per cui la precisione non è applicabile, viene restituito NULL. Il valore restituito per la colonna PRECISION è in base 10.|  
-|LITERAL_PREFIX|**varchar (** 32 **)**|Carattere o caratteri che precedono il nome di una costante, Ad esempio, una virgoletta singola (**'**) per i tipi di carattere e 0x per i dati binari.|  
-|LITERAL_SUFFIX|**varchar (** 32 **)**|Carattere o caratteri che seguono il nome di una costante, Ad esempio, una virgoletta singola (**'**) per i tipi di carattere e nessuna virgoletta per i dati binari.|  
-|CREATE_PARAMS|**varchar (** 32 **)**|Descrizione dei parametri di creazione per questo tipo di dati, Ad esempio, **decimale** "precision, scale", viene **float** è NULL, e **varchar** "max_length".|  
+|LITERAL_PREFIX|**varchar(** 32 **)**|Carattere o caratteri che precedono il nome di una costante, Ad esempio, una virgoletta singola (**'**) per i tipi di carattere e 0x per i dati binari.|  
+|LITERAL_SUFFIX|**varchar(** 32 **)**|Carattere o caratteri che seguono il nome di una costante, Ad esempio, una virgoletta singola (**'**) per i tipi di carattere e nessuna virgoletta per i dati binari.|  
+|CREATE_PARAMS|**varchar(** 32 **)**|Descrizione dei parametri di creazione per questo tipo di dati, Ad esempio, **decimale** "precision, scale", viene **float** è NULL, e **varchar** "max_length".|  
 |NULLABLE|**smallint**|Specifica se i valori Null sono supportati.<br /><br /> 1 = I valori Null sono supportati.<br /><br /> 0 = I valori Null non sono supportati.|  
 |CASE_SENSITIVE|**smallint**|Specifica se viene rispettata la distinzione tra maiuscole e minuscole.<br /><br /> 1 = In tutte le colonne di questo tipo viene rispettata la distinzione tra maiuscole e minuscole (per le regole di confronto).<br /><br /> 0 = In tutte le colonne di questo tipo non viene rispettata la distinzione tra maiuscole e minuscole.|  
 |SEARCHABLE|**smallint**|Specifica la funzionalità di ricerca del tipo di colonna.<br /><br /> 1 = Non è possibile eseguire ricerche in questo tipo di colonna.<br /><br /> 2 = È possibile eseguire ricerche con LIKE.<br /><br /> 3 = È possibile eseguire ricerche con WHERE.<br /><br /> 4 = È possibile eseguire ricerche con WHERE o LIKE.|  

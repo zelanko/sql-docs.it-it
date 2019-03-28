@@ -16,12 +16,12 @@ ms.assetid: c36e5865-25d5-42b7-b045-dc5036225081
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 5cdd5f3b4c4c1dd8ddac0df34423834c3b09b839
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: 45c61b33a7cc1669ae34f7888fda1450524b079b
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54131241"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58536823"
 ---
 # <a name="spchangepublication-transact-sql"></a>sp_changepublication (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -42,14 +42,11 @@ sp_changepublication [ [ @publication = ] 'publication' ]
 ```  
   
 ## <a name="arguments"></a>Argomenti  
- [  **@publication =** ] **'**_pubblicazione_**'**  
- Nome della pubblicazione. *pubblicazione* viene **sysname**, con un valore predefinito è NULL.  
+`[ @publication = ] 'publication'` È il nome della pubblicazione. *pubblicazione* viene **sysname**, con un valore predefinito è NULL.  
   
- [  **@property =** ] **'**_proprietà_**'**  
- Proprietà della pubblicazione da modificare. *proprietà* viene **nvarchar(255**.  
+`[ @property = ] 'property'` È la proprietà della pubblicazione da modificare. *proprietà* viene **nvarchar(255**.  
   
- [  **@value =** ] **'**_valore_**'**  
- Nuovo valore della proprietà. *valore* viene **nvarchar(255**, con un valore predefinito è NULL.  
+`[ @value = ] 'value'` È il nuovo valore della proprietà. *valore* viene **nvarchar(255**, con un valore predefinito è NULL.  
   
  Nella tabella seguente vengono descritte le proprietà della pubblicazione che è possibile modificare e le limitazioni previste per i valori di tali proprietà.  
   
@@ -88,7 +85,7 @@ sp_changepublication [ [ @publication = ] 'publication' ]
 |**ftp_password**||Password del nome utente utilizzato per la connessione al servizio FTP. Non è possibile modificare questa proprietà per pubblicazioni non [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |**ftp_port**||Numero di porta del servizio FTP per il server di distribuzione. Non è possibile modificare questa proprietà per pubblicazioni non [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |**ftp_subdirectory**||Specifica la posizione in cui vengono creati i file di snapshot se la pubblicazione supporta la propagazione di snapshot tramite FTP. Non è possibile modificare questa proprietà per pubblicazioni non [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
-|**immediate_sync**|**true**|I file di sincronizzazione della pubblicazione vengono creati o ricreati a ogni esecuzione dell'agente snapshot. Se l'esecuzione dell'agente snapshot è stata completata una volta prima della sottoscrizione, i Sottoscrittori possono ricevere i file di sincronizzazione immediatamente dopo la sottoscrizione. Le nuove sottoscrizioni ricevono i file di sottoscrizione più recenti generati dall'ultima esecuzione dell'agente snapshot. *independent_agent* deve essere inoltre **true**. Vedere la sezione Osservazioni di seguito per altre informazioni **immediate_sync**.|  
+|**immediate_sync**|**true**|I file di sincronizzazione della pubblicazione vengono creati o ricreati a ogni esecuzione dell'agente snapshot. Se l'esecuzione dell'agente snapshot è stata completata una volta prima della sottoscrizione, i Sottoscrittori possono ricevere i file di sincronizzazione immediatamente dopo la sottoscrizione. Le nuove sottoscrizioni ricevono i file di sottoscrizione più recenti generati dall'ultima esecuzione dell'agente snapshot. *independent_agent* must also be **true**. Vedere la sezione Osservazioni di seguito per altre informazioni **immediate_sync**.|  
 ||**false**|I file di sincronizzazione vengono creati solo se esistono nuove sottoscrizioni. I Sottoscrittori ricevono i file di sincronizzazione dopo la sottoscrizione solo se l'agente snapshot è stato avviato e completato.|  
 |**independent_agent**|**true**|Per la pubblicazione viene utilizzato un agente di distribuzione dedicato.|  
 ||**false**|Per la pubblicazione viene utilizzato un agente di distribuzione condiviso e a ogni coppia database di pubblicazione/database di sottoscrizione è associato un agente condiviso.|  
@@ -99,28 +96,27 @@ sp_changepublication [ [ @publication = ] 'publication' ]
 |**publish_to_ActiveDirectory**|**true**|Questo parametro è deprecato ed è supportato solo per compatibilità con gli script di versioni precedenti. Non è più possibile aggiungere informazioni di pubblicazione in [!INCLUDE[msCoName](../../includes/msconame-md.md)] Active Directory.|  
 ||**false**|Rimuove le informazioni sulla pubblicazione da Active Directory.|  
 |**queue_type**|**sql**|Consente di utilizzare [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] per l'archiviazione delle transazioni. È possibile modificare questa proprietà solo se non esistono sottoscrizioni attive.<br /><br /> Nota: L'utilizzo di MSMQ ([!INCLUDE[msCoName](../../includes/msconame-md.md)] Message Queuing) non è più supportato. Se si specifica un valore di **msmq** per *valore* provoca un errore.|  
-|**repl_freq**|**continua**|Pubblica l'output di tutte le transazioni basate su log.|  
-||**Snapshot**|Pubblica solo gli eventi di sincronizzazione pianificati.|  
+|**repl_freq**|**continuous**|Pubblica l'output di tutte le transazioni basate su log.|  
+||**snapshot**|Pubblica solo gli eventi di sincronizzazione pianificati.|  
 |**replicate_ddl**|**1**|Le istruzioni DDL (Data Definition Language) eseguite nel server di pubblicazione vengono replicate. Non è possibile modificare questa proprietà per pubblicazioni non [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 ||**0**|Non viene eseguita la replica delle istruzioni DDL. Non è possibile modificare questa proprietà per pubblicazioni non [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. La replica delle modifiche dello schema non può essere disabilitata in caso di utilizzo della replica peer-to-peer.|  
 |**replicate_partition_switch**|**true**|ISTRUZIONE ALTER TABLE... Istruzioni SWITCH eseguite sul database pubblicato devono essere replicate ai sottoscrittori. Questa opzione è valida solo se *allow_partition_switch* è impostata su TRUE. Per altre informazioni, vedere [Replicare tabelle e indici partizionati](../../relational-databases/replication/publish/replicate-partitioned-tables-and-indexes.md).|  
 ||**false**|ISTRUZIONE ALTER TABLE... Le istruzioni SWITCH non devono essere replicate nei Sottoscrittori.|  
-|**conservazione**||**int** che rappresenta il periodo di memorizzazione, espresso in ore, per attività di sottoscrizione. Se una sottoscrizione non viene attivata entro il periodo di memorizzazione, viene rimossa.|  
+|**retention**||**int** che rappresenta il periodo di memorizzazione, espresso in ore, per attività di sottoscrizione. Se una sottoscrizione non viene attivata entro il periodo di memorizzazione, viene rimossa.|  
 |**snapshot_in_defaultfolder**|**true**|I file di snapshot sono memorizzati nella cartella snapshot predefinita. Se *alt_snapshot_folder*viene anche specificato, i file di snapshot vengono archiviati in entrambe le predefinito e una posizione alternativa.|  
 ||**false**|File di snapshot sono archiviati nella posizione alternativa specificata da *alt_snapshot_folder*.|  
-|**status**|**Attiva**|I dati della pubblicazione risultano immediatamente disponibili per i Sottoscrittori quando viene creata la pubblicazione. Questa proprietà non è supportata per server di pubblicazione Oracle.|  
-||**inattivo**|I dati della pubblicazione non sono disponibili per i Sottoscrittori quando viene creata la pubblicazione. Questa proprietà non è supportata per server di pubblicazione Oracle.|  
+|**status**|**active**|I dati della pubblicazione risultano immediatamente disponibili per i Sottoscrittori quando viene creata la pubblicazione. Questa proprietà non è supportata per server di pubblicazione Oracle.|  
+||**inactive**|I dati della pubblicazione non sono disponibili per i Sottoscrittori quando viene creata la pubblicazione. Questa proprietà non è supportata per server di pubblicazione Oracle.|  
 |**sync_method**|**native**|Consente di utilizzare l'output generato dal programma per la copia bulk in modalità nativa per tutte le tabelle durante la sincronizzazione delle sottoscrizioni.|  
 ||**character**|Consente di utilizzare l'output generato dal programma per la copia bulk in modalità carattere per tutte le tabelle durante la sincronizzazione delle sottoscrizioni.|  
-||**simultanee**|Consente di utilizzare l'output generato dal programma per la copia bulk in modalità nativa per tutte le tabelle, senza tuttavia bloccare le tabelle durante il processo di generazione dello snapshot. Questa proprietà non è valida per la replica snapshot.|  
+||**concurrent**|Consente di utilizzare l'output generato dal programma per la copia bulk in modalità nativa per tutte le tabelle, senza tuttavia bloccare le tabelle durante il processo di generazione dello snapshot. Questa proprietà non è valida per la replica snapshot.|  
 ||**concurrent_c**|Consente di utilizzare l'output generato dal programma per la copia bulk in modalità carattere per tutte le tabelle, senza tuttavia bloccare le tabelle durante il processo di generazione dello snapshot. Questa proprietà non è valida per la replica snapshot.|  
-|**ID attività**||Questa proprietà è deprecata e non è più supportata.|  
+|**taskid**||Questa proprietà è deprecata e non è più supportata.|  
 |**allow_drop**|**true**|Abilita `DROP TABLE` DLL il supporto per gli articoli che fanno parte della replica transazionale. Versione minima supportata: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Service Pack 2 o versione successiva e [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] il Service Pack 1 o versione successiva. Riferimenti aggiuntivi: [KB 3170123](https://support.microsoft.com/help/3170123/supports-drop-table-ddl-for-articles-that-are-included-in-transactional-replication-in-sql-server-2014-or-in-sql-server-2016-sp1)|
 ||**false**|Disabilita `DROP TABLE` DLL il supporto per gli articoli che fanno parte della replica transazionale. Questo è il **predefinito** valore per questa proprietà.|
 |**NULL** (impostazione predefinita)||Restituisce l'elenco di valori supportati per *proprietà*.|  
   
-[  **@force_invalidate_snapshot =** ] *force_invalidate_snapshot*  
- Segnala che l'azione eseguita da questa stored procedure potrebbe invalidare uno snapshot esistente. *force_invalidate_snapshot* è un **bit**, il valore predefinito è **0**.  
+`[ @force_invalidate_snapshot = ] force_invalidate_snapshot` Segnala che l'azione eseguita da questa stored procedure potrebbe invalidare uno snapshot esistente. *force_invalidate_snapshot* è un **bit**, il valore predefinito è **0**.  
   - **0** specifica che le modifiche apportate all'articolo non invalidano lo snapshot non è valido. Se la stored procedure rileva che la modifica richiede un nuovo snapshot, viene generato un errore e non viene apportata alcuna modifica.  
   - **1** specifica che le modifiche apportate all'articolo possono invalidare lo snapshot non è valido. Se alcune sottoscrizioni esistenti richiedono un nuovo snapshot, questo valore consente di contrassegnare lo snapshot esistente come obsoleto e di generarne uno nuovo.   
 Per informazioni sulle proprietà che richiedono la generazione di un nuovo snapshot quando vengono modificate, vedere la sezione Osservazioni.  
@@ -130,8 +126,7 @@ Per informazioni sulle proprietà che richiedono la generazione di un nuovo snap
   - **0** specifica che le modifiche apportate all'articolo non causano la reinizializzazione della sottoscrizione. Se la stored procedure rileva che la modifica richiede la reinizializzazione delle sottoscrizioni esistenti, viene generato un errore e non viene apportata alcuna modifica.  
   - **1** specifica che le modifiche apportate all'articolo causano la sottoscrizione esistente per la reinizializzazione e concede l'autorizzazione per la reinizializzazione della sottoscrizione.  
   
-[ **@publisher**  =] **'**_editore_**'**  
- Specifica un non - [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] server di pubblicazione. *server di pubblicazione* viene **sysname**, con un valore predefinito è NULL.  
+`[ @publisher = ] 'publisher'` Specifica un non - [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] server di pubblicazione. *server di pubblicazione* viene **sysname**, con un valore predefinito è NULL.  
   
   > [!NOTE]  
   >  *server di pubblicazione* non deve essere utilizzata quando si modificano le proprietà degli articoli in una [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] server di pubblicazione.  

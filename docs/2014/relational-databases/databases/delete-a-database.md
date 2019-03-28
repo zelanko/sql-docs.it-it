@@ -17,12 +17,12 @@ ms.assetid: 1fd8c0f5-03e1-449a-af45-b8cacb479d9c
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 0d0abed3b23b563c6b2620ad93d3f59d58bebd67
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: ffda3be2194b26b46f9633c3bdf76d60d36ce73c
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52789044"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58538543"
 ---
 # <a name="delete-a-database"></a>Eliminare un database
   In questo argomento si descrive come eliminare un database definito dall'utente in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] di [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] utilizzando [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)].  
@@ -67,7 +67,7 @@ ms.locfileid: "52789044"
   
 ###  <a name="Security"></a> Sicurezza  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> Autorizzazioni  
  Per eseguire DROP DATABASE, un utente deve disporre almeno dell'autorizzazione CONTROL per il database.  
   
 ##  <a name="SSMSProcedure"></a> Utilizzo di SQL Server Management Studio  
@@ -88,9 +88,9 @@ ms.locfileid: "52789044"
   
 2.  Dalla barra Standard fare clic su **Nuova query**.  
   
-3.  Copiare e incollare l'esempio seguente nella finestra delle query e fare clic su **Esegui**. Nell'esempio si rimuovono i database `Sales` e `NewSales` .  
+3.  Copiare e incollare l'esempio seguente nella finestra Query, quindi fare clic su **Esegui**. Nell'esempio si rimuovono i database `Sales` e `NewSales` .  
   
-```tsql  
+```sql  
 USE master ;  
 GO  
 DROP DATABASE Sales, NewSales ;  

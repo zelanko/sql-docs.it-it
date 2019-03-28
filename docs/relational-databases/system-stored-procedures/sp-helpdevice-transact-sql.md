@@ -18,12 +18,12 @@ ms.assetid: 1a5eafa7-384e-4691-ba05-978eb73bbefb
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 3ec03794e60027ea578988dbe38855d8ad14cb09
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: c856e11b55040bf699eace2fb1f917f058c2fc9a
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47596799"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58536373"
 ---
 # <a name="sphelpdevice-transact-sql"></a>sp_helpdevice (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -43,15 +43,14 @@ sp_helpdevice [ [ @devname = ] 'name' ]
 ```  
   
 ## <a name="arguments"></a>Argomenti  
- [  **@devname =** ] **'***nome***'**  
- Nome del dispositivo di backup per il quale vengono visualizzate le informazioni. Il valore di *name* è sempre **sysname**.  
+`[ @devname = ] 'name'` È il nome del dispositivo di backup per il quale vengono restituite informazioni. Il valore di *name* è sempre **sysname**.  
   
 ## <a name="return-code-values"></a>Valori restituiti  
  0 (esito positivo) o 1 (esito negativo)  
   
 ## <a name="result-sets"></a>Set di risultati  
   
-|Nome colonna|Tipo di dati|Description|  
+|Nome colonna|Tipo di dati|Descrizione|  
 |-----------------|---------------|-----------------|  
 |**device_name**|**sysname**|Nome logico del dispositivo.|  
 |**physical_name**|**nvarchar(260)**|Nome fisico del file.|  

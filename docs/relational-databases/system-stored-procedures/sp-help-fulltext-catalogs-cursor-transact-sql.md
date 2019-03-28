@@ -19,12 +19,12 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 53c4b27fe3907b4098f5b4ef1bcce83eec416ddd
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 459536c3e7e97b98605f3322a3c7eb78db11b98f
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47702249"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58535593"
 ---
 # <a name="sphelpfulltextcatalogscursor-transact-sql"></a>sp_help_fulltext_catalogs_cursor (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -45,21 +45,19 @@ sp_help_fulltext_catalogs_cursor [ @cursor_return= ] @cursor_variable OUTPUT ,
 ```  
   
 ## <a name="arguments"></a>Argomenti  
- [ **@cursor_return=**] *@cursor_variable* **OUTPUT**  
- Variabile di output di tipo **cursore**. Il cursore restituito è di tipo scorrevole, dinamico e di sola lettura.  
+`[ @cursor_return = ] @cursor_variable OUTPUT` Variabile di output di tipo **cursore**. Il cursore restituito è di tipo scorrevole, dinamico e di sola lettura.  
   
- [  **@fulltext_catalog_name=**] **'***fulltext_catalog_name***'**  
- Nome del catalogo full-text. *fulltext_catalog_name* viene **sysname**. Se questo parametro viene omesso oppure è NULL, vengono restituite informazioni su tutti i cataloghi full-text associati al database corrente.  
+`[ @fulltext_catalog_name = ] 'fulltext_catalog_name'` È il nome del catalogo full-text. *fulltext_catalog_name* viene **sysname**. Se questo parametro viene omesso oppure è NULL, vengono restituite informazioni su tutti i cataloghi full-text associati al database corrente.  
   
 ## <a name="return-code-values"></a>Valori restituiti  
  0 (esito positivo) o 1 (esito negativo)  
   
 ## <a name="result-sets"></a>Set di risultati  
   
-|Nome colonna|Tipo di dati|Description|  
+|Nome colonna|Tipo di dati|Descrizione|  
 |-----------------|---------------|-----------------|  
 |**fulltext_catalog_id**|**smallint**|ID del catalogo full-text.|  
-|**NOME**|**sysname**|Nome del catalogo full-text.|  
+|**NAME**|**sysname**|Nome del catalogo full-text.|  
 |**PATH**|**nvarchar(260)**|A partire da [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], questa clausola non ha alcun effetto.|  
 |**STATO**|**int**|Stato di popolamento dell'indice full-text del catalogo:<br /><br /> 0 = inattivo<br /><br /> 1 = popolamento completo in corso<br /><br /> 2 = sospeso<br /><br /> 3 = rallentato<br /><br /> 4 = Recupero in corso<br /><br /> 5 = Chiusura<br /><br /> 6= popolamento incrementale in corso<br /><br /> 7 = compilazione dell'indice in corso<br /><br /> 8 = disco pieno Paused<br /><br /> 9 = rilevamento modifiche|  
 |**NUMBER_FULLTEXT_TABLES**|**int**|Numero di tabelle indicizzate full-text associate al catalogo|  

@@ -18,12 +18,12 @@ ms.assetid: cbdfea38-9e42-47f3-8fc8-5978b82e2623
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 5fd6986a245d960a96592c8c63c9744b741fa5ff
-ms.sourcegitcommit: 08b3de02475314c07a82a88c77926d226098e23f
+ms.openlocfilehash: c12e078505c8049511e59973c26d6a1417c7eae0
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49119688"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58537853"
 ---
 # <a name="spupdatejob-transact-sql"></a>sp_update_job (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -57,65 +57,48 @@ sp_update_job [ @job_id =] job_id | [@job_name =] 'job_name'
 ```  
   
 ## <a name="arguments"></a>Argomenti  
- [ **@job_id =**] *job_id*  
- Numero di identificazione del processo da aggiornare. *job_id*viene **uniqueidentifier**.  
+`[ @job_id = ] job_id` Il numero di identificazione del processo da aggiornare. *job_id*is **uniqueidentifier**.  
   
- [ **@job_name =**] **'***job_name***'**  
- Nome del processo. *nome_processo* viene **nvarchar (128)**.  
+`[ @job_name = ] 'job_name'` Il nome del processo. *nome_processo* viene **nvarchar (128)**.  
   
-> **Nota:** entrambe *job_id* oppure *job_name* deve essere specificato ma non è possibile specificarli entrambi.  
+> **NOTA:** Entrambi *job_id* oppure *job_name* deve essere specificato ma non è possibile specificarli entrambi.  
   
- [ **@new_name =**] **'***new_name***'**  
- Nuovo nome del processo. *new_name* viene **nvarchar (128)**.  
+`[ @new_name = ] 'new_name'` Il nuovo nome per il processo. *new_name* viene **nvarchar (128)**.  
   
- [  **@enabled =**] *abilitata*  
- Specifica se il processo è abilitato (**1**) o non abilitato (**0**). *abilitata* viene **tinyint**.  
+`[ @enabled = ] enabled` Specifica se il processo è abilitato (**1**) o non abilitato (**0**). *abilitata* viene **tinyint**.  
   
- [  **@description =**] **'***descrizione***'**  
- Descrizione del processo. *Descrizione* viene **nvarchar(512)**.  
+`[ @description = ] 'description'` La descrizione del processo. *Descrizione* viene **nvarchar(512)**.  
   
- [ **@start_step_id =**] *step_id*  
- Numero di identificazione del primo passaggio da eseguire per il processo. *step_id* viene **int**.  
+`[ @start_step_id = ] step_id` Il numero di identificazione del primo passaggio da eseguire per il processo. *step_id* viene **int**.  
   
- [  **@category_name =**] **'***categoria***'**  
- Categoria del processo. *categoria* viene **nvarchar (128)**.  
+`[ @category_name = ] 'category'` La categoria del processo. *category* is **nvarchar(128)**.  
   
- [  **@owner_login_name =**] **'***account di accesso***'**  
- Nome dell'account di accesso proprietario del processo. *account di accesso* viene **nvarchar (128)** solo i membri del **sysadmin** ruolo predefinito del server è possibile modificare la proprietà dei processi.  
+`[ @owner_login_name = ] 'login'` Il nome dell'account di accesso proprietario del processo. *account di accesso* viene **nvarchar (128)** solo i membri del **sysadmin** ruolo predefinito del server è possibile modificare la proprietà dei processi.  
   
- [  **@notify_level_eventlog =**] *eventlog_level*  
- Viene specificato quando inserire una voce per il processo nel registro applicazioni di Microsoft Windows. *eventlog_level*viene **int**, i possibili valori sono i seguenti.  
+`[ @notify_level_eventlog = ] eventlog_level` Specifica quando inserire una voce nel registro applicazioni di Microsoft Windows per questo processo. *eventlog_level*viene **int**, i possibili valori sono i seguenti.  
   
-|valore|Descrizione (azione)|  
+|Value|Descrizione (azione)|  
 |-----------|----------------------------|  
 |**0**|Never|  
 |**1**|In caso di esito positivo|  
 |**2**|In caso di esito negativo|  
 |**3**|Always|  
   
- [  **@notify_level_email =**] *email_level*  
- Viene specificato quando inviare un messaggio di posta elettronica al termine del processo. *email_level*viene **int**. *email_level*Usa gli stessi valori *eventlog_level*.  
+`[ @notify_level_email = ] email_level` Specifica quando inviare un messaggio di posta elettronica al termine del processo. *email_level*viene **int**. *email_level*Usa gli stessi valori *eventlog_level*.  
   
- [ **@notify_level_netsend =**] *netsend_level*  
- Viene specificato quando inviare un messaggio di rete al termine del processo. *netsend_level*viene **int**. *netsend_level*Usa gli stessi valori *eventlog_level*.  
+`[ @notify_level_netsend = ] netsend_level` Specifica quando inviare un messaggio di rete al termine del processo. *netsend_level*viene **int**. *netsend_level*Usa gli stessi valori *eventlog_level*.  
   
- [  **@notify_level_page =**] *page_level*  
- Viene specificato quando inviare una pagina al termine del processo. *page_level* viene **int**. *page_level*Usa gli stessi valori *eventlog_level*.  
+`[ @notify_level_page = ] page_level` Specifica quando inviare una pagina al termine del processo. *page_level* viene **int**. *page_level*Usa gli stessi valori *eventlog_level*.  
   
- [  **@notify_email_operator_name =**] **'***nome_operatore***'**  
- Il nome dell'operatore a cui viene inviato il messaggio di posta elettronica quando *email_level* viene raggiunto. *nome_posta_elettronica* viene **nvarchar (128)**.  
+`[ @notify_email_operator_name = ] 'operator_name'` Il nome dell'operatore a cui viene inviato il messaggio di posta elettronica quando *email_level* viene raggiunto. *nome_posta_elettronica* viene **nvarchar (128)**.  
   
- [  **@notify_netsend_operator_name =**] **'***netsend_operator***'**  
- Nome dell'operatore a cui viene inviato il messaggio di rete. *netsend_operator* viene **nvarchar (128)**.  
+`[ @notify_netsend_operator_name = ] 'netsend_operator'` Il nome dell'operatore a cui viene inviato il messaggio di rete. *netsend_operator* is **nvarchar(128)**.  
   
- [  **@notify_page_operator_name =**] **'***page_operator***'**  
- Nome dell'operatore a cui viene inviata una pagina. *page_operator* viene **nvarchar (128)**.  
+`[ @notify_page_operator_name = ] 'page_operator'` Il nome dell'operatore a cui viene inviata una pagina. *page_operator* viene **nvarchar (128)**.  
   
- [  **@delete_level =**] *i possibili*  
- Specifica quando eliminare il processo. *delete_value*viene **int**. *i possibili*Usa gli stessi valori *eventlog_level*.  
+`[ @delete_level = ] delete_level` Specifica quando eliminare il processo. *delete_value*viene **int**. *i possibili*Usa gli stessi valori *eventlog_level*.  
   
- [  **@automatic_post =**] *automatic_post*  
- Riservato.  
+`[ @automatic_post = ] automatic_post` Riservato.  
   
 ## <a name="return-code-values"></a>Valori restituiti  
  **0** (esito positivo) o **1** (errore)  

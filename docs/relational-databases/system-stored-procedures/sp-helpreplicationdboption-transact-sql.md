@@ -16,12 +16,12 @@ ms.assetid: 143ce689-108b-49d7-9892-fd3a86897f38
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 29fcbe7f5e7b2b7e72c88390df9d5fe20c0f7352
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: a56e8cb4531fbe48e2a66242d23406d6d647573c
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52812033"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58536703"
 ---
 # <a name="sphelpreplicationdboption-transact-sql"></a>sp_helpreplicationdboption (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -40,20 +40,17 @@ sp_helpreplicationdboption [ [ @dbname =] 'dbname' ]
 ```  
   
 ## <a name="arguments"></a>Argomenti  
- [  **@dbname=**] **'***dbname***'**  
- Nome del database. *dbname* viene **sysname**, il valore predefinito è **%**. Se **%**, quindi il set di risultati contiene tutti i database nel server di pubblicazione, in caso contrario, sole nel database specificato vengono restituite informazioni. Non vengono restituite informazioni per gli eventuali database per cui l'utente non dispone delle autorizzazioni appropriate, come indicato di seguito.  
+`[ @dbname = ] 'dbname'` È il nome del database. *dbname* viene **sysname**, il valore predefinito è **%**. Se **%**, quindi il set di risultati contiene tutti i database nel server di pubblicazione, in caso contrario, sole nel database specificato vengono restituite informazioni. Non vengono restituite informazioni per gli eventuali database per cui l'utente non dispone delle autorizzazioni appropriate, come indicato di seguito.  
   
- [  **@type=**] **'***tipo***'**  
- Limita il set di risultati al database in cui l'opzione di replica specificato *tipo* valore è stato abilitato. *tipo di* viene **sysname**, e può essere uno dei valori seguenti.  
+`[ @type = ] 'type'` Limita il set di risultati al database in cui l'opzione di replica specificato *tipo* valore è stato abilitato. *tipo di* viene **sysname**, e può essere uno dei valori seguenti.  
   
 |Value|Descrizione|  
 |-----------|-----------------|  
-|**pubblicare**|È consentita la replica transazionale.|  
+|**publish**|È consentita la replica transazionale.|  
 |**pubblicazione di tipo merge**|È consentita la replica di tipo merge.|  
 |**è consentita la replica** (impostazione predefinita)|È consentita la replica transazionale o la replica di tipo merge.|  
   
- [  **@reserved=** ] *riservato*  
- Specifica se vengono restituite informazioni sulle pubblicazioni e sulle sottoscrizioni esistenti. *riservato* viene **bit**, valore predefinito pari a 0. Se **1**, il set di risultati include informazioni sul fatto che il database specificato ha eventuali pubblicazioni o sottoscrizioni esistenti.  
+`[ @reserved = ] reserved` Specifica se vengono restituite informazioni sulle pubblicazioni e sottoscrizioni esistenti. *riservato* viene **bit**, valore predefinito pari a 0. Se **1**, il set di risultati include informazioni sul fatto che il database specificato ha eventuali pubblicazioni o sottoscrizioni esistenti.  
   
 ## <a name="result-sets"></a>Set di risultati  
   
@@ -64,7 +61,7 @@ sp_helpreplicationdboption [ [ @dbname =] 'dbname' ]
 |**transpublish**|**bit**|Se il database è stato abilitato per la pubblicazione snapshot o transazionale; dove il valore **1** significa che è abilitata la pubblicazione transazionale o snapshot.|  
 |**mergepublish**|**bit**|Se il database è stato abilitato per l'unione di pubblicazione; dove il valore **1** significa che la pubblicazione di tipo merge è abilitata.|  
 |**dbowner**|**bit**|Se l'utente è membro del **db_owner** dove il valore del ruolo predefinito del database; **1** indica che l'utente è un membro di questo ruolo.|  
-|**dbReadOnly**|**bit**|È se il database è contrassegnato come sola lettura. dove il valore **1** significa che il database è di sola lettura.|  
+|**dbreadonly**|**bit**|È se il database è contrassegnato come sola lettura. dove il valore **1** significa che il database è di sola lettura.|  
 |**haspublications**|**bit**|È se il database presenta pubblicazioni esistenti dove il valore **1** significa che non esistono pubblicazioni esistenti.|  
 |**haspullsubscriptions**|**bit**|Se il database dispone di tutte le sottoscrizioni pull esistenti; dove il valore **1** significa che sono presenti sottoscrizioni pull.|  
   

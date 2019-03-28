@@ -16,12 +16,12 @@ ms.assetid: a012a32f-6f26-45bf-8046-b51cd7fec455
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: d3c8037bdccc0b04e2c11399f09e5a99c109df65
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: 429a0c439f5257989e6fb7e85d34a8ea576ad41a
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54134111"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58526993"
 ---
 # <a name="spcopysnapshot-transact-sql"></a>sp_copysnapshot (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -40,17 +40,13 @@ sp_copysnapshot [ @publication = ] 'publication', [ @destination_folder = ] 'des
 ```  
   
 ## <a name="arguments"></a>Argomenti  
- [  **@publication=**] **'**_pubblicazione_**'**  
- Nome della pubblicazione di cui si desidera copiare la cartella snapshot. *pubblicazione* viene **sysname**, non prevede alcun valore predefinito.  
+`[ @publication = ] 'publication'` È il nome della pubblicazione il cui contenuto snapshot devono essere copiati. *pubblicazione* viene **sysname**, non prevede alcun valore predefinito.  
   
- [  **@destination_folder=**] **'**_destination_folder_**'**  
- Nome della cartella in cui si desidera copiare il contenuto della cartella snapshot della pubblicazione. *destination_folder*viene **nvarchar(255**, non prevede alcun valore predefinito. Il *destination_folder* può essere un percorso alternativo, ad esempio in un altro server, in un'unità di rete o su supporti rimovibili (ad esempio CD-ROM o un disco rimovibile).  
+`[ @destination_folder = ] 'destination_folder'` È il nome della cartella in cui si desidera copiare il contenuto dello snapshot di pubblicazione. *destination_folder*viene **nvarchar(255**, non prevede alcun valore predefinito. Il *destination_folder* può essere un percorso alternativo, ad esempio in un altro server, in un'unità di rete o su supporti rimovibili (ad esempio CD-ROM o un disco rimovibile).  
   
- [  **@subscriber=**] **'**_sottoscrittore_**'**  
- Nome del Sottoscrittore. *Sottoscrittore* is sysname con valore predefinito è NULL.  
+`[ @subscriber = ] 'subscriber'` È il nome del sottoscrittore. *Sottoscrittore* is sysname con valore predefinito è NULL.  
   
- [  **@subscriber_db=**] **'**_subscriber_db_**'**  
- Nome del database di sottoscrizione. *subscriber_db* is sysname con valore predefinito è NULL.  
+`[ @subscriber_db = ] 'subscriber_db'` È il nome del database di sottoscrizione. *subscriber_db* is sysname con valore predefinito è NULL.  
   
 ## <a name="return-code-values"></a>Valori restituiti  
  **0** (esito positivo) o **1** (errore)  

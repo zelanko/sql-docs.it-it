@@ -10,12 +10,12 @@ ms.assetid: e365e9ca-c34b-44ae-840c-10e599fa614f
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: aced288e62fefe46777993fd46130b8dd65e8d1b
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 26f0193d40a01858bc3fe651a23b389a4ffcb6ea
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52510016"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58527793"
 ---
 # <a name="guidelines-for-transaction-isolation-levels-with-memory-optimized-tables"></a>Linee guida per i livelli di isolamento delle transazioni con tabelle con ottimizzazione per la memoria
   In molti scenari è necessario specificare il livello di isolamento. L'isolamento delle transazioni per le tabelle ottimizzate per la memoria è diverso dalle tabelle basate su disco.  
@@ -62,7 +62,7 @@ ms.locfileid: "52510016"
   
  Nell'esempio di transazione in modalità autocommit seguente viene illustrato un join tra una tabella Customers ottimizzata per la memoria e una tabella normale [Order History], come parte di un batch ad hoc:  
   
-```tsql  
+```sql  
 SET TRANSACTION ISOLATION LEVEL READ COMMITTED;  
 GO  
 SELECT *   
@@ -73,7 +73,7 @@ LEFT JOIN dbo.[Order History] AS oh
   
  Nell'esempio di transazioni esplicite o implicite riportato di seguito viene illustrato lo stesso join, ma questa volta a una transazione utente esplicita. L'accesso alla tabella ottimizzata per la memoria Customers viene effettuato nel livello di isolamento SNAPSHOT, come indicato tramite l'hint di tabella WITH (SNAPSHOT), mentre l'accesso alla tabella normale [Order History] viene effettuato con il livello di isolamento READ COMMITTED:  
   
-```tsql  
+```sql  
 SET TRANSACTION ISOLATION LEVEL READ COMMITTED  
 GO  
 BEGIN TRAN  
@@ -105,7 +105,7 @@ COMMIT
   
  Si noti che la logica di polling deve essere all'esterno dell'ambito della transazione, poiché utilizza l'isolamento Snapshot per accedere alla tabella t1. L'utilizzo della logica di polling all'interno dell'ambito di una transazione crea una transazione con esecuzione prolungata, quindi è sconsigliata.  
   
-```tsql  
+```sql  
 -- poll table  
 WHILE NOT EXISTS (SELECT 1 FROM dbo.t1)  
 BEGIN   

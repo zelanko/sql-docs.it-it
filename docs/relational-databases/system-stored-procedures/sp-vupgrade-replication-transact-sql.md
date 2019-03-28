@@ -16,12 +16,12 @@ ms.assetid: d2c0ed66-07d1-4adc-82e5-a654376879bc
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 0e21e07cb9c81b65cccafda2e938057cd16f96b4
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: 096674359a553eb886f5241f60f265c9961647d1
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54124411"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58527443"
 ---
 # <a name="spvupgradereplication-transact-sql"></a>sp_vupgrade_replication (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -42,28 +42,23 @@ sp_vupgrade_replication [ [@login=] 'login' ]
 ```  
   
 ## <a name="arguments"></a>Argomenti  
- [  **@login=**] **'**_account di accesso_**'**  
- Account di accesso dell'amministratore di sistema da utilizzare per la creazione di nuovi oggetti di sistema nel database di distribuzione. *login* è di tipo **sysname** e il valore predefinito è NULL. Questo parametro non è obbligatorio se *security_mode* è impostata su **1**, ovvero l'autenticazione di Windows.  
+`[ @login = ] 'login'` È l'account di accesso amministratore del sistema da utilizzare durante la creazione di nuovi oggetti di sistema nel database di distribuzione. *login* è di tipo **sysname** e il valore predefinito è NULL. Questo parametro non è obbligatorio se *security_mode* è impostata su **1**, ovvero l'autenticazione di Windows.  
   
 > [!NOTE]  
 >  Questo parametro viene ignorato quando si esegue l'aggiornamento a [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] e versioni successive.  
   
- [  **@password=**] **'**_password_**'**  
- Password dell'amministratore di sistema da utilizzare per la creazione di nuovi oggetti di sistema nel database di distribuzione. *la password* viene **sysname**, il valore predefinito è **'** (stringa vuota). Questo parametro non è obbligatorio se *security_mode* è impostata su **1**, ovvero l'autenticazione di Windows.  
+`[ @password = ] 'password'` È la password di amministratore di sistema da utilizzare durante la creazione di nuovi oggetti di sistema nel database di distribuzione. *la password* viene **sysname**, il valore predefinito è **'** (stringa vuota). Questo parametro non è obbligatorio se *security_mode* è impostata su **1**, ovvero l'autenticazione di Windows.  
   
 > [!NOTE]  
 >  Questo parametro viene ignorato quando si esegue l'aggiornamento a [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] e versioni successive.  
   
- [  **@ver_old=**] **'**_old_version_**'**  
- [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
+`[ @ver_old = ] 'old_version'` [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
   
  Questa stored procedure è deprecata e verrà rimossa a partire da una delle prossime versioni di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
- [  **@force_remove=**] **'**_force_removal_**'**  
- [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
+`[ @force_remove = ] 'force_removal'` [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
   
- [  **@security_mode=**] **'**_security_mode_**'**  
- Modalità di sicurezza di accesso da utilizzare per la creazione di nuovi oggetti di sistema nel database di distribuzione. *security_mode* viene **bit** con valore predefinito è **0**. Se **0**, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] verrà utilizzata l'autenticazione. Se **1**, verrà utilizzata l'autenticazione di Windows.  
+`[ @security_mode = ] 'security_mode'` È la modalità di sicurezza di account di accesso da utilizzare durante la creazione di nuovi oggetti di sistema nel database di distribuzione. *security_mode* viene **bit** con valore predefinito è **0**. Se **0**, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] verrà utilizzata l'autenticazione. Se **1**, verrà utilizzata l'autenticazione di Windows.  
   
 > [!NOTE]  
 >  Questo parametro viene ignorato quando si esegue l'aggiornamento a [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] e versioni successive.  

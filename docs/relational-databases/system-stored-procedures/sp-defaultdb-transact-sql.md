@@ -18,12 +18,12 @@ ms.assetid: 663b859f-c6da-4942-95a6-60b93d05654e
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 65b9187c5b3f0ba05301bb944ee2ddc8a78c4866
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: cc9703b4310870105d3a0961c430699449da7ff3
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47625049"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58532983"
 ---
 # <a name="spdefaultdb-transact-sql"></a>sp_defaultdb (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -43,11 +43,9 @@ sp_defaultdb [ @loginame = ] 'login', [ @defdb = ] 'database'
 ```  
   
 ## <a name="arguments"></a>Argomenti  
- [  **@loginame=**] **'***account di accesso***'**  
- Nome dell'account di accesso. *account di accesso* viene **sysname**, non prevede alcun valore predefinito. *account di accesso* può essere un oggetto esistente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] account di accesso o un utente di Windows o un gruppo. Se un account di accesso per l'utente o il gruppo di Windows non esiste in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], ne verrà automaticamente creato uno.  
+`[ @loginame = ] 'login'` È il nome di account di accesso. *account di accesso* viene **sysname**, non prevede alcun valore predefinito. *account di accesso* può essere un oggetto esistente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] account di accesso o un utente di Windows o un gruppo. Se un account di accesso per l'utente o il gruppo di Windows non esiste in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], ne verrà automaticamente creato uno.  
   
- [  **@defdb=**] **'***database***'**  
- Nome del nuovo database predefinito. *database* viene **sysname**, non prevede alcun valore predefinito. *database* deve esistere già.  
+`[ @defdb = ] 'database'` È il nome del nuovo database predefinito. *database* viene **sysname**, non prevede alcun valore predefinito. *database* deve esistere già.  
   
 ## <a name="return-code-values"></a>Valori restituiti  
  0 (esito positivo) o 1 (esito negativo)  

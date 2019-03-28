@@ -18,12 +18,12 @@ ms.assetid: 9a1fc335-1bef-4638-a33a-771c54a5dd19
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 409dec92a6dbfe9c4dd2c8cef1d81b2aa7f21d91
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: a66591f5cc2eefcf60a9ea9b0a584a61c215df85
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52536368"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58537573"
 ---
 # <a name="spdetachschedule-transact-sql"></a>sp_detach_schedule (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -43,26 +43,21 @@ sp_detach_schedule
 ```  
   
 ## <a name="arguments"></a>Argomenti  
- [ **@job_id=** ] *job_id*  
- Numero di identificazione del processo da cui eliminare la pianificazione. *job_id* viene **uniqueidentifier**, con un valore predefinito è NULL.  
+`[ @job_id = ] job_id` Numero di identificazione del processo da cui eliminare la pianificazione. *job_id* viene **uniqueidentifier**, con un valore predefinito è NULL.  
   
- [  **@job_name=** ] **'**_job_name_**'**  
- Nome del processo da cui eliminare la pianificazione. *nome_processo* viene **sysname**, con un valore predefinito è NULL.  
+`[ @job_name = ] 'job_name'` Il nome del processo da cui eliminare la pianificazione. *nome_processo* viene **sysname**, con un valore predefinito è NULL.  
   
 > [!NOTE]  
 >  Entrambi *job_id* oppure *job_name* devono essere specificati, ma non è possibile specificarli entrambi.  
   
- [  **@schedule_id=** ] *schedule_id*  
- Numero di identificazione della pianificazione da eliminare per il processo. *schedule_id* viene **int**, con un valore predefinito è NULL.  
+`[ @schedule_id = ] schedule_id` Il numero di identificazione della pianificazione della pianificazione da eliminare dal processo. *schedule_id* viene **int**, con un valore predefinito è NULL.  
   
- [  **@schedule_name=** ] **'**_schedule_name_**'**  
- Nome della pianificazione da eliminare dal processo. *schedule_name* viene **sysname**, con un valore predefinito è NULL.  
+`[ @schedule_name = ] 'schedule_name'` Il nome della pianificazione da eliminare dal processo. *schedule_name* viene **sysname**, con un valore predefinito è NULL.  
   
 > [!NOTE]  
 >  Entrambi *schedule_id* oppure *schedule_name* devono essere specificati, ma non è possibile specificarli entrambi.  
   
- [  **@delete_unused_schedule=** ] *delete_unused_schedule*  
- Specifica se eliminare le pianificazioni dei processi non utilizzate. *delete_unused_schedule* viene **bit**, il valore predefinito è **0**, a indicare che verranno mantenute tutte le pianificazioni, anche se vi fa riferimento alcun processo. Se impostato su **1**, pianificazioni di processi non utilizzate vengono eliminate se vi fa riferimento alcun processo.  
+`[ @delete_unused_schedule = ] delete_unused_schedule` Specifica se eliminare le pianificazioni dei processi. *delete_unused_schedule* viene **bit**, il valore predefinito è **0**, a indicare che verranno mantenute tutte le pianificazioni, anche se vi fa riferimento alcun processo. Se impostato su **1**, pianificazioni di processi non utilizzate vengono eliminate se vi fa riferimento alcun processo.  
   
 ## <a name="return-code-values"></a>Valori restituiti  
  **0** (esito positivo) o **1** (errore)  

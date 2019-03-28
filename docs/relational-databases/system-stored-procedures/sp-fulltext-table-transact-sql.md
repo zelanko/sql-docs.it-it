@@ -19,12 +19,12 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: =azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: ecf9b63dda28bd65912d606a69b1e188af713be9
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 340d50725a13da4993ade63d890f2300ba38763b
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47594361"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58527193"
 ---
 # <a name="spfulltexttable-transact-sql"></a>sp_fulltext_table (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-xxx-md.md)]
@@ -32,7 +32,7 @@ ms.locfileid: "47594361"
   Contrassegna una tabella per l'indicizzazione full-text oppure elimina tale contrassegno.  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] Uso [CREATE FULLTEXT INDEX](../../t-sql/statements/create-fulltext-index-transact-sql.md), [ALTER FULLTEXT INDEX](../../t-sql/statements/alter-fulltext-index-transact-sql.md), e [DROP FULLTEXT INDEX](../../t-sql/statements/drop-fulltext-index-transact-sql.md) invece.  
+>  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] Utilizzare in alternativa [CREATE FULLTEXT INDEX](../../t-sql/statements/create-fulltext-index-transact-sql.md), [ALTER FULLTEXT INDEX](../../t-sql/statements/alter-fulltext-index-transact-sql.md)e [DROP FULLTEXT INDEX](../../t-sql/statements/drop-fulltext-index-transact-sql.md) .  
   
  ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -50,13 +50,11 @@ sp_fulltext_table
 ```  
   
 ## <a name="arguments"></a>Argomenti  
- [  **@tabname=**] **'***qualified_table_name***'**  
- Nome della tabella composto da una o due parti. La tabella deve esistere nel database corrente *qualified_table_name* viene **nvarchar(517)**, non prevede alcun valore predefinito.  
+`[ @tabname = ] 'qualified_table_name'` È un nome di tabella di una o due parti. La tabella deve esistere nel database corrente *qualified_table_name* viene **nvarchar(517)**, non prevede alcun valore predefinito.  
   
- [  **@action=**] **'***azione***'**  
- Azione da eseguire. *azione* viene **nvarchar (50)** e non prevede alcun valore predefinito, i possibili valori sono i seguenti.  
+`[ @action = ] 'action'` È l'azione da eseguire. *azione* viene **nvarchar (50)** e non prevede alcun valore predefinito, i possibili valori sono i seguenti.  
   
-|valore|Description|  
+|Value|Descrizione|  
 |-----------|-----------------|  
 |**Creare**|Crea i metadati per un indice full-text per la tabella fa riferimento *qualified_table_name* e specifica che i dati dell'indice full-text per questa tabella devono trovarsi nel *fulltext_catalog_name*. Questa azione imposta inoltre l'utilizzo di *unique_index_name* come colonna chiave full-text. Questo indice univoco deve essere già presente e definito in una colonna della tabella.<br /><br /> Nella tabella sarà possibile eseguire una ricerca full-text solo dopo il popolamento del catalogo full-text.|  
 |**Drop**|Elimina i metadati dell'indice full-text per *qualified_table_name*. Se l'indice full-text è attivo, viene disattivato automaticamente prima dell'eliminazione. Non è necessario rimuovere le colonne prima di eliminare l'indice full-text.|  
@@ -71,11 +69,9 @@ sp_fulltext_table
 |**start_incremental**|Avvia un popolamento incrementale dell'indice full-text per la tabella.|  
 |**Arresta**|Arresta un popolamento completo o incrementale.|  
   
- [  **@ftcat=**] **'***fulltext_catalog_name***'**  
- È un nome di catalogo full-text esistente valido per un **creare** azione. Per tutte le altre azioni questo parametro deve essere NULL. *fulltext_catalog_name* viene **sysname**, con un valore predefinito è NULL.  
+`[ @ftcat = ] 'fulltext_catalog_name'` È un nome di catalogo full-text esistente valido per un **creare** azione. Per tutte le altre azioni questo parametro deve essere NULL. *fulltext_catalog_name* viene **sysname**, con un valore predefinito è NULL.  
   
- [  **@keyname=**] **'***unique_index_name***'**  
- È un indice valido che di colonna chiave singola, univoca nella *qualified_table_name* per una **creare** azione. Per tutte le altre azioni questo parametro deve essere NULL. *unique_index_name* viene **sysname**, con un valore predefinito è NULL.  
+`[ @keyname = ] 'unique_index_name'` È un indice valido che di colonna chiave singola, univoca nella *qualified_table_name* per una **creare** azione. Per tutte le altre azioni questo parametro deve essere NULL. *unique_index_name* viene **sysname**, con un valore predefinito è NULL.  
   
 ## <a name="return-code-values"></a>Valori restituiti  
  0 (esito positivo) o 1 (esito negativo)  
@@ -88,7 +84,7 @@ sp_fulltext_table
   
  Se la tabella viene riattivata e l'indice non viene ripopolato, l'indice precedente rimane disponibile per le query nelle colonne full-text attivate rimanenti, escluse quelle nuove. I dati provenienti da colonne eliminate vengono recuperati nelle query che specificano una ricerca su tutte le colonne full-text.  
   
- Dopo una tabella è stata definita per l'indicizzazione full-text, il passaggio di full-text colonna chiave univoca da un tipo a altro, la modifica del tipo di dati della colonna o modifica la chiave univoca full-text da una colonna a un altro, senza un popolamento completo può causare un errore durante una query successiva e restituire il messaggio di errore: "la conversione nel tipo *data_type* non è riuscita per il valore di chiave di ricerca full-text *key_value*." Per evitare questo problema, eliminare la definizione full-text per la tabella tramite il **drop** azione **sp_fulltext_table** e ridefinirla tramite **sp_fulltext_table** e**sp_fulltext_column**.  
+ Dopo avere definito una tabella per l'indicizzazione full-text, se si imposta un tipo di dati diverso nella colonna chiave univoca full-text tramite la modifica del tipo di dati della colonna o l'impostazione della chiave univoca full-text su un'altra colonna senza eseguire un popolamento completo, potrebbe verificarsi un errore durante le query successive. In questo caso viene visualizzato il messaggio di errore: "La conversione nel tipo *data_type* non è riuscita per il valore di chiave di ricerca full-text *key_value*." Per evitare questo problema, eliminare la definizione full-text per la tabella tramite il **drop** azione **sp_fulltext_table** e ridefinirla tramite **sp_fulltext_table** e**sp_fulltext_column**.  
   
  Il valore massimo definito per le dimensioni della colonna chiave full-text deve essere 900 byte. È consigliabile che le dimensioni della colonna chiave siano ridotte al massimo per motivi di prestazioni.  
   

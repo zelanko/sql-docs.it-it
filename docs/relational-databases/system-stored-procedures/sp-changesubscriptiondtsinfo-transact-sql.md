@@ -16,12 +16,12 @@ ms.assetid: 64fc085f-f81b-493b-b59a-ee6192d9736d
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 5e691c78e0ef0ddf775b5a23baa7dde1d96f72a9
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: f252d55a41def8e816e6e7843fb57574caacf385
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54129246"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58536063"
 ---
 # <a name="spchangesubscriptiondtsinfo-transact-sql"></a>sp_changesubscriptiondtsinfo (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -41,20 +41,16 @@ sp_changesubscriptiondtsinfo [ [ @job_id = ] job_id ]
 ```  
   
 ## <a name="arguments"></a>Argomenti  
- [  **@job_id=**] *job_id*  
- ID di processo dell'agente di distribuzione per la sottoscrizione push. *job_id* viene **varbinary(16)**, non prevede alcun valore predefinito. Per trovare l'ID di processo di distribuzione, eseguire **sp_helpsubscription** oppure **sp_helppullsubscription**.  
+`[ @job_id = ] job_id` È l'ID processo dell'agente di distribuzione per la sottoscrizione push. *job_id* viene **varbinary(16)**, non prevede alcun valore predefinito. Per trovare l'ID di processo di distribuzione, eseguire **sp_helpsubscription** oppure **sp_helppullsubscription**.  
   
- [ **@dts_package_name**=] **'**_dts_package_name_**'**  
- Nome del pacchetto DTS. *dts_package_name* è un **sysname**, con un valore predefinito è NULL. Ad esempio, specificare un pacchetto denominato **DTSPub_Package**, si specificherà `@dts_package_name = N'DTSPub_Package'`.  
+`[ @dts_package_name = ] 'dts_package_name'` Specifica il nome del pacchetto DTS. *dts_package_name* è un **sysname**, con un valore predefinito è NULL. Ad esempio, specificare un pacchetto denominato **DTSPub_Package**, si specificherà `@dts_package_name = N'DTSPub_Package'`.  
   
- [ **@dts_package_password**=] **'**_dts_package_password_**'**  
- Specifica la password per il pacchetto. *dts_package_password* viene **sysname** con valore predefinito è NULL, che indica che la proprietà della password deve rimanere invariata.  
+`[ @dts_package_password = ] 'dts_package_password'` Specifica la password del pacchetto. *dts_package_password* viene **sysname** con valore predefinito è NULL, che indica che la proprietà della password deve rimanere invariata.  
   
 > [!NOTE]  
 >  A ogni pacchetto DTS deve essere associata una password.  
   
- [ **@dts_package_location**=] **'**_dts_package_location_**'**  
- Specifica la posizione del pacchetto. *dts_package_location* è un **nvarchar (12)**, con un valore predefinito è NULL, che indica che il percorso del pacchetto rimane invariata. Il percorso del pacchetto può essere modificato da **distributore** oppure **sottoscrittore**.  
+`[ @dts_package_location = ] 'dts_package_location'` Specifica il percorso del pacchetto. *dts_package_location* è un **nvarchar (12)**, con un valore predefinito è NULL, che indica che il percorso del pacchetto rimane invariata. Il percorso del pacchetto può essere modificato da **distributore** oppure **sottoscrittore**.  
   
 ## <a name="return-code-values"></a>Valori restituiti  
  **0** (esito positivo) o **1** (errore)  

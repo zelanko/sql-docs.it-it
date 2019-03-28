@@ -18,12 +18,12 @@ ms.assetid: 850cef4e-6348-4439-8e79-fd1bca712091
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 522dcff230177b807299d1647e0333517f93d8bb
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: bca9c53780bb3258f73a274240c0bb5e63e126c3
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47728969"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58538463"
 ---
 # <a name="sphelpalert-transact-sql"></a>sp_help_alert (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -44,20 +44,15 @@ sp_help_alert [ [ @alert_name = ] 'alert_name' ]
 ```  
   
 ## <a name="arguments"></a>Argomenti  
- [  **@alert_name =**] **'***nome_avviso***'**  
- Nome dell'avviso. *nome_avviso* viene **nvarchar (128)**. Se *nome_avviso* viene omesso, vengono restituite informazioni su tutti gli avvisi.  
+`[ @alert_name = ] 'alert_name'` Il nome dell'avviso. *nome_avviso* viene **nvarchar (128)**. Se *nome_avviso* viene omesso, vengono restituite informazioni su tutti gli avvisi.  
   
- [  **@order_by =**] **'***order_by***'**  
- Criterio da applicare per l'ordinamento dei risultati. *order_by*viene **sysname**, con un valore predefinito è N' '*nome*'.  
+`[ @order_by = ] 'order_by'` L'ordinamento da usare per produrre i risultati. *order_by*viene **sysname**, con un valore predefinito è N' '*nome*'.  
   
- [ **@alert_id =**] *alert_id*  
- Numero di identificazione dell'avviso su cui si desidera ottenere informazioni. *alert_id*viene **int**, con un valore predefinito è NULL.  
+`[ @alert_id = ] alert_id` Il numero di identificazione dell'avviso per segnalare informazioni. *alert_id*viene **int**, con un valore predefinito è NULL.  
   
- [  **@category_name =**] **'***categoria***'**  
- Categoria dell'avviso. *categoria* viene **sysname**, con un valore predefinito è NULL.  
+`[ @category_name = ] 'category'` La categoria dell'avviso. *categoria* viene **sysname**, con un valore predefinito è NULL.  
   
- [ **@legacy_format**=] *legacy_format*  
- Indica se generare un set di risultati legacy. *legacy_format* viene **bit**, il valore predefinito è **0**. Quando *legacy_format* viene **1**, **sp_help_alert** restituisce il set di risultati restituito da **sp_help_alert** in Microsoft SQL Server 2000.  
+`[ @legacy_format = ] legacy_format` Indica se generare un set di risultati legacy. *legacy_format* viene **bit**, il valore predefinito è **0**. Quando *legacy_format* viene **1**, **sp_help_alert** restituisce il set di risultati restituito da **sp_help_alert** in Microsoft SQL Server 2000.  
   
 ## <a name="return-code-values"></a>Valori restituiti  
  **0** (esito positivo) o **1** (errore)  
@@ -65,11 +60,11 @@ sp_help_alert [ [ @alert_name = ] 'alert_name' ]
 ## <a name="result-sets"></a>Set di risultati  
  Quando **@legacy_format** viene **0**, **sp_help_alert** produce il set di risultati seguente.  
   
-|Nome colonna|Tipo di dati|Description|  
+|Nome colonna|Tipo di dati|Descrizione|  
 |-----------------|---------------|-----------------|  
 |**id**|**int**|Identificatore univoco di tipo integer assegnato dal sistema.|  
-|**name**|**sysname**|Nome dell'avviso (ad esempio Demo: Full **msdb** log).|  
-|**event_source**|**Nvarchar(100)**|Origine dell'evento. Sarà sempre **MSSQLServer** per [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] versione 7.0|  
+|**name**|**sysname**|Nome dell'avviso (ad esempio Demo: Completi **msdb** log).|  
+|**event_source**|**nvarchar(100)**|Origine dell'evento. Sarà sempre **MSSQLServer** per [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] versione 7.0|  
 |**event_category_id**|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**event_id**|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**message_id**|**int**|Numero dell'errore del messaggio che definisce l'avviso (In genere corrisponde a un numero di errore il **sysmessages** tabella). Se utilizzata per definire l'avviso, gravità **message_id** viene **0** o NULL.|  
@@ -83,7 +78,7 @@ sp_help_alert [ [ @alert_name = ] 'alert_name' ]
 |**notification_message**|**nvarchar(512)**|Messaggio aggiuntivo facoltativo inviato all'operatore come parte della notifica tramite posta elettronica o cercapersone.|  
 |**include_event_description**|**tinyint**|Indica se la descrizione dell'errore di SQL Server inclusa nel registro applicazioni di Microsoft Windows deve essere inserita nel messaggio di notifica.|  
 |**database_name**|**sysname**|Database in cui deve verificarsi l'errore affinché l'avviso venga generato. Se il nome del database è NULL, l'avviso viene generato indipendentemente dal database in cui l'errore si verifica.|  
-|**event_description_keyword**|**Nvarchar(100)**|Descrizione dell'errore di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] inclusa nel registro applicazioni di Windows, che deve corrispondere alla sequenza di caratteri specificata.|  
+|**event_description_keyword**|**nvarchar(100)**|Descrizione dell'errore di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] inclusa nel registro applicazioni di Windows, che deve corrispondere alla sequenza di caratteri specificata.|  
 |**occurrence_count**|**int**|Numero di volte che l'avviso è stato generato.|  
 |**count_reset_date**|**int**|Data la **numero_occorrenze** ultima reimpostazione.|  
 |**count_reset_time**|**int**|Ora il **numero_occorrenze** ultima reimpostazione.|  
@@ -99,11 +94,11 @@ sp_help_alert [ [ @alert_name = ] 'alert_name' ]
   
  Quando **@legacy_format** viene **1**, **sp_help_alert** produce il set di risultati seguente.  
   
-|Nome colonna|Tipo di dati|Description|  
+|Nome colonna|Tipo di dati|Descrizione|  
 |-----------------|---------------|-----------------|  
 |**id**|**int**|Identificatore univoco di tipo integer assegnato dal sistema.|  
-|**name**|**sysname**|Nome dell'avviso (ad esempio Demo: Full **msdb** log).|  
-|**event_source**|**Nvarchar(100)**|Origine dell'evento. Sarà sempre **MSSQLServer** per [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] versione 7.0|  
+|**name**|**sysname**|Nome dell'avviso (ad esempio Demo: Completi **msdb** log).|  
+|**event_source**|**nvarchar(100)**|Origine dell'evento. Sarà sempre **MSSQLServer** per [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] versione 7.0|  
 |**event_category_id**|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**event_id**|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**message_id**|**int**|Numero dell'errore del messaggio che definisce l'avviso (In genere corrisponde a un numero di errore il **sysmessages** tabella). Se utilizzata per definire l'avviso, gravità **message_id** viene **0** o NULL.|  
@@ -117,7 +112,7 @@ sp_help_alert [ [ @alert_name = ] 'alert_name' ]
 |**notification_message**|**nvarchar(512)**|Messaggio aggiuntivo facoltativo inviato all'operatore come parte della notifica tramite posta elettronica o cercapersone.|  
 |**include_event_description**|**tinyint**|Indica se la descrizione dell'errore di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] inclusa nel registro applicazioni di Windows deve essere inserita nel messaggio di notifica.|  
 |**database_name**|**sysname**|Database in cui deve verificarsi l'errore affinché l'avviso venga generato. Se il nome del database è NULL, l'avviso viene generato indipendentemente dal database in cui l'errore si verifica.|  
-|**event_description_keyword**|**Nvarchar(100)**|Descrizione dell'errore di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] inclusa nel registro applicazioni di Windows, che deve corrispondere alla sequenza di caratteri specificata.|  
+|**event_description_keyword**|**nvarchar(100)**|Descrizione dell'errore di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] inclusa nel registro applicazioni di Windows, che deve corrispondere alla sequenza di caratteri specificata.|  
 |**occurrence_count**|**int**|Numero di volte che l'avviso è stato generato.|  
 |**count_reset_date**|**int**|Data la **numero_occorrenze** ultima reimpostazione.|  
 |**count_reset_time**|**int**|Ora il **numero_occorrenze** ultima reimpostazione.|  

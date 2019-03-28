@@ -18,19 +18,19 @@ ms.assetid: e972a510-960e-41d6-93c5-c71cd581a585
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 9fac8fd56139b340df2a2c4cdcfc7376de02dcab
-ms.sourcegitcommit: fc6a6eedcea2d98c93e33d39c1cecd99fbc9a155
+ms.openlocfilehash: 3f842060c6ca621fc52fa34f08838541dc65e993
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49168851"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58535633"
 ---
 # <a name="sphelpmaintenanceplan-transact-sql"></a>sp_help_maintenance_plan (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Restituisce informazioni sul piano di manutenzione specificato. Se non è stato specificato alcun piano, vengono restituite informazioni su tutti i piani di manutenzione.  
   
-> **Nota:** questa stored procedure viene utilizzata con piani di manutenzione del database. Questa caratteristica è stata sostituita da piani di manutenzione che non utilizzano questa stored procedure. Utilizzare questa stored procedure per mantenere i piani di manutenzione del database nelle installazioni aggiornate da una versione precedente di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+> **NOTA:** Questa stored procedure viene utilizzata con piani di manutenzione del database. Questa caratteristica è stata sostituita da piani di manutenzione che non utilizzano questa stored procedure. Utilizzare questa stored procedure per mantenere i piani di manutenzione del database nelle installazioni aggiornate da una versione precedente di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]  
   
@@ -45,40 +45,39 @@ sp_help_maintenance_plan [ [ @plan_id = ] 'plan_id' ]
 ```  
   
 ## <a name="arguments"></a>Argomenti  
- [  **@plan_id =**] **'**_piano\_id_**'**  
- Viene specificato l'ID del piano di manutenzione. *plan_id* viene **UNIQUEIDENTIFIER**. Il valore predefinito è NULL.  
+`[ @plan_id = ] 'plan\_id'` Specifica l'ID del piano di manutenzione. *plan_id* viene **UNIQUEIDENTIFIER**. Il valore predefinito è NULL.  
   
 ## <a name="return-code-values"></a>Valori restituiti  
  None  
   
 ## <a name="result-sets"></a>Set di risultati  
- Se *plan_id* omette **sp_help_maintenance_plan** restituirà tre tabelle: piano, il Database e processi.  
+ Se *plan_id* omette **sp_help_maintenance_plan** restituirà tre tabelle: Piano, Database e processi.  
   
 ### <a name="plan-table"></a>Tabella relativa al piano  
   
-|Nome colonna|Tipo di dati|Description|  
+|Nome colonna|Tipo di dati|Descrizione|  
 |-----------------|---------------|-----------------|  
 |**plan_id**|**uniqueidentifier**|ID del piano di manutenzione.|  
 |**plan_name**|**sysname**|Nome del piano di manutenzione.|  
 |**date_created**|**datetime**|Data di creazione del piano di manutenzione.|  
-|**Proprietario**|**sysname**|Proprietario del piano di manutenzione.|  
+|**owner**|**sysname**|Proprietario del piano di manutenzione.|  
 |**max_history_rows**|**int**|Numero massimo di righe assegnate per la registrazione della cronologia del piano di manutenzione nella tabella di sistema.|  
 |**remote_history_server**|**int**|Nome del server remoto in cui è possibile scrivere il report della cronologia.|  
 |**max_remote_history_rows**|**int**|Numero massimo di righe assegnate nella tabella di sistema di un server remoto in cui è possibile scrivere il report della cronologia.|  
 |**user_defined_1**|**int**|Il valore predefinito è NULL.|  
-|**user_defined_2**|**Nvarchar(100)**|Il valore predefinito è NULL.|  
+|**user_defined_2**|**nvarchar(100)**|Il valore predefinito è NULL.|  
 |**user_defined_3**|**datetime**|Il valore predefinito è NULL.|  
 |**user_defined_4**|**uniqueidentifier**|Il valore predefinito è NULL.|  
   
 ### <a name="database-table"></a>Tabella relativa ai database  
   
-|Nome colonna|Description|  
+|Nome colonna|Descrizione|  
 |-----------------|-----------------|  
 |**database_name**|Nome di tutti i database associati al piano di manutenzione. *database_name* è di tipo **sysname**.|  
   
 ### <a name="job-table"></a>Tabella relativa ai processi  
   
-|Nome colonna|Description|  
+|Nome colonna|Descrizione|  
 |-----------------|-----------------|  
 |**job_id**|ID di tutti i processi associati al piano di manutenzione. *job_id* viene **uniqueidentifier**.|  
   

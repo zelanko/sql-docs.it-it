@@ -10,12 +10,12 @@ ms.assetid: 6d1ac280-87db-4bd8-ad43-54353647d8b5
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 56999c5e74648ecd36adea3ee941627c1e2e607b
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 42fe996b3521316279caf3fcf7adb3e155a83dbd
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53377901"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58536693"
 ---
 # <a name="determining-the-correct-bucket-count-for-hash-indexes"></a>Determinazione del numero di bucket corretto per gli indici hash
   È necessario specificare un valore per il parametro `BUCKET_COUNT` durante la creazione della tabella ottimizzata per la memoria. In questo argomento vengono fornite indicazioni per determinare il valore appropriato per il parametro `BUCKET_COUNT`. Se non è possibile determinare il numero di bucket corretto, utilizzare in alternativa un indice non cluster.  Un valore `BUCKET_COUNT` errato, in particolare se troppo basso, può influire in modo significativo sulle prestazioni del carico di lavoro e sul tempo di recupero del database. È consigliabile sovrastimare il numero di bucket.  
@@ -38,7 +38,7 @@ ms.locfileid: "53377901"
 ### <a name="primary-key-and-unique-indexes"></a>Chiave primaria e indici univoci  
  Poiché l'indice di chiave primaria è univoco, il numero di valori distinct nella chiave corrisponde al numero di righe nella tabella. Per un esempio di chiave primaria in (SalesOrderID, SalesOrderDetailID) nella tabella Sales.SalesOrderDetail del database AdventureWorks, eseguire la query seguente per calcolare il numero di valori di chiave primaria distinct, che corrisponde al numero di righe nella tabella:  
   
-```tsql  
+```sql  
 SELECT COUNT(*) AS [row count]   
 FROM Sales.SalesOrderDetail  
 ```  
@@ -48,7 +48,7 @@ FROM Sales.SalesOrderDetail
 ### <a name="non-unique-indexes"></a>Indici non univoci  
  Per altri indici, ad esempio un indice a più colonne in (SpecialOfferID, ProductID), eseguire la query seguente per determinare il numero di valori di chiave di indice univoci:  
   
-```tsql  
+```sql  
 SELECT COUNT(*) AS [SpecialOfferID_ProductID index key count]  
 FROM   
    (SELECT DISTINCT SpecialOfferID, ProductID   
@@ -65,7 +65,7 @@ FROM
 ## <a name="troubleshooting-the-bucket-count"></a>Risoluzione dei problemi relativi al numero di bucket  
  Per risolvere i problemi di conteggio dei bucket nelle tabelle ottimizzate per la memoria, usare [DM db_xtp_hash_index_stats &#40;Transact-SQL&#41; ](/sql/relational-databases/system-dynamic-management-views/sys-dm-db-xtp-hash-index-stats-transact-sql) per ottenere statistiche sui bucket vuoti e la lunghezza delle catene di righe. È possibile utilizzare la query seguente per ottenere statistiche su tutti gli indici hash nel database corrente. L'esecuzione della query può richiedere alcuni minuti se sono presenti tabelle di grandi dimensioni nel database.  
   
-```tsql  
+```sql  
 SELECT   
    object_name(hs.object_id) AS 'object name',   
    i.name as 'index name',   
@@ -99,7 +99,7 @@ FROM sys.dm_db_xtp_hash_index_stats AS hs
   
  Ad esempio, si considerino la tabella e lo script per inserire righe di esempio nella tabella riportati di seguito:  
   
-```tsql  
+```sql  
 CREATE TABLE [Sales].[SalesOrderHeader_test]  
 (  
    [SalesOrderID] [uniqueidentifier] NOT NULL DEFAULT (newid()),  

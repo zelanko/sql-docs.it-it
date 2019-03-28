@@ -11,15 +11,15 @@ helpviewer_keywords:
 - FOR XML clause, EXPLICIT mode
 - FOR XML EXPLICIT mode
 ms.assetid: 8b26e8ce-5465-4e7a-b237-98d0f4578ab1
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
-ms.openlocfilehash: e5972f4dfb9ad47b4017acf36df45098c11eceb2
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 8976b77bf0823c9735e6e6e67fc3159bcb54ecdf
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48086382"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58533033"
 ---
 # <a name="use-explicit-mode-with-for-xml"></a>Utilizzo della modalità EXPLICIT con FOR XML
   Come illustrato nell'argomento [Costruzione di codice XML tramite la clausola FOR XML](../xml/for-xml-sql-server.md), le modalità RAW e AUTO forniscono scarso controllo sulla forma del codice XML generato dai risultati della query. La modalità EXPLICIT tuttavia offre maggiore flessibilità nella generazione del codice XML desiderato dal risultato di una query.  
@@ -144,28 +144,28 @@ ElementName!TagNumber!AttributeName!Directive
   
  Se si specifica *AttributeName* il nome del tag viene sostituito dal nome specificato. In caso contrario, l'attributo viene aggiunto all'elenco corrente di attributi degli elementi che lo racchiudono inserendo il contenuto all'inizio dell'oggetto di contenimento senza codifica di entità. La colonna con questa direttiva deve essere di tipo testo, ad esempio **varchar**, **nvarchar**, **char**, **nchar**, **text**o **ntext**. Questa direttiva può essere usa solo con **hide**. Risulta particolarmente utile per il recupero dei dati di overflow archiviati in una colonna. Se il contenuto non è in un formato XML corretto, il funzionamento non è prevedibile.  
   
-## <a name="in-this-section"></a>Argomenti della sezione  
+## <a name="in-this-section"></a>In questa sezione  
  Negli esempi seguenti viene illustrato l'utilizzo della modalità EXPLICIT.  
   
--   [Esempio: Recupero di informazioni sui dipendenti](../xml/example-retrieving-employee-information.md)  
+-   [Esempio: Durante il recupero delle informazioni sui dipendenti](../xml/example-retrieving-employee-information.md)  
   
--   [Esempio: specifica della direttiva ELEMENT](../xml/example-specifying-the-element-directive.md)  
+-   [Esempio: Specifica della direttiva ELEMENT](../xml/example-specifying-the-element-directive.md)  
   
--   [Esempio: specifica della direttiva ELEMENTXSINIL](../xml/example-specifying-the-elementxsinil-directive.md)  
+-   [Esempio: Specifica della direttiva ELEMENTXSINIL](../xml/example-specifying-the-elementxsinil-directive.md)  
   
--   [Esempio: creazione di elementi di pari livello con la modalità EXPLICIT](../xml/example-constructing-siblings-with-explicit-mode.md)  
+-   [Esempio: Costruzione di elementi di pari livello con la modalità EXPLICIT](../xml/example-constructing-siblings-with-explicit-mode.md)  
   
--   [Esempio: specifica delle direttive ID e IDREF](../xml/example-specifying-the-id-and-idref-directives.md)  
+-   [Esempio: Specifica delle direttive ID e IDREF](../xml/example-specifying-the-id-and-idref-directives.md)  
   
--   [Esempio: specifica delle direttive ID e IDREFS](../xml/example-specifying-the-id-and-idrefs-directives.md)  
+-   [Esempio: Specifica delle direttive ID e IDREFS](../xml/example-specifying-the-id-and-idrefs-directives.md)  
   
--   [Esempio: specifica della direttiva HIDE](../xml/example-specifying-the-hide-directive.md)  
+-   [Esempio: Specifica della direttiva HIDE](../xml/example-specifying-the-hide-directive.md)  
   
--   [Esempio: specifica della direttiva ELEMENT e della codifica di entità](../xml/example-specifying-the-element-directive-and-entity-encoding.md)  
+-   [Esempio: Specifica la direttiva ELEMENT e della codifica di entità](../xml/example-specifying-the-element-directive-and-entity-encoding.md)  
   
--   [Esempio: specifica della direttiva CDATA](../xml/example-specifying-the-cdata-directive.md)  
+-   [Esempio: Specifica della direttiva CDATA](../xml/example-specifying-the-cdata-directive.md)  
   
--   [Esempio: specifica della direttiva XMLTEXT](../xml/example-specifying-the-xmltext-directive.md)  
+-   [Esempio: Specifica della direttiva XMLTEXT](../xml/example-specifying-the-xmltext-directive.md)  
   
 ## <a name="see-also"></a>Vedere anche  
  [Usare la modalità RAW con FOR XML](../xml/use-raw-mode-with-for-xml.md)   

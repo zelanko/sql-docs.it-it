@@ -16,12 +16,12 @@ ms.assetid: f775fa0f-28c7-4863-89ce-7bcfa1ab8b5e
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 3ad4b46cbf4c19b637bdc836e5c311321273de63
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 6f682400bc827d66878499b6e625671d5b9061da
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52769783"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58535644"
 ---
 # <a name="spmschangemergeagentproperties-transact-sql"></a>sp_MSchange_merge_agent_properties (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -44,26 +44,19 @@ sp_MSchange_merge_agent_properties [ @publisher = ] 'publisher'
 ```  
   
 ## <a name="arguments"></a>Argomenti  
- [ **@publisher** =] **'***publisher***'**  
- Nome del server di pubblicazione. *server di pubblicazione* viene **sysname**, non prevede alcun valore predefinito.  
+`[ @publisher = ] 'publisher'` È il nome del server di pubblicazione. *server di pubblicazione* viene **sysname**, non prevede alcun valore predefinito.  
   
- [  **@publisher_db=** ] **'***publisher_db***'**  
- Nome del database di pubblicazione. *publisher_db* viene **sysname**, non prevede alcun valore predefinito.  
+`[ @publisher_db = ] 'publisher_db'` È il nome del database di pubblicazione. *publisher_db* viene **sysname**, non prevede alcun valore predefinito.  
   
- [  **@publication =** ] **'***pubblicazione***'**  
- Nome della pubblicazione. *pubblicazione* viene **sysname**, non prevede alcun valore predefinito.  
+`[ @publication = ] 'publication'` È il nome della pubblicazione. *pubblicazione* viene **sysname**, non prevede alcun valore predefinito.  
   
- [  **@subscriber=** ] **'***sottoscrittore***'**  
- Nome del Sottoscrittore. *Sottoscrittore* viene **sysname**, non prevede alcun valore predefinito.  
+`[ @subscriber = ] 'subscriber'` È il nome del sottoscrittore. *Sottoscrittore* viene **sysname**, non prevede alcun valore predefinito.  
   
- [  **@subscriber_db=** ] **'***subscriber_db***'**  
- Nome del database di sottoscrizione. *subscriber_db* viene **sysname**, non prevede alcun valore predefinito.  
+`[ @subscriber_db = ] 'subscriber_db'` È il nome del database di sottoscrizione. *subscriber_db* viene **sysname**, non prevede alcun valore predefinito.  
   
- [  **@property =** ] **'***proprietà***'**  
- Proprietà della pubblicazione da modificare. *proprietà* viene **sysname**, non prevede alcun valore predefinito.  
+`[ @property = ] 'property'` È la proprietà della pubblicazione da modificare. *proprietà* viene **sysname**, non prevede alcun valore predefinito.  
   
- [  **@value =** ] **'***valore***'**  
- Nuovo valore della proprietà. *valore* viene **nvarchar(524**, con un valore predefinito è NULL.  
+`[ @value = ] 'value'` È il nuovo valore della proprietà. *valore* viene **nvarchar(524**, con un valore predefinito è NULL.  
   
  Nella tabella seguente vengono descritte le proprietà del processo dell'agente di merge che è possibile modificare e le limitazioni previste per i valori di tali proprietà.  
   

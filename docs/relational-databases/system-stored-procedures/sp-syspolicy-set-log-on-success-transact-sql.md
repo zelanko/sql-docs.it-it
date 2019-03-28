@@ -18,12 +18,12 @@ ms.assetid: 6b33383b-5949-488a-a911-59299a270f46
 author: VanMSFT
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: a075986a0a28e88fc9bb5891d043598315c47c8f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 0c0969aec1ba6e429c5b3a79d6ff0f5d638cd8f4
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47751209"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58538353"
 ---
 # <a name="spsyspolicysetlogonsuccess-transact-sql"></a>sp_syspolicy_set_log_on_success (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -41,8 +41,7 @@ sp_syspolicy_set_log_on_success [ @value = ] value
 ```  
   
 ## <a name="arguments"></a>Argomenti  
- [  **@value=** ] *valore*  
- Determina se le valutazioni di criteri riuscite vengono registrate. *valore* viene **sqlvariant**, e può essere uno dei valori seguenti:  
+`[ @value = ] value` Determina se le valutazioni di criteri riuscite vengono registrate. *valore* viene **sqlvariant**, e può essere uno dei valori seguenti:  
   
 -   0 o 'false' = Le valutazioni di criteri riuscite non vengono registrate.  
   
@@ -59,7 +58,7 @@ sp_syspolicy_set_log_on_success [ @value = ] value
 ## <a name="permissions"></a>Permissions  
  È necessaria l'appartenenza al ruolo predefinito del database PolicyAdministratorRole.  
   
-> **IMPORTANTE** Possibile elevazione di credenziali: gli utenti nel ruolo PolicyAdministratorRole possono creare trigger server e pianificare le esecuzioni di criteri che influiscono sul funzionamento dell'istanza del [!INCLUDE[ssDE](../../includes/ssde-md.md)]. Gli utenti con il ruolo PolicyAdministratorRole possono ad esempio creare criteri che impediscono la creazione della maggior parte degli oggetti nel [!INCLUDE[ssDE](../../includes/ssde-md.md)]. A causa di questa possibile elevazione di credenziali, il ruolo PolicyAdministratorRole deve essere concesso solo a utenti ritenuti attendibili per il controllo della configurazione del [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
+> **IMPORTANTE** Possibile elevazione di credenziali: Gli utenti nel ruolo PolicyAdministratorRole possono creare trigger server e pianificare le esecuzioni di criteri che possono influenzare l'operazione dell'istanza del [!INCLUDE[ssDE](../../includes/ssde-md.md)]. Gli utenti con il ruolo PolicyAdministratorRole possono ad esempio creare criteri che impediscono la creazione della maggior parte degli oggetti nel [!INCLUDE[ssDE](../../includes/ssde-md.md)]. A causa di questa possibile elevazione di credenziali, il ruolo PolicyAdministratorRole deve essere concesso solo a utenti ritenuti attendibili per il controllo della configurazione del [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
 ## <a name="examples"></a>Esempi  
  Nell'esempio seguente viene abilitata la registrazione delle valutazioni di criteri riuscite.  

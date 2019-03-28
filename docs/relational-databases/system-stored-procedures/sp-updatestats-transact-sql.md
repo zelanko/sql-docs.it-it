@@ -19,12 +19,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 5eb82ba893b39da389640f7b139279f8caf70da6
-ms.sourcegitcommit: f1cf91e679d1121d7f1ef66717b173c22430cb42
+ms.openlocfilehash: 51fd5471ac678a1d61986aaa9219eec923c38485
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/29/2018
-ms.locfileid: "52586244"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58535763"
 ---
 # <a name="spupdatestats-transact-sql"></a>sp_updatestats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -45,8 +45,7 @@ sp_updatestats [ [ @resample = ] 'resample']
  0 (esito positivo) o 1 (esito negativo)  
   
 ## <a name="arguments"></a>Argomenti  
- [ **@resample** =] **'resample'**  
- Specifica che **sp_updatestats** utilizzerà l'opzione RESAMPLE dell'istruzione [UPDATE STATISTICS](../../t-sql/statements/update-statistics-transact-sql.md). Se **'resample'** non viene specificato, **sp_updatestats** aggiorna le statistiche in base al campionamento predefinito. **@resample** è **varchar (8)** con valore predefinito 'NO'.  
+`[ @resample = ] 'resample'` Specifica che **sp_updatestats** utilizzerà l'opzione RESAMPLE del [UPDATE STATISTICS](../../t-sql/statements/update-statistics-transact-sql.md) istruzione. Se **'resample'** non viene specificato, **sp_updatestats** aggiorna le statistiche in base al campionamento predefinito. **@resample** è **varchar (8)** con valore predefinito 'NO'.  
   
 ## <a name="remarks"></a>Note  
  **sp_updatestats** viene eseguito `UPDATE STATISTICS`, specificando il `ALL` parola chiave, in tutte le tabelle interne e definite dall'utente nel database. La procedura sp_updatestats mostra i messaggi che indicano lo stato di avanzamento dell'esecuzione. Al termine dell'aggiornamento, viene mostrato un messaggio che indica l'effettivo aggiornamento delle statistiche di tutte le tabelle.  

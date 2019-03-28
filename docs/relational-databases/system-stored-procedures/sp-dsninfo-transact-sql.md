@@ -16,12 +16,12 @@ ms.assetid: 34648615-814b-42bc-95a3-50e86b42ec4d
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: f2836db0eef25c21861ec7b2d766f1195d250f20
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: e6eacb453fc2f66f4b87790770fa50916916a27c
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52817733"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58527430"
 ---
 # <a name="spdsninfo-transact-sql"></a>sp_dsninfo (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -42,11 +42,9 @@ sp_dsninfo [ @dsn =] 'dsn'
 ```  
   
 ## <a name="arguments"></a>Argomenti  
- [  **@dsn =**] **'***dsn***'**  
- Nome del server collegato DSN ODBC o OLE DB. *DSN* viene **varchar(128)**, non prevede alcun valore predefinito.  
+`[ @dsn = ] 'dsn'` È il nome del server collegato DSN ODBC o OLE DB. *DSN* viene **varchar(128)**, non prevede alcun valore predefinito.  
   
- [  **@infotype =**] **'***Info***'**  
- Tipo di informazioni che si desidera ottenere. Se *Info* viene omesso o se viene specificato NULL, vengono restituiti tutti i tipi di informazioni. *Info* viene **varchar(128)**, con un valore predefinito è NULL, i possibili valori sono i seguenti.  
+`[ @infotype = ] 'info_type'` È il tipo di informazioni da restituire. Se *Info* viene omesso o se viene specificato NULL, vengono restituiti tutti i tipi di informazioni. *Info* viene **varchar(128)**, con un valore predefinito è NULL, i possibili valori sono i seguenti.  
   
 |Value|Descrizione|  
 |-----------|-----------------|  
@@ -55,14 +53,11 @@ sp_dsninfo [ @dsn =] 'dsn'
 |**DATABASE_NAME**|Specifica il nome del database.|  
 |**SQL_SUBSCRIBER**|Specifica che l'origine dati può essere un Sottoscrittore.|  
   
- [  **@login =**] **'***account di accesso***'**  
- Account di accesso per l'origine dati. Se l'origine dati include un account di accesso, specificare NULL oppure omettere il parametro. *account di accesso*viene **varchar(128)**, con un valore predefinito è NULL.  
+`[ @login = ] 'login'` È l'account di accesso per l'origine dati. Se l'origine dati include un account di accesso, specificare NULL oppure omettere il parametro. *account di accesso*viene **varchar(128)**, con un valore predefinito è NULL.  
   
- [  **@password =**] **'***password***'**  
- Password per l'account di accesso. Se l'origine dati include un account di accesso, specificare NULL oppure omettere il parametro. *la password*viene **varchar(128)**, con un valore predefinito è NULL.  
+`[ @password = ] 'password'` È la password per l'account di accesso. Se l'origine dati include un account di accesso, specificare NULL oppure omettere il parametro. *la password*viene **varchar(128)**, con un valore predefinito è NULL.  
   
- [  **@dso_type=**] *dso_type*  
- Tipo dell'origine dati. *dso_type* viene **int**, i possibili valori sono i seguenti.  
+`[ @dso_type = ] dso_type` È il tipo di origine dati. *dso_type* viene **int**, i possibili valori sono i seguenti.  
   
 |Value|Descrizione|  
 |-----------|-----------------|  

@@ -10,12 +10,12 @@ ms.assetid: bd8df0a5-12b9-4f4c-887c-2fb78dd79f4e
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: c2adbcc07134b80e78dbc73691e275d56b6f90c6
-ms.sourcegitcommit: 35e4c71bfbf2c330a9688f95de784ce9ca5d7547
+ms.openlocfilehash: e347d942bf6541de9c16f34075e2d66817c3e347
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/16/2018
-ms.locfileid: "49356572"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58527803"
 ---
 # <a name="implementing-lob-columns-in-a-memory-optimized-table"></a>Implementazione di colonne LOB in una tabella con ottimizzazione per la memoria
   Le tabelle ottimizzate per la memoria non dispongono di archiviazione di oggetti all'esterno di righe o grandi dimensioni (LOB) (questa limitazione è stato rimosso in SQL Server 2016 e versioni successive, vedere [tipi di dati supportati per OLTP In memoria](../relational-databases/in-memory-oltp/supported-data-types-for-in-memory-oltp.md)), e il limite è impostato su 8060 byte. L'archiviazione dei valori elevati di stringa di caratteri o binaria può essere eseguita in due modi:  
@@ -80,7 +80,7 @@ go</code></pre>
   
  In alternativa, è possibile definire una tabella basata su disco per le colonne LOB. Ogni riga della tabella ottimizzata per la memoria avrebbe una riga corrispondente nella tabella basata su disco con tutti i valori LOB per tale riga. Nell'esempio seguente, i dati relativi ai dipendenti vengono archiviati in una tabella ottimizzata per la memoria, mentre la foto di ogni dipendente viene archiviata in una tabella basata su disco.  
   
-```tsql  
+```sql  
 CREATE TABLE EmployeePhoto (  
 EmployeeId int NOT NULL PRIMARY KEY CLUSTERED,  
 Photo varbinary(max))  

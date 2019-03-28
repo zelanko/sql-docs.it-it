@@ -18,12 +18,12 @@ ms.assetid: 11e7c7ac-a581-4a64-bb15-9272d5c1f7ac
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 436b4d5b9a4c0a539ccc4ff9ac7e62572883dfad
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: c296c668bf553569becb9b4cf2e30001021d47c1
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47758619"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58535753"
 ---
 # <a name="sptracesetfilter-transact-sql"></a>sp_trace_setfilter (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -47,31 +47,26 @@ sp_trace_setfilter [ @traceid = ] trace_id
 ```  
   
 ## <a name="arguments"></a>Argomenti  
- [ **@traceid=** ] *trace_id*  
- ID della traccia a cui applicare il filtro. *trace_id* viene **int**, non prevede alcun valore predefinito. L'utente può *trace_id* valore da identificare, modificare e controllare la traccia.  
+`[ @traceid = ] trace_id` È l'ID della traccia a cui il filtro è impostato. *trace_id* viene **int**, non prevede alcun valore predefinito. L'utente può *trace_id* valore da identificare, modificare e controllare la traccia.  
   
- [ **@columnid=** ] *column_id*  
- ID della colonna a cui applicare il filtro. *column_id* viene **int**, non prevede alcun valore predefinito. Se *column_id* è NULL, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Cancella tutti i filtri per la traccia specificata.  
+`[ @columnid = ] column_id` È l'ID della colonna in cui viene applicato il filtro. *column_id* viene **int**, non prevede alcun valore predefinito. Se *column_id* è NULL, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Cancella tutti i filtri per la traccia specificata.  
   
- [ **@logical_operator** =] *logical_operator*  
- Specifica se l'operatore AND (**0**) o OR (**1**) viene applicato l'operatore. *logical_operator* viene **int**, non prevede alcun valore predefinito.  
+`[ @logical_operator = ] logical_operator` Specifica se l'operatore AND (**0**) o OR (**1**) viene applicato l'operatore. *logical_operator* viene **int**, non prevede alcun valore predefinito.  
   
- [  **@comparison_operator=** ] *operatore_confronto*  
- Specifica il tipo di confronto da eseguire. *operatore_confronto* viene **int**, non prevede alcun valore predefinito. Nella tabella seguente vengono descritti gli operatori di confronto e i valori che li rappresentano.  
+`[ @comparison_operator = ] comparison_operator` Specifica il tipo di confronto da eseguire. *operatore_confronto* viene **int**, non prevede alcun valore predefinito. Nella tabella seguente vengono descritti gli operatori di confronto e i valori che li rappresentano.  
   
-|valore|Operatore di confronto|  
+|Value|Operatore di confronto|  
 |-----------|-------------------------|  
 |**0**|= (uguaglianza)|  
-|**1**|<> (disuguaglianza)|  
+|**1**|<> (Non uguale)|  
 |**2**|> (maggiore di)|  
 |**3**|< (minore di)|  
-|**4**|>= (maggiore o uguale a)|  
-|**5**|<= (minore o uguale a)|  
+|**4**|> = (maggiore o uguale)|  
+|**5**|< = (minore o uguale a)|  
 |**6**|LIKE|  
-|**7**|NOT LIKE|  
+|**7**|Non simile a|  
   
- [  **@value=** ] *valore*  
- Specifica il valore in base a cui applicare il filtro. Il tipo di dati *valore* deve corrispondere al tipo di dati della colonna da filtrare. Ad esempio, se il filtro è impostato su una colonna di ID di oggetto che è un' **int** tipo di dati *valore* deve essere **int**. Se *valore* viene **nvarchar** oppure **varbinary**, può avere una lunghezza massima di 8000.  
+`[ @value = ] value` Specifica il valore su cui applicare il filtro. Il tipo di dati *valore* deve corrispondere al tipo di dati della colonna da filtrare. Ad esempio, se il filtro è impostato su una colonna di ID di oggetto che è un' **int** tipo di dati *valore* deve essere **int**. Se *valore* viene **nvarchar** oppure **varbinary**, può avere una lunghezza massima di 8000.  
   
  Quando l'operatore di confronto è LIKE o NOT LIKE, l'operatore logico può includere "%" o un filtro appropriato per l'operazione LIKE.  
   
@@ -84,7 +79,7 @@ sp_trace_setfilter [ @traceid = ] trace_id
 ## <a name="return-code-values"></a>Valori restituiti  
  Nella tabella seguente vengono descritti i possibili valori di codice visualizzati al completamento della stored procedure.  
   
-|Codice restituito|Description|  
+|Codice restituito|Descrizione|  
 |-----------------|-----------------|  
 |0|Nessun errore.|  
 |1|Errore sconosciuto.|  

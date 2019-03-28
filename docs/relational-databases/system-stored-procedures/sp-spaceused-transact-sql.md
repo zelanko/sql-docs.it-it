@@ -19,12 +19,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 036dd5fd4898f7b7abc55eba4971ce599b746423
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 61cd3c5c4ba15d42c1b1fe261703cfbb67b3e24f
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47608810"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58538553"
 ---
 # <a name="spspaceused-transact-sql"></a>sp_spaceused (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-all-md](../../includes/tsql-appliesto-ss2012-all-md.md)]
@@ -47,7 +47,7 @@ sp_spaceused [[ @objname = ] 'objname' ]
 
 Per la [!INCLUDE[sssdw-md](../../includes/sssdw-md.md)] e [!INCLUDE[sspdw-md](../../includes/sspdw-md.md)], `sp_spaceused` deve specificare i parametri denominati (ad esempio `sp_spaceused (@objname= N'Table1');` invece di basarsi al momento la posizione ordinale dei parametri. 
 
- [  **@objname=**] **'***objname***'** 
+`[ @objname = ] 'objname'`
    
  Nome completo o non qualificato della tabella, della vista indicizzata o della coda per cui si desidera ottenere informazioni sull'utilizzo dello spazio. Le virgolette sono necessarie solo se viene specificato un nome di oggetto completo. Se viene specificato un nome di oggetto completo, ovvero contenente un nome di database, il nome del database deve essere quello del database corrente.  
 Se *objname* non viene specificato, vengono restituiti risultati per l'intero database.  
@@ -55,15 +55,13 @@ Se *objname* non viene specificato, vengono restituiti risultati per l'intero da
 > [!NOTE]  
 > [!INCLUDE[sssdw-md](../../includes/sssdw-md.md)] e [!INCLUDE[sspdw-md](../../includes/sspdw-md.md)] supportano solo gli oggetti di database e tabella.
   
- [  **@updateusage=**] **'***updateusage***'**  
- Esegue l'istruzione DBCC UPDATEUSAGE per aggiornare le informazioni sull'utilizzo dello spazio. Quando *objname* non è specificato, l'istruzione viene eseguita sull'intero database; in caso contrario, l'istruzione viene eseguita *objname*. I possibili valori sono **true** oppure **false**. *UPDATEUSAGE* viene **varchar (5)**, il valore predefinito è **false**.  
+`[ @updateusage = ] 'updateusage'` Indica di che eseguire DBCC UPDATEUSAGE per aggiornare le informazioni sull'utilizzo di spazio. Quando *objname* non è specificato, l'istruzione viene eseguita sull'intero database; in caso contrario, l'istruzione viene eseguita *objname*. I possibili valori sono **true** oppure **false**. *UPDATEUSAGE* viene **varchar (5)**, il valore predefinito è **false**.  
   
- [  **@mode=**] **'***modalità***'**  
- Indica l'ambito dei risultati. Per una tabella estesa o il database, il *modalità* parametro consente di includere o escludere la parte remota dell'oggetto. Per ulteriori informazioni, vedere [Stretch Database](../../sql-server/stretch-database/stretch-database.md).  
+`[ @mode = ] 'mode'` Indica l'ambito dei risultati. Per una tabella estesa o il database, il *modalità* parametro consente di includere o escludere la parte remota dell'oggetto. Per ulteriori informazioni, vedere [Stretch Database](../../sql-server/stretch-database/stretch-database.md).  
   
  Il *modalità* argomento può avere i valori seguenti:  
   
-|valore|Description|  
+|Value|Descrizione|  
 |-----------|-----------------|  
 |ALL|Restituisce le statistiche di archiviazione dell'oggetto o database tra cui la parte locale sia la parte remota.|  
 |LOCAL_ONLY|Restituisce le statistiche di archiviazione di solo la parte locale del database o oggetto. Se l'oggetto o il database non è abilitata per l'estensione, restituisce le stesse statistiche come quando @mode = ALL.|  
@@ -71,17 +69,16 @@ Se *objname* non viene specificato, vengono restituiti risultati per l'intero da
   
  *modalità* viene **varchar (11)**, il valore predefinito è **al '**.  
   
- [  **@oneresultset=**] *oneresultset*  
- Indica se restituire un singolo set di risultati. Il *oneresultset* argomento può avere i valori seguenti:  
+`[ @oneresultset = ] oneresultset` Indica se restituire un singolo set di risultati. Il *oneresultset* argomento può avere i valori seguenti:  
   
-|valore|Description|  
+|Value|Descrizione|  
 |-----------|-----------------|  
 |0|Quando *@objname* è null o non specificato, vengono restituiti due set di risultati. Due set di risultati è il comportamento predefinito.|  
 |1|Quando *@objname* = null o viene omesso, viene restituito un singolo set di risultati.|  
   
  *oneresultset* viene **bit**, il valore predefinito è **0**.  
 
-[ **@include_total_xtp_storage**] **'***include_total_xtp_storage***'**  
+`[ @include_total_xtp_storage] 'include_total_xtp_storage'`
 **Si applica a:** [!INCLUDE[sssql17-md](../../includes/sssql17-md.md)], [!INCLUDE[sssds-md](../../includes/sssds-md.md)].  
   
  Quando @oneresultset= 1, il parametro @include_total_xtp_storage determina se il singolo set di risultati include le colonne per l'archiviazione MEMORY_OPTIMIZED_DATA. Il valore predefinito è 0, vale a dire, per impostazione predefinita (se il parametro viene omesso) le colonne XTP non sono inclusi nel set di risultati.  
@@ -92,13 +89,13 @@ Se *objname* non viene specificato, vengono restituiti risultati per l'intero da
 ## <a name="result-sets"></a>Set di risultati  
  Se *objname* viene omesso e il valore di *oneresultset* è 0, i set di risultati seguente vengono restituiti per fornire informazioni sulle dimensioni di database corrente.  
   
-|Nome colonna|Tipo di dati|Description|  
+|Nome colonna|Tipo di dati|Descrizione|  
 |-----------------|---------------|-----------------|  
 |**database_name**|**nvarchar(128)**|Nome del database corrente.|  
 |**database_size**|**varchar(18)**|Dimensioni del database corrente, espresse in megabyte. **database_size** include file di dati e di log.|  
 |**spazio non allocato**|**varchar(18)**|Spazio nel database non riservato per i relativi oggetti.|  
   
-|Nome colonna|Tipo di dati|Description|  
+|Nome colonna|Tipo di dati|Descrizione|  
 |-----------------|---------------|-----------------|  
 |**reserved**|**varchar(18)**|Quantità totale di spazio allocato per gli oggetti del database.|  
 |**data**|**varchar(18)**|Quantità totale di spazio utilizzato per i dati.|  
@@ -107,7 +104,7 @@ Se *objname* non viene specificato, vengono restituiti risultati per l'intero da
   
  Se *objname* viene omesso e il valore di *oneresultset* è 1, per offrire informazioni sulle dimensioni di database corrente viene restituito il seguente set di risultati singolo.  
   
-|Nome colonna|Tipo di dati|Description|  
+|Nome colonna|Tipo di dati|Descrizione|  
 |-----------------|---------------|-----------------|  
 |**database_name**|**nvarchar(128)**|Nome del database corrente.|  
 |**database_size**|**varchar(18)**|Dimensioni del database corrente, espresse in megabyte. **database_size** include file di dati e di log.|  
@@ -119,7 +116,7 @@ Se *objname* non viene specificato, vengono restituiti risultati per l'intero da
   
  Se *objname* viene specificato, il set di risultati seguente viene restituito per l'oggetto specificato.  
   
-|Nome colonna|Tipo di dati|Description|  
+|Nome colonna|Tipo di dati|Descrizione|  
 |-----------------|---------------|-----------------|  
 |**name**|**nvarchar(128)**|Nome dell'oggetto per cui sono state richieste informazioni sull'utilizzo dello spazio.<br /><br /> Il nome dello schema dell'oggetto non viene restituito. Se è necessario il nome dello schema, usare il [DM db_partition_stats](../../relational-databases/system-dynamic-management-views/sys-dm-db-partition-stats-transact-sql.md) oppure [db_index_physical_stats](../../relational-databases/system-dynamic-management-views/sys-dm-db-index-physical-stats-transact-sql.md) viste a gestione dinamica per ottenere informazioni sulle dimensioni equivalenti.|  
 |**rows**|**char(20)**|Numero di righe esistenti nella tabella. Se l'oggetto specificato è una coda di [!INCLUDE[ssSB](../../includes/sssb-md.md)], in questa colonna viene indicato il numero di messaggi presenti nella coda.|  
@@ -130,7 +127,7 @@ Se *objname* non viene specificato, vengono restituiti risultati per l'intero da
  
 Questa è la modalità predefinita, quando viene specificato alcun parametro. I set di risultati seguente vengono restituiti che riporta informazioni sulle dimensioni di database su disco. 
 
-|Nome colonna|Tipo di dati|Description|  
+|Nome colonna|Tipo di dati|Descrizione|  
 |-----------------|---------------|-----------------|  
 |**database_name**|**nvarchar(128)**|Nome del database corrente.|  
 |**database_size**|**varchar(18)**|Dimensioni del database corrente, espresse in megabyte. **database_size** include file di dati e di log. Se il database ha un filegroup MEMORY_OPTIMIZED_DATA, ciò include la dimensione totale su disco di tutti i file di checkpoint nel filegroup.|  
@@ -138,7 +135,7 @@ Questa è la modalità predefinita, quando viene specificato alcun parametro. I 
 
 Spazio utilizzato dalle tabelle nel database: (questo set di risultati non riflette le tabelle ottimizzate per la memoria, come non vi è alcun contabilità per tabella di utilizzo del disco) 
 
-|Nome colonna|Tipo di dati|Description|  
+|Nome colonna|Tipo di dati|Descrizione|  
 |-----------------|---------------|-----------------|  
 |**reserved**|**varchar(18)**|Quantità totale di spazio allocato per gli oggetti del database.|  
 |**data**|**varchar(18)**|Quantità totale di spazio utilizzato per i dati.|  
@@ -147,7 +144,7 @@ Spazio utilizzato dalle tabelle nel database: (questo set di risultati non rifle
 
 Il set di risultati seguente viene restituito **solo se** il database ha un filegroup MEMORY_OPTIMIZED_DATA con almeno un contenitore: 
 
-|Nome colonna|Tipo di dati|Description|  
+|Nome colonna|Tipo di dati|Descrizione|  
 |-----------------|---------------|-----------------|  
 |**xtp_precreated**|**varchar(18)**|Dimensioni totali dei file di checkpoint con stato PRECREATED, espressa in KB. Conteggi per lo spazio non allocato del database nel suo complesso. [, Ad esempio, se è presente 600.000 KB di checkpoint precreati, questa colonna contiene 600000 ' KB']|  
 |**xtp_used**|**varchar(18)**|Dimensioni totali dei file di checkpoint con gli stati UNDER CONSTRUCTION, ACTIVE e destinazione di tipo MERGE, in KB. Questo è lo spazio su disco usato attivamente per i dati nelle tabelle ottimizzate per la memoria.|  
@@ -155,7 +152,7 @@ Il set di risultati seguente viene restituito **solo se** il database ha un file
 
 Se *objname* viene omesso, il valore di oneresultset è 1, e *include_total_xtp_storage* è 1, per offrire informazioni sulle dimensioni di database corrente viene restituito il seguente set di risultati singolo. Se `include_total_xtp_storage` è 0 (impostazione predefinita), le ultime tre colonne sono stati omessi. 
 
-|Nome colonna|Tipo di dati|Description|  
+|Nome colonna|Tipo di dati|Descrizione|  
 |-----------------|---------------|-----------------|  
 |**database_name**|**nvarchar(128)**|Nome del database corrente.|  
 |**database_size**|**varchar(18)**|Dimensioni del database corrente, espresse in megabyte. **database_size** include file di dati e di log. Se il database ha un filegroup MEMORY_OPTIMIZED_DATA, ciò include la dimensione totale su disco di tutti i file di checkpoint nel filegroup.|

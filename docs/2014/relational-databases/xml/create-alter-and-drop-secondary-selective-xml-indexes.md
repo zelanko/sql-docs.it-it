@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: xml
 ms.topic: conceptual
 ms.assetid: 45128105-833b-40a9-9cc9-1ae03ac0b52b
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
-ms.openlocfilehash: a792458362360a88b655ce50bc427e73dad1e0a5
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: b96e0bb7f28349e4d0b0ed5225f9b29e58de982f
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48130261"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58536623"
 ---
 # <a name="create-alter-and-drop-secondary-selective-xml-indexes"></a>Creare, modificare o eliminare indici XML selettivi secondari
   Viene descritto come creare un nuovo indice XML selettivo secondario oppure modificarne o eliminarne uno esistente.  
@@ -30,7 +30,7 @@ ms.locfileid: "48130261"
   
  Nell'esempio seguente viene creato un indice XML selettivo secondario nel percorso `'pathabc'`. Il percorso dell'indice viene identificato dal nome fornito al momento della creazione con l'istruzione CREATE SELECTIVE XML INDEX. Per altre informazioni, vedere [CREATE SELECTIVE XML INDEX &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-selective-xml-index-transact-sql).  
   
-```tsql  
+```sql  
 CREATE XML INDEX filt_sxi_index_c  
 ON Tbl(xmlcol)  
 USING XML INDEX sxi_index  
@@ -54,7 +54,7 @@ FOR
   
  Nell'esempio seguente viene modificato un indice XML selettivo secondario eliminandolo e ricreandolo.  
   
-```tsql  
+```sql  
 DROP INDEX filt_sxi_index_c  
   
 CREATE XML INDEX filt_sxi_index_c  
@@ -77,7 +77,7 @@ FOR
   
  Nell'esempio seguente viene illustrata un'istruzione DROP INDEX.  
   
-```tsql  
+```sql  
 DROP INDEX ssxi_index  
 ON tbl  
 ```  

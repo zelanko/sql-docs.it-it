@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 9f097652-a286-40b2-be73-568d77ada698
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: fa52c7e66a690b54c33330e09fe4373962ea2f9b
-ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
+ms.openlocfilehash: 910f4f02c17ba0f6524648b9ac1eb201d735b238
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/18/2018
-ms.locfileid: "53589315"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58527923"
 ---
 # <a name="spdropremotelogin-transact-sql"></a>sp_dropremotelogin (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -44,14 +44,11 @@ sp_dropremotelogin [ @remoteserver = ] 'remoteserver'
 ```  
   
 ## <a name="arguments"></a>Argomenti  
- [  **@remoteserver =** ] **'**_remoteserver_**'**  
- Nome del server remoto di cui è stato eseguito il mapping all'account di accesso remoto che si desidera rimuovere. *remoteserver* viene **sysname**, non prevede alcun valore predefinito. *remoteserver* deve esistere già.  
+`[ @remoteserver = ] 'remoteserver'` È il nome del server remoto eseguito il mapping all'account di accesso remoto che deve essere rimossa. *remoteserver* viene **sysname**, non prevede alcun valore predefinito. *remoteserver* deve esistere già.  
   
- [  **@loginame =** ] **'**_account di accesso_**'**  
- Nome facoltativo dell'account di accesso nel server locale associato al server remoto. *login* è di tipo **sysname** e il valore predefinito è NULL. *account di accesso* deve già esistere se specificato.  
+`[ @loginame = ] 'login'` È il nome di account di accesso facoltativo nel server locale in cui è associato al server remoto. *login* è di tipo **sysname** e il valore predefinito è NULL. *account di accesso* deve già esistere se specificato.  
   
- [  **@remotename =** ] **'**_remote_name_**'**  
- Nome facoltativo dell'account di accesso remoto viene mappato a *account di accesso* durante l'accesso dal server remoto. *remote_name* viene **sysname**, con un valore predefinito è NULL.  
+`[ @remotename = ] 'remote_name'` Nome facoltativo dell'account di accesso remoto viene mappato a *account di accesso* durante l'accesso dal server remoto. *remote_name* viene **sysname**, con un valore predefinito è NULL.  
   
 ## <a name="return-code-values"></a>Valori restituiti  
  0 (esito positivo) o 1 (esito negativo)  
@@ -77,7 +74,7 @@ sp_dropremotelogin [ @remoteserver = ] 'remoteserver'
 EXEC sp_dropremotelogin 'ACCOUNTS';  
 ```  
   
-### <a name="b-dropping-a-login-mapping"></a>b. Eliminazione di un mapping tra account di accesso  
+### <a name="b-dropping-a-login-mapping"></a>B. Eliminazione di un mapping tra account di accesso  
  Nell'esempio seguente viene rimossa la voce per il mapping degli account di accesso remoti tra il server remoto `ACCOUNTS` e l'account di accesso locale `Albert`.  
   
 ```  

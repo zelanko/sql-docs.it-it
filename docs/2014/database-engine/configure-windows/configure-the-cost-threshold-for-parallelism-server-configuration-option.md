@@ -12,12 +12,12 @@ ms.assetid: dad21bee-fe28-41f6-9d2f-e6ababfaf9db
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 6bf9890b05d0334b1a91561ce67e6acde18e1fe6
-ms.sourcegitcommit: 04dd0620202287869b23cc2fde998a18d3200c66
+ms.openlocfilehash: ae87ebd3afa2ee49b55471be4d955cbb4d894ca7
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "52639379"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58527623"
 ---
 # <a name="configure-the-cost-threshold-for-parallelism-server-configuration-option"></a>Configurare l'opzione di configurazione del server cost threshold for parallelism
   In questo argomento si illustra come configurare l'opzione di configurazione del server **cost threshold for parallelism** in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] utilizzando [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)]. Con l'opzione **cost threshold for parallelism** è possibile specificare la soglia oltre la quale in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] vengono creati ed eseguiti piani paralleli per le query. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] viene creato ed eseguito un piano parallelo per una query solo quando il costo stimato per l'esecuzione di un piano seriale per la stessa query è più elevato del valore impostato in **cost threshold for parallelism**. Il costo equivale al tempo (in secondi) stimato per l'esecuzione del piano seriale in una configurazione hardware specifica. L'opzione **cost threshold for parallelism** può essere impostata su qualsiasi valore compreso tra 0 e 32767. Il valore predefinito è 5.  
@@ -91,9 +91,9 @@ FROM sys.dm_os_sys_info
   
 2.  Dalla barra Standard fare clic su **Nuova query**.  
   
-3.  Copiare e incollare l'esempio seguente nella finestra delle query e fare clic su **Esegui**. Questo esempio illustra come usare [sp_configure](/sql/relational-databases/system-stored-procedures/sp-configure-transact-sql) per impostare il valore dell'opzione `cost threshold for parallelism` su `10`.  
+3.  Copiare e incollare l'esempio seguente nella finestra Query, quindi fare clic su **Esegui**. Questo esempio illustra come usare [sp_configure](/sql/relational-databases/system-stored-procedures/sp-configure-transact-sql) per impostare il valore dell'opzione `cost threshold for parallelism` su `10`.  
   
-```tsql  
+```sql  
 USE AdventureWorks2012 ;  
 GO  
 EXEC sp_configure 'show advanced options', 1 ;  

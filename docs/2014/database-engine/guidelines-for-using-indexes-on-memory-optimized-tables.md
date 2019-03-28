@@ -12,17 +12,17 @@ ms.assetid: 16ef63a4-367a-46ac-917d-9eebc81ab29b
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 514b6c8fedb50417b8c4060cb45e73bfa88fdddb
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 71d26e3f46034019d51bd69b86686f40eb9ce63e
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48094364"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58527953"
 ---
 # <a name="guidelines-for-using-indexes-on-memory-optimized-tables"></a>Linee guida per l'utilizzo di indici nelle tabelle con ottimizzazione per la memoria
   Gli indici vengono utilizzati per accedere in modo efficiente ai dati nelle tabelle di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. La definizione degli indici corretti può migliorare notevolmente le prestazioni delle query. Si consideri, ad esempio, la query riportata di seguito:  
   
-```tsql  
+```sql  
 SELECT c1, c2 FROM t WHERE c1 = 1;  
 ```  
   
@@ -69,11 +69,11 @@ SELECT c1, c2 FROM t WHERE c1 = 1;
   
 |Operazione|Indice hash non cluster con ottimizzazione per la memoria|Indice non cluster con ottimizzazione per la memoria|Indice basato su disco|  
 |---------------|-------------------------------------------------|------------------------------------------|-----------------------|  
-|Index Scan, recupera tutte le righe della tabella.|Sì|Sì|Sì|  
-|Index Seek su predicati di uguaglianza (=).|Sì<br /><br /> (chiave completa necessaria)|Sì <sup>1</sup>|Sì|  
-|Index seek su predicati di disuguaglianza (>, <, \<=, > =, BETWEEN).|No (risultati in un'analisi di indice)|Sì <sup>1</sup>|Sì|  
-|Recupero di righe con un ordinamento corrispondente alla definizione dell'indice.|no|Sì|Sì|  
-|Recupero di righe con un ordinamento inverso alla definizione dell'indice.|no|no|Sì|  
+|Index Scan, recupera tutte le righe della tabella.|Yes|Yes|Yes|  
+|Index Seek su predicati di uguaglianza (=).|Yes<br /><br /> (chiave completa necessaria)|Sì <sup>1</sup>|Yes|  
+|Index seek su predicati di disuguaglianza (>, <, \<=, > =, BETWEEN).|No (risultati in un'analisi di indice)|Sì <sup>1</sup>|Yes|  
+|Recupero di righe con un ordinamento corrispondente alla definizione dell'indice.|No|Yes|Yes|  
+|Recupero di righe con un ordinamento inverso alla definizione dell'indice.|No|No|Yes|  
   
  Nella tabella, Sì significa che l'indice può soddisfare la richiesta in modo appropriato e No significa che l'indice non può essere usato per soddisfare correttamente la richiesta.  
   
@@ -90,10 +90,10 @@ SELECT c1, c2 FROM t WHERE c1 = 1;
   
      Il processo di Garbage Collection funziona meglio se tutti gli indici della tabella vengono utilizzati di frequente. Gli indici utilizzati raramente possono causare un funzionamento non ottimale del sistema di Garbage Collection per le versioni di riga precedenti.  
   
-## <a name="creating-a-memory-optimized-index-code-samples"></a>Creazione di un indice con ottimizzazione per la memoria: esempi di codice  
+## <a name="creating-a-memory-optimized-index-code-samples"></a>Creazione di un indice con ottimizzazione per la memoria: Esempi di codice  
  Indice hash a livello di colonna:  
   
-```tsql  
+```sql  
 CREATE TABLE t1   
    (c1 INT NOT NULL INDEX idx HASH WITH (BUCKET_COUNT = 100))   
    WITH (MEMORY_OPTIMIZED = ON, DURABILITY = SCHEMA_ONLY)  
@@ -101,7 +101,7 @@ CREATE TABLE t1
   
  Indice hash a livello di tabella:  
   
-```tsql  
+```sql  
 CREATE TABLE t1_1   
    (c1 INT NOT NULL,   
    INDEX IDX HASH (c1) WITH (BUCKET_COUNT = 100))   
@@ -110,7 +110,7 @@ CREATE TABLE t1_1
   
  Indice hash di chiave primaria a livello di colonna:  
   
-```tsql  
+```sql  
 CREATE TABLE t2   
    (c1 INT NOT NULL PRIMARY KEY NONCLUSTERED HASH WITH (BUCKET_COUNT = 100))   
    WITH (MEMORY_OPTIMIZED = ON, DURABILITY = SCHEMA_AND_DATA)  
@@ -118,7 +118,7 @@ CREATE TABLE t2
   
  Indice hash di chiave primaria a livello di tabella:  
   
-```tsql  
+```sql  
 CREATE TABLE t2_2   
    (c1 INT NOT NULL,   
    PRIMARY KEY NONCLUSTERED HASH (c1) WITH (BUCKET_COUNT = 100))   
@@ -127,7 +127,7 @@ CREATE TABLE t2_2
   
  Indice non cluster a livello di colonna:  
   
-```tsql  
+```sql  
 CREATE TABLE t3   
    (c1 INT NOT NULL INDEX ID)   
    WITH (MEMORY_OPTIMIZED = ON, DURABILITY = SCHEMA_ONLY)  
@@ -135,7 +135,7 @@ CREATE TABLE t3
   
  Indice non cluster a livello di tabella:  
   
-```tsql  
+```sql  
 CREATE TABLE t3_3   
    (c1 INT NOT NULL,   
    INDEX IDX NONCLUSTERED (c1))   
@@ -144,7 +144,7 @@ CREATE TABLE t3_3
   
  Indice non cluster di chiave primaria a livello di colonna:  
   
-```tsql  
+```sql  
 CREATE TABLE t4   
    (c1 INT NOT NULL PRIMARY KEY NONCLUSTERED)   
    WITH (MEMORY_OPTIMIZED = ON, DURABILITY = SCHEMA_AND_DATA)  
@@ -152,7 +152,7 @@ CREATE TABLE t4
   
  Indice non cluster di chiave primaria a livello di tabella:  
   
-```tsql  
+```sql  
 CREATE TABLE t4_4   
    (c1 INT NOT NULL,   
    PRIMARY KEY NONCLUSTERED (c1))   
@@ -161,7 +161,7 @@ CREATE TABLE t4_4
   
  Indice multicolonna definito dopo la definizione delle colonne:  
   
-```tsql  
+```sql  
 create table t (  
        a int not null constraint ta primary key nonclustered,  
        b int not null,  

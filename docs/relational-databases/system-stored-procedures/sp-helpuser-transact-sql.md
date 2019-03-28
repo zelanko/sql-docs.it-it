@@ -18,12 +18,12 @@ ms.assetid: 9c70b41d-ef4c-43df-92da-bd534c287ca1
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 258a9e6002fccd27b4980140c49679b26c78f64b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: fb4dc6bce6ae10c040123b4a00c29e5ad0f57506
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47791999"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58535963"
 ---
 # <a name="sphelpuser-transact-sql"></a>sp_helpuser (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -43,8 +43,7 @@ sp_helpuser [ [ @name_in_db = ] 'security_account' ]
 ```  
   
 ## <a name="arguments"></a>Argomenti  
- [  **@name_in_db =** ] **'***account_protezione***'**  
- Nome dell'utente o del ruolo del database nel database corrente. *account_protezione* deve esistere nel database corrente. *account_protezione* viene **sysname**, con un valore predefinito è NULL. Se *account_protezione* non viene specificato, **sp_helpuser** restituisce informazioni su tutte le entità di database.  
+`[ @name_in_db = ] 'security_account'` È il nome dell'utente del database o del ruolo di database nel database corrente. *account_protezione* deve esistere nel database corrente. *account_protezione* viene **sysname**, con un valore predefinito è NULL. Se *account_protezione* non viene specificato, **sp_helpuser** restituisce informazioni su tutte le entità di database.  
   
 ## <a name="return-code-values"></a>Valori restituiti  
  0 (esito positivo) o 1 (esito negativo)  
@@ -52,7 +51,7 @@ sp_helpuser [ [ @name_in_db = ] 'security_account' ]
 ## <a name="result-sets"></a>Set di risultati  
  La tabella seguente illustra il set di risultati né un account utente né una [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o è specificato un utente di Windows per *account_protezione*.  
   
-|Nome colonna|Tipo di dati|Description|  
+|Nome colonna|Tipo di dati|Descrizione|  
 |-----------------|---------------|-----------------|  
 |**UserName**|**sysname**|Utenti nel database corrente.|  
 |**RoleName**|**sysname**|Ruoli a cui **UserName** appartiene.|  
@@ -64,19 +63,19 @@ sp_helpuser [ [ @name_in_db = ] 'security_account' ]
   
  Nella tabella seguente viene illustrato il set di risultati quando non si specifica alcun account utente ed esistono alias nel database corrente.  
   
-|Nome colonna|Tipo di dati|Description|  
+|Nome colonna|Tipo di dati|Descrizione|  
 |-----------------|---------------|-----------------|  
 |**LoginName**|**sysname**|Account di accesso associati come alias agli utenti del database corrente.|  
 |**UserNameAliasedTo**|**sysname**|Nome utente nel database corrente associato come alias all'account utente.|  
   
  La tabella seguente illustra il set di risultati quando viene specificato per un ruolo *account_protezione*.  
   
-|Nome colonna|Tipo di dati|Description|  
+|Nome colonna|Tipo di dati|Descrizione|  
 |-----------------|---------------|-----------------|  
 |**Role_name**|**sysname**|Nome del ruolo nel database corrente.|  
 |**Role_id**|**smallint**|ID del ruolo nel database corrente.|  
 |**Users_in_role**|**sysname**|Membro del ruolo nel database corrente.|  
-|**ID utente**|**smallint**|ID utente del membro del ruolo.|  
+|**Userid**|**smallint**|ID utente del membro del ruolo.|  
   
 ## <a name="remarks"></a>Note  
  Per visualizzare le informazioni sulle appartenenze dei ruoli predefiniti del database, usare [database_role_members](../../relational-databases/system-catalog-views/sys-database-role-members-transact-sql.md). Per visualizzare informazioni sui membri del ruolo server, usare [Sys. server_role_members](../../relational-databases/system-catalog-views/sys-server-role-members-transact-sql.md)e per visualizzare le informazioni sulle entità a livello di server, usare [Sys. server_principals](../../relational-databases/system-catalog-views/sys-server-principals-transact-sql.md).  

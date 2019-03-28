@@ -18,12 +18,12 @@ ms.assetid: 1546e0ae-5a99-4e01-9eb9-d147fa65884c
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 06e0e3f1f75c95924ec5d2adb52f19c7dae65735
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 6447f9a8a8504539400154c29c34d7340fcdb2d8
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47650429"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58536303"
 ---
 # <a name="sphelpfile-transact-sql"></a>sp_helpfile (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -40,24 +40,23 @@ sp_helpfile [ [ @filename= ] 'name' ]
 ```  
   
 ## <a name="arguments"></a>Argomenti  
- [  **@filename =** ] **'***nome***'**  
- Nome logico di qualsiasi file nel database corrente. *nome* viene **sysname**, con un valore predefinito è NULL. Se *nome* viene omesso, vengono restituiti gli attributi di tutti i file nel database corrente.  
+`[ @filename = ] 'name'` È il nome logico di qualsiasi file nel database corrente. *nome* viene **sysname**, con un valore predefinito è NULL. Se *nome* viene omesso, vengono restituiti gli attributi di tutti i file nel database corrente.  
   
 ## <a name="return-code-values"></a>Valori restituiti  
  0 (esito positivo) o 1 (esito negativo)  
   
 ## <a name="result-sets"></a>Set di risultati  
   
-|Nome colonna|Tipo di dati|Description|  
+|Nome colonna|Tipo di dati|Descrizione|  
 |-----------------|---------------|-----------------|  
 |**name**|**sysname**|Nome logico del file.|  
 |**fileid**|**smallint**|Identificatore numerico del file. Non viene restituito se *name* omette *.*|  
-|**Nome del file**|**nchar(260)**|Nome fisico del file.|  
+|**filename**|**nchar(260)**|Nome fisico del file.|  
 |**filegroup**|**sysname**|Filegroup a cui appartiene il file.<br /><br /> NULL = Il file è un file di log. Questo tipo di file non viene mai incluso in un filegroup.|  
 |**size**|**nvarchar(15)**|Dimensione del file in kilobyte.|  
 |**maxsize**|**nvarchar(15)**|Dimensioni massime consentite per il file. Se questo campo include il valore UNLIMITED, le dimensioni del file possono aumentare fino a riempire il disco.|  
-|**aumento delle dimensioni**|**nvarchar(15)**|Incremento per l'aumento delle dimensioni del file. Indica la quantità di spazio aggiunta al file ogni volta che è richiesto spazio aggiuntivo.<br /><br /> 0 = la dimensione del file è fissa e non aumenterà.|  
-|**Utilizzo**|**varchar(9)**|Per file di dati, il valore è **'solo data'** e per il file di log è il valore **'di log solo'**.|  
+|**growth**|**nvarchar(15)**|Incremento per l'aumento delle dimensioni del file. Indica la quantità di spazio aggiunta al file ogni volta che è richiesto spazio aggiuntivo.<br /><br /> 0 = la dimensione del file è fissa e non aumenterà.|  
+|**usage**|**varchar(9)**|Per file di dati, il valore è **'solo data'** e per il file di log è il valore **'di log solo'**.|  
   
 ## <a name="permissions"></a>Permissions  
  È richiesta l'appartenenza al ruolo **public** .  

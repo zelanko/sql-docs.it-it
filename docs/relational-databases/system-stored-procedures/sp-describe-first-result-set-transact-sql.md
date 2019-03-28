@@ -19,12 +19,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 62abd4d684c809e9dbf3f2863091f1f103808d87
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 1063facd150c6dfd6273f1fd78b6f507d062788e
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52400634"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58528163"
 ---
 # <a name="spdescribefirstresultset-transact-sql"></a>sp_describe_first_result_set (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-all-md](../../includes/tsql-appliesto-ss2012-all-md.md)]
@@ -43,16 +43,13 @@ sp_describe_first_result_set [ @tsql = ] N'Transact-SQL_batch'
 ```  
   
 ## <a name="arguments"></a>Argomenti  
- [  **\@tsql =** ] **'***Transact SQL_batch***'**  
- Una o più istruzioni [!INCLUDE[tsql](../../includes/tsql-md.md)]. *SQL_batch Transact* può essere **nvarchar (***n***)** oppure **nvarchar (max)**.  
+`[ \@tsql = ] 'Transact-SQL_batch'` Uno o più [!INCLUDE[tsql](../../includes/tsql-md.md)] istruzioni. *SQL_batch Transact* può essere **nvarchar (***n***)** oppure **nvarchar (max)**.  
   
- [  **\@params =** ] **N'***parametri***'**  
- \@params fornisce una stringa di dichiarazione per i parametri per il [!INCLUDE[tsql](../../includes/tsql-md.md)] batch, che è simile a sp_executesql. I parametri possono essere **nvarchar (n)** oppure **nvarchar (max)**.  
+`[ \@params = ] N'parameters'` \@params fornisce una stringa di dichiarazione per i parametri per il [!INCLUDE[tsql](../../includes/tsql-md.md)] batch, che è simile a sp_executesql. I parametri possono essere **nvarchar (n)** oppure **nvarchar (max)**.  
   
  Stringa che contiene le definizioni di tutti i parametri che sono stati incorporati nel [!INCLUDE[tsql](../../includes/tsql-md.md)] *_batch*. La stringa deve essere una costante o una variabile Unicode. Ogni definizione di parametro è costituita da un nome del parametro e da un tipo di dati. *n* è un segnaposto che indica definizioni di parametro aggiuntive. Ogni parametro specificato nell'istruzione deve essere definito \@params. Se il [!INCLUDE[tsql](../../includes/tsql-md.md)] istruzione o il batch nell'istruzione non contiene parametri, \@params non è obbligatorio. Il valore predefinito per questo parametro è NULL.  
   
- [  **\@browse_information_mode =** ] *tinyint*  
- Viene specificato se vengono restituite informazioni aggiuntive sulla tabella di origine e sulle colonne chiave. Se impostato su 1, ogni query viene analizzata come se per essa fosse stata specificata un'opzione FOR BROWSE. Vengono restituite informazioni aggiuntive sulla tabella di origine e sulle colonne chiave.  
+`[ \@browse_information_mode = ] tinyint` Specifica se vengono restituite informazioni sulla tabella di origine e di colonne chiave aggiuntive. Se impostato su 1, ogni query viene analizzata come se per essa fosse stata specificata un'opzione FOR BROWSE. Vengono restituite informazioni aggiuntive sulla tabella di origine e sulle colonne chiave.  
   
 -   Se impostato su 0, non viene restituita alcuna informazione.  
   
@@ -151,7 +148,7 @@ sp_describe_first_result_set [ @tsql = ] N'Transact-SQL_batch'
   
     -   **varbinary(a)** al **varbinary(a')** in cui un ' > un.  
   
-    -   **varbinary(a)** a **varbinary (max)**  
+    -   **varbinary(a)** to **varbinary(max)**  
   
  **sp_describe_first_result_set** non supporta la ricorsione indiretta.  
   
@@ -179,7 +176,7 @@ WHERE object_id = @id1'
 , @params = N'@id1 int'  
 ```  
   
-#### <a name="b-browse-mode-examples"></a>b. Esempi di modalità browse  
+#### <a name="b-browse-mode-examples"></a>B. Esempi di modalità browse  
  Nei tre esempi seguenti viene illustrata la differenza principale tra le diverse modalità di informazioni di esplorazione. Nei risultati delle query sono state incluse solo le colonne attinenti.  
   
  Nell'esempio in cui viene utilizzato 0 non viene restituita alcuna informazione.  

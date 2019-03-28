@@ -18,12 +18,12 @@ ms.assetid: 92ca7488-29db-414e-8e36-08b0a8f542bb
 author: VanMSFT
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: c3a8e3db9e0e66f3a3e300e972ca1d2f02f1d03b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 96dc0a33c15f1547088c3fe7c79824da55cd1d35
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47615529"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58538123"
 ---
 # <a name="sysmailupdateprofileaccountsp-transact-sql"></a>sysmail_update_profileaccount_sp (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -43,20 +43,15 @@ sysmail_update_profileaccount_sp  { [ @profile_id = ] profile_id
 ```  
   
 ## <a name="arguments"></a>Argomenti  
- [ **@profile_id** = ] *profile_id*  
- ID del profilo da aggiornare. *profile_id* viene **int**, con un valore predefinito è NULL. Entrambi i *profile_id* o nella *profile_name* deve essere specificato.  
+`[ @profile_id = ] profile_id` L'ID del profilo del profilo da aggiornare. *profile_id* viene **int**, con un valore predefinito è NULL. Entrambi i *profile_id* o nella *profile_name* deve essere specificato.  
   
- [ **@profile_name** =] **'***profile_name***'**  
- Nome del profilo da aggiornare. *profile_name* viene **sysname**, con un valore predefinito è NULL. Entrambi i *profile_id* o nella *profile_name* deve essere specificato.  
+`[ @profile_name = ] 'profile_name'` Il nome del profilo del profilo da aggiornare. *profile_name* viene **sysname**, con un valore predefinito è NULL. Entrambi i *profile_id* o nella *profile_name* deve essere specificato.  
   
- [ **@account_id** = ] *account_id*  
- ID dell'account da aggiornare. *account_id* viene **int**, con un valore predefinito è NULL. Entrambi i *account_id* o nella *account_name* deve essere specificato.  
+`[ @account_id = ] account_id` ID dell'account da aggiornare. *account_id* viene **int**, con un valore predefinito è NULL. Entrambi i *account_id* o nella *account_name* deve essere specificato.  
   
- [ **@account_name** =] **'***account_name***'**  
- Nome dell'account da aggiornare. *account_name* viene **sysname**, con un valore predefinito è NULL. Entrambi i *account_id* o nella *account_name* deve essere specificato.  
+`[ @account_name = ] 'account_name'` Il nome dell'account da aggiornare. *account_name* viene **sysname**, con un valore predefinito è NULL. Entrambi i *account_id* o nella *account_name* deve essere specificato.  
   
- [ **@sequence_number** =] *sequence_number*  
- Nuovo numero di sequenza dell'account. *sequence_number* viene **int**, non prevede alcun valore predefinito. Il numero di sequenza determina l'ordine in cui gli account sono utilizzati nel profilo.  
+`[ @sequence_number = ] sequence_number` Il nuovo numero di sequenza per l'account. *sequence_number* viene **int**, non prevede alcun valore predefinito. Il numero di sequenza determina l'ordine in cui gli account sono utilizzati nel profilo.  
   
 ## <a name="return-code-values"></a>Valori restituiti  
  **0** (esito positivo) o **1** (errore)  

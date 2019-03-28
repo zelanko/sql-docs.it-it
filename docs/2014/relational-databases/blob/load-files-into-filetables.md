@@ -14,12 +14,12 @@ ms.assetid: dc842a10-0586-4b0f-9775-5ca0ecc761d9
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 560fab599098d1f9e5fae76d42c274ad9a5fb144
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 04f32e1f1d0bc67e567a2a4d30779f13af6c68a6
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52507805"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58536026"
 ---
 # <a name="load-files-into-filetables"></a>Caricamento di file in FileTable
   Viene descritto come caricare o eseguire la migrazione dei file in tabelle FileTable.  
@@ -30,7 +30,7 @@ ms.locfileid: "52507805"
 |Attuale posizione dei file|Opzioni per migrazione|  
 |-------------------------------|---------------------------|  
 |I file sono attualmente archiviati nel file system.<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] non dispone di conoscenza dei file.|Poiché una tabella FileTable viene visualizzata come cartella nel file system di Windows, è possibile caricare facilmente file in un nuova tabella FileTable tramite alcuni dei metodi disponibili per lo spostamento o la copia di file. Questi metodi includono Esplora risorse, opzioni della riga di comando come xcopy e robocopy e applicazioni o script personalizzati.<br /><br /> Non è possibile convertire una cartella esistente in tabella FileTable.|  
-|I file sono attualmente archiviati nel file system.<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] include una tabella di metadati contenente puntatori ai file.|Il primo passaggio consiste nello spostare o copiare i file tramite uno dei metodi indicati in precedenza.<br /><br /> Il secondo passaggio consiste nell'aggiornare la tabella esistente di metadati in modo che punti alla nuova posizione dei file.<br /><br /> Per altre informazioni, vedere [esempio: La migrazione dei file dal File System in una tabella FileTable](#HowToMigrateFiles) in questo argomento.|  
+|I file sono attualmente archiviati nel file system.<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] include una tabella di metadati contenente puntatori ai file.|Il primo passaggio consiste nello spostare o copiare i file tramite uno dei metodi indicati in precedenza.<br /><br /> Il secondo passaggio consiste nell'aggiornare la tabella esistente di metadati in modo che punti alla nuova posizione dei file.<br /><br /> Per altre informazioni, vedere [Esempio: La migrazione dei file dal File System in una tabella FileTable](#HowToMigrateFiles) in questo argomento.|  
   
 ###  <a name="HowToLoadNew"></a> Come si fa: Caricare file in una tabella FileTable  
  Tra i metodi che è possibile utilizzare per caricare file in una tabella FileTable sono inclusi i seguenti:  
@@ -54,7 +54,7 @@ ms.locfileid: "52507805"
   
 3.  Correggere i metadati nella tabella `PhotoMetadata` tramite codice simile al seguente:  
   
-```tsql  
+```sql  
 --  Add a path locator column to the PhotoMetadata table.  
 ALTER TABLE PhotoMetadata ADD pathlocator hierarchyid;  
   

@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 4cb96efa-9358-44a3-a8ee-a7e181bed089
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: dc5cc9c4d7bb7ca9b2d758e33142d140bf6fc6fa
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 82519f069aaa59020e2dccb760df5d2a24c9178b
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52818983"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58537883"
 ---
 # <a name="spdropanonymousagent-transact-sql"></a>sp_dropanonymousagent (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -37,11 +37,9 @@ sp_dropanonymousagent [ @subid= ] sub_id    , [ @type= ] type
 ```  
   
 ## <a name="arguments"></a>Argomenti  
- [  **@subid=**] *sub_id*  
- Identificatore globale di una sottoscrizione anonima. *sub_id* viene **uniqueidentifier**, non prevede alcun valore predefinito. Questo identificatore può essere recuperato nel Sottoscrittore utilizzando **sp_helppullsubscription**. Il valore di **subid** campo del set di risultati restituito è l'identificatore globale.  
+`[ @subid = ] sub_id` È l'identificatore globale di una sottoscrizione anonima. *sub_id* viene **uniqueidentifier**, non prevede alcun valore predefinito. Questo identificatore può essere recuperato nel Sottoscrittore utilizzando **sp_helppullsubscription**. Il valore di **subid** campo del set di risultati restituito è l'identificatore globale.  
   
- [  **@type=**] *tipo*  
- Tipo di sottoscrizione. *tipo di* viene **int**, non prevede alcun valore predefinito. I valori validi sono **1** oppure **2**. Specificare **1**, se la replica snapshot o la replica transazionale con l'agente di distribuzione. Specificare **2**, se tramite l'agente di Merge di replica di tipo merge.  
+`[ @type = ] type` È il tipo di sottoscrizione. *tipo di* viene **int**, non prevede alcun valore predefinito. I valori validi sono **1** oppure **2**. Specificare **1**, se la replica snapshot o la replica transazionale con l'agente di distribuzione. Specificare **2**, se tramite l'agente di Merge di replica di tipo merge.  
   
 ## <a name="return-code-values"></a>Valori restituiti  
  **0** (esito positivo) o **1** (errore)  

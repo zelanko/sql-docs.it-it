@@ -5,15 +5,15 @@ ms.prod: sql
 ms.technology: machine-learning
 ms.date: 09/30/2018
 ms.topic: conceptual
-author: HeidiSteen
-ms.author: heidist
+author: dphansen
+ms.author: davidph
 manager: cgronlun
-ms.openlocfilehash: 897f83e7272a47428d696802adf79ff816805486
-ms.sourcegitcommit: ee76332b6119ef89549ee9d641d002b9cabf20d2
+ms.openlocfilehash: da28d6f0ae423ce9cca0c6d571af944a2d7acd3d
+ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/20/2018
-ms.locfileid: "53645450"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58512038"
 ---
 # <a name="upgrade-machine-learning-r-and-python-components-in-sql-server-instances"></a>Aggiornamento di machine learning (R e Python) componenti nelle istanze di SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -51,26 +51,26 @@ Si noti che l'associazione non garantisce la versione più recente di R o Anacon
 
 [**SQL Server 2016 R Services**](../install/sql-r-services-windows-install.md)
 
-Componente |Versione iniziale | [R Server 9.0.1](https://docs.microsoft.com/machine-learning-server/install/r-server-install-windows) | [R Server 9.1](https://docs.microsoft.com/machine-learning-server/install/r-server-install-windows) | [SERVIZIO PER INSERZIONI MULTIPLE 9.2.1](https://docs.microsoft.com/machine-learning-server/install/machine-learning-server-windows-install) | [SERVIZIO PER INSERZIONI MULTIPLE 9.3](https://docs.microsoft.com/machine-learning-server/install/machine-learning-server-windows-install) |
+Componente |Versione iniziale | [R Server 9.0.1](https://docs.microsoft.com/machine-learning-server/install/r-server-install-windows) | [R Server 9.1](https://docs.microsoft.com/machine-learning-server/install/r-server-install-windows) | [MLS 9.2.1](https://docs.microsoft.com/machine-learning-server/install/machine-learning-server-windows-install) | [MLS 9.3](https://docs.microsoft.com/machine-learning-server/install/machine-learning-server-windows-install) |
 ----------|----------------|----------------|--------------|---------|-------|
-Microsoft R Open (MRO) tramite R | R 3.2.2     | R 3.3.2   |3.3.3 R   | R 3.4.1  | R 3.4.3 |
+Microsoft R Open (MRO) tramite R | R 3.2.2     | R 3.3.2   |R 3.3.3   | R 3.4.1  | R 3.4.3 |
 [RevoScaleR](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler) | 8.0.3  | 9.0.1 |  9.1 |  9.2.1 |  9.3 |
-[MicrosoftML](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/microsoftml-package)| Paesi Bassi | 9.0.1 |  9.1 |  9.2.1 |  9.3 |
-[modelli con training preliminare](https://docs.microsoft.com/machine-learning-server/install/microsoftml-install-pretrained-models)| Paesi Bassi | 9.0.1 |  9.1 |  9.2.1 |  9.3 |
-[sqlrutils](https://docs.microsoft.com/machine-learning-server/r-reference/sqlrutils/sqlrutils)| Paesi Bassi | 1,0 |  1,0 |  1,0 |  1,0 |
-[olapR](https://docs.microsoft.com/machine-learning-server/r-reference/olapr/olapr) | Paesi Bassi | 1,0 |  1,0 |  1,0 |  1,0 |
+[MicrosoftML](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/microsoftml-package)| n.a. | 9.0.1 |  9.1 |  9.2.1 |  9.3 |
+[modelli con training preliminare](https://docs.microsoft.com/machine-learning-server/install/microsoftml-install-pretrained-models)| n.a. | 9.0.1 |  9.1 |  9.2.1 |  9.3 |
+[sqlrutils](https://docs.microsoft.com/machine-learning-server/r-reference/sqlrutils/sqlrutils)| n.a. | 1,0 |  1,0 |  1,0 |  1,0 |
+[olapR](https://docs.microsoft.com/machine-learning-server/r-reference/olapr/olapr) | n.a. | 1,0 |  1,0 |  1,0 |  1,0 |
 
 
 [**SQL Server 2017 Machine Learning Services**](../install/sql-machine-learning-services-windows-install.md)
 
-Componente |Versione iniziale | SERVIZIO PER INSERZIONI MULTIPLE 9.3 | | | |
+Componente |Versione iniziale | MLS 9.3 | | | |
 ----------|----------------|---------|-|-|-|-|
-Microsoft R Open (MRO) tramite R | 3.3.3 R | R 3.4.3 | | | |
+Microsoft R Open (MRO) tramite R | R 3.3.3 | R 3.4.3 | | | |
 [RevoScaleR](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler) |   9.2 |  9.3 | | | |
 [MicrosoftML](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/microsoftml-package) | 9.2  | 9.3| | | |
 [sqlrutils](https://docs.microsoft.com/machine-learning-server/r-reference/sqlrutils/sqlrutils)| 1,0 |  1,0 | | | |
 [olapR](https://docs.microsoft.com/machine-learning-server/r-reference/olapr/olapr) | 1,0 |  1,0 | | | |
-Anaconda 4.2 su Python 3.5  | 4.2/3.5.2 | 4.2/3.5.2 | | | |
+Anaconda 4.2 over Python 3.5  | 4.2/3.5.2 | 4.2/3.5.2 | | | |
 [revoscalepy](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/revoscalepy-package) | 9.2  | 9.3| | | |
  [microsoftml](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/microsoftml-package) | 9.2  | 9.3| | | |
 [modelli con training preliminare](https://docs.microsoft.com/machine-learning-server/install/microsoftml-install-pretrained-models) | 9.2 | 9.3| | | |
@@ -277,7 +277,7 @@ Si potrebbero essere aggiunti altri pacchetti open source o di terze parti per l
 
 ### <a name="parameters"></a>Parametri
 
-|nome|Descrizione|
+|Nome|Descrizione|
 |------|------|
 |*list*| Visualizza un elenco di tutti gli ID delle istanze di database SQL nel computer corrente|
 |*bind*| Aggiorna l'istanza di database SQL specificata alla versione più recente di R Server e assicura che all'istanza vengano applicati automaticamente gli aggiornamenti successivi di R Server|

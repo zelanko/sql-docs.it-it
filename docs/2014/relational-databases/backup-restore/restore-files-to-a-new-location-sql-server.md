@@ -17,12 +17,12 @@ ms.assetid: b4f4791d-646e-4632-9980-baae9cb1aade
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: dc0520f7c28804e5534b4334e8f440e263c4f2eb
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: b30322bb48cfff6e0bca092d72aa9d5ad0990948
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48128851"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58527913"
 ---
 # <a name="restore-files-to-a-new-location-sql-server"></a>Ripristino dei file in una nuova posizione (SQL Server)
   In questo argomento viene descritto come ripristinare i file in un nuovo percorso in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] tramite [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)].  
@@ -33,7 +33,7 @@ ms.locfileid: "48128851"
   
      [Limitazioni e restrizioni](#Restrictions)  
   
-     [Security](#Security)  
+     [Sicurezza](#Security)  
   
 -   **Per ripristinare i file in una nuova posizione utilizzando:**  
   
@@ -49,13 +49,13 @@ ms.locfileid: "48128851"
   
 -   Non è possibile utilizzare RESTORE in una transazione esplicita o implicita.  
   
--   In base al modello di recupero con registrazione completa o con registrazione minima delle operazioni bulk, prima di poter ripristinare file è necessario eseguire il backup del log delle transazioni attivo, noto come parte finale del log. Per altre informazioni, vedere [Eseguire il backup di un log delle transazioni &#40;SQL Server&#41;](back-up-a-transaction-log-sql-server.md).  
+-   In base al modello di recupero con registrazione completa o con registrazione minima delle operazioni bulk, prima di poter ripristinare file è necessario eseguire il backup del log delle transazioni attivo, noto come parte finale del log. Per altre informazioni, vedere [Back Up a Transaction Log &#40;SQL Server&#41;](back-up-a-transaction-log-sql-server.md).  
   
 -   Per ripristinare un database crittografato, è necessario poter accedere alla chiave asimmetrica o al certificato utilizzato per crittografare il database. Non è possibile effettuare l'operazione di ripristino del database senza almeno uno di questi due elementi. Di conseguenza, il certificato utilizzato per crittografare la chiave di crittografia del database deve essere conservato fino a quando il backup è necessario. Per altre informazioni, vedere [SQL Server Certificates and Asymmetric Keys](../security/sql-server-certificates-and-asymmetric-keys.md).  
   
 ###  <a name="Security"></a> Sicurezza  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> Autorizzazioni  
  Se il database da ripristinare non esiste, per eseguire un'operazione RESTORE l'utente deve disporre delle autorizzazioni CREATE DATABASE. Se il database esiste, le autorizzazioni per l'istruzione RESTORE vengono assegnate per impostazione predefinita ai membri dei ruoli predefiniti del server **sysadmin** e **dbcreator** e al proprietario (**dbo**) del database. Per l'opzione FROM DATABASE_SNAPSHOT, il database esiste sempre.  
   
  Le autorizzazioni per l'istruzione RESTORE vengono assegnate ai ruoli in cui le informazioni sull'appartenenza sono sempre disponibili per il server. Poiché è possibile controllare l'appartenenza ai ruoli predefiniti del database solo quando il database è accessibile e non è danneggiato, condizioni che non risultano sempre vere quando si esegue un'operazione RESTORE, i membri del ruolo predefinito del database **db_owner** non dispongono delle autorizzazioni per l'istruzione RESTORE.  
@@ -87,9 +87,9 @@ ms.locfileid: "48128851"
     |Intestazione della colonna|Valori|  
     |-----------------|------------|  
     |**Ripristina**|Le caselle di controllo selezionate indicano i set di backup da ripristinare.|  
-    |**Nome**|Nome del set di backup.|  
-    |**Tipo di file**|Specifica il tipo di dati nel backup: **Dati**, **Log**o **Dati FILESTREAM**. I dati contenuti nelle tabelle sono nei file **Dati** . I dati del log delle transazioni sono nei file **Log** . I dati BLOB (Binary Large Object, oggetto binario di grandi dimensioni) archiviati nel file system si trovano nei file **Dati FILESTREAM** .|  
-    |**Tipo**|Tipo di backup eseguito: **Completo**, **Differenziale**o **Log delle transazioni**.|  
+    |**Name**|Nome del set di backup.|  
+    |**Tipo di file**|Specifica il tipo di dati nel backup: **I dati**, **registro**, o **dati Filestream**. I dati contenuti nelle tabelle sono nei file **Dati** . I dati del log delle transazioni sono nei file **Log** . I dati BLOB (Binary Large Object, oggetto binario di grandi dimensioni) archiviati nel file system si trovano nei file **Dati FILESTREAM** .|  
+    |**Tipo**|Tipo di operazione di backup eseguita: **Completo**, **Differenziale** o **Log delle transazioni**.|  
     |**Server**|Nome dell'istanza del Motore di database che ha eseguito l'operazione di backup.|  
     |**Nome file logico**|Nome logico del file.|  
     |**Database**|Nome del database interessato dall'operazione di backup.|  
@@ -105,12 +105,12 @@ ms.locfileid: "48128851"
     |Intestazione della colonna|Valori|  
     |-----------------|------------|  
     |**Nome file originale**|Percorso completo di un file di backup di origine.|  
-    |**Tipo di file**|Specifica il tipo di dati nel backup: **Dati**, **Log**o **Dati FILESTREAM**. I dati contenuti nelle tabelle sono nei file **Dati** . I dati del log delle transazioni sono nei file **Log** . I dati BLOB (Binary Large Object, oggetto binario di grandi dimensioni) archiviati nel file system si trovano nei file **Dati FILESTREAM** .|  
+    |**Tipo di file**|Specifica il tipo di dati nel backup: **I dati**, **registro**, o **dati Filestream**. I dati contenuti nelle tabelle sono nei file **Dati** . I dati del log delle transazioni sono nei file **Log** . I dati BLOB (Binary Large Object, oggetto binario di grandi dimensioni) archiviati nel file system si trovano nei file **Dati FILESTREAM** .|  
     |**Ripristina come**|Percorso completo del file di database da ripristinare. Per specificare un nuovo file di ripristino, fare clic nella casella di testo e modificare il percorso e il nome del file suggeriti. La modifica del percorso o del nome file nella colonna **Ripristina come** equivale all'utilizzo dell'opzione MOVE in un'istruzione RESTORE [!INCLUDE[tsql](../../includes/tsql-md.md)] .|  
   
 8.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
-##  <a name="TsqlProcedure"></a> Uso di Transact-SQL  
+##  <a name="TsqlProcedure"></a> Utilizzo di Transact-SQL  
   
 #### <a name="to-restore-files-to-a-new-location"></a>Per ripristinare i file in una nuova posizione  
   
@@ -139,7 +139,7 @@ ms.locfileid: "48128851"
 ###  <a name="TsqlExample"></a> Esempio (Transact-SQL)  
  Questo esempio illustra come ripristinare in nuove posizioni nell'unità D due file del database `MyNwind` originariamente memorizzati nell'unità C. Verranno anche applicati due log delle transazioni per ripristinare il database all'ora corrente. L'istruzione `RESTORE FILELISTONLY` viene utilizzata per determinare il numero e i nomi logici e fisici dei file del database da ripristinare.  
   
-```tsql  
+```sql  
 USE master;  
 GO  
 -- First determine the number and names of the files in the backup.  
@@ -168,6 +168,6 @@ GO
  [Ripristinare un Backup del Database &#40;SQL Server Management Studio&#41;](restore-a-database-backup-using-ssms.md)   
  [RESTORE &#40;Transact-SQL&#41;](/sql/t-sql/statements/restore-statements-transact-sql)   
  [Copiare database tramite backup e ripristino](../databases/copy-databases-with-backup-and-restore.md)   
- [Ripristino di file e filegroup &#40;SQL Server&#41;](restore-files-and-filegroups-sql-server.md)  
+ [Ripristinare file e filegroup &#40;SQL Server&#41;](restore-files-and-filegroups-sql-server.md)  
   
   

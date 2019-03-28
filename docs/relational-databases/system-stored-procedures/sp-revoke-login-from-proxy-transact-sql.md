@@ -18,12 +18,12 @@ ms.assetid: e4546c13-9fba-4bab-8b42-d6f18b33ec25
 author: VanMSFT
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: c136a58e8d23f67a5c703d6f840858757661686b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b5fdea72621ef18cc032fbf806ec0cb7faad4739
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47769559"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58537873"
 ---
 # <a name="sprevokeloginfromproxy-transact-sql"></a>sp_revoke_login_from_proxy (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -43,14 +43,11 @@ sp_revoke_login_from_proxy
 ```  
   
 ## <a name="arguments"></a>Argomenti  
- [ **@name=** ] **'***name***'**  
- Il nome del [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] account di accesso, ruolo del server o **msdb** ruolo del database per rimuovere l'accesso. *nome* viene **nvarchar(256)** non prevede alcun valore predefinito.  
+`[ @name = ] 'name'` Il nome del [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] account di accesso, ruolo del server o **msdb** ruolo del database per rimuovere l'accesso. *nome* viene **nvarchar(256)** non prevede alcun valore predefinito.  
   
- [  **@proxy_id=** ] *id*  
- ID del proxy per il quale rimuovere l'accesso. Entrambi *id* oppure *proxy_name* devono essere specificati, ma non è possibile specificarli entrambi. Il *id* viene **int**, con un valore predefinito è NULL.  
+`[ @proxy_id = ] id` L'id del proxy da rimuovere l'accesso. Entrambi *id* oppure *proxy_name* devono essere specificati, ma non è possibile specificarli entrambi. Il *id* viene **int**, con un valore predefinito è NULL.  
   
- [  **@proxy_name=** ] **'***proxy_name***'**  
- Nome del proxy per il quale rimuovere l'accesso. Entrambi *id* oppure *proxy_name* devono essere specificati, ma non è possibile specificarli entrambi. Il *nome_proxy* viene **sysname**, con un valore predefinito è NULL.  
+`[ @proxy_name = ] 'proxy_name'` Il nome del proxy da rimuovere l'accesso. Entrambi *id* oppure *proxy_name* devono essere specificati, ma non è possibile specificarli entrambi. Il *nome_proxy* viene **sysname**, con un valore predefinito è NULL.  
   
 ## <a name="return-code-values"></a>Valori restituiti  
  **0** (esito positivo) o **1** (errore)  

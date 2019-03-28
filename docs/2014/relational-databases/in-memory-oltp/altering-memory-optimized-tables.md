@@ -10,12 +10,12 @@ ms.assetid: 690b70b7-5be1-4014-af97-54e531997839
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 3dfd0d92f5dcf82cbfdd5786fed26e3b41048f8b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: dab550be7e867486d7a155c2113e2d7e3b63a038
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48136481"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58533043"
 ---
 # <a name="altering-memory-optimized-tables"></a>Modifica di tabelle con ottimizzazione per la memoria
   L'esecuzione di operazioni ALTER nelle tabelle ottimizzate per la memoria non è supportata. Sono incluse le operazioni come la modifica di bucket_count oppure l'aggiunta e la rimozione di un indice o di una colonna. In questo argomento vengono fornite le linee guida su come aggiornare le tabelle ottimizzate per la memoria.  
@@ -33,7 +33,7 @@ ms.locfileid: "48136481"
   
      Per trovare gli oggetti associati allo schema che fanno riferimento alla tabella utilizzare la query seguente:  
   
-    ```tsql  
+    ```sql  
     declare @t nvarchar(255) = N'<table name>'  
   
     select r.referencing_schema_name, r.referencing_entity_name  
@@ -43,7 +43,7 @@ ms.locfileid: "48136481"
   
      È possibile generare uno script delle autorizzazioni di una stored procedure utilizzando la seguente query [!INCLUDE[tsql](../../includes/tsql-md.md)]:  
   
-    ```tsql  
+    ```sql  
     declare @sp nvarchar(255) = N'<procedure name>'  
     declare @permissions nvarchar(max) = N''  
   
@@ -65,7 +65,7 @@ ms.locfileid: "48136481"
   
 4.  Creare una copia della tabella e copiare i dati dalla tabella originale alla copia della tabella. La copia può essere creata con i seguenti [!INCLUDE[tsql](../../includes/tsql-md.md)] <sup>1</sup>.  
   
-    ```tsql  
+    ```sql  
     select * into dbo.T_copy from dbo.T  
     ```  
   
@@ -110,7 +110,7 @@ ms.locfileid: "48136481"
   
  Lo script per il passaggio 4 deve essere aggiornato per riflettere le modifiche apportate allo schema. Se sono state apportate modifiche alle colonne della tabella, gli script per i passaggi 5 (copiare i dati dalla tabella temporanea) e 6 (ricreare le stored procedure) devono essere aggiornati in base alle necessità.  
   
-```tsql  
+```sql  
 # Prepare for schema changes by scripting out the table, as well as associated permissions  
 # --------  
 # Usage: prepare_schema_change.ps1 server_name db_name schema_name table_name  
@@ -226,7 +226,7 @@ write-host ""
   
  Utilizzo: execute_schema_change.ps1 *nome_server * * db_name`schema_name`table_name*  
   
-```tsql  
+```sql  
 # stop execution once an error occurs  
 $ErrorActionPreference="Stop"  
   

@@ -1,5 +1,5 @@
 ---
-title: 'Esempio: specifica della direttiva XMLTEXT | Microsoft Docs'
+title: 'Esempio: Specifica della direttiva XMLTEXT | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -9,18 +9,18 @@ ms.topic: conceptual
 helpviewer_keywords:
 - XMLTEXT directive
 ms.assetid: e78008ec-51e8-4fd1-b86f-1058a781de17
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
-ms.openlocfilehash: fc9d79c82df85e680ccf298f3d7f7997be87610b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 75f04b8dfb6cfec70c6fc141178dfb56c9ffd94c
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48075821"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58537353"
 ---
-# <a name="example-specifying-the-xmltext-directive"></a>Esempio: specifica della direttiva XMLTEXT
-  Questo esempio viene illustrato come i dati nella colonna di overflow viene risolto usando il `XMLTEXT` direttiva in un `SELECT` istruzione usando la modalità EXPLICIT.  
+# <a name="example-specifying-the-xmltext-directive"></a>Esempio: Specifica della direttiva XMLTEXT
+  Nell'esempio seguente viene illustrata la gestione dei dati nella colonna di overflow utilizzando la direttiva `XMLTEXT` in un'istruzione `SELECT` in modalità EXPLICIT.  
   
  Si consideri la tabella `Person` . La tabella contiene una colonna `Overflow` in cui viene archiviata la parte non utilizzata del documento XML.  
   
@@ -52,7 +52,7 @@ FOR XML EXPLICIT;
   
 -   Poiché l'attributo `PersonID` nell'elemento <`xmltext`> è in conflitto con l'attributo `PersonID` recuperato allo stesso livello dell'elemento, l'attributo dell'elemento <`xmltext`> viene ignorato, anche se `PersonID` è NULL. In linea generale, nell'overflow un attributo prevarrà sull'attributo con lo stesso nome.  
   
- Risultato:  
+ Questo è il risultato:  
   
  `<Parent PersonID="P1" PersonName="Joe" attr1="data">content</Parent>`  
   
@@ -86,7 +86,7 @@ FROM Person
 FOR XML EXPLICIT;  
 ```  
   
- Risultato:  
+ Questo è il risultato:  
   
  `<Parent PersonID="P1" PersonName="Joe" attr1="data">content</Parent>`  
   
@@ -112,7 +112,7 @@ FROM Person
 FOR XML EXPLICIT  
 ```  
   
- Risultato:  
+ Questo è il risultato:  
   
  `<Parent PersonID="P1" PersonName="Joe">`  
   
@@ -147,7 +147,7 @@ FROM Person
 FOR XML EXPLICIT;  
 ```  
   
- Risultato:  
+ Questo è il risultato:  
   
  `<Parent PersonID="P1" attr1="data">content<PersonName>Joe</PersonName>`  
   

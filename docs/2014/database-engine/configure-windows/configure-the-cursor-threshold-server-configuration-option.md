@@ -12,12 +12,12 @@ ms.assetid: 189f2067-c6c4-48bd-9bd9-65f6b2021c12
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: e99a0faa53739f588d0240b8425617af112ae04b
-ms.sourcegitcommit: 04dd0620202287869b23cc2fde998a18d3200c66
+ms.openlocfilehash: a710ef8474ea0ce67d0b549febb3a9dd40aa36e0
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "52640012"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58527873"
 ---
 # <a name="configure-the-cursor-threshold-server-configuration-option"></a>Configurare l'opzione di configurazione del server cursor threshold
   In questo argomento si illustra come configurare l'opzione di configurazione del server **cursor threshold** in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] utilizzando [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)]. Con l'opzione **cursor threshold** è possibile specificare il numero delle righe del set di cursori in corrispondenza del quale i keyset del cursore vengono generati in modo asincrono. Quando i cursori generano un keyset per un set di risultati, Query Optimizer produce una stima del numero di righe che verranno restituite per tale set di risultati. Se il numero stimato di righe restituite supera la soglia, il cursore viene generato in modo asincrono ed è pertanto possibile recuperare le righe dal cursore durante il popolamento del cursore stesso. In caso contrario, il cursore viene generato in modo sincrono e la query attende che vengano restituite tutte le righe.  
@@ -77,9 +77,9 @@ ms.locfileid: "52640012"
   
 2.  Dalla barra Standard fare clic su **Nuova query**.  
   
-3.  Copiare e incollare l'esempio seguente nella finestra delle query e fare clic su **Esegui**. Questo esempio mostra come usare [sp_configure](/sql/relational-databases/system-stored-procedures/sp-configure-transact-sql) per impostare l'opzione `cursor threshold` su `0` in modo che i keyset del cursore vengano generati in modo asincrono.  
+3.  Copiare e incollare l'esempio seguente nella finestra Query, quindi fare clic su **Esegui**. Questo esempio mostra come usare [sp_configure](/sql/relational-databases/system-stored-procedures/sp-configure-transact-sql) per impostare l'opzione `cursor threshold` su `0` in modo che i keyset del cursore vengano generati in modo asincrono.  
   
-```tsql  
+```sql  
 USE AdventureWorks2012 ;  
 GO  
 EXEC sp_configure 'show advanced options', 1 ;  

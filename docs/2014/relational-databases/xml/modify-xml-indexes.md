@@ -10,15 +10,15 @@ helpviewer_keywords:
 - XML indexes [SQL Server], modifying
 - modifying indexes
 ms.assetid: 24d50fe1-c6ec-49e6-91a3-9791851ba53d
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
-ms.openlocfilehash: b41139bf7d2261f884ea078b6e3b8bafcb8c0197
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 67767ae7ec3bda62783281385333fef89481f45d
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48088751"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58536565"
 ---
 # <a name="modify-xml-indexes"></a>Modifica di indici XML
   È possibile usare l’istruzione DDL di [ALTER INDEX &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-index-transact-sql)[!INCLUDE[tsql](../../includes/tsql-md.md)] per modificare gli indici XML e non XML esistenti. Per gli indici XML, tuttavia, non sono disponibili tutte le opzioni ALTER INDEX. Per la modifica degli indici XML non sono valide le opzioni seguenti:  
@@ -29,7 +29,7 @@ ms.locfileid: "48088751"
   
 -   Se viene specificata l'opzione ALTER INDEX ALL, questa viene applicata agli indici sia XML che non XML. È possibile che vengano specificate opzioni di indicizzazione che non sono valide per entrambi i tipi di indici. In tal caso, l'intera istruzione ha esito negativo.  
   
-## <a name="example-modifying-an-xml-index"></a>Esempio: modifica di un indice XML  
+## <a name="example-modifying-an-xml-index"></a>Esempio: Modifica di un indice XML  
  Nell'esempio seguente viene creato, e quindi modificato, un indice XML impostando l'opzione `ALLOW_ROW_LOCKS` su `OFF`. Quando l'opzione `ALLOW_ROW_LOCKS` è impostata su `OFF`, le righe non sono bloccate ed è possibile ottenere l'accesso agli indici specificati tramite blocchi a livello di pagina e di tabella.  
   
 ```  
@@ -50,7 +50,7 @@ ALTER INDEX PIdx_T_XmlCol on T
 SET (ALLOW_ROW_LOCKS = OFF)  
 ```  
   
-## <a name="example-disabling-and-enabling-an-xml-index"></a>Esempio: disabilitazione e attivazione di un indice XML  
+## <a name="example-disabling-and-enabling-an-xml-index"></a>Esempio: Disabilitazione e abilitazione di un indice XML  
  Per impostazione predefinita, viene attivato un indice XML. Se si disabilita un indice XML, per le query in esecuzione sulla colonna XML non viene utilizzato l'indice XML. Per abilitare un indice XML, utilizzare `ALTER INDEX` con l'opzione `REBUILD` .  
   
 ```  

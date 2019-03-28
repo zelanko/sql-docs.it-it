@@ -18,12 +18,12 @@ ms.assetid: 33755c33-7e1e-4ef7-af14-a9cebb1e2ed4
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: f034b1247f9865b83077ed11f644d6fdbbc4cecd
-ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
+ms.openlocfilehash: 5d135b3b4b0f9d63ccd89db04be259f3c7031b7e
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/18/2018
-ms.locfileid: "53589386"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58538493"
 ---
 # <a name="sptablesex-transact-sql"></a>sp_tables_ex (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -45,20 +45,15 @@ sp_tables_ex [ @table_server = ] 'table_server'
 ```  
   
 ## <a name="arguments"></a>Argomenti  
- [  **@table_server=** ] **'**_table_server_**'**  
- Nome del server collegato di cui si desidera ottenere informazioni di tabella. *table_server* viene **sysname**, non prevede alcun valore predefinito.  
+`[ @table_server = ] 'table_server'` È il nome del server collegato per cui restituire le informazioni della tabella. *table_server* viene **sysname**, non prevede alcun valore predefinito.  
   
- [ **,** [  **@table_name=** ] **'**_table_name_**'**]  
- Nome della tabella di cui si desidera ottenere informazioni sul tipo di dati. *TABLE_NAME*viene **sysname**, con un valore predefinito è NULL.  
+``[ , [ @table_name = ] 'table_name']`` È il nome della tabella per cui si desidera restituire le informazioni sul tipo di dati. *TABLE_NAME*viene **sysname**, con un valore predefinito è NULL.  
   
- [  **@table_schema=** ] **'**_table_schema_**'**]  
- Schema della tabella. *TABLE_SCHEMA*viene **sysname**, con un valore predefinito è NULL.  
+`[ @table_schema = ] 'table_schema']` È lo schema della tabella. *TABLE_SCHEMA*viene **sysname**, con un valore predefinito è NULL.  
   
- [  **@table_catalog=** ] **'**_table_catalog_**'**  
- È il nome del database in cui l'oggetto specificato *table_name* risiede. *TABLE_CATALOG* viene **sysname**, con un valore predefinito è NULL.  
+`[ @table_catalog = ] 'table_catalog'` È il nome del database in cui l'oggetto specificato *table_name* risiede. *TABLE_CATALOG* viene **sysname**, con un valore predefinito è NULL.  
   
- [  **@table_type=** ] **'**_table_type_**'**  
- Tipo di tabella da restituire. *TABLE_TYPE* viene **sysname**, con un valore predefinito è NULL e può avere uno dei valori seguenti.  
+`[ @table_type = ] 'table_type'` È il tipo della tabella da restituire. *TABLE_TYPE* viene **sysname**, con un valore predefinito è NULL e può avere uno dei valori seguenti.  
   
 |Value|Descrizione|  
 |-----------|-----------------|  
@@ -71,8 +66,7 @@ sp_tables_ex [ @table_server = ] 'table_server'
 |**TABLE**|Nome di una tabella utente.|  
 |**VIEW**|Nome di una vista.|  
   
- [  **@fUsePattern=** ] **'**_fUsePattern_**'**  
- Determina se i caratteri **_**, **%**, **[**, e **]** vengono interpretati come caratteri jolly. I valori validi sono 0 (utilizzo dei criteri di ricerca disattivato) e 1 (utilizzo dei criteri di ricerca attivato). *fUsePattern* viene **bit**, con un valore predefinito è 1.  
+`[ @fUsePattern = ] 'fUsePattern'` Determina se i caratteri **_**, **%**, **[**, e **]** vengono interpretati come caratteri jolly. I valori validi sono 0 (utilizzo dei criteri di ricerca disattivato) e 1 (utilizzo dei criteri di ricerca attivato). *fUsePattern* viene **bit**, con un valore predefinito è 1.  
   
 ## <a name="return-code-values"></a>Valori restituiti  
  None  
@@ -85,7 +79,7 @@ sp_tables_ex [ @table_server = ] 'table_server'
 |**TABLE_SCHEM**|**sysname**|Nome del proprietario della tabella. In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] questa colonna rappresenta il nome dell'utente del database che ha creato la tabella. Questo campo restituisce sempre un valore.|  
 |**TABLE_NAME**|**sysname**|Nome della tabella. Questo campo restituisce sempre un valore.|  
 |**TABLE_TYPE**|**varchar(32)**|Tabella, tabella di sistema o vista.|  
-|**SEZIONE OSSERVAZIONI**|**varchar(254)**|In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] non viene restituito alcun valore per questa colonna.|  
+|**REMARKS**|**varchar(254)**|In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] non viene restituito alcun valore per questa colonna.|  
   
 ## <a name="remarks"></a>Note  
  **sp_tables_ex** viene eseguita tramite una query di set di righe TABLES del **IDBSchemaRowset** interfaccia del provider OLE DB corrispondente a *table_server*. Il *nome_tabella*, *table_schema*, *table_catalog*, e *colonna* i parametri vengono passati a questa interfaccia per limitare le righe restituito.  

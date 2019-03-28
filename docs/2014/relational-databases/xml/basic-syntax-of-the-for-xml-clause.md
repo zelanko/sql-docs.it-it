@@ -13,15 +13,15 @@ helpviewer_keywords:
 - FOR XML clause, syntax
 - FOR XML clause, ROOT directive
 ms.assetid: df19ecbf-d28e-4e9c-aaa3-700f8bbd3be4
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 9216eca73e0251b20f28793020a3d05e9bd20310
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 0bb04374ede05406fdf6d273a76a246bb35f5dac
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48053961"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58537743"
 ---
 # <a name="basic-syntax-of-the-for-xml-clause"></a>Sintassi di base della clausola FOR XML
   La modalità FOR XML può essere RAW, AUTO, EXPLICIT o PATH. Tale modalità determina la forma della struttura XML risultante.  

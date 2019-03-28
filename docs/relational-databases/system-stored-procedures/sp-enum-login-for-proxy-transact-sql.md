@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 62a75019-248a-44c8-a5cc-c79f55ea3acf
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 9250f4c7da207561c935d7aa1c72ac4df7104526
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: bf71a75b86698fc78c56c26d87878a14a2ba91a1
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47799438"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58535583"
 ---
 # <a name="spenumloginforproxy-transact-sql"></a>sp_enum_login_for_proxy (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -42,26 +42,23 @@ sp_enum_login_for_proxy
 ```  
   
 ## <a name="arguments"></a>Argomenti  
- [ **@name**=] '*nome*'  
- Il nome di un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] principale, account di accesso, ruolo del server, oppure **msdb** ruolo del database per l'elenco dei proxy. Il nome è **nvarchar(256)**, con un valore predefinito è NULL.  
+`[ @name = ] 'name'` Il nome di un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] principale, account di accesso, ruolo del server, oppure **msdb** ruolo del database per l'elenco dei proxy. Il nome è **nvarchar(256)**, con un valore predefinito è NULL.  
   
- [ **@proxy_id**=] *id*  
- Numero di identificazione del proxy per cui visualizzare un elenco di informazioni. Il *proxy_id* viene **int**, con un valore predefinito è NULL. Entrambi i *id* o nella *proxy_name* può essere specificato.  
+`[ @proxy_id = ] id` Il numero di identificazione per elencare le informazioni per il proxy. Il *proxy_id* viene **int**, con un valore predefinito è NULL. Entrambi i *id* o nella *proxy_name* può essere specificato.  
   
- [ **@proxy_name**=] **'***proxy_name***'**  
- Nome del proxy per cui visualizzare un elenco di informazioni. Il *nome_proxy* viene **sysname**, con un valore predefinito è NULL. Entrambi i *id* o nella *proxy_name* può essere specificato.  
+`[ @proxy_name = ] 'proxy_name'` Il nome del proxy da elenco di informazioni. Il *nome_proxy* viene **sysname**, con un valore predefinito è NULL. Entrambi i *id* o nella *proxy_name* può essere specificato.  
   
 ## <a name="return-code-values"></a>Valori restituiti  
  **0** (esito positivo) o **1** (errore)  
   
 ## <a name="result-sets"></a>Set di risultati  
   
-|Nome colonna|Tipo di dati|Description|  
+|Nome colonna|Tipo di dati|Descrizione|  
 |-----------------|---------------|-----------------|  
 |**proxy_id**|**int**|Numero di identificazione del proxy.|  
 |**proxy_name**|**sysname**|Nome del proxy.|  
 |**name**|**sysname**|Nome dell'entità di sicurezza per l'associazione.|  
-|**flags**|**int**|Tipo dell'entità di sicurezza.<br /><br /> **0**  =  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] account di accesso<br /><br /> **1** = ruolo predefinito del sistema<br /><br /> **2** = ruolo del database in **msdb**|  
+|**flags**|**int**|Tipo dell'entità di sicurezza.<br /><br /> **0** = [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] login<br /><br /> **1** = ruolo predefinito del sistema<br /><br /> **2** = ruolo del database in **msdb**|  
   
 ## <a name="remarks"></a>Note  
  Quando viene specificato alcun parametro, **sp_enum_login_for_proxy** Elenca le informazioni su tutti gli account di accesso nell'istanza per ogni proxy.  

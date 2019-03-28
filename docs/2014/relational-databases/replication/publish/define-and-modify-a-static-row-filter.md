@@ -14,12 +14,12 @@ ms.assetid: a6ebb026-026f-4c39-b6a9-b9998c3babab
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: a0af353d79fcb84d1ca4b8921048c3c5f502c29f
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 2c2abc45712be58eabd4ed6ef4c9b276438e8afe
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52771553"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58535723"
 ---
 # <a name="define-and-modify-a-static-row-filter"></a>Definizione e modifica di un filtro di riga statico
   In questo argomento viene descritto come definire e modificare un filtro di riga statico in [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] tramite [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../../includes/tsql-md.md)].  
@@ -70,19 +70,19 @@ ms.locfileid: "52771553"
   
     -   L'area di testo **Istruzione per il filtro** contiene il testo predefinito, nel formato seguente:  
   
-        ```tsql  
+        ```sql  
         SELECT <published_columns> FROM [schema].[tablename] WHERE  
         ```  
   
     -   Il testo predefinito non può essere modificato. Digitare la clausola di filtro dopo la parola chiave WHERE usando la sintassi SQL standard. La clausola di filtro completa sarà simile alla seguente:  
   
-        ```tsql  
+        ```sql  
         SELECT <published_columns> FROM [HumanResources].[Employee] WHERE [LoginID] = 'adventure-works\ranjit0'  
         ```  
   
     -   In un filtro di riga statico può essere inclusa una funzione definita dall'utente. La clausola di filtro completa per un filtro di riga statico con una funzione definita dall'utente sarà simile alla seguente:  
   
-        ```tsql  
+        ```sql  
         SELECT <published_columns> FROM [Sales].[SalesOrderHeader] WHERE MyFunction([Freight]) > 100  
         ```  
   

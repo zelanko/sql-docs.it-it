@@ -19,12 +19,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: b421d32e8c8ac3d4f56ecaf95448ecafc92c8e17
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ab2f2fcb07fb181fd32d5a60f9fd2d8f25725f96
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47663395"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58535683"
 ---
 # <a name="sppurgejobhistory-transact-sql"></a>sp_purge_jobhistory (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -44,17 +44,14 @@ sp_purge_jobhistory
 ```  
   
 ## <a name="arguments"></a>Argomenti  
- [ **@job_name=** ] **'***job_name***'**  
- Nome del processo di cui si desidera eliminare i record della cronologia. *nome_processo*viene **sysname**, con un valore predefinito è NULL. Entrambi *job_id* oppure *job_name* devono essere specificati, ma non è possibile specificarli entrambi.  
+`[ @job_name = ] 'job_name'` Il nome del processo per cui si desidera eliminare i record della cronologia. *nome_processo*viene **sysname**, con un valore predefinito è NULL. Entrambi *job_id* oppure *job_name* devono essere specificati, ma non è possibile specificarli entrambi.  
   
 > [!NOTE]  
 >  I membri del **sysadmin** fissa ruolo del server o i membri del **SQLAgentOperatorRole** ruolo predefinito del database possono eseguire **sp_purge_jobhistory** senza specificare un *nome_processo* oppure *job_id*. Quando **sysadmin** questi argomenti non vengono specificati gli utenti, la cronologia processo per tutti i processi locali e multiserver viene eliminata entro il tempo specificato da *oldest_date*. Quando **SQLAgentOperatorRole** gli utenti non specificano questi argomenti, la cronologia processo per tutti i processi locali verrà eliminata entro il tempo specificato da *oldest_date*.  
   
- [ **@job_id=** ] *job_id*  
- Numero di identificazione del processo dei record da eliminare. *job_id*viene **uniqueidentifier**, con un valore predefinito è NULL. Entrambi *job_id* oppure *job_name* devono essere specificati, ma non è possibile specificarli entrambi. Vedere la nota nella descrizione del **@job_name** per informazioni su come **sysadmin** oppure **SQLAgentOperatorRole** gli utenti possono usare questo argomento.  
+`[ @job_id = ] job_id` Numero di identificazione del processo per i record da eliminare. *job_id*viene **uniqueidentifier**, con un valore predefinito è NULL. Entrambi *job_id* oppure *job_name* devono essere specificati, ma non è possibile specificarli entrambi. Vedere la nota nella descrizione del **@job_name** per informazioni su come **sysadmin** oppure **SQLAgentOperatorRole** gli utenti possono usare questo argomento.  
   
- [ **@oldest_date** =] *oldest_date*  
- Il record meno recente da conservare nella cronologia. *oldest_date* viene **datetime**, con un valore predefinito è NULL. Quando *oldest_date* omette **sp_purge_jobhistory** rimuove solo i record precedenti rispetto al valore specificato.  
+`[ @oldest_date = ] oldest_date` Il record meno recente da conservare nella cronologia. *oldest_date* viene **datetime**, con un valore predefinito è NULL. Quando *oldest_date* omette **sp_purge_jobhistory** rimuove solo i record precedenti rispetto al valore specificato.  
   
 ## <a name="return-code-values"></a>Valori restituiti  
  **0** (esito positivo) o **1** (errore)  

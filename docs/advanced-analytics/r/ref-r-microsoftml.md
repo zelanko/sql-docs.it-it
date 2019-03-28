@@ -5,15 +5,15 @@ ms.prod: sql
 ms.technology: machine-learning
 ms.date: 12/04/2018
 ms.topic: conceptual
-author: HeidiSteen
-ms.author: heidist
+author: dphansen
+ms.author: davidph
 manager: cgronlun
-ms.openlocfilehash: 37f52a5ac891ab1d52a9b6335a62fdf2789df9b1
-ms.sourcegitcommit: ee76332b6119ef89549ee9d641d002b9cabf20d2
+ms.openlocfilehash: 73d9dcf56c0eb5e69704adf169946f6aa28a432c
+ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/20/2018
-ms.locfileid: "53645310"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58512258"
 ---
 # <a name="microsoftml-r-library-in-sql-server"></a>MicrosoftML (libreria R in SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -89,7 +89,7 @@ In questa sezione elenca le funzioni in base alla categoria per farsi un'idea de
 
 | Nome funzione | Descrizione |
 |---------------|-------------|
-|[rxpredict. Mlmodel](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/rxpredict) | Esegue la libreria di assegnazione dei punteggi da SQL Server, tramite la stored procedure, o dal codice R, l'abilitazione di assegnazione dei punteggi in tempo reale offrire prestazioni molto più veloce di stima.|
+|[rxPredict.mlModel](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/rxpredict) | Esegue la libreria di assegnazione dei punteggi da SQL Server, tramite la stored procedure, o dal codice R, l'abilitazione di assegnazione dei punteggi in tempo reale offrire prestazioni molto più veloce di stima.|
 |[rxFeaturize](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/rxfeaturize) | Trasforma i dati da un set di dati di input a un set di dati di output.|
 |[mlModel](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/mlmodel) | Fornisce un riepilogo di un modello di Machine Learning di Microsoft R.|
 
@@ -126,7 +126,7 @@ In questa sezione elenca le funzioni in base alla categoria per farsi un'idea de
 
 | Nome funzione | Descrizione |
 |---------------|-------------|
-|[Query Optimizer](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/optimizer) | Specifica gli algoritmi di ottimizzazione per la [rxNeuralNet](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/rxneuralnet) algoritmo di machine learning.|
+|[optimizer](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/optimizer) | Specifica gli algoritmi di ottimizzazione per la [rxNeuralNet](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/rxneuralnet) algoritmo di machine learning.|
 
 
 ## <a name="8-package-state-functions"></a>Funzioni dello stato di 8-package

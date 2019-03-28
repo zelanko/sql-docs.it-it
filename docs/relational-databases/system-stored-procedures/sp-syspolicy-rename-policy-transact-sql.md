@@ -18,12 +18,12 @@ ms.assetid: ce2b07f5-23b1-4f49-8e7b-c18cf3f3d45b
 author: VanMSFT
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 297f0040f127ae210f8507374f940e4439cdf0d2
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 2262bf4d05e10ef20a531794cd342a5ee903fe3a
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47855619"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58536733"
 ---
 # <a name="spsyspolicyrenamepolicy-transact-sql"></a>sp_syspolicy_rename_policy (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -42,14 +42,11 @@ sp_syspolicy_rename_policy { [ @name = ] 'name' | [ @policy_id = ] policy_id }
 ```  
   
 ## <a name="arguments"></a>Argomenti  
- [ **@name=** ] **'***name***'**  
- Nome dei criteri che si desidera rinominare. *nome* viene **sysname**e deve essere specificato se *policy_id* è NULL.  
+`[ @name = ] 'name'` È il nome del criterio che si desidera rinominare. *nome* viene **sysname**e deve essere specificato se *policy_id* è NULL.  
   
- [ **@policy_id=** ] *policy_id*  
- Identificatore dei criteri che si desidera rinominare. *policy_id* viene **int**e deve essere specificato se *nome* è NULL.  
+`[ @policy_id = ] policy_id` È l'identificatore per il criterio che si desidera rinominare. *policy_id* viene **int**e deve essere specificato se *nome* è NULL.  
   
- [  **@new_name=** ] **'***new_name***'**  
- È il nuovo nome per il criterio. *new_name* viene **sysname**ed è obbligatorio. Non può essere NULL o una stringa vuota.  
+`[ @new_name = ] 'new_name'` È il nuovo nome per il criterio. *new_name* viene **sysname**ed è obbligatorio. Non può essere NULL o una stringa vuota.  
   
 ## <a name="return-code-values"></a>Valori restituiti  
  **0** (esito positivo) o **1** (errore)  
@@ -63,7 +60,7 @@ sp_syspolicy_rename_policy { [ @name = ] 'name' | [ @policy_id = ] policy_id }
  È necessaria l'appartenenza al ruolo predefinito del database PolicyAdministratorRole.  
   
 > [!IMPORTANT]  
->  Possibile elevazione di credenziali: gli utenti nel ruolo PolicyAdministratorRole possono creare trigger server e pianificare le esecuzioni di criteri che influiscono sul funzionamento dell'istanza del [!INCLUDE[ssDE](../../includes/ssde-md.md)]. Gli utenti con il ruolo PolicyAdministratorRole possono ad esempio creare criteri che impediscono la creazione della maggior parte degli oggetti nel [!INCLUDE[ssDE](../../includes/ssde-md.md)]. A causa di questa possibile elevazione di credenziali, il ruolo PolicyAdministratorRole deve essere concesso solo a utenti ritenuti attendibili per il controllo della configurazione del [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
+>  Possibile elevazione di credenziali: Gli utenti nel ruolo PolicyAdministratorRole possono creare trigger server e pianificare le esecuzioni di criteri che possono influenzare l'operazione dell'istanza del [!INCLUDE[ssDE](../../includes/ssde-md.md)]. Gli utenti con il ruolo PolicyAdministratorRole possono ad esempio creare criteri che impediscono la creazione della maggior parte degli oggetti nel [!INCLUDE[ssDE](../../includes/ssde-md.md)]. A causa di questa possibile elevazione di credenziali, il ruolo PolicyAdministratorRole deve essere concesso solo a utenti ritenuti attendibili per il controllo della configurazione del [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
 ## <a name="examples"></a>Esempi  
  Nell'esempio seguente i criteri 'Test Policy 1' vengono rinominati in 'Test Policy 2'.  

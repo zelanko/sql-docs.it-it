@@ -19,12 +19,12 @@ ms.assetid: abcb1407-ff78-4c76-b02e-509c86574462
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: bf38282332f1cf8c3a5d3dd7716f9adc21e7bd8f
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: 1b5dfd9cf062e5767606d83c3beb8a25b36387f1
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53201910"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58538223"
 ---
 # <a name="spdetachdb-transact-sql"></a>sp_detach_db (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -46,16 +46,13 @@ sp_detach_db [ @dbname= ] 'database_name'
 ```  
   
 ## <a name="arguments"></a>Argomenti  
- [  **@dbname =** ] **'***database_name***'**  
- Nome del database da scollegare. *database_name* è un **sysname** valore, con un valore predefinito NULL.  
+`[ @dbname = ] 'database_name'` È il nome del database da scollegare. *database_name* è un **sysname** valore, con un valore predefinito NULL.  
   
- [  **@skipchecks =** ] **'***skipchecks***'**  
- Specifica se ignorare o eseguire UPDATE STATISTIC. *skipchecks* è un **nvarchar(10)** valore, con un valore predefinito NULL. Per ignorare UPDATE STATISTICS, specificare **true**. Per eseguire in modo esplicito UPDATE STATISTICS, specificare **false**.  
+`[ @skipchecks = ] 'skipchecks'` Specifica se ignorare o eseguire UPDATE STATISTIC. *skipchecks* è un **nvarchar(10)** valore, con un valore predefinito NULL. Per ignorare UPDATE STATISTICS, specificare **true**. Per eseguire in modo esplicito UPDATE STATISTICS, specificare **false**.  
   
  Per impostazione predefinita, l'istruzione UPDATE STATISTICS viene eseguita per aggiornare le informazioni sui dati nelle tabelle e negli indici. L'esecuzione di UPDATE STATISTICS risulta utile per i database che devono essere spostati su supporti di sola lettura.  
   
- [  **@keepfulltextindexfile=** ] **'***KeepFulltextIndexFile***'**  
- Specifica che il file di indice full-text associato al database che si desidera scollegare non verrà eliminato durante l'operazione di scollegamento del database. *KeepFulltextIndexFile* è un **nvarchar(10)** valore e il valore predefinito **true**. Se *KeepFulltextIndexFile* viene **false**, tutti i file di indice full-text associati al database e vengono eliminati i metadati dell'indice full-text, a meno che il database è di sola lettura. Se è NULL oppure **true**, full-text relativi metadati vengono mantenuti.  
+`[ @keepfulltextindexfile = ] 'KeepFulltextIndexFile'` Specifica che il file di indice full-text associato al database che si desidera scollegare non verrà eliminato il database durante l'operazione di scollegamento. *KeepFulltextIndexFile* è un **nvarchar(10)** valore e il valore predefinito **true**. Se *KeepFulltextIndexFile* viene **false**, tutti i file di indice full-text associati al database e vengono eliminati i metadati dell'indice full-text, a meno che il database è di sola lettura. Se è NULL oppure **true**, full-text relativi metadati vengono mantenuti.  
   
 > [!IMPORTANT]
 >  Il**@keepfulltextindexfile** parametro verrà rimosso in una versione futura di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Non utilizzare questo parametro in un nuovo progetto di sviluppo e modificare non appena possibile le applicazioni in cui viene attualmente utilizzato.  

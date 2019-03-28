@@ -21,12 +21,12 @@ ms.assetid: 525cfcfc-f317-478d-ba84-72e62285f160
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 3d3e6ad6a0cf8ed5c84279b621badc939b1e97a8
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: ee22bbf5028959d0aab178924d38465c9d98b432
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52791713"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58527453"
 ---
 # <a name="spchecksubsetfilter-transact-sql"></a>sp_check_subset_filter (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -45,14 +45,11 @@ sp_check_subset_filter [ @filtered_table = ] 'filtered_table'
 ```  
   
 ## <a name="arguments"></a>Argomenti  
- [ **@filtered_table**=] **'***filtered_table***'**  
- Nome della tabella filtrata. *filtered_table* viene **nvarchar(400)**, non prevede alcun valore predefinito.  
+`[ @filtered_table = ] 'filtered_table'` È il nome di una tabella filtrata. *filtered_table* viene **nvarchar(400)**, non prevede alcun valore predefinito.  
   
- [ **@subset_filterclause** =] **'***subset_filterclause***'**  
- Clausola di filtro sottoposta a verifica. *subset_filterclause* viene **nvarchar(1000)**, non prevede alcun valore predefinito.  
+`[ @subset_filterclause = ] 'subset_filterclause'` Si sta testando la clausola di filtro. *subset_filterclause* viene **nvarchar(1000)**, non prevede alcun valore predefinito.  
   
- [ **@has_dynamic_filters**=] *has_dynamic_filters*  
- Indica se la clausola di filtro è un filtro di riga con parametri. *has_dynamic_filters* viene **bit**, con un valore predefinito è NULL ed è un parametro di output. Restituisce un valore pari **1** quando la clausola di filtro è un filtro di riga con parametri.  
+`[ @has_dynamic_filters = ] has_dynamic_filters` Indica se la clausola di filtro è un filtro di riga con parametri. *has_dynamic_filters* viene **bit**, con un valore predefinito è NULL ed è un parametro di output. Restituisce un valore pari **1** quando la clausola di filtro è un filtro di riga con parametri.  
   
 ## <a name="result-sets"></a>Set di risultati  
   

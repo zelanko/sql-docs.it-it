@@ -10,12 +10,12 @@ ms.assetid: f855e931-7502-44bd-8a8b-b8543645c7f4
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 9588b40fa253c3866ab0e7f7ce328edf22aa1789
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 999f58014d661f2eb476cd195e11788b2a565937
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53364833"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58527893"
 ---
 # <a name="resolve-out-of-memory-issues"></a>Risolvere i problemi di memoria insufficiente
   [!INCLUDE[hek_1](../../includes/hek-1-md.md)] usa più memoria e in modi diversi rispetto a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. È possibile che la quantità di memoria installata e allocata per [!INCLUDE[hek_2](../../includes/hek-2-md.md)] diventi inadeguata con l'aumentare delle esigenze. In tal caso, è possibile che la memoria risulti insufficiente. In questo argomento viene descritto come risolvere una situazione di memoria insufficiente. Per le linee guida che consentono di evitare molte situazioni di memoria insufficiente, vedere [Monitorare e risolvere i problemi relativi all'utilizzo della memoria](monitor-and-troubleshoot-memory-usage.md) .  
@@ -24,11 +24,11 @@ ms.locfileid: "53364833"
   
 |Argomento|Panoramica|  
 |-----------|--------------|  
-|[Risoluzione degli errori di ripristino del database dovuti a memoria insufficiente](resolve-out-of-memory-issues.md#bkmk_resolverecoveryfailures)|Operazioni da eseguire se viene visualizzato il messaggio di errore "Operazione di ripristino non riuscita per il database '*\<NomeDatabase>*'. Memoria insufficiente nel pool di risorse '*\<NomePoolRisorse>*'."|  
-|[Risoluzione dell'impatto delle condizioni di memoria insufficiente sul carico di lavoro](resolve-out-of-memory-issues.md#bkmk_recoverfromoom)|Operazioni da eseguire nel caso in cui i problemi di memoria insufficiente incidono negativamente sulle prestazioni.|  
-|[Risoluzione degli errori di allocazione della pagina dovuti a memoria insufficiente quando è disponibile memoria sufficiente](resolve-out-of-memory-issues.md#bkmk_pageallocfailure)|Operazioni da eseguire se viene visualizzato il messaggio di errore "È in corso la disabilitazione delle allocazioni di pagine per il database '*\<NomeDatabase>*'. Memoria insufficiente nel pool di risorse '*\<NomePoolRisorse>*'. ..." quando la memoria disponibile è sufficiente per l'operazione.|  
+| [Risoluzione degli errori di ripristino del database dovuti a memoria insufficiente](#resolve-database-restore-failures-due-to-oom) |Operazioni da eseguire se viene visualizzato il messaggio di errore "Operazione di ripristino non riuscita per il database '*\<NomeDatabase>*'. Memoria insufficiente nel pool di risorse '*\<NomePoolRisorse>*'."|  
+| [Risoluzione dell'impatto delle condizioni di memoria insufficiente sul carico di lavoro](#resolve-impact-of-low-memory-or-oom-conditions-on-the-workload)|Operazioni da eseguire nel caso in cui i problemi di memoria insufficiente incidono negativamente sulle prestazioni.|  
+| [Risoluzione degli errori di allocazione della pagina dovuti a memoria insufficiente quando è disponibile memoria sufficiente](#resolve-page-allocation-failures-due-to-insufficient-memory-when-sufficient-memory-is-available) |Operazioni da eseguire se viene visualizzato il messaggio di errore "È in corso la disabilitazione delle allocazioni di pagine per il database '*\<NomeDatabase>*'. Memoria insufficiente nel pool di risorse '*\<NomePoolRisorse>*'. ..." quando la memoria disponibile è sufficiente per l'operazione.|  
   
-##  <a name="bkmk_resolveRecoveryFailures"></a> Risoluzione degli errori di ripristino del database dovuti a memoria insufficiente  
+## <a name="resolve-database-restore-failures-due-to-oom"></a>Risoluzione degli errori di ripristino del database dovuti a memoria insufficiente  
  Quando si tenta di ripristinare un database è possibile che venga visualizzato il messaggio di errore: "Operazione non riuscita per il database di ripristino '*\<databaseName >*'a causa di memoria insufficiente nel pool di risorse'*\<Nomepoolrisorse >*'." Prima di poter ripristinare correttamente il database, è necessario risolvere il problema di memoria insufficiente rendendo disponibile una maggiore quantità di memoria.  
   
  Per risolvere l'errore di recupero a causa delle memoria insufficiente, aumentare la memoria disponibile usando uno o tutti questi metodi per aumentare temporaneamente la memoria disponibile per l'operazione di recupero.  
@@ -43,7 +43,7 @@ ms.locfileid: "53364833"
     >  Se il server è in esecuzione in una VM e non è dedicato, impostare il valore di MIN_MEMORY_PERCENT sullo stesso valore di MAX_MEMORY_PERCENT.   
     > Per altre informazioni, vedere [Procedure consigliate: Uso di OLTP In memoria in un ambiente di VM](../../database-engine/using-in-memory-oltp-in-a-vm-environment.md) per altre informazioni.  
   
-    ```tsql  
+    ```sql  
   
     -- disable resource governor  
     ALTER RESOURCE GOVERNOR DISABLE  
@@ -61,24 +61,24 @@ ms.locfileid: "53364833"
   
     ```  
   
-     Per informazioni sui valori massimi per MAX_MEMORY_PERCENT, vedere la sezione dell'argomento che riporta le [percentuali di memoria disponibile per indici e tabelle ottimizzate per la memoria](bind-a-database-with-memory-optimized-tables-to-a-resource-pool.md#bkmk_PercentAvailable).  
+     Per informazioni sui valori massimi per MAX_MEMORY_PERCENT, vedere la sezione dell'argomento [percentuale di memoria disponibile per indici e tabelle ottimizzate per la memoria](bind-a-database-with-memory-optimized-tables-to-a-resource-pool.md#percent-of-memory-available-for-memory-optimized-tables-and-indexes)
   
 -   Riconfigurare **max server memory**.  
     Per informazioni sulla configurazione di **max server memory** vedere l'argomento [Ottimizzazione delle prestazioni del server tramite le opzioni di configurazione della memoria](https://technet.microsoft.com/library/ms177455\(v=SQL.105\).aspx).  
   
-##  <a name="bkmk_recoverFromOOM"></a> Risoluzione dell'impatto delle condizioni di memoria insufficiente sul carico di lavoro  
+## <a name="resolve-impact-of-low-memory-or-oom-conditions-on-the-workload"></a>Risoluzione dell'impatto delle condizioni di memoria insufficiente sul carico di lavoro  
  Ovviamente, è consigliabile non trovarsi in una situazione di memoria insufficiente. Una buona pianificazione e un buon monitoraggio consentono di evitare le situazioni di memoria insufficiente. Tuttavia, nonostante l'accurata pianificazione non sempre è possibile prevedere le effettive esigenze e potrebbero verificarsi situazioni di memoria insufficiente. Sono disponibili due passaggi per risolvere una situazione di memoria insufficiente:  
   
-1.  [Aprire una connessione amministrativa dedicata (DAC)](resolve-out-of-memory-issues.md#bkmk_opendac)  
+1.  [Aprire una (connessione amministrativa dedicata) dell'applicazione livello dati ](#open-a-dac-dedicated-administrator-connection) 
   
-2.  [Intraprendere un'azione correttiva](resolve-out-of-memory-issues.md#bkmk_takecorrectiveaction)  
+2.  [Intraprendere un'azione correttiva](#take-corrective-action) 
   
-###  <a name="bkmk_openDAC"></a> Aprire una connessione amministrativa dedicata (DAC)  
+### <a name="open-a-dac-dedicated-administrator-connection"></a>Aprire una connessione amministrativa dedicata (DAC)  
  Microsoft SQL Server fornisce una connessione amministrativa dedicata (DAC). La connessione DAC consente a un amministratore di accedere a un'istanza in esecuzione del motore di database di SQL Server per risolvere i problemi presenti nel server, anche quando il server non risponde ad altre connessioni client. La connessione DAC è disponibile tramite l'utilità `sqlcmd` e SQL Server Management Studio (SSMS).  
   
  Per informazioni sull'uso di `sqlcmd` e della connessione DAC, vedere [Utilizzo di una connessione amministrativa dedicata](../../database-engine/configure-windows/diagnostic-connection-for-database-administrators.md). Per indicazioni sull'uso della connessione DAC tramite SSMS vedere [come: Usare la connessione amministrativa dedicata con SQL Server Management Studio](https://msdn.microsoft.com/library/ms178068.aspx).  
   
-###  <a name="bkmk_takeCorrectiveAction"></a> Intraprendere un'azione correttiva  
+### <a name="take-corrective-action"></a>Intraprendere un'azione correttiva  
  Per risolvere la condizione di memoria insufficiente, è necessario liberare la memoria esistente riducendone l'utilizzo o rendere disponibile una maggiore quantità di memoria per le tabelle in memoria.  
   
 #### <a name="free-up-existing-memory"></a>Liberare memoria esistente  
@@ -98,7 +98,7 @@ ms.locfileid: "53364833"
 ##### <a name="increase-value-of-maxmemorypercent-on-the-resource-pool"></a>Aumentare il valore di MAX_MEMORY_PERCENT nel pool di risorse  
  Se non è stato creato un pool di risorse denominato per le tabelle in memoria, è consigliabile eseguire tale operazione e associare al pool i database di [!INCLUDE[hek_2](../../includes/hek-2-md.md)] . Per istruzioni sulla creazione e l'associazione dei database [a un pool di risorse, vedere l'argomento](bind-a-database-with-memory-optimized-tables-to-a-resource-pool.md) Associazione di un database con tabelle con ottimizzazione per la memoria a un pool di risorse [!INCLUDE[hek_2](../../includes/hek-2-md.md)] .  
   
- Se il database di [!INCLUDE[hek_2](../../includes/hek-2-md.md)] è associato a un pool di risorse, è possibile aumentare la percentuale di memoria a cui il pool può accedere. Per informazioni sulla modifica del valore di MIN_MEMORY_PERCENT e MAX_MEMORY_PERCENT per un pool di risorse, vedere l'argomento secondario [Cambiare MIN_MEMORY_PERCENT e MAX_MEMORY_PERCENT in un pool esistente](bind-a-database-with-memory-optimized-tables-to-a-resource-pool.md#bkmk_ChangeAllocation) .  
+ Se il database di [!INCLUDE[hek_2](../../includes/hek-2-md.md)] è associato a un pool di risorse, è possibile aumentare la percentuale di memoria a cui il pool può accedere. Per informazioni sulla modifica del valore di MIN_MEMORY_PERCENT e MAX_MEMORY_PERCENT per un pool di risorse, vedere l'argomento secondario [Cambiare MIN_MEMORY_PERCENT e MAX_MEMORY_PERCENT in un pool esistente](bind-a-database-with-memory-optimized-tables-to-a-resource-pool.md#change-min-memory-percent-and-max-memory-percent-on-an-existing-pool) .  
   
  Aumentare il valore di MAX_MEMORY_PERCENT.   
 Nel frammento di codice seguente il valore di MAX_MEMORY_PERCENT per il pool di risorse PoolHk viene modificato al 70% della memoria installata.  
@@ -107,7 +107,7 @@ Nel frammento di codice seguente il valore di MAX_MEMORY_PERCENT per il pool di 
 >  Se il server è in esecuzione in una VM e non è dedicato, impostare il valore di MIN_MEMORY_PERCENT e MAX_MEMORY_PERCENT sullo stesso valore.   
 > Per altre informazioni, vedere [Procedure consigliate: Uso di OLTP In memoria in un ambiente di VM](../../database-engine/using-in-memory-oltp-in-a-vm-environment.md) per altre informazioni.  
   
-```tsql  
+```sql  
   
 -- disable resource governor  
 ALTER RESOURCE GOVERNOR DISABLE  
@@ -125,16 +125,16 @@ GO
   
 ```  
   
- Per informazioni sui valori massimi per MAX_MEMORY_PERCENT, vedere la sezione dell'argomento che riporta le [percentuali di memoria disponibile per indici e tabelle ottimizzate per la memoria](bind-a-database-with-memory-optimized-tables-to-a-resource-pool.md#bkmk_PercentAvailable).  
+ Per informazioni sui valori massimi per MAX_MEMORY_PERCENT, vedere la sezione dell'argomento che riporta le [percentuali di memoria disponibile per indici e tabelle ottimizzate per la memoria](bind-a-database-with-memory-optimized-tables-to-a-resource-pool.md#percent-of-memory-available-for-memory-optimized-tables-and-indexes).  
   
 ##### <a name="install-additional-memory"></a>Installare memoria aggiuntiva  
- Infine, la soluzione migliore, se possibile, prevede l'installazione di ulteriore memoria fisica. In questo caso, tenere presente che probabilmente sarà possibile aumentare anche il valore di MAX_MEMORY_PERCENT (vedere l'argomento [Modificare il valore di MIN_MEMORY_PERCENT e MAX_MEMORY_PERCENT in un pool esistente](bind-a-database-with-memory-optimized-tables-to-a-resource-pool.md#bkmk_ChangeAllocation)) poiché [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] potrebbe non necessitare di ulteriore memoria, consentendo di rendere disponibile la maggior parte se non tutta la memoria appena installata per il pool di risorse.  
+ Infine, la soluzione migliore, se possibile, prevede l'installazione di ulteriore memoria fisica. In questo caso, tenere presente che probabilmente sarà possibile aumentare anche il valore di MAX_MEMORY_PERCENT (vedere l'argomento [Modificare il valore di MIN_MEMORY_PERCENT e MAX_MEMORY_PERCENT in un pool esistente](bind-a-database-with-memory-optimized-tables-to-a-resource-pool.md#change-min-memory-percent-and-max-memory-percent-on-an-existing-pool)) poiché [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] potrebbe non necessitare di ulteriore memoria, consentendo di rendere disponibile la maggior parte se non tutta la memoria appena installata per il pool di risorse.  
   
 > [!IMPORTANT]  
 >  Se il server è in esecuzione in una VM e non è dedicato, impostare il valore di MIN_MEMORY_PERCENT e MAX_MEMORY_PERCENT sullo stesso valore.   
 > Per altre informazioni, vedere [Procedure consigliate: Uso di OLTP In memoria in un ambiente di VM](../../database-engine/using-in-memory-oltp-in-a-vm-environment.md) per altre informazioni.  
   
-##  <a name="bkmk_PageAllocFailure"></a> Risoluzione degli errori di allocazione della pagina dovuti a memoria insufficiente quando è disponibile memoria sufficiente  
+## <a name="resolve-page-allocation-failures-due-to-insufficient-memory-when-sufficient-memory-is-available"></a>Risoluzione degli errori di allocazione della pagina dovuti a memoria insufficiente quando è disponibile memoria sufficiente  
  Se viene visualizzato il messaggio di errore "corso la disabilitazione delle allocazioni di pagine per il database '*\<databaseName >*'a causa di memoria insufficiente nel pool di risorse'*\<Nomepoolrisorse >*'. Vedere '<https://go.microsoft.com/fwlink/?LinkId=330673>' per ulteriori informazioni. " nel log degli errori quando la memoria fisica disponibile è sufficiente per allocare pagina, il problema può essere dovuto a Resource Governor disabilitato. Quando Resource Governor è disabilitato MEMORYBROKER_FOR_RESERVE genera richieste di memoria artificiali.  
   
  Per risolvere questo problema, è necessario abilitare Resource Governor.  

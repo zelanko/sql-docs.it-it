@@ -10,12 +10,12 @@ ms.assetid: 55548cb2-77a8-4953-8b5a-f2778a4f13cf
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: fa8a92b3727bf4c06a5b5a85c8359f96b592cd44
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 9b8d6f35f8dedeb4539dc8299ca32f6566beb03f
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53359753"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58538063"
 ---
 # <a name="monitoring-performance-of-natively-compiled-stored-procedures"></a>Monitoraggio delle prestazioni di stored procedure compilate in modo nativo
   In questo argomento viene illustrato come è possibile monitorare le prestazioni di stored procedure compilate in modo nativo  
@@ -25,7 +25,7 @@ ms.locfileid: "53359753"
   
  È possibile utilizzare `line_number` e `object_id` nell'evento esteso per esaminare la query. È possibile utilizzare la query seguente per recuperare la definizione della routine. Il numero di riga può essere utilizzato per identificare la query all'interno della definizione:  
   
-```tsql  
+```sql  
 select [definition] from sys.sql_modules where object_id=object_id  
 ```  
   
@@ -49,7 +49,7 @@ select [definition] from sys.sql_modules where object_id=object_id
   
  La query seguente restituisce i nomi delle routine e le statistiche di esecuzione per le stored procedure compilate in modo nativo nel database corrente, dopo la raccolta delle statistiche:  
   
-```tsql  
+```sql  
 select object_id,  
        object_name(object_id) as 'object name',  
        cached_time,  
@@ -71,7 +71,7 @@ order by total_worker_time desc
   
  La query seguente restituisce il testo della query nonché le statistiche di esecuzione per tutte le query nelle stored procedure compilate in modo nativo nel database corrente per il quale sono state raccolte le statistiche, ordinate in base al tempo del processo, in ordine decrescente.  
   
-```tsql  
+```sql  
 select st.objectid,   
        object_name(st.objectid) as 'object name',   
        SUBSTRING(st.text, (qs.statement_start_offset/2) + 1, ((qs.statement_end_offset-qs.statement_start_offset)/2) + 1) as 'query text',   
@@ -100,7 +100,7 @@ order by qs.total_worker_time desc
   
  Showplan XML viene ottenuto mediante l'esecuzione dell'istruzione [!INCLUDE[tsql](../../includes/tsql-md.md)]seguente:  
   
-```tsql  
+```sql  
 SET SHOWPLAN_XML ON  
 GO  
 EXEC my_proc   

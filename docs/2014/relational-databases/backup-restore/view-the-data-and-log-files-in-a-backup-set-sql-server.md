@@ -17,12 +17,12 @@ ms.assetid: abb6420c-f809-426e-aeb4-d0a74989cf39
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 09bbecf0e0cc308449adde0a462e1641d240b1bf
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: fe58874e0046a53a33d0580c4477ac89f6cd6e18
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48063311"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58537589"
 ---
 # <a name="view-the-data-and-log-files-in-a-backup-set-sql-server"></a>Visualizzare i file di dati e i file di log in un set di backup (SQL Server)
   In questo argomento viene descritto come visualizzare i file di log e di dati in un set di backup in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] tramite [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)].  
@@ -31,7 +31,7 @@ ms.locfileid: "48063311"
   
 -   **Prima di iniziare:**  
   
-     [Security](#Security)  
+     [Sicurezza](#Security)  
   
 -   **Per visualizzare i file di dati e i file di log in un set di backup utilizzando:**  
   
@@ -44,7 +44,7 @@ ms.locfileid: "48063311"
 ###  <a name="Security"></a> Sicurezza  
  Per informazioni sulla sicurezza, vedere [RESTORE FILELISTONLY &#40;Transact-SQL&#41;](/sql/t-sql/statements/restore-statements-filelistonly-transact-sql).  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> Autorizzazioni  
  In [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] e versioni successive, per ottenere informazioni su un set o un dispositivo di backup è necessario disporre dell'autorizzazione CREATE DATABASE. Per altre informazioni, vedere [GRANT - autorizzazioni per database &#40;Transact-SQL&#41;](/sql/t-sql/statements/grant-database-permissions-transact-sql).  
   
 ##  <a name="SSMSProcedure"></a> Utilizzo di SQL Server Management Studio  
@@ -61,7 +61,7 @@ ms.locfileid: "48063311"
   
 5.  Nella griglia **File di database** è visualizzato un elenco dei file di dati e dei file di log e delle relative proprietà.  
   
-##  <a name="TsqlProcedure"></a> Uso di Transact-SQL  
+##  <a name="TsqlProcedure"></a> Utilizzo di Transact-SQL  
   
 #### <a name="to-view-the-data-and-log-files-in-a-backup-set"></a>Per visualizzare i file di dati e i file di log in un set di backup  
   
@@ -71,7 +71,7 @@ ms.locfileid: "48063311"
   
 3.  Utilizzare l'istruzione [RESTORE FILELISTONLY](/sql/t-sql/statements/restore-statements-filelistonly-transact-sql) . In questo esempio vengono restituite informazioni sul secondo set di backup (`FILE=2`) nel dispositivo di backup `AdventureWorksBackups` .  
   
-```tsql  
+```sql  
 USE AdventureWorks2012 ;  
 RESTORE FILELISTONLY FROM AdventureWorksBackups   
    WITH FILE=2;  

@@ -9,15 +9,15 @@ ms.topic: conceptual
 helpviewer_keywords:
 - names [SQL Server], columns with
 ms.assetid: d9551df1-5bb4-4c0b-880a-5bb049834884
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 899ea4a4f60fb3e8981de4119697864a24f57093
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: f1ec180247a3df15af58f95e041a0c426a35cdb4
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53362799"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58532813"
 ---
 # <a name="columns-with-a-name-specified-as-a-wildcard-character"></a>Colonne con nome specificato come carattere jolly
   Se il nome di colonna specificato è un carattere jolly (\*), il contenuto della colonna viene inserito come se non fosse stato specificato alcun nome di colonna. Se la colonna non è di tipo `xml`, il relativo contenuto viene inserito come nodo di testo, come illustrato nell'esempio seguente:  

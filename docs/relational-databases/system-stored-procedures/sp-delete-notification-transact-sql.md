@@ -18,12 +18,12 @@ ms.assetid: b55d3898-596d-47a5-a4f0-d65dc736223b
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 3b2c202ae0336884b801160569c62ad469d22aa1
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e4a71411fca869d3562481c3e15f6faa5895df22
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47758519"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58537793"
 ---
 # <a name="spdeletenotification-transact-sql"></a>sp_delete_notification (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -42,11 +42,9 @@ sp_delete_notification
 ```  
   
 ## <a name="arguments"></a>Argomenti  
- [  **@alert_name=** ] **'***avviso***'**  
- Nome dell'avviso. *avviso* viene **sysname**, non prevede alcun valore predefinito.  
+`[ @alert_name = ] 'alert'` Il nome dell'avviso. *avviso* viene **sysname**, non prevede alcun valore predefinito.  
   
- [  **@operator_name=** ] **'***operatore***'**  
- Nome dell'operatore. *operatore* viene **sysname**, non prevede alcun valore predefinito.  
+`[ @operator_name = ] 'operator'` Il nome dell'operatore. *operatore* viene **sysname**, non prevede alcun valore predefinito.  
   
 ## <a name="return-code-values"></a>Valori restituiti  
  **0** (esito positivo) o **1** (errore)  

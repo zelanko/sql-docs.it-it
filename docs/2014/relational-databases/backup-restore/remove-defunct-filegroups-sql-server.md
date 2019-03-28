@@ -17,12 +17,12 @@ ms.assetid: 055f9c6a-5c18-4942-98e7-ec918f0ff975
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 58ee1265918a96133ac0b25b9dd2ac516607b0fd
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 2a59277110d91ffd40a2db7d62fd3a01aa109dfc
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48187041"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58536633"
 ---
 # <a name="remove-defunct-filegroups-sql-server"></a>Rimozione di filegroup inattivi (SQL Server)
   In questo argomento viene descritto come rimuovere filegroup inattivi in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] utilizzando [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)].  
@@ -35,7 +35,7 @@ ms.locfileid: "48187041"
   
 -   [Indicazioni](#Recommendations)  
   
-     [Security](#Security)  
+     [Sicurezza](#Security)  
   
 -   **Per rimuovere filegroup inattivi utilizzando:**  
   
@@ -59,7 +59,7 @@ ms.locfileid: "48187041"
   
 ###  <a name="Security"></a> Sicurezza  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> Autorizzazioni  
  È richiesta l'autorizzazione ALTER per il database.  
   
 ##  <a name="SSMSProcedure"></a> Utilizzo di SQL Server Management Studio  
@@ -78,7 +78,7 @@ ms.locfileid: "48187041"
   
 6.  Nella griglia **Righe** selezionare il filegroup da eliminare, fare clic su **Rimuovi**e quindi su **OK**.  
   
-##  <a name="TsqlProcedure"></a> Uso di Transact-SQL  
+##  <a name="TsqlProcedure"></a> Utilizzo di Transact-SQL  
   
 #### <a name="to-remove-defunct-filegroups"></a>Per rimuovere filegroup inattivi  
   
@@ -86,9 +86,9 @@ ms.locfileid: "48187041"
   
 2.  Dalla barra Standard fare clic su **Nuova query**.  
   
-3.  Copiare e incollare l'esempio seguente nella finestra delle query e fare clic su **Esegui**. **Nota:** in questo esempio si presuppone che i file e il filegroup siano già presenti. Per creare questi oggetti, vedere l'esempio B nell'argomento [Opzioni per file e filegroup ALTER DATABASE](/sql/t-sql/statements/alter-database-transact-sql-file-and-filegroup-options). Nel primo esempio vengono rimossi i file `test1dat3` e `test1dat4` dal filegroup inattivo tramite l'istruzione `ALTER DATABASE` con la clausola `REMOVE FILE`. Nel secondo esempio viene rimosso il filegroup `Test1FG1` inattivo tramite la clausola `REMOVE FILEGROUP`.  
+3.  Copiare e incollare l'esempio seguente nella finestra Query, quindi fare clic su **Esegui**. (**Nota:** Questo esempio si presuppone che i file e filegroup esista già. Per creare questi oggetti, vedere l'esempio B nell'argomento [Opzioni per file e filegroup ALTER DATABASE](/sql/t-sql/statements/alter-database-transact-sql-file-and-filegroup-options). Nel primo esempio vengono rimossi i file `test1dat3` e `test1dat4` dal filegroup inattivo tramite l'istruzione `ALTER DATABASE` con la clausola `REMOVE FILE`. Nel secondo esempio viene rimosso il filegroup `Test1FG1` inattivo tramite la clausola `REMOVE FILEGROUP`.  
   
-```tsql  
+```sql  
 USE master;  
 GO  
 ALTER DATABASE AdventureWorks2012  
@@ -99,7 +99,7 @@ GO
   
 ```  
   
-```tsql  
+```sql  
 USE master;  
 GO  
 ALTER DATABASE AdventureWorks2012  

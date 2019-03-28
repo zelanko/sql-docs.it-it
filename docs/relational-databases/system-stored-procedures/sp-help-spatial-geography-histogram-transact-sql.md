@@ -18,12 +18,12 @@ ms.assetid: 5c5bd319-055d-4cd6-8c5a-06354cc056cc
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 2fa398eade8b3cac1497c1168882dbacbc6e9817
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: a6fa55cd5359c64f2a124ff85429745c995fae96
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51659487"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58538163"
 ---
 # <a name="sphelpspatialgeographyhistogram-transact-sql"></a>sp_help_spatial_geography_histogram (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -41,27 +41,23 @@ sp_help_spatial_geography_histogram [ @tabname =] 'tabname'
 ```  
   
 ## <a name="arguments"></a>Argomenti  
- [  **@tabname =**] **'***tabname***'**  
- Nome qualificato o non qualificato della tabella per cui è stato specificato l'indice spaziale.  
+`[ @tabname = ] 'tabname'` È il nome completo o non qualificato della tabella per cui è stato specificato l'indice spaziale.  
   
  Le virgolette sono necessarie solo se viene specificata una tabella qualificata. Nel caso di un nome completo, ovvero contenente un nome di database, il nome del database deve corrispondere a quello del database corrente. *TabName* viene **sysname**, non prevede alcun valore predefinito.  
   
- [  **@colname =** ] **'***columnname***'**  
- Nome della colonna spaziale specificata. *ColumnName* è un **sysname**, non prevede alcun valore predefinito.  
+`[ @colname = ] 'columnname'` È il nome della colonna spaziale specificata. *ColumnName* è un **sysname**, non prevede alcun valore predefinito.  
   
- [  **@resolution =** ] **'***risoluzione***'**  
- Risoluzione del rettangolo di selezione. I valori validi sono compresi tra 10 e 5000. *risoluzione* è un **tinyint**, non prevede alcun valore predefinito.  
+`[ @resolution = ] 'resolution'` È la risoluzione del rettangolo. I valori validi sono compresi tra 10 e 5000. *risoluzione* è un **tinyint**, non prevede alcun valore predefinito.  
   
- [  **@sample =** ] **'***esempio***'**  
- Percentuale della tabella utilizzata. I valori validi sono da 0 a 100. *TABLESAMPLE* è un **float**. Il valore predefinito è 100.  
+`[ @sample = ] 'sample'` È la percentuale della tabella che viene usata. I valori validi sono da 0 a 100. *TABLESAMPLE* è un **float**. Il valore predefinito è 100.  
   
 ## <a name="property-valuereturn-value"></a>Valore proprietà/Valore restituito  
  Viene restituito un valore di tabella. Nella griglia seguente viene descritto il contenuto delle colonne della tabella.  
   
-|Nome colonna|Tipo di dati|Description|  
+|Nome colonna|Tipo di dati|Descrizione|  
 |-----------------|---------------|-----------------|  
 |**cellid**|**int**|Rappresenta l'ID univoco di ciascuna cella, con un conteggio iniziale di 1.|  
-|**cella**|**geography**|Poligono rettangolare che rappresenta ciascuna cella. La forma della cella è identica alla forma della cella utilizzata per l'indicizzazione spaziale.|  
+|**cell**|**geography**|Poligono rettangolare che rappresenta ciascuna cella. La forma della cella è identica alla forma della cella utilizzata per l'indicizzazione spaziale.|  
 |**row_count**|**bigint**|Indica il numero di oggetti spaziali che toccano o contengono la cella.|  
   
 ## <a name="permissions"></a>Permissions  

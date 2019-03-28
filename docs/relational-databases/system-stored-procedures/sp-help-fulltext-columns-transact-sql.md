@@ -18,12 +18,12 @@ ms.assetid: 92c8656b-f7fd-4904-9796-acc9ffed4106
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 622a0eafad0c4b029c0fd9512c25defa63229fc0
-ms.sourcegitcommit: fc6a6eedcea2d98c93e33d39c1cecd99fbc9a155
+ms.openlocfilehash: 60968c70a6b47b53ad0edb38d8245cbcc883bf26
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49169361"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58537923"
 ---
 # <a name="sphelpfulltextcolumns-transact-sql"></a>sp_help_fulltext_columns (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -44,18 +44,16 @@ sp_help_fulltext_columns [ [ @table_name = ] 'table_name' ] ]
 ```  
   
 ## <a name="arguments"></a>Argomenti  
- [  **@table_name=**] **'**_tabella\_nome_**'**  
- Nome della tabella composto da una o due parti su cui si desidera ottenere informazioni relative all'indice full-text. *TABLE_NAME* viene **nvarchar(517)**, con un valore predefinito NULL. Se *table_name* viene omesso, viene recuperati informazioni sulle colonne di indice full-text per ogni tabella indicizzata full-text.  
+`[ @table_name = ] 'table\_name'` È il nome della tabella una o due parti per il quale vengono richieste informazioni di indice full-text. *TABLE_NAME* viene **nvarchar(517)**, con un valore predefinito NULL. Se *table_name* viene omesso, viene recuperati informazioni sulle colonne di indice full-text per ogni tabella indicizzata full-text.  
   
- [  **@column_name=**] **'**_colonna\_nome_**'**  
- Nome della colonna per cui vengono richiesti metadati di indice full-text. *column_name* viene **sysname**, con un valore predefinito NULL. Se *column_name* viene omesso oppure è NULL, vengono restituite informazioni di colonna full-text per ogni colonna indicizzata full-text per *table_name*. Se *table_name* anche viene omesso oppure è NULL, vengono restituite informazioni di colonna di indice full-text per ogni colonna indicizzata full-text per tutte le tabelle nel database.  
+`[ @column_name = ] 'column\_name'` È il nome della colonna per cui vengono richiesti metadati di indice full-text. *column_name* viene **sysname**, con un valore predefinito NULL. Se *column_name* viene omesso oppure è NULL, vengono restituite informazioni di colonna full-text per ogni colonna indicizzata full-text per *table_name*. Se *table_name* anche viene omesso oppure è NULL, vengono restituite informazioni di colonna di indice full-text per ogni colonna indicizzata full-text per tutte le tabelle nel database.  
   
 ## <a name="return-code-values"></a>Valori restituiti  
  0 (esito positivo) o 1 (esito negativo)  
   
 ## <a name="result-sets"></a>Set di risultati  
   
-|Nome colonna|Tipo di dati|Description|  
+|Nome colonna|Tipo di dati|Descrizione|  
 |-----------------|---------------|-----------------|  
 |**TABLE_OWNER**|**sysname**|Proprietario della tabella. Corrisponde al nome dell'utente del database che ha creato la tabella.|  
 |**TABLE_ID**|**int**|ID della tabella.|  

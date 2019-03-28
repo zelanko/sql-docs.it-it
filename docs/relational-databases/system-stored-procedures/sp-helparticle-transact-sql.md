@@ -16,12 +16,12 @@ ms.assetid: 9c4a1a88-56f1-45a0-890c-941b8e0f0799
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 0ebb3f1e81fbace678d281116643e1fcd97c3dc1
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: 43eada100fb1de531c0d16082bdf0977e479ccfb
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53212506"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58536152"
 ---
 # <a name="sphelparticle-transact-sql"></a>sp_helparticle (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -42,29 +42,24 @@ sp_helparticle [ @publication = ] 'publication'
 ```  
   
 ## <a name="arguments"></a>Argomenti  
- [  **@publication =**] **'***pubblicazione***'**  
- Nome della pubblicazione. *pubblicazione* viene **sysname**, non prevede alcun valore predefinito.  
+`[ @publication = ] 'publication'` È il nome della pubblicazione. *pubblicazione* viene **sysname**, non prevede alcun valore predefinito.  
   
- [  **@article=**] **'***articolo***'**  
- Nome di un articolo della pubblicazione. *articolo* viene **sysname**, il valore predefinito è **%**. Se *articolo* viene omesso, vengono restituite informazioni su tutti gli articoli per la pubblicazione specificata.  
+`[ @article = ] 'article'` È il nome di un articolo nella pubblicazione. *articolo* viene **sysname**, il valore predefinito è **%**. Se *articolo* viene omesso, vengono restituite informazioni su tutti gli articoli per la pubblicazione specificata.  
   
- [  **@returnfilter=**] *returnfilter*  
- Indica se restituire o meno la clausola di filtro. *returnfilter* viene **bit**, il valore predefinito è **1**, che restituisce la clausola di filtro.  
+`[ @returnfilter = ] returnfilter` Specifica se la clausola di filtro deve essere restituita. *returnfilter* viene **bit**, il valore predefinito è **1**, che restituisce la clausola di filtro.  
   
- [ **@publisher**=] **'***publisher***'**  
- Specifica un non - [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] server di pubblicazione. *server di pubblicazione* viene **sysname**, con un valore predefinito è NULL.  
+`[ @publisher = ] 'publisher'` Specifica un non - [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] server di pubblicazione. *server di pubblicazione* viene **sysname**, con un valore predefinito è NULL.  
   
 > [!NOTE]  
 >  *server di pubblicazione* non deve essere specificato quando la richiesta di informazioni in un articolo pubblicato da un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] server di pubblicazione.  
   
- [  **@found=** ] *trovato* OUTPUT  
- Solo per uso interno.  
+`[ @found = ] found OUTPUT` Solo uso interno.  
   
 ## <a name="result-sets"></a>Set di risultati  
   
 |Nome colonna|Tipo di dati|Descrizione|  
 |-----------------|---------------|-----------------|  
-|**id articolo**|**int**|ID dell'articolo.|  
+|**article id**|**int**|ID dell'articolo.|  
 |**nome dell'articolo**|**sysname**|Nome dell'articolo.|  
 |**oggetto di base**|**nvarchar(257)**|Nome della tabella sottostante rappresentata dall'articolo o dalla stored procedure.|  
 |**oggetto di destinazione**|**sysname**|Nome della tabella di destinazione (sottoscrizione).|  
@@ -91,7 +86,7 @@ sp_helparticle [ @publication = ] 'publication'
 |**auto_identity_range**|**int**|Flag che indica se la gestione automatica degli intervalli di valori Identity era attivata nella pubblicazione quando la pubblicazione è stata creata. **1** significa che l'intervallo di valori identity automatico è abilitato. **0** significa che è disabilitata.|  
 |**publisher_identity_range**|**int**|Intervallo di dimensioni dell'intervallo di valori identity nel server di pubblicazione se l'articolo contiene *identityrangemanagementoption* impostata su **automatico** oppure **auto_identity_range** impostato su  **true**.|  
 |**identity_range**|**bigint**|Intervallo di dimensioni dell'intervallo di valori identity nel Sottoscrittore se l'articolo contiene *identityrangemanagementoption* impostata su **automatico** oppure **auto_identity_range** impostato su  **true**.|  
-|**soglia**|**bigint**|Valore percentuale che indica quando l'agente di distribuzione assegna un nuovo intervallo di valori Identity.|  
+|**threshold**|**bigint**|Valore percentuale che indica quando l'agente di distribuzione assegna un nuovo intervallo di valori Identity.|  
 |**identityrangemanagementoption**|**int**|Indica la gestione degli intervalli di valori Identity per l'articolo.|  
 |**fire_triggers_on_snapshot**|**bit**|Indica se i trigger utente replicati vengono eseguiti quando viene applicato lo snapshot iniziale.<br /><br /> **1** = i trigger utente vengono eseguiti.<br /><br /> **0** = utente trigger non vengono eseguiti.|  
   

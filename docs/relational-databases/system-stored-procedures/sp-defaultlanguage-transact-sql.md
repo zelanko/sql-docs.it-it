@@ -18,12 +18,12 @@ ms.assetid: 908d01cc-e704-45d9-9e85-d2df6da3e6f5
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 46b99e16505cf6f7a08503a98f37ced7bedcdb12
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 9fa56614c65dfc14982c62fb71ce117f8872805c
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52520807"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58527993"
 ---
 # <a name="spdefaultlanguage-transact-sql"></a>sp_defaultlanguage (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -44,11 +44,9 @@ sp_defaultlanguage [ @loginame = ] 'login'
 ```  
   
 ## <a name="arguments"></a>Argomenti  
- [  **@loginame =** ] **'**_account di accesso_**'**  
- Nome dell'account di accesso. *account di accesso* viene **sysname**, non prevede alcun valore predefinito. *account di accesso* può essere un oggetto esistente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] account di accesso o un utente di Windows o un gruppo.  
+`[ @loginame = ] 'login'` È il nome di account di accesso. *account di accesso* viene **sysname**, non prevede alcun valore predefinito. *account di accesso* può essere un oggetto esistente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] account di accesso o un utente di Windows o un gruppo.  
   
- [  **@language =** ] **'**_linguaggio_**'**  
- Lingua predefinita dell'account di accesso. *linguaggio* viene **sysname**, con un valore predefinito è NULL. *linguaggio* deve essere una lingua valida nel server. Se *language* non viene specificato, *language* è impostato per la lingua predefinita del server lingua predefinita è definita dal **sp_configure** variabile di configurazione **lingua predefinita**. Se si modifica la lingua predefinita del server non viene modificata la lingua predefinita degli account di accesso esistenti.  
+`[ @language = ] 'language'` È la lingua predefinita dell'account di accesso. *linguaggio* viene **sysname**, con un valore predefinito è NULL. *linguaggio* deve essere una lingua valida nel server. Se *language* non viene specificato, *language* è impostato per la lingua predefinita del server lingua predefinita è definita dal **sp_configure** variabile di configurazione **lingua predefinita**. Se si modifica la lingua predefinita del server non viene modificata la lingua predefinita degli account di accesso esistenti.  
   
 ## <a name="return-code-values"></a>Valori restituiti  
  0 (esito positivo) o 1 (esito negativo)  
@@ -78,7 +76,7 @@ GO
  [ALTER LOGIN &#40;Transact-SQL&#41;](../../t-sql/statements/alter-login-transact-sql.md)   
  [@@LANGUAGE &#40;Transact-SQL&#41;](../../t-sql/functions/language-transact-sql.md)   
  [Istruzioni SET &#40;Transact-SQL&#41;](../../t-sql/statements/set-statements-transact-sql.md)   
- [Sys. syslanguages &#40;Transact-SQL&#41;](../../relational-databases/system-compatibility-views/sys-syslanguages-transact-sql.md)   
+ [sys.syslanguages &#40;Transact-SQL&#41;](../../relational-databases/system-compatibility-views/sys-syslanguages-transact-sql.md)   
  [Stored procedure di sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

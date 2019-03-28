@@ -1,5 +1,5 @@
 ---
-title: Esempi d'uso della modalità AUTO | Microsoft Docs
+title: 'Esempi: Uso della modalità AUTO | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -9,20 +9,20 @@ ms.topic: conceptual
 helpviewer_keywords:
 - AUTO FOR XML mode, examples
 ms.assetid: 11e8d0e4-df8a-46f8-aa21-9602d4f26cad
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 969721724f3d2dd171c56d5d62e56b41ec0ece73
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 93a26764a7111a01b07d23c61bfbfb5c4a728e72
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48081971"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58538453"
 ---
-# <a name="examples-using-auto-mode"></a>Esempi di utilizzo della modalità AUTO
+# <a name="examples-using-auto-mode"></a>Esempi: Utilizzo della modalità AUTO
   Negli esempi seguenti viene illustrato l'utilizzo della modalità AUTO. Molte di queste query vengono eseguite sui documenti XML con istruzioni per la produzione di biciclette, archiviati nella colonna Instructions della tabella ProductModel del database di esempio [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] .  
   
-## <a name="example-retrieving-customer-order-and-order-detail-information"></a>Esempio: recupero di informazioni sul cliente, l'ordine e i dettagli dell'ordine  
+## <a name="example-retrieving-customer-order-and-order-detail-information"></a>Esempio: Recupero di informazioni dettagliate sugli ordini cliente e ordine  
  Questa query recupera informazioni sul cliente, sull'ordine e sui dettagli dell'ordine per un cliente specifico.  
   
 ```  
@@ -93,7 +93,7 @@ FOR XML AUTO;
   
  `</Cust>`  
   
-## <a name="example-specifying-group-by-and-aggregate-functions"></a>Esempio: specifica della clausola GROUP BY e di funzioni di aggregazione  
+## <a name="example-specifying-group-by-and-aggregate-functions"></a>Esempio: Specifica di GROUP BY e funzioni di aggregazione  
  La query seguente restituisce gli ID di singoli clienti e il numero degli ordini effettuati da tali clienti.  
   
 ```  
@@ -113,7 +113,7 @@ FOR XML AUTO;This is the partial result:
   
  `...`  
   
-## <a name="example-specifying-computed-columns-in-auto-mode"></a>Esempio: specifica di colonne calcolate in modalità AUTO  
+## <a name="example-specifying-computed-columns-in-auto-mode"></a>Esempio: Specifica le colonne calcolate in modalità AUTO  
  Questa query restituisce i nomi concatenati dei singoli clienti e le informazioni sugli ordini. Poiché la colonna calcolata viene assegnata al livello più interno rilevato fino a quel punto, che in questo esempio è l'elemento <`SOH`>, nel risultato i nomi concatenati dei clienti vengono aggiunti come attributi dell'elemento <`SOH`>.  
   
 ```  
@@ -166,7 +166,7 @@ ORDER BY IndividualCustomer.CustomerID, SOH.CustomerIDFOR XML AUTO;
   
  `...`  
   
-## <a name="example-returning-binary-data"></a>Esempio: recupero di dati binari  
+## <a name="example-returning-binary-data"></a>Esempio: Recupero di dati binari  
  Questa query restituisce una foto del prodotto dalla tabella `ProductPhoto` . `ThumbNailPhoto` è una colonna `varbinary(max)` nella tabella `ProductPhoto`. Per impostazione predefinita, la modalità `AUTO` restituisce ai dati binari un riferimento costituito da un URL relativo alla radice virtuale del database in cui viene eseguita la query. Per identificare l'immagine, è necessario specificare l'attributo chiave `ProductPhotoID` . Per recuperare un riferimento a un'immagine come illustrato nell'esempio seguente, è inoltre necessario specificare la chiave primaria della tabella nella clausola `SELECT` , per identificare una riga in modo univoco.  
   
 ```  
@@ -176,7 +176,7 @@ WHERE ProductPhotoID=70
 FOR XML AUTO;  
 ```  
   
- Risultato:  
+ Questo è il risultato:  
   
  `-- result`  
   
@@ -195,7 +195,7 @@ WHERE ProductPhotoID=70
 FOR XML AUTO, BINARY BASE64;  
 ```  
   
- Risultato:  
+ Questo è il risultato:  
   
  `-- result`  
   
@@ -203,7 +203,7 @@ FOR XML AUTO, BINARY BASE64;
   
  Per impostazione predefinita, quando si utilizza la modalità AUTO per recuperare dati binari, al posto dei dati binari viene restituito un riferimento a un URL relativo alla radice virtuale del database in cui è stata eseguita la query. Questa situazione si presenta se non è specificata l'opzione BINARY BASE64.  
   
- Quando la modalità AUTO restituisce un riferimento URL a dati binari in database senza distinzione tra maiuscole e minuscole, in cui un nome di tabella o colonna specificato nella query non corrisponde al nome della tabella o della colonna nel database, la query viene eseguita, ma la combinazione di maiuscole e minuscole nel riferimento non sarà consistente. Esempio:  
+ Quando la modalità AUTO restituisce un riferimento URL a dati binari in database senza distinzione tra maiuscole e minuscole, in cui un nome di tabella o colonna specificato nella query non corrisponde al nome della tabella o della colonna nel database, la query viene eseguita, ma la combinazione di maiuscole e minuscole nel riferimento non sarà consistente. Ad esempio:  
   
 ```  
 SELECT ProductPhotoID, ThumbnailPhoto  
@@ -212,7 +212,7 @@ WHERE  ProductPhotoID=70
 FOR XML AUTO;  
 ```  
   
- Risultato:  
+ Questo è il risultato:  
   
  `<Production.PRODUCTPHOTO`  
   
@@ -222,7 +222,7 @@ FOR XML AUTO;
   
  Questo costituisce un problema soprattutto quando si eseguono query dbobject su un database con distinzione tra maiuscole e minuscole. Per evitarlo, è necessario che la combinazione di maiuscole e minuscole nel nome di tabella o colonna specificato nelle query corrisponda a quella del nome della tabella o colonna nel database.  
   
-## <a name="example-understanding-the-encoding"></a>Esempio: informazioni sulla codifica  
+## <a name="example-understanding-the-encoding"></a>Esempio: Informazioni sulla codifica  
  In questo esempio vengono illustrate le varie operazioni di codifica eseguite sul risultato.  
   
  Creare la tabella seguente:  
@@ -243,7 +243,7 @@ INSERT INTO [Special Chars] VALUES ('&', 0x20), ('#', 0x20);
 SELECT * FROM [Special Chars] FOR XML AUTO;  
 ```  
   
- Risultato:  
+ Questo è il risultato:  
   
  `<Special_x0020_Chars`  
   

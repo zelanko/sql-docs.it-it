@@ -18,12 +18,12 @@ ms.assetid: 1a0be7b1-8f31-4b4c-aadb-586c0e00ed04
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 905386a1e346ed982c3ad84baf57f532aa5b020f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b6480c498914c4ec0bc02ba21552615bbdd28f6e
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47828359"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58535693"
 ---
 # <a name="sphelpjobsteplog-transact-sql"></a>sp_help_jobsteplog (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -43,27 +43,23 @@ sp_help_jobsteplog { [ @job_id = ] 'job_id' | [ @job_name = ] 'job_name' }
 ```  
   
 ## <a name="arguments"></a>Argomenti  
- [ **@job_id =**] **'***job_id***'**  
- ID del processo per il quale si desidera ottenere le informazioni sul log del passaggio. *job_id* viene **int**, con un valore predefinito è NULL.  
+`[ @job_id = ] 'job_id'` ID del processo per cui restituire informazioni del log. *job_id* viene **int**, con un valore predefinito è NULL.  
   
- [ **@job_name =**] **'***job_name***'**  
- Nome del processo. *nome_processo* viene **sysname**, predefinito è NULL.  
+`[ @job_name = ] 'job_name'` Il nome del processo. *nome_processo* viene **sysname**, predefinito è NULL.  
   
 > [!NOTE]  
 >  Entrambi *job_id* oppure *job_name* devono essere specificati, ma non è possibile specificarli entrambi.  
   
- [ **@step_id =**] *step_id*  
- Numero di identificazione del passaggio del processo. Se viene omesso, vengono inclusi tutti i passaggi del processo. *step_id* viene **int**, con un valore predefinito è NULL.  
+`[ @step_id = ] step_id` Il numero di identificazione del passaggio del processo. Se viene omesso, vengono inclusi tutti i passaggi del processo. *step_id* viene **int**, con un valore predefinito è NULL.  
   
- [  **@step_name =**] **'***step_name***'**  
- Nome del passaggio del processo. *step_name* viene **sysname**, con un valore predefinito è NULL.  
+`[ @step_name = ] 'step_name'` Il nome del passaggio del processo. *step_name* viene **sysname**, con un valore predefinito è NULL.  
   
 ## <a name="return-code-values"></a>Valori restituiti  
  0 (esito positivo) o 1 (esito negativo)  
   
 ## <a name="result-sets"></a>Set di risultati  
   
-|Nome colonna|Tipo di dati|Description|  
+|Nome colonna|Tipo di dati|Descrizione|  
 |-----------------|---------------|-----------------|  
 |**job_id**|**uniqueidentifier**|ID univoco del processo.|  
 |**job_name**|**sysname**|Nome del processo|  

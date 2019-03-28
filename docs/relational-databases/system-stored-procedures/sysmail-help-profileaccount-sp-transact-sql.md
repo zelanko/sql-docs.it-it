@@ -18,12 +18,12 @@ ms.assetid: 3ea68271-0a6b-4d77-991c-4757f48f747a
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 779519ef5ba3098e205a70d8c5923adc993f44f6
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ff6dbe9abcd1378370a17a053b69ea59c01fee75
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47700750"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58527203"
 ---
 # <a name="sysmailhelpprofileaccountsp-transact-sql"></a>sysmail_help_profileaccount_sp (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -44,17 +44,13 @@ sysmail_help_profileaccount_sp
 ```  
   
 ## <a name="arguments"></a>Argomenti  
- [ **@profile_id** = ] *profile_id*  
- ID del profilo che si desidera visualizzare nell'elenco. *profile_id* viene **int**, con un valore predefinito è NULL. Entrambi *profile_id* oppure *profile_name* deve essere specificato.  
+`[ @profile_id = ] profile_id` È l'ID del profilo del profilo all'elenco. *profile_id* viene **int**, con un valore predefinito è NULL. Entrambi *profile_id* oppure *profile_name* deve essere specificato.  
   
- [ **@profile_name** =] **'***profile_name***'**  
- Nome del profilo che si desidera visualizzare nell'elenco. *profile_name* viene **sysname**, con un valore predefinito è NULL. Entrambi *profile_id* oppure *profile_name* deve essere specificato.  
+`[ @profile_name = ] 'profile_name'` È il nome del profilo del profilo all'elenco. *profile_name* viene **sysname**, con un valore predefinito è NULL. Entrambi *profile_id* oppure *profile_name* deve essere specificato.  
   
- [ **@account_id** = ] *account_id*  
- ID dell'account che si desidera visualizzare nell'elenco. *account_id* viene **int**, con un valore predefinito è NULL. Quando *account_id* e *account_name* sono entrambi NULL, vengono elencati tutti gli account nel profilo.  
+`[ @account_id = ] account_id` È l'ID account all'elenco. *account_id* viene **int**, con un valore predefinito è NULL. Quando *account_id* e *account_name* sono entrambi NULL, vengono elencati tutti gli account nel profilo.  
   
- [ **@account_name** =] **'***account_name***'**  
- Nome dell'account che si desidera visualizzare nell'elenco. *account_name* viene **sysname**, con un valore predefinito è NULL. Quando *account_id* e *account_name* sono entrambi NULL, vengono elencati tutti gli account nel profilo.  
+`[ @account_name = ] 'account_name'` È il nome dell'account all'elenco. *account_name* viene **sysname**, con un valore predefinito è NULL. Quando *account_id* e *account_name* sono entrambi NULL, vengono elencati tutti gli account nel profilo.  
   
 ## <a name="return-code-values"></a>Valori restituiti  
  **0** (esito positivo) o **1** (errore)  
@@ -64,7 +60,7 @@ sysmail_help_profileaccount_sp
   
 ||||  
 |-|-|-|  
-|Nome colonna|Tipo di dati|Description|  
+|Nome colonna|Tipo di dati|Descrizione|  
 |**profile_id**|**int**|ID del profilo.|  
 |**profile_name**|**sysname**|Nome del profilo.|  
 |**account_id**|**int**|ID dell'account.|  

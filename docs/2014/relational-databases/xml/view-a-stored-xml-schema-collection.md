@@ -15,15 +15,15 @@ helpviewer_keywords:
 - displaying XML schema collections
 - viewing XML schema collections
 ms.assetid: e38031af-22df-4cd9-a14e-e316b822f91b
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 9e43af2841de0f2e5a00bf4e7871f71092e6bc87
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 8cde5898fc4c9ae8b71452bfb22ff58e0c3c9725
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53373783"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58536163"
 ---
 # <a name="view-a-stored-xml-schema-collection"></a>Visualizzazione di una raccolta di XML Schema archiviata
   Dopo aver importato una raccolta di XML Schema tramite l'istruzione [CREATE XML SCHEMA COLLECTION](/sql/t-sql/statements/create-xml-schema-collection-transact-sql), i componenti di schema vengono archiviati nei metadati. Per ricostruire la raccolta di XML Schema, è possibile usare la funzione intrinseca [xml_schema_namespace](/sql/t-sql/xml/xml-schema-namespace). Questa funzione restituisce un'istanza del tipo di dati `xml`.  

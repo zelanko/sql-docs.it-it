@@ -18,12 +18,12 @@ ms.assetid: 94918d1d-7c10-4be7-bf9f-27e00b003a0f
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 5ef0cb341c0f37f6961eebb759f2a236510044f3
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 4bc7254d8a3eafa3c7c7d152d323051a3c5bea94
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48097491"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58537433"
 ---
 # <a name="view-or-change-the-recovery-model-of-a-database-sql-server"></a>Visualizzazione o modifica del modello di recupero di un database (SQL Server)
   In questo argomento viene illustrato come visualizzare o modificare il modello di recupero di un database in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] utilizzando [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)]. Un *modello di recupero* è una proprietà del database che determina la modalità di registrazione delle transazioni, se è necessario (e possibile) eseguire il backup del log delle transazioni e quali tipi di operazioni di ripristino sono disponibili. Sono tre i modelli di recupero disponibili: con registrazione minima, con registrazione completa e con registrazione minima delle operazioni bulk. In genere, un database utilizza il modello di recupero con registrazione completa o con registrazione minima. In un database è possibile passare a un modello di recupero diverso in qualsiasi momento. Il database **modello** imposta il modello di recupero predefinito dei nuovi database.  
@@ -34,7 +34,7 @@ ms.locfileid: "48097491"
   
      [Indicazioni](#Recommendations)  
   
-     [Security](#Security)  
+     [Sicurezza](#Security)  
   
 -   **Per visualizzare o modificare il modello di recupero di un database, utilizzando:**  
   
@@ -65,7 +65,7 @@ ms.locfileid: "48097491"
   
 ###  <a name="Security"></a> Sicurezza  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> Autorizzazioni  
  È richiesta l'autorizzazione ALTER per il database.  
   
 ##  <a name="SSMSProcedure"></a> Utilizzo di SQL Server Management Studio  
@@ -86,7 +86,7 @@ ms.locfileid: "48097491"
   
 7.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
-##  <a name="TsqlProcedure"></a> Uso di Transact-SQL  
+##  <a name="TsqlProcedure"></a> Utilizzo di Transact-SQL  
   
 #### <a name="to-view-the-recovery-model"></a>Per visualizzare il modello di recupero  
   
@@ -94,9 +94,9 @@ ms.locfileid: "48097491"
   
 2.  Dalla barra Standard fare clic su **Nuova query**.  
   
-3.  Copiare e incollare l'esempio seguente nella finestra delle query e fare clic su **Esegui**. In questo esempio viene mostrato come eseguire una query sulla vista del catalogo [sys.databases](/sql/relational-databases/system-catalog-views/sys-databases-transact-sql) per individuare il modello di recupero del database **model** .  
+3.  Copiare e incollare l'esempio seguente nella finestra Query, quindi fare clic su **Esegui**. In questo esempio viene mostrato come eseguire una query sulla vista del catalogo [sys.databases](/sql/relational-databases/system-catalog-views/sys-databases-transact-sql) per individuare il modello di recupero del database **model** .  
   
-```tsql  
+```sql  
 SELECT name, recovery_model_desc  
    FROM sys.databases  
       WHERE name = 'model' ;  
@@ -110,14 +110,14 @@ GO
   
 2.  Dalla barra Standard fare clic su **Nuova query**.  
   
-3.  Copiare e incollare l'esempio seguente nella finestra delle query e fare clic su **Esegui**. In questo esempio viene mostrato come impostare il modello di recupero nel database `model` su `FULL` utilizzando l'opzione `SET RECOVERY` dell'istruzione [ALTER DATABASE](/sql/t-sql/statements/alter-database-transact-sql-set-options) .  
+3.  Copiare e incollare l'esempio seguente nella finestra Query, quindi fare clic su **Esegui**. In questo esempio viene mostrato come impostare il modello di recupero nel database `model` su `FULL` utilizzando l'opzione `SET RECOVERY` dell'istruzione [ALTER DATABASE](/sql/t-sql/statements/alter-database-transact-sql-set-options) .  
   
-```tsql  
+```sql  
 USE master ;  
 ALTER DATABASE model SET RECOVERY FULL ;  
 ```  
   
-##  <a name="FollowUp"></a> Indicazioni sul completamento: Dopo aver modificato il modello di recupero  
+##  <a name="FollowUp"></a> Indicazioni sul completamento: fasi successive alla modifica del modello di recupero  
   
 -   **Dopo il passaggio tra i modelli di recupero con registrazione completa e con registrazione minima delle operazioni bulk**  
   
@@ -154,7 +154,7 @@ ALTER DATABASE model SET RECOVERY FULL ;
   
 -   [Creazione di un processo](../../ssms/agent/create-a-job.md)  
   
--   [Disable or Enable a Job](../../ssms/agent/disable-or-enable-a-job.md)  
+-   [Abilitare o disabilitare un processo](../../ssms/agent/disable-or-enable-a-job.md)  
   
 ##  <a name="RelatedContent"></a> Contenuto correlato  
   

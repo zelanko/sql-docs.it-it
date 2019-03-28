@@ -5,15 +5,15 @@ ms.prod: sql
 ms.technology: machine-learning
 ms.date: 11/01/2018
 ms.topic: tutorial
-author: HeidiSteen
-ms.author: heidist
+author: dphansen
+ms.author: davidph
 manager: cgronlun
-ms.openlocfilehash: a0991f43ed7446cc9b86325d4f536a0787b8dcc1
-ms.sourcegitcommit: ee76332b6119ef89549ee9d641d002b9cabf20d2
+ms.openlocfilehash: 2e0505cf847a091a5650b392aab56f486cee16aa
+ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/20/2018
-ms.locfileid: "53645172"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58511248"
 ---
 # <a name="train-and-save-a-python-model-using-t-sql"></a>Eseguire il training e salvataggio di un modello Python con T-SQL
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -121,7 +121,7 @@ Per renderne più semplice ripetere il training del modello su nuovi dati, esegu
 
 3. Aprire la tabella *città di New York\_taxi_models*. È possibile notare che è stata aggiunta una riga nuova contenente il modello serializzato nella colonna _model_.
 
-    *SciKit_model* *0x800363736B6C6561726E2E6C696E6561...*
+    *SciKit_model* *0x800363736B6C6561726E2E6C696E6561....*
 
 ### <a name="traintippredictionmodelrxpy"></a>TrainTipPredictionModelRxPy
 
@@ -178,14 +178,14 @@ Usando **revoscalepy**, è possibile creare contesti di calcolo remoti, spostare
     INSERT INTO nyc_taxi_models (name, model) VALUES('revoscalepy_model', @model);
     ```
 
-    L'elaborazione dei dati e l'adattamento del modello potrebbe richiedere qualche minuto. I messaggi che sarebbero inoltrati di Python **stdout** flusso vengono visualizzati nel **messaggi** finestra di [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]. Ad esempio:
+    L'elaborazione dei dati e l'adattamento del modello potrebbe richiedere qualche minuto. I messaggi che sarebbero inoltrati di Python **stdout** flusso vengono visualizzati nel **messaggi** finestra di [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]. Esempio:
 
     *Messaggi STDOUT dallo script esterno:*
   *C:\Program Files\Microsoft SQL Server\MSSQL14. MSSQLSERVER\PYTHON_SERVICES\lib\site packages\revoscalepy*
 
 3. Aprire la tabella *nyc_taxi_models*. È possibile notare che è stata aggiunta una riga nuova contenente il modello serializzato nella colonna _model_.
 
-    *revoscalepy_model* *0x8003637265766F7363616c...*
+    *revoscalepy_model* *0x8003637265766F7363616c....*
 
 Nel passaggio successivo, si usano i modelli con training per creare stime.
 
