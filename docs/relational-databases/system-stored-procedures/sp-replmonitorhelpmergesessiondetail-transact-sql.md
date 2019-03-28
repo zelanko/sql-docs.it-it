@@ -16,12 +16,12 @@ ms.assetid: 805c92fc-3169-410c-984d-f37e063b791d
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 8e661ed27a586b45bbcfd812e6e47d169daa70b8
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: dbafa8dd407269fa23ca37574f18a12be519c448
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52813053"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58534634"
 ---
 # <a name="spreplmonitorhelpmergesessiondetail-transact-sql"></a>sp_replmonitorhelpmergesessiondetail (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -38,8 +38,7 @@ sp_replmonitorhelpmergesessiondetail [ @session_id = ] session_id
 ```  
   
 ## <a name="arguments"></a>Argomenti  
- [ **@session_id** = ] *session_id*  
- Specifica una sessione dell'agente. *session_id* viene **int** non prevede alcun valore predefinito.  
+`[ @session_id = ] session_id` Specifica una sessione dell'agente. *session_id* viene **int** non prevede alcun valore predefinito.  
   
 ## <a name="result-sets"></a>Set di risultati  
   
@@ -56,8 +55,8 @@ sp_replmonitorhelpmergesessiondetail [ @session_id = ] session_id
 |**Conflitti**|**int**|Numero di conflitti verificatisi in una sessione.|  
 |**ErrorID**|**int**|ID di un errore di sessione.|  
 |**SeqNo**|**int**|Ordine delle sessioni nel set di risultati.|  
-|**Tipo di riga**|**int**|Indica il tipo di informazioni rappresentato da ogni riga nel set di risultati.<br /><br /> **0** = inizializzazione<br /><br /> **1** = riepilogo del caricamento<br /><br /> **2** = dettagli di caricamento dell'articolo<br /><br /> **3** = riepilogo del download<br /><br /> **4** = dettagli di scaricamento dell'articolo|  
-|**Modifiche allo schema**|**int**|Numero di modifiche dello schema in una sessione.|  
+|**RowType**|**int**|Indica il tipo di informazioni rappresentato da ogni riga nel set di risultati.<br /><br /> **0** = inizializzazione<br /><br /> **1** = riepilogo del caricamento<br /><br /> **2** = dettagli di caricamento dell'articolo<br /><br /> **3** = riepilogo del download<br /><br /> **4** = dettagli di scaricamento dell'articolo|  
+|**SchemaChanges**|**int**|Numero di modifiche dello schema in una sessione.|  
   
 ## <a name="return-code-values"></a>Valori restituiti  
  **0** (esito positivo) o **1** (errore)  

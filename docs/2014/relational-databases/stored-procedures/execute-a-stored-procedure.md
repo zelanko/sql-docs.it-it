@@ -19,12 +19,12 @@ ms.assetid: a0b1337d-2059-4872-8c62-3f967d8b170f
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 528881f91b39e2dd25ce76c63c5cbead33392265
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 0cd447f6ad12ee12c96f6bcbb6af858aa32fdb06
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48057488"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58532893"
 ---
 # <a name="execute-a-stored-procedure"></a>Eseguire una stored procedure
   In questo argomento viene illustrato come eseguire una stored procedure in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] utilizzando [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)].  
@@ -39,7 +39,7 @@ ms.locfileid: "48057488"
   
      [Indicazioni](#Recommendations)  
   
-     [Security](#Security)  
+     [Sicurezza](#Security)  
   
 -   **Per eseguire una stored procedure tramite:**  
   
@@ -53,7 +53,7 @@ ms.locfileid: "48057488"
   
 -   Le regole di confronto del database chiamante vengono utilizzate per la ricerca dei nomi delle stored procedure di sistema corrispondenti. Nei nomi delle stored procedure di sistema nelle chiamate alle stored procedure è pertanto necessario utilizzare sempre la corretta combinazione di maiuscole e minuscole. Ad esempio, il codice seguente, se eseguito nel contesto di un database con regole di confronto con distinzione tra maiuscole e minuscole, genererà un errore:  
   
-    ```tsql  
+    ```sql  
     EXEC SP_heLP; -- Will fail to resolve because SP_heLP does not equal sp_help  
     ```  
   
@@ -67,7 +67,7 @@ ms.locfileid: "48057488"
   
      Le stored procedure di sistema iniziano con il prefisso **sp_**. Poiché sono visualizzate logicamente in ogni database definito dall'utente e dal sistema, possono essere eseguite da qualsiasi database senza che sia necessario specificare il nome completo della stored procedure. È tuttavia consigliabile specificare lo schema in tutti i nomi di stored procedure di sistema con il nome dello schema **sys** per evitare conflitti. Nell'esempio seguente viene illustrato il metodo consigliato per la chiamata a una stored procedure di sistema.  
   
-    ```tsql  
+    ```sql  
     EXEC sys.sp_who;  
     ```  
   
@@ -77,7 +77,7 @@ ms.locfileid: "48057488"
   
      Nell'esempio seguente viene illustrato il metodo consigliato per l'esecuzione di una stored procedure definita dall'utente. Si noti che la stored procedure accetta un parametro di input. Per informazioni su come specificare i parametri di input e di output, vedere [Specificare i parametri](specify-parameters.md).  
   
-    ```tsql  
+    ```sql  
     USE AdventureWorks2012;  
     GO  
     EXEC dbo.uspGetEmployeeManagers @BusinessEntityID = 50;  
@@ -85,7 +85,7 @@ ms.locfileid: "48057488"
   
      Oppure  
   
-    ```tsql  
+    ```sql  
     EXEC AdventureWorks2012.dbo.uspGetEmployeeManagers 50;  
     GO  
     ```  
@@ -122,7 +122,7 @@ ms.locfileid: "48057488"
 ###  <a name="Security"></a> Sicurezza  
  Per altre informazioni, vedere [EXECUTE AS &#40;Transact-SQL&#41;](/sql/t-sql/statements/execute-as-transact-sql) e [Clausola EXECUTE AS &#40;Transact-SQL&#41;](/sql/t-sql/statements/execute-as-clause-transact-sql).  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> Autorizzazioni  
  Per altre informazioni, vedere la sezione Autorizzazioni in [EXECUTE &#40;Transact-SQL&#41;](/sql/t-sql/language-elements/execute-transact-sql).  
   
 ##  <a name="SSMSProcedure"></a> Utilizzo di SQL Server Management Studio  
@@ -154,7 +154,7 @@ ms.locfileid: "48057488"
   
 5.  Per eseguire la stored procedure, fare clic su **OK**.  
   
-##  <a name="TsqlProcedure"></a> Uso di Transact-SQL  
+##  <a name="TsqlProcedure"></a> Utilizzo di Transact-SQL  
   
 #### <a name="to-execute-a-stored-procedure"></a>Per eseguire una stored procedure  
   
@@ -162,9 +162,9 @@ ms.locfileid: "48057488"
   
 2.  Dalla barra Standard fare clic su **Nuova query**.  
   
-3.  Copiare e incollare l'esempio seguente nella finestra delle query e fare clic su **Esegui**. In questo esempio viene illustrato come eseguire una stored procedure che prevede un parametro. Nell'esempio viene eseguita la stored procedure `uspGetEmployeeManagers` con il valore  `6` specificato come parametro `@EmployeeID` .  
+3.  Copiare e incollare l'esempio seguente nella finestra Query, quindi fare clic su **Esegui**. In questo esempio viene illustrato come eseguire una stored procedure che prevede un parametro. Nell'esempio viene eseguita la stored procedure `uspGetEmployeeManagers` con il valore  `6` specificato come parametro `@EmployeeID` .  
   
-```tsql  
+```sql  
 USE AdventureWorks2012;  
 GO  
 EXEC dbo.uspGetEmployeeManagers 6;  
@@ -177,9 +177,9 @@ GO
   
 2.  Dalla barra Standard fare clic su **Nuova query**.  
   
-3.  Copiare e incollare l'esempio seguente nella finestra delle query e fare clic su **Esegui**. Questo esempio mostra come usare [sp_procoption](/sql/relational-databases/system-stored-procedures/sp-procoption-transact-sql) per impostare una stored procedure per l'esecuzione automatica.  
+3.  Copiare e incollare l'esempio seguente nella finestra Query, quindi fare clic su **Esegui**. Questo esempio mostra come usare [sp_procoption](/sql/relational-databases/system-stored-procedures/sp-procoption-transact-sql) per impostare una stored procedure per l'esecuzione automatica.  
   
-```tsql  
+```sql  
 USE AdventureWorks2012;  
 GO  
 EXEC sp_procoption @ProcName = '<procedure name>'   
@@ -193,9 +193,9 @@ EXEC sp_procoption @ProcName = '<procedure name>'
   
 2.  Dalla barra Standard fare clic su **Nuova query**.  
   
-3.  Copiare e incollare l'esempio seguente nella finestra delle query e fare clic su **Esegui**. Questo esempio mostra come usare [sp_procoption](/sql/relational-databases/system-stored-procedures/sp-procoption-transact-sql) per arrestare l'esecuzione automatica di una stored procedure.  
+3.  Copiare e incollare l'esempio seguente nella finestra Query, quindi fare clic su **Esegui**. Questo esempio mostra come usare [sp_procoption](/sql/relational-databases/system-stored-procedures/sp-procoption-transact-sql) per arrestare l'esecuzione automatica di una stored procedure.  
   
-```tsql  
+```sql  
 USE AdventureWorks2012;  
 GO  
 EXEC sp_procoption @ProcName = '<procedure name>'   

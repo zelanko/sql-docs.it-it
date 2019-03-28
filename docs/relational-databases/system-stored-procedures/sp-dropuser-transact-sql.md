@@ -18,12 +18,12 @@ ms.assetid: e28f18f9-7ecf-4568-89f4-fe5c520df386
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 0f4e2a7537de3e33ffccd6bf0a9ebb7f4b6e33ba
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d96004357962ee822df7458a30d740fc836de658
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47854025"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58532953"
 ---
 # <a name="spdropuser-transact-sql"></a>sp_dropuser (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -43,8 +43,7 @@ sp_dropuser [ @name_in_db = ] 'user'
 ```  
   
 ## <a name="arguments"></a>Argomenti  
- [  **@name_in_db =**] **'***utente***'**  
- Nome dell'utente da rimuovere. *utente* è un **sysname**, non prevede alcun valore predefinito. *utente* deve esistere nel database corrente. Quando si specifica un account di accesso di Windows, utilizzare il nome con il quale il database identifica l'account di accesso.  
+`[ @name_in_db = ] 'user'` È il nome dell'utente da rimuovere. *utente* è un **sysname**, non prevede alcun valore predefinito. *utente* deve esistere nel database corrente. Quando si specifica un account di accesso di Windows, utilizzare il nome con il quale il database identifica l'account di accesso.  
   
 ## <a name="return-code-values"></a>Valori restituiti  
  0 (esito positivo) o 1 (esito negativo)  

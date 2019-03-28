@@ -18,12 +18,12 @@ ms.assetid: 57971787-f9f5-4199-9f64-c2b61a308906
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 18408265b75503bc73905eb561f118e4ea950fa8
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ba2120b4c48ac9df9cc901b4ee789d95f9fc0357
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47729899"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58533293"
 ---
 # <a name="sphelpjobserver-transact-sql"></a>sp_help_jobserver (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -43,24 +43,21 @@ sp_help_jobserver
 ```  
   
 ## <a name="arguments"></a>Argomenti  
- [ **@job_id=** ] *job_id*  
- ID del processo per il quale devono essere restituite informazioni. *job_id* viene **uniqueidentifier**, con un valore predefinito è NULL.  
+`[ @job_id = ] job_id` ID del processo per cui restituire informazioni. *job_id* viene **uniqueidentifier**, con un valore predefinito è NULL.  
   
- [ **@job_name=** ] **'***job_name***'**  
- Nome del processo su cui si desidera ottenere informazioni. *nome_processo* viene **sysname**, con un valore predefinito è NULL.  
+`[ @job_name = ] 'job_name'` Il nome del processo per cui restituire informazioni. *nome_processo* viene **sysname**, con un valore predefinito è NULL.  
   
 > [!NOTE]  
 >  Entrambi *job_id* oppure *job_name* devono essere specificati, ma non è possibile specificarli entrambi.  
   
- [  **@show_last_run_details=** ] *show_last_run_details*  
- Indica se le informazioni relative all'ultima esecuzione vengono incluse nel set di risultati. *show_last_run_details* viene **tinyint**, il valore predefinito è **0**. **0** non include informazioni di ultima esecuzione, e **1** viene.  
+`[ @show_last_run_details = ] show_last_run_details` Indica se le informazioni relative all'ultima esecuzione vengono incluse nel set di risultati. *show_last_run_details* viene **tinyint**, il valore predefinito è **0**. **0** non include informazioni di ultima esecuzione, e **1** viene.  
   
 ## <a name="return-code-values"></a>Valori restituiti  
  0 (esito positivo) o 1 (esito negativo)  
   
 ## <a name="result-sets"></a>Set di risultati  
   
-|Nome colonna|Tipo di dati|Description|  
+|Nome colonna|Tipo di dati|Descrizione|  
 |-----------------|---------------|-----------------|  
 |**server_id**|**int**|Numero di identificazione del server di destinazione.|  
 |**server_name**|**nvarchar(30)**|Nome di computer del server di destinazione.|  
@@ -69,13 +66,13 @@ sp_help_jobserver
   
  Se **sp_help_jobserver** viene eseguito con *show_last_run_details* impostata su **1**, il set di risultati include le colonne aggiuntive.  
   
-|Nome colonna|Tipo di dati|Description|  
+|Nome colonna|Tipo di dati|Descrizione|  
 |-----------------|---------------|-----------------|  
 |**last_run_date**|**int**|Data di inizio dell'ultima esecuzione del processo nel server di destinazione.|  
 |**last_run_time**|**int**|Ora di inizio dell'ultima esecuzione del processo nel server corrente|  
 |**last_run_duration**|**int**|Durata in secondi dell'ultima esecuzione del processo nel server di destinazione corrente.|  
 |**last_outcome_message**|**nvarchar(1024)**|Descrive l'ultimo risultato del processo.|  
-|**last_run_outcome**|**int**|Risultato dell'ultima esecuzione del processo nel server specificato:<br /><br /> **0** = non è riuscita<br /><br /> **1** = ha avuto esito positivo<br /><br /> **3** = annullato<br /><br /> **5** = sconosciuto|  
+|**last_run_outcome**|**int**|Risultato dell'ultima esecuzione del processo nel server specificato:<br /><br /> **0** = non è riuscita<br /><br /> **1** = Succeeded<br /><br /> **3** = annullato<br /><br /> **5** = sconosciuto|  
   
 ## <a name="permissions"></a>Permissions  
  Per impostazione predefinita, questa stored procedure può essere eseguita dai membri del ruolo predefinito del server **sysadmin** . Gli altri utenti devono essere membri di uno dei ruoli predefiniti del database di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent seguenti nel database **msdb** :  

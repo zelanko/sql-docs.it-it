@@ -16,12 +16,12 @@ ms.assetid: 37b0983e-3b69-4f0f-977e-20efce0a0b97
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 63441a20a5ac4f6faed366c06fc55638073b09f4
-ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
+ms.openlocfilehash: c86f2b8ba6b9cc7223fa9fa16794ee69aa9cf46e
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/18/2018
-ms.locfileid: "53591395"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58533263"
 ---
 # <a name="sphelpdistributor-transact-sql"></a>sp_helpdistributor (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -50,58 +50,45 @@ sp_helpdistributor [ [ @distributor= ] 'distributor' OUTPUT ]
 ```  
   
 ## <a name="arguments"></a>Argomenti  
- [  **@distributor=**] **'**_distributore_**'** OUTPUT  
- Nome del server di distribuzione. Server di distribuzione **sysname**, il valore predefinito è **%**, che è l'unico valore che restituisce un set di risultati.  
+`[ @distributor = ] 'distributor' OUTPUT` È il nome del server di distribuzione. Server di distribuzione **sysname**, il valore predefinito è **%**, che è l'unico valore che restituisce un set di risultati.  
   
- [  **@distribdb=**] **'**_distribdb_**'** OUTPUT  
- Nome del database di distribuzione. *distribdb* viene **sysname**, il valore predefinito è **%**, che è l'unico valore che restituisce un set di risultati.  
+`[ @distribdb = ] 'distribdb' OUTPUT` È il nome del database di distribuzione. *distribdb* viene **sysname**, il valore predefinito è **%**, che è l'unico valore che restituisce un set di risultati.  
   
- [  **@directory=**] **'**_directory_**'** OUTPUT  
- Directory di lavoro. *directory* viene **nvarchar(255**, il valore predefinito è **%**, che è l'unico valore che restituisce un set di risultati.  
+`[ @directory = ] 'directory' OUTPUT` È la directory di lavoro. *directory* viene **nvarchar(255**, il valore predefinito è **%**, che è l'unico valore che restituisce un set di risultati.  
   
- [  **@account=**] **'**_account_**' OUTPUT**  
- Account utente di [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows. *account*viene **nvarchar(255**, il valore predefinito è **%**, che è l'unico valore che restituisce un set di risultati.  
+`[ @account = ] 'account' OUTPUT` È il [!INCLUDE[msCoName](../../includes/msconame-md.md)] account utente di Windows. *account*viene **nvarchar(255**, il valore predefinito è **%**, che è l'unico valore che restituisce un set di risultati.  
   
- [  **@min_distretention=**] _min_distretention_**OUTPUT**  
- Periodo di memorizzazione minimo per la distribuzione espresso in ore. *min_distretention* viene **int**, il valore predefinito è **-1**.  
+`[ @min_distretention = ] _min_distretentionOUTPUT` È il periodo di memorizzazione minimo per la distribuzione espresso in ore. *min_distretention* viene **int**, il valore predefinito è **-1**.  
   
- [  **@max_distretention=**] _max_distretention_**OUTPUT**  
- Periodo di memorizzazione massimo per la distribuzione espresso in ore. *max_distretention* viene **int**, il valore predefinito è **-1**.  
+`[ @max_distretention = ] _max_distretentionOUTPUT` È il periodo di memorizzazione massimo per la distribuzione espresso in ore. *max_distretention* viene **int**, il valore predefinito è **-1**.  
   
- [  **@history_retention=**] _history_retention_**OUTPUT**  
- Periodo di memorizzazione della cronologia espresso in ore. *history_retention* viene **int**, il valore predefinito è **-1**.  
+`[ @history_retention = ] _history_retentionOUTPUT` È il periodo di memorizzazione della cronologia espresso in ore. *history_retention* viene **int**, il valore predefinito è **-1**.  
   
- [  **@history_cleanupagent=**] **'**_history_cleanupagent_**' OUTPUT**  
- Nome dell'agente per la pulizia del contenuto della cronologia. *history_cleanupagent* viene **nvarchar(100)**, il valore predefinito è **%**, che è l'unico valore che restituisce un set di risultati.  
+`[ @history_cleanupagent = ] 'history_cleanupagent' OUTPUT` È il nome dell'agente di pulizia della cronologia. *history_cleanupagent* viene **nvarchar(100)**, il valore predefinito è **%**, che è l'unico valore che restituisce un set di risultati.  
   
- [  **@distrib_cleanupagent =**] **'**_distrib_cleanupagent_**' OUTPUT**  
- Nome dell'agente per l'eliminazione dei riferimenti di distribuzione *distrib_cleanupagent* viene **nvarchar(100)**, il valore predefinito è **%**, che è l'unico valore che restituisce un set di risultati.  
+`[ @distrib_cleanupagent = ] 'distrib_cleanupagent' OUTPUT` È il nome dell'agente di pulizia di distribuzione. *distrib_cleanupagent* viene **nvarchar(100)**, il valore predefinito è **%**, che è l'unico valore che restituisce un set di risultati.  
   
- [  **@publisher=**] **'**_editore_**'**  
- Nome del server di pubblicazione. *server di pubblicazione* viene **sysname**, con un valore predefinito è NULL.  
+`[ @publisher = ] 'publisher'` È il nome del server di pubblicazione. *server di pubblicazione* viene **sysname**, con un valore predefinito è NULL.  
   
- [  **@local=**] **'**_locale_**'**  
- Indica se [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] deve recuperare o meno i valori del server locale. *locale* viene **nvarchar(5**, con un valore predefinito è NULL.  
+`[ @local = ] 'local'` È se [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] deve ottenere i valori del server locale. *locale* viene **nvarchar(5**, con un valore predefinito è NULL.  
   
- [  **@rpcsrvname=**] **'**_rpcsrvname_**' OUTPUT**  
- Nome del server che esegue chiamate di procedure remote. *rpcsrvname* viene **sysname**, il valore predefinito è **%**, che è l'unico valore che restituisce un set di risultati.  
+`[ @rpcsrvname = ] 'rpcsrvname' OUTPUT` È il nome del server che esegue chiamate di procedura remota. *rpcsrvname* viene **sysname**, il valore predefinito è **%**, che è l'unico valore che restituisce un set di risultati.  
   
- [ **@publisher_type**=] **'**_publisher_type_**' OUTPUT**  
- Tipo del server di pubblicazione. *publisher_type* viene **sysname**, il valore predefinito è **%**, che è l'unico valore che restituisce un set di risultati.  
+`[ @publisher_type = ] 'publisher_type' OUTPUT` È il tipo di server di pubblicazione del server di pubblicazione. *publisher_type* viene **sysname**, il valore predefinito è **%**, che è l'unico valore che restituisce un set di risultati.  
   
 ## <a name="result-sets"></a>Set di risultati  
   
 |Nome colonna|Tipo di dati|Descrizione|  
 |-----------------|---------------|-----------------|  
-|**server di distribuzione**|**sysname**|Nome del server di distribuzione.|  
+|**distributor**|**sysname**|Nome del server di distribuzione.|  
 |**database di distribuzione**|**sysname**|Nome del database di distribuzione.|  
-|**Directory**|**nvarchar(255)**|Nome della directory di lavoro.|  
+|**directory**|**nvarchar(255)**|Nome della directory di lavoro.|  
 |**account**|**nvarchar(255)**|Nome dell'account utente di Windows.|  
 |**conservazione di distrib min**|**int**|Periodo di memorizzazione minimo per la distribuzione.|  
 |**distrib massima conservazione**|**int**|Periodo di memorizzazione massimo per la distribuzione.|  
 |**periodo memorizzazione cronologia**|**int**|Periodo di memorizzazione per la cronologia.|  
-|**agente di pulizia della cronologia**|**Nvarchar(100)**|Nome dell'agente di pulizia del contenuto della cronologia.|  
-|**agente**|**Nvarchar(100)**|Nome dell'agente di pulizia dei riferimenti alla distribuzione.|  
+|**agente di pulizia della cronologia**|**nvarchar(100)**|Nome dell'agente di pulizia del contenuto della cronologia.|  
+|**agente**|**nvarchar(100)**|Nome dell'agente di pulizia dei riferimenti alla distribuzione.|  
 |**nome del server RPC**|**sysname**|Nome del server di distribuzione remoto o locale.|  
 |**nome account di accesso RPC**|**sysname**|Account di accesso utilizzato per le chiamate di procedure remote al server di distribuzione remoto.|  
 |**tipo di server di pubblicazione**|**sysname**|Tipo di server di pubblicazione. Può essere uno dei tipi seguenti:<br /><br /> **MSSQLSERVER**<br /><br /> **ORACLE**<br /><br /> **ORACLE GATEWAY**|  

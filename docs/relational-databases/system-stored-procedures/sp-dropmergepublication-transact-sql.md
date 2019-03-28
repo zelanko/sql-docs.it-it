@@ -16,12 +16,12 @@ ms.assetid: 9e1cb96e-5889-4f97-88cd-f60cf313ce68
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 74aa782a7dcf6abdc71ca82dc104406948f21989
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 74b5ff58db964bff29e863eec39e76313220f556
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52802303"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58533093"
 ---
 # <a name="spdropmergepublication-transact-sql"></a>sp_dropmergepublication (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -41,17 +41,13 @@ sp_dropmergepublication [ @publication= ] 'publication'
 ```  
   
 ## <a name="arguments"></a>Argomenti  
- [  **@publication=**] **'***pubblicazione***'**  
- Nome della pubblicazione da eliminare. *pubblicazione* viene **sysname**, non prevede alcun valore predefinito. Se **tutti**, tutte le pubblicazioni di tipo merge esistenti vengono rimosse, nonché il processo dell'agente Snapshot associato. Se si specifica un valore specifico per *publication*, vengono eliminati solo tale pubblicazione e il processo dell'agente Snapshot associato.  
+`[ @publication = ] 'publication'` È il nome della pubblicazione da eliminare. *pubblicazione* viene **sysname**, non prevede alcun valore predefinito. Se **tutti**, tutte le pubblicazioni di tipo merge esistenti vengono rimosse, nonché il processo dell'agente Snapshot associato. Se si specifica un valore specifico per *publication*, vengono eliminati solo tale pubblicazione e il processo dell'agente Snapshot associato.  
   
- [  **@ignore_distributor =**] *ignore_distributor*  
- Utilizzato per eliminare una pubblicazione senza eseguire attività di pulizia nel server di distribuzione. *ignore_distributor* viene **bit**, il valore predefinito è **0**. Questo parametro viene utilizzato anche quando si reinstalla il server di distribuzione.  
+`[ @ignore_distributor = ] ignore_distributor` Consente di eliminare una pubblicazione senza eseguire attività di pulizia nel server di distribuzione. *ignore_distributor* viene **bit**, il valore predefinito è **0**. Questo parametro viene utilizzato anche quando si reinstalla il server di distribuzione.  
   
- [  **@reserved=**] *riservato*  
- Riservato per utilizzi futuri. *riservato* viene **bit**, il valore predefinito è **0**.  
+`[ @reserved = ] reserved` è riservato per utilizzi futuri. *riservato* viene **bit**, il valore predefinito è **0**.  
   
- [  **@ignore_merge_metadata=** ] *ignore_merge_metadata*  
- Solo per uso interno.  
+`[ @ignore_merge_metadata = ] ignore_merge_metadata` Solo uso interno.  
   
 ## <a name="return-code-values"></a>Valori restituiti  
  **0** (esito positivo) o **1** (errore)  

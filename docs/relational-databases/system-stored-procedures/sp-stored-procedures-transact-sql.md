@@ -18,12 +18,12 @@ ms.assetid: fe52dd83-000a-4665-83fb-7a0024193dec
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: a0ca437ccef3a986d4db7bf72d6017e0e2f515d3
-ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
+ms.openlocfilehash: ff94284ba1f60d40697ad5a1e209b284dfaaefdf
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/18/2018
-ms.locfileid: "53588464"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58535193"
 ---
 # <a name="spstoredprocedures-transact-sql"></a>sp_stored_procedures (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -43,11 +43,9 @@ sp_stored_procedures [ [ @sp_name = ] 'name' ]
 ```  
   
 ## <a name="arguments"></a>Argomenti  
- [  **@sp_name =** ] **'**_nome_**'**  
- Nome della procedura utilizzata per restituire informazioni sul catalogo. *nome* viene **nvarchar(390)**, con un valore predefinito è NULL. La ricerca con caratteri jolly è supportata.  
+`[ @sp_name = ] 'name'` È il nome della procedura utilizzata per restituire informazioni del catalogo. *nome* viene **nvarchar(390)**, con un valore predefinito è NULL. La ricerca con caratteri jolly è supportata.  
   
- [  **@sp_owner =** ] **'**_schema_**'**  
- Nome dello schema a cui appartiene la procedura. *lo schema* viene **nvarchar (384)**, con un valore predefinito è NULL. La ricerca con caratteri jolly è supportata. Se *proprietario* non viene specificato, si applicano le regole di visibilità predefinite procedure del sistema DBMS sottostante.  
+`[ @sp_owner = ] 'schema'` È il nome dello schema a cui appartiene la stored procedure. *lo schema* viene **nvarchar (384)**, con un valore predefinito è NULL. La ricerca con caratteri jolly è supportata. Se *proprietario* non viene specificato, si applicano le regole di visibilità predefinite procedure del sistema DBMS sottostante.  
   
  In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], se lo schema corrente contiene una procedura con il nome specificato, viene restituita tale procedura. Se è specificata una stored procedure non qualificata, [!INCLUDE[ssDE](../../includes/ssde-md.md)] cerca la procedura nell'ordine seguente:  
   
@@ -57,11 +55,9 @@ sp_stored_procedures [ [ @sp_name = ] 'name' ]
   
 -   Schema **dbo** nel database corrente.  
   
- [  **@qualifier =** ] **'**_qualificatore_**'**  
- Nome del qualificatore della procedura. *qualificatore* viene **sysname**, con un valore predefinito è NULL. Vari prodotti DBMS supportano i nomi di tre parti per le tabelle nel formato (_qualificatore_**.** _schema_**.** _nome_. Nelle [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], *qualificatore* rappresenta il nome del database. In alcuni prodotti rappresenta il nome del server dell'ambiente di database della tabella.  
+`[ @qualifier = ] 'qualifier'` È il nome del qualificatore della procedura. *qualificatore* viene **sysname**, con un valore predefinito è NULL. Vari prodotti DBMS supportano i nomi di tre parti per le tabelle nel formato (_qualificatore_**.** _schema_**.** _nome_. Nelle [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], *qualificatore* rappresenta il nome del database. In alcuni prodotti rappresenta il nome del server dell'ambiente di database della tabella.  
   
- [  **@fUsePattern =** ] **'**_fUsePattern_**'**  
- Determina se i caratteri di sottolineatura (_), percentuale (%) o parentesi quadre ([ ]) vengono interpretati come caratteri jolly. *fUsePattern* viene **bit**, con un valore predefinito è 1.  
+`[ @fUsePattern = ] 'fUsePattern'` Determina se il carattere di sottolineatura (_), simbolo di percentuale (%) o parentesi quadre []) vengono interpretati come caratteri jolly. *fUsePattern* viene **bit**, con un valore predefinito è 1.  
   
  **0** = criteri di corrispondenza è disattivata.  
   
@@ -80,7 +76,7 @@ sp_stored_procedures [ [ @sp_name = ] 'name' ]
 |**NUM_INPUT_PARAMS**|**int**|Riservato per utilizzi futuri.|  
 |**NUM_OUTPUT_PARAMS**|**int**|Riservato per utilizzi futuri.|  
 |**NUM_RESULT_SETS**|**int**|Riservato per utilizzi futuri.|  
-|**SEZIONE OSSERVAZIONI**|**varchar(254)**|Descrizione della procedura. In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] non viene restituito alcun valore per questa colonna.|  
+|**REMARKS**|**varchar(254)**|Descrizione della procedura. In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] non viene restituito alcun valore per questa colonna.|  
 |**PROCEDURE_TYPE**|**smallint**|Tipo di procedura. Tramite [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] viene restituito sempre 2.0. I valori validi sono i seguenti:<br /><br /> 0 = SQL_PT_UNKNOWN<br /><br /> 1 = SQL_PT_PROCEDURE<br /><br /> 2 = SQL_PT_FUNCTION|  
   
 ## <a name="remarks"></a>Note  
@@ -104,7 +100,7 @@ GO
 EXEC sp_stored_procedures;  
 ```  
   
-### <a name="b-returning-a-single-stored-procedure"></a>b. Restituzione di una singola stored procedure  
+### <a name="b-returning-a-single-stored-procedure"></a>B. Restituzione di una singola stored procedure  
  Nell'esempio seguente viene restituito un set di risultati per la stored procedure `uspLogError`.  
   
 ```  

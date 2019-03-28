@@ -18,12 +18,12 @@ ms.assetid: 2cded902-9272-4667-ac4b-a4f95a9f008e
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 36e00cf0e5d39722fee1c60fc86f0e6f81fd7e43
-ms.sourcegitcommit: 78e32562f9c1fbf2e50d3be645941d4aa457e31f
+ms.openlocfilehash: 982596981c6c363abcad57b94427fcb4178c2c65
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/08/2019
-ms.locfileid: "54100356"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58532883"
 ---
 # <a name="sphelpjobschedule-transact-sql"></a>sp_help_jobschedule (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -44,22 +44,18 @@ sp_help_jobschedule { [ @job_id = ] job_id | [ @job_name = ] 'job_name' }
 ```  
   
 ## <a name="arguments"></a>Argomenti  
- [ **@job_id=** ] *job_id*  
- Numero di identificazione del processo. *job_id*viene **uniqueidentifier**, con un valore predefinito è NULL.  
+`[ @job_id = ] job_id` ID del processo. *job_id*viene **uniqueidentifier**, con un valore predefinito è NULL.  
   
- [  **@job_name=** ] **'**_job_name_**'**  
- Nome del processo. *nome_processo*viene **sysname**, con un valore predefinito è NULL.  
+`[ @job_name = ] 'job_name'` Il nome del processo. *nome_processo*viene **sysname**, con un valore predefinito è NULL.  
   
-> **NOTA:** Entrambi *job_id* oppure *job_name* devono essere specificati, ma non è possibile specificarli entrambi.  
+> [!NOTE]
+> Entrambi *job_id* oppure *job_name* devono essere specificati, ma non è possibile specificarli entrambi.
+
+`[ @schedule_name = ] 'schedule_name'` Il nome dell'elemento di pianificazione per il processo. *schedule_name*viene **sysname**, con un valore predefinito è NULL.  
   
- [  **@schedule_name=** ] **'**_schedule_name_**'**  
- Nome dell'elemento di pianificazione per il processo. *schedule_name*viene **sysname**, con un valore predefinito è NULL.  
+`[ @schedule_id = ] schedule_id` Il numero di identificazione dell'elemento di pianificazione per il processo. *schedule_id*viene **int**, con un valore predefinito è NULL.  
   
- [  **@schedule_id=** ] *schedule_id*  
- Numero di identificazione dell'elemento di pianificazione per il processo. *schedule_id*viene **int**, con un valore predefinito è NULL.  
-  
- [  **@include_description=** ] *include_description*  
- Specifica se includere la descrizione della pianificazione nel set dei risultati. *include_description* viene **bit**, il valore predefinito è **0**. Quando *include_description* viene **0**, la descrizione della pianificazione non è incluso nel set di risultati. Quando *include_description* viene **1**, la descrizione della pianificazione è incluso nel set di risultati.  
+`[ @include_description = ] include_description` Specifica se includere la descrizione della pianificazione nel set di risultati. *include_description* viene **bit**, il valore predefinito è **0**. Quando *include_description* viene **0**, la descrizione della pianificazione non è incluso nel set di risultati. Quando *include_description* viene **1**, la descrizione della pianificazione è incluso nel set di risultati.  
   
 ## <a name="return-code-values"></a>Valori restituiti  
  0 (esito positivo) o 1 (esito negativo)  
@@ -71,7 +67,7 @@ sp_help_jobschedule { [ @job_id = ] job_id | [ @job_name = ] 'job_name' }
 |**schedule_id**|**int**|Numero di identificazione della pianificazione.|  
 |**schedule_name**|**sysname**|Nome della pianificazione.|  
 |**enabled**|**int**|Se la pianificazione è abilitato (**1**) o non abilitato (**0**).|  
-|**freq_type**|**int**|Valore che indica la frequenza di esecuzione del processo:<br /><br /> **1** = una sola volta<br /><br /> **4** = giornaliera<br /><br /> **8** = settimanale<br /><br /> **16** = mensile<br /><br /> **32** = mensile relativa al **freq_interval**<br /><br /> **64** = vengono eseguite quando **SQLServerAgent** all'avvio del servizio.|  
+|**freq_type**|**int**|Valore che indica la frequenza di esecuzione del processo:<br /><br /> **1** = Once<br /><br /> **4** = giornaliera<br /><br /> **8** = settimanale<br /><br /> **16** = mensile<br /><br /> **32** = mensile relativa al **freq_interval**<br /><br /> **64** = vengono eseguite quando **SQLServerAgent** all'avvio del servizio.|  
 |**freq_interval**|**int**|Giorni in cui viene eseguito il processo. Il valore dipende dal valore della **freq_type**. Per altre informazioni, vedere [sp_add_schedule &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-schedule-transact-sql.md).|  
 |**freq_subday_type**|**int**|Unità di misura per **freq_subday_interval**. Per altre informazioni, vedere [sp_add_schedule &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-schedule-transact-sql.md).|  
 |**freq_subday_interval**|**int**|Numerosi **freq_subday_type** periodi intercorrere tra ogni esecuzione del processo. Per altre informazioni, vedere [sp_add_schedule &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-schedule-transact-sql.md).|  
@@ -120,7 +116,7 @@ EXEC dbo.sp_help_jobschedule
 GO  
 ```  
   
-### <a name="b-returning-the-job-schedule-for-a-specific-schedule"></a>b. Restituzione della pianificazione di un processo per una pianificazione specifica  
+### <a name="b-returning-the-job-schedule-for-a-specific-schedule"></a>B. Restituzione della pianificazione di un processo per una pianificazione specifica  
  Nell'esempio seguente vengono restituite informazioni sulla pianificazione `NightlyJobs` e sul processo `RunReports`.  
   
 ```  
@@ -152,5 +148,3 @@ GO
  [sp_delete_schedule &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-delete-schedule-transact-sql.md)   
  [sp_update_schedule &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-update-schedule-transact-sql.md)   
  [Stored procedure di sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
-  
-  

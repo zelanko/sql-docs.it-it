@@ -18,12 +18,12 @@ ms.assetid: 314ec720-3a37-48f7-bb6b-8d5b894bf843
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 358918d91a13cf879d56ff5afd23d9aea0c8d81f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 16d5c1815e42e419940223b7f25a565e04ab0508
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47627935"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58533253"
 ---
 # <a name="spmsxsetaccount-transact-sql"></a>sp_msx_set_account (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -40,11 +40,9 @@ sp_msx_set_account [ @credential_name = ] 'credential_name'  | [ @credential_id 
 ```  
   
 ## <a name="arguments"></a>Argomenti  
- [  **@credential_name=** ] **'***credential_name***'**  
- Nome delle credenziali da utilizzare per accedere al server master. Il nome specificato deve corrispondere al nome di una credenziale esistente. Entrambi *credential_name* oppure *credential_id* deve essere specificato.  
+`[ @credential_name = ] 'credential_name'` Il nome delle credenziali da usare per accedere al server master. Il nome specificato deve corrispondere al nome di una credenziale esistente. Entrambi *credential_name* oppure *credential_id* deve essere specificato.  
   
- [  **@credential_id=** ] *credential_id*  
- Identificatore delle credenziali da utilizzare per accedere al server master. L'identificatore deve corrispondere a un identificatore di credenziali già esistenti. Entrambi *credential_name* oppure *credential_id* deve essere specificato.  
+`[ @credential_id = ] credential_id` L'identificatore per le credenziali da usare per accedere al server master. L'identificatore deve corrispondere a un identificatore di credenziali già esistenti. Entrambi *credential_name* oppure *credential_id* deve essere specificato.  
   
 ## <a name="return-code-values"></a>Valori restituiti  
  **0** (esito positivo) o **1** (errore)  

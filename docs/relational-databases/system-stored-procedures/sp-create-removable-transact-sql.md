@@ -18,12 +18,12 @@ ms.assetid: 06e36ae5-f70d-4a26-9a7f-ee4b9360b355
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: a17ec458ffe1094691932fee6661e38551012b54
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 9c2e25b51998d863809a57654b245b1cb63027b5
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47749450"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58534673"
 ---
 # <a name="spcreateremovable-transact-sql"></a>sp_create_removable (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -56,37 +56,27 @@ sp_create_removable
 ```  
   
 ## <a name="arguments"></a>Argomenti  
- [  **@dbname=** ] **'***dbname***'**  
- Nome del database da creare per utilizzarlo nei supporti rimovibili. *dbname* viene **sysname**.  
+`[ @dbname = ] 'dbname'` È il nome del database da creare per utilizzarlo nei supporti rimovibili. *dbname* viene **sysname**.  
   
- [  **@syslogical=** ] **'***syslogical***'**  
- Nome logico del file contenente le tabelle del catalogo di sistema. *syslogical* viene **sysname**.  
+`[ @syslogical = ] 'syslogical'` È il nome logico del file che contiene le tabelle del catalogo di sistema. *syslogical* viene **sysname**.  
   
- [  **@sysphysical=** ] **'***sysphysical***'**  
- Nome fisico. In esso è incluso un percorso completo del file contenente le tabelle del catalogo di sistema. *sysphysical* viene **nvarchar(260)**.  
+`[ @sysphysical = ] 'sysphysical'` È il nome fisico. In esso è incluso un percorso completo del file contenente le tabelle del catalogo di sistema. *sysphysical* viene **nvarchar(260)**.  
   
- [  **@syssize=** ] *syssize*  
- Dimensione in megabyte del file contenente le tabelle del catalogo di sistema. *syssize* viene **int**. Il valore minimo *syssize* è 1.  
+`[ @syssize = ] syssize` È la dimensione, in megabyte del file che contiene il sistema tabelle del catalogo. *syssize* viene **int**. Il valore minimo *syssize* è 1.  
   
- [  **@loglogical=** ] **'***loglogical***'**  
- Nome logico del file contenente il log delle transazioni. *loglogical* viene **sysname**.  
+`[ @loglogical = ] 'loglogical'` È il nome logico del file che contiene il log delle transazioni. *loglogical* viene **sysname**.  
   
- [  **@logphysical=** ] **'***logphysical***'**  
- Nome fisico. In esso è incluso un percorso completo del file contenente il log delle transazioni. *logphysical* viene **nvarchar(260)**.  
+`[ @logphysical = ] 'logphysical'` È il nome fisico. In esso è incluso un percorso completo del file contenente il log delle transazioni. *logphysical* viene **nvarchar(260)**.  
   
- [  **@logsize=** ] *logsize*  
- Dimensioni in megabyte del file contenente il log delle transazioni. *LogSize* viene **int**. Il valore minimo *logsize* è 1.  
+`[ @logsize = ] logsize` È la dimensione, in megabyte del file che contiene il log delle transazioni. *LogSize* viene **int**. Il valore minimo *logsize* è 1.  
   
- [  **@datalogical1=** ] **'***datalogical***'**  
- Nome logico di un file contenente le tabelle di dati. *datalogical* viene **sysname**.  
+`[ @datalogical1 = ] 'datalogical'` È il nome logico di un file contenente le tabelle di dati. *datalogical* viene **sysname**.  
   
  Il numero dei file di dati è compreso tra 1 e 16. Vengono in genere creati più file di dati quando si prevede che il database sia di grandi dimensioni e debba essere pertanto suddiviso su più dischi.  
   
- [  **@dataphysical1=** ] **'***dataphysical***'**  
- Nome fisico. In esso è incluso un percorso completo di un file contenente le tabelle di dati. *dataphysical* viene **nvarchar(260)**.  
+`[ @dataphysical1 = ] 'dataphysical'` È il nome fisico. In esso è incluso un percorso completo di un file contenente le tabelle di dati. *dataphysical* viene **nvarchar(260)**.  
   
- [  **@datasize1=** ] **'***datasize***'**  
- Dimensioni in megabyte di un file contenente le tabelle di dati. *DataSize* viene **int**. Il valore minimo *datasize* è 1.  
+`[ @datasize1 = ] 'datasize'` È la dimensione, in megabyte di un file che contiene le tabelle di dati. *DataSize* viene **int**. Il valore minimo *datasize* è 1.  
   
 ## <a name="return-code-values"></a>Valori restituiti  
  0 (esito positivo) o 1 (esito negativo)  

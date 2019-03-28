@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: xml
 ms.topic: conceptual
 ms.assetid: 598ecdcd-084b-4032-81b2-eed6ae9f5d44
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 758eadb1d5b3724bd829c556ca93ce8ae4a3bfa0
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: a00800150f5f100f97687df59bc4603f07d0fcc3
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48206241"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58534583"
 ---
 # <a name="selective-xml-indexes-sxi"></a>Indici XML selettivi
   Gli indici XML selettivi rappresentano un altro tipo di indice XML disponibile oltre agli indici XML comuni. Di seguito sono indicati gli obiettivi della funzionalità degli indici XML selettivi.  
@@ -78,7 +78,7 @@ ms.locfileid: "48206241"
   
  Se è necessario esclusivamente eseguire una query su questi dati per il percorso `/book/title` e il percorso `/book/subjects` , è possibile creare l'indice XML selettivo seguente:  
   
-```tsql  
+```sql  
 CREATE SELECTIVE XML INDEX SXI_index  
 ON Tbl(xmlcol)  
 FOR   
@@ -123,7 +123,7 @@ FOR
   
 -   Indicizzazione di nodi con tipi XS binari: ad esempio, base64Binary e hexBinary.  
   
--   Specifica dei nodi da indicizzare con espressioni XPath contenenti il carattere jolly `*` come elemento finale: ad esempio,  `/a/b/c/*`, `/a//b/*`o `/a/b/*:c`.  
+-   Specifica dei nodi da indicizzare con espressioni XPath contenenti il carattere jolly `*` alla fine: Ad esempio, `/a/b/c/*`, `/a//b/*`, o `/a/b/*:c`.  
   
 -   Indicizzazione di un asse diverso da figlio, attributo o discendente. Il case `//<step>` è consentito come case speciale.  
   

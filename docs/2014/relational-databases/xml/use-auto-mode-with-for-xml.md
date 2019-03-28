@@ -12,15 +12,15 @@ helpviewer_keywords:
 - FOR XML AUTO mode
 - AUTO FOR XML mode
 ms.assetid: 7140d656-1d42-4f01-a533-5251429f4450
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 599707905c1d4c9693f1ccec53abf4933f4a6193
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: f8e6464fee5779e35559b6eca23981aa09312aeb
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48187061"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58534793"
 ---
 # <a name="use-auto-mode-with-for-xml"></a>Utilizzo della modalità AUTO con FOR XML
   Come descritto in [FOR XML &#40;SQL Server&#41;](for-xml-sql-server.md), la modalità AUTO restituisce i risultati della query come elementi XML annidati. ma non consente di controllare in modo preciso la struttura del valore XML generato. È consigliabile utilizzare query in modalità AUTO solo se si desidera generare gerarchie semplici. Tuttavia, l' [uso della modalità EXPLICIT con FOR XML](use-explicit-mode-with-for-xml.md) e l' [uso della modalità PATH con FOR XML](use-path-mode-with-for-xml.md) assicurano maggiore controllo e flessibilità nella definizione della forma di elementi XML dal risultato di una query.  
@@ -129,14 +129,14 @@ FOR XML AUTO, ELEMENTS
   
  Se nella clausola SELECT è specificato il carattere jolly asterisco (*), il livello di nidificazione verrà determinato come descritto in precedenza, ovvero in base all'ordine in cui le righe vengono restituite dal motore query.  
   
-## <a name="in-this-section"></a>Argomenti della sezione  
+## <a name="in-this-section"></a>In questa sezione  
  Per ulteriori informazioni sulla modalità AUTO, vedere gli argomenti seguenti:  
   
 -   [Utilizzo dell'opzione BINARY BASE64](use-the-binary-base64-option.md)  
   
 -   [Approccio euristico della modalità AUTO per la determinazione della struttura dei valori XML restituiti](auto-mode-heuristics-in-shaping-returned-xml.md)  
   
--   [Esempi di utilizzo della modalità AUTO](examples-using-auto-mode.md)  
+-   [Esempi: Uso della modalità AUTO](examples-using-auto-mode.md)  
   
 ## <a name="see-also"></a>Vedere anche  
  [SELECT &#40;Transact-SQL&#41;](/sql/t-sql/queries/select-transact-sql)   

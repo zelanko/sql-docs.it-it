@@ -16,12 +16,12 @@ ms.assetid: 356a7b8a-ae53-4fb5-86ee-fcfddbf23ddd
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 128efbfb754508cf3ad395c89b2085f7f8b6297e
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: b7f1bfc868b34ac16e1c38aedc9193002d35d5b8
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52783034"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58532731"
 ---
 # <a name="splookupcustomresolver-transact-sql"></a>sp_lookupcustomresolver (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -43,23 +43,17 @@ sp_lookupcustomresolver [ @article_resolver = ] 'article_resolver'
 ```  
   
 ## <a name="arguments"></a>Argomenti  
- [  **@article_resolver =** ] **'***article_resolver***'**  
- Specifica il nome della logica di business personalizzata di cui annullare la registrazione. *article_resolver* viene **nvarchar(255**, non prevede alcun valore predefinito. Se la logica di business in fase di rimozione è un componente COM, questo parametro è il nome descrittivo del componente. Se la logica di business è un assembly [!INCLUDE[msCoName](../../includes/msconame-md.md)] .NET Framework, questo parametro è il nome dell'assembly.  
+`[ @article_resolver = ] 'article_resolver'` Specifica il nome della logica di business personalizzata di cui annullare la registrazione. *article_resolver* viene **nvarchar(255**, non prevede alcun valore predefinito. Se la logica di business in fase di rimozione è un componente COM, questo parametro è il nome descrittivo del componente. Se la logica di business è un assembly [!INCLUDE[msCoName](../../includes/msconame-md.md)] .NET Framework, questo parametro è il nome dell'assembly.  
   
- [ **@resolver_clsid**=] **'***resolver_clsid***'** OUTPUT  
- Valore CLSID dell'oggetto COM associato al nome della logica di business personalizzata specificata nel *article_resolver* parametro. *resolver_clsid* viene **nvarchar (50)**, con un valore predefinito è NULL.  
+`[ @resolver_clsid = ] 'resolver_clsid' OUTPUT` Valore CLSID dell'oggetto COM associato al nome della logica di business personalizzata specificata nel *article_resolver* parametro. *resolver_clsid* viene **nvarchar (50)**, con un valore predefinito è NULL.  
   
- [  **@is_dotnet_assembly=** ] **'***is_dotnet_assembly***'** OUTPUT  
- Specifica il tipo di logica di business personalizzata di cui è in corso la registrazione. *is_dotnet_assembly* viene **bit**, con un valore predefinito è 0. **1** indica che la logica di business personalizzata è un gestore della logica di business stesso Assembly. **0** indica che è un componente COM.  
+`[ @is_dotnet_assembly = ] 'is_dotnet_assembly' OUTPUT` Specifica il tipo di logica di business personalizzata in fase di registrazione. *is_dotnet_assembly* viene **bit**, con un valore predefinito è 0. **1** indica che la logica di business personalizzata è un gestore della logica di business stesso Assembly. **0** indica che è un componente COM.  
   
- [  **@dotnet_assembly_name=** ] **'***dotnet_assembly_name***'** OUTPUT  
- Nome dell'assembly che implementa il gestore della logica di business. *dotnet_assembly_name* viene **nvarchar(255**, con un valore predefinito NULL.  
+`[ @dotnet_assembly_name = ] 'dotnet_assembly_name' OUTPUT` È il nome dell'assembly che implementa il gestore della logica di business. *dotnet_assembly_name* viene **nvarchar(255**, con un valore predefinito NULL.  
   
- [  **@dotnet_class_name=** ] **'***dotnet_class_name***'** OUTPUT  
- Nome della classe che sostituisce <xref:Microsoft.SqlServer.Replication.BusinessLogicSupport.BusinessLogicModule> per implementare il gestore della logica di business. *dotnet_class_name* viene **nvarchar(255**, con un valore predefinito NULL.  
+`[ @dotnet_class_name = ] 'dotnet_class_name' OUTPUT` È il nome della classe che esegue l'override <xref:Microsoft.SqlServer.Replication.BusinessLogicSupport.BusinessLogicModule> per implementare il gestore della logica di business. *dotnet_class_name* viene **nvarchar(255**, con un valore predefinito NULL.  
   
- [  **@publisher=** ] **'***publisher***'**  
- Nome del server di pubblicazione. *server di pubblicazione* viene **sysname**, con un valore predefinito NULL. Utilizzare questo parametro quando la stored procedure non viene chiamata dal server di pubblicazione. Se omesso, si presuppone che il server locale è il server di pubblicazione.  
+`[ @publisher = ] 'publisher'` È il nome del server di pubblicazione. *server di pubblicazione* viene **sysname**, con un valore predefinito NULL. Utilizzare questo parametro quando la stored procedure non viene chiamata dal server di pubblicazione. Se omesso, si presuppone che il server locale è il server di pubblicazione.  
   
 ## <a name="return-code-values"></a>Valori restituiti  
  **0** (esito positivo) o **1** (errore)  

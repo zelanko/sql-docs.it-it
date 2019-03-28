@@ -18,12 +18,12 @@ ms.assetid: 0ecbec81-e637-44a9-a61e-11bf060ef084
 author: VanMSFT
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 0bef77291c0a719b9cdc96106d3c173dff652da1
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: c1904b1549613e53c685d784628696e84b134a03
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47644679"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58534713"
 ---
 # <a name="sppassword-transact-sql"></a>sp_password (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -45,17 +45,14 @@ sp_password [ [ @old = ] 'old_password' , ]
 ```  
   
 ## <a name="arguments"></a>Argomenti  
- [  **@old=** ] **'***old_password***'**  
- Vecchia password. *old_password* viene **sysname**, con un valore predefinito è NULL.  
+`[ @old = ] 'old_password'` È la vecchia password. *old_password* viene **sysname**, con un valore predefinito è NULL.  
   
- [  **@new=** ] **'***new_password***'**  
- Nuova password. *nuova_password* viene **sysname**, non prevede alcun valore predefinito. *old_password* deve essere specificata se non si utilizzano parametri denominati.  
+`[ @new = ] 'new_password'` È la nuova password. *nuova_password* viene **sysname**, non prevede alcun valore predefinito. *old_password* deve essere specificata se non si utilizzano parametri denominati.  
   
 > [!IMPORTANT]  
 >  Non utilizzare una password NULL. Usare una password complessa. Per altre informazioni, vedere [Strong Passwords](../../relational-databases/security/strong-passwords.md).  
   
- [  **@loginame=** ] **'***account di accesso***'**  
- Nome dell'account di accesso interessato dalla modifica della password. *login* è di tipo **sysname** e il valore predefinito è NULL. *account di accesso* deve esistere già e può essere specificato solo dai membri del **sysadmin** oppure **securityadmin** ruoli predefiniti del server.  
+`[ @loginame = ] 'login'` È il nome dell'account di accesso interessato dalla modifica della password. *login* è di tipo **sysname** e il valore predefinito è NULL. *account di accesso* deve esistere già e può essere specificato solo dai membri del **sysadmin** oppure **securityadmin** ruoli predefiniti del server.  
   
 ## <a name="return-code-values"></a>Valori restituiti  
  0 (esito positivo) o 1 (esito negativo)  

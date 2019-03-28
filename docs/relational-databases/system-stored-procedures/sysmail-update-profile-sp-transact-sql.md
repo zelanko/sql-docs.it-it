@@ -18,12 +18,12 @@ ms.assetid: eaedf7ce-a8d5-4ab9-99e0-d77d5be19e90
 author: VanMSFT
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: c979104c30ec9b134f2d73acb2d85ecd22490371
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d2b1616fdf7b690d61c6a2605cc15da2508a3fb9
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47854206"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58534663"
 ---
 # <a name="sysmailupdateprofilesp-transact-sql"></a>sysmail_update_profile_sp (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -41,14 +41,11 @@ sysmail_update_profile_sp [ [ @profile_id = ] profile_id , ] [ [ @profile_name =
 ```  
   
 ## <a name="arguments"></a>Argomenti  
- [ **@profile_id** = ] *profile_id*  
- ID del profilo da aggiornare. *profile_id* viene **int**, con un valore predefinito è NULL. Almeno uno dei *profile_id* oppure *profile_name* deve essere specificato. Se si specificano entrambi, la procedura modifica il nome del profilo.  
+`[ @profile_id = ] profile_id` Id del profilo da aggiornare. *profile_id* viene **int**, con un valore predefinito è NULL. Almeno uno dei *profile_id* oppure *profile_name* deve essere specificato. Se si specificano entrambi, la procedura modifica il nome del profilo.  
   
- [ **@profile_name** =] **'***profile_name***'**  
- Nome del profilo da aggiornare oppure nuovo nome del profilo. *profile_name* viene **sysname**, con un valore predefinito è NULL. Almeno uno dei *profile_id* oppure *profile_name* deve essere specificato. Se si specificano entrambi, la procedura modifica il nome del profilo.  
+`[ @profile_name = ] 'profile_name'` Il nome del profilo da aggiornare oppure nuovo nome per il profilo. *profile_name* viene **sysname**, con un valore predefinito è NULL. Almeno uno dei *profile_id* oppure *profile_name* deve essere specificato. Se si specificano entrambi, la procedura modifica il nome del profilo.  
   
- [ **@description** =] **'***descrizione***'**  
- Nuova descrizione del profilo. *Descrizione* viene **nvarchar(256)**, con un valore predefinito è NULL.  
+`[ @description = ] 'description'` Nuova descrizione per il profilo. *Descrizione* viene **nvarchar(256)**, con un valore predefinito è NULL.  
   
 ## <a name="return-code-values"></a>Valori restituiti  
  **0** (esito positivo) o **1** (errore)  
