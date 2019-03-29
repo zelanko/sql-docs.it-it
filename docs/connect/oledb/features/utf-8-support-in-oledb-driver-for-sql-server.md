@@ -2,7 +2,7 @@
 title: Supporto UTF-8 in OLE DB Driver for SQL Server| Microsoft Docs
 description: Supporto UTF-8 in OLE DB Driver for SQL Server
 ms.custom: ''
-ms.date: 02/11/2019
+ms.date: 03/27/2018
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,12 +10,12 @@ ms.technology: connectivity
 ms.topic: reference
 author: v-kaywon
 ms.author: v-kaywon
-ms.openlocfilehash: f410ddf4e3843936da6f93f488f379feea863e59
-ms.sourcegitcommit: 958cffe9288cfe281280544b763c542ca4025684
+ms.openlocfilehash: b7f138438d522c9da1b7ef74acbaf963e17d6144
+ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/23/2019
-ms.locfileid: "56744822"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58492603"
 ---
 # <a name="utf-8-support-in-ole-db-driver-for-sql-server"></a>Supporto UTF-8 in OLE DB Driver for SQL Server
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -24,7 +24,7 @@ ms.locfileid: "56744822"
 
 Driver Microsoft OLE DB per SQL Server (versione 18.2.1) aggiunge supporto per la codifica UTF-8 server. Per informazioni sul supporto UTF-8 di SQL Server, vedere:
 - [Regole di confronto e supporto Unicode](../../../relational-databases/collations/collation-and-unicode-support.md)
-- [Supporto UTF-8 (CTP 2.2)](../../../sql-server/what-s-new-in-sql-server-ver15.md#utf-8-support-ctp-22)
+- [Supporto UTF-8](../../../sql-server/what-s-new-in-sql-server-ver15.md#utf-8-support-ctp-23)
 
 ## <a name="data-insertion-into-a-utf-8-encoded-char-or-varchar-column"></a>Inserimento dei dati in un UTF-8 con codifica colonne CHAR o VARCHAR
 Quando si crea un buffer del parametro di input per l'inserimento, il buffer è descritto tramite una matrice di [strutture DBBINDING](https://go.microsoft.com/fwlink/?linkid=2071182). Ogni struttura DBBINDING associa un singolo parametro al buffer del consumer e contiene informazioni quali la lunghezza e tipo del valore di dati. Per un buffer del parametro di input di tipo CHAR, il *wType* di DBBINDING struttura deve essere impostata su DBTYPE_STR. Per un buffer del parametro di input di tipo WCHAR, il *wType* di DBBINDING struttura deve essere impostata su DBTYPE_WSTR.
