@@ -10,12 +10,12 @@ ms.topic: tutorial
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: 68fe779dbdc99bd3eca1870a4e8ff1ee0fa7d95f
-ms.sourcegitcommit: 2533383a7baa03b62430018a006a339c0bd69af2
+ms.openlocfilehash: f8e5cc5b3da7bf8c571a1f4b3febd9ef45e44d9e
+ms.sourcegitcommit: a9a03f9a7ec4dad507d2dfd5ca33571580114826
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57017847"
+ms.lasthandoff: 03/28/2019
+ms.locfileid: "58566520"
 ---
 # <a name="tutorial-load-sample-data-into-a-sql-server-2019-big-data-cluster"></a>Esercitazione: Caricare i dati di esempio in un cluster di big data di SQL Server 2019
 
@@ -115,4 +115,18 @@ I passaggi seguenti descrivono come usare un client Linux per caricare i dati di
 
 ## <a name="next-steps"></a>Passaggi successivi
 
-Dopo aver eseguito lo script di bootstrap, il cluster di big data con il database di esempio e dati di HDFS. Per iniziare a esplorare dati e i cluster di big data, vedere la [esercitazioni](tutorial-query-hdfs-storage-pool.md) in questa sezione.
+Dopo aver eseguito lo script di bootstrap, il cluster di big data con il database di esempio e dati di HDFS. Le esercitazioni seguenti mostrano come usare i dati di esempio per illustrare le funzionalità di cluster di big data:
+
+Virtualizzazione dei dati:
+
+- [Esercitazione: Query di HDFS in un cluster di big data di SQL Server](tutorial-query-hdfs-storage-pool.md)
+- [Esercitazione: Eseguire una query Oracle da un cluster di big data di SQL Server](tutorial-query-oracle.md)
+
+Inserimento di dati:
+
+- [Esercitazione: Inserire dati in un pool di dati di SQL Server con Transact-SQL](tutorial-data-pool-ingest-sql.md)
+- [Esercitazione: Inserire dati in un pool di dati di SQL Server con i processi Spark](tutorial-data-pool-ingest-spark.md)
+
+Notebook:
+
+- [Esercitazione: Eseguire un notebook di esempio in un cluster di big data di SQL Server 2019](tutorial-notebook-spark.md)

@@ -11,12 +11,12 @@ ms.topic: conceptual
 author: yualan
 ms.author: alayu
 manager: craigg
-ms.openlocfilehash: 5189d997e0408ead627556f5dc3a2b8f0c975fa3
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.openlocfilehash: 9aad778475649280e5472f80ad96973d09803375
+ms.sourcegitcommit: a9a03f9a7ec4dad507d2dfd5ca33571580114826
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58392719"
+ms.lasthandoff: 03/28/2019
+ms.locfileid: "58566380"
 ---
 # <a name="how-to-use-notebooks-in-azure-data-studio"></a>Come usare i notebook in Azure Data Studio
 
@@ -45,9 +45,9 @@ Esistono diversi modi per avviare un nuovo notebook.
 
 ## <a name="supported-kernels-and-attach-to-context"></a>Supportati i kernel e associare al contesto
 
-L'installazione di Notebook in Azure Data Studio supporta in modo nativo SQL Kernel. Se si è uno sviluppatore di SQL e si desidera usare i notebook, il risultato sarà la prescelta Kernel. 
+L'installazione di Notebook in Azure Data Studio supporta in modo nativo SQL Kernel. Se si sono uno sviluppatore SQL e si desidera usare i notebook e quindi il risultato sarà la prescelta Kernel. 
 
-Il Kernel SQL è anche utilizzabile per connettersi alle istanze del server PostgreSQL. Se si è uno sviluppatore di PostgreSQL e si desidera connettersi al PostgreSQL Server quindi scaricare il [ **estensioni di PostgreSQL** ](postgres-extension.md) nel marketplace delle estensioni di Studio dei dati di Azure.
+Il Kernel SQL è anche utilizzabile per connettersi alle istanze del server PostgreSQL. Se si è uno sviluppatore di PostgreSQL e si desidera connettersi al PostgreSQL Server, quindi scaricare il [ **estensioni di PostgreSQL** ](postgres-extension.md) nel marketplace delle estensioni di Studio dei dati di Azure.
 
 ![image7](media/sql-notebooks/sql-kernel-dropdown.png)
 
@@ -90,7 +90,7 @@ Dopo l'installazione viene completata, si noterà una notifica nella cronologia 
 |Kernel Spark|Scrivere il codice R e Scala con Spark compute dal cluster.
 |Kernel Python|Scrivere il codice Python per lo sviluppo locale.
 
-`Attach to` fornisce il contesto per il Kernel da collegare. Se si usa SQL Kernel, è possibile `Attach to` qualsiasi delle istanze di SQL Server.
+`Attach to` fornisce il contesto per il Kernel da collegare. Se si usa SQL Kernel, è quindi possibile `Attach to` qualsiasi delle istanze di SQL Server.
 
 Se si usa il Kernel Python3 il `Attach to` è `localhost`. È possibile usare questo kernel per lo sviluppo Python locale.
 
@@ -116,7 +116,7 @@ Facendo clic all'esterno della cella di testo visualizzerà il testo di markdown
 
 Apri in Studio di Azure Data i notebook sono predefiniti **attendibile**.
 
-Se si apre un Notebook da un'altra origine verrà aperto nel **Non Trusted** modalità e quindi è possibile renderlo **attendibile**.
+Se si apre un Notebook da un'altra origine, verrà aperta **Non Trusted** modalità e quindi è possibile renderlo **attendibile**.
 
 ### <a name="save"></a>Salvare 
 
