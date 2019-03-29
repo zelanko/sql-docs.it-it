@@ -10,12 +10,12 @@ ms.topic: quickstart
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: b89ec7cd24ed61f08cf44f934066a9b0fc619434
-ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
+ms.openlocfilehash: 00810eb3f57fdaf8f87fc0db16744ab9e3334f70
+ms.sourcegitcommit: 0c049c539ae86264617672936b31d89456d63bb0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58493554"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58618148"
 ---
 # <a name="quickstart-deploy-sql-server-big-data-cluster-on-azure-kubernetes-service-aks"></a>Avvio rapido: Distribuire il cluster di big data di SQL Server in Azure Kubernetes Service (AKS)
 
@@ -78,14 +78,14 @@ Usare la procedura seguente per eseguire lo script di distribuzione. Questo scri
    | **Nome utente di docker** | Il nome utente Docker fornito come parte dell'anteprima pubblica limitata. |
    | **Password di docker** | La password di Docker fornita come parte dell'anteprima pubblica limitata. |
    | **Area di Azure** | L'area di Azure per il nuovo cluster servizio contenitore di AZURE (impostazione predefinita **westus**). |
-   | **Dimensioni della macchina** | Il [dimensioni della macchina](https://docs.microsoft.com/azure/virtual-machines/windows/sizes) da usare per i nodi del cluster servizio contenitore di AZURE (impostazione predefinita **Standard_L4s**). |
-   | **Nodi di lavoro** | Il numero di nodi di lavoro del cluster servizio contenitore di AZURE (impostazione predefinita **3**). |
+   | **Dimensioni della macchina** | Il [dimensioni della macchina](https://docs.microsoft.com/azure/virtual-machines/windows/sizes) da usare per i nodi del cluster servizio contenitore di AZURE (impostazione predefinita **Standard_L8s**). |
+   | **Nodi di lavoro** | Il numero di nodi di lavoro del cluster servizio contenitore di AZURE (impostazione predefinita **1**). |
    | **Nome del cluster** | Nome del cluster servizio contenitore di AZURE sia il cluster di big data. Solo i caratteri alfanumerici minuscoli e senza spazi, deve essere il nome del cluster. (default **sqlbigdata**). |
    | **Password** | Password per l'istanza master, un gateway HDFS/Spark e un controller (impostazione predefinita **MySQLBigData2019**). |
    | **Utente controller** | Nome utente dell'utente controller (impostazione predefinita: **admin**). |
 
    > [!IMPORTANT]
-   > Il valore predefinito **Standard_L4s** le dimensioni del computer potrebbero non essere disponibili in ogni area di Azure. Se si seleziona una dimensione di macchina diverso, assicurarsi che il numero totale di dischi che possono essere collegati tra i nodi del cluster è maggiore o uguale a 24. Ogni attestazione di volume permanente nel cluster richiede un disco collegato. Attualmente, cluster di big data richiede 24 crediti di volume permanente. Ad esempio, il [Standard_L4s](https://docs.microsoft.com/azure/virtual-machines/windows/sizes-storage#ls-series) dimensioni della macchina supportano 16 dischi collegati, tre nodi significa che è possibile collegare 48 dischi.
+   > Il valore predefinito **Standard_L8s** le dimensioni del computer potrebbero non essere disponibili in ogni area di Azure. Se si seleziona una dimensione di macchina diverso, assicurarsi che il numero totale di dischi che possono essere collegati tra i nodi del cluster è maggiore o uguale a 24. Ogni attestazione di volume permanente nel cluster richiede un disco collegato. Attualmente, cluster di big data richiede 24 crediti di volume permanente. Ad esempio, il [Standard_L8s](https://docs.microsoft.com/azure/virtual-machines/windows/sizes-storage#ls-series) dimensioni della macchina supportano 32 dischi collegati, in modo che sia in grado di valutare i cluster di big data con un singolo nodo di queste dimensioni di macchina.
 
    > [!NOTE]
    > Il `sa` account sia un amministratore di sistema nell'istanza master di SQL Server che viene creato durante l'installazione. Dopo aver creato la distribuzione, il `MSSQL_SA_PASSWORD` variabile di ambiente diventa individuabile eseguendo `echo $MSSQL_SA_PASSWORD` nel contenitore istanza master. Per motivi di sicurezza, modificare il `sa` password nell'istanza di master dopo la distribuzione. Per altre informazioni, vedere [modificare la password SA](../linux/quickstart-install-connect-docker.md#sapassword).

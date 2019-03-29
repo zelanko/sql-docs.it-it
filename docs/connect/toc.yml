@@ -2523,6 +2523,8 @@ items:
         href: ../connect/jdbc/using-parameter-metadata.md
       - name: Utilizzo di tipi di dati di base
         href: ../connect/jdbc/using-basic-data-types.md
+      - name: Uso del tipo di dati SQL_variant
+        href: ../connect/jdbc/using-sql-variant-datatype.md
       - name: Uso dei tipi di dati spaziali
         href: ../connect/jdbc/use-spatial-datatypes.md
       - name: Informazioni sulle transazioni
@@ -2617,10 +2619,13 @@ items:
         href: ../connect/jdbc/using-sql-escape-sequences.md
       - name: Utilizzo delle istruzioni con le stored procedure
         href: ../connect/jdbc/using-statements-with-stored-procedures.md
-      - name: Versione di esempio di Azure Key Vault 6.0.0
-        href: ../connect/jdbc/azure-key-vault-sample-version-6.0.0.md
-      - name: Versione di esempio di Azure Key Vault 6.2.2
-        href: ../connect/jdbc/azure-key-vault-sample-version-6.2.2.md
+      - name: Esempi di Azure Key Vault, per la versione 7.0 e altre
+        href: ../connect/jdbc/azure-key-vault-sample-version-7.0.md
+        items:
+        - name: Versione di esempio di Azure Key Vault 6.2.2
+          href: ../connect/jdbc/azure-key-vault-sample-version-6.2.2.md
+        - name: Versione di esempio di Azure Key Vault 6.0.0
+          href: ../connect/jdbc/azure-key-vault-sample-version-6.0.0.md
 - name: Node.js
   items:
   - name: Driver Node.js per SQL Server
@@ -5248,7 +5253,7 @@ items:
             href: ../connect/oledb/ole-db-how-to/results/execute-stored-procedure-with-rpc-and-process-output.md
           - name: Recuperare righe da un set di risultati
             href: ../connect/oledb/ole-db-how-to/results/fetch-rows-from-a-result-set-ole-db.md
-        - name: FileStream
+        - name: Filestream
           href: ../connect/oledb/ole-db-how-to/filestream/filestream-and-ole-db.md
           items:
           - name: Leggere una colonna FILESTREAM in un file usando IBCPSession
@@ -7644,9 +7649,9 @@ items:
     href: ../ado/reference/ado-programmer-s-reference.md
   - name: Glossario di ADO
     href: ../ado/ado-glossary.md
-ms.openlocfilehash: 67cfc70b3bdd5744c91ace414dc04d4b9090f4d7
-ms.sourcegitcommit: 715683b5fc7a8e28a86be8949a194226b72ac915
+ms.openlocfilehash: f55c9266746f452d2592d7d0ded5993ebb4fab80
+ms.sourcegitcommit: a9a03f9a7ec4dad507d2dfd5ca33571580114826
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58478306"
+ms.lasthandoff: 03/28/2019
+ms.locfileid: "58566640"

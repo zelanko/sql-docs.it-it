@@ -15,12 +15,12 @@ ms.assetid: ''
 author: HJToland3
 ms.author: rajpo
 manager: craigg
-ms.openlocfilehash: 35b90cec967f60f0adfc4d9720f3aec809006f8c
-ms.sourcegitcommit: f8fced37f3fe5c45b2b97219d378137afd68cf76
+ms.openlocfilehash: fac9636b336c2571e159c72c79d482768bf2fbe6
+ms.sourcegitcommit: 0c049c539ae86264617672936b31d89456d63bb0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/19/2019
-ms.locfileid: "58198200"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58618178"
 ---
 # <a name="assess-an-enterprise-and-consolidate-assessment-reports-with-dma"></a>Valutare un'azienda e di consolidare i report di valutazione con DMA
 
@@ -72,7 +72,11 @@ L'inventario può trovarsi in uno dei due formati:
 
 ### <a name="if-using-a-csv-file"></a>Se si usa un file CSV
 > [!IMPORTANT]
+>
 > Verificare che il file di inventario viene salvato come file delimitato da virgole (CSV).
+>
+> Per le istanze predefinite, impostare il nome dell'istanza di MSSQLServer.
+>
 
 Quando si usa un file csv per importare i dati, assicurarsi che esistono solo due colonne di dati - **nome istanza** e **Nome Database**, e che le colonne non includono le righe di intestazione.
  

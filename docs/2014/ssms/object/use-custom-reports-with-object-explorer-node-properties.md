@@ -12,18 +12,16 @@ ms.assetid: c7b84355-71ba-402d-85af-23826f18b7da
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 09f3cf66d28a70eecd82adde490d02b521fd80ed
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 5941b15c0aea7319d132e05b902133d3d8b986fa
+ms.sourcegitcommit: 0c049c539ae86264617672936b31d89456d63bb0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53374403"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58618228"
 ---
 # <a name="use-custom-reports-with-object-explorer-node-properties"></a>Utilizzo di report personalizzati con proprietà dei nodi di Esplora oggetti
   I report personalizzati possono essere eseguiti nel contesto di un nodo Esplora oggetti selezionato, a condizione che facciano riferimento ai parametri di report di tale nodo. Un report personalizzato può pertanto utilizzare il contesto corrente, ad esempio il database corrente, oppure un oggetto server o database.  
   
-## <a name="report-samples"></a>Report di esempio  
- Sono disponibili per il download alcuni[report di esempio](https://go.microsoft.com/fwlink/?LinkId=81792), inclusi i report standard creati da [!INCLUDE[msCoName](../../includes/msconame-md.md)]. Questi esempi possono essere modificati con [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)].  
   
 ## <a name="object-explorer-node-report-parameters"></a>Parametri di report dei nodi Esplora oggetti  
   

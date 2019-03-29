@@ -1,5 +1,5 @@
 ---
-title: db_index_physical_stats (Transact-SQL) | Microsoft Docs
+title: sys.dm_db_index_physical_stats (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -22,12 +22,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: b9d093983408502d391c4025e03ba0a590e8f77a
-ms.sourcegitcommit: c19696d3d67161ce78aaa5340964da3256bf602d
+ms.openlocfilehash: 9330c41ccf23cdb03add4c15fc2160594c2ff7a7
+ms.sourcegitcommit: 0c049c539ae86264617672936b31d89456d63bb0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/29/2018
-ms.locfileid: "52617877"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58618298"
 ---
 # <a name="sysdmdbindexphysicalstats-transact-sql"></a>sys.dm_db_index_physical_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -63,14 +63,14 @@ sys.dm_db_index_physical_stats (
   
  La funzione predefinita [DB_ID](../../t-sql/functions/db-id-transact-sql.md) può essere specificato. Quando si utilizza DB_ID senza specificare un nome di database, il livello di compatibilità del database corrente deve essere 90 o un valore superiore.  
   
- *object_id* | NULL | 0 | IMPOSTAZIONE PREDEFINITA  
+ *object_id* | NULL | 0 | DEFAULT  
  ID oggetto della tabella o vista in cui si trova l'indice. *object_id* è di tipo **int**.  
   
  Gli input validi sono il numero di ID di una tabella o vista, NULL, 0 o DEFAULT. Il valore predefinito è 0. NULL, 0 e DEFAULT sono valori equivalenti in questo contesto. A partire dal [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], gli input validi includono anche il nome della coda service broker o il nome della tabella interna della coda. Quando vengono applicati i parametri predefiniti (ad esempio tutti gli oggetti, tutti gli indici e così via), informazioni sulla frammentazione per tutte le code sono inclusi nel set di risultati.  
   
  Specificare NULL per restituire le informazioni per tutte le tabelle e le viste nel database specificato. Se si specifica NULL per *object_id*, è necessario specificare NULL anche per *index_id* e *partition_number*.  
   
- *index_id* | 0 | NULL | -1 | IMPOSTAZIONE PREDEFINITA  
+ *index_id* | 0 | NULL | -1 | DEFAULT  
  ID dell'indice. *index_id* viene **int**. Gli input validi sono il numero di ID di un indice, 0 se *object_id* è un heap, NULL, -1 o DEFAULT. Il valore predefinito è -1. NULL, -1 e DEFAULT sono valori equivalenti in questo contesto.  
   
  Specificare NULL per restituire le informazioni per tutti gli indici per una vista o tabella di base. Se si specifica NULL per *index_id*, è necessario specificare NULL anche per *partition_number*.  
@@ -197,7 +197,7 @@ GO
   
 -   Utilizzare ALTER INDEX REBUILD, l'alternativa a DBCC DBREINDEX, per ricompilare l'indice online o offline. Per altre informazioni, vedere [ALTER INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/alter-index-transact-sql.md).  
   
- La sola frammentazione non è un motivo sufficiente per riorganizzare o ricompilare un indice. L'effetto principale della frammentazione è che rallenta la velocità read-ahead effettiva delle pagine durante le analisi di indici, provocando tempi di risposta più lenti. Se il carico di lavoro della query in una tabella o in un indice frammentato non comporta analisi, poiché il carico di lavoro è rappresentato principalmente da ricerche singleton, la rimozione della frammentazione potrebbe non avere alcun effetto. Per altre informazioni, vedere questo [sito Web Microsoft](https://go.microsoft.com/fwlink/?linkid=31012).  
+ La sola frammentazione non è un motivo sufficiente per riorganizzare o ricompilare un indice. L'effetto principale della frammentazione è che rallenta la velocità read-ahead effettiva delle pagine durante le analisi di indici, provocando tempi di risposta più lenti. Se il carico di lavoro della query in una tabella o in un indice frammentato non comporta analisi, poiché il carico di lavoro è rappresentato principalmente da ricerche singleton, la rimozione della frammentazione potrebbe non avere alcun effetto.
   
 > [!NOTE]  
 >  L'esecuzione di DBCC SHRINKFILE o DBCC SHRINKDATABASE potrebbe provocare la frammentazione se un indice viene spostato completamente o in parte durante l'operazione di compattazione. Pertanto, se è necessario eseguire un'operazione di compattazione, è consigliabile eseguirla prima della rimozione della frammentazione.  
@@ -265,7 +265,7 @@ GO
   
 ```  
   
-### <a name="b-returning-information-about-a-heap"></a>b. Restituzione delle informazioni su un heap  
+### <a name="b-returning-information-about-a-heap"></a>B. Restituzione delle informazioni su un heap  
  Nell'esempio seguente vengono restituite le statistiche per l'heap `dbo.DatabaseLog` nel database [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)]. Poiché la tabella contiene dati LOB, viene restituita una riga per l'unità di allocazione `LOB_DATA` in aggiunta alla riga restituita per `IN_ROW_ALLOCATION_UNIT` che archivia le pagine di dati dell'heap. L'esecuzione di questa query richiede almeno l'autorizzazione CONTROL per la tabella `dbo.DatabaseLog`.  
   
 ```  

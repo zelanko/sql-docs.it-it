@@ -5,17 +5,17 @@ description: Questo articolo descrive gli ultimi aggiornamenti e problemi noti p
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 03/27/2018
+ms.date: 03/28/2018
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: 2502396dba4b88a9750aa3bfc62c4153711e1426
-ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
+ms.openlocfilehash: c7c80b69ac7120f2cd88500d3c276a313ef34390
+ms.sourcegitcommit: 0c049c539ae86264617672936b31d89456d63bb0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58510338"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58618308"
 ---
 # <a name="release-notes-for-big-data-clusters-on-sql-server"></a>Note sulla versione per i cluster di big data in SQL Server
 
@@ -31,8 +31,11 @@ Le sezioni seguenti descrivono le nuove funzionalità e problemi noti per i clus
 
 | Nuova funzionalità o aggiornamento | Dettagli |
 |:---|:---|
-| Indicazioni sulla GPU supporta per l'esecuzione di deep learning con TensorFlow in Spark. | [Distribuire un cluster di big data con supporto GPU ed eseguire TensorFlow](spark-gpu-tensorflow.md) |
+| Indicazioni sulla GPU supporta per l'esecuzione di deep learning con TensorFlow in Spark. | [Distribuire un cluster di big data con supporto GPU ed eseguire TensorFlow](spark-gpu-tensorflow.md). |
 | **SqlDataPool** e **SqlStoragePool** zdroje dat non vengono più creati per impostazione predefinita. | Essere creata manualmente in base alle esigenze. Vedere le [problemi noti](#externaltablesctp24). |
+| `INSERT INTO SELECT` supporto per il pool di dati. | Per un esempio, vedere [esercitazione: Inserire dati in un pool di dati di SQL Server con Transact-SQL](tutorial-data-pool-ingest-sql.md). |
+| `FORCE SCALEOUTEXECUTION` e `DISABLE SCALEOUTEXECUTION` opzione. | Forza o disabilita l'utilizzo dell'attività di calcolo del pool per le query su tabelle esterne. Ad esempio `SELECT TOP(100) * FROM web_clickstreams_hdfs_book_clicks OPTION(FORCE SCALEOUTEXECUTION)`. |
+| Raccomandazioni aggiornate distribuzione AKS. | Quando si valutano i cluster di big data nel servizio contenitore di AZURE, è ora consigliabile usare un singolo nodo della dimensione **Standard_L8s**. |
 | Aggiornamento del runtime Spark per Spark 2.4. | |
 
 ### <a name="known-issues"></a>Problemi noti

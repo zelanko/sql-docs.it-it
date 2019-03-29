@@ -26,12 +26,12 @@ ms.assetid: 736d8d9a-39f1-4bf8-b81f-2e56c134d12e
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: a5b13d9d2095df5d464b7102e1527c21c36c4f5c
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 12e5d699615018c2d9e20a8fd49953931850a106
+ms.sourcegitcommit: 0c049c539ae86264617672936b31d89456d63bb0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53376183"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58618168"
 ---
 # <a name="import-a-bacpac-file-to-create-a-new-user-database"></a>Importare un file BACPAC per creare un nuovo database utente
   Importare un file dell'applicazione livello dati (DAC), con estensione bacpac, per creare una copia del database originale, completo dei dati, in una nuova istanza del [!INCLUDE[ssDE](../../includes/ssde-md.md)] o in [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]. Le operazioni di importazione ed esportazione possono essere combinate per eseguire la migrazione di un'applicazione livello dati o database tra istanze o per creare un backup logico, quale la creazione di una copia locale di un database distribuito in [!INCLUDE[ssSDS](../../includes/sssds-md.md)].  
@@ -43,8 +43,7 @@ ms.locfileid: "53376183"
   
 2.  Durante l'importazione viene eseguita la copia bulk di dati dal file di esportazione.  
   
- È disponibile un'applicazione di esempio nelle esercitazioni di [!INCLUDE[ssSDS](../../includes/sssds-md.md)] che è possibile usare per testare l'esportazione e l'importazione di applicazioni livello dati e database. Per istruzioni su come scaricare e usare l'esempio, vedere la pagina relativa all' [importazione e all'esportazione del database per il database SQL di Windows Azure](https://go.microsoft.com/fwlink/?LinkId=219404).  
-  
+ 
 ## <a name="sql-server-utility"></a>Utilità SQL Server  
  Se si importa un'applicazione livello dati in un'istanza gestita del Motore di database, il pacchetto di applicazione livello dati importato viene incorporato in Utilità SQL Server al successivo invio del set di raccolta dell'utilità dall'istanza al punto di controllo dell'utilità. L'applicazione livello dati sarà quindi presente nel nodo **Deployed Data-tier Applications** (Applicazioni livello dati distribuite) in [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] **Utility Explorer** and reported in the **Deployed Data-tier Applications** details page.  
   
