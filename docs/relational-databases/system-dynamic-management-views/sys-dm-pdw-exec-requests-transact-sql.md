@@ -13,12 +13,12 @@ author: ronortloff
 ms.author: rortloff
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: ca750b483aee088a6997f9f0b1beac6d15b0d9df
-ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
+ms.openlocfilehash: d049833897685b7998fc1168ec09398860df233b
+ms.sourcegitcommit: 706f3a89fdb98e84569973f35a3032f324a92771
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58509868"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58657746"
 ---
 # <a name="sysdmpdwexecrequests-transact-sql"></a>sys.dm_pdw_exec_requests (Transact-SQL)
 
@@ -43,7 +43,7 @@ ms.locfileid: "58509868"
 |resource_class|**nvarchar(20)**|La classe di risorse per questa richiesta. Vedere correlati **concurrency_slots_used** nelle [sys.dm_pdw_resource_waits &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-resource-waits-transact-sql.md).  Per altre informazioni sulle classi di risorse, vedere [classi & i carico di lavoro di gestione delle risorse](https://docs.microsoft.com/azure/sql-data-warehouse/resource-classes-for-workload-management) |Classi di risorse statiche</br>staticrc10</br>staticrc20</br>staticrc30</br>staticrc40</br>staticrc50</br>staticrc60</br>staticrc70</br>staticrc80</br>            </br>Classi di risorse dinamiche</br>SmallRC</br>MediumRC</br>LargeRC</br>XLargeRC|
 |importanza (anteprima per SQL Data Warehouse Gen2)|**nvarchar(32)**|L'importanza di impostare la richiesta è stata inviata. Le richieste con una priorità inferiore rimarrà in coda in stato sospeso, se vengono inviate le richieste di maggiore importanza.  Le richieste con un'importanza superiore verranno eseguite prima delle richieste di importanza inferiore che sono state inviate in precedenza.  Per altre informazioni sull'importanza, vedere [carico di lavoro di importanza](https://docs.microsoft.com/azure/sql-data-warehouse/sql-data-warehouse-workload-importance).  |NULL</br>low</br>below_normal</br>normale (impostazione predefinita)</br>above_normal</br>high|
   
- Per informazioni sul numero massimo di righe mantenuto da questa vista, vedere la sezione di metadati nel [limiti di capacità](https://docs.microsoft.com/azure/sql-data-warehouse/sql-data-warehouse-service-capacity-limits#metadata) argomento.   
+ Per informazioni sul numero massimo di righe mantenuto da questa vista, vedere la sezione di metadati nel [limiti di capacità](/azure/sql-data-warehouse/sql-data-warehouse-service-capacity-limits#metadata) argomento.   
   
 ## <a name="permissions"></a>Permissions
 

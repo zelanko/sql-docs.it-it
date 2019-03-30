@@ -11,12 +11,12 @@ ms.assetid: cf559b0a-499a-4d74-b520-b382b87e0b17
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.openlocfilehash: 83485916e0dcfeb02555e3068931415801691692
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: 473ff59f217662ea01f8e24335f3723bf26d40ec
+ms.sourcegitcommit: 706f3a89fdb98e84569973f35a3032f324a92771
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56296849"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58658025"
 ---
 # <a name="rendering-to-html-report-builder-and-ssrs"></a>Rendering in formato HTML (Generatore report e SSRS)
   L'estensione per il rendering HTML consente di eseguire il rendering di un report in formato HTML. Può inoltre generare pagine HTML complete o frammenti di HTML da incorporare in altre pagine HTML. Tutto il codice HTML viene generato con la codifica UTF-8.  
@@ -35,8 +35,6 @@ ms.locfileid: "56296849"
 ##  <a name="RenderingMHTML"></a> Rendering in formato MHTML  
  L'estensione per il rendering HTML può inoltre consentire l'esecuzione del rendering dei report in formato MHTML (MIME Encapsulation of Aggregate HTML Documents). MHTML estende HTML per incorporare oggetti codificati, ad esempio immagini, in documenti HTML. Tale estensione consente di incorporare risorse, quali immagini, documenti o altri file binari, come strutture MIME nel codice HTML del report, in un singolo file. I report MHTML sono utili anche per l'incorporamento di elementi in messaggi di posta elettronica, in quanto tutte le risorse vengono incluse nel report. Sebbene il rendering MHTML venga eseguito dall'estensione per il rendering HTML, talvolta questa funzionalità viene denominata anche estensione per il rendering MHTML.  
   
- ![Icona freccia usata con il collegamento Torna all'inizio](../../2014-toc/media/uparrow16x16.gif "Icona freccia usata con il collegamento Torna all'inizio") [Torna all'inizio](#BackToTop)  
-  
 ##  <a name="BrowserSupport"></a> Supporto browser  
  Questa estensione per il rendering supporta le seguenti versioni di browser:  
   
@@ -47,8 +45,6 @@ ms.locfileid: "56296849"
 -   Safari 3.0 e versioni successive  
   
  In considerazione delle caratteristiche dei diversi browser, è possibile che il report visualizzabile sia leggermente diverso a seconda del browser. Ad esempio, la casella di testo contiene una proprietà chiamata WritingMode. non supportata in Firefox.  
-  
- ![Icona freccia usata con il collegamento Torna all'inizio](../../2014-toc/media/uparrow16x16.gif "Icona freccia usata con il collegamento Torna all'inizio") [Torna all'inizio](#BackToTop)  
   
 ##  <a name="HTMLSpecificRenderingRules"></a> Regole di rendering specifiche di HTML  
  Durante il rendering vengono applicate le seguenti regole specifiche di HTML:  
@@ -66,8 +62,6 @@ ms.locfileid: "56296849"
 -   Le dimensioni di tutte le altre righe e colonne possono aumentare in base alle dimensioni dei singoli elementi del report.  
   
 -   Tutte le coordinate e le dimensioni degli elementi del report vengono convertite in millimetri. Tutte le altre dimensioni, incluse le proprietà dello stile, mantengono le unità di misura originali. Le differenze di dimensioni e posizioni inferiori a 0,2 mm vengono considerate come 0 mm.  
-  
- ![Icona freccia usata con il collegamento Torna all'inizio](../../2014-toc/media/uparrow16x16.gif "Icona freccia usata con il collegamento Torna all'inizio") [Torna all'inizio](#BackToTop)  
   
 ##  <a name="Interactivity"></a> Interattività  
  In HTML sono supportati alcuni elementi interattivi. Di seguito è riportata una descrizione di comportamenti specifici.  
@@ -92,18 +86,12 @@ ms.locfileid: "56296849"
   
  Ulteriori funzionalità di ricerca vengono fornite dal controllo Web Form ReportViewer.  
   
- ![Icona freccia usata con il collegamento Torna all'inizio](../../2014-toc/media/uparrow16x16.gif "Icona freccia usata con il collegamento Torna all'inizio") [Torna all'inizio](#BackToTop)  
-  
 ##  <a name="DeviceInfo"></a> Impostazioni relative alle informazioni sul dispositivo  
  Modificando le impostazioni relative alle informazioni sul dispositivo, è possibile modificare alcune impostazioni predefinite per questo renderer, tra cui la modalità di rendering. Per altre informazioni, vedere [Impostazioni relative alle informazioni sul dispositivo HTML](../html-device-information-settings.md).  
-  
- ![Icona freccia usata con il collegamento Torna all'inizio](../../2014-toc/media/uparrow16x16.gif "Icona freccia usata con il collegamento Torna all'inizio") [Torna all'inizio](#BackToTop)  
-  
+
 ## <a name="see-also"></a>Vedere anche  
  [Paginazione in Reporting Services &#40;Generatore report e SSRS&#41;](../report-design/pagination-in-reporting-services-report-builder-and-ssrs.md)   
  [Tipi di rendering &#40;Generatore report e SSRS&#41;](../report-design/rendering-behaviors-report-builder-and-ssrs.md)   
  [Funzionalità interattiva per estensioni per il rendering di report differenti &#40;Generatore report e SSRS&#41;](interactive-functionality-different-report-rendering-extensions.md)   
  [Rendering degli elementi del report &#40;Generatore report e SSRS&#41;](../report-design/rendering-report-items-report-builder-and-ssrs.md)   
  [Tabelle, matrici ed elenchi &#40;Generatore report e SSRS&#41;](../report-design/create-invoices-and-forms-with-lists-report-builder-and-ssrs.md)  
-  
-  

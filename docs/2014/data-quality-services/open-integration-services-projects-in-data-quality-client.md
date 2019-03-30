@@ -10,12 +10,12 @@ ms.assetid: a8bad2f1-8fb0-4d14-a978-11a5720e62d6
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 52a1bcb820d444e33ab034a09ee486592540e50c
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 9e1d315ca23b379238a19baf09ac2591d0085fad
+ms.sourcegitcommit: 706f3a89fdb98e84569973f35a3032f324a92771
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56020142"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58658085"
 ---
 # <a name="open-integration-services-projects-in-data-quality-client"></a>Apertura di progetti di Integration Services nel client Data Quality
   [!INCLUDE[ssDQSCleansingLong](../includes/ssdqscleansinglong-md.md)] consente di eseguire un progetto di pulizia in modalità batch. È tuttavia talvolta necessario rivedere i risultati della pulizia in un pacchetto di Integration Services in modo simile a quello utilizzato per rivedere i risultati della pulizia nella scheda **Gestisci e visualizza risultati** di un'attività di pulizia in un progetto Data Quality di DQS. DQS consente di aprire progetti di Integration Services in [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] nello stesso modo in cui si apre qualsiasi altro progetto Data Quality dalla finestra di dialogo **Apri progetto** e di eseguire attività interattive sui risultati della pulizia in un progetto di Integration Services.  
@@ -35,10 +35,8 @@ ms.locfileid: "56020142"
   
 ###  <a name="Security"></a> Sicurezza  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> Autorizzazioni  
  Per aprire un progetto di Integration Services è necessario disporre del ruolo dqs_kb_editor o dqs_kb_operator nel database DQS_MAIN.  
-  
- ![Icona freccia usata con il collegamento superiore](../2014-toc/media/uparrow16x16.gif "icona freccia usata con il collegamento superiore") [In questo argomento](#Intro)  
   
 ##  <a name="Open"></a> Apertura di un progetto di Integration Services  
   
@@ -60,10 +58,6 @@ ms.locfileid: "56020142"
   
 6.  Dopo avere esportato i dati, fare clic su **Fine** per chiudere il progetto di Integration Services.  
   
- ![Icona freccia usata con il collegamento superiore](../2014-toc/media/uparrow16x16.gif "icona freccia usata con il collegamento superiore") [In questo argomento](#Intro)  
-  
 ## <a name="see-also"></a>Vedere anche  
  [Trasformazione DQS Cleansing](../integration-services/data-flow/transformations/dqs-cleansing-transformation.md)   
  [Progetti di Integration Services &#40;SSIS&#41;](../integration-services/integration-services-ssis-projects-and-solutions.md)  
-  
-  

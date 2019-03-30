@@ -17,12 +17,12 @@ ms.assetid: fdc7659e-df41-488e-b2b5-0d79734dfacb
 author: pmasl
 ms.author: pelopes
 manager: amitban
-ms.openlocfilehash: 0dd8b138c425adb47f0bb228848ca39361ffa87e
-ms.sourcegitcommit: 0c049c539ae86264617672936b31d89456d63bb0
+ms.openlocfilehash: 0bef01ab6b4ecf1a9f05b1c7b40e2767aaae0db3
+ms.sourcegitcommit: c60784d1099875a865fd37af2fb9b0414a8c9550
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 03/29/2019
-ms.locfileid: "58618606"
+ms.locfileid: "58645353"
 ---
 # <a name="sysdmexecqueryplanstats-transact-sql"></a>sys.dm_exec_query_plan_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
@@ -80,7 +80,7 @@ Nelle condizioni seguenti, una **semplificata <sup>1</sup>**  viene restituito n
     **AND**    
 -   La query è molto semplice, in genere suddivisi in categorie come parte di un carico di lavoro OLTP.
 
-<sup>1</sup> fa riferimento a un piano Showplan contenente solo l'operatore di nodo radice (SELECT). 
+<sup>1</sup> fa riferimento a un piano Showplan contenente solo l'operatore di nodo radice (SELECT). Per [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] CTP 2.4 solo si riferisce al piano memorizzato nella cache come disponibili tramite DM exec_cached_plans.
 
 Le seguenti condizioni **viene restituito alcun output** dalla **sys.dm_exec_query_plan_stats**:
 
@@ -135,5 +135,5 @@ GO
 ## <a name="see-also"></a>Vedere anche
   [Flag di traccia](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md)  
  [Funzioni e viste a gestione dinamica &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
- [Viste a gestione dinamica relative ai database &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/database-related-dynamic-management-views-transact-sql.md)  
+ [Viste a gestione dinamica relative all'esecuzione &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/execution-related-dynamic-management-views-and-functions-transact-sql.md)  
 

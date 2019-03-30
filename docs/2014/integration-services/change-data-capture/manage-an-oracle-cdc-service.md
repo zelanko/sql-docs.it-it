@@ -12,12 +12,12 @@ ms.assetid: 5972cee3-b1a9-4c56-aed6-bdddf84af283
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 1a6257a4f99637fd3be8d11f2848741806c10f2a
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.openlocfilehash: 9f9969630f8fe9f665a04575af8670ddb1af1b3c
+ms.sourcegitcommit: 706f3a89fdb98e84569973f35a3032f324a92771
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58387809"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58657705"
 ---
 # <a name="manage-an-oracle-cdc-service"></a>Manage an Oracle CDC Service
   È possibile utilizzare CDC Service Configuration Console per gestire un servizio CDC specifico.  
@@ -28,7 +28,7 @@ ms.locfileid: "58387809"
   
 2.  Selezionare il servizio CDC che si desidera utilizzare.  
   
-     È inoltre possibile fare clic con il pulsante destro del mouse sul servizio CDC da utilizzare e selezionare l'azione desiderata. Visualizzare [cosa puoi fare con un servizio CDC](manage-an-oracle-cdc-service.md#bkmk_whatcandowithcdcservice).  
+     È inoltre possibile fare clic con il pulsante destro del mouse sul servizio CDC da utilizzare e selezionare l'azione desiderata. Visualizzare [cosa puoi fare con un servizio CDC](manage-an-oracle-cdc-service.md#BKMK_WhatcandowithCDCService).  
   
  **OR**  
   
@@ -36,7 +36,7 @@ ms.locfileid: "58387809"
   
 2.  Dalla sezione centrale di CDC Service Configuration Console selezionare il servizio che si desidera utilizzare.  
   
-     È inoltre possibile fare clic con il pulsante destro del mouse sul servizio CDC da utilizzare e selezionare l'azione desiderata. Visualizzare [cosa puoi fare con un servizio CDC](manage-an-oracle-cdc-service.md#bkmk_whatcandowithcdcservice).  
+     È inoltre possibile fare clic con il pulsante destro del mouse sul servizio CDC da utilizzare e selezionare l'azione desiderata. Visualizzare [cosa puoi fare con un servizio CDC](manage-an-oracle-cdc-service.md#BKMK_WhatcandowithCDCService).  
   
 ##  <a name="BKMK_WhatcandowithCDCService"></a> Cosa può fare con un servizio CDC  
  Quando si utilizza un servizio CDC è possibile eseguire le azioni seguenti:  
@@ -46,7 +46,7 @@ ms.locfileid: "58387809"
   
  È inoltre possibile fare clic con il pulsante destro del mouse sul servizio CDC da eliminare e scegliere **Delete**.  
   
- **Nota**: Se il servizio è in esecuzione durante l'eliminazione del servizio, il servizio viene arrestato prima di essere eliminati.  
+ **Nota**: se il servizio è in esecuzione al momento dell'eliminazione, il servizio viene arrestato prima di essere eliminato.  
   
  Per eliminare la definizione del servizio Windows di Oracle CDC, è necessario aggiornare l'accesso al database MSXDBCDC nell'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] associata. Quando si fa clic su OK per eliminare il servizio, viene effettuato un tentativo di eliminare la registrazione del servizio Oracle CDC nel database MSXDBCDC. Se non è possibile eliminare la registrazione del servizio Oracle CDC tramite il programma perché non sono disponibili le autorizzazioni appropriate, viene richiesto all'utente di immettere un account di accesso di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] con autorizzazioni di aggiornamento per il database MSXDBCDC.  
   
@@ -59,5 +59,3 @@ ms.locfileid: "58387809"
   
 ## <a name="see-also"></a>Vedere anche  
  [Procedura di gestione di un servizio CDC locale](how-to-manage-a-local-cdc-service.md)  
-  
-  

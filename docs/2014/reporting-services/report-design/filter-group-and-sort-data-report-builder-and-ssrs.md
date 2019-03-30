@@ -20,12 +20,12 @@ ms.assetid: 4dda2a7f-3f31-47e9-a88b-28d770ebd65e
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.openlocfilehash: 776b240f17d40c64c63648175b2c5c15a532fb48
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: 8cce8a0acf2104689c1862518f9e78703a9d02f8
+ms.sourcegitcommit: 706f3a89fdb98e84569973f35a3032f324a92771
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56294689"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58658355"
 ---
 # <a name="filter-group-and-sort-data-report-builder-and-ssrs"></a>Filtro, raggruppamento e ordinamento di dati (Generatore report e SSRS)
   In un report le espressioni vengono usate per facilitare il controllo, l'organizzazione e l'ordinamento di dati del report. Per impostazione predefinita, mentre si creano set di dati e si progetta il layout del report, le proprietà degli elementi del report vengono impostate automaticamente su espressioni basate su campi del set di dati, parametri e altri elementi visualizzati nel riquadro dei dati del report. È inoltre possibile aggiungere un pulsante di ordinamento interattivo a una tabella o una cella della matrice, in modo da consentire a un utente di modificare in modo interattivo l'ordinamento della riga per gruppi o righe all'interno di gruppi.  
@@ -66,10 +66,8 @@ ms.locfileid: "56294689"
   
  Per consentire agli utenti di controllare i dati in un report, è possibile includere parametri nelle espressioni di filtro. Per altre informazioni, vedere [Riferimenti alla raccolta dei parametri &#40;Generatore report e SSRS&#41;](built-in-collections-parameters-collection-references-report-builder.md).  
   
- Per personalizzare una vista per ogni utente, è possibile includere un riferimento al campo predefinito UserID in un filtro. Per altre informazioni, vedere [Riferimenti alle raccolte predefinite Globals e Users &#40;Generatore report e SSRS&#41;](built-in-collections-built-in-globals-and-users-references-report-builder.md).  
-  
- ![Icona freccia usata con il collegamento Torna all'inizio](../../2014-toc/media/uparrow16x16.gif "Icona freccia usata con il collegamento Torna all'inizio") [Torna all'inizio](#BackToTop)  
-  
+ Per personalizzare una vista per ogni utente, è possibile includere un riferimento al campo predefinito UserID in un filtro. Per altre informazioni, vedere [Riferimenti alle raccolte predefinite Globals e Users &#40;Generatore report e SSRS&#41;](built-in-collections-built-in-globals-and-users-references-report-builder.md).
+
 ##  <a name="Grouping"></a> Raggruppamento di dati nel report  
  I gruppi consentono di organizzare dati in un report per visualizzare o calcolare valori di aggregazione. La comprensione delle modalità di definizione dei gruppi e di utilizzo delle caratteristiche di gruppo consente di progettare report più concisi.  
   
@@ -103,16 +101,14 @@ ms.locfileid: "56294689"
 ### <a name="groups-and-scope-in-data-regions"></a>Gruppi e ambito in aree dati  
  Per fornire più viste dei dati dallo stesso set di dati, è possibile specificare le stesse espressioni di raggruppamento per ogni area dati. È ad esempio possibile visualizzare dati suddivisi in categorie in una tabella per mostrare tutti i dati di dettaglio sotto forma di grafico a torta, in modo da visualizzare le aggregazioni e ogni categoria in relazione all'intero set di dati. Per altre informazioni, vedere [Collegamento di più aree dati allo stesso set di dati &#40;Generatore report e SSRS&#41;](linking-multiple-data-regions-to-the-same-dataset-report-builder-and-ssrs.md).  
   
- Quando si nidifica un'area dati in una cella di una tabella, una matrice o un elenco, viene definito automaticamente l'ambito dei dati nelle appartenenze ai gruppi più interni della cella. Si supponga, ad esempio, di aggiungere un grafico a una cella presente sia in un gruppo di righe che in un gruppo di colonne. In fase di esecuzione i dati disponibili per il grafico avranno come ambito l'istanza del gruppo di righe più interno e l'istanza del gruppo di colonne più interno. Per altre informazioni, vedere [Ambito di espressioni per totali, aggregazioni e raccolte predefinite &#40;Generatore report e SSRS&#41;](expression-scope-for-totals-aggregates-and-built-in-collections.md)sottostante.  
-  
- ![Icona freccia usata con il collegamento Torna all'inizio](../../2014-toc/media/uparrow16x16.gif "Icona freccia usata con il collegamento Torna all'inizio") [Torna all'inizio](#BackToTop)  
-  
+ Quando si nidifica un'area dati in una cella di una tabella, una matrice o un elenco, viene definito automaticamente l'ambito dei dati nelle appartenenze ai gruppi più interni della cella. Si supponga, ad esempio, di aggiungere un grafico a una cella presente sia in un gruppo di righe che in un gruppo di colonne. In fase di esecuzione i dati disponibili per il grafico avranno come ambito l'istanza del gruppo di righe più interno e l'istanza del gruppo di colonne più interno. Per altre informazioni, vedere [Ambito di espressioni per totali, aggregazioni e raccolte predefinite &#40;Generatore report e SSRS&#41;](expression-scope-for-totals-aggregates-and-built-in-collections.md).  
+
 ##  <a name="Sorting"></a> Ordinamento di dati nel report  
  Per controllare l'ordinamento di dati nel report, è possibile ordinarli in una query del set di dati o definire un'espressione di ordinamento per un'area o un gruppo di dati. È inoltre possibile aggiungere pulsanti di ordinamento interattivi a tabelle e matrici per consentire agli utenti di modificare l'ordinamento per le righe.  
   
  Tutti e tre i tipi di ordinamento possono essere combinati nello stesso report. Per impostazione predefinita, l'ordinamento è determinato dall'ordine in cui i dati vengono restituiti dalla query del set di dati. Le espressioni di ordinamento vengono applicate nell'area dati e nel gruppo di aree dati. Gli ordinamenti interattivi vengono applicati dopo le espressioni di ordinamento.  
   
- Per le espressioni contenenti funzioni di aggregazione, la maggior parte dei risultati non è interessata dall'ordinamento. I valori restituiti per le funzioni di aggregazione seguenti sono interessate dall'ordinamento:: Primo, ultimo e quella precedente. Per altre informazioni, vedere [Riferimento a funzioni di aggregazione &#40;Generatore report e SSRS&#41;](report-builder-functions-aggregate-functions-reference.md).  
+ Per le espressioni contenenti funzioni di aggregazione, la maggior parte dei risultati non è interessata dall'ordinamento. I valori restituiti per le funzioni di aggregazione seguenti sono interessati dall'ordinamento: First, Last e Previous. Per altre informazioni, vedere [Riferimento a funzioni di aggregazione &#40;Generatore report e SSRS&#41;](report-builder-functions-aggregate-functions-reference.md).  
   
 ### <a name="sorting-data-in-a-dataset-query"></a>Ordinamento dei dati di una query del set di dati  
  Includere l'ordinamento nella query del set di dati per eseguire un preordinamento dei dati prima che vengano recuperati per un report. Quando si ordinano i dati nella query, l'operazione di ordinamento viene eseguita dall'origine dati anziché dal componente Elaborazione report.  
@@ -168,9 +164,7 @@ FROM Production.Product
  Per consentire a un utente di modificare l'ordinamento dei dati del report in una tabella o una matrice, è possibile aggiungere pulsanti di ordinamento interattivi a intestazioni di colonna o di gruppo. Gli utenti possono fare clic sul pulsante per attivare o disattivare l'ordinamento. L'ordinamento interattivo è disponibile solo nei formati di rendering che consentono l'interazione dell'utente, ad esempio HTML.  
   
  È possibile aggiungere pulsanti di ordinamento interattivo a una casella di testo in una cella dell'area dati Tablix. Per impostazione predefinita, in ogni cella è contenuta una casella di testo. Nelle proprietà della casella di testo si specifica la parte di un'area dati di tabella o matrice da ordinare (i valori di un gruppo padre, i valori di un gruppo figlio o le righe di dettaglio), l'elemento in base al quale eseguire l'ordinamento e se applicare l'espressione di ordinamento agli altri elementi del report con una relazione di tipo peer. Se, ad esempio, una tabella e un grafico che forniscono viste sullo stesso set di dati sono contenuti in un rettangolo, avranno aree dati peer. Quando un utente attiva l'ordinamento nella tabella, viene attivato anche l'ordinamento del grafico. Per altre informazioni, vedere [Ordinamento interattivo &#40;Generatore report e SSRS&#41;](interactive-sort-report-builder-and-ssrs.md).  
-  
- ![Icona freccia usata con il collegamento Torna all'inizio](../../2014-toc/media/uparrow16x16.gif "Icona freccia usata con il collegamento Torna all'inizio") [Torna all'inizio](#BackToTop)  
-  
+
 ##  <a name="HowTo"></a> Procedure  
  [Mantenere visibili le intestazioni durante lo scorrimento di un report &#40;Generatore report e SSRS&#41;](keep-headers-visible-when-scrolling-through-a-report-report-builder-and-ssrs.md)  
   
@@ -218,5 +212,3 @@ FROM Production.Product
  [Grafici sparkline e barre dei dati &#40;Generatore report e SSRS&#41;](sparklines-and-data-bars-report-builder-and-ssrs.md)   
  [Misuratori &#40;Generatore report e SSRS&#41;](gauges-report-builder-and-ssrs.md)   
  [Indicatori &#40;Generatore report e SSRS&#41;](indicators-report-builder-and-ssrs.md)  
-  
-  

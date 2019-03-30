@@ -13,12 +13,12 @@ author: ronortloff
 ms.author: rortloff
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: fac2105011440cbabd3ed7eedebdaeb5cba37346
-ms.sourcegitcommit: 2111068372455b5ec147b19ca6dbf339980b267d
+ms.openlocfilehash: 331bb44faa2938241de98a6bff08f1e660583c4e
+ms.sourcegitcommit: 706f3a89fdb98e84569973f35a3032f324a92771
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58417173"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58657825"
 ---
 # <a name="sysdmpdwexecsessions-transact-sql"></a>sys.dm_pdw_exec_sessions (Transact-SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
@@ -39,7 +39,7 @@ ms.locfileid: "58417173"
 |APP_NAME|**nvarchar(255)**|Consente di acquisire le informazioni sul nome dell'applicazione se lo si desidera impostare come parte del processo di connessione.|Qualsiasi stringa valida.|  
 |sql_spid|**int**|Il numero di id dello SPID Desiderato. Uso di `session_id` questa sessione. Usare la `sql_spid` colonna da aggiungere al **sys.dm_pdw_nodes_exec_sessions**.<br /><br /> **\*\* Avviso \* \***  questa colonna contiene SPID chiuso.||  
   
- Per informazioni sul numero massimo di righe mantenuto da questa vista, vedere la sezione di metadati nel [limiti di capacità](https://docs.microsoft.com/azure/sql-data-warehouse/sql-data-warehouse-service-capacity-limits#metadata) argomento.  
+ Per informazioni sul numero massimo di righe mantenuto da questa vista, vedere la sezione di metadati nel [limiti di capacità](/azure/sql-data-warehouse/sql-data-warehouse-service-capacity-limits#metadata) argomento.  
   
 ## <a name="permissions"></a>Permissions  
  È necessaria l'autorizzazione `VIEW SERVER STATE`.  

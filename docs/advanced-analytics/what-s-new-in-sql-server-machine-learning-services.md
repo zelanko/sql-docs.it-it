@@ -1,7 +1,7 @@
 ---
 title: Novità - servizi di SQL Server Machine Learning | Microsoft Docs
 description: Nuovo gli annunci di funzionalità per ogni versione di SQL Server 2016 R Services, R Server, servizi Machine Learning di SQL Server 2017.
-ms.date: 03/27/2018
+ms.date: 03/29/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
@@ -10,12 +10,12 @@ ms.custom: sqlseattle
 ms.prod: sql
 ms.technology: machine-learning
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: a41844fb7cd9c7e638d42fe9edbbb05ef0b81be1
-ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
+ms.openlocfilehash: 64fbf68f09f685223ba42d9d2b79d5a8454f7125
+ms.sourcegitcommit: c60784d1099875a865fd37af2fb9b0414a8c9550
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58509828"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58645523"
 ---
 # <a name="whats-new-in-sql-server-machine-learning-services"></a>Novità in servizi di SQL Server Machine Learning
 
@@ -47,7 +47,7 @@ Questa versione aggiunge le funzionalità di richiesta per R e Python operazioni
 ::: moniker range=">=sql-server-2017||=sqlallproducts-allversions"
 ## <a name="new-in-sql-server-2017"></a>Novità di SQL Server 2017
 
-Questa versione aggiunge [supporto di Python e leader di settore algoritmi di machine learning](https://blogs.technet.microsoft.com/dataplatforminsider/2017/04/19/python-in-sql-server-2017-enhanced-in-database-machine-learning/). Rinominati per riflettere il nuovo ambito, l'introduzione di segni di SQL Server 2017 [SQL Server Machine Learning Services (In-Database)](what-is-sql-server-machine-learning.md), con supporto del linguaggio per Python e R. 
+Questa versione aggiunge [supporto di Python e leader di settore algoritmi di machine learning](https://cloudblogs.microsoft.com/sqlserver/2017/04/19/python-in-sql-server-2017-enhanced-in-database-machine-learning/). Rinominati per riflettere il nuovo ambito, l'introduzione di segni di SQL Server 2017 [SQL Server Machine Learning Services (In-Database)](what-is-sql-server-machine-learning.md), con supporto del linguaggio per Python e R. 
 
 Per funzionalità annunci completa, vedere [What ' s New in SQL Server 2017](../sql-server/what-s-new-in-sql-server-2017.md).
 

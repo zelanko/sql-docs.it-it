@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.custom: sql-linux
 ms.technology: linux
-ms.openlocfilehash: 85ea90343ebf1cac9ba04a4b9252a6dd9fb748bf
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: b93e48c20645da68ed53d98775a4cc57760abc77
+ms.sourcegitcommit: 706f3a89fdb98e84569973f35a3032f324a92771
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52533074"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58658406"
 ---
 # <a name="sql-server-availability-basics-for-linux-deployments"></a>Nozioni fondamentali sulla disponibilità di SQL Server per le distribuzioni di Linux
 
@@ -58,7 +58,7 @@ In questa sezione vengono descritte attività comuni a tutti i basati su Linux [
 Copia i file da un server a un'altra è un'attività che gli utenti che usano [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] in Linux deve essere in grado di eseguire. Questa attività è molto importante per le configurazioni del gruppo di disponibilità.
 
 Ad esempio problemi di autorizzazione può essere presente in Linux, nonché nelle installazioni dei componenti basati su Windows. Tuttavia, chi ha familiarità con la procedura per copiare da server a server in Windows potrebbero non avere familiarità con come questa operazione viene eseguita in Linux. Un metodo comune consiste nell'usare l'utilità della riga di comando `scp`, che è l'acronimo di copia sicuro. Dietro le quinte, `scp` Usa OpenSSH. SSH è l'acronimo di shell sicura. A seconda della distribuzione di Linux, potrebbe non essere installato OpenSSH stesso. In caso contrario, deve essere installato per primo OpenSSH. Per altre informazioni sulla configurazione di OpenSSH, vedere le informazioni visitando i collegamenti seguenti per ogni distribuzione:
--   [Red Hat Enterprise Linux (RHEL)](https://access.redhat.com/documentation/en-US/Red_Hat_Enterprise_Linux/6/html/Deployment_Guide/ch-OpenSSH.html)
+-   [Red Hat Enterprise Linux (RHEL)](https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/6/html/deployment_guide/ch-openssh)
 -   [SUSE Linux Enterprise Server (SLES)](https://en.opensuse.org/SDB:Configure_openSSH)
 -   [Ubuntu](https://help.ubuntu.com/community/SSH/OpenSSH/Configuring)
 
@@ -86,7 +86,7 @@ Analogamente a Windows, distribuzioni Linux hanno un firewall incorporato. Se l'
 
 | Numero di porta | Tipo     | Description                                                                                                                 |
 |-------------|----------|-----------------------------------------------------------------------------------------------------------------------------|
-| 111         | TCP/UDP  | NFS: `rpcbind/sunrpc`                                                                                                    |
+| 111         | TCP/UDP  | NFS - `rpcbind/sunrpc`                                                                                                    |
 | 135         | TCP      | Samba (se usati) - Mapper di endpoint                                                                                          |
 | 137         | UDP      | Samba (se usati) - servizio nomi NetBIOS                                                                                      |
 | 138         | UDP      | Samba (se usati) - datagrammi NetBIOS                                                                                          |
@@ -117,7 +117,7 @@ sudo firewall-cmd --permanent --add-service=high-availability
 ```
 
 **Documentazione del firewall:**
--   [RHEL](https://access.redhat.com/documentation/red_hat_enterprise_linux/7/html/high_availability_add-on_reference/s1-firewalls-haar)
+-   [RHEL](https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/7/html/high_availability_add-on_reference/s1-firewalls-haar)
 -   [SLES](https://www.suse.com/documentation/sle-ha-12/singlehtml/book_sleha/book_sleha.html)
 
 ### <a name="install-includessnoversion-mdincludesssnoversion-mdmd-packages-for-availability"></a>Installare [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] pacchetti per la disponibilità
@@ -200,7 +200,7 @@ Il `corosync.conf` file contiene la configurazione del cluster. Si trova in `/et
 #### <a name="cluster-log-location"></a>Percorso del registro cluster
 Percorsi dei log per i cluster Pacemaker differiscono a seconda della distribuzione.
 -   RHEL e SLES: `/var/log/cluster/corosync.log`
--   Ubuntu- `/var/log/corosync/corosync.log`
+-   Ubuntu - `/var/log/corosync/corosync.log`
 
 Per modificare il percorso di registrazione predefinito, modificare `corosync.conf`.
 

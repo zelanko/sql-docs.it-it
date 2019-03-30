@@ -11,12 +11,12 @@ ms.prod: sql
 ms.custom: sql-linux, seodec18
 ms.technology: linux
 ms.assetid: 85180155-6726-4f42-ba57-200bf1e15f4d
-ms.openlocfilehash: cab40f66976677fee78e79de2f2996653aee9446
-ms.sourcegitcommit: de8ef246a74c935c5098713f14e9dd06c4733713
+ms.openlocfilehash: 72ca07a14495261d61601c4acd503790697ce6a4
+ms.sourcegitcommit: 706f3a89fdb98e84569973f35a3032f324a92771
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53160629"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58658095"
 ---
 # <a name="configure-sles-cluster-for-sql-server-availability-group"></a>Configurare Cluster SLES per gruppo di disponibilità di SQL Server
 
@@ -221,7 +221,7 @@ Isolamento a livello di risorsa principalmente assicura che non vi sia alcun dan
 
 Isolamento a livello di nodo assicura che un nodo non viene eseguita alcuna risorsa. In tal caso, reimpostare il nodo e l'implementazione di Pacemaker di esso viene chiamato STONITH (che è l'acronimo di "girare in altro nodo nell'intestazione"). Pacemaker supporta una vasta gamma di dispositivi, ad esempio un uninterruptible power supply o gestione schede di interfaccia di per i server di conflitti.
 
-Per altre informazioni, vedere [cluster Pacemaker da zero](https://clusterlabs.org/doc/en-US/Pacemaker/1.1-plugin/html/Clusters_from_Scratch/ch05.html), [Fencing e Stonith](https://clusterlabs.org/doc/crm_fencing.html) e [documentazione SUSE a disponibilità elevata: L'isolamento e STONITH](https://www.suse.com/documentation/sle_ha/book_sleha/data/cha_ha_fencing.html).
+Per altre informazioni, vedere [cluster Pacemaker da zero](https://clusterlabs.org/pacemaker/doc/en-US/Pacemaker/1.1/html/Clusters_from_Scratch/), [Fencing e Stonith](https://clusterlabs.org/doc/crm_fencing.html) e [documentazione SUSE a disponibilità elevata: L'isolamento e STONITH](https://www.suse.com/documentation/sle_ha/book_sleha/data/cha_ha_fencing.html).
 
 In fase di inizializzazione del cluster, se non viene rilevata alcuna configurazione di STONITH è disabilitata. Può essere abilitata in un secondo momento usando il comando seguente:
 

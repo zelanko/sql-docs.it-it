@@ -13,12 +13,12 @@ ms.assetid: 45ad2965-05ec-4fb1-a164-d8060b562ea5
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: e092962430895f5398560cdd8f758e24477c2388
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 9226a15351e8c6fcc938543d04fc95b0237f702b
+ms.sourcegitcommit: 706f3a89fdb98e84569973f35a3032f324a92771
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52511518"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58657975"
 ---
 # <a name="directquery-mode-ssas-tabular"></a>Modalità DirectQuery (SSAS tabulare)
   Analysis Services consente di recuperare i dati e creare report da un modello tabulare recuperando dati e aggregazioni direttamente da un sistema di database relazionali, usando *la modalità DirectQuery*. In questo argomento vengono illustrate le differenze tra i modelli tabulari standard residenti unicamente in memoria e i modelli tabulari in grado di eseguire query su un'origine dati relazionale. Viene inoltre descritto come creare e distribuire un modello destinato a essere utilizzato nella modalità DirectQuery.  
@@ -29,7 +29,7 @@ ms.locfileid: "52511518"
   
 -   [Creazione di modelli per l'uso con la modalità DirectQuery](#bkmk_Design)  
   
-    -   [Origini dati per i modelli DirectQuery](directquery-mode-ssas-tabular.md#bkmk_datasources)  
+    -   [Origini dati per i modelli DirectQuery](directquery-mode-ssas-tabular.md#bkmk_DataSources)  
   
     -   [Convalida e restrizioni della struttura per la modalità DirectQuery](#bkmk_Validation)  
   
@@ -71,7 +71,7 @@ ms.locfileid: "52511518"
   
  Quando si esegue questa operazione, in Progettazione modelli viene automaticamente configurato il database dell'area di lavoro per l'esecuzione in una modalità ibrida che consente l'utilizzo dei dati memorizzati nella cache. Vengono inoltre segnalate all'utente le caratteristiche del modello non compatibili con la modalità DirectQuery. Di seguito sono elencati i requisiti principali da tenere presente:  
   
--   **Origini dati:** i modelli DirectQuery possono usare esclusivamente i dati di una sola origine dati di SQL Server. Dopo avere attivato la modalità DirectQuery per un modello, non è possibile utilizzare altri tipi di dati in Progettazione modelli, incluse le tabelle aggiunte tramite operazioni di copia e incolla. Tutte le altre opzioni dell'importazione sono disabilitate. Eventuali tabelle incluse in una query devono appartenere all'origine dati di SQL Server. Visualizzare [origini dati per i modelli DirectQuery](directquery-mode-ssas-tabular.md#bkmk_datasources)per altre informazioni.  
+-   **Origini dati:** i modelli DirectQuery possono usare esclusivamente i dati di una sola origine dati di SQL Server. Dopo avere attivato la modalità DirectQuery per un modello, non è possibile utilizzare altri tipi di dati in Progettazione modelli, incluse le tabelle aggiunte tramite operazioni di copia e incolla. Tutte le altre opzioni dell'importazione sono disabilitate. Eventuali tabelle incluse in una query devono appartenere all'origine dati di SQL Server. Visualizzare [origini dati per i modelli DirectQuery](directquery-mode-ssas-tabular.md#bkmk_DataSources)per altre informazioni.  
   
 -   **Supporto per le colonne calcolate:** Le colonne calcolate non sono supportate per i modelli DirectQuery. È tuttavia possibile creare misure e indicatori di prestazioni chiave (KPI) utilizzabili sui set di dati. Vedere la sezione sulla [convalida](#bkmk_Validation) per altre informazioni.  
   
@@ -153,7 +153,7 @@ ms.locfileid: "52511518"
   
  Per informazioni su come impostare queste proprietà, vedere [scenari di distribuzione DirectQuery &#40;modello tabulare di SSAS&#41;](../directquery-deployment-scenarios-ssas-tabular.md).  
   
-##  <a name="bkmk_PropertyList"></a> Proprietà di DirectQuery  
+##  <a name="bkmk_PropertyList"></a> DirectQuery Properties  
  Nella tabella seguente sono elencate le proprietà che è possibile impostare in [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] e in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] per abilitare DirectQuery e controllare l'origine dei dati utilizzati per le query sul modello.  
   
 |Nome proprietà|Descrizione|  
@@ -182,5 +182,3 @@ ms.locfileid: "52511518"
  [Partizioni &#40;SSAS tabulare&#41;](partitions-ssas-tabular.md)   
  [Progetti di modello tabulare &#40;SSAS tabulare&#41;](tabular-model-projects-ssas-tabular.md)   
  [Analizzare in Excel &#40;SSAS tabulare&#41;](analyze-in-excel-ssas-tabular.md)  
-  
-  

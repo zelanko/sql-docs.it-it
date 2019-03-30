@@ -14,19 +14,19 @@ ms.assetid: b287436b-fa48-4970-a1a7-1dbcb86e7411
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.openlocfilehash: dc26141bc33a991116f8bdca1316b4efe529dcfa
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: 98e98c3908735d53777ed425b26c2f229c830f92
+ms.sourcegitcommit: 706f3a89fdb98e84569973f35a3032f324a92771
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56293659"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58658045"
 ---
 # <a name="sparklines-and-data-bars-report-builder-and-ssrs"></a>Grafici sparkline e barre dei dati (Generatore report e SSRS)
   I grafici sparkline e le barre dei dati sono grafici semplici e di piccole dimensioni contenenti numerose informazioni in uno spazio ridotto, spesso in linea con il testo. I grafici sparkline e le barre dei dati vengono spesso utilizzati in tabelle e matrici. La loro efficacia consiste nella possibilità di visualizzarne molti insieme e di confrontarli rapidamente l'uno con l'altro, anziché visualizzarli singolarmente. Facilitano la visualizzazione degli outlier, ovvero le righe che non si eseguono come le altre. Sebbene di dimensioni ridotte, ogni grafico sparkline spesso rappresenta, nel tempo, più punti dati. Le barre dei dati possono rappresentare più punti dati, ma generalmente ne illustrano solo uno. Solitamente in ogni grafico sparkline è presente una sola serie. Non è possibile aggiungere un grafico sparkline a un gruppo di dettagli in una tabella. Poiché nei grafici sparkline vengono visualizzati dati aggregati, devono essere inseriti in una cella associata a un gruppo. Gli elementi di base dei grafici sparkline e delle barre dei dati sono uguali a quelli delle categorie, delle serie e dei valori, tuttavia non dispongono di legende, linee assi, etichette o segni di graduazione.  
   
  ![rs_SparklineExample](../media/rs-sparklineexample.gif "rs_SparklineExample")  
   
- Per iniziare rapidamente con i grafici sparkline, vedere [esercitazione: Aggiungere un grafico Sparkline al Report &#40;Generatore Report&#41; ](../tutorial-add-a-sparkline-to-your-report-report-builder.md) e i video [procedura: Creare un grafico Sparkline in una tabella](https://go.microsoft.com/fwlink/?LinkId=197092) e [grafici sparkline, grafici a barre e indicatori in Generatore Report](https://technet.microsoft.com/bi/video/ff877165) .  
+ Per una rapida introduzione ai grafici sparkline, vedere [Esercitazione: Aggiungere un grafico sparkline al report &#40;Generatore report&#41;](../tutorial-add-a-sparkline-to-your-report-report-builder.md) e i video [Procedura: Creazione di un grafico sparkline in una tabella](https://go.microsoft.com/fwlink/?LinkId=197092) e [Grafici di tipo sparkline, grafici a barre e indicatori in Generatore report](https://technet.microsoft.com/bi/video/ff877165).  
   
 > [!NOTE]  
 >  È possibile pubblicare grafici sparkline e barre dei dati con tabella, matrice o elenco padri corrispondenti separatamente da un report come parte del report. [!INCLUDE[ssRBrptparts](../../includes/ssrbrptparts-md.md)]  
@@ -37,15 +37,15 @@ ms.locfileid: "56293659"
 ##  <a name="KindsofSparklines"></a> Tipi di grafici sparkline  
  Si possono creare quasi tanti tipi di grafici sparkline quanti sono quelli normali. In generale, non è possibile creare grafici sparkline 3D. È possibile creare versioni di grafici sparkline di questi grafici completi:  
   
--   [I grafici a colonne &#40;Report e SSRS&#41;](charts-report-builder-and-ssrs.md): grafici standard, istogramma in pila e istogramma in pila 100%.  
+-   [Istogrammi &#40;Generatore report e SSRS&#41;](charts-report-builder-and-ssrs.md): grafici standard, istogramma in pila e istogramma in pila 100%.  
   
--   [Grafici a linee &#40;Report e SSRS&#41;](line-charts-report-builder-and-ssrs.md): tutti i tipi di grafico eccetto quello a linee 3D.  
+-   [Grafici a linee &#40;Generatore report e SSRS&#41;](line-charts-report-builder-and-ssrs.md): tutti i tipi di grafico eccetto quello a linee 3D.  
   
--   [Grafici ad area &#40;Report e SSRS&#41;](area-charts-report-builder-and-ssrs.md): tutti i tipi di grafico eccetto quello ad area 3D  
+-   [Grafici ad aree &#40;Generatore report e SSRS&#41;](area-charts-report-builder-and-ssrs.md): tutti i tipi di grafico eccetto quello ad area 3D  
   
--   [I grafici a torta &#40;Report e SSRS&#41;](pie-charts-report-builder-and-ssrs.md): grafici ad anello, sia lineare che 3D, ma non grafici di altre forme, ad esempio quelli a imbuto e a piramide.  
+-   [Grafici a torta &#40;Generatore report e SSRS&#41;](pie-charts-report-builder-and-ssrs.md): grafici ad anello, sia lineare che 3D, ma non grafici di altre forme, ad esempio quelli a imbuto e a piramide.  
   
--   [Grafici a intervalli &#40;Report e SSRS&#41;](range-charts-report-builder-and-ssrs.md): azionari, a candela, a barre di errore e box plot.  
+-   [Grafici a intervalli &#40;Generatore report e SSRS&#41;](range-charts-report-builder-and-ssrs.md): azionari, a candela, a barre di errore e box plot.  
   
 ##  <a name="DataBars"></a> Barre dei dati  
  Le barre dei dati rappresentano in genere un solo punto dati, sebbene possano rappresentarne di più, proprio come i grafici a barre normali. Spesso contengono diverse serie senza categoria o dispongono di raggruppamento di serie.  
@@ -56,12 +56,10 @@ ms.locfileid: "56293659"
   
  È possibile creare versioni di barre dei dati di questi grafici completi:  
   
--   [Grafici a barre &#40;Report e SSRS&#41;](bar-charts-report-builder-and-ssrs.md): grafici standard, con barre in pila e barre in pila 100%.  
+-   [Grafici a barre &#40;Generatore report e SSRS&#41;](bar-charts-report-builder-and-ssrs.md): grafici standard, con barre in pila e barre in pila 100%.  
   
--   [I grafici a colonne &#40;Report e SSRS&#41;](charts-report-builder-and-ssrs.md): grafici standard, istogramma in pila e istogramma in pila 100%. Gli istogrammi possono essere grafici sparkline o barre dei dati.  
-  
- ![Icona freccia usata con il collegamento Torna all'inizio](../../2014-toc/media/uparrow16x16.gif "Icona freccia usata con il collegamento Torna all'inizio") [Torna all'inizio](#BackToTop)  
-  
+-   [Istogrammi &#40;Generatore report e SSRS&#41;](charts-report-builder-and-ssrs.md): grafici standard, istogramma in pila e istogramma in pila 100%. Gli istogrammi possono essere grafici sparkline o barre dei dati.  
+
 ##  <a name="AlignDatainTableMatrix"></a> Allineamento dei dati del grafico sparkline in una tabella o matrice  
  Quando si inserisce un grafico sparkline in una tabella o matrice, è di solito importante allineare i punti dati in ogni grafico sparkline ai punti dati degli altri grafici sparkline in quella colonna. In caso contrario risulta difficile il confronto dei dati nelle differenti righe. Ad esempio, quando si confrontano i dati di vendita in base al mese di diversi venditori nella società, sarebbe opportuno l'allineamento dei mesi. Se un dipendente fosse fuori per il mese di aprile, non ci sarebbero dati forniti da quel dipendente relativamente a quel mese. Per visualizzare il gap per quel mese e vedere i dati relativi ai mesi successivi, allineare i dati degli altri dipendenti. È possibile eseguire questa operazione allineando l'asse orizzontale. Per altre informazioni, vedere la sezione sui grafici sparkline in [Ambito di espressioni per totali, aggregazioni e raccolte predefinite &#40;Generatore report e SSRS&#41;](expression-scope-for-totals-aggregates-and-built-in-collections.md) e vedere anche [Allineare i dati in un grafico di una tabella o matrice &#40;Generatore report e SSRS&#41;](align-the-data-in-a-chart-in-a-table-or-matrix-report-builder-and-ssrs.md).  
   
@@ -70,9 +68,7 @@ ms.locfileid: "56293659"
  ![rs_SparklineAlignData](../media/rs-sparklinealigndata.gif "rs_SparklineAlignData")  
   
  In questa immagine, nell'istogramma vengono mostrate le vendite giornaliere per ogni dipendente. Nei giorni in cui il dipendente non ha effettuato vendite, nel grafico viene lasciato uno spazio vuoto e i giorni successivi vengono allineati. Di seguito viene riportato un esempio di allineamento orizzontale. Si noti inoltre che per alcuni dipendenti, ogni barra è corta e nessuna delle barre raggiunge la parte superiore della cella. Di seguito viene riportato un esempio di allineamento verticale; senza di esso, nelle righe senza barre alte, quelle corte si espanderebbero fino a riempire l'altezza della cella.  
-  
- ![Icona freccia usata con il collegamento Torna all'inizio](../../2014-toc/media/uparrow16x16.gif "Icona freccia usata con il collegamento Torna all'inizio") [Torna all'inizio](#BackToTop)  
-  
+
 ##  <a name="UnderstandScope"></a> Informazioni sui dati forniti in un grafico sparkline o in una barra dei dati  
  L'operazione che consente di aggiungere un grafico sparkline o una barra dei dati a una tabella o a una matrice viene definita *nidificazione* di un'area dati all'interno di un'altra. La nidificazione indica che i dati forniti nel grafico sparkline o nella barra dei dati vengono controllati dal set di dati su cui è basata la tabella o la matrice e dal punto in cui vengono collocati nella tabella o nella matrice. Per altre informazioni, vedere [Aree dati annidate &#40;Generatore report e SSRS&#41;](nested-data-regions-report-builder-and-ssrs.md).  
   
@@ -81,9 +77,7 @@ ms.locfileid: "56293659"
   
 > [!NOTE]  
 >  Non è possibile convertire un grafico completo in un grafico sparkline o barra dei dati con un clic. Tuttavia, è possibile creare un grafico sparkline o una barra dei dati da un grafico completo semplicemente eliminando tutti gli elementi del grafico che non sono nei grafici sparkline e nelle barre dei dati.  
-  
- ![Icona freccia usata con il collegamento Torna all'inizio](../../2014-toc/media/uparrow16x16.gif "Icona freccia usata con il collegamento Torna all'inizio") [Torna all'inizio](#BackToTop)  
-  
+
 ##  <a name="HowTo"></a> Procedure  
  [Aggiungere grafici sparkline e barre dei dati &#40;Generatore report e SSRS&#41;](sparklines-and-data-bars-report-builder-and-ssrs.md)  
   
@@ -115,5 +109,3 @@ ms.locfileid: "56293659"
  [Esercitazione: Aggiungere un grafico Sparkline al Report &#40;Generatore Report&#41;](../tutorial-add-a-sparkline-to-your-report-report-builder.md)   
  [I grafici sparkline, grafici a barre e indicatori in Generatore Report (video)](https://technet.microsoft.com/bi/video/ff877165)   
  [Procedura: Creare un grafico Sparkline in una tabella (video)](https://go.microsoft.com/fwlink/?LinkId=197092)  
-  
-  

@@ -10,12 +10,12 @@ ms.prod: sql
 ms.custom: sql-linux
 ms.technology: linux
 ms.assetid: ''
-ms.openlocfilehash: 79b55906477d091f4e61883a2f24d991f655054b
-ms.sourcegitcommit: 8bc5d85bd157f9cfd52245d23062d150b76066ef
+ms.openlocfilehash: ee4550d9b86c5969bdf930391090e06c54988063
+ms.sourcegitcommit: 706f3a89fdb98e84569973f35a3032f324a92771
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/07/2019
-ms.locfileid: "57579461"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58657906"
 ---
 # <a name="always-on-availability-group-failover-on-linux"></a>Failover gruppo di disponibilità AlwaysOn in Linux
 
@@ -105,7 +105,7 @@ Un esempio del vincolo che viene creato a causa di un failover manuale.
 
 Per ulteriori informazioni:
 - [Red Hat - Managing Cluster Resources](https://access.redhat.com/documentation/Red_Hat_Enterprise_Linux/6/html/Configuring_the_Red_Hat_High_Availability_Add-On_with_Pacemaker/ch-manageresource-HAAR.html) (Red Hat - Gestione di risorse cluster)
-- [Pacemaker - spostare manualmente le risorse](https://clusterlabs.org/doc/en-US/Pacemaker/1.1-pcs/html/Clusters_from_Scratch/_move_resources_manually.html)
+- [Pacemaker - spostare manualmente le risorse](https://clusterlabs.org/pacemaker/doc/en-US/Pacemaker/1.1/html/Clusters_from_Scratch/_manually_moving_resources_around_the_cluster.html)
  [Guida all'amministrazione di SLES - risorse](https://www.suse.com/documentation/sle-ha-12/singlehtml/book_sleha/book_sleha.html#sec.ha.troubleshooting.resource) 
  
 ## <a name="forceFailover"></a> Forzare il failover 
@@ -118,13 +118,13 @@ Questo processo per il failover forzato è specifico di SQL Server in Linux.
 
 1. Verificare che la risorsa del gruppo di disponibilità non è gestita dal cluster più. 
 
-      - Impostare la risorsa in modalità non gestita nel nodo del cluster di destinazione. Questo comando segnala l'agente delle risorse alla gestione e monitoraggio delle risorse significative. Ad esempio: 
+      - Impostare la risorsa in modalità non gestita nel nodo del cluster di destinazione. Questo comando segnala l'agente delle risorse alla gestione e monitoraggio delle risorse significative. Esempio: 
       
       ```bash
       sudo pcs resource unmanage <resourceName>
       ```
 
-      - Se il tentativo di impostare la modalità di risorse per la modalità non gestita non riesce, eliminare la risorsa. Ad esempio:
+      - Se il tentativo di impostare la modalità di risorse per la modalità non gestita non riesce, eliminare la risorsa. Esempio:
 
       ```bash
       sudo pcs resource delete <resourceName>

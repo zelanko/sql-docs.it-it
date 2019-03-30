@@ -3,17 +3,17 @@ title: Assegnazione del punteggio utilizzando sp_rxPredict stored procedure - se
 description: Generare stime usando sp_rxPredict, assegnazione dei punteggi dei dati di input in base a un modello con training preliminare scritte in R in SQL Server.
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 08/15/2018
+ms.date: 03/29/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
 manager: cgronlun
-ms.openlocfilehash: a7e55ac47fdb28a18c8a41b3535e67fc8886cfea
-ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
+ms.openlocfilehash: 22f6c48aec0c9434b17ceda0a2b729f6e63bf136
+ms.sourcegitcommit: c60784d1099875a865fd37af2fb9b0414a8c9550
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58509628"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58645473"
 ---
 # <a name="real-time-scoring-with-sprxpredict-in-sql-server-machine-learning"></a>In tempo reale di assegnazione dei punteggi con sp_rxPredict in SQL Server machine Learning Services
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -32,9 +32,6 @@ Assegnazione dei punteggi in tempo reale è un processo in più passaggi:
 2. Caricare il modello con training preliminare in formato binario.
 3. È fornire nuovi dati di input a cui assegnare un punteggio, righe tabulari o singole, come input per il modello.
 4. Per generare i punteggi, chiamare il [sp_rxPredict](https://docs.microsoft.com//sql/relational-databases/system-stored-procedures/sp-rxpredict-transact-sql) stored procedure.
-
-> [!TIP]
-> Per un esempio di assegnazione dei punteggi in tempo reale in azione, vedere [End End prestito prestiti stima compilati tramite Azure HDInsight cluster Spark e di SQL Server 2016 R Services](https://blogs.msdn.microsoft.com/rserver/2017/06/29/end-to-end-loan-chargeoff-prediction-built-using-azure-hdinsight-spark-clusters-and-sql-server-2016-r-service/)
 
 ## <a name="prerequisites"></a>Prerequisiti
 
@@ -201,7 +198,5 @@ EXEC sp_rxPredict
 Per disabilitare la funzionalità di assegnazione dei punteggi in tempo reale, aprire un prompt dei comandi con privilegi elevati ed eseguire il comando seguente: `RegisterRExt.exe /uninstallrts /database:<database_name> [/instance:name]`
 
 ## <a name="next-steps"></a>Passaggi successivi
-
-Per un esempio di come rxPredict può essere utilizzato per l'assegnazione dei punteggi, vedere [end-to End prestito prestiti stima compilati tramite Azure HDInsight cluster Spark e SQL Server 2016 R Services-](https://blogs.msdn.microsoft.com/rserver/2017/06/29/end-to-end-loan-chargeoff-prediction-built-using-azure-hdinsight-spark-clusters-and-sql-server-2016-r-service/).
 
 Per altre informazioni sull'assegnazione dei punteggi in SQL Server, vedere [come generare le stime in SQL Server machine Learning Services](r/how-to-do-realtime-scoring.md).

@@ -12,12 +12,12 @@ ms.assetid: 1114a1bb-7556-40d9-b44e-f18ff7f63ed5
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 0f6922172a21ac41e3afe003d5f7307a5424bf13
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.openlocfilehash: 320530eeb7bad37f7fd40bab5df9a9af8e9b1d82
+ms.sourcegitcommit: 706f3a89fdb98e84569973f35a3032f324a92771
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58381599"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58657715"
 ---
 # <a name="edit-the-advanced-properties"></a>Modificare le proprietà avanzate
   Utilizzare la scheda **Avanzate** per aggiungere proprietà speciali all'istanza di CDC.  
@@ -31,10 +31,8 @@ ms.locfileid: "58381599"
     > [!NOTE]  
     >  È possibile visualizzare le proprietà avanzate nel visualizzatore. Quando si utilizza il visualizzatore le informazioni sono in sola lettura. Nel visualizzatore è inoltre incluso un elenco delle colonne acquisite nella tabella.  
   
- Per una descrizione delle proprietà che è possibile immettere, vedere la tabella delle opzioni disponibili in [cdc.xdbcdc_config](the-oracle-cdc-databases.md#BKMK_cdcxdbcdc_config).  
+ Per una descrizione delle proprietà che è possibile immettere, vedere la tabella delle opzioni disponibili in [cdc.xdbcdc_config](the-oracle-cdc-databases.md#bkmk_cdcxdbcdc_config).  
   
 ## <a name="see-also"></a>Vedere anche  
  [How to Manage a CDC Instance](manage-a-cdc-instance.md)   
  [Procedura di modifica delle proprietà dell'istanza di CDC](how-to-edit-the-cdc-instance-properties.md)  
-  
-  

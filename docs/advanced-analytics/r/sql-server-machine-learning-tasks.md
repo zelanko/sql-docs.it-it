@@ -2,17 +2,17 @@
 title: Ciclo di vita e processo per i team - SQL Server Machine Learning Services di Machine learning
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 04/15/2018
+ms.date: 03/29/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
 manager: cgronlun
-ms.openlocfilehash: 4d19c103f2e90220bc7d80a1da65eb0352252ad6
-ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
+ms.openlocfilehash: c06155a433718a068bc914b071f0f738cd236613
+ms.sourcegitcommit: c60784d1099875a865fd37af2fb9b0414a8c9550
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58511288"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58645433"
 ---
 # <a name="machine-learning-lifecycle-and-personas"></a>Gli utenti tipo e il ciclo di vita di machine learning
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -21,7 +21,7 @@ Progetti di Machine learning possono essere complessi, poiché richiedono le pro
 
 > [!TIP]
 > 
-> Prima di iniziare a su un progetto di machine learning, è consigliabile rivedere gli strumenti e le procedure consigliate fornite dal [Microsoft Team Data Science Process](https://blogs.technet.microsoft.com/machinelearning/2017/10/09/the-microsoft-team-data-science-process-tdsp-recent-updates/), o TDSP. Questo processo è stato creato di machine learning i consulenti Microsoft per consolidare le procedure consigliate per la pianificazione e l'iterazione di progetti di machine learning. Il TDSP ha le sue radici nella standard di settore come CRISP-DM, ma prevede procedure di recente, ad esempio DevOps e la visualizzazione.
+> Prima di iniziare a su un progetto di machine learning, è consigliabile rivedere gli strumenti e le procedure consigliate fornite dal [Microsoft Team Data Science Process](https://docs.microsoft.com/azure/machine-learning/team-data-science-process/overview), o TDSP. Questo processo è stato creato di machine learning i consulenti Microsoft per consolidare le procedure consigliate per la pianificazione e l'iterazione di progetti di machine learning. Il TDSP ha le sue radici nella standard di settore come CRISP-DM, ma prevede procedure di recente, ad esempio DevOps e la visualizzazione.
 
 ## <a name="machine-learning-life-cycle"></a>Ciclo di vita di Machine learning
 

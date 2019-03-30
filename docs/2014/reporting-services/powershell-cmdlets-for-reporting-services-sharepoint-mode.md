@@ -11,12 +11,12 @@ ms.assetid: 7835bc97-2827-4215-b0dd-52f692ce5e02
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.openlocfilehash: 5c010d299448bbecd7f527b349cf3ca719809493
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: e51aef3d9aa06790420cec9fab0d487a68563a4a
+ms.sourcegitcommit: 706f3a89fdb98e84569973f35a3032f324a92771
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56013522"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58658265"
 ---
 # <a name="powershell-cmdlets-for-reporting-services-sharepoint-mode"></a>Cmdlet di PowerShell per la modalità SharePoint di Reporting Services
   Quando si installa la modalità SharePoint di [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] , i cmdlet di PowerShell sono installati per supportare i server di report in modalità SharePoint. I cmdlets riguardano tre categorie di funzionalità.  
@@ -56,7 +56,7 @@ ms.locfileid: "56013522"
     -   [Modificare ed elencare i proprietari di sottoscrizioni](#bkmk_change_subscription_owner)  
   
 ##  <a name="bkmk_cmdlet_sum"></a> Riepilogo dei cmdlet  
- Per eseguire i cmdlet è necessario aprire la shell di gestione SharePoint. È anche possibile usare l'editor dell'interfaccia utente grafica incluso in Microsoft Windows, **Windows PowerShell Integrated Scripting Environment (ISE)**. Per altre informazioni, vedere [avvio di Windows PowerShell in Windows Server](https://technet.microsoft.com/library/hh847814.aspx) (https://technet.microsoft.com/library/hh847814.aspx). Nei riepiloghi di cmdlet seguenti, i riferimenti al servizio database dell'applicazione' ', fare riferimento a tutti i database creati e utilizzati da un [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] applicazione del servizio. Sono inclusi i database di configurazione, di avvisi e temporaneo.  
+ Per eseguire i cmdlet è necessario aprire la shell di gestione SharePoint. È anche possibile usare l'editor dell'interfaccia utente grafica incluso in Microsoft Windows, **Windows PowerShell Integrated Scripting Environment (ISE)**. Per altre informazioni, vedere [Starting Windows PowerShell on Windows Server (Avvio di Windows PowerShell su Windows Server)](https://docs.microsoft.com/powershell/scripting/getting-started/starting-windows-powershell). Nei riepiloghi di cmdlet seguenti, i riferimenti al servizio database dell'applicazione' ', fare riferimento a tutti i database creati e utilizzati da un [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] applicazione del servizio. Sono inclusi i database di configurazione, di avvisi e temporaneo.  
   
  Se quando si digitano gli esempi di PowerShell si visualizza un messaggio di errore simile al seguente:  
   
@@ -83,7 +83,7 @@ ms.locfileid: "56013522"
   
 3.  Fare clic su **Shell di gestione SharePoint**.  
   
- Per visualizzare le informazioni della Guida relative alla riga di comando per un cmdlet, usare il comando PowerShell "Get-Help" al prompt dei comandi di PowerShell. Ad esempio:  
+ Per visualizzare le informazioni della Guida relative alla riga di comando per un cmdlet, usare il comando PowerShell "Get-Help" al prompt dei comandi di PowerShell. Esempio:  
   
  `Get-Help Get-SPRSServiceApplicationServers`  
   

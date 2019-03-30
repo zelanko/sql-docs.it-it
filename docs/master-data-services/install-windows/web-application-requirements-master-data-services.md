@@ -13,12 +13,12 @@ ms.assetid: 9455d3cf-c1b7-4d48-8aff-7dc636ed5dc3
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 38c4cdc0a777fe68d466854a9b2dd7cf1403d07f
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
-ms.translationtype: HT
+ms.openlocfilehash: cfad36590bc36e604efb563390f4e50442080676
+ms.sourcegitcommit: 706f3a89fdb98e84569973f35a3032f324a92771
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52757793"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58658255"
 ---
 # <a name="web-application-requirements-master-data-services"></a>Requisiti dell'applicazione Web (Master Data Services)
 
@@ -52,7 +52,7 @@ ms.locfileid: "52757793"
   
 ||  
 |-|  
-|Internet Information Services<br /><br /> Strumenti di gestione Web<br /><br /> Console di gestione IIS<br /><br /> Servizi Web<br /><br /> Sviluppo applicazioni<br /><br /> Estendibilità .NET 3.5<br /><br /> Estendibilità .NET 4.5<br /><br /> ASP.NET 3.5<br /><br /> ASP.NET 4.5<br /><br /> Estensioni ISAPI<br /><br /> Filtri ISAPI<br /><br /> Funzionalità HTTP comuni<br /><br /> Documento predefinito<br /><br /> Esplorazione directory<br /><br /> Errori HTTP<br /><br /> Contenuto statico<br /><br /> [Nota: non installare la pubblicazione WebDAV]<br /><br /> Integrità e diagnostica<br /><br /> Registrazione HTTP<br /><br /> Monitoraggio richieste<br /><br /> restazioni<br /><br /> Compressione contenuto statico<br /><br /> Security<br /><br /> Filtro richieste<br /><br /> Autenticazione di Windows|  
+|Internet Information Services<br /><br /> Strumenti di gestione Web<br /><br /> Console di gestione IIS<br /><br /> Servizi Web<br /><br /> Sviluppo applicazioni<br /><br /> Estendibilità .NET 3.5<br /><br /> Estendibilità .NET 4.5<br /><br /> ASP.NET 3.5<br /><br /> ASP.NET 4.5<br /><br /> Estensioni ISAPI<br /><br /> Filtri ISAPI<br /><br /> Funzionalità HTTP comuni<br /><br /> Documento predefinito<br /><br /> Esplorazione directory<br /><br /> Errori HTTP<br /><br /> Contenuto statico<br /><br /> [Nota: non installare la pubblicazione WebDAV]<br /><br /> Integrità e diagnostica<br /><br /> Registrazione HTTP<br /><br /> Monitoraggio richieste<br /><br /> Prestazioni<br /><br /> Compressione contenuto statico<br /><br /> Sicurezza<br /><br /> Filtro richieste<br /><br /> Autenticazione di Windows|  
   
 ### <a name="features"></a>Funzionalità 
  In Windows Server 2012 e Windows Server 2012 R2 è possibile usare **Server Manager** per installare le funzionalità necessarie seguenti.  
@@ -69,7 +69,7 @@ Install-WindowsFeature Web-Mgmt-Console, AS-NET-Framework, Web-Asp-Net, Web-Asp-
 Install-WindowsFeature Web-App-Dev, NET-Framework-45-Features -IncludeAllSubFeature -Restart  
 ```  
   
- Per altre informazioni sul comando di PowerShell, vedere [Install-WindowsFeature](https://technet.microsoft.com/library/jj205467).  
+ Per altre informazioni sul comando di PowerShell, vedere [Install-WindowsFeature](/powershell/module/servermanager/install-windowsfeature).  
   
 ### <a name="accounts-and-permissions"></a>Account e autorizzazioni  
   

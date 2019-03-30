@@ -23,12 +23,12 @@ ms.assetid: b86a88ba-4f7c-4e19-9fbd-2f8bcd3be14a
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 9ce37ee013e8424079e9d2e526ccdbeacfb5544b
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: cc9657d8db84b67abe324aea9614dd27c2d9df83
+ms.sourcegitcommit: 706f3a89fdb98e84569973f35a3032f324a92771
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53367143"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58658230"
 ---
 # <a name="statistics"></a>Statistiche
   In Query Optimizer vengono utilizzate le statistiche per creare piani di query che consentono di migliorare le prestazioni di esecuzione delle query. Per la maggior parte delle query, Query Optimizer genera già le statistiche necessarie per un piano di query di alta qualità. In alcuni casi, è necessario creare statistiche aggiuntive o modificare la progettazione delle query per ottenere risultati migliori. In questo argomento vengono illustrati i concetti relativi alle statistiche e vengono fornite linee guida per un utilizzo efficace delle statistiche di ottimizzazione delle query.  
@@ -105,8 +105,6 @@ ORDER BY s.name;
 |-|  
 |**Si applica a**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] tramite [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].|  
   
- ![Icona freccia usata con il collegamento Torna all'inizio](../../2014-toc/media/uparrow16x16.gif "Icona freccia usata con il collegamento Torna all'inizio") [Torna all'inizio](#Top)  
-  
 ##  <a name="CreateStatistics"></a> Quando creare le statistiche  
  Query Optimizer crea già le statistiche nelle modalità seguenti:  
   
@@ -154,7 +152,7 @@ GO
 ### <a name="query-selects-from-a-subset-of-data"></a>La query effettua la selezione da un subset di dati  
  La creazione di statistiche per indici e colonne singole in Query Optimizer implica la creazione di statistiche per i valori in tutte le righe. Quando le query effettuano la selezione da un subset di righe che dispone di una distribuzione dei dati univoca, le statistiche filtrate possono migliorare i piani di query. È possibile creare le statistiche filtrate utilizzando l'istruzione CREATE STATISTICS con la clausola WHERE per definire l'espressione del predicato del filtro.  
   
- Ad esempio, usando [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)], ogni prodotto nella tabella Production. Product appartiene a una delle quattro categorie della tabella Production. ProductCategory: Biciclette, componenti, Clothing e Accessories. Ogni categoria dispone di una distribuzione dei dati diversa in relazione al peso. I pesi nella categoria Bikes sono compresi tra 13,77 e 30, quelli della categoria Components sono compresi tra 2,12 e 1.050 con alcuni valori NULL e quelli delle categorie Clothing e Accessories sono tutti NULL.  
+ Ad esempio, usando [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)], ogni prodotto nella tabella Production. Product appartiene a una delle quattro categorie della tabella Production. ProductCategory: Bikes, Components, Clothing e Accessories. Ogni categoria dispone di una distribuzione dei dati diversa in relazione al peso. I pesi nella categoria Bikes sono compresi tra 13,77 e 30, quelli della categoria Components sono compresi tra 2,12 e 1.050 con alcuni valori NULL e quelli delle categorie Clothing e Accessories sono tutti NULL.  
   
  Prendendo come esempio la categoria Bikes, le statistiche filtrate per tutti i pesi consentono di fornire a Query Optimizer statistiche più accurate e di migliorare la qualità del piano di query rispetto alle statistiche di tabella completa o alle statistiche inesistenti nella colonna relativa al peso (Weight). La colonna Weight della categoria Bikes rappresenta un candidato valido per le statistiche filtrate. Nel caso di un numero relativamente ridotto di ricerche correlate al peso, tale colonna non è tuttavia necessariamente un candidato valido per un indice filtrato. È possibile che i vantaggi derivanti dai miglioramenti alle prestazioni delle ricerche offerti da un indice filtrato siano inferiori rispetto agli svantaggi derivanti dai costi di manutenzione e archiviazione supplementari dovuti all'aggiunta di un indice filtrato al database.  
   
@@ -197,8 +195,6 @@ GO
   
  Poiché le statistiche temporanee sono archiviate in `tempdb`, un riavvio del servizio [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] comporta l'indisponibilità di tutte le statistiche temporanee.  
   
- ![Icona freccia usata con il collegamento Torna all'inizio](../../2014-toc/media/uparrow16x16.gif "Icona freccia usata con il collegamento Torna all'inizio") [Torna all'inizio](#Top)  
-  
 ##  <a name="UpdateStatistics"></a> Quando aggiornare le statistiche  
  Query Optimizer determina che le statistiche potrebbero non essere aggiornate, quindi ne effettua l'aggiornamento qualora siano necessarie per un piano di query. In alcuni casi, è possibile migliorare il piano di query e le prestazioni di esecuzione delle query aggiornando le statistiche più frequentemente di quanto accada quando AUTO_UPDATE_STATISTICS è impostata su ON. È possibile aggiornare le statistiche mediante l'istruzione UPDATE STATISTICS o la stored procedure sp_updatestats.  
   
@@ -228,8 +224,6 @@ GO
  Aggiornare le statistiche dopo avere eseguito procedure di manutenzione che modificano la distribuzione dei dati, quali il troncamento di una tabella o l'esecuzione di un inserimento bulk di un'elevata percentuale di righe. Ciò consente di evitare ritardi futuri nell'elaborazione delle query causati dall'attesa da parte delle query stesse degli aggiornamenti automatici delle statistiche.  
   
  Operazioni quali la ricompilazione, la deframmentazione o la riorganizzazione di un indice non modificano la distribuzione dei dati. Non è pertanto necessario aggiornare le statistiche in seguito all'esecuzione di operazioni ALTER INDEX REBUILD, DBCC REINDEX, DBCC INDEXDEFRAG o ALTER INDEX REORGANIZE. L'aggiornamento delle statistiche viene eseguito in Query Optimizer in seguito alla ricompilazione di un indice in una tabella o una vista mediante ALTER INDEX REBUILD o DBCC DBREINDEX. Tale aggiornamento delle statistiche è tuttavia il risultato della ricostruzione dell'indice. L'aggiornamento delle statistiche non viene eseguito in Query Optimizer dopo operazioni DBCC INDEXDEFRAG o ALTER INDEX REORGANIZE.  
-  
- ![Icona freccia usata con il collegamento Torna all'inizio](../../2014-toc/media/uparrow16x16.gif "Icona freccia usata con il collegamento Torna all'inizio") [Torna all'inizio](#Top)  
   
 ##  <a name="DesignStatistics"></a> Query in cui vengono usate le statistiche in modo efficace  
  Alcune implementazioni delle query, quali le variabili locali e le espressioni complesse nel predicato di query, possono comportare la definizione di piani di query non ottimali. Per evitare che ciò accada, attenersi alle linee guida relative alla progettazione delle query per un utilizzo efficace delle statistiche. Per altre informazioni sui predicati, vedere [Condizione di ricerca&#40;Transact-SQL&#41;](/sql/t-sql/queries/search-condition-transact-sql).  
@@ -328,8 +322,6 @@ GO
 ### <a name="improving-cardinality-estimates-with-plan-guides"></a>Miglioramento delle stime della cardinalità con le guide di piano  
  È possibile che le linee guida relative alla progettazione delle query non siano valide per alcune applicazioni, in quanto non è possibile modificare la query o l'utilizzo dell'hint per la query RECOMPILE potrebbe causare un numero eccessivo di ricompilazioni. È possibile utilizzare le guide di piano per specificare altri hint, ad esempio USE PLAN, in modo da controllare il comportamento della query mentre si collabora con il fornitore dell'applicazione per esaminarne le modifiche. Per altre informazioni sulle guide di piano, vedere [Guide di piano](../performance/plan-guides.md).  
   
- ![Icona freccia usata con il collegamento Torna all'inizio](../../2014-toc/media/uparrow16x16.gif "Icona freccia usata con il collegamento Torna all'inizio") [Torna all'inizio](#Top)  
-  
 ## <a name="see-also"></a>Vedere anche  
  [CREATE STATISTICS &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-statistics-transact-sql)   
  [UPDATE STATISTICS &#40;Transact-SQL&#41;](/sql/t-sql/statements/update-statistics-transact-sql)   
@@ -340,5 +332,3 @@ GO
  [CREATE INDEX &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-index-transact-sql)   
  [ALTER INDEX &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-index-transact-sql)   
  [Creare indici filtrati](../indexes/create-filtered-indexes.md)  
-  
-  

@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 5df94dc555aead1225bcb791456e7dc87c0b7590
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: 583059b93268f3652cf2e8f324574ec739d449dd
+ms.sourcegitcommit: 706f3a89fdb98e84569973f35a3032f324a92771
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53214962"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58658231"
 ---
 # <a name="power-pivot-data-refresh-with-sharepoint-2013"></a>Aggiornamento dati PowerPivot con SharePoint 2013
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -42,12 +42,12 @@ ms.locfileid: "53214962"
 ||||  
 |-|-|-|  
 ||Cartelle di lavoro di Excel 2013|Cartelle di lavoro di Excel 2010|  
-|Attivazione dell'aggiornamento dati|**Interattiva:** Authenticated User<br /><br /> **Pianificata:** [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] Servizio di sistema|[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] Servizio di sistema|  
+|Attivazione dell'aggiornamento dati|**Interactive:** Authenticated User<br /><br /> **Pianificata:** [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] Servizio di sistema|[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] Servizio di sistema|  
 |Caricamento della cartella di lavoro da database di contenuto|SharePoint 2013 Excel Services|SharePoint 2013 Excel Services|  
 |Caricamento del modello di dati in un'istanza di Analysis Services|SharePoint 2013 Excel Services|SharePoint 2013 Excel Services|  
 |Invio dei comandi di elaborazione all'istanza di Analysis Services|SharePoint 2013 Excel Services|[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] Servizio di sistema|  
 |Aggiornamento dei dati della cartella di lavoro|SharePoint 2013 Excel Services|SharePoint 2013 Excel Services|  
-|Salvataggio della cartella di lavoro e del modello di dati nel database di contenuto|**Interattiva:** N/D<br /><br /> **Pianificata:** SharePoint 2013 Excel Services|SharePoint 2013 Excel Services|  
+|Salvataggio della cartella di lavoro e del modello di dati nel database di contenuto|**Interactive:** N/D<br /><br /> **Pianificata:** SharePoint 2013 Excel Services|SharePoint 2013 Excel Services|  
   
  Nella tabella seguente sono riepilogate le funzionalità di aggiornamento supportate in una farm di SharePoint 2013 configurata per usare un server [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Analysis Services in modalità SharePoint:  
   
@@ -235,7 +235,7 @@ ms.locfileid: "53214962"
 ##  <a name="bkmk_moreinformation"></a> Ulteriori informazioni  
  [Risoluzione dei problemi relativi all'aggiornamento dati PowerPivot](http://social.technet.microsoft.com/wiki/contents/articles/3870.troubleshooting-powerpivot-data-refresh.aspx).  
   
- [Excel Services in SharePoint 2013](http://msdn.microsoft.com/library/sharepoint/jj164076\(v=office.15\)) (<http://msdn.microsoft.com/library/sharepoint/jj164076(v=office.15>).  
+ [Excel Services in SharePoint](/sharepoint/dev/general-development/excel-services-in-sharepoint).  
   
 ## <a name="see-also"></a>Vedere anche  
  [Installazione di Analisi Services in modalità Power Pivot](../../analysis-services/instances/install-windows/install-analysis-services-in-power-pivot-mode.md)  

@@ -11,12 +11,12 @@ ms.assetid: ef217717-6d05-443e-af26-44dc745a349d
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 98801ffe8ea0066bc425622a0f62e7306a217ff2
-ms.sourcegitcommit: 7d4a3fc0f2622cbc6930d792be4a9b3fcac4c4b6
+ms.openlocfilehash: 35ba90efe3233c34f710dda0e35b7108352df421
+ms.sourcegitcommit: 706f3a89fdb98e84569973f35a3032f324a92771
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/21/2019
-ms.locfileid: "58305939"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58658205"
 ---
 # <a name="reference-data-services-in-dqs"></a>Servizi dati di riferimento in DQS
 
@@ -35,7 +35,7 @@ ms.locfileid: "58305939"
 -   La funzionalità supporta l'utilizzo di dati di riferimento da Windows Azure Marketplace e direttamente dai provider di dati di riferimento di terze parti.  
   
 ##  <a name="Marketplace"></a> Utilizzo dei dati di riferimento da Windows Azure Marketplace  
- DQS supporta l'utilizzo di dati di riferimento da Windows Azure Marketplace per consentire ai provider di contenuti di fornire servizi dati di riferimento mediante il servizio Marketplace. Marketplace è un servizio Microsoft che fornisce un singolo marketplace e canale di recapito per dati e applicazioni di alta qualità come servizi cloud. Per altre informazioni su Marketplace, vedere [Learn About Windows Azure Marketplace](https://go.microsoft.com/fwlink/?LinkId=211291) (Informazioni su Windows Azure Marketplace) (https://go.microsoft.com/fwlink/?LinkId=211291).  
+ DQS supporta l'utilizzo di dati di riferimento da Windows Azure Marketplace per consentire ai provider di contenuti di fornire servizi dati di riferimento mediante il servizio Marketplace. Marketplace è un servizio Microsoft che fornisce un singolo marketplace e canale di recapito per dati e applicazioni di alta qualità come servizi cloud. Per altre informazioni su Marketplace, vedere [Learn About Microsoft Azure Marketplace](https://azuremarketplace.microsoft.com/about) (https://azuremarketplace.microsoft.com/about).
   
  La perfetta integrazione tra Marketplace e DQS semplifica i passaggi associati all'individuazione, all'esplorazione e all'acquisizione di informazioni per i progetti Data Quality dall'interno di DQS. I dati vengono utilizzati in DQS e aiutano gli utenti di DQS a ottenere un'elevata qualità dei dati unendo in modo del tutto innovativo le funzionalità di DQS, Marketplace e dei provider di servizi dati di riferimento.  
   

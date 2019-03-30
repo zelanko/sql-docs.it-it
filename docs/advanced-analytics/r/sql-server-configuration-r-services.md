@@ -2,17 +2,17 @@
 title: 'Configurazione di SQL Server (R Services): SQL Server Machine Learning Services'
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 04/15/2018
+ms.date: 03/29/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
 manager: cgronlun
-ms.openlocfilehash: f5dd6ee267b7bac933e40f90282d1bf74aa57b62
-ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
+ms.openlocfilehash: 9ad4d1a23a05db35e0c4b55473903dbf7e4265da
+ms.sourcegitcommit: c60784d1099875a865fd37af2fb9b0414a8c9550
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58511848"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58645543"
 ---
 # <a name="sql-server-configuration-for-use-with-r"></a>Configurazione di SQL Server per l'uso con R
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -165,10 +165,6 @@ Per informazioni dettagliate, incluso il codice di esempio, vedere l'esercitazio
 + [Soft-NUMA in SQL Server](https://docs.microsoft.com/sql/database-engine/configure-windows/soft-numa-sql-server)
     
     Come eseguire il mapping di nodi soft-NUMA alle CPU
-
-+ [Architettura soft-NUMA automatica: Esegue semplicemente più veloce (Bob Ward)](https://blogs.msdn.microsoft.com/bobsql/2016/06/03/sql-2016-it-just-runs-faster-automatic-soft-numa/)
-
-   Descrive cronologia e i dettagli di implementazione, le prestazioni nel server multi-core più recenti.
 
 ## <a name="task-specific-optimizations"></a>Ottimizzazioni specifiche per le attività
 

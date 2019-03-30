@@ -10,17 +10,17 @@ ms.assetid: ff79e19d-afca-42a4-81b0-62d759380d11
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: e9bebcc588a3ccbe522d4747bab2428f5e30973a
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.openlocfilehash: e0924c4ac6d2ddd4e14b35794b9c03ac7fb2e136
+ms.sourcegitcommit: 706f3a89fdb98e84569973f35a3032f324a92771
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58379419"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58657248"
 ---
 # <a name="error-handling"></a>Gestione degli errori
   Un'istanza di Oracle CDC estrae le modifiche da un singolo database di origine Oracle (un cluster Oracle RAC è considerato un singolo database) e scrive le modifiche di cui è stato eseguito il commit per modificare le tabelle in un database CDC nell'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] di destinazione.  
   
- Un'istanza di CDC mantiene il proprio stato in una tabella di sistema denominata **cdc.xdbcdc_state**. È possibile eseguire query su questa tabella ogni volta che è necessario trovare lo stato dell'istanza di CDC. Per altre informazioni sulla tabella cdc.xdbcdc_state, vedere [cdc.xdbcdc_state](the-oracle-cdc-databases.md#BKMK_cdcxdbcdc_state).  
+ Un'istanza di CDC mantiene il proprio stato in una tabella di sistema denominata **cdc.xdbcdc_state**. È possibile eseguire query su questa tabella ogni volta che è necessario trovare lo stato dell'istanza di CDC. Per altre informazioni sulla tabella cdc.xdbcdc_state, vedere [cdc.xdbcdc_state](the-oracle-cdc-databases.md#bkmk_cdcxdbcdc_state).  
   
  Nella tabella seguente vengono descritti gli stati dell'istanza di CDC nella tabella xdbcdc_state.  
   
@@ -37,11 +37,11 @@ ms.locfileid: "58379419"
 |Stato|Codice di stato attivo|Codice di stato errore|Descrizione|  
 |------------|------------------------|-----------------------|------------------|  
 |ABORTED|0|1|L'istanza di Oracle CDC non è in esecuzione. Lo stato secondario ABORTED indica che l'istanza di Oracle CDC era ACTIVE e che si è arrestata in modo imprevisto.<br /><br /> Lo stato secondario ABORTED viene stabilito dall'istanza principale del servizio Oracle CDC quando viene rilevato che l'istanza di Oracle CDC non è in esecuzione mentre il relativo stato è ACTIVE.|  
-|error|0|1|L'istanza di Oracle CDC non è in esecuzione. Lo stato ERROR indica che l'istanza di CDC era ACTIVE, ma che in seguito a un errore reversibile è stata disabilitata. Lo stato ERROR contiene i codici di stato secondario seguenti:<br /><br /> CONFIGURATO CORRETTAMENTE: È stato rilevato un errore di configurazione irreversibile.<br /><br /> PASSWORD-REQUIRED: Non è stata impostata alcuna password per Change Data Capture Designer for Oracle by Attunity oppure la password configurata non è valida. Il problema può essere dovuto a una modifica alla password della chiave asimmetrica del servizio.|  
-|RUNNING|1|0|L'istanza di CDC è in esecuzione ed è in corso l'elaborazione dei record delle modifiche. Lo stato RUNNING contiene i codici di stato secondario seguenti:<br /><br /> INATTIVO: Tutti i record delle modifiche sono stati elaborati e archiviati nel controllo di destinazione (**CT**) le tabelle. Non è presente alcuna transazione attiva con le tabelle di controllo.<br /><br /> ELABORAZIONE: Sono presenti record delle modifiche in fase di elaborazione che non sono ancora stati scritti per il controllo (**CT**) le tabelle.|  
+|error|0|1|L'istanza di Oracle CDC non è in esecuzione. Lo stato ERROR indica che l'istanza di CDC era ACTIVE, ma che in seguito a un errore reversibile è stata disabilitata. Lo stato ERROR contiene i codici di stato secondario seguenti:<br /><br /> MISCONFIGURED: è stato rilevato un errore di configurazione irreversibile.<br /><br /> PASSWORD-REQUIRED: non è stata impostata alcuna password per Change Data Capture Designer per Oracle di Attunity oppure la password configurata non è valida. Il problema può essere dovuto a una modifica alla password della chiave asimmetrica del servizio.|  
+|RUNNING|1|0|L'istanza di CDC è in esecuzione ed è in corso l'elaborazione dei record delle modifiche. Lo stato RUNNING contiene i codici di stato secondario seguenti:<br /><br /> IDLE: tutti i record delle modifiche sono stati elaborati e archiviati nelle tabelle di controllo di destinazione (**_CT**). Non è presente alcuna transazione attiva con le tabelle di controllo.<br /><br /> PROCESSING: è in corso l'elaborazione di alcuni record delle modifiche che non sono ancora stati scritti nelle tabelle di controllo (**_CT**).|  
 |STOPPED|0|0|L'istanza di CDC non è in esecuzione. Lo stato secondario STOP indica che l'istanza di CDC era ACTIVE e che è stata arrestata in modo corretto.|  
-|SUSPENDED|1|1|L'istanza di CDC è in esecuzione ma l'elaborazione è stata sospesa in seguito a un errore reversibile. Lo stato SUSPENDED contiene i codici di stato secondario seguenti:<br /><br /> DISCONNECTED: Impossibile stabilire la connessione con il database Oracle di origine. L'elaborazione verrà ripresa dopo il ripristino della connessione.<br /><br /> SPAZIO DI ARCHIVIAZIONE: Lo spazio di archiviazione è pieno. L'elaborazione verrà ripresa non appena sarà nuovamente disponibile dello spazio di archiviazione. In alcuni casi è possibile che questo stato non venga visualizzato perché non è possibile aggiornare la tabella dello stato.<br /><br /> LOGGER: Il logger è connesso a Oracle ma non è possibile leggere i log delle transazioni Oracle a causa di un problema temporaneo.|  
-|DATAERROR|x|x|Questo codice di stato viene usato unicamente per la tabella **xdbcdc_trace** . e non compare nella tabella **xdbcdc_state** . I record di traccia con questo stato indicano un problema con un record di log Oracle. Il record di log danneggiato viene archiviato nella colonna **data** come BLOB. Lo stato DATAERROR contiene i codici di stato secondario seguenti:<br /><br /> BADRECORD: Non è stato possibile analizzare il record di log collegato.<br /><br /> CONVERT-ERROR: Non è stato possibile convertire i dati in alcune colonne per le colonne di destinazione nella tabella di acquisizione. È possibile che questo stato si verifichi solo se nella configurazione è stato specificato che gli errori di conversione devono produrre record di traccia.|  
+|SUSPENDED|1|1|L'istanza di CDC è in esecuzione ma l'elaborazione è stata sospesa in seguito a un errore reversibile. Lo stato SUSPENDED contiene i codici di stato secondario seguenti:<br /><br /> DISCONNECTED: non è possibile stabilire la connessione con il database Oracle di origine. L'elaborazione verrà ripresa dopo il ripristino della connessione.<br /><br /> STORAGE: lo spazio di archiviazione è esaurito. L'elaborazione verrà ripresa non appena sarà nuovamente disponibile dello spazio di archiviazione. In alcuni casi è possibile che questo stato non venga visualizzato perché non è possibile aggiornare la tabella dello stato.<br /><br /> LOGGER: il logger è connesso a Oracle, ma non è in grado di leggere i log delle transazioni di Oracle a causa di un problema temporaneo.|  
+|DATAERROR|x|x|Questo codice di stato viene usato unicamente per la tabella **xdbcdc_trace** . e non compare nella tabella **xdbcdc_state** . I record di traccia con questo stato indicano un problema con un record di log Oracle. Il record di log danneggiato viene archiviato nella colonna **data** come BLOB. Lo stato DATAERROR contiene i codici di stato secondario seguenti:<br /><br /> BADRECORD: non è possibile analizzare il record di log collegato.<br /><br /> CONVERT-ERROR: non è possibile convertire i dati di alcune colonne nelle colonne di destinazione della tabella di acquisizione. È possibile che questo stato si verifichi solo se nella configurazione è stato specificato che gli errori di conversione devono produrre record di traccia.|  
   
  Poiché lo stato del servizio Oracle CDC viene archiviato in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], è possibile che in alcuni casi il valore dello stato nel database non rifletta lo stato effettivo del servizio. Lo scenario più comune si verifica quando il servizio perde la connessione a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e per un qualche motivo non è in grado di riprenderla. In questo caso, lo stato archiviato in **cdc.xdbcdc_state** non risulta più aggiornato. Se il timestamp dell'ultimo aggiornamento (UTC) risale a più di un minuto prima, lo stato non è probabilmente aggiornato. In questo caso, utilizzare il Visualizzatore eventi di Windows per trovare informazioni aggiuntive sullo stato del servizio.  
   
@@ -115,5 +115,3 @@ ms.locfileid: "58379419"
 ## <a name="see-also"></a>Vedere anche  
  [Progettazione Change Data Capture per Oracle di Attunity](change-data-capture-designer-for-oracle-by-attunity.md)   
  [Istanza di Oracle CDC](the-oracle-cdc-instance.md)  
-  
-  

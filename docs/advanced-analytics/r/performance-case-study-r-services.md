@@ -2,17 +2,17 @@
 title: Prestazioni per SQL Server R Services, i risultati e le risorse, SQL Server Machine Learning Services
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 04/15/2018
+ms.date: 03/29/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
 manager: cgronlun
-ms.openlocfilehash: 4b71afb8f373eed4f49bc2cf0ea1c6086b6f121d
-ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
+ms.openlocfilehash: 392a6da09827355e6bc9a901b0e4580e5eb72bf5
+ms.sourcegitcommit: c60784d1099875a865fd37af2fb9b0414a8c9550
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58510758"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58645553"
 ---
 # <a name="performance-for-r-services-results-and-resources"></a>Le prestazioni per R Services: risorse e i risultati
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -337,10 +337,8 @@ Numero di utenti sia preso nota prima che vi sia una piccola pausa quando viene 
 
 Per tutti questi motivi, non sussiste alcun unica soluzione per mitigare questa tempi di caricamento iniziale, come l'impatto sulle prestazioni varia notevolmente a seconda dell'attività. Ad esempio, la memorizzazione nella cache viene eseguita per la singola riga e di assegnazione dei punteggi in batch; di conseguenza, le operazioni di assegnazione dei punteggi successive sono molto più veloci e il modello, né il runtime di R viene ricaricato. È anche possibile usare [assegnazione dei punteggi nativa](../sql-native-scoring.md) per evitare il caricamento del runtime di R interamente.
 
-Per il training dei modelli di grandi dimensioni oppure di assegnazione dei punteggi in batch di grandi dimensioni, l'overhead potrebbe essere ridotta rispetto i guadagni da evitando spostamenti di dati o dal flusso e l'elaborazione parallela. Vedere i blog recenti e gli esempi per indicazioni aggiuntive sulle prestazioni:
+Per il training dei modelli di grandi dimensioni oppure di assegnazione dei punteggi in batch di grandi dimensioni, l'overhead potrebbe essere ridotta rispetto i guadagni da evitando spostamenti di dati o dal flusso e l'elaborazione parallela. Vedere questo blog post per indicazioni aggiuntive sulle prestazioni:
 
-+ [Classificazione di prestito con SQL Server 2016 R Services](https://blogs.msdn.microsoft.com/microsoftrservertigerteam/2016/09/27/loan-classification-using-sql-server-2016-r-services/)
-+ [Esperienze utente anticipata con R Services](https://blogs.msdn.microsoft.com/sqlcat/2016/06/16/early-customer-experiences-with-sql-server-r-services/)
 + [Uso di R per rilevare una frode a 1 milione di transazioni al secondo](https://blog.revolutionanalytics.com/2016/09/fraud-detection.html/)
 
 ## <a name="resources"></a>Risorse

@@ -10,12 +10,12 @@ ms.assetid: 11f4ed8a-aaa9-417b-bdd5-204f551c6bb6
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 8ba3763c9ccf28286c61e87f4105c3d3293351dd
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 6470cd60eb3b5491b8941685dcae00a49b4e967c
+ms.sourcegitcommit: 706f3a89fdb98e84569973f35a3032f324a92771
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53371053"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58658340"
 ---
 # <a name="install-sql-server-2014-using-sysprep"></a>Installare SQL Server 2014 tramite SysPrep
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Le azioni di installazione correlate a SysPrep sono accessibili tramite Centro installazione. Nella pagina **Avanzate** di **Centro installazione** sono disponibili due opzioni: **Preparazione immagine di un'istanza autonoma di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]** e **Completamento immagine di un'istanza autonoma predisposta di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]**. Nelle sezioni di [preparazione](#prepare) e [completamento](#complete) viene descritto in modo dettagliato il processo di installazione. Per altre informazioni, vedere [Considerazioni sull'installazione di SQL Server tramite SysPrep](considerations-for-installing-sql-server-using-sysprep.md).  
@@ -48,9 +48,9 @@ ms.locfileid: "53371053"
   
 -   [Rimuovere funzionalità da un'istanza predisposta di SQL Server](#RemoveFeatures)  
   
--   [Disinstallazione di un'istanza predisposta](install-sql-server-using-sysprep.md#uninstall)  
+-   [Disinstallazione di un'istanza predisposta](install-sql-server-using-sysprep.md#Uninstall)  
   
--   [Modifica o disinstallazione di un'istanza completata di SQL Server.](install-sql-server-using-sysprep.md#bk_modifying_uninstalling)  
+-   [Modifica o disinstallazione di un'istanza completata di SQL Server.](install-sql-server-using-sysprep.md#bk_Modifying_Uninstalling)  
   
 ##  <a name="sysprep"></a> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Supporto dei cluster di SysPrep  
  A partire da [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)], SysPrep supporta le istanze di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] cluster nelle installazioni dalla riga di comando. Per altre informazioni, vedere [Che cos'è SysPrep](https://msdn.microsoft.com/library/cc721940\(v=WS.10\).aspx).  
@@ -69,7 +69,7 @@ ms.locfileid: "53371053"
   
 3.  Creare il cluster di failover di Windows.  
   
-4.  Eseguire setup.exe con tutti i nodi di `/ACTION=PrepareFailoverCluster`. Ad esempio:  
+4.  Eseguire setup.exe con tutti i nodi di `/ACTION=PrepareFailoverCluster`. Esempio:  
   
     ```  
     setup.exe /q /ACTION=PrepareFailoverCluster /InstanceName=<InstanceName> /Features=SQLEngine  /SQLSVCACCOUNT="<DomainName\UserName>" /SQLSVCPASSWORD="xxxxxxxxxxx"  /IACCEPTSQLSERVERLICENSETERMS  
@@ -325,5 +325,3 @@ ms.locfileid: "53371053"
 ## <a name="see-also"></a>Vedere anche  
  [Informazioni su Windows SysPrep](https://go.microsoft.com/fwlink/?LinkId=143546)   
  [Funzionamento di Windows SysPrepWork](https://go.microsoft.com/fwlink/?LinkId=143547)  
-  
-  

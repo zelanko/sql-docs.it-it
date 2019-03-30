@@ -11,12 +11,12 @@ ms.assetid: 11d72068-2d97-495e-948f-12d1e8c1957d
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.openlocfilehash: a1e9e221816a4b720695a4031850f08fd17a71e1
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: 0b32bf178677b564d31182a5d23d5abda1f024cf
+ms.sourcegitcommit: 706f3a89fdb98e84569973f35a3032f324a92771
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56295894"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58658035"
 ---
 # <a name="exporting-to-xml-report-builder-and-ssrs"></a>Esportazione in XML (Generatore report e SSRS)
   L'estensione per il rendering XML genera report in formato XML. Lo schema per il report XML è specifico del report e contiene solo dati. Il rendering delle informazioni di layout non viene eseguito e la paginazione non viene mantenuta dall'estensione per il rendering XML. Il codice XML generato da questa estensione può essere importato in un database, usato come messaggio di dati XML o inviato a un'applicazione personalizzata.  
@@ -54,8 +54,6 @@ ms.locfileid: "56295894"
   
 -   `Images, lines, and custom report items` vengono ignorati.  
   
- ![Icona freccia usata con il collegamento Torna all'inizio](../../2014-toc/media/uparrow16x16.gif "Icona freccia usata con il collegamento Torna all'inizio") [Torna all'inizio](#BackToTop)  
-  
 ##  <a name="DataTypes"></a> Tipi di dati  
  All'attributo o all'elemento casella di testo viene assegnato un tipo di dati XSD in base ai valori visualizzati nella casella di testo.  
   
@@ -71,8 +69,6 @@ ms.locfileid: "56295894"
 |`String`, `Char`|**xsd:string**|  
 |Altro|**xsd:string**|  
   
- ![Icona freccia usata con il collegamento Torna all'inizio](../../2014-toc/media/uparrow16x16.gif "Icona freccia usata con il collegamento Torna all'inizio") [Torna all'inizio](#BackToTop)  
-  
 ##  <a name="XMLSpecificRenderingRules"></a> Regole di rendering specifiche di XML  
  Nelle sezioni seguenti viene descritta l'interpretazione degli elementi di un report da parte delle estensioni per il rendering XML.  
   
@@ -85,7 +81,7 @@ ms.locfileid: "56295894"
   
  I valori delle variabili sono i seguenti:  
   
-|nome|Value|  
+|Nome|Value|  
 |----------|-----------|  
 |Report|Report.DataElementName|  
 |ReportURL|URL assoluto URLEncoded del report nel server.|  
@@ -115,8 +111,6 @@ ms.locfileid: "56295894"
   
 ### <a name="lines"></a>Linee  
  Il rendering delle linee non viene eseguito.  
-  
- ![Icona freccia usata con il collegamento Torna all'inizio](../../2014-toc/media/uparrow16x16.gif "Icona freccia usata con il collegamento Torna all'inizio") [Torna all'inizio](#BackToTop)  
   
 ### <a name="tables-matrices-and-lists"></a>Tabelle, matrici ed elenchi  
  Tabelle, matrici ed elenchi vengono visualizzati come elemento. Il nome dell'elemento deriva dalla proprietà RDL DataElementName della Tablix.  
@@ -155,17 +149,11 @@ ms.locfileid: "56295894"
   
  Se il valore della proprietà DataElementOutput è uguale a Output, l'intestazione di un elemento ripetuto viene visualizzata come elemento figlio dell'elemento dettaglio.  
   
- ![Icona freccia usata con il collegamento Torna all'inizio](../../2014-toc/media/uparrow16x16.gif "Icona freccia usata con il collegamento Torna all'inizio") [Torna all'inizio](#BackToTop)  
-  
 ##  <a name="CustomFormatsXSLTransformations"></a> Formati personalizzati e trasformazioni XSL  
  I file XML generati dall'estensione per il rendering XML possono essere trasformati in quasi tutti i formati utilizzando trasformazioni XSL (XSLT). Questa funzionalità consente di produrre dati in formati non supportati dalle estensioni per il rendering esistenti. È consigliabile provare a utilizzare l'estensione per il rendering XML e le trasformazioni XSL prima di creare estensioni per il rendering personalizzate.  
   
- ![Icona freccia usata con il collegamento Torna all'inizio](../../2014-toc/media/uparrow16x16.gif "Icona freccia usata con il collegamento Torna all'inizio") [Torna all'inizio](#BackToTop)  
-  
 ##  <a name="DuplicateName"></a> Nomi duplicati  
  Se sono presenti nomi di elementi dati duplicati all'interno dello stesso ambito, verrà visualizzato un messaggio di errore del renderer.  
-  
- ![Icona freccia usata con il collegamento Torna all'inizio](../../2014-toc/media/uparrow16x16.gif "Icona freccia usata con il collegamento Torna all'inizio") [Torna all'inizio](#BackToTop)  
   
 ##  <a name="XSLTTransformations"></a> Trasformazioni XSLT  
  Il renderer XML può applicare una trasformazione XSLT lato server ai dati XML originali. Quando viene applicata una trasformazione XSLT, il renderer restituisce il contenuto trasformato anziché i dati XML originali. La trasformazione si verifica nel server, non nel client.  
@@ -173,8 +161,6 @@ ms.locfileid: "56295894"
  La trasformazione XSLT da applicare all'output viene definita nel file di definizione del report con la proprietà DataTransform del report o con il parametro XSLT *DeviceInfo* . Se viene impostato uno di questi valori, la trasformazione si verifica ogni volta che viene utilizzato il renderer XML. Quando si usano le sottoscrizioni, la trasformazione XSLT deve essere definita nella proprietà RDL DataTransform.  
   
  Se si specifica un file XSLT, tramite la proprietà di definizione DataTransform e l'impostazione delle informazioni sul dispositivo, la trasformazione XSLT specificata in DataTransform si verifica per prima, seguita dalla trasformazione XSLT specificata tramite le impostazioni delle informazioni sul dispositivo.  
-  
- ![Icona freccia usata con il collegamento Torna all'inizio](../../2014-toc/media/uparrow16x16.gif "Icona freccia usata con il collegamento Torna all'inizio") [Torna all'inizio](#BackToTop)  
   
 ###  <a name="DeviceInfo"></a> Impostazioni relative alle informazioni sul dispositivo  
  È possibile modificare alcune impostazioni predefinite per questo renderer modificando le impostazioni relative alle informazioni sul dispositivo, incluse le seguenti:  
@@ -195,13 +181,9 @@ ms.locfileid: "56295894"
   
  Per altre informazioni, vedere [Impostazioni relative alle informazioni sul dispositivo XML](../xml-device-information-settings.md).  
   
- ![Icona freccia usata con il collegamento Torna all'inizio](../../2014-toc/media/uparrow16x16.gif "Icona freccia usata con il collegamento Torna all'inizio") [Torna all'inizio](#BackToTop)  
-  
 ## <a name="see-also"></a>Vedere anche  
  [Paginazione in Reporting Services &#40;Generatore report e SSRS&#41;](../report-design/pagination-in-reporting-services-report-builder-and-ssrs.md)   
  [Tipi di rendering &#40;Generatore report e SSRS&#41;](../report-design/rendering-behaviors-report-builder-and-ssrs.md)   
  [Funzionalità interattiva per estensioni per il rendering di report differenti &#40;Generatore report e SSRS&#41;](interactive-functionality-different-report-rendering-extensions.md)   
  [Rendering degli elementi del report &#40;Generatore report e SSRS&#41;](../report-design/rendering-report-items-report-builder-and-ssrs.md)   
  [Tabelle, matrici ed elenchi &#40;Generatore report e SSRS&#41;](../report-design/create-invoices-and-forms-with-lists-report-builder-and-ssrs.md)  
-  
-  

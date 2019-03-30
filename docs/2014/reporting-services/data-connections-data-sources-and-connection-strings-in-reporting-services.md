@@ -20,12 +20,12 @@ ms.assetid: 4d8f0ae1-102b-4b3d-9155-fa584c962c9e
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.openlocfilehash: da5fb3c4c5dec240a9148772c95bb357f981db1e
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: 3323683075b99ce2ab8cbcb456240bc24323762f
+ms.sourcegitcommit: 706f3a89fdb98e84569973f35a3032f324a92771
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56291770"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58658121"
 ---
 # <a name="data-connections-data-sources-and-connection-strings-in-reporting-services"></a>Connessioni dati, origini dati e stringhe di connessione in Reporting Services
   Per includere i dati in un report di [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] , è necessario creare innanzitutto le *origini dati* e i *set di dati*. Questo argomento illustra il tipo di origini dati, come creare le origini dati e informazioni importanti relative alle credenziali delle origini dati. Un'origine dati include il tipo di origine dati, le informazioni di connessione e il tipo di credenziali da usare. Esistono due tipi di origini dati, ovvero incorporate e condivise. Un'origine dati incorporata viene definita nel report e viene utilizzata solo dal report specifico, mentre un'origine dati condivisa viene definita indipendentemente da un report e può essere utilizzata da più report. Per altre informazioni, vedere [Connessioni dati o origini dati incorporate e condivise &#40;Generatore report e SSRS&#41;](../../2014/reporting-services/embedded-and-shared-data-connections-or-data-sources-report-builder-and-ssrs.md) e [Set di dati condivisi e incorporati &#40;Generatore report e SSRS&#41;](report-data/embedded-and-shared-datasets-report-builder-and-ssrs.md).  
@@ -86,7 +86,7 @@ ms.locfileid: "56291770"
   
 -   **Tipo di origine dati** Tipo di connessione, ad esempio [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Selezionare questo valore nell'elenco a discesa dei tipi di connessione.  
   
--   **Informazioni di connessione** Nelle informazioni di connessione sono inclusi il nome e il percorso dell'origine dati, nonché le proprietà di connessione specifiche di ogni provider di dati. La *stringa di connessione* è la rappresentazione di testo di informazioni di connessione. Ad esempio, se l'origine dati è un database di SQL Server, è possibile specificare il nome del database. Per le origini dati incorporate, è inoltre possibile scrivere stringhe di connessione basate su espressioni che vengono valutate in fase di esecuzione. Per altre informazioni, vedere [Stringhe di connessione basate su espressioni](#Expressions) più avanti in questo argomento.  
+-   **Informazioni di connessione** Nelle informazioni di connessione sono inclusi il nome e il percorso dell'origine dati, nonché le proprietà di connessione specifiche di ogni provider di dati. La *stringa di connessione* è la rappresentazione di testo di informazioni di connessione. Ad esempio, se l'origine dati è un database di SQL Server, è possibile specificare il nome del database. Per le origini dati incorporate, è inoltre possibile scrivere stringhe di connessione basate su espressioni che vengono valutate in fase di esecuzione. Per altre informazioni, vedere [Stringhe di connessione basate su espressioni](#bkmk_Expressions_in_connection_strings) più avanti in questo argomento.  
   
 -   **Credenziali** Consente di specificare le credenziali necessarie per l'accesso ai dati. Il proprietario dell'origine dati deve concedere all'utente le autorizzazioni appropriate per l'accesso all'origine dati e ai dati specifici di tale origine. Per eseguire, ad esempio, la connessione al database di esempio [!INCLUDE[ssSampleDBnormal](../includes/sssampledbnormal-md.md)] installato in un server di rete, è necessario disporre dell'autorizzazione per la connessione al server, nonché di quella per l'accesso in sola lettura al database.  
   
@@ -146,7 +146,7 @@ ms.locfileid: "56291770"
 |Origine dati XML, documento XML|`http://localhost/XML/Customers.xml`|Impostare il tipo di origine dati su `XML`. La stringa di connessione è un URL per il documento XML.|  
 |Origine dati XML, documento XML incorporato|*Vuoto*|Impostare il tipo di origine dati su `XML`. I dati XML vengono incorporati nella definizione del report.|  
   
- Se non è possibile connettersi a un server di report usando `localhost`, verificare che il protocollo di rete per TCP/IP sia abilitato. Per altre informazioni, vedere [Configure Client Protocols](../database-engine/configure-windows/configure-client-protocols.md).  
+ Se non è possibile connettersi a un server di report utilizzando `localhost`, verificare che il protocollo di rete per TCP/IP sia abilitato. Per altre informazioni, vedere [Configure Client Protocols](../database-engine/configure-windows/configure-client-protocols.md).  
   
  Per altre informazioni sulle configurazioni necessarie per connettersi a questi tipi di origini dati, vedere l'argomento specifico relativo alla connessione dati in [Aggiungere dati da origini dati esterne &#40;SSRS&#41;](report-data/add-data-from-external-data-sources-ssrs.md) o [Origini dati supportate da Reporting Services &#40;SSRS&#41;](create-deploy-and-manage-mobile-and-paginated-reports.md).  
   
@@ -185,5 +185,3 @@ ms.locfileid: "56291770"
  [Impostare le proprietà di distribuzione &#40;Reporting Services&#41;](tools/set-deployment-properties-reporting-services.md)   
  [Specificare le credenziali e le informazioni sulla connessione per le origini dati del report](report-data/specify-credential-and-connection-information-for-report-data-sources.md)   
  [Aggiungere e verificare una connessione dati o un'origine dati &#40;Report e SSRS&#41;](report-data/add-and-verify-a-data-connection-report-builder-and-ssrs.md)  
-  
-  

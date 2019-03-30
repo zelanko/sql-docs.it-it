@@ -10,12 +10,12 @@ ms.assetid: 04be5896-2301-45f5-a8ce-5f4ef2b69aa5
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 90659977d3183108b5d97fe0bc92894f5277bb85
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.openlocfilehash: 2f8854dba3c1d998d572481c285ee75dc933e480
+ms.sourcegitcommit: 706f3a89fdb98e84569973f35a3032f324a92771
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58394410"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58658055"
 ---
 # <a name="working-with-the-oracle-cdc-service"></a>Utilizzo del servizio Oracle CDC
   In questa sezione vengono descritti alcuni concetti importanti relativi al servizio Oracle CDC. I concetti inclusi in questa sezione sono i seguenti:  
@@ -24,7 +24,7 @@ ms.locfileid: "58394410"
   
      In questa sezione vengono descritte le tabelle incluse in questo database e ne viene sottolineata l'importanza per CDC.  
   
--   [Database CDC](#BKMK_CDCdatabas)  
+-   [Database CDC](#BKMK_CDCdatabase)  
   
      In questa sezione viene fornita una breve descrizione dei database CDC. Questi database vengono creati utilizzando Oracle CDC Designer Console. Per ulteriori informazioni sui database CDC, vedere la documentazione inclusa con l'installazione di Oracle CDC Designer Console.  
   
@@ -94,7 +94,7 @@ ms.locfileid: "58394410"
 |NAME|Nome del database Oracle nell'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .|  
 |config_version|Timestamp (UTC) per l'ultima modifica della tabella **xdbcdc_config** del database CDC corrispondente o timestamp (UTC) per la riga corrente di questa tabella.<br /><br /> Il trigger UPDATE applica un valore di GETUTCDATE () per questo elemento. Tramite**config_version** il servizio CDC identifica l'istanza di CDC che deve essere controllata per la modifica della configurazione o per l'abilitazione o la disabilitazione.|  
 |cdc_service_name|Tramite questo elemento è possibile determinare quale servizio Oracle CDC gestisce il database Oracle selezionato.|  
-|enabled|Indica se l'istanza di Oracle CDC è attiva (1) o disabilitata (0). All'avvio del servizio Oracle CDC verranno avviate solo le istanze contrassegnate come abilitate (1).<br /><br /> **Nota**: Un'istanza di Oracle CDC può essere disabilitata a causa di un errore non irreversibile. In questo caso, è necessario riavviare manualmente l'istanza dopo avere risolto l'errore.|  
+|enabled|Indica se l'istanza di Oracle CDC è attiva (1) o disabilitata (0). All'avvio del servizio Oracle CDC verranno avviate solo le istanze contrassegnate come abilitate (1).<br /><br /> **Nota**: un'istanza di Oracle CDC può essere disabilitata in seguito a un errore non ripetibile. In questo caso, è necessario riavviare manualmente l'istanza dopo avere risolto l'errore.|  
   
 ###  <a name="BKMK_dboxdbcdc_services"></a> dbo.xdbcdc_services  
  In questa tabella sono elencati i servizi CDC associati all'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] host. Questa tabella viene utilizzata da CDC Designer Console per determinare l'elenco di servizi CDC configurati per l'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] locale. Viene inoltre utilizzata dal servizio CDC per garantire che solo un servizio Windows in esecuzione gestisca un determinato nome di servizio CDC.  
@@ -217,7 +217,7 @@ ms.locfileid: "58394410"
   
  **sql-username**e **sql-password** sono le credenziali di autenticazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] da aggiornare. Se per sqlacct non sono stati specificati password e nome utente, la connessione tra il servizio Oracle CDC e [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] viene effettuata tramite l'autenticazione di Windows.  
   
- **Nota**: Qualsiasi parametro contenente spazi o virgolette doppie deve essere racchiuse tra virgolette doppie ("). Le virgolette doppie incorporate devono essere raddoppiate, ad esempio per usare **"A#B" D** come password immettere **""A#B"" D"**.  
+ **Nota**: qualsiasi parametro contenente spazi o virgolette doppie deve essere racchiuso tra virgolette doppie ("). Le virgolette doppie incorporate devono essere raddoppiate, ad esempio per usare **"A#B" D** come password immettere **""A#B"" D"**.  
   
 ###  <a name="BKMK_create"></a> Create  
  Utilizzare `Create` per creare un servizio Oracle CDC da uno script. Il comando deve essere eseguito dall'amministratore di un computer. Di seguito è riportato un esempio del comando `Create` :  
@@ -243,7 +243,7 @@ ms.locfileid: "58394410"
   
  **sql-username**e **sql-password** sono il nome dell'account e la password di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usati per la connessione all'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Se entrambi questi parametri sono vuoti, la connessione tra il servizio CDC per Oracle e [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] viene effettuata utilizzando l'autenticazione di Windows.  
   
- **Nota**: Qualsiasi parametro contenente spazi o virgolette doppie deve essere racchiuse tra virgolette doppie ("). Le virgolette doppie incorporate devono essere raddoppiate, ad esempio per usare **"A#B" D** come password immettere **""A#B"" D"**.  
+ **Nota**: qualsiasi parametro contenente spazi o virgolette doppie deve essere racchiuso tra virgolette doppie ("). Le virgolette doppie incorporate devono essere raddoppiate, ad esempio per usare **"A#B" D** come password immettere **""A#B"" D"**.  
   
 ###  <a name="BKMK_delete"></a> Elimina  
  Utilizzare `Delete` per eliminare il servizio Oracle CDC da uno script. Questo comando deve essere eseguito dall'amministratore di un computer. Di seguito è riportato un esempio del comando `Delete` .  
@@ -258,10 +258,8 @@ ms.locfileid: "58394410"
   
  **cdc-service-name** è il nome del servizio CDC da eliminare.  
   
- **Nota**: Qualsiasi parametro contenente spazi o virgolette doppie deve essere racchiuse tra virgolette doppie ("). Le virgolette doppie incorporate devono essere raddoppiate, ad esempio per usare **"A#B" D** come password immettere **""A#B"" D"**.  
+ **Nota**: qualsiasi parametro contenente spazi o virgolette doppie deve essere racchiuso tra virgolette doppie ("). Le virgolette doppie incorporate devono essere raddoppiate, ad esempio per usare **"A#B" D** come password immettere **""A#B"" D"**.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Procedura di utilizzo dell'interfaccia della riga di comando del servizio CDC](how-to-use-the-cdc-service-command-line-interface.md)   
  [Procedura di preparazione di SQL Server per CDC](prepare-sql-server-for-cdc.md)  
-  
-  
