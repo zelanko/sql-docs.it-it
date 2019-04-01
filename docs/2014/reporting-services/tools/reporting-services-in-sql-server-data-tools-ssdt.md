@@ -13,12 +13,12 @@ ms.assetid: 0903c7b2-ac59-45f1-b7d0-922ecd9d76f8
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.openlocfilehash: d3411efb39bf6d944c1646704185ef9038aba1db
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: dab79e4efec442a24eb9bb5d944cb52e5c9b5640
+ms.sourcegitcommit: 706f3a89fdb98e84569973f35a3032f324a92771
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56289329"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58658341"
 ---
 # <a name="reporting-services-in-sql-server-data-tools-ssdt"></a>Reporting Services in SQL Server Data Tools (SSDT)
   [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)] è un [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] ambiente include miglioramenti specifici di soluzioni di business intelligence. [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)] è incluso in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
@@ -31,9 +31,7 @@ ms.locfileid: "56289329"
   
 ##  <a name="bkmk_SolutionsandProjects"></a> Soluzioni e progetti  
  Un progetto report costituisce il contenitore per le definizioni e le risorse del report. Tutti i file inclusi nel progetto report vengono pubblicati nel server di report al momento della distribuzione del progetto. Quando si crea un progetto per la prima volta, viene creata anche una soluzione come contenitore per il progetto. A una singola soluzione è possibile aggiungere più progetti.  
-  
- ![Icona freccia usata con il collegamento Torna all'inizio](../../2014-toc/media/uparrow16x16.gif "Icona freccia usata con il collegamento Torna all'inizio") [Torna all'inizio](#bkmk_Top)  
-  
+
 ##  <a name="bkmk_Configurations"></a> Configurazioni  
  Per creare più set di proprietà di progetto per distribuzioni diversificate, ad esempio server di report aziendali di test e produzione, utilizzare Gestione configurazione. Per altre informazioni, vedere [Distribuzione e supporto della versione in SQL Server Data Tools &#40;SSRS&#41;](deployment-and-version-support-in-sql-server-data-tools-ssrs.md).  
   
@@ -45,11 +43,9 @@ ms.locfileid: "56289329"
 -   **Creazione guidata progetto server di report.** Quando si seleziona un progetto Creazione guidata server di report, verrà creato automaticamente un progetto server di report e verrà aperta la Creazione guidata report. Nella procedura guidata è possibile creare un report seguendo le istruzioni riportate in ogni pagina per creare una stringa di connessione a un'origine dati, impostare le credenziali dell'origine dati, progettare una query, aggiungere un'area dati Tabella o Matrice, specificare i dati del report e i gruppi, selezionare uno stile di carattere e colore, pubblicare il report in un server di report e visualizzare l'anteprima del report in locale. Dopo aver creato un report con la procedura guidata, è possibile modificarne i dati e la finestra di progettazione tramite Progettazione report nel progetto server di report.  
   
  ![Nuovi modelli di progetto in SSDT](../../analysis-services/media/ssdt-biprojects.png "Nuovi modelli di progetto in SSDT")  
-  
- ![Icona freccia usata con il collegamento Torna all'inizio](../../2014-toc/media/uparrow16x16.gif "Icona freccia usata con il collegamento Torna all'inizio") [Torna all'inizio](#bkmk_Top)  
-  
+
 ##  <a name="bkmk_ReportDesignerWindowsandPanes"></a> Finestre e riquadri Progettazione report  
- Progettazione report supporta due visualizzazioni: **Progettazione** per definire i dati e il layout del report, e **anteprima** per visualizzare una visualizzazione sottoposta a rendering del report. In ogni visualizzazione è possibile aprire più finestre per progettare o visualizzare un report visualizzabile.  
+ Progettazione report supporta due visualizzazioni: **Progettazione** per definire i dati e il layout del report e **Anteprima** per mostrare una visualizzazione del report di cui è stato eseguito il rendering. In ogni visualizzazione è possibile aprire più finestre per progettare o visualizzare un report visualizzabile.  
   
 ###  <a name="bkmk_ReportDataPane"></a> Riquadro Dati report  
  Nel riquadro dei dati del report vengono visualizzati campi predefiniti, origini dati, set di dati, raccolte di campi, parametri di report e immagini.  
@@ -72,9 +68,7 @@ ms.locfileid: "56289329"
   
 > [!NOTE]  
 >  Se non si vedere il riquadro dati Report, nel **View** menu, fare clic su **i dati del Report**. Se il riquadro dei dati del report è mobile, è possibile ancorarlo. Per altre informazioni, vedere [Ancorare il riquadro dei dati del report in Progettazione report &#40;SSRS&#41;](dock-the-report-data-pane-in-report-designer-ssrs.md).  
-  
- ![Icona freccia usata con il collegamento Torna all'inizio](../../2014-toc/media/uparrow16x16.gif "Icona freccia usata con il collegamento Torna all'inizio") [Torna all'inizio](#bkmk_Top)  
-  
+
 ###  <a name="bkmk_GroupingPane"></a> Riquadro di raggruppamento  
  Utilizzare il riquadro di raggruppamento per definire i gruppi per un'area dati Tablix. È possibile definire gruppi di righe e gruppi di dettagli per le tabelle, nonché gruppi di righe e colonne per le matrici. Non è possibile utilizzare il riquadro di raggruppamento per definire gruppi per grafici o altre aree dati. Per altre informazioni, vedere [Informazioni sui gruppi &#40;Generatore report e SSRS&#41;](../report-design/understanding-groups-report-builder-and-ssrs.md).  
   
@@ -89,10 +83,8 @@ ms.locfileid: "56289329"
 > [!NOTE]  
 >  Per passare dalla modalità **Predefinita** alla modalità **Avanzata** (e viceversa), fare clic con il pulsante destro del mouse sulla freccia GIÙ a destra dell'icona **Gruppi di colonne** .  
   
- Per altre informazioni, vedere [Raggruppamento date](grouping-pane.md).  
-  
- ![Icona freccia usata con il collegamento Torna all'inizio](../../2014-toc/media/uparrow16x16.gif "Icona freccia usata con il collegamento Torna all'inizio") [Torna all'inizio](#bkmk_Top)  
-  
+ Per altre informazioni, vedere [Riquadro di raggruppamento](grouping-pane.md).  
+
 ###  <a name="bkmk_Toolbox"></a> Casella degli strumenti  
  La casella degli strumenti contiene elementi del report che è possibile trascinare nell'area di progettazione. Le aree dati sono elementi del report che è possibile utilizzare per organizzare i dati nel report. Tabelle, matrici, elenchi, grafici, misuratori, barre dei dati, grafici sparkline e indicatori sono aree dati. Altri elementi del report sono Mappa, Casella di testo, Rettangolo, Riga, Immagine e Sottoreport. In questo elenco possono anche essere inclusi elementi del report personalizzati, se sono stati installati e registrati dall'amministratore del sistema.  
   
@@ -108,9 +100,7 @@ ms.locfileid: "56289329"
 -   Impostare le proprietà per il membro del gruppo attualmente selezionato nel riquadro di raggruppamento. Le proprietà dei membri del gruppo consentono di controllare in che modo le righe dell'intestazione e del piè di pagina di un gruppo statico si ripetono per ogni istanza di un gruppo. Per altre informazioni, vedere [Visualizzare intestazioni e piè di pagina con un gruppo &#40;Generatore report e SSRS&#41;](../report-design/display-headers-and-footers-with-a-group-report-builder-and-ssrs.md).  
   
  Per visualizzare il riquadro Proprietà, scegliere **Finestra Proprietà** dal menu **Visualizza**. È possibile annullare l'ancoraggio a questo riquadro e spostarlo in un'altra area della finestra di [!INCLUDE[ssBIDevStudio](../../../includes/ssbidevstudio-md.md)]oppure aprirlo come visualizzazione a schede nell'area di progettazione.  
-  
- ![Icona freccia usata con il collegamento Torna all'inizio](../../2014-toc/media/uparrow16x16.gif "Icona freccia usata con il collegamento Torna all'inizio") [Torna all'inizio](#bkmk_Top)  
-  
+
 ###  <a name="bkmk_SolutionExplorer"></a> Esplora soluzioni  
  Esplora soluzioni è un componente standard di [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] in cui vengono visualizzati tutti gli elementi del progetto. Per un progetto server di report, questo componente include cartelle per organizzare origini dati condivise, set di dati condivisi, report e risorse. Gli elementi della cartella vengono automaticamente disposti in ordine alfabetico quando si apre il file di soluzione. Per visualizzare le proprietà dell'elemento nel riquadro Proprietà, selezionare questo elemento.  
   
@@ -118,9 +108,7 @@ ms.locfileid: "56289329"
  Nella finestra di output vengono visualizzati gli errori di elaborazione che si verificano durante la visualizzazione dell'anteprima di un report e gli errori di pubblicazione che si verificano quando si distribuisce un report o un'origine dati condivisa.  
   
  Utilizzare la finestre di output e la finestra Struttura documento per eseguire il debug degli errori contenuti nelle espressioni.  
-  
- ![Icona freccia usata con il collegamento Torna all'inizio](../../2014-toc/media/uparrow16x16.gif "Icona freccia usata con il collegamento Torna all'inizio") [Torna all'inizio](#bkmk_Top)  
-  
+
 ###  <a name="bkmk_DocumentOutline"></a> Struttura documento.  
  Nella finestra Struttura documento viene visualizzato un elenco gerarchico di tutti gli elementi del report inclusi nella definizione del report. Per aprire il riquadro Struttura documento, scegliere **Altre finestre** dal menu **Visualizza** e quindi fare clic sulla **finestra del documento**.  
   
@@ -128,9 +116,7 @@ ms.locfileid: "56289329"
   
 ###  <a name="bkmk_TaskList"></a> Elenco attività  
  Nella finestra Elenco attività vengono visualizzati gli errori di compilazione relativi alle funzionalità non supportate quando si importa un report da un'altra applicazione, ad esempio [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Access.  
-  
- ![Icona freccia usata con il collegamento Torna all'inizio](../../2014-toc/media/uparrow16x16.gif "Icona freccia usata con il collegamento Torna all'inizio") [Torna all'inizio](#bkmk_Top)  
-  
+
 ##  <a name="bkmk_ReportDesignerDesignView"></a> Visualizzazione Progettazione di Progettazione report  
  Per impostazione predefinita, quando si crea un progetto server di report, Progettazione report viene aperto in visualizzazione Progettazione e consente di visualizzare l'area di progettazione. Per impostazione predefinita, nell'area di progettazione vengono visualizzati il corpo e lo sfondo del report.  
   
@@ -139,9 +125,7 @@ ms.locfileid: "56289329"
  Utilizzare il controllo Zoom per aumentare o ridurre l'ingrandimento del report.  
   
  Per progettare un report, trascinare gli elementi del report dalla casella degli strumenti all'area di progettazione, configurare quindi le proprietà di questi elementi e modificarne la disposizione nel report.  
-  
- ![Icona freccia usata con il collegamento Torna all'inizio](../../2014-toc/media/uparrow16x16.gif "Icona freccia usata con il collegamento Torna all'inizio") [Torna all'inizio](#bkmk_Top)  
-  
+
 ##  <a name="bkmk_ReportDesignerPreview"></a> Anteprima di Progettazione report  
  Utilizzare Anteprima per eseguire il report e aprire il report visualizzabile nel visualizzatore di report. Con l'anteprima i dati del report vengono memorizzati nella cache in locale. È anche possibile impostare le proprietà di configurazione in modo da eseguire il report in modalità debug, tramite un browser.  
   
@@ -154,9 +138,7 @@ ms.locfileid: "56289329"
 -   **Visualizzazione dell'anteprima del report tramite Gestione configurazione e Debug.** In [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)]le proprietà del progetto consentono di definire come distribuire i report ed eseguirne il debug. Queste proprietà si applicano a tutti i report e a tutte le origini dati condivise del progetto. Per impostare le proprietà del progetto, scegliere **Proprietà** dal menu **Progetto**. Utilizzare queste impostazioni per testare i report e pubblicarli nel server di report.  
   
 -   **Monitoraggio del riquadro di output per individuare i messaggi di errore.** Quando si visualizza l'anteprima di un report e viene rilevato un problema, il componente Elaborazione report scrive i messaggi di errore nel riquadro di output.  
-  
- ![Icona freccia usata con il collegamento Torna all'inizio](../../2014-toc/media/uparrow16x16.gif "Icona freccia usata con il collegamento Torna all'inizio") [Torna all'inizio](#bkmk_Top)  
-  
+
 ##  <a name="bkmk_ReportDesignerMenus"></a> Menu di Progettazione report  
  Quando in [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)]è attivo un progetto di Progettazione report, alla barra degli strumenti principale vengono aggiunte le barre degli strumenti seguenti. I menu di Progettazione report sono visibili solo in visualizzazione Progettazione.  
   
@@ -188,7 +170,7 @@ ms.locfileid: "56289329"
   
 -   **Proprietà report** Selezionare questa opzione per aprire la finestra di dialogo **Proprietà report** , in cui è possibile assegnare proprietà generali del report come il nome dell'autore e la spaziatura della griglia, nonché proprietà per il layout come il numero di colonne e le dimensioni pagina. È inoltre possibile includere codice personalizzato, riferimenti ad assembly e classi e i nomi di elementi di output dei dati, trasformazioni dati e schemi dati.  
   
--   **Visualizzazione** passare tra le due schede di progettazione Report: Progettazione e Anteprima.  
+-   **Visualizzazione** Consente di passare tra le due schede di Progettazione report: Progettazione e Anteprima.  
   
 -   **Intestazione pagina** Consente di aggiungere o eliminare un'intestazione di pagina nel report. L'eliminazione di un'intestazione di pagina implica la rimozione di tutti gli elementi al suo interno.  
   
@@ -231,9 +213,7 @@ ms.locfileid: "56289329"
 -   **Aggiorna elementi della casella degli strumenti del progetto** Consente di aggiornare la cache della casella degli strumenti quando si installano nuovi elementi del report personalizzati nel progetto.  
   
 -   **Proprietà** Consente di aprire la finestra di dialogo **Pagine delle proprietà** per il progetto. Per altre informazioni, vedere [Finestra di dialogo Pagine delle proprietà del progetto](project-property-pages-dialog-box.md).  
-  
- ![Icona freccia usata con il collegamento Torna all'inizio](../../2014-toc/media/uparrow16x16.gif "Icona freccia usata con il collegamento Torna all'inizio") [Torna all'inizio](#bkmk_Top)  
-  
+
 ##  <a name="bkmk_ReportDesignerToolbars"></a> Barre degli strumenti di Progettazione report  
  In Progettazione report sono disponibili le seguenti barre degli strumenti speciali da utilizzare per la progettazione di report:  
   
@@ -248,9 +228,7 @@ ms.locfileid: "56289329"
 -   **Standard** Consente di aprire o salvare progetti, visualizzare finestre e selezionare la configurazione di debug.  
   
  Usare il menu **Visualizza** per controllare se visualizzare o meno queste barre degli strumenti. È possibile che altre barre degli strumenti di [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] siano disabilitate se le relative funzionalità non sono applicabili alle funzionalità di Progettazione report.  
-  
- ![Icona freccia usata con il collegamento Torna all'inizio](../../2014-toc/media/uparrow16x16.gif "Icona freccia usata con il collegamento Torna all'inizio") [Torna all'inizio](#bkmk_Top)  
-  
+
 ##  <a name="bkmk_SourceControl"></a> Controllo del codice sorgente  
  [!INCLUDE[ssBIDevStudio](../../../includes/ssbidevstudio-md.md)] può essere integrato con i plug-in di origine. Usare le pagine Progetti e soluzioni della finestra di dialogo **Opzioni** per specificare il plug-in e configurare le proprietà.  
   
@@ -258,9 +236,7 @@ ms.locfileid: "56289329"
  Per utilizzare report personalizzati come modelli per nuovi report, è sufficiente copiarli nella cartella ReportProject nel computer in cui è installato [!INCLUDE[ssBIDevStudio](../../../includes/ssbidevstudio-md.md)] . Per impostazione predefinita, questa cartella è \<unità >: \Programmi\Microsoft Visual Studio 10.0\Common7\IDE\Private assemblies\projectitems\reportproject. Quando si aggiunge un nuovo elemento al progetto report, il report personalizzato viene visualizzato nel riquadro dei Modelli.  
   
  È inoltre possibile aggiungere stili personalizzati alla procedura guidata del report.  
-  
- ![Icona freccia usata con il collegamento Torna all'inizio](../../2014-toc/media/uparrow16x16.gif "Icona freccia usata con il collegamento Torna all'inizio") [Torna all'inizio](#bkmk_Top)  
-  
+
 ##  <a name="bkmk_CommandLineSupportForssdt"></a> Supporto della riga di comando per SQL Server Data Tools  
  [!INCLUDE[ssBIDevStudio](../../../includes/ssbidevstudio-md.md)] basa [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] 10.0 e sull'applicazione devenv.exe sottostante. Prima di poter utilizzare queste opzioni, è necessario impostare i valori validi dei seguenti due elementi:  
   
@@ -289,9 +265,7 @@ ms.locfileid: "56289329"
     ```  
     devenv.exe "C:\Users\MyUser\Documents\Visual Studio 2010\Projects\Reports\Reports.sln" /build "Debug" /out mybuildlog.txt  
     ```  
-  
- ![Icona freccia usata con il collegamento Torna all'inizio](../../2014-toc/media/uparrow16x16.gif "Icona freccia usata con il collegamento Torna all'inizio") [Torna all'inizio](#bkmk_Top)  
-  
+
 ##  <a name="bkmk_KeyboardShortcuts"></a> Tasti di scelta rapida di Reporting Services  
  Utilizzare i tasti di scelta rapida per:  
   
@@ -320,9 +294,7 @@ ms.locfileid: "56289329"
     |In una casella di testo, seleziona il testo dalla posizione corrente del cursore all'inizio dell'espressione|CTRL+MAIUSC+HOME|  
     |In una casella di testo, seleziona il testo dalla posizione corrente del cursore alla fine dell'espressione|CTRL+MAIUSC+FINE|  
     |Consente di aprire il menu di scelta rapida dell'elemento del report selezionato|MAIUSC+F10+tasto della proprietà nelle tastiere più recenti|  
-  
- ![Icona freccia usata con il collegamento Torna all'inizio](../../2014-toc/media/uparrow16x16.gif "Icona freccia usata con il collegamento Torna all'inizio") [Torna all'inizio](#bkmk_Top)  
-  
+
 ## <a name="see-also"></a>Vedere anche  
  [Esplora soluzioni](../../ssms/solution/solution-explorer.md)   
  [Report di Reporting Services &#40;SSRS&#41;](../reports/reporting-services-reports-ssrs.md)   
