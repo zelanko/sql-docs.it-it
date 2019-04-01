@@ -9,12 +9,12 @@ ms.prod_service: reporting-services-native, reporting-services-sharepoint
 ms.topic: conceptual
 ms.custom: seodec18
 ms.date: 12/14/2018
-ms.openlocfilehash: 586a8623e202674cdab644ac882be3ed45adc62a
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
-ms.translationtype: HT
+ms.openlocfilehash: 3acb11029c767efb3be21274d27ab271a5140793
+ms.sourcegitcommit: 706f3a89fdb98e84569973f35a3032f324a92771
+ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56293993"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58658075"
 ---
 # <a name="analysis-and-reporting-with-microsoft-business-intelligence-bi-tools"></a>Analisi dei dati e creazione di report con gli strumenti di business intelligence (BI) di Microsoft
 
@@ -22,7 +22,7 @@ La scelta dello strumento di business intelligence appropriato può risultare co
 
 Nella tabella seguente viene indicato il mapping dei carichi di lavoro per l'analisi dei dati e gli strumenti di Business Intelligence di Microsoft più appropriati per i carichi di lavoro. Per ulteriori informazioni su un prodotto, fare clic sul relativo collegamento nella tabella.  
   
- Per una breve panoramica di questi strumenti che permetta di definire quelli più appropriati, vedere la pagina sull'[introduzione agli strumenti di Microsoft Business Intelligence (BI)](https://msdn.microsoft.com/library/dn655131.aspx).  
+ Per una breve panoramica di questi strumenti che permetta di definire quelli più appropriati, vedere la pagina sull'[introduzione agli strumenti di Microsoft Business Intelligence (BI)](https://download.microsoft.com/download/D/2/0/D20E1C5F-72EA-4505-9F26-FEF9550EFD44/Introducing_Microsoft_BI_Tools.docx).
   
 |Carichi di lavoro|Utente|||Strumenti di Business Intelligence|||  
 |---------------|----------|-|-|--------------|-|-|  

@@ -1,6 +1,6 @@
 ---
 title: ADD SENSITIVITY CLASSIFICATION (Transact-SQL) | Microsoft Docs
-ms.date: 06/17/2018
+ms.date: 03/25/2019
 ms.reviewer: ''
 ms.prod: sql
 ms.technology: t-sql
@@ -24,15 +24,15 @@ helpviewer_keywords:
 - information types
 - data classification
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: 4296a2b56f5c347a26435a4c192c6dfac7f16538
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 9e4fee7a2504255b0763cf9cfad708fd341d336d
+ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56018283"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58494063"
 ---
 # <a name="add-sensitivity-classification-transact-sql"></a>ADD SENSITIVITY CLASSIFICATION (Transact-SQL)
-[!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-xxxxxx-asdb-asdw-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-asdw-xxx-md.md)]
 
 Aggiunge i metadati sulla classificazione di riservatezza a una o più colonne di database. La classificazione può includere un'etichetta di riservatezza e un tipo di informazioni.  
 
@@ -92,7 +92,7 @@ ADD SENSITIVITY CLASSIFICATION TO
 - La vista di sistema [sys.sensitivity_classifications](../../relational-databases/system-catalog-views/sys-sensitivity-classifications-transact-sql.md) può essere usata per recuperare le informazioni sulla classificazione di riservatezza per un database.
 
 
-## <a name="permissions"></a>Permissions
+## <a name="permissions"></a>Autorizzazioni
 
 È necessaria l'autorizzazione ALTER ANY SENSITIVITY CLASSIFICATION. L'autorizzazione ALTER ANY SENSITIVITY CLASSIFICATION è implicita nell'autorizzazione del database ALTER o nell'autorizzazione del server CONTROL SERVER.
 
@@ -109,7 +109,7 @@ ADD SENSITIVITY CLASSIFICATION TO
     WITH ( LABEL='Highly Confidential', INFORMATION_TYPE='Financial' )
 ```  
 
-### <a name="b-classifying-only-a-label"></a>b. Classificazione di una sola etichetta
+### <a name="b-classifying-only-a-label"></a>B. Classificazione di una sola etichetta
 L'esempio seguente classifica la colonna **dbo.customer.comments** con l'etichetta **Confidential** e l'ID etichetta **643f7acd-776a-438d-890c-79c3f2a520d6**. Il tipo di informazioni non è classificato per questa colonna.
 
 ```sql

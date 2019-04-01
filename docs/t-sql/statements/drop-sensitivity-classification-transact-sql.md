@@ -1,6 +1,6 @@
 ---
 title: DROP SENSITIVITY CLASSIFICATION (Transact-SQL) | Microsoft Docs
-ms.date: 06/17/2018
+ms.date: 03/25/2019
 ms.reviewer: ''
 ms.prod: sql
 ms.technology: t-sql
@@ -25,15 +25,15 @@ helpviewer_keywords:
 - information types
 - data classification
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: 82bd6847bd50d8ba43795f56deab4a6f08cc29cc
-ms.sourcegitcommit: 467b2c708651a3a2be2c45e36d0006a5bbe87b79
+ms.openlocfilehash: 871822e57e9109455614e1391a28d87a6d9e6b90
+ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53980107"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58493093"
 ---
 # <a name="drop-sensitivity-classification-transact-sql"></a>DROP SENSITIVITY CLASSIFICATION (Transact-SQL)
-[!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-xxxxxx-asdb-asdw-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-asdw-xxx-md.md)]
 
 Elimina i metadati di classificazione della riservatezza da una o più colonne di database.
 
@@ -62,7 +62,7 @@ Si tratta del nome della colonna del database da cui rimuovere la classificazion
 
 - È possibile eliminare più classificazioni di oggetti usando una sola istruzione 'DROP SENSITIVITY CLASSIFICATION'.
 
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorizzazioni  
 
 È necessaria l'autorizzazione ALTER ANY SENSITIVITY CLASSIFICATION. L'autorizzazione ALTER ANY SENSITIVITY CLASSIFICATION è implicita nell'autorizzazione del database ALTER o nell'autorizzazione del server CONTROL SERVER.
 
@@ -79,7 +79,7 @@ DROP SENSITIVITY CLASSIFICATION FROM
     dbo.sales.price
 ```
 
-### <a name="b-dropping-classification-from-multiple-columns"></a>b. Eliminazione della classificazione da più colonne
+### <a name="b-dropping-classification-from-multiple-columns"></a>B. Eliminazione della classificazione da più colonne
 
 Nell'esempio seguente la classificazione viene rimossa dalle colonne `dbo.sales.price`, `dbo.sales.discount` e `SalesLT.Customer.Phone`.  
 

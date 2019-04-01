@@ -8,12 +8,12 @@ ms.topic: conceptual
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: b9ae80895fa2cfd316e455e5084e5c1330365a62
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
-ms.translationtype: HT
+ms.openlocfilehash: b584c7fc3ffee49bf2d63fd95c8a8e23f0b09013
+ms.sourcegitcommit: 706f3a89fdb98e84569973f35a3032f324a92771
+ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52504298"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58657686"
 ---
 # <a name="powershell-cmdlets-for-reporting-services-sharepoint-mode"></a>Cmdlet di PowerShell per la modalità SharePoint di Reporting Services
 
@@ -34,7 +34,7 @@ Quando si installa la modalità SharePoint di SQL Server 2016 Reporting Services
 
 ## <a name="cmdlet-summary"></a>Riepilogo cmdlet
 
- Per eseguire i cmdlet è necessario aprire la shell di gestione SharePoint. È anche possibile usare l'editor dell'interfaccia utente grafica incluso in Microsoft Windows, **Windows PowerShell Integrated Scripting Environment (ISE)**. Per altre informazioni, vedere [Starting Windows PowerShell on Windows Server (Avvio di Windows PowerShell su Windows Server)](https://technet.microsoft.com/library/hh847814.aspx). Nei riepiloghi di cmdlet che seguono, i riferimenti ai "database" delle applicazioni di servizio indicano tutti i database creati e usati da un'applicazione di servizio Reporting Services. Sono inclusi i database di configurazione, di avvisi e temporaneo.  
+ Per eseguire i cmdlet è necessario aprire la shell di gestione SharePoint. È anche possibile usare l'editor dell'interfaccia utente grafica incluso in Microsoft Windows, **Windows PowerShell Integrated Scripting Environment (ISE)**. Per altre informazioni, vedere [Starting Windows PowerShell on Windows Server (Avvio di Windows PowerShell su Windows Server)](https://docs.microsoft.com/powershell/scripting/getting-started/starting-windows-powershell). Nei riepiloghi di cmdlet che seguono, i riferimenti ai "database" delle applicazioni di servizio indicano tutti i database creati e usati da un'applicazione di servizio Reporting Services. Sono inclusi i database di configurazione, di avvisi e temporaneo.  
   
  Se quando si digitano gli esempi di PowerShell si visualizza un messaggio di errore simile al seguente:  
   
@@ -61,7 +61,7 @@ Quando si installa la modalità SharePoint di SQL Server 2016 Reporting Services
   
 3.  Fare clic su **Shell di gestione SharePoint**.  
   
- Per visualizzare le informazioni della Guida relative alla riga di comando per un cmdlet, usare il comando PowerShell "Get-Help" al prompt dei comandi di PowerShell. Ad esempio  
+ Per visualizzare le informazioni della Guida relative alla riga di comando per un cmdlet, usare il comando PowerShell "Get-Help" al prompt dei comandi di PowerShell. Esempio:  
   
  `Get-Help Get-SPRSServiceApplicationServers`  
   
@@ -94,7 +94,7 @@ Quando si installa la modalità SharePoint di SQL Server 2016 Reporting Services
 |Mount-SPRSDatabase|Monta i database di un'applicazione di servizio Reporting Services.|  
 |New-SPRSDatabase|Consente di creare nuovi database per l'applicazione di servizio Reporting Services specificata.|  
 |Get-SPRSDatabaseCreationScript|Genera come output sullo schermo lo script di creazione del database per un'applicazione di servizio Reporting Services. È quindi possibile eseguire lo script in SQL Server Management Studio.|  
-|Get-SPRSDatabase|Ottiene uno o più database dell'applicazione di servizio Reporting Services. Usare il comando per ottenere l'ID del database dell'applicazione di servizio in modo da potere usare il cmdlet Set-SPRSDatabase per modificare le proprietà, ad esempio `querytimeout`. Vedere l'esempio contenuto nell'argomento [Ottenere e impostare le proprietà del database dell'applicazione Reporting Service, ad esempio timeout database](#bkmk_example_db_properties).|  
+|Get-SPRSDatabase|Ottiene uno o più database dell'applicazione di servizio Reporting Services. Usare il comando per ottenere l'ID del database dell'applicazione di servizio in modo da potere usare il cmdlet Set-SPRSDatabase per modificare le proprietà, ad esempio `querytimeout`. Vedere l'esempio contenuto nell'argomento [Ottenere e impostare le proprietà del database dell'applicazione Reporting Service, ad esempio timeout database](#get-and-set-properties-of-the-reporting-service-application-database).|  
 |Get-SPRSDatabaseRightsScript|Genera come output sullo schermo lo script dei diritti del database per un'applicazione di servizio Reporting Services. Vengono richiesti l'utente desiderato e il database, quindi viene restituita l'istruzione Transact-SQL che è possibile eseguire per modificare le autorizzazioni. È quindi possibile eseguire lo script in SQL Server Management Studio.|  
 |Get-SPRSDatabaseUpgradeScript|Visualizza uno script di aggiornamento del database. Lo script consente di aggiornare i database dell'applicazione di servizio Reporting Services alla versione del database dell'installazione di Reporting Services corrente.|  
   
@@ -193,7 +193,7 @@ $emailXml.SelectSingleNode("//From").InnerText = '<your FROM email address>'
 Set-SPRSExtension -identity $app -ExtensionType "Delivery" -name "Report Server Email" -ExtensionConfiguration $emailXml.OuterXml  
 ```  
   
- Nell'esempio precedente, se non si conosce il nome esatto dell'applicazione di servizio, è possibile riscrivere la prima istruzione per ottenere l'applicazione di servizio in base a una ricerca del nome parziale. Ad esempio  
+ Nell'esempio precedente, se non si conosce il nome esatto dell'applicazione di servizio, è possibile riscrivere la prima istruzione per ottenere l'applicazione di servizio in base a una ricerca del nome parziale. Esempio:  
   
 ```  
 $app=get-sprsserviceapplication | where {$_.name -like " ssrs_testapp *"}  

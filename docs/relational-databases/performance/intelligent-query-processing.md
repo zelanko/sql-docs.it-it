@@ -13,12 +13,12 @@ author: joesackmsft
 ms.author: josack
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 78e818a535c31e60e1b73b4a48f301e8d90b7430
-ms.sourcegitcommit: 8bc5d85bd157f9cfd52245d23062d150b76066ef
+ms.openlocfilehash: 57d96068af7120ef4ccf4da8882093fa26908089
+ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/07/2019
-ms.locfileid: "57579741"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58493981"
 ---
 # <a name="intelligent-query-processing-in-sql-databases"></a>Elaborazione di query intelligenti nei database SQL
 
@@ -28,7 +28,7 @@ La famiglia di funzionalità di elaborazione di query intelligenti include funzi
 
 ![Elaborazione di query intelligenti](./media/3_iqpfeaturefamily.png)
 
-È possibile impostare automaticamente i carichi di lavoro come idonei all'elaborazione di query intelligenti abilitando il livello di compatibilità applicabile per il database.  Questa opzione è impostabile con Transact-SQL. Ad esempio  
+È possibile impostare automaticamente i carichi di lavoro come idonei all'elaborazione di query intelligenti abilitando il livello di compatibilità applicabile per il database.  Questa opzione è impostabile con Transact-SQL. Esempio:  
 
 ```sql
 ALTER DATABASE [WideWorldImportersDW] SET COMPATIBILITY_LEVEL = 150;
@@ -147,7 +147,7 @@ Per abilitare nuovamente i join adattivi per tutte le esecuzioni di query proven
 ALTER DATABASE SCOPED CONFIGURATION SET DISABLE_BATCH_MODE_ADAPTIVE_JOINS = OFF;
 ```
 
-È anche possibile disabilitare i join adattivi per una query specifica, definendo `DISABLE_BATCH_MODE_ADAPTIVE_JOINS` come [hint per la query USE HINT](../../t-sql/queries/hints-transact-sql-query.md#use_hint). Ad esempio
+È anche possibile disabilitare i join adattivi per una query specifica, definendo `DISABLE_BATCH_MODE_ADAPTIVE_JOINS` come [hint per la query USE HINT](../../t-sql/queries/hints-transact-sql-query.md#use_hint). Esempio:
 
 ```sql
 SELECT s.CustomerID,
@@ -213,7 +213,7 @@ Per abilitare nuovamente i commenti della concessione di memoria in modalità ba
 ALTER DATABASE SCOPED CONFIGURATION SET DISABLE_BATCH_MODE_MEMORY_GRANT_FEEDBACK = OFF;
 ```
 
-È anche possibile disabilitare i commenti sulla concessione di memoria in modalità batch per una query specifica definendo `DISABLE_BATCH_MODE_MEMORY_GRANT_FEEDBACK` come [hint per la query USE HINT](../../t-sql/queries/hints-transact-sql-query.md#use_hint). Ad esempio
+È anche possibile disabilitare i commenti sulla concessione di memoria in modalità batch per una query specifica definendo `DISABLE_BATCH_MODE_MEMORY_GRANT_FEEDBACK` come [hint per la query USE HINT](../../t-sql/queries/hints-transact-sql-query.md#use_hint). Esempio:
 
 ```sql
 SELECT * FROM Person.Address  
@@ -263,7 +263,7 @@ Per riabilitare il feedback delle concessioni di memoria in modalità riga per t
 ALTER DATABASE SCOPED CONFIGURATION SET ROW_MODE_MEMORY_GRANT_FEEDBACK = ON;
 ```
 
-È anche possibile disabilitare i commenti sulla concessione di memoria in modalità riga per una query specifica definendo `DISABLE_ROW_MODE_MEMORY_GRANT_FEEDBACK` come [hint per la query USE HINT](../../t-sql/queries/hints-transact-sql-query.md#use_hint). Ad esempio
+È anche possibile disabilitare i commenti sulla concessione di memoria in modalità riga per una query specifica definendo `DISABLE_ROW_MODE_MEMORY_GRANT_FEEDBACK` come [hint per la query USE HINT](../../t-sql/queries/hints-transact-sql-query.md#use_hint). Esempio:
 
 ```sql
 SELECT * FROM Person.Address  
@@ -353,7 +353,7 @@ Per abilitare nuovamente l'esecuzione interleaved per tutte le esecuzioni di que
 ALTER DATABASE SCOPED CONFIGURATION SET DISABLE_INTERLEAVED_EXECUTION_TVF = OFF;
 ```
 
-È anche possibile disabilitare l'esecuzione interleaved per una query specifica definendo `DISABLE_INTERLEAVED_EXECUTION_TVF` come [hint per la query USE HINT](../../t-sql/queries/hints-transact-sql-query.md#use_hint). Ad esempio
+È anche possibile disabilitare l'esecuzione interleaved per una query specifica definendo `DISABLE_INTERLEAVED_EXECUTION_TVF` come [hint per la query USE HINT](../../t-sql/queries/hints-transact-sql-query.md#use_hint). Esempio:
 
 ```sql
 SELECT [fo].[Order Key], [fo].[Quantity], [foo].[OutlierEventQuantity]
@@ -505,4 +505,4 @@ OPTION(RECOMPILE, USE HINT('DISALLOW_BATCH_MODE'));
 [Guida di riferimento a operatori Showplan logici e fisici](../../relational-databases/showplan-logical-and-physical-operators-reference.md)    
 [Join](../../relational-databases/performance/joins.md)    
 [Demonstrating Adaptive Query Processing](https://github.com/joesackmsft/Conferences/blob/master/Data_AMP_Detroit_2017/Demos/AQP_Demo_ReadMe.md)      (Dimostrazione dell'elaborazione di query adattive)  
-[Demonstrating Intelligent QP](https://github.com/joesackmsft/Conferences/blob/master/IQPDemos/IQP_Demo_ReadMe.md) (Dimostrazione di Query Processor intelligente)   
+[Demonstrating Intelligent QP](https://github.com/Microsoft/sql-server-samples/tree/master/samples/features/intelligent-query-processing) (Dimostrazione di Query Processor intelligente)   

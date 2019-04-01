@@ -30,12 +30,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 8c25ae621c281e0bafd3c2c7e683a05cfc55746b
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: 15688c3767b691e8a59568143db390eb82dd3993
+ms.sourcegitcommit: 706f3a89fdb98e84569973f35a3032f324a92771
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54128371"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58658425"
 ---
 # <a name="create-columnstore-index-transact-sql"></a>CREATE COLUMNSTORE INDEX (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-all-md](../../includes/tsql-appliesto-ss2012-all-md.md)]
@@ -287,7 +287,7 @@ Crea l'indice specificato nel filegroup predefinito.
   
 In questo contesto il termine default non rappresenta una parola chiave, È un identificatore per il filegroup predefinito e pertanto deve essere delimitato, ad esempio ON **"** default **"** o ON **[** default **]**. Se si specifica "default", l'opzione QUOTED_IDENTIFIER deve essere impostata su ON per la sessione corrente. Si tratta dell'impostazione predefinita. Per altre informazioni, vedere [SET QUOTED_IDENTIFIER &#40;Transact-SQL&#41;](../../t-sql/statements/set-quoted-identifier-transact-sql.md).  
   
-##  <a name="Permissions"></a> Permissions  
+##  <a name="Permissions"></a> Autorizzazioni  
  È necessario disporre dell'autorizzazione ALTER per la tabella.  
   
 ##  <a name="GenRemarks"></a> Osservazioni generali  
@@ -425,7 +425,7 @@ CREATE CLUSTERED COLUMNSTORE INDEX cci_Simple ON SimpleTable;
 GO  
 ```  
   
-### <a name="b-convert-a-clustered-index-to-a-clustered-columnstore-index-with-the-same-name"></a>b. Convertire un indice cluster in un indice columnstore cluster con lo stesso nome.  
+### <a name="b-convert-a-clustered-index-to-a-clustered-columnstore-index-with-the-same-name"></a>B. Convertire un indice cluster in un indice columnstore cluster con lo stesso nome.  
  In questo esempio viene creato una tabella con un indice cluster, quindi viene illustrata la sintassi della conversione dell'indice cluster in un indice columnstore cluster. In questo modo viene modificata l'archiviazione dell'intera tabella da rowstore a columnstore.  
   
 ```sql  
@@ -614,7 +614,7 @@ ON SimpleTable
 GO  
 ```  
   
-### <a name="b-create-a-simple-nonclustered-columnstore-index-using-all-options"></a>b. Creare un indice columnstore non cluster semplice usando tutte le opzioni  
+### <a name="b-create-a-simple-nonclustered-columnstore-index-using-all-options"></a>B. Creare un indice columnstore non cluster semplice usando tutte le opzioni  
  Nell'esempio seguente viene illustrata la sintassi della creazione di un indice columnstore non cluster usando tutte le opzioni.  
   
 ```sql  
@@ -694,7 +694,7 @@ ON xdimProduct
 WITH ( DROP_EXISTING = ON );  
 ```  
   
-### <a name="b-rebuild-a-clustered-columnstore-index"></a>b. Ricompilare un indice columnstore cluster  
+### <a name="b-rebuild-a-clustered-columnstore-index"></a>B. Ricompilare un indice columnstore cluster  
  Usando come base l'esempio precedente, questo esempio usa CREATE CLUSTERED COLUMNSTORE INDEX per ricompilare l'indice columnstore cluster esistente denominato cci_xDimProduct.  
   
 ```sql  
@@ -735,7 +735,7 @@ WITH ( DROP_EXISTING = ON);
 ```  
   
 ### <a name="e-convert-a-columnstore-table-back-to-a-rowstore-heap"></a>E. Convertire una tabella columnstore di nuovo in un heap rowstore  
- Usare [DROP INDEX (SQL Server PDW)](https://msdn.microsoft.com/f59cab43-9f40-41b4-bfdb-d90e80e9bf32) per eliminare l'indice columnstore cluster e convertire la tabella in un heap rowstore. Questo esempio converte la tabella cci_xDimProduct in un heap rowstore. La tabella continua a essere distribuita, ma viene archiviata come heap.  
+ Usare [DROP INDEX (SQL Server PDW)](drop-index-transact-sql.md) per eliminare l'indice columnstore cluster e convertire la tabella in un heap rowstore. Questo esempio converte la tabella cci_xDimProduct in un heap rowstore. La tabella continua a essere distribuita, ma viene archiviata come heap.  
   
 ```sql  
 --Drop the clustered columnstore index. The table continues to be distributed, but changes to a heap.  

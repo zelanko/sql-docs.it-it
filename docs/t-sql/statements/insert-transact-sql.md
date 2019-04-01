@@ -33,12 +33,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 71e72818b9ab5269d898f00a4110936478da35af
-ms.sourcegitcommit: a13256f484eee2f52c812646cc989eb0ce6cf6aa
+ms.openlocfilehash: e3a4da06849b245ba72d3ac87d5db04309f10823
+ms.sourcegitcommit: 706f3a89fdb98e84569973f35a3032f324a92771
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/25/2019
-ms.locfileid: "56802367"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58658385"
 ---
 # <a name="insert-transact-sql"></a>INSERT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -406,7 +406,7 @@ In Parallel Data Warehouse la clausola ORDER BY non è valida in VIEWS, CREATE T
   
  Quando si usa OPENROWSET(BULK...), è essenziale comprendere il modo in cui la rappresentazione viene gestita da [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Per altre informazioni, vedere "Considerazioni sulla sicurezza" [Importazione di dati per operazioni bulk con BULK INSERT o OPENROWSET&#40;BULK...&#41; &#40;SQL Server&#41;](../../relational-databases/import-export/import-bulk-data-by-using-bulk-insert-or-openrowset-bulk-sql-server.md).  
   
-### <a name="permissions"></a>Permissions  
+### <a name="permissions"></a>Autorizzazioni  
  È richiesta l'autorizzazione INSERT per la tabella di destinazione.  
   
  Le autorizzazioni INSERT vengono assegnate per impostazione predefinita ai membri del ruolo predefinito del server **sysadmin** e ai membri dei ruoli predefiniti del database **db_owner** e **db_datawriter** nonché al proprietario della tabella. I membri dei ruoli **sysadmin**, **db_owner** e **db_securityadmin** e il proprietario della tabella possono trasferire le autorizzazioni ad altri utenti.  
@@ -437,7 +437,7 @@ INSERT INTO Production.UnitMeasure
 VALUES (N'FT', N'Feet', '20080414');  
 ```  
   
-#### <a name="b-inserting-multiple-rows-of-data"></a>b. Inserimento di più righe di dati  
+#### <a name="b-inserting-multiple-rows-of-data"></a>B. Inserimento di più righe di dati  
  Nell'esempio seguente viene usato il [costruttore di valori di tabella](../../t-sql/queries/table-value-constructor-transact-sql.md) per inserire tre righe nella tabella `Production.UnitMeasure` del database [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] in una singola istruzione INSERT. Poiché i valori per tutte le colonne vengono specificati ed elencati nello stesso ordine delle colonne nella tabella, non è necessario specificare i nomi delle colonne nell'elenco delle colonne.  
   
 ```sql
@@ -999,7 +999,7 @@ OPTION ( LABEL = N'label1' );
 ```  
   
 #### <a name="y-using-a-label-and-a-query-hint-with-the-insert-statement"></a>Y. Uso di un'etichetta e di un hint per la query con l'istruzione INSERT  
- Questa query illustra la sintassi di base per l'uso di un'etichetta e di un hint di join per la query con l'istruzione INSERT. Dopo l'invio della query al nodo di controllo, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], in esecuzione nei nodi di calcolo, genera il piano di query di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] applicando la strategia di hash join. Per altre informazioni sugli hint di join e su come usare la clausola OPTION, vedere [OPTION (SQL Server PDW)](https://msdn.microsoft.com/72bbce98-305b-42fa-a19f-d89620621ecc).  
+ Questa query illustra la sintassi di base per l'uso di un'etichetta e di un hint di join per la query con l'istruzione INSERT. Dopo l'invio della query al nodo di controllo, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], in esecuzione nei nodi di calcolo, genera il piano di query di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] applicando la strategia di hash join. Per altre informazioni sugli hint di join e su come usare la clausola OPTION, vedere [OPTION (SQL Server PDW)](../../t-sql/queries/option-clause-transact-sql.md).  
   
 ```sql
 -- Uses AdventureWorks  

@@ -12,15 +12,15 @@ helpviewer_keywords:
 - queries [XML in SQL Server], nested FOR XML
 - nested FOR XML queries
 ms.assetid: 7604161a-a958-446d-b102-7dee432979d0
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
-ms.openlocfilehash: cb14ca08bdea68f307a0f455fd79707f64564ead
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d5774edb15c444663c94e7a0789ee9a4c0d55979
+ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47810435"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58510058"
 ---
 # <a name="use-nested-for-xml-queries"></a>Utilizzo di query FOR XML nidificate
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -85,7 +85,7 @@ SELECT  (SELECT ProductModelID, Name
 ```  
   
 ## <a name="returning-inner-for-xml-query-results-to-outer-queries-as-xml-type-instances"></a>Restituzione di risultati della query FOR XML interna a query esterne come istanze di tipo XML  
- È possibile scrivere query `FOR XML` nidificate in cui il risultato della query interna viene restituito alla query esterna come tipo di dati **xml** . Ad esempio  
+ È possibile scrivere query `FOR XML` nidificate in cui il risultato della query interna viene restituito alla query esterna come tipo di dati **xml** . Esempio:  
   
 ```  
 SELECT Col1,   

@@ -11,15 +11,15 @@ helpviewer_keywords:
 - granting permissions [SQL Server], XML schema collections
 - ALTER permission
 ms.assetid: ffbb829c-3b8f-4e5d-97d9-ab4059aab0db
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 5acba25c4a393723c4311cc0070b6dee165757c2
-ms.sourcegitcommit: bfa10c54e871700de285d7f819095d51ef70d997
+ms.openlocfilehash: 556c4cb0a5b51adcd87f4308e296459650eeadc1
+ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/14/2019
-ms.locfileid: "54256656"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58510428"
 ---
 # <a name="grant-permissions-on-an-xml-schema-collection"></a>Concedere autorizzazioni per una raccolta di XML Schema
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -122,7 +122,7 @@ DROP LOGIN TestLogin1
 GO  
 ```  
   
-### <a name="b-granting-permission-to-use-an-existing-xml-schema-collection"></a>b. Concessione dell'autorizzazione per l'utilizzo di una raccolta di XML Schema esistente  
+### <a name="b-granting-permission-to-use-an-existing-xml-schema-collection"></a>B. Concessione dell'autorizzazione per l'utilizzo di una raccolta di XML Schema esistente  
  Nell'esempio seguente viene illustrato ulteriormente il modello di autorizzazione per la raccolta di XML Schema, con le diverse autorizzazioni necessarie per creare e utilizzare tale raccolta.  
   
  Nell'esempio vengono creati un database di prova e l'account di accesso `TestLogin1`. `TestLogin1` crea una raccolta di XML Schema nel database. L'account di accesso crea quindi una tabella e utilizza la raccolta di XML Schema per creare una colonna XML tipizzata. Successivamente, l'utente inserisce i dati ed esegue le relative query. Tutti questi passaggi richiedono le autorizzazioni necessarie per lo schema, come illustrato nel codice seguente.  

@@ -1,7 +1,7 @@
 ---
 title: Panoramica dei driver Microsoft per PHP per SQL Server | Microsoft Docs
 ms.custom: ''
-ms.date: 03/26/2018
+ms.date: 03/27/2018
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -11,12 +11,12 @@ ms.assetid: 66559249-34c0-409d-b919-9b5bf0c4c9ec
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 1a879746757f7c5c1f9692d0341ddc5bedb4e5bd
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f2129745a8732fba882da6da1caf22e80df11f47
+ms.sourcegitcommit: c60784d1099875a865fd37af2fb9b0414a8c9550
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47682379"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58645483"
 ---
 # <a name="overview-of-the-microsoft-drivers-for-php-for-sql-server"></a>Panoramica dei driver Microsoft per PHP per SQL Server
 
@@ -31,16 +31,19 @@ Usare il [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)], è necessari
 |Argomento|Descrizione|  
 |---------|---------------|  
 | ![Download-FRECCIAGIÙ cerchiato](../../ssdt/media/download.png)[di scaricare i driver per PHP per SQL Server](download-drivers-php-sql-server.md) | Collegamenti ai download dei driver Microsoft per PHP per SQL Server. |
-|[Note sulla versione dei driver Microsoft per PHP per SQL Server](../../connect/php/release-notes-for-the-php-sql-driver.md)|Elenca le funzionalità che sono state aggiunte per alle versioni 4.0, 3.2, 3.1, 3.0 e 2.0.|  
+|[Note sulla versione dei driver Microsoft per PHP per SQL Server](../../connect/php/release-notes-php-sql-driver.md)|Elenca le funzionalità che sono state aggiunte per alle versioni 4.0, 3.2, 3.1, 3.0 e 2.0.|  
 |[Risorse di supporto dei driver Microsoft per PHP per SQL Server](../../connect/php/support-resources-for-the-php-sql-driver.md)|Vengono forniti collegamenti a risorse che possono risultare utili per sviluppare applicazioni che usano i [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)].|  
 |[Informazioni sugli esempi di codice nella documentazione](../../connect/php/about-code-examples-in-the-documentation.md)|Vengono fornite informazioni che possono risultare utili quando si eseguono gli esempi di codice di questa documentazione.|  
-  
-## <a name="reference"></a>Riferimento  
+| &nbsp; | &nbsp; |
+
+## <a name="reference"></a>Riferimento
+
 [Riferimento all'API del driver SQLSRV](../../connect/php/sqlsrv-driver-api-reference.md)  
 [Guida di riferimento del driver PDO_SQLSRV](../../connect/php/pdo-sqlsrv-driver-reference.md)  
 [Costanti &#40;driver Microsoft per PHP per SQL Server&#41;](../../connect/php/constants-microsoft-drivers-for-php-for-sql-server.md)  
-  
-## <a name="see-also"></a>Vedere anche  
+
+## <a name="see-also"></a>Vedere anche
+
 [Introduzione a Microsoft Drivers per PHP per SQL Server](../../connect/php/getting-started-with-the-php-sql-driver.md)
 
 [Guida di programmazione per i driver Microsoft per PHP per SQL Server](../../connect/php/programming-guide-for-php-sql-driver.md)

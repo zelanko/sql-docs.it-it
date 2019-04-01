@@ -16,15 +16,15 @@ helpviewer_keywords:
 - xml data type [SQL Server], serialization
 - typed XML
 ms.assetid: 42b0b5a4-bdd6-4a60-b451-c87f14758d4b
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
-ms.openlocfilehash: d6428b2715cbac122bec7cb284d171ee6304472f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 077490ef3af4e144dbe414fde02ab94b87c87511
+ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47705849"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58512618"
 ---
 # <a name="define-the-serialization-of-xml-data"></a>Definire la serializzazione di dati XML
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -33,7 +33,7 @@ ms.locfileid: "47705849"
 ## <a name="serialization-encoding"></a>Codifica della serializzazione  
  Se il tipo SQL di destinazione è VARBINARY, il risultato viene serializzato nel formato UTF-16 preceduto da un indicatore dell'ordine dei byte UTF-16, ma senza una dichiarazione XML. Se il tipo di destinazione è di grandezza troppo ridotta, viene generato un errore.  
   
- Ad esempio  
+ Esempio:  
   
 ```  
 select CAST(CAST(N'<Δ/>' as XML) as VARBINARY(MAX))  
@@ -47,7 +47,7 @@ select CAST(CAST(N'<Δ/>' as XML) as VARBINARY(MAX))
   
  Se il tipo SQL di destinazione è NVARCHAR o NCHAR, il risultato viene serializzato nel formato UTF-16 non preceduto dall'indicatore dell'ordine dei byte e senza una dichiarazione XML. Se il tipo di destinazione è di grandezza troppo ridotta, viene generato un errore.  
   
- Ad esempio  
+ Esempio:  
   
 ```  
 select CAST(CAST(N'<Δ/>' as XML) as NVARCHAR(MAX))  
@@ -61,7 +61,7 @@ select CAST(CAST(N'<Δ/>' as XML) as NVARCHAR(MAX))
   
  Se il tipo SQL di destinazione è VARCHAR o NCHAR, il risultato viene serializzato nella codifica corrispondente alla tabella codici delle regole di confronto del database, senza un indicatore dell'ordine dei byte o una dichiarazione XML. Se il tipo di destinazione è di grandezza troppo ridotta o se non è possibile eseguire il mapping del valore alla tabella codici delle regole di confronto di destinazione, viene generato un errore.  
   
- Ad esempio  
+ Esempio:  
   
 ```  
 select CAST(CAST(N'<Δ/>' as XML) as VARCHAR(MAX))  
@@ -89,7 +89,7 @@ select CAST(CAST(N'<Δ/>' as XML) as VARCHAR(MAX))
   
 -   Per proteggere i nodi di testo che contengono solo spazi vuoti, uno degli spazi vuoti (in genere l'ultimo) viene sostituito con l'entità rappresentata dal relativo riferimento a un carattere numerico. In questo modo, durante l'analisi il nodo di testo con spazi vuoti viene mantenuto, indipendentemente da come vengono gestiti gli spazi vuoti durante l'analisi.  
   
- Ad esempio  
+ Esempio:  
   
 ```  
 declare @u NVARCHAR(50)  

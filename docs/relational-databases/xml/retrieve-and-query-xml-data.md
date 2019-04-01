@@ -11,15 +11,15 @@ helpviewer_keywords:
 - XML data [SQL Server], retrieving
 - XML instance retrieval
 ms.assetid: 24a28760-1225-42b3-9c89-c9c0332d9c51
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 799b1fbd201284ce9e485aba5ed395f76af0c692
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 98250d8c070c8d7dfaff5c5b1dc490d1be3fcf3d
+ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47839229"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58512558"
 ---
 # <a name="retrieve-and-query-xml-data"></a>Recuperare ed eseguire query su dati XML
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -29,7 +29,7 @@ ms.locfileid: "47839229"
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] mantiene il contenuto dell'istanza XML, ma non mantiene gli aspetti dell'istanza XML che non sono considerati significativi nel modello di dati XML. Ciò significa che un'istanza XML recuperata potrebbe non essere identica all'istanza archiviata nel server, ma conterrà le stesse informazioni.  
   
 ### <a name="xml-declaration"></a>Dichiarazione XML  
- La dichiarazione XML in un'istanza non viene mantenuta quando l'istanza viene archiviata nel database. Ad esempio  
+ La dichiarazione XML in un'istanza non viene mantenuta quando l'istanza viene archiviata nel database. Esempio:  
   
 ```  
 CREATE TABLE T1 (Col1 int primary key, Col2 xml)  
@@ -81,7 +81,7 @@ SELECT @x.query('/*')
 GO  
 ```  
   
- È possibile che il prefisso dello spazio dei nomi nel risultato sia diverso. Ad esempio  
+ È possibile che il prefisso dello spazio dei nomi nel risultato sia diverso. Esempio:  
   
 ```  
 <p1:root xmlns:p1="abc"><p1:SomeElement/></p1:root>  

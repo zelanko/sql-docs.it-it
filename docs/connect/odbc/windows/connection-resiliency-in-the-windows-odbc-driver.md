@@ -11,12 +11,12 @@ ms.assetid: 614fa0b4-e9fd-4c68-aab3-183f9b9df143
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 6b7a27d9358d6f7f5719aaf1fea1fb292b2db1af
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: a038d146b21660e629c7ba7e44332aa6d2133a2c
+ms.sourcegitcommit: 706f3a89fdb98e84569973f35a3032f324a92771
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52545293"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58658165"
 ---
 # <a name="connection-resiliency-in-the-windows-odbc-driver"></a>Resilienza di connessione nel driver ODBC di Windows
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
@@ -26,7 +26,7 @@ ms.locfileid: "52545293"
 > [!IMPORTANT]  
 >  La funzionalità di resilienza di connessione è supportata nelle versioni server dei database SQL di Microsoft Azure e in SQL Server 2014 (e versioni successive).  
   
- Per altre informazioni sulla resilienza delle connessioni inattive, vedere l'articolo tecnico [Idle Connection Resiliency](https://go.microsoft.com/fwlink/?LinkId=393996) (Resilienza delle connessioni inattive).  
+ Per altre informazioni sulla resilienza delle connessioni inattive, vedere l'articolo tecnico [Idle Connection Resiliency](https://download.microsoft.com/download/D/2/0/D20E1C5F-72EA-4505-9F26-FEF9550EFD44/Idle%20Connection%20Resiliency.docx) (Resilienza delle connessioni inattive).
   
  Per controllare il comportamento di riconnessione, il driver ODBC per [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] in Windows include due opzioni:  
   
