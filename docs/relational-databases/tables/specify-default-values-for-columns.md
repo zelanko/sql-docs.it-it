@@ -65,7 +65,7 @@ Per le azioni descritte in questo articolo è necessaria l'autorizzazione ALTER 
    > [!NOTE]
    > Per specificare un valore predefinito numerico, immettere il numero desiderato. Per specificare un oggetto o una funzione, immetterne il nome. Per specificare un valore predefinito alfanumerico, immettere il valore racchiudendolo tra virgolette singole.
 
-4. Scegliere ***Salva** _nome tabella_ dal menu **File**.
+4. Scegliere **Salva** _nome tabella_ dal menu **File**.
 
 ## <a name="TsqlProcedure"></a> Usare Transact-SQL per specificare un valore predefinito
 
