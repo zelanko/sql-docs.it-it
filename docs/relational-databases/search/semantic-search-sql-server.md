@@ -31,7 +31,7 @@ La ricerca semantica statistica offre una visione approfondita dei documenti non
   
  Negli esempi seguenti vengono illustrate le capacità della ricerca semantica. Questi esempi illustrato allo stesso tempo le tre funzioni di set di righe Transact-SQL usate per recuperare gli indici semantici e ottenere i risultati in forma di dati strutturati.  
   
-###  <a name="find1"></a> Find the key phrases in a document  
+###  <a name="find1"></a> Individuare le frasi chiave in un documento  
  Nella query seguente vengono ottenute le frasi chiave identificate nel documento di esempio. Presenta i risultati in ordine decrescente in base al punteggio di classificazione della rilevanza statistica di ogni frase chiave.
  
  Questa query chiama la funzione [semantickeyphrasetable](../../relational-databases/system-functions/semantickeyphrasetable-transact-sql.md).  
@@ -69,7 +69,7 @@ SELECT @Title AS SourceTitle, DocumentTitle AS MatchedTitle,
   
 ```  
   
-###  <a name="find3"></a> Find the key phrases that make documents similar or related  
+###  <a name="find3"></a> Individuare le frasi chiave che rendono documenti simili o correlati  
  Nella query seguente vengono ottenute le frasi chiavi indicanti la somiglianza o la correlazione tra i due documenti di esempio. Presenta i risultati in ordine decrescente in base al punteggio di classificazione del peso di ogni frase chiave.
  
  Questa query chiama la funzione [semanticsimilaritydetailstable](../../relational-databases/system-functions/semanticsimilaritydetailstable-transact-sql.md).  

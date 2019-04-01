@@ -15,18 +15,18 @@ helpviewer_keywords:
 ms.assetid: 1e3be259-d453-4802-b2f5-6b81ef607edf
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 582359e25e0eaec775deb1abbcb64af211d68350
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
-ms.translationtype: HT
+ms.openlocfilehash: 2803e8d4ed2e0246c27dae775e864e81e10d91eb
+ms.sourcegitcommit: 706f3a89fdb98e84569973f35a3032f324a92771
+ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50021815"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58658135"
 ---
 # <a name="report-and-snapshot-size-limits"></a>Limiti delle dimensioni di report e snapshot
   Le informazioni contenute in questo argomento consentono agli amministratori che gestiscono una distribuzione di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] di conoscere i limiti relativi alle dimensioni dei report quando questi ultimi vengono pubblicati in un server di report, quando ne viene eseguito il rendering in fase di esecuzione e quando vengono salvati nel file system. In questo argomento vengono inoltre fornite indicazioni pratiche su come calcolare le dimensioni di un database del server di report e vengono descritti gli effetti delle dimensioni degli snapshot sulle prestazioni del server.  
   
 ## <a name="maximum-size-for-published-reports"></a>Dimensioni massime per i report pubblicati  
- Nel server di report le dimensioni dei report e dei modelli sono basate sulle dimensioni dei file di definizione del report, con estensione rdl, e del modello di report, con estensione smdl, pubblicati in un server di report. Il server di report non prevede limiti per le dimensioni di un report da pubblicare. [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] prevede comunque una dimensione massima per gli elementi inviati al server. Per impostazione predefinita, questo limite è di 4 MB. Se si carica o si pubblica in un server di report un file le cui dimensioni superano questo limite, viene generata un'eccezione HTTP. In questo caso, è possibile modificare l'impostazione predefinita aumentando il valore dell'elemento **maxRequestLength** nel file Machine.config.  
+ Nel server di report le dimensioni dei report e dei modelli sono basate sulle dimensioni dei file di definizione del report, con estensione rdl, e del modello di report, con estensione smdl, pubblicati in un server di report. Il server di report non prevede limiti per le dimensioni di un report da pubblicare.  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] prevede comunque una dimensione massima per gli elementi inviati al server. Per impostazione predefinita, questo limite è di 4 MB. Se si carica o si pubblica in un server di report un file le cui dimensioni superano questo limite, viene generata un'eccezione HTTP. In questo caso, è possibile modificare l'impostazione predefinita aumentando il valore dell'elemento **maxRequestLength** nel file Machine.config.  
   
  Sebbene un modello di report possa avere dimensioni molto grandi, le definizioni dei report non superano quasi mai i 4 MB. In genere, un report ha dimensioni di alcuni kilobyte (KB). Se tuttavia sono presenti immagini incorporate, la codifica di tali immagini può determinare un aumento considerevole delle dimensioni della definizione del report e, di conseguenza, il superamento del limite predefinito di 4 MB.  
   
@@ -50,7 +50,7 @@ ms.locfileid: "50021815"
  L'unico caso in cui vi è un limite fisico per le dimensioni del report è quando si esegue il rendering in formato Excel. Nei fogli di lavoro non possono essere presenti più di 65536 righe o 256 colonne. Con altri formati di rendering non sono presenti limiti simili, pertanto le dimensioni sono limitate solo dalla quantità di risorse disponibili nel server.  
   
 > [!NOTE]  
->  I processi di elaborazione e rendering dei report avvengono in memoria. Se si utilizzano report di grandi dimensioni o sono presenti numerosi utenti, eseguire una pianificazione delle capacità per garantire agli utenti un livello soddisfacente di prestazioni della distribuzione del server di report. Per altre informazioni su strumenti e linee guida, vedere le pubblicazioni seguenti su MSDN: [Pianificazione di scalabilità e prestazioni con Reporting Services](https://go.microsoft.com/fwlink/?LinkID=70650) e [Uso di Visual Studio 2005 per eseguire test di carico in un server di report di SQL Server 2005 Reporting Services](https://go.microsoft.com/fwlink/?LinkID=77519).  
+>  I processi di elaborazione e rendering dei report avvengono in memoria. Se si utilizzano report di grandi dimensioni o sono presenti numerosi utenti, eseguire una pianificazione delle capacità per garantire agli utenti un livello soddisfacente di prestazioni della distribuzione del server di report. Per altre informazioni su strumenti e linee guida, vedere le pubblicazioni seguenti su MSDN: [Pianificazione di scalabilità e prestazioni con Reporting Services](/previous-versions/sql/sql-server-2005/administrator/cc966418(v=technet.10)) e [Uso di Visual Studio 2005 per eseguire test di carico in un server di report di SQL Server 2005 Reporting Services](https://go.microsoft.com/fwlink/?LinkID=77519).  
   
 ## <a name="measuring-snapshot-storage"></a>Calcolo dello spazio di archiviazione degli snapshot  
  Le dimensioni di un determinato snapshot sono direttamente proporzionali alla quantità di dati del report. Gli snapshot hanno in genere dimensioni molto maggiori rispetto agli altri elementi archiviati in un server di report. Le dimensioni degli snapshot variano in genere da pochi MB a decine di MB. Se si dispone di report di dimensioni molto grandi, le dimensioni degli snapshot potrebbero essere anche maggiori. In base alla frequenza di utilizzo degli snapshot e alla modalità di configurazione della cronologia del report, la quantità di spazio su disco necessaria per il database del server di report può aumentare rapidamente in un intervallo di tempo breve.  

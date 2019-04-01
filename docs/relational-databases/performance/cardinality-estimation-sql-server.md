@@ -195,7 +195,7 @@ Di seguito sono indicate alcune operazioni da eseguire per stabilire se una dell
   
     -   **Numero stimato di righe**.  
   
-    -   **Costo I/O stimato***Stimato* simili che riguardano le prestazioni effettive anziché le previsioni del numero di righe.  
+    -   **Costo I/O stimato** *Stimato* simili che riguardano le prestazioni effettive anziché le previsioni del numero di righe.  
   
     -   **Operazione logica** e **Operazione fisica**. *Parallelismo* è un valore adeguato.  
   
