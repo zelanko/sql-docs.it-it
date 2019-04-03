@@ -1,6 +1,6 @@
 ---
 title: Persistenza dei dati in Kubernetes
-titleSuffix: SQL Server 2019 big data clusters
+titleSuffix: SQL Server big data clusters
 description: Informazioni sul funzionamento di persistenza dei dati in un cluster di big data di SQL Server 2019.
 author: rothja
 ms.author: jroth
@@ -10,14 +10,16 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: 1dcf390fe87239cde45e8c7fda1bc5cebd10f0ed
-ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
+ms.openlocfilehash: f8cddaeca6c6bcc7eb32c28fa852566bb7dcf331
+ms.sourcegitcommit: 2de5446fbc57787f18a907dd5deb02a7831ec07d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58494163"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58860277"
 ---
 # <a name="data-persistence-with-sql-server-big-data-cluster-on-kubernetes"></a>Persistenza dei dati con cluster di big data di SQL Server in Kubernetes
+
+[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
 [Volumi permanenti](https://kubernetes.io/docs/concepts/storage/persistent-volumes/) offrono un modello di plug-in archiviazione in Kubernetes in cui come archiviazione viene fornita è che sono state completate ricavati dall'utilizzo della risorsa. Pertanto, è possibile portare il proprio archiviazione a disponibilità elevata e inserirlo in cluster di cluster di SQL Server i big Data. Ciò offre il controllo completo sul tipo di archiviazione, disponibilità e prestazioni necessari. Kubernetes supporta vari tipi di soluzioni di archiviazione, tra cui dischi/file di Azure, NFS, risorsa di archiviazione locale e altro ancora.
 

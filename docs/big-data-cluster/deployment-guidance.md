@@ -1,6 +1,6 @@
 ---
 title: Modalità di distribuzione
-titleSuffix: SQL Server 2019 big data clusters
+titleSuffix: SQL Server big data clusters
 description: Informazioni su come distribuire i cluster di big data di SQL Server 2019 (anteprima) in Kubernetes.
 author: rothja
 ms.author: jroth
@@ -10,14 +10,16 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: 5efefd5bc94aa8d1842ee244c947e48e90604834
-ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
+ms.openlocfilehash: c991181fc79627aee1f2c2e397ad7d9b1aaf953f
+ms.sourcegitcommit: 2de5446fbc57787f18a907dd5deb02a7831ec07d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58493733"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58860593"
 ---
 # <a name="how-to-deploy-sql-server-big-data-clusters-on-kubernetes"></a>Come distribuire i cluster di big data di SQL Server in Kubernetes
+
+[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
 Cluster di big data di SQL Server possono essere distribuiti come contenitori docker in un cluster Kubernetes. Questa è una panoramica dei passaggi di installazione e configurazione:
 
@@ -53,7 +55,7 @@ Se si dispone già di un cluster Kubernetes che soddisfa di sopra dei prerequisi
 
 Prima di distribuire il cluster di big data di SQL Server 2019, innanzitutto [installare gli strumenti dei big data](deploy-big-data-tools.md):
 - **mssqlctl**
-- **kubectl**
+- **Kubectl**
 - **Azure Data Studio**
 - **Estensione di SQL Server 2019**
 
@@ -66,7 +68,7 @@ Dopo aver configurato il cluster Kubernetes, è possibile procedere con la distr
 
 Per distribuire un cluster di big data in Azure con tutte le configurazioni predefinite per un ambiente di sviluppo/test, seguire le istruzioni riportate in questo articolo:
 
-[Guida introduttiva: Distribuire cluster di big data di SQL Server in Kubernetes](quickstart-big-data-cluster-deploy.md)
+[Avvio rapido: Distribuire cluster di big data di SQL Server in Kubernetes](quickstart-big-data-cluster-deploy.md)
 
 Se si desidera personalizzare la distribuzione del cluster di big data in base al carico di lavoro deve, seguire le istruzioni nella parte restante di questo articolo.
 
