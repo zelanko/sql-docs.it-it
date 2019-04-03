@@ -1,6 +1,6 @@
 ---
 title: Configurare la suddivisione in livelli di HDFS
-titleSuffix: SQL Server 2019 big data clusters
+titleSuffix: SQL Server big data clusters
 description: Questo articolo illustra come configurare la suddivisione in livelli per montare un file system di archivio Azure Data Lake esterni in HDFS in un cluster di big data (anteprima) di SQL Server 2019 HDFS.
 author: nelgson
 ms.author: negust
@@ -10,14 +10,16 @@ ms.date: 03/27/2018
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 1199d8d522df83c626f04f30c8937b57a5359f5c
-ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
+ms.openlocfilehash: 2542c7c05b222517ae9f4a4c05152f21a5ba293b
+ms.sourcegitcommit: 2de5446fbc57787f18a907dd5deb02a7831ec07d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58493774"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58859643"
 ---
-# <a name="configure-hdfs-tiering-on-sql-server-2019-big-data-clusters"></a>Configurare la suddivisione in livelli in SQL Server 2019 dei big data cluster HDFS
+# <a name="configure-hdfs-tiering-on-sql-server-big-data-clusters"></a>Configurare la suddivisione in livelli nel cluster di big data di SQL Server HDFS
+
+[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
 La suddivisione in livelli di HDFS offre la possibilità di montaggio esterni, compatibile con HDFS file system HDFS. Questo articolo illustra come configurare HDFS la suddivisione in livelli per i cluster di big data di SQL Server 2019 (anteprima). A questo punto, CTP 2.4 supporta solo la connessione a Azure Data Lake Storage Gen2, che è l'obiettivo di questo articolo.
 
@@ -35,7 +37,7 @@ Le sezioni seguenti forniscono un esempio di come configurare la suddivisione in
 - [Cluster di big data distribuita](deployment-guidance.md)
 - [Strumenti dei big Data](deploy-big-data-tools.md)
   - **mssqlctl**
-  - **kubectl**
+  - **Kubectl**
 
 ## <a id="load"></a> Caricare i dati in archiviazione di Azure Data Lake
 

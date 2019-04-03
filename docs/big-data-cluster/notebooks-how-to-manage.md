@@ -1,6 +1,6 @@
 ---
 title: Gestire i notebook in Azure Data Studio
-titleSuffix: SQL Server 2019 big data clusters
+titleSuffix: SQL Server big data clusters
 description: Informazioni su come gestire i notebook in Azure Data Studio. Ciò include l'apertura di notebook, essi un notevole risparmio e modificando la connessione di cluster di big data.
 author: rothja
 ms.author: jroth
@@ -10,14 +10,16 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: 107a567da4727fa5786b0b913f1c75706a23a9b7
-ms.sourcegitcommit: 202ef5b24ed6765c7aaada9c2f4443372064bd60
+ms.openlocfilehash: ab731e3f657a629dbb1b4058bd94b32677c2def0
+ms.sourcegitcommit: 2de5446fbc57787f18a907dd5deb02a7831ec07d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/12/2019
-ms.locfileid: "54241925"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58860512"
 ---
 # <a name="how-to-manage-notebooks-in-azure-data-studio"></a>Come gestire i notebook in Azure Data Studio
+
+[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
 Questo articolo illustra come aprire e salvare i file di notebook in Azure Data Studio con l'anteprima di SQL Server 2019. Viene inoltre illustrato come modificare la connessione al cluster SQL Server i big Data.
 

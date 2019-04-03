@@ -1,6 +1,6 @@
 ---
 title: Ripristinare un database
-titleSuffix: SQL Server 2019 big data clusters
+titleSuffix: SQL Server big data clusters
 description: Questo articolo illustra come ripristinare un database nell'istanza master di un cluster di big data di SQL Server 2019 (anteprima).
 author: rothja
 ms.author: jroth
@@ -10,14 +10,16 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: 7b6f37f3e82b48a0c56e42cae63f898c3c1089fb
-ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
+ms.openlocfilehash: cc1fddfd7aa2e3400dda3d005eb365cde7364dd4
+ms.sourcegitcommit: 2de5446fbc57787f18a907dd5deb02a7831ec07d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58513208"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58860313"
 ---
-# <a name="restore-a-database-into-the-sql-server-2019-big-data-cluster-master-instance"></a>Ripristinare un database nell'istanza master di SQL Server 2019 dei big data cluster
+# <a name="restore-a-database-into-the-sql-server-big-data-cluster-master-instance"></a>Ripristinare un database nell'istanza master del cluster dei big data di SQL Server
+
+[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
 Questo articolo descrive come ripristinare un database esistente nell'istanza master di un cluster di big data di SQL Server 2019 (anteprima). Il metodo consigliato è usare una copia di backup, e il ripristino approccio.
 

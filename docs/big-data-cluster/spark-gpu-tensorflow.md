@@ -1,6 +1,6 @@
 ---
 title: Supporto per GPU e TensorFlow
-titleSuffix: SQL Server 2019 big data clusters
+titleSuffix: SQL Server big data clusters
 description: Distribuire un cluster di big data con supporto GPU e usare TensorFlow nei notebook di Studio dei dati di Azure.
 author: lgongmsft
 ms.author: shivprashant
@@ -10,14 +10,16 @@ ms.date: 03/27/2018
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: f89568860fa656efbb93eb9b72eb647f88ce6089
-ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
+ms.openlocfilehash: 0336c39a4afc235e29111dd78db128495a8b6e64
+ms.sourcegitcommit: 2de5446fbc57787f18a907dd5deb02a7831ec07d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58494113"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58860462"
 ---
 # <a name="deploy-a-big-data-cluster-with-gpu-support-and-run-tensorflow"></a>Distribuire un cluster di big data con supporto GPU ed eseguire TensorFlow
+
+[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
 Questo articolo illustra come distribuire un cluster di big data in Azure Kubernetes Service (AKS) che supportano pool di nodi abilitate per GPU per carichi di lavoro a elevato utilizzo di calcolo. È quindi possibile eseguire notebook di esempio in Azure Data Studio di cui eseguire la classificazione delle immagini con TensorFlow per GPU.
 
@@ -25,10 +27,10 @@ Questo articolo illustra come distribuire un cluster di big data in Azure Kubern
 
 - [Gli strumenti dei big data](deploy-big-data-tools.md):
   - **mssqlctl**
-  - **kubectl**
+  - **Kubectl**
   - **Azure Data Studio**
   - **Estensione di SQL Server 2019**
-  - **Comando di Azure**
+  - **Interfaccia della riga di comando di Azure**
 
 [!INCLUDE [Limited public preview note](../includes/big-data-cluster-preview-note.md)]
 
@@ -142,7 +144,7 @@ Per distribuire un cluster di big data di SQL Server 2019 (anteprima) che suppor
       SET MSSQL_SA_PASSWORD=<sa_password_of_master_sql_instance, password complexity compliant>
 
       SET DOCKER_REGISTRY=marinchcreus3.azurecr.io
-      SET DOCKER_REPOSITORY=ctp23-8-0-61-gpu
+      SET DOCKER_REPOSITORY=ctp24-8-0-61-gpu
       SET DOCKER_USERNAME=<your username, gpu-specific credentials provided by Microsoft>
       SET DOCKER_PASSWORD=<your password, gpu-specific credentials provided by Microsoft>
       SET DOCKER_EMAIL=<your email address>
@@ -170,7 +172,7 @@ Per distribuire un cluster di big data di SQL Server 2019 (anteprima) che suppor
       export MSSQL_SA_PASSWORD="<sa_password_of_master_sql_instance, password complexity compliant>"
 
       export DOCKER_REGISTRY="marinchcreus3.azurecr.io"
-      export DOCKER_REPOSITORY="ctp23-8-0-61-gpu"
+      export DOCKER_REPOSITORY="ctp24-8-0-61-gpu"
       export DOCKER_USERNAME="<your username, gpu-specific credentials provided by Microsoft>"
       export DOCKER_PASSWORD="<your password, gpu-specific credentials provided by Microsoft>"
       export DOCKER_EMAIL="<your email address>"

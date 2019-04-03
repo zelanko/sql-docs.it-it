@@ -1,6 +1,6 @@
 ---
 title: Inserire dati in un pool di dati di SQL Server
-titleSuffix: SQL Server 2019 big data clusters
+titleSuffix: SQL Server big data clusters
 description: Questa esercitazione illustra come inserire dati nel pool di dati di un cluster di big data di SQL Server 2019 (anteprima).
 author: rothja
 ms.author: jroth
@@ -10,14 +10,16 @@ ms.topic: tutorial
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: 5ae0777c2bc98e99c83bca35fa2aab8efc8b57a5
-ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
+ms.openlocfilehash: 497dd1856a8847bbba9b05d3abc11836841f6e7c
+ms.sourcegitcommit: 2de5446fbc57787f18a907dd5deb02a7831ec07d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58509938"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58860343"
 ---
 # <a name="tutorial-ingest-data-into-a-sql-server-data-pool-with-transact-sql"></a>Esercitazione: Inserire dati in un pool di dati di SQL Server con Transact-SQL
+
+[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
 Questa esercitazione illustra come usare Transact-SQL per caricare i dati di [pool di dati](concept-data-pool.md) di un cluster di big data di SQL Server 2019 (anteprima). Con i cluster di big data di SQL Server, i dati da una varietà di origini possono essere inseriti e distribuiti in istanze del pool di dati.
 
@@ -34,7 +36,7 @@ In questa esercitazione, apprenderà come:
 ## <a id="prereqs"></a> Prerequisiti
 
 - [Strumenti dei big Data](deploy-big-data-tools.md)
-   - **kubectl**
+   - **Kubectl**
    - **Azure Data Studio**
    - **Estensione di SQL Server 2019**
 - [Caricare i dati di esempio in cluster i big Data](tutorial-load-sample-data.md)

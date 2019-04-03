@@ -8,12 +8,12 @@ ms.topic: tutorial
 author: dphansen
 ms.author: davidph
 manager: cgronlun
-ms.openlocfilehash: de46594a5de2bee6e50786de25826c96da01ae53
-ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
+ms.openlocfilehash: 77d08db22ca7ff1b4b66620d277280f0c1ac314e
+ms.sourcegitcommit: 2de5446fbc57787f18a907dd5deb02a7831ec07d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58513068"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58860582"
 ---
 # <a name="run-predictions-using-python-embedded-in-a-stored-procedure"></a>Eseguire le stime usando Python incorporato in una stored procedure
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -172,8 +172,8 @@ In alcuni casi, invece di assegnazione punteggio batch, si potrebbe decidere di 
 
 In questa sezione si apprenderà come creare le stime singole chiamando due stored procedure:
 
-+ [PredictTipSingleModeSciKitPy](#PredictTipSingleModeSciKitPy) è destinato a riga singola assegnazione del punteggio utilizzando il scikit-informazioni su modello.
-+ [PredictTipSingleModeRxPy](#PredictTipSingleModeRxPy) è destinato a riga singola assegnazione del punteggio utilizzando il modello revoscalepy.
++ [PredictTipSingleModeSciKitPy](#predicttipsinglemodescikitpy) è destinato a riga singola assegnazione del punteggio utilizzando il scikit-informazioni su modello.
++ [PredictTipSingleModeRxPy](#predicttipsinglemoderxpy) è destinato a riga singola assegnazione del punteggio utilizzando il modello revoscalepy.
 + Se ancora stato eseguito il training di un modello ancora, tornare alla [passaggio 5](sqldev-py5-train-and-save-a-model-using-t-sql.md)!
 
 Entrambe accettano modelli come input una serie di valori singoli, ad esempio il numero di passeggeri, distanza della corsa e così via. Una funzione con valori di tabella, `fnEngineerFeatures`, viene usato per convertire i valori di latitudine e longitudine dagli input a una nuova funzionalità, distanza diretta. [Lezione 4](sqldev-py4-create-data-features-using-t-sql.md) contiene una descrizione di questa funzione con valori di tabella.

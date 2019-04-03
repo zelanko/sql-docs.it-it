@@ -10,14 +10,16 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: 4d13d200bf331771b0f2f8735bf2c76c1f227979
-ms.sourcegitcommit: 202ef5b24ed6765c7aaada9c2f4443372064bd60
+ms.openlocfilehash: 705d3b5230faf69ca9eb9de2f7f0cc21b42a8955
+ms.sourcegitcommit: 2de5446fbc57787f18a907dd5deb02a7831ec07d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/12/2019
-ms.locfileid: "54241652"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58860082"
 ---
 # <a name="data-wrangling-using-prose-code-accelerator"></a>Wrangling dei dati usando i tasti di scelta rapida codice PROSE
+
+[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
 Tasti di scelta rapida PROSE codice genera il codice Python leggibile per l'attività di gestione dei dati. Mentre si lavora in un notebook in Azure Data Studio, è possibile combinare il codice generato con il codice scritto a mano in modo trasparente. Questo articolo offre una panoramica di come è possibile utilizzare l'acceleratore di codice.
 
@@ -112,7 +114,7 @@ Per altre informazioni, vedere la [documentazione](https://aka.ms/prose-codeacce
 Un altro scenario comune è per rilevare modelli in una colonna stringa allo scopo di pulizia o di raggruppamento. Ad esempio, potrebbe essere una colonna di date con le date in più formati diversi. Per standardizzare i valori, si potrebbe voler scrivere istruzioni condizionali usando espressioni regolari.
 
 
-|   |nome                      |BirthDate      |
+|   |Nome                      |BirthDate      |
 |---|:-------------------------|:--------------|
 | 0 |Bertram du Plessis        |1995           |
 | 1 |Naiara Moravcikova        |Unknown        |

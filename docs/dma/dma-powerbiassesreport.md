@@ -15,12 +15,12 @@ ms.assetid: ''
 author: HJToland3
 ms.author: rajpo
 manager: craigg
-ms.openlocfilehash: 786e86fb6f0326e2f8ea568f4c069828ff1ff4c6
-ms.sourcegitcommit: e9fcd10c7eb87a4f09ac2d8f7647018e83a5f5c5
+ms.openlocfilehash: c00196468b846174bb73c8d82c691f482aa8b21e
+ms.sourcegitcommit: 1a4aa8d2bdebeb3be911406fc19dfb6085d30b04
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57974120"
+ms.lasthandoff: 04/03/2019
+ms.locfileid: "58872072"
 ---
 # <a name="analyze-consolidated-assessment-reports-created-by-data-migration-assistant-with-power-bi"></a>Analizzare i report consolidati di valutazione creati dai Data Migration Assistant con Power BI
 
@@ -34,23 +34,23 @@ Per informazioni su consolidare le valutazioni di migrazione create da Data Migr
 
 I report seguenti sono inclusi: 
 
-- [Dashboard](#dashboard--details)
+- [Dashboard](#dashboard-report)
 
   Include un report drill-down e statistiche di snapshot.
 
-- [Preparazione aggiornamenti in locale](#on-premises-upgrade-readiness--details)
+- [Preparazione aggiornamenti in locale](#on-premises-upgrade-readiness-report)
 
   L'origine dati è la visualizzazione UpgradeSuccessRanking nel database DMAReporting.  Questo report mostra il corretto aggiornamento percentuale per i database valutati.
 
-- [Parità delle funzionalità in locale](#on-premise-feature-parity--details)
+- [Parità delle funzionalità in locale](#on-premises-feature-parity-report)
 
   Illustra le funzionalità consigliate per la versione di SQL Server di destinazione.
 
-- [Azure SQL DB preparazione aggiornamenti](#azure-sql-db-upgrade-readiness--details)
+- [Azure SQL DB preparazione aggiornamenti](#azure-sql-db-upgrade-readiness-report)
 
   L'origine dati è la visualizzazione UpgradeSuccessRanking nel database DMAReporting.  Questo report mostra il corretto aggiornamento percentuale per i database valutato per le migrazioni di database SQL di Azure.
 
-- [Funzionalità di Azure SQL DB non supportati](#azure-sql-db-unsupported-features--details)
+- [Funzionalità di Azure SQL DB non supportati](#azure-sql-db-unsupported-features-report)
 
   Mostra le funzionalità dei database esistenti che non sono supportate in database SQL di Azure (V12).
 

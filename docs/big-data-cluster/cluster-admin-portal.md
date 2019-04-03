@@ -1,23 +1,26 @@
 ---
 title: Portale di amministrazione cluster
-titleSuffix: SQL Server 2019 big data clusters
+titleSuffix: SQL Server big data clusters
 description: Informazioni su come usare il portale di amministrazione cluster per monitorare i cluster di big data di SQL Server 2019 (anteprima).
 author: yualan
 ms.author: alayu
+ms.reviewer: jroth
 manager: craigg
 ms.date: 03/27/2018
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: 2ed73006850a5174c6df07ed09302ea48decf6d2
-ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
+ms.openlocfilehash: c83ad67b6d76ddf43762a814c26d2037594b78de
+ms.sourcegitcommit: 2de5446fbc57787f18a907dd5deb02a7831ec07d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58492863"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58860502"
 ---
 # <a name="how-to-use-the-cluster-administration-portal-to-monitor-a-sql-server-big-data-cluster"></a>Come usare il portale di amministrazione cluster per monitorare un cluster di big data di SQL Server
+
+[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
 Se si desidera monitorare o risolverne i problemi del cluster di big data di SQL Server 2019 (anteprima), usare il portale di amministrazione cluster.
 

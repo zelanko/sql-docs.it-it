@@ -1,22 +1,25 @@
 ---
 title: Estensione di distribuzione di App
-titleSuffix: SQL Server 2019 big data clusters
+titleSuffix: SQL Server big data clusters
 description: Distribuire uno script Python o R come un'applicazione nel cluster di big data 2019 Server SQL (anteprima).
-author: TheBharath
-ms.author: bharaths
+author: jeroenterheerdt
+ms.author: jterh
+ms.reviewer: jroth
 manager: craigg
 ms.date: 02/28/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 761818cd83df5db38b3877184b03b7e5d634aa63
-ms.sourcegitcommit: 1c1ed8d6aa2fb9fceb6a00c39597578442f7f4e9
+ms.openlocfilehash: 10fcc71c69ecc138f78cd19c4661f917067ead7e
+ms.sourcegitcommit: 2de5446fbc57787f18a907dd5deb02a7831ec07d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/21/2019
-ms.locfileid: "58222025"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58860412"
 ---
 # <a name="how-to-use-vs-code-to-deploy-applications-to-sql-server-big-data-clusters"></a>Come usare Visual Studio Code per distribuire applicazioni in cluster di SQL Server i big Data
+
+[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
 Questo articolo descrive come distribuire le applicazioni a un cluster di big data di SQL Server usando Visual Studio Code con l'estensione di distribuzione dell'App. Questa funzionalità è stata introdotta nella versione CTP 2.3. 
 
@@ -29,11 +32,11 @@ Questo articolo descrive come distribuire le applicazioni a un cluster di big da
 
 Questa estensione supporta le attività seguenti in Visual Studio Code:
 
-- Eseguire l'autenticazione con il Cluster di Big Data SQL Server.
+- Eseguire l'autenticazione con il cluster di big data di SQL Server.
 - Recuperare un modello di applicazione dal repository GitHub per la distribuzione dei runtime supportati.
 - Gestire i modelli di applicazione attualmente aperti nell'area di lavoro dell'utente.
 - Distribuire un'applicazione tramite una specifica del formato YAML.
-- Gestire le app distribuite nel Cluster di Big Data di SQL Server.
+- Gestire le app distribuite nel cluster di big data di SQL Server.
 - Visualizzare tutte le app che è stata distribuita nella barra laterale con informazioni aggiuntive.
 - Generare una specifica di esecuzione per utilizzare l'app o eliminare l'app dal cluster.
 - Usare le app distribuite tramite una specifica esecuzione YAML.
@@ -88,9 +91,9 @@ Il modello è un semplice `Hello World` app disposti come segue:
 
 - **spec.yaml**
    - Indica il cluster come distribuire l'app
-- **run-spec.yaml**
+- **esecuzione spec.yaml**
    - Indica il cluster come chiamare l'app
-- **handler.py**
+- **Handler.py**
    - Si tratta di file del codice sorgente come specificato dalle `src` in `spec.yaml`
    - Ha una funzione denominata `handler` che viene considerato il `entrypoint` dell'app come illustrato nel `spec.yaml`. Accetta un input di stringa denominato `msg` e restituisce un output di tipo stringa denominato `out`. Tali opzioni vengono specificate `inputs` e `outputs` del `spec.yaml`.
 

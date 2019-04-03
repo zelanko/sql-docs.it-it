@@ -1,6 +1,6 @@
 ---
 title: Caricare dati di esempio
-titleSuffix: SQL Server 2019 big data clusters
+titleSuffix: SQL Server big data clusters
 description: Questa esercitazione illustra come caricare i dati di esempio in un cluster di big data di SQL Server. I dati di esempio includono i dati relazionali nell'istanza master di SQL Server. Include anche dati di HDFS nel pool di archiviazione. Questo tipo di dati supporta altre esercitazioni in questa sezione.
 author: rothja
 ms.author: jroth
@@ -10,14 +10,16 @@ ms.topic: tutorial
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: f8e5cc5b3da7bf8c571a1f4b3febd9ef45e44d9e
-ms.sourcegitcommit: a9a03f9a7ec4dad507d2dfd5ca33571580114826
+ms.openlocfilehash: faee29ed293c59752988760ea9ca27a4cf3e372a
+ms.sourcegitcommit: 2de5446fbc57787f18a907dd5deb02a7831ec07d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/28/2019
-ms.locfileid: "58566520"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58859992"
 ---
-# <a name="tutorial-load-sample-data-into-a-sql-server-2019-big-data-cluster"></a>Esercitazione: Caricare i dati di esempio in un cluster di big data di SQL Server 2019
+# <a name="tutorial-load-sample-data-into-a-sql-server-big-data-cluster"></a>Esercitazione: Caricare i dati di esempio in un cluster di big data di SQL Server
+
+[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
 Questa esercitazione illustra come usare uno script per caricare i dati di esempio in un cluster di big data di SQL Server 2019 (anteprima). Molte delle altre esercitazioni nella documentazione di usare i dati di esempio.
 
@@ -29,9 +31,9 @@ Questa esercitazione illustra come usare uno script per caricare i dati di esemp
 - [Un cluster di big data distribuita](deployment-guidance.md)
 - [Strumenti dei big Data](deploy-big-data-tools.md)
    - **mssqlctl**
-   - **kubectl**
+   - **Kubectl**
    - **sqlcmd**
-   - **curl**
+   - **CURL**
 
 ## <a id="sampledata"></a> Caricare dati di esempio
 

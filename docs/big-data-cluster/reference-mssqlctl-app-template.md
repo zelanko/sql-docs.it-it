@@ -1,6 +1,6 @@
 ---
 title: riferimento di modello app mssqlctl
-titleSuffix: SQL Server 2019 big data clusters
+titleSuffix: SQL Server big data clusters
 description: Articolo di riferimento per i comandi di modello app mssqlctl.
 author: rothja
 ms.author: jroth
@@ -9,14 +9,16 @@ ms.date: 02/28/2019
 ms.topic: reference
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 16583ba970bfc13312864ea2e9d2571b04c20fcb
-ms.sourcegitcommit: d7ed341b2c635dcdd6b0f5f4751bb919a75a6dfe
+ms.openlocfilehash: c67ed74750ac36d1a5c79503417414a9dd8ab6b5
+ms.sourcegitcommit: 2de5446fbc57787f18a907dd5deb02a7831ec07d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57527224"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58860102"
 ---
 # <a name="mssqlctl-app-template"></a>modello di app mssqlctl
+
+[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
 L'articolo seguente fornisce informazioni di riferimento per la **modello di app** comandi nel **mssqlctl** dello strumento. Per altre informazioni sulle altre **mssqlctl** comandi, vedere [mssqlctl riferimento](reference-mssqlctl.md).
 
@@ -24,7 +26,7 @@ L'articolo seguente fornisce informazioni di riferimento per la **modello di app
 
 |||
 |---|---|
-| [list](#list) | Modelli di recupero supportata. |
+| [elenco](#list) | Modelli di recupero supportata. |
 | [pull](#pull) | Scaricare i modelli supportati. |
 
 ## <a id="list"></a> elenco di modelli di app mssqlctl
@@ -71,7 +73,7 @@ mssqlctl app template pull
 
 | Parametri | Descrizione |
 |---|---|
-| **--destination -d** | Posizione in cui inserire il modello di struttura dell'applicazione.  Valore predefinito:. / modelli. |
+| **-destinazione -d** | Posizione in cui inserire il modello di struttura dell'applicazione.  Valore predefinito:. / modelli. |
 | **-Nome - n** | Nome del modello. Per un elenco completo di disattivare i nomi dei modelli supportati eseguire `mssqlctl app template list`. |
 | **-url -u** | Specificare un percorso del repository di modelli diversi. Impostazione predefinita:
 https://github.com/Microsoft/sql-server-samples.git (Indici per tabelle con ottimizzazione per la memoria). |

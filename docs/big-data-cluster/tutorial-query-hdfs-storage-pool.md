@@ -1,6 +1,6 @@
 ---
 title: Eseguire query sui dati HDFS nel pool di archiviazione
-titleSuffix: SQL Server 2019 big data clusters
+titleSuffix: SQL Server big data clusters
 description: Questa esercitazione illustra come eseguire query sui dati HDFS in un cluster di big data di SQL Server 2019 (anteprima). Creare una tabella esterna dei dati nel pool di archiviazione e quindi eseguire una query.
 author: rothja
 ms.author: jroth
@@ -10,14 +10,16 @@ ms.topic: tutorial
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: 57851a4e0f4cedde1e630afeca49ff26c971c7b5
-ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
+ms.openlocfilehash: 57605d74e81a6c1c37263fc4088cb70fa3431dec
+ms.sourcegitcommit: 2de5446fbc57787f18a907dd5deb02a7831ec07d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58511118"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58860052"
 ---
 # <a name="tutorial-query-hdfs-in-a-sql-server-big-data-cluster"></a>Esercitazione: Query di HDFS in un cluster di big data di SQL Server
+
+[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
 Questa esercitazione illustra come eseguire query sui dati HDFS in un cluster di big data di SQL Server 2019 (anteprima).
 
@@ -33,7 +35,7 @@ In questa esercitazione, apprenderà come:
 ## <a id="prereqs"></a> Prerequisiti
 
 - [Strumenti dei big Data](deploy-big-data-tools.md)
-   - **kubectl**
+   - **Kubectl**
    - **Azure Data Studio**
    - **Estensione di SQL Server 2019**
 - [Caricare i dati di esempio in cluster i big Data](tutorial-load-sample-data.md)

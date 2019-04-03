@@ -1,6 +1,6 @@
 ---
 title: riferimento di debug mssqlctl cluster
-titleSuffix: SQL Server 2019 big data clusters
+titleSuffix: SQL Server big data clusters
 description: Articolo di riferimento per i comandi di cluster mssqlctl.
 author: rothja
 ms.author: jroth
@@ -9,14 +9,16 @@ ms.date: 02/28/2019
 ms.topic: reference
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 9312e972dfcb439f4ef19a4e72d8d66454622096
-ms.sourcegitcommit: d7ed341b2c635dcdd6b0f5f4751bb919a75a6dfe
+ms.openlocfilehash: b12b0421cf32a36cfd6d681bc90ad9ca7c3f9209
+ms.sourcegitcommit: 2de5446fbc57787f18a907dd5deb02a7831ec07d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57527234"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58860552"
 ---
-# <a name="mssqlctl-cluster-debug"></a>debug di cluster mssqlctl
+# <a name="mssqlctl-cluster-debug"></a>debug cluster mssqlctl
+
+[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
 L'articolo seguente fornisce informazioni di riferimento per la **debug cluster** comandi nel **mssqlctl** dello strumento. Per altre informazioni sulle altre **mssqlctl** comandi, vedere [mssqlctl riferimento](reference-mssqlctl.md).
 

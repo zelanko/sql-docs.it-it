@@ -1,23 +1,26 @@
 ---
 title: Distribuire le applicazioni usando mssqlctl
-titleSuffix: SQL Server 2019 big data clusters
+titleSuffix: SQL Server big data clusters
 description: Distribuire uno script Python o R come un'applicazione nel cluster di big data 2019 Server SQL (anteprima).
-author: TheBharath
-ms.author: bharaths
+author: jeroenterheerdt
+ms.author: jterh
+ms.reviewer: jroth
 manager: craigg
 ms.date: 03/27/2018
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: acd7bef7219827eb7a4666d33d6e8477a522e268
-ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
+ms.openlocfilehash: 6cdedc7eac7b9faa2d266b1a32c299d8b7f5fe73
+ms.sourcegitcommit: 1a4aa8d2bdebeb3be911406fc19dfb6085d30b04
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58492803"
+ms.lasthandoff: 04/03/2019
+ms.locfileid: "58872001"
 ---
-# <a name="how-to-deploy-an-app-on-sql-server-2019-big-data-cluster-preview"></a>Come distribuire un'app nel cluster di big data 2019 Server SQL (anteprima)
+# <a name="how-to-deploy-an-app-on-sql-server-big-data-cluster-preview"></a>Come distribuire un'app nel cluster di big data di SQL Server (anteprima)
+
+[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
 Questo articolo descrive come distribuire e gestire lo script R e Python come un'applicazione all'interno di un cluster di big data di SQL Server 2019 (anteprima).
 
@@ -63,9 +66,9 @@ mssqlctl app create --help
 
 Le sezioni seguenti descrivono questi comandi in modo più dettagliato.
 
-## <a name="log-in"></a>Accedi
+## <a name="sign-in"></a>Accedi
 
-Prima di distribuire o interagire con le applicazioni, innanzitutto effettuare l'accesso a SQL Server del cluster di big data con il `mssqlctl login` comando. Specificare l'indirizzo IP esterno del `endpoint-service-proxy` servizio (ad esempio: `https://ip-address:30777`) con il nome utente e la password per il cluster.
+Prima di distribuire o interagire con le applicazioni, accedere prima all'istanza di SQL Server del cluster di big data con il `mssqlctl login` comando. Specificare l'indirizzo IP esterno del `endpoint-service-proxy` servizio (ad esempio: `https://ip-address:30777`) con il nome utente e la password per il cluster.
 
 ```bash
 mssqlctl login -e https://<ip-address-of-endpoint-service-proxy>:30777 -u <user-name> -p <password>
@@ -95,51 +98,49 @@ Per creare un'applicazione, usare `mssqlctl` con il `app create` comando. Questi
 Usare la sintassi seguente per creare una nuova app nel cluster di big data:
 
 ```bash
-mssqlctl app create -n <app_name> -v <version_number> --spec <directory containing spec file>
+mssqlctl app create --spec <directory containing spec file>
 ```
 
 Il comando seguente illustra un esempio di ciò che potrebbe essere simile questo comando:
-
-Ciò presuppone che si dispone di file denominato `spec.yaml` all'interno di `addpy` cartella.
-Il `addpy` cartella contiene il `add.py` e `spec.yaml` il `spec.yaml` è un file di specifica per il `add.py` app.
-
-
-`add.py` Crea l'app python seguente:
-
-```py
-#add.py
-def add(x,y):
-        result = x+y
-        return result
-result=add(x,y)
-```
-
-Lo script seguente è riportato un esempio del contenuto per `spec.yaml`:
-
-```yaml
-#spec.yaml
-name: add-app #name of your python script
-version: v1  #version of the app
-runtime: Python #the language this app uses (R or Python)
-src: ./add.py #full path to the location of the app
-entrypoint: add #the function that will be called upon execution
-replicas: 1  #number of replicas needed
-poolsize: 1  #the pool size that you need your app to scale
-inputs:  #input parameters that the app expects and the type
-  x: int
-  y: int
-output: #output parameter the app expects and the type
-  result: int
-```
-
-A questo scopo, copiare le righe di codice precedente in due file nella directory `addpy` come `add.py` e `spec.yaml` ed eseguire il comando seguente:
 
 ```bash
 mssqlctl app create --spec ./addpy
 ```
 
-> [!NOTE]
-> Il `spec.yaml` file specifica sia una `poolsize` e un numero di `replicas`. Il numero di `replicas` specifica il numero di copie del servizio desidera essere distribuite. Il `poolsize` specifica il numero di pool che si desidera creare per ogni replica. Queste impostazioni hanno un impatto sulla quantità di richieste che può gestire la distribuzione in parallelo. Il numero massimo di richieste in un determinato momento è uguale a `replicas` volte `poolsize`, ovvero Se sono presenti 5 repliche e 2 pool per ogni replica la distribuzione può gestire 10 richieste in parallelo. Vedere l'immagine seguente per una rappresentazione grafica dei `replicas` e `poolsize`: ![DimensionePool e repliche](media/big-data-cluster-create-apps/poolsize-vs-replicas.png)
+Ciò presuppone che si disponga dell'applicazione archiviato nel `addpy` cartella. Questa cartella deve contenere anche un file della specifica per l'applicazione, denominata chiamato `spec.yaml`. Vedi [la pagina distribuzione delle applicazioni](concept-application-deployment.md) per altre informazioni sul `spec.yaml` file.
+
+Per distribuire questa app di esempio di app, creare i seguenti file in una directory denominata `addpy`:
+
+- `add.py`. Copiare il seguente codice Python in questo file:
+   ```py
+   #add.py
+   def add(x,y):
+        result = x+y
+        return result
+    result=add(x,y)
+   ```
+- `spec.yaml`. Copiare il codice seguente nel file:
+   ```yaml
+   #spec.yaml
+   name: add-app #name of your python script
+   version: v1  #version of the app
+   runtime: Python #the language this app uses (R or Python)
+   src: ./add.py #full path to the location of the app
+   entrypoint: add #the function that will be called upon execution
+   replicas: 1  #number of replicas needed
+   poolsize: 1  #the pool size that you need your app to scale
+   inputs:  #input parameters that the app expects and the type
+     x: int
+     y: int
+   output: #output parameter the app expects and the type
+     result: int
+   ```
+
+Quindi, eseguire il comando seguente:
+
+```bash
+mssqlctl app create --spec ./addpy
+```
 
 È possibile controllare se l'app viene distribuita usando il comando di elenco:
 

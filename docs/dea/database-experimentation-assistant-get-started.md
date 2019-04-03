@@ -13,12 +13,12 @@ author: HJToland3
 ms.author: ajaykar
 ms.reviewer: douglasl
 manager: craigg
-ms.openlocfilehash: f0ea70ded49d37d553f5de188a4a0735f521ee66
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+ms.openlocfilehash: 7630aee7ab39f98f372af7c33f277e7272042f43
+ms.sourcegitcommit: 1a4aa8d2bdebeb3be911406fc19dfb6085d30b04
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "56987697"
+ms.lasthandoff: 04/03/2019
+ms.locfileid: "58872241"
 ---
 # <a name="get-started-with-database-experimentation-assistant"></a>Introduzione a Database sperimentazione Assistant
 
@@ -81,7 +81,7 @@ Per riprodurre il file di traccia:
 
    - **Nome di riproduzione**: Il nome di file per la traccia di riproduzione.
    - **Nome computer del controller**: Nome del computer del controller di riesecuzione distribuita.
-   - **Percorso del file di traccia di origine nel controller**: Il percorso del file per il file di traccia di origine dal [acquisire](#Capture).
+   - **Percorso del file di traccia di origine nel controller**: Il percorso del file per il file di traccia di origine dal [acquisire](#capture).
    - **Nome dell'istanza SQL Server**: Il nome dell'istanza di SQL Server in cui si desidera riprodurre la traccia di origine.
    - **Percorso in cui archiviare i file di traccia di destinazione nel computer SQL Server**: Il percorso della cartella per il file di traccia di riproduzione risultante.
 

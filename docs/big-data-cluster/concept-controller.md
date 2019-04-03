@@ -1,23 +1,26 @@
 ---
 title: Che cos'è il controller?
-titleSuffix: SQL Server 2019 big data clusters
+titleSuffix: SQL Server big data clusters
 description: Questo articolo descrive il controller di un cluster di big data di SQL Server 2019 (anteprima).
 author: mihaelablendea
 ms.author: mihaelab
+ms.reviewer: jroth
 manager: craigg
 ms.date: 03/27/2018
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: 25afe48d2191bf77301331ed30850bf0af0baff0
-ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
+ms.openlocfilehash: 3677a2a68799ab1cfa7b6101893fe2b799b5b04a
+ms.sourcegitcommit: 2de5446fbc57787f18a907dd5deb02a7831ec07d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58491794"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58860072"
 ---
-# <a name="what-is-the-controller-on-a-sql-server-2019-big-data-cluster"></a>Che cos'è il controller in un cluster di SQL Server 2019 dei big Data?
+# <a name="what-is-the-controller-on-a-sql-server-big-data-cluster"></a>Che cos'è il controller in un cluster di big data di SQL Server?
+
+[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
 Il controller ospita la logica di base per distribuire e gestire un cluster di big data. Si occupa di tutte le interazioni con Kubernetes, le istanze di SQL Server che fanno parte del cluster e altri componenti come HDFS e Spark. 
 

@@ -1,6 +1,6 @@
 ---
 title: Diagnosi/debug delle applicazioni Spark
-titleSuffix: SQL Server 2019 big data clusters
+titleSuffix: SQL Server big data clusters
 description: Usare il Server cronologia Spark per eseguire il debug e diagnosticare le applicazioni Spark in esecuzione nei cluster di SQL Server 2019 dei big Data.
 author: jejiang
 ms.author: jejiang
@@ -11,14 +11,16 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: 6b3cac808386d2341e1c22b18999009f7d72a43f
-ms.sourcegitcommit: 202ef5b24ed6765c7aaada9c2f4443372064bd60
+ms.openlocfilehash: e7444a9f5bcdc480425ba02c8a068831c081b47a
+ms.sourcegitcommit: 2de5446fbc57787f18a907dd5deb02a7831ec07d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/12/2019
-ms.locfileid: "54241792"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58860333"
 ---
 # <a name="debug-and-diagnose-spark-applications-on-sql-server-big-data-clusters-in-spark-history-server"></a>Debug e diagnosticare le applicazioni Spark nei cluster di big data di SQL Server in Server cronologia Spark
+
+[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
 Questo articolo fornisce indicazioni su come usare il Server cronologia Spark estesi per eseguire il debug e diagnosticare le applicazioni Spark in un cluster di big data 2019 Server SQL (anteprima). Queste funzionalità di debug e diagnosi vengono incorporate nel Server cronologia Spark e con tecnologia Microsoft. L'estensione include schede di dati e scheda graph e diagnosi. Nella scheda dati, gli utenti possono controllare i dati di input e outpui del processo Spark. Nella scheda graph, gli utenti possono controllare il flusso di dati e riprodurre il grafico del processo. Nella scheda diagnostica utente può fare riferimento a un'asimmetria dei dati, mancata sincronizzazione dell'ora e analisi dell'utilizzo di Executor.
 

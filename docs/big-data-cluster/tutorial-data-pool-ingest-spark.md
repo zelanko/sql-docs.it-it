@@ -1,6 +1,6 @@
 ---
 title: Inserire i dati con i processi Spark
-titleSuffix: SQL Server 2019 big data clusters
+titleSuffix: SQL Server big data clusters
 description: Questa esercitazione illustra come inserire dati nel pool di dati di un cluster di big data 2019 Server SQL (anteprima) con i processi Spark in Azure Data Studio.
 author: rothja
 ms.author: jroth
@@ -10,14 +10,16 @@ ms.topic: tutorial
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: 1611a8b0513e8f1a9e50d3cc612b114c88698df5
-ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
+ms.openlocfilehash: c29b6b942b797b5a58679d9d7f5cb91e68561123
+ms.sourcegitcommit: 2de5446fbc57787f18a907dd5deb02a7831ec07d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58491904"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58860672"
 ---
 # <a name="tutorial-ingest-data-into-a-sql-server-data-pool-with-spark-jobs"></a>Esercitazione: Inserire dati in un pool di dati di SQL Server con i processi Spark
+
+[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
 Questa esercitazione illustra come usare processi di Spark per caricare i dati di [pool di dati](concept-data-pool.md) di un cluster di big data di SQL Server 2019 (anteprima). 
 
@@ -34,7 +36,7 @@ In questa esercitazione, apprenderà come:
 ## <a id="prereqs"></a> Prerequisiti
 
 - [Strumenti dei big Data](deploy-big-data-tools.md)
-   - **kubectl**
+   - **Kubectl**
    - **Azure Data Studio**
    - **Estensione di SQL Server 2019**
 - [Caricare i dati di esempio in cluster i big Data](tutorial-load-sample-data.md)

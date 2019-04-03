@@ -1,6 +1,6 @@
 ---
 title: riferimento mssqlctl
-titleSuffix: SQL Server 2019 big data clusters
+titleSuffix: SQL Server big data clusters
 description: Articolo di riferimento per i comandi mssqlctl.
 author: rothja
 ms.author: jroth
@@ -9,14 +9,16 @@ ms.date: 02/28/2019
 ms.topic: reference
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: d15b4149fe336b173452030ec67fb7f229e6ae3d
-ms.sourcegitcommit: d7ed341b2c635dcdd6b0f5f4751bb919a75a6dfe
+ms.openlocfilehash: b050638ee0ca600c5df0ecdbe5616b801f41e7a8
+ms.sourcegitcommit: 2de5446fbc57787f18a907dd5deb02a7831ec07d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57527284"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58860353"
 ---
 # <a name="mssqlctl"></a>mssqlctl
+
+[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
 L'articolo seguente fornisce informazioni di riferimento per la **mssqlctl** dello strumento per [cluster di big data 2019 Server SQL (anteprima)](big-data-cluster-overview.md). Per altre informazioni su come installare il **mssqlctl** dello strumento, vedere [installare mssqlctl per gestire i cluster di big data di SQL Server 2019](deploy-install-mssqlctl.md).
 
@@ -28,7 +30,7 @@ L'articolo seguente fornisce informazioni di riferimento per la **mssqlctl** del
 | [cluster](reference-mssqlctl-cluster.md) | Selezionare, gestire e operare i cluster. |
 | [login](#login) | Accedere al cluster. |
 | [logout](#logout) | Disconnettersi dal cluster. |
-| [storage](reference-mssqlctl-storage.md) | Gestire l'archiviazione del cluster. |
+| [archiviazione](reference-mssqlctl-storage.md) | Gestire l'archiviazione del cluster. |
 
 ## <a id="login"></a> account di accesso mssqlctl
 
@@ -45,9 +47,9 @@ mssqlctl login
 
 | Parametro | Descrizione |
 |---|---|
-|**--endpoint -e**| Cluster host e porta (ex) `http://host:port"`. |
-|**--password -p**| Credenziali password. |
-|**-- username -u**| Account utente. |
+|**-endpoint -e**| Cluster host e porta (ex) `http://host:port"`. |
+|**-password -p**| Credenziali password. |
+|**--username -u**| Account utente. |
 
 ### <a name="examples"></a>Esempi
 
@@ -82,7 +84,7 @@ mssqlctl logout
 
 | Parametri | Descrizione |
 |---|---|
-| **-- username -u** | Account utente, se mancanti, disconnessione, l'account attivo corrente. |
+| **--username -u** | Account utente, se mancanti, disconnessione, l'account attivo corrente. |
 
 ### <a name="examples"></a>Esempi
 

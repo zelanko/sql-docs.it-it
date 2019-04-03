@@ -1,6 +1,6 @@
 ---
 title: Eseguire processi Spark in Azure Data Studio
-titleSuffix: SQL Server 2019 big data clusters
+titleSuffix: SQL Server big data clusters
 description: Inviare processi Spark nei cluster di SQL Server i big data in Azure Data Studio.
 author: jejiang
 ms.author: jejiang
@@ -9,14 +9,16 @@ ms.date: 12/06/2018
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: c1d439c13b06b305c814813eeca7cb9bf8aa53c5
-ms.sourcegitcommit: 8bc5d85bd157f9cfd52245d23062d150b76066ef
+ms.openlocfilehash: d5354927ff0c7e1c61bf358ad73312611c18f317
+ms.sourcegitcommit: 2de5446fbc57787f18a907dd5deb02a7831ec07d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/07/2019
-ms.locfileid: "57578241"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58860452"
 ---
 # <a name="submit-spark-jobs-on-sql-server-big-data-clusters-in-azure-data-studio"></a>Inviare processi Spark nei cluster di SQL Server i big data in Azure Data Studio
+
+[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
 Uno degli scenari chiave per i cluster di big data è la possibilità di inviare processi Spark per l'anteprima di SQL Server 2019. La funzionalità di invio dei processi di Spark consente di inviare un file con estensione Jar o Py locali con riferimenti a cluster di big data di SQL Server 2019. Consente inoltre di eseguire un file con estensione Jar o Py, che sono già presenti nel file system HDFS. 
 
@@ -25,7 +27,7 @@ Uno degli scenari chiave per i cluster di big data è la possibilità di inviare
 - [Strumenti di big data di SQL Server 2019](deploy-big-data-tools.md):
    - **Azure Data Studio**
    - **Estensione di SQL Server 2019**
-   - **kubectl**
+   - **Kubectl**
 
 - [Connessione di Studio di Azure Data al gateway HDFS/Spark del cluster di big data](connect-to-big-data-cluster.md).
 

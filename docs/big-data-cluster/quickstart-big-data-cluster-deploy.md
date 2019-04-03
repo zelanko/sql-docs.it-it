@@ -1,6 +1,6 @@
 ---
 title: Guida introduttiva alla distribuzione
-titleSuffix: SQL Server 2019 big data clusters
+titleSuffix: SQL Server big data clusters
 description: Procedura dettagliata di una distribuzione di cluster di big data 2019 Server SQL (anteprima) in Azure Kubernetes Service (AKS).
 author: rothja
 ms.author: jroth
@@ -10,14 +10,16 @@ ms.topic: quickstart
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: 00810eb3f57fdaf8f87fc0db16744ab9e3334f70
-ms.sourcegitcommit: 0c049c539ae86264617672936b31d89456d63bb0
+ms.openlocfilehash: 7b8abf65b5c2e7abf8823ce98aede22bba14caad
+ms.sourcegitcommit: 2de5446fbc57787f18a907dd5deb02a7831ec07d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/29/2019
-ms.locfileid: "58618148"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58860527"
 ---
 # <a name="quickstart-deploy-sql-server-big-data-cluster-on-azure-kubernetes-service-aks"></a>Avvio rapido: Distribuire il cluster di big data di SQL Server in Azure Kubernetes Service (AKS)
+
+[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
 In questa Guida introduttiva si usa uno script di distribuzione di esempio per distribuire cluster di big data 2019 Server SQL (anteprima) per Azure Kubernetes Service (AKS). 
 
@@ -33,10 +35,10 @@ La distribuzione di cluster di big data predefinita usata in questo esempio è c
 - Una sottoscrizione di Azure.
 - [Gli strumenti dei big data](deploy-big-data-tools.md):
    - **mssqlctl**
-   - **kubectl**
+   - **Kubectl**
    - **Azure Data Studio**
    - **Estensione di SQL Server 2019**
-   - **Comando di Azure**
+   - **Interfaccia della riga di comando di Azure**
 
 ## <a name="log-in-to-your-azure-account"></a>Accedere al proprio account Azure
 
