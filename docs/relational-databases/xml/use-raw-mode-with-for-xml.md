@@ -16,15 +16,15 @@ helpviewer_keywords:
 - RAW mode
 - XMLDATA option
 ms.assetid: 02c1bc0b-760c-4589-9ab1-6927c6d9c734
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 249bee21bdddacc369a99efe8c31be511e2d305a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 961f1e06cb7ba194612cf4e87f40d356096149bb
+ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47837959"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58510178"
 ---
 # <a name="use-raw-mode-with-for-xml"></a>Utilizzo della modalità RAW con FOR XML
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -37,19 +37,19 @@ ms.locfileid: "47837959"
 ## <a name="in-this-section"></a>Contenuto della sezione  
  In questa sezione sono disponibili gli esempi seguenti:  
   
--   [Esempio: recupero delle informazioni relative al modello del prodotto in formato XML](../../relational-databases/xml/example-retrieving-product-model-information-as-xml.md)  
+-   [Esempio: Recupero delle informazioni relative al modello del prodotto in formato XML](../../relational-databases/xml/example-retrieving-product-model-information-as-xml.md)  
   
--   [Esempio: specifica di XSINIL con la direttiva ELEMENTS](../../relational-databases/xml/example-specifying-xsinil-with-the-elements-directive.md)  
+-   [Esempio: Specifica di XSINIL con la direttiva ELEMENTS](../../relational-databases/xml/example-specifying-xsinil-with-the-elements-directive.md)  
   
--   [Esempio: richiesta di schemi di risultato mediante le opzioni XMLDATA e XMLSCHEMA](../../relational-databases/xml/example-requesting-schemas-as-results-with-the-xmldata-and-xmlschema-options.md)  
+-   [Esempio: Richiesta di schemi di risultato mediante le opzioni XMLDATA e XMLSCHEMA](../../relational-databases/xml/example-requesting-schemas-as-results-with-the-xmldata-and-xmlschema-options.md)  
   
--   [Esempio: recupero di dati binari](../../relational-databases/xml/example-retrieving-binary-data.md)  
+-   [Esempio: Recupero di dati binari](../../relational-databases/xml/example-retrieving-binary-data.md)  
   
--   [Esempio: ridenominazione dell'elemento &#60;row&#62;](../../relational-databases/xml/example-renaming-the-row-element.md)  
+-   [Esempio: Ridenominazione dell'elemento &#60;row&#62;](../../relational-databases/xml/example-renaming-the-row-element.md)  
   
--   [Esempio: specifica di un elemento radice per codice XML generato da FOR XML](../../relational-databases/xml/example-specifying-a-root-element-for-the-xml-generated-by-for-xml.md)  
+-   [Esempio: Specifica di un elemento radice per codice XML generato da FOR XML](../../relational-databases/xml/example-specifying-a-root-element-for-the-xml-generated-by-for-xml.md)  
   
--   [Esempio: esecuzione di query sulle colonne di tipo XML](../../relational-databases/xml/example-querying-xmltype-columns.md)  
+-   [Esempio: Esecuzione di query sulle colonne di tipo XML](../../relational-databases/xml/example-querying-xmltype-columns.md)  
   
 ## <a name="see-also"></a>Vedere anche  
  [Aggiungere spazi dei nomi alle query con WITH XMLNAMESPACES](../../relational-databases/xml/add-namespaces-to-queries-with-with-xmlnamespaces.md)   

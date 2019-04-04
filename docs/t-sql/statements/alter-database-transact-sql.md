@@ -27,12 +27,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-current||=azuresqldb-mi-current||=azure-sqldw-latest||>=aps-pdw-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: a9d870d766d7c2080b177270156cfa2428c21fc7
-ms.sourcegitcommit: 2111068372455b5ec147b19ca6dbf339980b267d
+ms.openlocfilehash: d0818f5ffbc75a296996e1cf3b5683dacbc0efa2
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58417243"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58538663"
 ---
 # <a name="alter-database-transact-sql"></a>ALTER DATABASE (Transact-SQL)
 
@@ -233,7 +233,7 @@ Modify Name = Northwind ;
 GO
 ```
 
-### <a name="b-changing-the-collation-of-a-database"></a>b. Modifica delle regole di confronto del database
+### <a name="b-changing-the-collation-of-a-database"></a>B. Modifica delle regole di confronto del database
 
 Nell'esempio seguente viene creato un database denominato `testdb` con le regole di confronto `SQL_Latin1_General_CP1_CI_A`S, quindi vengono modificate le regole di confronto del database `testdb` in `COLLATE French_CI_AI`.
 
@@ -592,7 +592,7 @@ SELECT Edition = DATABASEPROPERTYEX('db1', 'EDITION'),
 ALTER DATABASE [db1] MODIFY (EDITION = 'Premium', MAXSIZE = 1024 GB, SERVICE_OBJECTIVE = 'P15');
 ```
 
-### <a name="b-moving-a-database-to-a-different-elastic-pool"></a>b. Spostare un database in un pool elastico diverso
+### <a name="b-moving-a-database-to-a-different-elastic-pool"></a>B. Spostare un database in un pool elastico diverso
 Sposta un database esistente in un pool denominato pool1:
 
 ```sql
@@ -624,7 +624,15 @@ Alza di livello un database secondario db1 nel server `secondaryserver` perché 
 ALTER DATABASE db1 FAILOVER
 ```
 
-### <a name="f-update-a-single-database-to-service-tier-s0-standard-edition-performance-level-0"></a>F. Aggiornare un singolo database al livello di servizio S0 (edizione standard, livello di prestazioni 0)
+### <a name="e-force-failover-to-a-geo-replication-secondary-with-data-loss"></a>E. Forzare il failover su un database secondario con replica geografica con perdita di dati
+
+Forza un database secondario db1 nel server `secondaryserver` affinché diventi il nuovo database primario quando viene eseguito nel server `secondaryserver`, qualora il server primario risultasse non disponibile. Questa opzione può determinare una perdita di dati. 
+
+```sql
+ALTER DATABASE db1 FORCE_FAILOVER_ALLOW_DATA_LOSS
+```
+
+### <a name="g-update-a-single-database-to-service-tier-s0-standard-edition-performance-level-0"></a>G. Aggiornare un singolo database al livello di servizio S0 (edizione standard, livello di prestazioni 0)
 Aggiorna un database singolo all'edizione standard (livello di servizio) con un livello di prestazioni di S0 e una dimensione massima di 250 GB.
 
 ```sql
@@ -863,7 +871,7 @@ ALTER DATABASE AdventureWorks2012
 MODIFY NAME = Northwind;
 ```
 
-### <a name="b-change-max-size-for-the-database"></a>b. Modificare la dimensione massima del database
+### <a name="b-change-max-size-for-the-database"></a>B. Modificare la dimensione massima del database
 
 ```sql
 ALTER DATABASE dw1 MODIFY ( MAXSIZE=10240 GB );
@@ -1045,7 +1053,7 @@ ALTER DATABASE CustomerSales
     SET ( AUTOGROW = ON );
 ```
 
-### <a name="b-altering-the-maximum-storage-for-replicated-tables"></a>b. Modifica dell'archiviazione massima per le tabelle replicate
+### <a name="b-altering-the-maximum-storage-for-replicated-tables"></a>B. Modifica dell'archiviazione massima per le tabelle replicate
 
 Nell'esempio seguente il limite di archiviazione delle tabelle replicate viene impostato su 1 GB per il database `CustomerSales`. È il limite di archiviazione per ogni nodo di calcolo.
 

@@ -3,22 +3,39 @@ title: Virtualizzare i dati esterni in SQL Server 2019 CTP 2.0 | Microsoft Docs
 description: Questa pagina illustra i passaggi per l'uso della procedura guidata di creazione di una tabella esterna per un file CSV
 author: Abiola
 ms.author: aboke
+ms.reviewer: jroth
 manager: craigg
-ms.date: 12/13/2018
+ms.date: 03/27/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: polybase
 monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
-ms.openlocfilehash: 4529d31ab27f06b6a44b396dd6b20bd6e438dbef
-ms.sourcegitcommit: 2e8783e6bedd9597207180941be978f65c2c2a2d
+ms.openlocfilehash: dae0692bafd8c4de295a914c9da0ead5c6e3980b
+ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/19/2019
-ms.locfileid: "54405676"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58512958"
 ---
 # <a name="use-the-external-table-wizard-with-csv-files"></a>Usare la procedura guidata di creazione di una tabella esterna per i file CSV
 
 SQL Server 2019 offre inoltre la possibilità di virtualizzare i dati da un file CSV in HDFS.  Questo processo consente ai dati di rimanere nella posizione originale, ma è possibile **virtualizzare** i dati in un'istanza di SQL Server in modo da poter eseguire query nella versione virtualizzata come per qualsiasi altra tabella in SQL Server. Con questa funzionalità sarà possibile ridurre al minimo la necessità di ricorrere a processi ETL (estrazione, trasformazione e caricamento). Ciò è possibile grazie all'uso di connettori Polybase. Per altre informazioni sulla virtualizzazione dei dati, vedere il documento [Introduzione a PolyBase](polybase-guide.md).
+
+## <a name="prerequisite"></a>Prerequisiti
+
+A partire da CTP 2.4, le origini dati esterne del pool di dati e del pool di archiviazione non vengono più create per impostazione predefinita nel cluster Big Data. Prima di usare la procedura guidata, creare l'origine dati esterna **SqlStoragePool** predefinita nel database di destinazione con la query Transact-SQL seguente. Verificare di aver prima cambiato il contesto della query sul database di destinazione.
+
+```sql
+IF NOT EXISTS(SELECT * FROM sys.external_data_sources WHERE name = 'SqlStoragePool')
+  BEGIN
+    IF SERVERPROPERTY('ProductLevel') = 'CTP2.3'
+      CREATE EXTERNAL DATA SOURCE SqlStoragePool
+      WITH (LOCATION = 'sqlhdfs://service-mssql-controller:8080');
+    ELSE IF SERVERPROPERTY('ProductLevel') = 'CTP2.4'
+      CREATE EXTERNAL DATA SOURCE SqlStoragePool
+      WITH (LOCATION = 'sqlhdfs://service-master-pool:50070');
+  END
+```
 
 ## <a name="launch-the-external-table-wizard"></a>Avviare la procedura guidata Tabella esterna
 

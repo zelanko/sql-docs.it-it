@@ -11,15 +11,15 @@ helpviewer_keywords:
 - indexes [XML in SQL Server]
 - XML indexes [SQL Server], creating
 ms.assetid: 6ecac598-355d-4408-baf7-1b2e8d4cf7c1
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 9abf5eac7b884106c56d960025a8c15303f9b097
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: bd769a496bd5f9057c6cedfefcf3db371f829760
+ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47851119"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58511188"
 ---
 # <a name="create-xml-indexes"></a>Creazione di indici XML
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -57,7 +57,7 @@ ms.locfileid: "47851119"
   
  Quando si crea o si ricrea un indice XML primario in una colonna con tipo di dati XML che contiene valori dei tipi XML Schema **xs:date** o **xs:dateTime** o dei relativi sottotipi, non meno recenti di un anno, la creazione dell'indice non riuscirà in [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] e versioni successive. [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] sono consentiti questi valori, quindi questo problema può verificarsi quando si creano indici in un database generato in [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]. Per altre informazioni, vedere [Confrontare dati XML tipizzati con dati XML non tipizzati](../../relational-databases/xml/compare-typed-xml-to-untyped-xml.md).  
   
-### <a name="example-creating-a-primary-xml-index"></a>Esempio: creazione di un indice XML primario  
+### <a name="example-creating-a-primary-xml-index"></a>Esempio: Creazione di un indice XML primario  
  Nella maggior parte degli esempi viene utilizzata la tabella T (pk INT PRIMARY KEY, xCol XML), che include una colonna XML non tipizzata. Gli esempi possono essere estesi senza difficoltà ai dati XML tipizzati. Per semplicità vengono descritte le query per le istanze di dati XML, come illustrato nel codice seguente:  
   
 ```  
@@ -101,7 +101,7 @@ FROM    sys.xml_indexes;
   
  I valori restituiti nella colonna **seconday_type_desc** possono essere NULL, PATH, VALUE o PROPERTY. Per l'indice XML primario, il valore restituito è NULL.  
   
-### <a name="example-creating-secondary-xml-indexes"></a>Esempio: creazione di indici XML secondari  
+### <a name="example-creating-secondary-xml-indexes"></a>Esempio: Creazione di indici XML secondari  
  Nell'esempio seguente viene illustrata la creazione di indici XML secondari. Vengono inoltre fornite informazioni sugli indici XML creati.  
   
 ```  

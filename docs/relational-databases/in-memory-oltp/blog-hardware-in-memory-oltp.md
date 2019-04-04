@@ -1,7 +1,7 @@
 ---
 title: Hardware per OLTP in memoria di SQL | Microsoft Docs
 ms.custom: ''
-ms.date: 11/30/2018
+ms.date: 03/28/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -11,20 +11,20 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: =azuresqldb-current||=azuresqldb-mi-current||>=sql-server-2016||>=sql-server-linux-2017||=sqlallproducts-allversions
-ms.openlocfilehash: 9efb08ec81de552581fd2d1d0c34bbf731dac7d7
-ms.sourcegitcommit: b51edbe07a0a2fdb5f74b5874771042400baf919
+ms.openlocfilehash: 8990a7c8024ae19fa77f2635cf3134b02ea52bf6
+ms.sourcegitcommit: c60784d1099875a865fd37af2fb9b0414a8c9550
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/28/2019
-ms.locfileid: "55087591"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58645443"
 ---
-# <a name="hardware-considerations-for-in-memory-oltp-in-sql-server-2014"></a>Considerazioni sull'hardware per OLTP in memoria in SQL Server 2014
+# <a name="hardware-considerations-for-in-memory-oltp-in-sql-server"></a>Considerazioni sull'hardware per OLTP in memoria in SQL Server
 
 OLTP in memoria usa la memoria e il disco in modo diverso rispetto alle comuni tabelle basate su disco. Il miglioramento delle prestazioni registrato con OLTP in memoria dipende dall'hardware in uso. Questo post di blog include varie considerazioni generali sull'hardware e include informazioni e linee guida generiche per l'hardware da usare con OLTP in memoria.
 
 > [!NOTE]
-> Questo articolo è stato pubblicato in un blog il 1 agosto 2013 dal team di Microsoft SQL Server 2014. La pagina Web del blog è in fase di ritiro e questo articolo è una trasposizione di massima del testo del blog. Gli articoli della documentazione che in precedenza erano collegati al blog ora sono collegati a questo articolo. Questo articolo non viene mantenuto. L'articolo potrebbe essere escluso dal Sommario.
-> 
+> Questo articolo è stato pubblicato in un blog il 1 agosto 2013 dal team di Microsoft SQL Server 2014. La pagina Web del blog verrà ritirata.
+>
 > [OLTP in memoria di SQL Server](index.md)
 
 <!--
@@ -32,7 +32,7 @@ OLTP in memoria usa la memoria e il disco in modo diverso rispetto alle comuni t
     https://cloudblogs.microsoft.com/sqlserver/2013/08/01/hardware-considerations-for-in-memory-oltp-in-sql-server-2014/
     At least one pre-existing article that contained the obsolete blog link was:
         relational-databases\in-memory-oltp\sample-database-for-in-memory-oltp.md
- -->
+-->
 
 ## <a name="cpu"></a>CPU
 
@@ -47,7 +47,7 @@ Tutte le tabelle con ottimizzazione per la memoria risiedono completamente in me
 Per determinare la quantità di memoria usata da una determinata tabella con ottimizzazione per la memoria, eseguire la query seguente:
 
 ```sql
-select object_name(object_id), * from sys.dm_db_xtp_table_memory_stats
+select object_name(object_id), * from sys.dm_db_xtp_table_memory_stats;
 ```
 
 I risultati mostrano la memoria usata per le tabelle ottimizzate per la memoria e i relativi indici. I dati della tabella includono i dati dell'utente e anche tutte le versioni di riga precedenti ancora necessarie per l'esecuzione di transazioni o che non sono state ancora eliminate dal sistema. La memoria usata dagli indici hash è costante e non dipende dal numero di righe nella tabella.
@@ -74,3 +74,6 @@ Per soddisfare requisiti RTO rigorosi è consigliabile distribuire i file del ch
 
 In termini di capacità del disco è consigliabile avere una capacità pari a 2-3 volte le dimensioni delle tabelle ottimizzate per la memoria.
 
+## <a name="see-also"></a>Vedere anche
+
+[Database di esempio per OLTP in memoria](sample-database-for-in-memory-oltp.md)

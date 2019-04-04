@@ -11,25 +11,25 @@ ms.assetid: f7c7acc5-a350-4a17-95e1-e689c78a0900
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: bc8dc35b72a5544bc6b52934a4e2e517a047a621
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: 4b311802506ac8d0517026a9258a340e927a10f9
+ms.sourcegitcommit: a9a03f9a7ec4dad507d2dfd5ca33571580114826
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53215367"
+ms.lasthandoff: 03/28/2019
+ms.locfileid: "58566560"
 ---
 # <a name="configure-a-distributed-always-on-availability-group"></a>Configurare un gruppo di disponibilità distribuito Always On  
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-Per creare un gruppo di disponibilità distribuito, è necessario creare un gruppo di disponibilità e listener in ogni WSFC (Windows Server Failover Cluster). È quindi possibile combinare questi gruppi di disponibilità in un gruppo di disponibilità distribuito. La procedura seguente illustra un esempio di base in Transact-SQL. Questo esempio non descrive in dettaglio la creazione dei gruppi di disponibilità e listener, ma mette in rilievo i requisiti principali. 
+Per creare un gruppo di disponibilità distribuito, è necessario creare due gruppi di disponibilità ognuno con il proprio listener. È quindi possibile combinare questi gruppi di disponibilità in un gruppo di disponibilità distribuito. La procedura seguente illustra un esempio di base in Transact-SQL. Questo esempio non descrive in dettaglio la creazione di gruppi di disponibilità e listener, ma mette in rilievo i requisiti principali.
 
-Per una panoramica tecnica dei gruppi di disponibilità distribuiti, vedere [Gruppi di disponibilità distribuiti](distributed-availability-groups.md).   
+Per una panoramica tecnica dei gruppi di disponibilità distribuiti, vedere [Gruppi di disponibilità distribuiti](distributed-availability-groups.md).
 
 ## <a name="prerequisites"></a>Prerequisites
 
 ### <a name="set-the-endpoint-listeners-to-listen-to-all-ip-addresses"></a>Impostare i listener di endpoint in ascolto per tutti gli indirizzi IP
 
-Assicurarsi che gli endpoint possano comunicare tra i vari gruppi di disponibilità nel gruppo di disponibilità distribuito. Se un gruppo di disponibilità è impostato su una rete specifica dell'endpoint, il gruppo di disponibilità distribuito non funzionerà correttamente. In ogni server che ospita una replica nel gruppo di disponibilità distribuito, configurare il listener per `LISTENER_IP = ALL`. 
+Assicurarsi che gli endpoint possano comunicare tra i vari gruppi di disponibilità nel gruppo di disponibilità distribuito. Se un gruppo di disponibilità è impostato su una rete specifica dell'endpoint, il gruppo di disponibilità distribuito non funzionerà correttamente. In ogni server che ospita una replica nel gruppo di disponibilità distribuito, configurare il listener per l'ascolto su tutti gli indirizzi IP (`LISTENER_IP = ALL`).
 
 #### <a name="create-a-listener-to-listen-to-all-ip-addresses"></a>Creare un listener per l'ascolto di tutti gli indirizzi IP
 
@@ -60,7 +60,7 @@ GO
 ## <a name="create-first-availability-group"></a>Creare un primo gruppo di disponibilità
 
 ### <a name="create-the-primary-availability-group-on-the-first-cluster"></a>Creare il gruppo di disponibilità primario nel primo cluster  
-Creare un gruppo di disponibilità nel primo WSFC.   In questo esempio il gruppo di disponibilità è denominato `ag1` per il database `db1`. La replica primaria del gruppo di disponibilità primario è nota come **server primario globale** in un gruppo di disponibilità distribuito. Server1 è il server primario globale in questo esempio.        
+Creare un gruppo di disponibilità nel primo cluster di failover di Windows Server (WSFC).   In questo esempio il gruppo di disponibilità è denominato `ag1` per il database `db1`. La replica primaria del gruppo di disponibilità primario è nota come **server primario globale** in un gruppo di disponibilità distribuito. Server1 è il server primario globale in questo esempio.        
   
 ```sql  
 CREATE AVAILABILITY GROUP [ag1]   
@@ -209,11 +209,19 @@ Quando il database nella replica secondaria del secondo gruppo di disponibilità
 
 ```sql  
 ALTER DATABASE [db1] SET HADR AVAILABILITY GROUP = [ag2];   
-```  
+```
   
 ## <a name="failover"></a> Failover su un gruppo di disponibilità secondario  
-In questo momento è supportato solo il failover manuale. L'istruzione Transact-SQL seguente effettua il failover del gruppo di disponibilità distribuito denominato `distributedag`:  
 
+In questo momento è supportato solo il failover manuale. Per eseguire il failover manuale di un gruppo di disponibilità distribuito:
+
+1. Per evitare la perdita di dati, impostare il gruppo di disponibilità distribuito sulla modalità commit sincrono.
+1. Attendere che il gruppo di disponibilità distribuito sia sincronizzato.
+1. Nella replica primaria globale impostare il ruolo del gruppo di disponibilità distribuito su `SECONDARY`.
+1. Verificare la conformità del failover.
+1. Eseguire il failover del gruppo di disponibilità primario.
+
+Gli esempi Transact-SQL seguenti illustrano i passaggi dettagliati per il failover del gruppo di disponibilità distribuito denominato `distributedag`:
 
 1. Impostare il gruppo di disponibilità distribuito per il commit sincrono eseguendo il codice seguente *sia* nel server primario globale che nel server d'inoltro.   
     
@@ -242,8 +250,7 @@ In questo momento è supportato solo il failover manuale. L'istruzione Transact-
 
       ```  
    >[!NOTE]
-   >In modo analogo ai gruppi di disponibilità, lo stato di sincronizzazione tra due repliche di gruppi di disponibilità parte di un gruppo di disponibilità distribuito dipende dalla modalità di disponibilità di entrambe le repliche. Ad esempio, affinché si verifichi il commit sincrono, sia il gruppo di disponibilità primario corrente sia il gruppo di disponibilità secondario devono essere configurati con modalità di disponibilità con commit sincrono.  
-
+   >In un gruppo di disponibilità distribuito, lo stato di sincronizzazione tra i due gruppi di disponibilità dipende dalla modalità di disponibilità di entrambe le repliche. Per la modalità con commit sincrono, il gruppo di disponibilità primario corrente e quello secondario corrente devono essere entrambi configurati con la modalità di disponibilità `SYNCHRONOUS_COMMIT`. Per questo motivo, è necessario eseguire lo script precedente nella replica primaria globale e nel server di inoltro.
 
 1. Attendere che lo stato del gruppo di disponibilità distribuito diventi `SYNCHRONIZED`. Eseguire la query seguente nel server primario globale corrispondente alla replica primaria del gruppo di disponibilità primario. 
     

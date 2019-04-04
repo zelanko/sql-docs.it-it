@@ -6,20 +6,21 @@ ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
 ms.technology: xevents
-ms.topic: conceptual
+ms.topic: quickstart
 ms.assetid: 7bb78b25-3433-4edb-a2ec-c8b2fa58dea1
 author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: b7c3718d1402ebdc6ff82bddc55172f09ff8b61a
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 1e32610836ab856710de35dcf24104a3e4433877
+ms.sourcegitcommit: 715683b5fc7a8e28a86be8949a194226b72ac915
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51658350"
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58478236"
 ---
-# <a name="quick-start-extended-events-in-sql-server"></a>Avvio rapido: Eventi estesi in SQL Server
+# <a name="quickstart-extended-events-in-sql-server"></a>Avvio rapido: Eventi estesi in SQL Server
+
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
 
@@ -426,7 +427,7 @@ La tabella seguente elenca i termini usati per gli eventi estesi e ne descrive i
 
 | Nome | Descrizione |
 | :--- | :---------- |
-| sessione eventi | Un costrutto incentrato su uno o più eventi, oltre a elementi di supporto quali azioni e destinazioni. L'istruzione CREATE EVENT SESSION viene costruita a ogni sessione eventi. È possibile modificare una sessione eventi in modo da avviarla e arrestarla in base alle proprie esigenze. <br/> <br/> Una sessione eventi viene a volte indicata semplicemente come *sessione*, quando il dal contesto si evince che indica la *sessione eventi*. <br/> <br/> Altre informazioni sulle sessioni eventi sono descritte in: [Sessioni degli eventi estesi di SQL Server](../../relational-databases/extended-events/sql-server-extended-events-sessions.md). |
+| sessione eventi | Un costrutto incentrato su uno o più eventi, oltre a elementi di supporto quali azioni e destinazioni. L'istruzione CREATE EVENT SESSION viene costruita a ogni sessione eventi. È possibile modificare una sessione eventi in modo da avviarla e arrestarla in base alle proprie esigenze. <br/> <br/> Una sessione eventi viene a volte indicata semplicemente come *sessione*, quando il dal contesto si evince che indica la *sessione eventi*. <br/> <br/> Altre informazioni sulle sessioni eventi sono disponibili in: [Sessioni Eventi estesi di SQL Server](../../relational-databases/extended-events/sql-server-extended-events-sessions.md). |
 | evento | Un'occorrenza specifica del sistema che viene controllata da una sessione eventi attiva. <br/> <br/> Ad esempio, l'evento *sql_statement_completed* rappresenta il momento in cui viene completata un'istruzione T-SQL. L'evento può segnalare la durata e altri dati. |
 | target | Un elemento che riceve i dati di output da un evento acquisito. La destinazione visualizza i dati all'utente. <br/> <br/> Gli esempi includono *event_file*e la memoria *ring_buffer*, che rappresenta una versione più pratica e leggera della destinazione event_file. La destinazione *histogram* esegue alcune operazioni di elaborazione dei dati prima di visualizzarli. <br/> <br/> Qualsiasi destinazione può essere usata per qualsiasi sessione eventi. Per informazioni dettagliate, vedere [Destinazioni per gli eventi estesi in SQL Server](../../relational-databases/extended-events/targets-for-extended-events-in-sql-server.md). |
 | action | Un campo noto all'evento. I dati del campo vengono inviati alla destinazione. Il campo azione è strettamente correlato al *filtro predicato*. |
@@ -485,7 +486,7 @@ Un'altra opzione di ricerca consiste nell'usare l'interfaccia utente di SSMS per
 #### <a name="sql-trace-event-classes-with-extended-events"></a>Classi di evento di Traccia SQL, con eventi estesi
 
 
-Una descrizione dell'uso degli eventi estesi con le classi e le colonne di evento di Traccia SQL è disponibile all'indirizzo: [Visualizzare gli eventi estesi equivalenti alle classi di eventi di Traccia SQL](../../relational-databases/extended-events/view-the-extended-events-equivalents-to-sql-trace-event-classes.md)
+Una descrizione dell'uso degli eventi estesi con colonne e classi di evento di Traccia SQL è disponibile in: [Visualizzare gli eventi estesi equivalenti alle classi di eventi di Traccia SQL](../../relational-databases/extended-events/view-the-extended-events-equivalents-to-sql-trace-event-classes.md)
 
 
 
@@ -525,7 +526,7 @@ SQL Server viene fornito con alcuni eventi estesi già creati. Tutti sono config
 ### <a name="powershell-provider-for-extended-events"></a>Provider PowerShell per eventi estesi
 
 
-È possibile gestire gli eventi estesi di SQL Server usando il provider PowerShell per SQL Server. Informazioni dettagliate sono fornite in [Usare il provider PowerShell per eventi estesi](../../relational-databases/extended-events/use-the-powershell-provider-for-extended-events.md)
+È possibile gestire gli eventi estesi di SQL Server usando il provider PowerShell per SQL Server. I dettagli sono disponibili in: [Usare il provider PowerShell per eventi estesi](../../relational-databases/extended-events/use-the-powershell-provider-for-extended-events.md)
 
 
 ### <a name="system-views-for-extended-events"></a>Viste di sistema per gli eventi estesi
@@ -649,7 +650,7 @@ Di seguito sono forniti collegamenti alla documentazione relativa a queste istru
 - [GRANT - autorizzazioni per server (Transact-SQL)](../../t-sql/statements/grant-server-permissions-transact-sql.md)
 - [sys.server_principals (Transact-SQL)](https://msdn.microsoft.com/library/ms188786.aspx)
 - Per il database di SQL Azure in particolare, [sys.database_principals (Transact-SQL)](https://msdn.microsoft.com/library/ms187328.aspx)
-- Blog relativo alle [autorizzazioni efficaci del motore di database efficace](https://social.technet.microsoft.com/wiki/contents/articles/15180.effective-database-engine-permissions.aspx)
+- Blog: [Effective Database Engine Permissions](https://social.technet.microsoft.com/wiki/contents/articles/15180.effective-database-engine-permissions.aspx) (Autorizzazioni del motore di database valide)
 - [poster](https://aka.ms/sql-permissions-poster)ingrandibile, in formato PDF, che visualizza la gerarchia di tutte le autorizzazioni di SQL Server.
 
 

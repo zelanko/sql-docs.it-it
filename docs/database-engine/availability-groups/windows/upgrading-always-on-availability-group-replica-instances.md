@@ -10,12 +10,12 @@ ms.assetid: f670af56-dbcc-4309-9119-f919dcad8a65
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 27e2a4939ebe376408aad64414503a8c9edd46ce
-ms.sourcegitcommit: 1510d9fce125e5b13e181f8e32d6f6fbe6e7c7fe
+ms.openlocfilehash: 6c7b3874277b1046233e4f728a19d3eee60aa851
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/06/2019
-ms.locfileid: "55771347"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58535853"
 ---
 # <a name="upgrading-always-on-availability-group-replica-instances"></a>Aggiornamento delle istanze di replica dei gruppi di disponibilità AlwaysOn
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -80,17 +80,23 @@ Per ridurre al minimo i tempi di inattività e la perdita di dati per i gruppi d
   
 1.  Rimuovere il failover automatico in tutte le repliche con commit sincrono  
   
-2.  Aggiornare tutte le istanze di replica secondaria remota in cui vengono eseguite repliche secondarie con commit asincrono  
+2.  Aggiornare tutte le istanze di replica secondaria con commit asincrono. 
   
-3.  Aggiornare tutte le istanze di replica secondaria locale in cui non è attualmente in esecuzione la replica primaria  
+3.  Aggiornare tutte le istanze di replica secondaria con commit sincrono remote. 
+
+4.  Aggiornare tutte le istanze di replica secondaria con commit sincrono locali. 
   
-4.  Eseguire manualmente il failover del gruppo di disponibilità su una replica secondaria locale con commit sincrono  
+4.  Eseguire manualmente il failover del gruppo di disponibilità su una replica secondaria con commit sincrono locale appena aggiornata.  
   
-5.  Aggiornare l'istanza di replica locale in cui, in precedenza, era ospitata la replica primaria  
+5.  Aggiornare l'istanza di replica locale in cui, in precedenza, era ospitata la replica primaria.  
   
-6.  Configurare i partner di failover automatico nel modo desiderato  
+6.  Configurare i partner di failover automatico in base alle proprie preferenze.
   
  Se necessario, è possibile eseguire un ulteriore failover manuale per ripristinare la configurazione originale del gruppo di disponibilità.  
+ 
+   > [!NOTE]
+   > - L'aggiornamento di una replica con commit sincrono e la relativa impostazione offline non comporteranno un ritardo delle transazioni nella replica primaria. Dopo che la replica secondaria è stata disconnessa, il commit delle transazioni avviene nella replica primaria senza attendere la finalizzazione dei log nella replica secondaria. 
+   > - Se `REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT` è impostato su `1` o `2`, la replica primaria può non risultare disponibile per le operazioni di lettura/scrittura quando non è disponibile un numero corrispondente di repliche secondarie di sincronizzazione durante il processo di aggiornamento. 
   
 ## <a name="ag-with-one-remote-secondary-replica"></a>Gruppo di disponibilità con una replica secondaria remota  
  Se è stato distribuito un gruppo di disponibilità solo a fini di ripristino di emergenza potrebbe essere necessario eseguirne il failover su una replica secondaria con commit asincrono. Questo tipo di configurazione è illustrato nella figura seguente:  

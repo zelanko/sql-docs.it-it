@@ -11,12 +11,12 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 manager: craigg
-ms.openlocfilehash: 24c7a50845e4adb416251f25909c438d1bd4990d
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 27e7285fe95307c6ce6308dc27e0076146e86223
+ms.sourcegitcommit: 706f3a89fdb98e84569973f35a3032f324a92771
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52394755"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58657765"
 ---
 # <a name="are-you-upgrading-from-sql-server-2005-2008-or-2008r2"></a>Aggiornamento da SQL Server 2005, 2008 o 2008R2
 
@@ -41,7 +41,7 @@ Per un'analisi più completa di queste opzioni, [fare clic qui](https://sql05upg
   
 |Opzione di archiviazione relazionale|Vantaggi|Altri fattori da considerare|  
 |-------------------------------|--------------|-------------------------------|  
-|**SQL Server locale**<br /><br /> Prendere in considerazione questa opzione per le applicazioni di database di qualsiasi tipo, dai sistemi transazionali ai data warehouse.|Si ha un maggiore controllo sulle funzionalità e la scalabilità perché vengono gestiti sia l'hardware che il software.<br /><br /> Se si esegue l'aggiornamento da una versione precedente di SQL Server, questo è l'ambiente più simile.|L'investimento iniziale è elevato ed è necessaria una gestione continua perché è necessario acquistare, mantenere e gestire il proprio hardware e software.<br /><br /> Per altre informazioni, vedere [SQL Server](https://www.microsoft.com/server-cloud/products/sql-server-2017/).|  
+|**SQL Server locale**<br /><br /> Prendere in considerazione questa opzione per le applicazioni di database di qualsiasi tipo, dai sistemi transazionali ai data warehouse.|Si ha un maggiore controllo sulle funzionalità e la scalabilità perché vengono gestiti sia l'hardware che il software.<br /><br /> Se si esegue l'aggiornamento da una versione precedente di SQL Server, questo è l'ambiente più simile.|L'investimento iniziale è elevato ed è necessaria una gestione continua perché è necessario acquistare, mantenere e gestire il proprio hardware e software.<br /><br /> Per altre informazioni, vedere [SQL Server](https://www.microsoft.com/evalcenter/evaluate-sql-server-2017-rtm).|  
 |**SQL Server ospitato in macchine virtuali di Azure**<br /><br /> Prendere in considerazione questa opzione se si hanno le esigenze seguenti:<br /><br /> Vantaggi associati alla migrazione a un ambiente ospitato.<br /><br /> Controllo sull'ambiente operativo.<br /><br /> Set di funzionalità di SQL Server, già noto.|È possibile eseguire rapidamente la distribuzione da una libreria di immagini della macchina virtuale.<br /><br /> Viene fornito il set di funzionalità completo di SQL Server.<br /><br /> Si risparmiano i costi per l'hardware e il software del server. Si paga per ora in base all'utilizzo.|È necessario configurare e gestire sia SQL Server che il software del sistema operativo.<br /><br /> <br /><br /> Per altre informazioni, vedere [Panoramica di SQL Server in Macchine virtuali di Azure](https://azure.microsoft.com/documentation/articles/virtual-machines-sql-server-infrastructure-services/).<br /><br /> Per informazioni sulla migrazione, vedere [Eseguire la migrazione di un database di SQL Server a SQL Server in una macchina virtuale di Azure](https://azure.microsoft.com/documentation/articles/virtual-machines-migrate-onpremises-database/).|  
 |**Servizio di database ospitato nel database SQL di Azure**<br /><br /> Prendere in considerazione questa opzione se si preferisce una soluzione a basso costo che necessita di poca manutenzione.<br /><br /> Questa opzione è particolarmente adatta per le app che non richiedono una capacità costante o che devono fornire un accesso esterno.|La distribuzione è rapida e la scalabilità verticale semplice.<br /><br /> Si paga per ora in base all'utilizzo.<br /><br /> Il costo del servizio include anche la disponibilità elevata e i backup automatici, oltre all'archiviazione.|Il database SQL di Azure non offre alcune delle funzionalità di SQL Server non applicabili a un ambiente cloud ospitato. Per altre informazioni, vedere [Differenze di Transact-SQL del database SQL di Azure](https://azure.microsoft.com/documentation/articles/sql-database-transact-sql-information/).<br /><br /> Anche le dimensioni massime del database SQL di Azure sono di 4 TB, invece dei 524 PB di SQL Server. Per altre informazioni, vedere [Resource limits for single databases](https://docs.microsoft.com/azure/sql-database/sql-database-vcore-resource-limits-single-databases) (Limiti delle risorse per i database singoli)<br /><br /> Per altre informazioni sul Database SQL, vedere [Azure SQL Database overview](https://azure.microsoft.com/services/sql-database/) (Panoramica sul database SQL di Azure) e [Documentazione sul database SQL di Azure](https://docs.microsoft.com/azure/sql-database/).<br /><br /> Per informazioni sulla migrazione, vedere [Migrazione di un database SQL Server nel database SQL di Azure](https://azure.microsoft.com/documentation/articles/sql-database-cloud-migrate/).|  
   

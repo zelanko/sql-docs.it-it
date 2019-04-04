@@ -11,12 +11,12 @@ author: craigg-msft
 ms.author: craigg
 manager: jhubbard
 monikerRange: = sql-server-2014 || = sqlallproducts-allversions
-ms.openlocfilehash: d4346f3c30020d49f49deab4988b754a31ec401f
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: df99a74b9c26e13c9fc2037c9d540ee844bfebfb
+ms.sourcegitcommit: 706f3a89fdb98e84569973f35a3032f324a92771
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52503490"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58658275"
 ---
 # <a name="sql-server-2014-release-notes"></a>SQL Server 2014 Release Notes
 [!INCLUDE[tsql-appliesto-ss2014-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2014-xxxx-xxxx-xxx-md.md)]
@@ -50,7 +50,7 @@ SQL Server 2014 SP2 contiene rollup di correzioni rilasciate per SQL Server 2014
 |Supporto DROP DDL per la replica|Consente di eliminare dal database e dalla pubblicazione una tabella inclusa come articolo nella pubblicazione della replica transazionale.|[KB 3170123](https://support.microsoft.com/help/3170123/supports-drop-table-ddl-for-articles-that-are-included-in-transactiona)
 |Privilegio IFI per l'account di servizio SQL|Determinare se l'inizializzazione immediata dei file (IFI) è attiva all'avvio del servizio SQL Server.|[Inizializzazione di file di database](https://docs.microsoft.com/sql/relational-databases/databases/database-instant-file-initialization)
 |Concessioni di memoria: gestione dei problemi|È possibile sfruttare gli hint di diagnostica durante l'esecuzione delle query limitando le concessioni di memoria per evitare contese.|[KB 3107401](https://support.microsoft.com/help/3107401/new-query-memory-grant-options-are-available-min-grant-percent-and-max)
-|Profilatura lightweight dell'esecuzione di query per operatore |Consente di ottimizzare la raccolta per ogni operatore delle statistiche di esecuzione delle query, ad esempio il numero effettivo di righe.|[Scelta degli sviluppatori: stato di avanzamento della query, sempre e ovunque](https://blogs.msdn.microsoft.com/sql_server_team/query-progress-anytime-anywhere/)
+|Profilatura lightweight dell'esecuzione di query per operatore |Consente di ottimizzare la raccolta per ogni operatore delle statistiche di esecuzione delle query, ad esempio il numero effettivo di righe.|[Developers Choice: Query progress - anytime, anywhere](https://blogs.msdn.microsoft.com/sql_server_team/query-progress-anytime-anywhere/) (Scelta degli sviluppatori: Avanzamento delle query, sempre e dovunque)
 |Diagnostica di esecuzione delle query|Le righe effettive lette vengono ora segnalate nei piani di esecuzione della query per migliorare la risoluzione dei problemi di prestazioni della query.|[KB 3107397](https://support.microsoft.com/help/3107397/improved-diagnostics-for-query-execution-plans-that-involve-residual-p)
 |Diagnostica di esecuzione delle query per spill tempdb|Gli avvisi relativi ad hash e ordinamento ora hanno colonne aggiuntive per tenere traccia delle statistiche di I/O fisico, memoria in uso e righe interessate. |[Migliorare la diagnostica per spill temptdb](https://support.microsoft.com/help/3107172/improve-tempdb-spill-diagnostics-by-using-extended-events-in-sql-serve)
 |Facilità di supporto per tempdb |Usare un nuovo messaggio del log degli errori per il numero di file tempdb e le modifiche dei file dei dati tempdb all'avvio del server.|[KB 2963384](https://support.microsoft.com/help/2963384/fix-sql-server-crashes-when-the-log-file-of-tempdb-database-is-full-in)
@@ -83,7 +83,7 @@ SQL Server 2014 SP1 contiene correzioni disponibili nell'aggiornamento cumulativ
 
 - [Download del Service Pack 1 per Microsoft SQL Server 2014](https://www.microsoft.com/download/details.aspx?id=46694)
 - [Informazioni aggiornate sul rilascio di SQL Server 2014 Service Pack 1](https://blogs.msdn.microsoft.com/sqlreleaseservices/sql-server-2014-service-pack-1-has-released-updated/)
-- [Microsoft SQL Server 2014 SP1 Express](https://www.microsoft.com/download/details.aspx?id=46697)
+- [Microsoft SQL Server 2014 SP1 Express](https://www.microsoft.com/download/details.aspx?id=42299)
 - [Microsoft SQL Server 2014 SP1 Feature Pack](https://www.microsoft.com/download/details.aspx?id=46696)
 
 
@@ -95,7 +95,7 @@ SQL Server 2014 SP1 contiene correzioni disponibili nell'aggiornamento cumulativ
 2.  L'installazione side-by-side di SQL Server 2014 CTP 1 e SQL Server 2014 RTM NON è supportata.  
 3.  Il collegamento o il ripristino di un database SQL Server 2014 CTP 1 a SQL Server 2014 RTM NON è supportato.  
 
-**Soluzione alternativa:** nessuna.
+**Soluzione alternativa:** Nessuna.
 
 #### <a name="upgrading-from-sql-server-2014-ctp-2-to-sql-server-rtm"></a>Aggiornamento da SQL Server 2014 CTP 2 a SQL Server RTM
 L'aggiornamento è completamente supportato. In particolare, è possibile:
@@ -114,13 +114,13 @@ Questa azione non è supportata.
 #### <a name="incorrect-version-of-streaminsight-client-on-sql-server-2014-mediaisocab"></a>Versione non corretta di StreamInsight Client su supporto/ISO/CAB di SQL Server 2014  
 La versione errata di StreamInsight.msi e StreamInsightClient.msi si trova nel percorso seguente in supporto/ISO/CAB di SQL Server (StreamInsight\\\<Architecture\>\\\<ID Lingua\>).  
   
-**Soluzione alternativa** : scaricare e installare la versione corretta dalla [pagina per il download di SQL Server 2014 Feature Pack](https://go.microsoft.com/fwlink/?LinkID=306709).  
+**Soluzione alternativa:** Scaricare e installare la versione corretta dalla [pagina per il download di SQL Server 2014 Feature Pack](https://go.microsoft.com/fwlink/?LinkID=306709).  
   
 ### <a name="ProdDoc"></a>Documentazione del prodotto RTM
   
 Il contenuto di Generatore report e PowerPivot non è disponibile in alcune lingue. 
 
-**Problema:** il contenuto di Generatore report non è disponibile nelle seguenti lingue:  
+**Problema:** il contenuto di Generatore report non è disponibile nelle lingue seguenti:  
   
 -   Greco (el-GR)  
 -   Norvegese (Bokmål) (nb-NO)  
@@ -129,9 +129,9 @@ Il contenuto di Generatore report e PowerPivot non è disponibile in alcune ling
   
 In [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]il contenuto è disponibile in un file CHM fornito con il prodotto in queste lingue. I file CHM non vengono più forniti con il prodotto e il contenuto di Generatore report è disponibile solo su MSDN. MSDN non supporta queste lingue. Generatore report è stato rimosso da TechNet e non è più disponibile nelle lingue supportate.  
   
-**Soluzione alternativa:** nessuna.  
+**Soluzione alternativa:** Nessuna.  
   
-**Problema:** il contenuto di PowerPivot non è disponibile nelle seguenti lingue:
+**Problema:** il contenuto di Power Pivot non è disponibile nelle lingue seguenti:
   
 -   Greco (el-GR)  
 -   Norvegese (Bokmål) (nb-NO)  
@@ -147,7 +147,7 @@ In [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]il contenuto è disponibile in 
   
 In [!INCLUDE[ssSQL11](../includes/sssql11-md.md)], il contenuto era disponibile in TechNet ed era disponibile in queste lingue. Il contenuto è stato rimosso da TechNet e non è più disponibile in queste lingue supportate.  
   
-**Soluzione alternativa:** nessuna.  
+**Soluzione alternativa:** Nessuna.  
   
 ### <a name="DBEngine"></a>Motore di database (RTM)
   
@@ -177,7 +177,7 @@ memory-optimized table DLLs.
 ```  
 In realtà si tratta di un messaggio informativo e non è richiesto alcun intervento da parte dell'utente.  
   
-**Soluzione alternativa:** nessuna. È un messaggio informativo.  
+**Soluzione alternativa:** Nessuna. È un messaggio informativo.  
   
 #### <a name="missing-index-details-incorrectly-report-included-columns-for-memory-optimized-table"></a>Nei dettagli sugli indici mancanti sono erroneamente segnalate colonne incluse per la tabella ottimizzata per la memoria  
 **Problema:** se SQL Server 2014 rileva un indice mancante per una query in una tabella ottimizzata per la memoria, segnala un indice mancante in SHOWPLAN_XML e nelle DMV dell'indice mancante, ad esempio sys.dm_db_missing_index_details. In alcuni casi, i dettagli sugli indici mancanti contengono le colonne incluse. Poiché tutte le colonne sono incluse in modo implicito in tutti gli indici nelle tabelle ottimizzate per la memoria, non è consentito specificare in modo esplicito le colonne incluse con gli indici ottimizzati per la memoria.  
@@ -189,7 +189,7 @@ In realtà si tratta di un messaggio informativo e non è richiesto alcun interv
   
 In particolare, se una query contiene predicati di uguaglianza che interessano un subset delle colonne chiave dell'indice o se contiene predicati di disuguaglianza che interessano colonne chiave dell'indice, l'indice HASH non può essere utilizzato così com'è ed è necessario un altro indice per eseguire la query in modo efficace.  
   
-**Soluzione alternativa:** se si utilizzano gli indici hash, controllare le query e i piani di query per determinare se le query possono trarre vantaggio dalle operazioni Index Seek su un subset della chiave di indice o sui predicati di disuguaglianza. Se è necessario eseguire la ricerca su un subset della chiave di indice, utilizzare un indice NON CLUSTER oppure un indice HASH esattamente sulle colonne in cui eseguire la ricerca. Se è necessario eseguire la ricerca in un predicato di disuguaglianza, utilizzare un indice NON CLUSTER anziché HASH.  
+**Soluzione alternativa:** se si usano gli indici hash, controllare le query e i piani di query per determinare se le query possono trarre vantaggio dalle operazioni Index Seek su un subset della chiave di indice o sui predicati di disuguaglianza. Se è necessario eseguire la ricerca su un subset della chiave di indice, utilizzare un indice NON CLUSTER oppure un indice HASH esattamente sulle colonne in cui eseguire la ricerca. Se è necessario eseguire la ricerca in un predicato di disuguaglianza, utilizzare un indice NON CLUSTER anziché HASH.  
   
 #### <a name="failure-when-using-a-memory-optimized-table-and-memory-optimized-table-variable-in-the-same-query-if-the-database-option-readcommittedsnapshot-is-set-to-on"></a>Si verifica un errore quando si utilizza una tabella ottimizzata per la memoria e una variabile di tabella ottimizzata per la memoria nella stessa query, se l'opzione di database READ_COMMITTED_SNAPSHOT è impostata su ON  
 **Problema:** se l'opzione di database READ_COMMITTED_SNAPSHOT è impostata su ON e si accede sia a una tabella ottimizzata per la memoria sia a una variabile di tabella ottimizzata per la memoria nella stessa istruzione al di fuori del contesto di una transazione utente, è possibile che venga visualizzato il messaggio di errore seguente:  
@@ -212,10 +212,10 @@ SET MEMORY_OPTIMIZED_ELEVATE_TO_SNAPSHOT=ON
 #### <a name="procedure-and-query-execution-statistics-for-natively-compiled-stored-procedures-record-worker-time-in-multiples-of-1000"></a>Nelle statistiche di esecuzione di stored procedure e query per le stored procedure compilate in modo nativo il tempo del processo viene registrato in multipli di 1000  
 **Problema:** dopo avere abilitato la raccolta delle statistiche di esecuzione di stored procedure o query per le stored procedure compilate in modo nativo usando sp_xtp_control_proc_exec_stats o sp_xtp_control_query_exec_stats, *_worker_time verrà visualizzato in multipli di 1000 nelle DMV sys.dm_exec_procedure_stats e sys.dm_exec_query_stats. Le esecuzioni di query con un tempo del processo inferiore a 500 microsecondi verranno segnalate con un valore worker_time pari a 0.  
   
-**Soluzione alternativa:** nessuna. È opportuno non fare affidamento sul valore worker_time segnalato nelle DMV delle statistiche di esecuzione per le query con esecuzione rapida nelle stored procedure compilate in modo nativo.  
+**Soluzione alternativa:** Nessuna. È opportuno non fare affidamento sul valore worker_time segnalato nelle DMV delle statistiche di esecuzione per le query con esecuzione rapida nelle stored procedure compilate in modo nativo.  
   
 #### <a name="error-with-showplanxml-for-natively-compiled-stored-procedures-that-contain-long-expressions"></a>Si verifica un errore con SHOWPLAN_XML per le stored procedure compilate in modo nativo che contengono espressioni lunghe  
-**Problema:** se una stored procedure compilata in modo nativo contiene un'espressione lunga, l'acquisizione di SHOWPLAN_XML per la stored procedure, tramite l'opzione T-SQL SET SHOWPLAN_XML ON o l'opzione "Visualizza piano di esecuzione stimato" in Management Studio, può causare l'errore seguente:  
+**Problema:** se una stored procedure compilata in modo nativo contiene un'espressione lunga, l'acquisizione di SHOWPLAN_XML per la stored procedure, tramite l'opzione T-SQL SET SHOWPLAN_XML ON o l'opzione "Visualizza piano di esecuzione stimato" in Management Studio, potrebbe causare l'errore seguente:  
   
 ```  
 Msg 41322. MAT/PIT export/import encountered a failure for memory  
@@ -224,7 +224,7 @@ optimized table or natively compiled stored procedure with object ID
 0xc00cee81.  
 ```  
   
-**Soluzione alternativa:** sono disponibili due soluzioni.  
+**Soluzione alternativa:** sono disponibili due soluzioni:  
   
 1.  Aggiungere le parentesi all'espressione, in modo analogo all'esempio seguente:  
   
@@ -255,7 +255,7 @@ optimized table or natively compiled stored procedure with object ID
 #### <a name="using-a-string-parameter-or-variable-with-datepart-and-related-functions-in-a-natively-compiled-stored-procedure-results-in-an-error"></a>L'utilizzo di un parametro di stringa o di una variabile con DATEPART e funzioni correlate in una stored procedure compilata in modo nativo genera un errore  
 **Problema:** quando si usa una stored procedure compilata in modo nativo che usa un parametro o una variabile di stringa con le funzioni predefinite DATEPART, DAY, MONTH e YEAR, viene visualizzato un messaggio di errore che indica che il tipo di dati datetimeoffset non è supportato con le stored procedure compilate in modo nativo.  
   
-**Soluzione alternativa:** assegnare la variabile o il parametro di stringa a una nuova variabile di tipo datetime2 e utilizzare tale variabile nella funzione DATEPART, DAY, MONTH o YEAR. Ad esempio  
+**Soluzione alternativa:** assegnare la variabile o il parametro di stringa a una nuova variabile di tipo datetime2 e usare tale variabile nella funzione DATEPART, DAY, MONTH o YEAR. Esempio:  
   
 ```  
 DECLARE @d datetime2 = @string  
@@ -265,12 +265,12 @@ DATEPART(weekday, @d)
 #### <a name="native-compilation-advisor-flags-delete-from-clauses-incorrectly"></a>Assistente compilazione nativa contrassegna in modo errato le clausole DELETE FROM  
 **Problema:** Assistente compilazione nativa contrassegna in modo errato le clausole DELETE FROM all'interno di una stored procedure come incompatibili.  
   
-**Soluzione alternativa:** nessuna.  
+**Soluzione alternativa:** Nessuna.  
   
 #### <a name="register-through-ssms-adds-dac-meta-data-with-mismatched-instance-ids"></a>La registrazione con SSMS aggiunge metadati DAC con ID istanza non corrispondenti  
 **Problema:** quando si esegue la registrazione o l'eliminazione di un pacchetto di applicazione livello dati (con estensione dacpac) tramite SQL Server Management Studio, le tabelle sysdac* non vengono aggiornate correttamente per consentire a un utente di eseguire query nella cronologia di dacpac per il database.  I valori id_instance per sysdac_history_internal e sysdac_instances_internal non corrispondono, quindi non è possibile creare un join.  
   
-**Soluzione alternativa:** questo problema è stato corretto con la ridistribuzione del feature pack di [Data-Tier Application Framework](https://www.microsoft.com/download/details.aspx?id=42295).  Dopo l'applicazione dell'aggiornamento, tutte le nuove voci della cronologia useranno il valore elencato per id_instance nella tabella sysdac_instances_internal.  
+**Soluzione alternativa:** questo problema è stato corretto con la ridistribuzione del Feature Pack di [Data-Tier Application Framework](https://www.microsoft.com/download/details.aspx?id=42295).  Dopo l'applicazione dell'aggiornamento, tutte le nuove voci della cronologia useranno il valore elencato per id_instance nella tabella sysdac_instances_internal.  
   
 Se si è già verificato il problema relativo ai valori instance_id non corrispondenti, per correggere la mancata corrispondenza dei valori è necessario connettersi al server come utente con privilegi di scrittura per il database MSDB e aggiornare i valori instance_id in modo che corrispondano.  Se si verificano diversi eventi di registrazione e annullamento della registrazione dello stesso database, può essere necessario esaminare data e ora per vedere quali record corrispondono al valore instance_id corrente.  
   
@@ -398,20 +398,20 @@ Ciò è dovuto al fatto che i listener del gruppo di disponibilità richiedono l
 ### <a name="DQS"></a>Data Quality Services (RTM)
   
 #### <a name="no-cross-version-support-for-data-quality-services-in-master-data-services"></a>Nessun supporto tra versioni di Data Quality Services in Master Data Services  
-**Problema:** non sono supportati gli scenari riportati di seguito.  
+**Problema:** Non sono supportati gli scenari seguenti:  
   
 -   Master Data Services 2014 ospitato in un database del motore di database di SQL Server in SQL Server 2012 con Data Quality Services 2012 installato.  
   
 -   Master Data Services 2012 ospitato in un database del motore di database di SQL Server in SQL Server 2014 con Data Quality Services 2014 installato.  
   
-**Soluzione alternativa:** utilizzare la stessa versione di Master Data Services del database del motore di database e Data Quality Services.  
+**Soluzione alternativa:** usare la stessa versione di Master Data Services del database del motore di database e Data Quality Services.  
   
 ### <a name="UA"></a>Problemi di Gestione spazio aggiornamenti (RTM)
   
 #### <a name="sql-server-2014-upgrade-advisor-reports-irrelevant-upgrade-issues-for-sql-server-reporting-services"></a>Gestione spazio aggiornamenti di SQL Server 2014 segnala problemi di aggiornamento irrilevanti per SQL Server Reporting Services  
-**Problema:** Gestione spazio aggiornamenti di SQL Server fornito con i supporti di SQL Server 2014 segnala erroneamente più errori durante l'analisi del server SQL Server Reporting Services.  
+**Problema:** Preparazione aggiornamento di SQL Server fornito con i supporti di SQL Server 2014 segnala erroneamente più errori durante l'analisi del server SQL Server Reporting Services.  
   
-**Soluzione alternativa:** questo problema è stato risolto in Preparazione aggiornamento di SQL Server fornito nel [Feature Pack di SQL Server 2014 per SSUA](https://go.microsoft.com/fwlink/?LinkID=306709).  
+**Soluzione alternativa:** questo problema è stato risolto in Gestione spazio aggiornamenti di SQL Server incluso in [SQL Server 2014 Feature Pack per SSUA](https://go.microsoft.com/fwlink/?LinkID=306709).  
   
 #### <a name="sql-server-2014-upgrade-advisor-reports-an-error-when-analyzing-sql-server-integration-services-server"></a>Gestione spazio aggiornamenti di SQL Server 2014 segnala un errore durante l'analisi del server SQL Server Integration Services  
 **Problema:** Gestione spazio aggiornamenti di SQL Server fornito con i supporti di SQL Server 2014 segnala un errore durante l'analisi del server SQL Server Integration Services.  L'errore visualizzato all'utente è il seguente:  
@@ -422,6 +422,6 @@ The assembly information is "Microsoft.SqlServer.ManagedDTS, Version=11.0.0.0,
 Culture=neutral, PublicKeyToken=89845dcd8080cc91  
 ```  
   
-**Soluzione alternativa:** questo problema è stato risolto in Preparazione aggiornamento di SQL Server fornito nel [Feature Pack di SQL Server 2014 per SSUA](https://go.microsoft.com/fwlink/?LinkID=306709).  
+**Soluzione alternativa:** questo problema è stato risolto in Gestione spazio aggiornamenti di SQL Server incluso in [SQL Server 2014 Feature Pack per SSUA](https://go.microsoft.com/fwlink/?LinkID=306709).  
   
 [!INCLUDE[get-help-options](../includes/paragraph-content/get-help-options.md)]
