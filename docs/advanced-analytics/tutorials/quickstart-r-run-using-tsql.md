@@ -3,19 +3,19 @@ title: "Guida introduttiva per un'esecuzione di codice \"Hello World\" base R in
 description: Guida introduttiva per lo script R in SQL Server. Informazioni di base della chiamata al metodo di script R usando la stored procedure sp_execute_external_script in un esercizio hello-world.
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 01/04/2019
+ms.date: 04/04/2019
 ms.topic: quickstart
 author: dphansen
 ms.author: davidph
 manager: cgronlun
-ms.openlocfilehash: 7517b9ab18c7448014e8c9113430b2c21047f972
-ms.sourcegitcommit: baca29731a1be4f8fa47567888278394966e2af7
+ms.openlocfilehash: 1ec9580a533e51b7e99ea0ac34c1d322a27da452
+ms.sourcegitcommit: 3cfedfeba377560d460ca3e42af1e18824988c07
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/04/2019
-ms.locfileid: "54046910"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59042280"
 ---
-# <a name="quickstart-hello-world-r-script-in-sql-server"></a>Guida introduttiva: Script R di "Hello world" in SQL Server 
+# <a name="quickstart-hello-world-r-script-in-sql-server"></a>Avvio rapido: Script R di "Hello world" in SQL Server 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 Questa Guida introduttiva illustra i concetti chiave eseguendo una "Hello World" R script inT-SQL, un'introduzione al **sp_execute_external_script** stored procedure di sistema. 
@@ -43,7 +43,8 @@ L'esercizio seguente è incentrata sul modello di interazione prima: come passar
     b <- 2
     c <- a/b
     d <- a*b
-    print(c, d)'
+    print(c(c, d))'
+    '
     ```
 
 2. Supponendo che si dispone di tutto configurare correttamente la correttezza del risultato viene calcolato e di R `print` funzione restituisce il risultato per il **messaggi** finestra.
@@ -81,7 +82,7 @@ Gli input per questa stored procedure includono:
 
 **Risultati**
 
-| Salve, mondo |
+| Hello World |
 |-------------|
 | 1 |
 
@@ -90,4 +91,4 @@ Gli input per questa stored procedure includono:
 Ora che è stato eseguito un paio di script R semplici, esaminiamo più da vicino strutturazione di input e output.
 
 > [!div class="nextstepaction"]
-> [Guida introduttiva: Gestire gli input e output](quickstart-r-inputs-and-outputs.md)
+> [Avvio rapido: Gestire input e output](quickstart-r-inputs-and-outputs.md)

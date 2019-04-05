@@ -1,5 +1,5 @@
 ---
-title: Dimensioni abilitate la scrittura | Documenti Microsoft
+title: Abilitato per la scrittura dimensioni | Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 23f2fff5a78be0dad52f674a8d23c1922a86391c
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 4baa8b1fa57acde99439584483381f84f7a8d5c4
+ms.sourcegitcommit: 3cfedfeba377560d460ca3e42af1e18824988c07
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34023320"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59042260"
 ---
 # <a name="write-enabled-dimensions"></a>Dimensioni abilitate per la scrittura
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -22,7 +22,7 @@ ms.locfileid: "34023320"
 > [!IMPORTANT]  
 >  [!INCLUDE[ssNoteDepNextAvoid](../../includes/ssnotedepnextavoid-md.md)]  
   
- I dati di una dimensione sono in genere di sola lettura. In determinati scenari, tuttavia, può rivelarsi utile abilitare una dimensione per la scrittura. In [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]abilitando per la scrittura una dimensione è possibile consentire agli utenti aziendali di modificare i contenuti della dimensione e vedere l'effetto immediato delle modifiche sulle gerarchie della dimensione. È possibile abilitare per la scrittura qualsiasi dimensione basata su una singola tabella. In una dimensione abilitata per la scrittura, gli amministratori e gli utenti aziendali possono modificare, spostare, aggiungere ed eliminare membri all'interno della dimensione. Tali operazioni di aggiornamento vengono definite collettivamente come *writeback della dimensione*.  
+ I dati di una dimensione sono in genere di sola lettura. In determinati scenari, tuttavia, può rivelarsi utile abilitare una dimensione per la scrittura. Nelle [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], abilitando una dimensione per la scrittura consente agli utenti aziendali di modificare i contenuti della dimensione e vedere l'effetto immediato delle modifiche sulle gerarchie della dimensione. È possibile abilitare per la scrittura qualsiasi dimensione basata su una singola tabella. In una dimensione abilitata per la scrittura, gli amministratori e gli utenti aziendali possono modificare, spostare, aggiungere ed eliminare membri all'interno della dimensione. Tali operazioni di aggiornamento vengono definite collettivamente come *writeback della dimensione*.  
   
  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] supporta il writeback della dimensione in tutti gli attributi della dimensione e in qualsiasi membro di una dimensione che sia possibile modificare. Per una partizione o un cubo abilitato per la scrittura, gli aggiornamenti vengono archiviati in una tabella writeback separata dalle tabelle di origine del cubo. Per una dimensione abilitata per la scrittura, tuttavia, le modifiche vengono registrate direttamente nella tabella della dimensione. Inoltre, se la dimensione abilitata per la scrittura è inclusa in un cubo con più partizioni in cui alcune o tutte le origini dei dati contengono copie della tabella della dimensione, durante un processo di writeback verrà aggiornata solo la tabella della dimensione originale.  
   
@@ -54,8 +54,8 @@ ms.locfileid: "34023320"
  Gli utenti e i gruppi inclusi nel ruolo Administrators possono aggiornare i membri degli attributi di una dimensione abilitata per la scrittura, anche se la dimensione non è inclusa in un cubo.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Proprietà delle dimensioni di database](../../analysis-services/multidimensional-models-olap-logical-dimension-objects/database-dimension-properties.md)   
- [Partizioni abilitate per scrittura](../../analysis-services/multidimensional-models-olap-logical-cube-objects/partitions-write-enabled-partitions.md)   
- [Dimensioni & #40; Analysis Services - dati multidimensionali & #41;](../../analysis-services/multidimensional-models-olap-logical-dimension-objects/dimensions-analysis-services-multidimensional-data.md)  
+ [Proprietà delle dimensioni del database](../../analysis-services/multidimensional-models-olap-logical-dimension-objects/database-dimension-properties.md)   
+ [Partizioni abilitate per la scrittura](../../analysis-services/multidimensional-models-olap-logical-cube-objects/partitions-write-enabled-partitions.md)   
+ [Dimensioni &#40;Analysis Services - Dati multidimensionali&#41;](../../analysis-services/multidimensional-models-olap-logical-dimension-objects/dimensions-analysis-services-multidimensional-data.md)  
   
   

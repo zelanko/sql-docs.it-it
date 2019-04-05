@@ -3,19 +3,19 @@ title: "Guida introduttiva per un Python di base di \"Hello World\" di codice l'
 description: Guida introduttiva per script di Python in SQL Server. Informazioni di base della chiamata al metodo di script Python usando la stored procedure sp_execute_external_script in un esercizio hello-world.
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 01/11/2019
+ms.date: 04/04/2019
 ms.topic: quickstart
 author: dphansen
 ms.author: davidph
 manager: cgronlun
-ms.openlocfilehash: fb05e3b04fe9d6f33389e249d189baa7cc093016
-ms.sourcegitcommit: 032273bfbc240fe22ac6c1f6601a14a6d99573f7
+ms.openlocfilehash: f5e93ce5261d79acf5bf5a7419992c81c872d680
+ms.sourcegitcommit: 3cfedfeba377560d460ca3e42af1e18824988c07
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/01/2019
-ms.locfileid: "55513771"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59042220"
 ---
-# <a name="quickstart-hello-world-python-script-in-sql-server"></a>Guida introduttiva: Script di Python "Hello world" in SQL Server 
+# <a name="quickstart-hello-world-python-script-in-sql-server"></a>Avvio rapido: Script di Python "Hello world" in SQL Server 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 Questa Guida introduttiva illustra i concetti chiave eseguendo un "Hello World" Python script inT-SQL, un'introduzione al **sp_execute_external_script** stored procedure di sistema. 
@@ -44,7 +44,7 @@ L'esercizio seguente è incentrata sul modello di interazione prima: come passar
     b = 2
     c = a/b
     d = a*b
-    print(c, d)
+    print(c(c, d))
     '
     ```
 
@@ -98,4 +98,4 @@ Gli input per questa stored procedure includono:
 Ora che è stato eseguito un paio di semplici script di Python, esaminiamo più da vicino strutturazione di input e output.
 
 > [!div class="nextstepaction"]
-> [Guida introduttiva: Gestire gli input e output](quickstart-python-inputs-and-outputs.md)
+> [Avvio rapido: Gestire input e output](quickstart-python-inputs-and-outputs.md)

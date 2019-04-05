@@ -13,17 +13,17 @@ ms.assetid: 80f15dd6-e84d-4f96-9866-5b34ea531f1e
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 8907d3a3644c0795608495c259a93fb64d648332
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: 8ecac95d4cad190133d54e73862d607a719ac9c1
+ms.sourcegitcommit: 3cfedfeba377560d460ca3e42af1e18824988c07
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54125911"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59042200"
 ---
 # <a name="synchronize-a-subscription-using-windows-synchronization-manager-windows-synchronization-manager"></a>Sincronizzazione di una sottoscrizione mediante Gestione sincronizzazione Microsoft Windows (Gestione sincronizzazione Microsoft Windows)
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows Synchronization Manager può essere utilizzato solo per sincronizzare le sottoscrizioni con le pubblicazioni Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] se [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] viene eseguito nello stesso computer in cui è installato il componente Gestione sincronizzazione, nonché per sincronizzare pagine Web e file offline. Per utilizzare Gestione sincronizzazione:  
   
-1.  Abilitare la sincronizzazione delle sottoscrizioni pull con Gestione sincronizzazione Microsoft Windows nella **proprietà sottoscrizione - \<sottoscrittore >: \<Databasesottoscrizione >** nella finestra di dialogo. Per altre informazioni sull'accesso a questa finestra di dialogo, vedere [Visualizzare e modificare le proprietà delle sottoscrizioni pull](view-and-modify-pull-subscription-properties.md).  
+1.  Abilitare la sincronizzazione delle sottoscrizioni pull con Gestione sincronizzazione Microsoft Windows nella finestra di dialogo **Proprietà sottoscrizione - \<Sottoscrittore>: \<DatabaseSottoscrizione >**. Per altre informazioni sull'accesso a questa finestra di dialogo, vedere [Visualizzare e modificare le proprietà delle sottoscrizioni pull](view-and-modify-pull-subscription-properties.md).  
   
 2.  Accedere a Gestione sincronizzazione mediante il menu **Start** di Windows.  
   
@@ -34,7 +34,7 @@ ms.locfileid: "54125911"
   
 ### <a name="to-enable-the-synchronization-of-pull-subscriptions-with-windows-synchronization-manager"></a>Per abilitare la sincronizzazione delle sottoscrizioni pull con Gestione sincronizzazione Microsoft Windows  
   
-1.  Nel **generali** pagina della **proprietà sottoscrizione - \<sottoscrittore >: \<Databasesottoscrizione >** finestra di dialogo, selezionare il valore **abilitare** per il **Usa Gestione sincronizzazione Microsoft Windows** opzione.  
+1.  Nella finestra di dialogo **Generale** della finestra di dialogo **Proprietà sottoscrizione - \<Sottoscrittore>: \<DatabaseSottoscrizione** selezionare il valore **Abilita** per l'opzione **Usa Gestione sincronizzazione Microsoft Windows**.  
   
 2.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
@@ -97,7 +97,7 @@ ms.locfileid: "54125911"
   
 ### <a name="to-use-the-interactive-resolver"></a>Per utilizzare il sistema di risoluzione interattivo  
   
-1.  Abilitare l'articolo e la sottoscrizione per l'utilizzo della risoluzione interattiva. Per altre informazioni, vedere [Specificare la risoluzione interattiva dei conflitti per articoli di merge](/publish/specify-merge-replication-properties.md#interactive-conflict-resolution).  
+1.  Abilitare l'articolo e la sottoscrizione per l'utilizzo della risoluzione interattiva. Per altre informazioni, vedere [Specificare la risoluzione interattiva dei conflitti per articoli di merge](../../relational-databases/replication/publish/specify-merge-replication-properties.md#interactive-conflict-resolution).  
   
 2.  In seguito all'inizio della sincronizzazione della sottoscrizione in Gestione sincronizzazione, il sistema di risoluzione interattivo viene avviato automaticamente se la risoluzione interattiva dei conflitti è abilitata e si sono verificati conflitti tra uno o più articoli. In tale sistema i conflitti vengono visualizzati uno alla volta, con un suggerimento di risoluzione per ogni conflitto (in base al sistema di risoluzione dei conflitti specificato al momento della creazione della pubblicazione e della sottoscrizione).  
   
@@ -117,6 +117,4 @@ ms.locfileid: "54125911"
 >  Le modifiche vengono applicate solo se fanno parte della riga scelta per la risoluzione. Se, ad esempio, si apportano modifiche nel **Server di pubblicazione**e quindi si fa clic su **Accetta Sottoscrittore**, le modifiche verranno ignorate.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Risoluzione interattiva dei conflitti](merge/advanced-merge-replication-conflict-interactive-resolution.md)  
-  
-  
+ [Interactive Conflict Resolution](merge/advanced-merge-replication-conflict-interactive-resolution.md)  

@@ -12,12 +12,12 @@ ms.assetid: b1289cc3-f5be-40bb-8801-0e3eed40336e
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: f4d346379cf0aeb945187b18f7eb1fd7a868b33e
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 19eae2e3ace3859d61048536be9b70bf58ad66f5
+ms.sourcegitcommit: 3cfedfeba377560d460ca3e42af1e18824988c07
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52518097"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59042430"
 ---
 # <a name="upgrade-log-shipping-to-sql-server-2014-transact-sql"></a>Aggiornare il log shipping a SQL Server 2014 (Transact-SQL)
   Quando si effettua l'aggiornamento da [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)], [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]o [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], è possibile mantenere le configurazioni per il log shipping. In questo argomento vengono descritti scenari alternativi e procedure consigliate per aggiornare una configurazione per il log shipping.  
@@ -130,7 +130,7 @@ ms.locfileid: "52518097"
   
     5.  Verificare che lo spazio disponibile sul log delle transazioni del database secondario non si esaurisca mentre il database è online. Per evitare che si verifichi questa situazione, potrebbe essere necessario eseguire un backup del log. In questo caso è consigliabile eseguire il backup in un percorso condiviso, ovvero una *condivisione di backup*, in modo che i backup siano disponibili per eseguire il ripristino nell'altra istanza del server.  
   
-#####  <a name="Procedure2 "></a> Procedura 2: Aggiornare l'istanza del Server primario originale a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]  
+#####  <a name="Procedure2"></a> Procedura 2: Aggiornare l'istanza del Server primario originale a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]  
  Dopo aver aggiornato l'istanza del server primario originale a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], per il database sarà ancora attivata la modalità offline e il formato.  
   
 #####  <a name="Procedure3"></a> Procedura 3: Impostare il Log Shipping in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]  
@@ -193,7 +193,7 @@ ms.locfileid: "52518097"
 > [!IMPORTANT]  
 >  È necessario aggiornare sempre tutte le istanze del server secondario prima di aggiornare il server primario.  
   
- **Per eseguire l'aggiornamento tramite un failover e ritornare quindi di nuovo al server primario originale**  
+ **Per eseguire l'aggiornamento utilizzando un failover e ritornare quindi al server primario originale**  
   
 1.  Aggiornare tutte le istanze del server secondario (server B e server C).  
   
@@ -223,7 +223,5 @@ ms.locfileid: "52518097"
   
 ## <a name="see-also"></a>Vedere anche  
  [Backup di log delle transazioni &#40;SQL Server&#41;](../../relational-databases/backup-restore/transaction-log-backups-sql-server.md)   
- [Applicare backup del log delle transazioni &#40;SQL Server&#41;](../../relational-databases/backup-restore/apply-transaction-log-backups-sql-server.md)   
- [Tabelle e stored procedure relative al log shipping](log-shipping-tables-and-stored-procedures.md)  
-  
-  
+ [Applicare backup log delle transazioni &#40;SQL Server&#41;](../../relational-databases/backup-restore/apply-transaction-log-backups-sql-server.md)   
+ [Log Shipping Tables and Stored Procedures](log-shipping-tables-and-stored-procedures.md)  
