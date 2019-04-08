@@ -1,3 +1,11 @@
+---
+ms.openlocfilehash: bac867f5f3532f931d2708c46979659e2851645f
+ms.sourcegitcommit: 3cfedfeba377560d460ca3e42af1e18824988c07
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59055660"
+---
 Questo articolo offre una panoramica delle soluzioni di continuità aziendale per la disponibilità elevata e il ripristino di emergenza in SQL Server. 
 
 Un'attività comune di cui deve tenere conto chiunque esegua una distribuzione di SQL Server è verificare se tutte le istanze cruciali di SQL Server e i database all'interno delle stesse sono disponibili quando gli utenti finali e aziendali ne hanno bisogno, ovvero in orario di ufficio o 24 ore su 24. L'obiettivo è fare in modo che le interruzioni delle attività aziendali siano minime o inesistenti. Questo concetto è noto anche come continuità aziendale.
@@ -128,11 +136,9 @@ Nell'elenco che segue sono evidenziate alcune differenze tra Windows Server e Li
 * Il nome comune usato dalle istanze FCI in Linux è definito in DNS e deve essere lo stesso della risorsa creata per l'istanza FCI.
 
 #### <a name="log-shipping"></a>Log shipping
-Se il punto di recupero e gli obiettivi del tempo di recupero sono più flessibili o se i database non sono considerati cruciali, il log shipping è un'altra funzionalità di disponibilità collaudata in SQL Server. In base ai backup nativi di SQL Server, il processo per il log shipping genera automaticamente i backup del log delle transazioni, li copia in una o più istanze, note come warm standby, e applica automaticamente i backup del log delle transazioni a tale standby. Il log shipping usa SQL Server Agent - processi per automatizzare il processo di backup, copia e applicazione dei backup del log delle transazioni. 
-> [!IMPORTANT] 
-> In Linux SQL Server Agent - processi non è incluso come parte dell'installazione di SQL Server. È disponibile nel pacchetto mssql-server-Agent - processi, che deve a sua volta essere installato per usare il log shipping.
+Se il punto di recupero e gli obiettivi del tempo di recupero sono più flessibili o se i database non sono considerati cruciali, il log shipping è un'altra funzionalità di disponibilità collaudata in SQL Server. In base ai backup nativi di SQL Server, il processo per il log shipping genera automaticamente i backup del log delle transazioni, li copia in una o più istanze, note come warm standby, e applica automaticamente i backup del log delle transazioni a tale standby. Il log shipping usa SQL Server Agent - processi per automatizzare il processo di backup, copia e applicazione dei backup del log delle transazioni.
 
-![Log Shipping](media/sql-server-ha-story/image5.png)
+![Log shipping](media/sql-server-ha-story/image5.png)
  
 Senza dubbio il principale vantaggio offerto dal log shipping in alcune capacità è che prende in considerazione l'errore umano. L'applicazione dei log delle transazioni può subire un ritardo. Quindi, se ad esempio qualcuno rilascia un oggetto UPDATE senza una clausola WHERE, lo standby può non contenere la modifica ed è quindi possibile usarlo mentre si ripara il sistema primario. Benché il log shipping sia facile da configurare, il passaggio dall'istanza primaria al warm standby, noto come modifica del ruolo, è sempre manuale. Una modifica del ruolo viene avviata attraverso Transact-SQL e, come per un gruppo di disponibilità, tutti gli oggetti non acquisiti nel log delle transazioni devono essere sincronizzati manualmente. Il log shipping deve inoltre essere configurato per ogni database, mentre un singolo gruppo di disponibilità può contenere più database. A differenza di un gruppo di disponibilità o un'istanza FCI, il log shipping non è in grado di astrarre le modifiche di ruolo. Le applicazioni devono essere in grado di gestire questa situazione. È possibile ricorrere a tecniche come l'alias DNS (CNAME), ma esistono pro e contro, ad esempio il tempo necessario per l'aggiornamento di DNS dopo il passaggio.
 

@@ -11,12 +11,12 @@ helpviewer_keywords:
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 3c08f8cb48e22ba5ca1546f9fcca63f77868b356
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: 6783112203e5c63aae41749f942da6240265eea3
+ms.sourcegitcommit: 1a4aa8d2bdebeb3be911406fc19dfb6085d30b04
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53208800"
+ms.lasthandoff: 04/03/2019
+ms.locfileid: "58872301"
 ---
 # <a name="install-polybase-on-windows"></a>Installare PolyBase in Windows
 
@@ -77,7 +77,7 @@ Dopo aver installato PolyBase autonomo o in un gruppo di scalabilità orizzontal
    
    > [!IMPORTANT] 
    >
-   >In un gruppo con scalabilità orizzontale di PolyBase, il motore PolyBase e il servizio di spostamento dati di PolyBase su tutti i nodi devono essere eseguiti con lo stesso account di dominio. Vedere [Gruppi con scalabilità orizzontale di PolyBase](#Enable).
+   >In un gruppo con scalabilità orizzontale di PolyBase, il motore PolyBase e il servizio di spostamento dati di PolyBase su tutti i nodi devono essere eseguiti con lo stesso account di dominio. Vedere [Gruppi con scalabilità orizzontale di PolyBase](#enable).
    
 5. Nella pagina Configurazione di PolyBase, selezionare una delle due opzioni. Per altre informazioni, vedere [Gruppi con scalabilità orizzontale di PolyBase](../../relational-databases/polybase/polybase-scale-out-groups.md).  
    
@@ -105,8 +105,8 @@ Usare i valori in questa tabella per creare gli script di installazione. Il serv
 
 |componente di SQL Server|Parametro e valori|Descrizione|  
 |--------------------------|--------------------------|-----------------|  
-|Controllo dell'installazione di SQL Server|**Required**<br /><br /> /FEATURES=PolyBase|Viene selezionata la funzionalità PolyBase.|  
-|servizio motore PolyBase di SQL Server|**Facoltativo**<br /><br /> /PBENGSVCACCOUNT|Viene specificato l'account per il servizio motore. L'impostazione predefinita è **NT Authority\NETWORK SERVICE**.|  
+|Controllo dell'installazione di SQL Server|**Obbligatorio**<br /><br /> /FEATURES=PolyBase|Viene selezionata la funzionalità PolyBase.|  
+|Motore PolyBase di SQL Server|**Facoltativo**<br /><br /> /PBENGSVCACCOUNT|Viene specificato l'account per il servizio motore. L'impostazione predefinita è **NT Authority\NETWORK SERVICE**.|  
 |Motore di PolyBase per SQL Server|**Facoltativo**<br /><br /> /PBENGSVCPASSWORD|Viene specificata la password per l'account del servizio motore.|  
 |Motore di PolyBase per SQL Server|**Facoltativo**<br /><br /> /PBENGSVCSTARTUPTYPE|Viene specificata la modalità di avvio per il motore PolyBase: Automatico (predefinito), disabilitato e manuale.|  
 |SQL Server PolyBase Data Movement |**Facoltativo**<br /><br /> /PBDMSSVCACCOUNT|Viene specificato l'account per il servizio di spostamento dati. L'impostazione predefinita è **NT Authority\NETWORK SERVICE**.|  

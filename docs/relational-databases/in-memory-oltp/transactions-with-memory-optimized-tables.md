@@ -12,12 +12,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 7854ddbe4795a347b0a824f607c7206c0bc6b78c
-ms.sourcegitcommit: 97340deee7e17288b5eec2fa275b01128f28e1b8
+ms.openlocfilehash: dc51c4376f38d62f63969aaf3bba39715a9871ba
+ms.sourcegitcommit: 1a4aa8d2bdebeb3be911406fc19dfb6085d30b04
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55421368"
+ms.lasthandoff: 04/03/2019
+ms.locfileid: "58872291"
 ---
 # <a name="transactions-with-memory-optimized-tables"></a>Transazioni in tabelle con ottimizzazione per la memoria
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -26,7 +26,7 @@ Questo articolo descrive tutti gli aspetti delle transazioni specifici per le ta
   
 I livelli di isolamento delle transazioni in SQL Server si applicano in modo diverso alle tabelle ottimizzate per la memoria e alle tabelle basate su disco rigido e i meccanismi sottostanti sono diversi. Capire le differenze consente al programmatore di progettare un sistema con velocità effettiva elevata. L'obiettivo di integrità delle transazioni è condiviso in tutti i casi.  
 
-Per le condizioni di errore specifiche per le transazioni nelle tabelle ottimizzate per la memoria, passare alla sezione [Rilevamento dei conflitti e logica di ripetizione dei tentativi](#confdetretry34ni).
+Per le condizioni di errore specifiche per le transazioni nelle tabelle ottimizzate per la memoria, passare alla sezione [Rilevamento dei conflitti e logica di ripetizione dei tentativi](#conflict-detection-and-retry-logic).
   
 Per informazioni generali, vedere [SET TRANSACTION ISOLATION LEVEL (Transact-SQL)](../../t-sql/statements/set-transaction-isolation-level-transact-sql.md).  
   
@@ -97,7 +97,7 @@ Le tabelle basate su disco hanno indirettamente un sistema per il controllo dell
   
 ## <a name="isolation-levels"></a>Livelli di isolamento 
   
-La tabella che segue indica i livelli di isolamento possibili per le transazioni, ordinate dall'isolamento minimo a quello massimo. Per informazioni dettagliate sui conflitti che possono verificarsi e sulla logica di ripetizione dei tentativi per affrontare questi conflitti, vedere [Rilevamento dei conflitti e logica di ripetizione dei tentativi](#confdetretry34ni). 
+La tabella che segue indica i livelli di isolamento possibili per le transazioni, ordinate dall'isolamento minimo a quello massimo. Per informazioni dettagliate sui conflitti che possono verificarsi e sulla logica di ripetizione dei tentativi per affrontare questi conflitti, vedere [Rilevamento dei conflitti e logica di ripetizione dei tentativi](#conflict-detection-and-retry-logic). 
   
 | Livello di isolamento | Descrizione |   
 | :-- | :-- |   
@@ -123,7 +123,7 @@ Seguono le descrizioni delle fasi.
 #### <a name="validation-phase-2-of-3"></a>Convalida: fase 2 (di 3)  
   
 - La fase di convalida inizia con l'assegnazione dell'ora di fine, contrassegnando la transazione come completata a livello logico. Questo completamento rende visibili tutte le modifiche della transazione per le altre transazioni dipendenti da questa transazione. Il commit delle transazioni dipendenti non è consentito fino al commit di questa transazione. Inoltre, le transazioni che contengono queste dipendenze non possono restituire set di risultati al client per assicurare che il client veda solo i dati di cui è stato eseguito il commit nel database.  
-- Questa fase comprende la lettura ripetibile e la convalida serializzabile. Per la convalida di lettura ripetibile, verifica se le righe lette dalla transazione sono state aggiornate da quel momento. Per la convalida serializzabile, verifica se sono state inserite righe in qualsiasi intervallo di dati analizzato da questa transazione. Come indicato nella tabella [Livelli di isolamento e conflitti](#confdegreeiso30ni), la convalida di lettura ripetibile e la convalida serializzabile possono avere luogo quando si usa l'isolamento snapshot, per convalidare la coerenza dei vincoli di chiave univoca ed esterna.  
+- Questa fase comprende la lettura ripetibile e la convalida serializzabile. Per la convalida di lettura ripetibile, verifica se le righe lette dalla transazione sono state aggiornate da quel momento. Per la convalida serializzabile, verifica se sono state inserite righe in qualsiasi intervallo di dati analizzato da questa transazione. Come indicato nella tabella [Livelli di isolamento e conflitti](#isolation-levels), la convalida di lettura ripetibile e la convalida serializzabile possono avere luogo quando si usa l'isolamento snapshot, per convalidare la coerenza dei vincoli di chiave univoca ed esterna.  
   
 #### <a name="commit-processing-phase-3-of-3"></a>Elaborazione del commit: fase 3 (di 3)  
   
