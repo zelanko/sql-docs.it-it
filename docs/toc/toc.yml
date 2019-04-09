@@ -1847,7 +1847,7 @@ items:
           href: ../relational-databases/xml/use-the-binary-base64-option.md
         - name: Approccio euristico della modalità AUTO per la determinazione della struttura dei valori XML restituiti
           href: ../relational-databases/xml/auto-mode-heuristics-in-shaping-returned-xml.md
-        - name: 'Esempi: Utilizzo della modalità AUTO'
+        - name: 'Esempi: Uso della modalità AUTO'
           href: ../relational-databases/xml/examples-using-auto-mode.md
       - name: Modalità EXPLICIT
         href: ../relational-databases/xml/use-explicit-mode-with-for-xml.md
@@ -1889,7 +1889,7 @@ items:
           href: ../relational-databases/xml/columns-that-contain-a-null-value-by-default.md
         - name: Supporto dello spazio dei nomi in modalità di PATH
           href: ../relational-databases/xml/namespace-support-in-path-mode.md
-        - name: 'Esempi: Utilizzo della modalità PATH'
+        - name: 'Esempi: Uso della modalità PATH'
           href: ../relational-databases/xml/examples-using-path-mode.md
       - name: Query nidificate
         href: ../relational-databases/xml/use-nested-for-xml-queries.md
@@ -1920,7 +1920,7 @@ items:
     - name: OPENXML
       href: ../relational-databases/xml/openxml-sql-server.md
       items:
-      - name: 'Esempi: Utilizzo di OPENXML'
+      - name: 'Esempi: Uso di OPENXML'
         href: ../relational-databases/xml/examples-using-openxml.md
       - name: Specificare metaproprietà
         href: ../relational-databases/xml/specify-metaproperties-in-openxml.md
@@ -3345,7 +3345,7 @@ items:
       items:
       - name: Lato client e lato server
         href: ../relational-databases/sqlxml/formatting/client-side-and-server-side-formatting-sqlxml-4-0.md
-      - name: lato client lato server
+      - name: Lato client e lato server
         href: ../relational-databases/sqlxml/formatting/client-side-vs-server-side-xml-formatting-sqlxml-4-0.md
       - name: Lato client
         href: ../relational-databases/sqlxml/formatting/client-side-xml-formatting-sqlxml-4-0.md
@@ -3982,12 +3982,6 @@ items:
       href: ../sql-server/maximum-capacity-specifications-for-sql-server.md
     - name: Limiti della capacità di calcolo per edizione
       href: ../sql-server/compute-capacity-limits-by-edition-of-sql-server.md
-    - name: Customer Experience Improvement Program (CEIP)
-      href: ../sql-server/customer-experience-improvement-program-for-sql-server-data-tools.md
-    - name: Supplemento alla privacy
-      href: ../sql-server/sql-server-privacy.md
-    - name: Configurare SQL Server per inviare commenti e suggerimenti a Microsoft
-      href: ../sql-server/sql-server-customer-feedback.md
   - name: Note sulla versione
     items:
     - name: compatibilità con versioni precedenti
@@ -4017,6 +4011,16 @@ items:
       href: ../sql-server/install/local-language-versions-in-sql-server.md
     - name: Percorsi dei file
       href: ../sql-server/install/file-locations-for-default-and-named-instances-of-sql-server.md
+    - name: Raccolta di dati di diagnostica e utilizzo
+      items:
+      - name: Supplemento alla privacy
+        href: ../sql-server/sql-server-privacy.md
+      - name: Configurare i dati di diagnostica e utilizzo di SQL Server
+        href: ../sql-server/usage-and-diagnostic-data-configuration-for-sql-server.md
+      - name: Configurare i dati di diagnostica e utilizzo degli strumenti
+        href: ../sql-server/usage-and-diagnostic-data-configuration-for-sql-server-tools.md
+      - name: Controllo locale per SQL Server
+        href: ../sql-server/usage-and-diagnostic-data-in-local-audit.md
   - name: Installare SQL Server
     href: ../database-engine/install-windows/installation-for-sql-server.md
     items:
@@ -4113,8 +4117,6 @@ items:
       href: ../sql-server/install/configure-the-windows-firewall-to-allow-sql-server-access.md
     - name: Computer multihomed
       href: ../sql-server/install/configure-a-multi-homed-computer-for-sql-server-access.md
-    - name: Controllo locale per la raccolta di feedback sull'utilizzo
-      href: ../database-engine/install-windows/local-audit-for-sql-server-usage-feedback-collection.md
     - name: Configurazione delle istanze del motore di database
       href: ../database-engine/configure-windows/configure-database-engine-instances-sql-server.md
     - name: Percorsi predefiniti per i file di dati
@@ -7452,7 +7454,7 @@ items:
         items:
         - name: Connettersi a un repository MDS
           href: ../master-data-services/microsoft-excel-add-in/connect-to-an-mds-repository-mds-add-in-for-excel.md
-      - name: Panoramica Esportazione dei dati in Excel (Componente aggiuntivo Master Data Services per Microsoft Excel)
+      - name: 'Panoramica: Esportazione dei dati in Excel (Componente aggiuntivo Master Data Services per Microsoft Excel)'
         href: ../master-data-services/microsoft-excel-add-in/overview-exporting-data-to-excel-mds-add-in-for-excel.md
         items:
         - name: Filtrare i dati prima dell'esportazione
@@ -7468,7 +7470,7 @@ items:
           href: ../master-data-services/microsoft-excel-add-in/email-a-shortcut-query-file-mds-add-in-for-excel.md
         - name: Aggiornamento dei dati
           href: ../master-data-services/microsoft-excel-add-in/refreshing-data-mds-add-in-for-excel.md
-      - name: Panoramica Importazione dei dati da Excel (Componente aggiuntivo Master Data Services per Microsoft Excel)
+      - name: 'Panoramica: Importazione dei dati da Excel (Componente aggiuntivo Master Data Services per Microsoft Excel)'
         href: ../master-data-services/microsoft-excel-add-in/overview-importing-data-from-excel-mds-add-in-for-excel.md
         items:
         - name: Importare dati da Excel in Master Data Services
@@ -7574,7 +7576,7 @@ items:
           href: ../master-data-services/add-attributes-to-a-change-tracking-group-master-data-services.md
         - name: Inizializzare azioni basate su modifiche dei valori di attributo
           href: ../master-data-services/initiate-actions-based-on-attribute-value-changes-master-data-services.md
-    - name: Panoramica Importazione di dati da tabelle
+    - name: 'Panoramica: Importazione di dati da tabelle'
       href: ../master-data-services/overview-importing-data-from-tables-master-data-services.md
       items:
       - name: Importare dati da tabelle
@@ -7714,7 +7716,7 @@ items:
         href: ../master-data-services/create-a-collection-master-data-services.md
       - name: Aggiungere membri a una raccolta
         href: ../master-data-services/add-members-to-a-collection-master-data-services.md
-    - name: Panoramica Exporting Data
+    - name: 'Panoramica: Exporting Data'
       href: ../master-data-services/overview-exporting-data-master-data-services.md
       items:
       - name: Creare una vista sottoscrizioni per esportare i dati
@@ -8261,7 +8263,7 @@ items:
         items:
         - name: 'Lezione 1: Navigazione di base in Ottimizzazione guidata motore di database'
           href: ../tools/dta/lesson-1-basic-navigation-in-database-engine-tuning-advisor.md
-        - name: 'Lezione 2: Utilizzo di Ottimizzazione guidata motore di database'
+        - name: 'Lezione 2: Uso di Ottimizzazione guidata motore di database'
           href: ../tools/dta/lesson-2-using-database-engine-tuning-advisor.md
         - name: "Lezione 3: Uso dell'utilità del prompt dei comandi dta"
           href: ../tools/dta/lesson-3-using-the-dta-command-prompt-utility.md
@@ -9975,7 +9977,7 @@ items:
       items:
       - name: 'Lezione 1: Connessione al motore di database'
         href: ../relational-databases/lesson-1-connecting-to-the-database-engine.md
-      - name: 'Lezione 2: connessione da un altro computer'
+      - name: 'Lezione 2: Connessione da un altro computer'
         href: ../relational-databases/lesson-2-connecting-from-another-computer.md
     - name: Backup e ripristino nel servizio Archiviazione BLOB di Azure
       href: ../relational-databases/tutorial-sql-server-backup-and-restore-to-azure-blob-storage-service.md
@@ -10088,8 +10090,8 @@ items:
           href: ../linux/sql-server-linux-configure-msdtc-docker.md
       - name: Configurare la memoria persistente PMEM
         href: ../linux/sql-server-linux-configure-pmem.md
-      - name: Commenti e suggerimenti degli utenti
-        href: ../linux/sql-server-linux-customer-feedback.md
+      - name: Configurare per l'invio di dati su utilizzo e diagnostica a Microsoft
+        href: ../linux/usage-and-diagnostic-data-configuration-for-sql-server-linux.md
     - name: Sviluppo
       href: ../linux/sql-server-linux-develop-overview.md
       items:
@@ -10198,10 +10200,10 @@ items:
         href: ../linux/sql-server-linux-security-get-started.md
       - name: Autenticazione di Azure Active Directory
         href: ../linux/sql-server-linux-active-directory-auth-overview.md
+      - name: Aggiunta a un dominio AD
+        href: ../linux/sql-server-linux-active-directory-join-domain.md
       - name: Crittografia delle connessioni
         href: ../linux/sql-server-linux-encrypted-connections.md
-      - name: Autenticazione di AD di terze parti
-        href: ../linux/sql-server-linux-active-directory-third-party-providers.md
     - name: Prestazioni
       items:
       - name: Procedure consigliate
@@ -16231,15 +16233,15 @@ items:
             href: ../t-sql/language-elements/less-than-transact-sql.md
           - name: '>= (maggiore o uguale a)'
             href: ../t-sql/language-elements/greater-than-or-equal-to-transact-sql.md
-          - name: <= (non maggiore di)
+          - name: <= (minore o uguale a)
             href: ../t-sql/language-elements/less-than-or-equal-to-transact-sql.md
           - name: <> (diverso da)
             href: ../t-sql/language-elements/not-equal-to-transact-sql-traditional.md
-          - name: '!< (maggiore o uguale a)'
+          - name: '!< (non minore di)'
             href: ../t-sql/language-elements/not-less-than-transact-sql.md
           - name: '!= (Diverso da)'
             href: ../t-sql/language-elements/not-equal-to-transact-sql-exclamation.md
-          - name: '!> (minore o uguale a)'
+          - name: '!> (non maggiore di)'
             href: ../t-sql/language-elements/not-greater-than-transact-sql.md
         - name: Composto
           href: ../t-sql/language-elements/compound-operators-transact-sql.md
@@ -17273,9 +17275,9 @@ items:
         href: ../xquery/string-search-in-xquery.md
       - name: Gestione degli spazi dei nomi in XQuery
         href: ../xquery/handling-namespaces-in-xquery.md
-ms.openlocfilehash: bb8074720b48ca68679d43e12a04e868e6469ea6
-ms.sourcegitcommit: 3cfedfeba377560d460ca3e42af1e18824988c07
+ms.openlocfilehash: ee53aa861524c5bcf117fdaef3d857cf62a54fc7
+ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/05/2019
-ms.locfileid: "59042490"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59242359"
