@@ -12,18 +12,18 @@ ms.assetid: 6f7c6ac5-e6d3-4dca-831e-b28442ba535b
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: ad54f13fbb939b9ac65f656f37bbba94560da829
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: b909160a11dbcced44a0c81d92fd28ce02a50906
+ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53377433"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59241669"
 ---
 # <a name="create-tables-database-engine"></a>Creare tabelle (motore di database)
   È possibile creare una nuova tabella, assegnarle un nome e aggiungerla a un database esistente in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] utilizzando [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)].  
   
 > [!NOTE]  
->  Se si è connessi a un database di SQL Azure, l'opzione Nuova tabella avvierà uno script modello per la creazione della tabella. Modificare i parametri, quindi eseguire lo script per creare una nuova tabella. Per ulteriori informazioni, vedere [SQL Azure Overview](https://go.microsoft.com/fwlink/?LinkId=163948).  
+>  Se si è connessi a un database di SQL Azure, l'opzione Nuova tabella avvierà uno script modello per la creazione della tabella. Modificare i parametri, quindi eseguire lo script per creare una nuova tabella. Per ulteriori informazioni, vedere [SQL Azure Overview](https://microsoft.sharepoint.com/sites/infopedia_g01/pages/cards/azure-sql-database.aspx).  
   
  **Contenuto dell'argomento**  
   
@@ -31,7 +31,7 @@ ms.locfileid: "53377433"
   
      [Sicurezza](#Security)  
   
--   **Per creare una tabella, utilizzando:**  
+-   **Per creare una tabella:**  
   
      [SQL Server Management Studio](#SSMSProcedure)  
   
@@ -41,7 +41,7 @@ ms.locfileid: "53377433"
   
 ###  <a name="Security"></a> Sicurezza  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> Autorizzazioni  
  Sono richieste l'autorizzazione CREATE TABLE per il database e l'autorizzazione ALTER per lo schema in cui viene creata la tabella.  
   
  Se tutte le colonne nell'istruzione CREATE TABLE sono definite come tipo CLR definito dall'utente, è necessario che l'utente sia il proprietario del tipo o disponga dell'autorizzazione REFERENCES.  
@@ -92,7 +92,7 @@ ms.locfileid: "53377433"
   
 2.  Sulla barra Standard fare clic su **Nuova query**.  
   
-3.  Copiare e incollare l'esempio seguente nella finestra delle query e fare clic su **Esegui**.  
+3.  Copiare e incollare l'esempio seguente nella finestra Query, quindi fare clic su **Esegui**.  
   
     ```  
     CREATE TABLE dbo.PurchaseOrderDetail  

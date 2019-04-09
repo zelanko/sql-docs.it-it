@@ -15,18 +15,18 @@ ms.assetid: 91e3622e-4b1a-439a-80c7-a00b90d66979
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 601e3b906a8c10d6f073eb05b3f62857f8c79bac
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.openlocfilehash: 00d28ef5dbe2c0a19e5a464981934f2a84df7a7c
+ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58390467"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59241189"
 ---
 # <a name="ole-db-connection-manager"></a>gestione connessione OLE DB
   Una gestione connessione OLE DB consente la connessione di un pacchetto a un'origine dati tramite un provider OLE DB. In una gestione connessione OLE DB tramite che si connette a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , ad esempio, è possibile usare il provider [!INCLUDE[msCoName](../../includes/msconame-md.md)] OLE DB per [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 > [!NOTE]
->  Il provider OLE DB di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client 11.0 non supporta le nuove parole chiave per le stringhe di connessione (MultiSubnetFailover=True) per il clustering di failover su più subnet. Per altre informazioni, vedere la [note sulla versione di SQL Server](https://go.microsoft.com/fwlink/?LinkId=247824) e il post di blog [Failover su più Subnet AlwaysOn e SSIS](https://go.microsoft.com/fwlink/?LinkId=247825), su www.mattmasson.com.  
+>  Il provider OLE DB di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client 11.0 non supporta le nuove parole chiave per le stringhe di connessione (MultiSubnetFailover=True) per il clustering di failover su più subnet. Per altre informazioni, vedere la [note sulla versione di SQL Server](https://go.microsoft.com/fwlink/?LinkId=247824) e il post di blog [Failover su più Subnet AlwaysOn e SSIS](https://www.mattmasson.com/2012/03/alwayson-multi-subnet-failover-and-ssis/), su www.mattmasson.com.  
   
  La gestione connessione OLE DB viene usata da diversi componenti di flusso di dati e attività di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . L'origine e la destinazione OLE DB, ad esempio, usano questa gestione connessione per estrarre e caricare i dati, mentre l'attività Esegui SQL può usarla per connettersi a un database di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] per l'esecuzione delle query.  
   

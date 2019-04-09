@@ -12,19 +12,19 @@ ms.assetid: 5ed6f7cd-d9af-4439-9f33-fc935b883d91
 author: craigg-msft
 ms.author: craigg
 manager: craigg
-ms.openlocfilehash: 9a67eff74a4c95a851c65b2fb7db959d765bc192
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 61c11ad810109d76a59b9f6d9c1a3620a2866d65
+ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53374533"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59240639"
 ---
 # <a name="new-full-text-catalog-general-page"></a>Nuovo catalogo full-text (pagina Generale)
   Utilizzare questa finestra di dialogo per creare un nuovo catalogo full-text.  
   
- **Usare SQL Server Management Studio per creare un catalogo full-text**  
+ **Per utilizzare SQL Server Management Studio per creare un catalogo full-text**  
   
--   [Creare e gestire cataloghi full-text](../relational-databases/search/create-and-manage-full-text-catalogs.md)  
+-   [Creazione e gestione dei cataloghi full-text](../relational-databases/search/create-and-manage-full-text-catalogs.md)  
   
 ## <a name="uielement-list"></a>Elenco degli elementi di interfaccia  
  **Nome catalogo full-text**  
@@ -38,7 +38,7 @@ ms.locfileid: "53374533"
  Selezionare questa opzione per impostare il catalogo come predefinito per i nuovi cataloghi full-text.  
   
  **Distinzione caratteri accentati/non accentati**  
- Indica se il catalogo non sensibili o distinzione relativa ai segni diacritici, ad esempio una tilde (**~**), mark latino (**'**), o umlaut (**¨**). Se si seleziona **Insensitive**, segni diacritici vengono ignorati negli indici full-text che sono associati a questo catalogo full-text. Per informazioni sui segni diacritici, vedere[segno diacritico](https://go.microsoft.com/fwlink/?LinkId=154091) nell'Enciclopedia Encarta di MSN.  
+ Indica se il catalogo non sensibili o distinzione relativa ai segni diacritici, ad esempio una tilde (**~**), mark latino (**'**), o umlaut (**¨**). Se si seleziona **Insensitive**, segni diacritici vengono ignorati negli indici full-text che sono associati a questo catalogo full-text. Per informazioni sui segni diacritici, vedere [segno diacritico](https://www.merriam-webster.com/dictionary/diacritic) nel sito Web di Merriam inventa.  
   
 ## <a name="see-also"></a>Vedere anche  
  [CREATE FULLTEXT CATALOG &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-fulltext-catalog-transact-sql)  

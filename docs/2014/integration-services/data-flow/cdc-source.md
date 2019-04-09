@@ -12,12 +12,12 @@ ms.assetid: 99775608-e177-44ed-bb44-aaccb0f4f327
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 80e557d9d286040b1d145c852779a9eca5cd4e64
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.openlocfilehash: 4572e9fc61649f638b7c86ee23c75450216a4342
+ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58382727"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59241789"
 ---
 # <a name="cdc-source"></a>Origine CDC
   Tramite l'origine CDC viene letto un intervallo di dati delle modifiche da tabelle delle modifiche di [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] ; queste vengono poi recapitate a valle ad altri componenti SSIS.  
@@ -45,11 +45,11 @@ ms.locfileid: "58382727"
 ## <a name="error-handling"></a>Gestione degli errori  
  L'origine CDC include un output degli errori. L'output degli errori del componente include le colonne di output seguenti:  
   
--   **Codice di errore**: Il valore è sempre -1.  
+-   **Error Code** (Codice errore): il valore è sempre -1.  
   
--   **Errore colonna**: La colonna di origine che provoca l'errore (per gli errori di conversione).  
+-   **Error Column**(Colonna errore): colonna di origine che causa l'errore (per gli errori di conversione).  
   
--   **Error Row Columns**: I dati del record che ha provocato l'errore.  
+-   **Error Row Columns** (Colonne riga errore): dati del record che causano l'errore.  
   
  A seconda dell'impostazione del comportamento in seguito all'errore, l'origine CDC supporta la restituzione degli errori (conversione dei dati, troncamento) che si verificano durante il processo di estrazione nell'output degli errori. Per altre informazioni, vedere [CDC Source Editor &#40;Error Output Page&#41;](../cdc-source-editor-error-output-page.md).  
   
@@ -88,7 +88,7 @@ use <cdc-enabled-database-name>
 #### <a name="sql-server-error-message"></a>Messaggio di errore di SQL Server  
  È possibile che in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]venga restituito il messaggio di errore seguente:  
   
- **Numero di argomenti insufficiente per la routine o funzione cdc.fn_cdc_get_net_changes_\<.>.**  
+ **Sono stato specificato un numero di argomenti insufficiente per la procedura o funzione CDC. fn_cdc_get_net_changes _\<... >.**  
   
  Questo errore non indica che un argomento è mancante. Indica invece che i valori LSN iniziale o finale nella variabile di stato CDC non sono validi.  
   
@@ -125,6 +125,6 @@ use <cdc-enabled-database-name>
   
 ## <a name="related-content"></a>Contenuto correlato  
   
--   Intervento nel blog sulle [modalità di elaborazione per l'origine CDC](https://go.microsoft.com/fwlink/?LinkId=242541) sul sito Web mattmasson.com.  
+-   Intervento nel blog sulle [modalità di elaborazione per l'origine CDC](https://www.mattmasson.com/2012/01/processing-modes-for-the-cdc-source/) sul sito Web mattmasson.com.  
   
   

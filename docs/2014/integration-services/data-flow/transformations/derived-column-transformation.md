@@ -18,12 +18,12 @@ ms.assetid: 8eba755e-8e48-4233-bd1e-09a46bf2692f
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: c3a00b9cdd386a433fa25742d575751b051d77c5
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.openlocfilehash: 2a2767de67eac1a0346f059e1a2c81a5698607dc
+ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58377668"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59240996"
 ---
 # <a name="derived-column-transformation"></a>Trasformazione Colonna derivata
   La trasformazione Colonna derivata consente di creare nuovi valori di colonna tramite l'applicazione di espressioni alle colonne di input della trasformazione. Un'espressione può contenere qualsiasi combinazione di variabili, funzioni, operatori e colonne dell'input della trasformazione. Il risultato può essere aggiunto come nuova colonna o inserito in una colonna esistente come valore di sostituzione. La trasformazione Colonna derivata può definire più colonne derivate e qualsiasi variabile o colonna di input può comparire in più espressioni.  
@@ -64,19 +64,19 @@ ms.locfileid: "58377668"
   
 -   [Proprietà comuni](../../common-properties.md)  
   
--   [Proprietà personalizzate delle trasformazioni](transformation-custom-properties.md)  
+-   [proprietà personalizzate della trasformazione](transformation-custom-properties.md)  
   
  Per ulteriori informazioni sulle procedure per l'impostazione delle proprietà, fare clic su uno degli argomenti seguenti:  
   
--   [Impostare le proprietà di un componente del flusso di dati](../set-the-properties-of-a-data-flow-component.md)  
+-   [Impostazione delle proprietà di un componente del flusso di dati](../set-the-properties-of-a-data-flow-component.md)  
   
 ## <a name="related-tasks"></a>Attività correlate  
   
--   [Derivare i valori di colonna tramite la trasformazione Colonna derivata](derived-column-transformation.md)  
+-   [Derivazione di valori di colonna tramite la trasformazione Colonna derivata](derived-column-transformation.md)  
   
 ## <a name="related-content"></a>Contenuto correlato  
  Articolo tecnico relativo agli [esempi di espressioni SSIS](https://go.microsoft.com/fwlink/?LinkId=220761)nel sito Web social.technet.microsoft.com  
   
- Risposta curata [How to Split Column Data using SSIS](https://go.microsoft.com/fwlink/?LinkId=321995)(Come suddividere i dati delle colonne mediante SSIS) su curatedviews.cloudapp.net.  
+ Blog [procedura di suddivisione dei dati di colonne mediante SSIS](https://microsoft-ssis.blogspot.com/2012/10/split-multi-value-column-into-multiple.html).  
   
   

@@ -13,12 +13,12 @@ ms.assetid: edfbcd56-012f-462e-a542-95491394fda9
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 5552780cdc4a2f4e3faf39b9111882fcf4ffdd63
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.openlocfilehash: 3bc3c5ca8209c3b04aabdfc7fb27e7ce014121e3
+ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58380119"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59240669"
 ---
 # <a name="interoperability-and-coexistence-integration-services"></a>Interoperabilità e coesistenza (Integration Services)
   [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Integration Services (SSIS) può coesistere in modalità affiancata con [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] Integration Services e [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] Integration Services.  
@@ -28,7 +28,7 @@ ms.locfileid: "58380119"
   
 |Funzionalità|[!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)]|[!INCLUDE[ssISversion11](../../includes/ssisversion11-md.md)]|[!INCLUDE[ssISversion10](../../includes/ssisversion10-md.md)]|  
 |-------------|-------------------------------|---------------------------------|---------------------------------|  
-|Ambiente di sviluppo|[SQL Server 2014 Data Tools - Business Intelligence per Visual Studio 2012 CTP 2](https://www.microsoft.com/download/details.aspx?id=40736)<br /><br /> [SQL Server 2014 Data Tools - Business Intelligence per Visual Studio 2013](https://www.microsoft.com/download/details.aspx?id=42313)|[SQL Server Data Tools per Visual Studio 2010](https://msdn.microsoft.com/library/hh500335\(v=vs.103\).aspx)<br /><br /> [SQL Server Data Tools - Business Intelligence per Visual Studio 2012](https://www.microsoft.com/download/details.aspx?id=36843)|Business Intelligence Development Studio ([!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsOrcas](../../includes/vsorcas-md.md)])|  
+|Ambiente di sviluppo|[Versioni precedenti di SQL Server Data Tools (SSDT e SSDT-BI)](/ssdt/previous-releases-of-sql-server-data-tools-ssdt-and-ssdt-bi)<br /><br /> [SQL Server 2014 Data Tools - Business Intelligence per Visual Studio 2013](https://www.microsoft.com/download/details.aspx?id=42313)|[SQL Server Data Tools per Visual Studio 2010](https://msdn.microsoft.com/library/hh500335\(v=vs.103\).aspx)<br /><br /> [SQL Server Data Tools - Business Intelligence per Visual Studio 2012](https://www.microsoft.com/download/details.aspx?id=36843)|Business Intelligence Development Studio ([!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsOrcas](../../includes/vsorcas-md.md)])|  
 |Ambiente di gestione|[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]|[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]|[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]|  
 |Tabella di sistema principale in msdb per l'archivio di pacchetti|sysssispackages|sysssispackages|sysssispackages|  
 |Utilità del prompt dei comandi principale per i pacchetti in esecuzione|**dtexec** (dtexec.exe), versione 2014|**dtexec** (dtexec.exe), versione 2012|**dtexec** (dtexec.exe), versione 2008|  
@@ -40,7 +40,7 @@ ms.locfileid: "58380119"
   
 -   **Progettare pacchetti in SQL Server Data Tools**. È possibile usare gli strumenti seguenti per sviluppare e gestire i pacchetti in base alle versioni corrispondenti di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
-    -   Utilizzare la versione [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] di Business Intelligence Development Studio per sviluppare e gestire pacchetti basati su [!INCLUDE[ssISversion10](../../includes/ssisversion10-md.md)].  
+    -   Utilizzare la versione [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] di Business Intelligence Development Studio per sviluppare e gestire pacchetti basati su [!INCLUDE[ssISversion10](../../includes/ssisversion10-md.md)]  
   
     -   Utilizzare la versione [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] di [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] per sviluppare e gestire pacchetti basati su [!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)].  
   

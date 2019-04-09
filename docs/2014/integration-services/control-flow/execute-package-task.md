@@ -16,12 +16,12 @@ ms.assetid: 042d4ec0-0668-401c-bb3a-a25fe2602eac
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: d7d0273e166f715030da1ae2a984f4f744364ba4
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.openlocfilehash: 59b623076e86f3bacf5ae8c6e24b48774e33f670
+ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58387139"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59241249"
 ---
 # <a name="execute-package-task"></a>Attività Esegui pacchetto
   L'attività Esegui pacchetto permette di estendere le funzionalità aziendali di [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] consentendo ai pacchetti di eseguire altri pacchetti nell'ambito di un flusso di lavoro.  
@@ -75,7 +75,7 @@ ms.locfileid: "58387139"
   
  È possibile utilizzare i metodi seguenti per passare valori a un pacchetto figlio:  
   
--   **Configurazioni di pacchetto**  
+-   **SSIS**  
   
      [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] offre un tipo di configurazione, cioè Variabile pacchetto padre, per il passaggio dei valori dal pacchetto padre a quello figlio. Tale configurazione è compilata in base al pacchetto figlio e utilizza una variabile del pacchetto padre. Viene quindi eseguito il mapping della configurazione a una variabile nel pacchetto figlio o alla proprietà di un oggetto nel pacchetto figlio. La variabile può anche essere utilizzata negli script eseguiti dall'attività Script o dal componente script.  
   
@@ -97,7 +97,7 @@ ms.locfileid: "58387139"
  Per altre informazioni, vedere [Utilizzare i valori di variabili e parametri in un pacchetto figlio](../use-the-values-of-variables-and-parameters-in-a-child-package.md).  
   
 ### <a name="accessing-parent-package-variables"></a>Accesso alle variabili del pacchetto padre  
- Utilizzando l'attività Script è possibile consentire ai pacchetti figlio di accedere alle variabili del pacchetto padre. Quando si immette il nome della variabile del pacchetto padre nella pagina **Script** di **Editor attività Script**, non includere **User:** nel nome della variabile. In caso contrario, il pacchetto figlio non individua la variabile quando si esegue il pacchetto padre. Per altre informazioni sull'utilizzo dell'attività Script per accedere alle variabili del pacchetto padre, vedere questo post di blog, [SSIS: Accesso alle variabili in un pacchetto padre](https://go.microsoft.com/fwlink/?LinkId=257729), sul sito Web consultingblogs.emc.com.  
+ Utilizzando l'attività Script è possibile consentire ai pacchetti figlio di accedere alle variabili del pacchetto padre. Quando si immette il nome della variabile del pacchetto padre nella pagina **Script** di **Editor attività Script**, non includere **User:** nel nome della variabile. In caso contrario, il pacchetto figlio non individua la variabile quando si esegue il pacchetto padre. Per altre informazioni sull'utilizzo dell'attività Script per accedere alle variabili del pacchetto padre, vedere questo post di blog, [SSIS: Accesso alle variabili in un pacchetto padre](https://andyleonard.blog/2015/08/ssis-design-pattern-access-parent-variables-from-a-child-package-in-the-ssis-catalog/).  
   
 ## <a name="configuring-the-execute-package-task"></a>Configurazione dell'attività Esegui pacchetto  
  È possibile impostare le proprietà tramite Progettazione [!INCLUDE[ssIS](../../includes/ssis-md.md)] o a livello di codice.  
@@ -118,6 +118,6 @@ ms.locfileid: "58387139"
   
 -   Intervento nel blog concernente [SSIS: Esecuzione dei pacchetti figlio in-process o out-of-process? ](https://go.microsoft.com/fwlink/?LinkId=220819), sul sito Web consultingblogs.emc.com.  
   
--   Intervento nel blog concernente [SSIS: Accesso alle variabili in un pacchetto padre](https://go.microsoft.com/fwlink/?LinkId=257729), sul sito Web consultingblogs.emc.com.  
+-   Intervento nel blog concernente [SSIS: Accesso alle variabili in un pacchetto padre](https://andyleonard.blog/2015/08/ssis-design-pattern-access-parent-variables-from-a-child-package-in-the-ssis-catalog/), su andyleonard.blog. 
   
   

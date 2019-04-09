@@ -15,12 +15,12 @@ ms.assetid: ce4053fb-e37a-4851-b711-8e504059a780
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 1db606c086624610a158b6a87576188fa14aefaa
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 0b1265d3ef58f6ef0946937b15411b0cb79a3c20
+ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53357830"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59240709"
 ---
 # <a name="tempdb-database"></a>Database tempdb
   Il database di sistema **tempdb** è una risorsa globale disponibile a tutti gli utenti connessi all'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e viene usata per contenere gli elementi seguenti:  
@@ -79,7 +79,7 @@ ms.locfileid: "53357830"
 |CONCAT_NULL_YIELDS_NULL|OFF|Yes|  
 |CURSOR_CLOSE_ON_COMMIT|OFF|Yes|  
 |CURSOR_DEFAULT|GLOBAL|Yes|  
-|Opzioni relative alla disponibilità del database|ONLINE<br /><br /> MULTI_USER<br /><br /> READ_WRITE|No<br /><br /> No<br /><br /> No|  
+|Opzioni relative alla disponibilità del database|ONLINE<br /><br /> MULTI_USER<br /><br /> READ_WRITE|no<br /><br /> No<br /><br /> No|  
 |DATE_CORRELATION_OPTIMIZATION|OFF|Yes|  
 |DB_CHAINING|ON|No|  
 |ENCRYPTION|OFF|No|  
@@ -143,6 +143,6 @@ ms.locfileid: "53357830"
  [Spostare file del database](move-database-files.md)  
   
 ## <a name="see-also"></a>Vedere anche  
- [Utilizzo di tempdb in SQL Server 2005](https://go.microsoft.com/fwlink/?LinkId=81216)  
+ [Utilizzo di tempdb in SQL Server 2005](https://chresandro.wordpress.com/2014/09/29/working-with-tempdb-in-sql-server-2005/)  
   
   

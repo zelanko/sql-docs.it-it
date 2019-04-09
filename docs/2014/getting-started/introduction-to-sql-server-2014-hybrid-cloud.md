@@ -11,12 +11,12 @@ ms.assetid: 6dc42752-1fcd-4ab9-8194-c3001ea342e7
 author: mightypen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 026ed516989bde6f2c0b305d6af159f13a82f156
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 89344537c53c4caf066536804557451c965e4596
+ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53358453"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59241619"
 ---
 # <a name="introduction-to-sql-server-2014-hybrid-cloud"></a>Introduzione al cloud ibrido di SQL Server 2014
  L'obiettivo della maggior parte delle applicazioni è affrontare alcuni problemi chiave, quali efficienza elevata, valore aziendale, configurazioni hardware complesse, picchi notevoli su richiesta, nonché conformità a norme aziendali e del settore. Le operazioni necessarie per prendere in considerazione tutti questi fattori e sviluppare una tecnologia aziendale possono risultare molto complesse. La strategia Microsoft di un cloud ibrido intende risolvere questi problemi offrendo il supporto per cloud tradizionali e privati, cloud pubblici e ambienti cloud ibridi. 
@@ -111,7 +111,7 @@ ms.locfileid: "53358453"
 ## <a name="see-also"></a>Vedere anche 
  [Guida di SQL Server 2014 CTP2](https://www.microsoft.com/download/details.aspx?id=39269)  
  [SQL Server 2014](https://www.microsoft.com/sqlserver/sql-server-2014.aspx)  
- [Serie di Blog di Cloud ibrido di Microsoft SQL Server](https://blogs.msdn.com/b/azure/archive/2013/10/16/microsoft-sql-server-hybrid-cloud-blog-series.aspx)  
- [Migrazione di applicazioni incentrate sui dati in Azure](https://msdn.microsoft.com/library/jj156154.aspx) 
+ [Serie di blog sul cloud ibrido di Microsoft SQL Server](https://azure.microsoft.com/blog/microsoft-sql-server-hybrid-cloud-blog-series/)  
+ [Migrazione di applicazioni incentrate sui dati in Azure](https://azure.microsoft.com/blog/cloud-services-series-migrating-data-centric-applications-to-windows-azure/) 
  
  

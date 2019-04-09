@@ -12,12 +12,12 @@ ms.assetid: d1f66762-2d40-4f24-b635-a417d22ee79a
 author: craigg-msft
 ms.author: craigg
 manager: craigg
-ms.openlocfilehash: 7fa2edb4437b2d97a5a78da609838c6fcaaadda3
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: be73ed98700ef261ccee026469dddd22017998e0
+ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53353587"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59241450"
 ---
 # <a name="full-text-catalog-properties-general-page"></a>Proprietà catalogo full-text (pagina Generale)
   Questa sezione illustra le opzioni e le funzioni disponibili nella **generali** pagina della **proprietà catalogo Full-Text** nella finestra di dialogo.  
@@ -34,43 +34,43 @@ ms.locfileid: "53353587"
  **Stato popolamento**  
  Indica lo stato del catalogo. I valori possibili sono:  
   
--   **Inattività**  
+-   **Idle**  
   
 -   **Ricerca per indicizzazione in corso**  
   
 -   **In sospeso**  
   
--   **Limitata**  
+-   **Sospensione causata dal servizio Microsoft FullText**  
   
--   **Il ripristino**  
+-   **Recupero in seguito a un'interruzione in corso**  
   
--   **Arresto**  
+-   **Shutdown**  
   
--   **Popolamento incrementale in corso**  
+-   **Popolamento incrementale del catalogo in corso**  
   
--   **Compilazione dell'indice**  
+-   **Compilazione dell'indice in corso**  
   
 -   **Il disco è in pausa full**  
   
--   **Change tracking**  
+-   **Rilevamento modifiche**  
   
- **Numero di elementi**  
+ **Conteggio elementi**  
  Consente di visualizzare il numero di elementi full-text presenti nel catalogo.  
   
  **Dimensioni catalogo**  
  Consente di visualizzare le dimensioni in megabyte del catalogo full-text.  
   
- **Name**  
+ **Nome**  
  Nome del catalogo full-text.  
   
- **/ Non accentati**  
+ **Distinzione caratteri accentati/non accentati**  
  Visualizzare o modificare se il catalogo è sensibile ai segni diacritici, ad esempio una tilde (**~**), mark latino (**'**), o umlaut (**¨**). I valori validi sono:  
   
 -   **No**  
   
--   **Sì**  
+-   **Yes**  
   
--   Per informazioni sui segni diacritici, vedere [segno diacritico](https://go.microsoft.com/fwlink/?LinkId=154091) nell'Enciclopedia Encarta di MSN.  
+-   Per informazioni sui segni diacritici, vedere [segni diacritici](https://www.merriam-webster.com/dictionary/diacritic) nel dizionario Merriam inventa.  
   
  **Data ultimo popolamento**  
  Consente di visualizzare la data dell'ultimo popolamento del catalogo.  

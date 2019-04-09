@@ -17,12 +17,12 @@ ms.assetid: a980cd52-54ef-4b9c-b00c-e6807cf8e01f
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: f931b6c9edd917a12d3a84cc9cd65af862f0697e
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.openlocfilehash: 9b307c48da04e32691afa12ff1b05f6a4e8c33d8
+ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58384749"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59242189"
 ---
 # <a name="literals-ssis"></a>Valori letterali (SSIS)
   Le espressioni possono includere valori letterali numerici, stringa e booleani. L'analizzatore di espressioni supporta un'ampia gamma di valori letterali numerici, quali costanti intere, decimali e a virgola mobile. Supporta inoltre i suffissi per valori di tipo long e float, che specificano come gestire tali valori, e la notazione scientifica nei valori letterali numerici.  
@@ -54,12 +54,12 @@ ms.locfileid: "58384749"
   
 |Espressione regolare‏|Descrizione|  
 |------------------------|-----------------|  
-|{D}+{IS}|Valore letterale numerico integrale con almeno una cifra (D) e, facoltativamente, suffisso per valori di tipo long e/o per valori senza segno (IS).  Esempi: 457, 785u, 986l e 7945ul.|  
-|{D}+{E}{FS}|Valore letterale numerico non integrale con almeno una cifra (D), notazione scientifica e suffisso per valori di tipo long o float.  Esempi: 4E8l, 13e-2f e 5e+l.|  
-|{D}*"."{D}+{E}?{FS}|Valore letterale numerico non integrale con una cifra decimale, frazione decimale con almeno una cifra (D), esponente facoltativo (E) e identificatore di tipo float o long (FS). Questo valore letterale numerico ha tipo di dati DT_R4 o DT_R8.  Esempi: 6,45e3f, 89E - 2L e 1.05E + 7F.|  
-|{D}+"."{D}*{E}?{FS}|Valore letterale numerico non integrale con almeno una cifra significativa (D), una cifra decimale, esponente (E) e un identificatore di tipo float o long (FS). Questo valore letterale numerico ha tipo di dati DT_R4 o DT_R8.  Esempi: 1,e-4f, 4,6e6l e 8.365E + 2f.|  
+|{D}+{IS}|Valore letterale numerico integrale con almeno una cifra (D) e, facoltativamente, suffisso per valori di tipo long e/o per valori senza segno (IS).  Esempi: 457, 785u, 986L e 7945ul.|  
+|{D}+{E}{FS}|Valore letterale numerico non integrale con almeno una cifra (D), notazione scientifica e suffisso per valori di tipo long o float.  Esempi: 4E8l, 13e-2f e 5E+L.|  
+|{D}*"."{D}+{E}?{FS}|Valore letterale numerico non integrale con una cifra decimale, frazione decimale con almeno una cifra (D), esponente facoltativo (E) e identificatore di tipo float o long (FS). Questo valore letterale numerico ha tipo di dati DT_R4 o DT_R8.  Esempi: 6,45E3f, 0,89E-2l e 1,05E+7F.|  
+|{D}+"."{D}*{E}?{FS}|Valore letterale numerico non integrale con almeno una cifra significativa (D), una cifra decimale, esponente (E) e un identificatore di tipo float o long (FS). Questo valore letterale numerico ha tipo di dati DT_R4 o DT_R8.  Esempi: 1,E-4f, 4,6E6L e 8,365E+2f.|  
 |{D}*.{D}+|Valore letterale numerico non integrale con precisione e scala. Include una cifra decimale e una frazione decimale con almeno una cifra (D). Questo valore letterale numerico ha tipo di dati DT_NUMERIC.  Esempi: ,9, 5,8 e 0,346.|  
-|{D}+.{D}*|Valore letterale numerico non integrale con precisione e scala. Include almeno una cifra significativa (D) e una cifra decimale. Questo valore letterale numerico ha tipo di dati DT_NUMERIC.  Esempi: 6., 0,2 e 8,0.|  
+|{D}+.{D}*|Valore letterale numerico non integrale con precisione e scala. Include almeno una cifra significativa (D) e una cifra decimale. Questo valore letterale numerico ha tipo di dati DT_NUMERIC.  Esempi: 6., 0,2 e 8,.0.|  
 |#{D}+|Identificatore di derivazione. È costituito dal simbolo di cancelletto (#) e da almeno una cifra (D). Esempi: #123.|  
 |0[xX]{H}+{uU}|Valore letterale stringa in formato esadecimale. Include uno zero, una x maiuscola o minuscola, almeno una H maiuscola e, facoltativamente, il suffisso per valori senza segno. Esempi: 0xFF0A e 0X000010000U.|  
   
@@ -117,6 +117,6 @@ ms.locfileid: "58384749"
 >  Nelle espressioni i valori letterali booleani devono essere delimitati da spazi.  
   
 ## <a name="related-content"></a>Contenuto correlato  
- Articolo tecnico relativo al [foglio d'aiuto per le espressioni SSIS](https://go.microsoft.com/fwlink/?LinkId=217683)sul sito Web pragmaticworks.com  
+ Articolo tecnico relativo al [foglio d'aiuto per le espressioni SSIS](https://pragmaticworks.com/Resources/Cheat-Sheets/SSIS-Expression-Cheat-Sheet)sul sito Web pragmaticworks.com  
   
   

@@ -15,12 +15,12 @@ ms.assetid: e5f5a938-ae7c-4f4e-9416-a7f94ac82763
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 3800e9ed229491c4abe1746f6d0325ff1c63525d
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 732b1c979f0dbf3a346ad85fc11bb8e0c5097c4f
+ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53365263"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59240399"
 ---
 # <a name="usage-based-optimization-wizard-f1-help"></a>Guida sensibile al contesto dell'Ottimizzazione guidata basata sulle statistiche di utilizzo
   L'Ottimizzazione guidata basata sulle statistiche di utilizzo è simile alla Progettazione guidata aggregazioni per quanto concerne l'output e consente di progettare aggregazioni per una partizione. Le aggregazioni progettate tramite l'Ottimizzazione guidata basata sulle statistiche di utilizzo, tuttavia, sono basate su un modello di utilizzo specifico delle query registrate nel log di query di un'istanza di [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] . Le aggregazioni garantiscono miglioramenti delle prestazioni poiché consentono a [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] di recuperare totali precalcolati direttamente dall'archiviazione del cubo senza dover ricalcolare i dati da un'origine dati sottostante per ogni query.  
@@ -44,28 +44,28 @@ ms.locfileid: "53365263"
  In genere le due procedure guidate vengono utilizzate insieme per migliorare le prestazioni in fase di distribuzione e in seguito. È consigliabile utilizzare prima la Progettazione guidata aggregazioni quando la partizione (o il cubo o il gruppo di misure che contiene la partizione) viene inizialmente distribuita, per garantire un miglioramento generale delle prestazioni. Dopo un periodo di tempo durante il quale sono state registrate le query degli utenti aziendali per la partizione nel log di query, sarà possibile utilizzare l'Ottimizzazione guidata basata sulle statistiche di utilizzo per ottimizzare la progettazione delle aggregazioni in modo da gestire al meglio i requisiti relativi alle prestazioni e alle query degli utenti aziendali.  
   
 > [!NOTE]  
->  er ulteriori informazioni sulla configurazione del log di query, vedere [Configurazione del log di query di Analysis Services](https://www.microsoft.com/technet/prodtechnol/sql/2005/technologies/config_ssas_querylog.mspx).  
+>  er ulteriori informazioni sulla configurazione del log di query, vedere [Configurazione del log di query di Analysis Services](instances/log-operations-in-analysis-services.md?view=sql-server-2014#bkmk_querylog).  
   
 ## <a name="in-this-section"></a>In questa sezione  
   
--   [Selezione partizioni da modificare &#40;procedura guidata basata sulle statistiche&#41;](select-partitions-to-modify-usage-based-optimization-wizard.md)  
+-   [Selezione partizioni da modificare &#40;Ottimizzazione guidata basata sulle statistiche di utilizzo&#41;](select-partitions-to-modify-usage-based-optimization-wizard.md)  
   
--   [Specificare i criteri di Query &#40;procedura guidata basata sulle statistiche&#41;](specify-query-criteria-usage-based-optimization-wizard.md)  
+-   [Impostazione criteri di query &#40;Ottimizzazione guidata basata sulle statistiche di utilizzo&#41;](specify-query-criteria-usage-based-optimization-wizard.md)  
   
--   [Verifica delle query che verranno ottimizzate &#40;Ottimizzazione guidata basata sull'utilizzo&#41;](review-the-queries-that-will-be-optimized-usage-based-optimization-wizard.md)  
+-   [Verifica delle query che verranno ottimizzate &#40;Ottimizzazione guidata basata sulle statistiche di utilizzo&#41;](review-the-queries-that-will-be-optimized-usage-based-optimization-wizard.md)  
   
--   [Controlla utilizzo aggregazioni &#40;procedura guidata basata sulle statistiche basate sull'utilizzo&#41;](review-aggregation-usage-usage-based-optimiation-wizard.md)  
+-   [Controlla utilizzo aggregazioni &#40;Ottimizzazione guidata basata sulle statistiche di utilizzo&#41;](review-aggregation-usage-usage-based-optimiation-wizard.md)  
   
--   [Impostazione conteggi oggetti &#40;procedura guidata basata sulle statistiche&#41;](specify-object-counts-usage-based-optimization-wizard.md)  
+-   [Impostazione conteggi oggetti &#40;Ottimizzazione guidata basata sulle statistiche di utilizzo&#41;](specify-object-counts-usage-based-optimization-wizard.md)  
   
--   [Impostare le opzioni di aggregazione &#40;procedura guidata basata sulle statistiche&#41;](set-aggregation-options-usage-based-optimization-wizard.md)  
+-   [Impostazione opzioni di aggregazione &#40;Ottimizzazione guidata basata sulle statistiche di utilizzo&#41;](set-aggregation-options-usage-based-optimization-wizard.md)  
   
--   [Completamento procedura guidata &#40;procedura guidata basata sulle statistiche&#41;](completing-the-wizard-usage-based-optimization-wizard.md)  
+-   [Completamento procedura guidata &#40;Ottimizzazione guidata basata sulle statistiche di utilizzo&#41;](completing-the-wizard-usage-based-optimization-wizard.md)  
   
 ## <a name="see-also"></a>Vedere anche  
- [Le aggregazioni e progettazione di aggregazioni](multidimensional-models-olap-logical-cube-objects/aggregations-and-aggregation-designs.md)   
+ [Aggregations and Aggregation Designs](multidimensional-models-olap-logical-cube-objects/aggregations-and-aggregation-designs.md)   
  [Cubi nei modelli multidimensionali](multidimensional-models/cubes-in-multidimensional-models.md)   
- [Guida F1 guidata di progettazione delle aggregazioni](aggregation-design-wizard-f1-help.md)   
- [Procedure guidate di Analysis Services &#40;dati multidimensionali&#41;](analysis-services-wizards-multidimensional-data.md)  
+ [Guida sensibile al contesto della Progettazione guidata aggregazioni](aggregation-design-wizard-f1-help.md)   
+ [Procedure guidate di Analysis Services &#40;Dati multidimensionali&#41;](analysis-services-wizards-multidimensional-data.md)  
   
   

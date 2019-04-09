@@ -15,12 +15,12 @@ ms.assetid: e66349f3-b1b8-4763-89b7-7803541a4d62
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: eb7800a18e8df28848d775746bab6d90f75d7439
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.openlocfilehash: 15ef45a4f3bfb0b74de2472a5b2f0d8e483edab1
+ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58390935"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59242259"
 ---
 # <a name="excel-source"></a>Origine Excel
   L'origine Excel consente di estrarre dati da fogli di lavoro o intervalli di una cartella di lavoro di [!INCLUDE[msCoName](../../includes/msconame-md.md)] Excel.  
@@ -80,7 +80,7 @@ ms.locfileid: "58390935"
 ## <a name="excel-source-configuration"></a>Configurazione dell'origine Excel  
  È possibile impostare le proprietà tramite Progettazione [!INCLUDE[ssIS](../../includes/ssis-md.md)] o a livello di codice.  
   
- Per altre informazioni sulle proprietà che è possibile impostare nella finestra di dialogo **Editor origine Excel** , fare clic su uno degli argomenti seguenti:  
+ Per altre informazioni sulle proprietà che è possibile impostare nella finestra di dialogo **Editor origine Excel**, fare clic su uno degli argomenti seguenti:  
   
 -   [Editor origine Excel &#40;pagina Gestione connessione&#41;](../excel-source-editor-connection-manager-page.md)  
   
@@ -98,15 +98,15 @@ ms.locfileid: "58390935"
   
 ## <a name="related-tasks"></a>Attività correlate  
 
--   [Caricare dati da o in Excel con SQL Server Integration Services (SSIS)](../load-data-to-from-excel-with-ssis.md)
+-   [Importare i dati da Excel o esportarli in Excel con SQL Server Integration Services (SSIS)](../load-data-to-from-excel-with-ssis.md)
 
--   [Mapping dei parametri di query a variabili in un componente flusso di dati](map-query-parameters-to-variables-in-a-data-flow-component.md)  
+-   [Mapping dei parametri di query a variabili in un componente del flusso di dati](map-query-parameters-to-variables-in-a-data-flow-component.md)  
   
 -   [Impostazione delle proprietà di un componente del flusso di dati](set-the-properties-of-a-data-flow-component.md)  
   
 -   [Ordinamento dei dati per le trasformazioni Unione e Merge Join](transformations/sort-data-for-the-merge-and-merge-join-transformations.md)  
   
--   [Esecuzione di un ciclo su file e tabelle di Excel usando un contenitore Ciclo Foreach](../control-flow/foreach-loop-container.md)  
+-   [Esecuzione di un ciclo su file e tabelle di Excel utilizzando un contenitore Ciclo Foreach](../control-flow/foreach-loop-container.md)  
   
 ## <a name="related-content"></a>Contenuto correlato  
   
@@ -118,6 +118,6 @@ ms.locfileid: "58390935"
   
 -   Intervento nel blog concernente [Excel in Integration Services, parte 3 di 3: Problemi e alternative](https://go.microsoft.com/fwlink/?LinkId=217676), su dougbert.com.  
   
--   Intervento nel blog concernente [file con XLSX in SISS](https://go.microsoft.com/fwlink/?LinkId=233704), sul sito sqlservergeeks.com.  
+-   Intervento nel blog concernente [la connessione a Excel (XLSX) in SSIS ](https://microsoft-ssis.blogspot.com/2014/02/connecting-to-excel-xlsx-in-ssis.html).  
   
   

@@ -14,12 +14,12 @@ ms.assetid: 5c7206f1-7d6a-4923-8dff-3c4912da4157
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 86b86039f3e308953d41f5a463b0716a76d5c361
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.openlocfilehash: f21a5f938b2dcd7b90fa71ab946d2986b0633987
+ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58377309"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59240810"
 ---
 # <a name="web-service-task"></a>Attività Servizio Web
   L'attività Servizio Web esegue un metodo di servizio Web. È possibile utilizzare l'attività Servizio Web per gli scopi seguenti:  
@@ -74,7 +74,7 @@ ms.locfileid: "58377309"
   
  Per altre informazioni sull'impostazione di queste proprietà in Progettazione [!INCLUDE[ssIS](../../includes/ssis-md.md)] , fare clic sull'argomento seguente:  
   
--   [Impostare le proprietà di un'attività o di un contenitore](../set-the-properties-of-a-task-or-container.md)  
+-   [Impostazione delle proprietà di un'attività o di un contenitore](../set-the-properties-of-a-task-or-container.md)  
   
 ## <a name="programmatic-configuration-of-the-web-service-task"></a>Configurazione dell'attività Servizio Web a livello di codice  
  Per ulteriori informazioni sull'impostazione di queste proprietà a livello di codice, fare clic su uno degli argomenti seguenti:  
@@ -82,8 +82,8 @@ ms.locfileid: "58377309"
 -   <xref:Microsoft.SqlServer.Dts.Tasks.WebServiceTask.WebServiceTask>  
   
 ## <a name="related-content"></a>Contenuto correlato  
- Video [Procedura: Chiamare un servizio Web usando l'attività servizio Web (Video di SQL Server)](https://go.microsoft.com/fwlink/?LinkId=259642), sul sito Web technet.microsoft.com.  
+ Video [Procedura: Chiamata a un servizio Web tramite l'attività Servizio Web (video di SQL Server)](https://go.microsoft.com/fwlink/?LinkId=259642) nel sito technet.microsoft.com.  
   
- Risposta curata relativa all' [uso dei servizi Web in SSIS tramite script](https://go.microsoft.com/fwlink/?LinkId=321996)su curatedviews.cloudapp.net.  
+ [Come usare il servizio Web tramite il pacchetto SSIS](https://www.c-sharpcorner.com/article/how-to-consume-web-service-through-ssis-package/).  
   
   

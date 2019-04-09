@@ -17,19 +17,19 @@ ms.assetid: 8cdd1515-0bd7-4f8c-a7fc-a33b575e20f6
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 41044c16343ba93055815851000a1a642578e39a
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 5d8ef6822b623e546aa0215964ba0ae237862687
+ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53354728"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59242219"
 ---
 # <a name="use-warning-thresholds-and-alerts-on-mirroring-performance-metrics-sql-server"></a>Utilizzare valori di soglia avvisi e avvisi sulle metriche delle prestazioni di mirroring (SQL Server)
   In questo argomento sono incluse informazioni sugli eventi di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] per cui è possibile configurare e gestire valori soglia degli avvisi per il mirroring del database. È possibile usare Monitoraggio mirroring del database o le stored procedure **sp_dbmmonitorchangealert**, **sp_dbmmonitorhelpalert**e **sp_dbmmonitordropalert** . Nell'argomento sono inoltre incluse informazioni relative alle configurazione degli avvisi per gli eventi di mirroring del database.  
   
  Dopo aver stabilito il monitoraggio per un database con mirroring, un amministratore di sistema può configurare soglie di avviso su alcune metriche chiave delle prestazioni. Un amministratore può inoltre configurare avvisi su questi e altri eventi di mirroring del database.  
   
- **Contenuto dell'argomento:**  
+ **Contenuto dell'argomento**  
   
 -   [Misurazioni delle prestazioni e delle soglie di avviso](#PerfMetricsAndWarningThresholds)  
   
@@ -105,7 +105,7 @@ ms.locfileid: "53354728"
   
  Quando si definiscono avvisi su eventi di mirroring del database, è consigliabile definire valori soglia avvisi su entrambe le istanze dei server partner. Nel server principale o nel server mirror vengono generati singoli eventi, ma ognuno dei partner può eseguire in qualsiasi momento uno o l'altro dei due ruoli. Per assicurarsi che un avviso continui a funzionare dopo un failover, l'avviso deve essere definito su entrambi i partner.  
   
- Per ulteriori informazioni, vedere il white paper relativo agli avvisi sugli eventi di mirroring del database nel [sito Web SQL Server](https://go.microsoft.com/fwlink/?linkid=62373). In questo white paper sono contenute informazioni su come configurare avvisi utilizzando [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent, eventi WMI di mirroring del database e script di esempio.  
+ Per ulteriori informazioni, vedere il white paper relativo agli avvisi sugli eventi di mirroring del database nel [sito Web SQL Server](../../database-engine/database-mirroring/use-warning-thresholds-and-alerts-on-mirroring-performance-metrics-sql-server.md). In questo white paper sono contenute informazioni su come configurare avvisi utilizzando [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent, eventi WMI di mirroring del database e script di esempio.  
   
 > [!IMPORTANT]  
 >  Per tutte le sessioni di mirroring, è consigliabile configurare il database per l'invio di un avviso per qualsiasi evento di modifica di stato. A meno che non sia prevista una modifica dello stato in seguito a una modifica manuale della configurazione, si è verificato un evento che potrebbe compromettere i dati. Per proteggere i dati, identificare e correggere la causa della modifica imprevista dello stato.  
@@ -119,7 +119,7 @@ ms.locfileid: "53354728"
   
  **Per monitorare il mirroring del database**  
   
--   [Avviare il monitoraggio mirroring del database &#40;SQL Server Management Studio&#41;](../database-mirroring/start-database-mirroring-monitor-sql-server-management-studio.md)  
+-   [Avviare Monitoraggio mirroring del database &#40;SQL Server Management Studio&#41;](../database-mirroring/start-database-mirroring-monitor-sql-server-management-studio.md)  
   
 -   [sp_dbmmonitoraddmonitoring &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-dbmmonitoraddmonitoring-transact-sql)  
   

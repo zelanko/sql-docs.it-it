@@ -10,12 +10,12 @@ ms.assetid: 7a458b9c-3423-4e24-823d-99573544c877
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: d93743c90cafd83509ba4bbbd6c0f38369355be3
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: 9e58af1c10322baae4321c62901a55000e631678
+ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58535953"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59240439"
 ---
 # <a name="monitor-and-troubleshoot-memory-usage"></a>Monitorare e risolvere i problemi relativi all'utilizzo della memoria
   [!INCLUDE[hek_1](../../includes/hek-1-md.md)] utilizza la memoria in modi diversi rispetto alle tabelle basate su disco. È possibile monitorare la quantità di memoria allocata e utilizzata dagli indici e dalle tabelle ottimizzate per la memoria nel database tramite DMV o contatori delle prestazioni forniti per il sottosistema di Garbage Collection e memoria.  Ciò offre visibilità a livello di sistema e di database e consente di evitare problemi dovuti all'esaurimento della memoria.  
@@ -196,7 +196,7 @@ PGPOOL: 64K               0                    0                    0
 PGPOOL:  4K               0                    0                    0  
 ```  
   
- Per altre informazioni, vedere [sys.dm_xtp_system_memory_consumers &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-xtp-system-memory-consumers-transact-sql).  
+ Per altre informazioni, vedere [sys.dm_xtp_system_memory_consumers &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-db-xtp-table-memory-stats-transact-sql.md).  
   
 #### <a name="memory-consumption-at-run-time-when-accessing-memory-optimized-tables"></a>Utilizzo della memoria in fase di esecuzione quando si accede alle tabelle ottimizzate per la memoria  
  Per determinare la memoria utilizzata dalle strutture di runtime, ad esempio la cache delle procedure, eseguire la query riportata di seguito. Tutte le strutture di runtime sono contrassegnate con XTP.  

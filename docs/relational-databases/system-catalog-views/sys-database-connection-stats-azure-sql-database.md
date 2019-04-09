@@ -20,12 +20,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: 9d9e6f23d9e73295f34f23777c76253d27671ed8
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 225e80855c0042085b35670efc0666f133806d04
+ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56012362"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59242329"
 ---
 # <a name="sysdatabaseconnectionstats-azure-sql-database"></a>sys.database_connection_stats (Database di SQL Azure)
 
@@ -36,13 +36,13 @@ ms.locfileid: "56012362"
 |Statistiche|Tipo|Descrizione|  
 |---------------|----------|-----------------|  
 |**database_name**|**sysname**|Nome del database.|  
-|**start_time**|**datetime2**|Data e ora UTC dell'inizio dell'intervallo di aggregazione. L'ora è sempre un multiplo di 5 minuti. Ad esempio:<br /><br /> 28/09/2011 16:00:00<br />'2011-09-28 16:05:00'<br />'2011-09-28 16:10:00'|  
+|**start_time**|**datetime2**|Data e ora UTC dell'inizio dell'intervallo di aggregazione. L'ora è sempre un multiplo di 5 minuti. Ad esempio: <br /><br /> 28/09/2011 16:00:00<br />'2011-09-28 16:05:00'<br />'2011-09-28 16:10:00'|  
 |**end_time**|**datetime2**|Data e ora UTC della fine dell'intervallo di aggregazione. **End_time** è sempre esattamente 5 minuti dopo rispetto al relativo **start_time** nella stessa riga.|  
-|**success_count**|**int**|Numero di connessioni riuscite.|  
-|**total_failure_count**|**int**|Numero totale di connessioni non riuscite. Questa è la somma dei **connection_failure_count**, **terminated_connection_count**, e **throttled_connection_count**e non include gli eventi deadlock.|  
-|**connection_failure_count**|**int**|Numero di errori di accesso.|  
-|**terminated_connection_count**|**int**|**_Applicabile solo per [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] v11._**<br /><br /> Numero di connessioni chiuse.|  
-|**throttled_connection_count**|**int**|**_Applicabile solo per [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] v11._**<br /><br /> Numero di connessioni limitate.|  
+|**success_count**|**INT**|Numero di connessioni riuscite.|  
+|**total_failure_count**|**INT**|Numero totale di connessioni non riuscite. Questa è la somma dei **connection_failure_count**, **terminated_connection_count**, e **throttled_connection_count**e non include gli eventi deadlock.|  
+|**connection_failure_count**|**INT**|Numero di errori di accesso.|  
+|**terminated_connection_count**|**INT**|**_Applicabile solo per [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] v11._**<br /><br /> Numero di connessioni chiuse.|  
+|**throttled_connection_count**|**INT**|**_Applicabile solo per [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] v11._**<br /><br /> Numero di connessioni limitate.|  
   
 ## <a name="remarks"></a>Note  
   
@@ -101,6 +101,6 @@ WHERE start_time>='2011-09-25:12:00:00' and end_time<='2011-09-28 12:00:00';
 
 ## <a name="see-also"></a>Vedere anche
 
- [Risoluzione dei problemi di Database SQL di Azure](https://msdn.microsoft.com/library/windowsazure/ee730906.aspx)  
+ [Risoluzione dei problemi di connessione al Database SQL di Azure](/azure/sql-database/sql-database-troubleshoot-common-connection-issues)  
   
   

@@ -18,17 +18,17 @@ ms.assetid: 58b96555-d876-4f61-bff8-db5764b9f5f9
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.openlocfilehash: 14d0f9f445717ed7744f5da14eba3e99b16127db
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: 3115624895c45585101db4d5c02ea85509d68220
+ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56286659"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59241819"
 ---
 # <a name="report-parameters-report-builder-and-report-designer"></a>Parametri report (Generatore report e Progettazione report)
   Questo argomento descrive gli usi comuni dei parametri di report SSRS, le proprietà che è possibile impostare e altre informazioni sui parametri. I parametri del report consentono di controllare i dati del report, connettere report correlati e variare la presentazione del report.  
   
-[!INCLUDE[applies](../../includes/applies-md.md)] Modalità SharePoint e nativa
+[!INCLUDE[applies](../../includes/applies-md.md)] in modalità SharePoint e nativa
   
  Per una dimostrazione su come aggiungere un parametro a un report, vedere [esercitazione: Aggiunta di parametri a un Report (SSRS)](https://technet.microsoft.com/library/aa337432\(v=SQL.105\).aspx)  
 
@@ -36,7 +36,7 @@ ms.locfileid: "56286659"
 ##  <a name="bkmk_Common_Uses_for_Parameters"></a> Utilizzi comuni per i parametri  
  Di seguito sono elencate alcune delle modalità più comuni in cui è possibile usare i parametri.  
   
- **Dati del Report controllo**  
+ **Controllare i dati del report**  
   
 -   Filtrare i dati del report nell'origine dati scrivendo query del set di dati contenenti variabili.  
   
@@ -92,7 +92,7 @@ ms.locfileid: "56286659"
   
      ![Finestra di dialogo Proprietà set di dati e riquadro Report](../media/datasetquery-parameters.png "finestra di dialogo Proprietà set di dati e riquadro Report")  
   
-    > **NOTA** Non tutte le origini dati supportano i parametri.  
+    > **NOTA!** Non tutte le origini dati supportano i parametri.  
   
      Il set di dati può essere incorporato o condiviso. Quando si aggiunge un set di dati condiviso a un report, non è possibile eseguire l'override dei parametri del set di dati contrassegnati come interni nel report. È possibile eseguire l'override dei parametri del set di dati che non sono contrassegnati come interni.  
   
@@ -103,13 +103,13 @@ ms.locfileid: "56286659"
      È possibile configurare i parametri del report in modo che un utente possa immettere in modo interattivo i valori per personalizzare il contenuto o l'aspetto di un report. È inoltre possibile configurare i parametri del report in modo che un utente non possa modificare i valori preconfigurati.  
   
 
-  > **NOTA** Poiché i parametri vengono gestiti in modo indipendente nel server, la ripubblicazione di un report principale con nuove impostazioni dei parametri non implica la sovrascrittura delle impostazioni dei parametri esistenti per il report principale o per quello collegato.  
+  > **NOTA!** Poiché i parametri vengono gestiti in modo indipendente nel server, la ripubblicazione di un report principale con nuove impostazioni dei parametri non implica la sovrascrittura delle impostazioni dei parametri esistenti per il report principale o per quello collegato.  
   
 -   Aggiungere una parte del report in cui siano inclusi riferimenti a un parametro o a un set di dati condiviso contenente variabili.  
   
      Le parti di report vengono archiviate sul server di report e possono quindi essere usate da altri utenti nei propri report. Le parti di report corrispondenti a parametri non possono essere gestite dal server di report. È possibile cercare i parametri in Raccolta parti del report e configurarli nel report dopo averli aggiunti. Per altre informazioni, vedere [Parti del report &#40;Generatore report e SSRS&#41;](../report-parts-report-builder-and-ssrs.md).  
      
-   > **NOTA** I parametri possono essere pubblicati come parte del report separata per aree dati che dispongono di set di dati dipendenti con parametri. Sebbene i parametri siano elencati come parte del report, non è possibile aggiungere un parametro della parte del report direttamente a un report. Aggiungere invece la parte del report e tutti i parametri del report necessari vengono generati automaticamente da query del set di dati contenute o a cui fa riferimento la parte del report. Per altre informazioni sulle parti del report, vedere [Parti del report &#40;Generatore report e SSRS&#41;](../report-parts-report-builder-and-ssrs.md) e [Parti del report in Progettazione report &#40;SSRS&#41;](report-parts-in-report-designer-ssrs.md).  
+   > **NOTA!** I parametri possono essere pubblicati come parte del report separata per aree dati che dispongono di set di dati dipendenti con parametri. Sebbene i parametri siano elencati come parte del report, non è possibile aggiungere un parametro della parte del report direttamente a un report. Aggiungere invece la parte del report e tutti i parametri del report necessari vengono generati automaticamente da query del set di dati contenute o a cui fa riferimento la parte del report. Per altre informazioni sulle parti del report, vedere [Parti del report &#40;Generatore report e SSRS&#41;](../report-parts-report-builder-and-ssrs.md) e [Parti del report in Progettazione report &#40;SSRS&#41;](report-parts-in-report-designer-ssrs.md).  
   
 ### <a name="parameter-values"></a>Valori di parametri  
  Di seguito sono riportate le opzioni per selezionare i valori di parametri nel report.  
@@ -129,9 +129,9 @@ ms.locfileid: "56286659"
   
 |Proprietà|Descrizione|  
 |--------------|-----------------|  
-|nome|Digitare un nome con distinzione tra maiuscole e minuscole per il parametro. Il nome deve iniziare con una lettera e contenere lettere, numeri e un carattere di sottolineatura (_). Il nome non può contenere spazi. Per i parametri generati automaticamente, il nome corrisponde al parametro nella query del set di dati. Per impostazione predefinita, i parametri creati manualmente sono simili a ParametroReport1.|  
+|Nome|Digitare un nome con distinzione tra maiuscole e minuscole per il parametro. Il nome deve iniziare con una lettera e contenere lettere, numeri e un carattere di sottolineatura (_). Il nome non può contenere spazi. Per i parametri generati automaticamente, il nome corrisponde al parametro nella query del set di dati. Per impostazione predefinita, i parametri creati manualmente sono simili a ParametroReport1.|  
 |Messaggio di richiesta|Il testo che viene visualizzato accanto al parametro nella barra degli strumenti del visualizzatore di report.|  
-|Tipo di dati|Quando sono definiti valori disponibili per un parametro, l'utente seleziona i valori da un elenco a discesa, anche quando il tipo di dati è `DateTime`. Un parametro di report deve corrispondere a uno dei seguenti tipi di dati:<br /><br /> `Boolean` (Indici per tabelle con ottimizzazione per la memoria). L'utente seleziona True o False mediante un pulsante di opzione.<br /><br /> `DateTime` (Indici per tabelle con ottimizzazione per la memoria). L'utente seleziona una data da un controllo calendario.<br /><br /> **Integer**. L'utente digita valori in una casella di testo.<br /><br /> **Float**. L'utente digita valori in una casella di testo.<br /><br /> `Text` (Indici per tabelle con ottimizzazione per la memoria). L'utente digita valori in una casella di testo.<br /><br /> Per altre informazioni sui tipi di dati di report, vedere [RDL Data Types](../reports/report-definition-language-ssrs.md#bkmk_RDL_Data_Types).|  
+|Tipo di dati|Quando sono definiti valori disponibili per un parametro, l'utente seleziona i valori da un elenco a discesa, anche quando il tipo di dati è `DateTime`. Un parametro di report deve corrispondere a uno dei seguenti tipi di dati:<br /><br /> `Boolean`. L'utente seleziona True o False mediante un pulsante di opzione.<br /><br /> `DateTime`. L'utente seleziona una data da un controllo calendario.<br /><br /> **Integer**. L'utente digita valori in una casella di testo.<br /><br /> **Float**. L'utente digita valori in una casella di testo.<br /><br /> `Text`. L'utente digita valori in una casella di testo.<br /><br /> Per altre informazioni sui tipi di dati di report, vedere [RDL Data Types](../reports/report-definition-language-ssrs.md#bkmk_RDL_Data_Types).|  
 |Consenti nessun valore|Selezionare questa opzione se il valore del parametro può corrispondere a una stringa vuota o a un valore vuoto.<br /><br /> Se si specificano valori validi per un parametro e si desidera che uno di essi sia un valore vuoto, è necessario includere tale valore come uno dei valori specificati. La selezione di questa opzione non include automaticamente un valore vuoto tra i valori disponibili.|  
 |Consenti valore Null|Selezionare questa opzione se il valore del parametro può essere un valore Null.<br /><br /> Se si specificano valori validi per un parametro e si desidera che uno dei valori sia Null, è necessario includere tale valore come uno dei valori specificati. La selezione di questa opzione non include automaticamente un valore Null tra i valori disponibili.|  
 |Consenti più valori|Fornire i valori disponibili per creare un elenco a discesa dal quale gli utenti possono scegliere. Si tratta di un metodo efficace per assicurarsi che nella query del set di dati vengano inviati solo valori validi.<br /><br /> Selezionare questa opzione se il valore per il parametro può essere costituito da più valori visualizzati in un elenco a discesa. I valori Null non sono consentiti. Se questa opzione è selezionata, verranno aggiunte caselle di controllo all'elenco di valori disponibili nell'elenco a discesa dei parametri. Nella parte superiore dell'elenco è inclusa una casella di controllo **Seleziona tutto**. Gli utenti possono selezionare i valori desiderati.<br /><br /> Se i dati che forniscono i valori cambiano rapidamente, l'utente potrebbe non visualizzare l'elenco più recente.|  
@@ -156,7 +156,7 @@ ms.locfileid: "56286659"
   
  Per un report pubblicato, è possibile usare gli elementi seguenti:  
   
--   **Proprietà del parametro di report.** Modificare i valori dei parametri del report direttamente nel server di report indipendentemente dalla definizione del report.  
+-   **Proprietà del parametro di report.** Modificare i valori del parametro di report direttamente nel server di report, indipendentemente dalla definizione del report.  
   
 -   **Report memorizzati nella cache.** Per creare un piano della cache per un report, ogni parametro deve avere un valore predefinito. Per altre informazioni, vedere [Memorizzazione dei report nella cache &#40;SSRS&#41;](../report-server/caching-reports-ssrs.md).  
   
@@ -217,19 +217,19 @@ ms.locfileid: "56286659"
   
 -   [Aggiungere un filtro a un set di dati &#40;Generatore report e SSRS&#41;](../report-data/add-a-filter-to-a-dataset-report-builder-and-ssrs.md)  
   
--   [Aggiungere un sottoreport e parametri &#40;Generatore report e SSRS&#41;](add-a-subreport-and-parameters-report-builder-and-ssrs.md)  
+-   [Aggiungere un sottoreport e di parametri &#40;Generatore report e SSRS&#41;](add-a-subreport-and-parameters-report-builder-and-ssrs.md)  
   
--   [Come usare parametri SSRS con stored procedure](https://go.microsoft.com/fwlink/p/?LinkId=396970)  
+-   [Report SSRS per la Stored Procedure con parametri](https://www.c-sharpcorner.com/UploadFile/7d3362/ssrs-report-for-parameterize-stored-procedure/)  
   
 ## <a name="did-this-article-help-you-were-listening"></a>Questo articolo è stato utile? Commenti e suggerimenti  
  Quali informazioni si stanno cercando? La ricerca ha restituito i risultati desiderati? Commenti e suggerimenti per commenti e suggerimenti per migliorare il contenuto. Inviare eventuali commenti all'indirizzo [sqlfeedback@microsoft.com](mailto:sqlfeedback@microsoft.com?subject=Your%20feedback%20about%20the%20Report%20Parameters%20page)  
   
 ##  <a name="bkmk_Related_Topics"></a> Contenuto correlato  
- [Configurazione dei parametri di report SSRS (quiz)](https://go.microsoft.com/fwlink/p/?LinkID=306443)  
+ [Configurazione dei parametri di report SSRS (quiz)](https://www.trenovision.com/quiz/sql-server-reporting-services-ssrs-quiz/)  
   
- [Esercitazione: Aggiungere un parametro al report &#40;Generatore report&#41;](../tutorial-add-a-parameter-to-your-report-report-builder.md)  
+ [Esercitazione: Aggiungere un parametro al Report &#40;Generatore Report&#41;](../tutorial-add-a-parameter-to-your-report-report-builder.md)  
   
- [Errori imprevisti di per InvalidReportParameterException nel servizio di creazione di report](https://go.microsoft.com/fwlink/p/?LinkId=393118)  
+ [Errori imprevisti per InvalidReportParameterException nel servizio di segnalazione](https://go.microsoft.com/fwlink/p/?LinkId=393118)  
   
  [Esempi di report (Generatore report e SSRS)](https://go.microsoft.com/fwlink/?LinkId=198283)  
   

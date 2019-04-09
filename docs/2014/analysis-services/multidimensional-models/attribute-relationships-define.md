@@ -14,12 +14,12 @@ ms.assetid: 9184d344-e96d-4025-ad6f-3f75129746df
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 93e3ca09b1d1d20be103db8bbd92aa15e3a1ba5a
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: ecc6eefcf6fea5ee815190e1d4204a00cca60f0a
+ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53360433"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59241239"
 ---
 # <a name="define-attribute-relationships"></a>Definire relazioni tra attributi
   In [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], gli attributi rappresentano l'elemento costitutivo fondamentale di una dimensione. Una dimensione contiene un set di attributi organizzato in base alle relazioni tra attributi.  
@@ -35,7 +35,7 @@ ms.locfileid: "53360433"
 -   Determina la selezione di aggregati più efficaci da parte degli algoritmi di progettazione delle aggregazioni, purché siano presenti gerarchie definite dall'utente nei percorsi delle relazioni.  
   
     > [!NOTE]  
-    >  Per altre informazioni sull'importanza e le implicazioni della definizione e configurazione di relazioni tra attributi, vedere la sezione "Ottimizzazione delle prestazioni delle query", nella [SQL Server 2005 Analysis Services Performance Guide](https://go.microsoft.com/fwlink/?LinkId=81621).  
+    >  Per altre informazioni sull'importanza e le implicazioni della definizione e configurazione di relazioni tra attributi, vedere la sezione "Ottimizzazione delle prestazioni delle query", nella [SQL Server 2005 Analysis Services Performance Guide](https://docsbay.net/Microsoft-SQL-Server-2005-Analysis-Services-Performance-Guide).  
   
 ## <a name="attribute-relationship-considerations"></a>Considerazioni sulle relazioni tra attributi  
  Quando i dati sottostanti lo supportano, si devono definire anche relazioni univoche tra attributi. Per definire relazioni tra attributi univoche, usare la scheda **Relazioni tra attributi** di Progettazione dimensioni.  
@@ -48,6 +48,6 @@ ms.locfileid: "53360433"
 >  Definire erroneamente relazioni tra attributi può produrre risultati della query non validi.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Relazione tra attributi](../multidimensional-models-olap-logical-dimension-objects/attribute-relationships.md)  
+ [Relazioni tra attributi](../multidimensional-models-olap-logical-dimension-objects/attribute-relationships.md)  
   
   

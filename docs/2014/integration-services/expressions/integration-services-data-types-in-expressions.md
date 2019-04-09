@@ -13,12 +13,12 @@ ms.assetid: c296ad10-4080-4988-8c2c-2c250f7a1884
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 99687b8168c16b0ad1ceef5f802b3345038524fe
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.openlocfilehash: f3b2c9137f34a76ec77f179eb329042d92be5cd1
+ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58378269"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59241031"
 ---
 # <a name="integration-services-data-types-in-expressions"></a>Tipi di dati nelle espressioni di Integration Services
   L'analizzatore di espressioni usa i tipi di dati di [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)]. La prima volta che i dati entrano nel flusso di dati di un pacchetto di [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] il motore del flusso di dati converte i dati di tutte le colonne in un tipo di dati di [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] , mentre i dati delle colonne utilizzate da un'espressione hanno già un tipo di dati di [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] . Le espressioni utilizzate nelle trasformazioni Suddivisione condizionale e Colonna derivata possono fare riferimento alle colonne perché fanno parte di un flusso di dati che include dati di colonna.  
@@ -51,11 +51,11 @@ ms.locfileid: "58378269"
 >   
 >  Per evitare errori o risultati imprevisti, è consigliabile non scrivere codice basato su particolari valori numerici per `True` e `False`. Quando possibile, è consigliabile limitare l'utilizzo delle variabili booleane ai valori logici per i quali sono progettate.  
   
- Per altre informazioni, vedere i seguenti argomenti:  
+ Per altre informazioni, vedere gli argomenti seguenti:  
   
 -   [== &#40;uguale&#41; &#40;espressione SSIS&#41;](equal-ssis-expression.md)  
   
--   [\!= &#40;diverso da&#41; &#40;espressione SSIS&#41;](unequal-ssis-expression.md)  
+-   [!= &#40;diverso da&#41; &#40;espressione SSIS&#41;](unequal-ssis-expression.md)  
   
 -   [&#62; &#40;maggiore di&#41; &#40;espressione SSIS&#41;](greater-than-ssis-expression.md)  
   
@@ -92,7 +92,7 @@ ms.locfileid: "58378269"
   
 -   Gli argomenti passati a funzioni matematiche devono restituire tipi di dati numeric. A seconda della funzione o dell'operazione può essere necessario un tipo di dati numeric specifico. La funzione HEX richiede ad esempio un intero con o senza segno.  
   
--   Gli argomenti passati alle funzioni di stringa devono restituire un tipo di dati carattere: DT_STR o DT_WSTR. Ad esempio, UPPER("flower"). Alcune funzioni per i valori stringa, ad esempio SUBSTRING, richiedono argomenti Integer aggiuntivi che indicano la posizione iniziale e la lunghezza della stringa.  
+-   Gli argomenti passati alle funzioni per i valori stringa devono restituire il tipo di dati character DT_STR o DT_WSTR. Ad esempio, UPPER("flower"). Alcune funzioni per i valori stringa, ad esempio SUBSTRING, richiedono argomenti Integer aggiuntivi che indicano la posizione iniziale e la lunghezza della stringa.  
   
 -   Gli argomenti passati alle funzioni di data e ora devono restituire una data valida. Ad esempio, DAY(GETDATE()). Funzioni quali DATEADD richiedono un argomento Integer aggiuntivo che indica il numero di giorni che la funzione deve aggiungere alla data specificata.  
   
@@ -105,7 +105,7 @@ ms.locfileid: "58378269"
   
 ## <a name="related-content"></a>Contenuto correlato  
   
--   Articolo tecnico relativo al [foglio d'aiuto per le espressioni SSIS](https://go.microsoft.com/fwlink/?LinkId=217683)sul sito Web pragmaticworks.com  
+-   Articolo tecnico relativo al [foglio d'aiuto per le espressioni SSIS](https://pragmaticworks.com/Resources/Cheat-Sheets/SSIS-Expression-Cheat-Sheet3)sul sito Web pragmaticworks.com  
   
 -   Articolo tecnico relativo agli [esempi di espressioni SSIS](https://go.microsoft.com/fwlink/?LinkId=220761)nel sito Web social.technet.microsoft.com  
   

@@ -25,12 +25,12 @@ ms.assetid: 88ed5b97-1d28-4980-80e4-b36761f3c03a
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.openlocfilehash: 0b745a3d9cfd88bb65b60720903768672fbe1e88
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: a6c183fc402571ab359071160d515939257f773b
+ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56019092"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59241629"
 ---
 # <a name="reporting-services-report-server"></a>Reporting Services Report Server
   In questo argomento viene fornita una panoramica del server di report di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] , il componente centrale di un'installazione [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] . È costituito da una coppia di componenti di elaborazione oltre a una raccolta di estensioni speciali che gestiscono le operazioni di autenticazione, elaborazione dati, rendering e recapito. Un server di report di [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] viene eseguito in una delle due modalità di distribuzione: nativa o SharePoint. Vedere la sezione [Confronto tra le funzionalità delle modalità SharePoint e nativa](#bkmk_featuresupport) per un confronto delle funzionalità.  
@@ -49,21 +49,21 @@ ms.locfileid: "56019092"
   
 ##  <a name="bkmk_top"></a> Contenuto dell'argomento  
   
--   [Panoramica delle modalità del Server di Report](#bkmk_overview)  
+-   [Panoramica delle modalità del server di report](#bkmk_overview)  
   
--   [Confronto tra le funzionalità della modalità SharePoint e nativa](#bkmk_featuresupport)  
+-   [Confronto tra le funzionalità delle modalità SharePoint e nativa](#bkmk_featuresupport)  
   
 -   [Modalità nativa](#bkmk_nativemode)  
   
--   [Modalità nativa con Web part di SharePoint](#bkmk_nativewithwebparts)  
+-   [Modalità nativa con web part di SharePoint](#bkmk_nativewithwebparts)  
   
 -   [Modalità SharePoint](#bkmk_sharepointmode)  
   
--   [Elaborazione di report e pianificazione e recapito](#bkmk_reportprocessor)  
+-   [Elaborazione di report e processo di pianificazione e recapito](#bkmk_reportprocessor)  
   
--   [Database del server di report](#bkmk_reportdatabase)  
+-   [database del server di report](#bkmk_reportdatabase)  
   
--   [L'autenticazione, Rendering, dati ed estensioni per il recapito](#bkmk_authentication)  
+-   [Estensioni per le operazioni di autenticazione, rendering, elaborazione dati e recapito](#bkmk_authentication)  
   
 -   [Attività correlate](#bkmk_relatedtasks)  
   
@@ -91,14 +91,14 @@ ms.locfileid: "56019092"
 |**Gestione configurazione**|Yes|**\*\* Importante \*\*** Non è possibile usare Gestione configurazione per gestire un server di report in modalità SharePoint. Usare invece Amministrazione centrale SharePoint.|  
 |**Gestione report**|Yes|Non è possibile usare Gestione report per gestire la modalità SharePoint. Usare le pagine dell'applicazione SharePoint. Per altre informazioni, vedere [Servizio SharePoint di Reporting Services e applicazioni di servizio](../../2014/reporting-services/reporting-services-sharepoint-service-and-service-applications.md).|  
 |**Report collegati**|Yes|No.|  
-|**Report personali**|Yes|No|  
-|**Sottoscrizioni personali** e metodi di invio in batch|Yes|No|  
+|**Report personali**|Yes|no|  
+|**Sottoscrizioni personali** e metodi di invio in batch|Yes|no|  
 |**Avvisi dati**|No|Yes|  
-|**Power View**|No|Yes<br /><br /> È necessario disporre di Silverlight nel browser del client. Per altre informazioni sui requisiti del browser, vedere [Planning for Reporting Services e supporto Browser per Power View &#40;Reporting Services 2014&#41;](../../2014/reporting-services/browser-support-for-reporting-services-and-power-view.md)|  
+|**Power View**|no|Yes<br /><br /> È necessario disporre di Silverlight nel browser del client. Per altre informazioni sui requisiti del browser, vedere [Planning for Reporting Services e supporto Browser per Power View &#40;Reporting Services 2014&#41;](../../2014/reporting-services/browser-support-for-reporting-services-and-power-view.md)|  
 |**Report RDL**|Yes|Yes<br /><br /> I report RDL possono essere eseguiti nei server di report di [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] in modalità nativa o SharePoint.|  
 |**Report RDLX**|No|Yes<br /><br /> I report RDLX di Power View possono essere eseguiti solo nei server di report di [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] in modalità SharePoint.|  
 |**Credenziali del token utente di SharePoint per l'estensione dell'elenco SharePoint**|No|Yes|  
-|**Aree AAM per distribuzioni che si interfacciano a Internet**|No|Yes|  
+|**Aree AAM per distribuzioni che si interfacciano a Internet**|no|Yes|  
 |**Backup e recupero di SharePoint**|No|Yes|  
 |**Supporto del log ULS**|No|Yes|  
   
@@ -183,6 +183,6 @@ ms.locfileid: "56019092"
  [Implementazione di un'estensione di sicurezza](extensions/security-extension/implementing-a-security-extension.md)   
  [Implementazione di un'estensione per l'elaborazione dati](extensions/data-processing/implementing-a-data-processing-extension.md)   
  [Origini dei dati supportate da Reporting Services &#40;SSRS&#41;](create-deploy-and-manage-mobile-and-paginated-reports.md)   
- [Come amministrare SSRS con PowerShell (risposta Curated)](https://go.microsoft.com/fwlink/?LinkId=321992)  
+ [Come amministrare SSRS con PowerShell](https://sqlbelle.wordpress.com/2015/08/17/automate-ssrs-report-generation-using-powershell/)  
   
   

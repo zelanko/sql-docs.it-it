@@ -1,5 +1,5 @@
 ---
-title: Creare membri calcolati | Documenti Microsoft
+title: Creare membri calcolati | Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,18 +9,18 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: a0cee9d01fb55ace4d7062f96b5d3ea16c026669
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 3bfa37a34ae6c3010c36dfe7693bb6d569e6e63d
+ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34023178"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59241467"
 ---
 # <a name="create-calculated-members"></a>Creare membri calcolati
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
   È possibile creare misure o membri di dimensioni personalizzati, denominati membri calcolati, combinando dati del cubo, operatori aritmetici, numeri e funzioni. È ad esempio possibile creare un membro calcolato denominato Euro in grado di convertire valori in dollari in euro moltiplicando una misura dollaro esistente per un tasso di conversione. Gli importi in euro potranno quindi essere visualizzati agli utenti finali in una riga o una colonna separata.  
   
- Le definizioni dei membri calcolati vengono archiviate, mentre i relativi valori sono presenti solo in memoria. Nell'esempio precedente, i valori convertiti vengono visualizzati agli utenti finali, ma non sono archiviati come dati del cubo.  
+ Le definizioni dei membri calcolati vengono archiviate, mentre i relativi valori sono presenti solo in memoria. Nell'esempio precedente, i valori in euro vengono visualizzati agli utenti finali, ma non vengono archiviati come dati del cubo.  
   
  I membri calcolati vengono creati nei cubi. Per creare un membro calcolato, nella scheda **Calcoli** di Progettazione cubi fare clic sull'icona **Nuovo membro calcolato** sulla barra degli strumenti. Verrà visualizzato un form in cui è possibile specificare le opzioni seguenti per il membro calcolato.  
   
@@ -56,7 +56,7 @@ ms.locfileid: "34023178"
  Stringa formato  
  Consente di specificare il formato dei valori di cella basati sul membro calcolato. Questa proprietà supporta gli stessi valori della proprietà **Formato di visualizzazione** delle misure. Per altre informazioni sui formati di visualizzazione, vedere [Configurare le proprietà delle misure](../../analysis-services/multidimensional-models/configure-measure-properties.md).  
   
- Visible  
+ Visibile  
  Determina se il membro calcolato è visibile o nascosto quando vengono recuperati i metadati del cubo. Se il membro calcolato è nascosto, può comunque essere utilizzato in espressioni MDX, istruzioni e script, ma non viene visualizzato come oggetto selezionabile nelle interfacce utente client.  
   
  Gestione NON EMPTY  

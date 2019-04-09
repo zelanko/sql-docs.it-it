@@ -17,15 +17,15 @@ ms.assetid: 7a50de3c-4ca0-4922-8028-fdddeb47e5b0
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 3883fdccb7f118ebd8954da670b968b745f36e27
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.openlocfilehash: 76c4f0d89e26e620b8c557383bd130bc8940b168
+ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58394399"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59241359"
 ---
 # <a name="data-flow"></a>Flusso di dati
-  In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] sono disponibili tre diversi tipi di componenti flusso di dati: origini, trasformazioni e destinazioni. Le origini estraggono dati da archivi dati quali tabelle e viste di database relazionali, file e database di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . Tramite le trasformazioni è possibile modificare, riepilogare e pulire i dati. Le destinazioni consentono di caricare dati in archivi dati o di creare set di dati in memoria.  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] provides three different types of data flow components: sources, sono disponibili tre diversi tipi di componenti flusso di dati: origini, trasformazioni e destinazioni.nLe origini estraggono dati da archivi dati quali tabelle e viste di database relazionali, file e database di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] .lTramite le trasformazioni è possibile modificare, riepilogare e pulire i dati.sLe destinazioni consentono di caricare dati in archivi dati o di creare set di dati in memoria.  
   
 > [!NOTE]  
 >  Quando si utilizzano i provider personalizzati, è necessario aggiornare il file ProviderDescriptors.xml con i valori delle colonne di metadati.  
@@ -100,7 +100,7 @@ ms.locfileid: "58394399"
 |Origine|Descrizione|  
 |------------|-----------------|  
 |Origine Oracle|L'origine Oracle è il componente di origine del connettore [!INCLUDE[msCoName](../../../includes/msconame-md.md)] per Oracle di Attunity. Il connettore [!INCLUDE[msCoName](../../../includes/msconame-md.md)] per Oracle di Attunity include anche una gestione connessione e una destinazione. Per ulteriori informazioni, vedere la pagina di download relativa ai [connettori Microsoft per Oracle e Teradata di Attunity](https://go.microsoft.com/fwlink/?LinkId=254963).|  
-|Origine SAP BI|L'origine SAP BI è il componente di origine del connettore [!INCLUDE[msCoName](../../../includes/msconame-md.md)] per SAP BI. Il connettore [!INCLUDE[msCoName](../../../includes/msconame-md.md)] per SAP BI include anche una gestione connessione e una destinazione. Per ulteriori informazioni, vedere la pagina di download relativa al [Feature Pack di Microsoft SQL Server 2008](https://go.microsoft.com/fwlink/?LinkId=110393).|  
+|Origine SAP BI|L'origine SAP BI è il componente di origine del connettore [!INCLUDE[msCoName](../../../includes/msconame-md.md)] per SAP BI. Il connettore [!INCLUDE[msCoName](../../../includes/msconame-md.md)] per SAP BI include anche una gestione connessione e una destinazione. Per ulteriori informazioni, vedere la pagina di download relativa al [Feature Pack di Microsoft SQL Server 2008](https://www.microsoft.com/download/details.aspx?id=16978).|  
 |Origine Teradata|L'origine Teradata è il componente di origine del connettore [!INCLUDE[msCoName](../../../includes/msconame-md.md)] per Teradata di Attunity. Il connettore [!INCLUDE[msCoName](../../../includes/msconame-md.md)] per Teradata di Attunity include anche una gestione connessione e una destinazione. Per ulteriori informazioni, vedere la pagina di download relativa ai [connettori Microsoft per Oracle e Teradata di Attunity](https://go.microsoft.com/fwlink/?LinkId=254963).|  
   
  Per una dimostrazione sull'uso dei miglioramenti delle prestazioni del connettore [!INCLUDE[msCoName](../../../includes/msconame-md.md)] per Oracle di Attunity, vedere la pagina [Performance of Microsoft Connector for Oracle by Attunity (SQL Server Video)](https://go.microsoft.com/fwlink/?LinkID=210369)(Prestazioni del connettore Microsoft per Oracle di Attunity (video di SQL Server)).  
@@ -114,25 +114,25 @@ ms.locfileid: "58394399"
   
  Le trasformazioni seguenti includono proprietà che possono essere aggiornate tramite espressioni di proprietà:  
   
--   [Trasformazione Suddivisione condizionale](transformations/conditional-split-transformation.md)  
+-   [Suddivisione condizionale - trasformazione](transformations/conditional-split-transformation.md)  
   
 -   [Trasformazione Colonna derivata](transformations/derived-column-transformation.md)  
   
--   [Trasformazione Raggruppamento fuzzy](transformations/fuzzy-grouping-transformation.md)  
+-   [Raggruppamento fuzzy - trasformazione](transformations/fuzzy-grouping-transformation.md)  
   
--   [Trasformazione Ricerca fuzzy](transformations/lookup-transformation.md)  
+-   [Ricerca fuzzy - trasformazione](transformations/lookup-transformation.md)  
   
--   [Trasformazione Comando OLE DB](transformations/ole-db-command-transformation.md)  
+-   [Comando OLE DB - trasformazione](transformations/ole-db-command-transformation.md)  
   
--   [Trasformazione Campionamento percentuale](transformations/percentage-sampling-transformation.md)  
+-   [Campionamento percentuale - trasformazione](transformations/percentage-sampling-transformation.md)  
   
--   [Trasformazione Pivot](transformations/pivot-transformation.md)  
+-   [Pivot - trasformazione](transformations/pivot-transformation.md)  
   
--   [Trasformazione Campionamento righe](transformations/row-sampling-transformation.md)  
+-   [Campionamento righe - trasformazione](transformations/row-sampling-transformation.md)  
   
--   [Trasformazione Ordinamento](transformations/sort-transformation.md)  
+-   [Ordinamento - trasformazione](transformations/sort-transformation.md)  
   
--   [Trasformazione UnPivot](transformations/unpivot-transformation.md)  
+-   [UnPivot - trasformazione](transformations/unpivot-transformation.md)  
   
  Per altre informazioni, vedere [Trasformazioni di Integration Services](transformations/integration-services-transformations.md).  
   
@@ -151,7 +151,7 @@ ms.locfileid: "58394399"
   
  Le destinazioni seguenti includono proprietà che possono essere aggiornate tramite espressioni di proprietà:  
   
--   [Destinazione file flat](flat-file-destination.md)  
+-   [file flat - destinazione](flat-file-destination.md)  
   
 -   [Destinazione SQL Server Compact Edition](sql-server-compact-edition-destination.md)  
   
@@ -189,7 +189,7 @@ ms.locfileid: "58394399"
  Per altre informazioni, vedere [Gestione degli errori nei dati](error-handling-in-data.md).  
   
 ### <a name="columns"></a>Colonne  
- Input, output e output degli errori sono raccolte di colonne. Ogni colonna è configurabile e a seconda del tipo di colonna (input, output o esterna), [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] offre proprietà diverse per la colonna. [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] offre tre modi diversi per impostare le proprietà della colonna: a livello di codice, tramite finestre di dialogo specifiche del componente o tramite la finestra di dialogo **Editor avanzato**.  
+ Input, output e output degli errori sono raccolte di colonne. Ogni colonna è configurabile e a seconda del tipo di colonna (input, output o esterna), [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] offre proprietà diverse per la colonna. [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] offre tre modi diversi di impostare le proprietà della colonna: a livello di codice, tramite finestre di dialogo specifiche del componente o tramite la finestra di dialogo **Editor avanzato** .  
   
 ## <a name="paths"></a>Percorsi  
  I percorsi connettono i componenti flusso di dati. In Progettazione [!INCLUDE[ssIS](../../../includes/ssis-md.md)] è possibile visualizzare e modificare le proprietà di un percorso, visualizzare i metadati di output per il punto iniziale di un percorso e collegare i visualizzatori dati a un percorso.  
@@ -211,13 +211,13 @@ ms.locfileid: "58394399"
   
 ## <a name="related-tasks"></a>Attività correlate  
   
--   [Aggiungere o eliminare un componente in un flusso di dati](add-or-delete-a-component-in-a-data-flow.md)  
+-   [Aggiunta o eliminazione di un componente in un flusso di dati](add-or-delete-a-component-in-a-data-flow.md)  
   
--   [Connettere componenti in un flusso di dati](connect-components-in-a-data-flow.md)  
+-   [Connessione di componenti in un flusso di dati](connect-components-in-a-data-flow.md)  
   
 ## <a name="related-content"></a>Contenuto correlato  
  Video sulle [prestazioni del connettore Microsoft per Oracle di Attunity (video di SQL Server)](https://go.microsoft.com/fwlink/?LinkID=210369)sul sito Web technet.microsoft.com.  
   
- Risposta curata [How to Create a Dynamic Connection String in SSIS](https://go.microsoft.com/fwlink/?LinkId=321994)(Procedura di creazione di una stringa di connessione dinamica in SSIS) su curatedviews.cloudapp.net.  
+ Risposta curata relativa alla [come creare una stringa di connessione dinamica in SSIS](https://kevine323.blogspot.com/2012/04/dynamic-connection-strings-in-ssis.html).  
   
   

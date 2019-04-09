@@ -14,12 +14,12 @@ ms.assetid: ead0150e-4943-4ad5-84c8-36f85c7278f4
 author: aliceku
 ms.author: aliceku
 manager: craigg
-ms.openlocfilehash: 8a9018c43ace6ebbf0a905567bb806b616530a02
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 1484a32eb808e6778896a498d5a6dee525b18aed
+ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53352194"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59242459"
 ---
 # <a name="sql-server-encryption"></a>Crittografia di SQL Server
   La crittografia è il processo che consiste nell'offuscare i dati tramite l'utilizzo di una chiave o di una password. È in grado di rendere i dati inutilizzabili se non si dispone della chiave di decrittografia o password corrispondente. La crittografia non risolve i problemi relativi al controllo di accesso, ma migliora la sicurezza limitando la perdita di dati anche se il controllo di accesso viene eluso. Se, ad esempio, il computer host del database è configurato scorrettamente e un pirata informatico ottiene dati riservati, le informazioni sottratte potrebbero essere inutilizzabili se crittografate.  
@@ -62,7 +62,7 @@ ms.locfileid: "53352194"
  Informazioni sull'utilizzo di un certificato per la crittografia dei dati.  
   
 ## <a name="external-resources"></a>Risorse esterne  
- [Microsoft TechNet: TechCenter di SQL Server: Protezione e sicurezza di SQL Server 2005](https://www.microsoft.com/technet/prodtechnol/sql/2005/library/security.mspx)  
+ [10 operazioni di sicurezza di SQL Server 2005](https://www.itprotoday.com/sql-server/10-steps-sql-server-2005-security)  
  Informazioni aggiornate sulla sicurezza di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .  
   
 ## <a name="see-also"></a>Vedere anche  

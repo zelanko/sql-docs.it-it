@@ -1,5 +1,5 @@
 ---
-title: Creare misure e gruppi di misure nei modelli multidimensionali | Documenti Microsoft
+title: Creare misure e gruppi di misure nei modelli multidimensionali | Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: fde4dd3ac818935319f0331448e552163a6e148f
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 9c963256ce1d2d0fa37c34d7ea96df60834f125f
+ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34026498"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59241969"
 ---
 # <a name="create-measures-and-measure-groups-in-multidimensional-models"></a>Creare misure e gruppi di misure nei modelli multidimensionali
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -39,7 +39,7 @@ ms.locfileid: "34026498"
 |-|-|  
 |Creazione guidata cubo|Eseguire la creazione guidata cubo in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] per creare un cubo.<br /><br /> In Esplora soluzioni fare clic con il pulsante destro del mouse su **Cubi** e scegliere **Nuovo cubo**. Per altre informazioni su questi passaggi, vedere [Modellazione multidimensionale &#40;esercitazione di AdventureWorks&#41;](../../analysis-services/multidimensional-modeling-adventure-works-tutorial.md).<br /><br /> Quando si crea un cubo basato su tabelle da un data warehouse esistente, le definizioni per le misure e un gruppo di misure materializzare come parte del processo di creazione del cubo. Nella procedura guidata, scegliendo i fatti e delle tabelle dei fatti per usare come base per la misura e misurare gli oggetti gruppo nel cubo.|  
 |Finestra di dialogo Nuova misura|Supponendo che il cubo già esiste [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], fare doppio clic sul nome del cubo in Esplora soluzioni per aprirlo in Progettazione cubi. Nel riquadro misure destro del mouse sul nodo principale per creare un nuovo gruppo di misure o nuove misure specificando una tabella di origine, la colonna e il tipo di aggregazione. Utilizzando questo approccio, è necessario scegliere il metodo di aggregazione da un elenco fisso di funzioni predefinite. Vedere [Use Aggregate Functions](../../analysis-services/multidimensional-models/use-aggregate-functions.md) per una discussione più comunemente utilizzati aggregazioni.|  
-|membro calcolato|Membri calcolati aggiungono funzionalità di analisi e la flessibilità di un cubo in [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] perché è possibile controllare come e quando vengono creati. In alcuni casi è sufficiente una misura temporaneamente, per la durata di una sessione utente o in Management Studio come parte di un'indagine.<br /><br /> In [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], aprire la scheda calcoli per creare un nuovo membro calcolato.<br /><br /> Scegliere questo approccio quando basare una misura su un'espressione MDX. Per altre informazioni, vedere gli argomenti seguenti: [Compilazione di misure in MDX](../../analysis-services/multidimensional-models/mdx/mdx-building-measures.md), [Calcoli](../../analysis-services/multidimensional-models-olap-logical-cube-objects/calculations.md), [Calcoli nei modelli multidimensionali](../../analysis-services/multidimensional-models/calculations-in-multidimensional-models.md) e [Nozioni fondamentali sullo scripting MDX &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/mdx/mdx-scripting-fundamentals-analysis-services.md).|  
+|membro calcolato|Membri calcolati aggiungono funzionalità di analisi e la flessibilità di un cubo in [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] perché è possibile controllare come e quando vengono creati. In alcuni casi è sufficiente una misura temporaneamente, per la durata di una sessione utente o in Management Studio come parte di un'indagine.<br /><br /> In [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], aprire la scheda calcoli per creare un nuovo membro calcolato.<br /><br /> Scegliere questo approccio quando basare una misura su un'espressione MDX. Per altre informazioni, vedere gli argomenti seguenti: [Creazione di misure in MDX](../../analysis-services/multidimensional-models/mdx/mdx-building-measures.md), [calcoli](../../analysis-services/multidimensional-models-olap-logical-cube-objects/calculations.md), [calcoli nei modelli multidimensionali](../../analysis-services/multidimensional-models/calculations-in-multidimensional-models.md) e [nozioni fondamentali sullo Scripting MDX &#40;Analysis Services&#41; ](../../analysis-services/multidimensional-models/mdx/mdx-scripting-fundamentals-analysis-services.md).|  
 |MDX o XMLA|In SQL Server Management Studio, è possibile eseguire MDX o XMLA per modificare un database per includere una nuova misura calcolata. Questo approccio è utile per test ad hoc dei dati, dopo la soluzione viene distribuita a un server. Vedere [Document and Script an Analysis Services Database](../../analysis-services/multidimensional-models/document-and-script-an-analysis-services-database.md).|  
   
 ##  <a name="bkmk_comps"></a> Componenti di una misura  
@@ -66,7 +66,7 @@ ms.locfileid: "34026498"
   
 -   Le colonne delle misure definiscono le misure contenute in un gruppo di misure.  
   
- Quando si esegue la creazione guidata cubo, le chiavi esterne vengono filtrate. Nell'elenco di colonne rimanenti da selezionare, si vedrà colonne di misura più colonne di attributi che non sono identificate come chiave esterna. Nell'esempio di **FactSalesQuote** la procedura guidata includerà **CalendarYear** e **CalendarQuarter** oltre a **SalesAmountQuota**. Solo la colonna della misura **SalesAmountQuota** restituirà una misura utilizzabile per il modello multidimensionale. Le altre colonne data esistono per qualificare ogni importo della quota. È consigliabile escludere le altre colonne, **CalendarYear** e **CalendarQuarter**, dall'elenco delle misure nella creazione guidata cubo oppure rimuoverle dal gruppo di misure in un secondo momento nella finestra di progettazione.  
+ Quando si esegue la creazione guidata cubo, le chiavi esterne vengono filtrate. Nell'elenco di colonne rimanenti da selezionare, si vedrà colonne di misura più colonne di attributi che non sono identificate come chiave esterna. Nel **FactSalesQuota** esempio offrirà la procedura guidata **CalendarYear** e **CalendarQuarter** oltre alla **SalesAmountQuota**. Solo la colonna della misura **SalesAmountQuota** restituirà una misura utilizzabile per il modello multidimensionale. Le altre colonne data esistono per qualificare ogni importo della quota. È consigliabile escludere le altre colonne, **CalendarYear** e **CalendarQuarter**, dall'elenco delle misure nella creazione guidata cubo oppure rimuoverle dal gruppo di misure in un secondo momento nella finestra di progettazione.  
   
  Il punto a questa discussione è che non tutte le colonne offerte dalla procedura guidata sono utili come una misura. Utilizzare la comprensione dei dati e come utilizzarlo quando decidere le colonne da usare come misura. Tenere presente che è possibile fare doppio clic su una tabella nella vista origine dati per esplorare i dati, che consentono di identificare le colonne da usare come misure. Per altre informazioni, vedere [Esplorare dati in una vista origine dati &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/explore-data-in-a-data-source-view-analysis-services.md).  
   
@@ -84,6 +84,6 @@ ms.locfileid: "34026498"
   
 ## <a name="see-also"></a>Vedere anche  
  [Cubi nei modelli multidimensionali](../../analysis-services/multidimensional-models/cubes-in-multidimensional-models.md)   
- [Le misure e gruppi di misure](../../analysis-services/multidimensional-models/measures-and-measure-groups.md)  
+ [Misure e gruppi di misure](../../analysis-services/multidimensional-models/measures-and-measure-groups.md)  
   
   

@@ -19,12 +19,12 @@ ms.assetid: 39975cf2-c351-4205-8c39-27a0fadfb010
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 3aab23efecc139e4aaf4a4c3d6d0075cf02a7e7f
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.openlocfilehash: c40d0003211c0446982f70a9c7a00c1f189808b6
+ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58387459"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59241903"
 ---
 # <a name="configure-a-windows-firewall-for-access-to-the-ssis-service"></a>Configurare un Windows Firewall per l'accesso al servizio SSIS
     
@@ -36,7 +36,7 @@ ms.locfileid: "58387459"
 > [!IMPORTANT]  
 >  Per gestire i pacchetti archiviati in un server remoto, non è necessario connettersi all'istanza del servizio [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] sul server remoto in questione. Modificare, invece, il file di configurazione per il servizio [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] in modo che in [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] vengano visualizzati i pacchetti archiviati nel server remoto. Per altre informazioni, vedere [Configuring the Integration Services Service &#40;SSIS Service&#41;](configuring-the-integration-services-service-ssis-service.md).  
   
- Il servizio [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] usa il protocollo DCOM. Per altre informazioni sul funzionamento del protocollo DCOM in presenza di firewall, vedere l'articolo[Using Distributed COM with Firewalls](https://go.microsoft.com/fwlink/?LinkId=12490)(Uso di COM distribuito con i firewall) in MSDN Library.  
+ Il servizio [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] usa il protocollo DCOM. Per altre informazioni sul funzionamento del protocollo DCOM attraverso i firewall, vedere l'articolo, "[Using Distributed COM with Firewalls](https://manualzz.com/doc/19762578/using-distributed-com-with-firewalls-by-michael-nelson-in...)".  
   
  Sono disponibili numerosi sistemi firewall. Se si esegue un firewall diverso da windowsfirewall, consultare la documentazione del firewall per informazioni specifiche al sistema in uso.  
   

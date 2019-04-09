@@ -13,12 +13,12 @@ ms.assetid: ab0c09d7-ce2e-487d-a1ed-a4b5adb6cc01
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: ea69aa9c04ce323b43e28d5426acd383d574a538
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.openlocfilehash: 04ad145d23cfcd158cf68ac941606e1c3bd0114a
+ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58386770"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59242169"
 ---
 # <a name="implementation-of-child-packages"></a>Implementazione di pacchetti figlio
   Quando si implementa il bilanciamento del carico tramite [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)], i pacchetti figlio vengono installati su altri server per sfruttare il tempo di CPU o di server disponibile. Per creare ed eseguire i pacchetti figlio è necessario attenersi alla procedura seguente:  
@@ -68,8 +68,8 @@ ms.locfileid: "58386770"
   
 ## <a name="related-content"></a>Contenuto correlato  
   
--   Intervento nel blog concernente [SSIS: Accesso alle variabili in un pacchetto padre](https://go.microsoft.com/fwlink/?LinkId=257729), sul sito Web consultingblogs.emc.com.  
+-   Intervento nel blog concernente [SSIS: Accesso alle variabili in un pacchetto padre](https://andyleonard.blog/2015/08/ssis-design-pattern-access-parent-variables-from-a-child-package-in-the-ssis-catalog/), su andyleonard.blog.  
   
--   Intervento nel blog concernente [SSIS: Esecuzione dei pacchetti figlio in-process o out-of-process? ](https://go.microsoft.com/fwlink/?LinkId=220819), sul sito Web consultingblogs.emc.com.  
+-   Articolo [attività Esegui pacchetto](../integration-services/control-flow/execute-package-task.md).  
   
   

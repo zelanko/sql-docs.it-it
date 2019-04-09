@@ -13,12 +13,12 @@ ms.assetid: 61c053c5-1182-4ad0-b804-51cbd19aa0ba
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 79939ea5addd97833faaf1d955b72ae17e487ceb
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.openlocfilehash: ed5ea8e711fcc3013a682f8c63a01dc042556f40
+ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58389849"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59240369"
 ---
 # <a name="syntax-ssis"></a>Sintassi (SSIS)
   La sintassi delle espressioni di [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] è simile a quella utilizzata nei linguaggi C e C#. Le espressioni includono elementi quali identificatori (colonne e variabili), valori letterali, operatori e funzioni. In questo argomento vengono riepilogati i requisiti specifici della sintassi dell'analizzatore di espressioni, in relazione ai diversi elementi delle espressioni.  
@@ -26,7 +26,7 @@ ms.locfileid: "58389849"
 > [!NOTE]  
 >  Nella versioni precedenti di [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]era presente un limite di 4000 caratteri sul risultato della valutazione di un'espressione quando il tipo di dati [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] del risultato era DT_WSTR o DT_STR. Questo limite è stato eliminato.  
   
- Per esempi di espressioni che usano funzioni e operatori specifici, vedere l'argomento relativo a ogni operatore e funzione negli argomenti: [Gli operatori &#40;espressioni SSIS&#41; ](operators-ssis-expression.md) e [funzioni &#40;espressione SSIS&#41;](functions-ssis-expression.md).  
+ Per esempi di espressioni che usano operatori e funzioni specifiche, vedere l'argomento relativo a ogni operatore e funzione negli argomenti: [Operatori &#40;espressione SSIS&#41;](operators-ssis-expression.md) e [Funzioni &#40;espressione SSIS&#41;](functions-ssis-expression.md).  
   
  Per esempi di espressioni che usano più operatori e funzioni, nonché identificatori e valori letterali, vedere [Esempi di espressioni avanzate di Integration Services](examples-of-advanced-integration-services-expressions.md).  
   
@@ -80,7 +80,7 @@ ms.locfileid: "58389849"
   
 ## <a name="related-content"></a>Contenuto correlato  
   
--   Articolo tecnico relativo al [foglio d'aiuto per le espressioni SSIS](https://go.microsoft.com/fwlink/?LinkId=217683)sul sito Web pragmaticworks.com  
+-   Articolo tecnico relativo al [foglio d'aiuto per le espressioni SSIS](https://pragmaticworks.com/Resources/Cheat-Sheets/SSIS-Expression-Cheat-Sheet)sul sito Web pragmaticworks.com  
   
 -   Articolo tecnico relativo agli [esempi di espressioni SSIS](https://go.microsoft.com/fwlink/?LinkId=220761)nel sito Web social.technet.microsoft.com  
   

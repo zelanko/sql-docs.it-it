@@ -11,12 +11,12 @@ ms.assetid: 7835bc97-2827-4215-b0dd-52f692ce5e02
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.openlocfilehash: e51aef3d9aa06790420cec9fab0d487a68563a4a
-ms.sourcegitcommit: 706f3a89fdb98e84569973f35a3032f324a92771
+ms.openlocfilehash: 56973f01112b670727cc0ffa83ba6372c45a3faa
+ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/29/2019
-ms.locfileid: "58658265"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59241579"
 ---
 # <a name="powershell-cmdlets-for-reporting-services-sharepoint-mode"></a>Cmdlet di PowerShell per la modalità SharePoint di Reporting Services
   Quando si installa la modalità SharePoint di [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] , i cmdlet di PowerShell sono installati per supportare i server di report in modalità SharePoint. I cmdlets riguardano tre categorie di funzionalità.  
@@ -47,7 +47,7 @@ ms.locfileid: "58658265"
   
     -   [Creare un proxy e un'applicazione di servizio Reporting Services](#bkmk_example_create_service_application)  
   
-    -   [Rivedere e aggiornare un'estensione di recapito di Reporting Services](#bkmk_example_delivery_extension)  
+    -   [Rivedere e aggiornare un'estensione per il recapito di Reporting Services](#bkmk_example_delivery_extension)  
   
     -   [Ottenere e impostare le proprietà del database dell'applicazione Reporting Service, ad esempio timeout database](#bkmk_example_db_properties)  
   
@@ -56,7 +56,9 @@ ms.locfileid: "58658265"
     -   [Modificare ed elencare i proprietari di sottoscrizioni](#bkmk_change_subscription_owner)  
   
 ##  <a name="bkmk_cmdlet_sum"></a> Riepilogo dei cmdlet  
+
  Per eseguire i cmdlet è necessario aprire la shell di gestione SharePoint. È anche possibile usare l'editor dell'interfaccia utente grafica incluso in Microsoft Windows, **Windows PowerShell Integrated Scripting Environment (ISE)**. Per altre informazioni, vedere [Starting Windows PowerShell on Windows Server (Avvio di Windows PowerShell su Windows Server)](https://docs.microsoft.com/powershell/scripting/getting-started/starting-windows-powershell). Nei riepiloghi di cmdlet seguenti, i riferimenti al servizio database dell'applicazione' ', fare riferimento a tutti i database creati e utilizzati da un [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] applicazione del servizio. Sono inclusi i database di configurazione, di avvisi e temporaneo.  
+
   
  Se quando si digitano gli esempi di PowerShell si visualizza un messaggio di errore simile al seguente:  
   
@@ -83,7 +85,7 @@ ms.locfileid: "58658265"
   
 3.  Fare clic su **Shell di gestione SharePoint**.  
   
- Per visualizzare le informazioni della Guida relative alla riga di comando per un cmdlet, usare il comando PowerShell "Get-Help" al prompt dei comandi di PowerShell. Esempio:  
+ Per visualizzare le informazioni della Guida relative alla riga di comando per un cmdlet, usare il comando PowerShell "Get-Help" al prompt dei comandi di PowerShell. Ad esempio:   
   
  `Get-Help Get-SPRSServiceApplicationServers`  
   
@@ -129,7 +131,7 @@ ms.locfileid: "58658265"
 |New-SPRSExtension|Registra una nuova estensione con un'applicazione di servizio Reporting Services.|  
 |Set-SPRSExtension|Imposta le proprietà di un'estensione di Reporting Services esistente.|  
 |Remove-SPRSExtension|Rimuove un'estensione da un'applicazione di servizio Reporting Services.|  
-|Get-SPRSExtension|Ottiene una o più estensioni di [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] per un'applicazione di servizio [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] .<br /><br /> I valori validi sono:<br /><br /> **Recapito**<br /><br /> **DeliveryUI**<br /><br /> **Rendering**<br /><br /> **Dati**<br /><br /> **Sicurezza**<br /><br /> **Autenticazione**<br /><br /> **EventProcessing**<br /><br /> **ReportItems**<br /><br /> **Progettazione**<br /><br /> **ReportItemDesigner**<br /><br /> **ReportItemConverter**<br /><br /> **ReportDefinitionCustomization**|  
+|Get-SPRSExtension|Ottiene una o più estensioni di [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] per un'applicazione di servizio [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] .<br /><br /> I valori validi sono:<br /><br /> **Recapito**<br /><br /> **DeliveryUI**<br /><br /> **Render**<br /><br /> **Dati**<br /><br /> **Sicurezza**<br /><br /> **Autenticazione**<br /><br /> **EventProcessing**<br /><br /> **ReportItems**<br /><br /> **Finestra di progettazione**<br /><br /> **ReportItemDesigner**<br /><br /> **ReportItemConverter**<br /><br /> **ReportDefinitionCustomization**|  
 |Get-SPRSSite|Ottiene i siti di SharePoint in base all'eventuale abilitazione della funzionalità "ReportingService". Per impostazione predefinita, vengono restituiti i siti in cui la funzionalità "ReportingService" è abilitata.|  
   
 ##  <a name="bkmk_basic_samples"></a> Esempi di base  
@@ -209,7 +211,7 @@ $emailXml.SelectSingleNode("//From").InnerText = '<your FROM email address>'
 Set-SPRSExtension -identity $app -ExtensionType "Delivery" -name "Report Server Email" -ExtensionConfiguration $emailXml.OuterXml  
 ```  
   
- Nell'esempio precedente, se non si conosce il nome esatto dell'applicazione di servizio, è possibile riscrivere la prima istruzione per ottenere l'applicazione di servizio in base a una ricerca del nome parziale. Ad esempio:  
+ Nell'esempio precedente, se non si conosce il nome esatto dell'applicazione di servizio, è possibile riscrivere la prima istruzione per ottenere l'applicazione di servizio in base a una ricerca del nome parziale. Ad esempio:   
   
 ```  
 $app=get-sprsserviceapplication | where {$_.name -like " ssrs_testapp *"}  
@@ -302,7 +304,7 @@ Get-SPRSExtension -identity $app -ExtensionType "Data" | select name,extensionty
   
 ## <a name="see-also"></a>Vedere anche  
  [Usare PowerShell per modificare ed elencare i proprietari di sottoscrizioni di Reporting Services ed eseguire una sottoscrizione](subscriptions/manage-subscription-owners-and-run-subscription-powershell.md)   
- [Elenco di controllo: Usare PowerShell per verificare PowerPivot per SharePoint](../analysis-services/instances/install-windows/checklist-use-powershell-to-verify-power-pivot-for-sharepoint.md)   
+ [Elenco di controllo: usare PowerShell per verificare PowerPivot per SharePoint](../analysis-services/instances/install-windows/checklist-use-powershell-to-verify-power-pivot-for-sharepoint.md)   
  [Script di PowerShell di gestione di SharePoint nel sito CodePlex](http://sharepointpsscripts.codeplex.com/)   
  [Come amministrare SSRS con PowerShell](https://curatedviews.cloudapp.net/13107/how-to-administer-ssrs-using-powershell)  
   

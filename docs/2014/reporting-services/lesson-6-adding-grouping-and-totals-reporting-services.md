@@ -11,21 +11,21 @@ ms.assetid: e3d61228-2aa4-42cc-955e-602dbf3406a7
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.openlocfilehash: 5409938a5e859d5df6a153cddf327129b2ca8878
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: 945cde51f7529dc31fd7018f1194de600ea1acf5
+ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56296899"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59241739"
 ---
 # <a name="lesson-6-adding-grouping-and-totals-reporting-services"></a>Lezione 6: Aggiunta di gruppi e totali (Reporting Services)
   È possibile aggiungere gruppi e totali al report per organizzare e riepilogare i dati.  
   
- Per informazioni sull'aggiunta dei totali parziali ai report, vedere gli articoli in curah.microsoft.com: [Aggiunta di totali ai report di Reporting Services (SSRS)](https://go.microsoft.com/fwlink/p/?LinkId=403698).  
+ Per informazioni sull'aggiunta dei totali parziali ai report, vedere: [Aggiunta di totali ai report di Reporting Services (SSRS)](https://www.tutorialgateway.org/add-total-and-subtotal-to-ssrs-report/).  
   
  **Contenuto dell'argomento:**  
   
--   [Per raggruppare i dati in un report](#bkmk_groupdata)  
+-   [Per raggruppare i dati di un report](#bkmk_groupdata)  
   
 -   [Per aggiungere totali a un report](#bkmk_addtotals)  
   
@@ -33,7 +33,7 @@ ms.locfileid: "56296899"
   
 -   [Per aggiungere un totale complessivo a un report](#bkmk_addgrandtotal)  
   
--   [Per pubblicare il Report nel Server di Report (facoltativo)](#bkmk_publishreport)  
+-   [Per pubblicare il report nel server di report (facoltativo)](#bkmk_publishreport)  
   
 ##  <a name="bkmk_groupdata"></a> Per raggruppare i dati in un report  
   
@@ -79,7 +79,7 @@ ms.locfileid: "56296899"
   
 6.  Nel menu **Formato** selezionare **Colore di sfondo**, fare clic su **Grigio chiaro**e scegliere **OK**.  
   
-     ![Visualizzazione progettazione: Tabella di base con totale degli ordini](../../2014/tutorials/media/rs-basictablesumlinetotaldesign.gif "visualizzazione progettazione: Tabella di base con totale degli ordini")  
+     ![Visualizzazione Progettazione: tabella di base con totale degli ordini](../../2014/tutorials/media/rs-basictablesumlinetotaldesign.gif "Visualizzazione Progettazione: tabella di base con totale degli ordini")  
   
 ##  <a name="bkmk_adddailytotal"></a> Per aggiungere un totale giornaliero a un report  
   
@@ -107,13 +107,13 @@ ms.locfileid: "56296899"
   
 4.  Nel menu **Formato** selezionare **Colore di sfondo**, fare clic su **Azzurro**e scegliere **OK**.  
   
-     ![Visualizzazione progettazione: Totale complessivo nella tabella di base](../../2014/tutorials/media/rs-basictablesumgrandtotaldesign.gif "visualizzazione progettazione: Totale complessivo nella tabella di base")  
+     ![Visualizzazione Progettazione: totale complessivo in una tabella di base](../../2014/tutorials/media/rs-basictablesumgrandtotaldesign.gif "Visualizzazione Progettazione: totale complessivo in una tabella di base")  
   
 5.  Fare clic su Anteprima.  
   
      L'ultima pagina dovrebbe essere simile alla seguente:  
   
-     ![Anteprima: Tabella di base con totale complessivo](../../2014/tutorials/media/rs-basictablesumgrandtotalpreview.gif "Preview: Tabella di base con totale complessivo")  
+     ![Anteprima: tabella di base con totale complessivo](../../2014/tutorials/media/rs-basictablesumgrandtotalpreview.gif "Anteprima: tabella di base con totale complessivo")  
   
 ##  <a name="bkmk_publishreport"></a> Per pubblicare il Report nel Server di Report (facoltativo)  
   
@@ -129,7 +129,7 @@ ms.locfileid: "56296899"
   
      Se viene visualizzato un messaggio simile al seguente nella finestra di output, la distribuzione è stata completata correttamente.  
   
-    > ------ Compilazione avviata - Progetto: tutorial, configurazione: Debug ------'Sales Orders.rdl' verrà ignorato. L'elemento è aggiornato. Compilazione completata -- 0 errori, 0 avvisi------ Inizio distribuzione: Progetto: tutorial, configurazione: Debug---distribuzione in http://\<nome server > / reportserverDeploying report '/ tutorial/Sales Orders'. Distribuzione completata-- 0 errori, 0 avvisi === compilazione: 1 completata o aggiornata, 0 non riuscite, 0 ignorate ==================== Distribuzione: 1 completata, 0 non riuscite, 0 ignorate ==========  
+    > ------ Compilazione avviata - Progetto: tutorial, Configurazione: Debug ------'Sales Orders.rdl' verrà ignorato. L'elemento è aggiornato. Compilazione completata -- 0 errori, 0 avvisi------ Inizio distribuzione: Progetto: tutorial, Configurazione: Debug---distribuzione in http://\<nome server > / reportserverDeploying report '/ tutorial/Sales Orders'. Distribuzione completata-- 0 errori, 0 avvisi === compilazione: 1 completata o aggiornata, 0 non riuscite, 0 ignorate ==================== Distribuzione: 1 completata, 0 non riuscite, 0 ignorate ==========  
   
      Se viene visualizzato un messaggio di errore simile al seguente, verificare di disporre delle autorizzazione per il server di report e di aver avviato [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)] con privilegi di amministratore.  
   
@@ -145,6 +145,6 @@ ms.locfileid: "56296899"
  Questo passaggio conclude l'esercitazione relativa alla creazione di un report tabella semplice.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Filtro, raggruppamento e ordinamento di dati &#40;Generatore report e SSRS&#41;](report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)  
+ [Filtrare, raggruppare e ordinare i dati &#40;Generatore report e SSRS&#41;](report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)  
   
   

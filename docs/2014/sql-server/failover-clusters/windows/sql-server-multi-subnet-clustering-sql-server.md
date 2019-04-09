@@ -16,12 +16,12 @@ ms.assetid: cd909612-99cc-4962-a8fb-e9a5b918e221
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 7773774d15cb6d6bdfd9e2335eac40bbf00652e8
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: be4125f417b6333bfcb3002b15f1319f484d22a1
+ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53349214"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59241609"
 ---
 # <a name="sql-server-multi-subnet-clustering-sql-server"></a>Clustering su più subnet di SQL Server (SQL Server)
   Un cluster di failover su più subnet di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] è una configurazione in cui ogni nodo del cluster di failover è connesso a una subnet diversa o a un set differente di subnet. Queste subnet possono trovarsi nella stessa posizione o in siti dislocati in località geografiche diverse. Il clustering tra siti dislocati in diverse località geografiche viene talvolta definito come cluster esteso. Poiché non esiste alcuna archiviazione condivisa a cui possono accedere tutti i nodi, i dati devono essere replicati tra le archiviazioni dati nelle diverse subnet. Grazie alla replica dei dati risultano disponibili più copie dei dati. Pertanto, oltre a una disponibilità elevata, un cluster di failover su più subnet offre una soluzione di ripristino di emergenza.  
@@ -82,7 +82,7 @@ ms.locfileid: "53349214"
 |Installazione di un cluster di failover di SQL Server|[Creare un nuovo cluster di failover di SQL Server &#40;programma di installazione&#41;](../install/create-a-new-sql-server-failover-cluster-setup.md)|  
 |Aggiornamento sul posto del cluster di failover di SQL Server esistente|[Eseguire l'aggiornamento di un'istanza del cluster di failover di SQL Server &#40;installazione&#41;](upgrade-a-sql-server-failover-cluster-instance-setup.md)|  
 |Gestione del cluster di failover di SQL Server esistente|[Aggiungere o rimuovere nodi in un cluster di failover di SQL Server &#40;programma di installazione&#41;](../install/add-or-remove-nodes-in-a-sql-server-failover-cluster-setup.md)|  
-|Clustering di failover di Windows|[Windows 2008 R2 Failover Clustering multisito](https://www.microsoft.com/windowsserver2008/en/us/failover-clustering-multisite.aspx)|  
+|Clustering di failover di Windows|[Procedure consigliate per Cluster di Failover multisito di Microsoft Windows](https://secureinfra.blog/2013/11/09/microsoft-windows-multi-site-failover-cluster-best-practices/)|  
 |Utilizzare lo snap-in Gestione cluster di failover per visualizzare gli eventi e i log WSFC|[Visualizzare eventi e log per un cluster di failover](https://technet.microsoft.com/library/cc772342\(WS.10\).aspx)|  
 |Utilizzare Windows PowerShell per creare un file di log per tutti i nodi (o un nodo specifico) in un cluster di failover WSFC|[Pagina relativa al cluster di failover Get-ClusterLog](https://technet.microsoft.com/library/ee461045.aspx)|  
   

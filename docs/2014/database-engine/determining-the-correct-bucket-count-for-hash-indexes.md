@@ -10,12 +10,12 @@ ms.assetid: 6d1ac280-87db-4bd8-ad43-54353647d8b5
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 42fe996b3521316279caf3fcf7adb3e155a83dbd
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: b1b79c0908f8639df869d01a8ff862afc5be77cb
+ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58536693"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59241959"
 ---
 # <a name="determining-the-correct-bucket-count-for-hash-indexes"></a>Determinazione del numero di bucket corretto per gli indici hash
   È necessario specificare un valore per il parametro `BUCKET_COUNT` durante la creazione della tabella ottimizzata per la memoria. In questo argomento vengono fornite indicazioni per determinare il valore appropriato per il parametro `BUCKET_COUNT`. Se non è possibile determinare il numero di bucket corretto, utilizzare in alternativa un indice non cluster.  Un valore `BUCKET_COUNT` errato, in particolare se troppo basso, può influire in modo significativo sulle prestazioni del carico di lavoro e sul tempo di recupero del database. È consigliabile sovrastimare il numero di bucket.  
@@ -26,7 +26,7 @@ ms.locfileid: "58536693"
   
  Una tabella hash viene allocata per ogni indice hash in una tabella ottimizzata per la memoria. Le dimensioni della tabella hash allocata per un indice viene specificato per il `BUCKET_COUNT` parametro nel [CREATE TABLE &#40;Transact-SQL&#41; ](/sql/t-sql/statements/create-table-transact-sql) o [CREATE TYPE &#40;Transact-SQL&#41; ](/sql/t-sql/statements/create-type-transact-sql). Il numero di bucket verrà arrotondato internamente per eccesso alla potenza più vicina di due. Se, ad esempio, si specifica un numero di bucket pari a 300.000 si avrà un numero di bucket effettivo pari a 524.288.  
   
- Per i collegamenti a un articolo e a un video sul numero di bucket, vedere [Come determinare 'esatto numero di bucket per gli indici hash (OLTP in memoria)](https://go.microsoft.com/fwlink/p/?LinkId=525853).  
+ Per i collegamenti a un articolo e a un video sul numero di bucket, vedere [Come determinare 'esatto numero di bucket per gli indici hash (OLTP in memoria)](https://www.mssqltips.com/sqlservertip/3104/determine-bucketcount-for-hash-indexes-for-sql-server-memory-optimized-tables/).  
   
 ## <a name="recommendations"></a>Indicazioni  
  Nella maggior parte dei casi, il numero di bucket dovrebbe essere impostato su un valore compreso tra una e due volte il numero di valori distinct nella chiave di indice. Se la chiave di indice contiene molti valori duplicati (in media sono presenti più di 10 righe per ogni valore di chiave di indice), utilizzare in alternativa un indice non cluster.  

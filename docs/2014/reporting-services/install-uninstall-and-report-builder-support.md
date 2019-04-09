@@ -13,12 +13,12 @@ ms.assetid: 2c9a5814-17bf-4947-8fb3-6269e7caa416
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.openlocfilehash: 542225a31879c47e58893f438e3af0309a6eca88
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: 939a60c8c23ee59e77f6a2f3c3a2b71a98a426bf
+ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56298319"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59241719"
 ---
 # <a name="install-uninstall-and-report-builder-support"></a>Installazione, disinstallazione e supporto di Generatore report
   Generatore report è uno strumento di creazione di report che consente di creare, aggiornare e condividere report, parti del report e set di dati condivisi. Generatore report è disponibile in due versioni: autonoma e [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)]. La versione autonoma viene installata nel computer in uso dall'utente o da un amministratore. La versione [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] viene installata automaticamente con [!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)] e viene scaricata nel computer da Gestione report o da un sito di SharePoint integrato con [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)].  
@@ -59,7 +59,7 @@ ms.locfileid: "56298319"
 ### <a name="installing-the-clickonce-version-of-report-builder-on-your-computer"></a>Installazione della versione ClickOnce di Generatore report nel computer in uso  
  La versione [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] di Generatore report viene installata con [!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)]. Viene installata sia con le installazioni native sia con quelle integrate di SharePoint di [!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)].  
   
- [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] è una tecnologia Microsoft per la distribuzione di applicazioni Windows. [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] consente agli utenti di installare ed eseguire un'applicazione Windows quale Generatore report facendo clic su un collegamento in una pagina Web. Per ulteriori informazioni sulla distribuzione di applicazioni [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] , sull'applicazione della sicurezza alle applicazioni [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] o sull'esecuzione di applicazioni [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] nell'area Internet, vedere gli articoli "Distribuzione ClickOnce per applicazioni for Windows Form", "Cenni preliminari sulla sicurezza in Windows Form" o "Cenni preliminari sulla distribuzione di applicazioni attendibili" nel sito Web [!INCLUDE[msCoName](../includes/msconame-md.md)] Developer Network Web all'indirizzo [www.microsoft.com/msdn](https://www.microsoft.com/msdn).  
+ [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] è una tecnologia Microsoft per la distribuzione di applicazioni Windows. [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] consente agli utenti di installare ed eseguire un'applicazione Windows quale Generatore report facendo clic su un collegamento in una pagina Web. Per altre informazioni sulla distribuzione [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] le applicazioni, applicare [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] protezione dell'applicazione oppure eseguendo [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] applicazioni nell'area Internet, vedere la "distribuzione per Windows Form applicazioni ClickOnce", "sicurezza di Windows Forms Overview"o"Trusted Application Deployment Overview"gli articoli pubblicati sul [!INCLUDE[msCoName](../includes/msconame-md.md)] sito Web MSDN all'indirizzo [ https://developer.microsoft.com/ ](https://developer.microsoft.com/).  
   
  La versione [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] di Generatore report si trova nel server di report e viene installata nel computer in uso quando si fa clic sul pulsante **Generatore report** in Gestione report o sull'opzione **Report di Generatore report** nel menu **Nuovo documento** in una raccolta di SharePoint.  
   
@@ -82,7 +82,7 @@ ms.locfileid: "56298319"
 |1030|Danese|da-DK|  
 |1031|Tedesco|de-DE|  
 |1032|Greco|el-GR|  
-|1033|Inglese|en-US|  
+|1033|Inglese|it-IT|  
 |1035|Finlandese|fi-FI|  
 |1036|Francese|fr-FR|  
 |1038|Ungherese|hu-HU|  

@@ -16,12 +16,12 @@ ms.assetid: 68c27ea5-e93d-4e26-bfb2-d967ca0a5282
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 1e18d8058519127108b2b23a6a798fe3d37c25c0
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.openlocfilehash: 28e7a7395c02e44e52469992f3738f0d873e227f
+ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58386639"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59240379"
 ---
 # <a name="xml-source"></a>Origine XML
   L'origine XML legge un file di dati XML e popola con tali dati le colonne nell'output dell'origine.  
@@ -69,11 +69,11 @@ ms.locfileid: "58386639"
   
  L'origine XML supporta più output regolari e più output degli errori.  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] include la finestra di dialogo **Editor origine XML**per la configurazione dell'origine XML. Questa finestra di dialogo è disponibile in Progettazione [!INCLUDE[ssIS](../../includes/ssis-md.md)] .  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] includes the **XML Source Edito**r dialog box for configuring include la finestra di dialogo **Editor origine XML**per la configurazione dell'origine XML.sQuesta finestra di dialogo è disponibile in Progettazione [!INCLUDE[ssIS](../../includes/ssis-md.md)] .  
   
  È possibile impostare le proprietà tramite Progettazione [!INCLUDE[ssIS](../../includes/ssis-md.md)] o a livello di codice.  
   
- Per altre informazioni sulle proprietà che è possibile impostare nella finestra di dialogo **Editor origine XML** , fare clic su uno degli argomenti seguenti:  
+ Per altre informazioni sulle proprietà che è possibile impostare nella finestra di dialogo **Editor origine XML**, fare clic su uno degli argomenti seguenti:  
   
 -   [Editor origine XML &#40;pagina Gestione connessione&#41;](../xml-source-editor-connection-manager-page.md)  
   
@@ -89,12 +89,12 @@ ms.locfileid: "58386639"
   
  Per ulteriori informazioni sulle procedure per l'impostazione delle proprietà, fare clic su uno degli argomenti seguenti:  
   
--   [Impostare le proprietà di un componente del flusso di dati](set-the-properties-of-a-data-flow-component.md)  
+-   [Impostazione delle proprietà di un componente del flusso di dati](set-the-properties-of-a-data-flow-component.md)  
   
 ## <a name="related-tasks"></a>Attività correlate  
- [Estrarre i dati tramite l'origine XML](xml-source.md)  
+ [Estrazione dei dati tramite l'origine XML](xml-source.md)  
   
 ## <a name="related-content"></a>Contenuto correlato  
- Risposta curata relativa alla [creazione di una destinazione XML per un pacchetto SSIS](https://go.microsoft.com/fwlink/?LinkId=321993) su curatedviews.cloudapp.net.  
+ Articolo tecnico relativo [utilizzando un file XML per configurare un pacchetto SSIS](https://www.sqlshack.com/using-xml-file-configure-ssis-package/).  
   
   

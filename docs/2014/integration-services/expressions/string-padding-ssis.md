@@ -14,12 +14,12 @@ ms.assetid: d3fed73d-e0d4-4c67-9355-fb7083a72dd6
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 069fa1deababf347d7c45b62952960f7535115bf
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.openlocfilehash: 50ad5f637d6e13d31af02698488d6eec8e734ddb
+ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58393807"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59240625"
 ---
 # <a name="string-padding-ssis"></a>Riempimento di stringhe (SSIS)
   L'analizzatore di espressioni non verifica se una stringa contiene spazi iniziali e finali, né applica riempimenti alle stringhe in modo che abbiano la stessa lunghezza, prima di confrontarle. Nelle espressioni che richiedono il riempimento delle stringhe è possibile utilizzare l'operatore + per concatenare valori di colonna e stringhe vuote. Per altre informazioni, vedere [+ &#40;concatenazione&#41; &#40;espressione SSIS&#41;](concatenate-ssis-expression.md).  
@@ -30,6 +30,7 @@ ms.locfileid: "58393807"
 >  La funzione LEN include nel conteggio anche gli spazi vuoti iniziali e finali.  
   
 ## <a name="related-content"></a>Contenuto correlato  
- Articolo tecnico relativo al [foglio d'aiuto per le espressioni SSIS](https://go.microsoft.com/fwlink/?LinkId=217683)sul sito Web pragmaticworks.com  
+ Articolo tecnico relativo al [foglio d'aiuto per le espressioni SSIS](https://pragmaticworks.com/Resources/Cheat-Sheets/SSIS-Expression-Cheat-Sheet
+)sul sito Web pragmaticworks.com  
   
   

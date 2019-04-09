@@ -19,15 +19,15 @@ ms.assetid: e8af85ff-ef33-4659-a003-bb34578eb2a2
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 45b0b733ccc6e42e1f4a63ba9c7a2f615d2b55eb
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: b12c2f4a95b2fc295aa1a3524def774e74a5ed32
+ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53357869"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59241901"
 ---
 # <a name="globalization-scenarios-for-analysis-services-multiidimensional"></a>Scenari di globalizzazione per Analysis Services multidimensionale
-  [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] archivia e gestisce dati e metadati multilingue nei modelli di dati tabulari e multidimensionali. L'archiviazione dei dati è in formato Unicode (UTF-16) nei set di caratteri che usano la codifica Unicode. Se in un modello di dati si caricano dati ANSI, i caratteri vengono archiviati usando elementi di codice Unicode equivalenti.  
+  [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] archivia e modifica dati e metadati multilingue nei modelli di dati tabulari e multidimensionali. L'archiviazione dei dati è in formato Unicode (UTF-16) nei set di caratteri che usano la codifica Unicode. Se in un modello di dati si caricano dati ANSI, i caratteri vengono archiviati usando elementi di codice Unicode equivalenti.  
   
  Le implicazioni del supporto Unicode consentono a [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] di archiviare i dati in una qualsiasi lingua supportata dai sistemi operativi client e server Windows, permettendo la lettura, la scrittura, l'ordinamento e il confronto dei dati in qualsiasi set di caratteri usato in un computer Windows. Le applicazioni client BI che utilizzano i dati di [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] possono rappresentare i dati nella lingua scelta dall'utente, supponendo che i dati esistano in tale lingua nel modello.  
   
@@ -77,7 +77,7 @@ ms.locfileid: "53357869"
   
 ## <a name="see-also"></a>Vedere anche  
  [Internazionalizzazione per le applicazioni di Windows](/windows/desktop/Intl/international-support)   
- [Developer Center sulla globalizzazione delle applicazioni](https://msdn.microsoft.com/goglobal/bb871628.aspx)   
+ [Documentazione sulla globalizzazione Microsoft](/globalization/)   
  [Scrittura di app di Windows Store con progettazione adattiva basata sulle impostazioni locali](http://blogs.windows.com/buildingapps/2014/03/06/writing-windows-store-apps-with-locale-based-adaptive-design/)   
  [Sviluppo di app di Windows universali con C# e XAML](http://www.microsoftvirtualacademy.com/training-courses/developing-universal-windows-apps-with-c-and-xaml)  
   

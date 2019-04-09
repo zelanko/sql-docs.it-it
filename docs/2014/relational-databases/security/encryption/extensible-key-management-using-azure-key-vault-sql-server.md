@@ -16,12 +16,12 @@ ms.assetid: 3efdc48a-8064-4ea6-a828-3fbf758ef97c
 author: aliceku
 ms.author: aliceku
 manager: craigg
-ms.openlocfilehash: c2a6acd93bc711e4722f3ca437b17cba603dfcad
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 852f65073a55cbe6e8d29b1dc17981cb5356d95f
+ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53372763"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59242205"
 ---
 # <a name="extensible-key-management-using-azure-key-vault-sql-server"></a>Extensible Key Management tramite l'insieme di credenziali delle chiavi di Azure (SQL Server)
   Il [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Connector for [!INCLUDE[msCoName](../../../includes/msconame-md.md)] consente a Azure Key Vault [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] crittografia da usare il servizio Azure Key Vault come un [Extensible Key Management &#40;EKM&#41; ](extensible-key-management-ekm.md) provider per la protezione relativo chiavi di crittografia.  
@@ -30,17 +30,17 @@ ms.locfileid: "53372763"
   
 -   [Utilizzi di EKM](#Uses)  
   
--   [Passaggio 1: Configurare l'insieme di credenziali chiave per l'uso da SQL Server](#Step1)  
+-   [Passaggio 1: Configurazione dell'insieme di credenziali delle chiavi per l'uso da parte di SQL Server](#Step1)  
   
 -   [Passaggio 2: Installazione di SQL Server Connector](#Step2)  
   
--   [Passaggio 3: Configurare SQL Server per usare un provider EKM per l'insieme di credenziali chiave](#Step3)  
+-   [Passaggio 3: Configurare SQL Server per l'uso di un provider EKM per l'insieme di credenziali delle chiavi](#Step3)  
   
--   [Esempio a: Transparent Data Encryption tramite una chiave asimmetrica dall'insieme di credenziali chiave](#ExampleA)  
+-   [Esempio A: Transparent Data Encryption tramite una chiave asimmetrica dell'insieme di credenziali delle chiavi](#ExampleA)  
   
--   [Esempio b: Crittografia dei backup tramite una chiave asimmetrica dall'insieme di credenziali chiave](#ExampleB)  
+-   [Esempio B: Crittografia dei backup tramite una chiave asimmetrica dell'insieme di credenziali delle chiavi](#ExampleB)  
   
--   [Esempio c: Crittografia a livello di colonna tramite una chiave asimmetrica dall'insieme di credenziali chiave](#ExampleC)  
+-   [Esempio C: Crittografia a livello di colonna tramite una chiave asimmetrica dell'insieme di credenziali delle chiavi](#ExampleC)  
   
 ##  <a name="Uses"></a> Utilizzi di EKM  
  Un'organizzazione può usare la crittografia di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] per proteggere i dati sensibili. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] include crittografia [Transparent Data Encryption &#40;Transparent Data Encryption&#41;](transparent-data-encryption.md), [crittografia a livello di colonna](/sql/t-sql/functions/cryptographic-functions-transact-sql) (CLE) e [crittografia dei Backup](../../backup-restore/backup-encryption.md). In tutti questi casi, i dati vengono crittografati tramite una chiave DEK simmetrica. Per proteggerla ulteriormente, tale chiave viene crittografata con una gerarchia di chiavi archiviate in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. In alternativa, l'architettura del provider EKM consente a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] di proteggere le chiavi DEK tramite una chiave asimmetrica archiviata all'esterno di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] in un provider del servizio di crittografia esterno. L'utilizzo dell'architettura del provider EKM aggiunge un ulteriore livello di sicurezza consentendo alle organizzazioni di separare la gestione delle chiavi e dei dati.  
@@ -52,7 +52,7 @@ ms.locfileid: "53372763"
  ![EKM di SQL Server con l'insieme di credenziali delle chiave di Azure](../../../database-engine/media/ekm-using-azure-key-vault.png "EKM di SQL Server con l'insieme di credenziali delle chiave di Azure")  
   
 ##  <a name="Step1"></a> Passaggio 1: Configurare l'insieme di credenziali delle chiavi per essere usato da SQL Server  
- Completare i passaggi seguenti per configurare un insieme di credenziali delle chiavi da usare con il [!INCLUDE[ssDEnoversion](../../../includes/ssdenoversion-md.md)] per la protezione delle chiavi di crittografia. È possibile che per l'organizzazione sia già in uso un insieme di credenziali. Se non esiste un insieme di credenziali, l'amministratore di Azure incaricato della gestione delle chiavi di crittografia può creare un insieme di credenziali, generare una chiave asimmetrica nell'insieme di credenziali e quindi autorizzare [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] a usare la chiave. Per acquisire familiarità con il servizio dell'insieme di credenziali delle chiavi, consultare [Introduzione all'insieme di credenziali delle chiavi di Azure](https://go.microsoft.com/fwlink/?LinkId=521402)e il riferimento di PowerShell [Cmdlet per l'insieme di credenziali delle chiavi di Azure](https://go.microsoft.com/fwlink/?LinkId=521403) .  
+ Completare i passaggi seguenti per configurare un insieme di credenziali delle chiavi da usare con il [!INCLUDE[ssDEnoversion](../../../includes/ssdenoversion-md.md)] per la protezione delle chiavi di crittografia. È possibile che per l'organizzazione sia già in uso un insieme di credenziali. Se non esiste un insieme di credenziali, l'amministratore di Azure incaricato della gestione delle chiavi di crittografia può creare un insieme di credenziali, generare una chiave asimmetrica nell'insieme di credenziali e quindi autorizzare [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] a usare la chiave. Per acquisire familiarità con il servizio dell'insieme di credenziali delle chiavi, consultare [Introduzione all'insieme di credenziali delle chiavi di Azure](https://go.microsoft.com/fwlink/?LinkId=521402)e il riferimento di PowerShell [Cmdlet per l'insieme di credenziali delle chiavi di Azure](/powershell/module/azurerm.keyvault/) .  
   
 > [!IMPORTANT]  
 >  Se sono disponibili più sottoscrizioni di Azure, è necessario usare la sottoscrizione contenente [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
@@ -115,7 +115,7 @@ ms.locfileid: "53372763"
   
 ##  <a name="Step3"></a> Passaggio 3: Configurare SQL Server per l'uso di un provider EKM per l'insieme di credenziali delle chiavi  
   
-###  <a name="Permissions"></a> Permissions  
+###  <a name="Permissions"></a> Autorizzazioni  
  Per completare l'intero processo è necessaria l'autorizzazione CONTROL SERVER o l'appartenenza al ruolo predefinito del server **sysadmin** . Le azioni specifiche richiedono le autorizzazioni seguenti:  
   
 -   Per creare un provider di crittografia è necessaria l'autorizzazione CONTROL SERVER o l'appartenenza al ruolo predefinito del server **sysadmin** .  
@@ -347,7 +347,7 @@ CLOSE SYMMETRIC KEY DATA_ENCRYPTION_KEY;
  [CREATE ASYMMETRIC KEY &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-asymmetric-key-transact-sql)   
  [CREATE SYMMETRIC KEY &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-symmetric-key-transact-sql)   
  [Extensible Key Management &#40;EKM&#41;](extensible-key-management-ekm.md)   
- [Abilitare Transparent Data Encryption tramite Extensible Key Management](enable-tde-on-sql-server-using-ekm.md)   
+ [Abilitare TDE utilizzando EKM](enable-tde-on-sql-server-using-ekm.md)   
  [Crittografia dei backup](../../backup-restore/backup-encryption.md)   
  [Creare un backup crittografato](../../backup-restore/create-an-encrypted-backup.md)  
   

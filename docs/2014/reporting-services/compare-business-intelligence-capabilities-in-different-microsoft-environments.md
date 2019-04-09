@@ -11,12 +11,12 @@ ms.assetid: 1fb759ee-8172-4c4c-9f7d-49af2c731006
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.openlocfilehash: 4f4339b91573aad752460b71fb4cce2181c9b880
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: e98dd10b670a3e6bb4f53f9b9d68f98411074ffc
+ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56018163"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59241689"
 ---
 # <a name="compare-business-intelligence-capabilities-in-different-microsoft-environments"></a>Confrontare le funzionalità di Business Intelligence in diversi ambienti Microsoft
   Microsoft [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Business Intelligence può essere distribuito in numerosi ambienti diversi, tra cui [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] con SharePoint Server, SharePoint Online e Power BI per Office 365. In questo argomento vengono confrontati i componenti e le funzionalità supportati in ogni ambiente.  
@@ -25,20 +25,20 @@ ms.locfileid: "56018163"
   
 ## <a name="author-and-manage-bi-reports-and-dashboards"></a>Creare e gestire report e dashboard di Business Intelligence  
   
-||SQL Server 2014 e SharePoint Server 2013|SharePoint Online Piano 2|Power BI per Office 365|  
+||SQL Server 2014 & SharePoint Server 2013|SharePoint Online Piano 2|Power BI per Office 365|  
 |-|----------------------------------------------|------------------------------|-----------------------------|  
-|Siti di Business Intelligence|Raccolta [!INCLUDE[ssGemini](../includes/ssgemini-md.md)]|No|Sito di Power BI|  
+|Siti di Business Intelligence|[!INCLUDE[ssGemini](../includes/ssgemini-md.md)] Gallery|No|Sito di Power BI|  
 |Amministrazione dei dati e gestione e condivisione delle query|No|No|Sì **<sup>1</sup>**|  
 |Integrazione con Master Data Services (MDS) e Data Quality Services (DQS)|Yes|No|No|  
 |Pianificazione dell'aggiornamento dati|Sì, ma non sono supportate le cartelle di lavoro che contengono dati di Power Query|No|Yes|  
 |Query in linguaggio naturale (domande e risposte)|No|No|Sì **<sup>2</sup>**|  
 |Previsione predittiva|No|No|Sì **<sup>3</sup>**|  
-|Integrazione di [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]|Yes|No|No|  
-|Integrazione di [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] (multidimensionale e tabulare)|Yes|No|No|  
-|Esportazione di dashboard interattivi di Power View nelle presentazioni di PowerPoint|Yes|No|No|  
+|[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] integrazione|Yes|No|no|  
+|[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] (multidimensionale e tabulare)|Yes|no|no|  
+|Esportazione di dashboard interattivi di Power View nelle presentazioni di PowerPoint|Yes|no|no|  
 |Creazione di dashboard basati su browser|Yes|No|No|  
-|Monitoraggio dell'utilizzo|Yes|No|Yes|  
-|Utilizzo della sicurezza a livello di riga dei cubi di [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]|Yes|No|No|  
+|Monitoraggio dell'utilizzo|Yes|no|Yes|  
+|Utilizzo della sicurezza a livello di riga dei cubi di [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]|Yes|no|no|  
   
  **<sup>1</sup>**[informazioni sul ruolo degli amministratori dei dati nella gestione dei dati](https://support.office.com/Article/Understanding-the-Role-of-Data-Stewards-in-Data-Management-ae3352f3-4389-45e8-a682-7fd6edb92524?ui=en-US&rs=en-US&ad=US) e [Video: Gestione delle informazioni di BI e amministrazione dei dati di Power](https://www.youtube.com/watch?v=8dHOj68ts7c).  
   
@@ -48,11 +48,11 @@ ms.locfileid: "56018163"
   
 ## <a name="view-and-browse-bi-data-reports-and-dashboards"></a>Visualizzare ed esplorare dati, report e dashboard di Business Intelligence  
   
-||SQL Server 2014 e SharePoint Server 2013|SharePoint Online Piano 2|Power BI per Office 365|  
+||SQL Server 2014 & SharePoint Server 2013|SharePoint Online Piano 2|Power BI per Office 365|  
 |-|----------------------------------------------|------------------------------|-----------------------------|  
 |Visualizzazione delle cartelle di lavoro di Microsoft Excel in un browser|Sì, se le dimensioni della cartella di lavoro sono inferiori a 2 GB|Sì, se le dimensioni della cartella di lavoro sono inferiori a 10 MB|Sì, se le dimensioni della cartella di lavoro sono inferiori a 250 MB|  
 |Esplorazione dei dati basati su browser in HTML5|No|No|Yes|  
-|App di Business Intelligence per dispositivi mobili per accedere a report e dashboard in remoto|No|No|Sì **<sup>1</sup>**|  
+|App di Business Intelligence per dispositivi mobili per accedere a report e dashboard in remoto|no|No|Sì **<sup>1</sup>**|  
 |Cartella di lavoro di Excel con [!INCLUDE[ssGemini](../includes/ssgemini-md.md)] come origine dati **<sup>2</sup>**|Yes|No|No|  
 |Possibilità di usare le funzionalità in versioni e browser diversi|Sì, per le visualizzazioni non relative a Power View **<sup>3</sup>**|Sì, per cartelle di lavoro di dimensioni inferiori a 10 MB **<sup>3</sup>**|Sì **<sup>3</sup>**|  
   
@@ -62,11 +62,11 @@ ms.locfileid: "56018163"
   
  **<sup>3</sup>**  [Supporto mobile tra strumenti di Business Intelligence (BI)](https://msdn.microsoft.com/library/dn151146\(v=sql.110\).aspx) e [Pianificazione per il supporto del browser per Reporting Services e Power View (Reporting Services 2014)](https://msdn.microsoft.com/library/ms156511.aspx).  
   
-## <a name="more-information"></a>Altre informazioni  
+## <a name="more-information"></a>Ulteriori informazioni  
   
--   [Funzionalità di business intelligence in Excel, SharePoint Online e Power BI per Office 365](https://technet.microsoft.com/en-us/library/dn198235.aspx).  
+-   [Funzionalità di Business Intelligence in Excel e Office 365](https://support.office.com/article/BI-capabilities-in-Excel-and-Office-365-26c0548e-124c-4fd3-aab3-5f64568cb743).  
   
--   Per informazioni sui requisiti per l'uso dei sinonimi, vedere [Aggiungere sinonimi a un modello di dati di Excel in Power Pivot](https://support.office.com/Article/Add-synonyms-to-a-Power-Pivot-Excel-data-model-345f4f5b-5ec2-4998-bc46-a26bdc0810b6?ui=en-US&rs=en-US&ad=US).  
+-   Per informazioni sui requisiti per l'uso dei sinonimi, vedere [ottimizzazione di Power BI domande e risposte con sinonimi & formulazione](https://blog.pragmaticworks.com/optimizing-power-bi-qa-with-synonyms-phrasing-using-cloud-modeling) al sito Web pragmaticworks.com.  
   
 -   [Office Online-scegliere un social network aziendale: Yammer o Newsfeed? ](https://support.office.com/article/Pick-your-enterprise-social-network-Yammer-or-Newsfeed-21954c85-4384-47d4-96c2-dfa1c9d56e66?ui=en-US&rs=en-US&ad=US).  
   
@@ -76,7 +76,7 @@ ms.locfileid: "56018163"
   
 -   [Confronto tra un sito Centro business intelligence e i siti Power BI per Office 365](https://technet.microsoft.com/library/dn394343\(v=office.15\).aspx)  
   
--   [Introduzione a strumenti di analisi e creazione di report di Microsoft BI](https://go.microsoft.com/fwlink/p/?LinkId=617093)  
+-   [Analisi dei dati e creazione di report con gli strumenti di business intelligence (BI) di Microsoft](../reporting-services/choosing-microsoft-business-intelligence-bi-tools-for-analysis-and-reporting.md)  
   
 ## <a name="community-content"></a>Contenuto della community  
  [Microsoft BI in modalità self-service in locale e nel cloud](http://businessintelligist.com/2014/02/07/microsoft-self-service-bi-on-premise-vs-could/)  

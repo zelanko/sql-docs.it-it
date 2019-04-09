@@ -15,12 +15,12 @@ ms.assetid: 1ac2646d-ed5a-4436-b18f-2150c33f3d87
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.openlocfilehash: 7ea45b2b785666253405c579930d1f89417d4c58
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 9248c80830b6ebb432629bf47d73ad44fd832c3b
+ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56024522"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59240699"
 ---
 # <a name="scripting-and-powershell-with-reporting-services"></a>Script e PowerShell con Reporting Services
   [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] supporta un'ampia gamma di scenari di sviluppo e gestione tramite script, tra cui l'utilità della riga di comando rs.exe, i cmdlet PowerShell per server di report in modalità SharePoint, sfruttando il modello a oggetti [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] da PowerShell per la modalità nativa e SharePoint.  
@@ -57,7 +57,7 @@ ms.locfileid: "56024522"
   
 -   Vedere la sezione "Accedere alle classi WMI utilizzando PowerShell" in [Accedere al provider WMI per Reporting Services](access-the-reporting-services-wmi-provider.md).  
   
--   [Come amministrare SSRS con gli script di PowerShell](http://curah.microsoft.com/13107/how-to-administer-ssrs-using-powershell)  
+-   [Come amministrare SSRS con gli script di PowerShell](https://www.sqlshack.com/how-to-administer-sql-server-reporting-services-ssrs-subscriptions-using-powershell/)  
   
 ## <a name="rsexe-scripting-samples"></a>Esempi di script RS.exe  
   

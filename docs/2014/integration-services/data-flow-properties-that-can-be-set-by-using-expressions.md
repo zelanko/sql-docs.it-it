@@ -20,12 +20,12 @@ ms.assetid: cd0e171a-08be-45d6-81dc-ed94f37698b8
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 2fd6b938d13e880f7ec8d48d3e4ca9665ee9cd65
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.openlocfilehash: fbb609a65c70cb44c8fda81feb75927060ed289b
+ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58378599"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59240419"
 ---
 # <a name="data-flow-properties-that-can-be-set-by-using-expressions"></a>Proprietà del flusso di dati che è possibile impostare tramite espressioni
   I valori di determinate proprietà di oggetti del flusso di dati possono essere specificati utilizzando espressioni di proprietà disponibili nel contenitore dell'attività Flusso di dati.  
@@ -71,20 +71,20 @@ ms.locfileid: "58378599"
 |----------------------|--------------|  
 |Destinazione ADO NET|Proprietà TableOrViewName<br /><br /> Proprietà BatchSize<br /><br /> Proprietà CommandTimeout|  
 |file flat - destinazione|Proprietà dell'intestazione|  
-|Destinazione [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Compact|Proprietà TableName|  
-|Destinazione [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]|Proprietà BulkInsertTableName<br /><br /> Proprietà BulkInsertFirstRow<br /><br /> Proprietà BulkInsertLastRow<br /><br /> Proprietà BulkInsertOrder<br /><br /> Proprietà Timeout|  
+|[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Destinazione Compact|Proprietà TableName|  
+|[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] destinazione|Proprietà BulkInsertTableName<br /><br /> Proprietà BulkInsertFirstRow<br /><br /> Proprietà BulkInsertLastRow<br /><br /> Proprietà BulkInsertOrder<br /><br /> Proprietà Timeout|  
   
 ## <a name="related-tasks"></a>Attività correlate  
   
--   [Aggiungere o modificare un'espressione di proprietà](expressions/add-or-change-a-property-expression.md)  
+-   [Aggiunta o modifica di un'espressione di proprietà](expressions/add-or-change-a-property-expression.md)  
   
 ## <a name="related-content"></a>Contenuto correlato  
- Articolo tecnico relativo al [foglio d'aiuto per le espressioni SSIS](http://pragmaticworks.com/cheatsheet/)sul sito Web pragmaticworks.com  
+ Articolo tecnico relativo al [foglio d'aiuto per le espressioni SSIS](https://pragmaticworks.com/Resources/Cheat-Sheets/SSIS-Expression-Cheat-Sheet)sul sito Web pragmaticworks.com  
   
 ## <a name="see-also"></a>Vedere anche  
- [Utilizzo delle espressioni di proprietà nei pacchetti](expressions/use-property-expressions-in-packages.md)   
+ [utilizzo delle espressioni di proprietà nei pacchetti](expressions/use-property-expressions-in-packages.md)   
  [Proprietà comuni](../../2014/integration-services/common-properties.md)   
- [Proprietà personalizzate della trasformazione](data-flow/transformations/transformation-custom-properties.md)   
+ [proprietà personalizzate della trasformazione](data-flow/transformations/transformation-custom-properties.md)   
  [Proprietà del percorso](../../2014/integration-services/path-properties.md)  
   
   

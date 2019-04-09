@@ -17,12 +17,12 @@ ms.assetid: ecfd783e-7dbb-4a6c-b5ab-c6c27d5dd57f
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 0df4e17291e03e23cb68e984c8473064b0208a9c
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 5b1317bc41be836cfad5159339a4e7c90fcfbc83
+ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53366323"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59241431"
 ---
 # <a name="connect-to-the-database-engine-using-extended-protection"></a>Connessione al motore di database mediante la protezione estesa
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] il supporto per la **protezione estesa** è disponibile a partire da [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]. La**protezione estesa per l'autenticazione** è una funzionalità dei componenti di rete implementata dal sistema operativo. La**protezione estesa** è supportata in Windows 7 e in Windows Server 2008 R2 La**protezione estesa** è inclusa nei Service Pack per i sistemi operativi [!INCLUDE[msCoName](../../includes/msconame-md.md)] meno recenti. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] è più sicuro quando le connessioni vengono effettuate tramite **protezione estesa**.  
@@ -55,7 +55,7 @@ ms.locfileid: "53366323"
   
 -   [Integrated Windows Authentication with Extended Protection](https://msdn.microsoft.com/library/dd639324.aspx)  
   
--   [Microsoft Security Advisory (973811), Extended Protection for Authentication](https://www.microsoft.com/technet/security/advisory/973811.mspx)  
+-   [Microsoft Security Advisory (973811), Extended Protection for Authentication](https://support.microsoft.com//help/973811/microsoft-security-advisory-extended-protection-for-authentication)  
   
 ## <a name="settings"></a>Impostazioni  
  Sono disponibili tre impostazioni di connessione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] che influiscono sull'associazione al servizio e sull'associazione di canale. Tali impostazioni possono essere configurate tramite Gestione configurazione [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o WMI e possono essere visualizzate utilizzando il facet **Impostazioni installazione server** della gestione basata su criteri.  
@@ -64,7 +64,7 @@ ms.locfileid: "53366323"
   
      I valori possibili sono **Attivata** e **Disattivata**. Per utilizzare l'associazione di canale, è necessario impostare **Forza crittografia** su **Attivata**in modo da forzare la crittografia su tutti i client. Se impostata su **Disattivata**, viene garantita solo l'associazione al servizio. **Forza crittografia** è disponibile in **Proprietà - Protocolli per MSSQLSERVER (scheda Flag)** in Gestione configurazione [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
--   **Protezione estesa**  
+-   **protezione estesa**  
   
      I valori possibili sono **Disattivata**, **Consentita**e **Obbligatoria**. La variabile relativa alla **Protezione estesa** consente agli utenti di configurare il livello di **protezione estesa** per ogni istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . **Protezione estesa** è disponibile in **Proprietà - Protocolli per MSSQLSERVER (scheda Avanzate)** in Gestione configurazione [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   

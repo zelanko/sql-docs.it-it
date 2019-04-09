@@ -1,23 +1,24 @@
 ---
-title: 'Esercitazione: Autenticazione di Active Directory per SQL Server in Linux'
+title: "Esercitazione: Usare l'autenticazione di AD per SQL Server in Linux"
 titleSuffix: SQL Server
-description: Questa esercitazione illustra i passaggi di configurazione di autenticazione di AAD per SQL Server in Linux.
-author: meet-bhagdev
-ms.date: 02/23/2018
-ms.author: meetb
+description: Questa esercitazione illustra la procedura di configurazione per l'autenticazione di AD per SQL Server in Linux.
+author: Dylan-MSFT
+ms.author: Dylan.Gray
+ms.reviewer: rothja
+ms.date: 04/01/2019
 manager: craigg
-ms.topic: conceptual
+ms.topic: tutorial
 ms.prod: sql
-ms.custom: sql-linux, seodec18
+ms.custom: seodec18
 ms.technology: linux
 helpviewer_keywords:
 - Linux, AAD authentication
-ms.openlocfilehash: 82f4df8607af55a4b50f0ecfaf7b66a8c088c43a
-ms.sourcegitcommit: 706f3a89fdb98e84569973f35a3032f324a92771
+ms.openlocfilehash: 5e75a0315c0e632e9637ad1f1467acc90dc586cf
+ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/29/2019
-ms.locfileid: "58657935"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59240779"
 ---
 # <a name="tutorial-use-active-directory-authentication-with-sql-server-on-linux"></a>Esercitazione: Usare l'autenticazione di Active Directory con SQL Server in Linux
 
@@ -31,186 +32,31 @@ Questa esercitazione include le attività seguenti:
 > * Join [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] host al dominio Active Directory
 > * Creare un utente di AD per [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] e impostare SPN
 > * Configurare [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] keytab servizio
+> * Proteggere il file keytab
+> * Configurare SQL Server per usare il file keytab per l'autenticazione Kerberos
 > * Creare gli account di accesso basato su Active Directory in Transact-SQL
 > * Connettersi a [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] usando l'autenticazione di AD
-
-> [!NOTE]
->
-> Se si vuole configurare [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] in Linux per usare un provider di terze parti AD, vedere [usare i provider di Active Directory di terze parti con SQL Server in Linux](./sql-server-linux-active-directory-third-party-providers.md).
 
 ## <a name="prerequisites"></a>Prerequisiti
 
 Prima di configurare l'autenticazione di AD, è necessario:
 
 * Impostare un Controller di dominio Active Directory (Windows) nella rete  
-* Installare [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]
-  * [Red Hat Enterprise Linux](quickstart-install-connect-red-hat.md)
-  * [SUSE Linux Enterprise Server](quickstart-install-connect-suse.md)
+* Installazione [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]
+  * [Red Hat Enterprise Linux (RHEL)](quickstart-install-connect-red-hat.md)
+  * [SUSE Linux Enterprise Server (SLES)](quickstart-install-connect-suse.md)
   * [Ubuntu](quickstart-install-connect-ubuntu.md)
 
 ## <a id="join"></a> Join [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] host al dominio Active Directory
 
-Usare la procedura seguente per aggiungere un [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] host a un dominio di Active Directory:
+È necessario aggiungere l'host di SQL Server su Linux con un controller di dominio Active Directory. Per informazioni su come aggiungere un dominio active directory, vedere [Join SQL Server in un host Linux a un dominio di Active Directory](sql-server-linux-active-directory-join-domain.md).
 
-1. Uso **[realmd](https://www.freedesktop.org/software/realmd/docs/guide-active-directory-join.html)** per aggiungere il computer host al dominio AD. Se hai già fatto, installare realmd sia pacchetti client Kerberos nel [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] macchina host usando Gestione pacchetti della distribuzione Linux:
+## <a id="createuser"></a> Creare l'utente di Active Directory (o account del servizio gestito) per [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] e impostare SPN
 
-   ```bash
-   # RHEL
-   sudo yum install realmd krb5-workstation
+> [!NOTE]
+> La procedura seguente usa il [nome di dominio completo](https://en.wikipedia.org/wiki/Fully_qualified_domain_name). Se si usa **Azure**, è necessario **[crearlo](https://docs.microsoft.com/azure/virtual-machines/linux/portal-create-fqdn)** prima di procedere.
 
-   # SUSE
-   sudo zypper install realmd krb5-client
-
-   # Ubuntu
-   sudo apt-get install realmd krb5-user software-properties-common python-software-properties packagekit
-   ```
-
-1. Se l'installazione del pacchetto client Kerberos richiede un nome dell'area di autenticazione, immettere il nome di dominio in lettere maiuscole.
-
-   > [!NOTE]
-   > Questa procedura dettagliata Usa "contoso.com" e "CONTOSO.COM" rispettivamente come area di autenticazione e di dominio i nomi di esempio. È necessario sostituire questi valori con i propri valori. Questi comandi sono tra maiuscole e minuscole, pertanto assicurarsi di che usare lettere maiuscole ovunque venga usato in questa procedura dettagliata.
-
-1. Configurare il [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] computer host per usare l'indirizzo IP del controller di dominio Active Directory come un server dei nomi DNS. 
-
-   - **Ubuntu**:
-
-      Modificare il file `/etc/network/interfaces` in modo che l'indirizzo IP del controller di dominio Active Directory sia elencato come server dns. Esempio: 
-
-      ```/etc/network/interfaces
-      <...>
-      # The primary network interface
-      auto eth0
-      iface eth0 inet dhcp
-      dns-nameservers **<AD domain controller IP address>**
-      dns-search **<AD domain name>**
-      ```
-
-      > [!NOTE]
-      > L'interfaccia di rete (eth0) potrebbe essere differente per diverse macchine. Per individuare quella in uso, eseguire il comando ifconfig e copiare l'interfaccia che ha un indirizzo IP e che ha trasmesso e ricevuto byte.
-
-      Dopo avere modificato questo file, riavviare il servizio di rete:
-
-      ```bash
-      sudo ifdown eth0 && sudo ifup eth0
-      ```
-
-      Verificare ora che il `/etc/resolv.conf` file contiene una riga simile al seguente:  
-
-      ```/etc/resolv.conf
-      nameserver **<AD domain controller IP address>**
-      ```
-
-   - **RHEL**:
-
-     Modificare il file `/etc/sysconfig/network-scripts/ifcfg-eth0` (o altro file di configurazione interfaccia a seconda dei casi) in modo che l'indirizzo IP del controller di dominio Active Directory sia elencato come server dns:
-
-     ```/etc/sysconfig/network-scripts/ifcfg-eth0
-     <...>
-     PEERDNS=no
-     DNS1=**<AD domain controller IP address>**
-     ```
-
-     Dopo avere modificato questo file, riavviare il servizio di rete:
-
-     ```bash
-     sudo systemctl restart network
-     ```
-
-     Verificare ora che il `/etc/resolv.conf` file contiene una riga simile al seguente:  
-
-     ```/etc/resolv.conf
-     nameserver **<AD domain controller IP address>**
-     ```
-
-   - **SLES**:
-
-     Modificare il `/etc/sysconfig/network/config` file in modo che verrà usato l'indirizzo IP controller di dominio Active Directory per le query DNS e il dominio di AD è incluso nell'elenco di ricerca di dominio:
-
-     ```/etc/sysconfig/network/config
-     <...>
-     NETCONFIG_DNS_STATIC_SERVERS="**<AD domain controller IP address>**"
-     ```
-
-     Dopo avere modificato questo file, riavviare il servizio di rete:
-
-     ```bash
-     sudo systemctl restart network
-     ```
-
-     Verificare ora che il `/etc/resolv.conf` file contiene una riga simile al seguente:
-
-     ```/etc/resolv.conf
-     nameserver **<AD domain controller IP address>**
-     ```
-
-1. Aggiunta al dominio
-
-   Dopo aver verificato che il DNS sia configurato correttamente, aggiungere il dominio eseguendo il comando seguente. È necessario eseguire l'autenticazione con un account di AD che abbia privilegi sufficienti in Active Directory per aggiungere un nuovo computer al dominio.
-
-   In particolare, questo comando crea un nuovo account computer in Active Directory, creare il `/etc/krb5.keytab` ospitare file keytab e configurare il dominio in `/etc/sssd/sssd.conf`:
-
-   ```bash
-   sudo realm join contoso.com -U 'user@CONTOSO.COM' -v
-   <...>
-   * Successfully enrolled machine in realm
-   ```
-
-   > [!NOTE]
-   > Se viene visualizzato un errore, "non sono installati i pacchetti necessari", quindi è necessario installare tali pacchetti usando Gestione pacchetti della distribuzione Linux prima di eseguire il `realm join` nuovo il comando.
-   >
-   > Se si riceve un errore, "Autorizzazioni insufficienti per accedere al dominio," è necessario verificare con un amministratore di dominio che si dispone di autorizzazioni sufficienti per aggiungere macchine Linux al dominio.
-   >
-   > Se si riceve un errore, "Rispondi KDC non corrisponde alle aspettative," quindi era possibile non specificare il nome dell'area di autenticazione corrette per l'utente. I nomi dell'area di autenticazione sono tra maiuscole e minuscole, lettere maiuscole in genere e può essere identificati con il comando `realm discover contoso.com`.
-   
-   > SQL Server Usa SSSD e NSS per eseguire il mapping di account utente e gruppi per gli identificatori di sicurezza (SID). SSSD deve essere configurato e in esecuzione in ordine per SQL Server creare correttamente gli account di accesso di AD. Realmd in genere viene eseguito automaticamente come parte dell'aggiunta al dominio, ma in alcuni casi è necessario eseguire questa operazione separatamente.
-   >
-   > Consultare quanto segue per configurare [SSSD manualmente](https://access.redhat.com/articles/3023951), e [configurare NSS per lavorare con SSSD](https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/7/html/system-level_authentication_guide/Configuring_Services#Configuration_Options-NSS_Configuration_Options)
-
-5. Verificare che il dominio è configurato in `/etc/krb5.conf`
-    ```/etc/krb5.conf
-    [libdefaults]
-    default_realm = CONTOSO.COM
-
-    [realms]
-    CONTOSO.COM = {
-    }
-
-    [domain_realm]
-    contoso.com = CONTOSO.COM
-    .contoso.com = CONTOSO.COM
-    ```
-
-  
-6. Verificare che ora è possibile raccogliere informazioni relative a un utente dal dominio e che è possibile acquisire un ticket Kerberos come tale utente.
-
-   L'esempio seguente usa **id**,  **[kinit](https://web.mit.edu/kerberos/krb5-1.12/doc/user/user_commands/kinit.html)**, e **[klist](https://web.mit.edu/kerberos/krb5-1.12/doc/user/user_commands/klist.html)** comandi per questo oggetto.
-
-   ```bash
-   id user@contoso.com
-   uid=1348601103(user@contoso.com) gid=1348600513(domain group@contoso.com) groups=1348600513(domain group@contoso.com)
-
-   kinit user@CONTOSO.COM
-   Password for user@CONTOSO.COM:
-
-   klist
-   Ticket cache: FILE:/tmp/krb5cc_1000
-   Default principal: user@CONTOSO.COM
-   <...>
-   ```
-
-   > [!NOTE]
-   > Se `id user@contoso.com` restituisce un valore "Nessuna tale utente," assicurarsi che il servizio SSSD avviato correttamente eseguendo il comando `sudo systemctl status sssd`. Se il servizio è in esecuzione e viene comunque visualizzato l'errore "Nessun utente", provare ad abilitare la registrazione dettagliata per SSSD. Per altre informazioni, vedere la documentazione di Red Hat per [risoluzione dei problemi SSSD](https://access.redhat.com/documentation/Red_Hat_Enterprise_Linux/7/html/System-Level_Authentication_Guide/trouble.html#SSSD-Troubleshooting).
-   >
-   > Se `kinit user@CONTOSO.COM` "risposta KDC non corrisponde alle aspettative durante il recupero delle credenziali iniziale," restituisce un valore assicurarsi che l'area di autenticazione specificata in lettere maiuscole.
-
-Per altre informazioni, vedere la documentazione di Red Hat per [scoperta e aggiunta di domini di identità](https://access.redhat.com/documentation/Red_Hat_Enterprise_Linux/7/html/Windows_Integration_Guide/realmd-domain.html). 
-
-## <a id="createuser"></a> Creare un utente di AD per [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] e impostare SPN
-
-  > [!NOTE]
-  > La successiva procedura Usa il [nome di dominio completo](https://en.wikipedia.org/wiki/Fully_qualified_domain_name). Se si usa **Azure**, è necessario **[crearlo](https://docs.microsoft.com/azure/virtual-machines/linux/portal-create-fqdn)** prima di procedere.
-
-1. Nel controller di dominio, eseguire la [New-ADUser](https://technet.microsoft.com/library/ee617253.aspx) comando di PowerShell per creare un nuovo utente di Active Directory con una password che non scade mai. Questo esempio assegna l'account "mssql", ma il nome dell'account può essere liberamente. Verrà richiesto di immettere una nuova password per l'account:
+1. Nel controller di dominio, eseguire la [New-ADUser](https://technet.microsoft.com/library/ee617253.aspx) comando di PowerShell per creare un nuovo utente di Active Directory con una password che non scade mai. Nell'esempio seguente i nomi di account `mssql`, ma il nome dell'account può essere liberamente. Verrà chiesto di immettere una nuova password per l'account.
 
    ```PowerShell
    Import-Module ActiveDirectory
@@ -219,152 +65,288 @@ Per altre informazioni, vedere la documentazione di Red Hat per [scoperta e aggi
    ```
 
    > [!NOTE]
-   > È una protezione ottimale per avere un account dedicato AD per SQL Server, in modo che le credenziali di SQL Server non vengono condivise con altri servizi che utilizzano lo stesso account. Tuttavia, è possibile riutilizzare un account AD esistente se si preferisce, se si conosce la password dell'account (obbligatorio per generare un file keytab nel passaggio successivo).
+   > È una protezione ottimale per avere un account dedicato AD per SQL Server, in modo che le credenziali di SQL Server non vengono condivise con altri servizi che utilizzano lo stesso account. Tuttavia, è possibile riutilizzare un account AD esistente, facoltativamente, se si conosce la password dell'account (che è obbligatorio per generare un file keytab nel passaggio successivo).
 
-2. Impostare il ServicePrincipalName (SPN) per questo account utilizzando la `setspn.exe` dello strumento. Il nome SPN deve essere formattato esattamente come specificato nell'esempio seguente. È possibile trovare il nome di dominio completo del [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] computer host eseguendo `hostname --all-fqdns` nel [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] host e la porta TCP deve essere 1433 a meno che non è stato configurato [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] per usare un numero di porta diverso.
+2. Impostare il ServicePrincipalName (SPN) per questo account utilizzando la **setspn.exe** dello strumento. Il nome SPN deve essere formattato esattamente come specificato nell'esempio seguente. È possibile trovare il nome di dominio completo del [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] computer host eseguendo `hostname --all-fqdns` nel [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] host. La porta TCP deve essere 1433, a meno che non è stato configurato [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] per usare un numero di porta diverso.
 
    ```PowerShell
    setspn -A MSSQLSvc/**<fully qualified domain name of host machine>**:**<tcp port>** mssql
+   setspn -A MSSQLSvc/**<netbios name of the host machine>**:**<tcp port>** mssql
    ```
 
    > [!NOTE]
-   > Se si riceve un errore, "diritti di accesso insufficienti", quindi è necessario contattare l'amministratore di dominio che si dispone di autorizzazioni sufficienti per impostare un nome SPN per questo account.
+   > Se si riceve un errore, `Insufficient access rights`, rivolgersi all'amministratore di dominio che si dispone di autorizzazioni sufficienti per impostare un nome SPN per questo account.
    >
-   > Se si modifica la porta TCP in futuro, quindi è necessario eseguire nuovamente il comando setspn con il nuovo numero di porta. È anche necessario aggiungere il nuovo nome dell'entità servizio a keytab il servizio SQL Server seguendo i passaggi descritti nella sezione successiva.
+   > Se si modifica la porta TCP in futuro, è necessario eseguire la **setspn** comando nuovamente con il nuovo numero di porta. È anche necessario aggiungere il nuovo nome dell'entità servizio a keytab il servizio SQL Server seguendo i passaggi descritti nella sezione successiva.
 
-3. Per altre informazioni, vedere [Registrare un nome dell'entità servizio per le connessioni Kerberos](../database-engine/configure-windows/register-a-service-principal-name-for-kerberos-connections.md).
+Per altre informazioni, vedere [Registrare un nome dell'entità servizio per le connessioni Kerberos](../database-engine/configure-windows/register-a-service-principal-name-for-kerberos-connections.md).
 
 ## <a id="configurekeytab"></a> Configurare [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] keytab servizio
 
-1. Controllare il numero di versione della chiave (kvno) per l'account di Active Directory creato nel passaggio precedente. In genere è 2, ma potrebbe trattarsi di un altro numero intero, se è stata modificata la password dell'account più volte. Nel [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] macchina host, eseguire il comando seguente:
+Esistono due diversi modi per configurare i file keytab del servizio SQL Server. La prima opzione consiste nell'usare un account del computer (UPN), mentre il secondo metodo prevede un Account di servizio gestiti (MSA) nella configurazione keytab. Entrambi i meccanismi sono ugualmente funzionali ed è possibile scegliere il metodo adatto per l'ambiente.
+
+In entrambi i casi, è necessario il nome SPN creato nel passaggio precedente e il nome SPN deve essere registrato nel keytab.
+
+Per configurare il file keytab del servizio SQL Server:
+
+1. Configurare il [voci keytab SPN](#spn) nella sezione successiva.
+
+1. Quindi entrambi [aggiungere UPN](#upn) (opzione 1) o [MSA](#msa) voci (opzione 2) nel file keytab seguendo i passaggi descritti nelle rispettive sezioni.
+
+> [!IMPORTANT]
+> Se si cambia la password per l'UPN/MSA o viene modificata la password per l'account che i nomi SPN vengono assegnati a, è necessario aggiornare il keytab con la nuova password e il numero di versione chiave (KVNO). Alcuni servizi potrebbero anche far ruotare le password automaticamente. Esaminare eventuali criteri di rotazione delle password per gli account in questione e allinearle con attività di manutenzione pianificata per evitare tempo di inattività imprevisto.
+
+### <a id="spn"></a> Voci keytab SPN
+
+1. Controllare il numero di versione chiave (KVNO) per l'account di Active Directory creato nel passaggio precedente. In genere è 2, ma potrebbe trattarsi di un altro numero intero, se è stata modificata la password dell'account più volte. Nel computer host SQL Server, eseguire i comandi seguenti:
 
    ```bash
    kinit user@CONTOSO.COM
-
    kvno MSSQLSvc/**<fully qualified domain name of host machine>**:**<tcp port>**
    ```
 
    > [!NOTE]
-   > I nomi SPN possono richiedere alcuni minuti per propagarsi attraverso il dominio, soprattutto se il dominio è di grandi dimensioni. Se viene visualizzato l'errore, "kvno: Server non è stato trovato nel database Kerberos durante il recupero delle credenziali per MSSQLSvc /\*\*\<il nome di dominio completo del computer host\>\*\*:\* \* \< la porta TCP\>\*\*\@CONTOSO.COM ", attendere qualche minuto e riprovare.
+   > I nomi SPN possono richiedere alcuni minuti per propagarsi attraverso il dominio, soprattutto se il dominio è di grandi dimensioni. Se viene visualizzato l'errore, `kvno: Server not found in Kerberos database while getting credentials for MSSQLSvc/**<fully qualified domain name of host machine>**:**<tcp port>**@CONTOSO.COM`attendere qualche minuto e riprovare.  
 
-2. Crea un file keytab **[ktutil](https://web.mit.edu/kerberos/krb5-1.12/doc/admin/admin_commands/ktutil.html)** per l'utente di Active Directory creato nel passaggio precedente. Quando richiesto, immettere la password per tale account di Active Directory.
+1. Avviare **ktutil**:
 
    ```bash
    sudo ktutil
+   ```
 
-   ktutil: addent -password -p MSSQLSvc/**<fully qualified domain name of host machine>**:**<tcp port>**@CONTOSO.COM -k **<kvno from above>** -e aes256-cts-hmac-sha1-96
+1. Aggiungere le voci keytab per ogni nome SPN usando i comandi seguenti:
 
-   ktutil: addent -password -p MSSQLSvc/**<fully qualified domain name of host machine>**:**<tcp port>**@CONTOSO.COM -k **<kvno from above>** -e rc4-hmac
+   ```bash
+   addent -password -p MSSQLSvc/**<fully qualified domain name of host machine>**:**<tcp port>**@CONTOSO.COM -k **<kvno from above>** -e aes256-cts-hmac -sha1-96
+   addent -password -p MSSQLSvc/**<fully qualified domain name of host machine>**:**<tcp port>**@CONTOSO.COM -k **<kvno from above>** -e rc4-hmac
+   addent -password -p MSSQLSvc/**<netbios name of the host machine>**:**<tcp port>**@CONTOSO.COM -k **<kvno from above>** -e aes256-cts-hmac -sha1-96
+   addent -password -p MSSQLSvc/**<netbios name of the host machine>**:**<tcp port>**@CONTOSO.COM -k **<kvno from above>** -e rc4-hmac
+   ```
 
-   ktutil: wkt /var/opt/mssql/secrets/mssql.keytab
+1. Scrivere il keytab in un file e uscire da ktutil:
 
+   ```bash
+   wkt /var/opt/mssql/secrets/mssql.keytab
    quit
    ```
 
    > [!NOTE]
-   > Lo strumento ktutil non convalidare la password, assicurarsi che immettere correttamente.
+   > Il **ktutil** strumento non convalida la password, assicurarsi immetterlo correttamente quando viene richiesto.
 
-3. Aggiungere l'account del computer per il keytab con  **[ktutil](https://web.mit.edu/kerberos/krb5-1.12/doc/admin/admin_commands/ktutil.html)**. L'account del computer (detto anche un UPN) è presente in `/etc/krb5.keytab` nel formato "\<hostname\>$\@\<realm.com\>" (ad esempio, $ sqlhost\@CONTOSO.COM). Queste voci da verranno copiati `/etc/krb5.keytab` a `mssql.keytab`.
+### <a id="upn"></a> Opzione 1: Utilizzo di UPN per configurare il keytab
+
+Aggiungere l'account del computer per il keytab con **ktutil**. L'account del computer (detto anche un UPN) è presente in **/etc/krb5.keytab** nel formato `<hostname>$@<realm.com>` (ad esempio, `sqlhost$@CONTOSO.COM`). Copiare queste voci dal **/etc/krb5.keytab** al **mssql.keytab**.
+
+1. Avviare **ktuil** con il comando seguente:
 
    ```bash
    sudo ktutil
+   ```
 
-   # Read all entries from /etc/krb5.keytab
-   ktutil: rkt /etc/krb5.keytab
+1. Usare la **rkt** comando per la lettura di tutte le voci dal **/etc/krb5.keytab**.
 
-   # List all entries
-   ktutil: list
+   ```bash
+   rkt /etc/krb5.keytab
+   ```
 
-   # Delete all entries by their slot number which are not the UPN one at a
-   # time.
-   # Warning: when an entry is deleted (e.g. slot 1), all values slide up by
-   # one to take its place (e.g. the entry in slot 2 moves to slot 1 when slot
-   # 1's entry is deleted)
-   ktutil: delent <slot num>
-   ktutil: delent <slot num>
-   ...
+1. Successivamente, elencare le voci.
 
-   # List all entries to ensure only UPN entries are left
-   ktutil: list
+   ```bash
+   list
+   ```
 
-   # When only UPN entries are left, append these values to mssql.keytab
-   ktutil: wkt /var/opt/mssql/secrets/mssql.keytab
+1. Eliminare tutte le voci per il numero di slot che non sono l'UPN. Eseguire questo uno alla volta, ripetere il comando seguente:
 
+   ```bash
+   delent <slot num>
+   ```
+
+   > [!IMPORTANT]
+   > Quando viene eliminata una voce, ad esempio nello slot 1, tutti i valori a tendina da uno a sostituirla. Ciò significa che la voce nello slot 2 Sposta nello slot 1 quando viene eliminata la voce nello slot 1.
+
+1. Elencare le voci di nuovo fino a quando non vengono lasciate solo le voci UPN.
+
+   ```bash
+   list
+   ```
+
+1. Quando vengono lasciate solo le voci UPN, aggiungere tali valori a **mssql.keytab**:
+
+   ```bash
+   wkt /var/opt/mssql/secrets/mssql.keytab
+   ```
+
+1. Quit **ktutil**.
+
+   ```bash
    quit
    ```
 
-4. Chiunque abbia accesso a questo `keytab` file può rappresentare [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] sul dominio, quindi verificare che è limitare l'accesso per il file in modo che solo il `mssql` account abbia accesso in lettura:
+### <a id="msa"></a> Opzione 2:  Utilizzo di account del servizio gestito per configurare il keytab
+
+Per l'opzione account del servizio gestito, è necessario creare keytab Kerberos di SQL Server. Deve contenere tutti i [SPN registrati nel primo passaggio](#spn) e le credenziali per l'account del servizio gestito in cui i nomi SPN vengono registrati. 
+
+1. Dopo il nome SPN keytab vengono creati, eseguire i comandi seguenti da un computer Linux che fa parte del dominio:
 
    ```bash
-   sudo chown mssql:mssql /var/opt/mssql/secrets/mssql.keytab
-   sudo chmod 400 /var/opt/mssql/secrets/mssql.keytab
+   kinit <AD user>
+   kvno <any SPN registered in step 1>
+      <spn>@CONTOSO.COM: kvno = <KVNO>
    ```
 
-5. Configurare [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] per usare questo `keytab` file per l'autenticazione Kerberos:
+   Questo passaggio consente di visualizzare il KVNO per l'account utente assegnato la proprietà del nome SPN. Per questo passaggio funzionare, il nome SPN deve assegnato all'account del account del servizio gestito durante la sua creazione. Se il nome SPN non è stato assegnato per l'account del servizio gestito, il KVNO visualizzato verrà SPN proprietario dell'account di corrente e non essere corretto da usare per la configurazione.  
+
+1. Avviare **ktutil**:
 
    ```bash
-   sudo /opt/mssql/bin/mssql-conf set network.kerberoskeytabfile /var/opt/mssql/secrets/mssql.keytab
-   sudo systemctl restart mssql-server
+   sudo ktutil
    ```
 
-6. Facoltativo: Disabilitare le connessioni dell'UDP al controller di dominio per migliorare le prestazioni. In molti casi, le connessioni di UDP avrà sempre esito negativo quando ci si connette a un controller di dominio, pertanto è possibile impostare le opzioni di configurazione `/etc/krb5.conf` per ignorare le chiamate UDP. Modifica `/etc/krb5.conf` e impostare le opzioni seguenti:
+1. Aggiungere l'account del servizio gestito con i due comandi seguenti:
 
-   ```/etc/krb5.conf
-   [libdefaults]
-   udp_preference_limit=0
+   ```bash
+   addent -password -p <MSA> -k <kvno from command above> -e aes256-cts-hmac-sha1-96
+   addent -password -p <MSA> -k <kvno from command above> -e rc4-hmac
    ```
+
+1. Scrivere il keytab in un file e uscire da ktutil:
+
+   ```bash
+   wkt /var/opt/mssql/secrets/mssql.keytab
+   quit
+   ```
+
+1. Quando si usa l'approccio account del servizio gestito, un'opzione di configurazione deve essere impostato con il **mssql-conf** dello strumento per specificare l'account del servizio gestito da usare durante l'accesso al file keytab. Verificare i valori seguenti siano **/var/opt/mssql/mssql.conf**.
+
+   ```bash
+   sudo mssql-conf set network.privilegedadaccount <MSA_Name>
+   ```
+
+   > [!NOTE]
+   > Includere solo il nome di account del servizio gestito e non il nome dominio\account.
+
+## <a id="securekeytab"></a> Proteggere il file keytab
+
+Chiunque abbia accesso a questo file keytab può rappresentare il Server SQL nel dominio, assicurarsi di che limitare l'accesso ai file in modo che solo l'account mssql disponga dell'accesso in lettura:
+
+```bash
+sudo chown mssql:mssql /var/opt/mssql/secrets/mssql.keytab
+sudo chmod 400 /var/opt/mssql/secrets/mssql.keytab
+```
+
+## <a id="keytabkerberos"></a> Configurare SQL Server per usare il file keytab per l'autenticazione Kerberos
+
+Utilizzare i seguenti passaggi per configurare il Server SQL per iniziare a usare il file keytab per l'autenticazione Kerberos.
+
+```bash
+sudo mssql-conf set network.kerberoskeytabfile /var/opt/mssql/secrets/mssql.keytab
+sudo systemctl restart mssql-server
+```
+
+Facoltativamente, disabilitare le connessioni dell'UDP al controller di dominio per migliorare le prestazioni. In molti casi, le connessioni di UDP in modo coerente, esito negativo quando ci si connette a un controller di dominio, pertanto è possibile impostare le opzioni di configurazione **/etc/krb5.conf** per ignorare le chiamate UDP. Modificare **/etc/krb5.conf** e impostare le opzioni seguenti:
+
+```/etc/krb5.conf
+[libdefaults]
+udp_preference_limit=0
+```
+
+A questo punto, si è pronti a usare gli account di accesso basato su Active Directory in SQL Server come indicato di seguito.
 
 ## <a id="createsqllogins"></a> Creare gli account di accesso basato su Active Directory in Transact-SQL
 
-1. Connettersi a [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] e creare un account di accesso di nuovo, basata su Active Directory:
+1. Connettersi a SQL Server e creare un account di accesso di nuovo, basata su Active Directory:
 
    ```sql
    CREATE LOGIN [CONTOSO\user] FROM WINDOWS;
    ```
 
-2. Verificare che l'account di accesso viene ora elencata nel [Sys. server_principals](../relational-databases/system-catalog-views/sys-server-principals-transact-sql.md) vista del catalogo di sistema:
+1. Verificare che l'account di accesso viene ora elencata nel [Sys. server_principals](../relational-databases/system-catalog-views/sys-server-principals-transact-sql.md) vista del catalogo di sistema:
 
    ```sql
    SELECT name FROM sys.server_principals;
    ```
 
-## <a id="connect"></a> Connettersi a [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] usando l'autenticazione di AD
+## <a id="connect"></a> Connettersi a SQL Server usando l'autenticazione di AD
 
-Accedere a un computer client usando le credenziali di dominio. A questo punto è possibile connettersi a [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] senza immettere di nuovo la password, usando l'autenticazione di AD. Se si crea un account di accesso per un gruppo di Active Directory, qualsiasi utente AD è un membro del gruppo possa connettersi allo stesso modo.
+Accedere a un computer client usando le credenziali di dominio. A questo punto è possibile connettersi a SQL Server senza immettere di nuovo la password usando l'autenticazione di AD. Se si crea un account di accesso per un gruppo di Active Directory, qualsiasi utente AD è un membro del gruppo possa connettersi allo stesso modo.
 
-Il parametro della stringa di connessione specifiche per i client di usare l'autenticazione AD dipende dal driver in uso. Si considerino gli esempi seguenti:
+Il parametro della stringa di connessione specifiche per i client di usare l'autenticazione AD dipende dal driver in uso. Si considerino gli esempi nelle sezioni seguenti.
 
-* `sqlcmd` in un client Linux appartenenti a un dominio
+### <a name="sqlcmd-on-a-domain-joined-linux-client"></a>SQLCMD in un client Linux appartenenti a un dominio
 
-   Accedere a un client Linux aggiunti al dominio usando `ssh` e le credenziali di dominio:
+Accedere a un client Linux aggiunti al dominio usando **ssh** e le credenziali di dominio:
 
-   ```bash
-   ssh -l user@contoso.com client.contoso.com
-   ```
-
-   Assicurarsi di aver installato il [mssql-tools](sql-server-linux-setup-tools.md) del pacchetto e quindi connettersi tramite `sqlcmd` senza specificare alcuna credenziale:
-
-   ```bash
-   sqlcmd -S mssql-host.contoso.com
-   ```
-
-* SQL Server Management Studio in un client di Windows aggiunti a un dominio
-
-   Accedere a un client Windows appartenenti a un dominio usando le credenziali di dominio. Assicurarsi che [!INCLUDE[ssmanstudiofull-md](../includes/ssmanstudiofull-md.md)] sia installato e quindi connettersi alle [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] istanza (ad esempio, "mssql-host.contoso.com"), specificando **l'autenticazione di Windows** nel **Connetti al Server** finestra di dialogo.
-
-* Autenticazione di Active Directory con altri driver di client
-
-  * JDBC: [Tramite l'autenticazione integrata Kerberos di connessione SQL Server](https://docs.microsoft.com/sql/connect/jdbc/using-kerberos-integrated-authentication-to-connect-to-sql-server)
-  * ODBC: [Uso dell'autenticazione integrata](https://docs.microsoft.com/sql/connect/odbc/linux/using-integrated-authentication)
-  * ADO.NET: [Sintassi della stringa di connessione](https://msdn.microsoft.com/library/system.data.sqlclient.sqlauthenticationmethod(v=vs.110).aspx)
-
-## <a name="performance-improvements"></a>Miglioramenti alle prestazioni
-Se si nota che ricerche di account Active Directory richiede un po' di tempo e che sono stati verificati è la configurazione di AD è valida con i passaggi descritti in [Usa autenticazione di Active Directory con SQL Server in Linux tramite i provider di terze parti AD](sql-server-linux-active-directory-third-party-providers.md), è possibile aggiungere il le righe di sotto di `/var/opt/mssql/mssql.conf` per ignorare le chiamate SSSD e usare direttamente le chiamate LDAP.
-
-```/var/opt/mssql/mssql.conf
-[network]
-disablesssd = true
+```bash
+ssh -l user@contoso.com client.contoso.com
 ```
+
+Assicurarsi di aver installato il [mssql-tools](sql-server-linux-setup-tools.md) del pacchetto e quindi connettersi tramite **sqlcmd** senza specificare alcuna credenziale:
+
+```bash
+sqlcmd -S mssql-host.contoso.com
+```
+
+### <a name="ssms-on-a-domain-joined-windows-client"></a>SQL Server Management Studio in un client di Windows aggiunti a un dominio
+
+Accedere a un client Windows appartenenti a un dominio usando le credenziali di dominio. Verificare che sia installato SQL Server Management Studio e quindi connettersi all'istanza di SQL Server (ad esempio, `mssql-host.contoso.com`), specificando **l'autenticazione di Windows** nel **Connetti al Server** finestra di dialogo.
+
+### <a name="ad-authentication-using-other-client-drivers"></a>Autenticazione di Active Directory con altri driver di client
+
+La tabella seguente descrive le raccomandazioni per gli altri driver di client:
+
+| Driver del client | Consiglio |
+|---|---|
+| **JDBC** | Usare l'autenticazione integrata Kerberos di connessione SQL Server. |
+| **ODBC** | Usare l'autenticazione integrata. |
+| **ADO.NET** | Sintassi della stringa di connessione. |
+
+## <a id="additionalconfig"></a> Opzioni di configurazione aggiuntive
+
+Se si usa ad esempio le utilità di terze parti [PBI](https://www.beyondtrust.com/), [VAS](https://www.oneidentity.com/products/authentication-services/), o [Centrify](https://www.centrify.com/) per aggiungere l'host Linux AD dominio e si vuole forzare il server SQL usando il openldap libreria direttamente, è possibile configurare il **disablesssd** opzione con **mssql-conf** come indicato di seguito:
+
+```bash
+sudo mssql-conf set network.disablesssd true
+systemctl restart mssql-server
+```
+
+> [!NOTE]
+> Sono disponibili, ad esempio l'utilità **realmd** quale configurare SSSD, mentre altri strumenti, ad esempio i PBI, VAS e Centrify fare installare SSSD. Se non è stato configurato SSSD con l'utilità utilizzata per unire il dominio di Active Directory, è consigliabile configurare **disablesssd** possibilità `true`. Anche se non è obbligatorio perché SQL Server proverà a usare SSSD per Active Directory prima di eseguire il fallback al meccanismo openldap, sarebbe più efficiente per configurarlo in modo che SQL Server effettua chiamate openldap direttamente esclusione del meccanismo SSSD.
+
+Se il controller di dominio supporta LDAPS, è possibile forzare tutte le connessioni da SQL Server a controller di dominio per essere tramite LDAPS. Per controllare il client può contattare il controller di dominio tramite ldaps, eseguire il seguente comando bash, `ldapsearch -H ldaps://contoso.com:3269`. Per configurare SQL Server da usare solo LDAPS, eseguire il comando seguente:
+
+```bash
+sudo mssql-conf set network.forceldaps true
+systemctl restart mssql-server
+```
+
+Si userà LDAPS su SSSD se Active Directory domain join su host è stato eseguito tramite il pacchetto SSSD e **disablesssd** non è impostata su true. Se **disablesssd** è impostata su true insieme **forceldaps** impostato su true, si userà protocollo LDAPS su chiamate alla libreria openldap eseguite da SQL Server.
+
+### <a name="post-sql-server-2017-cu14"></a>Post SQL Server 2017 CU14
+
+Partire da SQL Server 2017 CU14, se SQL Server è stato aggiunto a un controller di dominio Active Directory usando provider di terze parti ed è configurato per usare openldap chiamate per la ricerca tramite AD generale impostando **disablesssd** per true, è anche possibile usare **enablekdcfromkrb5** opzione per imporre a SQL Server da usare libreria krb5 per ricerca KDC invece di ricerca DNS inversa per il server KDC.
+
+Ciò può essere utile per lo scenario in cui si desidera configurare manualmente i controller di dominio che tenta di comunicare con SQL Server. E si utilizza il meccanismo di libreria openldap usando l'elenco KDC nel **krb5.conf**.
+
+Innanzitutto, impostare **disablessd** e **enablekdcfromkrb5conf** su true e quindi riavviare SQL Server:
+
+```bash
+sudo mssql-conf set network.disablesssd true
+sudo mssql-conf set network.enablekdcfromkrb5conf true
+systemctl restart mssql-server
+```
+
+Configurare quindi nell'elenco KDC **/etc/krb5.conf** come indicato di seguito:
+
+```/etc/krb5.conf
+[realms]
+CONTOSO.COM = {
+  kdc = dcWithGC1.contoso.com
+  kdc = dcWithGC2.contoso.com
+}
+```
+
+> [!NOTE]
+> Sebbene non sia consigliabile, è possibile usare le utilità, ad esempio **realmd**, impostato durante l'aggiunta di host di Linux per il dominio, durante la configurazione SSSD **disablesssd** su true in modo che usi di SQL Server chiamate OpenLDAP invece di SSSD per Active Directory di chiamate correlate.
 
 ## <a name="next-steps"></a>Passaggi successivi
 
