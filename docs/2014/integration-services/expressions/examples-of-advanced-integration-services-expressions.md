@@ -15,12 +15,12 @@ ms.assetid: c7794ba3-0de5-466b-ae8a-9ddd27360049
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: aa1465b8efb8c2e2b0f35e7dc2c6ec5e7ef766f3
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.openlocfilehash: 9272a6c11ce226f385c0b1f79f965a2a0f55835e
+ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58381669"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59241130"
 ---
 # <a name="examples-of-advanced-integration-services-expressions"></a>Esempi di espressioni avanzate di Integration Services
   In questa sezione vengono forniti esempi di alcune funzioni avanzate, in cui sono combinati più operatori e funzioni. Le espressioni utilizzate nei vincoli di precedenza o nella trasformazione Suddivisione condizionale devono restituire un valore booleano. Tale restrizione non si applica tuttavia alle espressioni utilizzate in espressioni di proprietà e variabili, nella trasformazione Colonna derivata o nel contenitore Ciclo For.  
@@ -103,6 +103,6 @@ ms.locfileid: "58381669"
  [Utilizzo di un'espressione in un componente flusso di dati](../use-an-expression-in-a-data-flow-component.md)  
   
 ## <a name="related-content"></a>Contenuto correlato  
- Articolo tecnico relativo al [foglio d'aiuto per le espressioni SSIS](http://pragmaticworks.com/cheatsheet/)sul sito Web pragmaticworks.com  
+ Articolo tecnico relativo al [foglio d'aiuto per le espressioni SSIS](https://pragmaticworks.com/Resources/Cheat-Sheets/SSIS-Expression-Cheat-Sheet)sul sito Web pragmaticworks.com  
   
   

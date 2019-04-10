@@ -10,12 +10,12 @@ ms.assetid: 5ae69ddf-27c3-467c-9af1-c89ec383f661
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 73d071b0fc5724c23074c0d827f1c12466f47bab
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.openlocfilehash: a11983c6fc9e1ca2e8917fd2efdaa5c90b4d3c30
+ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58380719"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59241729"
 ---
 # <a name="cdc-flow-components"></a>Componenti di flusso CDC
   I componenti Change Data Capture di Attunity per Microsoft [!INCLUDE[ssISCurrent](../../../includes/ssiscurrent-md.md)] consentono agli sviluppatori SSIS di utilizzare CDC e riducono la complessità dei pacchetti CDC.  
@@ -36,7 +36,7 @@ ms.locfileid: "58380719"
   
  [CDC Splitter](cdc-splitter.md)  
   
-## <a name="installation"></a>Installazione  
+## <a name="installation"></a>Installation  
  Questa sezione descrive le procedure di installazione dei componenti CDC per Microsoft [!INCLUDE[ssISCurrent](../../../includes/ssiscurrent-md.md)].  
   
 ### <a name="version-support"></a>Supporto versione  
@@ -204,7 +204,7 @@ ms.locfileid: "58380719"
   
 ## <a name="related-content"></a>Contenuto correlato  
   
--   Intervento nel blog [CDC in SSIS per SQL Server 2012](https://go.microsoft.com/fwlink/?LinkId=242543) nel sito Web mattmasson.com.  
+-   Intervento nel blog [CDC in SSIS per SQL Server 2012](https://www.mattmasson.com/2011/12/cdc-in-ssis-for-sql-server-2012-2/)nel sito Web mattmasson.com.  
   
 -   Intervento nel blog sull'impostazione del servizio CDC [CDC for Oracle in SQL Server 2012](https://go.microsoft.com/fwlink/?LinkId=247827)nel sito Web blogs.msdn.com.  
   

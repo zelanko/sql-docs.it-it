@@ -10,12 +10,12 @@ ms.assetid: 7b6867fa-1039-49b3-90fb-85b84678a612
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: f12fdd6e68b2e6d823ec32f88334804443a79555
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.openlocfilehash: 540f600d5005e8288aafe19ef59d4b7e894a99b0
+ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58388564"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59241895"
 ---
 # <a name="dtexec-utility"></a>Utilità dtexec
   Il `dtexec` utilità della riga di comando viene usato per configurare ed eseguire [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] pacchetti. Con l'utilità `dtexec` è possibile accedere a tutte le funzionalità di configurazione ed esecuzione dei pacchetti quali parametri, connessioni, proprietà, variabili, registrazione e indicatori di stato. Il `dtexec` utilità consente di caricare i pacchetti da queste origini: il [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] server, file di progetto con estensione ispac, un [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] database, il [!INCLUDE[ssIS](../../includes/ssis-md.md)] Store pacchetto e il file system.  
@@ -43,7 +43,7 @@ ms.locfileid: "58388564"
   
 -   [Parametri](#parameter)  
   
--   [Osservazioni](#remark)  
+-   [Note](#remark)  
   
 -   [Esempi](#example)  
   
@@ -126,7 +126,7 @@ DTExec /ISSERVER "\SSISDB\folderB\Integration Services Project17\Package.dtsx" /
 ##  <a name="cmdshell"></a> Utilizzo di dtexec da xp_cmdshell  
  **Utilizzo di dtexec da xp_cmdshell**  
   
- È possibile eseguire dtexec dal prompt di **xp_cmdshell** . Nell'esempio seguente viene illustrato come eseguire un pacchetto denominato UpsertData.dtsx e ignorare il codice restituito:  
+ È possibile eseguire dtexec dal prompt di **xp_cmdshell**. Nell'esempio seguente viene illustrato come eseguire un pacchetto denominato UpsertData.dtsx e ignorare il codice restituito:  
   
 ```  
 EXEC xp_cmdshell 'dtexec /f "C:\UpsertData.dtsx"'  
@@ -140,7 +140,7 @@ EXEC @returncode = xp_cmdshell 'dtexec /f "C:\UpsertData.dtsx"'
 ```  
   
 > [!IMPORTANT]  
->  Nelle nuove installazioni, in [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]l'opzione **xp_cmdshell** risulta disabilitata per impostazione predefinita. L'opzione può essere abilitata eseguendo la stored procedure di sistema **sp_configure** . Per altre informazioni, vedere [Opzione di configurazione del server xp_cmdshell](../../database-engine/configure-windows/xp-cmdshell-server-configuration-option.md).  
+>  Nelle nuove installazioni, in [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] l'opzione **xp_cmdshell** risulta disabilitata per impostazione predefinita. L'opzione può essere abilitata eseguendo la stored procedure di sistema **sp_configure**. Per altre informazioni, vedere [Opzione di configurazione del server xp_cmdshell](../../database-engine/configure-windows/xp-cmdshell-server-configuration-option.md).  
   
 ##  <a name="syntax"></a> Sintassi  
   
@@ -516,7 +516,7 @@ dtexec /option [value] [/option [value]]...
 ##  <a name="example"></a> Esempi  
  Gli esempi seguenti illustrano come usare il `dtexec` utilità della riga di comando per configurare ed eseguire [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] pacchetti.  
   
- **Pacchetti in esecuzione**  
+ **Esecuzione di pacchetti**  
   
  Per eseguire un pacchetto di [!INCLUDE[ssIS](../../includes/ssis-md.md)] salvato in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utilizzando l'autenticazione di Windows, utilizzare il codice seguente:  
   
@@ -669,6 +669,6 @@ dtexec /isserver "\SSISDB\MyFolder\MyProject\MyPackage.dtsx" /server "."
  [Eseguire un pacchetto in SQL Server Data Tools](../run-a-package-in-sql-server-data-tools.md)  
   
 ## <a name="related-content"></a>Contenuto correlato  
- Intervento sul blog relativo a [codici di uscita, DTEXEC e catalogo SSIS](https://go.microsoft.com/fwlink/?LinkId=251523), su www.mattmasson.com.  
+ Intervento sul blog relativo a [codici di uscita, DTEXEC e catalogo SSIS](https://www.mattmasson.com/2012/02/exit-codes-dtexec-and-ssis-catalog/), su www.mattmasson.com.  
   
   
