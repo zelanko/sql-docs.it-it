@@ -15,12 +15,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: a0ea80a51a578f99cdff6189acacfe991ab34c43
-ms.sourcegitcommit: 1a5448747ccb2e13e8f3d9f04012ba5ae04bb0a3
+ms.openlocfilehash: 0e3d57094a6863bb5b6bebd96f05ed57a1fcc25f
+ms.sourcegitcommit: 1a4aa8d2bdebeb3be911406fc19dfb6085d30b04
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51557838"
+ms.lasthandoff: 04/03/2019
+ms.locfileid: "58872021"
 ---
 # <a name="rename-a-database"></a>Rinominare un database
 
@@ -41,7 +41,7 @@ ms.locfileid: "51557838"
   
      [Transact-SQL](#rename-a-database-using-transact-sql)  
   
-- **Follow Up:**  [After renaming a database](#FollowUp)  
+- **Completamento:**  [Dopo la ridenominazione di un database](#backup-after-renaming-a-database)  
 
 > [!NOTE]
 > Per rinominare un database in Azure SQL Data Warehouse o Parallel Data Warehouse, usare l'istruzione [RENAME (Transact-SQL)](../../t-sql/statements/rename-transact-sql.md).
@@ -57,7 +57,7 @@ ms.locfileid: "51557838"
   
 ### <a name="security"></a>Security  
   
-#### <a name="permissions"></a>Permissions
+#### <a name="permissions"></a>Autorizzazioni
 
 È richiesta l'autorizzazione ALTER per il database.  
   
@@ -81,7 +81,7 @@ Usare la procedura seguente per rinominare un database di SQL Server mediante T-
   
 1. Connettersi al database `master` per l'istanza in uso.  
 2. Aprire una finestra di query.  
-3. Copiare e incollare l'esempio seguente nella finestra delle query e fare clic su **Esegui**. In questo esempio il nome del database `MyTestDatabase` viene modificato in `MyTestDatabaseCopy`.
+3. Copiare e incollare l'esempio seguente nella finestra Query, quindi fare clic su **Esegui**. In questo esempio il nome del database `MyTestDatabase` viene modificato in `MyTestDatabaseCopy`.
   
    ```sql
    USE master;  
@@ -101,7 +101,7 @@ Usare la procedura seguente per rinominare un database SQL di Azure usando T-SQL
 1. Connettersi al database `master` per l'istanza in uso.  
 2. Aprire una finestra di query.
 3. Assicurarsi che nessuno stia usando il database.
-4. Copiare e incollare l'esempio seguente nella finestra delle query e fare clic su **Esegui**. In questo esempio il nome del database `MyTestDatabase` viene modificato in `MyTestDatabaseCopy`.
+4. Copiare e incollare l'esempio seguente nella finestra Query, quindi fare clic su **Esegui**. In questo esempio il nome del database `MyTestDatabase` viene modificato in `MyTestDatabaseCopy`.
   
    ```sql
    ALTER DATABASE MyTestDatabase MODIFY NAME = MyTestDatabaseCopy ;

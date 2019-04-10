@@ -13,12 +13,12 @@ ms.assetid: ''
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 1aaf988a3b9a869aba5ef30c6aac739a6349c70e
-ms.sourcegitcommit: 0c1d552b3256e1bd995e3c49e0561589c52c21bf
+ms.openlocfilehash: e9e05ab2dd5eeb0511838cd0c1540b2c1ba964d4
+ms.sourcegitcommit: 2de5446fbc57787f18a907dd5deb02a7831ec07d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/14/2018
-ms.locfileid: "53381032"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58860742"
 ---
 # <a name="distributed-availability-groups"></a>Gruppi di disponibilità distribuiti
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -33,7 +33,7 @@ Per configurare un gruppo di disponibilità distribuito, vedere [Configurare gru
 
 Un gruppo di disponibilità distribuito è un tipo particolare di gruppo di disponibilità che comprende due gruppi di disponibilità distinti. I gruppi di disponibilità che fanno parte di un gruppo di disponibilità distribuito non devono necessariamente trovarsi nella stessa posizione. Possono essere fisici, virtuali, in locale, nel cloud pubblico o in qualsiasi posizione supporti la distribuzione di un gruppo di disponibilità. Sono inclusi i gruppi multidominio e persino multipiattaforma, ad esempio, nel caso di un gruppo di disponibilità ospitato in Linux e uno ospitato in Windows. Se due gruppi di disponibilità possono comunicare, è possibile usarli per configurare un gruppo di disponibilità distribuito.
 
-Per un gruppo di disponibilità tradizionale, le risorse sono configurate in un cluster WSFC. Per un gruppo di disponibilità distribuito, nel cluster WSFC non viene configurato nulla. Tutti gli elementi che lo riguardano vengono mantenuti all'interno di SQL Server. Per sapere come visualizzare le informazioni relative a un gruppo di disponibilità distribuito, vedere [Visualizzare informazioni su un gruppo di disponibilità distribuito](#viewing-distributed-availability-group-information). 
+Per un gruppo di disponibilità tradizionale, le risorse sono configurate in un cluster WSFC. Per un gruppo di disponibilità distribuito, nel cluster WSFC non viene configurato nulla. Tutti gli elementi che lo riguardano vengono mantenuti all'interno di SQL Server. Per sapere come visualizzare le informazioni relative a un gruppo di disponibilità distribuito, vedere [Visualizzare informazioni su un gruppo di disponibilità distribuito](#monitor-distributed-availability-group-health). 
 
 Un gruppo di disponibilità distribuito richiede la presenza di un listener per i gruppi di disponibilità sottostanti. Anziché specificare il nome del server sottostante per un'istanza autonoma o, nel caso di un'istanza del cluster di failover di SQL Server, il valore associato alla risorsa del nome di rete, come si farebbe con un gruppo di disponibilità tradizionale, si specifica il listener configurato per il gruppo di disponibilità distribuito con il parametro ENDPOINT_URL durante la creazione. Anche se ogni gruppo di disponibilità sottostante del gruppo di disponibilità distribuito ha un listener, il gruppo di disponibilità distribuito non ha alcun listener.
 
@@ -76,7 +76,7 @@ Vista la presenza di due gruppi di disponibilità separati, il processo di insta
 
 ### <a name="windows-server-versions-and-distributed-availability-groups"></a>Versioni e gruppi di disponibilità distribuiti di Windows Server
 
-Un gruppo di disponibilità distribuito comprende più gruppi di disponibilità, ognuno nel relativo cluster WSFC sottostante, ed è un costrutto solo SQL Server.  Ciò significa che i cluster WSFC che ospitano i singoli gruppi di disponibilità possono avere versioni principali diverse di Windows Server. Le versioni principali di SQL Server devono essere uguali, come illustrato nella sezione precedente. Come la [figura iniziale](#fig1), la figura seguente mostra AG 1 e AG 2 come parte di un gruppo di disponibilità distribuito, ma ognuno dei cluster WSFC ha una versione diversa di Windows Server.
+Un gruppo di disponibilità distribuito comprende più gruppi di disponibilità, ognuno nel relativo cluster WSFC sottostante, ed è un costrutto solo SQL Server.  Ciò significa che i cluster WSFC che ospitano i singoli gruppi di disponibilità possono avere versioni principali diverse di Windows Server. Le versioni principali di SQL Server devono essere uguali, come illustrato nella sezione precedente. Come la figura iniziale, la figura seguente mostra AG 1 e AG 2 come parte di un gruppo di disponibilità distribuito, ma ognuno dei cluster WSFC ha una versione diversa di Windows Server.
 
 
 ![Gruppi di disponibilità distribuiti con cluster WSFC con versioni diverse di Windows Server](./media/distributed-availability-group/dag-03-distributed-ags-wsfcs-different-versions-windows-server.png)
@@ -97,8 +97,8 @@ Con un gruppo di disponibilità distribuito, le repliche primarie in ogni gruppo
 Di seguito sono riportati i tre scenari di utilizzo principali per un gruppo di disponibilità distribuito: 
 
 * [Ripristino di emergenza e semplificazione delle configurazioni multisito](#disaster-recovery-and-multi-site-scenarios)
-* [Migrazione a nuovo hardware oppure a nuove configurazioni, come ad esempio l'uso di nuovo hardware o la modifica di sistemi operativi sottostanti](#migration-using-a-distributed-availability-group)
-* [Aumento del numero di repliche leggibili oltre otto in un singolo gruppo di disponibilità grazie all'estensione in più gruppi di disponibilità](#scaling-out-readable-replicas-with-distributed-accessibility-groups)
+* [Migrazione a nuovo hardware oppure a nuove configurazioni, come ad esempio l'uso di nuovo hardware o la modifica di sistemi operativi sottostanti](#migrate-by-using-a-distributed-availability-group)
+* [Aumento del numero di repliche leggibili oltre otto in un singolo gruppo di disponibilità grazie all'estensione in più gruppi di disponibilità](#scale-out-readable-replicas-with-distributed-availability-groups)
 
 ### <a name="disaster-recovery-and-multi-site-scenarios"></a>Scenari multisito e di ripristino di emergenza
 
@@ -212,7 +212,7 @@ Se tuttavia si fa clic con il pulsante destro del mouse sul gruppo di disponibil
 
 ![Nessuna opzione disponibile per l'azione](./media/distributed-availability-group/dag-09-no-options-available-action.png)
 
-Come mostrato nella figura seguente, le repliche secondarie non mostrano alcun valore in SQL Server Management Studio correlato al gruppo di disponibilità distribuito. I nomi di questi gruppi di disponibilità sono mappati ai ruoli mostrati nell'immagine precedente del [cluster CLUSTER_A WSFC](#fig7).
+Come mostrato nella figura seguente, le repliche secondarie non mostrano alcun valore in SQL Server Management Studio correlato al gruppo di disponibilità distribuito. I nomi di questi gruppi di disponibilità sono mappati ai ruoli mostrati nell'immagine precedente del cluster CLUSTER_A WSFC.
 
 ![Visualizzazione di una replica secondaria in SQL Server Management Studio](./media/distributed-availability-group/dag-10-view-ssms-secondary-replica.png)
 
@@ -412,5 +412,3 @@ La query seguente visualizza informazioni sullo stato corrente del seeding. Ciò
 * [Usare la finestra di dialogo Nuovo gruppo di disponibilità (SQL Server Management Studio)](use-the-new-availability-group-dialog-box-sql-server-management-studio.md)
  
 * [Creare un gruppo di disponibilità con Transact-SQL](create-an-availability-group-transact-sql.md)
-
- 

@@ -11,12 +11,12 @@ author: jaszymas
 ms.author: jaszymas
 manager: craigg
 monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
-ms.openlocfilehash: 866d71333297b609642707a793b27c735d29057d
-ms.sourcegitcommit: c6e71ed14198da67afd7ba722823b1af9b4f4e6f
+ms.openlocfilehash: e6e0f7bc107ae731e3eb2e7f6685e6c02914d41d
+ms.sourcegitcommit: 1a4aa8d2bdebeb3be911406fc19dfb6085d30b04
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/16/2019
-ms.locfileid: "54327890"
+ms.lasthandoff: 04/03/2019
+ms.locfileid: "58872151"
 ---
 # <a name="configure-always-encrypted-with-secure-enclaves"></a>Configurare Always Encrypted con enclave sicuri
 
@@ -144,7 +144,7 @@ L'introduzione delle chiavi abilitate per l'enclave non cambia sostanzialmente i
 - Viene impostata la proprietà **ENCLAVE_COMPUTATIONS** nei metadati della chiave master della colonna nel database.
 - I valori delle proprietà della chiave master della colonna (inclusa l'impostazione di **ENCLAVE_COMPUTATIONS**) vengono firmati digitalmente. Lo strumento aggiunge la firma, che viene creata usando la chiave master della colonna effettiva, ai metadati. Lo scopo della firma è impedire ad amministratori di database e amministratori di computer con intenti dannosi di manomettere l'impostazione di **ENCLAVE_COMPUTATIONS**. I driver client SQL verificano le firme prima di consentire l'uso dell'enclave. In questo modo gli amministratori della sicurezza hanno il controllo sui dati di colonna che possono essere calcolati all'interno dell'enclave.
 
-La proprietà **ENCLAVE_COMPUTATIONS** di una chiave master della colonna non è modificabile. Non è possibile modificarla dopo il provisioning della chiave. È comunque possibile sostituire la chiave master della colonna con una nuova chiave con un valore diverso per la proprietà **ENCLAVE_COMPUTATIONS** rispetto a quello della chiave originale, tramite un processo noto come [rotazione della chiave master della colonna](#initiate-the-rotation-from-the-current-column-master-key-to-the-new-column-master-key). Per altre informazioni sulla proprietà **ENCLAVE_COMPUTATIONS**, vedere [CREATE COLUMN MASTER KEY](../../../t-sql/statements/create-column-master-key-transact-sql.md).
+La proprietà **ENCLAVE_COMPUTATIONS** di una chiave master della colonna non è modificabile. Non è possibile modificarla dopo il provisioning della chiave. È comunque possibile sostituire la chiave master della colonna con una nuova chiave con un valore diverso per la proprietà **ENCLAVE_COMPUTATIONS** rispetto a quello della chiave originale, tramite un processo noto come [rotazione della chiave master della colonna](#make-columns-enclave-enabled-by-rotating-their-column-master-key). Per altre informazioni sulla proprietà **ENCLAVE_COMPUTATIONS**, vedere [CREATE COLUMN MASTER KEY](../../../t-sql/statements/create-column-master-key-transact-sql.md).
 
 Per effettuare il provisioning di una chiave di crittografia di colonna abilitata per l'enclave, è necessario assicurarsi che la chiave master della colonna usata per la crittografia della chiave di crittografia della colonna sia abilitata per l'enclave.
 
@@ -152,7 +152,7 @@ Per il provisioning delle chiavi abilitate per l'enclave esistono attualmente le
 
 - Le **chiavi master della colonna abilitate per l'enclave devono essere archiviate in Archivio certificati Windows o in Azure Key Vault**. L'archiviazione di chiavi master della colonna abilitate per l'enclave in altri tipi di archivi chiavi (moduli di protezione hardware o archivi chiavi personalizzati) non è attualmente supportata.
 
-### <a name="provision-enclave-enabled-keys-using-sql-server-management-studio-ssms"></a>**Effettuare il provisioning di chiavi abilitate per l'enclave con SQL Server Management Studio (SSMS)**
+### **<a name="provision-enclave-enabled-keys-using-sql-server-management-studio-ssms"></a>Effettuare il provisioning di chiavi abilitate per l'enclave con SQL Server Management Studio (SSMS)**
 
 La procedura seguente crea le chiavi abilitate per l'enclave (richiede SQL Server Management Studio 18.0 o versioni successive):
 
@@ -177,7 +177,7 @@ La procedura seguente crea le chiavi abilitate per l'enclave (richiede SQL Serve
     3. Nell'elenco a discesa **Chiave master della colonna** selezionare la chiave master della colonna creata nei passaggi precedenti.
     4. Fare clic su **OK**.
 
-### <a name="provision-enclave-enabled-keys-using-powershell"></a>**Effettuare il provisioning delle chiavi abilitate per l'enclave con PowerShell**
+### **<a name="provision-enclave-enabled-keys-using-powershell"></a>Effettuare il provisioning delle chiavi abilitate per l'enclave con PowerShell**
 
 Le sezioni seguenti forniscono esempi di script PowerShell per il provisioning delle chiavi abilitate per l'enclave. I passaggi specifici (nuovi) per Always Encrypted con enclave sicuri sono evidenziati. Per altre informazioni (non specifiche per Always Encrypted con enclave sicuri) sul provisioning delle chiavi tramite PowerShell, vedere [Configurare le chiavi di Always Encrypted con PowerShell](https://docs.microsoft.com/sql/relational-databases/security/encryption/configure-always-encrypted-keys-using-powershell).
 
@@ -553,7 +553,7 @@ Per rendere disponibili i calcoli avanzati, potrebbe anche essere necessario mod
 Il processo di rotazione della chiave master della colonna è lo stesso, indipendentemente dal fatto che la chiave coinvolta sia abilitata per l'enclave. Negli articoli seguenti sono disponibili informazioni dettagliate su come ruotare la chiave master della colonna:
 
 - [Ruotare una chiave master della colonna con SQL Server Management Studio](configure-always-encrypted-using-sql-server-management-studio.md)
-- [Ruotare le chiavi di Always Encrypted con PowerShell](rotate-always-encrypted-keys-using-powershell.md)
+- [Ruotare una chiave master della colonna con PowerShell](rotate-always-encrypted-keys-using-powershell.md)
 
 Per praticità, di seguito viene fornito uno script di PowerShell di esempio per la rotazione di una chiave master della colonna.
 

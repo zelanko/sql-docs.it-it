@@ -11,12 +11,12 @@ ms.assetid: dfd2b639-8fd4-4cb9-b134-768a3898f9e6
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 52a1bde0da61988793463aa725a5b0a4003b2e12
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: 04ccb88fd3df348b21f61b0a01d4e49ce944c81c
+ms.sourcegitcommit: 1a4aa8d2bdebeb3be911406fc19dfb6085d30b04
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53203351"
+ms.lasthandoff: 04/03/2019
+ms.locfileid: "58872321"
 ---
 # <a name="monitor-performance-for-always-on-availability-groups"></a>Monitorare le prestazioni di gruppi di disponibilità Always On
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -24,15 +24,15 @@ ms.locfileid: "53203351"
   
  Vengono trattati gli argomenti seguenti:  
   
--   [Processo di sincronizzazione dei dati](#BKMK_DATA_SYNC_PROCESS)  
+-   [Processo di sincronizzazione dei dati](#data-synchronization-process)  
   
--   [Controlli di flusso](#BKMK_FLOW_CONTROL_GATES)  
+-   [Controlli di flusso](#flow-control-gates)  
   
--   [Stima del tempo di failover (RTO)](#BKMK_RTO)  
+-   [Stima del tempo di failover (RTO)](#estimating-failover-time-rto)  
   
--   [Stima della possibile perdita dei dati (RPO)](#BKMK_RPO)  
+-   [Stima della possibile perdita dei dati (RPO)](#estimating-potential-data-loss-rpo)  
   
--   [Monitoraggio di RTO e RPO](#BKMK_Monitoring_for_RTO_and_RPO)  
+-   [Monitoraggio di RTO e RPO](#monitoring-for-rto-and-rpo)  
   
 -   [Scenari di risoluzione dei problemi relativi alle prestazioni](#BKMK_SCENARIOS)  
   
@@ -45,7 +45,7 @@ ms.locfileid: "53203351"
   
 |||||  
 |-|-|-|-|  
-|**Sequence**|**Descrizione passaggio**|**Commenti**|**Metrica utile**|  
+|**Sequenza**|**Descrizione passaggio**|**Commenti**|**Metrica utile**|  
 |1|Generazione log|I dati del log vengono scaricati su disco. Il log deve essere replicato nelle repliche secondarie. I record del log immettono la coda di invii.|[SQL Server:Database > Byte/sec scaricamento log](~/relational-databases/performance-monitor/sql-server-databases-object.md)|  
 |2|Acquisizione|I log di ogni database vengono acquisiti e inviati alla coda del partner corrispondente (uno per ogni coppia di replica/database). Il processo di acquisizione viene eseguito in modo continuo purché la replica di disponibilità sia connessa e lo spostamento dei dati non sia per qualche motivo sospeso. La coppia replica/database avrò lo stato Sincronizzazione in corso o Sincronizzato. Se il processo di acquisizione non esegue l'analisi e accoda i messaggi a una velocità sufficiente, si crea la coda di invii del log.|[SQL Server: Replica di disponibilità> Byte inviati alla replica/sec](~/relational-databases/performance-monitor/sql-server-availability-replica.md), vale a dire un'aggregazione della somma di tutti i messaggi di database accodati per tale replica di disponibilità.<br /><br /> [log_send_queue_size](~/relational-databases/system-dynamic-management-views/sys-dm-hadr-database-replica-states-transact-sql.md) (KB) e [log_bytes_send_rate](~/relational-databases/system-dynamic-management-views/sys-dm-hadr-database-replica-states-transact-sql.md) (KB/sec) nella replica primaria.|  
 |3|Send|I messaggi di ogni coda della replica/database vengono rimossi dalla coda e inviati in rete alla rispettiva replica secondaria.|[SQL Server:Replica di disponibilità > Byte inviati al trasporto/sec](~/relational-databases/performance-monitor/sql-server-availability-replica.md) and [SQL Server:Replica di disponibilità > Message Acknowledgement Time](~/relational-databases/performance-monitor/sql-server-availability-replica.md) (ms) (Tempo acknowledgement messaggio)|  
@@ -331,7 +331,7 @@ Per il database primario, **last_commit_time** corrisponde all'ora in cui è sta
 ##  <a name="monitoring-for-rto-and-rpo"></a>Monitoraggio di RTO e RPO  
  In questa sezione viene illustrato come monitorare i gruppi di disponibilità per la metrica degli obiettivi RTO e RPO. Questa dimostrazione è simile all'esercitazione per la GUI descritta in [The AlwaysOn Health Model Part 2: Extending the Health Model](https://blogs.msdn.com/b/sqlalwayson/archive/2012/02/13/extending-the-alwayson-health-model.aspx) (Il modello di integrità AlwaysOn parte 2: Estensione del modello di integrità).  
   
- Gli elementi per il calcolo del tempo di failover e della possibile perdita dei dati in [Stima del tempo di failover (RTO)](#BKMK_RTO) e in [Stima della potenziale perdita dei dati (RPO)](#BKMK_RPO) vengono specificati come metrica delle prestazione nel facet della gestione basata su criteri **Stato replica di database** (vedere [View the policy-based management facets on a SQL Server object](~/relational-databases/policy-based-management/view-the-policy-based-management-facets-on-a-sql-server-object.md)) (Visualizzare i facet della gestione basata su criteri in un oggetto di SQL Server). È possibile monitorare queste due metriche in una pianificazione e ricevere un avviso quando la metrica supera rispettivamente gli obiettivi RTO e RPO.  
+ Gli elementi per il calcolo del tempo di failover e della possibile perdita dei dati in [Stima del tempo di failover (RTO)](#estimating-failover-time-rto) e in [Stima della potenziale perdita dei dati (RPO)](#estimating-potential-data-loss-rpo) vengono specificati come metrica delle prestazione nel facet della gestione basata su criteri **Stato replica di database** (vedere [View the policy-based management facets on a SQL Server object](~/relational-databases/policy-based-management/view-the-policy-based-management-facets-on-a-sql-server-object.md)) (Visualizzare i facet della gestione basata su criteri in un oggetto di SQL Server). È possibile monitorare queste due metriche in una pianificazione e ricevere un avviso quando la metrica supera rispettivamente gli obiettivi RTO e RPO.  
   
  Gli script della dimostrazione creano due criteri di sistema che vengono eseguiti nelle rispettive pianificazioni, con le caratteristiche seguenti:  
   
@@ -474,5 +474,3 @@ Per creare i criteri, seguire le istruzioni riportate di seguito in tutte le ist
 |hadr_dump_primary_progress|`alwayson`|Debug|Primaria|  
 |hadr_dump_log_progress|`alwayson`|Debug|Primaria|  
 |hadr_undo_of_redo_log_scan|`alwayson`|Analitici|Secondari|  
-  
-  

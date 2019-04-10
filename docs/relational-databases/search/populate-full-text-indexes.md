@@ -25,12 +25,12 @@ ms.author: pelopes
 ms.reviewer: mikeray
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: b3583a5a0a4f68304bdc4cc78eadbadf3fb14b20
-ms.sourcegitcommit: 03870f0577abde3113e0e9916cd82590f78a377c
+ms.openlocfilehash: b49e8a5802152eeee8d1a2cac28ac0098057f423
+ms.sourcegitcommit: 3cfedfeba377560d460ca3e42af1e18824988c07
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/18/2019
-ms.locfileid: "57973650"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59042270"
 ---
 # <a name="populate-full-text-indexes"></a>Popolamento degli indici full-text
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -103,7 +103,7 @@ Esistono due tipi di rilevamento delle modifiche:
   
     -   [ALTER FULLTEXT INDEX](../../t-sql/statements/alter-fulltext-index-transact-sql.md) ... SET CHANGE_TRACKING AUTO  
   
-    **Esempio: modificare un indice full-text per l'uso del rilevamento delle modifiche automatico**  
+    **Esempio - Modificare un indice full-text per l'uso del rilevamento delle modifiche automatico**  
     Nell'esempio seguente viene creato un indice full-text della tabella `HumanResources.JobCandidate` del database di esempio `AdventureWorks` per l'utilizzo del rilevamento delle modifiche con il popolamento automatico.  
   
     ```sql  
@@ -123,7 +123,7 @@ Esistono due tipi di rilevamento delle modifiche:
   
     -   [ALTER FULLTEXT INDEX](../../t-sql/statements/alter-fulltext-index-transact-sql.md) ... SET CHANGE_TRACKING MANUAL  
   
-    **Esempio: creare un indice full-text con il rilevamento delle modifiche manuale**  
+    **Esempio - Creare un indice full-text con il rilevamento delle modifiche manuale**  
     Nell'esempio seguente viene creato un indice full-text che utilizzerà il rilevamento delle modifiche con popolamento manuale nella tabella `HumanResources.JobCandidate` del database di esempio `AdventureWorks` .  
   
     ```sql
@@ -137,7 +137,7 @@ Esistono due tipi di rilevamento delle modifiche:
     GO  
     ```  
   
-    **Esempio: eseguire un popolamento manuale**  
+    **Esempio - Eseguire un popolamento manuale**  
     Nell'esempio seguente viene eseguito un popolamento manuale nell'indice full-text con rilevamento delle modifiche della tabella `HumanResources.JobCandidate` del database di esempio `AdventureWorks` .  
   
     ```sql 
@@ -217,8 +217,8 @@ Il file del log di tipo ricerca per indicizzazione segue lo schema di denominazi
 `SQLFT<DatabaseID><FullTextCatalogID>.LOG[<n>]`
   
 Di seguito sono riportate le parti variabili del nome del file del log di ricerca per indicizzazione.
--   <**IDDatabase**>: ID di un database. <**dbid**> è un numero a cinque cifre con zeri iniziali.  
--   <**IDCatalogoFullText**>: ID del catalogo full-text. <**catid**> è un numero a cinque cifre con zeri iniziali.  
+-   <**IDDatabase**>: ID di un database. \<**dbid**> è un numero a cinque cifre con zeri iniziali.  
+-   <**IDCatalogoFullText**>: ID del catalogo full-text. \<**catid**> è un numero a cinque cifre con zeri iniziali.  
 -   <**n**>: numero intero che indica l'esistenza di uno o più log di ricerca per indicizzazione per lo stesso catalogo full-text.  
   
  Ad esempio, `SQLFT0000500008.2` è il file del log di ricerca per indicizzazione per un database con ID database = 5 e ID catalogo full-text = 8. Il 2 alla fine del nome file indica che sono disponibili due file del log di tipo ricerca per indicizzazione per questa coppia di database/catalogo.  

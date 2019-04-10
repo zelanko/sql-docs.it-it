@@ -41,12 +41,12 @@ ms.assetid: 864b393f-225f-4895-8c8d-4db59ea60032
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 9957e69ae2cc285ecad5709a9169bd3ee01be464
-ms.sourcegitcommit: a13256f484eee2f52c812646cc989eb0ce6cf6aa
+ms.openlocfilehash: b2474bc1f0d0111c4dedd2fa8ce3a9f885503d52
+ms.sourcegitcommit: 3cfedfeba377560d460ca3e42af1e18824988c07
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/25/2019
-ms.locfileid: "56801595"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59042450"
 ---
 # <a name="create-function-transact-sql"></a>CREATE FUNCTION (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -334,7 +334,7 @@ Valore predefinito del parametro. Se viene definito un valore *default*, è poss
   
  Nelle funzioni inline con valori di tabella il valore restituito TABLE viene definito tramite una sola istruzione SELECT. Alle funzioni inline non sono associate variabili restituite.  
   
- <a name="mstvf"></a>Nelle funzioni con valori di tabella con istruzioni multiple @*return_variable* è una variabile TABLE usata per l'archiviazione e l'accumulo delle righe da restituire come valore della funzione.È possibile specificare  @ *return_variable* solo per le funzioni [!INCLUDE[tsql](../../includes/tsql-md.md)] e non per le funzioni CLR.  
+ <a name="mstvf"></a> Nelle funzioni con valori di tabella con istruzioni multiple \@*@return_variable* è una variabile TABLE usata per l'archiviazione e l'accumulo delle righe da restituire come valore della funzione. È possibile specificare \@ *return_variable* solo per le funzioni [!INCLUDE[tsql](../../includes/tsql-md.md)] e non per le funzioni CLR.  
   
  *select_stmt*  
  Istruzione SELECT che definisce il valore restituito di una funzione inline con valori di tabella.  
@@ -347,15 +347,15 @@ Valore predefinito del parametro. Se viene definito un valore *default*, è poss
  Specifica l'assembly e il metodo a cui dovrà fare riferimento il nome della funzione creata.  
   
 -   *assembly_name*: deve corrispondere a un valore nella colonna `name` di   
-    `SELECT * FROM sys.assemblies;`(Indici per tabelle con ottimizzazione per la memoria).  
+    `SELECT * FROM sys.assemblies;`.  
     Si tratta del nome usato nell'istruzione `CREATE ASSEMBLY`.  
   
 -   *class_name*: deve corrispondere a un valore nella colonna `assembly_name` di  
-    `SELECT * FROM sys.assembly_modules;`(Indici per tabelle con ottimizzazione per la memoria).  
+    `SELECT * FROM sys.assembly_modules;`.  
     Spesso il valore contiene un punto incorporato. In tal caso, la sintassi Transact-SQL richiede che il valore venga racchiuso tra parentesi quadre [ ] o tra virgolette doppie "".  
   
 -   *method_name*: deve corrispondere a un valore nella colonna `method_name` di   
-    `SELECT * FROM sys.assembly_modules;`(Indici per tabelle con ottimizzazione per la memoria).  
+    `SELECT * FROM sys.assembly_modules;`.  
     Il metodo deve essere statico.  
   
 In un tipico esempio di MyFood.DLL, in cui tutti i tipi sono nello spazio dei nomi MyFood, il valore `EXTERNAL NAME` potrebbe essere:   
@@ -389,7 +389,7 @@ In un tipico esempio di MyFood.DLL, in cui tutti i tipi sono nello spazio dei no
  EXECUTE AS  
  EXECUTE AS è obbligatorio per funzioni definite dall'utente scalari compilate in modo nativo.  
   
- **\<function_option>::= and \<clr_function_option>::=** 
+ **\<function_option>::= e \<clr_function_option>::=** 
   
  Specifica che la funzione includerà una o più delle opzioni seguenti.  
   
@@ -430,7 +430,7 @@ Clausola EXECUTE AS
 Specifica il contesto di sicurezza nel quale viene eseguita la funzione definita dall'utente. Sarà pertanto possibile controllare l'account utente utilizzato da [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] per convalidare le autorizzazioni per qualsiasi oggetto di database a cui la funzione fa riferimento.  
   
 > [!NOTE]  
-> Non è possibile specificare la clausola `EXECUTE AS` per le funzioni inline con valori di tabella.
+> `EXECUTE AS` non può essere specificato per le funzioni inline con valori di tabella.
   
 Per altre informazioni, vedere [Clausola EXECUTE AS &#40;Transact-SQL&#41;](../../t-sql/statements/execute-as-clause-transact-sql.md).  
 
@@ -456,7 +456,7 @@ Specifica se questa funzione scalare definita dall'utente deve essere impostata 
  La clausola COLLATE consente di modificare le regole di confronto solo per le colonne con tipo di dati **char**, **varchar**, **nchar** e **nvarchar**.  
   
  > [!NOTE]
- > Non è possibile specificare la clausola `COLLATE` per le funzioni CLR con valori di tabella.  
+ > `COLLATE` non può essere specificato per le funzioni CLR con valori di tabella.  
   
  ROWGUIDCOL  
  Indica che la nuova colonna è un identificatore univoco di riga globale. È possibile designare come colonna ROWGUIDCOL una sola colonna di tipo **uniqueidentifier** per ogni tabella. La proprietà ROWGUIDCOL può essere assegnata solo a una colonna **uniqueidentifier**.  
@@ -474,7 +474,7 @@ Specifica se questa funzione scalare definita dall'utente deve essere impostata 
  *increment*  
  Valore intero da aggiungere al valore *seed* per le righe successive della tabella.  
   
- **\< column_constraint >::= and \< table_constraint>::=** 
+ **\< column_constraint >::= e \< table_constraint>::=** 
   
  Definisce il vincolo per una colonna o tabella specificata. Per le funzioni CLR l'unico tipo di vincolo consentito è NULL. I vincoli denominati non sono consentiti.  
   
@@ -488,9 +488,9 @@ Specifica se questa funzione scalare definita dall'utente deve essere impostata 
  Vincolo che impone l'integrità di entità per una o più colonne specificate tramite un indice univoco. Una tabella può includere più vincoli UNIQUE. Non è possibile specificare il vincolo UNIQUE per le funzioni CLR con valori di tabella.  
   
  CLUSTERED | NONCLUSTERED  
- Definisce la creazione di un indice cluster o non cluster per il vincolo PRIMARY KEY o UNIQUE. I vincoli PRIMARY KEY utilizzano l'opzione CLUSTERED, mentre i vincoli UNIQUE utilizzano l'opzione NONCLUSTERED.  
+ Definisce la creazione di un indice cluster o non cluster per il vincolo PRIMARY KEY o UNIQUE. I vincoli PRIMARY KEY usano l'opzione CLUSTERED, mentre i vincoli UNIQUE usano l'opzione NONCLUSTERED.  
   
- L'opzione CLUSTERED può essere specificata solo per un vincolo. Se per un vincolo UNIQUE si specifica CLUSTERED e viene specificato anche un vincolo PRIMARY KEY, quest'ultimo utilizza l'opzione NONCLUSTERED.  
+ L'opzione CLUSTERED può essere specificata solo per un vincolo. Se per un vincolo UNIQUE si specifica CLUSTERED e viene specificato anche un vincolo PRIMARY KEY, quest'ultimo usano l'opzione NONCLUSTERED.  
   
  Non è possibile specificare le opzioni CLUSTERED e NON CLUSTERED per le funzioni CLR con valori di tabella.  
   
@@ -567,15 +567,15 @@ Se una funzione definita dall'utente non viene creata tramite la clausola `SCHEM
 
 -   Istruzioni per il controllo di flusso, ad eccezione delle istruzioni `TRY...CATCH`.  
 
--   Istruzioni `DECLARE` che definiscono le variabili dati locali e i cursori locali.  
+-   `DECLARE` - Istruzioni che definiscono le variabili dati locali e i cursori locali.  
 
--   Istruzioni `SELECT` contenenti gli elenchi di selezione con espressioni che assegnano valori alle variabili locali.  
+-   `SELECT` - Istruzioni contenenti gli elenchi di selezione con espressioni che assegnano valori alle variabili locali.  
 
 -   Operazioni di cursore che fanno riferimento a cursori locali dichiarati, aperti, chiusi e deallocati nella funzione. Sono consentite solo istruzioni `FETCH` che assegnano valori alle variabili locali tramite la clausola `INTO`. Non sono consentite istruzioni `FETCH` che restituiscono dati al client.  
 
--   Istruzioni `INSERT`, `UPDATE` e `DELETE` che modificano le variabili di tabella locali.  
+-   `INSERT`, `UPDATE` e `DELETE` - Istruzioni che modificano le variabili di tabella locali.  
 
--   Istruzioni `EXECUTE` che chiamano stored procedure estese.  
+-   `EXECUTE` - Istruzioni che chiamano stored procedure estese.  
 
 Per altre informazioni, vedere [Creare funzioni definite dall'utente &#40;Motore di database&#41;](../../relational-databases/user-defined-functions/create-user-defined-functions-database-engine.md).  
   
@@ -645,11 +645,11 @@ Quando si usa la clausola `ORDER` in funzioni CLR con valori di tabella, attener
   
     -   Query di inserimento in cui la clausola `ORDER` è compatibile con un indice.  
   
-    -   Clausole `ORDER BY` compatibili con la clausola `ORDER`.  
+    -   `ORDER BY` - Clausole compatibili con la clausola `ORDER`.  
   
     -   Aggregazioni, in cui `GROUP BY` è compatibile con la clausola `ORDER`.  
   
-    -   Aggregazioni `DISTINCT` in cui le colonne distinte sono compatibili con la clausola `ORDER`.  
+    -   `DISTINCT` - Aggregazioni in cui le colonne distinte sono compatibili con la clausola `ORDER`.  
   
 La clausola `ORDER` non garantisce risultati ordinati quando viene eseguita una query SELECT, a meno che nella query non venga specificata anche la clausola `ORDER BY`. Vedere [sys.function_order_columns &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-function-order-columns-transact-sql.md) per informazioni su come eseguire una query relativa alle colonne incluse nell'ordinamento per le funzioni con valori di tabella.  
   
@@ -663,7 +663,7 @@ La clausola `ORDER` non garantisce risultati ordinati quando viene eseguita una 
 |[sys.parameters](../../relational-databases/system-catalog-views/sys-parameters-transact-sql.md)|Visualizza le informazioni sui parametri definiti nelle funzioni definite dall'utente.|  
 |[sys.sql_expression_dependencies](../../relational-databases/system-catalog-views/sys-sql-expression-dependencies-transact-sql.md)|Visualizza gli oggetti sottostanti a cui fa riferimento una funzione.|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorizzazioni  
  È necessario disporre dell'autorizzazione `CREATE FUNCTION` nel database e dell'autorizzazione `ALTER` per lo schema in cui la funzione è in fase di creazione. Se per la funzione viene specificato un tipo definito dall'utente, è necessario disporre dell'autorizzazione `EXECUTE` per tale tipo.  
   
 ## <a name="examples"></a>Esempi  
@@ -710,7 +710,7 @@ ISO Week
 52  
 ```  
   
-### <a name="b-creating-an-inline-table-valued-function"></a>b. Creazione di una funzione inline con valori di tabella  
+### <a name="b-creating-an-inline-table-valued-function"></a>B. Creazione di una funzione inline con valori di tabella  
  Nell'esempio seguente viene restituita una funzione con valori di tabella inline nel database [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)]. Vengono restituite tre colonne `ProductID`, `Name` e il valore aggregato dei totali da inizio anno per negozio come `YTD Total`per ogni prodotto venduto al negozio.  
   
 ```sql  
@@ -824,7 +824,7 @@ GO
  La definizione delle funzioni create tramite l'opzione `ENCRYPTION` non possono essere visualizzate tramite la vista sys.sql_modules. Vengono tuttavia visualizzate altre informazioni sulle funzioni crittografate.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Creare funzioni definite dall'utente &#40;Motore di database&#41;](../../relational-databases/user-defined-functions/create-user-defined-functions-database-engine.md)   
+ [Creare funzioni definite dall'utente &#40;motore di database&#41;](../../relational-databases/user-defined-functions/create-user-defined-functions-database-engine.md)   
  [ALTER FUNCTION &#40;Transact-SQL&#41;](../../t-sql/statements/alter-function-transact-sql.md)    
  [DROP FUNCTION &#40;Transact-SQL&#41;](../../t-sql/statements/drop-function-transact-sql.md)   
  [OBJECTPROPERTYEX &#40;Transact-SQL&#41;](../../t-sql/functions/objectpropertyex-transact-sql.md)   

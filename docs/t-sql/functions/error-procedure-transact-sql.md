@@ -25,12 +25,12 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: caae632e8e413001d57d125126bb3f8f979a8e82
-ms.sourcegitcommit: c19696d3d67161ce78aaa5340964da3256bf602d
+ms.openlocfilehash: bc0765e02958e6ec59a419933716e8485879add3
+ms.sourcegitcommit: fc1739be9b2735b2bb469979936e76ca2a3830f8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/29/2018
-ms.locfileid: "52617061"
+ms.lasthandoff: 04/03/2019
+ms.locfileid: "58899727"
 ---
 # <a name="errorprocedure-transact-sql"></a>ERROR_PROCEDURE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -49,7 +49,7 @@ ERROR_PROCEDURE ( )
 **nvarchar(128)**  
   
 ## <a name="return-value"></a>Valore restituito  
-Quando viene chiamata nel blocco CATCH di una stored procedure in cui si verifica un errore, `ERROR_PROCEDURE` restituisce il nome di tale stored procedure.  
+Quando viene chiamato in un blocco CATCH, `ERROR_PROCEDURE` restituisce il nome della stored procedure o del trigger in cui si è verificato l'errore.
   
 `ERROR_PROCEDURE` restituisce NULL se l'errore non si è verificato all'interno di una stored procedure o un trigger.  
   

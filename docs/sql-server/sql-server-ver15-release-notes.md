@@ -10,12 +10,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: = sql-server-ver15 || = sqlallproducts-allversions
-ms.openlocfilehash: 6336e6ebc549d1be2787bb8a100efec1ea9b6836
-ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
+ms.openlocfilehash: 62c637f8432fd168a9b23a92b7d50c00ea6c1e14
+ms.sourcegitcommit: 2de5446fbc57787f18a907dd5deb02a7831ec07d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58492853"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58860062"
 ---
 # <a name="sql-server-2019-preview-release-notes"></a>Note sulla versione di anteprima di SQL Server 2019
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
@@ -37,12 +37,12 @@ Questo articolo descrive le limitazioni e i problemi noti per le versioni Commun
 ## <a name="ctp-24"></a>CTP 2.4
 [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] CTP 2.4 è l'ultima versione pubblica di [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)].
 
-[!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] CTP 2.3 è disponibile solo come edizione di valutazione. Non sono disponibili altre edizioni. Il supporto per le versioni CTP è descritto in `license_Eval.rtf` nel supporto di installazione.
+[!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] CTP 2.4 è disponibile solo come edizione di valutazione. Non sono disponibili altre edizioni. Il supporto per le versioni CTP è descritto in `license_Eval.rtf` nel supporto di installazione.
 
 Un supporto limitato può essere disponibile in una delle posizioni seguenti:
 
 - Forum
-  - [Commenti di SQL Server](https://aka.ms/sqlfeedback)
+  - [Commenti e suggerimenti per SQL Server](https://aka.ms/sqlfeedback)
   - [Introduzione a SQL Server](https://social.msdn.microsoft.com/Forums/sqlserver/en-US/home?forum=sqlgetstarted)
   - [Transact-SQL](https://social.msdn.microsoft.com/Forums/sqlserver/en-US/home?forum=transactsql)
   - [Documentazione di SQL Server](https://social.msdn.microsoft.com/Forums/sqlserver/en-US/home?forum=sqldocumentation)

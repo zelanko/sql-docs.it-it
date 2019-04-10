@@ -1,5 +1,5 @@
 ---
-Title: 'Tutorial: Additional tips and tricks for using SQL Server Management Studio'
+Title: "Esercitazione: Suggerimenti e consigli aggiuntivi per l'uso di SQL Server Management Studio"
 description: 'Esercitazione che illustra suggerimenti e consigli aggiuntivi per usare SSMS. '
 keywords: SQL Server, SSMS, SQL Server Management Studio
 author: MashaMSFT
@@ -20,12 +20,12 @@ helpviewer_keywords:
 - Find SQL Server Instance
 - find instance name
 - find sql server instance name
-ms.openlocfilehash: 2b113d701bbcd5d385303e6a36fcc603d03c0cdf
-ms.sourcegitcommit: b3d84abfa4e2922951430772c9f86dce450e4ed1
+ms.openlocfilehash: ab394ef046d123b461dac813b2901dfcfd02b596
+ms.sourcegitcommit: 1a4aa8d2bdebeb3be911406fc19dfb6085d30b04
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/22/2019
-ms.locfileid: "56663107"
+ms.lasthandoff: 04/03/2019
+ms.locfileid: "58872221"
 ---
 # <a name="tutorial-additional-tips-and-tricks-for-using-ssms"></a>Esercitazione: Suggerimenti e consigli per l'uso di SSMS
 Questa esercitazione offre alcuni suggerimenti aggiuntivi per l'uso di SQL Server Management Studio (SSMS). Questo articolo illustra come: 
@@ -216,7 +216,7 @@ Il percorso per il log degli errori di SQL Server può variare a seconda delle i
 Per trovare il nome dell'istanza di SQL Server prima e dopo la connessione a SQL Server sono disponibili alcune opzioni.  
 
 ### <a name="before-you-connect-to-sql-server"></a>Prima di connettersi a SQL Server
-1. Seguire la procedura per individuare il [log degli errori di SQL Server su disco](#finding-your-error-log-if-you-cannot-connect-to-sql). Il percorso potrebbe essere diverso dal percorso nell'immagine di seguito.
+1. Seguire la procedura per individuare il [log degli errori di SQL Server su disco](#find-the-error-log-location-if-you-cant-connect-to-sql-server). Il percorso potrebbe essere diverso dal percorso nell'immagine di seguito.
 2. Aprire il file errorlog.log nel Blocco note.  
 3. Cercare il testo *Server name is*.
     
@@ -253,5 +253,3 @@ Se si è connessi a un alias o a un listener del gruppo di disponibilità, quest
 4. Visualizzare i risultati della query per identificare il nome dell'istanza di SQL Server a cui si è connessi: 
     
     ![Eseguire una query per recuperare il nome di SQL Server](media/ssms-tricks/queryservername.png)
-
-

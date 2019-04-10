@@ -13,12 +13,12 @@ author: jaszymas
 ms.author: jaszymas
 manager: craigg
 monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
-ms.openlocfilehash: a24f7577a5ac01b3bc035bd68056de3a95fa156c
-ms.sourcegitcommit: 2111068372455b5ec147b19ca6dbf339980b267d
+ms.openlocfilehash: b25824b52a09afd7111cacc3a1ec05969766863e
+ms.sourcegitcommit: 3cfedfeba377560d460ca3e42af1e18824988c07
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58417153"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59042130"
 ---
 # <a name="tutorial-getting-started-with-always-encrypted-with-secure-enclaves-using-ssms"></a>Esercitazione: Introduzione ad Always Encrypted con enclave sicuri tramite SSMS
 [!INCLUDE [tsql-appliesto-ssver15-xxxx-xxxx-xxx](../../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
@@ -36,8 +36,16 @@ Per iniziare a usare Always Encrypted con enclave sicuri sono necessari almeno d
 
 ### <a name="sql-server-computer-requirements"></a>Requisiti per il computer SQL Server
 
-- [!INCLUDE [sssqlv15-md](../../includes/sssqlv15-md.md)] o versioni successive
-- Windows 10 Enterprise versione 1809 o Windows Server 2019 Datacenter
+- [!INCLUDE [sssqlv15-md](../../includes/sssqlv15-md.md)] o versioni successive.
+- Windows 10 Enterprise versione 1809 o Windows Server 2019 Datacenter.
+- Se il computer SQL Server è un computer fisico, è necessario soddisfare i [requisiti hardware di Hyper-V](https://docs.microsoft.com/en-us/virtualization/hyper-v-on-windows/reference/hyper-v-requirements#hardware-requirements):
+   - Processore a 64 bit con SLAT (Second Level Address Translation)
+   - Supporto di CPU per Estensioni modalità di monitoraggio macchina virtuale (VT-c nelle CPU Intel)
+   - Supporto per la virtualizzazione abilitato (Intel VT-x o AMD-V)
+- Se il computer SQL Server è una macchina virtuale, la macchina virtuale deve essere configurata per consentire la virtualizzazione annidata.
+   - In Hyper-V 2016 o versioni successive, [abilitare le estensioni di virtualizzazione annidata](https://docs.microsoft.com/en-us/virtualization/hyper-v-on-windows/user-guide/nested-virtualization#configure-nested-virtualization) nel processore della macchina virtuale.
+   - In Azure, assicurarsi di eseguire una dimensione di macchina virtuale che supporta la virtualizzazione annidata, ad esempio le macchine virtuali della serie Dv3 ed Ev3. Vedere [Creare una VM di Azure in grado di supportare l'annidamento](https://docs.microsoft.com/en-us/azure/virtual-machines/windows/nested-virtualization#create-a-nesting-capable-azure-vm).
+   - In VMWare vSphere 6.7 6.7 o versioni successive, abilitare il supporto della sicurezza basata sulla virtualizzazione per la macchina virtuale come descritto nella [documentazione di VMware](https://docs.vmware.com/en/VMware-vSphere/6.7/com.vmware.vsphere.vm_admin.doc/GUID-C2E78F3E-9DE2-44DB-9B0A-11440800AADD.html).
 - [SQL Server Management Studio (SSMS) 18.0 o versioni successive](../../ssms/download-sql-server-management-studio-ssms.md).
 
 In alternativa è possibile installare SSMS in un altro computer.
@@ -105,6 +113,21 @@ In questo passaggio si configura il computer SQL Server come host controllato re
    ```
 
 3. Al prompt riavviare il computer SQL Server per completare l'installazione di Hyper-V.
+
+4. Se il computer SQL Server è una macchina virtuale o se si tratta di un computer fisico legacy che non supporta l'avvio protetto UEFI o non è dotato di IOMMU, è necessario rimuovere il requisito VBS per le funzionalità di sicurezza della piattaforma.
+    1. Rimuovere il requisito nel Registro di sistema di Windows.
+
+        ```powershell
+       Set-ItemProperty -Path HKLM:\SYSTEM\CurrentControlSet\Control\DeviceGuard -Name RequirePlatformSecurityFeatures -Value 0
+       ```
+
+    1. Riavviare il computer per riportare online VBS con i requisiti ridotti.
+
+        ```powershell
+       Restart-Computer
+       ```
+
+
 
 4. Accedere ancora al computer SQL Server come amministratore, aprire una console di Windows PowerShell con privilegi elevati, generare una chiave host univoca ed esportare la chiave pubblica risultante in un file.
 
@@ -236,7 +259,7 @@ In questo passaggio si crea una chiave master della colonna e una chiave di crit
     3. Assicurarsi di selezionare **Archivio certificati Windows (Utente corrente o Computer locale)** o **Azure Key Vault**.
     4. Selezionare **Consenti calcoli enclave**.
     5. Se si seleziona Azure Key Vault, accedere ad Azure e selezionare l'insieme di credenziali delle chiavi. Per altre informazioni su come creare un insieme di credenziali delle chiavi per Always Encrypted, vedere [Manage your key vaults from Azure portal](https://blogs.technet.microsoft.com/kv/2016/09/12/manage-your-key-vaults-from-new-azure-portal/) (Gestire gli insiemi di credenziali delle chiavi dal portale di Azure).
-    6. Selezionare la chiave se esiste già o seguire le istruzioni nel modulo per creare una nuova chiave.
+    6. Selezionare il certificato o la chiave di Azure Key Vault se esiste già oppure fare clic sul pulsante **Genera certificato** per crearne uno nuovo.
     7. Fare clic su **OK**.
 
         ![Consenti calcoli enclave](encryption/media/always-encrypted-enclaves/allow-enclave-computations.png)
@@ -258,8 +281,8 @@ In questo passaggio si esegue la crittografia dei dati archiviati nelle colonne 
     3. Selezionare Connessione \> Cambia connessione.
     4. Selezionare **Opzioni**. Passare alla scheda **Always Encrypted**, selezionare **Abilita Always Encrypted** e specificare l'URL di attestazione dell'enclave, ad esempio ht<span>tp://</span>hgs.bastion.local/Attestation.
     5. Selezionare **Connetti**.
-    6. Impostare il contesto di database sul database ContosoHR.
-1. In SSMS configurare un'altra finestra di query con Always Encrypted disabilitata per la connessione al database.
+    6. Se viene richiesto di abilitare la parametrizzazione per le query Always Encrypted, fare clic su **Abilita**.
+2. In SSMS configurare un'altra finestra di query con Always Encrypted disabilitata per la connessione al database.
     1. In SSMS aprire una nuova finestra di query.
     2. Fare clic con il pulsante destro del mouse in un punto qualsiasi all'interno della nuova finestra di query.
     3. Selezionare Connessione \> Cambia connessione.
@@ -296,12 +319,12 @@ In questo passaggio si esegue la crittografia dei dati archiviati nelle colonne 
 
 Ora è possibile eseguire query avanzate sulle colonne crittografate. Vengono eseguite alcune operazioni di elaborazione query nell'enclave lato server. 
 
-1. Abilitare Parametrizzazione per Always Encrypted.
+1. Assicurarsi che la funzionalità Parametrizzazione per Always Encrypted sia abilitata.
     1. Selezionare **Query** dal menu principale di SQL Server Management Studio.
     2. Selezionare **Opzioni query**.
     3. Passare a **Esecuzione** > **Avanzata**.
-    4. Selezionare **Abilita parametrizzazione per Always Encrypted**.
-    5. Fare clic su **OK**.
+    4. Assicurarsi che l'opzione Abilita Parametrizzazione per Always Encrypted sia selezionata.
+    5. Selezionare OK.
 2. Nella finestra della query con Always Encrypted abilitata, incollare ed eseguire la query seguente. La query restituisce valori di testo non crittografato e righe che soddisfano i criteri di ricerca specificati.
 
     ```sql

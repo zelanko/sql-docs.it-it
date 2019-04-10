@@ -11,12 +11,12 @@ ms.assetid: 5950f98a-3950-473d-95fd-cde3557b8fc2
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: fa8c74ec8bb9c80350b537142ce27cb61354c52f
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: 2301a4709585f9243073f085703a3070c813b43e
+ms.sourcegitcommit: 2de5446fbc57787f18a907dd5deb02a7831ec07d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53207570"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58860632"
 ---
 # <a name="configure-extended-events-for-always-on-availability-groups"></a>Configurare eventi estesi per i gruppi di disponibilità Always On
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -83,7 +83,7 @@ Per informazioni su alcuni eventi coperti da alwayson_health, vedere il [Riferim
   
  [error_reported (1480): Ruolo di replica di database modificato](#BKMK_error_reported_1480)  
   
-###  <a name="BKMK_availability_replica_state_change "></a> availability_replica_state_change  
+###  <a name="BKMK_availability_replica_state_change"></a> availability_replica_state_change  
  Si verifica quando lo stato di una replica di disponibilità viene modificato. La creazione di un gruppo di disponibilità o l'aggiunta di una replica di disponibilità può attivare questo evento. È utile per la diagnostica dei failover automatici non riusciti. Può anche essere utilizzato per tracciare i passaggi del failover.  
   
 #### <a name="event-information"></a>Informazioni sull'evento  
@@ -384,5 +384,3 @@ GO
   
 ## <a name="next-steps"></a>Passaggi successivi  
  [Visualizzare i dati della sessione eventi](https://msdn.microsoft.com/library/hh710068(v=sql.110).aspx)   
- 
-  

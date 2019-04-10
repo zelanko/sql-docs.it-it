@@ -11,16 +11,16 @@ helpviewer_keywords:
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: a7534e39be1973861ab827e7f5e2dab6adf941e0
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: a73eda4fbb3898846894a4cf35de4253cffedbc3
+ms.sourcegitcommit: 1a4aa8d2bdebeb3be911406fc19dfb6085d30b04
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56017002"
+ms.lasthandoff: 04/03/2019
+ms.locfileid: "58872251"
 ---
 # <a name="upgrade-sql-server-instances-running-on-windows-server-20082008-r22012-clusters"></a>Aggiornare istanze di SQL Server in esecuzione in cluster di Windows Server 2008/2008 R2/2012
 
-[!INCLUDE[nextref-longhorn-md](../../../includes/nextref-longhorn-md.md)], [!INCLUDE[winserver2008r2-md](../../../includes/winserver2008r2-md.md)] e [!INCLUDE[win8srv-md](../../../includes/win8srv-md.md)] impediscono ai cluster WSFC di eseguire aggiornamenti sul posto del sistema operativo, limitando la versione consentita di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] per i cluster. Dopo aver aggiornato il cluster almeno alla versione [!INCLUDE[winblue-server-2-md](../../../includes/winblue-server-2-md.md)], il cluster rimarrà aggiornato.
+[!INCLUDE[nextref-longhorn-md](../../../includes/nextref-longhorn-md.md)], [!INCLUDE[winserver2008r2-md](../../../includes/winserver2008r2-md.md)] e [!INCLUDE[win8srv-md](../../../includes/win8srv-md.md)] impediscono ai cluster Windows Server Failover Cluster (WSFC) di eseguire aggiornamenti sul posto del sistema operativo, limitando la versione consentita di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] per i cluster. Dopo aver aggiornato il cluster almeno alla versione [!INCLUDE[winblue-server-2-md](../../../includes/winblue-server-2-md.md)], il cluster rimarrà aggiornato.
 
 ## <a name="prerequisites"></a>Prerequisites
 
@@ -47,8 +47,8 @@ La strategia di migrazione appropriata dipende da alcuni parametri della topolog
 |                                   | Richiede tutti gli oggetti server e tutti i nomi rete virtuale | Richiede tutti gli oggetti server e tutti i nomi rete virtuale | Non richiede gli oggetti server/i nomi rete virtuale\* | Non richiede gli oggetti server/i nomi rete virtuale\* |
 |-----------------------------------|--------------------------------------|--------------------------------------------------------------------|------------|------------|
 | **_Gruppi di disponibilità (S/N)_**                  | **_S_**                              | **_N_**                                                            | **_S_**    | **_N_**    |
-| **Il cluster usa solo istanze di cluster di failover di SQL Server**         | [Scenario 3](#scenario-3-cluster-has-sql-fcis-only-and-uses-availability-groups)                           | [Scenario 2](#scenario-2-cluster-to-migrate-has-sql-fcis-only-and-no-ag)                                                        | [Scenario 1](#scenario-1-cluster-to-migrate-uses-strictly-availability-groups-windows-server-2008-r2-sp1) | [Scenario 2](#scenario-2-cluster-to-migrate-has-sql-fcis-only-and-no-ag) |
-| **Il cluster usa istanze autonome** | [Scenario 5](#scenario-5-cluster-has-some-non-fci-and-uses-availability-groups)                           | [Scenario 4](#scenario-4-cluster-has-some-non-fci-and-no-availability-groups)                                                         | [Scenario 1](#scenario-1-cluster-to-migrate-uses-strictly-availability-groups-windows-server-2008-r2-sp1) | [Scenario 4](#scenario-4-cluster-has-some-non-fci-and-no-availability-groups) |
+| **Il cluster usa solo istanze di cluster di failover di SQL Server**         | [Scenario 3](#scenario-3-windows-cluster-has-both-sql-fcis-and-sql-server-availability-groups)                           | [Scenario 2](#scenario-2-windows-clusters-with-sql-server-failover-cluster-instances-fcis)                                                        | [Scenario 1](#scenario-1-windows-cluster-with-sql-server-availability-groups-and-no-failover-cluster-instances-fcis) | [Scenario 2](#scenario-2-windows-clusters-with-sql-server-failover-cluster-instances-fcis) |
+| **Il cluster usa istanze autonome** | [Scenario 5](#scenario-5-windows-cluster-with-standalone-sql-server-instances-and-availability-groups)                           | [Scenario 4](#scenario-4-windows-cluster-with-standalone-sql-server-instances-and-no-availability-groups)                                                         | [Scenario 1](#scenario-1-windows-cluster-with-sql-server-availability-groups-and-no-failover-cluster-instances-fcis) | [Scenario 4](#scenario-4-windows-cluster-with-standalone-sql-server-instances-and-no-availability-groups) |
 
 \* Esclusi i nomi di listener di gruppi di disponibilità
 
@@ -285,7 +285,7 @@ La migrazione di un cluster che usa gruppi di disponibilità con repliche autono
 
 ### <a name="includessnoversionincludesssnoversion-mdmd-agent"></a>[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Agent
 
--   **Processi**
+-   **processi**
 
     I processi devono essere sottoposti a migrazione insieme ai database di sistema. Nel computer di destinazione, SQL Server Agent o gli utenti che eseguono un processo SQL Server Agent hanno le stesse autorizzazioni specificate nei prerequisiti.
 
@@ -309,7 +309,7 @@ La migrazione di un cluster che usa gruppi di disponibilità con repliche autono
 
 ### <a name="integration-services"></a>Integration Services
 
--   **Progetti SSIS**
+-   **progetti SSIS**
 
     La migrazione dei progetti SSIS viene eseguita insieme a quella del database SSIS. Dopo lo spostamento del database SSIS, i pacchetti sono eseguibili immediatamente prima dello spostamento delle tabelle di sistema.
 

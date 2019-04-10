@@ -30,12 +30,12 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: c43e8ae5b32753eccb42e1e706bbe13b9bf4f8d9
-ms.sourcegitcommit: 97340deee7e17288b5eec2fa275b01128f28e1b8
+ms.openlocfilehash: af33c0234ba1b8e6b92b5f1fee7f17f4d12dc667
+ms.sourcegitcommit: 3cfedfeba377560d460ca3e42af1e18824988c07
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55421218"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59042171"
 ---
 # <a name="create-user-transact-sql"></a>CREATE USER (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -55,9 +55,9 @@ ms.locfileid: "55421218"
 -   Utente basato su un gruppo di Windows che non dispone di account di accesso. `CREATE USER [Contoso\Sales];`  
 -   Utente [!INCLUDE[ssSDS](../../includes/sssds-md.md)] o [!INCLUDE[ssSDW_md](../../includes/sssdw-md.md)] basato su un utente Azure Active Directory. `CREATE USER [Contoso\Fritz] FROM EXTERNAL PROVIDER;`     
 
--   Utente del database indipendente con password. Non è disponibile in [!INCLUDE[ssSDW_md](../../includes/sssdw-md.md)]. `CREATE USER Mary WITH PASSWORD = '********';`   
+-   Utente del database indipendente con password. (Non disponibile in [!INCLUDE[ssSDW_md](../../includes/sssdw-md.md)].) `CREATE USER Mary WITH PASSWORD = '********';`   
   
-**Utenti basati sulle entità di sicurezza di Windows che si connettono tramite account di accesso del gruppo di Windows**  
+**Utenti basati sulle entità di Windows che si connettono tramite account di accesso del gruppo di Windows**  
   
 -   Utente basato su un utente di Windows che non dispone di account di accesso, ma che può connettersi al [!INCLUDE[ssDE](../../includes/ssde-md.md)] tramite l'appartenenza a un gruppo di Windows. `CREATE USER [Contoso\Fritz];`  
   
@@ -192,15 +192,16 @@ CREATE USER user_name
   
  Specifica l'entità di sicurezza di Azure Active Directory per la quale viene creato l'utente del database. *Azure_Active_Directory_principal* può essere un utente, un gruppo o un'applicazione di Azure Active Directory. Gli utenti di Azure Active Directory non possono avere un account di accesso di autenticazione di Windows in [!INCLUDE[ssSDS](../../includes/sssds-md.md)]. Possono averlo solo gli utenti del database. La stringa di connessione deve specificare il database indipendente come catalogo iniziale.
 
- Per gli utenti usare l'alias completo dell'entità di sicurezza del loro dominio.   
- 
--   `CREATE USER [bob@contoso.com] FROM EXTERNAL PROVIDER;`  
-  
--   `CREATE USER [alice@fabrikam.onmicrosoft.com] FROM EXTERNAL PROVIDER;`
+ Per le entità di sicurezza di Azure AD, la sintassi CREATE USER richiede:
 
- Per i gruppi di sicurezza usare il *nome visualizzato* del gruppo di sicurezza. Per il gruppo di sicurezza *Nurses* usare:  
+- UserPrincipalName dell'oggetto di Azure AD per utenti di Azure AD.
+
+  - `CREATE USER [bob@contoso.com] FROM EXTERNAL PROVIDER;`  
+  - `CREATE USER [alice@fabrikam.onmicrosoft.com] FROM EXTERNAL PROVIDER;`
+
+- DisplayName dell'oggetto di Azure AD per i gruppi di Azure AD e le applicazioni di Azure AD. Nel caso del gruppo di sicurezza *Nurses* si userebbe:  
   
--   `CREATE USER [Nurses] FROM EXTERNAL PROVIDER;`  
+  - `CREATE USER [Nurses] FROM EXTERNAL PROVIDER;`  
   
  Per altre informazioni, vedere [Connessione al database SQL oppure a SQL Data Warehouse con l'autenticazione di Azure Active Directory](https://azure.microsoft.com/documentation/articles/sql-database-aad-authentication).  
   
@@ -303,7 +304,7 @@ Quando si crea l'utente nel database dell'istanza gestita di database SQL, login
 -   `CREATE USER [Domain1\WindowsGroupManagers]`  
 -   `CREATE USER Barry WITH PASSWORD = 'sdjklalie8rew8337!$d'`  
   
-**Utenti basati su entità di sicurezza di Windows senza account di accesso nel database master**  
+**Utenti basati su entità di Windows senza account di accesso nel database master**  
   
  L'elenco seguente illustra la sintassi possibile per gli utenti che hanno accesso al [!INCLUDE[ssDE](../../includes/ssde-md.md)] attraverso un gruppo di Windows, ma che non hanno un account di accesso nel database **master**. Questa sintassi può essere usata in tutti i tipi di database. Le opzioni della lingua e dello schema predefinito non sono elencate.  
   
@@ -318,7 +319,7 @@ Quando si crea l'utente nel database dell'istanza gestita di database SQL, login
 -   `CREATE USER [Domain1\WindowsGroupManagers] FOR LOGIN [Domain1\WindowsGroupManagers]`  
 -   `CREATE USER [Domain1\WindowsGroupManagers] FROM LOGIN [Domain1\WindowsGroupManagers]`  
   
-**Utenti che non possono eseguire l'autenticazione**  
+**Utenti che non eseguono l'autenticazione**  
   
  Nell'elenco seguente viene illustrata la sintassi possibile per gli utenti che non possono effettuare l'accesso a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
@@ -336,13 +337,13 @@ Quando si crea l'utente nel database dell'istanza gestita di database SQL, login
   
  In un database indipendente, la creazione di utenti agevola la separazione del database dall'istanza del [!INCLUDE[ssDE](../../includes/ssde-md.md)]. In questo modo, risulterà più facile spostare il database in un'altra istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Per altre informazioni, vedere [Database indipendenti](../../relational-databases/databases/contained-databases.md) e [Utenti di database indipendente: rendere portabile un database](../../relational-databases/security/contained-database-users-making-your-database-portable.md). Per modificare un utente del database basato su un account di accesso dell'autenticazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in un utente del database indipendente con password, vedere [sp_migrate_user_to_contained &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-migrate-user-to-contained-transact-sql.md).  
   
- In un database indipendente non è necessario che gli utenti abbiano un account di accesso nel database **master**. Gli amministratori del [!INCLUDE[ssDE](../../includes/ssde-md.md)] devono essere consapevoli che l'accesso a un database indipendente può essere concesso al livello del database, anziché al livello del [!INCLUDE[ssDE](../../includes/ssde-md.md)]. Per altre informazioni, vedere [Security Best Practices with Contained Databases](../../relational-databases/databases/security-best-practices-with-contained-databases.md).  
+ In un database indipendente non è necessario che gli utenti abbiano un account di accesso nel database **master**. [!INCLUDE[ssDE](../../includes/ssde-md.md)] Gli amministratori devono essere consapevoli che l'accesso a un database indipendente può essere concesso al livello del database, anziché al livello del [!INCLUDE[ssDE](../../includes/ssde-md.md)]. Per altre informazioni, vedere [Security Best Practices with Contained Databases](../../relational-databases/databases/security-best-practices-with-contained-databases.md).  
   
  Quando si usano utenti di database indipendenti in [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], configurare l'accesso usando una regola del firewall a livello di database, invece di una regola del firewall a livello di server. Per altre informazioni, vedere[sp_set_database_firewall_rule &#40;Database di SQL Azure&#41;](../../relational-databases/system-stored-procedures/sp-set-database-firewall-rule-azure-sql-database.md).
  
 Per gli utenti di database indipendenti [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] e [!INCLUDE[ssSDW_md](../../includes/sssdw-md.md)], SQL Server Management Studio supporta Multi-Factor Authentication. Per altre informazioni, vedere [Supporto di SQL Server Management Studio (SSMS) per l'autenticazione MFA di Azure AD con database SQL e SQL Data Warehouse](https://azure.microsoft.com/documentation/articles/sql-database-ssms-mfa-authentication/).  
   
-### <a name="permissions"></a>Permissions  
+### <a name="permissions"></a>Autorizzazioni  
  È richiesta l'autorizzazione ALTER ANY USER per il database.  
   
 ## <a name="examples"></a>Esempi  
@@ -361,7 +362,7 @@ CREATE USER AbolrousHazem FOR LOGIN AbolrousHazem;
 GO   
 ```  
   
-### <a name="b-creating-a-database-user-with-a-default-schema"></a>b. Creazione di un utente del database con uno schema predefinito  
+### <a name="b-creating-a-database-user-with-a-default-schema"></a>B. Creazione di un utente del database con uno schema predefinito  
  Nell'esempio seguente viene innanzitutto creato un account di accesso al server denominato `WanidaBenshoof` con una password, quindi viene creato un corrispondente utente del database `Wanida` con lo schema predefinito `Marketing`.  
   
 ```  
@@ -468,7 +469,7 @@ WITH
 
  Per creare un utente di Azure AD da un account di accesso di Azure AD, usare la sintassi seguente.
 
- Accedere all'istanza gestita con un account di accesso di Azure AD con il ruolo `sysadmin`. La sintassi seguente crea un utente di Azure AD bob@contoso.com dall'account di accesso bob@contoso.com. Questo account di accesso è stato creato nell'esempio [CREATE LOGIN](create-login-transact-sql.md#d-creating-a-login-for-a-federated-azure-ad-account).
+ Accedere all'istanza gestita con un account di accesso di Azure AD con il ruolo `sysadmin`. La sintassi seguente crea un utente di Azure AD bob@contoso.com dall'account di accesso bob@contoso.com. Questo account di accesso è stato creato nell'esempio [CREATE LOGIN](create-login-transact-sql.md#examples).
 
 ```sql
 CREATE USER [bob@contoso.com] FROM LOGIN [bob@contoso.com];
@@ -506,7 +507,7 @@ Dopo aver creato l'utente, è consigliabile aggiungerlo a un ruolo del database 
 È anche consigliabile [concedere autorizzazioni per oggetti](../../t-sql/statements/grant-object-permissions-transact-sql.md) al ruolo perché possa accedere alle tabelle. Per informazioni generali sul modello di sicurezza di SQL Server, vedere [Autorizzazioni](../../relational-databases/security/permissions-database-engine.md).   
   
 ## <a name="see-also"></a>Vedere anche  
- [Creare un utente di database](../../relational-databases/security/authentication-access/create-a-database-user.md)   
+ [Creazione di un utente di database](../../relational-databases/security/authentication-access/create-a-database-user.md)   
  [sys.database_principals &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-principals-transact-sql.md)   
  [ALTER USER &#40;Transact-SQL&#41;](../../t-sql/statements/alter-user-transact-sql.md)   
  [DROP USER &#40;Transact-SQL&#41;](../../t-sql/statements/drop-user-transact-sql.md)   
@@ -515,7 +516,3 @@ Dopo aver creato l'utente, è consigliabile aggiungerlo a un ruolo del database 
  [Database indipendenti](../../relational-databases/databases/contained-databases.md)   
  [Connessione al database SQL con l'autenticazione di Azure Active Directory](https://azure.microsoft.com/documentation/articles/sql-database-aad-authentication)   
  [Introduzione alle autorizzazioni del motore di database](../../relational-databases/security/authentication-access/getting-started-with-database-engine-permissions.md)  
-  
-  
-
-
