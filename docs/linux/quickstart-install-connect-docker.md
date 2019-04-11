@@ -5,7 +5,7 @@ description: Questa Guida introduttiva illustra come usare Docker per eseguire S
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 01/10/2019
+ms.date: 04/10/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
@@ -14,12 +14,12 @@ ms.prod_service: linux
 ms.assetid: 82737f18-f5d6-4dce-a255-688889fdde69
 moniker: '>= sql-server-linux-2017 || >= sql-server-2017 || =sqlallproducts-allversions'
 zone_pivot_groups: cs1-command-shell
-ms.openlocfilehash: 794fe2353767da890c6998e8d858555dbef1eb78
-ms.sourcegitcommit: a9a03f9a7ec4dad507d2dfd5ca33571580114826
+ms.openlocfilehash: d9b00170520d4c0b7202f7d81d3427912d8725d1
+ms.sourcegitcommit: 57f7e5f25161dbb4cc446e751ea74b1ac5f86165
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/28/2019
-ms.locfileid: "58566420"
+ms.lasthandoff: 04/10/2019
+ms.locfileid: "59476687"
 ---
 # <a name="quickstart-run-sql-server-container-images-with-docker"></a>Avvio rapido: Eseguire le immagini del contenitore SQL Server con Docker
 
@@ -110,7 +110,7 @@ any changes to one section should be duplicated in the other-->
    | **-e 'ACCEPT_EULA=Y'** |  Impostare la variabile **ACCEPT_EULA** su qualsiasi valore per confermare l'accettazione delle [condizioni di licenza ](https://go.microsoft.com/fwlink/?LinkId=746388). Impostazione obbligatoria per l'immagine di SQL Server. |
    | **-e 'SA_PASSWORD=\<YourStrong!Passw0rd\>'** | Specificare la password complessa composta da almeno 8 caratteri e conforme ai [requisiti per le password di SQL Server](../relational-databases/security/password-policy.md). Impostazione obbligatoria per l'immagine di SQL Server. |
    | **-p 1433:1433** | Eseguire il mapping di una porta TCP nell'ambiente host (primo valore) con una porta TCP nel contenitore (secondo valore). In questo esempio, SQL Server è in ascolto sulla porta TCP 1433 nel contenitore e questa funzionalità è esposta alla porta 1433, nell'host. |
-   | **--name sql1** | Specificare un nome personalizzato per il contenitore, invece di un nome generato in modo casuale. Se si eseguono più contenitori, non è possibile riutilizzare questo stesso nome. |
+   | **-nome sql1** | Specificare un nome personalizzato per il contenitore, invece di un nome generato in modo casuale. Se si eseguono più contenitori, non è possibile riutilizzare questo stesso nome. |
    | **mcr.microsoft.com/mssql/server:2017-latest** | Immagine del contenitore di SQL Server 2017 su Linux. |
 
 3. Per visualizzare i contenitori di Docker, usare il comando `docker ps`.
@@ -205,7 +205,7 @@ L'impostazione di `-h` e `--name` sullo stesso valore è un buon modo per identi
    | **-e 'ACCEPT_EULA=Y'** |  Impostare la variabile **ACCEPT_EULA** su qualsiasi valore per confermare l'accettazione delle [condizioni di licenza ](https://go.microsoft.com/fwlink/?LinkId=746388). Impostazione obbligatoria per l'immagine di SQL Server. |
    | **-e 'SA_PASSWORD=\<YourStrong!Passw0rd\>'** | Specificare la password complessa composta da almeno 8 caratteri e conforme ai [requisiti per le password di SQL Server](../relational-databases/security/password-policy.md). Impostazione obbligatoria per l'immagine di SQL Server. |
    | **-p 1433:1433** | Eseguire il mapping di una porta TCP nell'ambiente host (primo valore) con una porta TCP nel contenitore (secondo valore). In questo esempio, SQL Server è in ascolto sulla porta TCP 1433 nel contenitore e questa funzionalità è esposta alla porta 1433, nell'host. |
-   | **--name sql1** | Specificare un nome personalizzato per il contenitore, invece di un nome generato in modo casuale. Se si eseguono più contenitori, non è possibile riutilizzare questo stesso nome. |
+   | **-nome sql1** | Specificare un nome personalizzato per il contenitore, invece di un nome generato in modo casuale. Se si eseguono più contenitori, non è possibile riutilizzare questo stesso nome. |
    | **mcr.microsoft.com/mssql/server:2019-CTP2.4-ubuntu** | L'immagine del contenitore Linux di SQL Server 2019 CTP 2.4. |
 
 3. Per visualizzare i contenitori di Docker, usare il comando `docker ps`.
@@ -288,11 +288,9 @@ La procedura seguente usa lo strumento da riga di comando di SQL Server, **sqlcm
 
 2. Una volta all'interno del contenitore, eseguire la connessione in locale con sqlcmd. Sqlcmd non è incluso nel percorso per impostazione predefinita, quindi occorre specificare il percorso completo.
 
-   ::: zone pivot="cs1-bash"
    ```bash
    /opt/mssql-tools/bin/sqlcmd -S localhost -U SA -P '<YourNewStrong!Passw0rd>'
    ```
-   ::: zone-end
 
    > [!TIP]
    > È possibile omettere la password nella riga di comanda perché sia richiesto di essere immessa.
@@ -406,9 +404,9 @@ La procedura seguente usa **sqlcmd** all'esterno del contenitore per stabilire l
 Altri strumenti usati comunemente per connettersi a SQL Server sono:
 
 - [Visual Studio Code](sql-server-linux-develop-use-vscode.md)
-- [SQL Server Management Studio (SSMS) per Windows](sql-server-linux-manage-ssms.md)
+- [SQL Server Management Studio (SSMS) in Windows](sql-server-linux-manage-ssms.md)
 - [Azure Data Studio](../azure-data-studio/what-is.md)
-- [mssql-cli (Preview)](https://blogs.technet.microsoft.com/dataplatforminsider/2017/12/12/try-mssql-cli-a-new-interactive-command-line-tool-for-sql-server/)
+- [MSSQL-cli (anteprima)](https://blogs.technet.microsoft.com/dataplatforminsider/2017/12/12/try-mssql-cli-a-new-interactive-command-line-tool-for-sql-server/)
 
 ## <a name="remove-your-container"></a>Rimuovere il contenitore
 

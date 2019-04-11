@@ -10,12 +10,12 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 monikerRange: '>= sql-server-2017 || = sqlallproducts-allversions'
-ms.openlocfilehash: efd71653e723344e9175d9ab1529fafd610901df
-ms.sourcegitcommit: 0a7beb2f51e48889b4a85f7c896fb650b208eb36
+ms.openlocfilehash: 4c1b433ae2023f544073e285cca9594c980dd83f
+ms.sourcegitcommit: 57f7e5f25161dbb4cc446e751ea74b1ac5f86165
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57685429"
+ms.lasthandoff: 04/10/2019
+ms.locfileid: "59476717"
 ---
 # <a name="analyze-in-excel"></a>Analizza in Excel
 
@@ -33,7 +33,7 @@ Questo articolo fa parte di un'esercitazione di modellazione tabulare, che deve 
   
 ## <a name="browse-using-the-default-and-internet-sales-perspectives"></a>Sfogliare il modello utilizzando la prospettiva predefinita e la prospettiva Internet Sales  
 
-In queste prime attività, esplorare il modello usando la prospettiva predefinita, che include tutti gli oggetti modello, e anche tramite la prospettiva Internet Sales è in precedenza. La prospettiva Internet Sales esclude l'oggetto Customer table.  
+In queste prime attività, si passa il modello usando la prospettiva predefinita, che include tutti gli oggetti modello, e anche tramite la prospettiva Internet Sales creata in precedenza. La prospettiva Internet Sales esclude l'oggetto Customer table.  
   
 #### <a name="to-browse-by-using-the-default-perspective"></a>Per sfogliare il modello tramite la prospettiva predefinita  
   
