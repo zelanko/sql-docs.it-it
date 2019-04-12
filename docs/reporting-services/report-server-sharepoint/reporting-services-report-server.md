@@ -7,12 +7,12 @@ ms.technology: report-server-sharepoint
 ms.topic: conceptual
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 624d00d0c9cd27acbaa00fefa52f6880c7a69916
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
-ms.translationtype: HT
+ms.openlocfilehash: f5f5a449fc3bf87ce6999f424957466bae49ee38
+ms.sourcegitcommit: 1a4aa8d2bdebeb3be911406fc19dfb6085d30b04
+ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52400585"
+ms.lasthandoff: 04/03/2019
+ms.locfileid: "58872231"
 ---
 # <a name="reporting-services-report-server"></a>Server di report di Reporting Services
 
@@ -25,7 +25,7 @@ Questo articolo offre informazioni sull'elemento centrale di un'installazione di
 > [!NOTE]
 > L'integrazione di Reporting Services con SharePoint non è più disponibile nelle versioni successive a SQL Server 2016.
 
-Un server di report di Reporting Services viene eseguito in una delle due modalità di distribuzione: nativa o SharePoint. Vedere la sezione [Confronto tra le funzionalità delle modalità SharePoint e nativa](#bkmk_featuresupport) per un confronto delle funzionalità.  
+Un server di report di Reporting Services viene eseguito in una delle due modalità di distribuzione: nativa o SharePoint. Vedere la sezione [Confronto tra le funzionalità delle modalità SharePoint e nativa](#feature-comparison-of-sharepoint-and-native-mode) per un confronto delle funzionalità.  
   
  **Installazione:** per informazioni sull'installazione di Reporting Services, vedere [Installare Reporting Services](../install-windows/install-reporting-services.md).
 
