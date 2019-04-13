@@ -9,12 +9,12 @@ ms.topic: tutorial
 ms.prod: sql
 ms.custom: sql-linux,mvc
 ms.technology: linux
-ms.openlocfilehash: 669d02d32642ba4723892a98a1f4d0f3bc6e51f6
-ms.sourcegitcommit: c51f7f2f5d622a1e7c6a8e2270bd25faba0165e7
+ms.openlocfilehash: 13bd39a2d5334c2d343fdbc6c77a697a5d6a8403
+ms.sourcegitcommit: b2a29f9659f627116d0a92c03529aafc60e1b85a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53626321"
+ms.lasthandoff: 04/12/2019
+ms.locfileid: "59516607"
 ---
 # <a name="deploy-a-sql-server-container-in-kubernetes-with-azure-kubernetes-services-aks"></a>Distribuire un contenitore di SQL Server in Kubernetes con servizi Kubernetes di Azure (AKS)
 
@@ -155,7 +155,7 @@ Configurare un [volume permanente](https://kubernetes.io/docs/concepts/storage/p
 
 In questo esempio, il contenitore che ospita l'istanza di SQL Server viene descritto come un oggetto di distribuzione di Kubernetes. La distribuzione crea un set di repliche. Il set di repliche consente di creare il pod. 
 
-In questo passaggio, creare un manifesto per descrivere il contenitore basato su SQL Server [mssql-server-linux](https://hub.docker.com/r/microsoft/mssql-server-linux/) immagine Docker. I riferimenti al manifesto le `mssql-server` attestazione di volume permanente e il `mssql` segreto che sono già state applicate al cluster Kubernetes. Il manifesto descrive anche un [servizio](https://kubernetes.io/docs/concepts/services-networking/service/). Questo servizio è un servizio di bilanciamento del carico. Il servizio di bilanciamento del carico garantisce che l'indirizzo IP viene mantenuta dopo che viene recuperato l'istanza di SQL Server. 
+In questo passaggio, creare un manifesto per descrivere il contenitore basato su SQL Server [mssql-server-linux](https://hub.docker.com/_/microsoft-mssql-server) immagine Docker. I riferimenti al manifesto le `mssql-server` attestazione di volume permanente e il `mssql` segreto che sono già state applicate al cluster Kubernetes. Il manifesto descrive anche un [servizio](https://kubernetes.io/docs/concepts/services-networking/service/). Questo servizio è un servizio di bilanciamento del carico. Il servizio di bilanciamento del carico garantisce che l'indirizzo IP viene mantenuta dopo che viene recuperato l'istanza di SQL Server. 
 
 1. Creare un manifesto (con estensione YAML) per descrivere la distribuzione. L'esempio seguente illustra una distribuzione, tra cui un contenitore in base l'immagine del contenitore SQL Server.
 
@@ -253,7 +253,7 @@ In questo passaggio, creare un manifesto per descrivere il contenitore basato su
    Nell'immagine precedente, il pod con stato `Running`. Questo stato indica che il contenitore è pronto. L'operazione potrebbe richiedere alcuni minuti.
 
    >[!NOTE]
-   >Dopo aver creata la distribuzione, può richiedere alcuni minuti prima che il pod è visibile. Il ritardo nel cluster effettua il pull, infatti, il [mssql-server-linux](https://hub.docker.com/r/microsoft/mssql-server-linux/) immagine dall'hub Docker. Dopo che l'immagine verrà inserita la prima volta, le distribuzioni successive potrebbero essere più veloce se la distribuzione è destinata a un nodo che dispone già dell'immagine memorizzati nella cache su di esso. 
+   >Dopo aver creata la distribuzione, può richiedere alcuni minuti prima che il pod è visibile. Il ritardo nel cluster effettua il pull, infatti, il [mssql-server-linux](https://hub.docker.com/_/microsoft-mssql-server) immagine dall'hub Docker. Dopo che l'immagine verrà inserita la prima volta, le distribuzioni successive potrebbero essere più veloce se la distribuzione è destinata a un nodo che dispone già dell'immagine memorizzati nella cache su di esso. 
 
 1. Verificare che i servizi sono in esecuzione. Eseguire il comando seguente:
 
