@@ -18,15 +18,15 @@ ms.assetid: 07f8f594-75b4-4591-8c29-d63811e7753e
 author: pmasl
 ms.author: pelopes
 manager: amitban
-ms.openlocfilehash: ba3e358e897b35aadf68ce198c0a43ec8f24adef
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: 4af50c6df7ef8ea451f38a038d19e39491604308
+ms.sourcegitcommit: b2a29f9659f627116d0a92c03529aafc60e1b85a
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56295669"
+ms.lasthandoff: 04/12/2019
+ms.locfileid: "59516557"
 ---
 # <a name="upgrading-databases-by-using-the-query-tuning-assistant"></a>Aggiornamento di database mediante l'Assistente ottimizzazione query
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
 Quando si esegue la migrazione da una versione precedente di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] o versioni successive e si aggiorna il [livello di compatibilità del database](../../relational-databases/databases/view-or-change-the-compatibility-level-of-a-database.md) alla versione più recente disponibile, un carico di lavoro può essere esposto al rischio di regressione delle prestazioni. Questo è anche possibile in misura minore durante l'aggiornamento da [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] a una nuova versione.
 
@@ -206,7 +206,7 @@ L'Assistente ottimizzazione Query è una funzionalità basata sulla sessione che
     > Se si elimina una sessione che aveva distribuito guide di piano, non è possibile usare l'Assistente ottimizzazione query per eseguire il rollback.    
     > Cercare invece le guide di piano mediante la tabella di sistema [sys.plan_guides](../../relational-databases/system-catalog-views/sys-plan-guides-transact-sql.md) ed eliminarle manualmente con [sp_control_plan_guide](../../relational-databases/system-stored-procedures/sp-control-plan-guide-transact-sql.md).  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorizzazioni  
 È necessaria l'appartenenza al ruolo **db_owner**.
   
 ## <a name="see-also"></a>Vedere anche  

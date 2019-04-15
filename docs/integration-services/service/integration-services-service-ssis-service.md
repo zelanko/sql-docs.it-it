@@ -23,12 +23,12 @@ ms.assetid: 2c785b3b-4a0c-4df7-b5cd-23756dc87842
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 7e64827ba35236f120f296baaaff7d01833ed6f5
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 9c29a6baa8948168f4fa8bc8a8099941e8b91503
+ms.sourcegitcommit: 2e7686443a61b1a2cf4ca47d9ab1010b9e9b5188
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58280545"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59291561"
 ---
 # <a name="integration-services-service-ssis-service"></a>Servizio Integration Services (servizio SSIS)
   Negli argomenti contenuti in questa sezione viene illustrato il servizio [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] , un servizio Windows per la gestione dei pacchetti di [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . Questo servizio non è necessario per creare, salvare ed eseguire i pacchetti di Integration Services. [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] supporta il servizio [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] per la compatibilità con le versioni precedenti di [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)].  
@@ -381,7 +381,7 @@ Per altre informazioni, vedere [Getting Cross Domain Kerberos and Delegation wor
 > [!IMPORTANT]  
 >  Per gestire i pacchetti archiviati in un server remoto, non è necessario connettersi all'istanza del servizio [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] sul server remoto in questione. Modificare, invece, il file di configurazione per il servizio [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] in modo che in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] vengano visualizzati i pacchetti archiviati nel server remoto.
   
- Il servizio [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] usa il protocollo DCOM. Per altre informazioni sul funzionamento del protocollo DCOM in presenza di firewall, vedere l'articolo[Using Distributed COM with Firewalls](https://go.microsoft.com/fwlink/?LinkId=12490)(Uso di COM distribuito con i firewall) in MSDN Library.  
+ Il servizio [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] usa il protocollo DCOM.
   
  Sono disponibili numerosi sistemi firewall. Se si esegue un firewall diverso da Windows Firewall, consultare la documentazione del firewall per informazioni specifiche sul sistema in uso.  
   

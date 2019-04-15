@@ -17,12 +17,12 @@ ms.assetid: 9f761846-390e-46d5-9db7-858943d40849
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: a399ee84e84f0c85e057b8eaf6294548e18f75ee
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 84711a5bdef0ce13f640b26b3973860b9b5a6f48
+ms.sourcegitcommit: 2e7686443a61b1a2cf4ca47d9ab1010b9e9b5188
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58290567"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59291551"
 ---
 # <a name="xml-task"></a>Attività XML
   L'attività XML consente di eseguire operazioni su dati in formato XML. Tramite questa attività un pacchetto può recuperare documenti XML, applicare operazioni ai documenti utilizzando fogli di stile XSLT (Extensible Stylesheet Language Transformation) ed espressioni XPath, unire più documenti oppure convalidare, confrontare e salvare i documenti aggiornati in file e variabili.  
@@ -121,7 +121,7 @@ ms.locfileid: "58290567"
   
  Per ulteriori informazioni sulle proprietà che è possibile impostare in Progettazione [!INCLUDE[ssIS](../../includes/ssis-md.md)] , fare clic su uno degli argomenti seguenti:  
   
--   [Eseguire la convalida XML con l'attività XML](../../integration-services/control-flow/validate-xml-with-the-xml-task.md)  
+-   [Validate XML with the XML Task](../../integration-services/control-flow/validate-xml-with-the-xml-task.md)  
   
 -   [Pagina Espressioni](../../integration-services/expressions/expressions-page.md)  
   
@@ -186,7 +186,7 @@ ms.locfileid: "58290567"
  **OverwriteDestination**  
  Consente di indicare se sovrascrivere il file o la variabile di destinazione.  
   
- **Destinazione**  
+ **Destination**  
  Selezionare una gestione connessione file esistente o fare clic su \<**Nuova connessione...**> per creare una nuova gestione connessione.  
   
  **Argomenti correlati:** [Gestione connessione file](../../integration-services/connection-manager/file-connection-manager.md), [Editor gestione connessione file](../../integration-services/connection-manager/file-connection-manager-editor.md)  
@@ -245,7 +245,7 @@ ms.locfileid: "58290567"
  **OverwriteDestination**  
  Consente di indicare se sovrascrivere il file o la variabile di destinazione.  
   
- **Destinazione**  
+ **Destination**  
  Se la proprietà **DestinationType** è impostata su **Connessione file**, selezionare una gestione connessione file oppure fare clic su \<**Nuova connessione...**> per creare una nuova gestione connessione.  
   
  **Argomenti correlati:** [Gestione connessione file](../../integration-services/connection-manager/file-connection-manager.md), [Editor gestione connessione file](../../integration-services/connection-manager/file-connection-manager-editor.md)  
@@ -291,7 +291,7 @@ ms.locfileid: "58290567"
  **OverwriteDestination**  
  Consente di indicare se sovrascrivere il file o la variabile di destinazione.  
   
- **Destinazione**  
+ **Destination**  
  Se la proprietà **DestinationType** è impostata su **Connessione file**, selezionare una gestione connessione file oppure fare clic su \<**Nuova connessione...**> per creare una nuova gestione connessione.  
   
  **Argomenti correlati:** [Gestione connessione file](../../integration-services/connection-manager/file-connection-manager.md), [Editor gestione connessione file](../../integration-services/connection-manager/file-connection-manager-editor.md)  
@@ -371,7 +371,7 @@ ms.locfileid: "58290567"
  **OverwriteDestination**  
  Consente di indicare se sovrascrivere il file o la variabile di destinazione.  
   
- **Destinazione**  
+ **Destination**  
  Se la proprietà **DestinationType** è impostata su **Connessione file**, selezionare una gestione connessione file oppure fare clic su \<**Nuova connessione...**> per creare una nuova gestione connessione.  
   
  **Argomenti correlati:** [Gestione connessione file](../../integration-services/connection-manager/file-connection-manager.md), [Editor gestione connessione file](../../integration-services/connection-manager/file-connection-manager-editor.md)  
@@ -446,7 +446,7 @@ ms.locfileid: "58290567"
  **OverwriteDestination**  
  Consente di indicare se sovrascrivere il file o la variabile di destinazione.  
   
- **Destinazione**  
+ **Destination**  
  Se la proprietà **DestinationType** è impostata su **Connessione file**, selezionare una gestione connessione file oppure fare clic su \<**Nuova connessione...**> per creare una nuova gestione connessione.  
   
  **Argomenti correlati:** [Gestione connessione file](../../integration-services/connection-manager/file-connection-manager.md), [Editor gestione connessione file](../../integration-services/connection-manager/file-connection-manager-editor.md)  
@@ -492,7 +492,7 @@ ms.locfileid: "58290567"
  **OverwriteDestination**  
  Consente di indicare se sovrascrivere il file o la variabile di destinazione.  
   
- **Destinazione**  
+ **Destination**  
  Se la proprietà **DestinationType** è impostata su **Connessione file**, selezionare una gestione connessione file oppure fare clic su \<**Nuova connessione...**> per creare una nuova gestione connessione.  
   
  **Argomenti correlati:** [Gestione connessione file](../../integration-services/connection-manager/file-connection-manager.md), [Editor gestione connessione file](../../integration-services/connection-manager/file-connection-manager-editor.md)  
@@ -530,9 +530,7 @@ ms.locfileid: "58290567"
  **Argomenti correlati**: [Variabili di Integration Services &#40;SSIS&#41;](../../integration-services/integration-services-ssis-variables.md), [Aggiungere una variabile](https://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5)  
   
 ## <a name="related-content"></a>Contenuto correlato  
-  
--   Intervento nel blog sul [componente script di destinazione XML](https://agilebi.com/jwelch/2007/06/02/xml-destination-script-component/)sul sito Web agilebi.com  
-  
+
 -   Esempio di CodePlex sull' [esempio di elaborazione di pacchetti dati XML](https://msftisprodsamples.codeplex.com/wikipage?title=SS2008!Process%20XML%20Data%20Package%20Sample&version=10&ProjectName=msftisprodsamples), su www.codeplex.com  
   
   

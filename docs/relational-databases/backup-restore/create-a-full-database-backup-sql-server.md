@@ -16,12 +16,12 @@ ms.assetid: 586561fc-dfbb-4842-84f8-204a9100a534
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 729464b51af6c9450f9166bd9a3c51d35541810f
-ms.sourcegitcommit: a13256f484eee2f52c812646cc989eb0ce6cf6aa
+ms.openlocfilehash: 21f9be84c86e2991a600dc340347c4ca89f519e9
+ms.sourcegitcommit: ae333686549dda5993fa9273ddf7603adbbaf452
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/25/2019
-ms.locfileid: "56801916"
+ms.lasthandoff: 04/12/2019
+ms.locfileid: "59533339"
 ---
 # <a name="create-a-full-database-backup-sql-server"></a>Creazione di un backup completo del database (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -54,7 +54,7 @@ ms.locfileid: "56801916"
   
  A partire da [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] , le opzioni **PASSWORD** e **MEDIAPASSWORD** non sono più disponibile per la creazione di backup. È possibile ripristinare backup creati con password.  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> Autorizzazioni  
  Le autorizzazioni BACKUP DATABASE e BACKUP LOG vengono assegnate per impostazione predefinita ai membri del ruolo predefinito del server **sysadmin** e dei ruoli predefiniti del database **db_owner** e **db_backupoperator** .  
   
  Eventuali problemi correlati alla proprietà e alle autorizzazioni sul file fisico del dispositivo di backup possono interferire con l'operazione di backup. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] è necessario poter leggere e scrivere nel dispositivo; l'account con il quale viene eseguito il servizio [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **deve** avere autorizzazioni di scrittura. Tuttavia, [sp_addumpdevice](../../relational-databases/system-stored-procedures/sp-addumpdevice-transact-sql.md), che aggiunge una voce per un dispositivo di backup nelle tabelle di sistema, non controlla le autorizzazioni di accesso al file. Di conseguenza, i problemi relativi all'accesso e alla proprietà del file fisico del dispositivo di backup potrebbero emergere solo in fase di accesso alla risorsa fisica durante un tentativo di backup o ripristino.  
@@ -211,19 +211,19 @@ Sono stati creati i criteri di accesso archiviati con diritti di lettura, scritt
 *
     5.  Selezionare `https://mystorageaccount.blob.core.windows.net/myfirstcontainer` dalla casella di testo **Contenitore di Archiviazione di Azure:**
 
-    6.  Nella casella di testo **File di Backup:** digitare `Sales_stripe1of2_20160601.bak`.
+   6.  Nella casella di testo **File di Backup:** digitare `Sales_stripe1of2_20160601.bak`.
 
-    7.  Fare clic su **OK**.
+   7.  Fare clic su **OK**.
 
-    8.  Ripetere i passaggi **4** e **5**.
+   8.  Ripetere i passaggi **4** e **5**.
 
-    9.  Nella casella di testo **File di Backup:** digitare `Sales_stripe2of2_20160601.bak`.
+   9.  Nella casella di testo **File di Backup:** digitare `Sales_stripe2of2_20160601.bak`.
 
-    10.  Fare clic su **OK**.
+   10.  Fare clic su **OK**.
 
-    11.   Fare clic su **OK**.
+   11.   Fare clic su **OK**.
 
-    **D2.  Esiste una firma di accesso condiviso e le credenziali di SQL Server non esistono**
+   **D2.  Esiste una firma di accesso condiviso e le credenziali di SQL Server non esistono**
   5.    Digitare `https://mystorageaccount.blob.core.windows.net/myfirstcontainer` nella casella di testo **Contenitore di Archiviazione di Azure:**
   
   6.    Digitare la firma di accesso condiviso nella casella di testo **Criteri di accesso condiviso:** .
@@ -242,7 +242,7 @@ Sono stati creati i criteri di accesso archiviati con diritti di lettura, scritt
   8.    Fare clic su **OK**.
 
   
-##  <a name="TsqlProcedure"></a> Utilizzo di Transact-SQL  
+##  <a name="TsqlProcedure"></a> Uso di Transact-SQL  
   
 ### <a name="create-a-full-database-backup"></a>Creare un backup completo del database  
   

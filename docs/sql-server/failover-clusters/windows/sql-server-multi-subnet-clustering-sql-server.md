@@ -16,12 +16,12 @@ ms.assetid: cd909612-99cc-4962-a8fb-e9a5b918e221
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 39030ba95129160680782eeb88e3b4c99da622e7
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: faa34ef2e1b38fe13f487574ba95d0ad015b08a4
+ms.sourcegitcommit: b2a29f9659f627116d0a92c03529aafc60e1b85a
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52407867"
+ms.lasthandoff: 04/12/2019
+ms.locfileid: "59516587"
 ---
 # <a name="sql-server-multi-subnet-clustering-sql-server"></a>Clustering su più subnet di SQL Server (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -31,7 +31,7 @@ ms.locfileid: "52407867"
 ##  <a name="VisualElement"></a> Clustering di failover su più subnet di SQL Server (due nodi, due subnet)  
  Nella figura seguente è illustrata un'istanza di cluster di failover (FCI) con due nodi e due subnet in [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)].  
   
- ![Architettura con più subnet con MultiSubnetFailover](../../../sql-server/failover-clusters/windows/media/multi-subnet-architecture-withmultisubnetfailoverparam.gif "Architettura con più subnet con MultiSubnetFailover")  
+ ![Architettura con più subnet con MultiSubnetFailover](../../../sql-server/failover-clusters/windows/media/multi-subnet-architecture-withmultisubnetfailoverparam.png "Architettura con più subnet con MultiSubnetFailover")  
   
   
 ##  <a name="Configurations"></a> Configurazioni di istanze di cluster di failover su più subnet  
@@ -45,12 +45,12 @@ ms.locfileid: "52407867"
   
 -   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] SQLCLUST1 sono inclusi i nodi Node1 e Node2. Node1 è connesso a Subnet1 e a Subnet2. Anche Node2 è connesso a Subnet1 e a Subnet2. La dipendenza delle risorse di indirizzo IP viene impostata su **AND** dall'installazione di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .  
   
-    > **NOTA:** questa configurazione non è considerata come una configurazione di cluster di failover su più subnet perché i nodi di tipo cluster si trovano nello stesso set di subnet.  
+    > **NOTA:** Questa configurazione non è considerata come una configurazione di cluster di failover su più subnet poiché i nodi di tipo cluster si trovano nello stesso set di subnet.  
   
 ##  <a name="ComponentsAndConcepts"></a> Considerazioni relative alle risorse di indirizzo IP  
  In una configurazione del cluster di failover su più subnet, gli indirizzi IP non sono di proprietà di tutti i nodi del cluster di failover e potrebbero non essere tutti online durante l'avvio di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . A partire da [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)], è possibile impostare la dipendenza delle risorse di indirizzo IP su **OR**. Questa operazione consente a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] di essere online quando è presente almeno un indirizzo IP valido a cui possa associarsi.  
   
-> **NOTA:** Nelle configurazioni di cluster multisito delle versioni di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] precedenti a [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)]veniva usata una tecnologia V-LAN estesa per esporre un singolo indirizzo IP per il failover nei siti. Grazie alla nuova funzionalità di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] che consente di eseguire il clustering di nodi in subnet diverse, è ora possibile configurare cluster di failover di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] in più siti senza implementare la tecnologia V-LAN estesa.  
+> **NOTA:** Nelle configurazioni di cluster multisito delle versioni di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] precedenti a [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)]veniva utilizzata una tecnologia V-LAN estesa per esporre un singolo indirizzo IP per failover nei siti. Grazie alla nuova funzionalità di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] che consente di eseguire il clustering di nodi in subnet diverse, è ora possibile configurare cluster di failover di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] in più siti senza implementare la tecnologia V-LAN estesa.  
   
 ### <a name="ip-address-resource-or-dependency-considerations"></a>Considerazioni sulla dipendenza OR delle risorse di indirizzo IP  
  Se la dipendenza delle risorse di indirizzo IP viene impostata su **OR**, è opportuno considerare il seguente comportamento di failover:  

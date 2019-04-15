@@ -19,12 +19,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: f29c5c3fbe0a0d9e3e8bb724ad2f7b2af7ad545e
-ms.sourcegitcommit: eb1f3a2f5bc296f74545f17d20c6075003aa4c42
+ms.openlocfilehash: 1714cc67cae1d8f2b49117891fa5a5b060f14415
+ms.sourcegitcommit: ae333686549dda5993fa9273ddf7603adbbaf452
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52191051"
+ms.lasthandoff: 04/12/2019
+ms.locfileid: "59533349"
 ---
 # <a name="create-indexed-views"></a>Creazione di viste indicizzate
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -46,7 +46,7 @@ ms.locfileid: "52191051"
 > <sup>1</sup> Ad esempio, operazioni UPDATE, DELETE o INSERT.   
   
 ###  <a name="Restrictions"></a> Opzioni SET necessarie per le viste indicizzate  
-La valutazione di una stessa espressione può produrre risultati diversi nel [!INCLUDE[ssDE](../../includes/ssde-md.md)] se sono attive diverse opzioni SET quando la query viene eseguita. Ad esempio, dopo aver impostato l'opzione SET `CONCAT_NULL_YIELDS_NULL` su ON, l'espressione `'abc' + NULL` restituisce il valore `NULL`. Tuttavia, dopo aver impostato `CONCAT_NULL_YIEDS_NULL` su OFF, la stessa espressione produce `'abc'`.  
+La valutazione di una stessa espressione può produrre risultati diversi nel [!INCLUDE[ssDE](../../includes/ssde-md.md)] se sono attive diverse opzioni SET quando la query viene eseguita. Ad esempio, dopo aver impostato l'opzione SET `CONCAT_NULL_YIELDS_NULL` su ON, l'espressione `'abc' + NULL` restituisce il valore `NULL`. Tuttavia, dopo aver impostato `CONCAT_NULL_YIELDS_NULL` su OFF, la stessa espressione produce `'abc'`.  
   
 Per essere certi che le viste possano essere gestite in modo corretto e restituiscano risultati coerenti, è necessario usare valori fissi per varie opzioni SET delle viste indicizzate. Le opzioni SET specificate nella tabella seguente devono essere impostate sui valori indicati nella colonna **Valore obbligatorio** quando si verificano le seguenti condizioni:  
   
@@ -155,12 +155,12 @@ Durante l'esecuzione di DML, ad esempio di `UPDATE`, `DELETE` o `INSERT`, in una
   
  È possibile disabilitare gli indici di tabelle e viste. Quando l'indice cluster di una tabella è disabilitato, anche gli indici delle viste associate alla tabella sono disabilitati.  
  
-<a name="nondeterministic"></a> Le espressioni che prevedono la conversione implicita di stringhe di caratteri nel tipo di dati **datetime** o **smalldatetime** sono considerate non deterministiche. Per altre informazioni, vedere [Nondeterministic conversion of literal date strings into DATE values](../../t-sql/data-types/nondeterministic-convert-date-literals.md) (Conversione non deterministica di stringhe di valori letterali in valori DATE).
+<a name="nondeterministic"></a> Le espressioni che prevedono la conversione implicita di stringhe di caratteri nel tipo di dati **datetime** o **smalldatetime** sono considerate non deterministiche. Per altre informazioni, vedere [Conversione non deterministica di stringhe di valori letterali in valori DATE](../../t-sql/data-types/nondeterministic-convert-date-literals.md).
 
 
 ###  <a name="Security"></a> Sicurezza  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> Autorizzazioni  
  Richiede l'autorizzazione **CREATE VIEW** per il database e l'autorizzazione **ALTER** per lo schema in cui viene creata la vista.  
   
 ##  <a name="TsqlProcedure"></a> Uso di Transact-SQL  
@@ -171,7 +171,7 @@ Durante l'esecuzione di DML, ad esempio di `UPDATE`, `DELETE` o `INSERT`, in una
   
 2.  Sulla barra Standard fare clic su **Nuova query**.  
   
-3.  Copiare e incollare l'esempio seguente nella finestra delle query e fare clic su **Esegui**. Nell'esempio vengono creati una vista e un indice per tale vista, quindi vengono eseguite due query in cui viene usata la vista indicizzata.  
+3.  Copiare e incollare l'esempio seguente nella finestra Query, quindi fare clic su **Esegui**. Nell'esempio vengono creati una vista e un indice per tale vista, quindi vengono eseguite due query in cui viene usata la vista indicizzata.  
   
     ```sql  
     USE AdventureWorks2012;  

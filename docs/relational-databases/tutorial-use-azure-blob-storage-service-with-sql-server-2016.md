@@ -1,7 +1,7 @@
 ---
 title: 'Esercitazione: Uso del servizio di archiviazione BLOB di Azure con SQL Server 2016 | Microsoft Docs'
 ms.custom: ''
-ms.date: 01/09/2019
+ms.date: 01/10/2019
 ms.prod: sql
 ms.technology: ''
 ms.prod_service: database-engine
@@ -15,12 +15,12 @@ ms.assetid: e69be67d-da1c-41ae-8c9a-6b12c8c2fb61
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 1d130177d51dc64e5eb1d0e763cc6068a61b7123
-ms.sourcegitcommit: 20de089b6e23107c88fb38b9af9d22ab0c800038
+ms.openlocfilehash: bcc5709a87939caf415f1b91b58e05a932aea14a
+ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58356484"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59241869"
 ---
 # <a name="tutorial-use-azure-blob-storage-service-with-sql-server-2016"></a>Esercitazione: Uso del servizio di archiviazione BLOB di Azure con SQL Server 2016
 
@@ -42,7 +42,9 @@ Per completare l'esercitazione è necessario conoscere i concetti di backup e ri
 - Installare [SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms).
 - Scaricare i [database di esempio AdventureWorks2016](https://docs.microsoft.com/sql/samples/adventureworks-install-configure).
 - Assegnare l'account utente al ruolo [db_backupoperator](https://docs.microsoft.com/sql/relational-databases/security/authentication-access/database-level-roles) e concedere le autorizzazioni [Modifica qualsiasi credenziale](https://docs.microsoft.com/sql/t-sql/statements/alter-credential-transact-sql). 
- 
+
+[!INCLUDE[Freshness](../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 ## <a name="1---create-stored-access-policy-and-shared-access-storage"></a>1: Creare criteri di accesso archiviati e l'archivio di accesso condiviso
 
 In questa lezione si userà uno script di [Azure PowerShell](https://azure.microsoft.com/documentation/articles/powershell-install-configure/) per creare una firma di accesso condiviso in un contenitore BLOB di Azure tramite criteri di accesso archiviati.  
@@ -491,6 +493,6 @@ Per eliminare il gruppo di risorse, eseguire il codice PowerShell seguente:
 [Credenziali &#40;motore di database&#41;](../relational-databases/security/authentication-access/credentials-database-engine.md)  
 [CREATE CREDENTIAL &#40;Transact-SQL&#41;](../t-sql/statements/create-credential-transact-sql.md)  
 [sys.credentials &#40;Transact-SQL&#41;](../relational-databases/system-catalog-views/sys-credentials-transact-sql.md)  
-[sp_delete_backup &#40;Transact-SQL&#41;](../relational-databases/system-stored-procedures/snapshot-backup-sp-delete-backup.md)  
-[sys.fn_db_backup_file_snapshots &#40;Transact-SQL&#41;](../relational-databases/system-functions/sys-fn-db-backup-file-snapshots-transact-sql.md)  
+[sp_delete_backup &#40; Transact-SQL &#41;](../relational-databases/system-stored-procedures/snapshot-backup-sp-delete-backup.md)  
+[sys.fn_db_backup_file_snapshots &#40; Transact-SQL &#41;](../relational-databases/system-functions/sys-fn-db-backup-file-snapshots-transact-sql.md)  
 [sp_delete_backup_file_snapshot &#40;Transact-SQL&#41;](../relational-databases/system-stored-procedures/snapshot-backup-sp-delete-backup-file-snapshot.md) [Backup di snapshot di file per i file di database in Azure](../relational-databases/backup-restore/file-snapshot-backups-for-database-files-in-azure.md)  
