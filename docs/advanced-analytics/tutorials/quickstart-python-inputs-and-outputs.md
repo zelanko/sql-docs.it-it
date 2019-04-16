@@ -8,14 +8,14 @@ ms.topic: quickstart
 author: dphansen
 ms.author: davidph
 manager: cgronlun
-ms.openlocfilehash: a410a6f732baf79d419405e38e7e84aed86b38dd
-ms.sourcegitcommit: baca29731a1be4f8fa47567888278394966e2af7
+ms.openlocfilehash: a778c4a65b9e3f4cbf4ed77cff46e9061d4b6a8a
+ms.sourcegitcommit: 46a2c0ffd0a6d996a3afd19a58d2a8f4b55f93de
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/04/2019
-ms.locfileid: "54046894"
+ms.lasthandoff: 04/15/2019
+ms.locfileid: "59583224"
 ---
-# <a name="quickstart-handle-inputs-and-outputs-using-python-in-sql-server"></a>Guida introduttiva: Gestire gli input e output con Python in SQL Server
+# <a name="quickstart-handle-inputs-and-outputs-using-python-in-sql-server"></a>Avvio rapido: Gestire gli input e output con Python in SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 Questa Guida introduttiva illustra come gestire gli input e restituisce quando si usano Python in SQL Server Machine Learning Services.
@@ -87,8 +87,6 @@ Esaminiamo l'impostazione predefinita le variabili di input e outpue di sp_execu
     ```
 
     Il caso delle variabili di input e outpue in `@input_data_1_name` e `@output_data_1_name` devono corrispondere il caso di quelli nel codice Python in `@script`, poiché Python è tra maiuscole e minuscole.
-
-    Inoltre, l'ordine dei parametri è importante. È necessario specificare per primi i parametri obbligatori *@input_data_1* e *@output_data_1*, per poi usare i parametri facoltativi *@input_data_1_name* e *@output_data_1_name*.
 
     È possibile passare come parametro un solo set di dati di input ed è possibile restituire un solo set di dati. Tuttavia, è possibile chiamare altri set di dati dall'interno del codice Python ed è possibile restituire output di altri tipi oltre il set di dati. È anche possibile aggiungere la parola chiave OUTPUT a qualsiasi parametro in modo che venga restituito con i risultati. 
 

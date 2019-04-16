@@ -13,19 +13,19 @@ ms.assetid: 2f63ad1c-1bc2-449d-b451-fb39a0060838
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 0ac754d9c27afb277701342855107d973f3f625d
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 217fc6d3d5a94fb443ea262563255c10bcfc2dda
+ms.sourcegitcommit: 46a2c0ffd0a6d996a3afd19a58d2a8f4b55f93de
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53374113"
+ms.lasthandoff: 04/15/2019
+ms.locfileid: "59582734"
 ---
 # <a name="report-server-status-ssrs-native-mode"></a>Stato del server di report (modalità nativa SSRS)
   Utilizzare questa pagina per visualizzare le informazioni sull'istanza del server di report a cui si è attualmente connessi. Questa rappresenta la pagina iniziale per la configurazione del server di report. Ulteriori pagine sono disponibili per configurare gli URL, l'account del servizio, il database del server di report, il recapito tramite posta elettronica del server di report, la distribuzione con scalabilità orizzontale e le chiavi di crittografia.  
   
  [!INCLUDE[applies](../../includes/applies-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .  
   
- Per aprire questa pagina, avviare Gestione configurazione [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] e connettersi all'istanza del server di report. Per altre informazioni, vedere [Gestione configurazione Reporting Services &#40;CANC&#41;](/sql/2014/sql-server/install/reporting-services-configuration-manager-native-mode).  
+ Per aprire questa pagina, avviare Gestione configurazione [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] e connettersi all'istanza del server di report. Per altre informazioni, vedere [Gestione configurazione Reporting Services &#40;CANC&#41;](reporting-services-configuration-manager-native-mode.md).  
   
 > [!TIP]  
 >  Il[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Configuration Manager (RSConfigTool.exe) viene installato con un livello di privilegio "highestAvailable". Questo comportamento si verifica per motivi strutturali. Gestione configurazione [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] richiede la comunicazione con le API di WMI per [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Una parte della comunicazione di WMI per [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] richiede un livello superiore o privilegi amministrativi.  

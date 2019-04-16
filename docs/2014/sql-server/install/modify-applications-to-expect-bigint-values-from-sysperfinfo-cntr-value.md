@@ -14,12 +14,12 @@ ms.assetid: b0345303-6e9a-4078-8148-6e1bce207b8c
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: e4f7945a5657cefb43af402523a6aee3e12eb63a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 835e5fae4717748664affef9491ea1f7eeaec8b2
+ms.sourcegitcommit: 46a2c0ffd0a6d996a3afd19a58d2a8f4b55f93de
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48137532"
+ms.lasthandoff: 04/15/2019
+ms.locfileid: "59583064"
 ---
 # <a name="modify-applications-to-expect-bigint-values-from-sysperfinfocntrvalue"></a>Modificare le applicazioni in modo da prevedere valori bigint da sysperfinfo.cntr_value
   sysperfinfo restituisce un `bigint` valore per la colonna cntr_value.  
@@ -35,6 +35,6 @@ ms.locfileid: "48137532"
   
 ## <a name="see-also"></a>Vedere anche  
  [Problemi di aggiornamento del motore di database](../../../2014/sql-server/install/database-engine-upgrade-issues.md)   
- [Preparazione aggiornamento a SQL Server 2014 &#91;new&#93;](/sql/2014/sql-server/install/sql-server-2014-upgrade-advisor)  
+ [Preparazione aggiornamento a SQL Server 2014 &#91;new&#93;](sql-server-2014-upgrade-advisor.md)  
   
   

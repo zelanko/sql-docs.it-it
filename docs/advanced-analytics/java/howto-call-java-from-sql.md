@@ -3,18 +3,18 @@ title: Come chiamare Java da SQL - SQL Server Machine Learning Services
 description: Informazioni su come chiamare classi Java da stored procedure SQL Server usando l'estensione del linguaggio in SQL Server 2019 di programmazione Java.
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 03/27/2018
+ms.date: 03/27/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
 manager: cgronlun
 monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 36a949f4d046d4071ffd7d52d34233e993ee700f
-ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
+ms.openlocfilehash: 8913f471b127663f9f1be179d791a4f72a0ed6aa
+ms.sourcegitcommit: 46a2c0ffd0a6d996a3afd19a58d2a8f4b55f93de
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58493003"
+ms.lasthandoff: 04/15/2019
+ms.locfileid: "59581576"
 ---
 # <a name="how-to-call-java-from-sql-server-2019-preview"></a>Come chiamare Java dalla versione di anteprima di SQL Server 2019
 
@@ -93,7 +93,7 @@ Esattamente come una variabile di sistema per i file eseguibili JDK è stato cre
 
 ## <a name="external-library"></a>Libreria esterna
 
-In SQL Server 2019 CTP 2.4, è possibile usare librerie esterne per la lingua di Java in Windows e Linux. La stessa funzionalità sarà disponibile in Linux in una versione CTP successiva. È possibile compilare le classi in un file con estensione jar e caricare il file con estensione jar e altre dipendenze nel database utilizzando la [CREATE EXTERNAL LIBRARY](https://docs.microsoft.com/sql/t-sql/statements/create-external-library-transact-sql) DDL.
+In SQL Server 2019 CTP 2.4, è possibile usare librerie esterne per la lingua di Java in Windows e Linux. È possibile compilare le classi in un file con estensione jar e caricare il file con estensione jar e altre dipendenze nel database utilizzando la [CREATE EXTERNAL LIBRARY](https://docs.microsoft.com/sql/t-sql/statements/create-external-library-transact-sql) DDL.
 
 Esempio di come caricare un file con estensione jar con la libreria esterna:
 

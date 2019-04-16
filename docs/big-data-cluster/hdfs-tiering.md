@@ -6,16 +6,16 @@ author: nelgson
 ms.author: negust
 ms.reviewer: jroth
 manager: craigg
-ms.date: 03/27/2018
+ms.date: 03/27/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 2542c7c05b222517ae9f4a4c05152f21a5ba293b
-ms.sourcegitcommit: 2de5446fbc57787f18a907dd5deb02a7831ec07d
+ms.openlocfilehash: 32648829c64143b4f31a5d27479bbc3d28076fa2
+ms.sourcegitcommit: 46a2c0ffd0a6d996a3afd19a58d2a8f4b55f93de
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58859643"
+ms.lasthandoff: 04/15/2019
+ms.locfileid: "59582424"
 ---
 # <a name="configure-hdfs-tiering-on-sql-server-big-data-clusters"></a>Configurare la suddivisione in livelli nel cluster di big data di SQL Server HDFS
 
@@ -37,7 +37,7 @@ Le sezioni seguenti forniscono un esempio di come configurare la suddivisione in
 - [Cluster di big data distribuita](deployment-guidance.md)
 - [Strumenti dei big Data](deploy-big-data-tools.md)
   - **mssqlctl**
-  - **Kubectl**
+  - **kubectl**
 
 ## <a id="load"></a> Caricare i dati in archiviazione di Azure Data Lake
 

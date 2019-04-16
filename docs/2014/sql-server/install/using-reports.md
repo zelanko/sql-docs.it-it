@@ -36,12 +36,12 @@ ms.assetid: 4a3cb94a-a7ac-4cec-94c7-db26fcf6d161
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 0d8ec04baf292807120ed5a26360878ac7e20442
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: eb2537af2539854f0f66e3f6c39c3b6e5315ec6f
+ms.sourcegitcommit: 46a2c0ffd0a6d996a3afd19a58d2a8f4b55f93de
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48070901"
+ms.lasthandoff: 04/15/2019
+ms.locfileid: "59581926"
 ---
 # <a name="using-reports"></a>Utilizzo dei report
   Per ogni componente e, se necessario, per ogni istanza analizzata tramite l'Analisi guidata di Preparazione aggiornamento su un server viene generato un report distinto, in cui sono forniti dettagli su problemi noti che influiscono su un aggiornamento. Il report contiene inoltre collegamenti a informazioni e ad azioni consigliate per la risoluzione dei problemi identificati.  
@@ -83,10 +83,10 @@ ms.locfileid: "48070901"
  Se si desidera condividere le informazioni con altri utenti, è possibile inviare il report XML. In alternativa, se si desidera utilizzare un'altra applicazione, è possibile esportare il report in un file con valori delimitati da virgole da utilizzare per creare un foglio di calcolo, un file di testo o un messaggio di posta elettronica.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Procedura: visualizzare un Report di preparazione aggiornamento](../../../2014/sql-server/install/how-to-view-an-upgrade-advisor-report.md)   
- [Procedura: esportare i report](../../../2014/sql-server/install/how-to-export-reports.md)   
- [Procedura: filtrare i report](../../../2014/sql-server/install/how-to-filter-reports.md)   
+ [Procedura: Visualizzare un Report di preparazione aggiornamento](../../../2014/sql-server/install/how-to-view-an-upgrade-advisor-report.md)   
+ [Procedura: Esportare report](../../../2014/sql-server/install/how-to-export-reports.md)   
+ [Procedura: Filtrare i report](../../../2014/sql-server/install/how-to-filter-reports.md)   
  [Risoluzione dei problemi di aggiornamento](../../../2014/sql-server/install/resolving-upgrade-issues.md)   
- [Preparazione aggiornamento a SQL Server 2014 &#91;new&#93;](/sql/2014/sql-server/install/sql-server-2014-upgrade-advisor)  
+ [Preparazione aggiornamento a SQL Server 2014 &#91;new&#93;](sql-server-2014-upgrade-advisor.md)  
   
   

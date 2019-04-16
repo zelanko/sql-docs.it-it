@@ -13,12 +13,12 @@ ms.assetid: ff87c368-4c00-4e48-809d-ea752839551e
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 9cf8109d1faa9bcd75a6150aea3959f37b79f1cf
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: 22460851ce3136301beaf5d94e7b0a3b39f8217c
+ms.sourcegitcommit: 46a2c0ffd0a6d996a3afd19a58d2a8f4b55f93de
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54136357"
+ms.lasthandoff: 04/15/2019
+ms.locfileid: "59582694"
 ---
 # <a name="specify-merge-replication-properties"></a>Specificare le proprietà della replica di Merge
 Questo argomento illustra come specificare varie proprietà per la replica di tipo merge. 
@@ -72,7 +72,7 @@ Questo argomento illustra come specificare varie proprietà per la replica di ti
         > [!NOTE]  
         >  Se la tabella di origine di un articolo è già inclusa in un'altra pubblicazione, il comportamento del solo download deve coincidere per entrambi gli articoli.  
  
-## <a name="interactive-conflict-resolution"></a>Risoluzione interattiva dei conflitti
+## <a name="interactive-conflict-resolution">Risoluzione interattiva dei conflitti</a>
 La replica di[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] offre un sistema di risoluzione interattivo che consente di risolvere i conflitti in modo manuale durante la sincronizzazione su richiesta in Gestione sincronizzazione [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Windows. Dopo l'abilitazione della risoluzione interattiva, risolvere interattivamente i conflitti durante la sincronizzazione utilizzando il sistema di risoluzione interattivo. Il sistema di risoluzione interattivo è disponibile tramite Gestione sincronizzazione [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Windows. Per altre informazioni, vedere [Sincronizzare una sottoscrizione mediante Gestione sincronizzazione Microsoft Windows &#40;Gestione sincronizzazione Microsoft Windows&#41;](../synchronize-a-subscription-using-windows-synchronization-manager.md).  
   
     
@@ -93,13 +93,13 @@ La replica di[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ss
   
 #### <a name="to-specify-that-a-subscription-should-use-interactive-conflict-resolution"></a>Per specificare che in una sottoscrizione dovrà essere utilizzata la risoluzione interattiva dei conflitti  
   
-1.  Nel **proprietà sottoscrizione - \<sottoscrittore >: \<Databasesottoscrizione >** finestra di dialogo, specificare un valore di **True** per il **risoluzione interattiva dei conflitti** opzione. Per ulteriori informazioni sull'accesso a questa finestra di dialogo, vedere [View and Modify Push Subscription Properties](../view-and-modify-push-subscription-properties.md) e [View and Modify Pull Subscription Properties](../view-and-modify-pull-subscription-properties.md). 
+1.  Nella finestra di dialogo **Proprietà sottoscrizione - \<Sottoscrittore>: \<DatabaseSottoscrizione>** specificare un valore **True** per l'opzione **Risoluzione interattiva dei conflitti**. Per ulteriori informazioni sull'accesso a questa finestra di dialogo, vedere [View and Modify Push Subscription Properties](../view-and-modify-push-subscription-properties.md) e [View and Modify Pull Subscription Properties](../view-and-modify-pull-subscription-properties.md). 
 2.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
 ### <a name="using-transact-sql"></a>Utilizzo di Transact-SQL  
  È possibile impostare a livello di programmazione un Sottoscrittore in modo che utilizzi questa interfaccia grafica per risolvere conflitti relativi agli articoli quando viene creata una sottoscrizione pull di una pubblicazione di tipo merge. Nel sistema di risoluzione interattivo verranno visualizzati solo i conflitti relativi ad articoli che supportano questa opzione.  
   
-#### <a name="create-a-merge-pull-subscription-that-uses-the-interactive-resolver"></a>Creare una sottoscrizione pull di tipo merge che utilizza il sistema di risoluzione interattivo  
+#### <a name="create-a-merge-pull-subscription-that-uses-the-interactive-resolver"></a>Creare una sottoscrizione pull di tipo merge che usa il sistema di risoluzione interattivo  
   
 1.  Nel database di pubblicazione del server di pubblicazione eseguire [sp_helpmergearticle](/sql/relational-databases/system-stored-procedures/sp-helpmergepublication-transact-sql), specificando **@publication**. Notare il valore di **allow_interactive_resolver** relativo a ogni articolo nel set di risultati per il quale verrà utilizzato il sistema di risoluzione interattivo.    
     -   Se questo valore è **1**, il sistema di risoluzione interattivo verrà utilizzato.    
@@ -130,11 +130,11 @@ Quando si sincronizza una sottoscrizione di una pubblicazione di tipo merge, la 
 ###  <a name="SSMSProcedure"></a> Utilizzo di SQL Server Management Studio  
  Specificare il rilevamento a livello di riga o colonna per gli articoli di merge nella scheda **Proprietà** della finestra di dialogo **Proprietà articolo**, disponibile nella Creazione guidata nuova pubblicazione e nella finestra di dialogo **Proprietà pubblicazione - \<Pubblicazione>**. Per altre informazioni sull'uso della creazione guidata e l'accesso alla finestra di dialogo, vedere [Creare una pubblicazione](create-a-publication.md) e [Visualizzare e modificare le proprietà della pubblicazione](../publish/view-and-modify-publication-properties.md).  
   
-#### <a name="specify-row--or-column-level-tracking"></a>Specificare o colonna a livello di riga di rilevamento  
+#### <a name="specify-row--or-column-level-tracking"></a>Specificare il rilevamento a livello di riga o di colonna  
   
 1.  Selezionare una tabella nella pagina **Articoli** della Creazione guidata nuova pubblicazione o nella finestra di dialogo **Proprietà pubblicazione - \<Pubblicazione>**.    
 2.  Fare clic su **Proprietà articolo**, quindi su **Imposta proprietà dell'articolo di tabella evidenziato** o su **Imposta proprietà di tutti gli articoli di tabelle**.   
-3.  Nel **proprietà** scheda della finestra di **proprietà articolo \<articolo >** finestra di dialogo, seleziona uno dei seguenti valori per il **rilevamento a livello di** proprietà: **Rilevamento a livello di riga** oppure **rilevamento a livello di colonna**.    
+3.  Nella scheda **Proprietà** della finestra di dialogo **Proprietà articolo \<Articolo>** selezionare uno dei valori seguenti per la proprietà **Livello rilevamento**: **Rilevamento a livello di riga** o **Rilevamento a livello di colonna**.    
 4.  Se è visualizzata la finestra di dialogo **Proprietà pubblicazione - \<Pubblicazione>** fare clic su **OK** per salvare e chiudere la finestra di dialogo.  
   
 ###  <a name="using-transact-sql"></a>Utilizzo di Transact-SQL  
@@ -146,7 +146,7 @@ Quando si sincronizza una sottoscrizione di una pubblicazione di tipo merge, la 
     -   **true** : consente di utilizzare il rilevamento a livello di colonna per l'articolo.    
     -   **false** : consente di utilizzare il rilevamento a livello di riga, che corrisponde all'impostazione predefinita.  
   
-#### <a name="change-conflict-tracking-options-for-a-merge-article"></a>Modificare le opzioni per un articolo di merge di rilevamento dei conflitti  
+#### <a name="change-conflict-tracking-options-for-a-merge-article"></a>Modificare le opzioni di rilevamento dei conflitti per un articolo di merge  
   
 1.  Per determinare le opzioni di rilevamento dei conflitti per un articolo di merge, eseguire [sp_helpmergearticle](/sql/relational-databases/system-stored-procedures/sp-helpmergearticle-transact-sql). Notare il valore dell'opzione **column_tracking** nel set di risultati relativo l'articolo. Il valore **1** indica che viene utilizzato il rilevamento a livello di colonna, mentre il valore **0** indica che viene utilizzato il rilevamento a livello di riga.    
 2.  Nel database di pubblicazione del server di pubblicazione eseguire [sp_changemergearticle](/sql/relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql). Specificare il valore **column_tracking** per **@property** e uno dei valori seguenti per **@value**:
@@ -165,14 +165,14 @@ Quando si sincronizza una sottoscrizione di una pubblicazione di tipo merge, la 
 > [!IMPORTANT]  
 >  L'attivazione di questa funzionalità causa la non convergenza pertanto i dati presenti nel Sottoscrittore non rifletteranno accuratamente i dati presenti nel server di pubblicazione. È necessario implementare un meccanismo personalizzato per la rimozione manuale delle righe eliminate.  
   
-### <a name="specify-that-deletes-be-ignored-for-a-new-merge-article"></a>Specificare che si desidera ignorare le eliminazioni per un nuovo articolo di merge  
+### <a name="specify-that-deletes-be-ignored-for-a-new-merge-article"></a>Specificare di ignorare le eliminazioni per un nuovo articolo di merge  
   
 1.  Nel database di pubblicazione del server di pubblicazione eseguire [sp_addmergearticle &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql). Specificare il valore `false` per **@delete_tracking**. Per altre informazioni, vedere [definire un articolo](../publish/define-an-article.md).  
   
     > [!NOTE]  
     >  Se la tabella di origine di un articolo è già pubblicata in un'altra pubblicazione, il valore di **delete_tracking** deve essere uguale per entrambi gli articoli.  
   
-### <a name="specify-that-deletes-be-ignored-for-an-existing-merge-article"></a>Specificare che si desidera ignorare le eliminazioni per un articolo di merge esistente  
+### <a name="specify-that-deletes-be-ignored-for-an-existing-merge-article"></a>Specificare di ignorare le eliminazioni per un articolo di merge esistente  
   
 1.  Per determinare se la compensazione errori è abilitata per un articolo, eseguire [sp_helpmergearticle &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-helpmergearticle-transact-sql) e prendere nota del valore di **delete_tracking** nel set di risultati. Se questo valore è **0**, le eliminazioni vengono già ignorate.    
 2.  Se il valore ottenuto al passaggio 1 è **1**, eseguire [sp_changemergearticle &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql) nel database di pubblicazione del server di pubblicazione. Specificare il valore **delete_tracking** per **@property**e il valore `false` per **@value**.  
@@ -181,7 +181,7 @@ Quando si sincronizza una sottoscrizione di una pubblicazione di tipo merge, la 
     >  Se la tabella di origine di un articolo è già pubblicata in un'altra pubblicazione, il valore di **delete_tracking** deve essere uguale per entrambi gli articoli.  
   
 ## <a name="processing-order"></a>Ordine di elaborazione
-  La replica di tipo merge consente di specificare l'ordine in cui gli articoli vengono elaborati dall'agente di merge durante il processo di sincronizzazione. È possibile assegnare a livello di programmazione un ordine a ogni articolo creato utilizzando le stored procedure di replica. Gli articoli vengono elaborati in ordine crescente in base al valore. Se due articoli hanno lo stesso valore, essi vengono elaborati simultaneamente. Per altre informazioni, vedere [delle proprietà di replica di tipo Merge specificare](../publish/specify-merge-replication-properties.md).  
+  La replica di tipo merge consente di specificare l'ordine in cui gli articoli vengono elaborati dall'agente di merge durante il processo di sincronizzazione. È possibile assegnare a livello di programmazione un ordine a ogni articolo creato utilizzando le stored procedure di replica. Gli articoli vengono elaborati in ordine crescente in base al valore. Se due articoli hanno lo stesso valore, essi vengono elaborati simultaneamente. Per altre informazioni, vedere [Specificare le proprietà della replica di tipo merge](../publish/specify-merge-replication-properties.md).  
 
   A partire da [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)], è possibile eseguire l'override dell'ordine predefinito dell'elaborazione degli articoli per le pubblicazioni di tipo merge. Ciò risulta utile, ad esempio, se si definisce l'integrità referenziale tramite trigger e tali trigger devono essere attivati in un determinato ordine. 
 

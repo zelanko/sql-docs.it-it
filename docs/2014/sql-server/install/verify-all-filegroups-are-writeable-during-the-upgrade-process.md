@@ -14,12 +14,12 @@ ms.assetid: 2985efc1-4b14-46c3-abbd-a656b159f23c
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: cc80c3729e905d11284437f35af50cd4959e3ba0
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 98633674559feead48a5b1c3cbe997863ad0f18a
+ms.sourcegitcommit: 46a2c0ffd0a6d996a3afd19a58d2a8f4b55f93de
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48051935"
+ms.lasthandoff: 04/15/2019
+ms.locfileid: "59583084"
 ---
 # <a name="verify-all-filegroups-are-writeable-during-the-upgrade-process"></a>Verificare che durante il processo di aggiornamento tutti i filegroup siano scrivibili
   È stato rilevato un database con uno o più filegroup di sola lettura. Prima dell'aggiornamento, è necessario che i filegroup di tutti i database nell'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] siano impostati su READ_WRITE.  
@@ -32,6 +32,6 @@ ms.locfileid: "48051935"
   
 ## <a name="see-also"></a>Vedere anche  
  [Problemi di aggiornamento del motore di database](../../../2014/sql-server/install/database-engine-upgrade-issues.md)   
- [Preparazione aggiornamento a SQL Server 2014 &#91;new&#93;](/sql/2014/sql-server/install/sql-server-2014-upgrade-advisor)  
+ [Preparazione aggiornamento a SQL Server 2014 &#91;new&#93;](sql-server-2014-upgrade-advisor.md)  
   
   

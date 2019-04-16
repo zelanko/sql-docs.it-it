@@ -14,12 +14,12 @@ ms.assetid: 3cb54053-ef65-4558-ae96-8686b6b22f4f
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: b7c21521fbdd4a4e80ed196c67c72f790341f020
-ms.sourcegitcommit: bfa10c54e871700de285d7f819095d51ef70d997
+ms.openlocfilehash: 35cc33df40c17e6dbc1935e205ed688615de0294
+ms.sourcegitcommit: 46a2c0ffd0a6d996a3afd19a58d2a8f4b55f93de
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/14/2019
-ms.locfileid: "54254276"
+ms.lasthandoff: 04/15/2019
+ms.locfileid: "59583105"
 ---
 # <a name="user-defined-functions-are-not-allowed-in-systemfunctionschema"></a>In system_function_schema non sono consentite funzioni definite dall'utente
   Rilevate funzioni definite dall'utente che sono proprietà dell'utente non documentato **system_function_schema**. Non è possibile creare una funzione di sistema definita dall'utente specificando tale utente. Il **system_function_schema** il nome utente non esiste e l'ID utente associato con questo nome (UID = 4) è riservato per il **sys** schema ed è limitato al solo uso interno.  
@@ -40,7 +40,7 @@ ms.locfileid: "54254276"
   
  Queste modifiche hanno l'effetto seguente sulle funzioni di sistema definite dall'utente:  
   
--   Istruzioni Data Definition Language (DDL) che fanno riferimento a **system_function_schema** avrà esito negativo. Ad esempio, l'istruzione `CREATE FUNCTION system`_`function` \_ `schema.fn` \_ `MySystemFunction` ... non verrà completata.  
+-   Istruzioni Data Definition Language (DDL) che fanno riferimento a **system_function_schema** avrà esito negativo. Ad esempio, l'istruzione `CREATE FUNCTION system`_`function` \_ `schema.fn` \_ `MySystemFunction` ... non riuscirà.  
   
 -   Dopo l'aggiornamento a [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], gli oggetti esistenti che sono di proprietà **system_function_schema** sono contenuti solo nel **sys** dello schema del **master** database. Poiché gli oggetti di sistema non possono essere modificati, queste funzioni mai possono essere modificate o eliminate dal **master** database. Inoltre, non possono essere richiamate da altri database specificando un nome di funzione composto da una sola parte.  
   
@@ -66,7 +66,7 @@ ms.locfileid: "54254276"
 -   "Database Resource"  
   
 ## <a name="see-also"></a>Vedere anche  
- [Preparazione aggiornamento a SQL Server 2014 &#91;new&#93;](/sql/2014/sql-server/install/sql-server-2014-upgrade-advisor)   
+ [Preparazione aggiornamento a SQL Server 2014 &#91;new&#93;](sql-server-2014-upgrade-advisor.md)   
  [Problemi di aggiornamento del motore di database](../../../2014/sql-server/install/database-engine-upgrade-issues.md)   
  [Rimuovere le istruzioni che modificano oggetti di sistema](../../../2014/sql-server/install/remove-statements-that-modify-system-objects.md)   
  [Rimuovere le istruzioni che eliminano oggetti di sistema](../../../2014/sql-server/install/remove-statements-that-drop-system-objects.md)  

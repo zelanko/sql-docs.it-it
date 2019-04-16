@@ -13,25 +13,25 @@ ms.assetid: 7b6fb18e-ec39-4661-88e3-977ed64e2c82
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: f31308a08b177e59cad0193b6a4b15a9888d7e81
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 05928a02a02680acb3a2a6e32dfdf1409fad8b19
+ms.sourcegitcommit: 46a2c0ffd0a6d996a3afd19a58d2a8f4b55f93de
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48193581"
+ms.lasthandoff: 04/15/2019
+ms.locfileid: "59583154"
 ---
 # <a name="reporting-services-configuration-manager-f1-help-topics-ssrs-native-mode"></a>Argomenti della Guida F1 di Gestione configurazione Reporting Services (modalità nativa SSRS)
   In questa sezione sono inclusi gli argomenti della Guida sensibile al contesto relativi a Gestione configurazione Reporting Services.  
   
  [!INCLUDE[applies](../../includes/applies-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .  
   
-## <a name="in-this-section"></a>Argomenti della sezione  
+## <a name="in-this-section"></a>In questa sezione  
   
 -   [Connettersi a un Server di Report](../../../2014/sql-server/install/connect-to-a-native-mode-report-server.md)  
   
 -   [Stato Server di report](../../../2014/sql-server/install/report-server-status-ssrs-native-mode.md)  
   
--   [Account del servizio](../../../2014/sql-server/install/service-account-ssrs-native-mode.md)  
+-   [Account servizio](../../../2014/sql-server/install/service-account-ssrs-native-mode.md)  
   
 -   [URL del servizio Web](../../../2014/sql-server/install/web-service-url-ssrs-native-mode.md)  
   
@@ -45,7 +45,7 @@ ms.locfileid: "48193581"
   
 -   [URL Gestione report](../../../2014/sql-server/install/report-manager-url-ssrs-native-mode.md)  
   
--   [Impostazioni di posta elettronica](../../reporting-services/install-windows/e-mail-settings-reporting-services-native-mode-configuration-manager.md)  
+-   [Impostazioni posta elettronica](../../reporting-services/install-windows/e-mail-settings-reporting-services-native-mode-configuration-manager.md)  
   
 -   [Account di esecuzione](../../../2014/sql-server/install/execution-account-ssrs-native-mode.md)  
   
@@ -58,6 +58,6 @@ ms.locfileid: "48193581"
 -   [Distribuzione con scalabilità orizzontale](../../../2014/sql-server/install/scale-out-deployment-native-mode-report-server.md)  
   
 ## <a name="see-also"></a>Vedere anche  
- [Gestione configurazione Reporting Services &#40;/del&#41;](/sql/2014/sql-server/install/reporting-services-configuration-manager-native-mode)  
+ [Gestione configurazione Reporting Services &#40;/del&#41;](reporting-services-configuration-manager-native-mode.md)  
   
   

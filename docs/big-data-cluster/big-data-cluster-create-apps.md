@@ -6,17 +6,17 @@ author: jeroenterheerdt
 ms.author: jterh
 ms.reviewer: jroth
 manager: craigg
-ms.date: 03/27/2018
+ms.date: 03/27/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: 6cdedc7eac7b9faa2d266b1a32c299d8b7f5fe73
-ms.sourcegitcommit: 1a4aa8d2bdebeb3be911406fc19dfb6085d30b04
+ms.openlocfilehash: 40919c7b300ffed0bdc84f4214b28c8ea71b15b8
+ms.sourcegitcommit: 46a2c0ffd0a6d996a3afd19a58d2a8f4b55f93de
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/03/2019
-ms.locfileid: "58872001"
+ms.lasthandoff: 04/15/2019
+ms.locfileid: "59582446"
 ---
 # <a name="how-to-deploy-an-app-on-sql-server-big-data-cluster-preview"></a>Come distribuire un'app nel cluster di big data di SQL Server (anteprima)
 
@@ -111,7 +111,7 @@ Ciò presuppone che si disponga dell'applicazione archiviato nel `addpy` cartell
 
 Per distribuire questa app di esempio di app, creare i seguenti file in una directory denominata `addpy`:
 
-- `add.py`. Copiare il seguente codice Python in questo file:
+- `add.py` (Indici per tabelle con ottimizzazione per la memoria). Copiare il seguente codice Python in questo file:
    ```py
    #add.py
    def add(x,y):
@@ -119,7 +119,7 @@ Per distribuire questa app di esempio di app, creare i seguenti file in una dire
         return result
     result=add(x,y)
    ```
-- `spec.yaml`. Copiare il codice seguente nel file:
+- `spec.yaml` (Indici per tabelle con ottimizzazione per la memoria). Copiare il codice seguente nel file:
    ```yaml
    #spec.yaml
    name: add-app #name of your python script

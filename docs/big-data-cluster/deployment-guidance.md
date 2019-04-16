@@ -5,17 +5,17 @@ description: Informazioni su come distribuire i cluster di big data di SQL Serve
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 03/27/2018
+ms.date: 03/27/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: c991181fc79627aee1f2c2e397ad7d9b1aaf953f
-ms.sourcegitcommit: 2de5446fbc57787f18a907dd5deb02a7831ec07d
+ms.openlocfilehash: 7a863259a3eb04aef648d98f1d8c4ac22e4a3f38
+ms.sourcegitcommit: 46a2c0ffd0a6d996a3afd19a58d2a8f4b55f93de
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58860593"
+ms.lasthandoff: 04/15/2019
+ms.locfileid: "59582414"
 ---
 # <a name="how-to-deploy-sql-server-big-data-clusters-on-kubernetes"></a>Come distribuire i cluster di big data di SQL Server in Kubernetes
 
@@ -55,7 +55,7 @@ Se si dispone già di un cluster Kubernetes che soddisfa di sopra dei prerequisi
 
 Prima di distribuire il cluster di big data di SQL Server 2019, innanzitutto [installare gli strumenti dei big data](deploy-big-data-tools.md):
 - **mssqlctl**
-- **Kubectl**
+- **kubectl**
 - **Azure Data Studio**
 - **Estensione di SQL Server 2019**
 
@@ -68,7 +68,7 @@ Dopo aver configurato il cluster Kubernetes, è possibile procedere con la distr
 
 Per distribuire un cluster di big data in Azure con tutte le configurazioni predefinite per un ambiente di sviluppo/test, seguire le istruzioni riportate in questo articolo:
 
-[Avvio rapido: Distribuire cluster di big data di SQL Server in Kubernetes](quickstart-big-data-cluster-deploy.md)
+[Guida introduttiva: Distribuire cluster di big data di SQL Server in Kubernetes](quickstart-big-data-cluster-deploy.md)
 
 Se si desidera personalizzare la distribuzione del cluster di big data in base al carico di lavoro deve, seguire le istruzioni nella parte restante di questo articolo.
 
@@ -90,7 +90,7 @@ La configurazione del cluster può essere personalizzata usando un set di variab
 | **CLUSTER_NAME** | Yes | N/D | Il nome dello spazio dei nomi Kubernetes per distribuire cluster di big data in SQL Server. |
 | **CLUSTER_PLATFORM** | Yes | N/D | La piattaforma che è distribuito il cluster Kubernetes. Può essere `aks`, `minikube`, `kubernetes`|
 | **CLUSTER_COMPUTE_POOL_REPLICAS** | No | 1 | Il numero di repliche di pool di calcolo da compilare. Nella versione CTP 2.4 solo con valori consentito è 1. |
-| **CLUSTER_DATA_POOL_REPLICAS** | No | 2 | Il numero di dati del pool di repliche da compilare. |
+| **CLUSTER_DATA_POOL_REPLICAS** | no | 2 | Il numero di dati del pool di repliche da compilare. |
 | **CLUSTER_STORAGE_POOL_REPLICAS** | No | 2 | Il numero di repliche di pool di archiviazione da compilare. |
 | **DOCKER_REGISTRY** | Yes | TBD | Il Registro di sistema privato in cui sono archiviate le immagini usate per distribuire il cluster. |
 | **DOCKER_REPOSITORY** | Yes | TBD | Il repository privato all'interno del Registro di sistema precedente in cui sono archiviate le immagini.  È necessario per la durata dell'anteprima pubblica gestita. |

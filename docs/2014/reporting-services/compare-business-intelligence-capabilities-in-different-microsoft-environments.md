@@ -1,48 +1,48 @@
 ---
 title: Confrontare le funzionalità di Business Intelligence In diversi ambienti Microsoft | Microsoft Docs
-ms.custom: ''
-ms.date: 03/06/2017
 ms.prod: sql-server-2014
-ms.reviewer: ''
 ms.technology:
 - reporting-services-native
 ms.topic: conceptual
-ms.assetid: 1fb759ee-8172-4c4c-9f7d-49af2c731006
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.openlocfilehash: e98dd10b670a3e6bb4f53f9b9d68f98411074ffc
-ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
+ms.reviewer: ''
+ms.custom: ''
+ms.date: 03/06/2017
+ms.openlocfilehash: 60ea737f20ba48c6ba8d441d389a124e90444a76
+ms.sourcegitcommit: 46a2c0ffd0a6d996a3afd19a58d2a8f4b55f93de
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59241689"
+ms.lasthandoff: 04/15/2019
+ms.locfileid: "59582505"
 ---
 # <a name="compare-business-intelligence-capabilities-in-different-microsoft-environments"></a>Confrontare le funzionalità di Business Intelligence in diversi ambienti Microsoft
-  Microsoft [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Business Intelligence può essere distribuito in numerosi ambienti diversi, tra cui [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] con SharePoint Server, SharePoint Online e Power BI per Office 365. In questo argomento vengono confrontati i componenti e le funzionalità supportati in ogni ambiente.  
+
+Microsoft [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Business Intelligence può essere distribuito in numerosi ambienti diversi, tra cui [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] con SharePoint Server, SharePoint Online e Power BI per Office 365. In questo argomento vengono confrontati i componenti e le funzionalità supportati in ogni ambiente.  
   
- Per altre informazioni sul confronto tra SharePoint Server e SharePoint Online, vedere [Confrontare piani e opzioni di SharePoint](http://products.office.com/SharePoint/compare-sharepoint-plans).  
+Per altre informazioni sul confronto tra SharePoint Server e SharePoint Online, vedere [Confrontare piani e opzioni di SharePoint](http://products.office.com/SharePoint/compare-sharepoint-plans).  
   
 ## <a name="author-and-manage-bi-reports-and-dashboards"></a>Creare e gestire report e dashboard di Business Intelligence  
   
 ||SQL Server 2014 & SharePoint Server 2013|SharePoint Online Piano 2|Power BI per Office 365|  
 |-|----------------------------------------------|------------------------------|-----------------------------|  
-|Siti di Business Intelligence|[!INCLUDE[ssGemini](../includes/ssgemini-md.md)] Gallery|No|Sito di Power BI|  
+|Siti di Business Intelligence|Raccolta [!INCLUDE[ssGemini](../includes/ssgemini-md.md)]|No|Sito di Power BI|  
 |Amministrazione dei dati e gestione e condivisione delle query|No|No|Sì **<sup>1</sup>**|  
 |Integrazione con Master Data Services (MDS) e Data Quality Services (DQS)|Yes|No|No|  
 |Pianificazione dell'aggiornamento dati|Sì, ma non sono supportate le cartelle di lavoro che contengono dati di Power Query|No|Yes|  
-|Query in linguaggio naturale (domande e risposte)|No|No|Sì **<sup>2</sup>**|  
+|Query in linguaggio naturale (domande e risposte)|no|No|Sì **<sup>2</sup>**|  
 |Previsione predittiva|No|No|Sì **<sup>3</sup>**|  
-|[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] integrazione|Yes|No|no|  
-|[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] (multidimensionale e tabulare)|Yes|no|no|  
-|Esportazione di dashboard interattivi di Power View nelle presentazioni di PowerPoint|Yes|no|no|  
+|Integrazione di [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]|Yes|No|no|  
+|Integrazione di [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] (multidimensionale e tabulare)|Yes|no|No|  
+|Esportazione di dashboard interattivi di Power View nelle presentazioni di PowerPoint|Yes|No|no|  
 |Creazione di dashboard basati su browser|Yes|No|No|  
-|Monitoraggio dell'utilizzo|Yes|no|Yes|  
-|Utilizzo della sicurezza a livello di riga dei cubi di [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]|Yes|no|no|  
+|Monitoraggio dell'utilizzo|Yes|No|Yes|  
+|Utilizzo della sicurezza a livello di riga dei cubi di [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]|Yes|No|No|  
   
  **<sup>1</sup>**[informazioni sul ruolo degli amministratori dei dati nella gestione dei dati](https://support.office.com/Article/Understanding-the-Role-of-Data-Stewards-in-Data-Management-ae3352f3-4389-45e8-a682-7fd6edb92524?ui=en-US&rs=en-US&ad=US) e [Video: Gestione delle informazioni di BI e amministrazione dei dati di Power](https://www.youtube.com/watch?v=8dHOj68ts7c).  
   
- **<sup>2</sup>**[di power BI domande e risposte: Ottimizzare una cartella di lavoro di Power BI (modellazione cloud)](https://support.office.com/article/Power-BI-Q-A-Optimize-a-Power-BI-workbook-cloud-modeling--96dc5941-d0f1-44e2-9d9d-c038a3a55849?ui=en-US&rs=en-US&ad=US).  
+ **<sup>2</sup>**[di power BI domande e risposte: Ottimizzare una cartella di lavoro di Power BI (modellazione cloud)](https://powerbi.microsoft.com/nl-nl/blog/new-in-power-bi-cloud-modeling-for-q-and-a/).  
   
  **<sup>3</sup>**  [Introduzione alle nuove funzionalità di previsione in Power View per Office 365](https://blogs.msdn.com/b/powerbi/archive/2014/05/08/introducing-new-forecasting-capabilities-in-power-view-for-office-365.aspx).  
   
@@ -51,9 +51,9 @@ ms.locfileid: "59241689"
 ||SQL Server 2014 & SharePoint Server 2013|SharePoint Online Piano 2|Power BI per Office 365|  
 |-|----------------------------------------------|------------------------------|-----------------------------|  
 |Visualizzazione delle cartelle di lavoro di Microsoft Excel in un browser|Sì, se le dimensioni della cartella di lavoro sono inferiori a 2 GB|Sì, se le dimensioni della cartella di lavoro sono inferiori a 10 MB|Sì, se le dimensioni della cartella di lavoro sono inferiori a 250 MB|  
-|Esplorazione dei dati basati su browser in HTML5|No|No|Yes|  
-|App di Business Intelligence per dispositivi mobili per accedere a report e dashboard in remoto|no|No|Sì **<sup>1</sup>**|  
-|Cartella di lavoro di Excel con [!INCLUDE[ssGemini](../includes/ssgemini-md.md)] come origine dati **<sup>2</sup>**|Yes|No|No|  
+|Esplorazione dei dati basati su browser in HTML5|No|no|Yes|  
+|App di Business Intelligence per dispositivi mobili per accedere a report e dashboard in remoto|No|No|Sì **<sup>1</sup>**|  
+|Cartella di lavoro di Excel con [!INCLUDE[ssGemini](../includes/ssgemini-md.md)] come origine dati **<sup>2</sup>**|Yes|no|No|  
 |Possibilità di usare le funzionalità in versioni e browser diversi|Sì, per le visualizzazioni non relative a Power View **<sup>3</sup>**|Sì, per cartelle di lavoro di dimensioni inferiori a 10 MB **<sup>3</sup>**|Sì **<sup>3</sup>**|  
   
  **<sup>1</sup>**  [Microsoft Power BI](http://apps.microsoft.com/windows/app/microsoft-power-bi/b7e7c94d-2ea3-4fa6-a277-9d19a1f697ba).  
@@ -64,21 +64,18 @@ ms.locfileid: "59241689"
   
 ## <a name="more-information"></a>Ulteriori informazioni  
   
--   [Funzionalità di Business Intelligence in Excel e Office 365](https://support.office.com/article/BI-capabilities-in-Excel-and-Office-365-26c0548e-124c-4fd3-aab3-5f64568cb743).  
+- [Funzionalità di Business Intelligence in Excel e Office 365](https://support.office.com/article/BI-capabilities-in-Excel-and-Office-365-26c0548e-124c-4fd3-aab3-5f64568cb743).  
   
--   Per informazioni sui requisiti per l'uso dei sinonimi, vedere [ottimizzazione di Power BI domande e risposte con sinonimi & formulazione](https://blog.pragmaticworks.com/optimizing-power-bi-qa-with-synonyms-phrasing-using-cloud-modeling) al sito Web pragmaticworks.com.  
+- Per informazioni sui requisiti per l'uso dei sinonimi, vedere [ottimizzazione di Power BI domande e risposte con sinonimi & formulazione](https://blog.pragmaticworks.com/optimizing-power-bi-qa-with-synonyms-phrasing-using-cloud-modeling) al sito Web pragmaticworks.com.  
   
--   [Office Online-scegliere un social network aziendale: Yammer o Newsfeed? ](https://support.office.com/article/Pick-your-enterprise-social-network-Yammer-or-Newsfeed-21954c85-4384-47d4-96c2-dfa1c9d56e66?ui=en-US&rs=en-US&ad=US).  
+- [Office Online-scegliere un social network aziendale: Yammer o Newsfeed? ](https://support.office.com/article/Pick-your-enterprise-social-network-Yammer-or-Newsfeed-21954c85-4384-47d4-96c2-dfa1c9d56e66?ui=en-US&rs=en-US&ad=US).  
   
--   [Power BI per Office 365](https://www.microsoft.com/powerbi/default.aspx)  
+- [Power BI per Office 365](https://www.microsoft.com/powerbi/default.aspx)  
   
--   [Prezzi di Power BI](https://www.microsoft.com/powerBI/pricing.aspx)  
+- [Prezzi di Power BI](https://www.microsoft.com/powerBI/pricing.aspx)  
   
--   [Confronto tra un sito Centro business intelligence e i siti Power BI per Office 365](https://technet.microsoft.com/library/dn394343\(v=office.15\).aspx)  
+- [Analisi e creazione di report con strumenti Microsoft business intelligence (BI)](../reporting-services/choosing-microsoft-business-intelligence-bi-tools-for-analysis-and-reporting.md)  
   
--   [Analisi dei dati e creazione di report con gli strumenti di business intelligence (BI) di Microsoft](../reporting-services/choosing-microsoft-business-intelligence-bi-tools-for-analysis-and-reporting.md)  
-  
-## <a name="community-content"></a>Contenuto della community  
- [Microsoft BI in modalità self-service in locale e nel cloud](http://businessintelligist.com/2014/02/07/microsoft-self-service-bi-on-premise-vs-could/)  
-  
-  
+## <a name="community-content"></a>Contenuto della community
+
+[Microsoft BI in modalità self-service in locale e nel cloud](http://businessintelligist.com/2014/02/07/microsoft-self-service-bi-on-premise-vs-could/)

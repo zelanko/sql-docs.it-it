@@ -5,17 +5,17 @@ description: Questa esercitazione illustra come eseguire query sui dati HDFS in 
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 03/27/2018
+ms.date: 03/27/2019
 ms.topic: tutorial
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: 57605d74e81a6c1c37263fc4088cb70fa3431dec
-ms.sourcegitcommit: 2de5446fbc57787f18a907dd5deb02a7831ec07d
+ms.openlocfilehash: c1c2ccf548b5df91420821a1865120c27edd2c02
+ms.sourcegitcommit: 46a2c0ffd0a6d996a3afd19a58d2a8f4b55f93de
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58860052"
+ms.lasthandoff: 04/15/2019
+ms.locfileid: "59581264"
 ---
 # <a name="tutorial-query-hdfs-in-a-sql-server-big-data-cluster"></a>Esercitazione: Query di HDFS in un cluster di big data di SQL Server
 
@@ -35,7 +35,7 @@ In questa esercitazione, apprenderà come:
 ## <a id="prereqs"></a> Prerequisiti
 
 - [Strumenti dei big Data](deploy-big-data-tools.md)
-   - **Kubectl**
+   - **kubectl**
    - **Azure Data Studio**
    - **Estensione di SQL Server 2019**
 - [Caricare i dati di esempio in cluster i big Data](tutorial-load-sample-data.md)
