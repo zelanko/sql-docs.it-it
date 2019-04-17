@@ -19,10 +19,10 @@ ms.assetid: 9d11d055-a3be-45aa-99a7-46447a94ed42
 author: markingmyname
 ms.author: maghan
 ms.openlocfilehash: 725d2015a186c28b48967a8f0154a76195abba6f
-ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
+ms.sourcegitcommit: e2d65828faed6f4dfe625749a3b759af9caa7d91
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59242279"
 ---
 # <a name="data-sources-supported-by-reporting-services-ssrs"></a>Origini dei dati supportate da Reporting Services (SSRS)
@@ -73,7 +73,7 @@ ms.locfileid: "59242279"
  Le considerazioni sulle piattaforme per le origini dei dati di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] sono diverse per il client di creazione dei report rispetto a quelle per il server di report.  
   
 ### <a name="on-the-report-authoring-client"></a>Nel client di creazione dei report  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ss_dtbi](../../includes/ss-dtbi-md.md)] is a 32-bit application. [!INCLUDE[ss_dtbi](../../è un'applicazione a 32 bit. is not supported on an Itanium-based platform. On non è supportato su una piattaforma basata su Itanium.nNelle piattaforme x64, per modificare e visualizzare l'anteprima dei report in Progettazione report, è necessario disporre di provider di dati a 32 bit installati nella directory della piattaforma (x86).  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ss_dtbi](../../includes/ss-dtbi-md.md)] è un'applicazione a 32 bit. [!INCLUDE[ss_dtbi](../../includes/ss-dtbi-md.md)] non è supportato su una piattaforma basata su Itanium. Nelle piattaforme x64, per modificare e visualizzare l'anteprima dei report in Progettazione report, è necessario disporre di provider di dati a 32 bit installati nella directory della piattaforma (x86).  
   
 ### <a name="on-the-report-server"></a>Nel server di report  
  Quando si distribuisce un report a un server di report a 64 bit, è necessario che nel server di report siano installati provider di dati a 64 bit compilati in modo nativo. Il wrapping di un provider di dati a 32 bit in interfacce a 64 bit non è supportato. Per ulteriori informazioni, consultare la documentazione relativa al provider di dati.  
@@ -150,7 +150,7 @@ ms.locfileid: "59242279"
   
  In [!INCLUDE[ss_dtbi](../../includes/ss-dtbi-md.md)] la finestra Progettazione query con interfaccia grafica associata a questa estensione per i dati è la finestra Progettazione query relazionale e non la finestra di progettazione di Visual Database Tools che viene usata con il tipo di origine dati **Microsoft SQL Server**.  
   
- [!INCLUDE[ss_dtbi](../../includes/ss-dtbi-md.md)] effettua automaticamente una distinzione tra i tipi di origine dati **Microsoft Azure[!INCLUDE[ssSDS](../../includes/sssds-md.md)]** e **Microsoft SQL Server** e apre la finestra Progettazione query con interfaccia grafica associata al tipo di origine dati.  
+ [!INCLUDE[ss_dtbi](../../includes/ss-dtbi-md.md)] effettua automaticamente una distinzione tra i tipi di origine dati **Microsoft Azure [!INCLUDE[ssSDS](../../includes/sssds-md.md)]** e **Microsoft SQL Server** e apre la finestra Progettazione query con interfaccia grafica associata al tipo di origine dati.  
   
  Se si utilizza l'interfaccia grafica di Progettazione query, la query verrà analizzata ed eventualmente riscritta. La finestra Progettazione query basata su testo è disponibile anche per la scrittura di query. Utilizzare Progettazione query basata su testo se si desidera controllare la sintassi esatta di [!INCLUDE[tsql](../../includes/tsql-md.md)] utilizzata per una query.   
   
@@ -270,7 +270,7 @@ Per installare gli strumenti client Oracle è possibile seguire questa procedura
   
  Per altre informazioni, vedere [Tipo di connessione Teradata &#40;SSRS&#41;](../../reporting-services/report-data/teradata-connection-type-ssrs.md).  
   
- È inoltre possibile creare modelli basati su un database Teradata. Per altre informazioni, vedere il white paper seguente nel sito Teradata [Microsoft SQL Server 2012 Reporting Services and Teradata Corporation](https://www.teradata.com/white-papers/Microsoft-SQL-Server-2012-Reporting-Services-and-Teradata-Corporation/?type=WP) (Microsoft SQL Server 2012 Reporting e Teradata Corporation).  
+ È inoltre possibile creare modelli basati su un database Teradata. Per altre informazioni, vedere il white paper seguente nel sito Teradata [Microsoft SQL Server 2012 Reporting Services and Teradata Corporation](https://www.teradata.com/white-papers/Microsoft-SQL-Server-2012-Reporting-Services-and-Teradata-Corporation/?type=WP)(Microsoft SQL Server 2012 Reporting e Teradata Corporation).  
   
  [Torna alla tabella delle origini dati](#DataSourcesTable)  
   
@@ -292,7 +292,7 @@ Per installare gli strumenti client Oracle è possibile seguire questa procedura
  Le credenziali specificate dipendono dall'implementazione utilizzata dall'applicazione client. Per altre informazioni, vedere [Tipo di connessione Elenco Microsoft SharePoint &#40;SSRS&#41;](../../reporting-services/report-data/sharepoint-list-connection-type-ssrs.md).  
   
 ###  <a name="XML"></a> Estensione per l'elaborazione dati XML  
- [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] include un'estensione per l'elaborazione dati XML che consente di usare dati XML in un report. I dati possono essere recuperati da un documento XML, da un servizio Web o da un'applicazione Web a cui è possibile accedere tramite un URL. Per altre informazioni, vedere [Tipo di connessione XML &#40;SSRS&#41;](../../reporting-services/report-data/xml-connection-type-ssrs.md). Per altre informazioni sulla finestra Progettazione query associata, vedere la sezione relativa alla progettazione di query basata su testo in [Interfaccia utente della finestra Progettazione query con interfaccia grafica](../../reporting-services/report-data/graphical-query-designer-user-interface.md). Per consultare degli esempi, vedere [Reporting Services: Using XML and Web Service Data Sources](https://go.microsoft.com/fwlink/?LinkId=81654) (Reporting Services: Uso di origini dati XML e servizio Web).  
+ [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] include un'estensione per l'elaborazione dati XML che consente di usare dati XML in un report. I dati possono essere recuperati da un documento XML, da un servizio Web o da un'applicazione Web a cui è possibile accedere tramite un URL. Per altre informazioni, vedere [Tipo di connessione XML &#40;SSRS&#41;](../../reporting-services/report-data/xml-connection-type-ssrs.md). Per altre informazioni sulla finestra Progettazione query associata, vedere la sezione relativa alla progettazione di query basata su testo in [Interfaccia utente della finestra Progettazione query con interfaccia grafica](../../reporting-services/report-data/graphical-query-designer-user-interface.md). Per consultare degli esempi, vedere [Reporting Services: Using XML and Web Service Data Sources](https://go.microsoft.com/fwlink/?LinkId=81654).  
   
  [Torna alla tabella delle origini dati](#DataSourcesTable)  
   
@@ -306,7 +306,7 @@ Per installare gli strumenti client Oracle è possibile seguire questa procedura
   
  Per altre informazioni, vedere [Tipo di connessione Hyperion Essbase &#40;SSRS&#41;](../../reporting-services/report-data/hyperion-essbase-connection-type-ssrs.md). Per altre informazioni sulla finestra Progettazione query associata, vedere [Interfaccia utente di Progettazione query Hyperion Essbase](../../reporting-services/report-data/hyperion-essbase-query-designer-user-interface.md).  
   
- Per altre informazioni su [!INCLUDE[extEssbase](../../includes/extessbase-md.md)], vedere [Using SQL Server 2005 Reporting Services with Hyperion Essbase](https://go.microsoft.com/fwlink/?LinkId=81970) (Uso di SQL Server 2005 Reporting Services con Hyperion Essbase).  
+ Per altre informazioni su [!INCLUDE[extEssbase](../../includes/extessbase-md.md)], vedere [Using SQL Server 2005 Reporting Services with Hyperion Essbase](https://go.microsoft.com/fwlink/?LinkId=81970)(Uso di SQL Server 2005 Reporting Services con Hyperion Essbase).  
   
  [Torna alla tabella delle origini dati](#DataSourcesTable)  
   
