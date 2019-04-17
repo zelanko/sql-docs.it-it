@@ -35,12 +35,12 @@ ms.assetid: 2c506167-0b69-49f7-9282-241e411910df
 author: pmasl
 ms.author: umajay
 manager: craigg
-ms.openlocfilehash: ec8ac971776b9b069fa9fb74bea2ee6bc9a22be3
-ms.sourcegitcommit: 0a7beb2f51e48889b4a85f7c896fb650b208eb36
+ms.openlocfilehash: 08d47fc52268df4d5a8fb027cd47572c62428707
+ms.sourcegitcommit: 5f38c1806d7577f69d2c49e66f06055cc1b315f1
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57685728"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59429367"
 ---
 # <a name="dbcc-checkdb-transact-sql"></a>DBCC CHECKDB (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
@@ -174,20 +174,20 @@ DBCC CHECKDB non esamina gli indici disabilitati. Per altre informazioni sugli i
 
 Se un tipo definito dall'utente (UDT) viene contrassegnato come ordinato per byte, è necessario che sia presente un'unica serializzazione di tale tipo. In assenza di una serializzazione consistente dei tipi definiti dall'utente (UDT) ordinati per byte, durante l'esecuzione di DBCC CHECKDB viene generato l'errore 2537. Per altre informazioni, vedere [Creazione di tipi definiti dall'utente - requisiti](../../relational-databases/clr-integration-database-objects-user-defined-types/creating-user-defined-types-requirements.md).    
 
-Poiché il [database Resource](../../relational-databases/databases/resource-database.md) è modificabile solo in modalità utente singolo, il comando DBCC CHECKDB non può essere eseguito direttamente su tale database. Tuttavia, quando DBCC CHECKDB viene eseguito sul [database master](../../relational-databases/databases/master-database.md), viene eseguito internamente anche un secondo CHECKDB sul database Resource. Di conseguenza, DBCC CHECKDB può restituire risultati aggiuntivi. Il comando restituisce ulteriori set di risultati quando non si imposta alcuna opzione o quando si imposta l'opzione PHYSICAL_ONLY o ESTIMATEONLY.    
+Poiché il [database Resource](../../relational-databases/databases/resource-database.md) è modificabile solo in modalità utente singolo, il comando DBCC CHECKDB non può essere eseguito direttamente su tale database. Tuttavia, quando DBCC CHECKDB viene eseguito sul [database master](../../relational-databases/databases/master-database.md), viene eseguito internamente anche un secondo CHECKDB sul database Resource. Di conseguenza, DBCC CHECKDB può restituire risultati aggiuntivi. Il comando restituisce ulteriori set di risultati quando non si imposta alcuna opzione o quando si imposta l'opzione `PHYSICAL_ONLY` o `ESTIMATEONLY`.    
 
 A partire da [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] SP2, l'esecuzione di DBCC CHECKDB **non comporta più** la cancellazione della cache dei piani per l'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Nelle versioni di [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] precedenti a SP2, l'esecuzione di DBCC CHECKDB cancella la cache dei piani. La cancellazione della cache dei piani comporta la ricompilazione di tutti i piani di esecuzione successivi e può causare un improvviso temporaneo peggioramento delle prestazioni di esecuzione delle query. 
     
 ## <a name="performing-logical-consistency-checks-on-indexes"></a>Esecuzione di controlli di consistenza logica negli indici    
 I controlli di consistenza logica negli indici variano in base al livello di compatibilità del database, come indicato di seguito:
 -   Se il livello di compatibilità è 100 ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]) o maggiore:    
--   A meno che non venga specificato NOINDEX, tramite DBCC CHECKDB vengono eseguiti controlli di consistenza sia fisica che logica in una singola tabella e in tutti i relativi indici non cluster. Per impostazione predefinita, tuttavia, negli indici XML, negli indici spaziali e nelle viste indicizzate vengono eseguiti solo controlli di consistenza fisica.
--   Se viene specificato WITH EXTENDED_LOGICAL_CHECKS, vengono eseguiti controlli logici in una vista indicizzata, indici XML e indici spaziali, dove presenti. Per impostazione predefinita, i controlli di consistenza fisica vengono eseguiti prima di quelli di consistenza logica. Se viene specificato anche NOINDEX, vengono eseguiti solo i controlli logici.
+-   A meno che non venga specificato `NOINDEX`, DBCC CHECKDB esegue controlli di consistenza sia fisica che logica su una singola tabella e tutti i relativi indici non cluster. Per impostazione predefinita, tuttavia, negli indici XML, negli indici spaziali e nelle viste indicizzate vengono eseguiti solo controlli di consistenza fisica.
+-   Se viene specificato `WITH EXTENDED_LOGICAL_CHECKS`, vengono eseguiti controlli logici su viste indicizzate, indici XML e indici spaziali, laddove presenti. Per impostazione predefinita, i controlli di consistenza fisica vengono eseguiti prima di quelli di consistenza logica. Se viene specificato anche `NOINDEX`, vengono eseguiti solo i controlli logici.
     
-Tramite questi controlli di consistenza logica vengono eseguiti controlli incrociati della tabella degli indici interna dell'oggetto Index con la tabella utente a cui viene fatto riferimento. Per trovare le righe esterne, viene creata una query interna per eseguire un'intersezione completa della tabella interna e della tabella utente. L'esecuzione di questa query può influire notevolmente sulle prestazioni e non è possibile tenere traccia del relativo stato di avanzamento. È pertanto consigliabile specificare WITH EXTENDED_LOGICAL_CHECKS solo se si sospetta la presenza di problemi dell'indice non correlati a danni fisici o se i checksum a livello di pagina sono stati disabilitati e si sospetta la presenza di danni hardware a livello di colonna.
+Tramite questi controlli di consistenza logica vengono eseguiti controlli incrociati della tabella degli indici interna dell'oggetto Index con la tabella utente a cui viene fatto riferimento. Per trovare le righe esterne, viene creata una query interna per eseguire un'intersezione completa della tabella interna e della tabella utente. L'esecuzione di questa query può influire notevolmente sulle prestazioni e non è possibile tenere traccia del relativo stato di avanzamento. È pertanto consigliabile specificare`WITH EXTENDED_LOGICAL_CHECKS` solo se si sospetta la presenza di problemi dell'indice non correlati a danni fisici o se i checksum a livello di pagina sono stati disabilitati e si sospetta la presenza di danni hardware a livello di colonna.
 -   Se l'indice è un indice filtrato, tramite DBCC CHECKDB vengono eseguiti controlli di consistenza per verificare che le voci di indice soddisfino il predicato del filtro.
--   Se il livello di compatibilità è 90 o minore, a meno che non venga specificato NOINDEX, tramite DBCC CHECKDB vengono eseguiti controlli di consistenza sia fisica che logica in una singola tabella o vista indicizzata e in tutti i relativi indici non cluster e XML. Gli indici spaziali non sono supportati.  
-- A partire da SQL Server 2016, non verranno eseguiti per impostazione predefinita controlli aggiuntivi su colonne calcolate persistenti, colonne UDT e indici filtrati per evitare valutazioni di espressioni costose. Questa modifica riduce notevolmente la durata di CHECKDB su database contenenti tali oggetti. Tuttavia, le verifiche di coerenza fisica di questi oggetti vengono sempre completate. Le valutazioni delle espressioni vengono eseguite, oltre alle verifiche logiche già presenti, ovvero viste indicizzate, indici XML e indici spaziali, solo quando è specificata l'opzione EXTENDED_LOGICAL_CHECKS, in quanto parte di tale opzione.   
+-   Se il livello di compatibilità è 90 o minore, a meno che non venga specificato `NOINDEX`, DBCC CHECKDB esegue controlli di consistenza sia fisica che logica su una singola tabella o vista indicizzata e su tutti i relativi indici non cluster e XML. Gli indici spaziali non sono supportati.  
+- A partire da SQL Server 2016, non verranno eseguiti per impostazione predefinita controlli aggiuntivi su colonne calcolate persistenti, colonne UDT e indici filtrati per evitare valutazioni di espressioni costose. Questa modifica riduce notevolmente la durata di CHECKDB su database contenenti tali oggetti. Tuttavia, le verifiche di coerenza fisica di questi oggetti vengono sempre completate. Solo quando viene specificata l'opzione `EXTENDED_LOGICAL_CHECKS` verranno eseguite le valutazioni delle espressioni, oltre alle verifiche logiche già presenti, ovvero viste indicizzate, indici XML e indici spaziali, come parte dell'opzione `EXTENDED_LOGICAL_CHECKS`.   
     
 **Per informazioni sul livello di compatibilità di un database**
 -   [Visualizzare o modificare il livello di compatibilità di un database](../../relational-databases/databases/view-or-change-the-compatibility-level-of-a-database.md)    
@@ -203,7 +203,7 @@ Quando FILESTREAM è abilitato per un database e una tabella, è possibile, faco
 Se, ad esempio, una tabella contiene una colonna **varbinary(max)** che usa l'attributo FILESTREAM, tramite DBCC CHECKDB viene verificato che sia presente un mapping uno-a-uno tra le directory e i file del file system e le righe, le colonne e i valori di colonna della tabella. DBCC CHECKDB consente di correggere i danneggiamenti se si specifica l'opzione REPAIR_ALLOW_DATA_LOSS. Per ripristinare il danneggiamento di FILESTREAM, DBCC consentirà di eliminare qualsiasi riga della tabella in cui mancano i dati del file system.
     
 ## <a name="best-practices"></a>Procedure consigliate    
-È consigliabile utilizzare l'opzione PHYSICAL_ONLY per l'utilizzo frequente nei sistemi di produzione, poiché consente di ridurre notevolmente i tempi di esecuzione di DBCC CHECKDB su database di grandi dimensioni. È inoltre consigliabile eseguire periodicamente DBCC CHECKDB senza opzioni. La frequenza consigliata di esecuzione varia a seconda delle singole aziende e dei relativi ambienti di produzione.
+È consigliabile usare l'opzione `PHYSICAL_ONLY` per l'uso frequente nei sistemi di produzione, poiché consente di ridurre notevolmente i tempi di esecuzione di DBCC CHECKDB su database di grandi dimensioni. È inoltre consigliabile eseguire periodicamente DBCC CHECKDB senza opzioni. La frequenza consigliata di esecuzione varia a seconda delle singole aziende e dei relativi ambienti di produzione.
     
 ## <a name="checking-objects-in-parallel"></a>Controllo parallelo degli oggetti    
 Per impostazione predefinita, DBCC CHECKDB esegue il controllo parallelo degli oggetti. Il grado di parallelismo viene determinato in modo automatico da Query Processor. Il livello massimo di parallelismo viene configurato allo stesso modo delle query parallele. Per limitare il numero massimo di processori disponibili per la verifica DBCC, usare [sp_configure](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md). Per altre informazioni, vedere [Configurare l'opzione di configurazione del server max degree of parallelism](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md). È possibile disabilitare il controllo parallelo tramite il flag di traccia 2528. Per altre informazioni, vedere [Flag di traccia &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md).
@@ -221,7 +221,7 @@ Dopo il completamento del comando DBCC CHECKDB, nel log degli errori di [!INCLUD
 |2|Si è verificato un errore durante un ripristino di database in modalità di emergenza.|    
 |3|Indica un danneggiamento dei metadati che ha causato l'interruzione del comando DBCC.|    
 |4|È stata rilevata una violazione di accesso o asserzione.|    
-|5|Si è verificato un errore sconosciuto che ha causato l'interruzione del comando DBCC.|    
+|5|il comando DBCC è stato terminato da un errore sconosciuto.|    
     
 ## <a name="error-reporting"></a>Segnalazione errori    
 Quando un comando DBCC CHECKDB rileva un errore di danneggiamento, viene creato un file di dump denominato `SQLDUMP*nnnn*.txt` nella directory LOG di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Quando la raccolta di dati *Utilizzo caratteristiche* e le funzionalità *Segnalazione errori* sono abilitate per l'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], il file viene inoltrato automaticamente a [!INCLUDE[msCoName](../../includes/msconame-md.md)]. I dati raccolti consentono di migliorare la funzionalità di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].
@@ -267,7 +267,7 @@ L'esecuzione del comando DBCC CHECKDB con l'opzione REPAIR_ALLOW_DATA_LOSS può 
 -   Tabelle di metadati della replica. Le azioni eseguite dal processo CHECKDB per correggere le tabelle di metadati della replica danneggiate richiedono l'eliminazione e la riconfigurazione della replica.    
     
 Se è necessario eseguire il comando DBCC CHECKDB con l'opzione REPAIR_ALLOW_DATA_LOSS su un database utente o di distribuzione:
-1.  Mettere in stato di inattività il sistema. Arrestare l'attività sul database e su qualsiasi altro database incluso nella topologia di replica, quindi provare a sincronizzare tutti i nodi. Per altre informazioni, vedere [Come mettere una topologia di replica in stato di inattività &#40;programmazione Transact-SQL della replica&#41;](../../relational-databases/replication/administration/quiesce-a-replication-topology-replication-transact-sql-programming.md).    
+1.  Mettere in stato di inattività il sistema: arrestare l'attività sul database e su qualsiasi altro database incluso nella topologia di replica, quindi provare a sincronizzare tutti i nodi. Per altre informazioni, vedere [Come mettere una topologia di replica in stato di inattività &#40;programmazione Transact-SQL della replica&#41;](../../relational-databases/replication/administration/quiesce-a-replication-topology-replication-transact-sql-programming.md).    
 1.  Eseguire DBCC CHECKDB.    
 1.  Se il report di DBCC CHECKDB include correzioni relative a tabelle presenti nel database di distribuzione o a tabelle di metadati della replica di un database utente, eliminare e riconfigurare la replica. Per altre informazioni, vedere [Disabilitare la pubblicazione e la distribuzione](../../relational-databases/replication/disable-publishing-and-distribution.md).    
 1.  Se il report di DBCC CHECKDB include correzioni relative a tabelle replicate, eseguire la convalida dei dati per determinare la presenza di eventuali differenze tra i dati dei database di pubblicazione e di sottoscrizione.    
@@ -365,7 +365,7 @@ DBCC CHECKDB restituisce il set di risultati seguente quando viene specificato E
  DBCC execution completed. If DBCC printed error messages, contact your system administrator.
 ```
     
-## <a name="permissions"></a>Permissions    
+## <a name="permissions"></a>Autorizzazioni    
 È richiesta l'appartenenza al ruolo predefinito del server sysadmin o al ruolo predefinito del database db_owner.
     
 ## <a name="examples"></a>Esempi    
@@ -382,7 +382,7 @@ DBCC CHECKDB (AdventureWorks2012, NOINDEX);
 GO    
 ```    
     
-### <a name="b-checking-the-current-database-suppressing-informational-messages"></a>b. Controllo del database corrente, con la disattivazione dei messaggi informativi    
+### <a name="b-checking-the-current-database-suppressing-informational-messages"></a>B. Controllo del database corrente, con la disattivazione dei messaggi informativi    
 Nell'esempio seguente viene verificato il database corrente e vengono soppressi tutti i messaggi informativi.
     
 ```sql    

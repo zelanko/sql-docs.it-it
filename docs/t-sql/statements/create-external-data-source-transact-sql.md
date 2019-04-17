@@ -20,12 +20,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 7f3c92067adfc0469802c81d78a7267af2cd28cc
-ms.sourcegitcommit: 97340deee7e17288b5eec2fa275b01128f28e1b8
+ms.openlocfilehash: 986a658c315241e14efd6fd10b170aaf9fb17da0
+ms.sourcegitcommit: b2a29f9659f627116d0a92c03529aafc60e1b85a
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55421198"
+ms.lasthandoff: 04/12/2019
+ms.locfileid: "59516527"
 ---
 # <a name="create-external-data-source-transact-sql"></a>CREATE EXTERNAL DATA SOURCE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-all-md](../../includes/tsql-appliesto-ss2016-all-md.md)]
@@ -208,7 +208,7 @@ CREATE EXTERNAL DATA SOURCE MyElasticDBQueryDataSrc WITH
 Per un'esercitazione dettagliata su RDBMS, vedere [Introduzione alle query tra database (partizionamento verticale)](https://azure.microsoft.com/documentation/articles/sql-database-elastic-query-getting-started-vertical/).  
 
 **BLOB_STORAGE**   
-Questo tipo viene usato solo per le operazioni bulk. `LOCATION` deve essere l'URL valido del contenitore e dell'archivio BLOB di Azure. Non inserire **/**, nome file o parametri di firma per l'accesso condiviso alla fine dell'URL `LOCATION`. `CREDENTIAL` è obbligatorio se l'oggetto BLOB non è pubblico. Ad esempio 
+Questo tipo viene usato solo per le operazioni bulk. `LOCATION` deve essere l'URL valido del contenitore e dell'archivio BLOB di Azure. Non inserire **/**, nome file o parametri di firma per l'accesso condiviso alla fine dell'URL `LOCATION`. `CREDENTIAL` è obbligatorio se l'oggetto BLOB non è pubblico. Esempio: 
 ```sql
 CREATE EXTERNAL DATA SOURCE MyAzureBlobStorage
 WITH (  TYPE = BLOB_STORAGE, 
@@ -216,7 +216,7 @@ WITH (  TYPE = BLOB_STORAGE,
         CREDENTIAL= MyAzureBlobStorageCredential    --> CREDENTIAL is not required if a blob has public access!
 );
 ```
-La credenziale usata deve essere creata con `SHARED ACCESS SIGNATURE` come identità, non deve avere `?` iniziale nel token di firma di accesso condiviso, deve avere almeno un'autorizzazione di lettura per il file da caricare (ad esempio, `srt=o&sp=r`), e il periodo di scadenza deve essere valido. Tutte le date sono in formato UTC. Ad esempio
+La credenziale usata deve essere creata con `SHARED ACCESS SIGNATURE` come identità, non deve avere `?` iniziale nel token di firma di accesso condiviso, deve avere almeno un'autorizzazione di lettura per il file da caricare (ad esempio, `srt=o&sp=r`), e il periodo di scadenza deve essere valido. Tutte le date sono in formato UTC. Esempio:
 ```sql
 CREATE DATABASE SCOPED CREDENTIAL MyAzureBlobStorageCredential 
  WITH IDENTITY = 'SHARED ACCESS SIGNATURE',
@@ -302,7 +302,7 @@ Per un elenco completo delle origini dati esterne supportate, vedere [Configuraz
   
 -   Una tabella esterna che fa riferimento all'origine dati esterna e al formato di file esterno.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorizzazioni  
  Richiede l'autorizzazione CONTROL nel database in SQL DW, SQL Server, APS 2016 e nel database SQL.
 
 > [!IMPORTANT]  
@@ -325,6 +325,10 @@ Per garantire l'esito positivo delle query di PolyBase in caso di failover del N
  Tutte le origini dati definite nello stesso percorso di cluster Hadoop devono usare la stessa impostazione per RESOURCE_MANAGER_LOCATION o JOB_TRACKER_LOCATION. Se è presente un'incoerenza, si verifica un errore di runtime.  
   
  Se il cluster Hadoop è configurato con un nome e l'origine dati esterna usa l'indirizzo IP per il percorso del cluster, PolyBase deve essere comunque in grado di risolvere il nome del cluster quando viene usata l'origine dati. Per risolvere il nome, è necessario abilitare un server d'inoltro DNS.  
+ 
+Non è attualmente supportato un token di firma di accesso condiviso con il tipo `hadoop` ed è supportato solo con una chiave di accesso dell'account di archiviazione. Il tentativo di creare un'origine dati esterna di tipo `hadoop` e tramite una credenziale di firma di accesso condiviso potrebbe non riuscire con l'errore:
+
+`Msg 105019, Level 16, State 1 - EXTERNAL TABLE access failed due to internal error: 'Java exception raised on call to HdfsBridge_Connect. Java exception message: Parameters provided to connect to the Azure storage account are not valid.: Error [Parameters provided to connect to the Azure storage account are not valid.] occurred while accessing external file.'`
   
 ## <a name="locking"></a>Utilizzo di blocchi  
  Acquisisce un blocco condiviso sull'oggetto EXTERNAL DATA SOURCE.  
@@ -343,7 +347,7 @@ WITH (
 
 ```  
   
-### <a name="b-create-external-data-source-to-reference-hadoop-with-pushdown-enabled"></a>b. Creare un'origine dati esterna per fare riferimento a Hadoop con il pushdown abilitato  
+### <a name="b-create-external-data-source-to-reference-hadoop-with-pushdown-enabled"></a>B. Creare un'origine dati esterna per fare riferimento a Hadoop con il pushdown abilitato  
 Specificare l'opzione RESOURCE_MANAGER_LOCATION per abilitare il push-down del calcolo in Hadoop per le query PolyBase. Dopo l'abilitazione, PolyBase usa una decisione basata sui costi per determinare se eseguire il push del calcolo delle query in Hadoop o spostare tutti i dati per elaborare la query in SQL Server.
   
 ```sql  

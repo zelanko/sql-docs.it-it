@@ -13,21 +13,34 @@ ms.assetid: 8092faa3-9cff-4f81-926c-6a0070d1ce2c
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: ce3bc10ad615e449da26e55d64b05ca36b6d10ca
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ac332e77226d5de33a4ef7fc77a0c34f6b234a3b
+ms.sourcegitcommit: b2a29f9659f627116d0a92c03529aafc60e1b85a
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47729509"
+ms.lasthandoff: 04/12/2019
+ms.locfileid: "59516487"
 ---
 # <a name="enable-a-database-for-replication-sql-server-management-studio"></a>Abilitazione di un database per la replica (SQL Server Management Studio)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  Un database viene implicitamente abilitato per la replica quando un membro del ruolo predefinito del server **sysadmin** crea una pubblicazione mediante la Creazione guidata nuova pubblicazione. Il membro del ruolo predefinito del server **sysadmin** può inoltre abilitare esplicitamente un database per la replica, in modo che un membro del ruolo predefinito del database **db_owner** possa creare una o più pubblicazioni in tale database. A tale scopo, usare la pagina **Database di pubblicazione** della finestra di dialogo **Proprietà server di pubblicazione - \<ServerPubblicazione>**. Per ulteriori informazioni sull'accesso a questa finestra di dialogo, vedere [Create a Publication](../../relational-databases/replication/publish/create-a-publication.md).  
   
-### <a name="to-enable-a-database-for-replication"></a>Per abilitare un database per la replica  
+Un database viene implicitamente abilitato per la replica quando un membro del ruolo predefinito del server **sysadmin** crea una pubblicazione mediante la Creazione guidata nuova pubblicazione. Il membro del ruolo predefinito del server **sysadmin** può inoltre abilitare esplicitamente un database per la replica, in modo che un membro del ruolo predefinito del database **db_owner** possa creare una o più pubblicazioni in tale database. A tale scopo, usare la pagina **Database di pubblicazione** della finestra di dialogo **Proprietà server di pubblicazione - \<ServerPubblicazione>**. Per ulteriori informazioni sull'accesso a questa finestra di dialogo, vedere [Create a Publication](../../relational-databases/replication/publish/create-a-publication.md).  
+  
+## <a name="using-sql-server-management-studio-ssms"></a>Utilizzo di SQL Server Management Studio (SSMS)
   
 1.  Nella pagina **Database di pubblicazione** della finestra di dialogo **Proprietà server di pubblicazione - \<ServerPubblicazione>** selezionare la casella di controllo **Transazionale** e/o **Merge** per ogni database da replicare. Selezionare **Transazionale** per abilitare il database per la replica snapshot.  
   
 2.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
   
+## <a name="using-transact-sql-t-sql"></a>Uso di Transact-SQL (T-SQL)
+È possibile abilitare un database per la replica con il codice Transact-SQL seguente: 
+
+```sql
+USE master
+EXEC sp_replicationdboption @dbname = 'AdventureWorks2017',
+@optname = 'publish',
+@value = 'true'
+GO
+```
+
+Per disabilitare la pubblicazione, impostare @value = 'false'. 

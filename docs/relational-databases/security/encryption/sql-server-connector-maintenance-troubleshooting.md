@@ -12,12 +12,12 @@ ms.assetid: 7f5b73fc-e699-49ac-a22d-f4adcfae62b1
 author: aliceku
 ms.author: aliceku
 manager: craigg
-ms.openlocfilehash: 48db6ede27c4ca7565ca4de1b0eab798c1eb2ef7
-ms.sourcegitcommit: c6e71ed14198da67afd7ba722823b1af9b4f4e6f
+ms.openlocfilehash: 67716270a13f71e23a0294db632ef0b0d51ca76e
+ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/16/2019
-ms.locfileid: "54327842"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59241379"
 ---
 # <a name="sql-server-connector-maintenance-amp-troubleshooting"></a>Manutenzione e risoluzione dei problemi di Connettore SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -102,7 +102,7 @@ Se è in uso la versione 1.0.1.0 o una versione successiva, seguire questa proce
  
 1. Installare la versione più recente del Connettore [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] dall' [Area download Microsoft](https://www.microsoft.com/download/details.aspx?id=45344). Nell'installazione guidata salvare il nuovo file DLL in un percorso di file diverso dal percorso del file DLL del Connettore [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] originale. Il nuovo percorso di file potrebbe ad esempio essere: `C:\Program Files\SQL Server Connector for Microsoft Azure Key Vault\<latest version number>\Microsoft.AzureKeyVaultService.EKM.dll`
  
-2. Nell'istanza di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]eseguire il comando Transact-SQL seguente per fare in modo che l'istanza di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] punti alla nuova versione del Connettore [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] :
+2. Nell'istanza di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] eseguire il comando Transact-SQL seguente per fare in modo che l'istanza di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] punti alla nuova versione del Connettore [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]:
 
     ``` 
     ALTER CRYPTOGRAPHIC PROVIDER AzureKeyVault_EKM_Prov   
@@ -159,7 +159,7 @@ I backup delle chiavi possono essere ripristinati in aree diverse di Azure, purc
 ### <a name="on-azure-key-vault"></a>Informazioni sull'insieme di credenziali delle chiavi di Azure  
   
 **Come funzionano le operazioni relative alla chiave nell'insieme di credenziali delle chiavi di Azure?**  
- la chiave asimmetrica nell'insieme di credenziali delle chiavi viene usata per proteggere le chiavi di crittografia di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Solo la parte pubblica della chiave asimmetrica lascia sempre l'insieme di credenziali. La parte privata non viene mai esportata dall'insieme di credenziali. Tutte le operazioni di crittografia che usano la chiave asimmetrica vengono eseguite all'interno del servizio Azure Key Vault e sono protette dal sistema di sicurezza del servizio.  
+ la chiave asimmetrica nell'insieme di credenziali delle chiavi viene usata per proteggere le chiavi di crittografia di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Solo la parte pubblica della chiave asimmetrica lascia sempre l'insieme di credenziali. La parte privata non viene mai esportata dall'insieme di credenziali. Tutte le operazioni di crittografia che usano la chiave asimmetrica vengono eseguite all'interno del servizio Azure Key Vault e sono protette dal sistema di sicurezza del servizio.  
   
  **Che cos'è un URI della chiave?**  
  Ogni chiave nell'insieme di credenziali delle chiavi di Azure ha un URI (Uniform Resource Identifier) che può essere usato per fare riferimento alla chiave dell'applicazione. Usare il formato `https://ContosoKeyVault.vault.azure.net/keys/ContosoFirstKey` per ottenere la versione corrente e usare il formato `https://ContosoKeyVault.vault.azure.net/keys/ContosoFirstKey/cgacf4f763ar42ffb0a1gca546aygd87` per ottenere una versione specifica.  
@@ -291,10 +291,10 @@ Versione di SQL Server  |Collegamento di installazione ridistribuibile
   
 -   [Introduzione all'insieme di credenziali delle chiavi di Azure](https://azure.microsoft.com/documentation/articles/key-vault-get-started/)  
   
--   Riferimento di PowerShell [Cmdlet per l'insieme di credenziali delle chiavi di Azure](https://msdn.microsoft.com/library/dn868052.aspx)  
+-   Riferimento di PowerShell [Cmdlet per l'insieme di credenziali delle chiavi di Azure](/powershell/module/azurerm.keyvault/)  
   
 ## <a name="see-also"></a>Vedere anche  
- [Extensible Key Management con l'insieme di credenziali delle chiavi di Azure](../../../relational-databases/security/encryption/extensible-key-management-using-azure-key-vault-sql-server.md)  [Usare Connettore SQL Server con le funzionalità di crittografia SQL](../../../relational-databases/security/encryption/use-sql-server-connector-with-sql-encryption-features.md)   
+ [Extensible Key Management con l'insieme di credenziali delle chiavi di Azure](../../../relational-databases/security/encryption/extensible-key-management-using-azure-key-vault-sql-server.md) [Usare Connettore SQL Server con le funzionalità di crittografia SQL](../../../relational-databases/security/encryption/use-sql-server-connector-with-sql-encryption-features.md)   
  [Opzione di configurazione del server EKM provider enabled](../../../database-engine/configure-windows/ekm-provider-enabled-server-configuration-option.md)   
  [Procedura di installazione di Extensible Key Management con l'insieme di credenziali delle chiavi di Azure](../../../relational-databases/security/encryption/setup-steps-for-extensible-key-management-using-the-azure-key-vault.md)  
   

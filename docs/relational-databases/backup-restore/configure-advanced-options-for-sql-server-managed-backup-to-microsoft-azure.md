@@ -1,7 +1,7 @@
 ---
 title: Configurare le opzioni avanzate per il backup gestito di SQL Server in Microsoft Azure | Microsoft Docs
 ms.custom: ''
-ms.date: 03/04/2017
+ms.date: 03/05/2017
 ms.prod: sql
 ms.prod_service: backup-restore
 ms.reviewer: ''
@@ -11,12 +11,12 @@ ms.assetid: ffd28159-8de8-4d40-87da-1586bfef3315
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 044e52311bbdb21f1a7f144a2b6f25809ea33ade
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b6bcf893e719a2501fcf2084331b21de6f6a491c
+ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47610179"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59241749"
 ---
 # <a name="configure-advanced-options-for-sql-server-managed-backup-to-microsoft-azure"></a>Configurare le opzioni avanzate per il backup gestito di SQL Server in Microsoft Azure
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -31,8 +31,10 @@ ms.locfileid: "47610179"
   
 ## <a name="configure-encryption"></a>Configurare la crittografia  
  I passaggi seguenti descrivono come specificare le impostazioni di crittografia usando la stored procedure [managed_backup.sp_backup_config_advanced &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/managed-backup-sp-backup-config-advanced-transact-sql.md).  
-  
-1.  **Determinare l'algoritmo di crittografia**: stabilire prima di tutto il nome dell'algoritmo di crittografia da usare. Selezionare uno degli algoritmi seguenti:  
+
+[!INCLUDE[Freshness](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
+1.  **Determinare l'algoritmo di crittografia:** determinare prima di tutto il nome dell'algoritmo di crittografia da usare. Selezionare uno degli algoritmi seguenti:  
   
     -   AES_128  
   
@@ -44,7 +46,7 @@ ms.locfileid: "47610179"
   
     -   NO_ENCRYPTION  
   
-2.  **Creare una chiave master del database:** scegliere una password per crittografare la copia della chiave master che verrà archiviata nel database.  
+2.  **Creare una chiave master del database:** Scegliere una password per la crittografia della copia della chiave master che verrà archiviata nel database.  
   
     ```  
     -- Creates a database master key.  
@@ -55,7 +57,7 @@ ms.locfileid: "47610179"
     GO  
     ```  
   
-3.  **Creare un certificato o una chiave asimmetrica per il backup:** è possibile usare un certificato o una chiave asimmetrica da usare con la crittografia. L'esempio seguente crea un certificato di backup da usare per la crittografia.  
+3.  **Creare un certificato di backup o una chiave asimmetrica:** è possibile usare un certificato o una chiave asimmetrica per l'uso con la crittografia. L'esempio seguente crea un certificato di backup da usare per la crittografia.  
   
     ```sql  
     USE Master;  
@@ -90,11 +92,11 @@ ms.locfileid: "47610179"
   
 3.  **Determinare il giorno della settimana per i backup settimanali:** se il backup è settimanale, scegliere un giorno della settimana per il backup completo.  
   
-4.  **Determinare l'ora di inizio per il backup:** scegliere l'ora di inizio del backup usando il formato 24 ore.  
+4.  **Determinare l'ora di inizio per il backup:** usando la notazione con 24 ore, scegliere un'ora di inizio per il backup.  
   
-5.  **Determinare la durata consentita per il backup:** specificare il periodo di tempo entro il quale deve essere completato un backup.  
+5.  **Determinare il periodo di tempo per l'esecuzione del backup:** specificare la quantità di tempo disponibile per il completamento di un backup.  
   
-6.  **Impostare una pianificazione personalizzata per il backup:** la stored procedure seguente definisce una pianificazione personalizzata per il database `MyDB` . I backup completi vengono eseguiti settimanalmente il giorno `Monday` alle `17:30`. I backup del log vengono eseguiti ogni `5` minuti. Per il completamento del backup sono previste due ore.  
+6.  **Impostare una pianificazione personalizzata per il backup:** la stored procedure seguente definisce una pianificazione personalizzata per il database `MyDB`. I backup completi vengono eseguiti settimanalmente il giorno `Monday` alle `17:30`. I backup del log vengono eseguiti ogni `5` minuti. Per il completamento del backup sono previste due ore.  
   
     ```  
     USE msdb;  

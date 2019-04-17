@@ -11,12 +11,12 @@ ms.topic: conceptual
 author: haoqian
 ms.author: haoqian
 manager: craigg
-ms.openlocfilehash: 43bfe4364543adee0e63e1d123680a82bb3bae39
-ms.sourcegitcommit: 8bc5d85bd157f9cfd52245d23062d150b76066ef
+ms.openlocfilehash: cedbd1516706191980dc7817a9bc7434def30831
+ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/07/2019
-ms.locfileid: "57578331"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59241461"
 ---
 # <a name="scale-out-support-for-high-availability"></a>Supporto della disponibilità elevata in Scale Out
 
@@ -43,7 +43,7 @@ Questo account dovrà poi poter accedere al database SSISDB nel nodo secondario 
 
 ### <a name="22-include-the-dns-host-name-for-the-scale-out-master-service-in-the-cns-of-the-scale-out-master-certificate"></a>2.2 Includere il nome host DNS del servizio Scale Out Master nei nomi comuni (CN) del certificato di Scale Out Master
 
-Questo nome host viene usato nell'endpoint di Scale Out Master. (Fornire un nome host DNS e non un nome del server.)
+Questo nome host è l'endpoint di Scale Out Master, che viene creato come un servizio generico nel cluster di failover (vedere il passaggio 7).   (Fornire un nome host DNS e non un nome del server.)
 
 ![Configurazione del master a disponibilità elevata](media/ha-master-config.PNG)
 
@@ -112,5 +112,5 @@ Per aggiornare Scale Out in un ambiente a disponibilità elevata seguire la [pro
 
 ## <a name="next-steps"></a>Passaggi successivi
 Per altre informazioni, vedere gli articoli seguenti:
--   [Integration Services (SSIS) Scale Out Master](integration-services-ssis-scale-out-master.md)
--   [Integration Services (SSIS) Scale Out Worker](integration-services-ssis-scale-out-worker.md)
+-   [Master di scalabilità orizzontale di Integration Services (SSIS)](integration-services-ssis-scale-out-master.md)
+-   [Ruolo di lavoro di scalabilità orizzontale di Integration Services (SSIS)](integration-services-ssis-scale-out-worker.md)

@@ -1,7 +1,7 @@
 ---
 title: Backup di file e filegroup (SQL Server) | Microsoft Docs
 ms.custom: ''
-ms.date: 08/02/2016
+ms.date: 08/03/2016
 ms.prod: sql
 ms.prod_service: backup-restore
 ms.reviewer: ''
@@ -17,12 +17,12 @@ ms.assetid: a0d3a567-7d8b-4cfe-a505-d197b9a51f70
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: e99ded8423879fe62393d3e8c3731780b305eaad
-ms.sourcegitcommit: b75fc8cfb9a8657f883df43a1f9ba1b70f1ac9fb
+ms.openlocfilehash: 1b6127bbc02c85276292da1ada5748fbb2d7923f
+ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/08/2018
-ms.locfileid: "48851910"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59241929"
 ---
 # <a name="back-up-files-and-filegroups-sql-server"></a>Backup di file e filegroup (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -44,12 +44,13 @@ ms.locfileid: "48851910"
 -   Per impostazione predefinita, per ogni operazione di backup eseguita in modo corretto viene aggiunta una voce al log degli errori di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e al registro eventi di sistema. Se il backup del log viene eseguito di frequente, questi messaggi possono aumentare rapidamente, provocando la creazione di log degli errori di dimensioni elevate e rendendo difficile l'individuazione di altri messaggi. In questi casi è possibile eliminare tali voci di log utilizzando il flag di traccia 3226 se nessuno degli script dipende da esse. Per altre informazioni, vedere [Flag di traccia &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md).  
   
  
-##  <a name="Permissions"></a> Permissions  
+##  <a name="Permissions"></a> Autorizzazioni  
  Le autorizzazioni BACKUP DATABASE e BACKUP LOG vengono assegnate per impostazione predefinita ai membri del ruolo predefinito del server **sysadmin** e dei ruoli predefiniti del database **db_owner** e **db_backupoperator** .  
   
  Eventuali problemi correlati alla proprietà e alle autorizzazioni sul file fisico del dispositivo di backup possono interferire con l'operazione di backup. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sia possibile leggere e scrivere sul dispositivo e che l'account utilizzato per eseguire il servizio [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] disponga delle autorizzazioni di scrittura. Le autorizzazioni di accesso ai file, tuttavia, non vengono controllate dalla stored procedure [sp_addumpdevice](../../relational-databases/system-stored-procedures/sp-addumpdevice-transact-sql.md)che aggiunge una voce per un dispositivo di backup nelle tabelle di sistema. Di conseguenza, i problemi relativi all'accesso e alla proprietà del file fisico del dispositivo di backup potrebbero emergere solo in fase di accesso alla risorsa fisica durante un tentativo di backup o ripristino.  
-  
-  
+
+[!INCLUDE[Freshness](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 ## <a name="back-up-files-and-filegroups-using-ssms"></a>Backup di file e filegroup usando SSMS   
   
 1.  Dopo aver effettuato la connessione all'istanza appropriata del [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)], in Esplora oggetti fare clic sul nome del server per espanderne l'albero.  
@@ -80,7 +81,7 @@ ms.locfileid: "48851910"
   
 11. Fare clic su **Disco** o su **Nastro**per selezionare il tipo di destinazione del backup. Per selezionare i percorsi per un massimo di 64 unità disco o nastro contenenti un singolo set di supporti, fare clic su **Aggiungi**. I percorsi selezionati vengono visualizzati nell'elenco **Backup su** .  
   
-    >**NOTA:** per rimuovere una destinazione di backup, selezionarla e fare clic su **Rimuovi**. Per visualizzare il contenuto di una destinazione di backup, selezionarla e fare clic su **Contenuto**.  
+    >**NOTA:** Per rimuovere una destinazione di backup, selezionarla e fare clic su **Rimuovi**. Per visualizzare il contenuto di una destinazione di backup, selezionarla e fare clic su **Contenuto**.  
   
 12. Per visualizzare o selezionare le opzioni avanzate, fare clic su **Opzioni** nel riquadro **Selezione pagina** .  
   
@@ -108,7 +109,7 @@ ms.locfileid: "48851910"
   
 15. Se si esegue il backup su un'unità nastro, come specificato nella sezione **Destinazione** della pagina **Generale**, l'opzione **Scarica nastro al termine del backup** sarà attiva. Selezionando questa opzione viene abilitata anche l'opzione **Riavvolgi il nastro prima di scaricarlo** .  
   
-    > **NOTA:** le opzioni presenti nella sezione **Log delle transazioni** sono attive solo in caso di backup di un log delle transazioni, come specificato nella sezione **Tipo backup** della pagina **Generale** .  
+    > **NOTA:** Le opzioni presenti nella sezione **Log delle transazioni** sono attive solo in caso di backup di un log delle transazioni, come specificato nella sezione **Tipo backup** nella pagina **Generale** .  
   
 16. [!INCLUDE[ssEnterpriseEd10](../../includes/ssenterpriseed10-md.md)] e nelle versioni più recenti è supportata la [compressione dei backup](../../relational-databases/backup-restore/backup-compression-sql-server.md). Per impostazione predefinita, la compressione di un backup dipende dal valore dell'opzione di configurazione del server **Valore predefinito di compressione backup**. Tuttavia, indipendentemente dall'impostazione predefinita a livello di server corrente, è possibile comprimere un backup selezionando **Comprimi backup**ed è possibile impedire la compressione selezionando **Non comprimere il backup**.  
   
@@ -139,12 +140,12 @@ ms.locfileid: "48851910"
   
     |Opzione|Descrizione|  
     |------------|-----------------|  
-    |*database*|Nome del database di cui viene eseguito il backup del log delle transazioni oppure il backup parziale o completo del database.|  
+    |*Database*|Nome del database di cui viene eseguito il backup del log delle transazioni oppure il backup parziale o completo del database.|  
     |FILE _=_*nome_file_logico*|Specifica il nome logico di un file da includere nel backup del file.|  
     |FILEGROUP _=_*nome_filegroup_logico*|Specifica il nome logico di un filegroup da includere nel backup del file. Con il modello di recupero con registrazione minima, il backup dei filegroup è consentito solo per i filegroup di sola lettura.|  
     |[ **,**...*f* ]|Segnaposto che indica che è possibile specificare più file e filegroup. Il numero di file o filegroup che possono essere specificati è illimitato.|  
     |*backup_device* [ **,**...*n* ]|Specifica un elenco di dispositivi di backup da 1 a 64 da utilizzare per l'operazione di backup. È possibile specificare un dispositivo di backup fisico oppure un dispositivo di backup logico corrispondente se è già stata definito. Per specificare un dispositivo di backup fisico, utilizzare l'opzione DISK o TAPE:<br /><br /> { DISK &#124; TAPE } _=_*nome_dispositivo_backup_fisico*<br /><br /> Per altre informazioni, vedere [Dispositivi di backup &#40;SQL Server&#41;](../../relational-databases/backup-restore/backup-devices-sql-server.md).|  
-    |WITH *con_opzioni* [ **,**...*o* ]|Facoltativamente, specifica una o più opzioni aggiuntive, ad esempio DIFFERENTIAL.<br /><br /> Nota: il backup differenziale del file richiede come base un backup completo del file. Per altre informazioni, vedere [Creare un backup differenziale del database &#40;SQL Server&#41;](../../relational-databases/backup-restore/create-a-differential-database-backup-sql-server.md).|  
+    |WITH *con_opzioni* [ **,**...*o* ]|Facoltativamente, specifica una o più opzioni aggiuntive, ad esempio DIFFERENTIAL.<br /><br /> Nota: un backup differenziale del file richiede come base un backup completo del file. Per altre informazioni, vedere [Creare un backup differenziale del database &#40;SQL Server&#41;](../../relational-databases/backup-restore/create-a-differential-database-backup-sql-server.md).|  
   
 2.  Se si utilizza il modello di recupero con registrazione completa, è inoltre necessario eseguire un backup del log delle transazioni. Per utilizzare un set completo di backup del file completi per il ripristino di un database, è inoltre necessario disporre di backup dei log relativi a tutti i backup del file, dall'inizio del primo backup del file. Per altre informazioni, vedere [Eseguire il backup di un log delle transazioni &#40;SQL Server&#41;](../../relational-databases/backup-restore/back-up-a-transaction-log-sql-server.md).  
   

@@ -7,12 +7,12 @@ ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.topic: conceptual
 ms.date: 09/17/2017
-ms.openlocfilehash: 1543846ec5353f5419b12bb5747b1ced53d2b4f0
-ms.sourcegitcommit: 134a91ed1a59b9d57cb1e98eb1eae24f118da51e
+ms.openlocfilehash: 61f72b2676e2c3c92dd82febc70d2e00d3363baf
+ms.sourcegitcommit: c017b8afb37e831c17fe5930d814574f470e80fb
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/07/2019
-ms.locfileid: "57556243"
+ms.lasthandoff: 04/11/2019
+ms.locfileid: "59506558"
 ---
 # <a name="power-bi-report-server-integration-configuration-manager"></a>Integrazione del server di report e di Power BI (Gestione configurazione)
 
@@ -34,15 +34,15 @@ Oltre a una connessione Internet attiva per passare al servizio [!INCLUDE[sspowe
 
 - I report che si desidera aggiungere devono usare credenziali archiviate. Questo non è un requisito per l'integrazione di [!INCLUDE[sspowerbi](../../includes/sspowerbi-md.md)] , bensì per il processo di aggiornamento degli elementi aggiunti.  L'azione di aggiunta di un elemento del report crea una sottoscrizione di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] per gestire la pianificazione dell'aggiornamento dei riquadri in [!INCLUDE[sspowerbi](../../includes/sspowerbi-md.md)]. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] richiedono credenziali archiviate. Se un report non usa le credenziali archiviate, un utente può comunque aggiungere gli elementi del report, ma quando la sottoscrizione associata tenta di aggiornare i dati di [!INCLUDE[sspowerbi](../../includes/sspowerbi-md.md)]viene generato un messaggio di errore simile al seguente nella pagina **Sottoscrizioni personali** .
 
-        PowerBI Delivery error: dashboard: IT Spend Analysis Sample, visual: Chart2, error: The current action cannot be completed. The user data source credentials do not meet the requirements to run this report or shared dataset. Either the user data source credential.
+    Errore di recapito di Power BI: dashboard: Esempio di analisi della spesa IT, oggetto visivo: Chart2, errore: Impossibile completare l'azione corrente. Le credenziali per l'origine dati utente non soddisfano i requisiti per eseguire il report o il set di dati condiviso. Le credenziali per l'origine dati utente.
 
 Per altre informazioni su come archiviare le credenziali, vedere la sezione "Configurare le credenziali archiviate per un'origine dati specifica del report" in [Archiviare le credenziali in un'origine dati di Reporting Services](../../reporting-services/report-data/store-credentials-in-a-reporting-services-data-source.md).
 
 Per altre informazioni l'amministratore può leggere i file di registro di  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .  Vedrà messaggi simili al seguente. Un ottimo modo per esaminare e monitorare i file di registro di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] è applicare [!INCLUDE[msCoName](../../includes/msconame-md.md)] Power Query sui file.  Per altre informazioni e un breve filmato vedere [Report Server Service Trace Log](../../reporting-services/report-server/report-server-service-trace-log.md).
 
-    subscription!WindowsService_1!1458!09/24/2015-00:09:27:: e ERROR: PowerBI Delivery error: dashboard: IT Spend Analysis Sample, visual: Chart2, error: The current action cannot be completed. The user data source credentials do not meet the requirements to run this report or shared dataset. Either the user data source credentials are not stored in the report server database, or the user data source is configured not to require credentials but the unattended execution account is not specified.
+- subscription!WindowsService_1!1458!09/24/2015-00:09:27:: e ERRORE: Errore di recapito di PowerBI: dashboard: Esempio di analisi della spesa IT, oggetto visivo: Chart2, errore: Impossibile completare l'operazione in corso. Le credenziali per l'origine dati utente non soddisfano i requisiti per eseguire il report o il set di dati condiviso. Le credenziali per l'origine dati utente non sono archiviate nel database del server di report oppure l'origine dati utente è configurata per non richiedere credenziali, ma l'account di esecuzione automatica non è specificato.
 
-    notification!WindowsService_1!1458!09/24/2015-00:09:27:: e ERROR: Error occurred processing subscription fcdb8581-d763-4b3b-ba3e-8572360df4f9: PowerBI Delivery error: dashboard: IT Spend Analysis Sample, visual: Chart2, error: The current action cannot be completed. The user data source credentials do not meet the requirements to run this report or shared data set. Either the user data source credentials are not stored in the report server database, or the user data source is configured not to require credentials but the unattended execution account is not specified.
+- notification!WindowsService_1!1458!09/24/2015-00:09:27:: e ERRORE: Errore durante l'elaborazione della sottoscrizione fcdb8581-d763-4b3b-ba3e-8572360df4f9: Errore di recapito di PowerBI: dashboard: Esempio di analisi della spesa IT, oggetto visivo: Chart2, errore: Impossibile completare l'operazione in corso. Le credenziali per l'origine dati utente non soddisfano i requisiti per eseguire il report o il set di dati condiviso. Le credenziali per l'origine dati utente non sono archiviate nel database del server di report oppure l'origine dati utente è configurata per non richiedere credenziali, ma l'account di esecuzione automatica non è specificato.
 
 ## <a name="bkmk_steps2integrate"></a> Per integrare e registrare il server di report
 
@@ -155,6 +155,6 @@ La seconda volta che un utente aggiunge un elemento vengono ignorati i passaggi 
 
 [Impostazioni personali per Integrazione di Power BI](https://msdn.microsoft.com/85c2fac7-80bf-45b7-8654-764b5f5231f5)  
 [Aggiungere elementi di Reporting Services ai dashboard di Power BI](../../reporting-services/pin-reporting-services-items-to-power-bi-dashboards.md)
-[dashboard in Power BI](https://powerbi.microsoft.com/documentation/powerbi-service-dashboards/)  
+[Dashboard in Power BI](https://powerbi.microsoft.com/documentation/powerbi-service-dashboards/)  
 
 Altre domande? [Visitare il forum su Reporting Services](https://go.microsoft.com/fwlink/?LinkId=620231)

@@ -47,9 +47,9 @@ Per evitare l'eliminazione di connessioni inattive da un componente di rete, è 
   
 |Impostazione del Registro di sistema|Valore consigliato|  
 |----------------------|-----------------------|  
-|HKEY_LOCAL_MACHINE \ sistema \ CurrentControlSet \ Services \ Tcpip \ parametri \ parametro KeepAliveTime della connessione|30000|  
-|HKEY_LOCAL_MACHINE \ sistema \ CurrentControlSet \ Services \ Tcpip \ parametri \ parametro KeepAliveInterval della connessione|1000|  
-|HKEY_LOCAL_MACHINE \ sistema \ CurrentControlSet \ Services \ Tcpip \ parametri \ TcpMaxDataRetransmissions|10|  
+|HKEY_LOCAL_MACHINE \ SYSTEM \ CurrentControlSet \ Services \ Tcpip \ Parameters \ KeepAliveTime|30000|  
+|HKEY_LOCAL_MACHINE \ SYSTEM \ CurrentControlSet \ Services \ Tcpip \ Parameters \ KeepAliveInterval|1000|  
+|HKEY_LOCAL_MACHINE \ SYSTEM \ CurrentControlSet \ Services \ Tcpip \ Parameters \ TcpMaxDataRetransmissions|10|  
   
 Riavviare il computer per attivare le impostazioni del Registro di sistema.  
 
@@ -81,7 +81,7 @@ Prima della versione 4.0 di [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversio
 
 ## <a name="using-encryption-requires-setting-hostnameincertificate"></a>Impostazione di hostNameInCertificate obbligatoria per l'utilizzo della crittografia
 
-Prima della versione 7.2 del [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)], quando ci si connette a un [!INCLUDE[ssAzure](../../includes/ssazure_md.md)], è necessario specificare **hostNameInCertificate** se si specifica **crittografa = true** (se il server di nome della connessione stringa è *shortName*. *domainName*, impostare il **hostNameInCertificate** proprietà \*. *domainName*.). Questa proprietà è facoltativa a partire dalla versione 7.2 del driver.
+Prima della versione 7.2 del [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)], quando ci si connette a un [!INCLUDE[ssAzure](../../includes/ssazure_md.md)], è necessario specificare **hostNameInCertificate** se si specifica **encrypt=true** (se il server di nome della connessione stringa è *shortName*. *domainName*, impostare il **hostNameInCertificate** proprietà \*. *domainName*.). Questa proprietà è facoltativa a partire dalla versione 7.2 del driver.
 
 Ad esempio
 

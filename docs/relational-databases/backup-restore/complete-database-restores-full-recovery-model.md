@@ -1,7 +1,7 @@
 ---
 title: Ripristini di database completi (modello di recupero con registrazione completa) | Microsoft Docs
 ms.custom: ''
-ms.date: 03/14/2017
+ms.date: 03/15/2017
 ms.prod: sql
 ms.prod_service: backup-restore
 ms.reviewer: ''
@@ -18,12 +18,12 @@ ms.assetid: 5b4c471c-b972-498e-aba9-92cf7a0ea881
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 38c3fd7407955d1c05e7c3bf7550531a4bce2978
-ms.sourcegitcommit: 202ef5b24ed6765c7aaada9c2f4443372064bd60
+ms.openlocfilehash: 838a6f840f6576d502fa1908c0f4b876b4cf62b7
+ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/12/2019
-ms.locfileid: "54241982"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59242203"
 ---
 # <a name="complete-database-restores-full-recovery-model"></a>Ripristini di database completi (modello di recupero con registrazione completa)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -34,21 +34,18 @@ ms.locfileid: "54241982"
   
  Durante il ripristino di un database, in particolare nel modello di recupero con registrazione completa o in quello con registrazione minima delle operazioni bulk, si consiglia di utilizzare una sola sequenza di ripristino. Una *sequenza di ripristino* è costituita da una o più operazioni di ripristino che gestiscono lo spostamento dei dati attraverso una o più fasi del ripristino.  
   
-> [!IMPORTANT]  
->  È consigliabile evitare di collegare o ripristinare database provenienti da origini sconosciute o non attendibili. Questi database potrebbero contenere malware che può eseguire codice [!INCLUDE[tsql](../../includes/tsql-md.md)] indesiderato o causare errori modificando lo schema o la struttura fisica di database. Prima di usare un database da un'origine sconosciuta o non attendibile, eseguire [DBCC CHECKDB](../../t-sql/database-console-commands/dbcc-checkdb-transact-sql.md) sul database in un server non di produzione ed esaminare anche il codice contenuto nel database, ad esempio le stored procedure o altro codice definito dall'utente.  
-  
- **Contenuto dell'argomento**  
-  
--   [Ripristino di un database fino al momento dell'errore](#PointOfFailure)  
-  
--   [Ripristino di un database fino a un punto all'interno di un backup del log](#PointWithinBackup)  
-  
--   [Attività correlate](#RelatedTasks)  
-  
-> [!NOTE]  
->  Per informazioni sul supporto dei backup di versioni precedenti di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], vedere la sezione "Supporto della compatibilità" di [RESTORE &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-transact-sql.md).  
+### <a name="untrusted-sources"></a>Origini non attendibili
+
+È consigliabile _evitare_ di collegare o ripristinare database provenienti da origini sconosciute o non attendibili. Questi database potrebbero contenere malware che può eseguire codice [!INCLUDE[tsql](../../includes/tsql-md.md)] indesiderato o causare errori modificando lo schema o la struttura fisica di database. Prima di usare un database da un'origine ignota o non attendibile, eseguire [DBCC CHECKDB](../../t-sql/database-console-commands/dbcc-checkdb-transact-sql.md) sul database in un server non di produzione. Inoltre esaminare il codice scritto dall'utente nel database, ad esempio stored procedure o altro codice definito dall'utente.
+
+### <a name="backups-from-earlier-versions"></a>Backup da versioni precedenti
+
+Per informazioni sul supporto dei backup di versioni precedenti di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], vedere la sezione "Supporto della compatibilità" di [RESTORE &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-transact-sql.md).
   
 ##  <a name="PointOfFailure"></a> Ripristino di un database fino al momento dell'errore  
+
+[!INCLUDE[Freshness](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
  Il recupero dello stato di un database fino al momento dell'errore in genere include i passaggi seguenti:  
   
 1.  Eseguire il backup del log delle transazioni attive (noto anche come parte finale del log). In questo modo viene creato un backup della parte finale del log. Se il log delle transazioni attivo non è disponibile, tutte le transazioni in quella parte del log vengono perdute.  
@@ -154,9 +151,9 @@ GO
 ##  <a name="RelatedTasks"></a> Attività correlate  
  **Per ripristinare un backup completo del database**  
   
--   [Ripristinare un backup del database con SSMS](../../relational-databases/backup-restore/restore-a-database-backup-using-ssms.md)  
+-   [Ripristinare un backup del database tramite SSMS](../../relational-databases/backup-restore/restore-a-database-backup-using-ssms.md)  
   
--   [Ripristinare un database in una nuova posizione &#40;SQL Server&#41;](../../relational-databases/backup-restore/restore-a-database-to-a-new-location-sql-server.md)  
+-   [Ripristinare un database in un percorso nuovo &#40;SQL Server&#41;](../../relational-databases/backup-restore/restore-a-database-to-a-new-location-sql-server.md)  
   
  **Per ripristinare un backup differenziale del database**  
   
@@ -172,7 +169,7 @@ GO
   
  **Per ripristinare un database fino a un punto all'interno di un backup del log**  
   
--   [Ripristinare un database di SQL Server fino a un punto specifico &#40;modello di recupero con registrazione completa&#41;](../../relational-databases/backup-restore/restore-a-sql-server-database-to-a-point-in-time-full-recovery-model.md)  
+-   [Ripristinare un database di SQL Server fino a un punto specifico &#40;Modello di recupero con registrazione completa&#41;](../../relational-databases/backup-restore/restore-a-sql-server-database-to-a-point-in-time-full-recovery-model.md)  
   
 -   [Recupero di database correlati che contengono transazioni contrassegnate](../../relational-databases/backup-restore/recovery-of-related-databases-that-contain-marked-transaction.md)  
   

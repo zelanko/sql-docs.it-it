@@ -1,7 +1,7 @@
 ---
 title: 'Esercitazione: Introduzione ad Always Encrypted con enclave sicuri tramite SSMS | Microsoft Docs'
 ms.custom: ''
-ms.date: 10/04/2018
+ms.date: 04/05/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: vanto
@@ -13,12 +13,12 @@ author: jaszymas
 ms.author: jaszymas
 manager: craigg
 monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
-ms.openlocfilehash: b25824b52a09afd7111cacc3a1ec05969766863e
-ms.sourcegitcommit: 3cfedfeba377560d460ca3e42af1e18824988c07
+ms.openlocfilehash: 051123efd5c58048635bb83e43eaff73218c463e
+ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/05/2019
-ms.locfileid: "59042130"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59241539"
 ---
 # <a name="tutorial-getting-started-with-always-encrypted-with-secure-enclaves-using-ssms"></a>Esercitazione: Introduzione ad Always Encrypted con enclave sicuri tramite SSMS
 [!INCLUDE [tsql-appliesto-ssver15-xxxx-xxxx-xxx](../../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
@@ -46,6 +46,7 @@ Per iniziare a usare Always Encrypted con enclave sicuri sono necessari almeno d
    - In Hyper-V 2016 o versioni successive, [abilitare le estensioni di virtualizzazione annidata](https://docs.microsoft.com/en-us/virtualization/hyper-v-on-windows/user-guide/nested-virtualization#configure-nested-virtualization) nel processore della macchina virtuale.
    - In Azure, assicurarsi di eseguire una dimensione di macchina virtuale che supporta la virtualizzazione annidata, ad esempio le macchine virtuali della serie Dv3 ed Ev3. Vedere [Creare una VM di Azure in grado di supportare l'annidamento](https://docs.microsoft.com/en-us/azure/virtual-machines/windows/nested-virtualization#create-a-nesting-capable-azure-vm).
    - In VMWare vSphere 6.7 6.7 o versioni successive, abilitare il supporto della sicurezza basata sulla virtualizzazione per la macchina virtuale come descritto nella [documentazione di VMware](https://docs.vmware.com/en/VMware-vSphere/6.7/com.vmware.vsphere.vm_admin.doc/GUID-C2E78F3E-9DE2-44DB-9B0A-11440800AADD.html).
+   - Altri hypervisor e cloud pubblici potrebbero supportare l'uso di Always Encrypted con enclave sicure in una macchina virtuale, purché le estensioni di virtualizzazione (note a volte come virtualizzazione annidata) vengano esposte alla macchina virtuale. Consultare la documentazione della soluzione di virtualizzazione per informazioni sulla compatibilità e istruzioni per la configurazione.
 - [SQL Server Management Studio (SSMS) 18.0 o versioni successive](../../ssms/download-sql-server-management-studio-ssms.md).
 
 In alternativa è possibile installare SSMS in un altro computer.

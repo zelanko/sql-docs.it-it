@@ -16,14 +16,15 @@ author: julieMSFT
 ms.author: jrasnick
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: ca1168e0e101f8d8d8c5ae75636f2923faf7e2a1
-ms.sourcegitcommit: 8664c2452a650e1ce572651afeece2a4ab7ca4ca
+ms.openlocfilehash: 2b95caa318df620d91e6508d3ca0811942063fcd
+ms.sourcegitcommit: b2a29f9659f627116d0a92c03529aafc60e1b85a
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/26/2019
-ms.locfileid: "56828021"
+ms.lasthandoff: 04/12/2019
+ms.locfileid: "59516457"
 ---
 # <a name="cardinality-estimation-sql-server"></a>Stima della cardinalità (SQL Server)
+
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
 Query Optimizer di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] è un'utilità di ottimizzazione basata sui costi. Questo significa che vengono selezionati i piani di query con il minor costo di elaborazione stimato per l'esecuzione. Query Optimizer determina il costo di esecuzione di un piano di query in base a due fattori principali:
@@ -53,9 +54,10 @@ Il sistema di applicazioni può includere una query importante il cui piano vien
 - Una query OLTP (elaborazione di transazioni online) che viene eseguita con una frequenza tale da determinare l'esecuzione simultanea di più istanze della query.  
 - Un'istruzione SELECT con aggregazione sostanziale che viene eseguita durante l'orario lavorativo di OLTP.  
   
-Sono implementate tecniche per identificare una query che risulta più lenta con la nuova stima della cardinalità. Inoltre, sono disponibili opzioni per la risoluzione del problema di prestazioni.     
+Sono implementate tecniche per identificare una query che risulta più lenta con la nuova stima della cardinalità. Inoltre, sono disponibili opzioni per la risoluzione del problema di prestazioni.
   
-## <a name="versions-of-the-ce"></a>Versioni della stima della cardinalità  
+## <a name="versions-of-the-ce"></a>Versioni della stima della cardinalità
+
 Nel 1998 è stato incluso un aggiornamento importante della stima di cardinalità in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 7.0, per cui il livello di compatibilità era 70. Questa versione del modello di stima di cardinalità si basa su quattro presupposti:
 
 -  **Indipendenza:** si presuppone che le distribuzioni dei dati in colonne diverse siano indipendenti una dall'altra, a meno che siano disponibili e utilizzabili informazioni di correlazione.
@@ -106,7 +108,7 @@ Oppure, a partire da [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1, l'[h
  ```sql  
 SELECT CustomerId, OrderAddedDate  
 FROM OrderTable  
-WHERE OrderAddedDate >= '2016-05-01'; 
+WHERE OrderAddedDate >= '2016-05-01'
 OPTION (USE HINT ('FORCE_LEGACY_CARDINALITY_ESTIMATION'));  
 ```
  
@@ -293,5 +295,6 @@ WHERE s.ticket = r.ticket AND
  [Optimizing Your Query Plans with the SQL Server 2014 Cardinality Estimator](https://msdn.microsoft.com/library/dn673537.aspx) (Ottimizzazione dei piani di query con la stima di cardinalità di SQL Server 2014)  
  [Query Hints](../../t-sql/queries/hints-transact-sql-query.md)    (Hint per la query)  
  [Hint per le query USE HINT](../../t-sql/queries/hints-transact-sql-query.md#use_hint)       
+ [Aggiornamento di database mediante l'Assistente ottimizzazione query](../../relational-databases/performance/upgrade-dbcompat-using-qta.md)           
  [Monitoraggio delle prestazioni tramite Archivio query](../../relational-databases/performance/monitoring-performance-by-using-the-query-store.md)    
  [Guida sull'architettura di elaborazione delle query](../../relational-databases/query-processing-architecture-guide.md)   

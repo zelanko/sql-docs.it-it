@@ -13,12 +13,12 @@ author: joesackmsft
 ms.author: josack
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: d3572af85861c2175638484e9e2097d43a65b63d
-ms.sourcegitcommit: 3cfedfeba377560d460ca3e42af1e18824988c07
+ms.openlocfilehash: 6bc44d24631454e792b150750508647019411631
+ms.sourcegitcommit: ae333686549dda5993fa9273ddf7603adbbaf452
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/05/2019
-ms.locfileid: "59042230"
+ms.lasthandoff: 04/12/2019
+ms.locfileid: "59533359"
 ---
 # <a name="intelligent-query-processing-in-sql-databases"></a>Elaborazione di query intelligenti nei database SQL
 
@@ -42,8 +42,8 @@ La tabella seguente illustra nel dettaglio tutte le funzionalità di elaborazion
 | [Count Distinct approssimato](https://docs.microsoft.com/en-us/sql/relational-databases/performance/intelligent-query-processing?view=sql-server-2017#approximate-query-processing) | Sì, anteprima pubblica| Sì, a partire da SQL Server 2019 CTP 2.0, anteprima pubblica|Consente di offrire il COUNT DISTINCT approssimativo per gli scenari Big Data con il vantaggio di prestazioni elevate mantenendo basso il footprint di memoria. |
 | [Modalità batch per rowstore](https://docs.microsoft.com/en-us/sql/relational-databases/performance/intelligent-query-processing?view=sql-server-2017#batch-mode-on-rowstore) | Sì, nel livello di compatibilità 150, anteprima pubblica| Sì, a partire da SQL Server 2019 CTP 2.0 nel livello di compatibilità 150, anteprima pubblica|Consente di specificare la modalità batch per i carichi di lavoro del data warehouse relazionale associati alla CPU senza richiedere gli indici columnstore.  | 
 | [Esecuzione interleaved](https://docs.microsoft.com/en-us/sql/relational-databases/performance/intelligent-query-processing?view=sql-server-2017#interleaved-execution-for-mstvfs) | Sì, nel livello di compatibilità 140| Sì, a partire da SQL Server 2017 nel livello di compatibilità 140|Consente di usare la cardinalità effettiva della funzione con valori di tabella con istruzioni multiple rilevata nella prima compilazione invece di una stima fissa.|
-| [Commenti sulla concessione di memoria (modalità batch)](https://docs.microsoft.com/en-us/sql/relational-databases/performance/intelligent-query-processing?view=sql-server-2017#batch-mode-memory-grant-feedback) | Sì, nel livello di compatibilità 140| Sì, a partire da SQL Server 2017 nel livello di compatibilità 140|Se una query in modalità batch contiene operazioni che eseguono lo spill su disco, aggiungere altra memoria per le esecuzioni consecutive. Se una query comporta uno spreco di oltre il 50% della memoria, ridurre il margine di concessione di memoria per le esecuzioni consecutive.|
-| [Commenti sulla concessione di memoria (modalità riga)](https://docs.microsoft.com/en-us/sql/relational-databases/performance/intelligent-query-processing?view=sql-server-2017#row-mode-memory-grant-feedback) | Sì, nel livello di compatibilità 150, anteprima pubblica| Sì, a partire da SQL Server 2019 CTP 2.0 nel livello di compatibilità 150, anteprima pubblica|Se una query in modalità riga contiene operazioni che eseguono lo spill su disco, aggiungere altra memoria per le esecuzioni consecutive. Se una query comporta uno spreco di oltre il 50% della memoria, ridurre il margine di concessione di memoria per le esecuzioni consecutive.|
+| [Feedback delle concessioni di memoria (modalità batch)](https://docs.microsoft.com/en-us/sql/relational-databases/performance/intelligent-query-processing?view=sql-server-2017#batch-mode-memory-grant-feedback) | Sì, nel livello di compatibilità 140| Sì, a partire da SQL Server 2017 nel livello di compatibilità 140|Se una query in modalità batch contiene operazioni che eseguono lo spill su disco, aggiungere altra memoria per le esecuzioni consecutive. Se una query comporta uno spreco di oltre il 50% della memoria allocata, ridurre il margine di concessione di memoria per le esecuzioni consecutive.|
+| [Feedback delle concessioni di memoria (modalità riga)](https://docs.microsoft.com/en-us/sql/relational-databases/performance/intelligent-query-processing?view=sql-server-2017#row-mode-memory-grant-feedback) | Sì, nel livello di compatibilità 150, anteprima pubblica| Sì, a partire da SQL Server 2019 CTP 2.0 nel livello di compatibilità 150, anteprima pubblica|Se una query in modalità riga contiene operazioni che eseguono lo spill su disco, aggiungere altra memoria per le esecuzioni consecutive. Se una query comporta uno spreco di oltre il 50% della memoria allocata, ridurre il margine di concessione di memoria per le esecuzioni consecutive.|
 | [Inlining di funzioni definite dall'utente scalari](https://docs.microsoft.com/en-us/sql/relational-databases/performance/intelligent-query-processing?view=sql-server-2017#scalar-udf-inlining) | no | Sì, a partire da SQL Server 2019 CTP 2.1 nel livello di compatibilità 150, anteprima pubblica|Le funzioni definite dall'utente scalari vengono trasformate in espressioni relazionali equivalenti che vengono rese inline nella query chiamante, ottenendo spesso significativi miglioramenti delle prestazioni.|
 | [Compilazione posticipata delle variabili di tabella](https://docs.microsoft.com/en-us/sql/relational-databases/performance/intelligent-query-processing?view=sql-server-2017#table-variable-deferred-compilation) | Sì, nel livello di compatibilità 150, anteprima pubblica| Sì, a partire da SQL Server 2019 CTP 2.0 nel livello di compatibilità 150, anteprima pubblica|Consente di usare la cardinalità effettiva della variabile tabella rilevata nella prima compilazione invece di una stima fissa.|
 
@@ -504,5 +504,5 @@ OPTION(RECOMPILE, USE HINT('DISALLOW_BATCH_MODE'));
 [Guida sull'architettura di elaborazione delle query](../../relational-databases/query-processing-architecture-guide.md)    
 [Guida di riferimento a operatori Showplan logici e fisici](../../relational-databases/showplan-logical-and-physical-operators-reference.md)    
 [Join](../../relational-databases/performance/joins.md)    
-[Demonstrating Adaptive Query Processing (Dimostrazione dell'elaborazione di query adattive)](https://github.com/joesackmsft/Conferences/blob/master/Data_AMP_Detroit_2017/Demos/AQP_Demo_ReadMe.md)       
-[Demonstrating Intelligent QP (Dimostrazione di Query Processor intelligente)](https://github.com/Microsoft/sql-server-samples/tree/master/samples/features/intelligent-query-processing)   
+[Demonstrating Adaptive Query Processing](https://github.com/joesackmsft/Conferences/blob/master/Data_AMP_Detroit_2017/Demos/AQP_Demo_ReadMe.md)      (Dimostrazione dell'elaborazione di query adattive)  
+[Demonstrating Intelligent QP](https://github.com/Microsoft/sql-server-samples/tree/master/samples/features/intelligent-query-processing) (Dimostrazione di Query Processor intelligente)   

@@ -39,12 +39,12 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d8d205e184f31e628cf9629b702e21e43c200e38
-ms.sourcegitcommit: 480961f14405dc0b096aa8009855dc5a2964f177
+ms.openlocfilehash: a035182b6436f723abfb2a53a034ddac30fe2165
+ms.sourcegitcommit: b2a29f9659f627116d0a92c03529aafc60e1b85a
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/22/2019
-ms.locfileid: "54420096"
+ms.lasthandoff: 04/12/2019
+ms.locfileid: "59516497"
 ---
 # <a name="database-level-roles"></a>Ruoli a livello di database
 
@@ -58,7 +58,7 @@ Per aggiungere e rimuovere utenti a un ruolo del database, usare le opzioni `ADD
   
  I ruoli predefiniti del database vengono definiti a livello di database e sono presenti in ogni database. I membri del ruolo del database **db_owner** possono gestire l'appartenenza ai ruoli predefiniti del database. Nel database msdb sono presenti anche alcuni ruoli predefiniti del database per scopi specifici.  
   
- È possibile aggiungere qualsiasi account del database e altri ruoli [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ai ruoli a livello di database. Tutti i membri di un ruolo predefinito del database possono aggiungere altri utenti allo stesso ruolo.  
+ È possibile aggiungere qualsiasi account del database e altri ruoli [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ai ruoli a livello di database.
   
 > [!TIP]  
 >  Evitare di aggiungere ruoli del database definiti dall'utente come membri dei ruoli predefiniti, poiché in tal modo si potrebbe provocare un'imprevista intensificazione dei privilegi.  
@@ -74,7 +74,7 @@ Per un elenco di tutte le autorizzazioni, vedere il poster [Autorizzazioni del m
 |Nome del ruolo predefinito del database|Descrizione|  
 |-------------------------------|-----------------|  
 |**db_owner**|I membri del ruolo predefinito del database **db_owner** possono eseguire tutte le attività di configurazione e di manutenzione sul database e anche eliminare il database in [!INCLUDE[ssNoVersion_md](../../../includes/ssnoversion-md.md)]. In [!INCLUDE[ssSDS_md](../../../includes/sssds-md.md)] e [!INCLUDE[ssSDW_md](../../../includes/sssdw-md.md)]alcune attività di manutenzione richiedono autorizzazioni a livello di server e non possono essere eseguite da ruoli **db_owner**.|  
-|**db_securityadmin**|I membri del ruolo predefinito del database **db_securityadmin** possono modificare le appartenenze al ruolo e gestire le autorizzazioni. L'aggiunta di entità a questo ruolo potrebbe provocare un'imprevista intensificazione dei privilegi.|  
+|**db_securityadmin**|I membri del ruolo predefinito del database **db_securityadmin** possono modificare le appartenenze al ruolo solo per i ruoli personalizzati, creare utenti senza account di accesso e gestire le autorizzazioni. L'aggiunta di entità a questo ruolo potrebbe provocare un'imprevista intensificazione dei privilegi.|  
 |**db_accessadmin**|I membri del ruolo predefinito del database **db_accessadmin** possono aggiungere o rimuovere le autorizzazioni di accesso al database per gli account di accesso di Windows, i gruppi di Windows e gli account di accesso di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .|  
 |**db_backupoperator**|I membri del ruolo predefinito del database **db_backupoperator** possono eseguire il backup del database.|  
 |**db_ddladmin**|I membri del ruolo predefinito del database **db_ddladmin** possono eseguire qualsiasi comando DDL (Data Definition Language) in un database.|  
@@ -143,9 +143,9 @@ Quando R Services è installato, i ruoli di database aggiuntivi sono disponibili
 |[sp_droprole &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-droprole-transact-sql.md)|Comando|Rimuove un ruolo del database dal database corrente.|  
 |[sp_addrolemember &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addrolemember-transact-sql.md)|Comando|Aggiunge un utente del database, un ruolo del database, un account di accesso di Windows o un gruppo di Windows a un ruolo del database nel database corrente. Tutte le piattaforme ad accezione di [!INCLUDE[ssPDW_md](../../../includes/sspdw-md.md)] devono usare invece `ALTER ROLE` .|  
 |[sp_droprolemember &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-droprolemember-transact-sql.md)|Comando|Rimuove un account di sicurezza da un ruolo di SQL Server nel database corrente. Tutte le piattaforme ad accezione di [!INCLUDE[ssPDW_md](../../../includes/sspdw-md.md)] devono usare invece `ALTER ROLE` .|
-|[GRANT](../../../t-sql/statements/grant-transact-sql.md)| Permissions | Aggiunge autorizzazioni a un ruolo.
-|[DENY](../../../t-sql/statements/deny-transact-sql.md)| Permissions | Nega un'autorizzazione a un ruolo.
-|[REVOKE](../../../t-sql/statements/revoke-transact-sql.md)| Permissions | Rimuove un'autorizzazione precedentemente concessa o negata.
+|[GRANT](../../../t-sql/statements/grant-transact-sql.md)| Autorizzazioni | Aggiunge autorizzazioni a un ruolo.
+|[DENY](../../../t-sql/statements/deny-transact-sql.md)| Autorizzazioni | Nega un'autorizzazione a un ruolo.
+|[REVOKE](../../../t-sql/statements/revoke-transact-sql.md)| Autorizzazioni | Rimuove un'autorizzazione precedentemente concessa o negata.
   
   
 ## <a name="public-database-role"></a>Ruolo di database public  

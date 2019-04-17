@@ -1,7 +1,7 @@
 ---
 title: Monitoraggio attività | Microsoft Docs
 ms.custom: ''
-ms.date: 03/14/2017
+ms.date: 04/07/2019
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
@@ -13,21 +13,21 @@ ms.assetid: 1e6c430d-3a2a-468e-a3d5-ef5459c36c15
 author: julieMSFT
 ms.author: jrasnick
 manager: craigg
-ms.openlocfilehash: 540774d3b6e41bdadc4f7e9cb06a8302f29f7ff5
-ms.sourcegitcommit: 0c1d552b3256e1bd995e3c49e0561589c52c21bf
+ms.openlocfilehash: 6d6f215127e584b73e28ee30339189ef49fa10d0
+ms.sourcegitcommit: bf23b81af45eddaa3c8bb87135c5ad0e1b42fbc2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/14/2018
-ms.locfileid: "53380382"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59367209"
 ---
 # <a name="activity-monitor"></a>Monitoraggio attività
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  Monitoraggio attività consente di visualizzare informazioni sui processi di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e sul modo in cui questi processi influiscono sull'istanza corrente di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+Monitoraggio attività consente di visualizzare informazioni sui processi di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e sul modo in cui questi processi influiscono sull'istanza corrente di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
- Monitoraggio attività è una finestra del documento a schede con i riquadri espandibili e comprimibili seguenti: **Panoramica**, **Attività utente attive**, **Attese risorse**, **I/O file di dati**, e **Query recenti con costo elevato**. Quando un riquadro è espanso, Monitoraggio attività esegue una query sull'istanza per ottenere informazioni. Quando un riquadro è compresso, significa che tutte le relative attività di query sono arrestate. È possibile espandere uno o più riquadri contemporaneamente per visualizzare diversi tipi di attività sull'istanza.  
+Monitoraggio attività è una finestra del documento a schede con i riquadri espandibili e comprimibili seguenti: **Panoramica**, **Processi**, **Attese risorse**, **I/O file di dati**, **Query recenti con costo elevato** e **Query attive con costo elevato**. Quando un riquadro è espanso, Monitoraggio attività esegue una query sull'istanza per ottenere informazioni. Quando un riquadro è compresso, significa che tutte le relative attività di query sono arrestate. È possibile espandere uno o più riquadri contemporaneamente per visualizzare diversi tipi di attività sull'istanza.  
  
- ## <a name="customize-columns"></a>Personalizzare colonne 
- Per le colonne incluse nei riquadri **Attività utente attive**, **Attese risorse**, **I/O file di dati**, e **Query recenti con costo elevato** , personalizzare la visualizzazione come indicato di seguito:  
+## <a name="customize-columns"></a>Personalizzare colonne 
+Per le colonne incluse nei riquadri **Processi**, **Attese risorse**, **I/O file di dati**, e **Query recenti con costo elevato** e **Query attive con costo elevato**, personalizzare la visualizzazione come indicato di seguito:  
   
 1.  Per ridisporre l'ordine delle colonne, fare clic sull'intestazione di colonna e trascinarla in un altro punto della barra multifunzione delle intestazioni.  
   

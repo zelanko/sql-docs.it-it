@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: d7cc4c7aaf4dfc085bab1fbb3fd3335dda534a2f
-ms.sourcegitcommit: bfa10c54e871700de285d7f819095d51ef70d997
+ms.openlocfilehash: dd85274454db10b0bd3415ec41aa6cedcd629d0f
+ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/14/2019
-ms.locfileid: "54257106"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59241839"
 ---
 # <a name="polybase-configuration-and-security-for-hadoop"></a>Configurazione di PolyBase e sicurezza per Hadoop
 
@@ -33,6 +33,8 @@ Un modo comune per proteggere la comunicazione in un cluster Hadoop è modificar
      <value></value>
    </property> 
 ```
+
+Per usare 'Privacy' o 'Integrity' per hadoop.rpc.protection, è necessario usare almeno SQL Server 2016 SP1 CU7, SQL Server 2016 SP2 o SQL Server 2017 CU3.
 
 ## <a name="example-xml-files-for-cdh-5x-cluster"></a>File XML di esempio per cluster CDH 5.X
 
@@ -159,11 +161,11 @@ Per connettersi a un cluster Hadoop protetto con Kerberos tramite MIT KDC:
    |**#**|**File di configurazione**|**Chiave di configurazione**|**Azione**|  
    |------------|----------------|---------------------|----------|   
    |1|core-site.xml|polybase.kerberos.kdchost|Specificare il nome host KDC. Ad esempio: kerberos.area-di-autenticazione.com.|  
-   |2|core-site.xml|polybase.kerberos.realm|Specificare l'area di autenticazione Kerberos. Ad esempio AREA-DI-AUTENTICAZIONE.COM|  
-   |3|core-site.xml|hadoop.security.authentication|Trovare la configurazione lato Hadoop e copiarla nel computer SQL Server. Ad esempio KERBEROS<br></br>**Nota sulla sicurezza:** è necessario scrivere KERBEROS in maiuscolo. Se si usano lettere minuscole, potrebbe non essere disponibile.|   
+   |2|core-site.xml|polybase.kerberos.realm|Specificare l'area di autenticazione Kerberos. Esempio: AREA-DI-AUTENTICAZIONE.COM|  
+   |3|core-site.xml|hadoop.security.authentication|Trovare la configurazione lato Hadoop e copiarla nel computer SQL Server. Esempio: KERBEROS<br></br>**Nota sulla sicurezza:** è necessario scrivere KERBEROS in maiuscolo. Se si usano lettere minuscole, potrebbe non essere disponibile.|   
    |4|hdfs-site.xml|dfs.namenode.kerberos.principal|Trovare la configurazione lato Hadoop e copiarla nel computer SQL Server. Ad esempio: hdfs/_HOST@YOUR-REALM.COM|  
    |5|mapred-site.xml|mapreduce.jobhistory.principal|Trovare la configurazione lato Hadoop e copiarla nel computer SQL Server. Ad esempio: mapred/_HOST@YOUR-REALM.COM|  
-   |6|mapred-site.xml|mapreduce.jobhistory.address|Trovare la configurazione lato Hadoop e copiarla nel computer SQL Server. Ad esempio 10.193.26.174:10020|  
+   |6|mapred-site.xml|mapreduce.jobhistory.address|Trovare la configurazione lato Hadoop e copiarla nel computer SQL Server. Esempio: 10.193.26.174:10020|  
    |7|yarn-site.xml yarn.|yarn.resourcemanager.principal|Trovare la configurazione lato Hadoop e copiarla nel computer SQL Server. Ad esempio: yarn/_HOST@YOUR-REALM.COM|  
 
 4. Creare un oggetto credenziali con ambito database per specificare le informazioni di autenticazione per ogni utente di Hadoop. Vedere [Oggetti T-SQL PolyBase](../../relational-databases/polybase/polybase-t-sql-objects.md).  

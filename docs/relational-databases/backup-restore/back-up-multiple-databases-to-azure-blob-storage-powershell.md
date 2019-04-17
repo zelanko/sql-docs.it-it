@@ -1,7 +1,7 @@
 ---
 title: Backup di più database nel servizio di archiviazione BLOB di Azure - PowerShell | Microsoft Docs
 ms.custom: ''
-ms.date: 05/20/2016
+ms.date: 05/21/2016
 ms.prod: sql
 ms.prod_service: backup-restore
 ms.reviewer: ''
@@ -11,12 +11,12 @@ ms.assetid: f7008339-e69d-4e20-9265-d649da670460
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 3f043a9df2b561fb9fbd7a56c993838137b0601d
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 09e32f92112844e8a291d212e271281636df55e1
+ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52512887"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59242469"
 ---
 # <a name="back-up-multiple-databases-to-azure-blob-storage---powershell"></a>Backup di più database nel servizio di archiviazione BLOB di Azure - PowerShell
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -49,12 +49,14 @@ ms.locfileid: "52512887"
   
 ### <a name="powershell-for-multi-database-multi-instance-backup-operations"></a>PowerShell per le operazioni di backup di più istanze di più database  
  Nelle sezioni seguenti vengono forniti alcuni script per diverse operazioni quali la creazione di credenziali SQL in più istanze di SQL Server, il backup di tutti i database utente in un'istanza di SQL Server e simili. È possibile utilizzare questi script per automatizzare e pianificare le operazioni di backup in base ai requisiti dell'ambiente. Gli script forniti di seguito sono esempi e possono essere modificati o estesi per l'ambiente in uso.  
-  
+
+[!INCLUDE[Freshness](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
  Di seguito sono riportate alcune considerazioni per gli script di esempio:  
   
-1.  **Spostamento all'interno dei percorsi di SQL Server PowerShell:** Windows PowerShell implementa alcuni cmdlet per spostarsi all'interno della struttura del percorso che rappresenta la gerarchia di oggetti supportati da un provider PowerShell. Quando si passa a un nodo nel percorso, è possibile utilizzare altri cmdlet per eseguire operazioni di base sull'oggetto corrente.  
+1.  **Spostamenti all'interno dei percorsi di SQL Server PowerShell:** Windows PowerShell implementa cmdlet per spostarsi all'interno della struttura del percorso che rappresenta la gerarchia di oggetti supportati da un provider PowerShell. Quando si passa a un nodo nel percorso, è possibile utilizzare altri cmdlet per eseguire operazioni di base sull'oggetto corrente.  
   
-2.  Cmdlet**Get-ChildItem** : le informazioni restituite da **Get-ChildItem** dipendono dal percorso di PowerShell per SQL Server. Ad esempio, se il percorso è a livello di computer, questo cmdlet restituisce tutte le istanze del motore di database di SQL Server installate nel computer. Sempre a titolo di esempio, se il percorso è a livello di oggetto come i database, questo cmdlet restituisce un elenco di oggetti di database.  Per impostazione predefinita il cmdlet **Get-ChildItem** non restituisce oggetti di sistema.  Se si usa il parametro -Force, è possibile visualizzare gli oggetti di sistema.  
+2.  Cmdlet **Get-ChildItem**: le informazioni restituite da **Get-ChildItem** dipendono dalla posizione in un percorso di SQL Server PowerShell. Ad esempio, se il percorso è a livello di computer, questo cmdlet restituisce tutte le istanze del motore di database di SQL Server installate nel computer. Sempre a titolo di esempio, se il percorso è a livello di oggetto come i database, questo cmdlet restituisce un elenco di oggetti di database.  Per impostazione predefinita il cmdlet **Get-ChildItem** non restituisce oggetti di sistema.  Se si usa il parametro -Force, è possibile visualizzare gli oggetti di sistema.  
   
      Per altre informazioni, vedere [Navigate SQL Server PowerShell Paths](../../relational-databases/scripting/navigate-sql-server-powershell-paths.md).  
   

@@ -1,7 +1,7 @@
 ---
 title: Eseguire passaggi di Windows PowerShell in SQL Server Agent | Microsoft Docs
 ms.custom: ''
-ms.date: 03/14/2017
+ms.date: 03/16/2017
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: scripting
@@ -10,37 +10,39 @@ ms.assetid: f25f7549-c9b3-4618-85f2-c9a08adbe0e3
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 0ea20fbf0eb09686075c4fceeee2f3091bc244c4
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d9034e88276192c14eb8d7008ced10b7041e40c9
+ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47769069"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59241200"
 ---
 # <a name="run-windows-powershell-steps-in-sql-server-agent"></a>Esecuzione di passaggi di Windows PowerShell in SQL Server Agent
+
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 Utilizzare SQL Server Agent per eseguire script di SQL Server PowerShell a orari pianificati.  
   
-**Per eseguire PowerShell da SQL Server Agent, utilizzando:**  [Passaggio processo di PowerShell](#PShellJob), [Passaggio processo del prompt dei comandi](#CmdExecJob)  
+**Per eseguire PowerShell da SQL Server Agent tramite:**  [passaggio del processo di PowerShell](#PShellJob), [passaggio del processo del prompt dei comandi](#CmdExecJob)  
   
-> [!NOTE]
+> [!IMPORTANT]
 > Esistono due moduli SQL Server PowerShell: **SqlServer** e **SQLPS**. Il modulo **SQLPS** è incluso nell'installazione di SQL Server (per la compatibilità con le versioni precedenti), ma non viene più aggiornato. Il modulo PowerShell più aggiornato è il modulo **SqlServer**. Il modulo **SqlServer** contiene versioni aggiornate dei cmdlet di **SQLPS** e include anche nuovi cmdlet per il supporto delle funzionalità SQL più recenti.  
 > Le versioni precedenti del modulo **SqlServer** *erano* incluse con SQL Server Management Studio (SSMS), ma solo con le versioni 16.x di SQL Server Management Studio. Per usare PowerShell con SSMS 17.0 e versioni successive, è necessario installare il modulo **SqlServer** da PowerShell Gallery.
 > Per installare il modulo **SqlServer**, vedere [Installare il modulo PowerShell SqlServer](download-sql-server-ps-module.md).
 
 
 Sono disponibili molti tipi di passaggi del processo di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Agent. Ogni tipo è associato a un sottosistema che implementa un ambiente specifico, ad esempio un agente di replica o un ambiente del prompt dei comandi. È possibile codificare gli script di Windows PowerShell, quindi utilizzare [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Agent per includere gli script nei processi eseguiti in base a orari pianificati o in risposta a eventi di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] . È possibile eseguire gli script di Windows PowerShell con un passaggio del processo del prompt dei comandi o di PowerShell.  
-  
-1.  Usare un passaggio del processo di PowerShell per fare in modo che il sottosistema [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Agent esegua l'utilità **sqlps** , che avvia PowerShell e importa il modulo **sqlps** .  
-  
-2.  Usare un passaggio del processo del prompt dei comandi per eseguire PowerShell.exe e specificare uno script che importa il modulo **sqlps** .  
-  
-###  <a name="LimitationsRestrictions"></a> Limitazioni e restrizioni  
-  
-> [!CAUTION]  
->  Ogni passaggio del processo di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Agent che esegue PowerShell con il modulo **sqlps** avvia un processo che usa circa 20 MB di memoria. L'esecuzione simultanea di numerosi passaggi del processo di Windows PowerShell può avere un impatto negativo sulle prestazioni.  
-  
+
+- Usare un passaggio del processo di PowerShell per fare in modo che il sottosistema [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Agent esegua l'utilità **sqlps** , che avvia PowerShell e importa il modulo **sqlps** .
+
+- Usare un passaggio del processo del prompt dei comandi per eseguire PowerShell.exe e specificare uno script che importa il modulo **sqlps** .
+
+### <a name="LimitationsRestrictions"></a> Attenzione all'utilizzo della memoria
+
+Ogni passaggio del processo di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Agent che esegue PowerShell con il modulo **sqlps** avvia un processo che usa circa **20 MB** di memoria. L'esecuzione simultanea di numerosi passaggi del processo di Windows PowerShell può avere un impatto negativo sulle prestazioni.  
+
+[!INCLUDE[Freshness](../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 ##  <a name="PShellJob"></a> Creare un passaggio del processo di PowerShell  
  **Per creare un passaggio del processo di PowerShell**  
   

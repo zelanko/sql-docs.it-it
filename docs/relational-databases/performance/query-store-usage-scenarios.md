@@ -13,13 +13,13 @@ ms.assetid: f5309285-ce93-472c-944b-9014dc8f001d
 author: julieMSFT
 ms.author: jrasnick
 manager: craigg
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 3b9b0e74eebe3a1cf86af9e3bf8a9a8d4e58495b
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||= azure-sqldw-latest||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 455530c12d498f62b367ecb7ce30d0eb34aa6c5d
+ms.sourcegitcommit: acb5de9f493238180d13baa302552fdcc30d83c0
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53372483"
+ms.lasthandoff: 04/12/2019
+ms.locfileid: "59542041"
 ---
 # <a name="query-store-usage-scenarios"></a>Scenari di utilizzo dell'Archivio query
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
@@ -131,6 +131,9 @@ A partire da [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] tutte le modifich
     A.  Per i casi in cui sono presenti regressioni, forzare il piano considerato migliore in precedenza in Query Store.  
   
     B.  Se non è possibile forzare i piani di query o se le prestazioni non sono ancora sufficienti, è consigliabile ripristinare l'impostazione precedente del [livello di compatibilità del database](../../relational-databases/databases/view-or-change-the-compatibility-level-of-a-database.md) e contattare il supporto tecnico Microsoft.  
+    
+> [!TIP]
+> Usare l'attività [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] *Aggiorna database* per aggiornare il [livello di compatibilità del database](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md#compatibility-levels-and-sql-server-upgrades) del database. Per informazioni dettagliate, vedere [Aggiornamento di database mediante l'Assistente ottimizzazione query](../../relational-databases/performance/upgrade-dbcompat-using-qta.md).
   
 ## <a name="identify-and-improve-ad-hoc-workloads"></a>Identificare e migliorare i carichi di lavoro ad hoc  
 Alcuni carichi di lavoro non includono query dominanti che è possibile ottimizzare per migliorare le prestazioni complessive dell'applicazione. In genere, questi carichi di lavoro sono caratterizzati da un numero relativamente elevato di query diverse, ognuna delle quali utilizza una parte delle risorse di sistema. Essendo univoche, queste query vengono eseguite raramente, (di solito una sola volta, quindi si consiglia di assegnare un nome ad hoc), di conseguenza il consumo di runtime non è critico. D'altra parte, dato che l'applicazione genera continuamente nuove query, una parte significativa delle risorse di sistema viene impiegata per la compilazione di query, il che non rappresenta uno scenario ottimale. Questa situazione non è ideale per Archivio query perché un numero elevato di query e piani ne occupa lo spazio riservato e causa probabilmente il passaggio in tempi molto rapidi alla modalità di sola lettura di Archivio query. Se è attivato **Modalità di pulizia basata sulle dimensioni** , un'opzione[fortemente consigliata](best-practice-with-the-query-store.md) per mantenere Archivio query sempre attivo e in esecuzione, il processo in background esegue costantemente la pulizia delle strutture di Archivio query assorbendo molto spesso notevoli risorse di sistema.  
@@ -217,6 +220,7 @@ ALTER DATABASE [QueryStoreTest] SET QUERY_STORE = ON
   
 ## <a name="see-also"></a>Vedere anche  
  [Monitoraggio delle prestazioni tramite Archivio query](../../relational-databases/performance/monitoring-performance-by-using-the-query-store.md)   
- [Procedure consigliate per l'archivio query](../../relational-databases/performance/best-practice-with-the-query-store.md)  
+ [Procedure consigliate per l'archivio query](../../relational-databases/performance/best-practice-with-the-query-store.md)         
+ [Aggiornamento di database mediante l'Assistente ottimizzazione query](../../relational-databases/performance/upgrade-dbcompat-using-qta.md)           
   
   

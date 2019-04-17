@@ -12,12 +12,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||=azuresqldb-mi-current'
-ms.openlocfilehash: 0923e52610d5fd0c7907d3edaa061073989d582e
-ms.sourcegitcommit: 2111068372455b5ec147b19ca6dbf339980b267d
+ms.openlocfilehash: 44229bbe0bd0a4df65e9dfbfe213c6a14cee0f42
+ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58417256"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59241894"
 ---
 # <a name="release-notes-for-sql-server-data-tools-ssdt"></a>Note sulla versione per SQL Server Data Tools (SSDT)
 
@@ -61,7 +61,7 @@ _SSDT per Visual Studio 2017._
 | :------- | :------ |
 | Aggiunta l'origine Power Query (anteprima) per SSIS in ADF 2017. | &nbsp; |
 | Aggiunto di nuovo il supporto per SQL Server 2012. | &nbsp; |
-| Aggiunte origine e destinazione Oracle per SQL Server 2019. | &nbsp; |
+| Aggiunte origine e destinazione Oracle per SQL Server 2019. | La funzionalità per la selezione di origine e destinazione Oracle per SQL Server 2019 è già inclusa nell'installazione di SQL Server Data Tools (SSDT).<br/><br/>Per progettare pacchetti destinati alla versione 2017 o precedente del server, scaricare la versione del connettore Oracle corrispondente dal sito di download Microsoft e installarla nel computer di SSDT. <br/>[Connettore Microsoft versione 5.0 per Oracle di Attunity per SQL Server 2017](https://www.microsoft.com/en-us/download/details.aspx?id=55179)<br/>[Connettore Microsoft versione 4.0 per Oracle di Attunity per SQL Server 2016](https://www.microsoft.com/en-us/download/details.aspx?id=52950)<br/>[Connettore Microsoft versione 3.0 per Oracle di Attunity per SQL Server 2014](https://www.microsoft.com/en-us/download/details.aspx?id=44582)<br/>[Connettore Microsoft versione 2.0 per Oracle di Attunity per SQL Server 2012](https://www.microsoft.com/en-us/download/details.aspx?id=29283)|
 | Risolto il problema dell'impossibilità di caricare un'attività Script o un componente di script durante la migrazione da versioni di SSIS precedenti. | &nbsp; |
 | Risolto il problema del mancato funzionamento del visualizzatore dati in Windows 7 SP1 e in Windows 8.1. | &nbsp; |
 | Risolto il problema dell'arresto anomalo di Visual Studio, in alcuni casi, durante il salvataggio del pacchetto. | &nbsp; |
@@ -267,13 +267,13 @@ SSDT per Visual Studio 2017 (15.5.0) passa dalla versione di anteprima alla disp
 1. L'interfaccia utente del programma di installazione è localizzata.
 1. L'icona è stata sostituita con una versione di qualità superiore.
 
-**Integration Services (IS)**
+**Integration Services**
 1. È stato aggiunto un passaggio di convalida del pacchetto nella distribuzione guidata durante la distribuzione nel runtime di integrazione di Azure SSIS nel file di definizione dell'applicazione (ADF), che consente di individuare potenziali problemi di compatibilità nei pacchetti SSIS per l'esecuzione nel runtime di integrazione di Azure SSIS. Per altre informazioni, vedere [Convalidare pacchetti SSIS distribuiti in Azure](../integration-services/lift-shift/ssis-azure-validate-packages.md).
 1. L'estensione SSIS è localizzata.
 
 ### <a name="bug-fixes"></a>Correzioni di bug
 
-**Integration Services (IS)**
+**Integration Services**
 1. È stato risolto un problema per cui il layout della gestione connessione OLEDB e ADO.NET risultava danneggiata.
 2. È stato risolto un problema per cui veniva generato un errore di assembly non trovato durante il tentativo di modifica di un'attività di elaborazione della dimensione.
 
@@ -288,19 +288,19 @@ _SSDT per Visual Studio 2015._
 
 ### <a name="whats-new"></a>Novità
 
-**Progetti Analysis Services (SSAS)**
+**Progetti di Analysis Services (AS)**
 - Sono state aggiunte tre nuove opzioni per progetti tabulari in Opzioni > Analysis Services Tabular > Importazione dati:
   - Abilita origini dati legacy: consente all'utente di creare origini dati precedenti alla "modalità di compatibilità 1200" in modalità di compatibilità più recenti.
   - Automatic type detection (Rilevamento tipo automatico): se abilitato, l'editor di query per le origini dati moderne tenta di rilevare i tipi di dati per le query non strutturate quando vengono caricate. Se il rilevamento ha esito positivo, è possibile aggiungere un nuovo passaggio alla query.
   - Esegui analisi in background nell'editor di query: quando è abilitato, l'editor di query per le origini dati moderne esegue le query sull'origine dati quando le query vengono caricate per analizzare lo schema di output della query.
 
-**Integration Services (IS)**
+**Integration Services**
 - È stato aggiunto un passaggio di convalida del pacchetto nella distribuzione guidata durante la distribuzione nel runtime di integrazione di Azure SSIS nel file di definizione dell'applicazione (ADF), che consente di individuare potenziali problemi di compatibilità nei pacchetti SSIS per l'esecuzione nel runtime di integrazione di Azure SSIS. Per altre informazioni, vedere [Convalidare pacchetti SSIS distribuiti in Azure](../integration-services/lift-shift/ssis-azure-validate-packages.md).
 
 
 ### <a name="bug-fixes"></a>Correzioni di bug
 
-**Progetti Analysis Services (SSAS):**
+**Progetti Analysis Services (AS):**
 - È stato risolto un problema che poteva causare un'eccezione non gestita durante l'archiviazione delle modifiche del modello in TFS.
 - È stato risolto un problema che poteva causare un'eccezione durante l'aggiunta di una tabella con espressioni M complesse a un modello 1400.
 - È stato risolto un problema che poteva causare un arresto anomalo di Visual Studio durante la ricerca di metadati nella vista diagramma del modello.
@@ -318,7 +318,7 @@ _SSDT per Visual Studio 2015._
 - Le parole chiave di query M, come ad esempio "Origine" nell'editor di PowerQuery sono state localizzate.
 - Le credenziali vengono memorizzate nella cache quando si usano i modelli 1400 e le origini dati strutturate per evitare di dover immettere le stesse credenziali per ogni tabella modificata.
 
-**Progetti SSRS:**
+**Progetti RS:**
 - È stato risolto un problema che impediva la distribuzione di un singolo report in un progetto a più report
 - È stato risolto un problema con le origini dati condivise che potevano causare un problema nella distribuzione
 - È stato risolto un problema che poteva causare l'arresto in modo anomalo della gestione degli annullamenti quando ci si postava tra la visualizzazione Codice, la visualizzazione Progettazione e la finestra dell'editor di query
@@ -370,7 +370,7 @@ _SSDT per Visual Studio 2015._
 
 ### <a name="whats-new"></a>Novità
 
-**Analysis Services (AS)**
+**Analysis Services**
 
 - Nei modelli 1400 sono abilitati Cosmos DB e HDI Spark.
 - Proprietà delle origini dati tabulari.
@@ -383,7 +383,7 @@ _SSDT per Visual Studio 2015._
 
 ### <a name="known-issues"></a>Problemi noti
 
-**Analysis Services (AS)**
+**Analysis Services**
 
 - I modelli con livello di compatibilità 1400 in modalità DirectQuery che includono prospettive non sono in grado di individuare i metadati o di eseguire query sugli stessi.
 
@@ -397,13 +397,13 @@ _SSDT per Visual Studio 2015._
 
 - Dopo aver aggiornato il progetto al nuovo formato MSBuild, è possibile che il salvataggio abbia esito negativo con un messaggio simile al seguente:
 
-   *"Il parametro "unevaluatedValue" non può essere null".*
+   *"Il parametro "unevaluatedValue" non può essere null."*
 
    Per risolvere questo problema, aggiornare le *configurazioni di progetto* e popolare la proprietà *Platform*.
 
 ### <a name="bug-fixes"></a>Correzioni di bug
 
-**Analysis Services (AS)**
+**Analysis Services**
 
 - Notevole miglioramento delle prestazioni quando si carica la visualizzazione Diagramma del modello tabulare.
 - Corretti alcuni problemi per migliorare l'integrazione e l'esperienza con Power Query nei modelli con livello di compatibilità 1400.
@@ -608,11 +608,11 @@ _Supporto fino a SQL Server 2017._
 - Progetti tabulari: Esplora modelli tabulari sarà visibile solo se ci sono progetti tabulari di SSAS aperti.
 - Progetti multidimensionali: è stato risolto un problema a causa del quale la finestra di dialogo di elaborazione era inutilizzabile in computer con valori DPI alti.
 - Progetti tabulari: è stato risolto un problema a causa del quale si verifica un errore in SSDT all'apertura di qualsiasi progetto BI quando SSMS è già aperto. [Argomento Connect](https://connect.microsoft.com/SQLServer/feedback/details/3100900/ssdt-faults-when-opening-any-bi-project-when-ssms-is-already-open)
-- Progetti tabulari: è stato risolto un problema a causa del quale le gerarchie non venivano salvate correttamente nel file bim in un modello 1103. [Argomento Connect](https://connect.microsoft.com/SQLServer/feedback/details/3105222/vs-2015-ssdt)
+- Tabulare: è stato risolto un problema a causa del quale le gerarchie non venivano salvate correttamente nel file bim in un modello 1103. [Argomento Connect](https://connect.microsoft.com/SQLServer/feedback/details/3105222/vs-2015-ssdt)
 - Progetti tabulari: è stato risolto un problema a causa del quale la modalità area di lavoro integrata era consentita nei computer a 32 bit anche se non è supportata.
 - Progetti tabulari: è stato risolto un problema a causa del quale il clic su qualsiasi elemento in modalità di semiselezione (ad esempio, digitazione di un'espressione DAX ma clic su una misura) può causare l'arresti anomalo del sistema.
 - Progetti tabulari: è stato risolto un problema a causa del quale la distribuzione guidata reimposta la proprietà .Name del modello su "Model". [Argomento Connect](https://connect.microsoft.com/SQLServer/feedback/details/3107018/ssas-deployment-wizard-resets-modelname-to-model)
-- Progetti tabulari: è stato risolto un problema a causa del quale la selezione di una gerarchia in Esplora modelli tabulari comporta la visualizzazione delle proprietà anche se non è selezionata la vista diagramma.
+- Tabulare: è stato risolto un problema a causa del quale la selezione di una gerarchia in Esplora modelli tabulari comporta la visualizzazione delle proprietà anche se non è selezionata la vista diagramma.
 - Progetti tabulari: è stato risolto un problema a causa del quale quando si incolla contenuto nella barra della formula DAX vengono incollati immagini o altri contenuti invece del testo, se il contenuto da incollare proviene da determinate applicazioni.
 - Progetti tabulari: è stato risolto un problema a causa del quale alcuni vecchi modelli nel livello 1103 non potevano essere aperti a causa della presenza di misure con una definizione specifica.
 - Progetti tabulari: è stato risolto un problema a causa del quale non era possibile eliminare sessioni XEvent.

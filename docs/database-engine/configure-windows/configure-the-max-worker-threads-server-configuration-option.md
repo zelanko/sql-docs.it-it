@@ -14,12 +14,12 @@ ms.assetid: abeadfa4-a14d-469a-bacf-75812e48fac1
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: c35aab2ebd2b31fbbe7067bc8049930f791543c3
-ms.sourcegitcommit: 009bee6f66142c48477849ee03d5177bcc3b6380
+ms.openlocfilehash: 6088e603405a41d5bffbc1425b9f6f5495096f18
+ms.sourcegitcommit: 5f38c1806d7577f69d2c49e66f06055cc1b315f1
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/13/2019
-ms.locfileid: "56230978"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59429337"
 ---
 # <a name="configure-the-max-worker-threads-server-configuration-option"></a>Configurare l'opzione di configurazione del server max worker threads
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -34,7 +34,7 @@ ms.locfileid: "56230978"
   
      [Indicazioni](#Recommendations)  
   
-     [Sicurezza](#Security)  
+     [Security](#Security)  
   
 -   **Per configurare l'opzione max worker threads utilizzando:**  
   
@@ -77,14 +77,14 @@ ms.locfileid: "56230978"
     |\> 64 processori|256 + ((CPU logica - 4) * 32)|512 + ((CPU logica - 4) * 32)|
   
     > [!NOTE]  
-    > [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] non può più essere installato in un sistema operativo a 32 bit. I valori per i computer a 32 bit vengono indicati per offrire assistenza ai clienti che eseguono [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] e versioni precedenti.   Si consiglia 1024 come numero massimo di thread di lavoro per un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in esecuzione in un computer a 32 bit.  
+    > [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] non può più essere installato in un sistema operativo a 32 bit. I valori per i computer a 32 bit vengono indicati per offrire assistenza ai clienti che eseguono [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] e versioni precedenti. Si consiglia 1.024 come numero massimo di thread di lavoro per un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in esecuzione in un computer a 32 bit.  
   
     > [!NOTE]  
-    >  Per consigli sull'uso di più di 64 CPU, vedere [Procedure consigliate per l'esecuzione di SQL Server in computer con più di 64 CPU](../../relational-databases/thread-and-task-architecture-guide.md#best-practices-for-running-sql-server-on-computers-that-have-more-than-64-cpus).  
+    > Per consigli sull'uso di più di 64 CPU, vedere [Procedure consigliate per l'esecuzione di SQL Server in computer con più di 64 CPU](../../relational-databases/thread-and-task-architecture-guide.md#best-practices-for-running-sql-server-on-computers-that-have-more-than-64-cpus).  
   
 -   Se tutti i thread di lavoro sono attivi con query a esecuzione prolungata, si potrebbe non ricevere alcuna risposta da [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] finché un thread di lavoro non viene completato e diventa disponibile. Anche se non si tratta di un difetto, questo comportamento può talvolta risultare indesiderato. Se non si riceve risposta da un processo e non è possibile elaborare alcuna query, connettersi a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utilizzando la connessione amministrativa dedicata (DAC) e terminare il processo. Per evitare questo problema, aumentare il numero massimo di thread di lavoro.  
   
- L'opzione di configurazione del server **max worker threads** non considera i thread che sono richiesti per tutte le attività di sistema come i gruppi di disponibilità, Service Broker, gestione blocchi e altri. Se viene superato il numero di thread configurato, la seguente query fornirà informazioni sulle attività di sistema che hanno generato i thread aggiuntivi.  
+ L'opzione di configurazione del server **max worker thread** server non limita tutti i thread che possono essere generati nel sistema. I thread necessari per attività come i gruppi di disponibilità, Service Broker, Gestione blocchi o altre, vengono generati senza tener conto di questo limite. Se viene superato il numero di thread configurato, la query seguente fornirà informazioni sulle attività di sistema che hanno generato i thread aggiuntivi.  
   
  ```sql  
  SELECT  s.session_id, r.command, r.status,  
@@ -104,7 +104,7 @@ ms.locfileid: "56230978"
 ###  <a name="Security"></a> Sicurezza  
   
 ####  <a name="Permissions"></a> Autorizzazioni  
- Le autorizzazioni di esecuzione per **sp_configure** senza alcun parametro o solo con il primo parametro vengono assegnate per impostazione predefinita a tutti gli utenti. Per eseguire **sp_configure** con entrambi i parametri per la modifica di un'opzione di configurazione o per l'esecuzione dell'istruzione RECONFIGURE, a un utente deve essere concessa l'autorizzazione a livello di server ALTER SETTINGS. L'autorizzazione ALTER SETTINGS è assegnata implicitamente ai ruoli predefiniti del server **sysadmin** e **serveradmin** .  
+ Le autorizzazioni di esecuzione per **sp_configure** senza alcun parametro o solo con il primo parametro vengono assegnate per impostazione predefinita a tutti gli utenti. Per eseguire **sp_configure** con entrambi i parametri per la modifica di un'opzione di configurazione o per l'esecuzione dell'istruzione `RECONFIGURE`, a un utente deve essere concessa l'autorizzazione a livello di server `ALTER SETTINGS`. L'autorizzazione `ALTER SETTINGS` è assegnata implicitamente ai ruoli predefiniti del server**sysadmin** e **serveradmin**.  
   
 ##  <a name="SSMSProcedure"></a> Uso [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]  
   
@@ -120,7 +120,7 @@ ms.locfileid: "56230978"
 > L'opzione **max worker threads** consente di configurare il numero di thread di lavoro disponibili per i processi di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . L'impostazione predefinita di **max worker threads** è ottimale per la maggior parte dei sistemi. A seconda della configurazione del sistema, tuttavia, l'impostazione di **max worker thread** su un valore inferiore determina talvolta un miglioramento delle prestazioni.
 > Per altre informazioni, vedere [Indicazioni](#Recommendations), in precedenza in questo argomento.
   
-##  <a name="TsqlProcedure"></a> Utilizzo di Transact-SQL  
+##  <a name="TsqlProcedure"></a> Uso di Transact-SQL  
   
 #### <a name="to-configure-the-max-worker-threads-option"></a>Per configurare l'opzione max worker threads  
   
@@ -128,7 +128,7 @@ ms.locfileid: "56230978"
   
 2.  Dalla barra Standard fare clic su **Nuova query**.  
   
-3.  Copiare e incollare l'esempio seguente nella finestra delle query e fare clic su **Esegui**. In questo esempio si illustra come utilizzare [sp_configure](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md) per configurare l'opzione `max worker threads` su `900`.  
+3.  Copiare e incollare l'esempio seguente nella finestra Query, quindi fare clic su **Esegui**. In questo esempio si illustra come utilizzare [sp_configure](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md) per configurare l'opzione `max worker threads` su `900`.  
   
 ```sql  
 USE AdventureWorks2012 ;  
@@ -143,7 +143,7 @@ RECONFIGURE;
 GO  
 ```  
   
-##  <a name="FollowUp"></a> Completamento: fasi successive alla configurazione dell'opzione max worker threads  
+##  <a name="FollowUp"></a> Completamento: Dopo la configurazione dell'opzione max worker threads  
  La modifica sarà applicata immediatamente dopo l'esecuzione di [RECONFIGURE](../../t-sql/language-elements/reconfigure-transact-sql.md) senza richiedere il riavvio del [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
 ## <a name="see-also"></a>Vedere anche  

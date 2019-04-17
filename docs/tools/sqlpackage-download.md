@@ -2,7 +2,7 @@
 title: Scaricare e installare sqlpackage | Microsoft Docs
 description: Scaricare e installare sqlpackage per Windows, macOS o Linux
 ms.custom: tools|sos
-ms.date: 06/19/2018
+ms.date: 06/20/2018
 ms.prod: sql
 ms.reviewer: alayu; sstein
 ms.prod_service: sql-tools
@@ -10,35 +10,37 @@ ms.topic: conceptual
 author: pensivebrian
 ms.author: broneill
 manager: craigg
-ms.openlocfilehash: 5a45803f4ce2a91962a5bba824a468ca436f7839
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: 7b909df2e97149019d70af49085cc5f1e212f5ee
+ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58527213"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59240409"
 ---
 # <a name="download-and-install-sqlpackage"></a>Scaricare e installare sqlpackage
 
-Sqlpackage viene eseguito in Windows, macOS e Linux.
+sqlpackage viene eseguito in Windows, macOS e Linux.
 
-Scaricare e installare la versione più recente di .NET Framework e macOS e Linux anteprime:
+Scaricare e installare la versione più recente per .NET Framework e le anteprime per macOS e Linux:
 
 |Piattaforma|Scarica|Data di rilascio|Versione|Compilazione
 |:---|:---|:---|:---|:---|
 |Windows|[Programma di installazione MSI](https://go.microsoft.com/fwlink/?linkid=2069405)|1 febbraio 2019|18.1|15.0.4316.1|
-|macOS (anteprima) di .NET Core|[.zip file](https://go.microsoft.com/fwlink/?linkid=2069126)|1 febbraio 2019 | 18.1 |15.0.4316.1|
-|Linux .NET Core (anteprima)|[.zip file](https://go.microsoft.com/fwlink/?linkid=2069122)|1 febbraio 2019 | 18.1 |15.0.4316.1|
+|macOS .NET Core (anteprima)|[File ZIP](https://go.microsoft.com/fwlink/?linkid=2069126)|1 febbraio 2019 | 18.1 |15.0.4316.1|
+|Linux .NET Core (anteprima)|[File ZIP](https://go.microsoft.com/fwlink/?linkid=2069122)|1 febbraio 2019 | 18.1 |15.0.4316.1|
 
-Per informazioni dettagliate relative alla versione più recente, vedere la [note sulla versione](release-notes-sqlpackage.md).
+Per informazioni dettagliate sulla versione più recente, vedere le [note sulla versione](release-notes-sqlpackage.md).
+
+[!INCLUDE[Freshness](../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
 ## <a name="get-sqlpackage-for-windows"></a>Ottenere sqlpackage per Windows
 
-Questa versione di sqlpackage include un'esperienza di installazione di Windows standard e un file ZIP: 
+Questa versione di sqlpackage include un'esperienza di installazione Windows standard e un file ZIP: 
 
-1. Scaricare ed eseguire la [dacframework. msi installer per Windows](https://go.microsoft.com/fwlink/?linkid=2069405).
+1. Scaricare ed eseguire il [programma di installazione DacFramework.msi per Windows](https://go.microsoft.com/fwlink/?linkid=2069405).
 2. Aprire una nuova finestra del prompt dei comandi ed eseguire sqlpackage.exe
-    - Sqlpackage è installato per il ```C:\Program Files\Microsoft SQL Server\150\DAC\bin``` cartella
-    - Installazione x86 versione su un x64 computer, sqlpackage è installato per il ```C:\Program Files (x86)\Microsoft SQL Server\150\DAC\bin``` cartella
+    - sqlpackage viene installato nella cartella ```C:\Program Files\Microsoft SQL Server\150\DAC\bin```
+    - Installando la versione x86 in un computer x64, sqlpackage viene installato nella cartella ```C:\Program Files (x86)\Microsoft SQL Server\150\DAC\bin```
 
 ## <a name="get-sqlpackage-preview-for-macos"></a>Ottenere sqlpackage (anteprima) per macOS
 
@@ -57,7 +59,7 @@ Questa versione di sqlpackage include un'esperienza di installazione di Windows 
 
 ## <a name="get-sqlpackage-preview-for-linux"></a>Ottenere sqlpackage (anteprima) per Linux
 
-1. Scaricare [sqlpackage per Linux](https://go.microsoft.com/fwlink/?linkid=2069122) usando uno dei programmi di installazione o l'archivio GZ:
+1. Scaricare [sqlpackage per Linux](https://go.microsoft.com/fwlink/?linkid=2069122) usando uno dei programmi di installazione o l'archivio tar.gz:
 2. Per estrarre il file e avviare sqlpackage, aprire una nuova finestra del terminale e digitare i comandi seguenti:
 
    **Installazione file con estensione zip:**
@@ -73,7 +75,7 @@ Questa versione di sqlpackage include un'esperienza di installazione di Windows 
    ```
 
    > [!NOTE]
-   > In Debian, Red Hat e Ubuntu, è possibile dipendenze mancanti. Usare i comandi seguenti per installare queste dipendenze a seconda della versione di Linux:
+   > In Debian, Red Hat e Ubuntu potrebbero mancare alcune dipendenze. Usare i comandi seguenti per installare queste dipendenze a seconda della versione di Linux:
 
    **Debian:**
 
@@ -81,7 +83,7 @@ Questa versione di sqlpackage include un'esperienza di installazione di Windows 
    sudo apt-get install libunwind8
    ```
 
-   **RedHat:**
+   **Redhat:**
 
    ```bash
    yum install libunwind
@@ -102,13 +104,13 @@ Questa versione di sqlpackage include un'esperienza di installazione di Windows 
 
 ## <a name="uninstall-sqlpackage-preview"></a>Disinstallare sqlpackage (anteprima)
 
-Se è stato installato tramite il programma di installazione di Windows di sqlpackage, quindi disinstallare simile a quello di rimuovere qualsiasi applicazione Windows.
+Se sqlpackage è stato installato usando il programma di installazione di Windows, disinstallarlo così come si rimuove qualsiasi applicazione Windows.
 
 Se sqlpackage è stato installato con un file ZIP o un altro archivio, è sufficiente eliminare i file.
 
 ## <a name="supported-operating-systems"></a>Sistemi operativi supportati
 
-Sqlpackage viene eseguito in Windows, macOS e Linux ed è supportata nelle piattaforme seguenti:
+sqlpackage viene eseguito in Windows, macOS e Linux ed è supportato nelle piattaforme seguenti:
 
 ### <a name="windows"></a>Windows
 

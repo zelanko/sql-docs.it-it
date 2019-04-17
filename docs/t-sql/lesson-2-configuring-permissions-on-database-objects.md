@@ -1,7 +1,7 @@
 ---
-title: 'Esercitazione di T-SQL: Configurare le autorizzazioni negli oggetti di database | Microsoft Docs'
+title: 'Esercitazione di T-SQL: Configurare le autorizzazioni per gli oggetti di database | Microsoft Docs'
 ms.custom: ''
-ms.date: 07/30/2018
+ms.date: 07/31/2018
 ms.prod: sql
 ms.technology: t-sql
 ms.reviewer: ''
@@ -13,14 +13,14 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 4faa36c3cbef3d0ae84ac62a6cb7e866998ee064
-ms.sourcegitcommit: ce4b39bf88c9a423ff240a7e3ac840a532c6fcae
+ms.openlocfilehash: 56f98831db725a04d7399a49fbe8f6803cbe510c
+ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/09/2018
-ms.locfileid: "48878134"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59241399"
 ---
-# <a name="lesson-2-configure-permissions-on-database-objects"></a>Lezione 2: Configurare le autorizzazioni negli oggetti di database
+# <a name="lesson-2-configure-permissions-on-database-objects"></a>Lezione 2: Configurare le autorizzazioni per gli oggetti di database
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../includes/tsql-appliesto-ss2008-all-md.md)]
 La concessione di un accesso utente a un database consiste in tre passaggi. Viene innanzitutto creato un account di accesso, il quale consente all'utente di connettersi a [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]. L'account di accesso viene quindi configurato come utente nel database specificato. Viene infine concessa l'autorizzazione utente per gli oggetti di database. In questa lezione vengono illustrati tali passaggi e viene descritto come creare due oggetti, ovvero una vista e una stored procedure.  
 
@@ -33,9 +33,11 @@ Per completare questa esercitazione è necessario avere SQL Server Management St
 - Installare [SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms).
 
 Se non si dispone dell'accesso a un'istanza di SQL Server, selezionare la piattaforma in uso tra i collegamenti seguenti. Se si sceglie Autenticazione SQL, usare le credenziali di accesso di SQL Server.
-- **Windows**: [scaricare SQL Server 2017 Developer Edition](https://www.microsoft.com/sql-server/sql-server-downloads).
-- **macOS**: [scaricare SQL Server 2017 in Docker](https://docs.microsoft.com/sql/linux/quickstart-install-connect-docker).
-  
+- **Windows**: [Scaricare SQL Server 2017 Developer](https://www.microsoft.com/sql-server/sql-server-downloads).
+- **macOS**: [Scaricare SQL Server 2017 in Docker](https://docs.microsoft.com/sql/linux/quickstart-install-connect-docker).
+
+[!INCLUDE[Freshness](../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 ## <a name="create-a-login"></a>Crea un accesso
 Per accedere a [!INCLUDE[ssDE](../includes/ssde-md.md)]è necessario che gli utenti dispongano di un account di accesso. L'account di accesso può rappresentare l'identità dell'utente come un account di Windows o come membro di un gruppo di Windows oppure un account di accesso di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] esistente solo in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Se possibile, è consigliabile utilizzare l'autenticazione di Windows.  
   

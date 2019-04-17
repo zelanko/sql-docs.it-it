@@ -22,12 +22,12 @@ ms.assetid: 63373c2f-9a0b-431b-b9d2-6fa35641571a
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 85e4ceb8c70d6aa11ac37a8b3e8fd28c997c03dc
-ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
+ms.openlocfilehash: fddb5027da7d1b8e33ebcbc53ba403b866eadb8c
+ms.sourcegitcommit: c017b8afb37e831c17fe5930d814574f470e80fb
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58493783"
+ms.lasthandoff: 04/11/2019
+ms.locfileid: "59506548"
 ---
 # <a name="alter-database-scoped-configuration-transact-sql"></a>ALTER DATABASE SCOPED CONFIGURATION (Transact-SQL)
 
@@ -59,7 +59,7 @@ ALTER DATABASE SCOPED CONFIGURATION
 {
      {  [ FOR SECONDARY] SET <set_options>}
 }
-| CLEAR PROCEDURE_CACHE
+| CLEAR PROCEDURE_CACHE  [plan_handle]
 | SET < set_options >
 [;]
 
@@ -94,9 +94,14 @@ FOR SECONDARY
 
 Specifica le impostazioni per i database secondari. Tutti i database secondari devono avere valori identici.
 
-CLEAR PROCEDURE_CACHE    
+CLEAR PROCEDURE_CACHE [plan_handle]
 
 Cancella la cache delle procedure (piani) per il database e può essere eseguito sia nel database primario che in quelli secondari.  
+
+Specificare un handle di piano di query per cancellare un singolo piano di query dalla cache dei piani.
+
+> [!NOTE]
+> È possibile specificare un handle di piano di query nel database SQL di Azure e in SQL Server 2019 o versione successiva.
 
 MAXDOP **=** {\<value> | PRIMARY } **\<value>**
 
@@ -406,7 +411,7 @@ In questo esempio il parametro PARAMETER_SNIFFING viene impostato su OFF per un 
 ALTER DATABASE SCOPED CONFIGURATION SET PARAMETER_SNIFFING = OFF ;
 ```
 
-In questo esempio il parametro PARAMETER_SNIFFING viene impostato su OFF per un database primario in uno scenario di replica geografica.
+In questo esempio il parametro PARAMETER_SNIFFING viene impostato su OFF per un database secondario in uno scenario di replica geografica.
 
 ```sql
 ALTER DATABASE SCOPED CONFIGURATION FOR SECONDARY SET PARAMETER_SNIFFING = OFF ;
@@ -468,6 +473,13 @@ In questo esempio viene impostato il parametro ELEVATE_RESUMABLE su WHEN_SUPPORT
 ALTER DATABASE SCOPED CONFIGURATION SET ELEVATE_RESUMABLE = WHEN_SUPPORTED ;
 ```
 
+### <a name="k-clear-a-query-plan-from-the-plan-cache"></a>K. Cancellare un piano di query dalla cache dei piani
+Questo esempio cancella un piano specifico dalla cache delle procedure 
+
+```sql
+ALTER DATABASE SCOPED CONFIGURATION CLEAR PROCEDURE_CACHE 0x06000500F443610F003B7CD12C02000001000000000000000000000000000000000000000000000000000000;
+```
+
 ## <a name="additional-resources"></a>Risorse aggiuntive
 
 ### <a name="maxdop-resources"></a>Risorse di MAXDOP
@@ -478,25 +490,25 @@ ALTER DATABASE SCOPED CONFIGURATION SET ELEVATE_RESUMABLE = WHEN_SUPPORTED ;
 ### <a name="legacycardinalityestimation-resources"></a>Risorse di LEGACY_CARDINALITY_ESTIMATION
 
 - [Stima della cardinalità (SQL Server)](../../relational-databases/performance/cardinality-estimation-sql-server.md)
-- [Optimizing Your Query Plans with the SQL Server 2014 Cardinality Estimator](https://msdn.microsoft.com/library/dn673537.aspx) (Ottimizzazione dei piani di query con la stima di cardinalità di SQL Server 2014)
+- [Optimizing Your Query Plans with the SQL Server 2014 Cardinality Estimator (Ottimizzazione dei piani di query con la stima di cardinalità di SQL Server 2014)](https://msdn.microsoft.com/library/dn673537.aspx)
 
 ### <a name="parametersniffing-resources"></a>Risorse di PARAMETER_SNIFFING
 
 - [Analisi dei parametri](../../relational-databases/query-processing-architecture-guide.md#ParamSniffing)
-- ["I smell a parameter!"](https://blogs.msdn.microsoft.com/queryoptteam/2006/03/31/i-smell-a-parameter/) (Uso dei parametri)
+- ["I smell a parameter!" (Uso dei parametri)](https://blogs.msdn.microsoft.com/queryoptteam/2006/03/31/i-smell-a-parameter/)
 
 ### <a name="queryoptimizerhotfixes-resources"></a>Risorse di QUERY_OPTIMIZER_HOTFIXES
 
 - [Flag di traccia](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md)
-- [SQL Server query optimizer hotfix trace flag 4199 servicing model](https://support.microsoft.com/kb/974006)(Modello di manutenzione del flag di traccia 4199 di Query Optimizer in SQL Server)
+- [SQL Server query optimizer hotfix trace flag 4199 servicing model(Modello di manutenzione del flag di traccia 4199 di Query Optimizer in SQL Server)](https://support.microsoft.com/kb/974006)
 
 ### <a name="elevateonline-resources"></a>Risorse di ELEVATE_ONLINE
 
-[Linee guida per le operazioni sugli indici online](../../relational-databases/indexes/guidelines-for-online-index-operations.md)
+[Linee guida per operazioni di indice online](../../relational-databases/indexes/guidelines-for-online-index-operations.md)
 
 ### <a name="elevateresumable-resources"></a>Risorse di ELEVATE_RESUMABLE
 
-[Linee guida per le operazioni sugli indici online](../../relational-databases/indexes/guidelines-for-online-index-operations.md)
+[Linee guida per operazioni di indice online](../../relational-databases/indexes/guidelines-for-online-index-operations.md)
 
 ## <a name="more-information"></a>Ulteriori informazioni
 
