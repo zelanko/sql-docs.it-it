@@ -16,12 +16,12 @@ ms.assetid: 76bd8524-ebc1-4d80-b5a2-4169944d6ac0
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: c7e8d3f735a096eeaf60ecdb376d02d046112a25
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 47d0f7c4eb6c78b9e551fafdc1e018a27604086e
+ms.sourcegitcommit: e2d65828faed6f4dfe625749a3b759af9caa7d91
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53375363"
+ms.lasthandoff: 04/17/2019
+ms.locfileid: "59671367"
 ---
 # <a name="implement-a-custom-conflict-resolver-for-a-merge-article"></a>Implementazione di un sistema di risoluzione dei conflitti personalizzato per un articolo di tipo merge
   In questo argomento viene descritto come implementare il sistema di risoluzione dei conflitti personalizzato per un articolo di tipo merge in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] tramite [!INCLUDE[tsql](../../includes/tsql-md.md)] o un [sistema di risoluzione personalizzato basato su COM](merge/advanced-merge-replication-conflict-com-based-custom-resolvers.md).  
@@ -118,7 +118,7 @@ ms.locfileid: "53375363"
   
 #### <a name="viewing-a-sample-custom-resolver"></a>Visualizzazione di un sistema di risoluzione personalizzato di esempio  
   
-1.  Un esempio è disponibile nei file di esempio di SQL Server 2000. Scaricare il file **sql2000samples.cab** dalla pagina relativa agli [esempi aggiornati per SQL Server 2000 Service Pack 3](https://www.microsoft.com/download/details.aspx?id=8560). Vengono scaricati 8 file per un totale di 6,9 MB.  
+1.  Un esempio è disponibile nei file di esempio di SQL Server 2000. Scaricare il [ **sql2000samples.zip**](https://github.com/Microsoft/sql-server-samples/blob/master/samples/tutorials/Miscellaneous/sql2000samples.zip). Vengono scaricati 3 file comporta la 6,9 MB.  
   
 2.  Estrarre i file dal file con estensione cab compresso scaricato.  
   

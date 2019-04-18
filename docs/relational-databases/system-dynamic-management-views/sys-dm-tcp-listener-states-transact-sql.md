@@ -1,5 +1,5 @@
 ---
-title: Sys.dm_tcp_listener_states (Transact-SQL) | Microsoft Docs
+title: sys.dm_tcp_listener_states (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -21,12 +21,12 @@ ms.assetid: 9997ffed-a4c1-428f-8bac-3b9e4b16d7cf
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: b69bfb4da1bf20a8d74f5adcda44e55954bbdf65
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: f45c634b2a5ab057fd9c2ae878e544a6b7d84f7f
+ms.sourcegitcommit: e2d65828faed6f4dfe625749a3b759af9caa7d91
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52409638"
+ms.lasthandoff: 04/17/2019
+ms.locfileid: "59671347"
 ---
 # <a name="sysdmtcplistenerstates-transact-sql"></a>sys.dm_tcp_listener_states (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -39,13 +39,13 @@ ms.locfileid: "52409638"
 |Nome colonna|Tipo di dati|Descrizione|  
 |-----------------|---------------|-----------------|  
 |**listener_id**|**int**|ID interno del listener Non ammette i valori Null.<br /><br /> Chiave primaria.|  
-|**ip_address**|**nvarchar48**|L'indirizzo IP del listener online e attualmente in attesa. È consentito IPv4 o IPv6. Se un listener dispone di entrambi gli indirizzi, vengono elencati separatamente. Un carattere jolly IPv4 viene visualizzato come "0.0.0.0". Un carattere jolly IPv6 viene visualizzato come "::".<br /><br /> Non ammette i valori Null.|  
+|**ip_address**|**nvarchar(48)**|L'indirizzo IP del listener online e attualmente in attesa. È consentito IPv4 o IPv6. Se un listener dispone di entrambi gli indirizzi, vengono elencati separatamente. Un carattere jolly IPv4 viene visualizzato come "0.0.0.0". Un carattere jolly IPv6 viene visualizzato come "::".<br /><br /> Non ammette i valori Null.|  
 |**is_ipv4**|**bit**|Tipo di indirizzo IP<br /><br /> 1 = IPv4<br /><br /> 0 = IPv6|  
 |**port**|**int**|Numero della porta su cui il listener rimane in attesa. Non ammette i valori Null.|  
 |**type**|**tinyint**|Tipo di listener, uno di:<br /><br /> 0 = [!INCLUDE[tsql](../../includes/tsql-md.md)]<br /><br /> 1 = Service Broker<br /><br /> 2 = Mirroring del database<br /><br /> Non ammette i valori Null.|  
 |**type_desc**|**nvarchar(20)**|Descrizione del **tipo**, uno di:<br /><br /> TSQL<br /><br /> SERVICE_BROKER<br /><br /> DATABASE_MIRRORING<br /><br /> Non ammette i valori Null.|  
 |**state**|**tinyint**|Stato del listener del gruppo di disponibilità, uno di:<br /><br /> 1 = Online. Il listener è in attesa ed elabora le richieste.<br /><br /> 2 = Riavvio in sospeso. Il listener è offline, con il riavvio in sospeso.<br /><br /> Se il listener del gruppo di disponibilità è in attesa sulla stessa porta dell'istanza del server, questi due listener si trovano sempre nello stesso stato.<br /><br /> Non ammette i valori Null.<br /><br /> Nota: I valori in questa colonna provengono dall'oggetto TSD_listener. La colonna non supporta uno stato offline perché quando il TDS_listener è offline, non è possibile eseguire query per lo stato.|  
-|**state_desc**|**nvarchar (16)**|Descrizione della **stato**, uno di:<br /><br /> ONLINE<br /><br /> PENDING_RESTART<br /><br /> Non ammette i valori Null.|  
+|**state_desc**|**nvarchar(16)**|Descrizione della **stato**, uno di:<br /><br /> ONLINE<br /><br /> PENDING_RESTART<br /><br /> Non ammette i valori Null.|  
 |**start_time**|**datetime**|Timestamp che indica l'avvio del listener. Non ammette i valori Null.|  
   
 ## <a name="security"></a>Sicurezza  

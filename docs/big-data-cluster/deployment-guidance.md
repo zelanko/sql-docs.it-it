@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: 7a863259a3eb04aef648d98f1d8c4ac22e4a3f38
-ms.sourcegitcommit: 46a2c0ffd0a6d996a3afd19a58d2a8f4b55f93de
+ms.openlocfilehash: b7ca08d7ab73cc90e90717b23d2e5b293022bb1c
+ms.sourcegitcommit: e2d65828faed6f4dfe625749a3b759af9caa7d91
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/15/2019
-ms.locfileid: "59582414"
+ms.lasthandoff: 04/17/2019
+ms.locfileid: "59671377"
 ---
 # <a name="how-to-deploy-sql-server-big-data-clusters-on-kubernetes"></a>Come distribuire i cluster di big data di SQL Server in Kubernetes
 
@@ -89,8 +89,8 @@ La configurazione del cluster può essere personalizzata usando un set di variab
 | **ACCEPT_EULA** | Yes | N/D | Accettare il contratto di licenza di SQL Server (ad esempio, 'Yes').  |
 | **CLUSTER_NAME** | Yes | N/D | Il nome dello spazio dei nomi Kubernetes per distribuire cluster di big data in SQL Server. |
 | **CLUSTER_PLATFORM** | Yes | N/D | La piattaforma che è distribuito il cluster Kubernetes. Può essere `aks`, `minikube`, `kubernetes`|
-| **CLUSTER_COMPUTE_POOL_REPLICAS** | No | 1 | Il numero di repliche di pool di calcolo da compilare. Nella versione CTP 2.4 solo con valori consentito è 1. |
-| **CLUSTER_DATA_POOL_REPLICAS** | no | 2 | Il numero di dati del pool di repliche da compilare. |
+| **CLUSTER_COMPUTE_POOL_REPLICAS** | no | 1 | Il numero di repliche di pool di calcolo da compilare. Nella versione CTP 2.4 solo con valori consentito è 1. |
+| **CLUSTER_DATA_POOL_REPLICAS** | No | 2 | Il numero di dati del pool di repliche da compilare. |
 | **CLUSTER_STORAGE_POOL_REPLICAS** | No | 2 | Il numero di repliche di pool di archiviazione da compilare. |
 | **DOCKER_REGISTRY** | Yes | TBD | Il Registro di sistema privato in cui sono archiviate le immagini usate per distribuire il cluster. |
 | **DOCKER_REPOSITORY** | Yes | TBD | Il repository privato all'interno del Registro di sistema precedente in cui sono archiviate le immagini.  È necessario per la durata dell'anteprima pubblica gestita. |
@@ -104,7 +104,7 @@ La configurazione del cluster può essere personalizzata usando un set di variab
 | **CONTROLLER_PASSWORD** | Yes | N/D | La password dell'amministratore cluster. |
 | **KNOX_PASSWORD** | Yes | N/D | La password per utente Knox. |
 | **MSSQL_SA_PASSWORD** | Yes | N/D | La password dell'utente dell'amministratore di sistema per l'istanza master di SQL. |
-| **USE_PERSISTENT_VOLUME** | No | true | `true` Per utilizzare attestazioni Volume permanente Kubernetes per l'archiviazione di pod.  `false` usare l'archiviazione temporanea host per l'archiviazione di pod. Vedere le [persistenza dei dati](concept-data-persistence.md) per altri dettagli vedere l'articolo. Se si distribuisce SQL Server del cluster di big data in minikube e USE_PERSISTENT_VOLUME = true, è necessario impostare il valore per `STORAGE_CLASS_NAME=standard`. |
+| **USE_PERSISTENT_VOLUME** | no | true | `true` Per utilizzare attestazioni Volume permanente Kubernetes per l'archiviazione di pod.  `false` usare l'archiviazione temporanea host per l'archiviazione di pod. Vedere le [persistenza dei dati](concept-data-persistence.md) per altri dettagli vedere l'articolo. Se si distribuisce SQL Server del cluster di big data in minikube e USE_PERSISTENT_VOLUME = true, è necessario impostare il valore per `STORAGE_CLASS_NAME=standard`. |
 | **STORAGE_CLASS_NAME** | No | predefiniti | Se `USE_PERSISTENT_VOLUME` è `true` viene indicato il nome della classe di archiviazione Kubernetes da usare. Vedere le [persistenza dei dati](concept-data-persistence.md) per altri dettagli vedere l'articolo. Se si distribuisce SQL Server del cluster di big data in minikube, il nome predefinito della classe di archiviazione è diverso ed è necessario eseguirne l'override impostando `STORAGE_CLASS_NAME=standard`. |
 | **CONTROLLER_PORT** | No | 30080 | La porta TCP/IP che il servizio controller è in ascolto sulla rete pubblica. |
 | **MASTER_SQL_PORT** | No | 31433 | La porta TCP/IP che è in ascolto l'istanza SQL master nella rete pubblica. |
@@ -120,6 +120,29 @@ La configurazione del cluster può essere personalizzata usando un set di variab
 >1. Verificare che a capo le password tra virgolette quando contiene caratteri speciali. È possibile impostare il MSSQL_SA_PASSWORD con qualsiasi nome desiderato, ma assicurarsi che questi sono sufficientemente complessi e non usare la `!`, `&` o `'` caratteri. Si noti che i delimitatori tra virgolette doppie funzionano solo in comandi bash.
 >1. Il nome del cluster deve essere solo alfanumerici caratteri minuscoli, senza spazi. Tutti Kubernetes gli elementi (contenitori, i POD, set prive di stato e servizi) per il cluster verranno creati in uno spazio dei nomi con lo stesso nome del cluster il nome specificato.
 >1. Il **SA** account sia un amministratore di sistema nell'istanza Master di SQL Server che viene creato durante l'installazione. Dopo la creazione il contenitore di SQL Server, la variabile di ambiente MSSQL_SA_PASSWORD specificata diventa individuabile eseguendo echo MSSQL_SA_PASSWORD $ nel contenitore. Per motivi di sicurezza, modificare la password dell'amministratore di sistema in base alle procedure consigliate documentate [qui](https://docs.microsoft.com/sql/linux/quickstart-install-connect-docker?view=sql-server-2017#change-the-sa-password).
+
+I dettagli sulle opzioni di configurazioni YARN nella sezione seguente. Nota: Si tratta di configurazioni a livello di esperti. L'utente non è necessario specificare uno di questi valori e in tal caso le impostazioni predefinite effettive. Yarn è Resource Manager per Spark. Spark viene eseguito nel POD di archiviazione e che possono essere controllati tramite CLUSTER_STORAGE_POOL_REPLICAS.
+
+| Variabile di ambiente yarn | Obbligatorio | Valore predefinito | Descrizione |
+|---|---|---|---|
+| **HADOOP_HEAPSIZE** | No | 2048  | Dimensioni dell'heap per i processi di nodo nome e i dati HDFS |
+| **YARN_HEAPSIZE**   | No | 2048  | Dimensioni dell'heap per i processi di gestione risorse di Yarn e NM |
+| **YARN_NODEMANAGER_RESOURCE_MEMORY** | No | 18432  | Memoria totale massima Yarn può usare per ogni contenitore K8  |
+| **YARN_NODEMANAGER_RESOURCE_VCORES** | No | 6  | Core virtuali max Yarn può usare in un nodo  |
+| **YARN_SCHEDULER_MAX_MEMORY** | No | 18432  | Memoria massima per un contenitore Yarn può usare in un nodo  |
+| **YARN_SCHEDULER_MAX_VCORES** | No | 6  | Memoria massima per un contenitore Yarn può usare in un nodo  |
+| **YARN_SCHEDULER_CAPACITY_MAX_AM_PERCENT** | no | 0.3  | Percentuale di memoria totale che è possibile usare l'applicazione Master   |
+
+In questa sezione illustra in dettaglio nelle configurazioni di Spark opzioni. Nota: Si tratta di configurazioni a livello di esperti. L'utente non è necessario specificare uno di questi valori e in tal caso le impostazioni predefinite effettive. In fase di esecuzione utente può configurare in modo specifico per ogni applicazione tramite % % configurare nei notebook spark.
+
+| Variabile di ambiente Spark | Obbligatorio | Valore predefinito | Descrizione |
+|---|---|---|---|
+| **SPARK_DRIVER_MEMORY** | no | 2048  | Memoria utilizzata del driver Spark  |
+| **SPARK_DRIVER_CORES** | No | 1  | Numero di core usati da driver Spark  |
+| **SPARK_EXECUTOR_INSTANCES** | no | 3  | Memoria utilizzata del driver Spark  |
+| **SPARK_EXECUTOR_MEMORY** | No | 1536  | Memoria utilizzata executor Spark |
+| **SPARK_EXECUTOR_CORES** | no | 1  | Numero di core usati dagli executor Spark  |
+
 
 Impostare le variabili di ambiente necessarie per la distribuzione di un cluster di big data è diverso a seconda se si usano client Windows o Linux.  Scegliere i passaggi seguenti a seconda del sistema operativo in uso.
 

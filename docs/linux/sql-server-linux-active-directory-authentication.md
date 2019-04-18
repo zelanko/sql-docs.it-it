@@ -13,12 +13,12 @@ ms.custom: seodec18
 ms.technology: linux
 helpviewer_keywords:
 - Linux, AAD authentication
-ms.openlocfilehash: 5e75a0315c0e632e9637ad1f1467acc90dc586cf
-ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
+ms.openlocfilehash: e71c4c68a7f04e5f7f33b8635e660a84f501c263
+ms.sourcegitcommit: e2d65828faed6f4dfe625749a3b759af9caa7d91
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59240779"
+ms.lasthandoff: 04/17/2019
+ms.locfileid: "59671297"
 ---
 # <a name="tutorial-use-active-directory-authentication-with-sql-server-on-linux"></a>Esercitazione: Usare l'autenticazione di Active Directory con SQL Server in Linux
 
@@ -42,7 +42,7 @@ Questa esercitazione include le attività seguenti:
 Prima di configurare l'autenticazione di AD, è necessario:
 
 * Impostare un Controller di dominio Active Directory (Windows) nella rete  
-* Installazione [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]
+* Installare [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]
   * [Red Hat Enterprise Linux (RHEL)](quickstart-install-connect-red-hat.md)
   * [SUSE Linux Enterprise Server (SLES)](quickstart-install-connect-suse.md)
   * [Ubuntu](quickstart-install-connect-ubuntu.md)
@@ -315,11 +315,11 @@ systemctl restart mssql-server
 Se il controller di dominio supporta LDAPS, è possibile forzare tutte le connessioni da SQL Server a controller di dominio per essere tramite LDAPS. Per controllare il client può contattare il controller di dominio tramite ldaps, eseguire il seguente comando bash, `ldapsearch -H ldaps://contoso.com:3269`. Per configurare SQL Server da usare solo LDAPS, eseguire il comando seguente:
 
 ```bash
-sudo mssql-conf set network.forceldaps true
+sudo mssql-conf set network.forcesecureldap true
 systemctl restart mssql-server
 ```
 
-Si userà LDAPS su SSSD se Active Directory domain join su host è stato eseguito tramite il pacchetto SSSD e **disablesssd** non è impostata su true. Se **disablesssd** è impostata su true insieme **forceldaps** impostato su true, si userà protocollo LDAPS su chiamate alla libreria openldap eseguite da SQL Server.
+Si userà LDAPS su SSSD se Active Directory domain join su host è stato eseguito tramite il pacchetto SSSD e **disablesssd** non è impostata su true. Se **disablesssd** è impostata su true insieme **forcesecureldap** impostato su true, si userà protocollo LDAPS su chiamate alla libreria openldap eseguite da SQL Server.
 
 ### <a name="post-sql-server-2017-cu14"></a>Post SQL Server 2017 CU14
 
