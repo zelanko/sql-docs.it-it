@@ -1,7 +1,7 @@
 ---
 title: SQL Server Always On modelli distribuzione gruppo di disponibilità | Microsoft Docs
 ms.custom: sql-linux
-ms.date: 10/16/2017
+ms.date: 04/17/2019
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: linux
@@ -10,12 +10,12 @@ ms.assetid: edd75f68-dc62-4479-a596-57ce8ad632e5
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: a9d09f9f769d195600c8af97b347831340837d91
-ms.sourcegitcommit: 1e28f923cda9436a4395a405ebda5149202f8204
+ms.openlocfilehash: b0b7e735b2897f8bc942f1d4e6c151f27f588e8c
+ms.sourcegitcommit: e2d65828faed6f4dfe625749a3b759af9caa7d91
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/25/2019
-ms.locfileid: "55044934"
+ms.lasthandoff: 04/17/2019
+ms.locfileid: "59671177"
 ---
 # <a name="high-availability-and-data-protection-for-availability-group-configurations"></a>Elevata disponibilità e protezione dei dati per le configurazioni di gruppo di disponibilità
 
@@ -62,7 +62,7 @@ Un gruppo di disponibilità con tre repliche sincrone può fornire la protezione
 | |read-scale|Disponibilità elevata & </br> protezione dei dati | Protezione dei dati|
 |:---|---|---|---|
 |`REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT=`|0 |1<sup>\*</sup>|2|
-|Interruzione primaria | Failover manuale. Potrebbe verificarsi la perdita di dati. Nuova replica primaria è R / w. |Failover automatico. Nuova replica primaria è R / w. |Failover automatico. Nuovo database primario non è disponibile per le transazioni utente fino a quando i database primario viene ripristinato e join di gruppo di disponibilità secondario. |
+|Interruzione primaria |Failover automatico. Nuova replica primaria è R / w. |Failover automatico. Nuova replica primaria è R / w. |Failover automatico. Nuovo database primario non è disponibile per le transazioni utente fino a quando i database primario viene ripristinato e join di gruppo di disponibilità secondario. |
 |Interruzione di una replica secondaria  | La replica primaria è R / w. Nessun failover automatico se l'area primaria non riesce. |La replica primaria è R / w. Nessun failover automatico se l'area primaria non riesce anche. | Database primario non è disponibile per le transazioni utente. |
 
 <sup>\*</sup> Default
@@ -71,7 +71,7 @@ Un gruppo di disponibilità con tre repliche sincrone può fornire la protezione
 
 ## <a name="two-synchronous-replicas"></a>Due repliche sincrone
 
-Questa configurazione abilita la protezione dei dati. Come le altre configurazioni gruppo disponibilità, è possibile abilitare con scalabilità in lettura. La configurazione di due repliche sincrone non fornisce la disponibilità elevata automatica. 
+Questa configurazione abilita la protezione dei dati. Come le altre configurazioni gruppo disponibilità, è possibile abilitare con scalabilità in lettura. La configurazione di due repliche sincrone non fornisce la disponibilità elevata automatica. Una configurazione a due repliche è applicabile solo a SQL Server 2017 RTM e non è più supportata con versioni successive (CU1 e oltre) le versioni di SQL Server 2017...
 
 ![Due repliche sincrone][1]
 
@@ -84,9 +84,6 @@ Un gruppo di disponibilità con due repliche sincrone fornisce scalabilità in l
 |Interruzione di una replica secondaria  |La replica primaria è L/S, esecuzione esposta alla perdita di dati. |Database primario non è disponibile per le transazioni utente fino al recupero della replica secondaria.|
 
 <sup>\*</sup> Default
-
-> [!NOTE]
-> Lo scenario precedente è il comportamento prima dell'aggiornamento Cumulativo 1 di SQL Server 2017. 
 
 <a name = "configOnly"></a>
 
