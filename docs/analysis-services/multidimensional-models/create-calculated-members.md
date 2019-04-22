@@ -10,10 +10,10 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 3bfa37a34ae6c3010c36dfe7693bb6d569e6e63d
-ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
+ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59241467"
 ---
 # <a name="create-calculated-members"></a>Creare membri calcolati
@@ -24,7 +24,7 @@ ms.locfileid: "59241467"
   
  I membri calcolati vengono creati nei cubi. Per creare un membro calcolato, nella scheda **Calcoli** di Progettazione cubi fare clic sull'icona **Nuovo membro calcolato** sulla barra degli strumenti. Verrà visualizzato un form in cui è possibile specificare le opzioni seguenti per il membro calcolato.  
   
- **Nome**  
+ **Name**  
  Selezionare il nome del membro calcolato. Questo nome viene visualizzato nell'intestazione della colonna o della riga contenente i valori del membro calcolato quando gli utenti finali esplorano il cubo.  
   
  **Gerarchia padre**  

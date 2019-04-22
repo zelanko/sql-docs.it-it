@@ -19,10 +19,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 2a2767de67eac1a0346f059e1a2c81a5698607dc
-ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
+ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59240996"
 ---
 # <a name="derived-column-transformation"></a>Trasformazione Colonna derivata
@@ -64,15 +64,15 @@ ms.locfileid: "59240996"
   
 -   [Proprietà comuni](../../common-properties.md)  
   
--   [proprietà personalizzate della trasformazione](transformation-custom-properties.md)  
+-   [Proprietà personalizzate delle trasformazioni](transformation-custom-properties.md)  
   
  Per ulteriori informazioni sulle procedure per l'impostazione delle proprietà, fare clic su uno degli argomenti seguenti:  
   
--   [Impostazione delle proprietà di un componente del flusso di dati](../set-the-properties-of-a-data-flow-component.md)  
+-   [Impostare le proprietà di un componente del flusso di dati](../set-the-properties-of-a-data-flow-component.md)  
   
 ## <a name="related-tasks"></a>Attività correlate  
   
--   [Derivazione di valori di colonna tramite la trasformazione Colonna derivata](derived-column-transformation.md)  
+-   [Derivare i valori di colonna tramite la trasformazione Colonna derivata](derived-column-transformation.md)  
   
 ## <a name="related-content"></a>Contenuto correlato  
  Articolo tecnico relativo agli [esempi di espressioni SSIS](https://go.microsoft.com/fwlink/?LinkId=220761)nel sito Web social.technet.microsoft.com  

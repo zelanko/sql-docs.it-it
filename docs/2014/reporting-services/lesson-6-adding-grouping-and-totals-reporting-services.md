@@ -12,10 +12,10 @@ author: markingmyname
 ms.author: maghan
 manager: kfile
 ms.openlocfilehash: 945cde51f7529dc31fd7018f1194de600ea1acf5
-ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
+ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59241739"
 ---
 # <a name="lesson-6-adding-grouping-and-totals-reporting-services"></a>Lezione 6: Aggiunta di gruppi e totali (Reporting Services)
@@ -25,7 +25,7 @@ ms.locfileid: "59241739"
   
  **Contenuto dell'argomento:**  
   
--   [Per raggruppare i dati di un report](#bkmk_groupdata)  
+-   [Per raggruppare i dati in un report](#bkmk_groupdata)  
   
 -   [Per aggiungere totali a un report](#bkmk_addtotals)  
   
@@ -33,7 +33,7 @@ ms.locfileid: "59241739"
   
 -   [Per aggiungere un totale complessivo a un report](#bkmk_addgrandtotal)  
   
--   [Per pubblicare il report nel server di report (facoltativo)](#bkmk_publishreport)  
+-   [Per pubblicare il Report nel Server di Report (facoltativo)](#bkmk_publishreport)  
   
 ##  <a name="bkmk_groupdata"></a> Per raggruppare i dati in un report  
   
@@ -129,7 +129,7 @@ ms.locfileid: "59241739"
   
      Se viene visualizzato un messaggio simile al seguente nella finestra di output, la distribuzione è stata completata correttamente.  
   
-    > ------ Compilazione avviata - Progetto: tutorial, Configurazione: Debug ------'Sales Orders.rdl' verrà ignorato. L'elemento è aggiornato. Compilazione completata -- 0 errori, 0 avvisi------ Inizio distribuzione: Progetto: tutorial, Configurazione: Debug---distribuzione in http://\<nome server > / reportserverDeploying report '/ tutorial/Sales Orders'. Distribuzione completata-- 0 errori, 0 avvisi === compilazione: 1 completata o aggiornata, 0 non riuscite, 0 ignorate ==================== Distribuzione: 1 completata, 0 non riuscite, 0 ignorate ==========  
+    > ---Compilazione avviata: Progetto: tutorial, Configurazione: Eseguire il debug---verrà ignorato 'Sales Orders'. L'elemento è aggiornato. Compilazione completata-- 0 errori, 0 avvisi---distribuzione avviata: Progetto: tutorial, Configurazione: Debug---distribuzione in http://\<nome server > / reportserverDeploying report '/ tutorial/Sales Orders'. Distribuzione completata-- 0 errori, 0 avvisi === compilazione: 1 completata o aggiornata, 0 non riuscite, 0 ignorate === distribuzione: 1 completata, 0 non riuscite, 0 ignorate ===  
   
      Se viene visualizzato un messaggio di errore simile al seguente, verificare di disporre delle autorizzazione per il server di report e di aver avviato [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)] con privilegi di amministratore.  
   
@@ -145,6 +145,6 @@ ms.locfileid: "59241739"
  Questo passaggio conclude l'esercitazione relativa alla creazione di un report tabella semplice.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Filtrare, raggruppare e ordinare i dati &#40;Generatore report e SSRS&#41;](report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)  
+ [Filtro, raggruppamento e ordinamento di dati &#40;Generatore report e SSRS&#41;](report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)  
   
   

@@ -10,10 +10,10 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.openlocfilehash: 69b5d9b69536243d371cb45c1c46620f5194657d
-ms.sourcegitcommit: 2de5446fbc57787f18a907dd5deb02a7831ec07d
+ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/02/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58860432"
 ---
 # <a name="get-started-with-sql-server-big-data-clusters"></a>Introduzione ai cluster di SQL Server i big Data
@@ -29,7 +29,7 @@ I cluster di big data richiedono un set di strumenti client specifico. Prima di 
 | Strumento | Descrizione |
 |---|---|
 | **mssqlctl** | Distribuisce e gestisce i cluster di big data. |
-| **Kubectl** | Crea e gestisce il cluster Kubernetes sottostante. |
+| **kubectl** | Crea e gestisce il cluster Kubernetes sottostante. |
 | **Azure Data Studio** | Interfaccia grafica per l'uso di cluster di big data. |
 | **Estensione di SQL Server 2019** | Estensione di Azure Data Studio che abilita le funzionalità di cluster di big data. |
 

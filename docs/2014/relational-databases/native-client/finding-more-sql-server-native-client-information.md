@@ -14,10 +14,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 639796b9abcf95c9f701d3ed88fbb5e71078eb8f
-ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
+ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59241291"
 ---
 # <a name="finding-more-sql-server-native-client-information"></a>Ricerca di ulteriori informazioni su SQL Server Native Client
@@ -26,10 +26,10 @@ ms.locfileid: "59241291"
  [Centro per sviluppatori di soluzioni di accesso ai dati e archiviazione](https://go.microsoft.com/fwlink?linkid=4173)  
  In questo sito sono disponibili articoli tecnici, codice di esempio e altre risorse per [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client e altre tecnologie di accesso ai dati.  
   
- [Blog dell'accesso ai dati](https://go.microsoft.com/fwlink/?LinkId=48617)  
+ [Blog per l'accesso ai dati](https://go.microsoft.com/fwlink/?LinkId=48617)  
  In questo blog vengono fornite informazioni sulle tecnologie di accesso ai dati ed è possibile interagire direttamente con i membri del team di prodotto.  
   
- [Pagina relativa a Windows Data Access Components](https://go.microsoft.com/fwlink/?LinkId=107907)  
+ [Windows Data Access Components](https://go.microsoft.com/fwlink/?LinkId=107907)  
  In questo sito è disponibile la documentazione SDK più recente sui componente Windows DAC (Windows Data Access Components). Windows DAC è la versione dei componenti per l'accesso ai dati, denominati MDAC nelle versioni precedenti, inclusa in Windows Vista e Windows Server 2008.  
   
  Nell'SDK di Windows DAC è inclusa documentazione relativa agli oggetti ADO (ActiveX Data Objects), OLE DB e ODBC (Open Database Connectivity).  

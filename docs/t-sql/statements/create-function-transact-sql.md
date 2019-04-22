@@ -42,10 +42,10 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: b2474bc1f0d0111c4dedd2fa8ce3a9f885503d52
-ms.sourcegitcommit: 3cfedfeba377560d460ca3e42af1e18824988c07
+ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59042450"
 ---
 # <a name="create-function-transact-sql"></a>CREATE FUNCTION (Transact-SQL)
@@ -389,7 +389,7 @@ In un tipico esempio di MyFood.DLL, in cui tutti i tipi sono nello spazio dei no
  EXECUTE AS  
  EXECUTE AS è obbligatorio per funzioni definite dall'utente scalari compilate in modo nativo.  
   
- **\<function_option>::= e \<clr_function_option>::=** 
+ **\<function_option>::= and \<clr_function_option>::=** 
   
  Specifica che la funzione includerà una o più delle opzioni seguenti.  
   
@@ -430,7 +430,7 @@ Clausola EXECUTE AS
 Specifica il contesto di sicurezza nel quale viene eseguita la funzione definita dall'utente. Sarà pertanto possibile controllare l'account utente utilizzato da [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] per convalidare le autorizzazioni per qualsiasi oggetto di database a cui la funzione fa riferimento.  
   
 > [!NOTE]  
-> `EXECUTE AS` non può essere specificato per le funzioni inline con valori di tabella.
+> Non è possibile specificare la clausola `EXECUTE AS` per le funzioni inline con valori di tabella.
   
 Per altre informazioni, vedere [Clausola EXECUTE AS &#40;Transact-SQL&#41;](../../t-sql/statements/execute-as-clause-transact-sql.md).  
 
@@ -456,7 +456,7 @@ Specifica se questa funzione scalare definita dall'utente deve essere impostata 
  La clausola COLLATE consente di modificare le regole di confronto solo per le colonne con tipo di dati **char**, **varchar**, **nchar** e **nvarchar**.  
   
  > [!NOTE]
- > `COLLATE` non può essere specificato per le funzioni CLR con valori di tabella.  
+ > Non è possibile specificare la clausola `COLLATE` per le funzioni CLR con valori di tabella.  
   
  ROWGUIDCOL  
  Indica che la nuova colonna è un identificatore univoco di riga globale. È possibile designare come colonna ROWGUIDCOL una sola colonna di tipo **uniqueidentifier** per ogni tabella. La proprietà ROWGUIDCOL può essere assegnata solo a una colonna **uniqueidentifier**.  
@@ -474,7 +474,7 @@ Specifica se questa funzione scalare definita dall'utente deve essere impostata 
  *increment*  
  Valore intero da aggiungere al valore *seed* per le righe successive della tabella.  
   
- **\< column_constraint >::= e \< table_constraint>::=** 
+ **\< column_constraint >::= and \< table_constraint>::=** 
   
  Definisce il vincolo per una colonna o tabella specificata. Per le funzioni CLR l'unico tipo di vincolo consentito è NULL. I vincoli denominati non sono consentiti.  
   
@@ -567,15 +567,15 @@ Se una funzione definita dall'utente non viene creata tramite la clausola `SCHEM
 
 -   Istruzioni per il controllo di flusso, ad eccezione delle istruzioni `TRY...CATCH`.  
 
--   `DECLARE` - Istruzioni che definiscono le variabili dati locali e i cursori locali.  
+-   Istruzioni `DECLARE` che definiscono le variabili dati locali e i cursori locali.  
 
--   `SELECT` - Istruzioni contenenti gli elenchi di selezione con espressioni che assegnano valori alle variabili locali.  
+-   Istruzioni `SELECT` contenenti gli elenchi di selezione con espressioni che assegnano valori alle variabili locali.  
 
 -   Operazioni di cursore che fanno riferimento a cursori locali dichiarati, aperti, chiusi e deallocati nella funzione. Sono consentite solo istruzioni `FETCH` che assegnano valori alle variabili locali tramite la clausola `INTO`. Non sono consentite istruzioni `FETCH` che restituiscono dati al client.  
 
--   `INSERT`, `UPDATE` e `DELETE` - Istruzioni che modificano le variabili di tabella locali.  
+-   Istruzioni `INSERT`, `UPDATE` e `DELETE` che modificano le variabili di tabella locali.  
 
--   `EXECUTE` - Istruzioni che chiamano stored procedure estese.  
+-   Istruzioni `EXECUTE` che chiamano stored procedure estese.  
 
 Per altre informazioni, vedere [Creare funzioni definite dall'utente &#40;Motore di database&#41;](../../relational-databases/user-defined-functions/create-user-defined-functions-database-engine.md).  
   
@@ -645,11 +645,11 @@ Quando si usa la clausola `ORDER` in funzioni CLR con valori di tabella, attener
   
     -   Query di inserimento in cui la clausola `ORDER` è compatibile con un indice.  
   
-    -   `ORDER BY` - Clausole compatibili con la clausola `ORDER`.  
+    -   Clausole `ORDER BY` compatibili con la clausola `ORDER`.  
   
     -   Aggregazioni, in cui `GROUP BY` è compatibile con la clausola `ORDER`.  
   
-    -   `DISTINCT` - Aggregazioni in cui le colonne distinte sono compatibili con la clausola `ORDER`.  
+    -   Aggregazioni `DISTINCT` in cui le colonne distinte sono compatibili con la clausola `ORDER`.  
   
 La clausola `ORDER` non garantisce risultati ordinati quando viene eseguita una query SELECT, a meno che nella query non venga specificata anche la clausola `ORDER BY`. Vedere [sys.function_order_columns &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-function-order-columns-transact-sql.md) per informazioni su come eseguire una query relativa alle colonne incluse nell'ordinamento per le funzioni con valori di tabella.  
   
@@ -824,7 +824,7 @@ GO
  La definizione delle funzioni create tramite l'opzione `ENCRYPTION` non possono essere visualizzate tramite la vista sys.sql_modules. Vengono tuttavia visualizzate altre informazioni sulle funzioni crittografate.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Creare funzioni definite dall'utente &#40;motore di database&#41;](../../relational-databases/user-defined-functions/create-user-defined-functions-database-engine.md)   
+ [Creare funzioni definite dall'utente &#40;Motore di database&#41;](../../relational-databases/user-defined-functions/create-user-defined-functions-database-engine.md)   
  [ALTER FUNCTION &#40;Transact-SQL&#41;](../../t-sql/statements/alter-function-transact-sql.md)    
  [DROP FUNCTION &#40;Transact-SQL&#41;](../../t-sql/statements/drop-function-transact-sql.md)   
  [OBJECTPROPERTYEX &#40;Transact-SQL&#41;](../../t-sql/functions/objectpropertyex-transact-sql.md)   

@@ -10,10 +10,10 @@ ms.topic: reference
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.openlocfilehash: 47c4d331c2f1848265c1322bda88c358b61cf56a
-ms.sourcegitcommit: 2de5446fbc57787f18a907dd5deb02a7831ec07d
+ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/02/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58860617"
 ---
 # <a name="mssqlctl-storage"></a>archiviazione mssqlctl
@@ -26,7 +26,7 @@ L'articolo seguente fornisce informazioni di riferimento per il **memorizzazione
 
 |||
 |---|---|
-| [montaggio](reference-mssqlctl-storage-mount.md) | Gestire il montaggio di archivi remoti in HDFS. |
+| [mount](reference-mssqlctl-storage-mount.md) | Gestire il montaggio di archivi remoti in HDFS. |
 
 ## <a name="next-steps"></a>Passaggi successivi
 

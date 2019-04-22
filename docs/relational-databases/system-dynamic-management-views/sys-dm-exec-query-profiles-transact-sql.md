@@ -22,10 +22,10 @@ ms.author: sstein
 manager: craigg
 monikerRange: =azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 87488f36a4b4b01181cd973a75d6e5c7f2e233d7
-ms.sourcegitcommit: 2de5446fbc57787f18a907dd5deb02a7831ec07d
+ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/02/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58860722"
 ---
 # <a name="sysdmexecqueryprofiles-transact-sql"></a>sys.dm_exec_query_profiles (Transact-SQL)
@@ -38,42 +38,42 @@ I contatori restituiti sono specifici per ogni operatore per ogni thread. I risu
   
 |Nome colonna|Tipo di dati|Descrizione|  
 |-----------------|---------------|-----------------|  
-|session_id|**SMALLINT**|Identifica la sessione in cui viene eseguita la query. Fa riferimento a dm_exec_sessions.session_id.|  
-|request_id|**INT**|Identifica la richiesta di destinazione. Fa riferimento a dm_exec_sessions.request_id.|  
+|session_id|**smallint**|Identifica la sessione in cui viene eseguita la query. Fa riferimento a dm_exec_sessions.session_id.|  
+|request_id|**int**|Identifica la richiesta di destinazione. Fa riferimento a dm_exec_sessions.request_id.|  
 |sql_handle|**varbinary(64)**|È un token che identifica in modo univoco il batch o una stored procedure che fa parte della query. Fa riferimento a dm_exec_query_stats.sql_handle.|  
 |plan_handle|**varbinary(64)**|È un token che identifica in modo univoco un piano di esecuzione di query per un batch che ha eseguito e il piano risiede nella cache dei piani o attualmente in esecuzione. Fa riferimento a dm_exec_query_stats. plan_handle.|  
 |physical_operator_name|**nvarchar(256)**|Nome dell'operatore fisico.|  
-|node_id|**INT**|Identifica un nodo operatore nell'albero della query.|  
-|thread_id|**INT**|Distingue i thread (per una query parallela) che appartengono allo stesso nodo operatore della query.|  
+|node_id|**int**|Identifica un nodo operatore nell'albero della query.|  
+|thread_id|**int**|Distingue i thread (per una query parallela) che appartengono allo stesso nodo operatore della query.|  
 |task_address|**varbinary(8)**|Identifica l'attività SQLOS utilizzata da questo thread. Fa riferimento a dm_os_tasks.task_address.|  
-|row_count|**BIGINT**|Numero di righe restituite finora dall'operatore.|  
-|rewind_count|**BIGINT**|Numero di ripristini finora.|  
-|rebind_count|**BIGINT**|Numero di riassociazioni finora.|  
-|end_of_scan_count|**BIGINT**|Numero di analisi terminate finora.|  
-|estimate_row_count|**BIGINT**|Numero stimato di righe. Può essere utile per confrontare il valore estimated_row_count con il valore row_count effettivo.|  
-|first_active_time|**BIGINT**|Ora, in millisecondi, in cui l'operatore è stato chiamato la prima volta.|  
-|last_active_time|**BIGINT**|Ora, in millisecondi, in cui l'operatore è stato chiamato l'ultima volta.|  
-|open_time|**BIGINT**|Timestamp apertura in millisecondi.|  
-|first_row_time|**BIGINT**|Timestamp in cui è stata aperta la prima riga in millisecondi.|  
-|last_row_time|**BIGINT**|Timestamp in cui è stata aperta l'ultima riga in millisecondi.|  
-|close_time|**BIGINT**|Timestamp chiusura in millisecondi.|  
-|elapsed_time_ms|**BIGINT**|Tempo totale trascorso, in millisecondi, usato finora dalle operazioni del nodo di destinazione.|  
-|cpu_time_ms|**BIGINT**|Totale CPU (in millisecondi) utilizzo finora dalle operazioni del nodo di destinazione.|  
-|database_id|**SMALLINT**|ID del database contenente l'oggetto in cui vengono eseguite le letture e le scritture.|  
-|object_id|**INT**|Identificatore dell'oggetto in cui vengono eseguite le letture e le scritture. Fa riferimento a sys.objects.object_id.|  
-|index_id|**INT**|Indice in cui viene aperto il set di righe.|  
-|scan_count|**BIGINT**|Numero di analisi tabella/indice.|  
-|logical_read_count|**BIGINT**|Numero di letture logiche.|  
-|physical_read_count|**BIGINT**|Numero di letture fisiche.|  
-|read_ahead_count|**BIGINT**|Numero di letture anticipate.|  
-|write_page_count|**BIGINT**|Numero di scritture di pagina a causa dello spill.|  
-|lob_logical_read_count|**BIGINT**|Numero di letture logiche LOB.|  
-|lob_physical_read_count|**BIGINT**|Numero di letture fisiche LOB.|  
-|lob_read_ahead_count|**BIGINT**|Numero di letture anticipate LOB.|  
-|segment_read_count|**INT**|Numero di letture anticipate di segmenti.|  
-|segment_skip_count|**INT**|Numero di segmenti ignorati finora.| 
-|actual_read_row_count|**BIGINT**|Numero di righe lette da un operatore, prima è stato applicato il predicato residuo.| 
-|estimated_read_row_count|**BIGINT**|**Si applica a:** A partire da [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] SP1. <br/>Numero stimato di righe da leggere da un operatore prima che è stato applicato il predicato residuo.|  
+|row_count|**bigint**|Numero di righe restituite finora dall'operatore.|  
+|rewind_count|**bigint**|Numero di ripristini finora.|  
+|rebind_count|**bigint**|Numero di riassociazioni finora.|  
+|end_of_scan_count|**bigint**|Numero di analisi terminate finora.|  
+|estimate_row_count|**bigint**|Numero stimato di righe. Può essere utile per confrontare il valore estimated_row_count con il valore row_count effettivo.|  
+|first_active_time|**bigint**|Ora, in millisecondi, in cui l'operatore è stato chiamato la prima volta.|  
+|last_active_time|**bigint**|Ora, in millisecondi, in cui l'operatore è stato chiamato l'ultima volta.|  
+|open_time|**bigint**|Timestamp apertura in millisecondi.|  
+|first_row_time|**bigint**|Timestamp in cui è stata aperta la prima riga in millisecondi.|  
+|last_row_time|**bigint**|Timestamp in cui è stata aperta l'ultima riga in millisecondi.|  
+|close_time|**bigint**|Timestamp chiusura in millisecondi.|  
+|elapsed_time_ms|**bigint**|Tempo totale trascorso, in millisecondi, usato finora dalle operazioni del nodo di destinazione.|  
+|cpu_time_ms|**bigint**|Totale CPU (in millisecondi) utilizzo finora dalle operazioni del nodo di destinazione.|  
+|database_id|**smallint**|ID del database contenente l'oggetto in cui vengono eseguite le letture e le scritture.|  
+|object_id|**int**|Identificatore dell'oggetto in cui vengono eseguite le letture e le scritture. Fa riferimento a sys.objects.object_id.|  
+|index_id|**int**|Indice in cui viene aperto il set di righe.|  
+|scan_count|**bigint**|Numero di analisi tabella/indice.|  
+|logical_read_count|**bigint**|Numero di letture logiche.|  
+|physical_read_count|**bigint**|Numero di letture fisiche.|  
+|read_ahead_count|**bigint**|Numero di letture anticipate.|  
+|write_page_count|**bigint**|Numero di scritture di pagina a causa dello spill.|  
+|lob_logical_read_count|**bigint**|Numero di letture logiche LOB.|  
+|lob_physical_read_count|**bigint**|Numero di letture fisiche LOB.|  
+|lob_read_ahead_count|**bigint**|Numero di letture anticipate LOB.|  
+|segment_read_count|**int**|Numero di letture anticipate di segmenti.|  
+|segment_skip_count|**int**|Numero di segmenti ignorati finora.| 
+|actual_read_row_count|**bigint**|Numero di righe lette da un operatore, prima è stato applicato il predicato residuo.| 
+|estimated_read_row_count|**bigint**|**Si applica a:** A partire da [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] SP1. <br/>Numero stimato di righe da leggere da un operatore prima che è stato applicato il predicato residuo.|  
   
 ## <a name="general-remarks"></a>Osservazioni generali  
  Se il nodo del piano di query non dispone di tutti i/o, tutti i contatori relativi ai / O vengono impostati su NULL.  
@@ -109,7 +109,7 @@ GO
 --Next, run your query in this session, or in any other session if query profiling has been enabled globally 
 ```  
   
- Passaggio 2: accedere a una seconda sessione, diversa dalla sessione in cui viene eseguita la query.  
+ Passaggio 2: Account di accesso a una seconda sessione diversa dalla sessione in cui viene eseguita la query.  
   
  L'istruzione seguente riepiloga lo stato di avanzamento della query attualmente in esecuzione nella sessione 54. A tale scopo, viene calcolato il numero totale di righe di output restituite da tutti i thread per ogni nodo e confrontato con il numero stimato di righe di output per tale nodo.  
   

@@ -16,10 +16,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 15ef45a4f3bfb0b74de2472a5b2f0d8e483edab1
-ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
+ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59242259"
 ---
 # <a name="excel-source"></a>Origine Excel
@@ -80,7 +80,7 @@ ms.locfileid: "59242259"
 ## <a name="excel-source-configuration"></a>Configurazione dell'origine Excel  
  È possibile impostare le proprietà tramite Progettazione [!INCLUDE[ssIS](../../includes/ssis-md.md)] o a livello di codice.  
   
- Per altre informazioni sulle proprietà che è possibile impostare nella finestra di dialogo **Editor origine Excel**, fare clic su uno degli argomenti seguenti:  
+ Per altre informazioni sulle proprietà che è possibile impostare nella finestra di dialogo **Editor origine Excel** , fare clic su uno degli argomenti seguenti:  
   
 -   [Editor origine Excel &#40;pagina Gestione connessione&#41;](../excel-source-editor-connection-manager-page.md)  
   
@@ -98,15 +98,15 @@ ms.locfileid: "59242259"
   
 ## <a name="related-tasks"></a>Attività correlate  
 
--   [Importare i dati da Excel o esportarli in Excel con SQL Server Integration Services (SSIS)](../load-data-to-from-excel-with-ssis.md)
+-   [Caricare dati da o in Excel con SQL Server Integration Services (SSIS)](../load-data-to-from-excel-with-ssis.md)
 
--   [Mapping dei parametri di query a variabili in un componente del flusso di dati](map-query-parameters-to-variables-in-a-data-flow-component.md)  
+-   [Mapping dei parametri di query a variabili in un componente flusso di dati](map-query-parameters-to-variables-in-a-data-flow-component.md)  
   
 -   [Impostazione delle proprietà di un componente del flusso di dati](set-the-properties-of-a-data-flow-component.md)  
   
 -   [Ordinamento dei dati per le trasformazioni Unione e Merge Join](transformations/sort-data-for-the-merge-and-merge-join-transformations.md)  
   
--   [Esecuzione di un ciclo su file e tabelle di Excel utilizzando un contenitore Ciclo Foreach](../control-flow/foreach-loop-container.md)  
+-   [Esecuzione di un ciclo su file e tabelle di Excel usando un contenitore Ciclo Foreach](../control-flow/foreach-loop-container.md)  
   
 ## <a name="related-content"></a>Contenuto correlato  
   

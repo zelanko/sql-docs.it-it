@@ -11,10 +11,10 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.openlocfilehash: 10fcc71c69ecc138f78cd19c4661f917067ead7e
-ms.sourcegitcommit: 2de5446fbc57787f18a907dd5deb02a7831ec07d
+ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/02/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58860412"
 ---
 # <a name="how-to-use-vs-code-to-deploy-applications-to-sql-server-big-data-clusters"></a>Come usare Visual Studio Code per distribuire applicazioni in cluster di SQL Server i big Data
@@ -91,9 +91,9 @@ Il modello è un semplice `Hello World` app disposti come segue:
 
 - **spec.yaml**
    - Indica il cluster come distribuire l'app
-- **esecuzione spec.yaml**
+- **run-spec.yaml**
    - Indica il cluster come chiamare l'app
-- **Handler.py**
+- **handler.py**
    - Si tratta di file del codice sorgente come specificato dalle `src` in `spec.yaml`
    - Ha una funzione denominata `handler` che viene considerato il `entrypoint` dell'app come illustrato nel `spec.yaml`. Accetta un input di stringa denominato `msg` e restituisce un output di tipo stringa denominato `out`. Tali opzioni vengono specificate `inputs` e `outputs` del `spec.yaml`.
 

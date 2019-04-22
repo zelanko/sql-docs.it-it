@@ -17,10 +17,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 59b623076e86f3bacf5ae8c6e24b48774e33f670
-ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
+ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59241249"
 ---
 # <a name="execute-package-task"></a>Attività Esegui pacchetto
@@ -75,7 +75,7 @@ ms.locfileid: "59241249"
   
  È possibile utilizzare i metodi seguenti per passare valori a un pacchetto figlio:  
   
--   **SSIS**  
+-   **Configurazioni di pacchetto**  
   
      [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] offre un tipo di configurazione, cioè Variabile pacchetto padre, per il passaggio dei valori dal pacchetto padre a quello figlio. Tale configurazione è compilata in base al pacchetto figlio e utilizza una variabile del pacchetto padre. Viene quindi eseguito il mapping della configurazione a una variabile nel pacchetto figlio o alla proprietà di un oggetto nel pacchetto figlio. La variabile può anche essere utilizzata negli script eseguiti dall'attività Script o dal componente script.  
   

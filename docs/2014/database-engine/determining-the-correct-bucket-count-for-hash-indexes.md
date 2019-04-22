@@ -11,10 +11,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: b1b79c0908f8639df869d01a8ff862afc5be77cb
-ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
+ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59241959"
 ---
 # <a name="determining-the-correct-bucket-count-for-hash-indexes"></a>Determinazione del numero di bucket corretto per gli indici hash
@@ -137,9 +137,9 @@ GO
   
  Si considerino i tre indici hash in questa tabella:  
   
--   IX_Status: il 50 percento dei bucket è vuoto, una condizione positiva. Tuttavia, la lunghezza media della catena è molto elevata (65.536). Ciò indica un numero alto di valori duplicati. Pertanto, l'utilizzo di un indice hash non cluster non è appropriato in questo caso. È più opportuno utilizzare in alternativa un indice non cluster.  
+-   IX_Status: 50 percento dei bucket è vuoto, condizione positiva. Tuttavia, la lunghezza media della catena è molto elevata (65.536). Ciò indica un numero alto di valori duplicati. Pertanto, l'utilizzo di un indice hash non cluster non è appropriato in questo caso. È più opportuno utilizzare in alternativa un indice non cluster.  
   
--   IX_OrderSequence: lo 0 percento dei bucket è vuoto, un valore troppo basso. Inoltre, la lunghezza media della catena è pari a 8. I valori di questo indice sono univoci e ciò implica che, in media, viene eseguito il mapping di 8 valori per ogni bucket. Il numero di bucket deve essere aumentato. Poiché la chiave di indice ha 262.144 valori univoci, il numero di bucket deve essere pari ad almeno 262.144. Se si prevede una crescita futura, il numero deve essere maggiore.  
+-   IX_OrderSequence: 0 percento dei bucket è vuoto, un valore troppo basso. Inoltre, la lunghezza media della catena è pari a 8. I valori di questo indice sono univoci e ciò implica che, in media, viene eseguito il mapping di 8 valori per ogni bucket. Il numero di bucket deve essere aumentato. Poiché la chiave di indice ha 262.144 valori univoci, il numero di bucket deve essere pari ad almeno 262.144. Se si prevede una crescita futura, il numero deve essere maggiore.  
   
 -   Indice di chiave primaria (PK): 36% dei bucket è vuoto, condizione positiva. Inoltre, la lunghezza media della catena è pari a 1, un'altra condizione positiva. Non è necessario apportare alcuna modifica.  
   

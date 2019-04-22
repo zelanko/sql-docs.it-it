@@ -10,10 +10,10 @@ ms.topic: reference
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.openlocfilehash: 57b77e83994f8471e677ba2ba367acc48a66cddd
-ms.sourcegitcommit: 2de5446fbc57787f18a907dd5deb02a7831ec07d
+ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/02/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58860022"
 ---
 # <a name="mssqlctl-cluster-config"></a>configurazione cluster mssqlctl
@@ -26,7 +26,7 @@ L'articolo seguente fornisce informazioni di riferimento per la **configurazione
 
 |||
 |---|---|
-| [Ottieni](#get) | Get cluster. |
+| [get](#get) | Get cluster. |
 
 ## <a id="get"></a> configurazione di cluster mssqlctl ottenere
 

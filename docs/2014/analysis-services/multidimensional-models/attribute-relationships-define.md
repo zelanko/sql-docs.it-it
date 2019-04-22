@@ -15,10 +15,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: ecc6eefcf6fea5ee815190e1d4204a00cca60f0a
-ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
+ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59241239"
 ---
 # <a name="define-attribute-relationships"></a>Definire relazioni tra attributi
@@ -48,6 +48,6 @@ ms.locfileid: "59241239"
 >  Definire erroneamente relazioni tra attributi può produrre risultati della query non validi.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Relazioni tra attributi](../multidimensional-models-olap-logical-dimension-objects/attribute-relationships.md)  
+ [Relazione tra attributi](../multidimensional-models-olap-logical-dimension-objects/attribute-relationships.md)  
   
   

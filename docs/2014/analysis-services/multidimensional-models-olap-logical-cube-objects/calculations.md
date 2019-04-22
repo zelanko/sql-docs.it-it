@@ -19,10 +19,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: ce999e5a301fc6c6a9fd50f241e6863e0ad2cca9
-ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
+ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59241779"
 ---
 # <a name="calculations"></a>Calcoli
@@ -33,7 +33,7 @@ ms.locfileid: "59241779"
   
  È possibile definire membri calcolati per qualsiasi dimensione, inclusa la dimensione delle misure. I membri calcolati creati per la dimensione Measures vengono denominati "misure calcolate".  
   
- Sebbene i membri calcolati siano generalmente basati su dati già esistenti nel cubo, è possibile creare espressioni complesse combinando questi dati con operatori aritmetici, numeri e funzioni. È possibile utilizzare anche funzioni MDX, ad esempio LookupCube per accedere in altri cubi nel database [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] include librerie di funzione Visual Studio standardizzate ed è possibile usare le stored procedure per recuperare i dati da origini diverse dal corrente [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] database. Per altre informazioni sulle stored procedure, vedere [definizione di Stored procedure](../multidimensional-models-extending-olap-stored-procedures/defining-stored-procedures.md).  
+ Sebbene i membri calcolati siano generalmente basati su dati già esistenti nel cubo, è possibile creare espressioni complesse combinando questi dati con operatori aritmetici, numeri e funzioni. È possibile utilizzare anche funzioni MDX, ad esempio LookupCube per accedere in altri cubi nel database [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] include librerie di funzione Visual Studio standardizzate ed è possibile utilizzare stored procedure per recuperare dati da origini diverse dal database [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] corrente. Per altre informazioni sulle stored procedure, vedere [definizione di Stored procedure](../multidimensional-models-extending-olap-stored-procedures/defining-stored-procedures.md).  
   
  Si supponga, ad esempio, che i dirigenti di una società di spedizioni desiderino determinare i tipi di merci più vantaggiosi da trasportare in base al profitto per unità di volume. A tale scopo, utilizzano un cubo Shipments contenente le dimensioni Cargo, Fleet e Time e le misure Price_to_Ship, Cost_to_Ship e Volume_in_Cubic_Meters. Il cubo, tuttavia, non contiene una misura per la redditività. In tal caso, è possibile creare nel cubo un membro calcolato come misura denominata Profit_per_Cubic_Meter combinando le misure esistenti nell'espressione seguente:  
   

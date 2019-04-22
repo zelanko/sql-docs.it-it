@@ -26,22 +26,22 @@ author: markingmyname
 ms.author: maghan
 manager: kfile
 ms.openlocfilehash: a6c183fc402571ab359071160d515939257f773b
-ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
+ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59241629"
 ---
 # <a name="reporting-services-report-server"></a>Reporting Services Report Server
   In questo argomento viene fornita una panoramica del server di report di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] , il componente centrale di un'installazione [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] . È costituito da una coppia di componenti di elaborazione oltre a una raccolta di estensioni speciali che gestiscono le operazioni di autenticazione, elaborazione dati, rendering e recapito. Un server di report di [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] viene eseguito in una delle due modalità di distribuzione: nativa o SharePoint. Vedere la sezione [Confronto tra le funzionalità delle modalità SharePoint e nativa](#bkmk_featuresupport) per un confronto delle funzionalità.  
   
- **Installazione:** per informazioni sull'installazione di [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)], vedere quanto riportato di seguito:  
+ **Installazione:** Per informazioni su [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] installazione, vedere gli argomenti seguenti:  
   
 -   [Installare un server di report in modalità nativa di Reporting Services](install-windows/install-reporting-services-native-mode-report-server.md)  
   
 -   [Installare le funzionalità SQL Server BI con SharePoint &#40;Reporting Services e PowerPivot&#41;](../../2014/sql-server/install/install-sql-server-bi-features-sharepoint-powerpivot-reporting-services.md)  
   
- **Windows Azure**: Per informazioni sull'utilizzo di [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] con Macchine Virtuali di Microsoft Azure, vedere quanto segue:  
+ **Windows Azure**: Per informazioni sull'uso [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] con macchine virtuali di Azure, vedere quanto segue:  
   
 -   [SQL Server Business Intelligence in Macchine virtuali di Azure](https://msdn.microsoft.com//library/windowsazure/jj992719.aspx).  
   
@@ -49,21 +49,21 @@ ms.locfileid: "59241629"
   
 ##  <a name="bkmk_top"></a> Contenuto dell'argomento  
   
--   [Panoramica delle modalità del server di report](#bkmk_overview)  
+-   [Panoramica delle modalità del Server di Report](#bkmk_overview)  
   
--   [Confronto tra le funzionalità delle modalità SharePoint e nativa](#bkmk_featuresupport)  
+-   [Confronto tra le funzionalità della modalità SharePoint e nativa](#bkmk_featuresupport)  
   
 -   [Modalità nativa](#bkmk_nativemode)  
   
--   [Modalità nativa con web part di SharePoint](#bkmk_nativewithwebparts)  
+-   [Modalità nativa con Web part di SharePoint](#bkmk_nativewithwebparts)  
   
 -   [Modalità SharePoint](#bkmk_sharepointmode)  
   
--   [Elaborazione di report e processo di pianificazione e recapito](#bkmk_reportprocessor)  
+-   [Elaborazione di report e pianificazione e recapito](#bkmk_reportprocessor)  
   
--   [database del server di report](#bkmk_reportdatabase)  
+-   [Database del server di report](#bkmk_reportdatabase)  
   
--   [Estensioni per le operazioni di autenticazione, rendering, elaborazione dati e recapito](#bkmk_authentication)  
+-   [L'autenticazione, Rendering, dati ed estensioni per il recapito](#bkmk_authentication)  
   
 -   [Attività correlate](#bkmk_relatedtasks)  
   
@@ -91,16 +91,16 @@ ms.locfileid: "59241629"
 |**Gestione configurazione**|Yes|**\*\* Importante \*\*** Non è possibile usare Gestione configurazione per gestire un server di report in modalità SharePoint. Usare invece Amministrazione centrale SharePoint.|  
 |**Gestione report**|Yes|Non è possibile usare Gestione report per gestire la modalità SharePoint. Usare le pagine dell'applicazione SharePoint. Per altre informazioni, vedere [Servizio SharePoint di Reporting Services e applicazioni di servizio](../../2014/reporting-services/reporting-services-sharepoint-service-and-service-applications.md).|  
 |**Report collegati**|Yes|No.|  
-|**Report personali**|Yes|no|  
-|**Sottoscrizioni personali** e metodi di invio in batch|Yes|no|  
+|**Report personali**|Yes|No|  
+|**Sottoscrizioni personali** e metodi di invio in batch|Yes|No|  
 |**Avvisi dati**|No|Yes|  
-|**Power View**|no|Yes<br /><br /> È necessario disporre di Silverlight nel browser del client. Per altre informazioni sui requisiti del browser, vedere [Planning for Reporting Services e supporto Browser per Power View &#40;Reporting Services 2014&#41;](../../2014/reporting-services/browser-support-for-reporting-services-and-power-view.md)|  
+|**Power View**|No|Yes<br /><br /> È necessario disporre di Silverlight nel browser del client. Per altre informazioni sui requisiti del browser, vedere [Planning for Reporting Services e supporto Browser per Power View &#40;Reporting Services 2014&#41;](../../2014/reporting-services/browser-support-for-reporting-services-and-power-view.md)|  
 |**Report RDL**|Yes|Yes<br /><br /> I report RDL possono essere eseguiti nei server di report di [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] in modalità nativa o SharePoint.|  
 |**Report RDLX**|No|Yes<br /><br /> I report RDLX di Power View possono essere eseguiti solo nei server di report di [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] in modalità SharePoint.|  
 |**Credenziali del token utente di SharePoint per l'estensione dell'elenco SharePoint**|No|Yes|  
-|**Aree AAM per distribuzioni che si interfacciano a Internet**|no|Yes|  
+|**Aree AAM per distribuzioni che si interfacciano a Internet**|No|Yes|  
 |**Backup e recupero di SharePoint**|No|Yes|  
-|**Supporto del log ULS**|No|Yes|  
+|**Supporto del log ULS**|no|Yes|  
   
 ##  <a name="bkmk_nativemode"></a> Modalità nativa  
  In modalità nativa un server di report è un server applicazioni autonomo che fornisce tutte le funzionalità necessarie per la visualizzazione, la gestione, l'elaborazione e il recapito di report e modelli di report. Questa è la modalità predefinita per le istanze del server di report. È possibile installare un server di report in modalità nativa configurato durante l'installazione oppure configurarlo per le operazioni in modalità nativa al termine dell'installazione.  

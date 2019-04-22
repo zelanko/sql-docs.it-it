@@ -10,10 +10,10 @@ ms.topic: reference
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.openlocfilehash: b418f1ded8d9911143b431ae9793c467c4e26eb4
-ms.sourcegitcommit: 2de5446fbc57787f18a907dd5deb02a7831ec07d
+ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/02/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58860652"
 ---
 # <a name="mssqlctl-app"></a>app mssqlctl
@@ -28,12 +28,12 @@ L'articolo seguente fornisce informazioni di riferimento per la **app** comandi 
 |---|---|
 | [create](#create) | Creare l'applicazione. |
 | [delete](#delete) | Eliminare l'applicazione. |
-| [viene descritto](#describe) | Descrivere l'applicazione. |
-| [Init](#init) | Kickstart nuova struttura dell'applicazione. |
-| [elenco](#list) | Elencare le applicazioni. |
+| [describe](#describe) | Descrivere l'applicazione. |
+| [init](#init) | Kickstart nuova struttura dell'applicazione. |
+| [list](#list) | Elencare le applicazioni. |
 | [run](#run) | Esegui l'applicazione. |
 | [update](#update) | Aggiornare l'applicazione. |
-| [modello](reference-mssqlctl-app-template.md) | Comandi di modello. |
+| [template](reference-mssqlctl-app-template.md) | Comandi di modello. |
 
 ## <a id="create"></a> creare app mssqlctl
 
@@ -58,8 +58,8 @@ mssqlctl app create
 
 | Parametri | Descrizione |
 |---|---|
-| **-Asset - a** | Elenco degli asset di file dell'applicazione aggiuntivi da includere. |
-| **-code - c** | Percorso file di codice R o Python. |
+| **--assets -a** | Elenco degli asset di file dell'applicazione aggiuntivi da includere. |
+| **--code -c** | Percorso file di codice R o Python. |
 | **--description -d** | Descrizione dell'applicazione. |
 | **--entrypoint** |  |
 | **--inputs** | Schema dei parametri di input. |
@@ -67,7 +67,7 @@ mssqlctl app create
 | **--outputs** | Schema dei parametri output. |
 | **-r - runtime** | Fase di esecuzione dell'applicazione.  Valori consentiti: Mleap, Python, R, SSIS. |
 | **-spec -s** | Percorso di una directory con un file YAML delle specifiche che descrive l'applicazione. |
-| **-versione - v** | Versione dell'applicazione. |
+| **--version -v** | Versione dell'applicazione. |
 | **-Sì -y** | Non chiedere conferma quando si crea un'applicazione dal file spec.yaml del CWD. |
 
 ### <a name="examples"></a>Esempi
@@ -111,7 +111,7 @@ mssqlctl app delete
 | Parametri | Descrizione |
 |---|---|
 | **-Nome - n** | Nome applicazione |
-| **-versione - v** | Versione dell'applicazione. |
+| **--version -v** | Versione dell'applicazione. |
 
 ### <a name="examples"></a>Esempi
 
@@ -138,7 +138,7 @@ mssqlctl app describe
 |---|---|
 | **-Nome - n** | Nome applicazione |
 | **-spec -s** | Percorso di una directory con un file YAML delle specifiche che descrive l'applicazione. |
-| **-versione - v** | Versione dell'applicazione. |
+| **--version -v** | Versione dell'applicazione. |
 
 ### <a name="examples"></a>Esempi
 
@@ -166,12 +166,12 @@ mssqlctl app init
 
 | Parametri | Descrizione |
 |---|---|
-| **-destinazione -d** | Posizione in cui posizionare lo scheletro dell'applicazione. Valore predefinito: directory di lavoro corrente. |
+| **--destination -d** | Posizione in cui posizionare lo scheletro dell'applicazione. Valore predefinito: directory di lavoro corrente. |
 | **-Nome - n** | Nome applicazione |
 | **-spec -s** | Generare solo un spec.yaml dell'applicazione. |
-| **-modelli -t** | Nome del modello. Per un elenco completo di disattivare i nomi dei modelli supportati eseguire `mssqlctl app template list`. |
+| **--template -t** | Nome del modello. Per un elenco completo di disattivare i nomi dei modelli supportati eseguire `mssqlctl app template list`. |
 | **-url -u** | Specificare un percorso del repository di modelli diversi. Valore predefinito: https://github.com/Microsoft/sql-server-samples.git. |
-| **-versione - v** | Versione dell'applicazione. |
+| **--version -v** | Versione dell'applicazione. |
 
 ### <a name="examples"></a>Esempi
 
@@ -214,7 +214,7 @@ mssqlctl app list
 | Parametri | Descrizione |
 |---|---|
 | **-Nome - n** | Nome applicazione |
-| **-versione - v** | Versione dell'applicazione. |
+| **--version -v** | Versione dell'applicazione. |
 
 ### <a name="examples"></a>Esempi
 
@@ -252,7 +252,7 @@ mssqlctl app run
 | Parametri | Descrizione |
 |---|---|
 | **-Nome - n** | Nome applicazione |
-| **-versione - v** | Versione dell'applicazione. |
+| **--version -v** | Versione dell'applicazione. |
 | **--inputs** | I parametri in un file CSV di input applicazione `name=value` formato. |
 
 ### <a name="examples"></a>Esempi

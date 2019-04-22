@@ -12,10 +12,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 04c366bc668fe09d1ebf57d169587ec11476f707
-ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
+ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59241939"
 ---
 # <a name="powerpivot-data-refresh-with-sharepoint-2013"></a>Aggiornamento dati PowerPivot con SharePoint 2013
@@ -27,11 +27,11 @@ ms.locfileid: "59241939"
   
  **Contenuto dell'argomento:**  
   
--   [Aggiornamento dati interattivo](#bkmk_interactive_refresh)  
+-   [Interactive Data Refresh](#bkmk_interactive_refresh)  
   
 -   [Autenticazione di Windows con connessioni dati della cartella di lavoro e aggiornamento dati interattivo](#bkmk_windows_auth_interactive_data_refresh)  
   
--   [aggiornamento dati pianificato](#bkmk_scheduled_refresh)  
+-   [Scheduled Data Refresh](#bkmk_scheduled_refresh)  
   
 -   [Architettura dell'aggiornamento dati pianificato in SharePoint 2013](#bkmk_refresh_architecture)  
   
@@ -72,7 +72,7 @@ ms.locfileid: "59241939"
   
 -   L'aggiornamento dati interattivo viene eseguito solo per i dati nella sessione utente corrente. I dati non vengono salvati di nuovo automaticamente nell'elemento della cartella di lavoro nel database del contenuto di SharePoint.  
   
--   **Credenziali:** Per l'aggiornamento dati interattivo è possibile utilizzare l'identità dell'utente attualmente connesso come credenziali o credenziali archiviate per connettersi all'origine dati. Le credenziali utilizzate dipendono dalle impostazioni di autenticazione di Excel Services definite per la connessione della cartella di lavoro all'origine dati esterna.  
+-   **Credenziali:** L'aggiornamento dati interattivo è possibile usare l'identità dell'utente attualmente connesso come credenziali o credenziali archiviate per connettersi all'origine dati. Le credenziali utilizzate dipendono dalle impostazioni di autenticazione di Excel Services definite per la connessione della cartella di lavoro all'origine dati esterna.  
   
 -   **Cartelle di lavoro supportate:**  Cartelle di lavoro create in Excel 2013.  
   
@@ -86,7 +86,7 @@ ms.locfileid: "59241939"
   
 3.  Tramite Excel Services il database PowerPivot viene caricato, elaborato e successivamente sottoposto a query per aggiornare la cache della cartella di lavoro di Excel.  
   
-4.  **Nota:** la cartella di lavoro aggiornata non viene salvata di nuovo automaticamente nella raccolta documenti.  
+4.  **Nota:** La cartella di lavoro aggiornata non viene salvata automaticamente torna alla raccolta documenti.  
   
  ![aggiornamento dati interattivo](../media/as-interactive-datarefresh-sharepoint2013.gif "aggiornamento dati interattivo")  
   
@@ -95,21 +95,21 @@ ms.locfileid: "59241939"
   
  Esperienza utente tipica: Quando un cliente seleziona "Aggiorna tutte le connessioni" in una cartella di lavoro di Excel 2013 contenente un modello PowerPivot, viene visualizzato un messaggio di errore simile al seguente:  
   
--   **Aggiornamento dei dati esterni non riuscito:** C'è stato un errore durante l'uso del modello di dati nella cartella di lavoro. Riprovare. Non è possibile aggiornare i dati per una o più connessioni dati nella cartella di lavoro.  
+-   **Aggiornamento dei dati esterni non riuscito:** Si è verificato un errore mentre si utilizza il modello di dati nella cartella di lavoro. Riprovare. Non è possibile aggiornare i dati per una o più connessioni dati nella cartella di lavoro.  
   
  A seconda del provider di dati utilizzato, è possibile che vengano visualizzati messaggi simili ai seguenti nel log ULS.  
   
  **Con SQL Native Client:**  
   
--   Non è possibile creare una connessione esterna o eseguire una query. Messaggio provider: L'oggetto out-of-line 'DataSource', che fa riferimento all'ID '20102481-39c8-4d21-bf63-68f583ad22bb', è stato specificato, ma non è stato usato.  Errore OLE DB o ODBC: Si è verificato un errore specifico dell'istanza o relativo alla rete durante il tentativo di stabilire una connessione a SQL Server. Server non trovato o non accessibile. Verificare che il nome dell'istanza sia corretto e che il server sia configurato in modo da consentire connessioni remote. Per altre informazioni, vedere la documentazione online di SQL Server.; 08001; Provider SSL: Il pacchetto di sicurezza richiesto non esiste; 08001; Il client non è in grado di effettuare la connessione; 08001; Crittografia non supportata dal client; 08001.  , NomeConnessione: ThisWorkbookDataModel, cartella di lavoro: book1.xlsx.  
+-   Non è possibile creare una connessione esterna o eseguire una query. Messaggio provider: Oggetto of line "DataSource", che fa riferimento all'ID ' 20102481-39 c 21 8-4 d-bf63-68f583ad22bb', è stato specificato ma non è stato utilizzato.  Errore OLE DB o ODBC: Si è verificato un errore relativo alla rete o specifico dell'istanza mentre veniva stabilita una connessione a SQL Server. Server non trovato o non accessibile. Verificare che il nome dell'istanza sia corretto e che il server sia configurato in modo da consentire connessioni remote. Per altre informazioni, vedere la documentazione Online di SQL Server.; 08001; Provider SSL: Il pacchetto di sicurezza richiesto non esiste; 08001; Impossibile stabilire la connessione; client 08001; Crittografia non supportata nel client.; 08001.  , ConnectionName: ThisWorkbookDataModel, cartella di lavoro: book1.xlsx.  
   
  **Con il provider Microsoft OLE DB per SQL Server:**  
   
--   Non è possibile creare una connessione esterna o eseguire una query. Messaggio provider: l'oggetto out-of-line "DataSource", che fa riferimento all'ID "6e711bfa-b62f-4879-a177-c5dd61d9c242", è stato specificato ma non è stato usato. Errore OLE DB o ODBC, , NomeConnessione: ModelloDatiCartellaDiLavoro, cartella di lavoro: Provider OLEDB.xlsx.  
+-   Non è possibile creare una connessione esterna o eseguire una query. Messaggio provider: Oggetto of line "DataSource", che fa riferimento all'ID "6e711bfa-b62f-4879-a177-c5dd61d9c242", è stato specificato ma non è stato utilizzato. Errore OLE DB o ODBC, , ConnectionName: ThisWorkbookDataModel, cartella di lavoro: Provider OLEDB. xlsx.  
   
  **Con il provider di dati .NET Framework per SQL Server:**  
   
--   Non è possibile creare una connessione esterna o eseguire una query. Messaggio provider: L'oggetto out-of-line 'DataSource', che fa riferimento all'ID 'f5fb916c-3eac-4d07-a542-531524c0d44a', è stato specificato, ma non è stato usato.  Errori nel motore relazionale di alto livello. È stata generata la seguente eccezione durante l'uso dell'interfaccia IDbConnection gestita: Non è stato possibile caricare il file o l'assembly "System.Transactions, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" o una delle relative dipendenze. Non è stato fornito il livello richiesto di rappresentazione di client oppure il livello di rappresentazione fornito non è valido. (Eccezione da HRESULT: 0x80070542).  , NomeConnessione: ModelloDatiCartellaDiLavoro, cartella di lavoro: Provider NET.xlsx.  
+-   Non è possibile creare una connessione esterna o eseguire una query. Messaggio provider: Line "DataSource", che fa riferimento a '07 f5fb916c-3eac - 4D-a542-531524c0d44a', ID di oggetto è stato specificato ma non è stato utilizzato.  Errori nel motore relazionale di alto livello. Si è verificato l'eccezione seguente durante l'utilizzo dell'interfaccia IDbConnection gestita: Impossibile caricare il file o l'assembly ' System. Transactions, versione version=4.0.0.0, Culture = neutral, PublicKeyToken = b77a5c561934e089' o una delle relative dipendenze. Non è stato fornito il livello richiesto di rappresentazione di client oppure il livello di rappresentazione fornito non è valido. (Eccezione da HRESULT: 0x80070542).  , ConnectionName: ThisWorkbookDataModel, cartella di lavoro: NETProvider.xlsx.  
   
  **Riepilogo dei passaggi di configurazione** Per configurare il privilegio **Agire come parte del sistema operativo** nel server locale:  
   
@@ -142,9 +142,9 @@ ms.locfileid: "59241939"
   
     -   Salvare di nuovo la cartella di lavoro nel database di contenuto.  
   
--   **Credenziali:** vengono utilizzate le credenziali archiviate. Non usare l'identità dell'utente corrente.  
+-   **Credenziali:** Usa le credenziali archiviate. Non usare l'identità dell'utente corrente.  
   
--   **Cartelle di lavoro supportate:** Cartelle di lavoro create tramite il componente aggiuntivo PowerPivot di [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] per Excel 2010 o tramite Excel 2013. Le cartelle di lavoro create in Excel 2010 con il componente aggiuntivo [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] PowerPivot non sono supportate. Aggiornare la cartella di lavoro almeno al formato [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] PowerPivot. Per altre informazioni sugli aggiornamenti delle cartelle di lavoro, vedere [Aggiornare le cartelle di lavoro e l'aggiornamento dati pianificato &#40;SharePoint 2013&#41;](../instances/install-windows/upgrade-workbooks-and-scheduled-data-refresh-sharepoint-2013.md).  
+-   **Cartelle di lavoro supportate:** Cartelle di lavoro create tramite il [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] il componente aggiuntivo PowerPivot per Excel 2010 o tramite Excel 2013. Le cartelle di lavoro create in Excel 2010 con il componente aggiuntivo [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] PowerPivot non sono supportate. Aggiornare la cartella di lavoro almeno al formato [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] PowerPivot. Per altre informazioni sugli aggiornamenti delle cartelle di lavoro, vedere [Aggiornare le cartelle di lavoro e l'aggiornamento dati pianificato &#40;SharePoint 2013&#41;](../instances/install-windows/upgrade-workbooks-and-scheduled-data-refresh-sharepoint-2013.md).  
   
  Per visualizzare la pagina **Gestisci aggiornamento dati** :  
   
@@ -189,7 +189,7 @@ ms.locfileid: "59241939"
 >  Dal momento che tramite il servizio di sistema PowerPivot non viene più eseguito il caricamento o il salvataggio dei modelli PowerPivot, a una farm di SharePoint 2013 non viene applicata la maggior parte delle impostazioni per memorizzare i modelli nella cache di un server applicazioni.  
   
 ## <a name="data-refresh-log-data"></a>Dati del log di aggiornamento dati  
- **Dati di utilizzo:** è possibile visualizzare i dati di utilizzo per l'aggiornamento dati nel dashboard di gestione PowerPivot. Per visualizzare i dati di utilizzo:  
+ **Dati di utilizzo:** È possibile visualizzare i dati di utilizzo di aggiornamento dati nel Dashboard di gestione PowerPivot. Per visualizzare i dati di utilizzo:  
   
 1.  Nel gruppo **Impostazioni generali applicazione** di Amministrazione centrale SharePoint fare clic su **Dashboard di gestione PowerPivot** .  
   
@@ -197,7 +197,7 @@ ms.locfileid: "59241939"
   
 3.  Per altre informazioni sui dati di utilizzo e sulla relativa abilitazione, vedere [PowerPivot Management Dashboard and Usage Data](power-pivot-management-dashboard-and-usage-data.md).  
   
- **Dati di log di diagnostica:** è possibile visualizzare i dati del log di diagnostica di SharePoint correlati all'aggiornamento dati. Innanzitutto, verificare la configurazione della registrazione dei dati di diagnostica per il **servizio PowerPivot** nella pagina **Monitoraggio** di Amministrazione centrale SharePoint. Potrebbe essere necessario aumentare il livello di registrazione per l'evento"critico" log. Impostare, ad esempio, temporaneamente il valore su **Dettagliato** , quindi eseguire di nuovo le operazioni di aggiornamento dati.  
+ **Dati di log di diagnostica:** È possibile visualizzare i dati di log di diagnostica di SharePoint correlati all'aggiornamento dati. Innanzitutto, verificare la configurazione della registrazione dei dati di diagnostica per il **servizio PowerPivot** nella pagina **Monitoraggio** di Amministrazione centrale SharePoint. Potrebbe essere necessario aumentare il livello di registrazione per l'evento"critico" log. Impostare, ad esempio, temporaneamente il valore su **Dettagliato** , quindi eseguire di nuovo le operazioni di aggiornamento dati.  
   
  Tra le voci di log sono incluse:  
   
@@ -210,9 +210,9 @@ ms.locfileid: "59241939"
 ##  <a name="datarefresh_additional_authentication"></a> Considerazioni aggiuntive sull'autenticazione  
  Tramite le impostazioni della finestra di dialogo **Impostazioni autenticazione Excel Services** in Excel 2013 è possibile stabilire l'identità Windows utilizzata da Excel Services e [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] per l'aggiornamento dati.  
   
--   **Usare l'account utente autenticato**: in Excel Services l'aggiornamento dati viene eseguito usando l'identità dell'utente attualmente connesso.  
+-   **Usare l'account utente autenticato**: Excel Services esegue l'aggiornamento dei dati in base all'identità dell'utente connesso.  
   
--   **Usa account archiviato**: presuppone un ID dell'applicazione del servizio di archiviazione sicura di SharePoint usato da Excel Services per recuperare il nome utente e la password e consentire l'autenticazione dell'aggiornamento dati.  
+-   **Usa account archiviato**: Si presuppone un ID dell'applicazione SharePoint Secure Store Service, che utilizza Excel Services per recuperare il nome utente e password per autenticare l'autenticazione dell'aggiornamento dati.  
   
 -   **Nessuno**: I servizi Excel **Account servizio automatico** viene usato. L'account del servizio è associato a un proxy dell'archiviazione sicura. Configurare le impostazioni nella sezione **Dati esterni** della pagina **Impostazioni applicazioni Excel Services** .  
   
@@ -237,6 +237,6 @@ ms.locfileid: "59241939"
   
 ## <a name="see-also"></a>Vedere anche  
  [Aggiornare le cartelle di lavoro e l'aggiornamento dati pianificato &#40;SharePoint 2013&#41;](../instances/install-windows/upgrade-workbooks-and-scheduled-data-refresh-sharepoint-2013.md)   
- [PowerPivot for SharePoint 2013 Installation](../instances/install-windows/install-analysis-services-in-power-pivot-mode.md)  
+ [Installazione di PowerPivot per SharePoint 2013](../instances/install-windows/install-analysis-services-in-power-pivot-mode.md)  
   
   

@@ -10,10 +10,10 @@ ms.topic: conceptual
 ms.custom: seodec18
 ms.date: 12/14/2018
 ms.openlocfilehash: 1a56eec4c2b36aba75664a34e96166b60841f89e
-ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
+ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59241369"
 ---
 # <a name="analysis-and-reporting-with-microsoft-business-intelligence-bi-tools"></a>Analisi dei dati e creazione di report con gli strumenti di business intelligence (BI) di Microsoft
@@ -30,10 +30,10 @@ ms.locfileid: "59241369"
 |**Business Intelligence in modalità self-service**|Analisti/utenti finali||||||  
 |Individuare facilmente e accedere ai dati pubblici e aziendali||[Power Query](https://go.microsoft.com/fwlink/p/?LinkId=391845)||[Azure Data Catalog](https://azure.microsoft.com/services/data-catalog/)<br /><br />||  
 |Creare modelli di dati potenti||[Power Pivot](https://support.office.com/article/power-pivot-overview-and-learning-f9001958-7901-4caa-ad80-028a6d2432ed?ui=en-US&rs=en-US&ad=US)|||[Power BI Desktop](https://powerbi.microsoft.com/documentation/powerbi-desktop-get-the-desktop/)||  
-|Eseguire analisi predittive self-service||||||[Componenti aggiuntivi Data mining per Excel](../analysis-services/data-mining-client-for-excel-sql-server-data-mining-add-ins.md)|  
+|Eseguire analisi predittive self-service||||||[Dati di componenti aggiuntivi Data Mining per Excel](../analysis-services/data-mining-client-for-excel-sql-server-data-mining-add-ins.md)|  
 |Visualizzare ed esplorare i dati||[Power View](https://go.microsoft.com/fwlink/p/?LinkId=391847)<br /><br /> [Power Map](https://go.microsoft.com/fwlink/p/?LinkId=391848)|||||  
 |Porre domande tramite query in linguaggio naturale|||||[DOMANDE E RISPOSTE](https://docs.microsoft.com/power-bi/consumer/end-user-q-and-a)||  
-|Accedere ai report tramite i dispositivi mobili||||[HTML 5 (supporta la visualizzazione < file di 10 MB)](https://go.microsoft.com/fwlink/p/?LinkId=391853)|[HTML 5 (supporta la visualizzazione < 250 MB)](https://go.microsoft.com/fwlink/p/?LinkId=391854)<br /><br /> [App di Power BI per dispositivi mobili nei dispositivi iOS](https://docs.microsoft.com/power-bi/consumer/mobile/mobile-iphone-app-get-started)<br /><br /> [App di Power BI per dispositivi mobili nei dispositivi Android](https://docs.microsoft.com/power-bi/consumer/mobile/mobile-android-app-get-started) <br /><br />[App per dispositivi mobili di Power BI per Windows 10](https://docs.microsoft.com/power-bi/consumer/mobile/mobile-windows-10-phone-app-get-started)||  
+|Accedere ai report tramite i dispositivi mobili||||[HTML 5 (supporta la visualizzazione di file <10 MB)](https://go.microsoft.com/fwlink/p/?LinkId=391853)|[HTML 5 (supporta la visualizzazione di file <250 MB)](https://go.microsoft.com/fwlink/p/?LinkId=391854)<br /><br /> [App Power BI per dispositivi mobili su dispositivi iOS](https://docs.microsoft.com/power-bi/consumer/mobile/mobile-iphone-app-get-started)<br /><br /> [App Power BI per dispositivi mobili su dispositivi Android](https://docs.microsoft.com/power-bi/consumer/mobile/mobile-android-app-get-started) <br /><br />[App Power BI per dispositivi mobili per Windows 10](https://docs.microsoft.com/power-bi/consumer/mobile/mobile-windows-10-phone-app-get-started)||  
 |Collaborare e condividere|||[Siti di SharePoint](https://go.microsoft.com/fwlink/p/?LinkId=391849)|[Siti del team SharePoint](https://go.microsoft.com/fwlink/p/?LinkId=391850)|[Siti di Power BI](https://docs.microsoft.com/power-bi/service-how-to-collaborate-distribute-dashboards-reports)||  
 |**Business Intelligence aziendale**|Professionisti IT||||||  
 |Creare modelli aziendali multidimensionali e tabulari||||||[Analysis Services](../analysis-services/analysis-services.md)|  
@@ -42,7 +42,7 @@ ms.locfileid: "59241369"
 |Creare report operativi||||||<sup>1</sup> [Reporting Services](create-deploy-and-manage-mobile-and-paginated-reports.md)|  
 |Creare report personalizzati e incorporati||||||<sup>1</sup> [Reporting Services](create-deploy-and-manage-mobile-and-paginated-reports.md)|  
 |**Analisi avanzata**|Data Scientist||||||  
-|Eseguire analisi predittive self-service||||||[Componenti aggiuntivi Data mining per Excel](https://msdn.microsoft.com/library/dn282385\(v=sql.120\).aspx)|  
-|Utilizzare algoritmi di data mining||||||[Data Mining in Analysis Services](https://technet.microsoft.com/library/bb510516\(v=sql.120\).aspx)|  
+|Eseguire analisi predittive self-service||||||[Dati di componenti aggiuntivi Data Mining per Excel](https://msdn.microsoft.com/library/dn282385\(v=sql.120\).aspx)|  
+|Utilizzare algoritmi di data mining||||||[Data mining in Analysis Services](https://technet.microsoft.com/library/bb510516\(v=sql.120\).aspx)|  
   
  <sup>1</sup> reporting Services include numerose funzionalità che supportano il recapito di report operativi e report personalizzati, quali sottoscrizioni e avvisi dati.

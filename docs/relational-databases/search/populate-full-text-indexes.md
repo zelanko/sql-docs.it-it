@@ -26,10 +26,10 @@ ms.reviewer: mikeray
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: b49e8a5802152eeee8d1a2cac28ac0098057f423
-ms.sourcegitcommit: 3cfedfeba377560d460ca3e42af1e18824988c07
+ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59042270"
 ---
 # <a name="populate-full-text-indexes"></a>Popolamento degli indici full-text
@@ -103,7 +103,7 @@ Esistono due tipi di rilevamento delle modifiche:
   
     -   [ALTER FULLTEXT INDEX](../../t-sql/statements/alter-fulltext-index-transact-sql.md) ... SET CHANGE_TRACKING AUTO  
   
-    **Esempio - Modificare un indice full-text per l'uso del rilevamento delle modifiche automatico**  
+    **Esempio: modificare un indice full-text per l'uso del rilevamento delle modifiche automatico**  
     Nell'esempio seguente viene creato un indice full-text della tabella `HumanResources.JobCandidate` del database di esempio `AdventureWorks` per l'utilizzo del rilevamento delle modifiche con il popolamento automatico.  
   
     ```sql  
@@ -123,7 +123,7 @@ Esistono due tipi di rilevamento delle modifiche:
   
     -   [ALTER FULLTEXT INDEX](../../t-sql/statements/alter-fulltext-index-transact-sql.md) ... SET CHANGE_TRACKING MANUAL  
   
-    **Esempio - Creare un indice full-text con il rilevamento delle modifiche manuale**  
+    **Esempio: creare un indice full-text con il rilevamento delle modifiche manuale**  
     Nell'esempio seguente viene creato un indice full-text che utilizzerà il rilevamento delle modifiche con popolamento manuale nella tabella `HumanResources.JobCandidate` del database di esempio `AdventureWorks` .  
   
     ```sql
@@ -137,7 +137,7 @@ Esistono due tipi di rilevamento delle modifiche:
     GO  
     ```  
   
-    **Esempio - Eseguire un popolamento manuale**  
+    **Esempio: eseguire un popolamento manuale**  
     Nell'esempio seguente viene eseguito un popolamento manuale nell'indice full-text con rilevamento delle modifiche della tabella `HumanResources.JobCandidate` del database di esempio `AdventureWorks` .  
   
     ```sql 

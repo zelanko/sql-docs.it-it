@@ -13,10 +13,10 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: be73ed98700ef261ccee026469dddd22017998e0
-ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
+ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59241450"
 ---
 # <a name="full-text-catalog-properties-general-page"></a>Proprietà catalogo full-text (pagina Generale)
@@ -40,35 +40,35 @@ ms.locfileid: "59241450"
   
 -   **In sospeso**  
   
--   **Sospensione causata dal servizio Microsoft FullText**  
+-   **Throttled**  
   
--   **Recupero in seguito a un'interruzione in corso**  
+-   **Il ripristino**  
   
--   **Shutdown**  
+-   **Arresto**  
   
--   **Popolamento incrementale del catalogo in corso**  
+-   **Popolamento incrementale in corso**  
   
--   **Compilazione dell'indice in corso**  
+-   **Compilazione dell'indice**  
   
 -   **Il disco è in pausa full**  
   
--   **Rilevamento modifiche**  
+-   **Change tracking**  
   
- **Conteggio elementi**  
+ **Numero di elementi**  
  Consente di visualizzare il numero di elementi full-text presenti nel catalogo.  
   
  **Dimensioni catalogo**  
  Consente di visualizzare le dimensioni in megabyte del catalogo full-text.  
   
- **Nome**  
+ **Name**  
  Nome del catalogo full-text.  
   
- **Distinzione caratteri accentati/non accentati**  
+ **/ Non accentati**  
  Visualizzare o modificare se il catalogo è sensibile ai segni diacritici, ad esempio una tilde (**~**), mark latino (**'**), o umlaut (**¨**). I valori validi sono:  
   
 -   **No**  
   
--   **Yes**  
+-   **Sì**  
   
 -   Per informazioni sui segni diacritici, vedere [segni diacritici](https://www.merriam-webster.com/dictionary/diacritic) nel dizionario Merriam inventa.  
   

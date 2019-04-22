@@ -13,12 +13,12 @@ ms.assetid: 3242deef-6f5f-4051-a121-36b3b4da851d
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 629ab86b869e36ec816dc99070f11a88147a1ca8
-ms.sourcegitcommit: e6e5da19b393f30b068552a18c911495cbc32952
+ms.openlocfilehash: 2bb8afe1e20e71245beea8f9482ff0aec4b047ba
+ms.sourcegitcommit: e2d65828faed6f4dfe625749a3b759af9caa7d91
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/22/2019
-ms.locfileid: "54443697"
+ms.lasthandoff: 04/17/2019
+ms.locfileid: "59671138"
 ---
 # <a name="set-or-change-the-server-collation"></a>Impostazione o modifica di regole di confronto del server
 
@@ -30,7 +30,7 @@ ms.locfileid: "54443697"
   
 ## <a name="setting-the-server-collation-in-sql-server"></a>Impostazione delle regole di confronto in SQL Server
 
-  Le regole di confronto del server vengono specificate durante l'installazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Le regole di confronto predefinite corrispondono a **SQL_Latin1_General_CP1_CI_AS**. Regole di confronto solo Unicode non possono essere specificate come regole di confronto a livello di server. Per altre informazioni, vedere [Configurazione del server - Regole di confronto](/sql/sql-server/install/server-configuration-collation.md).
+  Le regole di confronto del server vengono specificate durante l'installazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Le regole di confronto predefinite corrispondono a **SQL_Latin1_General_CP1_CI_AS**. Regole di confronto solo Unicode non possono essere specificate come regole di confronto a livello di server. Per altre informazioni, vedere [Collation and Unicode Support](collation-and-unicode-support.md).
   
 ## <a name="changing-the-server-collation-in-sql-server"></a>Modifica delle regole di confronto in SQL Server
 
@@ -42,7 +42,7 @@ ms.locfileid: "54443697"
   
 - Eliminare tutti i database utente.  
   
-- Ricompilare il database master specificando le nuove regole di confronto nella proprietà SQLCOLLATION del comando **setup** . Ad esempio  
+- Ricompilare il database master specificando le nuove regole di confronto nella proprietà SQLCOLLATION del comando **setup** . Esempio:  
   
     ```sql  
     Setup /QUIET /ACTION=REBUILDDATABASE /INSTANCENAME=InstanceName

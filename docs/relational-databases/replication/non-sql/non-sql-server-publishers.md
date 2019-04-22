@@ -16,12 +16,12 @@ ms.assetid: 08a160a6-33be-46b5-bc7b-d53180d8bdf1
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 47c4aed72c074ee1c591bd94afbcd53d6ba9fa01
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: be6dac20a6ebc019cfd616860651a10a57aae325
+ms.sourcegitcommit: 46a2c0ffd0a6d996a3afd19a58d2a8f4b55f93de
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53215357"
+ms.lasthandoff: 04/15/2019
+ms.locfileid: "59583164"
 ---
 # <a name="non-sql-server-publishers"></a>server di pubblicazione non SQL Server  
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -33,10 +33,12 @@ La pubblicazione di dati da origini non [!INCLUDE[ssNoVersion](../../../includes
 -   Pubblicazione di dati da [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] a Sottoscrittori non[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .  
 
 -   Pubblicazione di dati da e verso Oracle con le limitazioni seguenti:  
-  | |2016 o versioni precedenti |2017 o versioni successive |
-  |-------|-------|--------|
+
+  |Replica |2016 o versioni precedenti |2017 o versioni successive |
+  |:-----------|:---------------|:-------------|
   |Replica da Oracle |Supporta solo Oracle 10g o versioni precedenti |Supporta solo Oracle 10g o versioni precedenti |
   |Replica verso Oracle |Fino a Oracle 12c |Non supportato |
+  | &nbsp; | &nbsp; | &nbsp; |
 
 
  La replica eterogenea a Sottoscrittori non SQL Server è deprecata. La pubblicazione Oracle è deprecata. Per spostare dati, creare soluzioni utilizzando Change Data Capture e [!INCLUDE[ssIS](../../../includes/ssis-md.md)].  

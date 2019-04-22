@@ -16,10 +16,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 732b1c979f0dbf3a346ad85fc11bb8e0c5097c4f
-ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
+ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59240399"
 ---
 # <a name="usage-based-optimization-wizard-f1-help"></a>Guida sensibile al contesto dell'Ottimizzazione guidata basata sulle statistiche di utilizzo
@@ -48,24 +48,24 @@ ms.locfileid: "59240399"
   
 ## <a name="in-this-section"></a>In questa sezione  
   
--   [Selezione partizioni da modificare &#40;Ottimizzazione guidata basata sulle statistiche di utilizzo&#41;](select-partitions-to-modify-usage-based-optimization-wizard.md)  
+-   [Selezione partizioni da modificare &#40;procedura guidata basata sulle statistiche&#41;](select-partitions-to-modify-usage-based-optimization-wizard.md)  
   
--   [Impostazione criteri di query &#40;Ottimizzazione guidata basata sulle statistiche di utilizzo&#41;](specify-query-criteria-usage-based-optimization-wizard.md)  
+-   [Specificare i criteri di Query &#40;procedura guidata basata sulle statistiche&#41;](specify-query-criteria-usage-based-optimization-wizard.md)  
   
--   [Verifica delle query che verranno ottimizzate &#40;Ottimizzazione guidata basata sulle statistiche di utilizzo&#41;](review-the-queries-that-will-be-optimized-usage-based-optimization-wizard.md)  
+-   [Verifica delle query che verranno ottimizzate &#40;Ottimizzazione guidata basata sull'utilizzo&#41;](review-the-queries-that-will-be-optimized-usage-based-optimization-wizard.md)  
   
--   [Controlla utilizzo aggregazioni &#40;Ottimizzazione guidata basata sulle statistiche di utilizzo&#41;](review-aggregation-usage-usage-based-optimiation-wizard.md)  
+-   [Controlla utilizzo aggregazioni &#40;procedura guidata basata sulle statistiche basate sull'utilizzo&#41;](review-aggregation-usage-usage-based-optimiation-wizard.md)  
   
--   [Impostazione conteggi oggetti &#40;Ottimizzazione guidata basata sulle statistiche di utilizzo&#41;](specify-object-counts-usage-based-optimization-wizard.md)  
+-   [Impostazione conteggi oggetti &#40;procedura guidata basata sulle statistiche&#41;](specify-object-counts-usage-based-optimization-wizard.md)  
   
--   [Impostazione opzioni di aggregazione &#40;Ottimizzazione guidata basata sulle statistiche di utilizzo&#41;](set-aggregation-options-usage-based-optimization-wizard.md)  
+-   [Impostare le opzioni di aggregazione &#40;procedura guidata basata sulle statistiche&#41;](set-aggregation-options-usage-based-optimization-wizard.md)  
   
--   [Completamento procedura guidata &#40;Ottimizzazione guidata basata sulle statistiche di utilizzo&#41;](completing-the-wizard-usage-based-optimization-wizard.md)  
+-   [Completamento procedura guidata &#40;procedura guidata basata sulle statistiche&#41;](completing-the-wizard-usage-based-optimization-wizard.md)  
   
 ## <a name="see-also"></a>Vedere anche  
- [Aggregations and Aggregation Designs](multidimensional-models-olap-logical-cube-objects/aggregations-and-aggregation-designs.md)   
+ [Le aggregazioni e progettazione di aggregazioni](multidimensional-models-olap-logical-cube-objects/aggregations-and-aggregation-designs.md)   
  [Cubi nei modelli multidimensionali](multidimensional-models/cubes-in-multidimensional-models.md)   
- [Guida sensibile al contesto della Progettazione guidata aggregazioni](aggregation-design-wizard-f1-help.md)   
- [Procedure guidate di Analysis Services &#40;Dati multidimensionali&#41;](analysis-services-wizards-multidimensional-data.md)  
+ [Guida F1 guidata di progettazione delle aggregazioni](aggregation-design-wizard-f1-help.md)   
+ [Procedure guidate di Analysis Services &#40;dati multidimensionali&#41;](analysis-services-wizards-multidimensional-data.md)  
   
   

@@ -15,10 +15,10 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: ad8f8aca9577023d3170fc0c1b6e7e4099129a90
-ms.sourcegitcommit: 1a4aa8d2bdebeb3be911406fc19dfb6085d30b04
+ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/03/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58872311"
 ---
 # <a name="whats-new-in-database-engine---sql-server-2016"></a>Novità del motore di database - SQL Server 2016
@@ -41,7 +41,7 @@ Per informazioni sulle novità negli altri componenti di SQL Server, vedere [Nov
 > Per le note sulla versione correnti, vedere [SQL Server 2016 Release Notes](../sql-server/sql-server-2016-release-notes.md).
   
 ## <a name="sql-server-2016-service-pack-1-sp1"></a>SQL Server 2016 Service Pack 1 (SP1)  
--  `CREATE OR ALTER <object>` - Questa sintassi è ora disponibile per [procedure](../t-sql/statements/create-procedure-transact-sql.md), [viste](../t-sql/statements/create-view-transact-sql.md), [funzioni](../t-sql/statements/create-function-transact-sql.md) e [trigger](../t-sql/statements/create-trigger-transact-sql.md).
+-  La sintassi`CREATE OR ALTER <object>` è ora disponibile per [procedure](../t-sql/statements/create-procedure-transact-sql.md), [viste](../t-sql/statements/create-view-transact-sql.md), [funzioni](../t-sql/statements/create-function-transact-sql.md)e [trigger](../t-sql/statements/create-trigger-transact-sql.md).
 -   È stato aggiunto il supporto per un modello di hint per query più generico: `OPTION (USE HINT('<hint1>', '<hint2>'))`. Per altre informazioni, vedere [Hint per la query (Transact-SQL)](../t-sql/queries/hints-transact-sql-query.md).  
 - È stata aggiunta la DMV [sys.dm_exec_valid_use_hints](../relational-databases/system-dynamic-management-views/sys-dm-exec-valid-use-hints-transact-sql.md) per elencare gli hint.  
 - È stata aggiunta la DMV [sys.dm_exec_query_statistics_xml](../relational-databases/system-dynamic-management-views/sys-dm-exec-query-statistics-xml-transact-sql.md) per restituire le statistiche temporanee dello showplan XML.  
@@ -60,16 +60,16 @@ Questa sezione contiene le sottosezioni seguenti:
 -   [Configurazioni con ambito database](#database-scoped-configurations)
 -   [OLTP in memoria](#in-memory-oltp)
 -   [Query Optimizer](#query-optimizer)
--   [Live Query Statistics](#live-query-statistics)
+-   [Statistiche sulle query dinamiche](#live-query-statistics)
 -   [Archivio query](#query-store)
 -   [Tabelle temporali](#temporal-tables)
--   [Backup con striping nell'archivio BLOB di Microsoft Azure](#striped-backups-to-microsoft-azure-blob-storage)
--   [Backup di snapshot dei file nell'archivio BLOB di Microsoft Azure](#file-snapshot-backups-to-microsoft-azure-blob-storage)
+-   [Backup con striping in Archiviazione BLOB di Microsoft Azure](#striped-backups-to-microsoft-azure-blob-storage)
+-   [Backup di snapshot dei file in Archiviazione BLOB di Microsoft Azure](#file-snapshot-backups-to-microsoft-azure-blob-storage)
 -   [Backup gestito](#managed-backup)
 -   [Database tempdb](#tempdb-database)
 -   [Supporto JSON integrato](#built-in-json-support)
 -   [PolyBase](#polybase)
--   [Stretch Database](#stretch-database)
+-   [Estensione database](#stretch-database)
 -   [Supporto per UTF-8](#support-for-utf-8)
 -   [Nuove dimensioni predefinite del database e nuovi valori di aumento automatico](#new-default-database-size-and-autogrow-values)
 -   [Miglioramenti di Transact-SQL](#transact-sql-enhancements)
@@ -206,7 +206,7 @@ Per informazioni generali, vedere:
 
 - [Sicurezza a livello di riga nelle tabelle con ottimizzazione per la memoria](../relational-databases/in-memory-oltp/introduction-to-memory-optimized-tables.md#rls)
 
-- Le connessioni con [Multiple Active Result Set &#40;MARS&#41;](../relational-databases/native-client/features/using-multiple-active-result-sets-mars.md)possono ora accedere alle tabelle ottimizzate per la memoria e alle stored procedure compilate in modo nativo.
+- Le connessioni con [Multiple Active Result Set &#40;MARS&#41;](../relational-databases/native-client/features/using-multiple-active-result-sets-mars.md)possono ora accedere alle tabelle con ottimizzazione per la memoria e alle stored procedure compilate in modo nativo.
 
 - Supporto di [Transparent Data Encryption (TDE)](../relational-databases/security/encryption/transparent-data-encryption.md). Se un database è configurato per la crittografia, ora i file del [filegroup con ottimizzazione per la memoria](../relational-databases/in-memory-oltp/the-memory-optimized-filegroup.md) vengono anch'essi crittografati.
 
@@ -414,7 +414,7 @@ Il bilanciamento del carico delle richieste di connessione con finalità di lett
 
  Il numero di repliche che supportano il failover automatico è stato aumentato da due a tre.
 
- Gli account del servizio gestito di gruppo sono ora supportati per i cluster di failover Always On. Per altre informazioni, vedere [Account del servizio gestito di gruppo](https://technet.microsoft.com/library/hh831782.aspx). Per Windows Server 2012 R2, è necessario un aggiornamento per evitare tempo di inattività temporaneo dopo una modifica della password. Per ottenere l'aggiornamento, vedere [gMSA-based services can't log on after a password change in a Windows Server 2012 R2 domain](https://support.microsoft.com/kb/2998082/) (I servizi basati su gMSA non possono accedere dopo una modifica della password in un dominio di Windows Server 2012 R2).
+ Gli account del servizio gestito di gruppo sono ora supportati per i cluster di failover Always On. Per altre informazioni, vedere [Account del servizio gestito di gruppo](https://technet.microsoft.com/library/hh831782.aspx). Per Windows Server 2012 R2, è necessario un aggiornamento per evitare tempo di inattività temporaneo dopo una modifica della password. Per ottenere l'aggiornamento, vedere [gMSA-based services can't log on after a password change in a Windows Server 2012 R2 domain](https://support.microsoft.com/kb/2998082/)(I servizi basati su gMSA non possono accedere dopo una modifica della password in un dominio di Windows Server 2012 R2).
 
  [!INCLUDE[ssHADR](../includes/sshadr-md.md)] supporta le transazioni distribuite e il servizio DTC in Windows Server 2016. Per altre informazioni, vedere [Supporto delle transazioni distribuite](../database-engine/availability-groups/windows/transactions-always-on-availability-and-database-mirroring.md#dtcsupport).
 

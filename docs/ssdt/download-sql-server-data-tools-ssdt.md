@@ -15,10 +15,10 @@ ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||=azuresqldb-mi-current'
 ms.openlocfilehash: b336589f59bef9087392ff141a4bd64df1ed76c8
-ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
+ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59243505"
 ---
 # <a name="download-and-install-sql-server-data-tools-ssdt-for-visual-studio"></a>Scaricare e installare SQL Server Data Tools (SSDT) per Visual Studio
@@ -66,7 +66,7 @@ Il programma di installazione elenca le istanze di Visual Studio disponibili per
 
 ## <a name="ssdt-for-vs-2017-standalone-installer"></a>SSDT per Visual Studio 2017 (programma di installazione autonomo)
 
-[![download](../ssdt/media/download.png) Scaricare SSDT per Visual Studio 2017 (15.9.0)](https://go.microsoft.com/fwlink/?linkid=2052454) 
+[![download](../ssdt/media/download.png) Download di SSDT per Visual Studio 2017 (15.9.0)](https://go.microsoft.com/fwlink/?linkid=2052454) 
 
 > [!IMPORTANT]
 > - Prima di installare SSDT per Visual Studio 2017 (15.9.0), disinstallare le estensioni *Progetti di Analysis Services* e *Progetti di Reporting Services*, se già installate, e chiudere tutte le istanze di Visual Studio.
@@ -87,8 +87,8 @@ SSDT per Visual Studio 2017 ha gli stessi [requisiti di sistema](https://docs.mi
 
 Questa versione di **SSDT per VS 2017** può essere installata nelle lingue seguenti:
 
-- [Cinese (semplificato)]( https://go.microsoft.com/fwlink/?linkid=2052454&clcid=0x804)
-- [Cinese (tradizionale)]( https://go.microsoft.com/fwlink/?linkid=2052454&clcid=0x404)
+- [Cinese semplificato]( https://go.microsoft.com/fwlink/?linkid=2052454&clcid=0x804)
+- [Cinese tradizionale]( https://go.microsoft.com/fwlink/?linkid=2052454&clcid=0x404)
 - [Inglese (Stati Uniti)]( https://go.microsoft.com/fwlink/?linkid=2052454&clcid=0x409)
 - [Francese]( https://go.microsoft.com/fwlink/?linkid=2052454&clcid=0x40c)
 - [Tedesco]( https://go.microsoft.com/fwlink/?linkid=2052454&clcid=0x407)

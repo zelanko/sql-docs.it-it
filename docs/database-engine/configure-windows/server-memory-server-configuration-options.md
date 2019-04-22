@@ -23,10 +23,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: e3d3a6524d0f7e791628ec664bc9b5df17a0e529
-ms.sourcegitcommit: 3cfedfeba377560d460ca3e42af1e18824988c07
+ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59042190"
 ---
 # <a name="server-memory-server-configuration-options"></a>Opzioni di configurazione del server Server Memory
@@ -86,8 +86,7 @@ Per disabilitare l'opzione **Blocco di pagine in memoria** per [!INCLUDE[ssNoVer
 Questa opzione non influisce sulla [gestione dinamica della memoria](../../relational-databases/memory-management-architecture-guide.md#dynamic-memory-management) di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], consentendone l'espansione o la riduzione su richiesta di altri clerk di memoria. Quando si usa il diritto utente *Blocco di pagine in memoria* è consigliabile impostare un limite superiore per **max server memory** come [descritto in dettaglio in precedenza](#max_server_memory).
 
 > [!IMPORTANT]
-> L'impostazione di questa opzione deve essere usata solo quando necessario, ovvero in presenza di segnali di page out del processo sqlservr. In questo caso nel log degli errori verrà segnalato l'errore 17890, simile a quello riportato nell'esempio seguente:
-> `A significant part of sql server process memory has been paged out. This may result in a performance degradation. Duration: #### seconds. Working set (KB): ####, committed (KB): ####, memory utilization: ##%.`
+> L'impostazione di questa opzione deve essere usata solo quando necessario, ovvero in presenza di segnali di page out del processo sqlservr. In questo caso nel log degli errori viene segnalato l'errore 17890, simile a quello riportato nell'esempio seguente: `A significant part of sql server process memory has been paged out. This may result in a performance degradation. Duration: #### seconds. Working set (KB): ####, committed (KB): ####, memory utilization: ##%.`
 > A partire da [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] il [flag di traccia 845](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) non è necessario per l'uso dell'opzione Blocco di pagine nell'edizione Standard. 
   
 ### <a name="to-enable-lock-pages-in-memory"></a>Per abilitare l'opzione Blocco di pagine in memoria  
@@ -169,13 +168,13 @@ FROM sys.configurations c WHERE c.[name] = 'max server memory (MB)'
 ```
   
 ## <a name="see-also"></a>Vedere anche  
- [guida sull'architettura di gestione della memoria](../../relational-databases/memory-management-architecture-guide.md)   
+ [Guida sull'architettura di gestione della memoria](../../relational-databases/memory-management-architecture-guide.md)   
  [Monitoraggio e ottimizzazione delle prestazioni](../../relational-databases/performance/monitor-and-tune-for-performance.md)   
  [RECONFIGURE &#40;Transact-SQL&#41;](../../t-sql/language-elements/reconfigure-transact-sql.md)   
  [Opzioni di configurazione del server &#40;SQL Server&#41;](../../database-engine/configure-windows/server-configuration-options-sql-server.md)   
  [sp_configure &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md)   
  [Opzioni di avvio del servizio del motore di database](../../database-engine/configure-windows/database-engine-service-startup-options.md)   
- [Edizioni e funzionalità supportate di SQL Server 2016](../../sql-server/editions-and-components-of-sql-server-2016.md#Cross-BoxScaleLimits)   
+ [Edizioni e le funzionalità supportate di SQL Server 2016](../../sql-server/editions-and-components-of-sql-server-2016.md#Cross-BoxScaleLimits)   
  [Edizioni e funzionalità supportate di SQL Server 2017](../../sql-server/editions-and-components-of-sql-server-2017.md#Cross-BoxScaleLimits)   
  [Edizioni e funzionalità supportate di SQL Server 2017 in Linux](../../linux/sql-server-linux-editions-and-components-2017.md#Cross-BoxScaleLimits)   
- [Memory Limits for Windows and Windows Server Releases (Limiti di memoria per le diverse versioni di Windows e Windows Server)](/windows/desktop/Memory/memory-limits-for-windows-releases)
+ [Memory Limits for Windows and Windows Server Releases](/windows/desktop/Memory/memory-limits-for-windows-releases) (Limiti di memoria per le diverse versioni di Windows e Windows Server)

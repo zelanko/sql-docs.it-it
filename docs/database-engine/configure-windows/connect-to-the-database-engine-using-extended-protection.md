@@ -15,22 +15,22 @@ helpviewer_keywords:
 - channel binding
 - Extended Protection
 ms.assetid: ecfd783e-7dbb-4a6c-b5ab-c6c27d5dd57f
-author: MikeRayMSFT
-ms.author: mikeray
+author: VanMSFT
+ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 185c03ef5c5ffdd35a1d32df6fecb29568d5ab82
-ms.sourcegitcommit: 706f3a89fdb98e84569973f35a3032f324a92771
+ms.openlocfilehash: d04f5e640f7622b5eab6106da29366f164fb6878
+ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/29/2019
-ms.locfileid: "58657805"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59774546"
 ---
 # <a name="connect-to-the-database-engine-using-extended-protection"></a>Connessione al motore di database mediante la protezione estesa
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] il supporto per la **protezione estesa** è disponibile a partire da [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]. La**protezione estesa per l'autenticazione** è una funzionalità dei componenti di rete implementata dal sistema operativo. La**protezione estesa** è supportata in Windows 7 e in Windows Server 2008 R2 La**protezione estesa** è inclusa nei Service Pack per i sistemi operativi [!INCLUDE[msCoName](../../includes/msconame-md.md)] meno recenti. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] è più sicuro quando le connessioni vengono effettuate tramite **protezione estesa**.  
   
 > [!IMPORTANT]  
->  Per impostazione predefinita, in Windows la **protezione estesa** non è abilitata. Per informazioni su come abilitare la **protezione estesa** in Windows, vedere la pagina relativa alla [protezione estesa per l'autenticazione](https://support.microsoft.com/kb/968389).  
+> Per impostazione predefinita, in Windows la **protezione estesa** non è abilitata. Per informazioni su come abilitare la **protezione estesa** in Windows, vedere la pagina relativa alla [protezione estesa per l'autenticazione](/dotnet/framework/wcf/feature-details/extended-protection-for-authentication-overview).
   
 ## <a name="description-of-extended-protection"></a>Descrizione della protezione estesa  
  La**protezione estesa** utilizza l'associazione al servizio e l'associazione di canale per impedire un attacco di tipo relay per l'autenticazione. In un attacco di questo tipo un client che può eseguire l'autenticazione NTLM, ad esempio Esplora risorse, [!INCLUDE[msCoName](../../includes/msconame-md.md)] Outlook, un'applicazione .NET SqlClient e così via, si connette all'autore dell'attacco, ad esempio un file server CIFS dannoso. L'autore usa le credenziali del client per mascherarsi ed eseguire l'autenticazione per un servizio, ad esempio un'istanza del servizio [!INCLUDE[ssDE](../../includes/ssde-md.md)].  

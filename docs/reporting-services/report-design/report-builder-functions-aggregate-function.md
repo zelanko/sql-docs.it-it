@@ -9,10 +9,10 @@ ms.assetid: 16ce643f-bbb3-40a5-ba78-7aed73156f3e
 author: markingmyname
 ms.author: maghan
 ms.openlocfilehash: a24554d0317c17edf9c532611c588ea7c38d1926
-ms.sourcegitcommit: bf23b81af45eddaa3c8bb87135c5ad0e1b42fbc2
+ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59367229"
 ---
 # <a name="report-builder-functions---aggregate-function"></a>Funzioni di Generatore report - Funzione Aggregate
@@ -29,7 +29,7 @@ Aggregate(expression, scope)
 ```  
   
 #### <a name="parameters"></a>Parametri  
- *espressione*  
+ *expression*  
  Espressione su cui eseguire l'aggregazione. È necessario che l'espressione sia un riferimento di campo semplice.  
   
  *ambito*  

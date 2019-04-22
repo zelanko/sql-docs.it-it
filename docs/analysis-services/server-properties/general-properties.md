@@ -10,10 +10,10 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 0683a8eb03cb0d5d17072825cfc90f8c9ba2500e
-ms.sourcegitcommit: 3cfedfeba377560d460ca3e42af1e18824988c07
+ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59042390"
 ---
 # <a name="general-properties"></a>Proprietà generali
@@ -46,7 +46,7 @@ Il valore predefinito per questa proprietà è -1, che consente che tutte le cac
  **CommitTimeout**  
  Proprietà Integer che specifica per quanto tempo (in millisecondi) il server attenderà prima di acquisire un blocco in scrittura allo scopo di eseguire il commit di una transazione. Un periodo di attesa è spesso necessario perché il server deve attendere che eventuali altri blocchi vengano rilasciati prima di acquisire un blocco in scrittura per il commit della transazione.  
   
- Il valore predefinito di questa proprietà è zero (0). Ciò significa che il server attenderà per un periodo di tempo indefinito. Per altre informazioni sulle proprietà correlate al blocco, vedere [SQL Server 2008 R2 Analysis Services Operations Guide](http://go.microsoft.com/fwlink/?LinkID=225539) (Guida operativa di SQL Server 2008 R2 Analysis Services).  
+ Il valore predefinito di questa proprietà è zero (0). Ciò significa che il server attenderà per un periodo di tempo indefinito. Per altre informazioni sulle proprietà correlate al blocco, vedere [SQL Server 2008 R2 Analysis Services Operations Guide](http://go.microsoft.com/fwlink/?LinkID=225539)(Guida operativa di SQL Server 2008 R2 Analysis Services).  
   
  **CoordinatorBuildMaxThreads**  
  Proprietà Integer a 32 bit con segno che definisce il numero massimo di thread allocati alla compilazione di indici di partizioni. Per rendere più veloce l'indicizzazione delle partizioni a scapito della quantità di memoria utilizzata, è necessario aumentare il valore di questa proprietà. Per altre informazioni su questa proprietà, vedere [SQL Server 2008 R2 Analysis Services Operations Guide](http://go.microsoft.com/fwlink/?LinkID=225539)(Guida operativa di SQL Server 2008 R2 Analysis Services).  
@@ -63,7 +63,7 @@ Il valore predefinito per questa proprietà è -1, che consente che tutte le cac
  Proprietà Integer a 32 bit con segno che definisce il numero massimo di thread per segmento di partizione durante la risoluzione delle query. Minore è il numero di utenti concorrenti e maggiore è il valore assegnabile a questa proprietà, a scapito della memoria. Viceversa, se il numero di utenti concorrente è elevato, è necessario abbassare il valore di questa proprietà.  
   
  **CoordinatorShutdownMode**  
- Proprietà booleana che definisce la modalità di arresto del coordinatore. Si tratta di una proprietà avanzata che deve essere modificata solo sotto la supervisione del servizio di supporto tecnico [!INCLUDE[msCoName](../../includes/msconame-md.md)].  
+ Proprietà booleana che definisce la modalità di arresto del coordinatore. Si tratta di una proprietà avanzata che deve essere modificata solo sotto la supervisione del servizio di supporto tecnico [!INCLUDE[msCoName](../../includes/msconame-md.md)] .  
   
  **DataDir**  
  Proprietà di stringa che consente l'identificazione del nome della directory in cui sono archiviati i dati.  
@@ -118,7 +118,7 @@ Il valore predefinito per questa proprietà è -1, che consente che tutte le cac
  **InstanceVisible**  
  Proprietà booleana che indica se è l'istanza del server è visibile alle richieste di individuazione di istanze provenienti dal servizio per SQL Server Browser. Il valore predefinito è True. Se si imposta questa proprietà su false, l'istanza non sarà visibile a SQL Server Browser.  
   
- **Linguaggio**  
+ **Lingua**  
  Proprietà stringa che definisce la lingua, inclusi i messaggi di errore e la formattazione dei numeri. Questa proprietà ha la priorità sulla proprietà CollationName.  
   
  Il valore predefinito di questa proprietà è vuoto. Ciò significa che la lingua viene definita dalla proprietà CollationName.  
@@ -132,7 +132,7 @@ Il valore predefinito per questa proprietà è -1, che consente che tutte le cac
  **MinIdleSessionTimeout**  
  Proprietà Integer che definisce il timeout minimo in secondi per le sessioni inattive. Il valore predefinito è 2700 secondi. Trascorso questo tempo, al server è consentito terminare la sessione inattiva, operazione che viene eseguita solo quando è richiesta memoria.  
   
- **Port**  
+ **Porta**  
  Proprietà Integer che definisce il numero di porta su cui il server rimarrà in attesa di connessioni client. Se questa proprietà non viene impostata, il server trova in modo dinamico la prima porta non utilizzata.  
   
  Il valore predefinito di questa proprietà è zero (0) al quale per impostazione predefinita viene assegnata la porta 2383. Per altre informazioni sulla configurazione della porta, vedere [Configurare Windows Firewall per consentire l'accesso ad Analysis Services](../../analysis-services/instances/configure-the-windows-firewall-to-allow-analysis-services-access.md).  

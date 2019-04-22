@@ -18,10 +18,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 5b1317bc41be836cfad5159339a4e7c90fcfbc83
-ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
+ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59241431"
 ---
 # <a name="connect-to-the-database-engine-using-extended-protection"></a>Connessione al motore di database mediante la protezione estesa
@@ -64,7 +64,7 @@ ms.locfileid: "59241431"
   
      I valori possibili sono **Attivata** e **Disattivata**. Per utilizzare l'associazione di canale, è necessario impostare **Forza crittografia** su **Attivata**in modo da forzare la crittografia su tutti i client. Se impostata su **Disattivata**, viene garantita solo l'associazione al servizio. **Forza crittografia** è disponibile in **Proprietà - Protocolli per MSSQLSERVER (scheda Flag)** in Gestione configurazione [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
--   **protezione estesa**  
+-   **Protezione estesa**  
   
      I valori possibili sono **Disattivata**, **Consentita**e **Obbligatoria**. La variabile relativa alla **Protezione estesa** consente agli utenti di configurare il livello di **protezione estesa** per ogni istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . **Protezione estesa** è disponibile in **Proprietà - Protocolli per MSSQLSERVER (scheda Avanzate)** in Gestione configurazione [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   

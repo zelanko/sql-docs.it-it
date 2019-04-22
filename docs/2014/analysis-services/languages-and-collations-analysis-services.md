@@ -20,14 +20,14 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: a6300606195ea435a0290d828109b821d0d6702c
-ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
+ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59241829"
 ---
 # <a name="languages-and-collations-analysis-services"></a>Lingue e regole di confronto (Analysis Services)
-  [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] supporta le lingue e le regole di confronto fornite dai sistemi operativi [!INCLUDE[msCoName](../includes/msconame-md.md)] Windows. `Language` e `Collation` vengono inizialmente impostate a livello di istanza durante l'installazione, ma in seguito possono essere modificate a livelli diversi della gerarchia di oggetti.  
+  [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] supporta le lingue e le regole di confronto fornite dai sistemi operativi [!INCLUDE[msCoName](../includes/msconame-md.md)] Windows. Le proprietà `Language` e `Collation` vengono inizialmente impostate a livello di istanza durante l'installazione, ma in seguito possono essere modificate a livelli diversi della gerarchia di oggetti.  
   
  In (solo) un modello multidimensionale, è possibile impostare queste proprietà in un database o cubo: è anche possibile impostarle nelle traduzioni create per gli oggetti all'interno di un cubo.  
   
@@ -70,7 +70,7 @@ ms.locfileid: "59241829"
   
  Inoltre, è possibile impostare `Language`, da solo, in un **Translation** oggetto.  
   
- Un oggetto Translation vien creato quando si aggiungono traduzioni a un cubo o una dimensione. `Language` fa parte della definizione di traduzione. `Collation`invece viene impostata per il cubo o a livello superiore ed è condivisa da tutte le traduzioni. Ciò è evidente nel codice XMLA di un cubo contenente traduzioni, dove si avranno più proprietà della lingua (una per ogni traduzione), ma un solo set di regole di confronto. Si noti che esiste un'eccezione per le traduzioni dell'attributo della dimensione, in cui è possibile eseguire l'override delle regole di confronto del cubo per specificare un set di regole di confronto dell'attributo che corrisponda alla colonna di origine (il motore di database supporta l'impostazione delle regole di confronto per singole colonne ed è frequente configurare le singole traduzioni per ottenere i dati dei membri da colonne di origine diverse). Per tutte le altre traduzioni invece la proprietà `Language` viene usata da sola senza la proprietà `Collation` conseguente. Per informazioni dettagliate, vedere [Traduzioni &#40;Analysis Services&#41;](translations-analysis-services.md).  
+ Un oggetto Translation vien creato quando si aggiungono traduzioni a un cubo o una dimensione. `Language` fa parte della definizione di traduzione. `Collation` invece viene impostato per il cubo o a livello superiore ed è condiviso da tutte le traduzioni. Ciò è evidente nel codice XMLA di un cubo contenente traduzioni, dove si avranno più proprietà della lingua (una per ogni traduzione), ma un solo set di regole di confronto. Si noti che esiste un'eccezione per le traduzioni dell'attributo della dimensione, in cui è possibile eseguire l'override delle regole di confronto del cubo per specificare un set di regole di confronto dell'attributo che corrisponda alla colonna di origine (il motore di database supporta l'impostazione delle regole di confronto per singole colonne ed è frequente configurare le singole traduzioni per ottenere i dati dei membri da colonne di origine diverse). Per tutte le altre traduzioni invece la proprietà `Language` viene usata da sola senza la proprietà `Collation` conseguente. Per informazioni dettagliate, vedere [Traduzioni &#40;Analysis Services&#41;](translations-analysis-services.md).  
   
 ##  <a name="bkmk_lang"></a> Supporto della lingua in Analysis Services  
  La proprietà `Language` definisce le impostazioni locali di un oggetto usato durante l'elaborazione, l'esecuzione di query e con `Captions` e `Translations` per supportare gli scenari multilingue. Le impostazioni locali si basano su un identificatore di lingua, ad esempio l'inglese, e su un'area, ad esempio Stati Uniti o Australia, che definiscono ulteriormente le rappresentazioni di data e ora.  
@@ -100,7 +100,7 @@ ms.locfileid: "59241829"
 >  La proprietà `Language` non determina la lingua in cui vengono restituiti i messaggi di sistema né le stringhe che vengono visualizzate nell'interfaccia utente. Errori, avvisi e messaggi vengono localizzati in tutte le lingue supportate in Office e Office 365 e vengono usati automaticamente quando la connessione client specifica le impostazioni locali supportate.  
   
 ##  <a name="bkmk_collations"></a> Supporto delle regole di confronto in Analysis Services  
- [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] usa esclusivamente le regole di confronto binarie e di Windows. Non usa le regole di confronto datate di SQL Server. Un singolo set di regole di confronto viene usato in tutto il cubo ad eccezione delle traduzioni a livello di attributo. Per altre informazioni sulla definizione di traduzioni per gli attributi, vedere [Traduzioni &#40;Analysis Services&#41;](translations-analysis-services.md).  
+ [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Usa esclusivamente le regole di confronto binarie e di Windows. Non usa le regole di confronto datate di SQL Server. Un singolo set di regole di confronto viene usato in tutto il cubo ad eccezione delle traduzioni a livello di attributo. Per altre informazioni sulla definizione di traduzioni per gli attributi, vedere [Traduzioni &#40;Analysis Services&#41;](translations-analysis-services.md).  
   
  Le regole di confronto controllano la distinzione tra maiuscole/minuscole di tutte le stringhe di un alfabeto composto da due set di caratteri maiuscoli/minuscoli distinti ad eccezione degli identificatori di oggetto. Se si usano caratteri maiuscoli e minuscoli in un identificatore di oggetto, tenere presente che la distinzione tra maiuscole e minuscole degli identificatori di oggetto non è determinata dalle regole di confronto, ma da [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]. Per gli identificatori di oggetto creati con l'alfabeto inglese non verrà mai fatta distinzione tra maiuscole e minuscole, indipendentemente dalle regole di confronto. Per il cirillico e le altre lingue che usano un alfabeto composto da due set di caratteri maiuscoli/minuscoli distinti avviene il contrario, ovvero viene sempre fatta distinzione tra maiuscole/minuscole. Per informazioni dettagliate, vedere [Suggerimenti e procedure consigliate per la globalizzazione &#40;Analysis Services&#41;](globalization-tips-and-best-practices-analysis-services.md) .  
   

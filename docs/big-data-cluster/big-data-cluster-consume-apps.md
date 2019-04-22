@@ -12,10 +12,10 @@ ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
 ms.openlocfilehash: 4d299f364b4d67e1f31ce7c0e70d6ba062933f37
-ms.sourcegitcommit: 2de5446fbc57787f18a907dd5deb02a7831ec07d
+ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/02/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58860542"
 ---
 # <a name="consume-an-app-deployed-on-sql-server-big-data-cluster-using-a-restful-web-service"></a>Usare un'app distribuita nel cluster di big data di SQL Server usando un servizio web RESTful
@@ -105,7 +105,7 @@ Il risultato di questa richiesta viene visualizzato un token JWT `access_token`,
 > [!NOTE]
 > Se si desidera, è possibile aprire l'URL per il `swagger` che è stato restituito quando è stato eseguito `mssqlctl app describe --name [appname] --version [version]` nel browser, che dovrebbe essere simile a `https://[IP]:[PORT]/api/app/[appname]/[version]/swagger.json`. Sarà necessario accedere con le stesse credenziali usate per `mssqlctl login`. Il contenuto del `swagger.json` è possibile incollare [Editor Swagger](https://editor.swagger.io). Si noterà che il servizio web espone i `run` (metodo). Si noti inoltre l'URL di Base visualizzato nella parte superiore.
 
-È possibile usare lo strumento preferito per chiamare il `run` metodo (`https://[IP]:30778/api/app/[appname]/[version]/run`), passando i parametri nel corpo della richiesta POST come json. In questo esempio si userà [Postman](https://www.getpostman.com/). Prima di effettuare la chiamata, è necessario impostare il `Authorization` a `Bearer Token` e incollare il token recuperato in precedenza. Questo verrà impostato un'intestazione della richiesta. Vedere la schermata seguente.
+È possibile usare lo strumento preferito per chiamare il `run` metodo (`https://[IP]:30778/api/app/[appname]/[version]/run`), passando i parametri nel corpo della richiesta POST come json. In questo esempio si userà [Postman](https://www.getpostman.com/). Prima di effettuare la chiamata, è necessario impostare il `Authorization` a `Bearer Token` e incollare il token recuperato in precedenza. Questo verrà impostato un'intestazione della richiesta. Vedere lo screenshot seguente.
 
 ![Postman eseguire intestazioni](media/big-data-cluster-consume-apps/postman_run_1.png)
 

@@ -12,10 +12,10 @@ author: haoqian
 ms.author: haoqian
 manager: craigg
 ms.openlocfilehash: cedbd1516706191980dc7817a9bc7434def30831
-ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
+ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59241461"
 ---
 # <a name="scale-out-support-for-high-availability"></a>Supporto della disponibilità elevata in Scale Out
@@ -112,5 +112,5 @@ Per aggiornare Scale Out in un ambiente a disponibilità elevata seguire la [pro
 
 ## <a name="next-steps"></a>Passaggi successivi
 Per altre informazioni, vedere gli articoli seguenti:
--   [Master di scalabilità orizzontale di Integration Services (SSIS)](integration-services-ssis-scale-out-master.md)
--   [Ruolo di lavoro di scalabilità orizzontale di Integration Services (SSIS)](integration-services-ssis-scale-out-worker.md)
+-   [Integration Services (SSIS) Scale Out Master](integration-services-ssis-scale-out-master.md)
+-   [Integration Services (SSIS) Scale Out Worker](integration-services-ssis-scale-out-worker.md)

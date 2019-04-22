@@ -16,10 +16,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 0b1265d3ef58f6ef0946937b15411b0cb79a3c20
-ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
+ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59240709"
 ---
 # <a name="tempdb-database"></a>Database tempdb
@@ -72,23 +72,23 @@ ms.locfileid: "59240709"
 |ARITHABORT|OFF|Yes|  
 |AUTO_CLOSE|OFF|No|  
 |AUTO_CREATE_STATISTICS|ON|Yes|  
-|AUTO_SHRINK|OFF|No|  
+|AUTO_SHRINK|OFF|no|  
 |AUTO_UPDATE_STATISTICS|ON|Yes|  
 |AUTO_UPDATE_STATISTICS_ASYNC|OFF|Yes|  
 |CHANGE_TRACKING|OFF|No|  
 |CONCAT_NULL_YIELDS_NULL|OFF|Yes|  
 |CURSOR_CLOSE_ON_COMMIT|OFF|Yes|  
 |CURSOR_DEFAULT|GLOBAL|Yes|  
-|Opzioni relative alla disponibilità del database|ONLINE<br /><br /> MULTI_USER<br /><br /> READ_WRITE|no<br /><br /> No<br /><br /> No|  
+|Opzioni relative alla disponibilità del database|ONLINE<br /><br /> MULTI_USER<br /><br /> READ_WRITE|No<br /><br /> No<br /><br /> No|  
 |DATE_CORRELATION_OPTIMIZATION|OFF|Yes|  
-|DB_CHAINING|ON|No|  
+|DB_CHAINING|ON|no|  
 |ENCRYPTION|OFF|No|  
 |NUMERIC_ROUNDABORT|OFF|Yes|  
 |PAGE_VERIFY|CHECKSUM per nuove installazioni di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].<br /><br /> NONE per aggiornamenti di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|Yes|  
 |PARAMETERIZATION|SIMPLE|Yes|  
 |QUOTED_IDENTIFIER|OFF|Yes|  
 |READ_COMMITTED_SNAPSHOT|OFF|No|  
-|RECOVERY|SIMPLE|No|  
+|RECOVERY|SIMPLE|no|  
 |RECURSIVE_TRIGGERS|OFF|Yes|  
 |Opzioni relative a Service Broker|ENABLE_BROKER|Yes|  
 |TRUSTWORTHY|OFF|No|  

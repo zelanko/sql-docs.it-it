@@ -13,10 +13,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 1c24de94f948282772f6f08d8a4a6c62e1c952ad
-ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
+ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59241210"
 ---
 # <a name="connect-to-server-login-page-database-engine"></a>Motore di database - Connetti al server (pagina Account di accesso)
@@ -37,7 +37,7 @@ ms.locfileid: "59241210"
  Consente di selezionare l'istanza del server a cui connettersi. Per impostazione predefinita verrà visualizzata l'ultima istanza del server a cui è stata effettuata la connessione.  
   
  **Autenticazione**  
- Per la connessione a un'istanza di [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] sono disponibili due modalità di autenticazione.  
+ Per la connessione a un'istanza di [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]sono disponibili due modalità di autenticazione.  
   
  Quando si esegue una connessione a un'istanza del motore di database di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tramite [!INCLUDE[ssSDS](../../includes/sssds-md.md)], è necessario usare l'autenticazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e specificare un database nella scheda **Proprietà connessione** della finestra di dialogo **Connetti al server** . Assicurarsi di selezionare la casella di controllo **Crittografa connessione** .  
   
@@ -64,7 +64,7 @@ ms.locfileid: "59241210"
  **Memorizza password**  
  Selezionare questa opzione affinché [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] archivi la password immessa. Questa opzione viene visualizzata solo se si è scelto di utilizzare l'autenticazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] per la connessione.  
   
- **Connessione**  
+ **Connetti**  
  Fare clic su questo pulsante per connettersi al server selezionato.  
   
  **Opzioni**  

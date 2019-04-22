@@ -20,10 +20,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 9287cc028357c8db8e37242153e9815398b11858
-ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
+ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59242269"
 ---
 # <a name="mdx-query-fundamentals-analysis-services"></a>Nozioni fondamentali sulle query MDX (Analysis Services)
@@ -39,7 +39,7 @@ ms.locfileid: "59242269"
 |Argomento|Descrizione|  
 |-----------|-----------------|  
 |[Query MDX di base &#40;MDX&#41;](mdx-query-the-basic-query.md)|Fornisce informazioni sulla sintassi di base dell'istruzione MDX SELECT.|  
-|[Restrizione della query con gli assi della query e di sezionamento &#40;MDX&#41;](mdx-query-and-slicer-axes-restricting-the-query.md)|Spiega cosa sono gli assi di query e filtro dei dati e come specificarli.|  
+|[Restrizione della Query con Progettazione Query e assi di sezionamento &#40;MDX&#41;](mdx-query-and-slicer-axes-restricting-the-query.md)|Spiega cosa sono gli assi di query e filtro dei dati e come specificarli.|  
 |[Definizione del contesto di cubo in una query &#40;MDX&#41;](establishing-cube-context-in-a-query-mdx.md)|Descrive lo scopo della clausola FROM nelle istruzioni MDX SELECT.|  
 |[Compilazione di set denominati in MDX &#40;MDX&#41;](mdx-named-sets-building-named-sets.md)|Descrive lo scopo dei set denominati in MDX e le tecniche necessarie per crearli e utilizzarli nelle query MDX.|  
 |[Compilazione di membri calcolati in MDX &#40;MDX&#41;](mdx-calculated-members-building-calculated-members.md)|Fornisce informazioni sui membri calcolati in MDX, incluse le tecniche necessarie per crearli e utilizzarli nelle espressioni MDX.|  

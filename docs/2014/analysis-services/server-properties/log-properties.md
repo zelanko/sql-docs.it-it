@@ -55,10 +55,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: e5ade1c582956548a62f36d79f0e1b8fbd03525a
-ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
+ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59240730"
 ---
 # <a name="log-properties"></a>Proprietà dei log
@@ -88,9 +88,9 @@ ms.locfileid: "59240730"
  **ErrorLog\KeyErrorAction**  
  Specifica l'azione eseguita dal server quando si verifica un errore `KeyNotFound`. Le risposte valide a questo errore sono le seguenti:  
   
--   `ConvertToUnknown` indica al server di allocare il valore della chiave errore al membro sconosciuto.  
+-   `ConvertToUnknown`: indica al server di allocare il valore della chiave con errore al membro sconosciuto.  
   
--   `DiscardRecord` indica al server di escludere il record.  
+-   `DiscardRecord`: indica al server di escludere il record.  
   
  **ErrorLog\KeyErrorLogFile**  
  Si tratta di un nome di file definito dall'utente che deve avere un'estensione di file log ed essere posizionato in una cartella in cui l'account del servizio dispone delle autorizzazioni di lettura-scrittura. Il file di log conterrà solo gli errori generati durante l'elaborazione. Se sono necessarie informazioni più dettagliate, usare utilità Traccia eventi.  
@@ -101,18 +101,18 @@ ms.locfileid: "59240730"
  **ErrorLog\KeyErrorLimitAction**  
  Specifica l'azione eseguita dal server quando il numero di errori di chiave ha raggiunto il limite superiore. Le risposte valide a questa azione sono le seguenti:  
   
--   `StopProcessing` indica al server di arrestare l'elaborazione quando viene raggiunto il limite di errore.  
+-   `StopProcessing` indica al server di arrestare l'elaborazione quando il limite errori viene raggiunto.  
   
--   `StopLogging` indica al server di arrestare la registrazione degli errori quando viene raggiunto il limite di errori, ma continuare l'elaborazione.  
+-   `StopLogging` indica al server di arrestare la registrazione degli errori quando il limite errori viene raggiunto, senza interrompere però l'elaborazione.  
   
  **ErrorLog\ LogErrorTypes\KeyNotFound**  
  Specifica l'azione eseguita dal server quando si verifica un errore `KeyNotFound`. Le risposte valide a questo errore sono le seguenti:  
   
--   `IgnoreError` indica al server di continuare l'elaborazione senza registrare l'errore né conteggiarlo per il limite degli errori di chiave. Ignorando l'errore, si consente semplicemente la continuazione dell'elaborazione senza aggiungere l'errore al numero complessivo e senza registrarlo nella schermata o nel file di log. Per il record specifico è presente un problema di integrità dei dati. Di conseguenza, il record non può essere aggiunto al database e verrà rimosso o aggregato al membro sconosciuto, come determinato dalla proprietà `KeyErrorAction`.  
+-   `IgnoreError`: indica al server di continuare l'elaborazione senza registrare l'errore né conteggiarlo ai fini del limite degli errori di chiave. Ignorando l'errore, si consente semplicemente la continuazione dell'elaborazione senza aggiungere l'errore al numero complessivo e senza registrarlo nella schermata o nel file di log. Per il record specifico è presente un problema di integrità dei dati. Di conseguenza, il record non può essere aggiunto al database e verrà rimosso o aggregato al membro sconosciuto, come determinato dalla proprietà `KeyErrorAction`.  
   
--   `ReportAndContinue` indica al server di registrare l'errore, di conteggiarlo ai fini del limite degli errori di chiave e di continuare l'elaborazione. Il record che ha attivato l'errore viene rimosso o convertito in membro sconosciuto.  
+-   `ReportAndContinue` indica al server di registrare l'errore, di conteggiarlo per il limite di errori di chiave e di continuare l'elaborazione. Il record che ha attivato l'errore viene rimosso o convertito in membro sconosciuto.  
   
--   `ReportAndStop` indica al server di registrare l'errore e arresta immediatamente l'elaborazione, indipendentemente dal limite degli errori di chiave. Il record che ha attivato l'errore viene rimosso o convertito in membro sconosciuto.  
+-   `ReportAndStop` indica al server di registrare l'errore e di arrestare immediatamente l'elaborazione, indipendentemente dal limite di errori di chiave. Il record che ha attivato l'errore viene rimosso o convertito in membro sconosciuto.  
   
  **ErrorLog\ LogErrorTypes\KeyDuplicate**  
  Specifica l'azione eseguita dal server in caso di chiave duplicata. I valori validi includono `IgnoreError` per continuare l'elaborazione come se non si fosse verificato alcun errore, `ReportAndContinue` per registrare l'errore e continuare l'elaborazione e `ReportAndStop` per registrare l'errore e arrestare immediatamente l'elaborazione, anche se il numero di errori è inferiore al limite.  
@@ -172,7 +172,7 @@ ms.locfileid: "59240730"
  Il valore predefinito di questa proprietà è vuoto, al quale per impostazione predefinita viene assegnato il nome di file FlightRecorderTraceDef.xml.  
   
 ## <a name="query-log"></a>Query Log  
- **Si applica a:** solo in modalità server multidimensionale  
+ **Si applica a:** Solo in modalità server multidimensionale  
   
  **QueryLog\QueryLogFileName**  
  Proprietà stringa che identifica il nome del file di log delle query. Questa proprietà viene applicata solo quando viene usato un file su disco per la registrazione invece che una tabella di database (condizione predefinita).  
@@ -233,7 +233,7 @@ ms.locfileid: "59240730"
  Proprietà avanzata che deve essere modificata solo sotto la supervisione del servizio di supporto tecnico [!INCLUDE[msCoName](../../includes/msconame-md.md)] .  
   
 ## <a name="see-also"></a>Vedere anche  
- [Configurare le proprietà del server in Analysis Services](server-properties-in-analysis-services.md)   
+ [Configurare le proprietà del Server in Analysis Services](server-properties-in-analysis-services.md)   
  [Determinare la modalità server di un'istanza di Analysis Services](../instances/determine-the-server-mode-of-an-analysis-services-instance.md)  
   
   
