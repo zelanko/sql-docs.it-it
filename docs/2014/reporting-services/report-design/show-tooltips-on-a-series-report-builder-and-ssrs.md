@@ -8,15 +8,15 @@ ms.technology:
 - reporting-services-native
 ms.topic: conceptual
 ms.assetid: 4c9606ff-e1c3-4cf7-a4e7-bb16f1a9e8ab
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: dedf1cedbfc0d829ae9e1c3b10a2f4699e35cb6b
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: 5e9e02af6adf0e674d6af2775cb427440b4471c9
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56291429"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59939457"
 ---
 # <a name="show-tooltips-on-a-series-report-builder-and-ssrs"></a>Visualizzazione di descrizioni comandi in una serie (Generatore report e SSRS)
   È possibile aggiungere una descrizione comando a ogni punto dati nella serie di un grafico per visualizzare informazioni relative al punto dati, ad esempio il nome del gruppo, il valore del punto dati o la relativa percentuale rispetto al totale della serie, al passaggio del mouse sul punto dati in un report sottoposto a rendering.  

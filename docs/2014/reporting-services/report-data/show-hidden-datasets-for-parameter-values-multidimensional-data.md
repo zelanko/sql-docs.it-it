@@ -8,15 +8,15 @@ ms.technology:
 - reporting-services-native
 ms.topic: conceptual
 ms.assetid: eb01c4ca-4fd6-4629-b595-f0d2565915df
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 649fdfce5968af63ada22f6e9a2715bdca9866ad
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: ce84fc2829334d202fde2f41f35fe1c4cbac856e
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56024782"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59942831"
 ---
 # <a name="show-hidden-datasets-for-parameter-values-for-multidimensional-data-report-builder-and-ssrs"></a>Visualizzare set di dati nascosti per i valori dei parametri di dati multidimensionali (Generatore report e SSRS)
   Il report potrebbe includere set di dati generati automaticamente (noti anche come set di dati nascosti) che per impostazione predefinita non vengono visualizzati nel riquadro dei dati del report. Tali set di dati vengono creati nei modi seguenti:  

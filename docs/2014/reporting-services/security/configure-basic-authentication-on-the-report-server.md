@@ -11,15 +11,15 @@ helpviewer_keywords:
 - Reporting Services, configuration
 - Basic authentication
 ms.assetid: 8faf2938-b71b-4e61-a172-46da2209ff55
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: a605117b6d2b1011d9285c0fb02275e5abeb35ac
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 34ef8153b717c13b6fc5fdf2147b90339f8640e4
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56019332"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59942737"
 ---
 # <a name="configure-basic-authentication-on-the-report-server"></a>configurazione dell'autenticazione di base nel server di report
   Per impostazione predefinita, tramite Reporting Services vengono accettate richieste che consentono di specificare l'autenticazione con negoziazione e NTLM. Se la distribuzione include applicazioni client o browser che utilizzano l'autenticazione di base, è necessario aggiungere questo tipo di autenticazione all'elenco di tipi supportati. Inoltre, se si desidera utilizzare Generatore report, è necessario abilitare l'accesso anonimo ai relativi file.  
@@ -41,7 +41,7 @@ ms.locfileid: "56019332"
   
      Il file si trova in  *\<unità >:* \Programmi\Microsoft SQL Server\MSRS12. Services\ReportServer MSSQLSERVER\Reporting.  
   
-2.  Individuare <`Authentication`>.  
+2.  Trovare <`Authentication`>.  
   
 3.  Tra le strutture XML seguenti, copiare quella che corrisponde meglio alle proprie esigenze. Nella prima struttura XML sono disponibili segnaposti per la specifica di tutti gli elementi, descritti nella sezione successiva:  
   
@@ -74,7 +74,7 @@ ms.locfileid: "56019332"
   
      Si noti che non è possibile utilizzare `Custom` con altri tipi di autenticazione.  
   
-5.  Sostituire i valori vuoti per <`Realm`> o <`DefaultDomain`> con valori validi per l'ambiente in uso.  
+5.  Sostituire i valori vuoti per <`Realm`> o <`DefaultDomain`> con i valori validi per l'ambiente.  
   
 6.  Salvare il file.  
   

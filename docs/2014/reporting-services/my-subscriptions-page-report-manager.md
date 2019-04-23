@@ -8,15 +8,15 @@ ms.technology:
 - reporting-services-native
 ms.topic: conceptual
 ms.assetid: 491a85a3-f323-4155-a0a8-de2779899995
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 29824d30b1fdd96c2bc847b8908b49340a05aaf3
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: d2d29838c371559c54163eb8e5488d198cf28345
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56026902"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59943917"
 ---
 # <a name="my-subscriptions-page-report-manager"></a>Pagina Sottoscrizioni personali (Gestione report)
   La pagina Sottoscrizioni personali consente di visualizzare tutte le sottoscrizioni personali in un'unica posizione. Da questa pagina è possibile accedere a tutte le proprie sottoscrizioni, nonché modificarle o eliminarle. L'utente è proprietario solo delle sottoscrizioni che ha creato. Non è possibile accedere alle sottoscrizioni di altri utenti o a sottoscrizioni disponibili per l'utilizzo ma create da altri utenti, ad esempio quando il nome di un utente viene aggiunto a una sottoscrizione esistente definita da un altro utente. Non si possono creare sottoscrizioni da questa pagina. Per altre informazioni sulla creazione di sottoscrizioni, vedere la [pagina nuova sottoscrizione o modifica sottoscrizione &#40;gestione Report&#41;](../../2014/reporting-services/new-subscription-or-edit-subscription-page-report-manager.md).  

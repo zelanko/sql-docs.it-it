@@ -13,15 +13,15 @@ helpviewer_keywords:
 - modifying configuration files
 - configuration files [Reporting Services]
 ms.assetid: 21e5c32f-ad67-4917-b55a-8e21bd64f5a6
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 651f8f2fa263918a59a4756a53f1e86f4679c60e
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 63d2dff214ed1125450ec319dff4ad7f7dc36990
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56025693"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59939807"
 ---
 # <a name="reporting-services-configuration-files"></a>File di configurazione di Reporting Services
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] le informazioni sui componenti vengono archiviate nel Registro di sistema e in file di configurazione che vengono copiati nel file system durante l'installazione. I file di configurazione contengono una combinazione di valori solo per uso interno e valori definiti dall'utente. I valori definiti dall'utente vengono specificati durante l'installazione, tramite gli strumenti di configurazione e le utilità della riga di comando e mediante la modifica manuale dei file di configurazione.  
@@ -44,7 +44,7 @@ ms.locfileid: "56025693"
 C:\Program Files\Microsoft SQL Server\MSRS12.MSSQLSERVER  
 ```  
   
-|File di archiviazione|Descrizione|Località|  
+|File di archiviazione|Descrizione|Location|  
 |----------------|-----------------|--------------|  
 |RSReportServer.config|Archivia le impostazioni di configurazione delle aree di funzionalità del servizio Server di Report: Gestione report, il servizio Web ReportServer e l'elaborazione in background. Per ulteriori informazioni su ogni impostazione, vedere [RSReportServer Configuration File](rsreportserver-config-configuration-file.md).|\<Directory installazione> \Reporting Services \ReportServer|  
 |RSSrvPolicy.config|Nel file sono archiviati i criteri di sicurezza dall'accesso di codice per le estensioni del server. Per ulteriori informazioni su questo file, vedere [Using Reporting Services Security Policy Files](../extensions/secure-development/using-reporting-services-security-policy-files.md).|\<Directory installazione> \Reporting Services \ReportServer|  
@@ -65,7 +65,7 @@ C:\Program Files\Microsoft SQL Server\MSRS12.MSSQLSERVER
 C:\Program Files\Common Files\Microsoft Shared\Web Server Extensions\15\WebServices\Reporting  
 ```  
   
-|File di archiviazione|Descrizione|Località|  
+|File di archiviazione|Descrizione|Location|  
 |----------------|-----------------|--------------|  
 |RSReportServer.config|Archivia le impostazioni di configurazione delle aree di funzionalità del servizio Server di Report: Gestione report, il servizio Web ReportServer e l'elaborazione in background. Per ulteriori informazioni su ogni impostazione, vedere [RSReportServer Configuration File](rsreportserver-config-configuration-file.md).|\<Directory installazione> \Reporting Services \ReportServer|  
 |RSSrvPolicy.config|Nel file sono archiviati i criteri di sicurezza dall'accesso di codice per le estensioni del server. Per ulteriori informazioni su questo file, vedere [Using Reporting Services Security Policy Files](../extensions/secure-development/using-reporting-services-security-policy-files.md).|\<Directory installazione> \Reporting Services \ReportServer|  

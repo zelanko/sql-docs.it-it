@@ -13,15 +13,15 @@ helpviewer_keywords:
 - encryption keys [Reporting Services]
 - symmetric keys [Reporting Services]
 ms.assetid: 6773d5df-03ef-4781-beb7-9f6825bac979
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 558c27c978ec6343b6185fab3792906c6d21ad52
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 43e705bf75e70b12c8201fb583462e2ee36c31c7
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56036592"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59943197"
 ---
 # <a name="back-up-and-restore-reporting-services-encryption-keys"></a>Eseguire il backup e il ripristino delle chiavi di crittografia di Reporting Services
   Un aspetto importante della configurazione del server di report riguarda la creazione di una copia di backup della chiave simmetrica utilizzata per crittografare le informazioni riservate. La copia di backup della chiave è obbligatoria per molte operazioni di routine e consente di riutilizzare un database del server di report esistente in una nuova installazione.  
@@ -49,7 +49,7 @@ ms.locfileid: "56036592"
   
  **Modalità nativa:** Uno di Gestione configurazione Reporting Services o il **rskeymgmt** utilità.  
   
- **Modalità SharePoint:** pagine di Amministrazione centrale SharePoint o PowerShell.  
+ **Modalità SharePoint:** Pagine di amministrazione centrale SharePoint o PowerShell.  
   
 ####  <a name="bkmk_backup_sharepoint"></a> Eseguire il backup di server di report in modalità SharePoint  
  Per i server di report in modalità SharePoint è possibile utilizzare i comandi di PowerShell o le pagine di gestione per l'applicazione di servizio [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Per altre informazioni, vedere la sezione "Gestione chiavi" di [Gestire un'applicazione di servizio SharePoint di Reporting Services](../manage-a-reporting-services-sharepoint-service-application.md)  

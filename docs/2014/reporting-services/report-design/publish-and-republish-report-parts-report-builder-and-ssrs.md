@@ -8,15 +8,15 @@ ms.technology:
 - reporting-services-native
 ms.topic: conceptual
 ms.assetid: 92dce484-f39b-403c-9caf-d8772bc3aca3
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 7390aa556898f4842850b66684c74a347caba94b
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: 375d4c87b444411c0882ecb748976df40ed98412
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56293119"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59936477"
 ---
 # <a name="publish-and-republish-report-parts-report-builder-and-ssrs"></a>Pubblicare e ripubblicare parti del report (Generatore report e SSRS)
   È possibile pubblicare una parte del report con le impostazioni predefinite in un percorso predefinito o modificare i metadati della parte del report, ad esempio il nome e la descrizione, e salvarla altrove in un server di report. Il salvataggio può avvenire anche in un sito di SharePoint integrato con un server di report, se si dispone delle opportune autorizzazioni.  
@@ -35,7 +35,7 @@ ms.locfileid: "56293119"
   
      In caso contrario, scegliere **Consente di verificare e modificare le parti del report prima di eseguire la pubblicazione**.  
   
-3.  Modificare la descrizione e nome di parte di report: Fare doppio clic sul nome per modificarlo e selezionare il **descrizione** campo per aggiungere una descrizione.  
+3.  Modifica del nome e della descrizione della parte di report: fare doppio clic sul nome per modificarlo e selezionare il campo **Descrizione** per aggiungere una descrizione.  
   
     > [!NOTE]  
     >  È opportuno attribuire alla parte di report un nome e una descrizione in modo da facilitarne l'identificazione da parte degli utenti durante la ricerca. La lunghezza massima per il nome di una parte di report è 260 caratteri per il percorso intero, inclusi i nomi delle cartelle nel server, seguito dal nome effettivo della parte di report.  

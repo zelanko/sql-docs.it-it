@@ -8,15 +8,15 @@ ms.technology:
 - reporting-services-native
 ms.topic: conceptual
 ms.assetid: c33231a5-b3a8-42e4-95bc-d05bdf2222f5
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: c436b578bc1e277dbcb196e25a1a391fb74f5efc
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: 9e9d03ee424f9e192a7218f289bfe133456789d7
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56290389"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59950460"
 ---
 # <a name="lists-report-builder-and-ssrs"></a>Elenchi (Generatore report e SSRS)
   Un'area dati elenco viene ripetuta con ogni gruppo o riga nel set di dati del report. È possibile utilizzare un elenco per creare form o report in formato libero, ad esempio fatture, o in combinazione ad altre aree dati, nonché definire elenchi contenenti il numero desiderato di elementi del report. Per offrire più gruppi di dati, gli elenchi possono essere nidificati l'uno nell'altro.  
@@ -24,7 +24,7 @@ ms.locfileid: "56290389"
 > [!NOTE]  
 >  È possibile pubblicare elenchi separatamente da un report come parti del report. [!INCLUDE[ssRBrptparts](../../includes/ssrbrptparts-md.md)]  
   
- Per iniziare rapidamente con gli elenchi, vedere [esercitazione: Creazione di un Report in formato libero &#40;Generatore Report&#41;](../tutorial-creating-a-free-form-report-report-builder.md).  
+ Per una rapida introduzione agli elenchi, vedere [Esercitazione: Creazione di un report in formato libero&#40;Generatore report&#41;](../tutorial-creating-a-free-form-report-report-builder.md).  
   
  Nei report di esempio [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] è incluso un report in cui viene utilizzato un elenco. Per informazioni sugli elenchi, esplorare la definizione del report di esempio in Generatore report o Progettazione report oppure visualizzare in anteprima il report generato in Generatore report o Progettazione report. Per altre informazioni sul download dei report di esempio, vedere [(SSRS) Reporting Services Samples](https://go.microsoft.com/fwlink/?LinkID=198283).  
   
@@ -47,7 +47,7 @@ ms.locfileid: "56290389"
 ##  <a name="DisplayingLayout"></a> Visualizzazione dei dati in un layout in formato libero  
  Per organizzare i dati del report in un layout in formato libero anziché in una griglia, è possibile aggiungere un elenco all'area di progettazione. Trascinare i campi dal riquadro dei dati del report alla cella. Per impostazione predefinita, la cella contiene un rettangolo utilizzato come contenitore. Spostare ogni campo nel contenitore fino a ottenere la progettazione desiderata. Utilizzare le guide di allineamento che appaiono quando le caselle di testo vengono trascinate nel contenitore del rettangolo per consentire l'allineamento verticale e orizzontale dei bordi. Rimuovere lo spazio vuoto indesiderato modificando la dimensione della cella. Per altre informazioni, vedere [Modificare l'altezza di riga o la larghezza di colonna &#40;Generatore report e SSRS&#41;](change-row-height-or-column-width-report-builder-and-ssrs.md).  
   
- La figura seguente mostra un elenco che consente di visualizzare informazioni su un ordine, oltre ai campi: Date, Order, Qty, Product, LineTotal e un'immagine.  
+ Nella figura seguente viene riportato un elenco che include informazioni su un ordine, oltre ai campi Date, Order, Qty, Product, LineTotal e a un'immagine.  
   
  ![Elenco in visualizzazione Progettazione con 4 campi e un'immagine](../media/rs-basiclistformdesign.gif "Elenco in visualizzazione Progettazione con 4 campi e un'immagine")  
   

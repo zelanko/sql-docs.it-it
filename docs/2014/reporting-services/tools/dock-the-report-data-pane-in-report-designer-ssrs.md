@@ -10,15 +10,15 @@ ms.topic: conceptual
 helpviewer_keywords:
 - Report Data pane, docking
 ms.assetid: 8b87bb59-6083-44cb-ab34-493855b41585
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 7892e0699c9815cdf16b3f40e553f95d38ac51df
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: aa9537784b4e7118567ddc262aecac3e722432ee
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56036612"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59946637"
 ---
 # <a name="dock-the-report-data-pane-in-report-designer-ssrs"></a>Ancorare il riquadro dei dati del report in Progettazione report (SSRS)
   In [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] nel riquadro dei dati del report di Progettazione report viene visualizzata una vista gerarchica di oggetti dati che è possibile utilizzare in un report, ad esempio origini dati, set di dati, campi, parametri e immagini. Le origini dati presenti in questa vista possono essere incorporate o fare riferimento a origini dati condivise visualizzate in Esplora soluzioni.  

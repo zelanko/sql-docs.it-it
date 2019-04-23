@@ -4,18 +4,18 @@ ms.prod: sql-server-2014
 ms.technology:
 - reporting-services-native
 ms.topic: conceptual
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
 ms.reviewer: ''
 ms.custom: ''
 ms.date: 06/13/2017
-ms.openlocfilehash: 411929fe3f5640d385a70c45f9526a4a372ee160
-ms.sourcegitcommit: 46a2c0ffd0a6d996a3afd19a58d2a8f4b55f93de
+ms.openlocfilehash: 246b0be389857e002e5c9e30cb899826234a58b7
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/15/2019
-ms.locfileid: "59582207"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59939487"
 ---
 # <a name="reporting-services-report-server-sharepoint-mode"></a>Server di report di Reporting Services (modalità SharePoint)
 
@@ -81,7 +81,7 @@ Per ulteriori informazioni sull'installazione e sulla configurazione, vedere qua
   
 -   *Modalità locale*: la modalità locale consente l'esecuzione del rendering locale dei report dalla raccolta documenti di SharePoint, senza l'integrazione con un server di report di [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] . A differenza del server di report di [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] , il componente aggiuntivo di [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] per i prodotti SharePoint è obbligatorio. Il componente aggiuntivo può essere installato in diversi modi, tra cui l'Utilità preparazione prodotti Microsoft SharePoint 2010. Per altre informazioni sulla modalità locale, vedere [Report in modalità locale e Report nel Visualizzatore di Report in modalità locale &#40;Reporting Services in modalità SharePoint&#41; ](../../2014/reporting-services/local-vs-connected-mode-report-viewer-reporting-services-sharepoint-mode.md) e [dove trovare il componente aggiuntivo di Reporting Services per prodotti SharePoint](install-windows/where-to-find-the-reporting-services-add-in-for-sharepoint-products.md).  
   
--   *Modalità con connessione*: la modalità con connessione è supportata tramite l'integrazione di un server di report di [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] nella farm di SharePoint usando Amministrazione centrale SharePoint. L'integrazione con un server di report consente la creazione completa di report, fornendo le funzionalità di collaborazione di SharePoint 2010 e le funzionalità basate su server di un server di report, tra cui sottoscrizioni, snapshot ed elaborazione basata su server.  
+-   *Modalità con connessione*: Modalità con connessione è supportata tramite l'integrazione un [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] server di report nella farm di SharePoint usando Amministrazione centrale SharePoint. L'integrazione con un server di report consente la creazione report completa end-to-end, fornendo le funzionalità di collaborazione di SharePoint 2010 e le funzionalità basate su server di un server di report tra cui: Sottoscrizioni, snapshot ed elaborazione basata su server.  
   
 ##  <a name="bkmk_unsupportedsharepoint"></a> Funzionalità di SharePoint non supportate
 

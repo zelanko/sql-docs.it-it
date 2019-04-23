@@ -19,15 +19,15 @@ helpviewer_keywords:
 - SQL Server Reporting Services, tools
 - architecture [Reporting Services]
 ms.assetid: 23d616e3-eb90-43fb-9b7a-869bd7e22e7b
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 144cce158e6b4f8814392a996699ddbe214ca628
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 8cbe5a25ef6ca87c2ffa5fd83c8ff1ca0796fdae
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56016032"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59939847"
 ---
 # <a name="reporting-services-tools"></a>Strumenti di Reporting Services
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] contiene un set di strumenti grafici e di scripting che supportano lo sviluppo e l'uso di report completi in un ambiente gestito. Il set include strumenti di sviluppo, strumenti di configurazione e amministrazione e strumenti per la visualizzazione di report. In questo argomento viene fornita una breve panoramica di ogni strumento di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] e di come è possibile accedervi.  
@@ -39,7 +39,7 @@ ms.locfileid: "56016032"
   
 |Strumento|Descrizione|Modalità di accesso|  
 |----------|-----------------|-------------------|  
-|[!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)]|Un'esperienza interattiva di esplorazione e presentazione visiva dei dati progettata per consentire la creazione e l'interazione con i report basati sui modelli tabulari di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] .<br /><br /> Nota: È necessario che [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] sia in modalità SharePoint.|Browser con Silverlight.|  
+|[!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)]|Un'esperienza interattiva di esplorazione e presentazione visiva dei dati progettata per consentire la creazione e l'interazione con i report basati sui modelli tabulari di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] .<br /><br /> Nota: Richiede [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] in modalità SharePoint.|Browser con Silverlight.|  
 |Progettazione report|Utilizzare questo strumento per progettare report e per distribuirli in un server di report in modalità nativa o in modalità SharePoint.<br /><br /> Ospitato in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]<br /><br /> Riquadro dei dati del report per organizzare i dati utilizzati nel report<br /><br /> Visualizzazioni a schede per la progettazione e l'anteprima per una progettazione dei report interattiva<br /><br /> Finestre di progettazione query che consentono di specificare i dati da recuperare dalle origini dati associati ai tipi di origini dati nel [file di configurazione RSReportDesigner](../report-server/rsreportdesigner-configuration-file.md)<br /><br /> Editor espressioni con supporto IntelliSense per compilare le espressioni di [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] che consentono di personalizzare il contenuto e l'aspetto del report.<br /><br /> Supporta gli elementi del report personalizzati e le finestre Progettazione query personalizzate<br /><br /> <br /><br /> Per altre informazioni, vedere [Reporting Services in SQL Server Data Tools &#40;SSDT&#41;](reporting-services-in-sql-server-data-tools-ssdt.md).|[!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]|  
 |Generatore report|Utilizzare questo strumento per progettare report e per distribuirli in un server di report in modalità nativa o in modalità SharePoint.<br /><br /> [!INCLUDE[msCoName](../../includes/msconame-md.md)] Ambiente di creazione simile a Office<br /><br /> Possibilità di salvare elementi del report come parti di report<br /><br /> Una procedura guidata per la creazione di mappe<br /><br /> Aggregazioni di aggregazioni<br /><br /> Supporto migliorato per le espressioni<br /><br /> Finestre Progettazione query che consentono di specificare i dati da recuperare da una selezione di tipi di origini dati predefiniti<br /><br /> <br /><br /> Per altre informazioni, vedere [Generatore Report &#40;SSRS&#41;](report-builder-authoring-environment-ssrs.md).|Scaricare il file MSI o aprirlo da Gestione report/SharePoint|  
   

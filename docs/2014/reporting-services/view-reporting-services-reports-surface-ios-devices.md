@@ -14,15 +14,15 @@ helpviewer_keywords:
 - Report Viewer [Reporting Services]
 - iOS
 ms.assetid: 2124bcf5-d60a-475f-a4ae-de6df44d2860
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 5bedfa3c06a760baccd460915f313bb1bc6dcd79
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: 1453d381b38d01cca5b531661714dbbce1693d1b
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56293129"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59947968"
 ---
 # <a name="view-reporting-services-reports-on-microsoft-surface-devices-and--apple-ios-devices"></a>Visualizzare i report Reporting Services su dispositivi Microsoft Surface e Apple iOS
   In questo articolo vengono descritti i flussi di lavoro e le funzionalità di [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] supportati per i dispositivi di Microsoft Surface e i dispositivi con Apple iOS 6 e Apple Safari come l'iPad.  
@@ -49,16 +49,16 @@ Esaminare una dimostrazione per la visualizzazione dei report in un iPad.
   
 2.  Aprire il report effettuando una delle operazioni seguenti.  
   
-    -   **Avvio dalla posta elettronica:** In un messaggio di posta elettronica creato da una sottoscrizione di [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] toccare l'URL del report. Il report verrà aperto nel browser.  
+    -   **Avvio dalla posta elettronica:** Dal messaggio di posta elettronica creato da un [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] sottoscrizione, toccare l'URL del report. Il report verrà aperto nel browser.  
   
-    -   **Iniziare dal Server di Report:** passare alla directory nel server di report [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)], quindi toccare il nome del report per aprirlo.  
+    -   **Iniziare dal Server di Report:** Passare alla directory nel [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] server di report e quindi toccare il nome del report per aprire il report.  
   
-    -   **Iniziare da una raccolta documenti di SharePoint:** passare a una raccolta documenti di SharePoint che contiene report di [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)], quindi toccare il nome del report. È possibile visualizzare e interagire con il report.  
+    -   **Iniziare da una raccolta documenti di SharePoint:** Passare a una raccolta documenti di SharePoint contenente [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] i report e quindi toccare il nome del report. È possibile visualizzare e interagire con il report.  
   
         > [!IMPORTANT]  
         >  Per l'iPad, verificare che la proprietà relativa all'esplorazione privata per Safari sia disabilitata **.**  
   
-    -   **Web part di SharePoint:** se la Web part è stata aggiunta a una pagina di SharePoint, è possibile visualizzare i report di [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)].  
+    -   **Web part di SharePoint:** Se la web part è stata aggiunta a una pagina di SharePoint, è possibile visualizzare [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] i report.  
   
 3.  Sul dispositivo Microsoft Surface è inoltre possibile aprire il report utilizzando Gestione report. Sfogliare la directory in Gestione report di [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] , quindi toccare il nome del report per aprirlo.  
   

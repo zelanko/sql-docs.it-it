@@ -11,15 +11,15 @@ helpviewer_keywords:
 - reports [Reporting Services], publishing
 - publishing reports [Reporting Services]
 ms.assetid: ef5a514e-e818-4041-a8b0-15835f9a046b
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: a19db72ae854ae3ffaf4b56587642ddb37e22e0d
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: c37897df36297323d164e382b6af081f2985eaf1
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56032402"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59942677"
 ---
 # <a name="publish-reports"></a>Pubblicazione di report
   In[!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]è possibile pubblicare un solo report oppure pubblicare tutti i report e le origini dati condivise di un progetto server di report in un server di report distribuendo il progetto. Prima di pubblicare un report è necessario specificare l'URL del server di report di destinazione. Per altre informazioni, vedere [Impostare le proprietà di distribuzione &#40;Reporting Services&#41;](tools/set-deployment-properties-reporting-services.md).  
