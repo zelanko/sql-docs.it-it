@@ -12,10 +12,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: e991ad5b1b88798604f4c8ba6486af3d739c96c1
-ms.sourcegitcommit: 3cfedfeba377560d460ca3e42af1e18824988c07
+ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59041880"
 ---
 # <a name="microsoft-odbc-driver-for-sql-server"></a>Microsoft ODBC Driver for SQL Server
@@ -45,7 +45,7 @@ L'esempio di codice C++ illustra come usare le API ODBC per connettersi e accede
 - [SQL Server Native Client](../../relational-databases/native-client/features/sql-server-native-client-features.md) (le funzionalità disponibili sono applicabili anche a ODBC Driver for SQL Server senza OLEDB)
 - [Uso di Always Encrypted](../../connect/odbc/using-always-encrypted-with-the-odbc-driver.md)
 - [Uso di Azure Active Directory](../../connect/odbc/using-azure-active-directory.md)
-- [Uso della risoluzione dell'IP di rete trasparente](../../connect/odbc/using-transparent-network-ip-resolution.md)
+- [Uso della stringa di connessione TransparentNetworkIPResolution](../../connect/odbc/using-transparent-network-ip-resolution.md)
 - [Uso delle transazioni XA](../../connect/odbc/use-xa-with-dtc.md)
 
 ### <a name="linux-and-macos"></a>Linux e macOS

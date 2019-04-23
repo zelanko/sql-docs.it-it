@@ -11,17 +11,17 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 591c0cc47a4f807172cbfd24b91f465144faae09
-ms.sourcegitcommit: 3cfedfeba377560d460ca3e42af1e18824988c07
+ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59042370"
 ---
 # <a name="programming-guidelines"></a>Linee guida per la programmazione
 
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
 
-Le funzionalità di programmazione di [!INCLUDE[msCoName](../../../includes/msconame_md.md)] ODBC Driver for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] in macOS e Linux si basano su ODBC in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client ([SQL Server Native Client (ODBC)](https://go.microsoft.com/fwlink/?LinkID=134151)). [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client si basa su ODBC in Windows Data Access Components ([ODBC Programmer's Reference](https://go.microsoft.com/fwlink/?LinkID=45250)).  
+Le funzionalità di programmazione di [!INCLUDE[msCoName](../../../includes/msconame_md.md)] ODBC Driver for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] in macOS e Linux si basano su ODBC in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client ([SQL Server Native Client (ODBC)](https://go.microsoft.com/fwlink/?LinkID=134151)). [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client si basa su ODBC in Windows Data Access Components ([ODBC Programmer's Reference](https://go.microsoft.com/fwlink/?LinkID=45250), Riferimento per i programmatori di ODBC).  
 
 Un'applicazione ODBC può usare MARS (Multiple Active Result Set) e altre funzionalità specifiche di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] includendo `/usr/local/include/msodbcsql.h` dopo le intestazioni unixODBC (`sql.h`, `sqlext.h`, `sqltypes.h` e `sqlucode.h`). Per elementi specifici di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], quindi, usare gli stessi nomi simbolici che si userebbero nelle applicazioni ODBC Windows.
 
@@ -43,7 +43,7 @@ Quando si usa il driver ODBC in macOS o Linux, sono valide le sezioni seguenti d
 -   [Crittografia SSL](../../../relational-databases/native-client/features/using-encryption-without-validation.md)
 -   [Parametri con valori di tabella](https://docs.microsoft.com/sql/relational-databases/native-client-odbc-table-valued-parameters/table-valued-parameters-odbc)
 -   [UTF-8 e UTF-16 per l'interfaccia API dei comandi e dei dati](https://msdn.microsoft.com/library/ff878241.aspx)
--   [Utilizzo delle funzioni di catalogo](../../../relational-databases/native-client/odbc/using-catalog-functions.md)  
+-   [Uso delle funzioni catalogo](../../../relational-databases/native-client/odbc/using-catalog-functions.md)  
 
 ## <a name="unsupported-features"></a>Caratteristiche non supportate
 

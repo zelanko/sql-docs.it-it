@@ -14,10 +14,10 @@ author: MightyPen
 ms.author: v-jizho2
 manager: kenvh
 ms.openlocfilehash: 3550e17c8f4d6384ceafabb77aa9ca70cd80c44b
-ms.sourcegitcommit: 3cfedfeba377560d460ca3e42af1e18824988c07
+ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59042330"
 ---
 # <a name="installing-the-microsoft-odbc-driver-for-sql-server-on-linux-and-macos"></a>Installazione di Microsoft ODBC Driver for SQL Server in Linux e macOS
@@ -513,7 +513,7 @@ Il driver ODBC in Linux e MacOS include i componenti seguenti:
 |Componente|Descrizione|  
 |---------------|-----------------|  
 |libmsodbcsql-17.X.so.X.X o libmsodbcsql-13.X.so.X.X|File della libreria di collegamento dinamico dell'oggetto condiviso (`so`) che contiene tutte le funzionalità del driver. Questo file viene installato in `/opt/microsoft/msodbcsql17/lib64/` per Driver 17 e in `/opt/microsoft/msodbcsql/lib64/` per Driver 13.|  
-|`msodbcsqlr17.rll` o Gestione configurazione `msodbcsqlr13.rll`|File di risorse associato per la libreria del driver. Questo file viene installato in `[driver .so directory]../share/resources/en_US/`| 
+|`msodbcsqlr17.rll` o `msodbcsqlr13.rll`|File di risorse associato per la libreria del driver. Questo file viene installato in `[driver .so directory]../share/resources/en_US/`| 
 |msodbcsql.h|File di intestazione che contiene tutte le nuove definizioni necessarie per usare il driver.<br /><br /> **Nota:**  non è possibile fare riferimento a msodbcsql.h e odbcss.h nello stesso programma.<br /><br /> msodbcsql.h viene installato in `/opt/microsoft/msodbcsql17/include/` per Driver 17 e in `/opt/microsoft/msodbcsql/include/` per Driver 13. |
 |LICENSE.txt|File di testo che contiene i termini del contratto di licenza con l'utente finale. Questo file viene inserito in `/usr/share/doc/msodbcsql17/` per Driver 17 e in `/usr/share/doc/msodbcsql/` per Driver 13.|
 |RELEASE_NOTES|File di testo che contiene le note sulla versione. Questo file viene inserito in `/usr/share/doc/msodbcsql17/` per Driver 17 e in `/usr/share/doc/msodbcsql/` per Driver 13.|
@@ -524,7 +524,7 @@ Il driver ODBC in Linux e MacOS include i componenti seguenti:
 |Componente|Descrizione|  
 |---------------|-----------------|  
 |libmsodbcsql.17.dylib o libmsodbcsql.13.dylib|File della libreria di collegamento dinamico (`dylib`) che contiene tutte le funzionalità del driver. Questo file viene installato in `/usr/local/lib/`.|  
-|`msodbcsqlr17.rll` o Gestione configurazione `msodbcsqlr13.rll`|File di risorse associato per la libreria del driver. Questo file viene installato in `[driver .dylib directory]../share/msodbcsql17/resources/en_US/` per Driver 17 e in `[driver .dylib directory]../share/msodbcsql/resources/en_US/` per Driver 13. | 
+|`msodbcsqlr17.rll` o `msodbcsqlr13.rll`|File di risorse associato per la libreria del driver. Questo file viene installato in `[driver .dylib directory]../share/msodbcsql17/resources/en_US/` per Driver 17 e in `[driver .dylib directory]../share/msodbcsql/resources/en_US/` per Driver 13. | 
 |msodbcsql.h|File di intestazione che contiene tutte le nuove definizioni necessarie per usare il driver.<br /><br /> **Nota:**  non è possibile fare riferimento a msodbcsql.h e odbcss.h nello stesso programma.<br /><br /> msodbcsql.h viene installato in `/usr/local/include/msodbcsql17/` per Driver 17 e in `/usr/local/include/msodbcsql/` per Driver 13. |
 |LICENSE.txt|File di testo che contiene i termini del contratto di licenza con l'utente finale. Questo file viene inserito in `/usr/local/share/doc/msodbcsql17/` per Driver 17 e in `/usr/local/share/doc/msodbcsql/` per Driver 13. |
 |RELEASE_NOTES|File di testo che contiene le note sulla versione. Questo file viene inserito in `/usr/local/share/doc/msodbcsql17/` per Driver 17 e in `/usr/local/share/doc/msodbcsql/` per Driver 13. |
@@ -545,4 +545,4 @@ MacOS: `/usr/local/share/msodbcsql17/resources/en_US/`
 
 [Note sulla versione](../../../connect/odbc/linux-mac/release-notes-odbc-sql-server-linux-mac.md)
 
-[Requisiti di sistema](../../../connect/odbc/linux-mac/system-requirements.md)
+[System Requirements](../../../connect/odbc/linux-mac/system-requirements.md)

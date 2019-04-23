@@ -12,10 +12,10 @@ author: v-makouz
 ms.author: v-makouz
 manager: kenvh
 ms.openlocfilehash: f74d5a70325fdceb311bb3a45ba6824e64242ff0
-ms.sourcegitcommit: 1a4aa8d2bdebeb3be911406fc19dfb6085d30b04
+ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/03/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58872011"
 ---
 # <a name="release-notes-for-odbc-to-sql-server-on-windows"></a>Note sulla versione di ODBC per SQL Server in Windows
@@ -98,7 +98,7 @@ Questa versione di ODBC contiene il supporto per Istanza gestita del database SQ
 > - La creazione di tipi definiti dall'utente dal percorso locale non è supportata.
 > - L'autenticazione integrata di Windows non è supportata.
 > - DTC non è supportato.
-> - `sa` L'account non è presente. L'account predefinito è `cloudSA`.
+> - L'account `sa` non è presente. L'account predefinito è `cloudSA`.
 > - L'errore del token TDS (0xAA) restituisce un nome server non corretto.
 > - Non sono supportati i caratteri speciali nel nome del database.
 > - ALTER DATABASE [dbname1] MODIFY NAME = [dbname2] non è supportato.

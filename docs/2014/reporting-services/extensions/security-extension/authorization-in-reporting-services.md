@@ -4,22 +4,20 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- docset-sql-devref
-- reporting-services-native
+ms.technology: reporting-services
 ms.topic: reference
 helpviewer_keywords:
 - authorization [Reporting Services]
 ms.assetid: 15fc1c7b-560c-4737-b126-e0d428a1b530
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 5141ca13693d140e56700b46e030e1eb2b14e0e0
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: ac9f9882724e9ba0341bf11af948c948070e6774
+ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56027002"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "60153526"
 ---
 # <a name="authorization-in-reporting-services"></a>Autorizzazione in Reporting Services
   L'autorizzazione è il processo tramite cui viene determinato se a un'identità deve essere concesso il tipo di accesso richiesto a una determinata risorsa nel database del server di report. In [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] viene utilizzata un'architettura di autorizzazione basata sui ruoli che consente di concedere a un utente l'accesso a una determinata risorsa in base all'assegnazione di ruolo dell'utente per l'applicazione. Le estensioni di sicurezza per [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] contengono un'implementazione di un componente di autorizzazione utilizzata per concedere l'accesso agli utenti dopo l'autenticazione nel server di report. L'autorizzazione viene richiamata quando un utente tenta di eseguire un'operazione nel sistema o in un elemento del server di report tramite l'API SOAP e l'accesso con URL. Questo è reso possibile tramite l'interfaccia di estensione di sicurezza **IAuthorizationExtension**. Come dichiarato in precedenza, tutte le estensioni ereditano da **IExtension** l'interfaccia di base per qualsiasi estensione distribuita. **IExtension** e **IAuthorizationExtension** appartengono le **ReportingServices** dello spazio dei nomi.  
