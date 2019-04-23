@@ -8,15 +8,15 @@ ms.technology:
 - reporting-services-native
 ms.topic: conceptual
 ms.assetid: 4d67a01c-eae4-49ba-a6e8-8e983c0248f5
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: b097b327121656cda3ff8c93ec24bfe1cb35921e
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 1d3e8051c246c6ec5c29df4fc49fd0f242852354
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56035032"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59971987"
 ---
 # <a name="site-settings-page-report-manager"></a>Pagina Impostazioni sito (Gestione report)
   La pagina Impostazioni sito consente di modificare il titolo dell'applicazione, di definire le impostazioni predefinite a livello di server per i valori limite per la cronologia dei report e i valori di timeout per l'elaborazione dei report, di gestire le assegnazioni di ruolo a livello di sistema e di gestire le pianificazioni condivise. Per visualizzare questa pagina, è necessario disporre delle autorizzazioni Gestione contenuto e Amministratore sistema.  

@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: database-engine
 ms.topic: reference
 helpviewer_keywords:
 - table-valued parameters, type discovery
@@ -14,12 +12,12 @@ ms.assetid: f55818c2-ebb5-4cf6-8c0c-0da41f592560
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: bdf4acafd0a1bd2d986bbc75f5b1486d7dbb524b
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: cf3f7b4d6754902ac38172ffa0e8fc392599d307
+ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52532417"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "60154837"
 ---
 # <a name="table-valued-parameter-type-discovery"></a>Individuazione del tipo di parametro con valori di tabella
   Il consumer-, ovvero le applicazioni client che usano il [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Provider OLE DB Native Client, può individuare il tipo di ogni parametro del comando se il testo del comando è stato assegnato per il Provider OLE DB. Una volta noto il tipo di un parametro con valori di tabella, il consumer può individuare le informazioni sui metadati per ogni singola colonna del parametro con valori di tabella.  

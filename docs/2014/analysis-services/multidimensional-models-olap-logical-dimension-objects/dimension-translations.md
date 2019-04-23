@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: analysis-services
 ms.topic: reference
 helpviewer_keywords:
 - dimensions [Analysis Services], translations
@@ -19,12 +17,12 @@ ms.assetid: 38fc1e05-2ac9-4816-b52b-dfd19c3a43a2
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 99c7bb8501d386aeac0496e975a5df6d6353a25d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 81e0ecacaa185b9fe520513af57ced3b382a343c
+ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48131081"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "60156817"
 ---
 # <a name="dimension-translations"></a>Traduzioni delle dimensioni
   Una traduzione è un semplice meccanismo che consente di modificare la lingua delle etichette e delle didascalie visualizzate. Ogni traduzione è definita come una coppia di valori: una stringa con il testo tradotto e un numero con l'ID della lingua. Le traduzioni sono disponibili per tutti gli oggetti in [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Nel caso delle dimensioni è possibile tradurre anche i valori di attributo. L'applicazione client è responsabile della ricerca dell'impostazione della lingua definita dall'utente e del passaggio alla visualizzazione di tutte le didascalie e le etichette nella lingua in questione. Un oggetto può disporre di un numero illimitato di traduzioni.  
@@ -40,6 +38,6 @@ ms.locfileid: "48131081"
 ## <a name="see-also"></a>Vedere anche  
  [Traduzioni di cubi](../multidimensional-models-olap-logical-cube-objects/cube-translations.md)   
  [Le traduzioni &#40;Analysis Services&#41;](../translations-analysis-services.md)   
- [Globalizzazione suggerimenti e procedure consigliate &#40;Analysis Services&#41;](../globalization-tips-and-best-practices-analysis-services.md)  
+ [Suggerimenti e procedure consigliate per la globalizzazione &#40;Analysis Services&#41;](../globalization-tips-and-best-practices-analysis-services.md)  
   
   

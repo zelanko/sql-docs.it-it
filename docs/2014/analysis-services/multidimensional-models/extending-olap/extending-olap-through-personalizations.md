@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: analysis-services
 ms.topic: reference
 helpviewer_keywords:
 - Analysis Services, extensibility
@@ -14,12 +12,12 @@ ms.assetid: 348e49fc-4390-43c1-9b6c-61b386ff4373
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 67e1af257dcdb9700fcdfa6643a50000f9dc845f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 74c5b777dda06cf70a6afa2e6384eb2a3587d431
+ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48092191"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "60156614"
 ---
 # <a name="extending-olap-through-personalizations"></a>Estensione di OLAP tramite personalizzazioni
   In Microsoft [!INCLUDE[ssASCurrent](../../../includes/ssascurrent-md.md)] sono disponibili diverse funzioni intrinseche da utilizzare con i linguaggi MDX (Multidimensional Expressions) e DMX (Data Mining Extensions). Queste funzioni sono progettate per consentire l'esecuzione di qualsiasi operazione, dai calcoli statistici standard all'attraversamento dei membri di una gerarchia. Come avviene per qualsiasi altro prodotto complesso e affidabile, tuttavia, si è avvertita l'esigenza di estendere ulteriormente le funzionalità di questo servizio.  

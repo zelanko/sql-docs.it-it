@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: analysis-services
 ms.topic: reference
 helpviewer_keywords:
 - connections [XML for Analysis]
@@ -24,12 +22,12 @@ ms.assetid: b59f8197-c33d-4e65-9022-848ccba540f5
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: ba972db55dd5754bdd55c5c53caaaf45f8cc033f
-ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
+ms.openlocfilehash: 80bddac8f800c1b9394c1ed605007ab0f2137b88
+ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50145006"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "60158637"
 ---
 # <a name="canceling-commands-xmla"></a>Annullamento di comandi (XMLA)
   A seconda delle autorizzazioni amministrative dell'utente che invia il comando, il [annullare](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/cancel-element-xmla) comando nel codice XML per Analysis (XMLA) può annullare un comando in una sessione, una sessione, una connessione, un processo del server o una sessione associata o connessione.  

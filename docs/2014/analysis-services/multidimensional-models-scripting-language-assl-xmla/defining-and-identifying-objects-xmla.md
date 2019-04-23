@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 04/27/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: analysis-services
 ms.topic: reference
 helpviewer_keywords:
 - objects [XML for Analysis]
@@ -20,12 +18,12 @@ ms.assetid: 43b65f6d-0123-4556-81f0-c7a0b84361e5
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 595a792e515e862297389faccc324fff8727b8da
-ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
+ms.openlocfilehash: ad6c8de47577eccd7797517c8080957d7afe1abd
+ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50147986"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "60158567"
 ---
 # <a name="defining-and-identifying-objects-xmla"></a>Definizione e identificazione di oggetti (XMLA)
   Nei comandi XMLA (XML for Analysis) gli oggetti vengono identificati tramite identificatori e riferimenti all'oggetto e vengono definiti tramite comandi XMLA relativi a elementi ASSL (Analysis Services Scripting Language).  
