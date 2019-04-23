@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: database-engine
 ms.topic: reference
 helpviewer_keywords:
 - sample applications [SMO]
@@ -16,19 +14,19 @@ ms.assetid: 5eb28044-8437-466e-9c55-60941c237fbb
 author: mikeraymsft
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 90dc94e906ff9b8e99e14bef4b6b0bd158d38f37
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 933274c4e5084d50d530b1d90377648b793a6f86
+ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48136991"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "60154009"
 ---
 # <a name="link-to-programming-samples"></a>Collegamento agli esempi di programmazione
   Nella tabella seguente sono elencati gli esempi di programmazione di SMO ([!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Management Objects) disponibili nella directory [!INCLUDE[ssSampPathEng](../../includes/sssamppatheng-md.md)]Programmability\SMO. Questi esempi sono disponibili in entrambe [!INCLUDE[csprcs](../../includes/csprcs-md.md)] e [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] .NET.  
   
  Per altre informazioni su come installare gli esempi, vedere [AdventureWorks per SQL Server 2012](http://msftdbprodsamples.codeplex.com/releases/view/55330).  
   
-|Title|Description|  
+|Titolo|Descrizione|  
 |-----------|-----------------|  
 |BackRest|Illustra come eseguire il backup e il ripristino di un database.|  
 |ChangeTableOwner|Illustra come modificare la proprietà di tutte le tabelle che non sono dbo to dbo.|  
@@ -45,7 +43,7 @@ ms.locfileid: "48136991"
 |ServerConnect|Illustra come connettersi al sistema [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |ServerInfo|Visualizza l'elenco delle proprietà del server e della connessione per l'istanza selezionata di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |SMOPing|Applicazione console che si connette all'istanza selezionata di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ed esegue il dump delle proprietà selezionate. Può essere utilizzata per controllare la connessione [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
-|SQLServerList|Enumera un elenco di istanze disponibili di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
+|SQLServerList|Enumera l'elenco delle istanze disponibili di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |SQLService|Visualizza i servizi [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] disponibili per l'avvio, l'arresto, la sospensione e la ripresa.|  
 |Utilità di traccia|Legge e visualizza le informazioni di traccia da un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |Trigger|Visualizza i trigger del database.|  

@@ -4,20 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: database-engine
 ms.topic: reference
 ms.assetid: 4140d6b1-51cb-4d23-a4b6-8155360034fe
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 9e1dedaab57761c88487dbd3a61d359bcf0b3dd1
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 6c7230150807b5bdd0849ea7ad5af00dbedb4ff3
+ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53350273"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "60155667"
 ---
 # <a name="handling-large-objects-using-clr"></a>Gestione di oggetti di grandi dimensioni tramite CLR
   Nell'esempio `HandlingLOBUsingCLR` relativo a SQL Server viene illustrato il trasferimento di oggetti di grandi dimensioni (LOB) tra [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e un file system accessibile dal server tramite stored procedure Common Language Runtime (CLR). In questo esempio viene illustrata la procedura di accesso ai file nel codice sul lato server e quindi la procedura di richiamo di query dinamiche e di stored procedure dalle stored procedure basate su CLR. Viene inoltre descritta la procedura di registrazione e annullamento della registrazione di metodi e assembly CLR tramite [!INCLUDE[tsql](../../includes/tsql-md.md)].  
@@ -25,7 +23,7 @@ ms.locfileid: "53350273"
 ## <a name="prerequisites"></a>Prerequisiti  
  Per creare ed eseguire questo progetto, è necessario installare il software seguente:  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express.  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express è disponibile gratuitamente nel [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sito Web [di documentazione ed esempi di](https://go.microsoft.com/fwlink/?LinkId=31046)Express  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express è disponibile gratuitamente nel [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sito Web [di documentazione ed esempi di](https://go.microsoft.com/fwlink/?LinkId=31046)Express  
   
 -   Database AdventureWorks, disponibile nel [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sito Web [per sviluppatori di](https://go.microsoft.com/fwlink/?linkid=62796)  
   

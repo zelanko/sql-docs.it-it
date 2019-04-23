@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: analysis-services
 ms.topic: reference
 helpviewer_keywords:
 - storage [Analysis Services], partitions
@@ -23,12 +21,12 @@ ms.assetid: 86d17547-a0b6-47ac-876c-d7a5b15ac327
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: ffb6331f3e02c0974320d8d9c71df9aff7602874
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 74f53ddb6e7e3fc6b9d14ddcc726c2766a598860
+ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52507786"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "60157598"
 ---
 # <a name="partition-storage-modes-and-processing"></a>Elaborazione e modalità di archiviazione delle partizioni
   La modalità di archiviazione di una partizione influisce sulle prestazioni di esecuzione delle query e di elaborazione e su requisiti e percorsi di archiviazione della partizione e del relativo cubo e gruppo di misure padre. La scelta della modalità di archiviazione influisce inoltre sulle opzioni di elaborazione.  
@@ -76,9 +74,9 @@ ms.locfileid: "52507786"
   
 -   Le dimensioni totali di una chiave dell'indice, in [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)], non possono essere maggiori di 900 byte. [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] Questa condizione basata su colonne chiave a lunghezza fissa quando viene elaborata l'istruzione CREATE INDEX verrà verificata. Tuttavia, se sono presenti colonne a lunghezza variabile nella chiave di indice, [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] verrà inoltre verificata questa condizione per tutti gli aggiornamenti di tabelle di base. Poiché aggregazioni diverse utilizzano definizioni di viste diverse, l'elaborazione ROLAP con viste indicizzate avrà esito positivo o negativo in base alla progettazione delle aggregazioni.  
   
--   Nella sessione di creazione della vista indicizzata le seguenti opzioni devono essere impostate su ON: ARITHABORT, CONCAT_NULL_YEILDS_NULL, QUOTED_IDENTIFIER, ANSI_NULLS, ANSI_PADDING e ANSI_WARNING. Questa impostazione può essere eseguita in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
+-   Nella sessione di creazione della vista indicizzata deve avere le seguenti opzioni impostate su ON: ARITHABORT, CONCAT_NULL_YEILDS_NULL, QUOTED_IDENTIFIER, ANSI_NULLS, ANSI_PADDING e ANSI_WARNING. Questa impostazione può essere eseguita in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
   
--   Nella sessione con cui viene creata la vista indicizzata la seguente opzione deve essere impostata su OFF: NUMERIC_ROUNDABORT. Questa impostazione può essere eseguita in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
+-   Nella sessione di creazione della vista indicizzata deve avere la seguente opzione impostata su OFF: NUMERIC_ROUNDABORT. Questa impostazione può essere eseguita in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
   
 ## <a name="holap"></a>HOLAP  
  La modalità di archiviazione HOLAP combina attributi sia di MOLAP che di ROLAP. Come MOLAP, HOLAP determina le aggregazioni della partizione che deve essere archiviato in una struttura multidimensionale in un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] istanza. HOLAP non prevede l'archiviazione di una copia dei dati di origine. Per le query che accedono esclusivamente ai dati di riepilogo nelle aggregazioni di una partizione, la modalità HOLAP equivale a MOLAP. Le query che accedono ai dati di origine, ad esempio, se si desidera eseguire il drill down una cella del cubo atomica per cui non esiste alcuna aggregazione dei dati, deve recuperare dati dal database relazionale e non sarà stessa velocità con cui verrebbero usati se i dati di origine sono stati archiviati nel structur MOLAP e. Con la modalità di archiviazione HOLAP, gli utenti riscontrano in genere differenze significative nei tempi di esecuzione delle query a seconda che la query possa essere risolta dalla cache o dalle aggregazioni oppure dai dati di origine.  

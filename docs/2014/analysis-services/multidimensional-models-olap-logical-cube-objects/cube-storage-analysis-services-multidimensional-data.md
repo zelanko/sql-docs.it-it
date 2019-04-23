@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: analysis-services
 ms.topic: reference
 helpviewer_keywords:
 - measure groups [Analysis Services], cubes
@@ -19,12 +17,12 @@ ms.assetid: 1b1ad360-9a9b-4996-bee9-84238a2bb4ac
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 88bd86cad9eaf3884b19c6a74f6594d8c71ca25d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: d780010d0cae7dbbe358c9ae5e6430ed0fff4d2d
+ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48177861"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "60154337"
 ---
 # <a name="cube-storage-analysis-services---multidimensional-data"></a>Archiviazione di cubi (Analysis Services - Dati multidimensionali)
   L'archiviazione può coinvolgere solo i metadati del cubo oppure tutti i dati di origine della tabella dei fatti nonché le aggregazioni definite dalle dimensioni correlate al gruppo di misure. La quantità di dati archiviata dipende dalla modalità di archiviazione selezionata e dal numero di aggregazioni. La quantità di dati archiviata direttamente influisce sulle prestazioni di esecuzione delle query. [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] vengono utilizzate diverse tecniche per ridurre al minimo lo spazio necessario per l'archiviazione dei dati del cubo e le aggregazioni:  
@@ -44,10 +42,10 @@ ms.locfileid: "48177861"
   
  Le partizioni inizialmente vengono create con le stesse impostazioni di archiviazione del gruppo di misure in cui vengono definite. Le impostazioni di archiviazione determinano se i dati dettaglio e relativi alle aggregazioni vengono archiviati in un formato multidimensionale nell'istanza di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], in un formato relazionale nel server di origine oppure in una combinazione di entrambi questi formati. Le impostazioni di archiviazione determinano inoltre se viene utilizzata la memorizzazione nella cache attiva per elaborare automaticamente le modifiche dei dati di origine nei dati multidimensionali archiviati in [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)].  
   
- Le partizioni di un cubo non sono visibili all'utente. La scelta di impostazioni di archiviazione per partizioni diverse può tuttavia influire sull'immediatezza dei dati, sulla quantità di spazio su disco utilizzato e sulle prestazioni delle query. È possibile archiviare le partizioni in più istanze di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. In questo modo all'archiviazione dei cubi viene applicata la tecnica dei cluster e il carico di lavoro viene distribuito tra server [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Per altre informazioni, vedere [modalità di archiviazione delle partizioni e l'elaborazione](partitions-partition-storage-modes-and-processing.md), [partizioni Remote](partitions-remote-partitions.md), e [partizioni &#40;Analysis Services - dati multidimensionali&#41; ](partitions-analysis-services-multidimensional-data.md).  
+ Le partizioni di un cubo non sono visibili all'utente. La scelta di impostazioni di archiviazione per partizioni diverse può tuttavia influire sull'immediatezza dei dati, sulla quantità di spazio su disco utilizzato e sulle prestazioni delle query. È possibile archiviare le partizioni in più istanze di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. In questo modo all'archiviazione dei cubi viene applicata la tecnica dei cluster e il carico di lavoro viene distribuito tra server [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . Per altre informazioni, vedere [modalità di archiviazione delle partizioni e l'elaborazione](partitions-partition-storage-modes-and-processing.md), [partizioni Remote](partitions-remote-partitions.md), e [partizioni &#40;Analysis Services - dati multidimensionali&#41; ](partitions-analysis-services-multidimensional-data.md).  
   
 ## <a name="linked-measure-groups"></a>Gruppi di misure collegati  
- Sebbene l'archiviazione di più copie di un cubo in più istanze di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] possa richiedere uno spazio su disco notevole, tale operazione consente di ridurre considerevolmente lo spazio necessario sostituendo le copie del gruppo di misure con i gruppi di misure collegati. Un gruppo di misure collegato si basa su un gruppo di misure di un cubo in un altro database di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], nella stessa istanza di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] oppure in un'istanza diversa. I gruppi di misure collegati possono essere utilizzati anche con le dimensioni collegate dello stesso cubo di origine. Le dimensioni e i gruppi di misure collegati utilizzano le aggregazioni del cubo di origine e non prevedono quindi requisiti di archiviazione dei dati propri. Pertanto, se si archiviano i gruppi di misure e le dimensioni di un'origine in un database e si creano cubi e dimensioni collegati in cubi di altri database, lo spazio su disco necessario per l'archiviazione sarà decisamente inferiore. Per altre informazioni, vedere [Linked Measure Groups](../multidimensional-models/linked-measure-groups.md).  
+ Sebbene l'archiviazione di più copie di un cubo in più istanze di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]possa richiedere uno spazio su disco notevole, tale operazione consente di ridurre considerevolmente lo spazio necessario sostituendo le copie del gruppo di misure con i gruppi di misure collegati. Un gruppo di misure collegato si basa su un gruppo di misure di un cubo in un altro database di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , nella stessa istanza di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]oppure in un'istanza diversa. I gruppi di misure collegati possono essere utilizzati anche con le dimensioni collegate dello stesso cubo di origine. Le dimensioni e i gruppi di misure collegati utilizzano le aggregazioni del cubo di origine e non prevedono quindi requisiti di archiviazione dei dati propri. Pertanto, se si archiviano i gruppi di misure e le dimensioni di un'origine in un database e si creano cubi e dimensioni collegati in cubi di altri database, lo spazio su disco necessario per l'archiviazione sarà decisamente inferiore. Per ulteriori informazioni, vedere [Linked Measure Groups](../multidimensional-models/linked-measure-groups.md).  
   
 ## <a name="see-also"></a>Vedere anche  
  [Aggregazioni e progettazione di aggregazioni](aggregations-and-aggregation-designs.md)  

@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: analysis-services
 ms.topic: reference
 helpviewer_keywords:
 - statistical information [XML for Analysis]
@@ -20,12 +18,12 @@ ms.assetid: 4dd27afa-10c7-408d-bc24-ca74217ddbcb
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: c1128fccb209c38f4b33009b3045f0f3ad2aebb1
-ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
+ms.openlocfilehash: 81450789395dfef84f81896990fa251514d3489e
+ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50148156"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "60156137"
 ---
 # <a name="designing-aggregations-xmla"></a>Progettazione di aggregazioni (XMLA)
   Le progettazioni delle aggregazioni sono associate alle partizioni di un gruppo di misure specifico per garantire che utilizzino la stessa struttura nell'archiviazione delle aggregazioni. Usando la stessa struttura di archiviazione per le partizioni consente di definire in modo semplice partizioni che possono essere unite in un secondo momento usando il [MergePartitions](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/mergepartitions-element-xmla) comando. Per altre informazioni sulle progettazioni delle aggregazioni, vedere [aggregazioni e progettazione di aggregazioni](../multidimensional-models-olap-logical-cube-objects/aggregations-and-aggregation-designs.md).  
@@ -103,7 +101,7 @@ ms.locfileid: "50148156"
 ## <a name="returning-design-statistics"></a>Restituzione di statistiche relative alla progettazione  
  Quando il comando `DesignAggregations` restituisce il controllo all'applicazione client, viene restituito anche un set di righe contenente un'unica riga che rappresenta le statistiche relative alla progettazione per il comando. Nel set di righe sono contenute le colonne elencate nella tabella seguente.  
   
-|colonna|Tipo di dati|Description|  
+|colonna|Tipo di dati|Descrizione|  
 |------------|---------------|-----------------|  
 |Passaggi|Valore intero|Numero di passaggi eseguiti dal comando prima di restituire il controllo all'applicazione client.|  
 |Time|Long integer|Numero di millisecondi necessari al comando prima di restituire il controllo all'applicazione client.|  

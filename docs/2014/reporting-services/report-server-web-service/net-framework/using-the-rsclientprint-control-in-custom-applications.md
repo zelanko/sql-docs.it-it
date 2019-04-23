@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- docset-sql-devref
-- reporting-services-native
+ms.technology: reporting-services
 ms.topic: reference
 helpviewer_keywords:
 - RSPrintClient control
@@ -14,15 +12,15 @@ helpviewer_keywords:
 - custom printing [Reporting Services]
 - client-side printing
 ms.assetid: 8c0bdd18-8905-4e22-9774-a240fc81a8a7
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 0cddac844ac9603da32a4fabc47fa71a8ddcd226
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 28f4cdf562db1b3008db239a08b76097dc5d7e46
+ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56036602"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "60157711"
 ---
 # <a name="using-the-rsclientprint-control-in-custom-applications"></a>Utilizzo del controllo RSClientPrint in applicazioni personalizzate
   Il controllo [!INCLUDE[msCoName](../../../includes/msconame-md.md)] ActiveX **RSPrintClient** consente la stampa sul lato client dei report visualizzati nel Visualizzatore HTML. Offre una finestra di dialogo **Stampa** per consentire all'utente di avviare un processo di stampa, visualizzare un'anteprima di un report, specificare le pagine da stampare e modificare i margini. Durante la stampa sul lato client, il server di report esegue il rendering del report con l'estensione per il rendering Immagine (EMF) e utilizza le funzionalità di stampa del sistema operativo per creare il processo di stampa e inviarlo a una stampante.  
@@ -107,7 +105,7 @@ ms.locfileid: "56036602"
 |Argomento|I/O|Tipo|Descrizione|  
 |--------------|----------|----------|-----------------|  
 |ServerPath|In|String|Specifica la directory virtuale del server di report (ad esempio, https://adventure-works/reportserver).|  
-|ReportPathParameters|In|String|Specifica il nome completo del report nello spazio dei nomi delle cartelle del server di report, inclusi i parametri. I report vengono recuperati mediante l'accesso a un URL, ad esempio "/AdventureWorks Sample Reports/Employee Sales Summary&EmpID=1234"|  
+|ReportPathParameters|In|String|Specifica il nome completo del report nello spazio dei nomi delle cartelle del server di report, inclusi i parametri. I report vengono recuperati mediante l'accesso a un URL, Ad esempio: "/ AdventureWorks Sample Reports/Employee Sales Summary&empID=1234 EventID=1234"|  
 |ReportName|In|String|Nome breve del report (nell'esempio precedente è Employee Sales Summary) che viene visualizzato nella finestra di dialogo di stampa e nella coda di stampa.|  
   
 ### <a name="example"></a>Esempio  

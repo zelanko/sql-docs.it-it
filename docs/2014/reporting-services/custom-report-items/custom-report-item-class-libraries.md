@@ -4,23 +4,21 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- docset-sql-devref
-- reporting-services-native
+ms.technology: reporting-services
 ms.topic: reference
 helpviewer_keywords:
 - custom report items, RDL
 - RDL [Reporting Services], custom report items
 ms.assetid: f18c5d8f-1d6b-4f0b-8657-c14896c2ce0d
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 5a5586ac74b77a6019d83a451a0b94fa2aa1bca2
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: b7fc20f857f42c854fcf01947c39ea88206bb5b8
+ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56012542"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "60156087"
 ---
 # <a name="custom-report-item-class-libraries"></a>Librerie di classi dell'elemento del report personalizzato
   Gli elementi del report personalizzati utilizzano le classi dello spazio dei nomi `Microsoft.ReportDesigner`. Le classi utilizzate per implementare un elemento del report personalizzato possono essere suddivise in due categorie principali: le classi univoche progettate per supportare l'infrastruttura dell'elemento del report personalizzato e le classi wrapper gestite che incapsulano la funzionalità degli elementi RDL (Report Definition Language) rilevanti. Per un esempio di codice sull'uso di queste classi, vedere [SQL Server Reporting Services Product Samples](https://go.microsoft.com/fwlink/?LinkId=177889) (Esempi del prodotto SQL Server Reporting Services).  
@@ -65,7 +63,7 @@ ms.locfileid: "56012542"
 |`OnPaint`|Viene chiamato in risposta all'evento `Paint`.|  
   
 ### <a name="microsoftreportdesignercustomreportitemattribute"></a>Microsoft.ReportDesigner.CustomReportItemAttribute  
- Attributo utilizzato per identificare il tipo di elemento del report personalizzato. Il nome deve corrispondere al valore dell'attributo <`Name`> dell'elemento `ReportItem` nel file di configurazione di Progettazione report.  
+ Attributo utilizzato per identificare il tipo di elemento del report personalizzato. Il nome deve corrispondere al valore della <`Name`> attributo del `ReportItem` elemento nel file di configurazione di progettazione Report.  
   
 #### <a name="public-methods"></a>Metodi pubblici  
   
@@ -123,7 +121,7 @@ ms.locfileid: "56012542"
 |`EditValue`|Richiama l'Editor espressioni, inizializzato con il valore dell'oggetto specificato.|  
   
 ### <a name="microsoftreportdesignerifieldsdataobject"></a>Microsoft.ReportDesigner.IFieldsDataObject  
- Questa classe è una raccolta di campi di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] e viene utilizzata per supportare eventi di trascinamento della selezione nell'ambiente di progettazione. Eredita dall'oggetto `IReportItemDataObject`.  
+ Questa classe è una raccolta di campi di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] e viene utilizzata per supportare eventi di trascinamento della selezione nell'ambiente di progettazione. Eredita da `IReportItemDataObject`.  
   
 #### <a name="public-properties"></a>Proprietà pubbliche  
   

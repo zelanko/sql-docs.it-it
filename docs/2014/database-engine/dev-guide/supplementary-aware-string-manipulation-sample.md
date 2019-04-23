@@ -4,20 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: database-engine
 ms.topic: reference
 ms.assetid: 343a1cd6-94e9-4200-9d17-11cef0d73f73
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 820e418e9de194c038ca8b9fcd0dbed2db18bab7
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 48017f32b5c010498dc089982900b60f03371830
+ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53364293"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "60153900"
 ---
 # <a name="supplementary-aware-string-manipulation-sample"></a>Esempio di modifica di stringhe in grado di riconoscere caratteri supplementari
   In questo esempio per [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] viene illustrata l'elaborazione di stringhe con supporto per i caratteri supplementari. Nell'esempio viene illustrata l'implementazione di cinque funzioni per i valori stringa Transact-SQL che offrono le stesse funzioni di manipolazione dei valori stringa di quelle predefinite, nonché ulteriori capacità di supporto dei caratteri supplementari, che consentono di gestire sia le stringhe Unicode sia quelle contenenti caratteri supplementari. Le cinque funzioni sono LENS (), `lefts(), rights(), subs()` e `replace_s()` equivalenti per le funzioni predefinite `LEN(), LEFT(), RIGHT(), SUBSTRING()` e `REPLACE()` funzioni per valori stringa.  
@@ -25,7 +23,7 @@ ms.locfileid: "53364293"
 ## <a name="prerequisites"></a>Prerequisiti  
  Per creare ed eseguire questo progetto, è necessario installare il software seguente:  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express.  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express è disponibile gratuitamente nel [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sito Web [di documentazione ed esempi di](https://go.microsoft.com/fwlink/?LinkId=31046)Express  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express è disponibile gratuitamente nel [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sito Web [di documentazione ed esempi di](https://go.microsoft.com/fwlink/?LinkId=31046)Express  
   
 -   Database AdventureWorks, disponibile nel [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sito Web [per sviluppatori di](https://go.microsoft.com/fwlink/?linkid=62796)  
   

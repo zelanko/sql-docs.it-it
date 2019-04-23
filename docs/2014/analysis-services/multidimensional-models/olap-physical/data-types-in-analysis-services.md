@@ -4,20 +4,18 @@ ms.custom: ''
 ms.date: 04/27/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: analysis-services
 ms.topic: reference
 ms.assetid: 910be4f4-3010-41cd-9fdc-f0a79a0ce823
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 5c697a0bcf7c7b338169100aeac0d65b341c86f5
-ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
+ms.openlocfilehash: 4ecdc64918e582f25f0e017d263c66e78c0d1bee
+ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50146356"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "60155607"
 ---
 # <a name="data-types-in-analysis-services"></a>Tipi di dati in Analysis Services
   Per tutti i <xref:Microsoft.AnalysisServices.DataItem> oggetti [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] supporta il subset seguente di `System.Data.OleDb.OleDbType`. Per impostare o leggere il tipo di dati, usare [tipo di dati DataItem &#40;ASSL&#41;](https://docs.microsoft.com/bi-reference/assl/data-type/dataitem-data-type-assl).  
@@ -49,7 +47,7 @@ ms.locfileid: "50146356"
 |------------|-------------|------------------------|  
 |DimensionAttribute|KeyColumns|Tutti tranne i dati binari|  
 ||NameColumn|Solo WChar|  
-||SkippedLevelsColumns|Solo tipi integer: BigInt, Integer, SmallInt, TinyInt, UnsignedBigInt, UnsignedInt, UnsignedSmallInt e UnsignedTinyInt|  
+||SkippedLevelsColumns|Solo i tipi integer: BigInt, Integer, SmallInt, TinyInt, UnsignedBigInt, UnsignedInt, UnsignedSmallInt, UnsignedTinyInt|  
 ||CustomRollupColumn|Solo WChar|  
 ||CustomRollupPropertiesColumn|Solo WChar|  
 ||UnaryOperatorColumn|Solo WChar|  
@@ -59,6 +57,6 @@ ms.locfileid: "50146356"
 ||NameColumn|Solo WChar|  
 |TableMiningStructureColumn|ForeignKeyColumns|Tutti tranne i dati binari|  
 |MeasureGroupAttribute|KeyColumns|Tutti tranne i dati binari|  
-|Misura Distinct Count|Origine|BigInt, Currency, Double, Integer, Single, SmallInt, TinyInt, UnsignedBigInt, UnsignedInt, UnsignedSmallInt e UnsignedTinyInt|  
+|Misura Distinct Count|Source|BigInt, Currency, Double, Integer, Single, SmallInt, TinyInt, UnsignedBigInt, UnsignedInt, UnsignedSmallInt e UnsignedTinyInt|  
   
   

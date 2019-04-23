@@ -4,20 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: database-engine
 ms.topic: reference
 ms.assetid: 9623013f-15f1-4614-8dac-1155e57c880c
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 83a9816afeae77036616bec4e850c09f613f0f74
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: b704f24379a0d56f738b28f9553cf03d214b9e3c
+ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58531313"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "60158267"
 ---
 # <a name="string-utility-functions-sample"></a>Esempio String Utility Functions
   L'esempio String Utilities include una funzione di flusso con valori di tabella, scritta in Visual C# e Visual Basic, che consente di dividere una stringa delimitata da virgole in una tabella con una colonna, nonché una funzione di aggregazione che consente di convertire una colonna stringa in una stringa delimitata da virgole.  Vengono inoltre implementate una funzione scalare e una funzione con valori di tabella che garantiscono funzionalità di ricerca e sostituzione di espressioni regolari.  
