@@ -8,15 +8,15 @@ ms.technology:
 - reporting-services-native
 ms.topic: conceptual
 ms.assetid: fff24978-e3bd-4fac-8cd7-d6aa81f3cc25
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: a636559f5d90bd4e0fec5cf9df140e88f17796a6
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: d998c2f9ecc19167f34530e6fa2d0190f71287ce
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56286549"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59956567"
 ---
 # <a name="change-a-chart-type-report-builder-and-ssrs"></a>Modificare un tipo di grafico (Generatore report e SSRS)
   Quando si inserisce innanzitutto un grafico in un report, il **Seleziona tipo di grafico** viene visualizzata la finestra. Se si elimina questa finestra di dialogo, per impostazione predefinita viene aggiunto un istogramma.  

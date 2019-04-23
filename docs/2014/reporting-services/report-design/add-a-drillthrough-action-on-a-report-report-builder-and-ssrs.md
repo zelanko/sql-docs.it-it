@@ -8,15 +8,15 @@ ms.technology:
 - reporting-services-native
 ms.topic: conceptual
 ms.assetid: 153729c4-d01e-4629-b78f-0cfd5a7f83da
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: d6924f93adaa34af925704396d208c17723234a1
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: 9861bc63a8fd1e4dd76fb030baf2a11c2774961a
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56288559"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59943847"
 ---
 # <a name="add-a-drillthrough-action-on-a-report-report-builder-and-ssrs"></a>Aggiungere un'azione drill-through a un report (Generatore report e SSRS)
   Il report visualizzato quando si fa clic sul collegamento nel report principale è noto come *report drill-through*. Questo collegamento drill-through consente un'azione drill-through.  

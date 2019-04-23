@@ -8,15 +8,15 @@ ms.technology:
 - reporting-services-native
 ms.topic: conceptual
 ms.assetid: f6641f59-5267-4f57-8957-63b93d1a9679
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 458a04b87bf8aedd0d772e18ceb9cbc669fe6ba4
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 4a18e523c8d839cc6ec9e0c64c94ad648b1c1d0c
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56042352"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59954347"
 ---
 # <a name="snapshot-options-properties-page-report-manager"></a>Pagina delle proprietà Opzioni snapshot (Gestione report)
   Utilizzare la pagina delle proprietà Opzioni snapshot per pianificare gli snapshot del report da aggiungere alla cronologia del report e impostare limiti per il numero di snapshot del report archiviati nella cronologia.  

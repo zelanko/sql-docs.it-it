@@ -10,15 +10,15 @@ ms.topic: conceptual
 helpviewer_keywords:
 - report servers [Reporting Services], network load balancing
 ms.assetid: 6bfa5698-de65-43c3-b940-044f41c162d3
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: a0b2a24a0db089262512094b5cb33c2eda695094
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 4587f4e496e5542e53df40741c1dcdf6e9abc6ce
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56042811"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59941847"
 ---
 # <a name="configure-a-report-server-on-a-network-load-balancing-cluster"></a>Configurare un server di report in un cluster per il bilanciamento del carico di rete
   Se si intende configurare la scalabilità orizzontale di un server di report per l'esecuzione in un cluster per il bilanciamento del carico di rete (NLB, Network Load Balancing), è necessario effettuare le operazioni seguenti:  
@@ -38,7 +38,7 @@ ms.locfileid: "56042811"
 |----------|-----------------|----------------------|  
 |1|Prima di installare Reporting Services nei nodi del server in un cluster per il bilanciamento del carico di rete, verificare i requisiti per la distribuzione con scalabilità orizzontale.|[Configurare una distribuzione con scalabilità orizzontale Server Report in modalità nativa &#40;Gestione configurazione SSRS&#41; ](../install-windows/configure-a-native-mode-report-server-scale-out-deployment.md) [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] documentazione Online|  
 |2|Configurare il cluster per il bilanciamento del carico di rete e verificarne il corretto funzionamento.<br /><br /> Assicurarsi di eseguire il mapping di un nome dell'intestazione host all'IP del server virtuale del cluster per il bilanciamento del carico di rete. Il nome dell'intestazione host viene utilizzato nell'URL del server di report ed è più semplice da ricordare e digitare rispetto a un indirizzo IP.|Per ulteriori informazioni, vedere la documentazione di Windows Server relativa alla versione del sistema operativo Windows utilizzato.|  
-|3|Aggiungere il nome del NetBIOS e il nome di dominio completo (FQDN) per l'intestazione host all'elenco di **BackConnectionHostNames** archiviato nel Registro di sistema di Windows. Usare la procedura descritta in **metodo 2: Specificare i nomi host** nelle [KB 896861](https://support.microsoft.com/kb/896861) (https://support.microsoft.com/kb/896861), con la regolazione seguente. In base a quanto specificato nel**passaggio 7** dell'articolo della KB: uscire dall'editor del Registro di sistema e riavviare il servizio IISAdmin. Si consiglia, invece, di riavviare il computer per assicurarsi che le modifiche abbiano effetto.<br /><br /> Ad esempio, se il nome dell'intestazione host \<MyServer> è un nome virtuale per il nome computer Windows "contoso", probabilmente è possibile fare riferimento al modulo FQDN come "contoso.domain.com". Sarà necessario aggiungere il nome di intestazione host (MyServer ) e il nome FQDN (contoso.domain.com) all'elenco in **BackConnectionHostNames**.|Questo passaggio è obbligatorio se l'ambiente server implica l'autenticazione NTLM sul computer locale, creando una connessione loopback.<br /><br /> In tal caso, le richieste tra Gestione report e Server di report restituiscono un errore 401 (Unauthorized).|  
+|3|Aggiungere il nome del NetBIOS e il nome di dominio completo (FQDN) per l'intestazione host all'elenco di **BackConnectionHostNames** archiviato nel Registro di sistema di Windows. Seguire i passaggi descritti in **Method 2: Specify host names** (Metodo 2: Specificare i nomi host) nell'articolo [KB 896861](https://support.microsoft.com/kb/896861) (https://support.microsoft.com/kb/896861), con la rettifica seguente. In base a quanto specificato nel**passaggio 7** dell'articolo della KB: uscire dall'editor del Registro di sistema e riavviare il servizio IISAdmin. Si consiglia, invece, di riavviare il computer per assicurarsi che le modifiche abbiano effetto.<br /><br /> Ad esempio, se il nome dell'intestazione host \<MyServer> è un nome virtuale per il nome computer Windows "contoso", probabilmente è possibile fare riferimento al modulo FQDN come "contoso.domain.com". Sarà necessario aggiungere il nome di intestazione host (MyServer ) e il nome FQDN (contoso.domain.com) all'elenco in **BackConnectionHostNames**.|Questo passaggio è obbligatorio se l'ambiente server implica l'autenticazione NTLM sul computer locale, creando una connessione loopback.<br /><br /> In tal caso, le richieste tra Gestione report e Server di report restituiscono un errore 401 (Unauthorized).|  
 |4|Installare [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] in modalità solo file in nodi che appartengono già a un cluster per il bilanciamento del carico di rete e configurare le istanze del server di report per la distribuzione con scalabilità orizzontale.<br /><br /> La scalabilità orizzontale configurata potrebbe non rispondere a richieste indirizzate all'IP del server virtuale. La configurazione della scalabilità orizzontale per l'utilizzo dell'IP del server virtuale viene effettuata in un passaggio successivo, dopo la configurazione della convalida dello stato di visualizzazione.|[Configurare una distribuzione con scalabilità orizzontale di un server di report in modalità nativa &#40;Gestione configurazione SSRS&#41;](../install-windows/configure-a-native-mode-report-server-scale-out-deployment.md)|  
 |5|Configurare la convalida dello stato di visualizzazione.<br /><br /> Per ottenere risultati ottimali, eseguire questo passaggio dopo avere configurato la distribuzione con scalabilità orizzontale e prima di configurare le istanze del server di report per l'utilizzo dell'IP del server virtuale. Configurando innanzitutto la convalida dello stato di visualizzazione, è possibile evitare eccezioni a causa di errori di convalida dello stato quando gli utenti tentano di accedere a report interattivi.|[Come configurare la convalida dello stato di visualizzazione](#ViewState) in questo argomento.|  
 |6|Configurare `Hostname` e `UrlRoot` per l'utilizzo dell'IP del server virtuale del cluster per il bilanciamento del carico di rete.|[Come configurare Hostname e UrlRoot](#SpecifyingVirtualServerName) in questo argomento.|  
@@ -59,13 +59,13 @@ ms.locfileid: "56042811"
     <machineKey validationKey="123455555" decryptionKey="678999999" validation="SHA1" decryption="AES"/>  
     ```  
   
-2.  Aprire il file Web.config di Gestione report, quindi nella sezione <`system.web`> incollare l'elemento <`machineKey`> generato. Per impostazione predefinita, il file Web.config di Gestione report si trova in \Programmi\Microsoft SQL Server\MSRS10_50.MSSQLSERVER\Reporting Services\ReportManager\Web.config.  
+2.  Aprire il file Web. config per gestione Report, quindi di <`system.web`> sezione incollare la <`machineKey`> elemento che è stato generato. Per impostazione predefinita, il file Web.config di Gestione report si trova in \Programmi\Microsoft SQL Server\MSRS10_50.MSSQLSERVER\Reporting Services\ReportManager\Web.config.  
   
 3.  Salvare il file.  
   
 4.  Ripetere il passaggio precedente per ogni server di report presente nella distribuzione con scalabilità orizzontale.  
   
-5.  Verificare che tutti i file Web.Config nelle cartelle \Reporting Services\Report Manager contengano elementi <`machineKey`> identici nella sezione <`system.web`>.  
+5.  Verificare che tutti i file Web. config nelle cartelle services\report Manager contengano identici <`machineKey`> elementi di <`system.web`> sezione.  
   
 ##  <a name="SpecifyingVirtualServerName"></a> Come configurare Hostname e UrlRoot  
  Per configurare una distribuzione con scalabilità orizzontale del server di report in un cluster per il bilanciamento del carico di rete, è necessario definire un unico nome del server virtuale che fornisce un singolo punto di accesso al cluster di server. Successivamente, registrare il nome del server virtuale con Domain Name Server (DNS) nel proprio ambiente.  
@@ -108,9 +108,9 @@ ms.locfileid: "56042811"
   
 1.  Aprire il file RSReportServer.config in un editor di testo.  
   
-2.  Trovare <`Hostname`>, <`ReportServerUrl`> e <`UrlRoot`>, quindi verificare il nome host per ogni impostazione. Se il valore non corrisponde al nome host previsto, sostituirlo con il nome host corretto.  
+2.  Trovare <`Hostname`>, <`ReportServerUrl`>, e <`UrlRoot`>, quindi verificare il nome host per ogni impostazione. Se il valore non corrisponde al nome host previsto, sostituirlo con il nome host corretto.  
   
- Se si avvia lo strumento di configurazione di Reporting Services dopo avere apportato queste modifiche, lo strumento potrebbe modificare le impostazioni di <`ReportServerUrl`> ripristinando il valore predefinito. Mantenere sempre una copia di backup dei file di configurazione per i casi in cui sia necessario sostituirli con la versione contenente le impostazioni che si desidera utilizzare.  
+ Se si avvia lo strumento di configurazione di Reporting Services dopo aver apportato queste modifiche, lo strumento potrebbe modificare il <`ReportServerUrl`> impostazioni per il valore predefinito. Mantenere sempre una copia di backup dei file di configurazione per i casi in cui sia necessario sostituirli con la versione contenente le impostazioni che si desidera utilizzare.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Gestione configurazione Reporting Services &#40;modalità nativa&#41;](../../sql-server/install/reporting-services-configuration-manager-native-mode.md)   

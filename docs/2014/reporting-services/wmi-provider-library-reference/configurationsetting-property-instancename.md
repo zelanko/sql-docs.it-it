@@ -16,15 +16,15 @@ topic_type:
 helpviewer_keywords:
 - InstanceName property
 ms.assetid: 5e8aa5fb-2d4a-45ac-bbd8-47ed3c667cbb
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 9ff7824705c167b2747e30e590d13f4fe1566caa
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 8dfe34895ae18f3195ee90882ed0b400299418e3
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56040222"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59932187"
 ---
 # <a name="instancename-property-wmi-msreportserverconfigurationsetting"></a>Proprietà InstanceName (MSReportServer_ConfigurationSetting WMI)
   Specifica il nome di un'istanza del server di report in un determinato computer. Di sola lettura.  

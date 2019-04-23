@@ -13,12 +13,12 @@ ms.assetid: 1af22188-e08b-4c80-a27e-4ae6ed9ff969
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: c9acd3857115a2f6fc13e74d4129630286a27323
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 6ad0e30c0db83daf7e0cae4f7353d1f0a96a96d9
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53356134"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59953827"
 ---
 # <a name="configure-sql-server-to-use-soft-numa-sql-server"></a>Configurare SQL Server per l'utilizzo di Soft-NUMA (SQL Server)
 I processori moderni sono costituiti da multipli a molti core per socket. Ogni socket è solitamente rappresentato come un unico nodo NUMA. Il motore di database di SQL Server suddivide le varie strutture interne e i thread del servizio per nodo NUMA. Con i processori che contiene 10 o più core per socket, l'uso di NUMA (soft-NUMA) per suddividere i nodi NUMA hardware in genere aumenta la scalabilità e prestazioni.   
@@ -27,7 +27,6 @@ I processori moderni sono costituiti da multipli a molti core per socket. Ogni s
 > L'architettura soft-NUMA consente di aggiungere processori a caldo.
   
 ## <a name="automatic-soft-numa"></a>Architettura soft-NUMA automatica
-
 A partire da SQL Server 2014 Service Pack 2, ogni volta che il server del motore di database rileva più di 8 processori fisici all'avvio, vengono creati automaticamente nodi soft-NUMA se il flag di traccia 8079 è abilitato come parametro di avvio. Memorie centrali del processore e con hyperthreading non vengono presi in considerazione per il conteggio dei processori fisici. Quando il numero di processori fisici rilevato è superiore a 8 per ogni socket, il servizio motore di database crea nodi soft-NUMA che idealmente contengono 8 core, può essere tuttavia ridotto a 5 o incrementato a 9 processori logici per nodo. La dimensione del nodo hardware può essere limitata da una maschera di affinità di CPU. Il numero di nodi NUMA non supererà mai il numero massimo di nodi NUMA supportati.
 
 Senza il flag di traccia, soft-NUMA è disabilitato per impostazione predefinita. È possibile abilitare soft-NUMA usando il flag di traccia 8079. Per rendere effettiva la modifica del valore di questa impostazione è necessario riavviare il motore di database.
@@ -36,9 +35,12 @@ La figura seguente illustra il tipo di informazioni riguardanti soft-NUMA che ve
 
 ![Soft-NUMA](./media/soft-numa-sql-server/soft-numa.PNG)
 
+> [!NOTE]
+> A partire da SQL Server 2016 questo comportamento è controllato dal motore e trace flag 8079 non ha alcun effetto.
+
 ## <a name="manual-soft-numa"></a>Architettura soft-NUMA manuale
   
-Per configurare [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] per usare soft-NUMA manuale, è necessario modificare il Registro di sistema per aggiungere una maschera di affinità di configurazione di nodo. La maschera soft-NUMA può essere dichiarata come voce del Registro di sistema binaria, DWORD (esadecimale o decimale) o QWORD (esadecimale o decimale). Per configurare un numero maggiore rispetto alle prime 32 CPU, utilizzare i valori del Registro di sistema QWORD o BINARY. I valori QWORD non possono essere usati nelle versioni precedenti a [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]. È necessario riavviare il [!INCLUDE[ssDE](../../includes/ssde-md.md)] per configurare soft-NUMA.  
+Per configurare [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] per usare soft-NUMA manuale, è necessario modificare il Registro di sistema per aggiungere una maschera di affinità di configurazione di nodo. La maschera soft-NUMA può essere dichiarata come voce del Registro di sistema binaria, DWORD (esadecimale o decimale) o QWORD (esadecimale o decimale). Per configurare un numero maggiore rispetto alle prime 32 CPU, utilizzare i valori del Registro di sistema QWORD o BINARY. I valori QWORD non possono essere usati nelle versioni precedenti a [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]. È necessario riavviare il [!INCLUDE[ssDE](../../includes/ssde-md.md)] configurare soft-NUMA.  
   
 > [!TIP]  
 >  Le CPU sono numerate partendo da 0.  
@@ -55,7 +57,7 @@ Per configurare [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] per us
   
  Nell'istanza A che presenta un I/O significativo sono disponibili ora due thread di I/O e un thread Lazywriter mentre nell'istanza B in cui vengono eseguite operazioni con utilizzo elevato del processore sono disponibili solo un thread di I/O e un thread Lazywriter. È possibile assegnare alle istanze quantità di memoria diverse ma, a differenza di quanto avviene con hardware NUMA, entrambe le istanze ricevono memoria dallo stesso blocco di memoria del sistema operativo e non è presente affinità tra memoria e processore.  
   
- Il thread Lazywriter è correlato alla vista del sistema operativo SQL dei nodi di memoria NUMA fisici. Pertanto, qualsiasi elemento venga presentato come nodo NUMA fisico da parte dell'hardware corrisponderà al numero di thread Lazywriter creati. Per altre informazioni, vedere [funzionamento: Soft-NUMA, Thread di completamento i/o, thread di lavoro Lazywriter e nodi di memoria](https://blogs.msdn.com/b/psssql/archive/2010/04/02/how-it-works-soft-numa-i-o-completion-thread-lazy-writer-workers-and-memory-nodes.aspx).  
+ Il thread Lazywriter è correlato alla vista del sistema operativo SQL dei nodi di memoria NUMA fisici. Pertanto, qualsiasi elemento venga presentato come nodo NUMA fisico da parte dell'hardware corrisponderà al numero di thread Lazywriter creati. Per altre informazioni, vedere [How It Works: Soft-NUMA, Thread di completamento i/o, thread di lavoro Lazywriter e nodi di memoria](https://blogs.msdn.com/b/psssql/archive/2010/04/02/how-it-works-soft-numa-i-o-completion-thread-lazy-writer-workers-and-memory-nodes.aspx).  
   
 > [!NOTE]  
 >  Le chiavi del Registro di sistema di **Soft-NUMA** non vengono copiate quando si aggiorna un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  

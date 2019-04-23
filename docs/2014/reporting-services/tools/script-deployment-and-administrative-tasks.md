@@ -20,15 +20,15 @@ helpviewer_keywords:
 - transferrng reports
 - reports [Reporting Services], migrating
 ms.assetid: d0416c9e-e3f9-456d-9870-2cfd2c49039b
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: bf378f94e8a3a010f2959a2c8ce1bd5e69f005bb
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 033e1852f076dde631a3ea1e9be1c8918eab042a
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56013702"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59940447"
 ---
 # <a name="script-deployment-and-administrative-tasks"></a>Utilizzare script per l'esecuzione di attività di distribuzione e di amministrazione
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] supporta l'uso di script per automatizzare installazioni di routine, distribuzioni e attività amministrative. La distribuzione di un server di report è un processo costituito da più passaggi. Per configurare una distribuzione è necessario utilizzare diversi strumenti e processi, in quanto non è disponibile un unico programma o approccio che consenta di automatizzare tutte le attività.  

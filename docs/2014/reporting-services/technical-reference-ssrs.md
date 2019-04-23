@@ -14,15 +14,15 @@ helpviewer_keywords:
 - tools [Reporting Services]
 - user interface reference [Reporting Services]
 ms.assetid: 4876bee2-071f-4a8d-ab8a-b03337625b74
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 455eaec943cb649023ecea1b9ee4964a23961191
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 24e88abe61ef373cb93449d44d40c47742f95898
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56037742"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59936687"
 ---
 # <a name="technical-reference-ssrs"></a>Guida di riferimento tecnico (SSRS)
   Individuare gli strumenti e la documentazione di riferimento di PowerShell per l'uso o l'amministrazione di [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] in [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)].  

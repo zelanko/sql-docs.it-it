@@ -8,15 +8,15 @@ ms.technology:
 - reporting-services-native
 ms.topic: conceptual
 ms.assetid: 4dcfb311-e9c3-4c5d-b2e0-018d79f37d2e
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 73549c4e578b65d87da4c9863f537bc898973657
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 80d69d377948ebb85c907edb195807abf26ee33b
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56030072"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59963742"
 ---
 # <a name="dependent-items-page-report-manager"></a>Pagina Elementi dipendenti (Gestione report)
   La pagina Elementi dipendenti consente di visualizzare un elenco di report e modelli che fanno riferimento a un'origine dati condivisa. L'icona disponibile per ogni tipo di elemento indica se si tratta di un report o un modello. Questa pagina può essere visualizzata nella visualizzazione Elenco o Dettagli. Se per ogni elemento si desidera visualizzare un numero maggiore di informazioni, è consigliabile utilizzare la visualizzazione Dettagli. In tale visualizzazione sono infatti disponibili opzioni aggiuntive per la pagina. Per semplificare la gestione dell'origine dati condivisa, questa pagina fornisce collegamenti ai report e ai modelli che utilizzano l'origine dati, metriche relative all'ultima esecuzione del report o del modello, nonché i pulsanti Elimina e Sposta, che consentono di rimuovere in modo semplice report e modelli non più utilizzati o di spostarli in una posizione diversa mentre si stabilisce se sono ancora necessari.  

@@ -11,15 +11,15 @@ helpviewer_keywords:
 - concepts
 - terminology
 ms.assetid: 99311b36-5dc5-4039-ac93-4d2826701327
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: e27a9a73c966e1058ec273415f17b80142a582ae
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: b7aa95480780c89dadcbcba4b4d08016adae50f4
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56291629"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59945337"
 ---
 # <a name="report-authoring-concepts-report-builder-and-ssrs"></a>Concetti relativi alla creazione di report (Generatore report e SSRS)
   In questa sezione vengono definiti brevemente i concetti principali utilizzati nella documentazione di Generatore report e Progettazione report. Per definizioni di parole o termini specifici, vedere [Glossario &#40;Generatore report&#41;](../report-builder/glossary-report-builder.md).  

@@ -8,15 +8,15 @@ ms.technology:
 - reporting-services-native
 ms.topic: conceptual
 ms.assetid: 6819720c-d848-4b90-9b51-89501b4f4645
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: e71c7e2c933afc0da1a09adbb26cc5e08bc9747f
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 809f893a38af6f269899e8e9d5913116b32864cc
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56035632"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59941517"
 ---
 # <a name="data-alert-messages"></a>Messaggi di avviso dati
   [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] gli avvisi dati di recapitare due tipi di messaggi di avviso dati tramite posta elettronica: Messaggi con risultati degli avvisi dati e i messaggi con descrizioni degli errori. I messaggi con i risultati consentono di tenere informati tutti i destinatari sulle modifiche ai dati dei report di interesse comune e importanti per le decisioni aziendali. Se per qualche motivo si verifica un errore e i risultati non sono disponibili, viene inviato il messaggio di errore.  

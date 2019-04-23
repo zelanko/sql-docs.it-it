@@ -11,15 +11,15 @@ helpviewer_keywords:
 - Reporting Services, programming
 - development [Reporting Services]
 ms.assetid: 0cc20225-5784-479c-bfb0-445854111367
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 601f4ca75b9126d1f3d5e4b534159245e3785a0e
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: d20fc0c1257d467f2115095b19c4d1b05c37cebb
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56041782"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59950557"
 ---
 # <a name="reporting-services-features-and-tasks-ssrs"></a>Caratteristiche e attività di Reporting Services (SSRS)
   [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] è organizzato in base ai report, le caratteristiche dei report, le caratteristiche del server di report e le caratteristiche dei prodotti di [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] .  

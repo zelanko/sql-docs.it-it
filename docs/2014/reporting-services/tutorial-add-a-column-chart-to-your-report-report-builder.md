@@ -1,5 +1,5 @@
 ---
-title: 'Esercitazione: Aggiungere un istogramma al Report (Generatore Report) | Microsoft Docs'
+title: 'Esercitazione: Aggiungere un istogramma al report (Generatore report) | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
@@ -8,17 +8,17 @@ ms.technology:
 - reporting-services-native
 ms.topic: conceptual
 ms.assetid: 63480059-b7b9-44b5-9d7f-91780db708b6
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: feff14049b3fa7a00d3d73bbe493aaded3748d2a
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: 24c8e48ef26d3db2bc7662a36d40725c84b1bbc7
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56287089"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59936857"
 ---
-# <a name="tutorial-add-a-column-chart-to-your-report-report-builder"></a>Esercitazione: Aggiungere un istogramma al Report (Generatore Report)
+# <a name="tutorial-add-a-column-chart-to-your-report-report-builder"></a>Esercitazione: Aggiungere un istogramma al report (Generatore report)
   In un istogramma le serie vengono visualizzate come set di barre verticali raggruppate per categoria. Un istogramma può essere utile per:  
   
 -   Mostrare le modifiche apportate in un determinato periodo di tempo.  
@@ -53,9 +53,9 @@ ms.locfileid: "56287089"
 9. [Salvare il Report](#Save)  
   
 > [!NOTE]  
->  In questa esercitazione, i passaggi per la procedura guidata sono consolidati in un'unica procedura. Per istruzioni dettagliate su come selezionare un server di report, scegliere un'origine dati e creare un set di dati, vedere la prima esercitazione di questa serie: [Esercitazione: Creazione di un Report tabella semplice &#40;Generatore Report&#41;](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md).  
+>  In questa esercitazione, i passaggi per la procedura guidata sono consolidati in un'unica procedura. Per istruzioni dettagliate su come selezionare un server di report, scegliere un'origine dati e creare un set di dati. Vedere la prima esercitazione di questa serie: [Esercitazione: Creazione di un report tabella semplice &#40;Generatore report&#41;](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md).  
   
- Tempo previsto per il completamento di questa esercitazione: 15 minuti.  
+ Tempo stimato per completare questa esercitazione: 15 minuti.  
   
 ## <a name="requirements"></a>Requisiti  
  Per informazioni sui requisiti, vedere [Prerequisiti per le esercitazioni &#40;Generatore report&#41;](../reporting-services/report-builder-tutorials.md).  

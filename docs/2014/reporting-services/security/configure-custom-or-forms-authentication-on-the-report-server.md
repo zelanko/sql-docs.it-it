@@ -11,15 +11,15 @@ helpviewer_keywords:
 - Forms authentication, configuring
 - custom authentication [Reporting Services]
 ms.assetid: e8601a8f-e66d-4649-8e4d-a46ca20ec7d0
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: e568d04a58ad13479f0e3a58254f8e409c46164d
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 8969e3202a9c58b46fac2116912e3d90474d7072
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56010822"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59932538"
 ---
 # <a name="configure-custom-or-forms-authentication-on-the-report-server"></a>Configurare l'autenticazione personalizzata o basata su form nel server di report
   Reporting Services offre un'architettura estensibile che consente di inserire moduli di autenticazione basata su form o personalizzata. È possibile implementare un'estensione di autenticazione personalizzata, se i requisiti di distribuzione non includono la sicurezza integrata di Windows o l'autenticazione di base. Lo scenario più comune per l'utilizzo dell'autenticazione personalizzata consiste nel supporto dell'accesso Internet o extranet a un'applicazione Web. La sostituzione dell'estensione di autenticazione di Windows predefinita con un'estensione di autenticazione personalizzata consente un maggiore controllo sulle modalità di concessione dell'accesso al server di report agli utenti esterni.  
@@ -35,7 +35,7 @@ ms.locfileid: "56010822"
   
 1.  Aprire RSReportServer.config in un editor di testo.  
   
-2.  Individuare <`Authentication`>.  
+2.  Trovare <`Authentication`>.  
   
 3.  Copiare la struttura XML seguente:  
   

@@ -8,15 +8,15 @@ ms.technology:
 - reporting-services-native
 ms.topic: conceptual
 ms.assetid: 5360fefa-1362-4102-bfd1-81d3d313c2b6
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 0a92fb78664e472ef65a5c9af9fca87e5b50fa1e
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 64040ce6a938f2456d3d655aad6dfbcd4abf3e29
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56027912"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59948087"
 ---
 # <a name="view-page-resources-report-manager"></a>Pagina Visualizza, Risorse (Gestione report)
   La pagina Visualizza per le risorse consente di visualizzare una risorsa. Una risorsa è un elemento che viene archiviato e gestito in un server di report, ma non viene elaborato in un server di report (nel server di report vengono elaborati report e modelli). Le risorse possono essere utilizzate per l'archiviazione di documenti, immagini o altri file arbitrari non elaborati nel server. La maggior parte dei file di immagine (come file JPG, GIF e PNG) può essere visualizzata nella pagina Visualizza di Gestione report. Le altre risorse vengono aperte in una finestra dell'applicazione separata.  

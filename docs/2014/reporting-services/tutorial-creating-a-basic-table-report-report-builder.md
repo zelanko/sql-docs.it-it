@@ -1,5 +1,5 @@
 ---
-title: 'Esercitazione: Creazione di un Report tabella semplice (Generatore Report) | Microsoft Docs'
+title: 'Esercitazione: Creazione di un report tabella semplice (Generatore report) | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
@@ -8,17 +8,17 @@ ms.technology:
 - reporting-services-native
 ms.topic: conceptual
 ms.assetid: d9e30521-f8ae-4c45-89c3-d40727f622f7
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: f6d835c7f600264f91303046cb35d52424978861
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: fa3c6f3f6d1a0870fca88871ad3effe642f547e6
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56295369"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59959547"
 ---
-# <a name="tutorial-creating-a-basic-table-report-report-builder"></a>Esercitazione: Creazione di un Report tabella semplice (Generatore Report)
+# <a name="tutorial-creating-a-basic-table-report-report-builder"></a>Esercitazione: Creazione di un report tabella semplice (Generatore report)
   In questa esercitazione viene illustrato come creare un report tabella semplice basato sui dati di vendita di esempio. Nell'illustrazione seguente viene mostrato il report che verrà creato.  
   
  ![rs_CreateBasicReportTutorial](../../2014/tutorials/media/rs-createbasicreporttutorial.gif "rs_CreateBasicReportTutorial")  
@@ -50,12 +50,12 @@ ms.locfileid: "56295369"
   
 7.  [Esportare il Report](#Export)  
   
- Tempo previsto per il completamento di questa esercitazione: 20 minuti.  
+ Tempo stimato per completare questa esercitazione: 20 minuti.  
   
 ## <a name="requirements"></a>Requisiti  
  Per altre informazioni sui requisiti, vedere [Prerequisiti per le esercitazioni &#40;Generatore report&#41;](../reporting-services/report-builder-tutorials.md).  
   
-##  <a name="CreateTable"></a> 1. Creare un nuovo report dal Riquadro attività iniziale  
+##  <a name="CreateTable"></a> 1. Creare un nuovo Report dal riquadro attività iniziale  
  Creare un report di tabella dal **introduttiva** nella finestra di dialogo. Sono disponibili due modalità: progettazione report e progettazione del set di dati condivisa. Nella modalità progettazione report si specificano i dati nel riquadro dei dati del report e il layout del report nell'area di progettazione. Nella modalità progettazione del set di dati condivisa, si creano query del set di dati da condividere con altri. In questa esercitazione si utilizzerà modalità progettazione report.  
   
 #### <a name="to-create-a-new-report"></a>Per creare un nuovo report  
@@ -229,7 +229,7 @@ ms.locfileid: "56295369"
   
 3.  Scegliere **Fine**.  
   
- La tabella viene aggiunta all'area di progettazione. La tabella dispone di 5 colonne e 5 righe. Nel riquadro gruppi di righe vengono visualizzati tre gruppi di righe: SalesDate, Subcategory e Details. I dati dettaglio costituiscono tutti i dati recuperati dalla query del set di dati.  
+ La tabella viene aggiunta all'area di progettazione. La tabella dispone di 5 colonne e 5 righe. Nel riquadro Gruppi di righe vengono visualizzati tre gruppi di righe: SalesDate, Subcategory e Details. I dati dettaglio costituiscono tutti i dati recuperati dalla query del set di dati.  
   
 ##  <a name="FormatCurrency"></a> 2. Formattare i dati come valuta  
  Per impostazione predefinita, i dati di riepilogo del campo Sales riportano un numero generico. È possibile formattare tale numero come valuta. Attivare o disattivare **Stili segnaposto** per visualizzare caselle di testo formattate e testo segnaposto come valori di esempio.  

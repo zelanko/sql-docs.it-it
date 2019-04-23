@@ -10,15 +10,15 @@ ms.topic: conceptual
 f1_keywords:
 - "10127"
 ms.assetid: 0c030cab-6087-45a5-99f0-c7bd693f20a1
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: a88f06bec5a488ffde925cdcb32e0e7078da165a
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: 8aa1315ca0f4a69e234d627a415ba088bd45742b
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56294439"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59943933"
 ---
 # <a name="column-visibility-dialog-box-report-builder"></a>Finestra di dialogo Visibilità colonne (Generatore report)
   Utilizzare la finestra di dialogo **Visibilità colonne** per visualizzare o nascondere la colonna selezionata quando il report viene eseguito per la prima volta oppure per utilizzare un altro elemento del report per attivare/disattivare la visibilità della colonna.  

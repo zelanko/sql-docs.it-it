@@ -8,15 +8,15 @@ ms.technology:
 - reporting-services-native
 ms.topic: conceptual
 ms.assetid: b577568b-ecbd-44c3-be88-31dab6fc38a2
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 009cce23aff5d3b3755b4eb8086bd1560a5be487
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: a26b183d3024333f5792203e180df395c0301892
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56289094"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59948907"
 ---
 # <a name="export-a-report-as-another-file-type-report-builder-and-ssrs"></a>Esportare un report in un altro tipo di file (Generatore report e SSRS)
   È possibile eseguire il rendering di un report in un altro formato di file, ad esempio CSV, immagine, PDF, [!INCLUDE[ofprword](../includes/ofprword-md.md)]o [!INCLUDE[ofprexcel](../includes/ofprexcel-md.md)], durante la visualizzazione in anteprima in Generatore report o Progettazione report oppure durante la visualizzazione nel server di report. Il rendering del report in un formato specifico risulta utile quando si desidera salvare immediatamente il report in un altro tipo di file senza pubblicarlo sul server di report oppure quando si desidera visualizzare l'aspetto che avrà il report quando verrà recapitato ai lettori in un formato specifico. Il rendering del report nel server di report risulta utile quando si impostano sottoscrizioni o si recapitano i report tramite posta elettronica oppure se si desidera salvare un report disponibile nel server di report. Per altre informazioni, vedere [Sottoscrizioni e recapito &#40;Reporting Services&#41;](subscriptions/subscriptions-and-delivery-reporting-services.md).  

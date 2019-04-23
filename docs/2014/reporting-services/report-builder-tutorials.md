@@ -8,15 +8,15 @@ ms.technology:
 - reporting-services-native
 ms.topic: conceptual
 ms.assetid: c99495c3-899b-4c84-af87-76e96d4afa23
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 11e1f02ebe6c1d8965d7f42b76dc6057824c59c5
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: a7d077ffdddaf88a004e5b1fc7e35c08fb3e2562
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56291559"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59957197"
 ---
 # <a name="tutorials-report-builder"></a>esercitazioni (Generatore report)
   Usare le esercitazioni seguenti di Generatore report per apprendere come creare report di base.  
@@ -29,40 +29,40 @@ ms.locfileid: "56291559"
  [Modalità alternative di acquisizione di una connessione dati &#40;Generatore report&#41;](alternative-ways-to-get-a-data-connection-report-builder.md)  
  Per la maggior parte di queste esercitazioni vengono usate origini dati incorporate. Se si dispone dell'accesso a origini dati condivise, sarà invece possibile usarle. In questo argomento viene illustrata la procedura per l'utilizzo di origini dati condivise.  
   
- [Esercitazione: Creazione di un Report tabella semplice &#40;Generatore Report&#41;](tutorial-creating-a-basic-table-report-report-builder.md)  
+ [Esercitazione: Creazione di un report tabella semplice &#40;Generatore report&#41;](tutorial-creating-a-basic-table-report-report-builder.md)  
  Eseguire la procedura descritta in questa esercitazione per creare il primo report. In questa esercitazione viene illustrato come usare Generatore report per la creazione di una connessione a un'origine dati, la definizione di una query semplice, la compilazione di un layout contenente i dati desiderati, la formattazione del report e l'aggiunta di gruppi e totali.  
   
- [Esercitazione: Creazione di un Report matrice &#40;Generatore Report&#41;](tutorial-creating-a-matrix-report-report-builder.md)  
+ [Esercitazione: Creazione di un report matrice &#40;Generatore report&#41;](tutorial-creating-a-matrix-report-report-builder.md)  
  Eseguire la procedura descritta in questa esercitazione per aggiungere e configurare un report matrice. Verrà usata la Creazione guidata tabella o matrice per creare l'origine dati del report, il set di dati e il layout, quindi per ottimizzare la matrice all'interno della visualizzazione **Struttura** di Generatore report.  
   
- [Esercitazione: Creazione di un Report in formato libero &#40;Generatore Report&#41;](tutorial-creating-a-free-form-report-report-builder.md)  
+ [Esercitazione: Creazione di un report in formato libero&#40;Generatore report&#41;](tutorial-creating-a-free-form-report-report-builder.md)  
  Eseguire la procedura descritta in questa esercitazione per creare da zero un report in formato libero. L'aspetto di questo report è simile a un notiziario.  
   
- [Esercitazione: Formattare il testo &#40;Generatore Report&#41;](tutorial-format-text-report-builder.md)  
+ [Esercitazione: Formattazione di testo &#40;Generatore report&#41;](tutorial-format-text-report-builder.md)  
  Eseguire la procedura descritta in questa esercitazione per apprendere alcuni dei modi in cui è possibile formattare il testo nei report.  
   
- [Esercitazione: Aggiungere un istogramma al Report &#40;Generatore Report&#41;](tutorial-add-a-column-chart-to-your-report-report-builder.md)  
+ [Esercitazione: Aggiungere un istogramma al report &#40;Generatore report&#41;](tutorial-add-a-column-chart-to-your-report-report-builder.md)  
  Eseguire la procedura descritta in questa esercitazione per aggiungere un istogramma con un media mobile a un report.  
   
- [Esercitazione: Aggiungere un grafico a torta al Report &#40;Generatore Report&#41;](tutorial-add-a-pie-chart-to-your-report-report-builder.md)  
+ [Esercitazione: Aggiungere un grafico a torta al report &#40;Generatore report&#41;](tutorial-add-a-pie-chart-to-your-report-report-builder.md)  
  Eseguire la procedura descritta in questa esercitazione per aggiungere un grafico a torta a un report.  
   
- [Esercitazione: Aggiungere un grafico a barre al Report &#40;Generatore Report&#41;](tutorial-add-a-bar-chart-to-your-report-report-builder.md)  
+ [Esercitazione: Aggiungere un grafico a barre al report &#40;Generatore report&#41;](tutorial-add-a-bar-chart-to-your-report-report-builder.md)  
  Eseguire la procedura descritta in questa esercitazione per aggiungere un grafico a barre a un report.  
   
- [Esercitazione: Aggiungere un grafico Sparkline al Report &#40;Generatore Report&#41;](tutorial-add-a-sparkline-to-your-report-report-builder.md)  
+ [Esercitazione: Aggiungere un grafico sparkline al report &#40;Generatore report&#41;](tutorial-add-a-sparkline-to-your-report-report-builder.md)  
  Seguire la procedura descritta in questa esercitazione per apprendere come creare una matrice e aggiungere un set di grafici sparkline alla matrice.  
   
- [Esercitazione: Aggiunta di un indicatore KPI al Report &#40;Generatore Report&#41;](tutorial-adding-a-kpi-to-your-report-report-builder.md)  
+ [Esercitazione: Aggiunta di un indicatore di prestazioni chiave al report &#40;Generatore report&#41;](tutorial-adding-a-kpi-to-your-report-report-builder.md)  
  Eseguire la procedura descritta in questa esercitazione per aggiungere un indicatore di prestazioni chiave (KPI) a un report.  
   
- [Esercitazione: Report mappa &#40;Generatore Report&#41;](tutorial-map-report-report-builder.md)  
+ [Esercitazione: Report mappa &#40;Generatore report&#41;](tutorial-map-report-report-builder.md)  
  Eseguire la procedura descritta in questa esercitazione per aggiungere una mappa a un report.  
   
  [Esercitazione: Aggiungere un parametro al report &#40;Generatore report&#41;](tutorial-add-a-parameter-to-your-report-report-builder.md)  
  Eseguire la procedura descritta in questa esercitazione per apprendere come personalizzare l'aspetto e il contenuto di un report tramite l'utilizzo di parametri.  
   
- [Esercitazione: Creazione di report principali e drill-through &#40;Generatore Report&#41;](tutorial-creating-drillthrough-and-main-reports-report-builder.md)  
+ [Esercitazione: Creazione di report drill-through e report principali &#40;Generatore report&#41;](tutorial-creating-drillthrough-and-main-reports-report-builder.md)  
  Eseguire la procedura descritta in questa esercitazione per imparare come creare report per uno scenario drill-through basato su un cubo di Analysis Services. Verrà creato un report principale abilitato per il drill-through e il report che è la destinazione dell'azione drill-through.  
   
  [Esercitazione: Introduzione alle espressioni](tutorial-introducing-expressions.md)  

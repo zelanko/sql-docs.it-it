@@ -8,15 +8,15 @@ ms.technology:
 - reporting-services-native
 ms.topic: conceptual
 ms.assetid: 47c502da-d163-45d9-bf04-0849e5ba7929
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: e949a8610c7320830b33d21674f0fda79d281073
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: 0053228f5d52f2a1dad8e41e2406d34fdaf9b2b2
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56292587"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59940407"
 ---
 # <a name="shared-dataset-design-view-report-builder"></a>Visualizzazione di progettazione set di dati condivisi (Generatore report)
   La finestra di progettazione del set di dati condiviso consente di creare una query del set di dati che può essere condivisa con altri utenti. Nella finestra è possibile selezionare un'origine dati condivisa, specificare proprietà per il set di dati condiviso e creare una query in Progettazione query.  
@@ -26,7 +26,7 @@ ms.locfileid: "56292587"
  Per altre informazioni sull'utilizzo di dati in un report, vedere [aggiungere dati a un Report &#40;Generatore Report e SSRS&#41;](../report-data/report-datasets-ssrs.md).  
   
 ##  <a name="Ribbon"></a> Barra multifunzione  
- La barra multifunzione consente la rapida individuazione dei comandi necessari per completare un'attività. I comandi sono organizzati nei gruppi logici seguenti: Connessione, set di dati e Progettazione query.  
+ La barra multifunzione consente la rapida individuazione dei comandi necessari per completare un'attività. I comandi sono organizzati in gruppi logici seguenti: Connessione, set di dati e Progettazione Query.  
   
 ### <a name="connection"></a>Connessione  
  Usare il pulsante **Seleziona** nel gruppo Connessione per selezionare un'origine dati condivisa o individuare e selezionare l'origine dati condivisa nel server di report.  

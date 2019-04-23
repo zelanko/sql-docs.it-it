@@ -8,15 +8,15 @@ ms.technology:
 - reporting-services-native
 ms.topic: conceptual
 ms.assetid: 0e709c96-7517-4547-8ef6-5632f8118524
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: b5353afae9a07be7dcf5b5df3f1a2ec5442378a6
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 838c48ec4c15d1e89a571e5cb84cf1add613a045
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56041282"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59936587"
 ---
 # <a name="enable-and-disable-client-side-printing-for-reporting-services"></a>Abilitare e disabilitare la stampa sul lato client per Reporting Services
   Il [!INCLUDE[msCoName](../../includes/msconame-md.md)] controllo ActiveX **RSClientPrint**, consente la stampa sul lato client per i report visualizzati in un browser. Tramite il controllo viene visualizzata una finestra di dialogo di stampa personalizzata che supporta funzionalità comuni ad altre finestre di questo tipo. Tra le funzionalità sono incluse l'anteprima di stampa, le selezioni delle pagine per specificare pagine e intervalli particolari, i margini di pagina e l'orientamento. Sebbene la funzionalità di stampa sul alto client sia abilitata per impostazione predefinita, è possibile disabilitarla per evitare che venga utilizzata.  

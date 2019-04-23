@@ -8,17 +8,17 @@ ms.technology:
 - reporting-services-native
 ms.topic: conceptual
 ms.assetid: 87288b59-faf2-4b1d-a8e4-a7582baedf2f
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: eaf7f68cb2658b50bf21ea188324f5208acd488a
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: 9e1246a32f890c5842a1d1a9c8ad0202c160a171
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56286801"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59951247"
 ---
-# <a name="tutorial-creating-a-free-form-report-report-builder"></a>Esercitazione: Creazione di un report in formato libero (Generatore report)
+# <a name="tutorial-creating-a-free-form-report-report-builder"></a>Esercitazione: Creazione di un Report in formato libero (Generatore Report)
   In questa esercitazione viene illustrato come creare un report in formato libero di SSRS che sia simile a una lettera tipo. È possibile disporre gli elementi dei report in modo da creare un form, con caselle di testo, immagini e altre aree dati.  
   
  Il report creato in questa esercitazione si basa su dati di vendita di esempio inclusi nell'esercitazione. Nel report le informazioni vengono raggruppate per territorio e vengono visualizzati il nome del responsabile vendite del territorio e informazioni dettagliate e riepilogative relative alle vendite. Come base per il report in formato libero si utilizzerà l'area dati elenco e si aggiungerà quindi un pannello decorativo con un'immagine, testo statico contenente dati, una tabella per la visualizzazione di informazioni dettagliate e facoltativamente grafici a torta e istogrammi per la visualizzazione di informazioni di riepilogo.  
@@ -46,7 +46,7 @@ ms.locfileid: "56286801"
   
 -   [Aggiungere una visualizzazione dei dati di riepilogo](#Visualization)  
   
- Tempo previsto per il completamento di questa esercitazione: 20 minuti.  
+ Tempo stimato per completare questa esercitazione: 20 minuti.  
   
 ## <a name="requirements"></a>Requisiti  
  Per altre informazioni sui requisiti, vedere [Prerequisiti per le esercitazioni &#40;Generatore report&#41;](../reporting-services/report-builder-tutorials.md).  
@@ -224,7 +224,7 @@ ms.locfileid: "56286801"
   
 2.  Nella scheda **Inserisci** della barra multifunzione fare clic su **Casella di testo**, quindi trascinare una casella di testo nell'angolo superiore sinistro dell'elenco all'interno del rettangolo aggiunto in precedenza. Assegnare alla casella di testo un'altezza di 3 pollici (8 centimetri) e una larghezza di 5 pollici (13 centimetri).  
   
-3.  Posizionare il cursore nella parte superiore della casella di testo, quindi digitare: **Notiziario per** .  
+3.  Posizionare il cursore nella parte superiore della casella di testo e quindi digitare: **Notiziario per** .  
   
      ![Aggiungere il testo dell'intestazione newsletter](../../2014/tutorials/media/tutorial-newsletterfor.png "Aggiungere il testo dell'intestazione newsletter")  
   
@@ -279,7 +279,7 @@ ms.locfileid: "56286801"
   
      ![Aggiungi testo newsletter](../../2014/tutorials/media/tutorial-newslettertext.png "Aggiungi testo newsletter")  
   
-20. Posizionare il cursore sotto il testo digitato nel passaggio 15 e digitare: **Congratulazioni per le vendite totali di** .  
+20. Posizionare il cursore sotto il testo incollato nel passaggio 15 e quindi digitare: **Congratulazioni per le vendite totali di** .  
   
     > [!NOTE]  
     >  Assicurarsi di includere lo spazio aggiuntivo dopo la parola "di". Lo spazio consente di separare il testo dal campo che si aggiungerà nel passaggio successivo.  

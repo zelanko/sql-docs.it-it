@@ -1,5 +1,5 @@
 ---
-title: 'Esercitazione: Aggiungere un grafico a barre al Report (Generatore Report) | Microsoft Docs'
+title: 'Esercitazione: Aggiungere un grafico a barre al report (Generatore report) | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
@@ -8,17 +8,17 @@ ms.technology:
 - reporting-services-native
 ms.topic: conceptual
 ms.assetid: 6956ebd6-0217-4087-a4fa-5cc1c3804691
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 6bd2d801c4f6aae8d87764bdefbe153f3d9743f8
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: 0b21826cb926dbd5f8b0315f490b20850c6ccd23
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56295989"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59938157"
 ---
-# <a name="tutorial-add-a-bar-chart-to-your-report-report-builder"></a>Esercitazione: Aggiungere un grafico a barre al Report (Generatore Report)
+# <a name="tutorial-add-a-bar-chart-to-your-report-report-builder"></a>Esercitazione: Aggiungere un grafico a barre al report (Generatore report)
   In un grafico a barre i dati delle categorie vengono visualizzati orizzontalmente per gli scopi seguenti:  
   
 -   Migliorare la leggibilità dei nomi di categoria lunghi.  
@@ -55,9 +55,9 @@ ms.locfileid: "56295989"
 10. [Salvare il Report](#Save)  
   
 > [!NOTE]  
->  In questa esercitazione, i passaggi per la procedura guidata sono consolidati in un'unica procedura. Per istruzioni dettagliate su come selezionare un server di report, creare un set di dati e scegliere un'origine dati, vedere la prima esercitazione di questa serie: [Esercitazione: Creazione di un Report tabella semplice &#40;Generatore Report&#41;](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md).  
+>  In questa esercitazione, i passaggi per la procedura guidata sono consolidati in un'unica procedura. Per istruzioni dettagliate su come selezionare un server di report, creare un set di dati e scegliere un'origine dati. Vedere la prima esercitazione di questa serie: [Esercitazione: Creazione di un report tabella semplice &#40;Generatore report&#41;](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md).  
   
- Tempo previsto per il completamento di questa esercitazione: 15 minuti.  
+ Tempo stimato per completare questa esercitazione: 15 minuti.  
   
 ## <a name="requirements"></a>Requisiti  
  Per altre informazioni sui requisiti, vedere [Prerequisiti per le esercitazioni &#40;Generatore report&#41;](../reporting-services/report-builder-tutorials.md).  
@@ -122,7 +122,7 @@ ms.locfileid: "56295989"
   
 2.  Fare clic su **Barre**, quindi su **Avanti**.  
   
-     Nel **Disponi campi del grafico** pagina, sono contenuti quattro campi il **campi disponibili** riquadro: FirstName, LastName, SalesYear2009 e SalesYear2008.  
+     Nel riquadro **Campi disponibili** della pagina **Disponi campi del grafico** sono contenuti quattro campi: FirstName, LastName, SalesYear2009 e SalesYear2008.  
   
 3.  Trascinare LastName nel riquadro Categorie.  
   
@@ -194,7 +194,7 @@ ms.locfileid: "56295989"
 > [!NOTE]  
 >  Se i nomi dei venditori sull'asse verticale non sono leggibili, è possibile aumentare l'altezza del grafico o modificare le opzioni di formattazione per le etichette dell'asse.  
   
-##  <a name="Sort"></a> 4. Modificare l'ordinamento dei nomi sull'asse verticale  
+##  <a name="Sort"></a> 4. Modificare l'ordinamento per i nomi sull'asse verticale  
  Quando si ordinano i dati in un grafico si modifica l'ordine dei valori sull'asse delle categorie.  
   
 #### <a name="to-sort-the-names-in-alphabetical-order-on-the-bar-chart"></a>Per ordinare i nomi in ordine alfabetico sul grafico a barre  
@@ -213,7 +213,7 @@ ms.locfileid: "56295989"
   
 7.  Fare clic su **OK**.  
   
-8.  Riaccenderle il **proprietà gruppo categorie** pagina il **ordine** elenco a discesa, seleziona **dalla Z alla A**. In questo modo verrà selezionato l'ordine alfabetico inverso, che comporta la visualizzazione dei nomi dall'alto verso il basso.  
+8.  Riaccenderle il **proprietà gruppo categorie** pagina il **ordine** elenco a discesa, seleziona **dalla Z alla A**. Ciò consente di selezionare ordine alfabetico inverso in modo che i nomi visualizzati nell'ordine dall'alto verso il basso.  
   
 9. [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   

@@ -18,15 +18,15 @@ f1_keywords:
 - "10251"
 - "10172"
 ms.assetid: d56d0521-362f-4361-843a-acf2c897a87c
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 84a4d723a545ebe6fb849d3b5b78f2f2e8e99908
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: 447ca38b75b21bdb2015a29ea6ff357eba6f24db
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56295389"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59932457"
 ---
 # <a name="charts-report-builder-and-ssrs"></a>Grafici (Generatore report e SSRS)
   Se si desidera riepilogare i dati in formato visivo, usare l'area dati del grafico. I grafici consentono di presentare volumi elevati di informazioni aggregate in modo immediato. Prima di creare un grafico, è importante preparare e identificare con attenzione i dati, in modo da procedere rapidamente e con maggiore efficienza. Per altre informazioni, vedere [Aggiungere un grafico a un report &#40;Generatore report e SSRS&#41;](add-a-chart-to-a-report-report-builder-and-ssrs.md). Per iniziare a usare un grafico immediatamente, vedere la barra, colonne, grafici sparkline ed esercitazioni relative ai grafici a torta in [esercitazioni &#40;Generatore Report&#41; ](../report-builder-tutorials.md) o la barra e le esercitazioni di grafico a torta in [esercitazioni su Reporting Services &#40;SSRS&#41;](../reporting-services-tutorials-ssrs.md).  
@@ -152,8 +152,8 @@ ms.locfileid: "56295389"
  [Immagini, caselle di testo, rettangoli e linee &#40;Generatore report e SSRS&#41;](rectangles-and-lines-report-builder-and-ssrs.md)   
  [Ordinamento interattivo, mappe documento e collegamenti &#40;Generatore report e SSRS&#41;](interactive-sort-document-maps-and-links-report-builder-and-ssrs.md)   
  [Aree dati annidate &#40;Generatore report e SSRS&#41;](nested-data-regions-report-builder-and-ssrs.md)   
- [Esercitazione: Aggiungere un istogramma al Report &#40;Generatore Report&#41;](../tutorial-add-a-column-chart-to-your-report-report-builder.md)   
- [Esercitazione: Aggiungere un grafico a torta al Report &#40;Generatore Report&#41;](../tutorial-add-a-pie-chart-to-your-report-report-builder.md)   
- [Esercitazione: Aggiungere un grafico a barre al Report &#40;Generatore Report&#41;](../tutorial-add-a-bar-chart-to-your-report-report-builder.md)  
+ [Esercitazione: Aggiungere un istogramma al report &#40;Generatore report&#41;](../tutorial-add-a-column-chart-to-your-report-report-builder.md)   
+ [Esercitazione: Aggiungere un grafico a torta al report &#40;Generatore report&#41;](../tutorial-add-a-pie-chart-to-your-report-report-builder.md)   
+ [Esercitazione: Aggiungere un grafico a barre al report &#40;Generatore report&#41;](../tutorial-add-a-bar-chart-to-your-report-report-builder.md)  
   
   

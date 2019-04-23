@@ -12,15 +12,15 @@ helpviewer_keywords:
 - Reporting Services, backward compatibility
 - breaking changes [Reporting Services]
 ms.assetid: 39c7aafd-dcb9-4317-b8f7-d15828eb4f9a
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 00b787d9fbeebd04b81ec608bf23745ddd733a0a
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: e779a88940db2883846168535e7823c1723f4b4e
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56040172"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59947657"
 ---
 # <a name="breaking-changes-in-sql-server-reporting-services-in-sql-server-2014"></a>Modifiche di rilievo di SQL Server Reporting Services in SQL Server 2014
   In questo argomento vengono descritte le modifiche di rilievo introdotte in [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]. Tali modifiche potrebbero interrompere il funzionamento di applicazioni, funzionalità o script basati su versioni precedenti di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. I problemi potrebbero verificarsi durante un aggiornamento oppure in script o report personalizzati. Per altre informazioni, vedere [Use Upgrade Advisor to Prepare for Upgrades](../sql-server/install/use-upgrade-advisor-to-prepare-for-upgrades.md).  
@@ -39,7 +39,7 @@ ms.locfileid: "56040172"
 ##  <a name="bkmk_rc0"></a> [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] Modifiche di rilievo di Reporting Services  
   
 ### <a name="sharepoint-mode-server-references-require-the-sharepoint-site"></a>Per i riferimenti server della modalità SharePoint è richiesto il sito di SharePoint  
- Non è possibile accedere o fare riferimento direttamente al server di report usando direttamente il nome virtuale nel percorso URL. Ad esempio:  
+ Non è possibile accedere o fare riferimento direttamente al server di report usando direttamente il nome virtuale nel percorso URL. Ad esempio:   
   
  `http://<Server name>/ReportServer`  
   
@@ -63,7 +63,7 @@ ms.locfileid: "56040172"
   
 -   Gestione configurazione [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] , rskeymgmt.exe e rsconfig.exe. Per la configurazione della modalità SharePoint di [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] , usare Amministrazione centrale SharePoint e PowerShell, anziché queste utilità.  
   
--   SQL Server Management Studio: i clienti non possono fare riferimento a un server con sintassi analoga a <machine_name>/<instance_name>. A partire dalla versione [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)] , il metodo consigliato consiste nell'usare l'URL del sito di SharePoint. Ad esempio, **http://<SHAREPOINT_SERVER>/<sharePoint_site&gt**. A partire da [!INCLUDE[ssSQL11](../includes/sssql11-md.md)], l'URL del sito di SharePoint è l'unica sintassi supportata.  
+-   SQL Server Management Studio: I clienti non possono fare riferimento a un server con sintassi analoga a < machine_name > / < instance_name >. A partire dalla versione [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)] , il metodo consigliato consiste nell'usare l'URL del sito di SharePoint. Ad esempio, **http://<SHAREPOINT_SERVER>/<sharePoint_site&gt**. A partire da [!INCLUDE[ssSQL11](../includes/sssql11-md.md)], l'URL del sito di SharePoint è l'unica sintassi supportata.  
   
 ### <a name="report-model-designer-is-not-available-in-sql-server-data-tools"></a>Progettazione modelli report non è disponibile in SQL Server Data Tools  
  [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] non supporta più progetti di modello di report. Progettazione modelli report non è disponibile in [!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)]. Non è possibile creare nuovi progetti modello di report, aprire progetti esistenti in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] e creare o aggiornare modelli di report. Per aggiornare i modelli di report, è possibile usare [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)][!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] o strumenti precedenti. È possibile continuare a usare i modelli di report come origini dati nei report creati negli strumenti di [!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)] , quali Generatore report e Progettazione report. In [!INCLUDE[ssSQL11](../includes/sssql11-md.md)][!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] è ancora disponibile Progettazione query, cioè lo strumento usato per creare query ed estrarre i dati del report dai relativi modelli.  

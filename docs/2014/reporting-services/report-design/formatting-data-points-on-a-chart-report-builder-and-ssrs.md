@@ -11,15 +11,15 @@ f1_keywords:
 - sql12.rtp.rptdesigner.serieslabelproperties.general.f1
 - "10248"
 ms.assetid: 08ec3818-f63a-4e89-b52c-750e47f48b85
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: c23a01244e75abe7df4bedc62ec3a19246474b45
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: c85c464c6ebf32d81c08c319999aa2c6d8b1514c
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56296879"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59940707"
 ---
 # <a name="formatting-data-points-on-a-chart-report-builder-and-ssrs"></a>Formattazione dei punti dati di un grafico (Generatore report e SSRS)
   Per punto dati si intende l'entità singola più piccola di un grafico. Nei grafici senza forme la rappresentazione dei punti dati dipende dal relativo tipo di grafico. Una serie di linee è ad esempio costituita da uno o più punti dati connessi. Nei grafici con forme i punti dati sono rappresentati dai singoli segmenti o sezioni che costituiscono l'intero grafico. In un grafico a torta, ad esempio, ogni parte è un punto dati. Per altre informazioni, vedere [Tipi di grafico &#40;Generatore report e SSRS&#41;](chart-types-report-builder-and-ssrs.md).  
@@ -44,7 +44,7 @@ ms.locfileid: "56296879"
 ## <a name="positioning-data-point-labels-on-a-chart"></a>Posizionamento di etichette dei punti dati in un grafico  
  Per tutti i tipi di grafico è possibile visualizzare etichette dei punti dati facendo clic con il pulsante destro del mouse sul grafico e quindi scegliendo **Mostra etichette dati**. La posizione delle etichette dei punti dati specificata dipende dal tipo di grafico:  
   
--   In un grafico a barre è possibile modificare la posizione dell'etichetta del punto dati usando l'attributo personalizzato **BarLabelStyle** , Esistono quattro posizioni: Esterno, a sinistra, al centro e a destra. Quando lo stile delle etichette del grafico a barre viene impostato su Esterno, le etichette vengono posizionate all'esterno della barra, purché quest'ultima rientri nell'area del grafico. Se l'etichetta non può essere posizionata esternamente alla barra e internamente all'area del grafico, viene inserita nella barra.  
+-   In un grafico a barre è possibile modificare la posizione dell'etichetta del punto dati usando l'attributo personalizzato **BarLabelStyle** , che può assumere quattro posizioni, ovvero Esterno, A sinistra, Al centro e A destra. Quando lo stile delle etichette del grafico a barre viene impostato su Esterno, le etichette vengono posizionate all'esterno della barra, purché quest'ultima rientri nell'area del grafico. Se l'etichetta non può essere posizionata esternamente alla barra e internamente all'area del grafico, viene inserita nella barra.  
   
 -   In un grafico a torta è possibile modificare la posizione dell'etichetta del punto dati usando l'attributo personalizzato **PieLabelStyle** . Quando si posizionano le etichette dei punti dati in un grafico a torta, è necessario tenere presente diversi fattori, quali la dimensione del grafico stesso, lo spazio disponibile tra il grafico e la legenda corrispondente, nonché la dimensione delle etichette. Per altre informazioni, vedere [Visualizzare le etichette dei punti dati al di fuori di un grafico a torta &#40;Generatore report e SSRS&#41;](display-data-point-labels-outside-a-pie-chart-report-builder-and-ssrs.md).  
   
@@ -101,7 +101,7 @@ ms.locfileid: "56296879"
  [Formattazione delle etichette degli assi in un grafico &#40;Generatore report e SSRS&#41;](formatting-axis-labels-on-a-chart-report-builder-and-ssrs.md)   
  [Grafici &#40;Generatore report e SSRS&#41;](charts-report-builder-and-ssrs.md)   
  [Formattazione delle etichette degli assi come date o valute &#40;Generatore report e SSRSSSRS&#41;](format-axis-labels-as-dates-or-currencies-report-builder-and-ssrs.md)   
- [Esercitazione: Aggiungere un grafico a torta al Report &#40;Generatore Report&#41;](../tutorial-add-a-pie-chart-to-your-report-report-builder.md)   
+ [Esercitazione: Aggiungere un grafico a torta al report &#40;Generatore report&#41;](../tutorial-add-a-pie-chart-to-your-report-report-builder.md)   
  [Esempi di espressioni &#40;Generatore report e SSRS&#41;](expression-examples-report-builder-and-ssrs.md)   
  [Espressioni &#40;Generatore report e SSRS&#41;](expressions-report-builder-and-ssrs.md)  
   

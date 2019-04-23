@@ -16,15 +16,15 @@ topic_type:
 helpviewer_keywords:
 - UnattendedExecutionAccount property
 ms.assetid: ab5203ba-c01e-4020-8619-ee290cf9da07
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 59148f4664497d96fcf836c8205434d97a2d6dd5
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: b8e3cab3ae78b43a5a37432e230c9bef6a8a383c
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56028482"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59956007"
 ---
 # <a name="unattendedexecutionaccount-property-wmi-msreportserverconfigurationsetting"></a>Proprietà UnattendedExecutionAccount (MSReportServer_ConfigurationSetting WMI)
   Restituisce l'account utente rappresentato dal server di report per l'esecuzione automatica dei report. Di sola lettura.  

@@ -12,15 +12,15 @@ helpviewer_keywords:
 - closing reports
 - reports [Reporting Services], opening
 ms.assetid: a9db1caf-1e7d-41ee-9aed-e09fd0712f9b
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 41d67805a939cd6b5826dd227cc02e348e48dc32
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 11f2aa43220ef419325f64c368f80ea7691b3b65
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56034398"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59947877"
 ---
 # <a name="open-and-close-a-report-report-manager"></a>Aprire e chiudere un report (Gestione report)
   È possibile utilizzare Gestione report per visualizzare i report pubblicati in un server di report. Per impostazione predefinita, tutti i report vengono aperti in formato HTML. Dopo avere aperto un report, è possibile esportarlo per visualizzarlo in altri formati di applicazioni. Se il report contiene caratteristiche interattive o se si tratta di un report di Generatore report contenente dati interattivi, sarà possibile fare clic sui collegamenti per visualizzare report o dati aggiuntivi.  

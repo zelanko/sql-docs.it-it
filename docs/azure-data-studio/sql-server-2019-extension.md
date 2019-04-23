@@ -3,7 +3,7 @@ title: Estensione di SQL Server 2019 (anteprima)
 titleSuffix: Azure Data Studio
 description: Estensione di anteprima di SQL Server 2019 per Data Studio di Azure
 ms.custom: seodec18
-ms.date: 03/18/2019
+ms.date: 04/19/2019
 ms.reviewer: alayu; sstein
 ms.prod: sql
 ms.technology: azure-data-studio
@@ -11,12 +11,12 @@ ms.topic: conceptual
 author: yualan
 ms.author: alayu
 manager: craigg
-ms.openlocfilehash: dfa49b1611c7fd9b196e57ea08575388aa90329b
-ms.sourcegitcommit: 11ab8a241a6d884b113b3cf475b2b9ed61ff00e3
+ms.openlocfilehash: 11dee99f7d0648a4c7fc701234796e6d552d47a9
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/18/2019
-ms.locfileid: "58161549"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59934127"
 ---
 # <a name="sql-server-2019-extension-preview"></a>Estensione di SQL Server 2019 (anteprima)
 
@@ -30,9 +30,9 @@ Per installare l'estensione di SQL Server 2019 (anteprima), scaricare e installa
 
    |Piattaforma|Scarica|Data di rilascio|Versione
    |:---|:---|:---|:---|
-   |Windows|[.vsix](https://go.microsoft.com/fwlink/?linkid=2083220)|18 marzo 2019 |0.11.0
-   |macOS|[.vsix](https://go.microsoft.com/fwlink/?linkid=2083219)|18 marzo 2019 |0.11.0
-   |Linux|[.vsix](https://go.microsoft.com/fwlink/?linkid=2083218)|18 marzo 2019 |0.11.0
+   |Windows|[.vsix](https://go.microsoft.com/fwlink/?linkid=2087443)|18 aprile 2019 |0.12.0
+   |macOS|[.vsix](https://go.microsoft.com/fwlink/?linkid=2087442)|18 aprile 2019 |0.12.0
+   |Linux|[.vsix](https://go.microsoft.com/fwlink/?linkid=2087441)|18 aprile 2019 |0.12.0
 
 1. In Azure Data Studio scegliere **installare l'estensione dal pacchetto VSIX** dalle **File** menu e selezionare il file VSIX scaricato.
 
@@ -44,12 +44,27 @@ Per installare l'estensione di SQL Server 2019 (anteprima), scaricare e installa
 
 1. Dopo le dipendenze completato l'installazione, chiudere e riaprire Data Studio di Azure. Il **cluster di big data di SQL Server** tipo di connessione non è disponibile solo dopo il riavvio Data Studio di Azure.
 
+## <a name="changes-in-release-012"></a>Modifiche nella versione 0,12
+
+* Il **cluster di big data di SQL Server** tipo di connessione è stata rimossa in questa versione. Tutte le funzionalità disponibili in precedenza dalla connessione di cluster di SQL Server i big data sono ora disponibile nella connessione di SQL Server.
+* Esplorazione di HDFS sono disponibili nel **Data Services** cartella
+* Per i notebook del kernel PySpark e altri dati di lavoro quando si è connessi all'istanza master di SQL Server nel cluster di big data di SQL Server.
+* Creazione guidata tabella esterna:
+  * Supporto per la creazione di tabella esterna usando l'origine dati esterna esistente.
+  * Miglioramenti delle prestazioni attraverso la procedura guidata.
+  * Gestione migliorata dei nomi degli oggetti con caratteri speciali. In alcuni casi questi errori causati la procedura guidata non
+  * Miglioramenti dell'affidabilità per la pagina Mapping di oggetto.
+  * Rimosso database di sistema - 'DWConfiguration', 'Delle DWDiagnostics', 'DWQueue' - dall'elenco a discesa database.
+  * Supporto per l'impostazione del nome dell'oggetto External File Format **Create External Table dai file CSV** procedura guidata.
+  * Aggiungere un pulsante di aggiornamento per la prima pagina della **Create External Table dai file CSV** procedura guidata.
+
 ## <a name="release-notes-v0110"></a>Note sulla versione (v0.11.0)
-  * Supporto per Notebook di Jupyter, in particolare il supporto per i kernel Spark e Python3, è stato spostato in Azure Data Studio. Questa estensione non è più necessaria per usare i notebook.
-  * Più correzioni di bug nelle procedure guidate di dati esterni:
-    * Mapping dei tipi Oracle sono stati aggiornati per riflettere le modifiche disponibile in versione CTP 2.3 di SQL Server 2019.
-    * Risolto un problema in cui sono stati perditi nuovi schemi tipizzati nei controlli di mapping della tabella.
-    * Risolto un problema in cui il controllo di un nodo del Database nei mapping di tabella non ha restituito tutte le tabelle e visualizzazioni in fase di verifica.
+
+* Supporto per Notebook di Jupyter, in particolare il supporto per i kernel Spark e Python3, è stato spostato in Azure Data Studio. Questa estensione non è più necessaria per usare i notebook.
+* Più correzioni di bug nelle procedure guidate di dati esterni:
+  * Mapping dei tipi Oracle sono stati aggiornati per riflettere le modifiche disponibile in versione CTP 2.3 di SQL Server 2019.
+  * Risolto un problema in cui sono stati perditi nuovi schemi tipizzati nei controlli di mapping della tabella.
+  * Risolto un problema in cui il controllo di un nodo del Database nei mapping di tabella non ha restituito tutte le tabelle e visualizzazioni in fase di verifica.
 
 
 ## <a name="release-notes-v0102"></a>Note sulla versione (v0.10.2)

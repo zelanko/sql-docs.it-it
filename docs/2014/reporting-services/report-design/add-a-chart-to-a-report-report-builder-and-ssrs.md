@@ -8,22 +8,22 @@ ms.technology:
 - reporting-services-native
 ms.topic: conceptual
 ms.assetid: a6b595dc-f775-4a53-8554-74a0bf9335ec
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 0724a68097b2730cf00fc80098f03d4bc5675061
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: e8776cb0c1f0db206274ff7d766f31ba1c446f51
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56298569"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59961157"
 ---
 # <a name="add-a-chart-to-a-report-report-builder-and-ssrs"></a>Aggiungere un grafico a un report (Generatore report e SSRS)
   Se si desidera riepilogare i dati in formato visivo, utilizzare un'area dati del grafico. È importante scegliere un tipo di grafico appropriato per il tipo di dati da visualizzare. Tale scelta influirà sull'interpretazione dei dati visualizzati nel grafico. Per altre informazioni, vedere [Grafici &#40;Generatore report e SSRS&#41;](charts-report-builder-and-ssrs.md).  
   
  La soluzione più semplice per aggiungere un'area dati del grafico al report è l'esecuzione della procedura guidata Nuovo grafico. La procedura guidata offre istogrammi, grafici a linee, a torta, a barre e ad area. Per questi ed altri tipi di grafico, è possibile anche aggiungere un grafico manualmente.  
   
- Dopo avere aggiunto un'area dati del grafico all'area di progettazione, è possibile trascinare campi del set di dati del report relativi a dati numerici e non numerici nel riquadro Dati grafico del grafico. Fare clic sul grafico per visualizzare il riquadro dati grafico con le tre aree: Gruppi di serie, gruppi di categorie e i valori.  
+ Dopo avere aggiunto un'area dati del grafico all'area di progettazione, è possibile trascinare campi del set di dati del report relativi a dati numerici e non numerici nel riquadro Dati grafico del grafico. Fare clic sul grafico per visualizzare il riquadro Dati grafico con le tre aree: Gruppi di serie, Gruppi di categorie e Valori.  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
@@ -71,9 +71,9 @@ ms.locfileid: "56298569"
  [Grafici &#40;Generatore report e SSRS&#41;](charts-report-builder-and-ssrs.md)   
  [Tipi di grafico &#40;Generatore report e SSRS&#41;](chart-types-report-builder-and-ssrs.md)   
  [Punti dati vuoti e Null nei grafici &#40;Generatore report e SSRS&#41;](empty-and-null-data-points-in-charts-report-builder-and-ssrs.md)   
- [Esercitazione: Aggiunta di un grafico a barre al Report (Generatore Report)](https://go.microsoft.com/fwlink/?LinkId=198052)   
- [Esercitazione: Aggiunta di un grafico a barre a un rapporto (progettazione Report)](https://go.microsoft.com/fwlink/?LinkId=198042)   
- [Esercitazione: Aggiunta di un grafico a torta al Report (Generatore Report)](https://go.microsoft.com/fwlink/?LinkId=198051)   
- [Esercitazione: Aggiunta di un grafico a torta a un rapporto (progettazione Report)](https://go.microsoft.com/fwlink/?LinkId=198041)  
+ [Esercitazione: Aggiunta di un grafico a barre al report (Generatore report)](https://go.microsoft.com/fwlink/?LinkId=198052)   
+ [Esercitazione: Aggiunta di un grafico a barre a un report (Progettazione report)](https://go.microsoft.com/fwlink/?LinkId=198042)   
+ [Esercitazione: Aggiunta di un grafico a torta al report (Generatore report)](https://go.microsoft.com/fwlink/?LinkId=198051)   
+ [Esercitazione: Aggiunta di un grafico a torta a un report (Progettazione report)](https://go.microsoft.com/fwlink/?LinkId=198041)  
   
   

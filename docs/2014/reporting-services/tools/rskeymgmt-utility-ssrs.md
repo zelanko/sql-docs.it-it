@@ -19,15 +19,15 @@ helpviewer_keywords:
 - rskeymgmt utility
 - scale-out deployments [Reporting Services]
 ms.assetid: 53f1318d-bd2d-4c08-b19f-c8b698b5b3d3
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: cdd2e2bd7d668ca276cdc62d988f7334a6709e6b
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 4135236979beb320c201f635ad353cbe83a261bd
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56038262"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59941197"
 ---
 # <a name="rskeymgmt-utility-ssrs"></a>Utilità rskeymgmt (SSRS)
   Questa utilità consente di estrarre, ripristinare, creare ed eliminare la chiave simmetrica utilizzata per proteggere i dati riservati del server di report dall'accesso non autorizzato. Questa utilità viene inoltre utilizzata per unire in join istanze del server di report in un'implementazione basata sulla scalabilità orizzontale. La *distribuzione con scalabilità orizzontale di un server di report* fa riferimento a più istanze del server di report che condividono lo stesso database del server di report.  
@@ -148,9 +148,9 @@ rskeymgmt -j -m <remotecomputer> -n <namedreportserverinstance> -u <administrato
 >  Un'implementazione del server di report basata sulla scalabilità orizzontale fa riferimento a un modello di implementazione dove più istanze del server di report condividono lo stesso database. Un database del server di report può essere utilizzato da qualsiasi istanza del server di report che archivia le relative chiavi simmetriche nel database. Se, ad esempio, un database del server di report contiene le informazioni sulle chiavi per tre istanze del server di report, queste tre istanze verranno considerate membri della stessa implementazione basata sulla scalabilità orizzontale.  
   
 #### <a name="joining-report-server-instances-on-the-same-computer"></a>Unione in join di istanze del server di report nello stesso computer  
- È possibile creare una distribuzione con scalabilità orizzontale da più istanze del server di report installate nello stesso computer. Se si esegue l'unione in join di istanze del server di report installate localmente, non impostare gli argomenti `-u` e `-v`. Gli argomenti `-u` e `-v` vengono infatti utilizzati solo per l'unione in join di un'istanza di un computer remoto. Se si specificano gli argomenti, viene visualizzato l'errore seguente: "Impossibile usare le credenziali utente per le connessioni locali".  
+ È possibile creare una distribuzione con scalabilità orizzontale da più istanze del server di report installate nello stesso computer. Se si esegue l'unione in join di istanze del server di report installate localmente, non impostare gli argomenti `-u` e `-v`. Gli argomenti `-u` e `-v` vengono infatti utilizzati solo per l'unione in join di un'istanza di un computer remoto. Se si specificano tali argomenti, si otterrà l'errore seguente: "Le credenziali dell'utente non possono essere utilizzate per le connessioni locali".  
   
- Nell'esempio seguente viene illustrata la sintassi per la creazione di una distribuzione con scalabilità orizzontale utilizzando più istanze locali. In questo esempio <`initializedinstance`> è il nome di un'istanza già inizializzata per usare il database del server di report e <`newinstance`> è il nome dell'istanza che si desidera aggiungere alla distribuzione:  
+ Nell'esempio seguente viene illustrata la sintassi per la creazione di una distribuzione con scalabilità orizzontale utilizzando più istanze locali. In questo esempio, <`initializedinstance`> è il nome di un'istanza già inizializzata per usare il database del server di report, e <`newinstance`> è il nome dell'istanza che si desidera aggiungere alla distribuzione:  
   
 ```  
 rskeymgmt -j -i <initializedinstance> -m <computer name> -n <newinstance>  

@@ -1,5 +1,5 @@
 ---
-title: 'Esercitazione: Creazione di drill-through e report principali (Generatore Report) | Microsoft Docs'
+title: 'Esercitazione: Creazione di report drill-through e report principali (Generatore report) | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,17 +8,17 @@ ms.technology:
 - reporting-services-native
 ms.topic: conceptual
 ms.assetid: 7168c8d3-cef5-4c4a-a0bf-fff1ac5b8b71
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: b150ff5fd1e69a9c6ac8ea7e2f2ef2b60d32ffb8
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: 1177dfb7260959940eb89a31dde740e290ab73f8
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56289869"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59961237"
 ---
-# <a name="tutorial-creating-drillthrough-and-main-reports-report-builder"></a>Esercitazione: Creazione di report drill-through e report principali (Generatore report)
+# <a name="tutorial-creating-drillthrough-and-main-reports-report-builder"></a>Esercitazione: Creazione di drill-through e report principali (Generatore Report)
   In questa esercitazione verrà illustrato come creare due tipi di report: un report drill-through e un report principale. I dati di vendita di esempio utilizzati in questi report vengono recuperati da un cubo di Analysis Services. Nell'illustrazione seguente vengono mostrati i report creati.  
   
  ![rs_DrillthroughCubeTutorial](../../2014/tutorials/media/rs-drillthroughcubetutorial.gif "rs_DrillthroughCubeTutorial")  
@@ -80,7 +80,7 @@ ms.locfileid: "56289869"
   
 8.  [Eseguire i report principali e drill-through](#MRunReports)  
   
- Tempo previsto per il completamento di questa esercitazione: 30 minuti.  
+ Tempo stimato per completare questa esercitazione: 30 minuti.  
   
 ## <a name="requirements"></a>Requisiti  
  Questa esercitazione richiede l'accesso al cubo vendite Contoso. Questo requisito si applica sia al drill-through che ai report principali. Per altre informazioni sui requisiti, vedere [Prerequisiti per le esercitazioni &#40;Generatore report&#41;](../reporting-services/report-builder-tutorials.md).  
@@ -168,7 +168,7 @@ ms.locfileid: "56289869"
   
 5.  Nell'elenco dell'espressione filtro, espandere **Tutti i canali**, fare clic su **Online**, fare clic su **Rivenditore**, quindi fare clic su **OK**.  
   
-     La query ora comprende un filtro per includere solo questi canali: Online e Rivenditore.  
+     La query include ora un filtro per includere solo queste canali: Online e rivenditore.  
   
 6.  Espandere la dimensione Territorio di vendita, quindi trascinare Gruppo territorio di vendita nella colonna **Gerarchia** , sotto **Nome canale**.  
   
@@ -390,7 +390,7 @@ ms.locfileid: "56289869"
   
 7.  Fare clic su **Salva**.  
   
-##  <a name="MMatrixAndDataset"></a> 1. Creare un nuovo report da Creazione guidata tabella o matrice  
+##  <a name="MMatrixAndDataset"></a> 1. Creare un nuovo Report tabella o procedura guidata matrice  
  Dalla finestra di dialogo **Attività iniziali** creare un report matrice tramite **Creazione guidata tabella o matrice**.  
   
 #### <a name="to-create-a-new-report"></a>Per creare un nuovo report  
@@ -462,7 +462,7 @@ ms.locfileid: "56289869"
   
 5.  Nell'elenco dell'espressione filtro, espandere **Tutti i canali**, fare clic su **Online** e **Rivenditore**, quindi fare clic su **OK**.  
   
-     La query ora comprende un filtro per includere solo questi canali: Online e Rivenditore.  
+     La query include ora un filtro per includere solo queste canali: Online e rivenditore.  
   
 6.  Espandere la dimensione Territorio di vendita, quindi trascinare Gruppo territorio di vendita nella colonna **Gerarchia** , sotto **Nome canale**.  
   
@@ -562,7 +562,7 @@ ms.locfileid: "56289869"
   
 1.  Nella pagina **Scegliere il layout** , sotto **Opzioni**, verificare che la casella **Mostra subtotali e totali complessivi** sia selezionata.  
   
-     Nel riquadro di anteprima della creazione guidata viene visualizzata una matrice con quattro righe.  Quando si esegue il report, ogni riga viene visualizzata nel seguente modo: La prima riga è il gruppo di colonne, la seconda riga contiene le intestazioni di colonna, la terza riga contiene i dati della categoria di prodotto (`[Sum(Net_ QTY)]` e `[Sum(Net_Sales)]`) e la quarta riga contiene i totali.  
+     Nel riquadro di anteprima della creazione guidata viene visualizzata una matrice con quattro righe.  Quando si esegue il report, ogni riga viene visualizzata nel seguente modo: La prima riga è il gruppo di colonne, la seconda riga contiene le intestazioni di colonna, la terza riga contiene i dati della categoria del prodotto (`[Sum(Net_ QTY)]` e `[Sum(Net_Sales)]`, e la quarta riga contiene i totali.  
   
 2.  Scegliere **Avanti**.  
   
@@ -685,7 +685,7 @@ ms.locfileid: "56289869"
   
 1.  Nell'area di progettazione fare clic su **Fare clic per aggiungere il titolo**.  
   
-2.  Tipo **2009 Product Category Sales: Online e rivenditore categoria:**.  
+2.  Digitare **Vendite per categoria di prodotto 2009: categoria Online e Rivenditore:**.  
   
 3.  Selezionare il testo digitato.  
   

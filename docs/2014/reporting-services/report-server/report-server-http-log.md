@@ -10,15 +10,15 @@ ms.topic: conceptual
 helpviewer_keywords:
 - HTTP [Reporting Services]
 ms.assetid: 6cc433b7-165c-4b16-9034-79256dd6735f
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 9eb3cd35267075b6228df993f31dbec021b681bf
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: b4e7850cb0c66b6acbc7be54178cbc9ace27ce72
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56031372"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59961107"
 ---
 # <a name="report-server-http-log"></a>Log HTTP del server di report
   Nei file di log HTTP del server di report di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] viene mantenuto un record per ogni richiesta HTTP e relativa risposta gestite dal server di report. Poiché gli errori di overflow e di timeout relativi alle richiesta ed errori non raggiungono il server di report, non vengono registrati nel file di log.  
@@ -61,8 +61,8 @@ ms.locfileid: "56031372"
 |-----------|-----------------|-------------|  
 |HttpTraceFileName|Questo valore è facoltativo. Il valore predefinito è ReportServerServiceHTTP_. È possibile specificare un valore diverso se desidera utilizzare una convenzione di denominazione del file diversa (ad esempio per includere il nome del server se i file di log vengono salvati in una posizione centrale).|Yes|  
 |HTTPTraceSwitches|Questo valore è facoltativo. Se lo si specifica, è possibile configurare i campi utilizzati nel file di log in formato delimitato da virgole.|No|  
-|date|Data di esecuzione dell'attività.|No|  
-|Time|Ora di esecuzione dell'attività.|No|  
+|date|Data di esecuzione dell'attività.|no|  
+|Time|Ora di esecuzione dell'attività.|no|  
 |ClientIp|Indirizzo IP del client che ha eseguito l'accesso al server di report.|Yes|  
 |UserName|Nome dell'utente che ha eseguito l'accesso al server di report.|No|  
 |ServerPort|Numero della porta utilizzata per la connessione.|No|  
@@ -71,11 +71,11 @@ ms.locfileid: "56031372"
 |UriStem|Risorsa cui è stato eseguito l'accesso.|Yes|  
 |UriQuery|Query utilizzata per accedere alla risorsa.|No|  
 |ProtocolStatus|Codice di stato HTTP.|Yes|  
-|BytesReceived|Numero di byte ricevuti dal server.|No|  
-|TimeTaken|Tempo (in millisecondi) dall'istante in cui HTTP.SYS restituisce i dati della richiesta fino al momento in cui il server completa l'ultimo invio, ad eccezione del tempo di trasmissione della rete.|No|  
+|BytesReceived|Numero di byte ricevuti dal server.|no|  
+|TimeTaken|Tempo (in millisecondi) dall'istante in cui HTTP.SYS restituisce i dati della richiesta fino al momento in cui il server completa l'ultimo invio, ad eccezione del tempo di trasmissione della rete.|no|  
 |ProtocolVersion|Versione del protocollo utilizzata dal client.|No|  
 |UserAgent|Tipo di browser utilizzato dal client.|No|  
-|CookieReceived|Contenuto del cookie ricevuto dal server.|No|  
+|CookieReceived|Contenuto del cookie ricevuto dal server.|no|  
 |CookieSent|Contenuto del cookie inviato dal server.|No|  
 |Referrer|Sito precedente visitato dal client.|No|  
   

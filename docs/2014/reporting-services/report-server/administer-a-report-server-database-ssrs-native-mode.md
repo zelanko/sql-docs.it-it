@@ -15,15 +15,15 @@ helpviewer_keywords:
 - reportservertempdb
 - reportserver database
 ms.assetid: 97b2e1b5-3869-4766-97b9-9bf206b52262
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 6870e52124d303b2e04e85158adb98872b78085f
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: bc152d3130d903f4b098a495451d2918abcd7329
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56041252"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59961137"
 ---
 # <a name="administer-a-report-server-database-ssrs-native-mode"></a>Amministrare un database del server di report (modalità nativa SSRS)
   In una distribuzione di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] vengono utilizzati due database relazionali di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] per l'archiviazione interna. Per impostazione predefinita, i database sono denominati ReportServer e ReportServerTempdb. ReportServerTempdb viene creato con il database primario del server di report e viene utilizzato per l'archiviazione di dati temporanei, informazioni sulla sessione e report memorizzati nella cache.  
@@ -59,7 +59,7 @@ ms.locfileid: "56041252"
  Questo errore si verifica perché il nome ReportServerTempdb viene archiviato internamente e viene utilizzato dalle stored procedure per l'esecuzione di operazioni interne. Rinominare il database temporaneo impedisce pertanto il corretto funzionamento delle stored procedure.  
   
 ## <a name="enabling-snapshot-isolation-on-the-report-server-database"></a>Attivazione dell'isolamento dello snapshot nel database del server di report  
- Nel database del server di report non è possibile attivare l'isolamento dello snapshot. Se è attivato l'isolamento dello snapshot, si verificherà l'errore seguente: "Il report selezionato non è pronto per la visualizzazione. Il rendering del report è ancora in corso oppure non è disponibile uno snapshot del report".  
+ Nel database del server di report non è possibile attivare l'isolamento dello snapshot. Se l'isolamento dello snapshot è abilitato, si verificherà l'errore seguente: "Il report selezionato non è pronto per la visualizzazione. Il rendering del report è ancora in corso oppure non è disponibile uno snapshot del report".  
   
  Se non si attiva intenzionalmente l'isolamento dello snapshot, è probabile che l'attributo sia stato impostato da un'altra applicazione o che per il database **modello** sia stato attivato l'isolamento dello snapshot, facendo in modo che tutti i nuovi database ereditino l'impostazione.  
   

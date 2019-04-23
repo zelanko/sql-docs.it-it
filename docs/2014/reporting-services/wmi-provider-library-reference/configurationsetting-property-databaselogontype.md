@@ -16,15 +16,15 @@ topic_type:
 helpviewer_keywords:
 - DatabaseLogonType property
 ms.assetid: 6b592582-4c35-4029-ab86-982fff47d8d6
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: a8bbbcc9ba9f1eefad4801a0e9294affea4ef39a
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: cfe28e2cf9c47f3eebaddbcaa013ad492d715748
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56020588"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59941027"
 ---
 # <a name="databaselogontype-property-wmi-msreportserverconfigurationsetting"></a>Proprietà DatabaseLogonType (MSReportServer_ConfigurationSetting WMI)
   Specifica se il server di report usa un account del servizio [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows, un account utente di Windows o un account di accesso di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] per accedere al database del server di report. Di sola lettura.  

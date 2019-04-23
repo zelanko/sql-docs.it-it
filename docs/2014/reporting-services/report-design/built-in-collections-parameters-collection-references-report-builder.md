@@ -8,20 +8,20 @@ ms.technology:
 - reporting-services-native
 ms.topic: conceptual
 ms.assetid: c4b47e15-0484-4c13-9182-898db825f01f
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 178060835cf90032013a11e2b674462cb6e26ea7
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: 0aeef25c70e3e8ff7be1cbec739063ffe2c20dbb
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56287971"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59938017"
 ---
 # <a name="parameters-collection-references-report-builder-and-ssrs"></a>Riferimenti alla raccolta dei parametri (Generatore report e SSRS)
   I parametri di un report sono una delle raccolte predefinite a cui è possibile fare riferimento da un'espressione. Includendo parametri in un'espressione, è possibile personalizzare i dati e l'aspetto dei report in base alle opzioni scelte da un utente. È possibile usare le espressioni per qualsiasi proprietà degli elementi del report o delle caselle di testo che includa l'opzione (*Fx*) o \<**Espressione**>. Le espressioni vengono anche utilizzate per controllare il contenuto e l'aspetto dei report in altri modi. Per altre informazioni, vedere [Esempi di espressioni &#40;Generatore report e SSRS&#41;](expression-examples-report-builder-and-ssrs.md).  
   
- Quando si confrontano i valori dei parametri con i valori dei campi di set di dati in fase di esecuzione, i tipi di dati per i due elementi confrontati devono essere identici. I parametri del report possono essere uno dei tipi seguenti: Valore booleano, DateTime, Integer, Float o Text, che rappresenta il tipo di dati stringa sottostante. Può essere necessario convertire il tipo di dati del valore del parametro in base al valore del set di dati. Per altre informazioni, vedere [Tipi di dati nelle espressioni &#40;Generatore report e SSRS&#41;](expressions-report-builder-and-ssrs.md).  
+ Quando si confrontano i valori dei parametri con i valori dei campi di set di dati in fase di esecuzione, i tipi di dati per i due elementi confrontati devono essere identici. I parametri dei report possono essere dei tipi seguenti: Boolean, DateTime, Integer, Float o Text, che rappresenta il tipo di dati stringa sottostante. Può essere necessario convertire il tipo di dati del valore del parametro in base al valore del set di dati. Per altre informazioni, vedere [Tipi di dati nelle espressioni &#40;Generatore report e SSRS&#41;](expressions-report-builder-and-ssrs.md).  
   
  Per includere un riferimento a un parametro in un'espressione, è necessario essere in grado di specificare la sintassi corretta per tale riferimento, che varia a seconda che il parametro sia a valore singolo o multivalore.  
   
@@ -60,7 +60,7 @@ ms.locfileid: "56287971"
  [Espressioni &#40;Generatore report e SSRS&#41;](expressions-report-builder-and-ssrs.md)   
  [Filtri di uso comune &#40;Generatore report e SSRS&#41;](commonly-used-filters-report-builder-and-ssrs.md)   
  [Aggiungere, modificare o eliminare un parametro di report &#40;Generatore report e SSRS&#41;](add-change-or-delete-a-report-parameter-report-builder-and-ssrs.md)   
- [Esercitazione: Aggiungere un parametro al Report &#40;Generatore Report&#41;](../tutorial-add-a-parameter-to-your-report-report-builder.md)   
+ [Esercitazione: Aggiungere un parametro al report &#40;Generatore report&#41;](../tutorial-add-a-parameter-to-your-report-report-builder.md)   
  [Esercitazioni su &#40;Generatore Report&#41;](../report-builder-tutorials.md)   
  [Raccolte predefinite nelle espressioni &#40;Generatore report e SSRS&#41;](built-in-collections-in-expressions-report-builder.md)  
   

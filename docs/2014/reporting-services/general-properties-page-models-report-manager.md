@@ -10,15 +10,15 @@ ms.topic: conceptual
 f1_keywords:
 - sql12.swb.reportserver.modelproperties.general.f1
 ms.assetid: 7ad59850-8135-4c4d-95e9-6d705b6d77a8
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: bdc8abebbf713372caf31429082f9d3fda4cfc42
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 2523909f2719fb8316acecf8ad0b56ddbe086a36
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56018243"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59947547"
 ---
 # <a name="general-properties-page-models-report-manager"></a>Pagina delle proprietà Generale, Modelli (Gestione report)
   La pagina delle proprietà Generale per i modelli di report consente di rinominare, eliminare, spostare o sostituire il file di definizione del modello, con estensione smdl. Nella parte superiore della pagina vengono visualizzati il nome dell'utente che ha creato o modificato il modello e la data e ora di creazione o modifica.  

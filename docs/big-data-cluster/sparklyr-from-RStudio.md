@@ -10,11 +10,11 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.openlocfilehash: 148e4942babafb35af2efe33eb427f9462f0a47e
-ms.sourcegitcommit: 2e7686443a61b1a2cf4ca47d9ab1010b9e9b5188
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59291581"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59969877"
 ---
 # <a name="use-sparklyr-in-sql-server-big-data-cluster"></a>Usare sparklyr nel cluster di big data di SQL Server
 

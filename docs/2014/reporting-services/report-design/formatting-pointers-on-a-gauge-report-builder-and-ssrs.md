@@ -8,15 +8,15 @@ ms.technology:
 - reporting-services-native
 ms.topic: conceptual
 ms.assetid: 2fdf670a-5237-48fe-813d-97657c5c77d2
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 5e83c008e44d0aa6011e74cdf85ce88a9c19444e
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: 3254f7bbe4cfdd826b24c003b5b472535534dd54
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56297109"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59957027"
 ---
 # <a name="formatting-pointers-on-a-gauge-report-builder-and-ssrs"></a>Formattazione degli indicatori di misura su un misuratore (Generatore report e SSRS)
   Un indicatore di misura del misuratore indica il valore corrente del misuratore. Per impostazione predefinita, quando si aggiunge un campo, i valori in esso contenuti vengono aggregati in un unico valore indicato dall'indicatore di misura sul misuratore. È possibile aggiungere più indicatori di misura al misuratore in modo da indicare più valori sulla stessa scala o aggiungere più scale e un indicatore di misura per ogni scala aggiunta. Dopo aver aggiunto un campo a un misuratore, è necessario impostare i valori massimo e minimo sulla scala corrispondente in modo da fornire un contesto per il valore dell'indicatore di misura. È inoltre possibile impostare i valori minimo e massimo su un intervallo per mostrare un'area critica sulla scala.  

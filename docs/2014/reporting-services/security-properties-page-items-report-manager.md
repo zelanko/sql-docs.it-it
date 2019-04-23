@@ -8,15 +8,15 @@ ms.technology:
 - reporting-services-native
 ms.topic: conceptual
 ms.assetid: 351b8503-354f-4b1b-a7ac-f1245d978da0
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 9b38c5820a1680726b3c69d2e09c1d29600a71b4
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: bb1835a67ca1f909bf382fd227783cb0a20bbbf5
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56024472"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59934767"
 ---
 # <a name="security-properties-page-items-report-manager"></a>Pagina delle proprietà sicurezza, Elementi (Gestione report)
   Utilizzare la pagina delle proprietà sicurezza per visualizzare o modificare le impostazioni di sicurezza che regolano l'accesso a cartelle, report, modelli, risorse e origini dei dati condivise. Questa pagina è disponibile per gli elementi per i quali l'utente è autorizzato a definire le impostazioni di sicurezza.  

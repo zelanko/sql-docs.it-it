@@ -8,15 +8,15 @@ ms.technology:
 - reporting-services-native
 ms.topic: conceptual
 ms.assetid: d9f51c37-b071-45d0-baec-f82fa6db366f
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: dc06dc9c708354e863c37d6067a2355492d4cddd
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 2d5a4394a9fbbf9ff7daa54ed7ba6a8b28921bd5
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56024292"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59945307"
 ---
 # <a name="sharepoint-integration-with-2008-and-2008-r2--report-servers"></a>Integrazione di SharePoint con server di report 2008 e 2008 R2
   Nella versione [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] di [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] viene introdotta un'architettura in cui la modalità SharePoint è basata su un servizio SharePoint Shared. La gestione della nuova funzionalità viene eseguita nelle pagine **Gestisci servizi** e **Gestisci applicazioni di servizio** di Amministrazione centrale SharePoint. L'architettura precedente di [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] per l'integrazione SharePoint è ancora supportata con il componente aggiuntivo [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] per Prodotti SharePoint 2010, pertanto è possibile integrare SharePoint 2010 con le versioni precedenti di un server di report.  

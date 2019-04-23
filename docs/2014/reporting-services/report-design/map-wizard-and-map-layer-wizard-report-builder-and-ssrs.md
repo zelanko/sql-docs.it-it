@@ -12,15 +12,15 @@ f1_keywords:
 - "10542"
 - MICROSOFT.REPORTDESIGNER.MAPLAYER.NAME
 ms.assetid: 48cbe18b-1290-4107-8a1c-ec6acd71f73b
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: f005ac1a727b375d7c0796a9f30bfed388dccfbd
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: aa0ccc9d3b2ca01e1b2279f71ef2815c81e060e3
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56290759"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59962987"
 ---
 # <a name="map-wizard-and-map-layer-wizard-report-builder-and-ssrs"></a>Creazione guidata mappa e Creazione guidata livello mappa (Generatore report e SSRS)
   La Creazione guidata mappa e la Creazione guidata livello mappa consentono di automatizzare l'attività di creazione di una mappa, di aggiunta di un livello mappa o di modifica delle opzioni di livello mappa in un livello esistente.  
@@ -53,7 +53,7 @@ ms.locfileid: "56290759"
   
  Fare clic sul titolo della pagina della procedura guidata per il contenuto della guida corrispondente. Le pagine visualizzate variano a seconda delle scelte effettuate per il tipo di mappa, l'origine dei dati spaziali e l'origine dei dati analitici.  
   
-1.  [Scegliere un'origine dati spaziali](#SpatialDataSource). I dati spaziali possono provenire dalla raccolta mappe, ovvero un file di forma Environmental Systems Research Institute, Inc. (ESRI) o da dati spaziali di un database relazionale [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
+1.  [Scegliere un'origine dati spaziali](#SpatialDataSource). I dati spaziali possono provenire dalla raccolta mappe, un'Environmental Systems Research Institute, Inc. (ESRI) o da dati spaziali di un database relazionale [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
     -   [Informazioni sui dati spaziali](#SpatialData)  
   
@@ -107,7 +107,7 @@ ms.locfileid: "56290759"
   
  Dopo aver aggiunto una mappa o un relativo livello e visualizzato in anteprima il report, è possibile modificare le opzioni della mappa e del relativo livello che sono state impostate nelle procedure guidate. Per altre informazioni, vedere [Personalizzare i dati e la visualizzazione di una mappa o di un livello mappa &#40;Generatore report e SSRS&#41;](customize-the-data-and-display-of-a-map-or-map-layer-report-builder-and-ssrs.md).  
   
- Per altre informazioni sulle mappe, vedere [Mappe &#40;Generatore report e SSRS&#41;](maps-report-builder-and-ssrs.md). Per istruzioni dettagliate aggiungere una mappa a un report, vedere [esercitazione: Report mappa &#40;Generatore Report&#41;](../tutorial-map-report-report-builder.md).  
+ Per altre informazioni sulle mappe, vedere [Mappe &#40;Generatore report e SSRS&#41;](maps-report-builder-and-ssrs.md). Per istruzioni dettagliate sull'aggiunta di una mappa a un report, vedere [Esercitazione: Report mappa &#40;Generatore report&#41;](../tutorial-map-report-report-builder.md).  
   
  ![Icona freccia usata con il collegamento Torna all'inizio](../../2014-toc/media/uparrow16x16.gif "Icona freccia usata con il collegamento Torna all'inizio") [Torna all'inizio](#BackToTop)  
   
@@ -125,7 +125,7 @@ ms.locfileid: "56290759"
  La raccolta mappe contiene le mappe dei report presenti nella cartella della raccolta mappe per l'ambiente di creazione del report. Le mappe della raccolta rappresentano un modo rapido per aggiungere una mappa al report. Le mappe predefinite della raccolta vengono fornite da un provider di mappe.  
   
 > [!NOTE]  
->  Questa funzionalità di mapping di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] usa i dati dei file di forma TIGER/Line forniti gentilmente Census Bureau degli Stati Uniti ([http://www.census.gov/](http://www.census.gov/)). I file di forma TIGER/Line sono un estratto di informazioni geografiche e cartografiche selezionate dal database Census MAF/TIGER e sono messi a disposizione gratuitamente dal Census Bureau degli Stati Uniti. Per altre informazioni sui file di forma TIGER/Line, visitare [http://www.census.gov/geo/www/tiger](http://www.census.gov/geo/www/tiger). Le informazioni sui confini presenti nei file di forma TIGER/Line servono solo per la raccolta dei dati statistici e la tabulazione. La relativa rappresentazione e designazione per scopi statistici non determina un'autorità giurisdizionale oppure diritti di proprietà o titoli, né rappresentano descrizioni geografiche valide a livello legale. Census TIGER e TIGER/Line sono marchi registrati di U.S. Bureau of the Census.  
+>  Questa funzionalità di mapping di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] usa i dati dei file di forma TIGER/Line forniti gentilmente Census Bureau degli Stati Uniti ([http://www.census.gov/](http://www.census.gov/)). I file di forma TIGER/Line sono un estratto di informazioni geografiche e cartografiche selezionate dal database Census MAF/TIGER File di forma TIGER/Line sono disponibili senza gratuitamente da U.S. Census Bureau. Per altre informazioni sui file di forma TIGER/Line, visitare [http://www.census.gov/geo/www/tiger](http://www.census.gov/geo/www/tiger). Le informazioni sui confini presenti nei file di forma TIGER/Line servono solo per la raccolta dei dati statistici e la tabulazione. La relativa rappresentazione e designazione per scopi statistici non determina un'autorità giurisdizionale oppure diritti di proprietà o titoli, né rappresentano descrizioni geografiche valide a livello legale. Census TIGER e TIGER/Line sono marchi registrati negli Stati Uniti Bureau of the Census.  
   
  Per estendere la raccolta mappe, è possibile aggiungere o rimuovere report dalla directory della raccolta mappe e aggiungere cartelle per organizzare le mappe. Per altre informazioni, vedere [Mappe &#40;Generatore report e SSRS&#41;](maps-report-builder-and-ssrs.md).  
   
@@ -198,7 +198,7 @@ ms.locfileid: "56290759"
   
  Per altre informazioni sulle sezioni, vedere [Bing Maps Tiles System](https://go.microsoft.com/fwlink/?LinkId=147315). Per altre informazioni sull'utilizzo delle tessere mappa di Bing nel report, vedere [Ulteriori condizioni di utilizzo](https://go.microsoft.com/fwlink/?LinkId=151371) e [Informativa sulla privacy](https://go.microsoft.com/fwlink/?LinkId=151372).  
   
- Per vedere uno sfondo a sezioni in visualizzazione della struttura, è necessario poter accedere a Internet. Per vedere in anteprima lo sfondo a sezioni di un report in un server di report, quest'ultimo deve essere configurato in modo da supportare le tessere mappa di Bing. Per altre informazioni, vedere [rapporti di risoluzione dei problemi: I report mappa &#40;Generatore Report e SSRS&#41; ](troubleshoot-reports-map-reports-report-builder-and-ssrs.md) "Pianificazione per le mappe" in e il [documentazione relativa a Reporting Services](https://go.microsoft.com/fwlink/?linkid=121312) nella documentazione Online di SQL Server.  
+ Per vedere uno sfondo a sezioni in visualizzazione della struttura, è necessario poter accedere a Internet. Per vedere in anteprima lo sfondo a sezioni di un report in un server di report, quest'ultimo deve essere configurato in modo da supportare le tessere mappa di Bing. Per altre informazioni, vedere [Risoluzione dei problemi dei report: I report mappa &#40;Generatore Report e SSRS&#41; ](troubleshoot-reports-map-reports-report-builder-and-ssrs.md) "Pianificazione per le mappe" in e il [documentazione relativa a Reporting Services](https://go.microsoft.com/fwlink/?linkid=121312) nella documentazione Online di SQL Server.  
   
  Per altre informazioni su come personalizzare un livello sezione, vedere [Aggiungere, modificare o eliminare una mappa o livello mappa &#40;Generatore report e SSRS&#41;](add-change-or-delete-a-map-or-map-layer-report-builder-and-ssrs.md).  
   

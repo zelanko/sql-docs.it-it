@@ -1,5 +1,5 @@
 ---
-title: 'Lezione 2: Specificare le informazioni di connessione (Reporting Services) | Microsoft Docs'
+title: 'Lezione 2: Definizione delle informazioni di connessione (Reporting Services) | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,17 +8,17 @@ ms.technology:
 - reporting-services-native
 ms.topic: conceptual
 ms.assetid: 54405a3a-d7fa-4d95-8963-9aa224e5901e
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 67336ec0829c810a087ddfdcf79628408c045a76
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: cd0c7e3bc9ece2a6eafa9de1623bfa2b641e5e64
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56290179"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59955577"
 ---
-# <a name="lesson-2-specifying-connection-information-reporting-services"></a>Lezione 2: Specificare le informazioni di connessione (Reporting Services)
+# <a name="lesson-2-specifying-connection-information-reporting-services"></a>Lezione 2: Definizione delle informazioni di connessione (Reporting Services)
   Dopo aver aggiunto un report al progetto Tutorial, è necessario definire un' *origine dati*, vale a dire informazioni di connessione usate dal report per accedere ai dati da un database relazionale, da un database multidimensionale o da un'altra risorsa.  
   
  In questa lezione come origine dati verrà utilizzato il database di esempio [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)]. L'esercitazione presuppone che il database si trovi in un'istanza predefinita del [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../includes/ssde-md.md)] installata nel computer locale.  
@@ -56,7 +56,7 @@ ms.locfileid: "56290179"
 7.  [!INCLUDE[clickOK](../includes/clickok-md.md)] zdroj dat [!INCLUDE[ssSampleDBnormal](../includes/sssampledbnormal-md.md)] viene aggiunto per il **i dati del Report** riquadro.  
   
 ## <a name="next-task"></a>Attività successiva  
- È stata definita correttamente una connessione al database di esempio [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] . Verrà successivamente creato il report. Vedere [lezione 3: La definizione di un set di dati per il Report di tabella &#40;Reporting Services&#41;](lesson-3-defining-a-dataset-for-the-table-report-reporting-services.md).  
+ È stata definita correttamente una connessione al database di esempio [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] . Verrà successivamente creato il report. Vedere [Lezione 3: Definizione di un set di dati per il report tabella &#40;Reporting Services&#41;](lesson-3-defining-a-dataset-for-the-table-report-reporting-services.md).  
   
 ## <a name="see-also"></a>Vedere anche  
  [Connessioni dati, origini dati e stringhe di connessione in Reporting Services](data-connections-data-sources-and-connection-strings-in-reporting-services.md)  

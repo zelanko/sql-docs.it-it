@@ -10,15 +10,15 @@ ms.topic: conceptual
 helpviewer_keywords:
 - GetReportServerUrls method
 ms.assetid: 4865e32c-0114-465a-be8c-be223a7bc09e
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: fc9427e01f320778eafc1bac738daed0e80ce3c8
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 2580538f24fe220369f0f6ea807e6caa8dd822a6
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56014002"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59945597"
 ---
 # <a name="getreportserverurls-method-wmi-msreportserverinstance"></a>Metodo GetReportServerUrls (MSReportServer_Instance WMI)
   Restituisce un elenco degli URL che è possibile utilizzare per accedere al server di report e alla gestione report.  

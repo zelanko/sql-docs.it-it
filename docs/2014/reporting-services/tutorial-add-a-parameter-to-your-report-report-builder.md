@@ -1,5 +1,5 @@
 ---
-title: 'Esercitazione: Aggiungere un parametro al Report (Generatore Report) | Microsoft Docs'
+title: 'Esercitazione: Aggiungere un parametro al report (Generatore report) | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,17 +8,17 @@ ms.technology:
 - reporting-services-native
 ms.topic: conceptual
 ms.assetid: eab34ec4-b3ad-4a76-95cc-07b2f75ee6d7
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 6545812b60732d07881a17dba57cc36066d2f8b5
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: cf5f7a4bee10b58f644d98fe03ada0a9e8d0faa3
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56298659"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59966517"
 ---
-# <a name="tutorial-add-a-parameter-to-your-report-report-builder"></a>Esercitazione: Aggiungere un parametro al report (Generatore report)
+# <a name="tutorial-add-a-parameter-to-your-report-report-builder"></a>Esercitazione: Aggiungere un parametro al Report (Generatore Report)
   Aggiungere un parametro al report per consentire agli utenti di filtrare i dati del report dall'origine dati o nel report. I parametri di report vengono creati automaticamente per ogni parametro di query incluso in una query del set di dati. Il tipo di dati determina il modo in cui il parametro viene presentato sulla barra degli strumenti della visualizzazione report.  
   
  ![rs_tut_Parameter](../../2014/tutorials/media/rs-tut-parameter.gif "rs_tut_Parameter")  
@@ -55,14 +55,14 @@ ms.locfileid: "56298659"
 10. [Salvare il Report](#Save)  
   
 > [!NOTE]  
->  In questa esercitazione, i passaggi per la procedura guidata sono consolidati in un'unica procedura. Per istruzioni dettagliate su come selezionare un server di report, scegliere un'origine dati e creare un set di dati, vedere la prima esercitazione di questa serie: [Esercitazione: Creazione di un Report tabella semplice &#40;Generatore Report&#41;](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md).  
+>  In questa esercitazione, i passaggi per la procedura guidata sono consolidati in un'unica procedura. Per istruzioni dettagliate su come selezionare un server di report, scegliere un'origine dati e creare un set di dati. Vedere la prima esercitazione di questa serie: [Esercitazione: Creazione di un report tabella semplice &#40;Generatore report&#41;](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md).  
   
- Tempo previsto per il completamento di questa esercitazione: 25 minuti.  
+ Tempo stimato per completare questa esercitazione: 25 minuti.  
   
 ## <a name="requirements"></a>Requisiti  
  Per informazioni sui requisiti, vedere [Prerequisiti per le esercitazioni &#40;Generatore report&#41;](../reporting-services/report-builder-tutorials.md).  
   
-##  <a name="Setup"></a> 1. Creare un report matrice e un set di dati dalla Creazione guidata tabella o matrice  
+##  <a name="Setup"></a> 1. Creare un Report matrice e un set di dati dalla tabella o dalla creazione guidata matrice  
  Creare un report matrice, un'origine dati e un set di dati.  
   
 > [!NOTE]  
@@ -123,7 +123,7 @@ ms.locfileid: "56298659"
   
 12. Scegliere **Avanti**.  
   
-##  <a name="CompleteWizard"></a> 2. Organizzare dati, scegliere il layout e lo stile dalla Creazione guidata tabella o matrice  
+##  <a name="CompleteWizard"></a> 2. Organizzare i dati, scegliere il Layout e lo stile dalla tabella o procedura guidata matrice  
  Utilizzare la procedura guidata per fornire una progettazione iniziale in cui visualizzare i dati. Il riquadro di anteprima nella procedura guidata consente di visualizzare il risultato del raggruppamento di dati prima di completare la progettazione della tabella o della matrice.  
   
 #### <a name="to-organize-data-into-groups"></a>Per organizzare i dati in gruppi  
@@ -327,7 +327,7 @@ ms.locfileid: "56298659"
   
 7.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
-     L'intestazione di colonna store contiene il testo visualizzato per un'espressione complessa: **<\<Expr>>**.  
+     Nell'intestazione di colonna del punto vendita è contenuto il testo visualizzato per un'espressione complessa: **<\<Expr>>**.  
   
 8.  Visualizzare l'anteprima del report.  
   

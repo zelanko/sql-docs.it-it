@@ -8,15 +8,15 @@ ms.technology:
 - reporting-services-native
 ms.topic: conceptual
 ms.assetid: 1c1e265e-52a2-4de3-96fd-ca4abae01c02
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 59b1574f7c302a5cf3adc3bee04881eefd176080
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 4347854a56e0d6cb021a3958203d94c28cb96d22
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56032012"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59936827"
 ---
 # <a name="plan-for-report-design-and-report-deployment-reporting-services-2014"></a>Pianificare la progettazione e la distribuzione di report (Reporting Services 2014)
   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] sono disponibili diversi approcci per la creazione e distribuzione di report. Utilizzare questo argomento per la pianificazione di un ambiente di creazione di report e un server di report che interagiscono. In questo argomento viene fornita una panoramica del supporto delle definizioni di report mediante i componenti [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] . Una definizione di report è un file XML scritto in linguaggio RDL (Report Definition Language) o RDLC (Report Definition Language for Clients). Ogni definizione di report è conforme a una versione di schema specifica elencata all'inizio del file.  
@@ -56,15 +56,15 @@ ms.locfileid: "56032012"
 ##  <a name="bkmk_report_server_rdl_schema_support"></a> Server di report e supporto dello schema RDL  
  In un server di report di [!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)] è possibile distribuire un file di definizione del report nei modi seguenti:  
   
--   **Progettazione report:** distribuire un report da Progettazione report in [!INCLUDE[ss_dtbi](../includes/ss-dtbi-md.md)].  
+-   **Progettazione report:** Distribuire un report da Progettazione Report in [!INCLUDE[ss_dtbi](../includes/ss-dtbi-md.md)].  
   
--   **Generatore report:** salvare un report nel server di report da Generatore report.  
+-   **Generatore report:** Salvare un report nel server di report da Generatore Report.  
   
--   **Gestione report:** caricare un report in un server di report in modalità nativa da Gestione report.  
+-   **Gestione report:** Caricare un report in un server di report in modalità nativa da Gestione Report.  
   
--   **SharePoint:** caricare un report in un sito di SharePoint configurato con un server di report in modalità SharePoint.  
+-   **SharePoint:** Caricare un report in un sito di SharePoint configurato con un server di report in modalità SharePoint.  
   
--   **A livello di codice:** pubblicare un report a livello di programmazione tramite le interfacce API SOAP in un server di report. Per ulteriori informazioni, vedere [Report Server Web Service](report-server-web-service/report-server-web-service.md).  
+-   **A livello di codice:** A livello di programmazione pubblica un report con le interfacce API SOAP in un server di report. Per ulteriori informazioni, vedere [Report Server Web Service](report-server-web-service/report-server-web-service.md).  
   
  Nella tabella seguente viene elencata la versione supportata dello schema rdl in base alla versione del server di report.  
   

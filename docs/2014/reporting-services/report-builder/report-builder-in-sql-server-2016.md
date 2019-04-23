@@ -13,15 +13,15 @@ helpviewer_keywords:
 - overview of Report Builder
 - getting started
 ms.assetid: 55bf4f9c-d037-412f-ae57-3fc39ce32fa5
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: eb8120b9ba413ce6f1a59667c136b1580eb5b675
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: a0c9605bfafac3611b9a24f25bb7e46c194ed22c
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56290439"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59948267"
 ---
 # <a name="report-builder-in-sql-server-2014"></a>Generatore report in SQL Server 2014
   Generatore report è un ambiente per la creazione di report destinato a utenti aziendali che preferiscono lavorare nell'ambiente [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Office. Quando si progetta un report, si specifica dove ottenere i dati, quali dati ottenere e come visualizzarli. Quando si esegue il report, Elaborazione report utilizza tutte le informazioni specificate, recupera i dati e li combina con il layout per generare il report. È possibile visualizzare l'anteprima dei report in Generatore report oppure pubblicare un report in un server di report o in un server di report in modalità integrata SharePoint dove potrà essere eseguito da altri utenti.  
@@ -38,7 +38,7 @@ ms.locfileid: "56290439"
   
 -   **Avviare la procedura guidata di tabella, matrice o grafico**. Scegliere una connessione all'origine dati, trascinare campi per creare una query del set dei dati, selezionare un layout e uno stile e personalizzare il report.  
   
--   **Avviare la creazione guidata della mappa** per creare report di visualizzazione dei dati aggregati su uno sfondo geografico o geometrico. I dati di una mappa possono essere dati spaziali di una query [!INCLUDE[tsql](../../includes/tsql-md.md)] o di un file di forma ESRI (Environmental Systems Research Institute, Inc.) . È inoltre possibile aggiungere un sfondo a tessera mappa di [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Bing.  
+-   **Avviare la creazione guidata della mappa** per creare report di visualizzazione dei dati aggregati su uno sfondo geografico o geometrico. I dati della mappa possono essere dati spaziali da un [!INCLUDE[tsql](../../includes/tsql-md.md)] query o un Environmental Systems Research Institute, Inc. File di forma (ESRI). È inoltre possibile aggiungere un sfondo a tessera mappa di [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Bing.  
   
 
   
@@ -79,7 +79,7 @@ ms.locfileid: "56290439"
  [Novità di Generatore report per SQL Server 2014](../what-s-new-in-report-builder-for-sql-server-2014.md)  
  Vengono illustrate le nuove caratteristiche disponibili in questa versione di Generatore report, incluse le mappe.  
   
- [Esercitazione: Creazione di un Report grafico rapido Offline](tutorial-create-a-quick-chart-report-offline-report-builder.md)  
+ [Esercitazione: Creazione di un report grafico rapido offline](tutorial-create-a-quick-chart-report-offline-report-builder.md)  
  Vengono fornite informazioni preliminari su Generatore report e sulle procedure guidate disponibili per la creazione di report. Viene inoltre fornito un set di dati iniziale da utilizzare per evitare di connettersi a un'origine dati.  
   
  [Pianificazione di un report &#40;Generatore report&#41;](../report-design/planning-a-report-report-builder.md)  

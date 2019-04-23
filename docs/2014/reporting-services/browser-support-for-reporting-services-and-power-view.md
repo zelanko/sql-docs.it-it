@@ -1,7 +1,7 @@
 ---
 title: Pianificazione per il supporto browser per Reporting Services e Power View (Reporting Services 2014)
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
 ms.reviewer: ''
 ms.prod: sql-server-2014
@@ -9,12 +9,12 @@ ms.technology: reporting-services-native
 ms.topic: conceptual
 ms.custom: ''
 ms.date: 06/13/2017
-ms.openlocfilehash: 0f385bbdbec1072896c0b248257ef9b82d439ab2
-ms.sourcegitcommit: 78e32562f9c1fbf2e50d3be645941d4aa457e31f
+ms.openlocfilehash: 58ed105619ca5ad5eadb00271e18ddaa10c6bfe3
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/08/2019
-ms.locfileid: "54100936"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59953957"
 ---
 # <a name="planning-for-reporting-services-and-power-view-browser-support-reporting-services-2014"></a>Pianificazione per il supporto browser per Reporting Services e Power View (Reporting Services 2014)
   In [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)][!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] viene usato un Web browser per visualizzare i report ed eseguire Gestione report. Solo alcuni browser supportano tutte le funzionalità report. In questo argomento viene descritto il supporto e i requisiti per le funzionalità di gestione di Gestione report, per la visualizzazione dei report e i comandi del visualizzatore di report in Visual Studio. Viene inoltre riepilogata la disponibilità delle funzionalità per i browser supportati, i requisiti di autenticazione e i requisiti di script.  
@@ -51,7 +51,7 @@ ms.locfileid: "54100936"
   
 - Per altre informazioni sul supporto browser per SharePoint 2010, vedere [pianificare il supporto browser (SharePoint Server 2010)](https://technet.microsoft.com/library/cc263526\(office.14\).aspx) (https://technet.microsoft.com/library/cc263526(office.14).aspx).  
   
-|**Browser**|**Windows 8 e 8.1**|**Windows 7**|**Windows Server 2012 e 2012 R2**|**Windows Server 2008 R2**|**Windows Server 2008**|**Mac OS X 10.6-10.9**|  
+|**Browser**|**Windows 8 e 8.1**|**Windows 7**|**Windows Server 2012 e 2012 R2**|**Windows Server 2008 R2**|**Windows Server 2008**|**Mac OS X 10.6 - 10.9**|  
 |-----------------|---------------------------|-------------------|-----------------------------------------|--------------------------------|-----------------------------|------------------------------|  
 |**Internet Explorer 11 (per il desktop)**|32 bit, 64 bit|32 bit, 64 bit|32 bit, 64 bit|32 bit, 64 bit|Non supportato|Non supportato|  
 |**Internet Explorer 10 (per il desktop)**|32 bit, 64 bit|32 bit, 64 bit|32 bit, 64 bit|32 bit, 64 bit|Non supportato|Non supportato|  
@@ -73,7 +73,7 @@ ms.locfileid: "54100936"
   
 -   Per altre informazioni sul supporto browser per SharePoint 2013, vedere [pianificare il supporto browser in SharePoint 2013](https://technet.microsoft.com/library/cc263526\(office.15\).aspx) (https://technet.microsoft.com/library/cc263526(office.15).aspx).  
   
-|**Browser**|**Windows 8 e 8.1**|**Windows 7**|**Windows Server 2012 e 2012 R2**|**Windows Server 2008 R2**|**Windows Server 2008**|**Mac OS X 10.6-10.9**|  
+|**Browser**|**Windows 8 e 8.1**|**Windows 7**|**Windows Server 2012 e 2012 R2**|**Windows Server 2008 R2**|**Windows Server 2008**|**Mac OS X 10.6 - 10.9**|  
 |-----------------|---------------------------|-------------------|-----------------------------------------|--------------------------------|-----------------------------|------------------------------|  
 |**Internet Explorer 11 (per il desktop)**|32 bit, 64 bit|32 bit, 64 bit|32 bit, 64 bit|32 bit, 64 bit|Non supportato|Non supportato|  
 |**Internet Explorer 10 (per il desktop)**|32 bit, 64 bit|32 bit, 64 bit|32 bit, 64 bit|32 bit, 64 bit|Non supportato|Non supportato|  
@@ -100,7 +100,7 @@ ms.locfileid: "54100936"
 
  Di seguito è riportato l'elenco corrente delle funzionalità e dei browser supportati con il visualizzatore di report. Il visualizzatore di report supporta la visualizzazione dei report da Gestione report e dalle raccolte di SharePoint di [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] .  
   
-|**Browser**|**Windows 8 e 8.1**|**Windows 7**|**Windows Server 2012 e 2012 R2**|**Windows Server 2008 R2**|**Windows Server 2008**|**Mac OS X 10.6-10.9**|**iOS 6-7 per iPad**|  
+|**Browser**|**Windows 8 e 8.1**|**Windows 7**|**Windows Server 2012 e 2012 R2**|**Windows Server 2008 R2**|**Windows Server 2008**|**Mac OS X 10.6 - 10.9**|**iOS 6-7 per iPad**|  
 |-----------------|---------------------------|-------------------|-----------------------------------------|--------------------------------|-----------------------------|------------------------------|----------------------------|  
 |**Internet Explorer 11 (per il desktop)**|32 bit, 64 bit|32 bit, 64 bit|32 bit, 64 bit|Non supportato|Non supportato|Non supportato|Non supportato|  
 |**Internet Explorer 10 (per il desktop)**|32 bit, 64 bit|32 bit, 64 bit|32 bit, 64 bit|Non supportato|Non supportato|Non supportato|Non supportato|  
@@ -146,7 +146,7 @@ ms.locfileid: "54100936"
   
  Se lo scripting non è abilitato, all'apertura di un report verrà visualizzato un messaggio di errore simile al seguente:  
   
-- **Il browser in uso non supporta gli script oppure è stato configurato in modo da non consentire l'esecuzione di script. Fare clic qui per visualizzare il report senza script**.  
+- **Il browser non supporta gli script oppure è stato configurato per non consentire l'esecuzione di script. Fare clic qui per visualizzare il report senza script**.  
   
  Se si sceglie di visualizzare il report senza il supporto per gli script, il report verrà sottoposto a rendering in HTML senza le funzionalità del visualizzatore di report, quali la barra degli strumenti per report e la mappa documento.  
   
@@ -169,7 +169,7 @@ ms.locfileid: "54100936"
   
 |||||||||  
 |-|-|-|-|-|-|-|-|  
-|**Browser**|**Windows 8** e **Windows 8.1**|**Windows 7**|**Windows Server 2012** e **2012 R2**|**Windows Server 2008** e **2008 R2**|**Windows Server 2003**|**Mac OS X 10.6-10.9**|**Note**|  
+|**Browser**|**Windows 8** e **Windows 8.1**|**Windows 7**|**Windows Server 2012** e **2012 R2**|**Windows Server 2008** e **2008 R2**|**Windows Server 2003**|**Mac OS X 10.6 - 10.9**|**Note**|  
 |**Internet Explorer 11 (per il desktop**|Yes|Yes|Yes|Non supportato|Non supportato|Non supportato|Internet Explorer supporta il set completo di funzionalità ReportViewer.|  
 |**Internet Explorer 10 (per il desktop)**|Yes|Yes|Yes|Non supportato|Non supportato|Non supportato|Internet Explorer supporta il set completo di funzionalità ReportViewer.|  
 |**Internet Explorer 9**|Non supportato|Yes|Non supportato|Yes|Yes|Yes|Internet Explorer supporta il set completo di funzionalità ReportViewer.|  
