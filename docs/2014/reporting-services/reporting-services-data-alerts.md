@@ -8,15 +8,15 @@ ms.technology:
 - reporting-services-native
 ms.topic: conceptual
 ms.assetid: 8c234077-b670-45c0-803f-51c5a5e0866e
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 15323e5ea5f2762e0cef9b4e275e8131d43c591a
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: e3e317659f4c0efb964b996de7afd46663538eed
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56017272"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59958713"
 ---
 # <a name="reporting-services-data-alerts"></a>Reporting Services Data Alerts
   [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] rappresentano una soluzione guidata dai dati che consente di essere informati sui dati dei report di proprio interesse o importanti al momento appropriato. Utilizzando gli avvisi dati non è più necessario andare in cerca di informazioni, che possono essere ottenute automaticamente.  
@@ -128,7 +128,7 @@ ms.locfileid: "56017272"
   
  Nella tabella seguente sono elencati gli elementi di configurazione per gli avvisi dati, i relativi valori predefiniti, le descrizioni e le posizioni.  
   
-|Impostazione|Valore predefinito|Descrizione|Località|  
+|Impostazione|Valore predefinito|Descrizione|Location|  
 |-------------|-------------------|-----------------|--------------|  
 |AlertingCleanupCycleMinutes|20|Numero di minuti tra l'inizio di un ciclo di pulizia e l'altro.|File di configurazione del server di report|  
 |AlertingExecutionLogCleanupMinutes|10080|Numero di minuti di durata delle voci del log di esecuzione.|File di configurazione del server di report|  

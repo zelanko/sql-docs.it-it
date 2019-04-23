@@ -22,15 +22,15 @@ helpviewer_keywords:
 - Web service [Reporting Services], report server
 - storage [Reporting Services]
 ms.assetid: 88ed5b97-1d28-4980-80e4-b36761f3c03a
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: a6c183fc402571ab359071160d515939257f773b
-ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
+ms.openlocfilehash: ea53907b9561a92ef46056fad145f5d0236048cb
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59241629"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59963387"
 ---
 # <a name="reporting-services-report-server"></a>Reporting Services Report Server
   In questo argomento viene fornita una panoramica del server di report di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] , il componente centrale di un'installazione [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] . È costituito da una coppia di componenti di elaborazione oltre a una raccolta di estensioni speciali che gestiscono le operazioni di autenticazione, elaborazione dati, rendering e recapito. Un server di report di [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] viene eseguito in una delle due modalità di distribuzione: nativa o SharePoint. Vedere la sezione [Confronto tra le funzionalità delle modalità SharePoint e nativa](#bkmk_featuresupport) per un confronto delle funzionalità.  

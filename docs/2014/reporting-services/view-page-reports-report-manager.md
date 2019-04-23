@@ -8,15 +8,15 @@ ms.technology:
 - reporting-services-native
 ms.topic: conceptual
 ms.assetid: 4874ba29-429b-4dd4-a8cb-d4f087237dc2
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 057d2c4c75bbc0d7070992571a80907e811d354e
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: d36a9e8b5e4b46283b78f07c27834a79993faeab
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56031632"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59969438"
 ---
 # <a name="view-page-reports-report-manager"></a>Pagina Visualizza, Report (Gestione report)
   La pagina Visualizza per i report consente di visualizzare un report. La prima volta che si apre un report in Gestione report, questo viene visualizzato in formato HTML. I report HTML includono una barra degli strumenti dei report visualizzata nella parte superiore del report, che consente di spostarsi tra le pagine del report, eseguire ricerche all'interno di un report oppure esportarlo in un diverso formato. Nella figura seguente viene illustrata la barra degli strumenti dei report.  

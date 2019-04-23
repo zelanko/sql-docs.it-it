@@ -11,21 +11,21 @@ helpviewer_keywords:
 - authentication [Reporting Services]
 - extensions [Reporting Services], custom security
 ms.assetid: 91aeb053-149e-4562-ae4c-a688d0e1b2ba
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 6787ec73d91b32e0bdb90f8a5f25499f0ac35620
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: bff2f31eb321a24c184580a6b1565f4dbc76bb1d
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56034492"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59955027"
 ---
 # <a name="configure-report-manager-to-pass-custom-authentication-cookies"></a>Configurare Gestione report per il passaggio di cookie di autenticazione personalizzati
   Se si sta utilizzando un'estensione di autenticazione personalizzata, è necessario configurare Gestione report per la trasmissione di cookie di autenticazione personalizzati. In caso contrario, i cookie verranno trasmessi solo mediante richieste HTTP specifiche del server di report. Se si desidera trasmettere ulteriori cookie, è necessario modificare il file RSReportServer.Config.  
   
 ## <a name="modifying-the-rsreportserverconfig-file"></a>Modifica del file RSReportServer.config  
- È possibile consentire a Gestione report di trasmettere ulteriori cookie al server di report aggiungendo un elemento ;<`PassThroughCookies`> alle impostazioni di configurazione di Gestione report nel file RSReportServer.config. La trasmissione di cookie aggiuntivi è utile in una soluzione di autenticazione Single Sign-On che, insieme ai cookie di autenticazione del server di report, richiede anche cookie di un sistema di autenticazione di terze parti.  
+ È possibile abilitare gestione Report di trasmettere ulteriori cookie al server di report mediante l'aggiunta di un <`PassThroughCookies`> elemento per le impostazioni di configurazione di gestione Report nel file RSReportServer. config. La trasmissione di cookie aggiuntivi è utile in una soluzione di autenticazione Single Sign-On che, insieme ai cookie di autenticazione del server di report, richiede anche cookie di un sistema di autenticazione di terze parti.  
   
  Per consentire la trasmissione di ulteriori cookie tramite richieste HTTP quando si utilizza Gestione report, impostare gli elementi seguenti nel file RSReportServer.config:  
   

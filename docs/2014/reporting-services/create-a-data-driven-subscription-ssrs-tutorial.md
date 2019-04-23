@@ -12,15 +12,15 @@ helpviewer_keywords:
 - walkthroughs [Reporting Services]
 - data-driven subscriptions
 ms.assetid: 79ab0572-43e9-4dc4-9b5a-cd8b627b8274
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: f4122aa579766d80cfac6600753d4a8f8a672ae9
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: a6e1399c97e77a2b7b0bb68a8022effefb1d4814
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56017913"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59964107"
 ---
 # <a name="create-a-data-driven-subscription-ssrs-tutorial"></a>Creare una sottoscrizione guidata dai dati (esercitazione su SSRS)
   In [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] sono disponibili sottoscrizioni guidate dai dati che consentono di personalizzare la distribuzione di un report in base ai dati dinamici del Sottoscrittore. Le sottoscrizioni guidate dai dati sono progettate per i tipi di scenari seguenti:  

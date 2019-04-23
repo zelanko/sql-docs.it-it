@@ -8,15 +8,15 @@ ms.technology:
 - reporting-services-native
 ms.topic: conceptual
 ms.assetid: 227da40c-6bd2-48ec-aa9c-50ce6c1ca3a6
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: b759391592a84d0509a8036277ccb6e0cc92a279
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 05f2cdfc40c8677bfa38c821cfd849c3ce483c31
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56011504"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59964197"
 ---
 # <a name="cache-refresh-options-report-manager"></a>Opzioni di aggiornamento Cache (Gestione report)
   La pagina Opzioni di aggiornamento cache consente di creare pianificazioni per precaricare nella cache copie temporanee di dati per un report o per un set di dati condiviso. Un piano di aggiornamento include una pianificazione e l'opzione per specificare o eseguire l'override di valori per i parametri. Per un set di dati condiviso, non è possibile eseguire l'override di valori per i parametri contrassegnati di sola lettura. È possibile creare e utilizzare più piani di aggiornamento come parte delle opzioni di aggiornamento.  

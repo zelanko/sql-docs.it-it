@@ -25,15 +25,15 @@ f1_keywords:
 helpviewer_keywords:
 - "10140"
 ms.assetid: ddf50dd5-5314-42ff-97f4-c3a4a17cfcdd
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 6d0ec435926a3b7604aa0d6397b72ef6886da21a
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: 80cc037b98e527815f1b0b2e7010c1411da03c16
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56292619"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59970987"
 ---
 # <a name="formatting-axis-labels-on-a-chart-report-builder-and-ssrs"></a>Formattazione delle etichette degli assi in un grafico (Generatore report e SSRS)
   Nei tipi di grafico basati su coordinate (grafico a barre, ad area, a punti, a linee, con intervalli e istogramma) sono inclusi due assi utilizzati per la classificazione e la visualizzazione di relazioni tra dati. A ogni asse verranno applicati tipi diversi di formattazione.  
@@ -78,7 +78,7 @@ ms.locfileid: "56292619"
 ### <a name="example-of-how-the-chart-calculates-axis-labels"></a>Esempio di calcolo delle etichette degli assi  
  La tabella seguente contiene esempi di dati sulle vendite da tracciare in un istogramma. Il campo Name viene aggiunto all'area Gruppi di categorie e il campo Quantity all'area Valori.  
   
-|nome|Quantity|  
+|Nome|Quantity|  
 |----------|--------------|  
 |Michael Blythe|229|  
 |Jae Pak|112|  

@@ -8,17 +8,17 @@ ms.technology:
 - reporting-services-native
 ms.topic: conceptual
 ms.assetid: 47a882b7-efe5-4ee6-bef4-06118eb56903
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 5a754f0d81714e3f483ee5abeab1850c61592ab6
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: b5ecbbebd3ed29f5fc3fc8b8a47717f09ba51e43
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56039242"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59971687"
 ---
-# <a name="lesson-1-creating-a-sample-subscriber-database"></a>Lezione 1: Creazione di un Database Sottoscrittore di esempio
+# <a name="lesson-1-creating-a-sample-subscriber-database"></a>Lezione 1: Creazione di un database di esempio del Sottoscrittore
   Prima di definire una sottoscrizione guidata dai dati è necessario disporre di un'origine dei dati contenente i dati della sottoscrizione. In questo passaggio vengono illustrate le procedure per la creazione di un piccolo database per archiviare i dati della sottoscrizione utilizzati in questa esercitazione. Successivamente, quando la sottoscrizione viene elaborata, tramite il server di report vengono recuperati i dati e utilizzati per personalizzare l'output di report, le opzioni di recapito e il formato di presentazione del report.  
   
  In questa lezione si presuppone che si usa [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] per creare un [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] database.  

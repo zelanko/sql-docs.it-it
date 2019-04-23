@@ -10,15 +10,15 @@ ms.topic: conceptual
 helpviewer_keywords:
 - expressions [Reporting Services], about expressions
 ms.assetid: 76b9ed31-5aec-40fc-bb88-a1c1b0ab3fc3
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 19c423a2ecb7911cd25b51cbde438cf27b870d0b
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: e6f77a2ecf9ed5a985efa4a36f18b9f495c7091f
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56289859"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59954467"
 ---
 # <a name="expression-uses-in-reports-report-builder-and-ssrs"></a>Utilizzo delle espressioni nei report (Generatore report e SSRS)
   Le espressioni sono usate nella definizione del report per specificare o calcolare valori per parametri, query, filtri, proprietà degli elementi del report, definizioni di gruppo e di ordinamento, proprietà delle caselle di testo, segnalibri, mappe documento, contenuto dinamico dell'intestazione e del piè di pagina, immagini e definizioni delle origini dati dinamiche. In questo argomento vengono forniti esempi delle numerose posizioni in cui è possibile usare le espressioni per modificare il contenuto o l'aspetto di un report. Non si tratta tuttavia di un elenco completo. È possibile impostare un'espressione per qualsiasi proprietà in una finestra di dialogo che contiene il pulsante di espressione (**fx**) o in un elenco a discesa in cui è visualizzato **\<Espressione...>**.  

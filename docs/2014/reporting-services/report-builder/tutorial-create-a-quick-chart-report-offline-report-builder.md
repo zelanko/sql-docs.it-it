@@ -1,5 +1,5 @@
 ---
-title: 'Esercitazione: Creare un Report grafico rapido Offline (Generatore Report) | Microsoft Docs'
+title: 'Esercitazione: Creare un report grafico rapido offline (Generatore report) | Microsoft Docs'
 ms.custom: ''
 ms.date: 12/29/2017
 ms.prod: sql-server-2014
@@ -12,17 +12,17 @@ helpviewer_keywords:
 - tutorials, getting started
 - creating reports
 ms.assetid: 6b1db67a-cf75-494c-b70c-09f1e6a8d414
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 7c817f68fce5fcf561e7aac46f3d809d2213aad7
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: fd22b4419b8300fdaf8db6e98a3eab9683fd226e
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56291269"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59956837"
 ---
-# <a name="tutorial-create-a-quick-chart-report-offline-report-builder"></a>Esercitazione: Creare un Report grafico rapido Offline (Generatore Report)
+# <a name="tutorial-create-a-quick-chart-report-offline-report-builder"></a>Esercitazione: Creare un report grafico rapido offline (Generatore report)
   In questa esercitazione verrà creato un grafico a torta utilizzando una procedura guidata e verranno quindi apportate alcune modifiche allo scopo di illustrare le potenzialità offerte all'utente. È possibile eseguire questa esercitazione in due modi diversi. Entrambi i metodi presentano stesso risultato: un grafico a torta simile a quello nell'illustrazione seguente:  
   
  ![Consente di visualizzare "Mio primo grafico a torta" in esecuzione](../media/rs-my1stpierunview.gif "My primo grafico a torta nella visualizzazione Esegui")  

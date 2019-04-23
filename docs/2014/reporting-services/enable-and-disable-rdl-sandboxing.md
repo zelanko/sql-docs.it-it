@@ -8,15 +8,15 @@ ms.technology:
 - reporting-services-native
 ms.topic: conceptual
 ms.assetid: d5619e9f-ec5b-4376-9b34-1f74de6fade7
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 2db60863c1ae8c21e391d62182cb27a52558a1e1
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: c4bbf82d1bea70659b839405141dc7194d99951e
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56013182"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59956987"
 ---
 # <a name="enable-and-disable-rdl-sandboxing"></a>Abilitare e disabilitare la funzionalità RDL Sandboxing
   La caratteristica RDL (Report Definition Language) Sandboxing consente di rilevare e limitare l'utilizzo di tipi specifici di risorse in base a singoli tenant in un ambiente in cui più tenant utilizzano una sola Web farm di server di report. Un esempio di questo tipo è rappresentato dai servizi di hosting in cui è possibile gestire una sola Web farm di server di report utilizzati da più tenant e probabilmente da società diverse. L'amministratore del server di report può abilitare questa caratteristica per ottenere gli obiettivi seguenti:  
@@ -35,10 +35,10 @@ ms.locfileid: "56013182"
   
 -   Parametri denominati nelle espressioni.  
   
- In questo argomento viene descritto ogni elemento dell'elemento <`RDLSandboxing`> nel file RSReportServer.Config. Per altre informazioni su come modificare questo file, vedere [Modificare un file di configurazione di Reporting Services &#40;RSreportserver.config&#41;](report-server/modify-a-reporting-services-configuration-file-rsreportserver-config.md). Attività dei record del log di traccia del server correlata alla caratteristica RDL Sandboxing. Per altre informazioni sui log di traccia, vedere [Log di traccia del servizio del server di report](report-server/report-server-service-trace-log.md).  
+ Questo argomento viene descritto ogni elemento di <`RDLSandboxing`> elemento nel file RSReportServer. config. Per altre informazioni su come modificare questo file, vedere [Modificare un file di configurazione di Reporting Services &#40;RSreportserver.config&#41;](report-server/modify-a-reporting-services-configuration-file-rsreportserver-config.md). Attività dei record del log di traccia del server correlata alla caratteristica RDL Sandboxing. Per altre informazioni sui log di traccia, vedere [Log di traccia del servizio del server di report](report-server/report-server-service-trace-log.md).  
   
 ## <a name="example-configuration"></a>Configurazione di esempio  
- Nell'esempio seguente vengono illustrate le impostazioni e i valori di esempio per l'elemento <`RDLSandboxing`> nel file RSReportServer.Config.  
+ L'esempio seguente illustra le impostazioni e i valori di esempio per la <`RDLSandboxing`> elemento nel file RSReportServer. config.  
   
 ```  
 <RDLSandboxing>  

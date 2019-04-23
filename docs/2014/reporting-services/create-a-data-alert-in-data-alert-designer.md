@@ -8,15 +8,15 @@ ms.technology:
 - reporting-services-native
 ms.topic: conceptual
 ms.assetid: 8464ab9d-afe1-4490-955f-9f3319bcbf8d
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: adabb736dd34b35ee98f4ed46b84fd9205d504b5
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: f2dd3739d481162e7685b7021a120dd5d48e844a
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56012132"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59963977"
 ---
 # <a name="create-a-data-alert-in-data-alert-designer"></a>Creare un avviso dati nella finestra di progettazione Avviso dati
   Le definizioni di avviso dati vengono create nella finestra di progettazione Avviso dati. Dopo aver salvato le definizioni di avviso, è possibile riaprirle, modificarle, quindi salvare di nuovo nella finestra di progettazione Avviso dati. Per informazioni sulla modifica delle definizioni di avviso, vedere [Gestire gli avvisi dati in Gestione avvisi dati](manage-my-data-alerts-in-data-alert-manager.md) e [Modificare un avviso dati nella finestra di progettazione di avvisi](edit-a-data-alert-in-alert-designer.md).  
@@ -65,7 +65,7 @@ ms.locfileid: "56012132"
   
      A seconda del tipo di dati della colonna selezionata, vengono elencati operatori di confronto differenti. Se la colonna dispone di un tipo di dati relativo alla data, verrà visualizzata un'icona di calendario accanto al valore soglia per la regola. È possibile immettere dati facendo clic su una data nel calendario o digitando la data.  
   
-     Finestra di progettazione avviso dati offre due modalità di confronto: **Valore di modalità di immissione** e **modalità selezione campo**. La modalità predefinita è **Modalità immissione valori**. È possibile aggiungere clausole OR solo quando è attiva la **Modalità immissione valori** e si sta usando il confronto di tipo **is** .  
+     La finestra di progettazione Avviso Dati fornisce due modalità di confronto: **Modalità immissione valori** e **Modalità selezione campo**. La modalità predefinita è **Modalità immissione valori**. È possibile aggiungere clausole OR solo quando è attiva la **Modalità immissione valori** e si sta usando il confronto di tipo **is** .  
   
 9. Per aggiungere una clausola OR, fare clic sulla freccia rivolta verso il basso, quindi su **Modalità immissione valori**.  
   

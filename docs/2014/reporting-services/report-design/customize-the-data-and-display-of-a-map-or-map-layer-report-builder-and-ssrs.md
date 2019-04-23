@@ -21,15 +21,15 @@ f1_keywords:
 - sql12.rtp.rptdesigner.mapgroupproperties.general.f1
 - "10507"
 ms.assetid: fdd9b994-d138-4990-a291-279b0249eb72
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 2b2290b738a7433fa1cc67bfd08079790f3029d3
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: d3bd3ef7205591d0353d7e8ee75e2d0ec49a221d
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56289549"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59954987"
 ---
 # <a name="customize-the-data-and-display-of-a-map-or-map-layer-report-builder-and-ssrs"></a>Personalizzare i dati e la visualizzazione di una mappa o di un livello mappa (Generatore report e SSRS)
   Dopo aver aggiunto una mappa o un livello mappa a un report utilizzando una procedura guidata, è possibile modificare il tipo di visualizzazione della mappa nel report. È possibile apportare dei miglioramenti tenendo in considerazione i concetti seguenti:  
@@ -130,7 +130,7 @@ ms.locfileid: "56289549"
   
  L'espressione di raggruppamento consente di specificare come vengono aggregati i dati analitici che hanno una relazione con i dati spaziali per ogni elemento della mappa sul livello. Per impostazione predefinita, l'espressione di raggruppamento è il set di campi delle corrispondenze specificato per la relazione tra i dati spaziali e i dati analitici. Ad esempio, per una mappa a bolle in cui sono visualizzati i percorsi delle città e le dimensioni della popolazione per regione o area, i campi delle corrispondenze includono il nome della città [Città] e il nome dell'area [Area] dal momento che possono esistere più città con lo stesso nome. Nell'espressione di raggruppamento corrispondente sono inclusi due campi: [City] e [Region].  
   
- Per altre informazioni, vedere [mappa suggerimenti: Come importare i file di forma in SQL Server e aggregare i dati spaziali](https://go.microsoft.com/fwlink/?LinkID=214991).  
+ Per altre informazioni, vedere la pagina relativa ai [suggerimenti sulle mappe relativi alle modalità di importazione dei file di forma in SQL Server e di aggregazione dei dati spaziali](https://go.microsoft.com/fwlink/?LinkID=214991).  
   
  
   

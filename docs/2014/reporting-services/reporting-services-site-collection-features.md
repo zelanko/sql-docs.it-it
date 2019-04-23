@@ -8,15 +8,15 @@ ms.technology:
 - reporting-services-native
 ms.topic: conceptual
 ms.assetid: e05ae162-a4b2-489d-9853-d6b09414e632
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: b9915a1071fa8b3ea0485c6a10790b2efd0a1e33
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 43b45b7e1bd2d8a4ba10870cc442e73aecbbc618
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56034397"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59964787"
 ---
 # <a name="reporting-services-site-collection-features"></a>Funzionalità della raccolta siti di Reporting Services
   [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] La modalità SharePoint fornisce tre funzionalità della raccolta siti di SharePoint. Le funzionalità supportano l'ambiente di report in modalità SharePoint di [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] generale, [!INCLUDE[ssCrescent](../includes/sscrescent-md.md)], una funzionalità del componente aggiuntivo [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)][!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] per [!INCLUDE[SPS2010](../includes/sps2010-md.md)] Enterprise Edition, e le operazioni di gestione per [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] in Amministrazione centrale SharePoint.  

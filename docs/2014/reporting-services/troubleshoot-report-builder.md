@@ -8,15 +8,15 @@ ms.technology:
 - reporting-services-native
 ms.topic: conceptual
 ms.assetid: 3806fc48-56f8-44d1-a3c1-df8c33cce0a3
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 78f9232b45be9c70a8a244ff97af7d401419d49a
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: 0b0287d9b8533cc551f31c4c054db9bf87c5415a
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56297169"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59958487"
 ---
 # <a name="troubleshoot-report-builder"></a>Risoluzione dei problemi relativi a Generatore report
   Generatore report è uno strumento per la creazione di report di [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] che è possibile utilizzare per compilare report da molti tipi di origini dati diversi e per pubblicarli in un server di report o in un sito di SharePoint. I report creati dall'utente sono visualizzabili in Generatore Report in un Web browser o come parte di un [!INCLUDE[msCoName](../includes/msconame-md.md)] applicazione Windows o un sito di SharePoint.  
@@ -26,7 +26,7 @@ ms.locfileid: "56297169"
  Gli argomenti seguenti sono utili per risolvere problemi relativi ai report, a seconda se si è autore del report o amministratore del server di report.  
   
 ## <a name="report-authors"></a>Autori di report  
- [Risolvere problemi relativi ai report: Eseguire il mapping di report &#40;Report e SSRS&#41;](report-design/troubleshoot-reports-map-reports-report-builder-and-ssrs.md)  
+ [Risolvere problemi relativi ai report: Report mappa &#40;Generatore report e SSRS&#41;](report-design/troubleshoot-reports-map-reports-report-builder-and-ssrs.md)  
   
  [Risolvere i problemi di parti del Report &#40;Report e SSRS&#41;](report-parts-report-builder-and-ssrs.md)  
   

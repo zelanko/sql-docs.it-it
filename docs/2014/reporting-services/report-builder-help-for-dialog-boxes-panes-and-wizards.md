@@ -15,15 +15,15 @@ helpviewer_keywords:
 - Help, dialog boxes
 - user interface, dialog boxes
 ms.assetid: 2da24891-0b6d-4d3c-8b18-81b98752642f
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: e01b814bad72c5ff8a481fd361b2409b9adbda99
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: 77b6eb7d3e82e2741c87612265ca69a75e369204
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56293429"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59964407"
 ---
 # <a name="report-builder-help-for-dialog-boxes-panes-and-wizards"></a>Guida di Generatore report per finestre di dialogo, riquadri e procedure guidate
   In questa sezione sono contenuti gli argomenti della Guida relativi a molte procedure guidate, viste e finestre di dialogo di Generatore report. In alternativa, è possibile accedere alla Guida premendo F1 o facendo clic sul pulsante ? visualizzato nella finestra di dialogo.  

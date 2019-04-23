@@ -8,15 +8,15 @@ ms.technology:
 - reporting-services-native
 ms.topic: conceptual
 ms.assetid: c7d95245-4709-4d04-acb4-59bf71e60d97
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: b6330f18f63caaf1e5c497dec8b87741030a0480
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: 0aa360b52f6928db53a473712c38bbfc2d05de78
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56287810"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59961787"
 ---
 # <a name="display-page-numbers-or-other-report-properties-report-builder-and-ssrs"></a>Visualizzare i numeri di pagina o altre proprietà del report (Generatore report e SSRS)
   Aggiungere numeri di pagina, un titolo di report, un nome file e altre proprietà alle intestazioni o ai piè di pagina del report è un'operazione semplice. Queste proprietà sono archiviate come campi nella cartella Campi predefiniti nel riquadro dei dati del report:  
@@ -63,7 +63,7 @@ ms.locfileid: "56287810"
   
 1.  Fare clic con il pulsante destro del mouse sulla casella di testo che contiene [&PageNumber], quindi scegliere **Espressioni**.  
   
-     Il **imposta espressione per: Valore** casella di testo contiene l'espressione = Globals! PageNumber.  
+     La casella di testo **Imposta espressione per: Valore** contiene l'espressione =Globals!PageNumber.  
   
 2.  Posizionare il cursore dopo il segno = e digitare `"Page " &`.  
   

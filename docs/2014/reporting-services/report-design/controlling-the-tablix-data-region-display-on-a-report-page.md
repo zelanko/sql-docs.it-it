@@ -8,15 +8,15 @@ ms.technology:
 - reporting-services-native
 ms.topic: conceptual
 ms.assetid: f81c48cc-f038-4f57-988d-e9a3cbb46424
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 4f6402d68a1d6b2b62b5e4c2879f26c9ee917f2b
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: 3f740965cdc0b3c17e1a889975fae72bf37a85a6
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56295205"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59951707"
 ---
 # <a name="controlling-the-tablix-data-region-display-on-a-report-page-report-builder-and-ssrs"></a>Controllo della visualizzazione dell'area dati Tablix in una pagina del report (Generatore report e SSRS)
   In questo argomento vengono descritte le proprietà di un'area dati Tablix che è possibile modificare per cambiare l'aspetto di tale area quando visualizzata in un report.  

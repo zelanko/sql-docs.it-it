@@ -11,15 +11,15 @@ f1_keywords:
 - sql12.rtp.rptdesigner.mapmeridianproperties.labels.f1
 - "10518"
 ms.assetid: 47650a82-3b0c-4e32-8565-e9332bdcf4d6
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 4ecaf5c0ad58dcb3fbc60d9c6417ac969f85ca40
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: 892b53a2f7179fce18844085fe2c0edcaafb4c04
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56296110"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59967737"
 ---
 # <a name="map-meridian-properties-dialog-box-labels"></a>Finestra di dialogo Proprietà meridiani mappa, Etichette
   Usare la **MapMeridian proprietà** finestra di dialogo per modificare le opzioni di etichetta per la griglia verticale nel viewport della mappa. Un meridiano rappresenta il valore seguente a seconda del sistema di coordinate specificato per il viewport:  

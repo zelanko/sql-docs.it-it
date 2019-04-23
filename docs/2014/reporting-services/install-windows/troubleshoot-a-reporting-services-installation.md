@@ -8,15 +8,15 @@ ms.technology:
 - database-engine
 ms.topic: conceptual
 ms.assetid: e2536f7f-d90c-4571-9ffd-6bbfe69018d6
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 9205097462a2c9bcc08334e4d83716a224d3b786
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: c923a239ad0eeb677b476665a4c99b45d430b421
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56043332"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59954207"
 ---
 # <a name="troubleshoot-a-reporting-services-installation"></a>Risoluzione dei problemi di installazione di Reporting Services
   Se non è possibile installare [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] a causa di errori restituiti durante l'installazione, utilizzare le indicazioni fornite in questo argomento per risolvere le condizioni che costituiscono la causa più probabile degli errori di installazione.  
@@ -84,18 +84,18 @@ ms.locfileid: "56043332"
 -   [Viene visualizzato un messaggio di errore in cui è indicato che RS_SHP non è supportato con PREPAREIMAGE](#bkmk_RS_SHP_notsupported)  
   
 ###  <a name="bkmk_configmanager_notstart"></a> Impossibile avviare Gestione configurazione Reporting Services  
- **Descrizione:** questo è un problema che si verifica per motivi strutturali in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] è ora progettato per l'architettura del servizio SharePoint. Gestione configurazione non è più necessario per la configurazione e l'amministrazione di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] in modalità SharePoint.  
+ **Descrizione:** Questo problema è per motivi strutturali in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] è ora progettato per l'architettura del servizio SharePoint. Gestione configurazione non è più necessario per la configurazione e l'amministrazione di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] in modalità SharePoint.  
   
  **Soluzione alternativa:** Utilizzare Amministrazione centrale SharePoint per configurare un server di report in modalità SharePoint. Per altre informazioni, vedere [Gestire un'applicazione di servizio SharePoint di Reporting Services](../../../2014/reporting-services/manage-a-reporting-services-sharepoint-service-application.md)  
   
 ###  <a name="bkmk_no_ssrs_service"></a> Il servizio SQL Server Reporting Services in Amministrazione centrale SharePoint non viene visualizzato dopo l'installazione di SQL Server 2012 SSRS in modalità SharePoint  
  **Descrizione:** Se dopo l'installazione [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] in modalità SharePoint e il [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] componente aggiuntivo per SharePoint 2010, non viene visualizzato "SQL Server Reporting Services" nei due menu seguenti, quindi il [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] servizio dispone di non è stato registrato:  
   
--   Amministrazione centrale SharePoint 2010 -> "Gestione applicazioni" -> pagina "Gestisci servizi nel server"  
+-   Amministrazione centrale SharePoint 2010 -> "Gestione applicazioni" -> pagina "Gestisci servizi nel Server"  
   
 -   Amministrazione centrale SharePoint 2010 -> "Gestione applicazioni" -> "Gestisci applicazioni di servizio" -> menu "Nuovo"  
   
- **Soluzione alternativa:** per registrare e avviare SharePoint Services per [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], completare i passaggi seguenti:  
+ **Soluzione alternativa:** Per registrare e avviare il [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint Services, eseguire le operazioni seguenti:  
   
 1.  Sul computer che esegue Amministrazione centrale SharePoint 2010  
   
@@ -116,11 +116,11 @@ ms.locfileid: "56043332"
 2.  Verificare i [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] servizio Mostra lo stato "**avviato**" nella pagina: SharePoint 2010 Central Administration -> "**Application Management**" -> "**Manage Services on Server**"  
   
 ###  <a name="bkmk_cmdlets_not_recognized"></a> I cmdlet di PowerShell per Reporting Services non sono disponibili e i comandi non sono riconosciuti  
- **Descrizione:** quando si tenta di eseguire un cmdlet di PowerShell per [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], viene visualizzato un messaggio di errore simile al seguente:  
+ **Descrizione:** Quando si prova a eseguire un [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] cmdlet di PowerShell, è visualizzato un messaggio di errore simile al seguente:  
   
--   Termine 'Install-SPRSServiceInstall-SPRSService' **non riconosciuto** come nome di cmdlet, funzione, programma eseguibile o file script. Controllare l'ortografia del nome o verificare che il percorso sia incluso e corretto e quindi riprovare. At line:1 char:39+ Install-SPRSServiceInstall-SPRSService <<<<    + CategoryInfo          : ObjectNotFound: (Install-SPRSServiceInstall-SPRSService:String) [], CommandNotFoundExcep  
+-   Termine 'Install-SPRSServiceInstall-SPRSService' **non riconosciuto** come nome di cmdlet, funzione, programma eseguibile o file script. Controllare l'ortografia del nome, o se è stato incluso un percorso, verificare che il percorso sia corretto e riprovare. In linea: 39 char:1+ Install-SPRSServiceInstall-SPRSService <<<< + CategoryInfo: ObjectNotFound: (Installare-SPRSServiceInstall-Sprsservice) [], CommandNotFoundExcep  
   
- **Soluzione alternativa:** completare una delle operazioni seguenti:  
+ **Soluzione alternativa:** Completare una delle operazioni seguenti:  
   
 -   Eseguire il componente aggiuntivo [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] per prodotti SharePoint. **rssharepoint.msi**.  
   
@@ -137,13 +137,13 @@ ms.locfileid: "56043332"
 -   [Installare Reporting Services SharePoint Mode for SharePoint 2013](../../../2014/sql-server/install/install-reporting-services-sharepoint-mode-for-sharepoint-2013.md)  
   
 ###  <a name="bkmk_URL_not_configured"></a> Viene visualizzato un messaggio di errore nel quale è indicato che l'URL non è configurato  
- **Descrizione:** viene visualizzato un messaggio di errore simile al seguente:  
+ **Descrizione:** Viene vedere messaggio di errore simile al seguente:  
   
  Questa funzionalità di SQL Server Reporting Services (SSRS) non è supportata. Utilizzare Amministrazione centrale per verificare e correggere uno o più dei seguenti problemi:•L'URL di un server di report non è configurato. Utilizzare la pagina Integrazione di SSRS per impostarlo.•Il proxy dell'applicazione del servizio SSRS non è configurato. Utilizzare le pagine relative all'applicazione del servizio SSRS per configurare il proxy.•Non è stato eseguito il mapping dell'applicazione del servizio SSRS a questa applicazione Web. Utilizzare le pagine relative all'applicazione del servizio SSRS per associare il proxy dell'applicazione del servizio Web al gruppo di proxy dell'applicazione per questa applicazione Web.  
   
- **Soluzione alternativa:** il messaggio di errore contiene tre passaggi suggeriti per correggere questo problema. Il primo suggerimento nel messaggio 'Un server di report URL non è configurato..' è pertinente per l'integrazione con la versione del server di report anteriore a [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]. La configurazione di SharePoint per le versioni del server di report precedenti viene completata nella pagina **Impostazioni generali applicazione** usando **SQL Server Reporting Services (2008 e 2008 R2)**.  
+ **Soluzione alternativa:** Il messaggio di errore contiene tre passaggi suggeriti per correggere questo problema. Il primo suggerimento nel messaggio 'Un server di report URL non è configurato..' è pertinente per l'integrazione con la versione del server di report anteriore a [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]. La configurazione di SharePoint per le versioni del server di report precedenti viene completata nella pagina **Impostazioni generali applicazione** usando **SQL Server Reporting Services (2008 e 2008 R2)**.  
   
- **Altre informazioni:** questo messaggio di errore viene visualizzato quando si tenta di utilizzare una funzionalità di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] che richiede una connessione al servizio [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], ad esempio:  
+ **Altre informazioni:** Si verrà visualizzato questo messaggio di errore quando provano a usare uno qualsiasi dei [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] funzionalità che richiedono una connessione al [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] servizio. ad esempio:  
   
 -   Apertura di Generatore report di SQL Server da una raccolta documenti di SharePoint.  
   
@@ -152,38 +152,38 @@ ms.locfileid: "56043332"
 -   Gestione di un'applicazione di servizio  
   
 ###  <a name="bkmk_sharepoint_not_confiugred"></a> La configurazione non riesce in un computer con SharePoint installato ma non configurato  
- **Descrizione:** se si sceglie di installare la modalità SharePoint di Reporting Services in un computer con SharePoint installato ma non configurato, verrà visualizzato un messaggio simile al seguente e l'installazione verrà arrestata:  
+ **Descrizione:** Se si seleziona per installare Reporting Services SharePoint Mode su un computer con SharePoint installato ma SharePoint non è configurato, verrà visualizzato che un messaggio simile al seguente e l'installazione viene arrestata:  
   
  L'installazione di SQL Server ha smesso di funzionare  
   
- **Soluzione alternativa:** configurare SharePoint e quindi eseguire l'installazione di SQL Server.  
+ **Soluzione alternativa:** Configurare SharePoint ed eseguire l'installazione di SQL Server.  
   
- **Altre informazioni:** quando si installa [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] in un'installazione di SharePoint esistente, il programma di installazione tenta di installare e avviare il servizio [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint. L'installazione del servizio non riesce se SharePoint non è configurato.  
+ **Altre informazioni:** Quando si installa [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] in e un'installazione di SharePoint, il programma di installazione tenta di installare e avviare il [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] servizio SharePoint. L'installazione del servizio non riesce se SharePoint non è configurato.  
   
 ###  <a name="bkmk_central_admin_blank"></a> La pagina Amministrazione centrale SharePoint è vuota  
- **Descrizione:** SharePoint 2010 è stato installato senza errori. Tuttavia quando si passa ad Amministrazione centrale, viene visualizzata una pagina vuota.  
+ **Descrizione:** Era stato installato SharePoint 2010, senza errori. Tuttavia quando si passa ad Amministrazione centrale, viene visualizzata una pagina vuota.  
   
- **Soluzione alternativa:** questo non è un problema specifico di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], ma è relativo alla configurazione delle autorizzazioni nell'installazione generale di SharePoint. Di seguito viene fornito un elenco di suggerimenti:  
+ **Soluzione alternativa:** Questo problema non riguarda [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] ma è relativo alla configurazione delle autorizzazioni nell'installazione generale di SharePoint. Di seguito viene fornito un elenco di suggerimenti:  
   
 -   Esaminare l'argomento relativo a SharePoint negli ambienti di sviluppo. [Configurazione dell'ambiente di sviluppo per SharePoint 2010 in Windows Vista, Windows 7 e Windows Server 2008](https://msdn.microsoft.com/library/ee554869\(office.14\).aspx)  
   
--   Esaminare il post del forum relativo ad [Amministrazione centrale restituisce una pagina vuota dopo l'installazione in Windows 7](https://social.technet.microsoft.com/Forums/en/sharepoint2010setup/thread/a422a3c8-39f6-4b9e-988a-4c4d1e745694)  
+-   Esaminare il post del forum: [Amministrazione centrale restituisce una pagina vuota dopo l'installazione in Windows 7](https://social.technet.microsoft.com/Forums/en/sharepoint2010setup/thread/a422a3c8-39f6-4b9e-988a-4c4d1e745694)  
   
 -   L'account del servizio che si sta utilizzando per i servizi SharePoint, ad esempio il servizio Amministrazione centrale SharePoint 2010, deve disporre dei privilegi amministrativi nel sistema operativo locale.  
   
 ###  <a name="bkmk_reportbuilder_newreport_error"></a> Viene visualizzato un messaggio di errore quando si tenta di creare un nuovo report di Generatore report  
- **Descrizione:** viene visualizzato un messaggio di errore simile al seguente quando si tenta di creare un report di Generatore report in una raccolta documenti:  
+ **Descrizione:** Quando si prova a creare un report di Generatore Report all'interno di una raccolta documenti, viene visualizzato un messaggio di errore simile al seguente:  
   
  Questa funzionalità non è supportata perché non esiste un'applicazione del servizio SQL Server Reporting Services o non è stato configurato un URL del server di report in Amministrazione centrale.  
   
- **Soluzione alternativa:** verificare che l'applicazione del servizio [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] sia disponibile e configurata correttamente. Per altre informazioni, vedere la sezione "creare un'applicazione di servizio Reporting Services" in [installare Reporting Services SharePoint Mode for SharePoint 2010](../../../2014/sql-server/install/install-reporting-services-sharepoint-mode-for-sharepoint-2010.md)  
+ **Soluzione alternativa:** Verificare avere un [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] applicazione di servizio e sia configurato correttamente. Per altre informazioni, vedere la sezione "creare un'applicazione di servizio Reporting Services" in [installare Reporting Services SharePoint Mode for SharePoint 2010](../../../2014/sql-server/install/install-reporting-services-sharepoint-mode-for-sharepoint-2010.md)  
   
 ###  <a name="bkmk_RS_SHP_notsupported"></a> Viene visualizzato un messaggio di errore in cui è indicato che RS_SHP non è supportato con PREPAREIMAGE  
- **Descrizione:** quando si tenta di eseguire PREPAREIMAGE per [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], viene visualizzato un messaggio di errore simile al seguente:  
+ **Descrizione:** Quando si tenta di eseguire PREPAREIMAGE per [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] viene visualizzato un messaggio di errore simile al seguente:  
   
  "Funzionalità specificata 'RS_SHP' non supportata durante l'esecuzione dell'azione PREPAREIMAGE perché l'utilità SysPrep non è supportata. Rimuovere le funzionalità non compatibili con SysPrep ed eseguire nuovamente l'installazione".  
   
- **Soluzione alternativa:** non esiste alcuna soluzione alternativa. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] non supporta SYSPREP (PREPAREIMAGE). [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] non supporta SYSPREP.  
+ **Soluzione alternativa:** Non vi è alcuna soluzione alternativa. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] non supporta SYSPREP (PREPAREIMAGE). [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] non supporta SYSPREP.  
   
 ##  <a name="bkmk_tshoot_native"></a> Risoluzione dei problemi relativi alle installazioni della modalità nativa  
   

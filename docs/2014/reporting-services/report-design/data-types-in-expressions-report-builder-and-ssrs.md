@@ -8,15 +8,15 @@ ms.technology:
 - reporting-services-native
 ms.topic: conceptual
 ms.assetid: 94fdf921-270c-4c12-87b3-46b1cc98fae5
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 694afd46c2b04a09bffc951cba82af91edf9b6a5
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: 5b0af16c21cb9fdf2c8ab41a931f955b46c29352
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56290729"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59956107"
 ---
 # <a name="data-types-in-expressions-report-builder-and-ssrs"></a>Tipi di dati nelle espressioni (Generatore report e SSRS)
   I tipi di dati rappresentano tipologie di dati diversi che possono essere archiviati ed elaborati in modo efficiente. I tipi di dati standard includono testo, noto anche come stringhe, numeri con e senza posizioni decimali, date e ore e immagini. I valori in un report devono essere costituiti da un tipo di dati RDL (Report Definition Language). È possibile formattare un valore in base alle proprie preferenze quando si lo visualizza in un report. Un campo che rappresenta la valuta, ad esempio, viene archiviato nella definizione del report come numero a virgola mobile, ma può essere visualizzato in diversi formati a seconda della proprietà di formattazione scelta.  
@@ -33,8 +33,8 @@ ms.locfileid: "56290729"
 |--------------|---------------|  
 |String|Impostazione predefinita: String<br /><br /> Chart, GUID, Timespan|  
 |Boolean|Impostazione predefinita: Boolean|  
-|Integer|Impostazione predefinita: Int64<br /><br /> Int16, Int32, Uint16, Uint64, Byte, Sbyte|  
-|DateTime|Impostazione predefinita: DateTime<br /><br /> DateTimeOffset|  
+|Valore intero|Impostazione predefinita: Int64<br /><br /> Int16, Int32, Uint16, Uint64, Byte, Sbyte|  
+|Datetime|Impostazione predefinita: Datetime<br /><br /> DateTimeOffset|  
 |float|Impostazione predefinita: Double<br /><br /> Single, Decimal|  
 |Binario|Impostazione predefinita: Byte[]|  
 |Variant|Uno qualsiasi tra quelli riportati in precedenza eccetto Byte []|  
@@ -69,7 +69,7 @@ ms.locfileid: "56290729"
 -   Controllare se l'estensione per l'elaborazione dati in uso include metadati per il recupero dei dati preformattati. Una query MDX di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] include ad esempio una proprietà estesa FORMATTED_VALUE per i valori del cubo già formattati durante l'elaborazione del cubo. Per altre informazioni, vedere [Proprietà di campo estese per un database di Analysis Services &#40;SSRS&#41;](../report-data/extended-field-properties-for-an-analysis-services-database-ssrs.md).  
   
 ## <a name="understanding-parameter-data-types"></a>Informazioni sui tipi di dati dei parametri  
- I parametri del report devono essere uno dei cinque tipi di dati: Valore booleano, DateTime, Integer, Float o Text (anche noto come String). Quando una query del set di dati include parametri di query, i parametri del report vengono creati automaticamente e collegati ai parametri di query. Il tipo di dati predefinito per un parametro di report è String. Per modificare tale tipo di dati, selezionare il valore corretto nell'elenco a discesa **Tipo di dati** nella pagina **Generale** della finestra di dialogo **Proprietà parametri report** .  
+ I parametri del report devono essere di uno dei cinque tipi di dati seguenti: Boolean, DateTime, Integer, Float o Text (anche noto come String). Quando una query del set di dati include parametri di query, i parametri del report vengono creati automaticamente e collegati ai parametri di query. Il tipo di dati predefinito per un parametro di report è String. Per modificare tale tipo di dati, selezionare il valore corretto nell'elenco a discesa **Tipo di dati** nella pagina **Generale** della finestra di dialogo **Proprietà parametri report** .  
   
 > [!NOTE]  
 >  I parametri di report di tipo DateTime non supportano i millisecondi. Sebbene sia possibile creare un parametro basato su valori che includono millisecondi, non è possibile selezionare un valore da un elenco a discesa di valori disponibili contenente valori di tipo Date o Time che includono millisecondi.  
@@ -109,7 +109,7 @@ ms.locfileid: "56290729"
   
  Per convertire questi dati in uno o più valori CLR, è possibile adottare una delle strategie seguenti:  
   
--   In una casella di testo utilizzare un'espressione per estrarre parti della stringa. Ad esempio:  
+-   In una casella di testo utilizzare un'espressione per estrarre parti della stringa. Ad esempio:   
   
     -   Nell'espressione seguente solo la parte relativa all'ora della differenza di fuso orario dall'ora UTC viene prima estratta e poi convertita in minuti: `=CInt(Fields!MyDateTime.Value.Substring(Fields!MyDateTime.Value.Length-5,2)) * 60`  
   
@@ -117,7 +117,7 @@ ms.locfileid: "56290729"
   
     -   Nell'espressione seguente la stringa viene convertita in un valore di data e ora: `=DateTime.Parse(Fields!MyDateTime.Value)`  
   
-         Se la stringa `MyDateTime.Value` include una differenza UTC, la funzione `DateTime.Parse` regola in primo luogo l'ora in base alla differenza UTC: 7 AM, - [`+08:00`] con l'ora UTC 11 PM. della notte precedente). La funzione `DateTime.Parse` applica quindi la differenza UTC del server di report locale e, se necessario, regola nuovamente l'ora in base all'ora legale. Ad esempio, a Redmond, Washington, la differenza tra ora locale e ora legale è `[-07:00]`, ovvero 7 ore prima delle 23.00. Il risultato è il seguente `DateTime` valore: `2007-07-06 04:07:07 PM` (6 luglio 2007 in 4.07 PM).  
+         Se la stringa `MyDateTime.Value` include una differenza UTC, la funzione `DateTime.Parse` regola in primo luogo l'ora in base alla differenza UTC: 7 AM, - [`+08:00`] con l'ora UTC 11 PM. della notte precedente). La funzione `DateTime.Parse` applica quindi la differenza UTC del server di report locale e, se necessario, regola nuovamente l'ora in base all'ora legale. Ad esempio, a Redmond, Washington, la differenza tra ora locale e ora legale è `[-07:00]`, ovvero 7 ore prima delle 23.00. Il risultato è il seguente `DateTime` valore: `2007-07-06 04:07:07 PM` (6 luglio 2007 alle 16.07).  
   
  Per altre informazioni sulla conversione di stringhe `DateTime` tipi di dati, vedere [analisi di stringhe di data e ora](https://go.microsoft.com/fwlink/?LinkId=89703), [formattazione di data e ora per impostazioni cultura specifiche](https://go.microsoft.com/fwlink/?LinkId=89704), e [scelta Tra DateTime, DateTimeOffset e TimeZoneInfo](https://go.microsoft.com/fwlink/?linkid=110652) su MSDN.  
   

@@ -8,15 +8,15 @@ ms.technology:
 - reporting-services-native
 ms.topic: conceptual
 ms.assetid: 81110ef6-4289-405c-a931-e7e9f49e69ba
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: e062d516b929f436c6a255a9dfb28e69568133e5
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: df69bfef4b82aa9451fb47f6169f5966090f633a
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56025142"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59954968"
 ---
 # <a name="turn-on-reporting-services-events-for-the-sharepoint-trace-log-uls"></a>Abilitare gli eventi di Reporting Services per il log di traccia di SharePoint (ULS)
   A partire da [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)], tramite i server [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] in modalità SharePoint è possibile scrivere gli eventi di [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] nel log di traccia del Servizio di registrazione unificato (ULS, Unified Logging Service) di SharePoint. [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] sono disponibili nella pagina di monitoraggio di Amministrazione centrale SharePoint.  
@@ -126,7 +126,7 @@ Get-SPDiagnosticConfig
 |Provider del server di report||  
 |Rendering del server di report||  
 |Anteprima report del server di report||  
-|Utilità risorse server di report|Voci di esempio:<br /><br /> Servizi MediumReporting di avvio SKU Copia di valutazione<br /><br /> Copia di MediumEvaluation: scadenza tra 180 giorni|  
+|Utilità risorse server di report|Voci di esempio:<br /><br /> Servizi MediumReporting di avvio SKU: Copia di valutazione<br /><br /> Copia di MediumEvaluation: scadenza tra 180 giorni|  
 |Processi in esecuzione del server di report||  
 |Richieste in esecuzione del server di report||  
 |Pianificazione del server di report||  

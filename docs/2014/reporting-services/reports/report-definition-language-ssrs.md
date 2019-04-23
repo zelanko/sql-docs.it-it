@@ -17,15 +17,15 @@ helpviewer_keywords:
 - RDL [Reporting Services]
 - reports [Reporting Services], definitions
 ms.assetid: b18b025e-f4bd-4744-8f86-0ac9fb967548
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 88c22eebf7a070628e72515fafc83591a8e34c64
-ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
+ms.openlocfilehash: 7b7c63e4850d17009992f8749c35d86534c0ee83
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59241152"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59955149"
 ---
 # <a name="report-definition-language-ssrs"></a>Report Definition Language (SSRS)
   Report Definition Language (RDL) è una rappresentazione XML di una definizione di un report di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Una definizione del report contiene informazioni sul layout e sul recupero dei dati per un report. RDL è costituito da elementi XML che corrispondono a una grammatica XML creata per [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. È possibile aggiungere funzioni personalizzate per il controllo dei valori degli elementi del report, degli stili e della formattazione mediante l'accesso agli assembly di codice all'interno dei file di definizione dei report.  
@@ -82,7 +82,7 @@ ms.locfileid: "59241152"
 |**Tipi CLR**|**Tipo di dati corrispondente**|  
 |-----------------------|---------------------------------|  
 |Boolean|Boolean|  
-|DateTime, DateTimeOffset|DateTime|  
+|DateTime, DateTimeOffset|Datetime|  
 |Int16, Int32, UInt16, Byte, SByte|Valore intero|  
 |Single, Double|float|  
 |String, Char, GUID, Timespan|String|  

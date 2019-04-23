@@ -17,15 +17,15 @@ f1_keywords:
 - sql12.rtp.rptdesigner.textboxproperties.fill.f1
 - "10124"
 ms.assetid: 93a91d02-d558-4a0e-8d17-3fdf21e208d3
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 083915c4a915faebb19027932a19930a6f836f5e
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: c8feeb496948b34abd3bd4205e52854211cde5d5
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56296039"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59960267"
 ---
 # <a name="fill-dialog-box-report-builder-and-ssrs"></a>Finestra di dialogo Riempimento (Generatore report e SSRS)
   Nella scheda **Riempimento** è possibile specificare le opzioni relative al colore per lo sfondo di una o più celle in un'area dati o una casella di testo.  

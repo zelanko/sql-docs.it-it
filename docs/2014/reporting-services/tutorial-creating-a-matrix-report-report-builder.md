@@ -1,5 +1,5 @@
 ---
-title: 'Esercitazione: Creazione di un Report matrice (Generatore Report) | Microsoft Docs'
+title: 'Esercitazione: Creazione di un report matrice (Generatore report) | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
@@ -8,17 +8,17 @@ ms.technology:
 - reporting-services-native
 ms.topic: conceptual
 ms.assetid: 9ee19c2e-2a8c-4bb0-9274-04a5812c2e96
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 1b1f3226d196354dbbe6a959822534342a92f818
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: 86bffd9c3cf98732da253e511287a9c9e722f4a7
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56288414"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59965697"
 ---
-# <a name="tutorial-creating-a-matrix-report-report-builder"></a>Esercitazione: Creazione di un Report matrice (Generatore Report)
+# <a name="tutorial-creating-a-matrix-report-report-builder"></a>Esercitazione: Creazione di un report matrice (Generatore report)
   In questa esercitazione viene illustrato come creare un report matrice semplice basato su dati di vendita di esempio. La matrice presenta gruppi di righe e di colonne annidati, nonché un gruppo di colonne adiacente. Verrà inoltre illustrato come formattare le colonne e ruotare il testo. Nell'immagine seguente viene illustrato un report simile a quello che verrà creato.  
   
  ![rs_CreateMatixReportTutorial](../../2014/tutorials/media/rs-creatematixreporttutorial.gif "rs_CreateMatixReportTutorial")  
@@ -48,7 +48,7 @@ ms.locfileid: "56288414"
   
 1.  [Ruotare il testo casella 270 gradi](#RotateTextBox)  
   
- Tempo previsto per il completamento di questa esercitazione: 20 minuti.  
+ Tempo stimato per completare questa esercitazione: 20 minuti.  
   
 ## <a name="requirements"></a>Requisiti  
  Per altre informazioni sui requisiti, vedere [Prerequisiti per le esercitazioni &#40;Generatore report&#41;](../reporting-services/report-builder-tutorials.md).  
@@ -74,7 +74,7 @@ ms.locfileid: "56288414"
   
 5.  Scegliere **Avanti**.  
   
-6.  Nel **scegliere una connessione a un'origine dati** pagina, selezionare un'origine dati esistente o individuare il server di report e quindi selezionare un'origine dati. Se non è disponibile un'origine dati o non si dispone dell'accesso a un server di report, sarà possibile utilizzare un'origine dati incorporata. Per altre informazioni sulla creazione di un'origine dati incorporata, vedere [esercitazione: Creazione di un Report tabella semplice &#40;Generatore Report&#41;](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md).  
+6.  Nel **scegliere una connessione a un'origine dati** pagina, selezionare un'origine dati esistente o individuare il server di report e quindi selezionare un'origine dati. Se non è disponibile un'origine dati o non si dispone dell'accesso a un server di report, sarà possibile utilizzare un'origine dati incorporata. Per altre informazioni sulla creazione di un'origine dati incorporata, vedere [esercitazione: Creazione di un report tabella semplice &#40;Generatore report&#41;](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md).  
   
 7.  Scegliere **Avanti**.  
   
@@ -117,7 +117,7 @@ ms.locfileid: "56288414"
   
 10. Scegliere **Avanti**.  
   
-##  <a name="Groups"></a> 2. Organizzare i dati e scegliere il layout e lo stile tramite la Creazione guidata tabella o matrice  
+##  <a name="Groups"></a> 2. Organizzare i dati e scegliere il Layout e lo stile dalla nuova tabella o procedura guidata matrice  
  Utilizzare la procedura guidata per fornire una progettazione iniziale in cui visualizzare i dati. Il riquadro di anteprima nella procedura guidata consente di visualizzare il risultato del raggruppamento di dati prima di completare la progettazione della matrice.  
   
 #### <a name="to-organize-data-into-groups-and-choose-a-layout-and-style"></a>Per organizzare i dati in gruppi e scegliere un layout e uno stile  
@@ -160,7 +160,7 @@ ms.locfileid: "56288414"
   
 13. Scegliere **Fine**.  
   
-     La matrice viene aggiunta all'area di progettazione. Nel riquadro gruppi di righe Mostra due gruppi di righe: Territory e SalesDate. Nel riquadro gruppi di colonne Mostra due gruppi di colonne: SubCategory e Product. I dati dettaglio costituiscono tutti i dati recuperati dalla query del set di dati.  
+     La matrice viene aggiunta all'area di progettazione. Nel riquadro Gruppi di righe vengono visualizzati due gruppi di righe: Territory e SalesDate. Nel riquadro Gruppi di colonne vengono visualizzati due gruppi di colonne: SubCategory e Product. I dati dettaglio costituiscono tutti i dati recuperati dalla query del set di dati.  
   
 14. Fare clic su **Esegui** per visualizzare l'anteprima del report.  
   

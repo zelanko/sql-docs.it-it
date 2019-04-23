@@ -8,15 +8,15 @@ ms.technology:
 - reporting-services-native
 ms.topic: conceptual
 ms.assetid: eb5c6f4a-3ed5-430b-a712-d5ed4b6b9b2b
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: d071000fa25a732465deb9c1020ed6365a9fc58e
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 48e798aeb8309060a6f56a8a2ffcdbe0e0166fb9
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56017929"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59958477"
 ---
 # <a name="extended-protection-for-authentication-with-reporting-services"></a>Protezione estesa per l'autenticazione con Reporting Services
   La protezione estesa consiste in un set di miglioramenti apportati alle versioni recenti del sistema operativo [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows. La protezione estesa migliora la protezione di credenziali e autenticazione da parte delle applicazioni. La funzionalità non fornisce direttamente la protezione contro attacchi specifici quale l'inoltro delle credenziali, ma rende disponibile un'infrastruttura per le applicazioni, ad esempio [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] , per l'imposizione della protezione estesa per l'autenticazione.  
@@ -114,7 +114,7 @@ ms.locfileid: "56017929"
 |Impostazione|Descrizione|  
 |-------------|-----------------|  
 |`RSWindowsExtendedProtectionLevel`|Specifica il grado di imposizione della protezione estesa. I valori validi sono `Off`, `Allow` e `Require`.<br /><br /> Il valore predefinito è `Off`.<br /><br /> Il valore `Off` specifica che non viene eseguita alcuna verifica dell'associazione di canale o dell'associazione al servizio.<br /><br /> Il valore `Allow` indica il supporto della protezione estesa senza tuttavia richiederlo. Il valore Allow specifica quanto segue:<br /><br /> La protezione estesa verrà imposta per le applicazioni client in esecuzione nei sistemi operativi che supportano la protezione estesa. La modalità di imposizione della protezione è determinata dall'impostazione `RsWindowsExtendedProtectionScenario`.<br /><br /> L'autenticazione sarà consentita per le applicazioni client in esecuzione nei sistemi operativi che non supportano la protezione estesa.<br /><br /> Il valore `Require` specifica quanto segue:<br /><br /> La protezione estesa verrà imposta per le applicazioni client in esecuzione nei sistemi operativi che supportano la protezione estesa.<br /><br /> L'autenticazione verrà **non** sarà consentita per le applicazioni che eseguono sistemi operativi che non supportano la protezione estesa.|  
-|`RsWindowsExtendedProtectionScenario`|Specifica i formati di protezione estesa che vengono convalidati: associazione di canale, associazione a servizio o entrambe. I valori validi sono `Any`, `Proxy` e `Direct`.<br /><br /> Il valore predefinito è `Proxy`.<br /><br /> Il valore `Any` specifica quanto segue:<br /><br /> - L'autenticazione NTLM, Kerberos e Negotiate di Windows e l'associazione di canale non sono necessari.<br /><br /> - L'associazione al servizio viene imposta.<br /><br /> Il valore `Proxy` specifica quanto segue:<br /><br /> - Autenticazione NTLM, Kerberos e Negotiate di Windows quando è presente un token di associazione di canale.<br /><br /> - L'associazione al servizio viene imposta.<br /><br /> Il valore `Direct` specifica quanto segue:<br /><br /> - Autenticazione NTLM, Kerberos e Negotiate quando è presente un token CBT. È inoltre presente una connessione SSL al servizio corrente e il token CBT per la connessione SSL corrisponde al token CBT del token NTLM, Kerberos o Negotiate.<br /><br /> - L'associazione al servizio non viene imposta.<br /><br /> <br /><br /> Nota: Questa impostazione viene ignorata se `RsWindowsExtendedProtectionLevel` è impostata su `OFF`.|  
+|`RsWindowsExtendedProtectionScenario`|Specifica quali moduli di protezione estesa sono convalidati: Associazione di canale, associazione al servizio o entrambi. I valori validi sono `Any`, `Proxy` e `Direct`.<br /><br /> Il valore predefinito è `Proxy`.<br /><br /> Il valore `Any` specifica quanto segue:<br /><br /> - L'autenticazione NTLM, Kerberos e Negotiate di Windows e l'associazione di canale non sono necessari.<br /><br /> - L'associazione al servizio viene imposta.<br /><br /> Il valore `Proxy` specifica quanto segue:<br /><br /> - Autenticazione NTLM, Kerberos e Negotiate di Windows quando è presente un token di associazione di canale.<br /><br /> - L'associazione al servizio viene imposta.<br /><br /> Il valore `Direct` specifica quanto segue:<br /><br /> - Autenticazione NTLM, Kerberos e Negotiate quando è presente un token CBT. È inoltre presente una connessione SSL al servizio corrente e il token CBT per la connessione SSL corrisponde al token CBT del token NTLM, Kerberos o Negotiate.<br /><br /> - L'associazione al servizio non viene imposta.<br /><br /> <br /><br /> Nota: Questa impostazione viene ignorata se `RsWindowsExtendedProtectionLevel` è impostata su `OFF`.|  
   
  Voci di esempio nel file di configurazione `rsreportserver.config`:  
   

@@ -18,15 +18,15 @@ f1_keywords:
 - "10531"
 - "10536"
 ms.assetid: 7f1f5584-37b4-4fa2-ae44-8988c5f0c744
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 41187abb5ca3cfaf030497c787da470ebfe4dea6
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: fc596a1075a2795f9db622bc2cdecc1e7885c0da
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56294539"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59969293"
 ---
 # <a name="vary-polygon-line-and-point-display-by-rules-and-analytical-data-report-builder-and-ssrs"></a>Variare la visualizzazione di poligoni, linee e punti in base a regole e dati analitici (Generatore report e SSRS)
   Le opzioni di visualizzazione per poligoni, linee e punti su un livello mappa vengono controllate impostando le opzioni del livello, le regole per gli elementi della mappa sul livello o sostituendo le opzioni per specifici elementi incorporati della mappa su un livello.  
@@ -101,7 +101,7 @@ ms.locfileid: "56294539"
 ##  <a name="Distribution"></a> Informazioni sulle opzioni di distribuzione  
  Per creare una distribuzione di valori, è possibile dividere i dati in intervalli. Si specifica il tipo di distribuzione, il numero di intervalli secondari e i valori minimo e massimo dell'intervallo.  
   
- Nell'elenco seguente, si supponga di disporre di tre elementi della mappa e di sei valori analitici correlati che vanno da 1 a 9999 con i valori seguenti: 1, 10, 200, 2000, 4777, 8999.  
+ Nell'elenco seguente, si supponga di avere tre elementi della mappa e sei valori analitici correlati che spaziano da 1 a 9999 con i valori seguenti: 1, 10, 200, 2000, 4777, 8999.  
   
 -   **Intervallo equo.** Crea intervalli che dividono i dati in intervalli uguali. Per l'esempio, i tre intervalli sarebbero 0-2999, 3000-5999, 6000-8999. Intervallo secondario 1: 1, 10, 200, 500. Intervallo secondario 2: 4777. Intervallo secondario 3: 8999. Questo metodo non prende in considerazione la modalità di distribuzione dei dati. Valori molto grandi o molto piccoli possono distorcere i risultati della distribuzione.  
   
@@ -109,7 +109,7 @@ ms.locfileid: "56294539"
   
 -   **Ottimale.** Crea intervalli che regolano automaticamente la distribuzione in modo da creare intervalli secondari equilibrati. Il numero di intervalli secondari è determinato dall'algoritmo.  
   
--   **Personalizzato.** Specifica il numero di intervalli per controllare la distribuzione di valori. Per i dati dell'esempio, è possibile specificare 3 intervalli: 1-2, 3-8, 9.  
+-   **Personalizzato.** Specifica il numero di intervalli per controllare la distribuzione di valori. Per i dati di esempio, è possibile specificare 3 intervalli: 1-2, 3-8, 9.  
   
  I valori di distribuzione vengono utilizzati dalle regole per variare i valori di visualizzazione degli elementi della mappa.  
   

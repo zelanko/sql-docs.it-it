@@ -11,15 +11,15 @@ helpviewer_keywords:
 - device information settings [Reporting Services], URLs
 - URL access [Reporting Services], device information settings
 ms.assetid: cb7f7577-c6a8-4e6f-8e60-5ec0760f29c3
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: d769e272792bb4032c2ad2f0d5469e33a512656b
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 9edd0cf977a976023e498b93436701cc42244a39
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56012572"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59971197"
 ---
 # <a name="specify-device-information-settings-in-a-url"></a>Specificare le impostazioni relative alle informazioni sul dispositivo in un URL
   Le impostazioni relative alle informazioni sul dispositivo sono parametri passati a un'estensione per il rendering. Se si utilizzano i metodi del servizio Web ReportServer [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] per eseguire il rendering di un report, come parametro di input viene passato un elemento `DeviceInfo` XML. Gli elementi figlio dell'elemento `DeviceInfo` sono specifici delle impostazioni relative alle informazioni sul dispositivo di diverse estensioni per il rendering. È possibile includere le impostazioni relative alle informazioni sul dispositivo in un URL usando la stringa di parametri *rc:tag=value* , dove *tag* è il nome dell'elemento delle impostazioni relative alle informazioni sul dispositivo a cui si accede. Per altre informazioni sulle impostazioni relative alle informazioni sul dispositivo in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)], vedere [Passaggio delle impostazioni relative alle informazioni sul dispositivo alle estensioni per il rendering](report-server-web-service/net-framework/passing-device-information-settings-to-rendering-extensions.md).  

@@ -10,15 +10,15 @@ ms.topic: conceptual
 helpviewer_keywords:
 - MachineAccountIdentity property
 ms.assetid: 9c3a74c2-c7f4-44a7-a552-2e5f6e7cb941
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: f71ac2824a1cefe7d601bbc3e21168c02a285025
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 340b1b54054ff8687fc08a92ebc91e1380f2ae7a
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56015822"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59967433"
 ---
 # <a name="machineaccountidentity-property-wmi"></a>Proprietà MachineAccountIdentity (WMI)
   Ottiene l'identità dell'account del computer in cui è installato il server di report.  

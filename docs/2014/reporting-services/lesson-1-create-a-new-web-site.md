@@ -8,15 +8,15 @@ ms.technology:
 - reporting-services-native
 ms.topic: conceptual
 ms.assetid: 3f226bc8-614e-4dac-9078-3448a83342b5
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 1a956ec3ea8aca78b87b1a728c55e878540d909e
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 95bd0257deae9d06870ccb75abd8f4f8b41910bb
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56036962"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59967407"
 ---
 # <a name="lesson-1-create-a-new-web-site"></a>Lezione 1: Creare un nuovo sito Web
   In questa lezione viene illustrato come creare un nuovo progetto di sito Web usando il modello di sito Web ASP.NET per Visual C#.  
@@ -34,6 +34,6 @@ ms.locfileid: "56036962"
  Viene visualizzato il progetto di sito Web.  
   
 ## <a name="next-task"></a>Attività successiva  
- È stato creato correttamente un nuovo progetto di sito Web. Successivamente, verranno create una connessione dati e una tabella di dati per il report padre. Vedere [lezione 2: Definire una connessione dati e un tabella di dati per il Report padre](lesson-2-define-a-data-connection-and-data-table-for-parent-report.md).  
+ È stato creato correttamente un nuovo progetto di sito Web. Successivamente, verranno create una connessione dati e una tabella di dati per il report padre. Vedere [Lezione 2: Definire una connessione dati e un tabella di dati per il Report padre](lesson-2-define-a-data-connection-and-data-table-for-parent-report.md).  
   
   

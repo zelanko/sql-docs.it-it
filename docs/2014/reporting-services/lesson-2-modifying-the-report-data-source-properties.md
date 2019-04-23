@@ -8,17 +8,17 @@ ms.technology:
 - reporting-services-native
 ms.topic: conceptual
 ms.assetid: c962b0ff-ce8a-4742-8262-dc730901afcf
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 7f7f1df9e5b5ee885af3e7a0fe462faeafd2d6b7
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 41746f2938afd17e59dc4a9f2278179e4ccc1695
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56026422"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59964797"
 ---
-# <a name="lesson-2-modifying-the-report-data-source-properties"></a>Lezione 2: Modifica le proprietà dell'origine dati Report
+# <a name="lesson-2-modifying-the-report-data-source-properties"></a>Lezione 2: Modifica delle proprietà dell'origine dati del report
   In questa lezione verrà utilizzato Gestione report per seleziona un report da recapitare ai destinatari. Con la sottoscrizione guidata dai dati che verrà definita verrà distribuito il report **Ordine vendita** creato nell'esercitazione [Creare un report tabella semplice &#40;esercitazione su SSRS&#41;](../reporting-services/create-a-basic-table-report-ssrs-tutorial.md). Nei passaggi seguenti verranno modificate le informazioni di connessione all'origine dei dati utilizzate dal report per acquisire i dati. Solo i report in cui vengono usate **credenziali archiviate** per accedere a un'origine dati del report possono essere distribuiti attraverso una sottoscrizione guidata dai dati. Le credenziali archiviate sono necessarie per l'esecuzione automatica dei report.  
   
  Inoltre, verrà modificato il set di dati e il report per utilizzare un parametro al fine di filtrare il report in `[Order]` in modo che tramite la sottoscrizione sia possibile restituire istanze differenti del report per formati di rendering e ordini specifici.  
@@ -123,7 +123,7 @@ ms.locfileid: "56026422"
 2.  Sulla barra degli strumenti fare clic su **Compila** , quindi scegliere **Distribuisci Tutorial**.  
   
 ## <a name="next-steps"></a>Passaggi successivi  
- In questo modo il report è stato configurato per l'acquisizione di dati utilizzando credenziali archiviate. Il passaggio successivo consiste nell'impostazione della sottoscrizione tramite le pagine relative disponibili in Gestione report. Vedere [lezione 3: Definizione di una sottoscrizione guidata dai dati](../reporting-services/lesson-3-defining-a-data-driven-subscription.md).  
+ In questo modo il report è stato configurato per l'acquisizione di dati utilizzando credenziali archiviate. Il passaggio successivo consiste nell'impostazione della sottoscrizione tramite le pagine relative disponibili in Gestione report. Vedere [Lezione 3: Definizione di una sottoscrizione guidata dai dati](../reporting-services/lesson-3-defining-a-data-driven-subscription.md).  
   
 ## <a name="see-also"></a>Vedere anche  
  [Gestire origini dati dei report](report-data/manage-report-data-sources.md)   

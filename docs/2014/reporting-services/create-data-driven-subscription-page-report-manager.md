@@ -8,15 +8,15 @@ ms.technology:
 - reporting-services-native
 ms.topic: conceptual
 ms.assetid: 814b4653-572a-48c7-847f-b310ba0f3046
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: d3abebe357646aab1a09e3bc6a59130461d268bd
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 625afedabdb376f913d3353e2bda343bba66e3e1
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56027042"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59964817"
 ---
 # <a name="create-data-driven-subscription-page-report-manager"></a>Pagine Creazione di una sottoscrizione guidata dai dati (Gestione report)
   Le pagine Creazione di una sottoscrizione guidata dai dati consentono di compilare o modificare una sottoscrizione che esegue una query su un database sottoscrittore per ottenere informazioni sulla sottoscrizione ogni volta che la sottoscrizione viene eseguita. Le sottoscrizioni guidate dai dati utilizzano i risultati della query per determinare i destinatari della sottoscrizione, le impostazioni di recapito e i valori dei parametri del report. In fase di esecuzione, il server di report esegue una query per recuperare i valori utilizzati per le impostazioni di sottoscrizione. È possibile utilizzare queste pagine per definire la query e assegnare i valori della query alle impostazioni della sottoscrizione. I valori e le opzioni che è possibile impostare per una sottoscrizione guidata dai dati sono suddivisi in più pagine, in modo simile a una procedura guidata. La procedura è composta da un totale di sette pagine.  

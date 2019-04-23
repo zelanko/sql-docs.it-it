@@ -19,15 +19,15 @@ helpviewer_keywords:
 - user interface
 - overview of Report Builder
 ms.assetid: 1544472c-2803-448d-af52-e901cb457a00
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: d1a9e3264ce3580ec5b1c6d110ce745236accff1
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: 714fe10abac63da9abdb7c1415e8f6abbfba11b0
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56287019"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59953297"
 ---
 # <a name="report-design-view-report-builder"></a>Visualizzazione di progettazione report (Generatore report)
   La finestra Generatore report è progettata per semplificare l'organizzazione delle risorse del report e per consentire una più rapida compilazione dei report necessari. L'area di progettazione si trova al centro della finestra, con la barra multifunzione nella parte superiore mentre i riquadri Dati report, Raggruppamento e Proprietà nonché Raccolta parti del report sono a sinistra, in basso e a destra. Nell'area di progettazione vengono aggiunti e organizzati gli elementi del report. Sulla barra multifunzione le voci di menu tradizionali sono suddivise in categorie che è possibile individuare e utilizzare facilmente. I riquadri consentono di aggiungere, selezionare e organizzare le risorse del report, nonché di modificare le proprietà degli elementi del report.  
@@ -42,7 +42,7 @@ ms.locfileid: "56287019"
  In modalità di esecuzione, la barra multifunzione dispone di una sola scheda **eseguiti**.  
   
 ### <a name="home-tab"></a>Scheda Home  
- La scheda Home è una raccolta di comandi di uso comune che si riferiscono all'aspetto degli elementi contenuti nel report. Dalla scheda Home è possibile accedere ai comandi relativi all'esecuzione, al tipo di carattere, al paragrafo, al bordo, al numero e al layout. Quando si fa clic su un elemento nella scheda, nell'area di progettazione l'elemento selezionato cambia. Quando fa clic su **eseguire**, il report viene eseguito il rendering in formato HTML, in modo da visualizzare come verrà visualizzato il contenuto del report quando pubblicato e viene visualizzata la scheda Esegui anziché la scheda Home. La scheda Home è la scheda predefinita visualizzata durante la creazione di un report.  
+ La scheda Home è una raccolta di comandi di uso comune che si riferiscono all'aspetto degli elementi contenuti nel report. Dalla scheda Home è possibile accedere ai comandi relativi all'esecuzione, al tipo di carattere, al paragrafo, al bordo, al numero e al layout. Quando si fa clic su un elemento nella scheda, nell'area di progettazione l'elemento selezionato cambia. Quando fa clic su **eseguire**, il report viene eseguito il rendering in formato HTML, in modo da visualizzare come verrà visualizzato il contenuto del report quando pubblicato e viene visualizzata la scheda Esegui anziché la scheda Home. La scheda Home è la scheda predefinita visualizzata quando si crea un report.  
   
 ### <a name="insert-tab"></a>Scheda Inserisci  
  La scheda Inserisci è una raccolta di comandi di uso comune utilizzati per aggiungere elementi al report. Dalla scheda Inserisci è possibile utilizzare alcune procedure guidate per aggiungere una tabella, una matrice, un grafico o una mappa. È inoltre possibile aggiungere tali elementi senza utilizzare una procedura guidata e aggiungere altri elementi del report quali grafici sparkline, indicatori, caselle di testo, immagini, rettangoli, sottoreport nonché intestazioni e piè di pagina.  
@@ -146,17 +146,17 @@ ms.locfileid: "56287019"
 ### <a name="changing-the-properties-pane-view"></a>Modifica della vista del riquadro Proprietà  
  Per impostazione predefinita, le proprietà visualizzate nel riquadro Proprietà sono organizzate in ampie categorie, ad esempio Azione, Bordo, Riempimento, Carattere e Generale. A ogni categoria è associato un set di proprietà. Ad esempio, nella categoria carattere vengono elencate le proprietà seguenti: Color, FontFamily, FontSize, FontStyle, FontWeight, LineHeight e TextDecoration. Se lo si desidera, è possibile ordinare alfabeticamente tutte le proprietà elencate nel riquadro. In questo modo, le categorie verranno rimosse e tutte le proprietà verranno elencate in ordine alfabetico, indipendentemente dalla categoria a cui appartengono.  
   
- Le proprietà sono disponibili tre pulsanti nella parte superiore del riquadro: Categoria di disporre in ordine alfabetico e pagine delle proprietà. Fare clic sui pulsanti Categoria e Ordine alfabetico per passare da una vista all'altra del riquadro Proprietà. Fare clic sul pulsante **Pagine delle proprietà** per aprire la finestra di dialogo delle proprietà per l'elemento del report selezionato.  
+ Nella parte superiore del riquadro Proprietà sono disponibili tre pulsanti, ovvero Per categoria, Per nome e Pagine delle proprietà. Fare clic sui pulsanti Categoria e Ordine alfabetico per passare da una vista all'altra del riquadro Proprietà. Fare clic sul pulsante **Pagine delle proprietà** per aprire la finestra di dialogo delle proprietà per l'elemento del report selezionato.  
   
   
 ##  <a name="GroupPane"></a> Riquadro di raggruppamento (Generatore report)  
- I gruppi vengono utilizzati per organizzare i dati del report in una gerarchia visiva e per calcolare i totali. È possibile visualizzare i gruppi di righe e di colonne inclusi in un'area dati nell'area di progettazione e nel riquadro di raggruppamento. Nel riquadro di raggruppamento è disponibili due riquadri: Gruppi di righe e gruppi di colonne. Quando si seleziona un'area dati, nel riquadro di raggruppamento vengono visualizzati tutti i gruppi all'interno di tale area dati come un elenco gerarchico: I gruppi figlio vengono visualizzati rientrati sotto i relativi gruppi padre.  
+ I gruppi vengono utilizzati per organizzare i dati del report in una gerarchia visiva e per calcolare i totali. È possibile visualizzare i gruppi di righe e di colonne inclusi in un'area dati nell'area di progettazione e nel riquadro di raggruppamento. Il riquadro di raggruppamento dispone di due riquadri: Gruppi di righe e Gruppi di colonne. Quando si seleziona un'area dati, nel riquadro di raggruppamento vengono visualizzati tutti i gruppi inclusi in tale area dati sotto forma di elenco gerarchico: i gruppi figlio vengono visualizzati rientrati sotto i relativi gruppi padre.  
   
  ![Riquadro di raggruppamento per gruppi di righe e colonne annidate](../media/rs-basictablixdesigngroupingpanedefaultview.gif "Riquadro di raggruppamento per gruppi di righe e colonne annidate")  
   
  È possibile creare gruppi trascinando i campi dal riquadro dei dati del report e rilasciandoli sull'area di progettazione o nel riquadro di raggruppamento. Nel riquadro di raggruppamento è possibile aggiungere gruppi padre, adiacenti e figlio, modificare le proprietà di gruppo ed eliminare gruppi.  
   
- Il riquadro di raggruppamento viene visualizzato per impostazione predefinita, ma è possibile chiuderlo deselezionando la casella di controllo Riquadro di raggruppamento nella scheda Visualizza. Il riquadro Raggruppamento non è disponibile per le aree dati Grafico e Misuratore.  
+ Nel riquadro di raggruppamento viene visualizzato per impostazione predefinita, ma è possibile chiuderlo deselezionando la casella di controllo riquadro di raggruppamento nella scheda Visualizza. Il riquadro Raggruppamento non è disponibile per le aree dati Grafico e Misuratore.  
   
  Per altre informazioni, vedere [Riquadro di raggruppamento &#40;Generatore report&#41;](../report-design/grouping-pane-report-builder.md) e [Informazioni sui gruppi &#40;Generatore report e SSRS&#41;](../report-design/understanding-groups-report-builder-and-ssrs.md).  
   

@@ -1,6 +1,6 @@
 ---
 title: Concetti chiave per MDX (Analysis Services) | Microsoft Docs
-ms.date: 05/02/2018
+ms.date: 04/19/2019
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: mdx
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: bb527f78b886154372092c128e2c2a33e1eac75c
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: b00478a739796d27b44899aa72099583b1d9a113
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52527816"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59962167"
 ---
 # <a name="key-concepts-in-mdx-analysis-services"></a>Concetti chiave di MDX (Analysis Services)
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
@@ -57,11 +57,11 @@ ms.locfileid: "52527816"
   
  ![Tabella pivot con tutti i membri indicate](../../../analysis-services/multidimensional-models/mdx/media/ssas-keyconcepts-pivot2-allmember.png "tabella pivot con tutti i membri indicate")  
   
- Espandere la gerarchia fino ad arrivare al livello più basso. Si tratta del **membro foglia**. Un membro foglia è un membro senza figli di una gerarchia. In questo esempio Australia membro foglia.  
+ Espandere la gerarchia fino ad arrivare al livello più basso. Si tratta del **membro foglia**. Un membro foglia è un membro senza figli di una gerarchia. In questo esempio, Sud-Ovest è il membro foglia.  
   
  ![Tabella pivot con callout membro foglia](../../../analysis-services/multidimensional-models/mdx/media/ssas-keyconcepts-pivot3-leafparent.PNG "tabella pivot con callout membro foglia")  
   
- Qualsiasi membro superiore è definito **membro padre**. Pacific è padre di Australia.  
+ Qualsiasi membro superiore è definito **membro padre**. Stati Uniti è l'elemento padre dell'area sudoccidentale.  
   
  **Componenti di una gerarchia dell'attributo**  
   
@@ -96,7 +96,7 @@ ms.locfileid: "52527816"
 ## <a name="key-attributes"></a>Attributi chiave  
  I modelli sono una raccolta di oggetti correlati che si basano su chiavi e indici per creare le associazioni. I modelli Analysis Services non sono diversi. Per ogni dimensione, che è uguale a una tabella in un modello relazionale, è presente un attributo chiave. L' **attributo** chiave è usato nelle relazioni di chiave esterna con la tabella dei fatti (gruppo di misure). Tutti gli attributi non chiave della dimensione sono collegati, direttamente o indirettamente, all'attributo chiave.  
   
- Spesso, ma non sempre, l'attributo chiave è anche l' **attributo di granularità**. La granularità indica il livello di dettaglio o di precisione nei dati. Anche in questo caso un esempio semplifica la comprensione di questo concetto. Esaminare i valori relativi alle date. Per le vendite giornaliere sono necessari valori di dati specificati in modo giornaliero. Per le quote, potrebbero essere sufficienti valori di dati trimestrali, ma se i dati analitici sono costituiti dai risultati di una competizione sportiva, è possibile che la granularità corrisponda ai millisecondi. Il livello di precisione dei valori di dati corrisponde alla granularità.  
+ Spesso, ma non sempre, l'attributo chiave è anche l' **attributo di granularità**. La granularità indica il livello di dettaglio o di precisione nei dati. Anche in questo caso un esempio semplifica la comprensione di questo concetto. Prendere in considerazione i valori di data: Per le vendite giornaliere, è necessario i valori di data specificati per il giorno; per le quote, ogni tre mesi potrebbe essere sufficiente, ma se i dati analitici sono costituiti da un evento sportivo di risultati di competizione, il livello di dettaglio potrebbe essere necessario molto bene ai millisecondi. Il livello di precisione dei valori di dati corrisponde alla granularità.  
   
  Valuta è un altro esempio: un'applicazione finanziaria tenga traccia dei valori monetari con a molte cifre decimali, mentre raccolta fondi della tua scuola locali potrebbero essere sufficienti valori al dollaro più vicino. La comprensione della granularità è importante, perché è consigliabile evitare di archiviare dati non necessari. L'eliminazione di millisecondi da un timestamp o di centesimi da un importo di vendita può permettere di risparmiare tempo di archiviazione ed elaborazione quando un livello così specifico di dati non è rilevante ai fini dell'analisi.  
   

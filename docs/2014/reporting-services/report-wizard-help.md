@@ -13,15 +13,15 @@ helpviewer_keywords:
 - Report Wizard
 - Report Designer [Reporting Services], wizards
 ms.assetid: 68287bcf-f91a-429f-bb7c-48c029b041fa
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 7f481692acf68d84916f11babf10562d0f1d0b9c
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: 869286901a428cf2b327fe65ba8c46877df092d3
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56285539"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59971587"
 ---
 # <a name="report-wizard-help"></a>Guida della Creazione guidata report
   In questa sezione sono inclusi gli argomenti della Guida sensibile al contesto relativi a Creazione guidata report. La Creazione guidata report consente di automatizzare il processo di creazione di report tabella e di report matrice. Gli argomenti disponibili in questa sezione sono descritti nella tabella seguente.  

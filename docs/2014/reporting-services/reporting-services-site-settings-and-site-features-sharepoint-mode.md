@@ -8,15 +8,15 @@ ms.technology:
 - reporting-services-native
 ms.topic: conceptual
 ms.assetid: e0040fec-e2b7-4099-ae01-3b9bb9128bbd
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: b2e6997afd52c8b999d981c5c15b782ad9a56407
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 14708d286ea11a872a3260f41cae44e05e7fb30c
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56031072"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59967398"
 ---
 # <a name="reporting-services-site-settings-and-site-featuressharepoint-mode"></a>Funzionalità e impostazioni del sito di Reporting Services (modalità SharePoint)
   [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] La modalità SharePoint include diverse funzionalità personalizzate a livello di sito e la funzionalità del sito che può essere gestita dalla pagina Impostazioni sito SharePoint. Le impostazioni sono a livello di sito e riguardano tutte le applicazioni di servizio [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] . Per visualizzare questa pagina, è necessario disporre delle autorizzazioni Gestione contenuto e Amministratore sistema.  

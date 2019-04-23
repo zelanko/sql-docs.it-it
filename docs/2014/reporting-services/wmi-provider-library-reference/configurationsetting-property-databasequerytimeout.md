@@ -16,15 +16,15 @@ topic_type:
 helpviewer_keywords:
 - DatabaseQueryTimeout property
 ms.assetid: 96faed97-9799-4bbf-a66f-fdd532d3eace
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: cf21ba6211a016676ea7d1f2547bf4d96b1e6fb4
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 25023ed146d00b8635b9ce822cbb2cdf23be65ec
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56023763"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59968387"
 ---
 # <a name="databasequerytimeout-property-wmi-msreportserverconfigurationsetting"></a>Proprietà DatabaseQueryTimeout (MSReportServer_ConfigurationSetting WMI)
   Specifica il numero di secondi di attesa prima che il server di report presuma che il comando non sia riuscito e che sia necessaria una quantità di tempo troppo elevata per l'esecuzione. Il server di report calcola il tempo di esecuzione della query rispetto al catalogo SQL e non rispetto a un'origine dati per il report. Proprietà di lettura/scrittura.  

@@ -10,15 +10,15 @@ ms.topic: conceptual
 f1_keywords:
 - "10128"
 ms.assetid: b54ec058-b910-450b-a634-6092a4f6d840
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 571e95646caa58a94e92768e1a5fbcc8ed7656b3
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 015548ce55df25d3e0751b697fe046783d084ec5
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56020542"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59966997"
 ---
 # <a name="enter-data-source-credentials-dialog-box-report-builder"></a>Finestra di dialogo Immetti credenziali origine dei dati (Generatore report)
   La finestra di dialogo **Immetti credenziali origine dei dati** consente di specificare le credenziali necessarie per il recupero di dati dall'origine dati.  

@@ -156,15 +156,15 @@ f1_keywords:
 - "10190"
 - "10232"
 ms.assetid: 1f086882-4834-48e9-ab30-c214beee2040
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: c27f8438d0576f06fb071b4073035a5885a2606e
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: 6da8262cd94a4e685f2baf5f1adb1692cfb3df25
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56297389"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59954257"
 ---
 # <a name="gauges-report-builder-and-ssrs"></a>Misuratori (Generatore report e SSRS)
   L'area dati del misuratore è un'area dati unidimensionale in cui viene visualizzato un solo valore nel set di dati. Un misuratore viene sempre posizionato in un pannello del misuratore, dove è possibile aggiungere misuratori figlio o adiacenti. In un singolo pannello del misuratore è possibile creare più misuratori che condividono funzioni come il filtraggio, il raggruppamento o l'ordinamento.  
@@ -181,7 +181,7 @@ ms.locfileid: "56297389"
   
  ![Diagramma degli elementi del misuratore](../media/gauge-elements-diagram.gif "Diagramma degli elementi del misuratore")  
   
- Per altre informazioni sull'utilizzo dei misuratori come KPI, vedere [esercitazione: Aggiunta di un indicatore KPI al Report &#40;Generatore Report&#41;](../tutorial-adding-a-kpi-to-your-report-report-builder.md).  
+ Per ulteriori informazioni sull'utilizzo dei misuratori come KPI, vedere [Esercitazione: Aggiunta di un indicatore di prestazioni chiave al report &#40;Generatore report&#41;](../tutorial-adding-a-kpi-to-your-report-report-builder.md).  
   
 > [!NOTE]  
 >  È possibile pubblicare misuratori separatamente da un report come parti del report. [!INCLUDE[ssRBrptparts](../../includes/ssrbrptparts-md.md)]  
@@ -204,13 +204,13 @@ ms.locfileid: "56297389"
   
  ![rs_RadialGauge](../media/rs-radialgauge.gif "rs_RadialGauge")  
   
- Opzioni del misuratore radiale: Radiale, radiale con Minimisuratore, due scale, 90 gradi nord-est, 90 gradi nord-ovest, 90 gradi sud-ovest, 90 gradi sud-est, 180 gradi a nord, 180 gradi a sud, 180 gradi West180 gradi a est e misuratore.  
+ Opzioni del misuratore radiale: Radiale, Radiale con minimisuratore, Due scale, 90 gradi nord-est, 90 gradi nord-ovest, 90 gradi sud-ovest, 90 gradi sud-est, 180 gradi a nord, 180 gradi a sud, 180 gradi a ovest, 180 gradi a est e Misuratore.  
   
  **Misuratore lineare**  
   
  ![rs_LinearGauge](../media/rs-lineargauge.gif "rs_LinearGauge")  
   
- Opzioni del misuratore lineare: Orizzontale, verticale, più barre, due scale, intervallo a tre colori, logaritmico, termometro, termometro Fahrenheit/Celcius e grafico Bullet.  
+ Opzioni del misuratore lineare: Orizzontale, Verticale, Più indicatori di misura a barre, Due scale, Intervallo a tre colori, Logaritmico, Termometro, Termometro Fahrenheit/Celcius e Grafico a bullet.  
   
   
 ##  <a name="AddingData"></a> Aggiunta di dati a un misuratore  

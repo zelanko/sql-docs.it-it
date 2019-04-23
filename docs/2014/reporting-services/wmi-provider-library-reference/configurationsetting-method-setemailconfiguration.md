@@ -16,15 +16,15 @@ topic_type:
 helpviewer_keywords:
 - SetEmailConfiguration method
 ms.assetid: b40a2224-2c90-4d32-892f-1fe73a0591ca
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: e8ad4dbb79f67591abbd1853757cddc749bf225d
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 9ab5c414ec780c44cb8482ef85ae2032eaa54637
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56014722"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59959167"
 ---
 # <a name="setemailconfiguration-method-wmi-msreportserverconfigurationsetting"></a>Metodo SetEmailConfiguration (MSReportServer_ConfigurationSetting WMI)
   Configura l'estensione per il recapito tramite posta elettronica utilizzata dal server di report per l'invio di messaggi di posta elettronica.  

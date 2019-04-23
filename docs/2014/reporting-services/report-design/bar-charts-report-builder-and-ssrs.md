@@ -8,15 +8,15 @@ ms.technology:
 - reporting-services-native
 ms.topic: conceptual
 ms.assetid: db0cf6a0-2114-41d0-ab27-0319e52dee76
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: f6a6e14bbabdab808ed81011ad5877ba180055f7
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: a09af051826fc771f37a912f5266554f7d98fe1c
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56291890"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59961247"
 ---
 # <a name="bar-charts-report-builder-and-ssrs"></a>Grafici a barre (Generatore report e SSRS)
   Nei grafici a barre le serie vengono visualizzate come set di barre orizzontali. Il grafico a barre semplice è strettamente correlato all'istogramma, in cui le serie vengono visualizzate come set di barre verticali, e al grafico a barre a intervalli, in cui le serie vengono visualizzate come set di barre orizzontali con punti iniziali e finali variabili.  
@@ -68,7 +68,7 @@ ms.locfileid: "56291890"
  [Formattazione delle etichette degli assi in un grafico &#40;Generatore report e SSRS&#41;](formatting-axis-labels-on-a-chart-report-builder-and-ssrs.md)   
  [Formattazione della legenda in un grafico &#40;Generatore report e SSRS&#41;](chart-legend-formatting-report-builder.md)   
  [Aggiungere stili smussato, rilievo e trama a un grafico &#40;Generatore report e SSRS&#41;](chart-effects-add-bevel-emboss-or-texture-report-builder.md)   
- [Esercitazione: Aggiunta di un grafico a barre a un Report (Generatore Report)](https://go.microsoft.com/fwlink/?LinkId=198052)   
- [Esercitazione: Aggiunta di un grafico a barre a un Report](https://go.microsoft.com/fwlink/?LinkId=198042)  
+ [Esercitazione: Aggiunta di un grafico a barre a un report (Generatore report)](https://go.microsoft.com/fwlink/?LinkId=198052)   
+ [Esercitazione: Aggiunta di un grafico a barre a un report](https://go.microsoft.com/fwlink/?LinkId=198042)  
   
   

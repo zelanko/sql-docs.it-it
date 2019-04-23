@@ -10,15 +10,15 @@ ms.topic: conceptual
 f1_keywords:
 - sql12.rtp.rptdesigner.documentoutline.f1
 ms.assetid: 521f3772-043a-4bfa-a3d6-d5e3405ac09c
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: fd6e8afa8a60cb01367eb538f191052de7cf5621
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: c57b2bfad47baba01e54d7b60030ceba0351f678
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56015932"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59952157"
 ---
 # <a name="document-outline"></a>Struttura documento.
   Utilizzare la finestra Struttura documento per visualizzare la gerarchia degli elementi di un report. Nelle aree dati Tablix sono visualizzate tutte le caselle di testo e gli altri elementi del report contenuti nelle celle della Tablix. Quando si seleziona un elemento del report nell'area di progettazione, viene selezionato l'elemento del report corrispondente nella finestra Struttura documento. In questa visualizzazione è possibile individuare gli elementi del report nell'area di progettazione. Quando ad esempio si visualizza in anteprima un report con gli errori relativi alle espressioni, nella finestra Output viene visualizzato un messaggio per ogni errore. Nel messaggio è indicato il nome della casella di testo che contiene l'espressione con l'errore. Facendo clic sul nome della casella di testo nella finestra Struttura documento, lo si seleziona nell'area di progettazione e viene visualizzata l'espressione che contiene l'errore.  

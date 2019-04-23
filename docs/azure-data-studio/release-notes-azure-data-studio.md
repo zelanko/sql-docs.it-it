@@ -3,7 +3,7 @@ title: Note sulla versione
 titleSuffix: Azure Data Studio
 description: Note sulla versione di Azure Data Studio
 ms.custom: seodec18
-ms.date: 03/22/2019
+ms.date: 04/19/2019
 ms.prod: sql
 ms.technology: azure-data-studio
 ms.reviewer: alayu; sstein
@@ -11,16 +11,30 @@ ms.topic: conceptual
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 359723a1e2d75b7cbbd3a88c9a0ba7ee89fdf420
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.openlocfilehash: 5497a2d70c32763d765888235f694b89dd0bb340
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58381589"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59963787"
 ---
 # <a name="release-notes-for-azure-data-studio"></a>Note sulla versione per Azure Data Studio
 
 **[Scaricare e installare la versione più recente.](download.md)**
+
+## <a name="april-2019"></a>Aprile 2019
+
+18 aprile 2019 &nbsp;  /  &nbsp; versione: 1.6.0 
+
+&nbsp;
+
+| Cambia | Dettagli |
+| :----- | :------ |
+| Rinominati **i server** premere TAB per passare **connessioni** | |
+| Spostare Esplora risorse di Azure come un Azure viewlet in connessioni | Gli utenti possono ora visualizzare le istanze di SQL di Azure tramite Azure viewlet nella visualizzazione di connessioni e si espandono per visualizzare gli oggetti in ogni server o database.|
+| Miglioramenti di Notebook SQL | &bull; &nbsp; Aggiunto il pulsante sulla barra degli strumenti per cancellare l'output per tutte le celle <br/>&bull; &nbsp; Aggiunto il pulsante sulla barra degli strumenti per eseguire tutte le celle <br/>&bull; &nbsp; Nome di connessione fisso anziché il nome server (se impostata) nella finestra Connetti a elenco a discesa <br/>&bull; &nbsp; Correzione per le immagini in markdown non per il rendering quando si usano i percorsi delle immagini relativo <br/>&bull; &nbsp; Funzionalità migliorate nelle griglie notebook aggiungendo fare doppio clic sulla dimensione della colonna-ridimensionamento automatico e un migliore supporto rotellina del mouse <br/>&bull; &nbsp; Miglioramenti alla gestione degli errori e python installare resilienza durante l'installazione di python tramite i notebook <br/>&bull; &nbsp; Miglioramenti alla funzionalità "Seleziona tutto" quando si selezionano celle del blocco appunti <br/>&bull; &nbsp; Miglioramenti alle connessioni di notebook per impedire la chiusura di un notebook e conseguenze per una connessione di Esplora oggetti <br/>&bull; &nbsp; Esperienza notebook migliorata per visualizzare un messaggio all'utente quando notebook disconnesso e richiede una connessione per l'esecuzione di celle<br/>&bull; &nbsp; Supporto migliorato per i notebook non salvati reidratare in annunci quando viene avviato nuovamente gli annunci |
+| Bug risolti e problemi. | Visualizzare [bug e problemi, in GitHub](https://github.com/Microsoft/azuredatastudio/milestone/26?closed=1). |
+| &nbsp; | &nbsp; |
 
 ## <a name="march-2019-hotfix"></a>Marzo 2019 (Hotfix)
 

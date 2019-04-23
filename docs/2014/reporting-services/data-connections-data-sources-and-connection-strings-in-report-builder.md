@@ -10,15 +10,15 @@ ms.topic: conceptual
 f1_keywords:
 - "10421"
 ms.assetid: 7e103637-4371-43d7-821c-d269c2cc1b34
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 13edc28a739af6a40ab47766c1909be3a8105ee5
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: 5e5fe086d16728a95b9ee8f2a52878d5a2c4bad4
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56288869"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59962127"
 ---
 # <a name="data-connections-data-sources-and-connection-strings-in-report-builder"></a>Connessioni dati, origini dati e stringhe di connessione in Generatore report
   Per includere dati in un report, è possibile creare connessioni dati e set di dati. In una connessione dati sono incluse informazioni sulla modalità di accesso a un'origine dati esterna. In un set di dati è incluso un comando di query che consente di specificare i dati da includere tramite la connessione dati.  

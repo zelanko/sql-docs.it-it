@@ -11,15 +11,15 @@ f1_keywords:
 - sql12.rtp.rptdesigner.mapviewport.centerandzoom.f1
 - "10506"
 ms.assetid: 642a06f5-293f-48e0-97a6-1489dbefa719
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: b29cc14559b1c81646a2285106e04b7380e6a77e
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: 0e345ca44b152986e0e8c7eae87d8a2a50481c8f
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56296269"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59962007"
 ---
 # <a name="map-viewport-properties-dialog-box-center-and-zoom"></a>Finestra di dialogo Proprietà viewport mappa, Allineamento al centro e zoom
   Selezionare **Centra e zoom** affinché tramite la finestra di dialogo **Proprietà viewport mappa** venga impostata la vista con allineamento al centro e il fattore di zoom per una mappa. Dopo aver specificato un'origine dati della mappa e i limiti della mappa che si desidera includere nel report, è possibile specificare l'allineamento al centro della vista e il fattore di zoom per controllare ulteriormente la visualizzazione della mappa. Le opzioni variano a seconda del metodo utilizzato per specificare i valori di allineamento al centro e zoom. Fare clic sul pulsante **Espressione** (*fx*) per modificare un'espressione che imposta il valore per l'opzione.  

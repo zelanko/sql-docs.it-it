@@ -10,15 +10,15 @@ ms.topic: conceptual
 f1_keywords:
 - "10437"
 ms.assetid: a2bab8c1-505d-4da3-b1db-ea0ae13b2336
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 8ef4cfaec1b66c9840d0dcf08d788b66b7107190
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: 91d702b8b5b3402783fb47819bdd18d552682931
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56291900"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59961827"
 ---
 # <a name="exporting-reports-report-builder-and-ssrs"></a>Esportazione di report (Generatore report e SSRS)
   Dopo avere eseguito un report, è possibile esportarlo in un altro formato, ad esempio Excel o PDF, oppure esportarlo generando un documento di servizio Atom, elencando tutti i feed di dati conformi ad Atom disponibili dal report.  
@@ -47,15 +47,15 @@ ms.locfileid: "56291900"
   
 -   **Estensioni per il renderer di dati** Le estensioni per il rendering di dati rimuovono tutte le informazioni di formattazione e layout dal report e visualizzano solo i dati. Il file risultante può essere usato per importare i dati del report non elaborati in un altro tipo di file, ad esempio Excel, in un altro database, in un messaggio di dati XML o in un'applicazione personalizzata. I renderer di dati non supportano le interruzioni di pagina.  
   
-     Sono supportate le estensioni seguenti per il rendering di dati: CSV, XML e Atom.  
+     Sono supportate le estensioni di rendering di dati seguenti: CSV, XML e Atom.  
   
 -   **Estensioni per il renderer interruzione di pagina automatica** Le estensioni per il rendering di interruzioni di pagina automatiche mantengono il layout e la formattazione del report. Il file risultante è ottimizzato per la visualizzazione su schermo e il recapito, ad esempio in una pagina Web o nei controlli **ReportViewer** .  
   
-     Sono supportate le estensioni per il rendering di interruzioni di pagina automatiche: [!INCLUDE[msCoName](../../includes/msconame-md.md)] Excel, [!INCLUDE[msCoName](../../includes/msconame-md.md)] Word e Archivio Web (MHTML).  
+     Sono supportate le estensioni per il rendering di interruzioni di pagina software seguenti: [!INCLUDE[msCoName](../../includes/msconame-md.md)] Excel, [!INCLUDE[msCoName](../../includes/msconame-md.md)] Word e archivio Web (MHTML).  
   
 -   **Estensioni per il renderer interruzione di pagina manuale** Le estensioni per il rendering di interruzioni di pagina manuali mantengono il layout e la formattazione del report. Il file risultante è ottimizzato per garantire una stampa coerente o per la visualizzazione del report online in formato libro.  
   
-     Sono supportate le estensioni per il rendering di interruzioni di pagina manuali: TIFF e PDF.  
+     Sono supportate le estensioni di rendering di interruzioni di pagina manuali seguenti: TIFF e PDF.  
   
 ##  <a name="ExportFormats"></a> Formati di esportazione  
  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] sono disponibili estensioni per il rendering per l'esecuzione del rendering dei report in formati diversi. Se si intende usare questa caratteristica, sarà necessario ottimizzare la progettazione del report per il formato di file scelto. L'argomento relativo a ogni estensione per il rendering contiene informazioni dettagliate sul rendering del report in tale formato.  
@@ -69,7 +69,7 @@ ms.locfileid: "56291900"
 |Word|Interruzione di pagina automatica|L'estensione per il rendering di Word esegue il rendering di un report come documento di Word compatibile con [!INCLUDE[ofprword](../../includes/ofprword-md.md)] 2007-2010 e con [!INCLUDE[ofprword](../../includes/ofprword-md.md)] 2003 con [!INCLUDE[msCoName](../../includes/msconame-md.md)] Office Compatibility Pack per i formati di file Word, Excel e PowerPoint. Dopo l'esportazione del report in un documento di Word, è possibile modificarne il contenuto e progettare report in formato documento, ad esempio etichette di indirizzi, ordini di acquisto o lettere tipo. L'estensione dei file generati da questo renderer è docx.<br /><br /> Per altre informazioni, vedere [Esportazione in Microsoft Word &#40;Generatore report e SSRS&#41;](exporting-to-microsoft-word-report-builder-and-ssrs.md).<br /><br /> Nota: L'estensione per il rendering di Word 2003 che esegue il rendering nel formato nativo di [!INCLUDE[ofprword](../../includes/ofprword-md.md)] 2003 è disponibile in alcuni scenari di report.|  
 |Archivio Web|Interruzione di pagina automatica|L'estensione per il rendering HTML consente di eseguire il rendering di un report in formato HTML. Può inoltre generare pagine HTML complete o frammenti di HTML da incorporare in altre pagine HTML. Tutto il codice HTML viene generato con la codifica UTF-8.<br /><br /> L'estensione per il rendering HTML è l'estensione per il rendering predefinita per i report dei quali viene visualizzata l'anteprima in Generatore report e che vengono visualizzati in un browser, inclusi quelli eseguiti in Gestione report.<br /><br /> Per altre informazioni, vedere [Rendering in formato HTML &#40;Generatore report e SSRS&#41;](rendering-to-html-report-builder-and-ssrs.md).|  
 |File Acrobat (PDF)|Interruzione di pagina manuale|L'estensione per il rendering PDF consente di eseguire il rendering di un report in file che possono essere aperti in Adobe Acrobat e in altri visualizzatori PDF di terze parti che supportano il formato PDF 1.3. Anche se PDF 1.3 è compatibile con Adobe Acrobat 4.0 e versioni successive, [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] supporta Adobe Acrobat 6 e versioni successive. Non è necessaria l'applicazione Adobe per convertire i report mediante l'estensione per il rendering. I visualizzatori PDF, ad esempio Adobe Acrobat, sono tuttavia necessari per visualizzare o stampare un report in formato PDF.<br /><br /> Per altre informazioni, vedere [Esportazione in un file PDF &#40;Generatore report e SSRS&#41;](exporting-to-a-pdf-file-report-builder-and-ssrs.md).|  
-|File TIFF|Interruzione di pagina manuale|L'estensione per il rendering delle immagini genera bitmap o metafile dei report. Per impostazione predefinita, l'estensione per il rendering delle immagini crea un file TIFF del report, che può essere visualizzato in più pagine. Nel client l'immagine può essere visualizzata in un visualizzatore di immagini e stampata.<br /><br /> L'estensione per il rendering delle immagini permette di generare file in tutti i formati supportati da [!INCLUDE[ndptecgdiplus](../../includes/ndptecgdiplus-md.md)]: BMP, EMF, EMFPlus, GIF, JPEG, PNG e TIFF.<br /><br /> Per altre informazioni, vedere [Esportazione in un file di immagine &#40;Generatore report e SSRS&#41;](exporting-to-an-image-file-report-builder-and-ssrs.md).|  
+|File TIFF|Interruzione di pagina manuale|L'estensione per il rendering delle immagini genera bitmap o metafile dei report. Per impostazione predefinita, l'estensione per il rendering delle immagini crea un file TIFF del report, che può essere visualizzato in più pagine. Nel client l'immagine può essere visualizzata in un visualizzatore di immagini e stampata.<br /><br /> L'estensione per il rendering delle immagini può generare file in tutti i formati supportati da [!INCLUDE[ndptecgdiplus](../../includes/ndptecgdiplus-md.md)]: BMP, EMF, EMFPlus, GIF, JPEG, PNG e TIFF.<br /><br /> Per altre informazioni, vedere [Esportazione in un file di immagine &#40;Generatore report e SSRS&#41;](exporting-to-an-image-file-report-builder-and-ssrs.md).|  
 |XML|Dati|L'estensione per il rendering XML genera report in formato XML. Lo schema per il report XML è specifico del report e contiene solo dati. Il rendering delle informazioni di layout non viene eseguito e la paginazione non viene mantenuta dall'estensione per il rendering XML. Il codice XML generato da questa estensione può essere importato in un database, usato come messaggio di dati XML o inviato a un'applicazione personalizzata.<br /><br /> Per altre informazioni, vedere [Esportazione in XML &#40;Generatore report e SSRS&#41;](exporting-to-xml-report-builder-and-ssrs.md).|  
 |Atom|Dati|L'estensione per il rendering Atom genera feed di dati conformi ad Atom dai report. I feed di dati sono leggibili e interscambiabili con applicazioni come il client [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] in grado di usare i feed di dati conformi ad Atom.<br /><br /> L'output è un documento di servizio Atom in cui sono elencati i feed di dati disponibili in un report. Per ogni area dati di un report viene creato almeno un feed di dati. A seconda del tipo di area dati e dei dati in essa contenuti, potrebbero essere generati più feed di dati.<br /><br /> Per altre informazioni, vedere [Generazione di feed di dati dai report &#40;Generatore report e SSRS&#41;](generating-data-feeds-from-reports-report-builder-and-ssrs.md).|  
   
