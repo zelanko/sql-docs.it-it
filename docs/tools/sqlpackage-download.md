@@ -10,12 +10,12 @@ ms.topic: conceptual
 author: pensivebrian
 ms.author: broneill
 manager: craigg
-ms.openlocfilehash: 7b909df2e97149019d70af49085cc5f1e212f5ee
-ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
+ms.openlocfilehash: 809a78130c5bc015114138e678c55522fa556f01
+ms.sourcegitcommit: e2d65828faed6f4dfe625749a3b759af9caa7d91
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59240409"
+ms.lasthandoff: 04/17/2019
+ms.locfileid: "59671167"
 ---
 # <a name="download-and-install-sqlpackage"></a>Scaricare e installare sqlpackage
 
@@ -25,9 +25,9 @@ Scaricare e installare la versione più recente per .NET Framework e le anteprim
 
 |Piattaforma|Scarica|Data di rilascio|Versione|Compilazione
 |:---|:---|:---|:---|:---|
-|Windows|[Programma di installazione MSI](https://go.microsoft.com/fwlink/?linkid=2069405)|1 febbraio 2019|18.1|15.0.4316.1|
-|macOS .NET Core (anteprima)|[File ZIP](https://go.microsoft.com/fwlink/?linkid=2069126)|1 febbraio 2019 | 18.1 |15.0.4316.1|
-|Linux .NET Core (anteprima)|[File ZIP](https://go.microsoft.com/fwlink/?linkid=2069122)|1 febbraio 2019 | 18.1 |15.0.4316.1|
+|Windows|[Programma di installazione MSI](https://go.microsoft.com/fwlink/?linkid=2087429)|15 aprile 2019|18.2|15.0.4384.2|
+|macOS .NET Core (anteprima)|[.zip file](https://go.microsoft.com/fwlink/?linkid=2087247)|15 aprile 2019 | 18.2 |15.0.4384.2|
+|Linux .NET Core (anteprima)|[.zip file](https://go.microsoft.com/fwlink/?linkid=2087431)|15 aprile 2019 | 18.2 |15.0.4384.2|
 
 Per informazioni dettagliate sulla versione più recente, vedere le [note sulla versione](release-notes-sqlpackage.md).
 
@@ -37,14 +37,14 @@ Per informazioni dettagliate sulla versione più recente, vedere le [note sulla 
 
 Questa versione di sqlpackage include un'esperienza di installazione Windows standard e un file ZIP: 
 
-1. Scaricare ed eseguire il [programma di installazione DacFramework.msi per Windows](https://go.microsoft.com/fwlink/?linkid=2069405).
+1. Scaricare ed eseguire il [programma di installazione DacFramework.msi per Windows](https://go.microsoft.com/fwlink/?linkid=2087429).
 2. Aprire una nuova finestra del prompt dei comandi ed eseguire sqlpackage.exe
     - sqlpackage viene installato nella cartella ```C:\Program Files\Microsoft SQL Server\150\DAC\bin```
     - Installando la versione x86 in un computer x64, sqlpackage viene installato nella cartella ```C:\Program Files (x86)\Microsoft SQL Server\150\DAC\bin```
 
 ## <a name="get-sqlpackage-preview-for-macos"></a>Ottenere sqlpackage (anteprima) per macOS
 
-1. Scaricare [sqlpackage per macOS](https://go.microsoft.com/fwlink/?linkid=2069126).
+1. Scaricare [sqlpackage per macOS](https://go.microsoft.com/fwlink/?linkid=2087247).
 2. Per estrarre il file e avviare sqlpackage, aprire una nuova finestra del terminale e digitare i comandi seguenti:
 
    **Installazione file con estensione zip:**
@@ -59,7 +59,7 @@ Questa versione di sqlpackage include un'esperienza di installazione Windows sta
 
 ## <a name="get-sqlpackage-preview-for-linux"></a>Ottenere sqlpackage (anteprima) per Linux
 
-1. Scaricare [sqlpackage per Linux](https://go.microsoft.com/fwlink/?linkid=2069122) usando uno dei programmi di installazione o l'archivio tar.gz:
+1. Scaricare [sqlpackage per Linux](https://go.microsoft.com/fwlink/?linkid=2087431) usando uno dei programmi di installazione o l'archivio tar.gz:
 2. Per estrarre il file e avviare sqlpackage, aprire una nuova finestra del terminale e digitare i comandi seguenti:
 
    **Installazione file con estensione zip:**
@@ -83,7 +83,7 @@ Questa versione di sqlpackage include un'esperienza di installazione Windows sta
    sudo apt-get install libunwind8
    ```
 
-   **Redhat:**
+   **RedHat:**
 
    ```bash
    yum install libunwind

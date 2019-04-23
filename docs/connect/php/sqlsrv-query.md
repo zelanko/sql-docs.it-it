@@ -1,7 +1,7 @@
 ---
 title: sqlsrv_query | Microsoft Docs
 ms.custom: ''
-ms.date: 08/01/2018
+ms.date: 04/11/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -18,12 +18,12 @@ ms.assetid: 9fa7c4c8-4da8-4299-9893-f61815055aa3
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 19d7f4d6562f64061f01bf0ff7a73fcd03a4f63c
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.openlocfilehash: a4c504228d94fb8642bb024128f4a8079d64a610
+ms.sourcegitcommit: 46a2c0ffd0a6d996a3afd19a58d2a8f4b55f93de
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51606251"
+ms.lasthandoff: 04/15/2019
+ms.locfileid: "59582824"
 ---
 # <a name="sqlsrvquery"></a>sqlsrv_query
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -63,13 +63,7 @@ sqlsrv_query(resource $conn, string $tsql [, array $params [, array $options]])
     |*$phpType*[facoltativo]|Costante **SQLSRV_PHPTYPE_\*** che specifica il tipo di dati PHP del valore restituito.<br /><br />Per altre informazioni sulle costanti PHP, vedere [Costanti &#40;driver Microsoft per PHP per SQL Server&#41;](../../connect/php/constants-microsoft-drivers-for-php-for-sql-server.md).|  
     |*$sqlType*[facoltativo]|Costante **SQLSRV_SQLTYPE_\*** che specifica il tipo di dati SQL Server del valore di input.<br /><br />Per altre informazioni sulle costanti PHP, vedere [Costanti &#40;driver Microsoft per PHP per SQL Server&#41;](../../connect/php/constants-microsoft-drivers-for-php-for-sql-server.md).|  
   
-*$options* [facoltativo]: matrice associativa che imposta le proprietà delle query. Le chiavi supportate sono le seguenti:  
-  
-|Key|Valori supportati|Descrizione|  
-|-------|--------------------|---------------|  
-|QueryTimeout|Valore integer positivo.|Imposta il timeout in secondi della query. Per impostazione predefinita il driver attende i risultati per un periodo illimitato.|  
-|SendStreamParamsAtExec|**true** o **false**<br /><br />Il valore predefinito è **true**.|Configura il driver per l'invio di tutti i flussi di dati in fase di esecuzione (**true**) o in blocchi (**false**). Per impostazione predefinita, il valore è impostato su **true**. Per altre informazioni, vedere [sqlsrv_send_stream_data](../../connect/php/sqlsrv-send-stream-data.md).|  
-|Scorrimento|SQLSRV_CURSOR_FORWARD<br /><br />SQLSRV_CURSOR_STATIC<br /><br />SQLSRV_CURSOR_DYNAMIC<br /><br />SQLSRV_CURSOR_KEYSET<br /><br />SQLSRV_CURSOR_CLIENT_BUFFERED|Per altre informazioni su questi valori, vedere [Specifica di un tipo di cursore e selezione di righe](../../connect/php/specifying-a-cursor-type-and-selecting-rows.md).|  
+*$options* [facoltativo]: matrice associativa che imposta le proprietà delle query. È lo stesso elenco di chiavi supportate anche da [sqlsrv_prepare](../../connect/php/sqlsrv-prepare.md#properties).
   
 ## <a name="return-value"></a>Valore restituito  
 Risorsa di istruzione. Se non è possibile creare e/o eseguire l'istruzione, viene restituito **false**.  
@@ -163,10 +157,10 @@ sqlsrv_close($conn);
 ```  
   
 > [!NOTE]
-> È consigliabile usare le stringhe come input durante l'associazione di valori da un [colonna decimal o numeric](https://docs.microsoft.com/sql/t-sql/data-types/decimal-and-numeric-transact-sql) per garantire precisione e accuratezza come PHP ha limitato la precisione per [numeri a virgola mobile](https://php.net/manual/en/language.types.float.php). Lo stesso vale per le colonne di tipo bigint, soprattutto quando i valori sono di fuori dell'intervallo di un' [integer](../../t-sql/data-types/int-bigint-smallint-and-tinyint-transact-sql.md).
+> È consigliabile usare stringhe come input durante l'associazione di valori a una [colonna decimal o numeric](https://docs.microsoft.com/sql/t-sql/data-types/decimal-and-numeric-transact-sql) per garantire precisione e accuratezza, dato che PHP offre una precisione limitata per i [numeri a virgola mobile](https://php.net/manual/en/language.types.float.php). Lo stesso vale per le colonne di tipo bigint, soprattutto quando i valori non sono compresi nell'intervallo di un [integer](../../t-sql/data-types/int-bigint-smallint-and-tinyint-transact-sql.md).
 
 ## <a name="example"></a>Esempio  
-Questo esempio di codice viene illustrato come associare un valore decimale come parametro di input.  
+Questo esempio di codice mostra come associare un valore decimale come parametro di input.  
 
 ```
 <?php
@@ -190,7 +184,7 @@ sqlsrv_close($conn);
 ```
 
 ## <a name="example"></a>Esempio
-Questo esempio di codice viene illustrato come creare una tabella di [sql_variant](https://docs.microsoft.com/sql/t-sql/data-types/sql-variant-transact-sql) tipi e recuperare i dati inseriti.
+Questo esempio illustra come creare una tabella di tipi [sql_variant](https://docs.microsoft.com/sql/t-sql/data-types/sql-variant-transact-sql) e recuperare i dati inseriti.
 
 ```
 <?php
@@ -240,7 +234,7 @@ sqlsrv_close($conn);
 ?>
 ```
 
-L'output previsto sarà:
+L'output previsto è il seguente:
 
 ```
 First field:  1

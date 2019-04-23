@@ -1,7 +1,7 @@
 ---
 title: Informazioni sul supporto Java EE | Microsoft Docs
 ms.custom: ''
-ms.date: 02/06/2019
+ms.date: 04/16/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -11,12 +11,12 @@ ms.assetid: a9448b80-b7a3-49cf-8bb4-322c73676005
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: ae55a5bc677c70d2a1f998e235031ac9bafd5aba
-ms.sourcegitcommit: c61c7b598aa61faa34cd802697adf3a224aa7dc4
+ms.openlocfilehash: 7d7d1867c8c6d9311736124cf74e30b748a9de68
+ms.sourcegitcommit: e2d65828faed6f4dfe625749a3b759af9caa7d91
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56154616"
+ms.lasthandoff: 04/17/2019
+ms.locfileid: "59671227"
 ---
 # <a name="understanding-java-ee-support"></a>Informazioni sul supporto Java EE
 
@@ -30,19 +30,19 @@ Assicurarsi innanzitutto che l'ambiente Java (JDK, JRE) includa il pacchetto jav
 
 Il nome della classe del driver è **com.microsoft.sqlserver.jdbc.SQLServerDriver**. Per JDBC Driver 4.1, 4.2 e 6.0, il driver è incluso nel file **sqljdbc.jar**, **sqljdbc4.jar**, **sqljdbc41.jar** o **sqljdbc42.jar**.
 
-Per JDBC Driver 6.2, il driver è incluso **mssql-jdbc-6.2.2.jre7.jar** oppure **mssql-jdbc-6.2.2.jre8.jar**.
+Per il driver JDBC 6.2, il driver è incluso in **mssql-jdbc-6.2.2.jre7.jar** oppure **mssql-jdbc-6.2.2.jre8.jar**.
 
-Per JDBC Driver 6.4, il driver è incluso **mssql-jdbc-6.4.0.jre7.jar**, **mssql-jdbc-6.4.0.jre8.jar**, o **mssql-jdbc-6.4.0.jre9.jar**.
+Per il driver JDBC 6.4, il driver è incluso in **mssql-jdbc-6.4.0.jre7.jar**, **mssql-jdbc-6.4.0.jre8.jar** o **mssql-jdbc-6.4.0.jre9.jar**.
 
-Per JDBC Driver 7.0, il driver è incluso **mssql-jdbc-7.0.0.jre8.jar**, o **mssql-jdbc-7.0.0.jre10.jar**.
+Per il driver JDBC 7.0, il driver è incluso in **mssql-jdbc-7.0.0.jre8.jar** o **mssql-jdbc-7.0.0.jre10.jar**.
 
-Per i 7.2 di Driver JDBC, il driver è incluso **mssql-jdbc-7.2.1.jre8.jar**, o **mssql-jdbc-7.2.1.jre11.jar**.
+Per il driver JDBC 7.2, il driver è incluso in **mssql-jdbc-7.2.2.jre8.jar** o **mssql-jdbc-7.2.2.jre11.jar**.
   
 Il nome della classe viene usato quando si carica il driver con la classe JDBC DriverManager, nonché quando è necessario specificare il nome della classe del driver in qualsiasi configurazione del driver. Per configurare un'origine dati all'interno di un server applicazioni Java EE potrebbe ad esempio essere necessario immettere il nome della classe del driver.  
   
 ## <a name="data-sources"></a>Origini dati
 
-Il driver JDBC fornisce supporto per le origini dati Java EE e JDBC 3.0. Il driver JDBC [SQLServerXADataSource](../../connect/jdbc/reference/sqlserverxadatasource-class.md) classe è implementata da `com.microsoft.sqlserver.jdbc.SQLServerXADataSource`.  
+Il driver JDBC fornisce supporto per le origini dati Java EE e JDBC 3.0. La classe [SQLServerXADataSource](../../connect/jdbc/reference/sqlserverxadatasource-class.md) del driver JDBC è implementata da `com.microsoft.sqlserver.jdbc.SQLServerXADataSource`.  
   
 ### <a name="datasource-names"></a>Nomi delle origini dati
 
@@ -73,7 +73,7 @@ DataSource ds = (DataSource) ctx.lookup("MyDataSource");
 Connection c = ds.getConnection("user", "pwd");  
 ```
 
-Per altre informazioni sulle proprietà dell'origine dati, vedere [impostando le proprietà dell'origine dati](../../connect/jdbc/setting-the-data-source-properties.md).  
+Per altre informazioni sulle proprietà dell'origine dati, vedere [Impostazione delle proprietà delle origini dei dati](../../connect/jdbc/setting-the-data-source-properties.md).  
   
 ## <a name="see-also"></a>Vedere anche
 

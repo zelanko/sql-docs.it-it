@@ -7,13 +7,14 @@ ms.technology: report-server-sharepoint
 ms.topic: conceptual
 author: markingmyname
 ms.author: maghan
+manager: kfile
 monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 51ef41f83e7122d0ab6fc1bc1149fd2eb257215e
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 05964630691537411c54bcd74b040a5d27301134
+ms.sourcegitcommit: 46a2c0ffd0a6d996a3afd19a58d2a8f4b55f93de
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52529745"
+ms.lasthandoff: 04/15/2019
+ms.locfileid: "59583354"
 ---
 # <a name="reporting-services-report-server-sharepoint-mode"></a>Server di report di Reporting Services (modalità SharePoint)
 
@@ -114,11 +115,11 @@ ms.locfileid: "52529745"
   
  Quando si configura un server di report per l'esecuzione in una distribuzione di un prodotto SharePoint, è possibile che i vari elementi vengano visualizzati in lingue diverse. L'interfaccia utente, la documentazione e i messaggi verranno visualizzati nelle lingue seguenti:  
   
--   Tutti gli strumenti, le pagine di applicazione, gli errori, gli avvisi e i messaggi generati da Reporting Services verranno visualizzati nella lingua usata dall'istanza di Reporting Services, ovvero in una delle lingue di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+- Tutti gli strumenti, le pagine di applicazione, gli errori, gli avvisi e i messaggi generati da Reporting Services verranno visualizzati nella lingua usata dall'istanza di Reporting Services, ovvero in una delle lingue di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
--   Le pagine dell'applicazione aperte in un sito di SharePoint, la web part Visualizzatore di report e Generatore report verranno visualizzati in una delle lingue supportate per il componente aggiuntivo Reporting Services. Per visualizzare l'elenco di lingue supportate, visitare la pagina dei [download di SQL Server](https://msdn.microsoft.com/sql/downloads/) e cercare la pagina di download del componente aggiuntivo Reporting Services di SQL Server 2016.  
+- Le pagine dell'applicazione aperte in un sito di SharePoint, la web part Visualizzatore di report e Generatore report verranno visualizzati in una delle lingue supportate per il componente aggiuntivo Reporting Services. Per visualizzare l'elenco di lingue supportate, visitare la pagina dei [download di SQL Server](https://msdn.microsoft.com/sql/downloads/) e cercare la pagina di download del componente aggiuntivo Reporting Services di SQL Server 2016.  
   
--   I siti di SharePoint, Amministrazione centrale SharePoint, la Guida online e i messaggi sono disponibili nelle lingue supportate dai prodotti Office Server.  
+- I siti di SharePoint, Amministrazione centrale SharePoint, la Guida online e i messaggi sono disponibili nelle lingue supportate dai prodotti Office Server.  
   
  Se la lingua del prodotto o della tecnologia SharePoint in uso è diversa da quella del server di report, Reporting Services tenterà di usare la lingua più simile disponibile nella stessa famiglia linguistica. Se non è disponibile un sostituto sufficientemente simile, per il server di report verrà utilizzata la lingua inglese.  
   
@@ -136,8 +137,7 @@ ms.locfileid: "52529745"
 
 ## <a name="next-steps"></a>Passaggi successivi
 
-[Installare o disinstallare il componente aggiuntivo Reporting Services per SharePoint](../../reporting-services/install-windows/install-or-uninstall-the-reporting-services-add-in-for-sharepoint.md)   
-[Web part Visualizzatore di report in un sito di SharePoint](../../reporting-services/report-server-sharepoint/report-viewer-web-part-on-a-sharepoint-site.md)   
-[Quiz: configurazione di SSRS 2012 per l'integrazione con SharePoint](https://go.microsoft.com/fwlink/?LinkId=306443)  
+[Installare o disinstallare il componente aggiuntivo Reporting Services per SharePoint](../../reporting-services/install-windows/install-or-uninstall-the-reporting-services-add-in-for-sharepoint.md)
+[Web part Visualizzatore di report in un sito di SharePoint](../../reporting-services/report-server-sharepoint/report-viewer-web-part-on-a-sharepoint-site.md)
 
 Altre domande? [Visitare il forum su Reporting Services](https://go.microsoft.com/fwlink/?LinkId=620231)
