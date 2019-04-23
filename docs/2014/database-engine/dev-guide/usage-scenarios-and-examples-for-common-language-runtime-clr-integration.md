@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: database-engine
 ms.topic: reference
 helpviewer_keywords:
 - scenarios [CLR integration]
@@ -19,19 +17,19 @@ ms.assetid: 33aac25f-abb4-4f29-af88-4a0dacd80ae7
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 550483f71344a790225a2d22b1caf09cee16b9f3
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 3718a084211e7c3b2b7a14973e195a4b1c3b6b1a
+ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53360473"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "60155018"
 ---
 # <a name="usage-scenarios-and-examples-for-common-language-runtime-clr-integration"></a>Scenari di utilizzo ed esempi per l'integrazione con CLR (Common Language Runtime)
   In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sono inclusi applicazioni e pacchetti di esempio nonché diversi esempi di codice che consentono di acquisire familiarità con le funzionalità di programmabilità dell'integrazione con Common Language Runtime (CLR).  
   
  Per progetti di Visual Studio completi implementati questi esempi e materiali aggiuntivi, visitare [Microsoft SQL Server Community Projects & Samples in CodePlex](https://go.microsoft.com/fwlink/?LinkID=193935).  
   
-|nome|Descrizione|  
+|Nome|Descrizione|  
 |----------|-----------------|  
 |[Accesso al codice nativo da un funzione CLR definita dall'utente](../../../2014/database-engine/dev-guide/accessing-native-code-from-a-clr-udf.md)|Viene illustrato come richiamare una funzione in codice C++ nativo (non gestito) da una funzione definita dall'utente in un assembly, nel database.|  
 |[Esempio Array Parameter](../../../2014/database-engine/dev-guide/array-parameter-sample.md)|Viene illustrato come creare, aggiornare o eliminare un set di righe in un database passando una matrice di informazioni da un client a una stored procedure per l'integrazione con CLR nel server. A tal scopo, viene utilizzato un tipo definito dall'utente (UDT).|  

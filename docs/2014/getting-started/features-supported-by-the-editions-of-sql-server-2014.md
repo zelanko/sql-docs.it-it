@@ -4,25 +4,18 @@ ms.custom: ''
 ms.date: 05/24/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
-- data-quality-services
-- database-engine
-- integration-services
-- master-data-services
-- reporting-services-native
-- reporting-services-sharepoint
+ms.technology: database-engine
 ms.topic: conceptual
 ms.assetid: 5da61ff5-12b9-48e6-b3c8-0dacca1751c4
 author: mightypen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 0652a2545f0b1e9d591777f0bcabe6395cf4feaa
-ms.sourcegitcommit: a13256f484eee2f52c812646cc989eb0ce6cf6aa
+ms.openlocfilehash: f23c3ff4d5bf55609e1dab2462b19a5fa273986f
+ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/25/2019
-ms.locfileid: "56802655"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "60158007"
 ---
 # <a name="features-supported-by-the-editions-of-sql-server-2014"></a>Funzionalità supportate dalle edizioni di SQL Server 2014
 
@@ -31,7 +24,7 @@ ms.locfileid: "56802655"
 
  > **Nota:** [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] è disponibile in versione di valutazione per un periodo di valutazione di 180 giorni. Per altre informazioni, vedere la [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [sito Web Software di prova](https://go.microsoft.com/fwlink/?LinkId=190955).  
 > 
-> **NOTA:** Per le funzionalità supportate dalle edizioni Evaluation e Developer, vedere il set di funzionalità di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Enterprise Edition.  
+> **NOTA:** Per vedere funzionalità supportate dalle edizioni Evaluation e Developer di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] set di funzionalità aziendali.  
   
  Per passare alla tabella per una tecnologia [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] , fare clic sul relativo collegamento:  
   
@@ -101,7 +94,7 @@ ms.locfileid: "56802655"
 |Nome funzionalità|Enterprise|Business Intelligence|Standard|Web|Express with Advanced Services|Express with Tools|Express|  
 |------------------|----------------|---------------------------|--------------|---------|------------------------------------|------------------------|-------------|  
 |Supporto di Server Core<sup>1</sup>|Yes|Yes|Yes|Yes|Yes|Yes|Yes|  
-|Log Shipping|Yes|Yes|Yes|Yes||||  
+|Log shipping|Yes|Yes|Yes|Yes||||  
 |Mirroring del database|Yes|Sì (solo protezione FULL)|Sì (solo protezione FULL)|Solo server di controllo|Solo server di controllo|Solo server di controllo|Solo server di controllo|  
 |Compressione backup|Yes|Yes|Yes|||||  
 |Snapshot del database|Yes|||||||  
@@ -381,13 +374,13 @@ ms.locfileid: "56802655"
 |Strumenti di data mining (procedure guidate, editor, generatori di query)|Yes|Yes|Yes|||||  
 |Convalida incrociata|Yes|Yes||||||  
 |Modelli in base a subset filtrati dei dati della struttura di data mining|Yes|Yes||||||  
-|Serie temporale: combinazione personalizzata tra metodi ARTXP e ARIMA|Yes|Yes||||||  
-|Serie temporale: stima con nuovi dati|Yes|Yes||||||  
+|Time Series: Combinazione personalizzata tra metodi ARTXP e ARIMA|Yes|Yes||||||  
+|Time Series: Stima con nuovi dati|Yes|Yes||||||  
 |Query di data mining simultanee illimitate|Yes|Yes||||||  
-|Opzioni di configurazione e ottimizzazione avanzate per algoritmi di data mining|Yes|Yes||||||  
+|Configurazione e le opzioni per algoritmi di Data Mining di ottimizzazione avanzate|Yes|Yes||||||  
 |Supporto per algoritmi plug-in|Yes|Yes||||||  
 |Elaborazione parallela dei modelli|Yes|Yes||||||  
-|Serie temporale: stima incrociata tra serie|Yes|Yes||||||  
+|Time Series: Stima incrociata tra serie|Yes|Yes||||||  
 |Attributi illimitati per Association Rules|Yes|Yes||||||  
 |Stima basata su sequenze|Yes|Yes||||||  
 |Più destinazioni di stima per gli algoritmi Logistic Regression, Neural Network e Naïve Bayes|Yes|Yes||||||  

@@ -4,20 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: analysis-services
 ms.topic: reference
 ms.assetid: 1d53dda1-f2c8-4a9b-8ec7-78f43ca1d7db
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 847bec408d0b3999c550bbfa533b6bf92ebf670d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: ea95066a8fecbf96c8f6b14b42486d4d62264ae2
+ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48177560"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "60154267"
 ---
 # <a name="hierarchy-representation-tabular"></a>Rappresentazione della gerarchia (tabulare)
   Nei modelli tabulari una gerarchia è il percorso di navigazione da un attributo a un altro, in base a valori selezionati dall'utente.  

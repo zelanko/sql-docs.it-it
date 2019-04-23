@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: database-engine
 ms.topic: reference
 helpviewer_keywords:
 - ODBC, results processing
@@ -14,17 +12,17 @@ ms.assetid: 772d9064-c91d-4cac-8b60-fcc16bf76e10
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: c8cca3c6208f572df76987d2c4de9fa0bbfc3d0c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: acd65a4dfc708c88dd30b6d2e15b189c0d340849
+ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48081311"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "60158667"
 ---
 # <a name="processing-results-how-to-topics-odbc"></a>Procedure relative all'elaborazione dei risultati (ODBC)
   L'elaborazione dei risultati in un'applicazione ODBC comporta innanzitutto la determinazione delle caratteristiche del set di risultati, quindi recuperare i dati nelle variabili di programma utilizzando [SQLBindCol](../../relational-databases/native-client-odbc-api/sqlbindcol.md) oppure [SQLGetData](../../relational-databases/native-client-odbc-api/sqlgetdata.md) .  
   
-## <a name="in-this-section"></a>Argomenti della sezione  
+## <a name="in-this-section"></a>In questa sezione  
   
 -   [Recuperare le informazioni sul Set di risultati &#40;ODBC&#41;](../../relational-databases/native-client-odbc-how-to/processing-results-retrieve-result-set-information.md)  
   

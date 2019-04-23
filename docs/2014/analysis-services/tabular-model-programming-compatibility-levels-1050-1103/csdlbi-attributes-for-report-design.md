@@ -4,20 +4,18 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: analysis-services
 ms.topic: reference
 ms.assetid: 61ba3a27-790e-43bc-b421-e01bf2fdbda6
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: dce0abecb352071a22e74cb820408fe5b8851fc3
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: b7d2a9f075879ce1bfa0c0e7257ea8a2495562c0
+ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53352528"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "60157848"
 ---
 # <a name="csdlbi-attributes-for-report-design"></a>Attributi CSDLBI per la progettazione di report
   In questa sezione vengono descritti gli attributi nelle estensioni a CSDL per la modellazione tabulare che influiscono sulla progettazione delle query di [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)].  
@@ -61,7 +59,7 @@ ms.locfileid: "53352528"
 |`Alignment`|Enum|Valore che indica come devono essere allineati i valori del campo in una presentazione tabulare. I valori possibili sono i seguenti: `Default`, `Center`, `Left`, `Right`. Se omesso, il valore predefinito determina l'allineamento basato sul tipo di dati del campo.|  
 |`FormatString`|Testo|Una stringa di formato .NET che indica come deve essere formattato il valore del campo per impostazione predefinita. Se omesso, si presuppone il formato seguente:<br /><br /> : Campi Datetime: data breve regionale o "d"<br />-Funzione di aggregazione di campi a virgola mobile e integrali con un valore predefinito: numero regionale o "n"<br />-Funzione di aggregazione numeri interi non prevede alcun valore predefinito: numero decimale regionale o "d"<br /><br /> Per tutti gli altri tipi di campi, non è applicabile alcuna stringa di formato.|  
 |`Units`|Testo|Simbolo applicato ai valori del campo per esprimere unità. Se omesso, si presuppone che le unità non siano note.|  
-|`Width`|Integer|Larghezza preferita espressa in caratteri che deve essere riservata per visualizzare i valori del campo in una presentazione tabulare. Se omesso, una larghezza predefinita si basa sul tipo di dati del campo.|  
+|`Width`|Valore intero|Larghezza preferita espressa in caratteri che deve essere riservata per visualizzare i valori del campo in una presentazione tabulare. Se omesso, una larghezza predefinita si basa sul tipo di dati del campo.|  
 |`SortDirection`|Enum|Valore che indica la modalità di ordinamento dei valori del campo. I valori possibili sono i seguenti: `Default`, `Ascending`, `Descending`. Se omesso, digitare il valore predefinito assegna che una direzione di ordinamento è basata sui dati del campo.|  
 |`IsRightToLeft`|Boolean|Indica se il campo contiene testo che deve essere letto da destra a sinistra. Se omesso, si presuppone l'impostazione del modello.|  
 |`OrderBy`|MemberRef|Un riferimento a un altro campo all'interno del modello che definisce l'ordinamento per i valori del campo. I valori per i due campi devono presentare un mapping 1:1 oppure il comportamento di ordinamento non è definito. Se omesso, il campo viene ordinato in base al proprio valore.|  

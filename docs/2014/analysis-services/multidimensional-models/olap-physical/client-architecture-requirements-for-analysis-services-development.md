@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: analysis-services
 ms.topic: reference
 helpviewer_keywords:
 - local mining models [Analysis Services]
@@ -19,12 +17,12 @@ ms.assetid: 03a8eb6b-159f-4a0a-afbe-06a2424b6090
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: a2fd3e4bb2804595db0bd219af0d116fee9192f9
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: a372b5c0b89088a7054606e76138906f83598e5d
+ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48093676"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "60158877"
 ---
 # <a name="client-architecture-requirements-for-analysis-services-development"></a>Requisiti di architettura client per sviluppo Analysis Services
   [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] supporta un'architettura thin client. Il [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] motore di calcolo è interamente basato su server, in modo che tutte le query vengono risolte nel server. Per ogni query è quindi necessario un solo round trip tra il client e il server, il che significa che le prestazioni sono scalabili a mano a mano che le query diventano più complesse.  
@@ -53,7 +51,7 @@ ms.locfileid: "48093676"
  Le applicazioni sia client che di livello intermedio possono comunicare direttamente con [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] senza l'intervento di un provider. Le applicazioni client e di livello intermedio possono inviare XML for Analysis in pacchetti SOAP attraverso il protocollo TCP/IP, HTTP o HTTPS. Il client può essere codificato in qualsiasi linguaggio che supporta SOAP. In tal caso, per semplificare la gestione delle comunicazioni è consigliabile utilizzare Internet Information Services (IIS) con HTTP, ma è anche possibile ricorrere a una connessione diretta al server tramite TCP/IP. Questa è la massima soluzione thin client supportata da [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)].  
   
 ## <a name="analysis-services-in-tabular-or-sharepoint-mode"></a>Analysis Services in modalità tabulare o SharePoint  
- Nelle [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)], il server può essere avviato in modalità motore (VertiPaq) di analitica in memoria xVelocity per i database tabulari e per [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] le cartelle di lavoro sono stati pubblicati in un sito di SharePoint.  
+ In [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] il server può essere avviato in modalità motore di analisi in memoria xVelocity (VertiPaq) per i database tabulari e per le cartelle di lavoro di [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] pubblicate in un sito di SharePoint.  
   
  [!INCLUDE[ssGeminiClient](../../../includes/ssgeminiclient-md.md)] e [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)] sono gli unici ambienti client supportati per la creazione e l'esecuzione di query su database in memoria in cui viene utilizzata rispettivamente la modalità SharePoint o tabulare. Il database PowerPivot incorporato creato tramite Excel e [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] strumenti è contenuta all'interno della cartella di lavoro di Excel e viene salvato come parte del file con estensione xlsx di Excel.  
   
@@ -63,7 +61,7 @@ ms.locfileid: "48093676"
 >  Quando si utilizza un cubo come origine dati per la cartella di lavoro di [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)], i dati che si ottengono dal cubo vengono definiti come query MDX. Tuttavia, i dati vengono importati come snapshot bidimensionale. Non è possibile operare in modo interattivo con i dati o aggiornare i dati dal cubo.  
   
 ### <a name="interfaces-for-powerpivot-client"></a>Interfacce per il client PowerPivot  
- [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] interagisce con l'analitica in memoria (VertiPaq) motore xVelocity all'interno della cartella di lavoro tramite i linguaggi e interfacce stabilite per Analysis Services: AMO e ADOMD.NET, MDX e XMLA. All'interno del componente aggiuntivo, le misure vengono definite tramite un linguaggio delle formule simile a Excel, Data Analysis Expressions (DAX). Le espressioni DAX sono incorporate all'interno dei messaggi XMLA inviati al server in-process.  
+ [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] interagisce con il motore di analitica in memoria xVelocity (VertiPaq) del motore di archiviazione all'interno della cartella di lavoro usando i linguaggi e interfacce stabilite per Analysis Services: AMO e ADOMD.NET, MDX e XMLA. All'interno del componente aggiuntivo, le misure vengono definite tramite un linguaggio delle formule simile a Excel, Data Analysis Expressions (DAX). Le espressioni DAX sono incorporate all'interno dei messaggi XMLA inviati al server in-process.  
   
 ### <a name="providers"></a>Provider  
  Le comunicazioni tra [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] ed Excel utilizzano il provider MSOLAP OLEDB (versione 11.0). All'interno del provider MSOLAP sono contenuti quattro diversi moduli, o trasporti, che possono essere utilizzati per l'invio di messaggi tra il client e il server.  

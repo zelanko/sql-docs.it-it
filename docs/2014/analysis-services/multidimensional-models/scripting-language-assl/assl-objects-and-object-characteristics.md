@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: analysis-services
 ms.topic: reference
 helpviewer_keywords:
 - reference exceptions [Analysis Services Scripting Language]
@@ -21,12 +19,12 @@ ms.assetid: 6e5c28b5-c0bc-4ccd-82e5-e174bbb71386
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: d83728b33a4cbf0ce76eea3c577302c7d7ffaf25
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: aee5e7b94aaaca2b35e34f8c4d49c2834189f114
+ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48082851"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "60157747"
 ---
 # <a name="assl-objects-and-object-characteristics"></a>Oggetti ASSL e relative caratteristiche
   In ASSL (Analysis Services Scripting Language) gli oggetti seguono linee guida specifiche in relazione ai gruppi di oggetti, all'ereditarietà, alla denominazione, all'espansione e all'elaborazione.  
@@ -88,7 +86,7 @@ ms.locfileid: "48082851"
 ## <a name="object-expansion"></a>Espansione di oggetti  
  La restrizione `ObjectExpansion` può essere utilizzata per controllare il grado di espansione dell'oggetto XML ASSL restituito dal server. Per questa restrizione sono disponibili le opzioni elencate nella tabella seguente.  
   
-|Valore di enumerazione|Consentito per \<Alter >|Description|  
+|Valore di enumerazione|Consentito per \<Alter >|Descrizione|  
 |-----------------------|---------------------------|-----------------|  
 |*ReferenceOnly*|no|Restituisce solo il nome, l'ID e il timestamp per l'oggetto richiesto e per tutti gli oggetti principali contenuti in modo ricorsivo.|  
 |*ObjectProperties*|sì|Espande l'oggetto richiesto e gli oggetti secondari contenuti, ma non restituisce alcun oggetto principale contenuto.|  

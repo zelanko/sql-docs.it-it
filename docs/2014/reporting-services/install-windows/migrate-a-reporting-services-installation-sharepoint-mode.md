@@ -8,15 +8,15 @@ ms.technology:
 - database-engine
 ms.topic: conceptual
 ms.assetid: 61290949-690a-4e19-b078-57c99b6b30fa
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: fb3d7e60db2e5827c61ff2c80dbaf674262621f7
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 46b689a3eee612bdeb5bac5e0706574e21493635
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56030242"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59952877"
 ---
 # <a name="migrate-a-reporting-services-installation-sharepoint-mode"></a>Migrazione di un'installazione di Reporting Services in modalità SharePoint
   In questo argomento viene fornita una panoramica dei passaggi necessari per eseguire la migrazione di una distribuzione in modalità SharePoint di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] da un ambiente SharePoint a un altro. I passaggi specifici possono variare a seconda della versione dalla quale si esegue la migrazione. Per altre informazioni sugli scenari di aggiornamento e di migrazione per la modalità SharePoint, vedere [Upgrade and Migrate Reporting Services](../../reporting-services/install-windows/upgrade-and-migrate-reporting-services.md). Se si vuole solo copiare gli elementi del report da un server a un altro, vedere [Script di esempio rs.exe di Reporting Services per la migrazione del contenuto tra server di report](../tools/sample-reporting-services-rs-exe-script-to-copy-content-between-report-servers.md).  
@@ -47,12 +47,12 @@ ms.locfileid: "56030242"
 ###  <a name="bkmk_content_only_migration"></a> Migrazione solo del contenuto  
  **Migrazione solo del contenuto di Reporting Services:** Per copiare il contenuto di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] in una nuova farm, è necessario usare strumenti come **rs.exe** per copiare il contenuto nella nuova installazione di SharePoint. Per altre informazioni sulle migrazioni solo del contenuto, vedere quanto riportato di seguito:  
   
--   **[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Script RSS:** gli script consentono di eseguire la migrazione del contenuto e delle risorse tra i server di report in modalità SharePoint e in modalità nativa. Per altre informazioni, vedere [Script di esempio rs.exe di Reporting Services per la migrazione del contenuto tra server di report](../tools/sample-reporting-services-rs-exe-script-to-copy-content-between-report-servers.md) e [script di Reporting Services RS.exe che esegue la migrazione di contenuto tra server di report in un altro](http://azuresql.codeplex.com/releases/view/115207).  
+-   **[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Script RSS:** Gli script possono eseguire la migrazione di contenuto e delle risorse tra server di report in modalità SharePoint e modalità nativa. Per altre informazioni, vedere [Script di esempio rs.exe di Reporting Services per la migrazione del contenuto tra server di report](../tools/sample-reporting-services-rs-exe-script-to-copy-content-between-report-servers.md) e [script di Reporting Services RS.exe che esegue la migrazione di contenuto tra server di report in un altro](http://azuresql.codeplex.com/releases/view/115207).  
   
--   **Strumento di migrazione di Reporting Services:** lo strumento consente di copiare gli elementi del report da un server in modalità nativa a un server in modalità SharePoint. Per altre informazioni, vedere la pagina relativa allo [strumento di migrazione di Reporting Services](https://www.microsoft.com/download/details.aspx?id=29560).  
+-   **Strumento di migrazione di Reporting Services:** Lo strumento può copiare gli elementi del report da un server in modalità nativa a un server in modalità SharePoint. Per altre informazioni, vedere la pagina relativa allo [strumento di migrazione di Reporting Services](https://www.microsoft.com/download/details.aspx?id=29560).  
   
 ###  <a name="bkmk_full_migration"></a> Migrazione completa  
- **Migrazione completa:** se si vuole eseguire la migrazione dei database del contenuto di SharePoint insieme ai database del catalogo di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] a una nuova farm, è possibile ricorrere a una serie di opzioni di backup e ripristino riepilogate nel presente argomento. In alcuni casi per la fase di ripristino sarà necessario usare uno strumento diverso da quello usato per la fase di backup. È ad esempio possibile usare Gestione configurazione [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] per eseguire il backup delle chiavi di crittografia da una versione precedente di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] ma è necessario usare Amministrazione centrale SharePoint o PowerShell per ripristinare le chiavi di crittografia in un'installazione di [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] in modalità SharePoint.  
+ **Migrazione completa:** Se si esegue la migrazione di database di contenuto di SharePoint insieme al [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] i database di catalogo in una nuova farm è possibile seguire una serie di opzioni di backup e ripristino riepilogate nel presente argomento. In alcuni casi per la fase di ripristino sarà necessario usare uno strumento diverso da quello usato per la fase di backup. È ad esempio possibile usare Gestione configurazione [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] per eseguire il backup delle chiavi di crittografia da una versione precedente di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] ma è necessario usare Amministrazione centrale SharePoint o PowerShell per ripristinare le chiavi di crittografia in un'installazione di [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] in modalità SharePoint.  
   
 ####  <a name="bkmk_databases"></a> Database che saranno visibili nella migrazione completata  
  Nella tabella seguente vengono descritti i database di SQL Server correlati a [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] che si avranno a disposizione dopo avere eseguito correttamente la migrazione dell'installazione di SharePoint [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] :  

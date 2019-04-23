@@ -4,20 +4,18 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: analysis-services
 ms.topic: reference
 ms.assetid: 6d2636c4-dae4-448f-a1d4-dbee739e177c
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: c7fa7c3607dd652b2a56324b3fa3c7140f252685
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: c4704fc56ae1eacfb8481533c9d743afff80e923
+ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48224474"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "60155628"
 ---
 # <a name="perspective-representation-tabular"></a>Rappresentazione della prospettiva (tabulare)
   Una prospettiva è un meccanismo per semplificare o concentrare il modello in una parte più piccola per l'applicazione client.  

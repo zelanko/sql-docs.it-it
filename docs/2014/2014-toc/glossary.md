@@ -4,17 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
-- analysis-services/data-mining
-- analysis-services/multidimensional-tabular
-- data-quality-services
-- database-engine
-- integration-services
-- master-data-services
-- replication
-- reporting-services-native
-- reporting-services-sharepoint
+ms.technology: sql
 ms.topic: conceptual
 helpviewer_keywords:
 - definitions [SQL Server]
@@ -24,16 +14,32 @@ ms.assetid: 0e8a7967-b407-4e01-b8c4-3eabe2820df5
 author: heidisteen
 ms.author: heidist
 manager: craigg
-ms.openlocfilehash: 9b565fb16621760a69e2462680444db5f0ea3916
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 334735c2ec9fc0573ed08bcc76b214a093394b6c
+ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52519478"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "60157108"
 ---
 # <a name="glossary"></a>Glossario
-  
-  
+
+<!--
+Metadata 'ms.technology:' is restricted to a maximum of one value.
+So I am erasing all the values shown below.  (GeneMi , 2019/04/19)
+
+ms.technology:
+  - "analysis-services"
+  - "analysis-services/data-mining"
+  - "analysis-services/multidimensional-tabular"
+  - "data-quality-services"
+  - "database-engine"
+  - "integration-services"
+  - "master-data-services"
+  - "replication"
+  - "reporting-services-native"
+  - "reporting-services-sharepoint"
+-->
+
 ## <a name="terms"></a>Termini  
   
 |Nome|Definizione|  
@@ -469,7 +475,7 @@ ms.locfileid: "52519478"
 |segno diacritico|Segno posto sopra, sotto o attraverso un carattere, in genere per indicare un valore fonetico diverso rispetto al carattere senza segno.|  
 |segno diacritico|Segno posto sopra, sotto o attraverso un carattere, in genere per indicare un valore fonetico diverso rispetto al carattere senza segno.|  
 |dialetto|Sintassi e regole generali utilizzate per analizzare una stringa o un'istruzione di query.|  
-|relazione a forma di rombo|Catena di relazioni tra attributi che suddivide e riunisce ma che non contiene relazioni ridondanti. Ad esempio, giorno->mese->anno e giorno->trimestre->anno hanno lo stesso punto di inizio e di fine, ma non hanno relazioni comuni.|  
+|relazione a forma di rombo|Catena di relazioni tra attributi che suddivide e riunisce ma che non contiene relazioni ridondanti. Ad esempio, giorno -> mese -> anno e giorno -> trimestre -> anno hanno i punti di inizio e fine, ma non hanno relazioni comuni.|  
 |differenziatore|Interfaccia di uno strumento per la creazione di un oggetto DifferencingService.|  
 |backup differenziale|Backup che contiene solo le modifiche apportate al database a partire dal backup dei dati precedente su cui il backup differenziale è basato.|  
 |base differenziale|Backup completo più recente di tutti i dati in un database o in un subset dei relativi file o filegroup.|  
@@ -543,7 +549,7 @@ ms.locfileid: "52519478"
 |dump|Copia duplicata di un programma, di un disco o di dati eseguita per scopi di archiviazione o salvaguardia di file.|  
 |dispositivo di dump|Unità nastro o disco contenente un supporto di backup.|  
 |cursore dinamico|Cursore che, quando aperto, riflette le modifiche apportate ai dati sottostanti.|  
-|filtro dinamico|Filtro di riga disponibile con la replica di tipo merge che consente di limitare i dati replicati a un Sottoscrittore in base a una funzione di sistema oppure a una funzione definita dall'utente (ad esempio: SUSER_SNAME()).|  
+|filtro dinamico|Filtro di riga disponibile con la replica di tipo merge che consente di limitare i dati replicati a un sottoscrittore basata su una funzione di sistema o una funzione definita dall'utente (ad esempio: SUSER_SNAME()).|  
 |blocco dinamico|Processo utilizzato da SQL Server per determinare i blocchi più strategici da utilizzare in un momento specifico.|  
 |funzione a gestione dinamica|Funzione di un set di funzioni predefinite che restituisce informazioni sullo stato del server relative a valori, oggetti e impostazioni in SQL Server.|  
 |DMV|Set di viste predefinite che restituiscono informazioni sullo stato del server relative a valori, oggetti e impostazioni in SQL Server.|  
@@ -737,7 +743,7 @@ ms.locfileid: "52519478"
 |baffo superiore|Valore più alto diverso da un outlier in un grafico box plot.|  
 |hint|Opzione o strategia specificata per l'imposizione da parte di Query Processor di SQL Server nelle istruzioni SELECT, INSERT, UPDATE o DELETE. L'hint esegue l'override di eventuali piani di esecuzione selezionati da Query Optimizer per una query.|  
 |cronologia|Elenco delle azioni dell'utente all'interno di un programma, ad esempio comandi immessi in una shell del sistema operativo, menu passati tramite Gopher o collegamenti seguiti utilizzando un Web browser.|  
-|trattenibilità|Fa riferimento alla possibilità di lasciare aperti (in attesa) set di risultati elaborati, che di norma vengono chiusi dopo tale operazione. Ad esempio:  "SQL Server supporta la trattenibilità soltanto al livello di connessione".|  
+|trattenibilità|Fa riferimento alla possibilità di lasciare aperti (in attesa) set di risultati elaborati, che di norma vengono chiusi dopo tale operazione. Ad esempio:  "SQL Server supporta la trattenibilità soltanto a livello di connessione".|  
 |dati di controllo|Percentuale dei dati di training riservata per misurare l'accuratezza della struttura del modello di data mining.|  
 |dati di controllo|Percentuale dei dati di training riservata per misurare l'accuratezza della struttura del modello di data mining.|  
 |archivio dati di controllo|Struttura di data mining utilizzata per memorizzare nella cache i dati di controllo. Contiene riferimenti ai dati di controllo.|  
@@ -969,7 +975,7 @@ ms.locfileid: "52519478"
 |Microsoft SQL Server|Famiglia di sistemi di analisi e gestione di database relazionali Microsoft per soluzioni e-commerce, line-of-business e di data warehousing.|  
 |Microsoft SQL Server 2008 Express|Versione lightweight e incorporabile di Microsoft SQL Server 2008.|  
 |Microsoft SQL Server 2008 Express with Advanced Services|Sistema di gestione e progettazione di database relazionali Microsoft per soluzioni e-commerce, line-of-business e di data warehousing.|  
-|Microsoft SQL Server 2008 Express with Tools|Versione gratuita e di facile uso della piattaforma dati SQL Server Express in cui è incluso lo strumento grafico per la gestione SQL Server Management Studio (SMSS) Express.|  
+|Microsoft SQL Server 2008 Express with Tools|Una versione della piattaforma dati SQL Server Express che include lo strumento di gestione grafica gratuita e facile da usare: SQL Server Management Studio (SMSS) Express.|  
 |Documentazione online di Microsoft SQL Server|Raccolta di documentazione elettronica in cui è inclusa la documentazione completa fornita con Microsoft SQL Server.|  
 |Microsoft SQL Server Business Intelligence|Piattaforma di infrastruttura di dati e di Business Intelligence basata su Microsoft SQL Server costituita da Microsoft SQL Server Integration Services, Master Data Services, Reporting Services, Analysis Services e dal motore relazionale.|  
 |Microsoft SQL Server Compact|Sistema di gestione e analisi di database relazionali Microsoft per soluzioni e-commerce, line-of-business e di data warehouse.|  
@@ -1091,7 +1097,7 @@ ms.locfileid: "52519478"
 |elaborazione parallela|Metodo di elaborazione che può essere utilizzato solo su un computer in cui sono presenti due o più processori in esecuzione simultanea. L'elaborazione parallela differisce dalla multielaborazione per il modo in cui un'attività viene distribuita ai processori disponibili. Nella multielaborazione è possibile che un processo venga diviso in blocchi sequenziali, dove un processore gestisce l'accesso a un database, un altro analizza i dati e un terzo gestisce l'output grafico sullo schermo. I programmatori che utilizzano sistemi in cui è attiva l'elaborazione parallela devono trovare un modo per dividere un'attività affinché sia distribuita più o meno uniformemente tra i processori disponibili.|  
 |query con parametri|Query che accetta valori di input tramite parametri.|  
 |report con parametri|Report pubblicato che accetta valori di input tramite parametri.|  
-|filtro di riga con parametri|Filtro di riga disponibile con la replica di tipo merge che consente di limitare i dati replicati a un Sottoscrittore in base a una funzione di sistema oppure a una funzione definita dall'utente (ad esempio: SUSER_SNAME()).|  
+|filtro di riga con parametri|Filtro di riga disponibile con la replica di tipo merge che consente di limitare i dati replicati a un sottoscrittore basata su una funzione di sistema o una funzione definita dall'utente (ad esempio: SUSER_SNAME()).|  
 |backup parziale|Backup di tutti i dati nel filegroup primario, di tutti i filegroup di lettura/scrittura e di altri file eventualmente specificati. Il backup parziale di un database di sola lettura contiene esclusivamente il filegroup primario.|  
 |ripristino di database parziale|Ripristino solo di una parte del database, costituita dal filegroup primario ed eventualmente da uno o più filegroup secondari. Gli altri filegroup rimangono definitivamente offline, sebbene possano essere ripristinati in seguito.|  
 |backup parziale differenziale|Backup parziale differenziale rispetto a un unico backup parziale precedente (backup di base). Il backup parziale differenziale per un database di sola lettura contiene esclusivamente il filegroup primario.|  
@@ -1785,7 +1791,7 @@ ms.locfileid: "52519478"
 |asse x|Linea di riferimento orizzontale in una griglia, in un diagramma o in un grafico con dimensioni orizzontali e verticali.|  
 |XML for Analysis|Specifica che descrive uno standard aperto che supporta l’accesso a origini dati che risiedono sul World Wide Web.|  
 |XMLA|Specifica che descrive uno standard aperto che supporta l’accesso a origini dati che risiedono sul World Wide Web.|  
-|XQuery|Linguaggio di query funzionale ampiamente applicabile a una varietà di tipi di dati XML derivati da Quilt, XPath e XQL. Ipedo e Software AG implementano entrambi le proprie versioni della specifica proposta di W3C per il linguaggio XQuery. Definito anche: Query XML, XQL.|  
+|XQuery|Linguaggio di query funzionale ampiamente applicabile a una varietà di tipi di dati XML derivati da Quilt, XPath e XQL. Ipedo e Software AG implementano entrambi le proprie versioni della specifica proposta di W3C per il linguaggio XQuery. Anche chiamata: XML Query, XQL.|  
 |XSL|Vocabolario XML utilizzato per trasformare dati XML in un altro formato, ad esempio HTML, mediante un foglio di stile in cui sono definite le regole di presentazione.|  
 |Trasformazione XSL|Linguaggio dichiarativo basato su XML utilizzato per presentare o trasformare dati XML.|  
 |XSLT|Linguaggio dichiarativo basato su XML utilizzato per presentare o trasformare dati XML.|  

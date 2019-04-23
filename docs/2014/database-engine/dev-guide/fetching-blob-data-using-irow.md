@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: database-engine
 ms.topic: reference
 helpviewer_keywords:
 - fetching rows
@@ -18,17 +16,17 @@ ms.assetid: badbd6ac-20aa-4891-a14f-48d38e7f30de
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: cfdcec624614ef540180c7c02661c2927a1084f4
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 06ca087cdb1e2009faa19ff8fb86f9ab4982fddd
+ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48225771"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "60157627"
 ---
 # <a name="fetching-blob-data-using-irow"></a>Recupero di dati BLOB tramite IRow
   Una colonna BLOB in un oggetto riga può essere recuperata tramite **IRow:: GetColumns**, o **IRow:: Open** e **ISequentialStream**.  
   
-## <a name="in-this-section"></a>Argomenti della sezione  
+## <a name="in-this-section"></a>In questa sezione  
   
 -   [Recupero di dati BLOB con IRow::GetColumns e ISequentialStream](../../relational-databases/native-client-ole-db-rowsets/fetching-blob-data-using-irow-getcolumns-and-isequentialstream.md)  
   

@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: analysis-services
 ms.topic: reference
 helpviewer_keywords:
 - locking [XML for Analysis]
@@ -17,12 +15,12 @@ ms.assetid: 451afa58-ce03-4ecc-8dd3-9e7e8559b5f1
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: e1f518f846a6e0bb87f858d7a5798eb9a7e9c8d0
-ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
+ms.openlocfilehash: 290f1e5fe7efb876ab6c24004c7465cf109de0d0
+ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50146276"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "60154227"
 ---
 # <a name="locking-and-unlocking-databases-xmla"></a>Blocco e sblocco di database (XMLA)
   È possibile bloccare e sbloccare database utilizzando, rispettivamente, il [Lock](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/lock-element-xmla) e [Unlock](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/lock-element-xmla) comandi XML for Analysis (XMLA). In genere, gli altri comandi XMLA bloccano e sbloccano automaticamente gli oggetti in base alle esigenze per completare il comando durante l'esecuzione. In modo esplicito è possibile bloccare o sbloccare un database per eseguire più comandi all'interno di una singola transazione, ad esempio un [Batch](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/batch-element-xmla) comando, impedendo ad altre applicazioni dal commit di una transazione di scrittura al database.  

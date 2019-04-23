@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: analysis-services
 ms.topic: reference
 helpviewer_keywords:
 - XML for Analysis, traces
@@ -17,12 +15,12 @@ ms.assetid: cdbfb984-18bd-4c4e-8fb7-d64ce298ed35
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 24af6f2ff33235321ef49732721042ab2227ca5f
-ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
+ms.openlocfilehash: 678c6d2312261475f4b970b1535ce1faa1f00930
+ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50146466"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "60156413"
 ---
 # <a name="monitoring-traces-xmla"></a>Monitoraggio di tracce (XMLA)
   È possibile usare la [Sottoscrivi](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/subscribe-element-xmla) comando in XML for Analysis (XMLA) per monitorare una traccia esistente definita in un'istanza di [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Il comando `Subscribe` restituisce i risultati di una traccia come set di righe.  
@@ -35,13 +33,13 @@ ms.locfileid: "50146466"
   
  Nel set di righe sono contenute le colonne elencate nella tabella seguente.  
   
-|colonna|Tipo di dati|Description|  
+|colonna|Tipo di dati|Descrizione|  
 |------------|---------------|-----------------|  
 |EventClass|Valore intero|Classe di evento dell'evento ricevuto dalla traccia.|  
 |EventSubclass|Long integer|Sottoclasse di evento dell'evento ricevuto dalla traccia.|  
-|CurrentTime|DATETIME|Ora di inizio dell'evento, se disponibile. I formati previsti per l'applicazione di filtri sono "YYYY-MM-DD" e "YYYY-MM-DD HH:MM:SS".|  
-|StartTime|DATETIME|Ora di inizio dell'evento, se disponibile. I formati previsti per l'applicazione di filtri sono "YYYY-MM-DD" e "YYYY-MM-DD HH:MM:SS".|  
-|EndTime|DATETIME|Ora di fine dell'evento, se disponibile. I formati previsti per l'applicazione di filtri sono "YYYY-MM-DD" e "YYYY-MM-DD HH:MM:SS".<br /><br /> Questa colonna non viene popolata per classi di evento che descrivono l'inizio di un processo o di un'azione.|  
+|CurrentTime|Datetime|Ora di inizio dell'evento, se disponibile. I formati previsti per l'applicazione di filtri sono "YYYY-MM-DD" e "YYYY-MM-DD HH:MM:SS".|  
+|StartTime|Datetime|Ora di inizio dell'evento, se disponibile. I formati previsti per l'applicazione di filtri sono "YYYY-MM-DD" e "YYYY-MM-DD HH:MM:SS".|  
+|EndTime|Datetime|Ora di fine dell'evento, se disponibile. I formati previsti per l'applicazione di filtri sono "YYYY-MM-DD" e "YYYY-MM-DD HH:MM:SS".<br /><br /> Questa colonna non viene popolata per classi di evento che descrivono l'inizio di un processo o di un'azione.|  
 |Duration|Long integer|Durata dell'evento (in millisecondi).|  
 |CPUTime|Long integer|Tempo processore utilizzato per l'evento (in millisecondi).|  
 |JobID|Long integer|Identificatore di processo.|  
@@ -56,8 +54,8 @@ ms.locfileid: "50146466"
 |ObjectReference|String|Rappresentazione XML del riferimento all'oggetto per l'oggetto specificato in ObjectName.|  
 |NestLevel|Valore intero|Livello della transazione per cui si è verificato l'evento.|  
 |NumSegments|Long integer|Numero di segmenti di dati interessati o utilizzati dal comando per cui si è verificato l'evento.|  
-|Severity|Valore intero|Livello di gravità di un'eccezione per l'evento. I possibili valori della colonna sono i seguenti:<br /><br /> Valore: 0 = esito positivo<br /><br /> Valore: 1 = informazioni<br /><br /> Valore: 2 = avviso<br /><br /> Value: 3 = errore|  
-|Esito positivo|Boolean|Indica se un comando ha avuto esito positivo o negativo.|  
+|Severity|Valore intero|Livello di gravità di un'eccezione per l'evento. I possibili valori della colonna sono i seguenti:<br /><br /> Valore: 0 = Esito positivo<br /><br /> Valore: 1 = informazioni<br /><br /> Valore: 2 = Avviso<br /><br /> Valore: 3 = Errore|  
+|Riuscito|Boolean|Indica se un comando ha avuto esito positivo o negativo.|  
 |Errore|Long integer|Numero di errore di un evento, se applicabile.|  
 |ConnectionID|String|Identificatore della connessione per cui si è verificato l'evento.|  
 |DatabaseName|String|Nome del database per cui si è verificato l'evento.|  

@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: database-engine
 ms.topic: reference
 helpviewer_keywords:
 - SQL Server Native Client, ODBC
@@ -17,12 +15,12 @@ ms.assetid: 06b7edee-8636-49d9-9b5c-2c710bf4fa2d
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: ce534f3667aaa9c42b1fa12820d5bdbd20728b8b
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 27c46e8e186f0e8424e679e9c023854e7887e232
+ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53371403"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "60155906"
 ---
 # <a name="sql-server-native-client-odbc-reference"></a>Guida di riferimento a SQL Server Native Client (ODBC)
   ODBC (Open Database Connectivity) è un'API Microsoft Win32 utilizzata dalle applicazioni per l'accesso ai dati delle origini dati ODBC.  

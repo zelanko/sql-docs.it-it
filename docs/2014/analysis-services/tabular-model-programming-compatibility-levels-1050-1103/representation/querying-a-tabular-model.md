@@ -4,20 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: analysis-services
 ms.topic: reference
 ms.assetid: b01d45d9-4598-4ded-9a9e-e3419cc3df8e
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 56308532b157828746db911e60240638826b988f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 61b6f366843b326a8983c27c3d5ee945604756f0
+ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48217384"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "60156268"
 ---
 # <a name="querying-a-tabular-model"></a>Esecuzione di query su un modello tabulare
   La query di uno sviluppatore su un modello tabulare produce il recupero dei dati dal database tabulare. Per portare a termine questo obiettivo vi sono due opzioni: utilizzare le query della tabella in DAX o utilizzare MDX e recuperare i dati come se stessero arrivando da un cubo. Tuttavia, a seconda della modalità sottostante del modello tabulare è possibile che l'utilizzo venga limitato alle sole query della tabella DAX. La modalità DirectQuery richiede l'utilizzo di query delle tabelle DAX.  
@@ -68,27 +66,27 @@ FROM [Model]
 ||Accessories|$           700,759.96|$           571,297.93|$        1,272,057.89|  
 ||Bikes|$     28,318,144.65|$     66,302,381.56|$     94,620,526.21|  
 ||Clothing|$           339,772.61|$        1,777,840.84|$        2,117,613.45|  
-||Components||$     11,799,076.66|$     11,799,076.66|  
+||Componenti||$     11,799,076.66|$     11,799,076.66|  
 |2001||$        3,266,373.66|$        8,065,435.31|$     11,331,808.96|  
 |2001|Accessories||$              20,235.36|$              20,235.36|  
 |2001|Bikes|$        3,266,373.66|$        7,395,348.63|$     10,661,722.28|  
 |2001|Clothing||$              34,376.34|$              34,376.34|  
-|2001|Components||$           615,474.98|$           615,474.98|  
+|2001|Componenti||$           615,474.98|$           615,474.98|  
 |2002||$        6,530,343.53|$     24,144,429.65|$     30,674,773.18|  
 |2002|Accessories||$              92,735.35|$              92,735.35|  
 |2002|Bikes|$        6,530,343.53|$     19,956,014.67|$     26,486,358.20|  
 |2002|Clothing||$           485,587.15|$           485,587.15|  
-|2002|Components||$        3,610,092.47|$        3,610,092.47|  
+|2002|Componenti||$        3,610,092.47|$        3,610,092.47|  
 |2003||$        9,791,060.30|$     32,202,669.43|$     41,993,729.72|  
 |2003|Accessories|$           293,709.71|$           296,532.88|$           590,242.59|  
 |2003|Bikes|$        9,359,102.62|$     25,551,775.07|$     34,910,877.69|  
 |2003|Clothing|$           138,247.97|$           871,864.19|$        1,010,112.16|  
-|2003|Components||$        5,482,497.29|$        5,482,497.29|  
+|2003|Componenti||$        5,482,497.29|$        5,482,497.29|  
 |2004||$        9,770,899.74|$     16,038,062.60|$     25,808,962.34|  
 |2004|Accessories|$           407,050.25|$           161,794.33|$           568,844.58|  
 |2004|Bikes|$        9,162,324.85|$     13,399,243.18|$     22,561,568.03|  
 |2004|Clothing|$           201,524.64|$           386,013.16|$           587,537.80|  
-|2004|Components||$        2,091,011.92|$        2,091,011.92|  
+|2004|Componenti||$        2,091,011.92|$        2,091,011.92|  
   
  Se l'espressione MDX viene sostituita con questa espressione di query della tabella DAX:  
   
@@ -107,6 +105,6 @@ DEFINE
 |4|4|Accessories|$        700,759.96|$        571,297.93|  
 |1|1|Bikes|$  28,318,144.65|$  66,302,381.56|  
 |3|3|Clothing|$        339,772.61|$    1,777,840.84|  
-|2|2|Components||$  11,799,076.66|  
+|2|2|Componenti||$  11,799,076.66|  
   
   

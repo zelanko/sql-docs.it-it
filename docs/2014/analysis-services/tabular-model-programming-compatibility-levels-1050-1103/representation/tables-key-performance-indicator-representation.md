@@ -4,20 +4,18 @@ ms.custom: ''
 ms.date: 04/27/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: analysis-services
 ms.topic: reference
 ms.assetid: 8d3d949e-5d43-4d2e-9dc8-48d182a7a935
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 1af16003b73b76ea0d899ecacb19dda42aa867d9
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: d0981b473ef29ac709213c1e9eee1cea01f47e2b
+ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52538687"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "60154183"
 ---
 # <a name="key-performance-indicator-representation-tabular"></a>Rappresentazione dell'indicatore di prestazioni chiave (tabulare)
   Un indicatore KPI viene utilizzato per misurare le prestazioni di un valore, definito mediante una misura di base, rispetto a un valore di destinazione.  
@@ -223,6 +221,6 @@ private void addStaticKPI(object sender, EventArgs e)
 ```  
   
 ## <a name="amo2tabular-sample"></a>Esempio AMO2Tabular  
- Per comprendere la modalità di utilizzo di AMO per la creazione e la gestione delle rappresentazioni dell'indicatore di prestazioni chiave, vedere il codice sorgente dell'esempio AMO to Tabular. In particolare effettuare un controllo nel seguente file di origine: AddKPIs.cs. L'esempio è disponibile in Codeplex. Nota importante sul codice: il codice viene fornito solo come supporto ai concetti logici illustrati in questo argomento e non deve essere utilizzato in un ambiente di produzione né deve essere utilizzato per altro scopo se non quello formativo.  
+ Su come usare AMO per creare e modificare l'indicatore di prestazioni chiave per comprendere le rappresentazioni, vedere il codice sorgente di esempio AMO to Tabular; in particolare controllare nel seguente file di origine: AddKPIs.cs. L'esempio è disponibile in Codeplex. Nota importante sul codice: il codice viene fornito solo come supporto ai concetti logici illustrati in questo argomento e non deve essere utilizzato in un ambiente di produzione né deve essere utilizzato per altro scopo se non quello formativo.  
   
   

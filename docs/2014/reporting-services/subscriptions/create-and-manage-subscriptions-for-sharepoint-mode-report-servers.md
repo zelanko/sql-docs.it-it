@@ -12,15 +12,15 @@ helpviewer_keywords:
 - subscriptions [Reporting Services], deleting
 - subscriptions [Reporting Services], managing
 ms.assetid: 44be7ee2-33ce-46e4-9d1a-a20aaf43a227
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: e53af8ff7de611f00af6e38553f21885597e7232
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 4d28613857573b2793937a20b94d637d4f36b084
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56040642"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59950737"
 ---
 # <a name="create-and-manage-subscriptions-for-sharepoint-mode-report-servers"></a>Creare e gestire sottoscrizioni per server di report in modalità SharePoint
   È possibile creare sottoscrizioni di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] per il recapito di report da un'applicazione Web di SharePoint integrata con un server di report in modalità SharePoint. Le sottoscrizioni possono recapitare report a una raccolta documenti o a una cartella di file oppure come messaggio di posta elettronica. Questo argomento fornisce un riepilogo dei requisiti e dei passaggi necessari per la creazione di una sottoscrizione di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .  
@@ -35,7 +35,7 @@ ms.locfileid: "56040642"
   
 -   **Cartella di file:** È possibile recapitare un documento basato sul report originale a una cartella condivisa nel file system. È necessario selezionare una cartella esistente accessibile tramite una connessione di rete.  
   
--   **Messaggio di posta elettronica:** Se il server di report è configurato in modo da utilizzare l'estensione del server di report per il recapito tramite posta elettronica, sarà possibile creare una sottoscrizione che invia un report o un file di report esportato (salvato in uno dei formati di output disponibili) alla propria cartella di posta in arrivo. Per ricevere solo la notifica, senza il report o l'URL del report, deselezionare le caselle di controllo **Includi collegamento al report** e **Visualizza report all'interno del messaggio** .  
+-   **Messaggio di posta elettronica:** Se il server di report è configurato per usare l'estensione per il recapito tramite posta elettronica Server di Report, è possibile creare una sottoscrizione che invia un report o un file di report esportato (salvato in un formato di output disponibili) alla posta in arrivo. Per ricevere solo la notifica, senza il report o l'URL del report, deselezionare le caselle di controllo **Includi collegamento al report** e **Visualizza report all'interno del messaggio** .  
   
  **Contenuto dell'argomento:**  
   

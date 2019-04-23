@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: analysis-services
 ms.topic: reference
 helpviewer_keywords:
 - multiple projects
@@ -21,12 +19,12 @@ ms.assetid: 731c70e5-ed51-46de-bb69-cbf5aea18dda
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: bca0c74ab978b6f47e68221987777f1818a95b7b
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 2bd661506dbb792eb55194c61d7284d619e63a5f
+ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52542578"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "60156807"
 ---
 # <a name="performing-batch-operations-xmla"></a>Esecuzione di operazioni batch (XMLA)
   È possibile usare la [Batch](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/batch-element-xmla) comando in XML for Analysis (XMLA) per eseguire più comandi XMLA utilizzando un singolo XMLA [Execute](https://docs.microsoft.com/bi-reference/xmla/xml-elements-methods-execute) (metodo). È possibile eseguire più comandi contenuti nel comando `Batch` come una transazione singola o in transazioni separate per ogni comando, in serie o in parallelo. È inoltre possibile specificare associazioni out-of-line e altre proprietà di `Batch` comando per l'elaborazione di più [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] oggetti.  
@@ -39,7 +37,7 @@ ms.locfileid: "52542578"
   
  Se un comando non riesce in un batch transazionale, [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] rollback di qualsiasi comando nel `Batch` comando eseguito prima del comando che non è riuscita e `Batch` comando termina immediatamente. Viene inoltre sospesa l'esecuzione di tutti i comandi nel comando `Batch` non ancora eseguiti. Dopo il `Batch` comando termina, il `Batch` comando segnala tutti gli errori che si sono verificati per il comando non riuscito.  
   
- **Non transazionale**  
+ **Nontransactional**  
  Se il `Transaction` attributo è impostato su false, il `Batch` comando viene eseguito ogni comando contenuto il `Batch` comando in una transazione a un *non transazionale* batch. Se in un batch non transazionale un comando non riesce, il comando `Batch` continua a eseguire i comandi successivi al comando non riuscito. Dopo il `Batch` tentato di eseguire tutti i comandi che il `Batch` comando contiene, il `Batch` comando segnala tutti gli errori che si sono verificati.  
   
  Tutti i risultati relativi ai comandi contenuti in un comando `Batch` vengono restituiti nello stesso ordine in cui i comandi sono contenuti nel comando `Batch` stesso. I risultati restituiti da un comando `Batch` possono variare a seconda che il comando `Batch` sia transazionale o non transazionale.  

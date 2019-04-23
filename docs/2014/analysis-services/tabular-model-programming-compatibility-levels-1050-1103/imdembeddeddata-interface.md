@@ -4,20 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: analysis-services
 ms.topic: reference
 ms.assetid: 9dba8c68-4bef-4c2b-815c-c286f1a1939b
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: b5a80b6bd9ef469d6711f7d6d019935fbfa1a581
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 83e46e9b62359623093415ca456ecadd72f847cd
+ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48218031"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "60155217"
 ---
 # <a name="imdembedded-interface"></a>Interfaccia IMDEmbedded
   L'interfaccia IMDEmbedded è un'interfaccia pubblica utilizzata per gestire un database PowerPivot incorporato o un database modello tabulare. L'interfaccia eredita dall'interfaccia `IPersistStream` e consente di effettuare le operazioni seguenti:  
@@ -32,15 +30,15 @@ ms.locfileid: "48218031"
   
 -   Annullare l'operazione incorporata corrente.  
   
--   Ottenere le dimensioni stimate (in byte) del flusso per il salvataggio dell'oggetto incorporato. Ereditato da `IPersistStream`.  
+-   Ottenere le dimensioni stimate (in byte) del flusso per il salvataggio dell'oggetto incorporato. La proprietà viene ereditata da `IPersistStream`.  
   
--   Verificare se il database incorporato è stato modificato rispetto all'ultimo salvataggio. Ereditato da `IPersistStream`.  
+-   Verificare se il database incorporato è stato modificato rispetto all'ultimo salvataggio. La proprietà viene ereditata da `IPersistStream`.  
   
--   Caricare il database incorporato nel motore locale o in-process. Ereditato da `IPersistStream`.  
+-   Caricare il database incorporato nel motore locale o in-process. La proprietà viene ereditata da `IPersistStream`.  
   
--   Salvare il database locale o in-process nel flusso incorporato del documento contenitore. Ereditato da `IPersistStream`.  
+-   Salvare il database locale o in-process nel flusso incorporato del documento contenitore. La proprietà viene ereditata da `IPersistStream`.  
   
-## <a name="reference"></a>Riferimento  
+## <a name="reference"></a>Riferimenti  
  Di seguito fanno riferimento i documenti il `IMDEmbedded` interfaccia illustrata nella **msmd** file di intestazione.  
   
 ### <a name="source-file-pxoembeddeddataidl"></a>File di origine: PXOEmbeddedData.idl  
@@ -83,7 +81,7 @@ HRESULT GetStreamIdentifier (
     )  
 ```  
   
-#### <a name="description"></a>Description  
+#### <a name="description"></a>Descrizione  
  Ottiene l'identificatore utilizzato dall'applicazione host per il flusso incorporato nel documento contenitore.  
   
 #### <a name="parameters"></a>Parametri  
@@ -105,13 +103,13 @@ HRESULT GetStreamIdentifier (
   
  I valori possibili per DBPROP_MSMD_EMBEDDED_DATA sono:  
   
-|nome|valore|Definizione|  
+|nome|Value|Definizione|  
 |----------|-----------|----------------|  
 |DBPROPVAL_EMBED_NONE|0x00|Nessun database incorporato disponibile|  
 |DBPROPVAL_EMBED_EMBEDDED|0x01|L'applicazione corrente contiene il database incorporato|  
 |DBPROPVAL_EMBED_LINKED|0x02|Il database incorporato è ospitato in un'applicazione remota, ad esempio SharePoint Server|  
   
-#### <a name="source"></a>Origine  
+#### <a name="source"></a>Source  
   
 ```  
 [id(1), helpstring("Get identifier used to look up embedded stream in container document")]   
@@ -127,7 +125,7 @@ HRESULT SetContainerURL (
     )  
 ```  
   
-#### <a name="description"></a>Description  
+#### <a name="description"></a>Descrizione  
  Viene impostato l'URL per il file in cui è contenuto il flusso incorporato.  
   
 #### <a name="parameters"></a>Parametri  
@@ -141,7 +139,7 @@ HRESULT SetContainerURL (
  `E_FAIL`  
  Si è verificato un errore durante l'impostazione dell'URL del contenitore.  
   
-#### <a name="source"></a>Origine  
+#### <a name="source"></a>Source  
   
 ```  
 [id(2), helpstring("Set the URL for the document containing the embedded stream")]   
@@ -157,7 +155,7 @@ HRESULT SetHosted (
     )  
 ```  
   
-#### <a name="description"></a>Description  
+#### <a name="description"></a>Descrizione  
  Impostare un flag per specificare se l'applicazione in cui viene eseguito l'incorporamento è in ambiente host.  
   
 #### <a name="parameters"></a>Parametri  
@@ -171,7 +169,7 @@ HRESULT SetHosted (
  `E_FAIL`  
  Si è verificato un errore durante l'impostazione del flag.  
   
-#### <a name="source"></a>Origine  
+#### <a name="source"></a>Source  
   
 ```  
 [id(5), helpstring("Set flag indicating if the application is in a hosted environment")]   
@@ -187,7 +185,7 @@ HRESULT SetTempDirPath (
     )  
 ```  
   
-#### <a name="description"></a>Description  
+#### <a name="description"></a>Descrizione  
  Impostare il percorso dei file temporanei utilizzati dall'applicazione in cui viene eseguito l'incorporamento.  
   
 #### <a name="parameters"></a>Parametri  
@@ -201,7 +199,7 @@ HRESULT SetTempDirPath (
  `E_FAIL`  
  Si è verificato un errore durante l'impostazione del percorso.  
   
-#### <a name="source"></a>Origine  
+#### <a name="source"></a>Source  
   
 ```  
 [id(4), helpstring("Set the path used by the host application for temporary files")]   
@@ -215,7 +213,7 @@ HRESULT SetTempDirPath (
 HRESULT Cancel ( void )  
 ```  
   
-#### <a name="description"></a>Description  
+#### <a name="description"></a>Descrizione  
  Annulla l'operazione del database incorporato corrente.  
   
 #### <a name="parameters"></a>Parametri  
@@ -231,7 +229,7 @@ HRESULT Cancel ( void )
  `E_FAIL`  
  Si verificato un errore durante l'annullamento dell'operazione incorporata.  
   
-#### <a name="source"></a>Origine  
+#### <a name="source"></a>Source  
   
 ```  
 [id(5), helpstring("Cancel the current operation")]   
@@ -246,8 +244,8 @@ HRESULT GetSizeMax (
     )  
 ```  
   
-#### <a name="description"></a>Description  
- Ottiene la dimensione stimata (in byte) del flusso per il salvataggio dell'oggetto incorporato. Ereditato da `IPersistStream`.  
+#### <a name="description"></a>Descrizione  
+ Ottiene la dimensione stimata (in byte) del flusso per il salvataggio dell'oggetto incorporato. La proprietà viene ereditata da `IPersistStream`.  
   
 #### <a name="parameters"></a>Parametri  
  *in_bstrPath*  
@@ -266,8 +264,8 @@ HRESULT GetSizeMax (
 HRESULT IsDirty ( void )  
 ```  
   
-#### <a name="description"></a>Description  
- Verifica se il database incorporato è stato modificato rispetto all'ultimo salvataggio. Ereditato da `IPersistStream`.  
+#### <a name="description"></a>Descrizione  
+ Verifica se il database incorporato è stato modificato rispetto all'ultimo salvataggio. La proprietà viene ereditata da `IPersistStream`.  
   
 #### <a name="parameters"></a>Parametri  
  none  
@@ -290,8 +288,8 @@ HRESULT Load (
     )  
 ```  
   
-#### <a name="description"></a>Description  
- Carica il database incorporato sul motore locale o in-process. Ereditato da `IPersistStream`.  
+#### <a name="description"></a>Descrizione  
+ Carica il database incorporato sul motore locale o in-process. La proprietà viene ereditata da `IPersistStream`.  
   
 #### <a name="parameters"></a>Parametri  
  *in_pStm*  
@@ -316,8 +314,8 @@ HRESULT Save (
     )  
 ```  
   
-#### <a name="description"></a>Description  
- Salva il database locale o in-process nel flusso incorporato del documento contenitore. Ereditato da `IPersistStream`.  
+#### <a name="description"></a>Descrizione  
+ Salva il database locale o in-process nel flusso incorporato del documento contenitore. La proprietà viene ereditata da `IPersistStream`.  
   
 #### <a name="parameters"></a>Parametri  
  *in_pStm*  

@@ -8,15 +8,15 @@ ms.technology:
 - reporting-services-native
 ms.topic: conceptual
 ms.assetid: db6542ee-02d0-4073-90e6-cba8f9510fbb
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: e7b1a8f740ed11bf476bb72896cc14954c63536f
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: 51dac05945565e7952141b247f3f3e326e7ad9d5
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56287719"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59952577"
 ---
 # <a name="aggregate-functions-reference-report-builder-and-ssrs"></a>Riferimento a funzioni di aggregazione (Generatore report e SSRS)
   Per includere valori aggregati nel report, è possibile utilizzare funzioni di aggregazione predefinite nelle espressioni. La funzione di aggregazione predefinita per i campi numerici è SUM. È possibile modificare l'espressione e utilizzare una funzione di aggregazione predefinita o specificare un ambito differente. L'ambito identifica il set di dati da utilizzare per il calcolo.  
@@ -75,16 +75,16 @@ ms.locfileid: "56287719"
 |Intestazione di pagina<br /><br /> Piè di pagina|Yes|Yes|Al massimo uno<br /><br /> Nota 1|Yes|Yes|Yes|Yes|  
 |Body|Yes<br /><br /> Nota 2|Yes|Solo elementi nell'ambito corrente o in un ambito contenitore<br /><br /> Nota 3|No|Yes|Yes|Yes|  
 |Parametro del report|No|Solo i parametri precedenti dell'elenco<br /><br /> Nota 4|No|No|No|No|No|  
-|Campo|Yes|Yes|No|No|No|No|No|  
-|Parametro della query|No|Yes|No|No|No|No|No|  
+|Campo|Yes|Yes|No|No|No|no|No|  
+|Parametro della query|No|Yes|No|No|No|no|No|  
 |Espressione di raggruppamento|Yes|Yes|No|No|Yes|No|No|  
 |Espressione di ordinamento|Yes|Yes|No|No|Yes|Yes<br /><br /> Nota 5|No|  
 |Espressione filtro|Yes|Yes|No|No|Yes|Yes<br /><br /> Nota 6|No|  
 |Codice|No|Yes<br /><br /> Nota 7|No|No|No|No|No|  
-|Lingua del report|No|Yes|No|No|No|No|No|  
+|Lingua del report|no|Yes|No|no|No|No|no|  
 |Variabili|Yes|Yes|No|No|Yes|Ambito corrente o contenitore|No|  
 |Aggregazioni|Yes|Yes|Solo nell'intestazione di pagina/piè di pagina|Solo nelle aggregazioni dell'elemento del report|Yes|No|No|  
-|Funzioni di ricerca|Yes|Yes|Yes|No|Yes|No|No|  
+|Funzioni di ricerca|Yes|Yes|Yes|no|Yes|No|No|  
   
 -   **Nota 1.** ReportItems deve essere incluso nella pagina del report visualizzabile; in caso contrario, il relativo valore è Null. Se la visibilità di un elemento del report dipende da un'espressione che restituisce False, l'elemento del report non sarà presente nella pagina.  
   
@@ -107,13 +107,13 @@ ms.locfileid: "56287719"
   
 |Contesto|RunningValue|RowNumber|Primo<br /><br /> Ultimo|Previous|Sum e altre funzioni di ordinamento preliminare|Aggregazioni ReportItem|Funzioni di ricerca|Funzione di aggregazione|  
 |-------------|------------------|---------------|--------------------|--------------|-------------------------------------|---------------------------|----------------------|------------------------|  
-|Valore corrente|No|No|No|No|Yes|No|Yes|No|  
-|Primo<br /><br /> Ultimo|No|No|No|No|Yes|No|No|No|  
+|Valore corrente|no|no|No|No|Yes|No|Yes|No|  
+|Primo<br /><br /> Ultimo|No|No|No|No|Yes|No|no|no|  
 |Previous|Yes|Yes|Yes|No|Yes|No|Yes|No|  
-|Sum e altre funzioni di ordinamento preliminare|No|No|No|No|Yes|No|Yes|No|  
-|Aggregazioni ReportItem|No|No|No|No|No|No|No|No|  
+|Sum e altre funzioni di ordinamento preliminare|No|No|No|No|Yes|no|Yes|No|  
+|Aggregazioni ReportItem|No|No|no|No|No|No|No|No|  
 |Funzioni di ricerca|Yes|Yes<br /><br /> Nota 1|Yes<br /><br /> Nota 1|Yes<br /><br /> Nota 1|Yes<br /><br /> Nota 1|Yes<br /><br /> Nota 1|No|No|  
-|Funzione di aggregazione|No|No|No|No|No|No|No|No|  
+|Funzione di aggregazione|no|No|No|No|No|no|No|No|  
   
 -   **Nota 1.** Le funzioni di aggregazione sono consentite solo all'interno dell'espressione *Source* di una funzione di ricerca se tale funzione non è contenuta in un'aggregazione. Le funzioni di aggregazione non sono consentite all'interno di espressioni *Destination* o *Result* di una funzione di ricerca.  
   

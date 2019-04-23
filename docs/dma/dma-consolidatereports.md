@@ -15,12 +15,12 @@ ms.assetid: ''
 author: HJToland3
 ms.author: rajpo
 manager: craigg
-ms.openlocfilehash: fac9636b336c2571e159c72c79d482768bf2fbe6
-ms.sourcegitcommit: 0c049c539ae86264617672936b31d89456d63bb0
+ms.openlocfilehash: 15513348d4a747b0335bca8dd6345070e2c84ef0
+ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/29/2019
-ms.locfileid: "58618178"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "60159007"
 ---
 # <a name="assess-an-enterprise-and-consolidate-assessment-reports-with-dma"></a>Valutare un'azienda e di consolidare i report di valutazione con DMA
 
@@ -71,18 +71,22 @@ L'inventario può trovarsi in uno dei due formati:
 - Tabella di SQL Server
 
 ### <a name="if-using-a-csv-file"></a>Se si usa un file CSV
+
 > [!IMPORTANT]
->
 > Verificare che il file di inventario viene salvato come file delimitato da virgole (CSV).
 >
 > Per le istanze predefinite, impostare il nome dell'istanza di MSSQLServer.
->
+
 
 Quando si usa un file csv per importare i dati, assicurarsi che esistono solo due colonne di dati - **nome istanza** e **Nome Database**, e che le colonne non includono le righe di intestazione.
  
  ![contenuto del file CSV](../dma/media//dma-consolidatereports/dma-csv-file-contents.png)
 
-### <a name="if-using-sql-server-table"></a>Se si usa una tabella di SQL Server
+### <a name="if-using-a-sql-server-table"></a>Se si usa una tabella di SQL Server
+
+> [!IMPORTANT]
+> Per le istanze predefinite, impostare il nome dell'istanza di MSSQLServer.
+
 Creare un database denominato **EstateInventory** e una tabella denominata **DatabaseInventory**. La tabella che contiene questi dati di inventario può avere qualsiasi numero di colonne, fino a quando esistono quattro colonne seguenti:
 - ServerName
 - InstanceName
@@ -161,8 +165,8 @@ Sebbene non sia obbligatorio, per ottenere il massimo valore dai report, è cons
 
 1. Aprire il modello DMA i report Power BI in Power BI Desktop.
 2. Immettere i dettagli del server che puntano alle **DMAWarehouse** del database e quindi selezionare **carico**.
-   
-      ![Caricare il modello DMA i report Power BI](../dma/media//dma-consolidatereports/dma-reports-powerbi-template-loaded.png)
+
+   ![Caricare il modello DMA i report Power BI](../dma/media//dma-consolidatereports/dma-reports-powerbi-template-loaded.png)
 
    Dopo che il report ha aggiornato i dati di **DMAWarehouse** database, viene visualizzato un report simile al seguente.
 

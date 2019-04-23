@@ -9,26 +9,26 @@ helpviewer_keywords:
 - Reporting Services, upgrades
 - SQL Server Reporting Services, upgrading
 - upgrading Reporting Services
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
 ms.reviewer: ''
 ms.custom: ''
 ms.date: 06/13/2017
-ms.openlocfilehash: 77bc8ae2bb029218d79025cb97d9fb1ed281fe6c
-ms.sourcegitcommit: 46a2c0ffd0a6d996a3afd19a58d2a8f4b55f93de
+ms.openlocfilehash: 2ef6c53e1cb9fd11eb8cba6bb788de9b9b1fe10a
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/15/2019
-ms.locfileid: "59583074"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59952847"
 ---
 # <a name="upgrade-and-migrate-reporting-services"></a>Upgrade and Migrate Reporting Services
 
 In questo argomento viene fornita una panoramica delle opzioni di aggiornamento e migrazione per [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. Sono disponibili due approcci generali per l'aggiornamento di una distribuzione di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .  
   
--   **Eseguire l'aggiornamento:** vengono aggiornati i componenti di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] nei server e nelle istanze in cui sono attualmente installati. Si tratta dell'aggiornamento comunemente definito "sul posto". L'aggiornamento sul posto non è supportato da una modalità all'altra del server [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Non è possibile ad esempio eseguire l'aggiornamento da un server di report in modalità nativa a un server di report in modalità SharePoint. È possibile eseguire la migrazione degli elementi del report da una modalità all'altra. Per altre informazioni, vedere la sezione "Native per la migrazione di SharePoint" più avanti in questo documento e l'argomento correlato [rs.exe Sample Reporting Services Script to Migrate Content between Report Servers](../tools/sample-reporting-services-rs-exe-script-to-copy-content-between-report-servers.md).  
+-   **Eseguire l'aggiornamento:** Si esegue l'aggiornamento di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] componenti nei server e istanze in cui sono attualmente installati. Si tratta dell'aggiornamento comunemente definito "sul posto". L'aggiornamento sul posto non è supportato da una modalità all'altra del server [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Non è possibile ad esempio eseguire l'aggiornamento da un server di report in modalità nativa a un server di report in modalità SharePoint. È possibile eseguire la migrazione degli elementi del report da una modalità all'altra. Per altre informazioni, vedere la sezione "Native per la migrazione di SharePoint" più avanti in questo documento e l'argomento correlato [rs.exe Sample Reporting Services Script to Migrate Content between Report Servers](../tools/sample-reporting-services-rs-exe-script-to-copy-content-between-report-servers.md).  
   
--   **Eseguire la migrazione**: viene installato e configurato un nuovo ambiente SharePoint, vengono copiate risorse ed elementi di report nel nuovo ambiente che viene configurato in modo da usare il contesto esistente. Un tipo di migrazione di livello inferiore consiste nel copiare i database di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] , i file di configurazione e, se si utilizza la modalità SharePoint, i database di contenuto di SharePoint.  
+-   **Eseguire la migrazione**: Installare e configurare un nuovo ambiente SharePoint, copiare gli elementi di report e risorse nel nuovo ambiente e configurare il nuovo ambiente per usare il contenuto esistente. Un tipo di migrazione di livello inferiore consiste nel copiare i database di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] , i file di configurazione e, se si utilizza la modalità SharePoint, i database di contenuto di SharePoint.  
   
 ||  
 |-|  
@@ -135,7 +135,7 @@ In questo argomento viene fornita una panoramica delle opzioni di aggiornamento 
  ![Icona freccia usata con il collegamento superiore](../../2014-toc/media/uparrow16x16.gif "icona freccia usata con il collegamento superiore") [In questo argomento:](#bkmk_top)  
   
 ##  <a name="bkmk_native_scenarios"></a> Scenari di aggiornamento e migrazione della modalità nativa  
- **Eseguire l'aggiornamento:** L'aggiornamento sul posto per la modalità nativa prevede lo stesso processo per ognuna delle versioni supportate elencate in precedenza in questo argomento. Eseguire l'Installazione guidata di SQL Server o l'installazione da riga di comando. Al termine dell'installazione il database del server di report verrà aggiornato automaticamente al nuovo schema del database del server di report. Per altre informazioni, vedere la sezione [In-place upgrade](#bkmk_inplace_upgrade) contenuta in questo argomento.  
+ **Eseguire l'aggiornamento:** Aggiornamento sul posto per la modalità nativa è lo stesso processo per ognuna delle versioni supportate elencate in precedenza in questo argomento. Eseguire l'Installazione guidata di SQL Server o l'installazione da riga di comando. Al termine dell'installazione il database del server di report verrà aggiornato automaticamente al nuovo schema del database del server di report. Per altre informazioni, vedere la sezione [In-place upgrade](#bkmk_inplace_upgrade) contenuta in questo argomento.  
   
  Il processo di aggiornamento viene avviato quando si seleziona un'istanza del server di report esistente da aggiornare.  
   
@@ -204,7 +204,7 @@ In questo argomento viene fornita una panoramica delle opzioni di aggiornamento 
   
  **Ambiente finale:** [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)], SharePoint 2010 o SharePoint 2013.  
   
--   **SharePoint 2010:** l'aggiornamento sul posto di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] è supportato, ma lo scenario di aggiornamento implica tempi di inattività dell'ambiente SharePoint.  
+-   **SharePoint 2010:** Eseguire l'aggiornamento di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] è supportato ma lo scenario di aggiornamento implica tempi di inattività dell'ambiente SharePoint.  
   
      Se si desidera eseguire SharePoint 2013 nell'ambiente finale, è necessario completare un aggiornamento del collegamento di database da SharePoint 2010 a SharePoint 2013.  
   

@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: analysis-services
 ms.topic: reference
 helpviewer_keywords:
 - write-enabled dimensions [Analysis Services]
@@ -18,12 +16,12 @@ ms.assetid: 0bac050d-cd3b-427b-884a-65a91be89500
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: bf87518328e036b69dfc8596ec239b4770c1edab
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: f76ba993508807e57e73d5e53ea25a4cbe382529
+ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48225131"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "60156948"
 ---
 # <a name="write-enabled-dimensions"></a>Dimensioni abilitate per la scrittura
     
@@ -62,8 +60,8 @@ ms.locfileid: "48225131"
  Gli utenti e i gruppi inclusi nel ruolo Administrators possono aggiornare i membri degli attributi di una dimensione abilitata per la scrittura, anche se la dimensione non è inclusa in un cubo.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Proprietà delle dimensioni di database](database-dimension-properties.md)   
- [Partizioni abilitate per scrittura](../multidimensional-models-olap-logical-cube-objects/partitions-write-enabled-partitions.md)   
- [Dimensioni &#40;Analysis Services - dati multidimensionali&#41;](dimensions-analysis-services-multidimensional-data.md)  
+ [Proprietà delle dimensioni del database](database-dimension-properties.md)   
+ [Partizioni abilitate per la scrittura](../multidimensional-models-olap-logical-cube-objects/partitions-write-enabled-partitions.md)   
+ [Dimensioni &#40;Analysis Services - Dati multidimensionali&#41;](dimensions-analysis-services-multidimensional-data.md)  
   
   
