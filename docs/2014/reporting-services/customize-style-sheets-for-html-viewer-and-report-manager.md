@@ -10,15 +10,15 @@ ms.topic: conceptual
 helpviewer_keywords:
 - style sheets [Reporting Services]
 ms.assetid: df805cff-b1de-4062-b2ac-423f37390fbd
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 45b7973dd7711f09b6bf187f7c2798e44e91c375
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
-ms.translationtype: MT
+ms.openlocfilehash: d9c4a57413db37c8f93b1a311542398417bfeff0
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56017953"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59969527"
 ---
 # <a name="customize-style-sheets-for-html-viewer-and-report-manager"></a>Personalizzare i fogli di stile per il visualizzatore HTML e Gestione report
   [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] fornisce stile CSS predefiniti file sheets (CSS) che definiscono stili per il **report** sulla barra degli strumenti Visualizzatore HTML e per gestione Report. Gli sviluppatori Web o gli utenti con esperienza nella creazione di fogli di stile CSS possono modificare gli stili predefiniti a loro rischio per modificare i colori, i tipi di carattere e il layout della barra degli strumenti di Gestione report. Né i fogli di stile predefiniti né le istruzioni relative alla loro modifica sono documentati in questa versione.  
@@ -46,12 +46,12 @@ ms.locfileid: "56017953"
   
  Per utilizzare un foglio di stile personalizzato per il Visualizzatore HTML in fase di esecuzione, è possibile procedere in uno dei modi seguenti:  
   
--   Aggiungere l'impostazione <`HTMLViewerStyleSheet`> al file di configurazione di [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)].  
+-   Aggiungere il <`HTMLViewerStyleSheet`> impostando sul [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] file di configurazione.  
   
 -   Specificare il foglio di stile nell'URL del report.  
   
 ### <a name="modifying-the-rsreportserverconfig-file"></a>Modifica del file RSReportServer.config  
- È possibile modificare il file RSReportServer.config per specificare un foglio di stile personalizzato per il Visualizzatore HTML. L'impostazione <`HTMLViewerStyleSheet`> non è inclusa nel file per impostazione predefinita. È necessario digitarla nella sezione <`Configuration`> del file RSReportServer.config e specificare il foglio di stile che si desidera utilizzare. Non includere l'estensione del file css quando si specifica il foglio di stile.  
+ È possibile modificare il file RSReportServer.config per specificare un foglio di stile personalizzato per il Visualizzatore HTML. Il <`HTMLViewerStyleSheet`> impostazione non è incluso nel file per impostazione predefinita. È necessario digitarla nella <`Configuration`> selezione di RSReportServer. config di file e quindi specificare il foglio di stile da usare. Non includere l'estensione del file css quando si specifica il foglio di stile.  
   
  Nell'esempio seguente viene illustrato come specificare il foglio di stile:  
   

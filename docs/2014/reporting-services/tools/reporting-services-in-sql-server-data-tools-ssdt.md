@@ -10,15 +10,15 @@ ms.topic: conceptual
 helpviewer_keywords:
 - Business Intelligence Development Studio, Reporting Services in
 ms.assetid: 0903c7b2-ac59-45f1-b7d0-922ecd9d76f8
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: dab79e4efec442a24eb9bb5d944cb52e5c9b5640
-ms.sourcegitcommit: 706f3a89fdb98e84569973f35a3032f324a92771
-ms.translationtype: MT
+ms.openlocfilehash: af8fd934206361e0abb43a84a9a036772e90fc52
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/29/2019
-ms.locfileid: "58658341"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59965999"
 ---
 # <a name="reporting-services-in-sql-server-data-tools-ssdt"></a>Reporting Services in SQL Server Data Tools (SSDT)
   [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)] è un [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] ambiente include miglioramenti specifici di soluzioni di business intelligence. [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)] è incluso in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
@@ -170,7 +170,7 @@ ms.locfileid: "58658341"
   
 -   **Proprietà report** Selezionare questa opzione per aprire la finestra di dialogo **Proprietà report** , in cui è possibile assegnare proprietà generali del report come il nome dell'autore e la spaziatura della griglia, nonché proprietà per il layout come il numero di colonne e le dimensioni pagina. È inoltre possibile includere codice personalizzato, riferimenti ad assembly e classi e i nomi di elementi di output dei dati, trasformazioni dati e schemi dati.  
   
--   **Visualizzazione** Consente di passare tra le due schede di Progettazione report: Progettazione e Anteprima.  
+-   **Visualizzazione** Consente di passare tra le due schede di Progettazione report: Progettazione e anteprima.  
   
 -   **Intestazione pagina** Consente di aggiungere o eliminare un'intestazione di pagina nel report. L'eliminazione di un'intestazione di pagina implica la rimozione di tutti gli elementi al suo interno.  
   

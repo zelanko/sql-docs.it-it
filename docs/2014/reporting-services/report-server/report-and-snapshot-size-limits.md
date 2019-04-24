@@ -15,15 +15,15 @@ helpviewer_keywords:
 - reports [Reporting Services], size
 - denial of service attacks [Reporting Services]
 ms.assetid: 1e3be259-d453-4802-b2f5-6b81ef607edf
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: b43ad109b3b64927f2e4b03ef26fc0bc648a1ec7
-ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
-ms.translationtype: MT
+ms.openlocfilehash: 9ef488e088a9101e46b3c203ef6f3ca519dc3aec
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59240649"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59946457"
 ---
 # <a name="report-and-snapshot-size-limits"></a>Limiti delle dimensioni di report e snapshot
   Le informazioni contenute in questo argomento consentono agli amministratori che gestiscono una distribuzione di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] di conoscere i limiti relativi alle dimensioni dei report quando questi ultimi vengono pubblicati in un server di report, quando ne viene eseguito il rendering in fase di esecuzione e quando vengono salvati nel file system. In questo argomento vengono inoltre fornite indicazioni pratiche su come calcolare le dimensioni di un database del server di report e vengono descritti gli effetti delle dimensioni degli snapshot sulle prestazioni del server.  
