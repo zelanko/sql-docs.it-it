@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- docset-sql-devref
-- reporting-services-native
+ms.technology: reporting-services
 ms.topic: reference
 helpviewer_keywords:
 - report servers [Reporting Services], properties
@@ -14,15 +12,15 @@ helpviewer_keywords:
 - report items [Reporting Services], properties
 - items [Reporting Services], properties
 ms.assetid: 21edec6d-9897-48fb-8c75-182305b1dbdb
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 368ee35385a7147c849a4800cf9419b19986545d
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
-ms.translationtype: MT
+ms.openlocfilehash: 6ed8a56892cfd70b43341ffff8349faa56094a97
+ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56020502"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "60158017"
 ---
 # <a name="report-server-item-properties"></a>Proprietà degli elementi del server di report
   Le proprietà degli elementi sono proprietà specifiche degli elementi del database del server di report. Tali elementi includono report, report collegati, cartelle, risorse, modelli e origini dati.  
@@ -60,7 +58,7 @@ ms.locfileid: "56020502"
 |Proprietà|Descrizione|  
 |--------------|-----------------|  
 |**Lingua**|Lingua usata in un report. Il valore è un codice della lingua definito nella specifica Internet Engineering Task Force (IETF) RFC1766. La prima parte è costituita da una designazione di due caratteri della lingua di base. La seconda parte è separata da un trattino e definisce la variazione o il sottolinguaggio della lingua. Se un valore non viene specificato nell'elemento `Style` associato all'elemento `Body` nella definizione del report, il valore predefinito è costituito dalla lingua del server di report.|  
-|`ReportProcessingTimeout`|Timeout, in secondi, per un singolo report. Se questo valore è impostato, il server di report tenta di arrestare l'elaborazione di un report quando scade il tempo specificato. I valori validi sono compresi tra `-1` e `2`.`147`.`483`.`647`. Se il valore è `-1` durante l'elaborazione non si verifica il timeout del report. Se il valore è `null`, per il timeout per l'elaborazione del report viene usato il valore della proprietà di sistema `ReportProcessingTimeout`. Il valore predefinito è `null`. Per altre informazioni, vedere [Proprietà di sistema del server di report](reporting-services-properties-report-server-system-properties.md).|  
+|`ReportProcessingTimeout`|Timeout, in secondi, per un singolo report. Se questo valore è impostato, il server di report tenta di arrestare l'elaborazione di un report quando scade il tempo specificato. I valori validi sono compresi tra `-1` e `2`.`147`.`483`.`647`. Se il valore è `-1` durante l'elaborazione non si verifica il timeout del report. Se il valore è `null`, il valore della proprietà di sistema `ReportProcessingTimeout` viene usato per il timeout di elaborazione di report. Il valore predefinito è `null`. Per altre informazioni, vedere [Proprietà di sistema del server di report](reporting-services-properties-report-server-system-properties.md).|  
 |**ExecutionDate**|Data e ora dell'ultima creazione di uno snapshot del report.|  
 |**CanRunUnattended**|Valore che indica se un report può essere eseguito automaticamente in base a una pianificazione. Se questa proprietà è impostata su `true`, i valori predefiniti per i parametri del report sono definiti e le credenziali dell'origine dati sono archiviate con il report oppure l'opzione per il recupero delle credenziali è impostata su `None`. Se questa proprietà è impostata su `false`, i prerequisiti per l'esecuzione automatica di un report non sono soddisfatti. Per altre informazioni, vedere [Configurare l'account di esecuzione automatica &#40;Gestione configurazione SSRS&#41;](../../install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md).|  
 |**HasParameterDefaultValues**|Valore che indica se per il report sono impostati valori predefiniti validi per tutti i parametri. Il valore è `true` anche se un report non dispone di parametri. Se questa proprietà è impostata su `false`, uno o più parametri del report non dispongono di un valore predefinito valido.|  
