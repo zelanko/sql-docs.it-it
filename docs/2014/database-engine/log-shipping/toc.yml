@@ -1,35 +1,28 @@
-items:
 - name: Panoramica
   href: about-log-shipping-sql-server.md
 - name: Procedure
   items:
-  - name: Aggiornare il log shipping a SQL Server 2014
-    href: upgrading-log-shipping-to-sql-server-2016-transact-sql.md
-  - name: Configurare il log shipping
-    href: configure-log-shipping-sql-server.md
-  - name: Aggiungere un database secondario
-    href: add-a-secondary-database-to-a-log-shipping-configuration-sql-server.md
-  - name: Rimuovere un database secondario
-    href: remove-a-secondary-database-from-a-log-shipping-configuration-sql-server.md
-  - name: Disattivare il log shipping
-    href: remove-log-shipping-sql-server.md
-  - name: Visualizzare il report del log shipping
-    href: view-the-log-shipping-report-sql-server-management-studio.md
-  - name: Monitorare il log shipping
-    href: monitor-log-shipping-transact-sql.md
-  - name: Eseguire il failover in un database secondario
-    href: fail-over-to-a-log-shipping-secondary-sql-server.md
-  - name: Modificare i ruoli tra server primario e secondario
-    href: change-roles-between-primary-and-secondary-log-shipping-servers-sql-server.md
+    - name: Aggiornare il log shipping a SQL Server 2014
+      href: upgrading-log-shipping-to-sql-server-2016-transact-sql.md
+    - name: Configurare il log shipping
+      href: configure-log-shipping-sql-server.md
+    - name: Aggiungere un database secondario
+      href: add-a-secondary-database-to-a-log-shipping-configuration-sql-server.md
+    - name: Rimuovere un database secondario
+      href: remove-a-secondary-database-from-a-log-shipping-configuration-sql-server.md
+    - name: Disattivare il log shipping
+      href: remove-log-shipping-sql-server.md
+    - name: Visualizzare il report del log shipping
+      href: view-the-log-shipping-report-sql-server-management-studio.md
+    - name: Monitorare il log shipping
+      href: monitor-log-shipping-transact-sql.md
+    - name: Eseguire il failover in un database secondario
+      href: fail-over-to-a-log-shipping-secondary-sql-server.md
+    - name: Modificare i ruoli tra server primario e secondario
+      href: change-roles-between-primary-and-secondary-log-shipping-servers-sql-server.md
 - name: Concetti
   items:
-  - name: Log shipping e replica
-    href: log-shipping-and-replication-sql-server.md
-  - name: Log Shipping Tables and Stored Procedures
-    href: log-shipping-tables-and-stored-procedures.md
-ms.openlocfilehash: 951323a40f1adbd3b02e3016da2835f989bd7cec
-ms.sourcegitcommit: 032273bfbc240fe22ac6c1f6601a14a6d99573f7
-ms.translationtype: HT
-ms.contentlocale: it-IT
-ms.lasthandoff: 02/01/2019
-ms.locfileid: "55513821"
+    - name: Log shipping e replica
+      href: log-shipping-and-replication-sql-server.md
+    - name: Log Shipping Tables and Stored Procedures
+      href: log-shipping-tables-and-stored-procedures.md

@@ -188,7 +188,7 @@
 - name: Categoria di eventi Report di stato
   href: progress-report-event-category.md
   items:
-    - name: 'Classe di evento Progress Report: Online Index Operation'
+    - name: 'Report di stato: Classe di evento Online Index Operation'
       href: progress-report-online-index-operation-event-class.md
 - name: Categoria di eventi di notifica delle query
   href: query-notifications-event-category.md
@@ -349,7 +349,7 @@
   items:
     - name: DTCTransaction - classe di evento
       href: dtctransaction-event-class.md
-    - name: Classe di evento SQLTransaction
+    - name: SQLTransaction - classe di evento
       href: sqltransaction-event-class.md
     - name: 'TM: Begin Tran Completed - classe di evento'
       href: tm-begin-tran-completed-event-class.md
@@ -357,7 +357,7 @@
       href: tm-begin-tran-starting-event-class.md
     - name: 'TM: Commit Tran Completed - classe di evento'
       href: tm-commit-tran-completed-event-class.md
-    - name: 'Classe di evento TM: Commit Tran Starting'
+    - name: 'TM: Commit Tran Starting - classe di evento'
       href: tm-commit-tran-starting-event-class.md
     - name: 'TM: Promote Tran Completed - classe di evento'
       href: tm-promote-tran-completed-event-class.md
@@ -367,9 +367,9 @@
       href: tm-rollback-tran-completed-event-class.md
     - name: 'TM: Rollback Tran Starting - classe di evento'
       href: tm-rollback-tran-starting-event-class.md
-    - name: 'Classe di evento TM: Save Tran Completed'
+    - name: 'TM: Save Tran Completed - classe di evento'
       href: tm-save-tran-completed-event-class.md
-    - name: 'Classe di evento TM: Save Tran Starting'
+    - name: 'TM: Save Tran Starting - classe di evento'
       href: tm-save-tran-starting-event-class.md
     - name: TransactionLog - classe di evento
       href: transactionlog-event-class.md

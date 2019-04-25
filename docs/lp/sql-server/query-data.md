@@ -12,11 +12,11 @@ ms.date: 12/15/2018
 featureFlags:
 - clicktale
 ms.openlocfilehash: fbffcdd5de49cadd3e18ab3db0a5da7ff6a042e9
-ms.sourcegitcommit: 769b71f01052ec9b4fc5eb02d9da9a1a58118029
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56319342"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63253042"
 ---
 <div id="main" class="v2">
     <div class="container">
@@ -135,7 +135,7 @@ ms.locfileid: "56319342"
                                                     </div>
                                                 </div>
                                                 <div class="cardText">
-                                                    <h3>Generazione di script</h3>
+                                                    <h3>Scripting</h3>
                                                     <p>Informazioni sui diversi linguaggi di scripting supportati da SQL Server, ad esempio PowerShell e xQuery. </p>
                                                 </div>
                                             </div>

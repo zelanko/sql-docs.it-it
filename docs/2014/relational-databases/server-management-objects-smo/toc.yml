@@ -96,7 +96,7 @@
       href: tasks/scheduling-automatic-administrative-tasks-in-sql-server-agent.md
     - name: Backup e ripristino dei database e dei log delle transazioni
       href: tasks/backing-up-and-restoring-databases-and-transaction-logs.md
-    - name: Generazione di script
+    - name: Scripting
       href: tasks/scripting.md
     - name: Trasferimento di dati
       href: tasks/transferring-data.md

@@ -12,11 +12,11 @@ ms.date: 12/15/2018
 featureFlags:
 - clicktale
 ms.openlocfilehash: f1b88c2a82866c171601d5184a90fd0d6362a435
-ms.sourcegitcommit: 769b71f01052ec9b4fc5eb02d9da9a1a58118029
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56319122"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63213553"
 ---
 <div id="main" class="v2">
     <div class="container">
@@ -116,7 +116,7 @@ ms.locfileid: "56319122"
                                                     </div>
                                                 </div>
                                                 <div class="cardText">
-                                                    <h3>Crittografia sempre attiva</h3>
+                                                    <h3>Always Encrypted</h3>
                                                     <p>Consente ai client di crittografare dati sensibili all'interno di applicazioni client senza mai rivelare le chiavi di crittografia al motore di database. </p>
                                                 </div>
                                             </div>
@@ -154,7 +154,7 @@ ms.locfileid: "56319122"
                                                     </div>
                                                 </div>
                                                 <div class="cardText">
-                                                    <h3>Permissions</h3>
+                                                    <h3>Autorizzazioni</h3>
                                                     <p>Determinano chi è autorizzato ad accedere a cosa all'interno di SQL Server. </p>
                                                 </div>
                                             </div>

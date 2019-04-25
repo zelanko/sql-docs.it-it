@@ -12,11 +12,11 @@ ms.date: 12/15/2018
 featureFlags:
 - clicktale
 ms.openlocfilehash: 601bf4bdfae6b896c218d30c9b943bd1e97ba70c
-ms.sourcegitcommit: 769b71f01052ec9b4fc5eb02d9da9a1a58118029
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56319232"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63265203"
 ---
 <div id="main" class="v2">
     <div class="container">
@@ -219,7 +219,7 @@ ms.locfileid: "56319232"
                                                     </div>
                                                 </div>
                                                 <div class="cardText">
-                                                    <h3>importazione ed esportazione guidate</h3>
+                                                    <h3>Importazione/Esportazione guidata</h3>
                                                     <p>Usare la procedura guidata per copiare facilmente i dati da un'ampia gamma di origini nel database SQL. </p>
                                                 </div>
                                             </div>

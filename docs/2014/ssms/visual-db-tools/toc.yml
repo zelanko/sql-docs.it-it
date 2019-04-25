@@ -63,7 +63,7 @@
       href: arrange-tables-in-diagrams-visual-database-tools.md
     - name: 'Modifica dello stile, del colore e delle dimensioni del carattere nei diagrammi (Visual Database Tools)'
       href: change-the-font-color-size-and-style-in-diagrams-visual-database-tools.md
-    - name: 'Scenario: Aggiunta e modifica di un diagramma di database'
+    - name: 'Procedura dettagliata: Aggiunta e modifica di un diagramma di database'
       href: walkthrough-adding-and-changing-a-database-diagram.md
     - name: Strumenti di progettazione di Visual Database Tools (Visual Database Tools)
       href: visual-database-tool-designers.md

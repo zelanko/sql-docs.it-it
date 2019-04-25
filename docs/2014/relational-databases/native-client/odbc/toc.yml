@@ -309,7 +309,7 @@
       href: ../../native-client-odbc-how-to/support-for-large-udts.md
     - name: Chiamare SQLColumns su un tabella con colonne di tipo sparse
       href: ../../native-client-odbc-how-to/call-sqlcolumns-on-a-table-with-sparse-columns.md
-    - name: 'Procedura: Inserimento di righe in colonne geografiche (ODBC)'
+    - name: 'Procedura: Inserire righe in colonne geografiche (ODBC)'
       href: ../../native-client-odbc-how-to/how-to-insert-rows-into-geography-column-odbc.md
     - name: Ottenere l'autenticazione Kerberos reciproca
       href: ../../native-client-odbc-how-to/get-mutual-kerberos-authentication.md

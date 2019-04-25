@@ -80,7 +80,7 @@
       href: xml-input-file-sample-with-inline-workload-dta.md
     - name: Esempio di file di input XML con configurazione specificata dall'utente (DTA)
       href: xml-input-file-sample-with-user-specified-configuration-dta.md
-- name: 'Esercitazione: Strumento Ottimizzazione guidata motore di database'
+- name: 'Esercitazione: Database Engine Tuning Advisor'
   href: tutorial-database-engine-tuning-advisor.md
   items:
     - name: 'Lezione 1: Navigazione di base in Ottimizzazione guidata motore di database'
@@ -90,7 +90,7 @@
           href: lesson-1-1-launching-database-engine-tuning-advisor.md
         - name: Impostazione del layout e delle opzioni dello strumento
           href: lesson-1-2-setting-tool-options-and-layout.md
-    - name: 'Lezione 2: Utilizzo dello strumento Ottimizzazione guidata motore di database'
+    - name: 'Lezione 2: Uso di Ottimizzazione guidata motore di database'
       href: lesson-2-using-database-engine-tuning-advisor.md
       items:
         - name: Ottimizzazione di un carico di lavoro
