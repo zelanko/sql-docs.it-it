@@ -16,11 +16,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: c0c77323f6ae37e3543cf070817a9fee05943f3f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48058047"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62760854"
 ---
 # <a name="populating-a-hierarchical-table-using-hierarchical-methods"></a>Popolamento di una tabella gerarchica utilizzando metodi gerarchici
   [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] ha 8 dipendenti che lavorano nel reparto Marketing. La gerarchia dei dipendenti è simile alla seguente:  

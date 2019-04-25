@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 355ade7f4c90b595356efc5d39c2fa7cf587b11b
-ms.sourcegitcommit: 9f2edcdf958e6afce9a09fb2e572ae36dfe9edb0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50099682"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62509943"
 ---
 # <a name="view-data-refresh-history-power-pivot-for-sharepoint"></a>Visualizzare la cronologia dell'aggiornamento dati (Power Pivot per SharePoint)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -55,14 +55,14 @@ ms.locfileid: "50099682"
 ##  <a name="pageelements"></a> Utilizzare le informazioni sulla cronologia  
  Nella pagina della cronologia dell'aggiornamento dati vengono fornite informazioni dettagliate sulle singole operazioni di aggiornamento. È possibile utilizzare le informazioni contenute in questa pagina per verificare se l'aggiornamento è stato eseguito o il motivo per cui non è stato completato correttamente.  
   
-|Elemento|Description|  
+|Elemento|Descrizione|  
 |----------|-----------------|  
-|nome|Specifica il nome di file della cartella di lavoro di Excel in cui sono contenuti i dati [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] .|  
+|Nome|Specifica il nome di file della cartella di lavoro di Excel in cui sono contenuti i dati [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] .|  
 |Stato corrente|I valori disponibili sono **Pianificato**, **Aggiornamento in corso**, **Operazione completata**o **Operazione non riuscita**.<br /><br /> Il valore**Pianificato** viene visualizzato quando si crea per la prima volta la pianificazione. Dopo la prima esecuzione dell'aggiornamento dei dati, questo messaggio di stato non viene più visualizzato.<br /><br /> **Aggiornamento in corso** indica che è in corso l'aggiornamento dei dati. Una richiesta si trova nella coda dei processi o è in esecuzione nel server.<br /><br /> **Operazione completata** indica che l'ultima operazione di aggiornamento dei dati è stata completata e la cartella di lavoro aggiornata viene nuovamente archiviata nella raccolta di SharePoint.<br /><br /> **Operazione non riuscita** indica che l'ultima operazione di aggiornamento dei dati non è stata completata. I dati aggiornati non sono stati salvati. Nella cartella di lavoro sono inclusi gli stessi dati presenti prima dell'inizio dell'aggiornamento.|  
 |Ultimo aggiornamento riuscito|Consente di specificare la data in cui l'ultimo aggiornamento dei dati è stato completato correttamente.|  
 |Prossimo aggiornamento pianificazione|Consente di specificare la data in cui è previsto il prossimo aggiornamento dei dati in base alla pianificazione.<br /><br /> Il collegamento **Configura pianificazione** reindirizza l'utente alla pagina di definizione della pianificazione. Se la cartella di lavoro contiene le autorizzazioni di collaborazione, è possibile fare clic sul collegamento per visualizzare e modificare le informazioni sulla pianificazione che regolano l'aggiornamento automatico dei dati [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] nella cartella di lavoro.|  
 |Started|All'interno della sezione relativa ai dettagli della cronologia, **Avvio eseguito** indica il tempo di elaborazione effettivo. Il tempo di elaborazione effettivo potrebbe essere diverso da quello pianificato. L'elaborazione inizierà quando è disponibile memoria sufficiente sul server. Se il server è molto occupato, l'elaborazione potrebbe iniziare diverse ore dopo l'ora di inizio specificata.|  
-|Completato|All'interno della sezione relativa ai dettagli della cronologia, **Completato** indica il momento in cui l'operazione di aggiornamento dei dati è stata completata. Sono specificate la data e l'ora in cui la cartella di lavoro è stata nuovamente archiviata nella raccolta.<br /><br /> Se l'aggiornamento dei dati ha esito negativo, la causa dell'errore viene illustrata in uno o più i messaggi di errore. È possibile espandere ogni record per visualizzare i dettagli sullo stato. Ogni origine dati viene elencata singolarmente, accanto ai messaggi relativi all'esito positivo o negativo nel quali viene spiegato il motivo per cui l'aggiornamento dei dati non è stato completato.|  
+|Operazione completata|All'interno della sezione relativa ai dettagli della cronologia, **Completato** indica il momento in cui l'operazione di aggiornamento dei dati è stata completata. Sono specificate la data e l'ora in cui la cartella di lavoro è stata nuovamente archiviata nella raccolta.<br /><br /> Se l'aggiornamento dei dati ha esito negativo, la causa dell'errore viene illustrata in uno o più i messaggi di errore. È possibile espandere ogni record per visualizzare i dettagli sullo stato. Ogni origine dati viene elencata singolarmente, accanto ai messaggi relativi all'esito positivo o negativo nel quali viene spiegato il motivo per cui l'aggiornamento dei dati non è stato completato.|  
 |Time|Viene fornito il tempo totale dall'avvio dell'aggiornamento dei dati fino al completamento.|  
 |Stato|Viene fornito un record cronologico relativo all'esito positivo o negativo di un'operazione di aggiornamento.|  
   

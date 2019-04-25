@@ -12,11 +12,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: efa4c0758ed85008ccb04b30a8dcd8e24ed54208
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59948897"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62511366"
 ---
 # <a name="subscriptions-page-report-manager"></a>Pagina Sottoscrizioni (Gestione report)
   La pagina Sottoscrizioni consente di visualizzare un elenco di tutte le sottoscrizioni del report o dell'origine dati condivisa corrente. Se sono disponibili autorizzazioni sufficienti (quelle assegnate dall'attività Gestione di tutte le sottoscrizioni) è possibile visualizzare le sottoscrizioni di tutti gli utenti. In caso contrario, in questa pagina vengono visualizzate solo le sottoscrizioni personali.  

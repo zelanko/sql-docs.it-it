@@ -1,5 +1,5 @@
 ---
-title: INSERIRE (DMX) | Microsoft Docs
+title: INSERT INTO (DMX) | Microsoft Docs
 ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 16732c1d889f7125d71d01bd0804b4202daceb7e
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37992440"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62505151"
 ---
 # <a name="insert-into-dmx"></a>INSERT INTO (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -35,7 +35,7 @@ INSERT INTO [MINING MODEL]|[MINING STRUCTURE] <model>|<structure>.COLUMN_VALUES 
  *model*  
  Identificatore del modello.  
   
- *struttura*  
+ *structure*  
  Identificatore della struttura.  
   
  *colonne del modello con mapping*  
@@ -80,14 +80,14 @@ INSERT INTO [MINING MODEL] <model>
   
  La sintassi di SKIP richiede che SKIP venga inserito nella posizione della colonna singola nel set di righe di input che non dispone di una colonna della struttura di data mining corrispondente. Ad esempio, nella seguente tabella nidificata, OrderNumber deve essere selezionato nella clausola APPEND in modo da poter essere utilizzato nella clausola RELATE per specificare il join. Tuttavia, non si desidera inserire i dati di OrderNumber nella tabella nidificata nella struttura di data mining. Nell'esempio è utilizzata pertanto la parola chiave SKIP anziché OrderNumber nell'argomento INSERT INTO.  
   
-## <a name="source-data-query"></a>Elemento <source data query>  
+## <a name="source-data-query"></a>Elemento &lt;source data query&gt;  
  Il \<query sull'origine dati > elemento può includere tipi di origine dati seguenti:  
   
 -   **OPENQUERY**  
   
 -   **OPENROWSET**  
   
--   **FORMA**  
+-   **SHAPE**  
   
 -   Qualsiasi query di [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] che restituisce un set di righe.  
   

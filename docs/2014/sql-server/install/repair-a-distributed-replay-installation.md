@@ -12,11 +12,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: d14b1bf3200802e9fab359ba3ede9fa295911fe1
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48227213"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62760933"
 ---
 # <a name="repair-a-distributed-replay-installation"></a>Ripristinare un'installazione di Riesecuzione distribuita
   Il ripristino di un componente Riesecuzione distribuita (controller o client) comporta le operazioni seguenti:  

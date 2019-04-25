@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 091f6d49c4cccbcba47d50bbde3b395d8ce9d260
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53364273"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62758557"
 ---
 # <a name="tabular-model-designer-ssas-tabular"></a>Progettazione di modelli tabulari (SSAS tabulare)
   La progettazione di modelli tabulari fa parte di [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)], integrato con Microsoft [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 2010 o versione successiva, con modelli di tipi di progetto aggiuntivi espressamente per lo sviluppo di soluzioni di modelli tabulari professionali.  
@@ -31,7 +31,7 @@ ms.locfileid: "53364273"
   
 -   [Windows e i menu](#bkmk_wind_men)  
   
--   [Integrazione di Visual Studio](#bkmk_vsint)  
+-   [Visual Studio Integration](#bkmk_vsint)  
   
 ##  <a name="bkmk_benefits"></a> Vantaggi  
  Quando si installa [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)], i nuovi modelli di progetto per la creazione di modelli tabulari vengono aggiunti ai tipi di progetto disponibili. Dopo aver creato un nuovo progetto di modello tabulare utilizzando uno dei modelli, è possibile iniziare la creazione di modelli utilizzando gli appositi strumenti e procedure guidate.  

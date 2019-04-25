@@ -14,11 +14,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 38c16d837dd886785479e1e2994b5b0f19372cfe
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48211431"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62760864"
 ---
 # <a name="examining-the-current-structure-of-the-employee-table"></a>Esame della struttura corrente della tabella Employee
   Il database di esempio [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] contiene una tabella **Employee** nello schema **HumanResources**. Per evitare di modificare la tabella originale, in questo passaggio viene creata una copia della tabella **Employee** denominata **EmployeeDemo**. Per semplificare l'esempio, copiare solo cinque colonne della tabella originale. Quindi, si esegue una query di **HumanResources. Employeedemo** tabella per verificare la modalità con cui i dati sono strutturati in una tabella senza utilizzare il `hierarchyid` tipo di dati.  

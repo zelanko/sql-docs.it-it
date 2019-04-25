@@ -19,11 +19,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 328ce6c6474beb68d14edd26779d868142a29fd0
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48136797"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62520253"
 ---
 # <a name="accuracy-chart-sql-server-data-mining-add-ins"></a>Grafico di accuratezza (componenti aggiuntivi Data mining di SQL Server)
   ![Pulsante grafico di accuratezza sulla barra multifunzione Data Mining](media/dmc-accchart.gif "pulsante grafico di accuratezza sulla barra multifunzione Data Mining")  
@@ -73,7 +73,7 @@ ms.locfileid: "48136797"
      Tramite la procedura guidata viene creato un report che include il grafico di accuratezza e i dati sottostanti.  
   
 ### <a name="requirements"></a>Requisiti  
- Per la stima di un valore discreto, è necessario selezionare il valore di destinazione da stimare. Se ad esempio i dati vengono assegnati alla relativa categoria con una risposta "Yes: Buy" come 1 e la risposta "No: Do Not Buy" come 2, sarà necessario specificare 1 o 2 come valori di stima. Se invece si desidera stimare un intervallo di valori, sarà possibile confrontare solo due valori alla volta. Se, ad esempio, si desidera stimare un punteggio superiore a 5, potrebbe essere necessario modificare le etichette dei dati di origine e creare un nuovo modello in cui i risultati vengano separati in due set: quelli superiori a 5 e quelli inferiori a 5. È quindi possibile confrontare l'accuratezza di questi due gruppi.  
+ Per la stima di un valore discreto, è necessario selezionare il valore di destinazione da stimare. Ad esempio, se i dati sono classificati con una risposta "Yes: Buy"come 1 e la risposta" No: Do Not Buy"come 2, è necessario specificare 1 o 2 come valori di stima. Se invece si desidera stimare un intervallo di valori, sarà possibile confrontare solo due valori alla volta. Se, ad esempio, si desidera stimare un punteggio superiore a 5, potrebbe essere necessario modificare le etichette dei dati di origine e creare un nuovo modello in cui i risultati vengano separati in due set: quelli superiori a 5 e quelli inferiori a 5. È quindi possibile confrontare l'accuratezza di questi due gruppi.  
   
 ## <a name="understanding-accuracy"></a>Informazioni sull'accuratezza  
  È possibile creare due tipi di grafico, uno in cui si specifica uno stato della colonna stimabile e l'altro in cui non si specifica lo stato.  

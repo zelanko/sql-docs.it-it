@@ -25,11 +25,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 3aa085cc0a098f557ca7a8cbddcd787a178b79d0
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47711609"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62760766"
 ---
 # <a name="descriptor-handles"></a>Handle del descrittore
 Oggetto *descrittore* è una raccolta di metadati che descrivono i parametri di un'istruzione SQL o le colonne di un set di risultati, come illustrato per l'applicazione o il driver (noto anche come il *implementazione*). Di conseguenza, un descrittore può compilare uno qualsiasi dei quattro ruoli:  

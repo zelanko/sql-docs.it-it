@@ -13,11 +13,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 384c1e0f14d3cfe5237913b29be1d9ae74aa2d9d
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52799423"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62511321"
 ---
 # <a name="creating-altering-and-removing-schemas"></a>Creazione, modifica e rimozione di schemi
   L'oggetto <xref:Microsoft.SqlServer.Management.Smo.Schema> rappresenta un contesto di proprietà per un oggetto di database. La proprietà <xref:Microsoft.SqlServer.Management.Smo.Database.Schemas%2A> dell'oggetto <xref:Microsoft.SqlServer.Management.Smo.Database> rappresenta una raccolta di oggetti <xref:Microsoft.SqlServer.Management.Smo.Schema>.  

@@ -15,11 +15,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 16376e7c1be1e22968846e7cbfbfc361fa8bb16e
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53203407"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62510320"
 ---
 # <a name="save-as"></a>Save As
   Utilizzare questa finestra di dialogo per salvare un'istanza dell'elemento corrente nel percorso e nel formato di file specificati. Per visualizzare questa finestra di dialogo, fare clic su **salvare**  *\<file >* **come** sul **File** menu (dove  *\<file >* è il nome dell'elemento corrente), oppure premere ALT + F, A nell'Editor del codice.  

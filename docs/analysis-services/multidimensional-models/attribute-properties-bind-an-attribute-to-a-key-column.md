@@ -1,5 +1,5 @@
 ---
-title: Associare un attributo a una colonna chiave | Documenti Microsoft
+title: Associare un attributo a una colonna chiave | Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,13 +10,13 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: ed2a51a39f1fa1fd465c6a57fb51552fcb7cabfb
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34022038"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62472353"
 ---
-# <a name="attribute-properties---bind-an-attribute-to-a-key-column"></a>Attributo di proprietà: associare un attributo a una colonna chiave
+# <a name="attribute-properties---bind-an-attribute-to-a-key-column"></a>Proprietà degli attributi - Associare un attributo a una colonna chiave
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
   Questo argomento descrive la procedura per modificare l'impostazione della proprietà **Name** di un attributo in una dimensione.  
   

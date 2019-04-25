@@ -20,11 +20,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.openlocfilehash: f35ae03cb6588bc7828349dd4a4beafcc5a7b2f3
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47746449"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62760824"
 ---
 # <a name="exporting-an-access-inventory-accesstosql"></a>Esportazione di un inventario di Access (AccessToSQL)
 Se si dispone di più database di Access e non si sono certi che quelli per eseguire la migrazione in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], è possibile esportare un inventario di tutti i database di Access in un progetto. È quindi possibile esaminare e ottenere i metadati di inventario per determinare quali database e gli oggetti presenti in tali database per eseguire la migrazione. L'inventario è possibile rapidamente trovare le risposte alle domande, ad esempio il seguente:  
@@ -107,7 +107,7 @@ Per altre informazioni sull'aggiunta di database per i progetti, vedere [aggiunt
   
     -   Se ci si connette all'istanza predefinita in un altro computer, immettere il nome del computer.  
   
-    -   Se ci si connette a un'istanza denominata, immettere il nome del computer, una barra rovesciata e il nome dell'istanza. Ad esempio: MyServer\MyInstance.  
+    -   Se ci si connette a un'istanza denominata, immettere il nome del computer, una barra rovesciata e il nome dell'istanza. Ad esempio:  MyServer\MyInstance.  
   
 3.  Nel **Database** immettere il nome del database di destinazione per i metadati esportati.  
   

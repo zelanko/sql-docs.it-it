@@ -19,11 +19,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 1be4fbfb6ce30443a979fb500954e7aa8fa9779a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47614925"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62507407"
 ---
 # <a name="spdatabases-transact-sql"></a>sp_databases (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -44,11 +44,11 @@ sp_databases
   
 ## <a name="result-sets"></a>Set di risultati  
   
-|Nome colonna|Tipo di dati|Description|  
+|Nome colonna|Tipo di dati|Descrizione|  
 |-----------------|---------------|-----------------|  
 |**DATABASE_NAME**|**sysname**|Nome del database. Nel [!INCLUDE[ssDE](../../includes/ssde-md.md)], questa colonna rappresenta il nome del database archiviato nel **Sys. Databases** vista del catalogo.|  
 |**DATABASE_SIZE**|**int**|Dimensioni del database in kilobyte.|  
-|**SEZIONE OSSERVAZIONI**|**varchar(254)**|In [!INCLUDE[ssDE](../../includes/ssde-md.md)] questo campo restituisce sempre NULL.|  
+|**REMARKS**|**varchar(254)**|In [!INCLUDE[ssDE](../../includes/ssde-md.md)] questo campo restituisce sempre NULL.|  
   
 ## <a name="remarks"></a>Note  
  I nomi di database restituiti possono essere utilizzati come parametri nell'istruzione USE per modificare il contesto del database corrente.  

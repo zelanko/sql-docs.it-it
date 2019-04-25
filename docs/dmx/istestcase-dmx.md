@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: b7e80f8a9dfb82f13350b94b310690a081fae1de
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51606641"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62503729"
 ---
 # <a name="istestcase-dmx"></a>IsTestCase (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -53,7 +53,7 @@ WHERE IsTestCase()
  Per altre informazioni su come eseguire query sui case utilizzati nel data mining, vedere [SELECT FROM &#60;modello&#62;. I casi &#40;DMX&#41; ](../dmx/select-from-model-cases-dmx.md) e [SELECT FROM &#60;struttura&#62;. CASI](../dmx/select-from-structure-cases.md).  
   
 ## <a name="see-also"></a>Vedere anche  
- [Le funzioni &#40;DMX&#41;](../dmx/functions-dmx.md)   
+ [Functions &#40;DMX&#41;](../dmx/functions-dmx.md)   
  [Query di data mining](../analysis-services/data-mining/data-mining-queries.md)   
  [Set di dati di training e di testing](../analysis-services/data-mining/training-and-testing-data-sets.md)  
   

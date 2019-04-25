@@ -24,11 +24,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 177450ed6cbe934406fc596606e0bb13ee51f7eb
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59933027"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62511023"
 ---
 # <a name="create-modify-and-delete-schedules"></a>Create, Modify, and Delete Schedules
   In questo argomento vengono fornite informazioni sulla creazione, la modifica e l'eliminazione di pianificazioni.  

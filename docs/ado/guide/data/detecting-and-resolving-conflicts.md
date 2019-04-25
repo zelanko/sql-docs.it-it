@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: a27a8ff70a995ab24dcf762d0ada731e0de6fa92
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47625285"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62472283"
 ---
 # <a name="detecting-and-resolving-conflicts"></a>Rilevamento e risoluzione di conflitti
 Se è necessario gestire in modalità immediata del Recordset, vi è molto meno possibilità di problemi di concorrenza si verifichi. D'altra parte, se l'applicazione usa l'aggiornamento in modalità batch, potrebbe esserci un'ottima possibilità che un utente modifichi un record prima che vengano salvate le modifiche apportate da un altro utente modifica il record stesso. In tal caso, è consigliabile l'applicazione per gestire normalmente il conflitto. Potrebbe essere ogni vostro desiderio che ultima persona che ha inviato un aggiornamento nel server "wins". In alternativa, è possibile consentire all'utente più recente per decidere quali update deve avere la precedenza fornendo quest'ultimo con una scelta tra i due valori in conflitto.  

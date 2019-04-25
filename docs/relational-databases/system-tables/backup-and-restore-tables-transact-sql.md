@@ -19,18 +19,18 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 021077a7e127f9c93ee752dea7f87aa12e792d02
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47596409"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62471384"
 ---
 # <a name="backup-and-restore-tables-transact-sql"></a>Tabelle di backup e ripristino (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
   Negli argomenti di questa sezione vengono descritte le tabelle di sistema in cui sono archiviate le informazioni utilizzate dalle operazioni di backup e ripristino di database.  
   
-## <a name="in-this-section"></a>Argomenti della sezione  
+## <a name="in-this-section"></a>In questa sezione  
  [backupfile](../../relational-databases/system-tables/backupfile-transact-sql.md)  
  Contiene una riga per ogni file di dati o di log di un database.  
   

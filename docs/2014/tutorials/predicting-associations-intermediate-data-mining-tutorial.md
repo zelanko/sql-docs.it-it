@@ -11,11 +11,11 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: bee5ca4ded1b2fd5cbda0712cb766c825b9d0318
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56022362"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62472846"
 ---
 # <a name="predicting-associations-intermediate-data-mining-tutorial"></a>Stima delle associazioni (Esercitazione intermedia sul data mining)
   Dopo avere elaborato i modelli, è possibile utilizzare le informazioni sulle associazioni archiviate nei modelli per creare stime. Nell'attività finale di questa lezione verrà illustrato come compilare query di stima rispetto nei modelli di associazione creati. In questa lezione si presuppone che l'utente abbia familiarità con l'utilizzo del generatore delle query di stima e desideri apprendere come compilare query di stima mediante modelli di associazione. Per altre informazioni su come usare generatore Query di stima, vedere [interfacce di Data Mining Query](../../2014/analysis-services/data-mining/data-mining-query-tools.md).  

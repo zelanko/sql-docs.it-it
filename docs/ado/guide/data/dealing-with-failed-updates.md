@@ -14,11 +14,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 9930e76c902080cb7df22bf2a28afc1ae18b3cfd
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53202220"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62472373"
 ---
 # <a name="dealing-with-failed-updates"></a>Gestione degli aggiornamenti non riusciti
 Quando un aggiornamento si conclude con errori, come è risolvere gli errori dipende la natura e la gravità degli errori e la logica dell'applicazione. Tuttavia, se il database è condiviso con altri utenti, un errore tipico è che un altro utente modifica il campo prima di procedere. Questo tipo di errore viene chiamato un conflitto. ADO rileva questa condizione e segnala un errore.  

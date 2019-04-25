@@ -20,24 +20,24 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 53f978bf7914776e8596a89b0ee9b62770cd6866
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47714360"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62760221"
 ---
 # <a name="syscollectorcollectionitems-transact-sql"></a>syscollector_collection_items (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Restituisce informazioni su un elemento di un set di raccolta.  
   
-|Nome colonna|Tipo di dati|Description|  
+|Nome colonna|Tipo di dati|Descrizione|  
 |-----------------|---------------|-----------------|  
 |**collection_set_id**|**int**|Identifica il set di raccolta. Non ammette i valori Null.|  
 |**collection_item_id**|**int**|Identifica un elemento del set di raccolta. Non ammette i valori Null.|  
 |**collector_type_uid**|**uniqueidentifier**|GUID utilizzato per identificare il tipo agente di raccolta dati. Non ammette i valori Null.|  
 |**name**|**nvarchar(4000)**|Nome del set di raccolta. Ammette i valori Null.|  
-|**Frequenza**|**int**|La frequenza con cui i dati sono raccolti da un elemento della raccolta. Non ammette i valori Null.|  
+|**frequency**|**int**|La frequenza con cui i dati sono raccolti da un elemento della raccolta. Non ammette i valori Null.|  
 |**parameters**|**xml**|Descrive la parametrizzazione per il tipo di agente di raccolta associato all'elemento della raccolta. il XML schema per questo elemento della raccolta viene convalidato con il XSD (XML Schema) archiviato nel **parameter_schema** per un tipo di agente di raccolta specifico. Ammette i valori Null. Per altre informazioni, vedere [syscollector_collector_types &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/syscollector-collector-types-transact-sql.md).|  
   
 ## <a name="permissions"></a>Permissions  

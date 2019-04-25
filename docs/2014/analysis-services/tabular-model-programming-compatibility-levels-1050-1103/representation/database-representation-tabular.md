@@ -11,11 +11,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 377b85c22d1c6da9f5296d6ad57a86028e022785
-ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "60156507"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62757813"
 ---
 # <a name="database-representationtabular"></a>Rappresentazione del database(tabulare)
   In modalità tabulare, il database è il contenitore per tutti gli oggetti del modello tabulare.  

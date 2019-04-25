@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 4ea890e0e2d49781f06f38f606a6c92582dc44d1
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47742230"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62472190"
 ---
 # <a name="transaction-processing"></a>Elaborazione di transazioni
 Oggetto *transazione* delimita l'inizio e alla fine di una serie di operazioni di accesso ai dati eseguite attraverso una connessione. Soggetti alle funzionalità transazionali di origine dati, il **connessione** oggetto consente inoltre di creare e gestire le transazioni. Ad esempio, Usa il Provider Microsoft OLE DB per SQL Server per accedere a un database in Microsoft SQL Server, è possibile creare più transazioni nidificate per i comandi da eseguire.  
@@ -41,7 +41,7 @@ Oggetto *transazione* delimita l'inizio e alla fine di una serie di operazioni d
   
  In base il **connessione** dell'oggetto [attributi](../../../ado/reference/ado-api/attributes-property-ado.md) proprietà, la chiamata al **CommitTrans** o **RollbackTrans** potrebbe (metodo) avviare automaticamente una nuova transazione. Se il **attributi** è impostata su **adXactCommitRetaining**, il provider avvia automaticamente una nuova transazione dopo un **CommitTrans** chiamare. Se il **attributi** è impostata su **adXactAbortRetaining**, il provider avvia automaticamente una nuova transazione dopo un **RollbackTrans** chiamare.  
   
-## <a name="transaction-isolation-level"></a>Livello di isolamento delle transazioni  
+## <a name="transaction-isolation-level"></a>Livello di isolamento della transazione  
  Usare la **IsolationLevel** per impostare il livello di isolamento di una transazione in un **connessione** oggetto. L'impostazione ha effetto fino al successivo si chiama il [BeginTrans](../../../ado/reference/ado-api/begintrans-committrans-and-rollbacktrans-methods-ado.md) (metodo). Se il livello di isolamento che richiesto non è disponibile, il provider può restituire il successivo livello più alto di isolamento. Vedere le **IsolationLevel** proprietà nel riferimento del programmatore di ADO per ulteriori informazioni sui valori validi.  
   
 ## <a name="nested-transactions"></a>Transazioni nidificate  

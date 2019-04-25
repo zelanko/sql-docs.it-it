@@ -1,5 +1,5 @@
 ---
-title: Le colonne della struttura di data mining | Documenti Microsoft
+title: Le colonne della struttura di data mining | Microsoft Docs
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 1cbdcd14127cdf45eb35dd7a24652be4f7c4d613
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34015158"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62509973"
 ---
 # <a name="mining-structure-columns"></a>Colonne della struttura di data mining
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -27,19 +27,19 @@ ms.locfileid: "34015158"
   
  La definizione di una colonna della struttura di data mining deve contenere le informazioni seguenti:  
   
--   **ID**: nome univoco della colonna, spesso identico al nome. Non è possibile modificare questo elemento dopo avere creato la struttura di data mining, mentre è possibile modificare il nome.  
+-   **ID**: Il nome univoco della colonna, spesso lo stesso come il nome. Non è possibile modificare questo elemento dopo avere creato la struttura di data mining, mentre è possibile modificare il nome.  
   
--   **Nome**: nome o alias della colonna.  
+-   **Nome**: Un nome o alias della colonna.  
   
--   **Contenuto**: enumerazione che descrive se i dati sono discreti o continui.  
+-   **Contenuto**: Enumerazione che descrive se i dati sono discreti o continui.  
   
--   **Tipo**: enumerazione che indica il tipo di dati generale.  
+-   **Tipo**: Enumerazione che indica il tipo di dati generale.  
   
--   **Distribuzione**: enumerazione che descrive la distribuzione prevista dei valori. Una distribuzione viene inclusa se la colonna è continua.  
+-   **Distribuzione**: Enumerazione che descrive la distribuzione prevista dei valori. Una distribuzione viene inclusa se la colonna è continua.  
   
--   **Flag di modellazione**: enumerazione che indica come gestire valori mancanti e così via. È anche possibile definire flag di modellazione nel modello di data mining, ma i flag del modello sono diversi da quelli utilizzati nelle colonne della struttura.  
+-   **Flag di modellazione**: Enumerazione che indica come gestire valori mancanti e così via. È anche possibile definire flag di modellazione nel modello di data mining, ma i flag del modello sono diversi da quelli utilizzati nelle colonne della struttura.  
   
--   **Associazioni**: proprietà che specificano i dati di origine.  
+-   **Associazioni**: Proprietà che specificano i dati di origine.  
   
  Gli algoritmi di terze parti possono includere inoltre proprietà personalizzate che è possibile definire nella colonna della struttura di data mining.  
   
@@ -60,7 +60,7 @@ ms.locfileid: "34015158"
 |Vengono fornite informazioni sull'aggiunta e la modifica delle colonne della struttura di data mining.|[Attività e procedure relative alla struttura di data mining](../../analysis-services/data-mining/mining-structure-tasks-and-how-tos.md)|  
   
 ## <a name="see-also"></a>Vedere anche  
- [Strutture di data mining & #40; Analysis Services - Data Mining & #41;](../../analysis-services/data-mining/mining-structures-analysis-services-data-mining.md)   
+ [Strutture di data mining &#40;Analysis Services - Data mining&#41;](../../analysis-services/data-mining/mining-structures-analysis-services-data-mining.md)   
  [Colonne del modello di data mining](../../analysis-services/data-mining/mining-model-columns.md)  
   
   

@@ -12,11 +12,11 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 2794e4f59b6c898b1fd956c0f9390ba9bbbd439e
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51668020"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62515476"
 ---
 # <a name="sqlerrorlogfile-class"></a>Classe SqlErrorLogFile
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -42,11 +42,11 @@ class SQLErrorLogFile
   
 |||  
 |-|-|  
-|ArchiveNumber|Tipo di dati: **uint32**<br /><br /> Tipo di accesso: sola lettura<br /><br /> <br /><br /> Numero dell'archivio per il file di log.|  
-|InstanceName|Tipo di dati: **stringa**<br /><br /> Tipo di accesso: sola lettura<br /><br /> Qualificatori: chiave<br /><br /> <br /><br /> Nome dell'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in cui si trova il file di log.|  
-|LastModified|Tipo di dati: **datetime**<br /><br /> Tipo di accesso: sola lettura<br /><br /> <br /><br /> Data dell'ultima modifica apportata al file di log.|  
-|LogFileSize|Tipo di dati: **uint32**<br /><br /> Tipo di accesso: sola lettura<br /><br /> <br /><br /> Dimensione del file di log, in byte.|  
-|nome|Tipo di dati: **stringa**<br /><br /> Tipo di accesso: sola lettura<br /><br /> Qualificatori: chiave<br /><br /> <br /><br /> Nome del file di log.|  
+|ArchiveNumber|Tipo di dati: **uint32**<br /><br /> Tipo di accesso: Sola lettura<br /><br /> <br /><br /> Numero dell'archivio per il file di log.|  
+|InstanceName|Tipo di dati: **stringa**<br /><br /> Tipo di accesso: Sola lettura<br /><br /> Qualificatori: Chiave<br /><br /> <br /><br /> Nome dell'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in cui si trova il file di log.|  
+|LastModified|Tipo di dati: **datetime**<br /><br /> Tipo di accesso: Sola lettura<br /><br /> <br /><br /> Data dell'ultima modifica apportata al file di log.|  
+|LogFileSize|Tipo di dati: **uint32**<br /><br /> Tipo di accesso: Sola lettura<br /><br /> <br /><br /> Dimensione del file di log, in byte.|  
+|Nome|Tipo di dati: **stringa**<br /><br /> Tipo di accesso: Sola lettura<br /><br /> Qualificatori: Chiave<br /><br /> <br /><br /> Nome del file di log.|  
   
 ## <a name="remarks"></a>Note  
   
@@ -54,7 +54,7 @@ class SQLErrorLogFile
 |-|-|  
 |MOF|Sqlmgmprovider xpsp2up.mof|  
 |DLL|Sqlmgmprovider.dll|  
-|Namespace|\root\Microsoft\SqlServer\ComputerManagement10|  
+|Spazio dei nomi|\root\Microsoft\SqlServer\ComputerManagement10|  
   
 ## <a name="example"></a>Esempio  
  Nell'esempio seguente viene illustrato come recuperare informazioni su tutti i file di log di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in un'istanza specificata di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Per eseguire l'esempio, sostituire \< *nome_istanza*> con il nome dell'istanza, ad esempio "Istanza1".  

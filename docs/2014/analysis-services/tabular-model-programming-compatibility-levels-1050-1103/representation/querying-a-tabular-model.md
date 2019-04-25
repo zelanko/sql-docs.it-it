@@ -1,23 +1,23 @@
 ---
 title: Esecuzione di query su un modello tabulare | Microsoft Docs
-ms.custom: ''
-ms.date: 06/13/2017
-ms.prod: sql-server-2014
-ms.reviewer: ''
+ms.date: 05/07/2018
+ms.prod: sql
 ms.technology: analysis-services
+ms.custom: tabular-models
 ms.topic: reference
-ms.assetid: b01d45d9-4598-4ded-9a9e-e3419cc3df8e
-author: minewiskan
 ms.author: owend
-manager: craigg
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
 ms.openlocfilehash: 61b6f366843b326a8983c27c3d5ee945604756f0
-ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "60156268"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62757738"
 ---
 # <a name="querying-a-tabular-model"></a>Esecuzione di query su un modello tabulare
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
   La query di uno sviluppatore su un modello tabulare produce il recupero dei dati dal database tabulare. Per portare a termine questo obiettivo vi sono due opzioni: utilizzare le query della tabella in DAX o utilizzare MDX e recuperare i dati come se stessero arrivando da un cubo. Tuttavia, a seconda della modalità sottostante del modello tabulare è possibile che l'utilizzo venga limitato alle sole query della tabella DAX. La modalità DirectQuery richiede l'utilizzo di query delle tabelle DAX.  
   
 ## <a name="querying-with-adomdnet"></a>Query con ADOMD.Net  

@@ -1,11 +1,11 @@
 ---
 title: MSSQLSERVER_845 | Microsoft Docs
 ms.custom: ''
-ms.date: 03/06/2017
-ms.prod: sql-server-2014
+ms.date: 04/04/2017
+ms.prod: sql
 ms.reviewer: ''
 ms.technology: supportability
-ms.topic: conceptual
+ms.topic: language-reference
 helpviewer_keywords:
 - 845 (Database Engine error)
 ms.assetid: 8fff6ad4-234c-44be-b123-e25d5e1cd63e
@@ -13,14 +13,15 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 9d98be02727582d4f9201ec7f47c3cdb8db5a56b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48100701"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62761920"
 ---
 # <a name="mssqlserver845"></a>MSSQLSERVER_845
-    
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  
 ## <a name="details"></a>Dettagli  
   
 |||  
@@ -33,10 +34,10 @@ ms.locfileid: "48100701"
 |Testo del messaggio|Timeout durante l'attesa di un latch del buffer di tipo %d per la pagina %S_PGID, ID di database %d.|  
   
 ## <a name="explanation"></a>Spiegazione  
- Un processo in attesa di acquisire un latch non è stato in grado di acquisirne uno prima della scadenza del limite di tempo. Ciò può verificarsi se il completamento di un'operazione di I/O richiede una quantità di tempo eccessiva, in genere a causa di un blocco dei processi di sistema determinato da altre attività. In alcuni casi, tuttavia, può essere dovuto a un errore hardware.  
+Un processo in attesa di acquisire un latch non è stato in grado di acquisirne uno prima della scadenza del limite di tempo. Ciò può verificarsi se il completamento di un'operazione di I/O richiede una quantità di tempo eccessiva, in genere a causa di un blocco dei processi di sistema determinato da altre attività. In alcuni casi, tuttavia, può essere dovuto a un errore hardware.  
   
 ## <a name="user-action"></a>Azione dell'utente  
- È possibile impedire che si verifichi questo errore eseguendo le attività seguenti:  
+È possibile impedire che si verifichi questo errore eseguendo le attività seguenti:  
   
 -   Ridurre il carico di lavoro.  
   
@@ -46,6 +47,5 @@ ms.locfileid: "48100701"
   
 -   Se si verificano spesso errori critici, ad esempio di asserzione, risolvere tali problemi.  
   
- Se l'errore persiste, contattare il Servizio Supporto Tecnico Clienti Microsoft.  
-  
+Se l'errore persiste, contattare il Servizio Supporto Tecnico Clienti Microsoft.  
   

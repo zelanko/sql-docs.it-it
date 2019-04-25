@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 011ca5ed5066113a467082e0fe05c6d0f831f25b
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53363463"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62757970"
 ---
 # <a name="configure-reporting-properties-for-power-view-reports"></a>Configurare le proprietà di creazione di report per i report Power View
   In questa lezione supplementare si imposteranno le proprietà dei report per il progetto Adventure Works Internet Sales Model. Con le proprietà dei report risulta più semplice, per gli utenti finali, selezionare e visualizzare i dati del modello in Power View. Si imposteranno inoltre le proprietà per nascondere alcune colonne e tabelle, nonché per creare nuovi dati da utilizzare nei grafici.  
@@ -161,7 +161,7 @@ ms.locfileid: "53363463"
      **Data**  
   
     > [!NOTE]  
-    >  Poiché la tabella Date è stata selezionata come tabella data dei modelli mediante l'impostazione Contrassegna come tabella data nella lezione 7 e la colonna Date nella tabella Date è stata selezionata come colonna da usare come identificatore univoco, la proprietà Identificatore di riga per la colonna Date verrà automaticamente impostata su True e non può essere modificata. Quando si utilizzano funzioni di Business Intelligence per le gerarchie temporali nelle formule DAX, è necessario specificare una tabella relativa alla data. In questo modello sono state create diverse misure utilizzando funzioni di Business Intelligence per le gerarchie temporali per calcolare i dati di vendita per diversi periodi, ad esempio i trimestri precedente e corrente, nonché per essere utilizzati negli indicatori KPI. Per altre informazioni su come specificare una tabella con data, vedere [Specificare Contrassegna come tabella data per l'utilizzo con funzionalità di Business Intelligence per le gerarchie temporali &#40;SSAS tabulare&#41;](tabular-models/specify-mark-as-date-table-for-use-with-time-intelligence-ssas-tabular.md) documentazione online di SQL Server.  
+    >  Poiché la tabella Date è stata selezionata come tabella data dei modelli, usando il contrassegno come impostazioni tabella data, nella lezione 7: Contrassegna come tabella data, la colonna Date nella tabella Date come colonna da utilizzare come identificatore univoco, la proprietà identificatore di riga per la colonna Date verrà automaticamente impostata su True e non può essere modificato. Quando si utilizzano funzioni di Business Intelligence per le gerarchie temporali nelle formule DAX, è necessario specificare una tabella relativa alla data. In questo modello sono state create diverse misure utilizzando funzioni di Business Intelligence per le gerarchie temporali per calcolare i dati di vendita per diversi periodi, ad esempio i trimestri precedente e corrente, nonché per essere utilizzati negli indicatori KPI. Per altre informazioni su come specificare una tabella con data, vedere [Specificare Contrassegna come tabella data per l'utilizzo con funzionalità di Business Intelligence per le gerarchie temporali &#40;SSAS tabulare&#41;](tabular-models/specify-mark-as-date-table-for-use-with-time-intelligence-ssas-tabular.md) documentazione online di SQL Server.  
   
     |colonna|Proprietà|Value|  
     |------------|--------------|-----------|  

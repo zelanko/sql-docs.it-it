@@ -13,11 +13,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.openlocfilehash: 543e248f19e76b0d2caca3ee595778fe430334ea
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58531883"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62524153"
 ---
 # <a name="linestring"></a>LineString
   `LineString` indica un oggetto unidimensionale che rappresenta una sequenza di punti e i segmenti lineari che li connettono.  

@@ -14,11 +14,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 44e773248cd2d61e211f6de98d5a0f81acc78bd1
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53215547"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62471176"
 ---
 # <a name="insert---sql-command"></a>INSERT (comando SQL)
 Accoda un record alla fine di una tabella che contiene i valori di campo specificato.  
@@ -41,10 +41,10 @@ INSERT INTO dbf_name [(fname1 [, fname2, ...])]
   
  Se la tabella specificata è aperta, l'istruzione INSERT Accoda il nuovo record alla tabella. Se la tabella è aperta in un'area di lavoro diverso da area di lavoro corrente, non è selezionato dopo che il record è stato aggiunto; l'area di lavoro corrente rimanga selezionata.  
   
- [( *fname1*[, *fname2*[,...]])]  
+ [( *fname1*[, *fname2*[, ...]])]  
  Specifica i nomi dei campi nel nuovo record in cui vengono inseriti i valori.  
   
- I valori ( *eExpression1*[, *eExpression2*[,...]])  
+ VALUES ( *eExpression1*[, *eExpression2*[, ...]])  
  Specifica i valori di campo inseriti un nuovo record. Se si omette i nomi dei campi, è necessario specificare i valori dei campi nell'ordine definito dalla struttura di tabella.  
   
 ## <a name="remarks"></a>Note  

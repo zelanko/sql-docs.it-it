@@ -19,11 +19,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 65c96ade0964146e1d8ff9cfa52f99938d290712
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47824849"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62759868"
 ---
 # <a name="sysmailallitems-transact-sql"></a>sysmail_allitems (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -32,21 +32,21 @@ ms.locfileid: "47824849"
   
  Per visualizzare solo i messaggi con lo stato non riuscito, usare [sysmail_faileditems &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sysmail-faileditems-transact-sql.md). Per visualizzare solo i messaggi non inviati, utilizzare [sysmail_unsentitems &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sysmail-unsentitems-transact-sql.md). Per visualizzare solo i messaggi che sono stati inviati, utilizzare [sysmail_sentitems &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sysmail-sentitems-transact-sql.md).  
   
-|Nome colonna|Tipo di dati|Description|  
+|Nome colonna|Tipo di dati|Descrizione|  
 |-----------------|---------------|-----------------|  
 |**mailitem_id**|**int**|Identificatore dell'elemento di posta nella coda della posta.|  
 |**profile_id**|**int**|Identificatore del profilo utilizzato per l'invio del messaggio.|  
-|**destinatari**|**ntext**|Indirizzi di posta elettronica dei destinatari del messaggio.|  
+|**recipients**|**ntext**|Indirizzi di posta elettronica dei destinatari del messaggio.|  
 |**copy_recipients**|**ntext**|Indirizzi di posta elettronica degli utenti che ricevono una copia del messaggio.|  
 |**blind_copy_recipients**|**ntext**|Indirizzi di posta elettronica degli utenti che ricevono una copia del messaggio, ma i cui nomi non sono indicati nell'intestazione del messaggio.|  
 |**subject**|**nvarchar(510)**|Oggetto del messaggio.|  
-|**Corpo**|**ntext**|Corpo del messaggio.|  
+|**body**|**ntext**|Corpo del messaggio.|  
 |**body_format**|**varchar(20)**|Formato del corpo del messaggio. I possibili valori sono TEXT e HTML.|  
-|**importanza**|**varchar(6)**|Il **importanza** parametro del messaggio.|  
-|**Sensibilità**|**varchar(12)**|Il **sensibilità** parametro del messaggio.|  
+|**importance**|**varchar(6)**|Il **importanza** parametro del messaggio.|  
+|**sensitivity**|**varchar(12)**|Il **sensibilità** parametro del messaggio.|  
 |**file_attachments**|**ntext**|Elenco delimitato da punti e virgola dei nomi dei file allegati al messaggio di posta elettronica.|  
 |**attachment_encoding**|**varchar(20)**|Tipo di allegato del messaggio di posta elettronica.|  
-|**Query**|**ntext**|Query eseguita dal programma di posta elettronica.|  
+|**query**|**ntext**|Query eseguita dal programma di posta elettronica.|  
 |**execute_query_database**|**sysname**|Contesto di database all'interno del quale il programma di posta elettronica ha eseguito la query.|  
 |**attach_query_result_as_file**|**bit**|Quando il valore è 0, i risultati della query sono inclusi nel corpo del messaggio di posta elettronica, dopo il contenuto del corpo. Quando il valore è 1, i risultati sono restituiti come file allegato.|  
 |**query_result_header**|**bit**|Quando il valore è 1, i risultati della query includono le intestazioni di colonna. Quando il valore è 0, i risultati della query non includono le intestazioni di colonna.|  

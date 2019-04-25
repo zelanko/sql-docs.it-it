@@ -14,16 +14,16 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 51f247adeee3e7c46faf5aca64f2668d736bb167
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48218181"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62757787"
 ---
 # <a name="table-import-wizard-reference-ssas"></a>Riferimento all'Importazione guidata tabella (SSAS)
   In questa sezione vengono fornite informazioni relative all' **Importazione guidata tabella**. Questa procedura guidata consente di importare dati da diverse origini dati. Per accedere alla procedura guidata da Progettazione modelli, selezionare **Importa da origine dati** nel menu **Modello**.  
   
-## <a name="pages"></a>Pagine  
+## <a name="pages"></a>Pages  
   
 -   [Impostazioni avanzate &#40;SSAS&#41;](advanced-settings-ssas.md)  
   
@@ -86,6 +86,6 @@ ms.locfileid: "48218181"
 -   [Specificare una Query SQL o MDX &#40;SSAS&#41;](specify-a-sql-or-mdx-query-ssas.md)  
   
 ## <a name="see-also"></a>Vedere anche  
- [Importare i dati &#40;tabulare di SSAS&#41;](import-data-ssas-tabular.md)  
+ [Importare dati &#40;SSAS tabulare&#41;](import-data-ssas-tabular.md)  
   
   

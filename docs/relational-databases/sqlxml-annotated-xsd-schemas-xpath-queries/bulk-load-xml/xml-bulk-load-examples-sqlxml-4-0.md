@@ -34,11 +34,11 @@ ms.author: genemi
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 2da7e9873c2c4bb2f0f12a980159dd05fbb9cef9
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56031032"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62521287"
 ---
 # <a name="xml-bulk-load-examples-sqlxml-40"></a>Esempi di caricamento bulk XML (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -201,7 +201,7 @@ End Function
 </Schema>  
 ```  
   
-## <a name="b-bulk-loading-xml-data-in-multiple-tables"></a>b. Caricamento bulk di dati XML in più tabelle  
+## <a name="b-bulk-loading-xml-data-in-multiple-tables"></a>B. Caricamento bulk di dati XML in più tabelle  
  In questo esempio, il documento XML è costituito il  **\<cliente >** e  **\<ordine >** elementi.  
   
 ```xml  

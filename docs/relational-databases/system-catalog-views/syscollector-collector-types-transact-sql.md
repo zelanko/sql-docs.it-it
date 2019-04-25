@@ -20,18 +20,18 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 41ae978e31db70f0cc49469d5ec14ae6f075ab7e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47650579"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62760239"
 ---
 # <a name="syscollectorcollectortypes-transact-sql"></a>syscollector_collector_types (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Fornisce informazioni su un tipo di agente di raccolta per un elemento della raccolta.  
   
-|Nome colonna|Tipo di dati|Description|  
+|Nome colonna|Tipo di dati|Descrizione|  
 |-----------------|---------------|-----------------|  
 |**collector_type_uid**|**uniqueidentifer**|GUID per un tipo di raccolta. Non ammette i valori Null.|  
 |**name**|**sysname**|Nome del tipo di raccolta. Non ammette i valori Null.|  

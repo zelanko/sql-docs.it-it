@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 782dec08b76a9e5a97719d6af39e2c30c0f92d19
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47797389"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62468618"
 ---
 # <a name="schema-views"></a>Viste degli schemi
 Un'applicazione può recuperare informazioni sui metadati dal sistema DBMS tramite la chiamata di funzioni di catalogo ODBC o le viste INFORMATION_SCHEMA. Le viste sono definite dallo standard ANSI SQL-92.  

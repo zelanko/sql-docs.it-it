@@ -12,11 +12,11 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: ffee06e8a6372f146996673c425a89000eda0a1d
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
-ms.translationtype: HT
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52420662"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62518634"
 ---
 # <a name="create-a-custom-workflow-master-data-services"></a>Creare un flusso di lavoro personalizzato (Master Data Services)
 
@@ -64,7 +64,7 @@ ms.locfileid: "52420662"
   
 3.  Aggiungere 'using Microsoft.MasterDataServices.Core.Workflow;' al file di codice C#.  
   
-4.  Ereditare da <xref:Microsoft.MasterDataServices.WorkflowTypeExtender.IWorkflowTypeExtender> nella dichiarazione di classe. La dichiarazione di classe deve essere simile a: 'public class WorkflowTester : IWorkflowTypeExtender'.  
+4.  Ereditare da <xref:Microsoft.MasterDataServices.WorkflowTypeExtender.IWorkflowTypeExtender> nella dichiarazione di classe. La dichiarazione di classe deve essere simile a: ' public class WorkflowTester: IWorkflowTypeExtender'.  
   
 5.  Implementare l'interfaccia <xref:Microsoft.MasterDataServices.WorkflowTypeExtender.IWorkflowTypeExtender>. Viene chiamato il metodo <xref:Microsoft.MasterDataServices.WorkflowTypeExtender.IWorkflowTypeExtender.StartWorkflow%2A> da SQL Server MDS Workflow Integration Service per avviare il flusso di lavoro.  
   
@@ -83,7 +83,7 @@ ms.locfileid: "52420662"
     </setting>  
     ```  
   
-3.  Sotto l'impostazione "ConnectionString" aggiungere l'impostazione "WorkflowTypeExtenders" per associare il nome di un tag all'assembly del gestore del flusso di lavoro. Ad esempio  
+3.  Sotto l'impostazione "ConnectionString" aggiungere l'impostazione "WorkflowTypeExtenders" per associare il nome di un tag all'assembly del gestore del flusso di lavoro. Ad esempio:  
   
     ```xml  
     <setting name="WorkflowTypeExtenders" serializeAs="String">  
@@ -145,7 +145,7 @@ ms.locfileid: "52420662"
   
 1.  Utilizzare lo snap-in Servizi per arrestare il servizio.  
   
-2.  Aprire un prompt dei comandi, passare al percorso del servizio ed eseguire il servizio in modalità console immettendo Microsoft.MasterDataServices.Workflow.exe -console.  
+2.  Aprire un prompt dei comandi, passare al percorso del servizio ed eseguire il servizio in modalità console immettendo: Microsoft.MasterDataServices.Workflow.exe -console.  
   
 3.  In [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] aggiornare il membro e applicare di nuovo le regole business. I log dettagliati vengono visualizzati nella finestra della console.  
   

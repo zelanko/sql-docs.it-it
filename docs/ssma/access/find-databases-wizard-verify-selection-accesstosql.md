@@ -13,11 +13,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.openlocfilehash: f2b3abf36923d11776ac08f4e4386981eb2aad48
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51669480"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62759658"
 ---
 # <a name="find-databases-wizard-verify-selection-accesstosql"></a>Procedura guidata trova database (verifica selezione) (AccessToSQL)
 Nella pagina Verifica selezione della procedura guidata trova database vengono elencati i file da aggiungere alla SSMA. Se l'elenco di file non è corretto, fare clic su **nuovamente** per modificare l'elenco. In caso contrario, fare clic su **fine** per aggiungere i file.  

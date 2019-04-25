@@ -10,11 +10,11 @@ ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
 ms.openlocfilehash: 2dae92263d7be76490a51ea7027f79ab5fcd6118
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52532575"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62509762"
 ---
 # <a name="configure-system-center-operations-manager-scom-to-monitor-analytics-platform-system"></a>Configurare System Center Operations Manager (SCOM) per monitorare il sistema di piattaforma Analitica
 Seguire questi passaggi per configurare il Management Pack di System Center Operations Manager (SCOM) per il sistema di piattaforma Analitica. I Management Pack sono necessari per monitorare il sistema di piattaforma Analitica da SCOM.  

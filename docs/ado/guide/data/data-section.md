@@ -14,11 +14,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: c6a06b2291d07378b63907b4a195fa3902930078
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53207770"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62472548"
 ---
 # <a name="data-section"></a>Sezione di dati
 La sezione di dati definisce i dati del set di righe con uno qualsiasi degli aggiornamenti, le operazioni di inserimento o eliminazione in sospeso. La sezione di dati può contenere zero o più righe. Può contenere solo i dati da un set di righe in cui la riga è definita dallo schema. Inoltre, come illustrato in precedenza, le colonne senza dati possono essere omessa. Se un attributo o un sottoelemento viene usato nella sezione dei dati e tale costrutto non è stato definito nella sezione schema, viene ignorata automaticamente.  
@@ -35,7 +35,7 @@ La sezione di dati definisce i dati del set di righe con uno qualsiasi degli agg
 ## <a name="binary"></a>Binario  
  Dati binari sono con codificata hex (vale a dire, un byte viene mappato a due caratteri, un carattere per nibble).  
   
-## <a name="datetime"></a>DateTime  
+## <a name="datetime"></a>Datetime  
  Il formato VT_DATE variant non è direttamente supportato dai tipi di dati XML-Data. Il formato corretto per le date con il componente di data e ora è aaaa-mm-ggThh.  
   
  Per altre informazioni su formati della data specificata da XML, vedere la [specifica W3C XML-Data](https://go.microsoft.com/fwlink/?LinkId=5692).  

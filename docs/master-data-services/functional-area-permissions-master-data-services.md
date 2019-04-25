@@ -16,11 +16,11 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: b16b70e4956caa7a2f5bffbdc484a725cfee937d
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
-ms.translationtype: HT
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52773823"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62516992"
 ---
 # <a name="functional-area-permissions-master-data-services"></a>Autorizzazioni per aree funzionali (Master Data Services)
 
@@ -42,7 +42,7 @@ ms.locfileid: "52773823"
   
  Quando si assegnano autorizzazioni a un'area funzionale, si rende visibile un'area dell'interfaccia utente all'utente o al gruppo.  
   
- All'interno dell'area funzionale **Visualizzatore** le autorizzazioni aggiuntive assegnate a oggetti modello e membri della gerarchia determinano i dati accessibili da un utente. All'interno di tutte le altre aree funzionali, un utente deve essere un amministratore del modello per visualizzare e agire su un modello. Per altre informazioni, vedere [Amministratori &#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md).  
+ All'interno dell'area funzionale **Visualizzatore** le autorizzazioni aggiuntive assegnate a oggetti modello e membri della gerarchia determinano i dati accessibili da un utente. All'interno di tutte le altre aree funzionali, un utente deve essere un amministratore del modello per visualizzare e agire su un modello. Per altre informazioni, vedere [Administrators &#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md).  
   
 > [!IMPORTANT]  
 >  Un utente con le autorizzazioni di utente con privilegi elevati ha l'autorizzazione di amministratore per tutti i modelli e ha anche tutte le altre autorizzazioni per le aree funzionali.  

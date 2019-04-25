@@ -19,28 +19,28 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 40696085bc8eb9980d1150feade91a9edd627be0
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47810388"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62471140"
 ---
 # <a name="data-tier-application-tables---sysdachistoryinternal"></a>Tabelle applicazioni livello dati - sysdac_history_internal
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Contiene informazioni sulle azioni eseguite per gestire le applicazioni livello dati. Questa tabella è archiviata nel **dbo** dello schema delle **msdb** database.  
   
-|Nome colonna|Tipo di dati|Description|  
+|Nome colonna|Tipo di dati|Descrizione|  
 |-----------------|---------------|-----------------|  
 |**action_id**|**int**|Identificatore dell'azione|  
 |**sequence_id**|**int**|Consente di identificare un passaggio all'interno di un'azione.|  
 |**instance_id**|**uniqueidentifier**|Identificatore dell'istanza di applicazione livello dati. Questa colonna può essere unita la **instance_id** colonna nelle [dbo.sysdac_instances &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/data-tier-application-views-dbo-sysdac-instances.md).|  
-|**action_type**|**tinyint**|Identificatore del tipo di azione:<br /><br /> **0** = distribuzione<br /><br /> **1** = creazione<br /><br /> **2** = ridenominazione<br /><br /> **3** = scollegamento<br /><br /> **4** = delete|  
-|**action_type_name**|**varchar(19)**|Nome del tipo di azione:<br /><br /> **Distribuire**<br /><br /> **creare**<br /><br /> **Rinomina**<br /><br /> **detach**<br /><br /> **delete**|  
-|**dac_object_type**|**tinyint**|Identificatore del tipo di oggetto interessato dall'azione:<br /><br /> **0** = file dacpac<br /><br /> **1** = account di accesso<br /><br /> **2** = database|  
+|**action_type**|**tinyint**|Identificatore del tipo di azione:<br /><br /> **0** = distribuzione<br /><br /> **1** = creazione<br /><br /> **2** = ridenominazione<br /><br /> **3** = detach<br /><br /> **4** = delete|  
+|**action_type_name**|**varchar(19)**|Nome del tipo di azione:<br /><br /> **deploy**<br /><br /> **create**<br /><br /> **rename**<br /><br /> **detach**<br /><br /> **delete**|  
+|**dac_object_type**|**tinyint**|Identificatore del tipo di oggetto interessato dall'azione:<br /><br /> **0** = dacpac<br /><br /> **1** = login<br /><br /> **2** = database|  
 |**dac_object_type_name**|**varchar(8)**|Nome del tipo di oggetto interessato dall'azione:<br /><br /> **file dacpac** = istanza di applicazione livello dati<br /><br /> **login**<br /><br /> **database**|  
-|**action_status**|**tinyint**|Codice di identificazione dello stato corrente dell'azione:<br /><br /> **0** = in sospeso<br /><br /> **1** = esito positivo<br /><br /> **2** = esito negativo|  
-|**action_status_name**|**varchar (11)**|Stato corrente dell'azione:<br /><br /> **pending**<br /><br /> **Operazione riuscita**<br /><br /> **fail**|  
+|**action_status**|**tinyint**|Codice di identificazione dello stato corrente dell'azione:<br /><br /> **0** = in sospeso<br /><br /> **1** = success<br /><br /> **2** = fail|  
+|**action_status_name**|**varchar(11)**|Stato corrente dell'azione:<br /><br /> **pending**<br /><br /> **success**<br /><br /> **fail**|  
 |**Obbligatorio**|**bit**|Utilizzato dal [!INCLUDE[ssDE](../../includes/ssde-md.md)] per il rollback di un'operazione dell'applicazione livello dati.|  
 |**dac_object_name_pretran**|**sysname**|Nome dell'oggetto prima dell'esecuzione del commit della transazione contenente l'azione. Utilizzato solo per database e account di accesso.|  
 |**dac_object_name_posttran**|**sysname**|Nome dell'oggetto dopo l'esecuzione del commit della transazione contenente l'azione. Utilizzato solo per database e account di accesso.|  

@@ -15,11 +15,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 36d9be6a759e2684602a20ed0c493818d5fe4cc4
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52775603"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62761640"
 ---
 # <a name="audit-add-db-user-event-class"></a>Audit Add DB User - classe di evento
   La classe di evento **Audit Add DB User** si verifica ogni volta che un account di accesso viene aggiunto o rimosso come utente database in un database. Questa classe di evento viene usata per le stored procedure **sp_grantdbaccess**, **sp_revokedbaccess**, **sp_adduser**e **sp_dropuser** .  
@@ -36,7 +36,7 @@ ms.locfileid: "52775603"
 |**DatabaseID**|**int**|ID del database specificato nell'istruzione di *database* USE oppure il database predefinito se per un'istanza specifica l'istruzione di *database* USE non è stata eseguita. [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] visualizza il nome del database se la colonna di dati **ServerName** è acquisita nella traccia e il server è disponibile. Determinare il valore per un database utilizzando la funzione DB_ID.|3|Yes|  
 |**DatabaseName**|**nvarchar**|Nome del database cui il nome utente viene aggiunto o dal quale viene rimosso.|35|Yes|  
 |**DBUserName**|**nvarchar**|Nome dell'utente che ha eseguito l'istruzione nel database.|40|Yes|  
-|**EventClass**|**int**|Tipo di evento = 109.|27|No|  
+|**EventClass**|**int**|Tipo di evento = 109.|27|no|  
 |**EventSequence**|**int**|Sequenza di un determinato evento all'interno della richiesta.|51|No|  
 |**EventSubClass**|**int**|Tipo di sottoclasse di evento.<br /><br /> 1=Aggiungi<br /><br /> 2=Elimina<br /><br /> 3=Concedi accesso al database<br /><br /> 4=Revoca accesso al database|21|Yes|  
 |**HostName**|**nvarchar**|Nome del computer in cui viene eseguito il client. Questa colonna di dati viene popolata se il nome host viene fornito dal client. Per determinare il nome host, usare la funzione HOST_NAME.|8|Yes|  

@@ -15,11 +15,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: f2f8da4d4178a411f71311f9b2aa62c78276863c
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52821785"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62519226"
 ---
 # <a name="scheduling-automatic-administrative-tasks-in-sql-server-agent"></a>Pianificazione delle attività amministrative automatiche in SQL Server Agent
   In SMO [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Agent è rappresentato dagli oggetti seguenti:  
@@ -166,7 +166,7 @@ $jbsch.Create();
 ## <a name="creating-an-alert-in-visual-basic"></a>Creazione di un avviso in Visual Basic  
  In questo esempio di codice viene creato un avviso attivato da una condizione delle prestazioni. La condizione deve essere fornita in un formato specifico:  
   
- **ObjectName | CounterName | Istanza | ComparisionOp | CompValue**  
+ **ObjectName|CounterName|Instance|ComparisionOp|CompValue**  
   
  Per la notifica dell'avviso è necessario un operatore. Per il tipo <xref:Microsoft.SqlServer.Management.Smo.Agent.Operator> sono necessarie le parentesi quadre poiché `operator` è una parola chiave di Visual Basic.  
   
@@ -175,7 +175,7 @@ $jbsch.Create();
 ## <a name="creating-an-alert-in-visual-c"></a>Creazione di un avviso in Visual C#  
  In questo esempio di codice viene creato un avviso attivato da una condizione delle prestazioni. La condizione deve essere fornita in un formato specifico:  
   
- **ObjectName | CounterName | Istanza | ComparisionOp | CompValue**  
+ **ObjectName|CounterName|Instance|ComparisionOp|CompValue**  
   
  Per la notifica dell'avviso è necessario un operatore. Per il tipo <xref:Microsoft.SqlServer.Management.Smo.Agent.Operator> sono necessarie le parentesi quadre poiché `operator` è una parola chiave di [!INCLUDE[csprcs](../../../includes/csprcs-md.md)].  
   
@@ -208,7 +208,7 @@ $jbsch.Create();
 ## <a name="creating-an-alert-in-powershell"></a>Creazione di un avviso in PowerShell  
  In questo esempio di codice viene creato un avviso attivato da una condizione delle prestazioni. La condizione deve essere fornita in un formato specifico:  
   
- **ObjectName | CounterName | Istanza | ComparisionOp | CompValue**  
+ **ObjectName|CounterName|Instance|ComparisionOp|CompValue**  
   
  Per la notifica dell'avviso è necessario un operatore. Per il tipo <xref:Microsoft.SqlServer.Management.Smo.Agent.Operator> sono necessarie le parentesi quadre poiché `operator` è una parola chiave di [!INCLUDE[csprcs](../../../includes/csprcs-md.md)].  
   

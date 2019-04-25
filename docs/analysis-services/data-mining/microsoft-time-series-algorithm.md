@@ -1,5 +1,5 @@
 ---
-title: Algoritmo Microsoft Time Series | Documenti Microsoft
+title: Algoritmo Microsoft Time Series | Microsoft Docs
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 390ff54485e92e28736424048e5aaedbbee31181
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34018538"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62758069"
 ---
 # <a name="microsoft-time-series-algorithm"></a>Algoritmo Microsoft Time Series
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -89,10 +89,10 @@ ms.locfileid: "34018538"
   
  In entrambi gli esempi, è possibile stimare le nuove vendite future e il volume di ogni prodotto. Non è possibile stimare valori nuovi relativi al prodotto o all'ora.  
   
-### <a name="example-1-time-series-data-set-with-series-represented-as-column-values"></a>Esempio 1: Set di dati della serie temporale con serie rappresentate come valori di colonna  
+### <a name="example-1-time-series-data-set-with-series-represented-as-column-values"></a>Esempio 1: Set di dati di serie temporale con serie rappresentate come valori di colonna  
  In questo esempio viene utilizzata la tabella seguente di casi di input:  
   
-|TimeID|Product|Sales|Volume|  
+|TimeID|Prodotto|Sales|Volume|  
 |------------|-------------|-----------|------------|  
 |1/2001|A|1000|600|  
 |2/2001|A|1100|500|  
@@ -105,7 +105,7 @@ ms.locfileid: "34018538"
   
  La colonna Sales descrive i profitti lordi del prodotto specificato per un giorno e la colonna Volume descrive la quantità del prodotto specificato che rimane nel warehouse. In queste due colonne sono contenuti i dati utilizzati per il training del modello. Sia Sales che Volume possono essere attributi stimabili per ogni serie nella colonna Product.  
   
-### <a name="example-2-time-series-data-set-with-each-series-in-separate-column"></a>Esempio 2: Set di dati della serie temporale con ogni serie in una colonna separata  
+### <a name="example-2-time-series-data-set-with-each-series-in-separate-column"></a>Esempio 2: Set di dati di serie temporale con ogni serie nella colonna separata  
  Anche se in questo esempio vengono utilizzati fondamentalmente gli stessi dati di input del primo esempio, i dati di input vengono strutturati in modo diverso, come illustrato nella tabella seguente:  
   
 |TimeID|A_Sales|A_Volume|B_Sales|B_Volume|  
@@ -113,7 +113,7 @@ ms.locfileid: "34018538"
 |1/2001|1000|600|500|900|  
 |2/2001|1100|500|300|890|  
   
- In questa tabella, la colonna TimeID contiene ancora la serie di casi per il modello Time Series che viene definito come colonna chiave temporale. Tuttavia, le colonne precedenti relative alle vendite e al volume sono suddivise in due colonne, ognuna preceduta dal nome del prodotto. Di conseguenza, la colonna TimeID include una singola voce per ogni giorno. In questo modo viene creato un modello Time Series contenente quattro colonne stimabili: A_Sales, A_Volume, B_Sales e B_Volume.  
+ In questa tabella, la colonna TimeID contiene ancora la serie di casi per il modello Time Series che viene definito come colonna chiave temporale. Tuttavia, le colonne precedenti relative alle vendite e al volume sono suddivise in due colonne, ognuna preceduta dal nome del prodotto. Di conseguenza, la colonna TimeID include una singola voce per ogni giorno. Ciò consente di creare un modello time series contenente quattro colonne stimabili: A_Sales, A_Volume, B_Sales e B_Volume.  
   
  Inoltre, poiché i prodotti sono stati separati in colonne diverse, non è necessario specificare una colonna chiave della serie aggiuntiva. Tutte le colonne del modello sono colonne della serie di casi o colonne stimabili.  
   
@@ -133,7 +133,7 @@ ms.locfileid: "34018538"
   
 -   Un modello Time Series può eseguire stime che differiscono, a volte in modo significativo, a seconda del sistema operativo a 64 bit utilizzato dal server. Queste differenze sono dovute al modo in cui un sistema basato su [!INCLUDE[vcpritanium](../../includes/vcpritanium-md.md)]rappresenta e gestisce i numeri per operazioni aritmetiche a virgola mobile, che è diverso dal modo in cui tali calcoli vengono eseguiti in un sistema basato su [!INCLUDE[vcprx64](../../includes/vcprx64-md.md)]. Poiché i risultati della stima possono essere specifici nel sistema operativo, si consiglia di valutare i modelli dello stesso sistema operativo che verrà utilizzato in produzione.  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Note  
   
 -   Non supporta l'utilizzo del linguaggio PMML (Predictive Model Markup Language) per la creazione di modelli di data mining.  
   
@@ -144,10 +144,10 @@ ms.locfileid: "34018538"
 -   Supporta il drill-through.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Algoritmi di Data Mining & #40; Analysis Services - Data Mining & #41;](../../analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining.md)   
- [Visualizzare un modello utilizzando il visualizzatore Microsoft Time Series](../../analysis-services/data-mining/browse-a-model-using-the-microsoft-time-series-viewer.md)   
- [Riferimento tecnico per algoritmo Microsoft Time Series](../../analysis-services/data-mining/microsoft-time-series-algorithm-technical-reference.md)   
- [Tempo Series Model Query Examples](../../analysis-services/data-mining/time-series-model-query-examples.md)   
- [Contenuto del modello di data mining per i modelli Time Series & #40; Analysis Services - Data Mining & #41;](../../analysis-services/data-mining/mining-model-content-for-time-series-models-analysis-services-data-mining.md)  
+ [Algoritmi di data mining &#40;Analysis Services - Data mining&#41;](../../analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining.md)   
+ [Visualizzare un modello utilizzando il Visualizzatore Microsoft Times Series](../../analysis-services/data-mining/browse-a-model-using-the-microsoft-time-series-viewer.md)   
+ [Riferimento tecnico per l'algoritmo Microsoft Time Series](../../analysis-services/data-mining/microsoft-time-series-algorithm-technical-reference.md)   
+ [Esempi di query sul modello di serie temporale](../../analysis-services/data-mining/time-series-model-query-examples.md)   
+ [Contenuto dei modelli di data mining per i modelli Time Series &#40;Analysis Services - Data mining&#41;](../../analysis-services/data-mining/mining-model-content-for-time-series-models-analysis-services-data-mining.md)  
   
   

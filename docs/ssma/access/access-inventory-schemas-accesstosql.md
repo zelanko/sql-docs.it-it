@@ -38,27 +38,27 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.openlocfilehash: 71a52a619ba2a3c16c372021181b90bae72ccfe7
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47653719"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62759698"
 ---
-# <a name="access-inventory-schemas-accesstosql"></a>Schemi di inventario di Access (AccessToSQL)
+# <a name="access-inventory-schemas-accesstosql"></a>Access Inventory Schemas (AccessToSQL)
 Le sezioni seguenti descrivono le tabelle che vengono create da SSMA durante l'esportazione degli schemi di accesso per [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 ## <a name="databases"></a>Database  
 I metadati del database viene esportato per la **SSMA_Access_InventoryDatabases** tabella. Questa tabella contiene le colonne seguenti:  
   
-|Nome colonna|Tipo di dati|Description|  
+|Nome colonna|Tipo di dati|Descrizione|  
 |---------------|-------------|---------------|  
 |**DatabaseId**|**uniqueidentifier**|GUID che identifica in modo univoco ogni database. Questa colonna è anche la chiave primaria per la tabella.|  
 |**DatabaseName**|**nvarchar(4000)**|Il nome del database di Access.|  
 |**ExportTime**|**datetime**|Data e ora di che creazione di questi metadati da SSMA.|  
-|**Percorso file**|**nvarchar(4000)**|Il nome di file e percorso completo del database di Access.|  
+|**FilePath**|**nvarchar(4000)**|Il nome di file e percorso completo del database di Access.|  
 |**FileSize**|**bigint**|Le dimensioni del database di Access in KB.|  
 |**FileOwner**|**nvarchar(4000)**|L'account Windows specificato come proprietario del database di Access.|  
-|**Proprietà DateCreated**|**datetime**|Data e ora di che creazione del database di Access.|  
+|**DateCreated**|**datetime**|Data e ora di che creazione del database di Access.|  
 |**DateModified**|**datetime**|Data e ora che dell'ultima modifica apportata al database di Access.|  
 |**TablesCount**|**int**|Il numero di tabelle nel database di Access.|  
 |**QueriesCount**|**int**|Il numero di query del database di Access.|  
@@ -75,7 +75,7 @@ I metadati del database viene esportato per la **SSMA_Access_InventoryDatabases*
 ## <a name="tables"></a>Tabelle  
 Metadati della tabella vengono esportati per il **SSMA_Access_InventoryTables** tabella. Questa tabella contiene le colonne seguenti:  
   
-|Nome colonna|Tipo di dati|Description|  
+|Nome colonna|Tipo di dati|Descrizione|  
 |---------------|-------------|---------------|  
 |**DatabaseId**|**uniqueidentifier**|Identifica il database che contiene questa tabella.|  
 |**TableId**|**uniqueidentifier**|GUID che identifica in modo univoco la tabella. Questa colonna è anche la chiave primaria per la tabella.|  
@@ -88,7 +88,7 @@ Metadati della tabella vengono esportati per il **SSMA_Access_InventoryTables** 
 ## <a name="columns"></a>Colonne  
 I metadati della colonna viene esportato per la **SSMA_Access_InventoryColumns** tabella. Questa tabella contiene le colonne seguenti:  
   
-|Nome colonna|Tipo di dati|Description|  
+|Nome colonna|Tipo di dati|Descrizione|  
 |---------------|-------------|---------------|  
 |**DatabaseId**|**uniqueidentifier**|Identifica il database che contiene questa colonna.|  
 |**TableId**|**uniqueidentifier**|Identifica la tabella che contiene questa colonna.|  
@@ -104,7 +104,7 @@ I metadati della colonna viene esportato per la **SSMA_Access_InventoryColumns**
 ## <a name="indexes"></a>Indici  
 I metadati dell'indice viene esportato per la **SSMA_Access_InventoryIndexes** tabella. Questa tabella contiene le colonne seguenti:  
   
-|Nome colonna|Tipo di dati|Description|  
+|Nome colonna|Tipo di dati|Descrizione|  
 |---------------|-------------|---------------|  
 |**DatabaseId**|**uniqueidentifier**|Identifica il database che contiene questo indice.|  
 |**TableId**|**uniqueidentifier**|Identifica la tabella che contiene questo indice.|  
@@ -118,7 +118,7 @@ I metadati dell'indice viene esportato per la **SSMA_Access_InventoryIndexes** t
 ## <a name="foreign-keys"></a>Chiavi esterne  
 I metadati della chiave esterno viene esportato per la **SSMA_Access_InventoryForeignKeys** tabella. Questa tabella contiene le colonne seguenti:  
   
-|Nome colonna|Tipo di dati|Description|  
+|Nome colonna|Tipo di dati|Descrizione|  
 |---------------|-------------|---------------|  
 |**DatabaseId**|**uniqueidentifier**|Identifica il database che contiene il vincolo foreign key.|  
 |**TableId**|**uniqueidentifier**|Identifica la tabella che contiene il vincolo foreign key.|  
@@ -134,7 +134,7 @@ I metadati della chiave esterno viene esportato per la **SSMA_Access_InventoryFo
 ## <a name="queries"></a>Query  
 Query metadati vengono esportati nel **SSMA_Access_InventoryQueries** tabella. Questa tabella contiene le colonne seguenti:  
   
-|Nome colonna|Tipo di dati|Description|  
+|Nome colonna|Tipo di dati|Descrizione|  
 |---------------|-------------|---------------|  
 |**DatabaseId**|**uniqueidentifier**|Identifica il database contenente la query.|  
 |**QueryId**|**int**|Incremento valore intero che identifica la query. Questa colonna è la chiave primaria per la tabella.|  
@@ -147,34 +147,34 @@ Query metadati vengono esportati nel **SSMA_Access_InventoryQueries** tabella. Q
 ## <a name="forms"></a>Form  
 I metadati di modulo vengono esportati per il **SSMA_Access_InventoryForms** tabella. Questa tabella contiene le colonne seguenti:  
   
-|Nome colonna|Tipo di dati|Description|  
+|Nome colonna|Tipo di dati|Descrizione|  
 |---------------|-------------|---------------|  
 |**DatabaseId**|**uniqueidentifier**|Identifica il database che contiene questo modulo.|  
 |**FormId**|**int**|Incremento valore intero che identifica il modulo. Questa colonna è la chiave primaria per la tabella.|  
-|**NomeModulo**|**nvarchar(4000)**|Nome del form.|  
+|**FormName**|**nvarchar(4000)**|Nome del form.|  
   
 ## <a name="macros"></a>Macro  
 Metadati della macro vengono esportati per il **SSMA_Access_InventoryMacros** tabella. Questa tabella contiene le colonne seguenti:  
   
-|Nome colonna|Tipo di dati|Description|  
+|Nome colonna|Tipo di dati|Descrizione|  
 |---------------|-------------|---------------|  
 |**DatabaseId**|**uniqueidentifier**|Identifica il database che contiene la macro.|  
 |**MacroId**|**int**|Incremento valore intero che identifica la macro. Questa colonna è la chiave primaria per la tabella.|  
-|**Nomemacro**|**nvarchar(4000)**|Il nome della macro.|  
+|**MacroName**|**nvarchar(4000)**|Il nome della macro.|  
   
 ## <a name="reports"></a>Report  
 I metadati del report viene esportato per la **SSMA_Access_InventoryReports** tabella. Questa tabella contiene le colonne seguenti:  
   
-|Nome colonna|Tipo di dati|Description|  
+|Nome colonna|Tipo di dati|Descrizione|  
 |---------------|-------------|---------------|  
 |**DatabaseId**|**uniqueidentifier**|Identifica il database che contiene il report.|  
-|**ID report**|**int**|Incremento valore intero che identifica il report. Questa colonna è la chiave primaria per la tabella.|  
-|**NomeReport**|**nvarchar(4000)**|Nome del report.|  
+|**ReportId**|**int**|Incremento valore intero che identifica il report. Questa colonna è la chiave primaria per la tabella.|  
+|**ReportName**|**nvarchar(4000)**|Nome del report.|  
   
 ## <a name="modules"></a>Moduli  
 I metadati di modulo vengono esportati per il **SSMA_Access_InventoryModules** tabella. Questa tabella contiene le colonne seguenti:  
   
-|Nome colonna|Tipo di dati|Description|  
+|Nome colonna|Tipo di dati|Descrizione|  
 |---------------|-------------|---------------|  
 |**DatabaseId**|**uniqueidentifier**|Identifica il database che contiene il modulo.|  
 |**ModuleId**|**int**|Incremento valore intero che identifica il modulo. Questa colonna è la chiave primaria per la tabella.|  

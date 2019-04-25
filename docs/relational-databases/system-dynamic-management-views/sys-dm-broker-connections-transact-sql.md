@@ -1,5 +1,5 @@
 ---
-title: Sys.dm_broker_connections (Transact-SQL) | Microsoft Docs
+title: sys.dm_broker_connections (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/08/2016
 ms.prod: sql
@@ -20,18 +20,18 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 95acff9d1b80560294758045c449c1c6c6790c27
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47615761"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62759975"
 ---
 # <a name="sysdmbrokerconnections-transact-sql"></a>sys.dm_broker_connections (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Restituisce una riga per ogni connessione di rete di [!INCLUDE[ssSB](../../includes/sssb-md.md)]. Per ulteriori informazioni, vedere la tabella seguente.  
   
-|Nome colonna|Tipo di dati|Description|  
+|Nome colonna|Tipo di dati|Descrizione|  
 |-----------------|---------------|-----------------|  
 |**connection_id**|**uniqueidentifier**|Identificatore della connessione. Ammette valori Null.|  
 |**transport_stream_id**|**uniqueidentifier**|Identificatore del [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] connessione di interfaccia di rete (SNI) utilizzato dalla connessione per le comunicazioni TCP/IP. Ammette valori Null.|  
@@ -47,7 +47,7 @@ ms.locfileid: "47615761"
 |**login_state**|**smallint**|Stato del processo di accesso per la connessione. I valori possibili sono:<br /><br /> 0 = INITIAL<br /><br /> 1 = WAIT LOGIN NEGOTIATE<br /><br /> 2 = ONE ISC<br /><br /> 3 = ONE ASC<br /><br /> 4 = TWO ISC<br /><br /> 5 = TWO ASC<br /><br /> 6 = WAIT ISC Confirm<br /><br /> 7 = WAIT ASC Confirm<br /><br /> 8 = WAIT REJECT<br /><br /> 9 = WAIT PRE-MASTER SECRET<br /><br /> 10 = WAIT VALIDATION<br /><br /> 11 = WAIT ARBITRATION<br /><br /> 12 = ONLINE<br /><br /> 13 = ERROR|  
 |**login_state_desc**|**nvarchar(60)**|Descrizione dello stato corrente dell'accesso dal computer remoto. I valori possibili sono:<br /><br /> È in corso l'inizializzazione dell'handshake della connessione.<br /><br /> L'handshake della connessione è in attesa del messaggio relativo alla negoziazione dell'accesso.<br /><br /> L'handshake della connessione ha inizializzato e inviato il contesto di sicurezza per l'autenticazione.<br /><br /> L'handshake della connessione ha ricevuto e accettato il contesto di sicurezza per l'autenticazione.<br /><br /> L'handshake della connessione ha inizializzato e inviato il contesto di sicurezza per l'autenticazione. È disponibile un meccanismo facoltativo per l'autenticazione dei peer.<br /><br /> L'handshake della connessione ha ricevuto e inviato il contesto di sicurezza accettato per l'autenticazione. È disponibile un meccanismo facoltativo per l'autenticazione dei peer.<br /><br /> L'handshake della connessione è in attesa del messaggio di conferma dell'inizializzazione del contesto di sicurezza.<br /><br /> L'handshake della connessione è in attesa del messaggio di conferma dell'accettazione del contesto di sicurezza.<br /><br /> L'handshake della connessione è in attesa del messaggio di rifiuto SSPI per l'autenticazione non riuscita.<br /><br /> L'handshake della connessione è in attesa del messaggio relativo al segreto pre-master.<br /><br /> L'handshake della connessione è in attesa del messaggio di convalida.<br /><br /> L'handshake della connessione è in attesa del messaggio relativo all'arbitraggio.<br /><br /> L'handshake della connessione è completo ed è online (pronto) per lo scambio di messaggi.<br /><br /> Errore di connessione.|  
 |**peer_certificate_id**|**int**|ID di oggetto locale del certificato utilizzato dall'istanza remota per l'autenticazione. Il proprietario di questo certificato deve disporre delle autorizzazioni CONNECT per l'endpoint di [!INCLUDE[ssSB](../../includes/sssb-md.md)]. Ammette valori Null.|  
-|**encryption_algorithm**|**smallint**|Algoritmo di crittografia utilizzato per la connessione. Ammette valori Null. I valori possibili sono:<br /><br /> **Valore &#124; descrizione &#124; opzione DDL corrispondente**<br /><br /> 0 &#124; none &#124; disabilitato<br /><br /> 1 &AMP;#124; SOLO FIRMA<br /><br /> 2 &#124; versione RC4, AES &#124; richiesto &#124; obbligatorio algoritmo RC4}<br /><br /> 3 &#124; AES &#124;obbligatorio algoritmo AES<br /><br /> **Nota:** l'algoritmo RC4 è supportato solo per compatibilità con le versioni precedenti. È possibile crittografare il nuovo materiale usando RC4 o RC4_128 solo quando il livello di compatibilità del database è 90 o 100. (Non consigliato.) Usare un algoritmo più recente, ad esempio uno degli algoritmi AES. In [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] e versioni successive il materiale crittografato utilizzando RC4 o RC4_128 può essere decrittografato in qualsiasi livello di compatibilità.|  
+|**encryption_algorithm**|**smallint**|Algoritmo di crittografia utilizzato per la connessione. Ammette valori Null. I valori possibili sono:<br /><br /> **Valore &#124; descrizione &#124; opzione DDL corrispondente**<br /><br /> 0 &#124; none &#124; disabilitato<br /><br /> 1 &#124; SIGNING ONLY<br /><br /> 2 &#124; versione RC4, AES &#124; richiesto &#124; obbligatorio algoritmo RC4}<br /><br /> 3 &#124; AES &#124;obbligatorio algoritmo AES<br /><br /> **Nota:** L'algoritmo RC4 è supportato solo per motivi di compatibilità con le versioni precedenti. È possibile crittografare il nuovo materiale usando RC4 o RC4_128 solo quando il livello di compatibilità del database è 90 o 100. (Non consigliato.) Usare un algoritmo più recente, ad esempio uno degli algoritmi AES. In [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] e versioni successive il materiale crittografato utilizzando RC4 o RC4_128 può essere decrittografato in qualsiasi livello di compatibilità.|  
 |**encryption_algorithm_desc**|**nvarchar(60)**|Rappresentazione testuale dell'algoritmo di crittografia. Ammette valori Null. I valori possibili sono:<br /><br /> **Descrizione &#124; opzione DDL corrispondente**<br /><br /> NONE &#124; Disabled<br /><br /> RC4 &#124; {necessari &#124; obbligatorio algoritmo RC4}<br /><br /> AES &#124; obbligatorio algoritmo AES<br /><br /> NONE, RC4 &#124; {supportati &#124; algoritmo RC4 è supportato}<br /><br /> NONE, AES &#124; algoritmo RC4 è supportato<br /><br /> RC4, AES &#124; obbligatorio algoritmo RC4 AES<br /><br /> AES, RC4 &#124; obbligatorio algoritmo AES RC4<br /><br /> NONE, RC4, AES &#124; algoritmo RC4 è supportato AES<br /><br /> NONE, AES, RC4 &#124; algoritmo AES RC4 è supportato|  
 |**receives_posted**|**smallint**|Numero di ricezioni di rete asincrone non ancora completate per la connessione. Ammette valori Null.|  
 |**is_receive_flow_controlled**|**bit**|Specifica se le ricezioni di rete sono state posticipate a causa del controllo di flusso, poiché la rete è occupata. Ammette valori Null.<br /><br /> 1 = True|  

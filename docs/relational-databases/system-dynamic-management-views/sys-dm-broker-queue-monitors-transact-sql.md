@@ -20,11 +20,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: fed9d261f692e9c9e1eee4f7078ca69e8c74594e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47779859"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62760117"
 ---
 # <a name="sysdmbrokerqueuemonitors-transact-sql"></a>sys.dm_broker_queue_monitors (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -32,11 +32,11 @@ ms.locfileid: "47779859"
   Restituisce una riga per ogni monitoraggio di coda nell'istanza. Un monitoraggio di coda gestisce l'attivazione di una coda.  
   
 
-|Nome colonna|Tipo di dati|Description|  
+|Nome colonna|Tipo di dati|Descrizione|  
 |-----------------|---------------|-----------------|  
 |**database_id**|**int**|Identificatore di oggetto per il database contenente la coda controllata dal monitoraggio. Ammette valori Null.|  
 |**queue_id**|**int**|Identificatore di oggetto per la coda controllata dal monitoraggio. Ammette valori Null.|  
-|**state**|**nvarchar(32)**|Stato del server di monitoraggio. Ammette valori Null. I possibili valori sono i seguenti:<br /><br /> **INATTIVO**<br /><br /> **RICEVE UNA NOTIFICA**<br /><br /> **RECEIVES_OCCURRING**|  
+|**state**|**nvarchar(32)**|Stato del server di monitoraggio. Ammette valori Null. I possibili valori sono i seguenti:<br /><br /> **INACTIVE**<br /><br /> **RICEVE UNA NOTIFICA**<br /><br /> **RECEIVES_OCCURRING**|  
 |**last_empty_rowset_time**|**datetime**|Ultima volta in cui un'istruzione RECEIVE dalla coda ha restituito un risultato vuoto. Ammette valori Null.|  
 |**last_activated_time**|**datetime**|Ultima volta in cui il monitoraggio di coda ha attivato una stored procedure. Ammette valori Null.|  
 |**tasks_waiting**|**int**|Numero di sessioni in attesa della coda all'interno di un'istruzione RECEIVE. Ammette valori Null.<br /><br /> Nota: Questo numero include qualsiasi sessione che esegue un'istruzione receive, indipendentemente dal fatto che il monitoraggio di coda avviato la sessione. Ciò è valido solo in caso di utilizzo di WAITFOR in combinazione con RECEIVE. Queste attività rimangono essenzialmente in attesa dell'arrivo di messaggi nella coda.|  

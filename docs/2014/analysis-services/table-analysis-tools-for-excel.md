@@ -15,11 +15,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 596bc66152f36c25169e4a089644042d25f8c13b
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52391899"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62757915"
 ---
 # <a name="table-analysis-tools-for-excel"></a>Strumenti di analisi tabelle per Excel
   Strumenti di data mining nel **Analyze** barra degli strumenti sono il modo più semplice per iniziare a usare il data mining. Ogni strumento analizza automaticamente la distribuzione e il tipo di dati e imposta i parametri per garantire la validità dei risultati. Non è necessario selezionare un algoritmo o configurare parametri complessi.  

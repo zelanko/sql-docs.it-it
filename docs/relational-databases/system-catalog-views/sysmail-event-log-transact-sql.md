@@ -19,21 +19,21 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 8ac38c2e54fde2beb02e009e00b9f587e9265a43
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47781099"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62759949"
 ---
 # <a name="sysmaileventlog-transact-sql"></a>sysmail_event_log (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Contiene una riga per ogni messaggio di Windows o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] restituito dal sistema di Posta elettronica database. Il termine messaggio in questo contesto indica un messaggio ad esempio di errore, non un messaggio di posta elettronica. Configura il **a livello di registrazione** parametro usando la **configurazione parametri di sistema** la finestra di dialogo di configurazione guidata posta elettronica Database, o il [sysmail_configure_sp](../../relational-databases/system-stored-procedures/sysmail-configure-sp-transact-sql.md)stored procedure per determinare quali messaggi vengono restituiti.  
+  Contiene una riga per ogni messaggio di Windows o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] restituito dal sistema di Posta elettronica database. (Messaggio in questo contesto si riferisce a un messaggio, ad esempio un messaggio di errore, non un messaggio di posta elettronica). Configura il **a livello di registrazione** parametro usando la **configurazione parametri di sistema** la finestra di dialogo di configurazione guidata posta elettronica Database, o il [sysmail_configure_sp](../../relational-databases/system-stored-procedures/sysmail-configure-sp-transact-sql.md)stored procedure per determinare quali messaggi vengono restituiti.  
   
-|Nome colonna|Tipo di dati|Description|  
+|Nome colonna|Tipo di dati|Descrizione|  
 |-----------------|---------------|-----------------|  
 |**Log_id**|**int**|Identificatore degli elementi nel log.|  
-|**event_type**|**varchar (11)**|Tipo di avviso inserito nel log. I possibili valori sono errori, avvisi, messaggi informativi, messaggi di operazione riuscita e altri messaggi interni.|  
+|**event_type**|**varchar(11)**|Tipo di avviso inserito nel log. I possibili valori sono errori, avvisi, messaggi informativi, messaggi di operazione riuscita e altri messaggi interni.|  
 |**log_date**|**datetime**|Data e ora di creazione della voce del log.|  
 |**description**|**nvarchar(max)**|Testo del messaggio registrato.|  
 |**process_id**|**int**|ID di processo del programma esterno Posta elettronica database. In genere, viene modificato a ogni avvio del programma esterno Posta elettronica database.|  

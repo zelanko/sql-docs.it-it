@@ -12,11 +12,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: d9d6407d98bccb62f54443a8a8d1f5b61a093c7c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48182661"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62761122"
 ---
 # <a name="feature-review"></a>Esame caratteristiche
   La pagina Esame caratteristiche è un elenco di sola lettura di caratteristiche che sono state preparate e saranno configurate e completate alla fine del passaggio di completamento dell'immagine. L'elenco delle caratteristiche viene selezionato durante il passaggio relativo alla preparazione dell'immagine e non può essere modificato durante il passaggio di completamento dell'immagine. Oltre alle caratteristiche visualizzate, un'istanza predisposta include anche [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser, Writer di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client.  
@@ -27,8 +27,8 @@ ms.locfileid: "48182661"
   
 |Gruppo di componenti|Componenti e caratteristiche|  
 |---------------------|-----------------------------|  
-|Servizi[!INCLUDE[ssDE](../../includes/ssde-md.md)] |[!INCLUDE[ssDE](../../includes/ssde-md.md)] è il servizio principale per l'archiviazione, l'elaborazione e la sicurezza dei dati. Nel [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] sono inclusi i seguenti componenti:<br /><br /> Replica: (Facoltativo) La funzione di replica è un set di tecnologie per la copia e la distribuzione di dati e oggetti di database da un database a un altro e la successiva sincronizzazione dei database per garantirne la coerenza.<br /><br /> Ricerca full-text (facoltativa): la ricerca full-text fornisce le funzionalità necessarie per eseguire query full-text su semplici dati di tipo carattere in tabelle di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].<br /><br /> [!INCLUDE[ssDQSnoversion](../../includes/ssdqsnoversion-md.md)] (Facoltativo): [!INCLUDE[ssDQSnoversion](../../includes/ssdqsnoversion-md.md)] (DQS) è una soluzione di pulizia dei dati che consente di individuare dati incoerenti e non corretti nell'origine dati e che offre metodi automatici e interattivi per pulire i dati.|  
-|[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]|In [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] sono inclusi componenti client e server per la creazione, la gestione e la distribuzione di report tabulari, matrice, grafici e in formato libero. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] è inoltre una piattaforma estendibile che consente di sviluppare applicazioni di creazione di report.|  
+|Servizi[!INCLUDE[ssDE](../../includes/ssde-md.md)] |[!INCLUDE[ssDE](../../includes/ssde-md.md)] è il servizio principale per l'archiviazione, l'elaborazione e la sicurezza dei dati. Nel [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] sono inclusi i seguenti componenti:<br /><br /> Replica: (Facoltativo) La replica è un set di tecnologie per la copia e la distribuzione di oggetti di database e i dati da un database a un altro e la successiva sincronizzazione dei database per garantirne la coerenza.<br /><br /> Ricerca full-Text: (Facoltativo) Ricerca full-Text offre funzionalità per eseguire query full-text su semplici dati basati su caratteri in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tabelle.<br /><br /> [!INCLUDE[ssDQSnoversion](../../includes/ssdqsnoversion-md.md)] (Facoltativo): [!INCLUDE[ssDQSnoversion](../../includes/ssdqsnoversion-md.md)] (DQS) è una soluzione di pulizia dei dati che consente di individuare dati incoerenti e non corretti nell'origine dati e che offre metodi automatici e interattivi per pulire i dati.|  
+|[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]|In[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] sono inclusi componenti client e server per la creazione, la gestione e la distribuzione di report tabulari, matrice, grafici e in formato libero. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] è inoltre una piattaforma estendibile che consente di sviluppare applicazioni di creazione di report.|  
   
 ## <a name="see-also"></a>Vedere anche  
  [Installare SQL Server 2014 con SysPrep](../../database-engine/install-windows/install-sql-server-using-sysprep.md)  

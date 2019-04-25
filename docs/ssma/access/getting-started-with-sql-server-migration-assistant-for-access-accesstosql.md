@@ -20,11 +20,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: murato
 ms.openlocfilehash: 1168609d35a266f2ac5fe6641aee7ca131bc9d89
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47668669"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62759912"
 ---
 # <a name="getting-started-with-sql-server-migration-assistant-for-access-accesstosql"></a>Introduzione a SQL Server Migration Assistant per Access (AccessToSQL)
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Migration Assistant (SSMA) per l'accesso consente di convertire rapidamente oggetti di database di Access da [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o gli oggetti di database SQL di Azure, caricare gli oggetti risultanti nelle [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o database SQL di Azure ed eseguire la migrazione dei dati da Access a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o database SQL di Azure. Se necessario, è anche possibile collegare le tabelle di accesso al [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o tabelle di database SQL di Azure in modo che è possibile continuare a usare le applicazioni front-end Access esistenti con [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o database SQL di Azure.  
@@ -88,7 +88,7 @@ Visualizzatore metadati accesso illustra informazioni sui database di Access che
 Per altre informazioni, vedere [caricamento di convertire gli oggetti di Database in SQL Server](loading-converted-database-objects-into-sql-server-accesstosql.md).  
   
 ### <a name="metadata"></a>Metadati  
-A destra di ogni Visualizzatore metadati sono schede che descrivono l'oggetto selezionato. Ad esempio, se si seleziona una tabella nel Visualizzatore metadati di accesso, quattro schede vengono visualizzate: **tabella**, **mapping tra i tipi**, **proprietà**, e **dati** . Se si seleziona una tabella in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Visualizzatore metadati, visualizzati tre schede: **tabella**, **SQL**, e **dati**.  
+A destra di ogni Visualizzatore metadati sono schede che descrivono l'oggetto selezionato. Ad esempio, se si seleziona una tabella nel Visualizzatore metadati di accesso, vengono visualizzati quattro schede: **Nella tabella**, **Mapping dei tipi**, **delle proprietà**, e **dati**. Se si seleziona una tabella in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Visualizzatore metadati, visualizzati tre schede: **Nella tabella**, **SQL**, e **dati**.  
   
 La maggior parte delle impostazioni dei metadati sono di sola lettura. Tuttavia, è possibile modificare i metadati seguenti:  
   
@@ -116,7 +116,7 @@ Barra degli strumenti di migrazione include i comandi seguenti:
 ### <a name="menus"></a>Menu  
 SSMA contiene i menu seguenti:  
   
-|Menu|Description|  
+|Menu|Descrizione|  
 |--------|---------------|  
 |**File**|Contiene i comandi per la migrazione guidata, si lavora su progetti, aggiunta e rimozione dei file di database di Access e ci si connette a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o database SQL di Azure.|  
 |**Modifica**|Contiene i comandi per la ricerca e lavora sul testo nelle pagine di dettagli, ad esempio la copia [!INCLUDE[tsql](../../includes/tsql-md.md)] dal riquadro dei dettagli SQL. Per aprire la **gestire i segnalibri** finestra di dialogo, dal menu Modifica, fare clic su Gestisci segnalibri. Nella finestra di dialogo, verrà visualizzato un elenco dei propri segnalibri esistenti. È possibile usare i pulsanti sul lato destro della finestra di dialogo per gestire i segnalibri.|  

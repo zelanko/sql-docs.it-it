@@ -20,18 +20,18 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: dcc027ad80d4bbe1142a9e17add52f8a42d7d404
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47842509"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62760196"
 ---
 # <a name="syscollectorcollectionsets-transact-sql"></a>syscollector_collection_sets (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Fornisce informazioni su un set di raccolta, inclusa pianificazione, modalità di raccolta e stato.  
   
-|Nome colonna|Tipo di dati|Description|  
+|Nome colonna|Tipo di dati|Descrizione|  
 |-----------------|---------------|-----------------|  
 |collection_set_id|**int**|Identificatore locale del set di raccolta. Non ammette i valori Null.|  
 |collection_set_uid|**uniqueidentifier**|Identificatore univoco globale del set di raccolta. Non ammette i valori Null.|  
