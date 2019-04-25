@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 3c3b8a4ac0da80303a63bd62f7b4d6f51faab1fb
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47692939"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62472568"
 ---
 # <a name="data-providers"></a>Provider di dati
 Provider di dati rappresentano diverse origini dei dati, ad esempio database SQL, file sequenziali-indicizzate, fogli di calcolo, archivi di documenti e i file di posta elettronica. I provider di espongono i dati in modo uniforme tramite un'astrazione comune definita set di righe.  

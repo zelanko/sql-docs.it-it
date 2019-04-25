@@ -14,16 +14,16 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 24b62c2b5cd449b6e7201d413b315e48fbd570f6
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54132577"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62468798"
 ---
 # <a name="scalar-function-calls"></a>Chiamate di funzioni scalari
 Funzioni scalari restituiscono un valore per ogni riga. Ad esempio, la funzione scalare del valore assoluto accetta una colonna numerica come argomento e restituisce il valore assoluto di ogni valore nella colonna. La sequenza di escape per chiamare una funzione scalare  
   
- **{fn**_funzione-scalare_ **}**  
+ **{fn**  _scalar-function_ **}**  
   
  in cui *funzione-scalare* è una delle funzioni elencate [appendice e: Funzioni scalari](../../../odbc/reference/appendixes/appendix-e-scalar-functions.md). Per altre informazioni sulla sequenza di escape di funzione scalare, vedere [sequenza di Escape di funzione scalare](../../../odbc/reference/appendixes/scalar-function-escape-sequence.md) nell'appendice c: Grammatica SQL.  
   
@@ -43,7 +43,7 @@ SELECT {fn SUBSTRING(Name, 1, CHARINDEX(',', Name) - 1)} FROM Customers
   
  Per garantire la massima interoperabilità, le applicazioni devono usare la **CONVERTIRE** funzione scalare per assicurarsi che l'output di una funzione scalare sia il tipo richiesto. Il **CONVERTIRE** funzione converte i dati da un tipo di dati SQL per il tipo di dati SQL specificato. La sintassi del **CONVERTIRE** è (funzione)  
   
- **CONVERTIRE (** _value_exp_ **,** _data_type_**)**  
+ **CONVERT(** _value_exp_ **,** _data_type_**)**  
   
  in cui *value_exp* è un nome di colonna, il risultato di un'altra funzione scalare o un valore letterale, e *data_type* è una parola chiave che corrisponde alla **#define** nome utilizzato da un Identificatore del tipo di dati SQL come definito in [appendice d: Tipi di dati](../../../odbc/reference/appendixes/appendix-d-data-types.md). Ad esempio, l'istruzione SQL seguente usa il **CONVERTIRE** funzione per assicurarsi che l'output delle **CURDATE** funzione è una data, invece di un timestamp o un carattere di dati:  
   

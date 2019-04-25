@@ -13,11 +13,11 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 7b138dd1cf07ccfccefb9e1556c743f3c0a45abd
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52747413"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62765252"
 ---
 # <a name="how-permissions-are-determined-master-data-services"></a>Modalità di determinazione delle autorizzazioni (Master Data Services)
   In [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]il modo più semplice per configurare la sicurezza consiste nell'assegnare autorizzazioni per oggetti modello a un gruppo di cui l'utente è membro.  
@@ -35,7 +35,7 @@ ms.locfileid: "52747413"
   
  ![mds_conc_security_no_overlap](../../2014/master-data-services/media/mds-conc-security-no-overlap.gif "mds_conc_security_no_overlap")  
   
-### <a name="step-1-effective-attribute-permissions-are-determined"></a>Passaggio 1: Autorizzazioni per attributi valide dipendono.  
+### <a name="step-1-effective-attribute-permissions-are-determined"></a>Passaggio 1: Vengono determinate le autorizzazioni per attributi valide.  
  Nell'elenco seguente viene descritto il modo in cui vengono determinate le autorizzazioni per attributi valide:  
   
 -   Le autorizzazioni assegnate agli oggetti modello determinano gli attributi a cui un utente può accedere.  
@@ -50,7 +50,7 @@ ms.locfileid: "52747413"
   
  ![mds_conc_inheritance_model](../../2014/master-data-services/media/mds-conc-inheritance-model.gif "mds_conc_inheritance_model")  
   
-### <a name="step-2-if-hierarchy-member-permissions-are-assigned-effective-member-permissions-are-determined"></a>Passaggio 2: Se vengono assegnate le autorizzazioni membri gerarchia, vengono determinate autorizzazioni per membri valide.  
+### <a name="step-2-if-hierarchy-member-permissions-are-assigned-effective-member-permissions-are-determined"></a>Passaggio 2: Se vengono assegnate autorizzazioni per i membri gerarchia, vengono determinate autorizzazioni per i membri valide.  
  Nell'elenco seguente viene descritto il modo in cui vengono determinate le autorizzazioni per i membri gerarchia valide:  
   
 -   Le autorizzazioni assegnate ai nodi gerarchia determinano i membri a cui un utente può accedere.  
@@ -65,7 +65,7 @@ ms.locfileid: "52747413"
   
  ![mds_conc_inheritance_hierarchy](../../2014/master-data-services/media/mds-conc-inheritance-hierarchy.gif "mds_conc_inheritance_hierarchy")  
   
-### <a name="step-3-the-intersection-of-attribute-and-member-permissions-is-determined"></a>Passaggio 3: Viene determinata l'intersezione delle autorizzazioni di membri e attributi.  
+### <a name="step-3-the-intersection-of-attribute-and-member-permissions-is-determined"></a>Passaggio 3: Viene determinata l'intersezione delle autorizzazioni per membri e attributi.  
  Se le autorizzazioni per attributi valide sono diverse dalle autorizzazioni per membri valide, le autorizzazioni devono essere determinate per ogni singolo valore di attributo. Per altre informazioni, vedere [Autorizzazioni per modelli e membri sovrapposte &#40;Master Data Services&#41;](../../2014/master-data-services/overlapping-model-and-member-permissions-master-data-services.md).  
   
 ## <a name="permissions-assigned-to-multiple-groups"></a>Autorizzazioni assegnate a più gruppi  

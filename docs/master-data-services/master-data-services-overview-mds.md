@@ -17,11 +17,11 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 66cee237e12729f494aa1ed0e915db145ff5d076
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
-ms.translationtype: HT
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52786963"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62448166"
 ---
 # <a name="master-data-services-overview-mds"></a>Panoramica di Master Data Services (MDS)
 
@@ -52,7 +52,7 @@ In questo argomento sono descritte le principali funzionalità di organizzazione
   
  Dopo aver definito una struttura di base per i dati, è possibile iniziare ad aggiungere record di dati (membri) usando la funzionalità di importazione. Caricare i dati nelle tabelle di staging, convalidarli usando le regole business e caricarli nelle tabelle MDS.  Le regole business possono essere usate anche per impostare i valori dell'attributo.  
   
- La tabella seguente descrive le attività principali di [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] . Se non diversamente specificato, tutte le procedure riportate di seguito richiedono privilegi di amministratore di modelli. Per altre informazioni, vedere [Amministratori &#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md).  
+ La tabella seguente descrive le attività principali di [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] . Se non diversamente specificato, tutte le procedure riportate di seguito richiedono privilegi di amministratore di modelli. Per altre informazioni, vedere [Administrators &#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md).  
   
 > [!NOTE]  
 >  Si consiglia di completare le attività seguenti in un ambiente di test e di utilizzare i dati di esempio forniti al momento dell'installazione di [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]. Per altre informazioni, vedere [Distribuzione di modelli &#40;Master Data Services&#41;](../master-data-services/deploying-models-master-data-services.md).  

@@ -12,11 +12,11 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: c2d852accb33b1667e5f2d0981d6f351543ee72a
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
-ms.translationtype: HT
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56029998"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62469243"
 ---
 # <a name="use-the-dqs-speller"></a>Utilizzare il correttore ortografico DQS
 
@@ -39,7 +39,7 @@ ms.locfileid: "56029998"
   
 ###  <a name="Security"></a> Sicurezza  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> Autorizzazioni  
  Per eseguire il correttore ortografico, è necessario disporre del ruolo dqs_kb_editor o dqs_administrator nel database DQS_MAIN.  
   
 ##  <a name="Enable"></a> Abilitare il correttore ortografico  

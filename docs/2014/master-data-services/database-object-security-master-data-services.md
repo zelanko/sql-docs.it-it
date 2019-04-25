@@ -14,11 +14,11 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: f5d485aec6d3056022ea55f1cb2bc8ee29a4e314
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52822235"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62765764"
 ---
 # <a name="database-object-security-master-data-services"></a>Sicurezza di oggetti di database (Master Data Services)
   Nel database [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] i dati vengono archiviati in più tabelle di database e sono visibili tramite viste. Le informazioni eventualmente protette nell'applicazione Web [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] sono visibili agli utenti che dispongono dell'accesso al database [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] .  
@@ -46,11 +46,11 @@ ms.locfileid: "52822235"
   
 |Azione|Entità a protezione diretta|Permissions|  
 |------------|----------------|-----------------|  
-|Caricare membri foglia e i relativi attributi nella tabella di staging.|stg.name_Leaf|Obbligatorio: INSERT<br /><br /> Facoltativo: SELECT e UPDATE|  
+|Caricare membri foglia e i relativi attributi nella tabella di staging.|stg.name_Leaf|Obbligatoria: INSERT<br /><br /> Facoltativo: SELECT e UPDATE|  
 |Caricare i dati dalla tabella di staging Foglia nelle tabelle di database MDS appropriate.|stg.udp_name_Leaf|EXECUTE|  
-|Caricare membri consolidati e i relativi attributi nella tabella di staging.|stg.name_Consolidated|Obbligatorio: INSERT<br /><br /> Facoltativo: SELECT e UPDATE|  
+|Caricare membri consolidati e i relativi attributi nella tabella di staging.|stg.name_Consolidated|Obbligatoria: INSERT<br /><br /> Facoltativo: SELECT e UPDATE|  
 |Caricare i dati dalla tabella di staging Consolidata nelle tabelle di database MDS appropriate.|stg.udp_name_Consolidated|EXECUTE|  
-|Caricare membri foglia e relazioni tra membri consolidati loro in una gerarchia esplicita nella tabella di staging.|stg.name_Relationship|Obbligatorio: INSERT<br /><br /> Facoltativo: SELECT e UPDATE|  
+|Caricare membri foglia e relazioni tra membri consolidati loro in una gerarchia esplicita nella tabella di staging.|stg.name_Relationship|Obbligatoria: INSERT<br /><br /> Facoltativo: SELECT e UPDATE|  
 |Caricare i dati dalla tabella di staging Relazione nelle tabelle di database MDS appropriate.|stg.udp_name_Relationship|EXECUTE|  
 |Visualizzare gli errori che si verificati quando i dati delle tabelle di staging sono stati inseriti nelle tabelle di database MDS.|stg.udp_name_Relationship|SELECT|  
   

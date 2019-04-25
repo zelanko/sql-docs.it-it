@@ -16,11 +16,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: dc3d863889f7e5cb8ca1e79f78e920aedd79f979
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48173001"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62473493"
 ---
 # <a name="algorithm-parameters-dialog-box-mining-models-view"></a>Finestra di dialogo Parametri algoritmo (visualizzazione Modelli di data mining)
   Usare la finestra di dialogo **Parametri algoritmo** per modificare i parametri dell'algoritmo specifici per il modello selezionato. Quando si modifica un parametro dell'algoritmo, i risultati del modello di data mining di solito cambiano. L'influenza che ogni parametro ha sui risultati dipende dall'algoritmo utilizzato e dai dati. Per altre informazioni, vedere [Personalizzare struttura e modelli di data mining](data-mining/customize-mining-models-and-structure.md).  
@@ -31,7 +31,7 @@ ms.locfileid: "48173001"
   
  Di seguito vengono descritte le colonne disponibili.  
   
-|colonna|Description|  
+|colonna|Descrizione|  
 |------------|-----------------|  
 |**Parametro**|Indica il nome del parametro.|  
 |**Valore**|Immettere un valore solo se si desidera modificare quello predefinito del parametro.|  
@@ -50,7 +50,7 @@ ms.locfileid: "48173001"
  Se si elimina dall'elenco uno dei parametri dell'algoritmo standard di Analysis Services, il parametro verrà ancora utilizzato nel modello, ma con i valori predefiniti per quel parametro. Il parametro non è eliminato in modo permanente e verrà visualizzato la volta successiva che si apre la finestra di dialogo.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Algoritmi di Data Mining &#40;Analysis Services - Data Mining&#41;](data-mining/data-mining-algorithms-analysis-services-data-mining.md)   
+ [Algoritmi di data mining &#40;Analysis Services - Data mining&#41;](data-mining/data-mining-algorithms-analysis-services-data-mining.md)   
  [Visualizzazione di modelli di data mining &#40;Progettazione modelli di Data Mining&#41;](mining-models-view-data-mining-model-designer.md)   
  [Spostamento di oggetti di data mining](data-mining/moving-data-mining-objects.md)  
   

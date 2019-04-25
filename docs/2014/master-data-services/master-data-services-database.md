@@ -14,11 +14,11 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 40fcb993ddc3894ec44a60c79db463611f4ab1f9
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52785803"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62764869"
 ---
 # <a name="master-data-services-database"></a>Database Master Data Services
   Nel database sono contenute tutte le informazioni per il sistema [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] . È l'elemento centrale di una distribuzione di [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] . Il database [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] :  

@@ -14,11 +14,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 31ed60f10f12bbc11037a64caa50802360b919de
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48084376"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62467301"
 ---
 # <a name="table-valued-parameters-odbc"></a>Parametri con valori di tabella (ODBC)
   Il supporto ODBC dei parametri con valori di tabella consente a un'applicazione client di inviare più efficientemente i dati con parametri al server, inviando più righe al server con una sola chiamata.  
@@ -37,7 +37,7 @@ ms.locfileid: "48084376"
   
  È possibile creare vincoli e chiavi primarie durante la creazione della variabile di tabella. I vincoli rappresentano un ottimo metodo per assicurarsi che i dati di una tabella soddisfino requisiti specifici.  
   
-## <a name="in-this-section"></a>Argomenti della sezione  
+## <a name="in-this-section"></a>In questa sezione  
  [Usi dei parametri con valori di tabella in ODBC](uses-of-odbc-table-valued-parameters.md)  
  Vengono descritti gli scenari utente principali per i parametri con valori di tabella e ODBC.  
   

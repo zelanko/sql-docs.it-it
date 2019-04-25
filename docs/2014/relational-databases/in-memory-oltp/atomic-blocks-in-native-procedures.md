@@ -11,11 +11,11 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 83ec721d214633df7daf9ace5ae45c3cdb51ca97
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58532850"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62467281"
 ---
 # <a name="atomic-blocks"></a>Blocchi atomici
   `BEGIN ATOMIC` fa parte dello standard SQL ANSI. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] supporta i blocchi atomici solo al livello superiore delle stored procedure compilate in modo nativo.  

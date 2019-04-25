@@ -11,11 +11,11 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: c4f85a74b91a74b58847a24d04053e2b8848234d
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53371203"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62763387"
 ---
 # <a name="system-administration-functional-area-master-data-manager"></a>Area funzionale Amministrazione sistema (Gestione dati master)
   Nell'area funzionale Amministrazione sistema, gli amministratori possono creare un modello e tutti i relativi oggetti. Inoltre, possono creare regole business e creare e distribuire i pacchetti del modello. Per altre informazioni sugli amministratori, vedere [Amministratori &#40;Master Data Services&#41;](administrators-master-data-services.md).  

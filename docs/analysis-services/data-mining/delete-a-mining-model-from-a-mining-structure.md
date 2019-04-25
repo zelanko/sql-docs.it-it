@@ -1,5 +1,5 @@
 ---
-title: Eliminazione di un modello di Data Mining da una struttura di Data Mining | Documenti Microsoft
+title: Eliminare un modello di Data Mining da una struttura di Data Mining | Microsoft Docs
 ms.date: 05/01/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,15 +10,15 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: b17489213e0f057d8f291095f01b65f97a977ff1
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34019318"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62468847"
 ---
 # <a name="delete-a-mining-model-from-a-mining-structure"></a>Eliminare un modello di data mining da una struttura di data mining
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-  È possibile eliminare i modelli di data mining usando Progettazione modelli di data mining, [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o istruzioni DMX.  
+  È possibile eliminare i modelli di data mining usando Progettazione modelli di data mining, [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]o istruzioni DMX.  
   
 ### <a name="delete-a-mining-model-using-sql-server-data-tools"></a>Eliminare un modello di data mining utilizzando SQL Server Data Tools  
   
@@ -28,7 +28,7 @@ ms.locfileid: "34019318"
   
      Verrà visualizzata la finestra di dialogo **Elimina oggetti** .  
   
-3.  Scegliere **OK**.  
+3.  Fare clic su **OK**.  
   
 ### <a name="delete-a-mining-model-using-sql-server-management-studio"></a>Eliminare un modello di data mining utilizzando SQL Server Management Studio  
   
@@ -42,9 +42,9 @@ ms.locfileid: "34019318"
   
 ### <a name="delete-a-mining-model-using-dmx"></a>Eliminare un modello di data mining tramite DMX  
   
--   [ELIMINARE IL MODELLO DI DATA MINING & #40; DMX & #41;](../../dmx/drop-mining-model-dmx.md)  
+-   [DROP MINING MODEL &#40;DMX&#41;](../../dmx/drop-mining-model-dmx.md)  
   
 ## <a name="see-also"></a>Vedere anche  
- [Procedure dettagliate e attività di modello di data mining](../../analysis-services/data-mining/mining-model-tasks-and-how-tos.md)  
+ [Attività e procedure relative al modello di data mining](../../analysis-services/data-mining/mining-model-tasks-and-how-tos.md)  
   
   

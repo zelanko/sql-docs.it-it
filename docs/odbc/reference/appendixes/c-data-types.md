@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 3f948b50fae0995e16024ac41d8dd891630d1dbe
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53208462"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62447540"
 ---
 # <a name="c-data-types"></a>Tipi di dati C
 Tipi di dati C ODBC indicano il tipo di dati di C buffer usato per archiviare i dati nell'applicazione.  
@@ -36,19 +36,19 @@ Tipi di dati C ODBC indicano il tipo di dati di C buffer usato per archiviare i 
 |-----------------------|--------------------|------------|  
 |SQL_C_CHAR|SQLCHAR *|unsigned char *|  
 |SQL_C_WCHAR|SQLWCHAR *|wchar_t *|  
-|SQL_C_SSHORT [j#]|SQLSMALLINT|short int|  
-|SQL_C_USHORT [j#]|SQLUSMALLINT|Unsigned Integer a breve|  
-|SQL_C_SLONG [j#]|SQLINTEGER|long int|  
-|SQL_C_ULONG [j#]|SQLUINTEGER|long int senza segno|  
+|SQL_C_SSHORT[j]|SQLSMALLINT|short int|  
+|SQL_C_USHORT[j]|SQLUSMALLINT|Unsigned Integer a breve|  
+|SQL_C_SLONG[j]|SQLINTEGER|long int|  
+|SQL_C_ULONG[j]|SQLUINTEGER|long int senza segno|  
 |SQL_C_FLOAT|SQLREAL|FLOAT|  
 |SQL_C_DOUBLE|SQLDOUBLE, SQLFLOAT|double|  
 |SQL_C_BIT|SQLCHAR|unsigned char|  
-|SQL_C_STINYINT [j#]|SQLSCHAR|char con segno|  
-|SQL_C_UTINYINT [j#]|SQLCHAR|unsigned char|  
-|SQL_C_SBIGINT|SQLBIGINT|_int64 [h]|  
+|SQL_C_STINYINT[j]|SQLSCHAR|char con segno|  
+|SQL_C_UTINYINT[j]|SQLCHAR|unsigned char|  
+|SQL_C_SBIGINT|SQLBIGINT|_int64[h]|  
 |SQL_C_UBIGINT|SQLUBIGINT|_int64 non firmati [h]|  
 |SQL_C_BINARY|SQLCHAR *|unsigned char *|  
-|SQL_C_BOOKMARK [i]|SEGNALIBRO|long int senza segno [d]|  
+|SQL_C_BOOKMARK[i]|SEGNALIBRO|long int senza segno [d]|  
 |SQL_C_VARBOOKMARK|SQLCHAR *|unsigned char *|  
 |Tutti i tipi di dati di intervallo C|SQL_INTERVAL_STRUCT|Vedere le [struttura C Interval](../../../odbc/reference/appendixes/c-interval-structure.md) più avanti in questa appendice.|  
   
@@ -68,7 +68,7 @@ struct tagDATE_STRUCT {
   
  **Identificatore di tipo C** SQL_C_TYPE_TIME [c]  
   
- **Typedef di ODBC C** SQL_TIME_STRUCT  
+ **ODBC C typedef** SQL_TIME_STRUCT  
   
  **Tipo C**  
   
@@ -82,7 +82,7 @@ struct tagTIME_STRUCT {
   
  **Identificatore di tipo C** SQL_C_TYPE_TIMESTAMP [c]  
   
- **Typedef di ODBC C** SQL_TIMESTAMP_STRUCT  
+ **ODBC C typedef** SQL_TIMESTAMP_STRUCT  
   
  **Tipo C**  
   

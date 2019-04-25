@@ -1,5 +1,5 @@
 ---
-title: Eliminare una libreria di Feed dei dati di Power Pivot | Documenti Microsoft
+title: Eliminare una libreria di Feed di Power Pivot Data | Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 5faff360ee314ae35632e9fc8578d6bd71436b3e
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34022558"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62467594"
 ---
 # <a name="delete-a-power-pivot-data-feed-library"></a>Eliminare una libreria di feed di dati PowerPivot
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -30,7 +30,7 @@ ms.locfileid: "34022558"
   
 3.  In Amministrazione sito fare clic su **Raccolte ed elenchi del sito**.  
   
-4.  Fare clic su **Personalizza "\<nome della libreria >"**  
+4.  Fare clic su **Personalizza "\<il nome della libreria >"**  
   
 5.  In Autorizzazioni e gestione fare clic su **Elimina la raccolta**.  
   

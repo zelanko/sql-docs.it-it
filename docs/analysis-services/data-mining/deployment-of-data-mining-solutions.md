@@ -1,5 +1,5 @@
 ---
-title: Distribuzione di soluzioni di Data Mining | Documenti Microsoft
+title: Distribuzione di soluzioni di Data Mining | Microsoft Docs
 ms.date: 05/01/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: b42d01b097483d9088bd76257cd30ac37158f889
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34015218"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62467407"
 ---
 # <a name="deployment-of-data-mining-solutions"></a>Distribuzione di soluzioni di data mining
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -36,10 +36,10 @@ ms.locfileid: "34015218"
   
  [Risorse correlate](#bkmk_Resources)  
   
-## <a name="in-this-section"></a>Contenuto della sezione  
- [Distribuire una soluzione di Data Mining in versioni precedenti di SQL Server](../../analysis-services/data-mining/deploy-a-data-mining-solution-to-previous-versions-of-sql-server.md)  
+## <a name="in-this-section"></a>In questa sezione  
+ [Distribuire una soluzione di data mining in versioni precedenti di SQL Server](../../analysis-services/data-mining/deploy-a-data-mining-solution-to-previous-versions-of-sql-server.md)  
   
- [Esportare e importare oggetti di Data Mining](../../analysis-services/data-mining/export-and-import-data-mining-objects.md)  
+ [Esportare e importare gli oggetti di data mining](../../analysis-services/data-mining/export-and-import-data-mining-objects.md)  
   
 ##  <a name="bkmk_Reqs"></a> Requisiti per la distribuzione delle soluzioni di data mining  
  L'istanza di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] a cui si distribuisce la soluzione deve essere in esecuzione in una modalità che supporta oggetti multidimensionali e oggetti di data mining; non è infatti possibile distribuire oggetti di data mining a un'istanza che ospita modelli tabulari o dati [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] .  
@@ -63,21 +63,21 @@ ms.locfileid: "34015218"
  In genere, gli oggetti di data mining utilizzano anche le stesse origini dati e le stesse viste origine dati utilizzate per il cubo. Tuttavia, è possibile aggiungere origini dati e viste origine dati destinate in modo specifico al data mining. Ad esempio, un cubo in genere non contiene dati su clienti potenziali o dati esterni non utilizzati negli oggetti multidimensionali.  
   
 ##  <a name="bkmk_Resources"></a> Risorse correlate  
- [Lo spostamento di oggetti di Data Mining](../../analysis-services/data-mining/moving-data-mining-objects.md)  
+ [Spostamento di oggetti di data mining](../../analysis-services/data-mining/moving-data-mining-objects.md)  
   
  Se il modello è basato unicamente su dati relazionali, l'esportazione e l'importazione di oggetti tramite DMX è il modo più semplice per spostare i modelli.  
   
- [Spostare un Database di Analysis Services](../../analysis-services/multidimensional-models/move-an-analysis-services-database.md)  
+ [Spostare un database di Analysis Services](../../analysis-services/multidimensional-models/move-an-analysis-services-database.md)  
   
  Quando i modelli utilizzano un cubo come origine dati, fare riferimento a questo argomento per ottenere ulteriori informazioni sullo spostamento dei modelli e dei dati del cubo di supporto.  
   
- [Distribuire progetti di Analysis Services & #40; SSDT & #41;](../../analysis-services/multidimensional-models/deploy-analysis-services-projects-ssdt.md)  
+ [Distribuire progetti di Analysis Services &#40;SSDT&#41;](../../analysis-services/multidimensional-models/deploy-analysis-services-projects-ssdt.md)  
   
  Vengono fornite informazioni generali sulla distribuzione di progetti di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] e vengono descritte le proprietà che è possibile impostare come parte della configurazione del progetto.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Elaborazione di un modello multidimensionale &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/processing-a-multidimensional-model-analysis-services.md)   
  [Strumenti query di data mining](../../analysis-services/data-mining/data-mining-query-tools.md)   
- [L'elaborazione di Data Mining requisiti e considerazioni & #40; & #41;](../../analysis-services/data-mining/processing-requirements-and-considerations-data-mining.md)  
+ [Requisiti e considerazioni sull'elaborazione &#40;data mining&#41;](../../analysis-services/data-mining/processing-requirements-and-considerations-data-mining.md)  
   
   

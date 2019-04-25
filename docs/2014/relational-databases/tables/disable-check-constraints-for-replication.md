@@ -16,11 +16,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 957fcd77a6443cf2e23be8965a68823085db870c
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52807523"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62762192"
 ---
 # <a name="disable-check-constraints-for-replication"></a>Disabilitare un vincolo CHECK per la replica
   È possibile disabilitare i vincoli CHECK in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] tramite [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)]. I vincoli CHECK possono essere espressamente disabilitati per la replica e ciò può essere utile quando si pubblicano dati da una versione precedente di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
@@ -32,7 +32,7 @@ ms.locfileid: "52807523"
   
 ###  <a name="Security"></a> Sicurezza  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> Autorizzazioni  
  È necessario disporre dell'autorizzazione ALTER per la tabella.  
   
 ##  <a name="SSMSProcedure"></a> Utilizzo di SQL Server Management Studio  
@@ -55,7 +55,7 @@ ms.locfileid: "52807523"
   
 2.  Sulla barra Standard fare clic su **Nuova query**.  
   
-3.  Copiare e incollare l'esempio seguente nella finestra delle query e fare clic su **Esegui**. Nell'esempio viene creata una tabella con una colonna IDENTITY e un vincolo CHECK sulla tabella. Nell'esempio il vincolo viene quindi eliminato e ricreato specificando la clausola NOT FOR REPLICATION.  
+3.  Copiare e incollare l'esempio seguente nella finestra Query, quindi fare clic su **Esegui**. Nell'esempio viene creata una tabella con una colonna IDENTITY e un vincolo CHECK sulla tabella. Nell'esempio il vincolo viene quindi eliminato e ricreato specificando la clausola NOT FOR REPLICATION.  
   
     ```  
     USE AdventureWorks2012;  

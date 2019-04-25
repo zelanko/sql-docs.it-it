@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: a2f507e9f22e4d090407b0b0849f69a8e7914e8d
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52512932"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62469136"
 ---
 # <a name="lesson-11-create-roles"></a>Lezione 11: Creazione di ruoli
 [!INCLUDE[ssas-appliesto-sql2016-later-aas](../includes/ssas-appliesto-sql2016-later-aas.md)]
@@ -51,7 +51,7 @@ Questo argomento fa parte di un'esercitazione relativa alla modellazione tabular
   
 4.  Nella colonna **Autorizzazioni** fare clic nell'elenco a discesa, quindi selezionare l'autorizzazione **Lettura** . 
 
-    ![come in formato tabulare-lesson11-nuova-ruolo](../analysis-services/media/as-tabular-lesson11-new-role.png) 
+    ![as-tabular-lesson11-new-role](../analysis-services/media/as-tabular-lesson11-new-role.png) 
   
 5.  Facoltativo: Scegliere il **membri** scheda e quindi fare clic su **Add**. Nella finestra di dialogo **Selezione utenti o gruppi** immettere i gruppi o gli utenti di Windows dell'organizzazione che si desidera includere nel ruolo.  
   
@@ -70,7 +70,7 @@ Questo argomento fa parte di un'esercitazione relativa alla modellazione tabular
     ```
     
     Una formula di filtro di riga deve essere risolta in un valore booleano (TRUE/FALSE). Con questa formula, si specifica che solo le righe con il valore di Country Region Code "US" sia visibile all'utente.  
-    ![come-tabulare-lesson11-ruolo-filter](../analysis-services/media/as-tabular-lesson11-role-filter.png) 
+    ![as-tabular-lesson11-role-filter](../analysis-services/media/as-tabular-lesson11-role-filter.png) 
   
 6.  Facoltativo: Fare clic sulla scheda **Membri** , quindi su **Aggiungi**. Nella finestra di dialogo **Selezione utenti o gruppi** immettere i gruppi o gli utenti di Windows dell'organizzazione che si desidera includere nel ruolo.  
   

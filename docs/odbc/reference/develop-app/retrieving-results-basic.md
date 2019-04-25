@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 8eb98d7c17663894e1bacdc27e431d6a54f45d3b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47772209"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62468664"
 ---
 # <a name="retrieving-results-basic"></a>Recupero di risultati (di base)
 Oggetto *set di risultati* è un set di righe nell'origine dati che corrisponde a determinati criteri. È una tabella concettuale che nei risultati di una query e che sono disponibili in un'applicazione in formato tabulare. **Selezionare** istruzioni, funzioni di catalogo e alcune procedure creano set di risultati. Nell'esempio seguente, la prima istruzione SQL crea un set di risultati contenente tutte le righe e tutte le colonne nella tabella Orders e la seconda istruzione SQL crea un set di risultati contenente le colonne OrderID, venditore e lo stato per le righe nella tabella Orders in cui lo stato è aperto:  
