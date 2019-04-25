@@ -21,10 +21,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: dec0b9aa3c92cdefa82e3031546ea8200f70bb6e
-ms.sourcegitcommit: 3cfedfeba377560d460ca3e42af1e18824988c07
+ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59042440"
 ---
 # <a name="prerequisites-restrictions-and-recommendations-for-always-on-availability-groups"></a>Prerequisiti, restrizioni e consigli per i gruppi di disponibilità Always On
@@ -40,7 +40,7 @@ ms.locfileid: "59042440"
   
 ||Funzionalità dipendente|Hotfix|Collegamento|  
 |------|-----------------------|------------|----------|  
-|![Casella di controllo](../../../database-engine/availability-groups/windows/media/checkboxemptycenterxtraspacetopandright.gif "Casella di controllo")|[!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]|L'hotfix per .Net 3.5 SP1 aggiunge il supporto a SQL Client per le funzionalità AlwaysOn di Read-intent, readonly e multisubnetfailover. L'hotfix deve essere installato in ogni server di report di [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] .|ARTICOLO 2654347 DELLA KNOWLEDGE BASE [Hotfix per .Net 3.5 SP1 per aggiungere supporto alle funzionalità Always On](https://go.microsoft.com/fwlink/?LinkId=242896)|  
+|![Casella di controllo](../../../database-engine/availability-groups/windows/media/checkboxemptycenterxtraspacetopandright.gif "Casella di controllo")|[!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]|L'hotfix per .Net 3.5 SP1 aggiunge il supporto a SQL Client per le funzionalità AlwaysOn di Read-intent, readonly e multisubnetfailover. L'hotfix deve essere installato in ogni server di report di [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] .|KB 2654347: [Hotfix per .Net 3.5 SP1 per aggiungere supporto alle funzionalità Always On](https://go.microsoft.com/fwlink/?LinkId=242896)|  
   
 
 ###  <a name="SystemRequirements"></a> Elenco di controllo: requisiti (sistema Windows)  
@@ -61,7 +61,7 @@ ms.locfileid: "59042440"
   
 -   **Sistemi simili:**  Per un determinato gruppo di disponibilità, tutte le repliche di disponibilità devono essere in sistemi simili, in grado di gestire carichi di lavoro identici.  
   
--   **Schede di rete dedicate:**  Per ottenere prestazioni ottimali, utilizzare una scheda di rete dedicata (scheda di interfaccia di rete) per [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)].  
+-   **Schede di rete dedicate:**  Per ottenere prestazioni ottimali, usare una scheda di rete dedicata (scheda di interfaccia di rete) per [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)].  
   
 -   **Spazio su disco sufficiente:**  Ogni computer in cui un'istanza del server ospita una replica di disponibilità deve disporre di spazio su disco sufficiente per tutti i database nel gruppo di disponibilità. Tenere presente che, con l'aumentare delle dimensioni dei database primari, i database secondari corrispondenti aumentano di conseguenza.  
   
@@ -100,7 +100,7 @@ ms.locfileid: "59042440"
   
 ##### <a name="related-content-powershell"></a>Contenuto correlato (PowerShell)  
   
--   [Clustering and High-Availability (Clustering e disponibilità elevata)](https://blogs.msdn.com/b/clustering/archive/2009/05/23/9636665.aspx) (Failover Clustering and Network Load Balancing Team Blog - Blog del team di clustering di failover e bilanciamento del carico di rete)  
+-   [Clustering and High-Availability](https://blogs.msdn.com/b/clustering/archive/2009/05/23/9636665.aspx) (Failover Clustering and Network Load Balancing Team Blog) (Clustering e disponibilità elevata - Blog del team di clustering di failover e bilanciamento del carico di rete)  
   
 -   [Introduzione a Windows PowerShell in un cluster di failover](https://technet.microsoft.com/library/ee619762\(WS.10\).aspx)  
   
@@ -118,7 +118,7 @@ ms.locfileid: "59042440"
   
  **Contenuto della sezione**  
   
--   [Elenco di controllo: Prerequisites](#PrerequisitesSI)  
+-   [Elenco di controllo: Prerequisiti](#PrerequisitesSI)  
   
 -   [Utilizzo del thread da parte dei gruppi di disponibilità](#ThreadUsage)  
   
@@ -137,8 +137,8 @@ ms.locfileid: "59042440"
 |![Casella di controllo](../../../database-engine/availability-groups/windows/media/checkboxemptycenterxtraspacetopandright.gif "Casella di controllo")|Se si intende utilizzare un'istanza del cluster di failover di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] per ospitare una replica di disponibilità, assicurarsi di aver compreso le restrizioni su questo tipo di istanza e che vengano soddisfatti i relativi requisiti.|[Prerequisiti e requisiti sull'uso di un'istanza del cluster di failover di SQL Server per ospitare una replica di disponibilità](#FciArLimitations), più avanti in questo articolo|  
 |![Casella di controllo](../../../database-engine/availability-groups/windows/media/checkboxemptycenterxtraspacetopandright.gif "Casella di controllo")|Per partecipare a un gruppo di disponibilità Always On, ogni istanza del server deve eseguire la stessa versione di SQL Server.|Edizioni e funzionalità supportate per [SQL 2014](https://docs.microsoft.com/sql/getting-started/features-supported-by-the-editions-of-sql-server-2014?view=sql-server-2014), [SQL 2016](https://docs.microsoft.com/sql/sql-server/editions-and-components-of-sql-server-2016?view=sql-server-2016), [SQL 2017](https://docs.microsoft.com/sql/sql-server/editions-and-components-of-sql-server-2017?view=sql-server-2017).|  
 |![Casella di controllo](../../../database-engine/availability-groups/windows/media/checkboxemptycenterxtraspacetopandright.gif "Casella di controllo")|In tutte le istanze del server in cui sono ospitate repliche di disponibilità per un gruppo di disponibilità devono essere utilizzate le stesse regole di confronto di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .|[Impostazione o modifica di regole di confronto del server](../../../relational-databases/collations/set-or-change-the-server-collation.md)|  
-|![Casella di controllo](../../../database-engine/availability-groups/windows/media/checkboxemptycenterxtraspacetopandright.gif "Casella di controllo")|Abilitare la funzionalità [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] in ogni istanza del server in cui sarà ospitata una replica di disponibilità per qualsiasi gruppo di disponibilità. In un computer specificato è possibile abilitare tante istanze del server per [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] quante sono quelle supportate dall'installazione di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].|[Abilitare e disabilitare la funzionalità Gruppi di disponibilità AlwaysOn &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/enable-and-disable-always-on-availability-groups-sql-server.md)<br /><br /> <br /><br /> <b>\*\* Importante \*\*</b> Se si elimina e si ricrea un cluster WSFC, è necessario disabilitare e riabilitare la funzionalità [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] in ogni istanza del server abilitata per [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] nel cluster originale.|  
-|![Casella di controllo](../../../database-engine/availability-groups/windows/media/checkboxemptycenterxtraspacetopandright.gif "Casella di controllo")|Per ogni istanza del server è necessario un endpoint del mirroring del database. Si noti che questo endpoint è condiviso da tutte le repliche di disponibilità, dai partner di mirroring di database, nonché dai server di controllo nell'istanza del server.<br /><br /> Se un'istanza del server selezionata come host per una replica di disponibilità è in esecuzione in un account utente di dominio e non dispone ancora di un endpoint del mirroring del database, tramite la [Creazione guidata Gruppo di disponibilità](../../../database-engine/availability-groups/windows/use-the-availability-group-wizard-sql-server-management-studio.md) (o [Procedura guidata Aggiungi replica a gruppo di disponibilità](../../../database-engine/availability-groups/windows/use-the-add-replica-to-availability-group-wizard-sql-server-management-studio.md)) è possibile creare l'endpoint e concedere l'autorizzazione CONNECT all'account del servizio dell'istanza del server. Se, tuttavia, il servizio [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] viene eseguito come account predefinito, ad esempio Sistema locale, Servizio locale o Servizio di rete, oppure come account non di dominio, è necessario usare certificati per l'autenticazione dell'endpoint e non sarà possibile creare un endpoint del mirroring del database nell'istanza del server tramite la procedura guidata. In tal caso, è consigliabile creare manualmente gli endpoint del mirroring del database prima di avviare la procedura guidata.<br /><br /> <br /><br /> <b>\*\* Nota di sicurezza \*\*</b> La sicurezza del trasporto per [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] corrisponde a quella per il mirroring del database.|[Endpoint del mirroring del database. &#40;SQL Server&#41;](../../../database-engine/database-mirroring/the-database-mirroring-endpoint-sql-server.md)<br /><br /> [Sicurezza trasporto per il mirroring del database e i gruppi di disponibilità AlwaysOn &#40;SQL Server&#41;](../../../database-engine/database-mirroring/transport-security-database-mirroring-always-on-availability.md)|  
+|![Casella di controllo](../../../database-engine/availability-groups/windows/media/checkboxemptycenterxtraspacetopandright.gif "Casella di controllo")|Abilitare la funzionalità [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] in ogni istanza del server in cui sarà ospitata una replica di disponibilità per qualsiasi gruppo di disponibilità. In un computer specificato è possibile abilitare tante istanze del server per [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] quante sono quelle supportate dall'installazione di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .|[Abilitare e disabilitare gruppi di disponibilità AlwaysOn &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/enable-and-disable-always-on-availability-groups-sql-server.md)<br /><br /> <br /><br /> <b>\*\* Importante \*\*</b> Se si elimina e si ricrea un cluster WSFC, è necessario disabilitare e riabilitare la funzionalità [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] in ogni istanza del server abilitata per [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] nel cluster originale.|  
+|![Casella di controllo](../../../database-engine/availability-groups/windows/media/checkboxemptycenterxtraspacetopandright.gif "Casella di controllo")|Per ogni istanza del server è necessario un endpoint del mirroring del database. Si noti che questo endpoint è condiviso da tutte le repliche di disponibilità, dai partner di mirroring di database, nonché dai server di controllo nell'istanza del server.<br /><br /> Se un'istanza del server selezionata come host per una replica di disponibilità è in esecuzione in un account utente di dominio e non dispone ancora di un endpoint del mirroring del database, tramite la [Creazione guidata Gruppo di disponibilità](../../../database-engine/availability-groups/windows/use-the-availability-group-wizard-sql-server-management-studio.md) (o [Procedura guidata Aggiungi replica a gruppo di disponibilità](../../../database-engine/availability-groups/windows/use-the-add-replica-to-availability-group-wizard-sql-server-management-studio.md)) è possibile creare l'endpoint e concedere l'autorizzazione CONNECT all'account del servizio dell'istanza del server. Se, tuttavia, il servizio [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] viene eseguito come account predefinito, ad esempio Sistema locale, Servizio locale o Servizio di rete, oppure come account non di dominio, è necessario usare certificati per l'autenticazione dell'endpoint e non sarà possibile creare un endpoint del mirroring del database nell'istanza del server tramite la procedura guidata. In tal caso, è consigliabile creare manualmente gli endpoint del mirroring del database prima di avviare la procedura guidata.<br /><br /> <br /><br /> <b>\*\* Nota di sicurezza \*\*</b> La sicurezza del trasporto per [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] corrisponde a quella per il mirroring del database.|[Endpoint del mirroring del database &#40;SQL Server&#41;](../../../database-engine/database-mirroring/the-database-mirroring-endpoint-sql-server.md)<br /><br /> [Sicurezza trasporto per il mirroring del database e i gruppi di disponibilità AlwaysOn &#40;SQL Server&#41;](../../../database-engine/database-mirroring/transport-security-database-mirroring-always-on-availability.md)|  
 |![Casella di controllo](../../../database-engine/availability-groups/windows/media/checkboxemptycenterxtraspacetopandright.gif "Casella di controllo")|Se tutti i database in cui è utilizzato FILESTREAM saranno aggiunti a un gruppo di disponibilità, verificare che FILESTREAM sia abilitato in ogni istanza del server in cui sarà ospitata una replica di disponibilità per il gruppo di disponibilità.|[Abilitare e configurare FILESTREAM](../../../relational-databases/blob/enable-and-configure-filestream.md)|  
 |![Casella di controllo](../../../database-engine/availability-groups/windows/media/checkboxemptycenterxtraspacetopandright.gif "Casella di controllo")|Se tutti i database indipendenti saranno aggiunti a un gruppo di disponibilità, verificare che l'opzione del server **contained database authentication** sia impostata su **1** in ogni istanza del server in cui sarà ospitata una replica di disponibilità per il gruppo di disponibilità.|[Opzione di configurazione del server contained database authentication](../../../database-engine/configure-windows/contained-database-authentication-server-configuration-option.md)<br /><br /> [Opzioni di configurazione del server &#40;SQL Server&#41;](../../../database-engine/configure-windows/server-configuration-options-sql-server.md)|  
   
@@ -200,9 +200,9 @@ ms.locfileid: "59042440"
 ##  <a name="FciArLimitations"></a> Prerequisiti e restrizioni per l'utilizzo di un'istanza del cluster di failover di SQL Server per ospitare una replica di disponibilità  
  **Contenuto della sezione**  
   
--   [Restrictions](#RestrictionsFCI)  
+-   [Restrizioni](#RestrictionsFCI)  
   
--   [Elenco di controllo: Prerequisites](#PrerequisitesFCI)  
+-   [Elenco di controllo: Prerequisiti](#PrerequisitesFCI)  
   
 -   [Attività correlate](#RelatedTasksFCIs)  
   
@@ -248,11 +248,11 @@ ms.locfileid: "59042440"
 ##  <a name="PrerequisitesForAGs"></a> Prerequisiti e restrizioni dei gruppi di disponibilità  
  **Contenuto della sezione**  
   
--   [Restrictions](#RestrictionsAG)  
+-   [Restrizioni](#RestrictionsAG)  
   
 -   [Requisiti](#RequirementsAG)  
   
--   [Security](#SecurityAG)  
+-   [Sicurezza](#SecurityAG)  
   
 -   [Attività correlate](#RelatedTasksAGs)  
   
@@ -292,7 +292,7 @@ ms.locfileid: "59042440"
   
     -   Controllo completo  
   
-         [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] necessitano di un controllo completo. Se si abilita [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] in un'istanza di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] viene assegnato a quest'ultima il controllo completo del cluster, tramite il SID del servizio.  
+         [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] necessitano di un controllo completo. Se si abilita [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] in un'istanza di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] viene fornito a quest'ultima il controllo completo del cluster, tramite il SID del servizio.  
   
          Non è possibile aggiungere o rimuovere direttamente la sicurezza per un'istanza del server in Gestione cluster. Per gestire sessioni di sicurezza del cluster, usare Gestione configurazione [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] o l'equivalente WMI da [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
@@ -312,7 +312,7 @@ ms.locfileid: "59042440"
   
 |Attività|Articolo|  
 |----------|-----------|  
-|Creazione di un gruppo di disponibilità|[Utilizzare il gruppo di disponibilità (Creazione guidata Gruppo di disponibilità)](../../../database-engine/availability-groups/windows/use-the-availability-group-wizard-sql-server-management-studio.md)<br /><br /> [Creare un gruppo di disponibilità (Transact-SQL)](../../../database-engine/availability-groups/windows/create-an-availability-group-transact-sql.md)<br /><br /> [Creare un gruppo di disponibilità (SQL Server PowerShell)](../../../database-engine/availability-groups/windows/create-an-availability-group-sql-server-powershell.md)<br /><br /> [Specificare l'URL dell'endpoint quando si aggiunge o si modifica una replica di disponibilità &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/specify-endpoint-url-adding-or-modifying-availability-replica.md)|  
+|Creazione di un gruppo di disponibilità|[Utilizzare il gruppo di disponibilità (Creazione guidata Gruppo di disponibilità)](../../../database-engine/availability-groups/windows/use-the-availability-group-wizard-sql-server-management-studio.md)<br /><br /> [Creare un gruppo di disponibilità (Transact-SQL)](../../../database-engine/availability-groups/windows/create-an-availability-group-transact-sql.md)<br /><br /> [Creare un gruppo di disponibilità (SQL Server PowerShell)](../../../database-engine/availability-groups/windows/create-an-availability-group-sql-server-powershell.md)<br /><br /> [Specifica dell'URL dell'endpoint quando si aggiunge o si modifica una replica di disponibilità &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/specify-endpoint-url-adding-or-modifying-availability-replica.md)|  
 |Modifica del numero di repliche di disponibilità|[Aggiungere una replica secondaria a un gruppo di disponibilità &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/add-a-secondary-replica-to-an-availability-group-sql-server.md)<br /><br /> [Creare un join di una replica secondaria a un gruppo di disponibilità &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/join-a-secondary-replica-to-an-availability-group-sql-server.md)<br /><br /> [Rimuovere una replica secondaria da un gruppo di disponibilità &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/remove-a-secondary-replica-from-an-availability-group-sql-server.md)|  
 |Creazione di un listener del gruppo di disponibilità|[Creare o configurare un listener del gruppo di disponibilità &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/create-or-configure-an-availability-group-listener-sql-server.md)|  
 |Rimozione di un gruppo di disponibilità|[Rimuovere un gruppo di disponibilità &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/remove-an-availability-group-sql-server.md)|  
@@ -324,7 +324,7 @@ ms.locfileid: "59042440"
   
 -   [Requisiti](#RequirementsDb)  
   
--   [Restrictions](#RestrictionsDb)  
+-   [Restrizioni](#RestrictionsDb)  
   
 -   [Indicazioni per computer in cui sono ospitate repliche di disponibilità (sistema Windows)](#TDEdbs)  
   
@@ -383,16 +383,16 @@ ms.locfileid: "59042440"
   
 ##  <a name="RelatedContent"></a> Contenuto correlato  
   
--   [Pagine relative alla guida alle soluzioni AlwaysOn di Microsoft SQL Server per la disponibilità elevata e il ripristino di emergenza](https://go.microsoft.com/fwlink/?LinkId=227600)  
+-   [Microsoft SQL Server Always On Solutions Guide for High Availability and Disaster Recovery (Guida alle soluzioni AlwaysOn di Microsoft SQL Server per la disponibilità elevata e il ripristino di emergenza)](https://go.microsoft.com/fwlink/?LinkId=227600)  
   
--   [Blog del team di SQL Server Always On: blog ufficiale del team di SQL Server Always On](https://blogs.msdn.microsoft.com/sqlalwayson/)  
+-   [SQL Server Always On Team Blog: blog ufficiale del team di SQL Server Always On](https://blogs.msdn.microsoft.com/sqlalwayson/)  
   
 -   [Serie di informazioni su Always On - HADRON: Utilizzo del pool di lavoro per database abilitati HADRON](https://blogs.msdn.com/b/psssql/archive/2012/05/17/Always%20On-hadron-learning-series-worker-pool-usage-for-hadron-enabled-databases.aspx)  
   
 ## <a name="see-also"></a>Vedere anche  
- [Panoramica di Gruppi di disponibilità Always On &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   
+ [Panoramica di gruppi di disponibilità AlwaysOn &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   
  [Clustering di failover e gruppi di disponibilità AlwaysOn &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/failover-clustering-and-always-on-availability-groups-sql-server.md)   
- [Connettività client Always On &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/always-on-client-connectivity-sql-server.md)  
+ [Connettività client AlwaysOn &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/always-on-client-connectivity-sql-server.md)  
   
     
   

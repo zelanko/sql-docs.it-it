@@ -18,11 +18,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 2f6361e3e6a295398bdd88d56a6c70a79e92b526
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58538522"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62467417"
 ---
 # <a name="unique-particle-attribution-constraint"></a>Vincolo di attribuzione di particelle univoche
   In XSD i modelli di contenuto complessi sono soggetti alla regola del vincolo di attribuzione di particelle univoche (UPA, Unique Particle Attribution). Tale regola prevede che ogni elemento in un documento dell'istanza corrisponda in modo non ambiguo a una particella `<xsd:element>` o `<xsd:any>` nel relativo modello di contenuto padre. Ogni schema che contiene un tipo con un modello di contenuto potenzialmente ambiguo viene rifiutato.  
@@ -80,11 +80,11 @@ ms.locfileid: "58538522"
 ## <a name="finding-more-information"></a>Per ulteriori informazioni  
  Il documento seguente è pubblicato dal World Wide Web Consortium (W3C) e contiene la descrizione tecnica del vincolo di attribuzione di particelle univoche (informazioni in lingua inglese):  
   
- "XML Schema Part 1: Structures Second Edition, W3C Proposed Edited Recommendation":  
+ "XML Schema Part 1: Strutture Second Edition, W3C Proposed Recommendation modificato":  
   
--   Section 3.8.6: Constraints on Model Group Schema Components  
+-   Sezione 3.8.6: Vincoli su Model Group Schema Components  
   
--   Appendix H: Analysis of the Unique Particle Attribution Constraint (non-normative)  
+-   Appendice h: Analisi di Particle Attribution vincoli univoci (non normativo)  
   
  Per vedere il documento, visitare [http://www.w3.org/TR/xmlschema-1](https://go.microsoft.com/fwlink/?linkid=48881).  
   

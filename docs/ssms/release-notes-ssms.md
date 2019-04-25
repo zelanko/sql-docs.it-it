@@ -12,10 +12,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 0bb422177cc0908a8cf5d274dc0b0d0332dcbc95
-ms.sourcegitcommit: 3cfedfeba377560d460ca3e42af1e18824988c07
+ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59042500"
 ---
 # <a name="release-notes-for-sql-server-management-studio-ssms"></a>Note sulla versione per SQL Server Management Studio (SSMS)
@@ -190,7 +190,7 @@ Se manca l'etichetta *Anteprima 5*, *Anteprima 6*, *Anteprima 7* o *RC1*, signif
   - [Novità in Anteprima 5] Migliorata l'usabilità di alcuni report (Consumo complessivo risorse) grazie all'aggiunta di migliaia di separatori per i numeri visualizzati sull'asse Y dei grafici.
   - [Novità in Anteprima 5] Aggiunto un nuovo report Statistiche di attesa query.
 
-- **Mascheramento dei dati**
+- **Maschera dati**
   - [Novità in Anteprima 5] Aggiunta una maschera dati statica. La maschera dati statica è uno strumento di protezione dei dati che consente agli utenti di creare una copia del database per mascherare i propri dati sensibili nella copia. Questa funzionalità si rivelerà utile a chi condivide il database di produzione con utenti non di produzione, ad esempio con il team di sviluppo/test o di analisi. Per altre informazioni, vedere [Static Data Masking for Azure SQL Database and SQL Server](https://azure.microsoft.com/blog/static-data-masking-preview/) (Maschera dati statica per database SQL di Azure e SQL Server).
   - [Novità in Anteprima 7] I file di configurazione JSON sono ora supportati
   - [Novità in Anteprima 7] Il formato del file di configurazione XML è stato modificato per renderlo più flessibile in futuro.  I file di configurazione esistenti dovranno essere ricreati.
@@ -217,7 +217,7 @@ Se manca l'etichetta *Anteprima 5*, *Anteprima 6*, *Anteprima 7* o *RC1*, signif
   - [Novità in Anteprima 7] È stato aggiunto il pulsante "Create SSIS IR" (Crea SSIS IR) in "Catalog Creation Wizard" (Creazione guidata catalogo). Tale pulsante può essere usato per avviare "Integration Runtime Creation Wizard" (Creazione guidata Integration Runtime) e creare rapidamente "Azure-SSIS Integration Runtime".
   - [Novità in Anteprima 7] ISDeploymentWizard ora supporta l'autenticazione SQL, nonché l'autenticazione integrata e l'autorizzazione tramite password di Azure Active Directory in modalità riga di comando.
 
-- **Classificazione dei dati**
+- **Classificazione dati**
   - Riorganizzazione del menu attività Classificazione dati : è stato aggiunto un sottomenu al menu delle attività del database ed è stata aggiunta un'opzione per aprire il report dal menu senza dover aprire prima la finestra Classifica dati.
   - [Novità in Anteprima 7] È stata aggiunta la nuova funzionalità 'Classificazione dati' in SMO. L'oggetto colonna espone nuove proprietà: SensitivityLabelName, SensitivityLabelId, SensitivityInformationTypeName, SensitivityInformationTypeId e IsClassified (sola lettura). Per altre informazioni, vedere: https://docs.microsoft.com/sql/t-sql/statements/add-sensitivity-classification-transact-sql?view=azuresqldb-current 
   - [Novità in Anteprima 7] È stata aggiunta la voce "Classification Report" (Report di classificazione) al riquadro a comparsa "Classificazione dati".
@@ -227,7 +227,7 @@ Se manca l'etichetta *Anteprima 5*, *Anteprima 6*, *Anteprima 7* o *RC1*, signif
   - [Novità in Anteprima 7] È stato modificato il set di regole di valutazione della vulnerabilità eseguito nei server di Istanza gestita di database SQL di Azure, in modo da rendere coerenti con il database SQL di Azure i risultati dell'analisi di "Valutazione della vulnerabilità". 
   - [Novità in Anteprima 7] "Valutazione della vulnerabilità" ora supporta Azure SQL Data Warehouse.
 
-- **Always Encrypted**
+- **Crittografia sempre attiva**
   - La casella di controllo Abilita Always Encrypted nella nuova scheda Always Encrypted nella finestra di dialogo Connetti al server ora consente di abilitare o disabilitare facilmente la funzionalità Always Encrypted per una connessione di database. 
 
 - [**Always Encrypted con enclave sicuri**](https://docs.microsoft.com/sql/relational-databases/security/encryption/always-encrypted-enclaves)
@@ -239,10 +239,10 @@ Se manca l'etichetta *Anteprima 5*, *Anteprima 6*, *Anteprima 7* o *RC1*, signif
 - **Procedura guidata Importa file flat**
   - [Novità in Anteprima 7] È stata aggiunta la logica per notificare all'utente che un'importazione di file flat può aver causato una ridenominazione delle colonne.
 
-- **Importazione guidata applicazione livello dati**
+- **Data-tier Application Wizard**
   - [Novità in Anteprima 7] È stato aggiunto il supporto per l'applicazione livello dati di importazione/esportazione con tabelle grafi.
 
-- **Istanza gestita di SQL di Azure**
+- **Istanza gestita di database SQL di Azure**
   - [Novità in Anteprima 7] È stato aggiunto l'**account di accesso di AAD** come nuovo tipo di account di accesso in SMO e SSMS durante la connessione a un'istanza gestita di database SQL di Azure.
 
 - **Visualizzatore XEvent**
@@ -348,7 +348,7 @@ Se manca l'etichetta *Anteprima 5*, *Anteprima 6*, *Anteprima 7* o *RC1*, signif
   - [Novità in Anteprima 7] È stato corretto il problema che causava un errore `StringBuilder.FormatError` durante il tentativo di ripristinare un database se il nome di questo conteneva parentesi graffe `{}`.
   - [Novità in RC1] Risolto un problema in cui i database di Azure in SMO utilizzavano per impostazione predefinita le regole di confronto senza distinzione maiuscole/minuscole per tutti i confronti tra stringhe invece di usare le regole di confronto specificate per il database.
  
-- **AS**
+- **Analysis Services**
   - Correzione di un problema per cui "Impostazioni avanzate" per l'interfaccia utente AS Xevent viene troncata
   - [Novità in Anteprima 5] Correzione di un problema per cui l'analisi DAX genera l'eccezione File non trovato
   - [Novità in Anteprima 5] Aggiunto nuovamente il collegamento "Distribuzione guidata" al menu Start
@@ -368,11 +368,11 @@ Se manca l'etichetta *Anteprima 5*, *Anteprima 6*, *Anteprima 7* o *RC1*, signif
   - [Novità in Anteprima 7] È stato corretto il problema a causa del quale l'importazione guidata non era in grado di elaborare valori decimali negativi.
   - [Novità in Anteprima 7] È stato corretto il problema a causa del quale la procedura guidata non era in grado di eseguire l'importazione da file CSV a colonna singola.
 
-- **Disponibilità elevata e ripristino di emergenza/gruppo di disponibilità**
+- **Disponibilità elevata e ripristino di emergenza e gruppo di disponibilità**
   - [Novità in Anteprima 5] Correzione di un problema per cui i ruoli nella procedura guidata "Failover del gruppo di disponibilità" vengono sempre visualizzati come "Risoluzione in corso" 
   - [Novità in Anteprima 5] Correzione di un problema per cui SSMS visualizza avvisi troncati nel dashboard del gruppo di disponibilità.
 
-- **Classificazione dei dati** 
+- **Classificazione dati** 
   - Correzione di un problema per cui la parte di raccomandazione della classificazione dei dati non funziona con una nuova installazione.
   - [Novità in Anteprima 6] Risolto un problema nel salvataggio delle classificazioni nel riquadro di classificazione dei dati mentre sono aperti altri riquadri di classificazione dei dati in altri database.
 
@@ -446,10 +446,10 @@ Se manca l'etichetta *Anteprima 5*, *Anteprima 6*, *Anteprima 7* o *RC1*, signif
   - [Novità in Anteprima 6] Vengono visualizzate le proprietà del nuovo operatore di concessione memoria quando è presente più di un thread.
   - [Novità in RC1] Aggiungere i seguenti 4 attributi in RunTimeCountersPerThread del piano di esecuzione xml: HpcRowCount (numero di righe elaborate dal dispositivo hpc), HpcKernelElapsedUs (tempo di attesa scaduto per l'esecuzione del kernel in uso), HpcHostToDeviceBytes (byte trasferiti dall'host al dispositivo) e HpcDeviceToHostBytes (byte trasferiti dal dispositivo all'host).
 
-- **Mascheramento dei dati**
+- **Maschera dati**
   - [Novità in Anteprima 7] È stato corretto un bug a causa del quale non era possibile copiare automaticamente database locali con più log e file di tabelle ottimizzate per la memoria FileStream.
 
-- **Importazione guidata applicazione livello dati**
+- **Data-tier Application Wizard**
   - [Novità in RC1] Risolto un problema in cui l'utente non riusciva a importare un'applicazione livello dati (.dacpac) a causa dell'accesso limitato al server (ad esempio, nessun accesso a tutti i database nello stesso server).
   - [Novità in RC1] Risolto un problema che rendeva l'importazione estremamente lenta quando molti database erano ospitati nello stesso server di Azure SQL.
 
@@ -481,7 +481,7 @@ Le funzionalità seguenti non sono più disponibili in SSMS:
 
 ## <a name="1791-latest-ga-release"></a>17.9.1 (versione disponibile a livello generale più recente)
 
-![download](../ssdt/media/download.png) [SSMS 17.9.1](https://go.microsoft.com/fwlink/?linkid=2043154&clcid=0x409)
+![Scaricare](../ssdt/media/download.png) [SSMS 17.9.1](https://go.microsoft.com/fwlink/?linkid=2043154&clcid=0x409)
 
 - Numero di versione: 17.9.1<br>
 - Numero di build: 14.0.17289.0<br>
@@ -502,7 +502,7 @@ Le funzionalità seguenti non sono più disponibili in SSMS:
 
 ## <a name="179"></a>17.9
 
-![download](../ssdt/media/download.png) [SSMS 17.9](https://go.microsoft.com/fwlink/?linkid=2014306&clcid=0x409)
+![Scaricare](../ssdt/media/download.png) [SSMS 17.9](https://go.microsoft.com/fwlink/?linkid=2014306&clcid=0x409)
 
 Numero di build: 14.0.17285.0<br>
 Data di rilascio: 04 settembre 2018
@@ -616,7 +616,7 @@ Scripting:
 
 - Miglioramenti delle prestazioni generali, soprattutto nelle connessioni a latenza elevata.
     
-**Analysis Services**
+**Analysis Services (AS)**
 
 - Provider di dati e librerie client di Analysis Services aggiornati alla versione più recente, con aggiunta del supporto per la nuova autorità AAD di Azure per enti pubblici (login.microsoftonline.us).
 
@@ -643,7 +643,7 @@ Always Encrypted:
 - Risoluzione di un problema (in DacFx) che causava un errore di timeout di blocco quando si abilita Always Encrypted in una tabella partizionata
     
 
-**Analysis Services**
+**Analysis Services (AS)**
 
 - Risoluzione di un problema che verificava durante la modifica di un'origine dati OAuth in un modello tabulare con livello di compatibilità 1400 per Analysis Services, a causa del quale le modifiche nei token OAuth non venivano aggiornate nell'origine dati.
 - Risoluzione di un arresto anomalo in SSMS che poteva verificarsi durante l'uso di alcune credenziali dell'origine dati non valide o la modifica di origini dati che non supportano la migrazione Modifica origine dati in Power Query (ad esempio, Oracle) nei modelli tabulari con livello di compatibilità 1400 di Analysis Services.
@@ -676,7 +676,7 @@ Monitoraggio replica:
 Azure SQL Data Warehouse: 
 - Aggiunto il supporto del percorso righe rifiutate per Tabelle esterne in Azure SQL Data Warehouse. 
 
-**Integration Services**
+**Integration Services (IS)**
 
 - Aggiunta una funzionalità di pianificazione per i pacchetti SSIS distribuiti al database SQL di Azure. A differenza di SQL Server locale e di Istanza gestita di database SQL, che dispongono di SQL Server Agent come pianificatore di processi di prima classe, il database SQL non dispone di un pianificatore integrato. Questa nuova funzionalità SSMS offre un'interfaccia utente familiare e simile a SQL Server Agent per la pianificazione dei pacchetti distribuiti al database SQL. Se si usa il database SQL per ospitare il database del catalogo SSIS, SSIDB, è possibile usare questa funzionalità SSMS per generare le pipeline, le attività e i trigger Data Factory necessari per la pianificazione dei pacchetti SSIS. Quindi è possibile modificare ed estendere tali oggetti in Data Factory. Per altre informazioni dettagliate, vedere [Pianificare l'esecuzione di pacchetti SSIS nel database SQL di Azure con SQL Server Management Studio (SSMS)](../integration-services/lift-shift/ssis-azure-schedule-packages-ssms.md). Per altre informazioni sulla pipeline, sulle attività e sui trigger di Azure Data Factory, vedere [Pipeline e attività in Azure Data Factory](https://docs.microsoft.com/azure/data-factory/concepts-pipelines-activities) e [Esecuzione e trigger di pipeline in Azure Data Factory](https://docs.microsoft.com/azure/data-factory/concepts-pipeline-execution-triggers).
 - Supporto per la pianificazione dei pacchetti SSIS in SQL Agent nell'istanza gestita di SQL. È ora possibile creare processi di SQL Agent per eseguire pacchetti SSIS nell'istanza gestita. 
@@ -715,7 +715,7 @@ Impostazioni utente SSMS:
 Varie:  
 - Migliorata la visualizzazione del testo nella pagina *Statistics details* (Dettagli statistiche). 
 
-**Integration Services**
+**Integration Services (IS)**
 
 - Migliore supporto per Istanza gestita di database SQL di Azure.
 - Risolto un problema per cui l'utente non poteva creare un catalogo per SQL Server 2014 o versione precedente.
@@ -759,7 +759,7 @@ Esplora oggetti:
 Classificazione dei dati:
 - Miglioramenti generali e correzioni di bug.
 
-**Integration Services**
+**Integration Services (IS)**
 
 - Aggiunto il supporto per la distribuzione dei pacchetti a un'[istanza gestita del database SQL](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance).
 
@@ -798,11 +798,11 @@ Posta elettronica database:
 - Risolto un problema per cui la *configurazione guidata della posta elettronica del database* genera un'eccezione quando si tenta di visualizzare o gestire più di 16 profili.
 
 
-**Analysis Services**
+**Analysis Services (AS)**
 
 - Risolto come problema in cui le modifiche apportate a un'origine dati per un modello con livello di compatibilità 1400 in SSMS non vengono salvate nel server.
 
-**Integration Services**
+**Integration Services (IS)**
 
 - Risolto un problema per cui SSMS non visualizza il nodo del catalogo SSIS e i report quando si è connessi all'istanza gestita di database SQL
 
@@ -921,7 +921,7 @@ Procedura guidata Importa file flat:
 Query Store:
 - Ripristino del report "Query regredite" quando si espande l'elenco di report disponibili di Query Store.
 
-**Integration Services**
+**Integration Services (IS)**
 - Aggiunta della funzione di convalida dei pacchetti in Distribuzione guidata, che consente all'utente di determinare i componenti nei pacchetti SSIS non supportati nel runtime di integrazione SSIS di Azure.
 
 ### <a name="bug-fixes"></a>Correzioni di bug
@@ -949,7 +949,7 @@ Risoluzione di un problema per cui lo script di un database con estensione crea 
 - Impostazioni utente:
    - Con questa correzione, gli utenti di Azure per enti pubblici hanno accesso senza interruzione alle risorse del database SQL di Azure e di Azure Resource Manager con SSMS tramite l'autenticazione universale e l'accesso ad Azure Active Directory.  Gli utenti delle versioni precedenti di SSMS devono aprire Strumenti|Opzioni|Servizi di Azure e in Gestione risorse impostare la configurazione della proprietà "Autorità di Active Directory" su https://login.microsoftonline.us.
 
-**Analysis Services**
+**Analysis Services (AS)**
 
 - Profiler: risoluzione di un problema quando si prova a connettersi usando l'autenticazione di Windows in Azure AS.
 - Risoluzione di un problema che può causare un arresto anomalo del sistema quando si annullano i dettagli della connessione in un modello 1400.
@@ -1035,7 +1035,7 @@ Disponibile a livello generale| Numero di build: 14.0.17199.0
    - È stato risolto un problema per cui non era possibile modificare l'affinità processori server.
 
 
-**Analysis Services**
+**Analysis Services (AS)**
 
 - Sono stati risolti vari problemi di Distribuzione guidata per il supporto dei modelli di livello compatibilità 1400 tabulari e le origini dati Power Query.
 - Ora Distribuzione guidata può eseguire la distribuzione ad Azure AS durante l'esecuzione dalla riga di comando.
@@ -1052,7 +1052,7 @@ Disponibile a livello generale| Numero di build: 14.0.17199.0
 - *Query regredite* non è disponibile nell'elenco di report Query Store in Esplora oggetti.
    - Soluzione alternativa: fare clic con il pulsante destro del mouse sul nodo **Query Store** e selezionare **Visualizza query regredite**.
 
-**Integration Services**
+**Integration Services (IS)**
 
 - [execution_path] in [catalog].[event_messagea] non è corretto per le esecuzioni dei pacchetti in Scale Out. [execution_path] inizia con "\Package" anziché con il nome oggetto dell'eseguibile del pacchetto. Quando si visualizza il report panoramica delle esecuzioni dei pacchetti in SSMS, il collegamento "Percorso di esecuzione" in Panoramica sulle esecuzioni non funziona. La soluzione alternativa consiste nel fare clic su "Visualizzazione messaggi" nel report panoramica per controllare tutti i messaggi di evento.
 
@@ -1109,11 +1109,11 @@ Tutte le opzioni di scripting sono state spostate nella relativa sezione, *Opzio
   - Usare CTRL+F.
 
 
-**Analysis Services**
+**Analysis Services (AS)**
 
 - Nuova selezione di membri del ruolo AAD per gli utenti senza indirizzi di posta elettronica nei modelli di Azure Analysis Services in SSMS.
 
-**Integration Services**
+**Integration Services (IS)**
 
 - Nuova colonna "Numero di query eseguite" aggiunta al report di esecuzione per SSIS.
 
@@ -1132,7 +1132,7 @@ The connection is broken and recovery is not possible. The client driver attempt
   - Il componente **Server registrato** non supporta l'autenticazione di Azure AD.
   - L'**Ottimizzazione guidata motore di database** non è supportata per l'autenticazione di Azure AD. Esiste un problema noto per cui il messaggio di errore visualizzato all'utente è poco chiaro: *Impossibile caricare il file o l'assembly 'Microsoft.IdentityModel.Clients.ActiveDirectory,…*, invece del previsto *Ottimizzazione guidata motore di database non supporta database SQL di Microsoft Azure.*  (DTAClient).
 
-**Analysis Services**
+**Analysis Services (AS)**
 
 - Esplora oggetti in SSAS non visualizza il nome utente dell'autenticazione di Windows nelle proprietà di connessione di Azure Analysis Services.
 
@@ -1169,7 +1169,7 @@ The connection is broken and recovery is not possible. The client driver attempt
 - DTA: risolto un problema per cui DTAEngine.exe terminava con la corruzione dell'heap durante la valutazione della funzione di partizione con determinati valori limite.
 
 
-**Analysis Services**
+**Analysis Services (AS)**
 
 - Risolto un problema per cui Ripristina database di Analysis Services non riusciva con errore se il database aveva un nome diverso dall'ID.
 - Risolto un problema per cui la finestra di query DAX ignorava l'opzione di menu per l'attivazione/la disattivazione dell'opzione IntelliSense abilitato.
@@ -1179,7 +1179,7 @@ The connection is broken and recovery is not possible. The client driver attempt
 - Risolto un problema estremamente raro per cui la finestra di dialogo Elimina database poteva generare un errore durante il caricamento.
 - Risolto un problema che poteva verificarsi durante il tentativo di visualizzare le partizioni nel modello con livello di compatibilità 1400 contenente una combinazione di query SQL e definizioni di partizioni M.
 
-**Integration Services**
+**Integration Services (IS)**
 - Risolto il problema che impediva la visualizzazione dei report sulle informazioni di esecuzione del catalogo SSISDB.
 - Risolti i problemi di prestazioni non ottimali in SSMS correlati a un numero elevato di progetti/pacchetti.
 
@@ -1266,7 +1266,7 @@ Disponibile a livello generale| Numero di build: 14.0.17099.0
   - Estensioni grafiche per SQL Server: Nuove icone per il nodo grafico e le tabelle bordi. Il nodo grafico e le tabelle edge verranno visualizzate nella cartella Tabelle grafi. Modelli disponibili per creare il nodo grafico e le tabelle bordi.
 - Modalità presentazione: Tre nuove attività disponibili tramite Avvio veloce (CTRL+Q) PresentOn: attiva la modalità presentazione PresentEdit: modifica la dimensione del tipo di carattere per la modalità presentazione.  "Tipo di carattere Editor di testo" per Editor di query.  "Tipo di carattere ambiente" per altri componenti.
 RestoreDefaultFonts: ripristina le impostazioni predefinite.
-*Nota: non è attualmente disponibile un comando PresentOff.  Usare l'opzione RestoreDefaultFonts per disattivare la modalità presentazione*
+*Nota: non è attualmente disponibile un comando PresentOff.  Per disattivare la modalità presentazione è possibile usare l'opzione RestoreDefaultFonts*
 
 ### <a name="bug-fixes"></a>Correzioni di bug
 

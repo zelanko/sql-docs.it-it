@@ -1,7 +1,7 @@
 ---
-title: SQL Server Management Studio - Telemetria (SSMS) | Microsoft Docs
+title: SQL Server Management Studio - Dati di diagnostica e utilizzo (SSMS) | Microsoft Docs
 ms.custom: ''
-ms.date: 02/20/2017
+ms.date: 04/16/2019
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.reviewer: ''
@@ -11,28 +11,29 @@ ms.assetid: c28ffa44-7b8b-4efa-b755-c7a3b1c11ce4
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: ce4abde855b5fe6a65c3038e93eb8609f9736dc1
-ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
+ms.openlocfilehash: d76b2cbcab3ad156e3a8a5054429198c542c602b
+ms.sourcegitcommit: e2d65828faed6f4dfe625749a3b759af9caa7d91
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59240389"
+ms.lasthandoff: 04/17/2019
+ms.locfileid: "59670847"
 ---
 # <a name="local-audit-for-ssms-usage-and-diagnostic-data-collection"></a>Controllo locale per la raccolta di dati di diagnostica e utilizzo di SSMS
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
-SQL Server Management Studio (SSMS) include funzionalità abilitate per Internet che consentono di raccogliere e inviare a Microsoft dati anonimi di diagnostica e di utilizzo delle funzionalità. SSMS può raccogliere informazioni standard sul computer e informazioni relative all'uso e alle prestazioni che possono venire trasmesse a Microsoft e analizzate al fine di migliorare la qualità, la sicurezza e l'affidabilità di SSMS. Microsoft non raccoglie il nome, l’indirizzo o altre informazioni di contatto. Per informazioni dettagliate, vedere l'[Informativa sulla privacy di Microsoft](https://privacy.microsoft.com/privacystatement) e [Supplemento alla privacy di SQL Server](https://go.microsoft.com/fwlink/?LinkID=868444).
+SQL Server Management Studio (SSMS) include funzionalità abilitate per Internet che consentono di raccogliere e inviare a Microsoft dati anonimi di diagnostica e di utilizzo delle funzionalità. SSMS può raccogliere informazioni standard sul computer e informazioni relative all'uso e alle prestazioni che possono venire trasmesse a Microsoft e analizzate al fine di migliorare la qualità, la sicurezza e l'affidabilità di SSMS. Microsoft non raccoglie il nome, l'indirizzo o altre informazioni di contatto degli utenti. Per informazioni dettagliate, vedere l'[Informativa sulla privacy di Microsoft](https://privacy.microsoft.com/privacystatement) e [Supplemento alla privacy di SQL Server](https://go.microsoft.com/fwlink/?LinkID=868444).
 
-## <a name="audit-feature-usage-data"></a>Controllare i dati relativi all'utilizzo delle funzionalità
+## <a name="audit-feature-usage-and-diagnostic-data"></a>Controllare i dati di diagnostica e utilizzo delle funzionalità
 
-Per vedere i dati relativi all'utilizzo delle funzionalità raccolti da SSMS, eseguire questa procedura:
+Per vedere i dati relativi all'utilizzo delle funzionalità raccolti da SSMS, seguire questa procedura:
+
 1.  Avviare SSMS.
 2.  Fare clic su **Visualizza** e quindi su **Output** nel menu principale per visualizzare la finestra **Output**. 
 3.  Quando la finestra **Output** è visualizzata, scegliere **Telemetria** dal menu **Mostra output di**.
 
 Quando si usa SSMS per interagire con i database, la finestra **Output** mostra i dati raccolti.
 
-## <a name="enable-or-disable-usage-feedback-collection-in-ssms"></a>Abilitare o disabilitare la raccolta di dati relativi all'utilizzo in SSMS
+## <a name="enable-or-disable-usage-and-diagnostic-data-collection-in-ssms"></a>Abilitare o disabilitare la raccolta di dati di diagnostica e utilizzo in SSMS
 
 Per acconsentire esplicitamente alla raccolta di dati di utilizzo per SQL Server Management Studio o per rifiutare in modo esplicito:
 

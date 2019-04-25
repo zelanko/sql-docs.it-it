@@ -12,10 +12,10 @@ ms.author: jaszymas
 manager: craigg
 monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
 ms.openlocfilehash: e6e0f7bc107ae731e3eb2e7f6685e6c02914d41d
-ms.sourcegitcommit: 1a4aa8d2bdebeb3be911406fc19dfb6085d30b04
+ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/03/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58872151"
 ---
 # <a name="configure-always-encrypted-with-secure-enclaves"></a>Configurare Always Encrypted con enclave sicuri
@@ -152,7 +152,7 @@ Per il provisioning delle chiavi abilitate per l'enclave esistono attualmente le
 
 - Le **chiavi master della colonna abilitate per l'enclave devono essere archiviate in Archivio certificati Windows o in Azure Key Vault**. L'archiviazione di chiavi master della colonna abilitate per l'enclave in altri tipi di archivi chiavi (moduli di protezione hardware o archivi chiavi personalizzati) non è attualmente supportata.
 
-### **<a name="provision-enclave-enabled-keys-using-sql-server-management-studio-ssms"></a>Effettuare il provisioning di chiavi abilitate per l'enclave con SQL Server Management Studio (SSMS)**
+### <a name="provision-enclave-enabled-keys-using-sql-server-management-studio-ssms"></a>**Effettuare il provisioning di chiavi abilitate per l'enclave con SQL Server Management Studio (SSMS)**
 
 La procedura seguente crea le chiavi abilitate per l'enclave (richiede SQL Server Management Studio 18.0 o versioni successive):
 
@@ -177,7 +177,7 @@ La procedura seguente crea le chiavi abilitate per l'enclave (richiede SQL Serve
     3. Nell'elenco a discesa **Chiave master della colonna** selezionare la chiave master della colonna creata nei passaggi precedenti.
     4. Fare clic su **OK**.
 
-### **<a name="provision-enclave-enabled-keys-using-powershell"></a>Effettuare il provisioning delle chiavi abilitate per l'enclave con PowerShell**
+### <a name="provision-enclave-enabled-keys-using-powershell"></a>**Effettuare il provisioning delle chiavi abilitate per l'enclave con PowerShell**
 
 Le sezioni seguenti forniscono esempi di script PowerShell per il provisioning delle chiavi abilitate per l'enclave. I passaggi specifici (nuovi) per Always Encrypted con enclave sicuri sono evidenziati. Per altre informazioni (non specifiche per Always Encrypted con enclave sicuri) sul provisioning delle chiavi tramite PowerShell, vedere [Configurare le chiavi di Always Encrypted con PowerShell](https://docs.microsoft.com/sql/relational-databases/security/encryption/configure-always-encrypted-keys-using-powershell).
 
@@ -553,7 +553,7 @@ Per rendere disponibili i calcoli avanzati, potrebbe anche essere necessario mod
 Il processo di rotazione della chiave master della colonna è lo stesso, indipendentemente dal fatto che la chiave coinvolta sia abilitata per l'enclave. Negli articoli seguenti sono disponibili informazioni dettagliate su come ruotare la chiave master della colonna:
 
 - [Ruotare una chiave master della colonna con SQL Server Management Studio](configure-always-encrypted-using-sql-server-management-studio.md)
-- [Ruotare una chiave master della colonna con PowerShell](rotate-always-encrypted-keys-using-powershell.md)
+- [Ruotare le chiavi di Always Encrypted con PowerShell](rotate-always-encrypted-keys-using-powershell.md)
 
 Per praticità, di seguito viene fornito uno script di PowerShell di esempio per la rotazione di una chiave master della colonna.
 

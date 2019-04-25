@@ -1,6 +1,6 @@
 ---
 title: Note sulla versione di SQL Server 2019 | Microsoft Docs
-ms.date: 03/27/2018
+ms.date: 03/27/2019
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: release-landing
@@ -10,12 +10,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: = sql-server-ver15 || = sqlallproducts-allversions
-ms.openlocfilehash: 62c637f8432fd168a9b23a92b7d50c00ea6c1e14
-ms.sourcegitcommit: 2de5446fbc57787f18a907dd5deb02a7831ec07d
+ms.openlocfilehash: 3362a03fe1437b15985fdc557fac6536db5fd2f7
+ms.sourcegitcommit: 46a2c0ffd0a6d996a3afd19a58d2a8f4b55f93de
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58860062"
+ms.lasthandoff: 04/15/2019
+ms.locfileid: "59582875"
 ---
 # <a name="sql-server-2019-preview-release-notes"></a>Note sulla versione di anteprima di SQL Server 2019
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
@@ -42,7 +42,7 @@ Questo articolo descrive le limitazioni e i problemi noti per le versioni Commun
 Un supporto limitato può essere disponibile in una delle posizioni seguenti:
 
 - Forum
-  - [Commenti e suggerimenti per SQL Server](https://aka.ms/sqlfeedback)
+  - [Commenti di SQL Server](https://aka.ms/sqlfeedback)
   - [Introduzione a SQL Server](https://social.msdn.microsoft.com/Forums/sqlserver/en-US/home?forum=sqlgetstarted)
   - [Transact-SQL](https://social.msdn.microsoft.com/Forums/sqlserver/en-US/home?forum=transactsql)
   - [Documentazione di SQL Server](https://social.msdn.microsoft.com/Forums/sqlserver/en-US/home?forum=sqldocumentation)

@@ -16,47 +16,43 @@ ms.assetid: 0426fa90-ef6d-4d19-8207-02ee59f74aec
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-monikerRange: '>=sql-server-2017||=azure-sqldw-latest||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: eff2d9980e4036acae9f2b11a41582847b1a686b
-ms.sourcegitcommit: 1a182443e4f70f4632617cfef4efa56d898e64e9
+monikerRange: '>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 7734ce09ca33c1db8b0ab650509edeabe9e80a08
+ms.sourcegitcommit: e2d65828faed6f4dfe625749a3b759af9caa7d91
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58342929"
+ms.lasthandoff: 04/17/2019
+ms.locfileid: "59670857"
 ---
 # <a name="translate-transact-sql"></a>TRANSLATE (Transact-SQL)
 
-[!INCLUDE[tsql-appliesto-ss2017-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-asdw-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2017-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-xxxx-xxx-md.md)]
 
 Restituisce la stringa fornita come primo argomento dopo che alcuni caratteri specificati nel secondo argomento sono stati convertiti in un set di caratteri di destinazione specificato nel terzo argomento.
 
 ## <a name="syntax"></a>Sintassi
 
+```sql
+TRANSLATE ( inputString, characters, translations)
 ```
-TRANSLATE ( inputString, characters, translations) 
-```
 
-## <a name="arguments"></a>Argomenti   
+## <a name="arguments"></a>Argomenti
 
- *inputString*   
- Stringa [expression](../../t-sql/language-elements/expressions-transact-sql.md) da cercare. *inputString* può essere qualsiasi tipo di dati carattere (nvarchar, varchar, nchar, char).
+ *inputString* [Espressione](../../t-sql/language-elements/expressions-transact-sql.md) stringa da cercare. *inputString* può essere qualsiasi tipo di dati carattere (nvarchar, varchar, nchar, char).
 
- *characters*   
- [Espressione](../../t-sql/language-elements/expressions-transact-sql.md) di stringa contenente caratteri da sostituire. *characters* può essere qualsiasi tipo di dati carattere.
+ *characters* [Espressione](../../t-sql/language-elements/expressions-transact-sql.md) stringa contenente i caratteri da sostituire. *characters* può essere qualsiasi tipo di dati carattere.
 
-*translations*   
- [Espressione](../../t-sql/language-elements/expressions-transact-sql.md) stringa contenente i caratteri di sostituzione. Il tipo di dati e la lunghezza di *translations* devono corrispondere al tipo di dati e alla lunghezza di *characters*.
+*translations* [Espressione](../../t-sql/language-elements/expressions-transact-sql.md) stringa contenente i caratteri sostitutivi. Il tipo di dati e la lunghezza di *translations* devono corrispondere al tipo di dati e alla lunghezza di *characters*.
 
 ## <a name="return-types"></a>Tipi restituiti
 
 Restituisce un'espressione di caratteri dello stesso tipo di dati di `inputString` in cui i caratteri del secondo argomento vengono sostituiti con i caratteri corrispondenti del terzo argomento.
 
-## <a name="remarks"></a>Remarks   
+## <a name="remarks"></a>Remarks
 
 La funzione `TRANSLATE` restituirà un errore se le espressioni *characters* e *translations* hanno lunghezze diverse. `TRANSLATE` restituisce NULL se uno degli argomenti è NULL.  
 
 Il comportamento della funzione `TRANSLATE` è simile all'uso di più funzioni [REPLACE](../../t-sql/functions/replace-transact-sql.md). `TRANSLATE` tuttavia non sostituisce un carattere più di una volta. Questo non è simile all'uso di più funzioni `REPLACE`, poiché ogni uso sostituirebbe tutti i caratteri rilevanti. 
-
 
 `TRANSLATE` riconosce sempre le regole di confronto SC.
 
@@ -105,7 +101,7 @@ REPLACE
 );
 ```
 
-###  <a name="b-convert-geojson-points-into-wkt"></a>b. Convertire i punti GeoJSON in WKT (well-known text)
+### <a name="b-convert-geojson-points-into-wkt"></a>B. Convertire i punti GeoJSON in WKT (well-known text)
 
 GeoJSON è un formato per la codifica di un'ampia gamma di strutture di dati geografici. La funzione `TRANSLATE` consente agli sviluppatori di convertire facilmente i punti GeoJSON in formato WKT e viceversa. La query seguente sostituisce le parentesi quadrate e graffe nell'input con parentesi normali:
 
@@ -114,7 +110,7 @@ SELECT TRANSLATE('[137.4, 72.3]' , '[,]', '( )') AS Point,
     TRANSLATE('(137.4 72.3)' , '( )', '[,]') AS Coordinates;
 ```
 
-[!INCLUDE[ssResult_md](../../includes/ssresult-md.md)]   
+[!INCLUDE[ssResult_md](../../includes/ssresult-md.md)]
 
 |Punto  |Coordinate |  
 |---------|--------- |

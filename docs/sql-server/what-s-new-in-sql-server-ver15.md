@@ -1,6 +1,6 @@
 ---
 title: Novità di SQL Server 2019 | Microsoft Docs
-ms.date: 03/27/2018
+ms.date: 03/27/2019
 ms.prod: sql-server-2019
 ms.reviewer: ''
 ms.technology: release-landing
@@ -9,12 +9,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 0c36b85b210cf10a3d35e5708b123a30e85e3c39
-ms.sourcegitcommit: 3cfedfeba377560d460ca3e42af1e18824988c07
+ms.openlocfilehash: 4e2e29a3b473ca94ff203e99c9e4a76c803d69fc
+ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/05/2019
-ms.locfileid: "59042420"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59774606"
 ---
 # <a name="whats-new-in-includesql-server-2019includessssqlv15-mdmd"></a>Novità di [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)]
 
@@ -24,7 +24,7 @@ ms.locfileid: "59042420"
 
 Per altre informazioni e problemi noti, vedere le [Note sulla versione di [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)]](sql-server-ver15-release-notes.md).
 
-**Provare [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)]**
+**Provare[!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)]**
 
 - [![Download da Evaluation Center](../includes/media/download2.png)](https://go.microsoft.com/fwlink/?LinkID=862101) [Download di [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] per l'installazione in Windows](https://go.microsoft.com/fwlink/?LinkID=862101).
 - Installazione in Linux per [Red Hat Enterprise Server](../linux/quickstart-install-connect-red-hat.md), [SUSE Linux Enterprise Server](../linux/quickstart-install-connect-suse.md) e [Ubuntu](../linux/quickstart-install-connect-ubuntu.md).
@@ -39,8 +39,8 @@ Community Technology Preview (CTP) 2.4 è la versione pubblica più recente di [
 - [Cluster Big Data](#bigdatacluster)
   - Materiale sussidiario sul supporto della GPU per l'esecuzione di Deep Learning con TensorFlow in Spark.
   - Aggiornamento del runtime Spark a Spark 2.4.
-  - `INSERT INTO SELECT` Supporto per il pool di dati.
-  - `FORCE SCALEOUTEXECUTION` e clausola dell'opzione `DISABLE SCALEOUTEXECUTION` per le query di tabella esterna.
+  - Supporto di `INSERT INTO SELECT` per il pool di dati.
+  - Clausola dell'opzione `FORCE SCALEOUTEXECUTION` e `DISABLE SCALEOUTEXECUTION` per le query di tabella esterna.
 
 - [Motore di database](#databaseengine)
   - Il messaggio di errore di troncamento include per impostazione predefinita i nomi di tabelle e colonne e il valore troncato. Vedere [Troncamento](#truncation).
@@ -59,8 +59,8 @@ Le sezioni seguenti descrivono le nuove funzionalità introdotte nelle versioni 
 
 - [Supporto della GPU per l'esecuzione di Deep Learning con TensorFlow in Spark](../big-data-cluster/spark-gpu-tensorflow.md). (CTP 2.4)
 - Aggiornamento del runtime Spark a Spark 2.4. (CTP 2.4)
-- `INSERT INTO SELECT` Supporto per il pool di dati.
-- `FORCE SCALEOUTEXECUTION` e clausola dell'opzione `DISABLE SCALEOUTEXECUTION` per le query di tabella esterna.
+- Supporto di `INSERT INTO SELECT` per il pool di dati.
+- Clausola dell'opzione `FORCE SCALEOUTEXECUTION` e `DISABLE SCALEOUTEXECUTION` per le query di tabella esterna.
 - [Inviare processi Spark nei cluster Big Data di [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] in IntelliJ](../big-data-cluster/spark-submit-job-intellij-tool-plugin.md). (CTP 2.3)
 - [Esperienza di distribuzione e gestione di applicazioni](../big-data-cluster/big-data-cluster-create-apps.md) per diverse app con dati correlati, inclusa l'operatività di modelli di Machine Learning che usano R e Python, l'esecuzione di processi SQL Server Integration Services (SSIS) e così via. (CTP 2.3)
 - [Usare Sparklyr in cluster Big Data di [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)]](../big-data-cluster/sparklyr-from-RStudio.md). (CTP 2.3)
@@ -152,7 +152,7 @@ ALTER DATABASE <db_name> SET ACCELERATED_DATABASE_RECOVERY = {ON | OFF}
 ```
 
 > [!NOTE]
-> Questa sintassi non è necessaria per sfruttare i vantaggi di questa funzionalità nel database SQL di Azure in cui è la funzione è abilitata per impostazione predefinita.
+> Questa sintassi non è necessaria per sfruttare i vantaggi di questa funzionalità nel database SQL di Azure in cui la funzionalità viene [abilitata su richiesta durante l'anteprima pubblica](/azure/sql-database/sql-database-accelerated-database-recovery#to-enable-adr-during-this-preview-period). Dopo l'abilitazione, la funzionalità è attiva per impostazione predefinita.
 
 In caso di database critici con possibili transazioni di grandi dimensioni, provare a usare questa funzionalità durante l'anteprima. Inviare commenti al [team di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]](<https://aka.ms/sqlfeedback>).
 
@@ -171,7 +171,7 @@ Il risultato finale è la riduzione di ricompilazioni estranee e di overhead del
 
 ### <a name="improved-indirect-checkpoint-scalability-ctp-23"></a>Scalabilità migliorata per il checkpoint indiretto (CTP 2.3)
 
-Nelle versioni precedenti di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] gli utenti possono riscontrare errori con l'utilità di pianificazione che non cede il controllo quando il database genera un numero elevato di pagine dirty, ad esempio tempdb. [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] introduce una scalabilità migliorata per il checkpoint indiretto che consente di evitare questi errori nei database con un carico di lavoro di UPDATE/INSERT eccessivo.
+Nelle versioni precedenti di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] gli utenti possono riscontrare errori con l'utilità di pianificazione che non cede il controllo quando il database genera un numero elevato di pagine dirty, ad esempio tempdb. [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] introduce una scalabilità migliorata per il checkpoint indiretto che consente di evitare questi errori nei database che hanno un carico di lavoro di UPDATE/INSERT eccessivo.
 
 ### <a name="utf-8-support-ctp-23"></a>Supporto UTF-8 (CTP 2.3)
 
@@ -330,9 +330,9 @@ Per usare la funzionalità di elaborazione di query intelligenti impostare l'opz
 
 - Impostare questi valori predefiniti usando le opzioni di configurazione con ambito database `ELEVATE_ONLINE` e `ELEVATE_RESUMABLE`. Entrambe le opzioni fanno sì che il motore del database imposti automaticamente le operazioni dell'indice supportate per l'esecuzione online o ripristinabili. È possibile abilitare i comportamenti seguenti tramite queste opzioni:
 
-  - `FAIL_UNSUPPORTED` - Questa opzione autorizza tutte le operazioni sugli indici online o ripristinabili e non consente le operazioni sugli indici online o ripristinabili non supportate.
-  - `WHEN_SUPPPORTED` - Questa opzione consente le operazioni online o ripristinabili supportate ed esegue le operazioni sugli indici non supportate offline in modo non ripristinabile.
-  - `OFF` - Questa opzione consente il comportamento corrente di esecuzione di tutte le operazioni sugli indici come offline e non ripristinabili, salvo diversa indicazione esplicita nell'istruzione DDL.
+  - L'opzione `FAIL_UNSUPPORTED` autorizza tutte le operazioni sugli indici online o ripristinabili e non consente le operazioni sugli indici online o ripristinabili non supportate.
+  - L'opzione `WHEN_SUPPPORTED` consente le operazioni online o ripristinabili supportate ed esegue le operazioni sugli indici non supportate non in linea o in modo non ripristinabile.
+  - L'opzione `OFF` supporta il comportamento corrente di esecuzione di tutte le operazioni sugli indici come offline e non ripristinabili, salvo diversa indicazione esplicita nell'istruzione DDL.
 
 Per eseguire l'override dell'impostazione predefinita, includere l'opzione `ONLINE` o l'opzione `RESUMABLE` nei comandi di creazione e ricompilazione dell'indice. 
 
@@ -385,7 +385,7 @@ Qualsiasi file [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] inserito i
 
 ### <a name="new-options-added-to-spestimatedatacompressionsavings-ctp-20"></a>Nuove opzioni aggiunte a sp_estimate_data_compression_savings (CTP 2.0)
 
-`sp_estimate_data_compression_savings` restituisce le dimensioni correnti degli oggetti richiesti e stima le dimensioni dell'oggetto per lo stato di compressione richiesto. Questa procedura supporta attualmente tre opzioni: `NONE`, `ROW` e `PAGE`. [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] introduce due nuove opzioni: `COLUMNSTORE` e `COLUMNSTORE_ARCHIVE`. Le nuove opzioni consentono di stimare il risparmio di spazio ottenibile con la creazione di un indice columnstore sulla tabella usando la compressione del columnstore standard o archivio.
+`sp_estimate_data_compression_savings` restituisce le dimensioni correnti degli oggetti richiesti e stima le dimensioni dell'oggetto per lo stato di compressione richiesto. Questa procedura supporta attualmente tre opzioni: `NONE`, `ROW` e `PAGE`. `COLUMNSTORE_ARCHIVE` introduce due nuove opzioni: [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] e `COLUMNSTORE`. Le nuove opzioni consentono di stimare il risparmio di spazio ottenibile con la creazione di un indice columnstore sulla tabella usando la compressione del columnstore standard o archivio.
 
 ### <a id="ml"></a> Cluster di failover di SQL Server Machine Learning Services e modellazione basata sulle partizioni (CTP 2.0)
 
@@ -524,11 +524,11 @@ I gruppi di calcolo consentono di risolvere un problema comune nei modelli compl
 
 Un gruppo di calcolo può avere qualsiasi numero di elementi di calcolo. Ogni elemento di calcolo è definito da un'espressione DAX. Sono state introdotte tre nuove funzioni DAX per poter usare i gruppi di calcolo: 
 
-- `SELECTEDMEASURE()` - Restituisce un riferimento alla misura attualmente nel contesto.  
+- `SELECTEDMEASURE()`: restituisce un riferimento alla misura attualmente nel contesto.  
 
-- `SELECTEDMEASURENAME()` - Restituisce una stringa contenente il nome della misura attualmente nel contesto.  
+- `SELECTEDMEASURENAME()`: restituisce una stringa contenente il nome della misura attualmente nel contesto.  
 
-- `ISSELECTEDMEASURE(M1, M2, …)` - Restituisce un valore booleano che indica se la misura attualmente nel contesto è una di quelle specificate come argomento.
+- `ISSELECTEDMEASURE(M1, M2, …)`: restituisce un valore booleano che indica se la misura attualmente nel contesto è una di quelle specificate come argomento.
 
 Oltre alle nuove funzioni DAX, vengono introdotte due nuove DMV:
 

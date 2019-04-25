@@ -12,15 +12,15 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: a73eda4fbb3898846894a4cf35de4253cffedbc3
-ms.sourcegitcommit: 1a4aa8d2bdebeb3be911406fc19dfb6085d30b04
+ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/03/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58872251"
 ---
 # <a name="upgrade-sql-server-instances-running-on-windows-server-20082008-r22012-clusters"></a>Aggiornare istanze di SQL Server in esecuzione in cluster di Windows Server 2008/2008 R2/2012
 
-[!INCLUDE[nextref-longhorn-md](../../../includes/nextref-longhorn-md.md)], [!INCLUDE[winserver2008r2-md](../../../includes/winserver2008r2-md.md)] e [!INCLUDE[win8srv-md](../../../includes/win8srv-md.md)] impediscono ai cluster Windows Server Failover Cluster (WSFC) di eseguire aggiornamenti sul posto del sistema operativo, limitando la versione consentita di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] per i cluster. Dopo aver aggiornato il cluster almeno alla versione [!INCLUDE[winblue-server-2-md](../../../includes/winblue-server-2-md.md)], il cluster rimarrà aggiornato.
+[!INCLUDE[nextref-longhorn-md](../../../includes/nextref-longhorn-md.md)], [!INCLUDE[winserver2008r2-md](../../../includes/winserver2008r2-md.md)] e [!INCLUDE[win8srv-md](../../../includes/win8srv-md.md)] impediscono ai cluster WSFC di eseguire aggiornamenti sul posto del sistema operativo, limitando la versione consentita di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] per i cluster. Dopo aver aggiornato il cluster almeno alla versione [!INCLUDE[winblue-server-2-md](../../../includes/winblue-server-2-md.md)], il cluster rimarrà aggiornato.
 
 ## <a name="prerequisites"></a>Prerequisites
 
@@ -285,7 +285,7 @@ La migrazione di un cluster che usa gruppi di disponibilità con repliche autono
 
 ### <a name="includessnoversionincludesssnoversion-mdmd-agent"></a>[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Agent
 
--   **processi**
+-   **Processi**
 
     I processi devono essere sottoposti a migrazione insieme ai database di sistema. Nel computer di destinazione, SQL Server Agent o gli utenti che eseguono un processo SQL Server Agent hanno le stesse autorizzazioni specificate nei prerequisiti.
 
@@ -309,7 +309,7 @@ La migrazione di un cluster che usa gruppi di disponibilità con repliche autono
 
 ### <a name="integration-services"></a>Integration Services
 
--   **progetti SSIS**
+-   **Progetti SSIS**
 
     La migrazione dei progetti SSIS viene eseguita insieme a quella del database SSIS. Dopo lo spostamento del database SSIS, i pacchetti sono eseguibili immediatamente prima dello spostamento delle tabelle di sistema.
 

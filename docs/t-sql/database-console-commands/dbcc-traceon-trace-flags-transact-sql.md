@@ -1,7 +1,7 @@
 ---
 title: Flag di traccia (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 03/27/2018
+ms.date: 03/27/2019
 ms.prod: sql
 ms.prod_service: sql-database
 ms.reviewer: ''
@@ -21,12 +21,12 @@ ms.assetid: b971b540-1ac2-435b-b191-24399eb88265
 author: pmasl
 ms.author: pelopes
 manager: craigg
-ms.openlocfilehash: c6a6d5e92c6aa5ab2a88606e829acba3c765276f
-ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
+ms.openlocfilehash: 9e204faee33deba95a53906f473bf909e182785e
+ms.sourcegitcommit: 46a2c0ffd0a6d996a3afd19a58d2a8f4b55f93de
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58494203"
+ms.lasthandoff: 04/15/2019
+ms.locfileid: "59583444"
 ---
 # <a name="dbcc-traceon---trace-flags-transact-sql"></a>DBCC TRACEON - Flag di traccia (Transact-SQL)
 
@@ -97,7 +97,7 @@ Nella tabella seguente vengono elencati e descritti i flag di traccia disponibil
 |**3427**|Abilita la risoluzione dei problemi quando più transazioni consecutive che inseriscono dati in tabelle temporanee in [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] o [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] usano maggiormente la CPU rispetto all'inserimento in [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]. Per altre informazioni, vedere questo [articolo del supporto tecnico Microsoft](https://support.microsoft.com/help/3216543)<br /><br />**Nota:** questo flag di traccia si applica a [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 CU2 e alle build successive. A partire da [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] questo flag di traccia non ha alcun effetto.<br /><br />**Ambito**: solo globale|  
 |**3459**|Disabilita il rollforward parallelo. Per altre informazioni, vedere questo [articolo del supporto tecnico Microsoft](https://support.microsoft.com/help/3200975) e [articolo del supporto tecnico Microsoft](https://support.microsoft.com/help/4101554).<br /><br />**Nota:** questo flag di traccia si applica a [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] e [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)].<br /><br />**Ambito**: solo globale| 
 |**3468**|Disabilita i [checkpoint indiretti](https://docs.microsoft.com/sql/relational-databases/logs/database-checkpoints-sql-server?view=sql-server-2017#IndirectChkpt) in TempDB.<br /><br />**Nota:** questo flag di traccia si applica a [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 CU5, [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU1 e alle build successive.<br /><br />**Ambito**: solo globale|  
-|**3608**|Impedisce l'avvio e il recupero automatico dei database ad eccezione del database **master** in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Se vengono avviate le attività che richiedono **tempdb**, viene recuperato il database **model** e viene creato il database **tempdb**. Gli altri database verranno avviati e recuperati al momento dell'accesso. Alcune funzionalità, ad esempio l'isolamento dello snapshot e lo snapshot Read committed, potrebbero non funzionare. Usare per [spostare i database di sistema](../../relational-databases/databases/move-system-databases.md) e [spostare i database utente](../../relational-databases/databases/move-user-databases.md).<br /><br />**Nota:** Evitare l'utilizzo durante il normale funzionamento.<br /><br />**Ambito**: solo globale|   
+|**3608**|Impedisce l'avvio e il recupero automatico dei database ad eccezione del database **master** in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Se vengono avviate le attività che richiedono **tempdb**, viene recuperato il database **model** e viene creato il database **tempdb**. Gli altri database verranno avviati e recuperati al momento dell'accesso. Alcune funzionalità, ad esempio l'isolamento dello snapshot e lo snapshot Read committed, potrebbero non funzionare. Usare per [spostare i database di sistema](../../relational-databases/databases/move-system-databases.md) e [spostare i database utente](../../relational-databases/databases/move-user-databases.md).<br /><br />**Nota:** evitare l'uso durante il normale funzionamento.<br /><br />**Ambito**: solo globale|   
 |**3625**|Limita la quantità di informazioni restituite agli utenti che non sono membri del ruolo predefinito del server sysadmin mascherando i parametri di alcuni messaggi di errore tramite '\*\*\*\*\*\*'. In questo modo è possibile impedire la divulgazione di informazioni riservate.<br /><br />**Ambito**: solo globale|  
 |**3656**|Consente la risoluzione dei simboli nel dump dello stack quando vengono installati gli strumenti di debug per Windows. Per ulteriori informazioni, vedere questo [white paper di Microsoft](https://www.microsoft.com/download/details.aspx?id=26666).<br /><br />**Avviso:** questo flag è per tracciare il debug e non è destinato all'ambiente di produzione.<br /><br />**Ambito**: globale e sessione|
 |**4136**|Disabilita l'analisi dei parametri, a meno che non venga usata OPTION(RECOMPILE), WITH RECOMPILE o OPTIMIZE FOR \<value>. Per altre informazioni, vedere questo [articolo del supporto tecnico Microsoft](https://support.microsoft.com/kb/980653).<br /><br />A partire da [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], per eseguire questa operazione a livello di database, vedere l'opzione PARAMETER_SNIFFING in [ALTER DATABASE SCOPED CONFIGURATION &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md).<br /><br />Per eseguire questa operazione a livello di query, aggiungere l'[hint per la query](../../t-sql/queries/hints-transact-sql-query.md) OPTIMIZE FOR UNKNOWN. A partire da [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1, una seconda opzione per eseguire questa operazione a livello di query consiste nell'aggiungere l'[hint per la query](../../t-sql/queries/hints-transact-sql-query.md) USE HINT 'DISABLE_PARAMETER_SNIFFING' anziché usare il flag di traccia.<br /><br />**Nota:** verificare di testare questa opzione prima di distribuirla in un ambiente di produzione.<br /><br />**Ambito**: globale o sessione|  

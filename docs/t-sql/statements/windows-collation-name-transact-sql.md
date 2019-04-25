@@ -19,12 +19,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 1816363425276ec532e5cc04433630e8e6b9bcac
-ms.sourcegitcommit: 03870f0577abde3113e0e9916cd82590f78a377c
+ms.openlocfilehash: 089c6d25d7c899db03d67a6f7d1b8c9d495c94e6
+ms.sourcegitcommit: e2d65828faed6f4dfe625749a3b759af9caa7d91
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/18/2019
-ms.locfileid: "57974350"
+ms.lasthandoff: 04/17/2019
+ms.locfileid: "59671387"
 ---
 # <a name="windows-collation-name-transact-sql"></a>Windows_collation_name (Transact-SQL)
 
@@ -37,7 +37,6 @@ Specifica il nome delle regole di confronto Windows nella clausola COLLATE in [!
 ## <a name="syntax"></a>Sintassi
 
 ```
-
 <Windows_collation_name> :: =
 CollationDesignator_<ComparisonStyle>
 
@@ -50,7 +49,8 @@ CollationDesignator_<ComparisonStyle>
 
 ## <a name="arguments"></a>Argomenti
 
-*CollationDesignator* specifica le regole di base usate nelle regole di confronto di Windows, ovvero:
+*CollationDesignator*   
+Specifica le regole alla base delle regole di confronto Windows, ovvero:
 
 - Le regole di ordinamento e confronto applicate quando si specifica l'ordinamento del dizionario. Le regole di ordinamento si basano sull'alfabeto o sulla lingua.
 - La tabella codici utilizzata per memorizzare i dati **varchar**.
@@ -67,20 +67,20 @@ Ad esempio:
 **AI** specifica che la distinzione tra caratteri accentati e non accentati non è rilevante, mentre **AS** indica che la distinzione tra caratteri accentati e non accentati è rilevante.
 
 *KanatypeSensitive*  
-**Omesso** specifica che la distinzione Kana non è rilevante, **KS** specifica che la distinzione Kana è rilevante.
+Omettendo questa opzione si specifica che la distinzione Kana non è rilevante. **KS** specifica che la distinzione Kana è rilevante.
 
 *WidthSensitivity*  
-**Omesso** specifica che la distinzione di larghezza non è rilevante, **WS** specifica che la distinzione di larghezza è rilevante.
+Omettendo questa opzione si specifica che la distinzione di larghezza non è rilevante. **WS** specifica che la distinzione di larghezza è rilevante.
 
 *VariationSelectorSensitivity*  
-**Si applica a**: A partire da [!INCLUDE[ssSQL15](../../includes/sssqlv14-md.md)] 
+- **Si applica a**: A partire da [!INCLUDE[ssSQL15](../../includes/sssqlv14-md.md)] 
 
-**Omesso** specifica che il selettore di variazione non è rilevante, **VSS** specifica che il selettore di variazione è rilevante.
+- Omettendo questa opzione si specifica che il selettore di variazione non è rilevante, **VSS** specifica che il selettore di variazione è rilevante.
 
 **UTF8**  
-**Si applica a**: A partire da [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]   
+- **Si applica a**: A partire da [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]   
 
-Specifica la codifica UTF-8 da usare per i tipi di dati idonei. Per altre informazioni, vedere [Collation and Unicode Support](../../relational-databases/collations/collation-and-unicode-support.md).
+- Specifica la codifica UTF-8 da usare per i tipi di dati idonei. Per altre informazioni, vedere [Collation and Unicode Support](../../relational-databases/collations/collation-and-unicode-support.md).
 
 **BIN**  
 Specifica che deve essere usato il tipo di ordinamento binario compatibile con le versioni precedenti.
@@ -143,7 +143,7 @@ Nella tabella seguente vengono elencate tutte le regole di confronto di Windows 
 |Baschiro (Russia)|Bashkir_100_|Non disponibile|
 |Basco (Basco)|Latin1_General_100_|Non disponibile|
 |Bengalese (Bangladesh)|Bengali_100_<sup>1</sup>|Non disponibile|
-|Bengali (India)|Bengali_100_<sup>1</sup>|Non disponibile|
+|Bengalese (India)|Bengali_100_<sup>1</sup>|Non disponibile|
 |Bosniaco (Bosnia ed Erzegovina, alfabeto cirillico)|Bosnian_Cyrillic_100_|Non disponibile|
 |Bosniaco (Bosnia ed Erzegovina, alfabeto latino)|Bosnian_Latin_100_|Non disponibile|
 |Bretone (Francia)|Breton_100_|Non disponibile|

@@ -11,10 +11,10 @@ ms.author: aboke
 manager: craigg
 monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
 ms.openlocfilehash: 4a7484acf7a63b5c2a6804e1f3f7914cabaf8524
-ms.sourcegitcommit: 57f7e5f25161dbb4cc446e751ea74b1ac5f86165
+ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/10/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59476646"
 ---
 # <a name="configure-polybase-to-access-external-data-in-oracle"></a>Configurare PolyBase per l'accesso a dati esterni in Oracle

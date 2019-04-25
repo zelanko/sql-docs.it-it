@@ -1,7 +1,7 @@
 ---
 title: Livello di compatibilità ALTER DATABASE (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 02/21/2019
+ms.date: 04/15/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -25,12 +25,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg'
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: dbc27afcf47429d0c6a74b43244ba9a4f6f483a7
-ms.sourcegitcommit: 8664c2452a650e1ce572651afeece2a4ab7ca4ca
+ms.openlocfilehash: d535d50bde7c05629d23be85c2c64083dd455965
+ms.sourcegitcommit: 46a2c0ffd0a6d996a3afd19a58d2a8f4b55f93de
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/26/2019
-ms.locfileid: "56828081"
+ms.lasthandoff: 04/15/2019
+ms.locfileid: "59583374"
 ---
 # <a name="alter-database-transact-sql-compatibility-level"></a>Livello di compatibilità ALTER DATABASE (Transact-SQL)
 
@@ -176,6 +176,14 @@ In questa sezione vengono descritti i nuovi comportamenti introdotti con il live
 
 Il livello di compatibilità del database 150 è attualmente in anteprima pubblica per [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] e [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]. Questo livello di compatibilità del database verrà associato alla prossima generazione di miglioramenti per l'elaborazione delle query, in aggiunta a quelli introdotti per il livello di compatibilità 140.
 
+|Livello di compatibilità 140 o inferiore|Livello di compatibilità 150|
+|--------------------------------------------------|-----------------------------------------|
+|I carichi di lavoro analitici e per data warehouse relazionali potrebbero non essere in grado di sfruttare gli indici columnstore a causa dell'overhead OLTP, della mancanza di supporto dei fornitori o di altre limitazioni.  Senza gli indici columnstore, questi carichi di lavoro non possono trarre vantaggio dalla modalità di esecuzione batch.|La modalità di esecuzione batch è ora disponibile per i carichi di lavoro analitici senza richiedere indici columnstore. Per altre informazioni, vedere [Modalità batch per rowstore](https://docs.microsoft.com/en-us/sql/relational-databases/performance/intelligent-query-processing?view=sql-server-2017#batch-mode-on-rowstore).|
+|Le query in modalità riga per le quali sono necessarie concessioni di memoria di dimensioni insufficienti che causano distribuzioni su disco possono essere problematiche su esecuzioni consecutive.|Le query in modalità riga per le quali sono necessarie concessioni di memoria di dimensioni insufficienti che causano distribuzioni su disco possono evidenziare miglioramenti in termini di prestazioni su esecuzioni consecutive. Per altre informazioni, vedere [Feedback delle concessioni di memoria in modalità riga](https://docs.microsoft.com/en-us/sql/relational-databases/performance/intelligent-query-processing?view=sql-server-2017#row-mode-memory-grant-feedback).|
+|Le query in modalità riga per le quali sono necessarie concessioni di memoria di dimensioni eccessive che causano problemi di concorrenza possono essere problematiche su esecuzioni consecutive.|Le query in modalità riga per le quali sono necessarie concessioni di memoria di dimensioni eccessive che causano problemi di concorrenza possono evidenziare miglioramenti in termini di concorrenza su esecuzioni consecutive. Per altre informazioni, vedere [Feedback delle concessioni di memoria in modalità riga](https://docs.microsoft.com/en-us/sql/relational-databases/performance/intelligent-query-processing?view=sql-server-2017#row-mode-memory-grant-feedback).|
+|Le query che fanno riferimento a funzioni definite dall'utente scalari T-SQL useranno la chiamata iterativa, senza calcolo dei costi e con esecuzione seriale imposta. |Le funzioni definite dall'utente scalari T-SQL vengono trasformate in espressioni relazionali equivalenti che vengono rese inline nella query chiamante, ottenendo spesso significativi miglioramenti delle prestazioni. Per altre informazioni, vedere [Inlining di funzioni definite dall'utente scalari T-SQL](https://docs.microsoft.com/en-us/sql/relational-databases/performance/intelligent-query-processing?view=sql-server-2017#scalar-udf-inlining).|
+|Le variabili di tabella usano un'ipotesi fissa per la stima della cardinalità.  Se il numero effettivo di righe è molto superiore al valore ipotizzato, possono esserci effetti negativi sulle prestazioni delle operazioni downstream. |I nuovi piani useranno la cardinalità effettiva della variabile tabella rilevata nella prima compilazione invece di una stima fissa. Per altre informazioni, vedere [Compilazione posticipata delle variabili di tabella](https://docs.microsoft.com/en-us/sql/relational-databases/performance/intelligent-query-processing?view=sql-server-2017#table-variable-deferred-compilation).|
+
 Per altre informazioni sulle funzionalità di elaborazione delle query abilitate nel livello di compatibilità del database 150, vedere [Novità di SQL Server 2019](../../sql-server/what-s-new-in-sql-server-ver15.md) ed [Elaborazione di query intelligenti nei database SQL](https://docs.microsoft.com/sql/relational-databases/performance/intelligent-query-processing?view=sql-server-2017).
 
 ## <a name="differences-between-compatibility-level-130-and-level-140"></a>Differenze tra il livello di compatibilità 130 e 140 
@@ -291,7 +299,7 @@ Se per un'applicazione si utilizza un identificatore che rappresenta una parola 
 
 Per altre informazioni, vedere [Parole chiave riservate](../../t-sql/language-elements/reserved-keywords-transact-sql.md).
 
-## <a name="permissions"></a>Permissions
+## <a name="permissions"></a>Autorizzazioni
 
 È richiesta l'autorizzazione ALTER per il database.
 
