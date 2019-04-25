@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 1186615ccd409ba34f65d3f63dd51c76dfa2fdb1
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47714329"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62518621"
 ---
 # <a name="ado-programming-task-table"></a>Tabella delle attività programmatori ADO
 La tabella seguente elenca le attività di programmazione contenute nel *Guida per programmatori ADO* e vengono forniti i riferimenti per ogni attività. Questi riferimenti possono essere visualizzate le descrizioni testuali o gli esempi di codice in cui è possibile trovare informazioni sulla funzionalità ADO che esegue l'attività.

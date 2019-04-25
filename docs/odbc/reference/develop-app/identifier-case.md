@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 6445cffd5faa8b825c81ec729d7b28c90e14a7b3
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47678351"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62447823"
 ---
 # <a name="identifier-case"></a>Maiuscole/minuscole per gli identificatori
 In istruzioni SQL e gli argomenti della funzione del catalogo, identificatori e gli identificatori delimitati possono essere uno tra maiuscole e minuscole o non, quale un'applicazione può determinare chiamando **SQLGetInfo** specificando le SQL_IDENTIFIER_CASE SQL_QUOTED_ Opzioni IDENTIFIER_CASE.  

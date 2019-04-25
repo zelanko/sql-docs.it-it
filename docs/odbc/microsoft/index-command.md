@@ -14,11 +14,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 864f6fa78ab1ef23b7db3a0be4c85738b95ea72d
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53214224"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62471259"
 ---
 # <a name="index-command"></a>INDEX (comando)
 Crea un file di indice per visualizzare e accedere ai record di tabella in ordine logico.  
@@ -46,7 +46,7 @@ INDEX ON eExpression TO IDXFileName | TAG TagName [OF CDXFileName]
   
  È possibile creare una chiave di indice con lunghezza pari a zero. Ad esempio, una chiave di indice pari a zero lunghezza viene creata quando l'espressione di indice è una sottostringa di un campo di tipo memo vuoto. Una chiave di indice pari a zero lunghezza genera un messaggio di errore. Quando Visual FoxPro viene creato un indice, la valuta i campi nel primo record nella tabella. Se un campo è vuoto, potrebbe essere necessario immettere alcuni dati temporanei nel campo del primo record per evitare che una chiave di indice di lunghezza 0.  
   
- PER *IDXFileName*  
+ TO *IDXFileName*  
  Crea un file di indice IDX. Il file di indice viene assegnato l'IDX di estensione predefinito.  
   
  TAG *TagName*[OF *CDXFileName*]  
@@ -62,7 +62,7 @@ INDEX ON eExpression TO IDXFileName | TAG TagName [OF CDXFileName]
   
  Se già creato e aperto un file di indice composto, indice con TAG di emissione *TagName* aggiunge un tag per il file di indice composto.  
   
- PER *lExpression*  
+ FOR *lExpression*  
  Specifica una condizione in base al quale solo i record che soddisfano l'espressione filtro *lExpression* sono disponibili per la visualizzazione e l'accesso; le chiavi di indice vengono create nel file di indice per solo i record corrispondenti all'espressione di filtro.  
   
  Visual FoxPro Rushmore tecnologia Ottimizza un indice... PER la *lExpression* dei comandi *lExpression* è un'espressione ottimizzabile. Per prestazioni ottimali, utilizzare un'espressione ottimizzabile nella clausola FOR.  

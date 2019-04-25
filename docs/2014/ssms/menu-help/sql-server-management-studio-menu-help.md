@@ -14,11 +14,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: c1405c26761b41ab0ecbccfc4e2479b89a01a1f2
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52818743"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62510346"
 ---
 # <a name="sql-server-management-studio-menu-help"></a>Guida dei menu di SQL Server Management Studio
   Questa sezione contiene gli argomenti della Guida sensibile al contesto per le finestre di dialogo e le pagine disponibili dalla barra dei menu di [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)].  

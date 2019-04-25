@@ -14,11 +14,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: a031466e35fef90104ab81fec17010725f8f5c0c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48146981"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62761735"
 ---
 # <a name="optimizing-the-neworg-table"></a>Ottimizzazione della tabella NewOrg
   Il **NewOrd** creato nella tabella di [popolamento di una tabella con dati gerarchici esistenti](lesson-1-2-populating-a-table-with-existing-hierarchical-data.md) attività contiene tutte le informazioni sul personale e rappresenta la struttura gerarchica usando un `hierarchyid`tipo di dati. Questa attività aggiunge indici nuovi per supportare ricerche nella colonna `hierarchyid`.  
@@ -72,7 +72,7 @@ ms.locfileid: "48146981"
   
      [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
-     Indice depth-first: i record relativi ai dipendenti vengono archiviati accanto al responsabile.  
+     Indice Depth-first: I record dei dipendenti vengono archiviati accanto al responsabile.  
   
      `LogicalNode OrgNode    H_Level EmployeeID LoginID`  
   
@@ -96,7 +96,7 @@ ms.locfileid: "48146981"
   
      `/2/2/       0x6B40       2         8      norint`  
   
-     **Indice EmployeeID**-first: le righe vengono archiviate nella sequenza di **EmployeeID**.  
+     **EmployeeID**-prima di tutto di indice: Le righe vengono archiviate nel **EmployeeID** sequenza.  
   
      `LogicalNode OrgNode    H_Level EmployeeID LoginID`  
   

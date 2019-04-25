@@ -21,11 +21,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: f22fc952f0394f9e59ca8d67c76d0b00594b0759
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53212427"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62466013"
 ---
 # <a name="sqlmanagedatasources"></a>SQLManageDataSources
 **Conformità**  
@@ -43,7 +43,7 @@ BOOL SQLManageDataSources(
 ```  
   
 ## <a name="arguments"></a>Argomenti  
- *HWND*  
+ *hwnd*  
  [Input] Handle della finestra padre.  
   
 ## <a name="returns"></a>Valori di codice restituiti  
@@ -94,7 +94,7 @@ BOOL SQLManageDataSources(
   
  Un DSN di sistema viene registrato nella voce HKEY_LOCAL_MACHINE nelle informazioni di sistema anziché nella voce HKEY_CURRENT_USER. Non è associato a un utente che esegue l'accesso con il proprio nome utente specifico e la password, ma può essere usato da qualsiasi utente del computer o da un servizio automatico a livello di sistema. Il DSN di sistema è, tuttavia, associato a un solo computer. Non supporta la funzionalità di utilizzo remoto DSN tra computer. DSN di sistema sono registrate come indicato di seguito le informazioni di sistema:  
   
- HKEY_LOCAL_MACHINE SOFTWARE ODBC ini  
+ HKEY_LOCAL_MACHINE    SOFTWARE       ODBC          Odbc.ini  
   
 ## <a name="file-dsns"></a>DSN file  
  Un'origine dati file non è un nome dell'origine dati, perché esegue un'origine dati di computer e non è registrato per qualsiasi utente o computer. Le informazioni di connessione per l'origine dati sono contenute in un file DSN che può essere copiato in tutti i computer. Un'origine dati file può essere condivisibile, nel qual caso il file DSN si trova in una rete e può essere usata contemporaneamente da più utenti nella rete, purché l'utente abbia il driver appropriato installato. Un'origine dati file può anche essere condivisibile, nel qual caso può essere utilizzato solo in un singolo computer.  

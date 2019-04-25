@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 91741ef8d6b0f7f984958837df3234b0bbc1e009
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47727339"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62472865"
 ---
 # <a name="anticipating-errors"></a>Prevenzione degli errori
 Prevenzione di errore è almeno tanto importante quanto la gestione degli errori. Questa sezione finale contiene un elenco ridotto di precauzioni che l'applicazione può richiedere per rendere meno probabile che si verificano errori.  

@@ -11,13 +11,13 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: e3d33209cd6dfe261a5deced345adac70b46961f
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52810973"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62523895"
 ---
-# <a name="tutorial-sql-server-data-files-in-windows-azure-storage-service"></a>Esercitazione: File di dati di SQL Server nel Servizio di archiviazione di Microsoft Azure
+# <a name="tutorial-sql-server-data-files-in-windows-azure-storage-service"></a>Esercitazione: File di dati di SQL Server nel servizio di archiviazione di Microsoft Azure
   Introduzione all'esercitazione sui file di dati di SQL Server nel servizio di archiviazione Windows Azure In questa esercitazione sono incluse informazioni sull'archiviazione di file di dati di SQL Server direttamente nel servizio di archiviazione BLOB di Windows Azure.  
   
  Il supporto per l'integrazione di SQL Server per il servizio di archiviazione BLOB di Windows Azure è una funzionalità avanzata di SQL Server 2014. Per una panoramica delle funzionalità e vantaggi dell'uso di questa funzionalità, vedere [file di dati di SQL Server in Windows Azure](databases/sql-server-data-files-in-microsoft-azure.md).  

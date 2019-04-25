@@ -14,16 +14,16 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: b15f077132fcc50c89dd93a38525316bf112f0a7
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48093172"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62465475"
 ---
 # <a name="browser-cube-designer-analysis-services---multidimensional-data"></a>Esplorazione (Progettazione cubi) (Analysis Services - Dati multidimensionali)
   La scheda **Esplorazione** di Progettazione cubi consente di esplorare dimensioni, misure e indicatori KPI in un cubo. In [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]il Visualizzatore cubi di [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] è stato integrato con Progettazione query MDX e fornisce interfacce utente grafiche per creare query MDX, filtrare e sezionare cubi ed eseguire il drill-down nelle gerarchie.  
   
- Nella scheda **Esplorazione** sono disponibili due modalità, ovvero **Modalità progettazione** e **Modalità query**. In entrambe le modalità è possibile usare gli oggetti disponibili nel riquadro **Metadati** per esplorare il cubo oppure trascinare membri dal riquadro **Metadati** nell'area della query per compilare una query MDX per il recupero dei dati che si desidera usare.  
+ Il **Browser** scheda è disponibili due modalità: **La modalità progettazione** e **modalità Query**. In entrambe le modalità è possibile usare gli oggetti disponibili nel riquadro **Metadati** per esplorare il cubo oppure trascinare membri dal riquadro **Metadati** nell'area della query per compilare una query MDX per il recupero dei dati che si desidera usare.  
   
  **Esplorazione e Query tramite la modalità progettazione grafica**  
   

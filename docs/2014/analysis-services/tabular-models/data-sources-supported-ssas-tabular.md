@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 52aae6defa5817236c4298d7c8e4cb44361a8284
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53371313"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62757426"
 ---
 # <a name="data-sources-supported-ssas-tabular"></a>Data Sources Supported (SSAS Tabular)
   In questo argomento vengono descritti i tipi di origini dati che possono essere utilizzati con i modelli tabulari.  
@@ -34,7 +34,7 @@ ms.locfileid: "53371313"
   
 |||||  
 |-|-|-|-|  
-|Origine|Versioni|Tipo di file|I provider <sup>1</sup>|  
+|Source|Versioni|Tipo di file|Providers <sup>1</sup>|  
 |Database di Access|Microsoft Access 2003, 2007, 2010.|Estensione accdb o mdb|Provider OLE DB per ACE 14|  
 |Database relazionali di SQL Server|Microsoft SQL Server 2005, 2008, 2008 R2 SQL Server 2012, Microsoft SQL Azure Database <sup>2</sup>|(non applicabile)|Provider OLE DB per SQL Server<br /><br /> Provider OLE DB di SQL Server Native Client<br /><br /> Provider OLE DB per SQL Server Native Client 10.0<br /><br /> Provider di dati .NET Framework per SQL Client|  
 |SQL Server Parallel Data Warehouse (PDW) <sup>3</sup>|2008 R2|(non applicabile)|Provider OLE DB per SQL Server PDW|  

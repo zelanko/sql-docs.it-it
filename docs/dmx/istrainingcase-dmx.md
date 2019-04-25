@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 6c42ecb976884573e313c06adc4241e202e123df
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51599932"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62503567"
 ---
 # <a name="istrainingcase-dmx"></a>IsTrainingCase (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -55,7 +55,7 @@ AND [Age] <40
   
 ## <a name="see-also"></a>Vedere anche  
  [Set di training e set di dati di Testing](../analysis-services/data-mining/training-and-testing-data-sets.md)   
- [Le funzioni &#40;DMX&#41;](../dmx/functions-dmx.md)   
+ [Functions &#40;DMX&#41;](../dmx/functions-dmx.md)   
  [Query di data mining](../analysis-services/data-mining/data-mining-queries.md)  
   
   

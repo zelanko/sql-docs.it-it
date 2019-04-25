@@ -14,16 +14,16 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: aef22dfdc18304591b8d556fd323ba6b851778eb
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48196891"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62757815"
 ---
 # <a name="suggest-related-columns-data-mining-wizard"></a>Suggerisci colonne correlate (Creazione guidata modello di data mining)
   Usare la pagina **Suggerisci colonne correlate** per visualizzare le indicazioni specificate dalla funzionalità **Suggerisci** selezionata nella pagina precedente della procedura. Le colonne di input verranno selezionate automaticamente sulla base della relativa associazione alla colonna **Stimabile** scelta. Se si accettano, le modifiche apportate a questa finestra di dialogo verranno riflesse nella pagina **Impostazione dati di training**.  
   
- **Per altre informazioni:** [Creazione guidata modello di data mining &#40;Analysis Services - Data Mining&#41;](data-mining/data-mining-wizard-analysis-services-data-mining.md) e [Creare una struttura di data mining relazionale](data-mining/create-a-relational-mining-structure.md)  
+ **Per altre informazioni:** [Procedura guidata di Data Mining &#40;Analysis Services - Data Mining&#41;](data-mining/data-mining-wizard-analysis-services-data-mining.md), [creare una struttura di Data Mining relazionale](data-mining/create-a-relational-mining-structure.md)  
   
 ## <a name="options"></a>Opzioni  
  **Nome colonna**  

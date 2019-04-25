@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: e6a5e9581a2a236eab869e74825ee97e7e289d44
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47798572"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62472697"
 ---
 # <a name="command-streams"></a>Flussi di comandi
 ADO ha sempre supportato l'input del comando nel formato di stringa specificato tramite il **CommandText** proprietà. In alternativa, con ADO 2.7 o versione successiva, è possibile anche usare un flusso di informazioni per l'input comando tramite l'assegnazione di flusso in cui il **CommandStream** proprietà. È possibile assegnare un oggetto ADO **Stream** oppure qualsiasi oggetto che supporta il modello COM **IStream** interfaccia.  

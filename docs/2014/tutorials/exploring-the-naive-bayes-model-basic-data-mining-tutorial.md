@@ -11,11 +11,11 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: eb35c829b798335a27a37629711acf299ac2c7c9
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56023532"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62472885"
 ---
 # <a name="exploring-the-naive-bayes-model-basic-data-mining-tutorial"></a>Esplorazione del modello Naive Bayes (Esercitazione di base sul data mining)
   Il [!INCLUDE[msCoName](../includes/msconame-md.md)] algoritmo Naive Bayes fornisce diversi metodi per la visualizzazione dell'interazione tra l'acquisto di biciclette e gli attributi di input.  

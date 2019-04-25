@@ -15,11 +15,11 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: a49361846ffcb309c39e816d5f7a62418db87d6e
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
-ms.translationtype: HT
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52794833"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62465526"
 ---
 # <a name="master-data-services-database"></a>Database Master Data Services
 
@@ -37,7 +37,7 @@ ms.locfileid: "52794833"
   
 -   Fornisce le viste per i sistemi di sottoscrizione per il quali è necessario il recupero di dati dal database.  
   
-## <a name="in-this-section"></a>Contenuto della sezione  
+## <a name="in-this-section"></a>In questa sezione  
   
 -   [Tabella di gestione temporanea dei membri foglia &#40;Master Data Services&#41;](../master-data-services/leaf-member-staging-table-master-data-services.md)  
   

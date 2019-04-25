@@ -21,11 +21,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: a492aee19d6b09cb7d227b34648f1ea35d1d95d9
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52816263"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62762080"
 ---
 # <a name="database-identifiers"></a>Identificatori del database
   Il nome di un oggetto di database rappresenta l'identificatore dell'oggetto stesso. È possibile associare un identificatore a qualunque elemento di [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , ad esempio server, database e oggetti di database quali tabelle, viste, colonne, indici, trigger, procedure, vincoli, regole e così via. Gli identificatori sono richiesti con la maggior parte degli oggetti. Per alcuni oggetti, quali i vincoli, sono facoltativi.  
@@ -57,7 +57,7 @@ WHERE KeyCol = 124
 ```  
   
  Identificatori delimitati  
- Sono racchiusi tra virgolette doppie (") o tra parentesi quadre ([ ]). Gli identificatori conformi alle regole relative al formato degli identificatori possono non essere delimitati. Ad esempio:  
+ Sono racchiusi tra virgolette doppie (") o tra parentesi quadre ([ ]). Gli identificatori conformi alle regole relative al formato degli identificatori possono non essere delimitati. Ad esempio:   
   
 ```  
 SELECT *  
@@ -65,7 +65,7 @@ FROM [TableX]         --Delimiter is optional.
 WHERE [KeyCol] = 124  --Delimiter is optional.  
 ```  
   
- All'interno di un'istruzione [!INCLUDE[tsql](../../includes/tsql-md.md)] è necessario che gli identificatori non conformi alle regole relative agli identificatori siano delimitati. Ad esempio:  
+ All'interno di un'istruzione [!INCLUDE[tsql](../../includes/tsql-md.md)] è necessario che gli identificatori non conformi alle regole relative agli identificatori siano delimitati. Ad esempio:   
   
 ```  
 SELECT *  

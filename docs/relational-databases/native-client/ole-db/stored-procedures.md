@@ -18,11 +18,11 @@ ms.author: genemi
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 181558e7827102a3b35b7b32227f8164a2e1490d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47748099"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62629759"
 ---
 # <a name="stored-procedures"></a>Stored procedure
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -38,7 +38,7 @@ ms.locfileid: "47748099"
   
      DLL C o C++ scritte nell'API ODS (Open Data Services) di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] per le stored procedure estese. L'API ODS amplia le funzionalità delle stored procedure per includere il codice C o C++.  
   
-## <a name="in-this-section"></a>Argomenti della sezione  
+## <a name="in-this-section"></a>In questa sezione  
   
 -   [Esecuzione di stored procedure &#40;OLE DB&#41;](../../../relational-databases/native-client/ole-db/stored-procedures-running.md)  
   

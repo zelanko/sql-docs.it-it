@@ -15,11 +15,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 673fa5941785f332893af3ea8f3630579d8a5741
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52770723"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62761997"
 ---
 # <a name="audit-add-member-to-db-role-event-class"></a>Audit Add Member to DB Role - classe di evento
   La classe di evento **Audit Add Member to DB Role** si verifica ogni volta che un account di accesso viene aggiunto o rimosso da un ruolo del database. Questa classe di evento è usata con le stored procedure **sp_addrolemember**, **sp_changegroup**e **sp_droprolemember** .  
@@ -47,7 +47,7 @@ ms.locfileid: "52770723"
 |**OwnerName**|**nvarchar**|Nome utente del database per il proprietario dell'oggetto.|37|Yes|  
 |**RequestID**|**int**|ID della richiesta contenente l'istruzione.|49|Yes|  
 |**RoleName**|**nvarchar**|Nome di un ruolo applicazione in corso di attivazione.|38|Yes|  
-|**ServerName**|**nvarchar**|Nome dell'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tracciata.|26|No|  
+|**ServerName**|**nvarchar**|Nome dell'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tracciata.|26|no|  
 |**SessionLoginName**|**Nvarchar**|Nome dell'account di accesso dell'utente che ha avviato la sessione. Se ad esempio si stabilisce la connessione a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] con l'account di accesso Login1 e si esegue un'istruzione con l'account di accesso Login2, **SessionLoginName** indica Login1 e **LoginName** indica Login2. In questa colonna sono visualizzati sia gli account di accesso di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] che quelli di Windows.|64|Yes|  
 |**SPID**|**int**|ID della sessione in cui si è verificato l'evento.|12|Yes|  
 |**StartTime**|**datetime**|Ora di inizio dell'evento, se disponibile.|14|Yes|  

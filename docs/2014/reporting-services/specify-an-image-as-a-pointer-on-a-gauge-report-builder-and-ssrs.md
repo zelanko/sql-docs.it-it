@@ -12,11 +12,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 0bc4168d6e6cf786b3137713d44441be0bd3a13f
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59932607"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62511394"
 ---
 # <a name="specify-an-image-as-a-pointer-on-a-gauge-report-builder-and-ssrs"></a>Specificare un'immagine come indicatore di misura su un misuratore (Generatore report e SSRS)
   Il misuratore include tre stili predefiniti utilizzabili per personalizzare l'aspetto dell'indicatore di misura. Per un misuratore radiale, gli stili predefiniti sono: Lancetta, marcatore e barre. mentre quelli per un misuratore lineare sono Marcatore, Barre e Termometro. Se è necessario un indicatore di misura univoco, l'utente può creare e specificare un'immagine utilizzabile come indicatore di misura con funzionalità complete.  

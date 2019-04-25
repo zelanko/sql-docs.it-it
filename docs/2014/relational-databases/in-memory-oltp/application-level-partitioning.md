@@ -11,11 +11,11 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 3b1bc12baf31a0e1d5edb344c538341cf2ad1be0
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58529620"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62468337"
 ---
 # <a name="application-level-partitioning"></a>Partizionamento a livello di applicazione
   Questo esempio illustra il partizionamento a livello di applicazione, in cui i dati vengono archiviati in una tabella ottimizzata per la memoria o una tabella basata su disco, a seconda del fatto che l'ordine si verifichi prima o dopo una data specifica. Tutti gli ordini più recenti o uguali al *hotDate* sono nelle tabelle ottimizzate per la memoria e tutti gli ordini prima le *hotDate* presenti nella tabella basata su disco. Si supponga un pesante carico di lavoro OLTP con molte transazioni simultanee. Questa regola di business (ordini recenti in una tabella ottimizzata per la memoria) deve essere applicata anche se diverse transazioni simultanee stanno tentando di modificare *hotDate*.  

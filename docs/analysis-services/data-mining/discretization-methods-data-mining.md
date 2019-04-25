@@ -1,5 +1,5 @@
 ---
-title: Metodi di discretizzazione (Data Mining) | Documenti Microsoft
+title: Metodi di discretizzazione (Data Mining) | Microsoft Docs
 ms.date: 05/01/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 610108ce4edb6e3beb5c13398d0a79eca200bdba
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34016978"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62467762"
 ---
 # <a name="discretization-methods-data-mining"></a>Metodi di discretizzazione (data mining)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -32,13 +32,13 @@ ms.locfileid: "34016978"
   
  Nella tabella seguente vengono descritti i metodi che è possibile utilizzare per la discretizzazione dei dati in [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)].  
   
-|Metodo di discretizzazione|Description|  
+|Metodo di discretizzazione|Descrizione|  
 |---------------------------|-----------------|  
 |**AUTOMATIC**|[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] determina il metodo di discretizzazione da usare.|  
 |**CLUSTERS**|L'algoritmo suddivide i dati in gruppi eseguendo il campionamento dei dati di training, l'inizializzazione su un numero di punti casuali e quindi diverse iterazioni dell'algoritmo Microsoft Clustering tramite il metodo di clustering EM (Expectation Maximization). Il metodo **CLUSTERS** è utile perché è valido per qualsiasi curva di distribuzione, ma richiede tempi di elaborazione più lunghi rispetto agli altri metodi di discretizzazione.<br /><br /> È possibile utilizzare tale metodo solo per le colonne numeriche.|  
 |**EQUAL_AREAS**|L'algoritmo suddivide i dati in gruppi che contengono lo stesso numero di valori. Questo metodo è particolarmente appropriato per le curve di distribuzione normali, ma non consente di ottenere risultati attendibili se la distribuzione include un numero elevato di valori che appartengono a un gruppo ristretto all'interno dei dati continui. Se ad esempio metà degli elementi ha un costo 0, metà dei dati corrisponderà a un singolo punto della curva. In tale distribuzione, questo metodo suddivide i dati in modo da stabilire una discretizzazione uguale in più aree, generando una rappresentazione non corretta dei dati.|  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Note  
   
 -   Per discretizzare le stringhe, è possibile usare il metodo **EQUAL_AREAS** .  
   
@@ -47,11 +47,11 @@ ms.locfileid: "34016978"
   
   
 ## <a name="see-also"></a>Vedere anche  
- [Contenuto di Data Mining tipi & #40; & #41;](../../analysis-services/data-mining/content-types-data-mining.md)   
- [Contenuto DMX tipi & #40; & #41;](../../dmx/content-types-dmx.md)   
- [Algoritmi di Data Mining & #40; Analysis Services - Data Mining & #41;](../../analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining.md)   
- [Strutture di data mining & #40; Analysis Services - Data Mining & #41;](../../analysis-services/data-mining/mining-structures-analysis-services-data-mining.md)   
- [Tipi di dati & #40; Data Mining & #41;](../../analysis-services/data-mining/data-types-data-mining.md)   
+ [Tipi di contenuto &#40;Data mining&#41;](../../analysis-services/data-mining/content-types-data-mining.md)   
+ [Tipi di contenuto &#40;DMX&#41;](../../dmx/content-types-dmx.md)   
+ [Algoritmi di data mining &#40;Analysis Services - Data mining&#41;](../../analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining.md)   
+ [Strutture di data mining &#40;Analysis Services - Data mining&#41;](../../analysis-services/data-mining/mining-structures-analysis-services-data-mining.md)   
+ [Tipi di dati &#40;Data mining&#41;](../../analysis-services/data-mining/data-types-data-mining.md)   
  [Colonne della struttura di data mining](../../analysis-services/data-mining/mining-structure-columns.md)   
  [Distribuzioni delle colonne &#40;Data mining&#41;](../../analysis-services/data-mining/column-distributions-data-mining.md)  
   

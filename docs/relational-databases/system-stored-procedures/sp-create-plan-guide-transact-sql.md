@@ -19,11 +19,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 6900c60b788c30cadd404cc2d687cf7993aa119c
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53202567"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62507309"
 ---
 # <a name="spcreateplanguide-transact-sql"></a>sp_create_plan_guide (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -52,10 +52,10 @@ sp_create_plan_guide [ @name = ] N'plan_guide_name'
 ```  
   
 ## <a name="arguments"></a>Argomenti  
- [ \@name =] N'*plan_guide_name*'  
+ [ \@name = ] N'*plan_guide_name*'  
  Nome della guida di piano. I nomi delle guide di piano vengono definiti a livello dell'ambito del database corrente. *plan_guide_name* devono essere conformi alle regole relative [identificatori](../../relational-databases/databases/database-identifiers.md) e non può iniziare con il simbolo di cancelletto (#). La lunghezza massima del *plan_guide_name* è 124 caratteri.  
   
- [ \@stmt =] N'*statement_text*'  
+ [ \@stmt = ] N'*statement_text*'  
  Istruzione [!INCLUDE[tsql](../../includes/tsql-md.md)] in cui creare una guida di piano. Quando la [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] query optimizer riconosce una query corrispondente a *statement_text*, *plan_guide_name* ha effetto. Per la creazione di una Guida di piano abbia esito positivo, *statement_text* deve comparire nel contesto specificato per il \@tipo, \@module_or_batch, e \@params parametri.  
   
  *statement_text* deve essere specificato in modo che consente del query optimizer di associarlo l'istruzione corrispondente definita all'interno del batch o modulo identificato dai \@module_or_batch e \@params. Per ulteriori informazioni, vedere la sezione "Osservazioni". Il valore pari *statement_text* è limitato solo dalla memoria disponibile del server.  
@@ -72,7 +72,7 @@ sp_create_plan_guide [ @name = ] N'plan_guide_name'
  TEMPLATE  
  Indica che la Guida di piano corrisponde a qualsiasi query che Parametrizza il form indicato nella *statement_text*. Se viene specificato di modello, solo il PARAMETERIZATION {FORCED | Hint di query semplice} possono essere specificati nel \@gli hint di parametro. Per altre informazioni sulle guide di piano TEMPLATE, vedere [specificare parametrizzazione delle Query per le guide di piano utilizzando](../../relational-databases/performance/specify-query-parameterization-behavior-by-using-plan-guides.md).  
   
- [\@module_or_batch =] {N'[ *schema_name*. ] *object_name*' | N'*batch_text*' | NULL}  
+ [\@module_or_batch =]{ N'[ *schema_name*. ] *object_name*' | N'*batch_text*' | NULL}  
  Specifica il nome dell'oggetto in cui *statement_text* viene visualizzata, o il testo del batch in cui *statement_text* viene visualizzata. Il testo del batch non può includere un uso*database* istruzione.  
   
  Per una Guida di piano corrisponda a un batch sottomesso da un'applicazione *batch_tex*t deve essere specificato nello stesso formato, carattere per carattere, così come viene inviato a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Per semplificare questa corrispondenza, non viene eseguita alcuna conversione interna. Per altre informazioni, vedere la sezione Osservazioni.  
@@ -88,8 +88,8 @@ sp_create_plan_guide [ @name = ] N'plan_guide_name'
   
  *\@data_type parameter_name* devono essere specificati nello stesso formato con cui è stato sottomesso a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tramite l'utilizzo di sp_executesql oppure inviandolo internamente dopo la parametrizzazione. Per altre informazioni, vedere la sezione Osservazioni. Se il batch non include parametri, è necessario specificare NULL. Le dimensioni di \@params è limitata solo dalla memoria disponibile del server.  
   
- [\@hint =] {n'Option (*query_hint* [,*... n* ])' | N'*XML_showplan*' | NULL}  
- N'Option (*query_hint* [,*... n* ])  
+ [\@hints = ]{ N'OPTION (*query_hint* [ ,*...n* ] )' | N'*XML_showplan*' | NULL }  
+ N'OPTION (*query_hint* [ ,*...n* ] )  
  Specifica una clausola OPTION da associare a una query che corrisponde a \@istr. \@hint deve essere sintatticamente identica a una clausola OPTION in un'istruzione SELECT e può contenere qualsiasi sequenza valida di hint per la query.  
   
  N'*XML_showplan*'  
@@ -113,7 +113,7 @@ sp_create_plan_guide [ @name = ] N'plan_guide_name'
 >  Le guide di piano sono supportate solo in alcune edizioni di [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Per un elenco delle funzionalità supportate dalle edizioni di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], vedere [Funzionalità supportate dalle edizioni di SQL Server 2016](~/sql-server/editions-and-supported-features-for-sql-server-2016.md). Le guide di piano sono visibili in qualsiasi edizione. È inoltre possibile collegare un database che contiene guide di piano a qualsiasi edizione. Quando si ripristina o si collega un database a una versione aggiornata di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], le guide di piano non vengono modificate. Dopo l'esecuzione di un aggiornamento del server è opportuno verificare l'effettiva necessità delle guide di piano di ogni database.  
   
 ## <a name="plan-guide-matching-requirements"></a>Requisiti di corrispondenza per la guida di piano  
- Le guide di piano che specificano \@tipo = 'SQL' o \@tipo = 'TEMPLATE' corrispondano esattamente a una query, i valori per *batch_text* e  *\@parameter_name data_type*[,*... n* ] necessario specificare esattamente lo stesso formato delle rispettive controparti inviate dall'applicazione. Ciò significa che è necessario specificare il testo del batch esattamente come il compilatore di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] lo riceve. Per acquisire il testo effettivo del batch e del parametro, è possibile utilizzare [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]. Per altre informazioni, vedere [utilizzare SQL Server Profiler per creare e testare guide di piano](../../relational-databases/performance/use-sql-server-profiler-to-create-and-test-plan-guides.md).  
+ Le guide di piano che specificano \@tipo = 'SQL' o \@tipo = 'TEMPLATE' corrispondano esattamente a una query, i valori per *batch_text* e  *\@parameter_name data_type* [,*... n* ] necessario specificare esattamente lo stesso formato delle rispettive controparti inviate dall'applicazione. Ciò significa che è necessario specificare il testo del batch esattamente come il compilatore di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] lo riceve. Per acquisire il testo effettivo del batch e del parametro, è possibile utilizzare [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]. Per altre informazioni, vedere [utilizzare SQL Server Profiler per creare e testare guide di piano](../../relational-databases/performance/use-sql-server-profiler-to-create-and-test-plan-guides.md).  
   
  Quando \@tipo = 'SQL' e \@module_or_batch viene impostato su NULL, il valore di \@module_or_batch viene impostato sul valore di \@stmt. Ciò significa che il valore per *statement_text* è necessario specificare esattamente lo stesso formato, carattere per carattere, così come viene inviato a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Per semplificare questa corrispondenza, non viene eseguita alcuna conversione interna.  
   
@@ -188,7 +188,7 @@ EXEC sp_create_plan_guide
     @hints = N'OPTION (OPTIMIZE FOR (@Country_region = N''US''))';  
 ```  
   
-### <a name="b-creating-a-plan-guide-of-type-sql-for-a-stand-alone-query"></a>b. Creazione di una guida di piano di tipo SQL per una query autonoma  
+### <a name="b-creating-a-plan-guide-of-type-sql-for-a-stand-alone-query"></a>B. Creazione di una guida di piano di tipo SQL per una query autonoma  
  Nell'esempio seguente viene creata una guida di piano corrispondente a una query in un batch inviato da un'applicazione che utilizza la stored procedure di sistema sp_executesql.  
   
  Di seguito è riportato il batch:  

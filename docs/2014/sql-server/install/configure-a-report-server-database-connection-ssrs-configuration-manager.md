@@ -19,11 +19,11 @@ author: markingmyname
 ms.author: maghan
 manager: craigg
 ms.openlocfilehash: 9e7f4785eb5b5d52d5271397e0be927180e53aea
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48202652"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62762025"
 ---
 # <a name="configure-a-report-server-database-connection--ssrs-configuration-manager"></a>Configurare una connessione del database del server di report (Gestione configurazione SSRS)
   Ogni istanza del server di report richiede una connessione al database del server di report in cui sono archiviati report, modelli di report, origini dei dati condivise, risorse e metadati gestiti dal server. La connessione iniziale può essere creata durante l'installazione del server di report, se si sta installando la configurazione predefinita. Nella maggior parte dei casi è possibile utilizzare lo strumento di configurazione di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] per configurare la connessione al termine dell'installazione. È possibile modificare la connessione in qualsiasi momento per cambiare il tipo di account o reimpostare le credenziali. Per istruzioni dettagliate su come creare il database e configurare la connessione, vedere [Creare un database del server di report in modalità nativa &#40;Gestione configurazione SSRS&#41;](../../reporting-services/install-windows/ssrs-report-server-create-a-native-mode-report-server-database.md).  
@@ -54,7 +54,7 @@ ms.locfileid: "48202652"
   
 -   Nome dell'istanza del [!INCLUDE[ssDE](../../includes/ssde-md.md)] che ospita il database del server di report.  
   
--   Nome del database del server di report. Quando si crea una connessione per la prima volta, è possibile creare un nuovo database del server di report oppure selezionare un database esistente. Per altre informazioni, vedere [creare un Database del Server di Report &#40;Gestione configurazione SSRS&#41;](../../../2014/sql-server/install/create-a-report-server-database-ssrs-configuration-manager.md).  
+-   Nome del database del server di report. Quando si crea una connessione per la prima volta, è possibile creare un nuovo database del server di report oppure selezionare un database esistente. Per altre informazioni, vedere [Creare un database del server di report &#40;Gestione configurazione SSRS&#41;](../../../2014/sql-server/install/create-a-report-server-database-ssrs-configuration-manager.md).  
   
 -   Tipo di credenziali. È possibile utilizzare gli account di servizio, un account di dominio di Windows o un account di accesso al database di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
@@ -123,7 +123,7 @@ ms.locfileid: "48202652"
  È possibile configurare più server di report in modo che utilizzino lo stesso database del server di report. Questa configurazione di distribuzione è denominata distribuzione con scalabilità orizzontale e costituisce un prerequisito se si desidera eseguire più server di report in un cluster di server. È tuttavia possibile utilizzare tale configurazione se si desidera segmentare le applicazioni del servizio o eseguire il test dell'installazione e delle impostazioni di una nuova istanza del server di report per confrontarla con un'installazione del server di report esistente. Per altre informazioni, vedere [Configurare una distribuzione con scalabilità orizzontale di un server di report in modalità nativa &#40;Gestione configurazione SSRS&#41;](../../reporting-services/install-windows/configure-a-native-mode-report-server-scale-out-deployment.md).  
   
 ## <a name="see-also"></a>Vedere anche  
- [Creare un Database del Server di Report &#40;Gestione configurazione SSRS&#41;](../../../2014/sql-server/install/create-a-report-server-database-ssrs-configuration-manager.md)   
+ [Creare un database del server di report &#40;Gestione configurazione SSRS&#41;](../../../2014/sql-server/install/create-a-report-server-database-ssrs-configuration-manager.md)   
  [Gestione di un server di report in modalità nativa](../../reporting-services/report-server/manage-a-reporting-services-native-mode-report-server.md)   
  [Configurare l'account del servizio del server di report &#40;Gestione configurazione SSRS&#41;](../../reporting-services/install-windows/configure-the-report-server-service-account-ssrs-configuration-manager.md)  
   

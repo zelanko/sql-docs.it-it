@@ -19,13 +19,13 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: dd226aef62c2d05eead5e2b5f72b2f358422025a
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52808903"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62471080"
 ---
-# <a name="conflictltschemagtlttablegt-transact-sql"></a>conflict_&lt;schema&gt;_&lt;tabella&gt; (Transact-SQL)
+# <a name="conflictltschemagtlttablegt-transact-sql"></a>conflict_&lt;schema&gt;_&lt;table&gt; (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Il conflict_\<schema > _\<tabella > tabella contiene informazioni sulle righe in conflitto nella replica peer-to-peer. Per ogni tabella replicata di una pubblicazione è disponibile una tabella dei conflitti, il cui nome è seguito dai nomi dello schema e dell'articolo. Queste tabelle dei conflitti specifiche dell'articolo sono presenti in ogni database di pubblicazione.  
@@ -42,10 +42,10 @@ ms.locfileid: "52808903"
 |__$pre_version|**varbinary (32)**|Versione del database in cui ha avuto origine la modifica in conflitto.|  
 |__$reason_code|**int**|Codice di risoluzione del conflitto. Il valore può essere uno dei seguenti:<br /><br /> 0<br /><br /> 1<br /><br /> 2<br /><br /> <br /><br /> Per altre informazioni, vedere **_ $reason_text**.|  
 |__$reason_text|**nvarchar (720)**|Risoluzione del conflitto. Il valore può essere uno dei seguenti:<br /><br /> Risolto (1)<br /><br /> Non risolto (2)<br /><br /> Sconosciuto (0)|  
-|__$update_bitmap|**varbinary (** *n* **)**. Dimensioni variano a seconda del contenuto.|Bitmap che indica le colonne aggiornate nel caso di un conflitto aggiornamento-aggiornamento.|  
+|__$update_bitmap|**varbinary(** *n* **)**. Dimensioni variano a seconda del contenuto.|Bitmap che indica le colonne aggiornate nel caso di un conflitto aggiornamento-aggiornamento.|  
 |__$inserted_date|**datetime**|Data e ora in cui la riga in conflitto è stata inserita in questa tabella.|  
 |__$row_id|**timestamp**|Versione della riga associata alla riga che ha causato il conflitto.|  
-|__$change_id|**file binario (8)**|Per una riga locale, questo valore è uguale a __$row_id della riga in ingresso in conflitto con la riga locale. Questo valore è NULL per una riga in ingresso.|  
+|__$change_id|**binary (8)**|Per una riga locale, questo valore è uguale a __$row_id della riga in ingresso in conflitto con la riga locale. Questo valore è NULL per una riga in ingresso.|  
 |\<i nomi di colonna nella tabella di base >|\<tipi di colonna nella tabella di base >|Questa tabella dei conflitti contiene una colonna per ogni colonna presente nella tabella di base.|  
   
 ## <a name="see-also"></a>Vedere anche  

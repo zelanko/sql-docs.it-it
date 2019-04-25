@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: d43432a53eb2321c3707f4034e244752a5c368ba
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52416403"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62468650"
 ---
 # <a name="lesson-10-create-partitions"></a>Lezione 10: Creare partizioni
 [!INCLUDE[ssas-appliesto-sql2016-later-aas](../includes/ssas-appliesto-sql2016-later-aas.md)]
@@ -135,13 +135,13 @@ Si noti che in Gestione partizioni, il **ultima elaborazione** colonna per ogni 
   
 4.  Selezionare la casella di controllo **Elabora** per ognuna delle cinque partizioni create, quindi fare clic su **OK**.  
 
-    ![come in formato tabulare-lesson10-processo-partizioni](../analysis-services/media/as-tabular-lesson10-process-partitions.png)
+    ![as-tabular-lesson10-process-partitions](../analysis-services/media/as-tabular-lesson10-process-partitions.png)
   
     Se viene chiesto di immettere le credenziali di rappresentazione, immettere il nome utente di Windows e la password specificati nella lezione 2.  
   
     Viene visualizzata la finestra di dialogo **Processo dati** , con informazioni dettagliate sul processo per ogni partizione. Si noti che per ogni partizione viene trasferito un numero diverso di righe. Questo avviene in quanto ogni partizione include solo le righe per l'anno specificato nella clausola WHERE dell'istruzione SQL. Al termine dell'elaborazione, proseguire e chiudere la finestra di dialogo Processo dati.  
   
-    ![come-tabulare-lesson10-processo-completato](../analysis-services/media/as-tabular-lesson10-process-complete.png)
+    ![as-tabular-lesson10-process-complete](../analysis-services/media/as-tabular-lesson10-process-complete.png)
   
  ## <a name="whats-next"></a>Quali sono le operazioni successive?
 Passare alla lezione successiva: [Lezione 11: Creare ruoli](../analysis-services/lesson-11-create-roles.md). 

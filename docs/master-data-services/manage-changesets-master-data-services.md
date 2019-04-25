@@ -12,11 +12,11 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 68c00133fde8c15fb028c013032c316658c056a9
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
-ms.translationtype: HT
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52777413"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62466840"
 ---
 # <a name="manage-changesets-master-data-services"></a>Gestire gli insiemi di modifiche (Master Data Services)
 
@@ -24,7 +24,7 @@ ms.locfileid: "52777413"
 
   In [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] è possibile gestire tutte le modifiche in base a modello e versione.  
   
-## <a name="prerequisites"></a>Prerequisites  
+## <a name="prerequisites"></a>Prerequisiti  
   
 -   È necessario disporre dell'autorizzazione per accedere all'area funzionale **Esplora** . Per altre informazioni, vedere [Autorizzazioni per aree funzionali &#40;Master Data Services&#41;](../master-data-services/functional-area-permissions-master-data-services.md).  
   

@@ -17,11 +17,11 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: b2f0bac42ce0fb2ae814b48cd21e0cffb84128b1
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52812103"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62764878"
 ---
 # <a name="leaf-permissions-master-data-services"></a>Autorizzazioni per elementi foglia (Master Data Services)
   Le autorizzazioni foglia si applicano ai valori di attributo per tutti i membri foglia di un'entità.  
@@ -47,15 +47,15 @@ ms.locfileid: "52812103"
 |----------------|-----------------|  
 |**Sola lettura**|L'attributo viene visualizzato, ma l'utente non può modificare i valori di attributo.|  
 |**Update**|L'attributo viene visualizzato e l'utente può modificare i valori di attributo.|  
-|**Nega**|L'attributo non viene visualizzato.<br /><br /> Nota: Non è possibile negare in modo esplicito l'accesso agli attributi Name e Code.|  
+|**Nega**|L'attributo non viene visualizzato.<br /><br /> Nota: È possibile negare in modo esplicito l'accesso agli attributi Name e Code.|  
   
 ### <a name="example"></a>Esempio  
  Per l'entità Product, assegnare l'autorizzazione **Update** all'attributo Subcategory. Negare l'autorizzazione per tutti gli altri attributi.  
   
-|nome|Codice|Subcategory (Aggiornamento)|  
+|Nome|Codice|Subcategory (Aggiornamento)|  
 |----------|----------|----------------------------|  
-|Mountain-100|BK-M101|{5} Mountain Bikes|  
-|Mountain-100|BK-M201|{5} Mountain Bikes|  
+|Mountain-100|BK-M101|{5} Mountain bike|  
+|Mountain-100|BK-M201|{5} Mountain bike|  
   
  Nel **Visualizzatore**è possibile aggiornare qualsiasi valore di attributo nella colonna Subcategory. Se non si dispone delle autorizzazioni per un attributo, l'attributo non viene visualizzato.  
   

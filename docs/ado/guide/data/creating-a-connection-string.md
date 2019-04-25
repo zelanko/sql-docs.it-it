@@ -15,14 +15,14 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 455fe1c3f5a19b498730909f1c56bf98b03ae51b
-ms.sourcegitcommit: e9fcd10c7eb87a4f09ac2d8f7647018e83a5f5c5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57972770"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62472647"
 ---
 # <a name="creating-a-connection-string"></a>Creazione di una stringa di connessione
-Una stringa di connessione è costituita da un elenco di coppie valore/argomento (vale a dire, parametri), separato da punti e virgola. Esempio:  
+Una stringa di connessione è costituita da un elenco di coppie valore/argomento (vale a dire, parametri), separato da punti e virgola. Ad esempio:   
   
 ```syntax
 "arg1=val1; arg2=val2; ... argN=valN;"  

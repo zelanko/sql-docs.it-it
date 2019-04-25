@@ -12,11 +12,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 32bd106320c8969813dbae107a7569af8560aba4
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59956067"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62513323"
 ---
 # <a name="specify-credentials-in-report-builder"></a>Specifica di credenziali in Generatore report
   Le credenziali consentono di autenticare l'utente che tenta di recuperare dati da un'origine dati. Il proprietario dell'origine dati determina il tipo di credenziali che è necessario usare. Ad esempio, un amministratore di database può specificare che l'utente deve fornire un nome utente e una password di Windows.  

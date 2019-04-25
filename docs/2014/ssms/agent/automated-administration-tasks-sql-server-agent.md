@@ -16,11 +16,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 790dd7e9199f511f434585c6b6741d0e09ab7d59
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52812363"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62472955"
 ---
 # <a name="automated-administration-tasks-sql-server-agent"></a>Automatizzazione delle attività amministrative (SQL Server Agent)
   Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] consente di automatizzare le attività amministrative. Per automatizzare le attività amministrative, è necessario definire quelle prevedibili e quindi specificare le condizioni in cui si verifica ogni attività. L'utilizzo dell'amministrazione automatica per gestire attività ed eventi di routine consente di dedicare il proprio tempo all'esecuzione di altre funzioni amministrative.  

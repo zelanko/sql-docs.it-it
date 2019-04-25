@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 63dbfda01d96cad53e5830e598b5812ed79d8f04
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47661745"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62468778"
 ---
 # <a name="dynamic-tracing"></a>Traccia dinamica
 Traccia può essere abilitata o disabilitata in qualsiasi punto in un'esecuzione dell'applicazione. In questo modo un'applicazione per tenere traccia di qualsiasi numero di chiamate di funzione.  

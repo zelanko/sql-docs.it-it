@@ -1,5 +1,5 @@
 ---
-title: Concessione di autorizzazioni di Database di processo | Documenti Microsoft
+title: Concessione di autorizzazioni di Database di processo | Microsoft Docs
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,13 +10,13 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: d7777d2bb3a69a2f42c5ee25adbc77e0f07a0b3e
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34017088"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62467752"
 ---
-# <a name="lesson-10---granting-process-database-permissions"></a>Lezione 10 - concessione di autorizzazioni di Database di elaborazione
+# <a name="lesson-10---granting-process-database-permissions"></a>Lezione 10: concessione di autorizzazioni di elaborazione Database
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
 Dopo l'installazione di un'istanza di [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], tutti i membri del ruolo di amministratore del server [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] nell'istanza dispongono di autorizzazioni valide per l'intero server per eseguire qualsiasi attività all'interno dell'istanza di [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]. Per impostazione predefinita, nessun altro utente dispone dell'autorizzazione per amministrare o visualizzare gli oggetti nell'istanza di [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)].  
@@ -33,7 +33,7 @@ Nelle procedure descritte in questo argomento viene definito un ruolo di sicurez
   
 3.  Nella finestra Proprietà modificare la proprietà **Nome** del nuovo ruolo in **Process Database Objects Role**.  
   
-    ![Progettazione ruoli](../analysis-services/media/l10-security-1.png "progettazione ruoli")  
+    ![Role Designer](../analysis-services/media/l10-security-1.png "Role Designer")  
   
 4.  Passare alla scheda **Appartenenze** di Progettazione ruoli e fare clic su **Aggiungi**.  
   
@@ -57,7 +57,7 @@ Nelle procedure descritte in questo argomento viene definito un ruolo di sicurez
 > È possibile ottenere un progetto completo per la lezione 10 scaricando e installando gli esempi aggiornati. Per altre informazioni, vedere [Installare dati di esempio e progetti per l'esercitazione di modellazione multidimensionale di Analysis Services](../analysis-services/install-sample-data-and-projects.md).  
   
 ## <a name="see-also"></a>Vedere anche  
-[Ruoli e autorizzazioni & #40; Analysis Services & #41;](../analysis-services/multidimensional-models/roles-and-permissions-analysis-services.md)  
+[Ruoli e autorizzazioni &#40;Analysis Services&#41;](../analysis-services/multidimensional-models/roles-and-permissions-analysis-services.md)  
   
   
   

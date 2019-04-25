@@ -20,18 +20,18 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: f535bf0ce2bf455fea72db4ebcdf9879749441cb
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47681409"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62761347"
 ---
 # <a name="syscollectorconfigstore-transact-sql"></a>syscollector_config_store (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Restituisce le proprietà che si applicano all'intero agente di raccolta dati, a differenza di un'istanza di un set di raccolta. Ogni riga in questa vista descrive una specifica proprietà dell'agente di raccolta dati, ad esempio il nome del data warehouse di gestione e il nome dell'istanza in cui si trova il data warehouse di gestione.  
   
-|Nome colonna|Tipo di dati|Description|  
+|Nome colonna|Tipo di dati|Descrizione|  
 |-----------------|---------------|-----------------|  
 |parameter_name|**nvarchar(128)**|Nome della proprietà. Non ammette i valori Null.|  
 |parameter_value|**sql_variant**|Valore effettivo della proprietà. Ammette i valori Null.|  
@@ -42,7 +42,7 @@ ms.locfileid: "47681409"
 ## <a name="remarks"></a>Note  
  L'elenco di proprietà disponibile è fisso e i relativi valori possono essere modificati utilizzando solo la stored procedure appropriata. Nella tabella seguente vengono descritte le proprietà esposte tramite questa vista.  
   
-|Nome proprietà|Description|  
+|Nome proprietà|Descrizione|  
 |-------------------|-----------------|  
 |CacheDirectory|Nome della directory nel file system in cui i pacchetti del tipo di agente di raccolta archiviano le informazioni temporanee.<br /><br /> NULL = viene utilizzata la directory predefinita di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |CacheWindow|Indica i criteri di memorizzazione dei dati relativi alla directory della cache per i caricamenti dei dati con errori.<br /><br /> -1 = Vengono memorizzati i dati relativi a tutti gli errori di caricamento.<br /><br /> 0 = Non viene memorizzato alcun dato relativo a errori di caricamento.<br /><br /> *n* = memorizzati i dati di *n* errori di caricamento precedenti, dove *n* > = 1.<br /><br /> Utilizzare la stored procedure sp_syscollector_set_cache_window stored per modificare questo valore.|  

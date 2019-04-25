@@ -22,11 +22,11 @@ ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 29449905da888d0f7c85b66d3731eed381dc582c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47704709"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62506058"
 ---
 # <a name="sysdmosbufferdescriptors-transact-sql"></a>sys.dm_os_buffer_descriptors (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -35,23 +35,23 @@ ms.locfileid: "47704709"
   
  Quando una pagina di dati viene letta dal disco, viene copiata nel pool di buffer di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e memorizzata nella cache per il riutilizzo. Ogni pagina di dati memorizzata nella cache è associata a un descrittore di buffer. I descrittori di buffer identificano in modo univoco ogni pagina di dati attualmente memorizzata nella cache in un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. sys.dm_os_buffer_descriptors restituisce le pagine memorizzate nella cache per tutti i database utente e di sistema. incluse le pagine associate al database Resource.  
   
-> **Nota:** chiamarla da [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] oppure [!INCLUDE[ssPDW](../../includes/sspdw-md.md)], usare il nome **sys.dm_pdw_nodes_os_buffer_descriptors**.  
+> **NOTA:** Per chiamare questo elemento dal [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] oppure [!INCLUDE[ssPDW](../../includes/sspdw-md.md)], usare il nome **sys.dm_pdw_nodes_os_buffer_descriptors**.  
 
-|Nome colonna|Tipo di dati|Description|  
+|Nome colonna|Tipo di dati|Descrizione|  
 |-----------------|---------------|-----------------|  
 |database_id|**int**|ID del database associato alla pagina nel pool di buffer. Ammette i valori Null.|  
 |file_id|**int**|ID del file in cui è archiviata l'immagine persistente della pagina. Ammette i valori Null.|  
 |page_id|**int**|ID della pagina all'interno del file. Ammette i valori Null.|  
 |page_level|**int**|Livello di indice della pagina. Ammette i valori Null.|  
 |allocation_unit_id|**bigint**|ID dell'unità di allocazione della pagina. Questo valore può essere utilizzato per unire in join sys.allocation_units. Ammette i valori Null.|  
-|page_type|**nvarchar(60)**|Tipo di pagina, ad esempio pagina di dati o pagina di indice. Ammette i valori Null.|  
+|page_type|**nvarchar(60)**|Tipo di pagina, ad esempio: Pagina di dati o pagina di indice. Ammette i valori Null.|  
 |row_count|**int**|Numero di righe nella pagina. Ammette i valori Null.|  
 |free_space_in_bytes|**int**|Quantità di spazio disponibile, in byte, nella pagina. Ammette i valori Null.|  
 |is_modified|**bit**|1 = La pagina è stata modificata dopo essere stata letta dal disco. Ammette i valori Null.|  
 |numa_node|**int**|Nodo NUMA (non-uniform memory access) per il buffer. Ammette i valori Null.|  
-|read_microsec|**bigint**|Tempo effettivo (in microsecondi) necessario per leggere la pagina nel buffer. Questo numero viene reimpostato quando si riutilizza il buffer. Ammette i valori Null.|  
-|is_in_bpool_extension|**bit**|1 = è attiva l'estensione del pool di buffer della pagina. Ammette i valori Null.|  
-|pdw_node_id|**int**|**Si applica a**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)], [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> L'identificatore per il nodo in questa distribuzione.|  
+|read_microsec|**bigint**|Tempo effettivo (in microsecondi) necessario per leggere la pagina nel buffer. Questo numero viene reimpostato quando si riutilizza il buffer. Ammette i valori Null.|  
+|is_in_bpool_extension|**bit**|1 = è attiva l'estensione del pool di buffer della pagina. Ammette i valori Null.|  
+|pdw_node_id|**int**|**Si applica a**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)], [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> L'identificatore per il nodo in questa distribuzione.|  
   
 ## <a name="permissions"></a>Permissions  
 
@@ -61,7 +61,7 @@ Sul [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)], è necessario il `VIEW DAT
 ## <a name="remarks"></a>Note  
  DM os_buffer_descriptors restituisce le pagine utilizzate dal database delle risorse. DM os_buffer_descriptors non restituisce invece informazioni sulle pagine libere o prelevate, né sulle pagine in cui si sono verificati errori quando essi sono stati letti.  
   
-|From|Per|Il|Relazione|  
+|From|Per|On|Relazione|  
 |----------|--------|--------|------------------|  
 |sys.dm_os_buffer_descriptors|sys.databases|database_id|molti-a-uno|  
 |sys.dm_os_buffer_descriptors|\<userdb>.sys.allocation_units|allocation_unit_id|molti-a-uno|  

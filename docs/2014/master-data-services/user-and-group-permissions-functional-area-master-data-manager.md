@@ -11,11 +11,11 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: bb4422ea0b2ac93ec928bc8ae755f715cb4def44
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53353262"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62763366"
 ---
 # <a name="user-and-group-permissions-functional-area-master-data-manager"></a>Area funzionale Autorizzazioni utenti e gruppi (Gestione dati master)
   Nell'area funzionale Autorizzazioni utenti e gruppi, gli amministratori possono concedere l'autorizzazione ad aree funzionali, ad attributi (nella scheda Modelli) e a membri (nella scheda Membri gerarchia). Le autorizzazioni sovrapposte vengono risolte per determinare l'autorizzazione di un utente a ogni singolo valore di attributo.  

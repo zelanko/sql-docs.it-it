@@ -11,11 +11,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: e0290e656105ebb33a7f73fc043beed64f1c25bc
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58374489"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62520326"
 ---
 # <a name="extract-change-data-using-the-cdc-source"></a>Estrarre dati delle modifiche tramite l'origine CDC
   Per aggiungere e configurare un'origine CDC, è necessario che il pacchetto includa già almeno un'attività Flusso di dati e un'attività di controllo CDC.  
@@ -44,15 +44,15 @@ ms.locfileid: "58374489"
   
 8.  Selezionare la modalità di elaborazione più adatta per le esigenze di elaborazione correnti. Di seguito sono elencate le opzioni possibili:  
   
-    -   **tutti i**: Restituisce le modifiche nell'intervallo CDC corrente senza il **Before Update** valori.  
+    -   **All** (Tutto): restituisce le modifiche nell'intervallo CDC corrente senza i valori **Before Update**.  
   
-    -   **Tutto con i valori precedenti**: Restituisce le modifiche nell'intervallo di elaborazione CDC corrente inclusi i valori precedenti (**Before Update**). Ogni operazione di aggiornamento prevede due righe: una con i valori prima dell'aggiornamento e una con i valori dopo l'aggiornamento.  
+    -   **All with old values** (Tutto con i valori precedenti): restituisce le modifiche nell'intervallo di elaborazione CDC corrente inclusi i valori precedenti (**Before Update**). Ogni operazione di aggiornamento prevede due righe: una con i valori prima dell'aggiornamento e una con i valori dopo l'aggiornamento.  
   
-    -   **NET**: Restituisce una sola modifica riga per ogni riga di origine modificata nell'intervallo di elaborazione CDC corrente. Se una riga di origine è stata aggiornata più volte, viene restituita la modifica combinata (ad esempio, inserimento+aggiornamento viene prodotto come un singolo aggiornamento e aggiornamento+eliminazione viene prodotto come una singola eliminazione). Quando si utilizza la modalità di elaborazione delle modifiche Net, è possibile suddividere le modifiche negli output Delete, Insert e Update e gestirli in parallelo, perché la singola riga di origine viene visualizzata in più output.  
+    -   **Net**: restituisce una sola riga delle modifiche per ogni riga di origine modificata nell'intervallo di elaborazione CDC corrente. Se una riga di origine è stata aggiornata più volte, viene restituita la modifica combinata (ad esempio, inserimento+aggiornamento viene prodotto come un singolo aggiornamento e aggiornamento+eliminazione viene prodotto come una singola eliminazione). Quando si utilizza la modalità di elaborazione delle modifiche Net, è possibile suddividere le modifiche negli output Delete, Insert e Update e gestirli in parallelo, perché la singola riga di origine viene visualizzata in più output.  
   
-    -   **NET con maschera di aggiornamento**: Questa modalità è simile alla modalità Net standard, ma aggiunge anche colonne booleane con il modello di nome **_ $\<nome-colonna >\_Changed** che indica colonne modificate nell'attuale modifiche di riga.  
+    -   **Net with update mask** (Net con maschera di aggiornamento): questa modalità è simile alla modalità Net standard, ma aggiunge anche colonne booleane con il modello di nome **__$\<<nome-colonna>\___Changed**, che indica la presenza di colonne modificate nella riga delle modifiche corrente.  
   
-    -   **NET con merge**: Questa modalità è simile al normale modalità di rete, ma con le operazioni Insert e Update unite in una singola operazione di Merge (UPSERT).  
+    -   **Net with merge** (Net con unione): questa modalità è simile alla modalità Net standard, ma con le operazioni Insert e Update unite in una singola operazione Merge (UPSERT).  
   
 9. Selezionare la variabile del pacchetto di stringhe SSIS che gestisce lo stato CDC per il contesto CDC corrente. Per altre informazioni sulla variabile di stato CDC, vedere [Definire una variabile di stato](define-a-state-variable.md).  
   
